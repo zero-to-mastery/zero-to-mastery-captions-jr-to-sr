@@ -1,0 +1,1108 @@
+WEBVTT
+
+00:01.910 --> 00:03.050
+Welcome back.
+
+00:03.050 --> 00:03.600
+All right.
+
+00:03.890 --> 00:10.580
+Let's start setting up our smart brain projects so it works on our machines something that we're going
+
+00:10.580 --> 00:17.690
+to use for the next couple of sections to actually add new features to it and do some really really
+
+00:17.690 --> 00:22.190
+neat things with some modern tools that really improve our up.
+
+00:22.190 --> 00:26.480
+The first thing I'm going to do I'm going to pretend this is my first day on the job.
+
+00:26.480 --> 00:33.460
+I have the smart brain project and the smart brain API and Bruno and the team has just told us that
+
+00:33.480 --> 00:41.480
+there is a client application a server which is this one and that we also need to set up the database
+
+00:41.750 --> 00:49.850
+because this server needs to speak to the database where all the users are and where we store the hashed
+
+00:49.910 --> 00:55.870
+passwords because users can log in and register to our up.
+
+00:56.050 --> 00:56.770
+Let's get to it.
+
+00:56.800 --> 01:02.620
+The very first thing I'm going to do is it's always good practice to instead of just cloning the original
+
+01:03.460 --> 01:08.070
+repo to just forget.
+
+01:08.230 --> 01:13.540
+Now in my case because this is on my repo I'm going to just corner for now.
+
+01:13.630 --> 01:22.250
+But I do recommend that you fork your projects and you make your pull requests from those forked projects.
+
+01:24.250 --> 01:30.630
+But for now I'm going to just clone the smart brain app to get us started.
+
+01:30.880 --> 01:33.930
+So I'm going to open up my terminal and in here.
+
+01:33.940 --> 01:35.610
+Let's make this a little bit bigger.
+
+01:35.980 --> 01:40.770
+And here I'm just going to get cloned on your repo.
+
+01:41.110 --> 01:42.250
+And while that's running.
+
+01:42.400 --> 01:45.560
+Let's go to the API and do the same thing.
+
+01:46.460 --> 01:53.340
+Just clone this Cerebro and get to clone.
+
+01:53.360 --> 01:54.060
+All right.
+
+01:54.190 --> 01:55.830
+You can minimize this window for now.
+
+01:56.720 --> 02:01.610
+And just have our two folders up here.
+
+02:01.650 --> 02:04.270
+So now let's make this even bigger.
+
+02:05.240 --> 02:12.090
+Now we want to do actually because we have two things we might want to have two terminal windows here.
+
+02:12.320 --> 02:14.510
+So I'm going to add a new window.
+
+02:14.510 --> 02:22.450
+There you go again make it a little bit bigger so we can all see and I'm going to have one for my server
+
+02:23.020 --> 02:27.150
+one for my client side up.
+
+02:27.260 --> 02:32.390
+The very first thing I'm going to do let's clear this a bit and to clear this as well.
+
+02:32.580 --> 02:37.020
+And I'm going to say that this is going to be the client side app the smart brain.
+
+02:37.380 --> 02:42.270
+And this is going to be the server that the client side app uses.
+
+02:42.270 --> 02:48.330
+So this is going to be C.D into smart brain API.
+
+02:48.340 --> 02:49.050
+All right.
+
+02:49.070 --> 02:56.270
+Now usually on get hub there's good documentation by the team of how to install and do everything to
+
+02:56.270 --> 02:57.010
+set it up.
+
+02:57.020 --> 03:03.020
+We can just start off with doing that and most likely we're going to have to do NPM install because
+
+03:03.020 --> 03:08.250
+we have a package dodgiest on file usually with all our NPM packages.
+
+03:08.320 --> 03:11.710
+But before we do that let me just open up subline
+
+03:14.430 --> 03:18.010
+and I'm going to put these two windows together just to make my life easier.
+
+03:27.070 --> 03:27.540
+Perfect.
+
+03:27.580 --> 03:35.110
+So now I have my server that is right over here I can just pretend this is its own machine and then
+
+03:35.170 --> 03:44.580
+do the same thing for my client side up again just putting these two together just to organize my screen
+
+03:44.580 --> 03:52.770
+so I know that these two are completely separate and before I actually even run NPM and saw I like looking
+
+03:52.770 --> 04:01.080
+at the package Jason phÃ³ that's usually going to tell you the commands that the project has what kind
+
+04:01.080 --> 04:08.820
+of dependencies we use or what kind of depth dependencies we use and just by looking at this I can Google
+
+04:08.880 --> 04:10.480
+perhaps NPM.
+
+04:10.640 --> 04:12.170
+This is one gnomon does.
+
+04:12.360 --> 04:18.300
+This is where PGE does PGE is postscripts so they must be using this database and express.
+
+04:18.390 --> 04:25.200
+They're using the Express server probably they're using something called clarify on Wonder what that
+
+04:25.200 --> 04:26.270
+is and then.
+
+04:26.490 --> 04:26.730
+OK.
+
+04:26.730 --> 04:32.490
+They're using the crypt to know J.S. to probably hashed her password so I already have an idea what
+
+04:32.490 --> 04:35.700
+the app uses as tools.
+
+04:36.150 --> 04:40.390
+Let's install those because for an app to work we obviously need to install these packages.
+
+04:40.410 --> 04:47.050
+And you'll see that the node modules folder is going to appear and do the same thing for the client
+
+04:47.050 --> 04:50.220
+side app going to NPM install.
+
+04:50.580 --> 04:55.720
+And again going by going to package our Jason I see OIA this is a Briac project.
+
+04:55.720 --> 05:00.150
+They're using Riak scripts so that's definitely a create re-act up.
+
+05:00.170 --> 05:00.640
+That's great.
+
+05:00.640 --> 05:06.280
+And these are all the commands that I can use it looks like NPM start is what I want to use for the
+
+05:06.280 --> 05:11.860
+front end and then the back end I see that there's only one script which is NPM start.
+
+05:11.890 --> 05:21.520
+So before I even do anything I can just run NPM start and see if all of this works which it does.
+
+05:21.520 --> 05:23.690
+The app is running OK that's great.
+
+05:24.130 --> 05:26.610
+And let's run NPM start here as well.
+
+05:30.060 --> 05:35.080
+And because we already have the server running on port three thousand we just hit yes so we get a different
+
+05:35.080 --> 05:39.330
+port.
+
+05:39.540 --> 05:42.580
+And without looking at a single line of code.
+
+05:42.630 --> 05:43.210
+All right.
+
+05:43.260 --> 05:48.030
+I have everything set up and working or it seems like it.
+
+05:48.090 --> 05:48.480
+All right.
+
+05:48.480 --> 05:51.870
+So it looks like it's working right now.
+
+05:52.260 --> 05:54.660
+Let's just try and create an account.
+
+05:54.660 --> 05:56.800
+We'll say hey at.
+
+05:57.030 --> 06:07.440
+Or the name is hey hey at gmail dot com and we'll say that the password is hey register I can register
+
+06:07.740 --> 06:10.110
+if I open up the console.
+
+06:10.110 --> 06:19.300
+All right I see that there's a 400 bad request at the register and point if I go back to my terminal.
+
+06:19.340 --> 06:22.430
+All right I get an error on the server.
+
+06:22.580 --> 06:25.640
+I get a K'NEX warning connection error.
+
+06:25.640 --> 06:28.510
+Connect connection ended unexpectedly.
+
+06:28.580 --> 06:28.790
+OK.
+
+06:28.790 --> 06:34.320
+So it looks like there is some sort of a connection there without looking at any code and.
+
+06:34.540 --> 06:40.430
+Well it looks like I can't really register and we know that in order to have any form of sign in or
+
+06:40.430 --> 06:50.300
+users we need a database to remember things for us such as user names passwords profile information
+
+06:50.660 --> 06:52.730
+all those things.
+
+06:52.800 --> 06:53.050
+All right.
+
+06:53.040 --> 06:54.020
+And we know this.
+
+06:54.030 --> 07:00.020
+I mean Bruno told us that there is a client app a server and a database.
+
+07:00.180 --> 07:08.420
+So looks like we need to set up our database now so that we have this connection and because I'm not
+
+07:08.420 --> 07:13.180
+get any airing any errors on the front end and front end is usually very easy to set up.
+
+07:13.950 --> 07:21.470
+I can go back and go through the dependencies and see what they're using and I see that they're using
+
+07:21.470 --> 07:30.590
+PGE which is postscripts and most likely the database connection and set up happens at one of the main
+
+07:31.770 --> 07:34.360
+files such as server that Jap's.
+
+07:34.380 --> 07:39.590
+So I'd go here probably first and right away I see that.
+
+07:39.630 --> 07:40.030
+All right.
+
+07:40.050 --> 07:46.260
+It looks like D-B database is using this K'NEX package and K'NEX.
+
+07:46.350 --> 07:54.270
+Let's say I don't know what it is I'll just go over here and say K'NEX and PM see what kind of results
+
+07:54.270 --> 07:55.020
+I get.
+
+07:56.860 --> 08:00.530
+All right batteries included multi dialect.
+
+08:00.690 --> 08:04.910
+That's a query builder for no G-S and browser.
+
+08:04.920 --> 08:05.240
+All right.
+
+08:05.250 --> 08:07.770
+All right so it looks like we're using it for ask.
+
+08:07.840 --> 08:13.900
+Well we go to get hub maybe they'll give us a better description.
+
+08:13.900 --> 08:17.370
+Looks like they have a Web site so Lescaut check that out and.
+
+08:17.410 --> 08:17.940
+Oh yeah.
+
+08:17.990 --> 08:20.680
+K'NEX again batteries included.
+
+08:20.680 --> 08:28.020
+Ask you all builder and it looks like we're able to create Eskew all statements really nice clean Eskew
+
+08:28.020 --> 08:30.500
+all statements by using this.
+
+08:30.540 --> 08:36.780
+If I go over here to let's say the query builder let's say that we want to do a select.
+
+08:36.780 --> 08:37.300
+Method.
+
+08:37.470 --> 08:37.810
+All right.
+
+08:37.810 --> 08:46.500
+So looks like we're using K'NEX to select title author a year from the books database and the output
+
+08:46.500 --> 08:50.770
+is select statement that gives us this.
+
+08:50.810 --> 08:51.090
+All right.
+
+08:51.090 --> 08:51.690
+Awesome.
+
+08:51.720 --> 08:54.450
+So maybe you knew what K'NEX was.
+
+08:54.750 --> 09:00.170
+Maybe you didn't but with any project I take a look at this and say OK so this is what they're using
+
+09:00.170 --> 09:00.950
+it for.
+
+09:00.960 --> 09:09.930
+That makes sense that we're creating a database and using K'NEX to connect to the port SCARUS database
+
+09:10.320 --> 09:17.950
+and oh looks like there's a connection here and it looks like this is localhost by the way.
+
+09:17.980 --> 09:22.260
+This want to 7.0 Dudd zero Darwan is the same thing as localhost.
+
+09:22.270 --> 09:28.620
+If I change changes to localhost it's going to be the same thing saw Funny Cher once I think I've said
+
+09:28.620 --> 09:36.630
+this before where it said there's no place like want 2 7 0 0 1 which means localhost.
+
+09:36.660 --> 09:38.870
+So home there's no place like home.
+
+09:39.240 --> 09:40.360
+I thought that was funny.
+
+09:40.500 --> 09:44.670
+Anyway we also see that there is a smart brain database.
+
+09:44.700 --> 09:45.500
+All right.
+
+09:45.540 --> 09:51.530
+And the user is on Google which I created but we'll see if we even need that.
+
+09:51.540 --> 09:57.720
+So looking at this we need to connect to a database and then divulge them because you're working on
+
+09:57.720 --> 09:59.070
+your own computer.
+
+09:59.190 --> 10:05.040
+You need to connect to a database that's on your computer or maybe they have a testing database that
+
+10:05.070 --> 10:06.230
+we can connect to.
+
+10:06.300 --> 10:11.970
+But Bruno didn't mention anything so it looks like we have to set up the database ourself.
+
+10:12.090 --> 10:17.490
+And again if databases are new to you then I do recommend you check out my other course.
+
+10:17.790 --> 10:30.690
+For now we can start off a postgresql database and create the smart brain app database inside of it.
+
+10:31.640 --> 10:39.080
+On a Mac this is different for every machine you can use something called a gooey or graphical user
+
+10:39.080 --> 10:47.440
+interface to actually create these tables for you just because it's a little bit easier than using the
+
+10:47.440 --> 10:48.060
+terminal.
+
+10:48.280 --> 10:56.230
+So I have something called Peace sequel are linked to sources that have Gucci's for Windows and Linux
+
+10:56.230 --> 10:57.280
+and other sources.
+
+10:57.280 --> 11:02.770
+But the sequel is free and really really nice for Mac lets me show you.
+
+11:06.470 --> 11:13.070
+Again it's it allows us to use postscripts and have a nice graphical user interface.
+
+11:13.160 --> 11:17.660
+So let's go back to our database and.
+
+11:17.660 --> 11:18.060
+All right.
+
+11:18.080 --> 11:24.810
+It looks like here we can just trying connect to localhost which is what we want.
+
+11:24.980 --> 11:29.580
+And to the smart brain database.
+
+11:29.700 --> 11:31.030
+So let's connect here.
+
+11:32.180 --> 11:36.510
+All right says Eric cannot connect to server connection refuse.
+
+11:36.860 --> 11:42.580
+Is the serving server running on host local host and this port number.
+
+11:42.870 --> 11:45.270
+Well probably not.
+
+11:45.350 --> 11:51.280
+I mean without you actually having to start a database server you're not going to have this running.
+
+11:51.290 --> 11:58.680
+So the first thing you need to do is say hey run a postscripts server on my computer.
+
+11:58.950 --> 12:03.880
+Again there's nothing that we've done to create a database have we.
+
+12:04.070 --> 12:09.960
+All we need to do is open up the terminal and it's at a new one.
+
+12:10.110 --> 12:11.710
+This may get a little bit bigger.
+
+12:14.200 --> 12:23.140
+And we're going to say Drew and this is something that I can use Brue is homebrewed for Mac and by using
+
+12:23.140 --> 12:29.040
+this command on a Mac I can start or stop postscripts ropes.
+
+12:29.140 --> 12:29.770
+I can type
+
+12:33.630 --> 12:35.970
+this is because I already have postscripts installed.
+
+12:35.970 --> 12:38.970
+Again I'll leave resources for you to do the same.
+
+12:39.120 --> 12:42.440
+If you haven't already done so from my previous course.
+
+12:42.780 --> 12:46.920
+So Bruce services start postscripts All right.
+
+12:46.920 --> 12:49.730
+Successfully started postscripts.
+
+12:49.750 --> 12:57.710
+Now if we go back and we've started the server and I try and connect to the smart brain database which
+
+12:57.980 --> 13:00.540
+I secretly already created.
+
+13:00.560 --> 13:01.130
+All right.
+
+13:01.130 --> 13:05.130
+Looks like I'm connected to the database.
+
+13:05.180 --> 13:06.600
+There's two tables here.
+
+13:06.620 --> 13:13.080
+There's a log table that has IDs the hash version or the password and the e-mails.
+
+13:13.190 --> 13:14.890
+So we can use this to log in.
+
+13:14.900 --> 13:15.440
+OK.
+
+13:15.590 --> 13:23.210
+And then we have the users we have name email entries joint and just by looking at the database I kind
+
+13:23.210 --> 13:27.000
+of have an idea of what information the smart brain app needs.
+
+13:27.080 --> 13:32.480
+And it looks like it just has user information.
+
+13:32.490 --> 13:35.300
+Now I have this already created.
+
+13:35.580 --> 13:42.030
+But what if we didn't have this already what if we have a different database.
+
+13:42.090 --> 13:44.470
+So let's close this actually and try again.
+
+13:44.620 --> 13:50.550
+I don't want to open the sequel again and this time around let's connect to a database called smart
+
+13:50.550 --> 13:56.830
+brain one if I connect database smart brain one does not exist.
+
+13:56.830 --> 14:00.550
+So how do I create that smart brain database.
+
+14:00.550 --> 14:10.280
+Again depending on the system that your postscripts is running in for Mac I can do the Create D-B and
+
+14:10.400 --> 14:14.680
+just give it the name whatever name I want.
+
+14:14.680 --> 14:19.620
+And again this comes with a brew installed version of postscripts.
+
+14:19.660 --> 14:21.010
+Again I'll leave links to that.
+
+14:21.040 --> 14:24.320
+So you can do it if you don't have postscripts already on your computer.
+
+14:24.430 --> 14:28.260
+So I'm going to say create database smart brain one.
+
+14:28.420 --> 14:37.960
+If I now go back and try to connect look that reaking connect and we have we're inside of the database
+
+14:37.990 --> 14:40.420
+but you see that we have no tables.
+
+14:40.420 --> 14:47.530
+We create tables by going into the query and in here I actually have a query history so I'm just going
+
+14:47.530 --> 14:49.000
+to write it for you.
+
+14:49.000 --> 14:56.530
+I can create the users table and this is just simple Eskew all commands and we'll go over this a little
+
+14:56.530 --> 14:57.990
+bit more.
+
+14:58.960 --> 15:06.520
+When we actually work with docker but we're creating an ID with a serial primary key that is it's going
+
+15:06.520 --> 15:08.640
+to go in order one two three four five.
+
+15:08.710 --> 15:16.630
+We have a name that limits to variable characters of 100 e-mail that needs to be unique and not all.
+
+15:16.630 --> 15:25.490
+And it also needs to be in text type and entries that begin began with the default of 0 and joined which
+
+15:25.490 --> 15:27.710
+is a time stamp that is a date.
+
+15:27.710 --> 15:35.410
+And this may remind me remind you a little bit of typescript and ask you all in a way is typed right
+
+15:35.420 --> 15:39.870
+before we can start assigning IDs and names and emails.
+
+15:39.920 --> 15:43.870
+We have to tell at what type it accepts.
+
+15:44.030 --> 15:51.740
+And this is how databases work to optimize their queries and just overall have the good performance
+
+15:51.740 --> 15:53.010
+that databases have.
+
+15:53.240 --> 15:55.100
+So let's run this query.
+
+15:56.110 --> 16:00.090
+If I refresh now I have the user stable.
+
+16:00.160 --> 16:01.080
+That's amazing.
+
+16:01.270 --> 16:04.770
+And we can create the log and table as well.
+
+16:07.260 --> 16:10.250
+Again same thing Id hash and email.
+
+16:10.290 --> 16:14.180
+If I run this query and refresh.
+
+16:14.680 --> 16:19.900
+All right I have the log in and user table awesome.
+
+16:19.940 --> 16:23.060
+So there's my database running.
+
+16:23.090 --> 16:25.200
+Theoretically our app should work.
+
+16:25.200 --> 16:34.050
+Now let's go back to our connection over here and instead of data base and it looks like we don't need
+
+16:34.050 --> 16:38.850
+a user because we haven't set a user and we're using again local host here.
+
+16:38.850 --> 16:43.910
+I'm going to say smart brain one one to save.
+
+16:44.160 --> 16:45.720
+We've restarted our server.
+
+16:45.720 --> 16:46.770
+Let's try this again.
+
+16:46.860 --> 16:50.450
+I'm going to go back to our app.
+
+16:50.650 --> 16:53.470
+Let's try this again.
+
+16:53.470 --> 16:57.580
+I want to register great.
+
+16:57.680 --> 16:59.710
+We've just logged into our app.
+
+16:59.730 --> 17:01.220
+If I go back to my database
+
+17:04.620 --> 17:05.880
+and I refresh your
+
+17:09.360 --> 17:10.440
+look of that I have.
+
+17:10.440 --> 17:13.350
+Hey hey at gmail dot com zero entries.
+
+17:13.350 --> 17:22.600
+A time stamp of when I joined and I even have a hashed password with the email that is very very cool.
+
+17:22.770 --> 17:26.250
+So we should be able to now work with this app.
+
+17:26.280 --> 17:26.840
+Right.
+
+17:27.180 --> 17:33.050
+Let's close the console and looks like this magic brain will detect faces in the pick picture.
+
+17:33.120 --> 17:33.980
+Give it a try.
+
+17:34.170 --> 17:37.110
+We can enter a u r l here to detect faces.
+
+17:37.260 --> 17:44.370
+So I have some face here that I can use I'm going to say copy image address which gives me the URL and
+
+17:44.400 --> 17:49.370
+I'm going to pasted in here and click detect.
+
+17:49.390 --> 17:49.840
+All right.
+
+17:49.870 --> 17:56.810
+Look at our entries count went up by one and I can check this by going to the users and we see that
+
+17:56.810 --> 18:00.020
+your entries is now once so database has been updated.
+
+18:00.100 --> 18:01.750
+And if I go back to the server.
+
+18:01.790 --> 18:02.110
+All right.
+
+18:02.120 --> 18:03.970
+No errors.
+
+18:03.980 --> 18:04.350
+All right.
+
+18:04.370 --> 18:07.850
+And oh where is this face detection feature.
+
+18:07.850 --> 18:09.930
+We don't really see it do we.
+
+18:09.930 --> 18:14.120
+If I open up the console I see that oh.
+
+18:14.140 --> 18:16.550
+Now we have another 400 at our air.
+
+18:16.570 --> 18:20.630
+A bad request and I see that it's at the end point image you are real.
+
+18:20.680 --> 18:23.300
+So something with the image you are l is working.
+
+18:25.760 --> 18:28.230
+It just says cannot get image Jaro.
+
+18:28.580 --> 18:31.490
+If I open up the network tab and try this again
+
+18:34.590 --> 18:38.340
+we see that the image you Arel there's something wrong here.
+
+18:38.490 --> 18:44.800
+We have a 400 square request and says unable to work with API.
+
+18:45.330 --> 18:51.480
+All right sounds like we have one more piece of the puzzle that we need to fix and that is we're using
+
+18:51.480 --> 18:56.660
+an API called clarify and clarify
+
+19:02.390 --> 19:10.370
+is an API that allows us to send a URL of the picture and they return a response for us.
+
+19:10.370 --> 19:16.280
+So if I go in into developers documentation and I go into let's see
+
+19:18.990 --> 19:25.900
+predict we see that via your well we can predict things.
+
+19:25.990 --> 19:26.690
+What can we do.
+
+19:26.800 --> 19:32.950
+It looks like we need an API key and with any API you work with you need something called an API key
+
+19:33.370 --> 19:35.650
+because this is how the API knows.
+
+19:35.890 --> 19:36.400
+Oh yeah.
+
+19:36.460 --> 19:37.180
+This is Andre.
+
+19:37.180 --> 19:42.810
+He's already paid for our services or she has 1000 free images that he can send to us.
+
+19:42.880 --> 19:47.290
+And by the way clarify is free for the entry level so don't worry.
+
+19:47.290 --> 19:50.680
+This is something that you get out of the box for free.
+
+19:50.770 --> 19:53.590
+So we need an API key.
+
+19:53.640 --> 20:03.270
+The best thing I can do is go back to my API and perhaps search for API say API for now and the site
+
+20:03.280 --> 20:09.250
+where we want to do we want to do a full on search let's say API.
+
+20:09.420 --> 20:13.450
+And if I keep scrolling down keep scrolling down I see.
+
+20:13.470 --> 20:13.840
+Oh yeah.
+
+20:13.860 --> 20:18.630
+Here's my API key for clarify.
+
+20:18.630 --> 20:21.370
+And yes I'm showing you might be Ickey.
+
+20:21.660 --> 20:22.320
+And don't worry.
+
+20:22.320 --> 20:26.270
+By the time you see this video I would have changed this so you don't have access to it.
+
+20:26.280 --> 20:30.160
+This is one of those things that is a secret you shouldn't show to anybody.
+
+20:30.180 --> 20:33.870
+You should never put it into production when you push this into get hub.
+
+20:33.870 --> 20:42.690
+You need to do something like your API key here so that people don't see your API key because most of
+
+20:42.690 --> 20:48.840
+the times API keys while they're valuable you either pay money for them or you have rate limits and
+
+20:48.840 --> 20:54.750
+you can only use the service a thousand times and if I was a bad person I can just steal this and just
+
+20:54.750 --> 20:57.500
+use up all your clarify data again.
+
+20:57.510 --> 20:59.000
+Don't worry I'll change this by now.
+
+20:59.010 --> 21:01.360
+By the time you see this so you can use it.
+
+21:01.500 --> 21:05.380
+But I've entered my clarify key indie image.
+
+21:05.400 --> 21:09.970
+Dodgy Yes which exists over here.
+
+21:10.020 --> 21:10.510
+All right.
+
+21:10.570 --> 21:15.910
+Again on most projects this is something that developers will already tell you are they're in the documentation
+
+21:16.210 --> 21:19.590
+so you don't have to go find this out yourself.
+
+21:20.200 --> 21:25.210
+But for those of you that again haven't been part of the my previous course and haven't worked with
+
+21:25.210 --> 21:30.420
+clarify all you need to do is create an account and it's completely free.
+
+21:32.220 --> 21:39.090
+And you can just say create new application click on your application and it has the API keys over here
+
+21:39.810 --> 21:44.460
+and the API Keys are going to be generated for you and you can just copy this
+
+21:47.340 --> 21:54.630
+or you can go to API keys over here and click on Create new API key and it looks like this is my API
+
+21:54.630 --> 21:55.150
+key.
+
+21:56.340 --> 22:02.380
+If I go back you can see that it's actually different than the older one which doesn't work anymore.
+
+22:02.920 --> 22:05.710
+So I just copy and pasted this saved it.
+
+22:05.950 --> 22:11.570
+And now let's go back to our up.
+
+22:11.570 --> 22:13.950
+All right let's close this and try this again.
+
+22:13.950 --> 22:18.740
+I'm going to click detect.
+
+22:18.820 --> 22:19.440
+Hmm.
+
+22:19.590 --> 22:20.670
+Let's go back here.
+
+22:20.670 --> 22:23.790
+All right so that's not working.
+
+22:24.600 --> 22:28.910
+I still getting the image you are all bad request.
+
+22:28.950 --> 22:31.020
+And here's the thing.
+
+22:31.230 --> 22:36.870
+As a developer there's always silly mistakes here and there that we think oh like there's something
+
+22:36.870 --> 22:38.490
+definitely wrong with the setup.
+
+22:38.490 --> 22:39.900
+What am I doing wrong.
+
+22:40.030 --> 22:46.110
+And is just one of those things that you have to test all your assumptions and you'll realize that sometimes
+
+22:46.110 --> 22:49.970
+you're just making a silly mistake and you think about it logically OK.
+
+22:50.070 --> 22:56.610
+The code that I just received was working because other developers are working on it and we did a special
+
+22:56.610 --> 22:59.730
+case where we modified the API key which most likely won't.
+
+22:59.730 --> 23:03.790
+I just wanted to show you how to do that in case you need to set that up yourself.
+
+23:03.870 --> 23:10.710
+But we wouldn't want to change too much of this code because this code is hypothetically already in
+
+23:10.710 --> 23:11.850
+production.
+
+23:11.940 --> 23:14.400
+So there's something that we're doing that we're doing wrong.
+
+23:14.460 --> 23:16.070
+We've entered the API key.
+
+23:16.140 --> 23:18.430
+Our connection to the database exist are.
+
+23:18.510 --> 23:20.100
+And trees are being updated.
+
+23:20.220 --> 23:24.830
+So the only thing that logically makes sense is something to do with this.
+
+23:24.910 --> 23:30.520
+And if you actually take a look at this message oh it is not a you.
+
+23:30.540 --> 23:32.250
+Well not at all.
+
+23:32.270 --> 23:36.420
+If you go to the very beginning let's see
+
+23:41.430 --> 23:48.070
+we see that it's a base 64 image which again is another way of getting images but it's not a you R-AL
+
+23:48.090 --> 23:49.950
+which is what we expect to hear.
+
+23:49.980 --> 23:54.720
+So you have to be careful with that because Google removed the view image tab from here.
+
+23:54.720 --> 23:55.850
+So it's hard to get a you.
+
+23:55.880 --> 23:59.330
+Well I've added it here because I have a chrome plug in that does it.
+
+23:59.640 --> 24:07.510
+So let's pick a different image that actually has a well I'm going to copy this copy image address go
+
+24:07.510 --> 24:09.600
+back to our app.
+
+24:09.610 --> 24:09.980
+All right.
+
+24:10.000 --> 24:13.860
+Now looks like a u r l with Dot jpeg.
+
+24:13.930 --> 24:15.150
+I'm going to click detect
+
+24:17.930 --> 24:24.330
+look that we have a face detection working for our app and there we have it.
+
+24:24.350 --> 24:26.890
+We have our set up and everything is working.
+
+24:26.900 --> 24:31.250
+If we go to the console Let's clear this and try again.
+
+24:31.580 --> 24:34.790
+Let's try a different picture this time we'll try this one.
+
+24:36.870 --> 24:45.270
+I'm going to say copy image address make sure it's a you Arel it's not it's base 64 Let's try a different
+
+24:45.270 --> 24:45.840
+one.
+
+24:45.840 --> 24:54.050
+Let's try this one copy image address.
+
+24:54.100 --> 24:54.790
+It's a jpeg.
+
+24:54.790 --> 24:55.270
+That's good.
+
+24:55.270 --> 24:56.910
+I click.
+
+24:56.970 --> 24:57.670
+All right.
+
+24:57.820 --> 25:03.980
+No errors in the console are entry count has increased and it detects the faces.
+
+25:04.000 --> 25:06.430
+All right very cool so we have everything set up.
+
+25:06.460 --> 25:12.310
+If we go back to our server and then go to our app there's no errors.
+
+25:12.310 --> 25:13.270
+Everything is working.
+
+25:13.270 --> 25:18.480
+Everything is set up and that's when we start to actually look at the code and analyze things.
+
+25:18.550 --> 25:23.710
+Once we set up everything so things are working we know that this is what we need.
+
+25:23.710 --> 25:28.370
+We can start looking at the code now and figuring out what to do what we can't do.
+
+25:29.510 --> 25:32.970
+By the way a quick side note for postscripts.
+
+25:32.980 --> 25:37.650
+Another way you can access the database is again through the PSU all command.
+
+25:37.670 --> 25:42.230
+Again this is something that might come with your Bruin's full of postscripts or you might have to do
+
+25:42.230 --> 25:44.560
+something different depending on your machine.
+
+25:44.660 --> 25:52.170
+But I do postscripts and you want the username and password the local hosts.
+
+25:52.180 --> 25:59.320
+In our case the poor number that you remember we default created the postscripts askew all with and
+
+25:59.320 --> 26:01.600
+then we have our smart brain app.
+
+26:01.600 --> 26:08.110
+So if I do smart Brai one here and we don't have a user name and password so let's just leave it at
+
+26:08.110 --> 26:08.570
+that.
+
+26:08.620 --> 26:11.220
+We'll see if it works without a username and password.
+
+26:12.100 --> 26:19.230
+Look at that I'm connected to the database and here I can use some common commands like Slash d backslash.
+
+26:20.230 --> 26:26.530
+Which gives me all the tables that I have available and I can run SU all commands here like select star
+
+26:26.530 --> 26:34.250
+from users and I see that a head G-mail dot com is also working.
+
+26:34.320 --> 26:39.230
+Again something that we cover in my previous course but at least now you know that that's what we're
+
+26:39.240 --> 26:41.050
+doing with our graphical user interface.
+
+26:41.070 --> 26:44.610
+We're just connecting to this database and accessing it.
+
+26:44.640 --> 26:46.210
+But in a more friendlier.
+
+26:46.230 --> 26:50.100
+Easier to use fashion.
+
+26:50.180 --> 26:50.700
+All right.
+
+26:50.780 --> 26:55.640
+So this is working and the next video we're going to start looking at the code and seeing how we can
+
+26:55.640 --> 26:58.210
+implement multiple face detection.
+
+26:58.440 --> 27:00.470
+I'll see in the next one Buh-Bye.

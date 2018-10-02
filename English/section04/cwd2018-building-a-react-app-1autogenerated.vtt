@@ -1,0 +1,562 @@
+WEBVTT
+
+00:00.810 --> 00:04.840
+It let's build our robo friends app I think to get started.
+
+00:04.870 --> 00:07.310
+We want to think about component's again.
+
+00:07.450 --> 00:10.690
+And what kind of components we want to build.
+
+00:10.690 --> 00:16.660
+Looking at this Web site the smallest component that we've probably want to start working on is perhaps
+
+00:16.960 --> 00:21.970
+the cart component this cart over here if we can build one of these.
+
+00:21.970 --> 00:29.280
+Then according to what I've said before we can just copy all these components and add them to the page.
+
+00:29.290 --> 00:31.370
+So let's start off with this.
+
+00:31.600 --> 00:34.490
+The card component.
+
+00:34.550 --> 00:36.350
+All right.
+
+00:36.530 --> 00:40.640
+Now we won't be using the halo component anymore.
+
+00:40.640 --> 00:43.730
+And if you remember it looked like this.
+
+00:43.730 --> 00:48.700
+Let's just I know it's sad but we're going to delete it when I delete the helos.
+
+00:48.700 --> 00:51.870
+SS start off clean.
+
+00:52.290 --> 00:53.810
+Song one to delete.
+
+00:54.190 --> 01:00.020
+OK.
+
+01:00.300 --> 01:03.750
+And we'll also delete hollowed out CSX.
+
+01:03.800 --> 01:08.970
+I know all our hard work just completely gone.
+
+01:09.130 --> 01:15.010
+You know we're going to start deleting things that we don't need in this project for example the app
+
+01:15.010 --> 01:16.830
+dodgiest that we had initially.
+
+01:16.840 --> 01:23.150
+Well we can delete that can also delete Abdollah CSX
+
+01:27.400 --> 01:28.390
+or test
+
+01:32.320 --> 01:40.970
+and the logo.
+
+01:40.990 --> 01:41.430
+All right.
+
+01:41.470 --> 01:44.350
+So everything's looking very small now.
+
+01:44.410 --> 01:52.750
+We have just and ex-Nazi SS index Rajai ass and this register service worker that comes with query racked
+
+01:52.750 --> 01:54.880
+up that we don't need to touch.
+
+01:54.900 --> 02:00.910
+OK obviously we have failed to compile because Walder Hello imports doesn't really work we don't have
+
+02:00.910 --> 02:02.560
+anything.
+
+02:02.720 --> 02:03.910
+So let's start off with this.
+
+02:03.950 --> 02:15.780
+Let's start off by creating a card component and this car component will have to import it from card.
+
+02:15.890 --> 02:22.850
+J.S. again if I save this still get an error because it doesn't exist.
+
+02:22.950 --> 02:23.690
+So let's create it.
+
+02:23.700 --> 02:27.380
+I'm going to say new file card.
+
+02:27.510 --> 02:28.070
+Yes.
+
+02:30.060 --> 02:35.480
+Then making sure that this is using table.
+
+02:35.660 --> 02:38.810
+And let's do what we've done before we do import
+
+02:42.130 --> 02:43.840
+re-act from
+
+02:47.000 --> 02:51.480
+instead of doing the CLOs way for now we're just going to worry about building the function.
+
+02:51.530 --> 02:57.380
+So I'm going to say Konst card equals.
+
+02:57.380 --> 02:59.350
+It won't have any properties for now.
+
+03:00.430 --> 03:05.350
+And this will return in brackets.
+
+03:11.480 --> 03:21.270
+And within here we'll say that it has a div within this div will have an image and this image will have
+
+03:21.270 --> 03:26.100
+some sort of a source that we don't know what it is yet so we'll just keep it the way it is.
+
+03:26.200 --> 03:29.790
+Closing tag and we'll have another div
+
+03:34.720 --> 03:35.460
+within here.
+
+03:35.470 --> 03:46.930
+If you remember we have our name and email in here so we'll just do an H-2 we'll just write hardcoded
+
+03:46.940 --> 03:48.020
+values here.
+
+03:48.240 --> 03:49.280
+Well Jane Jane Doe
+
+03:52.040 --> 04:00.270
+and finally a p tag that has some e-mail address solicitude Jane Doe at gmail dot com.
+
+04:01.500 --> 04:03.540
+Close the tag.
+
+04:03.590 --> 04:03.900
+All right.
+
+04:03.920 --> 04:08.000
+So we just have a simple component that's returning card.
+
+04:08.060 --> 04:10.880
+And remember we want to export this.
+
+04:10.880 --> 04:14.480
+So we want to say export default card
+
+04:17.320 --> 04:21.440
+save I get I'm geomancy must have an alt property.
+
+04:21.580 --> 04:23.320
+Again it's giving me a nice hand.
+
+04:23.350 --> 04:29.540
+So let's just add a alt property we just say what this photo is.
+
+04:29.590 --> 04:38.820
+So I'll just say photo for now or I'll say robots for now compile successfully if we look back at our
+
+04:38.820 --> 04:46.050
+app we have robots Jane Doe and Jane Doe perfect.
+
+04:46.080 --> 04:52.800
+All right we have the cart component and you must be asking yourself why are we using re-act here if
+
+04:52.800 --> 04:54.610
+we're not really using it.
+
+04:54.780 --> 04:56.320
+Let's see what happens if I remove it.
+
+04:58.070 --> 05:07.850
+I get a whole bunch of errors that says re-act must be in scope when using GSX remember GSX is this.
+
+05:07.850 --> 05:16.620
+We're not writing a shemale we're writing GSX and we need to import react so that our program understands
+
+05:16.680 --> 05:20.090
+GSX this a shemale like syntax.
+
+05:20.190 --> 05:20.650
+OK.
+
+05:20.880 --> 05:27.390
+Now we need an image and for this exercise I have something called Roble hash for you it's a really
+
+05:27.390 --> 05:28.990
+really cool API.
+
+05:29.070 --> 05:33.180
+And for those that don't know what API is or don't worry you have a session coming up with all that
+
+05:33.180 --> 05:35.300
+information well you'll get to learn about it.
+
+05:35.490 --> 05:45.510
+But the cool thing about roba hashes I can just say anything in here and it will return a random robot
+
+05:45.510 --> 05:47.370
+for me.
+
+05:47.410 --> 05:49.450
+All we need is just this.
+
+05:49.590 --> 05:59.080
+You are el and I can just say for now test.
+
+05:59.320 --> 06:05.780
+If I save this and go back to my example.
+
+06:05.960 --> 06:06.580
+There you go.
+
+06:06.590 --> 06:08.140
+We have our Random robot.
+
+06:08.390 --> 06:17.710
+If I changed this to let's say test test I save Well now I get another robot.
+
+06:17.730 --> 06:18.750
+How cool is that.
+
+06:20.450 --> 06:27.560
+All right I want to make sure that the size is somewhat small so you can do a question mark here and
+
+06:27.560 --> 06:29.080
+just give it width and height.
+
+06:29.150 --> 06:32.810
+So I'm just going to do 200 by 200.
+
+06:32.810 --> 06:36.100
+And again this is just something that you do with this.
+
+06:36.260 --> 06:40.940
+You are all that they give you and the information here how will make you go through it.
+
+06:44.890 --> 06:48.910
+Everything should look nice.
+
+06:48.960 --> 07:00.380
+Now let's say I wanted to add a title and I'll do something like divx or H-1 Pro Bowl friends here.
+
+07:06.900 --> 07:08.130
+You see I get an error here.
+
+07:08.340 --> 07:17.380
+It's because remember we need to return one thing and we can have multiple elements being returned right.
+
+07:17.560 --> 07:21.490
+If we want to return something make sure it's one thing or an array.
+
+07:21.490 --> 07:25.470
+But for now we'll worry about the title later.
+
+07:25.480 --> 07:29.590
+We want to make sure that we're only returning one element.
+
+07:29.590 --> 07:35.510
+So in this case that div element that has a ton of things inside which is the card component.
+
+07:35.650 --> 07:38.880
+All right let's save.
+
+07:38.910 --> 07:41.570
+All right we have our card component.
+
+07:41.670 --> 07:45.690
+It looks nice but what if I wanted to have multiple cards.
+
+07:45.700 --> 07:50.270
+Now according to what we know because we have the card component.
+
+07:50.280 --> 08:00.750
+If I go to index start yes I can just say I've put this on our new line so you can see I can just wrap
+
+08:00.750 --> 08:09.030
+this in a div again because we want to return just a single element and I could say Card
+
+08:12.020 --> 08:15.980
+card and close the DIV tag
+
+08:18.620 --> 08:26.400
+save and look at that we have multiple cars now they're each their own component.
+
+08:26.490 --> 08:32.370
+But let's have some styling to this just to make it look nicer again because we have Takio.
+
+08:32.700 --> 08:38.220
+We can use some really nice syntax if we go to the car component within the div..
+
+08:38.220 --> 08:40.250
+I can say class name again.
+
+08:40.290 --> 08:47.350
+Remember we can use class B.G. light green so that is background light green.
+
+08:47.400 --> 08:51.780
+And this is just tacky on classes that are already predefined for us again.
+
+08:52.020 --> 08:54.900
+CSSA section this isn't that.
+
+08:54.900 --> 08:57.060
+So we're not going to focus too much on CSSA.
+
+08:57.090 --> 08:59.850
+I'll just give you the styling say you need.
+
+08:59.880 --> 09:07.510
+Have the div the border we have padding of three lothsome margins too as well.
+
+09:07.530 --> 09:10.020
+And then it will do grow which is the animation.
+
+09:10.020 --> 09:16.460
+So if I save this look at that and that's that's pretty nice.
+
+09:19.160 --> 09:29.930
+You know it looks at a few more we'll do P.W. two and shadow five to add a bit of chateaus to them.
+
+09:29.930 --> 09:30.560
+There you go.
+
+09:30.570 --> 09:32.430
+They look more 3D now.
+
+09:32.660 --> 09:33.880
+That looks very nice.
+
+09:35.150 --> 09:35.480
+There you go.
+
+09:35.480 --> 09:37.360
+We have our cards again.
+
+09:37.370 --> 09:44.020
+We don't want this static card where it says Jane Doe Jane Doe Jane Doe we want it to be dynamic right.
+
+09:44.050 --> 09:52.990
+So it sounds like we need what we call prop's properties well and actually have for you a robot's object
+
+09:52.990 --> 09:53.980
+that I've created.
+
+09:53.980 --> 10:00.580
+So I'm just going to add a new file here that says robots dodgy us and one thing here.
+
+10:00.580 --> 10:06.760
+I'm just going to copy and paste this as you can see it is just a constant object it's robots it's an
+
+10:06.790 --> 10:16.350
+array of objects and it has ID name user name email and these are just random that I've made.
+
+10:16.470 --> 10:21.380
+If you want this file then you can grab the files from the end of this section.
+
+10:21.550 --> 10:26.170
+But for now this way I have something that I can use and you can see I'm exporting it.
+
+10:26.350 --> 10:35.990
+I can say import robots from Dot because we're in the same directory.
+
+10:36.430 --> 10:38.940
+Robots.
+
+10:39.020 --> 10:48.740
+Now if I save this we got robots as defined by never used but because this is using export instead of
+
+10:48.740 --> 10:52.580
+export default this file could have multiple exports.
+
+10:52.640 --> 10:54.670
+It just so happens that I only have one.
+
+10:54.830 --> 11:01.910
+The rule is for these phones because there are default Well you can just to cart for ones that aren't
+
+11:01.910 --> 11:02.590
+default.
+
+11:02.690 --> 11:05.470
+You have to restructure it.
+
+11:05.630 --> 11:06.970
+That is like this.
+
+11:06.980 --> 11:14.890
+So that if I have another variable let's say that says Katz then I will have to do that to grab it.
+
+11:16.160 --> 11:21.880
+So we have robots and now I can't give it some properties.
+
+11:21.890 --> 11:24.290
+I can say ID equals.
+
+11:24.320 --> 11:33.080
+And again we have these brackets so that it's a javascript expression and we'll say robots but robots
+
+11:34.540 --> 11:44.010
+first array dog ID has the ID then we have name equals robots.
+
+11:44.100 --> 11:50.890
+Again the first user thought name close to bracket.
+
+11:51.160 --> 12:03.280
+And then we also have email he calls robots first and the array dot email.
+
+12:03.390 --> 12:10.500
+Holy moly that's a lot of typing and I'm going to make this more just so you can see I'm going to copy
+
+12:10.500 --> 12:15.600
+and paste for the other ones as well except for.
+
+12:15.630 --> 12:27.770
+Change this to the second user and then the third use the second user
+
+12:31.720 --> 12:39.700
+Now if I save this it's compiled successfully but nothing has changed because we need to go to cards
+
+12:39.700 --> 12:46.750
+and get a close robust dodgiest for now and this because cards it needs to now accept parameters and
+
+12:46.750 --> 12:47.770
+what are the parameters.
+
+12:47.770 --> 12:56.200
+While it's properties and these props are now props Daut name
+
+13:01.120 --> 13:02.390
+props dot
+
+13:05.730 --> 13:08.600
+I save that go back.
+
+13:08.780 --> 13:13.370
+It's not working well because this is a javascript expression.
+
+13:13.370 --> 13:13.880
+Right.
+
+13:13.910 --> 13:17.740
+So I need to wrap it in curly brackets.
+
+13:18.760 --> 13:23.660
+Just the way it works in GSX save Look at that.
+
+13:23.700 --> 13:29.910
+We have dynamic names that we're passing as properties to each one.
+
+13:29.940 --> 13:31.860
+Let's add tech center here.
+
+13:33.750 --> 13:34.620
+And there you go.
+
+13:34.620 --> 13:35.840
+Now we have everything Center.
+
+13:35.910 --> 13:38.440
+That's a lot better OK.
+
+13:38.450 --> 13:42.170
+But we also passed ID we can use ID to do something cool.
+
+13:42.200 --> 13:47.800
+If you remember in that ESX section we have template strings.
+
+13:48.080 --> 13:55.060
+And because this is a template string we have to wrap it in a curly bracket so it's a javascript expression.
+
+13:55.310 --> 14:03.380
+And now within the robo hash instead of using test here we can randomize what robots we get by using
+
+14:03.860 --> 14:05.330
+this syntax as you remember.
+
+14:05.450 --> 14:08.530
+And in here we can just say Propst dot ID.
+
+14:08.870 --> 14:15.970
+So now this will say Roble hashed out org ID of whatever it is for the robot with the size.
+
+14:15.970 --> 14:20.170
+So we make sure that again the IDs are always dynamic and changing.
+
+14:20.170 --> 14:28.940
+If I save this and go back look at you see that there's a bit of a delay again because we're talking
+
+14:28.940 --> 14:31.370
+to the API and the API is returning.
+
+14:31.370 --> 14:33.740
+Answer for us but how cool is that.
+
+14:33.770 --> 14:37.330
+We just created our own dynamic cards.
+
+14:39.330 --> 14:46.060
+One last thing although this works something nicer that you can do is we have something called destructuring.
+
+14:46.290 --> 14:48.450
+We can do something like Konst
+
+14:50.880 --> 15:00.010
+name email equals props again as you may remember from E6.
+
+15:00.320 --> 15:05.400
+And now I can use outside ideas well
+
+15:11.220 --> 15:12.600
+and it still works.
+
+15:14.190 --> 15:21.100
+Another cool thing that you can do and this is even cleaner is within the parameters you can do destructuring.
+
+15:21.570 --> 15:23.790
+Again you can add this over here now.
+
+15:28.660 --> 15:34.730
+And now if I save it should still work and it does.
+
+15:34.920 --> 15:42.030
+This might be confusing if you're new to destructuring But as you saw step by step we're just receiving
+
+15:42.030 --> 15:46.150
+props and we're destructuring the props right inside of the brackets here.
+
+15:47.400 --> 15:50.390
+This is much cleaner.
+
+15:50.700 --> 15:51.420
+All right.
+
+15:51.420 --> 15:54.150
+That was a lot of fun in a really really fast way.
+
+15:54.150 --> 16:00.150
+We've just created our own cartes in the next section we're going to expand on this and make this even
+
+16:00.150 --> 16:01.050
+better.
+
+16:01.140 --> 16:02.790
+I'll see that one but by.

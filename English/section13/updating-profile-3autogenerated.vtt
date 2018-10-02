@@ -1,0 +1,301 @@
+WEBVTT
+
+00:01.130 --> 00:04.970
+All right we're getting so close I can almost see the end.
+
+00:05.030 --> 00:13.880
+So let's finally get the save button to work so that we can update our user information.
+
+00:13.920 --> 00:19.350
+I'm going to go back to my front end and I'm actually going to move this here so I don't have to keep
+
+00:19.440 --> 00:25.210
+seeing the back end code and within here I want to create a new method.
+
+00:25.370 --> 00:31.670
+I'm once again going to just make this a little bit smaller so it's cleaner and I'm going to create
+
+00:31.670 --> 00:40.310
+a new method called on profile change or let's call it arm profile update.
+
+00:40.650 --> 00:46.520
+And this is going to receive some sort of data and this data.
+
+00:46.970 --> 00:56.650
+Well we're going to do exactly what the back end expects us to do that is to fetch our HTP localhost
+
+00:57.910 --> 01:04.390
+port three thousand where we have our doctor container and we're going to do a profile and we want to
+
+01:04.390 --> 01:11.870
+give it some sort of an idea well we can just do Templi strengths instead of strengths here and change
+
+01:11.860 --> 01:21.830
+changes to dollar sign Kerley back brackets and end here do our users Id remember we get our eyes props
+
+01:22.010 --> 01:29.840
+the user object that includes the ID so we can just simply say stop prop's user Daut Heidi.
+
+01:29.870 --> 01:33.770
+So whatever idea of the user is that's the one that we want to post to.
+
+01:33.980 --> 01:41.760
+And the way we post to fetch is we have to actually tell it because otherwise the default is get.
+
+01:42.080 --> 01:49.570
+So the second parameter is going to be an object that has method of post.
+
+01:49.720 --> 01:52.270
+We're going to give it the headers
+
+01:57.540 --> 01:59.250
+content type
+
+02:02.120 --> 02:08.390
+and we're going to give it Jaison So we're going to say application Jaison because we're sending on
+
+02:08.660 --> 02:19.710
+Jason data and the body as we'll see and like we discussed the Jason string ify.
+
+02:19.750 --> 02:23.470
+So we're turning everything into a string and what are we turning into a string.
+
+02:23.530 --> 02:32.340
+Well we're going to return for and put with the data that the function receives.
+
+02:32.350 --> 02:38.350
+So the body's going to send four men but as the object that contains all the data that the back end
+
+02:38.350 --> 02:40.510
+expects which is name age.
+
+02:40.690 --> 02:48.290
+And Pat let's do a dot then here that's going to receive a response
+
+02:51.520 --> 02:55.920
+after this post call and we'll say that what should we do.
+
+02:56.780 --> 03:02.370
+Well first thing we want to do is definitely toggle the modal.
+
+03:02.610 --> 03:03.830
+We want to turn it off.
+
+03:03.840 --> 03:14.410
+Now remember we received that as part of the props and we also want to run the load user function that
+
+03:14.410 --> 03:18.180
+we have in the app.
+
+03:18.200 --> 03:20.230
+Now what does the load user do again.
+
+03:20.410 --> 03:29.090
+If you go back to Apogee Apogees we see that the load a user function which gets run right off to resign
+
+03:29.460 --> 03:37.600
+simply sets the state of the user object that gets returned and we simply need to pass it some data
+
+03:38.770 --> 03:40.560
+that includes these things.
+
+03:40.600 --> 03:48.580
+So in our case we can just do a nice shorthand way with spread operator I can say this dot props dot
+
+03:48.580 --> 03:53.320
+user whatever we've had before so we get to keep the idea of the user.
+
+03:53.350 --> 03:59.980
+Remember the props include the user id and then we're also going to on top of that any updates that
+
+04:00.040 --> 04:03.060
+may include within the data that is within the form.
+
+04:03.070 --> 04:05.790
+So it's going to overwrite whatever is in the user object.
+
+04:05.860 --> 04:07.380
+Maybe the age got changed.
+
+04:07.390 --> 04:15.240
+In that case it's going to overwrite whatever's in this prop's user and we create this object.
+
+04:15.460 --> 04:15.700
+Right.
+
+04:15.700 --> 04:20.270
+And then finally a super nice catch.
+
+04:20.450 --> 04:26.330
+And for now we'll just do a console log moment of truth would save everything.
+
+04:26.330 --> 04:29.290
+See if this actually works.
+
+04:30.090 --> 04:35.850
+Well first things first make sure that we pass load user and we have access to Loew's user and the prova
+
+04:36.490 --> 04:37.910
+for go back to APT.
+
+04:38.060 --> 04:38.660
+Yes.
+
+04:40.790 --> 04:41.690
+Profile.
+
+04:41.890 --> 04:42.990
+Doesn't have load user.
+
+04:43.000 --> 04:44.880
+So let's pass that.
+
+04:44.890 --> 04:54.340
+If we go back or and here we can just say load user is going to be this dot load user let's save go
+
+04:54.340 --> 04:59.110
+back sign in once again for the millionth time.
+
+05:00.830 --> 05:04.390
+Go to the profile.
+
+05:04.640 --> 05:08.760
+And I just realized we forgot to do something didn't we plan.
+
+05:08.770 --> 05:15.700
+We clicked the sign in button while we need to actually call the on profile update don't we.
+
+05:15.700 --> 05:17.220
+That's the most important part.
+
+05:17.260 --> 05:18.300
+So let's do that.
+
+05:19.290 --> 05:20.940
+I'm going to scroll all the way down.
+
+05:21.150 --> 05:23.040
+Open up whatever we're rendering.
+
+05:23.050 --> 05:25.980
+Scroll all the way down to the save button.
+
+05:26.310 --> 05:31.230
+And here in the Save button let's do a on click function.
+
+05:31.530 --> 05:40.470
+And this on click is going to have this dot on profile update.
+
+05:40.470 --> 05:41.460
+And we're going to pass it.
+
+05:41.500 --> 05:45.800
+Name age and pet.
+
+05:45.920 --> 05:51.020
+And if we go up we see that the user is props and this can get confusing.
+
+05:51.020 --> 05:53.950
+We don't want the props we want whatever the state is.
+
+05:53.960 --> 05:58.150
+So this state which is name Asian pet.
+
+05:58.190 --> 05:59.560
+So let's pass that on.
+
+05:59.570 --> 06:03.400
+I'm going to say this state.
+
+06:03.560 --> 06:04.020
+All right.
+
+06:04.090 --> 06:05.840
+I don't really like the way this looks.
+
+06:05.840 --> 06:08.960
+This should be something cleaner and more descriptive.
+
+06:09.140 --> 06:15.200
+So let's come up here and say Konst name age.
+
+06:15.390 --> 06:22.470
+Pat is going to be called Stop props or this start state because we're only interested in the state
+
+06:22.860 --> 06:30.890
+that the form has been filled with and and here instead of this state we can just use destructuring
+
+06:30.890 --> 06:37.270
+and say name age prop's because it's expecting a data object.
+
+06:37.370 --> 06:40.550
+And again we're not calling the function here.
+
+06:40.550 --> 06:43.960
+We want to assign the function to the on click event.
+
+06:44.240 --> 06:48.290
+So once again just assigning the function like this.
+
+06:48.650 --> 06:54.930
+Let's save and we have some issues and no not props.
+
+06:54.940 --> 06:57.430
+We want Pat here.
+
+06:58.860 --> 07:02.590
+Let's save go back seinen.
+
+07:02.830 --> 07:07.200
+Once again moment of truth here.
+
+07:07.250 --> 07:08.720
+Hopefully everything works.
+
+07:08.720 --> 07:15.160
+I changed my name to hey with some exclamation marks and I'm going to just click we get can't answer
+
+07:15.170 --> 07:18.020
+whatever we want here but we're not doing anything on the database.
+
+07:18.070 --> 07:21.000
+Monday click save o.
+
+07:21.020 --> 07:27.320
+Lee Moli our moto closed and our user was loaded with the new name.
+
+07:27.470 --> 07:28.680
+Congratulations.
+
+07:28.700 --> 07:31.740
+We just were able to update our profile.
+
+07:32.910 --> 07:40.010
+And now every time let's say I sign out and I sign back in again.
+
+07:40.230 --> 07:41.500
+My name's in the database.
+
+07:41.510 --> 07:46.880
+It's now hey with very exclamation or very excited exclamation marks.
+
+07:47.220 --> 07:49.260
+Very very nice.
+
+07:50.190 --> 07:50.970
+All right.
+
+07:51.090 --> 07:57.540
+We've done all of this for the sole purpose of demonstrating sessions but with our profile without some
+
+07:57.540 --> 08:03.080
+sort of a necessary user information it's hard to demonstrate why we need sessions.
+
+08:03.180 --> 08:07.230
+But now finally I know it's long overdue.
+
+08:07.230 --> 08:12.270
+We're going to learn about sessions and implemented in here I'll see in the next one.
+
+08:12.550 --> 08:12.810
+Babai.

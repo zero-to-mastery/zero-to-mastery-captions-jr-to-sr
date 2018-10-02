@@ -1,0 +1,256 @@
+WEBVTT
+
+00:02.070 --> 00:02.840
+Welcome back.
+
+00:02.850 --> 00:08.760
+We're going to start setting up postscripts on our computer so that just like we did with servers of
+
+00:08.770 --> 00:16.020
+Front-End we're going to have a terminal that's running our front end and a back and that is running
+
+00:16.020 --> 00:22.860
+our server but also another terminal that is running a database because as you remember these are just
+
+00:22.860 --> 00:28.880
+computers running somewhere in the same way that we ran our server on our computer.
+
+00:28.880 --> 00:35.440
+We can also run our database on our computer and in this video we're going to get our set up with postscripts.
+
+00:35.670 --> 00:38.690
+Now Mongo D-B has gotten popular.
+
+00:38.820 --> 00:44.950
+However nothing beats a relational database for really developing your knowledge of databases.
+
+00:44.970 --> 00:52.080
+Once you understand relational databases it gives you really really good tools and mental models to
+
+00:52.080 --> 00:56.550
+work with Mongo D-B Mongo DD is very very simple.
+
+00:56.670 --> 01:02.640
+You can think of it as a face on data structure where we just have Jaison that looks like an object
+
+01:03.030 --> 01:09.390
+and we store that information there with as well and relational databases.
+
+01:09.390 --> 01:11.000
+It's more complex than that.
+
+01:11.160 --> 01:17.060
+So if you understand this you are miles ahead when it comes to understanding databases.
+
+01:17.100 --> 01:23.660
+So we're going to be focusing on that because the principles are still the same for Mongo D-B.
+
+01:23.670 --> 01:23.990
+All right.
+
+01:24.050 --> 01:30.110
+So let's get postscripts set up on our computer.
+
+01:30.150 --> 01:34.840
+The first thing we want to do is download something called a gooey.
+
+01:34.860 --> 01:42.290
+So a graphical user interface for postscripts and this exists for pretty much any database out there.
+
+01:42.600 --> 01:45.000
+I like PC quoll because it's free.
+
+01:45.000 --> 01:49.050
+It's really really good for Mac and it's very light and simple.
+
+01:49.050 --> 01:55.500
+I'll also make sure to add notes on how to download something like this and post postscripts in general
+
+01:55.560 --> 02:00.480
+if you're using a Windows machine but otherwise just click on the download link.
+
+02:01.520 --> 02:03.050
+Will be completely fast.
+
+02:03.060 --> 02:08.290
+Just open it up and you'll have something like this that are going to be using throughout the course.
+
+02:08.520 --> 02:11.090
+But there's many many options and can take a look for it.
+
+02:11.280 --> 02:14.720
+You just search for progress as well.
+
+02:15.300 --> 02:23.380
+And once the happy sequel installed you'll have it in your application folder and you can follow along.
+
+02:23.380 --> 02:28.970
+Now let's go back to the terminal in order to have postscripts installed there's many many ways and
+
+02:28.970 --> 02:32.240
+again I'll provide some notes on how you can do it.
+
+02:32.480 --> 02:37.520
+But the best way especially Omak is to use Brue which we've already talked about.
+
+02:37.640 --> 02:44.240
+Every time you do something with homebrew again it's a way to download packages from the Internet on
+
+02:44.240 --> 02:45.310
+your terminal.
+
+02:45.320 --> 02:49.890
+You always want to make sure that you do a brew update to make sure that everything is updated.
+
+02:53.370 --> 02:59.730
+And also a group doctor was just make sure everything is working on your system
+
+03:03.780 --> 03:06.480
+that's clear that perfect.
+
+03:06.480 --> 03:12.470
+Once you have that set up we're going to just say Brue install
+
+03:14.970 --> 03:19.400
+post-crisis skua and this will install for us.
+
+03:19.620 --> 03:24.340
+Postscripts and you see over here that I already have postcards installed.
+
+03:24.340 --> 03:30.070
+But if it's your first time Ill run through the commands and then actually at the end tell you exactly
+
+03:30.070 --> 03:32.940
+how to start using it.
+
+03:33.020 --> 03:37.340
+But in our case also Stelly will be much easier to start postscripts.
+
+03:37.340 --> 03:46.800
+You need to do brew services start postscripts and don't worry this isn't postscripts specific any database
+
+03:46.820 --> 03:52.080
+they are downloading you're essentially downloading the software and then you want to start the service.
+
+03:52.190 --> 03:58.480
+Each one has its own commands but it's as simple as Googling and figuring out how to run the database.
+
+03:58.490 --> 04:02.880
+So we've started postscripts Eskew all it looks like.
+
+04:02.880 --> 04:12.810
+I've already started the service and just to show you if I actually do stop here it will stop the terrorists
+
+04:12.860 --> 04:13.250
+service
+
+04:16.040 --> 04:24.470
+and just to start again and you can see that it's starting now in order for us to use postscripts we
+
+04:24.470 --> 04:26.200
+need to create a database.
+
+04:26.630 --> 04:35.200
+And the way we do that is to use the Create D-B command that has come up once we've installed postscripts.
+
+04:35.380 --> 04:37.050
+And here we can call it whatever we want.
+
+04:37.090 --> 04:40.700
+So let's call that test.
+
+04:40.840 --> 04:44.400
+It's going to create the D-B And there you go.
+
+04:44.440 --> 04:45.810
+Here's a quote part.
+
+04:45.820 --> 04:53.010
+If I go back to my PC he will open this up when we close this.
+
+04:53.110 --> 04:55.420
+I have over here piece sequel.
+
+04:55.600 --> 04:59.880
+And it asks for the host which is the link to where the database is located.
+
+05:00.010 --> 05:04.160
+In my case it's located at my localhost right.
+
+05:04.180 --> 05:07.680
+It's running on my computer.
+
+05:07.770 --> 05:10.740
+So you want it to be localhost and the port number.
+
+05:10.740 --> 05:17.220
+This is the default poor number of 5:43 to remember how we had port three thousand three thousand one
+
+05:17.220 --> 05:19.250
+for the front end and backend.
+
+05:19.290 --> 05:20.150
+It's similar to that.
+
+05:20.160 --> 05:22.940
+It's opening up a port for it to listen to a database.
+
+05:23.160 --> 05:28.050
+And this is the standard port for postscripts that you'll see.
+
+05:28.050 --> 05:36.000
+So when I did the Started progress and create D-B the default or 5 4 3 2 was already set.
+
+05:36.000 --> 05:41.100
+I can actually set what ports and change it up but we want to keep everything standard so we'll keep
+
+05:41.100 --> 05:43.400
+it the way it is.
+
+05:43.550 --> 05:52.260
+If I now go to the database and we call that tests so again we'll do test database hit connect.
+
+05:52.270 --> 05:52.750
+All right.
+
+05:52.750 --> 05:58.840
+We're connected to the database but there's not much in here as there.
+
+05:59.090 --> 06:03.060
+But at least we know that we're connected to localhost test.
+
+06:03.160 --> 06:08.560
+And another way to connect to this remember this is a gooey a graphical user interface and I'm showing
+
+06:08.560 --> 06:12.760
+you this because it's really good for demo purposes but I wanted to get comfortable working with the
+
+06:12.760 --> 06:20.740
+terminals well in order to do the same thing we just did with the Guti we can type in PSU Well again
+
+06:20.740 --> 06:26.530
+which is a command that we'll get when we install postscripts and we'll say which database we want to
+
+06:26.530 --> 06:27.250
+connect to.
+
+06:27.340 --> 06:30.640
+In our case will be the test.
+
+06:30.830 --> 06:32.150
+And there you go.
+
+06:32.330 --> 06:34.990
+Just like when we run node and it changes terminals.
+
+06:35.000 --> 06:42.440
+Now we're inside of postscripts that's running on our computer but we don't know any commands yet.
+
+06:42.440 --> 06:48.850
+Dewey So in the next video we're going to learn some bascule commands and finally create some tables
+
+06:49.270 --> 06:51.070
+in our postscripts database.
+
+06:51.100 --> 06:52.780
+I'll see that one by.

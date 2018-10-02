@@ -1,0 +1,286 @@
+WEBVTT
+
+00:02.450 --> 00:03.430
+It's a long process.
+
+00:03.440 --> 00:10.730
+But we're getting there we've created our JWT token and now we're also able to send our JWT token to
+
+00:10.730 --> 00:11.540
+the client.
+
+00:11.630 --> 00:16.310
+But at the same time we now have a rattus database in our container.
+
+00:16.310 --> 00:21.270
+We can now store this token into our rattus database.
+
+00:21.470 --> 00:23.390
+And this is where we're going to do in this video.
+
+00:23.480 --> 00:32.510
+We're going to store this information and set our token so that we have this session database that we
+
+00:32.510 --> 00:39.290
+can now watch over and every time a user requests for profile we always check our read a server that
+
+00:39.590 --> 00:42.100
+contained the token it's going to be a fun one.
+
+00:42.230 --> 00:43.190
+Let's get started.
+
+00:44.650 --> 00:54.520
+Let's go back to the Create sessions function because now the Create sessions function should actually
+
+00:54.520 --> 00:58.500
+create the session and store something in the rattus database.
+
+00:58.510 --> 01:01.290
+We have our rattus client already ready to go.
+
+01:01.300 --> 01:04.730
+It's connected so we can start using some rattus comments.
+
+01:04.840 --> 01:13.090
+If I go back to our documentation here we see that we can just do dots set with the key and the value
+
+01:13.420 --> 01:19.650
+and other commands that this client allows us to do in our case.
+
+01:19.710 --> 01:22.920
+I want to have a new function in here.
+
+01:22.950 --> 01:29.690
+We signed the token but now we also want to set the token in our read this database.
+
+01:29.770 --> 01:41.880
+So I'm going to say that instead of returning this we want to return the function set token and this
+
+01:42.000 --> 01:49.310
+set token function is going to receive our JWT token and the ID.
+
+01:49.520 --> 01:57.550
+And as long as everything goes well and we're able to save this and the read us database then we're
+
+01:57.550 --> 01:59.830
+actually going to return the
+
+02:04.680 --> 02:09.030
+response.
+
+02:09.070 --> 02:13.070
+So once the token is set there's no airs.
+
+02:13.080 --> 02:20.150
+We're going to return this Hodgett and we might also want to do a dot catch.
+
+02:20.250 --> 02:21.570
+I need a dot here.
+
+02:21.660 --> 02:25.700
+I might also want to do a dot catch in case the set token function doesn't work.
+
+02:25.740 --> 02:28.110
+We know that we want to return a promise.
+
+02:28.110 --> 02:33.600
+So for now just to console log so that we can debug it.
+
+02:33.620 --> 02:44.900
+Now let's create the set token function the set token function as we can see receives two parameters
+
+02:45.260 --> 02:49.750
+the token and the ID.
+
+02:50.000 --> 02:53.720
+And if we go back to our documentation and we scroll down
+
+02:57.960 --> 03:03.440
+we see that if we want to return a promise which is what we want to do because we're using daat then
+
+03:03.630 --> 03:07.060
+and don't catch it again remember we're saying then don't catch.
+
+03:07.230 --> 03:12.750
+Well it actually doesn't return a promise by default.
+
+03:13.140 --> 03:20.640
+And in order to return a promise we have to use an external library like Bluebird that actually makes
+
+03:20.640 --> 03:22.080
+things into a promise.
+
+03:22.080 --> 03:27.300
+Luckily for us Bluebird it was something that was used back in the day when promises weren't native
+
+03:27.530 --> 03:33.430
+and node but we actually have a way to make sure that this returns a promise.
+
+03:33.430 --> 03:41.870
+I mean we've done it all over the codebase with promised reject and we can simply wrap this in a promise
+
+03:42.230 --> 03:44.610
+dot for now just resolve.
+
+03:44.960 --> 03:48.500
+So we're just going to assume that it's going to resolve for now.
+
+03:48.500 --> 03:54.200
+And this is something that you might want to add a promise and actually create a new promise with resolve
+
+03:54.200 --> 03:56.210
+and reject.
+
+03:56.260 --> 03:59.390
+For now we can just say promise that resolve.
+
+04:00.260 --> 04:07.190
+We're going to return this promise of resolve and this promise resolve is going to do the greatest client
+
+04:08.590 --> 04:16.360
+dot set and remember set and rattus is allows us to give it some strength.
+
+04:16.520 --> 04:28.020
+I'm going to set it so that the Tokin will be the key and the value will be the Heidi and just to name
+
+04:28.020 --> 04:28.530
+it better.
+
+04:28.620 --> 04:37.200
+Let's just say that this is going to be key value and this is going to be key and value.
+
+04:37.470 --> 04:43.110
+Actually I don't know if this is better naming because it's less descriptive but for now we're setting
+
+04:43.110 --> 04:51.110
+the Tokin with key value and hopefully returning a promise that as long as it results which it does
+
+04:51.170 --> 04:56.460
+because we are returning promised to resolve we're going to return a success user ID token.
+
+04:56.750 --> 04:57.440
+Let's save that
+
+05:01.060 --> 05:03.080
+and have a bit of an air here.
+
+05:04.910 --> 05:10.130
+Oh and I see that the Sendak's over here just make sure that we're returning an object.
+
+05:10.130 --> 05:12.530
+Let's just do a return here.
+
+05:13.990 --> 05:14.780
+That's a lot better.
+
+05:16.570 --> 05:17.430
+Let's try that again.
+
+05:20.510 --> 05:21.260
+All right.
+
+05:21.260 --> 05:22.010
+That's better.
+
+05:22.010 --> 05:24.990
+We're making sure that we're returning this object.
+
+05:25.010 --> 05:26.330
+Now let's test this out.
+
+05:27.300 --> 05:38.920
+We're going to both go back to the front and want to sign out and now I'm going to sign in with a dot.com
+
+05:40.110 --> 05:46.880
+a and I'm going to open up the network to click seinen.
+
+05:46.890 --> 05:47.250
+All right.
+
+05:47.250 --> 05:48.630
+We're signed in.
+
+05:48.630 --> 05:53.310
+If I take a look over here we have our token that we received.
+
+05:53.370 --> 05:54.330
+That's great.
+
+05:55.320 --> 05:57.430
+Now here's the interesting part.
+
+05:57.660 --> 06:07.440
+If I go back to my red S server I should be able to say get and the key that is this JWT token that
+
+06:07.440 --> 06:08.510
+we're storing.
+
+06:08.620 --> 06:20.750
+See a look of that we're able to get one because remember the I.D. of the user is what if I enter a
+
+06:20.780 --> 06:25.850
+get key that doesn't exist I'll get nil.
+
+06:25.920 --> 06:33.870
+We were successfully able to actually set a token and added to the rattus database.
+
+06:34.050 --> 06:36.690
+How easy and fun was that.
+
+06:36.810 --> 06:43.820
+We now have our token within the rattus database.
+
+06:43.880 --> 06:51.590
+Now again some of you might be asking are we using JWT the right way because GAAP is already contain
+
+06:51.590 --> 06:53.030
+information within it.
+
+06:53.030 --> 06:56.600
+We could just verify them by running that verify method.
+
+06:56.840 --> 07:02.090
+And again this is going back to a very hotly debated topic.
+
+07:02.090 --> 07:06.910
+People may disagree with how things work or how things might get done.
+
+07:07.070 --> 07:15.220
+But to me even though this is a little bit longer than a cookie that we might set it still has some
+
+07:15.370 --> 07:21.840
+flexibility in that we're able to have information that we can decode here with greater flexibility.
+
+07:21.850 --> 07:29.350
+There is a greater responsibility however we now have a full control with our rattus database to do
+
+07:29.350 --> 07:34.760
+what we want if we want to just disallow a user to sign in or ban a user.
+
+07:34.840 --> 07:38.580
+Simply just use the delete key word.
+
+07:38.710 --> 07:42.880
+And as long as I delete this token then I'm all set.
+
+07:42.940 --> 07:49.270
+But it also allows me to use this information perhaps in other parts of my app and decode this J-ws
+
+07:49.390 --> 07:51.920
+token and get some information about the user.
+
+07:52.030 --> 07:59.380
+But anyway if we go back we've just managed to set our information in the read us client.
+
+07:59.470 --> 08:01.430
+Very very exciting.
+
+08:02.650 --> 08:07.060
+And if we go back to our function everything is starting to look really really nice.
+
+08:07.700 --> 08:13.500
+I think we need to take a break and finally finalize this part of our application.
+
+08:13.590 --> 08:14.340
+I'll see in the next one.

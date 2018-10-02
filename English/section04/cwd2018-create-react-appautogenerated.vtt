@@ -1,0 +1,418 @@
+WEBVTT
+
+00:01.260 --> 00:02.070
+Welcome back.
+
+00:02.130 --> 00:06.310
+It's time to build our robo friends app to get started.
+
+00:06.450 --> 00:08.810
+Well let's open up our terminal.
+
+00:08.820 --> 00:11.220
+We should be comfortable with it by now.
+
+00:11.400 --> 00:17.910
+For this section I really really recommend coding along and following along the processes because you
+
+00:17.910 --> 00:23.260
+will learn a lot better by actually doing this yourself.
+
+00:23.310 --> 00:24.390
+And like I promised.
+
+00:24.480 --> 00:28.700
+It's fairly easy and we'll have a beautiful app at the end of it.
+
+00:28.800 --> 00:35.400
+But for those that enjoy just watching and working afterwards I will provide the final robo friends
+
+00:35.490 --> 00:40.520
+app files for you at the end of this section.
+
+00:40.810 --> 00:41.920
+So we have nothing yet.
+
+00:41.920 --> 00:43.350
+We're in the desktop.
+
+00:43.390 --> 00:52.740
+We need to actually create a project folder and we do need to install react.
+
+00:52.820 --> 01:01.320
+Now if you remember in NPM we could install react and have it as part of our packages in packaged Arjay
+
+01:01.320 --> 01:02.000
+so on.
+
+01:02.480 --> 01:07.370
+But there's a tool again because re-act types are so common.
+
+01:07.420 --> 01:15.260
+There's a tool that allows us to write a way create a react up with all our files already put in place.
+
+01:15.320 --> 01:21.440
+It's called create re-act app.
+
+01:21.630 --> 01:29.730
+This tool is a global package that you want to install from NPM and it creates a starter project that
+
+01:29.760 --> 01:36.320
+contains what pack it contains baseball so we can use the latest javascript features.
+
+01:36.570 --> 01:41.810
+It contains Linton and debugging that we haven't really looked at yet.
+
+01:41.940 --> 01:46.830
+It creates all this infrastructure for you so right away you can start writing the app and it's a very
+
+01:46.830 --> 01:51.670
+very good tool that a lot of people use so we're going to install create react up.
+
+01:51.690 --> 01:55.830
+If you remember we simply do NPM install Dashti
+
+01:59.050 --> 02:04.020
+and this will give us create react to again if you get these errors.
+
+02:04.120 --> 02:07.180
+Always remember to do sudo
+
+02:14.500 --> 02:20.870
+now that we have create re-act out we simply say create re-act app and the name of our app.
+
+02:20.890 --> 02:25.360
+In our case we'll call it robo friends.
+
+02:29.130 --> 02:35.960
+You see that it's installing a bunch of things that we need.
+
+02:36.350 --> 02:44.210
+It looks like it's a success created Roble friends at my directory and it even gives you some good comments
+
+02:44.240 --> 02:52.550
+NPM start NPM run build NPM test NPM Ranja jacked but we'll get to that later.
+
+02:52.550 --> 02:55.790
+Let's see what we have in our desktop folder.
+
+02:57.070 --> 03:01.200
+We have robo friends that's already been created for us.
+
+03:01.590 --> 03:04.800
+OK let's C.D into that.
+
+03:04.950 --> 03:14.280
+And now if I do ls who looks like we have a ton of folders and files such as Pakistan adjacent that
+
+03:14.430 --> 03:18.100
+were already created for us and no modules How awesome is that.
+
+03:18.120 --> 03:23.880
+It already installs react in all the dependencies that we need.
+
+03:23.880 --> 03:28.780
+As a matter of fact if we go to the desktop we see the folder here.
+
+03:28.920 --> 03:36.120
+So let's drag this to Sublime Text open it up and I'm going to change the screens around just so we
+
+03:36.120 --> 03:36.690
+can see
+
+03:40.230 --> 03:42.370
+both of these at the same time.
+
+03:47.630 --> 03:56.130
+Now before I show you what's in the folder we see that if we go to package our Jason we see the dependencies
+
+03:56.130 --> 03:57.480
+we have to react.
+
+03:57.480 --> 04:04.830
+We have something called the re-act dam and re-act scripts and we also have a bunch of scripts that
+
+04:04.890 --> 04:07.120
+they've already created for us.
+
+04:07.110 --> 04:10.790
+We start build test and Egypte.
+
+04:10.960 --> 04:16.660
+Let's start off with the start because while it looks like start reads the re-act scripts and starts
+
+04:16.660 --> 04:17.890
+up our server.
+
+04:18.150 --> 04:19.750
+So I'm going to say NPM start
+
+04:26.840 --> 04:35.940
+look that we have on our local host a sample react to so everything is working.
+
+04:35.980 --> 04:40.420
+We didn't have to do anything except for run just two commands really.
+
+04:40.420 --> 04:41.330
+Very cool.
+
+04:41.360 --> 04:46.480
+OK let's see what Crea react tab has created for us.
+
+04:46.480 --> 04:52.560
+We have a read me which is just information that you remember when we put it on get hub.
+
+04:52.660 --> 05:01.000
+This will display in the project folder we have package Jaison which again makes sense.
+
+05:01.230 --> 05:03.390
+I'll explain to you what the dependencies mean.
+
+05:03.450 --> 05:04.550
+And the next video.
+
+05:04.890 --> 05:12.080
+But we see that scripts were provided for and all of them use re-act scripts.
+
+05:12.360 --> 05:21.450
+Now Riak scripts is what makes KHRAIS react up so awesome instead of us installing things like wet pack
+
+05:21.720 --> 05:22.910
+and baseball.
+
+05:22.920 --> 05:29.270
+Do you remember how much setup we had to do to get ESX javascript working.
+
+05:29.430 --> 05:36.120
+And then we also use browser ephi to bundled with javascript bots will react scripts does everything
+
+05:36.120 --> 05:42.860
+for you and it uses the latest and greatest that we don't need to worry about any of it.
+
+05:42.900 --> 05:48.480
+So it allows for people to build really really fast apps and you can use the ject.
+
+05:48.510 --> 05:53.970
+If you end up wanting to customize the re-act scripts and go on your own.
+
+05:53.970 --> 06:00.660
+So as your project gets bigger and bigger you can always eject and customize your app is the best way
+
+06:00.660 --> 06:02.390
+to start every act project.
+
+06:02.400 --> 06:06.870
+It's managed by the Facebook team and it is really really good.
+
+06:08.530 --> 06:09.000
+OK.
+
+06:09.150 --> 06:16.860
+We also see that there's package locked database on file and this is a file that automatically is generated
+
+06:16.860 --> 06:18.280
+by package Jaison.
+
+06:18.570 --> 06:25.950
+It makes sure that the version numbers of your dependencies are locked in so that if I give this project
+
+06:25.950 --> 06:33.300
+to anybody else anywhere around the world we make sure that the versions are correct so that it works
+
+06:34.080 --> 06:35.270
+100 percent of the time.
+
+06:36.310 --> 06:40.830
+We also have something called good ignore and it has a dot in front of it.
+
+06:40.840 --> 06:42.520
+It's actually called the dot file.
+
+06:42.820 --> 06:47.180
+And before we run get and push this project on get help.
+
+06:47.530 --> 06:54.430
+Well it's check this file and if it sees anything in here that it shouldn't include it automatically
+
+06:54.430 --> 06:56.130
+says ignore these files.
+
+06:56.140 --> 07:01.690
+So remember how I said node modules we don't want to push that to a repo because while we have Pakistan
+
+07:01.780 --> 07:09.140
+Jason and it creates unnecessary work and wait to push our project Well again we don't care about known
+
+07:09.140 --> 07:10.240
+largest folder.
+
+07:10.240 --> 07:14.810
+We don't care about the covers folder which again is about testing we don't need to cover that.
+
+07:15.040 --> 07:20.160
+And we also don't care about the build folders and a couple of other ones.
+
+07:20.530 --> 07:25.870
+It just automatically generates this for us we don't need to touch.
+
+07:26.070 --> 07:32.760
+We then have well obviously our node modules and you can see over here there is a ton of them that again
+
+07:32.790 --> 07:36.890
+create re-act up just builds for us automatically.
+
+07:36.940 --> 07:41.770
+We also have a public folder and here we think should be familiar.
+
+07:41.770 --> 07:48.770
+We have indexed that H.M. we have something called manifest d'Agde Jaison.
+
+07:49.050 --> 07:56.250
+It's a new feature that allows people to download a shortcut to your website and have an icon on their
+
+07:56.250 --> 07:56.700
+desktop.
+
+07:56.700 --> 07:58.590
+But again we don't need to worry about it.
+
+07:58.710 --> 08:06.750
+And then we have Traficon ICAO which is the little icon that shows up at the top over here and he can
+
+08:06.750 --> 08:12.990
+change that with whatever iso file you want and there's online tools to generate these for you.
+
+08:12.990 --> 08:14.900
+Again something that we don't need to worry about.
+
+08:16.470 --> 08:21.210
+And finally we have the SIRC folder that is the source folder.
+
+08:21.350 --> 08:25.020
+This is where all the magic re-act happens.
+
+08:25.320 --> 08:29.580
+If you look at indexed Yes that is the main script file.
+
+08:29.610 --> 08:37.050
+We're doing a few imports which you remember we're just importing different scripts and we're just simply
+
+08:37.050 --> 08:40.640
+saying this new syntax that we've never seen before.
+
+08:40.650 --> 08:45.250
+Re-act Dom Rander app document get LMM by ID.
+
+08:45.270 --> 08:46.850
+OK we know this.
+
+08:46.950 --> 08:55.380
+So we're grabbing a element of ID root and we're saying re-act Dom Brender app.
+
+08:55.650 --> 09:03.350
+If we go to index thought ASTM file we see here and they have really nice comments so you can read we
+
+09:03.350 --> 09:12.190
+see that within the body there is just one div there's no script file is in case a browser isn't using
+
+09:12.190 --> 09:13.220
+javascript.
+
+09:13.230 --> 09:15.610
+Again we don't need to worry about that.
+
+09:15.640 --> 09:22.030
+It just comes with the file because it's good practice but in the body we just have this div with ID
+
+09:22.030 --> 09:23.920
+root and nothing else.
+
+09:23.940 --> 09:26.140
+Yet when we go to our app we see that.
+
+09:26.320 --> 09:28.190
+Well there's definitely something there.
+
+09:28.300 --> 09:36.260
+There's a least tax and a least a logo there so going back here without knowing and you react we can
+
+09:36.260 --> 09:47.240
+say that OK we're grabbing this idea route an index dot J.S. file and we're saying we want to render
+
+09:47.540 --> 09:54.050
+this app component and this is what we called GSX syntax which we'll get into later.
+
+09:54.840 --> 10:01.240
+This app is reacts way of saying this is a Riak component and I want you to render on the screen in
+
+10:01.260 --> 10:06.210
+the body this so I can actually change this too.
+
+10:06.510 --> 10:13.300
+While we can say H-1 Hello World.
+
+10:13.930 --> 10:14.640
+Hello.
+
+10:18.120 --> 10:18.710
+H-1.
+
+10:19.600 --> 10:30.120
+And now if I save this you'll notice that re-act automatically compiles this for us so I don't to refresh
+
+10:30.150 --> 10:35.190
+and look at that on our Web site we have hello world.
+
+10:35.230 --> 10:36.460
+Very cool.
+
+10:36.460 --> 10:39.400
+Now again another great thing about Creba react up.
+
+10:39.400 --> 10:43.590
+It also gives you warnings that says app is defined but never used.
+
+10:43.600 --> 10:48.870
+So if I go over here I'm importing app but I'm never using it.
+
+10:48.880 --> 10:56.690
+So we also get really really good advice in our terminal of how we can improve the app.
+
+10:56.960 --> 10:57.430
+OK.
+
+10:57.700 --> 11:02.110
+The final thing I want to show you before we get into the next section we actually start digging into
+
+11:02.110 --> 11:05.740
+the code as you can see the coloring is kind of off.
+
+11:05.760 --> 11:12.210
+And that's because Sublime Text doesn't really understand what's going on here.
+
+11:13.740 --> 11:26.640
+If we change this to Babel javascript there yo we get the nice syntax and everything looks fine.
+
+11:27.630 --> 11:28.440
+Perfect.
+
+11:28.500 --> 11:33.230
+We have our apps set up I wanted to change the Taghavi here too.
+
+11:33.240 --> 11:33.840
+Hello world.
+
+11:33.840 --> 11:37.500
+For now just to make sure that everything is working.
+
+11:37.600 --> 11:44.370
+But for now you have a setup in the next video we're going to go through the rest of the files and actually
+
+11:44.370 --> 11:47.080
+start building our first component.
+
+11:47.220 --> 11:48.370
+It's going to be a lot of fun.
+
+11:48.420 --> 11:49.360
+I'll see that one.

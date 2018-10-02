@@ -1,0 +1,424 @@
+WEBVTT
+
+00:01.520 --> 00:02.880
+Welcome back.
+
+00:02.880 --> 00:10.620
+We saw that we had an issue here where we need to create our daquiri databases or our postscripts databases
+
+00:11.000 --> 00:12.850
+in Dr..
+
+00:12.990 --> 00:20.910
+And when we first did this on our machine we had to open up the sequel and manually create this using
+
+00:20.910 --> 00:22.960
+the query table.
+
+00:23.490 --> 00:29.550
+And again another reason the reason we're using docker is so that developers don't have to keep doing
+
+00:29.550 --> 00:32.480
+this over and over and over as they join the team.
+
+00:32.670 --> 00:36.540
+So let's build that out as part of the doc or bill
+
+00:40.020 --> 00:42.010
+going to minimize this a little bit.
+
+00:42.320 --> 00:48.280
+And I'm going to go into our project folder and create a new folder.
+
+00:49.590 --> 00:56.950
+It's going to be called postscripts And this video might be a little bit difficult but it's a great
+
+00:56.950 --> 01:02.380
+set up that once you remember then you just repeat it on numerous project numerous projects and just
+
+01:02.680 --> 01:04.030
+do it the way it is now.
+
+01:04.090 --> 01:08.680
+So you can always come back to this video as long as you follow along and understand what we're trying
+
+01:08.680 --> 01:10.800
+to do how we're connecting the dots.
+
+01:10.810 --> 01:12.040
+That's the important part.
+
+01:14.040 --> 01:17.730
+So I just created a postscripts folder in here.
+
+01:17.820 --> 01:22.520
+We're going to create a new file and it's going to be a docker file.
+
+01:22.580 --> 01:29.750
+Now this stalker file is going to now do something really interesting instead of docker compose where
+
+01:29.750 --> 01:36.680
+we just had our image set up with no other Builth steps.
+
+01:36.850 --> 01:39.490
+We're actually going to customize this.
+
+01:39.670 --> 01:43.540
+I'm going to say that I want postscripts version ten point three.
+
+01:43.810 --> 01:46.580
+And this can be whatever you want it to be.
+
+01:46.690 --> 01:51.870
+And in here I want to add a few files inside of the dock or container.
+
+01:51.930 --> 01:58.900
+I'm going to use the command add because I want to add the tables folder which we're going to create
+
+01:58.900 --> 02:02.260
+in here to the docker.
+
+02:02.440 --> 02:07.610
+Let's call it entry point in it.
+
+02:07.950 --> 02:14.810
+D.B and this is going to be a dot defile tables.
+
+02:16.970 --> 02:17.800
+All right.
+
+02:17.990 --> 02:19.280
+What just happened here.
+
+02:19.940 --> 02:26.680
+This first file is saying that we want to create our users and log in table.
+
+02:27.260 --> 02:32.840
+And the way we're going to do that is we're going to create a new folder in our postscripts folder called
+
+02:33.110 --> 02:39.240
+Tables which is referenced here.
+
+02:39.320 --> 02:48.630
+Now within this table's folder I'm going to have two files I'm going to have the log in table which
+
+02:48.630 --> 03:00.840
+uses a dot as well file type and a another table called users which again uses the rescue all file to.
+
+03:00.850 --> 03:08.010
+Now the file type we just are able to write you all commands inside of this.
+
+03:08.060 --> 03:13.280
+So if we go back to how we create our users table and I just copy and paste this
+
+03:16.210 --> 03:18.610
+I can just say create table users.
+
+03:18.820 --> 03:24.130
+I have some nice syntax again Id of serial primary key.
+
+03:24.130 --> 03:30.940
+We have a name that has variable character with limit of 100 email that is a text type that has to be
+
+03:30.940 --> 03:32.600
+unique and cannot be No.
+
+03:32.860 --> 03:38.800
+We have an trees that is big integer that is it can go up pretty pretty high in number and the default
+
+03:38.800 --> 03:39.810
+is going to be 0.
+
+03:39.820 --> 03:46.800
+So when the first register there are going to be 0 and then our joint time stamp not no.
+
+03:47.110 --> 03:52.960
+These are just basic obscure commands to start create a table something that you can look over and really
+
+03:52.960 --> 03:54.980
+depends on each situation.
+
+03:55.050 --> 04:01.680
+Now another good practice when you're working with obscure all files is to do something called transactions
+
+04:01.690 --> 04:08.830
+that is to make sure that this transaction completes and it doesn't half fill the users table or we
+
+04:08.830 --> 04:12.280
+want to make sure that these things are what we call atomic.
+
+04:12.280 --> 04:18.880
+That is if this fails or part of it fails then just don't bother creating the users table at all because
+
+04:19.090 --> 04:20.380
+there's just going to mess things up.
+
+04:20.620 --> 04:27.100
+So the syntax for this is to say begin transaction.
+
+04:27.200 --> 04:35.190
+And again this is just good practice that the syntax that you have to use to make sure I the right began
+
+04:35.220 --> 04:36.140
+transaction.
+
+04:36.390 --> 04:39.960
+And then finally at the end of the transaction we say commit.
+
+04:40.060 --> 04:44.640
+I said yes commit those create table changes.
+
+04:44.850 --> 04:49.350
+So we have our users table if we go back let's grab our log in tables as well.
+
+04:49.410 --> 04:56.850
+If I go back to my history Well I don't have the history so we'll have to write it all by hand again
+
+04:57.000 --> 05:00.240
+as we remember begin transaction
+
+05:04.360 --> 05:08.350
+and go on to create table
+
+05:10.910 --> 05:21.740
+luggin and this log and table groups now something we wanted to do was go back circular brackets is
+
+05:21.740 --> 05:28.720
+going to have an ID of again serial primary
+
+05:35.630 --> 05:47.790
+it's going to have a hash of variable character a hundred and it cannot be No.
+
+05:47.860 --> 05:58.730
+And then finally it's going to have the email that is of text has to be unique and it's not null and
+
+05:58.730 --> 06:00.050
+we don't need a comma here.
+
+06:02.230 --> 06:07.190
+Finally semicolon and we want to commit this all right.
+
+06:07.340 --> 06:13.700
+So we've just created to rescue all files but they're not really doing anything right now are they.
+
+06:14.440 --> 06:21.400
+Luckily for us there is another Escorial file that we can use and this one we're just going to put at
+
+06:21.400 --> 06:23.380
+the root of the post-crash folder.
+
+06:23.590 --> 06:32.170
+And I'm going to call it deploy schemas because these are schemas that we're deploying.
+
+06:32.430 --> 06:35.250
+And again it's going to be a dot Eskew all file
+
+06:38.070 --> 06:49.430
+now within here I can comment and just say that this is deploy Frash database tables
+
+06:52.300 --> 06:56.290
+now in here we're going to do backslash.
+
+06:56.960 --> 07:05.900
+And this is going to run the new file that we're going to create now and here in our Dr far remember
+
+07:05.900 --> 07:13.610
+how we said at the table folder that we just created in its table so make sure I say tables here to
+
+07:13.610 --> 07:18.440
+the docker and touchpoint dush Doddie that table.
+
+07:18.440 --> 07:23.920
+So this is the folder we're going to create on our container.
+
+07:24.000 --> 07:33.010
+I can actually just copy this go back to the deploy schema and say run the tables.
+
+07:33.020 --> 07:36.750
+That is the use and let's run the users.
+
+07:36.940 --> 07:43.160
+As you all table because in the doc or compose file or the doc or file We're moving whatever's in the
+
+07:43.160 --> 07:46.720
+tables which is log in and users to this table thing.
+
+07:46.790 --> 07:50.820
+So the deploy is simply saying run this secure command.
+
+07:50.900 --> 07:51.660
+We just create.
+
+07:51.770 --> 07:54.000
+Which again is the users table.
+
+07:54.410 --> 08:07.520
+And we can do the same for the log and table.
+
+08:07.540 --> 08:11.000
+Now we have the tables we have the deploy.
+
+08:11.170 --> 08:15.430
+The last thing we need to do is actually run this file in the container.
+
+08:15.430 --> 08:22.360
+And the way we called this is once again in the doc profile we add another line saying add and this
+
+08:22.360 --> 08:31.220
+time because we're just adding the deploy schema Eskew all I'm going to say deploy schemas Don Pascual
+
+08:32.350 --> 08:38.160
+into the main folder like this.
+
+08:38.210 --> 08:41.330
+Now let's save and see if there's any errors.
+
+08:42.080 --> 08:50.310
+As we run this I'm going to close down everything run docker composed down and then go with Doc or compose
+
+08:50.790 --> 08:58.010
+built.
+
+08:58.030 --> 08:58.840
+All right.
+
+08:58.840 --> 09:07.860
+If you actually see up here you see that there is a create database called that was made.
+
+09:07.950 --> 09:08.340
+All right.
+
+09:08.340 --> 09:10.260
+So let's see if it actually works.
+
+09:10.260 --> 09:16.690
+Now if I go back to my app so let's give it another go here.
+
+09:16.740 --> 09:21.130
+Let's see if we can register now.
+
+09:21.480 --> 09:22.510
+We have bad requests.
+
+09:22.510 --> 09:24.180
+Let's see what we got wrong here.
+
+09:29.650 --> 09:33.630
+And again we have to think about what we're doing.
+
+09:33.630 --> 09:40.950
+Frigo to docker compose remember how we're just building the postscripts from Image.
+
+09:41.430 --> 09:42.750
+And we don't want to do that anymore.
+
+09:42.780 --> 09:50.300
+We have a docker file and I remember any time we need to use a docker file we want to run build.
+
+09:50.610 --> 09:53.230
+So instead of image I can say build.
+
+09:53.370 --> 09:54.640
+And what do we want to build.
+
+09:54.640 --> 09:59.610
+We want to build whatever's inside of postscripts or whatever doc follows at the root of postscripts
+
+10:00.120 --> 10:03.330
+in our case we can just write it like this.
+
+10:03.360 --> 10:05.790
+Let's say this again bring the service down.
+
+10:09.830 --> 10:13.330
+Oh and make sure that I add the dots here.
+
+10:16.560 --> 10:23.310
+And come on back up.
+
+10:23.310 --> 10:26.770
+All right let's make the output a little bit bigger.
+
+10:27.110 --> 10:33.170
+And if we scroll up look of that in our postscripts output we have creative role create database but
+
+10:33.170 --> 10:40.810
+also begin because remember we began a transaction we created a table we committed another transaction
+
+10:41.080 --> 10:43.230
+that created another table.
+
+10:43.360 --> 10:46.670
+So it looks like everything is running.
+
+10:46.690 --> 10:48.250
+The databases were created.
+
+10:48.310 --> 10:54.430
+If I go back again and rerun this let's open up the terminal make sure that we don't get any errors
+
+10:57.380 --> 11:08.850
+clear this and I won't hit register WOO-HOO who we just registered and we have 10 in here and let's
+
+11:08.850 --> 11:11.840
+just add a image here.
+
+11:11.880 --> 11:16.000
+Let's go with whatever face we can find.
+
+11:20.160 --> 11:27.890
+Let's use this one.
+
+11:28.010 --> 11:29.300
+Look at that.
+
+11:29.520 --> 11:33.040
+Her smart brain app is finally working.
+
+11:33.090 --> 11:35.750
+It's the exact same thing as we've done before.
+
+11:36.090 --> 11:42.780
+Nothing's changed on the Front-End but oh boy has a lot changed on the back and we now have all this
+
+11:42.900 --> 11:51.680
+amazing logging but post Chris and back and are running inside of the same command.
+
+11:51.970 --> 11:59.830
+Not only do we not have to worry about setting up a table making sure that a developer has postscripts
+
+12:00.040 --> 12:01.870
+installed on their computer.
+
+12:01.930 --> 12:04.450
+The right no diversion on their computer.
+
+12:04.510 --> 12:12.490
+All they had to do was simply run this command docker compose up build and our entire back end system
+
+12:13.300 --> 12:17.400
+was just like that already set up.
+
+12:17.500 --> 12:23.590
+Now the beauty with this is that because we run docker up build Toccara build all the time it takes
+
+12:23.590 --> 12:24.390
+time right.
+
+12:24.760 --> 12:30.160
+But you actually once you build it once and there's no changes that you want to make.
+
+12:30.190 --> 12:34.110
+He can just surround doc compose up and it's a lot faster this way.
+
+12:35.110 --> 12:39.150
+He doesn't rebuild everything from the Rockefeller.
+
+12:39.180 --> 12:40.230
+Very cool.
+
+12:40.260 --> 12:43.890
+I hope you're excited as I am about Dr..
+
+12:43.970 --> 12:47.370
+There's one last thing I want to add and I'll see in the next video.

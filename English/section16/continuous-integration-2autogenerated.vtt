@@ -1,0 +1,328 @@
+WEBVTT
+
+00:01.410 --> 00:02.460
+Welcome back.
+
+00:02.460 --> 00:08.640
+We've now implemented our circle CII server that wasn't too bad it was it just a simple circle YAML
+
+00:08.640 --> 00:13.700
+file that we configured and now we have everything running and we run our tests.
+
+00:13.710 --> 00:19.680
+We do some Lanting if you want we can also do some type script checking everything is working nicely
+
+00:20.370 --> 00:27.240
+so that now every time a PR is ready to be reviewed Shergill CII passes everything so that the code
+
+00:27.240 --> 00:33.630
+reviews can happen and then we can merge our changes no code reviews really necessary until all the
+
+00:33.630 --> 00:40.280
+circle see-I tests pass and we can be really elaborate with these tests to test all kinds of things.
+
+00:40.290 --> 00:46.410
+Now I want to add one more thing to our understanding of continuous integration and that is something
+
+00:46.410 --> 00:54.690
+called a pre commit hook What if we can run some some tasks before we even commit to get hung up here
+
+00:55.130 --> 00:58.910
+and we're going to use purtier to demonstrate this let's get started.
+
+01:00.220 --> 01:05.880
+Prettier is a great new tool that well as the name suggests makes your code prettier.
+
+01:05.890 --> 01:07.590
+It's a code formatter.
+
+01:07.750 --> 01:13.720
+You grab a piece of code you put it through prettier and prettier formats it and then it makes it look
+
+01:13.720 --> 01:18.130
+pretty whatever needs to happen to make it more readable.
+
+01:18.130 --> 01:20.750
+Now why do we need this again.
+
+01:20.800 --> 01:23.690
+Because we have so many developers working on a project.
+
+01:23.770 --> 01:28.720
+Wouldn't it be nice if there was a standard format that everybody followed.
+
+01:28.720 --> 01:35.230
+Instead of having strict guidelines we can't all code along the way we want it and then put it through
+
+01:35.230 --> 01:37.940
+prettier before we even push it up to get hub.
+
+01:38.050 --> 01:45.520
+So that pretty makes it well prettier and you can see over here that it works with a ton of tools including
+
+01:45.550 --> 01:53.740
+other languages like Java ph p works with flow type script GSX which is what we use in re-act a ton
+
+01:53.740 --> 01:57.430
+of tools and they have a lot of plug ins.
+
+01:57.490 --> 02:01.330
+It's really really good and highly recommended that you use it.
+
+02:01.330 --> 02:08.290
+I've worked for companies that have used this and the formatting of code on those projects are significantly
+
+02:08.290 --> 02:08.660
+better.
+
+02:08.740 --> 02:11.090
+So I'm going to show you how to quickly implement this.
+
+02:11.170 --> 02:16.180
+But if you want to read more you can click their god and they have some really really good information
+
+02:16.270 --> 02:17.850
+of what you can do.
+
+02:17.860 --> 02:19.060
+All right.
+
+02:19.190 --> 02:27.290
+So let's go back to our app and here I've actually created a new component called counter button to
+
+02:27.530 --> 02:36.460
+and counter buntu is a new component that I simply copied from our previous counterman which we had
+
+02:36.470 --> 02:40.530
+right over here and I've actually just made the format a little bit weird.
+
+02:40.790 --> 02:45.140
+I have all the spacing issues and it's pretty ugly.
+
+02:46.500 --> 02:53.790
+And I want to take that through pretty air so that by the time it arrives for the on get Hobb it's pretty
+
+02:54.790 --> 02:55.670
+let's give it a go.
+
+02:55.840 --> 02:59.430
+I'm going to go back to the Web site just to show you that.
+
+02:59.470 --> 03:01.090
+Yeah we do have that to counterbalance.
+
+03:01.090 --> 03:03.550
+They work there's no errors.
+
+03:03.670 --> 03:10.490
+So I'm going to close this and install a few packages in order to have prettier work.
+
+03:10.510 --> 03:20.460
+Now if you go to their install now we can install Ebbe regularly and maybe have a CLIA command that
+
+03:20.610 --> 03:21.320
+runs everything.
+
+03:21.360 --> 03:27.540
+But we want to do a print commit hook before a commit happens we want to run it through the prettier
+
+03:28.080 --> 03:29.550
+and we have a couple options here.
+
+03:29.550 --> 03:35.970
+I like their pretty quick option and you can see over here that we can just use the pretty quick Huskie
+
+03:36.030 --> 03:44.250
+dash dash def and I'm going to use NPM instead of yarn so I'm going to type NPM install and then run
+
+03:44.340 --> 03:52.230
+pretty quick Huskie dash dash dev Now while that's downloading Let's go back and we see that all we
+
+03:52.230 --> 03:58.560
+need to do is in our config file in our package start Jaison add in the scripts the pre-kid met pretty
+
+03:58.560 --> 04:01.740
+quick dash dash stage.
+
+04:01.840 --> 04:03.030
+So let's go back.
+
+04:04.750 --> 04:05.610
+If you can believe it.
+
+04:05.620 --> 04:07.780
+Yeah it's that simple.
+
+04:07.870 --> 04:15.910
+We add to our scripts over here another line and we'll just say pre commit now pre commit here will
+
+04:15.970 --> 04:18.450
+automatically be detected and run.
+
+04:18.580 --> 04:28.110
+Every time we make a commit and it's going to run pretty quick command with the dash dash stage option.
+
+04:28.130 --> 04:33.690
+Now the other thing that we need to do is we actually need to make sure that we have a pretty fair installed.
+
+04:33.890 --> 04:40.400
+So that again we go back and we can add NPM install or we'll just to save exact
+
+04:43.200 --> 04:44.320
+prettier as well.
+
+04:45.320 --> 04:52.550
+All right so we have prettier installed and I forgot to save this while we added the new script so let's
+
+04:52.550 --> 04:53.300
+do that again.
+
+04:53.300 --> 04:56.250
+I'm going to go back to the pre commit hook.
+
+04:56.480 --> 05:04.510
+Make sure that we have the pre commit command added on to here.
+
+05:04.720 --> 05:08.650
+Let's save and I'm going to say get status.
+
+05:08.650 --> 05:10.030
+Make sure that we have those changes.
+
+05:10.040 --> 05:13.730
+I'm going to create a new branch just for testing purposes.
+
+05:13.750 --> 05:22.680
+I'm going to call it prettier and here I'm going to get ad get to commit I'm going to commit with saying
+
+05:23.400 --> 05:24.990
+pretty please.
+
+05:27.820 --> 05:32.490
+And look at that a pre commit hook just happened.
+
+05:32.560 --> 05:38.830
+You can see that it's now running their predicament it and it's finding changes found for changes that
+
+05:38.830 --> 05:46.110
+are needed fixing and fixes up some indentation including Hetter dodgy Yes and bought on dodgy Yes.
+
+05:46.180 --> 05:53.710
+Now this prettier tool only runs on the files that we've actually changed.
+
+05:53.710 --> 06:00.480
+So it won't actually change on any of our preexisting files which is most likely why we want to do.
+
+06:00.700 --> 06:05.830
+It's a nice tool to have from the very beginning of the project to make sure everything is consistent.
+
+06:05.890 --> 06:14.260
+Now if we actually go to Connor bought into we see that well look at that all our indentation is fixed.
+
+06:15.350 --> 06:16.510
+That's what we had before.
+
+06:16.550 --> 06:22.220
+If I go back and this is why we have now everything is nice and clean and smooth.
+
+06:22.580 --> 06:24.060
+How cool is that.
+
+06:24.080 --> 06:24.510
+All right.
+
+06:24.530 --> 06:28.570
+So we've just added prettier extremely extremely easily.
+
+06:28.790 --> 06:41.790
+And now I can just run get push origin prettier and we'll have a new PR or a poor request.
+
+06:41.790 --> 06:48.610
+Go back to our Get Harbury poll click on compare poll requests.
+
+06:48.780 --> 06:49.560
+We see that.
+
+06:49.620 --> 06:50.160
+Oh yeah.
+
+06:50.190 --> 06:53.570
+Look everything is nice and clean with contraband too.
+
+06:53.580 --> 07:01.460
+And now if I do create pull request we have our see-I tests running.
+
+07:01.490 --> 07:03.230
+How cool is that.
+
+07:05.390 --> 07:12.110
+We've just implemented continuous integration and I bet your imaginations are running wild.
+
+07:12.110 --> 07:14.500
+We've only done testing a bit of Lanting.
+
+07:14.510 --> 07:21.050
+We've had it prettier and we've built our project on Circle C.I. but there's so many things that we
+
+07:21.050 --> 07:24.300
+can do completely up to you and completely up to your project.
+
+07:24.320 --> 07:31.100
+Anything that you can do programmatically you can check with circle C.I. for example something like
+
+07:31.160 --> 07:40.660
+a web pack bundle analyzer which analyzes your bundles can be used as something called artifacts and
+
+07:40.660 --> 07:48.290
+circle C.I. and artifacts are data that we add or persist in our workflow.
+
+07:48.500 --> 07:56.510
+So when our circle see-I runs and it's done you can have a file that outputs this image and stores it
+
+07:56.510 --> 07:58.270
+somewhere on the server.
+
+07:59.740 --> 08:05.900
+And now this file is available as an artifact long after the job succeeds on Circle CII.
+
+08:05.900 --> 08:09.980
+So you can go back and check that your builds have the proper amount.
+
+08:10.330 --> 08:16.810
+You can also add test to circle to make sure you have certain coverages on your tests or you can even
+
+08:16.810 --> 08:20.790
+check or limit how big your javascript files are.
+
+08:20.890 --> 08:26.110
+If you want to limit your javascript files to 100 megabytes you can run those tests and any time a new
+
+08:26.110 --> 08:30.460
+feature is added that might push you over 100 megabytes.
+
+08:30.550 --> 08:32.570
+You can make the test fail.
+
+08:32.620 --> 08:35.300
+There's so many things they can do.
+
+08:35.490 --> 08:42.090
+And I personally have had a really really good experience with circle C.I. but with any continuous integration
+
+08:42.120 --> 08:49.140
+platform you can do so many things to make your life easier to avoid having bugs in production.
+
+08:49.380 --> 08:53.150
+So I urge you to try it out you see how simple it was.
+
+08:53.220 --> 08:58.770
+And from now on any projects that you're on try continuous integration implementing it from the beginning.
+
+08:58.860 --> 09:06.120
+It's a bit of configuration at first but once you have a running working in teams just becomes so much
+
+09:06.240 --> 09:08.160
+easier.
+
+09:08.180 --> 09:11.180
+All right I'll see in the next video Buh-Bye.

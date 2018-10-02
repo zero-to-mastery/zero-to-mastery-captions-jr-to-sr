@@ -1,0 +1,532 @@
+WEBVTT
+
+00:01.170 --> 00:08.130
+Welcome back it's time for us to actually start implementing sessions because we now have a profile
+
+00:08.160 --> 00:14.300
+to work with and remember our goal here is to try and do this.
+
+00:14.360 --> 00:17.310
+We're going to sign in to our app.
+
+00:17.540 --> 00:20.920
+The user is going to send username and password.
+
+00:21.110 --> 00:32.830
+The server is then going to generate a JWT token and we're going to send that to the user so that next
+
+00:32.830 --> 00:40.960
+time they access any of their routes that are protected or require authentication like profile 23 they'll
+
+00:40.960 --> 00:51.070
+have to send this JWT token with them so that when a user gets a profile or updates a profile by doing
+
+00:51.070 --> 00:52.270
+a POST request.
+
+00:52.390 --> 00:57.160
+Well they have to send the JWT token to the server.
+
+00:57.460 --> 01:05.290
+The server then can verify the token using the DOD verify method or in our case it can actually have
+
+01:05.290 --> 01:11.960
+the token stored in a read us database checking to make sure that it's a valid one.
+
+01:12.190 --> 01:18.580
+And then if everything checks out all right you can have your profile or you can update your profile.
+
+01:18.670 --> 01:20.910
+And in this video we're going to work on this part.
+
+01:20.950 --> 01:27.150
+We're going to generate the JWT token after the user signs and let's get started.
+
+01:28.840 --> 01:36.250
+Now if we go back to our server Yes we have our docker compose running in the background here everything
+
+01:36.250 --> 01:41.970
+checks out the end point that we want to work with is the sign in endpoint.
+
+01:42.010 --> 01:48.070
+So when we sign in we're calling this function handle seinen and you see here that it's a little bit
+
+01:48.370 --> 01:50.040
+different than the other ones.
+
+01:50.110 --> 01:57.660
+You see that all the other endpoints receive a request response and then they have a function that receives
+
+01:57.660 --> 01:59.770
+the rest requests response.
+
+01:59.770 --> 02:05.300
+And we also pass in the database and the script that is the hashing library.
+
+02:05.320 --> 02:09.390
+Now this is a little bit different because I want to show different ways of doing it.
+
+02:09.550 --> 02:16.000
+In this case whenever a signing is called well the handle sign will be called with the database and
+
+02:16.000 --> 02:18.480
+be gripped using dependency injection.
+
+02:18.520 --> 02:24.830
+That is we give the dependency of database and be corrupt to handle seinen so that when handle signing
+
+02:24.850 --> 02:26.720
+is called here and sign in.
+
+02:26.840 --> 02:30.330
+Yes it is called with the DB script.
+
+02:30.640 --> 02:36.060
+And then whenever there's a post request the function gets run again.
+
+02:36.070 --> 02:38.330
+So once again this is a high order function.
+
+02:38.440 --> 02:43.150
+A function that returns a function and it receives the request response.
+
+02:44.790 --> 02:47.120
+And it works both ways.
+
+02:47.130 --> 02:54.810
+You can do it this way or we can do it this way and this is just cleaner because while we run this function
+
+02:55.080 --> 03:04.650
+and then whenever post gets hit whenever a user shines in we're going to add the request response automatically
+
+03:05.040 --> 03:08.230
+to this handler.
+
+03:08.230 --> 03:10.720
+Now here's the thing right now.
+
+03:10.720 --> 03:11.520
+Handle sign in.
+
+03:11.530 --> 03:13.900
+We want to make it better.
+
+03:14.110 --> 03:19.620
+We don't want to just say use the sign and methods that we have before we need to now generate a token.
+
+03:19.630 --> 03:22.250
+So let's change this to something else.
+
+03:22.390 --> 03:29.680
+Let's change it to let's say sign an authentication.
+
+03:29.840 --> 03:31.380
+Sounds a little bit more official.
+
+03:32.520 --> 03:32.990
+OK.
+
+03:33.120 --> 03:34.560
+And there's sign in authentication.
+
+03:34.570 --> 03:36.910
+We're going to have to create.
+
+03:36.930 --> 03:43.350
+So let's go to seinen dodgy Yes and and sign in.
+
+03:43.410 --> 03:51.730
+Yes let's change now the or let's add the konked sign in authentication
+
+03:54.240 --> 03:59.320
+and this sign in authentication is going to do what handle seinen used to do.
+
+03:59.430 --> 04:05.370
+It's going to receive a database and a brick B script through dependency injection.
+
+04:05.370 --> 04:08.610
+It's going to then receive the request response
+
+04:12.000 --> 04:14.640
+and then it's going to do a little bit of things here.
+
+04:15.820 --> 04:22.870
+For now though let's make sure that we're exporting this new function instead of the handle sign in.
+
+04:23.030 --> 04:31.170
+And let's talk about what we're going to do inside of you if we remember our diagram Well we want to
+
+04:31.680 --> 04:37.940
+obviously check the passwords and everything check the database do what handle seinen is doing.
+
+04:38.010 --> 04:46.340
+But we also want to generate a JWT token if everything checks out and the way I like to write things
+
+04:46.340 --> 04:49.220
+is to think about what the function does.
+
+04:49.370 --> 04:52.090
+Write things out with functions that don't exist yet.
+
+04:52.130 --> 04:54.750
+So we can just slowly build that up.
+
+04:55.900 --> 04:57.290
+Let's give it a go here.
+
+04:57.340 --> 05:03.100
+What we want to check first in this case is we want to make sure that well first of all we're going
+
+05:03.100 --> 05:06.950
+to receive request response from the requests from the client.
+
+05:06.970 --> 05:19.280
+So let's check if the authorization pÃ¤chter is set by the client because remember they can send JWT
+
+05:19.280 --> 05:21.970
+tokens in the authorization header.
+
+05:22.190 --> 05:24.690
+And don't worry we're going to see how that's done on the client side.
+
+05:24.800 --> 05:31.400
+But we want to check because if they already have this authorization token they shouldn't be able to
+
+05:31.400 --> 05:37.570
+sign in again they can just go ahead and just get into the website grab their profile.
+
+05:37.640 --> 05:42.350
+I mean that's one of the main reasons we're doing this is we don't want the user to constantly have
+
+05:42.350 --> 05:43.330
+to sign it.
+
+05:43.850 --> 05:50.610
+And in here let's just return to thinks or have two options.
+
+05:50.620 --> 05:57.060
+One is do we have the authorization in the headers and the signing.
+
+05:57.510 --> 06:04.230
+If that's the case well then we can say something like grab the user profile for now let's just name
+
+06:04.230 --> 06:04.400
+it.
+
+06:04.410 --> 06:12.790
+Get off token ID and this is a function that doesn't exist.
+
+06:13.060 --> 06:22.920
+So I'm just going to leave it the way it is and appear just call a concert get off token ID and this
+
+06:22.920 --> 06:32.870
+function is going to be a silly function that does absolutely nothing other than console log off.
+
+06:32.910 --> 06:33.330
+OK
+
+06:36.220 --> 06:39.170
+let's say that.
+
+06:39.260 --> 06:46.320
+Now we're saying here we have the second option the second option is if they don't have the authorization.
+
+06:46.520 --> 06:49.300
+Well we want to handle the signing.
+
+06:49.640 --> 06:57.250
+So once again we're going to say handle seinen and remember that handle seinen needs the database be
+
+06:57.250 --> 07:00.680
+crypt request and response objects.
+
+07:01.190 --> 07:11.180
+So I'm going to give that request or let's start off with the B B script request and response objects.
+
+07:11.360 --> 07:16.610
+And because this is no longer a higher order function we're just calling it once.
+
+07:16.820 --> 07:24.620
+Let's just change this from a function that returns a function to just simply a good all regular function
+
+07:25.310 --> 07:26.090
+just like that.
+
+07:28.430 --> 07:30.850
+Let's add this on your line actually just so we can see a better
+
+07:34.100 --> 07:35.050
+that's better.
+
+07:35.050 --> 07:41.660
+So we have to we have authorization in that case grab the auto can ID and hopefully grab the user profile.
+
+07:41.860 --> 07:46.950
+Otherwise we want to handle seinen which is what we have by default already.
+
+07:47.260 --> 07:55.360
+Now in here with handle seinen I want to go over an important concept and that is we've just changed
+
+07:55.720 --> 08:06.040
+the handle seinen from being the default handler of this endpoint to now having the sign and authentication.
+
+08:06.040 --> 08:12.630
+And when we do that mentally just to simplify things and to avoid any future errors I want to say that.
+
+08:12.640 --> 08:13.160
+OK.
+
+08:13.210 --> 08:15.950
+Because this is the handler of the end point.
+
+08:16.000 --> 08:22.400
+This should be the thing that returns a response a status 200 a Jaison response.
+
+08:22.660 --> 08:30.910
+We don't want the handle sign end to be returning the response dot Jaison or error response status 400
+
+08:31.120 --> 08:37.720
+because well this is just a helper function now that we use inside of the main handler.
+
+08:37.720 --> 08:43.030
+If for some reason a new developer comes along and sees this and says oh I'll just return a response
+
+08:43.030 --> 08:43.870
+in here.
+
+08:43.910 --> 08:48.960
+Well it's going to error out because we can send multiple responses.
+
+08:49.010 --> 08:55.310
+So I like keeping things clean and whatever handles the actual end point should be the one that actually
+
+08:55.310 --> 08:56.970
+returns a response.
+
+08:57.940 --> 09:01.530
+Now there's a nice way that we can clean things up.
+
+09:01.540 --> 09:08.350
+Let's go back to the handle sign and function here and change all our responses to just return a promise
+
+09:08.740 --> 09:14.240
+because at the end of the day handle signing is sort of handling promises.
+
+09:14.260 --> 09:20.890
+It's doing the database select checking the database which returns a promise and whenever we have a
+
+09:20.890 --> 09:26.620
+function we want to make sure that we stay consistent that function should always return an expected
+
+09:26.980 --> 09:27.910
+output.
+
+09:28.180 --> 09:33.070
+And that's something that we've learned before in this course that is we don't want to send a promise
+
+09:33.190 --> 09:34.190
+or a stream.
+
+09:34.450 --> 09:40.090
+We want to stick to something predictable so that if another function like sign and authentication is
+
+09:40.090 --> 09:46.930
+using it well we make sure that the sign in authentication whoever's writing this doesn't have to worry
+
+09:46.930 --> 09:52.540
+about the handle sign and function we can trust that it's working and it's only returning a promise.
+
+09:52.540 --> 09:59.260
+All right let's change this so that now we have a response that comes from seinen authentication and
+
+09:59.260 --> 10:04.750
+changing handle seinen to make sure it doesn't do any responses and just returns promises.
+
+10:04.760 --> 10:12.230
+Now the first thing I'm going to do is the handle seinen we need to return something to the client to
+
+10:12.250 --> 10:13.030
+the front end.
+
+10:13.180 --> 10:16.260
+So many some sort of response that we send back.
+
+10:16.720 --> 10:24.490
+So let's say within here I'm going to add a dot then for handle seinen and maybe I'll keep this on one
+
+10:24.490 --> 10:26.080
+line so it's easier to see.
+
+10:26.500 --> 10:33.310
+So the handle sign it is going to have a dot then it's going to receive the user as you can see here.
+
+10:33.310 --> 10:40.760
+We're going to be returning the user from here and this user or let's just leave it a data for now.
+
+10:42.120 --> 10:52.140
+This data is going to have for now let's just do a response Daut Jaison and just returned the data.
+
+10:52.490 --> 11:01.350
+That is the user that we're interested in and for some reason if that doesn't work out well then we
+
+11:01.350 --> 11:09.830
+can just do a dumb catch and their stock cash will receive the air response status.
+
+11:11.070 --> 11:18.120
+400 and for now we can just return the actual air.
+
+11:18.120 --> 11:19.400
+All right.
+
+11:19.570 --> 11:26.070
+Now if I go back here now we need to make sure that the handle sign in return is a promise because while
+
+11:26.220 --> 11:32.160
+we're doing 8.10 catch going back here we look at the handle sign and function.
+
+11:32.250 --> 11:38.880
+And the first thing that I notice is the fact that if no e-mail and password is given well we're going
+
+11:38.880 --> 11:43.310
+to return a status for Hodgin which we don't want to do.
+
+11:43.320 --> 11:50.880
+Perhaps instead what we want to do is reject a promise so that it catches in the handle sign here.
+
+11:51.720 --> 12:02.490
+So I'm going to change this to instead of response status to a promise dot reject which automatically
+
+12:02.490 --> 12:05.320
+rejects and returns a promise.
+
+12:05.340 --> 12:06.580
+Nice and simple.
+
+12:06.930 --> 12:10.090
+If we keep going down here the next step we see that.
+
+12:10.170 --> 12:14.640
+All right we're doing this database look up but we're actually not returning anything here.
+
+12:14.640 --> 12:16.470
+I don't see a return keyword.
+
+12:16.520 --> 12:18.910
+We're returning inside of it but not here.
+
+12:18.990 --> 12:21.260
+And this is a common mistake with promises.
+
+12:21.280 --> 12:24.990
+We always want to make sure that your returning promises.
+
+12:24.990 --> 12:29.390
+So in our case let's just add a return keyword in here.
+
+12:29.400 --> 12:31.250
+Now we're returning this promise.
+
+12:31.440 --> 12:34.220
+And as we go inside of it we see that.
+
+12:34.230 --> 12:34.480
+OK.
+
+12:34.500 --> 12:37.050
+Well we don't want to have a response.
+
+12:37.050 --> 12:41.790
+We just want to return the user and perhaps we might want to even change the name to handle sign and
+
+12:41.790 --> 12:47.970
+to perhaps check username password or something along those lines.
+
+12:47.970 --> 12:56.760
+For now though let's change this to a nice little one liner or let's grab it like this and return the
+
+12:57.750 --> 12:58.370
+user.
+
+12:58.420 --> 13:05.070
+Now remember returns an array of the user in our case the one user that returns from checking the password
+
+13:05.250 --> 13:07.760
+and email that looks a little bit cleaner.
+
+13:08.030 --> 13:15.400
+And then for the DOT catch here we want to make sure that instead of the status again we can just say
+
+13:15.400 --> 13:18.920
+a promise.
+
+13:19.000 --> 13:21.220
+Reject.
+
+13:21.430 --> 13:27.160
+And once again here for any errors we'll just do promise not reject.
+
+13:27.490 --> 13:28.030
+All right.
+
+13:28.030 --> 13:34.450
+So no matter what this function should be returning a promise now so that with handle sign and we can
+
+13:34.450 --> 13:39.280
+just handle it like this then send us the data that is the user.
+
+13:39.310 --> 13:42.550
+Otherwise we'll catch any errors that we've received.
+
+13:42.610 --> 13:48.580
+In our case on able to get user Ron credentials and just returned that Jaison response.
+
+13:48.880 --> 13:51.860
+Now let's safe here and test out our code.
+
+13:51.860 --> 13:54.830
+We've written a bit of code without actually testing it.
+
+13:54.950 --> 14:02.830
+So let's just go back here and sign out and test with our good old friend a dot.com or an eight hour
+
+14:03.570 --> 14:06.820
+day and open up the console make sure there's no errors here.
+
+14:07.090 --> 14:09.040
+As I clicked sign in.
+
+14:09.070 --> 14:10.950
+All right look at that Nowhere's.
+
+14:10.960 --> 14:12.960
+And we're still able to sign in.
+
+14:13.030 --> 14:18.620
+We've accomplished absolutely nothing in terms of functionality on the front end.
+
+14:18.760 --> 14:21.820
+But we now have more flexibility.
+
+14:21.850 --> 14:29.280
+We're still returning the user as they sign in the user from the database.
+
+14:29.560 --> 14:36.490
+But we've also extended So now that we check for authorization headers and if that exists we can just
+
+14:36.580 --> 14:39.600
+grab the auth token Heidi.
+
+14:39.820 --> 14:47.190
+Now that we have that set up in the next video I want to actually generate a JWT token for this user.
+
+14:47.290 --> 14:51.640
+If it's their first time loggy again they don't have an authorization token.
+
+14:51.640 --> 15:00.970
+Well I want to handle seinen by grabbing the user but also when I return the user data I also want to
+
+15:00.970 --> 15:06.570
+return a JWT token so that in future visits they don't have to go through this step again.
+
+15:07.530 --> 15:08.160
+I'll see on that one.

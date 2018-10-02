@@ -1,0 +1,91 @@
+WEBVTT
+
+00:01.740 --> 00:05.400
+I wanted to add a quick note on client side writing.
+
+00:05.580 --> 00:07.860
+I know I kind of brushed over the topic.
+
+00:07.860 --> 00:09.870
+But here's the general idea.
+
+00:09.870 --> 00:16.920
+Client side of routing happens when a route is handle internally by javascript that's loaded on the
+
+00:16.920 --> 00:17.590
+page.
+
+00:17.940 --> 00:22.620
+So that's something that we're going to see later on in the course when we work with our smart brain
+
+00:22.620 --> 00:23.970
+app.
+
+00:24.240 --> 00:28.830
+And that's how most client side render apps work.
+
+00:28.830 --> 00:34.860
+We're handling the routing with javascript because we're now using server side rendering like the old
+
+00:34.860 --> 00:39.080
+web pages that meet a request each time to the browser.
+
+00:39.090 --> 00:46.260
+Any time the rule changes the state of our application would also change.
+
+00:46.260 --> 00:52.410
+Now the main difference between client side rendering and server side rendering is that with client
+
+00:52.410 --> 00:56.850
+side rendering you don't have to refresh the entire page.
+
+00:56.940 --> 01:01.640
+Let's go back to our example if I just have the a tag.
+
+01:01.680 --> 01:03.180
+So let's comment this out.
+
+01:04.450 --> 01:08.500
+And I'm going to remove the comment from our e-tag.
+
+01:08.580 --> 01:11.490
+So this is now doing server side rendering.
+
+01:11.610 --> 01:20.170
+If I go back to my page I'm going to refresh and if I click the About page you'll see a flash.
+
+01:20.200 --> 01:20.880
+There you go.
+
+01:21.070 --> 01:28.330
+And you also see that all these requests were made to get the About page the entire web page or the
+
+01:28.330 --> 01:30.690
+entire page was reloaded.
+
+01:32.320 --> 01:37.240
+And if I go back again same thing that's server side rendering.
+
+01:37.280 --> 01:40.090
+Now if I use the link tag
+
+01:43.160 --> 01:53.550
+and let's comment this out again and I save here if I refresh the initial load downloads everything.
+
+01:53.550 --> 02:03.120
+But now if I click on About You see that only part of the page that is infected gets loaded.
+
+02:03.120 --> 02:11.430
+In our case is the about Dot js file and if we go back again because our indexed dot js file has already
+
+02:11.430 --> 02:13.980
+been loaded you won't see it anywhere here.
+
+02:14.000 --> 02:17.130
+And if I go about again again everything's already loaded.
+
+02:17.280 --> 02:20.080
+So we don't have to go back to the server again.
+
+02:20.100 --> 02:23.590
+That is something really really nice that comes with next access.

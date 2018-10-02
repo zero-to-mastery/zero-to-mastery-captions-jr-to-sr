@@ -1,0 +1,220 @@
+WEBVTT
+
+00:01.000 --> 00:02.150
+Welcome back.
+
+00:02.320 --> 00:09.910
+Now remember with databases there's 800 that each one of them is good for a particular problem has some
+
+00:09.910 --> 00:13.340
+benefits and some cons aswell.
+
+00:13.360 --> 00:19.860
+Now with databases you always want to think about the big picture and what the benefits of that databases.
+
+00:19.870 --> 00:24.230
+In our case we know that redness is an in memory storage.
+
+00:24.280 --> 00:27.760
+So that means it's super super fast for us to access.
+
+00:27.850 --> 00:36.010
+We can get values really really fast from it but it has that downside where it only takes a snapshot
+
+00:36.220 --> 00:40.730
+and writes it on disk occasionally so you might lose some data if the server goes down.
+
+00:41.730 --> 00:48.030
+And we know that rattus is often used for small pieces the data like session management or maybe even
+
+00:48.030 --> 00:51.210
+caching some small data which we'll talk about.
+
+00:51.210 --> 00:58.250
+But another part of databases you want to look at is what kind of data types can they support and based
+
+00:58.250 --> 01:00.950
+on these data types that fit your needs.
+
+01:01.040 --> 01:04.590
+A database might be good or bad for your project.
+
+01:06.160 --> 01:11.770
+So in this video in the next couple videos we're going to talk about what some of these datatypes are
+
+01:12.450 --> 01:13.580
+that breadths uses.
+
+01:13.630 --> 01:21.940
+And what we're going to use in the future section on sessions and JACT the very basic one and if you
+
+01:21.940 --> 01:27.590
+remember rattus is a key value storage that is we give it a key and a value.
+
+01:28.120 --> 01:32.090
+And we're we're going to be able to access that value from that key.
+
+01:32.110 --> 01:39.790
+So let me show you the very basic commands with thread is to set and look of that it already gives me
+
+01:39.790 --> 01:48.160
+options and hence by Dollon this read a CLID what I can put so I can set key and value and some options
+
+01:48.250 --> 01:48.800
+as well.
+
+01:49.570 --> 02:01.710
+So let's say that I want to set name to Godzilla nuts a string if I press enter I get OK.
+
+02:01.840 --> 02:11.350
+Now we're Same here I can now get this name whenever I want by saying Get name and I get Godzilla and
+
+02:11.360 --> 02:11.960
+that's it.
+
+02:11.960 --> 02:16.500
+Key value storage is simply that you give it a key you give it a value.
+
+02:16.550 --> 02:19.930
+And now we can use the get command to get that value back.
+
+02:21.230 --> 02:23.990
+Another command you on is to see if something exists.
+
+02:24.170 --> 02:27.930
+So if I do exists name I get.
+
+02:28.340 --> 02:34.960
+I have one name and I can also run the delete command so I can delete the name command.
+
+02:35.850 --> 02:39.280
+Now fibrin exists name.
+
+02:39.600 --> 02:41.140
+No there there's no name there.
+
+02:41.190 --> 02:43.280
+And if I do get name.
+
+02:43.570 --> 02:46.530
+No no I have absolutely nothing.
+
+02:46.530 --> 02:53.810
+Before I keep going into more comments I want to show you that once again documentation's are your friend.
+
+02:53.820 --> 03:00.090
+If you go to the your their documentation tab which I have opened over here they have a ton of resources
+
+03:00.090 --> 03:00.490
+for you.
+
+03:00.570 --> 03:04.070
+But the one we're interested in is the full list of commands.
+
+03:04.350 --> 03:09.560
+And as you can see here they give you a really nice breakdown on what everything does.
+
+03:11.880 --> 03:13.390
+So let's have a look on one of these.
+
+03:13.500 --> 03:16.270
+We see that we want to try the expire comment.
+
+03:16.890 --> 03:22.590
+And if I click on here will see that it sets a time out on key after the time has expired the key will
+
+03:22.590 --> 03:25.270
+automatically be the leader.
+
+03:25.280 --> 03:25.540
+All right.
+
+03:25.550 --> 03:28.900
+So let's say that we want to try this out.
+
+03:29.120 --> 03:39.210
+We can just simply say expire or we have to set something first so let's just set set a say session
+
+03:40.480 --> 03:51.470
+and Obi Jenny's session and will say that expire session and how many seconds but let's say that we
+
+03:51.470 --> 03:54.590
+want to have it in 10 seconds to expire.
+
+03:56.630 --> 04:08.340
+Now if I do get session I get Gennie I wait 10 seconds though and try get to session again O session
+
+04:08.370 --> 04:12.300
+is gone because I made it expire.
+
+04:12.450 --> 04:13.210
+How cool is that.
+
+04:13.230 --> 04:19.980
+Again each database has its own set of features and Rhetors has this nice expire where you can just
+
+04:19.980 --> 04:23.800
+expire things to be deleted from the database whenever you want.
+
+04:23.880 --> 04:30.840
+Another really useful tool was something like perhaps sessions if you want to expire a session for example
+
+04:31.410 --> 04:38.490
+of a user where after let's say a day they have to resign in into the OP.
+
+04:38.550 --> 04:43.020
+That's an easy thing that we can do right away with red X.
+
+04:43.170 --> 04:45.490
+Let's try a few more commands.
+
+04:45.630 --> 04:49.890
+We can set counter to 100.
+
+04:49.990 --> 04:54.160
+And we're just doing a simple key value storage.
+
+04:54.210 --> 04:59.790
+Now we can do another command Anke increment by.
+
+04:59.890 --> 05:06.160
+That's a little tough to spell but increment by we give it a key counter and we'll get say 50 or less
+
+05:06.160 --> 05:09.480
+do 33.
+
+05:09.740 --> 05:10.320
+Look at that.
+
+05:10.340 --> 05:11.540
+Now our counter
+
+05:15.470 --> 05:15.920
+is
+
+05:20.160 --> 05:22.040
+incremented by 33.
+
+05:22.050 --> 05:23.270
+Very cool.
+
+05:23.310 --> 05:31.100
+And as you can imagine there's also the decrement or decrement key and we'll document the counter and
+
+05:31.130 --> 05:40.620
+we can give it let's say 33 and yep it actually with decrement the default and the only working default
+
+05:40.680 --> 05:43.670
+is that it is just recommending by one.
+
+05:43.960 --> 05:50.130
+If I run this you see that the integer has now been documented by one.
+
+05:50.150 --> 05:50.600
+All right.
+
+05:50.690 --> 05:52.180
+A few more things to go through.
+
+05:52.200 --> 05:55.070
+But let's take a break and I'll see you in the next video.

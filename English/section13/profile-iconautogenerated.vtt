@@ -1,0 +1,514 @@
+WEBVTT
+
+00:00.920 --> 00:02.210
+Welcome back.
+
+00:02.210 --> 00:09.670
+I want to use a new library here now in our app right over here when we log in.
+
+00:09.800 --> 00:15.560
+Ideally I want to have perhaps a profile picture and then if I click on and have dropdown where I can
+
+00:15.560 --> 00:25.370
+say sign out or maybe profile and a profile pops up of the user and I want to use this re-act strap
+
+00:25.640 --> 00:33.770
+component library we can simply install it by using the re-act strap package and as long as we're using
+
+00:33.770 --> 00:34.910
+react.
+
+00:34.910 --> 00:38.350
+It allows us to use Boost Japp for components.
+
+00:38.540 --> 00:45.590
+And if you go to components you'll see that we can use a ton of things including the dropdown that I'm
+
+00:45.590 --> 00:47.820
+interested in looking at.
+
+00:48.080 --> 00:53.700
+That would be pretty nice to have on our profile and we see that it gives us a nice demo of what we
+
+00:53.700 --> 01:00.270
+can do and gives you pretty much copy and paste code which is really really nice.
+
+01:00.950 --> 01:05.900
+Now some of you might be asking why not just build this out ourselves.
+
+01:06.880 --> 01:13.770
+One is that well it's going to be a lot faster than building it out ourselves.
+
+01:13.810 --> 01:21.430
+And this is something that we can do fairly simply with some javascript and CSSA something that we've
+
+01:21.430 --> 01:23.900
+already covered before in my previous courses.
+
+01:24.870 --> 01:31.170
+But also when it comes to building fast and making sure that our app works we don't really want to worry
+
+01:31.170 --> 01:34.810
+too much about having a proper drop down functionality.
+
+01:34.920 --> 01:43.360
+We can just put in pieces into our app and then if we really want to remove libraries we can do so afterwards.
+
+01:43.470 --> 01:50.190
+But I also want to show you the dangers of adding third party libraries as you'll see when we add Riak
+
+01:50.190 --> 01:50.910
+strop.
+
+01:50.970 --> 01:53.470
+It's going to conflict with a library.
+
+01:53.490 --> 02:01.200
+We already have one that is called If we go back to our Front-End application and go into our source
+
+02:01.500 --> 02:02.170
+indexed.
+
+02:02.310 --> 02:06.290
+Yes we're using Tatiana's SPSS libraries.
+
+02:06.300 --> 02:07.940
+That has solved their app.
+
+02:07.980 --> 02:13.470
+Up until this point and I'm going to demonstrate for you why we want to be careful when we're just grabbing
+
+02:13.950 --> 02:16.460
+more and more libraries adding them onto our project.
+
+02:16.590 --> 02:19.290
+So I think it's going to be a good lesson for us as well.
+
+02:19.290 --> 02:24.660
+All right well we know that we want to install this package so let's just say NPM install and it's going
+
+02:24.660 --> 02:29.830
+to be called re-act strap.
+
+02:29.840 --> 02:30.420
+All right.
+
+02:30.470 --> 02:31.190
+Perfect.
+
+02:31.190 --> 02:32.610
+The next thing we want to do.
+
+02:32.660 --> 02:41.750
+Again going back to the Web site we also see here that we need to add bootstrap because the re-act strap
+
+02:41.810 --> 02:47.060
+package comes with the components but not with the styling that is bootstrap.
+
+02:47.060 --> 02:52.230
+So just to get the styling that they already have preset it looks like we can just NPM install boot
+
+02:52.230 --> 02:53.010
+strap.
+
+02:53.060 --> 02:58.310
+And if you're using a newer version of NPM you don't need to do dash dash save but just to show you
+
+02:58.310 --> 02:59.200
+that it's the same thing.
+
+02:59.200 --> 03:00.560
+I'm going to copy that.
+
+03:00.860 --> 03:04.180
+And then let's bring our front end up over here.
+
+03:04.190 --> 03:08.100
+So it's a little bit closer since we'll be working on that in this video.
+
+03:08.420 --> 03:14.360
+So we're installing bootstrap and then going back here we see that we need to import our CSA.
+
+03:14.780 --> 03:20.390
+And from there we can start importing whatever components that re-access shop needs.
+
+03:21.820 --> 03:24.230
+Now let's import the CSSA file.
+
+03:24.430 --> 03:36.280
+And if you see over here we now can go into our index page yes and import bootstrap with the M. fide
+
+03:36.290 --> 03:38.160
+see SS.
+
+03:38.200 --> 03:45.430
+Now here's the thing and here's how things work with create re-act up and they grab all the CSSA files
+
+03:45.580 --> 03:48.430
+that it finds and bundles them together.
+
+03:48.880 --> 03:55.600
+So right now the way we have things taxman's which already has some CSSA classes that we're going to
+
+03:55.600 --> 04:03.580
+be using if you go into dodgiest for example or actually let's go into a component let's say we're going
+
+04:03.580 --> 04:12.270
+to go into the face recognition we see over here that we're using these classes like empty to center
+
+04:12.290 --> 04:18.040
+Amay that are actual Tatian classes.
+
+04:18.040 --> 04:24.760
+Now because of the way create react up works these hearings are bundled and then the bootstrap cells
+
+04:24.790 --> 04:29.080
+are going to get bundled and whatever name clashes they might have.
+
+04:29.080 --> 04:32.520
+Let's say that both of them have a button class.
+
+04:32.530 --> 04:37.220
+Well the bootstrap one is going to overwrite it because it's going to be after Tatiana's.
+
+04:37.590 --> 04:39.770
+And we know that we like our app the way it is.
+
+04:39.790 --> 04:46.420
+So let's move this up here so that if there is anything that's being overwritten with DSS Tatiana's
+
+04:46.960 --> 04:48.690
+is going to win out.
+
+04:48.760 --> 04:54.090
+So let's say that we have bootstrap all loaded and ready to go.
+
+04:54.100 --> 04:57.960
+I think it's time for us to build our drop down functionality.
+
+04:58.030 --> 05:01.870
+So now that we have some components that we're going to be able to use.
+
+05:02.170 --> 05:04.210
+We also have Takiyama set up.
+
+05:04.300 --> 05:11.260
+The first thing I want to do is create perhaps an avatar or a profile little circle icon on the top
+
+05:11.260 --> 05:17.230
+right so that when we click on it it's going to have a drop down box that says View profile or sign
+
+05:17.230 --> 05:19.520
+out now.
+
+05:19.960 --> 05:26.110
+Luckily for us we're going to be using taxman's as well because they already have some pre-built CSSA
+
+05:26.170 --> 05:27.260
+for us.
+
+05:27.260 --> 05:35.020
+If I go back here I have tacked Kyon's And if we go to Avatar's we see that all right we have a couple
+
+05:35.020 --> 05:37.750
+of options that we can use.
+
+05:37.880 --> 05:44.630
+So say we want to use the circle border and look of that we already have the CSSA that we need for it.
+
+05:44.660 --> 05:52.560
+Let's go back to our app and have this circle appear if we log in here
+
+05:56.180 --> 06:01.910
+right over here and see that of the sign out and just so we don't have to keep signing in and out in
+
+06:01.910 --> 06:03.490
+and out in and out.
+
+06:03.560 --> 06:07.210
+Let's go back and go to our app.
+
+06:07.360 --> 06:21.570
+Yes and in our initial state make our route equal to home I save this and go back let's refresh Lupe's
+
+06:22.850 --> 06:24.560
+I have to do NPM start again.
+
+06:25.710 --> 06:29.670
+Well I have to go NPM start again because we did install some things
+
+06:32.880 --> 06:34.760
+yes sport 3000 and won
+
+06:38.630 --> 06:41.110
+and there we go.
+
+06:41.210 --> 06:43.280
+We're logged in now.
+
+06:43.490 --> 06:47.750
+We don't have a user you see that it's completely blank because we haven't logged in with anything.
+
+06:47.750 --> 06:54.350
+We all have that profile information but we also see that our stalling just got messed up quite a lot
+
+06:54.350 --> 06:55.040
+actually.
+
+06:55.100 --> 06:58.690
+We don't have that nice styling that we had before.
+
+06:58.880 --> 07:00.090
+What's happening here.
+
+07:02.170 --> 07:05.290
+Well again back to our discussion about CSSA.
+
+07:05.410 --> 07:09.850
+You see that index starts CSSA is right at the top here.
+
+07:09.850 --> 07:17.800
+And if you look at index Nazi SS our phone family was described in here and the bootstrap library we
+
+07:17.800 --> 07:25.110
+just installed and added to our Web site is overwriting our font family again.
+
+07:25.200 --> 07:29.860
+Do you want to do is ideally bring that CSSA all the way down.
+
+07:29.920 --> 07:38.130
+And also just keep CSSA together in a separate little section so that you know what's overwriting what.
+
+07:38.200 --> 07:41.970
+And again going back to just keep adding things over and over.
+
+07:42.070 --> 07:45.270
+This is a small enough app that we notice the changes right away.
+
+07:45.340 --> 07:53.410
+But as soon as you introduce a third party library and especially one that affects CSSA you might unintentionally
+
+07:53.800 --> 07:58.000
+change some of your webapp functionality as well as look.
+
+07:58.000 --> 08:01.480
+So you really want to be careful with this in a real project.
+
+08:01.480 --> 08:07.210
+I probably wouldn't be using these multiple libraries but I wanted to demonstrate that how dangerous
+
+08:07.270 --> 08:11.110
+it can be if I save this now and go back.
+
+08:11.110 --> 08:12.080
+All right.
+
+08:12.400 --> 08:14.840
+Everything is nice and smooth.
+
+08:14.860 --> 08:20.950
+We don't have the user yet because well we're kind of cheating and signing in but we have our set up
+
+08:21.040 --> 08:21.710
+all done.
+
+08:21.820 --> 08:28.120
+And ideally we want this profile like on that we saw an attack on us right here at the top and then
+
+08:28.120 --> 08:31.950
+if I click on it a dropdown menu shows up.
+
+08:31.960 --> 08:37.450
+So let's think about this the first thing we probably want to do is to build that profile icon that
+
+08:37.540 --> 08:39.660
+circular icon.
+
+08:39.900 --> 08:48.670
+And just to keep things clean let's create a new folder called at Profile and within this folder we'll
+
+08:48.670 --> 08:50.080
+create a new component.
+
+08:50.290 --> 08:58.820
+We'll say that this will be their profile icon component and we're here we can do our regular component
+
+08:58.820 --> 09:00.710
+and build that we do with react.
+
+09:00.710 --> 09:07.010
+We want to import re-act from their reata package.
+
+09:07.030 --> 09:13.180
+We also want to import some items from re-act bootstrap.
+
+09:13.300 --> 09:19.240
+But the doggo function let's not worry about it for now let's just work on getting that circular avatar
+
+09:19.390 --> 09:20.370
+on our page.
+
+09:20.410 --> 09:34.980
+We can just say class profile icon extends re-act dot component or I could just do something like this
+
+09:34.980 --> 09:35.530
+as well.
+
+09:35.640 --> 09:37.460
+But for now this is fine.
+
+09:39.050 --> 09:44.230
+And we want to export default the profile icon.
+
+09:44.290 --> 09:44.980
+All right.
+
+09:45.010 --> 09:49.460
+Now thinking about this icon this icon over here has the bit state right.
+
+09:49.480 --> 09:59.150
+It's either or clicked on and the toggle is open or it's closed and ideally I mean that's a simple true
+
+09:59.150 --> 10:01.410
+or false Boolean flag.
+
+10:01.640 --> 10:08.620
+We could move that all the way up to dog yes or include a redux store to contain that state but for
+
+10:08.630 --> 10:16.500
+small state that is really very specific to this profile icon and doesn't affect any other components.
+
+10:16.520 --> 10:22.100
+I like to keep the state in here because anybody that comes on to the project and needs to just something
+
+10:22.100 --> 10:24.890
+on the profile icon has everything in one place.
+
+10:25.610 --> 10:39.570
+So let's create our constructor method that will accept prop's and do our regular super call.
+
+10:39.790 --> 10:50.170
+And let's just say that this dot state is going to equal the let's call it drop down open and we'll
+
+10:50.170 --> 10:52.290
+set it to false to begin with.
+
+10:55.080 --> 10:55.670
+All right.
+
+10:55.740 --> 11:01.060
+And we also have our render function and within this render function what should we do.
+
+11:01.290 --> 11:06.530
+Well let's get our profile avatar from Tatiana's Well returned
+
+11:12.570 --> 11:20.520
+and let's say within here if we go back to taxations we can just copy and paste this little snippet
+
+11:21.030 --> 11:24.770
+pasted on here you got to fix this.
+
+11:25.020 --> 11:30.350
+And you see that the div is not highlighted and bread and that's because this is GSX.
+
+11:30.360 --> 11:33.210
+Remember we have to make sure that we close our tags.
+
+11:33.300 --> 11:40.260
+Even though this is valid to him all five without the closing slash and GSX we have to close our tags
+
+11:40.890 --> 11:42.080
+no matter what.
+
+11:42.240 --> 11:42.450
+Right.
+
+11:42.450 --> 11:44.070
+So let's say that.
+
+11:44.370 --> 11:45.770
+And if I go back.
+
+11:45.900 --> 11:47.460
+Well nothing's going to be shown.
+
+11:47.460 --> 11:51.530
+We have to actually import this in our homepage.
+
+11:51.660 --> 11:55.200
+Let's actually import this in our page.
+
+11:55.530 --> 12:05.100
+If we go back to our app we see that we have this area that we want to have to do and this area is where
+
+12:05.100 --> 12:08.590
+the sign and register component are.
+
+12:08.650 --> 12:13.430
+Luckily for us that's just right at the top over here and the navigation component.
+
+12:13.450 --> 12:20.980
+And because of a name it's fairly easy to see and we see over here that this is just adding the sign
+
+12:20.980 --> 12:23.670
+out sign in register components.
+
+12:23.700 --> 12:39.050
+Let's actually add this let's add the import whoops and port the profile icon from the profile capital
+
+12:39.050 --> 12:46.420
+profile and let's say profil.
+
+12:46.510 --> 12:51.850
+Now we have access to this component within the is signed in.
+
+12:52.020 --> 12:59.430
+Instead of having the sign out or for an hour we can keep the sign out just to have it there we'll add
+
+12:59.460 --> 13:03.340
+a profile icon.
+
+13:03.570 --> 13:06.190
+And right now it doesn't really do anything.
+
+13:06.210 --> 13:08.460
+So we're just going to pass it like that.
+
+13:08.490 --> 13:11.770
+Let's save looks like everything is fine.
+
+13:11.780 --> 13:22.430
+If I go back and refresh Let's see over here and you see that it's checking is signed in we're not checking
+
+13:22.430 --> 13:25.850
+the route we're checking to make sure that is signed in is true.
+
+13:25.850 --> 13:35.530
+So we have to go back to us make sure that is signed in is set to true so that our navigation bar also
+
+13:35.530 --> 13:36.200
+changes.
+
+13:36.220 --> 13:37.260
+Hey look at that.
+
+13:37.420 --> 13:39.170
+We have a nice little avatar here.
+
+13:39.220 --> 13:41.470
+All set up for us.
+
+13:41.470 --> 13:43.270
+Let's take a break in the next video.
+
+13:43.270 --> 13:48.100
+We're going to keep adding onto this functionality make it look a little bit pretty year and hopefully
+
+13:48.110 --> 13:49.950
+at our dropdown menu.
+
+13:50.260 --> 13:51.480
+I'll see you on that one.
+
+13:51.590 --> 13:52.060
+All right.

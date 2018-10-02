@@ -1,0 +1,388 @@
+WEBVTT
+
+00:02.000 --> 00:03.550
+What have we learned so far.
+
+00:05.060 --> 00:11.960
+Well when developers talk about client side rendering they're usually talking about rendering content
+
+00:11.990 --> 00:15.250
+in a browser using javascript.
+
+00:15.380 --> 00:17.450
+A single page application.
+
+00:17.780 --> 00:25.400
+So instead of getting all of the content from the shemale document itself you're getting a very tiny
+
+00:25.400 --> 00:34.070
+small a small document with a javascript file that will render the rest of the site for you on the browser.
+
+00:34.070 --> 00:38.870
+With this we're able to have really rich interactions that make our apps feel fast.
+
+00:38.870 --> 00:40.300
+So let's talk about that.
+
+00:40.310 --> 00:47.900
+We're going to talk about the pros and cons of server side versus client side as I just mentioned.
+
+00:48.130 --> 00:55.570
+One of the big things with client side rendering is the fact that it's got very rich interactions.
+
+00:55.710 --> 01:03.040
+Were you able to just load parts of the page and feel like we're working with apps instead of web pages
+
+01:03.040 --> 01:06.870
+that do a full refresh every time.
+
+01:07.030 --> 01:14.110
+They're really really nice for these modern application like feel that we have on our website client
+
+01:14.110 --> 01:21.970
+side rendering also has a faster response from the server because the server doesn't have to render
+
+01:22.360 --> 01:29.590
+the HTML page and you know do the Render to string that re-act Dom server has or do any extra work.
+
+01:29.590 --> 01:33.670
+All it needs to do is just send that tiny little Steimle file.
+
+01:33.670 --> 01:38.770
+The server actually responds a lot faster with client side rendering.
+
+01:38.950 --> 01:47.230
+And finally it's great for web applications not just because it has rich interactions but because it's
+
+01:47.230 --> 01:49.950
+a faster Web site experience.
+
+01:49.990 --> 01:51.440
+After the initial load.
+
+01:51.550 --> 01:59.260
+So after the Javascript has worked through and has created the view for us because we already have everything
+
+01:59.260 --> 02:05.850
+loaded on like server side rendering where we have to go back again to the server and make that request
+
+02:06.950 --> 02:14.960
+all our javascript is loaded all our views are there so that we're able to interact really really fast
+
+02:15.290 --> 02:19.410
+and modify only parts of the page based on the view.
+
+02:19.610 --> 02:24.710
+And we're pretty familiar with the benefits because we work with client side rendered applications and
+
+02:24.710 --> 02:29.010
+actually see them daily on the Internet.
+
+02:29.200 --> 02:37.190
+But there are a few cons with these sort of applications and probably the biggest one that you should
+
+02:37.190 --> 02:44.030
+consider is that with client side rendering it's really hard or it's definitely more difficult to have
+
+02:44.060 --> 02:47.070
+good as SEO or search engine optimization.
+
+02:48.040 --> 02:49.850
+Now why is that.
+
+02:50.200 --> 02:55.900
+Well because with these apps we just render a simple a small file.
+
+02:55.930 --> 03:02.860
+So with our react to app we just had a simple div and the way search engine optimization works is that
+
+03:03.100 --> 03:10.750
+browsers such as Google and all these other browsers have their own crullers or programs that search
+
+03:10.750 --> 03:11.680
+through Web sites.
+
+03:11.800 --> 03:17.770
+See what the Web sites are about and then put them into their database to understand what they're about.
+
+03:17.770 --> 03:25.350
+So that's when a user searches super recipe's all know this web sites about soup.
+
+03:25.470 --> 03:26.980
+This web sites about soup.
+
+03:27.000 --> 03:28.250
+This isn't about soup.
+
+03:28.260 --> 03:35.340
+I'm going to give this user these 10 results and that's how they're able to do searches.
+
+03:35.400 --> 03:44.020
+Now these crawlers because they're just programs have a difficult time working with Klein side rendered
+
+03:44.020 --> 03:52.290
+apps because something like the Googlebot will load the web page and then see that this web site only
+
+03:52.290 --> 03:56.470
+has a div with an idea of an app that's it.
+
+03:56.850 --> 04:03.180
+And it's going to say all right it's you know it might have some description that a meta tag that says
+
+04:03.270 --> 04:05.100
+oh yeah this web page is about robots.
+
+04:05.100 --> 04:11.350
+But when the Google bot looks at the web page it only sees the diff tag.
+
+04:11.400 --> 04:13.240
+So it says all right this is about a Web site.
+
+04:13.260 --> 04:20.380
+I'm not interested in ranking it high for SEO and then on top of that we also have our app making Ajax
+
+04:20.380 --> 04:26.280
+requests to get robots so again the rendering takes a lot longer.
+
+04:26.440 --> 04:31.540
+So by the time Googlebot actually checks maybe we haven't rendered everything and it will have a good
+
+04:31.540 --> 04:34.680
+idea of what our web page does.
+
+04:35.230 --> 04:41.440
+Now Googlebot actually weighs between 5 and 20 seconds before taking what we call a snapshot of each
+
+04:41.440 --> 04:44.400
+page so that they could index it for MCO.
+
+04:44.560 --> 04:48.120
+But this doesn't always work.
+
+04:48.250 --> 04:57.280
+And this is the case only for Chrome like Bing or Yahoo browser or Baidu.
+
+04:57.280 --> 04:58.460
+It's a lot different.
+
+04:58.480 --> 05:03.700
+So working with these these bots that crawl your Web site it's really really difficult to show them
+
+05:03.700 --> 05:06.450
+what your website is about so that you have good as he'll.
+
+05:06.670 --> 05:13.630
+And this is a lot of work with client side rendered applications and it's very easy to have poor deal
+
+05:13.660 --> 05:14.640
+with it.
+
+05:14.680 --> 05:17.590
+So if you have a website that really depends on Nescio.
+
+05:17.740 --> 05:22.710
+Let's say you're a hotel company that lists hotels all over the world.
+
+05:22.870 --> 05:28.330
+Well a CEO might be important to you because you get a lot of your customers through Google searches
+
+05:28.330 --> 05:35.200
+where people say I want a hotel in Milan they might consider that a server side rendered app might be
+
+05:35.200 --> 05:36.040
+better for them.
+
+05:38.020 --> 05:41.300
+And then finally this is an obvious one that we've talked about.
+
+05:41.410 --> 05:48.280
+It's the idea that it has longer initial load although we get a faster response from the server because
+
+05:48.280 --> 05:53.700
+we have javascript that needs to render our Web page.
+
+05:53.800 --> 05:57.750
+We have a faster initial load than server side rendered apps.
+
+05:57.760 --> 06:04.600
+So we see that loading screen or a blank page a lot longer than a server side rendered up initially
+
+06:04.600 --> 06:13.310
+for most users these types of applications will feel a lot slower What about the other side.
+
+06:13.700 --> 06:17.140
+What about server side rendered apps well.
+
+06:17.200 --> 06:23.830
+The first thing is that server side rendered apps are really good at SEO for the points that I just
+
+06:23.830 --> 06:30.270
+mentioned because it's rendered on the server but the time it arrives on the browser where the google
+
+06:30.270 --> 06:31.510
+bot searches it.
+
+06:31.660 --> 06:37.900
+It already has everything rendered and the Google Googlebot can be like oh yeah this is definitely a
+
+06:37.900 --> 06:39.960
+soup recipes website.
+
+06:40.210 --> 06:48.460
+I'm going to rank it high because the content is presented before you actually get it in the view.
+
+06:48.470 --> 06:55.280
+It's also really really good with what we call static sites just simple web sites that aren't as dynamic.
+
+06:55.280 --> 07:01.280
+There are Web sites that have a lot of text based information such as documentation.
+
+07:01.310 --> 07:06.640
+They're really really good and make static sites look really nice.
+
+07:06.800 --> 07:13.340
+For example the re-act documentation page is a great example of this.
+
+07:13.490 --> 07:19.850
+If we go to the documentation page for re-act we see that it's mainly text and we use it server side
+
+07:19.850 --> 07:22.510
+rendering to render all these pages.
+
+07:22.700 --> 07:26.430
+You see how the M-L changes of the top.
+
+07:26.430 --> 07:26.990
+As I
+
+07:30.690 --> 07:33.120
+switch between pages.
+
+07:33.270 --> 07:37.470
+So this is a great use case for a server side rendered.
+
+07:38.510 --> 07:45.470
+And then finally another big pro is the initial page load because server side rendered DAPs are rendered
+
+07:45.470 --> 07:47.970
+on the server to the user.
+
+07:48.140 --> 07:52.810
+Most of the time it appears that these Web sites load a little bit faster.
+
+07:53.930 --> 08:01.790
+Now what about the conc Well the first thing is the fact that we have to do a full page reload because
+
+08:02.030 --> 08:09.750
+we have to request a new page from the server and you can make things fast and look nice with this.
+
+08:09.860 --> 08:15.830
+But it also is is a tough one to do especially if most of your page looks the same but you're still
+
+08:15.830 --> 08:19.530
+requesting the same thing over and over for each different page.
+
+08:20.580 --> 08:24.650
+And then we also have a slower page rendering with the cut off over here.
+
+08:24.690 --> 08:25.070
+Whoops.
+
+08:25.080 --> 08:34.990
+But I'm sure you can still see that you see with server side rendering time to first byte which is when
+
+08:34.990 --> 08:41.940
+is the first piece of information from the server received is slower than client side rendering.
+
+08:41.950 --> 08:48.160
+Because as I mentioned your server needs to spend time to create the email for your page instead of
+
+08:48.160 --> 08:56.330
+just sending out a fast response like with client side rendering remembered the re-act Dom server render
+
+08:56.330 --> 09:01.780
+to string method Well it's a synchronous C.P. you Bankole.
+
+09:01.800 --> 09:08.100
+Which means that the CPQ has to work to render your app on the server which if it's a big app could
+
+09:08.100 --> 09:12.640
+take a long time it holds up what we called the event loop.
+
+09:12.670 --> 09:18.530
+So the server isn't able to process any other request until this is done.
+
+09:19.030 --> 09:22.200
+And this can be a huge deal breaker for some people.
+
+09:22.330 --> 09:30.030
+If our app is really really big and we need to render our let's say home page for a really long time
+
+09:30.300 --> 09:36.050
+that server is just going to be sitting there waiting for the server to finish its work.
+
+09:37.070 --> 09:43.820
+And this can be a huge deal breaker for most people server side rendering definitely means more work
+
+09:43.820 --> 09:44.840
+for your server.
+
+09:45.560 --> 09:49.940
+But not just for the server but for the developers as well.
+
+09:50.090 --> 09:56.870
+You're increasing the complexity of your codebase as your reactor components now will need a node server
+
+09:56.900 --> 10:02.320
+just like I showed you to be available for it to actually work.
+
+10:02.350 --> 10:05.800
+So with added complexity to your application.
+
+10:05.920 --> 10:13.660
+Keep that in mind that now more of your developer time and capital and resources are going to go into
+
+10:14.320 --> 10:20.260
+getting server side rendering to work versus working on new features or doing other things that could
+
+10:20.260 --> 10:24.170
+be more important to your app.
+
+10:24.300 --> 10:29.220
+And then obviously we have the number of requests to the server every time we need a new page or we
+
+10:29.220 --> 10:30.980
+need to communicate with the server.
+
+10:31.110 --> 10:37.620
+Depending on the internet connection maybe that will actually be worse off for you than having that
+
+10:37.650 --> 10:41.480
+initial load time be longer with client side rendering.
+
+10:42.340 --> 10:49.510
+Finally keep in mind that server side rendering may make your web site look faster but it doesn't actually
+
+10:49.510 --> 10:56.740
+mean a user can interact with it because remember until we get that interactivity we still need to load
+
+10:57.010 --> 10:57.700
+Javascript.
+
+10:57.700 --> 11:01.080
+So you have to be careful with that.
+
+11:01.090 --> 11:01.880
+All right.
+
+11:01.880 --> 11:06.960
+We should have a good idea of what's good what's bad when to use one over the other.
+
+11:07.420 --> 11:11.820
+Let's take a look in the next video some of the ways that you can do server side rendering right.
+
+11:11.830 --> 11:15.240
+Because we all already know how to do client side rendering.
+
+11:15.640 --> 11:16.400
+I'll see on that one.

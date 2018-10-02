@@ -1,0 +1,190 @@
+WEBVTT
+
+00:01.390 --> 00:02.380
+Welcome back.
+
+00:02.380 --> 00:07.360
+Before we start building our session management and our up I want to make sure that we're clear on what
+
+00:07.360 --> 00:08.630
+we're building.
+
+00:08.680 --> 00:14.950
+So I've created a few diagrams to go over the steps now now if you remember this is a token based authentication
+
+00:15.310 --> 00:18.230
+we sign in by sending the user name and password.
+
+00:18.310 --> 00:21.890
+The server does some work to make sure their username and password match.
+
+00:21.910 --> 00:29.060
+And then we generate a JWT token which again we're going to do and then we're going to send that GWG
+
+00:29.140 --> 00:35.380
+token back to the browser and on the browser we're going to store that token so that any time we need
+
+00:35.380 --> 00:43.030
+to make a request like X saying profile 23 that we should have access to I send that GW token in the
+
+00:43.090 --> 00:51.340
+authorization header as part of the request to the browser that browser simply Rantz the dot verify
+
+00:51.640 --> 00:52.380
+on the token.
+
+00:52.420 --> 00:59.640
+Make sure that it's a token that it's generated and it's going to send us the package the profile package
+
+01:00.100 --> 01:01.210
+we'll call it a present.
+
+01:01.240 --> 01:03.170
+So we have access to it.
+
+01:03.340 --> 01:11.860
+And again with a cookie based authentication we send the username and password once again the server
+
+01:12.010 --> 01:19.330
+does the work checks username and password generates a cookie a piece of string that is unique sends
+
+01:19.330 --> 01:21.790
+it to the browser.
+
+01:21.990 --> 01:29.580
+The browser remembers that as it's cookie and whenever it needs the profile 23 Well it's going to send
+
+01:29.580 --> 01:31.620
+that information to the server.
+
+01:31.650 --> 01:38.420
+The server is now going to check the piece of tax that is the cookie to the tax that it's stored.
+
+01:38.850 --> 01:41.470
+And remember it in let's say a database.
+
+01:41.760 --> 01:47.580
+And in this case you could have something like Pretis where Red is stores the session the piece of string
+
+01:47.850 --> 01:49.800
+that the cookie is in.
+
+01:50.040 --> 01:54.320
+So the server can say does this cookie exist.
+
+01:54.320 --> 01:58.710
+And yeah I've created this cookie this cookie belongs to this user.
+
+01:58.710 --> 02:01.560
+You can send him or her the package.
+
+02:01.560 --> 02:08.590
+Go ahead well we're going to bill is actually an implementation of both of these.
+
+02:08.700 --> 02:14.700
+And the reason I picked this way there's there's a few things I think it's a nice secure way of doing
+
+02:14.700 --> 02:15.290
+things.
+
+02:15.300 --> 02:17.260
+It gives you a bit of flexibility.
+
+02:17.460 --> 02:23.450
+And this is how I actually implement authentication and sessions in my apps personal.
+
+02:23.760 --> 02:29.130
+But it also teaches you both ways of doing things so that you can pick and choose and determine for
+
+02:29.130 --> 02:30.970
+yourself what is best for you.
+
+02:31.260 --> 02:35.880
+Well we're going to do is we're going to have user name and password check by the server and that's
+
+02:35.880 --> 02:38.770
+something that we already do with our sign and endpoint.
+
+02:38.850 --> 02:47.970
+And the smart braina we check the B script compare function and compare our past to the hash that is
+
+02:47.970 --> 02:49.740
+stored in our database.
+
+02:49.740 --> 02:53.340
+We then will generate a token.
+
+02:53.340 --> 03:01.710
+Now this tokin is going to be sent back to the server and this tokin once again is going to be saved
+
+03:02.100 --> 03:03.970
+on the browser.
+
+03:04.020 --> 03:08.030
+They say server Yeah the token gets sent back to the browser.
+
+03:08.600 --> 03:14.450
+The browser is going to save it and then any time we want to access the profile we're going to send
+
+03:14.450 --> 03:19.620
+that token back to the browser or back to the server.
+
+03:21.240 --> 03:28.530
+Now the difference here is up until this point we've kind of done JWT but instead of just running the
+
+03:28.560 --> 03:39.030
+JWT tokin dot varify we're instead going to check our read us database which will create and connect
+
+03:39.030 --> 03:47.970
+to our API and this database is going to be holding our JWT tokin strength so that we can check to see
+
+03:48.030 --> 03:49.600
+in the rattus database.
+
+03:49.610 --> 03:52.180
+Oia we have the JWT token.
+
+03:52.380 --> 03:59.100
+So in similar ways to what we do with cookies and it's going to return true or false the server is then
+
+03:59.300 --> 04:07.660
+once is checked that say all right this is a valid JWT token it hasn't actually decoded it it simply
+
+04:07.660 --> 04:13.450
+just checks this session and then says all right you can have the present and you see here that we're
+
+04:13.450 --> 04:17.330
+kind of combining these two methods instead of just verifying the GWG.
+
+04:17.410 --> 04:21.620
+We actually store it on the database and check against it.
+
+04:21.970 --> 04:25.490
+And like I said you get a bit of benefits from both of these.
+
+04:25.630 --> 04:32.330
+By doing it this way with the downside of you missing out on the benefits of not having to store things.
+
+04:32.350 --> 04:33.920
+If you use JWT.
+
+04:34.120 --> 04:38.990
+But once again I think it's a good way of doing things and it demonstrates both situations.
+
+04:39.130 --> 04:43.270
+So by the end of this section we're going to have this implemented and we're going to come back to this
+
+04:43.270 --> 04:45.220
+diagram so it all makes sense.
+
+04:45.250 --> 04:46.900
+I hope you're excited.
+
+04:47.140 --> 04:50.370
+It's going to be a lot of work but also it's going to be a lot of fun.
+
+04:51.570 --> 04:52.680
+I'll see in the next one.
+
+04:52.990 --> 04:53.250
+Buh-Bye.

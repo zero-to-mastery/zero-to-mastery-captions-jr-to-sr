@@ -1,0 +1,388 @@
+WEBVTT
+
+00:01.510 --> 00:02.460
+Welcome back.
+
+00:02.770 --> 00:10.840
+Let's keep going down our security guidelines and go with our second third party libraries to see what
+
+00:10.840 --> 00:11.800
+that's all about.
+
+00:15.080 --> 00:17.170
+Us our applications grow.
+
+00:17.270 --> 00:24.920
+We depend on more and more third party libraries and you can see that right away if you go into any
+
+00:24.920 --> 00:31.520
+project and look at their node modules folder we use a ton of code from other people and that's not
+
+00:31.520 --> 00:32.840
+a bad thing.
+
+00:32.870 --> 00:38.490
+We don't want to keep writing our own functions our own solutions that have already been discovered.
+
+00:38.600 --> 00:44.720
+The idea of A.P.M. is to be able to share code with other people so we can build applications faster.
+
+00:44.720 --> 00:47.230
+I mean look what create react up can do for us.
+
+00:48.010 --> 00:55.910
+Now when that happens you encounter this other problem where once again you're using code that you didn't
+
+00:55.910 --> 00:56.860
+write yourself.
+
+00:57.690 --> 01:04.980
+And that perhaps might not be the most secure and when it comes to third party libraries you always
+
+01:04.980 --> 01:11.990
+want to make sure if you're adding it to your project that it is a good library it's a library that
+
+01:12.000 --> 01:18.770
+you can trust and it's a library that is secure because anybody can load up any package that they want
+
+01:18.790 --> 01:19.690
+on NPM.
+
+01:19.890 --> 01:28.560
+And if I'm a bad person I can perhaps load a really bad library that says it helps you with one problem
+
+01:28.680 --> 01:35.040
+but actually collects user information perhaps or maybe your logging outputs.
+
+01:35.370 --> 01:39.000
+So you always want to be careful with third party libraries now.
+
+01:39.420 --> 01:46.920
+Luckily for you there's a fairly good system that you can implement and that is just make sure you go
+
+01:46.920 --> 01:52.710
+to their GET HELP page of whatever third party library you're using and look at their stars and how
+
+01:52.710 --> 01:54.610
+many times they've been forked.
+
+01:54.620 --> 02:02.790
+And generally the big community around it you can trust big libraries like react or redux because well
+
+02:02.820 --> 02:06.150
+they're developed by companies that you can trust.
+
+02:06.150 --> 02:08.000
+Well kind of you can just.
+
+02:08.430 --> 02:14.070
+But they also have a lot of stars on get Hobb a lot of people are working on it and a lot of open source
+
+02:14.070 --> 02:19.410
+community time has gone into it in order to make it better and safe.
+
+02:19.410 --> 02:28.040
+So use packages that are well-known well-respected and that are constantly being worked on.
+
+02:28.050 --> 02:34.190
+Now I want to show you two things you can do right away to really improve your security part practices
+
+02:34.190 --> 02:40.900
+when it comes to third party libraries and that is these two tools the NSB and the snake.
+
+02:40.910 --> 02:42.160
+I think you say Snick.
+
+02:42.200 --> 02:48.040
+Not sure how it's pronounced but we're going to show you how this work to check your third party libraries.
+
+02:49.570 --> 02:54.890
+I have over here our robo friends progressive Web app and in here.
+
+02:54.910 --> 02:56.730
+Let's make this a little bit bigger.
+
+02:57.800 --> 03:05.750
+I'm going to install these two packages that I just talked about NPM install G for global so that I
+
+03:05.750 --> 03:10.970
+can use the NSB command and enter.
+
+03:11.010 --> 03:13.760
+Now this is probably going to give me an error.
+
+03:13.800 --> 03:14.510
+There it is.
+
+03:14.610 --> 03:16.950
+You're going to get an easy access error.
+
+03:17.250 --> 03:18.930
+You have the permission denied.
+
+03:18.930 --> 03:24.370
+Again if you're getting this error that means you don't have permission to install a global package.
+
+03:24.450 --> 03:29.780
+So sometimes you might have to do sudo or run the command in admin mode.
+
+03:31.080 --> 03:36.180
+So let's do that with NSB and you'll have to enter your password.
+
+03:36.210 --> 03:41.220
+Make sure you say you are who you say you are and you have your package installed.
+
+03:41.400 --> 03:44.650
+So A.B. what can we do with it.
+
+03:45.680 --> 03:52.390
+Well we can run a command called NSB check and it's going to check our ruber friends P.W..
+
+03:52.700 --> 03:53.710
+Let's see what it does.
+
+03:59.370 --> 04:06.690
+Oh looks like we have one vulnerability and NSB check is awesome because it gives you great information
+
+04:06.960 --> 04:09.750
+on where your issues are.
+
+04:10.470 --> 04:17.160
+You see people are constantly finding vulnerabilities in code and how they can do bad things with it.
+
+04:17.430 --> 04:20.020
+And good people are always trying to fix these.
+
+04:20.100 --> 04:24.410
+And that's all you have on your iPhone or Android phone.
+
+04:24.420 --> 04:32.280
+Constant updates because companies are constantly updating software in order to be more secure.
+
+04:32.280 --> 04:38.070
+If somebody finds a vulnerability they need to fix that right away because all the attackers are going
+
+04:38.070 --> 04:39.950
+to be like oh there's a new vulnerability.
+
+04:39.960 --> 04:45.310
+I'm going to try that out and see if I can do bad things with it.
+
+04:45.780 --> 04:53.730
+So always always update and have the latest software updates because most of the time there are security
+
+04:53.730 --> 04:56.590
+updates to avoid these type of vulnerabilities.
+
+04:56.730 --> 05:02.800
+And with NSB check we see that yep we have a package that is named Hoek Hoek Hoek.
+
+05:02.820 --> 05:06.990
+I don't know how to say that and it's you see that it's a medium level.
+
+05:06.990 --> 05:14.690
+We have the 4.2 version installed and the vulnerability affects all things that are 4.2 or below.
+
+05:15.450 --> 05:21.690
+And then it shows you what the patch version is and also what is using this package.
+
+05:21.690 --> 05:28.430
+I mean we see that the robot friend zapped the whole package is used by re-act scripts just just Seelye
+
+05:28.440 --> 05:29.030
+environment.
+
+05:29.040 --> 05:32.750
+Bouvard JS Dom request Hawk Hoek.
+
+05:32.910 --> 05:36.360
+So it's being used you can see the nesting that's happening here.
+
+05:36.360 --> 05:42.510
+So even though we don't directly know about it it's being used by just Domm that use the request and
+
+05:42.510 --> 05:43.450
+they uses Hok.
+
+05:43.460 --> 05:44.910
+They have this hope.
+
+05:45.210 --> 05:51.910
+And also it gives the information are on where you can find more details about this vulnerability.
+
+05:52.350 --> 05:58.490
+And if you actually go to the Hoque Web site let's do hope and PM
+
+06:01.890 --> 06:12.360
+we see that oh yeah there is a near version 5 point 0.3 and that we definitely have an outdated version.
+
+06:12.420 --> 06:13.460
+Very cool.
+
+06:13.500 --> 06:18.030
+So we want to update that by changing our package.
+
+06:18.150 --> 06:26.970
+Jason Faltu a newer version or perhaps just using the NPM install command again to reinstall whatever
+
+06:26.970 --> 06:27.560
+we need.
+
+06:29.130 --> 06:29.370
+All right.
+
+06:29.370 --> 06:33.860
+What about the other two I was talking about the NPM installed dashi.
+
+06:33.900 --> 06:38.890
+But this time it's called Sonic snipy Snick.
+
+06:38.940 --> 06:47.010
+We're going to go with Nick and this story is going to require you to actually connect your get Halba
+
+06:47.010 --> 06:48.030
+account.
+
+06:48.060 --> 06:53.530
+That's because with NSB we're auditing our packaged God.
+
+06:53.600 --> 07:00.120
+Jason phÃ³ snake is going to audit your node modules directory using this nick task's command.
+
+07:00.170 --> 07:01.830
+And this is a really really good tool.
+
+07:02.710 --> 07:12.740
+So if we Ron let me clear this if we run Snick test you see that we need authentication account.
+
+07:12.750 --> 07:17.100
+So we need to connect it to our Get help so I can do Snick off
+
+07:21.820 --> 07:27.660
+and I'm just going to log in with my get help account I want to authorize it.
+
+07:29.940 --> 07:31.170
+Yeah sure I agree.
+
+07:34.770 --> 07:36.570
+All right we're ready to be used.
+
+07:36.720 --> 07:41.420
+So let's go with Snick test.
+
+07:41.650 --> 07:44.230
+We have to run NPM and solve first.
+
+07:44.440 --> 07:51.370
+And again because I just get cloned this package I haven't run NPM install so there's no node modules
+
+07:51.370 --> 07:52.020
+folder yet.
+
+07:52.060 --> 08:00.100
+And this project but the NSB was able to run the tests because it tests the package Jasonville.
+
+08:00.390 --> 08:04.900
+All right so let's just run NPM install.
+
+08:04.960 --> 08:05.330
+All right.
+
+08:05.340 --> 08:07.350
+And now let's run run our command.
+
+08:07.350 --> 08:15.290
+I'm going to clear this and we're going to rerun and sniff test and while this is running it's going
+
+08:15.290 --> 08:17.110
+to run a ton of tests.
+
+08:17.120 --> 08:23.520
+There are other tools like this out there but the idea and the end goal is always the same.
+
+08:23.600 --> 08:29.750
+Make sure that the third party libraries that you're using are always up to date and that you're not
+
+08:29.750 --> 08:33.630
+using any packages that have known vulnerabilities.
+
+08:33.740 --> 08:41.350
+And there's a ton of information online about how to find those.
+
+08:41.360 --> 08:41.950
+All right.
+
+08:42.840 --> 08:45.990
+We're testing that's a lot of dependencies.
+
+08:46.080 --> 08:55.030
+A thousand forty nine to been dependencies and found 13 vulnerabilities with 528 vulnerable paths.
+
+08:55.030 --> 08:57.930
+Holy moly that's a lot.
+
+08:58.390 --> 09:06.990
+And it gives you a ton of output it even gives you information of how you can fix this.
+
+09:07.000 --> 09:11.920
+You see that your dependencies are out of date otherwise you'll be using a new or tough cookie then
+
+09:11.920 --> 09:19.320
+tough cookie 2.3 to again assess tried deleting No module and re-installing them running snake tests
+
+09:19.320 --> 09:19.960
+again.
+
+09:21.230 --> 09:26.590
+And if the problem persists and it probably does because we just install this one of your dependencies
+
+09:26.590 --> 09:29.660
+may be bundling outdated modules.
+
+09:29.660 --> 09:34.730
+So again you might have to go ahead and fix that and install new packages.
+
+09:34.820 --> 09:37.200
+But you see that we have a time.
+
+09:37.700 --> 09:38.840
+And here's the thing.
+
+09:38.870 --> 09:46.940
+There's definitely when you run this it's very rare that you're going to get 100 percent but at least
+
+09:46.940 --> 09:52.280
+now we know where to start and where to perhaps update our packages.
+
+09:52.280 --> 09:58.700
+The problem with some of these is that the tough cookie package for example is needed by the request
+
+09:58.700 --> 10:05.690
+package and perhaps the if we update the tough cookie package the request package won't be able to work
+
+10:05.690 --> 10:07.820
+with the newer version of tough cookie.
+
+10:08.060 --> 10:14.990
+And you know what that's one of the big problems with PM and having these really deep nested dependency
+
+10:14.990 --> 10:15.720
+trees.
+
+10:16.250 --> 10:22.000
+And there are many discussions online on how to solve this and what the best practices are.
+
+10:22.190 --> 10:28.390
+But I hope by using these two tools you can decide for yourself what you want to fix.
+
+10:30.110 --> 10:36.410
+I hope this has taught you that you have to be careful of all these packages and it's good to have these
+
+10:36.410 --> 10:42.860
+tests running and perhaps as a team decide when to fix something and when to not want to not include
+
+10:42.860 --> 10:47.700
+a third party library because of a vulnerability or when you should.
+
+10:47.940 --> 10:48.810
+I'll see you in the next video.

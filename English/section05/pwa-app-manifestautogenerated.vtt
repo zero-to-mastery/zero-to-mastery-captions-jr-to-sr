@@ -1,0 +1,211 @@
+WEBVTT
+
+00:01.710 --> 00:02.710
+Walk them back.
+
+00:02.970 --> 00:10.770
+Let's talk about the second point of making a progressive webapp and probably the cutest little icon
+
+00:10.920 --> 00:13.620
+that I'm going to have in this course.
+
+00:13.620 --> 00:23.060
+The app manifest now for a progressive Web app to behave like a native app we need to mimic not just
+
+00:23.270 --> 00:32.660
+the function of a native app but also some of the views that we get with it or the shell for example
+
+00:32.660 --> 00:33.740
+on your phone.
+
+00:33.740 --> 00:40.760
+You can download an app and have an app icon on Android devices you have things such as splash screens.
+
+00:40.940 --> 00:49.100
+The idea is to make the web app as indistinguishable as possible to a real mobile app.
+
+00:50.600 --> 00:55.000
+And we can do that with the app manifest before we get into it.
+
+00:55.040 --> 01:03.890
+The one thing I do want to point is that a lot of people forget to include in their index start a shemale
+
+01:03.890 --> 01:10.430
+file this line over here and this comes out of the box with create react up he can see that I'm in the
+
+01:10.430 --> 01:19.370
+public index that a folder and this line which is the meta tag with viewport optimizes the app for multiple
+
+01:19.370 --> 01:20.350
+devices.
+
+01:20.690 --> 01:25.510
+And this might seem super obvious but a lot of people forget it.
+
+01:25.580 --> 01:32.850
+And this line helps with adjusting the screen size based on the device.
+
+01:32.860 --> 01:35.060
+So this is a must.
+
+01:35.080 --> 01:40.200
+And it will warn you if you're missing this line and the lighthouse report.
+
+01:40.340 --> 01:45.110
+So now that we have the screen set up for mobile devices.
+
+01:45.110 --> 01:47.360
+Let's talk about the app manifest.
+
+01:47.570 --> 01:54.770
+And as you can see in our public folder again this is something that we get for free from create reactor
+
+01:56.150 --> 01:57.710
+and this is it.
+
+01:57.740 --> 02:01.430
+This is the manifest dodgiest on file.
+
+02:01.480 --> 02:07.540
+It's a simple Jaisalmer filed that gives the developers the ability to control how the app should appear
+
+02:07.990 --> 02:15.670
+to the user in areas where they would expect to see apps such as the mobile device homescreen.
+
+02:15.910 --> 02:21.610
+And just define how the app is going to launch and how it's going to look.
+
+02:21.610 --> 02:29.530
+So if you remember in my example over here with this hacker news app we had the ad to homescreen button
+
+02:29.800 --> 02:36.410
+in the application tab and you might have noticed that we actually clicked on this thing called manifest
+
+02:36.620 --> 02:46.710
+and the application and that's the manifest dot Jasonville the browser reads this and spits out this
+
+02:46.710 --> 02:49.380
+little piece of information for us.
+
+02:49.500 --> 02:58.150
+And if I scroll down you see that I have icons here that to get downloaded just like I did for when
+
+02:58.150 --> 03:00.880
+I downloaded it onto my home screen.
+
+03:01.450 --> 03:06.690
+And this is the icon that you'll see when you download this app on your mobile phone.
+
+03:07.060 --> 03:13.820
+And it also gives us this nice little feature to add to homescreen.
+
+03:13.870 --> 03:17.350
+So this is the app manifest file and what it does.
+
+03:17.530 --> 03:20.410
+Now how do we generate these icons.
+
+03:21.460 --> 03:31.330
+We see over here that create re-act app has generated a feather on in the public folder but we're missing
+
+03:31.420 --> 03:33.030
+a few things aren't we.
+
+03:33.070 --> 03:40.150
+We don't have all these other sized icons for mobile phones because we still need to generate them for
+
+03:40.150 --> 03:48.160
+our app and we can see here that they have different sizes based on whichever device this gets downloaded
+
+03:48.160 --> 03:48.590
+on.
+
+03:50.050 --> 03:55.290
+Luckily for us there's a great tool that does this very nicely and easily.
+
+03:55.340 --> 03:59.040
+It's called real con generator.
+
+04:00.640 --> 04:10.940
+And this all we need to do is provide an image such as an image of a robot by just clicking on select
+
+04:11.480 --> 04:16.230
+Fab.com picture and it will take you through the steps to download these.
+
+04:16.610 --> 04:23.600
+And all we need to do is include them in our public folder just like the Fabrikant icon laws and reference
+
+04:23.600 --> 04:27.970
+them in the manifest dot Jaisalmer the end door.
+
+04:27.980 --> 04:35.240
+This is exactly where we're going to do in our exercise to turn our robot friends up into a progressive
+
+04:35.320 --> 04:36.440
+Web app.
+
+04:36.470 --> 04:46.160
+Another thing that this web site does for us is previewing and customizing the splash screen for our
+
+04:46.160 --> 04:48.100
+manifest file.
+
+04:48.100 --> 04:50.210
+Now what is a splash screen.
+
+04:51.580 --> 04:58.990
+In older versions of chrome for Android tapping on the home screen icon for an app would often take
+
+04:58.990 --> 05:04.700
+up to a couple of hundred milli seconds before that screen gets loaded.
+
+05:04.750 --> 05:11.990
+A user would see a white screen which makes the experience a little bit jarring.
+
+05:11.990 --> 05:15.560
+And it looks like the Web site is loading really slow.
+
+05:15.980 --> 05:23.930
+So chrome 47 and above support this idea of a splash screen where you can add a background color when
+
+05:23.930 --> 05:26.440
+you tap on the app.
+
+05:26.480 --> 05:32.240
+The progressive Web app instead of loading the white screen it's going to load something called a splash
+
+05:32.240 --> 05:32.790
+screen.
+
+05:33.570 --> 05:40.620
+Where will have the background color the name and icon of the web and you will get that all from our
+
+05:40.710 --> 05:42.870
+manifest God Jaisalmer.
+
+05:43.320 --> 05:50.320
+And this is all done simply to make your web app feel a lot closer to what you see with native apps.
+
+05:50.460 --> 05:55.860
+When you click on native apps even if they're loading they have some sort of a background and icon to
+
+05:55.860 --> 06:00.100
+show you that it is loading over although that's it.
+
+06:00.100 --> 06:01.510
+That's pretty simple right.
+
+06:01.510 --> 06:05.600
+All we need is some icons and add them to manifest.
+
+06:05.630 --> 06:08.390
+Got JS on R-Pa.
+
+06:08.420 --> 06:09.490
+That's it for now.
+
+06:09.500 --> 06:11.080
+I'll see in the next one.
+
+06:11.210 --> 06:11.530
+Bye bye.

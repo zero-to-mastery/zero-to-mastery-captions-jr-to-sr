@@ -1,0 +1,412 @@
+WEBVTT
+
+00:02.400 --> 00:08.550
+All right now that we have our compiler installed Let's see how we can start using it.
+
+00:08.580 --> 00:14.760
+I'm going to clear this and make this a little bit bigger so you can see all we need to do to create
+
+00:14.790 --> 00:23.280
+a typescript file is to have a dot ts at the end of the file just like we have dodgiest for javascript.
+
+00:23.310 --> 00:28.440
+All we need is a TS file and that is a type script file.
+
+00:28.620 --> 00:32.730
+So let's do that let's make a directory first.
+
+00:32.800 --> 00:35.540
+We'll call that type.
+
+00:35.650 --> 00:35.990
+All right.
+
+00:35.990 --> 00:40.010
+I already have it made we CD into that folder.
+
+00:41.310 --> 00:50.450
+So not to make territory we want a CD and to type and in here we can do touch type script dot TS for
+
+00:50.450 --> 00:51.810
+a typescript file.
+
+00:52.400 --> 00:53.720
+Let's open that in subline
+
+00:57.160 --> 01:07.590
+and we have our typescript file and again I have a nice little plug and it gives me a type or a type
+
+01:07.590 --> 01:11.820
+script icon over here and it's already detecting it.
+
+01:11.920 --> 01:18.850
+Now to get your editor set up to understand typescript you might have to google around and say how can
+
+01:18.850 --> 01:23.980
+we add typescript to your editor and I'm going to leave resources for you to do that as well.
+
+01:24.190 --> 01:28.010
+For Sublime Text All you need to do is do command shift.
+
+01:28.150 --> 01:32.020
+On a Mac you might have to do a control shift P on Windows.
+
+01:32.020 --> 01:39.590
+You do install packages and then within install packages just simply do typescript.
+
+01:40.190 --> 01:43.150
+And I've already installed the package.
+
+01:43.150 --> 01:47.950
+So you see that it doesn't show up here but it should just be this simple typescript package.
+
+01:47.950 --> 01:53.840
+There's a few others that you can download but the simple type of one should do just fine.
+
+01:54.780 --> 02:02.340
+Once you do that if you go to the bottom over here you'll see that my editor recognizes the TS file
+
+02:02.400 --> 02:09.580
+as typescript and that's how you can check that your editor has those syntax highlighting for it.
+
+02:09.700 --> 02:12.740
+Again you can see that God type script all set up
+
+02:15.980 --> 02:19.870
+let's write a simple typescript line here.
+
+02:19.880 --> 02:29.520
+We're going to go back to our simple example of a function some that takes in a and b and it's going
+
+02:29.520 --> 02:31.960
+to return.
+
+02:32.170 --> 02:33.670
+Let's say a
+
+02:36.820 --> 02:38.540
+a plus b.
+
+02:38.770 --> 02:41.740
+A very simple function.
+
+02:41.740 --> 02:47.000
+I'm going to save this and let's run this through the compiler.
+
+02:47.230 --> 02:49.230
+Let's bring up the terminal.
+
+02:49.370 --> 02:58.670
+I'm going to actually just put this on one file just so it looks nice and in here we can run TS C for
+
+02:58.760 --> 03:01.520
+typescript compiler and the file.
+
+03:01.520 --> 03:03.420
+We want to run the compiler.
+
+03:03.500 --> 03:07.690
+In our case the typescript dot TS So typescript
+
+03:10.940 --> 03:18.900
+TS let's say set enter while I've been coding a lot you may have noticed that.
+
+03:19.140 --> 03:26.220
+Why don't you just write an error function and again type scrip detects these errors any time you enter
+
+03:26.250 --> 03:27.870
+invalid javascript.
+
+03:28.050 --> 03:34.580
+It's going to be on line when you're doing something funny were you trying to do so again.
+
+03:34.610 --> 03:41.930
+Let's write proper javascript so this one is just a function declaration so let's save and run that
+
+03:41.930 --> 03:42.530
+again.
+
+03:45.190 --> 03:47.950
+All right that was it.
+
+03:48.030 --> 03:57.090
+No errors but you see here that the typescript dot js file was created and if I go to typescript Yes
+
+03:58.260 --> 04:01.510
+all right I have the exact same output.
+
+04:01.680 --> 04:02.680
+This function.
+
+04:02.820 --> 04:08.900
+This function went through the compiler and it got compiled to javascript.
+
+04:08.940 --> 04:15.510
+Well nothing is really different because we didn't do anything different here.
+
+04:15.510 --> 04:18.840
+All right so let's turn this into a Erol function.
+
+04:18.900 --> 04:22.390
+Let's just say consomme equals
+
+04:27.490 --> 04:36.190
+her function and run in to the compiler again and it looks like there's no error so let's go back to
+
+04:36.190 --> 04:38.390
+our jazz file and.
+
+04:38.490 --> 04:39.040
+Whoa.
+
+04:39.150 --> 04:39.820
+Look at that.
+
+04:40.700 --> 04:49.760
+It's changed our javascript or our typescript to a javascript file but it's using the Yes 5 syntax so
+
+04:49.760 --> 04:51.950
+no error function here.
+
+04:52.170 --> 04:57.630
+And you might be wondering to yourself doesn't this what Babel do.
+
+04:58.080 --> 05:02.540
+Well let's go to Babbel.
+
+05:02.690 --> 05:08.770
+Open up the browser and say Babel and go to the Bible compiler.
+
+05:10.150 --> 05:14.740
+And they have a nifty little tool here that says Just try it out.
+
+05:16.420 --> 05:24.870
+And right here we can actually just run what we've done here so let's just copy and paste our function
+
+05:28.300 --> 05:29.220
+and see what we get.
+
+05:34.920 --> 05:41.350
+If we click on and preset we see that we're getting the same thing.
+
+05:41.610 --> 05:46.260
+It's compiling down our new ESX code too.
+
+05:46.430 --> 05:48.810
+Yes five.
+
+05:48.860 --> 05:53.510
+So yeah it's doing the exact same thing as babble.
+
+05:54.010 --> 06:01.640
+And this is another way to try new features of javascript and still compile it down to something that
+
+06:01.640 --> 06:03.620
+a browser understands.
+
+06:03.620 --> 06:10.970
+And now it might make sense why typescript is a superset of javascript typescript allows us to use new
+
+06:10.970 --> 06:16.030
+features that javascript otherwise wouldn't have and we just get to compile it.
+
+06:16.960 --> 06:23.500
+Typescript also tries to stay in line with modern features of javascript so they'll actually implemented
+
+06:23.500 --> 06:27.820
+so that the compiler understands how our functions as well.
+
+06:27.860 --> 06:28.910
+Very cool.
+
+06:28.970 --> 06:31.400
+Now let's write our first type.
+
+06:31.750 --> 06:33.710
+The syntax for typescript again.
+
+06:33.770 --> 06:40.100
+They have a really good documentation on this and we're going to go step by step is to do something
+
+06:40.100 --> 06:48.380
+like a coaching or in our case it's a number and B should also be a number.
+
+06:48.510 --> 06:53.670
+When two outs bases here just to make it cleaner all right.
+
+06:53.820 --> 07:03.160
+If I save this now and watch this as I have over do you see how my editor is giving me a little hint.
+
+07:03.180 --> 07:04.770
+That's another benefit of typescript.
+
+07:04.770 --> 07:09.350
+It's going to help me with some pants as I'm working on my code.
+
+07:11.260 --> 07:14.120
+But for now let's see what it compiles to.
+
+07:14.360 --> 07:22.910
+I want to run it again and go to my javascript file and yep we don't have any of this number number
+
+07:23.010 --> 07:23.500
+stuff.
+
+07:23.600 --> 07:29.060
+The compiler takes it out because this is the code that's going into production and we don't want these
+
+07:29.090 --> 07:34.950
+X sure bytes in our code that's going to make our code heavier to send to the client.
+
+07:35.670 --> 07:38.850
+So the compiler does this automatically for us.
+
+07:38.850 --> 07:40.140
+Very cool.
+
+07:40.140 --> 07:41.510
+But check this out.
+
+07:41.730 --> 07:50.970
+If I do some four plus five well what did I just do.
+
+07:52.280 --> 07:53.390
+My editor.
+
+07:53.450 --> 07:58.020
+Automatically I didn't do anything other than have my typescript set up with my editor.
+
+07:58.130 --> 08:03.260
+I get expected to arguments but got one because I'm doing four plus five.
+
+08:03.300 --> 08:08.330
+Again if we do four come a five now everything should work.
+
+08:08.670 --> 08:10.170
+And I'm not getting any errors.
+
+08:10.200 --> 08:17.340
+If I save and run TMC everything works.
+
+08:17.440 --> 08:19.120
+Our code is still working.
+
+08:19.120 --> 08:29.090
+If I console dialog and let's just give it a constant answer.
+
+08:30.040 --> 08:31.250
+And what is this console log.
+
+08:31.250 --> 08:36.980
+The answer.
+
+08:37.060 --> 08:38.930
+And let's run this again.
+
+08:40.600 --> 08:40.940
+All right.
+
+08:40.950 --> 08:51.720
+Everything is working but if I do know what type skip dodgy us I get the answer of 9.
+
+08:51.800 --> 08:52.640
+Very cool.
+
+08:53.570 --> 09:04.140
+What if I do a string saying hello do you see that my editor has an underline of red.
+
+09:04.140 --> 09:11.810
+Now and if I hover over this underline kind of like a spell checker on your word or text document says
+
+09:12.230 --> 09:20.930
+argument of typo is not assignable to a parameter of type number because I've said that a has a type
+
+09:20.990 --> 09:22.630
+of number.
+
+09:22.750 --> 09:31.010
+Even if I tried to run TSC now oh I didn't save it you save that even if I ran TSC now.
+
+09:33.530 --> 09:39.440
+It actually will throw an error saying that exactly what it said in my editor.
+
+09:39.440 --> 09:43.550
+That type of string isn't going to work with type of number.
+
+09:43.550 --> 09:45.070
+How cool is that.
+
+09:45.080 --> 09:52.820
+This is what we mean where we say that it catches errors at compile time because this code will never
+
+09:52.820 --> 09:59.090
+make it out to production because in order for us to send code to production we must first convert it
+
+09:59.090 --> 10:00.410
+to Javascript.
+
+10:00.650 --> 10:08.240
+And when we convert to javascript we catch those errors in our compiler and if it throws any errors
+
+10:08.270 --> 10:15.410
+we know we need to fix them versus Javascript the way that it works is this javascript gets sent to
+
+10:15.410 --> 10:21.920
+the browser and the browser does what it's called a just in time compiling and compiles the code on
+
+10:21.920 --> 10:22.520
+the spot.
+
+10:22.670 --> 10:28.280
+For each one of their users and this will more likely throw an error and the user might see a blank
+
+10:28.280 --> 10:31.410
+screen or a bread and we wouldn't know what to do.
+
+10:31.880 --> 10:34.520
+So that's pretty nice.
+
+10:35.000 --> 10:42.640
+And by the way you may have noticed that it still compiles our javascript to the hello string parameter.
+
+10:42.710 --> 10:44.090
+That's just something that it does.
+
+10:44.090 --> 10:49.360
+But you can see here that the errors do come out so that you wouldn't actually send this to production
+
+10:49.370 --> 10:54.180
+you'll see that there's errors and that you need to fix some stuff.
+
+10:54.200 --> 10:55.100
+All right.
+
+10:55.400 --> 10:58.250
+This looks pretty exciting and promising.
+
+10:58.340 --> 11:06.500
+We just had this great feature added to make sure that our code is less error prone.
+
+11:06.500 --> 11:07.730
+Go try it out on your own.
+
+11:07.730 --> 11:14.890
+Make sure that your text editor has all of this setup and keep in mind.
+
+11:15.190 --> 11:18.310
+If you're having issues with your editor Google is your friend here.
+
+11:18.400 --> 11:24.160
+There's ton of resources online for whatever editor you have to set it up with the typescript but it
+
+11:24.160 --> 11:26.580
+shouldn't take you more than a couple minutes.
+
+11:26.620 --> 11:29.380
+Maybe Max an hour.
+
+11:29.550 --> 11:31.490
+All right I'll see you in the next video.
+
+11:31.730 --> 11:32.010
+Bye bye.

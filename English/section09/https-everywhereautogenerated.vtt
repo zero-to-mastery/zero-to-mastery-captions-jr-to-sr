@@ -1,0 +1,214 @@
+WEBVTT
+
+00:01.340 --> 00:02.450
+Welcome back.
+
+00:02.480 --> 00:10.250
+Let's talk about our next topic is B.S. everywhere and this is something that should be pretty familiar
+
+00:10.250 --> 00:20.250
+to most of the HTP us as we know is something called SSL and T.L. less certificates because a sheet
+
+00:20.850 --> 00:24.760
+without the s is a clear text protocol.
+
+00:24.780 --> 00:32.190
+It means that when we sent information from the client to the server it's in plain text.
+
+00:32.190 --> 00:40.630
+If anybody intercepts that message they can read it so SSL anti-alias creates a tunnel knownas a sheet
+
+00:40.840 --> 00:50.210
+B S S for secure and this encrypt the information between client and server.
+
+00:50.270 --> 00:58.090
+While we're making HDB requests for example if I was sending my username and password to check with
+
+00:58.090 --> 01:01.230
+the server to show that yeah I am who I say I am.
+
+01:01.330 --> 01:03.060
+Please let me log in.
+
+01:03.070 --> 01:09.540
+We're never ever ever going to use a GP if any web site ever does that.
+
+01:09.630 --> 01:15.580
+Runaway exit that website immediately because your password is going to be sent over the internet over
+
+01:15.580 --> 01:19.500
+the wires for anybody to intercept and see.
+
+01:19.750 --> 01:28.780
+And it's quite easy to do so you're going to see GDP ups in any web site that has any sort of form or
+
+01:29.130 --> 01:33.480
+any place where you need to enter sensitive user information.
+
+01:34.830 --> 01:38.410
+So how do we get these certificates.
+
+01:38.700 --> 01:44.450
+Because what they're saying at the end of the day is that you are who you say you are.
+
+01:44.460 --> 01:52.020
+This Web site lets encrypt is using a DP s because they've got an A certificate saying that yup this
+
+01:52.020 --> 01:53.600
+Web site is ours.
+
+01:53.610 --> 01:59.450
+We have the servers and we are who we say we are and we're not going to mess with your data.
+
+01:59.580 --> 02:07.860
+Well at least it's saying that they have the certificate and SSL until S uses some really high grade
+
+02:07.860 --> 02:14.040
+ciphers that make it virtually impossible for anybody else to see what the output of that data is that
+
+02:14.040 --> 02:22.930
+you're sending over the wire but there are ways that you can Miskin figure or set up your server where
+
+02:23.020 --> 02:24.920
+you think you have HTP TB.
+
+02:25.150 --> 02:27.980
+But it doesn't actually.
+
+02:28.040 --> 02:32.770
+So I'm going to show you my two favorite ways to get a CGP ass on your website.
+
+02:34.790 --> 02:37.460
+The best one is let's encrypt.
+
+02:37.550 --> 02:46.100
+You see encrypting communication is not only about privacy but also about user's safety since it will
+
+02:46.100 --> 02:48.890
+prevent most attempts at tampering.
+
+02:48.890 --> 02:53.840
+What they receive as well so yes.
+
+02:53.990 --> 03:04.230
+Which lets encrypt provides it gives you a certificate to have this as secure on your Web site means
+
+03:04.230 --> 03:07.730
+that you have this trust for both sides.
+
+03:08.800 --> 03:15.430
+Now in the early days you had to buy certificates from certificate authorities and you had spent hundreds
+
+03:15.430 --> 03:18.210
+of dollars and it was a really complex set up.
+
+03:18.700 --> 03:25.780
+And luckily for us for with let's encrypt They're much easier to set up and free of charge.
+
+03:25.930 --> 03:32.500
+You see a couple of years back the service launched to become a new certificate authority because all
+
+03:32.500 --> 03:34.830
+these other companies were charging so much for it.
+
+03:34.840 --> 03:42.550
+There are for profit and the issue these SSL TLM certificates by being part of the Linux Foundation
+
+03:42.580 --> 03:45.480
+and backed by some really big companies.
+
+03:46.610 --> 03:52.010
+Such as Google Facebook Cisco Mozilla the list just keeps going on and on.
+
+03:52.010 --> 03:57.380
+So you can't really trust them because as a certificate authority that issues these certificates you
+
+03:57.380 --> 03:59.290
+want to trust the party.
+
+03:59.540 --> 04:05.430
+Let's encrypt has great documentation on how to get a GPS set up for your website.
+
+04:05.510 --> 04:10.550
+Again if you ever have a form on your website you should be using a GPS and this is something that I
+
+04:10.550 --> 04:15.320
+feel like I keep mentioning in my courses because it is so important.
+
+04:17.150 --> 04:22.310
+Now another option that I really like and they have a free tier as well.
+
+04:22.310 --> 04:27.590
+And by the way if you're thinking about get help pages yes get help pages also allows you to have static
+
+04:27.590 --> 04:34.960
+sites that are search through a CPS but CloudFlare is really really good.
+
+04:35.030 --> 04:41.690
+They have a global network of servers that work has content delivery networks something that we're going
+
+04:41.690 --> 04:48.600
+to talk about in our third part in the performance section and by default they give you a sheet.
+
+04:48.620 --> 04:49.210
+Yes.
+
+04:49.280 --> 04:54.440
+So if you host your files with CloudFlare you're going to get us out of the box.
+
+04:54.440 --> 05:01.280
+They also have the added benefit that they help against something called the OS or distributed denial
+
+05:01.280 --> 05:03.000
+of service attack.
+
+05:03.290 --> 05:09.490
+And that is when a hand of computers try to send the request to a server at the same time.
+
+05:09.770 --> 05:17.990
+If we go back to our example imagine if we get a million machines or people at the same time to click
+
+05:18.200 --> 05:24.670
+send secret to the server the server won't be able to handle all this information.
+
+05:24.680 --> 05:25.640
+At the same time.
+
+05:25.790 --> 05:26.950
+And it could crash.
+
+05:27.020 --> 05:33.350
+And that's what a POS attack is and people use bÃ¡ networks to do exactly this.
+
+05:33.380 --> 05:38.430
+They can have devastating consequences because they take down your web site or your server.
+
+05:38.480 --> 05:46.300
+Luckily CloudFlare with all their global servers around the world has this basic Dio's protection out
+
+05:46.310 --> 05:51.200
+of the box and there are other tools in other places that offer this such as Amazon.
+
+05:51.290 --> 05:56.020
+But these are the two that I highly highly recommend.
+
+05:56.060 --> 05:59.970
+So if you've gotten anything from this it's pretty simple.
+
+06:00.040 --> 06:02.580
+Use UPS as a matter of fact.
+
+06:02.630 --> 06:07.380
+Google Now if you have a Web site with a form and you don't use HSDPA.
+
+06:07.550 --> 06:10.880
+They're going to have a bash here that says not secure.
+
+06:12.110 --> 06:17.740
+So again use they should CPS to make sure that your data is always encrypted.
+
+06:18.590 --> 06:19.770
+I'll see in the next one.
+
+06:20.160 --> 06:20.450
+But by.

@@ -1,0 +1,217 @@
+WEBVTT
+
+00:00.770 --> 00:01.900
+Welcome back.
+
+00:02.060 --> 00:06.380
+Things are slowly starting to piece together and they're starting to work.
+
+00:06.380 --> 00:07.790
+It feels good doesn't it.
+
+00:07.790 --> 00:14.510
+And we're getting so so close when we have one last thing that we want to implement on the backend before
+
+00:14.510 --> 00:19.330
+we come back to the front and do a few things such as fixing this profile issue.
+
+00:19.370 --> 00:28.070
+Now this token here is being sent to us but we also want to make sure that whenever we receive this
+
+00:28.090 --> 00:37.690
+token from the client we do some check on it because remember in our seinen function we have written
+
+00:37.750 --> 00:45.100
+this silly little function called Get auth token ID that just does a console.
+
+00:45.380 --> 00:53.090
+And if we go back to our main function that is seinen authentication we see that we check if the request
+
+00:53.230 --> 01:01.210
+headers has authorization and if they already do then we can run get auto can ID because we don't want
+
+01:01.210 --> 01:03.380
+the user to sign in over and over.
+
+01:03.640 --> 01:09.370
+Otherwise they have to run through the handle sign and step which already works for now.
+
+01:09.370 --> 01:14.500
+We checked and it's storing the information creating the session in the rattus server and returning
+
+01:14.860 --> 01:17.780
+the session information.
+
+01:17.830 --> 01:22.440
+So let's finish this off by having a get off token ID.
+
+01:22.450 --> 01:30.760
+Now this naming should make sense while we want to do here is actually get the token or get the ID from
+
+01:30.760 --> 01:32.770
+our rattus database.
+
+01:32.830 --> 01:42.030
+Remember if I do get this token that we've created with our user Well I want to receive the profile
+
+01:42.030 --> 01:48.840
+ID of one so that we're able to request and do a get request to the profile.
+
+01:48.840 --> 01:53.050
+Remember in our server Dutchie us our endpoints.
+
+01:53.050 --> 01:59.450
+Our goal is to have signing that just simply says yeah you're seinen heres your token.
+
+01:59.680 --> 02:07.180
+And then once we receive the token we send a request to actually get the profile ID and because this
+
+02:07.360 --> 02:17.470
+sign in authentication returns a token and an ID remember returns an ID and a token were able to now
+
+02:17.830 --> 02:26.530
+get the profile with the ID that we received and giving the authorization letter of the token so that
+
+02:26.890 --> 02:33.730
+later on when we make this a protected and point that only valid Autocad can access we make sure that
+
+02:34.450 --> 02:36.280
+this works properly.
+
+02:36.280 --> 02:37.760
+So let's do that.
+
+02:37.840 --> 02:43.880
+I'm going to go to seinen authentication and fix the get a token ID.
+
+02:43.890 --> 02:47.010
+This is going to be a nice simple function.
+
+02:47.010 --> 02:50.550
+Were simply getting the value from our red database.
+
+02:52.340 --> 03:05.250
+Were going to say Konst authorization because we're going to receive that from our request not hatters.
+
+03:05.290 --> 03:08.590
+And again we're going to receive these objects.
+
+03:08.590 --> 03:16.090
+So in the GET OFF token I.D. I'm going to pass the request response object to the gueth token get a
+
+03:16.210 --> 03:20.930
+token I.D. and in here we should have access to them now.
+
+03:23.550 --> 03:28.450
+Now with our redescribe it is a simple method.
+
+03:28.530 --> 03:36.090
+Instead of that we're going to use get just like we did in rattus and all we need to do now is give
+
+03:36.090 --> 03:44.820
+it the key in our case the authorization tokin and the Gebe request is going to receive a callback function
+
+03:45.090 --> 03:51.650
+when it actually receives this with either an air for a reply.
+
+03:52.050 --> 03:58.060
+So you'll get a nyl or an actual ID number.
+
+03:58.150 --> 04:00.560
+So let's create that callback function.
+
+04:00.640 --> 04:12.620
+And within this weekend do a quick check to say that if there is an error or maybe there is no reply.
+
+04:12.770 --> 04:15.350
+In that case we can say return
+
+04:20.600 --> 04:26.190
+and we can do their response in here and add a dog then.
+
+04:26.240 --> 04:31.160
+But just because we already have the handle sign in and just to keep the clutter from happening although
+
+04:31.160 --> 04:38.200
+I like keeping the responses within this function for now let's add the actual response in here.
+
+04:38.210 --> 04:46.340
+I'm going to say return response status of 400 and it's going to say
+
+04:50.270 --> 04:50.990
+on authorize
+
+04:54.610 --> 04:58.450
+nice sounds very official.
+
+04:58.580 --> 05:07.430
+However if everything works out well in that case we want to return response that Jason with the ID
+
+05:08.050 --> 05:09.910
+that is the reply that we receive.
+
+05:09.940 --> 05:16.170
+Remember the reply is going to be the string of one that will be assigned to ID.
+
+05:16.230 --> 05:24.870
+So this way our get our token I.D. will get the token ID and remember because we're returning here we
+
+05:24.870 --> 05:28.040
+want to make sure that this function actually returns something as well.
+
+05:28.170 --> 05:33.120
+In which case we add the return key here.
+
+05:33.180 --> 05:36.890
+So if we save this we shouldn't get any errors.
+
+05:36.900 --> 05:38.310
+We have a syntax error.
+
+05:38.550 --> 05:39.340
+I lied.
+
+05:41.060 --> 05:45.710
+And yes that's because we want to return an object here.
+
+05:45.890 --> 05:50.950
+Let's say that all right everything seems to be working.
+
+05:50.980 --> 06:00.870
+We're using GET OFF token ID if I scroll down here this should make sense now are signed in authentication
+
+06:01.050 --> 06:09.780
+that goes to the sign in and point is going to do one of two things if the user sends an authorization
+
+06:09.780 --> 06:15.320
+token we're going to just grab the user id and send our response back.
+
+06:15.390 --> 06:24.410
+Remember the response Jaison with ID of the user if there is no authorization token then we're going
+
+06:24.410 --> 06:31.700
+to handle sign in check our passwords used be crypt and the database to check our passwords if everything
+
+06:31.700 --> 06:37.130
+checks out well and we have an ID and an e-mail then we're going to create the session and actually
+
+06:37.130 --> 06:42.060
+store create the token set the token in our database.
+
+06:42.300 --> 06:45.450
+If it doesn't work well we just reject with an error.
+
+06:45.570 --> 06:53.810
+Otherwise we're going to return the session with success true and a user ID and a token once again.
+
+06:53.820 --> 07:01.110
+So that at the end of both of these situations the user ends up with an ID and token.
+
+07:01.230 --> 07:06.750
+So that in the future and what we're going to implement in the next video on the front end we can use
+
+07:06.750 --> 07:12.380
+the dot get request to get the profile.
+
+07:12.390 --> 07:14.790
+So with that I'll see in the next video.

@@ -1,0 +1,238 @@
+WEBVTT
+
+00:01.060 --> 00:08.380
+Welcome back I'm going to show you a type Now that well I don't recommend using but it's still there
+
+00:09.010 --> 00:12.430
+it still has some use cases but please be careful.
+
+00:12.430 --> 00:19.330
+I'm going to do some exclamation marks here because this is something that if you're using a you want
+
+00:19.330 --> 00:21.840
+to make sure that you're using it right.
+
+00:22.090 --> 00:25.880
+And that's the any type when you make more space over here.
+
+00:28.420 --> 00:39.400
+We say let whatever be of any type and let's be dramatic over here.
+
+00:39.670 --> 00:48.730
+No I save it works and whatever can be whatever we want.
+
+00:48.940 --> 00:55.210
+For example I can say whatever equals to five.
+
+00:55.400 --> 00:59.450
+And can spell.
+
+00:59.670 --> 01:00.100
+All right.
+
+01:00.120 --> 01:01.430
+No compilation errors.
+
+01:01.470 --> 01:02.210
+I can do.
+
+01:02.250 --> 01:05.420
+True.
+
+01:05.620 --> 01:09.690
+I can do lists to size that small from above.
+
+01:09.700 --> 01:10.360
+All right.
+
+01:10.360 --> 01:11.320
+That works too.
+
+01:12.400 --> 01:23.140
+And I can even do let's say whatever he calls basket which is the people from up here and no errors
+
+01:23.770 --> 01:30.240
+you see any type as the name suggest can be any type that we want.
+
+01:30.430 --> 01:33.120
+And you're thinking to yourself huh.
+
+01:33.550 --> 01:41.440
+So what's the point of any I mean isn't javascript just pretty much the type where we don't have static
+
+01:41.440 --> 01:42.160
+typing.
+
+01:42.430 --> 01:44.470
+Why would you ever want to use this.
+
+01:44.530 --> 01:49.780
+And you're right by using this you're neglecting all the benefits that typescript would give you because
+
+01:50.110 --> 01:57.520
+whatever we'll never throw out an error it can be whatever we want but any is useful for cases let's
+
+01:57.520 --> 02:03.280
+say where you're working on converting your code to your javascript code into typescript code.
+
+02:03.520 --> 02:08.800
+And that might take a long time and in the meantime you might want to just place any for really complicated
+
+02:08.800 --> 02:15.920
+functions or really complicated objects that we can't right away define them like we have here.
+
+02:16.000 --> 02:18.410
+But again be very cautious.
+
+02:18.550 --> 02:25.000
+You're pretty much now using the benefits of typescript at all so if you have any all over your codebase
+
+02:25.330 --> 02:28.420
+then you're not really using typescript properly.
+
+02:29.580 --> 02:33.650
+Another interesting one that we can learn about is something called void.
+
+02:34.470 --> 02:37.280
+And void is quite common when we're working with function.
+
+02:37.560 --> 02:46.920
+Let's say we had a sing function and this sync function doesn't return anything.
+
+02:47.190 --> 02:50.740
+It's just going to have console dialog.
+
+02:51.540 --> 02:54.680
+Or just to be more expressive.
+
+02:54.690 --> 02:56.520
+We have no return statement here.
+
+02:56.520 --> 02:58.660
+We're just going to do console dialog.
+
+02:59.130 --> 03:01.470
+La la la la la la.
+
+03:01.470 --> 03:02.400
+Beautiful song.
+
+03:03.230 --> 03:13.100
+Now and here if we add types to it because this function isn't returning anything we say void for nothing
+
+03:13.100 --> 03:14.090
+return.
+
+03:14.270 --> 03:15.970
+And you see that it's not failing.
+
+03:16.100 --> 03:23.720
+If we do return something let's say that we return Lalah we get an error because we're expecting no
+
+03:23.720 --> 03:24.470
+return.
+
+03:24.470 --> 03:29.030
+But we are indeed returning something again.
+
+03:29.190 --> 03:33.970
+We get that nice hint from typescript and our editor.
+
+03:34.140 --> 03:40.160
+So now if we're returning la la I can just say string and everything works.
+
+03:40.350 --> 03:43.080
+But let's keep it the way it was.
+
+03:43.080 --> 03:46.490
+Using void for any function that doesn't return anything.
+
+03:47.960 --> 03:55.510
+There's also a type of again let's make more space of never.
+
+03:55.520 --> 03:56.300
+Now this is a tough one.
+
+03:56.300 --> 03:59.140
+What do you think it does.
+
+03:59.150 --> 04:14.780
+Let me show you by code we can say a lot ERA Equal to the air function that simply throws an air
+
+04:20.840 --> 04:31.520
+if I saved this nothing's happening but if I give it a typo of never you know it passes.
+
+04:31.570 --> 04:33.280
+So we recognize that the type of.
+
+04:33.280 --> 04:38.350
+Never if I do avoid it still works because we're not returning anything.
+
+04:38.390 --> 04:43.580
+But if I do something like string it's working as well.
+
+04:44.120 --> 04:46.110
+So what does that mean.
+
+04:47.020 --> 04:50.060
+Never type actually tests two things.
+
+04:50.110 --> 04:58.850
+One is that a function never returns and the other one is that a very variable under some sort of a
+
+04:58.860 --> 05:01.370
+type Guard is never true.
+
+05:02.890 --> 05:10.120
+For example in our case when we throw an error typescript infers we never type because the function
+
+05:10.150 --> 05:15.120
+neither has a return type nor a reachable endpoint.
+
+05:15.370 --> 05:17.080
+So this works.
+
+05:17.230 --> 05:27.300
+And if I do return hello and Icesave I get an error we get an ARM reachable code error.
+
+05:27.670 --> 05:39.220
+But if I bring this or hold on make sure we get this to never we go up and save and we see that we get
+
+05:39.670 --> 05:47.350
+two errors one for our reachable code which don't make sense and type pelo is not assignable to type.
+
+05:47.380 --> 05:48.410
+Never.
+
+05:48.760 --> 05:52.890
+If I comment this out and save again I get that error.
+
+05:53.230 --> 05:56.530
+Once again because we're returning something
+
+05:59.510 --> 06:04.800
+let's go back to the air and everything is compiling properly.
+
+06:04.830 --> 06:07.470
+You might be wondering what if I put Never in here
+
+06:10.350 --> 06:17.670
+we see that a function returned returning never cannot have a reachable endpoint because this function
+
+06:18.950 --> 06:23.620
+runs and has an endpoint does Konsole log and then it ends.
+
+06:23.870 --> 06:32.060
+So remember never is for a function that doesn't return and doesn't have that endpoint usually throws
+
+06:32.060 --> 06:33.610
+an error.
+
+06:33.620 --> 06:35.320
+All right that's it for now.
+
+06:35.510 --> 06:37.940
+More types in the next video.
+
+06:38.200 --> 06:38.440
+Buh-Bye.

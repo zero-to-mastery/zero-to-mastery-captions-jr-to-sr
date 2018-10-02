@@ -1,0 +1,331 @@
+WEBVTT
+
+00:01.740 --> 00:02.680
+Welcome back.
+
+00:02.850 --> 00:06.490
+It's time to finish up this progressive webapp part.
+
+00:06.750 --> 00:13.950
+If we scroll down here we see that because of create react up we're getting all these benefits of a
+
+00:13.950 --> 00:14.360
+should.
+
+00:14.380 --> 00:23.720
+Yes we have service workers registered and we have some great caching happening with service workers.
+
+00:23.850 --> 00:33.580
+So let's double check that if we open up this app and go to our developer tools go to applications we
+
+00:33.580 --> 00:38.990
+can go into our cache storage
+
+00:41.860 --> 00:47.110
+and in the cache stores we see the S-W precast in here.
+
+00:47.140 --> 00:53.840
+We see what we are caching a CSX.
+
+00:53.930 --> 01:05.060
+We have some javascript and some funds that were caching perhaps over here we can add the sound file
+
+01:05.630 --> 01:13.910
+of all the robots and if we scroll up to the service workers we see that there is a service worker that
+
+01:13.910 --> 01:21.390
+is activated and running and it shows when it started.
+
+01:21.650 --> 01:24.790
+And you can even click on register if you want.
+
+01:24.800 --> 01:27.620
+Now the one thing that's missing though is the
+
+01:30.510 --> 01:33.080
+we don't have that much in the manifest file.
+
+01:33.090 --> 01:42.130
+We have some default from create re-act app but we have this Generica icon and it's kind of empty.
+
+01:42.360 --> 01:50.560
+And if we go into our report we see that it's complaining that the manifest does not have icons that
+
+01:50.560 --> 01:55.140
+are at least 192 pixels and 5 12 pixels.
+
+01:55.180 --> 01:57.390
+So let's go ahead and do that.
+
+01:57.460 --> 02:06.920
+If you remember we have the father on generator and in here we can just select a picture a screen capture
+
+02:06.920 --> 02:12.460
+that just took of one of our robots.
+
+02:12.560 --> 02:15.650
+It's going to generate for us everything that we need.
+
+02:16.160 --> 02:20.150
+I could have done a better job in making sure that my image is a square.
+
+02:20.360 --> 02:24.990
+But for now we can just continue with this picture and they'll do everything for you.
+
+02:27.200 --> 02:31.580
+As you can see here they have all the settings for us that we can use for.
+
+02:31.580 --> 02:37.790
+We can see what's going to look like we can see what it is going to look like on Android and also on
+
+02:38.030 --> 02:39.020
+Windows.
+
+02:39.080 --> 02:40.560
+Very very cool.
+
+02:40.670 --> 02:48.150
+And we can customize the look of our app so we can just click generate
+
+02:51.200 --> 02:55.680
+and this might take a bit of time depending on your internet connection.
+
+02:55.880 --> 02:59.540
+But hopefully by the end of it we have everything we need.
+
+02:59.560 --> 03:03.190
+First let's download our package.
+
+03:03.210 --> 03:13.370
+Let's open this up and we have a great set of icons that we can use.
+
+03:13.580 --> 03:15.810
+And we have nice steps laid out for us.
+
+03:16.650 --> 03:22.180
+So we want to extract this back kitchen the root of our Web site let's go ahead and do that.
+
+03:22.280 --> 03:27.820
+We're going to move the package that we just downloaded or we're going to put all the files that we
+
+03:27.820 --> 03:38.640
+just used in the public folder up let's copy paste here and we're going to replace the Fabrikant
+
+03:41.730 --> 03:46.190
+and the third step is to insert the following code in the section of your page.
+
+03:46.260 --> 03:56.840
+So let's just copy and paste this go to index Dodd G-S or index dot HMO and we can just
+
+04:00.210 --> 04:04.730
+this code and let's save this again.
+
+04:04.790 --> 04:08.630
+We're going to run NPM non-capital MBM run deploy
+
+04:12.200 --> 04:16.700
+and we're going to have to wait a little bit to make sure that our changes propagate and then we're
+
+04:16.700 --> 04:18.710
+going to test on Lighthouse.
+
+04:19.100 --> 04:25.900
+But also looking at this I don't see the sizing that the lighthouse report gave us.
+
+04:26.090 --> 04:33.880
+If you remember they wanted an icon with size 1 2 and 5 12 pixels.
+
+04:33.880 --> 04:36.380
+Let's go ahead and have those.
+
+04:36.470 --> 04:43.930
+Now the other thing we want to do is go into the manifest adjacent file and this is where we had the
+
+04:43.930 --> 04:51.960
+icons and we see that the sizes of 192 and 5:12 that the lighthouse report complained about is not here
+
+04:51.970 --> 04:54.100
+so let's just add those
+
+04:57.410 --> 05:04.200
+and we'll say that we want this one the Android Chrome one to buy 192.
+
+05:04.550 --> 05:18.180
+So we'll say Android Chrome one I need to buy one or two sizes is going to be one way to buy a 192 and
+
+05:18.180 --> 05:26.520
+the type is going to be Image TNG because well that's what it is.
+
+05:27.470 --> 05:30.470
+And that should be TNG as well.
+
+05:33.170 --> 05:42.000
+And then you see here that we don't have the size 512 that we generated.
+
+05:42.000 --> 05:44.700
+So let's just say that it will use this one instead.
+
+05:47.410 --> 05:56.770
+There's something that you can just manually do this yourself was well let's just say 384 by 384 picture.
+
+05:58.400 --> 06:05.240
+One display as well because we're going to say that the size is going to be five 12 by 12.
+
+06:05.400 --> 06:09.660
+But you can modify this and create this that matches the size properly.
+
+06:10.220 --> 06:16.020
+Let's save and then run NPM run deploy.
+
+06:16.030 --> 06:16.470
+All right.
+
+06:16.510 --> 06:18.630
+Looks like it's published.
+
+06:18.970 --> 06:25.230
+Let's just go back now to our re-act up and we can go back to our Web site.
+
+06:25.240 --> 06:27.610
+We see that our private con is updated.
+
+06:27.610 --> 06:29.760
+It doesn't have this re-act logo anymore.
+
+06:30.010 --> 06:39.470
+And if we open up the application folder and let's refresh what we have a syntax error and looks like
+
+06:39.470 --> 06:43.680
+in our manifest file we made a little mistake and line 10.
+
+06:43.820 --> 06:52.840
+We should have added a comma and by the way to show you that it does work if I do NPM start and just
+
+06:52.840 --> 06:54.040
+test locally
+
+06:57.450 --> 06:59.430
+but can see that we have the new icon.
+
+06:59.520 --> 07:08.230
+If I open the application folder manifest we have the add to homescreen button that on mobile will pop
+
+07:08.230 --> 07:15.590
+up if the user visit the website multiple times and I can even do this on my laptop as well.
+
+07:16.430 --> 07:21.580
+And if we scroll down we see our images.
+
+07:21.630 --> 07:28.550
+So if we deploy it should all work.
+
+07:28.590 --> 07:30.740
+All right let's check it out.
+
+07:31.600 --> 07:38.150
+If I go to the application and refresh if we scroll down.
+
+07:38.150 --> 07:42.580
+All right we see our icons 192 and 512.
+
+07:42.810 --> 07:49.890
+I even have the add to home screen button and this home screen button will obviously appear on our mobile
+
+07:49.890 --> 07:56.450
+device if we're using the website a lot but also over here at the site to your laptop.
+
+07:56.460 --> 07:58.320
+But I don't really want to do that.
+
+07:59.590 --> 08:03.480
+Let's submit this to Lighthouse and see what happens.
+
+08:04.420 --> 08:09.610
+And again I keep reminding you this sometimes when you deploy it takes a long time.
+
+08:09.610 --> 08:11.980
+The best way to check is if you go to your get hub
+
+08:18.280 --> 08:26.380
+and we can go to whichever repository you're using and if you go to your branch get help pages you can
+
+08:26.380 --> 08:28.930
+see what you're deploying.
+
+08:28.930 --> 08:35.010
+In our case you can see that we have index studies Shamal with our images.
+
+08:35.020 --> 08:36.240
+If I go to asset.
+
+08:36.270 --> 08:38.150
+Oh no not this one.
+
+08:38.260 --> 08:42.350
+If I go back and go to dot manifests if I can find it.
+
+08:44.210 --> 08:44.980
+Oh there you go.
+
+08:45.070 --> 08:46.480
+Manifested Jaison.
+
+08:46.530 --> 08:50.720
+I see that everything's been updated here all right.
+
+08:50.720 --> 08:59.190
+Moment of truth if I go close this and do lighthouse lab generate report.
+
+08:59.200 --> 09:00.110
+Wish me luck.
+
+09:06.110 --> 09:07.850
+Oh yeah look at that.
+
+09:07.900 --> 09:10.730
+100 100 100 100.
+
+09:10.820 --> 09:12.800
+This performance could be improved.
+
+09:12.800 --> 09:15.800
+Again this is because of my internet connection.
+
+09:16.010 --> 09:17.170
+It's not too too bad.
+
+09:17.210 --> 09:21.290
+But these are things that we can easily optimize.
+
+09:21.320 --> 09:23.070
+How cool is that though.
+
+09:23.120 --> 09:26.190
+That was pretty easy to implement a progressive Web app.
+
+09:26.270 --> 09:26.790
+Right.
+
+09:26.870 --> 09:35.640
+Just a little bit of work a day's work and you can have your app be a lot closer to mobile apps.
+
+09:35.930 --> 09:42.230
+Now as you know having a progressive Web app is a lot more than just loading a couple of images but
+
+09:42.230 --> 09:47.600
+it's nice to know that create re-act app takes care of it for us so that we can worry on performance
+
+09:47.600 --> 09:53.430
+improvements accessibility and other best practices.
+
+09:53.430 --> 09:56.030
+For now though we worked hard.
+
+09:56.280 --> 10:00.890
+Go ahead and start playing around with the app see what else you can improve.
+
+10:01.170 --> 10:05.560
+But ladies and gentlemen we've got ourselves a progressive Web site.
+
+10:06.060 --> 10:07.980
+I'll see in the next one by.

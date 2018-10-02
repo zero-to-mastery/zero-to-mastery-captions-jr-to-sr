@@ -1,0 +1,652 @@
+WEBVTT
+
+00:00.760 --> 00:01.530
+Welcome back.
+
+00:01.840 --> 00:08.700
+Let's start to add this new feature that is to create multiple face detections.
+
+00:08.800 --> 00:11.350
+Now how should we start about this.
+
+00:11.360 --> 00:15.320
+The first thing I want to do is just move things around.
+
+00:15.500 --> 00:20.310
+Let's have our Front-End over here.
+
+00:20.370 --> 00:23.230
+So I'm not constantly going back and forth here.
+
+00:23.670 --> 00:32.400
+And the very very first thing is while we're dependent on this API this clarify API so I can go into
+
+00:32.400 --> 00:39.830
+the documentation and see what kind of response we get where I can just maybe log out whatever the backend
+
+00:39.840 --> 00:44.020
+does when we hit detect and clarify sends us a response.
+
+00:44.100 --> 00:44.970
+So let's have a look.
+
+00:46.700 --> 00:53.900
+If I go to the back end to the image I see that the clarified response is here in the data.
+
+00:53.900 --> 01:01.090
+So let's just cancel the log this data and see what kind of information we get.
+
+01:01.130 --> 01:09.200
+I'll save and like I said there's probably an easier way of me just going to the documentation to see
+
+01:09.410 --> 01:11.150
+what the what they respond to.
+
+01:11.150 --> 01:16.370
+But I think this way is more general so I think it would be more beneficial to look at through here.
+
+01:16.370 --> 01:17.800
+So let's go back.
+
+01:17.970 --> 01:22.830
+It detect make sure that our assumption is correct and that we return something.
+
+01:22.970 --> 01:23.420
+All right.
+
+01:23.430 --> 01:25.480
+Looks like we get a response.
+
+01:26.790 --> 01:33.330
+Description OK we get an ID created at model input data.
+
+01:33.330 --> 01:37.820
+All right data might be something that we're interested in.
+
+01:37.950 --> 01:42.160
+So let's go into that let's go with actually before we even do that.
+
+01:42.270 --> 01:48.720
+Let's see since we're just returning this plane data let's see what the front end is doing with this
+
+01:48.720 --> 01:49.580
+information.
+
+01:50.580 --> 01:59.740
+So in the front end if we take a look at the where was it the calculate face location.
+
+01:59.940 --> 02:02.430
+We see that we receive some data here.
+
+02:02.430 --> 02:03.620
+I wonder if this might be.
+
+02:03.660 --> 02:09.420
+So let's go to calculate face location find it where we actually call this and yet we see that there
+
+02:09.420 --> 02:15.130
+is a response which comes from here where we make the image you are alcohol.
+
+02:15.240 --> 02:19.440
+All right so this I think might be the response from clarify.
+
+02:19.710 --> 02:24.290
+Let's see what the front end returns.
+
+02:24.420 --> 02:27.270
+I'm going to just within here say console dialogue
+
+02:31.040 --> 02:42.400
+and describe the response going to save and I have to sign in because we just refreshed so G-mail dot
+
+02:44.460 --> 02:51.770
+Hey seinen and let's copy and paste.
+
+02:51.840 --> 02:53.620
+I've got to get the image again.
+
+02:58.010 --> 03:01.220
+Copy and paste detect and open up the console.
+
+03:04.620 --> 03:04.880
+All right.
+
+03:04.890 --> 03:10.700
+So this is the response we get outputs with an ID.
+
+03:11.000 --> 03:16.820
+Let's see we get data input input data.
+
+03:16.880 --> 03:23.800
+There's a lot of things that we can probably go to their documentation and figure out what we need.
+
+03:24.870 --> 03:27.910
+Let's see if we get zero.
+
+03:28.150 --> 03:28.370
+OK.
+
+03:28.380 --> 03:29.820
+So this is a lot of information.
+
+03:29.820 --> 03:32.500
+Let's see how we actually use it on the front end.
+
+03:33.030 --> 03:40.110
+So on the front end if I go to display face box which is what we're using or calculate face location
+
+03:40.110 --> 03:46.290
+which is why we're using the data for I go up here and I see that I'm getting the data outputs dad our
+
+03:46.310 --> 03:49.830
+regions region ampho bounding box.
+
+03:49.890 --> 03:51.300
+So let's copy that
+
+03:54.120 --> 03:58.010
+or let's traverse that our Celso data outputs data regions.
+
+03:58.020 --> 04:00.300
+So let's go to data outputs
+
+04:07.310 --> 04:18.560
+so data outputs zero data regions and how interesting we have an array here of two but if we go back
+
+04:18.560 --> 04:26.920
+to the code it looks like regions we're just using one and we're getting the region info and the bounding
+
+04:26.920 --> 04:29.880
+box to calculate face location.
+
+04:29.890 --> 04:40.150
+So if I go here I see that OK this is the bounding box top row left column bottom row right column and
+
+04:40.480 --> 04:42.530
+on the second one.
+
+04:42.570 --> 04:42.810
+All right.
+
+04:42.810 --> 04:43.800
+We have the same thing.
+
+04:43.810 --> 04:44.040
+OK.
+
+04:44.050 --> 04:51.810
+That's interesting what if we just have a an image with just one person.
+
+04:51.810 --> 04:55.240
+Let's click that again.
+
+04:55.250 --> 04:57.630
+We always want to test our assumptions.
+
+04:57.630 --> 05:06.270
+So I'm going to copy this and that's an that's a u r l song a hit detect.
+
+05:06.290 --> 05:08.920
+All right we get a second response here.
+
+05:08.930 --> 05:17.060
+Again let's test that to our assumptions right so if I go all puts euro data regions there's only one
+
+05:17.060 --> 05:20.260
+region because there's only one face.
+
+05:20.270 --> 05:20.690
+All right.
+
+05:20.780 --> 05:29.430
+So without coding anything we can assume that maybe regions might be what gives us the face information.
+
+05:29.460 --> 05:35.280
+Again this is without even looking at the documents or the API referenced by clarify.
+
+05:35.380 --> 05:36.370
+Let's test that.
+
+05:36.910 --> 05:44.940
+Let's have perhaps a loop instead of just returning one thing.
+
+05:44.950 --> 05:46.270
+Or even better.
+
+05:46.300 --> 05:49.540
+Let's change this data region 1.
+
+05:49.600 --> 05:54.220
+Let's see if here and if I go back I've got to sign in again.
+
+05:57.460 --> 06:01.840
+Sign in and use the image that we had over here.
+
+06:01.840 --> 06:02.890
+Remember last time
+
+06:05.930 --> 06:09.740
+we got this face detected but not this one.
+
+06:09.740 --> 06:15.680
+So again going back to where we changed that one line we said that we want the second phase detection
+
+06:17.310 --> 06:24.650
+all look of that his face is now detected and not hers just by changing that number in the array.
+
+06:24.890 --> 06:29.710
+So right away before we run any line of code we know where we can fix it.
+
+06:29.750 --> 06:31.770
+But just testing it out.
+
+06:31.860 --> 06:40.840
+So it looks like we need to loop over this and instead of returning an object perhaps we can return
+
+06:40.840 --> 06:51.450
+an array of objects and when we display the face or remember we have the display face box.
+
+06:51.650 --> 07:01.270
+We should return perhaps multiple objects of where the faces might be let's start to do that now what
+
+07:01.270 --> 07:05.080
+usually you want to do is create a new branch as you start to work on your feature.
+
+07:05.080 --> 07:11.560
+Now they have a big idea of where you want to start testing your code and your start your branch and
+
+07:11.560 --> 07:15.490
+start working on it and make small gradual commits.
+
+07:15.490 --> 07:22.890
+But for now I'm just going to skip that process because we want to focus on just creating this new feature.
+
+07:22.960 --> 07:33.200
+So the first thing we want to do is let's map over this instead of having the first survey item because
+
+07:33.200 --> 07:42.250
+I know this is a array now I'm going to say map and I know that it's going to return some face detection
+
+07:42.250 --> 07:44.800
+information on a safe face.
+
+07:44.860 --> 07:47.510
+And let's start a new line here so we can see it better.
+
+07:49.350 --> 07:52.120
+Close the brackets.
+
+07:53.170 --> 07:59.350
+All right and we have this information from each one of the faces so if I have two faces I'll have two
+
+07:59.350 --> 08:00.610
+items in the array.
+
+08:02.550 --> 08:02.790
+OK.
+
+08:02.800 --> 08:11.110
+So we have this now because we're looping over this and we want to return an object each time we can
+
+08:11.140 --> 08:14.170
+actually just move all this inside over here.
+
+08:17.960 --> 08:24.530
+And the face region info boning box is now what this expects.
+
+08:24.560 --> 08:31.370
+Let's assign a variable to this that is the clarify face that we're using here to measure where we should
+
+08:31.370 --> 08:35.520
+display that blue box where the faces are songlines say caused.
+
+08:35.810 --> 08:38.570
+Clarify face
+
+08:42.950 --> 08:49.910
+to face equals this and change the above variable.
+
+08:49.910 --> 08:58.770
+To clarify face's But actually I see that since we want to return these clarify faces which is going
+
+08:58.770 --> 09:02.130
+to be an array of these objects.
+
+09:02.310 --> 09:06.430
+I might as well just take this out and say return.
+
+09:06.540 --> 09:17.050
+So this calculate face location we might want to name it to collate faces or face locations and change
+
+09:17.050 --> 09:18.520
+this everywhere else that we see it.
+
+09:18.520 --> 09:22.980
+So let's say where else do we have this.
+
+09:23.020 --> 09:26.730
+So just these two places I'm going to change this to face locations.
+
+09:27.700 --> 09:29.860
+Want to save now.
+
+09:31.990 --> 09:35.170
+The next part is the display Facebook so we've.
+
+09:35.290 --> 09:38.620
+We're returning an array now of these objects.
+
+09:38.770 --> 09:46.450
+If we go to display face box that is a really funny variable name whereas it display face box we see
+
+09:46.450 --> 09:47.410
+that we're setting.
+
+09:47.410 --> 09:51.970
+So we're separating the box to equal box.
+
+09:51.990 --> 09:57.790
+All right but this is expecting an object and we're returning an array now.
+
+09:59.270 --> 10:00.740
+So let's change that.
+
+10:00.740 --> 10:02.390
+We have boxes now.
+
+10:02.720 --> 10:05.610
+And this should be boxes.
+
+10:05.750 --> 10:14.720
+And just to keep the names standard we should change our state name to boxes and Ophir where we have
+
+10:14.720 --> 10:18.650
+initial state changes to boxes again.
+
+10:18.830 --> 10:21.950
+We're now returning an array instead of an object.
+
+10:21.950 --> 10:25.590
+So let's change this into an array.
+
+10:26.620 --> 10:28.680
+All right let me save see if we get any errors.
+
+10:28.680 --> 10:29.680
+Nothing yet.
+
+10:30.600 --> 10:33.390
+Where are we using these boxes.
+
+10:33.390 --> 10:35.730
+We want to make sure that these names are apt to do as well.
+
+10:35.730 --> 10:39.190
+So let's go look for any mention of boxes in here.
+
+10:39.210 --> 10:44.050
+We have the bounding box which is from clarify that's fine display face.
+
+10:44.310 --> 10:47.170
+Perhaps we can change the name to boxes.
+
+10:47.610 --> 10:57.440
+Let me close that display face boxes and use it over here and update that as well.
+
+10:57.440 --> 11:00.090
+Where else do we mention the word box.
+
+11:00.090 --> 11:07.160
+We've seen the render we have this state box but again we have multiple boxes Nasaw going to say boxes
+
+11:07.850 --> 11:11.220
+and let's save just to make sure that we're not making any errors.
+
+11:11.330 --> 11:14.360
+And we see that line 1:38 box is not defined.
+
+11:14.360 --> 11:22.510
+If I go to 1:38 I see that face recognition component that received this box information now needs to
+
+11:22.510 --> 11:27.450
+actually receive boxes and perhaps we should rename it.
+
+11:27.640 --> 11:30.270
+Props to boxes as well.
+
+11:30.370 --> 11:31.280
+So let's save.
+
+11:31.360 --> 11:36.520
+Everything is working but we know right away that since we're passing boxes as props to face recognition
+
+11:36.940 --> 11:38.810
+we have to go into this component.
+
+11:39.080 --> 11:43.060
+You see I'm taking a step by step seeing where these variables lead me.
+
+11:43.390 --> 11:51.320
+I go to the face recognition and OK right away I see I should change just two boxes.
+
+11:52.200 --> 12:04.680
+And I also want to change this two boxes boxes boxes and boxes.
+
+12:04.920 --> 12:06.810
+Well let's save and see what happens here.
+
+12:06.810 --> 12:09.240
+It's always good to check our work and see where we are.
+
+12:09.330 --> 12:13.910
+So I'm going to say hey at gmail dot com.
+
+12:14.200 --> 12:16.680
+Hey let's seinen.
+
+12:16.910 --> 12:19.870
+And again use our favorite couple image
+
+12:23.230 --> 12:25.820
+to paste.
+
+12:25.880 --> 12:28.560
+Scroll down.
+
+12:29.040 --> 12:29.910
+Nothing's display.
+
+12:29.910 --> 12:31.790
+Now we just broke the app.
+
+12:31.980 --> 12:33.840
+But let's go back here.
+
+12:33.870 --> 12:42.440
+Let's see if we're getting any errors in the Network tab someone to again click and we make this a little
+
+12:42.440 --> 12:43.010
+bit bigger.
+
+12:43.010 --> 12:44.900
+We see that everything is working.
+
+12:45.080 --> 12:48.320
+So we might be doing something off here.
+
+12:48.970 --> 12:55.900
+And another tool that I like to use is perhaps the developer tools the re-act developer tools which
+
+12:55.900 --> 13:03.520
+again is a chrome plug in that you can install and if by let's say look for the face recognition component
+
+13:04.480 --> 13:13.480
+I see that this face recognition component has to has the bounding box over here that there's nothing
+
+13:13.480 --> 13:15.370
+in there that makes sense.
+
+13:15.370 --> 13:22.400
+But if we go into the over here and look at the boxes we see that right.
+
+13:22.490 --> 13:25.150
+It receives a props of tear rays
+
+13:28.640 --> 13:31.440
+Well those fund my stores got full while recording.
+
+13:31.500 --> 13:32.670
+But I'm back at it.
+
+13:32.790 --> 13:39.840
+All right so we have the array right now that has two boxes and it looks like it's returning.
+
+13:39.840 --> 13:41.020
+What we want.
+
+13:41.010 --> 13:50.070
+So let's go back to our app and notice here that OK so we're turning an array here that has an index
+
+13:50.070 --> 13:57.230
+of 0 and 1 but in the bounding box we're doing boxes that top row boxes right column which don't exist
+
+13:57.270 --> 14:00.230
+because this isn't an object anymore it's an array.
+
+14:00.310 --> 14:06.300
+Right so there's a nice little fix that we can do here again and we can just create a javascript expression
+
+14:06.510 --> 14:09.040
+by wrapping it in curly brackets.
+
+14:09.290 --> 14:10.620
+No that's not what we want to do.
+
+14:10.620 --> 14:11.750
+Curly brackets.
+
+14:11.880 --> 14:17.040
+And because boxes is now an array I can just say boxes.
+
+14:17.100 --> 14:28.270
+Map our favor function mapping that on each iteration has a box that if you remember gives us those
+
+14:28.270 --> 14:37.490
+properties the div with box's top row or box top row and other dimensions that we need.
+
+14:37.510 --> 14:43.800
+So let's just return this and I'm going to keep this on one line even though it's kind of long.
+
+14:43.930 --> 14:48.690
+So that way we can just say return and then the element that we want.
+
+14:48.700 --> 14:57.070
+And because this is now box we can just go back to using Box which has these properties of bottom row
+
+14:57.400 --> 15:01.380
+right column left column and let's safe here.
+
+15:03.380 --> 15:03.750
+OK.
+
+15:03.910 --> 15:04.890
+Let's go to a chart here.
+
+15:04.900 --> 15:09.700
+And again we're just going step by step just logically talking to ourselves and figuring out what we
+
+15:09.700 --> 15:10.330
+need to do.
+
+15:10.450 --> 15:11.920
+Let's go back.
+
+15:11.920 --> 15:14.540
+We have to sign in again.
+
+15:15.280 --> 15:15.740
+Let's go.
+
+15:15.740 --> 15:18.680
+Hey quick sign in.
+
+15:18.860 --> 15:21.030
+And I'm going to close this for now.
+
+15:21.080 --> 15:23.080
+Let's grab the image again.
+
+15:25.340 --> 15:26.250
+Go back here.
+
+15:26.270 --> 15:29.270
+Paste it.
+
+15:29.320 --> 15:30.930
+Look at that two images.
+
+15:30.940 --> 15:35.060
+Let's make sure that we don't get any errors to go to the console.
+
+15:35.080 --> 15:35.650
+Oh.
+
+15:35.710 --> 15:42.520
+Each child in an array or iterator should have a unique key prop and this is a very common warning and
+
+15:42.550 --> 15:43.080
+react.
+
+15:43.090 --> 15:44.710
+And that's an easy one to fix.
+
+15:44.710 --> 15:51.370
+Anytime you're mapping over aliments and re-act you want to add a key prop that is unique.
+
+15:51.520 --> 16:00.190
+The key for now is just going to be the box dot top row probably could be something better but at least
+
+16:00.190 --> 16:01.540
+we know that it's going to be unique.
+
+16:01.540 --> 16:06.990
+For now let's go back again because we have to constantly sign in.
+
+16:07.030 --> 16:11.250
+We might want to just change the route the state over the road for development.
+
+16:11.260 --> 16:21.540
+So we don't have to do this over and over but if we go back detect two faces Nowhere's if we go to the
+
+16:21.540 --> 16:25.700
+network it looks like everything is working perfect.
+
+16:25.710 --> 16:31.350
+I think we've implemented the feature and now what we want to do is actually test different things and
+
+16:31.620 --> 16:34.490
+try to break this and see if we get any errors.
+
+16:34.530 --> 16:38.540
+Perhaps maybe write some tests for this make snapshot testing
+
+16:50.380 --> 16:51.700
+and there we go.
+
+16:51.700 --> 16:57.640
+We have ourselves a new feature implemented make sure we create a new branch make a pull request you
+
+16:57.660 --> 17:02.080
+know test start different things try and break this that this feature is actually working we haven't
+
+17:02.080 --> 17:06.130
+made any mistakes and we got our first feature in the summer.
+
+17:06.140 --> 17:11.260
+Now hopefully this gives you a good idea of how the app works because we're going to be using it in
+
+17:11.260 --> 17:14.670
+later sections to do some really really fun things.
+
+17:14.680 --> 17:19.080
+So for now I'll see in the next video by.

@@ -1,0 +1,217 @@
+WEBVTT
+
+00:01.000 --> 00:09.000
+Welcome back now we should have a better understanding of what see-I CD is continuous integration continuous
+
+00:09.000 --> 00:11.850
+delivery continuous deployment.
+
+00:11.850 --> 00:14.240
+Let's review what we've learned so far.
+
+00:14.250 --> 00:21.200
+Now you may not have realized it but you just learned the foundational practices that make you a rock
+
+00:21.200 --> 00:22.480
+star developer.
+
+00:22.500 --> 00:23.490
+Why.
+
+00:23.490 --> 00:31.380
+Because you know how a good software project should be set up what tools to use what practices to follow
+
+00:31.380 --> 00:35.290
+to make sure that this isn't a small silly little project.
+
+00:36.740 --> 00:38.740
+You know what some of the companies do.
+
+00:38.750 --> 00:43.580
+Some of the biggest companies in the world do to make sure that they can scale to millions of users
+
+00:44.420 --> 00:48.400
+and thousands of employees working on the same codebase.
+
+00:48.440 --> 00:55.160
+We saw that having a good code PR system where we're constantly making changes and small features and
+
+00:55.310 --> 01:03.590
+having daily pull requests that now get automatically run a with Bill steps and test steps Lanting and
+
+01:03.620 --> 01:05.250
+any other checks that we want.
+
+01:05.330 --> 01:10.010
+We then do code reviews and merge daily new features.
+
+01:10.010 --> 01:16.250
+We then can explore different things like continuos delivery and deployment where we have acceptance
+
+01:16.250 --> 01:22.220
+tests or testers that test our software and then we can manually deployed to production to our actual
+
+01:22.220 --> 01:25.910
+users or we can have that automated as well.
+
+01:25.910 --> 01:35.330
+And this diagram is what most good companies follow this process that takes quite a bit of time until
+
+01:35.330 --> 01:38.360
+you actually have code in production.
+
+01:38.420 --> 01:45.890
+We write our code on our machines as developers using tools like typescript Lanting and tests to make
+
+01:45.890 --> 01:47.870
+sure our codes pass.
+
+01:47.900 --> 01:53.560
+We then can have something like a Prete commit Huck that checks our code perhaps makes it pretty fair
+
+01:53.570 --> 01:57.470
+so that we have a consistent format with the rest of the project.
+
+01:57.530 --> 02:04.250
+We then make that pool request on get Hobb and circle s.i as soon as that pool request arrives says
+
+02:04.320 --> 02:09.980
+oh OK let me run some tests for you make sure that you're not going to mess up our codebase ran some
+
+02:09.980 --> 02:10.770
+tests.
+
+02:10.790 --> 02:12.110
+Everything passes.
+
+02:12.110 --> 02:16.490
+You then go to your teammates and other people review your code.
+
+02:16.490 --> 02:18.020
+We do a code review.
+
+02:18.020 --> 02:24.830
+They say maybe we can fix this maybe we can do this if they don't accept you start back from here and
+
+02:24.830 --> 02:26.030
+redo everything.
+
+02:26.120 --> 02:30.530
+If they accept they'll merge your changes and to get help.
+
+02:30.770 --> 02:34.780
+And in most companies you'll see something like deploying to staging.
+
+02:34.790 --> 02:40.400
+Staging is kind of like a practice field to make sure that before we send it out to the real world everything
+
+02:40.400 --> 02:43.280
+works as it's supposed to.
+
+02:43.640 --> 02:48.470
+We can add a process not an equal staging environmental variable.
+
+02:48.650 --> 02:54.980
+And we can have some if statements in our code base that says if this is staging maybe test the speed
+
+02:54.980 --> 02:58.190
+of our app how much CPQ you were using.
+
+02:58.190 --> 03:03.380
+If it's connected to the data base properly and you want to mimic the staging as much as you can with
+
+03:03.380 --> 03:07.920
+production such as having similar databases similar information.
+
+03:08.030 --> 03:13.690
+The more the staging has in common with production the more we can assume that things are going to work
+
+03:13.700 --> 03:15.770
+once we push to production.
+
+03:15.770 --> 03:23.450
+We then have something like acceptance testing where perhaps a tester or a product toner or even Brunow
+
+03:23.660 --> 03:29.020
+tests on the staging server to make sure everything works that our new feature works.
+
+03:29.210 --> 03:35.580
+And once all of that is passed then finally we can assume OK the code is safe.
+
+03:35.630 --> 03:44.060
+Let's deploy to production with the environmental variable production and all is well all is well but
+
+03:44.150 --> 03:45.340
+we're not done yet.
+
+03:45.380 --> 03:48.660
+We have something called smoke tests and smoke.
+
+03:48.680 --> 03:55.190
+Yes if you're going to deploy every commit automatically to production you need to make sure that you
+
+03:55.190 --> 03:59.020
+have a good way to be alerted if something goes wrong.
+
+03:59.810 --> 04:03.000
+So sometimes a new change won't break.
+
+04:03.050 --> 04:04.100
+Production right away.
+
+04:04.100 --> 04:11.630
+And it passed all these tests but all cause perhaps your CPQ or memory consumption to go really really
+
+04:11.630 --> 04:13.600
+high and break the up.
+
+04:13.760 --> 04:19.610
+So you might want to have four smoke tests real time monitoring of your production servers to be able
+
+04:19.610 --> 04:27.380
+to track irregularities or metrics that show that something's not going right and you have companies
+
+04:27.380 --> 04:30.890
+not like new relic that allow you to monitor your service.
+
+04:30.890 --> 04:37.420
+Again we always have tools and you can see here that it's a constant battle a constant battle to make
+
+04:37.420 --> 04:44.710
+sure that no matter how many coders we have no matter how big the codebase gets we have a nice smooth
+
+04:44.710 --> 04:51.670
+process to have everything flow nicely so that by the time it gets to production we can minimize our
+
+04:51.670 --> 04:59.090
+risk the risk that we might lose revenue or users or even just regular satisfaction with our customers.
+
+05:00.680 --> 05:09.260
+And if all of this works and we are able to help with this a senior developers while then we make everybody
+
+05:09.530 --> 05:15.820
+happy and that's the goal of a senior developer a senior developer isn't necessarily the person that
+
+05:16.060 --> 05:19.900
+knows the coolest functions and can write the cleverest code.
+
+05:20.140 --> 05:27.370
+No a senior developer is somebody that understands this process can make sure that this process flows
+
+05:27.370 --> 05:33.820
+smoothly that everything is working fine with circle s.i we're making all the tests necessary.
+
+05:33.820 --> 05:40.750
+We have all the smoke tests in place a senior developer is somebody that is able to have a big picture
+
+05:40.750 --> 05:49.800
+view of how we can make this flow from writing code on a developer's laptop to putting it in production.
+
+05:49.960 --> 05:58.350
+If you're able to master this understand this then you're able to manage teams and manage projects and
+
+05:58.350 --> 06:01.470
+then everybody is going to be happy with you.
+
+06:01.530 --> 06:02.300
+I'll see in the next one.

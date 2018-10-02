@@ -1,0 +1,136 @@
+WEBVTT
+
+00:01.990 --> 00:11.730
+Welcome back to a special bonus section and the extra bits and we're going to talk about code analysis.
+
+00:11.770 --> 00:19.210
+You see most of the time as developers you will be starting working on projects right from the very
+
+00:19.210 --> 00:20.210
+beginning.
+
+00:20.230 --> 00:27.150
+I mean it's very rare that you're there at the beginning setting up the original folder structures in
+
+00:27.150 --> 00:28.870
+code and web pack.
+
+00:29.230 --> 00:36.100
+Most of the time if you are working at a large company they usually already have a project that they've
+
+00:36.100 --> 00:39.020
+been building and you are told.
+
+00:39.070 --> 00:39.560
+All right.
+
+00:40.500 --> 00:41.520
+Go grab the files.
+
+00:41.550 --> 00:43.660
+Go grab the code and get started.
+
+00:44.460 --> 00:51.700
+You have to start reviewing the code analyzing it and figuring out how everything works.
+
+00:52.080 --> 01:00.380
+But just looking at the code and maybe some documentation made by your coworkers in this section we're
+
+01:00.380 --> 01:06.920
+going to use the smart brain up an app that we built from scratch in my previous course the complete
+
+01:06.920 --> 01:08.790
+web developer zero to mastery.
+
+01:09.950 --> 01:16.770
+In this course we're going to be adding a ton of more features to it like we would in real life.
+
+01:17.150 --> 01:22.730
+We're going to add multiple face detections we're going to create user profiles and the ability to save
+
+01:22.760 --> 01:29.780
+and modify user profiles adding sessions for management adding dock containers for our development and
+
+01:29.780 --> 01:37.650
+much much more but in order for us to do that we have to analyze the codebase and understand what is
+
+01:37.650 --> 01:38.530
+going on.
+
+01:39.430 --> 01:45.190
+In the next video I'm going to take you through my process when I first start working on a project that
+
+01:45.190 --> 01:53.010
+has already been started before I've arrived and this is an important skill that is often overlooked.
+
+01:53.810 --> 02:01.350
+Our senior developers we can walk through code logically and get caught up on how things work so that
+
+02:01.440 --> 02:04.530
+we can start contributing right away to the project.
+
+02:04.530 --> 02:10.650
+We can take a high level view and understand how each piece fits together and we're going to learn how
+
+02:10.650 --> 02:12.340
+to do that in this section.
+
+02:13.230 --> 02:20.000
+Then we're going to implement the new multiple face detection feature as Bruno requests it.
+
+02:20.120 --> 02:25.010
+We're going to follow best practices for making pull request to contribute to projects and do a lot
+
+02:25.010 --> 02:26.260
+of fun things.
+
+02:26.450 --> 02:28.040
+So shall we get started.
+
+02:28.250 --> 02:35.720
+Well before we do I just want to give you a heads up setting up a current project on your machine is
+
+02:35.720 --> 02:37.540
+going to be frustrating.
+
+02:37.610 --> 02:44.290
+You're going to have to set up your database server and client and I'm going to show you how to do this.
+
+02:44.480 --> 02:50.510
+But because we all have different machines different laptops different operating system it's going to
+
+02:50.510 --> 02:57.020
+be really really frustrating and there's going to be times where you have to google around or you might
+
+02:57.020 --> 03:04.190
+have errors that you don't understand and I do this on purpose because this is so common in the industry.
+
+03:04.490 --> 03:10.790
+But I'm going to show you how to set up this entire project and in the upcoming sections we're going
+
+03:10.790 --> 03:16.460
+to use this example of how frustrating it was to set up everything the database the server the client
+
+03:17.270 --> 03:23.050
+and then use docker and show you why daquiri is so amazing and why it solves this problem.
+
+03:23.810 --> 03:26.360
+Because it makes this process super easy.
+
+03:26.360 --> 03:34.550
+But before I do that and just dive you into docker you must understand the frustration so be forewarned.
+
+03:34.570 --> 03:41.320
+I'm going to give resources during this section so that this project works on all operating systems
+
+03:41.710 --> 03:48.520
+but use this as a way for you to practice something that you'd have to do when you start as a web developer
+
+03:48.700 --> 03:51.340
+and you company.
+
+03:51.400 --> 03:52.700
+Let's get started showing.
+
+03:53.080 --> 03:54.000
+I'll see in the next one.

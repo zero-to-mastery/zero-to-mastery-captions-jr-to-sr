@@ -1,0 +1,124 @@
+WEBVTT
+
+00:01.990 --> 00:05.050
+That was a other long section.
+
+00:05.050 --> 00:08.460
+But I hope everything makes sense now.
+
+00:08.650 --> 00:11.740
+How do we optimize our code.
+
+00:12.710 --> 00:20.000
+Well we can only load what's needed by doing something like code splitting where we can do route based
+
+00:20.720 --> 00:25.160
+chunking or component based Chungking all using web pack.
+
+00:25.160 --> 00:33.350
+And that dynamic import or maybe even using a tool like loadable library that does it for you and gives
+
+00:33.350 --> 00:34.820
+you a nice wrapper.
+
+00:34.850 --> 00:40.970
+We also have this idea of tree shaking which we didn't talk about it to too much because it's kind of
+
+00:40.970 --> 00:45.590
+done behind the scenes for you by a wetback which again is really really nice.
+
+00:46.490 --> 00:50.250
+And this tree shaking removes any unused code.
+
+00:50.390 --> 00:52.960
+When you actually build your app.
+
+00:53.120 --> 01:00.020
+So for example if you're importing a massive library but only using one function from it.
+
+01:00.020 --> 01:02.260
+Well discard all the rest.
+
+01:02.360 --> 01:09.560
+Now ideally in a perfect world that happens a hundred percent of the time with 100 percent accuracy
+
+01:10.430 --> 01:11.030
+in real life.
+
+01:11.040 --> 01:18.140
+That may not be the case but again this is something that you can do with wet back and improve as time
+
+01:18.140 --> 01:18.950
+goes on.
+
+01:19.460 --> 01:27.170
+But for now using things such as babbel preset EMF that we've seen before which avoids transponding
+
+01:27.170 --> 01:36.390
+features already in modern browsers allows us to use some of this tree shaking ability the other point
+
+01:36.420 --> 01:39.170
+was to avoid blocking the main threat.
+
+01:39.300 --> 01:45.630
+And this is something that we've talked about over and over and over minimizing our javascript time.
+
+01:45.690 --> 01:52.290
+Our compile parse and execution time would be really smart about how much javascript Wareing including
+
+01:52.350 --> 02:01.620
+in our code we actually inadvertently also talked a little bit about memory leaks and memory leaks.
+
+02:01.860 --> 02:11.250
+Although this term is new right here is simply making sure that we don't keep adding memory into our
+
+02:11.250 --> 02:12.060
+apps.
+
+02:12.060 --> 02:20.450
+So for example if we have a ton of event listeners on a page and we change that page to another row
+
+02:20.450 --> 02:25.690
+let's say we go to the About page but we haven't removed those even listeners.
+
+02:25.820 --> 02:30.270
+Now our browsers remember more and more and more things.
+
+02:30.410 --> 02:36.650
+So you can have something called Memory leaks where as we're working on our app the things that the
+
+02:36.650 --> 02:43.010
+browser has to remember such as variables increases more and more and more until it reaches the limit
+
+02:43.100 --> 02:44.990
+and it can crash.
+
+02:44.990 --> 02:48.390
+Another thing that can be avoided by minimizing our Javascript.
+
+02:48.650 --> 02:54.080
+And then finally we want to avoid multipole re rendering something that we really talked about with
+
+02:54.080 --> 02:58.630
+react and minimizing the number of Dom manipulations that we have to do.
+
+02:58.640 --> 03:02.570
+The amount of work that our code needs to do on the browser.
+
+03:02.570 --> 03:09.030
+All right optimizing code is something that can just keep going and going.
+
+03:09.030 --> 03:13.400
+There there's so many things you can do but you really want to pick your battles.
+
+03:13.560 --> 03:20.280
+But I hope he got a good overview of what we can do and what the fundamental principles are for this
+
+03:20.280 --> 03:20.940
+section.
+
+03:21.930 --> 03:26.070
+In the next part we're going to finally get to progress of webapps.
+
+03:26.220 --> 03:27.050
+I'll see on that one.

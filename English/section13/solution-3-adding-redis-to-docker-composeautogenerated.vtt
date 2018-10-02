@@ -1,0 +1,190 @@
+WEBVTT
+
+00:01.370 --> 00:09.200
+I hope that in the previous exercise it Major realized how amazing Dr. composes and how easy it is to
+
+00:09.200 --> 00:12.290
+set up something like rattus on it.
+
+00:12.290 --> 00:18.100
+So let me show you how we can set up rattus onto the stock gumbos.
+
+00:18.350 --> 00:27.590
+If you weren't able to do it again we're just going to add a new service by first adding a comment and
+
+00:27.650 --> 00:36.350
+we're going to add a rattus service and this Retta service will have an image that is read us.
+
+00:36.360 --> 00:43.260
+Luckily Dr. Haab already has a red a image already set up for us which is very very kind of them.
+
+00:43.410 --> 00:46.590
+And then we also want to add ports.
+
+00:47.100 --> 00:49.380
+So we have access to it on our machine.
+
+00:49.380 --> 00:56.900
+When our local host and we'll give it the default rattus port which is 6 3 7 9.
+
+00:57.140 --> 01:03.890
+And if you ever start a rattus server this is exactly how the poor would be if we go back here we see
+
+01:03.890 --> 01:09.830
+that when we started the server the poor was 6 3 7 9.
+
+01:09.830 --> 01:14.450
+All right so I'm going to do port forwarding again to have access to it on my machine.
+
+01:15.380 --> 01:22.670
+And the next piece is that we want to make sure that we can access read us from our back and API.
+
+01:22.690 --> 01:28.060
+So if you remember we'll have to do links to the rattus service
+
+01:30.730 --> 01:34.170
+and the backend API that links to their service.
+
+01:34.210 --> 01:39.820
+Most likely we should also give it an environmental variable that is just like we did with postscripts
+
+01:40.060 --> 01:45.940
+where we give it the you our eye or unique resource identifier to connect to it.
+
+01:46.000 --> 01:47.890
+We need to do the same for rattus.
+
+01:47.890 --> 01:56.530
+So let's say rattus you are right and this is going to use the name being created in doc or compose.
+
+01:56.530 --> 01:59.040
+In our case the rattus service.
+
+01:59.050 --> 02:12.820
+So instead of saying localhost or anything like that we just say rattus is being accessed by the local
+
+02:12.820 --> 02:20.570
+host and the port is going to be 6 3 7 9 and that should be all we need to do.
+
+02:20.710 --> 02:27.520
+Now the one thing we need to change now is in the seinen dodgy us where we access the rattus client
+
+02:28.120 --> 02:37.900
+instead of using host we can't just simply give it the you are right and again we're doing the exact
+
+02:37.900 --> 02:44.030
+same thing as we are doing with the database we're simply giving the process start and postscripts year-I
+
+02:45.410 --> 02:47.960
+but this time to the rattus client
+
+02:51.440 --> 02:56.410
+and we want to do process dot dot rattus
+
+02:59.050 --> 02:59.710
+you are right.
+
+03:01.390 --> 03:02.420
+Let's save this.
+
+03:02.710 --> 03:10.290
+And I want to rerun everything we have to close down docker so that this read as service gets created.
+
+03:10.390 --> 03:11.610
+So let's give that a go.
+
+03:11.620 --> 03:13.870
+I'm going to actually bring everything down.
+
+03:16.900 --> 03:19.090
+Just so we get a nice fresh state.
+
+03:19.220 --> 03:21.890
+All the containers or all the services were removed.
+
+03:22.070 --> 03:24.460
+And I'm going to run Dr. compose up.
+
+03:24.580 --> 03:35.480
+Bill and hopefully if everything works out we now have read us in our container.
+
+03:35.490 --> 03:36.330
+All right.
+
+03:36.330 --> 03:36.980
+We haven't done it.
+
+03:37.020 --> 03:38.190
+Any connection errors.
+
+03:38.190 --> 03:42.000
+Which is the thing we want to look for back end is running.
+
+03:42.000 --> 03:43.550
+We see that post cresses running.
+
+03:43.560 --> 03:49.200
+If I scroll all the way up look at that I see are red S service as well.
+
+03:49.530 --> 03:53.510
+That is ready to accept connection connections.
+
+03:53.520 --> 03:55.780
+How cool is that.
+
+03:55.800 --> 04:01.090
+We've just added rattus postscripts and back and all into our or container.
+
+04:01.170 --> 04:05.760
+And you might remember the image that we had initially where we said that we want to create a doctor
+
+04:05.760 --> 04:08.630
+container around all these three services.
+
+04:08.640 --> 04:13.620
+And now the amazing thing is that the developers that join our team don't really need to worry about
+
+04:13.710 --> 04:17.390
+postscripts or retests or even the backend API.
+
+04:17.430 --> 04:27.280
+Everything runs with one comment and the other exciting thing is that if I go back here and instead
+
+04:27.280 --> 04:36.750
+of read as we enter our project that is the smart brain API from here I can access the rattus server
+
+04:36.840 --> 04:49.350
+that is in our container by simply running Dakar compose execute rattus and then running the rattus
+
+04:49.410 --> 04:51.860
+CLIA.
+
+04:52.090 --> 04:53.010
+Look at that.
+
+04:53.310 --> 05:00.400
+We're able to log into our read a server and do any requests to check if things are actually in our
+
+05:00.400 --> 05:01.140
+database.
+
+05:01.930 --> 05:03.910
+Very very cool.
+
+05:03.910 --> 05:09.640
+I hope you are able to get to that point and address to our doctor container because now we can do some
+
+05:09.640 --> 05:11.320
+really really fun things.
+
+05:11.350 --> 05:19.400
+We're going to be able to finally go back to our site in J.S. and store our tokin in the create session
+
+05:19.400 --> 05:23.760
+here we can store our token in our re-edits database.
+
+05:23.900 --> 05:26.190
+We're going to do that in the next video.
+
+05:26.260 --> 05:27.250
+I'll see out that.

@@ -1,0 +1,427 @@
+WEBVTT
+
+00:01.290 --> 00:01.990
+Welcome back.
+
+00:02.190 --> 00:06.780
+Let's actually try and deploy this function so we can test it out.
+
+00:07.020 --> 00:15.720
+For now I'm going to change the name of this function to something like rankly so handler rankly or
+
+00:15.810 --> 00:26.910
+let's just keep it with rank and this means that I'll have changed the name over here to rank and the
+
+00:26.970 --> 00:31.050
+other thing I want to do is right now because this is devolvement purposes.
+
+00:31.140 --> 00:41.140
+Another option I can on comment and leave is what we call a stage where we can put to death or Prod..
+
+00:41.350 --> 00:48.190
+And this attaches a name to our lambda function for production or development and it's usually good
+
+00:48.190 --> 00:53.080
+practice to just have the def flag so you can test things out and then when it's ready for production
+
+00:53.080 --> 01:01.360
+to change that to prod right to and the next thing I want to do is I also want to change our service
+
+01:01.360 --> 01:01.810
+name.
+
+01:01.870 --> 01:06.730
+If we look at the comments over here I see that note update this with your service name.
+
+01:06.880 --> 01:11.520
+And if you remember our name on AWOS is not a yes no.
+
+01:11.530 --> 01:12.160
+Yes.
+
+01:12.280 --> 01:19.580
+He needs to be updated with our name which is rankly LAMDA.
+
+01:19.710 --> 01:24.310
+So I'm going to change the name of our service to rankly LAMDA.
+
+01:24.520 --> 01:31.190
+I'm going to save the server less YAML file and then I'm going to go into hÃ¤ndler dodgy Yes.
+
+01:31.260 --> 01:35.020
+Now we haven't really talked too much about hand-lettered.
+
+01:35.040 --> 01:37.790
+Yes let's bring them up here like that.
+
+01:37.800 --> 01:41.800
+Now there's three main things that we want to focus on here.
+
+01:41.820 --> 01:49.940
+One is the fact that we're just worried about a function Lamda needs to run a function.
+
+01:50.090 --> 01:56.390
+So everything should be inside of this rank command and that's the main principle.
+
+01:56.400 --> 02:03.600
+Now this function is going to get run based on a trigger event and that's why the event object is whatever
+
+02:03.630 --> 02:09.390
+triggers it we're going to get that object of that trigger and this event like we talked about can be
+
+02:09.390 --> 02:15.600
+anything it could be an HDTV requests it could be an extra you request we are able to configure that
+
+02:17.000 --> 02:23.330
+and we're also have this idea of resources where this lambda function couldn't use external resources
+
+02:23.570 --> 02:26.540
+like an Esrey back in for example.
+
+02:26.570 --> 02:33.020
+Now the key thing to remember here is that Lamda by itself is what we call stateless.
+
+02:33.140 --> 02:35.890
+That is it's not going to remember anything for us.
+
+02:35.900 --> 02:41.990
+Remember these things are created because the function is stored in a database and when it's ready to
+
+02:41.990 --> 02:50.280
+be invoked it's going to be put into a container by Amazon and it's going to get run and after it's
+
+02:50.280 --> 02:55.410
+done running and there's no more requests it's going to get put back into the database or that container
+
+02:55.410 --> 02:59.220
+is going to go down and there's no way to remember anything.
+
+02:59.220 --> 03:04.500
+So you want to keep your functions stateless and if you ever want to store information or data you can
+
+03:04.500 --> 03:07.520
+use dynamo D-B or an entry bucket.
+
+03:07.620 --> 03:13.360
+Again something that you can do quite easily in the server less YAML file.
+
+03:13.390 --> 03:20.500
+Now within this function we see that we have a few things and I want to focus your attention on the
+
+03:20.500 --> 03:22.310
+last line here callback.
+
+03:22.390 --> 03:31.940
+No response now this Colback function is what triggers the response of this entire function.
+
+03:32.250 --> 03:38.220
+And the way lambda works is that you get a callback with an air and a response.
+
+03:38.220 --> 03:45.570
+In our case the response is status code 200 with a body that is Jaison of message and input and this
+
+03:45.570 --> 03:49.260
+input is known to have the event object.
+
+03:49.270 --> 03:56.410
+Now this error over here we're not going to really ever use it on lambda because underneath the hood
+
+03:56.500 --> 04:00.060
+there's something called lambda proxy that's being integrated.
+
+04:00.160 --> 04:04.860
+And by default this is something that's taken care of for us.
+
+04:04.870 --> 04:11.710
+So if you ever want to send in an error with Lamda instead of changing this here you would do a status
+
+04:11.710 --> 04:12.230
+code.
+
+04:12.320 --> 04:16.200
+For example 400 in your response.
+
+04:16.390 --> 04:19.670
+Now let's actually deploy this and see what happens.
+
+04:19.710 --> 04:26.560
+I'm going to save this function and all we need to do with server less is we've already connected it
+
+04:26.800 --> 04:27.830
+to AWOS.
+
+04:27.850 --> 04:32.830
+We've changed the name and server less YAML to our rankly lambda.
+
+04:33.220 --> 04:45.450
+We can simply run server less or less deploy.
+
+04:45.540 --> 04:49.130
+And we have a bit of a nature and we have bad indentation.
+
+04:49.170 --> 04:55.540
+Again it's a YAML file so we have to make sure the indentation is absolutely correct.
+
+04:56.280 --> 04:57.520
+Let's try that again.
+
+04:58.380 --> 05:00.400
+Going to save deploy again.
+
+05:05.150 --> 05:08.470
+Looks like everything got deployed and it's got some really nice up year.
+
+05:08.480 --> 05:16.070
+We see that it's uploading to cloud formation and we have we're also uploading the zip file because
+
+05:16.070 --> 05:18.650
+what it does underneath the hood is actually zip.
+
+05:18.650 --> 05:25.220
+All our files and load them to our Esrey or not to our But to their Esrey bucket so that whenever they
+
+05:25.220 --> 05:29.050
+need that function they'll create the container and grab it from the tree.
+
+05:29.300 --> 05:35.540
+And it does a few things underneath the hood but the main part is that our service information is now
+
+05:35.540 --> 05:36.760
+all set.
+
+05:36.770 --> 05:42.190
+You see that our functions are ready it's call rankly lambda dev rank.
+
+05:42.200 --> 05:49.600
+Again we have the devah attached to you because we've made this stage to Dev and there's no API keys
+
+05:49.630 --> 05:51.490
+or endpoints that we've given.
+
+05:51.580 --> 05:56.040
+But our function is now running very very cool.
+
+05:56.230 --> 05:58.440
+Now how can we actually test this.
+
+05:58.770 --> 06:03.070
+Well one thing we can do is we can on the less invoke
+
+06:08.140 --> 06:13.100
+dash dash function and we can invoke the function that we have.
+
+06:13.150 --> 06:14.170
+Let's call the.
+
+06:14.390 --> 06:17.710
+And the function that we had was called rank.
+
+06:17.740 --> 06:21.470
+So let's give that a go.
+
+06:21.530 --> 06:27.450
+It looked that it invoked our function from our container from our land function on Ada.
+
+06:27.540 --> 06:34.440
+Yes we got a status code of 200 with the body that of go service 1.0.
+
+06:34.530 --> 06:36.780
+If we go back here like that.
+
+06:36.930 --> 06:37.810
+That's awesome.
+
+06:38.040 --> 06:43.200
+Now when you're testing it like this you might not want to invoke the lambda function every time because
+
+06:43.470 --> 06:46.950
+well it might cost you money especially if you're doing this a lot.
+
+06:46.950 --> 06:55.290
+Another way that you can do this is to actually say invoke local dash dash function rank and local means.
+
+06:55.360 --> 06:58.560
+Hey I won't touch your lambda function.
+
+06:58.560 --> 07:04.020
+I'm going to try and simulate the lambda function and run this locally so that we won't charge you for
+
+07:04.020 --> 07:04.680
+anything.
+
+07:04.800 --> 07:08.790
+And again don't get too stressed out about this you have a million requests a month.
+
+07:08.790 --> 07:09.930
+You're fine.
+
+07:10.050 --> 07:13.800
+You're not going to get charged for lambda function unless you're doing something absolutely insane
+
+07:14.280 --> 07:16.170
+or you have crazy Montu users.
+
+07:16.170 --> 07:17.840
+So for now let's try this out.
+
+07:19.540 --> 07:21.490
+Hey look at that it works.
+
+07:21.530 --> 07:28.610
+Now this local only works because our function is nice and simple if it for example was dependent on
+
+07:28.730 --> 07:33.690
+an Esrey resource or another resource that Amazon has in might not work.
+
+07:33.710 --> 07:37.150
+But for our purposes this is a great testing ground.
+
+07:38.410 --> 07:43.930
+All right the last thing I want to do is I want to get this ready for what we want to do that is we
+
+07:43.930 --> 07:51.070
+want to have an endpoint an A to be trigger event that we can trigger this function with because in
+
+07:51.070 --> 07:56.910
+our smart brain nap I'm not going to be able to just run as a loss invoke dash dash function rank.
+
+07:57.010 --> 08:03.400
+We know that now it exists but I want to have an HGP endpoint and we can simply do that by scrolling
+
+08:03.400 --> 08:05.580
+down to our functions.
+
+08:06.070 --> 08:12.460
+And you see here in the events that there is an HD DP path method that we can use.
+
+08:12.460 --> 08:14.640
+So I'm just going to copy this over here.
+
+08:14.920 --> 08:16.270
+Paste it and
+
+08:19.220 --> 08:27.770
+added to the rank functions that we have and in here I want to well first of all I want to have a GDP
+
+08:29.380 --> 08:33.100
+the path is going to be whatever we want.
+
+08:33.100 --> 08:35.470
+So let's just say ranke
+
+08:39.490 --> 08:45.010
+and the method is going to be a get method which want to get the message.
+
+08:45.010 --> 08:52.220
+Now let's say that and underneath the hood what this is going to do is actually use another service
+
+08:52.310 --> 09:00.880
+by AWOS called API gateway to give us an endpoint to actually trigger this event.
+
+09:00.890 --> 09:01.870
+Let me show you what that means.
+
+09:01.880 --> 09:11.600
+Let's deploy once again run our SLA us deploy and the beauty is that while Servilius just does this
+
+09:11.630 --> 09:16.680
+automatically for us talks to AWOS and make sure that everything is running smoothly.
+
+09:17.990 --> 09:19.240
+And there we go.
+
+09:19.280 --> 09:21.410
+We have everything deployed.
+
+09:21.560 --> 09:25.220
+Remember our region is US East wan because that's what we've set.
+
+09:25.370 --> 09:27.920
+It's stage Dev and look about.
+
+09:27.950 --> 09:37.560
+We now have an endpoint and it gave us a you Arel that is looks like an Amazon you well but with my
+
+09:37.560 --> 09:42.240
+path rank with the dev command because we're still in development.
+
+09:42.450 --> 09:44.900
+And now let's test this up.
+
+09:44.940 --> 09:46.720
+Let's see if this actually works.
+
+09:46.790 --> 09:50.060
+Want to open up the browser.
+
+09:50.130 --> 09:51.940
+Let's open up a new window in the browser.
+
+09:53.590 --> 09:58.100
+And in here let's paste this in.
+
+09:58.120 --> 09:59.860
+How cool is that.
+
+09:59.920 --> 10:04.570
+We just triggered that lambda function that lives somewhere on Amazon servers.
+
+10:04.660 --> 10:11.370
+We triggered it with an event and that event has all these things.
+
+10:11.440 --> 10:17.620
+First of all we have a message that says Go server let's remember in our function here or if we go over
+
+10:17.620 --> 10:24.680
+here we're returning a body with message go server less and an input which is the event.
+
+10:25.030 --> 10:31.990
+Now the event here you can see gives us information about the browser that I just sent the event from.
+
+10:32.100 --> 10:34.260
+I see that all right I have my headers.
+
+10:34.260 --> 10:35.260
+It was path rank.
+
+10:35.280 --> 10:39.370
+It was a request and so on and so forth.
+
+10:39.420 --> 10:42.390
+I can see that I'm doing a ton of things.
+
+10:42.390 --> 10:47.090
+I'm using DP won and all these event information.
+
+10:47.310 --> 10:54.120
+But just like that we have an Amazon lambda function super super simple.
+
+10:54.160 --> 11:00.760
+Now all we need to do now is actually make this function do something useful for us because right now
+
+11:00.940 --> 11:02.450
+we don't really care.
+
+11:02.470 --> 11:04.890
+Let's go back to what we had before.
+
+11:04.900 --> 11:08.200
+Right now we don't really care about just receiving the event.
+
+11:08.350 --> 11:17.320
+We want to do the ranking system of our smart bring up perhaps give people some emoji based on the user's
+
+11:17.380 --> 11:18.620
+ranking.
+
+11:18.670 --> 11:21.440
+So in the next video we're going to start doing that.
+
+11:21.490 --> 11:22.850
+It's going to be a lot of fun.
+
+11:22.990 --> 11:23.940
+I'll see in that one.
+
+11:24.170 --> 11:24.760
+Bye bye.

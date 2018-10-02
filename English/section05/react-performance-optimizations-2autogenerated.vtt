@@ -1,0 +1,577 @@
+WEBVTT
+
+00:01.900 --> 00:09.910
+Well Gombak Once you've identified components in your app that are rendered unnecessarily there are
+
+00:09.910 --> 00:12.490
+a few steps that you can take.
+
+00:13.220 --> 00:23.360
+Let's go back to our OP and we said that our head our component is kind of really rendering unnecessarily.
+
+00:23.420 --> 00:29.330
+I mean this is a small example but you can imagine if this was another part of the app that is really
+
+00:29.330 --> 00:36.400
+really complicated maybe we don't want that we Rander every time we hit the search box.
+
+00:36.420 --> 00:38.950
+So what can we do well.
+
+00:38.970 --> 00:42.430
+First off let's create a new header component.
+
+00:45.780 --> 00:51.090
+And this component again will have to import re-act
+
+01:02.680 --> 01:07.600
+and we're getting really good at creating Riak components because we've written down so many times.
+
+01:07.750 --> 01:10.460
+But that is always a good thing.
+
+01:11.430 --> 01:21.200
+And we want to make sure we export default the header component and within here we can just return or
+
+01:21.350 --> 01:27.460
+use the render and inside of the render we can just return.
+
+01:27.680 --> 01:39.620
+While we had initially which is just the simple H1.
+
+01:39.800 --> 01:47.490
+All right nice and simple header and if we go over here we can just replace this now with the header
+
+01:47.510 --> 01:51.890
+component and we'll want to import this
+
+01:56.180 --> 01:57.970
+from our components.
+
+02:02.130 --> 02:15.100
+Save everything and once again I want to add a little console log here to see what's being rendered.
+
+02:15.180 --> 02:16.920
+So I save it here.
+
+02:17.070 --> 02:28.650
+Let's also add a few more let's add in the cardless will add a console dialog that the cardless is being
+
+02:28.650 --> 02:29.510
+rendered.
+
+02:29.760 --> 02:31.770
+And we want to make sure that this is a string
+
+02:34.330 --> 02:39.640
+and slut's adds another one for the search box as well.
+
+02:44.800 --> 02:54.780
+Let's save to go back to our app and let's go to consul here and because our logger from Reebok's is
+
+02:54.780 --> 03:04.520
+kind of crowding our console list just for now disable it going to go back to index Hygeia us and for
+
+03:04.520 --> 03:16.570
+now just remove this from our apply middleware and save that and go back and that's a lot better.
+
+03:16.570 --> 03:17.470
+All right.
+
+03:17.470 --> 03:21.070
+Now we see over here that they're being rendered twice.
+
+03:21.130 --> 03:24.070
+And if you think about it why is that.
+
+03:24.070 --> 03:27.480
+Well it's because initially the robot's array is empty.
+
+03:27.820 --> 03:35.470
+And then we make that API call the robot's array gets filled which is our state and then we re Rander
+
+03:35.490 --> 03:37.630
+Hetter Smashbox cardless.
+
+03:37.840 --> 03:48.930
+So how can we avoid re rendering over here of Hetter Well we have a lice lifecycle that we can use called
+
+03:49.020 --> 03:53.130
+Should component update.
+
+03:54.000 --> 04:01.470
+And this comes with every single Riak component so its every act lifecycle hook and it returns true
+
+04:01.950 --> 04:10.440
+if it returns true then it will update the component if it returns false then it wont to update the
+
+04:10.440 --> 04:17.070
+component this component actually receives next props.
+
+04:17.160 --> 04:17.650
+Whoops.
+
+04:17.700 --> 04:24.960
+Next props and next state.
+
+04:25.080 --> 04:29.720
+But for us we don't really need that we just know that we don't want to render the header component
+
+04:30.440 --> 04:33.650
+and so we can just say return false.
+
+04:33.800 --> 04:34.810
+Let's see what happens here.
+
+04:37.300 --> 04:48.450
+I'm going to save go back and look at that our head component just renders once the original time and
+
+04:48.530 --> 04:49.310
+no matter what.
+
+04:49.310 --> 04:53.790
+Now our head or component will never render.
+
+04:53.970 --> 04:58.170
+And that is because we always have a shit component update.
+
+04:58.170 --> 04:58.800
+False.
+
+04:58.890 --> 04:59.380
+No.
+
+04:59.400 --> 05:08.170
+Just never update this component and this is pretty dangerous because you're saying never ever update
+
+05:08.170 --> 05:14.980
+this if this component actually received props or state and any of these change it won't render because
+
+05:14.980 --> 05:17.210
+we've just said return false.
+
+05:17.210 --> 05:24.040
+The default right now if we don't add Should component update is to always return true but should component
+
+05:24.070 --> 05:31.720
+update gives us an ability to control this update cycle.
+
+05:31.740 --> 05:37.410
+Let me give you a better example with something a little bit more complicated than a simple text.
+
+05:37.440 --> 05:46.220
+Let's create a new file here a new component and we'll call this we'll call this counter button.
+
+05:46.400 --> 05:47.300
+Yes.
+
+05:47.980 --> 05:56.070
+And once again going through our motion I'm actually just going to copy the header over here and change
+
+05:56.070 --> 06:03.740
+the names just to make things easier so I the say counter button.
+
+06:03.940 --> 06:14.030
+And now this counter button is going to do a little bit more than just have the H-1 to in the constructor.
+
+06:18.160 --> 06:24.760
+We're going to call super And then here it's going to have its own state and it's going to have a state
+
+06:25.540 --> 06:34.090
+that says the count is equal to 1 or less to count is equal to zero.
+
+06:34.100 --> 06:36.030
+That's the default count.
+
+06:36.170 --> 06:39.070
+And for now let's just not do anything here.
+
+06:39.080 --> 06:44.610
+I'm just going to keep that empty so it's always going to update the component.
+
+06:44.710 --> 06:48.310
+And then finally within the Rander let's surrender something meaningful.
+
+06:49.080 --> 06:50.450
+Let's render
+
+06:55.920 --> 06:57.940
+a button.
+
+06:59.170 --> 07:09.480
+That let's say has a color property and this color property is going to come from this stuff props dot
+
+07:09.720 --> 07:14.230
+color which we're going to pass on.
+
+07:14.470 --> 07:21.890
+And also a long click event update count.
+
+07:22.100 --> 07:29.430
+And this is going to be a method we're going to create and this update come up here.
+
+07:32.000 --> 07:37.540
+It will be a simple function that simply updates our state.
+
+07:37.660 --> 07:54.320
+So this set state is going to have count as this dot state DOT count plus 1.
+
+07:54.340 --> 08:04.690
+Now let's just now we're going to get back to this but for now let's just let's just have this button
+
+08:04.730 --> 08:10.490
+the counter button in the header and also pass down the color props and it looks like over here the
+
+08:10.490 --> 08:11.900
+highlighting is off.
+
+08:11.900 --> 08:15.490
+So I think we made a little mistake.
+
+08:15.710 --> 08:19.740
+Oh and that's because I need to close off this button.
+
+08:19.730 --> 08:32.190
+Let's do that and let's just put a piece of text in here that just says count the start States starts
+
+08:32.470 --> 08:34.900
+count.
+
+08:34.920 --> 08:39.340
+All right let's just save this and import this into the header.
+
+08:41.520 --> 08:47.900
+Well don't say imports Petar for not Hetter import counter Bodin
+
+08:51.640 --> 08:55.500
+from the conurbation file.
+
+08:57.350 --> 09:12.130
+And inside of here we can return a dev that has the counter button with say color of Mysti color red
+
+09:13.000 --> 09:13.350
+for now
+
+09:16.900 --> 09:26.430
+and let's not forget to close the day of let's save and we have a few syntax serious here if we go to
+
+09:26.940 --> 09:28.960
+Hetter Well yeah 90 day.
+
+09:29.190 --> 09:30.450
+Forgot my bracket here.
+
+09:35.240 --> 09:38.210
+All right let's go back to our app.
+
+09:38.360 --> 09:40.720
+We have our count zero.
+
+09:41.510 --> 09:42.940
+I don't like where it is.
+
+09:42.970 --> 09:47.430
+So let's actually put it below the H-1.
+
+09:47.630 --> 09:48.580
+Let's save that.
+
+09:48.650 --> 09:49.980
+That's a lot better.
+
+09:50.570 --> 09:54.850
+And if we click on it oh we get some errors.
+
+09:56.780 --> 09:59.260
+Sure component update returns undefined.
+
+09:59.660 --> 10:06.350
+And you're right because we're calling within the counter BOTTEN sure component update but not doing
+
+10:06.350 --> 10:07.260
+anything.
+
+10:07.430 --> 10:08.180
+It's not working.
+
+10:08.180 --> 10:11.240
+So just to return true for now
+
+10:14.380 --> 10:22.690
+and let's click count.
+
+10:22.710 --> 10:23.490
+All right.
+
+10:23.490 --> 10:24.330
+Very cool.
+
+10:24.330 --> 10:31.380
+Looks like it's working and we're rendering the combine and the Count number is increasing every time.
+
+10:33.470 --> 10:42.840
+Now I mentioned over here that sometimes you can get some funny side effects when you update the state
+
+10:44.540 --> 10:47.140
+based on what the current status.
+
+10:47.210 --> 10:52.330
+That is because state updates are actually not synchronous.
+
+10:52.400 --> 10:56.860
+That means they might not always happen when you might think.
+
+10:57.080 --> 11:04.800
+So any time you're using state like this or you need to derive the next state from the current state.
+
+11:05.210 --> 11:11.540
+It's recommended that you use the other way of updating state which is to grab the current state
+
+11:16.720 --> 11:17.530
+and return
+
+11:21.270 --> 11:26.990
+the new state based on this state parameter.
+
+11:27.080 --> 11:28.010
+So let's save
+
+11:32.400 --> 11:33.520
+and it's still working.
+
+11:33.660 --> 11:39.620
+Perfect Let's clear this now just for fun.
+
+11:39.780 --> 11:51.750
+Let's take a look at next props and next state if I go over here and do console log next props and console
+
+11:51.780 --> 11:55.890
+all log next state.
+
+11:56.100 --> 11:57.450
+Let's save here.
+
+11:57.450 --> 12:03.230
+Go back and let's clear this anti-press count.
+
+12:03.300 --> 12:06.420
+I see that I get the next prop read.
+
+12:06.490 --> 12:13.010
+Well it's not going to change because we haven't changed any of the props but the count is now one.
+
+12:13.050 --> 12:24.850
+If I click again count to to count to three and you can see we have access to both props and state.
+
+12:24.860 --> 12:35.780
+Now what happens if for some reason the state doesn't change because we don't really care about anything
+
+12:35.780 --> 12:38.300
+else in our prop of color red.
+
+12:38.300 --> 12:45.520
+It's kind of static right now and should component update we can do something like this.
+
+12:45.660 --> 12:53.270
+We can say if this dot state does count doesn't equal
+
+12:56.080 --> 13:02.950
+next state DOT count if they're different.
+
+13:02.990 --> 13:16.220
+In that case well yes please return true and we render Otherwise we can just return false.
+
+13:16.280 --> 13:24.280
+Let's save that go back make sure everything still works yeah everything still works.
+
+13:26.430 --> 13:37.750
+But let's say that now we want to change our props let's remove or comment out the should component
+
+13:37.750 --> 13:45.690
+update from Hetter and refresh your and type something.
+
+13:45.700 --> 13:50.810
+And we see that our header is updating once again.
+
+13:51.120 --> 13:58.890
+And if we go back to our conurbation and in the render we see that coner And although we're con. logging
+
+13:58.890 --> 14:03.180
+it it's not appearing here as Nyree rendering.
+
+14:03.180 --> 14:13.970
+But if I remove this piece of code let's say we remove sheet component update I save and go back we
+
+14:13.970 --> 14:17.070
+see that the conurbation is now being rendered.
+
+14:17.230 --> 14:26.570
+And even though we don't touch it and don't care about it because our parent component is being rendered
+
+14:27.260 --> 14:30.080
+we also get re rendered.
+
+14:30.500 --> 14:37.680
+So by adding should component update only update if the state count changes.
+
+14:37.730 --> 14:42.560
+That's the only time that our component should update.
+
+14:42.680 --> 14:45.370
+Very cool.
+
+14:45.500 --> 14:52.550
+But now no conurbation.
+
+14:52.700 --> 15:00.880
+Now there are times when you have simple what we call dumb components are stateless components are presentational
+
+15:00.880 --> 15:01.620
+components.
+
+15:01.660 --> 15:04.370
+Kind of like this card component here.
+
+15:04.510 --> 15:11.410
+It's a pure function and only changes when it's prop's change re-act has a special type of component
+
+15:11.680 --> 15:18.220
+built in cold pure component that is meant exactly for this.
+
+15:18.250 --> 15:29.330
+So if this card component was kind of like this kind of component we can say extends pure component
+
+15:29.690 --> 15:33.740
+and we can just import from re-act pure component.
+
+15:33.740 --> 15:35.500
+Now what does this mean.
+
+15:35.540 --> 15:38.360
+This means that only the component.
+
+15:38.360 --> 15:43.100
+From now on will only render when it's prop's actually change.
+
+15:43.100 --> 15:44.930
+That's a nice and simple.
+
+15:44.990 --> 15:52.130
+If you change this car component to have a class with that it stands a pure component it automatically
+
+15:52.130 --> 16:00.040
+does the should component update only change if these three things change which is really really nice.
+
+16:00.050 --> 16:07.860
+Now the one caveat is that this pure component does something call shallow comparison of props.
+
+16:07.880 --> 16:14.990
+So if you use complex data structures like deeply nested objects it may miss some props changes and
+
+16:15.080 --> 16:17.360
+not update your components.
+
+16:17.360 --> 16:20.320
+So I'm actually not a big fan of using pure components.
+
+16:21.770 --> 16:27.440
+I personally like using should component update which does the same thing but you have a bit of control
+
+16:27.740 --> 16:36.950
+but you shouldn't overuse this because now you've added an extra step in your re-act update to check
+
+16:36.950 --> 16:37.840
+for something else.
+
+16:37.850 --> 16:46.070
+So this actually also has a performance penalty because you're running a nother function to check if
+
+16:46.160 --> 16:54.880
+anything else change because shared component update is a method that is called before render this render
+
+16:54.880 --> 16:55.490
+right here.
+
+16:56.600 --> 16:58.890
+So use this cautiously.
+
+16:58.880 --> 17:05.360
+Never just add this because oh it's going to improve my performance actually measure it if this helps
+
+17:05.540 --> 17:06.930
+for those rare cases.
+
+17:07.070 --> 17:13.010
+Definitely use it but don't overuse it for every single component which I've seen in many projects.
+
+17:13.130 --> 17:19.100
+It could actually hinder your performance or sometimes miss some updates because of this shallow comparison
+
+17:19.280 --> 17:21.000
+that it does.
+
+17:21.100 --> 17:27.350
+I want to show you one last tool that might actually help you with some of this because it is a bit
+
+17:27.350 --> 17:30.130
+of a headache to figure all of this out on your own.
+
+17:32.530 --> 17:40.770
+It's called Why did you update and to oh why does you update.
+
+17:40.880 --> 17:51.870
+This is a tool that tells you in the console that hey why are you rendering this.
+
+17:51.880 --> 17:56.810
+Nothing has changed but it's render it's an avoidable render.
+
+17:56.850 --> 18:06.360
+So it does this for you and all you need to do is implemented into your re-act app just with a few lines
+
+18:07.410 --> 18:10.800
+and you make sure that it doesn't go into production.
+
+18:10.800 --> 18:13.250
+You just use it for development purposes only.
+
+18:14.270 --> 18:20.360
+Because one of the most common issues that affects performance and react is this unnecessary render
+
+18:20.360 --> 18:28.400
+cycles because remember Riak components will read Rander whenever their parent renders automatically
+
+18:29.440 --> 18:32.190
+even if their props didn't change.
+
+18:32.230 --> 18:39.220
+So this tool allows you to run this in development and see if when you're doing any unnecessary rendering.
+
+18:39.520 --> 18:45.460
+And this is extremely useful when you have a large app where it's really hard for you to just do console
+
+18:45.460 --> 18:50.000
+log or figure out where to where the highlights are happening.
+
+18:50.940 --> 18:58.440
+But again with everything use it with caution use your time wisely because performance you can always
+
+18:58.440 --> 19:00.390
+improve your apps performance.
+
+19:01.130 --> 19:05.470
+You just want to have this big picture and understand how your app works.
+
+19:05.510 --> 19:11.990
+In your case how this reacts redux app works and how you can improve it by understanding all the small
+
+19:11.990 --> 19:14.160
+details of how it works.
+
+19:14.240 --> 19:21.790
+You can now make smart decisions on how or when to tackle your performance problems.
+
+19:21.800 --> 19:23.030
+That's it for now.
+
+19:23.030 --> 19:23.860
+I'll see you in the next one.

@@ -1,0 +1,397 @@
+WEBVTT
+
+00:01.190 --> 00:02.340
+We'll come back.
+
+00:02.350 --> 00:05.560
+Let's talk a little bit about code optimizations.
+
+00:06.380 --> 00:15.670
+If you remember from our critical render path talk javascript executes or runs and allows the users
+
+00:15.760 --> 00:26.950
+to interact with the web page like clicking a dropdown menu or adding items to a list to do list once
+
+00:27.010 --> 00:35.550
+downloaded one of javascript's heaviest cost is the time for the javascript engine which is inside of
+
+00:35.560 --> 00:44.100
+the browser to parse and compile this code that is to read and understand the code that is this part
+
+00:44.250 --> 00:44.900
+over here.
+
+00:45.870 --> 00:53.550
+Luckily for us with browsers such as chrome we can use their developer tools to analyze the parse and
+
+00:53.550 --> 00:54.440
+compile.
+
+00:54.900 --> 00:55.780
+Let's have a look.
+
+00:57.480 --> 01:04.620
+I have my Twitter page opened up over here but if I open up the developer tools and go to the performance
+
+01:04.620 --> 01:13.900
+tab I can hit record to actually see what is happening behind the scenes in terms of performance on
+
+01:13.900 --> 01:14.920
+this webpage.
+
+01:14.920 --> 01:21.240
+So I'm going to hit record and then refresh the page once it's done.
+
+01:21.380 --> 01:22.130
+Refreshing.
+
+01:22.160 --> 01:34.470
+I'm going to hit stop and now it's able to output whatever happened in that time period that we recorded.
+
+01:34.510 --> 01:38.720
+So looking at this it can get a little bit overwhelming.
+
+01:38.860 --> 01:45.840
+There's a lot of callers a lot of graphs and there is a lot to take in.
+
+01:46.100 --> 01:49.750
+But I want to show you the main parts that might be interesting to you.
+
+01:50.620 --> 01:57.070
+The first is we have this timeline of our recording and you can see here that as I scroll through it
+
+01:57.820 --> 02:01.280
+it shows what gets loaded on the page.
+
+02:01.450 --> 02:05.350
+You can see that there's more and more things being displayed.
+
+02:07.810 --> 02:15.010
+Perfect and we have this green line which shows the first paint you can see over here how it paints
+
+02:16.210 --> 02:22.430
+and then we have the blue line which is the DOM content loaded which we've talked about before.
+
+02:22.450 --> 02:29.260
+And then finally the red line which is the load event web page has loaded.
+
+02:29.380 --> 02:36.250
+So that's pretty nifty and nice we can see how long it takes for our web page to appear on the screen.
+
+02:36.520 --> 02:43.540
+But the more exciting and interesting thing to look at is in the Summary tab and I'm going to make this
+
+02:43.630 --> 02:47.830
+a little bit bigger so we can see in the Summary tab over here.
+
+02:47.830 --> 02:53.710
+We see that there's loading which is we're waiting for the files to load.
+
+02:54.540 --> 03:00.180
+There's scripting there's rendering and then there's painting and a few other things.
+
+03:00.880 --> 03:09.310
+But the yellow part the scripting that's the javascript this yellow part includes the parse and compile
+
+03:10.210 --> 03:19.430
+and shows that it took one point eight seconds for the javascript part of the Web site to work.
+
+03:19.480 --> 03:29.460
+We can also go to the bottom up and look at total time and we see again once again the yellow parts
+
+03:30.180 --> 03:39.510
+the javascript that is running for evaluating scripts and function call and then we also have the colt
+
+03:39.520 --> 03:46.470
+tree which again gives us some really good information but let's not get too hung up on this.
+
+03:46.490 --> 03:55.290
+I want to show you this just to show you that javascript is a big part of this Web site loading so spending
+
+03:55.320 --> 04:03.360
+a long time parsing and compiling code for the browser can heavily delay how soon a user can interact
+
+04:03.630 --> 04:04.640
+with your site.
+
+04:05.010 --> 04:11.460
+A topic that we've discussed before is the more Javascript you send the longer it will take to parse
+
+04:11.460 --> 04:18.460
+and compile before your Web site becomes interactive.
+
+04:18.470 --> 04:27.410
+Now it's not just the parsing compile that has a cost javascript execution which is running the code
+
+04:27.570 --> 04:34.470
+wants parsing compiled happen is one of the operations that has to happen on the main thread.
+
+04:34.610 --> 04:39.130
+And if you remember the main thread is kind of like a worker in the browser.
+
+04:39.200 --> 04:45.050
+There's just one worker doing all the work and we can block it with heavy javascript.
+
+04:45.080 --> 04:50.130
+Remember when we did the alert in our script act on a demo.
+
+04:50.710 --> 04:56.290
+It blocked the execution and we couldn't scroll or click on any buttons until we hit OK.
+
+04:56.660 --> 05:01.220
+So we have javascript on our Web page here.
+
+05:01.240 --> 05:07.780
+We request the javascript file because we've encountered the script tag and then javascript finally
+
+05:07.990 --> 05:09.430
+arrives.
+
+05:09.480 --> 05:17.880
+We then have to run our compile parse execute and then we encounter o there's a fetch call and the javascript
+
+05:17.880 --> 05:18.520
+file.
+
+05:18.540 --> 05:26.700
+So again we have to wait for that content to arrive to populate our javascript and maybe then we have
+
+05:26.700 --> 05:29.340
+again our compiled parts execute.
+
+05:29.340 --> 05:37.110
+And finally our page becomes interactive and I want to show you another really good tool to be able
+
+05:37.110 --> 05:39.270
+to see this in action on a Web site.
+
+05:41.240 --> 05:46.670
+If we go back to our Web page a half here the easier to mastery website over here that is actually open
+
+05:46.670 --> 05:47.110
+sourced.
+
+05:47.120 --> 05:52.560
+And this was created by just students contributing to open source projects.
+
+05:52.850 --> 05:58.340
+Very very cool and then has links to some of our open source projects that you have access to.
+
+05:58.340 --> 06:03.920
+Think of it as a playground for you to just test out anything you want anyway.
+
+06:04.770 --> 06:12.960
+Using this Web site where he can go to something like weap ph test we can enter the U R L and then hit
+
+06:13.140 --> 06:19.600
+start.
+
+06:19.700 --> 06:20.510
+All right.
+
+06:20.510 --> 06:21.200
+Perfect.
+
+06:21.250 --> 06:26.910
+The stakes a bit of time but once it's done we have a nice report of what has happened.
+
+06:27.320 --> 06:31.240
+But the one I want to show you is this processing breakdown.
+
+06:31.490 --> 06:39.050
+If you click on here it's going to show you a breakdown kind of like the Google Devol portals did.
+
+06:39.210 --> 06:42.870
+But in really nice fashion to see what exactly is happening.
+
+06:44.050 --> 06:48.580
+We again see the scripting the layout the painting that took time.
+
+06:48.660 --> 06:50.060
+The loading.
+
+06:50.080 --> 06:55.990
+And we also see things like evaluating scripts how long it took to evaluate scripts how long it took
+
+06:55.990 --> 06:59.140
+the V-8 engine to compile the code.
+
+06:59.380 --> 07:08.870
+And if we go back to our def tools we see again something similar that we have the Evaluate script which
+
+07:08.870 --> 07:13.420
+is the script was evaluated and it took this much time.
+
+07:13.460 --> 07:20.090
+We have a function call which measures the top level javascript function call that appears only when
+
+07:20.090 --> 07:25.790
+the browser enters the javascript engine and there are lots of lots of things that you can do here and
+
+07:25.820 --> 07:26.600
+analyze.
+
+07:26.630 --> 07:31.870
+You can spend a ton of time just learning every single feature that Chrome has.
+
+07:31.880 --> 07:38.600
+But don't get too deep into the rabbit hole here because the main thing we want to focus on is the idea
+
+07:38.600 --> 07:42.540
+that this Barra's compile execution takes a lot of time.
+
+07:42.710 --> 07:44.510
+It's a lot of effort.
+
+07:44.510 --> 07:53.300
+The main takeaway here is that it takes a significant time for the browser to work with javascript and
+
+07:53.300 --> 07:57.120
+it can delay how soon a user can interact with our website.
+
+07:57.140 --> 08:02.510
+Imagine if they can see a button but not click on it or touch it for multiple seconds.
+
+08:02.510 --> 08:05.680
+This can definitely degrade the user experience.
+
+08:07.520 --> 08:15.110
+One little side note I want to make is this thing that angular too and now its angular four or five
+
+08:15.410 --> 08:19.150
+whatever version they're on has this idea of ahead of time.
+
+08:19.220 --> 08:27.170
+Compilation you see browsers do something called git just in time compilation as the javascript file
+
+08:27.290 --> 08:29.350
+gets loaded onto the browser.
+
+08:29.420 --> 08:34.910
+They compile it right there and then while we wait for it to load the angular team came up with the
+
+08:34.920 --> 08:42.860
+ahead of time computation just from our terminal compiling it ahead of time and then just ship that
+
+08:42.860 --> 08:47.860
+code that the browser can work with to the browser straight away.
+
+08:47.870 --> 08:53.910
+And you can see here that they were able to significantly lower their scripting.
+
+08:54.320 --> 09:00.590
+Now there's pros and cons to all this and there is a reason that not everybody does ahead of time compilation
+
+09:01.190 --> 09:03.170
+but you can read that up on your own.
+
+09:03.170 --> 09:07.420
+I just want to show to you that there are some solutions around the problem.
+
+09:07.730 --> 09:10.430
+And then the other thing you might be thinking of is.
+
+09:10.580 --> 09:13.190
+OK so your javascript just got loaded.
+
+09:13.460 --> 09:20.240
+And how can you keep your page snappy even after it's been loaded onto a webpage and that's all about
+
+09:20.300 --> 09:24.730
+limiting the amount of processing work the computer needs to do.
+
+09:24.740 --> 09:27.950
+Primarily this means limiting animations.
+
+09:28.040 --> 09:35.110
+You remember the Kaikohe Corp. website and how many animations we have don't go so heavy on them animations
+
+09:35.110 --> 09:42.390
+require a lot of processing and graphics power and can cause serious like you know you can sprinkle
+
+09:42.390 --> 09:45.260
+them here and there but don't go overboard with them.
+
+09:45.330 --> 09:52.430
+And this is especially true when it comes to mobile devices that usually have weaker processing power.
+
+09:52.740 --> 09:59.130
+So keep that in mind one of the biggest performance culprits is triggering animations during scrolling
+
+09:59.130 --> 10:07.270
+events or moving page elements around or fading them in and out changing the layout of the Web site.
+
+10:07.290 --> 10:13.400
+Not only does a browser have to process the visual changes associated with the scrolling a dynamic page
+
+10:13.590 --> 10:17.390
+but it also has to process all your animations at the same time.
+
+10:17.700 --> 10:23.990
+So again think of this one worker that's constantly working for you don't get him or her to start.
+
+10:24.060 --> 10:25.440
+Let me show you another thing.
+
+10:27.540 --> 10:31.020
+When you include in line javascript in your HMO.
+
+10:31.080 --> 10:37.390
+So that is you put a script tag and you're a symbol with let's say source is indexed.
+
+10:37.500 --> 10:45.990
+Yes this is a render blocking operation if you remember the browser must execute this script to completion
+
+10:45.990 --> 10:48.560
+before we can continue parsing the HTML.
+
+10:48.630 --> 10:50.910
+So if we go to evaluate scripts here.
+
+10:51.090 --> 10:55.990
+If you open this up you see that Parsa H.T. M-L is inside of it.
+
+10:56.100 --> 10:59.430
+Again I know I'm repeating myself but it makes sense right.
+
+10:59.430 --> 11:06.060
+If you're building a site and maybe it even targets a lot of mobile device users do your best to first
+
+11:06.060 --> 11:14.580
+of all build and tasked on Representative hardware that is using something like web page test to test
+
+11:14.880 --> 11:19.710
+on the mobile device power that your users may have.
+
+11:21.490 --> 11:28.820
+You want to keep your javascript parse and compile times low and ideally adopt something like a performance
+
+11:28.820 --> 11:37.460
+budget for your team that ensures you keep an eye on the javascript code and cost and you don't just
+
+11:37.460 --> 11:40.950
+keep piling on coding code and code without testing your performance.
+
+11:41.930 --> 11:48.530
+And at the end of the day we have the Holy Grail of what we want to achieve with our code.
+
+11:48.590 --> 11:55.670
+We want to have a fast time to first meaningful paint that is something that is shone onto the screen
+
+11:55.760 --> 11:57.940
+right away for the user.
+
+11:58.010 --> 12:04.580
+And then finally a really fast time interactive to be able to interact with our web sites as soon as
+
+12:04.580 --> 12:05.430
+possible.
+
+12:05.750 --> 12:11.970
+And in the next videos we're going to talk about how we can do this and show you some really fine examples.
+
+12:12.380 --> 12:13.690
+I'll see in the next one.
+
+12:13.930 --> 12:14.190
+Bobby.

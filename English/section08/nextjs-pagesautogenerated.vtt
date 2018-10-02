@@ -1,0 +1,280 @@
+WEBVTT
+
+00:01.400 --> 00:09.170
+All right let's make our up a little bit bigger than just an H1 tack Kerry add new pages here.
+
+00:09.530 --> 00:10.700
+Well let's have a look.
+
+00:10.700 --> 00:21.360
+If I do new file and let's say we're going to have an About page so about dodginess And this about page
+
+00:21.510 --> 00:31.870
+let's say well of same syntax we'll call it about and again we're just creating a simple component here.
+
+00:32.950 --> 00:39.060
+And we're going to return let's return let's return.
+
+00:39.290 --> 00:40.500
+In other div
+
+00:44.720 --> 00:53.610
+and inside of this div we'll just have an H1 tag that says about very exciting what page I know Let's
+
+00:53.850 --> 00:54.860
+export default
+
+00:58.080 --> 00:59.260
+and see what happens.
+
+01:00.500 --> 01:00.870
+All right.
+
+01:00.890 --> 01:03.010
+If I go back to my Web page.
+
+01:03.020 --> 01:11.490
+Ok I still see S.R. magician but if I go now to the boat you are Al.
+
+01:11.620 --> 01:12.140
+Look at that.
+
+01:12.150 --> 01:14.690
+I'm on the About page.
+
+01:14.800 --> 01:16.040
+How cool is that.
+
+01:16.060 --> 01:21.750
+Simply just putting files underneath the pages creates new pages for us.
+
+01:22.120 --> 01:23.920
+But we have a problem here now right.
+
+01:23.920 --> 01:27.700
+How can we link these two pages together because that's how web sites work.
+
+01:27.700 --> 01:29.640
+You have links between pages.
+
+01:29.650 --> 01:32.080
+Well let's just experiment with something.
+
+01:32.080 --> 01:43.170
+What if I add an atack here with the ref that he calls let's say about dodgiest
+
+01:46.170 --> 01:48.950
+and just close the attack here.
+
+01:49.140 --> 01:50.710
+We'll see if that works.
+
+01:50.820 --> 01:57.360
+I save go back to the index page and I have the about 2 over here if I click on it.
+
+01:59.610 --> 02:01.250
+I go to about Dodge.
+
+02:01.270 --> 02:02.300
+Yes.
+
+02:02.550 --> 02:13.170
+That link can be found because with next we just give it the end point that we want so about because
+
+02:13.210 --> 02:16.280
+well that's how Atra fork's we need an actual euro.
+
+02:16.360 --> 02:17.170
+So if I save
+
+02:19.710 --> 02:25.030
+and go back to our index click on a boat look at that we're on the About page now.
+
+02:25.050 --> 02:26.560
+How cool is that.
+
+02:26.580 --> 02:27.840
+Now check this out.
+
+02:27.900 --> 02:35.250
+If I open up the network tab and I refresh the page all right I get a ton of stuff with web pack and
+
+02:35.610 --> 02:36.200
+other things.
+
+02:36.210 --> 02:39.300
+But we got the index saw japes file.
+
+02:39.300 --> 02:45.450
+If I close this now and I click on the boat and you see that there's some background tasks happening
+
+02:45.810 --> 02:53.900
+don't worry too much about that if I click on about there you know my About page my About page just
+
+02:53.900 --> 03:00.800
+got loaded which is the standard way that we see server side rendered or older generation of web sites
+
+03:00.890 --> 03:08.710
+work but next provides a really cool tool for us to actually have client side writing.
+
+03:08.790 --> 03:17.230
+Let me show you what I mean in next you can you have access to something called a link component and
+
+03:17.230 --> 03:22.680
+this link component can be grabbed from the next link.
+
+03:22.750 --> 03:30.160
+So this is just saying from the next package grab the link component and now instead of using the tag
+
+03:31.320 --> 03:38.730
+let's comment this out instead of using the tag we can say link
+
+03:41.990 --> 03:43.070
+HSF.
+
+03:43.120 --> 03:47.040
+It calls to about
+
+03:50.020 --> 03:59.550
+and just close this link back and inside of here we can just give it a say and a tag that is about.
+
+03:59.630 --> 04:05.640
+All right so let's say that and close this for now let's see if it works.
+
+04:05.640 --> 04:07.830
+I go back here click on about.
+
+04:07.830 --> 04:08.100
+All right.
+
+04:08.100 --> 04:09.040
+It's working.
+
+04:11.310 --> 04:11.850
+Also.
+
+04:11.880 --> 04:12.430
+Next slide.
+
+04:12.490 --> 04:13.140
+Yes.
+
+04:13.140 --> 04:20.630
+Has the built in writing so we can go back and forth just like we would in a browser in a regular web
+
+04:20.630 --> 04:25.430
+site to go back and forth which is actually quite difficult when you do client side routing.
+
+04:25.650 --> 04:28.920
+But again everything just works out of the box.
+
+04:29.040 --> 04:30.330
+Nice and easy.
+
+04:31.680 --> 04:34.240
+And by the way I can do anything I want here.
+
+04:34.240 --> 04:37.150
+Not just an a tag if I do button here.
+
+04:39.140 --> 04:48.680
+And I save this go back here I click on About look at that I'm able to go back or go to the About page
+
+04:49.990 --> 04:56.530
+and this is very cool with the link tag as we can wrap anything we want and a link tag and it becomes
+
+04:56.530 --> 04:57.210
+a link.
+
+04:57.220 --> 05:05.970
+All we need to give it is an RF nice and simple let's make our About page a little bit snazzier again
+
+05:06.060 --> 05:11.480
+again nothing crazy here but we know how styles work with reactor's All right.
+
+05:11.480 --> 05:17.370
+I can say font size is 20 pixels.
+
+05:17.380 --> 05:23.700
+Make sure it's the string and maybe a lot a color
+
+05:26.880 --> 05:28.350
+a color of
+
+05:31.740 --> 05:35.770
+let's save go back.
+
+05:35.790 --> 05:36.480
+All right.
+
+05:36.480 --> 05:37.350
+Very cool.
+
+05:37.470 --> 05:40.140
+Nice and easy styling as well.
+
+05:40.140 --> 05:40.380
+All right.
+
+05:40.380 --> 05:46.350
+I'm going to make the About page just a little bit more stylish than what we have now so let's just
+
+05:46.620 --> 05:55.800
+add over here perhaps a while we'll leave the header the way it is but we'll also add a link.
+
+05:55.830 --> 06:07.350
+Again we have to import that up here so we'll say import link from our next link package and the link
+
+06:07.350 --> 06:08.900
+will just say Tref.
+
+06:08.970 --> 06:14.880
+We wanted to go to the homepage so I'll just say back to the home page
+
+06:18.090 --> 06:30.670
+and inside of this link we'll just have a backbone so I'll just give it a button that says back.
+
+06:30.840 --> 06:44.570
+And then finally maybe the bottom will also have a p tag that says I was a magician once.
+
+06:46.430 --> 06:48.590
+Very descriptive about age.
+
+06:48.650 --> 06:54.530
+Let's save and go to the above page who was a magician once.
+
+06:54.530 --> 07:00.800
+If I go back everything is working and I know this doesn't look super super impressive but the fact
+
+07:00.800 --> 07:07.580
+that we can do client side routing like this is actually very very nice.
+
+07:07.730 --> 07:14.050
+It is a tough problem that with Korea react up on the front and you'd have to use something like re-act
+
+07:14.060 --> 07:20.540
+rudder to implemented and although that is easy as we call it it's still especially hard when he worked
+
+07:20.540 --> 07:22.060
+with server side rendered.
+
+07:22.070 --> 07:25.830
+So this is just out of the box very easy.
+
+07:25.850 --> 07:26.520
+All right.
+
+07:26.600 --> 07:28.520
+More awesome stuff from next.
+
+07:28.550 --> 07:32.210
+Coming up next video that's funny I said next to many taps.
+
+07:32.210 --> 07:32.600
+All right.
+
+07:32.690 --> 07:33.940
+I'll see you in the next one.
+
+07:33.950 --> 07:34.540
+Bye bye.

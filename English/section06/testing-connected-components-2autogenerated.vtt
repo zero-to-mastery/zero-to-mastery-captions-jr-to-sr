@@ -1,0 +1,112 @@
+WEBVTT
+
+00:06.110 --> 00:13.400
+And you can already start to see some things that we can clean up here we can just copy and paste this
+
+00:13.400 --> 00:24.540
+list just create one more instance and says filter's robot correctly to say that the will say three
+
+00:24.540 --> 00:26.700
+for an hour just to keep this clean.
+
+00:27.900 --> 00:40.780
+Will say that the Konst filter or filtered robots should equal an empty array.
+
+00:40.840 --> 00:48.640
+And this time we're searching for the letter J which doesn't exist in name and we expect the filtered
+
+00:49.540 --> 00:56.790
+robots to be called the dummy filtered robots that we gave at
+
+01:00.140 --> 01:03.530
+let's say of.
+
+01:03.740 --> 01:05.420
+And we see that something is failing
+
+01:08.380 --> 01:11.280
+because Mach 2 is not defined.
+
+01:11.290 --> 01:14.700
+We need to give it three.
+
+01:14.820 --> 01:16.970
+And there you have it.
+
+01:17.010 --> 01:24.420
+We've now tested our main page at least the main page method of filtered robots
+
+01:27.250 --> 01:33.330
+and we also have some snapshot testing as well so let's just look at our code coverage for now let's
+
+01:33.340 --> 01:36.530
+just around NPM run tests.
+
+01:36.610 --> 01:39.660
+Dash dash dash dash coverage
+
+01:44.280 --> 01:48.860
+and again this is always with testing there's always many more things they can do.
+
+01:48.870 --> 01:56.870
+We see that main main page has a hundred percent but there is a branch percentage.
+
+01:56.880 --> 02:03.430
+We're only testing 50 percent of the branch and you see that the uncovered line is on 28.
+
+02:03.540 --> 02:14.230
+If we go back we can go to main page and see that we have is pending on line 28.
+
+02:14.230 --> 02:16.030
+How cool is that the test says.
+
+02:16.030 --> 02:16.480
+All right.
+
+02:16.600 --> 02:25.840
+We're testing that the card list is rendering because we're always testing with is pending is true.
+
+02:26.860 --> 02:33.810
+As you can see here in our in our mock props we always have is pending to false.
+
+02:33.850 --> 02:37.350
+So we might want to test is pending to true as well.
+
+02:37.510 --> 02:43.780
+And I'm going to leave that up to you to add the important concept here is that there are so many ways
+
+02:43.780 --> 02:45.230
+to test.
+
+02:45.280 --> 02:51.220
+You can always use the coverage you report as a reference but try to be smart about your tests and make
+
+02:51.220 --> 02:57.940
+sure that you spend your time wisely because you're just going to have finished things that you can
+
+02:57.940 --> 02:58.440
+do.
+
+02:58.450 --> 03:00.690
+But you only have limited time.
+
+03:02.020 --> 03:03.090
+That's it for now.
+
+03:03.250 --> 03:09.850
+I hope you have a better understanding of how container and components testing can be enhanced with
+
+03:10.180 --> 03:17.590
+enzyme and snapshot testing and obviously the tools that come with just the rest of the test is something
+
+03:17.650 --> 03:21.030
+I'm leaving up to you to complete for components and containers.
+
+03:21.040 --> 03:26.100
+But let's get to actions Constance and reducers.
+
+03:26.200 --> 03:29.110
+We're going to want to test those as well.
+
+03:29.110 --> 03:33.760
+So the next video we're going to do just that I'll see in that one by.

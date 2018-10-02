@@ -1,0 +1,115 @@
+WEBVTT
+
+00:01.620 --> 00:03.000
+Welcome back.
+
+00:03.000 --> 00:06.360
+We're finally made it or at least almost there.
+
+00:06.360 --> 00:10.970
+One last topic to go and we are finished off with the star of security.
+
+00:11.190 --> 00:15.280
+Let's talk about authentication and you might be thinking to yourself.
+
+00:15.500 --> 00:15.840
+Hold on.
+
+00:15.840 --> 00:19.460
+We kind of did this already with password storage.
+
+00:19.530 --> 00:27.230
+With a little bit of injection and using updated libraries and logging HSDPA us and all these things.
+
+00:27.290 --> 00:30.140
+And you might have seen that some of these overlap.
+
+00:30.260 --> 00:31.720
+That's the case with security.
+
+00:32.180 --> 00:39.270
+When one part of the system is vulnerable it affects other parts and it's just the way things are now.
+
+00:39.290 --> 00:46.070
+Authentication means making sure that the person on the other end is who they say they are.
+
+00:47.780 --> 00:54.410
+And this is done through passwords to authenticate that the users say that they are the person that
+
+00:54.410 --> 00:55.930
+has access to this account.
+
+00:57.250 --> 01:00.600
+And then afterwards we have to manage their session.
+
+01:00.730 --> 01:07.080
+That is to make sure that we say that this is Tim over here that's sending me their request.
+
+01:07.120 --> 01:14.450
+Remember on Twitter you don't have to sign in every time you refresh and authentication is really important
+
+01:14.480 --> 01:22.550
+because it could have really big consequences by allowing attackers to compromised passwords keys session
+
+01:22.550 --> 01:28.300
+tokens or other flaws can mean that they game personate other users.
+
+01:29.490 --> 01:30.780
+And here's the thing.
+
+01:31.550 --> 01:36.710
+This diagram is something that we're going to come back to because when it comes to authentication we
+
+01:36.710 --> 01:42.770
+have an entire section dedicated to it where we go through the best practices learning about session
+
+01:42.770 --> 01:49.270
+based authentication and token based authentication and how these work.
+
+01:49.460 --> 01:51.410
+But the ideas are the same.
+
+01:51.410 --> 01:59.270
+We make sure that the passwords match and that the user is who they say they are and then afterwards
+
+01:59.600 --> 02:07.490
+we either give them a cookie or a token to manage their session that is every time they make a request
+
+02:07.500 --> 02:09.650
+and we know who they are we know that.
+
+02:09.860 --> 02:11.510
+That's Tim making your request.
+
+02:11.540 --> 02:19.680
+Let's give Tim the appropriate resources that he needs good authentication means implementing simple
+
+02:19.680 --> 02:26.430
+but adequate password rules that encourage users to have long random passwords instead of silly passwords
+
+02:26.430 --> 02:33.810
+like 2:59 you want to use something like multi-factor authentication for your log ins like perhaps signing
+
+02:33.810 --> 02:39.270
+in to Twitter also requires you to have two factor authentication on your phone where you have to say
+
+02:39.510 --> 02:41.900
+yes I am who I say I am.
+
+02:41.910 --> 02:43.860
+Let me log in as well.
+
+02:43.890 --> 02:51.050
+We also learn that with cookies you want to set a should be only and secure headers to true.
+
+02:51.090 --> 02:56.430
+But like I said this is a topic that I think is really important and we have an entire section dedicated
+
+02:56.430 --> 02:56.880
+to it.
+
+02:57.180 --> 03:04.080
+But the idea is this we need a way to make sure that whoever is on the other side we trust and we can
+
+03:04.080 --> 03:06.390
+trust that they say who they say they're.

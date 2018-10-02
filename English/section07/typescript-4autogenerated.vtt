@@ -1,0 +1,160 @@
+WEBVTT
+
+00:01.180 --> 00:02.190
+Walk them back.
+
+00:02.310 --> 00:07.020
+Let's learn a few more types that we can use with typescript.
+
+00:07.020 --> 00:10.710
+The first one is something called a pupil.
+
+00:11.490 --> 00:14.090
+And by the way where do these types come from.
+
+00:14.220 --> 00:21.060
+Well some programming languages actually have these types that we're going to be talking about and Javascript
+
+00:21.060 --> 00:27.630
+just happens to not have them doesn't mean it's a bad thing but typescript allows us to actually use
+
+00:27.630 --> 00:30.060
+them which is a pretty nice feature.
+
+00:31.390 --> 00:34.470
+So a tuple is.
+
+00:34.810 --> 00:41.980
+Well I think just showing you might make sense what a tuple is we can say let Foskett
+
+00:46.910 --> 00:47.540
+string
+
+00:52.930 --> 01:05.630
+and number and now the basket will have a basketball and a five in its array.
+
+01:05.920 --> 01:09.730
+So if I save this everything still works.
+
+01:09.730 --> 01:19.090
+And that's a tuple a tuple you can define in this syntax and have different types inside of it so that
+
+01:19.480 --> 01:30.470
+if for some reason my order changes and I do 5 and now Baskett let me make sure I add the string.
+
+01:30.570 --> 01:39.790
+I get an error because it's expecting this specific type and this type order and it can come in very
+
+01:39.790 --> 01:44.730
+handy for certain things you might not use it that often.
+
+01:44.740 --> 01:53.350
+But just again like I said just SYNNEX your feature you can use another one that's very popular especially
+
+01:53.350 --> 02:01.880
+because it exists in a lot of programming languages is something called enew for innumerable.
+
+02:01.890 --> 02:10.160
+And here we can do something like this we can say in Gnome size you see that we get that highlighting.
+
+02:10.330 --> 02:18.580
+So this can be anything that we want and we usually capitalize it and we'll say with curly brackets
+
+02:18.580 --> 02:28.610
+that small equals to one medium equals two.
+
+02:28.620 --> 02:36.490
+Now let's say large equals to 3.
+
+02:36.570 --> 02:52.960
+And now using this new type I can say let size Lassez size name be a string and say equals size
+
+02:57.750 --> 03:00.810
+what does that mean let's save and see what happens.
+
+03:00.930 --> 03:02.700
+I'm not getting any years.
+
+03:02.910 --> 03:05.010
+So it looks like it's working.
+
+03:05.040 --> 03:08.500
+I'm getting no errors but if I go to typescript Dodd J.S.
+
+03:11.260 --> 03:14.740
+Whoa I'm getting some funky outputs here.
+
+03:15.070 --> 03:20.270
+But it looks like the size too that I'm getting.
+
+03:20.280 --> 03:22.280
+Should put medium.
+
+03:22.720 --> 03:23.900
+Let's test this theory.
+
+03:23.920 --> 03:30.970
+I'm going to say Konsole go log size name.
+
+03:31.060 --> 03:32.330
+You want to save.
+
+03:32.690 --> 03:37.930
+I'm going to close the compiler for now and just run node typescript.
+
+03:38.010 --> 03:39.570
+Dodgy Yes.
+
+03:39.620 --> 03:42.310
+And I get medium.
+
+03:42.370 --> 03:48.460
+I know this can get a little bit confusing but again something that you can read up on with nums you
+
+03:48.460 --> 03:55.410
+can have a different data structure that you can use to organize your information for your program.
+
+03:55.420 --> 04:03.850
+For example if we had a shopping cart and we had small medium and large sizes and each value of the
+
+04:03.850 --> 04:07.080
+small medium and large it was 1 2 and 3.
+
+04:07.090 --> 04:15.250
+Well we can use size name to make sure that we get the correct value.
+
+04:17.020 --> 04:25.200
+Now let's say we want to have instead of size 2 let's say we're going to have size
+
+04:28.250 --> 04:32.530
+small 5 on the compiler.
+
+04:35.040 --> 04:40.620
+Type size small is not assignable to type string but if I change just to number
+
+04:43.170 --> 04:52.930
+everything works because size small is now equal to 1 and you can see if I hover over this it shows
+
+04:52.930 --> 04:57.220
+me that size small is equal to 1.
+
+04:57.220 --> 05:00.160
+Now when would this be actually useful.
+
+05:00.430 --> 05:09.560
+Well in nums allow us to define a set of named Constans just like we have here and using them we can
+
+05:09.560 --> 05:17.540
+make it easier to perhaps document intent or create a set of distinct classes such as sizes or perhaps
+
+05:17.900 --> 05:24.710
+maybe we want to have directions like up down left right and each direction has a value associated with
+
+05:24.710 --> 05:25.050
+it.
+
+05:26.390 --> 05:33.570
+Again you can read up more about it on their documentation is just another useful tool.
+
+05:33.570 --> 05:37.350
+All right let's take a break and I'll see in the next one by.

@@ -1,0 +1,250 @@
+WEBVTT
+
+00:01.620 --> 00:03.100
+Walk them back.
+
+00:03.100 --> 00:09.760
+Now what I'm going to talk about in this video you'll just have to trust me on if you haven't worked
+
+00:09.760 --> 00:11.300
+in large teams.
+
+00:11.410 --> 00:14.280
+It's hard to imagine these problems.
+
+00:14.350 --> 00:20.860
+And one of the main reasons that companies are afraid of hiring junior developers is that they don't
+
+00:20.860 --> 00:23.820
+have experience with this process.
+
+00:24.720 --> 00:29.190
+So I know it's not the best way for me to just say hey trust me.
+
+00:29.190 --> 00:30.550
+Just follow along.
+
+00:30.720 --> 00:33.970
+But for this one let's do that.
+
+00:33.980 --> 00:36.970
+Just trust me that I have faced these problems.
+
+00:36.980 --> 00:43.880
+I have helped implement these patterns and companies and they're really really important to know especially
+
+00:43.880 --> 00:47.430
+as a senior developer.
+
+00:47.440 --> 00:49.730
+Now let's get back on track.
+
+00:49.790 --> 00:59.580
+You see each project usually starts up with a project set up you decide on the folder structure you
+
+00:59.580 --> 01:06.680
+maybe think of the build steps like setting up a web pack or using create re-act app but then you also
+
+01:06.680 --> 01:10.630
+want to set up what we call your continuous integration.
+
+01:10.680 --> 01:16.890
+The sooner you set it up the more standard your codebase will have and less headaches you'll have later
+
+01:16.890 --> 01:23.340
+on it's continuous integration is something that happens or should happen at the very beginning of a
+
+01:23.340 --> 01:24.050
+project.
+
+01:25.550 --> 01:31.710
+And then you can slowly start to expand to things like continuous delivery and continuous deployment.
+
+01:31.760 --> 01:37.690
+One day and again I'm telling you this from experience if you're working for a startup and you start
+
+01:37.690 --> 01:43.410
+from scratch go to your boss and let him or her know why you need to set this up right away.
+
+01:43.450 --> 01:48.600
+In the long run as the team grows they'll have less bugs and more manageable code.
+
+01:48.700 --> 01:55.940
+They're going to think if you're a superstar now old software practices used to do this and the Stiger
+
+01:56.770 --> 02:04.190
+everyone worked on a feature or a bug let's say we had a team of 10 developers then they all pushed
+
+02:04.700 --> 02:11.760
+all of their changes to something like get help on a branch and then it would just sit there until let's
+
+02:11.760 --> 02:16.800
+say Friday where they would then wait and all of them would merge.
+
+02:16.820 --> 02:24.430
+There are changes all at once into the master branch you would get conflicts and panics before the weekend
+
+02:24.850 --> 02:29.600
+and people would have to fix their code because they broke other parts of the code.
+
+02:29.740 --> 02:36.160
+Now continuous integration avoids this by having coders make poll requests daily emerging to master
+
+02:36.280 --> 02:37.330
+daily.
+
+02:37.330 --> 02:45.300
+It's important that developers integrate their changes as soon as possible on the main repository.
+
+02:45.380 --> 02:52.340
+If you get the code sitting on the branch or developer workstation for too long then you expose yourself
+
+02:52.370 --> 02:57.670
+to the risk of having too many conflicts and all these features not working together.
+
+02:59.610 --> 03:07.650
+By integrating your code early you reduce the scope of the changes which makes it easier for people
+
+03:07.650 --> 03:10.130
+to understand conflicts or when you have them.
+
+03:10.380 --> 03:14.010
+And there are also a lot smaller now.
+
+03:14.240 --> 03:22.220
+In order for us to be making constant cool requests and daily code reviews and daily merges to master
+
+03:22.370 --> 03:26.640
+like we want to do here we need a little bit of help.
+
+03:27.160 --> 03:32.890
+Luckily for us there there's tools out there that we can use including free ones that can help this
+
+03:32.890 --> 03:41.870
+process and help us implement continuous integration so that we go from here to looking like this.
+
+03:41.880 --> 03:46.790
+The one thing you might notice here is that we've added a few things.
+
+03:46.790 --> 03:55.800
+One is that we now have tests linking maybe typescript So we have static typing to avoid any errors.
+
+03:55.880 --> 04:01.960
+We run those on our computer as developers locally as we're working on a feature.
+
+04:02.480 --> 04:08.660
+And then we perhaps put it through something like purtier which we'll talk about that formats your code
+
+04:08.690 --> 04:14.660
+in a standard way so despite having all these developers all the code is going to look the same and
+
+04:14.660 --> 04:16.010
+it will be prettier.
+
+04:16.830 --> 04:20.090
+And that code goes up to get help.
+
+04:20.460 --> 04:28.890
+And here on get hub before there's any code review or before we do any merges we pass off that pull
+
+04:28.890 --> 04:35.210
+request to one of these tools that's going to run some tests for us.
+
+04:35.340 --> 04:41.010
+And here I have circle C.I. a tool that we're going to be using in the next couple of videos and I'll
+
+04:41.010 --> 04:42.710
+demonstrate how it works.
+
+04:42.730 --> 04:45.050
+There's many solutions out there.
+
+04:45.210 --> 04:47.010
+You have circle see-I.
+
+04:47.010 --> 04:56.570
+Travis see-I coach Chip Smith for CII Jenkin's bamboo team city or many many others.
+
+04:56.640 --> 04:59.400
+Again software tools come with the best names don't they.
+
+05:00.630 --> 05:02.820
+Anyway they work in a simple way.
+
+05:02.970 --> 05:09.900
+You have a server that runs your continuous integration or continuous delivery.
+
+05:09.900 --> 05:10.750
+What does that mean.
+
+05:10.890 --> 05:18.690
+Well when you merge once you've tested everything when you make the poor request to get help get a job
+
+05:18.720 --> 05:27.510
+automatically lets a circle see-I server know hey we just have a pool request can you run all the tests
+
+05:27.510 --> 05:35.020
+perhaps a run typescript run lending run all the tests make sure everything passes and build the project.
+
+05:35.190 --> 05:38.470
+If nothing fails in that step everything is good to go.
+
+05:38.670 --> 05:39.160
+All right.
+
+05:39.180 --> 05:40.880
+This PR is valid.
+
+05:40.920 --> 05:47.010
+You can now do a code review and somebody can do a final check on the code and then people can merge
+
+05:47.010 --> 05:47.400
+it.
+
+05:47.700 --> 05:54.450
+So we're adding this extra step over here or an extra machine that's going to do some work for us automatically
+
+05:54.480 --> 06:01.790
+every time we make a PR and circle see-I is a software as a service solution.
+
+06:01.830 --> 06:05.380
+It hosts servers for you and you don't have to worry about it.
+
+06:05.400 --> 06:09.570
+They'll manage the server and they'll run the test for you.
+
+06:09.570 --> 06:16.810
+All you need to do is just tell them what they need to run on like Circle C.I. or Travis s.i.
+
+06:17.060 --> 06:22.340
+If you're worried about security or you want to just have your own server and manage your own server
+
+06:22.430 --> 06:27.100
+let's say that Kaikohe Corp. wants to manage their own server for continuous integration.
+
+06:27.320 --> 06:33.510
+Well you can use other tools like Jenkins to do that which lets you manage the server yourself.
+
+06:34.510 --> 06:37.840
+And it's a little bit more flexible but circle C.I. is great.
+
+06:37.840 --> 06:39.460
+I've worked with Sturgell CIO before.
+
+06:39.460 --> 06:43.750
+It's really really nice to use and all these tools are quite similar.
+
+06:43.810 --> 06:49.540
+So we're going to use circle C.I. as an example to understand fully what continuous integration does
+
+06:50.230 --> 06:58.780
+how you can add this piece into our flow including pre-Iraq year including tasks so that in the future
+
+06:58.810 --> 07:01.760
+when he started Project you can implement this on your own.
+
+07:03.060 --> 07:07.470
+So in the next video we're going to get started with our CII pipeline.
+
+07:07.510 --> 07:09.240
+See that one by.

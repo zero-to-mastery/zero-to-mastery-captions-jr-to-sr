@@ -1,0 +1,334 @@
+WEBVTT
+
+00:02.080 --> 00:02.710
+All right.
+
+00:02.710 --> 00:03.700
+Welcome back.
+
+00:03.700 --> 00:08.390
+Let's finally get into things and talk about typescript now.
+
+00:08.440 --> 00:10.600
+Why did they pick typescript.
+
+00:10.600 --> 00:16.770
+Because there's actually many ways that we can introduce static typing to javascript.
+
+00:16.780 --> 00:27.720
+There's tools like flow Elm reason M-L and obviously typescript for example reason M-L and flow were
+
+00:27.750 --> 00:38.380
+created by Facebook and the developers at Facebook and typescript by the fells Microsoft but they all
+
+00:38.380 --> 00:39.740
+do the same thing.
+
+00:39.790 --> 00:43.830
+They all try and make javascript a statically typed language.
+
+00:44.840 --> 00:47.890
+Now let's talk about reason.
+
+00:48.410 --> 00:55.940
+Reason is based on a programming language called Camel and like I said before is created by Facebook
+
+00:55.940 --> 00:59.800
+to make it easy for javascript programmers to pick up.
+
+00:59.890 --> 01:07.400
+It's a language in its own but similar enough to javascript that it's easy to pick up and Facebook actually
+
+01:07.400 --> 01:10.070
+uses it with some of their projects.
+
+01:10.100 --> 01:17.290
+And currently 50 percent of their messengers from tangoed is written with reason.
+
+01:17.360 --> 01:20.900
+So that's a popular language coming out of Facebook.
+
+01:21.750 --> 01:25.810
+All right but again I'm still not getting this what does this all mean.
+
+01:25.930 --> 01:27.920
+What may be the next slide will help you.
+
+01:30.500 --> 01:32.260
+Again all of these tools.
+
+01:32.270 --> 01:40.100
+Their goal is to make writing javascript a little bit nicer a little less buggy and introduce static
+
+01:40.100 --> 01:40.660
+typing.
+
+01:41.940 --> 01:50.890
+And flow which is used very commonly with re-act projects is what we call a static type checker.
+
+01:51.120 --> 01:52.920
+Let's start off with this one.
+
+01:53.100 --> 02:03.780
+Flow is able to add types to our javascript by writing some code that works with flow and then putting
+
+02:03.780 --> 02:11.580
+it through a compiler such as the baler or B-ball compiler which spits out javascript and we know what
+
+02:11.580 --> 02:13.380
+Bible does from previous sections.
+
+02:13.440 --> 02:22.290
+It takes Yes 6 code or yes 7 or yes a code and changes it into E.S. 5 code so that all browsers can
+
+02:22.320 --> 02:23.120
+understand it.
+
+02:24.060 --> 02:31.650
+Now flow is static a static type checker which means we're actually writing something like this at the
+
+02:31.650 --> 02:32.760
+top of our files.
+
+02:34.790 --> 02:43.250
+The top of our files will do something like dash dash at flow and flow is going to be able to say ah
+
+02:43.880 --> 02:48.380
+this file has flow types and I'm going to check it for you.
+
+02:48.380 --> 02:51.150
+It checks the types again.
+
+02:51.470 --> 02:55.850
+Don't worry when we talk about types you're actually you're going to learn them and laid on videos.
+
+02:55.850 --> 02:58.550
+But again we want to build the foundation first.
+
+02:58.550 --> 03:08.470
+If you go back here what we actually do with flow is that it checks everything and it relies on be able
+
+03:09.340 --> 03:16.990
+to actually remove that add flow and all the other types that we've entered into our code.
+
+03:16.990 --> 03:26.820
+Before production before sending it to our users and flow actually comes pre-built into Cray reactor.
+
+03:26.980 --> 03:35.700
+If we go to the flow documentation that flow dot org we see that and create re-act up.
+
+03:35.700 --> 03:43.220
+We simply run these commands and we can start writing type checking in our code.
+
+03:43.320 --> 03:53.450
+Again something that will cover typescript differs from flow because pipe script has its own compiler.
+
+03:53.450 --> 04:00.500
+It's not like flow that depends on be able to remove all this extra code before spitting it into javascript
+
+04:00.500 --> 04:02.810
+that we want to send to the front end.
+
+04:03.590 --> 04:10.080
+Typescript is what we call a superset of javascript that is.
+
+04:10.080 --> 04:13.220
+It adds functionality on top of javascript.
+
+04:13.330 --> 04:23.220
+That means that javascript is typescript and typescript just simply adds a few extra features on top
+
+04:23.220 --> 04:24.170
+of Javascript.
+
+04:24.300 --> 04:26.130
+But it also has its own compiler.
+
+04:26.190 --> 04:31.490
+So we write typescript code which then gets run through the compiler.
+
+04:31.520 --> 04:38.250
+I remember a compiler is just simply a machine that takes an input of some piece of code and outputs
+
+04:38.310 --> 04:40.230
+a different piece of code.
+
+04:40.230 --> 04:47.440
+In our case we're going to convert it from typescript to javascript that our browsers can read just
+
+04:47.440 --> 04:49.540
+like I talked about before about reason.
+
+04:49.550 --> 04:56.230
+M-L it has the same thing it's own compiler and it's going to go through the compiler and spit out Javascript
+
+04:56.230 --> 04:56.820
+code.
+
+04:56.830 --> 05:06.070
+The difference between typescript and reason M-L is that reason is a completely separate language from
+
+05:06.070 --> 05:10.690
+javascript on its own typescript tries to mimic javascript and grow with javascript.
+
+05:10.690 --> 05:12.430
+Like I said it's a superset.
+
+05:12.430 --> 05:16.110
+But reason M-L is just a whole different language on its own.
+
+05:16.210 --> 05:20.900
+It doesn't depend on any javascript changes being made in the ecosystem.
+
+05:20.900 --> 05:29.410
+Any of that and Elm is pretty much the exact same thing as reason M-L it's own language that is typesafe
+
+05:29.420 --> 05:32.880
+that has its own compiler and spits out Javascript.
+
+05:33.260 --> 05:37.290
+So you might hear in javascript land people using these tools.
+
+05:37.310 --> 05:42.710
+The one thing you should really focus on because Elm and reason M-L are still fairly new.
+
+05:42.830 --> 05:47.330
+You won't find that many jobs out there that actually request it.
+
+05:47.330 --> 05:55.190
+It is nice to learn an interesting but again most of the time you're looking at either learning flow
+
+05:55.520 --> 05:57.600
+or typescript.
+
+05:57.660 --> 06:04.950
+Now the reason I'm teaching type script instead of flow in this course is that the growth of typescript
+
+06:05.220 --> 06:09.560
+outweighs all of the others that we've learned in this section.
+
+06:09.570 --> 06:18.560
+All this once now a big part of this is that angular is built with typescript and using typescript.
+
+06:18.630 --> 06:24.090
+So if you're an angular developer you're already using typescript pretty much by default.
+
+06:25.400 --> 06:32.480
+However a lot of the Riak community is also started to use typescript and just general javascript community
+
+06:32.480 --> 06:41.320
+is starting to get more and more used to using this and although flow was created specifically to work
+
+06:41.320 --> 06:46.360
+with re-act typescript currently is overtaking its popularity.
+
+06:46.360 --> 06:48.660
+So we wanted to learn this instead.
+
+06:48.910 --> 06:55.840
+Plus once you learn just like with most things once you learn the one method it's quite easy to pick
+
+06:55.840 --> 06:59.050
+up flow and how static typing works in flow.
+
+06:59.140 --> 07:06.340
+By the way if you don't trust me if we take a look at a stack overflow developer survey from this year
+
+07:08.160 --> 07:16.200
+we see that the most loved languages while we have Russ Codlin python we have javascript in there but
+
+07:16.190 --> 07:19.170
+you see typescript because it's its own language.
+
+07:19.170 --> 07:22.230
+I mean it's a superset of javascript but it's up there.
+
+07:22.230 --> 07:33.310
+It's very very loved and it's also quite high in the wanted section so it's very very important and
+
+07:33.310 --> 07:36.380
+if you look anywhere everybody's really excited about typescript.
+
+07:37.270 --> 07:42.590
+One quick note by the way why do you think angular is such a big fan of typescript.
+
+07:44.170 --> 07:45.540
+Now this is just my opinion.
+
+07:45.550 --> 07:49.840
+I may be wrong but if you remember I said that angular is kind of like the kitchen.
+
+07:49.870 --> 07:56.440
+It's great for big companies like banks to make sure that their massive developer teams work within
+
+07:56.620 --> 08:04.060
+a kitchen that has already everything defined of how to cook bread or how to cook an app typescript
+
+08:04.480 --> 08:13.050
+adds static typing which adds an extra layer of security or an extra layer of type safety in the code.
+
+08:13.180 --> 08:17.730
+Again expanding that kitchen to make sure that the codes or the coders.
+
+08:17.740 --> 08:21.160
+The developers on the team play within the rules.
+
+08:21.220 --> 08:23.230
+I think that's pretty interesting.
+
+08:23.290 --> 08:25.080
+So let's get back to the topic at hand.
+
+08:25.920 --> 08:30.360
+As developers we must understand why we put things into our projects.
+
+08:30.570 --> 08:36.200
+We don't want to just follow the trend because I just showed you the devil of a survey and everybody's
+
+08:36.210 --> 08:41.780
+using typescript and just jump on the latest bandwagon as senior developers.
+
+08:41.820 --> 08:48.490
+We must decide for ourselves what works for our project and our team and what makes sense.
+
+08:49.190 --> 08:55.350
+So here's my outline of when to use static type checking like typescript.
+
+08:55.470 --> 09:03.980
+Your project grows larger and larger You already have tests written and as more developers join the
+
+09:03.980 --> 09:04.570
+team.
+
+09:04.700 --> 09:11.600
+You want the code to be self documenting and also avoid bugs as need people touch code.
+
+09:11.600 --> 09:18.740
+You also have the budget within the company to train new employees to learn this new language and expect
+
+09:18.950 --> 09:20.450
+that our development cycle.
+
+09:20.450 --> 09:26.210
+That is how fast we're able to write features and you code is going to be slower because we're writing
+
+09:26.210 --> 09:27.360
+more code now.
+
+09:27.830 --> 09:28.780
+That's your checklist.
+
+09:28.790 --> 09:30.770
+If that's the case then we should add typescript.
+
+09:30.770 --> 09:32.140
+If not we shouldn't.
+
+09:32.330 --> 09:37.960
+But in order to really understand it we actually have to write typescript and go through the process
+
+09:39.140 --> 09:42.330
+so let's finally get into coding.
+
+09:42.360 --> 09:44.400
+I'll see in the next video by.

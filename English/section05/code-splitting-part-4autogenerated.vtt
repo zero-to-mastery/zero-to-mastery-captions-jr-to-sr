@@ -1,0 +1,91 @@
+WEBVTT
+
+00:02.490 --> 00:03.430
+Welcome back.
+
+00:03.430 --> 00:08.720
+I wanted to add a quick note about code splitting when it comes to code splitting.
+
+00:08.740 --> 00:11.270
+There's a couple of options.
+
+00:11.350 --> 00:18.360
+There's something called rote based Chungking or splitting up the javascript files based on the routes.
+
+00:18.370 --> 00:24.500
+Kind of like we did and the example and this is a really really good way to go about it.
+
+00:24.520 --> 00:27.380
+Most of the time this is why you want to do.
+
+00:27.600 --> 00:36.020
+But there's also a thing called component based Chongqing where you're able to code split not just at
+
+00:36.040 --> 00:39.560
+the road level but on a component level.
+
+00:39.560 --> 00:42.070
+Now when would you want to do that.
+
+00:42.070 --> 00:48.910
+For example if your home page gets really really really really big maybe you don't necessarily want
+
+00:48.910 --> 00:50.300
+to load up all the javascript.
+
+00:50.380 --> 00:56.890
+Maybe you have a little sidebar here where you click and a menu bar appears.
+
+00:56.890 --> 00:59.320
+Maybe we don't want that loaded.
+
+00:59.680 --> 01:07.980
+In that case you can have component level code splitting where you remove the javascript for this side
+
+01:08.070 --> 01:15.510
+menu bar and only activate it when a user clicks on the button and because the javascript for that should
+
+01:15.510 --> 01:22.580
+be small it should load fairly fast so as your apps get bigger and bigger you want to think about Rob
+
+01:22.640 --> 01:28.100
+base code splitting and also component based code splitting whatever fits your need.
+
+01:28.100 --> 01:30.520
+Every project is different by you want to think about that.
+
+01:31.300 --> 01:39.320
+Finally re-act has a really good documentation on code splitting and how to do it.
+
+01:39.550 --> 01:46.330
+And they even show you a great way to do code splitting with re-act router which again you can use for
+
+01:46.330 --> 01:51.670
+code splitting and something called re-act loadable which is a great library for you to do.
+
+01:51.670 --> 01:52.420
+Code splitting.
+
+01:52.680 --> 01:59.870
+I like their tag line over here but Riak loadable makes it really really easy to do code splitting so
+
+01:59.870 --> 02:03.690
+that you don't even have to implement that async component like we did.
+
+02:05.060 --> 02:11.670
+I highly recommend you check out them as well as re-act router and the documentation on the re-act Web
+
+02:11.670 --> 02:12.560
+site.
+
+02:12.590 --> 02:14.050
+There are many ways to do it.
+
+02:14.150 --> 02:20.410
+In the end the idea is the same how can we ship the least amount of javascript to the user.
+
+02:20.420 --> 02:23.740
+All right if you want to go ahead definitely check this out.
+
+02:23.740 --> 02:28.150
+Otherwise it's off to the next video Alcyone that one by.

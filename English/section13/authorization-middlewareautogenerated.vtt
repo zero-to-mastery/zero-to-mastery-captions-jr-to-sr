@@ -1,0 +1,508 @@
+WEBVTT
+
+00:01.040 --> 00:02.120
+Welcome back.
+
+00:02.150 --> 00:10.820
+Let's finally finish up this exercise and what we want to do here is use a middle where middle words
+
+00:10.820 --> 00:19.310
+are very very useful in something like a server because we make sure that we can handle cases where
+
+00:19.670 --> 00:22.550
+we always need to act upon the request.
+
+00:22.610 --> 00:30.470
+For example body parser does Jaison allows us to add Jason to our request body and have access to it.
+
+00:30.680 --> 00:38.390
+So it would be really really nice if we have a require off method or middleware that we can use that
+
+00:38.450 --> 00:45.230
+always checks and protects any endpoints that should be very sensitive and should only have authority
+
+00:45.460 --> 00:47.340
+accessing.
+
+00:47.400 --> 00:49.350
+So let's write that out first.
+
+00:49.500 --> 00:54.950
+I want to make sure that I'll create a Auth. service.
+
+00:54.990 --> 00:57.330
+Let's say that says require
+
+01:01.800 --> 01:06.730
+and any endpoint that requires Auth. can just use this.
+
+01:06.960 --> 01:12.840
+In my case maybe we don't want it for the register because well people are registering they don't have
+
+01:12.840 --> 01:13.930
+authorization.
+
+01:14.280 --> 01:20.310
+However I do want to for profile ID for getting a profile I want it also for profile.
+
+01:22.050 --> 01:29.280
+Updates and perhaps for images as well we want to make sure whoever is using our image recognition service
+
+01:29.310 --> 01:37.080
+is an actual user so that using this new middleware that we're going to implement nobody unless you're
+
+01:37.080 --> 01:43.680
+a registered user that has sessions with us that is signed in and is in our database.
+
+01:43.680 --> 01:47.000
+Well if you're not one of them you're not getting access here.
+
+01:47.960 --> 01:52.840
+So let's go ahead and actually create this now.
+
+01:52.880 --> 02:00.890
+Usually I like creating a middleware folder but for now let's just create a controller file and we're
+
+02:00.890 --> 02:07.090
+going to call this file authorization dodgy Yes.
+
+02:07.440 --> 02:08.870
+And this authorization.
+
+02:09.090 --> 02:09.840
+Yes.
+
+02:09.930 --> 02:14.830
+Well the very first thing we need is the red S client.
+
+02:14.850 --> 02:24.200
+We need to make sure that we can do a check to the Radice client that we have that user and because
+
+02:24.200 --> 02:28.290
+the Radice client is an the signing.
+
+02:28.350 --> 02:34.080
+Doug Yes we can just imported here for now but for future we might want to move that to the server so
+
+02:34.080 --> 02:39.310
+that other files that I needed other controllers and middleware can just importing.
+
+02:39.540 --> 02:44.130
+For now though let's just add the Berettas client to our exports
+
+02:47.780 --> 02:55.860
+to make sure we add a comment here and let's grab the rattus client from
+
+03:01.170 --> 03:09.460
+our relative path which is the sign in dodginess and we're just going to call the red S client method
+
+03:09.460 --> 03:09.980
+on it.
+
+03:12.380 --> 03:14.040
+And let's create this middleware now.
+
+03:14.180 --> 03:20.610
+I'm going to say cost require Auth. equals.
+
+03:21.090 --> 03:30.560
+It's going to receive the request and the response because remember answered that Jesus every time this
+
+03:30.560 --> 03:39.150
+gets called They're going to receive a request response parameter in here.
+
+03:39.250 --> 03:42.710
+Now let me make sure I say this.
+
+03:42.760 --> 03:46.040
+So we have that available now in here.
+
+03:46.170 --> 03:52.610
+There's actually a third parameter that you get with Express and it's called next.
+
+03:52.900 --> 03:59.960
+And next as the name suggests allows us to keep going down the chain in here by using next.
+
+03:59.980 --> 04:04.570
+I say OK do something in this function.
+
+04:04.750 --> 04:09.990
+Once it's done if I run next it keeps going to the next part which is here.
+
+04:10.890 --> 04:17.760
+So we want to make sure that within here at the very end whatever we do we're going to call next by
+
+04:17.760 --> 04:19.450
+returning next.
+
+04:19.470 --> 04:25.800
+So it's a middleware a middleware just less things pass through my modify things or check things in
+
+04:25.800 --> 04:26.390
+the middle.
+
+04:26.610 --> 04:34.770
+Just like the Course package or body posture or Morgan does it watches the request response does something
+
+04:34.770 --> 04:37.870
+to it like logging out and then calls next.
+
+04:37.890 --> 04:39.770
+So it keeps passing it through.
+
+04:41.340 --> 04:49.780
+For now and require auth we're going to do a simple logic here that says if there is authorization
+
+04:53.680 --> 04:58.200
+then we're going to request or we're going to grab those from the headers.
+
+04:59.750 --> 05:06.020
+And now we can do a check if there's no authorization.
+
+05:06.170 --> 05:11.140
+In that case I want to return and not even bother going on with the next.
+
+05:11.470 --> 05:17.090
+Just return a response status that is 401.
+
+05:18.250 --> 05:27.600
+And we'll just say that this is going to say Jaison on authorized.
+
+05:27.660 --> 05:35.100
+However if they do have the authorization tokin and their request in that case we want to return whatever
+
+05:35.100 --> 05:37.290
+the Radice client gives us.
+
+05:37.290 --> 05:45.570
+So if we do a get request we're going to have the authorization as the key and we're going to try and
+
+05:45.570 --> 05:46.070
+get that.
+
+05:46.110 --> 05:54.050
+And based on the Get we're going to get an error reply and we've done this before and this error reply
+
+05:54.650 --> 06:01.560
+will have let's say if there or no reply.
+
+06:01.560 --> 06:07.230
+In that case we're going to once again let's just return the same thing a 401.
+
+06:08.930 --> 06:22.040
+Otherwise we're just going to actually leave it like that or even we can put it up.
+
+06:22.080 --> 06:23.610
+So what's happening here.
+
+06:24.030 --> 06:30.780
+Well all we're doing require authors doing is trying to block the request from going any further unless
+
+06:30.780 --> 06:32.410
+we meet all the criteria.
+
+06:32.730 --> 06:39.780
+If there's enough authorization Hetter if there's none well just say on authorized if there is an authorization
+
+06:39.780 --> 06:46.320
+header we're going to check rattus make sure that we actually have something there.
+
+06:46.560 --> 06:49.170
+If we don't well then unauthorized.
+
+06:49.560 --> 06:52.050
+Otherwise we're going to do absolutely nothing.
+
+06:52.050 --> 06:58.200
+We're just going to pass that through and do next to get whatever endpoint the user needs.
+
+06:59.810 --> 07:05.390
+And that's a nice simple demonstration of middleware and we can use this in a nice way now.
+
+07:05.570 --> 07:08.740
+Just like I showed you by doing module exports
+
+07:13.800 --> 07:26.580
+and legist console log here so we can see it's a fact you shall pass hand in here will say require off.
+
+07:26.620 --> 07:27.770
+Let's say that.
+
+07:28.170 --> 07:29.670
+And finally in server.
+
+07:29.730 --> 07:31.090
+Dodgy Yes.
+
+07:31.120 --> 07:35.820
+Actually import this.
+
+07:35.920 --> 07:44.090
+And let's call it off and it's going to come from the authorization thought yes or we don't need the
+
+07:44.100 --> 07:45.240
+yes for now.
+
+07:45.240 --> 07:46.820
+Just leave it like that.
+
+07:46.860 --> 07:50.550
+Now we can use off Daut require all.
+
+07:51.000 --> 07:55.440
+So if I save here hopefully we get Nowhere's we do get a few years.
+
+07:55.440 --> 07:56.940
+Let's see what we've messed here.
+
+07:57.870 --> 08:01.620
+Type air require at his client is not a function.
+
+08:02.180 --> 08:04.820
+So I might have not exploited that properly.
+
+08:04.820 --> 08:06.440
+Let's check that out.
+
+08:06.520 --> 08:11.040
+Free go to seinen.
+
+08:11.110 --> 08:20.830
+We want to make sure that red S client is exported and we actually don't need to run this function as
+
+08:20.850 --> 08:23.610
+should just be like this.
+
+08:23.640 --> 08:24.990
+Make sure everything runs OK.
+
+08:24.990 --> 08:26.840
+App is running on port three thousand.
+
+08:27.030 --> 08:30.850
+If I go back to my terminal click sign in.
+
+08:30.870 --> 08:36.290
+All right I'm able to sign in and I get you shell pass.
+
+08:36.290 --> 08:36.920
+All right.
+
+08:36.920 --> 08:37.520
+Perfect.
+
+08:37.640 --> 08:39.550
+What if I try to get an image.
+
+08:39.590 --> 08:40.980
+Let's just do a face
+
+08:44.090 --> 08:45.170
+images.
+
+08:46.540 --> 08:47.840
+Well I'll use this one
+
+08:51.200 --> 08:52.330
+come back here.
+
+08:54.010 --> 09:00.900
+Detect boy on authorized and we're getting a few errors here.
+
+09:00.970 --> 09:03.900
+Now why is that.
+
+09:04.420 --> 09:06.980
+And there's some error handling that we can improve here.
+
+09:07.030 --> 09:09.630
+But the main thing is we're hitting these endpoints.
+
+09:09.760 --> 09:15.270
+Image your L image that well they're unauthorized.
+
+09:15.280 --> 09:18.650
+We're not actually we've haven't implemented on the front end.
+
+09:18.730 --> 09:27.480
+What happens when we do the handle image and handle API call because we want to actually send the token.
+
+09:28.080 --> 09:33.950
+And if we don't send a token we should not expect anything back.
+
+09:34.320 --> 09:37.890
+So let's go back to our front end and fix some of this.
+
+09:37.950 --> 09:44.520
+We need to add the authorization header to our image and image you are at endpoints.
+
+09:44.520 --> 09:50.860
+So let me just copy this and come on down to the laptop.
+
+09:50.910 --> 09:51.960
+Yes.
+
+09:52.060 --> 09:52.730
+And an apt.
+
+09:52.840 --> 09:55.680
+Yes find a where we call our images and we see that.
+
+09:55.690 --> 09:56.230
+All right.
+
+09:56.230 --> 10:04.830
+It's here on Bunz submit we called the image Jaro and image endpoints and they don't have the authorization
+
+10:04.830 --> 10:05.720
+headers set.
+
+10:06.000 --> 10:07.030
+So let's do that.
+
+10:07.050 --> 10:11.990
+I'm going to say authorization and in here we have to get the.
+
+10:11.990 --> 10:20.020
+So we'll just do window session storage get item and we'll just simply get
+
+10:22.780 --> 10:23.350
+token.
+
+10:23.800 --> 10:28.680
+And hopefully there's something for us to check if not well that's fine too.
+
+10:29.680 --> 10:42.770
+And we're going to do the exact same thing in here as well for the image you all.
+
+10:43.000 --> 10:44.290
+So let's try that.
+
+10:44.350 --> 10:45.800
+Make sure everything works.
+
+10:47.730 --> 10:57.960
+Go back to our app going to refresh make sure that we have our token we do we want to grab a face that
+
+10:57.960 --> 11:01.130
+we can test pasted in here.
+
+11:03.680 --> 11:05.890
+All right everything is working.
+
+11:05.990 --> 11:11.220
+If we go back to our app it says you shall pass perfect.
+
+11:11.240 --> 11:13.460
+We have the right request.
+
+11:14.330 --> 11:22.990
+But for some reason if I delete this and tried to submit a different face to this one over here
+
+11:29.550 --> 11:37.100
+and press detect go on authorized and we got some errors on authorized unauthorized and we see that
+
+11:37.130 --> 11:44.530
+in Abdulle Yes there's a bit of an error because in the calculate face location Well there's an issue
+
+11:44.530 --> 11:45.740
+there let's go check it out.
+
+11:47.880 --> 11:53.150
+On line 97 we expect calculate face to return something.
+
+11:53.340 --> 11:56.890
+But in our case we're not because while we're not authorized it.
+
+11:57.000 --> 11:59.650
+So I can just do a simple IF statement here.
+
+12:00.180 --> 12:02.640
+If let's say data
+
+12:05.550 --> 12:11.130
+or data and data outputs.
+
+12:11.500 --> 12:14.290
+In that case do some of this
+
+12:19.320 --> 12:24.160
+otherwise well well just return.
+
+12:24.370 --> 12:24.940
+Let's save
+
+12:28.160 --> 12:29.590
+and we have to sign in again.
+
+12:33.410 --> 12:35.620
+Let's make sure that our token is gone.
+
+12:39.310 --> 12:45.240
+The Takht.
+
+12:45.290 --> 12:47.130
+Oh boy we get a few more hours.
+
+12:47.180 --> 12:52.730
+And this is something that you really want to be careful of with making sure that we validate whatever
+
+12:52.940 --> 13:03.250
+we do here because calculate face location is being used right here to display the face boxes.
+
+13:03.470 --> 13:12.920
+So we again want to make sure that this doesn't fail and perhaps give it another option of not updating
+
+13:12.920 --> 13:15.680
+state if boxes doesn't exist.
+
+13:18.160 --> 13:25.210
+So we can't say a return something like what we can just have a return up here and we can just say if
+
+13:26.830 --> 13:34.640
+there's no boxes or if there is boxes we'll do this well update.
+
+13:34.880 --> 13:41.930
+We'll update the state save again one last time.
+
+13:42.080 --> 13:46.600
+Let's see if all of this works sign in.
+
+13:46.940 --> 13:48.860
+Delete our token.
+
+13:48.860 --> 13:50.180
+Make sure we have the face
+
+13:55.940 --> 13:58.600
+try that again make sure we have this information.
+
+14:02.430 --> 14:05.120
+And detect.
+
+14:05.180 --> 14:05.650
+All right.
+
+14:05.660 --> 14:07.260
+It's unauthorized.
+
+14:07.460 --> 14:10.980
+We have unauthorized unauthorized unauthorized perfect.
+
+14:11.090 --> 14:16.560
+And our little endpoint is telling us you shall not pass perfect.
+
+14:16.560 --> 14:17.320
+All right.
+
+14:17.400 --> 14:22.100
+That was a lot but we've managed to do some really exciting things.
+
+14:22.230 --> 14:27.620
+And in the next video we're going to review all the things that we've done put them all together so
+
+14:27.660 --> 14:32.240
+that we have a nice idea of all the work that we've put in to set this up.
+
+14:33.390 --> 14:35.040
+I'll see in the next one by.

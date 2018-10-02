@@ -1,0 +1,469 @@
+WEBVTT
+
+00:01.360 --> 00:03.250
+And welcome back.
+
+00:03.250 --> 00:10.330
+We just left off with code splitting which was very very exciting but there's actually a cleaner way
+
+00:10.570 --> 00:12.290
+of doing things.
+
+00:12.380 --> 00:13.470
+Well there are several.
+
+00:13.540 --> 00:16.370
+I'm going to show you one of them now.
+
+00:16.890 --> 00:18.140
+This over here.
+
+00:18.330 --> 00:22.610
+This state DOT component that's pretty ugly.
+
+00:22.650 --> 00:27.360
+And if somebody needs you your team comes and they're not familiar with the syntax they're going to
+
+00:27.360 --> 00:28.990
+be really confused by your code.
+
+00:29.130 --> 00:33.000
+Ideally we can make our code very simple to understand.
+
+00:33.150 --> 00:40.740
+So let's try and do that by the way just to keep things consistent because components while there are
+
+00:40.740 --> 00:48.430
+technically objects I'm going to make this Noal instead of string to keep things consistent.
+
+00:48.450 --> 00:54.910
+Now we're here with the cleaner version.
+
+00:54.910 --> 01:03.320
+Wouldn't it be nice if we had some sort of a component such as a signal Bonan that we can't wrap around
+
+01:03.320 --> 01:07.970
+things and just say that this component is going to be Aints async.
+
+01:07.970 --> 01:12.420
+So just import it well let's do that.
+
+01:12.430 --> 01:19.840
+I'm going to create an async component and you'll see why that's helpful at the end of the video Boinne
+
+01:19.850 --> 01:28.570
+to go into the components and create a new file and we'll call it a sync component.
+
+01:28.630 --> 01:37.630
+Dodginess within here we have the typical imports react and also the component
+
+01:42.020 --> 01:44.250
+from our Riak package.
+
+01:44.250 --> 01:44.590
+All right.
+
+01:44.610 --> 01:53.280
+And now we're going to create something called a higher order component and that's a component that
+
+01:53.280 --> 01:56.830
+returns a nother component.
+
+01:56.860 --> 02:02.410
+It's just like a higher order function a higher order function which we've talked about is a function
+
+02:02.410 --> 02:04.990
+that returns a function.
+
+02:04.990 --> 02:11.790
+So again because components are just functions that's what it is a component that returns another component
+
+02:12.780 --> 02:15.900
+just like we had connect and redux.
+
+02:15.900 --> 02:21.930
+So the way we create this and by the way as I'm writing this if this goes over your head don't worry
+
+02:22.020 --> 02:24.120
+async component is pretty standard.
+
+02:24.120 --> 02:30.810
+You can go online and search for it and all the code for this async component pretty much looks the
+
+02:30.810 --> 02:31.650
+same.
+
+02:31.680 --> 02:36.750
+So you just have to get used to it if you want to learn more about higher order components.
+
+02:36.750 --> 02:43.740
+The re-act docs has a high order component section and it's going to really help you.
+
+02:44.040 --> 02:47.190
+But for now stick with me it's all going to make sense.
+
+02:47.310 --> 02:55.920
+We're going to first start off with export the fault we'll call this a sync component with lowercase
+
+02:55.930 --> 03:00.050
+say which is a function.
+
+03:00.150 --> 03:08.740
+So let's just say exper default function async component and this async component remember because it's
+
+03:08.750 --> 03:16.570
+a higher order function it's going to need a component as a parameter going to say import component
+
+03:16.580 --> 03:19.980
+so that's going to be page 2 and page 3 for us.
+
+03:20.060 --> 03:27.470
+And now finally within here we get back to our syntax that we're familiar with that is class A sync
+
+03:27.470 --> 03:28.260
+component.
+
+03:28.310 --> 03:35.390
+But this time with capital because it's a class it's a component we're creating that extends component
+
+03:35.390 --> 03:46.530
+from react and within here we have the constructor that is going to also receive prop's And again we
+
+03:46.530 --> 03:49.860
+have to call super with props in order to have access to them.
+
+03:53.070 --> 04:00.780
+And we'll just say this state equals component equals to nil.
+
+04:00.800 --> 04:02.890
+So just like we had an apt.
+
+04:02.990 --> 04:03.750
+Yes.
+
+04:06.040 --> 04:09.320
+We're going to have component No here.
+
+04:09.550 --> 04:18.060
+Now within this next part we're going to do component did not.
+
+04:18.150 --> 04:26.880
+Now if you remember we need to load these ph to MP shreik components and they have there were promises
+
+04:26.910 --> 04:33.500
+because we used dot then and then we had to set state to whatever component we received just for fun.
+
+04:33.510 --> 04:40.020
+I'm going to show you how to do with a sink a weight just so that you get a little bit more extra info.
+
+04:40.260 --> 04:50.840
+So again with any asynchronous function we can just say a sync and within here we can use the sweet
+
+04:51.010 --> 05:01.850
+keyboard so we can say Konst default and this is a bit of destructuring if you remember the default
+
+05:01.850 --> 05:09.250
+over here we're just destructuring to just make sure we're getting the default component and that's
+
+05:09.250 --> 05:10.180
+going to equal
+
+05:13.530 --> 05:14.470
+component.
+
+05:14.790 --> 05:24.860
+And how do we get these while we do the wait and do our asynchronous code which is going to be import
+
+05:25.520 --> 05:32.760
+component because with this we're going to be able to import our push to impeach shreik component.
+
+05:32.800 --> 05:40.930
+So all we're doing here is while we had over here with component he calls page dot default we're now
+
+05:40.930 --> 05:43.380
+going to have access to the component.
+
+05:43.720 --> 05:44.790
+Now within here.
+
+05:44.800 --> 05:47.980
+We can finally do this thought satt state
+
+05:51.760 --> 05:53.470
+component he calls
+
+05:56.140 --> 05:57.070
+component.
+
+05:57.250 --> 06:04.260
+Again the very same thing we're doing over here with component equals toupees to default just the shorthand
+
+06:04.270 --> 06:06.070
+cleaner way of doing it.
+
+06:06.070 --> 06:08.410
+Finally we want to render
+
+06:11.300 --> 06:12.180
+the component.
+
+06:12.230 --> 06:17.930
+So I'm going to say conc component because we don't know if it's going to be page 2 or pastry.
+
+06:17.930 --> 06:20.950
+We just want a general generic component name.
+
+06:21.500 --> 06:27.790
+And this is going to equal this state DOT component.
+
+06:27.830 --> 06:38.250
+And finally in here we can just return if we have a component we'll say pass down that component and
+
+06:38.640 --> 06:44.760
+any props that it may have using a bit of the structure in which just say if this component has any
+
+06:44.760 --> 06:53.810
+props also include them and we have to make sure we wrap that like this.
+
+06:53.810 --> 07:00.440
+So remember because we've passed on Prossy async component if somehow anything trickles in past them
+
+07:00.440 --> 07:02.060
+down to component.
+
+07:02.060 --> 07:06.870
+Otherwise just render no don't render anything.
+
+07:09.130 --> 07:13.930
+Finally because we're wrapping this in a function we have to return something and we want to return
+
+07:13.930 --> 07:17.040
+the async component so we can't just say at the bottom
+
+07:20.880 --> 07:23.590
+we turn a sync component.
+
+07:23.910 --> 07:25.970
+Let's save.
+
+07:26.260 --> 07:34.790
+Now I'm going to run NPM start here just so it checks for errors we still have to import it async component.
+
+07:34.800 --> 07:36.580
+Now we can use.
+
+07:36.680 --> 07:39.950
+But this might still look a little bit confusing so see.
+
+07:39.980 --> 07:42.270
+Let's see how we can use this component now.
+
+07:42.320 --> 07:44.420
+This higher order component.
+
+07:44.420 --> 07:45.550
+I go back to APT.
+
+07:45.580 --> 08:01.550
+Yes and I'm going to import a sync component from our components folder.
+
+08:01.590 --> 08:05.300
+Now we can use this async component to clean this up a bit.
+
+08:05.430 --> 08:14.110
+We can well let's comment this out and go back to the way we had it at the beginning when we didn't
+
+08:14.110 --> 08:15.350
+have any code splitting.
+
+08:15.490 --> 08:24.820
+But this time around for this return statement we're going to say that we want to have a async page
+
+08:24.820 --> 08:29.100
+two that equals the async component.
+
+08:29.450 --> 08:30.860
+And remember it's a function.
+
+08:30.860 --> 08:42.480
+So we're going to call within this function with the first parameter being that remember it's import
+
+08:42.570 --> 08:43.610
+component.
+
+08:43.770 --> 08:49.160
+So to import the component we just do import
+
+08:52.860 --> 08:56.220
+components da slash ph to
+
+09:00.260 --> 09:02.380
+let me make that a little bit smaller.
+
+09:04.810 --> 09:05.690
+There you go.
+
+09:05.920 --> 09:11.920
+All we did here was say async component which is a function we created is going to take a parameter
+
+09:12.220 --> 09:20.410
+that imports the component and from that imported component we're going to grab the default the component
+
+09:20.560 --> 09:27.730
+default and added to the state and then we're going to return and render the component.
+
+09:27.730 --> 09:37.100
+So going back here I can now say async page to this will return async page 2 and we can do the same
+
+09:37.100 --> 09:40.070
+for page 3.
+
+09:40.140 --> 09:46.560
+I can say that in here we have a sync page 3.
+
+09:46.680 --> 09:51.750
+So now our component is a sync pastry.
+
+09:51.850 --> 09:54.260
+Let's save right.
+
+09:54.270 --> 09:55.830
+I'm not getting any errors.
+
+09:55.830 --> 09:57.840
+Let's see if it actually works in the browser.
+
+09:57.840 --> 10:01.290
+Let's go back and refresh.
+
+10:01.430 --> 10:05.880
+We have our bundle if I click this click on the second page.
+
+10:06.090 --> 10:12.070
+All right I get another file and another file.
+
+10:12.220 --> 10:14.070
+Perfect.
+
+10:14.070 --> 10:18.300
+Now you notice how we have three and four here.
+
+10:18.350 --> 10:22.860
+That's because up here we still have the imports.
+
+10:22.910 --> 10:27.650
+So now we're creating four chunks which we don't really want.
+
+10:27.740 --> 10:30.750
+We can now remove all of this.
+
+10:30.920 --> 10:41.780
+So now we can just go back to the way we have things with this dot set state all save go back let's
+
+10:41.780 --> 10:42.750
+refresh here.
+
+10:42.800 --> 10:44.630
+We have the bundled digests.
+
+10:44.900 --> 10:52.030
+If I clear and go to page 2 There you go page 2 pastry.
+
+10:52.200 --> 10:53.580
+Very very cool.
+
+10:53.580 --> 10:54.850
+And you saw that flash.
+
+10:54.870 --> 10:56.250
+You don't see that flash any more.
+
+10:56.250 --> 11:03.240
+But initially when they're loading there's a bit of a flash and that is a tradeoff that you need to
+
+11:03.240 --> 11:11.730
+decide on do I want this quick flash where the user has to wait to import the javascript files so that
+
+11:11.850 --> 11:16.540
+our load time initial load time for the first bundle is faster.
+
+11:16.650 --> 11:19.960
+And that's something that you just have to decide as a senior developer.
+
+11:20.100 --> 11:27.400
+But now you have the tools to decide why you want to do and you might be looking at this and saying
+
+11:27.770 --> 11:34.770
+hmm is this actually cleaner than what we did before.
+
+11:34.780 --> 11:35.640
+I think it is.
+
+11:35.650 --> 11:40.370
+I think the async component is definitely a little bit tougher to grasp.
+
+11:40.660 --> 11:45.280
+By the way just in case you're confused about this again.
+
+11:45.850 --> 11:52.870
+If I just leave it the way it was to have component like we've done before.
+
+11:52.960 --> 11:56.380
+Well in that case again it's still going to work.
+
+11:56.380 --> 11:59.360
+So that was just a shorthand way of doing it.
+
+11:59.620 --> 12:05.800
+But anyway getting back to the point now we're able to use async component anywhere we want in our code
+
+12:05.990 --> 12:11.620
+and any time we need to load something we can just wrap it in async component import the component name
+
+12:11.620 --> 12:16.990
+and whatever we want and render it one last thing.
+
+12:17.180 --> 12:21.080
+If I go back to my NPM run Bill
+
+12:28.450 --> 12:37.510
+we open this up and we see that compared to last time we actually have a bigger Bondel size for the
+
+12:37.540 --> 12:37.990
+main.
+
+12:38.080 --> 12:45.560
+We have one byte here but we don't have to worry about that our bundle size just increased.
+
+12:45.560 --> 12:47.160
+Now why is that.
+
+12:47.180 --> 12:54.230
+Because in our main bundle now we've included the async component because remember an app Dahlia's we
+
+12:54.230 --> 12:58.220
+import async component again.
+
+12:58.270 --> 13:01.160
+Always think of tradeoffs.
+
+13:01.180 --> 13:04.930
+Is this the best thing to deliver to the user at the beginning.
+
+13:05.110 --> 13:09.410
+And do we want to asynchronously load these chunks.
+
+13:09.590 --> 13:17.620
+But I hope you had fun and you see some of the power of asynchronous loading and code splitting.
+
+13:17.770 --> 13:24.850
+It's a pretty new topic but I think something that every company should consider when delivering javascript
+
+13:24.940 --> 13:25.990
+to the user.
+
+13:26.500 --> 13:27.950
+I'll see you in the next one.
+
+13:28.060 --> 13:28.250
+By.

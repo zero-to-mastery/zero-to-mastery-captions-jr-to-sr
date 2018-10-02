@@ -1,0 +1,139 @@
+WEBVTT
+
+00:02.000 --> 00:12.530
+Welcome back let's talk about a topic in type called type assertions now type assertions anti-spy antismoker
+
+00:12.910 --> 00:18.200
+allows you to override a type in any way you want.
+
+00:18.440 --> 00:23.980
+And this is done through this mechanism type assertion in plain English.
+
+00:23.990 --> 00:27.170
+It's simply saying Hey transcript compiler.
+
+00:27.170 --> 00:28.190
+Calm down.
+
+00:28.310 --> 00:30.060
+I know what I'm doing.
+
+00:30.110 --> 00:32.240
+This is the type that I want.
+
+00:32.330 --> 00:36.660
+Don't worry about anything or second guessing me or printing out or Knerr.
+
+00:36.710 --> 00:37.830
+I got this.
+
+00:37.850 --> 00:40.970
+I'll tell you what kind of type it has.
+
+00:41.010 --> 00:45.840
+So let me demonstrate for you what it would look like if we go back up to here with the robot army that
+
+00:45.840 --> 00:50.980
+we had and I copy this robot army instead of robot army.
+
+00:51.030 --> 00:53.040
+I'll call it let's say
+
+00:56.060 --> 00:58.080
+a cat army.
+
+01:01.600 --> 01:04.900
+Let's say that we're creating a object.
+
+01:04.900 --> 01:09.510
+Let's call it let dog.
+
+01:09.770 --> 01:13.900
+He called to an empty object if I tried to access dog.
+
+01:13.920 --> 01:15.640
+Does that count.
+
+01:15.730 --> 01:23.830
+And I save I'll get an air count does not exist on type empty object.
+
+01:24.020 --> 01:28.720
+But if I do something call type perception and let's just comment this.
+
+01:28.730 --> 01:31.790
+So we have a nice reference for it.
+
+01:35.730 --> 01:39.690
+If I do this I can say empty object as
+
+01:42.580 --> 01:43.470
+Army.
+
+01:43.580 --> 01:46.680
+And if I see if you're well look at that.
+
+01:46.940 --> 01:48.010
+No errors.
+
+01:48.200 --> 01:50.870
+I'm saying Hey dog.
+
+01:50.930 --> 01:52.120
+I'm telling you that.
+
+01:52.130 --> 01:53.470
+Don't worry about it.
+
+01:53.480 --> 01:59.380
+This is a cat Army regardless of the fact that dog actually doesn't have Dog Duck count.
+
+01:59.390 --> 02:02.920
+I'm overriding whatever air you're going to give me and telling you that.
+
+02:02.990 --> 02:05.530
+Trust me this is the cat army.
+
+02:05.780 --> 02:11.470
+And obviously this is very dangerous and it's something that you want to be really careful about using.
+
+02:11.870 --> 02:17.440
+But there are cases that we'll see when you might want to use this.
+
+02:17.570 --> 02:20.990
+So typescript allows us to do this type of assertion
+
+02:24.560 --> 02:24.960
+by the way.
+
+02:24.970 --> 02:31.490
+You might be thinking to yourself what happens if maybe the robot army sometimes has magic sometimes
+
+02:31.550 --> 02:32.620
+it doesn't.
+
+02:32.630 --> 02:37.840
+This is an optional property that not all robot army objects have.
+
+02:38.060 --> 02:38.920
+What can we do.
+
+02:39.200 --> 02:47.770
+Well we can just simply say questionmark and now questionmark says this may or may not be part of the
+
+02:47.770 --> 03:04.120
+object if we do fight robot army with an object that is count of one and type of dragon.
+
+03:04.120 --> 03:11.170
+A dragon robot army and I save and I made sure that I have this array over here.
+
+03:11.170 --> 03:14.390
+Everything still works because I have this question mark.
+
+03:14.470 --> 03:19.830
+We may or may not get the magic property but count and type do need to happen.
+
+03:19.870 --> 03:30.720
+If I remove this and I save I get an error it's expecting a magic property.
+
+03:30.750 --> 03:32.590
+All right I'll see in the next one.

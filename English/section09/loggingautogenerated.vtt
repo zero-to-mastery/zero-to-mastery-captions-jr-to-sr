@@ -1,0 +1,496 @@
+WEBVTT
+
+00:02.480 --> 00:03.480
+Welcome back.
+
+00:03.590 --> 00:06.420
+We've covered injections third party libraries.
+
+00:06.440 --> 00:14.190
+Looks like the next stop on the list is logging and logging is once again another important topic.
+
+00:14.190 --> 00:15.170
+I'm going to give you a hint.
+
+00:15.180 --> 00:19.810
+All of these are important but logging can be quite tricky.
+
+00:19.940 --> 00:23.330
+There's no clear right and wrong way to do things.
+
+00:23.360 --> 00:24.350
+When it comes to logging.
+
+00:24.530 --> 00:29.020
+But let's talk about what it is logging is all about.
+
+00:29.070 --> 00:35.390
+Getting information from your system let's say your machine your server as to what is happening.
+
+00:36.440 --> 00:42.620
+You want to gather information about how users are using your service.
+
+00:42.620 --> 00:50.270
+Your web site your Perhaps rest API so that if something goes wrong or you see something suspicious
+
+00:50.720 --> 01:00.650
+you're able to use logging and whatever we've logged to find the issue fix the bog or prevent any attacks.
+
+01:00.710 --> 01:07.280
+And one of the biggest security issues is something called insufficient logging insufficient logging
+
+01:07.550 --> 01:18.170
+and monitoring coupled with missing or ineffective logging allows attackers to attack systems while
+
+01:18.650 --> 01:25.040
+not being detected so that they can tamper or extract or destroy data.
+
+01:25.040 --> 01:31.280
+The interesting thing is that if you look at most breaches that have happened over history studies show
+
+01:31.280 --> 01:38.840
+that a time to detect a breach when something has gone awry and perhaps a bad person has entered your
+
+01:38.840 --> 01:46.970
+system your database and got an information the time that it takes to actually detected is around 200
+
+01:46.970 --> 01:48.500
+days.
+
+01:48.720 --> 01:58.970
+And it's typically detected by external parties such as security teams rather than internal monitoring.
+
+01:59.010 --> 02:07.900
+So having good logging means that you're able to detect issues quickly and prevent any bad things that
+
+02:07.900 --> 02:11.380
+might be happening with your product.
+
+02:11.400 --> 02:13.910
+So how can we do this.
+
+02:13.930 --> 02:22.190
+We want to have proper logging set up on our product and the two tools that I really enjoy with node
+
+02:22.370 --> 02:24.330
+is Winston and Morgan.
+
+02:24.410 --> 02:25.540
+So let's see how they work.
+
+02:27.570 --> 02:28.260
+All right.
+
+02:28.260 --> 02:32.490
+So let's have some logging into our server.
+
+02:34.600 --> 02:38.120
+I have two packages that I really really like.
+
+02:38.380 --> 02:42.290
+When it comes to logging and there's a ton of options out there.
+
+02:42.460 --> 02:46.770
+The first one I'm going to show you is one called Morgan.
+
+02:47.020 --> 02:54.380
+And as you can see it's an HGP request logger middleware for note and it's very easy to install.
+
+02:54.390 --> 02:58.810
+We can just NPM install it and then require it as we have it here.
+
+02:58.870 --> 02:59.990
+So let's do that.
+
+03:00.040 --> 03:11.640
+I'm going to run MTM install Morgan and at the top over here I'm going to just Konst Morgan and require
+
+03:11.640 --> 03:12.070
+it.
+
+03:15.090 --> 03:16.670
+Since we just installed
+
+03:19.590 --> 03:19.920
+it.
+
+03:20.120 --> 03:27.770
+So with Morgan we can use it as a middleware again for express if you want to use a middleware you'd
+
+03:27.770 --> 03:33.800
+use something like apt but use just like we have here with body parser dodgiest Jaison which by the
+
+03:33.800 --> 03:41.930
+way allows us to or to receive Jaison data from the requested body as you can see here.
+
+03:41.960 --> 03:45.350
+So with Morgan I can say Morgan
+
+03:48.690 --> 03:51.640
+and then give it some options let's say tiny.
+
+03:51.750 --> 03:57.030
+So if we scroll down through here we see that there's options that we can give more.
+
+03:57.120 --> 04:00.040
+What kind of logging we should have.
+
+04:02.580 --> 04:12.720
+So with tiny now that we have this middleware let's save Ron NPM start our app is listening to port
+
+04:12.750 --> 04:13.460
+3000
+
+04:16.000 --> 04:20.760
+and let's open up our up and say check submit.
+
+04:20.770 --> 04:21.580
+All right.
+
+04:21.580 --> 04:24.740
+Going back here I see that I get options.
+
+04:24.850 --> 04:31.360
+The point secret got a status of 200 and it took 3.7 Meli seconds.
+
+04:31.360 --> 04:35.200
+We got some logging of what happened with the request.
+
+04:35.210 --> 04:40.560
+Now here's a little side note that we need to fix before we can actually test this.
+
+04:40.570 --> 04:46.340
+You see that this is options instead of the post request that we're expecting.
+
+04:46.690 --> 04:52.810
+Well if I open up the console here I'll get an error which we're going to talk about in an upcoming
+
+04:52.990 --> 04:55.350
+security video about course.
+
+04:56.230 --> 04:58.700
+So for now we're going to leave that the way it is.
+
+04:58.720 --> 05:04.630
+We're going to fix this problem and come back to it in an upcoming video so don't worry the way we fix
+
+05:04.630 --> 05:10.420
+this is we install NPM install a package called core's
+
+05:14.160 --> 05:17.810
+and we're going to again use that as a nother middleware.
+
+05:17.880 --> 05:21.810
+So Konst course equals require
+
+05:27.080 --> 05:29.270
+of course.
+
+05:29.370 --> 05:36.050
+And once again we can say app use cores like this.
+
+05:36.120 --> 05:40.510
+So let's say that let's run NPM start again.
+
+05:42.470 --> 05:45.090
+And go back to our app.
+
+05:45.300 --> 05:46.590
+We're going to try that one more time.
+
+05:47.820 --> 05:50.430
+Hit check or let's change the two.
+
+05:50.440 --> 05:51.320
+Hello.
+
+05:51.600 --> 05:56.010
+Submit and we go back and look at that.
+
+05:56.090 --> 06:00.370
+We have a post request that hit the endpoint secret.
+
+06:00.530 --> 06:05.010
+We return status of 200 and you can see the times here as well.
+
+06:05.060 --> 06:06.710
+Very cool.
+
+06:06.710 --> 06:09.960
+All right so Morgan has this logging that we get.
+
+06:09.980 --> 06:10.450
+OK.
+
+06:10.550 --> 06:14.590
+We can do another one that I like which is combined and I save here.
+
+06:15.050 --> 06:16.400
+Go back.
+
+06:16.400 --> 06:21.860
+Type something like by Samit and look at that.
+
+06:21.960 --> 06:24.180
+We get a lot more information.
+
+06:24.180 --> 06:30.560
+I get a post request I see what kind of HTP protocol I used.
+
+06:30.590 --> 06:34.120
+I looked at what kind of device the request came from.
+
+06:34.190 --> 06:36.760
+And a ton of more information.
+
+06:37.740 --> 06:45.330
+So just by having Morgan we have this information that for example if we had a server that was an API
+
+06:45.690 --> 06:50.850
+we can now monitor and if we knew that at 4:00 p.m. Something might have happened we can go back in
+
+06:50.850 --> 06:51.790
+time and see.
+
+06:52.050 --> 06:54.360
+At this time something happened.
+
+06:54.360 --> 07:03.120
+Why did less users send post requests or log into our Web site or or any other metric they may need.
+
+07:03.120 --> 07:08.370
+Remember the more information you have the better you can be informed about what is happening.
+
+07:08.400 --> 07:10.360
+So Morgan is pretty nice.
+
+07:10.410 --> 07:11.730
+Let's look at another one.
+
+07:14.190 --> 07:18.160
+The next one I want to introduce to you is called Winston.
+
+07:18.330 --> 07:20.250
+We're going to NPM install Winston
+
+07:23.240 --> 07:26.290
+and we're going to grab it like this.
+
+07:26.300 --> 07:33.860
+So let me close the server run and PM install Winston and while that's installing.
+
+07:33.890 --> 07:36.860
+Let's go to the Winston documentation here.
+
+07:37.010 --> 07:40.390
+And you see that it's a logger for just about everything.
+
+07:40.680 --> 07:47.810
+Yeah you can think of Winston as the console log that we have except it comes with a ton of more features
+
+07:48.020 --> 07:51.440
+that you can use and he can read up all about it.
+
+07:51.470 --> 07:53.000
+It's really really good.
+
+07:53.000 --> 07:56.450
+And I've used this in production and I highly recommend it.
+
+07:56.590 --> 08:01.510
+See with console log you can only do a few things.
+
+08:01.550 --> 08:06.610
+It has limitation with Winsted you have the power to do a lot of interesting things.
+
+08:06.710 --> 08:15.800
+So let's change this console log to Winston because now we're able to use Winston and see what kind
+
+08:15.800 --> 08:18.290
+of log we get from user input.
+
+08:18.350 --> 08:21.290
+We want to save this run NPM start
+
+08:23.960 --> 08:28.960
+let's go back to our app and say check check
+
+08:32.340 --> 08:32.930
+go back
+
+08:37.140 --> 08:42.870
+we get nothing logged because with Winsted and we have to give with some parameters so the first says
+
+08:42.870 --> 08:43.870
+what kind of logging.
+
+08:43.950 --> 08:48.780
+And the second is the or the log that we want.
+
+08:48.780 --> 08:52.880
+So we try again or let's say first we try again
+
+08:55.790 --> 09:01.080
+and there you go ampho check check and we can do some really cool things.
+
+09:01.250 --> 09:10.310
+For example if there is some sort of an error we can have Winston respond with let's move this down
+
+09:10.310 --> 09:10.880
+here.
+
+09:12.370 --> 09:22.850
+And say this is this is good if we're getting the user and put.
+
+09:23.020 --> 09:28.350
+And if it airs out then we're going to we're going to do something different.
+
+09:28.360 --> 09:39.280
+We're going to log out on air or we can do just short form error here and say that
+
+09:42.990 --> 09:49.140
+this guy is messing with us.
+
+09:49.170 --> 09:56.460
+So if I say that go back hit submit again go back.
+
+09:56.460 --> 09:59.430
+I see that ampho user input was check check.
+
+09:59.430 --> 10:00.300
+That's great.
+
+10:00.300 --> 10:07.800
+If I mess something up let's say that we send a batch request and we don't send the user and put.
+
+10:07.840 --> 10:15.980
+So let's just say that on the front end I'm going to send a user and put with an exclamation mark where
+
+10:16.020 --> 10:26.730
+I can do that with one and one to save go back let's refresh this and we'll say how about now submit
+
+10:28.000 --> 10:29.650
+and we'll get that air.
+
+10:29.690 --> 10:31.670
+This guy is messing with us.
+
+10:32.680 --> 10:41.200
+So you see over here how with Winston we can get some really really good logging so that we can go because
+
+10:41.290 --> 10:43.150
+these will be locked somewhere.
+
+10:43.300 --> 10:49.870
+We can go back in time and say at 4:00 p.m. our service shut down or we experience some issues we can
+
+10:49.870 --> 10:57.610
+go back and see what happened this time and we are able to get hints about maybe some of the inputs
+
+10:57.610 --> 11:00.280
+that users have sent or other things.
+
+11:00.280 --> 11:06.640
+And you can see here that logging is up to you what information you want to keep what information you
+
+11:06.640 --> 11:09.070
+want to save is completely up to you.
+
+11:09.070 --> 11:16.150
+The idea is that you want to have good information but you're not storing any any personal information
+
+11:16.180 --> 11:27.090
+in your logs and most definitely you're not returning any logging input input to the client because
+
+11:27.450 --> 11:35.040
+if we send something let's say a user tries to sign in and if we sent with an error or we return instead
+
+11:35.040 --> 11:41.520
+of a status saying user already exists.
+
+11:41.520 --> 11:52.130
+Well if we respond to that and we send that to the front and now I'm giving information away about my
+
+11:52.130 --> 12:02.390
+system I'm letting the person on the Web site say oh I just found a user that might be in a database
+
+12:02.810 --> 12:09.860
+maybe I can try logging in with them and use Eskew all injection to see if I can get their information.
+
+12:10.160 --> 12:13.260
+So here's the thing with logging it's very tricky.
+
+12:13.340 --> 12:19.130
+You want to log information as much as you can so you can get this knowledge about how your system is
+
+12:19.130 --> 12:28.500
+working but you also want to be careful to keep this information to only the levels that should have
+
+12:28.500 --> 12:30.480
+access to see this.
+
+12:30.480 --> 12:40.200
+So you never want to log out system errors in a front end on console because then anybody in the world
+
+12:40.200 --> 12:43.300
+can see it.
+
+12:43.310 --> 12:45.490
+Finally I want to end off with one thing.
+
+12:45.530 --> 12:52.550
+There's a major issue with logging in that we're relying on logs for security purposes but logs are
+
+12:52.550 --> 12:56.890
+only going to tell us of a malicious event once it's already happened.
+
+12:58.080 --> 13:04.230
+And if we only periodically monitor our logs then we're going to miss whatever information was important
+
+13:04.440 --> 13:06.310
+at the time anyway.
+
+13:07.430 --> 13:12.800
+And then there's also the issue of how much data do we want to actually record if we have a really busy
+
+13:12.800 --> 13:13.280
+service.
+
+13:13.280 --> 13:19.460
+Are locks files are going to be enormous because I can just save all these logs in a text file and keep
+
+13:19.460 --> 13:20.930
+them somewhere.
+
+13:20.930 --> 13:27.510
+And the more information we have the harder it is to find data that we might be looking for anyway.
+
+13:27.560 --> 13:31.520
+Logging is a complex topic but you want to just be thinking about this.
+
+13:31.550 --> 13:37.670
+What information do you need so that you have a secure application you can detect when security issues
+
+13:37.670 --> 13:38.460
+arise.
+
+13:38.810 --> 13:46.760
+But also keep blogging away from clients or users because you don't want to reveal any information about
+
+13:46.760 --> 13:47.430
+your system.
+
+13:47.510 --> 13:53.170
+Any small information might be used against your.
+
+13:53.190 --> 13:54.330
+All right.
+
+13:54.330 --> 13:55.410
+I think my head hurts.
+
+13:55.410 --> 14:00.020
+There was a lot of information but I hope you have found this useful and I'll see you in the next one.
+
+14:00.320 --> 14:00.600
+But by.

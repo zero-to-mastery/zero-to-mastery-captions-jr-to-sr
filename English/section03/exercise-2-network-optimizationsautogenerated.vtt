@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00.880 --> 00:07.090
+Welcome back back to our super cool awesome Web site with this little little cute puppy.
+
+00:07.090 --> 00:12.660
+Anyway I have a fun little exercise to make sure that we got the points that we covered in this section.
+
+00:12.820 --> 00:18.820
+If this isn't your first rodeo as a web developer you might be thinking this is super easy Andre.
+
+00:18.820 --> 00:21.280
+Can we get some advanced stuff.
+
+00:21.280 --> 00:27.490
+And don't worry we still have lots and lots to cover but we really want to solidify these fundamentals
+
+00:27.580 --> 00:33.460
+that we're learning because I want to realize that each video on this course is a little Lego block
+
+00:33.520 --> 00:40.930
+that we build on top of each time each time getting a little bit more complex a little bit more advanced.
+
+00:40.930 --> 00:42.450
+So hang in there.
+
+00:42.460 --> 00:46.870
+Trust me things are going to get more and more interesting more and more advanced.
+
+00:46.890 --> 00:51.400
+And by the end of the course everything's going to be tied together and it's all going to make sense.
+
+00:51.400 --> 00:56.190
+So just hang in there but for now let's start off with a fun little exercise.
+
+00:56.650 --> 01:05.140
+We have this little web site over here and I'll provide for you the files for this Web site and using
+
+01:05.380 --> 01:07.370
+our new found knowledge in performance.
+
+01:07.390 --> 01:16.540
+I wanted to do four things on try to minimize all text minimize some of the images which are absolutely
+
+01:16.810 --> 01:21.550
+massive and you might want to add media queries.
+
+01:21.550 --> 01:25.880
+Perhaps we don't need to download these images every single time.
+
+01:27.150 --> 01:31.400
+And finally we also want to minimize the number of files.
+
+01:31.440 --> 01:33.280
+So how can we do that.
+
+01:34.570 --> 01:41.710
+I want you to also test it out as a real developer does in the chrome developer tools or whichever developer
+
+01:41.710 --> 01:44.450
+tool your browser has my case.
+
+01:44.490 --> 01:51.940
+I enjoy using Chrome so I'm going to open up the developer tools and end here in my web site.
+
+01:51.980 --> 01:58.550
+I wanted to check out the network tap and this network tab has a little bit or few options that we can
+
+01:58.550 --> 02:07.860
+use but just in case you're new to this if I refresh here you'll actually show me what's being downloaded.
+
+02:07.890 --> 02:12.140
+We see that we have a document so that's the first time all file that's being downloaded.
+
+02:12.240 --> 02:14.500
+That took 13 milliseconds.
+
+02:14.560 --> 02:17.600
+It was only 200 and 19 bytes pretty small.
+
+02:17.610 --> 02:26.320
+We downloaded some script files and also our nice puppy image.
+
+02:26.500 --> 02:31.100
+And there's a similar response now within here.
+
+02:31.150 --> 02:32.620
+I want you to look at a few options.
+
+02:32.620 --> 02:39.680
+I'm going to clear this one is that most likely your users aren't going to be on superfast connections
+
+02:40.280 --> 02:46.130
+so you can actually change this to something like slow 3G connection so that the network will be a little
+
+02:46.130 --> 02:47.330
+bit slower.
+
+02:47.330 --> 02:50.140
+Now keep in mind that browsers are constantly evolving.
+
+02:50.150 --> 02:54.300
+So this might now look the same to you when you watch this video.
+
+02:54.590 --> 02:58.230
+But they should still have these features somehow.
+
+02:58.460 --> 03:00.450
+So was slow 3G connection.
+
+03:00.520 --> 03:07.640
+You want to disable cache so that is if a browser automatically remembers this image that we've downloaded
+
+03:07.640 --> 03:14.360
+sold be faster the next time I refresh but if I disable cache it's going to reinstalled or re download
+
+03:14.360 --> 03:15.890
+these images all the time.
+
+03:17.470 --> 03:18.880
+I can also change the view
+
+03:21.570 --> 03:26.380
+and I can also filter things based on what I'm interested in.
+
+03:26.450 --> 03:35.000
+But again for now if I do a refresh or I always like doing a hard to reload to make sure that everything
+
+03:35.000 --> 03:39.410
+gets loaded you'll see that with a 3G network.
+
+03:39.650 --> 03:46.700
+Things are moving a little bit slower quite slow actually.
+
+03:46.730 --> 03:52.790
+So right away I noticed that this Web site if somebody is viewing it on really bad internet connection
+
+03:52.790 --> 03:59.510
+on their mobile phone while there are going to be really really annoyed with me because everything is
+
+03:59.510 --> 04:03.220
+just moving at a snail's pace.
+
+04:03.830 --> 04:08.490
+But the cool thing is you see over here the waterfall and what the browser is doing.
+
+04:08.540 --> 04:13.640
+We see that it's downloading right now the large background and the puppy JPAC and you see that it's
+
+04:13.640 --> 04:21.090
+taken a lot of time and that the request is not a finished yet but so far it's been taking 32 seconds.
+
+04:21.120 --> 04:21.960
+That's crazy.
+
+04:23.290 --> 04:28.660
+You can see over here you can play around with this tool get a little bit more information about what
+
+04:28.780 --> 04:29.800
+your Web site is doing.
+
+04:29.800 --> 04:32.890
+But as you can see this is pretty terrible.
+
+04:32.920 --> 04:37.440
+So I want to improve this using some of the settings that I've shown you.
+
+04:37.540 --> 04:42.580
+Let's try and improve this simple web site so that this doesn't happen anymore.
+
+04:43.510 --> 04:47.960
+All right I'll see in the next video shot by.

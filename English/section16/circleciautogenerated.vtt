@@ -1,0 +1,640 @@
+WEBVTT
+
+00:01.080 --> 00:02.010
+Welcome back.
+
+00:02.070 --> 00:06.840
+It's time for us to actually implement continuous integration into our project.
+
+00:06.870 --> 00:11.460
+We're going to be using circle C.I. and we're going to learn a few tricks along the way and we're going
+
+00:11.460 --> 00:14.480
+to set this up all ourselves so let's get started.
+
+00:16.260 --> 00:22.980
+Now we're going to be using circle C.I. which manages the server for us.
+
+00:22.980 --> 00:29.930
+So they own the servers and we simply are using their service to run some tests for our project.
+
+00:31.180 --> 00:36.210
+Now circle C.I. is actually free for a simple project like ours.
+
+00:36.220 --> 00:41.530
+So you're more than welcome to follow along and implement circle C.I. into your projects.
+
+00:41.710 --> 00:48.490
+If you're ever working on anything in teams I do recommend that use them because they're just very nice
+
+00:48.490 --> 00:55.810
+and simple to use and only need to do is click on Explore the docs and just a heads up that they recently
+
+00:55.810 --> 01:00.280
+upgraded to a 2.0 version that uses daquiri containers.
+
+01:00.280 --> 01:05.770
+So just a heads up that for your documentation we want to make sure we use the latest.
+
+01:05.770 --> 01:09.280
+A lot has changed since the 1.0 release.
+
+01:09.290 --> 01:12.350
+All right let's talk about some of the things that we'll be doing.
+
+01:12.710 --> 01:14.600
+Well we have our robo friends up.
+
+01:14.630 --> 01:15.610
+Remember them.
+
+01:15.800 --> 01:18.980
+And well this simple app still works.
+
+01:18.980 --> 01:20.180
+Everything is good.
+
+01:20.360 --> 01:25.250
+But Bruno has asked us to implement continuous integration into this project.
+
+01:25.520 --> 01:31.590
+Now using this repository we're going to try and include circle see-I on here.
+
+01:31.670 --> 01:37.010
+So every time there's a new poll request circle C.I. We'll run through everything and make sure that
+
+01:37.340 --> 01:39.620
+it's even ready to be merged.
+
+01:39.860 --> 01:46.110
+So let's get started with the circle C.I. so that we can implement it into our project.
+
+01:47.210 --> 01:50.180
+Now circle C.I. uses a YAML file.
+
+01:50.180 --> 01:57.940
+Something that we have seen before with Dharker as was when we worked with AWOS lambda and it uses a
+
+01:57.940 --> 02:04.110
+YAML files to indemnify how you want your testing environment set up and what tests you want to run.
+
+02:04.150 --> 02:05.580
+So let's build it first.
+
+02:05.590 --> 02:12.730
+The first thing we want to do is we want to create a new folder in our in the root of our project and
+
+02:12.730 --> 02:24.490
+by default we have to name it circle S.I. with a dot in front of it and that's because on any machine
+
+02:24.820 --> 02:31.930
+such as Mac Linux or Windows files or folder whose names have a dot in front of it our cold system files
+
+02:31.990 --> 02:35.610
+and they're automatically hit him by default users.
+
+02:35.620 --> 02:40.770
+But this is a standard that circle see-I requires to have for their 2.0 version.
+
+02:40.990 --> 02:49.250
+And here we create a new file and this file will have to be called config dot YAML file.
+
+02:49.500 --> 02:56.670
+And this is where we will configure what we want circle see-I servers to run for us to get things started.
+
+02:56.740 --> 03:04.620
+So let's just do a simple YAML file that circle C I can run and just a heads up in case you're wondering
+
+03:04.710 --> 03:06.590
+where you can find more information.
+
+03:06.690 --> 03:08.810
+Well obviously if you scroll down.
+
+03:08.850 --> 03:15.400
+They have great documentation of what you can do let's just copy and paste some of their examples here
+
+03:16.590 --> 03:20.390
+and paste that into our config YAML file.
+
+03:20.460 --> 03:24.730
+We see that we're defining our version in our case we're using circle CO2.
+
+03:24.760 --> 03:28.350
+So we need version 2 and then we define jobs.
+
+03:28.380 --> 03:29.910
+What we want.
+
+03:29.910 --> 03:39.650
+The server that they have to do well we wanted to do a build and this build will have a darker image.
+
+03:39.650 --> 03:44.930
+Remember I said version 2 of circle C.I. uses docker and we know all about that because we learned about
+
+03:44.930 --> 03:52.490
+it in our docker section what circle C.I. is doing is it's creating an image where it can run our test
+
+03:52.880 --> 04:00.170
+and we can see here that they're using docker hub and they have a custom image called Circle C.I. and
+
+04:00.170 --> 04:05.930
+it looks like they're using Ruby as the container to run our tests.
+
+04:05.930 --> 04:09.740
+Now this doesn't have to be node or anything javascript's specific.
+
+04:09.740 --> 04:12.520
+This is just the environment that the test will be running in.
+
+04:12.710 --> 04:20.700
+And you can see that that is their custom image so circle có is going to use this container to create
+
+04:20.700 --> 04:22.640
+the environment for your tests.
+
+04:22.740 --> 04:28.710
+And then we have steps of why we need to do and we see over here that run simply says to echo a first
+
+04:28.710 --> 04:33.580
+hello and that is just to print out a first hello to our project.
+
+04:33.730 --> 04:44.020
+Now for us to implement circle C.I. we need to go to Sign-Up and then here you simply have to click
+
+04:44.140 --> 04:52.300
+sign up with get help and once you do that you'll be able to connect to your get Haab dashboard and
+
+04:52.300 --> 04:58.730
+you see over here that I already have some past projects already running and these are all my continuous
+
+04:58.760 --> 05:00.800
+integration steps.
+
+05:00.800 --> 05:07.250
+But for now if this is your first time you might have to give access to circle C.I. from your get have
+
+05:07.250 --> 05:07.650
+a account.
+
+05:07.670 --> 05:11.610
+Otherwise you should see an empty build's dashboard.
+
+05:11.660 --> 05:17.300
+The next thing we want to do is actually add a project we want to make sure we add our robot friends
+
+05:17.420 --> 05:20.960
+testing repo so that circle C.I. knows about it.
+
+05:20.960 --> 05:27.140
+I'm going to click add projects and in here look at that I have all my repots listed here.
+
+05:27.140 --> 05:36.170
+I'm going to click on Roble friends testing setup project see that and here we get some default things
+
+05:36.170 --> 05:37.070
+that we should be using.
+
+05:37.070 --> 05:38.410
+Or we can change things.
+
+05:38.630 --> 05:44.970
+For example our project will have different operating systems we can use different languages.
+
+05:46.330 --> 05:53.500
+I recommend that you just leave the default on our project as node and we can just have a Linux operating
+
+05:53.500 --> 05:58.510
+system and then it shows you what the next steps are going to be.
+
+05:58.890 --> 06:03.270
+But we're going to ignore all of that and leave everything as it is now.
+
+06:04.040 --> 06:07.100
+You can see over here that they even give you a sample file they can use.
+
+06:07.100 --> 06:09.360
+They make it very very easy to get started.
+
+06:09.380 --> 06:18.940
+I'm just going to click Start building and see right away that my robo friends app starts building.
+
+06:18.940 --> 06:20.360
+Everything is all set up.
+
+06:24.950 --> 06:30.950
+And now the container you can see start container is going to run through some commands automatically.
+
+06:30.950 --> 06:43.530
+So this is running on their servers on my robot rebel friends testing Ribault.
+
+06:43.540 --> 06:44.090
+All right.
+
+06:44.110 --> 06:50.270
+I had to pause the video there because it does take a bit of time for circle CII to actually run everything.
+
+06:50.530 --> 06:53.810
+You can see that it took about five minutes to get everything done.
+
+06:53.860 --> 06:56.100
+But let's take a look at what it just did.
+
+06:56.230 --> 06:59.630
+We actually haven't even given it the config YAML for.
+
+06:59.650 --> 07:04.980
+Because remember this is just on my desktop and I haven't committed it to get help yet.
+
+07:05.100 --> 07:06.000
+We go back.
+
+07:06.130 --> 07:12.340
+We see that there's a few things that happened with circle see-I without even giving it the yellow fall
+
+07:12.370 --> 07:13.400
+for configuration.
+
+07:14.600 --> 07:24.300
+We see that we're able to set up the environment it use the circle see-I Ruby to point four point one
+
+07:24.570 --> 07:28.460
+image that we saw to launch an environment for us.
+
+07:28.560 --> 07:32.880
+We can see over here and start container all the things that it did.
+
+07:32.910 --> 07:36.100
+It also has enabled S-sh.
+
+07:36.510 --> 07:41.680
+As you remember from the SSA section we can now use S-sh.
+
+07:41.820 --> 07:49.680
+Look over here to actually S-sh into this container and see how everything's going maybe we need to
+
+07:49.680 --> 07:57.450
+debug something we can S-sh in again something that we'll have to actually add to our public key to
+
+07:57.450 --> 07:58.910
+the container if we want to do that.
+
+07:58.920 --> 08:04.100
+And that's a little advanced and the can read up on your own but that option exists which is nice.
+
+08:04.410 --> 08:10.410
+And then we do something called checking out the code which is circle see-I check so your get Haab repository
+
+08:10.860 --> 08:12.200
+and clone's it.
+
+08:12.270 --> 08:18.880
+You can see over here Colon's the full repository and actually run us through some steps by default.
+
+08:18.960 --> 08:23.400
+It runs NPM install it runs NPM test.
+
+08:23.400 --> 08:29.370
+If we click over here we see that our tests that we have on our project are Wrubel France project.
+
+08:29.430 --> 08:38.900
+There are 16 Tests five snapshots all of them passed and we keep scrolling down and everything finishes
+
+08:39.050 --> 08:39.680
+completely.
+
+08:39.680 --> 08:44.330
+We have green everywhere and it says success.
+
+08:44.420 --> 08:52.170
+If I go back to the builds we see that our robot friends testing and Master is now passing with success.
+
+08:52.170 --> 08:58.740
+Now let's actually add a bit more functionality than the default functionality we get which is just
+
+08:58.740 --> 09:03.960
+running NPM install and NPM test just to spice things up.
+
+09:04.150 --> 09:06.140
+Let's extend this a little bit.
+
+09:06.160 --> 09:10.300
+Right now we see that we're going to do a build in create a docker container.
+
+09:10.330 --> 09:14.100
+We're going to check out the code and run Ecko a first hello.
+
+09:14.110 --> 09:21.310
+This is just going to print this text but circle C.I. has this idea of workflows so I can actually add
+
+09:21.850 --> 09:22.630
+another step
+
+09:25.920 --> 09:27.880
+or perhaps a now they're built.
+
+09:28.230 --> 09:30.040
+So that is another container.
+
+09:30.880 --> 09:39.580
+And this container again I can just keep everything the same but this one I'm going to say double trouble
+
+09:41.120 --> 09:44.840
+to be right we actually now need to rename these.
+
+09:44.860 --> 09:49.270
+And this is what workflows is in circle C.I. so that we can distinguish them.
+
+09:49.270 --> 09:53.050
+So let's just say this one's going to be Bobby.
+
+09:53.440 --> 10:03.550
+This is going to be Sally and now using these two I can define what we call a workflow or workflows
+
+10:05.460 --> 10:11.280
+and and here we simply say again what version we want to use the workflow for and we can name it whatever
+
+10:11.280 --> 10:11.760
+we want.
+
+10:11.760 --> 10:12.940
+I'm going to name it.
+
+10:13.030 --> 10:22.710
+Bobby underscore Sally because we're going to be writing both of them and these will have jobs that
+
+10:22.710 --> 10:24.210
+they would need to accomplish.
+
+10:25.330 --> 10:32.030
+And these jobs are going to be the Babi job.
+
+10:32.210 --> 10:33.750
+Make sure I add a space here.
+
+10:36.110 --> 10:46.290
+And Sally so this workflow is going to say hey run this workflow Bobby and Sally and those include these
+
+10:46.290 --> 10:46.710
+things.
+
+10:46.710 --> 10:51.560
+So run two containers running the checkout and then run echo command.
+
+10:52.050 --> 10:54.840
+Let's just save this to make sure everything works.
+
+10:54.840 --> 10:57.790
+We have our circle see-I config file.
+
+10:57.870 --> 11:06.420
+Let's actually add this to get up to that circle see-I has a configure file to actually play with.
+
+11:06.420 --> 11:18.670
+I'm going to get ad and then get commit I'm going to add circle C.I. to our commit message.
+
+11:18.860 --> 11:22.950
+And then finally get push origin master.
+
+11:22.970 --> 11:29.930
+Now I'm using maß and I haven't created a branch or for this project which is not advised but for demonstration
+
+11:29.930 --> 11:34.390
+purposes for now I trust myself as just me on this project.
+
+11:34.400 --> 11:38.110
+I'm just going to push straight to master.
+
+11:38.130 --> 11:47.260
+All right let's go back to get how oh we have four seconds ago something that already failed.
+
+11:47.260 --> 11:50.110
+All right let's go back to get up and see what happens.
+
+11:50.120 --> 12:01.080
+Want to refresh go to commits and oh I see that I have a giant X now next to my commit.
+
+12:01.360 --> 12:02.370
+I click on it.
+
+12:03.390 --> 12:03.780
+All right.
+
+12:03.780 --> 12:10.000
+We've committed our config done YAML file and I go back here and I click on failed.
+
+12:10.380 --> 12:15.500
+I see that your config has errors and may not run correctly.
+
+12:15.510 --> 12:16.040
+Awesome.
+
+12:16.140 --> 12:23.760
+So I mean that's not great but at least we know that circle C.I. can detect our configuration file and
+
+12:23.760 --> 12:30.690
+we see here that it gives a pretty nice air of what might have scale error migrating config to version
+
+12:30.690 --> 12:31.400
+2.0.
+
+12:32.200 --> 12:35.490
+And the errors occurred in Job workflows.
+
+12:35.500 --> 12:37.840
+Steps is not a list.
+
+12:37.930 --> 12:42.040
+So let's go back and fix that with a YAML file.
+
+12:42.040 --> 12:44.250
+You really have to be careful with indentation.
+
+12:44.270 --> 12:49.690
+So anytime you're working with YAML files make sure you followed the documentation and what they expect
+
+12:50.050 --> 12:58.840
+in this case are indentation needs to be won back like this let's save that once again do our get push
+
+12:59.110 --> 13:01.570
+or G.M. although you know what.
+
+13:01.630 --> 13:04.540
+Just to demonstrate what circle C.I. actually does.
+
+13:04.540 --> 13:05.860
+Let's create a new branch.
+
+13:05.890 --> 13:12.250
+I'm going to say get checkout be for short hand to create a new branch and I'm going to call it circle
+
+13:12.520 --> 13:14.600
+C.I..
+
+13:14.620 --> 13:15.120
+All right.
+
+13:15.160 --> 13:16.450
+We've created a new branch.
+
+13:16.450 --> 13:23.410
+If I do get status I see that we have our config YAML file that's been updated.
+
+13:23.410 --> 13:32.530
+I'm going to say get commit I'm going to commit circle see-I to this is our try to.
+
+13:33.060 --> 13:35.760
+And then I'm going to get push
+
+13:38.300 --> 13:41.260
+origin Circle C.
+
+13:41.460 --> 13:43.600
+So push to our branch
+
+13:47.260 --> 13:50.540
+and silly me I realized that I forgot to get at.
+
+13:50.700 --> 13:51.420
+Try that again.
+
+13:51.420 --> 13:56.640
+Get ad get commit circle see-I to.
+
+13:56.640 --> 13:57.150
+There you go.
+
+13:57.150 --> 13:58.260
+That's a lot better.
+
+13:58.320 --> 14:05.970
+And then you'll run get push origin circle C.I..
+
+14:05.970 --> 14:08.580
+All right let's go check out get help here.
+
+14:08.580 --> 14:10.650
+All right we have a request.
+
+14:10.650 --> 14:12.420
+Let's take a look at here.
+
+14:14.390 --> 14:15.990
+First everything looks good.
+
+14:15.990 --> 14:17.830
+Those are the changes that I want.
+
+14:18.000 --> 14:25.900
+I'm going to just with our commentary and just say create pull requests and look at that circle C.I.
+
+14:25.900 --> 14:29.380
+is now running all my poor requests just like that.
+
+14:29.470 --> 14:32.460
+We see that your test passed on Sally.
+
+14:32.590 --> 14:35.410
+But Bauby right now is still working.
+
+14:35.410 --> 14:39.010
+So it's half done how easy was that.
+
+14:39.260 --> 14:42.800
+And once all the checks have passed I get these green check marks.
+
+14:42.800 --> 14:46.170
+And now it's ready to merge requests.
+
+14:46.170 --> 14:48.060
+Well let's go check out circle C.I. here.
+
+14:48.080 --> 14:51.800
+I'm going to go back to Bill's and we see that.
+
+14:51.860 --> 14:53.870
+Oh yeah look at that.
+
+14:53.870 --> 14:55.590
+We have a success.
+
+14:55.820 --> 14:58.970
+We've spun up the environment.
+
+14:59.070 --> 15:01.410
+We've checked out the code.
+
+15:01.530 --> 15:02.710
+That's great.
+
+15:02.820 --> 15:06.350
+And we also have the echo.
+
+15:06.380 --> 15:09.290
+Double trouble.
+
+15:09.700 --> 15:14.030
+If we go back here we see that we did double trouble here with the echo.
+
+15:14.170 --> 15:18.060
+But what about a first hello by Bobbie.
+
+15:18.340 --> 15:26.890
+If we go back we actually see that there were two jobs.
+
+15:26.990 --> 15:34.910
+If I go to click on Bobby Sally workflow we see that oh there's two jobs in this workflow.
+
+15:35.040 --> 15:39.410
+If I click on Bobby I get Bobby Acco hello first.
+
+15:39.460 --> 15:40.650
+Okay that's great.
+
+15:40.650 --> 15:44.770
+And then if I go back to workflow I see that.
+
+15:44.770 --> 15:45.250
+OK.
+
+15:45.370 --> 15:48.900
+Sally and Bobby and I see exactly what time it took.
+
+15:48.970 --> 15:53.410
+If I go back to build's I see that that's why I have two greens here.
+
+15:53.410 --> 15:58.860
+They each ran in their own container very very cool.
+
+15:59.280 --> 16:06.900
+And you also noticed that we no longer ran the NPM test for NPM install because we now are giving it
+
+16:06.930 --> 16:11.520
+a config file and these config file is going to say exactly what we want it to do.
+
+16:11.550 --> 16:16.620
+So now we actually have to implement our own to make sure that we test our code.
+
+16:16.710 --> 16:21.900
+We NPM install our code and everything is running smoothly.
+
+16:21.940 --> 16:22.740
+All right.
+
+16:22.840 --> 16:27.070
+I think it's time for us to actually implement something valuable here.
+
+16:27.070 --> 16:31.600
+Just echoing Double Trouble doesn't really help us with our robo friends up.
+
+16:31.930 --> 16:36.700
+But now that we see the power of circle C.I. in the next video we're going to configure this.
+
+16:36.790 --> 16:38.640
+So it has a nice workflow.
+
+16:38.680 --> 16:44.120
+I to merge a pull request confirmed the merge and I'll see you in the next video.
+
+16:44.210 --> 16:44.470
+Buh-Bye.

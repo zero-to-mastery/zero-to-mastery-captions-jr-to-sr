@@ -1,0 +1,337 @@
+WEBVTT
+
+00:01.960 --> 00:03.290
+Welcome back.
+
+00:03.340 --> 00:09.760
+Now that we've gotten into the weeds of how to optimize our code let's talk specifically about react
+
+00:10.300 --> 00:18.720
+how can we optimize our code in re-act such as our robo friends up will for any reactive help or the
+
+00:18.720 --> 00:24.750
+first thing you want to checkout is a feature that has come ever since re-act fifteen point four point
+
+00:24.750 --> 00:25.420
+zero.
+
+00:25.830 --> 00:29.100
+And that is our performance tool.
+
+00:29.220 --> 00:39.090
+All we need to do is in our local host give the query string parameter of re-act perf re-act underscore
+
+00:39.180 --> 00:40.970
+Perth from here.
+
+00:41.130 --> 00:53.270
+If you hit enter nothing happens but if you open your developer tools and go to performance we can now
+
+00:53.270 --> 00:55.190
+do something really interesting.
+
+00:55.280 --> 01:01.400
+I'm going to hit record type a few things in the search box and then hit stop and then we're going to
+
+01:01.400 --> 01:11.720
+analyze them or analyze the performance of our app let's have record and type things really really fast
+
+01:11.750 --> 01:17.140
+and change stuff and stop just seven seconds.
+
+01:18.650 --> 01:28.340
+Now by using this react to underscore perf we can now see our components and what they're doing in the
+
+01:28.340 --> 01:29.680
+performance down.
+
+01:29.900 --> 01:34.260
+Now I know this is overwhelming so let's try and go through it.
+
+01:34.430 --> 01:35.650
+Nice and easy.
+
+01:35.810 --> 01:44.760
+We see that we have our app that is rendering and being filtered and we want to take a look here at
+
+01:44.820 --> 01:51.410
+the C-p U.S. we see that there are some nice yellow bars over here that means some javascript happening.
+
+01:51.570 --> 01:58.940
+So I'm going to highlight it by just clicking and then on clicking and you see in the user timing section
+
+01:59.630 --> 02:03.470
+well here in the user timing section if I scroll Lin
+
+02:10.710 --> 02:15.910
+look like that by using react to underscore perf.
+
+02:16.220 --> 02:22.640
+Now the chrome developer tools recognizes Riak components you can see the re-act logo here and shows
+
+02:22.640 --> 02:24.770
+us what kind of work it's doing.
+
+02:24.770 --> 02:28.830
+We see that we have the react to render tree just at this moment in time.
+
+02:29.100 --> 02:30.510
+We have the connected app.
+
+02:30.500 --> 02:32.360
+Remember we're using redox.
+
+02:32.360 --> 02:40.700
+We have the app as our main container component and underneath it we see that we have Carlist air boundary
+
+02:40.820 --> 02:46.910
+and scroll components and underneath that we see our card components
+
+02:49.590 --> 02:51.600
+very very cool.
+
+02:51.600 --> 02:57.100
+And we actually see here what they're doing in the square brackets we see that it's updating.
+
+02:57.120 --> 03:02.800
+So because I probably type something here you can see up I've been typing something in this section.
+
+03:02.940 --> 03:12.760
+These components are updating in each color bar shows time that a component is doing work since javascript
+
+03:12.790 --> 03:22.090
+is single threaded whenever a component is mounting or rendering or updating it's hogging the main thread.
+
+03:22.100 --> 03:29.220
+Remember the main worker of the browser and preventing other code from running these bracketed quotes
+
+03:29.330 --> 03:34.030
+say update and sometimes they'll say Brandur and mounting.
+
+03:34.140 --> 03:38.280
+They describe what part of the component lifecycle is taking place.
+
+03:39.420 --> 03:41.940
+And the timeline breaks down each step.
+
+03:42.000 --> 03:46.190
+You can see fine grained timing on the methods that you're using.
+
+03:46.230 --> 03:53.610
+Our app is fairly small so you don't see too many jumps here but as you get more and more components
+
+03:53.670 --> 03:59.680
+you can imagine how this is going to go deeper and deeper and deeper into the render tree.
+
+03:59.730 --> 04:08.000
+I like to call this the reverse Christmas tree and the bigger their Christmas tree is the more and more
+
+04:08.000 --> 04:15.350
+components needs render because remember the way re-act work is if something updates in the app it will
+
+04:15.440 --> 04:25.250
+update and pass on those props to all the components below it and all those components which are functions
+
+04:25.520 --> 04:28.170
+need to run Embrey render.
+
+04:28.200 --> 04:31.600
+So you want to avoid something where it's really really deep.
+
+04:31.650 --> 04:38.110
+They look like just pyramids of doom just massive pyramids or reverse Christmas trees.
+
+04:38.940 --> 04:45.090
+Now it's typical to have a fairly deep component trees in reac But if you're optimizing a component
+
+04:45.570 --> 04:52.890
+that is mounted frequently it can help to reduce the number of wrapper components such as the connect
+
+04:52.890 --> 04:54.000
+component.
+
+04:54.330 --> 04:59.240
+Since each adds a small performance and memory penalty.
+
+04:59.320 --> 05:06.910
+Now one thing to keep in mind here is that when you run this it's running on the devolvement version
+
+05:06.910 --> 05:12.730
+of re-act which is a lot slower because you get X Akshara tooling Plus even running this re-act perf
+
+05:12.890 --> 05:14.040
+slows on your app.
+
+05:14.320 --> 05:19.810
+So it's not the exact same as your production production will most likely be faster but it is a good
+
+05:19.870 --> 05:27.310
+indicator of why your app is doing and you can test it out to see where are my bottlenecks now.
+
+05:27.510 --> 05:33.740
+Looking at this we might have realized something.
+
+05:33.840 --> 05:45.030
+How can we help this process with redux well by using redux looking Be smart about what components update
+
+05:45.480 --> 05:53.370
+because if this toplevel component updates it's going to render all its children or re-offender all
+
+05:53.370 --> 05:54.200
+those children.
+
+05:54.420 --> 06:02.790
+But if we have redux and instead of using this brute component to update the state we can just directly
+
+06:02.790 --> 06:11.700
+connect a lower component remember by using connect we can connect to the state so that we can now just
+
+06:11.970 --> 06:19.380
+connect the component here and only these two below it will update versus if he had the toplevel component
+
+06:19.380 --> 06:23.580
+connected which will really render a lot more components.
+
+06:23.580 --> 06:25.320
+So that's the strategy there.
+
+06:25.380 --> 06:32.070
+Do you want to have just one top level container or component or just a few components at the top that
+
+06:32.070 --> 06:38.220
+are connected to redox or to avoid passing down props and really deep nested trees.
+
+06:38.220 --> 06:46.800
+Do you want to use connect closer to the leaf nodes and that is an architectural decision that you and
+
+06:46.800 --> 06:50.000
+your team make based on the pros and cons.
+
+06:51.790 --> 06:56.430
+Finally I also wanted to show you the re-act developer tools.
+
+06:56.590 --> 06:59.680
+This is a chrome plug in that you can get.
+
+06:59.680 --> 07:04.950
+You just click on Add to Chrome and you'll have it and it's very very useful.
+
+07:05.220 --> 07:14.490
+If I go over here to the re-act tab you see that it shows my app I have my props and store I have my
+
+07:14.490 --> 07:20.970
+provider My connected app my app and then I see my search box scroll.
+
+07:20.970 --> 07:24.460
+And then finally all my children component.
+
+07:24.540 --> 07:31.860
+The cool thing about this is that it shows you what props you have what children you have all these
+
+07:31.860 --> 07:32.730
+things.
+
+07:32.820 --> 07:39.650
+And as we change things you can actually notice the changes.
+
+07:39.790 --> 07:46.900
+But for performance the reactive power tools is really really nice when you click on this highlight
+
+07:47.050 --> 07:54.490
+updates and what will happen is any time your app changes or a component is re rendered it's going to
+
+07:54.490 --> 07:55.740
+highlight it.
+
+07:55.840 --> 07:56.660
+Let's check it out.
+
+07:56.680 --> 08:01.100
+I'm going to start typing and look at that.
+
+08:01.220 --> 08:09.600
+It shows what is being rebranded which is pretty much all of our app and watch this as I type faster.
+
+08:10.670 --> 08:11.810
+Do you see that.
+
+08:11.870 --> 08:17.390
+I went really really aggressive with the typing there but you see how the colors change what the color
+
+08:17.390 --> 08:22.090
+represents how often things are being rendered.
+
+08:22.140 --> 08:26.720
+They're faster they're being rendered the closer they are to the color red.
+
+08:26.730 --> 08:33.750
+So think of the hot colors and the slower they are the closer they are to blue.
+
+08:33.830 --> 08:38.300
+Now this is helpful for detecting an unnecessary render cycle.
+
+08:38.510 --> 08:48.090
+For example as I type here I see that my header is being updated but why I mean it's just the same the
+
+08:48.090 --> 08:49.410
+entire time.
+
+08:49.470 --> 08:54.560
+Why would I need to read render this that's a function that's running that's kind of unnecessary.
+
+08:54.670 --> 08:57.810
+And when we look back at our code in the app.
+
+08:57.900 --> 08:59.710
+Yes we see that.
+
+08:59.880 --> 09:08.960
+Well it makes sense because every time I do the on search event I have to despise ssion action and it
+
+09:08.990 --> 09:10.720
+updates the search field.
+
+09:10.880 --> 09:20.230
+So this app ws component gets re rendered because there's a change in the redock store.
+
+09:20.240 --> 09:27.690
+And because the header is part of this it's going to render as well.
+
+09:29.130 --> 09:32.820
+So these are the kind of things you want to start noticing.
+
+09:32.940 --> 09:38.640
+Now keep in mind that seeing yellow or red when you're highlighting or when components are rendering
+
+09:39.030 --> 09:40.740
+isn't necessarily a bad thing.
+
+09:41.520 --> 09:48.660
+It's going to be expected when you're doing things like sliders or scrolling or any UI elements that
+
+09:49.170 --> 09:50.960
+triggers frequent updates.
+
+09:51.360 --> 09:57.240
+So you can't completely avoid it but if you're just clicking a button and you all of a sudden and seeing
+
+09:57.240 --> 10:01.140
+red that means there's something going on that you want to fix.
+
+10:01.820 --> 10:10.330
+So the tool here the highlight updates is mainly used to see what's being updated on unnecessarily and
+
+10:10.330 --> 10:17.070
+as the app developer you want to have a general idea of how your re-act app is being rendered.
+
+10:17.170 --> 10:24.310
+Because remember we want to avoid unnecessary dumb manipulations because we know by now that that really
+
+10:24.310 --> 10:25.750
+hinders our performance.
+
+10:26.430 --> 10:32.560
+So in the next video I'm going to show you how we can avoid some of these unnecessary renderers.
+
+10:32.730 --> 10:33.540
+I'll see in the next one.

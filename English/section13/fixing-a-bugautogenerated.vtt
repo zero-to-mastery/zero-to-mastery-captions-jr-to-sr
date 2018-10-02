@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00.420 --> 00:01.980
+Hey welcome back.
+
+00:01.980 --> 00:09.530
+We actually forgot to test one last point and fix one last point and that is the updating profile.
+
+00:09.900 --> 00:16.260
+If I check changed my user name to boo and save everything works.
+
+00:16.350 --> 00:26.870
+If I go to console and everything works or does it I get on authorized and on the client side I'm getting
+
+00:26.870 --> 00:27.310
+the update.
+
+00:27.320 --> 00:29.660
+But if I refresh year 0.
+
+00:29.780 --> 00:32.270
+My profile didn't change.
+
+00:32.270 --> 00:39.980
+And that's because we forgot to give authorization because post requests needs to send the authorization
+
+00:39.980 --> 00:50.440
+header through profile ID so on the front end we need to also go to our component's and go to our profile
+
+00:53.090 --> 00:58.700
+and on the button that says on profile update we need to add the headers.
+
+00:58.790 --> 01:05.330
+So let's go to our hop Doug A-S copy what we already have there.
+
+01:05.340 --> 01:09.760
+Let's scroll down let's copy this chunk of code for headers.
+
+01:11.270 --> 01:18.210
+Now if we go to profile we can make sure that the profile update will have the authorization headers
+
+01:18.330 --> 01:20.350
+from Windows session.
+
+01:20.720 --> 01:31.340
+Get item tokin and we want to make sure that based on the response let's say that if the response is
+
+01:31.580 --> 01:46.410
+has a status of 200 and also a response dot status of three or four that means the response was cached
+
+01:46.410 --> 01:49.600
+by the browser and the browser is just returning the cached version.
+
+01:49.620 --> 01:55.560
+So if everything works out in that case please do.
+
+01:56.640 --> 01:57.480
+All of these things
+
+02:03.820 --> 02:09.290
+so we only load the users if we actually get this information.
+
+02:09.340 --> 02:13.270
+And now that we're sending the authorization tokin this endpoint should work.
+
+02:13.270 --> 02:19.750
+All right so let's test that out by saving going back to our shop.
+
+02:19.770 --> 02:21.320
+Let's make this a little bit smaller.
+
+02:21.360 --> 02:26.860
+I'm going to update my profile finally to boom click save.
+
+02:27.040 --> 02:28.140
+Everything's updating.
+
+02:28.140 --> 02:37.190
+No errors here if I refresh boom your current entry count is 6 and we've updated our profile.
+
+02:37.190 --> 02:37.990
+All right.
+
+02:38.150 --> 02:39.260
+It's nice to get that one.
+
+02:39.260 --> 02:41.020
+It feels good.
+
+02:41.090 --> 02:42.690
+It's time for the next video.
+
+02:42.950 --> 02:44.360
+I'll see in the next one.
+
+02:44.600 --> 02:44.900
+Bye bye.

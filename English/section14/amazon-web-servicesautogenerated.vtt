@@ -1,0 +1,439 @@
+WEBVTT
+
+00:00.780 --> 00:02.190
+Welcome back.
+
+00:02.190 --> 00:09.480
+I'm on the AWOS platform Web site over here and you can see that they have a lot of services that we
+
+00:09.480 --> 00:10.290
+can use.
+
+00:10.410 --> 00:12.960
+All of them with pretty interesting sounding names.
+
+00:12.990 --> 00:20.040
+Amazon are Rora Amazon recognition where we can do image recognition similar like we have with our clarify
+
+00:20.040 --> 00:21.090
+API.
+
+00:21.090 --> 00:24.180
+They have storage they have compute.
+
+00:24.180 --> 00:25.590
+They have migration.
+
+00:25.590 --> 00:27.840
+They have our VR.
+
+00:27.960 --> 00:33.420
+If there's one thing that there's no shortage of is all the services that make your head hurt and you
+
+00:33.420 --> 00:37.050
+just cannot decide what you need and what you want to do.
+
+00:37.320 --> 00:39.560
+So I'm going to go over some of the basic ones.
+
+00:39.600 --> 00:44.830
+Some of the ones that are the most common and things that you'll most likely encounter in your day to
+
+00:44.840 --> 00:46.510
+day job.
+
+00:46.680 --> 00:51.660
+But if you want to you can go explore different services and see what they offer.
+
+00:51.660 --> 00:58.760
+Chances are that if you're trying to do something Amazon probably offers an easy solution for it.
+
+00:58.890 --> 01:05.010
+Now you still will have to write code but they take care of all those pain points that perhaps we don't
+
+01:05.010 --> 01:10.180
+want to worry about such as configuration set ups in machines.
+
+01:10.210 --> 01:12.650
+Anyway let's get back on track.
+
+01:12.760 --> 01:19.130
+The ones I'm going to talk about are these five and like I said before these are the most common ones
+
+01:19.160 --> 01:20.220
+that you'll see.
+
+01:20.480 --> 01:27.680
+And we're getting right now into what we call dev ops field which as a web developer you might not touch
+
+01:27.680 --> 01:32.720
+as much because some companies have dedicated people that work on these things because there's just
+
+01:32.780 --> 01:34.590
+so many things they need to keep up with.
+
+01:34.820 --> 01:40.500
+But it's really important for us to know how these pieces fall into our Web developer stack.
+
+01:42.730 --> 01:49.810
+Now let's start off with this one in the corner easy to again naming Amazon is not the best naming.
+
+01:49.800 --> 01:53.680
+So they're kind of hard to really wrap your hand around.
+
+01:53.710 --> 01:56.910
+You might have to come back to this video but you'll get it by the end of it.
+
+01:56.920 --> 01:59.130
+Don't worry now.
+
+01:59.180 --> 02:06.000
+Easy 2 is what we call a bare metal machine to run and whatever compute you want.
+
+02:06.070 --> 02:11.980
+So you want to think of easy to as a basic server you can run kind of like the Digital Ocean Linux server
+
+02:11.980 --> 02:13.870
+that we created.
+
+02:13.950 --> 02:22.320
+That's what E.C do is you can run your back and rest API or a server on easy to instead of let's say
+
+02:22.320 --> 02:24.520
+Digital Ocean or Laroque.
+
+02:24.990 --> 02:29.400
+So that's pretty nice and we've used something like that before so that makes sense.
+
+02:29.430 --> 02:36.430
+All we need to do is sign up on AWOS and say I want this and they'll set everything up for you.
+
+02:36.450 --> 02:42.270
+You can tell them Oh yeah I want this to have node available and ill be on a Linux machine.
+
+02:42.510 --> 02:43.320
+So that's nice.
+
+02:43.320 --> 02:46.930
+This is a general purpose bare metal server.
+
+02:46.980 --> 02:55.270
+Then there's s three and ESRI is what we call an object storage service.
+
+02:55.340 --> 03:04.170
+Now what that means is that each object is stored as a file with its metadata and ID and you can think
+
+03:04.170 --> 03:06.060
+of it as an object right.
+
+03:06.090 --> 03:10.690
+That's what as soon as an object storage you have a key or an ID.
+
+03:10.920 --> 03:17.450
+And with that I.D. you can access whatever object that Id stores and why is that useful.
+
+03:17.550 --> 03:26.430
+Well with as sweet it enables us to upload and store and also download pretty much any file or object
+
+03:27.030 --> 03:34.620
+that we may want if we want to store an image that we can load that on Esrey if we want to store maybe
+
+03:34.620 --> 03:37.650
+a massive object yet we can store that over here.
+
+03:37.860 --> 03:45.320
+For example with our smart brain app we want to load the images or save the images that the users send
+
+03:45.330 --> 03:53.970
+to clarify API here so that in the future we can train the model better and S3 has a size limit of five
+
+03:54.060 --> 03:55.020
+gigabytes.
+
+03:55.020 --> 04:00.480
+So you can imagine you can load up some pretty big things but it's great for storage.
+
+04:00.510 --> 04:07.650
+Maybe we want to have profile pictures for our smart brain app and our users well we might want to load
+
+04:07.650 --> 04:10.980
+up the profile pictures and the S3 bucket.
+
+04:10.980 --> 04:12.060
+Let's talk about the next one.
+
+04:12.060 --> 04:14.900
+And this is the one that really really gets me excited.
+
+04:14.940 --> 04:17.940
+And we're going to be actually experimenting with this in this section.
+
+04:19.090 --> 04:26.440
+It's called Lamda and Lamda with Lamda you can run code for virtually any type of application or back
+
+04:26.440 --> 04:27.650
+in service.
+
+04:27.670 --> 04:33.910
+The beauty is that you simply just provided a function lambda simply says Hey just give me a function
+
+04:33.940 --> 04:36.690
+and let me know when to run it and I'll run it for you.
+
+04:36.790 --> 04:37.600
+That's it.
+
+04:37.600 --> 04:39.710
+There's zero administration that we need.
+
+04:39.730 --> 04:41.670
+Zero Configuration.
+
+04:41.750 --> 04:47.390
+We simply upload our code and Lamda takes care of everything you're required to run and scale your code
+
+04:47.390 --> 04:49.240
+with high availability.
+
+04:49.280 --> 04:53.800
+That means whenever we need that code run don't worry Amazon's gonna take care of it.
+
+04:53.870 --> 05:00.050
+If 1000 people try to run the code at the same time the function of the same time let's say the insert
+
+05:00.140 --> 05:05.460
+image function well lambda automatically is going to scale and have oil.
+
+05:05.480 --> 05:12.300
+I'll just create multiple instances of this function so that we can handle a thousand a million users.
+
+05:12.470 --> 05:16.550
+And this is something that we're going to talk about later on in this course as we build our own lambda
+
+05:16.550 --> 05:19.410
+function and you'll have a better idea of what it does.
+
+05:19.430 --> 05:21.830
+It has some really interesting applications.
+
+05:22.040 --> 05:26.720
+For example with lambda you can use events to get triggered.
+
+05:26.720 --> 05:33.940
+Maybe somebody mentions you in your app while you can trigger a lambda to run the function notify about
+
+05:33.950 --> 05:37.280
+message again we're going to get into this later on.
+
+05:37.280 --> 05:38.120
+So hold on tight.
+
+05:38.120 --> 05:39.560
+This is very very exciting.
+
+05:40.290 --> 05:41.740
+Let's talk about the next one.
+
+05:41.850 --> 05:49.730
+Cloud front Amazon Cloud front is a web server that speeds up distribution of our static files and you
+
+05:49.730 --> 05:58.300
+might think of this as a CDN are a shemale CSSA javascript image files can now be put on cloud front
+
+05:58.940 --> 06:07.840
+and Amazon delivers this content through a world wide network of data centers exactly like a CDN does.
+
+06:07.840 --> 06:13.150
+So we've talked about CloudFlare before and CDN as well.
+
+06:13.150 --> 06:19.450
+Again something that we cover and performance part 3 and this makes our apps extremely fast when we
+
+06:19.450 --> 06:26.160
+request our HD mail CSSA javascript files because Amazon has so many servers everywhere around the world.
+
+06:26.350 --> 06:32.890
+If I'm in India well whatever server is closest to me is going to serve up that static file and they
+
+06:32.890 --> 06:34.900
+also provide automatic HGT.
+
+06:34.920 --> 06:35.510
+Yes.
+
+06:35.530 --> 06:38.120
+So secure connection.
+
+06:38.300 --> 06:41.700
+And then finally we have something like Dynamo D-B.
+
+06:42.050 --> 06:49.100
+Again Amazon also lets you have databases and this is a fast no Eskew database.
+
+06:49.100 --> 06:56.940
+And again they manage a scaling for you and it uses something that we're familiar with key value storage
+
+06:56.980 --> 07:03.980
+model a key and a value and you can access that whatever value is in the database through that key.
+
+07:04.460 --> 07:11.870
+And it's known for its reliability with performance and a lot of people are using it and web mobile
+
+07:12.110 --> 07:14.940
+Hayati gaming and so many other things.
+
+07:16.820 --> 07:20.610
+That was a lot and there's a ton of other services.
+
+07:20.670 --> 07:23.330
+But I hope this gives you an idea what they provide for us.
+
+07:23.430 --> 07:28.570
+So we don't have to go out on our own and start building things from scratch.
+
+07:28.710 --> 07:38.450
+Now there's something called flowcharts or Amazon flowcharts and it shows what people use to make their
+
+07:38.450 --> 07:42.970
+architecture or how their logic flows through their app.
+
+07:43.010 --> 07:48.740
+And there's many many ways that you can attach pieces kind of like Lego blocks and try different things.
+
+07:48.800 --> 07:49.880
+Here's an example.
+
+07:51.060 --> 07:58.500
+With our app our smart brain up for example we can have cloud front CD fans all over the world so that
+
+07:58.500 --> 08:05.010
+when a user goes online from anywhere in the world they're served our shemale CSSA and javascript files
+
+08:05.280 --> 08:12.680
+from whatever service the closest and then that CDN wants the user has the files.
+
+08:12.870 --> 08:21.390
+If they make a request to our back and rest API which we can put on our C-2 instance is now our rest
+
+08:21.450 --> 08:23.800
+API our Xpress server.
+
+08:24.030 --> 08:33.320
+And then in here maybe we can store our user information in Dynamo D-B our user profiles perhaps we
+
+08:33.320 --> 08:40.280
+can leave them here and then perhaps when they submit an image instead of having it work over here because
+
+08:40.490 --> 08:46.310
+this machine is already busy listening to connections maybe we just trigger a lambda function and this
+
+08:46.310 --> 08:52.330
+lambda function says all right you just send me a U r l of an image.
+
+08:52.520 --> 09:00.620
+I'm going to send that image to clarify get a response and perhaps store that response object in our
+
+09:00.650 --> 09:03.340
+Esrey bucket so we can analyze it later.
+
+09:03.560 --> 09:07.030
+And the Esrey bucket is going to return us whatever.
+
+09:07.040 --> 09:09.500
+Clarify sent us.
+
+09:09.870 --> 09:12.920
+And theres so many ways that you can built this.
+
+09:13.070 --> 09:14.380
+And thats the beauty of it.
+
+09:14.390 --> 09:20.980
+Its like your a little web developer child building different things based on what your needs are.
+
+09:21.260 --> 09:27.410
+And this is when being a senior developer and understanding how things are connecting is important because
+
+09:27.470 --> 09:34.320
+you can look at these diagrams and the needs of your application to decide what is the best flow they
+
+09:34.320 --> 09:34.990
+can have.
+
+09:36.100 --> 09:38.700
+Lets have a look at some of the photos that people have come up with.
+
+09:39.670 --> 09:43.620
+If I simply type here let's say AWOS flow
+
+09:46.460 --> 09:47.860
+and let's do images.
+
+09:47.890 --> 09:48.940
+I got flow logs
+
+09:51.910 --> 09:57.270
+you see over here that we get a ton of different things that we can do.
+
+09:57.430 --> 09:59.470
+And sometimes your head hurts.
+
+09:59.590 --> 10:02.470
+We can open this one but we can see it.
+
+10:02.590 --> 10:05.070
+Your head hurts from all the things that you can do.
+
+10:06.140 --> 10:12.500
+Now the best thing you can do is just learn about what each one of these does so that when a problem
+
+10:12.500 --> 10:18.740
+arises when you say hmm my server is starting to slow down because of all these users what can we do
+
+10:18.740 --> 10:20.540
+to scale it to manage it.
+
+10:20.540 --> 10:26.750
+You can say Let me check out Amazon and see what kind of services they provide that might help with
+
+10:26.750 --> 10:27.310
+us.
+
+10:27.650 --> 10:33.410
+And like I said this is getting into a topic that we called them ops and some web developers might not
+
+10:33.440 --> 10:35.000
+even touch it.
+
+10:35.070 --> 10:41.330
+Yes but as a senior developer its important to understand infrastructure and how things are connected
+
+10:41.540 --> 10:43.430
+and how things can grow.
+
+10:43.880 --> 10:50.470
+Because by building applications with this idea in mind when we start very very small.
+
+10:50.630 --> 10:57.560
+As long as we have this sort of thing in the back of our mind we write code that will work well with
+
+10:58.040 --> 10:59.440
+some of this infrastructure.
+
+10:59.510 --> 11:06.380
+For example if we have small tiny functions we can now just slowly give some of these functions to perhaps
+
+11:07.330 --> 11:10.640
+AWOS lambda.
+
+11:10.650 --> 11:11.300
+All right.
+
+11:11.400 --> 11:15.750
+So I hope you're starting to get a little bit excited because soon we're going to be implementing our
+
+11:15.750 --> 11:18.800
+own lambda function with AWOS.
+
+11:18.810 --> 11:21.690
+For now though I'll see in the next video by.

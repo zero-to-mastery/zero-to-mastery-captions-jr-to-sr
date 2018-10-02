@@ -1,0 +1,259 @@
+WEBVTT
+
+00:01.710 --> 00:08.190
+Welcome back now when the previous video we talked about how we need some sort of key exchange algorithm
+
+00:08.940 --> 00:14.930
+and this key exchange algorithm needs something called asymmetrical encryption.
+
+00:14.970 --> 00:18.110
+I know it's it's a lot to take in but stick with me.
+
+00:18.180 --> 00:21.550
+Hopefully this little drawing will help you out.
+
+00:21.580 --> 00:30.030
+Now unlike symmetrical encryption an asymmetrical encryption uses two separate keys for encryption and
+
+00:30.030 --> 00:31.780
+decryption.
+
+00:31.800 --> 00:37.020
+So these red keys are owned by this blue laptop.
+
+00:37.170 --> 00:41.360
+And these blue keys are owned by this other computer.
+
+00:41.400 --> 00:53.280
+Now these two keys are known as public keys and private keys and together these keys form a public private
+
+00:53.340 --> 00:54.050
+key pair.
+
+00:54.330 --> 01:02.400
+And as the name suggest these ones are public so I can share this reiki with anybody I want in the world.
+
+01:02.520 --> 01:04.260
+It can be out in the open.
+
+01:04.260 --> 01:05.310
+It's not a big problem.
+
+01:05.310 --> 01:06.670
+And same with this blue one.
+
+01:06.840 --> 01:10.630
+But these ones that are private that are kind of in the shadows.
+
+01:10.800 --> 01:15.150
+These are your absolute secrets that you shouldn't never ever share with anybody.
+
+01:16.850 --> 01:23.660
+Now these public keys are linked with the private key in terms of functionality.
+
+01:23.660 --> 01:26.540
+You can see that they're both red They're both blue here.
+
+01:28.120 --> 01:35.820
+The private key cannot mathematically compute from the public key.
+
+01:35.850 --> 01:37.200
+So what does that mean.
+
+01:37.200 --> 01:47.260
+Are the relationships a little bit complex but a message shut is encrypted by machines public key can
+
+01:47.260 --> 01:52.680
+only be decrypted by the same machines private key.
+
+01:52.760 --> 01:57.000
+And it's what we call a one way relationship.
+
+01:57.070 --> 01:58.570
+So let me show you how it works.
+
+01:58.720 --> 02:07.060
+If I send my public key to my friend's computer and let's say that friend also sends his public key
+
+02:07.690 --> 02:17.400
+to my computer if I want to send a message I can say hello send it over by encrypting it with his blue
+
+02:17.400 --> 02:23.250
+key his public key is going to get jumbled up and encrypted like this.
+
+02:23.370 --> 02:34.740
+And when I send it over to him Well now he can use his private key because this piece of text was encrypted
+
+02:34.740 --> 02:36.100
+by the public.
+
+02:36.150 --> 02:38.320
+So the private key can decrypt it.
+
+02:39.110 --> 02:40.360
+Do its magic.
+
+02:40.670 --> 02:43.470
+And then finally get the message.
+
+02:43.590 --> 02:43.990
+Hello
+
+02:46.690 --> 02:54.000
+So you see here now how we can send public keys to other people and bad people can grab the public key.
+
+02:54.070 --> 03:01.390
+But because it's one way relationship this public key cannot decrypt its own message nor can it decrypt
+
+03:01.480 --> 03:04.600
+anything encrypted by a private key.
+
+03:04.600 --> 03:12.310
+It can only encrypt something and it can only be decrypted by it's paired private key.
+
+03:12.310 --> 03:15.360
+That again is never ever shared with anybody.
+
+03:16.850 --> 03:22.430
+Now the strength of the interconnection lies in the fact that the private key is never relieved right.
+
+03:23.160 --> 03:23.610
+All right.
+
+03:23.630 --> 03:26.110
+Awesome so that makes sense right.
+
+03:26.110 --> 03:33.750
+A little bit more complicated than symmetrical encryption but I think we get now if we go back to where
+
+03:33.750 --> 03:43.300
+we started most people think that S-sh uses asymmetrical encryption entirely and that's not entirely
+
+03:43.330 --> 03:44.230
+true.
+
+03:44.260 --> 03:52.630
+It's this form of encryption with S-sh is actually only used during the key exchange algorithm of symmetric
+
+03:52.660 --> 03:53.890
+encryption.
+
+03:53.890 --> 03:55.020
+You remember that right.
+
+03:55.030 --> 04:01.930
+We need some way with symmetric encryption to generate that yellow key without it entering the public.
+
+04:01.930 --> 04:09.580
+What happens as a sage is that before we initiate a secure connection both parties generate temporary
+
+04:09.640 --> 04:13.700
+public and private keys and share their respective keys.
+
+04:14.560 --> 04:15.670
+To one another.
+
+04:16.000 --> 04:24.490
+And at this point we're able to get these yellow keys the symmetric key so we can exchange method messages
+
+04:25.330 --> 04:30.240
+using something called the Diffie Hellman key exchange.
+
+04:30.460 --> 04:36.190
+And I'm going to link to some resources that you can use because it is a little bit mathematically complex
+
+04:37.120 --> 04:45.640
+but what it does basically is that it uses a bit of this information a bit of this information a bit
+
+04:45.640 --> 04:49.980
+of the public keys to generate without ever exchanging the keys.
+
+04:50.050 --> 04:59.750
+Each machine on its computer can generate this symmetric key from data from each computer.
+
+04:59.780 --> 05:06.770
+And again this Diffie Helman algorithm or key key exchange algorithm makes it possible for each party
+
+05:06.770 --> 05:12.560
+to combine their own private data with public data are from other systems to arrive in an identical
+
+05:12.560 --> 05:14.880
+secret session key.
+
+05:14.990 --> 05:18.000
+I know that's a mouthful and I know that's confusing.
+
+05:18.050 --> 05:22.260
+Like I said check out the resource after this video if you want to learn more about it.
+
+05:23.730 --> 05:31.330
+But by now we should know how we're able to generate a symmetric key using asymmetrical encryption using
+
+05:31.330 --> 05:33.700
+the Diffie Hellman key exchange.
+
+05:33.810 --> 05:41.040
+And this way this yellow key is going to stay private to us and it's never going to touch the public
+
+05:41.610 --> 05:42.460
+by the way.
+
+05:43.190 --> 05:44.160
+You might be thinking.
+
+05:44.180 --> 05:44.630
+All right.
+
+05:44.630 --> 05:46.480
+Enough talk about S-sh.
+
+05:46.550 --> 05:48.020
+This is getting boring Andre.
+
+05:48.030 --> 05:49.850
+C'mon we just started the course.
+
+05:50.390 --> 05:53.260
+Trust me this type of encryption is everywhere.
+
+05:53.270 --> 05:58.660
+You're probably using it right now to watch this video using Diffie Hellman key exchange.
+
+05:58.820 --> 06:04.690
+And when you use your phone to do anything where it connects to a server it uses Diffie Hellman key
+
+06:04.700 --> 06:06.040
+exchange.
+
+06:06.210 --> 06:08.550
+And we should know how these things work.
+
+06:08.550 --> 06:09.140
+Right.
+
+06:09.150 --> 06:16.670
+As a developer we need to understand how things work not just on the surface level.
+
+06:16.880 --> 06:18.850
+You might notice how it's kind of funny right.
+
+06:19.040 --> 06:25.460
+The name key exchange is that we don't actually change a key because it would be out in the public and
+
+06:25.460 --> 06:26.190
+we don't want that.
+
+06:26.210 --> 06:32.630
+We actually just share a piece of public bill such as our public keys from each computer and we generate
+
+06:32.630 --> 06:36.920
+the key separately in our own private space.
+
+06:38.360 --> 06:42.590
+All right let's take a little bit of a break and I'll see you in the next video because I know that
+
+06:42.590 --> 06:43.910
+was a lot of information.
+
+06:44.030 --> 06:45.370
+I'll see that one bye bye.

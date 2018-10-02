@@ -1,0 +1,97 @@
+WEBVTT
+
+00:01.820 --> 00:02.540
+Welcome back.
+
+00:02.600 --> 00:11.700
+We have two topics to cover and the next one sounds a little bit like I'm paranoid don't trust anyone.
+
+00:12.020 --> 00:20.150
+And if we go to the next slide it's completely empty because this image requires the full screen.
+
+00:20.190 --> 00:28.060
+All right what is happening here now throughout all the security videos you might have realized something
+
+00:28.630 --> 00:30.620
+we just can't trust anything.
+
+00:30.640 --> 00:35.410
+We can't assume that there's good people everywhere and that everything's in a work out as expected
+
+00:35.650 --> 00:46.840
+with our CO so anywhere there is a connection with an outside system or an outside user user input.
+
+00:46.910 --> 00:57.040
+You are Relpax put post parameters cookies headers file uploads e-mails form fields tons and tons of
+
+00:57.040 --> 01:00.820
+things inputs come from many many places.
+
+01:01.630 --> 01:07.830
+And we have to assume that not everybody is going to answer what they're supposed to enter.
+
+01:08.080 --> 01:15.070
+So in any process that we have where there's a connection between systems we have to assume that there's
+
+01:15.100 --> 01:19.710
+Darth Vader over here just watching you trying to be really really bad.
+
+01:20.080 --> 01:25.500
+So you have to make sure that wall when you build software you don't trust anybody.
+
+01:25.660 --> 01:30.700
+And I know it sounds paranoid but the idea is to write good code and be smart about why you are allowed
+
+01:30.700 --> 01:31.330
+to do.
+
+01:31.600 --> 01:32.830
+Here's an example.
+
+01:32.830 --> 01:38.390
+Server maybe I've allowed my server to have requests from this domain.
+
+01:38.410 --> 01:47.480
+I've set my headers using helmet amusing as I'm pretty sure we're good well if somehow.
+
+01:47.790 --> 01:54.240
+Darth Vader over here gets access to the client and the domain name.
+
+01:54.630 --> 02:01.560
+He can perhaps just bombard your server with requests after requests after requests to requests until
+
+02:01.560 --> 02:08.220
+a Crash's your server and then oh yeah you just lost a ton of money because your server now can't run
+
+02:08.220 --> 02:09.680
+that shopping cart anymore.
+
+02:10.510 --> 02:17.630
+And then again you have to realize oh yeah maybe I should add a rate limiter like the rate limit package
+
+02:17.720 --> 02:23.240
+from NPM that allows us to make sure that we can just keep requesting requesting requesting requesting
+
+02:23.510 --> 02:24.730
+to the server.
+
+02:25.010 --> 02:28.910
+And there are so many cases that you just can't keep track of.
+
+02:28.970 --> 02:32.650
+The best thing you can do is just keep that in mind as you write your software.
+
+02:32.710 --> 02:38.740
+Anytime you're making a connection to the outside world or accepting Iput from the outside world.
+
+02:38.810 --> 02:43.780
+Think about it how can you prevent bad actors from doing bad things.
+
+02:45.490 --> 02:48.760
+How can we protect the baby from Darth Vader.
+
+02:49.560 --> 02:51.090
+Hunchy the next one.
+
+02:51.320 --> 02:51.590
+Babai.

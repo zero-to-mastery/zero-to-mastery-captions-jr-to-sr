@@ -1,0 +1,1336 @@
+WEBVTT
+
+00:00.830 --> 00:02.640
+And welcome back.
+
+00:02.750 --> 00:07.010
+Let's get to some exciting coding using what now.
+
+00:07.190 --> 00:11.210
+Remember creed re-act app uses web pack underneath the hood.
+
+00:11.240 --> 00:18.590
+So let's see what kind of setup they have by trying to build one ourselves or at least the simplified
+
+00:18.590 --> 00:19.350
+version of it.
+
+00:20.830 --> 00:28.690
+So first thing we want to do is let's just make a simple project we'll just make directory we'll call
+
+00:28.690 --> 00:29.630
+it what
+
+00:32.390 --> 00:36.640
+project and all Cdn to that as well.
+
+00:37.930 --> 00:45.370
+Now the very first thing we want to do is set up NPM so I can do NPM in it with Dash Y which means just
+
+00:45.550 --> 00:49.260
+say yes to all the configurations.
+
+00:49.300 --> 00:49.690
+All right.
+
+00:49.690 --> 00:54.770
+And we have everything set up plus clear this.
+
+00:54.880 --> 01:00.870
+And now let's just open up the project to make sure that we have all the files we need to.
+
+01:00.900 --> 01:05.540
+I use subline but you can obviously use whatever text editor you choose.
+
+01:11.190 --> 01:13.310
+And let's make the screens nice.
+
+01:14.520 --> 01:16.750
+Like this together so we can see everything.
+
+01:16.950 --> 01:17.530
+Nice.
+
+01:17.610 --> 01:18.310
+Perfect.
+
+01:19.270 --> 01:24.120
+All right so we have our web pack project with our package dot Gees on file.
+
+01:24.130 --> 01:27.390
+Not much in it for now but this is a good start.
+
+01:27.580 --> 01:33.630
+Now the whole served single page application that we're going to build is going to contain two files
+
+01:34.030 --> 01:42.780
+an HMO file and a javascript file while the javascript file is going to be generated automatically from
+
+01:43.080 --> 01:46.270
+all the other files that we have through ratpack.
+
+01:46.380 --> 01:55.830
+Later on we can starting create the XML file manually as an entry point for our application so we can
+
+01:55.830 --> 02:02.760
+simply just make another directory here we'll call it build or let's say two disks for distribution
+
+02:04.020 --> 02:12.810
+and all CD into that distribution and we'll just create an index dot a shim file perfect.
+
+02:12.860 --> 02:15.960
+If we check over here we have our index not a shemale.
+
+02:15.970 --> 02:17.630
+Well let's go back.
+
+02:18.380 --> 02:24.210
+To our route of the project here in the index start a similar fall.
+
+02:24.220 --> 02:28.790
+We can just simply create a simple basic template.
+
+02:29.170 --> 02:36.100
+I can actually and sublime tax do this and then if I hit tab at all are popular for me which is a nice
+
+02:36.100 --> 02:42.760
+little feature will give the title of what pack and within the body because we are going to be using
+
+02:43.150 --> 02:48.540
+re-act and we need some sort of an entry point for react.
+
+02:48.540 --> 02:58.610
+We can just have a div with an idea of let's say app and we can close that div and we can also have
+
+02:58.610 --> 03:07.580
+a script file and the script file is going to load our bundled Yes which we don't have yet but we're
+
+03:07.580 --> 03:08.840
+going to make.
+
+03:08.840 --> 03:19.100
+So we'll just say that the source for this script file will be in the bundle dodginess.
+
+03:19.200 --> 03:22.700
+All right there are nice and simple app.
+
+03:23.160 --> 03:29.060
+We're going to have an entry point for react and we're also going to have all our javascript files in
+
+03:29.070 --> 03:31.510
+one called bundle thought.
+
+03:32.710 --> 03:37.590
+Now you'll use wetback as a module bonder and a build tool.
+
+03:37.720 --> 03:44.650
+More of what you're going to use something called web packet dev server to serve this bundled up they
+
+03:44.650 --> 03:53.150
+you have in a local environment so that we can run a command here and we can test out a rap on our laptop.
+
+03:53.440 --> 03:57.280
+Otherwise you wouldn't be able to actually see it in the browser.
+
+03:57.340 --> 04:05.250
+And then finally we also need the wetbacks see a lie or command line interface to configure our wetbacks
+
+04:05.350 --> 04:06.060
+setup.
+
+04:06.070 --> 04:12.620
+So let's install these three packages so we can actually start using back.
+
+04:12.790 --> 04:15.130
+We can do NPM not there.
+
+04:15.130 --> 04:27.810
+We can do NPM install and because these are for development purposes we can just say dash dash save
+
+04:28.810 --> 04:40.160
+Dev and within here we're going to install what Pak the web pack death server so we can actually test
+
+04:40.160 --> 04:44.610
+out our project locally.
+
+04:44.690 --> 04:46.460
+And then finally the web pack
+
+04:49.650 --> 04:53.960
+CLIA let's install this.
+
+04:54.090 --> 05:01.230
+And while this is installing I want to warn you with this video if you're not used to wet back you're
+
+05:01.230 --> 05:05.040
+going to feel a little what's the word here.
+
+05:05.130 --> 05:10.170
+A little exhausted from all the packages we're going to install all the set up.
+
+05:10.200 --> 05:14.260
+It is honestly overwhelming when you first start.
+
+05:14.510 --> 05:21.020
+And this is exactly why create react up exists because setting this up and configuring everything and
+
+05:21.020 --> 05:24.680
+making sure everything is up to date is a big big task.
+
+05:24.830 --> 05:31.100
+So watch this video not as a you have to know everything and if you don't understand everything then
+
+05:31.100 --> 05:32.030
+you can move on.
+
+05:32.030 --> 05:37.780
+Watch it as a way to understand a little bit of what's going on underneath the hood of create react.
+
+05:37.880 --> 05:44.240
+But as I said before keep in mind that configurations always change so when the time comes for you to
+
+05:44.300 --> 05:48.620
+implement one back they have great documentation online that he can use.
+
+05:48.740 --> 05:52.200
+But for now just understand the why of what.
+
+05:52.280 --> 05:55.960
+Not every single detail as I always love to say.
+
+05:55.960 --> 06:00.090
+All right now that we have this installed Let's clear this.
+
+06:00.650 --> 06:06.560
+And the first thing we want to do is go into our packaged Jaisalmer file and within the scripts year
+
+06:07.100 --> 06:12.800
+we're going to change the test to start.
+
+06:13.070 --> 06:14.640
+And we're going to say that.
+
+06:14.750 --> 06:17.790
+Let me make this smaller so we can see.
+
+06:18.080 --> 06:23.910
+We want to remove this dummy text that they have and we're going to put in here.
+
+06:24.010 --> 06:34.660
+Pac dev server dash dash config space and a file that we don't have yet that we're going to build.
+
+06:34.730 --> 06:38.060
+It's going to be called web pack Daut config dot.
+
+06:38.140 --> 06:46.590
+J.S. and then dash dash mode development homeboy.
+
+06:46.690 --> 06:48.390
+Let me make this a little bit smaller.
+
+06:49.760 --> 06:50.390
+All right.
+
+06:50.490 --> 06:54.550
+That was a lot let me explain what's going on here.
+
+06:54.690 --> 07:02.430
+The script over here defines that you want to use wet pack def server with a configuration file called
+
+07:02.600 --> 07:10.380
+well-packed config dodginess which we're going to create and the dash dash mode devolvement is actually
+
+07:10.380 --> 07:15.270
+a new feature that came with went back four which was recently released.
+
+07:15.270 --> 07:23.310
+And this just adds the default to web pack configurations which come with the new get back before we
+
+07:23.310 --> 07:26.580
+actually with one two and three version of back.
+
+07:26.580 --> 07:30.690
+We now have this and you had to do even more manual setup.
+
+07:30.930 --> 07:37.770
+Luckily with version 4 they've realized that people don't want to necessarily do everything by hand
+
+07:37.770 --> 07:44.550
+so they have some nice date defaults so they have one for production as well which is very very helpful.
+
+07:44.550 --> 07:47.550
+All right so now that we have this set up let's save this.
+
+07:47.550 --> 07:53.400
+And within our terminal I'm going to create this configuration file.
+
+07:53.490 --> 08:04.430
+So it's we're going to say touch wet pack dot config dodginess and we see over here that we have what
+
+08:04.430 --> 08:07.540
+backdoor config dodgiest and I have a nice little plug in.
+
+08:07.540 --> 08:09.850
+That gives me a symbol here.
+
+08:09.850 --> 08:11.080
+Very cool.
+
+08:11.080 --> 08:16.090
+All right now let's go to this file because we can really do anything yet.
+
+08:16.090 --> 08:20.760
+We're going to go to the file and we're going to add the web pack configuration.
+
+08:21.280 --> 08:24.580
+And this is where most of the well-packed magic happens.
+
+08:25.710 --> 08:35.910
+We're here the first thing we want to do is say module datt exports.
+
+08:36.100 --> 08:40.150
+And then there's three main things we want to add to the exports.
+
+08:40.180 --> 08:50.440
+One is the entry which is where do we want wetback to start looking through our faith.
+
+08:50.610 --> 08:59.400
+In our case this entry is going to be a index js file that we're going to create.
+
+08:59.480 --> 09:10.080
+So let's say in the source folder it's going to be the index dot J.S. file and then the second thing
+
+09:10.500 --> 09:17.220
+we're going to say that the output which is from the entry server reading all the files and bundling
+
+09:17.220 --> 09:25.700
+everything out and all of your output put it into this location and we can do that simply by defining
+
+09:25.700 --> 09:33.390
+an output with a path dher which is the directory name that we currently have.
+
+09:35.760 --> 09:39.340
+And use our d'Este or distribution folder.
+
+09:39.480 --> 09:45.530
+Right over here and then we're also going to have a public
+
+09:49.810 --> 09:55.930
+and this public Plath is just going to be like this because this is just the your rel to the output
+
+09:55.930 --> 09:59.040
+directory resolved relative to the age to him.
+
+09:59.060 --> 10:04.840
+I'll page again and read up more about these on their documentation page.
+
+10:04.840 --> 10:08.760
+And then finally we want the output to be the bundle file.
+
+10:08.770 --> 10:16.900
+So we want to say that file name is going to be Bondel God yes.
+
+10:18.010 --> 10:18.730
+Awesome.
+
+10:18.820 --> 10:23.890
+And the last thing is going to be something called the dev server.
+
+10:23.890 --> 10:31.230
+So this is while we want to run while we're working on our Web site locally and the def server will
+
+10:31.240 --> 10:40.890
+have a content base with the distribution folder.
+
+10:40.910 --> 10:43.740
+So this tells us server where to serve the content from.
+
+10:43.880 --> 10:50.410
+So from the distribution folder when we're working in our local environment.
+
+10:50.480 --> 10:50.990
+All right.
+
+10:51.020 --> 10:59.330
+There was though was a lot but overall the big picture is that there's an entry there is an output and
+
+10:59.330 --> 11:05.330
+we also tell the def server where to look so that it displays the Web site for us when we're working
+
+11:05.330 --> 11:06.080
+on it.
+
+11:06.080 --> 11:12.800
+So again we're just saying we want to use the source index digest file as the entry point to bundle
+
+11:12.890 --> 11:14.900
+all of this important files.
+
+11:15.110 --> 11:20.370
+We need the Bondel died yes so we're going to go through everything index yes.
+
+11:20.420 --> 11:22.900
+Anything that's imported through there.
+
+11:23.060 --> 11:27.060
+We're going to compile and spit it out into a bundled budget.
+
+11:27.090 --> 11:27.760
+Yes.
+
+11:28.130 --> 11:35.810
+And then we're going to generate are already set up this folder as the serving point with the index
+
+11:35.920 --> 11:38.280
+not a shemale file for our app.
+
+11:38.510 --> 11:41.600
+So we're missing the source folder here so let's do that.
+
+11:41.600 --> 11:49.530
+I'm going to make your source so we have a news source folder and within here we can just go into the
+
+11:49.530 --> 11:58.520
+source folder and create the index file that we have in our wet pack config.
+
+11:59.460 --> 12:00.480
+Let's go back.
+
+12:01.540 --> 12:13.140
+And just for fun in the index Jasc let's just say console dog log and I will say what pack Wizards.
+
+12:13.330 --> 12:14.530
+Very exciting stuff.
+
+12:14.530 --> 12:15.210
+All right.
+
+12:15.430 --> 12:17.700
+Let's run NPM start and see what happens.
+
+12:18.040 --> 12:25.770
+I'm going to say NPM start because if you remember going to Pakistan on file we have this web pack DEP
+
+12:25.780 --> 12:27.710
+server command that we're going to run.
+
+12:28.080 --> 12:33.300
+So I'm going to say NPM start.
+
+12:33.350 --> 12:40.590
+All right so we get some output here but at the bottom you'll see that we have compiled successfully.
+
+12:40.700 --> 12:46.880
+And if we scroll up we see that the project is running a shitty local localhost.
+
+12:46.940 --> 12:48.290
+So let's do that.
+
+12:48.290 --> 12:50.930
+Let's go to local hosts over here.
+
+12:51.770 --> 12:55.110
+And do 80.
+
+12:55.130 --> 12:55.360
+All right.
+
+12:55.370 --> 13:02.810
+And we have what PAC wizard in the console which is working there's nothing displayed on the page because
+
+13:02.810 --> 13:13.110
+well our e-mail page doesn't really have anything we want we can just have a H-1 tag that says Web pack
+
+13:13.120 --> 13:15.720
+here just to make sure that it's working.
+
+13:18.170 --> 13:19.320
+And if we refresh.
+
+13:19.370 --> 13:20.060
+There you go.
+
+13:20.120 --> 13:24.870
+We have what back with wet pack wizard working.
+
+13:24.950 --> 13:25.880
+Very cool.
+
+13:26.590 --> 13:38.810
+So again we see that the content is being Sam from the dist folder and that our time of building was
+
+13:38.810 --> 13:40.040
+so bundling everything.
+
+13:40.040 --> 13:49.550
+Took 337 milli seconds and that we have a Bondel DOD J.S. file that we created that is quite small with
+
+13:49.610 --> 13:54.910
+just 300 kilobytes very very cool.
+
+13:54.920 --> 13:55.170
+All right.
+
+13:55.190 --> 13:58.640
+Now let's get a little bit more deep into the topic here.
+
+13:59.570 --> 14:07.920
+We also need something called Bible Bible enables us to write our code in six or seven or eight.
+
+14:08.060 --> 14:15.950
+And with Bible the code is going to get transpired or changed back to yes five so that every single
+
+14:15.950 --> 14:22.900
+browser without having all the 6 features already implemented on them can still interpret it.
+
+14:23.120 --> 14:28.050
+So we're writing as developers in year 6 putting it through baseball.
+
+14:28.070 --> 14:34.490
+It's going to spit out the exact same code but with E.S. 5 version so that all the browsers no matter
+
+14:34.520 --> 14:40.670
+how old they are can still implement it so we can still use cool things like Aero functions and object
+
+14:40.670 --> 14:45.890
+destructuring and other cool things that we can also test out new upcoming features of javascript that
+
+14:45.890 --> 14:48.220
+haven't even been implemented yet.
+
+14:48.260 --> 14:50.270
+So let's start off with that.
+
+14:50.480 --> 14:54.470
+Let's set up a baseball into our Roopak project.
+
+14:54.600 --> 15:06.400
+I'm going to close this and clear and I'm going to say NPM install again we'll just say save def because
+
+15:06.400 --> 15:10.450
+we're only doing this on the deaf side when we actually put it out into the public.
+
+15:10.460 --> 15:17.700
+We don't need a table because we're doing this before putting the files onto a server.
+
+15:17.750 --> 15:27.650
+So let's just say here we're going to need something called Whoops babble core which is the main cable
+
+15:27.650 --> 15:28.670
+package.
+
+15:28.820 --> 15:35.910
+We need something called Babel Lowder and Lowder is something that is used in Westpac.
+
+15:36.020 --> 15:38.010
+It compiles code.
+
+15:38.010 --> 15:45.320
+So Babel loader in wet pack works Sutekh javascript and take it through the Babel compiler and then
+
+15:45.320 --> 15:53.050
+we need something call table preset and.
+
+15:53.520 --> 16:01.890
+And this is the cool package that what it does is it checks whatever browser we're running in and based
+
+16:01.890 --> 16:09.330
+on that browsers version and how old it is it will know exactly which features they they haven't implemented
+
+16:09.330 --> 16:15.140
+yet in the browser and make those changes to S-5 for the browser.
+
+16:15.210 --> 16:20.190
+So it's smart enough to detect the browser and only change to a piece of the code that the browser doesn't
+
+16:20.190 --> 16:20.940
+understand.
+
+16:20.940 --> 16:23.840
+All right very cool so let's install that.
+
+16:23.940 --> 16:24.220
+All right.
+
+16:24.230 --> 16:26.410
+Awesome so we have babbel installed.
+
+16:26.540 --> 16:33.680
+But additionally we might want to use some more experimental features of javascript which can get activated
+
+16:33.950 --> 16:36.180
+via something called stages.
+
+16:36.230 --> 16:37.460
+So what does that mean.
+
+16:37.460 --> 16:45.600
+Well if we go to the Babel Web site and let's close this for now we see that we have different preset
+
+16:45.780 --> 16:54.960
+stages and these are things in javascript that are proposed that might or might not get implemented.
+
+16:54.960 --> 17:00.470
+But if you're really really eager you can start using them by using preset stage.
+
+17:00.810 --> 17:06.450
+And again because babbel transport is are code that means we can write whatever we want and as long
+
+17:06.450 --> 17:13.530
+US babble understands it it's going to spit out the version in S-5 for us so that all browsers understand
+
+17:13.530 --> 17:13.910
+it.
+
+17:14.190 --> 17:22.110
+So for fun right now let's say that we also want to test out a new feature of javascript so we'll say
+
+17:22.110 --> 17:24.380
+NPM install and.
+
+17:24.580 --> 17:36.050
+And we're going to download a package that is Babel preset say stage to so we can install that.
+
+17:36.320 --> 17:39.480
+So now that we have all these packages How can we use them.
+
+17:39.890 --> 17:53.160
+Well we go into packaged Jaison and then here we can add a cable property and in here we can just say
+
+17:53.160 --> 17:56.360
+that and make sure we add the comma
+
+18:00.150 --> 18:08.390
+the pre-sets which is why we just downloaded we'll have three of them.
+
+18:08.530 --> 18:10.110
+So let's go back here.
+
+18:10.120 --> 18:11.650
+Should be an array.
+
+18:11.950 --> 18:16.770
+And within here we'll say that we have the preset.
+
+18:16.900 --> 18:24.820
+We're also going to use the stage to preset you know what.
+
+18:24.830 --> 18:26.150
+Let's add one more.
+
+18:26.150 --> 18:33.030
+Again if we want to use react in our application we also want a the re-act preset.
+
+18:33.050 --> 18:41.660
+So again in here we can just NPM install and instead of precess stage to whatever we just Scott will
+
+18:41.660 --> 18:45.440
+say that will get preset react.
+
+18:45.460 --> 18:51.360
+So there is a ton of these that you can use.
+
+18:51.650 --> 18:54.430
+And now we'll have this one available to us as well.
+
+18:55.310 --> 19:02.000
+This last one is for us to be able to transform GSX files which sometimes comes naturally with react
+
+19:02.240 --> 19:06.200
+to Jeff's files so it's more for a sake of convenience than anything.
+
+19:06.200 --> 19:10.040
+Let me clear this and yes we can reload it.
+
+19:10.350 --> 19:12.990
+Oh and I forgot to save it so let's go back here.
+
+19:13.230 --> 19:15.600
+I'm going to copy this.
+
+19:15.600 --> 19:18.100
+And again we'll just put it down here.
+
+19:18.140 --> 19:22.260
+Our baseball setup and make sure we save it this time.
+
+19:23.600 --> 19:30.110
+All right so now we can go back to our Web page config and we can tell well-packed to hey also use baseball
+
+19:30.110 --> 19:32.450
+when going with the entry.
+
+19:32.450 --> 19:38.650
+And before you put everything put it through baseball and Jaspal everything that's very easy to do.
+
+19:38.690 --> 19:44.390
+We can add a module here to tell it to what to do with our modules.
+
+19:44.480 --> 19:47.830
+And within here we just have to mention a few things.
+
+19:47.840 --> 19:49.870
+So the first one is rules.
+
+19:49.970 --> 19:52.450
+So what rules do we need to follow.
+
+19:52.550 --> 19:57.630
+So the rules are going to be to test.
+
+19:58.060 --> 20:01.280
+So that is to look for files.
+
+20:02.380 --> 20:06.790
+And we're going to use some rejects expression here that are javascript
+
+20:09.980 --> 20:16.810
+or use brackets here that are javascript or GSX files.
+
+20:16.850 --> 20:20.460
+So those are default re-act false.
+
+20:20.610 --> 20:25.080
+And by the way you can look at the syntax this is regex and you can learn about the syntax but we're
+
+20:25.080 --> 20:31.590
+pretty much saying anything that matches dodgiest or dot GSX So pretty much all javascript.
+
+20:31.590 --> 20:40.280
+We wanted to use the Babel loader on it.
+
+20:40.370 --> 20:42.580
+So run it through Babel.
+
+20:42.590 --> 20:47.210
+Now we obviously don't want to do this with our no modules so you can see our known modules folders.
+
+20:47.210 --> 20:52.940
+There's a ton but those are entire files those are third parties and we're not interested in them so
+
+20:53.180 --> 21:02.070
+I can just say exclude and we'll exclude the known modules.
+
+21:02.080 --> 21:02.350
+All right.
+
+21:02.350 --> 21:03.070
+Perfect.
+
+21:03.340 --> 21:10.860
+And then the other thing I want to also do is I want to use resolve and this is something that you may
+
+21:10.860 --> 21:16.370
+have noticed when we were working with create re-act up when we entered a file a component file.
+
+21:16.380 --> 21:23.280
+We never put the dodgy Yes at the end because create react automatically knew that that was Javascript.
+
+21:23.280 --> 21:26.480
+So this is done using something called resolve.
+
+21:26.520 --> 21:29.140
+And we can just say that with resolve.
+
+21:29.370 --> 21:31.110
+We want the extensions
+
+21:36.380 --> 21:44.860
+J us and GSX to be left off and just assume that it's going to be a javascript or just X Files.
+
+21:45.040 --> 21:51.820
+So we never have to do dodgiest when importing at the top of the file which is nice and nifty.
+
+21:51.820 --> 21:54.550
+All right so let's save that and.
+
+21:54.730 --> 21:55.300
+All right.
+
+21:55.330 --> 22:01.150
+We're not done yet because let's say this is a reactor app we need a couple packages for react.
+
+22:01.240 --> 22:07.180
+But these ones we already know we can just do NPM install and this time the swans are going to be saved
+
+22:07.750 --> 22:11.140
+not for DAPH but their actual dependencies of the project.
+
+22:11.140 --> 22:22.190
+So we don't need to do dash dash save dev we can just say we want to install react and react dong.
+
+22:22.560 --> 22:25.210
+And I can't spell Let's try that again.
+
+22:25.370 --> 22:26.120
+React.
+
+22:27.820 --> 22:28.120
+All right.
+
+22:28.120 --> 22:28.560
+Awesome.
+
+22:28.570 --> 22:29.990
+We have a reaction.
+
+22:29.990 --> 22:31.000
+Stahl That's great.
+
+22:31.000 --> 22:37.030
+We're getting closer and closer to how create react up works underneath the hood.
+
+22:37.030 --> 22:37.480
+That's good.
+
+22:37.480 --> 22:43.820
+So now we use react and all that GSX goodness into our files.
+
+22:44.140 --> 22:52.090
+But another thing you might remember is that we're able to use something called Yes lint or every time
+
+22:52.090 --> 22:57.360
+we rank we react at any anytime we had a syntax error or anything like that.
+
+22:57.370 --> 23:02.760
+It displayed it in our terminal which was very very helpful.
+
+23:03.620 --> 23:09.020
+And they use something called E.S. lint which is lending that is checking your syntax making sure everything
+
+23:09.020 --> 23:09.860
+checks out.
+
+23:09.860 --> 23:11.430
+Think of it as a spell checker.
+
+23:12.200 --> 23:19.430
+And it allows you to maintain a consistent javascript and reac code Sol in your project and pretty much
+
+23:19.760 --> 23:28.250
+any company you work out uses some sort of Lanting so to do this let me clear this first again as you
+
+23:28.250 --> 23:30.390
+can imagine we're installing Muhl.
+
+23:30.420 --> 23:31.150
+Morse.
+
+23:31.340 --> 23:32.840
+Again it's a bit of a headache.
+
+23:32.840 --> 23:36.510
+I know because this is for development purposes only.
+
+23:36.620 --> 23:44.990
+Will say save def and we're going to install the Slint package.
+
+23:45.380 --> 23:51.200
+And while this is loading you might have realized for now because we're using web pack we need something
+
+23:51.200 --> 23:56.600
+called loader that is to have all the files go through this.
+
+23:56.600 --> 24:00.530
+They go through babbel to get them transported to iOS 5.
+
+24:00.530 --> 24:03.170
+So it's compatible with all browsers.
+
+24:03.170 --> 24:07.790
+But we also wanted to go through as Slint to check for any mistakes.
+
+24:07.790 --> 24:17.060
+So again we need something called Yes lint loader.
+
+24:17.100 --> 24:17.500
+All right.
+
+24:17.580 --> 24:23.690
+And now we can use this in our config to make sure that it goes through the Slint.
+
+24:23.820 --> 24:26.790
+Let's do that by adding another rule here.
+
+24:26.880 --> 24:34.200
+And actually I made a mistake here this should be an object because well we can have multiple rules
+
+24:35.420 --> 24:36.830
+so let's put that there.
+
+24:36.980 --> 24:43.740
+And the next Swan And we'll say that here we're going to do the same thing.
+
+24:43.740 --> 24:53.460
+We're going to copy these properties except this time we want to use the Slint loader again through
+
+24:53.460 --> 24:55.130
+our javascript files.
+
+24:55.170 --> 24:58.980
+So let's start our application and see if this is working.
+
+24:59.040 --> 25:03.180
+I kind of went along without checking my work so we'll see if I made any errors here.
+
+25:03.260 --> 25:04.950
+I'm going to run NPM start
+
+25:10.000 --> 25:11.500
+and I got a bit of an error here.
+
+25:11.500 --> 25:17.540
+If we scroll up you'll see that I made a silly little mistake here.
+
+25:17.590 --> 25:23.190
+I need a comma after the death server.
+
+25:23.190 --> 25:24.750
+Let's say that and start that again
+
+25:27.630 --> 25:29.360
+and we have another.
+
+25:29.700 --> 25:32.390
+I am full of mistakes today.
+
+25:32.460 --> 25:33.090
+There you go.
+
+25:33.090 --> 25:35.730
+Another comma that I've missed.
+
+25:40.110 --> 25:40.560
+All right.
+
+25:40.560 --> 25:42.640
+So it's compiling now.
+
+25:42.900 --> 25:44.920
+But it says fail to compile.
+
+25:44.920 --> 25:45.140
+All right.
+
+25:45.150 --> 25:52.440
+And I want to show you something that's quite tricky with pack and why so many people get frustrated
+
+25:52.440 --> 25:53.200
+with it.
+
+25:53.310 --> 26:03.130
+So I purposely made a few mistakes in here that if you look through here well it's not really clear
+
+26:03.220 --> 26:05.020
+what's going on.
+
+26:05.050 --> 26:13.100
+I mean I see that I have no yes land configuration but there's also all this other stuff happening here
+
+26:13.910 --> 26:16.090
+and it just says module not found.
+
+26:17.100 --> 26:21.300
+And again this is one of those things where you really want to make sure that the syntax you use in
+
+26:21.540 --> 26:24.880
+wet pack and thig is really really correct.
+
+26:24.900 --> 26:30.920
+That's why looking at their documentation and checking out their example is really really important.
+
+26:30.930 --> 26:40.290
+For example here we actually need for the resolve in the extensions to have a dot in the front and then
+
+26:40.620 --> 26:43.760
+with the tests with the rejects.
+
+26:43.830 --> 26:50.080
+Well we actually don't need the dots because we have this front as well.
+
+26:50.990 --> 26:53.710
+Let me save that and let's try this again.
+
+26:58.360 --> 27:04.660
+All right I still get some errors but if I scroll up I don't have all those modulars and it looks like
+
+27:05.170 --> 27:09.850
+I get a 1 error of no Eastland configuration found.
+
+27:09.940 --> 27:16.870
+That's pretty standard Yes Linta needs some sort of configuration some sort of rules that we can tell
+
+27:16.880 --> 27:21.480
+it hey check for these types of errors.
+
+27:21.510 --> 27:23.370
+Again another configuration file.
+
+27:23.500 --> 27:28.000
+I told you this can get pretty hairy but it's just the way it works.
+
+27:28.000 --> 27:34.940
+So with each slant is very simple we can just create something called a r c file so we can say touch.
+
+27:34.990 --> 27:36.110
+Yes lint.
+
+27:36.270 --> 27:46.330
+R C and this done over here is makes it a dot file and the R C means that when the project starts up
+
+27:46.780 --> 27:54.190
+it's going to read the Slint R C and set up each Slint so that whatever rules in there it's going to
+
+27:54.190 --> 27:55.530
+instantiate.
+
+27:55.630 --> 28:01.220
+Now I could do the same thing with baseball as well instead of putting it in package.
+
+28:01.250 --> 28:09.380
+Jason as I have it here I could have just taken all of this and created a dot dot are Sharifah.
+
+28:09.730 --> 28:12.370
+But for now we can leave it there for you.
+
+28:12.360 --> 28:13.170
+Slint though.
+
+28:13.360 --> 28:15.410
+Let's create a new slim file.
+
+28:16.280 --> 28:22.940
+And within here to start off we don't need anything crazy we're going to leave it blank and just keep
+
+28:23.150 --> 28:26.930
+the default syntax of defining rules like this.
+
+28:27.200 --> 28:31.610
+But keeping the object empty is going to save.
+
+28:31.880 --> 28:33.370
+And let's start this again.
+
+28:37.300 --> 28:42.150
+Rahu everything seems to have loaded and it all looks good.
+
+28:42.150 --> 28:48.130
+Again we have our local host 1881 that is distributing our up.
+
+28:48.250 --> 28:49.360
+So let's go check it out.
+
+28:50.920 --> 28:53.150
+All right everything looks nice.
+
+28:53.170 --> 28:54.330
+Ignore the 4 or 4.
+
+28:54.320 --> 28:59.750
+This is just Falvey con that we don't need to worry about but what pack is working.
+
+28:59.950 --> 29:08.110
+And if we go to the network and refresh we see that we get the bundle dodgiest file that has all this
+
+29:08.110 --> 29:13.770
+extra thing that wet pack comes with in order to work the way it does.
+
+29:15.900 --> 29:22.320
+Within here we have our console log that tells us to print what pack wizard.
+
+29:22.360 --> 29:23.890
+Very cool.
+
+29:23.890 --> 29:24.750
+All right.
+
+29:24.850 --> 29:28.470
+Are you getting a headache from all of this yet.
+
+29:28.660 --> 29:31.050
+Because we have one more thing to add.
+
+29:31.060 --> 29:34.170
+You see you have to use something called Babel.
+
+29:34.190 --> 29:36.250
+Yes lint in your configuration.
+
+29:36.250 --> 29:38.410
+So that are limiting.
+
+29:38.410 --> 29:43.750
+Also includes iOS 6 and 7 and iOS 8.
+
+29:43.750 --> 29:46.390
+So once again we've done this before.
+
+29:46.480 --> 29:54.430
+We're going to clear here and just do NPM install and again save Dev and this time around we're going
+
+29:54.430 --> 30:02.210
+to do both yes let.
+
+30:02.340 --> 30:08.220
+And again I can't spell a that again baseball with now.
+
+30:08.430 --> 30:20.490
+And again here now that I've downloaded this I can use another property called parser and this parser
+
+30:20.490 --> 30:26.050
+will have a table E.S. lint.
+
+30:26.140 --> 30:28.560
+Right let's save this and make sure it still works.
+
+30:28.570 --> 30:29.500
+NPM strt
+
+30:34.970 --> 30:38.560
+as well for that law come over here let's try that again.
+
+30:46.460 --> 30:52.790
+And everything is working but now we have Bible Slint working as well.
+
+30:52.800 --> 31:01.360
+Let's try something fun let's say that I want the rule no con. to have a warning
+
+31:05.100 --> 31:08.080
+let's say that and I'm going to run NPM start again.
+
+31:11.050 --> 31:12.190
+Check that out.
+
+31:12.190 --> 31:20.560
+We have a warning because the rule says that we don't want any console statements in our javascript
+
+31:20.560 --> 31:20.970
+file.
+
+31:21.160 --> 31:26.560
+So if I go to index suggests we have a console lock statement which sometimes in production you don't
+
+31:26.560 --> 31:31.480
+really want maybe you don't want to log out whatever errors you have to the user.
+
+31:31.480 --> 31:36.580
+And now I've added this rule that says give me a warning if there's a console.
+
+31:36.580 --> 31:39.590
+Very cool can also do error.
+
+31:39.820 --> 31:48.970
+And if I do air and start it all over again I get an error for using a console lock statement.
+
+31:49.040 --> 31:49.580
+Very cool.
+
+31:49.580 --> 31:58.130
+Similar functionality to what we had and create react up but now we also have this ability to lend new
+
+31:58.220 --> 32:05.690
+yes six features now adding rules by yourself line by line is tedious and as developers we don't want
+
+32:05.690 --> 32:08.230
+to do things that has already been done before.
+
+32:08.570 --> 32:12.980
+Luckily for us you don't have to specify your own set of rules every time.
+
+32:12.980 --> 32:18.950
+There's plenty of recommendations out there and you actually already used on for re-act using create
+
+32:18.950 --> 32:25.320
+react to a really good one that I like is the Airbnb style guide being be open sourced.
+
+32:25.320 --> 32:30.890
+It's Eastlink configuration and it's quite popular a lot of projects use it a lot of big projects to
+
+32:30.890 --> 32:31.450
+use it.
+
+32:31.490 --> 32:33.260
+We can actually just install it.
+
+32:33.290 --> 32:43.760
+So again going back to our console since we're downloading everything we can do and PM install dash
+
+32:43.760 --> 32:48.030
+dash save Dev and we want to install.
+
+32:48.030 --> 32:54.840
+Let's say the yes lent config BMB
+
+32:58.600 --> 33:07.050
+and let's say we want a few more features perhaps we want to make sure that with yes Slint the import
+
+33:07.050 --> 33:08.820
+statements and export statements work.
+
+33:08.940 --> 33:20.130
+In that case we would downlow plug in import and let's say we also want to make sure that we have Lentini
+
+33:20.390 --> 33:26.720
+to make sure that the code has accessibility in mind that is it's geared towards people who have screen
+
+33:26.720 --> 33:33.290
+readers viewing web pages so it's accessible to everybody and we can use a plug in there that is yes
+
+33:33.290 --> 33:37.690
+Slint plug in GSX
+
+33:40.050 --> 33:43.590
+ally and so on.
+
+33:43.600 --> 33:53.250
+And so for all right typing with a mike in front of you is not the best idea.
+
+33:53.300 --> 34:03.550
+We made another type error here and let's fix that now now you see over here it's a lot of plug ins
+
+34:03.550 --> 34:04.450
+and configuration.
+
+34:04.450 --> 34:10.510
+And luckily for us there is a lot of tools out there and a lot of documentation on how to do this best
+
+34:10.510 --> 34:11.530
+practices.
+
+34:11.710 --> 34:18.220
+But again this is what's happening underneath the hood with create Briac tap all these smart developers
+
+34:18.220 --> 34:23.440
+are working for you to set this up in the best way possible for you.
+
+34:23.440 --> 34:27.460
+All right so now that we have this let's just add the air MBBS Len Twan just for now.
+
+34:27.460 --> 34:36.150
+I know we installed a few more things but for now just the FBM view on we can't just simply say extends
+
+34:38.860 --> 34:44.370
+and extends whatever rules we have with an array of whatever.
+
+34:44.530 --> 34:51.700
+Yes liberals We've downloaded in our case it is the Airbnb based rules.
+
+34:51.710 --> 34:56.430
+Again this is something that you can read up on when you download the package you go to there get Hobb
+
+34:56.460 --> 35:00.840
+and check out the Eastlink vague airbed BMB.
+
+35:01.060 --> 35:02.790
+I saved this run.
+
+35:02.800 --> 35:03.880
+NPM start
+
+35:08.880 --> 35:14.630
+and you see that because we've extended our rules we have a few more hours.
+
+35:14.640 --> 35:21.720
+We have the unexpected console's statement which we've added but also we have a missing semicolon air
+
+35:21.810 --> 35:24.670
+and a new line required at the end of file.
+
+35:25.050 --> 35:27.040
+Let's go back to our index.
+
+35:27.060 --> 35:34.230
+Jesus had a semi-colon and a new line at the end of the file save it and look at that automatically
+
+35:34.230 --> 35:40.890
+it updates to just one error which we created which is the console lock statement but everything is
+
+35:40.890 --> 35:41.590
+working.
+
+35:41.610 --> 35:43.730
+Ignore some of this stuff.
+
+35:43.960 --> 35:55.840
+If I refresh we get everything but we get that error of the console lock statement that we said before.
+
+35:55.870 --> 35:56.880
+All right.
+
+35:57.220 --> 35:59.970
+Let's go back to our Web pack config.
+
+36:00.800 --> 36:02.210
+What have we learned here.
+
+36:02.210 --> 36:06.910
+Well we learned that web back is pretty pretty complicated.
+
+36:07.100 --> 36:12.340
+Luckily they have really good documentation online that you can read up on.
+
+36:12.590 --> 36:14.930
+But the main principles stand.
+
+36:14.930 --> 36:24.010
+All we're doing is we're creating a butler that takes all our files in our case index.
+
+36:24.120 --> 36:29.850
+Yes if indexed RJ has had import statements that lead to another file and that file had endorsed him
+
+36:29.850 --> 36:31.240
+and saw lead to another file.
+
+36:31.400 --> 36:39.790
+Well it would read through all of those through the entry that we gave it it would then run through
+
+36:39.790 --> 36:45.450
+those modules and test out if any of them end up in J.S. or GSX extension.
+
+36:45.460 --> 36:49.100
+We're going to run them through Babel and then we're also going to link them as well.
+
+36:50.080 --> 36:58.990
+And finally we're going to put that to a distribution folder and for the VOLP or purposes we can also
+
+36:58.990 --> 37:06.970
+have a server running like we had here and it constantly checks to make sure that our Web site is lint
+
+37:06.970 --> 37:08.200
+free.
+
+37:08.200 --> 37:10.240
+I think that's enough wetback for now.
+
+37:10.390 --> 37:12.430
+We all need a break after this one.
+
+37:12.430 --> 37:13.960
+Hope you had fun.
+
+37:13.960 --> 37:19.050
+I think this is probably the toughest part of the course to really get.
+
+37:19.090 --> 37:25.900
+I personally thing that configuration like this in the future will be less and less important as the
+
+37:25.900 --> 37:30.670
+community moves towards less and less configuration because as you can see it's a lot of headache and
+
+37:30.670 --> 37:37.330
+you are really coding you're just following the documentation of a library which personally I'm not
+
+37:37.330 --> 37:39.720
+the biggest fan of but it's up to you.
+
+37:39.720 --> 37:41.930
+It's still a useful tool.
+
+37:41.950 --> 37:47.900
+My recommendation used create re-act app if you ever ever need to customize your right back.
+
+37:47.920 --> 37:55.410
+You can run NPM run eject and create re-act up and they'll give you access to this web pack config file.
+
+37:55.540 --> 38:00.670
+For now I need a break and so do you see in the next one Buh-Bye.

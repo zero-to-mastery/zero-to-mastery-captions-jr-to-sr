@@ -1,0 +1,229 @@
+WEBVTT
+
+00:00.960 --> 00:02.410
+Welcome back.
+
+00:02.550 --> 00:05.420
+We've gotten this part all done.
+
+00:05.520 --> 00:11.700
+We've created the JWT tokened and we're sending it out front to the client.
+
+00:11.700 --> 00:17.080
+Now the client is going to be able to send back the GW token and get the profile.
+
+00:17.130 --> 00:24.990
+Now there's one other step that we need to have here because we're going to try and incorporate session
+
+00:24.990 --> 00:34.800
+management as well with rattus and instead of just now using the data verify with the JWT token we're
+
+00:34.800 --> 00:46.770
+going to actually store the JWT Dogan in our rattus database and by storing it in our database we have
+
+00:46.860 --> 00:55.590
+full control to see what tokens are available what tokens we've given out and also revoke them any time
+
+00:55.590 --> 00:56.390
+that we want.
+
+00:56.430 --> 00:59.290
+All we need to do is just delete them from the database.
+
+00:59.400 --> 01:07.200
+And now even if a user tries to get the profile with that token because we've removed it it no longer
+
+01:07.200 --> 01:09.540
+is able to access that information.
+
+01:09.540 --> 01:16.290
+And this gives us a lot of power and maneuverability when a user hits sign up when a user hits sign
+
+01:16.290 --> 01:16.500
+out.
+
+01:16.500 --> 01:20.490
+For example we can't remove that token from our database.
+
+01:20.490 --> 01:29.490
+So in this video we're going to actually add rattus to our backend and store this JWT token into our
+
+01:29.540 --> 01:38.010
+read us database so that when a user checks and ask for the profile we check our rattus database for
+
+01:38.010 --> 01:38.910
+that token.
+
+01:38.910 --> 01:42.060
+And if all checks out we send them the package.
+
+01:42.120 --> 01:42.960
+Let's get started.
+
+01:44.840 --> 01:53.600
+In order to have rattus working and being able to use on our server we need to actually install the
+
+01:53.660 --> 02:00.380
+red S client and in our case we need the red is client from NPM
+
+02:05.040 --> 02:12.180
+and we see that it's a nice and PM install and it gives us a nice little example of why we can do let's
+
+02:12.180 --> 02:13.420
+install rattus for now.
+
+02:15.380 --> 02:20.740
+And by the way we're not going to add rattus to our dock or container yet we're going to do that.
+
+02:20.750 --> 02:22.600
+And one of the upcoming exercises.
+
+02:22.780 --> 02:27.020
+But for now because we're still developing it make sure everything works.
+
+02:27.110 --> 02:31.250
+We're gonna have it completely separate from our doctor container.
+
+02:31.250 --> 02:39.300
+Now I'm going to bring back the container so everything is running and we have the reddest package installed.
+
+02:40.520 --> 02:51.980
+Now in our seinen Let's go to our page and at the very top ad our new rattus package we simply require
+
+02:51.980 --> 02:57.910
+it from the Radice package we just installed.
+
+02:58.150 --> 03:06.830
+And now we see that in order to have access to it we simply do client equals red s dot create client.
+
+03:07.020 --> 03:12.110
+And once we create the client we can just do our commands that we've seen before with Reddy's.
+
+03:12.120 --> 03:18.010
+I can't say that I can say that I can check the H keys and do all these commands.
+
+03:18.030 --> 03:23.050
+Again there is a lot of really nice documentation here for our purposes though.
+
+03:23.160 --> 03:26.520
+Let's just create this client right now.
+
+03:28.270 --> 03:39.300
+We're going to say set up Berettas and create this client.
+
+03:39.470 --> 03:49.960
+And just to be descript If you're like actually naming it rattus client now this read as client as parameter
+
+03:50.500 --> 03:54.310
+actually receives as default local host.
+
+03:54.310 --> 03:56.290
+But I like being explicit.
+
+03:56.290 --> 04:03.130
+And when we actually transition to docker or another server we're going to have to say where the host
+
+04:03.430 --> 04:04.430
+is.
+
+04:04.990 --> 04:12.060
+For now I'm just going to say local host or our good old friend 1:27 0 one.
+
+04:12.120 --> 04:17.770
+Now if I save this I'll get an error saying that Radice connection failed.
+
+04:17.920 --> 04:21.050
+Well because we're not running rattus remember.
+
+04:21.160 --> 04:24.790
+In order for us to connect to something we have to start the read a server.
+
+04:25.030 --> 04:29.210
+And luckily for us in the red US S. we've already installed it right.
+
+04:29.250 --> 04:31.480
+We go back to our desktop.
+
+04:31.480 --> 04:39.860
+We see that yeah we have our rattus package here and we can just start it all just say that we're going
+
+04:39.860 --> 04:45.130
+to add a new window and let's make this a little bit bigger.
+
+04:46.120 --> 04:57.050
+And here I'm just going to go into my red folder and run the rattus server command.
+
+04:57.080 --> 04:57.530
+All right.
+
+04:57.530 --> 04:59.390
+It's ready to accept connections.
+
+04:59.540 --> 05:00.460
+Let's go back.
+
+05:01.830 --> 05:08.770
+And refresh and we see that we still are getting this error.
+
+05:09.110 --> 05:10.780
+Now why is this.
+
+05:10.850 --> 05:16.980
+Let's think about this based on what we've learned about docker and all these connections.
+
+05:17.250 --> 05:18.630
+What are we missing here.
+
+05:19.600 --> 05:25.150
+Well if you remember our back end is running in a docker container.
+
+05:25.160 --> 05:31.060
+This Stockard container has a whole different idea of what localhost is.
+
+05:31.070 --> 05:35.190
+It's completely different than what we have on our machine.
+
+05:35.330 --> 05:38.040
+That is our computer localhost.
+
+05:38.150 --> 05:45.140
+If we go to our doctor compose file we see that we do port forwarding in order for us to actually access
+
+05:45.160 --> 05:46.750
+localhost 3000.
+
+05:47.180 --> 05:51.770
+But for rattus we don't actually have any of that set up yet.
+
+05:52.750 --> 06:00.490
+So before we go ahead and even though we have our local server running we actually want it to be run
+
+06:01.000 --> 06:03.820
+on docker.
+
+06:03.820 --> 06:07.670
+Otherwise we have to change our entire setup.
+
+06:07.870 --> 06:16.480
+And I think this is a good step to make sure that we have a nice running rattus server within our doc
+
+06:16.490 --> 06:22.760
+file so that we don't have to worry about who is connected to what what is connected to where all we
+
+06:22.760 --> 06:27.920
+need to do is to make sure that we do some port forwarding so we can access that.
+
+06:27.930 --> 06:34.110
+So before we get into the next video I want to challenge you based on what we've learned about docker
+
+06:34.110 --> 06:35.220
+up until now.
+
+06:35.220 --> 06:42.420
+Can you quickly set up a new rattus service right down here and have it connected to the back end API
+
+06:42.690 --> 06:44.630
+so that you're getting this error.
+
+06:45.160 --> 06:46.980
+I'll see in that one by.

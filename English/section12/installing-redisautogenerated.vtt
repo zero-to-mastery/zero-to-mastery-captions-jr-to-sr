@@ -1,0 +1,184 @@
+WEBVTT
+
+00:01.090 --> 00:09.890
+Come back let's install rattus onto our laptop or computers in order to actually use it and test some
+
+00:09.890 --> 00:10.940
+commands.
+
+00:10.940 --> 00:16.880
+Now keep in mind when it comes to databases most of the time you won't actually be running from your
+
+00:16.880 --> 00:17.680
+computer.
+
+00:18.580 --> 00:26.120
+In most cases it's going to be on a server or another machine that is just dedicated to that database.
+
+00:26.260 --> 00:31.540
+And we're going to be doing the same for Radice but because we want to test it out make sure that we
+
+00:31.540 --> 00:34.940
+know the commands and we can run it locally as well.
+
+00:34.960 --> 00:39.920
+It's good to practice the skills now in order to download it.
+
+00:39.920 --> 00:41.380
+It's very very simple.
+
+00:41.420 --> 00:43.510
+We simply go to their download tab
+
+00:48.430 --> 00:53.470
+and we see here that they have daquiri images as well which we might use later on.
+
+00:53.470 --> 00:54.280
+Hint hint.
+
+00:54.430 --> 01:03.450
+But for now we're going to get the stable version 4.0 and you can click download here or if he keeps
+
+01:03.450 --> 01:08.140
+scrolling down you see that you have some commands that you can use to get it.
+
+01:08.200 --> 01:09.300
+So you have two options.
+
+01:09.310 --> 01:15.640
+You can either just click on the download link that is appear which will download a file as you can
+
+01:15.640 --> 01:16.490
+see over here.
+
+01:17.970 --> 01:23.240
+And with that fall you can actually just open it and then run these commands.
+
+01:24.200 --> 01:29.100
+But for now just because we have these available to us I'm going to run the commands.
+
+01:29.150 --> 01:33.820
+So the first one is to get this thing that will get us Radice installed.
+
+01:35.100 --> 01:38.820
+So let's open up a terminal here and run the command.
+
+01:38.820 --> 01:42.050
+You see that it's installing and wants their son.
+
+01:42.180 --> 01:53.770
+We have to open it up with the tar command and then finally we get CD now into the red S 4.0 0.9.
+
+01:53.790 --> 01:59.240
+You might have different version as long as it's above 4.0 you should be fine.
+
+01:59.350 --> 02:02.560
+And this folder was created for us so let's just go in there.
+
+02:02.600 --> 02:03.950
+I'm want to clear.
+
+02:04.660 --> 02:11.180
+And then we see that the final command that we need is make which executes something called the Makefile.
+
+02:11.670 --> 02:15.850
+So let's do that.
+
+02:16.050 --> 02:21.900
+And this is going to be running to set everything up for us if we go back to the documentation.
+
+02:21.900 --> 02:30.170
+We see that the only thing we can do now is to run the source Retta server that is to run the red a
+
+02:30.210 --> 02:36.960
+server just like we did with postscripts to make sure that the Postgres server is running and sprawling
+
+02:36.960 --> 02:43.080
+and we are running on some port and then we can run the red S C like command to actually have access
+
+02:43.530 --> 02:47.030
+to this database and run some rattus commands.
+
+02:47.040 --> 02:50.970
+So let's open up let's minimize this and go back and.
+
+02:51.000 --> 02:51.560
+All right.
+
+02:51.630 --> 02:53.890
+We see that everything has been loaded.
+
+02:53.910 --> 03:01.580
+It gives us a suggestion to run make test to make sure that everything has been installed correctly.
+
+03:03.050 --> 03:05.630
+And it all run through some tests here.
+
+03:05.690 --> 03:10.760
+I'm not going to go through that just because I trust that everything was said but it's always good
+
+03:10.760 --> 03:12.880
+to run make test.
+
+03:12.930 --> 03:21.820
+All right so here you see that we've downloaded the tar file we've opened it into the Radice folder
+
+03:21.910 --> 03:25.990
+and now I'm inside of this folder of a nice background today.
+
+03:27.650 --> 03:31.080
+For any of those wondering where I'm getting these backgrounds from.
+
+03:31.080 --> 03:37.610
+Why have this desktop app called Art Pipp that has a different painting every day which is nice.
+
+03:37.610 --> 03:44.060
+Anyway back to what we're doing I can go over here and type source remember just like the documentation
+
+03:44.240 --> 03:44.980
+suggested.
+
+03:45.370 --> 03:50.390
+Read s server to start the server for Precentor.
+
+03:50.810 --> 03:57.230
+You'll see that it asks on my computer if they have if I can give access so that it accepts incoming
+
+03:57.230 --> 03:59.750
+network connections I'll allow it.
+
+03:59.960 --> 04:06.460
+And you see that we're now ready to accept connections and it gives you a nice little graphic here too
+
+04:06.460 --> 04:08.980
+that you can see.
+
+04:09.010 --> 04:09.900
+All right.
+
+04:10.210 --> 04:11.740
+I'm going to move this on this side.
+
+04:11.800 --> 04:18.040
+So the servers running now and I'm going to open up another window and with this one we're going to
+
+04:18.040 --> 04:19.090
+run the CLID.
+
+04:19.240 --> 04:28.940
+I'm going to say source for I have to go into the reddest folder and then run source rattus see a lot.
+
+04:29.590 --> 04:30.640
+And there we go.
+
+04:30.700 --> 04:35.610
+We're connected to this server and we can start running some Radice commands.
+
+04:35.980 --> 04:40.840
+And the next video we're going to learn some of these commands and how we can actually enter data into
+
+04:40.840 --> 04:42.020
+our rattus server.
+
+04:42.490 --> 04:43.210
+I'll see one.

@@ -1,0 +1,604 @@
+WEBVTT
+
+00:01.310 --> 00:06.020
+Now I'm going to leave a resource of how the configuration file in engine X works.
+
+00:06.020 --> 00:11.290
+There's great documentation online and as with all configuration you don't have to memorize the syncs.
+
+00:11.300 --> 00:16.250
+These are just things that you're going to look up when you actually implement a load balancer.
+
+00:16.250 --> 00:20.030
+So I'm going to just start off with some basic setup first.
+
+00:20.090 --> 00:27.130
+I'm going to say that the worker process is going to be one where I don't need the call.
+
+00:27.540 --> 00:28.770
+Now what does that mean.
+
+00:28.890 --> 00:35.170
+Well the number of worker processes is defined by this file and can be whatever we want we can add 2
+
+00:35.170 --> 00:36.140
+3 four.
+
+00:36.150 --> 00:37.850
+These are worker processes.
+
+00:39.560 --> 00:43.100
+And it usually matches the number of C-p use you want to use.
+
+00:43.100 --> 00:46.910
+So for example if you had for use on your machine that you might use for.
+
+00:46.910 --> 00:48.880
+For now I'm just going to leave it or one.
+
+00:48.980 --> 00:51.020
+Next we define the events
+
+00:53.620 --> 01:02.320
+and these events are going to have something called Worker connections and I'm going to say it's going
+
+01:02.320 --> 01:04.790
+to have 1024.
+
+01:05.070 --> 01:08.870
+And you see thousand twenty four or five 16 as the default here.
+
+01:08.880 --> 01:09.900
+Quite a lot.
+
+01:09.900 --> 01:17.010
+Again this sets the maximum number of simultaneous connections that can be opened by a worker process.
+
+01:17.010 --> 01:23.070
+So we have one worker process and the are the max simultaneous connections we can have.
+
+01:23.200 --> 01:25.180
+And then finally we get to the fun part.
+
+01:25.180 --> 01:26.670
+We defined the HP
+
+01:29.710 --> 01:31.600
+and this TTP.
+
+01:31.810 --> 01:38.950
+Well we'll have to tell it that we want the load balancer and Gen X to pass on to the servers that we
+
+01:38.950 --> 01:40.840
+have.
+
+01:40.860 --> 01:48.660
+So in our case I'll say server web one is going to be on port three thousand.
+
+01:48.860 --> 01:56.500
+And these are going to match the names that we have over here and the ports associated with them.
+
+01:57.310 --> 02:03.760
+So I'm going to say server one is going to be well one three thousand.
+
+02:03.930 --> 02:08.510
+The next one will be two three thousand one.
+
+02:08.700 --> 02:20.220
+And then finally server web 3 will be on port three thousand two.
+
+02:20.300 --> 02:27.380
+And now that we think about it most likely these web servers are going to be opening to the same port
+
+02:27.440 --> 02:30.930
+because we're just replicating them replicating them replicating them.
+
+02:31.130 --> 02:36.340
+So most of the time these are going to have port let's say 3000 consistently open.
+
+02:36.440 --> 02:41.030
+So I'm going to just change that back to 3000 3000 and do the same.
+
+02:41.030 --> 02:41.750
+And my doc Rafal
+
+02:46.630 --> 02:52.700
+going back here I'm going to now we have to make sure that we can use and reference these somehow.
+
+02:53.170 --> 02:59.340
+And the default way we do this is we use upstream and upstream we can just call this whatever we want
+
+02:59.470 --> 03:08.480
+let's just call it my app 1 and we're going to wrap these up here and I'll show you what this does in
+
+03:08.590 --> 03:09.510
+the next life.
+
+03:10.090 --> 03:16.180
+So we've said that the upstream is going to be my app one that will contain these three servers and
+
+03:16.180 --> 03:20.030
+not server server.
+
+03:20.080 --> 03:25.390
+We can now say that the server is going to listened
+
+03:28.500 --> 03:33.770
+to port 80 and I got to make sure I don't forget the semi-colons here
+
+03:38.150 --> 03:49.770
+and then I'm going to say that the location of the default route is going to lead us to what we call
+
+03:49.770 --> 03:50.990
+a Proxy Pass.
+
+03:51.010 --> 03:58.620
+So remember how he said it's going to be a reverse proxy Proxy Pass simply says I want you to access
+
+04:01.190 --> 04:02.890
+the my app.
+
+04:02.890 --> 04:05.060
+One we just created.
+
+04:05.120 --> 04:10.420
+So this upstream my app one can now be referenced in the proxy pass over here.
+
+04:10.490 --> 04:16.670
+So we're simply saying hey if we hit the main route like this just pass all those down to server one
+
+04:16.670 --> 04:19.580
+server to server three.
+
+04:19.680 --> 04:24.020
+Again this is all pretty well documented and their configuration.
+
+04:24.030 --> 04:25.660
+It's unique to engine x.
+
+04:25.800 --> 04:31.740
+So it might look confusing now but is just the default way to set up a load balancer.
+
+04:31.890 --> 04:33.920
+And now we have everything pretty much set up.
+
+04:34.260 --> 04:41.040
+But we can also do some cool things with engine X for example if I was serving static files I can say
+
+04:41.040 --> 04:55.440
+location and by using this little syntax I can say serve any CSX javascript gif.
+
+04:55.510 --> 04:56.310
+What else we have.
+
+04:56.320 --> 05:01.600
+We have JPEG we have PMG files
+
+05:04.180 --> 05:11.830
+and anything that includes those I want you to just cache.
+
+05:11.890 --> 05:16.450
+So if we ever have any of these files with these extensions.
+
+05:16.450 --> 05:25.330
+Well in that case just cache them using expires parameter and we can say anything you want like 168
+
+05:25.510 --> 05:27.830
+hours and that's it.
+
+05:27.870 --> 05:31.000
+Let's make sure I remember all the semi-colons here.
+
+05:31.170 --> 05:35.490
+And this is a typical engine X configuration file.
+
+05:35.520 --> 05:40.380
+Again all we're really doing is just saying hey reference my app 1 and this is going to include these
+
+05:40.380 --> 05:47.280
+servers and we're going to do a proxy pass through these and we're just going to listen to port 80.
+
+05:47.280 --> 05:48.700
+All right so let's save this.
+
+05:48.720 --> 05:52.070
+I'm going to go to Dr. compose.
+
+05:52.190 --> 05:58.850
+We now have an engine X folder that will run the doc file and is going to move our configuration file
+
+05:59.240 --> 06:02.420
+that we've just created onto our container.
+
+06:02.540 --> 06:04.900
+So let's give this a run and see how this works.
+
+06:06.610 --> 06:17.890
+First let's run NPM for docker compose up dash dash build and see if everything is working.
+
+06:20.240 --> 06:27.830
+And we get a bit of an error here because I did make a tiny mistake and that is over here it should
+
+06:27.830 --> 06:34.520
+be worker processes even though it's one because it's expecting sometimes more than one it should be
+
+06:34.520 --> 06:36.250
+worker processes.
+
+06:36.380 --> 06:38.600
+So let's save and try that again.
+
+06:38.600 --> 06:43.520
+Going to close and redo all of that
+
+06:47.340 --> 06:51.210
+hey look at that server running at these ports.
+
+06:51.210 --> 06:55.630
+Remember this local host is within the container though so we can't really access it.
+
+06:55.890 --> 06:59.160
+But we have our web servers running.
+
+06:59.180 --> 07:02.570
+So if I go to local host port 80 Now let's give that a go.
+
+07:07.350 --> 07:13.110
+Localhost and instead of Port 3000 will do port 80.
+
+07:13.110 --> 07:16.720
+All right we got some sort of a response.
+
+07:16.860 --> 07:18.910
+If I open up the console there's no errors.
+
+07:19.090 --> 07:20.140
+But check this out.
+
+07:20.260 --> 07:23.900
+If I go back now I see traffic.com requested.
+
+07:24.040 --> 07:29.690
+And also I have been hit web one has been hit.
+
+07:29.830 --> 07:33.450
+So it just responding.
+
+07:33.530 --> 07:37.870
+Now if we go back and refresh again go back
+
+07:41.390 --> 07:42.040
+we see that.
+
+07:42.070 --> 07:42.900
+Oh OK.
+
+07:42.920 --> 07:44.940
+Now we have too.
+
+07:44.960 --> 07:51.120
+That was head also with three that was head and Fabrikant as requested from Webb won and the load balancer
+
+07:51.200 --> 07:56.180
+just in order hitting each one of these servers.
+
+07:56.300 --> 08:02.660
+And if we go back to the configuration file you can actually define up here how you want to distribute
+
+08:02.660 --> 08:03.130
+the weight.
+
+08:03.140 --> 08:08.950
+For example you want WEP one to have more you get twice as many requests as well two and three.
+
+08:09.050 --> 08:10.000
+You can do that.
+
+08:10.040 --> 08:11.440
+You can have different orders.
+
+08:11.450 --> 08:14.230
+But for now is just hitting them one by one in order.
+
+08:14.240 --> 08:15.140
+One two three.
+
+08:15.140 --> 08:16.320
+Then one two three.
+
+08:16.460 --> 08:20.020
+One two three very very cool.
+
+08:20.020 --> 08:22.440
+And that was very hard to implement.
+
+08:22.490 --> 08:23.700
+Right.
+
+08:23.930 --> 08:25.550
+Now here's the exciting part.
+
+08:25.550 --> 08:27.550
+Let's have some fun with this.
+
+08:27.560 --> 08:30.600
+We now have a load balancer that's passing down requests.
+
+08:30.770 --> 08:35.980
+What if we just hit it with a ton of requests with hundreds and hundreds of request.
+
+08:36.140 --> 08:41.440
+Well we can do a bit of a load balancing testing a load testing.
+
+08:41.750 --> 08:45.720
+And luckily for us there's a ton of resources that we can use here.
+
+08:45.740 --> 08:52.670
+We're going to use the low test NPM package but there's a lot of fun sounding ones like artillery.
+
+08:52.740 --> 09:01.280
+There's sieged that you can use and also the very popular w k to and all of them pretty much do the
+
+09:01.280 --> 09:01.810
+same thing.
+
+09:01.850 --> 09:07.220
+They simulate requests and we can tell them how many requests we want to hit at an endpoint so let's
+
+09:07.220 --> 09:09.000
+use a low test.
+
+09:09.010 --> 09:13.730
+All we need to do is just globally install low test which I already have.
+
+09:13.730 --> 09:19.550
+And you might have to run the sudo command and after that you have the low test command available to
+
+09:19.550 --> 09:20.000
+you.
+
+09:20.300 --> 09:22.210
+So let me demonstrate something.
+
+09:22.640 --> 09:27.170
+I'm going to say low test and run this command.
+
+09:27.170 --> 09:28.650
+Let me make this a little bit bigger.
+
+09:29.870 --> 09:36.190
+Now low test dash t simply says t four time limit that is.
+
+09:36.190 --> 09:44.750
+I want you to do this low test for five seconds and then dash C means how many number of clients do
+
+09:44.750 --> 09:45.930
+we want to create.
+
+09:46.280 --> 09:54.260
+So we're creating 100 clients and 100 of them is going to arrive concurrently onto the server.
+
+09:56.510 --> 10:00.790
+And then finally we have the dash dash our P.S. And this stands for.
+
+10:00.870 --> 10:02.840
+The rate of requests per second.
+
+10:02.870 --> 10:07.930
+So we're going to send 100 requests per second to localhost 80.
+
+10:08.120 --> 10:11.120
+Once I hit Enter check out what happens on the right side.
+
+10:11.640 --> 10:14.360
+Ready let's give it a go.
+
+10:16.510 --> 10:18.900
+How cool is that.
+
+10:18.940 --> 10:25.270
+And you can see here it's going really fast but it's turning from web one two three one two three one
+
+10:25.270 --> 10:27.700
+two three.
+
+10:27.810 --> 10:30.810
+And we also get a nice little summary of what we've done.
+
+10:31.730 --> 10:34.800
+If I make this a little bit smaller so we can see better.
+
+10:34.910 --> 10:40.290
+We see that we've completed four hundred ninety nine requests 100 requests per second.
+
+10:40.370 --> 10:46.850
+As we've said a hundred concurrency level again as the parameters that we gave it we had localhost 80
+
+10:48.080 --> 10:55.600
+we ran the test for five seconds and the mean latency how long it took to respond was 5.1 milliseconds
+
+10:55.780 --> 10:56.830
+fairly fast.
+
+10:56.830 --> 11:03.590
+And it shows you some more info of how many of the requests served within a certain time so that looked
+
+11:03.770 --> 11:04.940
+pretty good.
+
+11:04.940 --> 11:06.640
+Now here's a little fun experiment.
+
+11:07.760 --> 11:14.020
+What if I close this and instead of the docker container that has the load bouncer.
+
+11:14.140 --> 11:17.560
+What if we just run NPM start.
+
+11:17.560 --> 11:24.700
+I've set it up so that the server which is just one single server is listening to localhost three thousand
+
+11:24.700 --> 11:29.230
+Now remember our server dodgiest file is just a simple server.
+
+11:29.230 --> 11:35.200
+So now that I'm running it on localhost 3000 we can test what happens when there's no low balancer and
+
+11:35.200 --> 11:36.380
+just one server.
+
+11:36.640 --> 11:42.220
+All we need to do is run the same test but this time instead of port 80 we do port three thousand.
+
+11:42.400 --> 11:43.220
+Let's give it a go.
+
+11:45.260 --> 11:48.370
+And you see that the server is responding with console logging it.
+
+11:48.410 --> 11:55.430
+It's been hit for five seconds and then we have a response.
+
+11:55.770 --> 11:56.520
+That's interesting.
+
+11:56.520 --> 12:00.130
+So let's have a look at this.
+
+12:00.230 --> 12:06.460
+We see here that we have again 500 completer quests no errors.
+
+12:06.460 --> 12:14.920
+Just like before but the mean latency was 2.3 milliseconds versus 5.1 milliseconds when we had the load
+
+12:14.920 --> 12:16.350
+balancer.
+
+12:16.360 --> 12:18.000
+Hmm interesting.
+
+12:18.430 --> 12:24.370
+So not having a low balance here was actually faster here because all the metrics are the same except
+
+12:24.370 --> 12:27.710
+for the fact that the mean latency was a lot faster.
+
+12:28.090 --> 12:30.130
+And that might make sense.
+
+12:30.130 --> 12:36.190
+One because well we haven't hit it to too much with too much traffic.
+
+12:36.370 --> 12:42.370
+And also the fact that we're running this low balancer in one container that has a low balancer and
+
+12:42.370 --> 12:45.790
+three web servers in real life we wouldn't actually do this.
+
+12:45.790 --> 12:53.140
+Each one of those services will be on different machines different containers so that it causes a bit
+
+12:53.140 --> 12:54.790
+of delay as well.
+
+12:54.790 --> 12:56.580
+But let's increase a few more things.
+
+12:56.590 --> 12:58.840
+Let's say that now I want to have
+
+13:02.290 --> 13:04.340
+500 requests per second.
+
+13:04.510 --> 13:07.830
+I'm going to press enter.
+
+13:07.850 --> 13:08.290
+All right.
+
+13:08.300 --> 13:08.810
+That's good.
+
+13:08.810 --> 13:10.050
+We're not getting any errors.
+
+13:10.070 --> 13:12.290
+It's able to complete the requests.
+
+13:12.290 --> 13:13.020
+That's great.
+
+13:13.130 --> 13:13.840
+What if I do.
+
+13:13.850 --> 13:18.160
+Even more what if I do a thousand concurrent requests.
+
+13:22.070 --> 13:23.630
+All right so it does some work.
+
+13:23.630 --> 13:26.900
+It has two thousand nine hundred eighty nine complete requests.
+
+13:26.900 --> 13:32.240
+Let's run the doc or compose the load balancer and see how that's going to work.
+
+13:37.440 --> 13:41.550
+Again I'm going to run the same thing but this time on port 80.
+
+13:41.730 --> 13:43.170
+Let's run that.
+
+13:43.380 --> 13:45.500
+Our head is doing some work doing some work
+
+13:49.280 --> 13:50.680
+and homeboy.
+
+13:50.780 --> 13:53.860
+Those numbers don't look very good do they.
+
+13:54.650 --> 14:04.970
+We have mean latency of 140 milliseconds versus 2.9 seconds and the completed requests are well actually
+
+14:05.030 --> 14:07.850
+less than when we had the one server.
+
+14:08.390 --> 14:16.010
+And again because we're running this on a container it is slower than if he actually implemented load
+
+14:16.010 --> 14:23.530
+balancing properly but using this tool I want you to play around and experiment with different things.
+
+14:23.580 --> 14:30.450
+See if he can make this load balancer faster than the local host method.
+
+14:30.450 --> 14:35.850
+Mind you if you're running a container you may not get that but see how far you have to go to make this
+
+14:35.850 --> 14:36.370
+fail.
+
+14:37.710 --> 14:44.850
+I hope you have a good idea of running a load balancer how it might work how you can implemented and
+
+14:44.850 --> 14:51.150
+also how to do something like load testing to see how good your server is at getting request and when
+
+14:51.150 --> 14:56.580
+you might need to actually upgrade maybe have more servers maybe have a load balancer in front of your
+
+14:56.580 --> 14:57.160
+server.
+
+14:59.130 --> 14:59.700
+All right.
+
+14:59.700 --> 15:04.230
+Go have fun out there and low test and have fun with the low test tool.
+
+15:04.410 --> 15:05.650
+I'll see in the next one.
+
+15:05.920 --> 15:06.460
+Bye bye.

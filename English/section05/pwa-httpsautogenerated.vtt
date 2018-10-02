@@ -1,0 +1,202 @@
+WEBVTT
+
+00:02.230 --> 00:03.230
+Welcome back.
+
+00:03.520 --> 00:06.540
+In this video we're going to talk about this first point.
+
+00:06.670 --> 00:07.780
+Yes.
+
+00:08.230 --> 00:10.610
+And why we needed for progress of webapps.
+
+00:10.990 --> 00:19.670
+Now progressive webapps have a certain checklist you can check out on the progressive Web app checklist.
+
+00:19.850 --> 00:23.030
+And I know I know I said that there isn't a checklist.
+
+00:23.030 --> 00:28.970
+Think of it think of progressive webapps as a running list but that's because these are probably going
+
+00:28.970 --> 00:32.330
+to get constantly updated and changed.
+
+00:32.330 --> 00:37.860
+Now this checklist as you go through it does look a little bit overwhelming.
+
+00:38.890 --> 00:44.780
+But we've been following good practices while building our apps just like we did with Robur friends
+
+00:44.800 --> 00:48.200
+up and we've actually done most of these things.
+
+00:48.590 --> 00:58.800
+So that's why instead of showing you this we only really need to focus on three main things that a progressive
+
+00:58.880 --> 01:00.930
+Web app needs to do.
+
+01:01.140 --> 01:07.890
+Now besides these There's a few features but the adoption for them such as Push Notifications haven't
+
+01:07.890 --> 01:13.560
+been that smooth or are still in the works.
+
+01:13.560 --> 01:19.770
+So for now we're going to focus on things that you can implement right now fully and be confident that
+
+01:19.770 --> 01:22.190
+they're going to work in your app.
+
+01:22.230 --> 01:32.940
+So yes HEG P.S. As you know since we mentioned it a little bit in the SSA section prevents bad actors
+
+01:33.210 --> 01:41.750
+from tampering with communications between our app and browser so that if we're sending let's say a
+
+01:41.750 --> 01:49.940
+user name and password to our server we can encrypt it so that that message that includes our password
+
+01:50.180 --> 01:59.450
+travels to the server in an encrypted fashion so that if Bob the evil third party hacker is trying to
+
+01:59.630 --> 02:06.230
+intercept the messages and read them even if he intercepts the message he won't understand it because
+
+02:06.260 --> 02:07.750
+it's encrypted.
+
+02:08.120 --> 02:11.920
+And again this is something that we talked about in my previous course.
+
+02:11.960 --> 02:22.360
+Now Google is really pushing for this TTP US encryption and if we go back to our Web sites we see that
+
+02:23.100 --> 02:28.100
+yes we have this little nice lock icon with secure.
+
+02:28.310 --> 02:29.660
+That's a good sign.
+
+02:29.690 --> 02:34.910
+Chrome has actually updated so that if you have any sort of forms on your Web site and they're not a
+
+02:34.910 --> 02:38.930
+shitty B-S they'll show up here is not secure.
+
+02:39.110 --> 02:42.650
+Pretty much schaming Web sites for now using a DBMS.
+
+02:42.650 --> 02:49.220
+So anytime you're sending data from the Cline to the server you should be using a sheet to press.
+
+02:49.250 --> 02:53.030
+Now why do we need that though for progressive Web apps.
+
+02:53.240 --> 02:58.370
+And that is because progressive Web apps use some features that we're going to talk about in other videos
+
+02:59.360 --> 03:08.230
+that require Yes for security reasons although this is a requirement for progress of web app.
+
+03:08.540 --> 03:14.240
+In general you should always serve your web sites if there's any sort of communication with the server
+
+03:14.690 --> 03:22.720
+through and if we go to our lighthouse report you see that when you scroll to progressive Web app and
+
+03:22.720 --> 03:28.810
+we check out the nine past audits that we had we have uses HTP Yes.
+
+03:28.960 --> 03:32.710
+As one of the requirements but how did that happen.
+
+03:32.710 --> 03:34.960
+How do we have a DiPiazza ready.
+
+03:34.990 --> 03:41.350
+And luckily for us we get this out of the box with get how pages you can see over here that this link
+
+03:41.350 --> 03:50.410
+that was generated is a GTP s so any time you put a website on how pages we automatically get this encryption
+
+03:51.040 --> 03:52.870
+which is fantastic.
+
+03:55.030 --> 04:02.080
+Not all web sites can be hosted on get pages you probably want to have your own server your own domain
+
+04:02.080 --> 04:13.660
+name well the easiest way to get HEG piece is probably through Let's encrypt let's encrypt is a free
+
+04:14.120 --> 04:21.380
+and in rights it says over here it's a free automated and open certificate authority and they're fantastic
+
+04:21.530 --> 04:29.300
+to use and a certificate authority is just this authority that says I'll give you a certificate to certify
+
+04:29.330 --> 04:36.710
+that yes you are indeed whoever you say you are whatever your domain name is and let's encrypt gives
+
+04:36.710 --> 04:39.040
+you free certificates.
+
+04:39.230 --> 04:43.550
+That is really really easy to set up and they have great documentation for you to use.
+
+04:43.970 --> 04:45.970
+I highly recommend them.
+
+04:46.020 --> 04:54.210
+You also have something like CloudFlare and CloudFlare is a Cdn or a content delivery network which
+
+04:54.210 --> 04:57.440
+we're going to talk about in later sections.
+
+04:57.660 --> 05:03.870
+But for now you can think of them as a server that you can put your files on and just like get pages
+
+05:03.870 --> 05:14.370
+that host your files on their servers CloudFlare hosts your site on their pages and automatically through
+
+05:14.370 --> 05:16.210
+them you get a sheet.
+
+05:16.280 --> 05:17.270
+Yes.
+
+05:17.460 --> 05:23.880
+And if you go to their pricing they're actually very very generous and there's a free plan for personal
+
+05:23.880 --> 05:27.630
+blog posts and any simple web sites that you have.
+
+05:27.630 --> 05:33.180
+Again I highly recommend them and they actually do improve your performance of the Web site as well.
+
+05:33.180 --> 05:39.770
+Again something that we'll get into and the performance part 3 Section going back to our Web site.
+
+05:39.970 --> 05:46.740
+This is something that we get out of the box our app is going to work with all the other features of
+
+05:46.740 --> 05:54.720
+progressive Web app because it's on pages and we automatically get this B.S. also and we can double
+
+05:54.720 --> 06:04.610
+check over here with prepacked hacker news that yep indeed they are using a sheet CPS as well.
+
+06:05.730 --> 06:06.170
+All right.
+
+06:06.240 --> 06:07.680
+That's it for now.
+
+06:07.680 --> 06:09.200
+I'll see you in the next one.
+
+06:09.200 --> 06:09.710
+Bye bye.

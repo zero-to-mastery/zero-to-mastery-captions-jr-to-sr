@@ -1,0 +1,565 @@
+WEBVTT
+
+00:01.180 --> 00:05.790
+Walk them back now that we have a nice sign an authentication function.
+
+00:06.070 --> 00:12.220
+It's time for us to generate the JWT token and actually send it to the user so we can start using it.
+
+00:12.220 --> 00:15.270
+And you can see how JWT tokens work.
+
+00:15.460 --> 00:25.800
+Now ideally what we want to do is something like this instead of returning just the data object that
+
+00:25.800 --> 00:34.310
+is the user object with ID email name and other fields that the database may have.
+
+00:34.620 --> 00:37.690
+Let's add a now other logic here.
+
+00:37.830 --> 00:39.390
+I'm going to say that in here
+
+00:43.400 --> 00:44.910
+we want to check something first.
+
+00:44.960 --> 00:51.920
+First we want to check that we have data ID from whatever the response was just to make sure that we
+
+00:51.920 --> 00:57.020
+indeed have the user that we need or the database return something that we can use.
+
+00:57.050 --> 01:03.590
+And let's just add another check that our DOT e-mail and we can do other checks here but this should
+
+01:03.590 --> 01:09.240
+be enough to verify that this data is in fact the user and we'll do a ternary operator.
+
+01:09.260 --> 01:17.540
+I'm going to say if this exists then I want you to respond with the user data or if it doesn't.
+
+01:17.540 --> 01:22.420
+Once again we can just use a promise that reject.
+
+01:22.500 --> 01:29.950
+A really really useful function to use and for now just to simplify things we're going to respond with
+
+01:30.070 --> 01:36.470
+whatever data we received you might actually want to return a string response here that doesn't give
+
+01:36.470 --> 01:42.470
+away too much information because right now we would be potentially sending data to the front and from
+
+01:42.470 --> 01:44.620
+the database which we don't really want to do.
+
+01:44.630 --> 01:50.960
+But for debugging purposes it's nice to have now because if somehow something fails I can see.
+
+01:50.960 --> 01:54.550
+All right what am I getting rejections with.
+
+01:54.680 --> 01:56.750
+And hopefully help us debug better.
+
+01:58.270 --> 02:05.890
+Now within here I like naming things nice and clean and in our case instead of just responding with
+
+02:06.010 --> 02:09.730
+the data we want to do something where we create a user session.
+
+02:09.730 --> 02:14.920
+So I'm going to change this to a function that we're going to create called create sessions and this
+
+02:14.980 --> 02:18.770
+create Sessions is going to receive the data.
+
+02:19.600 --> 02:27.910
+Object and this data object which hopefully is a user will be used and create sessions and create Sessions
+
+02:28.270 --> 02:35.140
+is going to return a promise a promise that includes all the user information that we need plus the
+
+02:35.140 --> 02:38.160
+Tokin the new token that we're going to generate.
+
+02:38.210 --> 02:47.790
+So let's create this function I'm going to say Konst create sessions which is going to receive data
+
+02:49.650 --> 02:51.610
+or let's just say user for now.
+
+02:52.960 --> 02:59.840
+And this function is now going to create our session for the user.
+
+02:59.910 --> 03:10.550
+Now in here we want to create the JJB token and return user data let's say and in order for us to create
+
+03:10.550 --> 03:19.790
+a JWT token we need to install the JND package from as you know and B.M. if we go over here this is
+
+03:19.790 --> 03:21.170
+the package we're going to use.
+
+03:21.170 --> 03:30.320
+We simply run NPM install Jason tokin and they have nice simple documentation for us to use and you
+
+03:30.320 --> 03:35.640
+can see that we can just create a token but by running this command nice and simple.
+
+03:35.780 --> 03:36.660
+So let's do that.
+
+03:36.680 --> 03:42.040
+I'm going to run NPM install when I close our container for now.
+
+03:42.860 --> 03:49.940
+And Ron the and so for Jason Webb token and that was nice and quick.
+
+03:50.090 --> 03:57.050
+Now once we have that too if we scroll down we simply require it and then sign the token.
+
+03:57.260 --> 03:59.560
+I'm going to copy this.
+
+03:59.610 --> 04:01.420
+Let's go all the way up here.
+
+04:03.090 --> 04:06.180
+I'm going to require the token and then I use Konst here.
+
+04:07.140 --> 04:17.300
+All right so we have the JWT object now that we can use to create token and in here let's create a function
+
+04:17.300 --> 04:20.520
+called sign token now.
+
+04:20.720 --> 04:22.540
+And they create session.
+
+04:22.790 --> 04:32.700
+I'm going to grab the user or email and ID which again and we check for over here so we make sure that
+
+04:32.700 --> 04:41.050
+we have data ID data and email from the parameter user that we receive.
+
+04:41.270 --> 04:47.600
+And we want to create a token that is going to be the sign token.
+
+04:47.900 --> 04:52.670
+But again I would like keeping things simple and function small song and create a new function called
+
+04:52.880 --> 05:03.990
+sign token and this sign token is going to receive the let's say e-mail of the user to use in order
+
+05:03.990 --> 05:05.100
+to sign the token.
+
+05:05.320 --> 05:14.130
+All right let's create a new function Konst sign token and again making functions nice and small means
+
+05:14.130 --> 05:18.420
+that well we can test them easier when we actually write tests.
+
+05:18.420 --> 05:25.340
+It's going to be simpler because while there are nice small chunks that we can unit test right and this
+
+05:25.460 --> 05:32.290
+sign token function is going to receive the email.
+
+05:32.380 --> 05:43.720
+And let's just have a JWT payload that we're going to use and this JWT payload is going to have the.
+
+05:44.070 --> 05:46.110
+The email.
+
+05:46.360 --> 05:52.660
+Now payload is just if you look at the documentation this is just common naming If you see over here
+
+05:53.260 --> 06:00.040
+we can sign the token with some sort of data because remember GW tokens actually hold data.
+
+06:00.220 --> 06:04.540
+When you decode it you can actually find out what object it contains.
+
+06:04.540 --> 06:10.430
+And I said that we don't really want sensitive information in a JWT tokin in our case.
+
+06:10.590 --> 06:11.550
+Email is fine.
+
+06:11.550 --> 06:16.800
+You might want to use ID but something that might be useful for you if you want to decode this token
+
+06:16.830 --> 06:18.400
+and use it later on.
+
+06:18.480 --> 06:26.250
+For us let's just keep the email as the payload of JWT so that we sign a token with the user's email
+
+06:27.480 --> 06:33.110
+and we can simply just return here and finally sign our token.
+
+06:33.210 --> 06:40.920
+So I'm just copying from whatever the documentation said you want to use JWT sign and this payload is
+
+06:41.010 --> 06:43.960
+going to be the payload that we just created.
+
+06:46.030 --> 06:51.100
+And here you want a secret in order to sign this again something very very important that you don't
+
+06:51.100 --> 06:58.050
+want people to know and as soon as I said that something should go blank in your head and that means
+
+06:58.260 --> 07:04.770
+well that's a very very secure thing that you should probably have an environmental variable for.
+
+07:04.770 --> 07:11.220
+For now though remember with environmental variables you'll have to do process thought and thought let's
+
+07:11.220 --> 07:17.640
+say JWT secret or something like that but because we've already gone through that and we already know
+
+07:17.640 --> 07:27.190
+how to do it I'm just going to keep it simple and say JWT secret and we're going to sign up with that.
+
+07:27.220 --> 07:30.580
+And by the way with GWG you can do some interesting things.
+
+07:30.580 --> 07:40.550
+For example you can give it options such as expires Dan and we can give it how many days or seconds.
+
+07:40.570 --> 07:43.850
+JWT token expires in which is a really nice feature.
+
+07:43.870 --> 07:45.820
+So let's just say two days.
+
+07:45.880 --> 07:51.210
+For now just for fun even though with JWT you can do this.
+
+07:51.280 --> 07:56.500
+One of the main drawbacks with them is that when it comes to users signing out it's kind of hard to
+
+07:56.500 --> 08:04.900
+revoke these tokens and there are ways around it but by using red S and our method of sessions it's
+
+08:04.900 --> 08:11.950
+going to become really really easy to actually remove the token any time the user signs up.
+
+08:11.950 --> 08:14.250
+But anyway for now let's leave it like that.
+
+08:14.290 --> 08:21.310
+We're just returning a JWT token now we're just signing the token and now we have a token and create
+
+08:21.550 --> 08:24.160
+sessions nice and simple.
+
+08:24.160 --> 08:28.160
+Now let me save this and run my docker container again.
+
+08:28.420 --> 08:30.210
+We just run docker compose up.
+
+08:30.250 --> 08:32.910
+It's already been built so we don't need the dash dash.
+
+08:32.920 --> 08:33.220
+Bill
+
+08:37.640 --> 08:37.850
+all right.
+
+08:37.850 --> 08:39.050
+Looks like there's no errors.
+
+08:39.050 --> 08:40.410
+That's always a good sign.
+
+08:40.730 --> 08:41.670
+Let's come back here.
+
+08:41.690 --> 08:48.240
+We see that we're signing the token and now the next thing we want to do is do something with the stock
+
+08:48.240 --> 08:54.320
+and to start off let's just return this token to the front and so we can actually see that we actually
+
+08:54.320 --> 08:57.100
+receive a JWT token.
+
+08:57.300 --> 08:59.620
+I'm going to simply say return.
+
+08:59.910 --> 09:02.040
+Well what should be returned here.
+
+09:02.040 --> 09:07.530
+Remember we don't really want to do a response but Jason because we want to keep all those responses
+
+09:07.560 --> 09:09.250
+to sign and authentication.
+
+09:09.330 --> 09:18.730
+We see that here we're returning or we want to return the Create sessions or a promise don't reject
+
+09:21.160 --> 09:22.000
+in our case.
+
+09:22.210 --> 09:29.610
+Ideally no matter what in here we want to have a dog then that has a response.
+
+09:30.640 --> 09:39.610
+So let's do a response Daut Jaison or let's actually return the session if we received the session from
+
+09:39.610 --> 09:45.630
+create session and we're going to simply say response.
+
+09:45.710 --> 09:53.960
+Jaison just return whatever the session is and whatever the session is is whatever we return from this
+
+09:54.020 --> 09:56.280
+create session function.
+
+09:56.450 --> 10:00.510
+This one for now because we're going to be sending Jaison.
+
+10:00.770 --> 10:13.270
+Let's just say that we want success to be true and we'll give let's say user ID to be the idea that
+
+10:13.270 --> 10:23.490
+we received from the user from the database and also give the token just like that.
+
+10:23.630 --> 10:29.930
+And just to make this nice and concise again because it's the key is equal to the value I can just leave
+
+10:29.930 --> 10:32.120
+it at tokin.
+
+10:32.140 --> 10:37.840
+So now we're sending back a token and our user ID.
+
+10:37.930 --> 10:46.210
+Now this user object if you remember Usually we return the entire thing and would have the profile information
+
+10:46.210 --> 10:52.360
+such as email name so that right away as we sign in we get that information.
+
+10:52.360 --> 10:59.770
+Now here's the thing that we're going to do because up until now when a user signed in we would run
+
+10:59.770 --> 11:03.650
+the handle sign and function and just return the user object.
+
+11:04.690 --> 11:10.130
+But there's a nicer cleaner way of doing this and we want to keep your endpoints really descriptive.
+
+11:11.220 --> 11:14.730
+And you want to make sure that seinen just handles the signing.
+
+11:14.760 --> 11:16.450
+It's either true or false.
+
+11:16.530 --> 11:17.250
+Are you signed in.
+
+11:17.280 --> 11:18.460
+Are you not signed in.
+
+11:18.540 --> 11:19.680
+Are you authenticated.
+
+11:19.680 --> 11:21.050
+Are you not authenticated.
+
+11:21.210 --> 11:28.220
+And ideally we use something like get profile ID to actually get the users information.
+
+11:28.350 --> 11:33.750
+Again we're just being very descriptive similar with how we do pure functions.
+
+11:33.750 --> 11:39.660
+We're just making sure that each endpoint does one thing and one thing really well and that's a nicer
+
+11:39.660 --> 11:44.070
+design to have because it makes more sense and it's a lot cleaner.
+
+11:44.100 --> 11:48.810
+And as you extend things it's easier to understand when a new developer comes on.
+
+11:48.810 --> 11:53.170
+They'll be able to say oh okay well this is what we're probably using to get the profile.
+
+11:53.220 --> 11:56.540
+This is probably what we're using to sign in.
+
+11:56.580 --> 12:02.170
+It might be surprising to some to say see that we're returning an entire user object with the sign in
+
+12:02.230 --> 12:10.570
+and point so just to keep things clean and rational in our heads I'm going to only return the ID and
+
+12:10.570 --> 12:17.560
+then on the front end I actually do a get request to the profile and because we have the user id Now
+
+12:17.950 --> 12:22.340
+we can just request that profile information.
+
+12:22.420 --> 12:23.670
+Let's test this out.
+
+12:23.680 --> 12:29.700
+I'm going to save and go back to my app.
+
+12:29.780 --> 12:32.060
+I'm going to sign out.
+
+12:32.180 --> 12:40.400
+Let's do a at a dot.com a I'm going to open up the developer tools go to network tab make sure everything's
+
+12:40.420 --> 12:44.860
+cleared and click sign in.
+
+12:44.870 --> 12:45.620
+All right.
+
+12:45.620 --> 12:48.790
+Looks like we were not able to sign in.
+
+12:48.830 --> 12:55.040
+If I click on the sign in oh look at that I have success.
+
+12:55.040 --> 12:58.330
+True user ID is one.
+
+12:58.700 --> 13:01.730
+And we have ourselves a token.
+
+13:01.730 --> 13:02.930
+Fantastic.
+
+13:02.930 --> 13:09.380
+So this is our token that now authenticates us and we make sure that now the server can identify this
+
+13:09.380 --> 13:13.380
+browser this client as well user id want.
+
+13:13.460 --> 13:14.400
+Very very cool.
+
+13:14.420 --> 13:22.720
+But why were we not able to log in well this is something that you have to be careful of every time
+
+13:22.720 --> 13:27.880
+you change whatever the expected return is up until this point.
+
+13:28.180 --> 13:33.350
+We had handle sign in do a certain thing and that is it returned the entire user object.
+
+13:33.370 --> 13:38.710
+As soon as we change something on the back to return something that the client didn't know the change
+
+13:38.710 --> 13:40.860
+happened we might break things.
+
+13:40.990 --> 13:42.610
+And we want to be conscious of that.
+
+13:42.700 --> 13:47.640
+Any time you return something different than what the client expects and what the front end developers
+
+13:47.650 --> 13:51.210
+expect that you make sure that you adjust for this.
+
+13:51.220 --> 13:56.850
+So if we go back to our front end code let's go to our seinen component.
+
+13:56.860 --> 14:04.920
+I believe that's where we do the seinen and we see over here that as we scroll down on submit seinen
+
+14:05.270 --> 14:09.930
+we do the signing and point with the post we send the e-mail and the password.
+
+14:10.120 --> 14:17.740
+And then finally here when we get a response we do a check saying user dot ID and then we load the user
+
+14:17.980 --> 14:18.980
+and do the route change.
+
+14:19.030 --> 14:24.530
+But we actually don't have a user dot I.D. anymore do we.
+
+14:24.610 --> 14:29.110
+Because what we return is actually an object with success.
+
+14:29.110 --> 14:32.430
+True user ID and a token.
+
+14:32.450 --> 14:41.150
+So we now have to change the front end to perhaps say that this is going to be data and this data is
+
+14:41.150 --> 14:53.060
+going to contain a user ID and if that matches then we want to load up the user which right now we actually
+
+14:53.060 --> 14:54.340
+don't have.
+
+14:54.380 --> 14:57.770
+So I'm going to leave that the way we have it for now.
+
+14:57.770 --> 15:01.680
+It might not load any of the users because there's no user object.
+
+15:01.700 --> 15:03.270
+I'm going to change it to data for now.
+
+15:04.230 --> 15:09.480
+And this might fail and it's something we'll come back to because we might want to do a get request
+
+15:09.480 --> 15:13.070
+now to profile ID with the idea that we have.
+
+15:13.080 --> 15:24.220
+So let me just say that go back let's sign in again I'm going to close this a to a dot.com a sign in.
+
+15:24.230 --> 15:25.370
+All right.
+
+15:25.370 --> 15:27.070
+We're logged into our app.
+
+15:27.260 --> 15:32.700
+We have our authentication token now but we have a problem we have undefined.
+
+15:33.080 --> 15:40.250
+That is there's no user name because we've only returned the ID and we've only returned the ID.
+
+15:40.250 --> 15:48.520
+As I mentioned because we want to use the ID to actually get the user profile.
+
+15:49.780 --> 15:55.750
+And the reason we want to do this is because we know that anything to do with the profile we want to
+
+15:55.750 --> 15:58.290
+make sure these are guarded endpoints.
+
+15:58.330 --> 16:05.590
+That is not everybody can just access them only authenticated users that have tokens can access it based
+
+16:05.590 --> 16:07.400
+on what tokens they have.
+
+16:08.630 --> 16:15.570
+All right in the next video we're going to add on to this and make sure that our authentication system
+
+16:15.600 --> 16:16.840
+is working nicely.
+
+16:17.250 --> 16:18.670
+I'll see in that one.
+
+16:18.820 --> 16:19.030
+Buh-Bye.

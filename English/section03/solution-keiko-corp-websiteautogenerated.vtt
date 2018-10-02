@@ -1,0 +1,391 @@
+WEBVTT
+
+00:01.240 --> 00:06.790
+Welcome back let's see what I would have done which again doesn't mean it's right is just what I would
+
+00:06.790 --> 00:10.140
+have done to improve the performance of the website.
+
+00:10.150 --> 00:12.350
+Hopefully you had fun with this challenge.
+
+00:12.400 --> 00:16.150
+Hopefully there are some trick questions there that he had to kind of get through.
+
+00:16.170 --> 00:19.270
+But again I'm sure everybody did great.
+
+00:19.360 --> 00:24.890
+So we talked about minimizing Phylis minimizing delivery and critical render path.
+
+00:24.940 --> 00:28.750
+Those are the things that we focused on in this section.
+
+00:28.750 --> 00:34.990
+So looking at the KCl Corp Web site it's not too bad let's refresh you here just to get those animations
+
+00:34.990 --> 00:35.490
+in.
+
+00:35.670 --> 00:36.540
+Yeah.
+
+00:36.670 --> 00:36.970
+All right.
+
+00:36.970 --> 00:38.700
+I made the web site so I did cheat.
+
+00:38.710 --> 00:43.570
+I do know how we can improve the performance pretty well on this Web site because I made some things
+
+00:43.570 --> 00:50.890
+that were definitely not the prettiest but you can see here it's not a bad web site for being what it
+
+00:50.890 --> 00:51.920
+is.
+
+00:52.030 --> 00:58.040
+It has some animations some some nice scrolling that we can do.
+
+00:58.820 --> 01:04.480
+But you'll also notice here that they're using some libraries that don't even work.
+
+01:04.850 --> 01:08.500
+So let's take a look at the code and see what I would have done to improve it.
+
+01:10.140 --> 01:18.010
+The first thing I would do is definitely look at the female file and the female file over here.
+
+01:18.150 --> 01:25.280
+First thing that catches my eye is the massive amounts of stylesheets that we have.
+
+01:25.300 --> 01:32.920
+We see that they have a ton including bootstrap including transitions carrousel animate and obviously
+
+01:32.920 --> 01:34.870
+our main CSSA file.
+
+01:34.900 --> 01:41.690
+If I look at those swans I see that some of them aren't even minimized so we probably should minimise
+
+01:41.710 --> 01:42.500
+those.
+
+01:42.640 --> 01:50.800
+But my first question is really why do we need so many SS styles and do we really need them.
+
+01:50.800 --> 01:57.640
+Do we really need animate CSSA or can we do some of those animations with just CSSA animations and transitions
+
+01:57.730 --> 01:59.770
+that come natively.
+
+01:59.810 --> 02:02.280
+Again you really want to focus on.
+
+02:02.390 --> 02:03.610
+Do we really need this.
+
+02:03.620 --> 02:09.810
+Don't just keep tacking on different things just because it's easy to do.
+
+02:09.960 --> 02:16.480
+So again I would definitely definitely look into this and say I could probably get rid of some of this.
+
+02:16.560 --> 02:19.670
+Then I scroll down and I see some script accent.
+
+02:19.700 --> 02:25.520
+Oh boy there's a lot of script tags and they're all in the head which definitely we don't want to do.
+
+02:25.530 --> 02:32.340
+We want to move all of these down to the very end of the body unless they're super important but looking
+
+02:32.340 --> 02:39.750
+at these Jey query carrousel parallax scroll to a nice scroll while we can definitely put all those
+
+02:39.750 --> 02:40.580
+down there.
+
+02:41.530 --> 02:45.470
+We also want to ask ourself again do we really need this.
+
+02:45.520 --> 02:48.500
+For example scroll to what it does.
+
+02:48.570 --> 02:53.890
+It's supposed to make us scroll to the part of the website that we care about.
+
+02:53.890 --> 02:56.300
+But you can see that it's not even working.
+
+02:56.380 --> 02:58.880
+So maybe we don't even need that.
+
+02:59.140 --> 03:06.490
+Again looking at why you need and why you don't need I then think about maybe are these minimised if
+
+03:06.490 --> 03:07.400
+they're not minimized.
+
+03:07.450 --> 03:10.650
+OK this one is this one is but this one isn't.
+
+03:10.660 --> 03:12.870
+Perhaps we should minimize all that.
+
+03:13.150 --> 03:19.480
+And then finally combine all of these into one file maybe have one main bundle file and the rest are
+
+03:19.780 --> 03:24.390
+the vendor files all in one again minimizing our trips over the wire.
+
+03:25.210 --> 03:33.920
+And then scrolling down through here you know typical typical a shemale nothing too crazy everything
+
+03:33.920 --> 03:36.160
+looks pretty good here.
+
+03:36.590 --> 03:42.050
+But again let's review some of our points and see what we can improve on here.
+
+03:42.050 --> 03:48.510
+All right so we talked about loading style tags in the head loading scripts right before the body.
+
+03:48.530 --> 03:49.040
+All right.
+
+03:49.080 --> 03:51.700
+And then CSSA only loading whatever is needed.
+
+03:51.710 --> 03:56.940
+We definitely talked about that we didn't talk about above the fold loading.
+
+03:57.070 --> 04:04.920
+Again looking at the Web site we see that well we definitely have a nice scrolling Web site but we don't
+
+04:04.920 --> 04:11.210
+need these images or any of these down below especially the CSSA.
+
+04:11.390 --> 04:12.640
+We only need the top part.
+
+04:12.890 --> 04:22.720
+So perhaps one thing we can do is actually add a style tag Rupes sell tag on our site it's really hard
+
+04:22.720 --> 04:26.570
+to type when you have a mike and you're in your face like I do.
+
+04:26.710 --> 04:33.310
+And you know that's just a side note in case you want to know with this style tag I can have some styles
+
+04:33.430 --> 04:39.070
+just for the main part of the page that the viewer sees right away.
+
+04:39.370 --> 04:46.930
+And this way I can just load my style sheets like I showed you after the page loads and all the stuff
+
+04:46.930 --> 04:49.580
+below the fold loads afterwards.
+
+04:49.600 --> 04:51.470
+So that's one way.
+
+04:51.470 --> 04:55.440
+Another thing we can look at is the media attributes.
+
+04:55.510 --> 05:02.520
+Looking at this background image it looks pretty big and I bet it's not optimized for the mobo.
+
+05:02.950 --> 05:07.150
+So let's take a look at how big this image is I want to open up the airport.
+
+05:07.510 --> 05:14.770
+I can't talk I am going to open up the network tab with developer tools and then I'm going to filter
+
+05:14.800 --> 05:19.240
+for images and I'm going to refresh and boy.
+
+05:19.420 --> 05:20.560
+That's a lot of images.
+
+05:20.560 --> 05:22.470
+I think it's the hero image.
+
+05:22.460 --> 05:23.440
+Yeah there it is.
+
+05:23.740 --> 05:29.190
+So we see over here that this image is one megabyte.
+
+05:29.210 --> 05:31.520
+That's that's pretty ridiculous.
+
+05:31.530 --> 05:37.590
+We can definitely compress this and minimizes and we definitely don't need that big of an image for
+
+05:37.590 --> 05:39.030
+a mobile screen.
+
+05:40.010 --> 05:44.580
+Also let's take a look at all of the requests that were making on this page.
+
+05:45.080 --> 05:46.010
+Oh boy.
+
+05:46.010 --> 05:47.920
+That's 48 requests.
+
+05:47.990 --> 05:50.440
+We definitely don't need that many requests.
+
+05:50.510 --> 05:56.180
+By the way this is how a lot of older Web sites used to work and definitely not not the best I would
+
+05:56.180 --> 05:58.300
+say.
+
+05:58.300 --> 06:00.760
+All right let's see what else we can improve here.
+
+06:03.160 --> 06:06.500
+We talked about the first three but less specificity.
+
+06:06.880 --> 06:11.800
+And this Web site they're not too bad with this and this is one of those minor things that you don't
+
+06:11.800 --> 06:14.640
+really want to worry too much about.
+
+06:14.680 --> 06:18.900
+It does affect performance but not to the extent of some of the other things.
+
+06:18.910 --> 06:22.960
+So I wouldn't worry too much about this but I wanted to include it there anyway for you.
+
+06:23.860 --> 06:29.260
+We also talked about loading scripts but we didn't talk about asynchronously or deferring those scripts
+
+06:29.530 --> 06:35.210
+for javascript or for Jay query and all these other scripts that we didn't really need.
+
+06:35.260 --> 06:40.280
+We probably want to add an async or deferred tag to them if we want to keep them around.
+
+06:41.280 --> 06:48.000
+We also want to minimize DOM manipulation and avoid long running Javascript.
+
+06:48.000 --> 06:49.470
+So let's take a look here.
+
+06:50.160 --> 06:55.950
+DOM manipulation Well I think that's happening a lot especially with all these animations that we see
+
+06:55.950 --> 06:57.510
+again if we refresh.
+
+06:57.510 --> 07:00.320
+We see all the animations that happen here.
+
+07:01.360 --> 07:08.160
+We can definitely avoid some of this especially using Jake queery the fact that they're using J.A.G.
+
+07:08.260 --> 07:09.360
+right now.
+
+07:09.400 --> 07:11.440
+Let's take a look at some of the stuff that we do.
+
+07:11.500 --> 07:13.990
+The parallax to go to Maine.
+
+07:14.050 --> 07:16.740
+You see that they're using Jacquier a lot.
+
+07:16.930 --> 07:19.450
+And that library is great.
+
+07:19.570 --> 07:24.820
+However pretty much anything they can do in jail where you can do with native Java.
+
+07:25.270 --> 07:27.800
+I think there's a Web site called.
+
+07:28.060 --> 07:31.380
+You don't need a query.
+
+07:31.690 --> 07:37.690
+Let's see.
+
+07:37.900 --> 07:44.650
+Or you might not need Jacqui and actually shows you all the things you can do with javascript instead
+
+07:44.650 --> 07:51.370
+of using Jay Querrey so we can avoid using this massive library and just use javascript that comes with
+
+07:51.370 --> 07:51.830
+the.
+
+07:53.160 --> 07:58.710
+And again we're using tools like scroll to or libraries like scroll to.
+
+07:58.710 --> 08:06.330
+That is supposed to make our Web site clickable and scroll to that section but it's not even working.
+
+08:06.330 --> 08:10.850
+So again really testing out to see do we really need this.
+
+08:10.950 --> 08:13.560
+And then finally avoid long running Javascript.
+
+08:13.560 --> 08:17.890
+I don't think we have too much of that but with animations that can get pretty tricky.
+
+08:18.180 --> 08:25.470
+So again things that you can improve on and we're just scratching the surface here but I hope you really
+
+08:25.470 --> 08:27.720
+had fun with this exercise.
+
+08:27.720 --> 08:34.190
+It was definitely fun making this Web site and I'm really excited to see how fast some of these Web
+
+08:34.190 --> 08:35.150
+sites can get.
+
+08:35.250 --> 08:38.080
+As I watch you post them and to the community.
+
+08:38.310 --> 08:44.650
+But the key thing to remember here is that performance is a never ending game.
+
+08:44.970 --> 08:47.350
+You can always improve performance over Web site.
+
+08:47.360 --> 08:49.520
+You can always tweak that little thing.
+
+08:49.830 --> 08:55.500
+As a senior developer you want to make sure that you spend your time wisely on things that matter.
+
+08:55.500 --> 09:03.030
+Figure out what's valuable for your client for your business for your boss and do those performance
+
+09:03.130 --> 09:07.920
+optimizations but only to the point that is needed because otherwise you're going to drive yourself
+
+09:07.950 --> 09:08.250
+mad.
+
+09:08.250 --> 09:09.810
+There's so many things you can do.
+
+09:09.840 --> 09:11.490
+Focus on those big ticket items.
+
+09:11.490 --> 09:15.460
+The key features to make a web site performant.
+
+09:15.710 --> 09:21.250
+I hope you had fun in this challenge and I look forward to seeing you in the next video Popeye.

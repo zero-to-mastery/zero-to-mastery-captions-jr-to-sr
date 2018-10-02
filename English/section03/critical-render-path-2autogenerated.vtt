@@ -1,0 +1,559 @@
+WEBVTT
+
+00:01.680 --> 00:02.840
+Walk them back.
+
+00:02.860 --> 00:06.540
+So we've gone through the first step but let's look at the second step.
+
+00:06.540 --> 00:16.340
+Now with CSSA CSSA is called render blocking because in order to construct the rendered tree remember
+
+00:16.340 --> 00:20.410
+this one over here and print something onto the screen.
+
+00:20.420 --> 00:26.840
+We're waiting for the CIA says Dom to complete and combine it with the Dom to create the render tree
+
+00:27.840 --> 00:32.820
+so CSSA is rendered blocking.
+
+00:32.830 --> 00:38.470
+So with that in mind it makes sense that we want to make them as lightweight as possible so that a user
+
+00:38.560 --> 00:44.320
+sees something as soon as possible and with the CSSA over here there just a few things that we need
+
+00:44.320 --> 00:45.180
+to consider.
+
+00:47.420 --> 00:50.350
+We want to only load whatever is needed.
+
+00:50.630 --> 00:54.140
+We want to possibly incorporate above the fold loading.
+
+00:54.140 --> 01:00.010
+We want to add media attributes and we want to get less specificity to improve performance.
+
+01:00.350 --> 01:03.190
+Let's get into that one by one to show you what I mean.
+
+01:06.070 --> 01:10.270
+We have our super awesome example that we used last time as well.
+
+01:10.270 --> 01:16.750
+This time we've added the success optimizing techniques that we've just discussed.
+
+01:16.840 --> 01:23.010
+The first one load only what is needed is pretty self-explanatory right.
+
+01:23.140 --> 01:31.330
+CSSA is really really easy to just keep adding stuff to we can add more styles maybe copy some styles
+
+01:31.330 --> 01:37.210
+that we saw online and paste them on here and we can make this file hundreds if not thousands of lines
+
+01:37.420 --> 01:38.040
+long.
+
+01:39.660 --> 01:45.870
+But by only loading what is actually needed and preventing the file from being bloated you avoid more
+
+01:45.870 --> 01:46.680
+download time.
+
+01:47.780 --> 01:48.580
+Right.
+
+01:48.650 --> 01:50.670
+If we go back to our example.
+
+01:50.750 --> 01:59.180
+Lucky for us we only have one style sheet that is so small that is says it's zero by train now takes
+
+01:59.420 --> 02:01.200
+one milli second to download.
+
+02:01.220 --> 02:02.220
+That's pretty nice.
+
+02:05.160 --> 02:07.270
+So the first one is nice and easy.
+
+02:07.380 --> 02:11.010
+Just load while you need.
+
+02:11.030 --> 02:15.380
+Now the second point above the fold loading.
+
+02:15.970 --> 02:17.520
+And this is pretty interesting.
+
+02:20.000 --> 02:27.820
+I'm a user right now and I refresh the page I'm only interested in what I can see if this web page with
+
+02:27.820 --> 02:33.470
+scrollable maybe we had images underneath or it was a one of those one page web size that I can keep
+
+02:33.470 --> 02:34.370
+scrolling down on.
+
+02:34.380 --> 02:36.540
+There's more and more information.
+
+02:36.710 --> 02:40.330
+I technically don't need to see that until I start scrolling.
+
+02:40.760 --> 02:48.860
+So the priority is to see whatever is above the fold the main page if we're able to optimize this and
+
+02:48.860 --> 02:54.930
+just load while we need above the fold there will be pretty nice wouldn't it.
+
+02:54.930 --> 03:00.100
+Maybe we only need the CSX that we're using right now above the fault.
+
+03:00.120 --> 03:01.790
+Let me show you how to do that.
+
+03:02.400 --> 03:14.820
+So let's say we have this style 3 and this style three is a CSSA file but we don't really need it for
+
+03:15.270 --> 03:27.380
+the main page of our website so in here let's just create a H-2 class and this H2 class will call it.
+
+03:27.380 --> 03:30.940
+This is important.
+
+03:34.850 --> 03:45.180
+And within here we'll say we'll just load up a piece of Texas says important above the fold content
+
+03:47.850 --> 03:56.810
+and we can just copy this again and say that we also have another H2 tag and this one will just say
+
+03:56.810 --> 03:58.350
+it's secondary.
+
+03:58.520 --> 04:05.990
+And this one's not important it is below the fault content.
+
+04:06.770 --> 04:13.450
+You want see this until after page loads.
+
+04:16.570 --> 04:23.440
+And let's say that important and secondary each have their own style glasses you can see that in style
+
+04:23.440 --> 04:29.340
+dots CSSA I have the important class that has background yellow and in-style three 3.
+
+04:29.380 --> 04:33.700
+SS I have secondary with background pink.
+
+04:33.780 --> 04:39.790
+Now these style files are pretty small but you can imagine how they would work if our app was bigger.
+
+04:42.010 --> 04:49.340
+But right now if I load this onto my Web page and I refresh.
+
+04:49.450 --> 04:55.890
+All right well I'm not getting the Stahl's because well I need to have the files and I also misspelled
+
+04:55.900 --> 04:57.270
+important.
+
+04:57.310 --> 04:58.070
+Silly me.
+
+04:58.300 --> 04:59.710
+Let's refresh.
+
+04:59.710 --> 05:05.860
+All right so the first CSSA is working the second one isn't because we need to import it.
+
+05:05.880 --> 05:14.090
+So again let's add a new style file three if I refresh your.
+
+05:14.590 --> 05:17.220
+All right everything is being loaded.
+
+05:17.410 --> 05:22.310
+But as you can see here in our network tab we get a nice little hint.
+
+05:22.570 --> 05:27.530
+If you look at the red line over here it says load is nine milli seconds.
+
+05:27.610 --> 05:31.500
+So that means our Web site was loaded in nine milliseconds pretty fast.
+
+05:31.720 --> 05:37.800
+But both stylesheets were loaded before we saw anything.
+
+05:37.910 --> 05:44.600
+But if this was like this and the pink background is unnecessary because as a user I'm only going to
+
+05:44.600 --> 05:46.370
+see this first content.
+
+05:46.370 --> 05:55.190
+Let's see if we can move the style three to be loaded after the load line.
+
+05:55.330 --> 06:00.700
+The red line with a little javascript this is actually quite simple and you can even grab this script
+
+06:00.810 --> 06:01.850
+on line.
+
+06:01.900 --> 06:03.100
+Don't stress too much about it.
+
+06:03.100 --> 06:11.130
+If you don't fully get it but again using a script AG We can just incorporate this fairly easily
+
+06:14.790 --> 06:25.400
+Well some really have a cost load style sheet and that will accept a parameter of source
+
+06:29.040 --> 06:41.220
+and we'll say if document Daut create style sheet and we just want to make sure that this property or
+
+06:41.220 --> 06:43.890
+this method actually exists.
+
+06:43.890 --> 06:50.010
+If that's the case because some browsers have this we can just say create a style sheet and give it
+
+06:50.010 --> 06:51.370
+the path.
+
+06:51.820 --> 06:52.390
+Otherwise
+
+06:56.180 --> 06:58.250
+we can just do this ourself.
+
+06:58.370 --> 07:07.820
+We can say style sheet equals document that create element and we're going to create a link tag
+
+07:11.420 --> 07:26.320
+and this link tag will have an ATF that is he calls to the path the source will also give it a type
+
+07:29.480 --> 07:31.260
+of text.
+
+07:31.520 --> 07:33.940
+CSX again just like we have it up here
+
+07:36.570 --> 07:39.030
+style sheet type.
+
+07:39.300 --> 07:51.800
+And then finally we can just say document dot get element by ID or at least two by tag name and we'll
+
+07:51.800 --> 07:58.760
+just grab the head tag and because it returns an array we have to get the array elements so this grabs
+
+07:59.000 --> 08:08.640
+our head tag in the Ishmail and to it we're simply going to append child the style sheet and we just
+
+08:08.650 --> 08:12.000
+create and we don't need the Cotes
+
+08:14.900 --> 08:15.720
+perfect.
+
+08:15.830 --> 08:18.960
+So that's going to create the style sheet.
+
+08:19.520 --> 08:23.950
+So we don't need to actually import it here anymore.
+
+08:24.120 --> 08:27.100
+Style 3.
+
+08:27.310 --> 08:34.840
+And now with our style sheet loaded or a function that loads our style sheet we can now incorporate
+
+08:34.840 --> 08:38.450
+it into something called Window data on load.
+
+08:38.650 --> 08:40.240
+So that is when it loads.
+
+08:40.240 --> 08:45.230
+Remember that red line when window does load.
+
+08:45.480 --> 08:46.440
+We can simply
+
+08:51.580 --> 08:57.120
+run the function and we'll just console lot here just to see that it's working.
+
+08:57.160 --> 09:00.830
+Will Say window done.
+
+09:02.620 --> 09:09.970
+And with here we can just do our loads style sheet with the file path that we're going to give it which
+
+09:09.970 --> 09:17.730
+is going to be Rupes which is going to be style three dot see assess.
+
+09:17.740 --> 09:19.420
+All right let's save this.
+
+09:19.420 --> 09:26.540
+See if we've made any mistakes and want to refresh and I see you get an error.
+
+09:27.560 --> 09:30.240
+And create aliment I cannot spell.
+
+09:30.350 --> 09:31.210
+Let's fix that.
+
+09:31.220 --> 09:39.920
+Create a law meant save Let's try that again and to get element by tag name because this should be get
+
+09:40.700 --> 09:43.230
+elements by tag name.
+
+09:43.380 --> 09:44.880
+I do this all the time.
+
+09:44.880 --> 09:54.170
+There you go let's refresh her rate we see that below the fold content and we're not getting any air
+
+09:54.200 --> 09:57.020
+but we're not getting the pink background here.
+
+09:57.890 --> 10:05.010
+And we also actually need a style sheet.
+
+10:09.080 --> 10:15.420
+Roll which will be a style sheet.
+
+10:15.590 --> 10:23.650
+So now we go and refresh Ceara the bottom if I refresh again.
+
+10:24.900 --> 10:32.970
+We see that index and style are being loaded before the window onload event so loading up the web page
+
+10:33.330 --> 10:36.410
+and end style three is being loaded afterwards.
+
+10:37.230 --> 10:44.260
+And if I scroll down there you'll there's my pink background from my style three dots.
+
+10:44.280 --> 10:53.290
+SS Let's close this and we'll just do a hair reload and we see that blank because the style is being
+
+10:53.290 --> 10:55.900
+loaded after the web page.
+
+10:55.900 --> 11:02.600
+So after it's being displayed then the styles get loaded versus the yellow that is always there.
+
+11:05.410 --> 11:06.610
+From the very
+
+11:11.140 --> 11:12.240
+very cool.
+
+11:12.330 --> 11:14.890
+So we just did above the fold loading.
+
+11:15.090 --> 11:20.420
+Now there are two more things and there are a lot quicker to demonstrate media attributes.
+
+11:20.460 --> 11:24.960
+Well you've done this before we showed you how to do media attributes with
+
+11:28.840 --> 11:36.710
+media in your CSSA files but you can actually do them in your e-mail files as well.
+
+11:38.470 --> 11:46.970
+So let's say for example you had some media that you only need for certain screen sizes wall in that
+
+11:46.970 --> 11:54.190
+case we can let's just copy all of this and we'll say media which by the way this is default if you
+
+11:54.190 --> 12:00.380
+don't put anything in a link tag assumed that media equals to all.
+
+12:00.580 --> 12:13.040
+But in our case let's say that our style to Dotsie SS This one will have a media on the screen.
+
+12:13.270 --> 12:14.650
+I don't use the media here.
+
+12:14.650 --> 12:15.410
+There you go.
+
+12:15.760 --> 12:17.820
+So it's only screen.
+
+12:17.830 --> 12:31.120
+So for any screen and we'll say and men with is going to be 500 pixels.
+
+12:31.210 --> 12:42.890
+So if I do this and save and will see that style too has a H-1 color of red I go back here and I refresh
+
+12:43.940 --> 12:47.650
+will see that the one that says Hi his
+
+12:50.310 --> 13:02.200
+red must change is back to how fast let's refresh and if I scroll the same closer we see that it's green
+
+13:02.200 --> 13:06.760
+now and you also notice at the bottom that we have all three style sheets.
+
+13:10.050 --> 13:10.920
+Very cool.
+
+13:10.920 --> 13:14.240
+And then the final thing is less specificity.
+
+13:14.340 --> 13:22.990
+And this is a very minor one but might want to just keep in mind that is if we go to style 2 over here
+
+13:23.380 --> 13:26.440
+we have a good and a bad.
+
+13:26.470 --> 13:28.780
+Now why would this be the case.
+
+13:28.810 --> 13:33.750
+Because remember browsers are computers that need to do work.
+
+13:33.820 --> 13:41.140
+First of all the more information we sent over the wire the more bytes that is.
+
+13:41.200 --> 13:44.210
+This is way less characters than this one.
+
+13:44.470 --> 13:52.570
+But also when it arrives in the browser the browser needs to calculate the styling to create that CSSA
+
+13:52.570 --> 13:53.620
+dom right.
+
+13:53.620 --> 14:01.360
+So it needs to do a little bit more work if the specificity is really really complicated versus if it's
+
+14:01.360 --> 14:03.460
+just like this.
+
+14:03.460 --> 14:08.800
+So again a small one but critical to understanding how rendering works in the browser.
+
+14:10.870 --> 14:12.760
+Ok I lied.
+
+14:12.760 --> 14:19.010
+There's one last thing I want to point out when we say load only what is needed.
+
+14:19.090 --> 14:22.380
+Some of you might be thinking there's a trick we can do.
+
+14:23.200 --> 14:34.380
+Perhaps instead of loading an external style sheet we can just create an internal one one that is a
+
+14:34.380 --> 14:35.070
+style tag
+
+14:40.960 --> 14:46.030
+and this style tag within here we can just put all our CSSA.
+
+14:46.110 --> 14:56.890
+For example if I wanted the H-1 to have a certain style let's say font style of 30 pixels and actually
+
+14:56.890 --> 15:03.340
+just to make it something clearer we can just say that we'll just say that color is
+
+15:06.450 --> 15:15.790
+Bulley all save and refresh and we see over here that we're able to change a style but we're not loading
+
+15:15.850 --> 15:17.790
+any new style sheets.
+
+15:17.980 --> 15:24.370
+So theoretically we can just put all the styles in here and in here just take all that out and put them
+
+15:24.520 --> 15:27.180
+within this block.
+
+15:27.430 --> 15:28.260
+And that's really good.
+
+15:28.300 --> 15:31.780
+We're avoiding that one actually request.
+
+15:32.030 --> 15:34.490
+However you might notice an issue here.
+
+15:34.490 --> 15:37.510
+If we had multiple Ishimaru pages.
+
+15:37.670 --> 15:42.700
+Well we'll have to copy and paste this into other pages.
+
+15:42.790 --> 15:47.120
+So this is only working on one.
+
+15:47.230 --> 15:54.020
+Tim Page and this is actually a good thing to do if you're doing about the full loading with an internal
+
+15:54.020 --> 15:57.350
+C-s us just for the above the fold.
+
+15:57.420 --> 15:59.930
+C Ss that's a good trick to do.
+
+15:59.930 --> 16:05.450
+Another option is to have something called in line C Ss and N line C Ss.
+
+16:05.460 --> 16:20.610
+Again is a style attribute this time and we can say that this style has a background Stu caller of yellow.
+
+16:20.820 --> 16:24.560
+If I save and refresh again nothing new.
+
+16:24.840 --> 16:28.860
+We have our background yellow Bob with no new style sheets.
+
+16:28.860 --> 16:31.530
+And once again this is pretty great.
+
+16:31.620 --> 16:36.180
+And the browser is able to read this really really fast and apply the style quite fast.
+
+16:36.180 --> 16:43.410
+But again the limitation of this is the fact that we have to do it for every single element and we can't
+
+16:43.410 --> 16:45.940
+really have classes or IDs for it.
+
+16:47.860 --> 16:55.220
+But strategically if you use these you are able to make your web site faster depending on your situation.
+
+16:56.240 --> 17:00.470
+All right that's it for now to review.
+
+17:00.580 --> 17:04.850
+We've learned that with CSSA we want to only load whatever's needed.
+
+17:05.170 --> 17:06.370
+We want to consider.
+
+17:06.370 --> 17:08.200
+Above the fold loading.
+
+17:08.200 --> 17:15.610
+We want to work with media attributes to make sure we render specific to screen sizes and we also might
+
+17:15.610 --> 17:20.150
+want to consider less specificity when it comes to our CSSA.
+
+17:20.150 --> 17:21.760
+All right that's enough for now.
+
+17:21.890 --> 17:25.280
+I'll see in the next video where we talk about javascript Buh-Bye.

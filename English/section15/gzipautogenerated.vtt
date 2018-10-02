@@ -1,0 +1,181 @@
+WEBVTT
+
+00:01.130 --> 00:07.090
+Welcome back in this video we're going to talk about Jesus and Jesus.
+
+00:07.270 --> 00:11.770
+Other than optimizing images which we have talked about already.
+
+00:12.000 --> 00:16.370
+Zipping is probably the biggest and the best way to optimize performance.
+
+00:16.600 --> 00:20.670
+And luckily for us it's really really simple to implement.
+
+00:21.540 --> 00:30.470
+You see by default when you compress a file or folder using the zip command it will have the same file
+
+00:30.470 --> 00:39.500
+name as it did before but now will have the extension dot GZ and also the files are going to be significantly
+
+00:39.800 --> 00:40.470
+smaller.
+
+00:41.830 --> 00:44.450
+We're simply making these files smaller.
+
+00:44.740 --> 00:50.520
+Something that we're very well aware of how that benefits performance.
+
+00:50.530 --> 00:53.720
+Now how do we get this Jesus to.
+
+00:54.030 --> 00:58.950
+It sounds extremely useful and it's very very easy to implement.
+
+00:59.040 --> 01:06.290
+For example in an express app on an express server all you need to do is to require the compression
+
+01:06.860 --> 01:13.870
+NPM package that is to install compression and then use it as a middleware app to use compression.
+
+01:14.300 --> 01:21.590
+And just by doing that all of your content that you sent to the client is going to be JE's it OK.
+
+01:21.600 --> 01:24.110
+Now how do we test this out.
+
+01:25.610 --> 01:33.160
+Well by default all modern browsers allowed GCP and get how pages for example does this automatically.
+
+01:33.330 --> 01:42.010
+If we go to our robo friends app and I open up the networked app in here if I refresh my page I see
+
+01:42.010 --> 01:50.180
+I get a ton of requests if I click on the first document and I scroll down to response headers.
+
+01:50.200 --> 01:58.460
+I see that content decoding is Jesus if I keep scrolling down to the CSSA file I see that the content
+
+01:58.510 --> 02:09.460
+coding is Jesus if I do the javascript fall again it's Cheez-It and this is done automatically we'll
+
+02:09.460 --> 02:15.280
+see that it's also serve from our service worker if I do a hard refresh.
+
+02:15.640 --> 02:19.930
+We see that our file sizes are again quite small.
+
+02:19.930 --> 02:27.610
+And this is all because is it if it wasn't Jees it this will be significantly bigger for in most Web
+
+02:27.610 --> 02:33.700
+sites that you visit if he go through here and you look at their headers of their files.
+
+02:33.870 --> 02:41.300
+Most of them are JE's it and as we saw with Express all we need to do is run the compression NPM middleware
+
+02:42.240 --> 02:46.650
+and you can pretty much everything that you send to the client.
+
+02:46.650 --> 02:53.220
+For example here's a list of the file types that allow you to get to Jesus things you can do Jason.
+
+02:53.400 --> 03:02.450
+You can do a shemale CSA us and many many other types you pretty much should be buying everything and
+
+03:02.450 --> 03:07.090
+if you're not then you have to ask yourself what is the reason that you're not.
+
+03:07.100 --> 03:09.960
+There's very very few reasons not to use it.
+
+03:11.030 --> 03:17.270
+Now you're also wondering to yourself What about if I don't have an Express server what I have for I
+
+03:17.270 --> 03:23.960
+have something like host skater that hosts my web site or blue host and most of those Web sites use
+
+03:24.050 --> 03:32.300
+something called Engine X or apache web server and those you can think of as a simpler express server
+
+03:32.540 --> 03:39.080
+that are really really good at just sending a shemale file CSSA files javascript files and you don't
+
+03:39.080 --> 03:44.670
+have to configure anything blue host and host gaitered does all that for you.
+
+03:44.670 --> 03:50.540
+And they usually have something like a configuration file and this is a configuration file example of
+
+03:50.660 --> 03:51.900
+engine X..
+
+03:52.070 --> 04:01.460
+All we need to do is say gee zip on and you have gs that automatically enabled in most places because
+
+04:01.650 --> 04:03.920
+it is so important for performance.
+
+04:04.020 --> 04:06.090
+Have this enabled by default.
+
+04:06.290 --> 04:10.400
+But as you saw it's very simple to check if you're using it.
+
+04:10.520 --> 04:15.440
+You simply go to the network tab and check to see what kind of encoding it has.
+
+04:17.190 --> 04:19.230
+Now just a quick heads up.
+
+04:19.260 --> 04:27.190
+There is one thing that was created by Google that is actually a little bit better than Jees up and
+
+04:27.220 --> 04:37.020
+it's called Broadley and it actually most of the time has 20 percent better compression than GS and
+
+04:37.230 --> 04:39.700
+websites are starting to use and more and more.
+
+04:39.810 --> 04:46.970
+Right now the adoption isn't 100 percent there yet and some browsers are still implementing the full
+
+04:46.980 --> 04:48.530
+thing coding by broadly.
+
+04:48.780 --> 04:55.410
+But if you go to Web sites like Product Hunt and let's say I refresh the page here if I go to the very
+
+04:55.410 --> 05:03.330
+top to the document and I go to the content decoding I see that they're using B.R. which is short for
+
+05:03.360 --> 05:04.770
+Broadley.
+
+05:04.880 --> 05:06.010
+So keep an eye on.
+
+05:06.050 --> 05:12.950
+Broadly it will probably surpass Jesus and will become the dominant compression algorithm that will
+
+05:12.950 --> 05:14.720
+be used on Web sites.
+
+05:14.780 --> 05:19.120
+But either way these two tools just absolutely improve your performance.
+
+05:19.130 --> 05:21.170
+There's no reason not to use them.
+
+05:21.470 --> 05:24.260
+And as you saw they are extremely easy to use.
+
+05:25.400 --> 05:27.200
+But that's it for now.
+
+05:27.200 --> 05:28.450
+I'll see in the next one.
+
+05:28.810 --> 05:29.190
+But by.

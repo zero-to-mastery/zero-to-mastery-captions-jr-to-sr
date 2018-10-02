@@ -1,0 +1,283 @@
+WEBVTT
+
+00:00.650 --> 00:03.070
+Our robo friends are looking really really nice.
+
+00:03.080 --> 00:05.690
+I really like this up there is one issue though.
+
+00:05.870 --> 00:14.540
+If I minimize this OK it's responsive it looks good but if I scroll down well I lose my search bar at
+
+00:14.540 --> 00:14.940
+the top.
+
+00:14.940 --> 00:20.940
+Would it be nice if this was at the top and I have a scroll that I can do and still search through my
+
+00:20.940 --> 00:21.320
+friends
+
+00:24.460 --> 00:30.070
+well you might be thinking well there's probably a CSSA style that I can add here but I want to illustrate
+
+00:30.070 --> 00:39.160
+to you the fact that react and we react to so good is because you can create components that are were
+
+00:39.160 --> 00:42.500
+usable not just car components but functionality.
+
+00:42.550 --> 00:48.070
+Would it be cool if there was maybe something where we can add a round card list.
+
+00:48.070 --> 00:58.910
+Maybe I can create a scroll component and this scroll component just wraps the cardless.
+
+00:59.140 --> 01:02.100
+And now cardless will be completely scrollable.
+
+01:02.140 --> 01:07.630
+But now I can use scroll this component anywhere in my app any time I need scrolling.
+
+01:07.930 --> 01:10.690
+I can just wrap it around.
+
+01:10.760 --> 01:11.810
+Can we do this.
+
+01:11.870 --> 01:12.740
+Let's give it a try.
+
+01:14.660 --> 01:19.080
+I'm going to import a component that we don't have yet.
+
+01:19.100 --> 01:30.340
+That's called scroll from a file that will create in just a second as create a new file.
+
+01:30.560 --> 01:31.890
+We'll call that scroll.
+
+01:32.000 --> 01:32.580
+J.S.
+
+01:35.290 --> 01:42.800
+and here will again go through the motion of re-act from re-act.
+
+01:42.850 --> 01:44.290
+Make this a little bit bigger.
+
+01:46.100 --> 01:54.440
+And again I want to change this to baseball and we'll say Konst scroll.
+
+01:54.550 --> 02:01.770
+He calls it's going to return from what should have returned.
+
+02:01.800 --> 02:11.740
+Before we talk about that just so we don't forget we have to export default skirl.
+
+02:11.760 --> 02:19.000
+Now here's a problem we want to return something but it doesn't make sense does it.
+
+02:19.000 --> 02:27.760
+If I go to AB dodgy Yes scrawl it's not a self closing component it wraps components.
+
+02:27.800 --> 02:33.690
+So how can we tell scroll to hey just render whatever's inside of you.
+
+02:36.270 --> 02:44.240
+Up to this point we've learned about props and we've learned about state.
+
+02:44.330 --> 02:53.010
+There's one or the thing and react that I want to teach you and that is children and children is this
+
+02:54.270 --> 03:00.270
+scrawl can use children as a way to render its children.
+
+03:00.690 --> 03:01.770
+What do I mean by that.
+
+03:02.990 --> 03:09.650
+Well in here every profs object has children.
+
+03:09.750 --> 03:16.360
+So if I go prop's dot children let's see what happens.
+
+03:16.580 --> 03:28.380
+I save and go back everything's render but if I remove this and I just do and H-1
+
+03:36.950 --> 03:45.050
+I just get this you see props start children is exactly that.
+
+03:45.050 --> 03:49.440
+If I Konsole thought log props
+
+03:53.470 --> 03:54.760
+Let's open up the con..
+
+03:54.850 --> 03:57.730
+I see that I get an object.
+
+03:57.730 --> 04:07.510
+And even though I am pass any props to scroll automatically every single component named Bre-X has this
+
+04:07.510 --> 04:08.260
+property.
+
+04:09.490 --> 04:17.990
+Children and this children a kind of looks confusing here but has card list type cardless
+
+04:22.380 --> 04:32.720
+So using this Propst our children we can create components that wrap other components up to this point
+
+04:32.730 --> 04:39.450
+we were only able to wrap these lower case components which are kind of like the team tags.
+
+04:39.780 --> 04:44.910
+But every time we had a custom component with a capital letter that we built well we can really wrap
+
+04:44.910 --> 04:45.920
+it.
+
+04:45.970 --> 04:50.630
+Now we can using this thought children.
+
+04:50.730 --> 04:52.620
+But here's the cool part.
+
+04:52.860 --> 04:54.830
+Using props to our children.
+
+04:55.110 --> 05:07.130
+Well I can create a scrollable component Let me show you how simply do diff clothes that Dave and then
+
+05:07.140 --> 05:16.080
+here again curly brackets prop's dot chose you and all we need now is to add styles to this div I could
+
+05:16.080 --> 05:22.590
+create a scroll dot CSSA file and add a style so it's scrollable but I want to show you another way
+
+05:22.590 --> 05:33.090
+which is using stuff just like an HMO using this style attribute an GSX I can add styles but using double
+
+05:33.090 --> 05:34.960
+curly brackets that is.
+
+05:35.130 --> 05:37.780
+This is a javascript expression.
+
+05:38.040 --> 05:43.670
+And within this I'm returning an object and this object can have CSSA else.
+
+05:45.100 --> 05:47.730
+Such as a property overflow.
+
+05:47.740 --> 05:49.660
+Why.
+
+05:50.000 --> 05:51.840
+Which is a CSSA property.
+
+05:51.980 --> 06:02.990
+And this we can say scroll again a CSSA way to make the elements scrollable will say border is one pixel
+
+06:03.290 --> 06:05.660
+solid block.
+
+06:06.080 --> 06:15.450
+And finally we'll give it a height of 500 pixels going to make this smaller so you can see I'm going
+
+06:15.450 --> 06:21.560
+to save compiling is fine if I go back it looks like we have a box here.
+
+06:21.640 --> 06:26.480
+Let's make it a little bit bigger Just so you can see say five pixels even though it's ugly.
+
+06:26.560 --> 06:29.350
+And I forgot a t in here.
+
+06:29.650 --> 06:30.130
+Right.
+
+06:30.130 --> 06:30.360
+All right.
+
+06:30.370 --> 06:35.660
+Let's see that we have a scrollable component.
+
+06:36.690 --> 06:44.080
+Let's make this a little bit bigger just so we can see a better look at that.
+
+06:44.110 --> 06:53.580
+If I make the smaller I now have a scrollable component side of this.
+
+06:53.710 --> 06:55.250
+Very cool.
+
+06:55.270 --> 06:57.540
+Now this is a simple.
+
+06:57.790 --> 07:00.240
+It allows you to search.
+
+07:00.520 --> 07:07.460
+It allows you to scroll but it does show the power of react doesn't it.
+
+07:08.210 --> 07:18.020
+We've created these simple functions and the only thing that we tell it to do is well we tell it what
+
+07:18.020 --> 07:28.890
+state it has the entire app is described through these two things the robots and search field and re-act
+
+07:29.010 --> 07:30.600
+takes care of the breast.
+
+07:30.870 --> 07:38.150
+As soon as search field or robot changes react trickles down.
+
+07:38.150 --> 07:46.850
+All this information as props to all these components and magically creates our view for us.
+
+07:46.850 --> 07:49.660
+That's why react is so powerful it's a view layer.
+
+07:49.820 --> 07:55.570
+It takes care of manipulating the DOM and all we tell it is hey what's the state.
+
+07:55.730 --> 07:59.570
+What are the functions that you wanted to work with the state and the rest.
+
+07:59.570 --> 08:06.350
+Well it optimizes to make sure that everything is super fast and you can see how amazingly fast everything
+
+08:06.350 --> 08:06.810
+is here.
+
+08:06.830 --> 08:11.730
+It's a super snappy app and these components are now reusable.
+
+08:12.170 --> 08:19.460
+I can bring a search box now into a another part of the web site I can add scrolling to another part
+
+08:19.460 --> 08:20.300
+of the Web site.
+
+08:21.190 --> 08:27.300
+This is what made react so powerful and this is why so many Web sites are powered by re-act.
+
+08:27.420 --> 08:35.770
+Once you learn the syntax and you get used to everything that's when re-act truly becomes powerful.
+
+08:35.910 --> 08:41.580
+And although we took a bit of time to create this app once you get used to it an hour like this you
+
+08:41.580 --> 08:45.510
+can create it in less than an hour probably 30 minutes.
+
+08:46.990 --> 08:47.710
+All right.
+
+08:47.710 --> 08:49.910
+I think we've done a great job here.
+
+08:49.930 --> 08:51.290
+Can't wait to see you in the next video.

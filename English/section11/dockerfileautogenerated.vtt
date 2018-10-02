@@ -1,0 +1,316 @@
+WEBVTT
+
+00:01.870 --> 00:02.980
+Welcome back.
+
+00:03.250 --> 00:07.720
+Now that you have a doctor set up and doctor is running.
+
+00:07.720 --> 00:17.710
+Let's go to our smart brain API project which I have over here and build a sample doc Rafal and we're
+
+00:17.710 --> 00:24.760
+using this project because by the end of this section we're actually going to build a docker file for
+
+00:24.820 --> 00:26.480
+this entire project.
+
+00:26.650 --> 00:35.670
+So to start off what we need to do is to well first of all let's close this server for now.
+
+00:35.670 --> 00:36.700
+There you go.
+
+00:36.820 --> 00:45.810
+And what we need to do is to first build an image an image file that or can read and the way we do that
+
+00:45.840 --> 00:50.030
+is by creating a new file at the root of our project.
+
+00:50.070 --> 00:53.430
+So I'm going to say actually I'm just going to do it here.
+
+00:53.450 --> 01:02.190
+I'm going to say touch and we have to call this docker file and this Daka file will be our image.
+
+01:02.270 --> 01:08.570
+So if I hit Enter Here we see that we now have a doc file in our project.
+
+01:08.570 --> 01:14.020
+So let's open this up and this is completely empty right now and that's fine.
+
+01:14.120 --> 01:21.560
+Now in here if you remember we can include images that I showed you in or hub that other people have
+
+01:21.560 --> 01:22.210
+been.
+
+01:22.490 --> 01:27.830
+So for example we want node to be running on this project.
+
+01:27.830 --> 01:30.840
+Let's see our node version for our smart brain up.
+
+01:30.890 --> 01:35.270
+If I do no dash fee I see that it's a point nine point one.
+
+01:35.270 --> 01:38.740
+All right let's go to Dr. Haab which I have it up over here.
+
+01:38.840 --> 01:41.090
+And let's check out node
+
+01:44.710 --> 01:53.530
+and we want to run a version we see that has the lead of the latest version of version 8 which is fine
+
+01:53.530 --> 01:54.010
+for us.
+
+01:54.010 --> 01:55.670
+It's also called carbon.
+
+01:55.690 --> 01:59.010
+So if I click here I see that.
+
+01:59.010 --> 02:05.030
+Oh yeah that's a docker file but I just need the node carbon or node.
+
+02:05.240 --> 02:14.360
+This specific version for now we can just say from with capital letters and we're going to just go ahead
+
+02:14.360 --> 02:18.370
+and say a node carbon and that's it.
+
+02:18.370 --> 02:23.080
+So we're saying just grab the node carbon image
+
+02:25.960 --> 02:34.410
+and I can put on here the version number and any of these tags that you see that you want for your project.
+
+02:34.510 --> 02:41.110
+And then finally I'm going to do a nother command called CMT that stands for command and in here it's
+
+02:41.110 --> 02:47.590
+going to be an array of commands that we want to run after we grab the node version.
+
+02:47.600 --> 02:54.960
+So all I'm going to say is Ben Bash and I'll show you what that does in a second.
+
+02:54.980 --> 03:03.290
+Now the first command as I said before tells docker to use the node image from or hub again the official
+
+03:03.290 --> 03:05.240
+daquiri image repository.
+
+03:05.570 --> 03:10.250
+And this is what we call a parent image of our image.
+
+03:10.250 --> 03:19.410
+Now the CMD or command instruction tells us what to run in the container which allows us to access its
+
+03:19.680 --> 03:24.160
+bash profile again something that I'm going to show you will make more sense later.
+
+03:24.180 --> 03:32.120
+Now let's go to our terminal make sure we save this file and I can run now the command docker again
+
+03:32.220 --> 03:35.680
+that comes with the docker install that we just had.
+
+03:36.360 --> 03:41.000
+We just say docker build and give it a tag name.
+
+03:41.070 --> 03:46.620
+So Dasht T is for tag and we can say whatever you want we'll say.
+
+03:46.620 --> 03:51.800
+Super awesome container.
+
+03:51.910 --> 03:59.390
+And once I press enter and here's a little trick because we have to tell it what to build.
+
+03:59.420 --> 04:03.710
+We we have to give it a period at the end so build all.
+
+04:03.830 --> 04:09.800
+And the current directory is going to find a doc or file and there you go.
+
+04:10.260 --> 04:13.710
+It's running everything running everything you see over here.
+
+04:13.830 --> 04:16.710
+It's doing the From note carbon.
+
+04:16.720 --> 04:20.750
+Step 2 the command that we just said.
+
+04:20.970 --> 04:27.990
+And it says successfully built and successfully tagged the super awesome container.
+
+04:28.060 --> 04:35.230
+This just created our first daquiri image with the tag name using the dark profiled that we just currently
+
+04:35.620 --> 04:36.160
+had.
+
+04:36.190 --> 04:42.410
+And again I ran this command from the root directory which is where our doc file is located.
+
+04:45.020 --> 04:46.670
+Now that took a bit of time.
+
+04:46.790 --> 04:55.010
+If I have run this command again see how much faster that was and that's because instead of downloading
+
+04:55.100 --> 05:02.240
+Noad all over again like it did the first time around Dockers going to use the cached image or remembers
+
+05:02.240 --> 05:02.790
+the image.
+
+05:02.930 --> 05:05.290
+So it becomes a lot faster.
+
+05:05.450 --> 05:09.770
+And now let me clear this we can do something fun.
+
+05:09.860 --> 05:17.380
+We can do the instead of Dr. Bill now which we just did we do Dr. run and Daco run.
+
+05:17.390 --> 05:20.400
+We have to give it a few parameters.
+
+05:20.960 --> 05:22.370
+And then the name of our container.
+
+05:22.370 --> 05:29.170
+So let's say the super OSS can take care that we created
+
+05:31.890 --> 05:32.460
+Whoa.
+
+05:32.600 --> 05:33.540
+Do you just see that.
+
+05:34.370 --> 05:41.490
+We just ran our docking container and it took us to our container.
+
+05:41.490 --> 05:44.000
+Now you see that my terminal is completely different.
+
+05:44.010 --> 05:46.160
+We're inside the container.
+
+05:48.360 --> 05:50.000
+Now why did it do that.
+
+05:50.040 --> 05:53.280
+Because we just ran our docker container.
+
+05:53.580 --> 06:03.580
+And if you remember our command was to do bin bash and this comment simply says to go into the bash
+
+06:03.760 --> 06:11.000
+profile that is the Ben bash of our container and you see over here that we have root at some hash.
+
+06:11.080 --> 06:17.570
+This is a hash that is generated randomly by darker to know which containers which.
+
+06:17.620 --> 06:18.450
+Very cool.
+
+06:18.610 --> 06:24.710
+But if we did actually install node then we should be able to have the note command right.
+
+06:24.760 --> 06:27.410
+So fibrin no dash V from our container.
+
+06:28.990 --> 06:33.950
+Look at that we have the node version but I see I got six point fourteen point one.
+
+06:34.510 --> 06:42.170
+That's not what we expected because if we look over here we installed carbon and that should be a point
+
+06:42.170 --> 06:42.500
+in love.
+
+06:42.520 --> 06:47.320
+But instead we got six point fourteen which is boron.
+
+06:47.410 --> 06:48.080
+Interesting.
+
+06:48.100 --> 06:52.620
+Let's change the version number to the actual number.
+
+06:52.630 --> 06:58.280
+So in our case Leisure's say that we one version eight point eleven an endpoint.
+
+06:58.300 --> 06:59.400
+Let's see what we had here.
+
+06:59.410 --> 07:02.190
+Point one want to save this.
+
+07:02.370 --> 07:09.330
+And I'm going to exit out if you're just typing exit and rerun our commands again to remember the first
+
+07:09.330 --> 07:12.780
+thing we do is we want to build and let's see what happens here.
+
+07:16.740 --> 07:17.190
+All right.
+
+07:17.190 --> 07:18.730
+It's building everything.
+
+07:19.170 --> 07:22.650
+And now if we run our other command which is Daka run
+
+07:25.670 --> 07:28.510
+and let's see node version.
+
+07:28.940 --> 07:32.080
+All right we have our node version correct.
+
+07:33.090 --> 07:37.890
+You always want to check this to make sure whatever you installed is correct because sometimes you can
+
+07:37.890 --> 07:41.460
+make mistakes and think you have a CRN version but you don't.
+
+07:41.460 --> 07:48.000
+So you always want to check your containers to make sure that whatever you have set up is actually on
+
+07:48.000 --> 07:48.660
+there.
+
+07:48.800 --> 07:51.670
+But as you can see everything is running smoothly.
+
+07:51.690 --> 07:56.820
+We have a machine a container with node preset or for us.
+
+07:57.070 --> 07:59.670
+And how simple is that.
+
+08:00.000 --> 08:03.090
+By the way just for fun let me exit out of this again.
+
+08:03.610 --> 08:07.750
+I want to clear and let's run this command
+
+08:10.260 --> 08:19.360
+without the dash I-T parameters and you see that we can go into the container and that is because the
+
+08:20.080 --> 08:29.830
+command gives us what we call a TDY environment or it allows us to enter this dock or container.
+
+08:29.890 --> 08:34.380
+Now that we've gotten a little bit used to docker we have a few more things to learn so I'll see you
+
+08:34.390 --> 08:35.670
+in the next video.
+
+08:35.870 --> 08:36.120
+Buh-Bye.

@@ -1,0 +1,193 @@
+WEBVTT
+
+00:01.670 --> 00:03.320
+Hey it's Bruno here.
+
+00:03.410 --> 00:07.190
+Oh my God this app looks amazing.
+
+00:07.190 --> 00:09.410
+I love this redux thing and look at this.
+
+00:09.410 --> 00:13.580
+Logging is going to be awesome I think our developers are really going to enjoy this.
+
+00:13.730 --> 00:20.990
+And I think our app can scale really really well now with us being able to keep track of all these actions.
+
+00:21.020 --> 00:22.670
+Super awesome job.
+
+00:22.820 --> 00:26.310
+Really glad I hars you well.
+
+00:26.390 --> 00:29.030
+Brunos definitely excited about our work.
+
+00:29.030 --> 00:33.980
+I think we're doing some good work for him but there's still lots more to learn and I have a feeling
+
+00:33.980 --> 00:37.130
+he's going to ask us to do a lot more things.
+
+00:37.580 --> 00:43.040
+Let's review what we just learned and I'm going to go through these diagrams that may not have made
+
+00:43.040 --> 00:45.480
+as much sense to you at the very beginning.
+
+00:45.800 --> 00:47.740
+But now it should be quite clear.
+
+00:48.230 --> 00:54.550
+We had react that allowed us to manage state with this state but not very well.
+
+00:54.560 --> 01:03.380
+Once our app grows it can get pretty hectic and get to a state where our component looks like this with
+
+01:03.380 --> 01:06.080
+all the states that need to be managed.
+
+01:07.420 --> 01:15.580
+Luckily for us with redux we're able to create a store and have these actions dispatched to the store
+
+01:16.060 --> 01:19.030
+and all the connected components would just listen in.
+
+01:19.510 --> 01:24.250
+And the cool thing about it is that we didn't have to pass down props anymore.
+
+01:24.250 --> 01:32.740
+We can just connect our component wherever we want we can connect this one if we wanted to we can connect
+
+01:32.740 --> 01:35.660
+this one whichever component we want to connect.
+
+01:35.710 --> 01:39.790
+That was up to us but it made everything in one location nice and easy.
+
+01:41.950 --> 01:44.250
+Now our app would look like this.
+
+01:47.390 --> 01:55.090
+And then we finally talked about why use redux Well it makes sense now.
+
+01:55.120 --> 01:57.660
+It's great for managing large state.
+
+01:57.820 --> 02:05.330
+We can share data between containers and now we understand the three principles which make it very predictable.
+
+02:05.410 --> 02:08.630
+The first one is the fact that it was a single source of truth.
+
+02:08.650 --> 02:12.140
+We just have one massive javascript object to worry about.
+
+02:12.160 --> 02:17.800
+That describes our app our state the state is also read only.
+
+02:18.010 --> 02:21.220
+Every time our reducer spits out a new state.
+
+02:21.220 --> 02:23.430
+So we're never modifying anything.
+
+02:23.530 --> 02:29.320
+And we can always do cool things like go back in time and run through the actions to see what state
+
+02:29.560 --> 02:37.240
+we derive out or what state we end up getting into the view such as typing a into the search wheel and
+
+02:37.240 --> 02:39.190
+getting the appropriate robots.
+
+02:40.140 --> 02:47.640
+And then finally all the changes are made using pure functions a great technique that avoids the side
+
+02:47.640 --> 02:51.260
+effects so that our apps are really really predictable.
+
+02:53.830 --> 03:00.430
+We learned about this diagram and how everything flows nicely you know directionally we have actions
+
+03:00.430 --> 03:05.030
+that may or may not go through metal whereas we have reducers we have store.
+
+03:05.140 --> 03:06.050
+We make changes.
+
+03:06.070 --> 03:11.510
+And any time there's an action we go back and have this uni directional flow.
+
+03:12.220 --> 03:18.910
+And now instead of having those apps that let's say use Jay Querrey back in the day that had all these
+
+03:18.910 --> 03:26.250
+complex logics that we can reason about or we couldn't make sense in our head can now look like this.
+
+03:26.260 --> 03:28.240
+Everything flows nicely.
+
+03:31.340 --> 03:40.380
+And then finally the last point is that redox doesn't mean that he can use this dot state any more for
+
+03:40.380 --> 03:47.850
+things such as perhaps a small sign in form we might want to still use this state here because we don't
+
+03:47.850 --> 03:51.630
+need to put everything in a read X store.
+
+03:51.630 --> 03:57.840
+We as developers can decide what goes into this or store and what is a minor and unimportant enough
+
+03:57.840 --> 04:05.400
+that we can still use this state react in redox work well together and we architect what our app should
+
+04:05.400 --> 04:05.960
+be like.
+
+04:07.160 --> 04:14.540
+Finally this all is starting to make sense now this critical render path have just been improved.
+
+04:15.540 --> 04:23.490
+We learned that Westpac helps us bundle these files in a nice easy way so that we can deliver the most
+
+04:23.550 --> 04:27.190
+optimized javascript files to the front end.
+
+04:28.110 --> 04:34.680
+And in the performance part 2 section you're actually going to learn a few more tricks that we can do
+
+04:35.070 --> 04:38.340
+with what pack in order to optimize this.
+
+04:38.340 --> 04:44.950
+We also now understand why redux and re-act work well together.
+
+04:45.150 --> 04:50.240
+One for react to minimize the number of Dohm updates that we need to make.
+
+04:50.250 --> 04:58.080
+It's going to TELEGIN decide what exactly needs to get rendered and redux adds onto the react by making
+
+04:58.080 --> 05:02.950
+it easier for us to understand as our apps get bigger and bigger.
+
+05:03.750 --> 05:04.520
+All right.
+
+05:04.650 --> 05:08.930
+That was a tough section but I'm glad that you got here this far.
+
+05:08.940 --> 05:14.050
+I hope you keep going because there's lots of other goodies coming up.
+
+05:14.100 --> 05:15.270
+I'm looking forward to it.
+
+05:15.270 --> 05:17.080
+I hope you are as well.
+
+05:17.100 --> 05:18.100
+I'll see you in the next one.

@@ -1,0 +1,196 @@
+WEBVTT
+
+00:00.650 --> 00:02.020
+Walk them back.
+
+00:02.220 --> 00:08.700
+There's two other data types that we want to talk about in rattus and they're called assets and sorted
+
+00:08.910 --> 00:09.570
+sets.
+
+00:11.600 --> 00:17.210
+And sets and arrests are an ordered collection of strings.
+
+00:17.690 --> 00:18.830
+And that's why we have two types.
+
+00:18.830 --> 00:26.910
+We have sorted sets which are ordered and ordered which are sets and with sets.
+
+00:26.910 --> 00:35.950
+It's possible to add remove and test for existing members in a group and you might be thinking sets
+
+00:35.950 --> 00:44.920
+kind of sounds like lists but the one major difference with sets is that you have this desirable property
+
+00:44.950 --> 00:52.580
+of not allowing repeated values or members so adding the same element multiple times.
+
+00:52.700 --> 00:57.380
+It's actually not going to work or it's just going to give you a single copy of that element in the
+
+00:57.380 --> 00:58.050
+database.
+
+00:59.190 --> 01:02.280
+And this is a really really nice property to have.
+
+01:03.080 --> 01:06.610
+We make sure that we don't have any duplicates in our lives.
+
+01:08.020 --> 01:14.920
+Let's tryall some commands to see how we can add sets again unordered collections of strings.
+
+01:16.470 --> 01:19.760
+We simply say as add four sets.
+
+01:20.130 --> 01:21.720
+And we give it a key.
+
+01:21.720 --> 01:29.100
+So let's say our set and we'll say that we want to add a collection of numbers.
+
+01:29.100 --> 01:38.400
+Let's go with 1 2 3 4 5 and we just added some elements to our assets.
+
+01:39.370 --> 01:49.910
+Now I can say as members and give it the key our set and we get the members of whatever our set is.
+
+01:49.990 --> 02:02.250
+Now if I do ask add our Sat 2 3 or just to add 1 2 3 4 I get integers 0.
+
+02:02.350 --> 02:05.220
+And if I do as members are set
+
+02:08.880 --> 02:15.930
+I still get the original want 2 3 4 5 again because this has already existed.
+
+02:16.050 --> 02:18.530
+We've already created our set right up here.
+
+02:19.570 --> 02:25.520
+Another nice feature of sets is I can run the command S is member.
+
+02:26.140 --> 02:33.480
+And now with is member I can say are set and is 5 a member of our set.
+
+02:33.800 --> 02:43.270
+Yep I get one but if I say if 20 is a member of my set and no I get zero means it's not a member of
+
+02:43.270 --> 02:50.340
+the hour set value or our set key now.
+
+02:50.360 --> 02:55.230
+There's also such thing as sorted sets.
+
+02:55.320 --> 03:03.060
+Now red is sort of sets up just like sets do the no repeating collection of strings that we've already
+
+03:03.060 --> 03:03.880
+demonstrated.
+
+03:04.110 --> 03:12.650
+But the difference is that every member of a sort a set is associated with a score and this score allows
+
+03:12.650 --> 03:15.830
+it to be ordered from smallest to greatest.
+
+03:15.830 --> 03:17.820
+So let's have a look at how this works.
+
+03:19.890 --> 03:23.010
+I do sort of sense by saying Ziyad instead of Assad
+
+03:26.110 --> 03:31.510
+I can add different things let's say that sort set.
+
+03:31.600 --> 03:34.900
+It's going to be team.
+
+03:35.140 --> 03:38.880
+We'll give it a number we'll say team has 50 members.
+
+03:39.600 --> 03:43.160
+All cissÃ© Wizards.
+
+03:46.430 --> 03:51.890
+Now let's say that the next team which is now Weezer's will be the
+
+03:54.950 --> 03:59.530
+Lears groups the Samenow and do.
+
+03:59.850 --> 04:04.460
+And this team has 40 members.
+
+04:05.760 --> 04:11.520
+I can now access this by saying Z range and this Z range.
+
+04:11.520 --> 04:21.690
+I'll give it the team keep from 0 to 1 and you see that now I have the range.
+
+04:21.690 --> 04:29.260
+However it's ordered even though I've inserted Wizards first into the sorted sets.
+
+04:29.310 --> 04:38.550
+The Cavaliers appear first because the team number is lower with Cavalier's remember it goes from lower
+
+04:38.550 --> 04:39.240
+to higher.
+
+04:39.300 --> 04:46.700
+So if I add a nother team let's say that he only has one and there are going to be called
+
+04:50.200 --> 04:53.220
+let's say ballz.
+
+04:53.280 --> 04:55.260
+I can now say zero.
+
+04:55.350 --> 04:57.820
+And we want to grab all three.
+
+04:58.230 --> 05:05.110
+And I have ballz Cavalier's and wizards all sorted and there's other useful commands that we can use
+
+05:05.110 --> 05:18.110
+or we can say Z rank for example and we can find out what the team Wizards rank is and we get that their
+
+05:18.110 --> 05:19.410
+rank is too.
+
+05:19.430 --> 05:27.660
+Again it's not three because the order sosh from 0 7 0 1 to all right there's plenty other commands
+
+05:27.660 --> 05:32.750
+that you can learn with retests and they're really easy to follow just with your documentation.
+
+05:32.790 --> 05:40.830
+However you should have a good idea of why you'd want to use Retz if you want a fast data base that
+
+05:41.040 --> 05:42.480
+scales really really well.
+
+05:42.480 --> 05:48.750
+If we have a lot of users but also helps us out that we want to store the data types that it supports
+
+05:48.750 --> 05:50.000
+like the ones that we have.
+
+05:50.160 --> 05:52.690
+Well Rukun do some really neat things with it.
+
+05:52.860 --> 05:59.130
+And like I said we're going to be using rattus to manage our sessions in the sessions and JWT section
+
+05:59.130 --> 06:01.100
+of the course.
+
+06:01.320 --> 06:05.640
+Now that we have a good understanding of rattus go try out some of these commands.
+
+06:05.640 --> 06:06.670
+Play around with it.
+
+06:06.690 --> 06:09.810
+It's a lot of fun and I'll see in the next video by.

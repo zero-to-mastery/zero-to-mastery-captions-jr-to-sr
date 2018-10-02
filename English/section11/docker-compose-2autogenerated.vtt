@@ -1,0 +1,112 @@
+WEBVTT
+
+00:01.280 --> 00:08.240
+Let's review we instructed our compose file to create a service called smart brain API.
+
+00:08.750 --> 00:14.420
+And this used the docket file by using the build.
+
+00:14.420 --> 00:19.340
+Otherwise we could use something like image and we would need this parameter.
+
+00:19.340 --> 00:25.210
+It mapped the containers internal ports 3000 to the Horst port.
+
+00:25.220 --> 00:33.820
+That is my computer and upon all the six fusion we run NPM start to start our server.
+
+00:33.850 --> 00:41.450
+We also learned about the command dock or compose run where we can run this service which will run the
+
+00:41.450 --> 00:44.120
+command that we have established here.
+
+00:44.180 --> 00:51.150
+However with Dharker compose run isn't that useful because we ideally have multiple services here.
+
+00:52.240 --> 01:01.360
+So instead of that we use something called Dharker compose up and dock or compose up allows us to bring
+
+01:01.360 --> 01:06.940
+up all the services that we have listed here and there will define all the services running by their
+
+01:07.000 --> 01:09.220
+container name as we have here.
+
+01:09.670 --> 01:18.120
+And right now even though we only have one service our back end API it's enough to show that it's working
+
+01:18.330 --> 01:22.230
+and how we can now add more things to this file.
+
+01:23.490 --> 01:31.770
+Now you may notice one issue here and that is the fact that any time we make a change to our file like
+
+01:32.220 --> 01:40.000
+when we added Morgan we had to rebuild everything rerun everything to get us up and running.
+
+01:43.620 --> 01:53.340
+For example if I go to server dodginess and let's say in here I'll just do a console log of check this
+
+01:53.340 --> 02:02.060
+doesn't refresh gnomon isn't really watching this change because these files that I changed is on my
+
+02:02.180 --> 02:08.580
+local machine not on the container but there's a way for us to fix this problem.
+
+02:08.780 --> 02:13.200
+We go back to dock or compose I can add volume
+
+02:15.790 --> 02:23.580
+and within the volumes I can give it my current directory on my local machine which in which case will
+
+02:23.580 --> 02:26.080
+be this the root directory.
+
+02:26.080 --> 02:33.860
+And we want it to be mapped to the working directory that we have in the container right here.
+
+02:33.920 --> 02:40.580
+And if you remember volume's allows us access to the file system of the dock or container where the
+
+02:40.580 --> 02:42.270
+dock or container is.
+
+02:42.290 --> 02:51.290
+So this way by copying or by having these files mapped to where the container is the container file
+
+02:51.290 --> 02:56.010
+system is going to see the changes and update gnomon.
+
+02:56.130 --> 02:57.610
+So let's save here.
+
+02:57.630 --> 03:03.090
+I'm going to close and again run NPM or duck compose up dash dash.
+
+03:03.100 --> 03:03.490
+Bill
+
+03:11.120 --> 03:15.650
+I get the check command but that's because I rebuilt it if I changed this to
+
+03:20.480 --> 03:27.740
+look that it's listening to changes now and I can update my file and the docker container is going to
+
+03:27.740 --> 03:28.810
+update with it.
+
+03:29.660 --> 03:34.610
+Volumes is a bit of a complex topic and I'll leave for a nice resource for you to read.
+
+03:34.670 --> 03:42.350
+But just think of volumes as a way to have a connection or mounting whatever we have on our computer
+
+03:42.860 --> 03:46.230
+to the doctor container.
+
+03:46.300 --> 03:52.870
+But for now we have some nice setup with the back and I think we need to add our postscripts.
+
+03:52.900 --> 03:55.930
+Finally I'll see in the next one by.

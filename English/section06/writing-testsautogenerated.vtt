@@ -1,0 +1,214 @@
+WEBVTT
+
+00:00.950 --> 00:02.180
+Welcome back.
+
+00:02.180 --> 00:10.100
+Let's finish off testing our Google search functionality because with tests the more you have the better
+
+00:10.100 --> 00:10.590
+it is.
+
+00:10.640 --> 00:17.440
+In most cases anyway because these are never going to go into production is just for devolvement purposes.
+
+00:17.510 --> 00:23.690
+It never hurts to have a lot of tests that cover a lot of scenarios because that way we just cover our
+
+00:23.690 --> 00:24.990
+bases even more.
+
+00:26.050 --> 00:34.380
+And don't worry too much about repeating yourself or do not repeat yourself rule and programming with
+
+00:34.380 --> 00:35.800
+it when it comes to tests.
+
+00:35.890 --> 00:42.070
+It's OK to repeat yourself ever once every once in a while especially if it makes the tests really readable
+
+00:42.070 --> 00:43.890
+for other people reading your code.
+
+00:43.900 --> 00:46.530
+Once again these are never going into production.
+
+00:46.630 --> 00:52.360
+So it's always better to have more tests than less tests.
+
+00:52.590 --> 00:56.710
+So let's test a few more cases with our Google search function.
+
+00:56.880 --> 01:11.420
+Let's say that we also want it to work with on defined and Noal input and that we want to make sure
+
+01:11.420 --> 01:14.980
+that this function is going to work.
+
+01:14.980 --> 01:16.350
+And let me just copy this.
+
+01:16.360 --> 01:17.020
+Expect
+
+01:19.940 --> 01:28.230
+assertion and within here in the Google search I'm just going to say on defined and we want that to
+
+01:28.230 --> 01:33.720
+equal an empty array if we somehow get a weird answer you an undefined input from the user.
+
+01:33.720 --> 01:39.180
+We still want to return an empty array because maybe on the front end we're still displaying an empty
+
+01:39.180 --> 01:40.320
+list.
+
+01:40.350 --> 01:43.350
+Let's save and that passes.
+
+01:43.350 --> 01:44.960
+We now have three tests.
+
+01:45.030 --> 01:49.110
+And let's also test for the null case again.
+
+01:49.140 --> 01:55.700
+We'll copy this and we'll test for no as well.
+
+01:55.700 --> 01:56.270
+All right.
+
+01:56.270 --> 02:03.650
+Our tests are passing perfect and you can see how nicely outlined there in just for us.
+
+02:03.660 --> 02:09.950
+Finally we also want to check if we look at our script that we return no more than three matches.
+
+02:09.950 --> 02:12.770
+That's an important feature of our app.
+
+02:13.040 --> 02:15.650
+Once again let's say it
+
+02:18.310 --> 02:22.690
+does not return more than three matches.
+
+02:25.730 --> 02:27.930
+And lame make more space for this so we can see
+
+02:32.090 --> 02:35.870
+and once again you can see a lot of repeating here but it's good.
+
+02:35.930 --> 02:37.620
+We're writing tests.
+
+02:37.640 --> 02:44.720
+Let's say that again I'm just going to copy this because I am lazy to type and will say that we want
+
+02:44.780 --> 02:57.030
+the when we search dotcom which all of these have we want this to equal wall to equal an array with
+
+02:57.030 --> 02:57.930
+three items.
+
+02:57.930 --> 02:59.190
+How can we do that.
+
+02:59.190 --> 03:01.530
+Again this is just simple javascript.
+
+03:01.530 --> 03:10.740
+We can just do a dot length in the xpect bracket which will return hopefully 3 even though we're doing
+
+03:10.790 --> 03:18.150
+dotcom and has four items because of our function isher return the length of three.
+
+03:18.260 --> 03:19.230
+So let's test that.
+
+03:21.170 --> 03:27.050
+Look at that our test pass and another advice here.
+
+03:27.350 --> 03:33.380
+Just because your test passes doesn't mean it's always correct it's always good to start off by making
+
+03:33.380 --> 03:37.120
+your tests fail and then trying to make them work.
+
+03:37.670 --> 03:42.790
+Let's just make it fail by adding four in here and it's safe.
+
+03:43.220 --> 03:50.570
+And all right we see that we expected a value to equal four but we received 3.
+
+03:50.840 --> 03:52.010
+That's good.
+
+03:52.010 --> 03:54.880
+If we change that to 3 everything is good.
+
+03:54.980 --> 03:57.980
+And you can play around with them puts a little bit more.
+
+03:58.140 --> 03:59.750
+I think you're Sharn to get this right.
+
+03:59.760 --> 04:01.420
+It's not that bad.
+
+04:01.440 --> 04:03.320
+It doesn't look that intimidating.
+
+04:03.420 --> 04:09.090
+And yet when you look at other people's tests there may be a few more methods that they add other than
+
+04:09.090 --> 04:10.550
+to be and to equal.
+
+04:10.560 --> 04:12.490
+But the basic principle is the same.
+
+04:12.570 --> 04:19.000
+We just have a function that we run tests and that's it.
+
+04:19.160 --> 04:26.120
+One final thing we can group all of these because remember with our apps thinking things can get bigger
+
+04:26.120 --> 04:32.270
+and bigger and bigger we can group tests that are similar especially in this case the ones that are
+
+04:32.270 --> 04:40.580
+doing Google search with a nother function called the describe and describe we'll say describes the
+
+04:41.800 --> 04:44.140
+Google search.
+
+04:44.380 --> 04:49.590
+And this is the exact same way that the block was described.
+
+04:49.630 --> 04:55.480
+The first parameter is a string that will be displayed on the test and then the second one is a function
+
+04:56.020 --> 05:02.180
+and we can enter all these tests inside of this block.
+
+05:02.230 --> 05:11.170
+So now if I see this I see that the tests are grouped together and I know that all these tests that
+
+05:11.170 --> 05:19.030
+were running are under the Google search function so that when we have hundreds of tests we can see
+
+05:19.030 --> 05:25.380
+which ones are failing and where we want to target to fix our test.
+
+05:25.480 --> 05:26.220
+All right.
+
+05:26.270 --> 05:28.730
+More exciting things in the next video.
+
+05:28.730 --> 05:30.050
+I'll see that one.
+
+05:30.210 --> 05:30.470
+Babai.

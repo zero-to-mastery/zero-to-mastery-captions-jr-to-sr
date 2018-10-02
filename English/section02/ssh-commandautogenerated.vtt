@@ -1,0 +1,259 @@
+WEBVTT
+
+00:01.830 --> 00:02.750
+Walk them back.
+
+00:02.970 --> 00:07.730
+So I just talked a lot about S-sh and it sounds pretty interesting.
+
+00:07.740 --> 00:10.840
+But how exactly do we use it.
+
+00:11.070 --> 00:13.530
+Well it's actually quite simple.
+
+00:13.590 --> 00:22.950
+We just run the S-sh command with whatever user we want to reach at whichever host that is whichever
+
+00:22.950 --> 00:27.270
+computer IP address we want to get to.
+
+00:27.270 --> 00:33.070
+Let me show you what I mean by a little bit of a demonstration right over here.
+
+00:33.090 --> 00:41.940
+I went to Digital Ocean dot com and Digital Ocean is a provider that gives us servers for really really
+
+00:41.940 --> 00:44.330
+cheap actually really really like them.
+
+00:44.340 --> 00:49.920
+And if you're ever testing out stuff and you're looking for a good option to have a server somewhere
+
+00:49.920 --> 00:53.790
+out in the cloud Well the ocean is great.
+
+00:53.820 --> 00:59.550
+I went ahead and actually created something called droplets and that's what they call their version
+
+00:59.550 --> 01:02.000
+of servers that you can purchase.
+
+01:02.020 --> 01:09.540
+I selected Ubuntu which for those who don't know it is an open source operating system that's built
+
+01:09.540 --> 01:10.760
+on top of Linux.
+
+01:10.890 --> 01:16.460
+Most servers out there in the world use a boon too so it's it's the standard.
+
+01:16.470 --> 01:21.470
+I'm just going to get the cheapest option here for $5 a month just a little memory.
+
+01:21.630 --> 01:27.360
+CPQ you we're not going to be using it for anything too crazy so this is great.
+
+01:27.450 --> 01:29.790
+I chose San Francisco as my region.
+
+01:29.790 --> 01:33.190
+Actually I'm going to choose New York because it's closer to me.
+
+01:33.210 --> 01:35.670
+So that's where the servers are going to be located.
+
+01:35.850 --> 01:45.070
+And I'm just going to hit create and once I hit create it will just give me a server that I can access.
+
+01:45.090 --> 01:51.720
+So right here with a bit of a jibberish of a name that is my server and you see over here how they give
+
+01:51.720 --> 02:00.960
+me the IP address of my server while I can just copy this and I just go to my terminal I can now using
+
+02:00.960 --> 02:11.640
+the S-sh command access route which is the user that they give us by default and copy and paste the
+
+02:11.700 --> 02:14.530
+IP address that they gave us.
+
+02:14.700 --> 02:18.180
+Hit enter and look at that.
+
+02:18.260 --> 02:22.120
+I am now in sight of that server.
+
+02:22.370 --> 02:26.400
+Inside of that terminal and I can access anything I want.
+
+02:26.450 --> 02:31.500
+So if I click Alice I see here that I've created a hello directory.
+
+02:31.640 --> 02:33.260
+I can also do another directory.
+
+02:33.260 --> 02:41.350
+Let's just run a make directory and we'll call let's you who because we're very excited.
+
+02:41.510 --> 02:46.670
+So now if I go LS look at that I have a directory called Woo hoo.
+
+02:46.670 --> 02:50.400
+And I have full access to the server.
+
+02:50.420 --> 02:51.900
+Very very cool.
+
+02:51.980 --> 02:56.870
+And don't worry I'm going to show you how to actually set this up and how I got everything working.
+
+02:56.900 --> 02:58.930
+And later on videos.
+
+02:59.030 --> 03:02.310
+But for now let's just go back to this slide.
+
+03:03.280 --> 03:10.120
+Now if you're using Linux or Mac then using S-sh is very simple if you use Windows.
+
+03:10.160 --> 03:16.990
+You'll need to utilize an S-sh client to open a S-sh connections and the most popular one for Windows
+
+03:16.990 --> 03:24.100
+is called puttee which I'll include in the resources for this lesson now by using S-sh we can connect
+
+03:24.100 --> 03:29.820
+to this remote computer and run commands on it just like I showed you.
+
+03:29.980 --> 03:37.090
+Now how cool is that using S-sh we can connect to any computer that allows for these S-sh connections
+
+03:37.990 --> 03:39.450
+anywhere in the world.
+
+03:39.520 --> 03:46.060
+So let's review the SH key command and structure your system that you want to open an encrypted secure
+
+03:46.060 --> 03:51.340
+shell connection user represents the account you want to access.
+
+03:51.340 --> 03:58.630
+For example you may want to access the root user which is basically synonymous for system an administrator
+
+03:58.930 --> 04:05.210
+with complete rights to modify anything on the system which can be dangerous at times.
+
+04:05.990 --> 04:09.370
+Host refers to the computer you want to access.
+
+04:09.440 --> 04:15.280
+This can be an IP address like the one we used or a domain name.
+
+04:15.510 --> 04:24.310
+And once you hit enter all greeted with a remote terminal window just like we were in that example OK.
+
+04:24.630 --> 04:32.460
+So you're thinking to yourself cool Andre but how does this apply to web development.
+
+04:32.950 --> 04:39.760
+Well let me tell you a story and why I'm starting with this lesson in this course on my very first day
+
+04:39.850 --> 04:41.690
+as a full time developer.
+
+04:41.770 --> 04:45.960
+I was asked to create an S-sh key and connected to get help.
+
+04:46.480 --> 04:47.640
+And guess what.
+
+04:47.770 --> 04:50.340
+I had no idea how to do that.
+
+04:50.410 --> 04:58.840
+I knew all about a male CSSA javascript and all that stuff but nobody told me anything about using S-sh
+
+04:58.840 --> 05:00.280
+key for get home.
+
+05:00.330 --> 05:01.580
+What was that.
+
+05:01.630 --> 05:04.570
+You see I had no idea how to do it.
+
+05:05.420 --> 05:11.420
+S-sh is a very important concept that not many talk about but as a web developer you really need to
+
+05:11.420 --> 05:16.330
+understand because you will use S-sh all the time in your career.
+
+05:16.430 --> 05:24.660
+So some of these examples include connecting to get hub clone push pull files from their servers to
+
+05:24.660 --> 05:27.510
+your computer.
+
+05:27.620 --> 05:33.900
+Remember how when we clone something from a get hub we have two options we have use DBMSs which you've
+
+05:33.920 --> 05:43.450
+most likely used before and use S-sh and remember how with DBMSs you had to enter your password all
+
+05:43.450 --> 05:45.700
+the time to clone a Ribault.
+
+05:46.060 --> 05:48.250
+You don't have to do that with S-sh.
+
+05:48.550 --> 05:52.590
+And there's a few other benefits that will go over later.
+
+05:52.620 --> 05:56.760
+Second you can remotely access another computer.
+
+05:56.760 --> 06:02.200
+So if you're at home when you need to access your computer work you can just S-sh into it.
+
+06:03.770 --> 06:11.360
+Finally probably the most important use case is you have your production app somewhere on a server and
+
+06:11.360 --> 06:17.510
+in the middle of the night you get a call Hey we deleted your app by mistake.
+
+06:17.510 --> 06:19.700
+Can you re-install it on the server.
+
+06:20.950 --> 06:25.530
+Now this sounds ridiculous but it's actually something that has happened to me.
+
+06:25.660 --> 06:33.100
+I had to S-sh into the server get the project files to the server again and go through all the steps
+
+06:33.370 --> 06:42.020
+of running NPM install A.P.M. build NPM start to get the app back up and running.
+
+06:42.030 --> 06:48.450
+So with the rest of the videos I'm going to show you how to master S-sh never have to experience what
+
+06:48.510 --> 06:50.690
+I did on my first day of the job.
+
+06:50.700 --> 06:57.960
+You'll learn how encryption works how to use S-sh to solve the above problems and also how to set up
+
+06:57.960 --> 07:01.600
+a server to allow for S-sh connections.
+
+07:01.650 --> 07:03.500
+It is a skill that is so important.
+
+07:03.570 --> 07:05.900
+I wanted to be the first part of the course.
+
+07:06.200 --> 07:07.860
+It's going to be a lot of fun.
+
+07:07.980 --> 07:10.390
+So I'll see on the next video Buh-Bye.

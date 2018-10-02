@@ -1,0 +1,199 @@
+WEBVTT
+
+00:01.390 --> 00:01.980
+All right.
+
+00:02.080 --> 00:09.490
+So we left off saying that we need to deliver javascript in a nice fashion so that we can have a fast
+
+00:09.670 --> 00:17.290
+time to for as meaningful paint and time to interactive and we also talked about how we need to improve
+
+00:17.620 --> 00:21.730
+the execution of our javascript wants sense on the page.
+
+00:22.060 --> 00:28.030
+To start off we're going to focus on the beginning how to deliver javascript files in the most efficient
+
+00:28.030 --> 00:29.280
+way possible.
+
+00:29.340 --> 00:33.680
+You see modern web sites ship a lot of javascript.
+
+00:33.800 --> 00:42.020
+It is common to bundle scripts into large files or a bundled file in a GDP one environments.
+
+00:42.240 --> 00:43.370
+Kind of like this.
+
+00:43.560 --> 00:51.390
+We just had one massive javascript file that was created by combining all our smaller ones and sending
+
+00:51.390 --> 00:58.300
+it as soon as the user enters our website and then this javascript file would also work on the About
+
+00:58.300 --> 01:02.360
+page if they go to the About page or maybe the contact page.
+
+01:02.370 --> 01:09.040
+Now this was done because a large amount of requests where detrimental to your performance initially
+
+01:09.820 --> 01:17.010
+however as JavaScript lines increased the files were becoming bigger and bigger and bigger.
+
+01:17.080 --> 01:24.060
+So why ship javascript if a user won't need it until he or she visits a second page.
+
+01:24.070 --> 01:29.260
+Maybe there's some javascript in here that only works in the About page or the contact page.
+
+01:29.260 --> 01:30.860
+Why should we ship it.
+
+01:31.090 --> 01:36.730
+If the user doesn't need it and doesn't ever visit the About page or the contact page that's a waste
+
+01:37.000 --> 01:38.590
+of resource.
+
+01:38.620 --> 01:46.150
+In addition with the new but slow down option of TTP to this is no longer the case to just ship all
+
+01:46.150 --> 01:48.360
+the javascript in one go.
+
+01:48.370 --> 01:55.870
+Often you want to ship multiple simultaneous requests which become much cheaper theoretically in here.
+
+01:55.960 --> 02:04.470
+Modern apps shouldn't do this javascript benefits from being in small chunks to avoid locking up the
+
+02:04.470 --> 02:05.770
+main threat.
+
+02:05.990 --> 02:14.270
+And we can do this through something called Code splitting which allows us to reduce the amount of work
+
+02:14.450 --> 02:16.640
+being done during the execution.
+
+02:16.970 --> 02:18.330
+Let's see how that looks.
+
+02:24.620 --> 02:25.430
+There you have it.
+
+02:25.670 --> 02:29.010
+We call this code splitting or progressive bootstrapping.
+
+02:30.300 --> 02:38.080
+We want to send down a minimally functional page composed of just a shemale javascript and as needed
+
+02:38.080 --> 02:40.800
+for the current wrote the homepage.
+
+02:41.020 --> 02:47.740
+And as more resources arrive the app can lazy load or unlock more features.
+
+02:47.740 --> 02:54.940
+Maybe as a user clicks on the About page it can load up the javascript file or maybe wants the home
+
+02:54.940 --> 03:01.630
+page is all loaded up and the browser isn't doing much work in the background while the user is visiting
+
+03:02.080 --> 03:02.830
+the home page.
+
+03:03.010 --> 03:11.550
+It can load up the About page javascript file end by splitting these up to each individual compartments
+
+03:12.360 --> 03:14.390
+we give the browser less work to do.
+
+03:14.610 --> 03:22.440
+By the way if you're wondering what this red javascript means well this is usually a vendor javascript.
+
+03:22.650 --> 03:32.940
+For example if our Web page uses re-act Well we know that we need to react on every single page.
+
+03:32.960 --> 03:40.670
+We can create this vendor file that also gets loaded and these are all the files of our third party
+
+03:40.670 --> 03:45.680
+scripts that our entire website or our entire app needs.
+
+03:45.830 --> 03:51.430
+And just a quick note on these third party libraries that all of us to use.
+
+03:51.710 --> 03:57.890
+They usually have a production Bill in a production build is something that you can use that's much
+
+03:57.890 --> 04:00.380
+faster than their development builds.
+
+04:00.410 --> 04:08.150
+That means it's a file that's modified that removes any tools such as debugging tools that might come
+
+04:08.150 --> 04:09.630
+with third party libraries.
+
+04:10.010 --> 04:14.100
+And this comes out of the box with create react up.
+
+04:14.150 --> 04:21.680
+We run NPM run built it will actually build the production version of react and react on.
+
+04:21.890 --> 04:28.690
+So it excludes anything that we don't actually need and production if you're wondering how this works.
+
+04:28.740 --> 04:30.720
+They're just simple if statements.
+
+04:30.720 --> 04:39.450
+For example if you have our redux slugger that I showed you in the previous section where we're able
+
+04:39.450 --> 04:47.580
+to log in the console all of our actions but in production you wouldn't really want that would you.
+
+04:47.580 --> 04:48.890
+That is just actual lines of code.
+
+04:48.900 --> 04:53.510
+And you also don't want all your actions being logged for the user.
+
+04:53.600 --> 04:57.350
+So instead you'd say if the environment.
+
+04:57.350 --> 05:04.560
+So if this is the production built then don't use the logger.
+
+05:04.620 --> 05:12.000
+If it's the development build then use the longer just simple logics and Javascript but to go back to
+
+05:12.000 --> 05:20.780
+our point we want to send down a minimally functional page composed of just Ishmail javascript and CSSA
+
+05:21.050 --> 05:23.730
+that we need for the current page.
+
+05:23.750 --> 05:24.800
+The current drought.
+
+05:25.310 --> 05:35.270
+And as more resources arrive the app can lazy load and unlock more features and lazy loading means just
+
+05:35.360 --> 05:42.200
+loading them after your page becomes interactive so that the user can feel like the app is fast and
+
+05:42.210 --> 05:48.090
+in the next video we're going to try our hand at our own code splitting.
+
+05:48.240 --> 05:49.190
+You know I said this law.
+
+05:49.200 --> 05:52.670
+But it's going to be fun so I'll see in that one.
+
+05:52.760 --> 05:52.960
+Babai.

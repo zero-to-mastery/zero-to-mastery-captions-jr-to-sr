@@ -1,0 +1,163 @@
+WEBVTT
+
+00:01.500 --> 00:07.130
+There is one problem we encounter as our applications get bigger and bigger.
+
+00:07.860 --> 00:13.620
+Our GET HOW project grows more code is added it becomes monolithic.
+
+00:13.800 --> 00:21.510
+That is it becomes this one big monster that needs to make sure it's all working all the parts are working
+
+00:21.780 --> 00:24.150
+so that it functions.
+
+00:24.310 --> 00:30.180
+This makes things harder to manage and monitor at the same time.
+
+00:30.350 --> 00:36.830
+You need to make sure that this project not only works on your laptop where you have a certain operating
+
+00:36.830 --> 00:44.940
+system a certain version of your operating system a certain version of node and many other things.
+
+00:45.200 --> 00:51.820
+Many other libraries that depend on each other and their versions most often when people try and have
+
+00:51.820 --> 00:58.400
+their projects run on a different machine or computer they encounter errors because just because it
+
+00:58.420 --> 01:04.300
+ran on one computer doesn't necessarily mean it will run on the other.
+
+01:04.310 --> 01:09.800
+This is what we called the environment the environment that a piece of code runs on.
+
+01:09.800 --> 01:16.520
+We need a way for us to be able to run our programs and our apps in all the environments possible.
+
+01:16.520 --> 01:19.080
+And this is where containers come in.
+
+01:20.660 --> 01:26.110
+You see many of today's web applications are built around the idea of containers.
+
+01:26.390 --> 01:35.180
+The nice small boxes that can be run anywhere instead of a giant monolithic application that does everything.
+
+01:35.180 --> 01:41.870
+Companies like Amazon and Netflix have their products composed of multiple layers.
+
+01:41.870 --> 01:50.090
+These layers can be considered services each their own container doing its own thing and communicating
+
+01:50.090 --> 01:53.090
+with each other to make the whole system work.
+
+01:54.380 --> 01:56.090
+Kind of like this.
+
+01:56.250 --> 02:02.950
+This is a monolithic app and this is more of a micro services architecture.
+
+02:03.890 --> 02:08.080
+You can think of them like our discussion about pure functions.
+
+02:08.240 --> 02:14.900
+We try and keep everything small so that we have a predictable function that takes an input and returns
+
+02:14.900 --> 02:18.290
+an output with Hopefully no side effects.
+
+02:19.100 --> 02:22.150
+And don't worry we're going to show you how to do this.
+
+02:22.160 --> 02:30.140
+And of course the idea of breaking down our app into small pieces was popularized by container services
+
+02:30.290 --> 02:37.200
+like docker which we're going to talk about you see with this type of system.
+
+02:37.560 --> 02:39.650
+There is a big problem.
+
+02:39.700 --> 02:47.430
+Each service or container may have its own requirements from different node versions to conflicting
+
+02:47.430 --> 02:48.940
+library dependencies.
+
+02:48.990 --> 02:54.140
+And when you add in the fact that every developer's machine and environment is different it can be challenged
+
+02:54.330 --> 03:02.180
+to onboard new developers quickly or run this service on a another machine.
+
+03:02.220 --> 03:04.430
+Think about our previous section.
+
+03:04.470 --> 03:10.410
+How difficult was it setting up everything in the project in the smart brain project that wasn't very
+
+03:10.410 --> 03:11.760
+fun was it.
+
+03:11.760 --> 03:17.610
+We had to make sure that we had a doctor set up then we had to run the database.
+
+03:17.610 --> 03:25.800
+Then we also had to make sure that we have the right version of node run our no server API.
+
+03:25.800 --> 03:31.930
+Now imagine working at a company that hires a new developer every week and has an even bigger project.
+
+03:32.010 --> 03:36.250
+That's a lot of work for all these new developers to do.
+
+03:36.330 --> 03:41.550
+Wouldn't it be nice if we could just onboard developers and get our application running consistently
+
+03:42.420 --> 03:46.200
+and predictably with one simple command.
+
+03:46.380 --> 03:51.420
+Would it be nice to have everything set up for production so that when you release your code to any
+
+03:51.420 --> 03:55.990
+machine with whatever versions that it works no matter what.
+
+03:56.040 --> 03:59.310
+And again that's why we have Dr..
+
+03:59.490 --> 04:06.060
+Even if everything's dependent on each other and we need a certain type of environment daquiri takes
+
+04:06.060 --> 04:08.820
+care of making sure that it runs anywhere.
+
+04:09.580 --> 04:10.540
+And don't worry.
+
+04:10.660 --> 04:15.610
+These are all things we're going to try and understand throughout the next few S..
+
+04:15.620 --> 04:22.070
+The first topic we're covering is this idea of Dr. docker helps us create these containers around our
+
+04:22.070 --> 04:23.080
+services.
+
+04:23.090 --> 04:29.160
+Like I said Don't get scared we're coming back to these points as we go through each section.
+
+04:29.330 --> 04:33.280
+We'll start to build our idea around the services architecture.
+
+04:33.440 --> 04:38.700
+And this is a tough topic but I promise it's going to make sense by the end of it all.
+
+04:38.700 --> 04:39.250
+All right.
+
+04:39.320 --> 04:42.650
+In the next video let's take a closer look at Dr..

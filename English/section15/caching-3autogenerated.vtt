@@ -1,0 +1,403 @@
+WEBVTT
+
+00:01.340 --> 00:02.120
+Welcome back.
+
+00:02.300 --> 00:10.220
+Let's finish our discussion on cashing on the blind side because we already know how to do caching here.
+
+00:10.220 --> 00:15.470
+It's really really dependent on your application on how you want to implement it.
+
+00:15.560 --> 00:21.950
+Now with the browser though there's a nice standard that we can use and I showed you with good pages
+
+00:21.950 --> 00:28.880
+in our Robur friends app how we're able to cache using create re-act apps bundling techniques and also
+
+00:28.880 --> 00:30.640
+service worker.
+
+00:30.730 --> 00:37.880
+But what if you actually control the server unlike how pages are Roble France that is purely Front-End.
+
+00:38.080 --> 00:47.190
+What if you have an Express server and you need to cache contents Well we can take advantage of the
+
+00:47.520 --> 00:51.380
+GTP cache that comes with all browsers.
+
+00:51.460 --> 00:56.110
+You see we have the browser over here and blue and the server over here.
+
+00:56.620 --> 01:03.970
+And if we do a get requests to a file and point the browser initially makes a request to the server
+
+01:04.270 --> 01:05.140
+and the server.
+
+01:05.140 --> 01:12.100
+If you remember always responds with something let's say a Jaisalmer response that says success or some
+
+01:12.100 --> 01:13.140
+sort of data.
+
+01:13.600 --> 01:20.560
+But along with this response usually also send headers that with Express come by default.
+
+01:20.560 --> 01:26.230
+Or you can manually configure them if you have things like Content-Length But then you have these two
+
+01:26.230 --> 01:28.600
+things that we use for caching.
+
+01:28.600 --> 01:36.290
+One is cache control and the other one is E-Tec and using these headers that we send from the server.
+
+01:36.420 --> 01:41.550
+We can tell the browser what to cache how to catch it and when to not catch it.
+
+01:42.030 --> 01:45.690
+So let's explore that topic.
+
+01:45.770 --> 01:50.110
+I have over here a very very simple server that I've created.
+
+01:50.120 --> 01:53.230
+Now let's go through the code.
+
+01:53.300 --> 01:59.120
+Usually I like writing this out by myself but this was something that we've already done a ton of times
+
+01:59.120 --> 02:03.440
+with Express servers so I don't want to bore you with just started from scratch.
+
+02:03.440 --> 02:09.300
+All we care about are these two endpoints that are new and we haven't seen before the end point high
+
+02:09.860 --> 02:13.040
+and the endpoint static.
+
+02:13.060 --> 02:20.140
+Now there might be some new code that we haven't seen here before so let's go over it.
+
+02:20.160 --> 02:29.560
+The first one static is an endpoint that we're adding and it's a middleware and this is how you serve
+
+02:29.680 --> 02:37.270
+static web sites an express or static files and express all we're saying is serve the Express use the
+
+02:37.270 --> 02:45.730
+express static method to serve the file that is in the public folder and you see over here that I've
+
+02:45.730 --> 02:53.850
+created a public folder with index that a Shyamal which is a very very simple.
+
+02:54.180 --> 02:56.030
+A shame Alpha.
+
+02:56.230 --> 03:00.250
+If I go back to the server I'm going to make this a little bit bigger.
+
+03:00.260 --> 03:02.110
+I'm going to make this a little bit bigger.
+
+03:02.110 --> 03:02.740
+There you go.
+
+03:03.840 --> 03:09.030
+All I'm saying is at this point serve this index start a mouthful.
+
+03:09.300 --> 03:21.090
+And I've also added the option that is Max H and in express the way you define this cache control Hetter
+
+03:21.750 --> 03:26.190
+is to simply say what's the max age and max age means.
+
+03:26.220 --> 03:31.530
+How many seconds do you want the browser to remember this content.
+
+03:31.560 --> 03:33.250
+This data that we're sending.
+
+03:33.720 --> 03:41.100
+So in our case we're saying I want MacSpeech to be two hours and I can say two hours or two days a year
+
+03:41.280 --> 03:42.240
+or I can do it.
+
+03:42.330 --> 03:44.880
+I can give it a number that is in milliseconds.
+
+03:46.060 --> 03:48.290
+And I guess let's just leave it a two hours.
+
+03:48.310 --> 03:53.280
+So I'm saying at this point I want you to remember this resource for two hours.
+
+03:54.580 --> 03:56.350
+So let's test this out.
+
+03:56.350 --> 03:58.570
+It's a simple server that's running this.
+
+03:58.690 --> 04:01.730
+That's going to serve me our index Alpha.
+
+04:02.020 --> 04:02.820
+Let's have a look.
+
+04:05.240 --> 04:14.770
+If I go to localhost and we go to the static and point I get my website that says Catch Me Baby One
+
+04:14.770 --> 04:21.020
+More Time If I open up the developer tools and I refresh.
+
+04:21.230 --> 04:30.260
+I see that these static file over here returned a three or four instead of a 200.
+
+04:30.270 --> 04:35.430
+Now three or four if I hover over it see you see that it's not modified.
+
+04:36.250 --> 04:41.400
+And if I refresh again it's Keef's saying not modified.
+
+04:41.630 --> 04:46.700
+If I do a hard refresh refresh with MT-NW cache I get 200.
+
+04:46.700 --> 04:50.190
+That means it went all the way to the server and back again.
+
+04:50.210 --> 04:52.390
+And return me this information.
+
+04:52.400 --> 05:00.860
+So what does three or four not modified mean if I open up our static contents and I scroll to the headers
+
+05:01.940 --> 05:05.710
+I see that oh here's my big cache control header that Avocet.
+
+05:05.720 --> 05:09.140
+So two hours is this many seconds.
+
+05:09.290 --> 05:19.070
+And we also see the e-TAG field and the three or four not modified is what we get when the e-TAG automatically
+
+05:19.070 --> 05:26.120
+generated through Express says that nothing has modified in this file and it says that usually with
+
+05:26.120 --> 05:32.590
+something that is a hash it's a randomly generated number that if nothing changes in our index file
+
+05:32.810 --> 05:34.200
+file will stay the same.
+
+05:34.220 --> 05:40.420
+So if we remember this number I'm going to change something in our index at a shim Alpha Let's go to
+
+05:40.420 --> 05:44.350
+index that A.P.M. and add some exclamation marks here.
+
+05:44.410 --> 05:46.210
+I'm going to save.
+
+05:46.430 --> 05:49.720
+And now when I go back and refresh
+
+05:52.410 --> 05:54.030
+I get 200.
+
+05:54.360 --> 05:54.900
+Once again
+
+05:58.520 --> 06:01.530
+because my e-tag now is completely different.
+
+06:01.670 --> 06:03.350
+Just to make sure that we did that right.
+
+06:03.350 --> 06:04.690
+I'm going to press enter again.
+
+06:05.610 --> 06:14.010
+And I get three or four because now I've already cashed this information this e-tag is the same again
+
+06:14.040 --> 06:20.980
+if I go back and change it to just the period go back and refresh I now get 200.
+
+06:21.180 --> 06:24.400
+And the e-TAG is once again ending in 3 0.
+
+06:27.600 --> 06:34.490
+Changing an exclamation marks five refresh the e-TAG now and then 5.
+
+06:36.960 --> 06:42.430
+All right so that's three or four the not modified request.
+
+06:42.580 --> 06:49.870
+And what that means is the browser makes that request to my server express server and says Hey but I
+
+06:49.870 --> 06:56.620
+have this e-tag thing has the resource changed the Express server says no no no this is the tag that
+
+06:56.620 --> 07:01.030
+I have the file hasn't changed so you can go ahead and use whatever's in your cache.
+
+07:01.030 --> 07:04.500
+That is the deep cache of this Web site.
+
+07:04.840 --> 07:06.240
+How cool is that.
+
+07:06.250 --> 07:13.270
+Now here's the interesting part because I've cached this file or this endpoint that is.
+
+07:13.270 --> 07:21.290
+That gives me the index not a shame I'll fall for two hours if I now close this and open up a new window.
+
+07:21.400 --> 07:26.980
+And I just go to localhost three thousand two static and I open up the developer tools first and I go
+
+07:26.980 --> 07:31.090
+to static.
+
+07:31.160 --> 07:32.980
+I get 200.
+
+07:33.200 --> 07:35.130
+But it's a little bit greyed out.
+
+07:35.240 --> 07:39.840
+And if I go all the way to the right I see that it's from disk.
+
+07:40.190 --> 07:46.820
+Because we cache this if I don't visit this Web site for two hours and I come back I won't get this
+
+07:46.820 --> 07:50.960
+because I've told it Hey I only wanted to cash just for two hours.
+
+07:50.960 --> 07:53.210
+Very very cool.
+
+07:53.210 --> 07:55.830
+Now just as an extra example.
+
+07:55.910 --> 08:00.840
+And also just to introduce some new syntax that is a little bit more advanced.
+
+08:00.890 --> 08:04.270
+What we have here of serving index not a shame.
+
+08:04.310 --> 08:08.840
+All I can do in similar fashion this way as well.
+
+08:08.850 --> 08:16.880
+I said headers so I use response headers and I'm using Express 4.00 API here.
+
+08:16.880 --> 08:20.750
+Express has changed this depending on the version that you use so just heads up.
+
+08:20.750 --> 08:23.390
+You'll have to go to the Express documentation.
+
+08:23.390 --> 08:26.210
+It might be set headers or some different method.
+
+08:26.780 --> 08:29.780
+But I can change the header to say cache control.
+
+08:29.780 --> 08:38.660
+I want this resource to be public and max age of I believe this is maybe a day and I can also say that
+
+08:38.660 --> 08:41.590
+the header is Content-Type tax a shemale.
+
+08:41.720 --> 08:48.230
+And then I send the response using what we call a new buffer and this is something that comes in node
+
+08:48.410 --> 08:57.950
+and a buffer allows us to send a shemale strings over the wire so they can be read by the browser and
+
+08:57.980 --> 08:58.820
+underneath the hood.
+
+08:58.820 --> 09:01.130
+This is what serving static files is like.
+
+09:01.130 --> 09:07.550
+It's using this new buffer but if I go to the high end point now and remember this Max Page that I've
+
+09:07.550 --> 09:17.800
+just created a 6 4 0 0 I'll go to the high end point and I see that the high end point I get the test
+
+09:17.800 --> 09:25.060
+strength that I've just sent and then I also get to look at that cache control max age 8 6 4 0 0 and
+
+09:25.090 --> 09:30.320
+I have my e-tag as well and there you have it.
+
+09:30.550 --> 09:38.560
+If I go back here to let's go to Product Hunt and this product and if I open up the Network tab we have
+
+09:38.710 --> 09:40.930
+now an idea of what it does.
+
+09:41.020 --> 09:48.480
+If I scroll up here to let's say the mail page I can see that all right there look at that.
+
+09:48.490 --> 09:59.460
+Using CloudFlare as their CDN they're using content encoding B.R. but if I scroll down I also see that
+
+09:59.460 --> 10:02.130
+they have cache control of Max h 0.
+
+10:02.130 --> 10:08.190
+That means they don't want to cached and we now have a way to read our headers and understand what is
+
+10:08.280 --> 10:11.850
+going on what about their API doesn't mean dodgy.
+
+10:11.910 --> 10:14.150
+Yes I see that.
+
+10:14.160 --> 10:17.270
+Oh yeah they're definitely caching that.
+
+10:17.430 --> 10:20.300
+And there's also an e-tag associated with it.
+
+10:20.520 --> 10:27.670
+And you can start to understand what each web site does in terms of caching but to wrap this up when
+
+10:27.670 --> 10:33.880
+it comes to caching you can implemented in all levels of your stack.
+
+10:33.910 --> 10:35.070
+It's not just one place.
+
+10:35.080 --> 10:36.610
+It's not just the browser.
+
+10:36.640 --> 10:43.540
+It's not just with a CD and they can cache he can cache anywhere that you see fit for your application.
+
+10:43.540 --> 10:49.570
+You'll most likely start with something like the front end with the cache control and the tags and using
+
+10:49.570 --> 10:55.810
+service workers maybe using a CDN CloudFlare and then you might want to move into actually using rattus
+
+10:55.810 --> 11:03.050
+for caching database queries or perhaps caching expensive API calls that take a long time.
+
+11:03.130 --> 11:10.060
+It is really up to you as a developer to implement but as we know when it comes to performance you only
+
+11:10.060 --> 11:16.660
+want to start working on a problem on maybe a cache solution when there is a measurable test that we
+
+11:16.660 --> 11:23.140
+can implement that we can for sure know that if we implemented this cache method that it is going to
+
+11:23.140 --> 11:29.290
+significantly improve our application and our user experience I'll see in the next video.

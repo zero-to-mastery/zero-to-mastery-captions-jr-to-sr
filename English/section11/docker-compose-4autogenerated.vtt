@@ -1,0 +1,463 @@
+WEBVTT
+
+00:00.870 --> 00:04.870
+Welcome back let's continue on with our example.
+
+00:04.940 --> 00:11.870
+We have Doc compose all set up here so we should be able to add postscripts on here as well so that
+
+00:11.960 --> 00:16.430
+we just have everything running inside of it container.
+
+00:16.490 --> 00:20.240
+Now before we do anything and you might encounter some errors as well.
+
+00:20.240 --> 00:24.500
+Always make sure that there's no containers running that might conflict.
+
+00:24.650 --> 00:28.000
+In our case we have our smart brain API running.
+
+00:28.510 --> 00:36.350
+But just to start off from a clean slate I like to do dog hair compose down which will bring down all
+
+00:36.350 --> 00:37.190
+the services.
+
+00:37.280 --> 00:44.710
+As you can see over here perfect Let's clear this now in order to add post-career on here.
+
+00:44.790 --> 00:47.000
+It's actually quite easy.
+
+00:47.070 --> 00:53.460
+We once again create a new service and let's add a comment here just so we know what we're doing so
+
+00:53.460 --> 00:59.460
+we'll say this is postscripts and I'm going to remove this comment over here since we don't need it
+
+01:00.570 --> 01:01.120
+perfect.
+
+01:01.140 --> 01:07.350
+And I'm going to say that this is the backend API.
+
+01:08.950 --> 01:12.430
+Now within here I'll call this service postscripts
+
+01:15.400 --> 01:24.100
+I'll have a container name of postscripts and we're going to use the image that is already pre-built
+
+01:24.100 --> 01:33.360
+for us on the dotcom hub and the postscripts image on Doc hobbies conveniently called postscripts.
+
+01:33.380 --> 01:39.100
+Now the other thing you want to do is again make sure that the ports are accessible to us.
+
+01:40.040 --> 01:45.890
+So we'll have our default postscripts and this is just the default port for postscripts.
+
+01:45.890 --> 01:48.270
+You might remember that we've used this before.
+
+01:48.560 --> 01:54.670
+Whenever we've connected to our database and just for that to the same port.
+
+01:54.690 --> 02:02.730
+Now if I save this let's see what happens when I run dock or compose up and then remember dash dash
+
+02:02.730 --> 02:07.070
+build to build everything.
+
+02:07.130 --> 02:10.350
+And you see that I've made a little typo here.
+
+02:10.350 --> 02:11.670
+It should be ports.
+
+02:11.840 --> 02:12.910
+Let's try that again.
+
+02:21.310 --> 02:28.340
+And you see over here how it's pulling postscripts the latest from the library pro scraps.
+
+02:28.420 --> 02:30.130
+You'll see that it's doing some work.
+
+02:30.370 --> 02:37.600
+And because this is our first time doing it it will take a bit of time just to download everything.
+
+02:38.780 --> 02:45.050
+Now the area here if you read it see it says that we cannot create a container service conflict.
+
+02:45.080 --> 02:50.360
+The container postscripts is already in use and there's something that you want to be careful of Whenever
+
+02:50.360 --> 02:51.980
+you're using images.
+
+02:52.010 --> 02:59.390
+In our case this image already has the container name set so we actually don't need this.
+
+02:59.450 --> 03:02.700
+If I save this and run this again
+
+03:10.210 --> 03:10.960
+we'll get that.
+
+03:11.130 --> 03:16.170
+Let's make this a little bit bigger so you can see actually.
+
+03:16.280 --> 03:17.020
+There you go.
+
+03:19.400 --> 03:19.980
+All right.
+
+03:20.000 --> 03:26.200
+Looks like our doctor container look at that has postscripts and the back and the back end is running
+
+03:26.570 --> 03:29.740
+and the post Chris gives a lot of input here.
+
+03:29.750 --> 03:31.280
+But we see their success.
+
+03:31.310 --> 03:33.520
+You can now start the database server.
+
+03:34.040 --> 03:40.080
+And if you keep going down you see that post graphs in it process complete ready for start up.
+
+03:40.100 --> 03:44.510
+And then the final message is database system is ready to accept connections.
+
+03:44.830 --> 03:47.310
+Well let's test these connections.
+
+03:47.900 --> 03:49.590
+Let's see if it actually works.
+
+03:49.670 --> 04:00.070
+If I go back to my piece sequel and I tried to connect to the smart brain what do we call it in our
+
+04:00.070 --> 04:00.770
+server.
+
+04:00.880 --> 04:03.450
+We call that smart brain.
+
+04:03.530 --> 04:06.890
+We used one but lets just do smart brain because that's what we did.
+
+04:08.880 --> 04:15.940
+No passwords supply and get password authentication filled for user on agoI.
+
+04:16.390 --> 04:23.430
+Ok that makes sense because I've created this database but there's nothing that I've specified in here.
+
+04:23.700 --> 04:32.070
+And a more likely scenario is that there is a user and a password for a database and we have a way to
+
+04:32.070 --> 04:38.280
+connect the back end to the postscripts even though they're in their own world their own container.
+
+04:38.280 --> 04:42.420
+You want a way for them to speak to each other and connect securely.
+
+04:42.600 --> 04:47.890
+Now the way we're going to do this is through environmental variables.
+
+04:47.900 --> 04:49.790
+Well let me show you what that looks like.
+
+04:49.890 --> 04:55.510
+If I go back to Dharker compose I'm going to give a property to back and API.
+
+04:55.650 --> 05:01.830
+And this is going to be environment and environment is simply environmental variables that we're going
+
+05:01.830 --> 05:13.350
+to pass down and with think here we can just simply do postscripts user will be let's say Sally postscripts
+
+05:14.440 --> 05:31.660
+password be say it's a secret and will say that postscripts database let's call it smart brain doctor.
+
+05:31.930 --> 05:34.080
+And then finally this is a bit of a trick.
+
+05:34.090 --> 05:40.120
+But if you see here we have a host and up to this point the host was local host.
+
+05:40.120 --> 05:46.300
+But remember when we're running in daquiri it's in it's own separate world so we can just reference
+
+05:46.300 --> 05:48.390
+local host from our computer.
+
+05:48.550 --> 05:51.160
+Instead we are able to reference
+
+05:54.470 --> 05:58.430
+the name of the service as the hosts.
+
+05:58.430 --> 06:10.160
+In our case it's going to be postscripts and this is linked by adding a links property and links simply
+
+06:10.160 --> 06:10.700
+says
+
+06:13.290 --> 06:21.750
+that in this darker world of ours I want to the back end API to link to postscripts.
+
+06:21.800 --> 06:22.830
+Let me show you what I mean.
+
+06:23.650 --> 06:26.870
+Going back to our diagram we're trying to build this container out.
+
+06:26.950 --> 06:31.420
+We have our API server running and we also have our database running now.
+
+06:31.450 --> 06:34.450
+However they don't really know of each other's existence.
+
+06:34.450 --> 06:39.470
+They're not really connecting and the API server needs to connect to the database to make all those
+
+06:39.470 --> 06:44.720
+rescue all calls like getting users storing hashed passwords and so on.
+
+06:45.160 --> 06:50.290
+And in the future videos we're also going to have to connect read as well so we're trying to form these
+
+06:50.290 --> 06:59.040
+connections and once again we're simply using links in the future when we have read us as well.
+
+06:59.040 --> 07:04.940
+We'll have a read a service and it's going to be linking here in the links.
+
+07:05.180 --> 07:07.680
+So we have these environmental variables.
+
+07:07.820 --> 07:15.430
+Now all we have to do is if I save this and go back I can simply access them through process.
+
+07:15.510 --> 07:17.030
+Dot dot
+
+07:19.590 --> 07:22.570
+postscripts let me just copy this because it will be easier.
+
+07:22.620 --> 07:33.070
+The post address host which is going to be postscripts so very Yeow process that MF
+
+07:35.980 --> 07:38.770
+and we're going to do for user.
+
+07:38.800 --> 07:45.360
+It's going to be user password is going to be password.
+
+07:45.490 --> 07:50.460
+And then finally for the database name we're just going to leave it at name.
+
+07:50.500 --> 07:52.240
+So let me just make sure the names are correct.
+
+07:52.240 --> 07:54.630
+User password D.B and host.
+
+07:54.790 --> 08:02.500
+So this should be D-B that's a weirdly named environment variable but that's fine for now.
+
+08:03.090 --> 08:04.920
+Let me save that.
+
+08:04.960 --> 08:09.960
+Now we have to restart everything since we need to recreate our database.
+
+08:09.960 --> 08:12.960
+So the way we do that is let me close this.
+
+08:12.960 --> 08:14.870
+I'm going to make this a little bit larger.
+
+08:14.910 --> 08:23.850
+Clear the terminal and run Ron or compose and instead of up we're going to bring everything down and
+
+08:23.850 --> 08:32.910
+we see we have a bit of an air if we go back to dock or compose Oh we have to have a space in here.
+
+08:33.580 --> 08:36.310
+YAML files can get very very tricky with spaces.
+
+08:36.310 --> 08:37.520
+Let's try that again.
+
+08:37.960 --> 08:49.920
+Purrfect and then run dock or compose up again.
+
+08:49.920 --> 08:50.150
+All right.
+
+08:50.170 --> 08:54.540
+We're getting an error here saying that roll Sally does not exist.
+
+08:54.760 --> 08:57.100
+If I go to my server yes.
+
+08:57.550 --> 09:09.830
+And we just console the old log process dot and Dot post-crash let's say user let's save
+
+09:12.910 --> 09:14.330
+OK I get Sally.
+
+09:14.380 --> 09:17.680
+So we are getting these environmental variables.
+
+09:17.710 --> 09:22.900
+All right let me minimize this.
+
+09:22.950 --> 09:29.880
+Here's the other thing and I bring this up because we're going to always have these issues when you're
+
+09:29.880 --> 09:33.400
+first setting up doctor and it can get really really frustrating.
+
+09:34.750 --> 09:41.350
+But if we think about this critically we've given our postscripts user and password DB host all these
+
+09:41.350 --> 09:51.070
+information however we actually have not given that to the postscripts image we need to also do the
+
+09:51.070 --> 10:00.370
+same thing to our database so that it creates the user password database and has all this information
+
+10:00.370 --> 10:01.720
+that it needs.
+
+10:01.720 --> 10:09.480
+So if I copy this down here too or let me copy the entire environment's variables
+
+10:12.650 --> 10:14.490
+and I save.
+
+10:14.730 --> 10:16.960
+Let me bring this down again.
+
+10:26.970 --> 10:29.360
+We now don't have any of those issues.
+
+10:29.400 --> 10:33.300
+And by the way change the user name to lowercase just because that's standard you don't want to have
+
+10:33.300 --> 10:37.820
+any upper cases in user field but this just looks nicer.
+
+10:37.830 --> 10:39.170
+Now let's give this a try.
+
+10:39.410 --> 10:47.640
+Right click OK and say we want to connect to smart brain docker users are going to be Salli password
+
+10:47.640 --> 10:49.200
+is going to be secret.
+
+10:49.670 --> 10:52.150
+Hey connect look at that.
+
+10:52.230 --> 10:56.750
+Connected to the database.
+
+10:56.770 --> 10:57.560
+All right.
+
+10:57.560 --> 10:59.770
+Now let's clean this up a bit.
+
+10:59.770 --> 11:06.230
+This is a little bit messy and most docker compose files.
+
+11:06.370 --> 11:14.410
+You'll see a bit of a different setup because from our smart brain API we can simply connect to postscripts
+
+11:14.410 --> 11:16.850
+like this.
+
+11:17.020 --> 11:26.350
+I can just say PC quoll postscripts and give my password and secret.
+
+11:26.480 --> 11:30.870
+So in my case it's going to be Salli password is secret.
+
+11:31.270 --> 11:42.860
+Instead of localhost remember it's going to be postscripts the port number and our database again because
+
+11:42.860 --> 11:51.690
+I'm using this from my laptop which is localhost I am exposing the port so I could leave this as a local
+
+11:51.710 --> 11:58.730
+host on the backend API server when I actually connect to proscribes I'll have to do this in our case
+
+11:58.730 --> 12:09.290
+though since I'm doing this from my computer from my local host if I do local host I see that I'm connected.
+
+12:09.380 --> 12:12.070
+Perfect.
+
+12:12.100 --> 12:17.770
+Now the setup that we want to do here is instead of having all of this we're going to just say that
+
+12:17.770 --> 12:19.830
+there's there postscripts you are right.
+
+12:21.280 --> 12:28.820
+And this you are I will reference the post-crisis and very similar to what we did here so I'm actually
+
+12:28.820 --> 12:30.170
+going to copy and paste this
+
+12:35.610 --> 12:37.070
+make this a little bit smaller.
+
+12:37.170 --> 12:42.220
+It's going to reference postscripts Salli secret instead of localhost.
+
+12:42.240 --> 12:47.460
+It's going to reference postscripts port 5:43 to smart brain.
+
+12:47.530 --> 12:55.820
+Dr. now all I need to do is save this go back to the server and ignore all these things and instead
+
+12:56.090 --> 13:01.250
+remove this because we can simply do process.
+
+13:01.340 --> 13:04.630
+And Dot postscripts.
+
+13:04.970 --> 13:10.770
+You are right for unique resource identifier.
+
+13:10.980 --> 13:17.060
+And if I saved this open up our terminal again let's bring everything down
+
+13:19.890 --> 13:28.050
+and started back up.
+
+13:28.110 --> 13:33.790
+We're now connected to that database and everything should be working.
+
+13:33.960 --> 13:34.820
+Very cool.
+
+13:34.830 --> 13:37.950
+We've just connected our two applications.
+
+13:38.080 --> 13:42.000
+Now it's time to see if this all works with our app.
+
+13:42.040 --> 13:43.360
+I'll see you in the next video.
+
+13:43.520 --> 13:43.700
+Buh-Bye.

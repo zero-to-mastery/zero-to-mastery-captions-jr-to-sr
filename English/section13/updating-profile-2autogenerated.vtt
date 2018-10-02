@@ -1,0 +1,343 @@
+WEBVTT
+
+00:01.130 --> 00:07.940
+Welcome back it's time to finally make this profile update work and connect it to our Bacchante.
+
+00:08.060 --> 00:12.800
+Let's go back to our Front-End and in our profile.
+
+00:12.910 --> 00:15.930
+Yes this two a few things.
+
+00:16.010 --> 00:24.770
+First I want to make sure that whenever we update our input here we also update the state of our app
+
+00:26.960 --> 00:38.140
+so going back once again I'm going to do a new method here and change this stateless function into a
+
+00:38.590 --> 00:39.610
+class component.
+
+00:39.610 --> 00:46.090
+Now I could just create the function out here but I like using class components or class declaration
+
+00:46.090 --> 00:48.940
+whenever we have other methods that we want to use.
+
+00:49.830 --> 00:53.900
+So class extends or a class profile
+
+00:56.500 --> 01:08.840
+extends re-act dot component.
+
+01:08.890 --> 01:10.210
+This is going to have a render
+
+01:13.500 --> 01:20.170
+let's bring all of this inside the Rander.
+
+01:20.180 --> 01:26.070
+I'm just going to minimize this so we can see a better it's a lot better.
+
+01:26.220 --> 01:34.090
+And we also want to have a constructor vowel C props.
+
+01:34.100 --> 01:45.770
+Super props and here will say that this thought state and this is going to be interesting and we're
+
+01:45.770 --> 01:47.860
+going to talk about this a little bit.
+
+01:48.230 --> 01:55.550
+I'm going to have Neame equal to this Daut props dot user dot name.
+
+01:55.550 --> 02:00.400
+And if you're wondering why we do props for constructor and super and sometimes we don't.
+
+02:00.620 --> 02:04.020
+Well if you ever want to use this stop props inside of the constructor.
+
+02:04.040 --> 02:08.330
+This is why you need to do and we are in this case so that's why we're doing this.
+
+02:09.770 --> 02:12.030
+All right so we have user name.
+
+02:12.240 --> 02:22.730
+We also have H that is props start user dot page and we also have Pat this stop prop's dot user dot
+
+02:22.910 --> 02:27.390
+Pat All right what am I doing here.
+
+02:27.390 --> 02:32.390
+Why are we creating a state when these are already props.
+
+02:32.400 --> 02:39.170
+Why not just update the state where these things actually exist.
+
+02:39.270 --> 02:40.950
+And if you remember when we go to APT.
+
+02:41.070 --> 02:41.420
+Yes.
+
+02:41.430 --> 02:47.240
+If we scroll all the way up to our state well we already have all the user information here.
+
+02:47.250 --> 02:57.120
+Why don't we just update this and have an event in profile that triggers up to render.
+
+02:57.170 --> 03:05.780
+And here I want to demonstrate some good practices of thinking in terms of react and how it works you
+
+03:05.780 --> 03:11.870
+see with forms there's a lot of instances where I can't just have a user just keep typing keep typing
+
+03:11.870 --> 03:18.710
+keep typing and that causes a revenger because state is being updated and every time we update on change
+
+03:18.830 --> 03:25.640
+an input it renders renders we renderers we renders the component and all the components underneath
+
+03:25.640 --> 03:26.780
+it.
+
+03:26.780 --> 03:35.520
+Now because app is that our top level as soon as we update the state is going to render everything underneath
+
+03:35.520 --> 03:35.840
+it.
+
+03:35.940 --> 03:38.520
+And that's just a waste.
+
+03:38.610 --> 03:48.350
+And with form this is good practice that is if you have a form have a state that the form keeps and
+
+03:48.380 --> 03:54.610
+as soon as the user clicks submit or does some sort of an action that is important.
+
+03:54.770 --> 04:02.330
+Then we update the state so that we keep all the state updates as the users typing within here and only
+
+04:02.330 --> 04:06.250
+update the general big state that is in the top dog.
+
+04:06.250 --> 04:06.850
+Yes.
+
+04:07.130 --> 04:09.270
+After the user has confirmed that.
+
+04:09.320 --> 04:09.670
+All right.
+
+04:09.710 --> 04:10.400
+This is my name.
+
+04:10.400 --> 04:11.090
+This is age.
+
+04:11.090 --> 04:16.750
+This is Pat and we don't have to update sayt every time they make a mistake for example.
+
+04:16.770 --> 04:17.470
+All right.
+
+04:17.480 --> 04:26.040
+Now that we got that out of the way let's handle what we call a on form change and this on form change
+
+04:26.070 --> 04:34.050
+is going to accept an event and this is just typical event handling that we do with react.
+
+04:34.110 --> 04:40.090
+I can do it if steamy here but just for fun let's just do a switch statement that doesn't event dot
+
+04:40.460 --> 04:43.120
+target dot name.
+
+04:43.380 --> 04:49.270
+And this is going to handle based on the name of the target.
+
+04:49.410 --> 04:51.820
+And if you remember we scroll down.
+
+04:51.960 --> 04:57.300
+We've given inputs different names user age user name user or pet.
+
+04:57.540 --> 05:04.600
+So based on those inputs I can say let's minimize this just to look cleaner.
+
+05:05.040 --> 05:16.710
+I'm going to say that if case is user name in that case I want you to update this dot set.
+
+05:16.770 --> 05:17.220
+St.
+
+05:19.900 --> 05:27.180
+with name to equal the event dot target dot value.
+
+05:28.490 --> 05:37.460
+And we can break their otherwise with case user page.
+
+05:37.540 --> 05:41.530
+In that case well of this set state the
+
+05:44.640 --> 05:47.480
+event that target value
+
+05:50.270 --> 05:52.420
+again break.
+
+05:52.430 --> 06:02.170
+And then finally our last case we'll do a case user Pat this thoughts at state
+
+06:06.630 --> 06:14.490
+to be Pat equaling whatever the event target dot value is.
+
+06:14.580 --> 06:21.760
+Who then will obviously do a break and will always add a default that just simply returns
+
+06:24.480 --> 06:29.260
+not deterrence returns.
+
+06:29.260 --> 06:31.530
+All right let's say this.
+
+06:31.730 --> 06:35.180
+And we have a few areas here and we'll see what we've done.
+
+06:35.210 --> 06:36.230
+User is not defined.
+
+06:36.230 --> 06:44.960
+User is not defined well because we need to make sure that within the Rander we can open it within the
+
+06:44.960 --> 06:48.820
+render we're using the user data entry so let's do a concert
+
+06:51.330 --> 06:56.790
+user from the start props.
+
+06:56.940 --> 06:59.750
+Let's save all right.
+
+06:59.780 --> 07:03.910
+And we have a few things we have returns Whoops.
+
+07:04.140 --> 07:05.930
+Swish them and make sure I fix that.
+
+07:06.140 --> 07:09.540
+And then we also have toggle motile is not defined.
+
+07:09.590 --> 07:20.490
+Again we need to make sure that we now within the toggle modal call this the props or toggle motile
+
+07:20.970 --> 07:28.720
+and this dog props dot toggle motile because it's not a stateless function like we had it before we
+
+07:28.730 --> 07:29.400
+save.
+
+07:29.660 --> 07:29.960
+All right.
+
+07:29.960 --> 07:39.380
+Everything is passing if we go back to our app sign in with our good friend a sign an and we go to the
+
+07:39.380 --> 07:49.110
+profile update the name open up the console.
+
+07:49.130 --> 07:49.740
+All right.
+
+07:49.760 --> 07:51.390
+Nowhere's that's good.
+
+07:51.600 --> 07:57.140
+But wouldn't it be nice if we'd type here and this name also gets updated.
+
+07:58.340 --> 08:02.750
+And remember we're in our own state here before we actually hit save.
+
+08:02.840 --> 08:06.210
+We haven't really updated the state in the apt.
+
+08:06.310 --> 08:13.800
+Yes but within the form will be nice to be able to change the user name to see how it displays so we
+
+08:13.800 --> 08:16.100
+can do that by going back to our profile.
+
+08:18.150 --> 08:19.980
+Let's make this a little bit smaller.
+
+08:21.400 --> 08:30.880
+And now the user name here that we use can instead be this dot state DOT user.
+
+08:30.970 --> 08:40.340
+Let's save this go back have to sign and once again go to your profile.
+
+08:40.340 --> 08:41.310
+Type something.
+
+08:41.390 --> 08:43.340
+But now we see that we don't have the user name
+
+08:47.450 --> 08:48.620
+and silly me.
+
+08:48.650 --> 08:53.920
+It's not user it's name member remember our state just has name age impact.
+
+08:53.990 --> 08:56.650
+Let's save.
+
+08:56.810 --> 09:03.710
+And then the final thing we want to do is actually call this on form change event.
+
+09:03.800 --> 09:05.520
+Now where should we call that.
+
+09:05.840 --> 09:17.190
+Well for each input we can just say that there is an on change that takes this dot on form change event
+
+09:18.200 --> 09:18.690
+again.
+
+09:18.720 --> 09:22.440
+Just gonna copy and paste this to all the inputs
+
+09:25.330 --> 09:33.240
+let's save and let's see if this finally works sign in again because we do that all the time.
+
+09:33.310 --> 09:37.020
+Seinen view profile.
+
+09:37.220 --> 09:39.280
+Start typing.
+
+09:39.430 --> 09:41.090
+Look at that.
+
+09:41.200 --> 09:43.700
+Our event is being fired.
+
+09:43.720 --> 09:45.880
+We're never updating the app state.
+
+09:45.880 --> 09:50.220
+We're only rendering just this little tiny portion that we need to.
+
+09:50.590 --> 09:57.460
+But as soon as I click save I want to make sure that this name gets updated.
+
+09:57.820 --> 10:05.770
+So let's finish this off by doing a post request with this information that we have and the form state.
+
+10:05.820 --> 10:07.200
+See in the next one.
+
+10:07.540 --> 10:07.750
+Bobby.

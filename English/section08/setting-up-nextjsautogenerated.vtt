@@ -1,0 +1,283 @@
+WEBVTT
+
+00:02.050 --> 00:07.180
+Welcome back in the next couple of videos we're going to learn about next.
+
+00:07.290 --> 00:07.980
+Yes.
+
+00:08.150 --> 00:16.010
+A really great tool if you want to build server side rendered apps and we're going to start off by installing
+
+00:16.010 --> 00:18.070
+Nexxus and having everything set up.
+
+00:18.110 --> 00:22.420
+And by the end of it you're going to see why it's such a popular tool.
+
+00:22.420 --> 00:27.870
+So to get started let's open up our terminal and whatever text editor you have.
+
+00:28.160 --> 00:33.880
+And just follow along we're going to make a directory we'll call LEAD next server side rendering.
+
+00:33.980 --> 00:36.820
+I'm going to CD into that folder.
+
+00:38.460 --> 00:42.540
+And from here we'll run our regular command which is NPM in it.
+
+00:42.600 --> 00:43.530
+Dash y.
+
+00:43.620 --> 00:45.010
+So to get our package.
+
+00:45.210 --> 00:46.360
+Jaisalmer File.
+
+00:46.530 --> 00:48.720
+We're going to open up our text editor.
+
+00:49.890 --> 00:52.070
+Let's make the windows nice and pretty together.
+
+00:53.690 --> 00:54.510
+There you go.
+
+00:54.710 --> 01:00.720
+And in this package do some file we want to install a few things we want to install next.
+
+01:01.560 --> 01:08.520
+The package obviously that's pretty self-explanatory but also react and react dumb.
+
+01:08.670 --> 01:13.770
+And we've seen these packages before we're building we're building a re-act application that is has
+
+01:13.770 --> 01:15.080
+server side rendered.
+
+01:15.180 --> 01:21.330
+So we need the repackages let's install these.
+
+01:21.420 --> 01:29.190
+Now while this is loading let's just go over a few things that next provides for us with next just like
+
+01:29.190 --> 01:30.390
+create react up.
+
+01:30.420 --> 01:37.480
+It includes all the things you need for you in order to build server side rendered apps.
+
+01:37.530 --> 01:44.230
+It includes routing so that you can go from page to page.
+
+01:44.260 --> 01:47.550
+It already has web packs set up for us.
+
+01:47.800 --> 01:57.280
+You can use different types of CSSA features their support for typescript as well if you really want
+
+01:57.280 --> 01:58.100
+to.
+
+01:58.180 --> 02:05.020
+And there's just a ton more a ton of things that help you build server side applications.
+
+02:05.020 --> 02:10.560
+Really really fast and you'll see right now how fast we can build this.
+
+02:10.570 --> 02:14.790
+Let's go back to our folder and we see that we have everything downloaded.
+
+02:15.340 --> 02:25.570
+The only thing we need to do now is change our command to say start in our scripts and we'll just say
+
+02:26.740 --> 02:29.550
+Next see what what happens here.
+
+02:29.620 --> 02:33.290
+I'm going to run NPM start.
+
+02:33.570 --> 02:39.680
+I'm getting there and it says couldn't find a page's directory and this is a default with next.
+
+02:39.810 --> 02:43.310
+It expects to see a page's directory here.
+
+02:43.410 --> 02:44.460
+So let's just create that.
+
+02:44.460 --> 02:45.780
+I'm going to say new folder
+
+02:49.580 --> 02:52.720
+pages.
+
+02:52.760 --> 02:56.200
+All right what do we run NPM start again.
+
+03:00.640 --> 03:01.940
+All right look at that.
+
+03:02.110 --> 03:04.280
+It's compiled successfully.
+
+03:04.300 --> 03:06.180
+It kind of reminds us of CCRI react up.
+
+03:06.180 --> 03:12.880
+We have everything set up it's ready and running on localhost 3000 we see that we have the pages folder
+
+03:13.030 --> 03:19.010
+but also a dot next folder that just appeared again just like create re-act up.
+
+03:19.060 --> 03:25.330
+It does a ton of things underneath the hood including having a distribution folder with all our bundles
+
+03:25.870 --> 03:27.770
+already preset for us.
+
+03:28.610 --> 03:29.120
+Amazing.
+
+03:31.640 --> 03:34.060
+Now let's go to localhost and see what happens.
+
+03:34.060 --> 03:39.070
+I mean we don't have anything in Page's folder but just let's go test it out.
+
+03:39.160 --> 03:43.990
+I'm going to say localhost and four or four.
+
+03:44.000 --> 03:49.530
+This page could not be found although we do have a really nice air because well we don't have any pages
+
+03:49.530 --> 03:49.960
+yet.
+
+03:50.370 --> 03:51.500
+So let's build one.
+
+03:53.330 --> 04:01.310
+I'm going to create a new file and this is going to be called index dot J Yes.
+
+04:01.420 --> 04:04.810
+Again the entry point of our app.
+
+04:04.870 --> 04:13.980
+The first thing that a user is going to see and let's do something like this something that we've seen
+
+04:13.980 --> 04:23.390
+in react before we're going to create an index component and this index component is going to return
+
+04:23.430 --> 04:25.730
+actually list through a cleaner version of this.
+
+04:25.920 --> 04:33.120
+Instead of using curly brackets we can use actual brackets so it just evaluates the expression inside
+
+04:33.120 --> 04:36.810
+of it and within here we can just say that's div
+
+04:41.900 --> 04:55.360
+and inside of this div we'll just have let's say a head or one of the S.R. magician.
+
+04:55.360 --> 04:57.660
+All right let's just say that and see what happens.
+
+04:57.700 --> 04:59.300
+Nothing's changed here.
+
+05:00.390 --> 05:02.110
+Nothing's changed here.
+
+05:02.490 --> 05:06.450
+We have the default export is not a rehab component.
+
+05:06.450 --> 05:13.860
+And we see again it gives us really nice errors right away and tells us what we're doing wrong in this
+
+05:13.860 --> 05:22.650
+case well we should have known that we need to export default index.
+
+05:22.800 --> 05:32.990
+If I save this compile successfully and I have as S.R. magician here how crazy is that.
+
+05:33.030 --> 05:43.290
+We didn't import react or react like we have before we simply wrote a component and we just exported
+
+05:43.300 --> 05:43.770
+it.
+
+05:44.170 --> 05:47.390
+And this is the beauty of next.
+
+05:47.470 --> 05:52.190
+It does everything for you all the repetitive things they used to do.
+
+05:52.270 --> 05:53.610
+You don't need to do that anymore.
+
+05:53.800 --> 05:59.050
+All you need to do is just have components in your pages and these are going to be your pages.
+
+05:59.050 --> 06:05.520
+For example we just created our home page our index component that renders everything automatically.
+
+06:05.680 --> 06:11.190
+We've simply exported a simple Riak component index such as.
+
+06:11.280 --> 06:17.590
+And yeah we could keep contesting this and create whatever components we want we want we can have our
+
+06:17.590 --> 06:23.020
+own components our own reac components that we create anything we want just like we did on the front
+
+06:23.020 --> 06:29.760
+end and all we need to do is just make sure that our component is the export default.
+
+06:29.960 --> 06:37.590
+And next is smart enough to know that I'm just going to render this component for you and as you saw
+
+06:37.590 --> 06:43.730
+next we'll just track errors and compile automatically and let us know anytime we've made a mistake.
+
+06:45.540 --> 06:46.340
+There you have it.
+
+06:46.350 --> 06:51.950
+We've set up next and everything is loading perfectly.
+
+06:51.960 --> 06:56.750
+If I open up the network tab here and I refresh.
+
+06:57.240 --> 07:06.150
+I see all the calls that I'm getting including the main japes index suggests that I'm requesting but
+
+07:06.150 --> 07:12.100
+the cool thing about this is that if I open up view page source
+
+07:15.240 --> 07:18.900
+we see that I know this is small so let's make it a little bit bigger.
+
+07:20.360 --> 07:23.610
+We see that as part of the a shemale page that we received.
+
+07:23.690 --> 07:28.690
+We have the H-1 SSR magician.
+
+07:28.690 --> 07:42.020
+So it's already pre-rendered when we received this.
+
+07:42.050 --> 07:48.810
+Now you see that we also have a few things that comes out of the box with one pack and the next set
+
+07:48.810 --> 07:49.360
+up.
+
+07:49.580 --> 07:52.810
+But for now we have a server side rendered up.
+
+07:52.970 --> 07:54.490
+So let's do some more on the next video.

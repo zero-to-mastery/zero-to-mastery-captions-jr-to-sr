@@ -1,0 +1,418 @@
+WEBVTT
+
+00:01.580 --> 00:02.530
+Welcome back.
+
+00:02.570 --> 00:06.250
+Let's finish off this slide with the last three points.
+
+00:07.740 --> 00:11.970
+Displaying different sized images for different backgrounds.
+
+00:12.630 --> 00:15.030
+Again that makes sense right.
+
+00:15.120 --> 00:20.400
+Right now in the world there are so many people with so many different size screens some people are
+
+00:20.400 --> 00:23.160
+visiting your Web site on a mobile phone.
+
+00:23.160 --> 00:29.070
+Some people may be on an iPad and other person maybe on a large display screen.
+
+00:29.490 --> 00:31.880
+Everybody has different screen sizes.
+
+00:32.040 --> 00:40.530
+So why would we want to send a large background image that works on a TV screen to somebody with a tiny
+
+00:40.530 --> 00:46.840
+mobile screen device and we're able to easily do that using something called media queries.
+
+00:47.130 --> 00:48.350
+And they look something like this
+
+00:51.100 --> 00:57.910
+media queries are useful when you want to apply CSSA styles depending on a device general type such
+
+00:57.910 --> 01:01.020
+as the screen size as you can see over here.
+
+01:02.360 --> 01:11.570
+Specific characteristics such as the width of the view or the environment such as the size of the screen
+
+01:12.050 --> 01:20.010
+and media queries have this general syntax where you do at media and then you give it what kind of properties
+
+01:20.010 --> 01:21.560
+you want.
+
+01:21.590 --> 01:28.160
+For example screen which 99 percent of the time this is where you want you want to use it for a screen
+
+01:28.340 --> 01:30.590
+that the Web site is being viewed on.
+
+01:30.590 --> 01:33.120
+You can also change just something like print.
+
+01:33.290 --> 01:40.960
+And this means that this SS file will be activated when it's in print screen mode
+
+01:44.590 --> 01:51.310
+but media queries are very simple using CSX you can actually deliver a different background image for
+
+01:51.310 --> 01:54.310
+the various screen sizes that your side provides.
+
+01:55.470 --> 02:01.900
+This means that you must save your images in different file sizes for them to work.
+
+02:02.280 --> 02:07.120
+But I think just watching this it might not make sense so let me give you an example.
+
+02:08.070 --> 02:12.420
+I have over here a Web site that will actually use as an exercise.
+
+02:12.600 --> 02:19.530
+At the end of this section to optimize things it's a simple index file and you see the task there you'll
+
+02:19.530 --> 02:21.690
+have to do later on.
+
+02:21.780 --> 02:28.500
+But for now let's just focus on the fact that it's very simple it just has a hello text and an image
+
+02:28.820 --> 02:33.060
+it loads some SS and also some javascript.
+
+02:33.060 --> 02:39.920
+The thing we want to we really care about is the first line which flows the first stylesheet and this
+
+02:39.920 --> 02:40.920
+style sheet over here.
+
+02:40.940 --> 02:51.400
+As I said uses media queries and you can see over here that we have the body background being used three
+
+02:51.400 --> 02:54.390
+times.
+
+02:54.500 --> 02:58.150
+We have the regular way that we have seen before.
+
+02:58.220 --> 02:59.340
+Background is yellow.
+
+02:59.690 --> 03:08.420
+But then we also have media queries that says that we want a media query for any screen that has a minimum
+
+03:08.420 --> 03:10.850
+width of 900 pixels.
+
+03:10.850 --> 03:21.350
+In that case I want to load up the body CSSA to have a background with an u r l of the image that we
+
+03:21.350 --> 03:25.070
+provide for it which looks like a pretty pretty massive image.
+
+03:27.150 --> 03:35.440
+With a few CSSA syntaxes to make it nice and we also have a Nunda me query because we can use as many
+
+03:35.440 --> 03:36.530
+as we want.
+
+03:36.640 --> 03:43.740
+That says the same thing except for this time we want to say that max width is 500 pixels.
+
+03:43.820 --> 03:51.140
+So let's see what this actually does and what these differences might be.
+
+03:52.270 --> 03:58.790
+I have the Web site running over here and you can see that it's a very simple web site but I think it
+
+03:58.790 --> 04:01.200
+looks pretty good especially the Stargell here.
+
+04:02.040 --> 04:08.000
+But check this out as I changed the screen size of this
+
+04:11.130 --> 04:12.650
+my background just turn to yellow.
+
+04:15.000 --> 04:26.280
+And my background just turned to the image so looks like depending on the screen size images are being
+
+04:26.280 --> 04:29.290
+loaded or it's yellow
+
+04:31.950 --> 04:32.390
+interesting
+
+04:35.730 --> 04:45.270
+so that's media queries at work what I'm saying is if I open up the developer tools and go into elements
+
+04:45.960 --> 04:56.470
+we see over here that we have our styles for the body and these styles have a media screen with the
+
+04:56.470 --> 04:59.050
+men with over 900 pixels.
+
+04:59.050 --> 05:07.210
+So we see that any time the minimum width of the screen is over 900 pixels.
+
+05:07.270 --> 05:16.660
+I want to apply this CSSA which makes sense as we make it smaller and smaller and we go below 900 pixels
+
+05:19.560 --> 05:27.210
+it turns yellow and we see in the top right corner of here how it shows us the pixel width.
+
+05:27.260 --> 05:32.010
+But as soon as we had less than 900 We have a yellow background.
+
+05:32.260 --> 05:35.640
+And then as soon as we hit 500
+
+05:39.060 --> 05:46.500
+because as soon as the max width is 500 pixels Well we have a u r l once again.
+
+05:46.710 --> 05:50.730
+And you see over here that it's not calculate in the background size and the background is a little
+
+05:50.730 --> 05:51.130
+bit.
+
+05:51.150 --> 05:52.520
+So let's fix that.
+
+05:52.740 --> 05:58.440
+We'll say cover save that.
+
+05:58.480 --> 05:59.010
+There you go.
+
+05:59.020 --> 05:59.880
+That looks a lot better.
+
+06:00.950 --> 06:02.660
+So that's it media queries.
+
+06:02.690 --> 06:06.990
+I'll leave resources for you at the end of the video so you can test it out yourself.
+
+06:07.250 --> 06:16.400
+But I forgot to mention one interesting thing you might be thinking to yourself well even if the original
+
+06:16.460 --> 06:23.680
+screen of the user let's say the user has a screen an iPad that is this size.
+
+06:23.760 --> 06:28.680
+Are we still loading the image in the background.
+
+06:28.720 --> 06:33.040
+I mean don't we still need to get this well let's check it out.
+
+06:33.050 --> 06:35.600
+This is something that we'll go into and laid on videos.
+
+06:35.600 --> 06:40.590
+But I want to show you just a nice little example I delete here.
+
+06:40.590 --> 06:42.430
+Go to the network tap it show.
+
+06:42.450 --> 06:48.130
+It's going to show me as soon as I refresh all the files that are being loaded for this Web site to
+
+06:48.450 --> 06:49.050
+refresh
+
+06:51.740 --> 06:53.610
+and I have some files here.
+
+06:53.970 --> 07:00.800
+But if you look I have CSSA javascript I have the dog image the puppy image over here.
+
+07:02.790 --> 07:03.720
+There you go.
+
+07:04.110 --> 07:08.850
+But no background image because we don't need it for the screen size.
+
+07:08.910 --> 07:17.650
+If I delete this and as soon as I make it a little bit bigger you see that the image got downloaded.
+
+07:20.430 --> 07:26.840
+So the browser is smart enough to know to only download whatever it actually needs.
+
+07:27.150 --> 07:33.750
+If it doesn't need the massive background image Well it doesn't need to load it and we just saved ourselves
+
+07:34.080 --> 07:38.640
+a whole bunch of time.
+
+07:38.870 --> 07:40.710
+I mean how cool is that.
+
+07:42.000 --> 07:46.900
+So media queries are very very important especially if you have users they use different screen sizes
+
+07:47.260 --> 07:50.650
+which in this day and age that's pretty common.
+
+07:52.160 --> 07:52.520
+All right.
+
+07:52.550 --> 07:54.320
+So there's that.
+
+07:54.320 --> 07:56.410
+Let's go to the last two points.
+
+07:56.510 --> 08:08.430
+Use CD ends or content delivery networks like image X and remove image meta data let's talk about these
+
+08:10.250 --> 08:14.290
+image X is just one example of a tool that we can use.
+
+08:14.420 --> 08:20.690
+And as you can see from their Web site what they do is well they take care of all the images for you.
+
+08:20.690 --> 08:21.790
+They optimize them.
+
+08:21.800 --> 08:22.640
+They deliver them.
+
+08:22.640 --> 08:27.880
+They use something called caching which we'll talk about in performance part 3.
+
+08:27.950 --> 08:34.550
+They are saying hey give us all your images no matter how big they are no matter how on optimized they
+
+08:34.550 --> 08:41.890
+are just upload it onto our Web site and then we'll give you back a your.
+
+08:42.320 --> 08:43.580
+And this you are l.
+
+08:43.680 --> 08:47.490
+You can just plug it into any of your web sites.
+
+08:47.730 --> 08:49.310
+So this you are all here.
+
+08:49.320 --> 08:56.310
+I can put in an image XBRL that I get of the photo I just upload it and they take care of optimizing
+
+08:56.310 --> 09:00.420
+it and making sure that it's a smallest possible.
+
+09:00.420 --> 09:03.400
+And they also use something called content delivery networks.
+
+09:03.420 --> 09:10.260
+So again something that will get into an performance part three but they allow faster access through
+
+09:10.260 --> 09:14.630
+their servers of images instead of just uploading it ourselves.
+
+09:17.070 --> 09:18.120
+So that's pretty nice.
+
+09:19.710 --> 09:22.110
+And then finally this is going to get creepy.
+
+09:22.930 --> 09:26.460
+We want to remove the photos meta tags.
+
+09:26.530 --> 09:27.620
+What does that mean.
+
+09:28.090 --> 09:34.270
+Well there's a really cool Web site over here that I will link to and what they do is they allow you
+
+09:34.270 --> 09:37.100
+to remove meta tags of a photo.
+
+09:37.660 --> 09:43.730
+And what that means is that most photos when you take a picture of them let's say with a digital camera.
+
+09:43.960 --> 09:50.650
+Not only take the picture but also save some data about where the photo was taken what device was taken
+
+09:50.650 --> 09:53.540
+on which we don't need on a Web site.
+
+09:53.620 --> 09:56.010
+But most of all it's also kind of creepy.
+
+09:56.200 --> 10:02.240
+We don't want to necessarily have an image of us maybe hiking some mountain.
+
+10:02.350 --> 10:08.870
+And for people to see where the image was taken what my device was and all that information let me show
+
+10:08.870 --> 10:14.750
+you by an example I have an image over here that I downloaded from the web.
+
+10:14.750 --> 10:16.750
+It's nice simple boat picture.
+
+10:16.990 --> 10:27.560
+If I open this and to this Web site and I click on View EXIF right look at that it shows me where this
+
+10:27.560 --> 10:37.970
+picture was taken which looks like it was taken in and bita it gives us our GPS coordinates and tells
+
+10:37.970 --> 10:48.550
+us all the camera information clueing that it was taken on an iPhone 4 and well that's not only do we
+
+10:48.550 --> 10:55.660
+not want that for privacy reasons but that's also extra data that we don't need to have in our photo.
+
+10:55.670 --> 10:58.010
+That's just extra information and extra size.
+
+10:58.510 --> 11:03.540
+So I can click Remove and look at that.
+
+11:03.540 --> 11:13.220
+Now I get a new photo that if I go to adjust size I see that this photo is it.
+
+11:13.290 --> 11:16.210
+This photo is a hundred and thirty seven kilobytes.
+
+11:17.200 --> 11:19.510
+If I go back to the original photo
+
+11:23.020 --> 11:32.360
+let's put it side by side and for this one I just click on a just size we see that.
+
+11:32.620 --> 11:39.380
+Is definitely a lot bigger and nothing changed in the image and we've only really saved three kilobytes.
+
+11:39.610 --> 11:47.620
+But we were able to remove the Met attacks and this is good for performance but obviously also security
+
+11:47.620 --> 11:48.320
+reasons.
+
+11:49.320 --> 11:51.320
+Very cool.
+
+11:51.360 --> 11:58.150
+So let's review using all these sick Meek's listed here.
+
+11:58.270 --> 12:05.730
+We're able to save a lot of transfer that a client and a server need to do.
+
+12:06.160 --> 12:12.270
+And this is a huge issue especially with images and using all these techniques we can make sure that
+
+12:12.600 --> 12:20.670
+our web sites are performant so hopefully hold this text on the screen now make sense to you I'll see
+
+12:20.670 --> 12:22.380
+in the next one by.

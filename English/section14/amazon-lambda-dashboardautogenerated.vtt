@@ -1,0 +1,217 @@
+WEBVTT
+
+00:01.060 --> 00:07.060
+Welcome back we can talk all we want about a yes and lambda but without actually coding it and seeing
+
+00:07.060 --> 00:08.470
+it live.
+
+00:08.590 --> 00:10.790
+We're not going to fully understand.
+
+00:10.870 --> 00:15.630
+So let's talk about what our plan is with A.W. and Lamda what we're going to do.
+
+00:15.780 --> 00:18.340
+So that way we can start implementing it.
+
+00:18.510 --> 00:23.730
+Now I want to give you a heads up and I want you to follow along here as you're doing this exercise
+
+00:24.210 --> 00:31.830
+because AWOS has something called a free tier that is it gives you their services for free to try them
+
+00:31.830 --> 00:40.220
+up now and here you can see that they have Esrey with five gigabytes per month that they allow you and
+
+00:40.220 --> 00:48.950
+E.C to and other options but also AWOS Lamda they allow you 1 million free requests per month.
+
+00:48.950 --> 00:54.770
+So you can try this exercise you won't pay any money and as long as you have less than a million requests
+
+00:54.770 --> 00:57.590
+per month which if you're just developing and playing along.
+
+00:57.740 --> 00:59.600
+I'm sure that's more than enough.
+
+01:00.710 --> 01:05.360
+So I recommend that you sign up so you can follow along and test it out yourself.
+
+01:05.360 --> 01:11.740
+It is unbelievably easy when you get started with Lamda once you figure out the configuration.
+
+01:11.900 --> 01:16.760
+It is so nice and so fun and there's so many things that you can do.
+
+01:16.760 --> 01:24.770
+I recently build a bot that sends me a text message any time there's a notification that I'm interested
+
+01:24.770 --> 01:32.570
+in with Bitcoin and I get a text message because a slander has been told that every 30 minutes I wanted
+
+01:32.570 --> 01:34.810
+to check some price of bitcoin.
+
+01:35.680 --> 01:40.310
+Things like that become super super easy with AWOS.
+
+01:40.370 --> 01:46.680
+Now I recommend you create an account and take advantage of this free tier.
+
+01:46.910 --> 01:54.230
+And once you log in you'll have something like this your dashboard and within the dashboard you can
+
+01:54.620 --> 02:05.250
+ask for any AWOS service you can do dynamo D-B can do S-3 you can do cloud front that we've talked about
+
+02:05.580 --> 02:11.620
+but we're interested in lambda and you just click on the service that you want and actually gives you
+
+02:11.620 --> 02:17.120
+a dashboard you see that already have a few things over here but to show you how easy it is to create
+
+02:17.120 --> 02:23.740
+a function well I can just name it test or what should we name this actually.
+
+02:24.100 --> 02:27.060
+Well let's go back to our app and see where we want to build.
+
+02:27.140 --> 02:35.780
+If I go to my app let's say that we want to add a ranking system as Bruno requested perhaps based on
+
+02:35.780 --> 02:37.730
+the number of entries that you have.
+
+02:37.730 --> 02:45.020
+You get a little badge here that says you know you're a rocket badge or you're a teddy bear badge whatever
+
+02:45.020 --> 02:45.740
+it may be.
+
+02:46.560 --> 02:49.460
+And we want to have that being updated.
+
+02:50.440 --> 02:56.660
+Through a function that lives in Amazon Lamda so it let's just create that.
+
+02:56.670 --> 03:04.380
+I'm going to just call it rankly just because all the popular names and then Lee apparently and will
+
+03:04.380 --> 03:04.790
+use.
+
+03:04.800 --> 03:05.270
+No.
+
+03:05.300 --> 03:05.940
+Yes.
+
+03:06.000 --> 03:10.680
+I think the latest version of note that they have you can see what programming languages you can use.
+
+03:10.770 --> 03:17.020
+Looks like they have node 8.10 Salles to that latest version of Node.
+
+03:17.230 --> 03:22.270
+And you also have to do something called rolls which you are going to talk about but for now just for
+
+03:22.270 --> 03:31.400
+demonstration purposes I'm going to just pick a random roll click Create function and that's it.
+
+03:32.230 --> 03:39.380
+We've created our lambda function and all we need to do is actually write our function in here.
+
+03:39.850 --> 03:45.370
+And once we're done we're going to get an endpoint a rule that we can access and trigger this function
+
+03:46.270 --> 03:48.190
+and we can write our function in here.
+
+03:48.190 --> 03:52.240
+But I'm going to show you a better way to implement our ranking system.
+
+03:53.400 --> 03:59.820
+You see instead of writing it here and figuring out all the configuration that exists because this is
+
+03:59.820 --> 04:03.990
+constantly going to change this dashboard is always going to get changed and maybe when you watch this
+
+04:03.990 --> 04:07.610
+video this won't actually look like this.
+
+04:08.400 --> 04:11.930
+And you don't really want to worry about configuration you just want to write code.
+
+04:12.210 --> 04:17.200
+And for this we're going to be using a tool called Servilius that really helps a set.
+
+04:17.640 --> 04:22.110
+But I wanted to show you regardless how easy it is to create a function.
+
+04:22.170 --> 04:24.310
+And here.
+
+04:24.360 --> 04:24.800
+All right.
+
+04:24.860 --> 04:31.040
+So we want to create a ranking system here that based on the number that we have of entries updates
+
+04:31.250 --> 04:34.750
+our little batch will get started.
+
+04:34.760 --> 04:41.110
+We need a tool called Server less and server less looks like this.
+
+04:41.120 --> 04:46.670
+The name is a little bit off because the package name is server less but it helps with what we call
+
+04:46.790 --> 04:50.420
+server less architecture which Amazon provides.
+
+04:50.420 --> 04:56.540
+Now the name server less is actually a little bit deceiving because keep in mind the service doesn't
+
+04:56.540 --> 04:59.550
+actually mean you still don't have a server.
+
+04:59.600 --> 05:03.980
+It just means you don't have to worry about scaling and all the things people used to do back then to
+
+05:03.980 --> 05:05.450
+manage the server.
+
+05:05.840 --> 05:12.610
+Amazon does that for you and I put two logos on here because server less recently updated their logos.
+
+05:12.620 --> 05:20.420
+If you see both of these it's the same thing now server less allows us to deploy Amazon lambda functions
+
+05:20.750 --> 05:23.460
+really really easy from our command line.
+
+05:23.560 --> 05:28.580
+And we don't have to worry too much about going to their dashboard and configuring everything by hand
+
+05:28.580 --> 05:30.700
+and that's never fun.
+
+05:30.710 --> 05:34.470
+It's better when we're coding and using our terminal.
+
+05:34.670 --> 05:35.630
+So we're going to do that.
+
+05:35.840 --> 05:39.470
+And the next video we're going to install service gets started.
+
+05:39.530 --> 05:45.560
+But I do recommend that you get a free tier for Amazon Lamda and follow along because it's going to
+
+05:45.560 --> 05:46.750
+be a lot of fun.
+
+05:46.850 --> 05:47.600
+I'll see in the next one.

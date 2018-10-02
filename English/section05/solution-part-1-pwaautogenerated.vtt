@@ -1,0 +1,334 @@
+WEBVTT
+
+00:01.080 --> 00:02.030
+Walk them back.
+
+00:02.190 --> 00:04.930
+Let's start to make these numbers look a little bit better.
+
+00:05.190 --> 00:10.980
+And before we get to the progressive webapps score let's try and get the accessibility and ASIO's score
+
+00:11.340 --> 00:12.530
+to 100.
+
+00:12.780 --> 00:21.890
+If we scroll down we see that we have an X over here for Avoid invisible text while fonts are loading.
+
+00:22.020 --> 00:26.430
+Lighthouse does a great job of giving you resources to show you what to do.
+
+00:26.610 --> 00:36.090
+But essentially it's saying that if we're using the font family to download that really awesome font.
+
+00:36.150 --> 00:38.900
+Let's see the Sega Logo font.
+
+00:39.210 --> 00:40.520
+And you're using font face.
+
+00:40.520 --> 00:48.840
+Let me make this a little bit smaller then consider using the font display feature and you can learn
+
+00:48.930 --> 00:50.630
+more about it here.
+
+00:51.380 --> 01:00.230
+But the idea is that we want something like the swap property that swaps the font face in as soon as
+
+01:00.230 --> 01:01.080
+it loads.
+
+01:01.370 --> 01:08.560
+So this means that browsers draw out text immediately and when the font face is loaded it will swap
+
+01:08.560 --> 01:08.720
+it.
+
+01:08.720 --> 01:15.140
+So this way the user will see that what will see the rebel friends text on the screen a lot sooner.
+
+01:15.170 --> 01:16.400
+Let's do that.
+
+01:16.400 --> 01:18.040
+We're going to go here.
+
+01:19.710 --> 01:29.160
+And type in font display and we'll say swap and Lighthouse is really good at giving you pretty specific
+
+01:29.160 --> 01:33.770
+hints of what you can do with your app if we keep scrolling down.
+
+01:33.770 --> 01:38.630
+We'll skip over the progress of web app for now we see that for accessibility.
+
+01:38.630 --> 01:45.280
+They want the form elements to have Sosia labels.
+
+01:45.390 --> 01:53.730
+Now accessibility is a very important topic and this is why it's included in the Lyce House score because
+
+01:54.030 --> 01:58.440
+not everybody can view a web site regularly like you and I.
+
+01:58.500 --> 02:05.310
+Some people might need screen readers or might have to access web sites in different ways and by creating
+
+02:05.310 --> 02:11.850
+your web site or a web app in an accessible way that means you're opening it up to people to experience
+
+02:11.850 --> 02:14.050
+your website in different ways.
+
+02:14.980 --> 02:16.720
+Such as screen readers.
+
+02:16.870 --> 02:23.650
+So in our case you can read more about it here but we want to make sure that we let people know with
+
+02:23.650 --> 02:26.400
+screen readers what this input is about.
+
+02:26.410 --> 02:30.580
+We know that it's to search the robots and it actually gives you the line.
+
+02:30.610 --> 02:39.890
+Let's go back here to our card or to the search box where we have this input and in here we can add
+
+02:39.890 --> 02:48.160
+something called Aryeh label and we give this input a label that screen readers can use.
+
+02:48.200 --> 02:56.750
+And we'll just say search robots will say that and let's keep scrolling down.
+
+02:57.220 --> 03:03.970
+We also see here that for ex-CEO we have a document does not have a meta description.
+
+03:04.450 --> 03:11.110
+And if we click on here again we get a nice little description that says meto name description with
+
+03:11.110 --> 03:14.150
+content describing our Web site.
+
+03:14.370 --> 03:21.540
+And this is recommended practice for SEO so that when Web site crawlers read our Web site they can see
+
+03:21.540 --> 03:26.070
+the description tag and understand what our Web site is about.
+
+03:26.070 --> 03:29.160
+So let's go at that in our index.
+
+03:29.190 --> 03:32.520
+A shim alpha can just add it here.
+
+03:33.560 --> 03:42.030
+We'll describe our Web site and we'll say that where robots make Prince.
+
+03:42.120 --> 03:42.950
+All right.
+
+03:43.380 --> 03:48.600
+Let's go back to the report and everything else looks pretty good.
+
+03:48.600 --> 03:56.490
+We have some performance issues here such as we conserve images in next gen formats but that is the
+
+03:56.520 --> 03:57.790
+robot's images.
+
+03:57.930 --> 04:04.170
+And unfortunately because this is an API we don't have too much control over it unless we actually want
+
+04:04.170 --> 04:07.290
+to receive them beforehand and change them ourselves.
+
+04:07.290 --> 04:10.360
+But for now let's not do that.
+
+04:10.400 --> 04:11.250
+That's not too bad.
+
+04:11.340 --> 04:16.680
+But let's take a look at the images and how we might be able to optimize the if I go back to the Web
+
+04:16.680 --> 04:21.060
+site and I open up the network tab.
+
+04:21.450 --> 04:24.080
+Let's refresh your.
+
+04:24.130 --> 04:26.480
+I see all the robots coming in.
+
+04:26.860 --> 04:35.490
+And if I click on here I see that even though I said 200 by 200 I'm getting 300 pixels by 300 pixels.
+
+04:35.680 --> 04:39.060
+So we don't need those robots to have that big of an image.
+
+04:40.020 --> 04:43.000
+And this is a small error in the code.
+
+04:43.200 --> 04:51.330
+If we go here to the card component the API of roba hash access that we give it a query parameter of
+
+04:51.690 --> 04:55.620
+size because 200 by 200.
+
+04:55.770 --> 05:04.720
+So that now if we save and we're going to want to start because that is our deployed Web site you want
+
+05:04.720 --> 05:14.770
+to just run it locally for now let's open up the network tab and there you go.
+
+05:14.780 --> 05:17.330
+Our size is now 200 by 200.
+
+05:17.360 --> 05:20.880
+Robots are looking a little bit smaller but this is what we want looks good.
+
+05:23.400 --> 05:23.790
+Right.
+
+05:23.840 --> 05:27.810
+Let's run NPM run.
+
+05:27.830 --> 05:31.350
+Deploy and see what kind of score we get.
+
+05:31.350 --> 05:40.860
+Now now while this is running keep in mind that until the deploy is run and then gets published it might
+
+05:40.860 --> 05:44.390
+take a while to actually propagate to our website.
+
+05:44.690 --> 05:46.320
+It says published here now.
+
+05:46.530 --> 05:58.830
+But if I go to my app so the u r l and open up the tab and refresh we see that we're still getting the
+
+05:58.830 --> 06:00.890
+robots at 300 by 300.
+
+06:00.900 --> 06:03.960
+So the changes haven't propagated yet.
+
+06:03.960 --> 06:09.390
+So you have to wait a couple minutes for that to happen which is a little bit frustrating but hey it's
+
+06:09.390 --> 06:11.250
+a good chance for you to grab a cup tea.
+
+06:11.620 --> 06:12.690
+Let's refresh again.
+
+06:12.720 --> 06:15.320
+See if anything changes.
+
+06:15.380 --> 06:15.710
+No.
+
+06:15.770 --> 06:16.290
+All right.
+
+06:16.340 --> 06:18.430
+I am just going to keep waiting here.
+
+06:21.530 --> 06:22.030
+All right.
+
+06:22.100 --> 06:24.320
+And I'm back at him make me wait.
+
+06:24.470 --> 06:25.180
+It wasn't too bad.
+
+06:25.190 --> 06:31.840
+It was just like a minute wait but now I see that my robot images are the proper size.
+
+06:32.090 --> 06:38.080
+If I go into the console I still have a bit of a console lock here from the button but it's all right.
+
+06:38.300 --> 06:42.130
+Let's run the lighthouse score and see what happens.
+
+06:49.760 --> 06:52.640
+How great things are looking a lot better.
+
+06:52.640 --> 06:58.520
+We have a hundred for a CEO a hundred for accessibility a handler for best practices.
+
+06:58.640 --> 07:04.700
+We have our performance web app which or a progressive Web app which we definitely want to improve and
+
+07:04.700 --> 07:07.490
+a bit of a performance issue.
+
+07:07.490 --> 07:14.120
+If we actually make this a little smaller and compared to our numbers from before we see that we've
+
+07:14.120 --> 07:18.380
+definitely improved these two aspects which is great.
+
+07:18.620 --> 07:27.120
+And you might not even notice it but our images now are loading a lot faster.
+
+07:27.130 --> 07:35.380
+You can see that the issue is not to serve images in next Schempp format as it was before but now the
+
+07:35.380 --> 07:38.380
+biggest issue is reduce render blocking stylesheets.
+
+07:38.560 --> 07:39.850
+And we know about that right.
+
+07:39.970 --> 07:48.670
+If we click on here it says hey for critical resources consider adding the stealth tag in the HDMI file
+
+07:48.910 --> 07:54.430
+and just load the other one so you don't need later on but that's something that we've already done
+
+07:54.430 --> 07:57.870
+so we're not going to focus ourselves with by the way.
+
+07:57.870 --> 08:03.960
+If my internet connection was better I'll probably get 100 percent for this regardless because these
+
+08:03.960 --> 08:05.020
+times aren't too bad.
+
+08:06.120 --> 08:09.220
+But overall we've improved everything.
+
+08:10.060 --> 08:14.210
+We just need to improve our progress of app now.
+
+08:14.350 --> 08:22.720
+And looking at this I see that there are some unused rules in the stylesheet that I could perhaps also
+
+08:22.990 --> 08:30.060
+look into but that's something I can do on your own or you might want to see that.
+
+08:30.140 --> 08:37.250
+Well these robots because they're being rendered towards the end aren't actually needed until the user
+
+08:37.250 --> 08:37.970
+scrolls.
+
+08:37.970 --> 08:44.150
+Again that's something that we can do with above the fold loading but we've already talked about so
+
+08:44.240 --> 08:45.300
+in the next video.
+
+08:45.380 --> 08:46.520
+Let's focus on this.
+
+08:46.610 --> 08:49.700
+Let's make this a progressive webapp.
+
+08:49.820 --> 08:50.440
+I'll see in that one.

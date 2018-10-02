@@ -1,0 +1,283 @@
+WEBVTT
+
+00:00.900 --> 00:07.920
+Welcome back I think it's time for us to write a proper Brank function that we can use with our smart
+
+00:07.920 --> 00:15.980
+brain API so that in here perhaps we can have a little emoji icon that will show up based on the count.
+
+00:16.270 --> 00:22.210
+And we're using right now Lamda for a simple exercise but I hope your imagination is running wild right
+
+00:22.210 --> 00:25.220
+now with all the things you can do with LAMDA.
+
+00:25.270 --> 00:31.330
+It is so cool and so interesting I definitely want to see some creative implementations that people
+
+00:31.330 --> 00:34.610
+have with the smartphone app or with your own app.
+
+00:34.690 --> 00:39.070
+I would love to see and hear what you've done with lambda functions.
+
+00:39.070 --> 00:45.220
+Definitely posted in our community chat because I love all these things and how creative people can
+
+00:45.220 --> 00:45.850
+get with it.
+
+00:46.880 --> 00:56.420
+Now and here I'm going to do something fun and this function I'm going to have a little emoji set that
+
+00:56.480 --> 01:03.220
+I've created and these emojis are going to be our ranking system.
+
+01:03.270 --> 01:07.920
+This is where you start off with the keep growing you keep growing you keep growing until you get to
+
+01:07.920 --> 01:12.620
+the rocket ship the best rank of all.
+
+01:12.620 --> 01:13.280
+Now what should we do.
+
+01:13.280 --> 01:19.980
+Well first off let's put this outside of the function actually now I'll leave it like that just to show
+
+01:19.980 --> 01:28.610
+you that we can have things outside the function and inside of fear before we send out the response.
+
+01:28.750 --> 01:40.530
+I'm going to have a concert rank and this rank is going to equal event dot Querrey string parameters
+
+01:40.990 --> 01:44.370
+and you're asking ward where did you just get that from.
+
+01:44.500 --> 01:49.770
+Well if we go back to our event Ahar we don't have it anymore.
+
+01:49.770 --> 01:53.360
+Let's grab the and point from here.
+
+01:55.020 --> 01:59.270
+And paste it in here and add one to three.
+
+01:59.320 --> 02:00.900
+And here in the parameters
+
+02:04.880 --> 02:09.390
+what we wanted to do make sure we don't have the get request in here.
+
+02:09.510 --> 02:12.020
+Let's try that again and end here.
+
+02:12.020 --> 02:19.770
+If I go to query string parameters we see that we're able to have the query strings of our API endpoint.
+
+02:20.310 --> 02:26.430
+So we're going to send the entries count through this parameter and we're going to accessit on the lambda
+
+02:26.430 --> 02:28.310
+function.
+
+02:28.410 --> 02:36.010
+So I'm going to say from here from the query strings parameter I'm going to grab the rank and I'll show
+
+02:36.010 --> 02:37.360
+you how we do that.
+
+02:37.570 --> 02:48.180
+Surely now from here let's create a now there function that's going to be called Brank emoji and this
+
+02:48.270 --> 02:52.130
+random Moji is going to do a simple little function for us.
+
+02:53.110 --> 02:57.060
+We'll just say emoji use our little logic for us.
+
+02:57.400 --> 03:05.700
+If the rank is greater than the emojis dot lenth.
+
+03:05.910 --> 03:12.330
+So that is whatever the rank or the entries count of the user is if it's larger than our lenth which
+
+03:12.330 --> 03:17.660
+looks like we have about 9 if it's bigger than that.
+
+03:17.680 --> 03:21.360
+Well just returned the latest or the rocket ship.
+
+03:22.290 --> 03:28.020
+So if that's the case I'm going to say and yes we're doing a little funny syntax here.
+
+03:28.050 --> 03:30.240
+Remember Mojo's is just an array.
+
+03:30.240 --> 03:36.450
+And we're doing a little bit of logic inside of the array can get confusing but it's nice shorthand
+
+03:36.450 --> 03:36.910
+for now.
+
+03:36.920 --> 03:38.460
+I hope you can follow along.
+
+03:39.270 --> 03:47.200
+Let's say that for that case we're going to say that emoji is not lenth minus one that is.
+
+03:47.200 --> 03:50.450
+Get the latest badge.
+
+03:50.550 --> 03:55.090
+Otherwise just give whatever rank we have.
+
+03:55.290 --> 03:57.600
+If you have zero entries you'll get this one.
+
+03:57.700 --> 03:59.710
+Have one entries you'll get this one.
+
+03:59.730 --> 04:00.620
+Two entries.
+
+04:00.630 --> 04:01.730
+Three four.
+
+04:01.740 --> 04:02.780
+So on and so forth.
+
+04:03.750 --> 04:07.080
+So let's save.
+
+04:07.150 --> 04:14.320
+And then finally in our response object we're going to instead of the inputs being the event we're just
+
+04:14.320 --> 04:19.440
+going to return the rank he Moji that we care about.
+
+04:19.440 --> 04:22.890
+So ideally we get an emoji out of this.
+
+04:23.150 --> 04:27.500
+Let's save and run deploy here.
+
+04:27.720 --> 04:29.790
+Now I want this for production.
+
+04:30.300 --> 04:32.390
+So I'm going to change the tag.
+
+04:32.400 --> 04:40.210
+Now if I scroll up to prod just to see what happens and I'm going to run a Salles deploy.
+
+04:40.770 --> 04:45.510
+And while that's happening in the background we're going to work on the front end of our app of our
+
+04:45.510 --> 04:46.420
+smart brain up.
+
+04:46.590 --> 04:48.900
+But I want to go over this one last time.
+
+04:48.900 --> 04:54.960
+We have an array of emojis and all we're doing is based on the query string parameters that we get from
+
+04:54.960 --> 05:04.010
+the point that is going to be the rank of our entries our users entries we're going to just return a
+
+05:04.010 --> 05:08.460
+ranking Moji based on the order that we have in the array.
+
+05:08.510 --> 05:11.970
+We're simply receiving an input with the rag and Moji.
+
+05:12.380 --> 05:19.120
+So while that's being served up I'm going to go back to my Front-End looking at our app actually you
+
+05:19.130 --> 05:22.120
+want to have something in here next to our rank.
+
+05:22.190 --> 05:28.820
+So I'm going to go into our ranke component which luckily we already have.
+
+05:29.350 --> 05:35.710
+And then this Rand component we see that we're just logging out entries and that's about it.
+
+05:35.710 --> 05:41.950
+Let's add our emoji to this component actually before we start touching this list make sure that our
+
+05:41.980 --> 05:44.590
+lambda function works as intended.
+
+05:44.590 --> 05:45.910
+I'm going to go back.
+
+05:45.940 --> 05:46.610
+We see that.
+
+05:46.630 --> 05:49.110
+All right we have a new endpoint.
+
+05:49.150 --> 05:57.400
+You see that it's now Prada is in production and we can grab this and point and test out what we get.
+
+05:57.440 --> 06:03.650
+I'm going to copy and paste and in here because we're waiting for query string parameters that means
+
+06:03.680 --> 06:06.310
+we have to do a question mark for query strings.
+
+06:06.440 --> 06:16.480
+We're going to say that the rank equals we'll just give it let's say for now remember where we're getting
+
+06:16.480 --> 06:17.100
+this from.
+
+06:17.110 --> 06:22.530
+If we go back to our function we have the query string parameters and we're grabbing the rank property.
+
+06:22.570 --> 06:30.890
+If I name this to something different like the Moji well in that case I'll have to use the Moji over
+
+06:30.890 --> 06:33.270
+here after the question mark but let's give that a go
+
+06:36.100 --> 06:37.230
+look at that.
+
+06:37.240 --> 06:38.440
+Let's make that a little bit bigger.
+
+06:38.440 --> 06:41.440
+To celebrate we got the little winky face.
+
+06:41.470 --> 06:43.660
+Our service function is working.
+
+06:43.900 --> 06:51.240
+And if we change this to let's say 400 we get the rocketship we've got the rocketship badge and if we
+
+06:51.240 --> 06:59.200
+change this to zero smiley face we got to work on our ranch here.
+
+06:59.200 --> 07:00.930
+How awesome is that.
+
+07:01.010 --> 07:07.320
+And how simple was it to just deploy that function to lambda to Amazon servers.
+
+07:07.450 --> 07:08.900
+And now we have access to it.
+
+07:10.110 --> 07:11.220
+Absolutely amazing.
+
+07:11.340 --> 07:12.120
+I love LAMDA.
+
+07:12.120 --> 07:14.560
+I hope you're getting excited in the next video.
+
+07:14.730 --> 07:18.930
+We're going to implement this and the Front-End I'll see on that one.

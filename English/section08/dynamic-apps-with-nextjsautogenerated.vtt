@@ -1,0 +1,514 @@
+WEBVTT
+
+00:00.710 --> 00:06.290
+Welcome back we've created a very very basic web site.
+
+00:06.650 --> 00:15.470
+And up until now if we look at the code we could build perhaps our own blog platform where we just have
+
+00:15.680 --> 00:23.030
+pages for our blog posts or our company information and we got up and running really really quickly.
+
+00:23.850 --> 00:29.370
+But as we know most of the time apps are a lot more complex than that.
+
+00:29.370 --> 00:30.590
+They're dynamic.
+
+00:30.690 --> 00:37.590
+They have API calls that they need to make and get data and change parts of the Web site based on that
+
+00:37.590 --> 00:38.150
+data.
+
+00:38.280 --> 00:40.530
+Kind of like we did with the robo friends app.
+
+00:40.890 --> 00:49.840
+We have to fetch the robots in our component did mount and then finally render it on our page.
+
+00:49.860 --> 00:59.460
+So in this video let's see how we can do that how you can have dynamic apps with next well next allows
+
+00:59.460 --> 01:09.130
+us to do this with an API called Get initial props and with that we can fetch data for a given page
+
+01:09.370 --> 01:17.320
+let's say a new page or we're about to build and it will pass it down to the component as a prop.
+
+01:17.330 --> 01:19.730
+Again just simply react.
+
+01:19.790 --> 01:27.320
+The cool thing about this that we'll see is that we can decide to do the API call on the server before
+
+01:27.320 --> 01:30.190
+it gets rendered and sent to the client.
+
+01:30.350 --> 01:38.210
+Or we can do this API call on the front end to all the client where once we give it the page it will
+
+01:38.200 --> 01:39.560
+load it separately.
+
+01:40.290 --> 01:41.980
+So let's get started.
+
+01:42.150 --> 01:48.120
+The very first thing we need to do is in order for us to be able to do a fetch call because that is
+
+01:48.120 --> 01:53.160
+only available on the browser and we're not running this in the browser.
+
+01:53.160 --> 01:55.970
+This is going to be on the server side.
+
+01:56.070 --> 02:00.930
+We need to have access to fetch and we can just install a package that's recommended.
+
+02:00.930 --> 02:10.120
+If you're working with next and server side it's called well let's run NPM not capital NPM install and
+
+02:10.120 --> 02:19.500
+it's called high so morphic on fetch We are name I know.
+
+02:19.520 --> 02:24.790
+All right so now that we can use fetch on the client side let's create a new page here.
+
+02:24.860 --> 02:29.710
+I'm going to say new file is going to be called robots
+
+02:32.400 --> 02:38.180
+yes robots that Jesus is going to have a few things.
+
+02:38.180 --> 02:50.720
+It's first of all going to use the link from the next link a link component and it's also going to import
+
+02:51.200 --> 02:59.740
+the Thach that we just downloaded from the isomorphic on fetch package
+
+03:03.240 --> 03:09.160
+and we're pretty familiar with the syntax by now I can just do a concert robots.
+
+03:09.200 --> 03:14.650
+He calls will not questionmark like this.
+
+03:14.650 --> 03:15.270
+There you go.
+
+03:15.430 --> 03:26.250
+And we're going to return here a component and let's say that this component is going to be a div that
+
+03:26.250 --> 03:40.360
+has an H1 tag that says robots and a nother div that inside of it will have some sort of robot's data.
+
+03:40.360 --> 03:42.400
+For now we'll just going to type it in.
+
+03:42.420 --> 03:45.960
+But hopefully we can fetch and render some data in here.
+
+03:47.830 --> 03:58.540
+And we can close this out like this and perhaps at the bottom or at the top we can add a link that references
+
+03:58.540 --> 04:02.010
+the home page so we can go back to the home page if we wanted to.
+
+04:04.400 --> 04:11.560
+And this will just be a button that says home.
+
+04:11.680 --> 04:24.620
+And then finally close out our link and then let's not forget to export default robots.
+
+04:24.780 --> 04:29.580
+Let's save that and also go back to our main page
+
+04:32.330 --> 04:40.320
+and in the main page make sure that we add a nother link tag to the robot's page.
+
+04:41.470 --> 04:46.730
+And that's going to be referencing the robots.
+
+04:46.890 --> 04:52.650
+And actually four pages the default is to or the standard just to keep the files lowercase are going
+
+04:52.650 --> 04:59.590
+to change the two lowercase robots just to keep up the standards.
+
+05:01.580 --> 05:02.030
+All right.
+
+05:02.090 --> 05:07.120
+So let's change the link over here to our robots page.
+
+05:07.260 --> 05:10.220
+Again that's why we have the lower case.
+
+05:10.560 --> 05:17.250
+So it looks Gneisenau you are all point to save and to make sure that the robot's page has the link
+
+05:17.250 --> 05:17.910
+as well.
+
+05:18.120 --> 05:24.140
+Let's run the PM start which runs the next and see what happens here.
+
+05:28.570 --> 05:28.850
+All right.
+
+05:28.870 --> 05:32.260
+We have two bands now but they both say robots.
+
+05:32.260 --> 05:34.020
+Let's go back here.
+
+05:34.390 --> 05:42.240
+If we go to our index side yes let's keep let's make that about a boot.
+
+05:42.340 --> 05:43.790
+I am from Canada after all.
+
+05:43.930 --> 05:44.470
+All right.
+
+05:46.650 --> 05:54.450
+We have the About page and the robot's page and we have an arrow over here says syntax here.
+
+05:54.450 --> 05:58.470
+I really like the errors that they display here unexpected tokin.
+
+05:58.830 --> 06:00.970
+So let's go back here to our robots.
+
+06:04.060 --> 06:06.710
+And yep a set of curly brackets.
+
+06:06.960 --> 06:08.610
+You actually need brackets here.
+
+06:10.330 --> 06:13.090
+Let's save.
+
+06:13.090 --> 06:13.780
+There you go.
+
+06:13.810 --> 06:15.240
+Our robust page is working.
+
+06:15.250 --> 06:21.830
+It's pretty ugly right now but everything is working at least if you remember with our robot friends
+
+06:21.830 --> 06:31.520
+app we're using something called Jason placeholder and this Jaisalmer placeholder gives us a user's
+
+06:31.550 --> 06:34.030
+end point that we can use over here.
+
+06:34.040 --> 06:42.350
+He can see the Jason that we get when we do a get request using this you r l.
+
+06:42.530 --> 06:45.110
+Let's load up some data here.
+
+06:45.500 --> 06:53.480
+And the way we do this here is to add get initial props from robots so we can pass these robots down
+
+06:53.480 --> 06:55.840
+as props.
+
+06:55.840 --> 06:58.480
+Bear with me here and we'll explain it as we go.
+
+06:58.510 --> 07:00.590
+I'm going to add a new method.
+
+07:01.440 --> 07:07.620
+Called get initial props and yeah we're just adding a method to robots.
+
+07:07.620 --> 07:12.980
+This is another way of doing it instead of perhaps the class method that you've seen before.
+
+07:13.900 --> 07:22.400
+And and here we're going to use async Oh wait we could do promises but let's use async function.
+
+07:24.560 --> 07:32.120
+And in here we're going to do our response.
+
+07:32.340 --> 07:39.200
+Whoops response that is going to say wait the fetch which we have access to now and it's going to be
+
+07:39.200 --> 07:39.650
+there you are.
+
+07:39.650 --> 07:47.910
+Well we just copied the Jason placeholders and just to have a little bit of a better view.
+
+07:47.910 --> 07:48.850
+I'm going to say.
+
+07:48.900 --> 07:54.050
+Then we don't need them because we have the await now.
+
+07:54.310 --> 08:01.370
+From now we'll say the concert data is going to be called The await response dot.
+
+08:01.790 --> 08:06.160
+Jason.
+
+08:06.220 --> 08:09.130
+And then finally we can just return
+
+08:11.910 --> 08:15.830
+so we can return this data.
+
+08:16.160 --> 08:21.760
+Let's say that robots is going to be returned with the data.
+
+08:25.510 --> 08:28.300
+As the name suggests we have a few errors here.
+
+08:28.310 --> 08:30.100
+And let's see what we've done.
+
+08:30.160 --> 08:32.130
+We don't need the semicolon here.
+
+08:32.140 --> 08:35.440
+Everything is working as the name suggests.
+
+08:35.440 --> 08:41.760
+All we're saying is Hey before we load up this robotic thing let's get some props for it.
+
+08:41.770 --> 08:43.560
+We're going to do an initial props.
+
+08:43.690 --> 08:47.920
+We're going to make an API call to this and point get all our data.
+
+08:47.920 --> 08:56.230
+Remember this is the data that we're getting and then loaded up as robots and what we can do now is
+
+08:56.230 --> 08:57.820
+in the robots.
+
+08:57.820 --> 09:04.780
+I have props now because again the name suggests get initial props and these props now have the robots
+
+09:04.900 --> 09:05.850
+property on them.
+
+09:06.680 --> 09:13.600
+So now let's say instead of having the robots data here we're actually going to use loops.
+
+09:13.610 --> 09:19.270
+We're actually going to use a better syntax.
+
+09:19.430 --> 09:26.420
+And again curly brackets so it's the javascript expression and we'll say that prop's dot robots.
+
+09:26.420 --> 09:34.940
+We're going to map over these robots and this is very similar to what we've done in our re-act app where
+
+09:34.940 --> 09:50.820
+we grab the robots and we can let's say create an ally that has a key of a robot.
+
+09:50.910 --> 09:58.500
+ID Again remember we have ID name user name email here that we receive.
+
+09:58.690 --> 10:00.340
+And you know what.
+
+10:00.340 --> 10:05.130
+For now let's just do that and see what happens to make sure that it works.
+
+10:05.250 --> 10:08.180
+Let's save that see if we get any error.
+
+10:08.380 --> 10:19.320
+No let's go back to our page and click on robots and just we just had to refresh a bit and see what
+
+10:19.320 --> 10:19.770
+we get here.
+
+10:19.770 --> 10:21.160
+Let's see if we get any errors.
+
+10:22.090 --> 10:24.020
+Fail too low resources the rest.
+
+10:24.270 --> 10:26.250
+Oh ok that's Fab.com us fine.
+
+10:26.260 --> 10:26.500
+All right.
+
+10:26.500 --> 10:28.270
+Everything is working.
+
+10:28.330 --> 10:34.610
+We're just not loading the IDs as we think although we are loading 10 list items.
+
+10:34.810 --> 10:39.640
+And if we actually go back it's because I'm not rendering anything so let's just say that.
+
+10:39.670 --> 10:47.420
+And here we're going to load up robots or robot name.
+
+10:47.520 --> 10:52.140
+Let's save go back here and look at that.
+
+10:52.570 --> 10:59.720
+Our data is loaded and you can see that this is very similar to what we do in our robot friends app.
+
+10:59.740 --> 11:06.160
+We're just simply using this Jaisalmer placeholder to grab our robots and then using another API to
+
+11:06.160 --> 11:15.800
+grab the robot images and I'm lacking a bit of CSSA care but the idea is all the same.
+
+11:15.930 --> 11:18.470
+Let's make this a little bit prettier.
+
+11:18.570 --> 11:25.050
+What if we wanted to have links to each one of these robots a robots profile for example.
+
+11:25.050 --> 11:27.490
+Well we can use the link tag again.
+
+11:28.420 --> 11:36.060
+Set this time around we can say link Tref is going to
+
+11:38.730 --> 11:40.900
+link to and I'm using Templi strings here.
+
+11:40.910 --> 11:48.610
+There's these quotes right above the tab of your keyboard and Templi strings by the way are ESX features
+
+11:48.610 --> 11:51.790
+so hopefully you're familiar with them.
+
+11:52.270 --> 11:53.900
+We're going to say a robot.
+
+11:54.460 --> 11:56.920
+And then I'm going to give it the idea.
+
+11:56.980 --> 11:58.000
+So let's say
+
+12:00.840 --> 12:04.090
+a robot got ID.
+
+12:04.260 --> 12:15.330
+So we're saying go to the link or Jarrell railed that is robot or we should do robots here because that's
+
+12:15.330 --> 12:17.160
+what we have here for this page.
+
+12:17.550 --> 12:26.420
+And then within here we'll leave the robot name the way it is but close the link tag like so let's save
+
+12:26.430 --> 12:27.760
+and see what happens here.
+
+12:32.950 --> 12:35.930
+Get in there here because I need to close this component
+
+12:38.790 --> 12:44.670
+merry go and I get an error saying that you're using a string directly inside a link.
+
+12:44.690 --> 12:50.510
+This usage has been deprecated because we should wrap this in some sort of a tag.
+
+12:50.510 --> 12:53.010
+So let's just say an ATAC for now.
+
+12:55.910 --> 13:00.280
+Let's save and go back or look at that.
+
+13:00.280 --> 13:04.070
+Now I have these links but check out this your Albar as I click on it.
+
+13:05.610 --> 13:06.010
+Look at that.
+
+13:06.030 --> 13:11.340
+I go to robots one by go back I go to robots to page.
+
+13:11.520 --> 13:16.200
+And obviously we don't have the pages yet because we haven't created those files in the pages folder.
+
+13:16.200 --> 13:21.510
+But you see here how easily we're able to link to profiles if we want.
+
+13:21.510 --> 13:22.460
+How cool is that.
+
+13:25.240 --> 13:32.160
+Again things work really really fast and really really easily in next.
+
+13:32.170 --> 13:33.740
+Now let's do one last thing.
+
+13:34.120 --> 13:39.030
+I want to console log the data here.
+
+13:39.160 --> 13:47.670
+If I save here now that we have a console or log data let's see what happens on the browser side.
+
+13:47.890 --> 13:53.480
+If I open up the console again I see that there's Amaar which stands for a hot module.
+
+13:53.500 --> 13:58.430
+Reloading is just always watching for changes so we don't have to worry about that.
+
+13:58.510 --> 14:08.500
+If I click on robots all right I'm getting the console log on the front end nothing on the server on
+
+14:08.500 --> 14:12.230
+request but if I refresh this again
+
+14:15.060 --> 14:18.520
+you see that nothing happened on the console.
+
+14:18.520 --> 14:29.750
+But if I go back you see that on the server it has been logged as consul to log data what just happened
+
+14:29.750 --> 14:30.650
+here.
+
+14:30.800 --> 14:38.600
+You see that's because when we render the page on the server we already have the data and there's no
+
+14:38.600 --> 14:41.510
+reason to fetch it again on the client.
+
+14:41.510 --> 14:48.490
+So in that case refreshing the page never fetch the data on the client which is very very cool.
+
+14:56.300 --> 14:57.710
+All right.
+
+14:57.710 --> 15:04.570
+I think you're starting to get the idea of next yes and how easy it is to do server side rendering Now
+
+15:06.120 --> 15:14.130
+you can probably go off on your own and rebuild the entire Roble friends up using next and comparing
+
+15:14.130 --> 15:15.320
+the differences there.
+
+15:15.750 --> 15:18.230
+I highly recommend you check out this library.
+
+15:18.270 --> 15:25.170
+As always they have great documentation and I hope you explore how you can create even bigger apps than
+
+15:25.170 --> 15:25.890
+this.
+
+15:27.120 --> 15:28.120
+I'll see in the next one.
+
+15:28.360 --> 15:28.640
+But by.

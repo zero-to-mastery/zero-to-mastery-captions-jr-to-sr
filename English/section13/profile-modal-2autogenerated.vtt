@@ -1,0 +1,739 @@
+WEBVTT
+
+00:01.670 --> 00:10.010
+The first thing we want to do as we do with all components is poor re-act But we also want to import
+
+00:10.610 --> 00:19.140
+react on from the re-act down package and I have a feeling we're going to need some CSSA styling with
+
+00:19.140 --> 00:19.930
+our motile.
+
+00:20.140 --> 00:25.850
+So I'm going to create a CSSA file as well for our motile.
+
+00:26.080 --> 00:34.560
+And before I forget and we're going to go ahead once again and make sure that I create a new file motile
+
+00:34.660 --> 00:36.200
+dot CSSA
+
+00:40.330 --> 00:45.920
+and make sure that I use a semicolon.
+
+00:45.980 --> 00:50.910
+Now the first thing we're going to do is we actually need to bind this motile.
+
+00:50.930 --> 00:57.860
+Remember we created another div component that we can bind to using react on because it's going to be
+
+00:57.860 --> 01:01.670
+completely separate from our app component.
+
+01:02.420 --> 01:16.440
+Let's do that let's say Konst model root is going to equal document dot get elements by id and we're
+
+01:16.440 --> 01:18.890
+going to grab the modal root all meant.
+
+01:18.900 --> 01:26.640
+I think that's what we called it and now we have access to this comment on our index start a shemale
+
+01:26.700 --> 01:28.330
+page.
+
+01:28.330 --> 01:29.530
+Now here's the fun part.
+
+01:29.800 --> 01:37.050
+We're going to create our model that extends react re-act component.
+
+01:37.180 --> 01:39.920
+Nothing new here we've done this before.
+
+01:39.940 --> 01:41.440
+We also want to export it
+
+01:46.900 --> 01:47.560
+now in here.
+
+01:47.560 --> 01:49.210
+This is where it gets tricky.
+
+01:49.240 --> 01:53.740
+We want to have our regular constructor and we want to accept prop's
+
+01:57.220 --> 01:58.620
+call super.
+
+01:59.050 --> 02:07.790
+So we can use the this keyword and then here I want to have a reference to something called an element
+
+02:08.630 --> 02:13.760
+and this element is going to be document dot create element
+
+02:17.060 --> 02:19.580
+and I'm gonna explain what that does.
+
+02:19.610 --> 02:25.940
+And again going forward with this model it might get a little bit confusing if this is your first time
+
+02:25.940 --> 02:26.890
+seeing this code.
+
+02:27.200 --> 02:32.960
+Again re-act has really really good documentation so you can go and you'll see some of this code on
+
+02:32.960 --> 02:35.880
+their website because it's the recommended way to do modals.
+
+02:35.900 --> 02:41.200
+So you might have to play around with it a couple of times but you will get used to it.
+
+02:41.270 --> 02:42.520
+I promise.
+
+02:42.590 --> 02:50.290
+Now what we want to do first is we want to render the moto.
+
+02:50.790 --> 03:02.570
+And the way we do this when we use a portal is we say return re-act Dom dot create portal
+
+03:05.420 --> 03:09.240
+in here it's going to accept two parameters.
+
+03:09.320 --> 03:19.070
+It's going to accept this stop prop's dot children whatever is inside of the modal component and it's
+
+03:19.070 --> 03:28.330
+also going to accept this dot element the element that we've just created a div element and the final
+
+03:28.330 --> 03:32.820
+piece of the puzzle is to create a component
+
+03:35.340 --> 03:41.550
+did mount that when the modal is open.
+
+03:41.650 --> 03:48.360
+We want to attach to the modal root that is the index card a shemale file.
+
+03:48.460 --> 03:49.630
+We want to append
+
+03:54.400 --> 03:55.210
+element.
+
+03:55.410 --> 04:05.310
+So we're adding this element a development to the modal root and this development is going to be wrapped
+
+04:05.310 --> 04:08.320
+around whatever we put inside of this Modal component.
+
+04:08.580 --> 04:10.590
+It's children.
+
+04:10.690 --> 04:16.130
+We also want to be careful with models because they do close and we want to exit out of them.
+
+04:16.420 --> 04:20.630
+We don't want to leave any junk behind on our index file.
+
+04:20.710 --> 04:30.470
+We can clean up after ourselves by doing component will on mount I guess no capital M there.
+
+04:33.290 --> 04:39.460
+And within here we simply say modal root Daut remove child.
+
+04:39.710 --> 04:46.790
+This dot element so and I have to do this thought element here to gang because we're referencing the
+
+04:46.880 --> 04:56.140
+ultimate safe and that's it we've just created a modal.
+
+04:56.350 --> 05:02.590
+I know this can get a little bit confusing but think of it as a standard way to create modal and react.
+
+05:02.620 --> 05:08.870
+All we're doing is creating a portal a nice little method that comes with react.
+
+05:09.370 --> 05:12.920
+And it's going to mount when we remove it.
+
+05:12.970 --> 05:18.040
+It's going to open some a symbol for us when we mount.
+
+05:18.230 --> 05:19.870
+Also going to add a little bit.
+
+05:19.990 --> 05:26.460
+They see SS Just to make sure that the modal pops out and we see it properly.
+
+05:26.560 --> 05:37.280
+I'm going to use the idea of moral bruit that we have in the DML file and give it a position of relative
+
+05:37.700 --> 05:41.220
+and a z index of 9 9.
+
+05:41.220 --> 05:50.790
+So to make sure that it's at the very front of all the other it's just going to save that go back to
+
+05:50.790 --> 05:52.560
+modal logic yes.
+
+05:52.770 --> 06:00.810
+And now if we go back to app dodgy us where we've already imported our motile we can test this out by
+
+06:00.810 --> 06:02.340
+using the component.
+
+06:02.490 --> 06:08.390
+So let's scroll down all the way down to where we're rendering and perhaps just on the main page just
+
+06:08.390 --> 06:08.900
+for fun.
+
+06:08.900 --> 06:16.890
+Say motile and remember it accepts children so I'm just going to say hello
+
+06:19.550 --> 06:22.670
+and close up the let's save
+
+06:25.790 --> 06:28.300
+Hello's not defined because it has to be a string.
+
+06:28.640 --> 06:29.500
+Let's go back.
+
+06:30.860 --> 06:37.840
+And where is this Modal Phi open up my developer tools.
+
+06:38.000 --> 06:43.360
+Let's go to elements or let's use it re-act developer tools.
+
+06:43.420 --> 06:49.900
+I see that there's a app but I don't see my model do I.
+
+06:51.550 --> 06:57.900
+If I go to the elements plane I see that I have ID model route.
+
+06:57.950 --> 06:58.820
+I have a div
+
+07:01.460 --> 07:09.710
+OK but there's nothing really in it except for the dif.
+
+07:09.860 --> 07:13.380
+And we need to do a few things here to actually get the model to work.
+
+07:13.730 --> 07:15.260
+Let's go back.
+
+07:15.260 --> 07:22.490
+The first thing we want to do is what we want to be able to open this model and toggle it on and off.
+
+07:22.770 --> 07:29.210
+And because that's a pretty big functionality let's added to the very top of Abdulle us where we have
+
+07:29.210 --> 07:39.130
+our state and create a new state called is profil open and we'll set it as false for now.
+
+07:40.450 --> 07:47.080
+And now we can pass this down as props to whatever component we want.
+
+07:47.490 --> 07:51.260
+So let's just add this has is profile open to our state
+
+07:54.010 --> 08:00.680
+and within the navigation before we actually even check if our router is home.
+
+08:01.090 --> 08:02.920
+Let's move this up
+
+08:07.880 --> 08:09.540
+and do something like this.
+
+08:09.560 --> 08:16.320
+Use a javascript expression by wrapping it in curly brackets then saying is profil open.
+
+08:16.340 --> 08:21.760
+And if it is render the modal Otherwise we can say no.
+
+08:22.190 --> 08:29.540
+Another easy way of doing this is actually a lot cleaner is to use and and this is a little shorthand
+
+08:30.590 --> 08:34.720
+by doing this let's wind this up a little bit better so we can see better.
+
+08:38.020 --> 08:45.230
+I'm saying if is profile is true then keep going and render the modal profile open to false then.
+
+08:45.250 --> 08:50.030
+Well that's going to error out so it's not even going to go to the modal and read it.
+
+08:50.030 --> 08:57.850
+So this is a shorthand way of doing if you want to do a turn an operator where the last option is just
+
+08:57.930 --> 08:58.540
+no.
+
+08:58.650 --> 08:59.190
+All right.
+
+08:59.200 --> 09:05.530
+And in here in the modal Let's create another component and we'll call this component profil because
+
+09:05.530 --> 09:18.380
+this is where we want the profile to be display and this profile will get the Is profile open state.
+
+09:18.460 --> 09:19.030
+Let's save
+
+09:22.310 --> 09:25.610
+and we get profile is not defined because we need to define it.
+
+09:25.910 --> 09:29.170
+But before we do that I want to do one little thing.
+
+09:29.450 --> 09:37.430
+I also want to actually use is profile open to toggle the modem to either turn it on or off mounting
+
+09:37.430 --> 09:47.990
+it or mounting it and we can just come up here and add a new method call and get toggle motile and this
+
+09:48.000 --> 09:54.150
+toggle motile will be a function that simply will do this.
+
+09:54.210 --> 10:09.490
+Set state and it will update is profile open to state DOT is profile open.
+
+10:09.550 --> 10:10.720
+So it's just kind of toggle it.
+
+10:10.720 --> 10:12.740
+True or False True or false every time.
+
+10:13.090 --> 10:19.180
+Now remember here every time I'm touching state and this should be this state every time I'm touching
+
+10:19.180 --> 10:26.060
+state within a set state that's a bit of a no no because of the way re-act works.
+
+10:26.060 --> 10:34.410
+We want to always make sure that we use the function way of updating state and that is to do something
+
+10:34.410 --> 10:35.520
+like this.
+
+10:35.870 --> 10:45.220
+And we can just wrap it in curly brackets so that we're returning this object previously when we actually
+
+10:45.520 --> 10:49.000
+did this in the I believe seinen
+
+10:51.600 --> 11:01.800
+or we did this in the profile icon we left did like this.
+
+11:02.030 --> 11:09.740
+But what we actually want to do is return the full state that we want to update and the way we do that
+
+11:09.860 --> 11:15.290
+is with a little bit of destructuring or spread operator.
+
+11:15.410 --> 11:18.200
+It is dot dot state.
+
+11:18.200 --> 11:26.240
+So right now I'm returning the entire state as well as updating whatever the current state is with the
+
+11:26.360 --> 11:29.160
+IS profile open updated.
+
+11:30.280 --> 11:39.800
+Let's save this and we'll get state is not defined because we have to update it to the parameter previous
+
+11:39.800 --> 11:40.280
+state.
+
+11:40.520 --> 11:47.540
+And this has to be now previous.
+
+11:47.550 --> 11:48.390
+All right.
+
+11:48.590 --> 11:53.940
+And I'm still getting profile is not defined but again because we don't have the component yet but we
+
+11:53.940 --> 12:06.330
+want to pass the toggle modal method down to profile as well because we can close the profile from the
+
+12:06.330 --> 12:11.880
+profile page but we can also open it from our navigation page.
+
+12:11.940 --> 12:22.530
+I'm going to say this dot Tongo mortal let's say if and let's start creating our profile component we
+
+12:22.530 --> 12:29.280
+have the ability to probably use this and close the model but also within the navigation where we do
+
+12:29.280 --> 12:35.160
+the profile icon click and then view profile with the dropdown menu we're most likely going to need
+
+12:35.160 --> 12:36.000
+that as well.
+
+12:36.000 --> 12:39.760
+So I'm just going to add it on a new line just so it's a little bit cleaner.
+
+12:39.780 --> 12:48.450
+I'm going to say toggle motile again passing down this dot toggle mode.
+
+12:48.470 --> 12:48.730
+All right.
+
+12:48.770 --> 12:51.770
+Let's build out the profile component.
+
+12:51.860 --> 12:57.850
+I'm going to add a new file here to our profile folder and this on is just going to be called Profiles.
+
+12:57.960 --> 12:58.780
+Yes.
+
+13:00.400 --> 13:01.460
+Now in profile.
+
+13:01.520 --> 13:06.520
+Yes I'm going to import re-act from re-act
+
+13:11.030 --> 13:14.640
+and we'll just do a stateless function.
+
+13:15.080 --> 13:21.240
+So we'll just say Konst profile is going to receive.
+
+13:21.360 --> 13:29.460
+Well we have is profile open that we receive I believe if we go back up is profile open and toggle motile
+
+13:29.550 --> 13:31.050
+that we receive.
+
+13:31.050 --> 13:33.300
+So let's make sure that we have those
+
+13:39.330 --> 13:42.290
+and within here where we want to return some things.
+
+13:42.450 --> 13:48.520
+Now for now I want to make sure that this is working so I'm just going to say DIVX and let's say Jack
+
+13:49.360 --> 13:50.270
+Jack.
+
+13:50.300 --> 13:52.220
+Or a lesser op ed just to make sure that's the string.
+
+13:52.230 --> 13:53.550
+Check check
+
+13:56.440 --> 14:05.340
+close the day make sure we export the profile.
+
+14:05.430 --> 14:08.820
+Let's save.
+
+14:09.030 --> 14:11.270
+And we also want to go back to APT.
+
+14:11.300 --> 14:21.920
+Yes I make sure we're importing the profile component so I'm going to add a profile from the profile
+
+14:22.890 --> 14:30.840
+folder let's save C forget 10 years nothing yet let's go back to our app.
+
+14:30.850 --> 14:34.320
+If I click View Profile Well nothing happens.
+
+14:34.330 --> 14:42.330
+And that's because if we go to our re-act Deval pro-tools and we look at is profile open.
+
+14:42.330 --> 14:44.180
+When I click View Profile.
+
+14:44.280 --> 14:46.380
+Well we're not toggling anything.
+
+14:46.410 --> 14:49.130
+Our profile is open is always false.
+
+14:52.180 --> 14:55.620
+But if I go back and just set our apt.
+
+14:55.660 --> 14:56.050
+Yes.
+
+14:56.050 --> 15:02.320
+Is Profar open to true go back.
+
+15:02.420 --> 15:09.810
+We see that as profile open is equal to true and we open up our app oh look at that.
+
+15:09.810 --> 15:17.210
+We see our motile and this motile has a profile component and this profile component has a div.
+
+15:17.310 --> 15:18.240
+Check check.
+
+15:18.660 --> 15:23.610
+But our CSSA is a little bit off and it's not showing but we see that this is working we just need to
+
+15:23.610 --> 15:26.170
+make sure that we can toggle it on and off.
+
+15:26.190 --> 15:27.030
+Let's work on that.
+
+15:28.690 --> 15:36.290
+I want to bring this back to false and within the profile section let's make it a little bit more interesting.
+
+15:37.080 --> 15:47.080
+I'm going to create a div with a class name of some styles I will get from Ptak Kyon's.
+
+15:47.250 --> 15:51.930
+Let's do a closed div.
+
+15:51.950 --> 15:56.870
+Put this on a new line and within here.
+
+15:57.130 --> 16:00.830
+Let's actually add what should be at.
+
+16:01.240 --> 16:09.180
+Well I just want to make sure that the toggle modal is working so let's just add a button and this button
+
+16:10.140 --> 16:11.700
+will just say click
+
+16:16.220 --> 16:23.140
+will have an on click function might not see the model so it might not work.
+
+16:23.140 --> 16:26.580
+We might have to add some CSSA cells first but let's give this a try.
+
+16:26.590 --> 16:34.810
+I'm going to say toggle modem Let's actually add some proper CSSA here so you can see this Modal going
+
+16:34.830 --> 16:37.600
+to create a new CSSA file.
+
+16:37.600 --> 16:43.610
+Let's do this first import profile got SS
+
+16:47.120 --> 16:49.700
+and let's add that's the SS file now.
+
+16:52.470 --> 17:03.810
+And let's just have a profile modal class that will have a background color as just make it a little
+
+17:03.810 --> 17:05.230
+bit see through.
+
+17:05.250 --> 17:09.300
+Let's say zero point eight for opacity.
+
+17:09.810 --> 17:17.780
+We'll give it a position of fixed again something that we will definitely need.
+
+17:17.810 --> 17:21.890
+Let's give it a height of 100 percent
+
+17:24.570 --> 17:28.400
+perhaps say with as well a 100 percent
+
+17:31.450 --> 17:35.770
+top of 0 laughed his 0.
+
+17:36.010 --> 17:40.360
+Lots of CSSA also add a display of Flack's
+
+17:43.760 --> 17:45.860
+you want to align the items.
+
+17:45.860 --> 17:49.290
+Again we're just using Fluxbox here to be centered.
+
+17:49.310 --> 17:54.630
+And finally we want to also justified content center
+
+17:59.250 --> 18:08.520
+let's safe here let's go back and actually you know what instead of this class name let me just change
+
+18:08.670 --> 18:15.540
+all of this to our class that we just created which is profile motile.
+
+18:15.950 --> 18:21.310
+So I'll say profile motile Let's go back
+
+18:24.150 --> 18:29.670
+and I just realized with a view profile when we click we want to make sure that we can toggle this on
+
+18:29.850 --> 18:30.750
+and off.
+
+18:30.750 --> 18:34.230
+So let's go back to our navigation here.
+
+18:35.750 --> 18:38.610
+Where we click the view profile.
+
+18:38.900 --> 18:48.790
+So we have profile icon and the profile icon when we click the view profile.
+
+18:49.040 --> 18:57.680
+We also want to have an on click event and this On Click event is going to have the this Dopp props
+
+18:57.720 --> 19:02.790
+toggle.
+
+19:02.920 --> 19:06.820
+That's what probably should have been doing from the beginning but we make these mistakes every once
+
+19:06.820 --> 19:11.830
+in a while and save make sure we get the toggle motile from profile icon.
+
+19:13.740 --> 19:16.590
+So let's go back to the navigation.
+
+19:16.860 --> 19:20.070
+Let's clean this up it's getting a little bit messy once again.
+
+19:22.930 --> 19:26.020
+And starting from the top if you go to
+
+19:29.090 --> 19:32.980
+navigation we see that in navigation we have this start toggle motile.
+
+19:33.080 --> 19:50.300
+So if you go to the navigation component and the profile icon lets also pass down the toggle moral property.
+
+19:50.400 --> 19:55.070
+Let's give that a go.
+
+19:55.070 --> 19:55.770
+All right.
+
+19:55.880 --> 20:00.030
+If you look at the bottom here it is doing something.
+
+20:00.100 --> 20:06.160
+It's toggling but we get an error not fun Felty execute removed child on Node the note to be removed
+
+20:06.160 --> 20:07.700
+is not a child of this.
+
+20:07.700 --> 20:10.850
+No that is a confusing load on air.
+
+20:10.870 --> 20:16.550
+But let's see what's going on here.
+
+20:16.580 --> 20:19.850
+I bet I made a silly mistake somewhere.
+
+20:20.800 --> 20:22.020
+And.
+
+20:22.170 --> 20:22.960
+All right.
+
+20:24.130 --> 20:25.730
+Classic mistake.
+
+20:25.750 --> 20:30.160
+It's one of those things that when you're a developer you just have to get used to it and kind of embrace.
+
+20:30.250 --> 20:34.460
+You see over here that I completely misspelled component.
+
+20:34.480 --> 20:39.040
+And some of you are probably laughing right now because they're wondering why I spelled it that way.
+
+20:39.040 --> 20:41.050
+Well hopefully that's the reason.
+
+20:41.050 --> 20:42.580
+Let's give it another try.
+
+20:43.120 --> 20:46.020
+Let's go to the profile.
+
+20:46.420 --> 20:47.920
+Hey look at that.
+
+20:49.810 --> 20:54.170
+We have ourselves a motel that just has a click function for now.
+
+20:54.520 --> 20:56.730
+But this is nice.
+
+20:56.740 --> 20:57.990
+It's working.
+
+20:58.300 --> 21:00.120
+Very very cool.
+
+21:00.120 --> 21:03.050
+Now you saw how silly that was.
+
+21:03.050 --> 21:09.890
+That was just a simple error of spelling but you don't really get any clear errors.
+
+21:09.890 --> 21:16.280
+It was hard to figure out what was going on but just by looking at the fact that nothing was mounting
+
+21:16.820 --> 21:22.670
+the aliment something was off so that's why I decided to look at the modal Geass and of course it was
+
+21:22.670 --> 21:24.500
+a spelling error.
+
+21:25.040 --> 21:31.460
+Now I actually want to draw our attention to this file because I did gloss over a little bit on what
+
+21:31.460 --> 21:33.130
+this does.
+
+21:33.170 --> 21:42.270
+You see a Port-Au element in Briac inserts into the dog treat after the Modals children are mounting.
+
+21:42.650 --> 21:48.860
+So that what we're doing here is where mounting the modal component.
+
+21:48.860 --> 21:52.100
+If I go back over here open up my developer tools
+
+21:55.180 --> 21:58.120
+scoter react over here.
+
+21:58.360 --> 22:06.220
+If I look over here as soon as I click View Profile I get the modal component and as soon as I click
+
+22:06.220 --> 22:16.250
+off the moral component is gone and is completely unmounted from here and it's attached at the root
+
+22:16.490 --> 22:20.530
+to that a simple element that we created.
+
+22:20.540 --> 22:29.810
+Again if we go to elements and we go to motile root this is where our div was created that we have here.
+
+22:29.830 --> 22:30.390
+All right.
+
+22:30.480 --> 22:33.710
+Now that we've gotten this far we have ourselves a modal.
+
+22:33.900 --> 22:40.070
+Let's make it a little bit prettier in the next video so that we can start working on our sessions.
+
+22:40.380 --> 22:41.330
+I'll see on that one.

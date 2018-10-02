@@ -1,0 +1,238 @@
+WEBVTT
+
+00:00.840 --> 00:01.730
+Welcome back.
+
+00:02.040 --> 00:04.290
+It's now exercise time.
+
+00:04.290 --> 00:11.850
+And be warned this is probably the hardest exercise in the entire course.
+
+00:11.880 --> 00:14.280
+It's going to be really really frustrating.
+
+00:14.490 --> 00:18.910
+And you're going to maybe say some not so nice things about me.
+
+00:19.320 --> 00:28.320
+But keep in mind that US developers were always confronted with tasks that don't have a clear solution.
+
+00:28.470 --> 00:34.080
+And we're going to have to google around look at code examples and figure out what needs to be done
+
+00:34.290 --> 00:41.340
+because our boss or our company or our project doesn't care that we're frustrated sometimes we just
+
+00:41.340 --> 00:43.280
+need to deliver work.
+
+00:43.710 --> 00:50.610
+So in this exercise you might feel a bit of frustration especially if typescript is new to you but just
+
+00:50.700 --> 00:51.670
+stick with it.
+
+00:51.690 --> 00:57.240
+I'm going to provide a solution video after this so that if you get really really frustrated you can
+
+00:57.240 --> 00:59.260
+continue on watching it.
+
+00:59.280 --> 01:07.980
+But I do recommend that you go along with this exercise try and add types as much as possible and hopefully
+
+01:08.370 --> 01:12.000
+you learn a little bit of typescript out of it.
+
+01:12.000 --> 01:19.260
+Now I've actually set up everything for you just to make it easy because setting up the project isn't
+
+01:19.260 --> 01:21.370
+necessarily the goal of this course.
+
+01:22.920 --> 01:26.370
+You see I use the Create react up type script.
+
+01:26.580 --> 01:34.920
+I follow the instructions which is just to download create re-act up and then run it with the typescript
+
+01:35.820 --> 01:43.260
+option and this out of the box gives us all we need to start writing typescript.
+
+01:43.280 --> 01:52.170
+I then finally took our robo friends up and moved the files over to this new app that includes typescript.
+
+01:52.170 --> 02:01.430
+So now here I have our typescript project which I'm going to give you access to before I just set you
+
+02:01.430 --> 02:02.120
+off.
+
+02:02.120 --> 02:08.420
+Keep in mind that there are a few differences such as there's now a TS config file here that gives us
+
+02:08.420 --> 02:10.340
+some compiler option.
+
+02:10.520 --> 02:15.320
+We can see where it's going to be that we're using E-S next modules.
+
+02:15.770 --> 02:18.220
+We have a target as he has five.
+
+02:18.260 --> 02:21.620
+We see that we also allow GSX react.
+
+02:21.620 --> 02:31.320
+And what that means is if I go into my source folders our files are not J.S. files they're TSX files.
+
+02:31.670 --> 02:37.910
+They have this x at the bottom because the typescript compiler needs to understand GSX
+
+02:41.780 --> 02:49.340
+And if we go down we also see that we're excluding some things that we don't want the typescript compiler
+
+02:49.340 --> 02:52.490
+to go through.
+
+02:52.500 --> 02:59.730
+Finally there's also something called TS lint and I actually commented all of this out.
+
+02:59.820 --> 03:10.060
+If we go to the default project from year you'll see that the TS lint has some of the recommended Lanting
+
+03:10.120 --> 03:16.810
+and for react as well as typescript as well as some prettier configurations to make sure that our code
+
+03:16.810 --> 03:20.330
+is pretty but I removed that from our project.
+
+03:20.340 --> 03:26.430
+You can see here that these are all Lanting rules so that we can get through something called Slint
+
+03:26.490 --> 03:32.150
+again because we're just compiling code typescript Kingo and lint our files as well.
+
+03:32.370 --> 03:36.140
+But I removed these because it's going to frustrate you even more.
+
+03:36.150 --> 03:39.320
+You're just going to keep having to deal with all these areas.
+
+03:39.480 --> 03:44.830
+And because we're only focusing on typescript right now and not necessarily limiting.
+
+03:45.060 --> 03:48.880
+I've commented this out if you want an extra challenge you could comment.
+
+03:48.900 --> 03:51.700
+But get ready for a tough road ahead.
+
+03:53.060 --> 04:01.970
+Finally if we go to package Jason File we see that in our dev dependencies we have the typescript package
+
+04:02.210 --> 04:12.080
+as well as the act types that is we have type declaration files for just our testing suite node we have
+
+04:12.080 --> 04:13.850
+react and react on.
+
+04:13.970 --> 04:22.400
+So if we go to our node modules file or folder and go to types we have access to all these type definitions
+
+04:23.330 --> 04:26.800
+that we can use with these third party libraries.
+
+04:27.170 --> 04:29.950
+So how do you get started.
+
+04:30.020 --> 04:40.230
+I want to just write types because if you run NPM start here the typescript compiler is going to run
+
+04:40.590 --> 04:45.560
+for you and right now the app is working and we see we have no errors.
+
+04:45.690 --> 04:56.250
+But if we do anything funny in our components if I just say that this is a string you'll see that typescript
+
+04:56.290 --> 05:03.490
+fails us because type string has no property name because it's expecting an object we have script already
+
+05:03.490 --> 05:05.330
+working out of the box.
+
+05:05.470 --> 05:10.040
+I wanted to go ahead and try and add types for components and containers.
+
+05:10.270 --> 05:18.450
+And because it's a little tricky I started you off just a little bit in the app dot TSX and again don't
+
+05:18.450 --> 05:19.560
+get intimidated here.
+
+05:19.560 --> 05:23.650
+This is just standard for re-act all about it.
+
+05:23.700 --> 05:26.230
+Are these lines over here.
+
+05:27.050 --> 05:32.010
+Where I'm exporting because I might want to use my interface robot.
+
+05:32.060 --> 05:39.080
+And this is just a common syntax where because it's an interface I'm going to say I and then robot the
+
+05:39.080 --> 05:43.360
+name of the interface which has name I.D. and e-mail.
+
+05:43.400 --> 05:44.740
+We've seen this before.
+
+05:45.080 --> 05:50.720
+And then we also have the interface for our props that the app receives.
+
+05:50.720 --> 05:53.030
+In our case we don't really receive any props.
+
+05:53.060 --> 05:54.390
+So it's empty.
+
+05:54.800 --> 06:02.060
+And then we also have our interface for our app state which has robots and Hershfield robots being an
+
+06:02.060 --> 06:06.470
+array of interface robots and then search.
+
+06:06.470 --> 06:16.630
+Feel being a strength and then finally I have Riak component that takes in the props which are empty
+
+06:17.110 --> 06:24.610
+and the state which as you can see has robots and Hershfield and I added this and here because it is
+
+06:24.610 --> 06:29.130
+pretty specific to react and it can trick you up trip you up.
+
+06:29.200 --> 06:35.620
+But now that you know how to do this you can go off on your own and start adding types.
+
+06:36.510 --> 06:39.270
+Like I said it's going to be challenging.
+
+06:39.540 --> 06:43.680
+It's going to be frustrating but I encourage you to try this out.
+
+06:44.010 --> 06:50.190
+And then by the end of this exercise you get a message in our community chat how you like types and
+
+06:50.190 --> 06:55.650
+how your experience was because there's so many people that love typescript and so many people that
+
+06:55.650 --> 07:00.240
+hate typescript and it's a really polarizing tool.
+
+07:00.240 --> 07:07.590
+So I want to hear all about it in our chat community but for now go off work on this and I'll see you
+
+07:07.770 --> 07:08.750
+in the solution video.

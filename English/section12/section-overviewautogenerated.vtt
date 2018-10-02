@@ -1,0 +1,220 @@
+WEBVTT
+
+00:01.310 --> 00:08.920
+With databases there are a ton of them and even in my previous course we've covered the differences
+
+00:09.070 --> 00:16.330
+between relational databases and no Eski Well databases relational databases meant that you had to define
+
+00:16.330 --> 00:24.460
+your schemas or how your database looked beforehand and you were able to build really complex databases
+
+00:24.490 --> 00:25.270
+this way.
+
+00:25.780 --> 00:29.220
+And that's what postscripts is a relational database.
+
+00:29.380 --> 00:35.170
+It's a database that allows us to have different tables that are related to one another and we define
+
+00:35.170 --> 00:38.980
+those relationships with what we call schemas.
+
+00:39.080 --> 00:47.400
+And again we use postscripts as a relational database to hold our users and passwords in our smart braina.
+
+00:47.490 --> 00:53.310
+But there's a reason there's so many databases out there different databases are built to optimize different
+
+00:53.310 --> 00:54.400
+things.
+
+00:54.450 --> 01:04.140
+Amazon Netflix Facebook Alibaba Joh's donut shop all have different database needs to meet all these
+
+01:04.140 --> 01:04.840
+needs.
+
+01:04.980 --> 01:07.990
+A ton of databases can be found online.
+
+01:08.490 --> 01:16.760
+And today we're going to talk about one of the most loved and used databases called re-edits and say
+
+01:16.910 --> 01:19.310
+no rescue all database.
+
+01:19.370 --> 01:24.310
+So this way we're able to learn a bit of relational database with postgresql as well as know rescue
+
+01:24.320 --> 01:30.940
+all with red eyes red this is what we call a Noas skew all in memory database.
+
+01:31.250 --> 01:36.640
+And by the end of the section those words are going to mean something to you.
+
+01:36.700 --> 01:37.760
+So let's get started.
+
+01:39.610 --> 01:46.070
+Berettas is an open source database that is often used to build really high performance scalable web
+
+01:46.070 --> 01:47.270
+applications.
+
+01:47.270 --> 01:55.790
+A lot of companies use rentes Now Noah skilled databases can have many different types.
+
+01:55.840 --> 01:59.410
+You have things such as document notes guild databases.
+
+01:59.410 --> 02:02.660
+You might have heard of Mongo D-B or Koshti.
+
+02:02.770 --> 02:05.270
+These are really really good at storing documents.
+
+02:05.290 --> 02:12.580
+So if you think of Linked-In profiles where your profile has all these different fields and categories
+
+02:12.580 --> 02:17.160
+and and one user has that document like data.
+
+02:17.200 --> 02:20.880
+In that case well these are really really good.
+
+02:21.030 --> 02:27.560
+You have things like wide column with Cassandra and things like Graph databases Nio for Jay.
+
+02:27.660 --> 02:35.680
+If you have a social media app for example that describes a graph like connection between its users.
+
+02:35.850 --> 02:43.490
+Now red S is what we call a key value store and this key value relationship is a little bit similar
+
+02:43.490 --> 02:48.380
+to how we handle objects in javascript.
+
+02:48.380 --> 02:54.290
+We have a object property that has a value associated with it a key and a value.
+
+02:55.350 --> 02:59.790
+And we're going to go over how we're going to use rattus in the next couple of videos.
+
+02:59.910 --> 03:07.950
+But the one thing I want to get across is that it is an in memory database which makes it really really
+
+03:07.950 --> 03:08.670
+fast.
+
+03:09.380 --> 03:14.900
+You see read as is use for short lived data in our applications.
+
+03:15.670 --> 03:23.500
+And it's often used with things like sessions or web page headcounts and in memory means you don't have
+
+03:23.650 --> 03:29.630
+large data sets such as you would with something like Cassandra or Mongo D-B.
+
+03:29.680 --> 03:36.430
+You have small pieces of data so tiny little pieces of data which allow us to keep it in memory.
+
+03:36.430 --> 03:38.990
+That is the machine's memory and not on disk.
+
+03:39.040 --> 03:47.020
+If you remember memory is something that is very easy to access on a machine and disk is a little bit
+
+03:47.020 --> 03:47.650
+slower.
+
+03:47.800 --> 03:53.260
+You can store a lot more information on disk but it's a little slower to access.
+
+03:53.270 --> 04:00.310
+So with rentes you want to use it when you have small pieces of data that you need access to.
+
+04:00.770 --> 04:04.440
+And you also don't care if you might lose some of that data.
+
+04:06.170 --> 04:14.390
+Now even though the data is in memory it does take a snapshot every once in a while to save the current
+
+04:14.510 --> 04:21.190
+database contents onto the disk which is great to recover from when there's unexpected shutdowns.
+
+04:21.250 --> 04:26.430
+Wherever you have read it's running and you'll only lose the last few minutes of information.
+
+04:27.870 --> 04:35.280
+Then based on that information we should be using rattus whenever we have small pieces of data that
+
+04:35.700 --> 04:42.570
+isn't super super important that if the service crashes we'll be able to come back to a snapshot and
+
+04:42.570 --> 04:45.480
+we might lose the latest information.
+
+04:45.870 --> 04:49.420
+But we're sacrificing all of that for the speed of service.
+
+04:49.470 --> 04:54.270
+It is super super fast and it's very very scalable.
+
+04:55.480 --> 05:01.480
+And read just like all other databases has its unique set of data types that it can store.
+
+05:01.780 --> 05:07.120
+And we're going to go through some of them and the next videos and you'll see that it doesn't use Eskew
+
+05:07.180 --> 05:11.600
+Well it's no Eskew all database and we'll see how that works.
+
+05:13.570 --> 05:19.240
+In this section we're going to get used to Rattus and then coming up when we talk about sessions and
+
+05:19.240 --> 05:26.800
+JWT we're actually going to use rattus in a way to manage a session for us because a senior developers
+
+05:26.800 --> 05:30.500
+we have to decide which tool is right for the job.
+
+05:30.610 --> 05:32.050
+We should know this by now.
+
+05:32.260 --> 05:39.190
+And although postscripts is amazing when you have tools like retests that can be really really fast
+
+05:39.190 --> 05:45.010
+for managing small pieces of data there's some use cases where you might want to have some information
+
+05:45.090 --> 05:49.650
+iritis and some information aren't postscripts depending on what your needs are.
+
+05:49.960 --> 05:57.470
+And in most companies you'll see this is very very rare that a big company has just one type of database.
+
+05:57.520 --> 06:04.990
+Most of the time they have different databases all around because they have different needs different
+
+06:04.990 --> 06:09.290
+ways that they need to read the data and different ways that they need to write the data.
+
+06:09.550 --> 06:12.730
+And again based on that tool they use different tools.
+
+06:14.070 --> 06:20.520
+So we're going to learn that skill of being able to use different pieces of tools that are as databases
+
+06:21.060 --> 06:21.860
+to work with.
+
+06:21.900 --> 06:26.960
+While we have all right it's time to get started with Radice.
+
+06:26.960 --> 06:28.450
+I'll see in the next one.
+
+06:28.630 --> 06:28.910
+Buh-Bye.

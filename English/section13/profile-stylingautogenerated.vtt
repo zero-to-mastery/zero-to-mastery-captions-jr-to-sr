@@ -1,0 +1,427 @@
+WEBVTT
+
+00:01.160 --> 00:02.180
+Walk them back.
+
+00:02.290 --> 00:08.320
+Now that we have a nice profile icon and a nice drop down menu I want to make sure that these things
+
+00:08.320 --> 00:08.840
+work.
+
+00:08.860 --> 00:14.650
+So let's work out the sign out functionality and this video and also remove this over here because we
+
+00:14.650 --> 00:16.720
+don't really need this anymore.
+
+00:16.720 --> 00:18.750
+Let's get back to our tech center.
+
+00:18.910 --> 00:26.200
+The first thing we want is we want the on a road change function which we already use in our app in
+
+00:26.200 --> 00:31.230
+our sign out over here and let's change out to sign out perfect.
+
+00:31.860 --> 00:39.550
+And in here if you go back to our navigation we see that all these routes have the on route change prop
+
+00:39.640 --> 00:43.980
+that we receive from the app and that simply changes routing for us.
+
+00:45.480 --> 00:47.450
+Let's grab the on route change.
+
+00:47.460 --> 00:49.090
+Assume that we get that as props.
+
+00:49.110 --> 01:01.030
+We'll work on that in a bit and say that this Daut prop's or we have to actually have an enclave function
+
+01:01.810 --> 01:10.390
+and this unclick function is going to have the this dobbed props start on row change called with the
+
+01:10.390 --> 01:17.270
+sign out called because we want to sign up and we also need to actually pass this Propp now.
+
+01:17.310 --> 01:23.970
+So let's go back to our navigation and in here we can actually change this up.
+
+01:23.970 --> 01:31.830
+We can completely remove the text that said sign out because we don't need it anymore but we do want
+
+01:31.830 --> 01:34.850
+the on road change function to work here.
+
+01:34.920 --> 01:42.060
+So let's just pass down the on route change down to profile like on because we already have access to
+
+01:42.060 --> 01:51.430
+that and navigation and just completely erase the speed at let me save go back
+
+01:59.030 --> 02:06.490
+and we have a bit of an issue here and that is because if we go to our profile icon Well I can just
+
+02:06.760 --> 02:08.770
+call this inside of the function.
+
+02:08.770 --> 02:12.240
+I have two more inside of the on click.
+
+02:12.280 --> 02:13.330
+I have to actually
+
+02:16.730 --> 02:24.110
+assign the function so that when on click happens the function runs not just immediately running it.
+
+02:24.110 --> 02:30.330
+All right let's say that go back quick on this.
+
+02:30.340 --> 02:30.620
+Hurry.
+
+02:30.620 --> 02:31.190
+Perfect.
+
+02:31.190 --> 02:35.860
+If I click sign out look at that i'm signed out.
+
+02:35.880 --> 02:36.640
+That's awesome.
+
+02:36.860 --> 02:39.630
+Now there's a few things that I'm noticing here.
+
+02:39.650 --> 02:44.260
+One is that oh my dropdown menu is a little bit off here.
+
+02:44.270 --> 02:45.950
+We need to adjust some VSS.
+
+02:45.980 --> 02:49.220
+And also when I sign out I don't want to go to the register page.
+
+02:49.250 --> 02:55.640
+I want to go to the sign and page let's fix that first.
+
+02:55.670 --> 03:02.570
+What we want to do is if we go to app that J.S. We'll see if I can find it or if we go to dodginess
+
+03:04.090 --> 03:09.260
+and on road change if we scroll down we see that it's a very simple router.
+
+03:09.430 --> 03:19.060
+When we sign out we set state to initial state in which case that is our sign out or in our case it's
+
+03:19.060 --> 03:24.980
+the home which we're changing just for the devolvement purposes.
+
+03:27.450 --> 03:29.250
+And there's many ways to fix this.
+
+03:29.250 --> 03:32.100
+First of all this routing logic could be improved.
+
+03:32.100 --> 03:37.980
+We see that we actually have the same route sign out which says state to initial state and then because
+
+03:37.980 --> 03:39.250
+it keeps going.
+
+03:39.330 --> 03:48.510
+It also runs the route to set to whatever route we pass it to now in our case because we pass the sign
+
+03:48.510 --> 03:55.900
+out route and if we scroll down here we have the route sign in and that's where we're checking for.
+
+03:55.920 --> 03:59.150
+And in that case we get signed and otherwise we get register.
+
+03:59.160 --> 04:05.600
+Well the logic here is a little bit off but a quick fix that we might want to do here we can add actual
+
+04:05.600 --> 04:11.790
+logic here so maybe if it's sign if the rowdiest sign out we can just go to the sign and page as well
+
+04:12.360 --> 04:17.940
+or we can't simply just call return here so that we don't even update the route.
+
+04:17.970 --> 04:25.050
+We just as soon as we sign out get to the initial state which in our case will be the will be the sign
+
+04:25.050 --> 04:25.600
+in page.
+
+04:25.620 --> 04:30.560
+And this is never going to be called Let's save and just test this out.
+
+04:32.100 --> 04:40.190
+I'm going to change the route to what we had before which was sign and and all changes is signed into
+
+04:40.190 --> 04:41.490
+force as well.
+
+04:41.660 --> 04:44.810
+Going back I will do my.
+
+04:44.810 --> 04:51.170
+Hey put a dot com and notice that my styling career has changed again because of boot straps again something
+
+04:51.170 --> 04:55.550
+that will have to fix I'm signed in the file.
+
+04:55.550 --> 04:58.800
+Click here and sign out.
+
+04:58.850 --> 04:59.500
+Perfect.
+
+04:59.510 --> 05:02.460
+I'm Allen the sign in page.
+
+05:02.520 --> 05:03.150
+All right.
+
+05:03.150 --> 05:07.160
+You know this year that we have another issue with the form.
+
+05:07.440 --> 05:11.100
+This is a bit of a tricky one because why is this happening.
+
+05:11.100 --> 05:19.170
+We put our styles after bootstrap our tack Kyon's and our index Nazi SS is after bootstrap But this
+
+05:19.170 --> 05:21.270
+is a funny thing that's actually happening.
+
+05:21.270 --> 05:23.600
+And another reason where you want to be careful.
+
+05:23.600 --> 05:26.190
+Anything that you can port to your project.
+
+05:26.310 --> 05:30.920
+If I scroll down here I see that whereas it
+
+05:33.870 --> 05:44.020
+background transparent over here if I scroll down and toggle it will see that oh look at that.
+
+05:44.500 --> 05:51.730
+That's now while we want out of our thing but somebody is calling background transparent with the important
+
+05:51.730 --> 05:52.640
+class.
+
+05:53.050 --> 05:54.180
+And if I click here
+
+05:56.960 --> 05:58.990
+it looks like this text CSSA.
+
+05:59.060 --> 06:01.110
+Oh yeah that's bootstrap right there.
+
+06:01.280 --> 06:07.360
+So bootstrap automatically assigns the important but not place.
+
+06:07.730 --> 06:13.650
+Let's go back to the inspect element bootstrap.
+
+06:13.660 --> 06:19.330
+Automatically assigns the important flag which again overrides all C Ss.
+
+06:19.520 --> 06:20.240
+Where are we.
+
+06:20.240 --> 06:21.190
+Let's go back to
+
+06:24.670 --> 06:26.080
+scroll up and there it is.
+
+06:28.600 --> 06:31.200
+You see over here it's not being read.
+
+06:31.340 --> 06:37.900
+While we have with Kyon's and instead it's being written overwritten by the same class in the bootstrap
+
+06:37.990 --> 06:39.480
+class.
+
+06:39.520 --> 06:48.180
+Again another reason why you want to stick usually with wants VSS library because you never know what
+
+06:48.180 --> 06:48.880
+they're doing.
+
+06:49.710 --> 06:54.570
+So let's fix that really really quickly because I like the black background that we had.
+
+06:56.330 --> 07:03.800
+And a simple fix that we can do is perhaps for seinen we can create a new file we'll call to sign in
+
+07:04.000 --> 07:15.040
+dot C Ss and we can just simply override everything so let's just call this however black on hover and
+
+07:15.040 --> 07:17.880
+we'll say that this is whenever it's hovering.
+
+07:17.890 --> 07:21.140
+I want the background color
+
+07:25.460 --> 07:27.450
+to be black.
+
+07:27.460 --> 07:33.440
+Now Bruce Shepp is still going to override that because it has the important flag so we can add our
+
+07:33.440 --> 07:36.060
+own flag here saying important.
+
+07:36.060 --> 07:37.730
+Now I'm warning you here.
+
+07:37.910 --> 07:43.820
+This is just for demonstration purposes just in case you encounter something like this which often happens
+
+07:43.820 --> 07:48.110
+when you mix and match I personally never like using this.
+
+07:48.130 --> 07:51.060
+If you're using this then there's something wrong.
+
+07:51.060 --> 07:52.930
+Maybe there's better ways of doing it.
+
+07:52.930 --> 07:58.870
+In our case maybe instead of using Buscema we can do something else so it doesn't override all our styles
+
+07:58.900 --> 08:01.760
+or maybe don't use tack Collins and bootstrap together.
+
+08:02.230 --> 08:10.310
+But for now we have this Hover block that we can apply to each one of our classes in our case we can
+
+08:10.310 --> 08:21.060
+go to the register or the sign in and in the sign in we can just have a class that we add to all our
+
+08:21.060 --> 08:22.110
+inputs.
+
+08:22.290 --> 08:24.440
+We have a lot of CSSA styles already.
+
+08:24.480 --> 08:26.830
+And we should KPRC SSL.
+
+08:26.940 --> 08:29.130
+Let's go with Hover Clott hover block
+
+08:32.000 --> 08:34.770
+to hear what other imposed do we have.
+
+08:35.090 --> 08:38.090
+We have the this one over here.
+
+08:38.360 --> 08:40.520
+Let's save go back
+
+08:43.780 --> 08:46.870
+oh what i miss here.
+
+08:46.990 --> 08:55.230
+Let's go back and that's because we actually need to import our CSSA file that we just created.
+
+08:56.330 --> 09:01.810
+So again most do sign an Daut see assess.
+
+09:01.850 --> 09:06.080
+So let's test that out go back look at that.
+
+09:06.210 --> 09:08.960
+We have our background all set.
+
+09:09.000 --> 09:11.220
+We can do probably the same thing for a register.
+
+09:11.220 --> 09:13.530
+We see that that's still being affected.
+
+09:13.620 --> 09:16.480
+But that's something that you can do on your own time.
+
+09:16.530 --> 09:20.950
+We have over written a hair styles.
+
+09:20.980 --> 09:25.720
+All right so now that we got this all figured out let's go back to let's clean this up a bit.
+
+09:27.400 --> 09:30.820
+I'm going to abduct Yes all our clothes some of these tabs
+
+09:35.070 --> 09:42.800
+and go to our home and is signed in to true just so we can play around with this.
+
+09:42.900 --> 09:45.030
+If I go back there we go.
+
+09:45.060 --> 09:50.080
+I think the one last fix we want to do is this positioning of the box.
+
+09:50.100 --> 09:52.070
+Let's fix that.
+
+09:52.250 --> 09:58.370
+And that's actually a nice little fix that we can do again if we go to profile.
+
+09:58.670 --> 10:06.080
+Luckily for us with the dropdown menu there is a attribute that we can use again if we go back to our
+
+10:06.500 --> 10:09.180
+re-act trap.
+
+10:09.340 --> 10:13.710
+We have the let's see position
+
+10:17.350 --> 10:24.400
+that is up down left right and you can see over here that you can align things based on how you want
+
+10:24.400 --> 10:24.980
+them to be.
+
+10:25.000 --> 10:29.210
+In our case we want to use the right attribute.
+
+10:29.420 --> 10:35.720
+So I can just go back here and just to stay consistent for Klaas's let's keep double quotes just like
+
+10:35.720 --> 10:36.590
+we have over here.
+
+10:36.620 --> 10:38.330
+Even though you can use both.
+
+10:38.330 --> 10:45.500
+And let's just add the right attribute here that comes with 3.x chape.
+
+10:45.540 --> 10:46.320
+If I go back
+
+10:49.250 --> 10:52.920
+are eight We've got everything nice and working.
+
+10:52.920 --> 10:56.150
+I think it's time for us because our sign our functionality works.
+
+10:56.220 --> 10:58.580
+It's time for us to build our profile.
+
+10:58.690 --> 10:59.810
+That's going to be a fun one.
+
+11:00.090 --> 11:01.190
+I'll see in that one.
+
+11:01.570 --> 11:01.860
+But by.

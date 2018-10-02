@@ -1,0 +1,808 @@
+WEBVTT
+
+00:02.400 --> 00:05.230
+Rates we're certain to read more more tests.
+
+00:05.230 --> 00:09.340
+But up until now we've only worked with some simple components.
+
+00:09.470 --> 00:15.940
+What if we want to work with something like a container that top dog uses We have all this maps state
+
+00:15.940 --> 00:17.000
+to props.
+
+00:17.200 --> 00:23.890
+It's also a connected component.
+
+00:23.930 --> 00:27.870
+How do we test with that.
+
+00:28.030 --> 00:29.380
+Let's give it a try.
+
+00:30.290 --> 00:34.980
+I'm going to create a new file and call it aptitude test.
+
+00:35.050 --> 00:35.700
+Yes.
+
+00:37.810 --> 00:46.400
+And this aptitude test that yes again and we can't just go through the motions and copy one the last
+
+00:46.400 --> 00:46.870
+tests.
+
+00:46.880 --> 00:56.140
+Let's just do this and this time instead of conurbation it's going to be up.
+
+00:56.260 --> 01:01.410
+And again we won't receive any colors.
+
+01:01.480 --> 01:03.580
+Let's just run this and see what happens.
+
+01:03.580 --> 01:04.240
+Oh actually.
+
+01:04.300 --> 01:05.780
+Let me delete this as well.
+
+01:05.860 --> 01:08.510
+Save.
+
+01:08.760 --> 01:09.390
+All right.
+
+01:09.390 --> 01:11.020
+I'm getting some errors.
+
+01:11.130 --> 01:17.960
+It says expect to render app component which is over here but I'm getting an error saying that invariant
+
+01:17.970 --> 01:24.920
+violation could not find store in either the context or prop's of connect app.
+
+01:24.930 --> 01:36.070
+All right so let's just lock a store you can say Konst lock store equals say an empty object for now.
+
+01:36.430 --> 01:47.550
+Or let's just do the robots of an empty array and let's do Sir's sure or a search field.
+
+01:47.990 --> 01:52.410
+That is an empty string and we'll just pass this mock store
+
+01:55.250 --> 01:56.080
+as the store proc
+
+02:01.460 --> 02:07.180
+and whole Boy I'm getting stored get state is not a function.
+
+02:07.310 --> 02:09.350
+And that makes sense right.
+
+02:09.350 --> 02:17.330
+If you remember our store isn't just an empty object or a dummy object.
+
+02:17.390 --> 02:23.690
+I mean it is an redox terms but it also came with all these other things that we didn't really think
+
+02:23.690 --> 02:26.620
+about when we installed the.
+
+02:26.720 --> 02:32.390
+We had get state subscribe and all these other methods that came with it.
+
+02:32.420 --> 02:40.420
+So that means we have to mock this entire list of store methods that redux comes up with.
+
+02:40.460 --> 02:45.930
+And if redux updates and add something new in the future we're going to have to update that as well.
+
+02:46.280 --> 02:51.390
+And luckily for us there's tools that already do this for you.
+
+02:51.650 --> 03:02.810
+For example there is a package called redux lock store that you can use to actually mock this store
+
+03:02.810 --> 03:06.320
+and have these proper methods on it.
+
+03:06.320 --> 03:08.780
+And that's an NPM package we can install.
+
+03:08.780 --> 03:11.500
+But I want to take a different route.
+
+03:11.600 --> 03:20.480
+I want to take a route of simplicity because right now looking at this app dot J.S. file We're doing
+
+03:20.480 --> 03:27.890
+a lot of things and I like simple tests tests that test simple things.
+
+03:28.130 --> 03:35.540
+And this app that is frankly a little bit complicated because we have this connect so it's technically
+
+03:35.540 --> 03:40.050
+not even rendering the app it's rendering Canet.
+
+03:40.290 --> 03:42.270
+And then that is ratbite.
+
+03:42.810 --> 03:50.280
+Let me show you what I mean if I go back to our app and open up our re-act developer tools you might
+
+03:50.280 --> 03:57.510
+have to download this plug and if you don't have it already I see that my app is a provider and then
+
+03:57.540 --> 03:59.990
+a connect to app.
+
+04:00.130 --> 04:09.190
+So this app what we're actually testing is this Kinect component that is wrapping the app and only inside
+
+04:09.190 --> 04:09.620
+of it.
+
+04:09.640 --> 04:14.970
+We have the app and then Hetter search box scroll and so on and so forth.
+
+04:16.430 --> 04:17.650
+Let's simplify this.
+
+04:17.660 --> 04:23.910
+Why not just test our app instead of testing are connected component.
+
+04:24.560 --> 04:33.400
+And this is what I'd like to do when I test things instead of trying to test a really complicated component.
+
+04:33.490 --> 04:39.640
+I ask myself is this component as simple as it can be is there better things that I can do with code
+
+04:40.090 --> 04:42.760
+to make it more testable.
+
+04:42.850 --> 04:45.800
+Which usually results in better code overall.
+
+04:55.350 --> 05:00.010
+So looking at this this app component does two main things.
+
+05:00.060 --> 05:04.430
+One it connects to the read box store.
+
+05:04.530 --> 05:08.100
+Through all this maps say two props and map dispatched to props.
+
+05:08.310 --> 05:11.900
+But it also renders a ton of the sinks.
+
+05:11.940 --> 05:14.550
+So let's separate this out.
+
+05:14.550 --> 05:23.220
+I'm going to create a new component file and call it main page digests so you can think of this as the
+
+05:23.220 --> 05:25.020
+home page of our Robur friends up
+
+05:28.260 --> 05:32.910
+and now this main page will also have a test file.
+
+05:32.970 --> 05:35.400
+So I'm going to move the app.
+
+05:35.600 --> 05:45.400
+Tested yes to actually be renamed to main page and put it into the components folder.
+
+05:48.210 --> 05:48.920
+All right.
+
+05:48.990 --> 05:53.500
+Our tests are failing but that's because we have our names all off.
+
+05:53.510 --> 05:55.660
+So let's go about this step by step.
+
+05:55.850 --> 06:03.110
+Let's make apt Rajai ass be worried about just connecting and receiving just receiving props from the
+
+06:03.110 --> 06:12.360
+store and make our main page be concerned with rendering all this home page stuff.
+
+06:12.410 --> 06:14.030
+So how can we do this.
+
+06:14.570 --> 06:21.550
+Well the very first step is I'm going to copy the entire app dodgiest file go to our main page.
+
+06:21.770 --> 06:23.030
+Copy and paste it.
+
+06:23.240 --> 06:29.190
+And right off the bat remove all the redux things because I don't need anything redux.
+
+06:29.240 --> 06:33.440
+This is going to be a simple component that's not connected to a redux store.
+
+06:33.620 --> 06:43.160
+So I'm going to remove the Connect I'm going to remove any of the actions and just leave our components.
+
+06:43.160 --> 06:54.210
+I'm going to remove the map state to prop's map dispatch to prop's and I'm going to rename this to main
+
+06:54.600 --> 06:59.850
+page component and where you don't have a CSSA fall for it.
+
+07:00.040 --> 07:04.510
+Or maybe we should move this app dodgiest to our main page.
+
+07:04.520 --> 07:06.980
+So for now I'm just going to create something quickly.
+
+07:07.100 --> 07:15.410
+I'm going to say new file main page dot C Ss and by the way you're start to see why we might want to
+
+07:15.410 --> 07:18.950
+have a better folder structure than just files files files.
+
+07:19.010 --> 07:24.490
+We might want to have components and a component folder for each one of these components.
+
+07:24.890 --> 07:30.280
+And I'm just going to copy and paste here and going back to our main page.
+
+07:30.290 --> 07:33.380
+We now have this DSS we have the
+
+07:36.170 --> 07:42.910
+constructor and I don't know why we have our count in here.
+
+07:42.990 --> 07:45.670
+I don't think we need the count now using it at all.
+
+07:45.750 --> 07:48.210
+So let's just remove that.
+
+07:48.480 --> 07:50.460
+So we don't need a constructor
+
+07:53.560 --> 08:00.430
+and in our main page again there's no constructor we have the component did mount because while we want
+
+08:00.430 --> 08:09.760
+to request robots and we have our regular render but we also don't have our connect anymore we're just
+
+08:09.760 --> 08:16.090
+simply rendering our main page.
+
+08:16.150 --> 08:16.690
+All right.
+
+08:16.690 --> 08:26.310
+So we've removed this and made this into a simple app that still has the component did mount but that's
+
+08:26.430 --> 08:29.360
+just prop's that we received from the store.
+
+08:30.910 --> 08:31.540
+All right.
+
+08:31.570 --> 08:33.550
+So let's go into APTA.
+
+08:33.580 --> 08:39.900
+Yes and now remove the up part because we don't really need that anymore or we don't need the render
+
+08:39.900 --> 08:43.260
+part we just need the connected component.
+
+08:43.290 --> 08:45.240
+So again in here.
+
+08:45.240 --> 08:54.920
+Now for our render all we really need to do is well remove all of this feels nice removing stuff and
+
+08:54.920 --> 09:01.940
+making files smaller and all we need is the main page component to render.
+
+09:02.180 --> 09:02.960
+Right.
+
+09:03.740 --> 09:12.220
+So we remove all these component imports and just import the main page component
+
+09:15.550 --> 09:16.200
+again.
+
+09:16.310 --> 09:17.780
+Another reason I love react.
+
+09:17.810 --> 09:21.110
+Everything is just so nice and simple to move components around.
+
+09:21.200 --> 09:24.310
+But look what we've just done really really quickly.
+
+09:24.470 --> 09:31.640
+Oh we definitely don't need component did mount because we're doing that in the main page.
+
+09:31.640 --> 09:36.410
+So look how small that component just got how nice is that.
+
+09:37.380 --> 09:43.220
+And now this app component just turned into a super simple container component.
+
+09:43.380 --> 09:50.850
+And this is an architectural decision that I really really like because we don't really need to even
+
+09:51.090 --> 09:52.020
+test this.
+
+09:52.050 --> 09:53.590
+Do we.
+
+09:53.710 --> 10:03.130
+Because all we're doing is just using the connect function to grab the state and dispatch events from
+
+10:03.190 --> 10:05.240
+our redock store.
+
+10:05.260 --> 10:10.480
+So even writing tests for this although we could do it we're just simply testing the functionality of
+
+10:10.720 --> 10:11.290
+redux.
+
+10:11.290 --> 10:17.500
+And that's something that redux library already does it already has tests and people working to make
+
+10:17.500 --> 10:19.110
+sure that it works properly.
+
+10:20.230 --> 10:25.290
+This component now becomes something so simple that we might not even need to test.
+
+10:25.810 --> 10:33.550
+And we've moved all our logic that we can test to the main page component and that's something really
+
+10:33.760 --> 10:34.790
+important to think about.
+
+10:34.810 --> 10:39.400
+To always try and make your tests easy.
+
+10:39.580 --> 10:44.620
+If they're not then perhaps there's something in your code that you can simplify Ngan see how elegant
+
+10:44.620 --> 10:45.880
+of a solution this is.
+
+10:46.030 --> 10:51.770
+The last thing we really want to do is just pass down these props down to the main page.
+
+10:52.180 --> 11:05.240
+To do that we can just use some destructuring or object spread say this dot props.
+
+11:05.410 --> 11:10.210
+Let's see if and actually haven't tested this code so make sure it still works.
+
+11:10.300 --> 11:11.890
+Let's run NPM start.
+
+11:11.920 --> 11:14.920
+Sure there's something that we may have missed.
+
+11:15.990 --> 11:19.490
+Let's close this.
+
+11:19.540 --> 11:26.840
+All right we have your render method should have a return statement and yep we need to actually return
+
+11:26.900 --> 11:31.350
+from this render statement as silly of us Sless return.
+
+11:34.720 --> 11:41.870
+And we have a bit of an issue with the CSSA and that is because it can't find the Segev font.
+
+11:41.930 --> 11:43.610
+So that's a simple fix.
+
+11:43.700 --> 11:51.110
+We just go to the well and do because the Segev font is in the containers.
+
+11:51.320 --> 11:59.340
+We can just simply do containers for now even though we probably want to move this around for now for
+
+11:59.340 --> 12:02.360
+demonstration purposes that's fine.
+
+12:02.400 --> 12:03.600
+Everything is passing.
+
+12:03.600 --> 12:07.380
+If I go back I see that there's a few other errors.
+
+12:07.530 --> 12:17.800
+We have the count of Noal and we're passing the count state in here in the header component.
+
+12:18.120 --> 12:26.460
+But if you remember our Hetter component has the counter-battery that actually has its own state.
+
+12:26.470 --> 12:29.770
+So looks like we're doing this for no reason.
+
+12:30.130 --> 12:36.460
+So let's just remove that from the whereas it from the main page.
+
+12:36.530 --> 12:37.120
+Yes.
+
+12:37.190 --> 12:42.310
+So we can just remove that save go back.
+
+12:42.390 --> 12:42.840
+All right.
+
+12:42.840 --> 12:45.890
+Everything is working make sure our searching works.
+
+12:46.020 --> 12:46.430
+Yeah.
+
+12:46.470 --> 12:49.200
+Everything is working count is working.
+
+12:49.200 --> 13:00.410
+If I open up my re-act developer tools no not redux we want re-act we have the provider we have the
+
+13:00.410 --> 13:01.500
+connected app.
+
+13:01.550 --> 13:02.510
+But check this out.
+
+13:03.700 --> 13:14.210
+We now have the main page that we can test and this main page now is more accessible for us using enzyme
+
+13:14.210 --> 13:15.620
+than just.
+
+13:15.790 --> 13:17.300
+So let's write some tests here.
+
+13:19.270 --> 13:23.130
+We're going to go into the main page got tests.
+
+13:23.200 --> 13:31.890
+All right let's first change the name to main page which is while we're testing now and because I feel
+
+13:31.890 --> 13:38.370
+like we're going to be doing this a lot and passing down some props There's a neat little trick that
+
+13:38.430 --> 13:46.220
+we can do let's say we're going to have a lot wrapper and I'm going to remove this for now.
+
+13:48.440 --> 13:55.670
+And we can use something called before each again comes with just and other testing frameworks and this
+
+13:55.760 --> 14:00.400
+make sure that it runs before each one of our tests.
+
+14:00.410 --> 14:08.300
+Now in here we simply give it a function and inside of this function we can say what should run before
+
+14:08.300 --> 14:10.100
+each one of our tests.
+
+14:10.100 --> 14:15.460
+In our case we want to mock prop's and these mock props.
+
+14:15.460 --> 14:17.030
+Well where are we going to have.
+
+14:17.170 --> 14:28.910
+We're going to have the on request robots which if you remember let's close this and close this so it's
+
+14:28.910 --> 14:31.020
+a little bit cleaner.
+
+14:31.240 --> 14:37.300
+If you remember main page has the on request robot's function.
+
+14:37.300 --> 14:43.930
+So we can't just do the just function here which we've seen before with mocking.
+
+14:43.930 --> 14:46.780
+So we're just saying that this is just this simple function.
+
+14:46.780 --> 14:49.520
+Don't worry about actually doing the API call.
+
+14:49.720 --> 14:52.260
+We'll say that robots is an empty array.
+
+14:54.410 --> 15:08.230
+That search field is going to be an empty string and that is pending will be set to false.
+
+15:08.320 --> 15:15.850
+And then finally because we have this for each or before each We're going to say that the rapper is
+
+15:15.850 --> 15:19.420
+going to equal the shallow
+
+15:22.120 --> 15:30.190
+rendered main page and this main page again just like we did in our apt.
+
+15:30.280 --> 15:35.400
+Yes can just received the props.
+
+15:35.640 --> 15:42.680
+That is the mock props.
+
+15:42.720 --> 15:47.490
+So this is going to receive all these properties just like we did in apt.
+
+15:47.610 --> 15:48.260
+Yes.
+
+15:48.360 --> 15:49.220
+See that ivory here.
+
+15:54.040 --> 15:54.380
+All right.
+
+15:54.420 --> 16:02.770
+So let's say if you're going to go back to running NPM test and we have a few errors because well that's
+
+16:02.770 --> 16:04.240
+not semi-colon that's comma.
+
+16:04.240 --> 16:12.110
+My arch nemesis the comma and we get an error saying that our test suites must contain one test because
+
+16:12.170 --> 16:13.490
+we haven't read one yet.
+
+16:13.850 --> 16:16.580
+We just wrote the before each.
+
+16:16.590 --> 16:18.330
+Now let's start off with the basics.
+
+16:18.350 --> 16:31.530
+The it renders main page without crashing and we'll say that while we can use our favorite test tool
+
+16:31.830 --> 16:38.820
+snapshot testing we can just say expect wrapper because now we have access to this wrapper that is shallow
+
+16:38.820 --> 16:47.780
+rendered because before each is going to run before this test and I'll say to match the snapshot.
+
+16:48.270 --> 16:54.750
+I love how easy this is let's save.
+
+16:54.910 --> 16:57.270
+And what did I mess up here.
+
+16:57.490 --> 16:57.860
+Wow.
+
+16:57.910 --> 17:00.290
+I am terrible writing commas.
+
+17:01.600 --> 17:03.090
+All right there you go.
+
+17:03.160 --> 17:07.650
+You must be just laughing at me right now with all the commas that I miss while I code.
+
+17:07.660 --> 17:10.790
+But hey we're all human here we all make mistakes.
+
+17:10.810 --> 17:16.100
+I don't think there's ever a perfect developer that doesn't make mistakes while coding.
+
+17:16.210 --> 17:16.730
+If there are.
+
+17:16.730 --> 17:19.030
+Well I'm very jealous of them.
+
+17:19.030 --> 17:19.360
+All right.
+
+17:19.390 --> 17:24.140
+Let's test another thing let's say that I wanted to make sure that it filters the robots correctly.
+
+17:24.160 --> 17:28.640
+So I'll say it filter's robots correctly.
+
+17:29.570 --> 17:42.770
+And I'm just going to say that in here we expect the rapper and how do we do this.
+
+17:42.800 --> 17:44.450
+If we go to main page da J.S.
+
+17:47.240 --> 17:55.990
+we have filter robots in here but that's happening in the render function.
+
+17:56.030 --> 18:07.500
+So let's just clean this up and say that we have the filter robots and this filter robots will receive
+
+18:07.520 --> 18:13.000
+the robots and it's going to almost make it or Nera function
+
+18:18.590 --> 18:21.020
+and we can just grab this
+
+18:25.010 --> 18:26.480
+and just return
+
+18:29.770 --> 18:32.170
+our filtered robots.
+
+18:32.170 --> 18:40.870
+We're going to need the search field here song and say this dot props dot search field to lowercase.
+
+18:41.060 --> 18:51.610
+And now within here we can just say that filter robots is coming from this dot filter robots.
+
+18:51.620 --> 18:53.330
+Let's just make sure this runs.
+
+18:53.330 --> 18:55.810
+I'm going to go back and run NPM start
+
+18:59.740 --> 19:03.420
+and it looks like I made a mistake somewhere here.
+
+19:03.730 --> 19:10.840
+We need to actually pass down the robot self or say it's going to receive the robots or we can even
+
+19:10.840 --> 19:17.490
+do this up over here for analysis leave it like that and make sure we have our naming correct here.
+
+19:17.530 --> 19:19.540
+Filter robots Let's go back.
+
+19:20.800 --> 19:22.290
+All right it's still working.
+
+19:23.070 --> 19:30.400
+So now that I've made this a little bit cleaner in our render function and let's just remove the search
+
+19:30.400 --> 19:36.430
+field from your merry go how can I actually test this.
+
+19:36.430 --> 19:47.990
+We can now just simply test this method on the main page class well we can just now use the instance
+
+19:49.050 --> 19:51.600
+property that comes with enzyme.
+
+19:51.990 --> 19:58.530
+And now this instance is going to give us access to all the methods that main page has including folder
+
+19:58.530 --> 19:59.220
+robots.
+
+19:59.430 --> 20:10.470
+So let's say in our test I'm going to move this around I'm going to say Dot filter robots is going to
+
+20:10.500 --> 20:13.470
+run filter robots with let's say an empty array.
+
+20:15.260 --> 20:20.660
+And we expect that to equal an empty array.
+
+20:20.750 --> 20:31.020
+So let's save and run NPM start or NPM test.
+
+20:31.260 --> 20:32.760
+We have a failed test.
+
+20:35.220 --> 20:38.040
+And I made a little bit of a mistake here.
+
+20:38.130 --> 20:43.010
+The xpect should be around this entire thing.
+
+20:43.020 --> 20:48.320
+We want to expect that the filter robots rants and we wanted to equal the empty array.
+
+20:48.390 --> 20:51.130
+Let's save hurt.
+
+20:51.150 --> 20:52.560
+Everything is passing.
+
+20:52.830 --> 20:59.460
+But let's test other cases because while this is most likely not going to be the case let's say that
+
+20:59.550 --> 21:04.860
+this time around in this statement only even though we're getting the before each and we have access
+
+21:04.860 --> 21:13.020
+to the wrapper this time around we want to have a special case where the mock props is going to have
+
+21:13.020 --> 21:16.760
+a search field of a.
+
+21:16.960 --> 21:34.670
+And here we have a robot that is let's say Id three with a name of John and email Wolf relieve user
+
+21:34.670 --> 21:41.080
+name out of it for now John at gmail dot com.
+
+21:41.240 --> 21:45.510
+Let's save this and create a new xpect statement.
+
+21:45.510 --> 21:45.750
+Now
+
+21:50.280 --> 22:02.240
+and just for this test we're going to use a different wrapper so lazy to say a wrapper with an I know
+
+22:02.240 --> 22:06.220
+this is not the cleanest but trying to illustrate a point here so bear with me.
+
+22:06.320 --> 22:08.500
+So let's do mock props.
+
+22:09.590 --> 22:11.480
+Two mock props too.
+
+22:11.720 --> 22:14.120
+And this is going to be a rapper too.
+
+22:14.120 --> 22:24.870
+So let's say if rapper to save and assess filter's robots correctly and you know what I just realized
+
+22:24.930 --> 22:33.900
+I think a better way for us to do filter robots for now at least is we can forget about the props and
+
+22:33.900 --> 22:39.380
+we can just do this dot this dot prop's robots.
+
+22:41.980 --> 22:47.480
+So going back here we can now remove the arrays so it just looks a little bit cleaner.
+
+22:48.840 --> 22:52.710
+And let's make this test pass.
+
+22:52.710 --> 22:58.860
+We get a bit of an error here because we need to do Konst wrapper too because Rapparee is not defined.
+
+22:58.860 --> 23:05.480
+Remember we have to define it and our tests pass because our search field is a.
+
+23:05.540 --> 23:09.410
+And we only have robots with John and John Ajimobi.
+
+23:09.620 --> 23:19.300
+But if I changed this to John O-ho it fails because we expected to equal the actual robots with John
+
+23:19.300 --> 23:21.070
+in.
+
+23:21.220 --> 23:31.140
+For now we can just say that we expect this array to be returned and I'm going to remove the first one.
+
+23:31.660 --> 23:32.260
+Let's save
+
+23:35.910 --> 23:37.820
+go and have extra.
+
+23:38.000 --> 23:39.130
+Blart brackets here.
+
+23:39.130 --> 23:40.000
+Again this is good.
+
+23:40.000 --> 23:42.720
+Our tests are failing and we're working towards passing them.
+
+23:43.030 --> 23:47.670
+All right and now we know that filter's robots correctly is working.

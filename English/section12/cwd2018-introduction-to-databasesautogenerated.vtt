@@ -1,0 +1,355 @@
+WEBVTT
+
+00:01.860 --> 00:10.290
+All companies store data from a simple record book of a small business maybe even on a journal or a
+
+00:10.290 --> 00:17.650
+piece of paper two massive companies like Amazon that need computers to store petabytes of data.
+
+00:17.760 --> 00:25.950
+Now in order to store this information pretty much every company and sometimes individuals to need something
+
+00:25.950 --> 00:27.870
+called a database.
+
+00:27.990 --> 00:31.960
+We saw in the last section how hard it was to have our server.
+
+00:32.040 --> 00:35.760
+Remember a new user every time the server crashed.
+
+00:35.760 --> 00:40.090
+The variable will get reset and then it would start all over.
+
+00:40.410 --> 00:48.340
+Or if we wanted to do a log in or sign and check and iterate through the e-mails and passwords during
+
+00:48.420 --> 00:51.900
+a loop through javascript that's inefficient.
+
+00:52.110 --> 00:54.070
+That's where database come to the rescue.
+
+00:54.960 --> 00:58.800
+So let's ask ourselves what is a database.
+
+00:58.830 --> 01:01.900
+A database is a collection of data.
+
+01:01.990 --> 01:03.480
+And what we mean by data.
+
+01:03.790 --> 01:05.670
+There are many forms of them right.
+
+01:05.710 --> 01:10.180
+There can be numbers there can be dates there could be password hashes.
+
+01:10.300 --> 01:17.390
+There could be user information databases allow us to organize this data in a way that is useful to
+
+01:17.390 --> 01:24.290
+us and makes data management easy and something came out of that.
+
+01:24.600 --> 01:29.890
+And it's called database management system or DBMSs for short.
+
+01:29.960 --> 01:35.060
+It's a collection of programs which allows us to access databases and work with data.
+
+01:35.390 --> 01:47.140
+And it also allows control access to database users so 8 DBI mass is something in this box something
+
+01:47.140 --> 01:55.290
+that allows us a tool or a piece of software that allows us to communicate with the database store information
+
+01:55.290 --> 02:05.790
+that's useful for us and also allows us to update insert delete look up whatever's in the database.
+
+02:05.790 --> 02:12.930
+And this idea of a DBMSs really started to take shape in 1960s and now it is at the forefront of many
+
+02:12.930 --> 02:14.080
+exciting things.
+
+02:14.100 --> 02:19.760
+There's an entire industry of Engineers that just work with databases because it is so important.
+
+02:21.040 --> 02:27.070
+Now there are two types of DBMSs that are really popular right now and that we're going to talk about
+
+02:27.070 --> 02:27.890
+in this course.
+
+02:29.740 --> 02:36.070
+And these two types are represented really well by postscripts and Mongo DB.
+
+02:36.400 --> 02:43.150
+Let's talk about the first one which is relational database and this is probably the most popular as
+
+02:43.150 --> 02:44.550
+you can see on the right hand side.
+
+02:44.560 --> 02:49.570
+You see that all of these are relational databases.
+
+02:49.570 --> 02:56.890
+Postscripts Oracle ask you all server you may have heard of my ask you I'll ask you a light.
+
+02:57.150 --> 03:03.790
+These are all types of databases that have this relational database tag to them.
+
+03:04.050 --> 03:06.720
+And the beauty with them is that they're all pretty much similar.
+
+03:06.720 --> 03:10.580
+They all follow a same standard format.
+
+03:10.590 --> 03:19.460
+Relational databases consist of two or more tables with columns and rows.
+
+03:19.480 --> 03:27.790
+So in this case users is a table and full name user name tax created out our columns and whatever values
+
+03:27.790 --> 03:31.160
+they have here are rows.
+
+03:31.180 --> 03:37.930
+Each row represents an entry and each column sorts a very specific type of information like name address
+
+03:37.930 --> 03:38.890
+or phone numbers.
+
+03:39.880 --> 03:47.960
+And then the relation between tables and fields is called a schema in a relational database.
+
+03:48.120 --> 03:55.430
+The schema must be clearly defined before any information can be added and if this is confusing right
+
+03:55.430 --> 03:59.110
+now don't worry we're actually going to create these databases so it makes sense to you.
+
+03:59.450 --> 04:05.420
+If we had Twitter for example you can see over here the types of tables that we would have and how we
+
+04:05.420 --> 04:07.080
+would organize it.
+
+04:07.190 --> 04:15.350
+We would have a user stable a tweet table a following table and we can connect all these information.
+
+04:15.360 --> 04:23.160
+For example by connecting different pieces of the table for example the user name will be the same in
+
+04:23.160 --> 04:27.500
+the Users table as it is in the tweets table.
+
+04:27.510 --> 04:37.470
+That way we can say that the username and the tweets table is the foreign key of the username in the
+
+04:37.470 --> 04:46.040
+Users table and then from user will be the foreign key of username and the following table.
+
+04:46.060 --> 04:56.350
+Now things like full name or ID something that identifies each row in a table is called a primary key
+
+04:57.010 --> 05:01.890
+and we'll go through that later on in the section.
+
+05:01.890 --> 05:07.080
+All right so all these databases we're going to learn about postscripts skewl but they're all pretty
+
+05:07.080 --> 05:07.620
+much the same.
+
+05:07.620 --> 05:14.760
+So once you know on it's fairly easy to pick up the other ones how do they actually communicate with
+
+05:15.610 --> 05:22.030
+the server with the Bakken well all relational databases use something called Eskew well
+
+05:26.460 --> 05:34.500
+and Escudero allows us to communicate just like a CTP did between the front end and the Bakhit with
+
+05:34.500 --> 05:43.080
+Eskew or we're able to communicate with the database and modify or get or update wherever we want and
+
+05:43.080 --> 05:45.570
+we'll have a video on this topic as well.
+
+05:45.570 --> 05:49.760
+All right so that's relational databases.
+
+05:49.760 --> 05:51.700
+What about the second type.
+
+05:51.760 --> 05:58.440
+The second type is called a non relational database or a no rescue database.
+
+05:58.960 --> 06:04.960
+And once again there are many many different types of databases with some cool names like Koshti and
+
+06:04.960 --> 06:06.650
+hyper table.
+
+06:06.760 --> 06:12.760
+Now a mongo D-B or a non-relational database lets you build an application without having to define
+
+06:12.760 --> 06:14.840
+the schema first.
+
+06:14.920 --> 06:26.340
+Unlike a relational database if we go back to relational database this schema or these tables have to
+
+06:26.430 --> 06:27.680
+kind of be predefined rate.
+
+06:27.690 --> 06:35.860
+We need to know how our app is going to look make these tables so that once the app is public we can
+
+06:35.880 --> 06:44.910
+start entering user information and tweets and followers with no rescue all or non-relational database.
+
+06:44.970 --> 06:51.660
+We can't just define it as we go and they all have different ways of storing this information so each
+
+06:51.660 --> 06:53.180
+one is very very different.
+
+06:53.430 --> 06:58.590
+And this is another powerful reason to use a non relational database is that if your data requirements
+
+06:58.590 --> 07:05.880
+aren't clear at the outset of your project and maybe have a massive amount of structure data you may
+
+07:05.880 --> 07:11.350
+not have the luxury of developing a relational database with a clearly defined schema.
+
+07:11.460 --> 07:18.330
+They offer instead a greater flexibility in that a non relational database are more like folders just
+
+07:18.330 --> 07:21.160
+assembling related information of all types.
+
+07:22.290 --> 07:26.470
+No Mongo D-B is something called document oriented.
+
+07:26.550 --> 07:31.690
+It stores information as documents.
+
+07:31.700 --> 07:33.490
+Let me illustrate this point to you.
+
+07:33.650 --> 07:37.110
+I have my desktop here with two folders.
+
+07:37.490 --> 07:40.020
+One is a really relational database.
+
+07:40.280 --> 07:48.860
+And here I have users tweets profile following and you can think of relational databases with this type
+
+07:48.860 --> 07:56.480
+of storage where this folder lives somewhere on a computer that stores this information and any time
+
+07:56.480 --> 08:02.540
+we need to ask a database for something while we grab the users and if we you also want to grab the
+
+08:02.540 --> 08:09.620
+tweets of the user we find the user that we're interested in then find the tweets of the user that we're
+
+08:09.620 --> 08:17.450
+also interested in with the foreign key that links to the users and we can also find however many followers
+
+08:17.480 --> 08:18.470
+that user has.
+
+08:18.620 --> 08:22.730
+We grab that information and display it on our web
+
+08:25.430 --> 08:34.230
+Mongo D-B on the other hand will actually have each user as a document.
+
+08:34.240 --> 08:36.950
+So if I wanted to grab the first user.
+
+08:37.360 --> 08:43.930
+Well I just grab this document and it has all the followers the tweets the profile everything is in
+
+08:43.930 --> 08:53.260
+this one document and you might be thinking Mongo D-MI looks like a better choice than having this way
+
+08:53.260 --> 08:54.330
+of doing things right.
+
+08:55.510 --> 08:59.950
+Well it depends on your need and that's why database's is such a complex topic.
+
+08:59.980 --> 09:02.410
+It really really depends on your situation.
+
+09:02.440 --> 09:08.620
+You can see this Mongo D-B way being very useful if you have something like a profile maybe a linked
+
+09:08.620 --> 09:09.390
+in profile.
+
+09:09.580 --> 09:15.340
+But if you needed something where you're working was just following data or just tweets data maybe with
+
+09:15.360 --> 09:18.980
+the tweets you want to see what is the average tweet size.
+
+09:19.100 --> 09:25.480
+Well it's really easy to just grab this file and calculate that versus this way where you might have
+
+09:25.480 --> 09:28.750
+to extract it from each one of the users.
+
+09:28.960 --> 09:30.740
+So it really depends on your needs.
+
+09:31.940 --> 09:37.360
+Michelle you another diagram that might be useful.
+
+09:38.860 --> 09:44.900
+When we look at relational versus non relational databases you can think of relational as.
+
+09:44.980 --> 09:54.190
+Each table has a block posts a block tag a block comment and it links the stables to give the blog information
+
+09:54.970 --> 10:02.110
+versus a non-relational that stores this entire block post in an entry and has comments tax categories
+
+10:02.530 --> 10:05.700
+and all other related data just in one single place.
+
+10:05.890 --> 10:08.690
+So what does Mongo DB use to communicate.
+
+10:09.390 --> 10:16.080
+If we go back to our example here we had ask you all for relational databases such as postscripts.
+
+10:16.170 --> 10:26.710
+Mongo D-B has its own what we call query language and it is just the Mongo D-B query language
+
+10:31.640 --> 10:33.640
+but they both aim to do the same thing.
+
+10:33.650 --> 10:40.010
+That is to communicate with the database provide an easy way for the server to communicate with the
+
+10:40.010 --> 10:41.550
+database.
+
+10:41.760 --> 10:46.230
+And in this section we're going to be talking about that and we're going to finally connect the dots
+
+10:46.800 --> 10:51.460
+and show you the power of databases once they're connected to a server.
+
+10:51.510 --> 10:53.020
+I'll see in the next one.
+
+10:53.300 --> 10:53.550
+But by.

@@ -1,0 +1,298 @@
+WEBVTT
+
+00:01.410 --> 00:02.310
+Welcome back.
+
+00:02.610 --> 00:07.730
+We've learned a few docker commands and how to create a dogfight.
+
+00:08.220 --> 00:10.610
+But there's a few things that we want to do.
+
+00:10.620 --> 00:17.700
+For example we have our version of a node but ideally we're able to run our smart brain API in this
+
+00:17.760 --> 00:18.760
+container.
+
+00:18.930 --> 00:20.360
+How can we do that.
+
+00:20.760 --> 00:24.090
+Well in this video let's tackle that.
+
+00:24.260 --> 00:27.550
+Let me introduce you to a few more docker commands that we can use.
+
+00:27.560 --> 00:32.400
+First one is the work directory or worker instruction.
+
+00:32.540 --> 00:36.910
+And this says that this is the directory in the container that we want to work out of.
+
+00:37.010 --> 00:44.800
+And I'm just going to create one that says app or logistical smart brain API.
+
+00:45.750 --> 00:47.790
+And that's the working directory.
+
+00:47.790 --> 00:54.400
+So next time we actually go into the back of the container we'll find ourselves in here.
+
+00:55.490 --> 01:04.100
+The next one we have we want to use is something like copy in copy as the name suggests copies whatever
+
+01:04.100 --> 01:10.190
+we want from our current directory into the container.
+
+01:10.190 --> 01:14.420
+In our case this is our root directory so we can just say that we want to copy
+
+01:17.080 --> 01:17.860
+everything.
+
+01:18.370 --> 01:19.670
+And this root directory.
+
+01:19.750 --> 01:24.470
+And where do we want to put it into our container.
+
+01:24.550 --> 01:28.580
+In our case we want to put it in our working directory so we can just keep it the way it is.
+
+01:28.930 --> 01:33.360
+And by the way over here I can do something like If I only want to copy package
+
+01:35.520 --> 01:41.670
+package Jaison file I could do that as well because that's at the root directory.
+
+01:41.740 --> 01:44.890
+Before now we want to copy everything.
+
+01:44.900 --> 01:46.070
+There you go.
+
+01:46.130 --> 01:53.840
+And then the last command I'm going to teach you is run and run is simply saying what should we do here
+
+01:54.440 --> 01:57.660
+and what type of commands should we run in the container.
+
+01:58.010 --> 02:03.210
+And we want to run NPM install because we've created a working directory.
+
+02:03.300 --> 02:08.410
+We've copied all these files and we then want to run NPM install.
+
+02:08.420 --> 02:15.750
+Kind of like what we do when we do get clone onto our desktop our project and then run NPM install.
+
+02:15.890 --> 02:17.080
+That's the exact same thing.
+
+02:18.080 --> 02:20.980
+And you can run multiple commands here.
+
+02:20.990 --> 02:27.540
+Now you might be thinking What's the difference between run and command now run is what we call an image.
+
+02:27.600 --> 02:28.330
+Step.
+
+02:28.460 --> 02:33.860
+The State of the container after a run command will be committed to the dock or image.
+
+02:33.860 --> 02:42.600
+So a Daco file can run many run steps that layer on top of one another to build the image that we want.
+
+02:42.660 --> 02:49.540
+Now the command on the other hand is something that xcuse by default when you launch the build image.
+
+02:49.620 --> 02:56.690
+So a dock or fall can have only one comment and that usually comes at the end of fall.
+
+02:56.730 --> 03:00.370
+So let's just check out and see what happens if I run these commands now.
+
+03:00.570 --> 03:06.400
+If I go into my terminal and once again let's make this a little bit bigger.
+
+03:06.550 --> 03:17.120
+And once again Iran docker built our super awesome.
+
+03:17.130 --> 03:17.530
+All right.
+
+03:17.550 --> 03:18.840
+You see that there's more steps.
+
+03:18.840 --> 03:21.700
+Now it's running NPM install.
+
+03:21.780 --> 03:24.180
+We have a bit of a warning but I think that should be fine.
+
+03:24.180 --> 03:29.490
+And then finally we're running the command five steps and it looks like it's successfully built
+
+03:32.890 --> 03:33.240
+now.
+
+03:33.270 --> 03:36.500
+Let's actually go into this container and see what happened.
+
+03:36.570 --> 03:46.360
+We want to clear this and say docker run again the Highty and then super awesome container
+
+03:49.210 --> 03:56.510
+operate like this our working directory is user source smart brain API which we just defined.
+
+03:56.550 --> 04:05.160
+And if I do last year how cool is that we have all our files from our computer in this container.
+
+04:05.160 --> 04:07.340
+And we also ran NPM install.
+
+04:07.440 --> 04:13.450
+So theoretically if I run and pm start here
+
+04:16.480 --> 04:18.120
+how cool is that.
+
+04:18.160 --> 04:23.000
+We have our server running on a container right now in a docker container.
+
+04:23.020 --> 04:25.430
+An app is running on port 3000.
+
+04:25.790 --> 04:26.010
+OK.
+
+04:26.020 --> 04:28.060
+So let's go check it out.
+
+04:28.090 --> 04:34.530
+I open up a new tab and let's just do localhost three thousand.
+
+04:34.980 --> 04:37.040
+The site can be reached.
+
+04:37.350 --> 04:41.670
+And that's because localhost is referring to our computer.
+
+04:42.000 --> 04:48.390
+But if you remember about our discussion all containers are containers a completely separate thing running
+
+04:48.390 --> 04:49.210
+on its own.
+
+04:49.530 --> 04:54.150
+And our computer doesn't really have knowledge of that container.
+
+04:54.770 --> 04:56.190
+And that's the thing.
+
+04:56.210 --> 05:01.580
+And this is something that gets a lot of people caught up when we have a container let me exit out of
+
+05:01.580 --> 05:10.260
+this when we have a container the container doesn't really know of of the machine we need to actually
+
+05:10.260 --> 05:13.770
+tell it where to expose a port.
+
+05:13.770 --> 05:19.480
+You see the outside world which is my computer cannot connect to the container by default.
+
+05:19.490 --> 05:25.320
+We have to actually tell the container what to expose and we called this port binding and we'll use
+
+05:25.320 --> 05:27.290
+a technique called port forwarding to do this.
+
+05:27.330 --> 05:29.690
+And it sounds more complicated than it is.
+
+05:29.730 --> 05:37.320
+All we need to do is within our command give it the dash P parameter which stands for port and give
+
+05:37.320 --> 05:44.220
+it the we want the port three thousand on our container and we're going to for that to port 3000 on
+
+05:44.220 --> 05:45.530
+the host on the machine.
+
+05:45.840 --> 05:57.530
+So if I run this OK we've gone into the container I ran NPM start our app is running on port 3000 and
+
+05:57.530 --> 06:08.040
+now if we go back R8 reference their database is not defined and that is because if we go to our server
+
+06:08.160 --> 06:19.170
+dodgy us we have over here in the Get request database user which actually is not correct.
+
+06:19.170 --> 06:23.070
+We have D-B now we're never using database but it's actually working.
+
+06:23.250 --> 06:25.700
+So let's change this to.
+
+06:25.980 --> 06:27.990
+It's working.
+
+06:28.970 --> 06:38.080
+We want to save and let's refresh and the tricky part is we're going to have to run this again.
+
+06:38.090 --> 06:42.050
+Let me close this and run NPM start.
+
+06:42.130 --> 06:53.180
+Let's go back and refresh and you see how it's actually not working right now and that is because
+
+06:58.870 --> 07:02.010
+and we actually have to let's close this.
+
+07:02.050 --> 07:06.990
+We're going to exit this and rebuild our image
+
+07:10.040 --> 07:13.210
+began it's copying the files we're running through the steps.
+
+07:14.180 --> 07:18.820
+Then finally run our container and if we were on NPM start now.
+
+07:20.700 --> 07:23.220
+Go back and refresh.
+
+07:23.410 --> 07:25.080
+It's working.
+
+07:25.280 --> 07:28.090
+How nice does that feel.
+
+07:28.100 --> 07:33.030
+We've just officially created Dharker container for our API server.
+
+07:33.350 --> 07:41.120
+So now all we need to do is give this folder with the doc or file anywhere and as long as they have
+
+07:41.150 --> 07:46.830
+a doctor we can just simply run this on any machine that we want.
+
+07:46.860 --> 07:50.540
+Very cool but there's a problem now.
+
+07:51.640 --> 07:53.930
+How about this database.
+
+07:54.040 --> 07:55.300
+What do we do with that.
+
+07:55.300 --> 07:58.340
+What do we do with postscripts for that.
+
+07:58.450 --> 08:00.690
+You have to wait for the next video.
+
+08:00.970 --> 08:01.890
+I'll see on that one.

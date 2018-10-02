@@ -1,0 +1,442 @@
+WEBVTT
+
+00:01.500 --> 00:02.650
+We'll come back.
+
+00:02.860 --> 00:04.630
+We're so close.
+
+00:04.630 --> 00:07.130
+We're going to talk about data management now.
+
+00:08.060 --> 00:14.980
+And what we can do to improve security when it comes to data management data management encompasses
+
+00:14.980 --> 00:15.940
+many ideas.
+
+00:15.940 --> 00:21.510
+But there's a few topics for example you want to make sure you always have backups.
+
+00:21.520 --> 00:27.880
+Some people like backing up their website data static files somewhere safe.
+
+00:27.880 --> 00:29.890
+Never have one point of failure.
+
+00:29.980 --> 00:36.140
+That is one place that is weak and if that gets down then you have no place else to recover from.
+
+00:37.610 --> 00:41.570
+You want to make sure that you limit sensitive data exposure.
+
+00:41.570 --> 00:50.330
+That is you want to encrypt data arrest so that is jumbling it up so that people can see it and in transition.
+
+00:50.330 --> 00:51.510
+Now here's the thing.
+
+00:51.830 --> 00:55.700
+What I just said encrypting data at rest and in transition.
+
+00:55.710 --> 01:02.420
+Most of the time is not feasible because encrypting data rest means when data is just sitting there
+
+01:02.840 --> 01:10.100
+pretty much let's say in a database encrypting all that data costs a lot of money requires a lot of
+
+01:10.100 --> 01:15.980
+effort and is just not feasible and it doesn't completely cover your bases in transition means when
+
+01:15.980 --> 01:16.970
+you're sending data.
+
+01:17.000 --> 01:22.490
+So when you're sending data from the database to the server when you sending data from the server to
+
+01:22.490 --> 01:26.270
+the client we know that a sheet is used in that case.
+
+01:27.160 --> 01:31.560
+Now you want to be selective of what data you encrypt and why you don't.
+
+01:31.660 --> 01:38.740
+Based on your resources at hand you might want to encrypt sensitive information like phone numbers email
+
+01:38.740 --> 01:46.630
+addresses of your users but perhaps not necessarily worry about pet names of the users that pen names
+
+01:47.090 --> 01:51.520
+column on a database maybe you don't need to encrypt.
+
+01:51.550 --> 01:59.150
+So what can we do with data management Well I'm going to show you a quick example of some of the things
+
+01:59.150 --> 01:59.810
+you can do.
+
+01:59.810 --> 02:07.280
+But the main ideas you want to use encryption for any data identifying users and sensitive data like
+
+02:07.790 --> 02:10.470
+Access tokens emails and billing.
+
+02:10.550 --> 02:12.120
+Like I said.
+
+02:12.540 --> 02:19.140
+And finally as we mentioned with backups you want those backups to be stored to be ideally encrypted
+
+02:19.200 --> 02:20.060
+as well.
+
+02:20.100 --> 02:24.760
+Again that may not always be feasible but you want to focus on the sensitive data first.
+
+02:24.780 --> 02:26.500
+And anything else that you can encrypt.
+
+02:26.580 --> 02:27.440
+You should do so.
+
+02:28.520 --> 02:32.810
+Now I want to talk about two main topics.
+
+02:32.810 --> 02:35.960
+One is hashing passwords and how to store them.
+
+02:35.960 --> 02:41.840
+And the second is how to encrypt your database that has sensitive data.
+
+02:42.230 --> 02:46.910
+The second part over here is really dependent on your database so I'm not going to go over it because
+
+02:46.910 --> 02:48.310
+it's too too specific.
+
+02:48.410 --> 02:55.160
+But tools like PGE crypto allow you to encrypt a few columns on a postscripts database.
+
+02:55.160 --> 02:58.590
+One of my favorite databases and they have great documentation.
+
+02:58.610 --> 02:59.810
+So that's something you can do.
+
+02:59.930 --> 03:09.110
+But if I was using 3G crypto I'll probably encrypt the billing address or email column of the users
+
+03:09.440 --> 03:12.500
+or anything sensitive for a user column.
+
+03:13.440 --> 03:15.930
+That is just good practice.
+
+03:15.930 --> 03:24.060
+But one of the topics that really fascinates me and actually love is password storage.
+
+03:24.630 --> 03:28.360
+And I know that's a geeky thing to say but it is really really exciting.
+
+03:29.170 --> 03:34.660
+I actually wrote a company blog in my past life on this topic song going to leave that for you at the
+
+03:34.660 --> 03:35.580
+end of this course.
+
+03:35.800 --> 03:41.290
+And it's also something that we've already covered in my previous course but I'm going to do a quick
+
+03:41.290 --> 03:44.320
+rundown of what you should do with passwords.
+
+03:44.320 --> 03:51.100
+Any web site that has user name and password and seinen needs to have good data management especially
+
+03:51.100 --> 03:52.290
+when it comes to passwords.
+
+03:52.420 --> 03:54.360
+So what can we do.
+
+03:54.610 --> 04:00.190
+Well there's three libraries that are really really good and these three libraries are really good because
+
+04:00.250 --> 04:04.830
+they're tried and tested when it comes to security.
+
+04:04.840 --> 04:11.860
+You want to choose packages that have been around for a long time because security experts hackers black
+
+04:11.860 --> 04:15.740
+hat and white hat hackers all have tested it and have stood the test of time.
+
+04:15.910 --> 04:22.330
+And these three have really stood the test of time are gone to is fairly new but it's been doing really
+
+04:22.330 --> 04:23.130
+really well.
+
+04:23.140 --> 04:30.700
+I personally like crypto So let me show you a quick demonstration I have over here a file.
+
+04:30.700 --> 04:37.030
+Let me make this a little bit bigger that I downloaded the crypt no guess package just to have it working
+
+04:37.030 --> 04:38.730
+with no js very easily.
+
+04:38.920 --> 04:41.310
+And that's pretty much it.
+
+04:41.410 --> 04:48.500
+And if I go to their packages over here we see that they have a Synchronoss option and an asynchronous
+
+04:48.500 --> 04:56.640
+option so let's just copy the first part and I'm going to explain what it does and I don't like bacon.
+
+04:56.640 --> 05:07.430
+I'm going to go with soup here so when your Web site has a user name and password why should we do well
+
+05:07.520 --> 05:13.940
+the first thing you're going to do is you're going to let the user type in their username and password.
+
+05:13.940 --> 05:16.960
+And then they're going to click submit when they click submit.
+
+05:17.030 --> 05:24.310
+You're going to make sure that it's a CBS so that the password and the user name you put it in the CBS
+
+05:24.590 --> 05:33.320
+request in the body of the request you send it over to the backend and then it arrives.
+
+05:33.420 --> 05:39.930
+Let's say that this is your back and once it arrives you grab that password and will say that your password
+
+05:39.930 --> 05:43.020
+that you just typed is soop very weak password.
+
+05:43.020 --> 05:46.180
+I know but we'll just use it for demonstration purposes.
+
+05:46.530 --> 05:54.180
+Now what we do is we never store passwords like this in our database because if our database gets compromised
+
+05:54.180 --> 05:57.940
+or somebody enters it they have all the passwords of everybody.
+
+05:58.050 --> 05:59.420
+Never ever do that.
+
+05:59.430 --> 06:05.160
+Instead we use B crypt which allows us to hash.
+
+06:05.270 --> 06:11.510
+And if you remember hashing from our S-sh section it's a one way Fange a function that will take the
+
+06:11.540 --> 06:19.750
+superstrings and turn it into a jumbled up string that well we'll never get to know that came from soup.
+
+06:19.760 --> 06:20.710
+So let me show you.
+
+06:20.750 --> 06:21.710
+I'm going to say
+
+06:24.350 --> 06:25.440
+Konsole
+
+06:27.730 --> 06:30.020
+log the hash
+
+06:33.810 --> 06:35.680
+let's save Ron Noad
+
+06:39.000 --> 06:41.370
+script and look at that.
+
+06:41.580 --> 06:46.440
+We got the hash this you do not want to copy that.
+
+06:46.440 --> 06:52.340
+This really really jumbled up strings string that represents soup.
+
+06:52.440 --> 06:57.160
+Even if a bad actor gets into our database and sees oh yeah.
+
+06:57.300 --> 07:03.000
+Password is this they're not going to be able to do anything with it because they don't know they can
+
+07:03.000 --> 07:06.690
+go to the Web site and type in this because well that won't work.
+
+07:06.690 --> 07:08.840
+My password is soup.
+
+07:08.850 --> 07:10.260
+So how does that work.
+
+07:10.260 --> 07:13.560
+We store this in the database for the user.
+
+07:13.560 --> 07:20.290
+Let's say Andri and when Andre comes back I don't like using my own name.
+
+07:20.290 --> 07:22.170
+Let's use Tim as an example.
+
+07:22.270 --> 07:29.390
+When Tim comes back how can we check that when Tim types soup again.
+
+07:29.650 --> 07:33.970
+That that is the same as this hash that we have in the database.
+
+07:33.970 --> 07:44.940
+Well we go back to the crypt they have a nother method called compair and this compare is going to compare
+
+07:44.940 --> 07:50.360
+the string that Tim puts in when he comes back to the website again to sign in.
+
+07:50.640 --> 07:53.880
+And the hash that we have stored in the database.
+
+07:53.880 --> 07:57.160
+In my case let's say I have this stored in the database.
+
+07:57.270 --> 08:04.550
+And again if you're not too familiar with databases I do recommend you check out my previous course.
+
+08:04.790 --> 08:06.660
+And there's our.
+
+08:06.670 --> 08:09.410
+Let's actually make it into a string.
+
+08:09.460 --> 08:12.770
+So that's our hash tag we just scrap from the database.
+
+08:12.790 --> 08:13.330
+All right.
+
+08:13.420 --> 08:18.070
+Now here we get a response so let's see what the response is going to be.
+
+08:18.070 --> 08:20.050
+And then I say console all.
+
+08:22.410 --> 08:29.510
+Response when Save run this you see that I got.
+
+08:29.510 --> 08:30.250
+True.
+
+08:30.290 --> 08:31.450
+So now I know that.
+
+08:31.470 --> 08:34.000
+Yup that's tent's password.
+
+08:34.070 --> 08:35.240
+He can sign in.
+
+08:35.390 --> 08:37.800
+But if Tim misspell something let's say I leave.
+
+08:37.840 --> 08:38.290
+I do.
+
+08:38.290 --> 08:39.320
+Capital S
+
+08:42.290 --> 08:44.100
+and an exclamation mark.
+
+08:44.210 --> 08:47.460
+I save and run this.
+
+08:47.510 --> 08:49.130
+Nope that's not your password.
+
+08:49.130 --> 08:49.900
+Try again.
+
+08:51.110 --> 08:56.680
+And it's good enough that even a capital attacked.
+
+08:56.680 --> 08:57.220
+There you go.
+
+08:57.290 --> 08:58.340
+Because a hash.
+
+08:58.340 --> 09:06.130
+Any small change in the password is going to spit out a completely different hash.
+
+09:06.160 --> 09:09.850
+Now in case you're wondering what gnoll Noal here is.
+
+09:09.850 --> 09:16.560
+Well in my article that I wrote I talk about Salt's runs and how it adds extra layers of security.
+
+09:16.570 --> 09:21.980
+It's a complex topic and beyond the scope of this course but do read it if you're interested in it.
+
+09:22.000 --> 09:28.900
+It's just an extra security measure but what it does is if you notice how slow we get the hash and then
+
+09:28.930 --> 09:31.490
+it takes a bit of time to get the true or false.
+
+09:31.540 --> 09:37.040
+Let me show you if I save this and run this again.
+
+09:37.260 --> 09:39.810
+You see that pause where the hash was hashed.
+
+09:39.810 --> 09:42.950
+Really really fast but this took a bit of time.
+
+09:43.950 --> 09:44.710
+Let's see again.
+
+09:46.340 --> 09:50.610
+So what happens there is it's extra protection by B crypt.
+
+09:50.660 --> 09:54.700
+It's saying all right if there was a bad person.
+
+09:54.700 --> 09:57.120
+Again just keep trying passwords until I get a match.
+
+09:57.170 --> 10:04.280
+So be script using something called Salt's rounds makes these brute force attacks where the person just
+
+10:04.280 --> 10:08.820
+keeps trying passwords really hard because it takes long.
+
+10:09.110 --> 10:11.380
+It takes a bit of time to actually check.
+
+10:11.420 --> 10:19.670
+So if I was a bad attacker I would keep trying these but because B crypt is slow it would take a really
+
+10:19.670 --> 10:24.490
+really long time for me to guess a password and it's another layer of protection that comes with crypt
+
+10:25.130 --> 10:29.360
+and most good hashing libraries.
+
+10:29.580 --> 10:36.100
+Again data management is really really important and this goes back to environment variables as well.
+
+10:36.150 --> 10:41.120
+Any secrets even including your S-sh key you want to manage it properly.
+
+10:41.190 --> 10:42.900
+Never reveal your secrets.
+
+10:43.050 --> 10:50.270
+Always make it as hard as possible for bad actors to access sensitive information.
+
+10:50.320 --> 10:51.260
+I'll see in the next one.

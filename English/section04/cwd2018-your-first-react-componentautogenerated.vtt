@@ -1,0 +1,700 @@
+WEBVTT
+
+00:01.620 --> 00:02.230
+All right.
+
+00:02.250 --> 00:03.210
+Welcome back.
+
+00:03.210 --> 00:06.480
+We have our Hello World app but that doesn't look very cool.
+
+00:06.480 --> 00:09.370
+We want to make our robo friends app.
+
+00:09.390 --> 00:15.340
+So in this video we're going to get started by building our first component.
+
+00:15.420 --> 00:19.020
+We go back here we remember that we have the terminal on the right hand side.
+
+00:19.050 --> 00:25.830
+And we just ran NPM start and create Doubs checks all the files for us make sure there's no errors.
+
+00:25.830 --> 00:33.630
+It says that our app is defined but never used so let's comment this out again comment slash say this
+
+00:34.320 --> 00:37.050
+and you'll see that everything's working fine.
+
+00:38.540 --> 00:42.470
+Now you may have a few questions just saw in this index.
+
+00:42.590 --> 00:48.860
+J.S. fall one we see that we're importing react but how come that's working.
+
+00:48.860 --> 00:55.340
+We remember that it didn't work before we had to use require and then browser fi again re-act has a
+
+00:55.340 --> 00:59.130
+wet pack underneath the hood that does the bundling for us.
+
+00:59.210 --> 01:03.620
+So we're allowed to use imports as long as we keep this at the top of the file.
+
+01:03.710 --> 01:10.590
+We can import whatever other files we want or whatever packages we want.
+
+01:10.600 --> 01:14.270
+We also see that there's two things react and react.
+
+01:14.300 --> 01:21.150
+Dom if you remember re-act is a view library.
+
+01:21.210 --> 01:25.590
+So this is the little robot that we remember from the previous video.
+
+01:25.980 --> 01:27.900
+It's the core of the package.
+
+01:27.920 --> 01:31.260
+Does the DOM manipulation for us.
+
+01:31.260 --> 01:35.850
+But as I said before Riak can be used in multiple places not just the browser.
+
+01:36.090 --> 01:38.270
+It can be used for mobile devices.
+
+01:38.280 --> 01:45.300
+It can be used for virtual reality and you can plug and play different libraries like this based on
+
+01:45.390 --> 01:47.780
+what screen you're rendering to.
+
+01:47.940 --> 01:57.090
+So re-act Dom is used for the dumb Web sites so the glue of react but we can have something like Riak
+
+01:57.090 --> 01:57.570
+native.
+
+01:57.570 --> 02:01.870
+That actually renders two mobile phones.
+
+02:01.920 --> 02:04.640
+We also have import index CSSA.
+
+02:04.710 --> 02:13.290
+And this is a new syntax will react to allows us to add CSSA not just in one file but for each different
+
+02:13.290 --> 02:14.340
+component.
+
+02:14.340 --> 02:15.910
+If we go to APT.
+
+02:16.050 --> 02:20.840
+Yes well we have dot CSSA that describes the app.
+
+02:21.180 --> 02:22.830
+If we go to index yes.
+
+02:22.860 --> 02:27.890
+While we have indexed starts VSS that has its own status.
+
+02:27.900 --> 02:35.610
+And these cells will only apply to whatever components and Exide G-S renderers.
+
+02:35.860 --> 02:41.500
+And the way we use it is we just say import and then unlike a Riak package where we just say the name
+
+02:41.500 --> 02:47.890
+of the package and it automatically knows to check the known modules folder we have to tell it where
+
+02:47.950 --> 02:55.230
+index Dotsie SS lives and the syntax of dot slash means it's in the same directory.
+
+02:55.270 --> 02:59.850
+So saying check in the source folder and ex-Nazi SS should be there.
+
+03:01.230 --> 03:05.040
+OK and finally we see register service worker.
+
+03:05.040 --> 03:10.980
+And this is an advanced topic that we won't cover in this course but think of service workers as a new
+
+03:10.980 --> 03:16.740
+feature that allows our apps to become faster and potentially work offline.
+
+03:16.740 --> 03:19.070
+It's something that we don't need to concern ourselves with.
+
+03:19.080 --> 03:26.160
+So for now you can comment this out and it will still work but we'll keep it here just because create
+
+03:26.160 --> 03:34.830
+re-act up gives it to us for free the things that we really really care about though is while this line
+
+03:34.830 --> 03:43.110
+over here this whole thing is what re-act does it saying I want the react package to use the function
+
+03:43.200 --> 03:52.680
+render and this render is I wanted to render whatever this is but if you remember before we had app
+
+03:55.060 --> 03:59.010
+and well this isn't really an a shemale tag is it.
+
+03:59.170 --> 04:04.810
+We've just created this from it looks like the same directory.
+
+04:04.830 --> 04:09.470
+There's something called app and it doesn't have a dot.
+
+04:09.720 --> 04:17.700
+Yes file like we see it over here and that is because it automatically says that if there's no dot CSX
+
+04:17.730 --> 04:19.350
+or any type after it.
+
+04:19.360 --> 04:27.400
+Well it assumes that it's javascript but this will work as well as you can see because the last go to
+
+04:27.490 --> 04:33.410
+app dodgiest file and see why we can use this a shameful task that we've created.
+
+04:33.610 --> 04:39.220
+If we go to opt out japes file well again and we see that we're importing something we're doing something
+
+04:39.220 --> 04:42.370
+called destructuring here and getting component as well.
+
+04:43.290 --> 04:49.640
+And we have a few files like Logo as Fiji and abduct CSSA that we're importing.
+
+04:49.920 --> 04:52.240
+And again we see that our syntax is a little bit.
+
+04:52.240 --> 05:03.780
+Also make sure that we change our files to javascript table and it looks like class-A app extends component
+
+05:04.470 --> 05:05.780
+that comes with react.
+
+05:05.790 --> 05:08.010
+And this is just standard syntax.
+
+05:08.040 --> 05:15.910
+This renders member a component always has the role that it must to render at least something.
+
+05:15.910 --> 05:21.210
+And the way we do that is we return a a Chanel piece of the Web site.
+
+05:21.390 --> 05:24.810
+So we see over here welcome to react to get started at added.
+
+05:25.030 --> 05:27.900
+Well that's exactly what it says over here.
+
+05:28.050 --> 05:29.390
+That is the power of react.
+
+05:29.400 --> 05:38.800
+We're creating our own custom components our own custom a shemale tags that we can just add and if you
+
+05:38.800 --> 05:45.270
+remember the one way data flow picture we have one parent that has children.
+
+05:45.270 --> 05:48.240
+So app has children but you know what.
+
+05:48.480 --> 05:52.110
+Let's build our own component to make this point clear.
+
+05:52.320 --> 05:57.690
+Instead of having hello world in here let's create a component called Hello.
+
+05:58.930 --> 06:02.320
+And it's a self-closing task so you want to have the backslash.
+
+06:02.620 --> 06:12.580
+And and here instead of saying import app let's do import Hello from We'll call it hello dodgy Yes.
+
+06:12.610 --> 06:14.630
+And you'll notice that it's capitalized here.
+
+06:14.740 --> 06:19.770
+Well if you're building a component the standard is that it's capitalized.
+
+06:19.840 --> 06:21.180
+So it'll be called hello.
+
+06:21.270 --> 06:28.650
+Yes if we save this we'll get an error says module not found can't resolve.
+
+06:28.660 --> 06:29.010
+Hello.
+
+06:29.050 --> 06:30.870
+Because the file doesn't exist.
+
+06:31.030 --> 06:32.290
+So let's create one.
+
+06:32.290 --> 06:36.970
+I'm going to say new file Hello dodgier Yes.
+
+06:37.960 --> 06:38.600
+There you go.
+
+06:38.620 --> 06:42.730
+We have a new hello dodgiest file and it's compiled successfully.
+
+06:42.970 --> 06:46.320
+If we go to the Web site well look at that.
+
+06:46.330 --> 06:51.860
+It actually even gives us air on the Web site and that's why create re-act up is just so awesome.
+
+06:51.940 --> 06:57.540
+It shows you exactly what the errors are without opening up the console right here.
+
+06:59.460 --> 07:03.760
+Again we have nothing built right now in Halo So we need to create it.
+
+07:03.780 --> 07:05.970
+Let's use the app that James as an example.
+
+07:05.970 --> 07:14.850
+It looks like we need to import re-act and component so we need say and poor re-act component from Riyadh.
+
+07:15.400 --> 07:16.500
+OK.
+
+07:16.530 --> 07:25.020
+And the reason we're doing this again this is destructuring instead of doing re-act dot component we
+
+07:25.020 --> 07:31.230
+can now just do component and it means the same thing.
+
+07:31.350 --> 07:34.310
+Again looking at App dodgiest it looks like we say class.
+
+07:34.350 --> 07:39.440
+Our computer name extends component to that class.
+
+07:39.720 --> 07:47.940
+We'll call this hello again that's what our components called extends component.
+
+07:47.990 --> 07:58.730
+And again remember to change our javascript to Paypal and if you remember one rule is that we always
+
+07:58.730 --> 08:07.540
+want to have a render function and within this render function we tell it what we want to return.
+
+08:08.010 --> 08:13.800
+Well we want to return the hello world example but we can say H-1
+
+08:16.600 --> 08:18.220
+Hello world.
+
+08:19.870 --> 08:27.290
+H-1 Okay let's see what happens when I do this I save.
+
+08:27.470 --> 08:31.570
+And it says export default importer's Hello was not found.
+
+08:31.600 --> 08:34.720
+Well it's because we're not exporting this.
+
+08:34.720 --> 08:42.580
+Remember if we want another file to use it we have to export and we use export default when we're just
+
+08:42.880 --> 08:44.410
+exporting one thing.
+
+08:44.710 --> 08:50.620
+If we use the word default that means this file only export to one thing and that is the app.
+
+08:50.820 --> 08:57.430
+So I can say export default Hello.
+
+08:57.670 --> 09:02.970
+Let's save looks like it's working let's see what happens in our website.
+
+09:03.420 --> 09:04.270
+Hello world.
+
+09:04.440 --> 09:09.910
+We've just created our very first component.
+
+09:09.930 --> 09:10.850
+How cool is that.
+
+09:11.720 --> 09:19.760
+Now right now we only have one line but what if I wanted to do something like Divx dropping it in a
+
+09:19.760 --> 09:28.230
+div and maybe underneath here all say a paragraph that says walk to react.
+
+09:31.560 --> 09:35.380
+If I saved this I get another error.
+
+09:37.970 --> 09:44.960
+And it's because we're just giving him multiple lines here and returns expecting a single thing.
+
+09:45.230 --> 09:47.840
+We need to wrap this in brackets.
+
+09:48.970 --> 09:55.180
+Like this in order to have javascript say this is an expression.
+
+09:55.220 --> 09:57.140
+Evaluate this entire thing.
+
+09:57.290 --> 10:05.610
+If we save this looks like it's working and then hello world welcome to react.
+
+10:05.720 --> 10:08.420
+Very cool within here.
+
+10:08.430 --> 10:20.050
+If you remember if we import Daut Hello Dad CSA us we can create whatever CSL styles we want but we
+
+10:20.050 --> 10:27.560
+need to create that file for Salles to new file and I need to outturn own here.
+
+10:27.570 --> 10:32.020
+And then you file name will be hello dot C Ss now.
+
+10:32.040 --> 10:34.650
+Hello CSSA I can just say that the H-1.
+
+10:34.710 --> 10:36.610
+And this is just standard CSSA.
+
+10:36.840 --> 10:40.000
+Will have background of red.
+
+10:40.410 --> 10:43.120
+I'm going to save save this as well.
+
+10:43.170 --> 10:44.360
+Everything looks good.
+
+10:45.270 --> 10:46.440
+And look at that.
+
+10:49.250 --> 10:51.760
+But you know what to make this faster.
+
+10:51.790 --> 10:59.510
+Because we've gone over CSSA I want to show you a cool package called Tatiana's and tak Kyon's allows
+
+10:59.510 --> 11:06.830
+us to have similar to bootstrap predefined class names that we can just add to components to make things
+
+11:06.830 --> 11:08.630
+look really really nice.
+
+11:08.690 --> 11:09.420
+So let's do that.
+
+11:09.440 --> 11:17.670
+I'm going to close this and say and PM install Tatiana's.
+
+11:17.750 --> 11:18.210
+All right.
+
+11:18.220 --> 11:19.190
+It's added a package.
+
+11:19.210 --> 11:25.230
+We can check by going to package our Jason we see that Tatiana's are there and we can use Tatiana's
+
+11:25.230 --> 11:33.200
+hands very easily but just going to index that Jeff's file and saying import Tatiana's.
+
+11:33.350 --> 11:42.460
+And now we have access to this package just to show you attack Kyon's are if I go to tag Kyon's styles
+
+11:46.770 --> 11:54.270
+that gives us little classes that we can use that for example tax center will just say TC as long as
+
+11:54.270 --> 12:01.170
+we have tax sounds and so we use TCAS class name will align our taxed.
+
+12:01.270 --> 12:12.840
+So now that we have Kyon's and it's indexed not just file we can just say within here class equals EF
+
+12:12.960 --> 12:18.820
+1 for Fonte want and Tuckson save.
+
+12:19.020 --> 12:24.150
+But I have to do NPM start here make sure that our server is running so that we can check our changes
+
+12:25.150 --> 12:30.940
+and we get hello world Volcom to react.
+
+12:30.940 --> 12:33.130
+But there's actually one trick here.
+
+12:33.160 --> 12:39.220
+If you open up the console although this worked I get a warning saying invalid Dom property class.
+
+12:39.220 --> 12:41.280
+Did you mean class name and reacts.
+
+12:41.290 --> 12:50.750
+Really really good at giving you errors and you might be asking yourself why a class name instead of
+
+12:51.020 --> 12:51.750
+class.
+
+12:51.770 --> 12:57.910
+Because if I save this go back I no longer have that air.
+
+12:58.350 --> 12:59.300
+Why is that.
+
+12:59.550 --> 13:04.270
+Well up until this point we've kind of just been a stigma.
+
+13:04.560 --> 13:06.870
+But this is a javascript file.
+
+13:06.990 --> 13:10.120
+How are we able to do this.
+
+13:10.140 --> 13:19.380
+This is actually something called GSX part of the act is that it allows you to write this email like
+
+13:19.980 --> 13:28.540
+syntax in your javascript and you might be asking yourself one doesn't that break the rule of separation
+
+13:28.540 --> 13:36.610
+of concerns and to how are we even able to add a symbol to javascript to answer the first question separation
+
+13:36.610 --> 13:43.300
+of concerns re-act has the idea of components and that is it's better to have functionality and styles
+
+13:43.540 --> 13:47.810
+per component so that each component is its own separate universe.
+
+13:47.860 --> 13:55.690
+And you just add these components and the idea of separation of concerns with react is that components
+
+13:56.290 --> 13:59.310
+while they're concerned about themselves nothing else.
+
+13:59.380 --> 14:03.520
+So it changes the paradigm here and it's kind of nice right.
+
+14:03.520 --> 14:05.060
+I can just look at the halo component.
+
+14:05.050 --> 14:06.360
+I know exactly what it's doing.
+
+14:06.370 --> 14:13.090
+I can look at this SS and any time I need to make a change I just need to worry about the files that
+
+14:13.090 --> 14:15.900
+contain the hello CSSA and Javascript.
+
+14:15.910 --> 14:21.440
+The second thing is this this thing called GSX underneath the hood.
+
+14:21.490 --> 14:28.970
+What reactor's doing is actually letting me use this syntax but they're not actual ASTM all tax.
+
+14:29.110 --> 14:34.840
+Remember what I said about the virtual Dom and how re-act creates its own object and then looks at the
+
+14:34.840 --> 14:39.180
+DOM and compares it and says Hmm I need to change this and it does it for us.
+
+14:39.320 --> 14:48.070
+Re-act uses GSX to create their virtual Dom their fake Dom that they built based on what we give it
+
+14:48.070 --> 14:48.780
+to them.
+
+14:48.940 --> 14:55.300
+Then they look at this virtual Dom and the real Dom and say hmm this part has changed.
+
+14:55.300 --> 15:01.840
+I'm going to change the Domhnall based on the virtual door and that is why re-act is really really fast.
+
+15:02.020 --> 15:08.380
+It creates objects which is really fast and Javascript and only changes what needs to be done in the
+
+15:08.380 --> 15:09.240
+door.
+
+15:09.310 --> 15:10.740
+So just get used to it.
+
+15:10.780 --> 15:18.190
+It's awkward at first but again as long as you wrap it in a bracket you can write here a shemale as
+
+15:18.190 --> 15:24.130
+well as your own custom components such as Halo that we used in indexed not just for
+
+15:28.500 --> 15:39.080
+and now maybe and makes sense why we can't say classier because class is a reserved keyword in javascript
+
+15:39.980 --> 15:42.770
+class is part of the language that javascript uses.
+
+15:42.770 --> 15:49.460
+So if this is javascript the fact that we're seeing class here doesn't make sense in the old version
+
+15:49.460 --> 15:50.030
+of react.
+
+15:50.030 --> 15:57.730
+This actually broke react but now gives us a nice error because this is javascript and not a shemale.
+
+15:57.740 --> 16:01.100
+We have to say class name and it's something that you'll get used to.
+
+16:01.100 --> 16:05.600
+You'll get tricked up with at the beginning but it becomes easy after a while.
+
+16:05.610 --> 16:12.230
+All right the last thing I'm going to show you is the part of re-act within the halo component I can
+
+16:12.230 --> 16:19.220
+now add something called props or properties and these props can be called anything.
+
+16:19.220 --> 16:21.310
+Think of them as a shim all attributes.
+
+16:21.310 --> 16:24.450
+I can say greeting.
+
+16:24.730 --> 16:27.660
+He calls them within here.
+
+16:27.980 --> 16:30.050
+I want to wrap it in curly brackets.
+
+16:30.230 --> 16:35.460
+And this is a javascript expression whatever I want I can say hello
+
+16:38.930 --> 16:43.140
+re-act ninja.
+
+16:43.370 --> 16:48.940
+And if I see this I get an error saying that no useless concatenation.
+
+16:48.940 --> 16:52.100
+So it's saying that hey why are you even adding things.
+
+16:52.110 --> 16:53.960
+You can just put them all together.
+
+16:54.010 --> 17:00.040
+So it's hard enough to even give you suggestions or warnings of when you're doing something that's not
+
+17:00.040 --> 17:00.310
+clean.
+
+17:00.310 --> 17:02.970
+But for now for demonstration purposes this is fine.
+
+17:03.340 --> 17:10.840
+Now that I've given it to what we call a greeting Propp to hello I now have access and hello.
+
+17:11.020 --> 17:11.620
+Yes.
+
+17:11.740 --> 17:14.580
+Two props I can now say
+
+17:17.140 --> 17:31.790
+this dot prop's dot greeting I save this go back and I say hello re-act Ninja.
+
+17:32.000 --> 17:43.980
+You see with this syntax it's saying that this object which is Halo has properties props that is greeting.
+
+17:44.020 --> 17:51.100
+I know this is confusing is just the syntax you have to get used to but now we have access to whatever
+
+17:51.310 --> 17:57.120
+property and whatever property value we get from.
+
+17:57.240 --> 18:02.360
+Hello this is a power that will come in handy later on.
+
+18:02.360 --> 18:08.010
+But I want you to build your own component here and get comfortable with the Sendak's.
+
+18:08.170 --> 18:11.700
+It is really really powerful and once to get used to it.
+
+18:11.830 --> 18:14.250
+You can build any components you want.
+
+18:14.290 --> 18:14.590
+OK.
+
+18:14.620 --> 18:15.630
+One final thing.
+
+18:16.700 --> 18:23.500
+This index might be kind of difficult but I want to show you that this is actually just a function.
+
+18:23.670 --> 18:39.480
+If I do Konst hello and in here this function accepts props if I do an error function here wrap it in
+
+18:39.480 --> 18:47.570
+curly brackets and instead of doing this render I just simply return
+
+18:54.660 --> 19:02.620
+if I save this well I'm getting an error because this stopped Propst Greetings doesn't really exist
+
+19:02.650 --> 19:06.070
+because it's not an object anymore it is a function.
+
+19:06.070 --> 19:07.220
+So I don't need the props.
+
+19:07.240 --> 19:13.990
+It receives props whatever parameters we give it and props that greeting is acceptable to us.
+
+19:14.020 --> 19:16.770
+I save this go back and look at that.
+
+19:16.780 --> 19:17.590
+It's working.
+
+19:17.830 --> 19:19.750
+It's just functions.
+
+19:19.740 --> 19:27.460
+Think of reactors that we're just creating these functions that take parameters and these parameters
+
+19:27.730 --> 19:36.420
+which are given by giving attributes and values are just being rendered.
+
+19:36.690 --> 19:43.000
+I have access to prop's greeting if I give it or another prop here called let's say a dog then I'll
+
+19:43.000 --> 19:47.040
+have props start dog available to me as well.
+
+19:48.550 --> 19:54.550
+And again we get a nice little error saying that component were grabbing this but we're not really using
+
+19:54.550 --> 19:59.140
+it and we're using unnecessary string concatenation.
+
+19:59.140 --> 20:05.720
+Again really useful as you can see fairly simple to pick up in the next lesson.
+
+20:05.730 --> 20:10.830
+We're going to start actually working on our robo friends app now that we have the basics.
+
+20:10.830 --> 20:12.540
+I've seen that one by.

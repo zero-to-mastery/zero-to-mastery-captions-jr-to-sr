@@ -1,0 +1,91 @@
+WEBVTT
+
+00:00.580 --> 00:09.110
+Walk them back it's time to see if we can run our entire up our smart brain app with the docker container.
+
+00:09.130 --> 00:13.610
+Let's go back to our app going to make this a little bit smaller.
+
+00:15.300 --> 00:17.860
+Want to remove this since we don't need it for now.
+
+00:18.780 --> 00:20.520
+You don't need any console logs.
+
+00:20.550 --> 00:27.000
+All we want to do since our app is running on port 3000 is go back to our front end and say NPM start
+
+00:31.040 --> 00:33.220
+yes let's run on a different port.
+
+00:35.510 --> 00:40.940
+And this is a little bit messed up because I zoomed in.
+
+00:41.140 --> 00:44.900
+Let's try that to 100 percent better.
+
+00:44.900 --> 00:50.790
+Let me refresh your.
+
+00:50.810 --> 00:51.270
+All right.
+
+00:51.350 --> 00:52.380
+That's better.
+
+00:52.410 --> 00:54.450
+Now let's try and register here.
+
+00:54.680 --> 00:59.150
+I'm going to create a new user Tim at gmail dot com.
+
+00:59.640 --> 01:01.220
+Whoops that should be the name.
+
+01:01.250 --> 01:05.420
+Let's do Tim and then Tim at gmail dot com.
+
+01:05.660 --> 01:12.630
+Tim register.
+
+01:13.140 --> 01:18.360
+We're getting an error status 400 of register.
+
+01:18.360 --> 01:19.820
+Why is that.
+
+01:19.890 --> 01:27.060
+We go back we look at the logs of our container and all right look at that.
+
+01:27.140 --> 01:31.050
+We have an air relation log in does not exist.
+
+01:31.100 --> 01:32.780
+So we tried to insert.
+
+01:32.780 --> 01:37.920
+All right so it's working but we haven't created the tables have we.
+
+01:38.150 --> 01:43.920
+Because in order for progress to work we need those log in and user tables.
+
+01:44.360 --> 01:47.690
+So in the next video we're going to finish up all of this.
+
+01:47.780 --> 01:54.730
+We're going to create these tables in our docker container so that once everything is done we're hands
+
+01:54.730 --> 01:56.770
+free we don't have to worry about it again.
+
+01:56.790 --> 02:03.540
+I know this is a long section and we're trying to do a lot of things but stick with me in the next video
+
+02:03.990 --> 02:05.650
+we're going to get everything working.
+
+02:05.790 --> 02:07.020
+I'll see on that one.
+
+02:07.260 --> 02:07.470
+Bob.

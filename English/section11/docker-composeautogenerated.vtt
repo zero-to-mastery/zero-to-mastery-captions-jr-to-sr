@@ -1,0 +1,424 @@
+WEBVTT
+
+00:01.670 --> 00:09.390
+Walk them back in the previous videos we learn how daquiri is created using doc Rafal and it provides
+
+00:09.390 --> 00:13.520
+a suitable environment in which our application services can run.
+
+00:13.650 --> 00:20.210
+So hypothetically we can use it for our node server we can use it for our postgresql database whatever
+
+00:20.220 --> 00:22.350
+we want all of our services.
+
+00:22.440 --> 00:30.690
+Now there is a nother tool that you actually installed when you got docker called docker compose and
+
+00:30.690 --> 00:36.270
+this is used to orchestrate our application services during development.
+
+00:36.270 --> 00:43.500
+So this is a tool that you mostly are going to use during development but if you remember Brunos request
+
+00:43.620 --> 00:51.870
+is to have our postscripts and our server all running from one command without us having to set up a
+
+00:51.870 --> 00:54.030
+server and a database separately.
+
+00:55.000 --> 01:02.920
+And Doc decompose allows you to compose these darker pieces these different services so that during
+
+01:02.920 --> 01:05.940
+development you can do these things very easily.
+
+01:07.460 --> 01:09.150
+Remember our diagram here.
+
+01:09.630 --> 01:14.720
+Well we're going to use Dharker compose even though we've used Dharker for our server.
+
+01:14.720 --> 01:21.270
+We're going to now use dock or compose to create a container that contains all of these things.
+
+01:21.620 --> 01:24.430
+We're going to focus on the API server and the database.
+
+01:24.680 --> 01:32.000
+And in these sessions and JWT section we're going to also include the rattus service which will be a
+
+01:32.000 --> 01:41.470
+lot of fun and again docking Limbo's orchestrates our application services and it's going to be really
+
+01:41.470 --> 01:43.820
+really Farnam when we get it to work.
+
+01:43.840 --> 01:45.870
+So let's get to it now.
+
+01:45.940 --> 01:52.360
+Just a heads up if he'd downloaded docker for Mac or dock or for Windows duck or compose already comes
+
+01:52.360 --> 01:52.780
+with it.
+
+01:52.870 --> 01:59.160
+If you installed it on Linux you actually need to go back to that page and install doc or compose separately.
+
+01:59.200 --> 02:01.360
+So just a heads up there.
+
+02:01.580 --> 02:11.720
+Now the way we can do this that is the way to combine both postscripts and our API server into a single
+
+02:11.810 --> 02:18.080
+Daker command is to create something called a doc post-fight and a doc compose file.
+
+02:18.080 --> 02:25.850
+Once again we created at a root directory of our project and it's going to be called docker compose
+
+02:26.300 --> 02:33.830
+and it is a YAML for this just the file type that they use and you'll see that sublime tacks or your
+
+02:33.830 --> 02:36.890
+editor is going to recognize certain syntax.
+
+02:36.890 --> 02:44.600
+So again doc can both die YAML and I've created it and you can see over here that my text editor recognizes
+
+02:44.600 --> 02:49.130
+this as a doc file or a doc or compose file.
+
+02:49.140 --> 02:52.490
+Now this is what a ducker compost file is going to look like.
+
+02:53.290 --> 02:56.100
+We first start off with the version that we want to use.
+
+02:56.320 --> 03:02.300
+So in my case it'll be version 3.6 which is the latest.
+
+03:02.300 --> 03:10.210
+Currently for me and down below we have something called services and these services are what we're
+
+03:10.210 --> 03:11.450
+going to orchestrate.
+
+03:11.530 --> 03:18.510
+That is we're going to have a backend API service a postscripts service and also later on a breadths
+
+03:18.630 --> 03:19.710
+service.
+
+03:20.050 --> 03:25.660
+And let's give it a name to our our first surface which is the back end.
+
+03:26.720 --> 03:31.450
+API or we can call it smart brain
+
+03:37.980 --> 03:39.030
+API.
+
+03:39.150 --> 03:44.850
+Now we can give it different options and Dharker compose once again is sort of a configuration file
+
+03:44.850 --> 03:47.940
+so you can find a lot of these online and online documentation.
+
+03:47.940 --> 03:49.690
+But I'll show you some of the common ones.
+
+03:49.790 --> 04:02.360
+One of them is the container name Rupes name and we can call the container backend because as our back
+
+04:02.360 --> 04:08.210
+end of our application and by the way in YAML files indentations like this matter so again keep an eye
+
+04:08.210 --> 04:13.330
+out on indentation in the way that I do things and then we also tell it.
+
+04:14.070 --> 04:18.180
+And then we can also tell it what image to use from Doc or hub.
+
+04:18.290 --> 04:23.760
+In our case we can just say node and what version do we use for node and the doc profile.
+
+04:24.020 --> 04:29.870
+Let's just use this one.
+
+04:29.960 --> 04:32.190
+We can also give it a command.
+
+04:32.390 --> 04:37.250
+So that is remember how we we had to run NPM start here.
+
+04:37.320 --> 04:46.020
+We can just give it a command when the service starts to or the containers created and installed to
+
+04:46.020 --> 04:50.330
+run start we can also do things like working directory.
+
+04:50.340 --> 05:00.900
+So working der and will say that this is in the app folder and we can also do Portes remember that when
+
+05:00.900 --> 05:08.920
+we ran the command with port binding and poor forwarding we can just simply say that we want port three
+
+05:08.930 --> 05:20.740
+thousand eight 3000 and then there's other options you have things like an environment that gives you
+
+05:20.740 --> 05:24.730
+environmental variables if you want to perhaps pass down API keys.
+
+05:24.730 --> 05:28.590
+We can do that as well but we're going to do that later on.
+
+05:28.600 --> 05:34.180
+We also have things like links and that gives us what we want this service to link to.
+
+05:34.180 --> 05:39.670
+So if we had post-crash for example we can say postscripts and a link to that postscripts service but
+
+05:39.670 --> 05:42.950
+we don't have it right now so we don't need that.
+
+05:43.000 --> 05:52.040
+And by the way we can also do things like built here in order to build our image and instead of using
+
+05:52.040 --> 05:56.330
+this we can say that we want to build from our dock or file which exists
+
+06:00.420 --> 06:06.960
+right here so it's going to build this service out of the profile.
+
+06:07.090 --> 06:08.200
+So let's give that a go.
+
+06:08.200 --> 06:11.020
+I'm going to actually remove that or comment it out for now.
+
+06:11.200 --> 06:21.550
+And as I saw you comment out and YAML files for it to save and the way we conduct or compose and run
+
+06:21.550 --> 06:23.000
+it let's exit out of here.
+
+06:24.890 --> 06:36.620
+I'm going to clear this up we have more space and now run the Dr. compose command and we can simply
+
+06:36.620 --> 06:44.130
+say that we won or compose built and that's going to read this fall that we just created and I wanted
+
+06:44.130 --> 06:50.770
+to show you this area because it can get pretty cryptic with docker whenever you make a mistake and
+
+06:50.770 --> 06:53.060
+actually specifically to YAML files.
+
+06:53.260 --> 06:59.620
+In this case I get this ere saying that there's something wrong and I want to keep an eye out on the
+
+06:59.770 --> 07:03.940
+syntax that you use and the spacing that you use for your YAML file.
+
+07:03.940 --> 07:14.620
+In our case we needed to add a semicolon here or a call in here and you see that even the color changed
+
+07:14.620 --> 07:19.690
+on my text editor and if you have a good text editor that helps you all with this it's really really
+
+07:19.690 --> 07:24.950
+big because even if I make this mistake my AOD get this error.
+
+07:25.000 --> 07:29.590
+Make sure that all your spacing is correct because that can be really really tricky.
+
+07:29.710 --> 07:36.910
+Luckily Dr. compose has really good documentation and you can go online and find out how to structure
+
+07:37.150 --> 07:38.300
+your posts.
+
+07:38.740 --> 07:44.100
+Now let's run our or compose Builth command wants again.
+
+07:47.500 --> 07:48.450
+And look at that.
+
+07:48.460 --> 07:49.660
+It's starting to work.
+
+07:49.660 --> 07:54.880
+It's grabbing from node version where we're creating our working directory.
+
+07:54.970 --> 08:02.380
+So it's reading our doco file because we said built from our source which has the Daka file it's running
+
+08:02.380 --> 08:12.140
+NPM install running the command and everything is built using this information.
+
+08:12.150 --> 08:14.190
+So let's go over what just happened here.
+
+08:15.250 --> 08:22.150
+Our instructions told the composer to create a service called smart brain API using the doc file we
+
+08:22.150 --> 08:23.250
+created previously
+
+08:26.440 --> 08:34.350
+we mapped the container to port 3000 so that we have access to it from our laptop and we also ran NPM
+
+08:34.360 --> 08:37.470
+stirred in the container to start our service.
+
+08:37.570 --> 08:41.920
+Now we haven't really done too much different than if we work with doc.
+
+08:42.130 --> 08:46.550
+And when you only have one service you're most likely working with just the single Bachar file.
+
+08:46.690 --> 08:52.890
+The only difference so far is that we build dock or compose to build our image instead of Dr..
+
+08:52.910 --> 08:55.220
+Now let's run the next command.
+
+08:55.260 --> 09:00.570
+Dr. compose run and see what happens.
+
+09:02.960 --> 09:09.090
+All clear and I have to give it a the actual thing that we want to Consolo say docker compose
+
+09:12.370 --> 09:19.450
+run with the container that we want to run in our case it's the smart brain API that we named.
+
+09:19.450 --> 09:28.060
+So let's just grab that and run and we get a few errors here so let's debug it and we see that we're
+
+09:28.060 --> 09:29.480
+looking for a path app.
+
+09:29.490 --> 09:31.190
+I packaged Our Jason.
+
+09:31.600 --> 09:38.370
+But if you remember in our doc file our working directory is this.
+
+09:38.420 --> 09:46.100
+So just to get a point across with working directory lists try and copy this here instead of the dash
+
+09:46.100 --> 09:50.320
+app that we created because that's where our packaged files exist.
+
+09:50.420 --> 09:53.590
+If we run the build command again
+
+10:03.540 --> 10:14.360
+and let me clear this and again run our Gawker kapos run smart brain API look at that.
+
+10:14.540 --> 10:18.930
+We have our app running on port 3000.
+
+10:19.110 --> 10:27.080
+And if we go to localhost and make sure we go to localhost 3000 here look at that.
+
+10:27.080 --> 10:29.070
+It's working.
+
+10:29.090 --> 10:30.160
+That's awesome.
+
+10:30.350 --> 10:35.480
+Now let's get a bit of logging here because it's hard to see what's going on and whether we're actually
+
+10:35.480 --> 10:36.600
+hitting the same point.
+
+10:36.950 --> 10:43.670
+So I'm going to actually close this quickly and install a package we talked about in the security section
+
+10:44.270 --> 10:52.260
+called Morgan and we're going to use Morgan here just for logging purposes and then add it over here
+
+10:52.350 --> 10:54.660
+with Konst Morgan.
+
+10:55.010 --> 11:00.530
+Want to require the package and it's a middleware.
+
+11:00.780 --> 11:04.010
+So all we need to do is use it just like we do here.
+
+11:06.810 --> 11:10.830
+And say Morgan and give it options of what kind of output we want.
+
+11:10.830 --> 11:14.670
+I like the option combined and we'll see what that looks like.
+
+11:14.670 --> 11:25.300
+So once again I'm going to run docker compose build to build from our Daker file.
+
+11:25.300 --> 11:34.500
+You can see over here we're running NPM install and let me clear this right so we clear the terminal
+
+11:34.510 --> 11:36.370
+we have the combined.
+
+11:36.370 --> 11:41.840
+Now just in case you have any containers running in the background or you need to take down anything
+
+11:41.980 --> 11:52.250
+you can just do docker composed down and bring back down any containers that you may have doesn't look
+
+11:52.290 --> 12:01.300
+like we had any and we can just go Dr. compose build and this is getting annoying of building and putting
+
+12:01.300 --> 12:02.230
+everything up.
+
+12:02.320 --> 12:10.420
+We can actually run docker or compose up to bring up the container with a dash dash built and build.
+
+12:10.420 --> 12:15.460
+You only have to do it at the beginning to build and run NPM install and everything that we've done
+
+12:15.460 --> 12:17.410
+and the docker file.
+
+12:17.410 --> 12:20.830
+But afterwards you can just keep running doc or compose up.
+
+12:20.830 --> 12:30.560
+So far I run this it's building our backend and look at that it is now logging back and according to
+
+12:30.560 --> 12:33.730
+the name that we gave the container you can see back and over here.
+
+12:33.800 --> 12:35.420
+That's what this is.
+
+12:35.720 --> 12:41.940
+And it ran NPM start and you see that we're now running on app port three thousand.
+
+12:42.140 --> 12:48.990
+And if I go back now and I refresh look of that we just got a bit of logging.
+
+12:48.990 --> 12:55.540
+If I do this three more times and refresh we see that we have logging.
+
+12:55.540 --> 13:02.410
+So we've just created a docker compose file with our smart brain API.
+
+13:02.410 --> 13:04.410
+But ideally we want to do more than that.
+
+13:04.420 --> 13:08.190
+Ideally we can have postscripts year and Radice year.
+
+13:08.290 --> 13:12.200
+So in the next video we're going to talk a little bit more about that.
+
+13:12.260 --> 13:13.240
+I'll see in the next one.

@@ -1,0 +1,346 @@
+WEBVTT
+
+00:01.670 --> 00:11.940
+Welcome back right here for you I have a simple express server that shows how server side rendering
+
+00:11.940 --> 00:13.770
+re-act would work.
+
+00:15.090 --> 00:19.410
+Let's go one by one to figure out what is happening.
+
+00:19.500 --> 00:25.710
+And by the way if you're not too familiar using knode and express I recommend you check out my other
+
+00:25.710 --> 00:26.890
+course.
+
+00:27.040 --> 00:30.850
+Otherwise assuming that we're comfortable with this it's fairly easy.
+
+00:30.850 --> 00:35.570
+All we're doing is importing the Express library to create our server.
+
+00:35.650 --> 00:46.510
+So we just do express to create our app server and within our own line 10 I say app use Xpress dot static
+
+00:46.840 --> 00:51.130
+and I don't need that plus sign to public folder.
+
+00:51.130 --> 00:52.740
+Now what does that mean.
+
+00:52.840 --> 01:02.000
+This is saying that I want to serve static files such as images CSSA files and javascript files using
+
+01:02.000 --> 01:06.190
+the Express built in static middleware.
+
+01:06.230 --> 01:13.190
+So if you ever work with EXPRESS This is just the standard serve any sort of file that we want to do.
+
+01:13.190 --> 01:20.360
+So again if our app has CSSA files then we're going to need to you add this to the top of our server
+
+01:20.720 --> 01:26.930
+and we are going to use the public folder that I can name this whatever I want but it's the public folder
+
+01:27.140 --> 01:29.740
+that we're going to have our static files.
+
+01:31.050 --> 01:37.200
+And let's ignore line 12 for now and move on to line 13 over here.
+
+01:38.480 --> 01:47.390
+We see here that we have re-act dot create aliment and we actually don't need to do this as the name
+
+01:47.390 --> 01:48.080
+suggests.
+
+01:48.140 --> 01:55.760
+This just says we want to create an element a re-act element from app so app over here that I'm importing
+
+01:56.120 --> 02:03.350
+can be our Apogee file with our Riak component in which case we don't need to do this or it could be
+
+02:03.770 --> 02:09.650
+a file that has some view engine such as.
+
+02:09.750 --> 02:17.070
+Yes and we want to convert that a shemale like syntax and to a re-act syntax.
+
+02:17.610 --> 02:20.510
+Either way line 13 just simply means just.
+
+02:20.520 --> 02:22.380
+We have our robo friends app.
+
+02:22.380 --> 02:27.600
+In our case we can just have our apt our js file like we have on our front end.
+
+02:27.870 --> 02:36.000
+Now from here all we do is with Express we can do the DOT get say that at the root directory so if I
+
+02:36.000 --> 02:44.370
+do Roble friends dot com slash I will do a get request and it's going to return the server is going
+
+02:44.370 --> 02:49.760
+to return a response that renders the index.
+
+02:49.770 --> 02:53.040
+So again we're returning a shemale here.
+
+02:53.040 --> 02:57.930
+We're going to render an index with the content.
+
+02:58.440 --> 03:06.040
+And this is where things differ from a client side rendered up you see with Robur friends we never really
+
+03:06.040 --> 03:08.110
+needed to have a server.
+
+03:08.110 --> 03:11.880
+We just had the Cline files that get delivered.
+
+03:11.890 --> 03:20.740
+And we could just place it on somewhere like get pages that host Sir static files.
+
+03:20.890 --> 03:24.680
+Now within here we're using something called render to string.
+
+03:24.880 --> 03:32.380
+And you see over here that render to string comes from something called re-act dash Dohm server and
+
+03:32.380 --> 03:40.730
+this is a special package that you use when you're doing server side rendering with re-act as the name
+
+03:40.730 --> 03:41.570
+suggests.
+
+03:41.570 --> 03:44.290
+All it does and it's actually quite simple.
+
+03:44.290 --> 03:52.310
+All it does is saying hey just rendered the robo friends app just print out the entire look of the rebel
+
+03:52.310 --> 03:54.720
+friends up and just converted into String.
+
+03:54.740 --> 04:00.930
+Because when we talk between the server and the client we have to send text.
+
+04:00.950 --> 04:04.870
+We can't just send the actual out because well that just won't work.
+
+04:05.030 --> 04:11.300
+Every time we're sending information over the wire we have to send texts which is why we use things
+
+04:11.300 --> 04:19.560
+like Jason Parsons Well and within here on our robo friends up we're also giving it some props.
+
+04:19.580 --> 04:25.700
+So this process looks like we're just giving it some data in our case just because we're doing server
+
+04:25.700 --> 04:32.990
+side rendering let's send them some robots some Jaison So that is maybe robots that are very very common
+
+04:32.990 --> 04:39.920
+that when we want to display to the user without sending an API request or doing a fetch call maybe
+
+04:39.920 --> 04:46.460
+we have it in our public folder and we just write a robot that is on file and give it maybe three objects
+
+04:46.460 --> 04:50.790
+of robots we can pass out down as props to robust friends.
+
+04:50.960 --> 04:52.650
+And that's what we're doing here.
+
+04:52.790 --> 05:02.980
+All we're doing here is using the FS module from node which says hey just read this file and this encoding
+
+05:03.000 --> 05:05.220
+format which is pretty much a standard.
+
+05:05.250 --> 05:10.690
+I think if you leave this blank you'll be still the same because this is the default.
+
+05:10.830 --> 05:17.800
+And then we do Jason parce again because we need to send things through text.
+
+05:17.880 --> 05:23.760
+We want to make sure that this is parsed and ready so that we can send it over the wires all the way
+
+05:23.910 --> 05:25.370
+to the client browser.
+
+05:26.350 --> 05:31.660
+Now although some of this may be new it's not too bad is it.
+
+05:31.680 --> 05:34.880
+There's just a few lines of code at the end of the day though.
+
+05:34.890 --> 05:45.280
+All we're doing is converting our re-act application our app by just calling Rander to string to convert
+
+05:45.270 --> 05:49.700
+it to strings so we can send it over the wire to the browser.
+
+05:49.710 --> 05:59.530
+The idea being that if we render this app on the server instead of just having that div with the ID
+
+05:59.530 --> 06:06.270
+app on the front end like we usually do with re-act applications we can send down HDMI.
+
+06:06.400 --> 06:15.580
+That is already filled with all our robot elements so that the web page can display our robo friends
+
+06:15.580 --> 06:20.200
+app right away and make the page load seem a lot faster.
+
+06:20.350 --> 06:23.560
+And we're also sending down some robots initially.
+
+06:23.560 --> 06:27.600
+So that again to the user it appears a lot faster.
+
+06:27.610 --> 06:37.440
+Now here's the trick with server side rendering and react you see we need react on both the server and
+
+06:37.860 --> 06:43.470
+the browser because initially we're sending down a string version.
+
+06:43.500 --> 06:52.020
+So re-act Dom server render a string that's going to convert our react up into strings send it over
+
+06:52.020 --> 06:52.820
+the wire.
+
+06:52.860 --> 06:56.220
+And it arrives in the browser but in the browser.
+
+06:56.220 --> 07:00.010
+Now we need to do something called re-act Dom.
+
+07:00.030 --> 07:01.650
+Hydrate and.
+
+07:01.890 --> 07:05.750
+These are only used for server side rendering.
+
+07:05.940 --> 07:08.490
+And you just need to know these two things.
+
+07:09.480 --> 07:17.140
+If you called re-act Dom Daut Hydroid it's pretty much like calling the render method in our components.
+
+07:17.260 --> 07:24.670
+Except that with this re-act Ahmad hydrate when we call this on a node that already has this server
+
+07:24.670 --> 07:32.500
+rendered markup that we've created re-act is going to preserve it preserve the markup and only attach
+
+07:32.650 --> 07:37.620
+event handlers so that we can actually interact with our Web site.
+
+07:37.780 --> 07:44.140
+We still need to run this because if we just send whatever we get from the server it's still not interactive
+
+07:44.170 --> 07:46.770
+is just text that we receive.
+
+07:47.110 --> 07:55.840
+And I know this seems really specific to react but the principles and the ideas apply to all libraries
+
+07:55.840 --> 08:02.900
+and frameworks including angler including view anything that works with single side single page applications.
+
+08:03.100 --> 08:12.370
+Use something like this you would render your page or the view on the server you send it down as text
+
+08:12.700 --> 08:17.470
+and then on the front end you would attach event listeners or any javascript functionality that you
+
+08:17.470 --> 08:24.430
+need.
+
+08:24.590 --> 08:31.280
+Again once it is rendered over here javascript takes over by doing something called hydrating which
+
+08:31.340 --> 08:34.420
+gives the interactivity all the page we want.
+
+08:34.580 --> 08:41.180
+Now you might be thinking wait could I potentially then make web pages work without javascript.
+
+08:41.180 --> 08:44.350
+Maybe they don't have as much interactivity so we don't even need javascript.
+
+08:44.340 --> 08:52.120
+And yes one thing you can do with server side rendering is make web pages that work even without Javascript.
+
+08:55.690 --> 09:01.930
+And also I wanted to point out in the new version of there react on server there is something called
+
+09:01.930 --> 09:08.620
+render to node stream which is very very similar to render to string except for the fact that we're
+
+09:08.620 --> 09:12.700
+using something called nodes stream which makes this process a lot faster.
+
+09:12.700 --> 09:16.720
+So it's a bit of a performance improvement.
+
+09:16.720 --> 09:24.060
+But let's go back to our code in react with server side rendering and client side rendering.
+
+09:24.080 --> 09:32.250
+You see that we need react because we need to build that dong.
+
+09:32.300 --> 09:37.880
+The only difference is that instead of sending that a shemale page with just one day of that has idea
+
+09:37.880 --> 09:44.540
+of an app that re-act would attach to on the client side on the server side rendering.
+
+09:44.540 --> 09:53.600
+We can actually do that all over here run and render to string so that instead of the browser doing
+
+09:53.600 --> 10:00.740
+the work of mounting all those Riak components the server has already done this for us and that's it.
+
+10:00.740 --> 10:05.150
+Those are the main principles of server side rendering.
+
+10:05.150 --> 10:08.470
+It sounds a lot more complicated than it actually is.
+
+10:08.570 --> 10:17.450
+We're just changing a few steps now using server side rendering with re-act does have some edge cases
+
+10:17.690 --> 10:23.600
+and it is quite difficult because re-act was originally built for single page applications.
+
+10:23.600 --> 10:28.970
+So there's a lot of maneuvering that you have to do in a lot of errors that people get when working
+
+10:28.970 --> 10:30.650
+with server side rendering.
+
+10:30.650 --> 10:36.400
+And in an upcoming video we're going to talk about better alternatives to doing this.
+
+10:36.680 --> 10:42.200
+But for now I think in the next video we should talk about the pros and cons of doing something like
+
+10:42.200 --> 10:42.790
+this.
+
+10:43.790 --> 10:50.090
+Because again remember although I used react as an example here the principles are all the same for
+
+10:50.090 --> 10:51.840
+all types of applications.
+
+10:52.670 --> 10:53.450
+I'll see in the next one.

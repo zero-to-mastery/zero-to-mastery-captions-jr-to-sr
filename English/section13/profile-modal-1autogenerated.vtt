@@ -1,0 +1,163 @@
+WEBVTT
+
+00:00.920 --> 00:09.050
+Walk back we've had a nice set up here where we now have a profile icon and we can sign out or view
+
+00:09.050 --> 00:12.870
+profile well or at least we can click on it.
+
+00:13.010 --> 00:15.690
+But there's no view profile functionality.
+
+00:15.800 --> 00:16.970
+We can sign out.
+
+00:17.090 --> 00:23.810
+But when I click View Profile nothing happens now or we're going to try and do is when we click View
+
+00:23.810 --> 00:28.810
+profile I think it would be nice if we had a model that pops up.
+
+00:29.330 --> 00:36.680
+And this model allows us to change our name maybe change other fields in our profile and have it update
+
+00:36.740 --> 00:37.390
+accordingly.
+
+00:37.490 --> 00:40.710
+Maybe have our name updated right in here.
+
+00:42.490 --> 00:43.320
+So let's do that.
+
+00:43.420 --> 00:47.940
+Let's build a component that creates a model for us.
+
+00:48.400 --> 00:53.800
+Luckily for us re-act came up with a new feature called create portal.
+
+00:53.800 --> 00:58.450
+You see modals in general and apps are very very common.
+
+00:58.870 --> 01:06.280
+And there has been an issue previously where we didn't have portals and it was a big problem of how
+
+01:06.280 --> 01:11.170
+to set up models in a way that works really well with re-act.
+
+01:11.210 --> 01:16.490
+Now with the introduction of portals this has become really really easy and they have a really really
+
+01:16.490 --> 01:17.710
+nice documentation.
+
+01:17.810 --> 01:21.610
+If you want to read more about it and really nice code snippets as well.
+
+01:21.980 --> 01:26.990
+We're going to build our own model here that it contains the profile so that when we click on the profile
+
+01:26.990 --> 01:30.940
+page or view profile we'll actually get this model.
+
+01:30.980 --> 01:33.400
+So let's get to working.
+
+01:33.540 --> 01:38.030
+The first thing I want to do is go back to the index dodgiest file.
+
+01:38.070 --> 01:41.260
+I'm going to close some of these things just to keep things clean.
+
+01:42.780 --> 01:43.310
+OK.
+
+01:43.560 --> 01:52.290
+Now the way modals work is that we want to make sure that we have a nother re-act render that is outside
+
+01:52.290 --> 01:55.670
+of the app and that's the cool thing about portals.
+
+01:55.850 --> 02:02.300
+You can have a portal that is completely separate from the app and a number of re-act Dom render.
+
+02:02.310 --> 02:13.350
+So think of it as another react on render that can be called let's say modal and by using the re-act
+
+02:13.380 --> 02:19.720
+create portal we can actually transfer prop's in between them which is really cool.
+
+02:19.740 --> 02:22.080
+It's kind of like well a portal.
+
+02:22.170 --> 02:24.050
+And that's why it's called Portal.
+
+02:24.060 --> 02:31.650
+So what we want to do is create another HMO element that we combined the modal component to.
+
+02:31.860 --> 02:32.610
+Let's get to it.
+
+02:33.900 --> 02:42.870
+The first thing I'm going to do is go back to my public folder where my index got a files and if I scroll
+
+02:42.870 --> 02:46.090
+down here we see that we have divides of root.
+
+02:46.110 --> 02:53.030
+That is where re-act is binding and rendering everything but down here I want to create a modal portal
+
+02:54.130 --> 03:03.110
+and I can say div ID and we'll call it whatever we want let's say modal.
+
+03:03.240 --> 03:09.000
+And again I like this demonstration because it shows how re-act works and how you can extend the functionality
+
+03:09.000 --> 03:10.890
+of re-act.
+
+03:10.900 --> 03:17.950
+So now we've created another thing that we can bind our mortal to and by using create portal we can
+
+03:17.950 --> 03:23.740
+just make sure that whatever's in the app the props passed down to whatever's in the motorcade route
+
+03:23.860 --> 03:24.580
+as well.
+
+03:24.640 --> 03:29.040
+Let's say that and go back to our apt.
+
+03:30.710 --> 03:31.700
+Now in app.
+
+03:31.730 --> 03:38.140
+Yes let's say that we're going to import another component that we haven't created yet but we will soon.
+
+03:38.420 --> 03:47.210
+And this is going to be the modal component and we're going to import it from our components folder
+
+03:48.080 --> 03:54.330
+and it's just going to be called motile or let's create a modal folder.
+
+03:56.610 --> 04:02.450
+And I get a bit of an error because well we haven't created the modal components yet.
+
+04:02.460 --> 04:02.750
+All right.
+
+04:02.790 --> 04:03.760
+Let's do that.
+
+04:03.810 --> 04:08.920
+I want to go into components create a new folder we'll call it motile.
+
+04:09.480 --> 04:16.880
+And within the modal folder I know we're getting a bit repetitive here but that's fine for now.
+
+04:16.890 --> 04:18.270
+Modal dodgiest
+
+04:20.880 --> 04:23.720
+And let's start building out this Modal component.

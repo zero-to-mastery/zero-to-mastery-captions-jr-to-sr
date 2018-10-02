@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.770 --> 00:01.580
+Welcome back.
+
+00:01.850 --> 00:04.090
+Let's finish off our types.
+
+00:04.130 --> 00:08.550
+And remember there's a few others but you can take a look at the documentation for you.
+
+00:08.630 --> 00:13.310
+I've shown you the types that you're going to use 90 percent of the time.
+
+00:13.310 --> 00:19.770
+So these last wants function and class.
+
+00:19.790 --> 00:26.710
+Let's take a look at function and a function can be quite similar to what we've already done.
+
+00:26.710 --> 00:27.470
+Right.
+
+00:27.520 --> 00:35.840
+Let's say that this fight robot army now and let's call it fight robot army three so that it doesn't
+
+00:35.840 --> 00:38.120
+complain that it's the same variable.
+
+00:38.330 --> 00:44.870
+We can say that the way you declare the functions is while we have the robot army but also that the
+
+00:44.870 --> 00:48.590
+function returns void because we're not returning anything.
+
+00:48.680 --> 00:50.510
+And we've seen this before.
+
+00:50.660 --> 01:01.990
+So if we do the same thing for the above we can scroll down fight robot army for and once again I know
+
+01:01.990 --> 01:05.080
+this is getting along but let's make this a little bit smaller.
+
+01:05.080 --> 01:17.810
+This again would return void if they have returned let's say a number let's say sonar return five.
+
+01:18.140 --> 01:28.020
+We get a sad number here and it looks like everything worked out well.
+
+01:28.230 --> 01:30.630
+And this is when you start to see that.
+
+01:30.660 --> 01:30.990
+All right.
+
+01:30.990 --> 01:36.600
+It's getting a little bit confusing with typescript adding all these types you kind of lose track of
+
+01:37.080 --> 01:39.480
+what is going on in a function.
+
+01:39.510 --> 01:45.330
+And if you are not comfortable with typescript it's really hard to be like I have no idea what this
+
+01:45.330 --> 01:47.450
+function is doing what the parameters are doing.
+
+01:47.670 --> 01:50.050
+And that's one of the drawbacks with typescript.
+
+01:50.100 --> 01:54.490
+It's an extra layer of complexity that your apps now have.
+
+01:56.750 --> 01:57.800
+That's pretty easy.
+
+01:57.800 --> 01:59.620
+We're pretty comfortable with functions.
+
+01:59.720 --> 02:03.640
+So let's talk about the last one which is class or classes.
+
+02:04.980 --> 02:20.130
+Let's say that I had an Animal class and this animal class will have a sing property that is a string.
+
+02:20.230 --> 02:27.080
+And let's also have a constructor that has a sound of string
+
+02:30.260 --> 02:32.420
+and we can say that this starts.
+
+02:32.660 --> 02:40.700
+And we're just using class syntax here is going to equal sound.
+
+02:40.850 --> 02:46.340
+And let's just say that singing is going to be la la la la.
+
+02:46.390 --> 02:57.820
+Now we'll also have a function or a method called grete and this grete method is going to let me scroll
+
+02:57.820 --> 03:02.020
+down here so we can see better is going to return.
+
+03:03.810 --> 03:16.420
+A template string Hello plus or we don't need that plus we can just say hello and do allow the this
+
+03:17.560 --> 03:18.790
+dot sync
+
+03:22.020 --> 03:24.190
+is closed off with the back deck.
+
+03:25.070 --> 03:25.360
+All right.
+
+03:25.370 --> 03:43.970
+So now if I go to one now if I go let Lion be a new animal that takes in the sound of let's say rar.
+
+03:44.040 --> 03:50.650
+I think that's how lions go and I save this school over here.
+
+03:51.060 --> 03:51.320
+All right.
+
+03:51.330 --> 03:54.940
+We're not getting any errors which is great.
+
+03:55.420 --> 04:02.860
+And let's run a lion dot sing or lion dot grete.
+
+04:03.100 --> 04:09.150
+And if I run this no errors and I do greet I should have the hello.
+
+04:09.260 --> 04:10.410
+La la la la la.
+
+04:10.690 --> 04:13.060
+From there just to test that for fun.
+
+04:13.980 --> 04:24.650
+I'm going to go to my jazz file scroll all the way down and just console log my lion greet for me to
+
+04:24.690 --> 04:30.310
+save let's close that compiler for now and run our notes script and we see Hello.
+
+04:30.380 --> 04:33.970
+Roger with our compiled Javascript code.
+
+04:34.030 --> 04:36.700
+All right let's go back to our top secret file.
+
+04:39.610 --> 04:43.430
+So this is working but here's the interesting part.
+
+04:43.570 --> 04:45.640
+What if I do sing
+
+04:48.290 --> 04:52.730
+or sing is a property so just grab the property.
+
+04:52.760 --> 04:58.590
+We see that we're able to grab the property from here.
+
+04:58.620 --> 04:59.090
+All right.
+
+04:59.160 --> 05:08.990
+But the cool thing you can do in typescript is I can set this to private and if I said this to private
+
+05:09.380 --> 05:12.140
+and Icesave I get an error.
+
+05:12.260 --> 05:17.380
+I'm trying to access a private variable that I shouldn't have access to.
+
+05:17.420 --> 05:18.360
+Very very cool.
+
+05:18.410 --> 05:23.830
+By the way by default this is set to public as you can see here.
+
+05:23.870 --> 05:25.830
+Again nothing too crazy.
+
+05:25.850 --> 05:29.340
+We have a good idea of our types.
+
+05:29.390 --> 05:39.260
+If I do greet and it's going to return a string or a string and I save that also works as well.
+
+05:39.360 --> 05:42.600
+So we should feel pretty comfortable with classes as well.
+
+05:43.710 --> 05:44.670
+All right.
+
+05:44.910 --> 05:52.890
+That was a lot we see here that we wrote a lot of typescript and it's all compiled into a little bit
+
+05:52.890 --> 05:58.500
+of a messy code on Javascript but we don't need to worry because typescript makes sure that we output
+
+05:58.530 --> 06:01.360
+code that works.
+
+06:01.490 --> 06:02.800
+I'll see in the next one.
+
+06:02.970 --> 06:03.230
+Buh-Bye.

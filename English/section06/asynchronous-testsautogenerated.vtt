@@ -1,0 +1,337 @@
+WEBVTT
+
+00:01.320 --> 00:02.460
+Welcome back.
+
+00:02.460 --> 00:08.520
+We got our tests to work and Google search right now is working pretty nicely.
+
+00:08.520 --> 00:10.750
+I'm pretty happy with it.
+
+00:10.980 --> 00:12.460
+And I think we can move on.
+
+00:12.750 --> 00:22.500
+Let's create a nother script and perhaps a more realistic or a harder function than this to test.
+
+00:22.550 --> 00:31.400
+So I'm going to just add a new file and call that script to dodge Yes and we definitely want to write
+
+00:31.400 --> 00:32.170
+some tests for it.
+
+00:32.180 --> 00:36.260
+But for now let's just write our function and what it's going to do.
+
+00:37.560 --> 00:44.660
+Now one of the harder tests to write and something that you might be thinking of is a synchronous tests.
+
+00:44.830 --> 00:52.140
+I mean right now you can see that with google search we can copy this with pretty much any function
+
+00:52.800 --> 00:56.050
+and you might see why pure functions are so good to test.
+
+00:56.070 --> 00:58.020
+I mean you're just testing function.
+
+00:58.110 --> 01:05.030
+You're just adding some random inputs and making sure that the outputs are what they're expected.
+
+01:05.040 --> 01:12.090
+Very nice and simple and they're all just synchronous nice tests but in real life we most likely have
+
+01:12.840 --> 01:16.770
+fecche calls or API calls that are asynchronous.
+
+01:16.800 --> 01:18.930
+How do we test for those.
+
+01:18.930 --> 01:23.940
+Well in this video let's tackle that for this exercise.
+
+01:23.940 --> 01:31.000
+I'm going to use an API they're really really like called Swaby And yeah that stands for the Star Wars
+
+01:31.120 --> 01:32.170
+API.
+
+01:32.170 --> 01:34.200
+It's free and it's awesome.
+
+01:34.240 --> 01:36.280
+I recommend it in the other course as well.
+
+01:36.280 --> 01:39.930
+So some people might be familiar with it but yeah it's great.
+
+01:39.930 --> 01:46.600
+You can see here that you can request Planetes you can request people you can request starship's all
+
+01:46.630 --> 01:47.550
+from Star Wars.
+
+01:47.650 --> 01:49.570
+Yeah pretty awesome.
+
+01:49.600 --> 01:59.050
+Using the Star Wars API you can see that this is the end point that we can hit to get the same response.
+
+01:59.050 --> 02:10.150
+Let's create a nice little function for us to use that we can test now fetch in no it won't work because
+
+02:10.480 --> 02:18.360
+if you remember fetch is something that's implemented by the browser and it's on the window object.
+
+02:18.480 --> 02:22.410
+But in node there's no such thing as a window object.
+
+02:22.530 --> 02:24.400
+So there's no window.
+
+02:24.510 --> 02:25.620
+Fetch.
+
+02:25.650 --> 02:29.190
+For that we need to install something called
+
+02:31.740 --> 02:36.700
+node fetch and there's a few other libraries they can use.
+
+02:36.700 --> 02:40.830
+You can do fetch calls from node but let's just stick with this one for now.
+
+02:42.250 --> 02:52.110
+This way we can now have fetch in node and again we import it with the common japes way because imports
+
+02:52.110 --> 02:55.610
+and exports are not available yet in node.
+
+02:55.890 --> 02:58.320
+And then just import node fetch
+
+03:02.180 --> 03:03.540
+all right to an end here.
+
+03:03.540 --> 03:14.630
+Let's do a Konst get people from Star Wars and let's say this is going to receive the Fach.
+
+03:14.670 --> 03:20.430
+Remember we're doing a bit of dependency injection here so that we can test them we can keep this nice
+
+03:20.430 --> 03:22.640
+and easy to test as possible.
+
+03:23.080 --> 03:29.850
+And here we can't say that we're going to return thuch.
+
+03:30.150 --> 03:38.790
+And I know I know this is a little bit redundant because we could just not have an input and have fach
+
+03:38.830 --> 03:45.800
+but it just shows I think dependency injection really well and this isn't something that you necessarily
+
+03:45.800 --> 03:51.350
+always need to do but for this purposes I think it's a good way for you to get familiar with dependency
+
+03:51.350 --> 03:54.010
+injection in here.
+
+03:54.060 --> 03:58.950
+We're going to have the Star Wars API Let's go back to what they had
+
+04:01.540 --> 04:10.070
+and let's copy this and say that we want to request the people API.
+
+04:10.390 --> 04:15.490
+And if you remember we always need to do our classic Dadds Then
+
+04:18.960 --> 04:23.590
+response and then run the Jaison method on the response.
+
+04:25.370 --> 04:32.310
+And then finally we have our data which will be the people that it returns.
+
+04:32.330 --> 04:40.100
+So let's say in here we're just going to return an object that has a count because if we go to people
+
+04:40.100 --> 04:49.370
+over here because we want to get all the characters we get a count variable of all the characters in
+
+04:49.380 --> 04:54.590
+the API so let's do that and we'll say count.
+
+04:54.660 --> 04:58.070
+And actually this should be data on that count.
+
+04:59.230 --> 05:07.780
+And then we'll do results that we'll just have the data Daut results which will have all the people
+
+05:07.780 --> 05:13.080
+in an array and each person in an object.
+
+05:13.090 --> 05:14.710
+All right let's save that.
+
+05:14.730 --> 05:22.800
+And I want to make sure this works so we'll just do console dialog get people and pass in the first
+
+05:22.800 --> 05:23.990
+function to it.
+
+05:24.110 --> 05:30.140
+I'm going to save and let's just run node let me clear this for now.
+
+05:30.390 --> 05:38.520
+And actually just because this is a synchronous and nicer way of doing this is just in here consol logging
+
+05:39.090 --> 05:45.300
+the data the save and run NPM script to dodge.
+
+05:45.320 --> 05:46.060
+Yes.
+
+05:47.570 --> 05:54.040
+And we have to wait a bit but you see over here that all right we've got all the characters with count
+
+05:54.060 --> 05:57.750
+87 and we got Luke Skywalker.
+
+05:57.950 --> 05:58.630
+What else we got.
+
+05:58.630 --> 06:01.250
+See Threepio R2-D2.
+
+06:01.460 --> 06:02.550
+All the main cats.
+
+06:02.570 --> 06:03.740
+Awesome.
+
+06:03.800 --> 06:05.560
+This is working.
+
+06:05.950 --> 06:07.010
+And you know what.
+
+06:07.010 --> 06:12.900
+While we're at it just for fun since this is using a promise.
+
+06:12.980 --> 06:17.180
+Let's also add the async weight version of the code
+
+06:20.470 --> 06:29.450
+and let's just remove the call and just call say that get people is going to use the async await.
+
+06:29.480 --> 06:34.740
+So that means in front of the function we're going to do a sync.
+
+06:34.970 --> 06:45.630
+And now we can use the weight keyword so we can just say Konst get request equals await the first call.
+
+06:45.830 --> 06:54.770
+And now we can say that the concert data again equals a weight
+
+06:59.870 --> 07:03.470
+request dodgiest on.
+
+07:03.700 --> 07:12.040
+And now we can remove the dog then and keep everything the way we had it.
+
+07:12.040 --> 07:16.780
+Let me add the semi-colons and let's just make this smaller so you can see better
+
+07:20.220 --> 07:21.540
+and we can move this
+
+07:24.560 --> 07:28.330
+on this line you can decide for yourself what looks cleaner.
+
+07:28.490 --> 07:32.330
+But let's test out to this as well to make sure that it works.
+
+07:32.330 --> 07:38.400
+So get people and we'll add fetch going to save.
+
+07:38.400 --> 07:41.920
+And Ron NPM Whoops not there.
+
+07:41.960 --> 07:44.650
+Run in here NPM Ron.
+
+07:44.940 --> 07:48.670
+No node script to dodge.
+
+07:48.680 --> 07:51.710
+Yes well wait a bit and there you go.
+
+07:51.710 --> 07:52.870
+Everything is working.
+
+07:55.460 --> 08:00.770
+I don't know why I decided to show that in the test video but I'm sure somebody out there is going to
+
+08:00.770 --> 08:07.400
+find this useful to compare promises and Eysenck a little bit of a tangent but let's get back on track
+
+08:07.400 --> 08:08.060
+here.
+
+08:08.060 --> 08:13.980
+Let's actually start writing tests for our async code.
+
+08:14.330 --> 08:20.060
+Again the first thing we're going to do and I'm going to remove the get people and console logs from
+
+08:20.060 --> 08:23.240
+here let's save
+
+08:26.120 --> 08:32.710
+and I'm going to create a new file call it script to test dots.
+
+08:32.740 --> 08:33.240
+Seamus
+
+08:36.180 --> 08:38.120
+and one thing here we want to do a few things.
+
+08:38.130 --> 08:45.600
+First we want to use the fetch function so we need the require
+
+08:48.320 --> 09:00.650
+node fetch again because we have used dependency injection and we need the parameter fetch for the Get
+
+09:00.720 --> 09:14.140
+people and then we also need the function from the swap API that returns the get people for analogise
+
+09:14.140 --> 09:26.730
+say require a script to dodgier us or we don't need the G-S But remember because this isn't a node package
+
+09:26.850 --> 09:30.350
+we need to actually give it the path.
+
+09:30.360 --> 09:36.880
+All right so let's export the function let's just export both of these for now.
+
+09:36.900 --> 09:44.850
+We'll say a module that exports and we export them in an object will say Get people.
+
+09:44.980 --> 09:52.840
+And instead of doing get people get people again shorthand with E6 is to just to get fewer people and
+
+09:52.840 --> 10:00.430
+get people promise which which is the same thing as get people semicolon get people property and value
+
+10:00.460 --> 10:01.820
+property value.
+
+10:02.440 --> 10:10.810
+All right so now within here we'll have the will have access to our functions both of them.
+
+10:10.820 --> 10:14.860
+Let's take a break and in the next video we're going to finish up this test.
+
+10:15.020 --> 10:16.770
+I'll see in that one by.

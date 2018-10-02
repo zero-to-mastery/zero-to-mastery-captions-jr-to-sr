@@ -1,0 +1,724 @@
+WEBVTT
+
+00:01.510 --> 00:12.490
+Let's talk about the very first topic in our security star or star of security and this is injections
+
+00:13.150 --> 00:14.030
+right over here.
+
+00:14.880 --> 00:25.330
+And we're starting off with injections because these are the most common attacks for the last number
+
+00:25.330 --> 00:29.550
+of years out of all these techniques.
+
+00:29.580 --> 00:31.670
+This is the most common.
+
+00:31.710 --> 00:40.770
+The thing that leads to most financial loss and I'd say about 50 percent of the time if you're preventing
+
+00:40.830 --> 00:42.500
+against injections.
+
+00:42.870 --> 00:47.750
+You've covered a big big chunk of improving security.
+
+00:47.800 --> 00:52.450
+So probably the most important topic and it's also really really fun to teach.
+
+00:52.530 --> 00:53.840
+So we're going to start off with this one.
+
+00:55.310 --> 01:02.460
+Now injections means injecting code into a another piece of code.
+
+01:02.690 --> 01:08.090
+And there's a couple ways that you can do this but it's a big principle the idea that we received code
+
+01:08.090 --> 01:15.680
+that we didn't really want from a third party a user or somebody else and they're trying to mess with
+
+01:15.680 --> 01:19.430
+our code and change our code and perhaps do bad things.
+
+01:20.840 --> 01:27.680
+And like I said before it's the most common attack and one of the most famous injections is something
+
+01:27.680 --> 01:35.710
+called Eskew well injection and these are two examples of askew all injections.
+
+01:36.220 --> 01:39.400
+But you know what we're just looking at a piece of text right now.
+
+01:39.460 --> 01:41.150
+It doesn't really mean anything.
+
+01:41.530 --> 01:45.300
+Let's actually perform next fuel injection and see how it works.
+
+01:48.200 --> 01:55.970
+I'm going to be using the sequel which is a database for Mac but there's tons of other versions for
+
+01:55.970 --> 01:57.950
+Windows and Linux that you use.
+
+01:57.950 --> 02:04.360
+It's essentially a graphical user interface to play around with your database.
+
+02:04.430 --> 02:12.420
+So I'm going to be using this and I should have it open right here as you see I have two tables here
+
+02:12.520 --> 02:14.260
+log in and users.
+
+02:14.420 --> 02:20.560
+Before this exercise let's just create a new table and I already have created the Eskew all statement
+
+02:20.560 --> 02:21.240
+here.
+
+02:22.230 --> 02:28.560
+And again if you're not 100 percent comfortable with the SU all yet then I cover that topic in my other
+
+02:28.560 --> 02:30.810
+course so I do recommend you check that out.
+
+02:30.810 --> 02:33.840
+Or you can find some really good resources online for it.
+
+02:33.840 --> 02:38.410
+All I'm saying is I want to create a new table called ask you all injection.
+
+02:38.520 --> 02:44.620
+It's going to have a column of ID and a column of email if I click.
+
+02:44.660 --> 02:48.410
+Ron Querrey There you go.
+
+02:48.660 --> 02:55.810
+If I refresh now I see that we've created a new table called rescue all injection.
+
+02:55.950 --> 02:59.460
+Now there's nothing in the stable but we do have the idea and email column.
+
+02:59.490 --> 03:03.030
+So let's add a new row here.
+
+03:03.330 --> 03:12.670
+Well just and I actually have them prepared over here so we'll just do the insert into Eskew all injection.
+
+03:12.810 --> 03:18.180
+So we're going to insert into the table the email field.
+
+03:18.270 --> 03:19.710
+We're going to add.
+
+03:19.850 --> 03:21.530
+Well to it.
+
+03:21.590 --> 03:23.210
+So let's run that query.
+
+03:24.410 --> 03:24.990
+All right.
+
+03:25.070 --> 03:33.570
+And if we go back to our table we see that we have a new row an idea of one because I've set it up so
+
+03:33.570 --> 03:34.550
+it's just sequential.
+
+03:34.590 --> 03:40.870
+I'll just keep adding two three four or five and then e-mail of EHLO well.
+
+03:40.930 --> 03:43.670
+Now here some ask you all injection that we can do.
+
+03:44.110 --> 03:47.590
+And we want to do something like this.
+
+03:47.590 --> 03:52.870
+Let's say that we're updating this email field because the user just changed your email.
+
+03:52.870 --> 04:02.200
+So if I let's say update my email to something like this that we have from our table and make sure our
+
+04:05.400 --> 04:07.140
+I have a quote here.
+
+04:07.200 --> 04:17.000
+So what I've just entered is I've entered my value of my new email to have this piece of code and you
+
+04:17.010 --> 04:23.450
+see that it's kind of highlighted everything instead of just being a string like it would have been
+
+04:23.480 --> 04:25.290
+if we did this.
+
+04:25.570 --> 04:28.090
+So by just modifying that piece of code
+
+04:31.400 --> 04:36.240
+like this and make sure we have that quote see how the colors change.
+
+04:36.590 --> 04:43.130
+What I'm saying is I have played around with this Eskew all statement and made it so that we update
+
+04:43.160 --> 04:47.030
+the values to an empty string but then add the semicolon.
+
+04:47.030 --> 04:53.150
+We have another statement that drops the table users or let's drop the table.
+
+04:53.150 --> 04:56.410
+Q Well injection.
+
+04:56.590 --> 05:00.170
+And then I end the statement with this line
+
+05:05.130 --> 05:07.080
+and we don't need the quotes anymore.
+
+05:07.930 --> 05:17.110
+You see that it's been highlighted as if it's a rescue or a query and we just simply do drop table Escorial
+
+05:17.110 --> 05:17.650
+injection.
+
+05:17.650 --> 05:26.300
+If I click on query and now I refresh Wu-Wo Did you see that are askew all injections.
+
+05:26.300 --> 05:29.050
+Table was just dropped.
+
+05:29.050 --> 05:29.830
+That's right.
+
+05:29.830 --> 05:34.840
+By just adding this piece of line I was able to draw up an entire table.
+
+05:34.840 --> 05:39.560
+So you can see how vicious that could be if I changed just to log in or users.
+
+05:39.580 --> 05:45.440
+I can draw the entire company's database and that was simply because I entered this line.
+
+05:45.640 --> 05:52.690
+So even though we were expecting an e-mail value instead of providing an e-mail I just sent over this
+
+05:52.690 --> 06:01.400
+piece of code that essentially extended the school statement to drop the table that is extremely dangerous.
+
+06:01.400 --> 06:06.570
+He just witnessed one of the most common ways that Web sites get attacked.
+
+06:06.650 --> 06:12.740
+People just keep copy and pasting these lines in different inputs on Web sites and apps and see if it
+
+06:12.890 --> 06:14.670
+does anything and it drops tables.
+
+06:17.030 --> 06:23.310
+And if we go back here we also see this top on the Says comma or want equals one.
+
+06:23.300 --> 06:25.950
+Again dash dash ignore everything after.
+
+06:26.230 --> 06:29.620
+Well this can be put in a password feel.
+
+06:29.620 --> 06:36.610
+For example you have to log into a web site and it says your username and password by adding this piece
+
+06:36.610 --> 06:44.080
+of line you're saying in the password field I'm expecting a password and I'll pass it on to my school
+
+06:44.350 --> 06:51.640
+statement but instead I'm going to just leave it an empty string and then say or one equals one which
+
+06:51.640 --> 06:52.880
+is true.
+
+06:53.260 --> 07:00.130
+So what that means is the skewl the database is going to check hey does this user exist and does this
+
+07:00.130 --> 07:01.430
+password match.
+
+07:01.480 --> 07:07.330
+But then because we're not we're adding this or saying does this password match or does one ECOs one
+
+07:07.530 --> 07:15.220
+and returns the full user information and logs you in and don't worry I'm going to leave and fun exercise
+
+07:15.220 --> 07:19.520
+for you after this video so you can actually practice this on your own.
+
+07:19.990 --> 07:26.590
+That's eschewed all injection and that happens with databases but injections can happen anywhere any
+
+07:26.680 --> 07:32.500
+time that a user has to input something you can do injections.
+
+07:32.960 --> 07:40.190
+Let me show you another example I've created over here a security exercise and don't worry I'm going
+
+07:40.190 --> 07:43.130
+to give you access to these files so you can play around with them.
+
+07:43.430 --> 07:46.000
+But I've created a very simple web site.
+
+07:46.010 --> 07:48.200
+If you look at index not a shemale.
+
+07:48.200 --> 07:49.940
+Not much going on here.
+
+07:50.510 --> 07:54.570
+And we just have a button that on click sends information to the server.
+
+07:54.860 --> 07:57.340
+And I have a server set up as well.
+
+07:57.380 --> 07:59.580
+And don't worry we're going to go over this.
+
+07:59.600 --> 08:05.110
+That is an express server and all we're doing is we're sent.
+
+08:05.120 --> 08:07.010
+We have a gap request.
+
+08:07.010 --> 08:14.420
+So if I go to let's start the server actually let's say NPM start.
+
+08:14.550 --> 08:16.470
+We're listening to port 3000.
+
+08:16.470 --> 08:19.860
+So if I go to my Chrome browser
+
+08:23.680 --> 08:31.300
+and let's open up localhost three thousand eight we see the Hello World text because the End Point is
+
+08:31.300 --> 08:32.860
+going to return Hello world.
+
+08:32.860 --> 08:38.830
+And then we also have another endpoint that is a post request to secret and I'm going to show you what
+
+08:38.830 --> 08:41.740
+that does on the front end.
+
+08:42.770 --> 08:49.970
+We can open up the index that a shim on file in our browser which looks something like this.
+
+08:50.040 --> 08:51.810
+Very very simple web site.
+
+08:51.840 --> 08:56.510
+All I have is an input field and I can hit submit.
+
+08:56.850 --> 09:03.080
+Now this Submit button if we go back to the code simply says send to server.
+
+09:03.390 --> 09:12.150
+We're going to grab the input value and then I'm going to run it through this function that simply just
+
+09:12.150 --> 09:17.050
+does adds the text to our Web page.
+
+09:17.130 --> 09:28.620
+So again if I type hello Samit I see the text Hello on the web page and after we do that we also do
+
+09:28.620 --> 09:37.130
+a fetch call an API call to our server and send the secret through POST method using Jay Saunders string
+
+09:37.130 --> 09:37.620
+of phi.
+
+09:37.670 --> 09:40.780
+We're sending the user input.
+
+09:40.980 --> 09:42.720
+And as Jason.
+
+09:42.860 --> 09:45.660
+So we're sending it into the body.
+
+09:45.710 --> 09:53.230
+Once we click hello and open up the Network tab let's let's click again we see that we're sending the
+
+09:53.320 --> 09:57.180
+secret to the Bacchante.
+
+09:57.370 --> 09:57.790
+That's it.
+
+09:57.790 --> 10:02.580
+Nothing too crazy if you're not too familiar with node servers.
+
+10:02.590 --> 10:08.530
+Then again I recommend you check out my other course but you don't have to worry about too much about
+
+10:08.530 --> 10:09.090
+that.
+
+10:09.100 --> 10:13.270
+What we want to do here is practice another form of injection.
+
+10:13.660 --> 10:21.490
+We expect our users to play around and type in whatever they want but what if a bad person comes and
+
+10:21.490 --> 10:27.810
+says What if I just do a script tag here because we're adding it to him all right.
+
+10:27.820 --> 10:31.470
+We're just adding whatever we've gotten here to our team multi-week.
+
+10:31.750 --> 10:34.170
+So let's do this script auto alert
+
+10:37.740 --> 10:47.740
+boom and then we're going to close that tab the script tag and now we hope to run the script in here.
+
+10:47.740 --> 10:48.920
+Let's see if that works.
+
+10:51.660 --> 10:53.010
+Nothing happens.
+
+10:53.010 --> 10:55.420
+We deem and print anything.
+
+10:55.560 --> 11:03.750
+Now if we go back to the code we see that we're getting the input and then we're using inner DML which
+
+11:04.230 --> 11:12.480
+is bad as you can see here to a P-TECH but luckily for us when scripts are injected into the dawn the
+
+11:12.540 --> 11:14.120
+script Dag's like we have.
+
+11:14.250 --> 11:16.830
+And we're using interface shemale.
+
+11:17.050 --> 11:24.010
+They're not actually run a time when they're injected because the Dom has already run and a shim all
+
+11:24.010 --> 11:26.140
+is smart enough to say yeah I'm not going to run that.
+
+11:26.130 --> 11:34.740
+That sounds like a bad idea because scripts like this which are called inline script are only run at
+
+11:34.740 --> 11:37.530
+the time that the original page is parsed.
+
+11:37.530 --> 11:45.830
+So if I refresh this that's not going to run on the other hand there is something we can do.
+
+11:46.930 --> 11:47.920
+Check this out.
+
+11:48.160 --> 11:58.930
+If we enter something like an image tag with a source of nothing really just a slash and because there's
+
+11:58.950 --> 12:00.810
+no source this is going to air.
+
+12:00.840 --> 12:11.590
+We can do a on air event that come standard with a shemale and in here I can say Alert.
+
+12:11.780 --> 12:15.330
+Boom and close that
+
+12:19.500 --> 12:25.350
+if I do this so an image tag that won't be able to fetch any image and it's going to have an on error
+
+12:25.380 --> 12:26.310
+of alert.
+
+12:26.370 --> 12:35.740
+Boom if I click submit and let's open up the console and unexpected and have input because we should
+
+12:35.740 --> 12:37.540
+use double quotes here.
+
+12:40.660 --> 12:41.740
+So try that again.
+
+12:45.640 --> 12:54.430
+We just ran a script that we injected into our browser and this is because images are injected into
+
+12:54.430 --> 12:58.140
+the DOM at the time of encountering the imageshack.
+
+12:58.330 --> 13:04.770
+And if the loading fails like you see over here on every event the handler is called.
+
+13:05.020 --> 13:13.580
+So what we've just done is we've injected a piece of code that is really really bad into a web site.
+
+13:13.750 --> 13:19.660
+So if you go around to Web sites and copy and paste this and try to submit it and they don't have good
+
+13:19.660 --> 13:25.030
+security practices you can inject whatever scripts you want into a website.
+
+13:25.180 --> 13:27.520
+Again use this information wisely.
+
+13:27.520 --> 13:29.960
+Don't be bad with this information.
+
+13:30.040 --> 13:34.200
+We're using this as a way to learn how to prevent these sorts of attacks.
+
+13:36.030 --> 13:38.230
+So how do we prevent against this.
+
+13:38.580 --> 13:40.470
+Well fairly simple.
+
+13:40.560 --> 13:45.810
+Instead of using this energy stimulus and that's why I say Inari shemale is bad don't use it.
+
+13:45.810 --> 13:49.130
+We want to use something like this.
+
+13:49.150 --> 13:56.340
+One last comment that out this creates a text node that is of input.
+
+13:56.400 --> 14:03.180
+So no matter what the input is this create text node is going to convert it into just pure text and
+
+14:03.180 --> 14:05.300
+does something call sanitizing it.
+
+14:05.340 --> 14:13.290
+And because of this we can't just attach a text node to the tag and it doesn't matter how bad we are
+
+14:13.290 --> 14:14.310
+with our code.
+
+14:14.430 --> 14:16.090
+It's not going to do anything.
+
+14:16.530 --> 14:19.860
+Let me save and show you if that fixes it.
+
+14:19.890 --> 14:27.760
+So I'm going to submit again Oh and I have to refresh the page let me refresh and let's try that again
+
+14:28.540 --> 14:29.230
+this time around.
+
+14:29.230 --> 14:30.900
+I'm just going to copy and paste it again.
+
+14:30.910 --> 14:39.730
+Same thing if I click Submit heart nothing happens and this is just convert it into text.
+
+14:39.800 --> 14:41.090
+That was pretty cool right.
+
+14:42.160 --> 14:42.640
+All right.
+
+14:42.700 --> 14:44.940
+We've learned about injections.
+
+14:44.950 --> 14:47.060
+What can we do to fix them.
+
+14:47.590 --> 14:50.770
+Well there's three main things that I wanted to remember.
+
+14:50.770 --> 14:57.850
+One is to do something called sanitising input and that is something that we did with the input field
+
+14:57.880 --> 14:58.910
+on the website.
+
+14:59.260 --> 15:03.790
+The idea is called the white list philosophy.
+
+15:04.150 --> 15:11.170
+And what that means is for data validation or anything the user inputs only allow the user to input
+
+15:11.200 --> 15:17.380
+data of your expected type if you expect a text to be entered.
+
+15:17.380 --> 15:25.270
+An email to be entered a phone number makes sure that you check using javascript that only those things
+
+15:25.270 --> 15:25.760
+are used.
+
+15:25.780 --> 15:32.320
+For example with a phone number make sure that it's only numbers that are let's say 10 digits.
+
+15:32.860 --> 15:35.460
+If it's not the proper type discard it.
+
+15:35.470 --> 15:36.790
+So we're sanitizing it.
+
+15:36.790 --> 15:37.750
+We're cleaning it.
+
+15:37.960 --> 15:45.100
+And by sanitizing and cleaning it into a format that we want using things like javascript we make sure
+
+15:45.100 --> 15:50.980
+that no matter what I can enter all these bad codes it doesn't matter because I've already cleaned your
+
+15:50.980 --> 15:54.560
+input and it won't do anything to my system.
+
+15:55.620 --> 15:59.570
+And sanitization is typically performed by using either.
+
+15:59.700 --> 16:02.680
+Like I said a white list or a blacklist.
+
+16:02.700 --> 16:04.830
+So why list is good things you can do.
+
+16:04.830 --> 16:08.340
+Blacklist is about things that you shouldn't do.
+
+16:08.400 --> 16:14.550
+So some of the things that we can do is removing a shemale tags while preserving perhaps the content
+
+16:14.970 --> 16:18.010
+or preserving all the actual content of a tag.
+
+16:19.530 --> 16:25.120
+Or prevent the user with a notification saying that hey you can't put that information in there.
+
+16:25.170 --> 16:27.200
+Try again put something in.
+
+16:27.240 --> 16:33.290
+The second point is something called parameterized query and it's also called prepared statements.
+
+16:34.230 --> 16:42.080
+And it's a way to prevent Eskew Well injections like we saw it precompile and Eskew all statements so
+
+16:42.080 --> 16:45.890
+that all you need to supply are the parameters.
+
+16:45.890 --> 16:47.560
+Think of it as a function.
+
+16:47.650 --> 16:56.070
+If we go back to our example instead of allowing the user to enter whatever they want what we want to
+
+16:56.070 --> 16:58.050
+do is have a sort of function.
+
+16:58.050 --> 17:05.490
+So let me open up a tab here a console tab and you have a function let's say that is ask well select
+
+17:05.490 --> 17:15.680
+statement and within here you give the name variable the email perhaps the ID variable and inside of
+
+17:15.680 --> 17:26.070
+this function you'd have something like If name equals number then you can area it out to.
+
+17:26.080 --> 17:34.190
+Or you can say that if name doesn't have the length of this or if name includes characters of this you
+
+17:34.640 --> 17:37.790
+have control over what the user enters.
+
+17:37.790 --> 17:44.990
+Now this is a big enough problem that there are a ton of really good solutions out there already and
+
+17:44.990 --> 17:48.920
+they're called object relational mappers.
+
+17:49.070 --> 17:54.860
+That is they provide these prepared statements Eskew all statements for you so that all you need to
+
+17:54.860 --> 17:56.560
+supply are the parameters.
+
+17:56.630 --> 18:00.920
+Just like I showed you think of them as variables that need to be inserted into the Steelmen for it
+
+18:01.010 --> 18:02.480
+to be executed.
+
+18:02.720 --> 18:08.510
+And this way it prevents things that we don't like dropping that table and being able to enter whatever
+
+18:08.510 --> 18:09.340
+we want.
+
+18:09.440 --> 18:17.510
+And as you all statement and one of the really good examples of this is K'NEX dodgy us that we use with
+
+18:17.510 --> 18:26.450
+our smart brain now where we're able to use things like if we go to select we're able to just give it
+
+18:26.450 --> 18:32.030
+parameters all we say is Connect dots select and we give it whatever parameters we need.
+
+18:32.030 --> 18:35.860
+Let's say we want to get the title author in year from the book's table.
+
+18:35.990 --> 18:38.370
+And that's the only thing we can do.
+
+18:38.540 --> 18:43.260
+K'NEX takes care of actually building the ASCII all statement for us.
+
+18:43.340 --> 18:46.030
+But it parameterize is everything.
+
+18:46.040 --> 18:51.550
+So we can only provide the parameters to the statement.
+
+18:51.570 --> 18:52.320
+All right.
+
+18:52.530 --> 18:53.750
+So there you have it.
+
+18:53.790 --> 18:55.470
+Those are injections.
+
+18:55.470 --> 19:02.730
+You prevent those and you make sure that whatever the user inputs is something that your program expects
+
+19:03.730 --> 19:07.120
+then you're going to avoid majority of the security issues that are out there.
+
+19:07.120 --> 19:16.980
+Like I said injections are the number one cause of attacks on Web sites so validate every last bit of
+
+19:16.980 --> 19:17.900
+user input.
+
+19:18.030 --> 19:26.430
+Using y lists on the client side as well as the server and never directly inject to user content into
+
+19:26.520 --> 19:27.820
+anything again.
+
+19:27.900 --> 19:30.780
+User input should always be trusted.
+
+19:30.810 --> 19:36.580
+The only thing they control you can control is how you run your program so you can modify any untrusted
+
+19:36.600 --> 19:39.730
+data and to trusted that.
+
+19:39.950 --> 19:41.740
+I'll see in the next one Buh-Bye.

@@ -1,0 +1,157 @@
+WEBVTT
+
+00:00.660 --> 00:01.740
+Welcome back.
+
+00:01.740 --> 00:07.680
+There's one last thing I want to show you one little trick and that is wouldn't it be nice if we had
+
+00:07.680 --> 00:14.700
+some sort of seed data within these tables so that we we run docker compose a bill that there is already
+
+00:14.700 --> 00:17.400
+some users that we can start testing with.
+
+00:17.820 --> 00:21.860
+And that is a very common case when working on a project.
+
+00:21.900 --> 00:24.650
+So let's do that in this video.
+
+00:24.690 --> 00:34.730
+All we need to do is create another command and this time after we've created the log in and the users
+
+00:34.730 --> 00:45.840
+table we're going to create a command and this command is going to run another obscure statement.
+
+00:45.840 --> 00:51.700
+That's called seed and that's going to be in the seed folder.
+
+00:51.720 --> 01:02.800
+Once again we create another folder called seed and we hear the new file again coaling get seed.
+
+01:02.880 --> 01:10.410
+Eskew well and this seed that SU all is going to do a simple skew all steam.
+
+01:10.720 --> 01:11.950
+It's going to insert
+
+01:15.350 --> 01:23.750
+into the users table the name email and trees.
+
+01:24.260 --> 01:26.320
+And let's just say Joynt as well.
+
+01:29.460 --> 01:33.460
+And it's going to enter the values.
+
+01:33.490 --> 01:40.110
+Let's go with Tim as the name email is going to be.
+
+01:40.250 --> 01:49.700
+Or let's change this up let's go with Jesse e-mails going to be Jesse at gmail dot com
+
+01:52.500 --> 02:00.810
+and trees is just going to be let's say five entries and the date joined is just going to be 2018.
+
+02:01.130 --> 02:03.650
+Let's go with January 1st
+
+02:07.970 --> 02:19.070
+and again just to make sure let's just do a began transaction and a commit at the end.
+
+02:20.750 --> 02:30.150
+We're also wanted to insert into the log and table because they need to log in as well and this log
+
+02:30.140 --> 02:32.040
+in table is going to accept Passhe
+
+02:34.690 --> 02:35.480
+and an email
+
+02:39.190 --> 02:40.180
+and the values
+
+02:44.010 --> 02:48.120
+are going to be this little hash that actually already checked.
+
+02:48.120 --> 02:54.450
+So this hash with the crypt is just password A.
+
+02:54.960 --> 03:02.520
+So as long as you put the letter you'll be able to log in and his Jessy's email is going to be Jessee
+
+03:02.610 --> 03:04.120
+at gmail dot com
+
+03:07.950 --> 03:08.600
+perfect.
+
+03:08.730 --> 03:14.730
+And the very last thing we need to do and obviously you can imagine if we want to add more users more
+
+03:15.030 --> 03:19.930
+information more data we can always just keep adding onto this seat file.
+
+03:20.210 --> 03:23.430
+But for now just to test make sure that this is all right.
+
+03:23.430 --> 03:35.630
+The last thing we need to do is in the docker file we want to add a nother folder called seed and add
+
+03:35.630 --> 03:38.350
+whatever files are in the seed folder.
+
+03:39.510 --> 03:42.550
+Once again let's close this up.
+
+03:45.900 --> 03:48.980
+Bring everything down and rebuild everything
+
+03:54.310 --> 03:55.120
+we scroll up.
+
+03:55.130 --> 03:59.950
+OK we see like oh yeah we have two answers that happened that's a good sign.
+
+04:01.280 --> 04:08.900
+And if we go back now to our app and sign out let's see if we can sign in with Jessy's information.
+
+04:08.900 --> 04:17.970
+So is Jesse at gmail dot com and the e-mail was just the letter A look of that we're able to log in
+
+04:17.970 --> 04:19.770
+to Jesse's account.
+
+04:19.890 --> 04:21.330
+That is a test account.
+
+04:21.390 --> 04:25.870
+The entries count is already 5 and everything is working.
+
+04:25.950 --> 04:35.190
+We're able to connect and we're also able to seed our database our test database already.
+
+04:35.330 --> 04:41.210
+And I wanted to show you this just to show you what you can do with Dr. Phil. You can keep adding things
+
+04:41.210 --> 04:46.780
+you can do different commands but it should make sense now how everything is working.
+
+04:47.970 --> 04:53.010
+In the next video we're going to review everything and make sure that we understand how each of these
+
+04:53.010 --> 04:54.680
+pieces connected.
+
+04:54.750 --> 04:59.520
+I know that there was a lot of information that I threw where you and this is a section that you might
+
+04:59.520 --> 05:05.640
+have to visit a couple of times but keep in mind that we want to connect these dots here and in the
+
+05:05.640 --> 05:10.670
+next video I'm going to try and help you finalize and solidify that knowledge.
+
+05:10.890 --> 05:12.740
+I'll see that one by.

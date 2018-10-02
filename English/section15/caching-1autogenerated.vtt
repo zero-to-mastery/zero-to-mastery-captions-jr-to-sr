@@ -1,0 +1,232 @@
+WEBVTT
+
+00:00.980 --> 00:04.640
+Caching is the process of storing some data.
+
+00:05.410 --> 00:14.430
+In cash cash is a temporary storage component area where the data is stored so that in future that I
+
+00:14.470 --> 00:16.590
+can be served faster.
+
+00:16.630 --> 00:23.050
+Think of it as a little package box that we store information in so that we don't have to travel all
+
+00:23.050 --> 00:26.560
+the way back to wherever we're going to retrieve this information.
+
+00:26.590 --> 00:33.150
+We have a package that is a lot closer to us that can give us this information a lot sooner.
+
+00:33.170 --> 00:40.890
+Now in order for us to really understand caching we have to go to the very basic steps that is talking
+
+00:40.890 --> 00:52.420
+about C-p use random access memory or RAM and hard disks now C.P. use are built with a special on chip
+
+00:52.690 --> 00:59.940
+memory called registers which usually consists of a small amount of fast storage.
+
+01:00.030 --> 01:07.260
+So C-p use nowadays actually have a bit of memory as well besides just doing all the work or being the
+
+01:07.260 --> 01:09.330
+brain of our computers.
+
+01:10.400 --> 01:16.760
+They're the closest and smallest memory storage in our computers but also the fastest.
+
+01:16.940 --> 01:26.300
+Sometimes you may have heard of these registers is l Zero Cash ALSWANG cash L-3 for cash and all these
+
+01:26.310 --> 01:31.520
+caches depend whether they exist or not on the architecture of the chip.
+
+01:31.760 --> 01:35.210
+But they're used as a superfast way to access memory.
+
+01:35.210 --> 01:36.730
+The fastest we can go.
+
+01:37.220 --> 01:41.120
+And then we have something like Ramm or random access memory.
+
+01:41.200 --> 01:48.470
+There are again closer to the CPI not as close as the registers where the small little pieces of memory
+
+01:48.470 --> 01:56.960
+that the C-p you had but large enough that can hold significant information that you can access information
+
+01:56.960 --> 02:03.990
+from and use it again because this is in memory as soon as the power goes off of our computers.
+
+02:04.000 --> 02:05.660
+Well that information is gone.
+
+02:05.930 --> 02:13.080
+But because it is a memory Well it's also fast to access.
+
+02:13.320 --> 02:16.570
+And then we have something like hard disk drives.
+
+02:16.980 --> 02:20.550
+And these were physical disks that we had in our computer.
+
+02:20.580 --> 02:26.820
+Now these sir in your computers you'll find something like solid state drives that actually make accessing
+
+02:27.060 --> 02:29.110
+information a lot faster.
+
+02:29.930 --> 02:37.880
+But the difference between RAM and this hard disk drive is the performance costs and the proximity to
+
+02:37.880 --> 02:46.670
+the CPE you you see as we go down the line it becomes cheaper and cheaper but also it becomes slower
+
+02:46.670 --> 02:52.420
+and sold slower to access this memory for the CPQ you to access disk memory.
+
+02:52.640 --> 02:59.300
+Well it has to travel longer distance and the disk takes a longer time to get that information to the
+
+02:59.340 --> 03:06.470
+CPQ but the added benefit is that even if the power goes off this disk will remember our information
+
+03:07.870 --> 03:12.220
+again versus the ram that stores only temporary data.
+
+03:12.220 --> 03:15.090
+The disk is able to store long term data.
+
+03:16.660 --> 03:16.970
+OK.
+
+03:16.980 --> 03:20.150
+But why do we just learn about this.
+
+03:20.310 --> 03:22.170
+How is this useful to us.
+
+03:22.850 --> 03:30.560
+You see because caching is actually everywhere and most people might not realize how many places we
+
+03:30.560 --> 03:39.500
+can actually cache things similar ways in which we're able to access memory or access data a lot faster
+
+03:39.560 --> 03:43.910
+in our computers using CPQ RAM and hard disks.
+
+03:43.910 --> 03:54.210
+What we can do the same similar principles in our applications for example we use CD ends to cache are
+
+03:54.270 --> 04:00.810
+a shemale CSSA and javascript files so that instead of the browser going all the way back to the server
+
+04:00.840 --> 04:08.700
+across the country across the globe it can just access the closest server CDN and use the cached files.
+
+04:09.830 --> 04:14.600
+There's also things that we can cash on the server for example on the server.
+
+04:14.600 --> 04:20.720
+If I was accessing some sort of an API that returns me robots well so that I don't have to request that
+
+04:20.720 --> 04:28.930
+every time maybe I can cash that robot information perhaps in a variable perhaps in a memory storage
+
+04:28.940 --> 04:31.750
+like rattus or perhaps even in a database.
+
+04:31.760 --> 04:38.810
+If the API is really slow we can also use caching on the database side and database servers will be
+
+04:38.810 --> 04:45.200
+configured out of the box usually for optimal caching but they do also allow you to control and change
+
+04:45.200 --> 04:48.280
+parameters based on your needs.
+
+04:48.430 --> 04:54.400
+And then we also talked about rattus and we know about all of our rattus now we use it to manage our
+
+04:54.550 --> 04:56.300
+session tokens.
+
+04:56.390 --> 04:58.230
+When I talk to you about Reddy's he thought.
+
+04:58.300 --> 05:01.880
+All right Andre he's teaching me about another useless database.
+
+05:01.880 --> 05:03.140
+This is a waste of time.
+
+05:03.200 --> 05:07.990
+But then you slowly started to come around and I showed you that you can manage sessions using read
+
+05:07.990 --> 05:09.730
+s and it's really fast.
+
+05:09.730 --> 05:15.380
+What if I told you that we can use red S for caching database requests that's all something that we've
+
+05:15.380 --> 05:19.240
+talked about a little bit in the database scaling video.
+
+05:19.290 --> 05:24.830
+For example if we had a node server and we had to make a request to the database.
+
+05:25.170 --> 05:32.850
+Well I can first place my bread server right in between us and I can ask the server Hey do you have
+
+05:32.850 --> 05:34.370
+this user information.
+
+05:34.530 --> 05:40.020
+If it doesn't while we go to the database retrieve that information through rescue Wall and send it
+
+05:40.020 --> 05:41.190
+back to the notes.
+
+05:41.550 --> 05:47.970
+But before we just send it directly back we go through rattus store that information in memory and then
+
+05:47.970 --> 05:54.840
+pass it back to the server so that the next time the server asks for the same information we go through
+
+05:54.840 --> 05:57.060
+rattus Retta says oh yeah I have it.
+
+05:57.060 --> 06:03.120
+Here you go and we avoid the rescue all statement and the disk access that most likely would happen
+
+06:03.570 --> 06:06.030
+with a database.
+
+06:06.180 --> 06:11.100
+And that's something that you really want to do before you do any sort of database scaling where we
+
+06:11.100 --> 06:13.320
+start working with the database.
+
+06:13.320 --> 06:21.900
+You want to figure out hey can I cash can I use rattus or memcached to cash our requests or our queries
+
+06:22.500 --> 06:26.830
+and there are so many other places that you can cash things.
+
+06:27.000 --> 06:33.870
+For example the most common one and the one that you're probably most familiar with is caching on the
+
+06:33.900 --> 06:35.750
+client side or on the browser.
+
+06:36.060 --> 06:42.870
+You see the browsers give us a ton of ways to cache information and we're going to dive a little bit
+
+06:42.870 --> 06:48.820
+deeper into this topic because you can do some really exciting performance optimizations with it.
+
+06:49.200 --> 06:54.670
+So for that one you'll have to wait until the next video so you that.

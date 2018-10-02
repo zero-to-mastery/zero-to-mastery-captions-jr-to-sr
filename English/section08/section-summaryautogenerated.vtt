@@ -1,0 +1,268 @@
+WEBVTT
+
+00:02.220 --> 00:06.540
+Well Sugoi this next just still looks great.
+
+00:06.540 --> 00:10.050
+And thanks for all the information on server side rendering.
+
+00:10.050 --> 00:10.760
+I think you're right.
+
+00:10.770 --> 00:15.660
+I don't think we need Robur friends out to be server side rendered for now but maybe on future projects
+
+00:15.740 --> 00:17.950
+we could use something like next Actually yes.
+
+00:18.210 --> 00:18.990
+Thanks again.
+
+00:19.110 --> 00:20.250
+Really appreciate it.
+
+00:20.250 --> 00:21.210
+God you are awesome.
+
+00:23.640 --> 00:24.230
+All right.
+
+00:24.240 --> 00:25.200
+We've done it again.
+
+00:25.230 --> 00:29.330
+Another task done for Bruno and Kaikohe Corp..
+
+00:29.490 --> 00:35.430
+Hopefully you now feel comfortable with the idea of server side rendering and client side rendering
+
+00:35.660 --> 00:43.840
+and you're able to make a smart decision on when to use what free Remember server side rendering is
+
+00:43.840 --> 00:50.450
+great for static sites initial page loads are faster and SEO is definitely better with them.
+
+00:51.980 --> 00:59.260
+The drawback being that it still does full page reloads the rendering can be slower because of that.
+
+00:59.660 --> 01:08.000
+And we have multiple requests to the server as it was increasing the complexity of our app client side
+
+01:08.120 --> 01:08.740
+rendering.
+
+01:08.780 --> 01:13.250
+On the other hand was really really good for rich interactions.
+
+01:13.370 --> 01:21.710
+Fast Web site rendering after the initial load and it was a good tool for web applications but it did
+
+01:21.710 --> 01:26.330
+have the drawback that MCO was really hard to get right.
+
+01:26.660 --> 01:30.020
+And you had that longer initial load.
+
+01:30.240 --> 01:36.530
+Now to finish off I want to show you three charts that I think are really helpful.
+
+01:38.300 --> 01:45.530
+The first char we're going to look at is how a regularly japes rendered page locks we have the initial
+
+01:45.530 --> 01:46.620
+request.
+
+01:46.810 --> 01:54.080
+A similar arrives and starting from there we start requesting all our resources including our large
+
+01:54.200 --> 01:58.470
+javascript file the javascript file arrives.
+
+01:58.470 --> 02:04.210
+It then gets parsed and evaluated and our view is finally painted.
+
+02:04.440 --> 02:06.310
+And we have interactivity.
+
+02:06.480 --> 02:15.090
+You see it takes a long time to actually have a workable page and we've already discussed this Two-Bits
+
+02:17.500 --> 02:21.220
+the second graph is with server side rendering.
+
+02:21.410 --> 02:31.070
+We have our initial request HMO arise but because we have information on our a shemale page we get a
+
+02:31.880 --> 02:34.480
+faster view painted.
+
+02:34.490 --> 02:40.130
+The problem being that we might have the view painted onto the screen but we have to wait for the java
+
+02:40.130 --> 02:43.010
+script to arrive be parsed and evaluated.
+
+02:43.130 --> 02:49.400
+So we have this thing called uncanny valley where the web page looks like it's ready and you might start
+
+02:49.400 --> 02:56.890
+clicking on a button but it won't start working until all this javascript business is taken care of.
+
+02:56.940 --> 02:59.620
+So maybe perhaps there is a better solution.
+
+03:00.790 --> 03:09.060
+Perhaps we can use something called progressive rendering the idea behind progressive rendering and
+
+03:09.270 --> 03:15.720
+you know what we've actually been talking about it throughout the course we only send out only what
+
+03:15.720 --> 03:18.380
+you need for the initial render.
+
+03:18.510 --> 03:26.560
+Then you progressively make more features and pages available in the background as more things arrive.
+
+03:27.120 --> 03:30.260
+So you might remember code splitting.
+
+03:30.420 --> 03:31.520
+That's what it is.
+
+03:31.770 --> 03:40.260
+Code splitting was sending only what we need to the front end above the fold loading that was sending
+
+03:40.380 --> 03:42.030
+all what we need to the front end.
+
+03:42.180 --> 03:48.000
+And then once the web page is loaded for the user then we started loading any background scripts maybe
+
+03:48.000 --> 03:52.550
+a new page Ibby the menu bar only when the user clicks on it.
+
+03:54.660 --> 04:00.700
+The idea is that we make the initial request HMO arrives and we don't have that uncanny valley things
+
+04:00.810 --> 04:07.560
+are working really really fast and we just slowly progressively make our app start working in the background
+
+04:07.560 --> 04:09.630
+without the user noticing.
+
+04:09.630 --> 04:18.220
+And you can actually see this in the re-act docs once again if we go to the Riak page and I open up
+
+04:18.220 --> 04:19.510
+the tab.
+
+04:19.510 --> 04:26.600
+If I go to network and I refresh I see that I'm downloading a ton of things.
+
+04:26.600 --> 04:30.730
+We see that there is this load line which is the red line.
+
+04:30.770 --> 04:32.540
+So the web page has been loaded.
+
+04:32.690 --> 04:42.260
+But then after that we have all these things that seem to load in the background trying to get this
+
+04:42.260 --> 04:44.410
+progressive loading happening.
+
+04:44.420 --> 04:53.470
+Very cool and many companies use this kind of way of making their Web sites fast.
+
+04:53.530 --> 04:58.750
+Big companies such as Flipkart or Ali Express.
+
+04:59.020 --> 05:04.660
+And then there's the idea of serving a shell or a skeleton of an.
+
+05:04.930 --> 05:13.330
+Companies like Flipkart and Ali Express used this where they server render a shell or a skeleton screen
+
+05:14.140 --> 05:21.730
+that gets printed right away so that it feels like content is loading immediately even though in the
+
+05:21.730 --> 05:25.390
+background there's actually loading happening on the client side.
+
+05:26.890 --> 05:32.650
+Now this is a combination and strategizing about why you ship to the front and why you render on the
+
+05:32.650 --> 05:33.820
+server.
+
+05:33.820 --> 05:35.490
+And that's important to think about.
+
+05:35.530 --> 05:40.190
+Again as a senior developer there's always trade off.
+
+05:40.200 --> 05:44.900
+There's it's never black and white right or wrong for each situation.
+
+05:44.920 --> 05:50.590
+You're trying to figure out what is the best thing you can do and you can take pieces from client side
+
+05:51.040 --> 05:55.290
+and server side rendering to make it work for whatever your needs are.
+
+05:55.300 --> 06:03.040
+For example there's a tool called pre-rendered IO and it allows javascript websites to be crawled for
+
+06:03.040 --> 06:10.690
+search engines and they do that by actually having a service where they render the page for you and
+
+06:10.720 --> 06:15.560
+you're able to save that rendered a shemale to the crullers.
+
+06:15.760 --> 06:18.400
+And there's many many things that you can do.
+
+06:18.400 --> 06:25.630
+The idea being that you want to know how things work and then decide for yourself what avenue you want
+
+06:25.630 --> 06:31.760
+to take and what pieces you want to take from each so to finish off.
+
+06:31.760 --> 06:35.490
+We've talked about server side rendering client side rendering.
+
+06:35.540 --> 06:42.600
+We took a look at great libraries like neckerchiefs that make server side rendering dynamic apps easy.
+
+06:43.040 --> 06:51.200
+And we also learned that companies like Priceline Walmart Airbnb are a big fan of things like server
+
+06:51.200 --> 06:58.910
+side rendering because they care about their su a lot of their customers come through Osseo and they
+
+06:58.910 --> 07:01.920
+want to make sure that that is as fast as possible.
+
+07:01.940 --> 07:08.500
+But other Web sites might not be as interested in that and adding that extra layer of complexity.
+
+07:08.690 --> 07:15.290
+So they try and do something that is client side rendered but also progressive enough where they minimize
+
+07:15.290 --> 07:19.370
+the amount of javascript we send to the content.
+
+07:19.390 --> 07:25.210
+I think Brunos happy with our decision that the Roble friends app doesn't need to be server side.
+
+07:25.210 --> 07:26.540
+It's fairly fast already.
+
+07:26.540 --> 07:32.230
+Our javascript files are fairly small and we don't care too much about Osseo with our Roble friends.
+
+07:32.230 --> 07:35.640
+So I think we're good sticking with client side rendering.
+
+07:35.740 --> 07:39.170
+What do you think I'll see in the next section.

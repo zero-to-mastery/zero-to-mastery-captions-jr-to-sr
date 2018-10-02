@@ -1,0 +1,91 @@
+WEBVTT
+
+00:00.890 --> 00:07.260
+Walk them back on and bring our discussion back to something that we've previously talked about with
+
+00:07.320 --> 00:18.050
+Dr. The idea of micro services architecture the idea that before we had this monolithic giant infrastructure
+
+00:18.080 --> 00:25.760
+or code base that did everything for us all the big pieces all the small pieces all together in one
+
+00:25.760 --> 00:29.390
+place running our application and logic.
+
+00:29.580 --> 00:38.700
+Now with docker and AWOS now making things extremely easy for us to manage these machines and connect
+
+00:38.700 --> 00:43.600
+them the idea of Micro's services has become more and more popular.
+
+00:43.630 --> 00:50.050
+That is the idea to split your application into a set of smaller interconnected services.
+
+00:50.050 --> 00:57.430
+Instead of building a single monolithic application and each Micro's service is a small application
+
+00:57.820 --> 01:05.530
+that has its own architecture consisting of its own business logic and concerned with doing one thing
+
+01:05.530 --> 01:06.670
+really well.
+
+01:06.670 --> 01:12.790
+Now looking at this you're thinking this seems monolithic seems like a way better option than oldest
+
+01:12.790 --> 01:17.190
+confusing things happening here and you may be right again.
+
+01:17.200 --> 01:21.670
+It really really depends on what your company is doing.
+
+01:22.530 --> 01:30.570
+However the one big benefit with Micro's services is that now you have these small chunks that can be
+
+01:30.660 --> 01:38.630
+tested on their own that we can have different developer teams on their own and all of them can be released
+
+01:38.660 --> 01:41.550
+individually to production one at a time.
+
+01:41.570 --> 01:44.340
+We don't have to make sure that all the pieces work together.
+
+01:44.360 --> 01:51.980
+I mean we still do but here we have to make sure that all developer teams work on one code base.
+
+01:52.070 --> 01:59.150
+Nobody breaks anything and all the tests pass before we send it to production versus here where we can
+
+01:59.150 --> 02:06.830
+have small individual teams that just worries about their one machine one service and make sure that
+
+02:06.830 --> 02:13.000
+thats really really good and you can have a one updated production while the other one is maybe updated
+
+02:13.010 --> 02:14.390
+in production two weeks from now.
+
+02:14.510 --> 02:21.560
+And as long as they have what we call a service level agreement or SLA as long as they say hey just
+
+02:21.560 --> 02:27.140
+make sure no matter what updates you do that you give me this return data or you respond to me this
+
+02:27.140 --> 02:27.740
+way.
+
+02:27.740 --> 02:34.460
+Then you can work individually on these boxes and it makes these massive companies that have so many
+
+02:34.460 --> 02:38.280
+Daval teams work a lot more efficiently.
+
+02:38.510 --> 02:43.910
+And this is a really interesting architecture that you really want to think about and keep an eye on
+
+02:44.060 --> 02:47.840
+because it's going to become more and more popular as time goes on.
+
+02:48.970 --> 02:54.820
+All right let's get back to Amazon Web Services and talk about lambda functions in the next video.

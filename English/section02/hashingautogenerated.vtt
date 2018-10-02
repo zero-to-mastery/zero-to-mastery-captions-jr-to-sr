@@ -1,0 +1,217 @@
+WEBVTT
+
+00:01.650 --> 00:04.950
+All right what have we learned so far.
+
+00:04.950 --> 00:13.550
+S-sh uses both symmetric and asymmetric encryption since asymmetric encryption is more time consuming.
+
+00:13.610 --> 00:17.280
+Most of the S-sh connections use symmetric encryption.
+
+00:17.420 --> 00:27.560
+As we've discussed the idea behind is that asymmetric encryption is used only to share a secret key.
+
+00:27.910 --> 00:35.140
+And then finally using that key that is symmetric encryption for further communication so it's fast
+
+00:37.330 --> 00:43.210
+now once a secure symmetric communication has been established the server uses the client's public key
+
+00:43.300 --> 00:49.180
+and generate a challenge and transmitted to the client for authentication if the client can successfully
+
+00:49.180 --> 00:50.400
+decrypt the message.
+
+00:50.530 --> 00:56.170
+Well it means that it holds the private key required for a connection then the same session finally
+
+00:56.170 --> 00:56.840
+begins.
+
+00:56.860 --> 01:04.990
+So we finally have this secure tunnel everything's happy and we can communicate in a secure way.
+
+01:04.990 --> 01:06.240
+One problem though.
+
+01:06.580 --> 01:15.650
+Someone can sit in the middle and pretend to be the other and tamper or modify the message.
+
+01:16.780 --> 01:22.570
+If they somehow convince the client that they're the host and the host that they're the client they
+
+01:22.570 --> 01:32.400
+can just have this key exchange between one another and the information came flow through that middleman.
+
+01:32.450 --> 01:41.710
+Now to solve one of these problems we'll talk about something called hashing and hashing is another
+
+01:41.710 --> 01:46.960
+form of cryptography used in secure shell connections.
+
+01:46.970 --> 01:54.410
+Now in my other course the complete web developer we use something called decrypt to hash passwords.
+
+01:54.410 --> 02:01.590
+So you may remember that now one way hash functions differ from the above two forms of corruption.
+
+02:01.620 --> 02:07.930
+The symmetrical and in asymmetric in that they're never meant to decrypt anything.
+
+02:08.150 --> 02:13.320
+They simply generate a unique value of a fixed length for each input.
+
+02:14.530 --> 02:23.440
+That A gets and there one way because if I hash Hello it's going to run through a function that spits
+
+02:23.440 --> 02:32.170
+out jibberish really really fast with the trick being that we have no idea how to get back to the whole
+
+02:32.230 --> 02:33.260
+text.
+
+02:33.280 --> 02:35.150
+So if going through a hash.
+
+02:35.470 --> 02:42.790
+If somebody looks at this they it's pretty much impossible for anybody to go back and figure out what
+
+02:43.000 --> 02:44.390
+this means.
+
+02:44.410 --> 02:50.150
+So how is that useful Well as we mentioned before.
+
+02:50.340 --> 02:58.590
+S-sh is able to transmit messages securely but if a third party is able to dupe the client and the host
+
+02:59.160 --> 03:01.620
+well they can tamper with the messages.
+
+03:01.620 --> 03:06.970
+Maybe they could change the messages for nefarious reasons.
+
+03:06.980 --> 03:14.780
+Luckily for us using the third technique hashes we're able to verify the authentication of the message
+
+03:14.780 --> 03:17.230
+was so the bad person.
+
+03:17.620 --> 03:22.300
+Well the bad person can modify our messages.
+
+03:22.330 --> 03:29.390
+This is done using something called HMX or hash based Message Authentication codes.
+
+03:29.500 --> 03:31.120
+I know it's a mouthful.
+
+03:31.150 --> 03:41.790
+These names are getting really really confusing but the gist of it is this using a hash function each
+
+03:41.790 --> 03:53.540
+message that is transmitted must contain a something called Mac and this Mac is a hash generated from
+
+03:53.660 --> 03:55.000
+the symmetric key.
+
+03:55.190 --> 04:00.560
+The packet sequence number and the message contents that were sent.
+
+04:00.770 --> 04:05.810
+So let's say this client is trying to send the password with the host and they've already established
+
+04:06.200 --> 04:15.890
+a symmetric key for secure communication while using the packet sequence number the key and then whatever
+
+04:15.890 --> 04:19.280
+text I'm sending and this case let's just say we're sending the password.
+
+04:19.370 --> 04:27.460
+I combine this into as an input into a hash function and this function is going to spit out some piece
+
+04:27.460 --> 04:27.910
+of string.
+
+04:27.910 --> 04:29.890
+That means absolutely nothing.
+
+04:30.190 --> 04:33.800
+And now this is sent to the host.
+
+04:33.980 --> 04:35.330
+But this means nothing right.
+
+04:35.370 --> 04:40.210
+So how can the host check that the message hasn't been tampered with.
+
+04:41.210 --> 04:47.090
+Well what they can do now is because they have the same information they can use their own symmetric
+
+04:47.090 --> 04:49.820
+key which is the same as the clients.
+
+04:50.120 --> 04:57.350
+They can use the packet sequence number again which they both know and then because this message was
+
+04:57.620 --> 05:04.910
+sent through S-sh they also have that message that was sent.
+
+05:04.920 --> 05:09.140
+So now they run it through the same hash function again.
+
+05:09.570 --> 05:20.380
+And once it calculates it it's going to see does what I just generated match what the client hash was.
+
+05:20.550 --> 05:27.600
+And if it does match well that means that this message was not tampered with because at any point if
+
+05:27.600 --> 05:36.540
+the password even one letter even a capitalization was changed this hash will be completely different.
+
+05:36.600 --> 05:40.440
+And that is one characteristic of hash functions change.
+
+05:40.500 --> 05:45.040
+Any single thing no matter how similar the inputs.
+
+05:45.060 --> 05:51.720
+Maybe it's going to spit out a completely different number now learning everything we have up until
+
+05:51.720 --> 05:52.750
+this point.
+
+05:52.950 --> 06:02.260
+We should understand what's going on when we type in S-sh at IP address or do you see up until now I
+
+06:02.260 --> 06:09.620
+may have lied to you a little bit because everything that we've talked about if I go to my terminal
+
+06:09.620 --> 06:21.770
+right now and we only implemented this well I would S-sh into that Digital Ocean server.
+
+06:21.770 --> 06:22.460
+Press enter
+
+06:26.770 --> 06:35.010
+and I get a password requirement but that didn't happen did it when I showed you in previous videos
+
+06:35.290 --> 06:41.750
+I just immediately logged on and I was able to do anything that I wanted and like I said I cheated a
+
+06:41.750 --> 06:49.160
+little bit here and I'll show you why that was and why we need to finally enter a password and the next
+
+06:49.160 --> 06:49.620
+video.
+
+06:49.700 --> 06:51.530
+I know a little bit of a cliffhanger.
+
+06:51.620 --> 06:53.070
+I'll see in the next video.
+
+06:53.240 --> 06:53.540
+Bebai.

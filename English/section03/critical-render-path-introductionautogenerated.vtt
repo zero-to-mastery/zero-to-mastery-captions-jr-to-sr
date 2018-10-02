@@ -1,0 +1,154 @@
+WEBVTT
+
+00:02.690 --> 00:09.140
+Now that we have a good grasp of network optimizations Let's talk about what happens once the files
+
+00:09.350 --> 00:11.530
+arrive in the browser.
+
+00:12.140 --> 00:14.600
+How can we optimize this step.
+
+00:16.550 --> 00:17.160
+See.
+
+00:17.180 --> 00:23.810
+Up until this point we have a pretty simplified view of what happens inside of a browser.
+
+00:26.140 --> 00:32.170
+The shemale arrives and then all these other files magically arrive as well.
+
+00:32.230 --> 00:35.220
+But what actually happens inside the hood.
+
+00:35.380 --> 00:37.510
+Grab your rain jackets we're diving in deep.
+
+00:37.630 --> 00:40.130
+Let's explore.
+
+00:40.170 --> 00:47.660
+So we have our typical diagram here of client and server and the very first step is well you request
+
+00:47.660 --> 00:54.220
+a Web site and then the server returns and ASTM all file.
+
+00:54.400 --> 01:03.600
+Now inside of that browser the Shemar file arrives and the browser starts reading it and as soon as
+
+01:03.630 --> 01:10.110
+a shim all arrives it starts creating something called the dong the document object model.
+
+01:10.350 --> 01:18.540
+And when the browser parses or read T.M. it incrementally generates this tree model of the HTML tags
+
+01:19.200 --> 01:22.480
+that we need to build for the Web site the.
+
+01:22.950 --> 01:30.780
+And this Dom describes the contents of the page but then just as it's about to start doing that it encounters
+
+01:30.810 --> 01:34.430
+a style link to grab the CSSA.
+
+01:34.830 --> 01:43.620
+So it asks for the CSSA file from the server and then the CSSA file arise and it gets back to working
+
+01:43.620 --> 01:49.140
+on the Dom creating the structure of the Web site.
+
+01:49.240 --> 02:01.560
+Now once the browser receives all the CSX it also starts generating a tree model called CSX on and this
+
+02:01.560 --> 02:10.410
+CSSA object model has the styling information attached to the tree nodes and this tree describes how
+
+02:10.950 --> 02:17.550
+the content is styled and it's working and it's working and is building this tree and then all of a
+
+02:17.550 --> 02:28.070
+sudden it sees a javascript tag a script tag so it grabs it from the server and the javascript derives.
+
+02:28.270 --> 02:30.780
+But it's also going to read the javascript file.
+
+02:31.180 --> 02:40.030
+And this javascript file is read by the browser and executes any changes that it might want onto the
+
+02:40.030 --> 02:44.540
+DOM and the CSSA.
+
+02:44.580 --> 02:53.840
+Now once all that's done the browser combines the DOM and the CSSA arm into a render tree.
+
+02:55.050 --> 03:02.460
+And this render tree has both information from a shemale and the styling and layout information of CSSA
+
+03:04.110 --> 03:12.030
+by combining the DOM and the success on the browser constructs this render tree so knows exactly what
+
+03:12.030 --> 03:14.120
+to render on the page.
+
+03:14.130 --> 03:19.050
+So now the browser uses this render tree to figure out the layout
+
+03:21.830 --> 03:29.400
+is going to forget about all these files and then it's going to figure out the layout.
+
+03:29.400 --> 03:33.120
+Where should I position these items in one location.
+
+03:33.450 --> 03:42.330
+What with what height and wants is figure that out is going to paint all the pixels in guess what at
+
+03:42.420 --> 03:47.040
+the end of all of that.
+
+03:47.180 --> 03:52.350
+We finally have our Web page displaying on the browser.
+
+03:52.890 --> 04:01.260
+Now you may be thinking what about images while those are happening to whenever the browser encounters
+
+04:01.260 --> 04:02.960
+an image tag.
+
+04:02.970 --> 04:06.120
+It will start downloading them as soon as it sees it.
+
+04:07.180 --> 04:14.690
+But the neat thing about images it's it's not part of this process images are just kind of downloaded
+
+04:14.690 --> 04:15.880
+in the background.
+
+04:16.010 --> 04:19.340
+And once they're loaded they will appear on the screen.
+
+04:19.520 --> 04:26.540
+You see what we've just learned is called the Critical render path and it is one of the most important
+
+04:26.540 --> 04:29.990
+concepts for optimizing browser performance.
+
+04:30.630 --> 04:36.110
+This path shows what it takes to paint the Web site on the screen.
+
+04:36.390 --> 04:41.380
+It looks like so many steps but in real life that happens fairly quickly right.
+
+04:41.430 --> 04:47.640
+Surprising that so many things need to happen in order for us to view a web site and once again just
+
+04:47.640 --> 04:51.100
+like we were able to optimize the network performance.
+
+04:51.270 --> 04:58.340
+We can now optimize this path and in the next videos we're going to do just that.
+
+04:58.360 --> 05:05.470
+Let's go one by one and see how we can improve each step of the critical render path.
+
+05:05.500 --> 05:06.730
+I'll see you in the next video.

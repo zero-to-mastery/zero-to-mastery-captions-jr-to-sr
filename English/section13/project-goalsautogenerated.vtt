@@ -1,0 +1,181 @@
+WEBVTT
+
+00:01.340 --> 00:10.430
+Welcome back after a long long break we're finally going to add some exciting features to our smart
+
+00:10.430 --> 00:11.930
+brain app.
+
+00:11.930 --> 00:16.900
+And by the way while you've been away I've managed to fool our clarify API.
+
+00:16.970 --> 00:21.100
+Apparently it can recognize upside down faces.
+
+00:21.350 --> 00:27.510
+But anyway let's go back to Mark now we have our content up.
+
+00:27.550 --> 00:28.780
+That is the smart brain.
+
+00:28.810 --> 00:35.600
+That is a react up and it's running on localhost three thousand one so port three thousand one.
+
+00:35.830 --> 00:40.350
+And then we also have our smart brain API which we've been working on.
+
+00:40.390 --> 00:46.960
+And actually we've described it it now has a dog or fall with dock or compose and does all these amazing
+
+00:46.960 --> 00:52.110
+things for us instead of us having to worry about databases and setting up everything.
+
+00:52.240 --> 00:57.110
+We now have this doc riced back and API with some data.
+
+00:57.610 --> 01:04.330
+And then here I've simplified things and just made a user with e-mail a com with password.
+
+01:04.340 --> 01:14.310
+A This is a hash password of using B crypt that if compared with the letter A is going to match.
+
+01:14.340 --> 01:22.820
+Now since we have our developer environment set up and let me clear this we now have the ability to
+
+01:22.850 --> 01:30.320
+do some really good quality work and implement sessions because ideally if we go back to our server
+
+01:30.350 --> 01:36.900
+dodgiest file in our endpoints over here well let's make this a little bit more smaller so we can see
+
+01:37.680 --> 01:46.020
+up until now we've kind of had this free access to sign in and register profile ID for example nobody
+
+01:46.250 --> 01:47.420
+is checking these.
+
+01:47.670 --> 01:55.440
+If for example this profile ID somebody did a get request from anywhere in the world they'll have access
+
+01:55.440 --> 02:00.890
+to this because we're not really asking for a username or password at this point.
+
+02:00.900 --> 02:05.760
+I mean we are for the seinen but anybody can log on to here.
+
+02:06.160 --> 02:15.250
+Ideally we have something in here that says we need to require auth because the way that express works
+
+02:15.520 --> 02:22.930
+just like core's embody parser and Morgan work their middleware they intercept whatever requests response
+
+02:22.930 --> 02:23.950
+we receive.
+
+02:23.950 --> 02:31.860
+They do some work around and does something and then they keep pushing it out to the end of the cycle.
+
+02:31.870 --> 02:38.590
+In our case for profile ID is to handle profile get but wouldn't it be nice to have something like require
+
+02:38.590 --> 02:46.000
+off and for every end point that we need authentication the user has to actually have permission to
+
+02:46.000 --> 02:47.400
+access the set point.
+
+02:47.470 --> 02:52.670
+We can just implement here and that's where we're going to do over the next couple of videos.
+
+02:53.570 --> 03:01.280
+We're going to use JWT read us and all those things that we've learned together to finally make an app
+
+03:01.700 --> 03:06.170
+that actually functions like apps we see in our day to day lives.
+
+03:06.560 --> 03:12.690
+And the cool part about it is by the end of this you'll have a app like the smartphone app.
+
+03:12.800 --> 03:21.440
+They can always mimic copy and modify based on your needs but you'll have your sign in log in functionality.
+
+03:21.440 --> 03:26.510
+You'll have a sign in page resume your search page already set up and you already have a server and
+
+03:26.510 --> 03:30.690
+doctor read us or read us database all set up.
+
+03:30.800 --> 03:31.940
+It's going to be a lot of fun.
+
+03:31.940 --> 03:38.990
+And by the end of it we're going to have a great tool for us to put into our portfolio or use for any
+
+03:38.990 --> 03:40.810
+of our future projects.
+
+03:40.940 --> 03:45.680
+Now the very first thing we're going to do is I'm going to remove whatever I just wrote because we don't
+
+03:45.680 --> 03:46.490
+have that yet.
+
+03:47.460 --> 03:49.950
+We want to make sure that we can run our bacot.
+
+03:49.950 --> 03:52.050
+So again we're going to run our Dr.
+
+03:54.990 --> 04:04.290
+compose up with dash dash build just to make sure that might see data my databases get created.
+
+04:04.410 --> 04:06.750
+And while that's running I'm going to go back.
+
+04:06.750 --> 04:12.490
+We see that the front end is already running and everything should be working fine.
+
+04:13.540 --> 04:19.250
+Just to test everything out once every thing is running which it is we have app is running on port 3
+
+04:19.320 --> 04:20.060
+0 0 0 0.
+
+04:20.620 --> 04:22.400
+Let's refresh over here.
+
+04:23.730 --> 04:31.960
+If I sign in with a at a dot com OK which is the C data we provided we're able to log in.
+
+04:32.490 --> 04:37.020
+And once again we can just enter a picture and it will work for us.
+
+04:37.110 --> 04:41.880
+But again our problem is that every time we refresh what we have to sign.
+
+04:42.090 --> 04:45.880
+That's a little bit annoying if you're a user isn't it.
+
+04:45.930 --> 04:46.430
+All right.
+
+04:46.650 --> 04:53.190
+And the next video we're going to start building out a profile page because in order for us to build
+
+04:53.340 --> 05:00.420
+sessions and do the require Auth. that we were talking about we need to have some sort of a meaningful
+
+05:00.420 --> 05:01.680
+reason to do this.
+
+05:01.770 --> 05:08.280
+So we're going to create a profile page where you'll be able to actually edit your name maybe some form
+
+05:08.280 --> 05:12.910
+fields about your profile so that we make our up a little bit more dynamic.
+
+05:13.020 --> 05:17.570
+And then we're going to add sessions to that see in the next one.
+
+05:17.750 --> 05:18.090
+Babai.

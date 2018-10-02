@@ -1,0 +1,211 @@
+WEBVTT
+
+00:02.400 --> 00:06.850
+Testing is an important concept in programming.
+
+00:07.090 --> 00:13.530
+Although we start off writing a simple script dodgiest file with a few lines of code.
+
+00:13.870 --> 00:20.840
+When we start getting into the Breer world you start getting thousands and millions of lines of code
+
+00:22.010 --> 00:30.730
+hundreds of javascript files files worked on by many people from different divisions in a company and
+
+00:31.360 --> 00:36.570
+most likely all of them starting at different time at the company.
+
+00:36.700 --> 00:40.570
+All the code changes happening over time at different times.
+
+00:40.570 --> 00:49.330
+As people work on the project as the complexity of the code and the size of the code increases it becomes
+
+00:49.330 --> 00:53.230
+harder and harder for someone to fix a bug that may arise.
+
+00:54.040 --> 01:00.940
+If you come into a project that has been around for years you may modify something that may modify another
+
+01:00.940 --> 01:03.770
+part of the app that you didn't think of.
+
+01:05.050 --> 01:12.840
+And you start creating all these bugs with new features that you introduce into the app.
+
+01:12.990 --> 01:19.600
+The longer that code stays in a project the more likely it is to be touched by different developers.
+
+01:20.510 --> 01:22.150
+So you see the problem here.
+
+01:22.430 --> 01:30.380
+For companies this is a huge problem because you're most likely always growing your product and adding
+
+01:30.500 --> 01:32.480
+more and more lines of code.
+
+01:32.600 --> 01:39.770
+That means that there's just going to keep making this giant monster that becomes harder and harder
+
+01:39.770 --> 01:45.310
+to tame and bugs cost companies a lot of money.
+
+01:46.520 --> 01:53.790
+Luckily for us we have something called testing which can help us solve this problem.
+
+01:55.080 --> 02:02.820
+As the name suggests testing is a method in software development where individual units of sourcecode
+
+02:03.270 --> 02:11.990
+assets or programs are tested to see whether they work properly although it may not be a big part of
+
+02:11.990 --> 02:13.690
+a coding interview.
+
+02:13.760 --> 02:20.140
+When he first get started it is a big part of any major software company that you work for.
+
+02:21.540 --> 02:28.940
+For example in my case when I first started out as a developer I didn't know that much about testing
+
+02:29.240 --> 02:31.920
+and I got hired without knowing much about testing.
+
+02:32.210 --> 02:38.600
+But the importance of testing grew more and more as they progressed in my career.
+
+02:39.170 --> 02:44.550
+And it's one of those things that we often overlook and a lot of junior developers overlook.
+
+02:44.860 --> 02:52.990
+But if you want to become a senior developer and if you want to have a long lasting career you really
+
+02:52.990 --> 03:03.530
+need to master the skill remember every serious company is going to have tests and they'll want you
+
+03:03.530 --> 03:05.620
+to write tests for your code.
+
+03:06.080 --> 03:14.150
+So how can we do this well a test is simply a nother file in your project.
+
+03:14.170 --> 03:19.110
+This file never runs in production or on a product website.
+
+03:19.150 --> 03:21.420
+Instead it runs in development.
+
+03:21.460 --> 03:26.040
+It's a file that you run to make sure before you released to production.
+
+03:26.080 --> 03:32.100
+That way you just have written works as intended.
+
+03:32.130 --> 03:37.110
+Now the best way to show you how it works is to demonstrate a test for you.
+
+03:37.530 --> 03:42.320
+So let's go to our robo friends up.
+
+03:42.370 --> 03:49.480
+I have the robo friends app here but I've included a few test just to demonstrate for you how it works.
+
+03:49.720 --> 03:53.510
+And by the end of this section you're going to be able to write this as well.
+
+03:53.650 --> 03:55.140
+And we're going to write them together.
+
+03:55.690 --> 04:05.240
+But if I run NPM run test again a command that comes with create react up let's see what happens.
+
+04:06.120 --> 04:14.050
+Gave me a few things saying that no test found related file file changes since last commit because I've
+
+04:14.050 --> 04:15.030
+already run the test.
+
+04:15.040 --> 04:16.270
+But if I press a
+
+04:19.770 --> 04:31.790
+did you Kassa we have six test suites 16 Tests and five snapshots that passed.
+
+04:32.000 --> 04:38.070
+All right what does this all mean and why do all these components have the dot test I'd just fall in
+
+04:38.070 --> 04:38.620
+here.
+
+04:38.790 --> 04:43.000
+I see a lot of green which is probably good but what does this all mean.
+
+04:44.050 --> 04:48.130
+And don't worry from here we're going to packet and see how everything works.
+
+04:48.160 --> 04:54.130
+We're going to learn about what tools we need what tools we're going to use and how we can become testing
+
+04:54.160 --> 04:55.950
+ninjas.
+
+04:56.180 --> 05:05.000
+By the way you may hear the term TDD or test driven development that is the idea of writing tests even
+
+05:05.000 --> 05:12.470
+before you actually write your application code so that you start writing code based on the tests that
+
+05:12.470 --> 05:13.410
+you provide.
+
+05:13.790 --> 05:20.450
+And some people really love this way of working and you can read up on it and decide for yourself if
+
+05:20.450 --> 05:22.610
+this is something you would want to try out.
+
+05:23.610 --> 05:24.930
+Now to get back to the point
+
+05:27.750 --> 05:31.400
+we are humans and as humans we make mistakes.
+
+05:31.490 --> 05:34.930
+It's unavoidable as an application grows.
+
+05:35.000 --> 05:43.280
+It is impossible to think of all cases in your code and have all the if statements that take care of
+
+05:43.280 --> 05:44.700
+all use cases.
+
+05:45.140 --> 05:52.350
+Especially not from the very beginning although adding tests will definitely decrease our development
+
+05:52.350 --> 05:53.220
+speed.
+
+05:53.370 --> 05:58.260
+Now we're writing more code just for tests in the long run.
+
+05:58.320 --> 06:05.250
+If your project is of a certain size it's always better to write tests because you avoid bugs in the
+
+06:05.250 --> 06:06.440
+long term.
+
+06:06.450 --> 06:07.290
+All right.
+
+06:07.620 --> 06:10.500
+In this section we're going to learn all about it.
+
+06:10.680 --> 06:16.350
+As always we're going to go through some core concepts and build our foundation and then we're going
+
+06:16.350 --> 06:19.120
+to get to coding some of our own tests.
+
+06:19.590 --> 06:20.460
+Let's get started.

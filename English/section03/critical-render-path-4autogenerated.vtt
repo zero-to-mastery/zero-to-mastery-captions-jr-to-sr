@@ -1,0 +1,139 @@
+WEBVTT
+
+00:01.750 --> 00:05.360
+Who that's been all out of information up until now.
+
+00:05.710 --> 00:13.210
+Luckily for us I'd say the hard part is over once we've got the DOM contd loaded.
+
+00:13.470 --> 00:15.130
+The next step is simple.
+
+00:15.360 --> 00:23.010
+We build the render tree which has all the information that we need from the DOM and the CSM how to
+
+00:23.010 --> 00:29.790
+construct the page from there the browser figures out the layout and the positioning of each one of
+
+00:29.790 --> 00:30.700
+these elements.
+
+00:30.870 --> 00:37.800
+And then finally paints it and we have the Load event that happens.
+
+00:37.870 --> 00:40.000
+Now you see over here there's one more step.
+
+00:40.000 --> 00:47.080
+Step number eight which is javascript and this is probably things that you're most familiar with if
+
+00:47.080 --> 00:50.310
+Javascript events change any part of the page.
+
+00:50.410 --> 00:59.110
+It causes a redraw of the render tree and it forces us to go through the lay out and paint again.
+
+01:00.390 --> 01:02.640
+And that's what web apps are right.
+
+01:02.640 --> 01:09.870
+Users interact with the page and the java script constantly modifies the page by cycling through the
+
+01:09.870 --> 01:11.730
+render tree layout and paint.
+
+01:11.730 --> 01:13.490
+And we keep going in a circle here.
+
+01:15.990 --> 01:24.040
+Now modern browsers are smart enough to only conduct a partial redraw but we can't rely on this being
+
+01:24.040 --> 01:27.030
+efficient or performant.
+
+01:27.160 --> 01:29.970
+So it's our job to make that efficient.
+
+01:30.310 --> 01:36.910
+So looking at this it looks like we definitely do want to minimize DOM manipulation and not get too
+
+01:36.910 --> 01:38.290
+carried away.
+
+01:38.290 --> 01:45.940
+Having said that obviously javascript is largely event based on the client side and we wanted to manipulate
+
+01:45.940 --> 01:46.830
+our Don.
+
+01:47.290 --> 01:54.310
+So it's going to do that but we just have to limit the under-perform and defects of good cause with
+
+01:54.310 --> 01:54.660
+it.
+
+01:55.890 --> 02:04.530
+Now let's recap one more time what we've learned with the critical render path we've learned how to
+
+02:04.770 --> 02:11.280
+optimize each one of these files in that critical render path so that our browsers can display the web
+
+02:11.280 --> 02:16.230
+page or web app as soon as possible for the user.
+
+02:16.240 --> 02:22.270
+We also should have a better understanding of this silly little animation that I made at the beginning
+
+02:22.600 --> 02:23.530
+of the section.
+
+02:24.540 --> 02:31.730
+We now understand how a shemale and C Ss get downloaded.
+
+02:31.820 --> 02:37.850
+We also know how the construction of the DOM tree and the CSSA arm is being constructed.
+
+02:37.880 --> 02:43.890
+We also know that javascript gets downloaded and then acts upon those two trees.
+
+02:45.310 --> 02:54.280
+And then finally using both of those we're able to construct the render tree.
+
+02:54.480 --> 03:00.710
+And then finally while not finally and then we get the lay out figure out their layout from the render
+
+03:00.710 --> 03:11.910
+tree we paint pixels on the screen and then finally we have our Web page displayed.
+
+03:11.960 --> 03:17.080
+And oh yeah we also have our little image that gets loaded in the background.
+
+03:18.030 --> 03:19.520
+Q That's a lot of work.
+
+03:19.530 --> 03:22.460
+Pretty impressive for browsers.
+
+03:22.590 --> 03:28.140
+Now I'm going to leave some of those files that are used in these videos so you can practice and test
+
+03:28.320 --> 03:29.650
+different things out.
+
+03:29.670 --> 03:36.510
+Keep in mind that different browsers behave differently and browsers are always trying to improve performance.
+
+03:36.540 --> 03:37.800
+Things may change.
+
+03:37.830 --> 03:44.310
+For example chrome right now is working on having javascript not be parser blocking and rendering in
+
+03:44.310 --> 03:51.740
+the background so keep that in mind as you explore some of those different topics that we practiced
+
+03:51.780 --> 03:53.550
+in these videos.
+
+03:53.550 --> 03:56.520
+Have fun and I'll see in the next video by.

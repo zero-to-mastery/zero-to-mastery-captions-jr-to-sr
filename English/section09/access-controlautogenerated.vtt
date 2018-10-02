@@ -1,0 +1,253 @@
+WEBVTT
+
+00:02.870 --> 00:03.670
+Welcome back.
+
+00:03.680 --> 00:05.810
+We're getting closer and closer to the end.
+
+00:05.960 --> 00:07.830
+Let's talk about access control.
+
+00:08.990 --> 00:17.310
+Access control is having restrictions on what authenticated users are allowed to do or not.
+
+00:18.610 --> 00:23.260
+So this is something that happens after you're giving authentication.
+
+00:23.260 --> 00:30.340
+That is we know the user but what do they have access to see attackers can exploit these flaws to access
+
+00:30.400 --> 00:39.450
+unauthorized functionality data and other access points that can see users accounts views sensitive
+
+00:39.450 --> 00:42.350
+files maybe even modify user data.
+
+00:42.720 --> 00:50.760
+So you want to make sure that the access control or access rights are in check for your project.
+
+00:51.880 --> 00:59.440
+Now with access control the main idea is this principle of least privilege you're going to hear this
+
+00:59.440 --> 01:00.240
+everywhere.
+
+01:00.280 --> 01:07.700
+Always give the least amount of privilege possible give only enough that people can do their work.
+
+01:08.490 --> 01:14.400
+And a great example of this is something that we've actually already done.
+
+01:14.440 --> 01:20.590
+If you remember in our security service that we've been working on I know it's a little bit messy so
+
+01:20.590 --> 01:22.830
+let's just clean it up for now.
+
+01:22.980 --> 01:30.080
+We're going to remove this and remember the course that I said we're going to get back to him we're
+
+01:30.080 --> 01:39.670
+going to talk about well Corps is very important for security and especially access control.
+
+01:39.680 --> 01:42.460
+Let's show you what happens when we don't use course.
+
+01:42.500 --> 01:50.210
+So I'm going to comment this out I'm going to save and then go back to our make me secure playground
+
+01:50.220 --> 01:56.780
+over here and let's type something I'm typing something and then let's look at the console as I submit.
+
+01:58.040 --> 02:06.380
+Oh we get some errors saying that pass access control no access control allow origin.
+
+02:06.410 --> 02:07.380
+What does that mean.
+
+02:07.420 --> 02:09.040
+Says set request motu.
+
+02:09.050 --> 02:12.360
+No course to Fessor resources.
+
+02:12.380 --> 02:13.450
+All right.
+
+02:13.470 --> 02:18.070
+Core's stands for cross origin resource sharing.
+
+02:18.380 --> 02:23.020
+I know all these names don't really make sense of the beginning but let me simplified that.
+
+02:23.120 --> 02:30.520
+All it saying is I need to have I don't have access for you to access the server.
+
+02:30.680 --> 02:40.730
+You see if we just created servers like this and just left it without cause well then anybody can access
+
+02:40.730 --> 02:41.260
+them.
+
+02:41.360 --> 02:48.170
+Maybe this server is only meant to be by myself for my special purposes but if I have random people
+
+02:48.170 --> 02:56.030
+accessing the server utilizing the machine and using up resources that could cost me a lot of money
+
+02:56.450 --> 03:02.380
+and for security reason we don't want to just give access to anybody to to these endpoints.
+
+03:02.420 --> 03:07.100
+I mean even just for this entire server may maybe this secret endpoint.
+
+03:07.130 --> 03:15.690
+We only want a certain domain or a certain website to actually be able to send secrets.
+
+03:15.920 --> 03:19.900
+We don't want bad people to just be able to send secrets.
+
+03:19.910 --> 03:30.770
+We do this by adding course and by adding cores I'm saying yeah yeah just let's let's this cross origin
+
+03:30.770 --> 03:31.970
+resource sharing happen.
+
+03:31.970 --> 03:33.150
+I don't mind at all.
+
+03:33.440 --> 03:34.760
+And if I refresh your
+
+03:37.590 --> 03:45.000
+and I sense something all right it's working fine that's great but that's not really good.
+
+03:45.060 --> 03:51.210
+I mean we want the principle of least privilege that is we want to get the least amount of access to
+
+03:51.210 --> 03:56.220
+make our apps work and in our case we don't want to just give access to everybody.
+
+03:56.370 --> 04:01.160
+We want to give access to only people that we trust.
+
+04:01.230 --> 04:03.520
+So cores in their documentation.
+
+04:03.780 --> 04:10.140
+If you go to their NPM package actually has some really really good documentation and code snippets
+
+04:10.140 --> 04:10.980
+that you can use.
+
+04:11.310 --> 04:13.030
+But let me show you one of them.
+
+04:14.280 --> 04:21.260
+If I copy and paste this from their documentation they essentially have something called core's options
+
+04:21.640 --> 04:26.860
+and these are just options that we give that we check this wireless.
+
+04:26.860 --> 04:34.910
+That is a good list of domains out we're giving access to hit our endpoints in our server and cores
+
+04:34.910 --> 04:41.780
+option just has an origin function that checks this wide list and all we need to do is add this core's
+
+04:41.780 --> 04:44.760
+options as a parameter.
+
+04:45.020 --> 04:56.450
+So now if I save this and go back to my Web site let's refresh and I type something oh no no no no you're
+
+04:56.450 --> 05:00.230
+not of those Web sites that we waitlisted we're not gonna let you in.
+
+05:01.180 --> 05:01.820
+Awesome.
+
+05:02.110 --> 05:04.830
+So let's give the access just to us.
+
+05:05.050 --> 05:11.530
+Right now I just have it locally running as you can see on my file but on get help over here which you
+
+05:11.530 --> 05:12.790
+have access to as well.
+
+05:12.920 --> 05:17.500
+I've put it up on get her pages so I have a nice yourself.
+
+05:17.680 --> 05:21.960
+So let's say that we want my I negotiate.
+
+05:22.160 --> 05:22.950
+Dodd get hard.
+
+05:22.970 --> 05:26.550
+I go to have access so that we can send information.
+
+05:26.830 --> 05:31.670
+Well let's open up the console to test the case where we don't have permission.
+
+05:32.180 --> 05:33.740
+Yep we get better.
+
+05:34.150 --> 05:38.710
+And let's add this to the white list.
+
+05:38.720 --> 05:39.500
+All right.
+
+05:39.500 --> 05:42.300
+I'm saving this and going back.
+
+05:42.320 --> 05:45.490
+Let's refresh just have a clean slate.
+
+05:45.510 --> 05:47.590
+I'm going to type something.
+
+05:47.800 --> 05:49.620
+Boom we have access.
+
+05:49.750 --> 05:50.960
+No issues here.
+
+05:50.980 --> 05:52.170
+You've actually received.
+
+05:52.180 --> 05:53.000
+Look at that.
+
+05:53.020 --> 05:55.560
+We've actually received this user input.
+
+05:55.720 --> 05:58.270
+Very very cool.
+
+05:58.280 --> 06:06.890
+Now this is one principle in access control but it can apply to anything to administrator privileges
+
+06:06.890 --> 06:09.970
+to database access to anything.
+
+06:09.980 --> 06:15.080
+The main idea is this one line principle of least privilege.
+
+06:15.290 --> 06:21.060
+Never give more privilege than you need to only just the right amount.
+
+06:21.220 --> 06:25.180
+So that way we give less attack points to bad people.
+
+06:27.300 --> 06:27.820
+All right.
+
+06:27.960 --> 06:29.060
+That's it for now.
+
+06:29.070 --> 06:30.690
+See you in the next one by.

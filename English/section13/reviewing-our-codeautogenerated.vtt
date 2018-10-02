@@ -1,0 +1,103 @@
+WEBVTT
+
+00:01.200 --> 00:05.470
+Oh boy that was a long journey but we've managed to do it.
+
+00:05.640 --> 00:13.640
+We've managed to add session into our app and make everything just feel perfect.
+
+00:13.660 --> 00:15.130
+We have our images submitted.
+
+00:15.130 --> 00:22.120
+We can update profiles we can submit images and we make sure that every time we refresh we have access
+
+00:22.120 --> 00:23.280
+to our profile.
+
+00:23.320 --> 00:27.310
+We have protected routes we've managed to add session.
+
+00:27.580 --> 00:30.000
+So let's review over what we've just done.
+
+00:32.660 --> 00:41.210
+Well on the back end if we go back here we see that we've now added authentication middleware to make
+
+00:41.210 --> 00:46.080
+sure that these protected endpoints are not touched by anybody that shouldn't be.
+
+00:46.160 --> 00:48.020
+They must have a token.
+
+00:48.200 --> 00:55.820
+We also incorporated sign in authentication and sign in authentication is a really really nice Hendler
+
+00:56.180 --> 01:00.360
+that allows us to check if there is an authorization header.
+
+01:00.680 --> 01:07.400
+If there is well in that case talk to the rattus database grab the token and grab the idea of the user
+
+01:07.880 --> 01:12.840
+and give them that information so they can retrieve the profile information.
+
+01:12.890 --> 01:20.390
+Do a GET request to profile ID which again is protected so they must pass a authorization token with
+
+01:20.390 --> 01:21.110
+it.
+
+01:21.110 --> 01:25.050
+And then if they don't have an authorization header this is their first time signing in.
+
+01:25.160 --> 01:34.890
+Make sure that we handle the sign in to check all these things create a session add a data point in
+
+01:35.070 --> 01:40.860
+our read us database and then finally return their session with their token I.D. so they can do whatever
+
+01:40.860 --> 01:46.710
+they want like getting profile and you might notice that we haven't really done this for register.
+
+01:46.720 --> 01:52.030
+We might have to implement some of this into our register and point as well but that's something that
+
+01:52.210 --> 01:57.100
+you can do on your own and it's fairly simple to do now that we've got a basic understanding of how
+
+01:57.100 --> 01:57.930
+this works.
+
+02:00.070 --> 02:07.750
+And all we had to do on the front end was at our token that we receive two session storage and then
+
+02:07.810 --> 02:15.030
+for any protected routes that were accessing we had to include the token into our request and that's
+
+02:15.030 --> 02:17.310
+how sessions work.
+
+02:17.310 --> 02:22.530
+We make sure that we protect what's valuable to us and only the people that can access it can access
+
+02:22.530 --> 02:23.020
+it.
+
+02:23.370 --> 02:29.700
+The interesting thing that we can do now is anytime a user signs out we can simply make sure that we
+
+02:29.700 --> 02:36.450
+remove the token from session storage in our code but also we can send a request a son or a request
+
+02:36.510 --> 02:44.370
+to our and point to make sure that we remove that token from our rattus database so we have full control
+
+02:44.580 --> 02:51.300
+of when we revoke tokens when we expire them when we do all these things which is really really nice.
+
+02:52.650 --> 02:55.980
+So let's go show off our work to Bruno.
+
+02:55.980 --> 02:57.810
+I'll see in the next video but by.

@@ -1,0 +1,253 @@
+WEBVTT
+
+00:01.860 --> 00:12.810
+Initially web pages displayed in very simple fashion you had one page per year now if your Web site
+
+00:12.810 --> 00:19.830
+had multiple pages you would simply add another HVM Alpha Multiple a similar files.
+
+00:19.830 --> 00:28.920
+For example if you had a home page and about page you'd have a home Daut HMO and an about 8 e-mail page
+
+00:29.790 --> 00:36.480
+and you'd have an anchor tag or an eight tag and you're a shemale that would link these two pages together.
+
+00:37.610 --> 00:46.850
+This means that if you clicked on the about link in the home page then a request would be made out to
+
+00:46.850 --> 00:55.400
+the server to get the about a shemale and display it on the browser but that was the past.
+
+00:55.790 --> 01:01.030
+And now there's multiple ways to do something like this.
+
+01:01.120 --> 01:08.270
+And in this section we're going to talk about that about single page applications versus server side
+
+01:08.450 --> 01:09.730
+rendered applications.
+
+01:10.740 --> 01:18.270
+Let's go take a look at how Web sites used to be right here we have the very first web page that was
+
+01:18.270 --> 01:24.260
+ever created by Tim Berners-Lee while he was working at CERN.
+
+01:24.340 --> 01:30.010
+If you look up at the you are Albar over here as I click on different things.
+
+01:30.040 --> 01:32.880
+A new file is generated
+
+01:36.230 --> 01:41.910
+and every time I switch links a request is made to the browser.
+
+01:42.200 --> 01:42.990
+Let's have a look.
+
+01:45.690 --> 01:53.000
+If I go to my network tab and I click on what's out there I get naked female page another a shemale
+
+01:53.010 --> 01:57.400
+page if I go back again another request and another request.
+
+02:00.390 --> 02:03.520
+And this was the way things worked.
+
+02:03.550 --> 02:04.500
+Life was good.
+
+02:04.540 --> 02:13.920
+Life was easy because this was the conventional method of getting your HMO up onto a screen by using
+
+02:14.220 --> 02:19.930
+server side rendering server side rendering worked great at the time too.
+
+02:20.630 --> 02:27.850
+Because all we did was just render the ASTM I'll send it to the client which is their web browser and
+
+02:27.850 --> 02:31.600
+the browser would create that Dom and render it on the page.
+
+02:32.620 --> 02:34.840
+And server side rendering work great.
+
+02:34.840 --> 02:44.050
+At the time too since most web pages back then were just displaying static images and text with very
+
+02:44.050 --> 02:46.270
+little to do with interactivity.
+
+02:47.250 --> 02:55.740
+Once I click on a link here and the request goes to the server the request is then finished processing
+
+02:56.220 --> 03:03.460
+and your browser gets back a fully rendered him l so that it can display it on the screen.
+
+03:05.010 --> 03:10.740
+And like you saw before if I click on a different page than your browser will make that same process
+
+03:10.740 --> 03:12.090
+again make request.
+
+03:12.240 --> 03:18.420
+The server always will process a request send back a fully rendered Jimoh and then the browser will
+
+03:18.420 --> 03:19.830
+read that ASTM Alpha.
+
+03:20.160 --> 03:27.960
+And this occurs each and every time you visit a page it doesn't even matter if one of these pages was
+
+03:27.960 --> 03:34.930
+very similar to the other and maybe we don't need this title to be read rendered again that doesn't
+
+03:34.930 --> 03:35.460
+really matter.
+
+03:35.500 --> 03:41.770
+The browser will always ask for the entire page and will render everything on the page.
+
+03:42.790 --> 03:44.570
+So all was good back then.
+
+03:44.650 --> 03:51.220
+But wait CSSA and Javascript came around and people started making their websites do more things than
+
+03:51.220 --> 03:54.120
+just display text and images.
+
+03:54.400 --> 03:56.610
+CSSA added styles and colors.
+
+03:57.420 --> 04:01.200
+But javascript came along and added a whole lot more.
+
+04:01.740 --> 04:09.150
+Since then something called single page applications or espies had become more and more popular.
+
+04:09.240 --> 04:17.740
+Something like product on over here these single page applications will just have one ACM Alpha and
+
+04:17.740 --> 04:22.150
+the rest such as navigating between links
+
+04:25.670 --> 04:32.150
+or navigating between pages is done inside the javascript programmatically.
+
+04:32.150 --> 04:36.620
+You no longer need to go to the server to request a new page every time.
+
+04:36.620 --> 04:38.980
+Sounds pretty sweet right.
+
+04:38.990 --> 04:46.160
+I can just play around and the page doesn't refresh just parts of the page refresh that I need and everything
+
+04:46.160 --> 04:53.760
+is nice and fast to so because of this single page applications became more and more powerful because
+
+04:54.150 --> 05:00.360
+you could argue that Web sites these days are a lot more like applications than just Web sites that
+
+05:00.360 --> 05:01.360
+we had back then.
+
+05:02.660 --> 05:10.760
+And the idea of a single page application or a client side rendered application vs a server side application
+
+05:11.300 --> 05:19.670
+was really popularized in javascript lent by libraries like angular one backbone and reac because you
+
+05:19.670 --> 05:25.850
+avoided this constant request to the server to change pages and update only parts of the page that you
+
+05:25.850 --> 05:29.100
+actually need and things looked a lot faster.
+
+05:29.180 --> 05:37.250
+As you can see here again modern web sites are not simple modern web sites have hundreds of lines of
+
+05:37.250 --> 05:44.970
+code and are much more complex imagining how we would browse a web page and having to wait for each
+
+05:45.000 --> 05:52.140
+and every page to render when navigating a site like we would have to with server side rendering would
+
+05:52.140 --> 05:54.810
+be a huge headache.
+
+05:54.980 --> 05:59.930
+By the way this is the experience you get with older WordPress websites where every time you click on
+
+05:59.930 --> 06:04.710
+a page you wait staring at a blank screen for that new page to load.
+
+06:05.960 --> 06:11.520
+They have a ton of javascript but it's a server side rendered Web site.
+
+06:11.620 --> 06:11.990
+All right.
+
+06:11.990 --> 06:19.040
+So client side rendering is the way of the future single page applications when Let's scrap server side
+
+06:19.040 --> 06:19.960
+rendering forever.
+
+06:19.970 --> 06:21.020
+We're done here.
+
+06:21.020 --> 06:23.320
+Wait just a second.
+
+06:23.480 --> 06:29.990
+We should know by now that too much of anything is not good for you.
+
+06:30.060 --> 06:36.850
+You see there are two major issues when it comes to single page applications.
+
+06:36.870 --> 06:41.920
+One is that more Javascript is sent to the client on the initial request.
+
+06:42.880 --> 06:48.850
+Because again we have hundreds of lines of code because javascript takes care of the routing and the
+
+06:48.850 --> 06:57.530
+pages and the views for us so it takes longer for the javascript to get sent and then to execute pages
+
+06:57.530 --> 07:00.120
+become more bloated and slower to load.
+
+07:00.410 --> 07:08.900
+Because of this the second issue is SVO performance or search engine optimization.
+
+07:08.920 --> 07:16.060
+It's a lot harder to do good SEO on a single page application than a server side rendered application
+
+07:16.540 --> 07:18.270
+and we'll get into that.
+
+07:18.400 --> 07:23.820
+We're going to talk about all the details between what we like to call client side rendering which are
+
+07:24.040 --> 07:30.970
+what single page applications are and server side rendered applications with each one of them having
+
+07:30.970 --> 07:34.680
+pros and cons in this section.
+
+07:34.800 --> 07:41.280
+We're going to be able to decide when we need to do one over the other and give Brunow the right decision
+
+07:41.610 --> 07:44.700
+for the road befriends product.
+
+07:44.710 --> 07:49.570
+We're also going to play with some really fun server side rendering libraries.
+
+07:49.570 --> 07:50.960
+Time to get started.
+
+07:51.010 --> 07:51.780
+I'll see you on site.

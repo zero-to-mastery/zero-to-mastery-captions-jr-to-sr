@@ -1,0 +1,397 @@
+WEBVTT
+
+00:01.130 --> 00:02.710
+Walk them back.
+
+00:02.750 --> 00:08.190
+Let's now implement this bar where we actually get the profile from the back end.
+
+00:08.210 --> 00:10.570
+Now this should be fairly simple to do.
+
+00:10.610 --> 00:19.640
+All we really have to do is to say as long as we have the data with the ID we can do a now or fetch
+
+00:20.180 --> 00:33.190
+call to our AM point except this endpoint now will be the profile endpoint and this profile endpoint
+
+00:33.190 --> 00:36.870
+is going to receive the idea of the user that we just got.
+
+00:36.970 --> 00:40.400
+So that is data that ID in our case will be.
+
+00:40.440 --> 00:49.040
+Our sample User A which is that idea of one and once again we need to give it second parameters that
+
+00:49.040 --> 00:56.930
+is going to have I'm just going to copy whatever we had up ahead.
+
+00:57.070 --> 00:59.460
+It's going to be a GET request.
+
+00:59.710 --> 01:08.800
+The tokin is going to be the token that we've have already from here and with the profile requests if
+
+01:08.800 --> 01:13.840
+all goes well well we have to do our response Jaison
+
+01:19.020 --> 01:22.290
+and then we'll get the actual
+
+01:25.460 --> 01:29.710
+And this user information as long as their gut End Point is working.
+
+01:29.870 --> 01:31.680
+We can do a bit of a check.
+
+01:31.730 --> 01:37.780
+Let's just say user and user e-mail for now
+
+01:41.010 --> 01:48.450
+if that checks out then just do our load user function because remember our load user function whereas
+
+01:48.450 --> 01:57.870
+it just receives data from here so we'll say load user data and we also want to call the on route change
+
+01:58.020 --> 01:59.680
+to go home.
+
+02:00.950 --> 02:04.560
+Just like we have in the seinen component.
+
+02:04.610 --> 02:06.310
+So just copy that.
+
+02:06.620 --> 02:09.870
+We're going to call on route change to go home as well.
+
+02:10.980 --> 02:17.250
+Now let's save go back to our app make sure that none of our tokens are there.
+
+02:17.250 --> 02:17.570
+All right.
+
+02:17.580 --> 02:27.070
+Everything is clear and I'm going to sign in with a at a dot.com and other a sign and I still get on
+
+02:27.070 --> 02:28.460
+to find him.
+
+02:28.720 --> 02:30.160
+Let's check this out.
+
+02:30.880 --> 02:37.020
+Well silly me this shouldn't be data this should be user.
+
+02:37.180 --> 02:40.880
+So let's say that again go back.
+
+02:41.080 --> 02:48.600
+Let's make sure that we remove the tokens and we get our error here because well this isn't a prop on
+
+02:48.600 --> 02:50.840
+route change is actually a method.
+
+02:51.000 --> 02:55.360
+I believe that we have over here on the app component.
+
+02:55.500 --> 03:00.990
+So let's just remove the props hit save let's go back again.
+
+03:01.030 --> 03:08.070
+No session storage a tradeoff a seinen.
+
+03:08.350 --> 03:12.380
+And I still get undefined if we go back.
+
+03:12.380 --> 03:15.050
+Let's see where we actually get from the user.
+
+03:15.070 --> 03:16.800
+And so I'm trying to console the log
+
+03:19.750 --> 03:22.510
+user groups not that user.
+
+03:22.630 --> 03:23.230
+Let's save
+
+03:26.620 --> 03:26.950
+and.
+
+03:26.950 --> 03:27.250
+All right.
+
+03:27.250 --> 03:29.480
+So this is the user that we're getting.
+
+03:29.590 --> 03:32.170
+And all of a sudden it's working.
+
+03:32.170 --> 03:34.420
+I might have had to refresh.
+
+03:34.610 --> 03:34.860
+OK.
+
+03:34.870 --> 03:40.590
+So I am getting ID name e-mail entries.
+
+03:40.790 --> 03:44.220
+I am getting this information as I expected it.
+
+03:44.240 --> 03:46.850
+It's being loaded as you can see here.
+
+03:48.030 --> 03:51.880
+Let's just sign out again and make sure that everything is working.
+
+03:53.130 --> 03:57.210
+Want to refresh again because we haven't implemented a sign out function.
+
+03:57.480 --> 03:58.520
+Our token still here.
+
+03:58.590 --> 04:09.780
+So as soon as I refresh I'm logged in I'm going to try this one more time let's clear this sign out.
+
+04:10.210 --> 04:14.810
+A dot com so that we get our token.
+
+04:15.050 --> 04:16.680
+Once we get the token.
+
+04:17.120 --> 04:18.970
+All right so there's a bit of logic here.
+
+04:18.980 --> 04:24.220
+As soon as I refresh I get my user profile.
+
+04:24.510 --> 04:29.680
+But as soon as I sign in I don't get my user profile and that should trigger something.
+
+04:29.910 --> 04:30.420
+Right.
+
+04:30.450 --> 04:36.320
+Because our app is handling this which is working nicely.
+
+04:36.360 --> 04:47.340
+However we're not handling the seinen correctly because now the load user and point this data only receives
+
+04:47.340 --> 04:49.260
+their user ID.
+
+04:49.260 --> 04:54.520
+And here we can do a little bit of a trick because of how re-act works.
+
+04:54.540 --> 04:59.840
+Remember every time we update state react Rieu renders.
+
+05:00.210 --> 05:08.310
+So in here we're just sending the data object that has user ID and a success and the token but load
+
+05:08.340 --> 05:19.920
+user right now if we go to load user has a few different things and there's so many ways that you can
+
+05:19.920 --> 05:20.840
+do this.
+
+05:20.990 --> 05:23.570
+You might want to change this load user function
+
+05:27.250 --> 05:30.630
+so in here there's a few ways that you can actually do this.
+
+05:30.760 --> 05:35.950
+You can already see here that this is getting a little bit long and messy and we might want to extrapolate
+
+05:35.950 --> 05:43.120
+it into or extract it into separate functions but for brevity sake and just to keep things moving along
+
+05:43.390 --> 05:49.260
+I'm going to just use the same get request that we use here to get that user profile.
+
+05:49.270 --> 05:56.000
+So after we've received the user id I'm going to save the auth token.
+
+05:56.530 --> 06:01.520
+And before I load the user and change the route change I'm going to remove that.
+
+06:01.780 --> 06:04.290
+I'm going to copy and paste this.
+
+06:04.330 --> 06:13.360
+That allows us to remove the little statements over here and we don't need to check for the if statement
+
+06:13.370 --> 06:14.310
+anymore.
+
+06:21.910 --> 06:22.480
+There you go.
+
+06:22.480 --> 06:29.560
+We're saving the auto can and then we're doing a fast call to get profile and once we get that back
+
+06:32.390 --> 06:39.640
+we are going to then use the user name to load user and change the route.
+
+06:39.800 --> 06:49.230
+Let's save and we have a bit of an error here because on line 42 tokens should be data Daut token.
+
+06:49.480 --> 06:52.840
+So data dot token.
+
+06:52.870 --> 06:53.340
+All right.
+
+06:53.410 --> 06:54.530
+Let's save here.
+
+06:54.550 --> 07:00.930
+Go back and I'm going to open up developer Pro-Tools Network tab or application tab.
+
+07:00.940 --> 07:02.710
+Make sure that we clear our storage.
+
+07:02.740 --> 07:08.830
+I'm going to refresh which makes us get into the site en route because we don't have a token sign in
+
+07:08.830 --> 07:10.210
+with our good friend a
+
+07:13.050 --> 07:13.450
+word.
+
+07:13.460 --> 07:16.290
+We have a bit of a never bad request.
+
+07:17.830 --> 07:20.440
+Ere getting user.
+
+07:20.660 --> 07:26.880
+And that's because data dot I.D. should be data user ID.
+
+07:26.900 --> 07:31.940
+Again this is another great example of why you might want to have a single function between app and
+
+07:31.950 --> 07:36.590
+seinen that does the same thing and you can use that both in both ways.
+
+07:36.590 --> 07:43.440
+And instead of having these cases and there's let's give that a go again.
+
+07:43.610 --> 07:44.720
+Let's delete our token
+
+07:47.800 --> 07:56.430
+refresh which makes us sign out and give this another go.
+
+07:56.430 --> 08:00.140
+All right we get the token.
+
+08:00.360 --> 08:04.510
+But this lodes user is not a function because.
+
+08:04.610 --> 08:06.300
+This should be crop's.
+
+08:06.390 --> 08:11.290
+So a few little adjustments here that we need to make.
+
+08:11.300 --> 08:12.140
+All right.
+
+08:12.140 --> 08:13.300
+One last time.
+
+08:13.370 --> 08:15.720
+This is bound to work.
+
+08:15.860 --> 08:24.390
+But this is life of a developer just costly debugging your code and look at that we're logged in with
+
+08:24.480 --> 08:25.120
+everything.
+
+08:25.260 --> 08:33.030
+Every time I refresh Now look at that I'm able to immediately grab my user so I don't have to keep signing
+
+08:33.030 --> 08:33.630
+in.
+
+08:33.630 --> 08:35.470
+That's very very nice.
+
+08:35.700 --> 08:44.150
+But if I ever remove my token or my token gets expired or revoked and I have to refresh.
+
+08:44.150 --> 08:44.990
+Sorry boss.
+
+08:45.080 --> 08:49.110
+You cannot say you not access that information.
+
+08:49.460 --> 08:51.650
+How cool is that.
+
+08:51.650 --> 08:54.920
+Let's just go over the code a little bit to make sure we're clear.
+
+08:55.200 --> 08:58.250
+An apt Yes on component did mount.
+
+08:58.340 --> 09:01.890
+We're simply checking for a token if there is a token.
+
+09:02.000 --> 09:09.200
+We're just going to have for the sign in route to get our ID from our database.
+
+09:09.440 --> 09:18.020
+Once we have that ID we have access to request the profile ID and then we get our user and we can load
+
+09:18.020 --> 09:26.150
+our user and change our route to home in the signing case where we don't have the session or we don't
+
+09:26.150 --> 09:27.250
+have the token.
+
+09:27.590 --> 09:35.900
+In that case we need to sign in with our email and password get our token and our ID we saved the token
+
+09:36.800 --> 09:45.830
+and then finally we can get the profile that we have now doing all of this was nice but there's still
+
+09:45.830 --> 09:46.550
+one issue.
+
+09:46.550 --> 09:53.630
+One last thing we need to do that is wouldn't it be nice if for all these endpoints that we really really
+
+09:53.630 --> 09:55.430
+care about to have.
+
+09:55.550 --> 10:01.890
+Well we mentioned before a middleware that before the request gets into perhaps handle register hand-job
+
+10:01.910 --> 10:04.830
+profile get a handle profile update.
+
+10:04.910 --> 10:11.900
+We have some sort of a middleware that says you need to require that simply checks for authorization
+
+10:12.700 --> 10:18.680
+Hatter and the token if the user has it then you can go on and proceed and update your profile.
+
+10:18.680 --> 10:20.960
+Otherwise just skip that entire process.
+
+10:20.960 --> 10:24.330
+That entire logic you're getting kicked out.
+
+10:24.350 --> 10:30.020
+So in the next video we're going to finish everything and implement that see in the next one.
+
+10:30.080 --> 10:30.270
+Bobby.

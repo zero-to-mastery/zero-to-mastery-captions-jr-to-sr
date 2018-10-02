@@ -1,0 +1,109 @@
+WEBVTT
+
+00:01.270 --> 00:02.260
+Welcome back.
+
+00:02.260 --> 00:08.890
+We just wrote a few lines of typescript code but the one thing that was kind of annoying was that we
+
+00:08.890 --> 00:12.710
+had to constantly run this command to compile our code.
+
+00:12.820 --> 00:17.760
+Ideally we can just have that running and done automatically.
+
+00:18.130 --> 00:20.470
+And that way we can do that is quite simple.
+
+00:20.470 --> 00:33.480
+We can initialize our project as a typescript project by simply running TS C dash dash in it.
+
+00:33.560 --> 00:37.570
+We see that it's created a TS config based on file.
+
+00:37.820 --> 00:48.250
+If we go to this file we see that it's created what we call a configuration file for typescript and
+
+00:48.340 --> 00:58.330
+you can see over here that this file gives us a ton of option for the compiler to check and the compiler
+
+00:58.360 --> 01:01.380
+options can do many things.
+
+01:01.390 --> 01:05.220
+We see that our target is yes 5.
+
+01:05.440 --> 01:11.140
+And it says specify ECMAScript version and you can see how many defaults they have.
+
+01:11.140 --> 01:15.910
+So for example if I changed this to let's see there are options that they're giving us let's change
+
+01:15.910 --> 01:18.180
+it to E.S. 2017.
+
+01:18.580 --> 01:22.040
+So I'll say yes 20 17.
+
+01:22.270 --> 01:25.620
+What kind of modules we want to use we can do common gas.
+
+01:25.720 --> 01:27.760
+Or perhaps you want to do.
+
+01:27.760 --> 01:32.770
+Yes 2015 and a ton of options.
+
+01:32.830 --> 01:40.510
+You basically can decide what kind of work you want the compiler to do and what type of output we need.
+
+01:40.600 --> 01:45.850
+And the great thing about this config file is that it actually describes every little thing that you
+
+01:45.850 --> 01:53.680
+can do online you also have a great documentation on TS config file if you want to get really into it.
+
+01:56.310 --> 02:03.060
+But don't worry later on I'm going to show you how to actually simplify this step or how it's already
+
+02:03.060 --> 02:04.950
+been simplified for us.
+
+02:04.950 --> 02:12.260
+For now though we have a TS config file which is the default setup for now.
+
+02:12.370 --> 02:18.650
+If we go to typescript us so we just cleared our terminal.
+
+02:18.780 --> 02:23.760
+And the way we are able to run this and watch mode is quite simple.
+
+02:23.760 --> 02:36.120
+All we need not here all we need is TSC typescript dot TS and then dash dash watch for watch mode and
+
+02:36.120 --> 02:41.770
+you can see over here it's starting compilation Kham compilation is complete and now it's watching for
+
+02:41.770 --> 02:42.580
+changes.
+
+02:43.000 --> 02:48.520
+And every time I say if it's going to recompile and detect these changes.
+
+02:48.790 --> 02:55.730
+For example if I change this now to a boolean value it's going to give me an error.
+
+02:55.860 --> 02:59.440
+And the compiler says you're doing something wrong here.
+
+02:59.580 --> 03:00.060
+All right.
+
+03:00.120 --> 03:03.540
+So we have this running and everything set up.
+
+03:03.600 --> 03:09.280
+I think it's time for us to go through all the typeset typescript give us and do a bit of coding.
+
+03:09.420 --> 03:14.880
+So get that set up on your computer on your machine and I'll see in the next video by.

@@ -1,0 +1,373 @@
+WEBVTT
+
+00:02.100 --> 00:03.330
+Welcome back.
+
+00:03.330 --> 00:08.380
+Let's start to actually write a test for the Google search function.
+
+00:08.460 --> 00:13.640
+The first thing we want to do is obviously have access to this Google search function.
+
+00:13.770 --> 00:17.300
+But in our test file and that's simple.
+
+00:17.320 --> 00:19.460
+This is simply just javascript.
+
+00:19.480 --> 00:27.070
+We can just export this function and import it in here now because this is node and we're now running
+
+00:27.070 --> 00:31.090
+in the browser or using Babel or wetback.
+
+00:31.240 --> 00:34.620
+We don't have the import and export statements yet.
+
+00:34.630 --> 00:35.970
+No it is working on that.
+
+00:36.070 --> 00:44.710
+But for now they're still using common Yes which as you might know has the syntax module that exports
+
+00:45.520 --> 00:46.450
+equals.
+
+00:46.660 --> 00:50.390
+And we'll just do the Google search.
+
+00:50.590 --> 00:52.760
+We're going to export this.
+
+00:52.810 --> 01:03.650
+And then finally we can import this at the very top of this test by saying Konst Google search equals
+
+01:05.190 --> 01:09.800
+require from the script to
+
+01:13.420 --> 01:14.380
+let's save that.
+
+01:14.650 --> 01:27.210
+And just to test it legist console logged this and do a google search save Ron NPM s test.
+
+01:27.280 --> 01:27.810
+All right.
+
+01:27.970 --> 01:38.110
+So we have our console log of Google search that's on script dodginess but also in the past we see that
+
+01:38.170 --> 01:43.100
+we're logging out function Google search which is great.
+
+01:43.180 --> 01:48.670
+We're going to comment this up for now because we know it's working we don't want to console log.
+
+01:49.010 --> 01:56.630
+But you might have also noticed that it's kind of annoying running NPM test over and over and over.
+
+01:56.780 --> 02:05.040
+And luckily for us with gests we can do a nice easy command dash dash watch and then we give it what
+
+02:05.040 --> 02:06.320
+to watch for in our case.
+
+02:06.330 --> 02:08.090
+All javascript files.
+
+02:08.160 --> 02:16.570
+So any time we make changes to any javascript files just is going to watch out for those and have the
+
+02:16.630 --> 02:19.920
+test running constantly.
+
+02:20.000 --> 02:20.820
+Let's see what I mean.
+
+02:20.930 --> 02:28.910
+I'm going to save this and run NPM test.
+
+02:29.070 --> 02:36.780
+And if you're wondering why your man NPM tests and not NPM run test Beths just the default of and PM
+
+02:36.900 --> 02:43.050
+if you do and pm start or NPM test you came round those two commands without the run word.
+
+02:43.110 --> 02:49.890
+But if you do anything that you created yourself like NPM bake a cake you have to do NPM run bake a
+
+02:49.890 --> 02:53.410
+cake or so now it's running.
+
+02:53.530 --> 02:59.290
+If I change anything in here to legist have save it.
+
+02:59.350 --> 03:01.230
+You see that it's now changing.
+
+03:01.240 --> 03:08.260
+If I change this It's constantly updating with the new test but nothing is happening in here yet.
+
+03:08.260 --> 03:14.240
+So let's write an actual test that we can use now that we have the Google search function.
+
+03:14.350 --> 03:15.330
+We want to test it.
+
+03:15.340 --> 03:27.490
+We want to say Google search give us some sort of a dummy and put let's say test test and somehow say
+
+03:28.480 --> 03:31.630
+whatever this returns should match whatever.
+
+03:31.760 --> 03:37.030
+Remember that's an assertion library won't we want to make an assertion and you may notice.
+
+03:37.060 --> 03:38.640
+One issue here.
+
+03:38.820 --> 03:41.310
+What about the database.
+
+03:41.320 --> 03:46.360
+Well we'll have to export this database as well.
+
+03:46.390 --> 03:47.300
+Right.
+
+03:47.500 --> 03:52.890
+And we totally Can we could do Google database and added to the module exports.
+
+03:53.290 --> 04:01.540
+But is that realistic you see in real life you're not going to just export the database and imported
+
+04:01.540 --> 04:05.340
+into a test and have the task to actually go through the database.
+
+04:05.380 --> 04:09.430
+That's really expensive really slow and a huge headache.
+
+04:09.430 --> 04:16.870
+Ideally you want a market you want to pretend that we have a database in here so that it makes tests
+
+04:16.990 --> 04:18.190
+run faster.
+
+04:18.910 --> 04:20.410
+Let me show you how we can do that.
+
+04:20.470 --> 04:32.080
+We can just say D-B lock a database mocke and this mocke will have some dummy database which isn't actually
+
+04:32.080 --> 04:34.830
+our real database just something that we can test on.
+
+04:34.840 --> 04:42.440
+So let's say this one has dog dot com it has cheese puff dot com
+
+04:47.170 --> 04:58.350
+it has let's say Disney dot com and it has dog pictures dot com so completely different from our real
+
+04:58.680 --> 05:01.040
+database.
+
+05:01.050 --> 05:05.890
+All right so we have this now but the problem is well Google search.
+
+05:06.190 --> 05:10.960
+Up until this point was using the Google database.
+
+05:10.960 --> 05:14.270
+And if you ran this function in script test yes.
+
+05:14.530 --> 05:17.170
+Well we don't have access to that database.
+
+05:17.170 --> 05:26.230
+We'd have to manually change the function and make sure that it filters through the DB mock in a good
+
+05:26.230 --> 05:32.080
+way of solving this issue and the way you want to write your functions is again you want them to be
+
+05:32.260 --> 05:32.710
+pure.
+
+05:32.710 --> 05:37.990
+And you also want to add things to them like a database through something called dependency injection
+
+05:38.470 --> 05:47.410
+that is in order for us to make this reusable and use it in other parts of our code base have the database
+
+05:48.160 --> 05:56.390
+injected into Google search so that anybody using a can like I am in the test can inject this D-B mark
+
+05:56.650 --> 05:58.910
+instead of the real database.
+
+05:59.970 --> 06:01.480
+And that's really easy to do.
+
+06:01.500 --> 06:09.780
+All we need to do is pass it a parameter of let's say D.B and I'm going to change this into D-B.
+
+06:10.110 --> 06:16.020
+And now this Google search is more extensible we can add whatever database we want to filter.
+
+06:16.020 --> 06:30.180
+Now all we need to do is in our what we call the function is to add a single parameter of Google database.
+
+06:30.260 --> 06:45.190
+If we comment that out and go back to our test file we can enter the D-B maake database.
+
+06:45.200 --> 06:47.750
+Let's save now and see what happens.
+
+06:49.160 --> 06:49.800
+All right.
+
+06:49.800 --> 06:55.280
+Test is passing but we're not really testing anything right now.
+
+06:55.380 --> 06:58.370
+We're just returning things and running this function.
+
+06:58.380 --> 07:00.840
+But that's not where we want to test.
+
+07:00.840 --> 07:03.540
+It's not very meaningful that we run this function.
+
+07:03.540 --> 07:07.200
+We want to assert that this does what we expected to do.
+
+07:09.470 --> 07:18.310
+And again just like we had the keyword just gives us a nice little function for us to use.
+
+07:18.470 --> 07:26.870
+If you go to using matchers we see that in their documentation they have the xpect and to be and they
+
+07:26.870 --> 07:33.680
+have a few other things that you can use to be defined to be defined to be falsie truthy and they have
+
+07:33.680 --> 07:35.990
+a ton.
+
+07:36.050 --> 07:51.250
+For now let's comment this out and say that we expect hello to be Hello hello to equal Hello hard let's
+
+07:51.250 --> 08:02.640
+say that all right everything is passing but if I change just to know and save Oh I get a failed test.
+
+08:02.780 --> 08:10.360
+It says it expected the no value but received hello and it's got pretty nice output.
+
+08:10.370 --> 08:15.130
+It shows you which line failed and what the test failed at.
+
+08:15.320 --> 08:25.760
+Using that logic let's change now the Google search to have xpect And you know what.
+
+08:25.770 --> 08:29.060
+Let's keep this test because I like this test will do.
+
+08:29.070 --> 08:29.830
+Hello.
+
+08:30.120 --> 08:30.560
+Hello.
+
+08:30.570 --> 08:41.480
+And calls this it is a silly test and create a nother test again we just have as many as we want and
+
+08:41.480 --> 08:50.470
+this song will say it is searching google and here we'll have the function
+
+08:54.080 --> 09:03.530
+let's add a space here because it looks nicer and we'll say that we expect Google search and we can
+
+09:03.530 --> 09:08.390
+just copy this.
+
+09:08.440 --> 09:14.110
+We expect Google search and we're running that function with test test D-B Mach..
+
+09:14.320 --> 09:16.810
+And here we can use instead of to be.
+
+09:16.810 --> 09:22.650
+We can also do two equal and within the two equal.
+
+09:22.650 --> 09:25.810
+Now let me just create a new line just so you can see it.
+
+09:26.130 --> 09:33.180
+It's going to say we expect it to equal an empty array because there's no test test here.
+
+09:33.270 --> 09:33.720
+Let's save
+
+09:36.790 --> 09:39.160
+Oh and I forgot a little bracket here.
+
+09:39.210 --> 09:44.600
+We want the expect to have the result of this so we need an extra bracket over here.
+
+09:44.610 --> 09:46.270
+So make sure you get that right.
+
+09:46.430 --> 09:48.980
+Save all went.
+
+09:49.140 --> 09:50.940
+You don't need that now.
+
+09:50.940 --> 09:51.870
+Perfect.
+
+09:51.870 --> 09:54.780
+Again maybe not having it on two lines is better.
+
+09:54.790 --> 09:56.400
+So you can see.
+
+09:56.400 --> 10:05.270
+So we have the expect function that runs this and to equal to test that this equals the empty array.
+
+10:06.350 --> 10:14.930
+We can now add a nother line and let's say that now we want to expect Google to test dog and if dog
+
+10:14.930 --> 10:24.820
+exists we wanted to include these two Web sites so we can add dog dot com to this array.
+
+10:25.250 --> 10:29.870
+And also dog pictures dot com to this right.
+
+10:33.330 --> 10:39.020
+And let's save.
+
+10:39.060 --> 10:39.750
+All right.
+
+10:39.750 --> 10:42.120
+This is running and passing.
+
+10:42.180 --> 10:48.150
+We still have two tests because while the it there's only two of them.
+
+10:48.420 --> 10:57.710
+But if I changed this to let's say that just D-G all get in there because we got something different
+
+10:57.710 --> 10:59.600
+than what we expected we expected a different.
+
+10:59.600 --> 11:02.800
+Eric There you go.
+
+11:02.870 --> 11:06.640
+We have our very first test.
+
+11:06.830 --> 11:08.390
+I'll see in the next video.
+
+11:08.720 --> 11:08.920
+By.

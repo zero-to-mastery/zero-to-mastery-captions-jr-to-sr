@@ -1,0 +1,409 @@
+WEBVTT
+
+00:00.990 --> 00:10.290
+Finally let's finish off our talk with Front-End performance optimizations with progressive webapps.
+
+00:10.380 --> 00:20.450
+So what is a progressive webapp Well a webapp is a Web site that allows users to interact with the web
+
+00:20.450 --> 00:23.360
+page in many ways.
+
+00:23.440 --> 00:34.980
+However whether it is a gay Twitter or Facebook it is inside of a browser window such as chrome Safari
+
+00:35.070 --> 00:44.870
+Firefox a native app on the other hand is an app that is on a mobile phone like an iPhone or a Samsung
+
+00:46.050 --> 00:48.190
+thats what native means.
+
+00:48.430 --> 00:53.480
+It's meant to work on a native platform like a mobile phone.
+
+00:53.500 --> 01:00.750
+So do you ever wish that web apps that live inside of browsers behave more like real lapse on your phone.
+
+01:01.210 --> 01:06.030
+Well progressive Web apps are a new technology that's aiming to make that happen.
+
+01:06.310 --> 01:13.860
+Just like your apps on your phone we want the user to have a similar experience when visiting the Web.
+
+01:13.930 --> 01:17.590
+But first let's talk about the differences between the two
+
+01:20.900 --> 01:22.350
+to create a web app.
+
+01:22.370 --> 01:29.250
+All you need to know is some H.M. C-s us and Javascript and you're good to go.
+
+01:30.190 --> 01:38.230
+To create a native app that is a mobile phone app you need to learn a native language like Java for
+
+01:38.230 --> 01:43.220
+Android apps or Objective-C and swift for iOS apps.
+
+01:44.200 --> 01:51.540
+Unlike viewing on the browser native apps have all the files they need on the user's mobile phone.
+
+01:52.510 --> 01:58.840
+For example if he go into your phone and go through your apps you can see how big some of those phone
+
+01:58.840 --> 01:59.620
+apps are.
+
+01:59.710 --> 02:06.930
+By looking at their file size and that's because unlike the server client relationship that a web app
+
+02:06.930 --> 02:15.210
+has what has to go through request M-L and finally get the CSSA and the javascript files.
+
+02:15.390 --> 02:18.600
+You can download native apps and have them on your phone.
+
+02:18.600 --> 02:20.700
+The files just living on your phone.
+
+02:21.540 --> 02:26.810
+The only thing you can really do with a web app is maybe bookmark a Web site.
+
+02:26.820 --> 02:31.850
+Additionally native apps can send you push notifications.
+
+02:32.060 --> 02:40.070
+They can even work off line and you're never going to get a blank screen.
+
+02:40.470 --> 02:41.070
+For example
+
+02:44.270 --> 02:54.690
+if you go to get hub and I have my Wi-Fi turned off if I refresh the page while I get this little dinosaur
+
+02:54.720 --> 02:57.230
+icon saying there's no internet connection.
+
+02:57.540 --> 03:06.790
+You've never seen that on a Native up happy because native apps are built to work off line.
+
+03:07.020 --> 03:14.740
+Maybe not have full functionality off line but still work and now get a blank screen.
+
+03:14.800 --> 03:20.800
+Finally with mobile apps or native apps you can find them to download.
+
+03:20.800 --> 03:28.180
+In places like the App Store or the Google Play store you can't really do that with web apps.
+
+03:29.410 --> 03:32.410
+Oh and I almost forgot with native apps.
+
+03:32.770 --> 03:38.890
+They also have access to the phone hardware like the camera geo location.
+
+03:39.130 --> 03:41.620
+Push notifications.
+
+03:41.670 --> 03:42.320
+All right.
+
+03:42.480 --> 03:43.950
+I hope you get the point.
+
+03:44.070 --> 03:50.330
+Right now our mobile apps and our web apps are not really the same thing.
+
+03:52.440 --> 03:56.850
+And mobile apps tend to work nicer than web apps on phones.
+
+03:58.160 --> 04:01.830
+And this is where progressive Web apps come in.
+
+04:01.910 --> 04:07.150
+You can now make web apps behave like native apps.
+
+04:07.220 --> 04:16.670
+What do I mean well with progressive Web apps you can make your browser not have that top RL bar.
+
+04:17.680 --> 04:22.030
+So that the entire app covers the screen and looks like a mobile app.
+
+04:22.300 --> 04:28.520
+You can download them on your phone and have a app icon on your phone home screen.
+
+04:28.840 --> 04:30.330
+They can work online.
+
+04:30.460 --> 04:33.220
+They can sent push notifications on your phone.
+
+04:34.140 --> 04:43.010
+And they also work a lot faster just like on phones a lot more than regular web apps because they're
+
+04:43.020 --> 04:48.840
+designed with mobile in mind and there are a few other features of progressive Web apps.
+
+04:48.840 --> 04:54.760
+All in a goal to make them a similar as possible to native.
+
+04:54.770 --> 05:01.470
+So think of progressive Web apps as well apps but they behave more like native apps.
+
+05:01.610 --> 05:05.470
+Don't worry it's a lot easier to implement than you think.
+
+05:06.370 --> 05:14.120
+Like existing web apps they'll be hosted directly on their associated website developers can update
+
+05:14.120 --> 05:20.320
+them directly on their web server by deploying or updating their get hub if it's hosted on get help
+
+05:20.380 --> 05:29.240
+pages without submitting those updates to several different app stores because to update an app on the
+
+05:29.600 --> 05:36.270
+iOS App Store you have to submit those changes and get those approved by Apple with a progressive Web
+
+05:36.270 --> 05:36.520
+app.
+
+05:36.530 --> 05:39.350
+You don't really need to do that.
+
+05:39.460 --> 05:45.200
+And the best part of all that same app is going to run on all browser platforms.
+
+05:45.310 --> 05:49.120
+That is if the phone is using Safari is going to work on safari.
+
+05:49.180 --> 05:52.090
+Going to work on Firefox is going to work on Chrome.
+
+05:52.940 --> 06:01.750
+And you don't have to worry about it being built for Android or iOS or even Windows right.
+
+06:01.770 --> 06:04.310
+So what's the goal of all of this.
+
+06:05.120 --> 06:09.490
+Well obviously better user experience faster Web sites.
+
+06:09.830 --> 06:14.690
+And we already know how important this is from our previous videos.
+
+06:14.750 --> 06:20.480
+Many people are really excited about progressive Web apps and although it's fairly new it's catching
+
+06:20.480 --> 06:26.020
+on fast and Bestival with a new team of 5 API.
+
+06:26.300 --> 06:32.140
+We're starting to get more and more access to foreign hardware that only native apps used to have.
+
+06:33.660 --> 06:42.370
+If you go to what we can do that today Web site it shows you what you can do and a Web platform.
+
+06:42.520 --> 06:51.200
+When you're building your app and you see that we can do notifications we can do audio and video capture.
+
+06:51.250 --> 06:58.070
+We can do geo location so we're certain to get more and more power with our web apps.
+
+06:58.150 --> 07:00.980
+Now here's an interesting thing.
+
+07:01.030 --> 07:06.700
+Who do you think came up with the idea of progressive webapps give up.
+
+07:06.730 --> 07:08.400
+It was Google.
+
+07:08.470 --> 07:13.950
+Now who do you think is the slowest in supporting this idea of progressive Web apps.
+
+07:15.840 --> 07:26.960
+Give up it's Apple because the goal is to make web feel like an app and you can look at the companies
+
+07:27.050 --> 07:32.480
+and their interests and see why they would have this stance.
+
+07:32.480 --> 07:36.940
+Google for example has a big market share in the web.
+
+07:37.040 --> 07:44.540
+They're interested in their Chrome browser and their Google com search results to be used as often as
+
+07:44.540 --> 07:45.560
+possible.
+
+07:45.770 --> 07:53.240
+While Apple has their closed ecosystem of the App Store and if you want to build an app wall you have
+
+07:53.240 --> 07:59.330
+to build it the way that Apple wants it using Objective-C or swift and using their developer platform
+
+07:59.360 --> 08:03.920
+X code and submitting to their app store to have an app.
+
+08:05.150 --> 08:13.970
+So Apple is interested in keeping their dominance of apps on their phones while Google is interested
+
+08:14.270 --> 08:17.030
+in keeping their dominance on the web.
+
+08:18.370 --> 08:22.900
+And it's always good to think about these things when looking at technologies developed by these big
+
+08:22.900 --> 08:27.400
+companies it's often usually out of self-interest.
+
+08:27.400 --> 08:32.740
+I know that sounds pessimistic but it is true although it benefits us.
+
+08:32.740 --> 08:42.770
+It's good to understand the overarching goals Facebook for example has something called re-act native.
+
+08:43.160 --> 08:52.810
+And just like we learned react react native is a way to build apps that work just like native apps.
+
+08:52.880 --> 08:59.960
+So using reality can now build iOS and Android apps all with pretty much 90 percent of the code being
+
+08:59.960 --> 09:02.320
+shared between those two platforms.
+
+09:02.420 --> 09:05.500
+Anyway let's get back on track now.
+
+09:05.650 --> 09:14.250
+There is a constant battle with this as Chrome has adopted this progressive Web app stance and apple
+
+09:14.340 --> 09:19.310
+that has the Safari browser has been really lagging in adopting these technologies.
+
+09:20.430 --> 09:23.250
+But anyway this is a cost them battle.
+
+09:23.670 --> 09:30.270
+And as with everything that I've mentioned so far we don't want to pick a technology just because it's
+
+09:30.270 --> 09:33.680
+hip and cool and it's the latest craze.
+
+09:33.750 --> 09:37.790
+We want to make sure that it adds value to our project.
+
+09:38.010 --> 09:45.040
+Now progressive Web apps are going to evolve over time but the main takeaway is this progressive Web
+
+09:45.040 --> 09:51.530
+apps do enhance the experience of our users even if it isn't everyone.
+
+09:51.570 --> 09:58.950
+Like people with us if it is easy to implement then we should consider it though because adding it to
+
+09:58.950 --> 10:04.350
+our project even if it helps just a few people it still is beneficial.
+
+10:04.410 --> 10:09.030
+And as time progresses hopefully more and more adoption happens.
+
+10:09.850 --> 10:17.830
+And this is exactly why create re-act app already comes preset with progressive Web app capabilities.
+
+10:17.960 --> 10:20.000
+You heard me right.
+
+10:20.000 --> 10:22.040
+They do it out of the box for you.
+
+10:22.070 --> 10:28.670
+Once again create re-act app helps out a ton here with a little few tweaks that I'm going to show you
+
+10:28.670 --> 10:30.730
+in the upcoming August sizes.
+
+10:30.860 --> 10:34.100
+We can have a progressive webapp pretty fast.
+
+10:34.340 --> 10:40.130
+So I argue that because it is so easy it's already set up in Korea re-act app.
+
+10:40.220 --> 10:45.930
+We should implement progressive webapps abilities because it makes the user experience better.
+
+10:47.090 --> 10:48.710
+And definitely improved performance
+
+10:51.850 --> 10:56.350
+but how can we make our robo friends up into a progressive Web app.
+
+10:56.350 --> 10:59.010
+I mean remember that's what Bruno asked us to do.
+
+10:59.820 --> 11:08.640
+Luckily for us Google has created something called lighthouse and this lighthouse is a plug in a chrome
+
+11:08.640 --> 11:11.370
+plug in that we can just install.
+
+11:11.370 --> 11:18.180
+You can see it over here already have it installed and run it on any Web site and tell us some performance
+
+11:18.180 --> 11:26.520
+metrics and also how close we are to that progressive Web app and I half year for us our rebel friends
+
+11:26.520 --> 11:33.240
+up with redox already set up and I have a link to the website because while we need an actual You are
+
+11:33.240 --> 11:33.840
+out.
+
+11:34.260 --> 11:42.610
+So if I click on this I can go to Lighthouse plug in and say generate report and this is going to generate
+
+11:42.610 --> 11:44.330
+for us different reports.
+
+11:44.530 --> 11:51.150
+Its going to turn the app off line and then online again to see if it has any offline capabilities its
+
+11:51.190 --> 11:56.500
+going to check if it has any other features that a progressive Web app will have.
+
+11:56.920 --> 12:04.270
+And we get a report back and as you can see it gives us a few extra things like Osseo best practices
+
+12:04.660 --> 12:11.030
+accessibility which we're going to talk about and also performance but the number that we're interested
+
+12:11.030 --> 12:13.210
+in is this progressive Whitelock number.
+
+12:13.310 --> 12:19.320
+We see that although we haven't done anything we have 82 percent.
+
+12:19.320 --> 12:22.240
+I mean it's green that's good right.
+
+12:22.260 --> 12:28.150
+If we scroll down to the progressive war map it even tells you what we can do to fix this.
+
+12:28.230 --> 12:33.300
+Now how do we have 82 percent when we haven't done anything.
+
+12:34.700 --> 12:41.210
+Well like I said before create re-act app sets everything for us so that it's easy to implement.
+
+12:41.720 --> 12:49.100
+And don't worry we're going to go through this and get this to 100 percent in our exercise for now.
+
+12:49.250 --> 12:50.730
+That's enough talking for me.
+
+12:51.050 --> 12:52.700
+I'll see you in the next video.
+
+12:52.700 --> 12:53.270
+Bye bye.

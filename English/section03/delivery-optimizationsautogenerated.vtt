@@ -1,0 +1,160 @@
+WEBVTT
+
+00:01.810 --> 00:08.740
+Welcome back so far we've talked about Honey I shrunk the files reducing the size of those downloads
+
+00:09.040 --> 00:14.390
+by compressing images magnifying CSX and Javascript and so on.
+
+00:14.860 --> 00:21.390
+But there's a more fundamental approach in addition to just reducing download size.
+
+00:21.400 --> 00:29.130
+Let's also consider reducing download frequency the traveling delivery man see reducing the number of
+
+00:29.130 --> 00:38.290
+components that a page requires proportionally reduces the number of TTP requests it has to make.
+
+00:38.290 --> 00:43.840
+This doesn't mean emitting content it just means structuring it more efficiently.
+
+00:44.670 --> 00:50.310
+Remember our traveling delivery man gets tired and there's only one of them.
+
+00:52.300 --> 00:53.360
+So let's have a look here.
+
+00:54.460 --> 01:02.950
+With less trips ideally while we're minimizing our files but also we're not sending every single file
+
+01:03.520 --> 01:04.480
+down the wire.
+
+01:04.780 --> 01:07.400
+Only the ones that we need.
+
+01:07.480 --> 01:08.760
+How can we do this.
+
+01:09.790 --> 01:18.160
+Well for example if you're using bootstrap or foundation or anything that helps you with your UI and
+
+01:18.850 --> 01:28.000
+adds new CSSA files ask yourself Are they really necessary or could you use fluxbox or she says grid
+
+01:28.780 --> 01:33.540
+which are superb alternatives and they're both native.
+
+01:33.760 --> 01:37.920
+You don't have to download those massive boot strap or Fondation files.
+
+01:38.790 --> 01:46.650
+Same with javascript and Javascript libraries they're really convenient but not always necessary take
+
+01:46.650 --> 01:54.060
+Jake queery for example element selection which is why J query was initially so popular has been greatly
+
+01:54.060 --> 02:00.150
+simplified thanks to new methods in javascript like Querrey selector ng query selects are all.
+
+02:00.750 --> 02:07.710
+And we even have event binding made easy with ADD and listener class list set attributes so on and so
+
+02:07.710 --> 02:08.180
+forth.
+
+02:09.590 --> 02:16.550
+So if you must use a library find maybe libraries that are lightweight and think twice before you just
+
+02:16.840 --> 02:22.330
+pile on another script or another library just for some cool animations on your website.
+
+02:22.340 --> 02:23.930
+Finally with images.
+
+02:23.960 --> 02:27.790
+Be careful and don't make your web site just full of them.
+
+02:28.100 --> 02:34.400
+In the past we had some things like sprites where you had one image and based on CSSA positioning you
+
+02:34.400 --> 02:42.800
+can have on this one image multiple images that get only displayed based on the CSSA you use but you
+
+02:42.800 --> 02:49.280
+get the gist rate just have less files and don't make the delivery man work so hard.
+
+02:49.560 --> 02:55.420
+Now you must be asking yourself can't we just tell them to carry all the files at once.
+
+02:55.810 --> 02:57.090
+But what's the big deal.
+
+02:57.900 --> 03:00.380
+Once again life isn't that simple.
+
+03:00.450 --> 03:08.490
+Thanks to the DB protocol our browsers will only simultaneously download a set maximum number of files
+
+03:09.030 --> 03:10.530
+from one domain at a time.
+
+03:10.890 --> 03:14.850
+And this ranges from 2 to 6 depending on your browser.
+
+03:15.240 --> 03:21.600
+And I'll leave a resource for you in this video so you can see how many Max requests or Max concurrent
+
+03:21.600 --> 03:23.420
+requests your browser can make.
+
+03:23.700 --> 03:25.530
+But again be careful.
+
+03:25.530 --> 03:29.110
+It also has limits on the total size it can carry.
+
+03:29.130 --> 03:31.020
+The delivery man isn't Superman.
+
+03:31.200 --> 03:38.110
+So again we want to minimize files and we want to limit the strips that the delivery man makes.
+
+03:38.370 --> 03:42.020
+So perhaps we can combine our CSSA files into one.
+
+03:42.330 --> 03:51.830
+Combine our javascript files into one we'll talk about a beat to an upcoming video and why this process
+
+03:51.860 --> 03:53.660
+might get improved in the future.
+
+03:53.780 --> 03:57.480
+But for now let's review.
+
+03:57.670 --> 04:05.530
+When we open up Google Chrome and we type in super fresh dotcom we request from the server a few things
+
+04:06.040 --> 04:12.000
+but knowing what we just learned we can optimize this process right.
+
+04:12.040 --> 04:19.810
+We can minimize our files and then we can also limit the number of files that we deliver
+
+04:22.780 --> 04:24.950
+and using just the simple methods.
+
+04:25.090 --> 04:28.360
+You've already made your web side tremendously faster.
+
+04:28.390 --> 04:34.560
+Now don't worry there's still a lot more to go through and things are going to get even more fun.
+
+04:36.000 --> 04:40.010
+Just to make sure that we've really learned these concepts.
+
+04:40.010 --> 04:41.790
+I have a fun little exercise for you.
+
+04:42.620 --> 04:44.610
+So I'll see on that one.

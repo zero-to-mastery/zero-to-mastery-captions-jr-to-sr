@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.950 --> 00:05.930
+Welcome back to the next couple of videos we're going to be talking about what about something that's
+
+00:05.930 --> 00:11.110
+used underneath the hood of create react up to bundle our files.
+
+00:11.140 --> 00:21.900
+Now as you can see from their Web site here wetback simply bundles all our files into what we call static
+
+00:21.900 --> 00:31.140
+assets things that we can just send to the browser for us to read our file and instead of doing all
+
+00:31.140 --> 00:32.710
+of these things manually.
+
+00:32.940 --> 00:41.470
+Well we're back magically combines all its resources to do this for us.
+
+00:42.470 --> 00:53.330
+Now what Beck has four main ideas that we need to talk about one is entry and entry is usually your
+
+00:53.330 --> 00:54.240
+javascript.
+
+00:56.350 --> 01:01.120
+And entry means where does the wetback.
+
+01:01.210 --> 01:04.530
+Where does wet pack enter into your project.
+
+01:04.720 --> 01:06.480
+So usually this is indexed.
+
+01:06.590 --> 01:12.280
+Yes we tell it where to enter so it can start analyzing our projects seeing our files.
+
+01:12.580 --> 01:21.930
+And from there it can do the second point which is an output and the output is where should we get back.
+
+01:22.010 --> 01:29.680
+Magically output all these files and we usually have a build folder like we have in Crea react up that
+
+01:29.920 --> 01:37.990
+says all right I'm going to go through the entry file index has read all the files that are connected
+
+01:38.170 --> 01:41.680
+to that index Hygeia file and see what we need.
+
+01:41.680 --> 01:45.830
+And from there I'm going to output into the build folder all these files.
+
+01:47.300 --> 01:53.450
+Finally within this magical box of wet back there's two concepts that they use.
+
+01:53.450 --> 01:59.970
+One is the idea of Lowder's and Lowder's as we'll see in the next videos.
+
+02:01.250 --> 02:11.430
+Our tools that compile or transpose all your code so you send in a piece of code through it and from
+
+02:11.430 --> 02:20.590
+there it uses something like babble to tranced spile to a different form maybe from six to five.
+
+02:20.760 --> 02:23.600
+So those are Lowder's that are inside of this box.
+
+02:23.790 --> 02:31.650
+And then the second thing is plug ins and plug ins play a vital role in outputting your code and you
+
+02:31.650 --> 02:38.020
+can do different things different sort of plug ins based on how you want your code to be outputted but
+
+02:38.020 --> 02:38.880
+enough talk.
+
+02:39.250 --> 02:43.280
+Let's get to coding and showing you an example I'll see in the next one.

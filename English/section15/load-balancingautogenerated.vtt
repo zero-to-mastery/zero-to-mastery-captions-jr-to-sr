@@ -1,0 +1,208 @@
+WEBVTT
+
+00:00.910 --> 00:02.020
+Walk them back.
+
+00:02.370 --> 00:06.220
+Let's talk about our last topic when it comes to performance.
+
+00:06.360 --> 00:09.810
+That is load balancing load balancing.
+
+00:09.870 --> 00:17.820
+As the name suggests is a way for us to balance multiple requests at the same time and distributed them
+
+00:17.970 --> 00:25.120
+to different services and that is something that we want to start to do when we have more and more users
+
+00:25.210 --> 00:32.820
+using our app perhaps making requests to our express app as we make more and more requests are Express
+
+00:32.820 --> 00:39.700
+up or our express server is going to get hit more and more more and more until it just cannot handle
+
+00:39.700 --> 00:40.540
+the load.
+
+00:40.660 --> 00:46.960
+In an ideal scenario we can just have another server perhaps two or three servers and this thing in
+
+00:46.960 --> 00:53.560
+front of it cold a low balancer just distributes it so that the first user goes to the first server.
+
+00:53.560 --> 00:58.900
+The second user to the second server the third user to the third server and that we were able to handle
+
+00:59.020 --> 01:00.860
+more load.
+
+01:00.880 --> 01:06.160
+Now in order for us to understand how load balancers work and also how we can implement it.
+
+01:06.220 --> 01:14.780
+We first need to speak about the most basic way that a client and server relationship works.
+
+01:14.810 --> 01:23.180
+Now on most web sites such as Wordpress sites that are hosted on host skater or blue host most simple
+
+01:23.180 --> 01:28.910
+just blog web sites that you perhaps you bought the domain name from GoDaddy and maybe even hosting
+
+01:28.910 --> 01:32.710
+it on GoDaddy have a server that they managed for you.
+
+01:32.720 --> 01:34.550
+You never have to create a server.
+
+01:34.910 --> 01:42.380
+I mean up until now we've created an express server that serves content to the client but most people
+
+01:42.380 --> 01:48.360
+aren't web developers and they don't need to know how to build an express server themselves.
+
+01:48.410 --> 01:54.680
+They rather just hand this off to a company that has servers for them and just give them the files so
+
+01:54.680 --> 01:56.410
+that they take care of it.
+
+01:56.870 --> 02:04.420
+And most of these companies like I said host gator blue host all use something called either Apache
+
+02:04.620 --> 02:14.070
+GTP server or engine next and these are open source software that you put on a machine on a computer.
+
+02:14.230 --> 02:21.270
+And they're especially good at serving static content static files like UML javascript and VSS.
+
+02:21.850 --> 02:22.740
+They're very simple.
+
+02:22.750 --> 02:27.920
+All they do is give me a request and I'll send you all the files that you need.
+
+02:28.300 --> 02:28.990
+That's it.
+
+02:29.170 --> 02:33.130
+And you'll see these two pieces of software all over the Internet.
+
+02:33.460 --> 02:38.650
+But we can actually do something really interesting with these tools because these tools are really
+
+02:38.650 --> 02:42.170
+really good and really fast just serving static files.
+
+02:42.400 --> 02:49.030
+We can use them as load balancers an engine nexts very very popular for doing that and quite easy to
+
+02:49.030 --> 02:53.540
+implement You see we can do something like this.
+
+02:53.710 --> 02:55.630
+We can have our single page application.
+
+02:55.690 --> 03:00.100
+Let's say our smart brain out and we make a request.
+
+03:00.280 --> 03:07.690
+Now that request instead of going to our server our API server instead hits an engine X server that
+
+03:07.690 --> 03:15.790
+will set up and this engine X server will balance the load between server 1 2 and 3 based on whichever
+
+03:15.790 --> 03:19.770
+one is well the least busy.
+
+03:19.870 --> 03:27.100
+So that way the more users we have as long as we have engine X that can act as what we call a reverse
+
+03:27.100 --> 03:31.680
+proxy and passed down through a cost to one two and three server.
+
+03:31.990 --> 03:38.890
+Then it can receive those files and serve them really really quick to the browser and you can also do
+
+03:38.890 --> 03:42.190
+interesting things like actually cash those requests.
+
+03:42.190 --> 03:48.040
+So the next time that a user requests the same G-mail page instead of going to several one two or three
+
+03:48.340 --> 03:56.350
+it can just return it because it's in their cash and you'll see a lot of applications built like this.
+
+03:57.800 --> 04:00.620
+Now looking at this diagram you're thinking to yourself.
+
+04:00.890 --> 04:05.610
+We've just increased the complexity of our application and how is this faster.
+
+04:05.630 --> 04:11.720
+If anything we're talking to more machines now we're making more hops and doing more work.
+
+04:11.720 --> 04:19.460
+And you're right in thinking that because we are adding more things more work more processing that needs
+
+04:19.460 --> 04:22.360
+to get done to actually return these files.
+
+04:22.370 --> 04:28.060
+And if you don't have a lot of users then this is just wasted resources wasted time.
+
+04:28.160 --> 04:33.260
+It doesn't really help you but when you start to have more and more users that a single server just
+
+04:33.260 --> 04:38.920
+cannot handle eventually that server is going to crash won't be able to handle all those requests.
+
+04:38.960 --> 04:44.870
+That's when you start implementing a load balancer and because engine X is a really really good way
+
+04:44.870 --> 04:45.580
+to use.
+
+04:45.590 --> 04:53.210
+Like I said a reverse proxy and to serve static files it actually has more users you have the faster
+
+04:53.210 --> 04:59.700
+the load balancer becomes than just doing a single server client relationship.
+
+04:59.720 --> 05:07.250
+Eventually you can have an architecture like this where you have a single page out the cation that has
+
+05:07.250 --> 05:13.970
+a content delivery network where you perhaps have cache versions of your Schmall CSSA javascript file
+
+05:14.000 --> 05:22.310
+that's all jes zipped and then perhaps you make API requests to a rest endpoint but this API requests
+
+05:22.400 --> 05:30.500
+will hit a load balancer and will distribute your request based on whichever server is open and the
+
+05:30.500 --> 05:37.640
+server will return again in my cache some of the request maybe a Jason response request and can also
+
+05:37.640 --> 05:42.870
+GZA this request and return it back to the client.
+
+05:43.130 --> 05:49.010
+So that now you're able to use all these tools you've learned to maximize performance and make this
+
+05:49.010 --> 05:51.570
+process as fast as possible.
+
+05:51.830 --> 05:55.600
+That's enough talk let's actually implement it in the next video.
+
+05:55.610 --> 06:00.500
+I'm going to show you how to implement a low balancer very simply and then we're going to do something
+
+06:00.500 --> 06:01.040
+fun.
+
+06:01.100 --> 06:06.160
+We're actually going to low test everything and see how well it handles the load.
+
+06:07.380 --> 06:07.900
+And then x1.

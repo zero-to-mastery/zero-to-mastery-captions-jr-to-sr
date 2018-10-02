@@ -1,0 +1,199 @@
+WEBVTT
+
+00:01.330 --> 00:09.730
+As we've mentioned before header's or HTP headers are really really important in telling the browser
+
+00:10.000 --> 00:12.880
+what to do with some of the contents that we've delivered.
+
+00:13.240 --> 00:18.720
+And sometimes to tell servers what to do as well with these should be requests.
+
+00:18.730 --> 00:24.910
+There are a ton of them and I'll leave a resource for you to read up on them because it is the it is
+
+00:24.940 --> 00:27.010
+outside of the scope of this course.
+
+00:27.550 --> 00:32.500
+But you're going to really really like me because I'm going to make this process super simple for you.
+
+00:33.310 --> 00:39.420
+To have secure headers in something like an express up that's all we need to do.
+
+00:39.420 --> 00:46.180
+Again these are problems that everybody has on their apps so there exists packages that help you make
+
+00:46.180 --> 00:47.330
+things easier.
+
+00:48.880 --> 00:51.430
+So we just need NPM install helmet.
+
+00:51.430 --> 00:53.090
+Now let me show you how it works.
+
+00:54.960 --> 01:02.120
+If I go back to my app here and let's minimize this for now so we can see everything let's just see
+
+01:02.270 --> 01:05.570
+what happens without helmet being used.
+
+01:05.570 --> 01:14.800
+I'm going to type something in here and let's open up the Network tab and just send some jibberish.
+
+01:14.800 --> 01:15.260
+All right.
+
+01:15.260 --> 01:17.480
+I get my secret
+
+01:20.170 --> 01:28.870
+and I see in my headers that I have all this little information oh look at that I have information that
+
+01:29.170 --> 01:33.690
+this Web site is powered by Xpress.
+
+01:33.730 --> 01:40.750
+Now that might not seem like important information but to a knowledgeable hacker maybe now I can Google
+
+01:40.880 --> 01:48.670
+him vulnerabilities and express and maybe if I haven't updated my express server that bad actor can
+
+01:48.940 --> 01:51.210
+now use those vulnerabilities against me.
+
+01:51.430 --> 01:58.270
+And there's many many headers like that that really affect the security of the app.
+
+01:58.540 --> 02:06.520
+And we have this great package called Hammad that I install on every server that I built and helmet
+
+02:06.670 --> 02:14.050
+as you can see helps you secure your express apps by setting various headers and there's tools for things
+
+02:14.110 --> 02:21.520
+other than express but Express is generally the most common and most well documented in the community.
+
+02:23.210 --> 02:25.480
+And as you can see here it's quite easy.
+
+02:25.520 --> 02:28.420
+So let's just copy and paste this.
+
+02:28.490 --> 02:31.100
+I'm going to install Helmut.
+
+02:31.110 --> 02:43.300
+Let's go back here and PM install Helmut and we can just include it as helmet equals require
+
+02:46.320 --> 02:46.920
+helmets.
+
+02:46.920 --> 02:47.820
+Perfect.
+
+02:47.820 --> 02:56.990
+And then if we look at the documentation right after app equals Express we can just use Helmut again
+
+02:57.030 --> 03:05.890
+and another middleware So we're intercepting the TBs and adding or modifying the headers.
+
+03:05.900 --> 03:13.890
+Remember instead of doing this type of thing where we have to set the headers helmet does this for us.
+
+03:14.240 --> 03:15.860
+So fight save.
+
+03:16.180 --> 03:24.080
+Ron NPM start and go back to our app and let's just refresh here.
+
+03:24.370 --> 03:29.380
+And I'm just going to submit something else.
+
+03:29.390 --> 03:35.780
+All right I get a nother seeker request but check this out.
+
+03:35.780 --> 03:43.540
+There's no X par by any more but we have all these headers such as cross-site scripting protection free
+
+03:43.610 --> 03:48.710
+options download option DNS prefetch control Content-Type options look that.
+
+03:48.710 --> 03:54.370
+We even have have a strict transport security Max Saige.
+
+03:54.740 --> 03:57.050
+That's a law of things.
+
+03:57.050 --> 04:04.250
+And you know what hametz sets all of this for us if we scroll down you see you can click through all
+
+04:04.250 --> 04:12.340
+of these and shows you what gets set and what gets set by default because some of these things they
+
+04:12.340 --> 04:16.650
+don't set so that you have some some freedom to adjust them.
+
+04:16.900 --> 04:22.360
+But out of the box just by running helmet without doing any configuration we have all of these guards
+
+04:22.390 --> 04:23.800
+in place.
+
+04:23.800 --> 04:31.990
+For example H.S. TS or strict transport security that we saw over here.
+
+04:32.160 --> 04:33.410
+Where was it.
+
+04:33.420 --> 04:34.680
+There you go.
+
+04:34.710 --> 04:44.100
+This says that with this website we're only going to allow AC DC s on the server and it redirects any
+
+04:44.790 --> 04:53.370
+calls made by this client to CBS and has max age which says I want you to remember this for this much
+
+04:53.370 --> 04:55.560
+time and this feels like it's a year.
+
+04:55.560 --> 04:56.410
+It's a long time.
+
+04:56.760 --> 05:05.030
+And the high powered by option that's the X powered by header that was removed.
+
+05:05.070 --> 05:09.050
+Remember it showed Xpress because of Helmut.
+
+05:09.050 --> 05:09.700
+There you go.
+
+05:09.710 --> 05:11.610
+Nice and simple solution.
+
+05:11.690 --> 05:15.530
+You can go ahead and read up on all of these and other security headers.
+
+05:15.590 --> 05:23.360
+But Helmut honestly covers a big chunk of these issues and if you have helmet as part of your app while
+
+05:23.360 --> 05:24.850
+then you're pretty much set.
+
+05:26.240 --> 05:29.470
+You see I told you this was going to be a nice and easy video.
+
+05:29.930 --> 05:32.570
+I think we deserve that every once in a while.
+
+05:32.570 --> 05:33.140
+All right.
+
+05:33.230 --> 05:34.560
+I'll see you in the next one.
+
+05:34.560 --> 05:35.020
+Bye bye.

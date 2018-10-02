@@ -1,0 +1,292 @@
+WEBVTT
+
+00:01.670 --> 00:07.220
+Our robo friends up we've missed it haven't we we haven't seen our robo friends in a long time but I
+
+00:07.220 --> 00:13.010
+want to demonstrate some of the caching things happening behind the scenes with rubber friends.
+
+00:13.130 --> 00:19.700
+If I open up the developer tools remember how I said that the client side or the browser has a ton of
+
+00:19.730 --> 00:24.930
+caching mechanisms to make sure that our robo friends app is as fast as possible.
+
+00:26.370 --> 00:29.620
+Well if I refresh your.
+
+00:29.860 --> 00:37.090
+I get all these requests but check out the size tab for make this a little bit bigger.
+
+00:37.930 --> 00:46.830
+We see that it's saying our HMO file our CSSA file and our javascript file was from service worker.
+
+00:46.860 --> 00:53.390
+There's no size associated with it because this is cached by the service worker.
+
+00:53.440 --> 01:01.630
+Remember how the service worker is something that allows us to intercept SCDP requests and it's going
+
+01:01.630 --> 01:06.850
+to check the cache and say hey do I already have this do I already have CSSA do I already have javascript
+
+01:07.120 --> 01:11.570
+and just return it without actually hitting the server.
+
+01:12.480 --> 01:14.400
+Well yeah that's what it is right.
+
+01:14.460 --> 01:22.250
+If we go back to the application tab we see that oh yeah we have a cache that is provided by the browser.
+
+01:22.440 --> 01:28.890
+Cold cash storage and in here look at that I have all these files that I've cached including my font
+
+01:29.220 --> 01:31.970
+my javascript fall my CSSA my H.T. mail.
+
+01:32.160 --> 01:35.390
+These are all cached saved in the browser.
+
+01:36.260 --> 01:42.500
+And we also have something called application cache which is an older form of cache stories that not
+
+01:42.500 --> 01:43.970
+many people use anymore.
+
+01:44.150 --> 01:51.230
+But you see that we have this ability in the browser to remember things but it's not just this raid.
+
+01:51.430 --> 01:57.430
+We also have things like session storage which we've talked about where I can hold information like
+
+01:57.430 --> 02:03.280
+key value information like holding tokens but he can do some interesting things here where you hold
+
+02:03.490 --> 02:10.300
+perhaps objects and other information that might be useful for your app to remember without having to
+
+02:10.300 --> 02:13.420
+go back to the server or doing those requests.
+
+02:13.420 --> 02:15.490
+And again same for local storage.
+
+02:15.490 --> 02:23.050
+And you can even use things like indexed IDB or index D-B which is used a lot in mobile applications
+
+02:23.770 --> 02:31.030
+where you have a little mini database on the browser all things to make sure that you're not traveling
+
+02:31.270 --> 02:34.770
+making requests over wires over long distances.
+
+02:36.290 --> 02:43.220
+Now if we go back to the Network tab We also see that if I scroll down a half from memory cache that
+
+02:43.280 --> 02:49.460
+this was accessed because this refresh happened while I've already visited this site before and it remembers
+
+02:50.210 --> 02:52.700
+and you see that that's all from memory.
+
+02:52.700 --> 02:54.260
+So it's extremely fast.
+
+02:54.260 --> 03:01.400
+And then I also have dispatch and we know all about these we know about memory we know about disk and
+
+03:01.460 --> 03:03.800
+we also learned about service workers.
+
+03:03.800 --> 03:12.350
+And if I refresh again again I have all these things still cached if I do a hard refresh so I say all
+
+03:12.350 --> 03:17.740
+right I want to empty cache and hard to reload.
+
+03:17.740 --> 03:18.520
+There you go.
+
+03:18.610 --> 03:20.970
+That Web site took a little bit longer to load.
+
+03:21.070 --> 03:21.940
+And we see that.
+
+03:21.970 --> 03:22.290
+Yeah.
+
+03:22.300 --> 03:29.200
+We've actually requested all these things to be loaded all over again with the exception of a few things
+
+03:29.200 --> 03:34.030
+that I have running in the background which is just the plug ins that I have but all the Web site materials
+
+03:34.360 --> 03:40.630
+where requested from the Bakken or whatever service we have five refresh again.
+
+03:40.780 --> 03:42.220
+Again a lot faster.
+
+03:42.220 --> 03:44.560
+Everything is cached now.
+
+03:44.770 --> 03:50.770
+We already know how to do this service worker things but how do we cash these things.
+
+03:51.850 --> 03:53.270
+Ourselves manual.
+
+03:53.430 --> 03:59.100
+I feel like this is being done by the browser automatically and yes browsers are configured to do this
+
+03:59.100 --> 04:02.130
+automatically for us but we can't control it.
+
+04:02.130 --> 04:05.710
+And in the next video I'm going to show you how to do this.
+
+04:05.850 --> 04:12.750
+But before I do this you might be asking yourself there's an issue here what if a designer or my team
+
+04:13.530 --> 04:21.000
+decides to change this CSSA file and make the let's say the robot's background red instead of green
+
+04:22.240 --> 04:28.970
+any user that would refresh then well wouldn't see that red background because they're using it get
+
+04:29.170 --> 04:36.950
+they're using this information from cache and because it's from cache it won't know that the changes
+
+04:36.950 --> 04:38.020
+have been made.
+
+04:38.060 --> 04:43.530
+And while my web site is completely different in my view an older version of the Web site.
+
+04:43.670 --> 04:45.630
+How do we deal with this.
+
+04:45.860 --> 04:48.570
+And this is something called Cash busting.
+
+04:48.830 --> 04:52.220
+I know it's a pretty cool sounding name but it's very simple.
+
+04:52.280 --> 05:00.020
+You see these random numbers that were generated for us a you remember when we go back to our robo friends
+
+05:00.230 --> 05:10.550
+PWI when we do NPM run build what pack gets everything optimized for production combines all the CSSA
+
+05:10.550 --> 05:19.100
+files all the javascript files into one end and two optimized files and we see that it's all so zipped
+
+05:19.160 --> 05:20.070
+which we know about.
+
+05:20.120 --> 05:27.580
+That's great but we also see that it's build a new main SS and.
+
+05:28.900 --> 05:34.980
+And these numbers are created by Crea react up all we can manually create them as well.
+
+05:34.990 --> 05:38.690
+We can just change the name file to this.
+
+05:38.700 --> 05:39.980
+Now here's the cool thing.
+
+05:40.030 --> 05:42.430
+If I run NPM run build again
+
+05:45.510 --> 05:50.760
+and I release these files to production let's say I put them on good hot pages.
+
+05:50.760 --> 05:55.690
+Well you see that these numbers are the exact same as they were before.
+
+05:56.070 --> 06:02.600
+So the user is just going to see a cached version of my older phos because well they haven't changed.
+
+06:02.880 --> 06:04.400
+What if we change something.
+
+06:04.590 --> 06:14.690
+What if I open up a sublime text and in here I'm just going to change our let's say our CSSA and index
+
+06:14.690 --> 06:22.150
+that CSSA to have padding of 50 pixels.
+
+06:22.250 --> 06:30.620
+I'm going to save go back and run NPM run build again.
+
+06:30.630 --> 06:31.470
+All right.
+
+06:31.470 --> 06:37.320
+We see that web pack has created the Bondel and we see that it's two bytes larger because we've just
+
+06:37.410 --> 06:44.690
+added a few extra characters and our javascript file if we go up a bit we see is the exact same name
+
+06:45.300 --> 06:50.860
+but our CSSA file now has a different number than the one above.
+
+06:51.180 --> 06:57.270
+And again well-packed does this automatically for you if there's been a change already.
+
+06:57.480 --> 07:05.470
+Well in that case I'm going to change this number so that next time I go back to Roble friends up and
+
+07:05.470 --> 07:13.060
+let's say I put this up in production on how pages when I refresh this page the CSSA file will have
+
+07:13.060 --> 07:14.340
+a different number.
+
+07:14.470 --> 07:18.140
+And the way the browser knows the CSSA file has changed.
+
+07:18.160 --> 07:25.490
+I'm going to grab the latest one and that is what cache busting is as long as you name your files differently.
+
+07:25.930 --> 07:28.060
+It's going to grab it no matter what.
+
+07:28.090 --> 07:30.970
+Whether it has it in cash or not.
+
+07:30.970 --> 07:32.320
+Very very cool.
+
+07:32.350 --> 07:37.300
+Now even if you don't have create re-act app that's something easily that you can implement yourself.
+
+07:37.300 --> 07:37.870
+Right.
+
+07:38.170 --> 07:44.500
+If a designer creates a new CSSA style with red backgrounds they can just simply manually change this
+
+07:44.500 --> 07:48.550
+number to something different before maybe you can save version 5.
+
+07:48.760 --> 07:53.710
+And now you make sure that all your users will have the latest version.
+
+07:53.800 --> 07:58.720
+They'll grab the latest version and then when they refresh again they'll use it from cache but they
+
+07:58.720 --> 08:00.530
+will have the red background.
+
+08:00.950 --> 08:07.120
+All right in the next video we're going to talk about how you can implement caching yourself without
+
+08:07.120 --> 08:12.120
+just using this default behavior from Craig re-act app and the browser.
+
+08:13.150 --> 08:14.080
+I'll see you in the next one.

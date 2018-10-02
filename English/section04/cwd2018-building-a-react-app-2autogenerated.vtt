@@ -1,0 +1,337 @@
+WEBVTT
+
+00:00.420 --> 00:01.180
+Welcome back.
+
+00:01.350 --> 00:10.150
+Let's continue building our robot friends at now up to this point if you look at our index genius Well
+
+00:10.250 --> 00:13.200
+there was a lot of copy and pasting that we did.
+
+00:13.250 --> 00:18.950
+If we had a lot of robot friends imagine having a hundred of these that we have to constantly copy and
+
+00:18.950 --> 00:21.630
+paste that's not very efficient is it.
+
+00:21.680 --> 00:30.110
+Also if you remember our diagram over here of one way data flow we always had a parent such as an app
+
+00:30.110 --> 00:34.930
+component that had children that had their own children and so on and so forth.
+
+00:35.000 --> 00:43.250
+So using that knowledge we can have one big component that have different children so that we make each
+
+00:43.250 --> 00:47.920
+component small and reusable.
+
+00:47.940 --> 00:57.110
+Let's go back to our example now that we have a robot that J.S. we ideally can list all these 10 users
+
+00:58.640 --> 01:09.690
+the way we do that let's have a card list component so that we import a cardless component which is
+
+01:09.690 --> 01:16.920
+a parent of card then we can just render that instead of all these cards.
+
+01:17.230 --> 01:30.340
+So I'll say the card list and again we'll have to so say a new file card this stodginess
+
+01:33.010 --> 01:42.990
+again change you get to our table syntax will do import re-act from re-act and I'll make this a little
+
+01:42.990 --> 01:43.750
+bit bigger.
+
+01:44.980 --> 01:52.620
+And again we'll just say Konst card list equals want to accept anything for now.
+
+01:54.300 --> 01:56.460
+But it will return.
+
+01:56.850 --> 02:01.630
+Well what should a return.
+
+02:01.800 --> 02:05.030
+It should return the cards right.
+
+02:05.860 --> 02:07.900
+We can just copy and paste this
+
+02:11.690 --> 02:13.110
+put this in here.
+
+02:13.430 --> 02:15.690
+Let's fix the indentation here a bit
+
+02:18.670 --> 02:22.920
+now card list will be the one that returns these cards.
+
+02:24.260 --> 02:33.190
+And index dot a symbol will just render Carlist.
+
+02:33.290 --> 02:41.990
+If I save this well I'll guess that card isn't being used so we can't remove it and robots aren't being
+
+02:41.990 --> 02:42.560
+used.
+
+02:42.560 --> 02:56.020
+But we can use the robots now to pass that as robots equals the robots array card list is accepting
+
+02:56.350 --> 03:04.560
+a robots prop I say this everything's working but I'm getting the error because well as you can see
+
+03:04.800 --> 03:12.760
+we didn't export if we go back to the card list export default and hopefully by now you're starting
+
+03:12.760 --> 03:13.860
+to get the hang of it.
+
+03:13.870 --> 03:19.990
+There's a lot of repetition here but each time as long as you learn the syntax we're creating these
+
+03:20.470 --> 03:28.360
+components nicely and we get a ton of errors because we don't have any access to robots and IDs and
+
+03:28.780 --> 03:30.220
+card for that matter either.
+
+03:30.220 --> 03:38.340
+So let's import a card from Again same directory card yes.
+
+03:39.230 --> 03:40.830
+Robots isn't defined.
+
+03:40.880 --> 03:45.300
+We know that card list receives robots now.
+
+03:45.490 --> 03:52.490
+So I have access to it in the props or I can be structured and say that we have access to it.
+
+03:53.520 --> 04:04.900
+With robots if I see this look I have everything back the way it was.
+
+04:05.030 --> 04:07.320
+But it's not all of them is it.
+
+04:07.340 --> 04:10.420
+We're only grabbing the 0 1 2.
+
+04:10.430 --> 04:11.750
+Only three of them.
+
+04:11.750 --> 04:17.910
+And as we saw on robust Yes I have 10.
+
+04:18.070 --> 04:20.660
+How can we do this better.
+
+04:20.980 --> 04:28.390
+Let's make this a little bit smaller so you can see it looks like we want to do some sort of a loop.
+
+04:28.440 --> 04:29.340
+Right.
+
+04:29.370 --> 04:35.470
+We want to loop over the robots and create a card component for each one.
+
+04:35.580 --> 04:36.830
+How can we do that here.
+
+04:36.850 --> 04:45.010
+Andrea let's start off by adding another variable here we'll call it Konst card
+
+04:47.690 --> 04:48.670
+component.
+
+04:50.450 --> 04:56.580
+And within the card component we want to say that robots we want to.
+
+04:56.690 --> 04:59.330
+Well what do we want to do when we do a loop.
+
+04:59.360 --> 05:03.400
+As I've said before we want to map right.
+
+05:03.420 --> 05:06.680
+We could do for each as well but I always recommending that.
+
+05:07.050 --> 05:09.240
+And within this map each robot
+
+05:11.770 --> 05:12.860
+gets this.
+
+05:12.910 --> 05:16.750
+So we get a user every time we map through it so we can say user
+
+05:20.040 --> 05:26.550
+should return again because a map needs to return it returns this right.
+
+05:26.550 --> 05:32.820
+We want to return a card component I can copy and paste this right here.
+
+05:34.440 --> 05:42.310
+And within the return I can just say now instead of robots index 0 do we have the index Well yeah because
+
+05:42.390 --> 05:48.720
+you remember the second parameter that we get in a map is the index.
+
+05:48.740 --> 05:52.690
+So I can say user and I for index.
+
+05:52.730 --> 06:02.480
+And now within robots I'll say hi four index Ishaan the first time around this will be zero.
+
+06:02.610 --> 06:08.760
+Then one then two all the way to 9 to include our 10 robots.
+
+06:08.790 --> 06:11.200
+Let's see if this actually works.
+
+06:11.310 --> 06:19.210
+If I had card component here you remember that we have to wrap it in curly brackets because it's javascript
+
+06:19.210 --> 06:22.110
+so it knows to evaluate.
+
+06:22.360 --> 06:24.680
+If I saved this.
+
+06:24.820 --> 06:26.830
+Looks like it's compiling successfully.
+
+06:26.950 --> 06:28.270
+I go back and.
+
+06:28.540 --> 06:30.110
+Holy moly.
+
+06:30.240 --> 06:33.630
+We got ourselves a card or a.
+
+06:33.770 --> 06:35.090
+How cool is that.
+
+06:35.090 --> 06:37.060
+That was incredibly fast to do.
+
+06:37.280 --> 06:40.820
+We just use our common sense and Javascript knowledge.
+
+06:40.970 --> 06:46.160
+Just use map to return multiple components.
+
+06:46.160 --> 06:50.640
+I hope you realize how powerful that is and that is why re-act is so popular right now.
+
+06:50.640 --> 06:57.440
+We're able to use javascript to return these HVM all elements and do things really really fast.
+
+06:59.330 --> 07:04.180
+If I open up the console here I'll see that I get a warning.
+
+07:04.190 --> 07:11.210
+Each child in an array or iterator should have a unique key prop and there is a link to it if you want
+
+07:11.210 --> 07:12.270
+to read up on it.
+
+07:13.320 --> 07:16.150
+This is a special case that you just have to remember.
+
+07:17.460 --> 07:24.030
+When working with react the way the virtual Dom works is it keeps track of what all these cards are.
+
+07:24.270 --> 07:35.240
+But without having something called a key Propp if some of these cars get deleted react to won't know
+
+07:36.660 --> 07:42.600
+which ones which and will have to change the entire Dom vs If they had a key Prabhat says oh this one
+
+07:42.600 --> 07:43.160
+gets removed.
+
+07:43.170 --> 07:45.930
+I can just remove this from the dawn member.
+
+07:46.020 --> 07:50.130
+We want to minimize the amount of work that we do to the dump.
+
+07:50.250 --> 07:53.110
+So when you do a loop it's just something you have to remember.
+
+07:53.160 --> 07:57.060
+You have to give it a unique key in our case.
+
+07:57.190 --> 08:01.160
+We can just say hi which is index.
+
+08:01.170 --> 08:02.220
+If we save this
+
+08:05.240 --> 08:10.130
+up we have to wrap it in curly brackets again.
+
+08:10.970 --> 08:14.670
+Because it's javascript and there you go.
+
+08:14.690 --> 08:16.940
+Now we don't have the error anymore.
+
+08:22.970 --> 08:29.110
+And let's just make this on a new line just sort of looks prettier.
+
+08:33.600 --> 08:39.010
+And because we're returning it on multiple lines we want to wrap this in a bracket right.
+
+08:39.280 --> 08:40.150
+And that's better.
+
+08:42.060 --> 08:45.320
+So this is working nicely as we want it.
+
+08:45.390 --> 08:49.110
+I want to show you one thing because this is javascript.
+
+08:49.200 --> 08:53.890
+Anything we put in these curly brackets is javascript including comments.
+
+08:54.390 --> 08:58.660
+Well we can just copy and paste this entire thing.
+
+08:58.740 --> 09:03.760
+Remove the constant and just add it within the brackets.
+
+09:07.690 --> 09:14.280
+If I save this it should still work like it does.
+
+09:14.450 --> 09:20.160
+And this is another power of re-act react makes you a really really good javascript programmer because
+
+09:20.880 --> 09:25.350
+other than this GSX syntax everything else is just javascript.
+
+09:25.350 --> 09:32.790
+So we are able to create a cardless component that lists cards and all we need to do is pass it a prop
+
+09:33.270 --> 09:39.380
+of robots and we just made this a ton cleaner.
+
+09:39.390 --> 09:40.830
+Very cool.
+
+09:40.830 --> 09:42.830
+All right that's it for this video.
+
+09:42.840 --> 09:45.430
+More things will happen in the next one.
+
+09:45.440 --> 09:46.540
+See you on that one.
+
+09:46.560 --> 09:46.830
+Bye bye.

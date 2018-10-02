@@ -1,0 +1,121 @@
+WEBVTT
+
+00:01.580 --> 00:08.420
+The next datatype we're going to talk about and read Berettas are called lists and lists are implemented
+
+00:08.420 --> 00:13.140
+using something called linked lists rather than arrays.
+
+00:13.400 --> 00:17.180
+And that's getting into a talk about data structures.
+
+00:17.180 --> 00:26.020
+So we're not going to get too into it but the main principle is that insertion is really really fast
+
+00:26.590 --> 00:27.570
+with lists.
+
+00:27.580 --> 00:33.710
+So if you're adding things to the lists it's really really fast but it takes a bit of time.
+
+00:33.810 --> 00:38.510
+Then erase when you're searching for a key.
+
+00:38.520 --> 00:39.570
+So think of it this way.
+
+00:39.570 --> 00:46.050
+Lists are useful if you have really long lists and you need to add elements quickly to that lists and
+
+00:46.050 --> 00:47.760
+you want to use something like that.
+
+00:47.880 --> 00:56.340
+Otherwise you want to use something like sorted lists and read S which is better for when you're searching
+
+00:56.340 --> 00:57.740
+or getting they'll sell it.
+
+00:58.050 --> 00:59.140
+So let's give it a try.
+
+01:00.090 --> 01:06.600
+The first thing we're going to do is say I'll push that is left push.
+
+01:06.690 --> 01:18.030
+So from left of where the head of the list is we're going to add 10 as a key or sorry I have to name
+
+01:18.030 --> 01:28.880
+the key so I'm going to say that this is going to be let's say our list and we're going to add 10 and
+
+01:28.880 --> 01:31.010
+let's say I also want to do a write push
+
+01:33.820 --> 01:39.280
+and this right push is going to be again on our list.
+
+01:41.500 --> 01:50.830
+And it's going to have let's say hello as a string and this is going to enter it from the right of the
+
+01:50.830 --> 01:52.850
+list.
+
+01:53.090 --> 02:03.040
+Now if I do something like get our list we see that because our list is a data type list.
+
+02:03.050 --> 02:07.040
+We can just use our string get on rattus.
+
+02:07.260 --> 02:11.670
+We even get a wrong type operation against a key holding the wrong kind of value.
+
+02:12.940 --> 02:19.930
+Now the way we can actually read some of this some of these lists is if I do something like l range
+
+02:20.230 --> 02:26.040
+and we give it our range that we want to grab the data from you see the key start and stop.
+
+02:26.260 --> 02:38.070
+So I'm going to say I want our list and we want from let's say 0 to 1 I get 10.
+
+02:38.250 --> 02:54.590
+And hello if Now let's say I do a left push to our list of 55 and do the range Alv range from zero to
+
+02:54.590 --> 02:55.390
+1.
+
+02:55.850 --> 03:03.100
+I get 55 and 10 because I only get the two values from 0 to 1 0 or 2 2.
+
+03:03.430 --> 03:06.730
+I get the 5 55 10 and hello
+
+03:09.810 --> 03:15.430
+you can also run commands like l trim to trim your list.
+
+03:15.810 --> 03:22.950
+Or you can run things like our drop which is drop whatever is on the right hand side and I can just
+
+03:22.950 --> 03:30.620
+say drop from our list or necessary instead of our drop.
+
+03:30.630 --> 03:33.210
+It's actually our pop just like in Javascript.
+
+03:33.210 --> 03:38.020
+So it's our list.
+
+03:38.030 --> 03:42.770
+So now if I go to the range are list 0 2.
+
+03:43.340 --> 03:48.320
+No there's no more hello because we pop that drop pop.
+
+03:48.380 --> 03:48.840
+All right.
+
+03:48.860 --> 03:50.790
+So these are lists.
+
+03:51.200 --> 03:53.670
+Let's talk about the next attack.

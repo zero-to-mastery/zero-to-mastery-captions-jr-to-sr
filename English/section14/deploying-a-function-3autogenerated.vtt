@@ -1,0 +1,511 @@
+WEBVTT
+
+00:02.330 --> 00:03.290
+Welcome back.
+
+00:03.320 --> 00:09.710
+Now that we have our running function doing fantastic work for us it's time to finalize our app and
+
+00:09.830 --> 00:13.810
+add our badge next to our number.
+
+00:13.900 --> 00:18.550
+Let's go back to our front and we don't have to worry about our lambda function because we know it's
+
+00:18.550 --> 00:19.160
+running.
+
+00:19.200 --> 00:20.990
+Amazon's taking care of it for us.
+
+00:21.130 --> 00:26.540
+Thank you Amazon and we can get back to doing some coding now.
+
+00:26.580 --> 00:32.980
+And here I want to add a new state that is the emoji state I could added to the app.
+
+00:33.100 --> 00:39.030
+Yes but the emoji is not an important state and it should only be handled by rank anyway.
+
+00:39.040 --> 00:51.220
+So let's change this into a stateful component going to say class rank extends re-act dot component
+
+00:53.670 --> 00:57.090
+and we're going to get rid of this for now.
+
+00:58.570 --> 01:05.700
+Move everything what we don't need either and move everything inside.
+
+01:09.250 --> 01:14.940
+And make sure that we do the render function here.
+
+01:16.970 --> 01:24.400
+And wrap it nicely.
+
+01:24.470 --> 01:31.450
+So now that we have the class component we can start using the start state by adding the constructor
+
+01:33.920 --> 01:42.900
+and in here again calling Super which is default and then this dot state is going to e called the emoji
+
+01:43.200 --> 01:48.690
+which is going to just be blank to start off with.
+
+01:48.730 --> 01:50.060
+Now any here.
+
+01:50.470 --> 01:56.510
+Let's say when component mounts let's do component did mount.
+
+01:56.620 --> 02:01.150
+So that is when the user initially sees this.
+
+02:01.410 --> 02:07.040
+Let's have our generate And Moji function.
+
+02:07.040 --> 02:17.030
+So we haven't made this here but I will say that we have a generate emoji that accepts the this dot
+
+02:17.180 --> 02:18.900
+prop's dot entries.
+
+02:20.290 --> 02:25.570
+Because that's what's going to give us the information of the rank.
+
+02:25.740 --> 02:33.810
+And again because we are using now the class structure we have to make sure that these things are named
+
+02:33.810 --> 02:37.950
+properly with this dot props dot entries.
+
+02:41.080 --> 02:45.090
+Let's save this and do a few more things.
+
+02:45.090 --> 02:57.810
+Let's create the generate emoji method the generate in Moji method is going to take a count or entries.
+
+02:58.060 --> 03:02.670
+And what we're going to do here is do a fast call to our lambda function.
+
+03:02.670 --> 03:10.410
+We're going to copy and paste whatever we had which was the end point that we got from our deployment
+
+03:10.470 --> 03:12.270
+through server less.
+
+03:12.440 --> 03:17.840
+And we want to make sure that we add at the end here the query string parameters Jonge Under do Templi
+
+03:17.840 --> 03:18.440
+strings.
+
+03:18.500 --> 03:25.970
+Remember special quotes here so that we can use the questionmark than dollar saw or a question mark
+
+03:27.500 --> 03:31.200
+rank to equal the dollar sign.
+
+03:32.360 --> 03:32.810
+Entry's
+
+03:35.950 --> 03:46.450
+and now we're doing a Gabb request and we can simply say then we want to get a response.
+
+03:46.590 --> 03:55.260
+And remember with a feature request we have to make sure that we do the response to our Jason.
+
+03:55.410 --> 03:58.510
+And then finally do the get the data.
+
+03:58.980 --> 04:03.440
+And with this data which is hopefully the emoji will do this thought set.
+
+04:03.900 --> 04:16.380
+State that will have the emoji being updated with the data dot input because remember when we go back
+
+04:16.380 --> 04:23.350
+to our function we're doing body with an input and the input is coming with the rank emoji.
+
+04:23.460 --> 04:31.430
+So we're doing data at input and so just to be safe let's do a catch here saying cancel the log if there's
+
+04:31.440 --> 04:33.390
+any errors.
+
+04:33.480 --> 04:35.280
+Let's save this.
+
+04:35.280 --> 04:36.840
+See if we get any errors.
+
+04:37.200 --> 04:38.400
+We have a few things.
+
+04:38.400 --> 04:43.840
+Let's see have a comma somewhere that shouldn't be there.
+
+04:43.840 --> 04:45.240
+Where is that.
+
+04:45.700 --> 04:49.060
+And that's because this has to have a semi-colon as an object.
+
+04:49.060 --> 04:49.510
+There you go.
+
+04:49.540 --> 04:53.460
+We're setting the state emoji from here with data input.
+
+04:53.500 --> 04:55.940
+Let's save perfect.
+
+04:55.960 --> 05:00.230
+And then if we scroll down let's add here the new badge.
+
+05:00.280 --> 05:06.910
+I'm going to just copy and paste a nother diff here and right below the entries will create.
+
+05:06.910 --> 05:07.720
+Let's make a big.
+
+05:07.750 --> 05:13.930
+I'm going to do EF 3 or not as big make it a little smaller and I'm going to say that this is going
+
+05:13.930 --> 05:31.040
+to equal rank badge or we have to make sure it's a string of say rank badge will be this dot props or
+
+05:31.040 --> 05:32.890
+make sure they're using template strings here.
+
+05:32.900 --> 05:35.060
+So we get the proper highlighting.
+
+05:35.060 --> 05:36.150
+Let's try that again.
+
+05:38.180 --> 05:39.280
+That's better.
+
+05:39.280 --> 05:40.070
+Rank badge.
+
+05:40.180 --> 05:43.450
+And then this should be this dot state.
+
+05:44.050 --> 05:44.590
+Emoji.
+
+05:47.500 --> 05:50.100
+All right let's save and see what happens here.
+
+05:50.130 --> 05:51.540
+Learn to go back.
+
+05:52.610 --> 05:57.300
+And I have a rank badge here but nothing is being displayed.
+
+05:57.560 --> 06:01.940
+Let's have a look at the cons. And I get a bit of an error.
+
+06:02.090 --> 06:09.540
+I get no access control allow origin Hetter is present on the request the source origin.
+
+06:09.560 --> 06:10.920
+So we've seen this before.
+
+06:10.970 --> 06:11.490
+Right.
+
+06:11.510 --> 06:15.500
+This is the cores error that we've talked about in the security section.
+
+06:15.500 --> 06:23.510
+And just to simplify things the easiest fix that we can do here we can make sure that within our handler
+
+06:23.510 --> 06:27.210
+function we're going to add a new header.
+
+06:27.380 --> 06:31.870
+And again this is something that for now just because we're playing around it's fine.
+
+06:31.880 --> 06:32.970
+But you might want to adjust it.
+
+06:33.020 --> 06:35.790
+The actual researchers say you want to get access to.
+
+06:36.170 --> 06:41.430
+But we're going to have a access.
+
+06:41.460 --> 06:43.080
+Whoops let's try that again.
+
+06:45.730 --> 06:58.100
+Control allow origin Hetter And for now we're going to allow anybody to access it by using a star.
+
+06:58.240 --> 07:05.390
+So anybody can access this lambda function when we actually deploy our service.
+
+07:05.390 --> 07:11.720
+Our front end you might actually want to paste the used the domain that we have for now let's just leave
+
+07:11.720 --> 07:12.370
+it a star.
+
+07:12.440 --> 07:19.670
+Anybody can access this access control allow origin and make sure we had a column on here well that's
+
+07:19.670 --> 07:20.680
+safe here.
+
+07:21.170 --> 07:28.180
+And actually this should be headers and make sure that our production system is working here.
+
+07:31.240 --> 07:31.980
+That's better.
+
+07:32.130 --> 07:34.870
+So Access Control allow origin.
+
+07:34.890 --> 07:41.240
+We're just going to allow anybody to access us for now point to save and let's just redeploy this.
+
+07:41.830 --> 07:48.480
+And while that's deploying let's make sure we have everything right over here we see that we're doing
+
+07:48.480 --> 07:56.310
+a fresh call to our rank with query parameters and trees response Jaison updating set state and make
+
+07:56.310 --> 07:59.740
+sure we can spell generate emoji properly.
+
+07:59.760 --> 08:00.530
+There you go.
+
+08:01.180 --> 08:02.610
+Well let's save that.
+
+08:02.640 --> 08:04.620
+Everything looks good.
+
+08:04.620 --> 08:08.100
+We're still deploying over here.
+
+08:08.120 --> 08:08.680
+All right.
+
+08:08.750 --> 08:10.460
+We have everything deployed.
+
+08:10.460 --> 08:12.940
+Now let's test this out.
+
+08:12.940 --> 08:15.780
+We're going to go back and refresh and look at that.
+
+08:15.800 --> 08:17.480
+We have our rank badge.
+
+08:17.480 --> 08:19.470
+That is absolutely awesome.
+
+08:19.700 --> 08:23.660
+Let's see if we can update this and get a better rank.
+
+08:23.660 --> 08:30.150
+I'm going to just picture and let's see is this one because we've used it so many times.
+
+08:31.300 --> 08:31.710
+Whoops.
+
+08:31.730 --> 08:41.800
+That's all we wanted to do was just copy image address come over here paste it detect.
+
+08:41.830 --> 08:42.640
+All right.
+
+08:42.640 --> 08:46.040
+The face got detected the badge got up did it.
+
+08:46.060 --> 08:53.590
+Or the entry got updated but the badge didn't because we need to make sure that our update happens and
+
+08:53.590 --> 08:54.580
+we call the function.
+
+08:54.580 --> 08:59.760
+So let's go back and fix this.
+
+09:00.010 --> 09:10.140
+What we want to do here is create a lifecycle hook and this hook is going to be component did mount
+
+09:11.310 --> 09:20.400
+and this component did mount or I should say component did update we're going to do a bit of a check
+
+09:21.360 --> 09:30.850
+if this component updates because remember this component only updates when the emoji or when the props
+
+09:30.850 --> 09:33.040
+change or the emoji changes.
+
+09:33.840 --> 09:38.880
+But you see here that the generate emoji is only being called on component did amount.
+
+09:38.940 --> 09:42.790
+So if it doesn't remount again it's not going to update.
+
+09:42.810 --> 09:44.220
+So that's a simple fix.
+
+09:44.220 --> 09:50.340
+Any time there is a component did update event.
+
+09:50.360 --> 09:59.310
+I'm just going to say if previous and component did update receives previous props and previous state
+
+10:01.050 --> 10:06.750
+and we're just going to grab previous props dot and.
+
+10:07.230 --> 10:12.730
+If that is going to be the exact same as the stop Propst got entries.
+
+10:12.780 --> 10:17.640
+If nothing changes in the entries Well then we don't really care just return.
+
+10:17.640 --> 10:22.620
+No you shouldn't really update anything because well name and entries.
+
+10:22.620 --> 10:24.170
+That's the only thing we care about.
+
+10:25.650 --> 10:27.510
+And maybe check for the name as well.
+
+10:27.570 --> 10:32.520
+So we'll say previous prop's dot name
+
+10:36.670 --> 10:40.190
+and stop prop's dot name.
+
+10:40.390 --> 10:48.720
+And then finally in here we can say if none of those change that's fine just return no.
+
+10:48.730 --> 10:59.160
+Otherwise I want you to always when the entries change to do a this thought generate emoji with the
+
+10:59.260 --> 11:03.720
+this dot prop's dot the new entries.
+
+11:03.780 --> 11:09.070
+So we want to make sure that we generate that emoji and call that lambda function.
+
+11:09.080 --> 11:10.390
+All right let's give that a go.
+
+11:10.400 --> 11:12.140
+I'm going to go back.
+
+11:12.170 --> 11:12.740
+All right.
+
+11:12.740 --> 11:18.040
+Our emoji change but let's add another picture.
+
+11:18.140 --> 11:19.420
+Hey look of that.
+
+11:19.550 --> 11:22.140
+We've leveled up to the rocket ship.
+
+11:22.160 --> 11:22.990
+That's awesome.
+
+11:23.120 --> 11:29.200
+Let's click detect again and trees nine but we're getting undefined.
+
+11:29.330 --> 11:30.120
+Why is that.
+
+11:31.570 --> 11:36.410
+It should be giving us a rocket ship for as long as we have the entries.
+
+11:36.460 --> 11:44.550
+So let's check that out we go to network and click detect again.
+
+11:44.550 --> 11:46.140
+All right so that's working.
+
+11:46.140 --> 11:47.210
+If we click again
+
+11:50.170 --> 11:52.270
+that's a little strange.
+
+11:52.370 --> 11:55.260
+All right everything seems to be working.
+
+11:55.270 --> 11:58.670
+We have the rocket ship.
+
+11:58.790 --> 11:59.900
+Everything's good.
+
+12:00.140 --> 12:09.760
+If we go up to our profile do view profile and let's change our name to Teti save.
+
+12:09.820 --> 12:18.640
+All right Teddy your current entry count is 15 and we have a rank badge of the wall the highest badge
+
+12:18.640 --> 12:19.630
+that we can get.
+
+12:19.630 --> 12:21.440
+How cool is that.
+
+12:21.460 --> 12:25.330
+We have ourselves a fully functioning app.
+
+12:25.490 --> 12:26.910
+Game and sign out.
+
+12:27.000 --> 12:38.030
+And just for fun let's enter a new user I'm going to call him Bobby and he's going to be at gmail dot
+
+12:38.030 --> 12:38.860
+com.
+
+12:38.990 --> 12:42.610
+Password is B register.
+
+12:42.630 --> 12:44.520
+Hey Bobby you're still a beginner.
+
+12:44.520 --> 12:46.700
+You got to work on your entry account.
+
+12:46.750 --> 12:52.300
+That's detect and everything is working.
+
+12:52.530 --> 12:56.430
+Let's just try this one more time because the first and second badge kind of looks similar if I do this
+
+12:56.430 --> 12:57.330
+again.
+
+12:57.330 --> 12:57.930
+There you go.
+
+12:57.930 --> 12:59.760
+The eyes changed.
+
+12:59.760 --> 13:00.290
+There you go.
+
+13:00.290 --> 13:03.490
+Ari Moji is currently upgrading and changing.
+
+13:03.540 --> 13:04.650
+Congratulations.
+
+13:04.770 --> 13:07.200
+We've used Amazon Lamda.

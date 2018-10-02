@@ -1,0 +1,733 @@
+WEBVTT
+
+00:01.340 --> 00:02.480
+Welcome back.
+
+00:02.480 --> 00:08.280
+Let's check out a new section of our star of security.
+
+00:08.290 --> 00:16.720
+We're going to talk about cross-site scripting and cross-site request forgery and they're kind of similar.
+
+00:16.720 --> 00:20.790
+They have some overlaps so we're going to talk about them together.
+
+00:20.800 --> 00:25.730
+You're also going to start noticing that a lot of these actually overlap as well.
+
+00:25.810 --> 00:32.620
+Some of the best practices here are also going to affect other parts of the star.
+
+00:32.640 --> 00:36.310
+So what is cross-site scripting first.
+
+00:36.450 --> 00:44.280
+Well cross-site scripting occurs whenever an application includes untrusted data in a new web page without
+
+00:44.430 --> 00:53.850
+proper validation or escaping or updating a web page with user supplied data using javascript cross-site
+
+00:53.850 --> 00:59.680
+scripting allows an attacker to execute scripts in a victim's browser.
+
+01:01.110 --> 01:04.130
+And you can do a lot of bad things by doing that.
+
+01:04.140 --> 01:06.130
+Let's use a practical example here.
+
+01:06.900 --> 01:15.450
+Imagine our security playground was a blog post and this blog post allowed for comments and users can
+
+01:15.450 --> 01:15.960
+comment.
+
+01:15.960 --> 01:17.400
+Users can comment.
+
+01:17.670 --> 01:26.610
+Now a bad person can come in and you know try to execute scripts like we tried and that won't work and
+
+01:26.610 --> 01:30.680
+we've seen this before where we can try and insert scripts in here.
+
+01:31.110 --> 01:38.320
+Well this was a blog post and I did our old example something like this.
+
+01:38.360 --> 01:45.080
+Remember our image source that's going to air and is going to alert one analyst make sure we close off
+
+01:45.080 --> 01:52.270
+the tab click submit and we've run javascript on our browser but that doesn't really mean much.
+
+01:52.280 --> 02:01.220
+However if this was a blog post with comments I by submitting this comment other people viewing this
+
+02:01.220 --> 02:09.140
+browser can now go to this blog post and because I've entered this comment it's going to also execute
+
+02:09.410 --> 02:17.180
+in their browser and the DOM is going to try and update and instead execute this alert function in a
+
+02:17.180 --> 02:19.400
+user's browser.
+
+02:19.560 --> 02:23.480
+And that's what Cross site scriptum means.
+
+02:23.660 --> 02:34.670
+I can run code cross sites two different sites from my browser and what most bad actors would do is
+
+02:34.880 --> 02:37.070
+use a line like this
+
+02:39.690 --> 02:48.150
+window dot location equals to some web site that I created that's really really bad web site.
+
+02:48.490 --> 02:52.600
+And I'm going to send something called document dot cookie.
+
+02:52.600 --> 02:54.330
+All right so let's unpack this.
+
+02:54.340 --> 03:00.470
+I'm going to just remove this for now and just do window location and it shows me exactly where my u
+
+03:00.470 --> 03:01.900
+r l is.
+
+03:02.020 --> 03:10.810
+If I go to a Web site like Twitter and do the same thing or it would do window Daut location I get the
+
+03:11.190 --> 03:19.710
+role of Twitter and I can actually change this well and send people to different Web sites by just saying
+
+03:20.010 --> 03:24.900
+window location equals.
+
+03:24.930 --> 03:33.860
+So the first part of the script is saying go to this new Web site that I own that is a bad web site
+
+03:34.500 --> 03:36.990
+and then I want you to send me the data.
+
+03:37.020 --> 03:38.140
+That is the cookies.
+
+03:38.190 --> 03:41.090
+What is document dot cookie.
+
+03:41.580 --> 03:45.720
+And this is something that we're actually going to talk about in the JWT sessions.
+
+03:45.990 --> 03:53.400
+But a cookie is a way for us when we log in to something let's use Twitter as an example.
+
+03:53.400 --> 03:59.270
+When I log in here Twitter now remembers that I'm logged in.
+
+03:59.270 --> 04:04.340
+If I refresh this page I'm I don't have to log in again.
+
+04:04.640 --> 04:09.360
+I have a session with Twitter and a lot of Web sites.
+
+04:09.590 --> 04:16.760
+Actually majority of them will let you sign in with what we call a cookie a random piece of text that
+
+04:17.450 --> 04:23.910
+I receive and that piece of text is going to be attached to my browser.
+
+04:24.080 --> 04:29.260
+So every time I go to Twitter.com now and I have that piece of text the server from Twitter is going
+
+04:29.260 --> 04:31.450
+to say oh yea that's Ondrea Yeah.
+
+04:31.520 --> 04:39.420
+You can let him in and like I said we're going to talk more about this in detail in the W.T. and sessions
+
+04:39.510 --> 04:40.100
+section.
+
+04:40.170 --> 04:42.730
+So don't get hung up too much about it.
+
+04:43.490 --> 04:49.820
+But the idea behind it is that if a piece of text is the only thing that's Allow me to enter Twitter
+
+04:50.090 --> 04:58.450
+then I can still that I can copy and paste that cookie open up another browser type it in and log in
+
+04:58.450 --> 04:58.910
+to Twitter
+
+05:01.650 --> 05:07.110
+so I can log on to Twitter without knowing my user name or password.
+
+05:07.110 --> 05:08.350
+Pretty scary stuff.
+
+05:08.700 --> 05:15.770
+So if we go back to this example all I'm saying is I want you to change the location of my your cell.
+
+05:15.810 --> 05:21.350
+So go to this Web site and I'm going to also send to my Web site.
+
+05:21.600 --> 05:29.160
+This information your cookie so I can have a server that just logs out people's cookies and now I have
+
+05:30.310 --> 05:38.020
+your information if I knew that you were commenting on Twitter for example then I could steal that cookie
+
+05:38.020 --> 05:45.010
+information and sign an and cross-site scripting is exactly that it's used for session hijack.
+
+05:45.050 --> 05:48.940
+That's why we call it you already know how to prevent this.
+
+05:48.960 --> 05:50.600
+We sanitize inputs.
+
+05:50.670 --> 05:57.350
+We make sure that you can't just enter anything you want in our web sites and put.
+
+05:57.400 --> 05:57.750
+Right.
+
+05:57.760 --> 06:00.580
+That's that's pretty nice and easy.
+
+06:00.590 --> 06:02.070
+Let's talk about the next point.
+
+06:03.650 --> 06:11.440
+The C S R F or C sirf for short is cross site request forgery.
+
+06:11.450 --> 06:14.750
+I know the names are pretty pretty confusing Don't worry.
+
+06:14.750 --> 06:19.130
+The main takeaway from this video is going to be at the end of How to prevent this.
+
+06:19.220 --> 06:21.630
+So you can always come back to it if you're confused.
+
+06:21.650 --> 06:25.420
+They are a little bit advanced and you don't need to know them by heart.
+
+06:25.430 --> 06:29.870
+Like I said you just want to know how to prevent them and don't worry I have a slide just for that.
+
+06:31.510 --> 06:34.570
+So we have a problem.
+
+06:34.780 --> 06:36.020
+We have our client.
+
+06:36.190 --> 06:39.870
+And luckily for us we know to use a sheet yes when communicating.
+
+06:39.970 --> 06:45.370
+So we have this little tunnel that protects our data from third parties and people that are trying to
+
+06:45.370 --> 06:46.100
+spy on us.
+
+06:46.150 --> 06:53.290
+A client makes a request to a server that maybe gets the profile of the user from the database and returns
+
+06:53.290 --> 06:55.370
+it to the client so we can log in.
+
+06:55.720 --> 06:58.480
+And then sometimes you also talk to third party API.
+
+06:58.510 --> 07:07.500
+Maybe we get weather information or we get our robots from a third party API and we make that request
+
+07:07.590 --> 07:08.540
+through a studio.
+
+07:09.000 --> 07:10.930
+So we're all safe right.
+
+07:12.260 --> 07:20.360
+Well as we saw with cross-site requests forgery if the server and the third party trusts the client
+
+07:20.720 --> 07:30.660
+well then we can use that cookie to log into server and database and get that user's session.
+
+07:30.680 --> 07:38.060
+So that's not the only thing that we need to do in Sisera or cross-site requests forgery.
+
+07:38.060 --> 07:44.160
+We as a bad person create a bad you Arel that has malicious code in it.
+
+07:45.140 --> 07:50.300
+So you are most likely going to see this in something like scam e-mails where they make you click on
+
+07:50.300 --> 07:51.270
+a link.
+
+07:51.440 --> 07:54.880
+For example they'll have something like this.
+
+07:54.920 --> 07:59.720
+Let's clear this list to a new piece of text.
+
+07:59.930 --> 08:07.550
+So this could be in an e-mail just this text or perhaps on a Web site that looks like Google dot com
+
+08:07.550 --> 08:14.850
+but it's actually has an extra L and has an API where you can click sign in or read more and takes you
+
+08:14.870 --> 08:16.880
+to this that website.
+
+08:17.300 --> 08:21.330
+And overhear what they're doing is they're using query parameters too.
+
+08:21.410 --> 08:28.790
+And this is just an example saying I want the account of the attacker and send the amount a hundred
+
+08:28.790 --> 08:30.580
+dollars to that account.
+
+08:30.740 --> 08:35.960
+And this is an example of a surf attack using the DP get.
+
+08:35.990 --> 08:41.220
+We're doing a get to a query parameter.
+
+08:41.380 --> 08:49.600
+If a victim visits this web page control by an attacker and the attack or in the victim is already logged
+
+08:49.600 --> 08:56.710
+in let's say to their bank because they've already set those cookies and the server thinks that they're
+
+08:56.710 --> 09:02.060
+already signed in and this is legitimate because we just made that person click on that link.
+
+09:02.080 --> 09:05.290
+So they're in the same browser that they are logged in with.
+
+09:05.290 --> 09:17.670
+Well I just made the user the victim click on a link that sends me money and this isn't just Garey cause
+
+09:17.680 --> 09:18.570
+they can do this with.
+
+09:18.590 --> 09:23.270
+You can also do it with post requests using I-frame and that gets pretty complicated.
+
+09:23.280 --> 09:25.910
+And outside of the scope of this course.
+
+09:26.300 --> 09:28.100
+So that's pretty terrible.
+
+09:28.100 --> 09:31.280
+How are we going to prevent something like that.
+
+09:33.010 --> 09:35.150
+Well let's talk about how we can prevent it.
+
+09:35.170 --> 09:37.910
+But before I do that let me do something quote.
+
+09:38.150 --> 09:41.990
+Let's try and attack Twitter.
+
+09:42.080 --> 09:48.590
+Let's write this piece of code a feature request to this Web site that actually actually let me show
+
+09:48.590 --> 09:49.510
+you what it does.
+
+09:55.660 --> 09:58.900
+It's an ACB request and response service.
+
+09:58.900 --> 10:04.320
+We essentially just output to this Web site whatever response we get.
+
+10:04.360 --> 10:05.100
+Or where are we.
+
+10:05.200 --> 10:08.940
+Whatever response we get and we can keep track of it.
+
+10:08.950 --> 10:18.250
+So let's try and do a post request and in that post request send the from this website from Twitter.
+
+10:18.320 --> 10:28.570
+Mike cookee of me being logged into Twitter if I press Enter Whew I get some errors I get refused to
+
+10:28.570 --> 10:34.700
+connect to this because it violates the following content security policy.
+
+10:36.470 --> 10:38.120
+Refuses to connect.
+
+10:38.150 --> 10:42.640
+We see that we have this content security policy that prevents me from doing it.
+
+10:42.890 --> 10:46.550
+And Twitter here is using a security measure to be like no no no.
+
+10:46.670 --> 10:53.340
+We're not just going to send document cookee which is very important to just another web site so easily.
+
+10:53.480 --> 10:57.470
+So they have good security measure and it looks like they're using something called content security
+
+10:57.470 --> 10:58.300
+policy.
+
+10:58.580 --> 11:06.050
+And all we need to do to set this is to just have it in our headers.
+
+11:06.130 --> 11:07.200
+Now what does that mean.
+
+11:07.320 --> 11:11.950
+Well let's just show you I have my express app over here.
+
+11:12.190 --> 11:16.300
+And let's just go to the get method where we just return Hello world.
+
+11:16.360 --> 11:24.490
+If you remember if I go to localhost I have the hello world over here now and here.
+
+11:26.940 --> 11:37.400
+Let's before we send this do are us so response dot set and this might be different if you're now using
+
+11:37.400 --> 11:38.680
+express or any other server.
+
+11:38.690 --> 11:44.730
+But the idea is the same it will be 99 percent of the code is pretty much the exact same.
+
+11:44.920 --> 11:52.500
+All you're going to do is give it an object and this object is going to have whatever headers we want.
+
+11:52.570 --> 11:58.360
+Let's say that we want to have content security
+
+12:02.330 --> 12:11.900
+policy and we're going to tell this Web site that the only places that we want javascript to be run
+
+12:12.130 --> 12:16.930
+and let's use double quotes here just so we can use single quotes as well.
+
+12:16.950 --> 12:22.620
+SCO like that and it's going to be self.
+
+12:22.650 --> 12:26.650
+So our domain name which is local host for now.
+
+12:27.060 --> 12:34.690
+And also let's say that we really trust Google API so let's just do a shitty ass.
+
+12:34.890 --> 12:42.130
+And to the Google API so that Google we trust that they can do.
+
+12:42.570 --> 12:47.490
+They can run scripts and let me just say that.
+
+12:47.900 --> 12:49.650
+All right syntax for Hello world.
+
+12:49.660 --> 12:55.190
+We just have to add the bracket over here now with save.
+
+12:55.230 --> 12:55.670
+All right.
+
+12:55.680 --> 12:56.850
+Now check this out.
+
+12:56.940 --> 13:07.190
+If I go to Hello World and I refresh or go to network tap and refresh if we go to localhost we now see
+
+13:07.190 --> 13:14.800
+that we have content security policy script source self GTP API google.com.
+
+13:14.840 --> 13:17.620
+So we just set content security policy.
+
+13:17.690 --> 13:18.420
+That's it.
+
+13:18.500 --> 13:19.780
+That's how simple it was.
+
+13:19.880 --> 13:24.090
+And these headers look really really overwhelming.
+
+13:24.530 --> 13:28.550
+And don't worry these are actually a lot simpler than you think.
+
+13:28.790 --> 13:35.000
+As you know with a sheepy request we have different things that we can send such as body parameters
+
+13:35.240 --> 13:41.670
+and we also have response headers and I'm going to show you actually how to simplify this.
+
+13:41.750 --> 13:44.870
+You're not going to do this manually most of the time.
+
+13:44.960 --> 13:50.780
+Luckily for you there's NPM packages that we're going to talk about later on in the videos where this
+
+13:50.780 --> 13:52.120
+is done automatically.
+
+13:52.430 --> 13:59.590
+But I wanted to show you just so you know how to set headers and then finally we want to make sure that
+
+13:59.590 --> 14:07.840
+this document cookie can be accessed so easily and by the way I don't recommend using cookies.
+
+14:08.070 --> 14:15.040
+And is again kind of a debate about what to use so people might hate me for saying this but I'm not
+
+14:15.040 --> 14:20.340
+a big fan of cookies just because it adds extra layers that you need to do to be secure.
+
+14:20.380 --> 14:27.400
+And I'm going to show you later on in the course in the JWT and session video how we can actually do
+
+14:27.400 --> 14:28.260
+this securely.
+
+14:28.360 --> 14:31.570
+But let's say you're using cookies on your Web site.
+
+14:31.710 --> 14:38.260
+Again it's a very very simple way to prevent this from happening and preventing subserve.
+
+14:38.260 --> 14:40.570
+So cross-site requests forgery.
+
+14:40.660 --> 14:46.100
+All we need to do is say that we want actually with Express.
+
+14:46.110 --> 14:47.850
+We can just say response.
+
+14:47.860 --> 14:53.740
+Dot cookie say a session ID.
+
+14:55.360 --> 15:01.780
+And by the way this is exactly how a set a cookie is created by the server saying I just checked your
+
+15:01.810 --> 15:03.810
+your username and password match.
+
+15:03.880 --> 15:08.960
+Here's your session so that from now on we don't have to check your password and username.
+
+15:09.190 --> 15:15.110
+As long as you send us the session one every request I will check and make sure that it works for you.
+
+15:15.740 --> 15:23.460
+So in here I'm just going to say that and these are the two headers that we want to set for cookies
+
+15:24.240 --> 15:24.810
+GTP
+
+15:27.750 --> 15:29.630
+only.
+
+15:29.810 --> 15:38.990
+And we're going to set that to true and secure is also set to true.
+
+15:39.150 --> 15:45.920
+If I save this right and actually I think we can only set it one at a time.
+
+15:45.930 --> 15:53.620
+So we're going to have to close this like this and we're going to do one more again this time with secure
+
+15:54.300 --> 15:54.810
+true
+
+15:58.900 --> 16:01.670
+let's save and go back here.
+
+16:01.730 --> 16:07.120
+Open up the tab for your refresh.
+
+16:08.370 --> 16:09.560
+Set the cookie.
+
+16:09.560 --> 16:10.190
+Look at that.
+
+16:10.340 --> 16:21.180
+We have a sheet only we have secure and the cool part is if we go to application and cookies look at
+
+16:21.180 --> 16:25.710
+that we have the cookies for the session.
+
+16:25.760 --> 16:32.110
+I think this is from a previous one so we can delete this one but if we refresh we have the session.
+
+16:32.120 --> 16:39.460
+If I close this and refresh again the session is back very cool again.
+
+16:39.560 --> 16:41.560
+Don't get too scared about this.
+
+16:41.570 --> 16:43.960
+We're going to talk about cookies a lot more.
+
+16:43.970 --> 16:45.480
+I know it can get confusing.
+
+16:45.500 --> 16:53.740
+But this is all part of while we can make secure and you know what I think going to a slide or and summarizing
+
+16:53.750 --> 16:59.700
+what we need to prevent cross-site scripting and see serve might be the best idea.
+
+17:01.470 --> 17:03.050
+So what have we learned.
+
+17:03.300 --> 17:05.780
+Well we already know this right.
+
+17:05.820 --> 17:11.180
+We want to do client side input validation for quick user feedback.
+
+17:11.190 --> 17:17.850
+Never let something like this work on your Web site and never trust it always validate and encode user
+
+17:17.850 --> 17:21.430
+input before displaying something that we've discussed a lot about.
+
+17:22.050 --> 17:28.010
+And by the way modern frameworks like angular re-acting view all do something called the scaping characters
+
+17:28.020 --> 17:30.580
+to avoid this type of behavior by default.
+
+17:31.380 --> 17:32.860
+Which is really really nice.
+
+17:34.020 --> 17:38.310
+And the sanitize input is something that we're very familiar with.
+
+17:38.310 --> 17:43.200
+I also want to emphasize to not use the eval function in javascript.
+
+17:43.200 --> 17:47.920
+Yes Javascript has an evil function and it's very very dangerous.
+
+17:47.940 --> 17:48.830
+Don't use it.
+
+17:48.930 --> 17:52.470
+It is very rare that you would ever ever this.
+
+17:52.500 --> 17:54.740
+There's also something called document dot.
+
+17:54.840 --> 17:55.520
+Right.
+
+17:55.740 --> 17:58.920
+So it's kind of like document interracially M..
+
+17:59.190 --> 18:10.540
+But worse for example if I go here and do document what Cantab document dot right
+
+18:13.150 --> 18:19.710
+and we do a script tag that has an alert of one and close US script tag
+
+18:24.910 --> 18:29.020
+hurt it doesn't let me do it because I've just set the headers.
+
+18:29.170 --> 18:31.210
+But if I go to my other
+
+18:34.730 --> 18:37.190
+security play ground that I haven't done anything in.
+
+18:37.190 --> 18:42.230
+Let's refresh here and remove this.
+
+18:42.370 --> 18:43.200
+Look at that.
+
+18:43.210 --> 18:50.650
+I was able to execute just by using Document R8 and I was able to enter a in line script.
+
+18:50.730 --> 18:57.330
+We learned that we should set content security policy headers and don't worry.
+
+18:57.350 --> 19:03.840
+This is something that I'll show you a tool that makes it very very easy and the set headers video.
+
+19:04.100 --> 19:10.440
+And finally we want to set secure and HGP only for cookies using some of the methods that I saw.
+
+19:10.460 --> 19:13.550
+I showed you by the way.
+
+19:13.870 --> 19:22.150
+As with anything for problems that happen all the time there is preexisting solutions and tools and
+
+19:22.150 --> 19:25.520
+one of them to avoid see surf is well.
+
+19:25.630 --> 19:32.950
+This package all we need to do is install it requires it and then we can use it in any app that we want.
+
+19:32.950 --> 19:36.990
+For example in Xpress it shows you how to use it.
+
+19:37.060 --> 19:42.760
+If you're using cookies but like I said I'm going to show you a better way than this so don't stress
+
+19:42.760 --> 19:43.190
+about it.
+
+19:43.210 --> 19:48.030
+I know this video is a little bit difficult but just stick with me.
+
+19:48.030 --> 19:48.880
+Trust me.
+
+19:48.880 --> 19:53.840
+By sessions and tokin video this video is going to make a lot more sense.
+
+19:55.000 --> 20:02.470
+Remember HGP only attribute prevents the cookies from being accessed by client side scripting and the
+
+20:02.470 --> 20:08.170
+secure attribute and Sher's cookie will be sent over the yes connection.
+
+20:08.200 --> 20:16.970
+So both of them work together again AC only says only HGP methods can access the cookie.
+
+20:16.990 --> 20:18.400
+No javascript can.
+
+20:18.730 --> 20:25.370
+So that mitigates our cross-site scripting attack that we might be able to use.
+
+20:25.450 --> 20:28.760
+All right we've learned a lot of new vocabulary here.
+
+20:28.780 --> 20:33.640
+This might be a video that you need to come back to but I'm going to list some exercises for you after
+
+20:33.640 --> 20:39.460
+this video to get a little bit more familiar and play some of fun hacking exercises I'll see in the
+
+20:39.460 --> 20:40.560
+next video.
+
+20:40.570 --> 20:40.810
+Probably.

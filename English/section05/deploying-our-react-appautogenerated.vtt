@@ -1,0 +1,370 @@
+WEBVTT
+
+00:01.600 --> 00:09.000
+Are right it's time for us to create a progressive Web app using our robo friends.
+
+00:09.180 --> 00:12.230
+Now instead of using the robot friends up
+
+00:16.070 --> 00:24.050
+our robo friends app I mean it is the rebel friends up but I just named it differently so that well
+
+00:24.110 --> 00:28.340
+I've been recording for a really long time today and this is what I do to entertain myself.
+
+00:29.330 --> 00:34.930
+If you get the zoo Lander reference Well then I'm glad that I'm glad that you do.
+
+00:34.930 --> 00:35.610
+If you haven't.
+
+00:35.630 --> 00:37.520
+Make sure you watch MTV movie it's great.
+
+00:37.520 --> 00:44.760
+Anyway I have the robo friends app here and there's nothing different than anything we've seen before.
+
+00:44.780 --> 00:46.520
+If I ran NPM start
+
+00:50.760 --> 00:54.150
+we have our robot friends perfect.
+
+00:54.230 --> 00:59.830
+But Bruno asked us to make this into a progressive Web site.
+
+01:00.040 --> 01:01.390
+How can we do this.
+
+01:01.480 --> 01:05.540
+The very first thing we need to do is to actually put this online.
+
+01:05.590 --> 01:12.920
+We can just make it a progressive Web app locally since we won't be able to test it on Lighthouse.
+
+01:13.030 --> 01:19.780
+So the very first thing I have the robot friends app here with an amazing name.
+
+01:20.020 --> 01:27.370
+But we want to have the good pages linked here so that it's actually online with the react app with
+
+01:27.370 --> 01:28.600
+a query backed up.
+
+01:28.600 --> 01:33.750
+It's a little difficult because well there's no index dot js file.
+
+01:33.910 --> 01:36.540
+I mean there is but it's in the public folder.
+
+01:36.910 --> 01:45.940
+And so it isn't as simple as just going to settings and clicking create get how pages we have to do
+
+01:45.940 --> 01:46.760
+a little bit of work.
+
+01:46.810 --> 01:50.050
+So let's do that first.
+
+01:50.140 --> 01:57.660
+I'm going to make this a little smaller and we don't need this so let's clean this up now.
+
+01:57.690 --> 02:04.820
+Actually the very first thing we want to do is to install a package and this package is going to be.
+
+02:04.830 --> 02:11.780
+Let me just make this bigger so you can see the name is called G.H. pages for pages.
+
+02:11.840 --> 02:17.020
+So you just do NPM install G.H. pages
+
+02:19.980 --> 02:25.810
+so that we have this tool to allow us to deploy on to get her pages.
+
+02:25.860 --> 02:33.900
+So if we check back on to package Jaison we see that we have get her pages installed.
+
+02:33.990 --> 02:44.070
+The next thing we want to do with get her pages is to run a deployment by us being able to run NPM Ron
+
+02:44.070 --> 02:44.750
+deploy.
+
+02:44.910 --> 02:49.710
+It's going to deploy to get her pages and the way we do that is fairly simple.
+
+02:49.770 --> 02:53.100
+We have a deploy command
+
+02:56.590 --> 03:05.420
+and this deploy command is going to have G.H. pages and we're going to build.
+
+03:05.740 --> 03:14.900
+So we're going to run the build commit to build our phos and make sure we had a comma here and then
+
+03:15.440 --> 03:26.480
+before this deploy an NPM scripts you can do the pre syntax and prae command name means before whatever
+
+03:26.480 --> 03:27.470
+command.
+
+03:27.470 --> 03:28.190
+Run this.
+
+03:28.190 --> 03:37.200
+So in our case before deploy so pre-deploy we're going to say and PM run built
+
+03:41.540 --> 03:48.180
+and by the way this is actually in the documentation of Kuri react up so you can check out the good
+
+03:48.180 --> 03:54.020
+how pages deploy section and you'll get a detailed description of what's happening here.
+
+03:54.020 --> 03:55.450
+All right let's save this.
+
+03:55.460 --> 04:03.920
+And the last piece of the puzzle is that with create react up we need to create within package on the
+
+04:04.730 --> 04:06.780
+home page property.
+
+04:07.430 --> 04:12.700
+And here we have to state where our home page is going to be.
+
+04:13.160 --> 04:15.490
+And you want to have it attached to your user name.
+
+04:15.500 --> 04:27.970
+So we're going to say GTP us in my case this is my get have user name Dogget hub dot IO and then finally
+
+04:28.030 --> 04:30.740
+your repo name.
+
+04:30.880 --> 04:39.970
+In my case the obnoxiously long repo name we're going to add it over here and make sure we have the
+
+04:39.970 --> 04:41.500
+comma at the end.
+
+04:41.530 --> 04:42.520
+Let's save that.
+
+04:42.790 --> 04:44.290
+Let's run NPM.
+
+04:44.290 --> 04:53.750
+Ron deploy PM Thrun deploy.
+
+04:53.800 --> 04:56.770
+It's going to create the build folder.
+
+04:58.500 --> 05:04.100
+And you can see over here it has created our app for us which is indexed.
+
+05:04.170 --> 05:10.180
+A shemale and all of our necessary files and the static folder.
+
+05:10.230 --> 05:17.670
+So javascript any media files and he CSSA Fox and we see that it's been published and the folder is
+
+05:17.670 --> 05:18.890
+ready to be deployed.
+
+05:20.140 --> 05:32.400
+At this link now the last thing we need to do is to go to get hub and in the settings page scroll down
+
+05:32.400 --> 05:41.670
+all the way to the get help pages and make sure that this branch the get how pages branch is not all
+
+05:41.670 --> 05:47.280
+master is not on Dachs but it's on the Get Help Pages branch which we've put.
+
+05:47.430 --> 05:53.010
+And you can see that we already have a checkmark saying that your site is published at this link.
+
+05:53.340 --> 05:54.430
+So let's click here.
+
+05:55.960 --> 05:57.000
+And there you go.
+
+05:57.070 --> 06:04.590
+We have our app our create react app deployed on how pages we have free hosting.
+
+06:04.600 --> 06:05.460
+Very cool.
+
+06:05.800 --> 06:09.430
+And we have this great long you are el.
+
+06:09.520 --> 06:12.870
+Now we can test our app on Lighthouse.
+
+06:12.910 --> 06:21.020
+So let's do that one to click and say generate report and as we know the White House is going to test
+
+06:21.020 --> 06:21.590
+everything.
+
+06:21.590 --> 06:23.030
+See how it works online.
+
+06:23.030 --> 06:30.380
+See what our time to first painting's time to interactive and just generally figure out how good of
+
+06:30.380 --> 06:33.840
+a progressive Web app are we looking at this.
+
+06:33.910 --> 06:37.360
+The score is not bad.
+
+06:37.370 --> 06:45.260
+We have ASIO's 89 percent accessibility 80 percent progressive Web app 82 percent performance 92 best
+
+06:45.260 --> 06:46.760
+practices 100 percent.
+
+06:46.760 --> 06:47.990
+That's awesome.
+
+06:47.990 --> 06:54.110
+That's great but not everything's 100 and especially progressive webapp is not 100.
+
+06:54.200 --> 06:55.990
+We want to get this to.
+
+06:56.060 --> 06:57.800
+While the perfect score.
+
+06:57.800 --> 07:06.260
+Now as we scroll down to here we know that lighthouse gives us some really really good information of
+
+07:06.290 --> 07:07.760
+how we can improve.
+
+07:07.820 --> 07:14.150
+For example it says exactly what we need to do to make our app a progressive Web.
+
+07:14.170 --> 07:23.820
+It says that hey you don't really have any prompt to install a web app so there's no icons or anything.
+
+07:24.020 --> 07:30.590
+People can't add it to their home screen and have a logo on their mobile phones just like a regular
+
+07:30.590 --> 07:32.530
+app.
+
+07:32.550 --> 07:40.890
+There's also no splash screen but all these other audits past including a CD p.s. and including service
+
+07:40.890 --> 07:41.740
+workers.
+
+07:41.790 --> 07:50.330
+This is the cool part because create re-act app has progressive Web app in mind and is always being
+
+07:50.360 --> 07:53.390
+updated with the best options for you.
+
+07:53.390 --> 07:56.600
+We have all of this done for us.
+
+07:58.770 --> 08:08.730
+We also have some cool features right out of the box such as if I turn off my Wi-Fi and I refresh look
+
+08:08.730 --> 08:09.620
+at that.
+
+08:09.830 --> 08:13.710
+We don't have an empty page with nothing in it.
+
+08:13.710 --> 08:18.620
+With that little dinosaur that you get in Google Chrome this app is actually working.
+
+08:18.710 --> 08:23.000
+I mean we're not loading our robots because we're making an API request.
+
+08:23.000 --> 08:27.070
+We could technically add that API request.
+
+08:27.080 --> 08:28.610
+So it works off line as well.
+
+08:28.700 --> 08:35.150
+But if I click on the comp on Google that this app is still working and based on the type of app that
+
+08:35.150 --> 08:43.160
+we have we could have an offline app that still works and every time I refresh I still get this app.
+
+08:43.230 --> 08:44.060
+Very cool.
+
+08:44.790 --> 08:51.330
+Now with any other web site that isn't a progressive Web app Let's go to my favorite Web site.
+
+08:51.340 --> 08:54.330
+Wait.
+
+08:54.530 --> 08:57.150
+But why do you see that.
+
+08:57.220 --> 08:58.550
+There's no Internet connection.
+
+08:58.550 --> 09:00.990
+We get absolutely nothing.
+
+09:02.240 --> 09:09.480
+Although just a fun little trick if you hit spacebar here you get a little dinosaur game.
+
+09:09.480 --> 09:12.760
+They can jump around it.
+
+09:13.970 --> 09:15.380
+Very cool.
+
+09:15.740 --> 09:16.120
+All right.
+
+09:16.130 --> 09:18.020
+This is getting a little addictive.
+
+09:18.020 --> 09:22.100
+But you see that this is not a progressive Web app.
+
+09:22.100 --> 09:24.140
+Ours is.
+
+09:24.140 --> 09:27.170
+And we get that out of the box with creative re-act app.
+
+09:27.560 --> 09:29.900
+Very very cool.
+
+09:29.900 --> 09:31.600
+Let's turn this back on.
+
+09:31.910 --> 09:39.050
+Definitely it our Internet again if we go back to the app and let's make this smaller.
+
+09:40.610 --> 09:49.010
+We see that we have the register service work here out of the box created by Create re-act app and it
+
+09:49.340 --> 09:52.790
+has everything set up for us.
+
+09:53.020 --> 10:00.570
+And then we have a few other things that we need to fix in the next video.
+
+10:00.650 --> 10:07.690
+We're going to start working on this and chipping away and trying to get these scores perfect but so
+
+10:07.690 --> 10:08.610
+far so good.
+
+10:08.620 --> 10:13.840
+We even got Estill CPS straight out of the box because of get how pages.
+
+10:14.080 --> 10:17.440
+For now though I'll see in the next video Buh-Bye.

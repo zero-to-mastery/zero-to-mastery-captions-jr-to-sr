@@ -1,0 +1,235 @@
+WEBVTT
+
+00:00.640 --> 00:01.600
+We'll come back.
+
+00:01.790 --> 00:03.950
+Let's do something fun here.
+
+00:04.100 --> 00:10.200
+We may create our own low balancer now when it comes to load balancing.
+
+00:10.210 --> 00:18.040
+We're gonna use engine X and there's a few possible options they can do engine access popular but also
+
+00:18.040 --> 00:20.740
+something called H.A. proxy is used a lot.
+
+00:21.590 --> 00:27.050
+Most of these tools just require a configuration file and there are a ton of resources out there to
+
+00:27.050 --> 00:27.940
+help you online.
+
+00:28.820 --> 00:34.690
+But additionally creating a low balancer by yourself is becoming less and less common.
+
+00:34.730 --> 00:42.920
+You see most companies like Amazon Digital Ocean and most providers that provide infrastructure have
+
+00:42.920 --> 00:50.420
+already load balancer setups they can implement easily for example digital action has low balancers
+
+00:50.420 --> 00:53.750
+they can add to your servers.
+
+00:53.830 --> 00:55.180
+It's very very simple.
+
+00:55.180 --> 01:00.340
+You don't really need to code and you just click on a few buttons and everything is down for you.
+
+01:00.340 --> 01:08.460
+You also have Amazon that has elastic load balancing that again you're just simply implement and configure.
+
+01:08.580 --> 01:14.940
+However I want us to build a load balancer just to understand how it works and to just have the knowledge
+
+01:14.940 --> 01:21.420
+of how these things like Amazon and Digital Ocean how these companies are able to implement load balancing.
+
+01:21.690 --> 01:23.200
+So let's give it a go.
+
+01:23.250 --> 01:29.790
+I have over here a fun little file and you're going to have access to this at the end of this video
+
+01:30.000 --> 01:34.200
+so you can test out some of the low balancing techniques and and low testing that we're going to do
+
+01:34.230 --> 01:36.390
+because it is a lot of fun.
+
+01:36.390 --> 01:38.700
+Now don't get overwhelmed with the code here.
+
+01:38.700 --> 01:46.260
+I just didn't use Express and use the native GTP module and node to just create a simple server that
+
+01:46.290 --> 01:48.980
+returns a fake havoc on icon.
+
+01:48.990 --> 01:57.060
+And I do this just to make sure that we don't get any weird logs of missing Fabrikant and then simply
+
+01:57.060 --> 01:59.370
+we're just cancel logging.
+
+01:59.370 --> 02:05.010
+We're adding some response headers but again this is an important we're just console logging every time
+
+02:05.100 --> 02:07.190
+our amps one gets hit with.
+
+02:07.200 --> 02:12.040
+I have been hit and our server will be running here.
+
+02:12.140 --> 02:18.670
+Nothing too crazy but I also have a docker composed file again something that we've seen before and
+
+02:18.790 --> 02:22.140
+this stalker compost file is quite interesting.
+
+02:22.150 --> 02:24.310
+We have a few services.
+
+02:24.310 --> 02:29.380
+One is web on the other one Web 2 and web 3.
+
+02:29.470 --> 02:31.180
+Really creative with my name here.
+
+02:31.360 --> 02:39.190
+But you see here that they simply have ports of 3000 and let's actually change these two different ports
+
+02:39.400 --> 02:42.950
+just so we have a better idea how they work.
+
+02:42.950 --> 02:51.620
+So each services on different ports and all they're going to do is run the build command.
+
+02:51.670 --> 02:53.770
+Also notice here that we're now doing port forwarding.
+
+02:53.770 --> 02:59.890
+So that means well they're just on their own only what's inside the dock or container will have access
+
+02:59.890 --> 03:00.660
+to them.
+
+03:00.790 --> 03:05.170
+If we go to the build that is the dock or file that builds these.
+
+03:05.330 --> 03:09.890
+I see that we're simply using node we're exposing port three thousand.
+
+03:09.920 --> 03:15.890
+We're creating a directory called app and we're moving the server that G-S file which I've already shown
+
+03:15.890 --> 03:24.170
+you and also the package dodgiest on file to run NPM install and then we have just the entry point and
+
+03:24.170 --> 03:28.220
+command which is to run the server that we have over here.
+
+03:31.260 --> 03:34.340
+And there's nothing too crazy happening over here.
+
+03:34.350 --> 03:41.940
+But then we have something called load balancer and this load balancer is building from an angry next
+
+03:41.940 --> 03:44.050
+folder which we haven't created yet.
+
+03:44.130 --> 03:51.700
+It's going to expose port 80 and we're going to have access to localhost aty and it links web one to
+
+03:51.880 --> 04:00.590
+three and it also uses volumes and has this comment now I'm going to leave a resource in this project
+
+04:00.590 --> 04:01.960
+for you to read up on this.
+
+04:01.970 --> 04:07.370
+All it does is it allows us to run Doctor commands inside the container and I've linked to an article
+
+04:07.370 --> 04:09.760
+that you can read more information on.
+
+04:09.770 --> 04:12.200
+Now this isn't a typical set up.
+
+04:12.200 --> 04:20.370
+When you do a load balancer because we have everything under one container if you remember we want to
+
+04:20.370 --> 04:25.100
+have a load balancer that is on its own with different servers.
+
+04:25.290 --> 04:30.510
+Right now we have everything in just one giant container and I'm only doing this so we can demonstrate
+
+04:30.540 --> 04:37.350
+without me having to spin up all these different services on my laptop and just tap everything in a
+
+04:37.450 --> 04:39.800
+or compose file for demonstration purposes.
+
+04:39.900 --> 04:46.260
+But in real life we have a load balancer machine on its own a server on its own a server on its own
+
+04:46.290 --> 04:56.230
+a server three on its own but with this file we now have a way to have the load balancer be ranne be
+
+04:56.230 --> 05:05.260
+hit through port 80 and then distribute the way to the server 1 2 and 3 which are going to be each running
+
+05:05.540 --> 05:07.510
+this copy of the server.
+
+05:07.640 --> 05:13.840
+So let's actually create this engine X folder and create our Angie Nax load bouncer.
+
+05:13.890 --> 05:24.550
+I'm going to say new folder then engine X and in this next folder we have to create two things.
+
+05:24.760 --> 05:33.700
+First we need to create a docker file because remember we have to build according to Dr. now and this
+
+05:33.700 --> 05:36.970
+fall we're going to do a simple doc file comment.
+
+05:37.060 --> 05:42.050
+We're going to just use the engine next image that's already there.
+
+05:42.130 --> 05:44.050
+Thanks Sudhakar hub.
+
+05:44.320 --> 05:45.700
+And then we're going to copy
+
+05:49.130 --> 05:54.680
+a file We're going to create called Engine X dot com which is the configuration file and engine X that
+
+05:54.680 --> 06:04.010
+we'll create shortly and move it to our container in the default location that engine X Files configuration
+
+06:04.010 --> 06:06.280
+files should be in our case.
+
+06:06.350 --> 06:09.020
+We'll just name it like this.
+
+06:13.360 --> 06:14.310
+That's it.
+
+06:14.470 --> 06:19.780
+We can use Dr. Howard to just grab the container or grab the image and then we can just configure it
+
+06:19.960 --> 06:21.190
+from our end.
+
+06:21.340 --> 06:29.370
+So let's create a new file now and this will be our engine X dot com fine in here.
+
+06:29.510 --> 06:31.820
+Let's start to work on our configuration for.

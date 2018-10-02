@@ -1,0 +1,484 @@
+WEBVTT
+
+00:00.480 --> 00:07.020
+Welcome back how was that very successful in writing a few types.
+
+00:08.880 --> 00:13.950
+I'm going to show you what I would have done if I've gone through these files.
+
+00:13.950 --> 00:16.580
+Now keep in mind that this isn't the only way.
+
+00:16.590 --> 00:22.320
+There are many many solutions to the problem but hopefully you'll learn a thing or two just by watching
+
+00:22.320 --> 00:25.210
+me add types to these files.
+
+00:25.260 --> 00:31.950
+Now the first thing I actually wanted to show you is something that came by default in our Creator re-act
+
+00:31.950 --> 00:36.080
+app typescript file in the index TSX.
+
+00:36.150 --> 00:45.750
+We see that we have in the re-act render function document get aliment by id root as a shemale element.
+
+00:45.860 --> 00:49.710
+And remember this is assertion type syntax.
+
+00:49.710 --> 00:55.530
+So we're saying hey trust us don't try to do any type inferences or anything like that.
+
+00:55.530 --> 00:58.030
+This is an HMO element.
+
+00:58.050 --> 01:05.450
+And as you can see here if I hover over it it's an interface a shemale element that wall is a nation
+
+01:05.580 --> 01:10.440
+moment and we get that out of the box from Definitely typed.
+
+01:10.530 --> 01:13.740
+You can see that there is an interface a shemale element.
+
+01:13.950 --> 01:18.650
+Just wanted to show you that in case some of you were wandering.
+
+01:18.830 --> 01:22.170
+All right let's start writing some typescript.
+
+01:22.230 --> 01:27.690
+I'm going to start off with card lists because it's going to be a nice and simple one.
+
+01:27.770 --> 01:34.420
+Remember that I already wrote for you a few things over here at the top of app dot TSX.
+
+01:34.460 --> 01:42.720
+Now in here the first thing I'm going to do let's go to Carlist over here I see that I'm receiving the
+
+01:42.720 --> 01:51.030
+robots and in app or TSX I have this interface robot that I've already created and I've already exported
+
+01:51.450 --> 01:55.790
+so I can just import this and use this as my type.
+
+01:55.800 --> 01:57.280
+So let's go back here.
+
+01:57.510 --> 02:14.100
+I'm going to say import interface robot from our container file or container folder and let's do hop.
+
+02:14.330 --> 02:21.400
+And now in here I can just simply say that robots should be.
+
+02:21.620 --> 02:24.980
+And this syntax is a little bit different because we are destructuring here.
+
+02:25.040 --> 02:35.830
+So we're going to have an object that has the robot's of array.
+
+02:37.600 --> 02:40.970
+Robot or robot.
+
+02:41.100 --> 02:43.630
+Just double check that is I Robot.
+
+02:44.390 --> 02:51.290
+So again I'm going to make this a little bit smaller so you can see I'm saying that these robots will
+
+02:51.290 --> 02:54.560
+have a type of array with the interface.
+
+02:54.560 --> 03:01.650
+And each of the cerate is going to be an object of the interface robot to save.
+
+03:01.830 --> 03:03.170
+And I get a bit of an error.
+
+03:03.180 --> 03:06.810
+That's good to get yours because we can make sure that things are working.
+
+03:06.810 --> 03:15.030
+I see that container's doesn't exist because I need to go a folder up.
+
+03:15.080 --> 03:15.610
+All right.
+
+03:15.710 --> 03:16.670
+Well that's working.
+
+03:16.670 --> 03:17.030
+All right.
+
+03:17.030 --> 03:17.990
+We've added some types.
+
+03:17.990 --> 03:19.430
+That's great.
+
+03:19.430 --> 03:22.380
+Now let's go to another Follistim card.
+
+03:23.380 --> 03:25.980
+The card file is an interesting one.
+
+03:25.980 --> 03:31.820
+I'm going to introduce something new here called the stainless functional component.
+
+03:31.880 --> 03:36.110
+Let's just create an interface here of name email ID.
+
+03:36.110 --> 03:42.590
+I know that we could use the robot interface here but let's just try something new.
+
+03:42.590 --> 03:54.520
+I'm going to say interface and I'm going to just say Card stayed less Propp or prop's and this interface
+
+03:54.850 --> 04:05.590
+is going to have a name that is string email that is also string and then an ID that is number
+
+04:08.900 --> 04:19.010
+and now in here I can say that this concert card is going to be a re-act dot stateless functional component.
+
+04:19.010 --> 04:21.470
+And do you see how I have auto completion already.
+
+04:21.560 --> 04:26.100
+Again out of the box we have hints of why we can add.
+
+04:26.420 --> 04:33.050
+And if you go over here to react we have a ton of attributes that we can enter such a stateless functional
+
+04:33.050 --> 04:33.920
+component.
+
+04:34.130 --> 04:38.650
+And if you're wondering like this seems random Where do you even get that from.
+
+04:38.750 --> 04:46.490
+Remember we have our node module folder and in the types we go to react to an index Dot T will have
+
+04:46.490 --> 04:54.860
+the SFA see type well see let's see where it comes up.
+
+04:54.860 --> 04:56.210
+Some are on here.
+
+05:00.080 --> 05:09.030
+There it is misyar Assef seat type but our editor gives us enough hint to know that we have a react
+
+05:09.450 --> 05:10.170
+as.
+
+05:10.500 --> 05:21.050
+And this stalest functional component and it gives you again a some hint We'll have the card stateless
+
+05:21.380 --> 05:22.450
+prop's type.
+
+05:22.950 --> 05:25.590
+Let me save.
+
+05:25.630 --> 05:26.410
+All right.
+
+05:26.410 --> 05:27.850
+And that's working.
+
+05:27.850 --> 05:32.930
+If I change this to string that's going to fail.
+
+05:32.930 --> 05:33.430
+Perfect.
+
+05:33.560 --> 05:35.110
+So things are working.
+
+05:36.080 --> 05:36.410
+All right.
+
+05:36.440 --> 05:38.480
+Let's go to another component.
+
+05:38.480 --> 05:42.350
+Let me close this and let's do the scroll component.
+
+05:43.230 --> 05:47.060
+In the skirl component we see that we're just receiving props.
+
+05:47.060 --> 05:54.320
+We're not doing any destructuring so we can do something interesting here we can say that type props
+
+05:55.510 --> 06:01.580
+and remember they're a little bit similar to interface just a few minor things that we can't do with
+
+06:01.580 --> 06:02.150
+them.
+
+06:02.360 --> 06:09.680
+And in here I'm going to say that the children because remember we have props children here.
+
+06:09.680 --> 06:14.590
+The children are going to equal GSX.
+
+06:14.700 --> 06:18.450
+And again we get ideas of what we want it to be.
+
+06:18.450 --> 06:21.220
+We want a GSX element.
+
+06:21.600 --> 06:31.910
+So we want the children to have the type of GSX element GSX is the syntax that we use with respect.
+
+06:31.920 --> 06:36.410
+And if we go to app dot TSX we see that in the scroll.
+
+06:36.410 --> 06:39.760
+The child is a GSX element.
+
+06:40.110 --> 06:49.580
+So if I say that we still need to add that type with a type I have to do equal here.
+
+06:50.800 --> 06:59.020
+And then for prop's I can just say prop's and we make sure that we're always rendering a GSX element
+
+06:59.920 --> 07:03.220
+inside of the scroll component.
+
+07:03.220 --> 07:08.810
+And by the way maybe we might have times where we don't have any children.
+
+07:08.950 --> 07:14.820
+Maybe we might want to use this component as something that doesn't always render children.
+
+07:15.010 --> 07:17.190
+In that case let's just add a question mark here.
+
+07:17.290 --> 07:21.810
+So it could or could not work with props or children.
+
+07:22.060 --> 07:23.270
+Nice.
+
+07:23.470 --> 07:27.420
+Let's keep going and do the search box.
+
+07:27.470 --> 07:34.070
+Now we have some interesting things happening with the search box mainly the on change the search change
+
+07:34.070 --> 07:34.570
+event.
+
+07:34.790 --> 07:45.420
+So let's do something here let's say that the interface is going to be called the interface search box
+
+07:46.280 --> 07:46.790
+props.
+
+07:46.830 --> 07:53.450
+And I know I'm changing the naming convention but I just want to show multiple ways of doing it.
+
+07:55.080 --> 07:57.660
+And in here the props.
+
+07:57.720 --> 08:00.650
+Well it's the search change Propp.
+
+08:01.080 --> 08:11.170
+So this search change is what is search change if we remember search change is something that takes
+
+08:11.170 --> 08:11.850
+an event.
+
+08:12.010 --> 08:21.550
+And if we go to app dot TSX we see that on search change is just an event that doesn't return anything
+
+08:21.550 --> 08:24.000
+just updates the state.
+
+08:24.020 --> 08:25.150
+Now how can we do this.
+
+08:25.160 --> 08:27.270
+And this one's a little bit tricky.
+
+08:27.270 --> 08:34.540
+I will say that this will take an event this event.
+
+08:34.710 --> 08:37.580
+Well what's this event going to be.
+
+08:38.490 --> 08:46.110
+If you remember it's an on Change event but react underneath the hood has its own version of the HMO
+
+08:46.110 --> 08:48.260
+implementation of on change.
+
+08:48.270 --> 08:56.220
+Again if you go to typed types and react you'll see that they have something called re-act synthetic
+
+08:56.310 --> 08:56.940
+events.
+
+08:57.990 --> 09:04.470
+And again don't worry if you didn't know this if you Googled anything to do with events for react they'll
+
+09:04.470 --> 09:11.670
+actually tell you what you should do for events so it doesn't mean that you didn't know how to do this
+
+09:11.670 --> 09:18.060
+is just one of those things that you'll learn you just have to learn it once and then it becomes standard.
+
+09:18.110 --> 09:23.200
+So let's say that this is going to be re-act synthetic event.
+
+09:23.270 --> 09:30.700
+You see that I have that completion and this synthetic event is going to be an HMO
+
+09:34.020 --> 09:42.720
+element because we have the input element so it's an event that is coming from an input element I guess
+
+09:42.720 --> 09:43.920
+that it's a little bit tricky.
+
+09:44.950 --> 09:49.440
+And then finally So that's the parameter it's going to return void.
+
+09:49.510 --> 09:50.950
+So I'm going to return anything.
+
+09:51.190 --> 09:51.880
+So I'm going to save
+
+09:55.040 --> 10:00.370
+and is declared but its value is never you never read my search box props.
+
+10:00.380 --> 10:10.040
+Let's add that now I'm going to say that this search change will be the high search box prop's right.
+
+10:10.060 --> 10:11.080
+Everything is passing.
+
+10:11.230 --> 10:12.000
+Very cool.
+
+10:13.890 --> 10:14.250
+All right.
+
+10:14.250 --> 10:15.990
+We've done our components.
+
+10:16.020 --> 10:19.680
+Let's go to the app dot TSX.
+
+10:19.680 --> 10:25.980
+As you saw over here I've already done a few things for you and we have a Riak component that takes
+
+10:26.070 --> 10:28.870
+props and state.
+
+10:28.950 --> 10:30.900
+And this is again pretty standard.
+
+10:30.900 --> 10:37.980
+You can see over here in the bottom that says class Riak component and it receives props and state.
+
+10:37.980 --> 10:41.000
+You'll see this a lot when working with react.
+
+10:41.220 --> 10:47.100
+And we've defined already that the state and the empty props.
+
+10:47.190 --> 10:55.800
+Now the next thing we want to do is to perhaps in the constructor function also give it the high cap
+
+10:55.980 --> 11:03.080
+props so interface of the props and let's scroll down here to the search change.
+
+11:03.180 --> 11:04.400
+This time we've already done.
+
+11:04.440 --> 11:15.690
+We know that this is going to be a re-act synthetic event that is will be an HMO input element.
+
+11:15.890 --> 11:18.680
+And remember that this function is going to return.
+
+11:18.680 --> 11:26.750
+Let me just make this a little bit bigger is going to just return void.
+
+11:26.890 --> 11:28.900
+Let's save.
+
+11:29.080 --> 11:30.390
+Everything is working.
+
+11:33.330 --> 11:39.000
+And we could also let's say for component demand that it's not returning anything so we can just do
+
+11:39.000 --> 11:40.140
+voyde here.
+
+11:40.170 --> 11:49.490
+Same with the render or render if we do voyde is not going to work because it is returning an element
+
+11:49.500 --> 11:58.600
+so we can just say re-act dot element or in our case we could just say GSX
+
+12:06.690 --> 12:14.760
+perfect and you're starting to get the idea behind this there's more types that we can add but hopefully
+
+12:14.760 --> 12:19.860
+you feel comfortable to add types to a Riak component.
+
+12:21.310 --> 12:25.830
+You see now the part of having the type declarations.
+
+12:25.890 --> 12:31.640
+Remember if we go to package Jason we have the at types.
+
+12:31.910 --> 12:42.210
+There's no way we would have been able to say react Daut synthetic event or GSX or SFE for statelets
+
+12:42.220 --> 12:43.360
+functional components.
+
+12:43.360 --> 12:52.390
+Those are all coming from re-act the types by re-act again anytime we use a third party library we might
+
+12:52.390 --> 12:58.930
+want to check that we can get the type declarations from Definitely typed website like I showed you
+
+12:59.860 --> 13:00.750
+over all.
+
+13:00.770 --> 13:07.760
+Once you get away from the awkwardness of the syntax if it's your first time seeing it there are definitely
+
+13:07.760 --> 13:12.770
+some really nice things that happen for us for example.
+
+13:12.770 --> 13:22.550
+Now if for some reason I never send the ID parameter or let's say that in this card component I never
+
+13:22.550 --> 13:32.460
+pass down the ID if I save this high immediately get an error before I even 8 am able to see the app.
+
+13:32.510 --> 13:37.080
+I mean here we get it because we get that error from create react up.
+
+13:37.250 --> 13:42.910
+But it doesn't even start to run our app because hey we already know it's not going to work as intended
+
+13:42.920 --> 13:50.550
+because you've told me that we need an ID property on car.
+
+13:50.570 --> 13:52.460
+All right that's it for now.
+
+13:52.460 --> 13:54.490
+Hope you had fun with this challenge.
+
+13:54.800 --> 13:57.280
+And as always I'll see you in the next video.

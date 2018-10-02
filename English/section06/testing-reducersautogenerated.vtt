@@ -1,0 +1,508 @@
+WEBVTT
+
+00:01.250 --> 00:02.450
+We'll come back.
+
+00:02.960 --> 00:11.720
+We have a good idea of how to test Riak components but what about redux and some of the reducers actions
+
+00:11.720 --> 00:14.630
+and concepts that we have.
+
+00:14.650 --> 00:22.660
+Let's start off with reducers and you're going to absolutely love this section because remember our
+
+00:22.660 --> 00:28.390
+reducers are pure functions and pure functions are a tester's dream.
+
+00:28.420 --> 00:32.750
+They're the easiest to test so let's do that.
+
+00:32.770 --> 00:37.770
+I'm going to create a new file call it reducers test.
+
+00:37.910 --> 00:38.670
+Yes.
+
+00:40.280 --> 00:48.040
+And then in here I'm going to import while we need the constants.
+
+00:48.210 --> 00:56.970
+So I'm going to import the constants and obviously our reducers so import will do import star as a new
+
+00:56.970 --> 01:01.210
+syntax as reducers from
+
+01:05.750 --> 01:12.710
+seducers with this syntax so we can just do reducers dot whatever we do so that we export it.
+
+01:12.780 --> 01:19.910
+So in our case reducers thoughts are sherbets reducers dot request robots which reads nicely.
+
+01:19.930 --> 01:20.390
+All right.
+
+01:20.560 --> 01:26.080
+Let's group these reducers this time around by using a describe block Celeste's to describe
+
+01:28.410 --> 01:30.120
+search robots.
+
+01:30.180 --> 01:34.270
+We're going to do our first reducer here and within here.
+
+01:34.320 --> 01:38.140
+Whoops that's not what I wanted to do with thing here.
+
+01:38.160 --> 01:39.680
+We're going to have a test.
+
+01:39.810 --> 01:55.540
+The first test that says should return the initial state.
+
+01:55.590 --> 02:03.270
+Now the initial state in the search robots reducer can be tested like this so we can do expect
+
+02:06.290 --> 02:09.940
+reducers dot search robots.
+
+02:09.940 --> 02:20.310
+So that's our reducer remember our reducer takes two things a state and an action and because if state
+
+02:20.610 --> 02:25.560
+doesn't exist or is defined we give it the initial state search.
+
+02:25.590 --> 02:26.230
+Let's do that.
+
+02:26.250 --> 02:31.150
+I'm going to say that the reducer does search robots gets undefined.
+
+02:31.530 --> 02:36.750
+So no state at the beginning and it's going to get no action.
+
+02:36.780 --> 02:43.170
+But given an empty action for now we want to test for those cases where.
+
+02:43.390 --> 02:45.540
+Well we we have an undefined state.
+
+02:45.620 --> 02:46.530
+What happens.
+
+02:46.790 --> 03:00.740
+Well we wanted to equal our ideal state and our ideal state and this case is to have search field to
+
+03:00.740 --> 03:02.170
+be an empty string.
+
+03:03.470 --> 03:08.660
+So let me say that open up our testing suite
+
+03:16.110 --> 03:18.780
+and Arita everything is passing.
+
+03:18.780 --> 03:28.410
+If I press say see that yeah everything is logged out nicely including our reducers dart test if we
+
+03:28.980 --> 03:31.250
+we put in a in the search field.
+
+03:31.320 --> 03:32.420
+It's going to fail.
+
+03:32.430 --> 03:35.190
+All right so that's great.
+
+03:35.190 --> 03:37.180
+That was super super easy.
+
+03:37.200 --> 03:38.470
+What else can we do.
+
+03:38.880 --> 03:50.890
+Well we expected that this producer when we see our change search field event that it returns a new
+
+03:50.890 --> 03:51.820
+state.
+
+03:51.820 --> 04:01.350
+So once again we can say that it should handle the change search field event and we can say reducers
+
+04:01.350 --> 04:03.240
+that search robots.
+
+04:03.310 --> 04:04.630
+Let's make this a little bit smaller
+
+04:07.360 --> 04:14.570
+is going to get the state of let's say an empty state or you know what.
+
+04:14.620 --> 04:26.990
+Let's add a concert initial state search here and say that this initial state search is search field
+
+04:28.750 --> 04:31.010
+he calls this.
+
+04:31.230 --> 04:35.020
+All right so we can just use initial search.
+
+04:35.040 --> 04:41.670
+So this is going to be the initial state which equals to the empty string and it's going to receive
+
+04:42.180 --> 04:43.620
+an action.
+
+04:43.650 --> 04:46.430
+And what kind of action is it going to receive.
+
+04:46.430 --> 04:48.370
+I am going to remove this for now.
+
+04:48.780 --> 04:53.460
+Well if you remember our actions are going to have a type.
+
+04:54.000 --> 05:00.060
+And in this case we'll say that type is going to be changed search field that comes from our Constans
+
+05:00.060 --> 05:04.300
+file and we can make up the payload that it's going to send.
+
+05:04.300 --> 05:10.580
+So let's just say for now that the payload is going to be a b c.
+
+05:10.670 --> 05:13.720
+Now what do we expect from that output.
+
+05:14.030 --> 05:25.860
+We expect that once it goes through this review sure that the search feel is going to equal a b c so
+
+05:25.860 --> 05:31.460
+we can say search field should be ABC again.
+
+05:31.590 --> 05:35.460
+We have our initial state search which is an empty string.
+
+05:35.550 --> 05:43.940
+It goes through this do you sir with this action and we now need the state because remember this reducer
+
+05:43.940 --> 05:45.770
+is just going to return to the state.
+
+05:45.870 --> 05:54.320
+We want the state to be a b c let's save and we have a bit of a fail here we'll see what kind of Nera
+
+05:54.330 --> 05:55.170
+we get.
+
+05:55.470 --> 06:03.400
+And it looks like just the unexpected token Oh and we need an extra bracket here.
+
+06:04.940 --> 06:10.800
+And we get our Knerr saying that type is not defined because because well we don't need to type here.
+
+06:10.870 --> 06:12.220
+That's just a typo on my part.
+
+06:13.670 --> 06:14.060
+All right.
+
+06:14.120 --> 06:15.620
+So that's passing.
+
+06:15.620 --> 06:17.160
+How simple is that.
+
+06:17.210 --> 06:23.270
+Ruth reducers all we need to do is just give us some sort of an input and expect an output and you could
+
+06:23.270 --> 06:25.760
+just keep going like this forever.
+
+06:25.760 --> 06:28.070
+Make your tests better and better.
+
+06:29.130 --> 06:30.600
+Let's do the next review.
+
+06:30.600 --> 06:34.190
+Now let's say that we want to let's make more space here.
+
+06:35.160 --> 06:36.990
+We want to describe the
+
+06:40.000 --> 06:44.890
+request robots reducer.
+
+06:45.060 --> 06:50.150
+In that case we can just say that we have what let's create an initial state.
+
+06:50.160 --> 06:58.420
+So I'm going to again say Konst initial state for the robots.
+
+06:58.810 --> 07:07.470
+And if you remember we have the this as the initial state so I'm just going to actually copy this.
+
+07:07.500 --> 07:11.990
+So this is our initial state for the test.
+
+07:14.000 --> 07:15.890
+And we want to do the same thing as above.
+
+07:16.080 --> 07:18.960
+It should return the initial state.
+
+07:18.960 --> 07:27.750
+So let's just copy and paste the above and just change the search robots to request robots and we want
+
+07:27.750 --> 07:35.120
+that to equal the initial state.
+
+07:35.190 --> 07:39.320
+Let's save and we have a failed test.
+
+07:39.320 --> 07:40.910
+Let's see what we failed here.
+
+07:42.710 --> 07:47.010
+Initial State robots is not defined.
+
+07:49.110 --> 07:52.320
+Because I need to add a cost in here.
+
+07:52.320 --> 07:53.880
+Let's save.
+
+07:53.880 --> 07:54.310
+All right.
+
+07:54.330 --> 07:55.780
+Everything is passing.
+
+07:56.100 --> 07:59.310
+We're getting our initial state as expected.
+
+07:59.310 --> 08:00.180
+That's good.
+
+08:00.330 --> 08:12.610
+But let's do a nother test and say that we want the three cases over here to be tested.
+
+08:12.770 --> 08:15.770
+So let's do an initial it
+
+08:18.530 --> 08:28.290
+should handle requests robots list to pending first action and it's going to
+
+08:31.510 --> 08:33.160
+have something similar to here.
+
+08:33.160 --> 08:38.300
+So again we're going to use the xpect statement.
+
+08:38.450 --> 08:46.790
+It's going to have the reducers Daut this time request robots.
+
+08:46.970 --> 08:55.390
+It's going to receive the initial state of the robots and then we'll give it an action of type
+
+08:58.020 --> 09:10.310
+request robots pending and a payload of let's give its is pending too true.
+
+09:10.480 --> 09:18.290
+So we expect that when this happens actually if we take a look at the reduced Here we see that it automatically
+
+09:18.800 --> 09:22.180
+sense the spending too true and there's no payload.
+
+09:22.250 --> 09:28.730
+So we don't need to set that we don't need to send a payload but we expect that payload to change from
+
+09:29.470 --> 09:35.570
+expanding all us to false here because expanding when we start off is always false
+
+09:38.600 --> 09:49.930
+and in here we want this to equal the state of robots.
+
+09:51.130 --> 09:56.610
+With an empty array is spending set to true.
+
+09:56.690 --> 09:58.730
+So let's save.
+
+09:58.750 --> 09:59.170
+All right.
+
+09:59.180 --> 10:07.030
+Everything is passing but I just noticed here that we don't actually want the default is spending to
+
+10:07.030 --> 10:08.020
+be true.
+
+10:08.050 --> 10:13.010
+We wanted to be false because when we first have the initial state.
+
+10:13.060 --> 10:15.130
+Well we haven't sent the promise yet.
+
+10:15.130 --> 10:17.900
+We haven't requested anything from the API.
+
+10:18.070 --> 10:24.280
+If we go into our reducers fall we see that we have the initial stage here by true by mistake.
+
+10:24.280 --> 10:30.820
+We can just change it to false will save and in here let's save here.
+
+10:31.990 --> 10:32.810
+Perfect.
+
+10:32.980 --> 10:34.700
+Everything is working.
+
+10:34.720 --> 10:41.160
+And the request robot's spending is changing our spending state to true.
+
+10:41.160 --> 10:42.810
+All right let's keep going.
+
+10:42.810 --> 10:47.150
+We have the second case which is the success.
+
+10:47.370 --> 10:58.340
+So I'm just going to copy and paste here and this time say request robots spending success and this
+
+10:58.490 --> 11:02.200
+success should have.
+
+11:02.480 --> 11:03.620
+Well what should it have.
+
+11:03.620 --> 11:12.820
+Well we need some sort of payload because again in our reducers we have the robots action payload that
+
+11:13.210 --> 11:17.060
+we return or out to the state upon success.
+
+11:17.080 --> 11:19.920
+So let's just create that in our type.
+
+11:19.930 --> 11:25.400
+We're going to see a payload and I'm going to return.
+
+11:25.900 --> 11:26.800
+Let's just grab
+
+11:30.630 --> 11:47.880
+those just create a Dommy idea of 2:59 let's say name of test and then finally e-mail of test at gmail
+
+11:47.940 --> 11:49.850
+dot com.
+
+11:50.180 --> 11:56.340
+You see over here that this is a string instead of a number I believe in our component we're actually
+
+11:56.340 --> 12:01.740
+not distinguishing between a number in a string so that's something we might want to fix in the future.
+
+12:02.730 --> 12:09.410
+But for now we expect that if the payload is that the state now gets updated with that payload.
+
+12:09.480 --> 12:13.020
+So let's copy that.
+
+12:13.140 --> 12:17.920
+And we also expect the is pending to be false again if we remember our seducer.
+
+12:17.970 --> 12:21.660
+We're also changing our is pending to false on success.
+
+12:21.660 --> 12:26.950
+So let's save and we have a bit of an error here.
+
+12:29.760 --> 12:33.900
+That is a simple arch nemesis Khama if we behave there that is.
+
+12:33.900 --> 12:36.750
+It passes one final test.
+
+12:36.840 --> 12:42.600
+You can see you can get pretty repetitive with tests but this is a good thing with reducers they're
+
+12:42.600 --> 12:49.950
+so simple to test that you just copy and paste a lot of the code which again is fine for testing because
+
+12:50.160 --> 12:52.770
+this code was never going to go into production.
+
+12:53.010 --> 12:55.880
+So let's do the the failed case here.
+
+12:55.890 --> 13:01.680
+That is the failed.
+
+13:01.870 --> 13:05.360
+And in this case we want the payload.
+
+13:05.360 --> 13:09.660
+If we go back to our function we want the payload to just have an error.
+
+13:09.680 --> 13:19.340
+So again back here we can just say super upset that we got in there and we expect the state to now have
+
+13:19.340 --> 13:22.250
+an air that is of
+
+13:26.070 --> 13:29.640
+you and a spending of false
+
+13:32.450 --> 13:38.410
+although I see here that we're actually not turning the is pending to false which we should be.
+
+13:38.410 --> 13:43.210
+So if we save Atacama.
+
+13:43.440 --> 13:47.550
+But we also expect the robots array to be returned remember.
+
+13:47.550 --> 13:56.230
+So the robots arrays should be empty and now we have this passing.
+
+13:56.340 --> 13:58.020
+Very cool.
+
+13:58.020 --> 13:59.450
+All right that's enough for you.
+
+13:59.470 --> 14:04.680
+Do you see how simple they are to test simply checking they input against the output.
+
+14:04.710 --> 14:11.640
+And that's why you want to have these reducers everywhere and why redux is so amazing it's super easy
+
+14:11.640 --> 14:12.390
+to test.
+
+14:12.500 --> 14:16.570
+And if you think about it all our logic is in our reducers.
+
+14:16.680 --> 14:25.080
+So if we have really really good test for our reducers we cover a lot of the logic of our applications
+
+14:25.080 --> 14:29.830
+because reducers are the thing that taken actions and spit out the state.
+
+14:29.950 --> 14:38.570
+They're pretty much the controller or the brain of our app redux allows us to have a really really nice
+
+14:38.590 --> 14:47.160
+test and keeping things simple on the reac side by just doing snapshot testing or simple enzyme tests
+
+14:47.490 --> 14:51.860
+and testing out pure functions which again is very useful.
+
+14:52.200 --> 14:54.100
+But for now that's it for me.
+
+14:54.180 --> 14:55.760
+I'll see in the next one by.

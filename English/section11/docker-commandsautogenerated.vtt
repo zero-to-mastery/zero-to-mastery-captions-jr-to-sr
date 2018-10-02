@@ -1,0 +1,217 @@
+WEBVTT
+
+00:00.590 --> 00:07.720
+Welcome back up to this point we learned to Dr. CLID comments that his command line interface there
+
+00:07.810 --> 00:08.740
+are pretty simple right.
+
+00:08.740 --> 00:18.600
+We had docker built and we gave it a tag to call our container something and then we did docker run
+
+00:18.910 --> 00:20.740
+and we ran our container.
+
+00:20.920 --> 00:29.470
+And because we used the I-T dash I-T parameter were able to go inside of that container and do all we
+
+00:29.470 --> 00:30.240
+want with it.
+
+00:30.250 --> 00:37.240
+For example if we had our project files from smart brain API I could have just done A.P.M. start there.
+
+00:37.240 --> 00:38.990
+If I had all those files.
+
+00:39.430 --> 00:46.820
+So again Doc built is used to build an image from the docker file that we created and then docker run
+
+00:47.910 --> 00:49.580
+again as the name suggests.
+
+00:49.740 --> 00:55.400
+Run the container and again each time it container's run Dharker assigns a new image hash.
+
+00:55.440 --> 01:02.620
+As we saw and we can confirm that we're actually running whatever we've whatever image reviews that
+
+01:02.660 --> 01:07.150
+we want to use something like node version or any of the commands that you might have.
+
+01:07.320 --> 01:15.630
+You can install Ubuntu for example and you can run Ubuntu commands like APT will list or app Dasch get
+
+01:15.660 --> 01:21.800
+to install things to make sure that your container actually is working as it's supposed to be.
+
+01:21.810 --> 01:28.170
+Now here's the thing with our container the way we have it we can't really do much can we we just have
+
+01:28.170 --> 01:33.530
+our node version and we can go into it and run commands from it.
+
+01:33.540 --> 01:34.370
+But that's it.
+
+01:34.380 --> 01:35.880
+It's pretty minimal right now.
+
+01:36.710 --> 01:43.470
+But like I said we can extend this and actually have our entire server running within this container.
+
+01:44.570 --> 01:50.120
+And as you saw because we're setting the environment here the node version we just give this container
+
+01:50.120 --> 01:57.530
+to anybody and anybody that has this dock or file will always make sure that the server runs the exact
+
+01:57.530 --> 02:06.820
+same way because everybody's using the same daquiri image now running the For go back to our terminal
+
+02:06.850 --> 02:07.780
+if we run
+
+02:10.440 --> 02:12.440
+our command every time.
+
+02:12.500 --> 02:15.180
+Well you might not want to actually go into the container.
+
+02:15.180 --> 02:17.540
+Be nice to be able to run it in the background.
+
+02:17.820 --> 02:22.780
+And the way we do this is we just give it another parameter which is Dashti.
+
+02:23.550 --> 02:25.230
+And here we have.
+
+02:25.260 --> 02:25.890
+There you go.
+
+02:25.890 --> 02:29.910
+Our container running in the background but we didn't go inside of it.
+
+02:30.000 --> 02:31.900
+Make sure we give that back.
+
+02:31.920 --> 02:33.620
+Luckily we didn't save it.
+
+02:33.630 --> 02:40.560
+Now we can run another command called Dr. p.s. and if we do that look at that and then you make this
+
+02:40.560 --> 02:41.750
+a little bit bigger.
+
+02:41.790 --> 02:49.740
+We can see all the containers that are currently running see our container I.D. our image names.
+
+02:49.740 --> 02:55.080
+See when it was created the status and also the commands that it's running.
+
+02:56.400 --> 02:57.770
+Very very cool.
+
+02:57.810 --> 03:03.790
+And you can have multiple multiple containers here and you can just check them out with Dr. p.s..
+
+03:03.810 --> 03:04.270
+All right.
+
+03:04.310 --> 03:06.350
+But now we have a problem.
+
+03:06.420 --> 03:09.070
+We have a container running in the background.
+
+03:09.090 --> 03:13.770
+How do we stop this or how can we go into it.
+
+03:13.830 --> 03:22.320
+Luckily once again we have a nother docker command that we can use which is dock or exec and by using
+
+03:22.320 --> 03:30.580
+the container idea or hash that we see over here we can reference this darker container because that's
+
+03:30.580 --> 03:33.500
+how daquiri can distinguish different containers.
+
+03:33.700 --> 03:36.270
+And by the way the alignments are a little bit off.
+
+03:36.280 --> 03:39.120
+But you see that this is container ID.
+
+03:39.520 --> 03:44.400
+And now in here I just do once again the I-T command.
+
+03:44.430 --> 03:49.430
+So think of it as getting us to go into the container.
+
+03:49.440 --> 03:57.450
+And then finally we give it the hash which we copied and then finally say that we want to access the
+
+03:57.450 --> 03:59.410
+back.
+
+03:59.450 --> 03:59.980
+There you go.
+
+03:59.990 --> 04:04.730
+We're back into the container and these commands I know they're hard to remember.
+
+04:04.730 --> 04:06.410
+You don't need to really remember them.
+
+04:06.560 --> 04:11.920
+You can always find them online or you can we watch this video whenever you need to use them.
+
+04:12.110 --> 04:18.580
+Now to stop this container now as you can imagine there's another command and it's pretty self-explanatory
+
+04:18.590 --> 04:20.680
+all we need to do is say stop.
+
+04:20.720 --> 04:22.280
+So let's accept this first.
+
+04:22.280 --> 04:28.410
+I'm going to just exit and then say Dr. P.S. We see that we have the container.
+
+04:28.410 --> 04:37.000
+Now all I need to do is say doctor stop and give it the hash of the container ID.
+
+04:37.020 --> 04:37.920
+All right.
+
+04:37.920 --> 04:39.190
+It looks like it worked if I do.
+
+04:39.190 --> 04:42.690
+Dr. P.S. We have nothing running now.
+
+04:42.690 --> 04:43.540
+Congratulations.
+
+04:43.560 --> 04:50.280
+You just learnt most of the tools you need to create containers and run containers and stop them.
+
+04:50.340 --> 04:52.220
+You can create as many containers as you want.
+
+04:52.260 --> 04:56.850
+Well as much as your your host the machine allows you to do.
+
+04:57.330 --> 05:01.410
+And now you've just become a container master.
+
+05:01.410 --> 05:06.210
+Well Ali starting to we have a few more things to cover in the next video.
+
+05:06.210 --> 05:07.590
+I'll see on that one.
+
+05:07.780 --> 05:07.950
+Bob.

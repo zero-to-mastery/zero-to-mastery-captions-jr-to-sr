@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00.940 --> 00:01.740
+Welcome back.
+
+00:01.870 --> 00:04.500
+Let's try a little bit of an exercise here.
+
+00:04.610 --> 00:13.270
+I'm going to call the server that I have up here something more exciting like super awesome app.
+
+00:13.320 --> 00:14.490
+Just do that.
+
+00:16.720 --> 00:23.780
+Now while this is loading I want to go through the experience of getting a call in the middle of the
+
+00:23.780 --> 00:27.450
+night again something that actually happened to me before.
+
+00:27.950 --> 00:34.380
+And you get a message saying the app somehow got deleted on the server.
+
+00:34.850 --> 00:42.170
+Can you upload it and have the app running again because users can't access the website.
+
+00:42.560 --> 00:47.280
+So I'm going to show you the basics of what to do in that scenario.
+
+00:47.960 --> 00:49.860
+So we have our super awesome app here.
+
+00:51.060 --> 00:56.470
+And if we remember we can just access it through S-sh.
+
+00:56.490 --> 00:59.720
+So let me minimize this.
+
+00:59.910 --> 01:09.300
+And over here we can just from our desktop S-sh to our route and remember our IP address over here.
+
+01:09.540 --> 01:10.710
+Hit enter.
+
+01:11.040 --> 01:18.420
+We are now inside of the boun to server that we have bought with the Digital Ocean.
+
+01:18.420 --> 01:25.290
+All right let me clear this just so we can see a little bit better now because this is a Linux operating
+
+01:25.290 --> 01:26.970
+system on the server.
+
+01:27.060 --> 01:33.610
+We need to install get if I Taiping get here.
+
+01:33.640 --> 01:33.900
+All right.
+
+01:33.900 --> 01:40.920
+Looks like the get command exists but sometimes that may not be the case in which case we'll have to
+
+01:40.920 --> 01:54.690
+do apt or sudo apt get an apt get is a a way to install packages on the Ubuntu box and you can think
+
+01:54.690 --> 02:01.410
+of it it's a little bit similar to and PM if you used NPM before or home brew if you've used Mac before.
+
+02:01.500 --> 02:02.660
+We just want to install things.
+
+02:02.660 --> 02:07.840
+So if I do sudo apt app dash get get it.
+
+02:07.920 --> 02:16.390
+And I have to do install then you can see over here that I'm able to install it which is great.
+
+02:16.400 --> 02:23.690
+All right so let's say that we have the app on our Get help page and for this example I'm just going
+
+02:23.690 --> 02:29.010
+to go to our 0 2 M.E. open source projects that students have contributed to.
+
+02:29.180 --> 02:34.960
+And I'll just click on the travel guide and we'll say I'll say that the travel guide.
+
+02:35.000 --> 02:36.530
+That's the one that we want to clone.
+
+02:36.710 --> 02:49.000
+Well in that case I can go in here and say get clone the repo and I'll say yes and actually we'll get
+
+02:49.000 --> 02:57.980
+an error here because well permission is denied because we don't have S-sh set up with get how yet so
+
+02:57.980 --> 03:15.740
+again going back here I'm going to use a piece copy to clipboard and try that again.
+
+03:15.760 --> 03:16.430
+All right.
+
+03:16.580 --> 03:27.600
+If I go LS now we see that we have our travel guide and we can go into our travel guide project.
+
+03:27.810 --> 03:36.820
+And again if I ls there we see that we have our little app and all the files that we need onto the server.
+
+03:36.900 --> 03:37.820
+How cool is that.
+
+03:39.090 --> 03:47.660
+And here if we wanted to if this was accessible we can also do Appian install and you see that and PM
+
+03:47.660 --> 03:48.890
+is currently not installed.
+
+03:48.890 --> 03:51.310
+So again what do we do in this situation.
+
+03:55.930 --> 04:01.820
+So now we can just run the no GIs and everything will be installed.
+
+04:01.990 --> 04:12.640
+Nice and easy and we'll see that no ass is now working on our server and we can do obviously the same
+
+04:12.640 --> 04:16.040
+with NPM run NPM install if we wanted to.
+
+04:16.060 --> 04:20.100
+Anything to get our app back up and running.
+
+04:20.560 --> 04:24.120
+But like I said before I don't want to get hung up on all these commands.
+
+04:24.130 --> 04:28.900
+These are things that would stack overflow dot com or Google.
+
+04:28.900 --> 04:35.950
+You can figure out again these are just commands that were able to run just like we can on our own computer
+
+04:36.340 --> 04:37.870
+onto a remote server.
+
+04:37.870 --> 04:43.690
+Another thing I wanted to show you is let's say that we have a super awesome app dot com over here just
+
+04:43.690 --> 04:46.140
+like I have on my desktop by the way.
+
+04:46.270 --> 04:48.120
+Pretty nice background today.
+
+04:48.530 --> 04:54.270
+Anyway let's say that within here we have our index script and style file.
+
+04:54.280 --> 05:00.150
+So just our Web site and we want to bring it up to our Ubuntu box here.
+
+05:00.160 --> 05:02.600
+All right so let's say.
+
+05:02.750 --> 05:05.350
+So the first thing we want to do is we want to exit out of here.
+
+05:05.350 --> 05:10.840
+We see that we've logged out we're back to our desktop our own computer and here I have installed a
+
+05:10.840 --> 05:13.030
+command called our sync.
+
+05:13.030 --> 05:21.130
+So let's just see the end to super awesome dot com and from here we'll just say our sync
+
+05:24.220 --> 05:27.150
+and we're going to copy all the files in this directory.
+
+05:27.370 --> 05:30.320
+You can read up about these syntaxes online.
+
+05:30.400 --> 05:35.940
+It's very important for this video just the fact that I'm copying anything recursively in this folder.
+
+05:36.130 --> 05:43.290
+And we're going to copy it into our IP address.
+
+05:43.410 --> 05:44.850
+Our Ubuntu box
+
+05:47.920 --> 05:54.840
+and we're going to put it in a folder called super awesome dot com.
+
+05:54.850 --> 05:55.400
+All right.
+
+05:55.510 --> 06:04.390
+So now if we S-sh got to our box and I clear this and let's check out what we have.
+
+06:04.390 --> 06:06.190
+We have super awesome dot.
+
+06:06.220 --> 06:16.380
+If I cd into super awesome dot.com I see that I have my index script and style file all up into our
+
+06:16.440 --> 06:19.730
+server somewhere out there in New York.
+
+06:19.740 --> 06:20.320
+Awesome.
+
+06:20.520 --> 06:22.320
+So there's that power of S-sh.
+
+06:22.320 --> 06:29.260
+We're just able to transfer files and take command of a server somewhere else in the world.
+
+06:30.010 --> 06:31.180
+Very cool.
+
+06:31.180 --> 06:32.760
+I'll see you in the next one.
+
+06:32.880 --> 06:33.140
+Babai.

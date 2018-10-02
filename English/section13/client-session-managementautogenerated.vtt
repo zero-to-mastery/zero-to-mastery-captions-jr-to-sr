@@ -1,0 +1,508 @@
+WEBVTT
+
+00:01.870 --> 00:05.910
+Welcome back once again we've created JWT token.
+
+00:05.980 --> 00:08.550
+We've stored it into our rattus database.
+
+00:08.620 --> 00:10.790
+We're sending it back to the user.
+
+00:10.870 --> 00:19.340
+But now we have one last issue and that is how do we store this information on the computer of the user.
+
+00:19.420 --> 00:25.180
+Because if they refresh they need a way to store this token so that they don't have to sign in over
+
+00:25.180 --> 00:26.120
+and over again.
+
+00:26.200 --> 00:33.600
+And we also need to send this token actually in the authorization header so we can get our profile and
+
+00:33.600 --> 00:38.080
+we're going to learn how to do that and this video will look.
+
+00:38.150 --> 00:41.310
+Now we're going to go back to the front end here and do some things.
+
+00:41.490 --> 00:47.910
+We know that when we sign in we receive the user id and the token and we need a way to first of all
+
+00:48.000 --> 00:54.510
+save this token somewhere on our browser so that on each subsequent request we're going to attach it
+
+00:54.600 --> 00:55.450
+to the header.
+
+00:55.740 --> 00:56.960
+Let me show you how that's done.
+
+00:58.080 --> 00:59.820
+We do have some windows around.
+
+01:00.010 --> 01:03.420
+Let's do our front end window up here.
+
+01:04.970 --> 01:11.730
+And we're going to use the sign component to actually do this because seinen on submit seinen.
+
+01:11.780 --> 01:17.380
+This is where we're doing our logic where we received the data user ID.
+
+01:17.540 --> 01:23.810
+Now the first thing we're going to do is we're going to create a new method called Save let's call it
+
+01:23.810 --> 01:31.910
+save auth token in sessions and a very descriptive name but hopefully this way it will stick.
+
+01:32.130 --> 01:39.630
+And this is going to receive a token that we get from the backend and this token is going to be stored
+
+01:39.900 --> 01:43.260
+in something called the window datt session.
+
+01:44.350 --> 01:45.360
+Storage.
+
+01:45.850 --> 01:49.700
+Now what is session storage.
+
+01:50.020 --> 01:57.550
+And it's on the window object so it means it's coming from the browser Well session storage is a way
+
+01:57.550 --> 02:05.060
+for us to save information onto a browser so that even if we refresh the page it still remembers it.
+
+02:05.080 --> 02:07.750
+It still remembers the session.
+
+02:07.750 --> 02:10.290
+We can check this by going to Applications tab.
+
+02:10.330 --> 02:11.670
+And our developer tools.
+
+02:11.950 --> 02:17.290
+And just like we've seen before we have the manifest service worker we have cookies here.
+
+02:17.410 --> 02:27.050
+We also have local storage and session storage now session stores here as you can see has information
+
+02:27.090 --> 02:35.450
+a key value information that we can store and even if I refresh the browser is going to remember it.
+
+02:35.560 --> 02:41.780
+Now the difference between session and local storage will actually explore that in a little bit.
+
+02:41.840 --> 02:47.540
+But for now we're going to use session storage and store a key and a value that is we're going to store
+
+02:47.720 --> 02:50.910
+our session or our tokin in here.
+
+02:51.200 --> 02:52.520
+Let's see how we can do that.
+
+02:52.550 --> 03:02.100
+I'm going to say session storage and this is a browser API that we can use and we simply give it a set
+
+03:02.420 --> 03:02.990
+item.
+
+03:04.150 --> 03:11.640
+To say that the key is going to be called tokin and the value of the key is going to be the actual token
+
+03:13.060 --> 03:13.940
+and that's it.
+
+03:14.110 --> 03:20.510
+We are just using this browser API and we didn't save the token.
+
+03:20.930 --> 03:26.020
+So let's actually use this in the par where we received the token.
+
+03:26.480 --> 03:34.640
+All we need to do is perhaps instead of just checking data user ID or we can even add a
+
+03:37.300 --> 03:42.190
+data dot success to equals.
+
+03:42.230 --> 03:47.060
+True because remember that's where we send from the backend now.
+
+03:47.510 --> 03:55.420
+And here before we do the load user and on route change we can just simply say this dot save off token
+
+03:55.530 --> 03:59.240
+in sessions and we're going to give it the data.
+
+03:59.260 --> 04:03.140
+Dot token that we receive.
+
+04:03.560 --> 04:14.770
+Again remember that in our network tab if you look at seinen which we've lost close to that one more
+
+04:14.770 --> 04:15.230
+time.
+
+04:15.370 --> 04:22.210
+Well we don't need to do that one more time because we remember it the token is received in the data
+
+04:22.740 --> 04:23.680
+token.
+
+04:23.740 --> 04:28.230
+So I'm going to sign in and see if this works.
+
+04:28.510 --> 04:29.050
+Let's save
+
+04:32.210 --> 04:35.320
+known to make this a little bit smaller.
+
+04:35.610 --> 04:38.000
+Press say dot.com.
+
+04:38.040 --> 04:41.120
+A sign in.
+
+04:41.240 --> 04:49.030
+All right now nothing crazy happened but if we go to applications look at that we have our token now
+
+04:49.030 --> 04:49.900
+stored here.
+
+04:49.900 --> 05:00.810
+So even if I refresh this token exists and I can refresh refresh token exists if I open up a new window
+
+05:00.840 --> 05:13.570
+and go to localhost three thousand one and I open up developer tools so there's no session in here.
+
+05:14.260 --> 05:15.230
+That's not good.
+
+05:15.610 --> 05:22.060
+But what if we add local storage on to here instead of session storage.
+
+05:22.110 --> 05:33.570
+If we do local storage and sign in again you're going to close this and tried this out all over again.
+
+05:33.580 --> 05:35.010
+I'm going to refresh.
+
+05:35.380 --> 05:46.190
+We're going to clear the smoke in to make sure that it's completely empty and then I'm going to seinen.
+
+05:46.300 --> 05:46.620
+All right.
+
+05:46.660 --> 05:53.530
+Now we have nothing in session storage but we have something in local storage and I like session storage
+
+05:53.590 --> 05:54.390
+if I refresh.
+
+05:54.400 --> 06:00.650
+I have this in local stores but also if I open up a new window and do local host three thousand one
+
+06:02.710 --> 06:10.580
+that I have my local storage in here and I recommend using session storage I personally prefer that
+
+06:10.730 --> 06:11.650
+over local storage.
+
+06:11.720 --> 06:14.860
+But depending on your need you can use whichever one you want.
+
+06:14.960 --> 06:20.600
+Again local storage persists a little bit longer than session storage session storage is simply just
+
+06:20.600 --> 06:24.370
+for one single session.
+
+06:24.380 --> 06:31.490
+All right let's close this up and change this to session storage.
+
+06:31.540 --> 06:34.010
+Now we have a bit of an issue here.
+
+06:34.030 --> 06:39.940
+We're still being asked to sign in every single time and that is because on the back end if you remember
+
+06:40.390 --> 06:49.860
+we do a check to get off token ID and we haven't really sent our authorization headers when we sign
+
+06:49.860 --> 06:51.730
+in with our token.
+
+06:51.900 --> 06:58.820
+Right now we're always going through the handle sign and because we've never set the authorization Hetter.
+
+06:58.970 --> 07:00.800
+So let's do that on the front end.
+
+07:00.920 --> 07:04.890
+Let's set the authorization header in the sign in.
+
+07:05.240 --> 07:08.430
+Well this is for the sign in page remember.
+
+07:08.680 --> 07:13.390
+And the sign in page only shows up if you remember and go back to opt out.
+
+07:13.430 --> 07:14.420
+Yes.
+
+07:14.420 --> 07:17.530
+And by the way this app dodgy is getting a little big.
+
+07:17.530 --> 07:22.430
+We might see why we want to incorporate redux or separate out some of these methods.
+
+07:22.520 --> 07:32.220
+However if we scroll all the way down we see that the sign in page shows up whenever the route is seinen.
+
+07:32.310 --> 07:39.190
+So the sign and page would should only show up in those instances when the user is not signed in.
+
+07:40.180 --> 07:52.830
+So perhaps up here in our main component that is the app before we do anything when component did mount.
+
+07:52.890 --> 07:59.280
+That is the first lifecycle method that is going to be heard before anything is rendered.
+
+07:59.280 --> 08:00.490
+We want to check something.
+
+08:00.540 --> 08:06.240
+We want to see if there's a session storage item a token that we can just use so we can avoid all the
+
+08:06.300 --> 08:15.750
+sine and logic and in here we can simply do a concert token and we're going to check the session storage
+
+08:15.810 --> 08:25.330
+we're going to say window session storage and here we're going say get item instead of said item and
+
+08:25.330 --> 08:28.950
+we're simply going to get the token that we have.
+
+08:29.020 --> 08:38.170
+If they have a token now within here we'll simply say if there is a token well in that case just fetch
+
+08:38.170 --> 08:44.380
+us a new thing and this new thing is going to be our sign in and point
+
+08:49.360 --> 08:53.970
+and this sign in and point is going to have a few different things than what we've had before.
+
+08:54.970 --> 09:02.530
+First it's going to be a second parameter that has a method of posts which we've seen before.
+
+09:03.810 --> 09:05.100
+It's going to have headers
+
+09:09.120 --> 09:10.000
+that is an object.
+
+09:10.000 --> 09:12.280
+Well first thing we have is a content type.
+
+09:12.300 --> 09:14.240
+We have to tell it what type it's going to be.
+
+09:14.580 --> 09:21.180
+And we're going to be sending it application Jaison again because we're going to send it into the body
+
+09:21.240 --> 09:31.180
+of the request but also a new edition is going to be the authorization hatters and this is just default
+
+09:31.180 --> 09:39.280
+headers say you can set with HGP and these authorization headers is simply going to have token the token
+
+09:39.280 --> 09:42.510
+that we have in our session storage.
+
+09:42.550 --> 09:44.580
+Now just a heads up here.
+
+09:44.860 --> 09:52.720
+Actually the way you want to set authorization this standard is to do something like barer and then
+
+09:52.720 --> 09:53.410
+space
+
+09:56.180 --> 09:57.980
+add the token to that bear.
+
+09:58.200 --> 10:01.460
+And I'm going to leave information for you to read up more about this.
+
+10:01.860 --> 10:04.850
+And it's a fairly easy thing to implement.
+
+10:04.950 --> 10:10.140
+For now though just to keep things simple I'm going to leave it like that so that we're sending the
+
+10:10.140 --> 10:12.020
+token with the authorization headers.
+
+10:12.150 --> 10:20.960
+And now we simply do a dot then and this dog then is going to receive the data.
+
+10:21.970 --> 10:26.980
+That we return which is going to be the user id remember.
+
+10:27.310 --> 10:28.600
+So we're going to do.
+
+10:28.630 --> 10:32.930
+Yes statement and this if statement is going to be data.
+
+10:33.040 --> 10:37.960
+If there's data and perhaps we'll do another check for data ID
+
+10:40.990 --> 10:49.320
+and if that works out well then in that case I'm just going to say success for now.
+
+10:50.550 --> 10:58.920
+We need to get user profile and let's just add a dot catch here just incase anything is out.
+
+10:59.080 --> 11:01.210
+And for now I'll just do a console log.
+
+11:03.270 --> 11:04.680
+All right let's save this.
+
+11:04.680 --> 11:11.850
+Make sure there's no errors and go over what just happened in sign in dodgy us because this will be
+
+11:11.850 --> 11:14.620
+the first time that the user comes in.
+
+11:14.620 --> 11:18.110
+There is no authorization token that they have.
+
+11:18.270 --> 11:19.310
+So they must sign in.
+
+11:19.350 --> 11:21.620
+They send their email and password.
+
+11:21.870 --> 11:28.950
+And if everything checks out the database is going to return for us the data token which we're going
+
+11:28.950 --> 11:32.350
+to save to our sessions in our browser.
+
+11:32.840 --> 11:39.020
+Now if a user refreshes and comes back to our app the first thing that gets rendered is the apt.
+
+11:39.140 --> 11:43.580
+Yes in there any component did mount before anything happens.
+
+11:43.700 --> 11:45.840
+We check the windows start sessions.
+
+11:45.950 --> 11:52.260
+We're going to get tokin and see if there's a token because if there isn't well nothing's going to happen
+
+11:52.260 --> 11:55.660
+and we're just going to keep going with our day like we've done before.
+
+11:55.700 --> 12:02.510
+Otherwise if there is a token we're going to run the seinen and point because we no longer need to click
+
+12:02.510 --> 12:10.490
+that sign in Boston and to have the on submit sign and function we automatically match and give the
+
+12:10.490 --> 12:18.470
+authorization token Hetter so that the autokey and header if we go to the back end is going to say oh
+
+12:18.620 --> 12:25.520
+there's an auto scan I'm just going to get the authorization token I.D. from our rattus database and
+
+12:25.520 --> 12:27.170
+I'm just going to respond.
+
+12:28.300 --> 12:31.570
+With your I.D..
+
+12:31.730 --> 12:40.690
+So that way when we go back within here we can do a fresh request to get profile.
+
+12:40.690 --> 12:41.960
+All right let's give it a go.
+
+12:42.340 --> 12:43.540
+Let's test this out.
+
+12:45.300 --> 12:48.200
+I'm going to make sure that there's no tokens.
+
+12:48.600 --> 12:51.470
+Let's go to sessions and local storage.
+
+12:51.480 --> 12:52.990
+I'm going to delete that.
+
+12:53.010 --> 12:54.160
+Everything is clear.
+
+12:54.980 --> 13:02.320
+And I'm going to say a COM A Let's sign an.
+
+13:02.520 --> 13:02.920
+All right.
+
+13:02.930 --> 13:09.420
+I'm able to sign in if I go to console.
+
+13:09.640 --> 13:11.140
+It looks like this.
+
+13:11.320 --> 13:19.600
+Didn't get run but that makes sense because we've just signed in we just received our session token.
+
+13:19.840 --> 13:21.870
+However if I refresh now
+
+13:25.030 --> 13:29.670
+and I'm not getting anything because well you might have noticed this.
+
+13:29.670 --> 13:39.580
+I need to actually run the dot then response remember all our good friend Jason method to make sure
+
+13:39.580 --> 13:41.800
+that we can read this information.
+
+13:41.910 --> 13:47.660
+Let's say that and go back here hey success.
+
+13:47.890 --> 13:53.480
+We need to get the user profile because we have the token success we need to get the user profile.
+
+13:53.580 --> 14:00.610
+If I go back and delete the session go to cons. And I refresh.
+
+14:00.730 --> 14:01.460
+No.
+
+14:01.830 --> 14:02.630
+No success.
+
+14:02.640 --> 14:04.660
+You need to sign in my friend.
+
+14:04.710 --> 14:06.150
+Very very cool.
+
+14:06.960 --> 14:07.410
+All right.
+
+14:07.410 --> 14:13.880
+So in the next video we're going to implement this part of getting our user profile I'll see seeing
+
+14:13.890 --> 14:14.280
+that one.

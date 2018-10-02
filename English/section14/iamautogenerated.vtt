@@ -1,0 +1,196 @@
+WEBVTT
+
+00:01.750 --> 00:02.700
+Welcome back.
+
+00:02.820 --> 00:09.710
+Let's actually connect our server less framework to our AWOS profile.
+
+00:09.750 --> 00:17.470
+Now the first thing we need to do is go back to AWOS and within our lambda function actually all the
+
+00:17.470 --> 00:20.640
+way back to our dashboard let's just click over here.
+
+00:21.590 --> 00:29.180
+In order to configure our profiles we have to use a service called I-AM and you'll have to use this
+
+00:29.180 --> 00:35.210
+anytime you use any of the AWOS services and this controls permissions.
+
+00:35.210 --> 00:40.890
+And in here I'm going to add a user and this user I'm going to say add a user.
+
+00:40.940 --> 00:50.440
+I'm going to call it rankly and is thus should be fine lowside lambda here just so we know it's a lambda
+
+00:50.440 --> 00:51.360
+function.
+
+00:52.500 --> 00:55.860
+And I want to give it programmatic access.
+
+00:55.860 --> 01:03.450
+That is it can access our lambda functions programmatically but we don't want them to access our management
+
+01:03.450 --> 01:04.470
+dashboard over here.
+
+01:04.470 --> 01:05.750
+This is just more secure.
+
+01:05.790 --> 01:13.050
+We don't need to give it all that permissions so we hit next for permissions and you want to create
+
+01:13.110 --> 01:14.790
+a permission group.
+
+01:14.790 --> 01:20.630
+So in our case we're going to attach existing policies that Amazon has already come up with.
+
+01:20.910 --> 01:28.460
+And if I search for functions or lambda functions we see that there's a couple of things that we can
+
+01:28.460 --> 01:31.020
+do for now for demonstration purposes.
+
+01:31.220 --> 01:35.750
+You have different options and I'll give you access information.
+
+01:35.750 --> 01:41.690
+I'm just going to use the administrator access which is not necessarily the best idea in production
+
+01:41.690 --> 01:47.390
+because that gives you admin access and you might not necessarily want to give that much permission
+
+01:47.840 --> 01:52.660
+but you can decide for yourself which permissions you want when you're just testing though administrator
+
+01:52.670 --> 01:54.500
+at Access's is fine.
+
+01:55.370 --> 01:58.780
+And we'll click next.
+
+01:59.030 --> 02:00.570
+We want to just review everything.
+
+02:00.620 --> 02:01.110
+Good.
+
+02:01.190 --> 02:03.280
+I'm going to see say create user.
+
+02:03.470 --> 02:05.180
+And there you go.
+
+02:05.240 --> 02:12.110
+We have success and it gave us an accessory and a secret key that we can now use to connect server less
+
+02:12.500 --> 02:15.310
+to our highest profile.
+
+02:15.770 --> 02:25.920
+So let's go back to our terminal and in here we have to write the command Salles config.
+
+02:26.520 --> 02:31.020
+And this is something you just need to do initially once you do it then Service is already configured
+
+02:31.020 --> 02:31.770
+for you.
+
+02:31.830 --> 02:37.320
+We're going to put credentials and we're going to give it a few parameters.
+
+02:37.320 --> 02:45.390
+First one is the provider that is AWOS because remember I can use Google I can use IBM Microsoft whatever
+
+02:45.390 --> 02:52.790
+provider we want and then the next parameter is going to be key and we're going to give it the secret
+
+02:52.790 --> 02:54.370
+key that we received here.
+
+02:54.530 --> 02:55.890
+I'm going to just copy that.
+
+02:55.910 --> 02:56.930
+The access skiddy
+
+03:00.480 --> 03:02.070
+it's not going to pass that in here.
+
+03:02.080 --> 03:12.130
+And then finally the secret and the secrets we're going to say show and copy that and pass it on here.
+
+03:12.250 --> 03:12.970
+Let's press Enter
+
+03:16.360 --> 03:17.320
+all right.
+
+03:17.320 --> 03:18.230
+Look at that.
+
+03:18.400 --> 03:25.930
+We've set up AWOS so that now any time we use the service framework it's attached to this profile on
+
+03:26.070 --> 03:27.170
+a.
+
+03:27.420 --> 03:28.280
+Awesome.
+
+03:28.300 --> 03:34.860
+Now just to show you what's happening behind the scenes it actually created a folder called AWOS I believe.
+
+03:36.520 --> 03:37.540
+Or hopes.
+
+03:37.550 --> 03:38.770
+Now some we want to do.
+
+03:38.900 --> 03:42.710
+It's in the root folder and it's a hidden file.
+
+03:42.830 --> 03:51.490
+So it's got to be a W S and if we go in here let me clear this and do ls.
+
+03:51.620 --> 03:54.070
+We see that we now have a credential file.
+
+03:54.260 --> 04:01.790
+And if I open up the credentials file we see that we have our access ID and access key brightening here.
+
+04:01.790 --> 04:07.670
+So that's how it knows that whenever we deploy or do anything with Amazon AWOS it's going to check this
+
+04:07.670 --> 04:09.080
+file.
+
+04:09.090 --> 04:11.620
+All right let's go back to what we had before.
+
+04:11.760 --> 04:19.070
+Let's CD into our desktop and then it was called ranke perfect.
+
+04:19.080 --> 04:19.650
+All right.
+
+04:19.650 --> 04:20.200
+That's it.
+
+04:20.220 --> 04:23.190
+We have our server desk connected to.
+
+04:23.390 --> 04:23.750
+Yes.
+
+04:23.760 --> 04:30.720
+We're all set to start writing some code I actually have our function do something so that we can use
+
+04:30.720 --> 04:32.810
+it in our smart brain now.
+
+04:34.020 --> 04:34.810
+I'll see in the next one.

@@ -1,0 +1,511 @@
+WEBVTT
+
+00:01.210 --> 00:02.380
+Welcome back.
+
+00:02.380 --> 00:09.120
+In this video we're going to talk a bit about something advanced and we haven't covered much in this
+
+00:09.120 --> 00:14.980
+course and we definitely will in the next section but I want to get started with it so that even though
+
+00:14.980 --> 00:20.020
+it might be new and confusing at first by the time we get into the next section we'll come back and
+
+00:20.020 --> 00:21.940
+review exactly what we're doing.
+
+00:22.770 --> 00:27.820
+I want to make this app more realistic in a real life app.
+
+00:27.870 --> 00:34.310
+We wouldn't necessarily have these robots written like I have here in robots.
+
+00:34.380 --> 00:36.320
+Yes I've just created this fall.
+
+00:36.330 --> 00:42.000
+But in real life well we're not manually entering users.
+
+00:42.360 --> 00:46.570
+We use something like an API.
+
+00:46.780 --> 00:47.980
+And what that means.
+
+00:47.980 --> 00:56.410
+Well we want when this Web site gets loaded to make a request somewhere out there in the world of the
+
+00:56.410 --> 01:06.630
+Internet and grab these robots from a server where we can actually do that we have over here something
+
+01:06.630 --> 01:12.620
+called Jason placeholder and you don't need to worry too much about it but they actually have a really
+
+01:12.620 --> 01:20.990
+nice your owl that we can use and they return what we need a name or an ID and a user name.
+
+01:21.020 --> 01:23.520
+The rest of the information well we don't really need it.
+
+01:23.540 --> 01:30.870
+But as you can see just by typing in this you Arel I get this.
+
+01:30.870 --> 01:37.010
+So using this we're going to make our app a little bit more realistic.
+
+01:37.020 --> 01:39.710
+Let's get started.
+
+01:39.780 --> 01:45.850
+If I close my CSSA file since we don't need them any more.
+
+01:46.050 --> 01:48.220
+And let's close the rest of the tabs as well.
+
+01:49.860 --> 01:59.280
+Looking at this app component we see that it is what we call a smart component like the search box or
+
+01:59.280 --> 02:04.770
+car list that are just pure functions as you can see here.
+
+02:05.950 --> 02:06.410
+Apt.
+
+02:06.600 --> 02:15.150
+Yes actually has state a piece of data that describes our app and because they have state we call them
+
+02:15.150 --> 02:16.830
+smart components.
+
+02:17.770 --> 02:20.830
+And smart components tend to have this class syntax.
+
+02:21.250 --> 02:30.390
+Now in real life when we start up this app this robots would actually be an empty array because there's
+
+02:30.430 --> 02:31.110
+nothing there.
+
+02:31.150 --> 02:33.360
+We haven't grabbed the users.
+
+02:33.370 --> 02:42.650
+So most likely if I save this robots wouldn't display until I load the Web site and then as soon as
+
+02:42.650 --> 02:47.630
+the Web site gets loaded I ask for the users from somewhere over the internet.
+
+02:49.970 --> 02:53.390
+Somewhere hopefully here.
+
+02:53.440 --> 02:54.300
+So let's do that.
+
+02:56.540 --> 03:06.610
+Re-act comes with a few other things inside of components that we can use and they're called life cycle
+
+03:06.760 --> 03:07.420
+methods.
+
+03:10.200 --> 03:12.490
+And it looks something like this.
+
+03:13.930 --> 03:15.160
+Don't get too overwhelmed.
+
+03:15.340 --> 03:23.510
+These are just methods that we can use in here that comes with re-act and they're called lifecycle hooks
+
+03:23.510 --> 03:32.180
+because what they do is if we run these it will automatically trigger when this app gets loaded on the
+
+03:32.220 --> 03:32.740
+website.
+
+03:32.900 --> 03:33.630
+Let me explain.
+
+03:34.700 --> 03:37.610
+We see that we have three sections.
+
+03:37.610 --> 03:45.810
+We have mounting updating and unmounting the way we act works is we do something called mounting.
+
+03:45.890 --> 03:58.880
+When I click refresh here the app component this component right here gets mounted into the document
+
+03:59.750 --> 04:01.160
+with the idea of route.
+
+04:01.250 --> 04:09.910
+If we go back to our index that HMO file will our Web page is nothing but a div with an idea of root.
+
+04:10.030 --> 04:21.290
+When we say we mount a component we're replacing this and adding our entire app that's mounting So mounting
+
+04:21.290 --> 04:31.410
+is the start of the app now mounting these are the lifecycle hooks that get hit and there are in-order.
+
+04:31.460 --> 04:37.910
+So the first thing is it checks Hey does this component have a constructor Bauld does have a constructor.
+
+04:37.940 --> 04:38.300
+Yes.
+
+04:38.330 --> 04:45.680
+OK then run this piece of code does it have components will mount.
+
+04:45.690 --> 04:47.850
+No it doesn't then ignore it.
+
+04:47.850 --> 04:53.180
+Does it have Rander Yes it has wrencher run this.
+
+04:53.180 --> 04:55.710
+Does it have component did mount.
+
+04:55.730 --> 04:58.030
+No it doesn't have component demarked ignored.
+
+04:58.910 --> 05:01.850
+And it just runs through this every time.
+
+05:01.850 --> 05:08.140
+It also has something called updating and that is whenever a component changes.
+
+05:08.180 --> 05:18.600
+For example when we had the list well every time I typed something the cardless component gets re rendered
+
+05:18.840 --> 05:24.030
+because we have new information the function receives new inputs.
+
+05:24.030 --> 05:27.210
+Same with the input component.
+
+05:27.210 --> 05:35.960
+So again within those components if we wanted to we can add component will receive prop's shook component
+
+05:35.960 --> 05:38.430
+update so on and so forth.
+
+05:39.340 --> 05:49.960
+And finally with unmounting is when a component is removed from a page for example if we change to a
+
+05:49.990 --> 05:58.230
+different page here the component will mount the app component will get deleted from the page.
+
+05:58.230 --> 06:05.350
+These are called lifecycle hooks because they get run every time a component does something and it comes
+
+06:05.350 --> 06:06.560
+with react.
+
+06:06.670 --> 06:12.420
+So you can just put them in into your class component and they'll automatically get triggered.
+
+06:12.430 --> 06:16.250
+You don't have to worry about calling the let me demonstrate this.
+
+06:17.840 --> 06:22.770
+We want to use component did mount which gets called after render.
+
+06:22.870 --> 06:28.930
+This says that yes the app component is mounted on the web page and it's Sprenger that is it's displaying
+
+06:28.930 --> 06:43.780
+something well we can do that by saying component did mount and because this is part of react.
+
+06:43.830 --> 06:46.310
+Notice that I'm now using aero functions here.
+
+06:49.020 --> 06:50.510
+Now I would think component Denn mount.
+
+06:50.520 --> 06:52.190
+I can say console thought log
+
+06:55.520 --> 07:05.940
+if I refresh this and open up the console you'll see that I have check if I refresh There you go that
+
+07:05.940 --> 07:06.610
+was really quick.
+
+07:06.620 --> 07:09.590
+But you see that that gets called automatically.
+
+07:09.590 --> 07:11.120
+Even though I haven't said anything.
+
+07:12.260 --> 07:14.980
+Using this we can do something interesting.
+
+07:15.050 --> 07:26.440
+Now when component does mount I can say this dart set state to now have robots to the robots that we
+
+07:26.440 --> 07:32.430
+get from natural Griffo.
+
+07:32.640 --> 07:39.930
+If I do this and save let's refresh and see what happens.
+
+07:40.020 --> 07:45.010
+It's really really fast but you see that we're getting our robots.
+
+07:45.200 --> 07:52.470
+I am saying run the constructor with an empty array just to show you the order of execution here.
+
+07:52.670 --> 07:57.140
+If I had a console log and we'll just say one here
+
+08:01.180 --> 08:18.220
+will say two here and we'll just say three if I save this and open up the console I have 1 3 2 3 let's
+
+08:18.220 --> 08:31.960
+just check the we have one Gerrans first then three which is Rander then two which is component did
+
+08:31.960 --> 08:34.750
+mount and then three runs again.
+
+08:35.200 --> 08:43.340
+Actually let's change this to actual words so that you see better what is actually happening.
+
+08:46.070 --> 08:53.200
+If we save and refresh look at that we have a constructor that runs first then render then component
+
+08:53.200 --> 08:57.020
+did mount just like this order.
+
+08:57.170 --> 09:00.460
+But we now also have render.
+
+09:00.770 --> 09:03.800
+Why did render run again.
+
+09:03.840 --> 09:14.080
+If you remember we created the constructor we ran Brandur and then we updated the state and component
+
+09:14.080 --> 09:14.920
+did MT.
+
+09:15.010 --> 09:24.420
+So because we updated the state every time the state changes Remember we go to the lifecycle it's updating
+
+09:24.900 --> 09:36.160
+Iran's render again so because it goes from an empty array to a robot's list render gets rerun and the
+
+09:36.160 --> 09:45.500
+virtual Dom notices that there's a difference and repaint our Web browser to include the robot's vertical
+
+09:46.810 --> 09:48.810
+knowing we just did.
+
+09:48.820 --> 09:55.880
+We can remove this and finally make this more realistic.
+
+09:56.000 --> 10:03.920
+Instead of using the robot's file I'm actually going to remove this and in here I'm going to show you
+
+10:04.790 --> 10:09.170
+a cool way to grab this list from here.
+
+10:09.170 --> 10:18.630
+I'm going to copy the link and I'm going to say fetch which we'll learn about in the next section.
+
+10:18.650 --> 10:25.640
+We're just saying make this a sheet request and fetch receives this.
+
+10:25.950 --> 10:28.280
+Again we're just saying go through here.
+
+10:29.540 --> 10:33.760
+Then this is going to receive a response
+
+10:38.860 --> 10:43.270
+and this response is Well this part is a little tricky.
+
+10:43.270 --> 10:44.560
+You just have to get used to it.
+
+10:46.590 --> 10:53.500
+Jason we just have to convert the response into again something that we'll talk about in the next session.
+
+10:53.510 --> 10:56.900
+For now just you can copy and basis follow along.
+
+10:56.930 --> 10:59.280
+We'll come back to this and explain what's happening.
+
+10:59.660 --> 11:05.140
+And from here this said this on a new line so we know exactly what's happening.
+
+11:06.810 --> 11:13.370
+We'll say then robots so far we can say users because in this case we're getting users.
+
+11:13.750 --> 11:15.000
+And and here we can say
+
+11:18.390 --> 11:22.460
+this says state robots to equal users.
+
+11:22.950 --> 11:27.870
+And we have to make sure that we return this safe.
+
+11:27.910 --> 11:28.910
+Let's see if that works.
+
+11:30.230 --> 11:30.950
+Look at that.
+
+11:31.060 --> 11:40.570
+Let's refresh and you see that little lag it is now working.
+
+11:40.650 --> 11:47.260
+So in here we can actually make this smaller and reduce it to one line.
+
+11:47.260 --> 11:48.770
+We should remember how to do that.
+
+11:50.220 --> 11:52.680
+And we see that we're simply
+
+11:55.370 --> 11:56.390
+updating state
+
+11:59.320 --> 12:01.850
+after we fetch.
+
+12:01.870 --> 12:04.680
+So we fetch whatever the users are.
+
+12:05.020 --> 12:06.760
+We're getting a response.
+
+12:06.760 --> 12:10.690
+We're doing some magic here with Jason which we'll talk about later.
+
+12:10.840 --> 12:17.820
+And then we're getting the users and updating the users with set state so far refresh.
+
+12:17.820 --> 12:18.190
+Again
+
+12:20.990 --> 12:28.200
+if I don't do this let's say I just here don't do anything and return an empty object.
+
+12:28.330 --> 12:37.020
+You see that I don't receive the robots I only receive the robots after I update with these users.
+
+12:37.060 --> 12:38.000
+How cool is that.
+
+12:42.190 --> 12:42.840
+All right.
+
+12:42.970 --> 12:43.810
+That was a lot.
+
+12:43.810 --> 12:50.950
+And this probably looks pretty scary to make you feel a little bit more comfortable because I'm using
+
+12:50.950 --> 12:54.100
+fetch and there is nothing attached to it.
+
+12:54.100 --> 12:58.030
+Does this mean that it's part of the window object.
+
+12:58.240 --> 13:05.970
+Let's check if I open up the console and I do window Daut fetch.
+
+13:06.430 --> 13:07.260
+Yeah look at that.
+
+13:07.270 --> 13:12.130
+Fetch is a method on the window object.
+
+13:12.130 --> 13:14.140
+It comes with all browsers now.
+
+13:14.320 --> 13:17.070
+It is a tool for us to make requests.
+
+13:17.980 --> 13:26.440
+Two servers and as you can see this is a server that returns for us when we do slash users a list of
+
+13:26.440 --> 13:35.230
+users that we can use which is perfect for our wrap.
+
+13:35.260 --> 13:40.140
+And finally you're wondering what if this was really slow or what if this took.
+
+13:40.210 --> 13:40.800
+I don't know.
+
+13:40.930 --> 13:41.870
+Five seconds.
+
+13:41.890 --> 13:44.370
+And we had a whole ton of users.
+
+13:44.800 --> 13:56.840
+Well in that case you can do something like an IF statement if robots don't lenth is zero.
+
+13:57.010 --> 14:03.450
+In that case we can return an H1 that says loading
+
+14:09.820 --> 14:13.060
+else we can just say return
+
+14:15.800 --> 14:19.310
+this again is just javascript.
+
+14:19.310 --> 14:20.840
+That's a beauty in Riyadh.
+
+14:22.440 --> 14:27.710
+And you see how we get robots is not defined because it's this dot state DOT robots.
+
+14:27.870 --> 14:29.870
+Again we're referring to the State of the app.
+
+14:30.300 --> 14:36.330
+And here if I refresh let's just say that we're not updating the state and I'm going to just return
+
+14:36.330 --> 14:37.250
+an empty object
+
+14:41.340 --> 14:48.630
+while in that case I just get loading.
+
+14:48.680 --> 14:49.750
+Very cool.
+
+14:50.240 --> 14:55.510
+And this is how you build real ops with re-act you have a loading bar.
+
+14:55.500 --> 15:05.150
+They can just add here make requests on component did mount and interact with components.
+
+15:05.240 --> 15:06.100
+Very cool.
+
+15:07.900 --> 15:13.280
+You know what we have ourselves our app.
+
+15:13.370 --> 15:18.830
+There's one last thing I'm going to show you with react and you've learned the basics and react.
+
+15:18.830 --> 15:22.270
+You can take this now to build any app that you want.
+
+15:22.280 --> 15:24.120
+So one more thing to go.
+
+15:24.140 --> 15:28.110
+One more little piece to get our re-act knowledge complete.
+
+15:28.490 --> 15:29.820
+I'll see you in the next one.
+
+15:29.830 --> 15:30.250
+Bye bye.

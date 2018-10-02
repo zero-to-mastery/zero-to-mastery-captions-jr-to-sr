@@ -1,0 +1,484 @@
+WEBVTT
+
+00:01.340 --> 00:06.660
+Welcome back let's add the dropdown ability to this profile icon.
+
+00:08.370 --> 00:15.480
+And luckily for us if we go back to react chape which we used and go to components that is nicely and
+
+00:15.480 --> 00:24.740
+easily done with the button dropdown we see over here that we need a few elements and I can even copy
+
+00:24.740 --> 00:27.520
+this entire piece of code.
+
+00:27.590 --> 00:29.040
+But let's go one by one.
+
+00:29.060 --> 00:37.390
+The first thing I want to do is I want to import some elements and let's space these out properly just
+
+00:37.390 --> 00:38.230
+so we can see them.
+
+00:42.940 --> 00:43.830
+Now that's better.
+
+00:44.720 --> 00:48.970
+And actually now that I go back we don't really want a button dropdown.
+
+00:48.980 --> 00:52.780
+We already have the button that is our avatar that's going to be the dropdown.
+
+00:52.910 --> 00:58.250
+So let's actually grab a simple dropdown over here without worrying about the button.
+
+00:58.670 --> 01:04.490
+Again I'm going to copy and paste this and let's change that up.
+
+01:04.520 --> 01:08.690
+So you want to make sure that you use only what you need.
+
+01:08.840 --> 01:14.010
+In our case looks like these four items is what we need.
+
+01:14.020 --> 01:14.820
+All right.
+
+01:14.890 --> 01:23.770
+And again going back to here we see that we need to have a steady state of dropdown open which we actually
+
+01:23.770 --> 01:24.410
+have.
+
+01:24.700 --> 01:30.720
+We need to bind this event and I'm going to talk about this in just a second.
+
+01:30.910 --> 01:33.790
+In case you haven't seen it before don't worry.
+
+01:33.820 --> 01:37.130
+We're going to talk about it.
+
+01:37.250 --> 01:39.220
+And let's just copy for now.
+
+01:39.230 --> 01:43.360
+This dropdown return component.
+
+01:43.570 --> 01:45.150
+I'm going to come down here.
+
+01:45.430 --> 01:46.930
+And for now just
+
+01:51.730 --> 01:55.200
+plop it in right after or right before our icon.
+
+01:55.530 --> 01:55.750
+All right.
+
+01:55.750 --> 02:02.830
+The first thing we want to check out is the is open which comes from this state dropdown open which
+
+02:02.830 --> 02:03.770
+we already have.
+
+02:04.000 --> 02:11.320
+And it also has a toggle function which we're going to get back to if we go down to dropdown toggle
+
+02:12.370 --> 02:21.940
+we have a few options and then our dropdown items as we can have a dropdown menu with our items.
+
+02:22.190 --> 02:32.780
+Now in our case well we have two items that we want we want view profile and we want Sign-Up we don't
+
+02:32.780 --> 02:36.500
+need any disabled ones and we don't need to worry about Hetter.
+
+02:36.620 --> 02:41.290
+And these are all things like this that have certain actions.
+
+02:41.300 --> 02:48.670
+We just want a normal another action WAHM which is over here without any attributes.
+
+02:48.750 --> 02:51.670
+So let's just remove all the ones that we don't need.
+
+02:53.430 --> 02:55.920
+And leave it at that.
+
+02:55.970 --> 03:05.220
+Now if I just save this like that I'm going to get a few error and one of the errors is going to be
+
+03:05.220 --> 03:07.360
+the fact that we're returning multiple things.
+
+03:07.380 --> 03:10.220
+Ideally these are wrapped in something.
+
+03:10.230 --> 03:11.390
+So let's wrap it all.
+
+03:11.400 --> 03:17.590
+Because remember with react to you want to return a single thing ordinary of elements.
+
+03:17.640 --> 03:20.400
+So I'm just going to wrap it in a div tag
+
+03:23.090 --> 03:26.870
+and with class name I'm going to give it some styling that again.
+
+03:26.900 --> 03:30.080
+I've tested it out already.
+
+03:30.080 --> 03:37.460
+So this is padding or for an text center because this isn't necessarily a CSSA course I'm using Tatiana's
+
+03:37.700 --> 03:40.890
+just to simplify things and not spend too much time on CSX.
+
+03:40.940 --> 03:48.020
+So if you ever see me typing these P-A for TCB search Tatian classes just automatically inject some
+
+03:48.020 --> 03:50.350
+nice CSSA for us so things look good.
+
+03:50.390 --> 03:56.210
+If you really want to know more about them than me just go to Tatiana's and they have great documentation
+
+03:56.210 --> 03:57.880
+that you can use.
+
+03:57.880 --> 04:03.660
+All right so this is now wrapped nicely in a div
+
+04:06.810 --> 04:08.330
+all right everything is working.
+
+04:08.370 --> 04:17.780
+If I go back now to my app so we have bind of undefined we haven't defined this Tuggle ability and that's
+
+04:17.780 --> 04:24.960
+because again if we go back to react Schrempp we have this toggle function.
+
+04:25.220 --> 04:29.900
+Again we can just copy it and the toggle function is very simple.
+
+04:29.900 --> 04:33.820
+It just sets state using the callback method.
+
+04:33.920 --> 04:40.910
+And this is just a way of anytime you update state you want to make sure that if you're ever within
+
+04:40.910 --> 04:46.670
+the update set state function you're touching the state because it can act in predictable ways.
+
+04:46.670 --> 04:52.730
+You want to have what we call a callback function where we make sure that we receive the previous state
+
+04:53.330 --> 04:54.620
+so that we can act upon it.
+
+04:54.710 --> 05:00.470
+In this case we're just saying that drop open we want to toggle it and we want to just turn it to the
+
+05:00.470 --> 05:02.590
+opposite of what it currently is.
+
+05:02.690 --> 05:09.410
+We're doing it this way because city state or state updates aren't actually run immediately as they're
+
+05:09.410 --> 05:10.210
+called.
+
+05:10.640 --> 05:17.870
+So we want to make sure that in order to avoid any buggy errors any time we're using state for an update
+
+05:18.170 --> 05:28.070
+you have this syntax of a callback function and this bind here is happening again because of a little
+
+05:28.070 --> 05:32.460
+quirk where this keyboard kind of gets messed around.
+
+05:32.930 --> 05:38.450
+And another way of doing this you'll see this in a lot of Riak project of using the bind to make sure
+
+05:38.450 --> 05:40.620
+that it binds to the component.
+
+05:41.000 --> 05:49.070
+But another way that I like doing it that it's a lot cleaner is to just use our functions and that's
+
+05:49.070 --> 05:56.350
+going to implicitly bind this for us and it just looks cleaner.
+
+05:56.360 --> 06:06.540
+Let's say that and go back right Legault that we have our dropdown menu that looks pretty nice but that's
+
+06:06.540 --> 06:11.760
+not really what rate we want to make sure that we can just click on the avatar and not have this drop
+
+06:11.770 --> 06:13.310
+down thing.
+
+06:13.700 --> 06:21.870
+Well luckily for us if we go back to our Riak trap if you scroll down there is an area called Custom
+
+06:22.030 --> 06:28.960
+dropdown content and you see over here I just created a custom content here and it just does dropdown
+
+06:30.130 --> 06:31.710
+and it's very simple to implement.
+
+06:31.720 --> 06:41.560
+We just simply use the dropdown toggle and put the dropdown toggle inside of the dropdown toggle whatever
+
+06:41.860 --> 06:43.150
+content we want.
+
+06:43.150 --> 06:44.980
+So I'm going to just copy this
+
+06:50.010 --> 06:53.300
+and instead of the dropdown toggle over here
+
+06:56.460 --> 06:58.940
+I'm going to paste this piece of code.
+
+07:02.720 --> 07:06.570
+And now this piece of code we can just keep it the way it is.
+
+07:06.800 --> 07:15.050
+But instead of the custom dropdown content we can perhaps insert our little icon that we have.
+
+07:15.050 --> 07:19.340
+So let's just grab the image or we can use the dev.
+
+07:19.340 --> 07:25.830
+Let's see what happens if we just add the dev again in our custom dropdown component.
+
+07:26.030 --> 07:28.500
+Make sure everything is aligned nicely.
+
+07:29.510 --> 07:35.370
+Let's save go back to our app.
+
+07:35.590 --> 07:39.370
+The clicking is not working.
+
+07:39.560 --> 07:40.620
+What happened here.
+
+07:40.930 --> 07:42.530
+Well let's go back.
+
+07:42.540 --> 07:46.480
+Well the first thing that I notice here is that I'm using class instead of class name.
+
+07:46.550 --> 07:51.020
+And remember we want to make sure that for react we use a class name.
+
+07:51.170 --> 07:58.220
+And I bet if we open up the terminal and let's make this a little bit bigger it looks like property
+
+07:58.220 --> 07:58.540
+class.
+
+07:58.530 --> 07:59.990
+Did you mean class name.
+
+08:00.470 --> 08:01.700
+So let's fix that.
+
+08:01.700 --> 08:07.070
+I also see that since we're using this div up here we don't really need to do a padding.
+
+08:07.100 --> 08:11.390
+We want the image to be a little bit higher and we can just remove the div
+
+08:14.850 --> 08:21.880
+and again for the class make sure that we use class name.
+
+08:21.890 --> 08:28.790
+Let's go back and again let's make sure that everything is working and figure out why the dropdown toggle
+
+08:29.240 --> 08:30.920
+isn't working right now.
+
+08:30.920 --> 08:41.650
+Again going back and if we actually go over here we'll see that we're doing something strange if we
+
+08:41.650 --> 08:42.410
+go.
+
+08:42.520 --> 08:50.070
+We see that there's a toggle call on the dropdown as well as a dropdown toggle that has an on click.
+
+08:50.310 --> 09:00.300
+And if we actually console like here what is happening let's just say this is state DOT state DOT dropped
+
+09:00.350 --> 09:12.160
+down open and I go back and open up the console and I click once I get this called twice.
+
+09:12.560 --> 09:16.610
+And this is a really funny thing with their documentation.
+
+09:16.610 --> 09:19.580
+You see that for the custom dropdown content.
+
+09:19.580 --> 09:29.910
+They're actually doing the set state in the toggle function to just do the typical accessing the state
+
+09:29.980 --> 09:33.760
+inside of the set state function which you actually don't want to do.
+
+09:33.840 --> 09:42.510
+And their workaround is to actually do this but I recommend instead to just remove this on click function
+
+09:43.200 --> 09:45.340
+because this is already happening.
+
+09:45.810 --> 09:55.160
+And in that case if I go back and I click this only happens once and you see that.
+
+09:55.290 --> 09:55.770
+Oh yeah.
+
+09:55.820 --> 10:00.730
+Now our profile is working and we've got a nice little toggle.
+
+10:00.730 --> 10:01.510
+How cool is that.
+
+10:01.510 --> 10:03.220
+That is nice and simple.
+
+10:03.220 --> 10:06.950
+Now let's remove the logging.
+
+10:08.830 --> 10:12.280
+And you can experiment yourself to see how that works.
+
+10:12.280 --> 10:21.070
+Again if you just pull back the click and add the this state DOT drop down and just update the object
+
+10:21.620 --> 10:23.420
+it'll work that way.
+
+10:23.500 --> 10:25.750
+But this is just a cleaner way of doing it.
+
+10:25.750 --> 10:27.620
+I recommend you do it this way as well.
+
+10:27.640 --> 10:35.080
+You can read up about using state inside of Seth state more on your own time is just a good practice
+
+10:35.080 --> 10:36.300
+to have.
+
+10:36.310 --> 10:36.970
+All right.
+
+10:36.970 --> 10:41.920
+We have the dropdown functionality but the styling is kind of off.
+
+10:41.950 --> 10:46.210
+So let's just fix that so instead of having it all the way up here it's a little bit lower maybe you
+
+10:46.210 --> 10:47.830
+have some see through next to it.
+
+10:49.100 --> 10:56.540
+Oh I have a few class name for us that we can use in the class or two dropdown menu.
+
+10:56.880 --> 10:58.720
+I can give it a class name.
+
+10:58.810 --> 11:06.440
+Again using Tatiana's I'll say that it's going to be a transparent background.
+
+11:06.520 --> 11:11.260
+It's going to have a shadow so gives it that 3D feel.
+
+11:11.310 --> 11:17.620
+A5 and then just to show you how it's done in case we wanted the styling as well.
+
+11:17.620 --> 11:22.200
+We can also do or we want to have our own styles.
+
+11:22.210 --> 11:25.390
+I can't just have a style attribute here.
+
+11:25.420 --> 11:27.940
+And let's just give it a margin.
+
+11:28.400 --> 11:38.860
+Top of 20 pixels began just to bring it down a bit and I want some transparency so let's just say that
+
+11:38.860 --> 11:44.090
+we want background color.
+
+11:44.120 --> 11:46.340
+Let me just move this on a new line.
+
+11:46.340 --> 11:46.870
+There you go.
+
+11:46.940 --> 11:49.730
+That's a lot cleaner.
+
+11:49.830 --> 11:55.590
+And again because this is javascript we don't do the dash color like we do with CSSA it's camel case
+
+11:56.410 --> 12:03.400
+and background color is going to be let's just give it the fall or this has to be a string.
+
+12:03.750 --> 12:05.740
+We'll do an R G B.
+
+12:05.790 --> 12:12.070
+So we can have some transparency and we'll do 2:55 2:55 2:55.
+
+12:12.240 --> 12:21.290
+So it's going to be white with 0.5 Alpha which is transparency.
+
+12:21.290 --> 12:23.530
+All right let's save that and see if that works.
+
+12:23.560 --> 12:25.240
+Let's have a look.
+
+12:25.240 --> 12:26.250
+All right look at that.
+
+12:26.290 --> 12:28.090
+That looks a lot better doesn't it.
+
+12:28.090 --> 12:30.400
+Like I said I kind of cheated with selling here.
+
+12:30.400 --> 12:31.630
+I've done it before hand.
+
+12:31.630 --> 12:35.220
+I usually like to code live and debug with you as I go.
+
+12:35.220 --> 12:39.430
+But when it comes to styling is just one of those things that it's nice to have before hand.
+
+12:39.430 --> 12:45.070
+You can play around and add your own styling as you want but you know what this is looking pretty nice.
+
+12:45.070 --> 12:47.470
+I'm pretty happy with how we have things.
+
+12:47.500 --> 12:52.720
+I think we need to add some functionality though so that when we click these things actually do something
+
+12:53.040 --> 12:54.910
+I will do that in the next video.
+
+12:55.210 --> 12:55.990
+I'll see on that one.

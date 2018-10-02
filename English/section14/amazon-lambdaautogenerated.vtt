@@ -1,0 +1,244 @@
+WEBVTT
+
+00:01.430 --> 00:02.550
+Welcome back.
+
+00:02.900 --> 00:07.850
+Let's talk about something that we're going to work on in this section and probably the most exciting
+
+00:07.850 --> 00:10.090
+things Elise for me when it comes to Ada.
+
+00:10.130 --> 00:10.790
+Yes.
+
+00:10.820 --> 00:17.180
+And that is lambda functions you see traditionally we've built and deployed web applications where we
+
+00:17.180 --> 00:23.940
+have some control over the sheepy request just like we've built our smart brain app.
+
+00:24.010 --> 00:25.680
+We kind of control everything.
+
+00:25.690 --> 00:34.210
+Every little piece we're responsible for that server for deploying that express server and making sure
+
+00:34.210 --> 00:36.710
+that our resources are set.
+
+00:36.820 --> 00:41.440
+Were responsible for what we call provisioning and managing the resources that is making sure that we're
+
+00:41.440 --> 00:47.380
+deploying to the right machine it's able to scale and all these configuration items.
+
+00:47.410 --> 00:54.860
+Now there are a few issues with this method of just doing everything you're on one were charged for
+
+00:54.860 --> 01:01.760
+keeping the server up even when we're not actually using or serving out and you requests for example
+
+01:01.790 --> 01:07.490
+if nobody is checking out our Web site smart brain and the server is still up and running.
+
+01:07.490 --> 01:14.740
+Listening to connections while we're paying money to have that server running that's not really efficient.
+
+01:15.950 --> 01:21.560
+We're also responsible for making sure that the server is running that there's maintenance done on it
+
+01:21.740 --> 01:25.910
+that we make upgrades whenever there needs to be upgrades and all these resources.
+
+01:25.910 --> 01:33.800
+Again another layer of headaches and then we also have to worry about security making sure that everything
+
+01:33.800 --> 01:40.260
+that we do with the server is secure and we won't have bad people being able to access it.
+
+01:42.180 --> 01:44.410
+So Azara uses skills.
+
+01:44.520 --> 01:50.700
+And then finally as more and more users start using our service we have to make sure that our server
+
+01:50.700 --> 01:52.090
+can adapt to it.
+
+01:52.290 --> 01:58.260
+But at the same time when it's not being used it isn't charging us so much money because we have to
+
+01:58.260 --> 01:58.980
+keep it running.
+
+02:00.450 --> 02:05.810
+And especially for smaller companies and individual developers this can be a huge headache.
+
+02:06.000 --> 02:11.370
+You start getting distracted with all this management of your resources from other more important things
+
+02:11.370 --> 02:17.150
+like actually building your application and writing code now at larger companies.
+
+02:17.190 --> 02:22.840
+This thing we call infrastructure usually has its own team called the infrastructure team.
+
+02:23.010 --> 02:29.430
+So what these large companies can use their expertise and their teams so that we can just focus on code
+
+02:29.460 --> 02:31.100
+and just hand things off to them.
+
+02:32.360 --> 02:38.080
+And as developers we've been looking for solutions like these to these problems for a long long time
+
+02:38.930 --> 02:45.830
+and this is where the idea of server less comes in Servilius allows us to build applications where we
+
+02:45.830 --> 02:49.260
+simply hand the cloud provider.
+
+02:49.370 --> 02:52.360
+So Google Amazon or Microsoft our code.
+
+02:52.400 --> 02:57.140
+And it runs it for us just says hey tell me what I need to run and I'll take care of everything for
+
+02:57.140 --> 02:57.760
+you.
+
+02:57.770 --> 03:03.770
+They also make sure that we only get charged for what we actually use because they can monitor what
+
+03:03.770 --> 03:08.850
+code gets executed and what resources it actually consumes.
+
+03:08.870 --> 03:13.900
+For example for seasonal things like Christmas shopping.
+
+03:14.080 --> 03:19.910
+Well the cloud provider can simply add more servers more power to the requests.
+
+03:20.960 --> 03:27.080
+And when it dies down it can remove those servers and because they can use those servers for other companies
+
+03:27.500 --> 03:29.850
+they don't care that we're not using it anymore.
+
+03:29.870 --> 03:35.360
+And then finally our code is running in a secure environment where the cloud provider just takes care
+
+03:35.360 --> 03:36.220
+of everything for us.
+
+03:36.230 --> 03:38.730
+They make sure that everything's up to date and secure.
+
+03:39.770 --> 03:41.630
+All right that sounds really great.
+
+03:41.630 --> 03:42.350
+I'm sold.
+
+03:42.410 --> 03:43.570
+Let's start doing this.
+
+03:43.680 --> 03:47.230
+Well let's use Amazon Lamda and LAMDA.
+
+03:47.230 --> 03:52.270
+Like I said lets you run a function and this is how it's going to work and we're going to implement
+
+03:52.270 --> 03:55.650
+this in the course when a user makes a request.
+
+03:55.710 --> 03:58.030
+Let's say we just have a function that console logs.
+
+03:58.140 --> 04:00.320
+I'M SO FANCY.
+
+04:00.480 --> 04:08.400
+All we need to do is do a let's say Fetch call from our app to the your rule that the Amazon Lamda provides
+
+04:08.400 --> 04:15.880
+for us and we just upload this code to Amazon Lamda and as soon as we do a fecche call today you Arel
+
+04:16.200 --> 04:17.110
+it's going to log.
+
+04:17.190 --> 04:18.480
+I'm so fancy.
+
+04:18.620 --> 04:19.860
+Now how does this work.
+
+04:19.860 --> 04:26.220
+Underneath the hood you see the cloud provider creates a container something that we know and we've
+
+04:26.220 --> 04:30.060
+learned in docker and it runs this function inside of it.
+
+04:31.280 --> 04:36.230
+And what happens if five users at the same time request this function.
+
+04:36.440 --> 04:43.220
+Well they're going to create five separate containers for each user and respond with console dialog.
+
+04:43.300 --> 04:45.680
+I'm so fancy.
+
+04:45.850 --> 04:52.900
+All they do is simply store the function that we give it in their database and whenever it's being called
+
+04:53.200 --> 04:57.340
+it will grab it from the database and actually run it.
+
+04:57.340 --> 05:02.240
+Now you may see a problem with this and this is actually called the cold start problem.
+
+05:02.290 --> 05:07.600
+That is they have to grab this function from the database which is just stored as a string and then
+
+05:07.630 --> 05:09.220
+run it inside of a container.
+
+05:09.300 --> 05:17.770
+That takes time and that is the one downside with Amazon Lamda when it first runs a function it takes
+
+05:17.770 --> 05:18.630
+a little bit of time.
+
+05:18.640 --> 05:22.900
+I mean when we say a little bit of time it's still Amazon so it's fast.
+
+05:23.230 --> 05:28.750
+But once the function has been run and now more and more users are using it then it's fine because it's
+
+05:28.750 --> 05:30.310
+in a container.
+
+05:30.310 --> 05:31.800
+So that's one thing to keep in mind.
+
+05:32.680 --> 05:38.650
+But the beauty of this is that this function is only going to be run when we trigger it and when it's
+
+05:38.650 --> 05:42.180
+not run Amazon is not charging us at all.
+
+05:42.190 --> 05:48.640
+So this is great if you have seasonal births in your company or you want to do something that isn't
+
+05:48.640 --> 05:53.540
+running constantly something that only occasionally runs.
+
+05:53.550 --> 05:54.150
+All right.
+
+05:54.150 --> 05:57.750
+Enough talk we need to code to actually understand this concept.
+
+05:57.810 --> 06:01.410
+So in the next video we're going to get started with Amazon Lamda.

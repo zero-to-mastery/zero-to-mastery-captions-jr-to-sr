@@ -1,0 +1,100 @@
+WEBVTT
+
+00:01.780 --> 00:03.190
+Welcome back.
+
+00:03.190 --> 00:08.920
+Looking back at how we can make our apps better from the previous section you remember the critical
+
+00:08.920 --> 00:11.010
+render path.
+
+00:11.210 --> 00:16.550
+You can see that there are two main bottlenecks for javascript right over here.
+
+00:16.550 --> 00:22.650
+Number three and right over here and number eight and four.
+
+00:22.730 --> 00:32.060
+One is to minimize DOM manipulation through javascript and the other is javascript delivery how we deliver
+
+00:32.060 --> 00:34.250
+our javascript to the content.
+
+00:34.280 --> 00:40.640
+Now in this section as I said we'll go over how to build a simple re-act up with this diagram things
+
+00:40.640 --> 00:41.740
+make sense right.
+
+00:41.750 --> 00:48.280
+The better our delivery of javascript Well the faster we're going to build the render tree.
+
+00:48.350 --> 00:55.100
+And we also want to be smart about how much real rendering we're going to do because any time javascript
+
+00:55.160 --> 01:00.770
+changes something in the DOM we have to go through this step again into the rendered tree layout and
+
+01:00.770 --> 01:02.120
+paint.
+
+01:02.120 --> 01:09.810
+So if we can solve these two bottlenecks with something like re-act That's pretty good right.
+
+01:09.950 --> 01:11.440
+And that's what we're going to do.
+
+01:11.540 --> 01:19.040
+We have react to really help us out with this cycle of rendering layout paint and then modifying rendering
+
+01:19.070 --> 01:21.610
+layout paint.
+
+01:21.670 --> 01:29.200
+We're also going to learn a little bit about Westpac which help us with javascript delivery to optimize
+
+01:29.200 --> 01:30.120
+that.
+
+01:30.310 --> 01:38.860
+And then finally we're going to talk about redux and how redux adds a little bit to react to allow us
+
+01:39.700 --> 01:40.290
+to improve.
+
+01:40.300 --> 01:47.440
+Again this process of change something random tree layout paint change something Redner tree layout
+
+01:47.830 --> 01:50.190
+paint.
+
+01:50.220 --> 01:51.590
+So remember our challenge
+
+01:54.170 --> 02:00.620
+Kaikohe Corp. has the rubber friends app which is going to bigger and they want to add state management
+
+02:00.890 --> 02:07.160
+to it which we can do through redux which we're going to talk about in the next video.
+
+02:07.300 --> 02:14.560
+But as with anything a senior developers we have to think about why we would want to learn redox why
+
+02:14.560 --> 02:22.630
+we might improve this process that we see previously right over here in the next video we're going to
+
+02:22.630 --> 02:32.850
+talk about state management and understand why redux might improve upon react and often with applications
+
+02:32.860 --> 02:38.290
+you'll see both of them being used because it really really is a nice experience.
+
+02:38.350 --> 02:45.260
+By the end you're going to be able to speak intelligently about all three of these technologies.
+
+02:46.390 --> 02:48.000
+I'll see in the next one.
+
+02:48.100 --> 02:48.340
+Babai.

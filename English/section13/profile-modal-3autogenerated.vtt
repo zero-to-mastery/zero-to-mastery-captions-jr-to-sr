@@ -1,0 +1,421 @@
+WEBVTT
+
+00:02.130 --> 00:07.460
+All right let's make this provide a model look a little bit nicer than it is now.
+
+00:10.700 --> 00:16.420
+We're going to go back to my project here and come back to our profile.
+
+00:16.430 --> 00:17.260
+Dodgy Yes.
+
+00:17.260 --> 00:19.520
+I'm going to clean some of this up again.
+
+00:20.960 --> 00:25.880
+And just Doretti use some of the code that we already have.
+
+00:26.450 --> 00:28.380
+Let's have inside of here.
+
+00:28.640 --> 00:37.930
+Something similar to what we already had in our seinen page or we can even use the registration page.
+
+00:38.210 --> 00:44.230
+So let's open up the registration page and it's a big one for now just to keep things simple.
+
+00:44.230 --> 00:54.340
+I'm going to copy this comeback here and let's make this indentation better paste our code.
+
+00:55.790 --> 00:56.440
+That's a big one.
+
+00:56.480 --> 00:58.370
+Let's make this smaller.
+
+00:58.400 --> 01:00.280
+Let's see what that looks like.
+
+01:00.320 --> 01:04.600
+Go back the profile OK.
+
+01:04.760 --> 01:06.070
+Not bad.
+
+01:06.100 --> 01:10.850
+We got ourselves a bit of a profile page but we don't really want register we want to customize it with
+
+01:11.420 --> 01:14.800
+some of the profile elements that we want.
+
+01:14.810 --> 01:18.110
+So let's go ahead and do a bit of that bit of clean up.
+
+01:18.170 --> 01:20.000
+You're going to minimize this a little bit.
+
+01:20.930 --> 01:23.340
+For the article.
+
+01:23.400 --> 01:27.260
+Let's have the background be white.
+
+01:27.300 --> 01:34.470
+It's a little too see through right now to have more of a clear model look to it also give with let's
+
+01:34.470 --> 01:35.610
+say 80
+
+01:38.280 --> 01:45.710
+and I kind of want to have our profile icon on here so I can go back to my profile whereas our profile
+
+01:45.710 --> 01:54.570
+like on right here and just use this little image for now in the future you can imagine uploading users
+
+01:54.900 --> 01:56.150
+profile in this year.
+
+01:56.190 --> 01:59.670
+But for now just to keep things simple let's add this image
+
+02:03.590 --> 02:07.690
+and we'll move some of these CSSA styles again just to make it look good.
+
+02:08.540 --> 02:16.960
+And then we ideally perhaps want to have some H-1 tag that has the user name.
+
+02:17.110 --> 02:30.080
+It's all the say John Doe we maybe want to have a name for tag that says and says image sibbe knitted
+
+02:30.080 --> 02:37.600
+by our images submitted and this will have the number of count that they've submitted.
+
+02:37.600 --> 02:44.520
+Let's just say for now on these are things we're going to load up once be hooked into the basket and
+
+02:44.520 --> 02:52.300
+maybe we can have another thing that says that this user has been a member since I was just in January
+
+02:52.310 --> 02:58.330
+for now just something static and just to make things pretty maybe a horizontal line.
+
+02:58.330 --> 03:04.990
+All right let's start to remove some of these things that we don't need here so we can just remove the
+
+03:04.990 --> 03:08.720
+legend field set.
+
+03:08.740 --> 03:15.130
+And Deb I'm going to remove that whereas the field site
+
+03:18.670 --> 03:23.320
+so let's remove the field cells because we don't really need it anymore.
+
+03:24.600 --> 03:33.410
+And let's say we don't need the legend Either we can just keep the must labels remove the label for
+
+03:33.410 --> 03:35.650
+this one as well.
+
+03:35.870 --> 03:38.360
+A bit of quick clean up here.
+
+03:42.730 --> 03:46.680
+Let's say that we don't really need this day of wrapping either.
+
+03:46.810 --> 03:50.110
+Just to keep things a little bit cleaner we don't need this
+
+03:53.990 --> 03:55.250
+perfect look of that.
+
+03:55.250 --> 03:57.290
+Things are already looking nice and clean.
+
+04:01.670 --> 04:04.780
+And I'm just going to remove this terribly.
+
+04:04.780 --> 04:13.490
+All right a little bit cleaner let's save see how that looks so far if I go to View profile a little
+
+04:13.490 --> 04:18.800
+bit better look at that we have the icon the name images submitted member and that looks still a little
+
+04:18.800 --> 04:20.560
+bit ugly so let's fix that up.
+
+04:21.880 --> 04:31.840
+Want to first fix the indentation is she going to remove this measure as well since we don't really
+
+04:31.840 --> 04:32.710
+need it.
+
+04:33.800 --> 04:36.000
+Let's fix it in notation over here.
+
+04:39.030 --> 04:40.390
+That's a lot better.
+
+04:40.400 --> 04:47.070
+All right let's start off with the label we want to have a few different classes for the label now we'll
+
+04:47.070 --> 04:53.710
+have margin top to font weight of six that should be good enough.
+
+04:55.180 --> 04:59.750
+And this will be for the user name field.
+
+04:59.760 --> 05:05.010
+So let's just say user name and we'll just use something like that.
+
+05:05.910 --> 05:16.680
+For the input OAB type text the name will be for the user name and then for the class name we can just
+
+05:16.680 --> 05:21.550
+keep some of this you don't need to worry about input resets.
+
+05:21.660 --> 05:24.870
+We don't really want a transparent background.
+
+05:26.300 --> 05:32.690
+And you know just to keep things simple I just want to say with those 100 that's good enough for us
+
+05:33.170 --> 05:35.120
+and perhaps we can have a placeholder
+
+05:37.720 --> 05:41.040
+that is the name that we want for now.
+
+05:41.040 --> 05:41.800
+Just keep it at
+
+05:44.880 --> 05:47.280
+John and we will have an onchange event.
+
+05:47.340 --> 05:50.040
+So I can just remove that.
+
+05:50.180 --> 05:54.640
+And you know what just so I don't keep doing this.
+
+05:54.640 --> 06:03.670
+I'm going to use whatever we have now which I kind of like if we check back here go to View Profile.
+
+06:03.990 --> 06:05.390
+Yeah that looks a lot better.
+
+06:05.400 --> 06:12.480
+I'm going to just copy and paste these fields over here and change them to a few of the different types
+
+06:12.480 --> 06:14.140
+list you want for page
+
+06:17.550 --> 06:21.520
+leaseholder will just be 56 for now.
+
+06:21.600 --> 06:25.040
+It's going to be for user age.
+
+06:25.380 --> 06:26.890
+Heidi over age as well.
+
+06:28.430 --> 06:34.310
+And this one let's just say they also have a pact that they can have had it's going to be a pet dragon
+
+06:36.050 --> 06:37.480
+username.
+
+06:37.610 --> 06:43.020
+Pat idea of Pat let's save let's have a look.
+
+06:45.800 --> 06:46.360
+All right.
+
+06:46.400 --> 06:47.470
+Not bad.
+
+06:47.500 --> 06:48.930
+It's looking pretty good.
+
+06:51.260 --> 07:00.680
+And then maybe at the bottom we can add some buttons that say we'll have a save and a cancel so that
+
+07:00.680 --> 07:09.780
+we can update our profile we'll give it a class name margin top of for and you know what I'm going to
+
+07:09.780 --> 07:12.630
+give it some special styles as well.
+
+07:12.630 --> 07:13.680
+We'll do display
+
+07:16.780 --> 07:22.970
+flaks just to keep everything nice and centered justify
+
+07:25.390 --> 07:31.240
+of space evenly matched should be good.
+
+07:31.270 --> 07:33.530
+Make sure we close that div tag
+
+07:36.760 --> 07:46.600
+and within here we can just have a button that again has a class name and just using some tag counts
+
+07:46.600 --> 07:47.350
+here.
+
+07:50.140 --> 07:56.570
+We're going to do a few things here I'm just gonna copy and paste this to the other button as well.
+
+07:56.570 --> 08:08.260
+So one's going to be for Save one is gonna be for cancell.
+
+08:08.490 --> 08:12.390
+So this button is going to be our save one
+
+08:20.200 --> 08:21.550
+and we'll have another button
+
+08:24.610 --> 08:26.600
+that will be Canso.
+
+08:26.710 --> 08:29.310
+Let's say that give that a go.
+
+08:29.320 --> 08:30.560
+We'll see how it looks.
+
+08:32.130 --> 08:32.900
+Hey better.
+
+08:32.900 --> 08:38.640
+I think some of our sailing can be improved year.
+
+08:39.030 --> 08:46.540
+We want to make sure that this is going to be red instead of blue because it is cancell and not space
+
+08:46.560 --> 08:51.570
+even the space even Lee has better.
+
+08:51.590 --> 08:58.260
+I think that's why I wasn't keeping the buns to get all look at that now looks WAY nicer.
+
+08:58.260 --> 08:59.270
+All right look at that.
+
+08:59.310 --> 09:01.450
+We have ourselves a profile.
+
+09:01.590 --> 09:02.550
+And you know what.
+
+09:02.550 --> 09:04.080
+Everything looks good.
+
+09:05.860 --> 09:10.460
+Except the buns don't do anything and we probably need an X button over here as well.
+
+09:10.570 --> 09:12.070
+So let's do that.
+
+09:12.190 --> 09:19.060
+We'll give the class castle one a toggle moto or on click that is
+
+09:22.310 --> 09:28.190
+toggle motile and you can see here with re-act you're doing a lot of repetition but once you get the
+
+09:28.190 --> 09:35.320
+hang of it everything flows nicely and it makes sense you just keep adding events adding components
+
+09:35.750 --> 09:39.460
+and it's a nice way to build something quite fast actually.
+
+09:39.740 --> 09:44.230
+So we have the toggle motile and lets out an X of the top here.
+
+09:46.480 --> 09:49.750
+Or maybe at the bottom over here should the cancel.
+
+09:50.020 --> 09:51.860
+We can just add.
+
+09:52.270 --> 10:04.380
+So right at the top over here we can just give it a div of class name will create a new class C assess
+
+10:04.380 --> 10:05.870
+class year to make it look better.
+
+10:05.870 --> 10:17.110
+And again we're going to give it or not a click of toggle modal and will be a giant x that will have.
+
+10:17.740 --> 10:25.830
+So let's give that a go or to save go back here view profile and look at that.
+
+10:26.270 --> 10:30.790
+Some bad.
+
+10:30.810 --> 10:31.160
+All right.
+
+10:31.160 --> 10:35.090
+There's actually a nicer X that I can get.
+
+10:35.220 --> 10:43.230
+And this is just a nicer way of creating that X-1 that you see everywhere with modals and you just do
+
+10:44.010 --> 10:52.110
+and symbol and then times semi-coma and you see that it changes.
+
+10:52.190 --> 11:00.380
+So I'm going to say that and also at some modal close classes or so the modal close will out the modal
+
+11:00.380 --> 11:00.910
+close
+
+11:04.240 --> 11:12.650
+will give it the font size of the SCO three R.E.M..
+
+11:12.660 --> 11:24.290
+So a pretty big font style new style of bold and maybe give it a cursor of pointer as well.
+
+11:24.520 --> 11:26.350
+And we also want to have a hover class.
+
+11:26.350 --> 11:32.150
+So let's just do modal close.
+
+11:32.290 --> 11:44.430
+However And we'll just do a color of gray when we hover over it and a cursor that is pointer let's say
+
+11:44.440 --> 11:50.360
+if give it a go view profile look at that.
+
+11:50.400 --> 11:51.570
+That's not too bad.
+
+11:52.780 --> 11:59.390
+If we click Cancel the modal closes if we click View profile and say it doesn't do anything good because
+
+11:59.390 --> 12:00.760
+it we're going to be working on that.
+
+12:00.870 --> 12:03.880
+If I click Close it also closes.
+
+12:03.880 --> 12:10.500
+And then finally to finish up what we've just done make sure that the sign out feature works as well.
+
+12:10.540 --> 12:19.750
+I'm going to say is signed in to false is our route to sign in and test one last feature.
+
+12:20.680 --> 12:22.460
+To make sure that it's all working.
+
+12:22.460 --> 12:28.400
+And then after this we get to some fun logic sign out.
+
+12:28.400 --> 12:29.360
+Perfect.
+
+12:29.540 --> 12:31.430
+I'll see in the next video.

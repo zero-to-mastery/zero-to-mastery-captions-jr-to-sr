@@ -1,0 +1,166 @@
+WEBVTT
+
+00:01.780 --> 00:09.800
+Welcome back as we've discussed in the introduction as our applications go from simple tax based web
+
+00:09.800 --> 00:16.740
+sites to the video Web sites like YouTube or evening games you can imagine that we are now shipping
+
+00:16.740 --> 00:27.400
+more and more Javascript than ever before to our client or our browser and you remember how an application
+
+00:27.400 --> 00:31.480
+looked when we worked with re-act right on our DML page.
+
+00:31.510 --> 00:34.900
+We just had one simple element.
+
+00:34.930 --> 00:43.000
+We had the diff tagged with an idea of root and re-act just attach itself to that Id root element and
+
+00:43.000 --> 00:52.800
+then rendered all the DML through re-act elements just through that one div tag in HDMI.
+
+00:53.200 --> 00:56.290
+And this is how client side rendered apps work.
+
+00:57.790 --> 01:07.790
+You see unlike server side rendering where the server responds with a fully loaded ASTM all page that's
+
+01:07.790 --> 01:16.510
+ready to be rendered to the user with client side rendering it gets a pretty bare bones a shemale page
+
+01:16.750 --> 01:23.040
+that links to your javascript files which have to be executed and downloaded.
+
+01:23.220 --> 01:31.590
+We see over here that we first request our email and while we do that we have a loading spinner or a
+
+01:31.590 --> 01:38.190
+blank page as we wait for something to be rendered on the browser.
+
+01:38.340 --> 01:43.380
+Once the DML file arrives we notice some javascript files.
+
+01:43.950 --> 01:51.240
+And because there is nothing really to be rendered we wait for the javascript files to be downloaded.
+
+01:51.420 --> 01:59.700
+We then wait for them to be evaluated and then finally while we're still watching this loading screen
+
+02:00.240 --> 02:08.610
+once all that is done our page loads up and becomes interactive and we can see it.
+
+02:08.850 --> 02:15.990
+Now the one benefit of this although we do have to wait a bit is that once this page becomes interactive
+
+02:16.590 --> 02:23.610
+if you were to click on a link on this page to load more content the browser doesn't have to make another
+
+02:23.610 --> 02:31.500
+request to the server you're rendering items within the browser through re-act through logic through
+
+02:31.500 --> 02:40.700
+javascript so using javascript it's going to load new content and new libraries and new views to the
+
+02:40.750 --> 02:42.980
+webpage.
+
+02:43.160 --> 02:49.070
+And this is much faster since you're only loading a very small section of the new page.
+
+02:49.070 --> 02:55.220
+So for example if we had a menu bar at the top that doesn't need to be rendered we can just rearrange
+
+02:55.220 --> 02:56.040
+or whatever.
+
+02:56.090 --> 02:59.010
+Perhaps the profile is underneath.
+
+02:59.450 --> 03:05.380
+Just like if you remember in our Product Hunt example only parts of the web page get loaded.
+
+03:05.510 --> 03:08.460
+And that's a lot faster now.
+
+03:08.580 --> 03:16.500
+There's also a problem here right with client side rendering you sometimes have these blank pages where
+
+03:16.800 --> 03:23.720
+people just put loading spinner's or a blank page while we wait for this initial rendering to happen.
+
+03:24.600 --> 03:32.220
+Let's see what server side rendering would look like with server side rendering things look a little
+
+03:32.220 --> 03:33.220
+bit different.
+
+03:35.190 --> 03:44.640
+Immediately you can see that with SSR it renders a lot faster on the initial request compared to the
+
+03:44.880 --> 03:52.890
+Klein side rendered which we had to wait a little bit more because our server now responds with a fully
+
+03:53.100 --> 04:00.870
+rendered page so that we can display something to the user while the javascript gets downloaded and
+
+04:00.870 --> 04:03.130
+evaluated in the background.
+
+04:03.210 --> 04:09.810
+But you do also notice that our page doesn't become interactive until this point until these two steps
+
+04:10.140 --> 04:12.500
+by javascript get run.
+
+04:12.900 --> 04:16.830
+So we still have the same interactivity point.
+
+04:17.010 --> 04:23.520
+The only difference is that to the user this web site appears a lot faster because it displays things
+
+04:23.520 --> 04:25.020
+on the page a lot faster.
+
+04:25.020 --> 04:28.780
+They have less time watching the loading spinner.
+
+04:28.820 --> 04:31.080
+All right well there is our decision.
+
+04:31.310 --> 04:36.680
+Looking at these two it's clear we need to do server side rendering let's scrap all our client side
+
+04:36.680 --> 04:41.600
+rendering projects everything we have learned up until now its all a waste.
+
+04:41.600 --> 04:43.140
+All right hold on.
+
+04:44.500 --> 04:49.510
+Thats not actually complete or right as with anything.
+
+04:49.690 --> 04:52.380
+There are pros and cons to everything.
+
+04:53.190 --> 04:58.620
+And before we get into when you do want to do client side rendering when youd want to do server side
+
+04:58.620 --> 05:06.450
+rendering Lets take a break because I'm sure you have a question now can we turn a single page application
+
+05:06.690 --> 05:09.470
+into a server side rendered application.
+
+05:09.510 --> 05:15.070
+Can we make our Roble friends up into a server side or rendered map is that even possible.
+
+05:15.330 --> 05:20.440
+Because you can see how easy it is to do if you just had it simple a stream of pages.
+
+05:20.520 --> 05:28.190
+But if you had a dynamic web app like a single page application then it might be a little bit more difficult.
+
+05:28.220 --> 05:30.810
+So I'll see in the next video.

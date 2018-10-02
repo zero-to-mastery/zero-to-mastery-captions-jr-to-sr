@@ -1,0 +1,370 @@
+WEBVTT
+
+00:01.070 --> 00:01.910
+Welcome back.
+
+00:01.970 --> 00:08.840
+It's time for us to write a nice continuous integration config file so that we're actually doing something
+
+00:08.960 --> 00:10.120
+meaningful here.
+
+00:10.800 --> 00:21.300
+The first thing I'm going to do is let's have a the first shop called Build and this build will use
+
+00:21.300 --> 00:26.490
+a daquiri image and I'm going to use since in our project we're using node.
+
+00:26.490 --> 00:33.570
+I'm going to use the circle C.I. node eight point nine and you can find out what kind of circle see-I
+
+00:33.570 --> 00:34.500
+images you can use.
+
+00:34.500 --> 00:37.010
+You just go to Dr. Hobb and search for circles.
+
+00:37.010 --> 00:37.540
+Yeah.
+
+00:37.800 --> 00:39.980
+But I'm going to keep node a point.
+
+00:40.200 --> 00:43.470
+Even though Ruby works as you just saw.
+
+00:43.470 --> 00:49.530
+Now the next thing I'm going to do is for the steps I'm going to say check out the repo and I wanted
+
+00:49.740 --> 00:53.000
+to run instead of just echo.
+
+00:53.070 --> 01:00.540
+Or we can leave this here we're going to say and PM and stalling and we're going to add another line.
+
+01:00.600 --> 01:09.090
+Another run that is going to actually run and PM install because remember NPM Insall means it will check
+
+01:09.120 --> 01:10.050
+all the packages.
+
+01:10.050 --> 01:18.660
+Make sure that everything can be installed and then finally once we have run NPM install on their server
+
+01:18.900 --> 01:22.910
+we have all the files necessary for Robur France project.
+
+01:22.920 --> 01:30.260
+I'm going to say run and I'm going to give it to an external environment or environmental variable.
+
+01:30.300 --> 01:34.370
+We're going to just say circle see-I equals to true.
+
+01:34.410 --> 01:36.640
+And this is not going to do anything right now.
+
+01:36.690 --> 01:43.710
+But in our project if we had some if statements or some conditions that we want to execute if we're
+
+01:43.710 --> 01:47.710
+running the code incircle C.I. we can do that this way.
+
+01:48.180 --> 01:49.960
+And then I can just say NPM.
+
+01:50.070 --> 01:59.090
+Bill Because remember create re-act app is going to throw any errors for us if this isn't working and
+
+01:59.090 --> 02:02.760
+if NPM rom built succeeds well that means we can build our project.
+
+02:02.780 --> 02:09.980
+That's probably the most important job we can have that is to build the next one is perhaps test.
+
+02:10.280 --> 02:13.280
+We want to test our code and actually run our tests.
+
+02:13.280 --> 02:21.230
+If I do and PM test here we want to make sure that yeah I can test that on my local environment.
+
+02:21.530 --> 02:24.830
+But just in case I forget to run these things.
+
+02:24.890 --> 02:28.720
+Let me read that again just in case I forget to run these.
+
+02:28.820 --> 02:35.240
+Every time I make a poor request automatically Circle C is going to test this for us so that somebody
+
+02:35.240 --> 02:42.020
+on my team won't even check my pool request unless all the tests pass and this way we make sure that
+
+02:42.380 --> 02:47.510
+if my modifications made somebody else's tests fail.
+
+02:47.510 --> 02:56.360
+I know that I need to fix them so in the test I'm again going to use the Noad a point nine image
+
+02:59.490 --> 03:09.170
+and the steps I'm going to take with this one will once again be to run NPM install and I'm going to
+
+03:09.170 --> 03:11.180
+leave the run here and just say
+
+03:14.500 --> 03:15.610
+testing stuff.
+
+03:17.970 --> 03:22.370
+And then the next NPM run is going to be NPM test
+
+03:25.260 --> 03:26.400
+nice and easy.
+
+03:26.800 --> 03:28.500
+You know what just for fun.
+
+03:28.640 --> 03:34.110
+I don't want to add a completely meaningful test or meaning less test and you can imagine here you can
+
+03:34.110 --> 03:42.110
+add any type typescript checking that you might want any other tests that you want to check for any
+
+03:42.110 --> 03:43.970
+commands that you have in your package.
+
+03:44.010 --> 03:49.950
+Jason you can use to actually test to check out your script.
+
+03:50.060 --> 03:59.360
+For example if you have a NPM test coverage you could add a coverage job here where it checks to make
+
+03:59.360 --> 04:03.620
+sure that your test coverage is over let's say 80 percent.
+
+04:03.680 --> 04:07.280
+And if it's not and if it falls below that well it's going to fail.
+
+04:07.300 --> 04:08.780
+We can do so many things with it.
+
+04:10.600 --> 04:22.080
+In here I'm just going to simply say check out and then give it a run command of just a simple echo
+
+04:22.080 --> 04:27.900
+command that says you completely useless.
+
+04:27.900 --> 04:33.420
+Like I said but now I can demonstrate something fun in the job seeker.
+
+04:33.420 --> 04:38.130
+I'm going to rename this to something more useful like build
+
+04:42.610 --> 04:48.270
+and lint because they react up won't let me NPM rumbled.
+
+04:48.400 --> 04:57.370
+If the Lanting doesn't pass and for the jobs I'm going to say I want you to do the build job and I also
+
+04:57.370 --> 05:06.740
+want you to do the test job but also I'm going to do something fun here I'm going to say that in here
+
+05:07.640 --> 05:15.220
+the test job requires the high there
+
+05:18.400 --> 05:19.850
+job to finish.
+
+05:19.960 --> 05:21.070
+What does that mean.
+
+05:21.460 --> 05:27.200
+Well now I tell it build and test are going to run in parallel.
+
+05:27.280 --> 05:29.330
+Oh and let me fix that.
+
+05:29.350 --> 05:32.660
+We want to do build Hi there.
+
+05:32.680 --> 05:33.420
+Let me go over that.
+
+05:33.430 --> 05:36.180
+So we have the jobs and we want to do build.
+
+05:36.340 --> 05:37.190
+Hi there.
+
+05:37.390 --> 05:39.950
+And the test Job.
+
+05:40.330 --> 05:47.210
+However the test job requires the high there to succeed.
+
+05:47.230 --> 05:54.640
+So what's going to happen is built and high there are going to run in parallel on two separate containers.
+
+05:54.700 --> 06:02.470
+However the test which if we didn't add the Requires would have ran again in parallel all at the same
+
+06:02.470 --> 06:04.230
+time on different containers.
+
+06:04.300 --> 06:06.870
+Instead it requires the high there.
+
+06:07.040 --> 06:12.880
+So until high there echoes Hello the test container cannot start.
+
+06:13.210 --> 06:18.810
+And you can start to imagine the type of workflows that you can do with oh and i just realized that
+
+06:18.810 --> 06:26.620
+here at high there we have to make sure that we say the Hucker image make sure we have that.
+
+06:26.820 --> 06:31.120
+And these have to be the steps.
+
+06:31.120 --> 06:31.570
+All right.
+
+06:31.650 --> 06:39.060
+So now that we have this all set up make sure that everything looks nice and just making sure all our
+
+06:39.060 --> 06:40.680
+indentation is right.
+
+06:40.680 --> 06:46.720
+Like I said with YAML files it's really important that we actually have that.
+
+06:46.830 --> 06:56.840
+We also want to make sure that that requires is indented properly like so again we'll save that.
+
+06:56.960 --> 07:02.860
+Let's get out of here and create just to get status to make sure that we've made those changes.
+
+07:02.880 --> 07:14.040
+I'm going to create a new branch called testing and in here we'll just get ad get to commit circle see-I
+
+07:14.050 --> 07:20.970
+tasks and then finally get push origin testing.
+
+07:21.530 --> 07:22.940
+Let's see if that works.
+
+07:25.920 --> 07:26.940
+Let's go back.
+
+07:26.940 --> 07:35.520
+There you go there's a request and we'll just say create poor Reclast.
+
+07:35.530 --> 07:36.980
+All right look at that.
+
+07:37.000 --> 07:38.730
+Hi there is running.
+
+07:38.770 --> 07:42.040
+So now test is running and then build is running as well.
+
+07:42.280 --> 07:45.090
+Let's go check out circle C.I. and see what it's doing.
+
+07:46.660 --> 07:51.080
+We have our Roble friends testing and look at that.
+
+07:51.300 --> 07:55.810
+We have the success that happened.
+
+07:55.890 --> 07:57.750
+That is just echoing hello.
+
+07:58.200 --> 08:03.900
+If we go back to the workflow over here we see that.
+
+08:03.910 --> 08:04.240
+All right.
+
+08:04.240 --> 08:06.770
+So hi there succeeded in one second.
+
+08:06.780 --> 08:15.750
+And now it's running the test and all of them seemed to have passed test took 34 seconds build 40 seconds
+
+08:15.760 --> 08:16.910
+if I click on it.
+
+08:17.260 --> 08:19.020
+Yeah looks like everything passed.
+
+08:19.030 --> 08:20.540
+Everything is good.
+
+08:20.680 --> 08:25.090
+Going back to the builds I see that everything is passing.
+
+08:25.090 --> 08:33.400
+If I go back and I refresh or weight or a little bit all checks have passed.
+
+08:33.400 --> 08:37.830
+Everything is good merge poor request.
+
+08:37.830 --> 08:44.790
+Now the interesting thing here is that this is going to fail every time I now make a poor request and
+
+08:45.060 --> 08:47.700
+any of the tests or built fail.
+
+08:47.700 --> 08:49.950
+For example let's say I want to create a new
+
+08:52.640 --> 09:00.550
+component or let's say that in the counter BOTTEN component I'm going to change the initial state to
+
+09:00.550 --> 09:01.380
+5.
+
+09:01.960 --> 09:03.540
+I'm going to save.
+
+09:04.450 --> 09:07.560
+And again I'm going to get checked out.
+
+09:07.590 --> 09:15.180
+M. and then from here I'm just going to get checkout B.
+
+09:15.660 --> 09:28.390
+I'm just going to give it to branch and I'm going to just get and get commit just a blank message.
+
+09:29.450 --> 09:33.200
+And then get push origin who
+
+09:37.110 --> 09:41.210
+oh I have to actually give it a command message let's try that again.
+
+09:41.220 --> 09:43.060
+I'm going say who.
+
+09:43.200 --> 09:44.150
+Now that's better.
+
+09:44.370 --> 09:45.830
+Let's try that again.
+
+09:48.110 --> 09:58.960
+And this request is going to fail because if Iran NPM test it's going to say your tests are not going
+
+09:58.960 --> 10:03.830
+to pass because we have some tests that expect the state to be zero.
+
+10:03.850 --> 10:05.050
+Very cool.
+
+10:05.050 --> 10:05.360
+All right.
+
+10:05.380 --> 10:10.590
+Let's take a break and I'm going to add one last step to our continuous integration in the next video.
+
+10:11.020 --> 10:11.290
+Buh-Bye.

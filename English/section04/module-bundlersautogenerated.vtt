@@ -1,0 +1,259 @@
+WEBVTT
+
+00:01.460 --> 00:03.670
+Welcome back OK.
+
+00:03.830 --> 00:07.850
+So we feel pretty comfortable with react and redux.
+
+00:07.850 --> 00:13.130
+We know that they're there for us to use to optimize this part right.
+
+00:13.130 --> 00:21.830
+The part where javascript has to constantly adjust to use your interactions and revenger paint and layout
+
+00:22.770 --> 00:25.010
+work and so this makes sense.
+
+00:25.010 --> 00:31.790
+But let's talk a little bit about this part where we have a ton of Djoser files and we somehow need
+
+00:31.790 --> 00:39.340
+to deliver them to the client to the browser so that we can render something other apps get bigger and
+
+00:39.340 --> 00:39.840
+bigger.
+
+00:39.940 --> 00:45.430
+Especially with single page applications we have more and more Java's care files.
+
+00:45.430 --> 00:52.780
+So we have a need for something called a Bandler something that bundles all these files together so
+
+00:52.780 --> 01:00.670
+that whether we want to put it all into one or divide them up it does it so nicely without us having
+
+01:00.670 --> 01:02.340
+to do it manually.
+
+01:02.410 --> 01:09.100
+You might remember in the performance Parwan exercise when we worked on the Kaikohe Web site well we
+
+01:09.100 --> 01:14.580
+manually had to copy and paste the javascript from one library into the other the mini ify it.
+
+01:14.800 --> 01:20.840
+And that's a lot of manual work that you wouldn't want to do especially as our apps get bigger and bigger.
+
+01:20.950 --> 01:29.170
+So things like butlers are able to manipulate and combine even CSSA nation more files into one.
+
+01:29.440 --> 01:33.790
+They can combine Java's care files an ugly side they could optimize images.
+
+01:33.910 --> 01:42.870
+They can do a ton of really cool things to maximize the delivery of Arafat's And up until this point.
+
+01:43.160 --> 01:51.140
+We were lucky enough because create re-act tap did this for us whenever we ran NPM start or NPM built
+
+01:51.440 --> 01:57.030
+to build our files for production Cray react up underneath the hood was using something called wetback
+
+01:57.620 --> 01:59.300
+to do this for us.
+
+02:00.580 --> 02:08.000
+For the next couple of videos I want to introduce you to wet pack and bundling for although tools like
+
+02:08.000 --> 02:11.030
+create re-act Abdou are really really good job for us.
+
+02:11.060 --> 02:13.810
+We still want to know how things work underneath the hood.
+
+02:15.100 --> 02:20.200
+And when it comes to Bon Lake homeboy there's a ton of options.
+
+02:20.920 --> 02:26.650
+Right now the most popular is wetback and they just came out with a wet pack for but there there's a
+
+02:26.650 --> 02:32.300
+new up and comer parsel and then roll up who's always been popular.
+
+02:32.440 --> 02:35.570
+Now all of these are Bandler's.
+
+02:35.650 --> 02:44.800
+That is they taken some files and they spit out a file based on some optimizations so that we can deliver
+
+02:44.800 --> 02:46.510
+it to the browser.
+
+02:46.930 --> 02:52.500
+Now what pack is the reigning champion and is definitely a good tool.
+
+02:52.500 --> 02:54.430
+That's why they react up uses it.
+
+02:54.430 --> 03:01.690
+But parsel has come out recently with the idea of zero configuration that is unlike wet bag that requires
+
+03:01.690 --> 03:02.920
+a lot of configuration.
+
+03:02.920 --> 03:07.780
+We have to tell it every single detail of what we need done to the files and what we need outputted
+
+03:08.140 --> 03:10.750
+parsel says Hey that's kind of hectic.
+
+03:10.750 --> 03:11.740
+That's kind of annoying.
+
+03:11.740 --> 03:13.300
+What if we just take care of it for you.
+
+03:13.300 --> 03:17.090
+Just tell us what files you want to put in here and we'll just spit them off for you.
+
+03:17.260 --> 03:18.900
+All optimized and ready to go.
+
+03:19.700 --> 03:26.070
+And then roll up is also famous for similar things with wet back but really really good.
+
+03:26.060 --> 03:31.850
+It's something called tree shaking that is avoiding any code that we don't really need to use and throwing
+
+03:31.850 --> 03:33.710
+it out before they bundle everything.
+
+03:34.470 --> 03:41.050
+Now in this course we're going to talk a bit about web back and do a nice little exercise and also a
+
+03:41.050 --> 03:45.680
+little demonstration on parsel but I wanted to keep two things in mind.
+
+03:45.730 --> 03:47.110
+The first one is practical.
+
+03:47.110 --> 03:51.400
+That is when should I use these well.
+
+03:51.580 --> 03:58.780
+What pack is the tried and tested module Bandler that if you have a large project you're most likely
+
+03:58.780 --> 03:59.860
+using wetback.
+
+03:59.860 --> 04:05.500
+And this is most likely set up at the beginning of the project by somebody who's a team leader or a
+
+04:05.500 --> 04:06.600
+senior developer.
+
+04:07.890 --> 04:10.110
+So use these for big projects.
+
+04:10.110 --> 04:15.950
+The second will use parsel if you're on a project by yourself or it's a small project.
+
+04:15.960 --> 04:18.030
+You just need to get up and going.
+
+04:18.060 --> 04:22.920
+You don't need to worry too much about configuration files like web pack it's super easy to pick up
+
+04:22.920 --> 04:31.290
+and very easy to learn finally use roll up for when you're rolling out your own NPM packages.
+
+04:32.160 --> 04:39.360
+The second point and the most important point I think is the fact that configurations and configuration
+
+04:39.360 --> 04:41.940
+files always change.
+
+04:41.940 --> 04:49.740
+One of my big pet peeves is how much time we dedicate to something like wetback to understand its configuration
+
+04:49.980 --> 04:52.530
+and then a new version comes out like what back for.
+
+04:52.650 --> 04:53.910
+And things change.
+
+04:54.740 --> 04:58.390
+When it comes to configuration and bundling we're always evolving.
+
+04:58.430 --> 05:05.070
+Things are always improving and something that we learned two years ago might not apply now.
+
+05:05.930 --> 05:07.690
+So keep that in mind.
+
+05:07.820 --> 05:15.310
+Don't go overboard and read every single line in the well-packed documentation when you have a problem
+
+05:15.320 --> 05:23.260
+when we need to create a web that config file to configure your module bundling well.
+
+05:23.400 --> 05:26.140
+By that point you should know what that does.
+
+05:26.180 --> 05:31.760
+So you can go into the documentation and read through them as you build your config file.
+
+05:31.800 --> 05:36.900
+You don't need to memorize every single thing and that's why I'm a big fan of using something like create
+
+05:36.900 --> 05:44.930
+react to create re-act app was developed by some of the smartest minds in web development and their
+
+05:44.940 --> 05:52.470
+working day in and day out to make that project successful and as optimized and as well coded as they
+
+05:52.470 --> 05:53.310
+can.
+
+05:53.310 --> 05:59.680
+They're spending their time full time there so why reinvent the wheel.
+
+05:59.810 --> 06:01.940
+Crea react up already exists.
+
+06:01.950 --> 06:04.030
+Use their power use their knowledge.
+
+06:04.050 --> 06:10.620
+Use the constant updates that you get for free and if you really really need to need to optimize.
+
+06:10.620 --> 06:18.860
+You can always do something like NPM run a jet and create racked up so that you have access to the well-packed
+
+06:18.870 --> 06:20.130
+config file.
+
+06:20.130 --> 06:23.860
+But keep this in mind configurations always change.
+
+06:23.970 --> 06:27.880
+Just know how they work and understand why they're useful.
+
+06:28.290 --> 06:33.990
+But don't spend all your time learning how to do a configuration file.
+
+06:34.020 --> 06:40.050
+Your time is better spent learning how to code properly create less bugs write better tests.
+
+06:40.380 --> 06:43.930
+All things that we'll talk about later in the course.
+
+06:43.970 --> 06:45.490
+That's it for now.
+
+06:45.530 --> 06:46.990
+I'll see in the next one.
+
+06:47.230 --> 06:47.480
+Babai.

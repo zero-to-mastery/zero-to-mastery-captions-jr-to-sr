@@ -1,0 +1,376 @@
+WEBVTT
+
+00:01.570 --> 00:02.640
+Welcome back.
+
+00:02.890 --> 00:04.970
+Let's go through a bit of a history lesson.
+
+00:05.020 --> 00:06.590
+You know how much I love those.
+
+00:06.640 --> 00:10.210
+It's always important to ask why did this tool get built.
+
+00:10.270 --> 00:16.650
+Why did people spend time and money creating it with any tools that we use.
+
+00:16.660 --> 00:25.120
+So before we had Dr. we had something called virtualise machines and that is all here on the left hand
+
+00:25.120 --> 00:25.570
+side.
+
+00:27.130 --> 00:35.590
+We had tools like VM ware or virtual box and virtual machines are what we called sandbox environments
+
+00:36.550 --> 00:43.510
+which contains a full fledged computer with its virtual hardware operating system kernel software.
+
+00:43.510 --> 00:49.900
+And as you can see in this diagram it's like having if you can imagine this being one computer a virtual
+
+00:50.230 --> 00:55.360
+machine was like having a computer on top of it.
+
+00:55.540 --> 01:01.730
+So you had app was running on an operating system on this computer up to running on the same computer.
+
+01:01.780 --> 01:04.330
+But again another operating system.
+
+01:04.570 --> 01:07.590
+And you can see it was pretty pretty big.
+
+01:07.600 --> 01:13.780
+But this allowed us to solve this problem of having things run in an environment that is the blue environment
+
+01:13.780 --> 01:20.580
+here the orange environment the red environment in a consistent predictable manner and because there
+
+01:20.580 --> 01:28.380
+are such big things that had their own operating system meant and libraries that sometimes it took a
+
+01:28.380 --> 01:38.000
+few minutes to even boot up these applications now docker came along and changed the idea that you see
+
+01:38.060 --> 01:45.110
+with darker containers they wrap up the software in a complete file system that contains everything
+
+01:45.130 --> 01:50.300
+and needs to run just like we had with virtual machines.
+
+01:50.550 --> 01:57.760
+You had code runtime system tools system libraries anything that you could install on a server.
+
+01:57.930 --> 02:00.320
+You can use with docker.
+
+02:00.510 --> 02:05.880
+And again this guaranteed that it will always run the same regardless of the environment it is running
+
+02:05.880 --> 02:16.400
+it now containers are a lightweight alternative to the full machine virtualization or virtual machines.
+
+02:16.400 --> 02:26.130
+Therefore they're designed unlike virtual machines for running just single applications on each container.
+
+02:26.900 --> 02:35.560
+Because they're so small and thin and this is a popular concept of micro services that we talked about
+
+02:36.520 --> 02:43.390
+containers that use the host operating system they don't have their own operating system like we have
+
+02:43.390 --> 02:44.800
+with virtual machines.
+
+02:44.800 --> 02:47.270
+They use the host operating system.
+
+02:47.860 --> 02:53.230
+And because of that they need just a few seconds and your container application is up and running a
+
+02:53.230 --> 03:00.390
+lot faster than we had with virtual machines so with darker containers we're able to have a fast and
+
+03:00.390 --> 03:07.500
+easy access to run these small single applications and just have multiple of these things just create
+
+03:07.500 --> 03:16.080
+as many containers as you want they're easy to just grow and grow as you scale as you have more users.
+
+03:16.310 --> 03:21.320
+And that's when you start getting to things like container orchestration where you now have to just
+
+03:21.590 --> 03:27.910
+manage all these containers which by the way if you have ever heard of Cabernets that is what it does.
+
+03:30.050 --> 03:31.660
+So I think we got that point across.
+
+03:31.730 --> 03:33.950
+Darker is a container platform.
+
+03:34.190 --> 03:41.880
+Unlike virtual machines containers bundle only their libraries and settings required for your application.
+
+03:42.050 --> 03:48.650
+Are efficient light weight and self-contained and this makes sure that your application will run the
+
+03:48.650 --> 03:51.540
+same anywhere and everywhere.
+
+03:51.650 --> 03:53.580
+So containers are good right.
+
+03:53.990 --> 03:55.160
+Absolutely.
+
+03:56.460 --> 04:00.860
+Now that we got that across Let's talk about what containers actually are.
+
+04:00.860 --> 04:05.250
+I've kind of thrown around the R word but haven't really explained what it is.
+
+04:06.250 --> 04:10.530
+Well a container can be explained with the diagram.
+
+04:10.870 --> 04:17.650
+We first have a host that is a machine or a computer that we're going to be able to host our container
+
+04:17.650 --> 04:17.980
+on.
+
+04:17.980 --> 04:25.870
+So again in this section we're going to use our laptop as the host or your computer as the host.
+
+04:25.900 --> 04:33.640
+Now on top of this host we have what we call the container something that we create with Dr..
+
+04:33.730 --> 04:41.000
+And luckily for us with one comment because of Dharker we can just create this container and inside
+
+04:41.000 --> 04:48.670
+of it we have something called an image and a container consists of an image.
+
+04:49.090 --> 04:57.910
+You see an image is what doctor uses to bundle your application into a standalone package that can live
+
+04:57.910 --> 04:59.140
+inside of a container.
+
+04:59.140 --> 05:07.810
+So within this image I can say I want a node server and this image is read by the doctor because again
+
+05:07.840 --> 05:12.820
+it's just a file and this file generates this container that runs.
+
+05:12.820 --> 05:15.420
+Note for us.
+
+05:15.660 --> 05:23.760
+Now the key part of this is that the environment inside the container is completely isolated from that
+
+05:23.850 --> 05:25.030
+of the host machine.
+
+05:25.110 --> 05:29.440
+So it doesn't matter what we run here as long as this machine can run docker.
+
+05:29.770 --> 05:36.540
+Then within this container we can have all the libraries and dependencies that we want for our notes
+
+05:36.810 --> 05:39.160
+server to work.
+
+05:39.230 --> 05:46.310
+And by the way this image also has something called a ridable file system just like we have files on
+
+05:46.310 --> 05:51.970
+our computer and is added on by docker automatically inside of the container.
+
+05:52.060 --> 05:54.110
+And that's what we call a volume.
+
+05:54.400 --> 06:02.020
+So we have the image which is the file that describes what the container should do and within that container
+
+06:02.020 --> 06:08.170
+we also have the option to use something like a file system just like we have files on our laptop for
+
+06:08.170 --> 06:09.400
+extra functionality.
+
+06:11.810 --> 06:20.020
+To review docker bundles your application into an image a standalone executable package and Dharker
+
+06:20.020 --> 06:27.340
+executes this image in this container and the environment inside the container is completely isolated
+
+06:27.610 --> 06:30.090
+from that of the host machine.
+
+06:30.090 --> 06:32.580
+Again this is something that we're going to come back to.
+
+06:32.650 --> 06:36.430
+I'm going to demonstrate to you how we're going to do this and we're going to work together to create
+
+06:36.430 --> 06:37.750
+a dog in danger.
+
+06:37.750 --> 06:41.800
+And then we're going to come back to this image and you're going to realize oh yeah this all makes sense
+
+06:41.800 --> 06:42.430
+now.
+
+06:42.490 --> 06:43.270
+So stick with me.
+
+06:43.270 --> 06:45.410
+Trust me you're going to get it.
+
+06:45.700 --> 06:50.650
+Now this whole image thing sounds pretty complicated right.
+
+06:51.100 --> 06:58.020
+Well luckily for you there's something called Dharker hop and it's what makes docker an amazing product.
+
+06:59.990 --> 07:11.440
+You see Dr. Hobb simply hub dot dot dot com is kind of like NPM and Javascript and with Doctor hub it
+
+07:11.440 --> 07:16.810
+provides a store like Web site where you can search and download images to use.
+
+07:16.810 --> 07:23.800
+There were already pre-written by people and it's highly adopted by a lot of people and many organizations
+
+07:23.800 --> 07:28.350
+so it's something that most people working Dharker use.
+
+07:28.450 --> 07:34.780
+For example if I scroll down I see that all right there's a node image that I can use if I click on
+
+07:34.900 --> 07:35.820
+details.
+
+07:36.160 --> 07:37.090
+I see that.
+
+07:37.270 --> 07:40.370
+All right I have different node versions that I can use.
+
+07:40.390 --> 07:46.840
+Let's say I wanted to use nine point eleven I can click on the dock or file here and look at that.
+
+07:46.990 --> 07:53.050
+Although this may look like jibberish now we're going to go over this a bit and late on videos but this
+
+07:53.050 --> 07:59.910
+is the docker image by just using this file and running docker with it.
+
+08:00.030 --> 08:07.590
+It's going to create a container that has the node version 9 already set up for us and you can see here
+
+08:07.590 --> 08:12.380
+that we have plenty of things that we can run and we can postscripts we can run Monga we can run to
+
+08:12.390 --> 08:17.170
+boon to read S which we're going to talk about and so many so many things.
+
+08:17.630 --> 08:22.250
+So just like NPM you can use these packages already predefined for us.
+
+08:22.350 --> 08:25.720
+And most of the time you're going to be doing that instead of writing your own.
+
+08:26.100 --> 08:31.060
+But I'm going to show you how to write some of the your own Daco files because why not.
+
+08:33.170 --> 08:39.350
+So now that we have the basic understanding of what doctor does and what containers are in the rest
+
+08:39.350 --> 08:45.450
+of the section we're going to be doing something like this in our development setup.
+
+08:45.530 --> 08:52.490
+We're going to create a docker container that is connected to our front end our front end smart brain
+
+08:52.490 --> 08:53.720
+application.
+
+08:53.750 --> 08:59.450
+Now within this Stockard container we already have our node express API but we're also going to bring
+
+08:59.450 --> 09:04.760
+in our postscripts as well as eventually rattus for session management.
+
+09:04.790 --> 09:13.160
+Again coming up in future sections and by putting all of this in a container we can just run one single
+
+09:13.160 --> 09:21.020
+command and have the database API server read its database all running getting started getting booted
+
+09:21.020 --> 09:23.780
+and starting to gather in this one container.
+
+09:23.780 --> 09:25.280
+It's going to be like magic.
+
+09:25.850 --> 09:32.240
+And by the way in most production setups that you see with modern companies you'll see something like
+
+09:32.240 --> 09:38.270
+this where you have our client side application our smart brain that has some sort of a load balancer
+
+09:38.930 --> 09:45.260
+and this load balancer just distributes to different API servers so that if we have a lot of traffic
+
+09:45.680 --> 09:52.940
+we don't clog up one API server and we have these API servers clone because they're just simple Gawker
+
+09:53.510 --> 09:54.110
+images.
+
+09:54.200 --> 09:57.690
+So by just creating more and more containers that's easy for us to do.
+
+09:57.950 --> 10:02.240
+And don't worry I'll show you how to do a load balancer as well in an upcoming video.
+
+10:02.750 --> 10:09.350
+And these API servers now connect to databases like postscripts and we can have multiple databases again
+
+10:09.350 --> 10:10.730
+to handle all the load.
+
+10:10.970 --> 10:18.440
+And also they can connect to something like Pretis which we'll talk about that manages caching or session
+
+10:18.440 --> 10:27.020
+management and you can see by having docker we're just able to easily clone and create more copies as
+
+10:27.020 --> 10:30.110
+we scale and as we grow.
+
+10:30.240 --> 10:36.080
+But I want to show you this diagram just for reference to show you what a production app looks like.
+
+10:36.080 --> 10:43.790
+The idea being that we're able to create these small services that we can duplicate so that as our demand
+
+10:43.820 --> 10:48.140
+of the app grows as our user base grows we can grow with it.
+
+10:49.290 --> 10:50.250
+All right.
+
+10:50.580 --> 10:54.030
+It's time to get started with docker and the next videos.
+
+10:55.490 --> 10:56.810
+I'll see on that one.
+
+10:56.850 --> 10:57.140
+Bebai.

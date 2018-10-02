@@ -1,0 +1,385 @@
+WEBVTT
+
+00:00.910 --> 00:02.130
+Welcome back.
+
+00:02.170 --> 00:09.880
+Let's talk about databases but I'm going to give you a heads up as a web developer you might not actually
+
+00:10.210 --> 00:16.540
+work too much with databases especially when it comes to scaling and improving their performance.
+
+00:16.540 --> 00:22.530
+However we can take a look at databases from a higher level so that we can connect the pieces.
+
+00:22.630 --> 00:28.870
+And if it ever comes down to it we can structure our applications so that it takes advantage of however
+
+00:28.870 --> 00:32.050
+the database is set up.
+
+00:32.110 --> 00:38.250
+So let's take a high level overview of what we can do with databases.
+
+00:38.380 --> 00:46.450
+I have listed here six items that are the main ways that databases can scale and the very first one
+
+00:46.510 --> 00:53.650
+is probably the most important one that you should look at before you do any sort of optimizations on
+
+00:53.650 --> 00:54.460
+a database.
+
+00:55.230 --> 01:01.050
+And that is to identify inefficient queries before you start looking at your data base and how you can
+
+01:01.050 --> 01:01.910
+scale it.
+
+01:02.130 --> 01:04.630
+Throwing more money to improve it.
+
+01:04.710 --> 01:10.000
+You first have to ask yourself Am I using the database efficiently.
+
+01:10.140 --> 01:18.510
+Am I making statements to the database from my let's say API server Am I making these requests in an
+
+01:18.510 --> 01:20.570
+efficient way possible.
+
+01:20.670 --> 01:27.930
+And there's many ways that you can improve that not having too many joints or asking for too much information
+
+01:27.930 --> 01:30.840
+when you only need a little bit of information.
+
+01:30.840 --> 01:35.760
+There's many ways that you can improve your ask you all queries but the two main things that you can
+
+01:35.760 --> 01:42.800
+improve on is making sure that you only request where you absolutely need on your server.
+
+01:42.900 --> 01:50.490
+And then finally using things like indexes to improve this querying of data.
+
+01:50.490 --> 01:52.540
+Now what are indexes.
+
+01:52.570 --> 01:58.550
+Well usually data access in a database is done with blocks on disks.
+
+01:58.590 --> 02:10.100
+That is when we query a database or a table we have to ask access that entire disk block with that information
+
+02:10.100 --> 02:11.240
+of the table.
+
+02:11.240 --> 02:12.740
+And usually this data.
+
+02:12.800 --> 02:16.440
+Let's say I have a user name and age is not sorted.
+
+02:16.520 --> 02:21.780
+So if I was searching for a user that is 34 years old.
+
+02:21.950 --> 02:30.320
+Well that's going to require me to look through the entire table whereas if that data was sorted I could
+
+02:30.320 --> 02:36.780
+do something called binary search which makes it a lot faster for me to find that user.
+
+02:36.800 --> 02:41.870
+So there's a huge performance increase by doing what we call indexing.
+
+02:42.110 --> 02:47.490
+So keep that in mind indexing is a way of sorting a number of records on multiple fields.
+
+02:48.590 --> 02:56.360
+So if I create an index on a field that is age of the users table it creates a new copy of that data
+
+02:56.360 --> 03:02.720
+structure which holds the field value and a pointer to the record that it relates to.
+
+03:02.720 --> 03:08.300
+So think of it as creating a file on your computer instead of having just the user stable file.
+
+03:08.300 --> 03:11.660
+Now you also have a user's index file.
+
+03:11.910 --> 03:18.230
+But next time we query any user age questions we can just use that index file to immediately find that
+
+03:18.230 --> 03:21.230
+user allowing us to use binary searches.
+
+03:21.260 --> 03:26.620
+Again to really increase performance.
+
+03:26.710 --> 03:32.290
+Now the obvious downside to indexing is that these indexes require additional space on disk.
+
+03:32.290 --> 03:40.360
+Again we're making another file and depending on your system having more and more space might especially
+
+03:40.360 --> 03:44.680
+if the database is large might not work well.
+
+03:44.780 --> 03:45.080
+All right.
+
+03:45.080 --> 03:47.820
+So all this index talk and inefficient queries.
+
+03:47.930 --> 03:50.010
+How can I actually create an index.
+
+03:50.330 --> 03:57.710
+Well remember our skew all statements to create a table we did the create table command and then we
+
+03:57.710 --> 04:00.470
+gave it the table name to create an index.
+
+04:00.470 --> 04:05.170
+We simply say create index reaking have an index name.
+
+04:05.210 --> 04:09.730
+Let's say use your age on the table name.
+
+04:09.740 --> 04:13.970
+In our case user and the column name age and that's it.
+
+04:13.970 --> 04:25.660
+After we do that any time we query our users table for something like H we have WAY faster query again
+
+04:26.350 --> 04:32.430
+when it comes to efficient Eskew or commands that's something that usually you have a database team
+
+04:32.470 --> 04:34.050
+or database engineers for.
+
+04:34.370 --> 04:40.030
+But creating simple things like indexes or making sure that you're only requesting what you require
+
+04:40.090 --> 04:43.980
+from the application is the way to do it.
+
+04:44.020 --> 04:48.760
+Remember storage is the slowest piece in a relational database.
+
+04:48.850 --> 05:00.640
+Wombat Escorial Querrey can cause a huge amount of delay or so the next topic is increasing memory.
+
+05:00.790 --> 05:02.980
+And this is a nice simple one.
+
+05:03.310 --> 05:10.510
+If you have a bottleneck that is your storage your first course of action usually after you've looked
+
+05:10.510 --> 05:17.980
+at inefficient queries is to give it additional memory and you do that by improving the hardware that
+
+05:17.980 --> 05:20.050
+the database is working on.
+
+05:20.050 --> 05:26.710
+By increasing the amount of information in memory you aren't accessing the disk as often as you increase
+
+05:26.710 --> 05:31.310
+your speed so that you can store more information in memory for a database.
+
+05:32.540 --> 05:37.140
+But as with anything with when it comes to memory it can only add a certain amount.
+
+05:37.220 --> 05:40.920
+You won't be able to add the entire database in memory.
+
+05:40.920 --> 05:42.150
+Let's talk about the next one.
+
+05:42.250 --> 05:44.490
+And that is vertical scaling.
+
+05:44.690 --> 05:51.650
+And this is usually done with something like red S or memcached and rattus is something that we're familiar
+
+05:51.650 --> 05:56.880
+with and we've talked about vertical scaling can also include increasing memory.
+
+05:57.080 --> 06:03.740
+But in this case we're talking about adding another service so that your system effectively uses the
+
+06:03.740 --> 06:05.600
+resources better.
+
+06:05.660 --> 06:13.390
+So adding a system like rentes is kind of like adding memory but not doing it on the same server as
+
+06:13.390 --> 06:14.940
+we would have in the first case.
+
+06:14.950 --> 06:22.570
+So by adding another server that has read us that is a memory storage which again we know that makes
+
+06:22.570 --> 06:27.230
+things fast means that we've just increased the memory of our database.
+
+06:27.310 --> 06:28.900
+But how does that help us.
+
+06:29.260 --> 06:37.750
+Well for example if we ask a query like a user's age and we keep noticing that this query of asking
+
+06:37.750 --> 06:46.210
+for the user's age always happens and every user uses it well we can actually cash in cash that response
+
+06:46.780 --> 06:54.640
+again something that we'll talk about but will say hey before you even ask me about the uses age check
+
+06:54.750 --> 06:58.190
+read us which is in memory is a lot faster than I am.
+
+06:58.510 --> 07:03.550
+Check if Mr. rattus or Mrs. rentes has that information.
+
+07:03.700 --> 07:05.970
+If it does well just return it.
+
+07:05.980 --> 07:09.790
+Otherwise pass that information on to me and I'll give it back to you.
+
+07:10.060 --> 07:15.580
+But when I return them user age I'm actually going to go through rattus and if rattus doesn't have it
+
+07:15.590 --> 07:19.540
+already I'm just going to store it there before I send it over.
+
+07:19.540 --> 07:23.750
+So it's kind of similar to Cdn if you think about it.
+
+07:24.190 --> 07:32.630
+Again we're just cashing things that are often requested so that we use memory access instead of disk
+
+07:32.630 --> 07:33.770
+access.
+
+07:35.410 --> 07:43.170
+Another option for database's is something called Shardik and I want to warn you shirting is one of
+
+07:43.170 --> 07:47.960
+those things that sounds like it makes sense but it's extremely hard to do.
+
+07:48.870 --> 07:50.710
+And it's a very tough problem.
+
+07:50.790 --> 07:57.930
+That raises a lot of issues that you're most likely won't ever implement yourself by shorting as this
+
+07:57.930 --> 08:03.840
+animation just demonstrated is simply breaking down the Web site in into different pieces.
+
+08:03.840 --> 08:08.670
+When you start having more and more stores in the database it gets too big to handle.
+
+08:08.790 --> 08:15.390
+So you break up the data maybe by users having that are younger than 30 and users that are older than
+
+08:15.390 --> 08:21.900
+30 so that when you make a query instead of searching through that entire list of users if we know the
+
+08:21.900 --> 08:29.630
+user is 23 we can just request to query this database instead of this one.
+
+08:30.640 --> 08:35.780
+Another thing we can do is adding more databases to the problem.
+
+08:36.600 --> 08:41.870
+So by having multiple databases we can simply have more options here.
+
+08:42.000 --> 08:48.780
+If a thousand users are requesting user information at the same time instead of giving a thousand request
+
+08:48.960 --> 08:55.350
+to this database at the same time why not give 300 333 requests to this one.
+
+08:55.350 --> 09:01.620
+Then 333 to this one and 334 to this one and distribute the load.
+
+09:01.760 --> 09:08.340
+And this is something that databases like postscripts can come preconfigured with so that if you add
+
+09:08.760 --> 09:14.040
+more database pools or postscripts pools it does this automatically for you.
+
+09:14.160 --> 09:20.550
+Or we can place your own load balancer in front of it to distribute this load.
+
+09:20.550 --> 09:29.750
+Again low balancers are something that will cover in the section and then finally we have database types
+
+09:31.280 --> 09:34.170
+a database can do only so much.
+
+09:34.280 --> 09:42.170
+Each database is good at its specific thing but some databases are suited for one thing and others are
+
+09:42.170 --> 09:43.320
+suited for another.
+
+09:43.530 --> 09:50.740
+So when picking databases you have to decide what type of characteristics or behaviors do we want to
+
+09:50.750 --> 09:52.040
+out of the database.
+
+09:52.040 --> 09:55.420
+And based on that you have to make sure you're picking the right one.
+
+09:55.790 --> 10:01.550
+And this is something that is really going to hurt your head because there are a ton of databases out
+
+10:01.550 --> 10:10.530
+there because there are so many ways to store data and some of these names may sound familiar to you.
+
+10:10.530 --> 10:12.860
+We know about relational storage.
+
+10:12.870 --> 10:18.400
+We've looked at postscripts before you might have heard of Majeski well and then there's documents or
+
+10:18.420 --> 10:24.070
+storage that is part of no rescue all or non relational databases.
+
+10:24.180 --> 10:29.700
+We've learned about rattus and the key values store but there's also things like Graph databases and
+
+10:29.700 --> 10:36.750
+you know for Jei or big tables and the list just goes on and on and on.
+
+10:36.960 --> 10:39.440
+Again don't let this overwhelm you.
+
+10:39.720 --> 10:42.390
+Most of these you're never going to touch in your career.
+
+10:42.390 --> 10:47.460
+You just want to know what the differences are what the major players are like postscripts in my ask
+
+10:47.460 --> 10:55.620
+you all Mongo D-B rattus but know that they're available that when you have a specific problem when
+
+10:55.620 --> 11:01.410
+you're creating perhaps a social network app maybe looking at graph databases which are really really
+
+11:01.410 --> 11:07.260
+good for storing graph data which is great for social connections.
+
+11:07.260 --> 11:14.550
+So when it comes to databases there are a lot of things to do but just keep in mind the six principles
+
+11:15.090 --> 11:20.310
+of how we can improve database scaling.
+
+11:20.440 --> 11:21.190
+I'll see in the next one.

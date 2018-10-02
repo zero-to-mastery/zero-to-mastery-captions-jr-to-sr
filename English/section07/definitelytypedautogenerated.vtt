@@ -1,0 +1,184 @@
+WEBVTT
+
+00:00.650 --> 00:02.030
+Welcome back.
+
+00:02.030 --> 00:09.350
+I want to talk about one last thing before we get into our exercise that is third party libraries and
+
+00:09.350 --> 00:12.650
+how they work with typescript.
+
+00:12.650 --> 00:17.730
+I mean up until now we've just used javascript which typescript understands.
+
+00:17.870 --> 00:25.920
+But what if we're using something like Jay Querrey or react or any other library.
+
+00:25.980 --> 00:31.670
+Most of the time we were using syntax that is not really Javascript.
+
+00:31.700 --> 00:41.120
+So for example we're going to be using a create react up type script project to actually add type script
+
+00:41.120 --> 00:43.500
+to our create react up.
+
+00:43.660 --> 00:45.510
+And this is pretty much the standard.
+
+00:45.510 --> 00:51.730
+You don't want to roll out your own just like create react up this repo which as you can see it's pretty
+
+00:51.730 --> 00:52.550
+popular.
+
+00:53.590 --> 01:00.240
+Sets everything up for you including the compiler including all the configurations.
+
+01:00.340 --> 01:07.930
+But the problem is that once we start this with just our regular typescript it's not going to understand
+
+01:08.500 --> 01:11.440
+what re-act is or what.
+
+01:11.440 --> 01:16.730
+JF sex's I mean this package does it for you but how does that actually work.
+
+01:17.010 --> 01:22.750
+Well typescript allows you to use something called declaration files which are files that allow you
+
+01:22.750 --> 01:32.660
+to describe the shape of code that it is written in so you can add files that we can reference to tell
+
+01:32.660 --> 01:40.330
+typescript Hey I'm also using this library use these types that I just made up for you.
+
+01:40.370 --> 01:41.480
+Let me show you what I mean.
+
+01:41.520 --> 01:50.780
+There's the definitely typed dot org which is the standard place to look for any types for third party
+
+01:50.780 --> 01:51.470
+libraries.
+
+01:51.710 --> 01:59.840
+And here you can just to type search and go to things like react and grab the re-act package and you
+
+01:59.840 --> 02:09.020
+see here that it has the at types re-act and this had types re-act gives us the declaration file to
+
+02:09.170 --> 02:13.410
+make sure that our typescript compiler understands react.
+
+02:13.490 --> 02:23.400
+So in the project over here that I actually just cloned if I go into the node modules folder we see
+
+02:23.400 --> 02:29.610
+that they automatically have a folder called at types that's pre-installed for us.
+
+02:29.610 --> 02:37.080
+If I click on this I see that all right I have just I have node I have react and react on.
+
+02:37.320 --> 02:44.500
+So looks like we're able to understand re-act syntax like GSX because we have these types.
+
+02:44.580 --> 02:53.580
+If I click on the index daddy TS which is the main file which I have over here I see that I have this
+
+02:53.580 --> 02:57.280
+little thing at the top which all my files have.
+
+02:57.390 --> 03:01.410
+Which gives us global access to some of these types.
+
+03:01.410 --> 03:05.610
+That means we can use them in any file and you see here and don't get overwhelmed.
+
+03:05.610 --> 03:12.840
+This is a lot but re-act gives us types such as react we have the
+
+03:15.570 --> 03:21.120
+react element type we see it as an interface that has props property.
+
+03:21.360 --> 03:32.570
+We can keep scrolling down and see that there's also react child type there is react no and there's
+
+03:32.600 --> 03:38.510
+a ton and I don't want to get overwhelmed here because most of the time you're not really looking through
+
+03:38.510 --> 03:44.540
+these files you're looking online of what people have done documentation and code examples.
+
+03:44.540 --> 03:51.950
+And you're only probably going to use a few of these regular occurring ones but you also see that we
+
+03:51.950 --> 04:00.770
+have things like mouse event focus event keyboard event all these types are now available for us when
+
+04:00.770 --> 04:03.690
+we include typescript in our project.
+
+04:04.770 --> 04:15.140
+And this file was downloaded just like over here through NPM through the definitely typed website.
+
+04:15.340 --> 04:21.640
+And this is the most popular repository for these declaration follows because for many many javascript
+
+04:21.640 --> 04:25.660
+libraries they don't really provide their own declaration files.
+
+04:25.690 --> 04:32.520
+These are community created declaration pulse because most of these libraries aren't developed with
+
+04:32.520 --> 04:38.880
+typescript they're written in javascript but luckily the community maintains this and tries to keep
+
+04:38.880 --> 04:46.320
+up with the libraries and provide declaration files for them and by using definitely typed and the declaration
+
+04:46.320 --> 04:52.920
+files that we get we're able to use some of the most popular javascript libraries like react as if they
+
+04:52.920 --> 05:00.180
+were written in typescript in the sense that you'll actually have type of validation that the compiler
+
+05:00.180 --> 05:05.050
+would check against for re-act types.
+
+05:05.070 --> 05:08.440
+Now you're thinking to yourself Oh boy.
+
+05:08.580 --> 05:12.920
+We're adding a lot of complexity here and I'm going to give you a warning here.
+
+05:12.960 --> 05:16.420
+It is complex typescript really adds a lot.
+
+05:16.470 --> 05:23.780
+Now not only do we have to make sure that we have these files for our third party libraries.
+
+05:23.850 --> 05:28.390
+We have to learn new types that these third party libraries provide.
+
+05:28.440 --> 05:35.310
+We also are hoping that these declaration files are kept up to date as the actual re-act package gets
+
+05:35.610 --> 05:36.620
+updated.
+
+05:36.620 --> 05:42.760
+Again we're adding more pieces to the puzzle which may not always be a good thing.
+
+05:44.810 --> 05:47.320
+But let's get into the next section.
+
+05:47.450 --> 05:54.510
+We're going to start off our exercise and actually start to write some typescript in our re-act up.
+
+05:54.620 --> 05:56.050
+I'll see in the next one.
+
+05:56.250 --> 05:56.520
+Buh-Bye.

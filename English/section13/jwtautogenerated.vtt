@@ -1,0 +1,136 @@
+WEBVTT
+
+00:01.840 --> 00:02.740
+Welcome back.
+
+00:02.980 --> 00:08.380
+Before we get started with some coding and implementing this I wanted to finalize our knowledge and
+
+00:08.380 --> 00:12.000
+our understanding of both cookies and GW.
+
+00:12.430 --> 00:19.600
+If I open up my developer tools here and go to application you'll see that in the storage section we
+
+00:19.600 --> 00:23.320
+have something called Cookie's and cookies.
+
+00:23.320 --> 00:27.680
+Here are exactly that pieces of strings that you see over here.
+
+00:27.790 --> 00:32.540
+Get habbe has assigned to me so that it remembers our session.
+
+00:32.860 --> 00:35.720
+Or perhaps another piece of data.
+
+00:36.040 --> 00:40.040
+And if I click on here I'll actually display some of these cookies.
+
+00:40.600 --> 00:44.050
+And that's how we store cookies on the browser.
+
+00:44.110 --> 00:49.900
+And remember these cookies don't mean anything other than a piece of string that identifies us on the
+
+00:50.110 --> 00:50.960
+hub server.
+
+00:51.790 --> 00:59.500
+On the other hand when it comes to JWT and are all linked to this Web site this is what a JWT token
+
+00:59.770 --> 01:04.700
+looks like and you can see here when it's encoded it's just complete gibberish.
+
+01:04.810 --> 01:07.750
+But when it's decoded it has all this information.
+
+01:07.750 --> 01:09.020
+It has Hetter.
+
+01:09.430 --> 01:11.780
+You can see what kind of algorithm we used.
+
+01:11.860 --> 01:13.400
+What type of tokened it is.
+
+01:13.600 --> 01:16.480
+And you also have the payload of information.
+
+01:16.480 --> 01:23.950
+So for example if I wanted the name to say Andre you'll see that as I type it changes things over here
+
+01:23.950 --> 01:24.460
+and the token
+
+01:27.320 --> 01:35.660
+so that every time I decode this token I can simply grab this information perhaps a user name and you
+
+01:35.670 --> 01:38.140
+see here that the signature is verified.
+
+01:38.150 --> 01:46.300
+So now all I can say is I can sign this and actually create this token.
+
+01:46.520 --> 01:52.610
+And because this is now verified I can simply verify this token and grab this information whenever I
+
+01:52.610 --> 01:53.070
+want.
+
+01:54.920 --> 01:57.070
+So you see here how it's different from a cookie.
+
+01:57.110 --> 02:02.230
+It actually has meaning in here and you simply can just decode it.
+
+02:02.250 --> 02:10.320
+Now you might notice here that I can just grab any JWT and just pasted in here and grab the information
+
+02:10.470 --> 02:11.410
+right away.
+
+02:11.730 --> 02:17.640
+And this is a reason that you don't necessarily want to put sensitive information into the payload because
+
+02:17.970 --> 02:26.910
+anybody that has a JWT tokin can just come onto this Web site and paste the encoded JWT and all get
+
+02:27.030 --> 02:28.340
+decoded again.
+
+02:28.350 --> 02:35.440
+I'm going to show you ways to not do this when we actually start coding and remember how I said that
+
+02:35.600 --> 02:36.740
+with Jason weap tokens.
+
+02:36.740 --> 02:38.450
+It's pretty pretty easy.
+
+02:38.810 --> 02:49.250
+Well with the Jason Webb token package all we need to do is install JWT and then finally we simply sign
+
+02:49.970 --> 02:52.610
+the token with whatever information we want.
+
+02:52.610 --> 02:59.060
+In this case we see that it's a foo bar and some sort of a secret string and then any time we receive
+
+02:59.060 --> 03:09.800
+it we simply if we scroll down run the verify function and we're able to verify and decode the token.
+
+03:09.810 --> 03:10.470
+All right.
+
+03:10.650 --> 03:15.610
+I think that's enough talk we need to start coding and we need to start implementing sessions in our
+
+03:15.610 --> 03:20.000
+app grab your terminal grab your favorite text editor.
+
+03:20.160 --> 03:21.510
+We're going to start coding.
+
+03:21.510 --> 03:23.010
+See in the next one by.

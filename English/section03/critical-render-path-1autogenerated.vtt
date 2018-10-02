@@ -1,0 +1,193 @@
+WEBVTT
+
+00:01.470 --> 00:02.880
+Welcome back.
+
+00:02.880 --> 00:12.160
+When a user requests a page for your site the page is DML starts streaming to the browser as soon as
+
+00:12.220 --> 00:20.320
+a browser encounters a tag for an external image a script a c file.
+
+00:20.350 --> 00:28.750
+It will start downloading the file simultaneously when the browser receives or e-mail it does something
+
+00:28.750 --> 00:34.980
+called parsing it it's breaking it down into a vocabulary it understands.
+
+00:35.170 --> 00:41.690
+After understanding the document this is what it does it starts creating the Dom as we've mentioned
+
+00:41.780 --> 00:43.450
+the document object model.
+
+00:43.970 --> 00:51.350
+And again as it's building that as soon as it sees an external resource it goes ahead and starts downloading
+
+00:51.560 --> 00:52.540
+all of those.
+
+00:52.910 --> 01:01.220
+And usually the CSSA and javascript files take high priority and other files like images take lower
+
+01:01.220 --> 01:02.890
+priority.
+
+01:02.990 --> 01:04.940
+So how do we optimize this process.
+
+01:04.940 --> 01:11.020
+How do we optimize the HCM Alpha which is step 1.
+
+01:12.850 --> 01:22.000
+Well the first thing you want to do is to load styles that is CSSA files as soon as possible and script
+
+01:22.120 --> 01:27.460
+that is javascript files as late as possible with a few exceptions here and there.
+
+01:29.150 --> 01:29.730
+Why.
+
+01:29.900 --> 01:37.460
+Well one of the main principles of CSSA performance is to get the CSSA to the browser as soon as possible.
+
+01:38.850 --> 01:45.370
+Javascript requires the melon CSSA parsing to finish before it can be run.
+
+01:45.430 --> 01:46.750
+That's step 4 here.
+
+01:47.750 --> 01:55.270
+This way would give styles ample time to create the DSS object model.
+
+01:55.380 --> 02:02.070
+So if you put javascript in the head tag in a Mel.
+
+02:02.270 --> 02:11.860
+The problem with that positioning if it's at the top is that it blocks page rendering scripts historically
+
+02:11.860 --> 02:15.680
+blocked additional resources from being downloaded more quickly.
+
+02:16.910 --> 02:23.750
+By replacing them at the bottom or by placing them at the bottom you're style content and media could
+
+02:23.750 --> 02:28.760
+start downloading more quickly given the perception of improved performance.
+
+02:29.920 --> 02:38.990
+The best way to demonstrate this is through an example I have over here a very very simple index card
+
+02:38.990 --> 02:39.950
+a set him off.
+
+02:40.610 --> 02:46.330
+It has a simple H-1 tag a button that does absolutely nothing.
+
+02:46.440 --> 02:53.980
+And we have a link tag with an external style sheet here and a script tag at the bottom as I mention
+
+02:54.370 --> 02:59.470
+which simply just doesn't alert saying check.
+
+02:59.480 --> 03:04.790
+So if we go to our browser We have our Web site here very pretty.
+
+03:04.880 --> 03:16.260
+Our network tab is open and if I click refresh here I see that my index file and stardate see a SS file
+
+03:17.420 --> 03:21.030
+is well it looks like it's loaded.
+
+03:21.550 --> 03:29.890
+And because we have an alert here it's blocking the rendering of the page because the javascript is
+
+03:29.890 --> 03:33.070
+running right now and we'll get to why that is.
+
+03:33.160 --> 03:34.720
+And the later videos.
+
+03:34.840 --> 03:42.850
+But for now I want you to see that the index and saw fall where both downloaded.
+
+03:42.860 --> 03:45.770
+Now let's try something else.
+
+03:45.870 --> 03:55.220
+If I move this script tag up above the stylesheet I save.
+
+03:55.420 --> 03:56.970
+And now I refresh my page
+
+03:59.740 --> 04:03.890
+we see that the stylesheet is now pending.
+
+04:04.930 --> 04:13.690
+If I click OK it then starts downloading and we see over here that the style sheet stalled for 14 seconds
+
+04:14.110 --> 04:21.850
+because we didn't let it download mainly because javascript was running.
+
+04:22.020 --> 04:27.090
+And then finally loaded and downloaded after Javascript.
+
+04:27.090 --> 04:36.440
+So you see here how we blocked other things from happening just by having script agues up in the deck.
+
+04:37.750 --> 04:44.900
+So again we want to make sure that javascript files tend to be at the bottom and now there is some exceptions
+
+04:44.920 --> 04:51.940
+let's say for example you have Google Analytics which is a script tag and you want that to be executed
+
+04:51.940 --> 04:54.910
+right away maybe you want to know what the user does.
+
+04:54.910 --> 04:56.570
+The very first second on the Web site.
+
+04:56.770 --> 05:02.800
+In that case you might want to put a script tag at the top but keep in mind that that may slow your
+
+05:02.800 --> 05:03.520
+Web site.
+
+05:03.850 --> 05:10.070
+And we also want to make sure that the styles are being downloaded as soon as possible.
+
+05:10.120 --> 05:11.840
+So that's why we put them in the head.
+
+05:12.950 --> 05:19.350
+So let's review if you put your scripts or the script tags at the bottom of the page.
+
+05:19.490 --> 05:21.280
+They'll be loaded last.
+
+05:21.380 --> 05:25.600
+In other words something can show up on the browser faster.
+
+05:25.610 --> 05:31.620
+You users don't have to wait for a script to finish downloading before they see something in your application.
+
+05:33.010 --> 05:40.540
+And you also want to load your style tags as soon as possible so that that CSSA document object can
+
+05:40.540 --> 05:43.020
+be created as soon as possible.
+
+05:43.030 --> 05:48.270
+And remember in order for us to create the render tree.
+
+05:48.350 --> 05:48.870
+All right.
+
+05:48.870 --> 05:50.970
+So that's the first part.
+
+05:51.920 --> 05:53.640
+Let's look at step two.
+
+05:54.050 --> 06:00.040
+And then all the rest of the steps in the next videos see that by.

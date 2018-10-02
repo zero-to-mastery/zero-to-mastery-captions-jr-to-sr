@@ -1,0 +1,286 @@
+WEBVTT
+
+00:01.220 --> 00:10.160
+Hey it's Bruno here wow you must have worked extremely hard that was a lot of code but I can't believe
+
+00:10.160 --> 00:10.520
+it.
+
+00:10.520 --> 00:12.020
+We have sessions.
+
+00:12.260 --> 00:19.130
+Our users don't have to constantly sign in to use our smart brain app and we've protected all our routes
+
+00:19.130 --> 00:21.830
+so that our endpoints are now safe.
+
+00:21.830 --> 00:23.510
+This is incredible work.
+
+00:23.510 --> 00:29.660
+I love how you use Dreda's to make sessions really really fast to check and couldn't thank you enough.
+
+00:29.660 --> 00:34.400
+I think you need a couple of days vacation after that one though because that was a lot of code anyway.
+
+00:34.550 --> 00:36.140
+Really appreciated.
+
+00:36.140 --> 00:40.580
+Our company is growing tremendously because of you so I think there's a promotion coming out for you
+
+00:40.580 --> 00:41.130
+soon.
+
+00:41.950 --> 00:44.220
+Anyway take a break.
+
+00:44.230 --> 00:45.970
+I'll see you in a couple of days.
+
+00:45.970 --> 00:47.350
+Back to work.
+
+00:47.440 --> 00:47.940
+Bye bye.
+
+00:51.300 --> 00:52.540
+All right everybody.
+
+00:52.540 --> 00:53.330
+Good job.
+
+00:53.350 --> 00:58.870
+We managed to impress Bruno and that was a really tough section but the beauty of that section is that
+
+00:59.380 --> 01:05.620
+you now have a code base that you can use to expand on your projects because most apps that you're going
+
+01:05.620 --> 01:09.640
+to use will have some sort of users and sign in functionality.
+
+01:09.640 --> 01:15.190
+You want to make sure that there is some sort of sessions and you also want to protect some rights so
+
+01:15.190 --> 01:20.050
+you can use the smart brain app and whichever way you want to extend it and make it better or to even
+
+01:20.050 --> 01:21.510
+create something new on your own.
+
+01:21.670 --> 01:28.870
+But you now have a good understanding of how to use sessions and JWT to have full access and control
+
+01:29.140 --> 01:30.760
+over your users.
+
+01:31.240 --> 01:37.990
+We've managed to create our sign in route where we store user names and passwords the hash passwords
+
+01:38.050 --> 01:47.650
+in our database if a user signs in we generate a token and that token gets also stored in our Dreda's
+
+01:47.800 --> 01:48.850
+database.
+
+01:48.850 --> 01:54.840
+Now you might be asking yourself this doesn't this make it extremely complicated and also take longer.
+
+01:55.060 --> 02:01.450
+Well because it rattus is a memory storage it's stored in memory it's extremely fast.
+
+02:01.450 --> 02:08.500
+One of the fastest databases you can have for accessing small pieces of data like Session tokens.
+
+02:08.500 --> 02:14.680
+So this is really really fast and you're able to scale because you can just have multiple rattus databases
+
+02:14.710 --> 02:16.360
+and multiple API servers.
+
+02:16.390 --> 02:24.460
+So you build a system that is extremely scalable you can just keep adding machines to it and it'll work
+
+02:24.460 --> 02:32.560
+fast no matter how many users were also able to have JWT that contains some sign of information so that
+
+02:32.860 --> 02:38.980
+if we have other API that we need to talk to and it's just not a simple client server relationship we
+
+02:38.980 --> 02:44.410
+can use this token to actually talk to other API endpoints from our server.
+
+02:44.410 --> 02:51.460
+Again it's extensible as we move to more and more servers deeper and nested architectures which again
+
+02:51.490 --> 02:53.060
+is beyond the scope of the discourse.
+
+02:53.080 --> 03:01.270
+But this teaches a great way to expand and have possibly have a scalable solution to your architecture.
+
+03:01.270 --> 03:07.690
+Anyway we stored this token into our Retta server and we return it to the client the client then stores
+
+03:07.690 --> 03:15.270
+it in their session stores or local storage and from there the user can do whatever they want anytime
+
+03:15.280 --> 03:21.190
+they need something like updating a profile or getting a profile or any other routes.
+
+03:21.190 --> 03:28.330
+They simply grab that token from their session storage sent to us we say Oh thanks for the token.
+
+03:28.330 --> 03:29.980
+I see the authorization header.
+
+03:30.160 --> 03:31.730
+I'm going to check read this.
+
+03:32.020 --> 03:35.970
+Hey Mr. rattus or Mrs. rattus do you have that token.
+
+03:36.280 --> 03:37.200
+Yep I do.
+
+03:37.270 --> 03:39.350
+If they do here's the I.D..
+
+03:39.400 --> 03:45.130
+And once that check goes to the server says all right you say who you say you are you can have your
+
+03:45.130 --> 03:48.420
+nice present.
+
+03:48.500 --> 03:54.710
+Now looking at this code there's a lot of things that we can improve and a lot of things that we could
+
+03:54.710 --> 03:55.540
+refactor.
+
+03:55.670 --> 03:58.930
+And if you started to notice see Sink's that's a really really good.
+
+03:59.000 --> 04:03.180
+That means you're starting to understand how the dots are connected how things are connected.
+
+04:03.470 --> 04:08.990
+And I encourage you to clean up the code and see where you can improve why you can do.
+
+04:09.020 --> 04:15.950
+I also want you to do a little bit of an exercise and that is if you remember in our apt.
+
+04:16.040 --> 04:19.490
+Yes we have new fields that we've created in the state.
+
+04:19.640 --> 04:24.110
+A pat and an age state that the user has.
+
+04:24.320 --> 04:33.110
+But we need to actually add those columns to our tables and have the ability to update these.
+
+04:33.270 --> 04:34.510
+Maybe in the profile update.
+
+04:34.510 --> 04:38.770
+We can also send the pat and age to obtain these values.
+
+04:38.770 --> 04:46.210
+So this is your challenge knowing what we've just done incorporate the profile update and point to also
+
+04:46.210 --> 04:49.000
+account for pet and age as a hint.
+
+04:49.030 --> 04:56.380
+You might need to update the create table whereas that in the post gresse right over here in the tables
+
+04:56.410 --> 05:02.320
+you might have to add a few extra columns in here such as Pat and H and you might have to take down
+
+05:02.320 --> 05:05.020
+your container and re build everything.
+
+05:05.200 --> 05:11.890
+But once you do that and you go through the steps you can expand upon the profile post update to also
+
+05:11.890 --> 05:16.120
+include age and pet.
+
+05:16.120 --> 05:22.450
+Now we finally incorporated all the things that we've learned in the past few sections and you can see
+
+05:22.450 --> 05:26.230
+now how clean and nice our working environment is.
+
+05:26.290 --> 05:31.050
+We put our rattus database an API all into this one container.
+
+05:31.090 --> 05:39.650
+So from one command and development time we're just able to have things work and really have fast development.
+
+05:39.670 --> 05:41.210
+I hope you see the value in that.
+
+05:41.350 --> 05:47.620
+And as a developer you now have the ability to incorporate this in your team your bosses your clients.
+
+05:47.710 --> 05:50.020
+Your company is just going to love you for it.
+
+05:50.020 --> 05:53.730
+So I highly recommend you do this and something like this.
+
+05:53.740 --> 06:02.680
+We also used things like rattus to be able to create scalable large applications because we know how
+
+06:02.680 --> 06:04.660
+to use containers.
+
+06:04.660 --> 06:10.420
+Now we can make multiple replications of our API server.
+
+06:10.600 --> 06:16.960
+We can make multiple replications of our databases and multiple replications of our rattus database
+
+06:16.960 --> 06:18.480
+which is really really fast.
+
+06:18.490 --> 06:27.490
+So even though the API is queuing rattus for ID and checking the session token it's extremely fast so
+
+06:27.490 --> 06:29.320
+that we can keep adding machines to it.
+
+06:29.320 --> 06:33.170
+Keep adding machines to it and scale in production.
+
+06:33.190 --> 06:39.010
+As more and more users grow and we're going to cover load balancing and how that might work in performance
+
+06:39.010 --> 06:39.870
+part 3.
+
+06:40.120 --> 06:46.270
+But this diagram should now make a lot of sense to you and how all these pieces are connected is one
+
+06:46.270 --> 06:48.040
+of the hardest things to grasp.
+
+06:48.040 --> 06:53.500
+So if you're able to understand this if you're able to follow along code along with me and understand
+
+06:53.710 --> 07:01.780
+what I've done up until now you are far above a regular web developer you now have a high level picture
+
+07:01.990 --> 07:06.460
+so you can decide for yourself what kind of architecture you want what do you want to do when you build
+
+07:06.460 --> 07:12.580
+an app so that it is pleasant to work with for developers but also come production time.
+
+07:12.610 --> 07:20.430
+It's a bold to scale and it has the flexibility to grow and with that I think we all need a break.
+
+07:20.730 --> 07:22.830
+I'll see in the next section Buh-Bye.

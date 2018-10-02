@@ -1,0 +1,619 @@
+WEBVTT
+
+00:01.290 --> 00:02.270
+Welcome back.
+
+00:02.310 --> 00:09.060
+So we've gotten our set up our app is running and functioning and now we're able to take a look at the
+
+00:09.060 --> 00:10.480
+code again.
+
+00:10.500 --> 00:12.110
+I like looking at the code.
+
+00:12.120 --> 00:17.220
+Once everything is running you make sure that you've gotten all your environmental variables like API
+
+00:17.220 --> 00:24.450
+keys from the team and your data base is all set up and if you remember we have our client app which
+
+00:24.450 --> 00:28.770
+is a re-act up where is it right here.
+
+00:28.890 --> 00:36.570
+We have our database that is running locally on our computer and then we have our server and I have
+
+00:36.660 --> 00:39.000
+three windows here for each one of these.
+
+00:39.180 --> 00:47.520
+Because in the real world in production we're most likely going to have these on different servers or
+
+00:47.520 --> 00:50.890
+different computers.
+
+00:50.940 --> 00:55.680
+So now that we have everything set up let's take a walk through through the code.
+
+00:55.680 --> 01:02.070
+I always prefer going through the API first so that I can look at the endpoints because the points tell
+
+01:02.070 --> 01:03.500
+a lot about the app.
+
+01:03.870 --> 01:06.470
+And over here let me minimize this a little bit.
+
+01:07.670 --> 01:13.620
+Over here I can start looking at the folder snarkier and I see that it's not too complicated.
+
+01:13.620 --> 01:20.970
+We have a server dodgiest file which I'm assuming is our main entry point and then we have controllers
+
+01:21.180 --> 01:26.680
+and controllers sound like something that have the logic for our endpoints.
+
+01:26.700 --> 01:31.260
+So the first thing I'm going to do look at the folder structure I've looked already a package that Jaison
+
+01:31.730 --> 01:37.530
+I obviously am also going to read the read me that the project provides and then go to the entry point
+
+01:37.980 --> 01:40.440
+and see what kind of packages they're using.
+
+01:40.440 --> 01:47.550
+I see they're they're using Express body parsers so that we can get the Jaison body from a request or
+
+01:48.120 --> 01:58.960
+request our body we're using be crypt which is a hashing library for most likely hashing passwords.
+
+01:59.050 --> 02:06.400
+We're using course to give access to what domains can access the server we K'NEX which we've talked
+
+02:06.400 --> 02:07.030
+about.
+
+02:07.030 --> 02:15.100
+It's an R R M which allows us to make Q All statements to our database and by the way I absolutely love
+
+02:15.100 --> 02:16.980
+this library I highly recommend it.
+
+02:16.980 --> 02:23.270
+It works with my Eskew well post Cresson a ton of other databases.
+
+02:23.440 --> 02:28.590
+And then we have our controllers our register sign in profile image.
+
+02:28.830 --> 02:34.470
+We have our database set up which we've already talked about and then we have a basic express server
+
+02:34.470 --> 02:40.160
+set up with cores that allows us to be up to access it from anywhere.
+
+02:40.200 --> 02:43.790
+So any domain can access it right now.
+
+02:43.890 --> 02:46.730
+And this is something that we cover in the security section.
+
+02:46.860 --> 02:49.480
+So we'll leave that for the security session.
+
+02:49.650 --> 03:00.070
+We have body potsherd Jaison again for us to be able to read Song from our endpoints and this is a pretty
+
+03:00.070 --> 03:01.950
+standard express server.
+
+03:02.020 --> 03:03.600
+We're listening to port 3000.
+
+03:03.820 --> 03:13.090
+And I can see that in the endpoints we have our seinen register profile ID image and image you RL And
+
+03:13.090 --> 03:16.800
+just by reading these endpoints we have an idea of what the app does.
+
+03:16.810 --> 03:25.960
+It allows users to sign in and register to maybe grab a profile each individual profiles to do some
+
+03:26.020 --> 03:27.770
+update to the image endpoint.
+
+03:27.790 --> 03:28.690
+It's a put.
+
+03:28.690 --> 03:35.350
+And then to post image you are real and I see that each one of them has the handle register handle profile
+
+03:35.350 --> 03:38.450
+get handle image handle API call.
+
+03:38.860 --> 03:43.870
+So now I can just go into each controller and just have an overview what each one does.
+
+03:43.870 --> 03:51.490
+Again we've seen this before we set up clarify API and looks like the image is just simply saying I'm
+
+03:51.490 --> 03:58.360
+going to make an API call to the clarify API and we're going to use the face detect model.
+
+03:58.370 --> 04:04.250
+This is straight from their documentation and that's going to return their response their data from
+
+04:04.250 --> 04:06.660
+the API and on our end.
+
+04:06.680 --> 04:13.430
+We also have a handle image and this handle image looks like we're grabbing the user's database using
+
+04:13.430 --> 04:20.080
+K'NEX syntax where the I.D. equals to the ID of the request.
+
+04:20.090 --> 04:21.590
+Body.
+
+04:21.720 --> 04:29.930
+And we just increment the entries by one and return the entries and return that to the front and so
+
+04:30.230 --> 04:38.030
+handle image looks like every time we increment or we send an image this entry count gets increased.
+
+04:38.060 --> 04:40.990
+All right so that's the image file we look at the profile.
+
+04:40.990 --> 04:44.640
+Again handle profile get is pretty self-explanatory.
+
+04:44.640 --> 04:52.350
+We grabbed the profile ID we select everything from the user's table.
+
+04:52.480 --> 04:58.720
+If the I.D. matches with that request because remember in the server dodginess we are doing this semi-colon
+
+04:58.750 --> 05:01.900
+ID to grab the parameters of what the request was
+
+05:05.890 --> 05:09.940
+and again we're just returning the users that we got from the database.
+
+05:11.940 --> 05:18.270
+For register a little bit more complicated but looking at it we're just handling register.
+
+05:18.360 --> 05:24.120
+Looks like we're hashing our passwords which is really really good security practice.
+
+05:24.120 --> 05:29.280
+Again this is something that we're going to talk about and have an exercise on in the security section
+
+05:29.760 --> 05:37.500
+and it looks like we update so we insert the hash in the email and the log in table and then we also
+
+05:38.900 --> 05:44.950
+use the user's table to insert the e-mail name and the date that is joint.
+
+05:44.970 --> 05:47.060
+So that's just the registering
+
+05:49.700 --> 05:57.100
+and then finally for seinen with handling seinen we are simply selecting that e-mail and the hash from
+
+05:57.100 --> 05:58.560
+the log in table.
+
+05:58.780 --> 06:05.940
+If the email matches whatever the front end gave us and then we do something Coleby gripped compare
+
+06:05.940 --> 06:11.100
+against something that we talk about in the security section where we compare the password to the hash
+
+06:11.100 --> 06:12.510
+that is stored in the database.
+
+06:12.510 --> 06:20.070
+Again a safe way to store information about the user and allow them to log in if it's valid we give
+
+06:20.070 --> 06:23.010
+them the user information.
+
+06:23.040 --> 06:26.480
+Otherwise we say wrong credentials.
+
+06:26.490 --> 06:28.530
+All right so that's not too bad.
+
+06:28.540 --> 06:30.700
+That was a nice run through.
+
+06:30.700 --> 06:33.190
+We don't have to learn too much about the codebase.
+
+06:33.190 --> 06:40.000
+And mind you on some project you'll get on and there's a lot more folders but with a logical step by
+
+06:40.000 --> 06:45.070
+step you have an idea what the app does especially now that you've gone through the app you can kind
+
+06:45.070 --> 06:48.670
+of guess where each one of these points are used.
+
+06:48.670 --> 06:57.580
+Let's go to the front end up the front end up right away we see that it is a reactor project and we
+
+06:57.580 --> 06:59.770
+can't just open up our source folder.
+
+06:59.770 --> 07:05.410
+And usually they'll have a component's a container folder and other folders they can see.
+
+07:05.410 --> 07:07.560
+But do you always want to start off with index cards.
+
+07:07.590 --> 07:08.390
+Yes.
+
+07:08.620 --> 07:13.080
+Make sure that you see whatever libraries that they're using it looks like they're using tacky onse
+
+07:13.150 --> 07:20.110
+for styling and on the index stodginess it looks like there's no provider here so they're not using
+
+07:20.110 --> 07:24.730
+redux just simple re-act app and that the entry point is the app.
+
+07:24.730 --> 07:26.650
+So again we go to APT.
+
+07:26.680 --> 07:30.610
+Yes and we see what the main component has.
+
+07:30.670 --> 07:33.800
+We see that they're using a lot of components here.
+
+07:34.000 --> 07:39.790
+And the first thing I like to do is to look at the initial state that the app needs.
+
+07:39.790 --> 07:45.390
+Again because we're now using redux the state usually lives in the components and we see that there's
+
+07:45.400 --> 07:50.200
+an output image you Arel we have something called Box which we're not too sure of.
+
+07:50.410 --> 07:56.530
+We see that the road is seinen is signed in is false and then we have user information again just by
+
+07:56.530 --> 07:57.490
+looking at the state.
+
+07:57.490 --> 08:02.570
+We have an idea of what the app information is going to look like.
+
+08:02.640 --> 08:11.690
+The state and the app we see that all right we have the load user we have the calculate face location
+
+08:12.040 --> 08:13.360
+and again this is why it's important.
+
+08:13.360 --> 08:19.210
+Name your functions really well because if you have a new team member coming onto the project it's nice
+
+08:19.210 --> 08:24.840
+for them to say oh OK so this calculates where the face location is and the image just by the name.
+
+08:25.300 --> 08:27.800
+We have the display face box.
+
+08:27.940 --> 08:34.750
+We have the on put change which probably could be a little bit more descriptive on button Samit and
+
+08:34.750 --> 08:42.080
+we see that we do a few fresh calls so on button Samit looks like a very important one because we have
+
+08:42.350 --> 08:45.550
+Thach another fecche year and we're doing all these things.
+
+08:45.550 --> 08:47.740
+So we should get back to this and see what it's doing.
+
+08:48.940 --> 08:52.490
+We have on route change which again looks like we're handling routes.
+
+08:52.690 --> 08:56.260
+And I also like looking at the component the main component and seeing.
+
+08:56.260 --> 09:02.660
+All right so they're loading up a navigation particles which is what we see over here.
+
+09:02.800 --> 09:12.690
+These this school background that moves around we see that we have the navigation with Simon and change
+
+09:13.410 --> 09:20.590
+and then we see that if the route is home we give them the logo ranke image link form and face recognition.
+
+09:20.760 --> 09:24.750
+And then if it's not we give them the sign in or register component.
+
+09:24.750 --> 09:31.610
+So immediately we kind of have an idea of the structure of the app and just by looking at this we see
+
+09:31.610 --> 09:34.290
+where we can improve how things could be cleaned up.
+
+09:34.460 --> 09:41.090
+We also see that this app component is getting pretty big with all these methods maybe redux might be
+
+09:41.570 --> 09:46.550
+a good thing to start looking at or perhaps having more than one container.
+
+09:46.760 --> 09:52.170
+All things that you can do as you browse through the code but I want to give you a side note here.
+
+09:52.340 --> 09:57.170
+A lot of programmers when they first come onto a project the first thing they do is criticize.
+
+09:57.290 --> 10:03.410
+They look at this code and says Say well what's with all this this is terrible this looks so ugly like
+
+10:03.620 --> 10:07.570
+what's with this on and put change function name that's not descriptive at all.
+
+10:07.580 --> 10:14.370
+Whoever wrote this is so dumb I should change this and oh this is too ugly like these sir.
+
+10:14.390 --> 10:17.100
+This is already too much complication we should break.
+
+10:17.150 --> 10:20.800
+We should have extra components here that is a lot neater.
+
+10:20.810 --> 10:27.380
+And this happens quite a lot where a person comes onto the project and immediately starts criticizing
+
+10:27.380 --> 10:28.550
+the code.
+
+10:28.640 --> 10:31.380
+And yes there's definitely things that we can improve here.
+
+10:31.520 --> 10:39.020
+But a senior developer knows that when they come onto a project it's not necessarily the oh why did
+
+10:39.020 --> 10:41.240
+they put the on and put change here.
+
+10:41.240 --> 10:48.170
+That's such a non-descriptive name but they weren't there when this function was run.
+
+10:48.320 --> 10:51.110
+They weren't there when this component was created.
+
+10:51.290 --> 10:58.370
+When the decision was made to make routing like this and with that lack of information you don't have
+
+10:58.370 --> 11:01.940
+that right to necessarily criticize.
+
+11:01.940 --> 11:07.430
+I mean constructive criticism and saying this could be improved is a good way of looking at it but you
+
+11:07.430 --> 11:11.780
+can't go and say this is wrong this is terrible code.
+
+11:12.170 --> 11:17.990
+I have to fix all of this because you don't know what the developers at the time knew maybe they were
+
+11:18.020 --> 11:19.320
+under a time crunch.
+
+11:19.400 --> 11:26.840
+Maybe they were training a junior developer and this was their first PR as a senior developer.
+
+11:26.850 --> 11:32.580
+You look at this in an unemotional way looking at the code seeing where in the future you might want
+
+11:32.580 --> 11:40.170
+to improve the code but without criticism just being completely neutral because when you come on a project
+
+11:40.230 --> 11:45.240
+the goal is not to stand out and improve and make everything better.
+
+11:45.240 --> 11:51.420
+The goal is to integrate into the project with the team and work together to make the project better.
+
+11:52.220 --> 11:56.750
+I know I kind of went on a tangent here but it's so important because it's something that I see all
+
+11:56.750 --> 12:03.770
+the time and it really is an unfortunate characteristic that I think some of the top developers that
+
+12:03.770 --> 12:11.000
+I've seen have this where they look at the code neutrally without criticism or it just went on a tangent
+
+12:11.000 --> 12:12.620
+there let's get back on track.
+
+12:12.620 --> 12:12.860
+All right.
+
+12:12.860 --> 12:16.320
+So let's just take a look at the on button submit.
+
+12:16.370 --> 12:22.280
+If I go to the on button submit here whereas it it looks like the image link form I have the on button
+
+12:22.280 --> 12:25.440
+submit and on but change just by the names.
+
+12:25.460 --> 12:26.190
+I know that.
+
+12:26.200 --> 12:26.920
+All right.
+
+12:26.930 --> 12:28.980
+It's most likely this.
+
+12:29.090 --> 12:32.360
+So this detect button that's where we're doing all those fecche calls.
+
+12:32.360 --> 12:38.600
+Seems like the most important part of the app and I can take a look at these fecche calls to see what's
+
+12:38.600 --> 12:39.980
+happening in the app.
+
+12:39.980 --> 12:45.730
+All right so I am fetching to localhost 3000 image you RL.
+
+12:45.770 --> 12:54.050
+So that's our API server and we're doing a post request and this image Jaro if we go to that endpoint
+
+12:55.240 --> 12:58.010
+we see that oh yeah it's handling the API call.
+
+12:58.010 --> 13:07.490
+Remember this is what makes the call to the clarify API and it handles the API call and that's it.
+
+13:07.500 --> 13:08.600
+It returns the data.
+
+13:08.640 --> 13:14.360
+So right away we see that okay we're getting the data from clarify.
+
+13:14.460 --> 13:22.270
+It's going to have a response and this response if we have a response we do a nother fess up to the
+
+13:22.360 --> 13:24.560
+image and point that is a put.
+
+13:24.730 --> 13:29.330
+And if you remember this was the end point that incremented our entries.
+
+13:29.350 --> 13:38.020
+So if everything succeeds and we get a response we increment the number of the entries by 1 and then
+
+13:38.020 --> 13:45.420
+once we get all of that we update the state to increase the users and trees count.
+
+13:45.490 --> 13:46.660
+Ok that makes sense.
+
+13:46.660 --> 13:52.310
+So that's what happens when we hit detect and the number increases here.
+
+13:52.750 --> 13:54.570
+But what about the face detection.
+
+13:54.580 --> 13:58.880
+Well the first detection again we have a nice name here once everything goes through.
+
+13:58.960 --> 14:02.780
+We display the face box kind of a weird name.
+
+14:02.830 --> 14:06.180
+I came up with it but it probably could be improved.
+
+14:06.400 --> 14:10.640
+And it says that we display the face by calculating the face location.
+
+14:10.690 --> 14:16.180
+Again it kind of reads nicely we know what's happening here right.
+
+14:16.220 --> 14:21.190
+And then we obviously have the components that we can take a look at but they're all descriptive enough
+
+14:21.260 --> 14:26.740
+and we have an idea of if we need a feature implemented where to look.
+
+14:27.200 --> 14:28.340
+So there you go.
+
+14:28.400 --> 14:33.740
+It wasn't that bad just by going through the code looking at the endpoints and then some of the main
+
+14:33.740 --> 14:35.330
+containers and components.
+
+14:35.360 --> 14:42.200
+We have an idea of what the app does and you don't need to right away understand the entire code because
+
+14:42.290 --> 14:45.480
+that will come over time as you start working on features and bugs.
+
+14:45.500 --> 14:51.170
+You're going to discover different pieces of the code because as code bases get larger and larger it
+
+14:51.170 --> 14:56.520
+really becomes more and more difficult to have everything in your head of how things work.
+
+14:56.540 --> 15:01.850
+So don't feel overwhelmed if you come on to a project and they have tons of folders that you have no
+
+15:01.850 --> 15:02.780
+idea what they're doing.
+
+15:03.630 --> 15:04.880
+Like with anything.
+
+15:05.040 --> 15:06.990
+Just take a bit by bit.
+
+15:06.990 --> 15:13.380
+Understand the high level concepts how everything fits together how the dots are connected and when
+
+15:13.380 --> 15:19.780
+a feature request such as Hey can we make this detect more than one face when that comes.
+
+15:19.800 --> 15:26.040
+You start working on that feature and get really familiar to perhaps the face recognition component
+
+15:26.280 --> 15:32.530
+and maybe the calculate face location function and you slowly start to understand the project.
+
+15:32.580 --> 15:38.110
+But the main thing is you want to have an idea of what the overall picture is.
+
+15:38.190 --> 15:40.050
+Never focus on the small things first.
+
+15:40.050 --> 15:45.820
+Always start with the big picture and slowly narrow down your focus.
+
+15:45.850 --> 15:50.440
+So with that said we have to implement a feature that Bruno asked.
+
+15:50.560 --> 15:58.750
+That is to have multiple face detections because if I go back here and let's do a an image it has multiple
+
+15:58.750 --> 15:59.200
+faces.
+
+15:59.200 --> 16:06.450
+Let me see if I can have people and you let's see this picture.
+
+16:06.580 --> 16:13.110
+I'm going to copy image address and paste it here.
+
+16:13.900 --> 16:15.490
+Oh I get one that's good.
+
+16:15.490 --> 16:19.530
+Let's say you are and I click the text.
+
+16:19.640 --> 16:19.990
+All right.
+
+16:20.000 --> 16:25.080
+Looks like it's only correcting one face but not the other.
+
+16:25.100 --> 16:30.920
+So in the next video we're going to fix that based on the code view that we just did based on the analysis
+
+16:30.920 --> 16:34.430
+that we just did and go about it in a smart way.
+
+16:34.460 --> 16:36.330
+I'll see in the next one by my.

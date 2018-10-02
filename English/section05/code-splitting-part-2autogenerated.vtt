@@ -1,0 +1,421 @@
+WEBVTT
+
+00:01.970 --> 00:06.420
+And welcome back it's time to finally implement some code splitting.
+
+00:06.830 --> 00:08.480
+Let's have a look at our files.
+
+00:09.560 --> 00:16.870
+In order to use code splitting We need to learn a new syntax although not really a new syntax.
+
+00:16.970 --> 00:19.730
+But it's this import keyword.
+
+00:19.730 --> 00:24.050
+Usually it's at the very top of the files with create re-act app.
+
+00:24.110 --> 00:30.680
+If we put the import anywhere inside of our code so not at the top of the file it's going to know that
+
+00:31.550 --> 00:40.280
+this NIE this is a dynamic import and what that means is that I'll only import it when that piece of
+
+00:40.280 --> 00:45.480
+code is requested and this happens underneath the hood with what path.
+
+00:45.560 --> 00:53.700
+So by using import we automatically tell it to code split which is super super nice this time around.
+
+00:54.170 --> 00:55.430
+Let's go to Doug.
+
+00:55.460 --> 00:56.600
+Yes.
+
+00:56.600 --> 01:03.870
+And to get started with code splitting now in here in Brender with code splitting.
+
+01:03.990 --> 01:05.430
+Let's comment this out.
+
+01:05.490 --> 01:17.920
+We want something different with code splitting we can ideally do this if this data state route it calls
+
+01:19.690 --> 01:22.170
+page 1.
+
+01:22.360 --> 01:32.520
+We're going to return page 1 on route change equals this Daut on route change.
+
+01:32.530 --> 01:33.160
+All right.
+
+01:33.160 --> 01:39.580
+That doesn't look any different and that's because it's the exact same but because this is the default
+
+01:39.580 --> 01:40.200
+page.
+
+01:40.330 --> 01:41.710
+That's fine.
+
+01:41.710 --> 01:43.910
+The next part is different.
+
+01:43.990 --> 01:45.250
+We can say else
+
+01:47.600 --> 02:05.480
+return this dot state DOT component on road change vehicles to start pro-change Holy Moly what just
+
+02:05.480 --> 02:06.040
+happened.
+
+02:06.140 --> 02:09.170
+Is this even allowed.
+
+02:09.640 --> 02:17.230
+I'm going to come back to this but for now keep in mind that all we're doing is saying just Rander page
+
+02:17.230 --> 02:25.080
+one if the route is anything but Page 1 then we need to do some sort of funny business here.
+
+02:25.400 --> 02:26.970
+And let me close off this.
+
+02:27.720 --> 02:34.200
+Now first of all we see that there is a state DOT component where is that coming from.
+
+02:34.500 --> 02:36.160
+Well we create it.
+
+02:36.300 --> 02:46.690
+We say that now we have a state called component and this component right now will render ph 2 or Page
+
+02:46.710 --> 02:55.290
+3 for us and for now we could just leave it as an empty string because we haven't really loaded page
+
+02:55.290 --> 02:56.620
+2 or pastry yet.
+
+02:57.090 --> 03:06.440
+Now on row change this is where we do something a little bit different with no code splitting.
+
+03:06.550 --> 03:11.110
+We just had this but with code splitting
+
+03:16.390 --> 03:19.270
+we start to use this dynamic import.
+
+03:19.300 --> 03:32.070
+I was telling you about we're going to have the same logic if route equals page 1 van this thought set
+
+03:32.070 --> 03:42.550
+state well just have route equal to repped because for Page 1 we just want to keep everything the same
+
+03:42.700 --> 03:50.000
+just like we had it before for the other two though which we're going to dynamically import.
+
+03:50.320 --> 04:05.240
+We're going to have a route whoops route calls ph to and right here because we won't have ph too accessible
+
+04:05.240 --> 04:12.050
+to us because we're not going to be loading it as a matter of fact we're not going to import any of
+
+04:12.050 --> 04:13.600
+these.
+
+04:13.690 --> 04:20.920
+We're going to import them here dynamically when we actually get to this line of javascript as our app
+
+04:20.920 --> 04:22.050
+is running in our browser.
+
+04:22.060 --> 04:26.340
+That's when we want to import them or load them.
+
+04:26.420 --> 04:29.120
+We're going to say import
+
+04:32.780 --> 04:38.660
+and by the way this only works because of wet pack and the way things are set up.
+
+04:38.660 --> 04:44.750
+If you try to do this in just plain old javascript it will throw an error because they don't understand
+
+04:44.750 --> 04:46.180
+what you're trying to do.
+
+04:46.190 --> 04:54.660
+We're going to say well we're going to load the components page to.
+
+04:54.820 --> 04:59.680
+So you see that we changed from importing here to importing down here.
+
+05:01.910 --> 05:05.770
+And this is asynchronous.
+
+05:05.880 --> 05:10.320
+That means it returns a promise.
+
+05:10.320 --> 05:20.440
+So we can use the dot then to say what's this page has been import it has been downloaded.
+
+05:20.640 --> 05:33.480
+Then we receive the page to component and with this received page to component we can now set this dot
+
+05:33.930 --> 05:46.650
+set state to have the route of route because it's just page 2 but also update the component state which
+
+05:46.650 --> 05:51.330
+we have up here to equal page to.
+
+05:51.330 --> 05:58.130
+So now we have access to the page to component through the start state.
+
+05:58.170 --> 06:02.240
+I know it looks a little bit weird but it's just something you have to get used to.
+
+06:02.550 --> 06:04.600
+By the way this could also be null.
+
+06:04.620 --> 06:06.450
+But for now empty string is fine.
+
+06:06.450 --> 06:09.230
+We're not going to worry too much about it.
+
+06:09.330 --> 06:16.140
+Now we have a page too accessible to us because if the route is page two we're going to import and download
+
+06:16.140 --> 06:25.480
+the pasted component then we're going to receive that component and update it to our current state now
+
+06:25.510 --> 06:26.140
+down here.
+
+06:26.140 --> 06:27.460
+This makes sense right.
+
+06:27.460 --> 06:34.990
+We're simply saying that we're accessing this dot state DOT component and we're able to do this funny
+
+06:34.990 --> 06:46.290
+syntax that uses GSX because this dot state component is a Riak component that is page to.
+
+06:46.550 --> 06:49.520
+I know when people see this first they really have a hard time with it.
+
+06:49.520 --> 06:52.370
+I'll show you how you can actually make it cleaner later on.
+
+06:52.370 --> 06:56.850
+But I want to really show you this point that we're just rendering this component.
+
+06:57.290 --> 06:59.410
+Let's finish this off.
+
+06:59.560 --> 07:05.590
+Let's create another LCF statement and this time around I'm just going to copy and paste here.
+
+07:08.520 --> 07:13.580
+And we'll do page 3 and this is going to end for page 3.
+
+07:13.620 --> 07:17.630
+We're going to get the pastry component and load it up here.
+
+07:18.630 --> 07:21.110
+Now is this going to work.
+
+07:21.150 --> 07:26.180
+Well let's see I'm not getting any errors here.
+
+07:26.310 --> 07:30.570
+If I go back to the browser and exit.
+
+07:30.640 --> 07:35.950
+Actually let's keep the console on and I click.
+
+07:36.550 --> 07:42.910
+I get an error and we get to fail to execute create aliment on document.
+
+07:42.960 --> 07:47.900
+That's a really really confusing error isn't it.
+
+07:48.180 --> 07:54.920
+Well let's console law here to see what happens what is actually going on what is page 2.
+
+07:55.050 --> 07:56.650
+Is it a component like I said.
+
+07:57.000 --> 07:58.450
+I mean it should be right.
+
+07:58.830 --> 08:08.870
+Well let's to console the log page to going to save click on page 2 and all right I'm getting these
+
+08:08.870 --> 08:09.420
+errors.
+
+08:09.440 --> 08:18.500
+But you see over here I'm logging out the component but you see that it looks kind of weird.
+
+08:18.600 --> 08:26.890
+The component is actually under the default property and this is where our page lies.
+
+08:26.890 --> 08:34.730
+This is a little godchild that you'll just have to get used to but the way you actually access the component
+
+08:35.750 --> 08:43.790
+to be able to access it as this state component and react is to just say Dot default and then have here
+
+08:43.820 --> 08:46.130
+Dot default.
+
+08:46.130 --> 08:47.300
+Now let's give it a try.
+
+08:50.820 --> 08:59.620
+Go back at page to 0 and I still get an error because we need to remove the first line which used the
+
+08:59.690 --> 09:03.310
+no code splitting We have to just have this and our route change.
+
+09:03.320 --> 09:10.620
+So let me save that go back page to look at that.
+
+09:10.720 --> 09:12.690
+Everything is working.
+
+09:13.850 --> 09:16.630
+But are we actually code splitting.
+
+09:16.640 --> 09:18.920
+Do we just implement code splitting.
+
+09:19.190 --> 09:20.550
+Well let's check it out.
+
+09:20.570 --> 09:22.510
+I'm going to go to the Network tab.
+
+09:22.580 --> 09:26.710
+I'm going to clear this and I'm going to refresh.
+
+09:26.740 --> 09:27.070
+All right.
+
+09:27.090 --> 09:29.490
+So nothing's changed so far.
+
+09:29.490 --> 09:31.330
+Let me make this a little bit bigger.
+
+09:31.350 --> 09:33.880
+We see the bundled js file.
+
+09:34.110 --> 09:37.320
+When I click on page 2
+
+09:41.950 --> 09:43.540
+I see this at the bottom.
+
+09:43.540 --> 09:44.350
+Let me try that again.
+
+09:44.350 --> 09:45.950
+I'm going to refresh again.
+
+09:46.300 --> 09:47.780
+And we see the Bondel.
+
+09:48.430 --> 09:53.560
+I'm going to clear this and see what happens when I click on page 2.
+
+09:53.790 --> 09:59.720
+I get one done Choctaws Jesus and if I click on three I get zero Dutch's.
+
+09:59.820 --> 10:04.280
+J.S. That's pretty cool.
+
+10:04.280 --> 10:11.790
+And we see over here if we click on it we have our chunk with a bunch of work back but we also see that
+
+10:12.390 --> 10:18.220
+in this file we have the page to component.
+
+10:18.430 --> 10:21.600
+We've just implemented code splitting.
+
+10:21.970 --> 10:28.720
+If we actually go back now and go back to page to page 1 it's not going to reload again because they've
+
+10:28.720 --> 10:38.410
+already loaded the scripts but otherwise when we load up our initial app page to page 3 component are
+
+10:38.410 --> 10:41.730
+not part of this bundle database file.
+
+10:41.860 --> 10:42.860
+How cool is that.
+
+10:45.080 --> 10:50.180
+We've just implemented code splitting on our own and quite simple.
+
+10:50.180 --> 10:51.250
+It makes a lot of sense.
+
+10:51.260 --> 10:57.590
+We're simply just removing the imports from the top and importing them only when we need them only when
+
+10:57.590 --> 11:03.960
+the user clicks on a route of page to very very neat.
+
+11:03.960 --> 11:07.860
+Now there's one thing that may have caught your eye.
+
+11:08.330 --> 11:09.870
+Let me show you something.
+
+11:10.220 --> 11:17.030
+I'm going to close this and run NPM run build.
+
+11:17.640 --> 11:24.090
+And what this does is create reactivate creates a built folder ready for production optimized for you
+
+11:24.330 --> 11:28.540
+so that you can put it up online for people to visit.
+
+11:28.680 --> 11:36.540
+You can see over here that it actually shows you the file sizes after it which by the way that's something
+
+11:36.540 --> 11:37.800
+we're going to talk about.
+
+11:37.800 --> 11:45.580
+And the last part of the performance section we see that we have a main dodge us that has the javascript.
+
+11:45.660 --> 11:55.140
+We have the main CSSA file but then we also have these two things the zero chunk and the one chunk and
+
+11:56.310 --> 12:01.320
+wetback builds is automatically for you based on where he sees the imports.
+
+12:01.660 --> 12:13.130
+So we were able to actually take off this much bytes or data from our main file because if a user never
+
+12:13.130 --> 12:17.070
+visits Pashtoon pastry we don't need to send that javascript their way.
+
+12:18.410 --> 12:21.320
+Very very cool.
+
+12:21.330 --> 12:26.510
+Now that was code splitting but there's actually a better way of doing it.
+
+12:26.580 --> 12:30.760
+And in the next video I'm going to show you how I'll see that one.
+
+12:31.070 --> 12:31.340
+But by.

@@ -1,0 +1,466 @@
+WEBVTT
+
+00:02.090 --> 00:02.680
+All right.
+
+00:02.710 --> 00:03.660
+Welcome back.
+
+00:03.760 --> 00:08.530
+Well let's demonstrate some code splitting and how it works in this video.
+
+00:08.530 --> 00:14.010
+Now right over here I just created a Creve react up project.
+
+00:14.020 --> 00:17.920
+So I just simply ran create react up code splitting.
+
+00:17.920 --> 00:21.670
+This is just the default project that we get out of the box.
+
+00:21.670 --> 00:29.710
+If I do NPM start you'll see that there's nothing special just nice and simple create react up perfect
+
+00:31.710 --> 00:34.730
+to get started with our code splitting.
+
+00:34.830 --> 00:42.800
+First of all I'm going to stop this that's clear here and I'm just going to remove everything in here.
+
+00:42.860 --> 00:52.830
+Other than the header and ideally we would want to have perhaps three buttons or three places that we
+
+00:52.830 --> 00:57.180
+can click to to give us a new page will have a page one component.
+
+00:59.650 --> 01:13.760
+We'll have a page to component and then finally a Page 3 component but obviously we have to create these
+
+01:13.760 --> 01:15.040
+components first.
+
+01:15.050 --> 01:17.690
+So let's go ahead and do that.
+
+01:17.750 --> 01:30.190
+I'm going to create a new folder call it component's and within here we'll just create the page Ron
+
+01:31.560 --> 01:32.520
+javascript file
+
+01:35.560 --> 01:41.700
+paste to javascript file and then finally the Page 3 javascript.
+
+01:42.130 --> 01:52.060
+Now within these pages we'll just import re-act from re-act which is pretty standard but you know what
+
+01:52.120 --> 01:56.620
+let's also grab the logo that we have up here as well.
+
+01:56.620 --> 02:00.900
+The re-act logo going to import that as well.
+
+02:01.080 --> 02:07.690
+And because we're in the components folder right now and the logo lives in the source folder we have
+
+02:07.690 --> 02:08.750
+to do dot dot.
+
+02:08.770 --> 02:14.230
+And actually we want the components folder to be inside of the source for that here not outside.
+
+02:14.230 --> 02:24.980
+So let's just move that will put it inside of the source folder.
+
+02:25.010 --> 02:28.270
+Now within this page it's going to be a save this function.
+
+02:28.310 --> 02:39.390
+So we'll call it cost page 1 is going to equal it won't have any props that all receive for now and
+
+02:39.450 --> 02:44.640
+within here we could do the return or for just returning a simple component.
+
+02:44.640 --> 02:49.200
+I can just leave it the way it is now and say Divx
+
+02:52.160 --> 03:01.890
+will give it a class name of app just so we get the same class name that we had before.
+
+03:02.170 --> 03:05.910
+And you don't we'll just copy the header as well.
+
+03:06.250 --> 03:09.820
+So this page one is going to have the
+
+03:17.760 --> 03:24.290
+and will close off the div but also within here we want to have two buttons.
+
+03:24.490 --> 03:33.760
+So the first button will have an on click event and for now is just going to be empty.
+
+03:38.530 --> 03:42.450
+And let's say that inside of this button I'll have the tag.
+
+03:42.460 --> 03:44.500
+It will have the text of paste too.
+
+03:44.530 --> 03:53.340
+So when we click on this button and take us to page 2 and we can do the same for page 3.
+
+03:53.360 --> 03:56.290
+So let's just go ahead and save that.
+
+03:56.660 --> 04:00.780
+The last thing we want to do is if we go to opt out.
+
+04:00.860 --> 04:07.970
+Yes well we still have Page 2 and page 3 but ideally we have some sort of routing.
+
+04:08.000 --> 04:16.100
+So we're going to display page on page 2 in pastry but not at the same time based on the route we want
+
+04:16.430 --> 04:23.540
+to render only page on if we're on page 1 only page 2 if we're on page 2 and only pastry if we're on
+
+04:23.540 --> 04:24.460
+page 3.
+
+04:24.500 --> 04:33.470
+So let's just create a simple routing logic here we can first start off by creating a state where we
+
+04:33.470 --> 04:36.040
+do that by having a constructor.
+
+04:36.140 --> 04:38.300
+Remember we have to call super.
+
+04:38.300 --> 04:44.420
+So we can use the this keyword and within here will say this dot state
+
+04:47.460 --> 04:51.830
+equals the route and the default route.
+
+04:51.870 --> 04:57.370
+When this app gets initialized we'll just be bage wrong.
+
+04:58.750 --> 05:05.740
+And based on where we click remember in page 1 how we have to Bundes that will have some sort of an
+
+05:05.740 --> 05:10.850
+event that if we click on page 2 it's going to take us to page two if we click on page 3.
+
+05:10.900 --> 05:12.840
+It's going to take us to page 3.
+
+05:13.070 --> 05:19.130
+So let's create an event we'll call it on the route change
+
+05:22.550 --> 05:25.240
+and this route change.
+
+05:25.520 --> 05:33.110
+Let's fix that spelling is going to have the this start on the road change method that we're going to
+
+05:33.110 --> 05:34.830
+create right now in the app.
+
+05:34.850 --> 05:42.270
+So let's go ahead and do then we'll say on route change and this Andreae change is going to receive
+
+05:42.990 --> 05:45.070
+the parameter route
+
+05:48.440 --> 05:51.920
+and I'm using era functions here so we don't have to bind in the constructor.
+
+05:51.920 --> 05:54.890
+Otherwise we have to use dot bind on route change.
+
+05:54.890 --> 05:56.450
+If we didn't do the error function.
+
+05:56.460 --> 05:58.780
+But I like this way I think it looks cleaner.
+
+05:59.660 --> 06:12.460
+Now within here we can simply say this dot sat state to have the route he calls to whatever the route
+
+06:13.060 --> 06:13.970
+is.
+
+06:14.260 --> 06:23.060
+So we can actually just shorthand use this but it's more descriptive so I like I like this method better.
+
+06:23.360 --> 06:25.830
+So we know what's going on.
+
+06:25.910 --> 06:31.190
+So now we're passing the on route change to the page one component.
+
+06:31.190 --> 06:31.620
+All right.
+
+06:31.630 --> 06:40.000
+So by that logic we can just copy and paste to page 2 and page 3 again.
+
+06:40.310 --> 06:49.200
+The same thing and all we are doing is anytime we click we update the route to whatever route we requested.
+
+06:49.280 --> 06:56.870
+Let's go back or let's save that and go to Page Ron page on now is going to receive the on route change
+
+06:57.320 --> 07:01.300
+prop and this on route change and I'm using destructuring here.
+
+07:01.310 --> 07:04.890
+So I don't have to do props on route change.
+
+07:05.000 --> 07:12.860
+I can just say on route change will have a function that gets run and this on route change is going
+
+07:12.860 --> 07:15.800
+to send the route page to.
+
+07:15.890 --> 07:19.860
+Because we're going to page two when we make that a little bit smaller.
+
+07:20.060 --> 07:32.010
+So you can see and again we're going to do the same thing to page 3 this time clicking on page 3.
+
+07:32.270 --> 07:42.060
+And then finally we can just add sports default page Ron and I'm going to go ahead and just copy all
+
+07:42.060 --> 07:45.400
+of this because our pages are pretty much going to look the same
+
+07:48.900 --> 07:56.140
+except for the fact that the names will be different so we'll have Page 3 and for the on click instead
+
+07:56.140 --> 08:05.530
+of page 2 and 3 we'll have page on page to page to page Ron we'll save that.
+
+08:05.560 --> 08:15.520
+And then same with Page 2 will rename this to page 2 component that has access to page one and page
+
+08:15.520 --> 08:16.020
+3.
+
+08:17.890 --> 08:24.720
+Her At the very last part is obviously we want to import these components.
+
+08:24.720 --> 08:34.070
+So I'm going to say import page one from or is just component components.
+
+08:34.220 --> 08:35.370
+Make sure we get that right.
+
+08:39.840 --> 08:42.320
+Page Ron.
+
+08:42.410 --> 08:53.570
+And then finally copying the rest over here to make sure we match page to is Sri is to page 3.
+
+08:53.790 --> 08:58.300
+I wanted to just save this and run NPM start see if we get any errors.
+
+09:06.390 --> 09:07.130
+All right.
+
+09:07.350 --> 09:15.000
+We have a quite an ugly web page with our components rendering but it looks like it's working.
+
+09:15.000 --> 09:21.480
+We have the pages running but we obviously don't want to display all them at the same time we want to
+
+09:21.480 --> 09:28.890
+have some sort of routing logic and the default should be page 1 because remember our route is currently
+
+09:28.890 --> 09:30.660
+page on.
+
+09:30.950 --> 09:32.720
+And this is pretty easy to do.
+
+09:32.720 --> 09:42.660
+We no longer need the header because well because the header and also the up are all within these components.
+
+09:42.710 --> 09:44.480
+So let's just remove this
+
+09:49.270 --> 09:50.650
+and add the logic in here
+
+09:57.510 --> 10:12.410
+we're going to say if this state route equals page 1 then we return page you want to hear
+
+10:20.270 --> 10:26.700
+Feltz if we have the route as page to
+
+10:29.490 --> 10:31.920
+then we can just render page to
+
+10:35.820 --> 10:38.440
+and I'm sure there is cleaner ways of doing this right now.
+
+10:38.460 --> 10:43.100
+But for this demonstration purposes this will do just fine.
+
+10:43.380 --> 10:45.960
+Nice simple routing logic
+
+10:49.870 --> 10:51.000
+pastry.
+
+10:51.190 --> 10:56.610
+We finally return that right over here.
+
+11:04.550 --> 11:05.780
+All right let's give it a go.
+
+11:05.810 --> 11:12.290
+Saving it logo is defined by never used because we don't use it on the main page anymore.
+
+11:12.320 --> 11:15.670
+Let's save go back.
+
+11:15.680 --> 11:16.550
+All right.
+
+11:16.550 --> 11:18.530
+Looks like we have everything running.
+
+11:18.530 --> 11:25.880
+Let's see if I click page 2 This changes to page 1 pastry changes to page 2.
+
+11:25.880 --> 11:31.130
+So we're changing pages right now but this is kind of hard to tell so let's have some success to make
+
+11:31.130 --> 11:31.820
+it look better.
+
+11:35.690 --> 11:41.510
+And I actually have some CSSA styles already that we can use because while we're now learning CSSA right
+
+11:41.510 --> 11:45.940
+now I have a button class.
+
+11:45.950 --> 11:48.830
+Nothing too crazy just bored or making a bigger.
+
+11:48.950 --> 12:00.000
+And we also have a disabled class so that now we can add a disable class to our buttons see which one
+
+12:00.000 --> 12:01.590
+we're actually clicking on.
+
+12:01.600 --> 12:10.720
+So let me save that and this time around I'm going to just have a button button that has a class name.
+
+12:13.500 --> 12:21.780
+Disabled and it's not going to do anything you'll just have the page one because we're currently on
+
+12:21.780 --> 12:22.410
+page one.
+
+12:22.470 --> 12:25.410
+We just want the page to and paste button to be active.
+
+12:25.650 --> 12:30.540
+And I'm going to save and do the same for all the other ones as well.
+
+12:30.570 --> 12:36.270
+Will say Page two because we're on page two is disabled.
+
+12:36.370 --> 12:42.740
+And and finally for page 3 We'll have that one disabled as well.
+
+12:42.740 --> 12:44.300
+All right let's see if that looks better.
+
+12:44.300 --> 12:46.500
+Let's go back.
+
+12:46.510 --> 12:47.110
+All right.
+
+12:47.110 --> 12:48.820
+So we're on page 1.
+
+12:48.850 --> 12:50.740
+You can see how good my CSSA skills are.
+
+12:50.740 --> 12:52.690
+This looks very beautiful.
+
+12:53.170 --> 12:57.380
+And if we click on page 2 you go to page to go to pastry.
+
+12:57.520 --> 12:59.540
+We go to page 3.
+
+12:59.560 --> 13:00.970
+Very cool.
+
+13:00.970 --> 13:01.460
+All right.
+
+13:01.540 --> 13:03.720
+So we did all that work.
+
+13:03.790 --> 13:04.690
+That's amazing.
+
+13:04.690 --> 13:07.670
+But where is this code splitting.
+
+13:07.900 --> 13:16.320
+Well this is the app that we're going to use code splitting on and because right now if I open up the
+
+13:16.890 --> 13:25.180
+tab the developer tools and go to network and I just click refresh.
+
+13:25.370 --> 13:27.170
+I see that I get the bundled up.
+
+13:27.290 --> 13:27.630
+Yes.
+
+13:27.650 --> 13:29.400
+Ignore all this other stuff.
+
+13:29.420 --> 13:34.650
+This is just actual stuff that comes with my chrome plug ins and also create re-act up.
+
+13:34.700 --> 13:38.190
+But the one we're interested interested in is the bundle.
+
+13:38.300 --> 13:43.460
+Yes this is where we have our components and you see this is the one that takes the longest time to
+
+13:43.460 --> 13:44.540
+load.
+
+13:44.540 --> 13:48.470
+Now this bundle of J.S. is just one single file.
+
+13:48.650 --> 13:56.300
+And if I click on page 2 nothing happens because all the javascript that we need has already been loaded
+
+13:56.750 --> 14:00.500
+in Bondel digests with code splitting now.
+
+14:00.620 --> 14:07.190
+We're going to be able to actually load up files each time we click on a page because we haven't loaded
+
+14:07.190 --> 14:15.920
+there yet and this way we can make this bundle like just that 354 kilobytes right now a lot smaller.
+
+14:15.970 --> 14:22.770
+I know I'm building up the suspense but in the next video we're going to make this have code splitting
+
+14:23.680 --> 14:24.850
+and it's quite easy.
+
+14:24.930 --> 14:26.920
+So all seen that the Buh-Bye.

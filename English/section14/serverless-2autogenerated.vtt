@@ -1,0 +1,178 @@
+WEBVTT
+
+00:01.020 --> 00:06.320
+Welcome back honors take a bit of time to talk about the surveillance framework and something that I
+
+00:06.330 --> 00:12.750
+may have skimmed over a little too quickly and the previous video and that is the fact that server less
+
+00:12.990 --> 00:18.580
+isn't just for Amazon Web services you can use it with a ton of things.
+
+00:18.780 --> 00:21.280
+You see that in the server less create command.
+
+00:21.300 --> 00:27.480
+We have all these templates and we use the Amazon know James.
+
+00:27.730 --> 00:30.830
+There's also Amazon with typescript.
+
+00:30.880 --> 00:34.910
+There's Python there's Java.
+
+00:35.080 --> 00:36.480
+There's all these other things.
+
+00:36.760 --> 00:42.700
+But also if we keep going down we see open wisk which is IBM.
+
+00:42.790 --> 00:49.990
+So IBM is webservices as well as if we keep going down we see that there's also Azure.
+
+00:50.150 --> 00:53.400
+So that is Microsoft that offers these services.
+
+00:53.420 --> 00:54.600
+You also have Google.
+
+00:54.710 --> 01:01.330
+So Servilius works with all of these service providers which is really really nice.
+
+01:01.340 --> 01:07.520
+Another reason I like showing gyud this method is because we're learning how to use not just AWOS but
+
+01:07.520 --> 01:12.170
+also all these other services that might meet your needs better.
+
+01:12.330 --> 01:21.000
+Now since we got that through the other thing I want to do is I want to make sure that my rankly which
+
+01:21.000 --> 01:27.630
+remember our node version here is 6.10 and because we're going to be deploying it from our server less
+
+01:28.200 --> 01:37.300
+framework will have to go back to our dashboard and remove this rankly lambda function because we don't
+
+01:37.300 --> 01:40.220
+want to create it here we're creating it through server less.
+
+01:40.300 --> 01:50.970
+So I'm going to go back to functions and just remove rankly goodbye rankly your life was short lived.
+
+01:50.980 --> 01:56.310
+All right let's minimize this and talk a little bit about the YAML file.
+
+01:57.660 --> 02:03.470
+The server less documentation is really really good at explaining all of these.
+
+02:03.560 --> 02:08.970
+So I'm not going to take too much time doing that because each one of them is different but you can
+
+02:09.230 --> 02:11.840
+write a bunch of defaults that they already have.
+
+02:11.900 --> 02:18.380
+For example in here if we uncomment this we see that we have regions where we want our server to be
+
+02:19.850 --> 02:26.270
+if you live somewhere else other than the North American you might want to change this so that the server
+
+02:26.270 --> 02:34.380
+is going to be closer to your users if you keep scrolling down you see that we also have environmental
+
+02:34.380 --> 02:37.140
+variables that we can add to our functions.
+
+02:38.010 --> 02:45.220
+For maybe perhaps making sure that the secrets stay outside of our functions and then obviously we've
+
+02:45.240 --> 02:52.770
+talked about the functions before we have our functions that we define called Hello so we can access
+
+02:52.770 --> 02:58.840
+it with the name hello and this can be changed to watever and it references the handler dodgiest function
+
+03:02.330 --> 03:04.250
+the in the YAML file.
+
+03:04.260 --> 03:09.960
+The following are a few example events that you can configure so we can configure different events that
+
+03:09.960 --> 03:13.080
+the helo function will be triggered with.
+
+03:13.080 --> 03:17.630
+For example we can do a sheepy we can do as three.
+
+03:17.630 --> 03:24.470
+So let's say somebody loads an image to an S3 bracket like a profile image and we need to let's say
+
+03:24.470 --> 03:32.840
+resize it well the trigger is going to be the ESRI image that gets uploaded and then that's going to
+
+03:32.840 --> 03:36.940
+trigger the helo function to do something.
+
+03:36.970 --> 03:42.400
+And by the way we're going to be using a CGP in our case but I wanted to show you that there's different
+
+03:42.400 --> 03:44.190
+things we can do for example.
+
+03:44.200 --> 03:47.570
+Another one that I really like using is the schedule.
+
+03:47.770 --> 03:51.130
+And here I can say how often I want the function to run.
+
+03:51.130 --> 03:57.570
+For example if I want a function to run every hour maybe to check a stock market price.
+
+03:57.640 --> 04:01.690
+Well I can tell it to run every hour and that every hour.
+
+04:01.690 --> 04:03.390
+The function is going to run.
+
+04:03.580 --> 04:09.740
+And if you use an API like Twilio that sends you text messages you can have every hour a text message
+
+04:09.740 --> 04:15.990
+just says the stock price is so-and-so or the stock price has gone up 100 percent.
+
+04:16.000 --> 04:18.180
+You're now Rich something along those lines.
+
+04:20.390 --> 04:23.420
+And there's a lot of things that we can go through here.
+
+04:23.570 --> 04:29.420
+But like I said these are all configuration items that you'll encounter when you actually have a specific
+
+04:29.420 --> 04:35.900
+need for a function while we're going to do now is build out our function.
+
+04:36.010 --> 04:42.460
+But there's one last configuration item that we need to do with server less before we have access to
+
+04:42.460 --> 04:44.640
+our AWOS account.
+
+04:44.740 --> 04:53.020
+You see right now I've created this service framework that lives on my laptop but yes doesn't really
+
+04:53.020 --> 04:54.370
+know that this exists.
+
+04:54.370 --> 04:59.860
+I need to connect my account to this server list framework so that I can write the function and then
+
+05:00.010 --> 05:01.470
+deploy it.
+
+05:01.480 --> 05:04.030
+So let's do that in the next video.
+
+05:04.070 --> 05:04.920
+I'll see you in that one.

@@ -1,0 +1,106 @@
+WEBVTT
+
+00:02.060 --> 00:09.920
+Welcome back now tests in general can be grouped into three main categories.
+
+00:10.200 --> 00:16.880
+Now everybody has their own definition and sometimes somebodies definition might overlap with the other
+
+00:16.880 --> 00:20.910
+category but just as a mental framework.
+
+00:21.290 --> 00:27.620
+Think of tests as having three main distinct types.
+
+00:27.670 --> 00:35.380
+The first are unit tests and these are the most common the easiest to implement and the ones that are
+
+00:35.380 --> 00:37.790
+really important to have in your application.
+
+00:39.240 --> 00:45.170
+Unit tests as the name suggests tests individual functions or classes.
+
+00:45.510 --> 00:53.070
+So if I had a some function I'm going to just test that one function to make sure that it does what
+
+00:53.070 --> 00:54.040
+it says it does.
+
+00:54.180 --> 01:01.290
+Maybe if it accepts parameter A and B I want to make sure that A and B get added with that function.
+
+01:02.270 --> 01:09.890
+They are the cheapest to implement the easiest to implement and 90 percent of your time you're going
+
+01:09.890 --> 01:12.350
+to be working on writing unit tests.
+
+01:12.350 --> 01:14.660
+They're very very useful.
+
+01:14.660 --> 01:19.180
+The second one is something called integration tests.
+
+01:19.370 --> 01:23.870
+This is testing how different pieces of code work together.
+
+01:24.170 --> 01:32.930
+So it can be testing of whether the database works with the express app that's requesting some data
+
+01:32.930 --> 01:40.820
+from the database or it could be how a function works with another function and how this connection
+
+01:40.820 --> 01:44.660
+between them works and testing that.
+
+01:44.680 --> 01:49.480
+Finally we have automation tests or UI tests.
+
+01:49.480 --> 01:56.050
+This usually involves testing real life scenarios on the browser by controlling the browser and making
+
+01:56.050 --> 02:00.460
+sure that the expected behavior on the web is correct.
+
+02:00.460 --> 02:07.450
+Now you can have humans doing this where they go through and click through everything on your Web site
+
+02:07.450 --> 02:08.780
+and make sure everything works.
+
+02:08.860 --> 02:16.330
+Or you can programmatically have robots or code that you write that runs through these tests for you
+
+02:17.440 --> 02:19.710
+as we go down into this order.
+
+02:19.720 --> 02:23.650
+They become more and more expensive to implement.
+
+02:23.650 --> 02:24.540
+What does that mean.
+
+02:24.760 --> 02:32.110
+Well automation tests just by hearing about what they do are a lot more difficult to implement than
+
+02:32.170 --> 02:32.980
+unit tests.
+
+02:33.010 --> 02:33.490
+Right.
+
+02:34.340 --> 02:39.710
+So all these tests have their use cases but have their pros and cons as well.
+
+02:41.250 --> 02:47.180
+And we're going to talk about each one of these but for now let's leave it at that.
+
+02:47.340 --> 02:52.140
+And in the next video we're going to talk about some of the tools that you're going to encounter as
+
+02:52.140 --> 02:54.590
+you start to write tests.
+
+02:54.680 --> 02:55.470
+I'll see in the next one.

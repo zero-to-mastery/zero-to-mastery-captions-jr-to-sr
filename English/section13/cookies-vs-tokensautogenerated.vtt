@@ -1,0 +1,412 @@
+WEBVTT
+
+00:01.640 --> 00:07.690
+I have a little diagram here that explains really really well some of the authentication methods that
+
+00:07.690 --> 00:08.880
+we can use.
+
+00:08.890 --> 00:15.700
+We have the traditional cookie based authentication which we have covered slightly in the security section
+
+00:16.330 --> 00:19.700
+and also the modern token based authentication method.
+
+00:21.530 --> 00:28.590
+And the cookie based authentication has been the default tried and true method for a long time.
+
+00:29.060 --> 00:32.090
+As you can see here we have a browser and a server.
+
+00:32.090 --> 00:40.420
+We usually have a POST request to authenticate or sign in and we send the username and password over
+
+00:40.420 --> 00:41.460
+to the server.
+
+00:41.680 --> 00:47.300
+The server checks this make sure that the passwords match and that the user exists.
+
+00:47.410 --> 00:55.270
+And if everything goes well they send back a response saying OK you can sign in but they also send a
+
+00:55.270 --> 00:59.650
+header that is set cookie with the session.
+
+00:59.650 --> 01:05.980
+That is a cookie which is a random piece of string and this random piece of string is going to identify
+
+01:05.980 --> 01:06.910
+this browser.
+
+01:06.910 --> 01:14.520
+It's going to say anytime you want a request like API users here send me the cookie.
+
+01:14.710 --> 01:17.160
+That is the cookie that I just sent you from the server.
+
+01:18.860 --> 01:24.890
+And in this case of the browser wants to get the user and point it talks to the server again the server
+
+01:24.890 --> 01:30.350
+sees that there's a cookie it's going to check this cookie to the wand that it's created over here.
+
+01:30.350 --> 01:36.320
+It has to remember that cookie and make sure it matches similar to the way we had password that needed
+
+01:36.320 --> 01:37.740
+to match.
+
+01:37.810 --> 01:39.390
+So the server is going to work here.
+
+01:39.400 --> 01:41.200
+It's going to be to do a bit of work.
+
+01:41.200 --> 01:44.240
+It's going to say OK yeah I have this cookie.
+
+01:44.350 --> 01:47.110
+I remember it I did assign you this cookie.
+
+01:47.110 --> 01:48.140
+I know who you are.
+
+01:48.250 --> 01:51.280
+So here is your information of the user.
+
+01:51.280 --> 01:58.570
+You get name feedback and cookie based authentication is what we call stateful.
+
+01:58.570 --> 02:05.170
+This means that an authentication record or session must be kept both in the browser as well as the
+
+02:05.170 --> 02:05.840
+server.
+
+02:06.160 --> 02:14.350
+The browser keeps their session cookie in the header and the server has to keep track of the cookies
+
+02:14.350 --> 02:20.640
+that it's sent out to the clients in let's say a database of some other way to manage that data because
+
+02:20.660 --> 02:25.600
+whenever they get a request they have to go through those cookies and figure out if any of them are
+
+02:25.600 --> 02:33.410
+valid and which user information they pass based on that cookie and has to keep track of these active
+
+02:33.410 --> 02:35.720
+sessions in the database.
+
+02:35.720 --> 02:42.740
+And the beauty is that once the user let's say logs out of the app the session is destroyed both on
+
+02:42.740 --> 02:45.290
+the client and server side.
+
+02:46.320 --> 02:48.060
+Nice and simple.
+
+02:48.060 --> 02:53.270
+Now token based authentication on the other hand is a little bit different.
+
+02:54.180 --> 02:59.280
+And it's something that has gained more and more popularity over the last couple of years with single
+
+02:59.280 --> 03:00.970
+page applications.
+
+03:01.180 --> 03:08.870
+And when it comes to token based authentication the most common one that most people talk about is the
+
+03:08.960 --> 03:15.870
+JWT tokin that is the Jason web token authentication which we're going to cover in this course.
+
+03:16.660 --> 03:23.530
+Now let's take a look at a token based authentication a user logs in or tries to log in and authenticate
+
+03:23.740 --> 03:32.090
+by sending username and password at the server checks that password make sure that everything works
+
+03:32.270 --> 03:33.230
+with the user.
+
+03:33.320 --> 03:36.320
+Yup the user exists yeah the password is right.
+
+03:36.320 --> 03:39.660
+And they're going to send instead of a cookie like we did here.
+
+03:39.710 --> 03:41.060
+They're going to send a token.
+
+03:41.060 --> 03:48.650
+A job JWT token and this token which we're going to cover has some special information but it looks
+
+03:48.710 --> 03:57.840
+quite similar with cookies in that it's all jumbled up piece of text and this token instead of being
+
+03:57.990 --> 04:04.530
+in a set cookie like we have here is actually stored on the browser in something like local stores or
+
+04:04.530 --> 04:05.460
+session storage.
+
+04:05.460 --> 04:10.790
+Again something that will cover but this browser now remembers this token now.
+
+04:10.810 --> 04:19.200
+Any time this browser or user needs to access information they have to send with their requests this
+
+04:19.320 --> 04:26.850
+authorization hador that we give the bearer JWT and the token number again we'll cover this so don't
+
+04:26.850 --> 04:27.540
+stress too much.
+
+04:27.540 --> 04:31.220
+We just want to get the flow of how everything works here.
+
+04:31.280 --> 04:39.990
+Now the interesting part happens here when the data token is sent with the request to get the user and
+
+04:39.990 --> 04:45.230
+point the server doesn't have to actually store that information anywhere.
+
+04:45.720 --> 04:52.890
+As a matter of fact the server doesn't really care about what sessions it's sent because they can simply
+
+04:52.950 --> 05:01.620
+the way JWT tokens work is that they simply can verify that what they signed and the token that they
+
+05:01.620 --> 05:05.540
+created is correct without touching a database without doing anything.
+
+05:05.550 --> 05:14.890
+They simply run a dot verify method on it and they can send whatever data back to the browser.
+
+05:15.470 --> 05:21.540
+And the interesting part is that within this JWT token there is user information that can be stored
+
+05:21.660 --> 05:23.180
+as well.
+
+05:23.190 --> 05:25.240
+Again this is something that we're going to come back to.
+
+05:25.240 --> 05:29.520
+So this diagram is going to make a lot more sense towards the end but I want to introduce you to the
+
+05:29.520 --> 05:30.400
+concept.
+
+05:30.480 --> 05:36.660
+The main takeaway is that token based authentication in theory is stateless.
+
+05:36.660 --> 05:44.450
+The server does not need to keep a record of which users are logged in or which have been issued.
+
+05:44.550 --> 05:51.930
+Instead all the server needs to do is decode this JWT and make sure that it's a valid token.
+
+05:51.930 --> 06:01.170
+By running this method verify and once a user logs out the token is destroyed on the client side.
+
+06:01.960 --> 06:06.910
+But there's no necessarily an interaction that happens on the Bakhit.
+
+06:06.930 --> 06:11.130
+Now why would we pick one over the other.
+
+06:11.130 --> 06:12.880
+There's pros and cons to everything.
+
+06:13.050 --> 06:15.800
+And I want to give you a heads up if you go online.
+
+06:15.920 --> 06:22.530
+There's a ton of debates as to what people think and some people think that this is the best way to
+
+06:22.530 --> 06:22.760
+do it.
+
+06:22.770 --> 06:24.820
+Others think that this is the best way to do it.
+
+06:25.020 --> 06:28.230
+And there is just a massive debate when it comes to session.
+
+06:28.230 --> 06:35.790
+It's a really hotly debated topic and they're going to be people that really hate one way and really
+
+06:35.790 --> 06:36.960
+like the other way.
+
+06:36.960 --> 06:37.880
+So keep that in mind.
+
+06:37.890 --> 06:42.930
+And I'm actually going to give you resources throughout this section that debate both topics so you
+
+06:42.930 --> 06:44.850
+can make a decision for yourself.
+
+06:44.850 --> 06:50.910
+The way I'm going to teach this section is I'm going to show you how to do a token based authentication
+
+06:51.090 --> 06:57.210
+but also including sessions that are very similar to cookie based authentication so that you can decide
+
+06:57.210 --> 06:58.920
+for yourself what is best.
+
+06:58.970 --> 07:04.410
+I'm going to show you what I think is best personally but that doesn't mean it's the right way or that
+
+07:04.740 --> 07:06.580
+you need to do it only this way.
+
+07:06.670 --> 07:09.540
+There's many many ways to do it.
+
+07:09.730 --> 07:15.100
+But like I said if you go online and start reading your head's gonna hurt about all the pros and cons
+
+07:15.100 --> 07:15.600
+and options.
+
+07:15.640 --> 07:22.280
+So I'm going to go over a few of these pros and cons now token based authentication.
+
+07:22.280 --> 07:27.400
+The biggest advantage is the idea of tokens over cookies.
+
+07:27.510 --> 07:28.900
+It is stateless.
+
+07:28.940 --> 07:34.350
+The backend does not need to actually record or store the tokens in a database.
+
+07:34.370 --> 07:42.210
+Each token is self-contained and contains all the data required to check its validity as well as convey
+
+07:42.270 --> 07:43.660
+user information.
+
+07:45.200 --> 07:47.590
+So the server's job is actually simplified.
+
+07:47.660 --> 07:50.780
+The only job is then to sign the tokens.
+
+07:50.780 --> 07:58.400
+And any time it gets a request to just verify the token nice and easy we just made the server work a
+
+07:58.400 --> 08:01.270
+lot less which is always nice.
+
+08:03.580 --> 08:10.030
+The other part is that unlike cookies which are meaningless strings in JWT you can actually have any
+
+08:10.030 --> 08:18.730
+type of data you want inside of the JWT so you can have things like user ID or the name of the user
+
+08:18.820 --> 08:25.250
+inside of this token so that when the server receives it it can actually see what type of data.
+
+08:25.270 --> 08:32.950
+This JWT tokin contains another good thing about tokens is that unlike cookies that work really really
+
+08:32.950 --> 08:41.910
+well with one single domain the classic browser server client relationship a token based approach makes
+
+08:41.910 --> 08:45.060
+it really really easy for you to work with different API.
+
+08:45.300 --> 08:52.620
+If your company had multiple IPs you can use the same JWT token across different API.
+
+08:53.620 --> 09:02.810
+Because a JWT token is required and checked with each and every call as long as the token is valid the
+
+09:02.820 --> 09:05.870
+requests can really be processed by anything.
+
+09:06.030 --> 09:10.530
+And yes there are ways to do this with a cookie based authentication is all but it's definitely more
+
+09:10.530 --> 09:11.550
+complicated.
+
+09:12.840 --> 09:21.870
+Now the other thing is that with token based authentication it can serve both browser and native mobile
+
+09:21.870 --> 09:23.770
+platforms like iOS and Android.
+
+09:25.320 --> 09:31.890
+Because having cookies on native mobile platforms is actually while they just don't mix well together
+
+09:32.040 --> 09:33.850
+it is possible to work with it.
+
+09:34.080 --> 09:40.710
+But using cookies with mobile platforms is really really hard tokens on the other hand is nice and simple
+
+09:40.710 --> 09:41.850
+works quite well.
+
+09:42.890 --> 09:46.560
+All right so tokens are awesome let's just pick tokens and forget about cookies.
+
+09:46.970 --> 09:54.870
+Well again as we know a senior developers there's always pros and cons the cons is that the size of
+
+09:54.870 --> 10:03.960
+a JWT compared to a cookie is actually quite different JWT because they hold information are a lot bigger
+
+10:04.470 --> 10:09.600
+and because you're sending them on every request that definitely increases the number of bytes you have
+
+10:09.600 --> 10:11.540
+to transfer back and forth back and forth.
+
+10:13.800 --> 10:19.070
+So depending on your situation the size of the game can become problematic.
+
+10:19.440 --> 10:26.250
+The other part is that the fact that we're storing information in JWT about the user it can be dangerous
+
+10:26.250 --> 10:31.300
+if we store anything sensitive about the user if the JWT token is stolen.
+
+10:31.560 --> 10:37.250
+Bad people can actually decode it and see what's inside the JWT tokin quite easily.
+
+10:38.020 --> 10:43.180
+And there's a few other things and I'm going to leave resources for you like I said this is a topic
+
+10:43.180 --> 10:48.450
+that just goes deeper and deeper and deeper and there's a lot of points to consider.
+
+10:48.730 --> 10:51.690
+So to simplify things I'm going to make it easy for you.
+
+10:51.700 --> 10:57.790
+I'm going to show you how I implement authentication and you can grab whatever pieces you want for your
+
+10:57.790 --> 10:58.890
+own application.
+
+11:00.620 --> 11:04.790
+At the end of the day though we're going to make sure that our application is going to be secure and
+
+11:04.780 --> 11:12.280
+manage these sessions in a way that won't make our app susceptible to bad people attacking us.
+
+11:13.910 --> 11:17.180
+All right let's take a break and I'll see you in the next video.
+
+11:17.200 --> 11:17.540
+Bye.
