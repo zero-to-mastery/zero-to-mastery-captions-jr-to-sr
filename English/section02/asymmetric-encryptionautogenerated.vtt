@@ -1,7 +1,7 @@
 WEBVTT
 
 00:01.710 --> 00:08.190
-Welcome back now when the previous video we talked about how we need some sort of key exchange algorithm
+Welcome back. Now when the previous video we talked about how we need some sort of key exchange algorithm,
 
 00:08.940 --> 00:14.930
 and this key exchange algorithm needs something called asymmetrical encryption.
@@ -13,7 +13,7 @@ I know it's it's a lot to take in but stick with me.
 Hopefully this little drawing will help you out.
 
 00:21.580 --> 00:30.030
-Now unlike symmetrical encryption an asymmetrical encryption uses two separate keys for encryption and
+Now unlike symmetrical encryption, an asymmetrical encryption uses two separate keys for encryption and
 
 00:30.030 --> 00:31.780
 decryption.
@@ -25,13 +25,13 @@ So these red keys are owned by this blue laptop.
 And these blue keys are owned by this other computer.
 
 00:41.400 --> 00:53.280
-Now these two keys are known as public keys and private keys and together these keys form a public private
+Now these two keys, are known as public keys and private keys and together these keys form a public private
 
 00:53.340 --> 00:54.050
 key pair.
 
 00:54.330 --> 01:02.400
-And as the name suggest these ones are public so I can share this reiki with anybody I want in the world.
+And as the name suggest these ones are public so I can share this red key with anybody I want in the world.
 
 01:02.520 --> 01:04.260
 It can be out in the open.
@@ -43,22 +43,22 @@ It's not a big problem.
 And same with this blue one.
 
 01:06.840 --> 01:10.630
-But these ones that are private that are kind of in the shadows.
+But these ones, that are private, that are kind of in the shadows,
 
 01:10.800 --> 01:15.150
-These are your absolute secrets that you shouldn't never ever share with anybody.
+these are your absolute secrets that you shouldn't never ever share with anybody.
 
 01:16.850 --> 01:23.660
 Now these public keys are linked with the private key in terms of functionality.
 
 01:23.660 --> 01:26.540
-You can see that they're both red They're both blue here.
+You can see that they're both red, they're both blue here.
 
 01:28.120 --> 01:35.820
 The private key cannot mathematically compute from the public key.
 
 01:35.850 --> 01:37.200
-So what does that mean.
+So what does that mean?
 
 01:37.200 --> 01:47.260
 Are the relationships a little bit complex but a message shut is encrypted by machines public key can
@@ -73,7 +73,7 @@ And it's what we call a one way relationship.
 So let me show you how it works.
 
 01:58.720 --> 02:07.060
-If I send my public key to my friend's computer and let's say that friend also sends his public key
+If I send my public key to my friend's computer, and let's say that friend also sends his public key
 
 02:07.690 --> 02:17.400
 to my computer if I want to send a message I can say hello send it over by encrypting it with his blue
@@ -82,7 +82,7 @@ to my computer if I want to send a message I can say hello send it over by encry
 key his public key is going to get jumbled up and encrypted like this.
 
 02:23.370 --> 02:34.740
-And when I send it over to him Well now he can use his private key because this piece of text was encrypted
+And when I send it over to him, well now he can use his private key because this piece of text was encrypted
 
 02:34.740 --> 02:36.100
 by the public.
@@ -109,31 +109,31 @@ But because it's one way relationship this public key cannot decrypt its own mes
 anything encrypted by a private key.
 
 03:04.600 --> 03:12.310
-It can only encrypt something and it can only be decrypted by it's paired private key.
+It can only encrypt something and it can only be decrypted by its paired private key.
 
 03:12.310 --> 03:15.360
 That again is never ever shared with anybody.
 
 03:16.850 --> 03:22.430
-Now the strength of the interconnection lies in the fact that the private key is never relieved right.
+Now the strength of the entire connection lies in the fact that the private key is never relieved right.
 
 03:23.160 --> 03:23.610
 All right.
 
 03:23.630 --> 03:26.110
-Awesome so that makes sense right.
+Awesome. So that makes sense right?
 
 03:26.110 --> 03:33.750
 A little bit more complicated than symmetrical encryption but I think we get now if we go back to where
 
 03:33.750 --> 03:43.300
-we started most people think that S-sh uses asymmetrical encryption entirely and that's not entirely
+we started most people think that SSH uses asymmetrical encryption entirely and that's not entirely
 
 03:43.330 --> 03:44.230
 true.
 
 03:44.260 --> 03:52.630
-It's this form of encryption with S-sh is actually only used during the key exchange algorithm of symmetric
+It's this form of encryption with SSH is actually only used during the key exchange algorithm of symmetric
 
 03:52.660 --> 03:53.890
 encryption.

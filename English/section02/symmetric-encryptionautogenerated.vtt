@@ -4,7 +4,7 @@ WEBVTT
 The first one we're going to talk about is symmetrical encryption.
 
 00:06.940 --> 00:15.850
-And just as a reminder encryption is a way to hide or essentially jumble up a let's say a piece of text
+And just as a reminder, encryption is a way to hide or essentially jumble up a let's say a piece of text
 
 00:16.150 --> 00:24.460
 and do something that it's impossible for a third party or someone to read without some sort of a way
@@ -22,19 +22,19 @@ Now symmetric encryption uses one secret key for both the encryption and decrypt
 Let me show you what I mean.
 
 00:43.020 --> 00:51.780
-If I wanted to send hello as a message to this other computer using symmetrical encryption I can have
+If I wanted to send hello as a message to this other computer, using symmetrical encryption I can have
 
 00:51.780 --> 00:58.530
-a key that turns this hello taxed into a piece of jibberish.
+a key that turns this hello text into a piece of jibberish.
 
 00:58.920 --> 01:08.820
-And as long as my friend or my other computer has the same key I can use this to decrypt it and get
+And as long as my friend or my other computer has the same key, I can use this to decrypt it and get
 
 01:09.410 --> 01:10.110
 hello.
 
 01:10.470 --> 01:16.890
-And who's ever in the middle here whoever is in the public overhear reading our message won't understand
+And who's ever in the middle here whoever is in the public over here reading our message won't understand
 
 01:16.890 --> 01:23.120
 what we're saying to each other because they don't have this key.
@@ -43,13 +43,13 @@ what we're saying to each other because they don't have this key.
 So again with symmetric encryption anyone who possesses a key can decrypt the message being transferred.
 
 01:30.360 --> 01:34.990
-And S-sh communicates through this shared key.
+And SSH communicates through this shared key.
 
 01:35.100 --> 01:38.640
 And that's that's how we are able to talk to one another.
 
 01:38.660 --> 01:44.460
-That's how was able to talk to Digital Ocean with that server OK.
+That's how was able to talk to Digital Ocean with that server. OK.
 
 01:44.630 --> 01:45.050
 Awesome.
@@ -58,7 +58,7 @@ Awesome.
 This looks nice but what is one problem you notice here.
 
 01:51.960 --> 01:53.200
-Can you think of any.
+Can you think of any?
 
 01:53.580 --> 01:57.810
 Well anyone that has the key can decrypt the message.
@@ -70,7 +70,7 @@ So if I was sending my password over to this other computer instead of just hell
 Something really really important.
 
 02:07.480 --> 02:18.850
-If somehow Mr. bad guy happens to find the key or also know this key he or she can find out my password
+If somehow Mr. bad guy happens to find the key or also know this key, he or she can find out my password
 
 02:19.680 --> 02:26.870
 he can decrypt this message just by using the same key as us.
@@ -82,7 +82,7 @@ So we have to get this key in a secure way so that other people can't use it as 
 what it is.
 
 02:36.070 --> 02:45.710
-And this is done through what we call a key exchange algorithm a secure way to exchange these keys without
+And this is done through what we call a key exchange algorithm. A secure way to exchange these keys without
 
 02:46.370 --> 02:48.810
 any bad actors intercepting it.
@@ -94,13 +94,13 @@ And what makes this algorithm particularly secure is the fact that the key is ne
 between the client and the host.
 
 02:57.880 --> 03:05.650
-Instead the two computers share public pieces of data and then manipulate it to independently calculate
+Instead the two computers share public pieces of data, and then manipulate it to independently calculate
 
 03:05.860 --> 03:06.670
-the seeker.
+the secret key.
 
 03:08.240 --> 03:14.840
-So even if another machine captures the publicly shared data it won't be able to calculate the key because
+So even if another machine captures the publicly shared data, it won't be able to calculate the key because
 
 03:15.350 --> 03:22.190
 well this key exchange algorithm which for now is kind of like this magical purple box is not known.
@@ -112,16 +112,16 @@ So without them having this key exchange algorithm they won't be able to ever fi
 key is and don't worry we're going to talk about this in the next video and how this is done.
 
 03:37.220 --> 03:46.790
-But it must be noted that the secret key is specific to each as a say Sheshan and is generated prior
+But it must be noted that the secret key is specific to each SSH session and is generated prior
 
 03:47.120 --> 03:50.370
 to something called Kline's authentication.
 
 03:50.390 --> 04:00.310
-So once the key has been generated between these two parties all packets moving between these two machines
+So once the key has been generated between these two parties, all packets moving between these two machines
 
 04:00.790 --> 04:08.940
-must be encrypted with the key so using symmetrical encryption we're able to communicate in a private
+must be encrypted with this key. So using symmetrical encryption we're able to communicate in a private
 
 04:08.940 --> 04:09.210
 way.
@@ -136,4 +136,4 @@ talk about exactly how we do that.
 I'll see on that one.
 
 04:19.340 --> 04:19.590
-Babai.
+Buh-bye.
