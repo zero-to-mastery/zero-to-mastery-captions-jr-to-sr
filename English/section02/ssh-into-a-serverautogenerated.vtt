@@ -19,7 +19,7 @@ I said share a lot there.
 Oh well now we still need to authenticate.
 
 00:16.700 --> 00:23.830
-So right now I could technically enter the password that was given to me by Digital Ocean and they won't
+So right now I could technically enter the password that was given to me by Digital Ocean and it won't
 
 00:23.840 --> 00:24.880
 show up over here.
@@ -37,7 +37,7 @@ Copy and paste.
 And I'll keep the password the same.
 
 00:40.040 --> 00:45.140
-I'll have to change your password because they just gave me a temporary one so let's just keep it nice
+I'll have to change the password because they just gave me a temporary one, so let's just keep it nice
 
 00:45.140 --> 00:45.880
 and simple.
@@ -58,13 +58,13 @@ But as I said before that is a bit of a hassle.
 You don't want to do that every time.
 
 01:05.180 --> 01:13.430
-So using S-sh we're going to use something called RSA which allows us to provide or prove the identity
+So using SSH we're going to use something called RSA which allows us to provide or prove the identity
 
 01:14.540 --> 01:17.180
 of the person without a password.
 
 01:17.180 --> 01:18.840
-Sounds like magic doesn't it.
+Sounds like magic doesn't it?
 
 01:19.130 --> 01:22.590
 Let's get that set up and show you how we can do that.
@@ -94,7 +94,7 @@ directory.
 And if I look at the files in it I have a few things that you may not have because well this might be
 
 02:05.530 --> 02:07.930
-your first time generating a necessary key.
+your first time generating an SSH key.
 
 02:07.990 --> 02:11.650
 In my case I already have some keys so there's some folders in there.
@@ -103,7 +103,7 @@ In my case I already have some keys so there's some folders in there.
 Don't worry if you don't see them.
 
 02:13.720 --> 02:17.370
-Now if you see an I.D. or a safe file.
+Now if you see an id-rsa file.
 
 02:17.560 --> 02:20.590
 If not you'll have to generate one.
@@ -121,31 +121,31 @@ So that way with this computer with this laptop I can communicate with the serve
 the way we can do that.
 
 02:40.140 --> 02:48.830
-It's quite simple actually we can use the S-sh keys command which you should have on your computer if
+It's quite simple actually we can use the SSH keygen command which you should have on your computer if
 
 02:48.830 --> 02:56.830
-not you may have to install the CLID where you can get it a few parameters.
+not you may have to install the CLI where you can get it a few parameters.
 
 02:56.870 --> 03:02.480
 There's a few that are recommended online but for now just to keep things simple we can just do
 
 03:05.360 --> 03:09.250
-this with whatever your email addresses solve.
+this with whatever your email addresses are.
 
 03:09.380 --> 03:15.510
 In my case I'm just going to do a test at gmail dot com wants to press enter.
 
 03:15.810 --> 03:22.560
-You'll get to ask where you want to save the file and you see over here that it's saving get in my data
+You'll get to ask where you want to save the file and you see over here that it's saving get in my dot
 
 03:22.620 --> 03:23.940
-S-sh folder.
+SSH folder.
 
 03:24.120 --> 03:25.480
 But I also don't want to.
 
 03:25.890 --> 03:30.900
-I already have an ID or a say and I want specifically for Digital Ocean.
+I already have an ID RSA and I want specifically for Digital Ocean.
 
 03:31.110 --> 03:39.210
 So I'm going to go ahead and just copy this and name it Digital Ocean.
@@ -160,7 +160,7 @@ just for extra security if you want.
 In my case I don't really want to say you can just press enter enter and there you go.
 
 03:54.560 --> 03:59.980
-We've just generated a public and private RSA keep.
+We've just generated a public and private RSA key pair.
 
 04:01.060 --> 04:02.200
 Very cool.
@@ -169,10 +169,10 @@ Very cool.
 And now let's clear this.
 
 04:04.420 --> 04:14.970
-If I look at my folder I have the I.D. RSA Digital Ocean and Id say Digital Ocean and pop.
+If I look at my folder I have the ID RSA Digital Ocean and ID RSA Digital Ocean dot pub.
 
 04:15.130 --> 04:18.320
-Now if this is your first time what S-sh.
+Now if this is your first time with SSH.
 
 04:18.580 --> 04:19.540
 Remember this.
@@ -184,7 +184,7 @@ If you remember anything from the section that is does pub which is a public key
 with anybody that you want.
 
 04:28.380 --> 04:36.510
-But this idea RSA Digital Ocean which is a private key never ever ever shared with anybody.
+But this ID RSA Digital Ocean which is a private key never ever ever shared with anybody.
 
 04:36.510 --> 04:40.140
 This is something that only you should keep on your computer.
@@ -214,7 +214,7 @@ online if you want.
 So don't don't worry too much about it about it if you want to read up on what this command does.
 
 05:14.800 --> 05:22.390
-It pretty much just copies whatever's inside though Id say disclosure in God PABX remember only the
+It pretty much just copies whatever's inside though, id_rsa_digitalocean dot pub, remember only the
 
 05:22.390 --> 05:23.730
 public key that we're sharing.
@@ -223,34 +223,34 @@ public key that we're sharing.
 So I'm going to press enter here and I've copied this to my clipboard.
 
 05:29.570 --> 05:42.410
-Now if I go into S-sh to my Digital Ocean server see that I'm connected over here by the way if you're
+Now if I go into SSH to my Digital Ocean server see that I'm connected over here by the way if you're
 
 05:42.410 --> 05:49.750
 wondering why I was able to log in this is because it's the same session actually exit the session it
 
 05:49.800 --> 05:52.370
-will last me for the password to get.
+will last me for the password again.
 
 05:52.450 --> 05:58.350
 For now we can do the same thing on this server.
 
 05:58.420 --> 06:07.640
-We can make a directory called Dot S-sh just like we have on our computer.
+We can make a directory called Dot SSH just like we have on our computer.
 
 06:07.730 --> 06:09.140
 And I can't spell.
 
 06:09.170 --> 06:15.920
-So make directory and looks like the S-sh file already exists.
+So make directory and looks like the SSH file already exists.
 
 06:15.920 --> 06:20.050
-So let's just do Alice and you'll see over here that I can't see it.
+So let's just do "ls" and you'll see over here that I can't see it.
 
 06:20.120 --> 06:27.430
-That is because it is a hidden file remember I'll have to do a dash a to show our hidden Fox which is
+That is because it is a hidden file remember I'll have to do a dash a to show our hidden files which is
 
 06:27.740 --> 06:29.570
-S-sh over here.
+dot SSH over here.
 
 06:29.570 --> 06:30.140
 Very cool.
@@ -259,7 +259,7 @@ Very cool.
 Let me clear this.
 
 06:34.320 --> 06:39.370
-Now we go into our DOT S-sh file and I cannot type.
+Now we go into our DOT SSH file and I cannot type.
 
 06:39.360 --> 06:40.610
 Let's try that again.
@@ -268,7 +268,7 @@ Let's try that again.
 All right.
 
 06:42.680 --> 06:52.290
-We're here in our S-sh And if we look over here we have already just by default from Digital Ocean known
+We're here in our SSH and if we look over here we have already just by default from Digital Ocean known
 
 06:52.290 --> 06:55.310
 hosts and authorized keys.
@@ -280,16 +280,16 @@ If you don't see this based on whatever server you have you can just create the 
 But for now authorized keys is what we want.
 
 07:04.620 --> 07:14.990
-So we can use something like nano which allows us to add a tax inside of authorized keys now in here
+So we can use something like nano which allows us to edit text inside of authorized keys. Now in here
 
 07:15.000 --> 07:20.580
 all we have to do is copy and paste our key that we had copied previously.
 
 07:20.580 --> 07:27.810
-So this is our public key from our desktop that we just pasted in here with Neno you can see over here
+So this is our public key from our desktop that we just pasted in here with Nano you can see over here
 
 07:27.810 --> 07:37.140
-to X it you have to hit command X or control X and then we want to modify and save We'll press Y and
+to exit you have to hit command X or control X and then we want to modify and save We'll press Y and
 
 07:37.140 --> 07:39.900
 then press enter.
@@ -298,16 +298,16 @@ then press enter.
 All right so now if I do.
 
 07:42.580 --> 07:51.130
-LS I see that I have authorized keys and in it we have our public infight exit.
+LS I see that I have authorized keys and in it we have our public, and if I exit.
 
 07:51.210 --> 07:55.300
 Now well let's try this.
 
 07:55.300 --> 08:05.750
-I'm going to S-sh into my root folder or let's end the session to make sure that it doesn't ask us for
+I'm going to SSH into my root folder or let's end the session to make sure that it doesn't ask us for
 
 08:05.750 --> 08:12.950
-a password and I'm going to see if I can enter it directly through S-sh with our keys without having
+a password and I'm going to see if I can enter it directly through SSH with our keys without having
 
 08:12.950 --> 08:15.600
 to worry about passwords.
@@ -322,16 +322,16 @@ All right so as I say each and you see here that we just got a permission denied
 bit tricky here.
 
 08:32.110 --> 08:40.930
-You may have this only if you're like me and in your S-sh it's all in your S-sh folder you have multiple
+You may have this only if you're like me and in your SSH it's all in your SSH folder you have multiple
 
 08:41.320 --> 08:43.110
-ID essays.
+ID RSAs.
 
 08:43.330 --> 08:50.750
 So you want to make sure that it's using the right public key for this connection.
 
 08:50.750 --> 08:58.100
-So in our case we can just simply do this command which is as I say add and then grab the public key
+So in our case we can just simply do this command which is SSH dash add and then grab the public key
 
 08:58.240 --> 09:03.430
 that we just used and sorry grab your private key which you've created.
@@ -343,16 +343,16 @@ Press Enter Oh and you don't want to have your.
 You want this.
 
 09:12.660 --> 09:14.350
-All right so my identity was.
+All right so my identity was added.
 
 09:14.360 --> 09:16.350
-So let's try S-sh ing again
+So let's try SSH ing again
 
 09:25.170 --> 09:26.460
-hand look at that.
+and look at that.
 
 09:26.830 --> 09:32.230
-We have as insatiate into our box we've proven that this is us.
+We have as SSHed into our box we've proven that this is us.
 
 09:32.230 --> 09:38.410
 This computer belongs to us and we have the authority to connect to the server and run any commands
@@ -361,22 +361,22 @@ This computer belongs to us and we have the authority to connect to the server a
 we want.
 
 09:41.870 --> 09:46.340
-All right Hosam we've done all of this and you're asking yourself.
+All right awesome, we've done all of this and you're asking yourself.
 
 09:46.460 --> 09:51.560
 I feel like I just wasted a bunch of time learning this and it doesn't really relate to web development
 
 09:51.590 --> 09:55.190
-or how I can set up S-sh with get Hobb and that's easy to do.
+or how I can set up SSH with GitHub and that's easy to do.
 
 09:55.190 --> 09:59.210
-Andrea why are you bothering me with this.
+Andrei why are you bothering me with this?
 
 09:59.230 --> 10:03.540
 Don't worry we are going to tie everything together in the next video.
 
 10:04.000 --> 10:13.500
-So you see why all this hard work is going to payoff finally when we finish up with this section by
+So you see why all this hard work is going to payoff finally when we finish up with this section, by
 
 10:13.500 --> 10:16.660
 the way just for fun just to see that this works.
@@ -385,19 +385,19 @@ the way just for fun just to see that this works.
 I'm going to let's clear this actually.
 
 10:21.080 --> 10:34.290
-I'm going to go into my essays folder and if I go into the authorization keys or authorized keys I'm
+I'm going to go into my SSH folder and if I go into the authorization keys or authorized keys I'm
 
 10:34.290 --> 10:40.790
 going to delete this line I'm going to save it.
 
 10:40.890 --> 10:45.900
-And then finally I'm going to exit out of this close my terminal
+And then finally I'm going to exit out of this, close my terminal,
 
 10:49.170 --> 10:57.590
-reopen the terminal over here let's clear this reopen the terminal over here and let's try S-sh.
+reopen the terminal over here, let's clear this reopen the terminal over here and let's try SSHing.
 
 10:57.620 --> 11:01.930
-And to our server.
+into our server.
 
 11:02.170 --> 11:02.980
 Permission denied.
@@ -406,7 +406,7 @@ Permission denied.
 But let's do this command that we did before.
 
 11:06.600 --> 11:12.540
-We've added the identity free S-sh.
+We've added the identity SSH.
 
 11:12.920 --> 11:15.440
 Permission is denied.
@@ -418,34 +418,34 @@ Because we no longer have our keys.
 We no longer share the public key with the server and the authorized keys folder.
 
 11:29.810 --> 11:35.120
-Now we see that we cannot S-sh anymore by the way.
+Now we see that we cannot SSH in anymore by the way.
 
 11:35.120 --> 11:40.630
-Does the ocean doesn't actually expect every one of their user to be able to know how to do this.
+Digital ocean doesn't actually expect every one of their user to be able to know how to do this.
 
 11:41.690 --> 11:48.410
-They actually have a really nice easy interface that you can use to add S-sh keys which actually works
+They actually have a really nice easy interface that you can use to add SSH keys which actually works
 
 11:48.410 --> 11:50.140
-very similar with get help.
+very similar with GitHub.
 
 11:50.150 --> 11:52.550
 So let's just copy our
 
 11:55.030 --> 11:59.220
-S-sh key again that we created for Digital Ocean.
+SSH key again that we created for Digital Ocean.
 
 11:59.500 --> 12:08.400
 And if I go to Digital Ocean over here I can go to my profile settings
 
 12:11.500 --> 12:16.010
-and if we go to security you see that they have S-sh keys.
+and if we go to security you see that they have SSH keys.
 
 12:16.210 --> 12:23.300
-I can add my S-sh key copy and paste and I'll just name it.
+I can add my SSH key copy and paste and I'll just name it.
 
 12:23.300 --> 12:32.930
-Test had the S-sh key which does the exact same thing that we did from the terminal except well it looks
+Test and add the SSH key which does the exact same thing that we did from the terminal except well it looks
 
 12:32.930 --> 12:33.330
 nicer.
@@ -460,16 +460,16 @@ All right.
 So there you have it.
 
 12:41.650 --> 12:51.700
-We're able to use all these tools symmetrical encryption asymmetrical encryption hashing in order to
+We're able to use all these tools symmetrical encryption, asymmetrical encryption, hashing, in order to
 
 12:51.790 --> 13:00.280
-securely connect to a host and even be able to authenticate through S-sh.
+securely connect to a host and even be able to authenticate through SSH.
 
 13:00.320 --> 13:07.790
-So with all of that knowledge in mind we're now going to look at our task at hand that Bruno asks us
+So with all of that knowledge in mind, we're now going to look at our task at hand that Bruno asks us
 
 13:07.790 --> 13:11.630
-to do and that is set up S-sh with get help.
+to do and that is set up SSH with GitHub.
 
 13:11.690 --> 13:13.160
-I'll see in the next one Bebai.
+I'll see in the next one. Buh-Bye.
