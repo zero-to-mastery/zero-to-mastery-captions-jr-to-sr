@@ -1,0 +1,193 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:03.320
+Hei, Bruno di sini.
+
+00:00:03.410 --> 00:00:07.190
+Ya Tuhan aplikasi ini terlihat luar biasa.
+
+00:00:07.190 --> 00:00:09.410
+Saya suka hal redux ini dan lihat ini.
+
+00:00:09.410 --> 00:00:13.580
+Logging akan menjadi luar biasa Saya pikir pengembang kami benar-benar akan menikmati ini
+
+00:00:13.730 --> 00:00:20.990
+Dan saya pikir aplikasi kami dapat mengukur dengan sangat baik sekarang dengan kami dapat melacak semua tindakan ini.
+
+00:00:21.020 --> 00:00:22.670
+Pekerjaan super luar biasa.
+
+00:00:22.820 --> 00:00:26.310
+Sangat senang saya memiliki Anda dengan baik.
+
+00:00:26.390 --> 00:00:29.030
+Brunos sangat bersemangat dengan pekerjaan kami.
+
+00:00:29.030 --> 00:00:33.980
+Saya pikir kami melakukan beberapa pekerjaan yang baik untuknya, tetapi masih banyak yang harus dipelajari dan saya
+
+00:00:33.980 --> 00:00:37.130
+merasa dia akan meminta kami melakukan lebih banyak hal lagi.
+
+00:00:37.580 --> 00:00:43.040
+Mari kita tinjau apa yang baru saja kita pelajari dan saya akan melihat diagram ini yang mungkin
+
+00:00:43.040 --> 00:00:45.480
+tidak masuk akal bagi Anda di awal.
+
+00:00:45.800 --> 00:00:47.740
+Tapi sekarang seharusnya sudah cukup jelas.
+
+00:00:48.230 --> 00:00:54.550
+Kami telah bereaksi yang memungkinkan kami untuk mengelola negara dengan keadaan ini tetapi tidak terlalu baik.
+
+00:00:54.560 --> 00:01:03.380
+Setelah aplikasi kami tumbuh, aplikasi tersebut dapat menjadi sangat sibuk dan mencapai kondisi di mana komponen kami terlihat seperti ini
+
+00:01:03.380 --> 00:01:06.080
+dengan semua kondisi yang perlu dikelola.
+
+00:01:07.420 --> 00:01:15.580
+Untungnya bagi kami dengan redux, kami dapat membuat toko dan mengirimkan tindakan ini ke toko dan semua
+
+00:01:16.060 --> 00:01:19.030
+komponen yang terhubung hanya akan mendengarkan.
+
+00:01:19.510 --> 00:01:24.250
+Dan hal yang keren tentang itu adalah bahwa kita tidak harus menurunkan alat peraga lagi.
+
+00:01:24.250 --> 00:01:32.740
+Kita dapat menghubungkan komponen kita ke mana pun kita mau. Kita dapat menghubungkan komponen ini jika kita ingin kita dapat menghubungkan
+
+00:01:32.740 --> 00:01:35.660
+komponen mana saja yang ingin kita sambungkan.
+
+00:01:35.710 --> 00:01:39.790
+Itu terserah kita tapi itu membuat semuanya dalam satu lokasi menyenangkan dan mudah.
+
+00:01:41.950 --> 00:01:44.250
+Sekarang aplikasi kita akan terlihat seperti ini.
+
+00:01:47.390 --> 00:01:55.090
+Dan akhirnya kami berbicara tentang mengapa menggunakan redux. Nah itu masuk akal sekarang.
+
+00:01:55.120 --> 00:01:57.660
+Ini bagus untuk mengelola negara besar.
+
+00:01:57.820 --> 00:02:05.330
+Kami dapat berbagi data antar wadah dan sekarang kami memahami tiga prinsip yang membuatnya sangat mudah diprediksi.
+
+00:02:05.410 --> 00:02:08.630
+Yang pertama adalah fakta bahwa itu adalah satu sumber kebenaran.
+
+00:02:08.650 --> 00:02:12.140
+Kami hanya memiliki satu objek javascript besar yang perlu dikhawatirkan.
+
+00:02:12.160 --> 00:02:17.800
+Itu menggambarkan aplikasi kita negara kita negara bagian juga hanya baca.
+
+00:02:18.010 --> 00:02:21.220
+Setiap kali peredam kami mengeluarkan kondisi baru.
+
+00:02:21.220 --> 00:02:23.430
+Jadi kami tidak pernah memodifikasi apa pun.
+
+00:02:23.530 --> 00:02:29.320
+Dan kita selalu dapat melakukan hal-hal keren seperti kembali ke masa lalu dan menjalankan tindakan untuk
+
+00:02:29.560 --> 00:02:37.240
+melihat keadaan apa yang kita peroleh atau keadaan seperti apa yang akhirnya kita masuki ke tampilan seperti mengetik a ke roda pencarian
+
+00:02:37.240 --> 00:02:39.190
+dan mendapatkan robot yang sesuai.
+
+00:02:40.140 --> 00:02:47.640
+Dan akhirnya semua perubahan dilakukan menggunakan fungsi murni, teknik hebat yang menghindari efek samping
+
+00:02:47.640 --> 00:02:51.260
+sehingga aplikasi kami benar-benar dapat diprediksi.
+
+00:02:53.830 --> 00:03:00.430
+Kami belajar tentang diagram ini dan bagaimana semuanya mengalir dengan baik yang Anda tahu secara terarah kami memiliki tindakan yang
+
+00:03:00.430 --> 00:03:05.030
+mungkin atau mungkin tidak melalui logam sedangkan kami memiliki reduksi yang kami simpan.
+
+00:03:05.140 --> 00:03:06.050
+Kami melakukan perubahan.
+
+00:03:06.070 --> 00:03:11.510
+Dan setiap kali ada tindakan kita kembali dan memiliki aliran uni directional ini.
+
+00:03:12.220 --> 00:03:18.910
+Dan sekarang alih-alih memiliki aplikasi yang katakanlah gunakan Jay Querrey di masa lalu yang memiliki semua
+
+00:03:18.910 --> 00:03:26.250
+logika kompleks yang dapat kita pikirkan atau kita tidak masuk akal di kepala kita sekarang dapat terlihat seperti ini.
+
+00:03:26.260 --> 00:03:28.240
+Semuanya mengalir dengan baik.
+
+00:03:31.340 --> 00:03:40.380
+Dan akhirnya poin terakhir adalah bahwa redoks tidak berarti bahwa dia dapat menggunakan keadaan titik ini lagi untuk hal-hal seperti mungkin
+
+00:03:40.380 --> 00:03:47.850
+sebuah tanda kecil dalam bentuk kita mungkin ingin tetap menggunakan keadaan ini di sini karena kita
+
+00:03:47.850 --> 00:03:51.630
+tidak perlu meletakkan semuanya di toko X baca.
+
+00:03:51.630 --> 00:03:57.840
+Kita sebagai pengembang dapat memutuskan apa yang masuk ke dalam ini atau menyimpan dan apa yang minor
+
+00:03:57.840 --> 00:04:05.400
+dan cukup penting sehingga kita masih bisa menggunakan keadaan ini bereaksi dalam kerja redoks bersama-sama dan kita merancang seperti apa seharusnya aplikasi
+
+00:04:05.400 --> 00:04:05.960
+kita.
+
+00:04:07.160 --> 00:04:14.540
+Akhirnya ini semua mulai masuk akal sekarang jalur render kritis ini baru saja diperbaiki.
+
+00:04:15.540 --> 00:04:23.490
+Kami mengetahui bahwa Westpac membantu kami menggabungkan file-file ini dengan cara yang mudah dan menyenangkan sehingga kami dapat mengirimkan
+
+00:04:23.550 --> 00:04:27.190
+file javascript yang paling optimal ke ujung depan.
+
+00:04:28.110 --> 00:04:34.680
+Dan di bagian kinerja bagian 2 Anda sebenarnya akan belajar beberapa trik lagi yang bisa kita
+
+00:04:35.070 --> 00:04:38.340
+lakukan dengan paket apa untuk mengoptimalkan ini.
+
+00:04:38.340 --> 00:04:44.950
+Kami juga sekarang mengerti mengapa reduks dan bertindak kembali bekerja dengan baik bersama.
+
+00:04:45.150 --> 00:04:50.240
+Satu untuk bereaksi untuk meminimalkan jumlah pembaruan Dohm yang perlu kita buat.
+
+00:04:50.250 --> 00:04:58.080
+Ini akan menjadi TELEGIN memutuskan apa yang sebenarnya perlu diberikan dan redux menambah reaksi dengan membuatnya lebih mudah bagi kita
+
+00:04:58.080 --> 00:05:02.950
+untuk memahami ketika aplikasi kita menjadi lebih besar dan lebih besar.
+
+00:05:03.750 --> 00:05:04.520
+Baiklah.
+
+00:05:04.650 --> 00:05:08.930
+Itu bagian yang sulit tapi saya senang Anda sampai di sini sejauh ini.
+
+00:05:08.940 --> 00:05:14.050
+Saya harap Anda terus maju karena ada banyak barang lain yang muncul.
+
+00:05:14.100 --> 00:05:15.270
+Aku tak sabar untuk itu.
+
+00:05:15.270 --> 00:05:17.080
+Saya harap kamu juga.
+
+00:05:17.100 --> 00:05:18.100
+Sampai jumpa di yang berikutnya.

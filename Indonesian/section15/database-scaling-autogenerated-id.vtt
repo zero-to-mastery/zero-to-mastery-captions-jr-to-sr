@@ -1,0 +1,385 @@
+﻿WEBVTT
+
+00:00:00.910 --> 00:00:02.130
+Selamat datang kembali.
+
+00:00:02.170 --> 00:00:09.880
+Mari kita bicara tentang database tetapi saya akan memberi Anda kepala sebagai pengembang web Anda mungkin tidak benar-benar
+
+00:00:10.210 --> 00:00:16.540
+bekerja terlalu banyak dengan database terutama ketika datang untuk meningkatkan dan meningkatkan kinerja mereka.
+
+00:00:16.540 --> 00:00:22.530
+Namun kita dapat melihat pada basis data dari tingkat yang lebih tinggi sehingga kita dapat menghubungkan bagian-bagian itu.
+
+00:00:22.630 --> 00:00:28.870
+Dan jika hal itu terjadi, kita dapat menyusun aplikasi kita sehingga memanfaatkan
+
+00:00:28.870 --> 00:00:32.050
+basis data yang sudah diatur.
+
+00:00:32.110 --> 00:00:38.250
+Jadi mari kita ambil tinjauan tingkat tinggi tentang apa yang bisa kita lakukan dengan database
+
+00:00:38.380 --> 00:00:46.450
+Saya telah membuat daftar di sini enam item yang merupakan cara utama agar skala dapat ditingkatkan dan yang
+
+00:00:46.510 --> 00:00:53.650
+pertama mungkin adalah yang paling penting yang harus Anda perhatikan sebelum Anda melakukan optimasi pada
+
+00:00:53.650 --> 00:00:54.460
+database.
+
+00:00:55.230 --> 00:01:01.050
+Dan itu untuk mengidentifikasi pertanyaan yang tidak efisien sebelum Anda mulai melihat basis data Anda dan bagaimana Anda bisa
+
+00:01:01.050 --> 00:01:01.910
+skala itu.
+
+00:01:02.130 --> 00:01:04.630
+Membuang lebih banyak uang untuk memperbaikinya.
+
+00:01:04.710 --> 00:01:10.000
+Pertama-tama Anda harus bertanya pada diri sendiri Apakah saya menggunakan database secara efisien.
+
+00:01:10.140 --> 00:01:18.510
+Apakah saya membuat pernyataan ke database dari saya katakan saja server API Apakah saya membuat permintaan ini dengan
+
+00:01:18.510 --> 00:01:20.570
+cara yang efisien mungkin.
+
+00:01:20.670 --> 00:01:27.930
+Dan ada banyak cara yang dapat Anda perbaiki yaitu tidak memiliki terlalu banyak sendi atau meminta terlalu banyak
+
+00:01:27.930 --> 00:01:30.840
+informasi ketika Anda hanya membutuhkan sedikit informasi.
+
+00:01:30.840 --> 00:01:35.760
+Ada banyak cara yang dapat Anda tingkatkan untuk menanyakan semua pertanyaan, tetapi dua
+
+00:01:35.760 --> 00:01:42.800
+hal utama yang dapat Anda tingkatkan adalah memastikan bahwa Anda hanya meminta tempat yang benar-benar Anda butuhkan di server.
+
+00:01:42.900 --> 00:01:50.490
+Dan akhirnya menggunakan hal-hal seperti indeks untuk meningkatkan kueri data ini.
+
+00:01:50.490 --> 00:01:52.540
+Sekarang apa itu indeks.
+
+00:01:52.570 --> 00:01:58.550
+Yah biasanya akses data dalam database dilakukan dengan blok pada disk.
+
+00:01:58.590 --> 00:02:10.100
+Saat itulah kami meminta database atau tabel, kami harus meminta akses seluruh blok disk dengan informasi tabel
+
+00:02:10.100 --> 00:02:11.240
+tersebut.
+
+00:02:11.240 --> 00:02:12.740
+Dan biasanya data ini.
+
+00:02:12.800 --> 00:02:16.440
+Katakanlah saya memiliki nama pengguna dan usia tidak diurutkan.
+
+00:02:16.520 --> 00:02:21.780
+Jadi jika saya sedang mencari pengguna yang berusia 34 tahun.
+
+00:02:21.950 --> 00:02:30.320
+Yah itu akan mengharuskan saya untuk melihat seluruh tabel sedangkan jika data itu diurutkan saya bisa melakukan sesuatu yang
+
+00:02:30.320 --> 00:02:36.780
+disebut pencarian biner yang membuatnya lebih cepat bagi saya untuk menemukan pengguna itu.
+
+00:02:36.800 --> 00:02:41.870
+Jadi ada peningkatan kinerja yang sangat besar dengan melakukan apa yang kita sebut pengindeksan.
+
+00:02:42.110 --> 00:02:47.490
+Jadi ingatlah bahwa pengindeksan adalah cara untuk menyortir sejumlah catatan pada berbagai bidang.
+
+00:02:48.590 --> 00:02:56.360
+Jadi jika saya membuat indeks pada bidang yang usia tabel pengguna itu membuat salinan baru dari struktur
+
+00:02:56.360 --> 00:03:02.720
+data yang memegang nilai bidang dan pointer ke catatan yang berkaitan dengan itu.
+
+00:03:02.720 --> 00:03:08.300
+Jadi anggap itu sebagai membuat file di komputer Anda alih-alih hanya memiliki file stabil pengguna.
+
+00:03:08.300 --> 00:03:11.660
+Sekarang Anda juga memiliki file indeks pengguna.
+
+00:03:11.910 --> 00:03:18.230
+Tetapi lain kali kami menanyakan pertanyaan usia pengguna, kami hanya dapat menggunakan file indeks itu untuk segera
+
+00:03:18.230 --> 00:03:21.230
+menemukan pengguna yang memungkinkan kami menggunakan pencarian biner.
+
+00:03:21.260 --> 00:03:26.620
+Sekali lagi untuk benar-benar meningkatkan kinerja.
+
+00:03:26.710 --> 00:03:32.290
+Sekarang downside jelas untuk pengindeksan adalah bahwa indeks ini membutuhkan ruang tambahan pada disk.
+
+00:03:32.290 --> 00:03:40.360
+Sekali lagi kami membuat file lain dan tergantung pada sistem Anda memiliki lebih banyak dan lebih banyak ruang mungkin
+
+00:03:40.360 --> 00:03:44.680
+terutama jika database besar mungkin tidak berfungsi dengan baik.
+
+00:03:44.780 --> 00:03:45.080
+Baiklah.
+
+00:03:45.080 --> 00:03:47.820
+Jadi semua indeks ini berbicara dan pertanyaan tidak efisien.
+
+00:03:47.930 --> 00:03:50.010
+Bagaimana saya bisa benar-benar membuat indeks.
+
+00:03:50.330 --> 00:03:57.710
+Yah ingatlah kami condong semua pernyataan untuk membuat tabel kami melakukan perintah buat tabel dan kemudian kami
+
+00:03:57.710 --> 00:04:00.470
+memberinya nama tabel untuk membuat indeks.
+
+00:04:00.470 --> 00:04:05.170
+Kami hanya mengatakan membuat reaking indeks memiliki nama indeks.
+
+00:04:05.210 --> 00:04:09.730
+Katakanlah gunakan umur Anda pada nama tabel.
+
+00:04:09.740 --> 00:04:13.970
+Dalam kasus pengguna kami dan usia nama kolom dan hanya itu.
+
+00:04:13.970 --> 00:04:25.660
+Setelah kami melakukannya setiap kali kami meminta tabel pengguna kami untuk sesuatu seperti H, kami memiliki kueri WAY lebih cepat lagi ketika datang ke Eskew yang
+
+00:04:26.350 --> 00:04:32.430
+efisien atau perintah itu adalah sesuatu yang biasanya Anda miliki untuk tim database atau
+
+00:04:32.470 --> 00:04:34.050
+insinyur basis data.
+
+00:04:34.370 --> 00:04:40.030
+Tetapi membuat hal-hal sederhana seperti indeks atau memastikan bahwa Anda hanya meminta apa yang
+
+00:04:40.090 --> 00:04:43.980
+Anda butuhkan dari aplikasi adalah cara untuk melakukannya.
+
+00:04:44.020 --> 00:04:48.760
+Ingat, penyimpanan adalah bagian paling lambat dalam basis data relasional.
+
+00:04:48.850 --> 00:05:00.640
+Wombat Escorial Querrey dapat menyebabkan keterlambatan yang sangat besar atau lebih topik berikutnya adalah meningkatkan memori.
+
+00:05:00.790 --> 00:05:02.980
+Dan ini sederhana sekali.
+
+00:05:03.310 --> 00:05:10.510
+Jika Anda memiliki hambatan yang merupakan penyimpanan Anda, tindakan pertama Anda biasanya setelah Anda melihat
+
+00:05:10.510 --> 00:05:17.980
+pertanyaan yang tidak efisien adalah memberikannya memori tambahan dan Anda melakukannya dengan meningkatkan perangkat keras yang sedang
+
+00:05:17.980 --> 00:05:20.050
+dikerjakan oleh basis data.
+
+00:05:20.050 --> 00:05:26.710
+Dengan meningkatkan jumlah informasi dalam memori Anda tidak mengakses disk sesering Anda meningkatkan kecepatan sehingga
+
+00:05:26.710 --> 00:05:31.310
+Anda dapat menyimpan lebih banyak informasi dalam memori untuk database.
+
+00:05:32.540 --> 00:05:37.140
+Tetapi seperti halnya dengan ketika datang ke memori itu hanya dapat menambah jumlah tertentu.
+
+00:05:37.220 --> 00:05:40.920
+Anda tidak akan dapat menambahkan seluruh database dalam memori.
+
+00:05:40.920 --> 00:05:42.150
+Mari kita bicarakan yang berikutnya.
+
+00:05:42.250 --> 00:05:44.490
+Dan itu adalah penskalaan vertikal.
+
+00:05:44.690 --> 00:05:51.650
+Dan ini biasanya dilakukan dengan sesuatu seperti S merah atau memcached dan rattus adalah sesuatu yang kita kenal
+
+00:05:51.650 --> 00:05:56.880
+dan kita sudah bicara tentang penskalaan vertikal juga dapat mencakup peningkatan memori.
+
+00:05:57.080 --> 00:06:03.740
+Tetapi dalam hal ini kita berbicara tentang menambahkan layanan lain sehingga sistem Anda secara efektif menggunakan
+
+00:06:03.740 --> 00:06:05.600
+sumber daya lebih baik.
+
+00:06:05.660 --> 00:06:13.390
+Jadi menambahkan sistem seperti sewa adalah seperti menambahkan memori tetapi tidak melakukannya di server yang sama seperti yang kita miliki
+
+00:06:13.390 --> 00:06:14.940
+dalam kasus pertama.
+
+00:06:14.950 --> 00:06:22.570
+Jadi dengan menambahkan server lain yang telah membaca kita yaitu penyimpanan memori yang lagi-lagi kita tahu bahwa membuat segalanya
+
+00:06:22.570 --> 00:06:27.230
+menjadi cepat berarti kita baru saja meningkatkan memori basis data kita.
+
+00:06:27.310 --> 00:06:28.900
+Tetapi bagaimana hal itu membantu kita.
+
+00:06:29.260 --> 00:06:37.750
+Sebagai contoh, jika kita menanyakan permintaan seperti usia pengguna dan kita terus memperhatikan bahwa permintaan untuk menanyakan usia pengguna selalu
+
+00:06:37.750 --> 00:06:46.210
+terjadi dan setiap pengguna menggunakannya dengan baik, kita dapat benar-benar mencairkan uang tunai sebagai tanggapan lagi sesuatu yang akan kita
+
+00:06:46.780 --> 00:06:54.640
+bicarakan tetapi akan mengatakan hei bahkan sebelum Anda bertanya kepada saya tentang penggunaan usia baca kami yang ada
+
+00:06:54.750 --> 00:06:58.190
+di memori jauh lebih cepat daripada saya.
+
+00:06:58.510 --> 00:07:03.550
+Periksa apakah bapak rattus atau Mrs. sewa memiliki informasi itu.
+
+00:07:03.700 --> 00:07:05.970
+Jika berhasil, kembalikan saja.
+
+00:07:05.980 --> 00:07:09.790
+Kalau tidak, berikan informasi itu kepada saya dan saya akan mengembalikannya kepada Anda.
+
+00:07:10.060 --> 00:07:15.580
+Tetapi ketika saya mengembalikan mereka usia pengguna saya benar-benar akan pergi melalui rattus dan jika rattus
+
+00:07:15.590 --> 00:07:19.540
+belum memilikinya saya hanya akan menyimpannya di sana sebelum saya kirimkan.
+
+00:07:19.540 --> 00:07:23.750
+Jadi agak mirip dengan CD jika Anda memikirkannya.
+
+00:07:24.190 --> 00:07:32.630
+Sekali lagi kami hanya menguangkan hal-hal yang sering diminta sehingga kami menggunakan akses memori daripada
+
+00:07:32.630 --> 00:07:33.770
+akses disk.
+
+00:07:35.410 --> 00:07:43.170
+Pilihan lain untuk basis data adalah sesuatu yang disebut Shardik dan saya ingin memperingatkan Anda tentang shirting adalah salah
+
+00:07:43.170 --> 00:07:47.960
+satu dari hal-hal yang terdengar masuk akal tetapi sangat sulit dilakukan.
+
+00:07:48.870 --> 00:07:50.710
+Dan itu masalah yang sangat sulit.
+
+00:07:50.790 --> 00:07:57.930
+Itu menimbulkan banyak masalah yang kemungkinan besar tidak akan pernah Anda terapkan dengan korslet karena
+
+00:07:57.930 --> 00:08:03.840
+animasi ini baru saja diperlihatkan hanya menghancurkan situs Web menjadi beberapa bagian.
+
+00:08:03.840 --> 00:08:08.670
+Ketika Anda mulai memiliki lebih banyak toko di basis data, ia menjadi terlalu besar untuk ditangani.
+
+00:08:08.790 --> 00:08:15.390
+Jadi, Anda memecah data mungkin oleh pengguna yang lebih muda dari 30 dan pengguna yang
+
+00:08:15.390 --> 00:08:21.900
+lebih tua dari 30 sehingga ketika Anda membuat kueri alih-alih menelusuri seluruh daftar
+
+00:08:21.900 --> 00:08:29.630
+pengguna jika kami tahu pengguna berusia 23 kami hanya dapat meminta untuk query database ini, bukan yang ini.
+
+00:08:30.640 --> 00:08:35.780
+Hal lain yang bisa kita lakukan adalah menambahkan lebih banyak database ke masalahnya.
+
+00:08:36.600 --> 00:08:41.870
+Jadi dengan memiliki banyak basis data, kita dapat memiliki lebih banyak opsi di sini.
+
+00:08:42.000 --> 00:08:48.780
+Jika seribu pengguna meminta informasi pengguna pada saat yang sama alih-alih memberikan seribu permintaan ke database
+
+00:08:48.960 --> 00:08:55.350
+ini pada saat yang sama, mengapa tidak memberikan 300 333 permintaan untuk yang satu ini.
+
+00:08:55.350 --> 00:09:01.620
+Kemudian 333 untuk yang ini dan 334 untuk yang ini dan mendistribusikan beban.
+
+00:09:01.760 --> 00:09:08.340
+Dan ini adalah sesuatu yang databasenya seperti postscript dapat datang dengan pra-konfigurasi sehingga jika Anda menambahkan lebih
+
+00:09:08.760 --> 00:09:14.040
+banyak kumpulan database atau kumpulan postscript itu melakukan ini secara otomatis untuk Anda.
+
+00:09:14.160 --> 00:09:20.550
+Atau kami dapat menempatkan penyeimbang beban Anda sendiri di depannya untuk mendistribusikan beban ini.
+
+00:09:20.550 --> 00:09:29.750
+Lagi-lagi penyeimbang rendah adalah sesuatu yang akan dibahas di bagian ini dan akhirnya kami memiliki tipe-tipe database yang
+
+00:09:31.280 --> 00:09:34.170
+hanya bisa dilakukan oleh database.
+
+00:09:34.280 --> 00:09:42.170
+Setiap basis data bagus dalam hal spesifiknya tetapi beberapa basis data cocok untuk satu hal dan lainnya cocok
+
+00:09:42.170 --> 00:09:43.320
+untuk lainnya.
+
+00:09:43.530 --> 00:09:50.740
+Jadi ketika memilih basis data, Anda harus memutuskan jenis karakteristik atau perilaku apa yang ingin kami keluarkan
+
+00:09:50.750 --> 00:09:52.040
+dari basis data.
+
+00:09:52.040 --> 00:09:55.420
+Dan berdasarkan itu Anda harus memastikan Anda memilih yang tepat.
+
+00:09:55.790 --> 00:10:01.550
+Dan ini adalah sesuatu yang benar-benar akan melukai kepala Anda karena ada banyak
+
+00:10:01.550 --> 00:10:10.530
+basis data di luar sana karena ada begitu banyak cara untuk menyimpan data dan beberapa nama ini mungkin terdengar asing bagi Anda.
+
+00:10:10.530 --> 00:10:12.860
+Kami tahu tentang penyimpanan relasional.
+
+00:10:12.870 --> 00:10:18.400
+Kami telah melihat tulisan tambahan sebelum Anda mungkin pernah mendengar tentang Majeski dengan baik dan kemudian
+
+00:10:18.420 --> 00:10:24.070
+ada dokumen atau penyimpanan yang merupakan bagian dari tidak ada penyelamatan semua atau basis data non relasional.
+
+00:10:24.180 --> 00:10:29.700
+Kami telah belajar tentang rattus dan menyimpan nilai-nilai kunci tetapi ada juga hal-hal seperti
+
+00:10:29.700 --> 00:10:36.750
+basis data Grafik dan Anda tahu untuk Jei atau tabel besar dan daftar hanya berjalan terus dan terus.
+
+00:10:36.960 --> 00:10:39.440
+Sekali lagi jangan biarkan ini membanjiri Anda.
+
+00:10:39.720 --> 00:10:42.390
+Sebagian besar dari ini Anda tidak akan pernah menyentuh dalam karir Anda.
+
+00:10:42.390 --> 00:10:47.460
+Anda hanya ingin tahu apa perbedaannya seperti apa para pemain utama
+
+00:10:47.460 --> 00:10:55.620
+seperti postscripts di saya minta Anda semua Mongo DB rattus tetapi tahu bahwa mereka tersedia bahwa ketika Anda memiliki
+
+00:10:55.620 --> 00:11:01.410
+masalah spesifik ketika Anda membuat mungkin aplikasi jejaring sosial mungkin mencari pada basis
+
+00:11:01.410 --> 00:11:07.260
+data grafik yang benar-benar bagus untuk menyimpan data grafik yang bagus untuk koneksi sosial.
+
+00:11:07.260 --> 00:11:14.550
+Jadi ketika datang ke database ada banyak hal yang harus dilakukan tetapi hanya perlu
+
+00:11:15.090 --> 00:11:20.310
+diingat enam prinsip bagaimana kita dapat meningkatkan skala database.
+
+00:11:20.440 --> 00:11:21.190
+Saya akan melihat yang berikutnya.

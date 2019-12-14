@@ -1,0 +1,718 @@
+﻿WEBVTT
+
+00:00:01.510 --> 00:00:12.490
+Mari kita bicara tentang topik pertama dalam bintang keamanan kita atau bintang keamanan dan ini adalah suntikan di
+
+00:00:13.150 --> 00:00:14.030
+sini.
+
+00:00:14.880 --> 00:00:25.330
+Dan kami memulai dengan suntikan karena ini adalah serangan paling umum selama beberapa tahun
+
+00:00:25.330 --> 00:00:29.550
+terakhir dari semua teknik ini.
+
+00:00:29.580 --> 00:00:31.670
+Ini yang paling umum.
+
+00:00:31.710 --> 00:00:40.770
+Hal yang menyebabkan sebagian besar kerugian finansial dan saya katakan sekitar 50 persen dari waktu jika Anda
+
+00:00:40.830 --> 00:00:42.500
+mencegah suntikan.
+
+00:00:42.870 --> 00:00:47.750
+Anda telah membahas sebagian besar peningkatan keamanan.
+
+00:00:47.800 --> 00:00:52.450
+Jadi mungkin topik yang paling penting dan juga sangat menyenangkan untuk diajarkan.
+
+00:00:52.530 --> 00:00:53.840
+Jadi kita akan mulai dengan yang ini.
+
+00:00:55.310 --> 00:01:02.460
+Sekarang injeksi berarti menyuntikkan kode ke bagian kode lain.
+
+00:01:02.690 --> 00:01:08.090
+Dan ada beberapa cara yang dapat Anda lakukan ini tetapi itu adalah prinsip besar gagasan
+
+00:01:08.090 --> 00:01:15.680
+bahwa kami menerima kode yang tidak benar-benar kami inginkan dari pihak ketiga, pengguna atau orang lain dan mereka berusaha mengacaukan kode kami
+
+00:01:15.680 --> 00:01:19.430
+dan mengubah kode kami. kode dan mungkin melakukan hal-hal buruk.
+
+00:01:20.840 --> 00:01:27.680
+Dan seperti yang saya katakan sebelumnya itu adalah serangan yang paling umum dan salah satu
+
+00:01:27.680 --> 00:01:35.710
+suntikan yang paling terkenal adalah sesuatu yang disebut injeksi sumur Eskew dan ini adalah dua contoh dari semua injeksi.
+
+00:01:36.220 --> 00:01:39.400
+Tapi Anda tahu apa yang baru saja kita lihat pada sepotong teks sekarang.
+
+00:01:39.460 --> 00:01:41.150
+Itu tidak berarti apa-apa.
+
+00:01:41.530 --> 00:01:45.300
+Mari kita benar-benar melakukan injeksi bahan bakar berikutnya dan lihat cara kerjanya.
+
+00:01:48.200 --> 00:01:55.970
+Saya akan menggunakan sekuel yang merupakan basis data untuk Mac tetapi ada banyak versi lain untuk Windows dan
+
+00:01:55.970 --> 00:01:57.950
+Linux yang Anda gunakan.
+
+00:01:57.950 --> 00:02:04.360
+Ini pada dasarnya adalah antarmuka pengguna grafis untuk bermain-main dengan database Anda.
+
+00:02:04.430 --> 00:02:12.420
+Jadi saya akan menggunakan ini dan saya harus membukanya di sini seperti yang Anda lihat saya punya dua tabel di
+
+00:02:12.520 --> 00:02:14.260
+sini login dan pengguna.
+
+00:02:14.420 --> 00:02:20.560
+Sebelum latihan ini, mari kita buat tabel baru dan saya sudah membuat pernyataan Eskew all di
+
+00:02:20.560 --> 00:02:21.240
+sini.
+
+00:02:22.230 --> 00:02:28.560
+Dan lagi jika Anda tidak 100 persen nyaman dengan SU semua maka saya membahas topik itu di kursus saya yang
+
+00:02:28.560 --> 00:02:30.810
+lain jadi saya sarankan Anda memeriksanya.
+
+00:02:30.810 --> 00:02:33.840
+Atau Anda dapat menemukan sumber daya online yang sangat bagus untuk itu.
+
+00:02:33.840 --> 00:02:38.410
+Yang saya katakan adalah saya ingin membuat tabel baru bernama ask you all injection.
+
+00:02:38.520 --> 00:02:44.620
+Ini akan memiliki kolom ID dan kolom email jika saya klik.
+
+00:02:44.660 --> 00:02:48.410
+Ron Querrey Ini dia.
+
+00:02:48.660 --> 00:02:55.810
+Jika saya menyegarkan sekarang, saya melihat bahwa kami telah membuat tabel baru bernama rescue all injection
+
+00:02:55.950 --> 00:02:59.460
+Sekarang tidak ada apa-apa di kandang tetapi kami memiliki ide dan kolom email.
+
+00:02:59.490 --> 00:03:03.030
+Jadi mari kita tambahkan baris baru di sini.
+
+00:03:03.330 --> 00:03:12.670
+Yah hanya dan saya benar-benar memiliki mereka disiapkan di sini jadi kami hanya akan melakukan memasukkan semua injeksi Eskew.
+
+00:03:12.810 --> 00:03:18.180
+Jadi kita akan memasukkan ke dalam tabel kolom email.
+
+00:03:18.270 --> 00:03:19.710
+Kami akan menambahkan.
+
+00:03:19.850 --> 00:03:21.530
+Baik untuk itu.
+
+00:03:21.590 --> 00:03:23.210
+Jadi mari kita jalankan query itu.
+
+00:03:24.410 --> 00:03:24.990
+Baiklah.
+
+00:03:25.070 --> 00:03:33.570
+Dan jika kita kembali ke meja kita, kita melihat bahwa kita memiliki ide baris baru karena saya telah mengaturnya sehingga
+
+00:03:33.570 --> 00:03:34.550
+hanya berurutan.
+
+00:03:34.590 --> 00:03:40.870
+Saya akan terus menambahkan dua tiga empat atau lima dan kemudian mengirim email ke EHLO dengan baik.
+
+00:03:40.930 --> 00:03:43.670
+Sekarang di sini beberapa meminta Anda semua suntikan yang bisa kami lakukan.
+
+00:03:44.110 --> 00:03:47.590
+Dan kami ingin melakukan sesuatu seperti ini.
+
+00:03:47.590 --> 00:03:52.870
+Katakanlah kita memperbarui bidang email ini karena pengguna baru saja mengubah email Anda.
+
+00:03:52.870 --> 00:04:02.200
+Jadi jika saya katakan perbarui email saya untuk sesuatu seperti ini yang kami miliki dari tabel kami dan pastikan kami memiliki
+
+00:04:05.400 --> 00:04:07.140
+penawaran di sini.
+
+00:04:07.200 --> 00:04:17.000
+Jadi yang baru saya masukkan adalah saya telah memasukkan nilai email baru saya dengan kode ini dan Anda melihat bahwa
+
+00:04:17.010 --> 00:04:23.450
+itu semacam semua yang disorot daripada hanya menjadi string seperti seharusnya jika
+
+00:04:23.480 --> 00:04:25.290
+kita melakukan ini.
+
+00:04:25.570 --> 00:04:28.090
+Jadi dengan hanya memodifikasi potongan kode
+
+00:04:31.400 --> 00:04:36.240
+seperti ini dan pastikan kita memiliki kutipan itu untuk melihat bagaimana warnanya berubah.
+
+00:04:36.590 --> 00:04:43.130
+Apa yang saya katakan adalah saya telah bermain-main dengan pernyataan Eskew all ini dan membuatnya sehingga kami memperbarui
+
+00:04:43.160 --> 00:04:47.030
+nilai ke string kosong tetapi kemudian menambahkan tanda titik koma.
+
+00:04:47.030 --> 00:04:53.150
+Kami memiliki pernyataan lain yang menjatuhkan pengguna tabel atau mari kita jatuhkan tabel.
+
+00:04:53.150 --> 00:04:56.410
+Q Injeksi dengan baik.
+
+00:04:56.590 --> 00:05:00.170
+Dan kemudian saya akhiri pernyataan dengan baris ini dan kita
+
+00:05:05.130 --> 00:05:07.080
+tidak perlu tanda kutip lagi.
+
+00:05:07.930 --> 00:05:17.110
+Anda melihat bahwa itu telah disorot seolah-olah itu penyelamatan atau permintaan dan kami hanya cukup melakukan drop table injeksi
+
+00:05:17.110 --> 00:05:17.650
+Escorial.
+
+00:05:17.650 --> 00:05:26.300
+Jika saya mengklik permintaan dan sekarang saya menyegarkan Wu-Wo. Apakah Anda melihat bahwa semua suntikan miring.
+
+00:05:26.300 --> 00:05:29.050
+Meja baru saja jatuh.
+
+00:05:29.050 --> 00:05:29.830
+Betul.
+
+00:05:29.830 --> 00:05:34.840
+Dengan hanya menambahkan potongan garis ini saya bisa menggambar seluruh tabel.
+
+00:05:34.840 --> 00:05:39.560
+Jadi, Anda bisa melihat betapa kejamnya itu jika saya berubah hanya untuk masuk atau pengguna.
+
+00:05:39.580 --> 00:05:45.440
+Saya dapat menggambar seluruh database perusahaan dan itu hanya karena saya memasuki baris ini.
+
+00:05:45.640 --> 00:05:52.690
+Jadi, meskipun kami mengharapkan nilai e-mail alih-alih memberikan e-mail, saya hanya
+
+00:05:52.690 --> 00:06:01.400
+mengirim potongan kode yang pada dasarnya memperpanjang pernyataan sekolah untuk menjatuhkan tabel yang sangat berbahaya.
+
+00:06:01.400 --> 00:06:06.570
+Dia baru saja menyaksikan salah satu cara paling umum bahwa situs Web diserang.
+
+00:06:06.650 --> 00:06:12.740
+Orang-orang hanya menyalin dan menempelkan baris-baris ini di input yang berbeda di situs Web dan aplikasi dan melihat apakah itu melakukan
+
+00:06:12.890 --> 00:06:14.670
+sesuatu dan itu menjatuhkan tabel.
+
+00:06:17.030 --> 00:06:23.310
+Dan jika kita kembali ke sini kita juga melihat puncak ini di koma Says atau ingin sama dengan.
+
+00:06:23.300 --> 00:06:25.950
+Sekali lagi dasbor dasbor abaikan semuanya setelah.
+
+00:06:26.230 --> 00:06:29.620
+Nah ini bisa dimasukkan ke dalam nuansa kata sandi.
+
+00:06:29.620 --> 00:06:36.610
+Misalnya, Anda harus masuk ke situs web dan mengatakan nama pengguna dan kata sandi Anda dengan menambahkan
+
+00:06:36.610 --> 00:06:44.080
+bagian kalimat yang Anda katakan di bidang kata sandi. Saya mengharapkan kata sandi dan saya akan meneruskannya ke pernyataan
+
+00:06:44.350 --> 00:06:51.640
+sekolah saya tetapi sebagai gantinya Saya akan membiarkannya sebagai string kosong dan kemudian mengatakan atau satu sama dengan
+
+00:06:51.640 --> 00:06:52.880
+yang benar.
+
+00:06:53.260 --> 00:07:00.130
+Jadi apa artinya skewl yang akan diperiksa oleh database, apakah pengguna ini ada dan cocok dengan
+
+00:07:00.130 --> 00:07:01.430
+kata sandi ini.
+
+00:07:01.480 --> 00:07:07.330
+Tetapi karena kita tidak menambahkan ini atau mengatakan apakah kata sandi ini cocok atau melakukan
+
+00:07:07.530 --> 00:07:15.220
+satu ECO satu dan mengembalikan informasi pengguna lengkap dan mencatat Anda dan jangan khawatir saya akan pergi dan berolahraga untuk
+
+00:07:15.220 --> 00:07:19.520
+Anda setelah video ini sehingga Anda benar-benar dapat berlatih sendiri.
+
+00:07:19.990 --> 00:07:26.590
+Itu menghindari semua suntikan dan itu terjadi dengan basis data tetapi suntikan dapat terjadi di
+
+00:07:26.680 --> 00:07:32.500
+mana saja kapan saja pengguna harus memasukkan sesuatu yang dapat Anda lakukan suntikan.
+
+00:07:32.960 --> 00:07:40.190
+Mari saya tunjukkan contoh lain yang saya buat di sini sebagai latihan keamanan dan jangan khawatir saya akan memberi Anda akses ke
+
+00:07:40.190 --> 00:07:43.130
+file-file ini sehingga Anda dapat bermain-main dengan mereka.
+
+00:07:43.430 --> 00:07:46.000
+Tetapi saya telah membuat situs web yang sangat sederhana.
+
+00:07:46.010 --> 00:07:48.200
+Jika Anda melihat indeks bukan waria.
+
+00:07:48.200 --> 00:07:49.940
+Tidak banyak yang terjadi di sini.
+
+00:07:50.510 --> 00:07:54.570
+Dan kami hanya memiliki tombol yang di klik mengirimkan informasi ke server.
+
+00:07:54.860 --> 00:07:57.340
+Dan saya memiliki server yang diatur juga.
+
+00:07:57.380 --> 00:07:59.580
+Dan jangan khawatir kita akan membahas ini.
+
+00:07:59.600 --> 00:08:05.110
+Itu adalah server kilat dan yang kami lakukan hanyalah mengirim.
+
+00:08:05.120 --> 00:08:07.010
+Kami memiliki permintaan celah.
+
+00:08:07.010 --> 00:08:14.420
+Jadi jika saya pergi ke mari kita mulai server sebenarnya katakanlah mulai NPM.
+
+00:08:14.550 --> 00:08:16.470
+Kami mendengarkan port 3000.
+
+00:08:16.470 --> 00:08:19.860
+Jadi jika saya pergi ke browser Chrome saya
+
+00:08:23.680 --> 00:08:31.300
+dan mari kita buka localhost tiga ribu delapan kita melihat teks Hello World karena End Point akan
+
+00:08:31.300 --> 00:08:32.860
+mengembalikan Hello world.
+
+00:08:32.860 --> 00:08:38.830
+Dan kemudian kami juga memiliki titik akhir lain yang merupakan permintaan pos untuk dirahasiakan dan saya akan menunjukkan
+
+00:08:38.830 --> 00:08:41.740
+kepada Anda apa yang dilakukannya di ujung depan.
+
+00:08:42.770 --> 00:08:49.970
+Kita dapat membuka indeks yang ada pada file di browser kita yang terlihat seperti ini.
+
+00:08:50.040 --> 00:08:51.810
+Situs web yang sangat sangat sederhana.
+
+00:08:51.840 --> 00:08:56.510
+Yang saya miliki hanyalah bidang input dan saya bisa menekan kirim.
+
+00:08:56.850 --> 00:09:03.080
+Sekarang tombol Kirim ini jika kita kembali ke kode hanya mengatakan kirim ke server.
+
+00:09:03.390 --> 00:09:12.150
+Kita akan mengambil nilai input dan kemudian saya akan menjalankannya melalui fungsi ini yang
+
+00:09:12.150 --> 00:09:17.050
+hanya menambahkan teks ke halaman Web kami.
+
+00:09:17.130 --> 00:09:28.620
+Jadi sekali lagi jika saya mengetik halo Samit saya melihat teks Halo di halaman web dan setelah kami melakukan itu kami juga melakukan
+
+00:09:28.620 --> 00:09:37.620
+panggilan panggilan API panggilan ke server kami dan mengirim rahasia melalui metode POST menggunakan Jay Saunders string phi.
+
+00:09:37.670 --> 00:09:40.780
+Kami mengirimkan input pengguna.
+
+00:09:40.980 --> 00:09:42.720
+Dan seperti Jason.
+
+00:09:42.860 --> 00:09:45.660
+Jadi kami mengirimkannya ke tubuh.
+
+00:09:45.710 --> 00:09:53.230
+Setelah kita klik halo dan buka tab Network, mari kita klik lagi kita melihat
+
+00:09:53.320 --> 00:09:57.180
+bahwa kita mengirimkan rahasia ke Bacchante.
+
+00:09:57.370 --> 00:09:57.790
+Itu dia.
+
+00:09:57.790 --> 00:10:02.580
+Tidak ada yang terlalu gila jika Anda tidak terlalu terbiasa dengan server node.
+
+00:10:02.590 --> 00:10:08.530
+Kemudian lagi saya sarankan Anda memeriksa kursus saya yang lain tetapi Anda tidak perlu terlalu khawatir tentang hal
+
+00:10:08.530 --> 00:10:09.090
+itu.
+
+00:10:09.100 --> 00:10:13.270
+Yang ingin kami lakukan di sini adalah mempraktikkan bentuk suntikan lain.
+
+00:10:13.660 --> 00:10:21.490
+Kami berharap pengguna kami dapat bermain-main dan mengetikkan apa pun yang mereka inginkan, tetapi bagaimana jika ada orang jahat datang
+
+00:10:21.490 --> 00:10:27.810
+dan mengatakan Bagaimana jika saya hanya membuat tag skrip di sini karena kami menambahkannya kepadanya.
+
+00:10:27.820 --> 00:10:31.470
+Kami hanya menambahkan apa pun yang kami dapatkan di sini ke tim kami selama beberapa minggu.
+
+00:10:31.750 --> 00:10:34.170
+Jadi mari kita lakukan booming
+
+00:10:37.740 --> 00:10:47.740
+peringatan skrip otomatis ini dan kemudian kita akan menutup tab tag skrip itu dan sekarang kita berharap untuk menjalankan skrip di sini.
+
+00:10:47.740 --> 00:10:48.920
+Mari kita lihat apakah itu berhasil.
+
+00:10:51.660 --> 00:10:53.010
+Tidak ada yang terjadi.
+
+00:10:53.010 --> 00:10:55.420
+Kami menganggap dan mencetak apa pun.
+
+00:10:55.560 --> 00:11:03.750
+Sekarang jika kita kembali ke kode kita melihat bahwa kita mendapatkan input dan kemudian kita menggunakan DML batin yang buruk
+
+00:11:04.230 --> 00:11:12.480
+seperti yang Anda lihat di sini untuk P-TECH tetapi untungnya bagi kita ketika skrip disuntikkan ke fajar Script Dag seperti
+
+00:11:12.540 --> 00:11:14.120
+yang kita miliki.
+
+00:11:14.250 --> 00:11:16.830
+Dan kami menggunakan antarmuka waria.
+
+00:11:17.050 --> 00:11:24.010
+Mereka tidak benar-benar menjalankan waktu ketika mereka disuntikkan karena Dom sudah berjalan dan shim semuanya cukup pintar untuk mengatakan ya
+
+00:11:24.010 --> 00:11:26.140
+aku tidak akan menjalankan itu.
+
+00:11:26.130 --> 00:11:34.740
+Itu terdengar seperti ide yang buruk karena skrip seperti ini yang disebut skrip inline hanya dijalankan
+
+00:11:34.740 --> 00:11:37.530
+pada saat halaman asli diuraikan.
+
+00:11:37.530 --> 00:11:45.830
+Jadi jika saya menyegarkan ini tidak akan berjalan di sisi lain ada sesuatu yang bisa kita lakukan.
+
+00:11:46.930 --> 00:11:47.920
+Lihat ini.
+
+00:11:48.160 --> 00:11:58.930
+Jika kita memasukkan sesuatu seperti tag gambar dengan sumber tidak ada yang benar-benar hanya garis miring dan karena tidak ada sumber
+
+00:11:58.950 --> 00:12:00.810
+ini akan mengudara.
+
+00:12:00.840 --> 00:12:11.590
+Kita bisa melakukan acara on air yang datang standar dengan waria dan di sini saya bisa mengatakan Siaga.
+
+00:12:11.780 --> 00:12:15.330
+Boom dan tutup bahwa jika saya melakukan ini
+
+00:12:19.500 --> 00:12:25.350
+maka tag gambar yang tidak akan dapat mengambil gambar apa pun dan itu akan memiliki
+
+00:12:25.380 --> 00:12:26.310
+kesalahan peringatan.
+
+00:12:26.370 --> 00:12:35.740
+Boom jika saya klik kirim dan mari kita buka konsol dan tidak terduga dan masukan karena kita harus menggunakan tanda kutip
+
+00:12:35.740 --> 00:12:37.540
+ganda di sini.
+
+00:12:40.660 --> 00:12:41.740
+Jadi coba lagi.
+
+00:12:45.640 --> 00:12:54.430
+Kami hanya menjalankan skrip yang kami disuntikkan ke browser kami dan ini karena gambar disuntikkan ke
+
+00:12:54.430 --> 00:12:58.140
+DOM pada saat bertemu dengan imageshack.
+
+00:12:58.330 --> 00:13:04.770
+Dan jika pemuatan gagal seperti yang Anda lihat di sini pada setiap acara pawang dipanggil.
+
+00:13:05.020 --> 00:13:13.580
+Jadi apa yang baru saja kita lakukan adalah kita menyuntikkan sepotong kode yang benar-benar buruk ke situs web.
+
+00:13:13.750 --> 00:13:19.660
+Jadi, jika Anda berkeliling ke situs Web dan menyalin dan menempel ini dan mencoba mengirimkannya dan mereka tidak memiliki
+
+00:13:19.660 --> 00:13:25.030
+praktik keamanan yang baik Anda dapat menyuntikkan skrip apa pun yang Anda inginkan ke situs web.
+
+00:13:25.180 --> 00:13:27.520
+Sekali lagi gunakan informasi ini dengan bijak.
+
+00:13:27.520 --> 00:13:29.960
+Jangan buruk dengan informasi ini.
+
+00:13:30.040 --> 00:13:34.200
+Kami menggunakan ini sebagai cara untuk belajar bagaimana mencegah serangan semacam ini.
+
+00:13:36.030 --> 00:13:38.230
+Jadi bagaimana kita mencegah hal ini.
+
+00:13:38.580 --> 00:13:40.470
+Yah cukup sederhana.
+
+00:13:40.560 --> 00:13:45.810
+Alih-alih menggunakan rangsangan energi ini dan itu sebabnya saya katakan shemale Inari buruk, jangan menggunakannya.
+
+00:13:45.810 --> 00:13:49.130
+Kami ingin menggunakan sesuatu seperti ini.
+
+00:13:49.150 --> 00:13:56.340
+Satu komentar terakhir yang menghasilkan ini membuat simpul teks yang merupakan input.
+
+00:13:56.400 --> 00:14:03.180
+Jadi, apa pun inputnya, simpul teks ini akan mengubahnya menjadi hanya teks murni
+
+00:14:03.180 --> 00:14:05.300
+dan melakukan panggilan sanitasi.
+
+00:14:05.340 --> 00:14:13.290
+Dan karena ini kita tidak bisa hanya melampirkan simpul teks ke tag dan tidak masalah seberapa buruk kita dengan
+
+00:14:13.290 --> 00:14:14.310
+kode kita.
+
+00:14:14.430 --> 00:14:16.090
+Itu tidak akan melakukan apa pun.
+
+00:14:16.530 --> 00:14:19.860
+Biarkan saya menyimpan dan menunjukkan kepada Anda jika itu memperbaikinya.
+
+00:14:19.890 --> 00:14:27.760
+Jadi saya akan mengirimkan lagi Oh dan saya harus menyegarkan halaman, biarkan saya menyegarkan dan mari kita coba lagi kali
+
+00:14:28.540 --> 00:14:29.230
+ini.
+
+00:14:29.230 --> 00:14:30.900
+Saya hanya akan menyalin dan menempelkannya lagi.
+
+00:14:30.910 --> 00:14:39.730
+Hal yang sama jika saya klik Kirim hati tidak ada yang terjadi dan ini hanya mengubahnya menjadi teks.
+
+00:14:39.800 --> 00:14:41.090
+Itu benar keren.
+
+00:14:42.160 --> 00:14:42.640
+Baiklah.
+
+00:14:42.700 --> 00:14:44.940
+Kami telah belajar tentang suntikan.
+
+00:14:44.950 --> 00:14:47.060
+Apa yang bisa kita lakukan untuk memperbaikinya.
+
+00:14:47.590 --> 00:14:50.770
+Ya ada tiga hal utama yang ingin saya ingat.
+
+00:14:50.770 --> 00:14:57.850
+Salah satunya adalah melakukan sesuatu yang disebut input sanitasi dan itu adalah sesuatu yang kami lakukan dengan bidang input di
+
+00:14:57.880 --> 00:14:58.910
+situs web.
+
+00:14:59.260 --> 00:15:03.790
+Idenya disebut filosofi daftar putih.
+
+00:15:04.150 --> 00:15:11.170
+Dan apa artinya itu untuk validasi data atau apa pun input pengguna hanya memungkinkan pengguna untuk
+
+00:15:11.200 --> 00:15:17.380
+memasukkan data dari tipe yang Anda harapkan jika Anda mengharapkan teks akan dimasukkan.
+
+00:15:17.380 --> 00:15:25.760
+Email yang akan dimasukkan nomor telepon memastikan bahwa Anda memeriksa menggunakan javascript bahwa hanya hal-hal yang digunakan.
+
+00:15:25.780 --> 00:15:32.320
+Misalnya dengan nomor telepon, pastikan itu hanya angka yang misalkan 10 digit.
+
+00:15:32.860 --> 00:15:35.460
+Jika itu bukan tipe yang tepat, buang saja.
+
+00:15:35.470 --> 00:15:36.790
+Jadi kami membersihkannya.
+
+00:15:36.790 --> 00:15:37.750
+Kami sedang membersihkannya.
+
+00:15:37.960 --> 00:15:45.100
+Dan dengan membersihkan dan membersihkannya ke dalam format yang kita inginkan menggunakan hal-hal seperti javascript, kita memastikan bahwa apa pun
+
+00:15:45.100 --> 00:15:50.980
+yang saya bisa masukkan semua kode buruk ini tidak masalah karena saya sudah membersihkan input Anda
+
+00:15:50.980 --> 00:15:54.560
+dan tidak akan melakukan apa pun ke sistem saya.
+
+00:15:55.620 --> 00:15:59.570
+Dan sanitasi biasanya dilakukan dengan menggunakan keduanya.
+
+00:15:59.700 --> 00:16:02.680
+Seperti saya katakan daftar putih atau daftar hitam.
+
+00:16:02.700 --> 00:16:04.830
+Jadi mengapa daftar adalah hal baik yang dapat Anda lakukan.
+
+00:16:04.830 --> 00:16:08.340
+Daftar hitam adalah tentang hal-hal yang tidak boleh Anda lakukan.
+
+00:16:08.400 --> 00:16:14.550
+Jadi beberapa hal yang bisa kita lakukan adalah menghapus tag shemale sambil mempertahankan mungkin konten
+
+00:16:14.970 --> 00:16:18.010
+atau mempertahankan semua konten sebenarnya dari tag.
+
+00:16:19.530 --> 00:16:25.120
+Atau cegah pengguna dengan pemberitahuan yang mengatakan bahwa Anda tidak dapat memasukkan informasi itu di sana.
+
+00:16:25.170 --> 00:16:27.200
+Coba lagi masukkan sesuatu.
+
+00:16:27.240 --> 00:16:33.290
+Poin kedua adalah sesuatu yang disebut permintaan parameterized dan juga disebut pernyataan siap.
+
+00:16:34.230 --> 00:16:42.080
+Dan itu adalah cara untuk mencegah injeksi Eskew Well seperti yang kita lihat sebelumnya mengkompilasi dan Eskew semua pernyataan
+
+00:16:42.080 --> 00:16:45.890
+sehingga semua yang Anda butuhkan untuk memasok adalah parameter.
+
+00:16:45.890 --> 00:16:47.560
+Anggap saja sebagai fungsi.
+
+00:16:47.650 --> 00:16:56.070
+Jika kita kembali ke contoh kita alih-alih mengizinkan pengguna untuk memasukkan apa pun yang mereka inginkan, apa yang ingin kita lakukan
+
+00:16:56.070 --> 00:16:58.050
+adalah memiliki semacam fungsi.
+
+00:16:58.050 --> 00:17:05.490
+Jadi izinkan saya membuka tab di sini tab konsol dan Anda memiliki
+
+00:17:05.490 --> 00:17:15.680
+fungsi katakanlah yang meminta pernyataan pilih baik dan di sini Anda memberikan variabel nama email mungkin variabel ID
+
+00:17:15.680 --> 00:17:26.070
+dan di dalam fungsi ini Anda akan memiliki sesuatu seperti Jika nama sama dengan angka maka Anda dapat menempatkannya.
+
+00:17:26.080 --> 00:17:34.190
+Atau Anda dapat mengatakan bahwa jika nama tidak memiliki panjang ini atau jika nama termasuk karakter ini, Anda memiliki
+
+00:17:34.640 --> 00:17:37.790
+kendali atas apa yang dimasukkan pengguna.
+
+00:17:37.790 --> 00:17:44.990
+Sekarang ini adalah masalah yang cukup besar bahwa sudah ada satu ton solusi yang sangat baik di
+
+00:17:44.990 --> 00:17:48.920
+luar sana dan mereka disebut pemetaan obyek relasional.
+
+00:17:49.070 --> 00:17:54.860
+Itu adalah mereka memberikan pernyataan yang disiapkan ini Eskew semua pernyataan untuk Anda sehingga semua yang Anda butuhkan
+
+00:17:54.860 --> 00:17:56.560
+untuk memasok adalah parameter.
+
+00:17:56.630 --> 00:18:00.920
+Sama seperti saya menunjukkan Anda menganggap mereka sebagai variabel yang perlu dimasukkan ke
+
+00:18:01.010 --> 00:18:02.480
+dalam Steelmen untuk dieksekusi.
+
+00:18:02.720 --> 00:18:08.510
+Dan dengan cara ini mencegah hal-hal yang kita tidak suka menjatuhkan meja itu dan bisa memasuki apa pun yang
+
+00:18:08.510 --> 00:18:09.340
+kita inginkan
+
+00:18:09.440 --> 00:18:17.510
+Dan seperti yang Anda semua pernyataan dan salah satu contoh yang sangat bagus dari ini adalah K'NEX menghindar dari kita yang kita
+
+00:18:17.510 --> 00:18:26.450
+gunakan dengan otak cerdas kita sekarang di mana kita dapat menggunakan hal-hal seperti jika kita pergi untuk memilih kita dapat hanya memberikan parameter yang kami
+
+00:18:26.450 --> 00:18:32.030
+katakan adalah Connect dots select dan kami berikan parameter apa pun yang kami butuhkan.
+
+00:18:32.030 --> 00:18:35.860
+Katakanlah kita ingin mendapatkan penulis judul dalam tahun dari tabel buku.
+
+00:18:35.990 --> 00:18:38.370
+Dan itulah satu-satunya yang bisa kita lakukan.
+
+00:18:38.540 --> 00:18:43.260
+K'NEX mengurus benar-benar membangun ASCII semua pernyataan untuk kita.
+
+00:18:43.340 --> 00:18:46.030
+Tapi parameterisasi adalah segalanya.
+
+00:18:46.040 --> 00:18:51.550
+Jadi kami hanya bisa memberikan parameter ke pernyataan.
+
+00:18:51.570 --> 00:18:52.320
+Baiklah.
+
+00:18:52.530 --> 00:18:53.750
+Jadi begitulah.
+
+00:18:53.790 --> 00:18:55.470
+Itu adalah suntikan.
+
+00:18:55.470 --> 00:19:02.730
+Anda mencegahnya dan memastikan bahwa apa pun yang diinput pengguna adalah sesuatu yang diharapkan oleh program Anda maka Anda akan menghindari
+
+00:19:03.730 --> 00:19:07.120
+sebagian besar masalah keamanan yang ada di luar sana.
+
+00:19:07.120 --> 00:19:16.980
+Seperti yang saya katakan, suntikan adalah penyebab utama serangan di situs Web, jadi validasi setiap bit terakhir dari input
+
+00:19:16.980 --> 00:19:17.900
+pengguna.
+
+00:19:18.030 --> 00:19:26.430
+Menggunakan daftar y di sisi klien serta server dan tidak pernah secara langsung menyuntikkan konten pengguna ke dalam apa
+
+00:19:26.520 --> 00:19:27.820
+pun lagi.
+
+00:19:27.900 --> 00:19:30.780
+Input pengguna harus selalu dipercaya.
+
+00:19:30.810 --> 00:19:36.580
+Satu-satunya hal yang mereka kontrol yang dapat Anda kontrol adalah bagaimana Anda menjalankan program Anda sehingga Anda
+
+00:19:36.600 --> 00:19:39.730
+dapat memodifikasi data yang tidak tepercaya dan memercayainya.
+
+00:19:39.950 --> 00:19:41.740
+Saya akan melihat yang berikutnya Buh-Bye.

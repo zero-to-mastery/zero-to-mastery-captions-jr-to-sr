@@ -1,0 +1,91 @@
+﻿WEBVTT
+
+00:00:01.740 --> 00:00:05.400
+Saya ingin menambahkan catatan singkat tentang penulisan sisi klien.
+
+00:00:05.580 --> 00:00:07.860
+Saya tahu saya agak menyinggung topik.
+
+00:00:07.860 --> 00:00:09.870
+Tapi inilah ide umum.
+
+00:00:09.870 --> 00:00:16.920
+Perutean sisi klien terjadi ketika rute ditangani secara internal oleh javascript yang dimuat pada
+
+00:00:16.920 --> 00:00:17.590
+halaman.
+
+00:00:17.940 --> 00:00:22.620
+Jadi itu adalah sesuatu yang akan kita lihat nanti saat kita bekerja dengan aplikasi
+
+00:00:22.620 --> 00:00:23.970
+otak cerdas kita.
+
+00:00:24.240 --> 00:00:28.830
+Dan itulah cara sebagian besar aplikasi render sisi klien bekerja.
+
+00:00:28.830 --> 00:00:34.860
+Kami menangani perutean dengan javascript karena kami sekarang menggunakan rendering sisi server seperti halaman
+
+00:00:34.860 --> 00:00:39.080
+web lama yang memenuhi permintaan setiap kali ke browser.
+
+00:00:39.090 --> 00:00:46.260
+Setiap saat aturan mengubah keadaan aplikasi kita juga akan berubah.
+
+00:00:46.260 --> 00:00:52.410
+Sekarang perbedaan utama antara rendering sisi klien dan rendering sisi server adalah bahwa dengan
+
+00:00:52.410 --> 00:00:56.850
+rendering sisi klien Anda tidak perlu me-refresh seluruh halaman.
+
+00:00:56.940 --> 00:01:01.640
+Mari kita kembali ke contoh kita jika saya hanya memiliki tag.
+
+00:01:01.680 --> 00:01:03.180
+Jadi mari kita komentari ini.
+
+00:01:04.450 --> 00:01:08.500
+Dan saya akan menghapus komentar dari e-tag kami.
+
+00:01:08.580 --> 00:01:11.490
+Jadi ini sekarang melakukan rendering sisi server.
+
+00:01:11.610 --> 00:01:20.170
+Jika saya kembali ke halaman saya, saya akan me-refresh dan jika saya mengklik halaman Tentang, Anda akan melihat flash.
+
+00:01:20.200 --> 00:01:20.880
+Ini dia.
+
+00:01:21.070 --> 00:01:28.330
+Dan Anda juga melihat bahwa semua permintaan ini dibuat untuk mendapatkan halaman Tentang seluruh halaman web
+
+00:01:28.330 --> 00:01:30.690
+atau seluruh halaman dimuat ulang.
+
+00:01:32.320 --> 00:01:37.240
+Dan jika saya kembali lagi hal yang sama yaitu rendering sisi server.
+
+00:01:37.280 --> 00:01:40.090
+Sekarang jika saya menggunakan tag
+
+00:01:43.160 --> 00:01:53.550
+tautan dan mari kita komentari ini lagi dan saya simpan di sini jika saya menyegarkan semua unduhan awal, unduh semuanya.
+
+00:01:53.550 --> 00:02:03.120
+Tetapi sekarang jika saya mengklik About You, hanya sebagian halaman yang terinfeksi yang dimuat.
+
+00:02:03.120 --> 00:02:11.430
+Dalam kasus kami adalah file tentang Dot js dan jika kami kembali lagi karena file dot js kami yang diindeks telah dimuat, Anda tidak
+
+00:02:11.430 --> 00:02:13.980
+akan melihatnya di mana pun di sini.
+
+00:02:14.000 --> 00:02:17.130
+Dan jika saya lanjutkan lagi, semuanya sudah dimuat.
+
+00:02:17.280 --> 00:02:20.080
+Jadi kita tidak perlu kembali ke server lagi.
+
+00:02:20.100 --> 00:02:23.590
+Itu adalah sesuatu yang sangat bagus yang hadir dengan akses berikutnya.

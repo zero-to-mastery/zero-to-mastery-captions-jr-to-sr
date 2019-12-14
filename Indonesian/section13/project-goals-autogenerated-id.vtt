@@ -1,0 +1,181 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:10.430
+Selamat datang kembali setelah istirahat panjang yang panjang, kami akhirnya akan menambahkan beberapa fitur menarik ke aplikasi otak
+
+00:00:10.430 --> 00:00:11.930
+pintar kami.
+
+00:00:11.930 --> 00:00:16.900
+Dan omong-omong saat Anda pergi, saya berhasil menipu API klarifikasi kami.
+
+00:00:16.970 --> 00:00:21.100
+Ternyata itu bisa mengenali wajah yang terbalik.
+
+00:00:21.350 --> 00:00:27.510
+Tapi bagaimanapun, mari kita kembali ke Mark sekarang konten kita sudah habis.
+
+00:00:27.550 --> 00:00:28.780
+Itu adalah otak yang cerdas.
+
+00:00:28.810 --> 00:00:35.600
+Itu adalah reaksi dan berjalan di localhost tiga ribu jadi port tiga ribu satu.
+
+00:00:35.830 --> 00:00:40.350
+Dan kemudian kami juga memiliki API otak pintar kami yang telah kami kerjakan.
+
+00:00:40.390 --> 00:00:46.960
+Dan sebenarnya kami sudah menggambarkannya sekarang ia memiliki anjing atau jatuh dengan dermaga atau menulis dan melakukan semua hal
+
+00:00:46.960 --> 00:00:52.110
+luar biasa ini bagi kami alih-alih kami harus khawatir tentang database dan mengatur semuanya.
+
+00:00:52.240 --> 00:00:57.110
+Kami sekarang mendokumentasikan dokumen ini dan API dengan beberapa data.
+
+00:00:57.610 --> 00:01:04.330
+Dan kemudian di sini saya sudah menyederhanakan hal-hal dan hanya membuat pengguna dengan email com dengan kata sandi.
+
+00:01:04.340 --> 00:01:14.310
+A Ini adalah kata sandi hash untuk menggunakan B crypt yang jika dibandingkan dengan huruf A akan cocok.
+
+00:01:14.340 --> 00:01:22.820
+Sekarang karena kami memiliki lingkungan pengembang kami yang mengatur dan biarkan saya membersihkan ini, kami sekarang memiliki kemampuan untuk melakukan
+
+00:01:22.850 --> 00:01:30.320
+beberapa pekerjaan yang sangat baik dan mengimplementasikan sesi karena idealnya jika kita kembali ke file server dodgiest
+
+00:01:30.350 --> 00:01:36.900
+kami di titik akhir kami di sini juga mari kita buat sedikit lebih kecil sehingga
+
+00:01:37.680 --> 00:01:46.020
+kita dapat melihat sampai sekarang kita memiliki semacam akses gratis untuk masuk dan mendaftar ID profil misalnya tidak ada yang
+
+00:01:46.250 --> 00:01:47.420
+memeriksa ini.
+
+00:01:47.670 --> 00:01:55.440
+Jika misalnya ID profil ini seseorang melakukan permintaan dapatkan dari mana saja di dunia mereka akan memiliki akses ke ini
+
+00:01:55.440 --> 00:02:00.890
+karena kami tidak benar-benar meminta nama pengguna atau kata sandi pada saat ini.
+
+00:02:00.900 --> 00:02:05.760
+Maksudku, kita untuk seinen tapi siapa pun bisa masuk ke sini.
+
+00:02:06.160 --> 00:02:15.250
+Idealnya kita memiliki sesuatu di sini yang mengatakan kita perlu meminta auth karena
+
+00:02:15.520 --> 00:02:22.930
+cara mengekspresikan berfungsi seperti pengurai inti dan Morgan mengerjakan middleware
+
+00:02:22.930 --> 00:02:23.950
+mereka.
+
+00:02:23.950 --> 00:02:31.860
+Mereka melakukan beberapa pekerjaan di sekitar dan melakukan sesuatu dan kemudian mereka terus mendorongnya sampai akhir siklus.
+
+00:02:31.870 --> 00:02:38.590
+Dalam kasus kami untuk ID profil adalah untuk menangani get profil, tetapi bukankah menyenangkan untuk memiliki
+
+00:02:38.590 --> 00:02:46.000
+sesuatu seperti mengharuskan off dan untuk setiap titik akhir yang kami perlukan otentikasi pengguna harus benar-benar memiliki izin untuk
+
+00:02:46.000 --> 00:02:47.400
+mengakses set point.
+
+00:02:47.470 --> 00:02:52.670
+Kami hanya bisa menerapkan di sini dan di situlah kami akan melakukan beberapa video berikutnya
+
+00:02:53.570 --> 00:03:01.280
+Kita akan menggunakan JWT untuk membaca kita dan semua hal yang telah kita pelajari bersama untuk akhirnya membuat aplikasi yang
+
+00:03:01.700 --> 00:03:06.170
+benar-benar berfungsi seperti aplikasi yang kita lihat dalam kehidupan kita sehari-hari.
+
+00:03:06.560 --> 00:03:12.690
+Dan bagian kerennya adalah pada akhirnya Anda akan memiliki aplikasi seperti aplikasi smartphone.
+
+00:03:12.800 --> 00:03:21.440
+Mereka selalu dapat meniru menyalin dan memodifikasi berdasarkan kebutuhan Anda, tetapi Anda akan memiliki fungsi login Anda.
+
+00:03:21.440 --> 00:03:26.510
+Anda akan memiliki halaman masuk melanjutkan halaman pencarian Anda sudah diatur dan Anda sudah memiliki
+
+00:03:26.510 --> 00:03:30.690
+server dan dokter membaca kami atau membaca kami semua database siap.
+
+00:03:30.800 --> 00:03:31.940
+Ini akan sangat menyenangkan.
+
+00:03:31.940 --> 00:03:38.990
+Dan pada akhirnya kami akan memiliki alat yang hebat bagi kami untuk dimasukkan ke dalam portofolio kami atau digunakan untuk
+
+00:03:38.990 --> 00:03:40.810
+proyek kami di masa depan.
+
+00:03:40.940 --> 00:03:45.680
+Sekarang hal pertama yang akan kita lakukan adalah aku akan menghapus apapun yang baru saja aku tulis karena
+
+00:03:45.680 --> 00:03:46.490
+kita belum memilikinya.
+
+00:03:47.460 --> 00:03:49.950
+Kami ingin memastikan bahwa kami dapat menjalankan bacot kami.
+
+00:03:49.950 --> 00:03:52.050
+Jadi sekali lagi kita akan menjalankan Dr.
+
+00:03:54.990 --> 00:04:04.290
+buat dengan dash dasbor build hanya untuk memastikan bahwa mungkin melihat data database saya dibuat.
+
+00:04:04.410 --> 00:04:06.750
+Dan sementara itu berjalan saya akan kembali.
+
+00:04:06.750 --> 00:04:12.490
+Kami melihat bahwa ujung depan sudah berjalan dan semuanya harus berfungsi dengan baik.
+
+00:04:13.540 --> 00:04:19.250
+Hanya untuk menguji semuanya setelah setiap hal berjalan yang kita punya aplikasi berjalan pada port 3 0 0
+
+00:04:19.320 --> 00:04:20.060
+0 0
+
+00:04:20.620 --> 00:04:22.400
+Mari menyegarkan di sini.
+
+00:04:23.730 --> 00:04:31.960
+Jika saya masuk dengan dot com OK yang merupakan data C yang kami sediakan, kami dapat masuk.
+
+00:04:32.490 --> 00:04:37.020
+Dan sekali lagi kita bisa memasukkan gambar dan itu akan berhasil untuk kita.
+
+00:04:37.110 --> 00:04:41.880
+Tetapi sekali lagi masalah kita adalah bahwa setiap kali kita menyegarkan apa yang harus kita tandatangani.
+
+00:04:42.090 --> 00:04:45.880
+Itu sedikit menjengkelkan jika Anda seorang pengguna bukan.
+
+00:04:45.930 --> 00:04:46.430
+Baiklah.
+
+00:04:46.650 --> 00:04:53.190
+Dan video berikutnya kita akan mulai membangun halaman profil karena agar kita dapat
+
+00:04:53.340 --> 00:05:00.420
+membangun sesi dan melakukan Auth yang diperlukan. bahwa kita berbicara tentang kita perlu memiliki semacam alasan yang bermakna
+
+00:05:00.420 --> 00:05:01.680
+untuk melakukan ini.
+
+00:05:01.770 --> 00:05:08.280
+Jadi kita akan membuat halaman profil di mana Anda akan dapat benar-benar mengedit nama Anda mungkin beberapa
+
+00:05:08.280 --> 00:05:12.910
+kolom formulir tentang profil Anda sehingga kami membuat sedikit lebih dinamis.
+
+00:05:13.020 --> 00:05:17.570
+Dan kemudian kita akan menambahkan sesi ke yang melihat di yang berikutnya.
+
+00:05:17.750 --> 00:05:18.090
+Babai.

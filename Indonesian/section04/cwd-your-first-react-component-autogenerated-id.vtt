@@ -1,0 +1,694 @@
+﻿WEBVTT
+
+00:00:01.620 --> 00:00:02.230
+Baiklah.
+
+00:00:02.250 --> 00:00:03.210
+Selamat datang kembali.
+
+00:00:03.210 --> 00:00:06.480
+Kami memiliki aplikasi Hello World kami tetapi itu tidak terlihat sangat keren.
+
+00:00:06.480 --> 00:00:09.370
+Kami ingin membuat aplikasi teman robo kami.
+
+00:00:09.390 --> 00:00:15.340
+Jadi dalam video ini kita akan memulai dengan membangun komponen pertama kita.
+
+00:00:15.420 --> 00:00:19.020
+Kita kembali ke sini, kita ingat bahwa kita memiliki terminal di sebelah kanan.
+
+00:00:19.050 --> 00:00:25.830
+Dan kami baru saja menjalankan NPM start dan membuat Doubs memeriksa semua file untuk kami pastikan tidak ada kesalahan.
+
+00:00:25.830 --> 00:00:33.630
+Ia mengatakan bahwa aplikasi kita didefinisikan tetapi tidak pernah digunakan jadi mari kita komentari ini lagi komentar slash katakan ini dan Anda
+
+00:00:34.320 --> 00:00:37.050
+akan melihat bahwa semuanya bekerja dengan baik
+
+00:00:38.540 --> 00:00:42.470
+Sekarang Anda mungkin memiliki beberapa pertanyaan di indeks ini.
+
+00:00:42.590 --> 00:00:48.860
+J. S. jatuh satu kita melihat bahwa kita mengimpor bereaksi tetapi kenapa itu bekerja.
+
+00:00:48.860 --> 00:00:55.340
+Kita ingat bahwa itu tidak bekerja sebelum kita harus menggunakan dan kemudian browser kembali bertindak memiliki paket
+
+00:00:55.340 --> 00:00:59.130
+basah di bawah kap yang melakukan bundling untuk kita.
+
+00:00:59.210 --> 00:01:03.620
+Jadi kami diizinkan menggunakan impor selama kami menyimpan ini di bagian atas file.
+
+00:01:03.710 --> 00:01:10.590
+Kami dapat mengimpor file apa pun yang kami inginkan atau paket apa pun yang kami inginkan.
+
+00:01:10.600 --> 00:01:14.270
+Kita juga melihat bahwa ada dua hal yang bereaksi dan bereaksi.
+
+00:01:14.300 --> 00:01:21.150
+Dom jika Anda ingat kembali bertindak adalah tampilan perpustakaan.
+
+00:01:21.210 --> 00:01:25.590
+Jadi ini adalah robot kecil yang kami ingat dari video sebelumnya.
+
+00:01:25.980 --> 00:01:27.900
+Ini inti dari paket.
+
+00:01:27.920 --> 00:01:31.260
+Apakah manipulasi DOM untuk kita.
+
+00:01:31.260 --> 00:01:35.850
+Tapi seperti yang saya katakan sebelumnya Riak dapat digunakan di banyak tempat bukan hanya browser.
+
+00:01:36.090 --> 00:01:38.270
+Dapat digunakan untuk perangkat seluler.
+
+00:01:38.280 --> 00:01:45.300
+Ini dapat digunakan untuk realitas virtual dan Anda dapat menyambungkan dan memutar pustaka yang berbeda seperti ini berdasarkan
+
+00:01:45.390 --> 00:01:47.780
+pada layar apa yang Anda render.
+
+00:01:47.940 --> 00:01:57.570
+Jadi ulangan Dom digunakan untuk situs Web yang bodoh sehingga lem bereaksi tetapi kita dapat memiliki sesuatu seperti Riak asli.
+
+00:01:57.570 --> 00:02:01.870
+Itu sebenarnya membuat dua ponsel.
+
+00:02:01.920 --> 00:02:04.640
+Kami juga memiliki indeks impor CSSA.
+
+00:02:04.710 --> 00:02:13.290
+Dan ini adalah sintaks baru yang akan bereaksi untuk memungkinkan kita menambahkan CSSA tidak hanya dalam satu file tetapi untuk setiap komponen
+
+00:02:13.290 --> 00:02:14.340
+yang berbeda.
+
+00:02:14.340 --> 00:02:15.910
+Jika kita pergi ke APT.
+
+00:02:16.050 --> 00:02:20.840
+Ya, kami memiliki dot CSSA yang menjelaskan aplikasi.
+
+00:02:21.180 --> 00:02:22.830
+Jika kita masuk ke indeks ya.
+
+00:02:22.860 --> 00:02:27.890
+Sementara kami telah mengindeks mulai VSS yang memiliki status sendiri.
+
+00:02:27.900 --> 00:02:35.610
+Dan sel-sel ini hanya akan berlaku untuk komponen apa pun dan Exide G-S renderers.
+
+00:02:35.860 --> 00:02:41.500
+Dan cara kita menggunakannya adalah kita hanya mengatakan impor dan kemudian tidak seperti paket Riak
+
+00:02:41.500 --> 00:02:47.890
+di mana kita hanya mengatakan nama paket dan secara otomatis tahu untuk memeriksa folder modul yang dikenal
+
+00:02:47.950 --> 00:02:55.230
+kita harus memberitahu di mana indeks Dotsie SS hidup dan sintaksis dari dot slash berarti berada di direktori yang sama.
+
+00:02:55.270 --> 00:02:59.850
+Jadi pepatah cek di folder sumber dan mantan Nazi SS harus ada di sana.
+
+00:03:01.230 --> 00:03:05.040
+OK dan akhirnya kita melihat pekerja layanan register.
+
+00:03:05.040 --> 00:03:10.980
+Dan ini adalah topik lanjutan yang tidak akan kami bahas dalam kursus ini, tetapi anggap pekerja
+
+00:03:10.980 --> 00:03:16.740
+layanan sebagai fitur baru yang memungkinkan aplikasi kami menjadi lebih cepat dan berpotensi bekerja offline.
+
+00:03:16.740 --> 00:03:19.070
+Itu adalah sesuatu yang tidak perlu kita perhatikan.
+
+00:03:19.080 --> 00:03:26.160
+Jadi untuk saat ini Anda dapat mengomentari ini dan itu masih akan bekerja tetapi kami
+
+00:03:26.160 --> 00:03:34.830
+akan menyimpannya di sini hanya karena buat kembali bertindak berikan kepada kami secara gratis hal-hal yang benar-benar kami pedulikan
+
+00:03:34.830 --> 00:03:43.110
+meskipun saat baris ini di sini seluruh ini masalahnya adalah apa tindakan yang dikatakannya saya ingin paket reaksi menggunakan
+
+00:03:43.200 --> 00:03:52.680
+fungsi render dan render ini adalah saya ingin membuat apa pun ini tetapi jika Anda ingat sebelum kami memiliki aplikasi dan
+
+00:03:55.060 --> 00:03:59.010
+baik ini sebenarnya bukan tag waria saya t.
+
+00:03:59.170 --> 00:04:04.810
+Kami baru saja membuat ini dari sepertinya direktori yang sama.
+
+00:04:04.830 --> 00:04:09.470
+Ada sesuatu yang disebut aplikasi dan tidak memiliki titik.
+
+00:04:09.720 --> 00:04:17.700
+Ya file seperti yang kita lihat di sini dan itu karena secara otomatis mengatakan bahwa jika tidak ada dot CSX atau
+
+00:04:17.730 --> 00:04:19.350
+jenis apa pun setelahnya.
+
+00:04:19.360 --> 00:04:27.400
+Yah itu mengasumsikan bahwa itu javascript tetapi ini akan bekerja sebaik yang Anda lihat karena terakhir pergi ke file aplikasi
+
+00:04:27.490 --> 00:04:33.410
+dodgiest dan melihat mengapa kita dapat menggunakan ini tugas memalukan yang telah kita buat.
+
+00:04:33.610 --> 00:04:39.220
+Jika kita pergi untuk memilih file japes dengan baik lagi dan kita melihat bahwa kita mengimpor sesuatu, kita sedang melakukan
+
+00:04:39.220 --> 00:04:42.370
+sesuatu yang disebut merusak di sini dan mendapatkan komponen juga.
+
+00:04:43.290 --> 00:04:49.640
+Dan kami memiliki beberapa file seperti Logo sebagai Fiji dan menculik CSSA yang kami impor.
+
+00:04:49.920 --> 00:04:52.240
+Dan lagi kita melihat bahwa sintaks kita sedikit.
+
+00:04:52.240 --> 00:05:03.780
+Juga pastikan bahwa kita mengubah file kita ke tabel javascript dan sepertinya aplikasi kelas-A memperluas komponen yang datang
+
+00:05:04.470 --> 00:05:05.780
+dengan reaksi.
+
+00:05:05.790 --> 00:05:08.010
+Dan ini hanya sintaks standar.
+
+00:05:08.040 --> 00:05:15.910
+Anggota ini membuat komponen selalu memiliki peran yang harus diberikannya setidaknya sesuatu.
+
+00:05:15.910 --> 00:05:21.210
+Dan cara kita melakukannya adalah kita mengembalikan sepotong situs Web Chanel.
+
+00:05:21.390 --> 00:05:24.810
+Jadi kita lihat di sini, selamat datang untuk bereaksi untuk memulai menambahkan.
+
+00:05:25.030 --> 00:05:27.900
+Nah itulah yang dikatakan di sini.
+
+00:05:28.050 --> 00:05:29.390
+Itulah kekuatan reaksi.
+
+00:05:29.400 --> 00:05:38.800
+Kami sedang membuat komponen khusus kami sendiri, label tag waria sendiri yang dapat kami tambahkan dan jika Anda ingat
+
+00:05:38.800 --> 00:05:45.270
+gambar aliran data satu arah, kami memiliki satu orangtua yang memiliki anak.
+
+00:05:45.270 --> 00:05:48.240
+Jadi aplikasi memiliki anak tetapi Anda tahu.
+
+00:05:48.480 --> 00:05:52.110
+Mari kita membangun komponen kita sendiri untuk memperjelas poin ini.
+
+00:05:52.320 --> 00:05:57.690
+Alih-alih memiliki hello world di sini, mari kita membuat komponen bernama Hello.
+
+00:05:58.930 --> 00:06:02.320
+Dan itu adalah tugas menutup diri sehingga Anda ingin memiliki backslash.
+
+00:06:02.620 --> 00:06:12.580
+Dan di sini alih-alih mengatakan aplikasi impor, mari kita mengimpor Halo dari Kami akan menyebutnya hello dodgy Ya.
+
+00:06:12.610 --> 00:06:14.630
+Dan Anda akan melihat bahwa itu huruf besar di sini.
+
+00:06:14.740 --> 00:06:19.770
+Nah, jika Anda sedang membangun komponen, standarnya adalah huruf kapital.
+
+00:06:19.840 --> 00:06:21.180
+Jadi itu akan disebut halo.
+
+00:06:21.270 --> 00:06:28.650
+Ya jika kita menyimpan ini kita akan mendapatkan kesalahan mengatakan modul tidak ditemukan tidak dapat menyelesaikan.
+
+00:06:28.660 --> 00:06:29.010
+Halo.
+
+00:06:29.050 --> 00:06:30.870
+Karena file tidak ada.
+
+00:06:31.030 --> 00:06:32.290
+Jadi mari kita buat satu.
+
+00:06:32.290 --> 00:06:36.970
+Saya akan mengatakan file baru Hello dodgier Ya.
+
+00:06:37.960 --> 00:06:38.600
+Ini dia.
+
+00:06:38.620 --> 00:06:42.730
+Kami memiliki file halo dodgiest baru dan berhasil dikompilasi.
+
+00:06:42.970 --> 00:06:46.320
+Jika kita pergi ke situs Web, lihat itu.
+
+00:06:46.330 --> 00:06:51.860
+Itu sebenarnya bahkan memberi kita udara di situs Web dan itu sebabnya membuat kembali bertindak sangat mengagumkan.
+
+00:06:51.940 --> 00:06:57.540
+Ini menunjukkan kepada Anda apa kesalahannya tanpa membuka konsol di sini.
+
+00:06:59.460 --> 00:07:03.760
+Sekali lagi kita tidak memiliki apa pun yang dibangun di Halo. Jadi kita harus membuatnya.
+
+00:07:03.780 --> 00:07:05.970
+Mari kita gunakan aplikasi yang James sebagai contoh.
+
+00:07:05.970 --> 00:07:14.850
+Sepertinya kita perlu mengimpor re-act dan komponen sehingga kita perlu mengatakan dan re-act komponen yang buruk dari Riyadh.
+
+00:07:15.400 --> 00:07:16.500
+BAIK.
+
+00:07:16.530 --> 00:07:25.020
+Dan alasan kami melakukan ini lagi ini adalah merusak daripada melakukan re-act komponen dot
+
+00:07:25.020 --> 00:07:31.230
+sekarang kita bisa melakukan komponen dan itu artinya sama.
+
+00:07:31.350 --> 00:07:34.310
+Sekali lagi melihat App dodgiest sepertinya kita katakan kelas.
+
+00:07:34.350 --> 00:07:39.440
+Nama komputer kami memperluas komponen ke kelas itu.
+
+00:07:39.720 --> 00:07:47.940
+Kami akan memanggil halo ini lagi, itulah yang disebut komponen kami dengan komponen extends.
+
+00:07:47.990 --> 00:07:58.730
+Dan sekali lagi ingat untuk mengubah javascript kami ke Paypal dan jika Anda ingat satu aturan adalah bahwa kami selalu ingin
+
+00:07:58.730 --> 00:08:07.540
+memiliki fungsi render dan dalam fungsi render ini kami beri tahu apa yang ingin kami kembalikan.
+
+00:08:08.010 --> 00:08:13.800
+Yah kami ingin mengembalikan contoh halo dunia tetapi kita dapat mengatakan
+
+00:08:16.600 --> 00:08:18.220
+H-1 halo dunia.
+
+00:08:19.870 --> 00:08:27.290
+H-1 Oke mari kita lihat apa yang terjadi ketika saya melakukan ini saya simpan.
+
+00:08:27.470 --> 00:08:31.570
+Dan katanya Halo importir default export tidak ditemukan.
+
+00:08:31.600 --> 00:08:34.720
+Yah itu karena kita tidak mengekspor ini.
+
+00:08:34.720 --> 00:08:42.580
+Ingat jika kita ingin file lain menggunakannya, kita harus mengekspor dan kita menggunakan standar ekspor ketika kita hanya
+
+00:08:42.880 --> 00:08:44.410
+mengekspor satu hal.
+
+00:08:44.710 --> 00:08:50.620
+Jika kita menggunakan kata default itu berarti file ini hanya mengekspor ke satu hal dan itu adalah aplikasi.
+
+00:08:50.820 --> 00:08:57.430
+Jadi saya bisa mengatakan ekspor default Halo.
+
+00:08:57.670 --> 00:09:02.970
+Mari kita simpan sepertinya berfungsi, mari kita lihat apa yang terjadi di situs web kami.
+
+00:09:03.420 --> 00:09:04.270
+Halo Dunia.
+
+00:09:04.440 --> 00:09:09.910
+Kami baru saja membuat komponen pertama kami.
+
+00:09:09.930 --> 00:09:10.850
+Betapa kerennya itu.
+
+00:09:11.720 --> 00:09:19.760
+Sekarang saat ini kami hanya memiliki satu baris tetapi bagaimana jika saya ingin melakukan sesuatu seperti
+
+00:09:19.760 --> 00:09:28.230
+Divx menjatuhkannya dalam div dan mungkin di bawah sini semua mengatakan paragraf yang mengatakan berjalan untuk bereaksi.
+
+00:09:31.560 --> 00:09:35.380
+Jika saya menyimpan ini saya mendapatkan kesalahan lain.
+
+00:09:37.970 --> 00:09:44.960
+Dan itu karena kami hanya memberinya beberapa baris di sini dan kembali mengharapkan satu hal.
+
+00:09:45.230 --> 00:09:47.840
+Kita harus membungkusnya dalam kurung.
+
+00:09:48.970 --> 00:09:55.180
+Seperti ini untuk memiliki javascript katakan ini adalah ekspresi.
+
+00:09:55.220 --> 00:09:57.140
+Evaluasi semua ini.
+
+00:09:57.290 --> 00:10:05.610
+Jika kita menyimpan ini sepertinya berfungsi dan kemudian hello world dipersilakan untuk bereaksi.
+
+00:10:05.720 --> 00:10:08.420
+Sangat keren di sini.
+
+00:10:08.430 --> 00:10:20.050
+Jika Anda ingat jika kami mengimpor Daut Hello Dad CSA kepada kami, kami dapat membuat gaya CSL apa pun yang kami inginkan, tetapi kami perlu
+
+00:10:20.050 --> 00:10:27.560
+membuat file itu untuk Salles ke file baru dan saya perlu mengunggah sendiri di sini.
+
+00:10:27.570 --> 00:10:32.020
+Dan kemudian nama file Anda akan menjadi halo dot C Ss sekarang.
+
+00:10:32.040 --> 00:10:34.650
+Halo CSSA Saya hanya bisa mengatakan bahwa H-1.
+
+00:10:34.710 --> 00:10:36.610
+Dan ini hanyalah CSSA standar.
+
+00:10:36.840 --> 00:10:40.000
+Akan memiliki latar belakang merah.
+
+00:10:40.410 --> 00:10:43.120
+Saya akan menghemat menyimpan ini juga.
+
+00:10:43.170 --> 00:10:44.360
+Semuanya terlihat bagus.
+
+00:10:45.270 --> 00:10:46.440
+Dan lihat itu.
+
+00:10:49.250 --> 00:10:51.760
+Tapi Anda tahu apa yang membuatnya lebih cepat.
+
+00:10:51.790 --> 00:10:59.510
+Karena kami telah membahas CSSA, saya ingin menunjukkan kepada Anda sebuah paket keren yang disebut Tatiana's dan tak Kyon memungkinkan
+
+00:10:59.510 --> 00:11:06.830
+kami memiliki mirip dengan nama kelas yang telah ditentukan bootstrap yang dapat kami tambahkan ke komponen untuk membuat
+
+00:11:06.830 --> 00:11:08.630
+semuanya terlihat sangat bagus.
+
+00:11:08.690 --> 00:11:09.420
+Jadi mari kita lakukan itu.
+
+00:11:09.440 --> 00:11:17.670
+Saya akan menutup ini dan berkata dan PM instal Tatiana.
+
+00:11:17.750 --> 00:11:18.210
+Baiklah.
+
+00:11:18.220 --> 00:11:19.190
+Sudah ditambahkan paket.
+
+00:11:19.210 --> 00:11:25.230
+Kita dapat memeriksa dengan pergi ke paket Jason kita, kita melihat bahwa Tatiana ada di
+
+00:11:25.230 --> 00:11:33.200
+sana dan kita dapat menggunakan tangan Tatiana dengan sangat mudah tetapi hanya akan mengindeks file Jeff itu dan mengatakan impor Tatiana.
+
+00:11:33.350 --> 00:11:42.460
+Dan sekarang kita memiliki akses ke paket ini hanya untuk menunjukkan Anda menyerang Kyon, jika saya pergi untuk menandai gaya Kyon
+
+00:11:46.770 --> 00:11:54.270
+yang memberi kita sedikit kelas yang bisa kita gunakan itu misalnya pusat pajak hanya akan mengatakan TC selama
+
+00:11:54.270 --> 00:12:01.170
+kita memiliki suara pajak dan jadi kami menggunakan nama kelas TCAS akan menyelaraskan pajak kami.
+
+00:12:01.270 --> 00:12:12.840
+Jadi sekarang kita memiliki Kyon dan itu diindeks bukan hanya file, kita bisa mengatakan di sini kelas sama
+
+00:12:12.960 --> 00:12:18.820
+dengan EF 1 untuk Fonte inginkan dan Tuckson menyimpan
+
+00:12:19.020 --> 00:12:24.150
+Tetapi saya harus melakukan NPM mulai dari sini untuk memastikan bahwa server kami
+
+00:12:25.150 --> 00:12:30.940
+berjalan sehingga kami dapat memeriksa perubahan kami dan kami meminta hello world Volcom untuk bereaksi.
+
+00:12:30.940 --> 00:12:33.130
+Tapi sebenarnya ada satu trik di sini.
+
+00:12:33.160 --> 00:12:39.220
+Jika Anda membuka konsol meskipun ini berhasil saya mendapatkan peringatan yang mengatakan kelas properti Dom tidak valid.
+
+00:12:39.220 --> 00:12:41.280
+Apakah maksud Anda nama kelas dan bereaksi.
+
+00:12:41.290 --> 00:12:50.750
+Benar-benar hebat dalam memberi Anda kesalahan dan Anda mungkin bertanya pada diri sendiri mengapa nama kelas bukan
+
+00:12:51.020 --> 00:12:51.750
+kelas.
+
+00:12:51.770 --> 00:12:57.910
+Karena jika saya menyimpan ini kembali, saya tidak lagi memiliki udara itu.
+
+00:12:58.350 --> 00:12:59.300
+Mengapa demikian.
+
+00:12:59.550 --> 00:13:04.270
+Sampai titik ini kita baru saja menjadi stigma.
+
+00:13:04.560 --> 00:13:06.870
+Tetapi ini adalah file javascript.
+
+00:13:06.990 --> 00:13:10.120
+Bagaimana kita bisa melakukan ini.
+
+00:13:10.140 --> 00:13:19.380
+Ini sebenarnya adalah sesuatu yang disebut GSX bagian dari tindakan ini adalah memungkinkan Anda untuk menulis email ini seperti
+
+00:13:19.980 --> 00:13:28.540
+sintaks dalam javascript Anda dan Anda mungkin bertanya pada diri sendiri, apakah itu tidak melanggar aturan pemisahan kekhawatiran
+
+00:13:28.540 --> 00:13:36.610
+dan bagaimana kita bahkan dapat tambahkan simbol ke javascript untuk menjawab pertanyaan pemisahan pertama kekhawatiran re-act memiliki
+
+00:13:36.610 --> 00:13:43.300
+ide komponen dan itu lebih baik untuk memiliki fungsionalitas dan gaya per komponen
+
+00:13:43.540 --> 00:13:47.810
+sehingga setiap komponen adalah alam semesta terpisah sendiri.
+
+00:13:47.860 --> 00:13:55.690
+Dan Anda hanya menambahkan komponen-komponen ini dan gagasan pemisahan kekhawatiran dengan reaksi adalah komponen-komponen itu sementara
+
+00:13:56.290 --> 00:13:59.310
+mereka tidak memikirkan hal lain.
+
+00:13:59.380 --> 00:14:03.520
+Jadi itu mengubah paradigma di sini dan itu agak menyenangkan.
+
+00:14:03.520 --> 00:14:05.060
+Saya hanya bisa melihat komponen halo.
+
+00:14:05.050 --> 00:14:06.360
+Saya tahu persis apa yang dilakukannya.
+
+00:14:06.370 --> 00:14:13.090
+Saya dapat melihat SS ini dan kapan saja saya perlu melakukan perubahan, saya hanya perlu khawatir tentang
+
+00:14:13.090 --> 00:14:15.900
+file yang berisi halo CSSA dan Javascript.
+
+00:14:15.910 --> 00:14:21.440
+Hal kedua adalah ini hal yang disebut GSX di bawah kapnya.
+
+00:14:21.490 --> 00:14:28.970
+Apa yang dilakukan reaktor sebenarnya membiarkan saya menggunakan sintaks ini, tetapi mereka bukan ASTM sebenarnya semua pajak.
+
+00:14:29.110 --> 00:14:34.840
+Ingat apa yang saya katakan tentang Dom virtual dan bagaimana aksi ulang menciptakan objeknya sendiri dan kemudian melihat DOM
+
+00:14:34.840 --> 00:14:39.180
+dan membandingkannya dan berkata Hmm saya perlu mengubah ini dan melakukannya untuk kita.
+
+00:14:39.320 --> 00:14:48.070
+Re-act menggunakan GSX untuk membuat Dom virtual Dom palsu mereka yang mereka buat berdasarkan apa yang kami berikan kepada
+
+00:14:48.070 --> 00:14:48.780
+mereka.
+
+00:14:48.940 --> 00:14:55.300
+Kemudian mereka melihat Dom virtual ini dan Dom nyata dan berkata hmm bagian ini telah berubah.
+
+00:14:55.300 --> 00:15:01.840
+Saya akan mengubah Domhnall berdasarkan pintu virtual dan itulah sebabnya re-bertindak sangat cepat.
+
+00:15:02.020 --> 00:15:08.380
+Ini menciptakan objek yang sangat cepat dan Javascript dan hanya mengubah apa yang perlu dilakukan
+
+00:15:08.380 --> 00:15:09.240
+di pintu.
+
+00:15:09.310 --> 00:15:10.740
+Jadi biasakan saja.
+
+00:15:10.780 --> 00:15:18.190
+Ini aneh pada awalnya tetapi sekali lagi selama Anda membungkusnya di braket Anda dapat menulis di sini waria
+
+00:15:18.190 --> 00:15:24.130
+dan juga komponen kustom Anda sendiri seperti Halo yang kami gunakan dalam indeks bukan
+
+00:15:28.500 --> 00:15:39.080
+hanya untuk dan sekarang mungkin dan masuk akal mengapa kami tidak bisa katakan kelas karena kelas adalah kata kunci yang disediakan dalam kelas javascript adalah
+
+00:15:39.980 --> 00:15:42.770
+bagian dari bahasa yang digunakan javascript.
+
+00:15:42.770 --> 00:15:49.460
+Jadi jika ini adalah javascript fakta bahwa kita melihat kelas di sini tidak masuk akal dalam versi lama
+
+00:15:49.460 --> 00:15:50.030
+reaksi
+
+00:15:50.030 --> 00:15:57.730
+Ini benar-benar rusak bereaksi tetapi sekarang memberi kita kesalahan yang bagus karena ini javascript dan bukan waria.
+
+00:15:57.740 --> 00:16:01.100
+Kami harus mengatakan nama kelas dan itu adalah sesuatu yang Anda akan terbiasa.
+
+00:16:01.100 --> 00:16:05.600
+Anda akan dipermainkan pada awalnya tetapi menjadi mudah setelah beberapa saat.
+
+00:16:05.610 --> 00:16:12.230
+Baiklah hal terakhir yang akan saya tunjukkan kepada Anda adalah bagian dari aksi ulang dalam komponen
+
+00:16:12.230 --> 00:16:19.220
+halo sekarang saya dapat menambahkan sesuatu yang disebut props atau properti dan props ini bisa disebut apa saja.
+
+00:16:19.220 --> 00:16:21.310
+Anggap mereka sebagai shim semua atribut.
+
+00:16:21.310 --> 00:16:24.450
+Saya bisa mengucapkan salam.
+
+00:16:24.730 --> 00:16:27.660
+Dia memanggil mereka di sini.
+
+00:16:27.980 --> 00:16:30.050
+Saya ingin membungkusnya dengan kurung keriting.
+
+00:16:30.230 --> 00:16:35.460
+Dan ini adalah ekspresi javascript apa pun yang saya inginkan,
+
+00:16:38.930 --> 00:16:43.140
+saya bisa mengatakan halo kembali bertindak ninja.
+
+00:16:43.370 --> 00:16:48.940
+Dan jika saya melihat ini saya mendapatkan kesalahan mengatakan bahwa tidak ada penggabungan yang tidak berguna.
+
+00:16:48.940 --> 00:16:52.100
+Jadi ia mengatakan bahwa hei mengapa Anda menambahkan sesuatu.
+
+00:16:52.110 --> 00:16:53.960
+Anda bisa menggabungkan semuanya.
+
+00:16:54.010 --> 00:17:00.310
+Jadi cukup sulit untuk bahkan memberi Anda saran atau peringatan ketika Anda melakukan sesuatu yang tidak bersih.
+
+00:17:00.310 --> 00:17:02.970
+Tetapi untuk saat ini untuk tujuan demonstrasi, ini tidak masalah.
+
+00:17:03.340 --> 00:17:10.840
+Sekarang saya sudah memberikannya kepada apa yang kita sebut Propp ucapan salam untuk halo saya sekarang memiliki akses dan halo.
+
+00:17:11.020 --> 00:17:11.620
+Iya nih.
+
+00:17:11.740 --> 00:17:14.580
+Dua alat peraga
+
+00:17:17.140 --> 00:17:31.790
+sekarang saya bisa mengatakan ini salam titik salam Saya menyimpan ini kembali dan saya menyapa kembali bertindak Ninja.
+
+00:17:32.000 --> 00:17:43.980
+Anda lihat dengan sintaks ini mengatakan bahwa objek ini yang Halo memiliki properti alat peraga yang menyambut
+
+00:17:44.020 --> 00:17:51.100
+Saya tahu ini membingungkan hanyalah sintaks yang harus Anda gunakan tetapi sekarang kami memiliki akses
+
+00:17:51.310 --> 00:17:57.120
+ke properti apa pun dan nilai properti apa pun yang kami dapatkan.
+
+00:17:57.240 --> 00:18:02.360
+Halo, ini adalah kekuatan yang akan berguna nantinya.
+
+00:18:02.360 --> 00:18:08.010
+Tapi saya ingin Anda membuat komponen sendiri di sini dan merasa nyaman dengan Sendak.
+
+00:18:08.170 --> 00:18:11.700
+Ini benar-benar sangat kuat dan sekali untuk terbiasa.
+
+00:18:11.830 --> 00:18:14.250
+Anda dapat membangun komponen apa pun yang Anda inginkan.
+
+00:18:14.290 --> 00:18:14.590
+BAIK.
+
+00:18:14.620 --> 00:18:15.630
+Satu hal terakhir.
+
+00:18:16.700 --> 00:18:23.500
+Indeks ini mungkin agak sulit tetapi saya ingin menunjukkan kepada Anda bahwa ini sebenarnya hanya sebuah fungsi.
+
+00:18:23.670 --> 00:18:39.480
+Jika saya melakukan Konst halo dan di sini fungsi ini menerima alat peraga jika saya melakukan fungsi kesalahan di sini membungkusnya dalam kurung keriting dan alih-alih
+
+00:18:39.480 --> 00:18:47.570
+melakukan render ini saya hanya kembali jika saya menyimpan ini dengan baik saya
+
+00:18:54.660 --> 00:19:02.620
+mendapatkan kesalahan karena ini berhenti Salam Salam tidak benar-benar ada karena itu bukan
+
+00:19:02.650 --> 00:19:06.070
+objek lagi itu adalah fungsi.
+
+00:19:06.070 --> 00:19:07.220
+Jadi saya tidak perlu alat peraga.
+
+00:19:07.240 --> 00:19:13.990
+Ia menerima alat peraga parameter apa pun yang kita berikan dan alat peraga bahwa salam dapat diterima oleh kita.
+
+00:19:14.020 --> 00:19:16.770
+Saya simpan ini kembali dan lihat itu.
+
+00:19:16.780 --> 00:19:17.590
+Bekerja.
+
+00:19:17.830 --> 00:19:19.750
+Itu hanya fungsi.
+
+00:19:19.740 --> 00:19:27.460
+Pikirkan reaktor yang baru saja kita buat fungsi-fungsi ini yang mengambil
+
+00:19:27.730 --> 00:19:36.420
+parameter dan parameter ini yang diberikan dengan memberikan atribut dan nilai-nilai baru saja diberikan.
+
+00:19:36.690 --> 00:19:43.000
+Saya memiliki akses ke salam prop jika saya memberikannya atau prop lain di sini disebut katakanlah seekor anjing maka
+
+00:19:43.000 --> 00:19:47.040
+saya akan memiliki alat peraga mulai anjing tersedia untuk saya juga.
+
+00:19:48.550 --> 00:19:54.550
+Dan lagi kita mendapatkan kesalahan kecil yang bagus mengatakan komponen mengambil ini tetapi kita tidak
+
+00:19:54.550 --> 00:19:59.140
+benar-benar menggunakannya dan kita menggunakan penggabungan string yang tidak perlu.
+
+00:19:59.140 --> 00:20:05.720
+Sekali lagi sangat berguna karena Anda dapat melihat cukup mudah untuk mengambil pelajaran selanjutnya.
+
+00:20:05.730 --> 00:20:10.830
+Kita akan mulai benar-benar bekerja pada aplikasi teman-teman robo kita sekarang karena kita memiliki dasar-dasarnya.
+
+00:20:10.830 --> 00:20:12.540
+Saya sudah melihatnya satu per satu.

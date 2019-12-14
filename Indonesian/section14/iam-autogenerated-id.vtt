@@ -1,0 +1,196 @@
+﻿WEBVTT
+
+00:00:01.750 --> 00:00:02.700
+Selamat datang kembali.
+
+00:00:02.820 --> 00:00:09.710
+Sebenarnya mari kita hubungkan kerangka kerja server kita ke profil AWOS kita.
+
+00:00:09.750 --> 00:00:17.470
+Sekarang hal pertama yang perlu kita lakukan adalah kembali ke AWOS dan dalam fungsi lambda kita benar-benar kembali
+
+00:00:17.470 --> 00:00:20.640
+ke dasbor kita, cukup klik di sini.
+
+00:00:21.590 --> 00:00:29.180
+Untuk mengonfigurasi profil kami, kami harus menggunakan layanan yang disebut I-AM dan Anda harus menggunakannya kapan
+
+00:00:29.180 --> 00:00:35.210
+pun Anda menggunakan salah satu layanan AWOS dan ini mengontrol izin.
+
+00:00:35.210 --> 00:00:40.890
+Dan di sini saya akan menambahkan pengguna dan pengguna ini saya akan mengatakan menambahkan pengguna
+
+00:00:40.940 --> 00:00:50.440
+Saya akan menyebutnya dengan rapi dan dengan demikian harus lambda lowside baik-baik saja di sini supaya kita tahu itu fungsi
+
+00:00:50.440 --> 00:00:51.360
+lambda.
+
+00:00:52.500 --> 00:00:55.860
+Dan saya ingin memberikannya akses terprogram.
+
+00:00:55.860 --> 00:01:03.450
+Itu bisa mengakses fungsi lambda kami secara terprogram tetapi kami tidak ingin mereka mengakses dashboard manajemen kami
+
+00:01:03.450 --> 00:01:04.470
+di sini.
+
+00:01:04.470 --> 00:01:05.750
+Ini lebih aman.
+
+00:01:05.790 --> 00:01:13.050
+Kami tidak perlu memberikan semua izin itu, jadi kami tekan berikutnya untuk izin dan Anda ingin
+
+00:01:13.110 --> 00:01:14.790
+membuat grup izin.
+
+00:01:14.790 --> 00:01:20.630
+Jadi, dalam kasus kami, kami akan melampirkan kebijakan yang sudah dibuat Amazon.
+
+00:01:20.910 --> 00:01:28.460
+Dan jika saya mencari fungsi atau fungsi lambda kita melihat bahwa ada beberapa hal yang dapat
+
+00:01:28.460 --> 00:01:31.020
+kita lakukan untuk tujuan demonstrasi.
+
+00:01:31.220 --> 00:01:35.750
+Anda memiliki opsi berbeda dan saya akan memberi Anda akses informasi.
+
+00:01:35.750 --> 00:01:41.690
+Saya hanya akan menggunakan akses administrator yang belum tentu merupakan ide terbaik dalam produksi karena itu memberi
+
+00:01:41.690 --> 00:01:47.390
+Anda akses admin dan Anda mungkin tidak selalu ingin memberikan izin sebanyak itu tetapi Anda dapat
+
+00:01:47.840 --> 00:01:52.660
+memutuskan sendiri izin mana yang Anda inginkan saat Anda hanya menguji meskipun administrator
+
+00:01:52.670 --> 00:01:54.500
+di Access baik-baik saja.
+
+00:01:55.370 --> 00:01:58.780
+Dan kami akan klik berikutnya.
+
+00:01:59.030 --> 00:02:00.570
+Kami hanya ingin meninjau semuanya.
+
+00:02:00.620 --> 00:02:01.110
+Baik.
+
+00:02:01.190 --> 00:02:03.280
+Saya akan melihat katakan buat pengguna.
+
+00:02:03.470 --> 00:02:05.180
+Dan begitulah.
+
+00:02:05.240 --> 00:02:12.110
+Kami sukses dan memberi kami aksesori dan kunci rahasia yang sekarang dapat kita gunakan untuk menghubungkan server
+
+00:02:12.500 --> 00:02:15.310
+lebih sedikit ke profil tertinggi kami.
+
+00:02:15.770 --> 00:02:25.920
+Jadi mari kita kembali ke terminal kita dan di sini kita harus menulis perintah Salles config.
+
+00:02:26.520 --> 00:02:31.020
+Dan ini adalah sesuatu yang hanya perlu Anda lakukan pada awalnya setelah Anda melakukannya maka Layanan sudah dikonfigurasi
+
+00:02:31.020 --> 00:02:31.770
+untuk Anda.
+
+00:02:31.830 --> 00:02:37.320
+Kami akan memberikan kredensial dan kami akan memberikan beberapa parameter.
+
+00:02:37.320 --> 00:02:45.390
+Yang pertama adalah penyedia yang AWOS karena ingat saya bisa menggunakan Google Saya bisa menggunakan IBM Microsoft penyedia apa pun
+
+00:02:45.390 --> 00:02:52.790
+yang kita inginkan dan kemudian parameter berikutnya akan menjadi kunci dan kita akan memberikannya kunci rahasia yang kami
+
+00:02:52.790 --> 00:02:54.370
+terima di sini.
+
+00:02:54.530 --> 00:02:55.890
+Saya akan menyalinnya.
+
+00:02:55.910 --> 00:02:56.930
+Akses skiddy
+
+00:03:00.480 --> 00:03:02.070
+tidak akan lulus di sini.
+
+00:03:02.080 --> 00:03:12.130
+Dan akhirnya rahasia dan rahasia yang akan kita ungkapkan menunjukkan dan menyalinnya dan meneruskannya di sini.
+
+00:03:12.250 --> 00:03:12.970
+Mari
+
+00:03:16.360 --> 00:03:17.320
+kita tekan Enter.
+
+00:03:17.320 --> 00:03:18.230
+Lihat itu.
+
+00:03:18.400 --> 00:03:25.930
+Kami telah menyiapkan AWOS sehingga sekarang kapan pun kami menggunakan kerangka layanan yang terlampir pada profil ini
+
+00:03:26.070 --> 00:03:27.170
+di a.
+
+00:03:27.420 --> 00:03:28.280
+Luar biasa.
+
+00:03:28.300 --> 00:03:34.860
+Sekarang hanya untuk menunjukkan kepada Anda apa yang terjadi di balik layar itu sebenarnya membuat folder bernama AWOS, saya percaya.
+
+00:03:36.520 --> 00:03:37.540
+Atau harapan.
+
+00:03:37.550 --> 00:03:38.770
+Sekarang beberapa yang ingin kita lakukan.
+
+00:03:38.900 --> 00:03:42.710
+Itu ada di folder root dan ini adalah file tersembunyi.
+
+00:03:42.830 --> 00:03:51.490
+Jadi itu harus menjadi W S dan jika kita masuk ke sini biar jelas ini dan lakukan ls.
+
+00:03:51.620 --> 00:03:54.070
+Kami melihat bahwa kami sekarang memiliki file kredensial.
+
+00:03:54.260 --> 00:04:01.790
+Dan jika saya membuka file kredensial, kami melihat bahwa kami memiliki ID akses dan kunci akses kami menjadi cerah di sini.
+
+00:04:01.790 --> 00:04:07.670
+Jadi begitulah ia tahu bahwa setiap kali kami menggunakan atau melakukan apa pun dengan Amazon AWOS, ia
+
+00:04:07.670 --> 00:04:09.080
+akan memeriksa file ini.
+
+00:04:09.090 --> 00:04:11.620
+Baiklah, mari kita kembali ke apa yang kita miliki sebelumnya.
+
+00:04:11.760 --> 00:04:19.070
+Mari kita CD ke desktop kita dan kemudian disebut peringkat sempurna.
+
+00:04:19.080 --> 00:04:19.650
+Baiklah.
+
+00:04:19.650 --> 00:04:20.200
+Itu dia.
+
+00:04:20.220 --> 00:04:23.190
+Kami memiliki meja server kami yang terhubung.
+
+00:04:23.390 --> 00:04:23.750
+Iya nih.
+
+00:04:23.760 --> 00:04:30.720
+Kita semua siap untuk mulai menulis beberapa kode. Saya sebenarnya memiliki fungsi kita melakukan sesuatu sehingga kita dapat menggunakannya
+
+00:04:30.720 --> 00:04:32.810
+di otak pintar kita sekarang.
+
+00:04:34.020 --> 00:04:34.810
+Saya akan melihat yang berikutnya.

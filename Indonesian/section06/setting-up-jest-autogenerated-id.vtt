@@ -1,0 +1,406 @@
+﻿WEBVTT
+
+00:00:01.010 --> 00:00:07.060
+Sekarang saya tahu bahwa mereka bereaksi sudah dilengkapi dengan alat pengujian lain yang sudah diinstal sebelumnya.
+
+00:00:07.190 --> 00:00:13.190
+Tapi saya pikir penting bagi kita untuk memahami cara kerjanya sehingga kita juga bisa membangun sesuatu
+
+00:00:13.190 --> 00:00:14.690
+seperti membuat bereaksi sendiri.
+
+00:00:14.870 --> 00:00:20.020
+Jadi saya akan mulai dari awal dan menyiapkan beberapa contoh pengujian untuk Anda.
+
+00:00:21.460 --> 00:00:24.770
+Sekarang hanya di sini memiliki dokumentasi yang bagus.
+
+00:00:24.820 --> 00:00:32.490
+Sekali lagi dengan perpustakaan apa pun yang Anda baca melalui panduan mereka dan kami memberikan banyak info ketika perpustakaan berubah Anda dapat melihat
+
+00:00:32.490 --> 00:00:36.850
+bahwa itu adalah versi 20 2. 4 sekarang semuanya mungkin diperbarui.
+
+00:00:36.970 --> 00:00:40.280
+Tetapi konsep utama mereka tidak akan berubah.
+
+00:00:40.360 --> 00:00:46.990
+Jadi mari kita mulai dengan menginstal hanya atau pertama-tama mari kita buat folder proyek.
+
+00:00:47.350 --> 00:00:54.940
+Saya akan membuat folder proyek bernama test dan kami hanya akan masuk ke folder itu dan menjalankan PM
+
+00:00:55.210 --> 00:00:56.490
+biasa di dalamnya.
+
+00:00:56.530 --> 00:00:59.540
+Dash y untuk membuat paket NPM.
+
+00:01:00.160 --> 00:01:08.220
+Dan kami juga ingin membuat file skrip dot JSE dan mari kita buka.
+
+00:01:08.310 --> 00:01:10.190
+Dan editor teks favorit
+
+00:01:18.200 --> 00:01:20.880
+kami terlihat bagus dan cukup sempurna.
+
+00:01:20.890 --> 00:01:29.480
+Sekarang mari kita lihat paket Jaison dan jelas langkah pertama yang ingin kita lakukan adalah menjalankan instalasi NPM dan benar-benar
+
+00:01:33.580 --> 00:01:35.360
+membiarkan saya membatalkan ini.
+
+00:01:35.420 --> 00:01:39.830
+Ingatlah bahwa hanya untuk tujuan pembangunan.
+
+00:01:39.950 --> 00:01:45.380
+Kami tidak benar-benar membutuhkannya sebagai ketergantungan untuk Facebook kami.
+
+00:01:45.380 --> 00:01:48.860
+Jadi biasanya ketika Anda menginstal
+
+00:01:52.790 --> 00:01:58.590
+hanya Anda ingin melakukan NPM instal dasbor simpan def loop.
+
+00:01:58.940 --> 00:02:00.330
+Mari kita coba lagi.
+
+00:02:00.380 --> 00:02:09.210
+Hanya ingat bahwa dengan versi NPM Anda ketika Anda melakukan NPM diinstal, itu mengasumsikan dash dasbor
+
+00:02:09.270 --> 00:02:13.280
+disimpan sebagai dev atau sebagai dependensi.
+
+00:02:13.290 --> 00:02:15.710
+Jadi itu sebabnya akhirnya lakukan dasbor dasbor dengan aman di sini.
+
+00:02:15.750 --> 00:02:25.410
+Sekarang sementara ini sedang memuat Mari kita masuk ke skrip kita dan mengubahnya ke perintah tes.
+
+00:02:27.250 --> 00:02:36.640
+Dan yang perlu kita lakukan di sini adalah menjalankan hanya sekali itu diinstal.
+
+00:02:36.730 --> 00:02:42.160
+Tidak yakin apa yang terjadi di sini terlihat sedikit sempit. Mari kita tutup ini dan jalankan
+
+00:02:42.440 --> 00:02:48.100
+lagi sekarang sekarang sambil memuat. Mari kita masuk ke file rok kita dan berpikir tentang latihan apa
+
+00:02:48.100 --> 00:02:49.550
+yang ingin kita masukkan.
+
+00:02:49.840 --> 00:02:57.910
+Dan saya pikir meminta kami menggabungkan fungsi pencarian Google sederhana mungkin merupakan latihan kecil yang menyenangkan.
+
+00:02:57.910 --> 00:02:59.670
+Jadi mari kita lakukan itu.
+
+00:02:59.910 --> 00:03:05.900
+Sepertinya semua sudah ditambahkan. Syllis tekan saja jadikan ini sedikit lebih kecil.
+
+00:03:06.390 --> 00:03:12.660
+Dan lagi jika kita pergi ke Pakistan Jason kita melihat bahwa itu adalah bagian dari
+
+00:03:12.690 --> 00:03:20.960
+dependensi dev bukan dependensi tetapi Dev karena Anda melakukannya karena kami melakukan dash dasbor menyimpan atau lari menyelamatkan kematian dalam skrip.
+
+00:03:20.990 --> 00:03:21.890
+File JS.
+
+00:03:22.130 --> 00:03:25.720
+Katakanlah itu adalah Google dan kami memiliki variabel.
+
+00:03:25.850 --> 00:03:32.330
+Ini akan menjadi versi sederhana dari algoritma pencarian mereka tetapi prinsip-prinsipnya
+
+00:03:32.330 --> 00:03:33.630
+akan sama.
+
+00:03:33.650 --> 00:03:42.150
+Jadi misalkan database Google memiliki larik semua situs Web yang telah mereka indeks.
+
+00:03:42.350 --> 00:03:45.460
+Katakanlah yang pertama adalah Catts dot com.
+
+00:03:45.740 --> 00:03:48.710
+Jelas itu internet.
+
+00:03:48.710 --> 00:03:56.710
+Kami juga memiliki resep sup Dawk pada semua orang suka sup.
+
+00:03:56.710 --> 00:04:04.940
+Kami memiliki bunga dot com dan mari kita tambahkan satu lagi kita akan mengatakan bahwa kita juga punya binatang dot com.
+
+00:04:04.950 --> 00:04:11.550
+Situs web yang cukup mendasar dan ini semua adalah situs web yang Google dapat cari dengan jelas dalam kehidupan nyata.
+
+00:04:11.550 --> 00:04:16.200
+Daftar ini mungkin sedikit lebih besar.
+
+00:04:16.210 --> 00:04:16.750
+Baiklah.
+
+00:04:16.800 --> 00:04:19.340
+Jadi ada basis data Google kami.
+
+00:04:19.470 --> 00:04:20.490
+Kamu tahu apa.
+
+00:04:20.640 --> 00:04:24.380
+Sementara kita melakukannya katakanlah beberapa gambar kucing lagi.
+
+00:04:24.530 --> 00:04:32.140
+Dot. com dan mungkin favorit saya baik-baik saja
+
+00:04:38.220 --> 00:04:45.840
+dan saya telah menambahkan dua terakhir ini karena mungkin jika seseorang mencari kucing di browser Google
+
+00:04:45.840 --> 00:04:51.170
+Chrome Yah kita mungkin ingin menunjukkan kepada mereka tiga tautan ini lagi.
+
+00:04:51.180 --> 00:04:56.810
+Mari kita membuat fungsi dan ini hanya akan menjadi fungsi pencarian Google.
+
+00:04:59.230 --> 00:05:04.450
+Dan fungsi ini akan mengambil pencarian yang
+
+00:05:08.350 --> 00:05:10.240
+disediakan pengguna.
+
+00:05:10.240 --> 00:05:15.380
+Jadi apa pun yang mereka cari dan dari sana itu melakukan beberapa hal.
+
+00:05:15.400 --> 00:05:20.910
+Pertama kita ingin mengatakan itu akan menjadi algoritma yang sangat sederhana.
+
+00:05:21.010 --> 00:05:27.290
+Jelas ini bisa jadi ini jauh lebih rumit di Google tetapi idenya adalah kita sesuatu dan
+
+00:05:27.290 --> 00:05:30.240
+jika ada semacam pertandingan kami ingin mengembalikannya.
+
+00:05:30.400 --> 00:05:41.040
+Anggap saja bahwa database Google akan difilter dan menggunakan fungsi filter akan mengatakan bahwa setiap
+
+00:05:41.040 --> 00:05:49.940
+item dalam database adalah situs Web yang akan difilter dan yang perlu
+
+00:05:50.090 --> 00:05:53.300
+kita lakukan adalah
+
+00:05:55.990 --> 00:05:59.220
+mengembalikan situs Web yang menyertakan.
+
+00:05:59.260 --> 00:06:12.610
+Jadi ini untuk mengatakan kucing dot com jika itu termasuk apa pun pencarian tetapi seperti saya katakan sangat baik
+
+00:06:12.610 --> 00:06:16.820
+dan dasar algoritma pencarian Google.
+
+00:06:17.120 --> 00:06:23.680
+Dan kami juga ingin mengembalikan kecocokan ini kepada pengguna karena itulah yang dilakukan Google.
+
+00:06:23.870 --> 00:06:31.370
+Tetapi katakanlah kita ingin memastikan karena secara hipotesis basis data ini dapat menjadi sangat besar, kita hanya
+
+00:06:31.670 --> 00:06:39.290
+ingin mengembalikan tiga hasil teratas sehingga kita bisa mengatakan izinkan saya memastikan saya mengeja dengan benar terlebih
+
+00:06:39.290 --> 00:06:40.170
+dahulu.
+
+00:06:40.190 --> 00:06:49.290
+Kami ingin mengatakan jika panjang titik ini lebih dari tiga jika Anda memiliki lebih dari tiga pertandingan maka
+
+00:06:49.290 --> 00:06:57.030
+kami hanya akan mengatakan kecocokan dot slice dan baru saja mengembalikan tiga hasil pertama.
+
+00:06:58.660 --> 00:07:01.480
+Kalau tidak, kembalikan saja pertandingan reguler.
+
+00:07:02.690 --> 00:07:07.060
+Mari kita buat ini lebih kecil agar kita bisa melihat.
+
+00:07:07.110 --> 00:07:07.530
+Baiklah.
+
+00:07:07.530 --> 00:07:10.680
+Mari kita coba ini dan lihat apakah itu benar-benar berfungsi.
+
+00:07:10.680 --> 00:07:20.360
+Saya akan menjalankan fungsi pencarian Google dan katakanlah bahwa input pencarian yang akan saya masukkan akan menjadi sup
+
+00:07:20.360 --> 00:07:23.720
+dan kurang lama dibatalkan untuk memastikan
+
+00:07:26.940 --> 00:07:32.940
+bahwa apa pun outputnya saat kami log in ke terminal kami
+
+00:07:32.940 --> 00:07:35.070
+biarkan aku menyelamatkan.
+
+00:07:35.340 --> 00:07:41.520
+Dan lagi dengan simpul kita bisa menjalankan skrip simpul ini.
+
+00:07:41.620 --> 00:07:42.120
+J. S.
+
+00:07:44.950 --> 00:07:46.300
+Baiklah, lihat itu.
+
+00:07:46.300 --> 00:07:48.130
+Saya punya resep sup.
+
+00:07:48.250 --> 00:07:50.430
+Jika ini berubah menjadi kucing saya
+
+00:07:54.800 --> 00:07:56.140
+mendapat barang-barang kucing.
+
+00:07:56.270 --> 00:08:02.530
+Dan kucing favorit saya tenang tetapi tidak gambar kucing dot karena tidak cocok dengan kucing.
+
+00:08:02.660 --> 00:08:11.230
+Jika kita memiliki situs Web nother di sini mari kita sebut itu kucing favorit saya dan saya hanya mencari kucing
+
+00:08:13.980 --> 00:08:18.380
+O dan pastikan saya menambahkan koma saya selalu lupa koma.
+
+00:08:18.380 --> 00:08:20.980
+Biarkan saya menghapus ini dan coba lagi.
+
+00:08:24.080 --> 00:08:24.450
+Baiklah.
+
+00:08:24.500 --> 00:08:31.340
+Saya hanya mendapatkan satu dua dan tiga hasil karena kami melakukan irisan kecil ini.
+
+00:08:31.340 --> 00:08:34.190
+Kami hanya mengembalikan tiga hasil teratas.
+
+00:08:34.190 --> 00:08:34.790
+Luar biasa.
+
+00:08:34.940 --> 00:08:42.950
+Kami baru saja menerapkan google pada skala yang lebih sederhana tetapi ingatlah bahwa ini adalah cara kerja Google.
+
+00:08:42.950 --> 00:08:48.050
+Baiklah jadi itu menyenangkan tapi bagaimana kita bisa menguji ini.
+
+00:08:48.050 --> 00:08:54.890
+Katakanlah kami adalah Google dan kami ingin memastikan bahwa fungsi pencarian Google ini berfungsi dengan baik karena
+
+00:08:54.890 --> 00:09:02.880
+ini adalah fungsi penting untuk aplikasi kami karena kami baru saja menginstal mari jalankan uji NPM dan lihat apa yang
+
+00:09:02.880 --> 00:09:03.530
+terjadi.
+
+00:09:05.490 --> 00:09:07.020
+Tes NPM itu
+
+00:09:11.310 --> 00:09:17.440
+hanya mengatakan tidak ada tes yang ditemukan karena kami belum menjalankan tes apa pun.
+
+00:09:17.850 --> 00:09:25.740
+Tetapi Anda dapat melihat di sini bahwa hanya secara otomatis mencari apa saja yang memiliki folder yang memiliki
+
+00:09:25.740 --> 00:09:32.310
+garis bawah di bawah tes crosscourt dan apa pun di dalamnya atau itu akan
+
+00:09:32.310 --> 00:09:36.550
+melihat file yang memiliki spec atau sintaksis titik uji.
+
+00:09:36.780 --> 00:09:46.380
+Dengan logika itu saya bisa membuat tes skrip file baru untuk menghindari kita atau saya bisa meletakkan Spack dan di sini
+
+00:09:46.380 --> 00:09:47.300
+juga umum.
+
+00:09:47.820 --> 00:09:49.530
+Dan saya menekan enter.
+
+00:09:49.530 --> 00:09:50.870
+Dan jika saya menjalankan
+
+00:09:57.070 --> 00:09:58.730
+ini lagi saya akan gagal.
+
+00:09:58.810 --> 00:10:04.600
+Dikatakan suite tes Anda harus mengandung setidaknya satu tes.
+
+00:10:04.600 --> 00:10:05.800
+Mari kita bersihkan ini.
+
+00:10:06.190 --> 00:10:12.100
+Jadi bagaimana Anda bisa menulis tes untuk pencarian Google dan kami akan mendapatkannya di video berikutnya.
+
+00:10:12.130 --> 00:10:18.880
+Tetapi hanya untuk memastikan bahwa tes kami lulus saya akan menunjukkan kepada Anda satu cara cepat bahwa kita
+
+00:10:18.910 --> 00:10:26.250
+dapat menulis tes unit dan adil dan itu adalah kita sekarang memiliki fungsi IT dan parameter pertama dari fungsi tersebut.
+
+00:10:26.320 --> 00:10:28.020
+Dan lagi ini datang dengan adil.
+
+00:10:28.150 --> 00:10:33.730
+Tetapi jika Anda mengunduh pustaka pengujian lain hampir semuanya memiliki fungsi ini juga.
+
+00:10:33.730 --> 00:10:37.300
+Seperti saya katakan semua perpustakaan ini memiliki sintaks yang sangat mirip.
+
+00:10:37.330 --> 00:10:43.480
+Jadi, jika Anda tahu satu, Anda dapat dengan mudah beralih ke yang lain dengan sedikit perubahan.
+
+00:10:43.540 --> 00:10:49.570
+Jadi parameter pertama dan di sini adalah semacam string yang akan muncul di sini jadi anggap saja
+
+00:10:49.660 --> 00:10:51.040
+ini adalah tes.
+
+00:10:51.430 --> 00:10:59.240
+Dan kemudian parameter kedua adalah fungsi yang merupakan tes yang perlu dijalankan.
+
+00:10:59.240 --> 00:11:04.990
+Dalam kasus kami, kami tidak benar-benar memiliki apa pun kecuali mari kita simpan ini dan jalankan tes NPM
+
+00:11:07.600 --> 00:11:08.110
+Whoa.
+
+00:11:08.260 --> 00:11:09.490
+Lihat itu.
+
+00:11:09.490 --> 00:11:11.980
+Kami memiliki tes pertama kami.
+
+00:11:13.030 --> 00:11:14.140
+Itu cukup mudah, benar.
+
+00:11:14.140 --> 00:11:23.050
+Semua yang kami lakukan adalah NPM dan adil dan kami sudah memiliki fungsi baru ini dan kami tidak dapat menjalankan tes dan kami
+
+00:11:23.050 --> 00:11:27.000
+melihat bahwa ini adalah tes yang lulus dalam satu milidetik.
+
+00:11:27.070 --> 00:11:28.540
+Itu tes yang cukup cepat.
+
+00:11:28.570 --> 00:11:31.210
+Semuanya hijau dan menyenangkan.
+
+00:11:31.210 --> 00:11:32.730
+Agak terasa enak.
+
+00:11:33.070 --> 00:11:35.270
+Memberi Anda dopamin yang baik.
+
+00:11:35.350 --> 00:11:36.250
+Baiklah.
+
+00:11:36.250 --> 00:11:41.500
+Dalam video berikutnya kita sebenarnya akan mulai menulis beberapa tes untuk pencarian Google kita.
+
+00:11:41.500 --> 00:11:42.250
+Saya akan melihat yang berikutnya.

@@ -1,0 +1,634 @@
+﻿WEBVTT
+
+00:00:01.080 --> 00:00:02.010
+Selamat datang kembali.
+
+00:00:02.070 --> 00:00:06.840
+Sudah waktunya bagi kita untuk benar-benar menerapkan integrasi berkelanjutan ke dalam proyek kita.
+
+00:00:06.870 --> 00:00:11.460
+Kita akan menggunakan lingkaran C. SAYA. dan kita akan belajar beberapa trik
+
+00:00:11.460 --> 00:00:14.480
+di sepanjang jalan dan kita akan mengatur ini sendiri jadi mari kita mulai
+
+00:00:16.260 --> 00:00:22.980
+Sekarang kita akan menggunakan lingkaran C. SAYA. yang mengelola server untuk kita.
+
+00:00:22.980 --> 00:00:29.930
+Jadi mereka memiliki server dan kami hanya menggunakan layanan mereka untuk menjalankan beberapa tes untuk proyek kami.
+
+00:00:31.180 --> 00:00:36.210
+Sekarang lingkaran C. SAYA. sebenarnya gratis untuk proyek sederhana seperti kita.
+
+00:00:36.220 --> 00:00:41.530
+Jadi, Anda dipersilakan untuk mengikuti dan menerapkan lingkaran C. SAYA. ke dalam proyek Anda.
+
+00:00:41.710 --> 00:00:48.490
+Jika Anda pernah mengerjakan apa pun dalam tim, saya sarankan untuk menggunakannya karena mereka sangat
+
+00:00:48.490 --> 00:00:55.810
+bagus dan mudah digunakan dan hanya perlu klik pada Jelajahi dokumen dan hanya kepala yang baru-baru ini
+
+00:00:55.810 --> 00:01:00.280
+ditingkatkan menjadi 2 . 0 versi yang menggunakan wadah daquiri.
+
+00:01:00.280 --> 00:01:05.770
+Jadi tunggu saja untuk dokumentasi Anda, kami ingin memastikan kami menggunakan yang terbaru.
+
+00:01:05.770 --> 00:01:09.280
+Banyak yang telah berubah sejak tanggal 1. 0 rilis.
+
+00:01:09.290 --> 00:01:12.350
+Baiklah mari kita bicara tentang beberapa hal yang akan kita lakukan.
+
+00:01:12.710 --> 00:01:14.600
+Yah, kita punya teman-teman robo kita.
+
+00:01:14.630 --> 00:01:15.610
+Ingat mereka.
+
+00:01:15.800 --> 00:01:18.980
+Dan aplikasi sederhana ini masih berfungsi.
+
+00:01:18.980 --> 00:01:20.180
+Semuanya baik.
+
+00:01:20.360 --> 00:01:25.250
+Tetapi Bruno telah meminta kami untuk menerapkan integrasi berkelanjutan ke dalam proyek ini.
+
+00:01:25.520 --> 00:01:31.590
+Sekarang menggunakan repositori ini kita akan mencoba dan memasukkan lingkaran lihat-I di sini.
+
+00:01:31.670 --> 00:01:37.010
+Jadi setiap kali ada lingkaran permintaan polling baru C. SAYA. Kami akan menjalankan semuanya dan
+
+00:01:37.340 --> 00:01:39.620
+memastikan bahwa itu bahkan siap untuk digabungkan.
+
+00:01:39.860 --> 00:01:46.110
+Jadi mari kita mulai dengan lingkaran C. SAYA. sehingga kami dapat mengimplementasikannya ke dalam proyek kami.
+
+00:01:47.210 --> 00:01:50.180
+Sekarang lingkaran C. SAYA. menggunakan file YAML.
+
+00:01:50.180 --> 00:01:57.940
+Sesuatu yang telah kita lihat sebelumnya dengan Dharker seperti ketika kami bekerja dengan AWOS lambda dan menggunakan file YAML untuk mengganti
+
+00:01:57.940 --> 00:02:04.110
+rugi bagaimana Anda ingin mengatur lingkungan pengujian Anda dan tes apa yang ingin Anda jalankan.
+
+00:02:04.150 --> 00:02:05.580
+Jadi mari kita bangun dulu.
+
+00:02:05.590 --> 00:02:12.730
+Hal pertama yang ingin kita lakukan adalah kita ingin membuat folder baru di root kita di proyek
+
+00:02:12.730 --> 00:02:24.490
+kita dan secara default kita harus menamakannya lingkaran S. SAYA. dengan titik di depannya dan itu karena pada mesin apa
+
+00:02:24.820 --> 00:02:31.930
+pun seperti Mac Linux atau file atau folder Windows yang namanya memiliki titik di depannya file sistem dingin
+
+00:02:31.990 --> 00:02:35.610
+kami dan mereka secara otomatis memukulnya oleh pengguna default.
+
+00:02:35.620 --> 00:02:40.770
+Tapi ini adalah standar yang lingkaran-aku butuhkan untuk 2 mereka. 0 versi.
+
+00:02:40.990 --> 00:02:49.250
+Dan di sini kita membuat file baru dan file ini harus disebut file config dot YAML.
+
+00:02:49.500 --> 00:02:56.670
+Dan di sinilah kita akan mengkonfigurasi apa yang kita inginkan server lingkaran lihat-I dijalankan agar kita dapat memulai sesuatu.
+
+00:02:56.740 --> 00:03:04.620
+Jadi mari kita lakukan file YAML sederhana yang lingkaran C saya dapat jalankan dan hanya kepala jika Anda bertanya-tanya di mana Anda
+
+00:03:04.710 --> 00:03:06.590
+dapat menemukan informasi lebih lanjut.
+
+00:03:06.690 --> 00:03:08.810
+Yah jelas jika Anda gulir ke bawah.
+
+00:03:08.850 --> 00:03:15.400
+Mereka memiliki dokumentasi yang bagus tentang apa yang dapat Anda lakukan, mari kita salin dan tempel beberapa contoh mereka
+
+00:03:16.590 --> 00:03:20.390
+di sini dan tempel itu ke file YAML konfigurasi kami.
+
+00:03:20.460 --> 00:03:24.730
+Kami melihat bahwa kami mendefinisikan versi kami dalam kasus kami menggunakan lingkaran CO2.
+
+00:03:24.760 --> 00:03:28.350
+Jadi kita membutuhkan versi 2 dan kemudian kita mendefinisikan pekerjaan.
+
+00:03:28.380 --> 00:03:29.910
+Apa yang kita inginkan.
+
+00:03:29.910 --> 00:03:39.650
+Server yang harus mereka lakukan dengan baik kami ingin membangun dan membangun ini akan memiliki gambar yang lebih gelap.
+
+00:03:39.650 --> 00:03:44.930
+Ingat saya katakan versi 2 dari lingkaran C. SAYA. menggunakan buruh pelabuhan dan kami tahu semua tentang
+
+00:03:44.930 --> 00:03:52.490
+itu karena kami mempelajarinya di bagian buruh pelabuhan kami apa lingkaran C. SAYA. lakukan adalah itu menciptakan gambar di mana ia dapat menjalankan pengujian kami dan kami dapat melihat di
+
+00:03:52.880 --> 00:04:00.170
+sini bahwa mereka menggunakan docker hub dan mereka memiliki gambar khusus yang disebut Circle C. SAYA. dan sepertinya mereka
+
+00:04:00.170 --> 00:04:05.930
+menggunakan Ruby sebagai wadah untuk menjalankan pengujian kami.
+
+00:04:05.930 --> 00:04:09.740
+Sekarang ini tidak harus berupa simpul atau javascript spesifik apa pun.
+
+00:04:09.740 --> 00:04:12.520
+Ini hanya lingkungan tempat tes akan berjalan.
+
+00:04:12.710 --> 00:04:20.700
+Dan Anda dapat melihat bahwa itu adalah gambar khusus mereka sehingga lingkaran akan menggunakan wadah ini untuk menciptakan
+
+00:04:20.700 --> 00:04:22.640
+lingkungan untuk pengujian Anda.
+
+00:04:22.740 --> 00:04:28.710
+Dan kemudian kita memiliki langkah-langkah mengapa kita perlu melakukan dan kita lihat di sini bahwa menjalankan hanya mengatakan
+
+00:04:28.710 --> 00:04:33.580
+untuk mengulangi halo pertama dan itu hanya untuk mencetak halo pertama ke proyek kami.
+
+00:04:33.730 --> 00:04:44.020
+Sekarang bagi kita untuk mengimplementasikan lingkaran C. SAYA. kita harus pergi ke Daftar dan kemudian di sini
+
+00:04:44.140 --> 00:04:52.300
+Anda hanya perlu mengklik mendaftar dengan mendapatkan bantuan dan setelah Anda melakukannya Anda akan dapat terhubung ke dasbor Haab Anda dan
+
+00:04:52.300 --> 00:04:58.730
+Anda melihat di sini bahwa saya sudah memiliki beberapa proyek sebelumnya sudah berjalan dan ini semua
+
+00:04:58.760 --> 00:05:00.800
+langkah integrasi berkelanjutan saya.
+
+00:05:00.800 --> 00:05:07.650
+Tetapi untuk sekarang jika ini adalah pertama kalinya Anda, Anda mungkin harus memberikan akses ke lingkaran C. SAYA. dari get Anda punya akun.
+
+00:05:07.670 --> 00:05:11.610
+Kalau tidak, Anda akan melihat dasbor bangunan kosong.
+
+00:05:11.660 --> 00:05:17.300
+Hal berikutnya yang ingin kita lakukan adalah benar-benar menambahkan proyek yang ingin kita pastikan kita menambahkan teman robot kita menguji
+
+00:05:17.420 --> 00:05:20.960
+repo sehingga lingkaran C. SAYA. tahu tentang itu.
+
+00:05:20.960 --> 00:05:27.140
+Saya akan mengklik tambah proyek dan di sini lihat bahwa saya memiliki semua repot saya yang tercantum di sini.
+
+00:05:27.140 --> 00:05:36.170
+Saya akan mengklik proyek setup pengujian teman Roble melihat itu dan di sini kita mendapatkan beberapa hal standar yang harus kita
+
+00:05:36.170 --> 00:05:37.070
+gunakan.
+
+00:05:37.070 --> 00:05:38.410
+Atau kita bisa mengubah banyak hal.
+
+00:05:38.630 --> 00:05:44.970
+Misalnya proyek kami akan memiliki sistem operasi yang berbeda kami dapat menggunakan bahasa yang berbeda
+
+00:05:46.330 --> 00:05:53.500
+Saya sarankan Anda membiarkan default pada proyek kami sebagai node dan kami hanya dapat memiliki sistem
+
+00:05:53.500 --> 00:05:58.510
+operasi Linux dan kemudian menunjukkan kepada Anda apa langkah selanjutnya.
+
+00:05:58.890 --> 00:06:03.270
+Tetapi kita akan mengabaikan semua itu dan meninggalkan semuanya seperti sekarang.
+
+00:06:04.040 --> 00:06:07.100
+Anda dapat melihat di sini bahwa mereka bahkan memberi Anda file sampel yang dapat mereka gunakan.
+
+00:06:07.100 --> 00:06:09.360
+Mereka membuatnya sangat sangat mudah untuk memulai.
+
+00:06:09.380 --> 00:06:18.940
+Saya hanya akan mengklik Mulai membangun dan segera melihat bahwa aplikasi teman-teman robo saya mulai membangun.
+
+00:06:18.940 --> 00:06:20.360
+Semuanya sudah diatur.
+
+00:06:24.950 --> 00:06:30.950
+Dan sekarang kontainer yang Anda dapat lihat mulai kontainer akan dijalankan melalui beberapa perintah secara otomatis.
+
+00:06:30.950 --> 00:06:43.530
+Jadi ini berjalan di server mereka di robot pemberontak teman saya yang menguji Ribault.
+
+00:06:43.540 --> 00:06:44.090
+Baiklah.
+
+00:06:44.110 --> 00:06:50.270
+Saya harus menjeda video di sana karena memang butuh sedikit waktu untuk lingkaran CII untuk benar-benar menjalankan semuanya.
+
+00:06:50.530 --> 00:06:53.810
+Anda dapat melihat bahwa butuh sekitar lima menit untuk menyelesaikan semuanya.
+
+00:06:53.860 --> 00:06:56.100
+Tapi mari kita lihat apa yang baru saja dilakukannya.
+
+00:06:56.230 --> 00:06:59.630
+Kami bahkan belum memberikan konfigurasi YAML untuknya.
+
+00:06:59.650 --> 00:07:04.980
+Karena ingat ini hanya di desktop saya dan saya belum berkomitmen untuk mendapatkan bantuan.
+
+00:07:05.100 --> 00:07:06.000
+Kami kembali.
+
+00:07:06.130 --> 00:07:12.340
+Kami melihat bahwa ada beberapa hal yang terjadi dengan circle see-I bahkan tanpa memberikan warna kuning
+
+00:07:12.370 --> 00:07:13.400
+untuk konfigurasi.
+
+00:07:14.600 --> 00:07:24.300
+Kami melihat bahwa kami dapat mengatur lingkungan yang menggunakan lingkaran lihat-I Ruby untuk menunjuk empat titik satu gambar yang
+
+00:07:24.570 --> 00:07:28.460
+kami lihat untuk meluncurkan lingkungan bagi kami.
+
+00:07:28.560 --> 00:07:32.880
+Kita dapat melihat di sini dan mulai menampung semua hal yang telah dilakukannya.
+
+00:07:32.910 --> 00:07:36.100
+Ini juga telah mengaktifkan S-sh.
+
+00:07:36.510 --> 00:07:41.680
+Seperti yang Anda ingat dari bagian SSA sekarang kita dapat menggunakan S-sh.
+
+00:07:41.820 --> 00:07:49.680
+Lihat di sini untuk benar-benar S-sh ke wadah ini dan lihat bagaimana semuanya berjalan mungkin kita perlu men-debug sesuatu
+
+00:07:49.680 --> 00:07:57.450
+yang kita bisa S-sh lagi sesuatu yang kita harus benar-benar menambahkan kunci publik kita ke wadah jika kita
+
+00:07:57.450 --> 00:07:58.910
+ingin melakukan bahwa.
+
+00:07:58.920 --> 00:08:04.100
+Dan itu sedikit maju dan dapat membaca sendiri tetapi ada opsi yang bagus.
+
+00:08:04.410 --> 00:08:10.410
+Dan kemudian kita melakukan sesuatu yang disebut memeriksa kode yang lingkaran lihat-saya periksa sehingga Anda mendapatkan repositori
+
+00:08:10.860 --> 00:08:12.200
+Haab dan mengkloningnya
+
+00:08:12.270 --> 00:08:18.880
+Anda dapat melihat di sini, tempat penyimpanan penuh Colon dan benar-benar menjalankan kami melalui beberapa langkah secara default.
+
+00:08:18.960 --> 00:08:23.400
+Ini menjalankan NPM menginstalnya menjalankan tes NPM.
+
+00:08:23.400 --> 00:08:29.370
+Jika kita klik di sini, kita melihat bahwa tes yang kita miliki pada proyek kita adalah proyek Wrubel France.
+
+00:08:29.430 --> 00:08:38.900
+Ada 16 Tes, lima foto semuanya lulus dan kami terus menggulir ke bawah dan semuanya selesai
+
+00:08:39.050 --> 00:08:39.680
+sepenuhnya.
+
+00:08:39.680 --> 00:08:44.330
+Kami memiliki hijau di mana-mana dan dikatakan sukses.
+
+00:08:44.420 --> 00:08:52.170
+Jika saya kembali ke bangunan, kita melihat bahwa teman-teman robot kami menguji dan Guru sekarang berhasil.
+
+00:08:52.170 --> 00:08:58.740
+Sekarang mari kita benar-benar menambahkan fungsionalitas yang sedikit lebih banyak daripada fungsi default yang kita dapatkan
+
+00:08:58.740 --> 00:09:03.960
+yang hanya menjalankan instalasi NPM dan uji NPM hanya untuk meningkatkan keadaan.
+
+00:09:04.150 --> 00:09:06.140
+Mari kita bahas ini sedikit.
+
+00:09:06.160 --> 00:09:10.300
+Saat ini kita melihat bahwa kita akan melakukan build in membuat wadah buruh pelabuhan.
+
+00:09:10.330 --> 00:09:14.100
+Kami akan memeriksa kode dan menjalankan Ecko halo pertama.
+
+00:09:14.110 --> 00:09:21.310
+Ini hanya akan mencetak teks ini tetapi lingkaran C. SAYA. memiliki ide alur kerja ini sehingga saya benar-benar
+
+00:09:21.850 --> 00:09:22.630
+dapat menambahkan
+
+00:09:25.920 --> 00:09:27.880
+langkah lain atau mungkin sekarang sedang dibangun.
+
+00:09:28.230 --> 00:09:30.040
+Jadi itu adalah wadah lain.
+
+00:09:30.880 --> 00:09:39.580
+Dan wadah ini lagi saya hanya bisa menjaga semuanya tetap sama tetapi yang ini saya akan mengatakan masalah ganda untuk menjadi
+
+00:09:41.120 --> 00:09:44.840
+benar kita sekarang benar-benar perlu mengubah nama ini.
+
+00:09:44.860 --> 00:09:49.270
+Dan inilah alur kerja di lingkaran C. SAYA. sehingga kita bisa membedakannya.
+
+00:09:49.270 --> 00:09:53.050
+Jadi katakan saja yang ini adalah Bobby.
+
+00:09:53.440 --> 00:10:03.550
+Ini akan menjadi Sally dan sekarang menggunakan dua ini saya dapat mendefinisikan apa yang kita sebut alur kerja atau alur kerja dan dan di sini kita hanya mengatakan
+
+00:10:05.460 --> 00:10:11.280
+lagi untuk apa kita ingin menggunakan alur kerja dan kita dapat menamainya apa pun yang kita
+
+00:10:11.280 --> 00:10:11.760
+inginkan.
+
+00:10:11.760 --> 00:10:12.940
+Saya akan menyebutkannya.
+
+00:10:13.030 --> 00:10:22.710
+Bobby menggarisbawahi Sally karena kita akan menulis keduanya dan ini akan memiliki pekerjaan yang harus
+
+00:10:22.710 --> 00:10:24.210
+mereka capai.
+
+00:10:25.330 --> 00:10:32.030
+Dan pekerjaan ini akan menjadi pekerjaan Babi.
+
+00:10:32.210 --> 00:10:33.750
+Pastikan saya menambahkan spasi di sini.
+
+00:10:36.110 --> 00:10:46.710
+Dan Sally jadi alur kerja ini akan mengatakan hei jalankan alur kerja ini Bobby dan Sally dan itu termasuk hal-hal ini.
+
+00:10:46.710 --> 00:10:51.560
+Jadi jalankan dua kontainer menjalankan checkout dan kemudian jalankan perintah echo.
+
+00:10:52.050 --> 00:10:54.840
+Mari kita simpan ini untuk memastikan semuanya bekerja.
+
+00:10:54.840 --> 00:10:57.790
+Kami memiliki file konfigurasi lihat-I lingkaran kami.
+
+00:10:57.870 --> 00:11:06.420
+Mari kita benar-benar menambahkan ini untuk naik ke lingkaran itu melihat-saya memiliki file konfigurasi untuk bermain.
+
+00:11:06.420 --> 00:11:18.670
+Saya akan mendapatkan iklan dan kemudian berkomitmen, saya akan menambahkan lingkaran C. SAYA. untuk pesan komit kami.
+
+00:11:18.860 --> 00:11:22.950
+Dan akhirnya mendapatkan master push asal.
+
+00:11:22.970 --> 00:11:29.930
+Sekarang saya menggunakan maß dan saya belum membuat cabang atau untuk proyek ini yang tidak disarankan tetapi untuk tujuan demonstrasi untuk
+
+00:11:29.930 --> 00:11:34.390
+saat ini saya percaya pada diri saya sendiri seperti saya pada proyek ini.
+
+00:11:34.400 --> 00:11:38.110
+Saya hanya akan mendorong langsung ke master.
+
+00:11:38.130 --> 00:11:47.260
+Baiklah mari kita kembali untuk mendapatkan bagaimana oh kita memiliki empat detik yang lalu sesuatu yang sudah gagal.
+
+00:11:47.260 --> 00:11:50.110
+Baiklah, mari kita kembali untuk bangun dan melihat apa yang terjadi.
+
+00:11:50.120 --> 00:12:01.080
+Ingin menyegarkan pergi ke komit dan oh saya melihat bahwa saya memiliki X raksasa di sebelah komit saya.
+
+00:12:01.360 --> 00:12:02.370
+Saya mengkliknya.
+
+00:12:03.390 --> 00:12:03.780
+Baiklah.
+
+00:12:03.780 --> 00:12:10.000
+Kami telah melakukan konfigurasi pada file YAML kami dan saya kembali ke sini dan saya mengklik gagal.
+
+00:12:10.380 --> 00:12:15.500
+Saya melihat bahwa konfigurasi Anda memiliki kesalahan dan mungkin tidak berjalan dengan benar.
+
+00:12:15.510 --> 00:12:16.040
+Luar biasa.
+
+00:12:16.140 --> 00:12:23.760
+Jadi maksud saya itu tidak bagus tetapi setidaknya kita tahu bahwa lingkaran C. SAYA. dapat mendeteksi file konfigurasi kami dan kami melihat di sini bahwa
+
+00:12:23.760 --> 00:12:31.400
+itu memberikan udara yang cukup bagus dari apa yang mungkin memiliki skala kesalahan migrasi konfigurasi ke versi 2.
+
+00:12:31.400 --> 00:12:31.400
+0.
+
+00:12:32.200 --> 00:12:35.490
+Dan kesalahan terjadi pada alur kerja Ayub.
+
+00:12:35.500 --> 00:12:37.840
+Langkah-langkah bukanlah daftar.
+
+00:12:37.930 --> 00:12:42.040
+Jadi mari kita kembali dan memperbaikinya dengan file YAML.
+
+00:12:42.040 --> 00:12:44.250
+Anda benar-benar harus berhati-hati dengan lekukan.
+
+00:12:44.270 --> 00:12:49.690
+Jadi kapan pun Anda bekerja dengan file YAML pastikan Anda mengikuti dokumentasi dan apa
+
+00:12:50.050 --> 00:12:58.840
+yang mereka harapkan dalam kasus ini adalah lekukan perlu dimenangkan kembali seperti ini, mari kita simpan bahwa sekali lagi kita dapat dorongan atau
+
+00:12:59.110 --> 00:13:01.570
+G. M. meskipun kamu tahu apa.
+
+00:13:01.630 --> 00:13:04.540
+Hanya untuk menunjukkan lingkaran C. SAYA. sebenarnya.
+
+00:13:04.540 --> 00:13:05.860
+Mari kita buat cabang baru.
+
+00:13:05.890 --> 00:13:12.250
+Saya akan mengatakan dapatkan checkout untuk tangan pendek untuk membuat cabang baru dan saya akan menyebutnya
+
+00:13:12.520 --> 00:13:14.600
+lingkaran C. SAYA..
+
+00:13:14.620 --> 00:13:15.120
+Baiklah.
+
+00:13:15.160 --> 00:13:16.450
+Kami telah membuat cabang baru.
+
+00:13:16.450 --> 00:13:23.410
+Jika saya mendapatkan status, saya melihat bahwa kami memiliki file YAML konfigurasi kami yang telah diperbarui.
+
+00:13:23.410 --> 00:13:32.530
+Saya akan mengatakan mendapatkan komitmen, saya akan melakukan lingkaran melihat-I untuk ini adalah upaya kami untuk.
+
+00:13:33.060 --> 00:13:35.760
+Dan kemudian saya akan
+
+00:13:38.300 --> 00:13:41.260
+mendapatkan push origin Circle C.
+
+00:13:41.460 --> 00:13:43.600
+Jadi dorong ke cabang kami
+
+00:13:47.260 --> 00:13:50.540
+dan konyol saya, saya menyadari bahwa saya lupa.
+
+00:13:50.700 --> 00:13:51.420
+Coba lagi.
+
+00:13:51.420 --> 00:13:56.640
+Dapatkan iklan dapatkan komit lingkaran lihat-I ke.
+
+00:13:56.640 --> 00:13:57.150
+Ini dia.
+
+00:13:57.150 --> 00:13:58.260
+Itu jauh lebih baik.
+
+00:13:58.320 --> 00:14:05.970
+Dan kemudian Anda akan menjalankan get asal lingkaran C. SAYA..
+
+00:14:05.970 --> 00:14:08.580
+Baiklah, mari kita lihat, cari bantuan di sini.
+
+00:14:08.580 --> 00:14:10.650
+Baiklah, kami punya permintaan.
+
+00:14:10.650 --> 00:14:12.420
+Mari lihat di sini.
+
+00:14:14.390 --> 00:14:15.990
+Pertama, semuanya terlihat bagus.
+
+00:14:15.990 --> 00:14:17.830
+Itulah perubahan yang saya inginkan.
+
+00:14:18.000 --> 00:14:25.900
+Saya akan hanya dengan komentar kami dan hanya mengatakan membuat permintaan tarik dan melihat lingkaran C. SAYA.
+
+00:14:25.900 --> 00:14:29.380
+sekarang menjalankan semua permintaan saya yang buruk begitu saja.
+
+00:14:29.470 --> 00:14:32.460
+Kami melihat bahwa tes Anda lulus pada Sally.
+
+00:14:32.590 --> 00:14:35.410
+Tapi Bauby saat ini masih bekerja.
+
+00:14:35.410 --> 00:14:39.010
+Jadi itu setengah dilakukan betapa mudahnya itu.
+
+00:14:39.260 --> 00:14:42.800
+Dan setelah semua cek telah lulus saya mendapatkan tanda centang hijau ini.
+
+00:14:42.800 --> 00:14:46.170
+Dan sekarang siap untuk menggabungkan permintaan.
+
+00:14:46.170 --> 00:14:48.060
+Baiklah mari kita periksa lingkaran C. SAYA. sini.
+
+00:14:48.080 --> 00:14:51.800
+Aku akan kembali ke Bill dan kita lihat itu.
+
+00:14:51.860 --> 00:14:53.870
+Oh ya lihat itu.
+
+00:14:53.870 --> 00:14:55.590
+Kami sukses.
+
+00:14:55.820 --> 00:14:58.970
+Kami telah memutar lingkungan.
+
+00:14:59.070 --> 00:15:01.410
+Kami telah memeriksa kodenya.
+
+00:15:01.530 --> 00:15:02.710
+Itu keren.
+
+00:15:02.820 --> 00:15:06.350
+Dan kami juga memiliki gema.
+
+00:15:06.380 --> 00:15:09.290
+Masalah ganda.
+
+00:15:09.700 --> 00:15:14.030
+Jika kita kembali ke sini kita melihat bahwa kita melakukan masalah ganda di sini dengan gema.
+
+00:15:14.170 --> 00:15:18.060
+Tapi bagaimana dengan halo pertama oleh Bobbie.
+
+00:15:18.340 --> 00:15:26.890
+Jika kita kembali, kita benar-benar melihat ada dua pekerjaan.
+
+00:15:26.990 --> 00:15:34.910
+Jika saya mengklik alur kerja Bobby Sally, kita melihat bahwa oh ada dua pekerjaan dalam alur kerja ini.
+
+00:15:35.040 --> 00:15:39.410
+Jika saya mengklik Bobby saya mendapatkan Bobby Acco halo dulu.
+
+00:15:39.460 --> 00:15:40.650
+Oke itu bagus.
+
+00:15:40.650 --> 00:15:44.770
+Dan kemudian jika saya kembali ke alur kerja saya melihatnya
+
+00:15:44.770 --> 00:15:45.250
+BAIK.
+
+00:15:45.370 --> 00:15:48.900
+Sally, Bobby, dan aku tahu waktu yang tepat.
+
+00:15:48.970 --> 00:15:53.410
+Jika saya kembali untuk membangun, saya melihat bahwa itu sebabnya saya punya dua sayuran di sini.
+
+00:15:53.410 --> 00:15:58.860
+Mereka masing-masing berlari dalam wadah mereka sendiri sangat sangat keren.
+
+00:15:59.280 --> 00:16:06.900
+Dan Anda juga memperhatikan bahwa kami tidak lagi menjalankan tes NPM untuk menginstal NPM karena kami sekarang memberikannya file konfigurasi
+
+00:16:06.930 --> 00:16:11.520
+dan file konfigurasi ini akan mengatakan dengan tepat apa yang kami inginkan.
+
+00:16:11.550 --> 00:16:16.620
+Jadi sekarang kita harus menerapkan sendiri untuk memastikan bahwa kita menguji kode kita.
+
+00:16:16.710 --> 00:16:21.900
+Kami NPM memasang kode kami dan semuanya berjalan dengan lancar.
+
+00:16:21.940 --> 00:16:22.740
+Baiklah.
+
+00:16:22.840 --> 00:16:27.070
+Saya pikir ini saatnya bagi kita untuk benar-benar mengimplementasikan sesuatu yang berharga di sini.
+
+00:16:27.070 --> 00:16:31.600
+Menggaungkan Masalah Ganda tidak terlalu membantu kami dengan teman-teman robo kami.
+
+00:16:31.930 --> 00:16:36.700
+Tetapi sekarang kita melihat kekuatan lingkaran C. SAYA. dalam video berikutnya kita akan mengkonfigurasi ini.
+
+00:16:36.790 --> 00:16:38.640
+Jadi ini memiliki alur kerja yang bagus.
+
+00:16:38.680 --> 00:16:44.120
+Saya menggabungkan permintaan tarik mengonfirmasi penggabungan dan saya akan melihat Anda di video berikutnya.
+
+00:16:44.210 --> 00:16:44.470
+Buh-Bye.

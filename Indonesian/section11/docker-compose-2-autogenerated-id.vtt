@@ -1,0 +1,109 @@
+﻿WEBVTT
+
+00:00:01.280 --> 00:00:08.240
+Mari kita tinjau kita menginstruksikan file penulisan kita untuk membuat layanan yang disebut smart brain API.
+
+00:00:08.750 --> 00:00:14.420
+Dan ini menggunakan file map dengan menggunakan build.
+
+00:00:14.420 --> 00:00:19.340
+Kalau tidak, kita bisa menggunakan sesuatu seperti gambar dan kita perlu parameter ini.
+
+00:00:19.340 --> 00:00:25.210
+Itu memetakan 3000 port internal kontainer ke port Horst.
+
+00:00:25.220 --> 00:00:33.820
+Itu adalah komputer saya dan di atas semua fusi kami menjalankan NPM mulai menjalankan server kami.
+
+00:00:33.850 --> 00:00:41.450
+Kami juga belajar tentang command dock atau compose run di mana kami dapat menjalankan layanan ini yang akan menjalankan perintah
+
+00:00:41.450 --> 00:00:44.120
+yang telah kami buat di sini.
+
+00:00:44.180 --> 00:00:51.150
+Namun dengan Dharker compose run tidak begitu berguna karena idealnya kami memiliki beberapa layanan di sini.
+
+00:00:52.240 --> 00:01:01.360
+Jadi alih-alih kita menggunakan sesuatu yang disebut Dharker menyusun dan merapat atau menyusun memungkinkan kita untuk membuka semua layanan yang telah kita daftarkan di
+
+00:01:01.360 --> 00:01:06.940
+sini dan di sana akan menentukan semua layanan yang berjalan dengan nama wadah mereka seperti
+
+00:01:07.000 --> 00:01:09.220
+yang kita miliki di sini.
+
+00:01:09.670 --> 00:01:18.120
+Dan saat ini meskipun kami hanya memiliki satu layanan API back end kami, itu sudah cukup untuk menunjukkan bahwa itu berfungsi dan bagaimana
+
+00:01:18.330 --> 00:01:22.230
+kita sekarang dapat menambahkan lebih banyak hal ke file ini.
+
+00:01:23.490 --> 00:01:31.770
+Sekarang Anda mungkin melihat satu masalah di sini dan itu adalah kenyataan bahwa setiap kali kami membuat perubahan ke file kami
+
+00:01:32.220 --> 00:01:40.000
+seperti ketika kami menambahkan Morgan kami harus membangun kembali semuanya jalankan kembali untuk membuat kami berdiri dan berjalan.
+
+00:01:43.620 --> 00:01:53.340
+Sebagai contoh jika saya pergi ke server dodginess dan katakanlah di sini saya hanya akan melakukan log konsol periksa ini
+
+00:01:53.340 --> 00:02:02.060
+tidak menyegarkan gnomon tidak benar-benar menonton perubahan ini karena file-file ini yang saya ubah adalah pada mesin lokal
+
+00:02:02.180 --> 00:02:08.580
+saya bukan pada wadah tetapi ada cara bagi kami untuk memperbaiki masalah ini.
+
+00:02:08.780 --> 00:02:13.200
+Kami kembali ke dermaga atau menulis saya dapat menambahkan volume
+
+00:02:15.790 --> 00:02:23.580
+dan dalam volume saya bisa memberikannya direktori saya saat ini di mesin lokal saya yang dalam hal
+
+00:02:23.580 --> 00:02:26.080
+ini akan menjadi direktori root.
+
+00:02:26.080 --> 00:02:33.860
+Dan kami ingin itu dipetakan ke direktori kerja yang kami miliki di wadah di sini.
+
+00:02:33.920 --> 00:02:40.580
+Dan jika Anda ingat volume memungkinkan kami mengakses sistem file dock atau wadah di mana dock
+
+00:02:40.580 --> 00:02:42.270
+atau kontainer berada.
+
+00:02:42.290 --> 00:02:51.290
+Jadi dengan cara ini dengan menyalin atau dengan membuat file-file ini dipetakan ke tempat kontainer adalah sistem
+
+00:02:51.290 --> 00:02:56.010
+file kontainer akan melihat perubahan dan memperbarui gnomon.
+
+00:02:56.130 --> 00:02:57.610
+Jadi mari kita simpan di sini.
+
+00:02:57.630 --> 00:03:03.090
+Saya akan menutup dan lagi menjalankan NPM atau bebek menulis dasbor.
+
+00:03:03.100 --> 00:03:15.650
+Bill saya mendapatkan perintah cek tetapi itu karena saya membangunnya kembali jika saya mengubahnya agar terlihat mendengarkan perubahan sekarang dan
+
+00:03:20.480 --> 00:03:27.740
+saya dapat memperbarui file saya dan buruh pelabuhan akan memperbarui dengan
+
+00:03:27.740 --> 00:03:28.810
+itu.
+
+00:03:29.660 --> 00:03:34.610
+Volume adalah sedikit topik yang kompleks dan saya akan pergi ke sumber yang bagus untuk Anda baca.
+
+00:03:34.670 --> 00:03:42.350
+Tetapi pikirkan volume sebagai cara untuk memiliki koneksi atau pemasangan apa pun yang kita
+
+00:03:42.860 --> 00:03:46.230
+miliki di komputer ke wadah dokter.
+
+00:03:46.300 --> 00:03:52.870
+Tetapi untuk saat ini kami memiliki beberapa pengaturan yang bagus dengan bagian belakang dan saya pikir kami perlu menambahkan tulisan tambahan kami.
+
+00:03:52.900 --> 00:03:55.930
+Akhirnya saya akan melihat yang berikutnya.

@@ -1,0 +1,271 @@
+﻿WEBVTT
+
+00:00:01.650 --> 00:00:10.830
+Mari kita tambahkan satu lagi alat untuk pengetahuan kita dan bertindak kembali dan bertindak kembali 16 yang merupakan versi baru dari tindakan
+
+00:00:11.010 --> 00:00:18.780
+ulang memperkenalkan sesuatu yang disebut batas kesalahan dan Mengatakan masalah yang bertindak kembali sebelumnya yang jika ada semacam
+
+00:00:19.110 --> 00:00:25.110
+semacam udara di dalam komponen untuk alasan apa pun tidak ada cara yang anggun
+
+00:00:25.110 --> 00:00:32.370
+untuk menanganinya di grand jury berikutnya Anda akan mendapatkan semua kesalahan samar dan hal-hal yang tidak akan
+
+00:00:32.370 --> 00:00:34.710
+berhasil dengan baik bagi pengguna.
+
+00:00:35.130 --> 00:00:42.900
+Anda ingin memastikan bahwa bahkan jika bagian dari komponen Anda rusak, Anda masih dapat memiliki pengalaman UI yang menyenangkan
+
+00:00:42.910 --> 00:00:48.780
+mungkin sepotong Texas mengatakan sesuatu di mana Bronk tetapi tidak memiliki istirahat aplikasi.
+
+00:00:48.780 --> 00:00:54.520
+Jadi dalam video ini kita akan berbicara tentang batas udara dan menerapkannya ke teman-teman kita.
+
+00:00:54.600 --> 00:00:55.500
+Mari kita mulai.
+
+00:00:57.140 --> 00:01:04.370
+Hal pertama yang ingin saya lakukan adalah dalam komponen saya akan menambahkan file baru dan kami
+
+00:01:04.760 --> 00:01:13.330
+akan menyebut batas kesalahan komponen ini dan hanya pengingat Anda perlu meminta ulang 16 atau lebih tinggi agar ini berfungsi.
+
+00:01:13.430 --> 00:01:21.930
+Jadi pastikan bahwa dalam file paket Anda bahwa Anda memiliki versi yang tepat untuk bertindak kembali sekarang
+
+00:01:22.110 --> 00:01:25.980
+di sini kita dapat melakukan komponen re-aksi
+
+00:01:28.960 --> 00:01:33.620
+impor reguler kami dan kami mengimpor dari paket tindakan ulang.
+
+00:01:34.050 --> 00:01:41.000
+Dan akhirnya kami memiliki kelas batas kesalahan yang memperluas komponen Riak dan di sini kami memiliki
+
+00:01:43.830 --> 00:01:45.840
+konstruktor dan sekali lagi
+
+00:01:48.960 --> 00:01:51.460
+kami memanggil supre di sini.
+
+00:01:52.610 --> 00:02:03.420
+Dan supaya kita memiliki akses ke prop harus dalam konstruktor memiliki sprad yang tepat lebih baik.
+
+00:02:03.560 --> 00:02:11.880
+Dan akhirnya untuk keadaan ini kita akan membuat properti yang disebut memiliki udara.
+
+00:02:12.370 --> 00:02:16.190
+Dan untuk saat ini akan salah.
+
+00:02:16.260 --> 00:02:26.310
+Dan jangan lupa juga untuk mengekspor batas kesalahan standar sehingga kami memiliki akses ke sana dan render default kami di
+
+00:02:26.520 --> 00:02:29.760
+sini yang akan kembali untuk kami.
+
+00:02:30.830 --> 00:02:32.760
+Hmm apa yang harus dikembalikan.
+
+00:02:33.170 --> 00:02:41.300
+Nah idealnya dengan komponen batas udara ini kita dapat membungkus komponen atau kita dapat membungkus komponen
+
+00:02:41.300 --> 00:02:48.890
+seperti komponen tanpa kartu dengan komponen batas udara dan jika komponen Carlists gagal kita dapat
+
+00:02:48.890 --> 00:02:51.340
+menangkapnya di batas udara.
+
+00:02:52.390 --> 00:02:57.790
+Saya tahu ini agak sulit untuk diikuti Riak memang memiliki dokumentasi yang sangat bagus tentang ini sehingga
+
+00:02:57.790 --> 00:02:59.520
+Anda selalu dapat membacanya nanti.
+
+00:02:59.530 --> 00:03:01.150
+Tapi tetaplah denganku.
+
+00:03:01.150 --> 00:03:03.220
+Percayalah, itu masuk akal.
+
+00:03:03.220 --> 00:03:14.080
+Jadi hal pertama yang ingin kita lakukan adalah kita ingin memeriksa apakah keadaan ini DOT memiliki udara sama dengan benar.
+
+00:03:14.150 --> 00:03:23.000
+Jadi jika ada semacam kesalahan maka kami ingin mengembalikan keadaan default ini dari Bagaimana Kami dapat dengan anggun menampilkan sesuatu kepada
+
+00:03:24.330 --> 00:03:29.670
+pengguna yang membuatnya bermakna bagi mereka meskipun kami tidak dapat menampilkan apa yang
+
+00:03:29.670 --> 00:03:31.190
+kami maksudkan semula.
+
+00:03:32.040 --> 00:03:44.590
+Dalam kasus kami, kami dapat mengatakan bahwa kami memiliki H1 of oops yang tidak baik untuk dilihat pengguna.
+
+00:03:44.620 --> 00:03:52.760
+Jadi kami katakan di sini bahwa jika karena alasan tertentu ada udara, kami hanya akan meludahkan tag H
+
+00:03:53.940 --> 00:03:54.870
+won.
+
+00:03:55.100 --> 00:03:58.460
+Dan kita bisa melakukan pengembalian di sini.
+
+00:03:58.560 --> 00:04:06.150
+Kita akan mengatakan bahwa anak-anak dot penyangga berhenti ini akan mengingat kembali karena anak-anak akan menjadi apa pun
+
+00:04:06.150 --> 00:04:09.070
+yang berada di antara batas udara.
+
+00:04:09.090 --> 00:04:16.050
+Dalam kasus kami mungkin akan menjadi cardless jadi rende anak-anak mereka apa pun di dalam
+
+00:04:16.140 --> 00:04:17.410
+batas udara
+
+00:04:17.470 --> 00:04:19.330
+Kalau tidak, Rander H-1.
+
+00:04:19.710 --> 00:04:28.390
+Sekarang bagaimana kita akan dapat mengubah ini memiliki sumur udara dengan re-act 16 dan kami memiliki
+
+00:04:28.390 --> 00:04:38.270
+metode siklus hidup baru yang diperkenalkan dan itu disebut komponen tidak menangkap dan komponen ini tidak menangkap adalah seperti
+
+00:04:38.270 --> 00:04:49.390
+seperti try catch block di javascript jika ada ahli waris yang akan menjalankan kait siklus hidup ini dan kait siklus hidup
+
+00:04:49.400 --> 00:04:52.420
+ini benar-benar mendapat beberapa parameter.
+
+00:04:52.450 --> 00:04:55.690
+Itu adalah kesalahan dan info.
+
+00:04:55.830 --> 00:05:03.540
+Tetapi dalam kasus kami, kami hanya ingin mengatakan bahwa ini memulai keadaan yang akan terjadi sekarang jika
+
+00:05:03.590 --> 00:05:08.230
+kesalahan komponen ini akan memiliki kesalahan sama dengan true.
+
+00:05:08.280 --> 00:05:13.760
+Jadi jika itu dipicu akan membuat tag H-1.
+
+00:05:13.870 --> 00:05:14.190
+Baiklah.
+
+00:05:14.230 --> 00:05:17.490
+Mari kita simpan dan mari kita pergi ke APT.
+
+00:05:17.580 --> 00:05:20.730
+Ya mari kita impor ke batas udara kami
+
+00:05:25.190 --> 00:05:26.630
+dari komponen kami.
+
+00:05:32.210 --> 00:05:34.030
+Dan sekarang kita bisa menggunakan ini.
+
+00:05:34.100 --> 00:05:38.740
+Mari kita gunakan di sini untuk daftar kartu.
+
+00:05:38.900 --> 00:05:46.370
+Jadi jika terjadi sesuatu dengan Carlist, kami ingin memiliki semacam batas keluar yang anggun.
+
+00:05:46.580 --> 00:05:55.340
+Jadi kami akan mengatakan batas udara dan karena kami memberikan alat peraga ini anak-anak dibungkus gratis seperti
+
+00:05:55.340 --> 00:05:55.970
+ini.
+
+00:05:57.250 --> 00:06:00.450
+Dan tidak ada yang terjadi masih akan membuat kartu.
+
+00:06:00.490 --> 00:06:03.030
+Jadi mari kita selamatkan. Mari kita lihat apakah kita membuat kesalahan.
+
+00:06:03.130 --> 00:06:04.570
+Sejauh ini baik.
+
+00:06:04.690 --> 00:06:08.320
+Mari kembali ke aplikasi kita dan.
+
+00:06:08.380 --> 00:06:10.400
+Baiklah, mari kita lihat konsol.
+
+00:06:10.410 --> 00:06:17.280
+Tidak ada tahun ini jika kita me-refresh Nowhere di sini jika saya mengetikkan barang-barang Nowhere yang bagus.
+
+00:06:19.190 --> 00:06:26.840
+Sekarang dengan batas udara ini jika ada sesuatu di Carlist gagal itu akan menangkapnya dan menampilkan pesan
+
+00:06:26.840 --> 00:06:28.000
+kesalahan kami.
+
+00:06:28.070 --> 00:06:29.420
+Jadi mari kita lihat apa yang saya maksud.
+
+00:06:29.710 --> 00:06:39.420
+Jika saya masuk ke daftar kartu di sini dan sekarang di sini jika kita mengatakan jika untuk saat ini kita hanya akan mengatakan benar.
+
+00:06:39.660 --> 00:06:48.440
+Kita akan berasumsi bahwa cardless ada di sana sehingga kita dapat melakukannya dengan mengatakan membuang udara baru dikatakan jika
+
+00:06:51.790 --> 00:06:54.850
+kita menyimpan ini semuanya masih berfungsi.
+
+00:06:54.850 --> 00:06:59.750
+Jika saya kembali, Anda melihat bahwa saya masih mendapatkan udara yang dikatakannya pada cut error.
+
+00:06:59.800 --> 00:07:00.620
+Tidak.
+
+00:07:00.910 --> 00:07:07.030
+Dan di bagian bawah dikatakan kesalahan di atas terjadi pada komponen Carlists bereaksi kita akan mencoba untuk membuat
+
+00:07:07.030 --> 00:07:11.950
+kembali komponen ini dari awal menggunakan udara Bhandari yang Anda berikan di udara.
+
+00:07:12.360 --> 00:07:16.670
+OK itu bagus tapi saya masih melihat udara.
+
+00:07:16.900 --> 00:07:23.770
+Dan itu karena kita sedang menjalankan pengembangan untuk membuat reaksi.
+
+00:07:23.770 --> 00:07:29.780
+Mereka ingin menunjukkan kepada kami setiap kali ada kesalahan dalam batas-batas udara komponen kami yang benar-benar berguna
+
+00:07:29.780 --> 00:07:38.750
+ketika Anda menempatkan aplikasi Anda ke dalam produksi di mana Anda tidak memiliki log rinci ini dari udara apa yang Anda miliki, pengguna Anda tidak
+
+00:07:38.750 --> 00:07:40.540
+akan pernah melihat ini.
+
+00:07:40.550 --> 00:07:45.040
+Jadi jika saya menyegarkan Anda dengan sangat cepat, apakah Anda melihatnya di sini?
+
+00:07:45.050 --> 00:07:48.320
+Bagaimana mengatakan oops itu tidak baik.
+
+00:07:48.470 --> 00:07:49.010
+Ups.
+
+00:07:49.100 --> 00:07:50.450
+Itu tidak baik.
+
+00:07:50.450 --> 00:07:54.820
+Jadi dalam produksi, pengguna akan melihat itu.
+
+00:07:55.040 --> 00:08:01.640
+Tetapi untuk kasus kami, perilaku yang dimaksudkan untuk pencipta yang terkunci dalam pengembangan adalah untuk menunjukkan kepada kami kesalahan
+
+00:08:01.910 --> 00:08:05.770
+tetapi dengan batas udara kami memiliki keamanan ekstra selama produksi.
+
+00:08:07.830 --> 00:08:08.890
+Itu saja untuk sekarang.
+
+00:08:08.890 --> 00:08:10.800
+Saya akan melihat yang berikutnya mungkin.

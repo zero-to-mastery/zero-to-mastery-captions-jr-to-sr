@@ -1,0 +1,373 @@
+﻿WEBVTT
+
+00:00:02.100 --> 00:00:03.330
+Selamat datang kembali.
+
+00:00:03.330 --> 00:00:08.380
+Mari kita mulai menulis tes untuk fungsi pencarian Google.
+
+00:00:08.460 --> 00:00:13.640
+Hal pertama yang ingin kami lakukan adalah jelas memiliki akses ke fungsi pencarian Google ini.
+
+00:00:13.770 --> 00:00:17.300
+Tetapi dalam file pengujian kami dan itu sederhana.
+
+00:00:17.320 --> 00:00:19.460
+Ini hanyalah javascript.
+
+00:00:19.480 --> 00:00:27.070
+Kami hanya dapat mengekspor fungsi ini dan mengimpornya di sini sekarang karena ini adalah simpul dan kami
+
+00:00:27.070 --> 00:00:31.090
+sekarang berjalan di browser atau menggunakan Babel atau wetback.
+
+00:00:31.240 --> 00:00:34.620
+Kami belum memiliki laporan impor dan ekspor.
+
+00:00:34.630 --> 00:00:35.970
+Tidak, itu berhasil.
+
+00:00:36.070 --> 00:00:44.710
+Tetapi untuk saat ini mereka masih menggunakan Ya umum yang seperti yang Anda ketahui memiliki modul sintaks yang sama
+
+00:00:45.520 --> 00:00:46.450
+dengan ekspor.
+
+00:00:46.660 --> 00:00:50.390
+Dan kami hanya akan melakukan pencarian Google.
+
+00:00:50.590 --> 00:00:52.760
+Kami akan mengekspor ini.
+
+00:00:52.810 --> 00:01:03.650
+Dan akhirnya kita dapat mengimpor ini di bagian paling atas dari tes ini dengan mengatakan Konst Google
+
+00:01:05.190 --> 00:01:09.800
+sama dengan yang disyaratkan dari script untuk
+
+00:01:13.420 --> 00:01:14.380
+menyimpannya.
+
+00:01:14.650 --> 00:01:27.210
+Dan hanya untuk mengujinya konsol legist login ini dan melakukan pencarian google menyimpan tes Ron NPM.
+
+00:01:27.280 --> 00:01:27.810
+Baiklah.
+
+00:01:27.970 --> 00:01:38.110
+Jadi kami memiliki log konsol pencarian Google kami yang ada di script dodginess tetapi juga di masa lalu kami melihat
+
+00:01:38.170 --> 00:01:43.100
+bahwa kami keluar dari fungsi pencarian Google yang bagus.
+
+00:01:43.180 --> 00:01:48.670
+Kami akan mengomentari ini untuk saat ini karena kami tahu ini berfungsi dan kami tidak ingin konsol log.
+
+00:01:49.010 --> 00:01:56.630
+Tetapi Anda mungkin juga memperhatikan bahwa ini agak mengganggu menjalankan tes NPM berulang-ulang.
+
+00:01:56.780 --> 00:02:05.040
+Dan untungnya bagi kita dengan gests kita bisa melakukan perintah dasbor mudah menonton bagus dan kemudian kita memberikan apa yang harus diperhatikan
+
+00:02:05.040 --> 00:02:06.320
+dalam kasus kita
+
+00:02:06.330 --> 00:02:08.090
+Semua file javascript.
+
+00:02:08.160 --> 00:02:16.570
+Jadi, setiap kali kita melakukan perubahan pada file javascript apa saja akan
+
+00:02:16.630 --> 00:02:19.920
+diwaspadai dan diuji terus-menerus.
+
+00:02:20.000 --> 00:02:20.820
+Mari kita lihat apa yang saya maksud.
+
+00:02:20.930 --> 00:02:28.910
+Saya akan menyimpan ini dan menjalankan tes NPM.
+
+00:02:29.070 --> 00:02:36.780
+Dan jika Anda bertanya-tanya mengapa orang Anda NPM menguji dan bukan NPM menjalankan tes Beths hanya default dan PM jika Anda
+
+00:02:36.900 --> 00:02:43.050
+lakukan dan pm mulai atau tes NPM Anda datang di kedua perintah tanpa menjalankan kata.
+
+00:02:43.110 --> 00:02:49.890
+Tetapi jika Anda melakukan sesuatu yang Anda buat sendiri seperti NPM memanggang kue, Anda harus melakukan NPM
+
+00:02:49.890 --> 00:02:53.410
+menjalankan memanggang kue atau lebih sekarang sudah berjalan.
+
+00:02:53.530 --> 00:02:59.290
+Jika saya mengubah apa pun di sini menjadi sah harus menyimpannya.
+
+00:02:59.350 --> 00:03:01.230
+Anda melihat bahwa itu sekarang berubah.
+
+00:03:01.240 --> 00:03:08.260
+Jika saya mengubahnya, ini terus diperbarui dengan tes baru tetapi belum ada yang terjadi di sini.
+
+00:03:08.260 --> 00:03:14.240
+Jadi mari kita tulis tes yang sebenarnya yang dapat kita gunakan sekarang setelah kita memiliki fungsi pencarian Google.
+
+00:03:14.350 --> 00:03:15.330
+Kami ingin mengujinya.
+
+00:03:15.340 --> 00:03:27.490
+Kami ingin mengatakan pencarian Google memberi kami semacam boneka dan katakanlah tes tes dan entah bagaimana mengatakan ini kembali harus
+
+00:03:28.480 --> 00:03:31.630
+cocok dengan apa pun.
+
+00:03:31.760 --> 00:03:37.030
+Ingat bahwa perpustakaan pernyataan tidak akan kami ingin membuat pernyataan dan Anda mungkin memperhatikan.
+
+00:03:37.060 --> 00:03:38.640
+Satu masalah di sini.
+
+00:03:38.820 --> 00:03:41.310
+Bagaimana dengan database.
+
+00:03:41.320 --> 00:03:46.360
+Kita juga harus mengekspor database ini.
+
+00:03:46.390 --> 00:03:47.300
+Kanan.
+
+00:03:47.500 --> 00:03:52.890
+Dan kami benar-benar dapat melakukan database Google dan menambahkan modul ekspor.
+
+00:03:53.290 --> 00:04:01.540
+Tetapi apakah itu realistis yang Anda lihat dalam kehidupan nyata Anda tidak akan hanya mengekspor database dan diimpor ke tes
+
+00:04:01.540 --> 00:04:05.340
+dan memiliki tugas untuk benar-benar pergi melalui database.
+
+00:04:05.380 --> 00:04:09.430
+Itu sangat mahal sangat lambat dan sakit kepala besar.
+
+00:04:09.430 --> 00:04:16.870
+Idealnya Anda menginginkan pasar yang Anda ingin berpura-pura bahwa kami memiliki database di sini sehingga membuat tes berjalan
+
+00:04:16.990 --> 00:04:18.190
+lebih cepat.
+
+00:04:18.910 --> 00:04:20.410
+Biarkan saya menunjukkan kepada Anda bagaimana kami bisa melakukan itu.
+
+00:04:20.470 --> 00:04:32.080
+Kita bisa saja mengatakan D-B mengunci basis data mocke dan mocke ini akan memiliki beberapa basis data dummy yang sebenarnya bukan basis data kita yang sebenarnya
+
+00:04:32.080 --> 00:04:34.830
+hanya sesuatu yang dapat kita uji.
+
+00:04:34.840 --> 00:04:42.440
+Jadi katakanlah yang satu ini memiliki dog dot com, ia memiliki keju
+
+00:04:47.170 --> 00:04:58.350
+puff dot com, katakanlah Disney dot com dan memiliki gambar-gambar anjing dot com sehingga sangat berbeda dari database
+
+00:04:58.680 --> 00:05:01.040
+kami yang sebenarnya.
+
+00:05:01.050 --> 00:05:05.890
+Baiklah jadi kita punya ini sekarang tapi masalahnya pencarian Google baik.
+
+00:05:06.190 --> 00:05:10.960
+Hingga saat ini menggunakan database Google.
+
+00:05:10.960 --> 00:05:14.270
+Dan jika Anda menjalankan fungsi ini dalam tes skrip ya.
+
+00:05:14.530 --> 00:05:17.170
+Kami tidak memiliki akses ke database itu.
+
+00:05:17.170 --> 00:05:26.230
+Kami harus mengubah fungsi secara manual dan memastikan bahwa ia menyaring melalui tiruan DB dengan cara yang baik untuk menyelesaikan masalah ini
+
+00:05:26.230 --> 00:05:32.080
+dan cara Anda ingin menulis fungsi Anda adalah lagi Anda ingin mereka menjadi
+
+00:05:32.260 --> 00:05:32.710
+murni.
+
+00:05:32.710 --> 00:05:37.990
+Dan Anda juga ingin menambahkan hal-hal kepada mereka seperti basis data melalui
+
+00:05:38.470 --> 00:05:47.410
+sesuatu yang disebut injeksi ketergantungan agar kami dapat membuat ini dapat digunakan kembali dan menggunakannya di bagian lain dari basis kode kami
+
+00:05:48.160 --> 00:05:56.390
+agar database disuntikkan ke dalam pencarian Google sehingga siapa pun yang menggunakan kaleng seperti saya dalam tes dapat menyuntikkan tanda
+
+00:05:56.650 --> 00:05:58.910
+DB ini, bukan database nyata.
+
+00:05:59.970 --> 00:06:01.480
+Dan itu sangat mudah dilakukan.
+
+00:06:01.500 --> 00:06:09.780
+Yang perlu kita lakukan hanyalah memberikan parameter katakanlah D. B dan saya akan mengubahnya menjadi D-B.
+
+00:06:10.110 --> 00:06:16.020
+Dan sekarang pencarian Google ini lebih diperluas kita dapat menambahkan basis data apa pun yang ingin kita filter.
+
+00:06:16.020 --> 00:06:30.180
+Sekarang yang perlu kita lakukan hanyalah fungsi yang kita sebut fungsi adalah menambahkan satu parameter dari basis data Google.
+
+00:06:30.260 --> 00:06:45.190
+Jika kami berkomentar dan kembali ke file pengujian kami, kami dapat memasukkan database maake D-B.
+
+00:06:45.200 --> 00:06:47.750
+Mari selamatkan sekarang dan lihat apa yang terjadi.
+
+00:06:49.160 --> 00:06:49.800
+Baiklah.
+
+00:06:49.800 --> 00:06:55.280
+Tes lulus tetapi kami tidak benar-benar menguji apa pun sekarang.
+
+00:06:55.380 --> 00:06:58.370
+Kami hanya mengembalikan barang dan menjalankan fungsi ini.
+
+00:06:58.380 --> 00:07:00.840
+Tapi bukan itu yang ingin kami uji.
+
+00:07:00.840 --> 00:07:03.540
+Tidak terlalu berarti bahwa kita menjalankan fungsi ini.
+
+00:07:03.540 --> 00:07:07.200
+Kami ingin menegaskan bahwa ini melakukan apa yang kami harapkan.
+
+00:07:09.470 --> 00:07:18.310
+Dan lagi seperti kita memiliki kata kunci hanya memberi kita fungsi kecil yang bagus untuk kita gunakan.
+
+00:07:18.470 --> 00:07:26.870
+Jika Anda menggunakan pencocokan, kami melihat bahwa dalam dokumentasinya mereka memiliki xpect dan to be dan mereka
+
+00:07:26.870 --> 00:07:33.680
+memiliki beberapa hal lain yang dapat Anda gunakan untuk didefinisikan sebagai falsie truthy dan
+
+00:07:33.680 --> 00:07:35.990
+mereka memiliki satu ton.
+
+00:07:36.050 --> 00:07:51.250
+Untuk saat ini mari kita komentari dan katakan bahwa kita mengharapkan halo menjadi Halo halo sama dengan halo Halo, katakanlah semua baik-baik saja
+
+00:07:51.250 --> 00:08:02.640
+semuanya berlalu tetapi jika saya berubah hanya untuk mengetahui dan menyimpan Oh saya mendapatkan tes gagal.
+
+00:08:02.780 --> 00:08:10.360
+Ia mengatakan tidak mengharapkan nilai selain menerima halo dan hasilnya bagus.
+
+00:08:10.370 --> 00:08:15.130
+Ini menunjukkan kepada Anda baris mana yang gagal dan tes apa yang gagal.
+
+00:08:15.320 --> 00:08:25.760
+Menggunakan logika itu, mari kita ubah sekarang pencarian Google untuk memiliki xpect Dan Anda tahu apa.
+
+00:08:25.770 --> 00:08:29.060
+Mari kita lanjutkan tes ini karena saya suka tes ini akan dilakukan.
+
+00:08:29.070 --> 00:08:29.830
+Halo.
+
+00:08:30.120 --> 00:08:30.560
+Halo.
+
+00:08:30.570 --> 00:08:41.480
+Dan menyebutnya ini adalah tes konyol dan membuat tes nother lagi kita hanya memiliki sebanyak yang kita inginkan dan lagu
+
+00:08:41.480 --> 00:08:50.470
+ini akan mengatakan itu sedang mencari google dan di sini kita akan memiliki fungsi mari
+
+00:08:54.080 --> 00:09:03.530
+kita tambahkan spasi di sini karena terlihat lebih bagus dan kita Saya akan mengatakan bahwa kami mengharapkan
+
+00:09:03.530 --> 00:09:08.390
+pencarian Google dan kami hanya dapat menyalin ini.
+
+00:09:08.440 --> 00:09:14.110
+Kami mengharapkan pencarian Google dan kami menjalankan fungsi itu dengan tes uji D-B Mach ..
+
+00:09:14.320 --> 00:09:16.810
+Dan di sini kita dapat menggunakannya sebagai pengganti.
+
+00:09:16.810 --> 00:09:22.650
+Kita juga bisa melakukan dua sama dan dalam dua sama.
+
+00:09:22.650 --> 00:09:25.810
+Sekarang izinkan saya membuat baris baru supaya Anda bisa melihatnya.
+
+00:09:26.130 --> 00:09:33.180
+Ini akan mengatakan kita mengharapkannya sama dengan array kosong karena tidak ada tes tes di sini.
+
+00:09:33.270 --> 00:09:33.720
+Mari
+
+00:09:36.790 --> 00:09:39.160
+selamatkan Oh dan saya lupa braket kecil di sini.
+
+00:09:39.210 --> 00:09:44.600
+Kami ingin ekspektasi mendapatkan hasil ini sehingga kami membutuhkan braket tambahan di sini.
+
+00:09:44.610 --> 00:09:46.270
+Jadi pastikan Anda melakukannya dengan benar.
+
+00:09:46.430 --> 00:09:48.980
+Simpan semua sudah.
+
+00:09:49.140 --> 00:09:50.940
+Anda tidak membutuhkan itu sekarang.
+
+00:09:50.940 --> 00:09:51.870
+Sempurna.
+
+00:09:51.870 --> 00:09:54.780
+Sekali lagi mungkin tidak memilikinya di dua jalur lebih baik.
+
+00:09:54.790 --> 00:09:56.400
+Jadi kamu bisa lihat.
+
+00:09:56.400 --> 00:10:05.270
+Jadi kita memiliki fungsi ekspektasi yang menjalankan ini dan untuk menguji bahwa ini sama dengan array kosong.
+
+00:10:06.350 --> 00:10:14.930
+Kami sekarang dapat menambahkan baris nother dan katakanlah sekarang kami ingin mengharapkan Google untuk menguji anjing dan
+
+00:10:14.930 --> 00:10:24.820
+jika ada anjing kami ingin memasukkan dua situs Web ini sehingga kami dapat menambahkan dog dot com ke array ini.
+
+00:10:25.250 --> 00:10:29.870
+Dan juga gambar anjing dot com di sebelah kanan ini.
+
+00:10:33.330 --> 00:10:39.020
+Dan mari kita simpan.
+
+00:10:39.060 --> 00:10:39.750
+Baiklah.
+
+00:10:39.750 --> 00:10:42.120
+Ini sedang berjalan dan berlalu.
+
+00:10:42.180 --> 00:10:48.150
+Kami masih memiliki dua tes karena sementara itu hanya ada dua dari mereka.
+
+00:10:48.420 --> 00:10:57.710
+Tetapi jika saya mengubah ini untuk mengatakan bahwa hanya D-G semua masuk ke sana karena kami mendapat sesuatu yang berbeda dari apa yang kami
+
+00:10:57.710 --> 00:10:59.600
+harapkan kami harapkan berbeda.
+
+00:10:59.600 --> 00:11:02.800
+Eric, ini dia.
+
+00:11:02.870 --> 00:11:06.640
+Kami memiliki tes pertama kami.
+
+00:11:06.830 --> 00:11:08.390
+Saya akan lihat di video berikutnya.
+
+00:11:08.720 --> 00:11:08.920
+Oleh.

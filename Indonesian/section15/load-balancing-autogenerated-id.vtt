@@ -1,0 +1,208 @@
+﻿WEBVTT
+
+00:00:00.910 --> 00:00:02.020
+Bawa mereka kembali.
+
+00:00:02.370 --> 00:00:06.220
+Mari kita bicara tentang topik terakhir kita dalam hal kinerja.
+
+00:00:06.360 --> 00:00:09.810
+Yaitu load balancing load balancing.
+
+00:00:09.870 --> 00:00:17.820
+Seperti namanya adalah cara bagi kita untuk menyeimbangkan banyak permintaan pada saat yang sama dan mendistribusikannya ke layanan yang
+
+00:00:17.970 --> 00:00:25.120
+berbeda dan itu adalah sesuatu yang ingin kita mulai lakukan ketika kita memiliki lebih banyak pengguna
+
+00:00:25.210 --> 00:00:32.820
+menggunakan aplikasi kita mungkin membuat permintaan ke ekspres kita aplikasi seperti yang kita buat semakin banyak permintaan Ekspres
+
+00:00:32.820 --> 00:00:39.700
+atau server ekspres kita akan mendapatkan hit lebih dan lebih dan lebih sampai tidak bisa menangani
+
+00:00:39.700 --> 00:00:40.540
+beban.
+
+00:00:40.660 --> 00:00:46.960
+Dalam skenario yang ideal kita hanya dapat memiliki server lain mungkin dua atau tiga server
+
+00:00:46.960 --> 00:00:53.560
+dan hal ini di depannya dingin penyeimbang rendah hanya mendistribusikannya sehingga pengguna pertama pergi ke server pertama.
+
+00:00:53.560 --> 00:00:58.900
+Pengguna kedua ke server kedua pengguna ketiga ke server ketiga dan kami dapat
+
+00:00:59.020 --> 00:01:00.860
+menangani lebih banyak beban.
+
+00:01:00.880 --> 00:01:06.160
+Sekarang agar kita mengerti bagaimana load balancers bekerja dan juga bagaimana kita bisa mengimplementasikannya.
+
+00:01:06.220 --> 00:01:14.780
+Pertama-tama kita perlu berbicara tentang cara paling dasar bahwa hubungan klien dan server bekerja.
+
+00:01:14.810 --> 00:01:23.180
+Sekarang di sebagian besar situs web seperti situs Wordpress yang di-host di host skater atau host biru paling sederhana hanya situs
+
+00:01:23.180 --> 00:01:28.910
+web blog yang Anda mungkin membeli nama domain dari GoDaddy dan mungkin bahkan hosting
+
+00:01:28.910 --> 00:01:32.710
+di GoDaddy memiliki server yang mereka kelola untuk Anda.
+
+00:01:32.720 --> 00:01:34.550
+Anda tidak perlu membuat server.
+
+00:01:34.910 --> 00:01:42.380
+Maksud saya sampai sekarang kami telah membuat server ekspres yang menyajikan konten kepada klien tetapi kebanyakan orang
+
+00:01:42.380 --> 00:01:48.360
+bukan pengembang web dan mereka tidak perlu tahu cara membuat server ekspres sendiri.
+
+00:01:48.410 --> 00:01:54.680
+Mereka lebih suka menyerahkan ini ke perusahaan yang memiliki server untuk mereka dan hanya memberi mereka
+
+00:01:54.680 --> 00:01:56.410
+file sehingga mereka mengurusnya.
+
+00:01:56.870 --> 00:02:04.420
+Dan sebagian besar dari perusahaan-perusahaan ini seperti yang saya katakan host blue gator host semua menggunakan sesuatu
+
+00:02:04.620 --> 00:02:14.070
+yang disebut Apache GTP server atau mesin berikutnya dan ini adalah perangkat lunak open source yang Anda pasang di mesin di komputer.
+
+00:02:14.230 --> 00:02:21.270
+Dan mereka sangat baik dalam menyajikan konten statis file statis seperti javascript UML dan VSS.
+
+00:02:21.850 --> 00:02:22.740
+Mereka sangat sederhana.
+
+00:02:22.750 --> 00:02:27.920
+Yang mereka lakukan hanyalah memberi saya permintaan dan saya akan mengirimkan semua file yang Anda butuhkan.
+
+00:02:28.300 --> 00:02:28.990
+Itu dia.
+
+00:02:29.170 --> 00:02:33.130
+Dan Anda akan melihat dua perangkat lunak ini di seluruh Internet.
+
+00:02:33.460 --> 00:02:38.650
+Tetapi kita sebenarnya dapat melakukan sesuatu yang sangat menarik dengan alat-alat ini karena alat-alat ini
+
+00:02:38.650 --> 00:02:42.170
+benar-benar bagus dan sangat cepat hanya menyajikan file-file statis.
+
+00:02:42.400 --> 00:02:49.030
+Kita dapat menggunakannya sebagai load balancers, mesin selanjutnya sangat populer untuk melakukan itu dan cukup mudah
+
+00:02:49.030 --> 00:02:53.540
+untuk diterapkan. Anda lihat kita bisa melakukan sesuatu seperti ini.
+
+00:02:53.710 --> 00:02:55.630
+Kami dapat memiliki aplikasi satu halaman kami.
+
+00:02:55.690 --> 00:03:00.100
+Katakanlah otak pintar kita keluar dan kita membuat permintaan.
+
+00:03:00.280 --> 00:03:07.690
+Sekarang permintaan itu alih-alih pergi ke server kami, server API kami malah mengenai server mesin
+
+00:03:07.690 --> 00:03:15.790
+X yang akan mengatur dan server mesin X ini akan menyeimbangkan beban antara server 1 2 dan 3
+
+00:03:15.790 --> 00:03:19.770
+berdasarkan mana saja yang baik paling tidak sibuk.
+
+00:03:19.870 --> 00:03:27.100
+Sehingga dengan demikian semakin banyak pengguna yang kami miliki selama kami memiliki mesin X yang dapat bertindak sebagai apa yang kami sebut
+
+00:03:27.100 --> 00:03:31.680
+sebagai proxy terbalik dan diturunkan melalui biaya ke satu dua dan tiga server.
+
+00:03:31.990 --> 00:03:38.890
+Kemudian dapat menerima file-file itu dan melayani mereka dengan sangat cepat ke browser dan Anda juga dapat
+
+00:03:38.890 --> 00:03:42.190
+melakukan hal-hal menarik seperti benar-benar menguangkan permintaan tersebut.
+
+00:03:42.190 --> 00:03:48.040
+Jadi lain kali seorang pengguna meminta halaman G-mail yang sama alih-alih pergi ke beberapa satu
+
+00:03:48.340 --> 00:03:56.350
+dua atau tiga itu hanya dapat mengembalikannya karena itu dalam bentuk tunai dan Anda akan melihat banyak aplikasi yang dibangun seperti ini.
+
+00:03:57.800 --> 00:04:00.620
+Sekarang lihat diagram ini yang Anda pikirkan sendiri.
+
+00:04:00.890 --> 00:04:05.610
+Kami baru saja meningkatkan kompleksitas aplikasi kami dan bagaimana ini lebih cepat.
+
+00:04:05.630 --> 00:04:11.720
+Jika ada yang kita bicarakan dengan lebih banyak mesin sekarang kita membuat lebih banyak lompatan dan melakukan lebih banyak pekerjaan.
+
+00:04:11.720 --> 00:04:19.460
+Dan Anda benar dalam berpikir bahwa karena kami menambahkan lebih banyak hal lebih banyak pekerjaan lebih banyak pemrosesan yang
+
+00:04:19.460 --> 00:04:22.360
+perlu dilakukan untuk benar-benar mengembalikan file-file ini.
+
+00:04:22.370 --> 00:04:28.060
+Dan jika Anda tidak memiliki banyak pengguna maka ini hanyalah sumber daya yang terbuang sia-sia.
+
+00:04:28.160 --> 00:04:33.260
+Itu tidak benar-benar membantu Anda tetapi ketika Anda mulai memiliki lebih banyak dan lebih banyak pengguna yang
+
+00:04:33.260 --> 00:04:38.920
+tidak bisa ditangani oleh satu server pada akhirnya server itu akan mogok tidak akan mampu menangani semua permintaan itu.
+
+00:04:38.960 --> 00:04:44.870
+Saat itulah Anda mulai menerapkan penyeimbang beban dan karena mesin X adalah cara yang sangat bagus untuk
+
+00:04:44.870 --> 00:04:45.580
+digunakan.
+
+00:04:45.590 --> 00:04:53.210
+Seperti saya katakan proxy terbalik dan untuk melayani file statis itu sebenarnya memiliki lebih banyak pengguna Anda
+
+00:04:53.210 --> 00:04:59.700
+memiliki penyeimbang beban menjadi lebih cepat daripada hanya melakukan hubungan klien server tunggal.
+
+00:04:59.720 --> 00:05:07.250
+Akhirnya Anda dapat memiliki arsitektur seperti ini di mana Anda memiliki satu halaman dari kation yang
+
+00:05:07.250 --> 00:05:13.970
+memiliki jaringan pengiriman konten di mana Anda mungkin memiliki versi cache dari file javascript Schmall
+
+00:05:14.000 --> 00:05:22.310
+CSSA Anda yang semuanya zip zip dan kemudian mungkin Anda membuat permintaan API ke titik akhir yang lain
+
+00:05:22.400 --> 00:05:30.500
+tetapi permintaan API ini akan mencapai penyeimbang beban dan akan mendistribusikan permintaan Anda berdasarkan server mana saja yang
+
+00:05:30.500 --> 00:05:37.640
+terbuka dan server akan kembali lagi di cache saya beberapa permintaan mungkin permintaan tanggapan Jason
+
+00:05:37.640 --> 00:05:42.870
+dan juga dapat GZA permintaan ini dan mengembalikannya ke klien.
+
+00:05:43.130 --> 00:05:49.010
+Sehingga sekarang Anda dapat menggunakan semua alat yang telah Anda pelajari untuk memaksimalkan kinerja
+
+00:05:49.010 --> 00:05:51.570
+dan membuat proses ini secepat mungkin.
+
+00:05:51.830 --> 00:05:55.600
+Sudah cukup banyak bicara, mari kita benar-benar mengimplementasikannya di video berikutnya.
+
+00:05:55.610 --> 00:06:00.500
+Saya akan menunjukkan kepada Anda bagaimana menerapkan penyeimbang rendah dengan sangat sederhana dan kemudian kita akan melakukan sesuatu yang
+
+00:06:00.500 --> 00:06:01.040
+menyenangkan.
+
+00:06:01.100 --> 00:06:06.160
+Kami benar-benar akan menguji semuanya rendah dan melihat seberapa baik menangani beban.
+
+00:06:07.380 --> 00:06:07.900
+Dan kemudian x1.

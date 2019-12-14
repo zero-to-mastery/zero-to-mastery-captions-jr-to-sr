@@ -1,0 +1,334 @@
+﻿WEBVTT
+
+00:00:02.080 --> 00:00:02.710
+Baiklah.
+
+00:00:02.710 --> 00:00:03.700
+Selamat datang kembali.
+
+00:00:03.700 --> 00:00:08.390
+Mari kita akhirnya membahas berbagai hal dan berbicara tentang naskah sekarang.
+
+00:00:08.440 --> 00:00:10.600
+Mengapa mereka memilih naskah.
+
+00:00:10.600 --> 00:00:16.770
+Karena sebenarnya ada banyak cara yang bisa kita lakukan untuk mengetik statis pada javascript.
+
+00:00:16.780 --> 00:00:27.720
+Ada alat seperti aliran Elm alasan M-L dan jelas naskah misalnya alasan M-L dan aliran dibuat
+
+00:00:27.750 --> 00:00:38.380
+oleh Facebook dan pengembang di Facebook dan naskah oleh Microsoft, tetapi mereka semua melakukan hal yang
+
+00:00:38.380 --> 00:00:39.740
+sama.
+
+00:00:39.790 --> 00:00:43.830
+Mereka semua mencoba dan menjadikan javascript sebagai bahasa yang diketik secara statis.
+
+00:00:44.840 --> 00:00:47.890
+Sekarang mari kita bicara tentang alasan.
+
+00:00:48.410 --> 00:00:55.940
+Alasan didasarkan pada bahasa pemrograman yang disebut Camel dan seperti yang saya katakan sebelumnya dibuat oleh
+
+00:00:55.940 --> 00:00:59.800
+Facebook untuk memudahkan programmer javascript untuk mengambil.
+
+00:00:59.890 --> 00:01:07.400
+Ini adalah bahasa tersendiri tetapi cukup mirip dengan javascript sehingga mudah diambil dan Facebook benar-benar
+
+00:01:07.400 --> 00:01:10.070
+menggunakannya dengan beberapa proyek mereka.
+
+00:01:10.100 --> 00:01:17.290
+Dan saat ini 50 persen dari utusan mereka dari tango ditulis dengan alasan.
+
+00:01:17.360 --> 00:01:20.900
+Jadi itu bahasa populer yang keluar dari Facebook.
+
+00:01:21.750 --> 00:01:25.810
+Baiklah tapi sekali lagi saya masih belum mengerti apa artinya semua ini.
+
+00:01:25.930 --> 00:01:27.920
+Apa yang mungkin menjadi slide berikutnya akan membantu Anda.
+
+00:01:30.500 --> 00:01:32.260
+Lagi-lagi semua alat ini.
+
+00:01:32.270 --> 00:01:40.100
+Tujuan mereka adalah membuat penulisan javascript sedikit lebih bagus sedikit kurang buggy dan memperkenalkan pengetikan
+
+00:01:40.100 --> 00:01:40.660
+statis.
+
+00:01:41.940 --> 00:01:50.890
+Dan aliran yang digunakan sangat umum dengan proyek aksi ulang adalah apa yang kita sebut pemeriksa tipe statis.
+
+00:01:51.120 --> 00:01:52.920
+Mari kita mulai dengan yang ini.
+
+00:01:53.100 --> 00:02:03.780
+Flow dapat menambahkan jenis ke javascript kami dengan menulis beberapa kode yang bekerja dengan flow dan kemudian meletakkannya melalui kompiler seperti
+
+00:02:03.780 --> 00:02:11.580
+baler atau B-ball compiler yang meludahkan javascript dan kami tahu apa yang Alkitab lakukan
+
+00:02:11.580 --> 00:02:13.380
+dari bagian sebelumnya.
+
+00:02:13.440 --> 00:02:22.290
+Dibutuhkan Ya 6 kode atau ya 7 atau ya kode dan mengubahnya menjadi E. S. 5 kode sehingga semua browser dapat
+
+00:02:22.320 --> 00:02:23.120
+memahaminya.
+
+00:02:24.060 --> 00:02:31.650
+Sekarang flow adalah statis pemeriksa tipe statis yang berarti kita sebenarnya menulis sesuatu seperti ini di bagian atas
+
+00:02:31.650 --> 00:02:32.760
+file kita.
+
+00:02:34.790 --> 00:02:43.250
+Bagian atas file kami akan melakukan sesuatu seperti dasbor dasbor pada aliran dan aliran akan dapat mengatakan ah file
+
+00:02:43.880 --> 00:02:48.380
+ini memiliki jenis aliran dan saya akan memeriksanya untuk Anda.
+
+00:02:48.380 --> 00:02:51.150
+Ini memeriksa jenis lagi.
+
+00:02:51.470 --> 00:02:55.850
+Jangan khawatir ketika kita berbicara tentang jenis Anda sebenarnya Anda akan mempelajarinya dan meletakkannya di video.
+
+00:02:55.850 --> 00:02:58.550
+Tetapi sekali lagi kami ingin membangun fondasi terlebih dahulu.
+
+00:02:58.550 --> 00:03:08.470
+Jika Anda kembali ke sini, apa yang sebenarnya kami lakukan dengan flow adalah memeriksa semuanya dan bergantung pada kemampuan untuk benar-benar
+
+00:03:09.340 --> 00:03:16.990
+menghapus add flow itu dan semua tipe lain yang telah kami masukkan ke dalam kode kami.
+
+00:03:16.990 --> 00:03:26.820
+Sebelum produksi sebelum mengirimkannya ke pengguna kami dan aliran sebenarnya sudah terpasang di dalam reaktor Cray.
+
+00:03:26.980 --> 00:03:35.700
+Jika kita pergi ke dokumentasi aliran yang mengalir dot org kita melihat itu dan membuat kembali bertindak.
+
+00:03:35.700 --> 00:03:43.220
+Kami hanya menjalankan perintah ini dan kami dapat mulai menulis jenis memeriksa kode kami.
+
+00:03:43.320 --> 00:03:53.450
+Sekali lagi sesuatu yang akan mencakup naskah berbeda dari aliran karena skrip pipa memiliki kompiler sendiri.
+
+00:03:53.450 --> 00:04:00.500
+Ini tidak seperti aliran yang bergantung pada kemampuan untuk menghapus semua kode tambahan ini sebelum meludahkannya ke dalam javascript yang
+
+00:04:00.500 --> 00:04:02.810
+ingin kami kirim ke ujung depan.
+
+00:04:03.590 --> 00:04:10.080
+Naskah adalah apa yang kita sebut superset dari javascript itu.
+
+00:04:10.080 --> 00:04:13.220
+Ini menambahkan fungsionalitas di atas javascript.
+
+00:04:13.330 --> 00:04:23.220
+Itu berarti bahwa javascript adalah naskah dan naskah hanya cukup menambahkan beberapa fitur tambahan di atas
+
+00:04:23.220 --> 00:04:24.170
+Javascript.
+
+00:04:24.300 --> 00:04:26.130
+Tetapi juga memiliki kompiler sendiri.
+
+00:04:26.190 --> 00:04:31.490
+Jadi kami menulis kode naskah yang kemudian dijalankan melalui kompiler.
+
+00:04:31.520 --> 00:04:38.250
+Saya ingat kompiler hanyalah sebuah mesin yang mengambil input dari beberapa bagian kode dan menghasilkan
+
+00:04:38.310 --> 00:04:40.230
+bagian kode yang berbeda.
+
+00:04:40.230 --> 00:04:47.440
+Dalam kasus kami, kami akan mengonversinya dari naskah ke javascript yang dapat dibaca peramban seperti yang saya
+
+00:04:47.440 --> 00:04:49.540
+bicarakan sebelumnya tentang alasan.
+
+00:04:49.550 --> 00:04:56.230
+M-L memiliki hal yang sama dengan kompilernya sendiri dan akan melalui kompiler dan mengeluarkan kode
+
+00:04:56.230 --> 00:04:56.820
+Javascript.
+
+00:04:56.830 --> 00:05:06.070
+Perbedaan antara naskah dan alasan M-L adalah bahwa alasan adalah bahasa yang sepenuhnya terpisah dari javascript pada naskah
+
+00:05:06.070 --> 00:05:10.690
+sendiri mencoba meniru javascript dan tumbuh dengan javascript.
+
+00:05:10.690 --> 00:05:12.430
+Seperti saya katakan itu superset.
+
+00:05:12.430 --> 00:05:16.110
+Tapi alasan M-L hanyalah bahasa yang berbeda.
+
+00:05:16.210 --> 00:05:20.900
+Itu tidak tergantung pada perubahan javascript yang dibuat dalam ekosistem.
+
+00:05:20.900 --> 00:05:29.410
+Semua itu dan Elm adalah hal yang persis sama dengan alasan M-L adalah bahasanya sendiri yaitu typesafe yang
+
+00:05:29.420 --> 00:05:32.880
+memiliki kompiler sendiri dan meludahkan Javascript.
+
+00:05:33.260 --> 00:05:37.290
+Jadi, Anda mungkin mendengar di tanah javascript orang menggunakan alat ini.
+
+00:05:37.310 --> 00:05:42.710
+Satu hal yang harus Anda fokuskan karena Elm dan alasan M-L masih cukup baru.
+
+00:05:42.830 --> 00:05:47.330
+Anda tidak akan menemukan banyak pekerjaan di luar sana yang benar-benar memintanya.
+
+00:05:47.330 --> 00:05:55.190
+Sangat menyenangkan untuk belajar yang menarik tetapi sekali lagi sebagian besar waktu Anda melihat alur
+
+00:05:55.520 --> 00:05:57.600
+belajar atau naskah.
+
+00:05:57.660 --> 00:06:04.950
+Sekarang alasan saya mengajar skrip jenis alih-alih mengalir dalam kursus ini adalah bahwa pertumbuhan skrip jenis lebih penting daripada
+
+00:06:05.220 --> 00:06:09.560
+semua yang lain yang telah kami pelajari di bagian ini.
+
+00:06:09.570 --> 00:06:18.560
+Semua ini sekarang sebagian besar dari ini adalah bahwa sudut dibangun dengan naskah dan menggunakan naskah.
+
+00:06:18.630 --> 00:06:24.090
+Jadi jika Anda seorang pengembang sudut, Anda sudah menggunakan cukup banyak naskah.
+
+00:06:25.400 --> 00:06:32.480
+Namun banyak komunitas Riak juga mulai menggunakan skrip dan hanya komunitas javascript
+
+00:06:32.480 --> 00:06:41.320
+umum mulai semakin terbiasa dengan ini dan meskipun aliran dibuat khusus untuk bekerja dengan skrip
+
+00:06:41.320 --> 00:06:46.360
+aksi ulang saat ini sedang mengejar popularitasnya.
+
+00:06:46.360 --> 00:06:48.660
+Jadi kami ingin mempelajari ini sebagai gantinya.
+
+00:06:48.910 --> 00:06:55.840
+Ditambah sekali Anda belajar seperti kebanyakan hal setelah Anda mempelajari satu metode cukup mudah untuk mengambil aliran
+
+00:06:55.840 --> 00:06:59.050
+dan bagaimana pengetikan statis bekerja dalam aliran.
+
+00:06:59.140 --> 00:07:06.340
+Ngomong-ngomong jika Anda tidak mempercayai saya jika kita melihat survei pengembang stack overflow dari tahun ini kita
+
+00:07:08.160 --> 00:07:16.200
+melihat bahwa bahasa yang paling dicintai sementara kita memiliki python Russ Codlin kita memiliki javascript di sana tetapi Anda
+
+00:07:16.190 --> 00:07:19.170
+melihat naskah karena itu sendiri bahasa.
+
+00:07:19.170 --> 00:07:22.230
+Maksud saya ini adalah superset dari javascript tetapi di atas sana.
+
+00:07:22.230 --> 00:07:33.310
+Ini sangat sangat dicintai dan juga cukup tinggi di bagian yang dicari sehingga sangat sangat penting dan jika Anda mencari di mana saja
+
+00:07:33.310 --> 00:07:36.380
+semua orang sangat bersemangat tentang naskah.
+
+00:07:37.270 --> 00:07:42.590
+Satu catatan singkat tentang mengapa sudut menurut Anda adalah penggemar naskah.
+
+00:07:44.170 --> 00:07:45.540
+Sekarang ini hanya pendapat saya saja.
+
+00:07:45.550 --> 00:07:49.840
+Saya mungkin salah tetapi jika Anda ingat saya mengatakan bahwa sudut seperti dapur.
+
+00:07:49.870 --> 00:07:56.440
+Ini bagus untuk perusahaan besar seperti bank untuk memastikan bahwa tim pengembang besar
+
+00:07:56.620 --> 00:08:04.060
+mereka bekerja di dapur yang telah menentukan segalanya tentang cara memasak roti atau cara memasak
+
+00:08:04.480 --> 00:08:13.050
+naskah aplikasi menambahkan pengetikan statis yang menambahkan lapisan keamanan ekstra atau lapisan ekstra dari jenis keamanan dalam kode.
+
+00:08:13.180 --> 00:08:17.730
+Sekali lagi perluas dapur itu untuk memastikan bahwa kode atau coders.
+
+00:08:17.740 --> 00:08:21.160
+Pengembang di tim bermain sesuai aturan.
+
+00:08:21.220 --> 00:08:23.230
+Saya pikir itu cukup menarik.
+
+00:08:23.290 --> 00:08:25.080
+Jadi mari kita kembali ke topik yang dibahas.
+
+00:08:25.920 --> 00:08:30.360
+Sebagai pengembang kita harus mengerti mengapa kita memasukkan banyak hal ke dalam proyek kita.
+
+00:08:30.570 --> 00:08:36.200
+Kami tidak ingin hanya mengikuti tren karena saya hanya menunjukkan kepada Anda setan survei dan
+
+00:08:36.210 --> 00:08:41.780
+semua orang menggunakan naskah dan hanya melompat pada kereta musik terbaru sebagai pengembang senior.
+
+00:08:41.820 --> 00:08:48.490
+Kita harus memutuskan sendiri apa yang cocok untuk proyek kita dan tim kita dan apa yang masuk akal.
+
+00:08:49.190 --> 00:08:55.350
+Jadi, inilah garis besar saya kapan harus menggunakan pemeriksaan jenis statis seperti naskah.
+
+00:08:55.470 --> 00:09:03.980
+Proyek Anda tumbuh lebih besar dan lebih besar Anda sudah memiliki tes tertulis dan semakin banyak pengembang bergabung dengan
+
+00:09:03.980 --> 00:09:04.570
+tim.
+
+00:09:04.700 --> 00:09:11.600
+Anda ingin kode didokumentasikan sendiri dan juga menghindari bug karena orang perlu menyentuh kode.
+
+00:09:11.600 --> 00:09:18.740
+Anda juga memiliki anggaran dalam perusahaan untuk melatih karyawan baru untuk mempelajari bahasa baru ini dan mengharapkan
+
+00:09:18.950 --> 00:09:20.450
+siklus pengembangan kami.
+
+00:09:20.450 --> 00:09:26.210
+Itulah seberapa cepat kami dapat menulis fitur dan kode Anda akan lebih lambat karena kami sedang menulis lebih
+
+00:09:26.210 --> 00:09:27.360
+banyak kode sekarang.
+
+00:09:27.830 --> 00:09:28.780
+Itu daftar periksa Anda.
+
+00:09:28.790 --> 00:09:30.770
+Jika itu masalahnya maka kita harus menambahkan naskah.
+
+00:09:30.770 --> 00:09:32.140
+Jika tidak, kita seharusnya tidak.
+
+00:09:32.330 --> 00:09:37.960
+Tetapi untuk benar-benar memahaminya kita benar-benar harus menulis naskah dan melalui proses jadi
+
+00:09:39.140 --> 00:09:42.330
+mari kita akhirnya masuk ke coding
+
+00:09:42.360 --> 00:09:44.400
+Saya akan melihat di video berikutnya oleh.

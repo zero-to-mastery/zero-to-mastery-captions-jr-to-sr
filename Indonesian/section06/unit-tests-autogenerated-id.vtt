@@ -1,0 +1,100 @@
+﻿WEBVTT
+
+00:00:01.970 --> 00:00:06.880
+Sebelum kita menyelami pengkodean, mari kita bicara tentang masing-masing jenis dengan cermat.
+
+00:00:07.070 --> 00:00:12.490
+Tes unit harus mencakup semua fungsi kecil murni suatu aplikasi.
+
+00:00:12.560 --> 00:00:18.560
+Anda mungkin pernah mendengar saya mengatakan bahwa fungsi murni kecil yang mengambil input dan mengembalikan output dan melakukan
+
+00:00:18.560 --> 00:00:20.450
+satu hal dengan sangat baik.
+
+00:00:20.450 --> 00:00:23.380
+Satu hal pada satu waktu adalah cara untuk pergi.
+
+00:00:23.630 --> 00:00:27.350
+Dan itu prinsip utama dalam pemrograman fungsional.
+
+00:00:27.470 --> 00:00:36.050
+Sekarang efek samping yang luar biasa dari ini adalah memungkinkan kita untuk menulis unit test dengan sangat mudah karena
+
+00:00:36.050 --> 00:00:37.880
+fungsi kita sangat sederhana.
+
+00:00:37.880 --> 00:00:43.220
+Berikan saja input dan dapatkan output dan hanya menguji berdasarkan input apakah Anda
+
+00:00:44.150 --> 00:00:50.010
+mendapatkan output ini dan ini adalah salah satu manfaat terbesar pemrograman fungsional dibandingkan pemrograman berorientasi objek.
+
+00:00:50.060 --> 00:00:56.840
+Tetapi untuk merekap fungsi murni adalah fungsi yang tidak memiliki efek samping seperti mempengaruhi bagian lain dari
+
+00:00:56.840 --> 00:00:59.920
+program dan selalu mengembalikan sesuatu berdasarkan input.
+
+00:01:00.750 --> 00:01:07.260
+Ini adalah makna deterministik bahwa Anda dapat memasukkan input yang sama sejuta kali dan Anda masih akan
+
+00:01:07.260 --> 00:01:14.590
+mendapatkan output yang sama sejuta kali dengan cara yang sama persis seperti yang Anda pikirkan membuat pengujian menjadi sangat mudah.
+
+00:01:15.960 --> 00:01:19.980
+Dan omong-omong komponen re-bertindak sebagian besar fungsi murni.
+
+00:01:20.010 --> 00:01:26.820
+Komponen-komponen stateless yang tidak memiliki siklus hidup atau menyatakan baik mereka mendapatkan input yang props
+
+00:01:26.820 --> 00:01:30.180
+dan mereka mengembalikan output yang merupakan tampilan.
+
+00:01:30.180 --> 00:01:37.620
+Itu benar-benar sangat mudah untuk diuji dengan sesuatu seperti tes unit sehingga Tes unit sangat berguna seperti saya katakan ini adalah hal-hal
+
+00:01:37.630 --> 00:01:43.090
+yang akan Anda lihat 90 persen dari waktu dan sebagian besar waktu Anda akan menjadi
+
+00:01:43.090 --> 00:01:44.620
+tes unit menulis .
+
+00:01:44.620 --> 00:01:47.280
+Jadi kita akan melakukannya juga dalam kursus ini.
+
+00:01:47.290 --> 00:01:52.390
+Satu hal yang perlu diingat adalah bahwa unit test tidak menguji kontrak.
+
+00:01:52.690 --> 00:01:54.420
+Dan apa yang saya maksud dengan kontrak.
+
+00:01:54.520 --> 00:01:57.400
+Kontrak adalah hubungan antara berbagai hal.
+
+00:01:57.580 --> 00:02:00.960
+Ini bisa berupa kontrak antara server dan database.
+
+00:02:00.970 --> 00:02:04.910
+Ini bisa berupa kontrak antara suatu fungsi dan fungsi lainnya.
+
+00:02:05.000 --> 00:02:13.720
+Mungkin fungsi masuk saya memanggil tes fungsi unit profil beban akan menguji tanda dan fungsi dan fungsi beban
+
+00:02:13.960 --> 00:02:17.470
+tetapi tidak kontrak di antara mereka.
+
+00:02:17.470 --> 00:02:24.890
+Apakah mereka mengintegrasikan bersama-sama yang penting adalah apakah ini ketika datang ke tes unit menulis kode
+
+00:02:24.900 --> 00:02:32.280
+yang dipisahkan dengan baik komponen fungsional bersih adalah fungsi yang membuatnya lebih mudah untuk unit test
+
+00:02:32.280 --> 00:02:35.100
+karena semuanya adalah potongan kecil.
+
+00:02:35.220 --> 00:02:39.020
+Dan ini akan mengarah pada kode yang bagus dan dapat dikelola dalam jangka panjang.
+
+00:02:40.420 --> 00:02:42.280
+Saya akan melihat yang berikutnya Buh-Bye.

@@ -1,0 +1,226 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:02.410
+Selamat datang kembali.
+
+00:00:02.550 --> 00:00:05.420
+Kami telah menyelesaikan bagian ini.
+
+00:00:05.520 --> 00:00:11.700
+Kami telah membuat token JWT dan kami mengirimkannya ke klien.
+
+00:00:11.700 --> 00:00:17.080
+Sekarang klien akan dapat mengirim kembali token GW dan mendapatkan profil.
+
+00:00:17.130 --> 00:00:24.990
+Sekarang ada satu langkah lain yang perlu kita miliki di sini karena kita akan
+
+00:00:24.990 --> 00:00:34.800
+mencoba dan menggabungkan manajemen sesi juga dengan rattus dan alih-alih hanya menggunakan data memverifikasi dengan token JWT kita
+
+00:00:34.800 --> 00:00:46.770
+akan benar-benar menyimpan JWT Dogan di basis data rattus kami dan dengan menyimpannya di basis data kami, kami memiliki kontrol penuh untuk melihat
+
+00:00:46.860 --> 00:00:55.590
+token apa yang tersedia, token apa yang telah kami berikan dan juga mencabutnya kapan saja kami
+
+00:00:55.590 --> 00:00:56.390
+mau.
+
+00:00:56.430 --> 00:00:59.290
+Yang perlu kita lakukan hanyalah menghapusnya dari basis data.
+
+00:00:59.400 --> 00:01:07.200
+Dan sekarang bahkan jika pengguna mencoba mendapatkan profil dengan token itu karena kami telah menghapusnya, ia tidak
+
+00:01:07.200 --> 00:01:09.540
+lagi dapat mengakses informasi itu.
+
+00:01:09.540 --> 00:01:16.500
+Dan ini memberi kita banyak kekuatan dan kemampuan manuver ketika pengguna menekan mendaftar ketika pengguna menekan keluar.
+
+00:01:16.500 --> 00:01:20.490
+Misalnya, kami tidak dapat menghapus token itu dari basis data kami.
+
+00:01:20.490 --> 00:01:29.490
+Jadi dalam video ini kita akan benar-benar menambahkan rattus ke backend kita dan menyimpan token JWT ini ke dalam database
+
+00:01:29.540 --> 00:01:38.010
+read us kita sehingga ketika seorang pengguna memeriksa dan meminta profil kita memeriksa database rattus kita untuk token
+
+00:01:38.010 --> 00:01:38.910
+itu.
+
+00:01:38.910 --> 00:01:42.060
+Dan jika semua check out, kami mengirim mereka paket.
+
+00:01:42.120 --> 00:01:42.960
+Mari kita mulai.
+
+00:01:44.840 --> 00:01:53.600
+Agar rattus berfungsi dan dapat digunakan di server kami, kami harus menginstal klien S merah dan dalam kasus kami, kami memerlukan
+
+00:01:53.660 --> 00:02:00.380
+merah adalah klien dari NPM dan kami melihat bahwa itu adalah pemasangan yang bagus dan PM
+
+00:02:05.040 --> 00:02:12.180
+dan memberi kami contoh kecil yang bagus tentang mengapa kita bisa melakukan mari kita instal rattus untuk
+
+00:02:12.180 --> 00:02:13.420
+saat ini.
+
+00:02:15.380 --> 00:02:20.740
+Dan omong-omong kita tidak akan menambahkan rattus ke dok atau wadah kita namun kita akan melakukannya.
+
+00:02:20.750 --> 00:02:22.600
+Dan salah satu latihan yang akan datang.
+
+00:02:22.780 --> 00:02:27.020
+Tetapi untuk saat ini karena kami masih mengembangkannya, pastikan semuanya berfungsi.
+
+00:02:27.110 --> 00:02:31.250
+Kami akan membuatnya benar-benar terpisah dari wadah dokter kami.
+
+00:02:31.250 --> 00:02:39.300
+Sekarang saya akan membawa kembali wadah sehingga semuanya berjalan dan kami memiliki paket yang paling merah diinstal.
+
+00:02:40.520 --> 00:02:51.980
+Sekarang di seinen kita. Mari kita pergi ke halaman kami dan di iklan teratas paket rattus baru, kami hanya
+
+00:02:51.980 --> 00:02:57.910
+memerlukannya dari paket Radice yang baru saja kami instal.
+
+00:02:58.150 --> 00:03:06.830
+Dan sekarang kita melihat bahwa untuk dapat mengaksesnya, kita cukup melakukan client sama dengan red s dot create client.
+
+00:03:07.020 --> 00:03:12.110
+Dan begitu kita membuat klien, kita bisa melakukan perintah yang telah kita lihat sebelumnya dengan Reddy.
+
+00:03:12.120 --> 00:03:18.010
+Saya tidak bisa mengatakan bahwa saya dapat mengatakan bahwa saya dapat memeriksa kunci H dan melakukan semua perintah ini.
+
+00:03:18.030 --> 00:03:23.050
+Sekali lagi ada banyak dokumentasi yang sangat bagus di sini untuk keperluan kita.
+
+00:03:23.160 --> 00:03:26.520
+Mari kita buat klien ini sekarang.
+
+00:03:28.270 --> 00:03:39.300
+Kami akan mengatakan mengatur Berettas dan membuat klien ini.
+
+00:03:39.470 --> 00:03:49.960
+Dan hanya untuk menjadi deskriptif Jika Anda benar-benar menamakannya rattus client sekarang ini dibaca sebagai klien sebagai parameter yang
+
+00:03:50.500 --> 00:03:54.310
+sebenarnya diterima sebagai host lokal default.
+
+00:03:54.310 --> 00:03:56.290
+Tapi saya suka bersikap eksplisit.
+
+00:03:56.290 --> 00:04:03.130
+Dan ketika kita benar-benar beralih ke buruh pelabuhan atau server lain kita harus mengatakan di mana tuan
+
+00:04:03.430 --> 00:04:04.430
+rumah berada.
+
+00:04:04.990 --> 00:04:12.060
+Untuk saat ini saya hanya akan mengatakan tuan rumah lokal atau teman lama kita 1:27 0 satu.
+
+00:04:12.120 --> 00:04:17.770
+Sekarang jika saya menyimpan ini saya akan mendapatkan pesan kesalahan yang mengatakan bahwa koneksi Radice gagal.
+
+00:04:17.920 --> 00:04:21.050
+Yah karena kita tidak menjalankan rattus ingat.
+
+00:04:21.160 --> 00:04:24.790
+Agar kita dapat terhubung ke sesuatu, kita harus mulai membaca server.
+
+00:04:25.030 --> 00:04:29.210
+Dan untungnya bagi kita di US S. merah kami sudah menginstalnya dengan benar.
+
+00:04:29.250 --> 00:04:31.480
+Kami kembali ke desktop kami.
+
+00:04:31.480 --> 00:04:39.860
+Kami melihat bahwa ya kami memiliki paket rattus kami di sini dan kami dapat memulai semuanya hanya dengan mengatakan bahwa kami
+
+00:04:39.860 --> 00:04:45.130
+akan menambahkan jendela baru dan mari kita buat ini sedikit lebih besar.
+
+00:04:46.120 --> 00:04:57.050
+Dan di sini saya hanya akan masuk ke folder merah saya dan menjalankan perintah server rattus.
+
+00:04:57.080 --> 00:04:57.530
+Baiklah.
+
+00:04:57.530 --> 00:04:59.390
+Sudah siap menerima koneksi.
+
+00:04:59.540 --> 00:05:00.460
+Ayo kembali.
+
+00:05:01.830 --> 00:05:08.770
+Dan menyegarkan dan kami melihat bahwa kami masih mendapatkan kesalahan ini.
+
+00:05:09.110 --> 00:05:10.780
+Sekarang mengapa ini.
+
+00:05:10.850 --> 00:05:16.980
+Mari kita pikirkan tentang ini berdasarkan apa yang telah kita pelajari tentang buruh pelabuhan dan semua koneksi ini.
+
+00:05:17.250 --> 00:05:18.630
+Apa yang kita lewatkan di sini.
+
+00:05:19.600 --> 00:05:25.150
+Nah, jika Anda ingat ujung belakang kami berjalan dalam wadah buruh pelabuhan.
+
+00:05:25.160 --> 00:05:31.060
+Wadah Stockard ini memiliki gagasan yang sepenuhnya berbeda tentang apa itu localhost.
+
+00:05:31.070 --> 00:05:35.190
+Ini benar-benar berbeda dari apa yang kita miliki di mesin kita.
+
+00:05:35.330 --> 00:05:38.040
+Itu adalah localhost komputer kami.
+
+00:05:38.150 --> 00:05:45.140
+Jika kita pergi ke file penulisan dokter, kita melihat bahwa kita melakukan port forwarding agar kita benar-benar
+
+00:05:45.160 --> 00:05:46.750
+mengakses localhost 3000.
+
+00:05:47.180 --> 00:05:51.770
+Tetapi untuk rattus, kita belum memiliki pengaturan itu.
+
+00:05:52.750 --> 00:06:00.490
+Jadi sebelum kita melanjutkan dan meskipun kita memiliki server lokal kita berjalan, kita sebenarnya ingin
+
+00:06:01.000 --> 00:06:03.820
+itu dijalankan pada buruh pelabuhan.
+
+00:06:03.820 --> 00:06:07.670
+Kalau tidak, kita harus mengubah seluruh pengaturan kita.
+
+00:06:07.870 --> 00:06:16.480
+Dan saya pikir ini adalah langkah yang baik untuk memastikan bahwa kami memiliki server rattus berjalan bagus dalam file doc kami sehingga
+
+00:06:16.490 --> 00:06:22.760
+kami tidak perlu khawatir tentang siapa yang terhubung dengan apa yang terhubung ke tempat yang perlu
+
+00:06:22.760 --> 00:06:27.920
+kita lakukan adalah pastikan bahwa kita melakukan penerusan port agar kita dapat mengaksesnya.
+
+00:06:27.930 --> 00:06:34.110
+Jadi sebelum kita masuk ke video berikutnya saya ingin menantang Anda berdasarkan apa yang telah kami pelajari tentang buruh
+
+00:06:34.110 --> 00:06:35.220
+pelabuhan sampai sekarang.
+
+00:06:35.220 --> 00:06:42.420
+Dapatkah Anda dengan cepat mengatur layanan rattus baru di sini dan menghubungkannya ke API ujung belakang sehingga
+
+00:06:42.690 --> 00:06:44.630
+Anda mendapatkan kesalahan ini.
+
+00:06:45.160 --> 00:06:46.980
+Aku akan melihatnya satu per satu.

@@ -1,0 +1,109 @@
+﻿WEBVTT
+
+00:00:01.270 --> 00:00:02.260
+Selamat datang kembali.
+
+00:00:02.260 --> 00:00:08.890
+Kami baru saja menulis beberapa baris kode naskah tetapi satu hal yang agak menyebalkan adalah kami
+
+00:00:08.890 --> 00:00:12.710
+harus terus menjalankan perintah ini untuk mengkompilasi kode kami.
+
+00:00:12.820 --> 00:00:17.760
+Idealnya kita dapat menjalankannya dan melakukannya secara otomatis.
+
+00:00:18.130 --> 00:00:20.470
+Dan dengan cara itu kita bisa melakukannya dengan sangat sederhana.
+
+00:00:20.470 --> 00:00:33.480
+Kami dapat menginisialisasi proyek kami sebagai proyek naskah dengan hanya menjalankan dasbor TS C di dalamnya.
+
+00:00:33.560 --> 00:00:37.570
+Kami melihat bahwa itu dibuat konfigurasi TS berdasarkan file.
+
+00:00:37.820 --> 00:00:48.250
+Jika kita membuka file ini, kita melihat bahwa itu menciptakan apa yang kita sebut file konfigurasi untuk naskah dan Anda
+
+00:00:48.340 --> 00:00:58.330
+dapat melihat di sini bahwa file ini memberi kita satu ton opsi untuk diperiksa oleh kompiler dan opsi
+
+00:00:58.360 --> 00:01:01.380
+kompiler dapat melakukan banyak hal.
+
+00:01:01.390 --> 00:01:05.220
+Kami melihat bahwa target kami adalah ya 5.
+
+00:01:05.440 --> 00:01:11.140
+Dan dikatakan tentukan versi ECMAScript dan Anda dapat melihat berapa banyak default yang mereka miliki.
+
+00:01:11.140 --> 00:01:15.910
+Jadi misalnya jika saya mengubah ini untuk mari kita lihat ada opsi yang mereka berikan mari kita ubah
+
+00:01:15.910 --> 00:01:18.180
+ke E. S. 2017
+
+00:01:18.580 --> 00:01:22.040
+Jadi saya akan mengatakan ya 20 17.
+
+00:01:22.270 --> 00:01:25.620
+Modul apa yang ingin kita gunakan, kita bisa lakukan gas biasa.
+
+00:01:25.720 --> 00:01:27.760
+Atau mungkin Anda ingin melakukannya.
+
+00:01:27.760 --> 00:01:32.770
+Ya 2015 dan banyak pilihan.
+
+00:01:32.830 --> 00:01:40.510
+Anda pada dasarnya dapat memutuskan jenis pekerjaan yang Anda inginkan untuk dikerjakan oleh kompiler dan jenis keluaran apa yang kami butuhkan.
+
+00:01:40.600 --> 00:01:45.850
+Dan hal yang hebat tentang file konfigurasi ini adalah ia benar-benar menggambarkan setiap hal
+
+00:01:45.850 --> 00:01:53.680
+kecil yang dapat Anda lakukan secara online. Anda juga memiliki dokumentasi hebat tentang file konfigurasi TS jika Anda ingin benar-benar memahaminya.
+
+00:01:56.310 --> 00:02:03.060
+Tetapi jangan khawatir nanti saya akan menunjukkan kepada Anda bagaimana sebenarnya menyederhanakan langkah ini atau bagaimana hal itu
+
+00:02:03.060 --> 00:02:04.950
+sudah disederhanakan bagi kami.
+
+00:02:04.950 --> 00:02:12.260
+Untuk saat ini kami memiliki file konfigurasi TS yang merupakan pengaturan default untuk saat ini.
+
+00:02:12.370 --> 00:02:18.650
+Jika kita pergi ke naskah kita maka kita hanya membersihkan terminal kita.
+
+00:02:18.780 --> 00:02:23.760
+Dan cara kita dapat menjalankan ini dan mode menonton cukup sederhana.
+
+00:02:23.760 --> 00:02:36.120
+Yang kita butuhkan di sini tidak semua yang kita butuhkan adalah TSC skrip dot TS dan kemudian dash dash untuk menonton mode dan Anda dapat melihat
+
+00:02:36.120 --> 00:02:41.770
+di sini itu mulai kompilasi Kham kompilasi selesai dan sekarang sedang menunggu
+
+00:02:41.770 --> 00:02:42.580
+perubahan.
+
+00:02:43.000 --> 00:02:48.520
+Dan setiap kali saya mengatakan apakah akan mengkompilasi ulang dan mendeteksi perubahan ini.
+
+00:02:48.790 --> 00:02:55.730
+Sebagai contoh jika saya mengubah ini sekarang menjadi nilai boolean itu akan memberi saya kesalahan.
+
+00:02:55.860 --> 00:02:59.440
+Dan kompiler mengatakan Anda melakukan sesuatu yang salah di sini.
+
+00:02:59.580 --> 00:03:00.060
+Baiklah.
+
+00:03:00.120 --> 00:03:03.540
+Jadi kami menjalankan ini dan semuanya diatur.
+
+00:03:03.600 --> 00:03:09.280
+Saya pikir sudah waktunya bagi kita untuk pergi melalui semua skrip typeset memberi kita dan melakukan sedikit pengkodean.
+
+00:03:09.420 --> 00:03:14.880
+Jadi siapkan itu di komputer Anda di komputer Anda dan saya akan melihat di video berikutnya.

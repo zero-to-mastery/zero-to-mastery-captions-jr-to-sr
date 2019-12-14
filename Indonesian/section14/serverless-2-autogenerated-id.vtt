@@ -1,0 +1,178 @@
+﻿WEBVTT
+
+00:00:01.020 --> 00:00:06.320
+Selamat datang kembali penghargaan mengambil sedikit waktu untuk berbicara tentang kerangka kerja pengawasan
+
+00:00:06.330 --> 00:00:12.750
+dan sesuatu yang saya mungkin telah menelusuri sedikit terlalu cepat dan video sebelumnya dan itu adalah fakta
+
+00:00:12.990 --> 00:00:18.580
+bahwa server kurang tidak hanya untuk layanan Web Amazon Anda dapat menggunakannya dengan banyak hal.
+
+00:00:18.780 --> 00:00:21.280
+Anda melihat bahwa di server kurang membuat perintah.
+
+00:00:21.300 --> 00:00:27.480
+Kami memiliki semua templat ini dan kami menggunakan Amazon know James.
+
+00:00:27.730 --> 00:00:30.830
+Ada juga Amazon dengan naskah.
+
+00:00:30.880 --> 00:00:34.910
+Ada Python, ada Java.
+
+00:00:35.080 --> 00:00:36.480
+Ada semua hal lainnya.
+
+00:00:36.760 --> 00:00:42.700
+Tetapi juga jika kita terus turun kita melihat wisk terbuka yang IBM.
+
+00:00:42.790 --> 00:00:49.990
+Jadi IBM adalah layanan web dan jika kami terus turun, kami melihat bahwa ada juga Azure.
+
+00:00:50.150 --> 00:00:53.400
+Jadi itulah Microsoft yang menawarkan layanan ini.
+
+00:00:53.420 --> 00:00:54.600
+Anda juga punya Google.
+
+00:00:54.710 --> 00:01:01.330
+Jadi Servilius bekerja dengan semua penyedia layanan ini yang sangat bagus.
+
+00:01:01.340 --> 00:01:07.520
+Alasan lain saya suka menunjukkan gyud metode ini adalah karena kita belajar bagaimana menggunakan tidak hanya AWOS tetapi
+
+00:01:07.520 --> 00:01:12.170
+juga semua layanan lain yang dapat memenuhi kebutuhan Anda dengan lebih baik.
+
+00:01:12.330 --> 00:01:21.000
+Sekarang karena kita mendapatkan hal lain yang ingin saya lakukan adalah saya ingin memastikan bahwa peringkat saya yang mengingat
+
+00:01:21.000 --> 00:01:27.630
+versi simpul kami di sini adalah 6. 10 dan karena kita akan menyebarkannya dari server
+
+00:01:28.200 --> 00:01:37.300
+kita, kerangka kerja yang lebih sedikit harus kembali ke dashboard kita dan menghapus fungsi lambda peringkat ini karena kita tidak ingin membuatnya
+
+00:01:37.300 --> 00:01:40.220
+di sini kita membuatnya melalui server kurang.
+
+00:01:40.300 --> 00:01:50.970
+Jadi saya akan kembali ke fungsi dan menghapus selamat tinggal, hidup Anda berumur pendek.
+
+00:01:50.980 --> 00:01:56.310
+Baiklah mari kita meminimalkan ini dan berbicara sedikit tentang file YAML.
+
+00:01:57.660 --> 00:02:03.470
+Dokumentasi server kurang benar-benar bagus menjelaskan semua ini.
+
+00:02:03.560 --> 00:02:08.970
+Jadi saya tidak akan mengambil terlalu banyak waktu melakukan itu karena masing-masing berbeda tetapi Anda dapat
+
+00:02:09.230 --> 00:02:11.840
+menulis banyak default yang sudah mereka miliki.
+
+00:02:11.900 --> 00:02:18.380
+Sebagai contoh di sini jika kita batalkan komentar ini kita melihat bahwa kita memiliki daerah di mana kita
+
+00:02:19.850 --> 00:02:26.270
+ingin server kita berada jika Anda tinggal di tempat lain selain Amerika Utara Anda mungkin ingin mengubah
+
+00:02:26.270 --> 00:02:34.380
+ini sehingga server akan lebih dekat dengan pengguna Anda jika Anda terus menggulir ke bawah Anda melihat bahwa kami juga memiliki variabel lingkungan
+
+00:02:34.380 --> 00:02:37.140
+yang dapat kami tambahkan ke fungsi kami.
+
+00:02:38.010 --> 00:02:45.220
+Untuk mungkin mungkin memastikan bahwa rahasia tetap berada di luar fungsi kita dan kemudian jelas kita
+
+00:02:45.240 --> 00:02:52.770
+sudah membicarakan fungsi sebelum kita memiliki fungsi yang kita definisikan disebut Halo sehingga kita dapat mengaksesnya dengan
+
+00:02:52.770 --> 00:02:58.840
+nama halo dan ini dapat diubah menjadi apa pun dan referensi fungsi dodgiest
+
+00:03:02.330 --> 00:03:04.250
+handler dalam file YAML.
+
+00:03:04.260 --> 00:03:09.960
+Berikut ini adalah beberapa contoh acara yang dapat Anda konfigurasi sehingga kami dapat mengonfigurasi
+
+00:03:09.960 --> 00:03:13.080
+berbagai peristiwa yang akan memicu fungsi helo.
+
+00:03:13.080 --> 00:03:17.630
+Misalnya kita bisa melakukan domba yang bisa kita lakukan sebagai tiga.
+
+00:03:17.630 --> 00:03:24.470
+Jadi katakanlah seseorang memuat gambar ke braket S3 seperti gambar profil dan
+
+00:03:24.470 --> 00:03:32.840
+kita perlu mengatakan ukurannya dengan baik pemicunya adalah gambar ESRI yang diunggah dan kemudian itu
+
+00:03:32.840 --> 00:03:36.940
+akan memicu fungsi helo untuk melakukan sesuatu.
+
+00:03:36.970 --> 00:03:42.400
+Dan omong-omong kita akan menggunakan CGP dalam kasus kami, tetapi saya ingin menunjukkan kepada Anda bahwa ada hal-hal berbeda
+
+00:03:42.400 --> 00:03:44.190
+yang dapat kita lakukan misalnya.
+
+00:03:44.200 --> 00:03:47.570
+Satu lagi yang saya sangat suka gunakan adalah jadwal.
+
+00:03:47.770 --> 00:03:51.130
+Dan di sini saya dapat mengatakan seberapa sering saya ingin fungsi dijalankan.
+
+00:03:51.130 --> 00:03:57.570
+Sebagai contoh jika saya ingin fungsi berjalan setiap jam mungkin untuk memeriksa harga pasar saham.
+
+00:03:57.640 --> 00:04:01.690
+Yah saya bisa katakan itu berjalan setiap jam dan itu setiap jam.
+
+00:04:01.690 --> 00:04:03.390
+Fungsi ini akan dijalankan.
+
+00:04:03.580 --> 00:04:09.740
+Dan jika Anda menggunakan API seperti Twilio yang mengirimkan pesan teks kepada Anda, Anda dapat
+
+00:04:09.740 --> 00:04:15.990
+memiliki setiap jam pesan teks hanya mengatakan harga saham begitu-dan-begitu atau harga saham sudah naik 100 persen.
+
+00:04:16.000 --> 00:04:18.180
+Anda sekarang kaya sesuatu di sepanjang garis itu.
+
+00:04:20.390 --> 00:04:23.420
+Dan ada banyak hal yang bisa kita lalui di sini.
+
+00:04:23.570 --> 00:04:29.420
+Tapi seperti yang saya katakan ini semua item konfigurasi yang akan Anda temui ketika
+
+00:04:29.420 --> 00:04:35.900
+Anda benar-benar memiliki kebutuhan khusus untuk suatu fungsi sementara kita akan lakukan sekarang adalah membangun fungsi kami.
+
+00:04:36.010 --> 00:04:42.460
+Tetapi ada satu item konfigurasi terakhir yang perlu kita lakukan dengan server lebih sedikit sebelum kita memiliki
+
+00:04:42.460 --> 00:04:44.640
+akses ke akun AWOS kita.
+
+00:04:44.740 --> 00:04:53.020
+Anda lihat sekarang saya telah membuat kerangka kerja layanan ini yang hidup di laptop saya tapi ya tidak benar-benar tahu
+
+00:04:53.020 --> 00:04:54.370
+bahwa ini ada.
+
+00:04:54.370 --> 00:04:59.860
+Saya perlu menghubungkan akun saya ke kerangka daftar server ini sehingga saya dapat menulis fungsi
+
+00:05:00.010 --> 00:05:01.470
+dan kemudian menggunakannya.
+
+00:05:01.480 --> 00:05:04.030
+Jadi mari kita lakukan di video berikutnya.
+
+00:05:04.070 --> 00:05:04.920
+Sampai jumpa di situ.

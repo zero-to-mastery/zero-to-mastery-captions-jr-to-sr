@@ -1,0 +1,451 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:08.430
+Selamat datang kembali, kami telah belajar sedikit tentang pengujian tetapi bagaimana dengan menguji komponen aksi ulang kami
+
+00:00:09.120 --> 00:00:12.580
+atau bertindak kembali atas teman-teman robo kami.
+
+00:00:12.800 --> 00:00:20.330
+Jika kita melihat folder kita di sini, saya punya teman-teman robo PWI karena sekarang
+
+00:00:20.330 --> 00:00:30.010
+aplikasi Web progresif dan berdasarkan apa yang telah kita pelajari kita mungkin pergi ke folder tindakan folder Konstans
+
+00:00:30.650 --> 00:00:34.220
+mungkin ada reduksi folder file kurasa.
+
+00:00:34.220 --> 00:00:41.370
+Dan karena ini hanyalah fungsi sederhana, kita mungkin tahu cara mengujinya.
+
+00:00:41.900 --> 00:00:50.810
+Tapi satu hal yang belum kita bahas adalah bagaimana kita menguji fungsi-fungsi ini yang merupakan komponen Riak-nya.
+
+00:00:50.810 --> 00:00:54.000
+Maksud saya, bagaimana sebenarnya kita melakukan itu.
+
+00:00:54.290 --> 00:01:00.690
+Dan ada beberapa cara yang dapat kita pikirkan untuk menguji ini dengan metode yang telah kita pelajari sejauh ini.
+
+00:01:01.460 --> 00:01:08.780
+Tapi ada perpustakaan hebat yang menyederhanakan hal-hal untuk kita dan itu adalah enzim.
+
+00:01:09.150 --> 00:01:12.750
+Dan ini adalah perpustakaan oleh Air B dan B.
+
+00:01:12.750 --> 00:01:14.020
+Itu cukup standar.
+
+00:01:14.040 --> 00:01:22.220
+Dan komunitas reac jika Anda ingin menguji komponen Anda maka kemungkinan besar Anda akan menggunakan enzim, enzim lagi-lagi
+
+00:01:22.940 --> 00:01:32.240
+merupakan alat yang memungkinkan kita untuk mengatakan hei dalam pengujian kami hanya membuat komponen mobil ini dan enzim akan memberi kita
+
+00:01:32.240 --> 00:01:35.900
+satu ton metode bagi kita untuk menguji.
+
+00:01:36.050 --> 00:01:41.200
+Hei apakah div mendapatkan Brender melakukan gambar mendapatkan Brandur.
+
+00:01:41.360 --> 00:01:46.100
+Apakah nama dan emailnya diberikan.
+
+00:01:46.290 --> 00:01:52.950
+Jadi dalam video ini, mari kita instal enzim dan lihat apa yang ditawarkannya kepada kita.
+
+00:01:53.020 --> 00:01:58.810
+Sekarang mereka memiliki dokumentasi yang bagus di sini dan Anda dapat melihat bahwa berdasarkan versi Riak kami, mereka
+
+00:01:58.810 --> 00:02:01.200
+memiliki hal-hal berbeda yang perlu kami pasang.
+
+00:02:01.360 --> 00:02:07.200
+Dan karena kita menggunakan reaksi yang lebih tinggi dari 16 jika kita melihat pada Jaison yang dipaket,
+
+00:02:10.520 --> 00:02:14.500
+kita melihat bahwa kita menggunakan aksi ulang enam belas koma dua.
+
+00:02:14.690 --> 00:02:19.820
+Anda mungkin menggunakan versi reaksi yang lebih tinggi tetapi kemungkinan besar Anda akan menggunakan versi yang
+
+00:02:19.820 --> 00:02:26.520
+lebih tinggi dari ini dan jika mereka memberi kami informasi yang cukup baik tentang apa yang harus dilakukan dan apa yang perlu
+
+00:02:26.520 --> 00:02:27.200
+kami instal.
+
+00:02:27.210 --> 00:02:33.220
+Jadi kita perlu menginstal pustaka enzim dan juga adaptor enzim ini bertindak kembali 16.
+
+00:02:33.360 --> 00:02:41.880
+Jadi hanya adaptor khusus yang kami perlukan untuk versi skyn reaksi yang lebih
+
+00:02:42.450 --> 00:02:55.490
+baru ini, silakan salin ini dan Anda melihat bahwa kami sedang melakukan dasbor, simpan Dev karena itu adalah ketergantungan kematian.
+
+00:02:55.500 --> 00:02:56.310
+Baiklah.
+
+00:02:56.550 --> 00:03:03.310
+Kami telah menginstal enzim dengan adaptor enzim.
+
+00:03:03.330 --> 00:03:09.450
+Sekarang jika Anda membaca dokumentasi mereka, kami perlu melakukan pengaturan cepat agar kami
+
+00:03:09.450 --> 00:03:11.510
+dapat benar-benar menggunakan enzim.
+
+00:03:11.540 --> 00:03:15.260
+Dan lagi ini karena kita menggunakan versi baru dari reaksi.
+
+00:03:15.260 --> 00:03:22.340
+Dan saya ingin diingat bahwa ini sebenarnya tidak sulit ketika Anda melihat saya memiliki kasus-kasus khusus
+
+00:03:22.340 --> 00:03:25.540
+perpustakaan dan kita perlu melakukan semacam pengaturan.
+
+00:03:25.580 --> 00:03:30.890
+Sebagian besar waktu semua perpustakaan ini memiliki dokumentasi untuk Anda mulai.
+
+00:03:30.890 --> 00:03:35.600
+Maksud saya tujuan mereka adalah agar orang-orang menggunakannya sebanyak mungkin sehingga mereka akan
+
+00:03:35.600 --> 00:03:38.550
+memudahkan Anda untuk memahami dan mengatur dengan enzim.
+
+00:03:38.570 --> 00:03:47.410
+Yang perlu kita lakukan adalah membuat sesuatu yang disebut tes pengaturan yang hanya untuk mengatur ini.
+
+00:03:47.520 --> 00:03:54.580
+Jadi di folder sumber kami, kami hanya bisa mengatakan file baru akan co-lead mengatur tes.
+
+00:03:54.640 --> 00:04:07.040
+J. S. dan di sini kita akan mengimpor sesuatu yang disebut configure dari enzim.
+
+00:04:07.140 --> 00:04:12.250
+Dan lagi semua ini dapat ditemukan dalam dokumentasi mereka jadi jangan terintimidasi oleh ini.
+
+00:04:12.270 --> 00:04:18.080
+Saya tidak tahu bagaimana melakukan ini sampai saya benar-benar membaca dokumentasi mereka hanya pada halaman pengantar mereka saya akan
+
+00:04:18.090 --> 00:04:20.100
+menunjukkan kepada Anda bagaimana melakukan ini.
+
+00:04:20.160 --> 00:04:27.400
+Dan akhirnya kami juga ingin mengimpor sesuatu yang disebut adaptor.
+
+00:04:27.590 --> 00:04:28.680
+Dan jika saya tidak bisa mengeja.
+
+00:04:28.700 --> 00:04:32.360
+Begitulah cara Anda mengeja adaptor dari pustaka
+
+00:04:34.600 --> 00:04:38.170
+adaptor enzim bertindak kembali 16 perpustakaan.
+
+00:04:38.210 --> 00:04:42.210
+Sekarang kami juga menginstal.
+
+00:04:42.380 --> 00:04:53.250
+Dan akhirnya kita hanya perlu satu baris di sini dan itu artinya konfigurasikan tab adaptor adaptor baru jika
+
+00:04:53.760 --> 00:04:57.720
+Anda benar-benar ingin tahu apa fungsinya.
+
+00:04:57.870 --> 00:05:05.460
+Dapat melalui pengkodean mereka di get hub tetapi hanya dengan melihat nama, kita akan mengatakan bahwa hanya mengonfigurasi
+
+00:05:05.640 --> 00:05:07.340
+pengujian kita dengan benar.
+
+00:05:07.350 --> 00:05:10.290
+Jadi itu mengatur apa yang bisa kita lakukan.
+
+00:05:10.320 --> 00:05:14.820
+Bagaimana kita bisa benar-benar menguji komponen kita sekarang
+
+00:05:17.660 --> 00:05:23.930
+dengan enzim Enzyte memberi kita hanya tiga hal yang bisa kita gunakan.
+
+00:05:24.050 --> 00:05:25.590
+Mari saya tunjukkan apa itu.
+
+00:05:25.610 --> 00:05:35.350
+Satu adalah sesuatu yang disebut Dangkal yang lain Ingin sesuatu yang disebut Gunung dan kemudian yang ketiga menjadi.
+
+00:05:35.460 --> 00:05:43.440
+Dan ini adalah fungsi yang dapat kita gunakan dari pustaka ujung yang baru saja kita gunakan dan dari sini kita
+
+00:05:43.470 --> 00:05:50.310
+dapat melakukan sesuatu yang sangat menarik dengan komponen yang kita lihat di dunia ideal untuk melakukan
+
+00:05:50.310 --> 00:05:51.010
+tes.
+
+00:05:51.180 --> 00:05:55.950
+Kita dapat membuat semua ini dan memastikan bahwa setiap belokan.
+
+00:05:55.950 --> 00:05:57.120
+Jadi apa yang kami harapkan.
+
+00:05:57.120 --> 00:06:04.290
+Seperti yang saya katakan sebelumnya untuk memastikan bahwa kami mengembalikan div mungkin dengan jenis nama kelas ini
+
+00:06:04.290 --> 00:06:09.570
+bahwa kami juga mengembalikan DB lain di dalamnya dengan nama dan email.
+
+00:06:09.590 --> 00:06:15.980
+Jadi seperti dom, kita perlu mencari tahu apakah itu membuat persis apa yang dibutuhkan
+
+00:06:15.980 --> 00:06:24.720
+dan hanya dengan melihat nama-nama itu sepertinya enzim memberi kita cara untuk membuat MT dan membuat komponen ini menjadi dangkal.
+
+00:06:24.740 --> 00:06:27.100
+Jadi apa arti semua ini.
+
+00:06:28.550 --> 00:06:30.730
+Dan saya akan memberi Anda kepala.
+
+00:06:30.740 --> 00:06:37.150
+Kemungkinan besar 90 persen dari waktu yang Anda ingin gunakan dangkal dan dangkal adalah apa yang akan kita gunakan dalam
+
+00:06:37.250 --> 00:06:38.190
+kursus ini.
+
+00:06:38.240 --> 00:06:43.400
+Ada beberapa kasus yang Anda mungkin ingin menggunakan mount dan render tetapi perlu diingat bahwa dengan
+
+00:06:43.700 --> 00:06:48.720
+enzim kami cukup banyak hanya menggunakan ini yang membuatnya sangat sangat bagus dan sederhana.
+
+00:06:48.860 --> 00:06:56.330
+Hal pertama yang paling sering kita gunakan. Apa yang paling baik dilakukan pertama kali adalah membuat file uji
+
+00:06:56.330 --> 00:07:01.490
+di sini karena kita tidak akan mengimpor enzim dalam komponen aktual kita.
+
+00:07:01.490 --> 00:07:08.420
+Jadi dalam file komponen saya hanya akan mengatakan kartu tes anjing ws baru.
+
+00:07:08.570 --> 00:07:12.690
+Dan sekarang mari kita impor enzim di sini.
+
+00:07:15.660 --> 00:07:18.930
+A Zola mengimpor ke komponen kami yang sebenarnya.
+
+00:07:19.090 --> 00:07:22.330
+Jadi sekali lagi kita akan
+
+00:07:25.600 --> 00:07:26.530
+mengimpor
+
+00:07:29.450 --> 00:07:33.650
+kartu dari hard dodgiest via Dan sekarang
+
+00:07:36.490 --> 00:07:49.590
+mari kita bersenang-senang melihat apa yang terjadi jika saya melakukan kartu dangkal atau komponen kartu dan mari kita konsol log ini.
+
+00:07:49.740 --> 00:07:52.010
+Sekarang bagaimana kita benar-benar menjalankan tes ini.
+
+00:07:52.320 --> 00:08:00.210
+Nah jika kita pergi ke Jaison paket kita, kita memiliki lelucon terinstal tapi ingat karena kita menggunakan buat
+
+00:08:00.210 --> 00:08:07.620
+kembali bertindak ini datang dibangun di dalam skrip Riak memiliki semua hal yang diatur untuk kita.
+
+00:08:07.920 --> 00:08:10.530
+Jadi itu hanya dapat menjalankan tes NPM dan
+
+00:08:16.140 --> 00:08:20.200
+kami mendapatkan sedikit sempit di sini dengan mengatakan bahwa aksi ulang tidak didefinisikan.
+
+00:08:21.020 --> 00:08:29.390
+Itu karena ingat kami menggunakan GSX di sini sehingga kami membutuhkan cara untuk Rejeb seks dan jika Anda ingat
+
+00:08:29.390 --> 00:08:35.510
+dengan komponen apa pun kami selalu mengimpor tindakan ulang dari paket tindakan ulang.
+
+00:08:38.160 --> 00:08:38.450
+Baiklah.
+
+00:08:38.490 --> 00:08:44.680
+Dan dikatakan bahwa suite pengujian kami harus mengandung setidaknya satu tes karena kami tidak benar-benar menguji apa pun.
+
+00:08:44.820 --> 00:08:51.500
+Tetapi di bagian bawah di sini kita melihat bahwa kita memiliki pembungkus dangkal dengan panjang 1.
+
+00:08:51.570 --> 00:08:57.170
+Jadi apa yang dilakukan dangkal hanya dengan menjalankan sintaks ini.
+
+00:08:57.180 --> 00:09:06.370
+Kami mengatakan hei dangkal render komponen kartu ini dan rendering dangkal berguna karena hanya
+
+00:09:06.370 --> 00:09:09.100
+membuat komponen kartu.
+
+00:09:09.100 --> 00:09:15.790
+Jika komponen kartu karena alasan tertentu katakanlah ada komponen di dalamnya yang merupakan komponen
+
+00:09:17.600 --> 00:09:21.210
+Halo. Nah, itu tidak akan membuatnya juga.
+
+00:09:21.320 --> 00:09:29.330
+Ini hanya akan membuat komponen ini dangkal dan itu berguna karena membatasi diri Anda untuk menguji satu komponen
+
+00:09:29.330 --> 00:09:37.220
+pada satu waktu satu unit karena Anda mungkin ingat tes unit adalah sesuatu yang hanya menguji satu unit
+
+00:09:37.520 --> 00:09:41.430
+pada suatu waktu sepotong kecil pada suatu waktu.
+
+00:09:41.780 --> 00:09:50.060
+Dan ini memastikan bahwa tes Anda tidak secara tidak langsung menyatakan perilaku komponen chawl seperti komponen
+
+00:09:50.240 --> 00:09:51.280
+halo.
+
+00:09:52.230 --> 00:09:56.270
+Jadi itu sebabnya saya penggemar enzim rendering yang dangkal.
+
+00:09:56.310 --> 00:10:02.740
+Idealnya Anda ingin menguji satu hal pada satu waktu tanpa mempengaruhi semua komponen anak.
+
+00:10:04.420 --> 00:10:07.130
+Dan ini membuat tes Anda bagus dan bersih.
+
+00:10:07.890 --> 00:10:16.810
+Sekarang hal yang paling keren dengan dangkal adalah kita mendapatkan banyak metode yang sekarang dapat kita gunakan pada komponen kereta ini
+
+00:10:18.300 --> 00:10:19.090
+misalnya.
+
+00:10:19.170 --> 00:10:27.810
+Sekarang karena kita membuat ini kita dapat menggunakan teman lama kita yang baik berharap untuk mengatakan xpect
+
+00:10:30.500 --> 00:10:40.490
+komponen mobil yang diberikan dangkal dan kemudian kita dapat mengatakan sama dengan yang sama dan kita hanya akan memberikan properti panjang
+
+00:10:40.490 --> 00:10:46.170
+di sini dan lagi kita ingin membungkus ini di IT kami.
+
+00:10:46.210 --> 00:10:50.560
+BLOCK berharap
+
+00:10:53.870 --> 00:11:01.430
+dapat membuat komponen kartu.
+
+00:11:01.670 --> 00:11:08.310
+Dan sekarang kita bisa meletakkan ini di dalam, mari kita simpan dan di sana Anda pergi.
+
+00:11:08.350 --> 00:11:15.970
+Kami memiliki satu tes kelulusan dan ini menunjukkan bahwa baik-baik saja komponen mobil ketika kami membuatnya
+
+00:11:15.970 --> 00:11:18.870
+akan benar-benar membuat sesuatu menjadi sama.
+
+00:11:18.880 --> 00:11:22.110
+Maksud saya tes konyol tapi bagus.
+
+00:11:22.150 --> 00:11:30.770
+Kami dapat membuat komponen mobil yang bagus dan sederhana, biarkan saya menghapus halo dari sini.
+
+00:11:33.020 --> 00:11:36.760
+Sekarang bagaimana dengan dua lainnya ini dua hal lainnya.
+
+00:11:36.800 --> 00:11:40.730
+Kami tidak akan membahas terlalu banyak karena mereka memiliki kasus penggunaan khusus ini.
+
+00:11:40.730 --> 00:11:46.520
+Seperti saya katakan sebagian besar waktu Anda ingin menggunakan dangkal dan menjaga tes Anda
+
+00:11:47.210 --> 00:11:56.780
+bagus dan sederhana dan terkandung tetapi mt melakukan apa yang disebut render DOM penuh itu ideal untuk kasus penggunaan di mana Anda memiliki komponen
+
+00:11:56.780 --> 00:11:59.710
+yang mungkin berinteraksi dengan DOM API.
+
+00:11:59.900 --> 00:12:06.480
+Jadi untuk beberapa alasan mungkin komponen kartu menggunakan pemilih kueri Daut.
+
+00:12:06.620 --> 00:12:11.380
+Atau API dom yang biasa kita lihat.
+
+00:12:11.900 --> 00:12:18.150
+Atau mungkin komponen mobil memiliki semacam metode siklus hidup A bereaksi terhadap metode siklus hidup.
+
+00:12:18.440 --> 00:12:21.430
+Anda ingin menguji komponen Sacha apakah mount.
+
+00:12:21.690 --> 00:12:31.270
+Sekarang satu dengan mount adalah itu membutuhkan DOM API lengkap untuk benar-benar berfungsi dan tersedia bagi kita
+
+00:12:31.270 --> 00:12:33.480
+untuk mount terjadi.
+
+00:12:34.710 --> 00:12:42.140
+Dan ini berarti harus dijalankan di lingkungan yang setidaknya terlihat seperti lingkungan browser.
+
+00:12:42.410 --> 00:12:49.500
+Dan jika Anda ingat dari pembicaraan kami sebelumnya, Anda mungkin tidak selalu ingin menjalankan tes Anda di dalam browser
+
+00:12:49.530 --> 00:12:51.920
+karena sementara itu membutuhkan sedikit waktu.
+
+00:12:52.140 --> 00:12:58.530
+Jadi, jika Anda tidak ingin menjalankan tes di dalam browser, Anda mungkin menggunakan sesuatu seperti browser tanpa
+
+00:12:58.890 --> 00:13:00.440
+kepala atau Jasc selesai.
+
+00:13:00.570 --> 00:13:04.860
+Dan direkomendasikan bahwa dengan jazz bodoh digunakan dengan Monk.
+
+00:13:05.070 --> 00:13:05.930
+Ingatlah itu.
+
+00:13:06.030 --> 00:13:14.880
+MT Saya suka rendering dangkal melakukan render penuh dan benar-benar me-mount komponen pada dump seperti re-act us yang berarti
+
+00:13:15.000 --> 00:13:21.220
+bahwa pengujian dapat saling mempengaruhi jika mereka semua menggunakan dump yang sama.
+
+00:13:21.600 --> 00:13:28.890
+Tapi seperti yang saya katakan, sangat jarang Anda ingin menggunakan MT karena itu bisa rumit
+
+00:13:28.890 --> 00:13:33.960
+dan kemudian Anda ingin menjaga tes Anda sebersih mungkin.
+
+00:13:33.960 --> 00:13:42.270
+Akhirnya yang terakhir adalah render dan fungsi render seperti namanya digunakan untuk membuat komponen
+
+00:13:42.420 --> 00:13:52.440
+Riak tetapi tidak seperti Dom nyata itu diberikan ke waria statis sehingga membuat mengembalikan sesuatu yang sangat
+
+00:13:52.440 --> 00:13:56.980
+mirip dengan apa yang dangkal dan Montross.
+
+00:13:57.030 --> 00:14:03.100
+Namun perbedaan yang dibuat menggunakan perpustakaan yang disebut Cheerio di bawah tenda.
+
+00:14:03.300 --> 00:14:06.060
+Anggap saja sebagai di antara dangkal mount.
+
+00:14:06.120 --> 00:14:13.770
+Sebenarnya tidak memerlukan DOM API lengkap tetapi membuat salah satu intinya atau kartu yang ada di
+
+00:14:13.800 --> 00:14:16.710
+bawahnya jika Anda perlu mengujinya.
+
+00:14:16.710 --> 00:14:17.120
+Baiklah.
+
+00:14:17.160 --> 00:14:23.610
+Jadi kita memiliki enzim yang diatur dan kita dapat menguji beberapa komponen kita tetapi masih ada sedikit pekerjaan
+
+00:14:23.610 --> 00:14:26.060
+yang perlu kita lakukan untuk itu.
+
+00:14:26.100 --> 00:14:28.000
+Saya akan melihat yang berikutnya.

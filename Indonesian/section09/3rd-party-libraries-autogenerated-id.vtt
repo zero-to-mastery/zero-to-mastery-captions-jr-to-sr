@@ -1,0 +1,388 @@
+﻿WEBVTT
+
+00:00:01.510 --> 00:00:02.460
+Selamat datang kembali.
+
+00:00:02.770 --> 00:00:10.840
+Mari kita terus membaca panduan keamanan kami dan pergi dengan perpustakaan pihak ketiga kami untuk melihat apa itu
+
+00:00:10.840 --> 00:00:11.800
+semua tentang.
+
+00:00:15.080 --> 00:00:17.170
+Kami aplikasi kami tumbuh.
+
+00:00:17.270 --> 00:00:24.920
+Kami bergantung pada semakin banyak pustaka pihak ketiga dan Anda dapat segera melihatnya jika Anda masuk ke proyek apa pun
+
+00:00:24.920 --> 00:00:31.520
+dan melihat folder modul simpul mereka. Kami menggunakan banyak kode dari orang lain dan itu bukan
+
+00:00:31.520 --> 00:00:32.840
+hal yang buruk.
+
+00:00:32.870 --> 00:00:38.490
+Kami tidak ingin terus menulis fungsi kami sendiri, solusi kami sendiri yang telah ditemukan.
+
+00:00:38.600 --> 00:00:44.720
+Gagasan tentang A. P. M. adalah untuk dapat berbagi kode dengan orang lain sehingga kami dapat membangun aplikasi lebih cepat.
+
+00:00:44.720 --> 00:00:47.230
+Maksud saya lihat apa yang dapat dilakukan reaksi buat untuk kita.
+
+00:00:48.010 --> 00:00:55.910
+Sekarang ketika itu terjadi, Anda menghadapi masalah lain ini di mana sekali lagi Anda menggunakan kode yang tidak Anda
+
+00:00:55.910 --> 00:00:56.860
+tulis sendiri.
+
+00:00:57.690 --> 00:01:04.980
+Dan itu mungkin mungkin bukan yang paling aman dan ketika datang ke perpustakaan pihak ketiga Anda selalu ingin memastikan
+
+00:01:04.980 --> 00:01:11.990
+jika Anda menambahkannya ke proyek Anda bahwa itu adalah perpustakaan yang baik itu adalah perpustakaan yang dapat Anda percayai
+
+00:01:12.000 --> 00:01:18.770
+dan itu adalah perpustakaan yang aman karena siapa pun dapat memuat paket apa pun yang mereka inginkan
+
+00:01:18.790 --> 00:01:19.690
+di NPM.
+
+00:01:19.890 --> 00:01:28.560
+Dan jika saya orang jahat saya mungkin dapat memuat perpustakaan yang benar-benar buruk yang mengatakan itu membantu Anda dengan
+
+00:01:28.680 --> 00:01:35.040
+satu masalah tetapi sebenarnya mengumpulkan informasi pengguna mungkin atau mungkin hasil logging Anda.
+
+00:01:35.370 --> 00:01:39.000
+Jadi, Anda selalu ingin berhati-hati dengan perpustakaan pihak ketiga sekarang.
+
+00:01:39.420 --> 00:01:46.920
+Untungnya bagi Anda ada sistem yang cukup baik yang dapat Anda terapkan dan itu hanya memastikan Anda pergi ke halaman GET HELP
+
+00:01:46.920 --> 00:01:52.710
+mereka dari perpustakaan pihak ketiga apa pun yang Anda gunakan dan lihat bintang mereka dan berapa
+
+00:01:52.710 --> 00:01:54.610
+kali mereka telah bercabang dua.
+
+00:01:54.620 --> 00:02:02.790
+Dan umumnya komunitas besar di sekitarnya Anda dapat mempercayai perpustakaan besar seperti bereaksi atau reduks karena mereka dikembangkan
+
+00:02:02.820 --> 00:02:06.150
+oleh perusahaan yang dapat Anda percayai.
+
+00:02:06.150 --> 00:02:08.000
+Yah, baik Anda bisa saja.
+
+00:02:08.430 --> 00:02:14.070
+Tetapi mereka juga memiliki banyak bintang untuk mendapatkan Hobb, banyak orang yang mengerjakannya dan
+
+00:02:14.070 --> 00:02:19.410
+banyak waktu komunitas open source telah digunakan untuk membuatnya lebih baik dan aman.
+
+00:02:19.410 --> 00:02:28.040
+Jadi gunakan paket-paket yang sudah dikenal luas dan terus dikerjakan.
+
+00:02:28.050 --> 00:02:34.190
+Sekarang saya ingin menunjukkan kepada Anda dua hal yang dapat Anda lakukan segera untuk benar-benar
+
+00:02:34.190 --> 00:02:40.900
+meningkatkan praktik bagian keamanan Anda ketika datang ke perpustakaan pihak ketiga dan itulah dua alat NSB dan ular.
+
+00:02:40.910 --> 00:02:42.160
+Saya pikir Anda mengatakan Snick.
+
+00:02:42.200 --> 00:02:48.040
+Tidak yakin bagaimana ini diucapkan tetapi kami akan menunjukkan kepada Anda bagaimana ini bekerja untuk memeriksa perpustakaan pihak ketiga Anda.
+
+00:02:49.570 --> 00:02:54.890
+Saya punya di sini aplikasi web progresif teman-teman robo kami dan di sini.
+
+00:02:54.910 --> 00:02:56.730
+Mari kita buat ini sedikit lebih besar.
+
+00:02:57.800 --> 00:03:05.750
+Saya akan menginstal dua paket ini yang baru saja saya bicarakan NPM install G untuk
+
+00:03:05.750 --> 00:03:10.970
+global sehingga saya dapat menggunakan perintah NSB dan masuk.
+
+00:03:11.010 --> 00:03:13.760
+Sekarang ini mungkin akan memberi saya kesalahan.
+
+00:03:13.800 --> 00:03:14.510
+Itu ada.
+
+00:03:14.610 --> 00:03:16.950
+Anda akan mendapatkan kesalahan akses yang mudah.
+
+00:03:17.250 --> 00:03:18.930
+Anda memiliki izin yang ditolak.
+
+00:03:18.930 --> 00:03:24.370
+Sekali lagi jika Anda mendapatkan kesalahan ini, itu berarti Anda tidak memiliki izin untuk menginstal paket global.
+
+00:03:24.450 --> 00:03:29.780
+Jadi kadang-kadang Anda mungkin harus melakukan sudo atau menjalankan perintah dalam mode admin.
+
+00:03:31.080 --> 00:03:36.180
+Jadi mari kita lakukan dengan NSB dan Anda harus memasukkan kata sandi Anda.
+
+00:03:36.210 --> 00:03:41.220
+Pastikan Anda mengatakan bahwa Anda adalah siapa Anda sebenarnya dan Anda telah menginstal paket Anda.
+
+00:03:41.400 --> 00:03:44.650
+Jadi A. B. apa yang bisa kita lakukan dengannya.
+
+00:03:45.680 --> 00:03:52.390
+Yah kita bisa menjalankan perintah yang disebut NSB check dan itu akan memeriksa teman ruber kami P. ..
+
+00:03:52.700 --> 00:03:53.710
+Mari kita lihat apa fungsinya.
+
+00:03:59.370 --> 00:04:06.690
+Oh, sepertinya kami memiliki satu kerentanan dan cek NSB luar biasa karena memberi Anda informasi hebat
+
+00:04:06.960 --> 00:04:09.750
+tentang di mana masalah Anda.
+
+00:04:10.470 --> 00:04:17.160
+Anda melihat orang-orang terus-menerus menemukan kerentanan dalam kode dan bagaimana mereka dapat melakukan hal-hal buruk dengannya.
+
+00:04:17.430 --> 00:04:20.020
+Dan orang baik selalu berusaha memperbaikinya.
+
+00:04:20.100 --> 00:04:24.410
+Dan itu semua yang Anda miliki di iPhone atau ponsel Android Anda.
+
+00:04:24.420 --> 00:04:32.280
+Pembaruan konstan karena perusahaan terus memperbarui perangkat lunak agar lebih aman.
+
+00:04:32.280 --> 00:04:38.070
+Jika seseorang menemukan kerentanan, mereka harus segera memperbaikinya karena semua penyerang akan menjadi seperti
+
+00:04:38.070 --> 00:04:39.950
+oh ada kerentanan baru.
+
+00:04:39.960 --> 00:04:45.310
+Saya akan mencobanya dan melihat apakah saya dapat melakukan hal-hal buruk dengannya.
+
+00:04:45.780 --> 00:04:53.730
+Jadi selalu selalu perbarui dan dapatkan pembaruan perangkat lunak terbaru karena sebagian besar waktu ada pembaruan keamanan
+
+00:04:53.730 --> 00:04:56.590
+untuk menghindari jenis kerentanan ini.
+
+00:04:56.730 --> 00:05:02.800
+Dan dengan NSB periksa kita melihat bahwa ya kita memiliki paket yang bernama Hoek Hoek Hoek.
+
+00:05:02.820 --> 00:05:06.990
+Saya tidak tahu bagaimana mengatakannya dan Anda tahu bahwa itu tingkat menengah.
+
+00:05:06.990 --> 00:05:14.690
+Kami memiliki 4. 2 versi terinstal dan kerentanan mempengaruhi semua hal yang 4. 2 atau di bawah.
+
+00:05:15.450 --> 00:05:21.690
+Dan kemudian itu menunjukkan kepada Anda apa versi patch dan juga apa yang menggunakan paket ini.
+
+00:05:21.690 --> 00:05:28.430
+Maksud saya, kita melihat bahwa robot teman mengepakkan seluruh paket digunakan oleh skrip aksi ulang hanya lingkungan Seelye
+
+00:05:28.440 --> 00:05:29.030
+saja.
+
+00:05:29.040 --> 00:05:32.750
+Bouvard JS Dom meminta Hawk Hoek.
+
+00:05:32.910 --> 00:05:36.360
+Jadi sedang digunakan Anda dapat melihat sarang yang terjadi di sini.
+
+00:05:36.360 --> 00:05:42.510
+Jadi meskipun kita tidak secara langsung tahu tentang itu, itu hanya digunakan oleh Domm yang menggunakan permintaan dan mereka
+
+00:05:42.510 --> 00:05:43.450
+menggunakan Hok.
+
+00:05:43.460 --> 00:05:44.910
+Mereka memiliki harapan ini.
+
+00:05:45.210 --> 00:05:51.910
+Dan juga memberi informasi di mana Anda dapat menemukan rincian lebih lanjut tentang kerentanan ini.
+
+00:05:52.350 --> 00:05:58.490
+Dan jika Anda benar-benar pergi ke situs Web Hoque mari kita berharap dan PM
+
+00:06:01.890 --> 00:06:12.360
+kita melihat bahwa oh ya ada versi dekat 5 poin 0. 3 dan kita pasti memiliki versi yang sudah ketinggalan zaman.
+
+00:06:12.420 --> 00:06:13.460
+Sangat keren.
+
+00:06:13.500 --> 00:06:18.030
+Jadi kami ingin memperbarui itu dengan mengubah paket kami.
+
+00:06:18.150 --> 00:06:26.970
+Jason Faltu versi yang lebih baru atau mungkin hanya menggunakan perintah install NPM lagi untuk menginstal ulang apa pun yang kita
+
+00:06:26.970 --> 00:06:27.560
+butuhkan.
+
+00:06:29.130 --> 00:06:29.370
+Baiklah.
+
+00:06:29.370 --> 00:06:33.860
+Bagaimana dengan dua lainnya yang saya bicarakan tentang NPM yang dipasang dashi.
+
+00:06:33.900 --> 00:06:38.890
+Tapi kali ini disebut Sonic Snipy Snick.
+
+00:06:38.940 --> 00:06:47.010
+Kami akan pergi dengan Nick dan cerita ini akan mengharuskan Anda untuk benar-benar menghubungkan akun get
+
+00:06:47.010 --> 00:06:48.030
+Halba Anda.
+
+00:06:48.060 --> 00:06:53.530
+Itu karena dengan NSB kami mengaudit Tuhan kami yang dikemas.
+
+00:06:53.600 --> 00:07:00.120
+Jason phó snake akan mengaudit direktori modul simpul Anda menggunakan perintah tugas nick ini.
+
+00:07:00.170 --> 00:07:01.830
+Dan ini adalah alat yang sangat bagus.
+
+00:07:02.710 --> 00:07:12.740
+Jadi, jika kita Ron, biarkan aku menghapus ini jika kita menjalankan tes Snick Anda melihat bahwa kita memerlukan akun otentikasi.
+
+00:07:12.750 --> 00:07:17.100
+Jadi kita perlu menghubungkannya ke Dapatkan bantuan sehingga saya dapat melakukan
+
+00:07:21.820 --> 00:07:27.660
+Snick off dan saya hanya akan masuk dengan akun bantuan get saya ingin mengotorisasi itu.
+
+00:07:29.940 --> 00:07:31.170
+Ya tentu saya setuju.
+
+00:07:34.770 --> 00:07:36.570
+Baiklah, kita siap digunakan.
+
+00:07:36.720 --> 00:07:41.420
+Jadi mari kita pergi dengan tes Snick.
+
+00:07:41.650 --> 00:07:44.230
+Kita harus menjalankan NPM dan menyelesaikannya terlebih dahulu.
+
+00:07:44.440 --> 00:07:51.370
+Dan lagi karena saya baru saja mengkloning paket ini, saya belum menjalankan NPM install sehingga belum ada folder modul
+
+00:07:51.370 --> 00:07:52.020
+node.
+
+00:07:52.060 --> 00:08:00.100
+Dan proyek ini tetapi NSB mampu menjalankan tes karena menguji paket Jasonville.
+
+00:08:00.390 --> 00:08:04.900
+Baiklah jadi mari kita jalankan instalasi NPM.
+
+00:08:04.960 --> 00:08:05.330
+Baiklah.
+
+00:08:05.340 --> 00:08:07.350
+Dan sekarang mari kita jalankan jalankan perintah kita.
+
+00:08:07.350 --> 00:08:15.290
+Saya akan menghapus ini dan kita akan menjalankan kembali dan mengendus tes dan saat ini sedang berjalan itu
+
+00:08:15.290 --> 00:08:17.110
+akan menjalankan banyak tes.
+
+00:08:17.120 --> 00:08:23.520
+Ada alat lain seperti ini di luar sana tetapi ide dan tujuan akhirnya selalu sama.
+
+00:08:23.600 --> 00:08:29.750
+Pastikan bahwa pustaka pihak ketiga yang Anda gunakan selalu terbaru dan bahwa Anda tidak
+
+00:08:29.750 --> 00:08:33.630
+menggunakan paket apa pun yang memiliki kerentanan diketahui.
+
+00:08:33.740 --> 00:08:41.350
+Dan ada banyak informasi online tentang cara menemukan itu.
+
+00:08:41.360 --> 00:08:41.950
+Baiklah.
+
+00:08:42.840 --> 00:08:45.990
+Kami menguji banyak dependensi.
+
+00:08:46.080 --> 00:08:55.030
+Seribu empat puluh sembilan menjadi tanggungan dan menemukan 13 kerentanan dengan 528 jalur rentan.
+
+00:08:55.030 --> 00:08:57.930
+Moly suci itu banyak.
+
+00:08:58.390 --> 00:09:06.990
+Dan itu memberi Anda satu ton output bahkan memberi Anda informasi tentang bagaimana Anda dapat memperbaikinya.
+
+00:09:07.000 --> 00:09:11.920
+Anda melihat bahwa dependensi Anda kedaluwarsa jika tidak, Anda akan menggunakan
+
+00:09:11.920 --> 00:09:19.320
+cookie baru atau sulit kemudian cookie tangguh 2. 3 untuk menilai lagi mencoba menghapus modul Tidak dan menginstalnya kembali menjalankan tes
+
+00:09:19.320 --> 00:09:19.960
+ular lagi.
+
+00:09:21.230 --> 00:09:26.590
+Dan jika masalah berlanjut dan mungkin terjadi karena kami baru saja menginstal ini, salah satu dari
+
+00:09:26.590 --> 00:09:29.660
+dependensi Anda mungkin adalah bundling modul yang sudah usang.
+
+00:09:29.660 --> 00:09:34.730
+Jadi sekali lagi Anda mungkin harus melanjutkan dan memperbaikinya dan menginstal paket baru.
+
+00:09:34.820 --> 00:09:37.200
+Tapi Anda lihat kita punya waktu.
+
+00:09:37.700 --> 00:09:38.840
+Dan inilah masalahnya.
+
+00:09:38.870 --> 00:09:46.940
+Ada pasti ketika Anda menjalankan ini sangat jarang bahwa Anda akan mendapatkan 100 persen tetapi setidaknya sekarang kita tahu
+
+00:09:46.940 --> 00:09:52.280
+harus mulai dari mana dan di mana mungkin memperbarui paket kami
+
+00:09:52.280 --> 00:09:58.700
+Masalah dengan beberapa di antaranya adalah bahwa paket cookie tangguh misalnya diperlukan oleh paket
+
+00:09:58.700 --> 00:10:05.690
+permintaan dan mungkin jika kita memperbarui paket cookie tangguh paket permintaan tidak akan dapat bekerja dengan
+
+00:10:05.690 --> 00:10:07.820
+versi baru cookie tangguh.
+
+00:10:08.060 --> 00:10:14.990
+Dan Anda tahu apa itu salah satu masalah besar dengan PM dan memiliki pohon ketergantungan yang sangat dalam
+
+00:10:14.990 --> 00:10:15.720
+ini.
+
+00:10:16.250 --> 00:10:22.000
+Dan ada banyak diskusi online tentang cara mengatasi ini dan apa praktik terbaiknya.
+
+00:10:22.190 --> 00:10:28.390
+Tapi saya harap dengan menggunakan dua alat ini Anda dapat memutuskan sendiri apa yang ingin Anda perbaiki.
+
+00:10:30.110 --> 00:10:36.410
+Saya harap ini mengajarkan Anda bahwa Anda harus berhati-hati terhadap semua paket ini dan ada
+
+00:10:36.410 --> 00:10:42.860
+baiknya menjalankan tes ini dan mungkin sebagai tim memutuskan kapan harus memperbaiki sesuatu dan kapan tidak
+
+00:10:42.860 --> 00:10:47.700
+ingin tidak menyertakan perpustakaan pihak ketiga karena kerentanan atau kapan seharusnya.
+
+00:10:47.940 --> 00:10:48.810
+Sampai jumpa di video berikutnya.

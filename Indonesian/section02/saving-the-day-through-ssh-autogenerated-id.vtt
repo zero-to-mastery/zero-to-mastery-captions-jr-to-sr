@@ -1,0 +1,223 @@
+﻿WEBVTT
+
+00:00:00.940 --> 00:00:01.740
+Selamat datang kembali.
+
+00:00:01.870 --> 00:00:04.500
+Mari kita coba sedikit latihan di sini.
+
+00:00:04.610 --> 00:00:13.270
+Saya akan memanggil server yang saya miliki di sini sesuatu yang lebih menarik seperti aplikasi super luar biasa.
+
+00:00:13.320 --> 00:00:14.490
+Lakukan saja.
+
+00:00:16.720 --> 00:00:23.780
+Sekarang saat ini sedang memuat saya ingin pergi melalui pengalaman mendapatkan telepon di tengah malam lagi
+
+00:00:23.780 --> 00:00:27.450
+sesuatu yang sebenarnya terjadi pada saya sebelumnya.
+
+00:00:27.950 --> 00:00:34.380
+Dan Anda mendapatkan pesan yang mengatakan aplikasi entah bagaimana terhapus di server.
+
+00:00:34.850 --> 00:00:42.170
+Dapatkah Anda mengunggahnya dan menjalankan aplikasi lagi karena pengguna tidak dapat mengakses situs web.
+
+00:00:42.560 --> 00:00:47.280
+Jadi saya akan menunjukkan kepada Anda dasar-dasar apa yang harus dilakukan dalam skenario itu.
+
+00:00:47.960 --> 00:00:49.860
+Jadi kami punya aplikasi kami yang super keren di sini.
+
+00:00:51.060 --> 00:00:56.470
+Dan jika kita ingat kita bisa mengaksesnya melalui SSH.
+
+00:00:56.490 --> 00:00:59.720
+Jadi saya perkecil ini.
+
+00:00:59.910 --> 00:01:09.300
+Dan di sini kita bisa langsung dari desktop kita, SSH ke root dan mengingat alamat IP kita di sini.
+
+00:01:09.540 --> 00:01:10.710
+Tekan enter.
+
+00:01:11.040 --> 00:01:18.420
+Kami sekarang berada di dalam server Ubuntu yang telah kami beli dengan Digital Ocean.
+
+00:01:18.420 --> 00:01:25.290
+Baiklah biarkan saya menghapus ini supaya kita bisa melihat sedikit lebih baik, sekarang karena ini adalah sistem
+
+00:01:25.290 --> 00:01:26.970
+operasi Linux di server.
+
+00:01:27.060 --> 00:01:33.610
+Kita perlu menginstal git. Jika saya mengetikkan git di sini.
+
+00:01:33.640 --> 00:01:33.900
+Baiklah.
+
+00:01:33.900 --> 00:01:40.920
+Sepertinya perintah git ada tetapi kadang-kadang itu mungkin bukan kasus
+
+00:01:40.920 --> 00:01:54.690
+di mana kita harus melakukan apt atau sudo apt-get. Apt-get adalah cara untuk menginstal paket pada kotak Ubuntu dan Anda dapat menganggapnya sedikit mirip dengan
+
+00:01:54.690 --> 00:02:01.410
+NPM jika Anda menggunakan NPM sebelumnya, atau homebrew jika Anda pernah menggunakan Mac sebelumnya.
+
+00:02:01.500 --> 00:02:02.660
+Kami hanya ingin menginstal sesuatu.
+
+00:02:02.660 --> 00:02:07.840
+Jadi jika saya melakukan sudo apt, dapatkan dasbor aplikasi get git.
+
+00:02:07.920 --> 00:02:16.390
+Dan saya harus melakukan install maka Anda dapat melihat di sini bahwa saya dapat menginstal git yang hebat.
+
+00:02:16.400 --> 00:02:23.690
+Baiklah, katakanlah kita memiliki aplikasi di halaman GitHub kita, dan untuk contoh ini saya hanya akan pergi ke
+
+00:02:23.690 --> 00:02:29.010
+proyek sumber terbuka Zero to Mastery yang telah disumbangkan oleh para siswa.
+
+00:02:29.180 --> 00:02:34.960
+Dan saya hanya akan mengklik panduan perjalanan dan kami akan mengatakan saya akan mengatakan bahwa panduan perjalanan.
+
+00:02:35.000 --> 00:02:36.530
+Itu yang ingin kita tiru.
+
+00:02:36.710 --> 00:02:49.000
+Nah dalam hal ini saya bisa masuk ke sini dan mengatakan "git clone" repo dan saya akan
+
+00:02:49.000 --> 00:02:57.980
+mengatakan ya dan sebenarnya kita akan mendapatkan kesalahan di sini karena
+
+00:02:57.980 --> 00:03:15.740
+izin baik ditolak karena kita belum mengatur SSH dengan GitHub. lagi akan kembali ke sini saya akan menggunakan HTTPS, salin ke clipboard dan coba lagi.
+
+00:03:15.760 --> 00:03:16.430
+Baiklah.
+
+00:03:16.580 --> 00:03:27.600
+Jika saya menggunakan LS sekarang kami melihat bahwa kami memiliki panduan perjalanan kami dan kami dapat masuk ke proyek panduan perjalanan kami.
+
+00:03:27.810 --> 00:03:36.820
+Dan lagi jika saya di sana kita melihat bahwa kita memiliki aplikasi kecil kita dan semua file yang kita butuhkan ke server.
+
+00:03:36.900 --> 00:03:37.820
+Betapa kerennya itu?
+
+00:03:39.090 --> 00:03:47.660
+Dan di sini jika kita ingin jika ini dapat diakses, kita juga dapat melakukan instalasi NPM dan Anda melihat bahwa NPM saat
+
+00:03:47.660 --> 00:03:48.890
+ini tidak diinstal.
+
+00:03:48.890 --> 00:03:51.310
+Jadi sekali lagi apa yang kita lakukan dalam situasi ini.
+
+00:03:55.930 --> 00:04:01.820
+Jadi sekarang kita bisa menjalankan nodejs dan semuanya akan diinstal.
+
+00:04:01.990 --> 00:04:12.640
+Bagus dan mudah dan kita akan melihat bahwa nodejs sekarang bekerja di server kami dan kami dapat melakukan hal yang sama dengan
+
+00:04:12.640 --> 00:04:16.040
+menjalankan NPM menginstal NPM jika kami mau.
+
+00:04:16.060 --> 00:04:20.100
+Apa pun untuk mengembalikan dan menjalankan aplikasi kami.
+
+00:04:20.560 --> 00:04:24.120
+Tapi seperti yang saya katakan sebelumnya saya tidak ingin menutup semua perintah ini.
+
+00:04:24.130 --> 00:04:28.900
+Ini adalah hal-hal yang akan menumpuk dot com atau Google.
+
+00:04:28.900 --> 00:04:35.950
+Anda bisa mencari tahu lagi ini hanya perintah yang bisa dijalankan seperti yang kita bisa di komputer kita sendiri
+
+00:04:36.340 --> 00:04:37.870
+ke server jauh.
+
+00:04:37.870 --> 00:04:43.690
+Hal lain yang ingin saya tunjukkan kepada Anda adalah katakanlah bahwa kami memiliki aplikasi dot com yang sangat luar biasa di
+
+00:04:43.690 --> 00:04:46.140
+sini, sama seperti yang saya miliki di desktop.
+
+00:04:46.270 --> 00:04:48.120
+Latar belakang yang cukup bagus hari ini.
+
+00:04:48.530 --> 00:04:54.270
+Bagaimanapun, katakanlah bahwa di dalam sini kita memiliki skrip indeks dan file gaya.
+
+00:04:54.280 --> 00:05:00.150
+Jadi hanya situs web kami dan kami ingin membawanya ke kotak Ubuntu kami di sini.
+
+00:05:00.160 --> 00:05:02.600
+Baiklah, katakan saja.
+
+00:05:02.750 --> 00:05:05.350
+Jadi hal pertama yang ingin kita lakukan adalah kita ingin keluar dari sini.
+
+00:05:05.350 --> 00:05:10.840
+Kami melihat bahwa kami telah keluar, kami kembali ke desktop komputer kami sendiri dan di sini saya
+
+00:05:10.840 --> 00:05:13.030
+telah menginstal perintah yang disebut rsync.
+
+00:05:13.030 --> 00:05:21.130
+Jadi mari kita cd ke super com dot com dan dari sini kita hanya akan mengatakan rsync dan kita akan
+
+00:05:24.220 --> 00:05:27.150
+menyalin semua file di direktori ini.
+
+00:05:27.370 --> 00:05:30.320
+Anda dapat membaca tentang sintaksis ini secara online.
+
+00:05:30.400 --> 00:05:35.940
+Ini tidak terlalu penting untuk video ini hanya fakta bahwa saya menyalin sesuatu secara rekursif di folder ini.
+
+00:05:36.130 --> 00:05:43.290
+Dan kita akan menyalinnya ke alamat IP kita.
+
+00:05:43.410 --> 00:05:44.850
+Kotak Ubuntu
+
+00:05:47.920 --> 00:05:54.840
+kami dan kami akan meletakkannya di folder yang disebut dot com super hebat.
+
+00:05:54.850 --> 00:05:55.400
+Baiklah.
+
+00:05:55.510 --> 00:06:04.390
+Jadi sekarang jika kita SSH sampai ke kotak kita dan saya membersihkan ini dan mari kita periksa apa yang kita miliki
+
+00:06:04.390 --> 00:06:06.190
+Kami memiliki dot com
+
+00:06:06.220 --> 00:06:16.380
+yang sangat luar biasa. Jika saya beralih ke dot com yang sangat luar biasa, saya melihat bahwa saya memiliki skrip indeks dan file gaya semuanya di
+
+00:06:16.440 --> 00:06:19.730
+server kami di suatu tempat di New York.
+
+00:06:19.740 --> 00:06:20.320
+Luar biasa.
+
+00:06:20.520 --> 00:06:22.320
+Jadi ada kekuatan SSH itu.
+
+00:06:22.320 --> 00:06:29.260
+Kami hanya dapat mentransfer file dan mengambil perintah dari server di tempat lain di dunia.
+
+00:06:30.010 --> 00:06:31.180
+Sangat keren.
+
+00:06:31.180 --> 00:06:32.760
+Sampai jumpa di yang berikutnya.
+
+00:06:32.880 --> 00:06:33.140
+Buh-bye.

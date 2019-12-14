@@ -1,0 +1,259 @@
+﻿WEBVTT
+
+00:00:01.710 --> 00:00:08.190
+Selamat datang kembali. Sekarang ketika video sebelumnya kita berbicara tentang bagaimana
+
+00:00:08.940 --> 00:00:14.930
+kita memerlukan semacam algoritma pertukaran kunci, dan algoritma pertukaran kunci ini membutuhkan sesuatu yang disebut enkripsi asimetris.
+
+00:00:14.970 --> 00:00:18.110
+Saya tahu ini banyak untuk diterima tetapi tetap dengan saya.
+
+00:00:18.180 --> 00:00:21.550
+Semoga gambar kecil ini akan membantu Anda.
+
+00:00:21.580 --> 00:00:30.030
+Sekarang tidak seperti enkripsi simetris, enkripsi asimetris menggunakan dua kunci terpisah untuk enkripsi
+
+00:00:30.030 --> 00:00:31.780
+dan dekripsi.
+
+00:00:31.800 --> 00:00:37.020
+Jadi kunci merah ini dimiliki oleh laptop biru ini.
+
+00:00:37.170 --> 00:00:41.360
+Dan kunci biru ini dimiliki oleh komputer lain ini.
+
+00:00:41.400 --> 00:00:53.280
+Sekarang dua kunci ini, dikenal sebagai kunci publik dan kunci privat dan bersama-sama kunci ini membentuk pasangan kunci privat
+
+00:00:53.340 --> 00:00:54.050
+publik.
+
+00:00:54.330 --> 00:01:02.400
+Dan seperti namanya, ini adalah milik umum sehingga saya dapat membagikan kunci merah ini dengan siapa pun yang saya inginkan di dunia.
+
+00:01:02.520 --> 00:01:04.260
+Itu bisa keluar di tempat terbuka.
+
+00:01:04.260 --> 00:01:05.310
+Itu bukan masalah besar.
+
+00:01:05.310 --> 00:01:06.670
+Dan sama dengan yang biru ini.
+
+00:01:06.840 --> 00:01:10.630
+Tetapi yang ini, yang bersifat pribadi, yang agak tersembunyi, ini
+
+00:01:10.800 --> 00:01:15.150
+adalah rahasia mutlak Anda yang tidak boleh Anda bagikan kepada siapa pun.
+
+00:01:16.850 --> 00:01:23.660
+Sekarang kunci publik ini ditautkan dengan kunci pribadi dalam hal fungsionalitas.
+
+00:01:23.660 --> 00:01:26.540
+Anda dapat melihat bahwa keduanya berwarna merah, keduanya berwarna biru di sini.
+
+00:01:28.120 --> 00:01:35.820
+Kunci pribadi tidak dapat menghitung secara matematis dari kunci publik.
+
+00:01:35.850 --> 00:01:37.200
+Jadi apa artinya itu?
+
+00:01:37.200 --> 00:01:47.260
+Apakah hubungannya sedikit rumit tetapi penutupan pesan dienkripsi oleh kunci publik mesin hanya
+
+00:01:47.260 --> 00:01:52.680
+dapat didekripsi oleh kunci privat yang sama.
+
+00:01:52.760 --> 00:01:57.000
+Dan itulah yang kami sebut hubungan satu arah.
+
+00:01:57.070 --> 00:01:58.570
+Jadi, saya tunjukkan cara kerjanya.
+
+00:01:58.720 --> 00:02:07.060
+Jika saya mengirim kunci publik ke komputer teman saya, dan katakanlah teman itu juga mengirim kunci
+
+00:02:07.690 --> 00:02:17.400
+publiknya ke komputer saya jika saya ingin mengirim pesan, saya bisa menyapa saya mengirimnya dengan mengenkripsi dengan kunci birunya
+
+00:02:17.400 --> 00:02:23.250
+kunci publiknya akan untuk mendapatkan campur aduk dan dienkripsi seperti ini.
+
+00:02:23.370 --> 00:02:34.740
+Dan ketika saya mengirimkannya kepadanya, nah sekarang dia dapat menggunakan kunci pribadinya karena potongan teks ini dienkripsi
+
+00:02:34.740 --> 00:02:36.100
+oleh publik.
+
+00:02:36.150 --> 00:02:38.320
+Jadi kunci pribadi dapat mendekripsi.
+
+00:02:39.110 --> 00:02:40.360
+Lakukan keajaibannya.
+
+00:02:40.670 --> 00:02:43.470
+Dan akhirnya menerima pesannya.
+
+00:02:43.590 --> 00:02:43.990
+Halo
+
+00:02:46.690 --> 00:02:54.000
+Jadi, Anda lihat di sini sekarang bagaimana kami dapat mengirim kunci publik ke orang lain dan orang jahat dapat mengambil kunci publik.
+
+00:02:54.070 --> 00:03:01.390
+Tetapi karena ini merupakan hubungan satu arah, kunci publik ini tidak dapat mendekripsi pesannya sendiri dan juga tidak dapat
+
+00:03:01.480 --> 00:03:04.600
+mendekripsi apa pun yang dienkripsi oleh kunci pribadi.
+
+00:03:04.600 --> 00:03:12.310
+Itu hanya dapat mengenkripsi sesuatu dan hanya bisa didekripsi dengan kunci privat yang dipasangkan.
+
+00:03:12.310 --> 00:03:15.360
+Itu lagi tidak pernah dibagikan dengan siapa pun.
+
+00:03:16.850 --> 00:03:22.430
+Sekarang kekuatan dari seluruh koneksi terletak pada kenyataan bahwa kunci pribadi tidak pernah lega.
+
+00:03:23.160 --> 00:03:23.610
+Baiklah.
+
+00:03:23.630 --> 00:03:26.110
+Luar biasa. Jadi itu masuk akal bukan?
+
+00:03:26.110 --> 00:03:33.750
+Sedikit lebih rumit daripada enkripsi simetris tetapi saya pikir kita dapatkan sekarang jika kita
+
+00:03:33.750 --> 00:03:43.300
+kembali ke tempat kita mulai kebanyakan orang berpikir bahwa SSH menggunakan enkripsi asimetris sepenuhnya dan itu tidak sepenuhnya
+
+00:03:43.330 --> 00:03:44.230
+benar.
+
+00:03:44.260 --> 00:03:52.630
+Bentuk enkripsi dengan SSH ini sebenarnya hanya digunakan selama algoritma pertukaran kunci enkripsi
+
+00:03:52.660 --> 00:03:53.890
+simetris.
+
+00:03:53.890 --> 00:03:55.020
+Anda ingat itu benar.
+
+00:03:55.030 --> 00:04:01.930
+Kami membutuhkan beberapa cara dengan enkripsi simetris untuk menghasilkan kunci kuning itu tanpa memasuki publik.
+
+00:04:01.930 --> 00:04:09.580
+Apa yang terjadi sebagai orang bijak adalah bahwa sebelum kita memulai koneksi yang aman kedua belah pihak menghasilkan
+
+00:04:09.640 --> 00:04:13.700
+kunci publik dan pribadi sementara dan berbagi kunci masing-masing.
+
+00:04:14.560 --> 00:04:15.670
+Satu sama lain.
+
+00:04:16.000 --> 00:04:24.490
+Dan pada titik ini kita bisa mendapatkan kunci kuning ini kunci simetris sehingga kita dapat bertukar pesan
+
+00:04:25.330 --> 00:04:30.240
+metode menggunakan sesuatu yang disebut pertukaran kunci Diffie Hellman.
+
+00:04:30.460 --> 00:04:36.190
+Dan saya akan menautkan ke beberapa sumber yang dapat Anda gunakan karena ini sedikit
+
+00:04:37.120 --> 00:04:45.640
+rumit secara matematis tetapi apa yang dilakukannya pada dasarnya adalah bahwa ia menggunakan sedikit informasi ini, sedikit dari informasi ini,
+
+00:04:45.640 --> 00:04:49.980
+sedikit dari kunci publik untuk menghasilkan pernah bertukar kunci.
+
+00:04:50.050 --> 00:04:59.750
+Setiap mesin di komputernya dapat menghasilkan kunci simetris ini dari data dari setiap komputer.
+
+00:04:59.780 --> 00:05:06.770
+Dan lagi, algoritma Diffie Helman atau algoritma pertukaran kunci ini memungkinkan setiap pihak untuk menggabungkan data
+
+00:05:06.770 --> 00:05:12.560
+pribadi mereka dengan data publik berasal dari sistem lain untuk sampai pada kunci
+
+00:05:12.560 --> 00:05:14.880
+sesi rahasia yang identik.
+
+00:05:14.990 --> 00:05:18.000
+Saya tahu itu seteguk dan saya tahu itu membingungkan.
+
+00:05:18.050 --> 00:05:22.260
+Seperti saya katakan, periksa sumber daya setelah video ini jika Anda ingin mempelajari lebih lanjut tentangnya.
+
+00:05:23.730 --> 00:05:31.330
+Tetapi sekarang kita harus tahu bagaimana kita dapat menghasilkan kunci simetris menggunakan enkripsi asimetris menggunakan
+
+00:05:31.330 --> 00:05:33.700
+pertukaran kunci Diffie Hellman.
+
+00:05:33.810 --> 00:05:41.040
+Dan dengan cara ini kunci kuning ini akan tetap pribadi bagi kita dan tidak akan pernah menyentuh
+
+00:05:41.610 --> 00:05:42.460
+publik.
+
+00:05:43.190 --> 00:05:44.160
+Anda mungkin berpikir.
+
+00:05:44.180 --> 00:05:44.630
+Baiklah.
+
+00:05:44.630 --> 00:05:46.480
+Cukup bicara tentang S-sh.
+
+00:05:46.550 --> 00:05:48.020
+Ini semakin membosankan Andre.
+
+00:05:48.030 --> 00:05:49.850
+Ayo, kita baru saja memulai kursus.
+
+00:05:50.390 --> 00:05:53.260
+Percayalah, jenis enkripsi ini ada di mana-mana.
+
+00:05:53.270 --> 00:05:58.660
+Anda mungkin menggunakannya sekarang untuk menonton video ini menggunakan pertukaran kunci Diffie Hellman.
+
+00:05:58.820 --> 00:06:04.690
+Dan ketika Anda menggunakan ponsel Anda untuk melakukan apa pun yang terhubung ke server, ia menggunakan pertukaran
+
+00:06:04.700 --> 00:06:06.040
+kunci Diffie Hellman.
+
+00:06:06.210 --> 00:06:08.550
+Dan kita harus tahu cara kerjanya.
+
+00:06:08.550 --> 00:06:09.140
+Kanan.
+
+00:06:09.150 --> 00:06:16.670
+Sebagai pengembang, kita perlu memahami bagaimana segala sesuatunya bekerja tidak hanya pada level permukaan saja.
+
+00:06:16.880 --> 00:06:18.850
+Anda mungkin memperhatikan betapa lucu itu benar.
+
+00:06:19.040 --> 00:06:25.460
+Pertukaran kunci nama adalah bahwa kami tidak benar-benar mengubah kunci karena itu akan keluar di publik dan kami
+
+00:06:25.460 --> 00:06:26.190
+tidak menginginkannya.
+
+00:06:26.210 --> 00:06:32.630
+Kami sebenarnya hanya berbagi sepotong tagihan publik seperti kunci publik kami dari setiap komputer dan
+
+00:06:32.630 --> 00:06:36.920
+kami menghasilkan kunci secara terpisah di ruang pribadi kami sendiri.
+
+00:06:38.360 --> 00:06:42.590
+Baiklah mari kita istirahat sejenak dan sampai jumpa di video berikutnya karena saya
+
+00:06:42.590 --> 00:06:43.910
+tahu itu banyak informasi.
+
+00:06:44.030 --> 00:06:45.370
+Saya akan melihat itu satu bye bye.

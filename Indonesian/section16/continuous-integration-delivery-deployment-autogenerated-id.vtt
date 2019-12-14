@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.230 --> 00:00:02.440
+Selamat datang kembali.
+
+00:00:02.460 --> 00:00:09.630
+Mari kita mulai dengan topik pertama integrasi berkelanjutan integrasi berkelanjutan.
+
+00:00:09.790 --> 00:00:11.890
+Apakah kotak biru ini ada di sini.
+
+00:00:12.760 --> 00:00:22.150
+Adalah praktik pelepasan di mana pengembang mengintegrasikan kode ke dalam repositori bersama sering kali
+
+00:00:22.150 --> 00:00:32.310
+lebih disukai beberapa kali sehari dan setiap integrasi kemudian dapat diverifikasi oleh pengujian otomatis dan pengujian otomatis.
+
+00:00:32.310 --> 00:00:40.170
+Sekarang mari kita uraikan pernyataan ini sehingga masuk akal dalam integrasi terus-menerus dalam bahasa Inggris adalah
+
+00:00:40.170 --> 00:00:48.440
+cara bagi pengembang untuk menggunakan repositori bersama seperti mendapatkan pekerjaan dan kami tahu semua tentang bagaimana sekarang dan
+
+00:00:48.440 --> 00:00:52.200
+repositori bersama ini akan digunakan sepanjang hari.
+
+00:00:52.380 --> 00:01:02.070
+Setiap permintaan penarikan perbaikan bug atau fitur baru harus melalui langkah Builth otomatis yang mungkin mencakup hal-hal seperti tes
+
+00:01:02.070 --> 00:01:09.360
+dan Linked-In untuk memastikan bahwa semua tes lulus semua tes unit kami lulus.
+
+00:01:09.360 --> 00:01:17.410
+Mungkin kami belum membuat kesalahan peminjaman atau sintaksis dan semuanya membangun proyek kami seperti yang diharapkan.
+
+00:01:17.630 --> 00:01:23.200
+Kami memastikan bahwa kode tersebut kompatibel dengan sisa basis kode.
+
+00:01:23.290 --> 00:01:31.270
+Sekarang salah satu manfaat utama dari mengintegrasikan secara teratur adalah Anda dapat mendeteksi kesalahan dengan cepat
+
+00:01:31.270 --> 00:01:38.530
+dan menemukannya dengan lebih mudah karena setiap perubahan yang diperkenalkan akan kecil dan akan
+
+00:01:38.710 --> 00:01:41.950
+menunjukkan perubahan spesifik yang menyebabkan cacat.
+
+00:01:41.950 --> 00:01:48.960
+Jika kami membuat PR atau permintaan tarik untuk mendapatkan Hobb, kami menjalankan tes dan tes itu gagal.
+
+00:01:49.120 --> 00:01:57.510
+Kami segera tahu bahwa PR perlu diperbaiki dan bahkan jika PR tersebut memperkenalkan bug setelah merger jika
+
+00:01:58.140 --> 00:01:59.950
+bug tiba-tiba muncul.
+
+00:01:59.970 --> 00:02:07.030
+Yah kita tahu bahwa permintaan jajak pendapat ini kemungkinan besar melakukannya karena baru-baru ini diperkenalkan.
+
+00:02:07.080 --> 00:02:09.750
+Jadi apa gunanya semua ini.
+
+00:02:09.750 --> 00:02:16.110
+Intinya adalah bagi perusahaan untuk memastikan bahwa kode dari banyak pengembang memiliki sesedikit mungkin
+
+00:02:16.530 --> 00:02:18.480
+bug dan tetap konsisten.
+
+00:02:18.480 --> 00:02:20.870
+Sebanyak mungkin.
+
+00:02:21.070 --> 00:02:27.190
+Sekarang saya akan membawa Anda melalui set ini sehingga Anda benar-benar dapat melihat apa yang saya maksud ketika saya
+
+00:02:27.190 --> 00:02:29.870
+mengatakan menjalankan langkah membangun seperti tes dan membangun.
+
+00:02:29.890 --> 00:02:33.330
+Jangan khawatir kita akan sampai ke sana.
+
+00:02:33.370 --> 00:02:42.460
+Saya ingin Anda hanya menyampaikan poin ini bahwa proses ini memastikan bahwa kode dari masing-masing pengembang memenuhi standar tertentu
+
+00:02:42.460 --> 00:02:49.480
+dan bahwa dengan cara ini tidak peduli seberapa besar tim kami, kami dapat memastikan
+
+00:02:49.600 --> 00:02:55.560
+bahwa setiap pengembang bekerja tidak mengalihkan dari yang asli basis kode.
+
+00:02:55.660 --> 00:03:04.960
+Kami menjaga segala sesuatunya tetap sejalan dan terintegrasi dan integrasi berkesinambungan adalah ketika Anda menggabungkan proses
+
+00:03:05.050 --> 00:03:14.910
+pembuatan PR seringkali dengan pengujian otomatis yaitu pengujian yang berjalan secara otomatis dan Anda memasukkan hal-hal sebagai
+
+00:03:14.910 --> 00:03:20.100
+bangunan otomatis dan kemudian pengembang lain memeriksa PR.
+
+00:03:20.100 --> 00:03:27.240
+Dan akhirnya menggabungkannya dengan melakukan ini Anda menghindari neraka integrasi yang biasanya terjadi ketika
+
+00:03:27.240 --> 00:03:30.820
+orang menunggu hari rilis untuk menggabungkan semuanya.
+
+00:03:31.110 --> 00:03:37.680
+Katakanlah sehari sebelum rilis besar semua orang yang telah mengerjakan fitur setiap orang pada
+
+00:03:37.680 --> 00:03:43.430
+fitur yang berbeda akan bergabung sekaligus dan lagi tanpa benar-benar menghadapi masalah.
+
+00:03:43.440 --> 00:03:45.430
+Akan sulit menjelaskan ini.
+
+00:03:45.480 --> 00:03:51.130
+Jadi kita benar-benar akan mengimplementasikannya di teman-teman robo kita.
+
+00:03:51.320 --> 00:03:57.770
+Tetapi saya ingin Anda hanya ingat bahwa integrasi berkelanjutan ini sangat menekankan pengujian otomatisasi untuk
+
+00:03:58.130 --> 00:04:00.350
+memeriksa apakah aplikasi tidak rusak.
+
+00:04:00.350 --> 00:04:07.910
+Setiap kali komit baru atau permintaan tarik PR diintegrasikan ke dalam cabang utama yang Anda lihat di sini
+
+00:04:08.120 --> 00:04:15.880
+bahwa kami membuat PR, tes secara otomatis berjalan untuk kami dan kami menjalankan build dan memastikan bahwa semuanya
+
+00:04:16.100 --> 00:04:22.520
+lewat dan itu secara otomatis dilakukan untuk memastikan sebelum kami bergabung sebelum seseorang memeriksa permintaan
+
+00:04:23.030 --> 00:04:25.720
+kami untuk lulus tes tersebut.
+
+00:04:25.720 --> 00:04:27.790
+Baiklah, mari kita pergi ke yang berikutnya.
+
+00:04:27.970 --> 00:04:34.930
+Yang berikutnya adalah kotak kuning ini yang lebih dari integrasi berkesinambungan Lap yang disebut pengiriman kontinu dan
+
+00:04:36.130 --> 00:04:42.520
+pengiriman kontinu adalah praktik menjaga basis kode Anda dapat digunakan pada titik mana pun.
+
+00:04:43.510 --> 00:04:51.630
+Selain memastikan bahwa aplikasi Anda di bagian biru ini terintegrasi ke cabang utama, kami
+
+00:04:51.630 --> 00:04:54.500
+memiliki beberapa langkah tambahan.
+
+00:04:54.730 --> 00:05:02.530
+Anda lihat itu harus memiliki semua konfigurasi yang diperlukan untuk mendorong produksi kapan pun kita ingin pengiriman terus
+
+00:05:02.530 --> 00:05:03.130
+menerus.
+
+00:05:03.160 --> 00:05:10.540
+Adalah gagasan bahwa kita akan selalu menyiapkan segala sesuatunya sehingga ketika kita menginginkan produk pengiriman yang digunakan untuk
+
+00:05:10.540 --> 00:05:17.140
+produksi mungkin memiliki pembaruan untuk produk kita, kita dapat melakukannya dan kita memiliki langkah tambahan tes
+
+00:05:17.140 --> 00:05:24.190
+penerimaan seperti kita menginginkan fitur ini untuk melakukan ini dan Anda mungkin memiliki seseorang yang cara yang
+
+00:05:24.190 --> 00:05:31.690
+lucu atau analis kualitas atau yang sedang melakukan tes atau pemilik produk yang memeriksa untuk memastikan bahwa semua
+
+00:05:31.750 --> 00:05:38.860
+fitur diimplementasikan dan kemudian secara manual pengembang atau tim memimpin klik tombol yang mengatakan menyebarkan ke produksi
+
+00:05:40.380 --> 00:05:41.660
+pengiriman berkelanjutan.
+
+00:05:41.700 --> 00:05:47.310
+Seperti yang Anda lihat adalah perpanjangan integrasi berkelanjutan untuk memastikan bahwa Anda dapat merilis perubahan
+
+00:05:47.310 --> 00:05:50.710
+baru kepada pelanggan Anda dengan cepat secara berkelanjutan.
+
+00:05:51.560 --> 00:05:58.910
+Ini berarti bahwa selain memiliki pengujian otomatis Anda, Anda juga harus mengotomatiskan proses rilis sehingga Anda dapat
+
+00:05:59.570 --> 00:06:01.330
+menggunakan produksi Anda.
+
+00:06:01.340 --> 00:06:09.270
+Seperti yang saya katakan sebelumnya pada setiap titik waktu dalam teori dengan proses pengiriman pengiriman berkelanjutan di perusahaan Anda, Anda dapat
+
+00:06:09.300 --> 00:06:16.300
+memutuskan untuk merilis setiap hari setiap minggu setiap malam atau apa pun yang sesuai dengan kebutuhan bisnis Anda.
+
+00:06:17.120 --> 00:06:22.040
+Tetapi ide pengiriman berkelanjutan adalah idealnya sama seperti yang kita lakukan dengan integrasi
+
+00:06:22.040 --> 00:06:29.030
+berkelanjutan dan membuat mobil kecil tapi sering dan menggabungkan permintaan dan fitur polling kami sesering mungkin dengan pengiriman
+
+00:06:29.030 --> 00:06:29.770
+berkelanjutan.
+
+00:06:29.900 --> 00:06:31.490
+Ini bekerja dengan sangat baik.
+
+00:06:31.640 --> 00:06:39.530
+Ketika Anda mulai melakukan batch rilis kecil, Anda mungkin telah memperhatikan di ponsel Anda bagaimana aplikasi Anda selalu
+
+00:06:39.530 --> 00:06:46.220
+diperbarui Anda memiliki patch baru versi baru hampir setiap minggu dan mereka mempraktikkan pengiriman terus
+
+00:06:46.220 --> 00:06:52.910
+menerus untuk membuat perubahan tambahan kecil pada aplikasi yang mudah dipecahkan jika ada masalah.
+
+00:06:52.910 --> 00:06:56.160
+Mereka harus kembali dan memperbaiki keadaan.
+
+00:06:56.210 --> 00:06:57.310
+Baiklah.
+
+00:06:57.480 --> 00:06:58.700
+Bukan hanya keduanya.
+
+00:06:58.710 --> 00:07:02.040
+Saya tahu judul kata see-I CD dan saya menyalakan sedikit.
+
+00:07:02.040 --> 00:07:12.110
+Ada satu lagi dan itu adalah penyebaran berkelanjutan yang terkait erat dengan pengiriman terus-menerus dan mengacu pada menjaga aplikasi
+
+00:07:12.110 --> 00:07:17.900
+Anda dapat digunakan kapan saja seperti yang kami miliki dengan
+
+00:07:17.900 --> 00:07:19.270
+pengiriman berkelanjutan.
+
+00:07:19.360 --> 00:07:27.500
+Tapi ada satu perbedaan kecil dan seperti pengiriman berkelanjutan, penyebaran terus-menerus langsung menuju
+
+00:07:27.500 --> 00:07:28.400
+produksi.
+
+00:07:28.400 --> 00:07:34.730
+Bahwa tidak ada pengembang manual atau Pimpinan Tim atau manajer yang kliknya diabaikan mengatakan
+
+00:07:34.730 --> 00:07:37.510
+semua tes penerimaan telah lulus.
+
+00:07:37.610 --> 00:07:38.790
+Semuanya periksa.
+
+00:07:38.810 --> 00:07:45.860
+Saya akan menyebarkan ke produksi terus penyebaran adalah filosofi di mana Anda mengatakan jika tes penerima
+
+00:07:45.920 --> 00:07:53.530
+secara otomatis lulus dengan baik secara otomatis itu akan digunakan untuk produksi dan Anda mungkin telah memperhatikan pengiriman
+
+00:07:53.530 --> 00:07:54.600
+terus menerus.
+
+00:07:54.610 --> 00:08:02.700
+Ketika Anda melihat DAPATKAN halaman PANAS dengan mendapatkan halaman seperti teman-teman robo redux kita melihat bahwa kami memiliki
+
+00:08:02.700 --> 00:08:04.220
+aplikasi kami dikerahkan.
+
+00:08:04.590 --> 00:08:10.230
+Dan setiap kali saya bergabung untuk menguasai versi baru mungkin saya ingin memberi judul ini ke
+
+00:08:11.170 --> 00:08:16.840
+sesuatu yang berbeda, kami mungkin ingin membuat beberapa perubahan di sini mungkin mengubah judul mungkin mengubah
+
+00:08:16.930 --> 00:08:23.980
+warna, tetapi setiap kali saya bergabung menjadi master di sini tautan ini akan diperbarui karena merujuk pada Zen Master apa
+
+00:08:23.980 --> 00:08:26.890
+pun dan ini mirip dengan penyebaran berkelanjutan.
+
+00:08:26.890 --> 00:08:35.520
+Setiap kali digabungkan dan semua pengujian saya berlalu sementara apa pun yang dilihat atau digunakan pengguna akan diubah
+
+00:08:35.520 --> 00:08:37.110
+secara otomatis juga.
+
+00:08:38.450 --> 00:08:41.810
+Sekarang mengapa saya mengajar Google ini.
+
+00:08:41.960 --> 00:08:48.590
+Itu karena penerapan terus-menerus dan pengiriman terus-menerus telah dikembangkan sebagai praktik terbaik untuk menjaga aplikasi Anda dalam
+
+00:08:48.590 --> 00:08:53.910
+kondisi yang baik dalam kondisi yang dapat digunakan pada titik mana pun.
+
+00:08:54.290 --> 00:08:57.800
+Dan ini hanya praktik yang baik untuk dimiliki.
+
+00:08:57.860 --> 00:09:04.270
+Ini memungkinkan tim Anda untuk bergerak cepat sambil menjaga standar kualitas tinggi yang dapat diperiksa secara otomatis.
+
+00:09:04.310 --> 00:09:09.940
+Anda melihat banyak perusahaan top mempraktikkan cara ini mengembangkan basis kode mereka sebagai fakta.
+
+00:09:09.950 --> 00:09:16.980
+Jika ini adalah beberapa hari pertama Anda di sebuah perusahaan besar, Anda mungkin akan dikenalkan dengan proses ini sehingga
+
+00:09:17.060 --> 00:09:18.510
+Anda terbiasa dengannya.
+
+00:09:18.860 --> 00:09:27.110
+Jadi ingatlah bahwa penyebaran yang berkelanjutan ini selangkah lebih maju daripada pengiriman yang berkelanjutan dengan praktik
+
+00:09:27.110 --> 00:09:27.890
+ini.
+
+00:09:28.100 --> 00:09:36.340
+Setiap perubahan yang melewati semua tahap produksi Anda apa yang kami sebut pipeline, proses ini dilepaskan
+
+00:09:36.550 --> 00:09:38.180
+ke pelanggan Anda.
+
+00:09:38.200 --> 00:09:44.170
+Tidak ada intervensi manusia dan hanya gagal untuk menguji akan mencegah perubahan baru untuk
+
+00:09:44.170 --> 00:09:45.790
+digunakan untuk produksi.
+
+00:09:45.820 --> 00:09:52.050
+Sekarang sekali lagi ini akan sangat sangat membingungkan jika Anda melihat ini untuk pertama kalinya.
+
+00:09:52.230 --> 00:09:59.070
+Kami akan benar-benar membangun saluran pipa langkah besar langkah integrasi berkesinambungan sehingga Anda memahami apa
+
+00:09:59.130 --> 00:10:01.530
+manfaatnya dan bagaimana melakukannya.
+
+00:10:01.570 --> 00:10:07.220
+Apakah perusahaan Anda, tetapi mari kita bicara sedikit lebih banyak tentang ini di video berikutnya.
+
+00:10:07.330 --> 00:10:09.070
+Aku akan melihatnya satu per satu.

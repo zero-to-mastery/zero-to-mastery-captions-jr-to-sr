@@ -1,0 +1,325 @@
+﻿WEBVTT
+
+00:00:01.410 --> 00:00:02.460
+Selamat datang kembali.
+
+00:00:02.460 --> 00:00:08.640
+Kami sekarang telah menerapkan server lingkaran CII kami yang tidak terlalu buruk itu hanya lingkaran file YAML yang
+
+00:00:08.640 --> 00:00:13.700
+kami konfigurasikan dan sekarang kami memiliki semuanya berjalan dan kami menjalankan pengujian kami.
+
+00:00:13.710 --> 00:00:19.680
+Kami melakukan beberapa Lanting jika Anda mau, kami juga dapat melakukan beberapa jenis skrip
+
+00:00:20.370 --> 00:00:27.240
+memeriksa semuanya bekerja dengan baik sehingga sekarang setiap kali PR siap ditinjau Shergill CII melewati semuanya sehingga
+
+00:00:27.240 --> 00:00:33.630
+ulasan kode dapat terjadi dan kemudian kami dapat menggabungkan perubahan review kode benar-benar diperlukan sampai
+
+00:00:33.630 --> 00:00:40.280
+semua tes lingkaran lihat-I berlalu dan kita dapat benar-benar menguraikan tes ini untuk menguji segala macam hal.
+
+00:00:40.290 --> 00:00:46.410
+Sekarang saya ingin menambahkan satu hal lagi ke pemahaman kita tentang integrasi berkelanjutan dan itu adalah sesuatu
+
+00:00:46.410 --> 00:00:54.690
+yang disebut pre commit hook. Bagaimana jika kita dapat menjalankan beberapa tugas bahkan sebelum kita berkomitmen untuk menutup telepon di sini dan kita
+
+00:00:55.130 --> 00:00:58.910
+akan menggunakan purtier untuk menunjukkan ini mari kita mulai.
+
+00:01:00.220 --> 00:01:05.880
+Lebih cantik adalah alat baru yang hebat yang juga namanya membuat kode Anda lebih cantik.
+
+00:01:05.890 --> 00:01:07.590
+Ini adalah formatter kode.
+
+00:01:07.750 --> 00:01:13.720
+Anda mengambil sepotong kode yang Anda masukkan melalui format yang lebih cantik dan lebih cantik dan kemudian
+
+00:01:13.720 --> 00:01:18.130
+membuatnya terlihat cantik apa pun yang terjadi untuk membuatnya lebih mudah dibaca.
+
+00:01:18.130 --> 00:01:20.750
+Sekarang mengapa kita membutuhkan ini lagi.
+
+00:01:20.800 --> 00:01:23.690
+Karena kami memiliki begitu banyak pengembang yang mengerjakan proyek.
+
+00:01:23.770 --> 00:01:28.720
+Bukankah lebih baik jika ada format standar yang diikuti semua orang.
+
+00:01:28.720 --> 00:01:35.230
+Alih-alih memiliki pedoman yang ketat, kita tidak bisa semua kode sepanjang yang kita inginkan dan kemudian membuatnya lebih cantik
+
+00:01:35.230 --> 00:01:37.940
+sebelum kita bahkan mendorongnya untuk mendapatkan hub.
+
+00:01:38.050 --> 00:01:45.520
+Sehingga cukup membuatnya menjadi lebih cantik dan Anda dapat melihat di sini bahwa ia bekerja dengan banyak alat termasuk
+
+00:01:45.550 --> 00:01:53.740
+bahasa lain seperti Java ph p bekerja dengan skrip jenis aliran GSX yang merupakan apa yang kami gunakan dalam bertindak kembali
+
+00:01:53.740 --> 00:01:57.430
+satu ton alat dan mereka memiliki banyak plug in.
+
+00:01:57.490 --> 00:02:01.330
+Ini benar-benar bagus dan sangat disarankan agar Anda menggunakannya.
+
+00:02:01.330 --> 00:02:08.660
+Saya telah bekerja untuk perusahaan yang telah menggunakan ini dan memformat kode pada proyek-proyek tersebut secara signifikan lebih baik.
+
+00:02:08.740 --> 00:02:11.090
+Jadi saya akan menunjukkan kepada Anda bagaimana menerapkan ini dengan cepat.
+
+00:02:11.170 --> 00:02:16.180
+Tetapi jika Anda ingin membaca lebih lanjut Anda dapat mengklik dewa mereka dan mereka memiliki beberapa informasi yang sangat bagus
+
+00:02:16.270 --> 00:02:17.850
+tentang apa yang dapat Anda lakukan.
+
+00:02:17.860 --> 00:02:19.060
+Baiklah.
+
+00:02:19.190 --> 00:02:27.290
+Jadi mari kita kembali ke aplikasi kita dan di sini saya telah benar-benar membuat komponen baru yang disebut
+
+00:02:27.530 --> 00:02:36.460
+tombol penghitung untuk dan melawan buntu adalah komponen baru yang saya salin dari negara kami sebelumnya yang kami miliki di sini
+
+00:02:36.470 --> 00:02:40.530
+dan saya sebenarnya baru saja membuat format agak aneh.
+
+00:02:40.790 --> 00:02:45.140
+Saya memiliki semua masalah spasi dan ini sangat jelek.
+
+00:02:46.500 --> 00:02:53.790
+Dan saya ingin mengambil itu melalui udara yang cukup sehingga pada saat itu tiba untuk mendapatkan Hobb itu cukup mari
+
+00:02:54.790 --> 00:02:55.670
+kita mencobanya.
+
+00:02:55.840 --> 00:02:59.430
+Saya akan kembali ke situs web hanya untuk menunjukkan itu kepada Anda.
+
+00:02:59.470 --> 00:03:01.090
+Ya kita punya itu untuk mengimbangi.
+
+00:03:01.090 --> 00:03:03.550
+Mereka bekerja tidak ada kesalahan.
+
+00:03:03.670 --> 00:03:10.490
+Jadi saya akan menutup ini dan menginstal beberapa paket untuk mendapatkan pekerjaan yang lebih cantik.
+
+00:03:10.510 --> 00:03:20.460
+Sekarang jika Anda pergi ke instal mereka sekarang, kami dapat menginstal Ebbe secara teratur dan mungkin memiliki perintah CLIA yang menjalankan
+
+00:03:20.610 --> 00:03:21.320
+semuanya.
+
+00:03:21.360 --> 00:03:27.540
+Tetapi kami ingin melakukan kait komit cetak sebelum komit terjadi, kami ingin menjalankannya melalui yang lebih cantik dan kami memiliki
+
+00:03:28.080 --> 00:03:29.550
+beberapa opsi di sini.
+
+00:03:29.550 --> 00:03:35.970
+Saya suka opsi mereka yang sangat cepat dan Anda dapat melihat di sini bahwa kita bisa menggunakan
+
+00:03:36.030 --> 00:03:44.250
+dasbor Huskie dasbor yang cukup cepat dan saya akan menggunakan NPM sebagai ganti benang jadi saya akan mengetik NPM menginstal dan kemudian
+
+00:03:44.340 --> 00:03:52.230
+menjalankan Huskie yang cukup cepat dash dasbor dev Sekarang sambil mengunduh Mari kita kembali dan kita melihat bahwa semua yang
+
+00:03:52.230 --> 00:03:58.560
+perlu kita lakukan adalah dalam file konfigurasi kita di paket kita mulai Jaison menambahkan dalam skrip
+
+00:03:58.560 --> 00:04:01.740
+pra-anak bertemu tahap dasbor dasbor cukup cepat.
+
+00:04:01.840 --> 00:04:03.030
+Jadi ayo kembali.
+
+00:04:04.750 --> 00:04:05.610
+Jika Anda bisa mempercayainya.
+
+00:04:05.620 --> 00:04:07.780
+Ya sesederhana itu.
+
+00:04:07.870 --> 00:04:15.910
+Kami menambahkan ke skrip kami di sini baris lain dan kami hanya akan mengatakan pra komit sekarang pra komit di sini
+
+00:04:15.970 --> 00:04:18.450
+akan secara otomatis terdeteksi dan dijalankan.
+
+00:04:18.580 --> 00:04:28.110
+Setiap kali kita membuat komit dan itu akan menjalankan perintah cukup cepat dengan opsi tahap dasbor dasbor.
+
+00:04:28.130 --> 00:04:33.690
+Sekarang hal lain yang perlu kita lakukan adalah kita benar-benar perlu memastikan bahwa kita telah menginstal cukup adil
+
+00:04:33.890 --> 00:04:40.400
+Jadi sekali lagi kita kembali dan kita dapat menambahkan NPM menginstal atau kita hanya akan menghemat lebih
+
+00:04:43.200 --> 00:04:44.320
+cantik juga.
+
+00:04:45.320 --> 00:04:52.550
+Baiklah jadi kita sudah menginstal lebih cantik dan saya lupa untuk menyimpan ini sementara kita menambahkan skrip baru jadi mari kita lakukan
+
+00:04:52.550 --> 00:04:53.300
+itu lagi
+
+00:04:53.300 --> 00:04:56.250
+Aku akan kembali ke hook pre commit.
+
+00:04:56.480 --> 00:05:04.510
+Pastikan bahwa kita memiliki perintah pre commit yang ditambahkan di sini.
+
+00:05:04.720 --> 00:05:08.650
+Mari kita simpan dan saya akan mengatakan mendapatkan status.
+
+00:05:08.650 --> 00:05:10.030
+Pastikan kami memiliki perubahan itu.
+
+00:05:10.040 --> 00:05:13.730
+Saya akan membuat cabang baru hanya untuk tujuan pengujian.
+
+00:05:13.750 --> 00:05:22.680
+Saya akan menyebutnya lebih cantik dan di sini saya akan mendapatkan iklan untuk berkomitmen, saya akan berkomitmen dengan
+
+00:05:23.400 --> 00:05:24.990
+mengatakan cukup tolong.
+
+00:05:27.820 --> 00:05:32.490
+Dan lihatlah bahwa hook pre commit baru saja terjadi.
+
+00:05:32.560 --> 00:05:38.830
+Anda dapat melihat bahwa sekarang menjalankan kesulitan mereka dan menemukan perubahan yang ditemukan untuk
+
+00:05:38.830 --> 00:05:46.110
+perubahan yang diperlukan untuk memperbaiki dan memperbaiki beberapa lekukan termasuk Hetter dodgy Ya dan dibeli pada dodgy Ya.
+
+00:05:46.180 --> 00:05:53.710
+Sekarang alat yang lebih cantik ini hanya berjalan pada file yang telah kita ubah.
+
+00:05:53.710 --> 00:06:00.480
+Jadi itu tidak akan benar-benar berubah pada file yang sudah ada sebelumnya yang kemungkinan besar ingin kita lakukan.
+
+00:06:00.700 --> 00:06:05.830
+Ini adalah alat yang bagus untuk dimiliki sejak awal proyek untuk memastikan semuanya konsisten.
+
+00:06:05.890 --> 00:06:14.260
+Sekarang jika kita benar-benar pergi ke Connor membeli ke kita melihat dengan baik melihat bahwa semua lekukan kita sudah diperbaiki.
+
+00:06:15.350 --> 00:06:16.510
+Itu yang kita miliki sebelumnya.
+
+00:06:16.550 --> 00:06:22.220
+Jika saya kembali dan inilah mengapa kita sekarang semuanya baik dan bersih dan halus
+
+00:06:22.580 --> 00:06:24.060
+Betapa kerennya itu.
+
+00:06:24.080 --> 00:06:24.510
+Baiklah.
+
+00:06:24.530 --> 00:06:28.570
+Jadi kami baru saja menambahkan lebih cantik dengan sangat cantik.
+
+00:06:28.790 --> 00:06:41.790
+Dan sekarang saya bisa menjalankan get push origin lebih cantik dan kami akan memiliki PR baru atau permintaan yang buruk.
+
+00:06:41.790 --> 00:06:48.610
+Kembali ke jajak pendapat Dapatkan Harbury kami, klik pada bandingkan permintaan jajak pendapat.
+
+00:06:48.780 --> 00:06:49.560
+Kami melihat itu.
+
+00:06:49.620 --> 00:06:50.160
+Oh ya.
+
+00:06:50.190 --> 00:06:53.570
+Terlihat semuanya bagus dan bersih dengan barang selundupan juga.
+
+00:06:53.580 --> 00:07:01.460
+Dan sekarang jika saya membuat permintaan tarik, kami memiliki tes lihat-I kami berjalan.
+
+00:07:01.490 --> 00:07:03.230
+Betapa kerennya itu.
+
+00:07:05.390 --> 00:07:12.110
+Kami baru saja menerapkan integrasi berkelanjutan dan saya yakin imajinasi Anda berjalan liar.
+
+00:07:12.110 --> 00:07:14.500
+Kami hanya melakukan pengujian sedikit Lanting.
+
+00:07:14.510 --> 00:07:21.050
+Kami sudah lebih cantik dan kami telah membangun proyek kami di Circle C. SAYA. tetapi ada begitu banyak hal yang dapat
+
+00:07:21.050 --> 00:07:24.300
+kami lakukan sepenuhnya terserah Anda dan sepenuhnya sesuai dengan proyek Anda.
+
+00:07:24.320 --> 00:07:31.100
+Apa pun yang dapat Anda lakukan secara pemrograman, Anda dapat memeriksa dengan lingkaran C. SAYA. misalnya sesuatu seperti
+
+00:07:31.160 --> 00:07:40.660
+penganalisa bundel paket web yang menganalisis bundel Anda dapat digunakan sebagai sesuatu yang disebut
+
+00:07:40.660 --> 00:07:48.290
+artefak dan lingkaran C. SAYA. dan artefak adalah data yang kami tambahkan atau bertahan dalam alur kerja kami.
+
+00:07:48.500 --> 00:07:56.510
+Jadi ketika lingkaran kami melihat-saya berjalan dan selesai, Anda dapat memiliki file yang menampilkan gambar ini dan menyimpannya di
+
+00:07:56.510 --> 00:07:58.270
+suatu tempat di server.
+
+00:07:59.740 --> 00:08:05.900
+Dan sekarang file ini tersedia sebagai artefak lama setelah pekerjaan berhasil di Circle CII.
+
+00:08:05.900 --> 00:08:09.980
+Jadi, Anda dapat kembali dan memeriksa bahwa bangunan Anda memiliki jumlah yang tepat.
+
+00:08:10.330 --> 00:08:16.810
+Anda juga dapat menambahkan tes ke lingkaran untuk memastikan Anda memiliki cakupan tertentu pada tes Anda atau Anda
+
+00:08:16.810 --> 00:08:20.790
+bahkan dapat memeriksa atau membatasi seberapa besar file javascript Anda.
+
+00:08:20.890 --> 00:08:26.110
+Jika Anda ingin membatasi file javascript Anda hingga 100 megabyte, Anda dapat menjalankan tes-tes itu dan
+
+00:08:26.110 --> 00:08:30.460
+kapan saja fitur baru ditambahkan yang mungkin mendorong Anda lebih dari 100 megabyte.
+
+00:08:30.550 --> 00:08:32.570
+Anda dapat membuat tes gagal.
+
+00:08:32.620 --> 00:08:35.300
+Ada begitu banyak hal yang bisa mereka lakukan.
+
+00:08:35.490 --> 00:08:42.090
+Dan saya pribadi memiliki pengalaman yang sangat bagus dengan lingkaran C. SAYA. tetapi dengan platform integrasi berkelanjutan
+
+00:08:42.120 --> 00:08:49.140
+Anda dapat melakukan banyak hal untuk membuat hidup Anda lebih mudah untuk menghindari bug dalam produksi.
+
+00:08:49.380 --> 00:08:53.150
+Jadi saya mendorong Anda untuk mencobanya Anda melihat betapa sederhananya itu
+
+00:08:53.220 --> 00:08:58.770
+Dan mulai sekarang pada proyek apa pun yang Anda coba coba integrasi terus-menerus menerapkannya dari awal.
+
+00:08:58.860 --> 00:09:06.120
+Ini sedikit konfigurasi pada awalnya, tetapi sekali Anda memiliki menjalankan bekerja dalam tim menjadi
+
+00:09:06.240 --> 00:09:08.160
+jauh lebih mudah
+
+00:09:08.180 --> 00:09:11.180
+Baiklah saya akan melihat di video berikutnya Buh-Bye.

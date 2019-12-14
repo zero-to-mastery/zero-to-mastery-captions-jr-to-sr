@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.130 --> 00:00:07.940
+Selamat datang kembali saatnya untuk akhirnya membuat pembaruan profil ini berfungsi dan menghubungkannya ke Bacchante kami.
+
+00:00:08.060 --> 00:00:12.800
+Mari kita kembali ke Front-End kami dan di profil kami.
+
+00:00:12.910 --> 00:00:15.930
+Ya ini dua beberapa hal.
+
+00:00:16.010 --> 00:00:24.770
+Pertama, saya ingin memastikan bahwa setiap kali kami memperbarui input kami di sini, kami juga memperbarui
+
+00:00:26.960 --> 00:00:38.140
+status aplikasi kami sehingga kembali lagi saya akan melakukan metode baru di sini dan mengubah fungsi stateless ini menjadi komponen
+
+00:00:38.590 --> 00:00:39.610
+kelas.
+
+00:00:39.610 --> 00:00:46.090
+Sekarang saya bisa membuat fungsi di sini tapi saya suka menggunakan komponen kelas atau deklarasi kelas setiap kali kita
+
+00:00:46.090 --> 00:00:48.940
+memiliki metode lain yang ingin kita gunakan.
+
+00:00:49.830 --> 00:00:53.900
+Jadi kelas
+
+00:00:56.500 --> 00:01:08.840
+meluas atau profil kelas meluas komponen re-act dot.
+
+00:01:08.890 --> 00:01:10.210
+Ini
+
+00:01:13.500 --> 00:01:20.170
+akan membuat render, mari kita bawa semua ini ke dalam Rander.
+
+00:01:20.180 --> 00:01:26.070
+Saya hanya akan meminimalkan ini sehingga kita bisa melihat yang lebih baik jauh lebih baik.
+
+00:01:26.220 --> 00:01:34.090
+Dan kami juga ingin memiliki alat peraga vokal C konstruktor.
+
+00:01:34.100 --> 00:01:45.770
+Alat peraga super dan di sini akan mengatakan bahwa keadaan pemikiran ini dan ini akan menarik dan kita akan
+
+00:01:45.770 --> 00:01:47.860
+membicarakan sedikit ini.
+
+00:01:48.230 --> 00:01:55.550
+Aku akan memiliki Neame sama dengan alat peraga Daut ini dot nama pengguna dot.
+
+00:01:55.550 --> 00:02:00.400
+Dan jika Anda bertanya-tanya mengapa kami melakukan alat peraga untuk konstruktor dan super dan kadang-kadang tidak.
+
+00:02:00.620 --> 00:02:04.020
+Nah jika Anda pernah ingin menggunakan alat peraga berhenti ini di dalam konstruktor.
+
+00:02:04.040 --> 00:02:08.330
+Inilah sebabnya mengapa Anda perlu melakukan dan kami berada dalam kasus ini sehingga kami melakukan ini.
+
+00:02:09.770 --> 00:02:12.030
+Baiklah, jadi kita punya nama pengguna.
+
+00:02:12.240 --> 00:02:22.730
+Kami juga memiliki H yaitu alat peraga mulai halaman pengguna dot dan kami juga memiliki Pat ini berhenti pengguna titik dot pengguna
+
+00:02:22.910 --> 00:02:27.390
+Pat Baiklah apa yang saya lakukan di sini.
+
+00:02:27.390 --> 00:02:32.390
+Mengapa kita membuat keadaan saat ini sudah menjadi alat peraga.
+
+00:02:32.400 --> 00:02:39.170
+Mengapa tidak memperbarui keadaan di mana hal-hal ini benar-benar ada.
+
+00:02:39.270 --> 00:02:40.950
+Dan jika Anda ingat ketika kita pergi ke APT.
+
+00:02:41.070 --> 00:02:41.420
+Iya nih.
+
+00:02:41.430 --> 00:02:47.240
+Jika kita gulir sepenuhnya ke kondisi kita, kita sudah memiliki semua informasi pengguna di sini.
+
+00:02:47.250 --> 00:02:57.120
+Mengapa tidak kita perbarui saja ini dan ada kejadian di profil yang memicu untuk di-render.
+
+00:02:57.170 --> 00:03:05.780
+Dan di sini saya ingin menunjukkan beberapa praktik berpikir yang baik dalam hal reaksi dan cara kerjanya, Anda melihat dengan
+
+00:03:05.780 --> 00:03:11.870
+bentuk ada banyak contoh di mana saya tidak bisa hanya memiliki pengguna terus
+
+00:03:11.870 --> 00:03:18.710
+mengetik terus mengetik terus mengetik dan yang menyebabkan pembalas karena status sedang diperbarui dan setiap kali
+
+00:03:18.830 --> 00:03:25.640
+kami memperbarui saat mengubah input, ia membuat kami merender, kami membuat komponen, dan semua komponen
+
+00:03:25.640 --> 00:03:26.780
+di bawahnya.
+
+00:03:26.780 --> 00:03:35.840
+Sekarang karena aplikasi adalah tingkat tertinggi kami segera setelah kami memperbarui keadaan akan membuat semuanya di bawahnya.
+
+00:03:35.940 --> 00:03:38.520
+Dan itu hanya sia-sia.
+
+00:03:38.610 --> 00:03:48.350
+Dan dengan formulir ini adalah praktik yang baik yaitu jika Anda memiliki formulir memiliki status yang disimpan dan
+
+00:03:48.380 --> 00:03:54.610
+segera setelah pengguna mengklik mengirimkan atau melakukan semacam tindakan yang penting.
+
+00:03:54.770 --> 00:04:02.330
+Kemudian kami memperbarui status sehingga kami menjaga semua pembaruan status sebagai pengguna yang mengetik di sini dan hanya
+
+00:04:02.330 --> 00:04:06.250
+memperbarui negara besar umum yang ada di atas anjing.
+
+00:04:06.250 --> 00:04:06.850
+Iya nih.
+
+00:04:07.130 --> 00:04:09.270
+Setelah pengguna mengkonfirmasi itu.
+
+00:04:09.320 --> 00:04:09.670
+Baiklah.
+
+00:04:09.710 --> 00:04:10.400
+Ini nama saya.
+
+00:04:10.400 --> 00:04:11.090
+Ini adalah usia.
+
+00:04:11.090 --> 00:04:16.750
+Ini Pat dan kami tidak harus memperbarui sayt setiap kali mereka membuat kesalahan misalnya.
+
+00:04:16.770 --> 00:04:17.470
+Baiklah.
+
+00:04:17.480 --> 00:04:26.040
+Sekarang setelah kita keluar dari jalan, mari kita menangani apa yang kita sebut perubahan bentuk dan perubahan bentuk
+
+00:04:26.070 --> 00:04:34.050
+ini akan menerima suatu peristiwa dan ini hanya penanganan peristiwa khas yang kita lakukan dengan reaksi.
+
+00:04:34.110 --> 00:04:40.090
+Saya bisa melakukannya jika beruap di sini tetapi hanya untuk bersenang-senang mari kita lakukan pernyataan switch
+
+00:04:40.460 --> 00:04:43.120
+yang tidak menunjukkan nama target dot.
+
+00:04:43.380 --> 00:04:49.270
+Dan ini akan ditangani berdasarkan nama target.
+
+00:04:49.410 --> 00:04:51.820
+Dan jika Anda ingat kami gulir ke bawah.
+
+00:04:51.960 --> 00:04:57.300
+Kami telah memberikan input nama yang berbeda usia pengguna nama pengguna atau hewan peliharaan.
+
+00:04:57.540 --> 00:05:04.600
+Jadi berdasarkan input-input itu saya bisa mengatakan mari kita meminimalkan ini hanya agar terlihat lebih bersih.
+
+00:05:05.040 --> 00:05:16.710
+Saya akan mengatakan bahwa jika case adalah nama pengguna dalam case tersebut, saya ingin Anda memperbarui set titik ini.
+
+00:05:16.770 --> 00:05:17.220
+St.
+
+00:05:19.900 --> 00:05:27.180
+dengan nama untuk menyamakan event dot target nilai titik.
+
+00:05:28.490 --> 00:05:37.460
+Dan kita dapat memecahkan sebaliknya dengan halaman kasus pengguna.
+
+00:05:37.540 --> 00:05:41.530
+Dalam hal ini, set ini dengan baik
+
+00:05:44.640 --> 00:05:47.480
+menyatakan peristiwa yang nilai
+
+00:05:50.270 --> 00:05:52.420
+targetnya kembali pecah.
+
+00:05:52.430 --> 00:06:02.170
+Dan akhirnya kasus terakhir kami, kami akan melakukan kasus pengguna Pat ini pemikiran di
+
+00:06:06.630 --> 00:06:14.490
+negara untuk menjadi Pat menyamakan apa pun titik target acara nilai.
+
+00:06:14.580 --> 00:06:21.760
+Yang kemudian jelas akan melakukan break dan akan selalu menambahkan default
+
+00:06:24.480 --> 00:06:29.260
+yang hanya mengembalikan bukan pencegahan pengembalian.
+
+00:06:29.260 --> 00:06:31.530
+Baiklah katakan saja ini.
+
+00:06:31.730 --> 00:06:35.180
+Dan kami memiliki beberapa area di sini dan kami akan melihat apa yang telah kami lakukan.
+
+00:06:35.210 --> 00:06:36.230
+Pengguna tidak ditentukan.
+
+00:06:36.230 --> 00:06:44.960
+Pengguna tidak didefinisikan dengan baik karena kami harus memastikan bahwa di dalam Rander kami dapat membukanya di
+
+00:06:44.960 --> 00:06:48.820
+dalam render, kami menggunakan entri data pengguna,
+
+00:06:51.330 --> 00:06:56.790
+jadi mari kita lakukan pengguna konser dari alat peraga awal.
+
+00:06:56.940 --> 00:06:59.750
+Mari kita simpan baik-baik saja.
+
+00:06:59.780 --> 00:07:03.910
+Dan kami memiliki beberapa hal yang kami miliki mengembalikan Whoops.
+
+00:07:04.140 --> 00:07:05.930
+Desak mereka dan pastikan saya memperbaikinya.
+
+00:07:06.140 --> 00:07:09.540
+Dan kemudian kita juga memiliki motil toggle tidak didefinisikan.
+
+00:07:09.590 --> 00:07:20.490
+Sekali lagi kita perlu memastikan bahwa kita sekarang dalam modal beralih menyebutnya props atau toggle motile dan anjing ini props
+
+00:07:20.970 --> 00:07:28.720
+dot toggle motile karena itu bukan fungsi stateless seperti yang kita miliki sebelum kita
+
+00:07:28.730 --> 00:07:29.400
+simpan.
+
+00:07:29.660 --> 00:07:29.960
+Baiklah.
+
+00:07:29.960 --> 00:07:39.380
+Semuanya lewat jika kita kembali ke aplikasi kita masuk dengan teman
+
+00:07:39.380 --> 00:07:49.110
+baik kita tanda dan kita pergi ke profil memperbarui nama membuka konsol.
+
+00:07:49.130 --> 00:07:49.740
+Baiklah.
+
+00:07:49.760 --> 00:07:51.390
+Tidak ada tempat yang bagus.
+
+00:07:51.600 --> 00:07:57.140
+Tapi bukankah menyenangkan jika kita mengetik di sini dan nama ini juga akan diperbarui.
+
+00:07:58.340 --> 00:08:02.750
+Dan ingat kita berada di negara kita sendiri sebelum kita benar-benar menekan save.
+
+00:08:02.840 --> 00:08:06.210
+Kami belum benar-benar memperbarui status di apt.
+
+00:08:06.310 --> 00:08:13.800
+Ya tetapi dalam formulir akan menyenangkan untuk dapat mengubah nama pengguna untuk melihat bagaimana tampilannya sehingga kami dapat melakukannya
+
+00:08:13.800 --> 00:08:16.100
+dengan kembali ke profil kami.
+
+00:08:18.150 --> 00:08:19.980
+Mari kita buat ini sedikit lebih kecil.
+
+00:08:21.400 --> 00:08:30.880
+Dan sekarang nama pengguna di sini yang kami gunakan malah bisa menjadi pengguna dot state DOT ini.
+
+00:08:30.970 --> 00:08:40.340
+Mari kita simpan ini kembali harus masuk dan sekali lagi pergi ke profil Anda.
+
+00:08:40.340 --> 00:08:41.310
+Ketikkan sesuatu.
+
+00:08:41.390 --> 00:08:43.340
+Tapi sekarang kita melihat bahwa kita tidak memiliki nama
+
+00:08:47.450 --> 00:08:48.620
+pengguna dan konyol saya.
+
+00:08:48.650 --> 00:08:53.920
+Itu bukan pengguna itu anggota nama ingat negara kita hanya memiliki dampak umur nama.
+
+00:08:53.990 --> 00:08:56.650
+Mari selamatkan.
+
+00:08:56.810 --> 00:09:03.710
+Dan kemudian hal terakhir yang ingin kita lakukan adalah benar-benar menyebutnya pada acara perubahan formulir.
+
+00:09:03.800 --> 00:09:05.520
+Sekarang di mana kita harus menyebutnya.
+
+00:09:05.840 --> 00:09:18.690
+Nah untuk setiap input kita bisa mengatakan bahwa ada perubahan yang mengambil titik ini pada perubahan acara lagi.
+
+00:09:18.720 --> 00:09:22.440
+Hanya akan menyalin dan menempel ini ke semua
+
+00:09:25.330 --> 00:09:33.240
+input, mari kita simpan dan mari kita lihat apakah ini akhirnya berhasil masuk lagi karena kita melakukan itu sepanjang waktu.
+
+00:09:33.310 --> 00:09:37.020
+Lihat profil.
+
+00:09:37.220 --> 00:09:39.280
+Mulai mengetik.
+
+00:09:39.430 --> 00:09:41.090
+Lihat itu.
+
+00:09:41.200 --> 00:09:43.700
+Acara kami sedang dipecat.
+
+00:09:43.720 --> 00:09:45.880
+Kami tidak pernah memperbarui status aplikasi.
+
+00:09:45.880 --> 00:09:50.220
+Kami hanya memberikan porsi kecil ini yang kami butuhkan.
+
+00:09:50.590 --> 00:09:57.460
+Tapi begitu saya klik simpan saya ingin memastikan bahwa nama ini diperbarui.
+
+00:09:57.820 --> 00:10:05.770
+Jadi mari kita selesaikan ini dengan melakukan permintaan posting dengan informasi ini yang kita miliki dan status formulir.
+
+00:10:05.820 --> 00:10:07.200
+Lihat yang berikutnya.
+
+00:10:07.540 --> 00:10:07.750
+Polisi.

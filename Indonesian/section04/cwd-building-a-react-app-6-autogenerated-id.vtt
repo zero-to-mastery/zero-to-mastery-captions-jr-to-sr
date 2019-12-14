@@ -1,0 +1,310 @@
+﻿WEBVTT
+
+00:00:01.430 --> 00:00:07.730
+Saya ingin menambahkan satu hal terakhir yang kami agak abaikan sampai saat ini karena saya tidak
+
+00:00:07.730 --> 00:00:10.250
+ingin mengganggu Anda dengan banyak hal.
+
+00:00:10.250 --> 00:00:21.470
+Jika kita melihat proyek kita Yah itu banyak yang salah meskipun itu adalah aplikasi sederhana yang dapat Anda bayangkan seberapa besar dan lebih
+
+00:00:21.470 --> 00:00:26.310
+besar dan lebih besar file sumber ini bisa dapatkan.
+
+00:00:26.490 --> 00:00:30.960
+Organisasi adalah bagian besar dalam mengerjakan proyek.
+
+00:00:30.980 --> 00:00:36.860
+Sebagian besar aplikasi akan jauh lebih besar daripada yang kami bangun dan kami membutuhkan cara yang baik
+
+00:00:36.860 --> 00:00:40.590
+untuk mengaturnya dan struktur folder adalah salah satu hal terpenting.
+
+00:00:40.610 --> 00:00:42.480
+Jadi mari kita bersihkan kode ini.
+
+00:00:42.500 --> 00:00:48.710
+Saya akan menunjukkan kepada Anda apa yang akan saya lakukan jika saya mengerjakan aplikasi ini dan saya ingin membuatnya lebih mudah
+
+00:00:48.740 --> 00:00:52.590
+diakses yang lebih bersih sehingga ketika orang lain datang ke tim mereka memahaminya.
+
+00:00:52.620 --> 00:00:56.050
+Dan juga saya dapat terus mengembangkan
+
+00:00:59.220 --> 00:01:09.270
+basis kode ini hal pertama yang akan saya lakukan adalah saya akan membuat beberapa folder yang akan disebut komponen dan ini adalah
+
+00:01:09.270 --> 00:01:14.190
+komponen yang telah kami bangun seperti kotak pencarian dan gulir Carlist.
+
+00:01:14.250 --> 00:01:20.510
+Yang kedua akan disebut wadah dan wadah.
+
+00:01:20.940 --> 00:01:28.950
+Apakah komponen pintar ini mengandung komponen yang memiliki status dan mereka yang memiliki kait siklus
+
+00:01:29.070 --> 00:01:31.750
+hidup yang memiliki sintaksis kelas.
+
+00:01:31.830 --> 00:01:35.440
+Anda melihat komponen ini atau wadah ini.
+
+00:01:35.610 --> 00:01:39.620
+Kami tidak dapat menggunakan fungsi murni dengan mereka karena secara teknis mereka tidak murni.
+
+00:01:39.690 --> 00:01:45.580
+Mereka menyatakan bahwa mereka memodifikasi dalam fungsi-fungsi ini dan itu OK.
+
+00:01:45.630 --> 00:01:52.620
+Tidak mungkin hanya memiliki fungsi murni karena sebagian besar waktu sementara kita mungkin perlu membuat
+
+00:01:52.770 --> 00:01:58.540
+permintaan ke dunia luar tetapi komponen ini khusus kita akan menyebutnya wadah
+
+00:01:58.540 --> 00:02:03.540
+yang berisi hal-hal dan mereka hanya menyampaikan status ke komponen.
+
+00:02:03.550 --> 00:02:14.830
+Sekarang kita bisa mengatakan bahwa kita akan pindah ke Nazi SS untuk sekarang berada di dalam wadah.
+
+00:02:14.880 --> 00:02:21.720
+Kita juga akan mengatakan ya kita akan memindahkannya menjadi wadah juga.
+
+00:02:25.390 --> 00:02:32.260
+Dan kemudian komponen fungsi sederhana fungsi murni yang telah kita buat kotak pencarian gulir dan
+
+00:02:32.710 --> 00:02:33.310
+kartu.
+
+00:02:33.350 --> 00:02:40.160
+Sementara ini bisa dalam komponen mari kita buka folder dan membuatnya lebih sederhana.
+
+00:02:41.090 --> 00:02:51.380
+Titik untuk menutup tab buka teman robo dan mari kita buka sumber akan mengatakan bahwa gulir kartu kotak pencarian dan
+
+00:02:52.730 --> 00:02:58.310
+daftar kartu yang hanya fungsi murni ada di dalam komponen.
+
+00:02:59.370 --> 00:03:05.370
+Sekarang jika Anda ingat Funt kami juga merupakan bagian dari file aplikasi Dotsie SS.
+
+00:03:05.400 --> 00:03:09.720
+Jadi kita akan memindahkannya ke sana juga karena sudah didefinisikan di sana.
+
+00:03:09.970 --> 00:03:12.990
+Dengan itu mari kita kembali ke aplikasi kita dan.
+
+00:03:13.150 --> 00:03:20.230
+Nah sekarang kita memiliki banyak kegagalan karena ini sekarang merujuk ke bagian yang berbeda yang tidak kita miliki.
+
+00:03:20.260 --> 00:03:20.950
+Aplikasi.
+
+00:03:21.480 --> 00:03:27.980
+Nah tinggal di folder yang berbeda dari Carlist di kotak pencarian dan gulir cara
+
+00:03:28.400 --> 00:03:37.890
+kita melakukannya adalah kita menggunakan dot dot yang berarti meninggalkan folder atau pergi ke folder dan kemudian dari sana masuk ke
+
+00:03:40.340 --> 00:03:44.070
+wadah atau maaf masuk ke dari wadah.
+
+00:03:44.150 --> 00:03:52.130
+Jadi di mana tepatnya WSS saya akan pergi yang merupakan titik dot dan kemudian setelah seseorang di sini untuk
+
+00:03:52.130 --> 00:03:58.640
+tingkat penuh saya akan mengatakan komponen dan saya dapat melakukan hal yang sama untuk sisanya
+
+00:04:05.380 --> 00:04:15.290
+Hemat dan kami juga telah mengindeks G-S yang sekarang mengacu pada nyawa dan wadah kami.
+
+00:04:15.310 --> 00:04:21.490
+Jadi sekali lagi karena kita sekarang meninggalkan folder kita berada di lingkungan
+
+00:04:22.300 --> 00:04:30.180
+yang sama sementara kita hanya bisa melakukan dot container, mari kita simpan dan aku salah mengeja
+
+00:04:30.180 --> 00:04:31.710
+Ejaan yang bagus menurut saya.
+
+00:04:31.710 --> 00:04:32.870
+Semuanya terlihat baik-baik saja.
+
+00:04:33.030 --> 00:04:36.040
+Mari kembali ke situs web kami.
+
+00:04:36.040 --> 00:04:36.790
+Ini dia.
+
+00:04:36.790 --> 00:04:38.620
+Semuanya merangkak dengan baik.
+
+00:04:39.820 --> 00:04:40.040
+BAIK.
+
+00:04:40.040 --> 00:04:43.430
+Jadi kami memiliki struktur folder yang bagus di sini.
+
+00:04:43.610 --> 00:04:45.140
+Banyak hal telah dibersihkan.
+
+00:04:45.350 --> 00:04:47.650
+Dan kami juga telah menggulir.
+
+00:04:47.770 --> 00:04:48.340
+Iya nih.
+
+00:04:48.400 --> 00:04:55.460
+Dan saya pikir kita hanya memiliki salinan tambahan sehingga kita bisa saja membuat salinannya.
+
+00:04:55.710 --> 00:04:57.760
+Pastikan semuanya masih berfungsi.
+
+00:04:57.930 --> 00:04:59.030
+Semuanya masih berfungsi.
+
+00:05:01.600 --> 00:05:05.390
+Kami ingin menghapus beberapa ruang di sini yang telah kami lakukan.
+
+00:05:05.410 --> 00:05:10.070
+Kami juga melihat beberapa kesalahan sehingga tidak selalu kesalahan tetapi hal-hal gaya.
+
+00:05:10.090 --> 00:05:16.660
+Sebagai contoh dengan filter saya katakan filter robot dan beralih melalui robot tidak benar-benar
+
+00:05:16.660 --> 00:05:18.190
+masuk akal seharusnya.
+
+00:05:18.220 --> 00:05:23.440
+Setiap item adalah pengguna robot yang kami dapatkan.
+
+00:05:23.530 --> 00:05:27.430
+Jadi saya menyimpan yang masih sama tidak ada kesalahan.
+
+00:05:28.360 --> 00:05:35.710
+Saya juga melihat sedikit pembersihan yang bisa dilakukan dengan menggunakan keadaan awal ini banyak.
+
+00:05:35.710 --> 00:05:39.430
+Kita bisa saja mengatakan lagi menggunakan perusakan kita dapat mengatakan
+
+00:05:42.050 --> 00:05:44.280
+robot Konst dan bidang pencarian.
+
+00:05:44.300 --> 00:05:45.600
+Kami sedang melakukan restrukturisasi.
+
+00:05:45.690 --> 00:05:50.750
+Dia menyebut keadaan titik ini.
+
+00:05:50.940 --> 00:05:54.520
+Dan sekarang saya dapat menghapus status ini dari sini.
+
+00:05:54.750 --> 00:06:04.200
+Saya dapat menghilangkan debu ini dari sini dan dari semua tempat lain yang kami gunakan pada kondisi ini
+
+00:06:04.200 --> 00:06:08.570
+dan render dengan menyimpan semuanya masih berfungsi.
+
+00:06:08.700 --> 00:06:11.630
+Tetapi kodenya jauh lebih bersih.
+
+00:06:11.650 --> 00:06:19.000
+Kami juga memperhatikan bahwa di sini, bakat robot sama dengan nol, sebenarnya ada cara yang lebih mudah untuk melakukan ini.
+
+00:06:19.000 --> 00:06:20.980
+Dan lagi itu hanya gaya.
+
+00:06:21.100 --> 00:06:23.880
+Ini akan disebut nol.
+
+00:06:23.920 --> 00:06:29.020
+Jadi, jika ini nol, itu akan mengevaluasi dalam javascript ke false.
+
+00:06:29.020 --> 00:06:31.210
+Jadi kita bisa mengatakan sebaliknya.
+
+00:06:31.210 --> 00:06:36.430
+Ingat sintaksnya jadi jika ini nol yang mana akan salah.
+
+00:06:36.430 --> 00:06:45.330
+Ubah jadi true sehingga jika tidak ada robot, kami memuat dengan aman dan itu tetap berfungsi.
+
+00:06:45.330 --> 00:06:52.210
+Dan akhirnya jika Anda melihat dan jika ada pernyataan yang baik, kita bisa melakukan perubahan haluan, bukan?
+
+00:06:52.250 --> 00:06:58.910
+Kita tidak bisa mengatakan kita menghidupkan robot jika ada robot yang mengembalikan
+
+00:07:02.480 --> 00:07:07.020
+ini, mari kita lihat apakah itu masih berfungsi.
+
+00:07:08.980 --> 00:07:10.120
+Kami tidak membutuhkan X
+
+00:07:14.090 --> 00:07:15.730
+atau kembali itu tetapi masih berfungsi.
+
+00:07:15.920 --> 00:07:19.090
+Dan Anda dapat melihat sekarang bahwa semuanya jauh lebih bersih.
+
+00:07:19.160 --> 00:07:26.620
+Kami memiliki aplikasi yang menjadikan semua hal untuk kami.
+
+00:07:26.620 --> 00:07:36.070
+Dan untuk menyelesaikannya ingat Jaison yang dikemas bagaimana kami memiliki beberapa skrip pra-bangun dan kami memiliki perintah build ini.
+
+00:07:36.250 --> 00:07:46.960
+Jika saya menghentikan ini sekarang dan saya membuat NPM build atau NPM Bruhn mereka akan memeriksanya di.
+
+00:07:47.210 --> 00:07:57.220
+Sementara ini sedang membangun, mereka telah membuat folder baru bernama built dan di sini kita memiliki semua file kita.
+
+00:07:57.350 --> 00:08:00.040
+Tapi kali ini dioptimalkan Apa artinya itu.
+
+00:08:00.050 --> 00:08:10.370
+Nah jika kita pergi ke statis dan pergi ke J. S. lihatlah bahwa semuanya sudah jadi favorit bagi kami CSSA kami
+
+00:08:11.260 --> 00:08:19.480
+dioptimalkan dan semua yang kami butuhkan untuk menyebarkan situs web ada di folder ini sehingga kami sekarang dapat mengambil folder yang dibuat ini dan meletakkannya
+
+00:08:19.780 --> 00:08:21.020
+di mana saja.
+
+00:08:21.040 --> 00:08:24.480
+Jadi ada di internet dan bahkan memberi Anda beberapa informasi yang baik.
+
+00:08:24.640 --> 00:08:28.730
+Jadi sekarang kita telah membangun yang dioptimalkan ini kita tidak perlu menguranginya.
+
+00:08:28.750 --> 00:08:31.360
+Kami tidak harus melakukan semua optimasi ini.
+
+00:08:31.480 --> 00:08:35.200
+Kelanjutannya harus bisa sehingga kita bisa menggunakan pernyataan impor di browser.
+
+00:08:35.230 --> 00:08:38.490
+Dan sekarang folder tagihan ini sekarang dapat digunakan di mana saja.
+
+00:08:40.380 --> 00:08:44.730
+Seperti yang saya katakan membuat aplikasi aksi ulang menghilangkan semua rasa sakit dari pengaturan.
+
+00:08:44.760 --> 00:08:51.090
+Semuanya dilakukan untuk Anda, Anda cukup menulis kode menggunakan komponen Briac dari seluruh web untuk membangun situs
+
+00:08:51.300 --> 00:08:52.640
+Web yang indah.
+
+00:08:55.240 --> 00:08:57.490
+Saya harap Anda senang bereaksi seperti saya.
+
+00:08:57.490 --> 00:09:03.610
+Inilah mengapa alat ini sangat populer dan inilah mengapa banyak perusahaan sekarang menggunakannya.
+
+00:09:03.660 --> 00:09:04.730
+Saya akan melihat yang berikutnya.
+
+00:09:04.960 --> 00:09:05.270
+Namun oleh.

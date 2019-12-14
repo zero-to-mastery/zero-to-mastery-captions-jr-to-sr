@@ -1,0 +1,385 @@
+﻿WEBVTT
+
+00:00:01.750 --> 00:00:02.710
+Selamat datang kembali.
+
+00:00:02.710 --> 00:00:09.160
+Saya tahu kita semua mulai bersemangat untuk memulai pengkodean tetapi saya ingin melakukan satu video terakhir sebelum
+
+00:00:09.160 --> 00:00:13.860
+kita benar-benar mulai bekerja dengan beberapa kode yang merupakan bagian yang menarik.
+
+00:00:14.010 --> 00:00:20.820
+Tetapi sekali lagi saya ingin menekankan bahwa sebelum kita menggunakan apa pun kita perlu memahami mengapa dan
+
+00:00:21.000 --> 00:00:28.780
+mengapa kita akan membutuhkan sesuatu seperti redux sekarang online dan dengan perusahaan mana pun yang bekerja dengan bereaksi sebagian besar
+
+00:00:28.780 --> 00:00:31.200
+dari mereka juga memiliki redoks.
+
+00:00:31.300 --> 00:00:39.220
+Jadi Anda akan mendengar aplikasi redux aktif yang disebutkan satu ton ketika Anda menonton tutorial atau bekerja dengan reaksi dan
+
+00:00:39.840 --> 00:00:43.150
+itu karena mereka berjalan sangat baik bersama-sama.
+
+00:00:43.180 --> 00:00:49.510
+Mari kita membahas beberapa hal tentang redux yang ingin kita pastikan kita pelajari dan sedikit peringatan di
+
+00:00:49.510 --> 00:00:49.990
+sini.
+
+00:00:49.990 --> 00:00:55.730
+Beberapa hal mungkin melebihi kepala Anda atau mungkin sedikit membingungkan tetapi saya ingin menunjukkan kepada
+
+00:00:55.730 --> 00:01:01.840
+Anda slide pertama karena setelah kita pergi melalui redux coding, wanita kembali ke mereka dan memastikan
+
+00:01:02.170 --> 00:01:06.440
+bahwa prinsip-prinsip ini diterapkan dan mereka masuk akal untuk kamu.
+
+00:01:06.460 --> 00:01:07.930
+Jadi bersabarlah.
+
+00:01:07.960 --> 00:01:10.480
+Percayalah, itu semua akan masuk akal pada akhirnya.
+
+00:01:12.880 --> 00:01:21.820
+Mengapa kami ingin menggunakan redux seperti yang kami sebutkan sebelumnya redux benar-benar bagus dalam mengelola negara terutama
+
+00:01:21.850 --> 00:01:23.470
+negara besar.
+
+00:01:23.470 --> 00:01:29.500
+Jadi redox adalah perpustakaan yang ingin kita gunakan jika aplikasi kita menjadi lebih besar dan lebih besar dan lebih besar dan mereka memiliki
+
+00:01:29.500 --> 00:01:31.500
+keadaan yang lebih besar dan lebih besar.
+
+00:01:31.570 --> 00:01:37.690
+Ingat kami ingin menggunakan alat berdasarkan masalah jiwa dan redux memecahkan masalah apa
+
+00:01:37.690 --> 00:01:45.760
+yang terjadi ketika aplikasi aksi kembali menjadi sangat besar dan hanya menggunakan titik ini saja tidak masuk akal
+
+00:01:45.760 --> 00:01:46.520
+lagi.
+
+00:01:46.540 --> 00:01:48.880
+Semakin dan semakin rumit.
+
+00:01:48.880 --> 00:01:51.880
+Ingat Briac adalah apa yang kita sebut layer tampilan.
+
+00:01:51.880 --> 00:01:55.780
+Ini benar-benar bagus di sisi tampilan tetapi tidak harus dalam mengelola negara.
+
+00:01:55.900 --> 00:02:00.660
+Jadi gunakan redux ketika segalanya menjadi sangat rumit.
+
+00:02:00.670 --> 00:02:08.670
+Poin kedua berguna untuk berbagi data antar kontainer dan ini adalah hal lain ketika proyek
+
+00:02:08.670 --> 00:02:14.920
+menjadi besar ketika mereka harus mulai berbagi status antar kontainer.
+
+00:02:15.970 --> 00:02:22.870
+Dengan reaksi ini sebenarnya agak sulit dan Anda harus memindahkan status ke atas satu lapisan sehingga Anda memiliki
+
+00:02:23.080 --> 00:02:26.290
+orangtua yang dapat berbagi keadaan di antara keduanya.
+
+00:02:26.710 --> 00:02:33.250
+Tetapi dengan redux ini menjadi sangat mudah karena kita akan menunjukkan di bagian pengkodean kami.
+
+00:02:33.370 --> 00:02:40.590
+Dan akhirnya redox memiliki manajemen negara yang dapat diprediksi menggunakan tiga prinsipal.
+
+00:02:40.740 --> 00:02:48.200
+Sekarang apa tiga prinsipal dari ketiga prinsipal dalam redoks ini yang benar-benar masuk akal.
+
+00:02:48.200 --> 00:02:52.990
+Pada akhirnya tetapi saya ingin tetap memperkenalkan mereka kepada Anda sehingga kami menyadarinya.
+
+00:02:53.960 --> 00:02:57.370
+Yang pertama adalah ide sumber kebenaran tunggal.
+
+00:02:57.680 --> 00:03:04.490
+Dan ini adalah cara yang bagus untuk mengatakan bahwa kita memiliki satu objek besar tunggal yang menggambarkan
+
+00:03:04.550 --> 00:03:06.010
+seluruh keadaan aplikasi.
+
+00:03:06.020 --> 00:03:14.010
+Ingat ini, kami memiliki satu objek keadaan besar yang menggambarkan segala sesuatu di dalam aplikasi kami.
+
+00:03:14.170 --> 00:03:21.940
+Jadi kita memiliki sumber kebenaran tunggal karena tindakan kembali bereaksi berdasarkan apa pun keadaannya.
+
+00:03:21.940 --> 00:03:29.330
+Kami hanya dapat memiliki satu objek besar yang menggambarkan bagaimana aplikasi akan terlihat dan bereaksi akan menanganinya.
+
+00:03:29.330 --> 00:03:37.370
+Prinsip kedua adalah gagasan bahwa negara hanya dibaca dan ini mendorong sesuatu yang disebut
+
+00:03:37.610 --> 00:03:45.380
+impeachability yang tidak memodifikasi objek dan mencegah kesalahan tak terduga dengan cara ini.
+
+00:03:45.470 --> 00:03:52.060
+Jadi objek state yang akan kita buat dengan redux sebenarnya tidak akan pernah dimodifikasi.
+
+00:03:52.130 --> 00:04:00.870
+Dan sebagai gantinya kita akan membuat negara baru setelah setiap tindakan diambil oleh pengguna dan akhirnya prinsip ketiga
+
+00:04:00.870 --> 00:04:08.850
+adalah gagasan bahwa perubahan hanya dibuat dengan menggunakan fungsi murni, sesuatu yang telah kita bicarakan dalam
+
+00:04:08.850 --> 00:04:10.460
+kursus saya sebelumnya.
+
+00:04:10.500 --> 00:04:19.080
+Gagasan bahwa fungsi murni adalah sesuatu yang menerima input dan selalu mengubah output yang dapat
+
+00:04:19.110 --> 00:04:20.220
+diprediksi.
+
+00:04:20.220 --> 00:04:28.760
+Jika kita memasukkan yang sama tetapi 1000 kali kita berharap fungsi itu memiliki output yang sama 1000 kali
+
+00:04:28.760 --> 00:04:30.220
+menggunakan prinsip-prinsip ini.
+
+00:04:30.470 --> 00:04:36.740
+Redux memiliki beberapa kata baru yang akan kami perkenalkan dalam kosakata kami dan kami akan merasa nyaman dengan
+
+00:04:36.740 --> 00:04:38.760
+mereka di akhir bagian ini.
+
+00:04:38.960 --> 00:04:40.360
+Yang pertama adalah aksi.
+
+00:04:40.370 --> 00:04:46.890
+Tindakan adalah sesuatu yang dilakukan pengguna seperti mengklik tombol atau menu tarik turun.
+
+00:04:47.100 --> 00:04:54.030
+Dan apa yang terjadi di redox adalah segera setelah pengguna mengklik sesuatu tombol dan membuat tindakan.
+
+00:04:54.150 --> 00:05:02.010
+Ia melewati sesuatu yang disebut reducer dan reducer hanyalah fungsi fungsi
+
+00:05:02.010 --> 00:05:10.410
+murni yang menerima input yang merupakan tindakan sehingga pengguna hanya mengklik tombol dan
+
+00:05:10.680 --> 00:05:22.600
+menciptakan output dan output ini adalah keadaan atau toko seperti yang kita sebut redux yang merupakan seluruh keadaan aplikasi.
+
+00:05:22.710 --> 00:05:31.290
+Jadi saat melewati fungsi toko diperbarui dan bereaksi karena memperhatikan perubahan keadaan ini membuat
+
+00:05:31.680 --> 00:05:33.640
+perubahan pada tampilan.
+
+00:05:36.590 --> 00:05:40.520
+Sekali lagi ini adalah perang yang akan kita hadapi saat kita mulai mengkode.
+
+00:05:40.580 --> 00:05:44.070
+Sekarang mengapa melakukan ini.
+
+00:05:44.080 --> 00:05:51.270
+Maksud saya, bisakah kita melakukan suatu tindakan dan kemudian suatu tindakan terjadi dan kemudian kita hanya membuat perubahan.
+
+00:05:52.790 --> 00:05:56.280
+Maksud saya, sesuatu seperti Jake yang biasa kita gunakan untuk bekerja.
+
+00:05:56.470 --> 00:05:59.200
+Dan ya itu terlihat lebih rumit bukan.
+
+00:05:59.200 --> 00:06:06.460
+Menambahkan semua langkah ini sebelumnya tetapi seperti yang dapat Anda lihat di atas jika Anda memiliki banyak tindakan yang terjadi dengan
+
+00:06:06.520 --> 00:06:11.990
+aplikasi modern yang sangat interaktif. Ini terjadi banyak di mana pengguna menggulir tindakan dan kemudian
+
+00:06:11.990 --> 00:06:16.090
+mengklik tombol dan kemudian menyoroti sesuatu dan seterusnya dan seterusnya sebagainya.
+
+00:06:16.150 --> 00:06:21.640
+Anda melihat bahwa semakin banyak tindakan yang kita lakukan, semakin banyak perubahan yang harus kita buat dan
+
+00:06:21.640 --> 00:06:26.550
+perubahan itu dapat memicu tindakan lain yang memicu perubahan lain dan seterusnya dan seterusnya.
+
+00:06:26.560 --> 00:06:30.090
+Dan itu bisa menjadi sangat rumit seperti yang Anda lihat dalam diagram ini.
+
+00:06:31.820 --> 00:06:39.900
+Nah dengan redux kami memastikan bahwa semua tindakan melalui satu peredam.
+
+00:06:40.280 --> 00:06:49.570
+Segala sesuatu mengalir melalui fungsi ini dan melalui fungsi ini selalu karena itu murni mengembalikan keadaan yang sama
+
+00:06:50.290 --> 00:06:58.180
+berdasarkan tindakan dan memperbarui toko dan toko ini sekarang yang mewakili seperti apa aplikasi
+
+00:06:58.180 --> 00:07:00.610
+kita seharusnya membuat perubahan.
+
+00:07:01.000 --> 00:07:08.390
+Jadi jenis corong semua tindakan ini menjadi satu reduksi sehingga semuanya dapat diprediksi dan menyenangkan lagi.
+
+00:07:08.410 --> 00:07:13.600
+Salah satu hal yang sulit untuk dijelaskan tanpa menemui masalah terlebih dahulu
+
+00:07:13.600 --> 00:07:16.360
+yang akan membuat Anda redux sekarang.
+
+00:07:16.570 --> 00:07:23.260
+Dan saya ingin mengajarkan ini hanya untuk tujuan historis menggunakan pola arsitektur arsitektur pola fluks
+
+00:07:24.220 --> 00:07:30.790
+dingin dan perangkat lunak digunakan sebagai cara untuk memastikan bahwa kami dapat menyelesaikan masalah dalam
+
+00:07:30.790 --> 00:07:33.300
+arti logis dan secara terorganisir.
+
+00:07:33.490 --> 00:07:40.930
+Dan pola fluks ini yang mengilhami redux perpustakaan memiliki ide untuk melakukan suatu tindakan
+
+00:07:40.930 --> 00:07:49.520
+dan kemudian memiliki operator yang mengirimkan tindakan ini ke toko yang merupakan negara kita yang memperbarui tampilan.
+
+00:07:49.790 --> 00:07:53.590
+Dan itu adalah data satu arah yang mengalir semuanya mengalir satu arah.
+
+00:07:53.660 --> 00:07:59.510
+Jika tampilan diperbarui, kami kembali ke tindakan dan kembali ke operator yang mengirim
+
+00:07:59.510 --> 00:08:03.250
+perubahan ke toko dan kemudian ke tampilan.
+
+00:08:03.340 --> 00:08:06.380
+Dan ini adalah ide yang cukup revolusioner.
+
+00:08:07.800 --> 00:08:14.470
+Karena sebelum itu kami memiliki sesuatu yang disebut MVC atau model view controller.
+
+00:08:14.710 --> 00:08:21.780
+Dan Anda mungkin pernah mendengarnya, cukup populer idenya dengan pola MVC adalah kita
+
+00:08:21.780 --> 00:08:26.780
+memiliki aksi dan aksi tersebut dibaca oleh pengontrol.
+
+00:08:27.120 --> 00:08:34.710
+Jadi sekali lagi file javascript lain yang terlihat pengguna Fraction mengklik tombol dan berdasarkan apa pun
+
+00:08:34.710 --> 00:08:38.750
+yang dikatakan pengontrol Kami memperbarui model atau data.
+
+00:08:38.790 --> 00:08:39.820
+Pada kasus ini.
+
+00:08:40.020 --> 00:08:47.490
+Jadi kita bisa menganggapnya sebagai keadaan kita mengubah sesuatu dalam model dan kemudian memperbarui tampilan.
+
+00:08:47.500 --> 00:08:54.280
+Sekarang masalah dengan pola MBC adalah diagram ini di sini kita memiliki controller yang
+
+00:08:54.280 --> 00:08:56.890
+mengubah potongan model yang berbeda.
+
+00:08:57.100 --> 00:09:03.020
+Dan model ini dapat mengubah tampilan yang dapat memicu perubahan nother.
+
+00:09:03.070 --> 00:09:07.270
+Dan model itu dapat mengubah bagian lain dari pandangan dan seterusnya dan seterusnya.
+
+00:09:07.270 --> 00:09:14.470
+Dan kami memiliki hal yang kami lihat sebelum kami memiliki kegilaan tindakan dan membuat perubahan semua panah ini
+
+00:09:14.470 --> 00:09:17.860
+hanya saling silang dan tidak terlihat sangat bagus.
+
+00:09:18.720 --> 00:09:24.480
+Dan meskipun itu mungkin tidak buruk ketika aplikasi Anda lebih kecil karena aplikasi Anda menjadi lebih besar, Anda
+
+00:09:24.480 --> 00:09:28.190
+ingin melakukan sesuatu seperti ini sehingga logis dan masuk akal.
+
+00:09:28.260 --> 00:09:29.970
+Dan itulah yang ingin kita lakukan dengan arsitektur.
+
+00:09:29.970 --> 00:09:37.170
+Kami ingin merancang aplikasi kami dengan cara yang saat mereka tumbuh meskipun kami dapat menambahkan
+
+00:09:37.730 --> 00:09:43.200
+beberapa hal pada akhirnya semuanya lebih mudah untuk dipertimbangkan dan dipahami.
+
+00:09:43.260 --> 00:09:48.500
+Jadi kami memiliki pola fluks yang memberlakukan aliran data directional yang unik.
+
+00:09:49.500 --> 00:09:57.770
+Kami memiliki pola MVC yang pasti dapat ditingkatkan jika Anda mendapatkan sesuatu dari video ini.
+
+00:09:57.780 --> 00:10:06.090
+Satu hal yang saya ingin Anda mengerti adalah gagasan bahwa redux pada akhir hari hampir sama
+
+00:10:06.090 --> 00:10:14.970
+dengan keadaan DOD ini bereaksi dengan tiga dokumen kita dapat mengganti keadaan Staat ini dan secara teoritis
+
+00:10:15.120 --> 00:10:25.050
+menghapus semua keadaan ini dari bereaksi dan itu semua terjadi di dalam pustaka redux ini yang lagi-lagi akan kita
+
+00:10:25.050 --> 00:10:25.740
+lakukan.
+
+00:10:25.920 --> 00:10:29.280
+Tapi satu peringatan.
+
+00:10:29.500 --> 00:10:39.220
+Anda bisa secara teknis memiliki redux dengan negara tetapi juga masih menyimpan sedikit kondisi reac dalam
+
+00:10:39.220 --> 00:10:39.950
+komponen.
+
+00:10:40.060 --> 00:10:47.080
+Redux tidak sepenuhnya menggantikan status ini atau status pengaturan Stotts ini dan bereaksi.
+
+00:10:47.110 --> 00:10:53.710
+Anda masih bisa menggunakannya bersama-sama dan saya akan tunjukkan kapan Anda mungkin ingin melakukannya saat itu adalah keputusan yang baik.
+
+00:10:54.130 --> 00:11:00.700
+Tapi seperti yang saya katakan sebelumnya tanpa masuk ke salah satu kode redoks ini mungkin terlihat
+
+00:11:00.760 --> 00:11:02.710
+sedikit membingungkan dan membingungkan.
+
+00:11:02.710 --> 00:11:04.710
+Saya berjanji kepada Anda bahwa kami akan kembali.
+
+00:11:04.720 --> 00:11:07.590
+Diagram dan hal-hal ini akan masuk akal pada akhirnya.
+
+00:11:07.690 --> 00:11:14.110
+Sebelum saya melemparkan kode ke layar, saya ingin memastikan bahwa Anda memiliki beberapa prinsip dan konsep yang
+
+00:11:14.110 --> 00:11:15.420
+sedang kami kerjakan.
+
+00:11:15.420 --> 00:11:16.060
+Baiklah.
+
+00:11:16.270 --> 00:11:21.250
+Saya tahu di mana Anda berpikir Andre saya muak dan bosan dengan slide meskipun mereka memiliki warna
+
+00:11:21.250 --> 00:11:25.600
+penilaian keren ini, saya perlu melihat beberapa kode karena saya bosan di sini.
+
+00:11:25.640 --> 00:11:30.440
+Anda tahu apa yang telah dijawab doa Anda di video berikutnya.
+
+00:11:30.490 --> 00:11:35.330
+Kami akhirnya akan mulai menulis beberapa kode dan masuk ke beberapa hal yang menyenangkan.
+
+00:11:36.110 --> 00:11:36.880
+Saya akan melihat yang itu.

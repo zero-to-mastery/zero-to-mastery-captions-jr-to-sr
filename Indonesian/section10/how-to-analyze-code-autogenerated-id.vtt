@@ -1,0 +1,619 @@
+﻿WEBVTT
+
+00:00:01.290 --> 00:00:02.270
+Selamat datang kembali.
+
+00:00:02.310 --> 00:00:09.060
+Jadi kami telah menyiapkan aplikasi kami yang sedang berjalan dan berfungsi dan sekarang kami dapat
+
+00:00:09.060 --> 00:00:10.480
+melihat kode lagi.
+
+00:00:10.500 --> 00:00:12.110
+Saya suka melihat kode.
+
+00:00:12.120 --> 00:00:17.220
+Setelah semuanya berjalan, Anda memastikan bahwa Anda mendapatkan semua variabel lingkungan Anda
+
+00:00:17.220 --> 00:00:24.450
+seperti kunci API dari tim dan basis data Anda sudah diatur dan jika Anda ingat kami memiliki aplikasi
+
+00:00:24.450 --> 00:00:28.770
+klien kami yang bertindak kembali di mana itu benar sini.
+
+00:00:28.890 --> 00:00:36.570
+Kami memiliki basis data kami yang berjalan secara lokal di komputer kami dan kemudian kami memiliki server kami dan saya memiliki
+
+00:00:36.660 --> 00:00:39.000
+tiga jendela di sini untuk masing-masingnya.
+
+00:00:39.180 --> 00:00:47.520
+Karena di dunia nyata dalam produksi, kita kemungkinan besar akan memilikinya di server yang
+
+00:00:47.520 --> 00:00:50.890
+berbeda atau komputer yang berbeda.
+
+00:00:50.940 --> 00:00:55.680
+Jadi sekarang kita sudah menyiapkan semuanya, mari kita berjalan melalui kode.
+
+00:00:55.680 --> 00:01:02.070
+Saya selalu lebih suka melalui API terlebih dahulu sehingga saya bisa melihat titik akhir karena poinnya banyak
+
+00:01:02.070 --> 00:01:03.500
+bercerita tentang aplikasi.
+
+00:01:03.870 --> 00:01:06.470
+Dan di sini izinkan saya meminimalkan ini sedikit.
+
+00:01:07.670 --> 00:01:13.620
+Di sini saya dapat mulai melihat folder snarkier dan saya melihat itu tidak terlalu rumit.
+
+00:01:13.620 --> 00:01:20.970
+Kami memiliki file server dodgiest yang saya asumsikan adalah titik masuk utama kami dan kemudian kami memiliki pengontrol
+
+00:01:21.180 --> 00:01:26.680
+dan pengontrol terdengar seperti sesuatu yang memiliki logika untuk titik akhir kami.
+
+00:01:26.700 --> 00:01:31.260
+Jadi hal pertama yang akan saya lakukan adalah melihat struktur folder saya sudah melihat paket
+
+00:01:31.730 --> 00:01:37.530
+yang Jaison saya jelas juga akan membaca baca saya bahwa proyek menyediakan dan kemudian pergi ke titik masuk dan
+
+00:01:37.980 --> 00:01:40.440
+melihat seperti apa paket yang mereka gunakan.
+
+00:01:40.440 --> 00:01:47.550
+Saya melihat mereka menggunakan pengurai tubuh Express sehingga kita bisa mendapatkan tubuh Jaison
+
+00:01:48.120 --> 00:01:58.960
+dari permintaan atau meminta tubuh kita yang kita gunakan menjadi crypt yang merupakan pustaka hashing untuk hashing password yang paling mungkin.
+
+00:01:59.050 --> 00:02:06.400
+Kami menggunakan kursus untuk memberikan akses ke domain apa yang dapat mengakses server yang kami K'NEX telah kita
+
+00:02:06.400 --> 00:02:07.030
+bicarakan.
+
+00:02:07.030 --> 00:02:15.100
+Ini adalah RM yang memungkinkan kita untuk membuat Q Semua pernyataan ke database kami dan omong-omong saya sangat menyukai perpustakaan
+
+00:02:15.100 --> 00:02:16.980
+ini, saya sangat merekomendasikannya.
+
+00:02:16.980 --> 00:02:23.270
+Ini berfungsi dengan baik Eskew saya memposting Cresson satu ton database lain.
+
+00:02:23.440 --> 00:02:28.590
+Dan kemudian kita memiliki pengendali kami daftar masuk kami di gambar profil.
+
+00:02:28.830 --> 00:02:34.470
+Kami memiliki pengaturan basis data yang telah kami bicarakan dan kemudian kami memiliki
+
+00:02:34.470 --> 00:02:40.160
+server ekspres dasar yang diatur dengan core yang memungkinkan kami mengaksesnya dari mana saja.
+
+00:02:40.200 --> 00:02:43.790
+Jadi domain apa saja dapat mengaksesnya sekarang.
+
+00:02:43.890 --> 00:02:46.730
+Dan ini adalah sesuatu yang kita bahas di bagian keamanan.
+
+00:02:46.860 --> 00:02:49.480
+Jadi kami akan meninggalkannya untuk sesi keamanan.
+
+00:02:49.650 --> 00:03:00.070
+Kami memiliki Jaison potsherd tubuh lagi agar kami dapat membaca Lagu dari titik akhir kami dan ini adalah server ekspres
+
+00:03:00.070 --> 00:03:01.950
+standar yang cantik.
+
+00:03:02.020 --> 00:03:03.600
+Kami mendengarkan port 3000.
+
+00:03:03.820 --> 00:03:13.090
+Dan saya dapat melihat bahwa pada titik akhir kita memiliki gambar ID profil dan gambar seinen register kita RL Dan hanya dengan membaca titik akhir
+
+00:03:13.090 --> 00:03:16.800
+ini kita memiliki gagasan tentang apa yang aplikasi lakukan.
+
+00:03:16.810 --> 00:03:25.960
+Ini memungkinkan pengguna untuk masuk dan mendaftar untuk mungkin mengambil profil setiap profil untuk melakukan beberapa pembaruan ke
+
+00:03:26.020 --> 00:03:27.770
+titik akhir gambar.
+
+00:03:27.790 --> 00:03:28.690
+Itu sebuah put.
+
+00:03:28.690 --> 00:03:35.350
+Dan kemudian untuk memposting gambar Anda adalah nyata dan saya melihat bahwa masing-masing dari mereka memiliki pegangan
+
+00:03:35.350 --> 00:03:38.450
+menangani profil menangani gambar menangani panggilan API.
+
+00:03:38.860 --> 00:03:43.870
+Jadi sekarang saya bisa masuk ke setiap controller dan hanya memiliki gambaran apa yang masing-masing lakukan.
+
+00:03:43.870 --> 00:03:51.490
+Sekali lagi kita telah melihat ini sebelum kita menyiapkan API klarifikasi dan sepertinya gambar hanya mengatakan saya
+
+00:03:51.490 --> 00:03:58.360
+akan membuat panggilan API ke API klarifikasi dan kita akan menggunakan model pendeteksi wajah.
+
+00:03:58.370 --> 00:04:04.250
+Ini langsung dari dokumentasi mereka dan itu akan mengembalikan respons mereka data mereka dari
+
+00:04:04.250 --> 00:04:06.660
+API dan pada akhirnya kami.
+
+00:04:06.680 --> 00:04:13.430
+Kami juga memiliki gambar pegangan dan gambar pegangan ini terlihat seperti kami meraih basis data pengguna menggunakan
+
+00:04:13.430 --> 00:04:20.080
+sintaks K'NEX di mana I. D. sama dengan ID permintaan.
+
+00:04:20.090 --> 00:04:21.590
+Tubuh.
+
+00:04:21.720 --> 00:04:29.930
+Dan kami hanya menambah entri dengan satu dan mengembalikan entri dan mengembalikannya ke depan sehingga menangani
+
+00:04:30.230 --> 00:04:38.030
+gambar tampak seperti setiap kali kami menambah atau kami mengirim gambar jumlah entri ini bertambah.
+
+00:04:38.060 --> 00:04:40.990
+Baiklah jadi itu file gambar yang kita lihat di profil.
+
+00:04:40.990 --> 00:04:44.640
+Sekali lagi menangani profil cukup jelas.
+
+00:04:44.640 --> 00:04:52.350
+Kami mengambil ID profil yang kami pilih semuanya dari tabel pengguna.
+
+00:04:52.480 --> 00:04:58.720
+Jika saya D. cocok dengan permintaan itu karena ingat di
+
+00:04:58.750 --> 00:05:01.900
+server dodginess kami melakukan ID semi-kolon ini untuk mengambil parameter dari
+
+00:05:05.890 --> 00:05:09.940
+apa permintaan itu dan sekali lagi kami hanya mengembalikan pengguna yang kami dapatkan dari database.
+
+00:05:11.940 --> 00:05:18.270
+Untuk mendaftar sedikit lebih rumit tetapi melihat itu kami hanya menangani register.
+
+00:05:18.360 --> 00:05:24.120
+Sepertinya kami membuat kata sandi kami yang merupakan praktik keamanan yang sangat bagus.
+
+00:05:24.120 --> 00:05:29.280
+Sekali lagi ini adalah sesuatu yang akan kita bicarakan dan latihan
+
+00:05:29.760 --> 00:05:37.500
+di bagian keamanan dan sepertinya kita memperbarui sehingga kita memasukkan hash di email dan tabel login dan kemudian
+
+00:05:38.900 --> 00:05:44.950
+kita juga menggunakan tabel pengguna untuk memasukkan nama email dan tanggal yang digunakan bersama.
+
+00:05:44.970 --> 00:05:47.060
+Jadi itu hanya mendaftar
+
+00:05:49.700 --> 00:05:57.100
+dan akhirnya untuk seinen dengan menangani seinen kita cukup memilih e-mail dan hash dari tabel
+
+00:05:57.100 --> 00:05:58.560
+log in.
+
+00:05:58.780 --> 00:06:05.940
+Jika email cocok dengan apa pun yang diberikan ujung depan kepada kami, maka kami melakukan sesuatu yang dicocokkan Coleby dengan
+
+00:06:05.940 --> 00:06:11.100
+sesuatu yang kami bicarakan di bagian keamanan tempat kami membandingkan kata sandi dengan hash yang
+
+00:06:11.100 --> 00:06:12.510
+disimpan dalam database.
+
+00:06:12.510 --> 00:06:20.070
+Sekali lagi cara yang aman untuk menyimpan informasi tentang pengguna dan memungkinkan mereka untuk masuk jika itu
+
+00:06:20.070 --> 00:06:23.010
+valid, kami memberi mereka informasi pengguna.
+
+00:06:23.040 --> 00:06:26.480
+Kalau tidak, kita mengatakan kredensial yang salah.
+
+00:06:26.490 --> 00:06:28.530
+Baiklah jadi itu tidak terlalu buruk.
+
+00:06:28.540 --> 00:06:30.700
+Itu berjalan baik melalui.
+
+00:06:30.700 --> 00:06:33.190
+Kami tidak perlu belajar terlalu banyak tentang basis kode.
+
+00:06:33.190 --> 00:06:40.000
+Dan ingatkan Anda pada beberapa proyek yang akan Anda jalani dan ada lebih banyak folder tetapi dengan langkah demi langkah yang
+
+00:06:40.000 --> 00:06:45.070
+logis Anda memiliki gagasan tentang apa yang aplikasi lakukan terutama sekarang setelah Anda melewati aplikasi,
+
+00:06:45.070 --> 00:06:48.670
+Anda dapat menebak di mana masing-masing dari titik-titik ini digunakan.
+
+00:06:48.670 --> 00:06:57.580
+Mari kita pergi ke ujung depan ke ujung depan segera kita melihat bahwa itu adalah proyek reaktor dan kita tidak bisa
+
+00:06:57.580 --> 00:06:59.770
+hanya membuka folder sumber kami.
+
+00:06:59.770 --> 00:07:05.410
+Dan biasanya mereka akan memiliki komponen folder penampung dan folder lain yang dapat mereka lihat.
+
+00:07:05.410 --> 00:07:07.560
+Tetapi apakah Anda selalu ingin memulai dengan kartu indeks.
+
+00:07:07.590 --> 00:07:08.390
+Iya nih.
+
+00:07:08.620 --> 00:07:13.080
+Pastikan bahwa Anda melihat perpustakaan apa pun yang mereka gunakan sepertinya
+
+00:07:13.150 --> 00:07:20.110
+mereka menggunakan ony norak untuk gaya dan pada indeks kerepotan sepertinya tidak ada penyedia di sini sehingga mereka tidak
+
+00:07:20.110 --> 00:07:24.730
+menggunakan redux hanya aplikasi aksi ulang sederhana dan titik masuknya adalah aplikasinya.
+
+00:07:24.730 --> 00:07:26.650
+Jadi sekali lagi kita pergi ke APT.
+
+00:07:26.680 --> 00:07:30.610
+Ya dan kami melihat apa yang dimiliki komponen utama.
+
+00:07:30.670 --> 00:07:33.800
+Kami melihat bahwa mereka menggunakan banyak komponen di sini.
+
+00:07:34.000 --> 00:07:39.790
+Dan hal pertama yang ingin saya lakukan adalah melihat keadaan awal yang dibutuhkan aplikasi.
+
+00:07:39.790 --> 00:07:45.390
+Sekali lagi karena kita sekarang menggunakan redux keadaan biasanya hidup di komponen dan kita melihat bahwa ada gambar
+
+00:07:45.400 --> 00:07:50.200
+output Anda Arel kami memiliki sesuatu yang disebut Box yang kami tidak terlalu yakin.
+
+00:07:50.410 --> 00:07:56.530
+Kami melihat bahwa jalan seinen masuk adalah salah dan kemudian kami memiliki informasi pengguna lagi hanya dengan
+
+00:07:56.530 --> 00:07:57.490
+melihat keadaan.
+
+00:07:57.490 --> 00:08:02.570
+Kami memiliki gagasan tentang seperti apa informasi aplikasi itu nantinya.
+
+00:08:02.640 --> 00:08:11.690
+Status dan aplikasi yang kami lihat memiliki hak untuk memuat pengguna, kami menghitung lokasi wajah, dan sekali lagi ini
+
+00:08:12.040 --> 00:08:13.360
+sebabnya penting.
+
+00:08:13.360 --> 00:08:19.210
+Beri nama fungsi Anda dengan sangat baik karena jika Anda memiliki anggota tim baru yang datang ke proyek, bagus
+
+00:08:19.210 --> 00:08:24.840
+bagi mereka untuk mengatakan oh OK jadi ini menghitung di mana lokasi wajah dan gambar hanya dengan namanya.
+
+00:08:25.300 --> 00:08:27.800
+Kami memiliki kotak tampilan wajah.
+
+00:08:27.940 --> 00:08:34.750
+Kami memiliki perubahan pada put yang mungkin bisa sedikit lebih deskriptif pada tombol Samit dan kami melihat bahwa
+
+00:08:34.750 --> 00:08:42.080
+kami melakukan beberapa panggilan baru sehingga pada tombol Samit terlihat seperti yang sangat penting karena kami memiliki Thach satu tahun
+
+00:08:42.350 --> 00:08:45.550
+lagi dan kami sedang melakukan semua hal ini.
+
+00:08:45.550 --> 00:08:47.740
+Jadi kita harus kembali ke ini dan melihat apa yang dilakukannya.
+
+00:08:48.940 --> 00:08:52.490
+Kami memiliki perubahan rute yang sekali lagi terlihat seperti kami menangani rute.
+
+00:08:52.690 --> 00:08:56.260
+Dan saya juga suka melihat komponen komponen utama dan melihat.
+
+00:08:56.260 --> 00:09:02.660
+Baiklah jadi mereka memuat partikel navigasi yang kita lihat di sini.
+
+00:09:02.800 --> 00:09:12.690
+Latar belakang sekolah ini yang bergerak di sekitar kita melihat bahwa kita memiliki navigasi dengan Simon dan berubah dan kemudian kita melihat
+
+00:09:13.410 --> 00:09:20.590
+bahwa jika rute pulang, kita memberi mereka bentuk tautan gambar logo peringkat dan pengenalan wajah.
+
+00:09:20.760 --> 00:09:24.750
+Dan jika tidak, kami memberi mereka komponen masuk atau daftar.
+
+00:09:24.750 --> 00:09:31.610
+Jadi segera kita agak memiliki gagasan tentang struktur aplikasi dan hanya dengan melihat ini kita melihat di mana
+
+00:09:31.610 --> 00:09:34.290
+kita dapat meningkatkan bagaimana hal-hal dapat dibersihkan.
+
+00:09:34.460 --> 00:09:41.090
+Kami juga melihat bahwa komponen aplikasi ini menjadi cukup besar dengan semua metode ini mungkin redux mungkin merupakan
+
+00:09:41.570 --> 00:09:46.550
+hal yang baik untuk mulai melihat atau mungkin memiliki lebih dari satu wadah.
+
+00:09:46.760 --> 00:09:52.170
+Semua hal yang dapat Anda lakukan saat menelusuri kode tetapi saya ingin memberi Anda catatan tambahan di sini.
+
+00:09:52.340 --> 00:09:57.170
+Banyak programmer ketika mereka pertama kali datang ke proyek hal pertama yang mereka lakukan adalah mengkritik.
+
+00:09:57.290 --> 00:10:03.410
+Mereka melihat kode ini dan berkata Katakan baik apa dengan semua ini ini mengerikan ini terlihat sangat jelek dengan
+
+00:10:03.620 --> 00:10:07.570
+apa ini dan memakai nama fungsi perubahan yang tidak deskriptif sama sekali.
+
+00:10:07.580 --> 00:10:14.370
+Siapa pun yang menulis ini begitu bodoh, saya harus mengubahnya dan oh ini terlalu jelek seperti Pak ini.
+
+00:10:14.390 --> 00:10:17.100
+Ini sudah terlalu banyak komplikasi yang harus kita hancurkan.
+
+00:10:17.150 --> 00:10:20.800
+Kita harus memiliki komponen tambahan di sini yang jauh lebih rapi.
+
+00:10:20.810 --> 00:10:27.380
+Dan ini terjadi cukup banyak ketika seseorang datang ke proyek dan segera mulai
+
+00:10:27.380 --> 00:10:28.550
+mengkritik kode.
+
+00:10:28.640 --> 00:10:31.380
+Dan ya pasti ada hal-hal yang dapat kita tingkatkan di sini.
+
+00:10:31.520 --> 00:10:39.020
+Tetapi seorang pengembang senior tahu bahwa ketika mereka datang ke suatu proyek itu tidak selalu oh mengapa mereka memakai
+
+00:10:39.020 --> 00:10:41.240
+dan melakukan perubahan di sini.
+
+00:10:41.240 --> 00:10:48.170
+Itu nama yang tidak deskriptif tapi mereka tidak ada di sana ketika fungsi ini dijalankan.
+
+00:10:48.320 --> 00:10:51.110
+Mereka tidak ada di sana ketika komponen ini dibuat.
+
+00:10:51.290 --> 00:10:58.370
+Ketika keputusan dibuat untuk membuat perutean seperti ini dan dengan kurangnya informasi Anda
+
+00:10:58.370 --> 00:11:01.940
+tidak memiliki hak untuk selalu mengkritik.
+
+00:11:01.940 --> 00:11:07.430
+Maksud saya kritik membangun dan mengatakan ini bisa diperbaiki adalah cara yang baik untuk melihatnya tetapi Anda
+
+00:11:07.430 --> 00:11:11.780
+tidak bisa pergi dan mengatakan ini salah ini adalah kode yang mengerikan.
+
+00:11:12.170 --> 00:11:17.990
+Saya harus memperbaiki semua ini karena Anda tidak tahu apa yang diketahui pengembang pada saat itu, mungkin mereka berada
+
+00:11:18.020 --> 00:11:19.320
+di bawah krisis waktu.
+
+00:11:19.400 --> 00:11:26.840
+Mungkin mereka melatih pengembang junior dan ini PR pertama mereka sebagai pengembang senior.
+
+00:11:26.850 --> 00:11:32.580
+Anda melihat ini dengan cara yang tidak emosional melihat kode melihat di mana di masa
+
+00:11:32.580 --> 00:11:40.170
+depan Anda mungkin ingin meningkatkan kode tetapi tanpa kritik hanya menjadi benar-benar netral karena ketika Anda datang pada suatu proyek
+
+00:11:40.230 --> 00:11:45.240
+tujuannya adalah untuk tidak menonjol dan meningkatkan dan membuat segalanya lebih baik.
+
+00:11:45.240 --> 00:11:51.420
+Tujuannya adalah untuk mengintegrasikan ke dalam proyek dengan tim dan bekerja bersama untuk membuat proyek lebih baik.
+
+00:11:52.220 --> 00:11:56.750
+Saya tahu saya agak bersinggungan di sini, tetapi ini sangat penting karena ini
+
+00:11:56.750 --> 00:12:03.770
+adalah sesuatu yang saya lihat sepanjang waktu dan itu benar-benar merupakan karakteristik yang tidak menguntungkan sehingga saya pikir beberapa pengembang
+
+00:12:03.770 --> 00:12:11.000
+top yang pernah saya lihat memiliki ini di mana mereka melihat kode netral tanpa kritik atau hanya bersinggungan di sana mari
+
+00:12:11.000 --> 00:12:12.620
+kita kembali ke jalur.
+
+00:12:12.620 --> 00:12:12.860
+Baiklah.
+
+00:12:12.860 --> 00:12:16.320
+Jadi mari kita lihat pada tombol kirim.
+
+00:12:16.370 --> 00:12:22.280
+Jika saya pergi ke tombol on submit di sini sedangkan sepertinya bentuk tautan gambar saya memiliki tombol
+
+00:12:22.280 --> 00:12:25.440
+on submit dan on tetapi ganti hanya dengan namanya.
+
+00:12:25.460 --> 00:12:26.190
+Saya tahu itu.
+
+00:12:26.200 --> 00:12:26.920
+Baiklah.
+
+00:12:26.930 --> 00:12:28.980
+Kemungkinan besar ini.
+
+00:12:29.090 --> 00:12:32.360
+Jadi tombol deteksi ini di situlah kita melakukan semua panggilan fecche itu.
+
+00:12:32.360 --> 00:12:38.600
+Sepertinya bagian terpenting dari aplikasi dan saya bisa melihat panggilan fecche ini untuk melihat apa yang
+
+00:12:38.600 --> 00:12:39.980
+terjadi di aplikasi.
+
+00:12:39.980 --> 00:12:45.730
+Baiklah jadi saya mengambil 3000 gambar localhost Anda RL.
+
+00:12:45.770 --> 00:12:54.050
+Jadi itulah server API kami dan kami sedang melakukan permintaan posting dan gambar ini Jaro jika kami pergi ke titik akhir itu kami melihat
+
+00:12:55.240 --> 00:12:58.010
+bahwa oh ya itu menangani panggilan API.
+
+00:12:58.010 --> 00:13:07.490
+Ingat ini yang membuat panggilan ke API klarifikasi dan menangani panggilan API dan hanya itu.
+
+00:13:07.500 --> 00:13:08.600
+Ini mengembalikan data.
+
+00:13:08.640 --> 00:13:14.360
+Jadi segera kami melihat bahwa oke kami mendapatkan data dari klarifikasi.
+
+00:13:14.460 --> 00:13:22.270
+Ini akan memiliki respons dan respons ini jika kita memiliki respons, kita melakukan nother fess hingga gambar
+
+00:13:22.360 --> 00:13:24.560
+dan titik yang menempatkan.
+
+00:13:24.730 --> 00:13:29.330
+Dan jika Anda ingat ini adalah titik akhir yang menambah entri kami.
+
+00:13:29.350 --> 00:13:38.020
+Jadi, jika semuanya berhasil dan kami mendapat respons, kami menambah jumlah entri dengan 1 dan kemudian setelah
+
+00:13:38.020 --> 00:13:45.420
+kami mendapatkan semua itu, kami memperbarui status untuk meningkatkan jumlah pengguna dan pohon.
+
+00:13:45.490 --> 00:13:46.660
+Ok itu masuk akal.
+
+00:13:46.660 --> 00:13:52.310
+Jadi itulah yang terjadi ketika kami menekan deteksi dan jumlahnya meningkat di sini.
+
+00:13:52.750 --> 00:13:54.570
+Tapi bagaimana dengan deteksi wajah.
+
+00:13:54.580 --> 00:13:58.880
+Nah deteksi pertama lagi kami punya nama yang bagus di sini setelah semuanya berjalan.
+
+00:13:58.960 --> 00:14:02.780
+Kami menampilkan jenis wajah kotak nama aneh.
+
+00:14:02.830 --> 00:14:06.180
+Saya datang dengan itu tetapi mungkin bisa diperbaiki.
+
+00:14:06.400 --> 00:14:10.640
+Dan dikatakan bahwa kita menampilkan wajah dengan menghitung lokasi wajah.
+
+00:14:10.690 --> 00:14:16.180
+Lagi-lagi ini semacam membaca dengan baik, kita tahu apa yang terjadi di sini, benar.
+
+00:14:16.220 --> 00:14:21.190
+Dan kemudian kita jelas memiliki komponen yang bisa kita lihat tetapi semuanya cukup
+
+00:14:21.260 --> 00:14:26.740
+deskriptif dan kita punya ide jika kita perlu fitur yang diimplementasikan ke mana harus mencari.
+
+00:14:27.200 --> 00:14:28.340
+Jadi begitulah.
+
+00:14:28.400 --> 00:14:33.740
+Itu tidak seburuk itu hanya dengan membaca kode melihat titik akhir dan kemudian beberapa
+
+00:14:33.740 --> 00:14:35.330
+kontainer dan komponen utama.
+
+00:14:35.360 --> 00:14:42.200
+Kami memiliki gagasan tentang apa yang dilakukan aplikasi dan Anda tidak perlu segera memahami seluruh kode karena akan muncul seiring
+
+00:14:42.290 --> 00:14:45.480
+waktu ketika Anda mulai bekerja pada fitur dan bug.
+
+00:14:45.500 --> 00:14:51.170
+Anda akan menemukan potongan kode yang berbeda karena basis kode menjadi lebih besar dan lebih besar itu
+
+00:14:51.170 --> 00:14:56.520
+benar-benar menjadi semakin sulit untuk memiliki segala sesuatu di kepala Anda tentang cara kerja sesuatu.
+
+00:14:56.540 --> 00:15:01.850
+Jadi jangan merasa kewalahan jika Anda datang ke suatu proyek dan mereka memiliki banyak folder yang Anda tidak tahu apa
+
+00:15:01.850 --> 00:15:02.780
+yang mereka lakukan.
+
+00:15:03.630 --> 00:15:04.880
+Suka dengan apa saja.
+
+00:15:05.040 --> 00:15:06.990
+Ambil sedikit demi sedikit.
+
+00:15:06.990 --> 00:15:13.380
+Memahami konsep tingkat tinggi bagaimana semuanya cocok bagaimana titik-titik terhubung dan ketika permintaan
+
+00:15:13.380 --> 00:15:19.780
+fitur seperti Hey dapatkah kita membuat ini mendeteksi lebih dari satu wajah ketika itu datang.
+
+00:15:19.800 --> 00:15:26.040
+Anda mulai bekerja pada fitur itu dan menjadi sangat akrab dengan komponen
+
+00:15:26.280 --> 00:15:32.530
+pengenalan wajah dan mungkin menghitung fungsi lokasi wajah dan perlahan-lahan Anda mulai memahami proyek.
+
+00:15:32.580 --> 00:15:38.110
+Tetapi yang utama adalah Anda ingin memiliki gambaran tentang keseluruhan gambar itu.
+
+00:15:38.190 --> 00:15:40.050
+Jangan pernah fokus pada hal-hal kecil terlebih dahulu.
+
+00:15:40.050 --> 00:15:45.820
+Selalu mulai dengan gambaran besar dan perlahan-lahan persempit fokus Anda.
+
+00:15:45.850 --> 00:15:50.440
+Maka dengan itu dikatakan kita harus mengimplementasikan fitur yang diminta Bruno.
+
+00:15:50.560 --> 00:15:58.750
+Yaitu memiliki beberapa deteksi wajah karena jika saya kembali ke sini dan mari kita lakukan gambar itu memiliki banyak
+
+00:15:58.750 --> 00:15:59.200
+wajah.
+
+00:15:59.200 --> 00:16:06.450
+Biarkan saya melihat apakah saya dapat memiliki orang dan mari kita lihat gambar ini.
+
+00:16:06.580 --> 00:16:13.110
+Saya akan menyalin alamat gambar dan menempelkannya di sini.
+
+00:16:13.900 --> 00:16:15.490
+Oh saya mendapatkan satu yang bagus.
+
+00:16:15.490 --> 00:16:19.530
+Katakanlah Anda dan saya mengklik teks.
+
+00:16:19.640 --> 00:16:19.990
+Baiklah.
+
+00:16:20.000 --> 00:16:25.080
+Sepertinya itu hanya mengoreksi satu wajah tetapi tidak yang lain.
+
+00:16:25.100 --> 00:16:30.920
+Jadi dalam video berikutnya kita akan memperbaikinya berdasarkan tampilan kode yang baru saja kita lakukan berdasarkan analisis yang
+
+00:16:30.920 --> 00:16:34.430
+baru saja kita lakukan dan melakukannya dengan cara yang cerdas.
+
+00:16:34.460 --> 00:16:36.330
+Saya akan melihat yang berikutnya oleh saya.

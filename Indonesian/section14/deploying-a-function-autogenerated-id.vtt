@@ -1,0 +1,427 @@
+﻿WEBVTT
+
+00:00:01.290 --> 00:00:01.990
+Selamat datang kembali.
+
+00:00:02.190 --> 00:00:06.780
+Mari kita benar-benar mencoba dan menggunakan fungsi ini sehingga kita dapat mengujinya.
+
+00:00:07.020 --> 00:00:15.720
+Untuk sekarang saya akan mengubah nama fungsi ini menjadi sesuatu seperti rank jadi handler rank atau mari kita
+
+00:00:15.810 --> 00:00:26.910
+simpan saja dengan rank dan ini berarti saya akan mengubah nama di sini untuk memberi peringkat dan hal lain yang ingin saya lakukan
+
+00:00:26.970 --> 00:00:31.050
+ada sekarang karena ini adalah tujuan devolvement.
+
+00:00:31.140 --> 00:00:41.140
+Pilihan lain yang saya dapat pada komentar dan pergi adalah apa yang kita sebut tahap di mana kita bisa dihukum mati atau Prod ..
+
+00:00:41.350 --> 00:00:48.190
+Dan ini melampirkan nama pada fungsi lambda kami untuk produksi atau pengembangan dan itu biasanya praktik yang baik
+
+00:00:48.190 --> 00:00:53.080
+untuk hanya memiliki bendera def sehingga Anda dapat menguji hal-hal dan kemudian ketika
+
+00:00:53.080 --> 00:01:01.360
+sudah siap untuk produksi untuk mengubahnya untuk menghasilkan hak dan hal berikutnya yang saya inginkan lakukan adalah saya juga ingin mengubah nama layanan
+
+00:01:01.360 --> 00:01:01.810
+kami.
+
+00:01:01.870 --> 00:01:06.730
+Jika kita melihat komentar di sini, saya melihat catatan memperbarui ini dengan nama layanan Anda.
+
+00:01:06.880 --> 00:01:11.520
+Dan jika Anda ingat nama kami di AWOS bukan ya tidak.
+
+00:01:11.530 --> 00:01:12.160
+Iya nih.
+
+00:01:12.280 --> 00:01:19.580
+Dia perlu diperbarui dengan nama kami yang merupakan LAMDA peringkat.
+
+00:01:19.710 --> 00:01:24.310
+Jadi saya akan mengubah nama layanan kami menjadi LAMDA peringkat.
+
+00:01:24.520 --> 00:01:31.190
+Saya akan menyimpan server lebih sedikit file YAML dan kemudian saya akan pergi ke händler dodgy Ya.
+
+00:01:31.260 --> 00:01:35.020
+Sekarang kita belum terlalu banyak bicara tentang surat tulisan tangan.
+
+00:01:35.040 --> 00:01:37.790
+Ya mari kita bawa mereka kesini seperti itu.
+
+00:01:37.800 --> 00:01:41.800
+Sekarang ada tiga hal utama yang ingin kita fokuskan di sini.
+
+00:01:41.820 --> 00:01:49.940
+Salah satunya adalah fakta bahwa kami hanya khawatir tentang fungsi yang Lamda butuhkan untuk menjalankan suatu fungsi.
+
+00:01:50.090 --> 00:01:56.390
+Jadi semuanya harus berada di dalam perintah peringkat ini dan itulah prinsip utama.
+
+00:01:56.400 --> 00:02:03.600
+Sekarang fungsi ini akan dijalankan berdasarkan peristiwa pemicu dan itulah mengapa objek acara adalah apa pun pemicunya, kita akan
+
+00:02:03.630 --> 00:02:09.390
+mendapatkan objek pemicu itu dan acara ini seperti yang kita bicarakan bisa berupa apa
+
+00:02:09.390 --> 00:02:15.600
+saja yang bisa menjadi permintaan HDTV itu bisa menjadi tambahan yang Anda minta, kami dapat mengonfigurasinya
+
+00:02:17.000 --> 00:02:23.330
+dan kami juga memiliki gagasan tentang sumber daya di mana fungsi lambda ini tidak dapat menggunakan sumber
+
+00:02:23.570 --> 00:02:26.540
+daya eksternal seperti Esrey kembali sebagai contoh.
+
+00:02:26.570 --> 00:02:33.020
+Sekarang hal utama yang perlu diingat di sini adalah bahwa Lamda dengan sendirinya adalah apa yang kita sebut tanpa kewarganegaraan.
+
+00:02:33.140 --> 00:02:35.890
+Itu tidak akan mengingat apa pun untuk kita.
+
+00:02:35.900 --> 00:02:41.990
+Ingat hal-hal ini dibuat karena fungsinya disimpan dalam database dan ketika siap dipanggil, itu
+
+00:02:41.990 --> 00:02:50.280
+akan dimasukkan ke dalam wadah oleh Amazon dan akan dijalankan dan setelah selesai dijalankan dan tidak ada lagi permintaan yang
+
+00:02:50.280 --> 00:02:55.410
+akan didapat dimasukkan kembali ke dalam database atau wadah itu akan turun
+
+00:02:55.410 --> 00:02:59.220
+dan tidak ada cara untuk mengingat apa pun.
+
+00:02:59.220 --> 00:03:04.500
+Jadi, Anda ingin menjaga fungsi Anda tanpa kewarganegaraan dan jika Anda ingin menyimpan informasi atau data,
+
+00:03:04.500 --> 00:03:07.520
+Anda dapat menggunakan dynamo D-B atau bucket entri.
+
+00:03:07.620 --> 00:03:13.360
+Sekali lagi sesuatu yang dapat Anda lakukan dengan mudah di server kurang file YAML.
+
+00:03:13.390 --> 00:03:20.500
+Sekarang dalam fungsi ini kita melihat bahwa kita memiliki beberapa hal dan saya ingin memusatkan perhatian Anda pada baris
+
+00:03:20.500 --> 00:03:22.310
+terakhir di sini callback.
+
+00:03:22.390 --> 00:03:31.940
+Tidak ada respons sekarang, fungsi Colback inilah yang memicu respons seluruh fungsi ini.
+
+00:03:32.250 --> 00:03:38.220
+Dan cara lambda bekerja adalah Anda mendapat panggilan balik dengan udara dan respons.
+
+00:03:38.220 --> 00:03:45.570
+Dalam kasus kami, responsnya adalah kode status 200 dengan badan yang merupakan Jaison dari pesan dan
+
+00:03:45.570 --> 00:03:49.260
+input dan input ini diketahui memiliki objek acara.
+
+00:03:49.270 --> 00:03:56.410
+Sekarang kesalahan ini di sini kita tidak akan pernah benar-benar menggunakannya pada lambda karena di bawah kap ada
+
+00:03:56.500 --> 00:04:00.060
+sesuatu yang disebut lambda proxy yang sedang terintegrasi
+
+00:04:00.160 --> 00:04:04.860
+Dan secara default ini adalah sesuatu yang diurus untuk kita.
+
+00:04:04.870 --> 00:04:11.710
+Jadi, jika Anda ingin mengirim kesalahan dengan Lamda alih-alih mengubahnya di sini, Anda akan melakukan kode
+
+00:04:11.710 --> 00:04:12.230
+status.
+
+00:04:12.320 --> 00:04:16.200
+Misalnya 400 dalam respons Anda.
+
+00:04:16.390 --> 00:04:19.670
+Sekarang mari kita sebarkan ini dan lihat apa yang terjadi.
+
+00:04:19.710 --> 00:04:26.560
+Saya akan menyimpan fungsi ini dan yang perlu kita lakukan dengan server lebih sedikit adalah kita sudah terhubung
+
+00:04:26.800 --> 00:04:27.830
+ke AWOS.
+
+00:04:27.850 --> 00:04:32.830
+Kami telah mengubah nama dan server lebih sedikit YAML menjadi lambda peringkat kami.
+
+00:04:33.220 --> 00:04:45.450
+Kami hanya dapat menjalankan penyebaran server kurang atau kurang.
+
+00:04:45.540 --> 00:04:49.130
+Dan kami memiliki sedikit sifat dan kami memiliki lekukan yang buruk.
+
+00:04:49.170 --> 00:04:55.540
+Sekali lagi ini adalah file YAML jadi kami harus memastikan lekukannya benar.
+
+00:04:56.280 --> 00:04:57.520
+Mari kita coba lagi.
+
+00:04:58.380 --> 00:05:00.400
+Akan menyimpan penyebaran lagi.
+
+00:05:05.150 --> 00:05:08.470
+Sepertinya semuanya telah dikerahkan dan ada beberapa tahun yang sangat bagus.
+
+00:05:08.480 --> 00:05:16.070
+Kami melihat bahwa itu mengunggah ke formasi cloud dan kami memiliki kami juga mengunggah file zip karena apa yang dilakukannya
+
+00:05:16.070 --> 00:05:18.650
+di bawah kap sebenarnya adalah zip.
+
+00:05:18.650 --> 00:05:25.220
+Semua file kita dan memuatnya ke Esrey kita atau tidak ke Tapi kita ke ember Esrey mereka sehingga setiap kali mereka
+
+00:05:25.220 --> 00:05:29.050
+membutuhkan fungsi itu mereka akan membuat wadah dan mengambilnya dari pohon.
+
+00:05:29.300 --> 00:05:35.540
+Dan itu melakukan beberapa hal di bawah tenda tetapi bagian utamanya adalah bahwa informasi layanan kami
+
+00:05:35.540 --> 00:05:36.760
+sudah siap.
+
+00:05:36.770 --> 00:05:42.190
+Anda melihat bahwa fungsi kami siap itu memanggil peringkat lambda dev peringkat.
+
+00:05:42.200 --> 00:05:49.600
+Sekali lagi kami memiliki devah yang melekat pada Anda karena kami telah membuat tahap ini untuk Dev dan tidak ada kunci API atau
+
+00:05:49.630 --> 00:05:51.490
+titik akhir yang kami berikan.
+
+00:05:51.580 --> 00:05:56.040
+Tetapi fungsi kami sekarang berjalan sangat sangat keren.
+
+00:05:56.230 --> 00:05:58.440
+Sekarang bagaimana kita bisa benar-benar menguji ini.
+
+00:05:58.770 --> 00:06:03.070
+Nah satu hal yang bisa kita lakukan adalah kita bisa pada
+
+00:06:08.140 --> 00:06:13.100
+fungsi dash dasbor kurang memohon dan kita dapat memanggil fungsi yang kita miliki.
+
+00:06:13.150 --> 00:06:14.170
+Mari kita panggil.
+
+00:06:14.390 --> 00:06:17.710
+Dan fungsi yang kami miliki disebut pangkat.
+
+00:06:17.740 --> 00:06:21.470
+Jadi mari kita mulai.
+
+00:06:21.530 --> 00:06:27.450
+Tampaknya itu memanggil fungsi kami dari wadah kami dari fungsi tanah kami di Ada.
+
+00:06:27.540 --> 00:06:34.440
+Ya kami mendapat kode status 200 dengan tubuh yang go service 1. 0.
+
+00:06:34.530 --> 00:06:36.780
+Jika kita kembali ke sini seperti itu.
+
+00:06:36.930 --> 00:06:37.810
+Itu luar biasa.
+
+00:06:38.040 --> 00:06:43.200
+Sekarang ketika Anda mengujinya seperti ini, Anda mungkin tidak ingin menggunakan fungsi lambda setiap kali karena mungkin
+
+00:06:43.470 --> 00:06:46.950
+akan dikenakan biaya uang terutama jika Anda sering melakukan ini.
+
+00:06:46.950 --> 00:06:55.290
+Cara lain yang dapat Anda lakukan adalah dengan benar-benar mengatakan memanggil peringkat fungsi dasbor lokal dan sarana lokal.
+
+00:06:55.360 --> 00:06:58.560
+Hai, saya tidak akan menyentuh fungsi lambda Anda.
+
+00:06:58.560 --> 00:07:04.020
+Saya akan mencoba dan mensimulasikan fungsi lambda dan menjalankan ini secara lokal sehingga kami tidak akan menagih Anda untuk
+
+00:07:04.020 --> 00:07:04.680
+apa pun.
+
+00:07:04.800 --> 00:07:08.790
+Dan lagi jangan terlalu stres tentang ini, Anda punya sejuta permintaan sebulan.
+
+00:07:08.790 --> 00:07:09.930
+Kamu baik-baik saja.
+
+00:07:10.050 --> 00:07:13.800
+Anda tidak akan dikenakan biaya untuk fungsi lambda kecuali Anda melakukan sesuatu yang benar-benar
+
+00:07:14.280 --> 00:07:16.170
+gila atau Anda memiliki pengguna Montu gila.
+
+00:07:16.170 --> 00:07:17.840
+Jadi untuk sekarang mari kita coba ini.
+
+00:07:19.540 --> 00:07:21.490
+Hei, lihat itu berhasil.
+
+00:07:21.530 --> 00:07:28.610
+Sekarang ini lokal hanya berfungsi karena fungsi kita bagus dan sederhana jika itu misalnya tergantung pada sumber daya
+
+00:07:28.730 --> 00:07:33.690
+Esrey atau sumber daya lain yang dimiliki Amazon mungkin tidak berfungsi.
+
+00:07:33.710 --> 00:07:37.150
+Tetapi untuk tujuan kita ini adalah tempat pengujian yang bagus.
+
+00:07:38.410 --> 00:07:43.930
+Baiklah hal terakhir yang ingin saya lakukan adalah saya ingin mendapatkan ini siap untuk apa yang ingin
+
+00:07:43.930 --> 00:07:51.070
+kita lakukan yaitu kita ingin memiliki titik akhir dan A untuk menjadi pemicu acara yang kita dapat memicu fungsi ini dengan karena di
+
+00:07:51.070 --> 00:07:56.910
+otak pintar kita tidur siang saya Aku tidak akan bisa hanya berjalan sebagai kerugian memanggil peringkat fungsi dasbor dasbor.
+
+00:07:57.010 --> 00:08:03.400
+Kita tahu bahwa sekarang ada tetapi saya ingin memiliki titik akhir HGP dan kita bisa melakukannya dengan menggulir
+
+00:08:03.400 --> 00:08:05.580
+ke bawah ke fungsi kita.
+
+00:08:06.070 --> 00:08:12.460
+Dan Anda lihat di sini bahwa ada metode jalur DP HD yang dapat kita gunakan.
+
+00:08:12.460 --> 00:08:14.640
+Jadi saya hanya akan menyalin ini di sini.
+
+00:08:14.920 --> 00:08:16.270
+Tempel dan
+
+00:08:19.220 --> 00:08:27.770
+tambahkan ke fungsi peringkat yang kita miliki dan di sini saya ingin pertama-tama saya ingin memiliki PDB,
+
+00:08:29.380 --> 00:08:33.100
+jalannya akan menjadi apa pun yang kita inginkan.
+
+00:08:33.100 --> 00:08:35.470
+Jadi katakan saja ranke
+
+00:08:39.490 --> 00:08:45.010
+dan metode ini akan menjadi metode get yang ingin mendapatkan pesan.
+
+00:08:45.010 --> 00:08:52.220
+Sekarang katakanlah dan di balik kap apa yang akan dilakukan sebenarnya menggunakan layanan
+
+00:08:52.310 --> 00:09:00.880
+lain oleh AWOS yang disebut API gateway untuk memberi kita titik akhir untuk benar-benar memicu acara ini.
+
+00:09:00.890 --> 00:09:01.870
+Izinkan saya menunjukkan kepada Anda apa artinya itu.
+
+00:09:01.880 --> 00:09:11.600
+Mari kita gunakan sekali lagi jalankan SLA kami gunakan dan keindahannya adalah sementara Servilius hanya melakukan ini secara otomatis untuk kami
+
+00:09:11.630 --> 00:09:16.680
+berbicara dengan AWOS dan memastikan bahwa semuanya berjalan dengan lancar.
+
+00:09:17.990 --> 00:09:19.240
+Dan kita mulai.
+
+00:09:19.280 --> 00:09:21.410
+Kami memiliki semua yang digunakan.
+
+00:09:21.560 --> 00:09:25.220
+Ingatlah bahwa wilayah kami adalah AS Timur karena itu yang kami tetapkan.
+
+00:09:25.370 --> 00:09:27.920
+Ini panggung Dev dan lihatlah.
+
+00:09:27.950 --> 00:09:37.560
+Kami sekarang memiliki titik akhir dan memberi kami Arel yang mirip Amazon, tetapi dengan peringkat jalur saya
+
+00:09:37.560 --> 00:09:42.240
+dengan perintah dev karena kami masih dalam pengembangan.
+
+00:09:42.450 --> 00:09:44.900
+Dan sekarang mari kita uji ini.
+
+00:09:44.940 --> 00:09:46.720
+Mari kita lihat apakah ini benar-benar berfungsi.
+
+00:09:46.790 --> 00:09:50.060
+Ingin membuka browser.
+
+00:09:50.130 --> 00:09:51.940
+Mari kita buka jendela baru di browser.
+
+00:09:53.590 --> 00:09:58.100
+Dan di sini mari kita tempel ini.
+
+00:09:58.120 --> 00:09:59.860
+Betapa kerennya itu.
+
+00:09:59.920 --> 00:10:04.570
+Kami baru saja memicu fungsi lambda yang hidup di suatu tempat di server Amazon.
+
+00:10:04.660 --> 00:10:11.370
+Kami memicunya dengan suatu acara dan acara itu memiliki semua hal ini.
+
+00:10:11.440 --> 00:10:17.620
+Pertama-tama kita memiliki pesan yang mengatakan Go server mari kita ingat dalam fungsi kita di sini
+
+00:10:17.620 --> 00:10:24.680
+atau jika kita pergi ke sini kita mengembalikan tubuh dengan server pesan pergi kurang dan input yang merupakan acara.
+
+00:10:25.030 --> 00:10:31.990
+Sekarang acara di sini Anda dapat melihat memberi kami informasi tentang browser tempat saya baru saja mengirim acara.
+
+00:10:32.100 --> 00:10:34.260
+Saya melihat bahwa saya memiliki header.
+
+00:10:34.260 --> 00:10:35.260
+Itu adalah peringkat jalan.
+
+00:10:35.280 --> 00:10:39.370
+Itu adalah permintaan dan seterusnya dan seterusnya.
+
+00:10:39.420 --> 00:10:42.390
+Saya dapat melihat bahwa saya melakukan banyak hal.
+
+00:10:42.390 --> 00:10:47.090
+Saya menggunakan DP yang dimenangkan dan semua informasi acara ini.
+
+00:10:47.310 --> 00:10:54.120
+Tapi begitu saja kami memiliki fungsi lambda Amazon super super sederhana.
+
+00:10:54.160 --> 00:11:00.760
+Yang perlu kita lakukan sekarang adalah membuat fungsi ini melakukan sesuatu yang berguna bagi kita karena saat ini
+
+00:11:00.940 --> 00:11:02.450
+kita tidak terlalu peduli.
+
+00:11:02.470 --> 00:11:04.890
+Mari kita kembali ke apa yang kita miliki sebelumnya.
+
+00:11:04.900 --> 00:11:08.200
+Saat ini kami tidak begitu peduli hanya dengan menerima acara.
+
+00:11:08.350 --> 00:11:17.320
+Kami ingin melakukan sistem peringkat pada tampilan cerdas kami, mungkin memberi orang beberapa emoji berdasarkan
+
+00:11:17.380 --> 00:11:18.620
+peringkat pengguna.
+
+00:11:18.670 --> 00:11:21.440
+Jadi di video berikutnya kita akan mulai melakukan itu.
+
+00:11:21.490 --> 00:11:22.850
+Ini akan sangat menyenangkan.
+
+00:11:22.990 --> 00:11:23.940
+Saya akan melihat yang itu.
+
+00:11:24.170 --> 00:11:24.760
+Sampai jumpa.

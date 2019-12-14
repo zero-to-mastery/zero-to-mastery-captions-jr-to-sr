@@ -1,0 +1,160 @@
+﻿WEBVTT
+
+00:00:01.810 --> 00:00:08.740
+Selamat datang kembali sejauh ini kita sudah bicara tentang Honey. Saya menyusut file mengurangi ukuran
+
+00:00:09.040 --> 00:00:14.390
+unduhan dengan mengompresi gambar memperbesar CSX dan Javascript dan sebagainya.
+
+00:00:14.860 --> 00:00:21.390
+Tapi ada pendekatan yang lebih mendasar selain hanya mengurangi ukuran unduhan.
+
+00:00:21.400 --> 00:00:29.130
+Mari kita juga pertimbangkan untuk mengurangi frekuensi unduhan yang dilihat oleh orang yang
+
+00:00:29.130 --> 00:00:38.290
+bepergian keliling mengurangi jumlah komponen yang dibutuhkan halaman secara proporsional mengurangi jumlah permintaan TTP yang harus dibuat.
+
+00:00:38.290 --> 00:00:43.840
+Ini tidak berarti memancarkan konten, itu hanya berarti menyusunnya dengan lebih efisien.
+
+00:00:44.670 --> 00:00:50.310
+Ingatlah bahwa petugas pengiriman keliling kami lelah dan hanya ada satu.
+
+00:00:52.300 --> 00:00:53.360
+Jadi mari kita lihat di sini.
+
+00:00:54.460 --> 00:01:02.950
+Dengan lebih sedikit perjalanan idealnya sementara kami meminimalkan file kami, tetapi kami juga tidak mengirim setiap
+
+00:01:03.520 --> 00:01:04.480
+file.
+
+00:01:04.780 --> 00:01:07.400
+Hanya yang kita butuhkan.
+
+00:01:07.480 --> 00:01:08.760
+Bagaimana kita bisa melakukan ini.
+
+00:01:09.790 --> 00:01:18.160
+Sebagai contoh, jika Anda menggunakan bootstrap atau yayasan atau apa pun yang membantu Anda dengan UI Anda
+
+00:01:18.850 --> 00:01:28.000
+dan menambahkan file CSSA baru tanyakan pada diri Anda Apakah mereka benar-benar diperlukan atau dapatkah Anda menggunakan fluxbox atau
+
+00:01:28.780 --> 00:01:33.540
+katanya grid yang merupakan alternatif hebat dan keduanya asli.
+
+00:01:33.760 --> 00:01:37.920
+Anda tidak perlu mengunduh file boot strap atau Fondation yang besar itu.
+
+00:01:38.790 --> 00:01:46.650
+Sama dengan javascript dan Javascript perpustakaan mereka sangat nyaman tetapi tidak selalu perlu mengambil Jake queery untuk
+
+00:01:46.650 --> 00:01:54.060
+pemilihan elemen misalnya itulah sebabnya permintaan J pada awalnya sangat populer telah sangat disederhanakan berkat
+
+00:01:54.060 --> 00:02:00.150
+metode baru dalam javascript seperti Querrey pemilih dan permintaan query memilih semuanya.
+
+00:02:00.750 --> 00:02:07.710
+Dan kami bahkan memiliki pengikatan acara yang dipermudah dengan ADD dan atribut set list listener kelas seterusnya dan
+
+00:02:07.710 --> 00:02:08.180
+sebagainya.
+
+00:02:09.590 --> 00:02:16.550
+Jadi jika Anda harus menggunakan pustaka, mungkin pustaka yang ringan dan berpikir dua kali sebelum Anda hanya menumpuk pada
+
+00:02:16.840 --> 00:02:22.330
+skrip lain atau pustaka lain hanya untuk beberapa animasi keren di situs web Anda.
+
+00:02:22.340 --> 00:02:23.930
+Akhirnya dengan gambar.
+
+00:02:23.960 --> 00:02:27.790
+Hati-hati dan jangan membuat situs web Anda penuh dengan mereka.
+
+00:02:28.100 --> 00:02:34.400
+Di masa lalu kami memiliki beberapa hal seperti sprite di mana Anda memiliki satu gambar dan
+
+00:02:34.400 --> 00:02:42.800
+berdasarkan pada posisi CSSA, Anda dapat memiliki pada gambar satu ini beberapa gambar yang hanya ditampilkan berdasarkan CSSA yang Anda gunakan tetapi
+
+00:02:42.800 --> 00:02:49.280
+Anda mendapatkan tingkat intinya hanya memiliki lebih sedikit file dan tidak membuat petugas pengiriman bekerja sangat keras.
+
+00:02:49.560 --> 00:02:55.420
+Sekarang Anda harus bertanya pada diri sendiri, bukankah kami hanya meminta mereka membawa semua file sekaligus.
+
+00:02:55.810 --> 00:02:57.090
+Tapi apa masalahnya?
+
+00:02:57.900 --> 00:03:00.380
+Sekali lagi hidup tidak sesederhana itu.
+
+00:03:00.450 --> 00:03:08.490
+Berkat protokol DB, browser kami hanya akan secara bersamaan mengunduh sejumlah file maksimum yang ditetapkan dari satu
+
+00:03:09.030 --> 00:03:10.530
+domain sekaligus.
+
+00:03:10.890 --> 00:03:14.850
+Dan ini berkisar dari 2 hingga 6 tergantung pada browser Anda.
+
+00:03:15.240 --> 00:03:21.600
+Dan saya akan meninggalkan sumber daya untuk Anda di video ini sehingga Anda dapat melihat berapa banyak permintaan Max atau permintaan
+
+00:03:21.600 --> 00:03:23.420
+bersamaan yang dapat dilakukan browser Anda.
+
+00:03:23.700 --> 00:03:25.530
+Tapi sekali lagi berhati-hatilah.
+
+00:03:25.530 --> 00:03:29.110
+Ini juga memiliki batasan pada ukuran total yang dapat dibawanya.
+
+00:03:29.130 --> 00:03:31.020
+Pengantar barang bukan Superman.
+
+00:03:31.200 --> 00:03:38.110
+Jadi sekali lagi kami ingin meminimalkan file dan kami ingin membatasi strip yang dibuat oleh petugas pengiriman.
+
+00:03:38.370 --> 00:03:42.020
+Jadi mungkin kita bisa menggabungkan file CSSA kita menjadi satu.
+
+00:03:42.330 --> 00:03:51.830
+Gabungkan file javascript kami menjadi satu, kita akan membicarakan tentang ketukan ke video yang akan datang dan mengapa proses ini mungkin diperbaiki
+
+00:03:51.860 --> 00:03:53.660
+di masa mendatang.
+
+00:03:53.780 --> 00:03:57.480
+Tetapi untuk sekarang mari kita tinjau.
+
+00:03:57.670 --> 00:04:05.530
+Ketika kami membuka Google Chrome dan mengetikkan dotcom super segar, kami meminta beberapa hal dari server, tetapi mengetahui
+
+00:04:06.040 --> 00:04:12.000
+apa yang baru kami pelajari, kami dapat mengoptimalkan proses ini dengan benar.
+
+00:04:12.040 --> 00:04:19.810
+Kami dapat meminimalkan file kami dan kemudian kami juga dapat membatasi jumlah file yang kami kirimkan dan
+
+00:04:22.780 --> 00:04:24.950
+hanya menggunakan metode sederhana.
+
+00:04:25.090 --> 00:04:28.360
+Anda telah membuat sisi web Anda lebih cepat.
+
+00:04:28.390 --> 00:04:34.560
+Sekarang, jangan khawatir, masih banyak hal yang harus dilalui dan segalanya akan menjadi lebih menyenangkan.
+
+00:04:36.000 --> 00:04:40.010
+Hanya untuk memastikan bahwa kami benar-benar mempelajari konsep-konsep ini.
+
+00:04:40.010 --> 00:04:41.790
+Saya punya sedikit latihan yang menyenangkan untuk Anda.
+
+00:04:42.620 --> 00:04:44.610
+Jadi saya akan lihat yang itu.

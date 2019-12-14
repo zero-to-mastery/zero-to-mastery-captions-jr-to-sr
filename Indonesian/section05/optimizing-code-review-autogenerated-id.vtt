@@ -1,0 +1,124 @@
+﻿WEBVTT
+
+00:00:01.990 --> 00:00:05.050
+Itu bagian panjang lainnya.
+
+00:00:05.050 --> 00:00:08.460
+Tapi saya harap semuanya masuk akal sekarang.
+
+00:00:08.650 --> 00:00:11.740
+Bagaimana kami mengoptimalkan kode kami.
+
+00:00:12.710 --> 00:00:20.000
+Yah kita hanya bisa memuat apa yang dibutuhkan dengan melakukan sesuatu seperti pemecahan kode di mana kita dapat melakukan
+
+00:00:20.720 --> 00:00:25.160
+chunking berbasis rute atau Chungking berbasis komponen semua menggunakan paket web.
+
+00:00:25.160 --> 00:00:33.350
+Dan impor dinamis atau bahkan mungkin menggunakan alat seperti perpustakaan loadable yang melakukannya untuk Anda dan memberi Anda
+
+00:00:33.350 --> 00:00:34.820
+pembungkus yang bagus.
+
+00:00:34.850 --> 00:00:40.970
+Kami juga memiliki gagasan tentang goyangan pohon yang tidak terlalu banyak kami bicarakan karena ini dilakukan
+
+00:00:40.970 --> 00:00:45.590
+di belakang layar untuk Anda oleh wetback yang sekali lagi sangat bagus.
+
+00:00:46.490 --> 00:00:50.250
+Dan gemetar pohon ini menghapus kode yang tidak digunakan.
+
+00:00:50.390 --> 00:00:52.960
+Ketika Anda benar-benar membangun aplikasi Anda.
+
+00:00:53.120 --> 00:01:00.020
+Jadi misalnya jika Anda mengimpor perpustakaan besar tetapi hanya menggunakan satu fungsi dari itu.
+
+00:01:00.020 --> 00:01:02.260
+Buang semua sisanya.
+
+00:01:02.360 --> 00:01:09.560
+Sekarang idealnya di dunia yang sempurna yang terjadi seratus persen dari waktu dengan akurasi 100 persen dalam kehidupan
+
+00:01:10.430 --> 00:01:11.030
+nyata.
+
+00:01:11.040 --> 00:01:18.140
+Itu mungkin tidak terjadi tetapi sekali lagi ini adalah sesuatu yang dapat Anda lakukan dengan kembali basah dan meningkatkan seiring
+
+00:01:18.140 --> 00:01:18.950
+berjalannya waktu.
+
+00:01:19.460 --> 00:01:27.170
+Tetapi untuk sekarang menggunakan hal-hal seperti babbel preset EMF yang telah kita lihat sebelumnya yang menghindari fitur-fitur
+
+00:01:27.170 --> 00:01:36.390
+transponder yang sudah ada di browser modern memungkinkan kita untuk menggunakan sebagian dari pohon ini kemampuan bergetar, titik lainnya adalah
+
+00:01:36.420 --> 00:01:39.170
+untuk menghindari pemblokiran ancaman utama.
+
+00:01:39.300 --> 00:01:45.630
+Dan ini adalah sesuatu yang telah kita bicarakan berulang kali meminimalkan waktu javascript kita.
+
+00:01:45.690 --> 00:01:52.290
+Waktu kompilasi parse dan eksekusi kami akan benar-benar pintar tentang berapa banyak
+
+00:01:52.350 --> 00:02:01.620
+javascript Wareing termasuk dalam kode kami, kami sebenarnya tidak sengaja juga berbicara sedikit tentang kebocoran memori dan kebocoran memori.
+
+00:02:01.860 --> 00:02:11.250
+Meskipun istilah ini baru di sini hanya memastikan bahwa kami tidak terus menambahkan memori ke dalam aplikasi
+
+00:02:11.250 --> 00:02:12.060
+kami.
+
+00:02:12.060 --> 00:02:20.450
+Jadi misalnya jika kita memiliki satu ton pendengar acara di sebuah halaman dan kita mengubah halaman itu ke baris lain katakanlah
+
+00:02:20.450 --> 00:02:25.690
+kita pergi ke halaman Tentang tetapi kita belum menghapus bahkan pendengar itu.
+
+00:02:25.820 --> 00:02:30.270
+Sekarang browser kita mengingat semakin banyak hal.
+
+00:02:30.410 --> 00:02:36.650
+Jadi Anda dapat memiliki sesuatu yang disebut Memory kebocoran di mana ketika kami sedang mengerjakan aplikasi
+
+00:02:36.650 --> 00:02:43.010
+kami hal-hal yang harus diingat browser seperti variabel meningkat lebih banyak dan lebih banyak sampai mencapai batas
+
+00:02:43.100 --> 00:02:44.990
+dan itu bisa crash.
+
+00:02:44.990 --> 00:02:48.390
+Hal lain yang bisa dihindari dengan meminimalkan Javascript kita.
+
+00:02:48.650 --> 00:02:54.080
+Dan akhirnya kami ingin menghindari multipole rendering sesuatu yang benar-benar kita bicarakan dengan
+
+00:02:54.080 --> 00:02:58.630
+bereaksi dan meminimalkan jumlah manipulasi Dom yang harus kita lakukan.
+
+00:02:58.640 --> 00:03:02.570
+Jumlah pekerjaan yang perlu dilakukan kode kami di browser.
+
+00:03:02.570 --> 00:03:09.030
+Kode optimalisasi yang benar adalah sesuatu yang bisa terus berjalan dan berjalan.
+
+00:03:09.030 --> 00:03:13.400
+Ada begitu banyak hal yang dapat Anda lakukan tetapi Anda benar-benar ingin memilih pertempuran Anda.
+
+00:03:13.560 --> 00:03:20.280
+Tetapi saya berharap dia mendapat gambaran yang baik tentang apa yang bisa kita lakukan dan apa prinsip dasar untuk bagian
+
+00:03:20.280 --> 00:03:20.940
+ini.
+
+00:03:21.930 --> 00:03:26.070
+Pada bagian selanjutnya kita akan akhirnya sampai pada kemajuan webapps.
+
+00:03:26.220 --> 00:03:27.050
+Saya akan lihat yang itu.

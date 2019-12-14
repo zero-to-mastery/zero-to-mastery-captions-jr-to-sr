@@ -1,0 +1,115 @@
+﻿WEBVTT
+
+00:00:01.620 --> 00:00:03.000
+Selamat datang kembali.
+
+00:00:03.000 --> 00:00:06.360
+Kami akhirnya berhasil atau setidaknya hampir sampai.
+
+00:00:06.360 --> 00:00:10.970
+Satu topik terakhir lagi dan kita selesai dengan bintang keamanan
+
+00:00:11.190 --> 00:00:15.280
+Mari kita bicara tentang otentikasi dan Anda mungkin berpikir sendiri.
+
+00:00:15.500 --> 00:00:15.840
+Tahan.
+
+00:00:15.840 --> 00:00:19.460
+Kami semacam sudah melakukan ini dengan penyimpanan kata sandi.
+
+00:00:19.530 --> 00:00:27.230
+Dengan sedikit injeksi dan menggunakan perpustakaan yang diperbarui dan masuk HSDPA kami dan semua hal ini.
+
+00:00:27.290 --> 00:00:30.140
+Dan Anda mungkin telah melihat bahwa beberapa di antaranya tumpang tindih.
+
+00:00:30.260 --> 00:00:31.720
+Itulah yang terjadi dengan keamanan.
+
+00:00:32.180 --> 00:00:39.270
+Ketika satu bagian dari sistem rentan itu mempengaruhi bagian lain dan itu hanya seperti sekarang.
+
+00:00:39.290 --> 00:00:46.070
+Otentikasi berarti memastikan bahwa orang di ujung sana adalah siapa yang mereka katakan.
+
+00:00:47.780 --> 00:00:54.410
+Dan ini dilakukan melalui kata sandi untuk mengautentikasi bahwa pengguna mengatakan bahwa mereka adalah orang yang memiliki akses
+
+00:00:54.410 --> 00:00:55.930
+ke akun ini.
+
+00:00:57.250 --> 00:01:00.600
+Dan kemudian setelah itu kita harus mengatur sesi mereka.
+
+00:01:00.730 --> 00:01:07.080
+Itu untuk memastikan bahwa kita mengatakan bahwa ini Tim di sini yang mengirimi saya permintaan mereka.
+
+00:01:07.120 --> 00:01:14.450
+Ingat di Twitter Anda tidak harus masuk setiap kali Anda menyegarkan dan otentikasi sangat penting karena
+
+00:01:14.480 --> 00:01:22.550
+itu bisa memiliki konsekuensi yang sangat besar dengan memungkinkan penyerang untuk token sesi kunci kata sandi yang dikompromikan
+
+00:01:22.550 --> 00:01:28.300
+atau kelemahan lainnya dapat berarti bahwa mereka berperan sebagai pengguna lain.
+
+00:01:29.490 --> 00:01:30.780
+Dan inilah masalahnya.
+
+00:01:31.550 --> 00:01:36.710
+Diagram ini adalah sesuatu yang akan kita bahas kembali karena ketika
+
+00:01:36.710 --> 00:01:42.770
+datang ke otentikasi kita memiliki seluruh bagian yang didedikasikan untuk itu di mana kita pergi
+
+00:01:42.770 --> 00:01:49.270
+melalui praktik terbaik belajar tentang otentikasi berbasis sesi dan otentikasi berbasis token dan bagaimana ini bekerja.
+
+00:01:49.460 --> 00:01:51.410
+Tapi idenya sama.
+
+00:01:51.410 --> 00:01:59.270
+Kami memastikan bahwa kata sandi cocok dan bahwa pengguna adalah siapa yang mereka katakan dan kemudian setelah itu kami
+
+00:01:59.600 --> 00:02:07.490
+memberi mereka cookie atau token untuk mengelola sesi mereka yang setiap kali mereka membuat permintaan dan kami tahu siapa
+
+00:02:07.500 --> 00:02:09.650
+mereka kami tahu .
+
+00:02:09.860 --> 00:02:11.510
+Itu Tim yang membuat permintaanmu.
+
+00:02:11.540 --> 00:02:19.680
+Mari berikan Tim sumber daya yang sesuai yang ia butuhkan otentikasi yang baik berarti menerapkan aturan kata sandi yang sederhana namun
+
+00:02:19.680 --> 00:02:26.430
+memadai yang mendorong pengguna untuk memiliki kata sandi acak yang panjang dan bukannya kata sandi konyol seperti 2:59
+
+00:02:26.430 --> 00:02:33.810
+Anda ingin menggunakan sesuatu seperti otentikasi multi-faktor untuk masuk log Anda seperti mungkin masuk ke Twitter juga mengharuskan Anda
+
+00:02:33.810 --> 00:02:39.270
+untuk memiliki dua faktor otentikasi pada ponsel Anda di mana Anda harus mengatakan ya
+
+00:02:39.510 --> 00:02:41.900
+saya yang saya katakan saya.
+
+00:02:41.910 --> 00:02:43.860
+Biarkan saya masuk juga.
+
+00:02:43.890 --> 00:02:51.050
+Kami juga belajar bahwa dengan cookie yang Anda ingin atur hanya dan mengamankan header.
+
+00:02:51.090 --> 00:02:56.430
+Tapi seperti yang saya katakan ini adalah topik yang saya pikir sangat penting dan kami memiliki seluruh bagian yang didedikasikan untuk
+
+00:02:56.430 --> 00:02:56.880
+itu.
+
+00:02:57.180 --> 00:03:04.080
+Tetapi idenya adalah ini, kita perlu cara untuk memastikan bahwa siapa pun yang ada di pihak lain kita percayai dan kita bisa percaya bahwa
+
+00:03:04.080 --> 00:03:06.390
+mereka mengatakan siapa yang mereka katakan adalah mereka.

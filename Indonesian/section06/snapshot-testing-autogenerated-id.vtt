@@ -1,0 +1,331 @@
+﻿WEBVTT
+
+00:00:01.440 --> 00:00:09.600
+Selamat datang kembali jika Anda ingat pembicaraan kami tentang pengujian yang saya sebutkan bahwa tindakan ulang memiliki dua fitur
+
+00:00:09.600 --> 00:00:13.450
+khusus yang sering Anda lihat dalam pengujian mereka.
+
+00:00:13.470 --> 00:00:20.790
+Salah satunya adalah pustaka enzim yang memungkinkan kita untuk membuat komponen kita dalam lingkungan pengujian yang kita
+
+00:00:22.120 --> 00:00:30.810
+lihat dan kemudian kita dapat menggunakan metode xpect apa pun yang kita inginkan dari hanya untuk benar-benar menguji apa pun yang dirender.
+
+00:00:30.850 --> 00:00:35.070
+Tetapi ada juga hal lain yang disebut pengujian snapshot.
+
+00:00:35.230 --> 00:00:43.060
+Dan sekali lagi ini adalah alat yang benar-benar bagus yang dilengkapi dengan hal yang sangat membantu kita menguji
+
+00:00:43.060 --> 00:00:44.760
+komponen re-act kita.
+
+00:00:44.770 --> 00:00:50.160
+Jadi mari kita bicarakan itu di video ini jika kita kembali ke aplikasi kita.
+
+00:00:50.250 --> 00:00:52.970
+Anda mungkin bertanya pada diri sendiri.
+
+00:00:53.070 --> 00:00:53.560
+Baiklah.
+
+00:00:53.700 --> 00:01:01.980
+Saya dapat terus menggunakan komponen mobil ini dan hanya menggunakan sintaks hanya biasa untuk memastikan bahwa komponen mobil
+
+00:01:01.980 --> 00:01:10.010
+memiliki semua yang saya butuhkan termasuk mungkin sebuah tag gambar def tag beberapa nama dan email.
+
+00:01:10.260 --> 00:01:12.690
+Tapi ini masalahnya.
+
+00:01:12.810 --> 00:01:20.450
+Kami bekerja sangat keras untuk menjaga komponen ini yang kami sebut komponen stalest.
+
+00:01:20.550 --> 00:01:25.940
+Mereka tidak menggunakan sintaks kelas untuk memperluas komponen Riak.
+
+00:01:25.980 --> 00:01:27.540
+Mereka tidak memiliki kondisi apa pun.
+
+00:01:27.540 --> 00:01:32.410
+Itu hanya fungsi murni yang kami buat.
+
+00:01:32.430 --> 00:01:38.940
+Jadi jika kita benar-benar menulis tes, saya yakin kita akan mengulang banyak kode di sini.
+
+00:01:39.040 --> 00:01:44.960
+Kami akan selalu hanya menguji jika orang ini memberikan dewa ini.
+
+00:01:45.040 --> 00:01:54.000
+Dan itu banyak pekerjaan yang berulang untuk pengembang dengan baik menyadari bahwa ini akan menjadi banyak waktu yang
+
+00:01:54.450 --> 00:01:55.710
+terbuang sia-sia.
+
+00:01:55.860 --> 00:02:04.100
+Bukankah lebih bagus jika kita bisa mengambil snapshot dari apa pun yang dirender oleh komponen troli
+
+00:02:04.110 --> 00:02:12.270
+ini dan kapan pun saat kita mengendarai komponen mobil kita, setiap perubahan dan komponennya tidak
+
+00:02:12.270 --> 00:02:21.730
+seperti yang kita harapkan sebagai snapshot yang kita ambil gambar dengan baik jika terlihat berbeda maka kita gagal tes.
+
+00:02:21.800 --> 00:02:24.280
+Itulah yang dimaksud pengujian snapshot.
+
+00:02:24.560 --> 00:02:25.750
+Dan itu sangat mudah.
+
+00:02:25.760 --> 00:02:28.490
+Biarkan saya menunjukkan dan Anda akan melihat betapa sederhananya itu.
+
+00:02:28.730 --> 00:02:30.500
+Mari kita kembali ke tes mobil kami di sini.
+
+00:02:31.750 --> 00:02:37.900
+Alih-alih melakukan panjang untuk menyamai satu dan banyak tes lain yang bisa kita lakukan di sini.
+
+00:02:37.900 --> 00:02:39.550
+Mari kita lakukan sesuatu yang berbeda di sini.
+
+00:02:39.580 --> 00:02:41.160
+Saya akan menulis xpect.
+
+00:02:41.160 --> 00:02:45.260
+Kami ke kartu dangkal kami dan mengatakan kami tidak menggunakan Rander mount di sini.
+
+00:02:45.380 --> 00:02:53.060
+Hanya untuk menghapus itu dari impor kami sekarang kami telah membuat komponen keranjang bercanda.
+
+00:02:53.080 --> 00:02:57.520
+Kita dapat menggunakan pengujian snapshot
+
+00:02:59.930 --> 00:03:04.930
+untuk mengatakan agar cocok dengan snapshot.
+
+00:03:04.960 --> 00:03:06.030
+Itu dia.
+
+00:03:06.150 --> 00:03:07.650
+Jadi apa fungsinya?
+
+00:03:07.740 --> 00:03:09.040
+Baiklah mari kita simpan di sini.
+
+00:03:10.470 --> 00:03:11.870
+Dan lihat apa yang baru saja terjadi.
+
+00:03:13.300 --> 00:03:21.280
+Kami memiliki ringkasan snapshot yang muncul yang mengatakan satu snapshot ditulis dalam satu dalam satu test suite dan kami
+
+00:03:21.280 --> 00:03:23.170
+melihat bahwa itu berlalu.
+
+00:03:23.170 --> 00:03:24.060
+Itu bagus.
+
+00:03:24.610 --> 00:03:32.940
+Tetapi satu hal yang mungkin Anda perhatikan adalah bahwa kita sekarang memiliki folder, folder snapshot yang secara ajaib muncul hanya
+
+00:03:33.090 --> 00:03:35.150
+dengan menjalankan metode ini.
+
+00:03:35.670 --> 00:03:44.520
+Jika saya membuka ini, saya melihat bahwa hanya mengambil snapshot dan Anda dapat membaca lebih lanjut di sini.
+
+00:03:44.660 --> 00:03:52.510
+Tapi sepertinya file teks atau file teks biasa yang memiliki semua hal ini.
+
+00:03:52.520 --> 00:03:57.740
+Anda melihat objek pembungkus dangkal di sini yang memiliki lenth 1.
+
+00:03:57.960 --> 00:04:03.900
+Itu memiliki nama kelas yang kita miliki di div kita.
+
+00:04:03.940 --> 00:04:15.000
+Jika saya terus menggulir ke bawah kita melihat bahwa kita memiliki banyak informasi seperti jenis div ..
+
+00:04:15.100 --> 00:04:17.720
+Kami juga memiliki jenis paragraf.
+
+00:04:17.720 --> 00:04:21.420
+Sekarang apa artinya ini sebenarnya.
+
+00:04:21.430 --> 00:04:30.580
+Ini mengambil gambar komponen ini ketika kita dangkal membuatnya sehingga sekarang saya bisa terus menyimpan katakanlah saya sedang
+
+00:04:30.580 --> 00:04:37.420
+mengerjakan aplikasi saya bekerja pada komponen mobil dan saya terus menyimpan tetap
+
+00:04:37.420 --> 00:04:46.840
+menyimpan tetapi saya memutuskan untuk menghapus kelas kalkulus pusat teks ini yang itu aku akan mengubahnya dan menyimpannya sekarang.
+
+00:04:46.860 --> 00:04:58.610
+Tes saya gagal dan dikatakan satu tes snapshot gagal karena kami baru saja mengubah apa yang diharapkan snapshot.
+
+00:04:58.650 --> 00:05:01.770
+Komponen mobil untuk di-render.
+
+00:05:01.770 --> 00:05:02.920
+Betapa kerennya itu.
+
+00:05:03.060 --> 00:05:09.320
+Secara ajaib mendeteksi setiap perubahan dan jika katakanlah seorang pengembang masuk dan mengacaukan komponen
+
+00:05:09.750 --> 00:05:12.660
+keranjang kami, pengujian akan segera gagal.
+
+00:05:12.810 --> 00:05:16.750
+Kami melihat bahwa berharap untuk membaca komponen mobil Anda gagal.
+
+00:05:18.810 --> 00:05:24.890
+Itu sangat sangat keren dan bahkan memberi tahu Anda di mana perubahan telah dibuat.
+
+00:05:25.110 --> 00:05:33.020
+Ini sama dengan katakanlah kita tidak sengaja tidak memberikan komponen kami email robot.
+
+00:05:33.140 --> 00:05:36.570
+Jika saya melihat ini kita melihat bahwa kita hilang.
+
+00:05:36.650 --> 00:05:37.310
+Jika
+
+00:05:41.680 --> 00:05:42.770
+menurut Anda sangat keren.
+
+00:05:42.770 --> 00:05:45.820
+Sekarang mari kita kembali ke surel di sini.
+
+00:05:45.950 --> 00:05:46.560
+Mari kita simpan.
+
+00:05:46.600 --> 00:05:46.840
+BAIK.
+
+00:05:46.850 --> 00:05:53.610
+Semuanya berlalu tetapi katakanlah baik saya sebenarnya tidak ingin pajak dipusatkan.
+
+00:05:53.650 --> 00:05:54.220
+Saya lakukan.
+
+00:05:54.220 --> 00:05:55.270
+Ini disengaja.
+
+00:05:55.270 --> 00:05:59.550
+Saya memang ingin memindahkan nama kelas dan mengubahnya.
+
+00:05:59.840 --> 00:06:07.230
+Nah dengan pengujian snapshot jika saya menyimpan ini kita melihat bahwa kita telah menekan w untuk menampilkan lebih banyak.
+
+00:06:07.230 --> 00:06:16.860
+Saya akan pasang Pressey WG dan di sini kita melihat bahwa kita memiliki pilihan untuk menekan Anda untuk memperbarui foto
+
+00:06:16.860 --> 00:06:18.240
+yang gagal.
+
+00:06:18.240 --> 00:06:24.590
+Jika saya menekan Anda di sini, itu akan mengambil snapshot lain dan itu akan mengatakan ya saya
+
+00:06:24.600 --> 00:06:27.730
+sengaja membuat snapshot lain dan menggunakannya sebagai referensi.
+
+00:06:27.750 --> 00:06:31.480
+Jadi saya akan mengatakan Anda dan ini dia.
+
+00:06:31.530 --> 00:06:34.320
+Cuplikan saya sekarang diperbarui.
+
+00:06:35.250 --> 00:06:41.410
+Dan jika saya kembali ke cara saya memilikinya sebelum itu tidak akan gagal karena mengharapkan snapshot
+
+00:06:41.410 --> 00:06:42.220
+yang berbeda.
+
+00:06:42.220 --> 00:06:45.660
+Cuplikan itu baru saja diperbarui di sini.
+
+00:06:47.020 --> 00:06:51.030
+Sekarang betapa sederhananya itu.
+
+00:06:51.040 --> 00:06:52.660
+Sangat sangat bagus.
+
+00:06:52.700 --> 00:07:00.770
+Dan faktanya karena kami membuat komponen kartu ini begitu sederhana hanya sebagai fungsi, fungsi murni yang
+
+00:07:00.770 --> 00:07:07.740
+mengambil input dan selalu menghasilkan output yang sama dengan hanya menggunakan pengujian snapshot.
+
+00:07:07.970 --> 00:07:10.610
+Kami tidak benar-benar perlu menguji lagi.
+
+00:07:10.820 --> 00:07:16.070
+Kami sedang menguji dengan tepat apa yang perlu dilakukan yang memastikan bahwa komponen mobil membuat apa pun
+
+00:07:16.100 --> 00:07:17.900
+yang kami kirim untuk ditampilkan.
+
+00:07:18.170 --> 00:07:23.950
+Dan itulah keindahan dari pengujian snapshot dan pembuatan komponen kecil tanpa kewarganegaraan ini.
+
+00:07:24.890 --> 00:07:33.050
+Kami dapat memiliki tes yang sangat bagus yang hanya terdiri dari satu liner untuk menjalankan tes snapshot dan dua sudah
+
+00:07:33.050 --> 00:07:35.230
+cukup banyak untuk pangkalan kami.
+
+00:07:36.960 --> 00:07:43.330
+Sekarang satu hal yang belum saya perlihatkan kepada Anda dan biarkan saya kembali memperbarui foto kami di sini.
+
+00:07:43.380 --> 00:07:48.520
+Ingin menekan Anda adalah cakupan kode.
+
+00:07:48.640 --> 00:07:59.830
+Bagaimana kita tahu bahwa snapshot peta atau snapshot yang cocok sebenarnya sepenuhnya menguji komponen mobil.
+
+00:08:00.230 --> 00:08:11.570
+Yah saya tidak bisa menjalankan cakupan dash dasbor uji coba NPM dan itu akan menunjukkan kepada saya laporan cakupan dan biarkan saya
+
+00:08:14.510 --> 00:08:20.640
+membuat ini sedikit lebih besar sehingga kita bisa melihat lihat itu.
+
+00:08:20.640 --> 00:08:27.740
+Kami benar-benar nol tes selain dari tes pengaturan.
+
+00:08:27.760 --> 00:08:32.020
+Doug Ya tapi itu karena kita tidak melakukan apa pun dalam file itu.
+
+00:08:32.070 --> 00:08:33.700
+Jadi tidak banyak yang bisa diuji di sana.
+
+00:08:33.930 --> 00:08:39.390
+Tetapi jika kita melihat komponen keranjang meskipun semua komponen lainnya
+
+00:08:39.390 --> 00:08:47.440
+hanya memiliki nol persen komponen kartu uji cakupan nol sekarang memiliki cakupan kode 100 persen.
+
+00:08:47.440 --> 00:08:48.850
+Betapa kerennya itu.
+
+00:08:49.000 --> 00:08:54.920
+Satu baris sederhana dan kami sudah membahas basis kami dengan komponen kartu.
+
+00:08:54.990 --> 00:09:01.440
+Sekali lagi saya akan terus mengatakan ini di seluruh video ini, tetapi tes menulis seharusnya tidak rumit.
+
+00:09:01.440 --> 00:09:08.010
+Cobalah untuk menyusun aplikasi Anda sedemikian rupa sehingga tes menulis benar-benar sangat sederhana dan cara Anda melakukannya adalah
+
+00:09:08.010 --> 00:09:14.790
+dengan menulis fungsi-fungsi murni ini yang membuat hal-hal sederhana dan Anda tidak memiliki fungsi besar yang melakukan banyak hal
+
+00:09:14.970 --> 00:09:20.270
+yang menjadi lebih sulit dan sulit. sulit untuk diuji dengan lebih banyak baris kode.
+
+00:09:22.710 --> 00:09:24.590
+Baiklah itu saja untuk saat ini.
+
+00:09:24.870 --> 00:09:28.390
+Mari terus menulis beberapa tes lagi dan video berikutnya.

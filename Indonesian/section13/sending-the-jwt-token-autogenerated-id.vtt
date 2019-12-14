@@ -1,0 +1,565 @@
+﻿WEBVTT
+
+00:00:01.180 --> 00:00:05.790
+Bawa mereka kembali sekarang karena kami memiliki tanda bagus fungsi otentikasi.
+
+00:00:06.070 --> 00:00:12.220
+Sudah waktunya bagi kami untuk menghasilkan token JWT dan benar-benar mengirimkannya kepada pengguna sehingga kami dapat mulai menggunakannya.
+
+00:00:12.220 --> 00:00:15.270
+Dan Anda dapat melihat cara kerja token JWT.
+
+00:00:15.460 --> 00:00:25.800
+Sekarang idealnya yang ingin kita lakukan adalah sesuatu seperti ini alih-alih mengembalikan hanya objek data yang merupakan
+
+00:00:25.800 --> 00:00:34.310
+objek pengguna dengan nama email ID dan bidang lain yang mungkin dimiliki database.
+
+00:00:34.620 --> 00:00:37.690
+Mari tambahkan logika lain sekarang di sini.
+
+00:00:37.830 --> 00:00:39.390
+Saya akan mengatakan bahwa di sini kami
+
+00:00:43.400 --> 00:00:44.910
+ingin memeriksa sesuatu terlebih dahulu.
+
+00:00:44.960 --> 00:00:51.920
+Pertama kita ingin memeriksa apakah kita memiliki ID data dari respons apa pun hanya untuk memastikan bahwa kita memang
+
+00:00:51.920 --> 00:00:57.020
+memiliki pengguna yang kita butuhkan atau database mengembalikan sesuatu yang dapat kita gunakan.
+
+00:00:57.050 --> 00:01:03.590
+Dan mari kita tambahkan cek lain yang dikirimi email DOT kami dan kami dapat melakukan pemeriksaan lain di sini, tetapi
+
+00:01:03.590 --> 00:01:09.240
+ini sudah cukup untuk memverifikasi bahwa data ini sebenarnya pengguna dan kami akan melakukan operator ternary.
+
+00:01:09.260 --> 00:01:17.540
+Saya akan mengatakan jika ini ada maka saya ingin Anda merespons dengan data pengguna atau jika tidak.
+
+00:01:17.540 --> 00:01:22.420
+Sekali lagi kita bisa menggunakan janji yang menolak.
+
+00:01:22.500 --> 00:01:29.950
+Fungsi yang sangat berguna untuk digunakan dan untuk saat ini hanya untuk menyederhanakan hal-hal yang akan kami tanggapi dengan data apa
+
+00:01:30.070 --> 00:01:36.470
+pun yang kami terima, Anda mungkin benar-benar ingin mengembalikan tanggapan string di sini yang tidak memberikan terlalu banyak
+
+00:01:36.470 --> 00:01:42.470
+informasi karena saat ini kami akan menjadi berpotensi mengirim data ke depan dan dari database yang
+
+00:01:42.470 --> 00:01:44.620
+tidak benar-benar ingin kita lakukan.
+
+00:01:44.630 --> 00:01:50.960
+Tetapi untuk keperluan debugging, itu menyenangkan untuk dimiliki sekarang karena jika ada sesuatu yang gagal saya dapat melihatnya.
+
+00:01:50.960 --> 00:01:54.550
+Baiklah dengan apa saya mendapat penolakan.
+
+00:01:54.680 --> 00:01:56.750
+Dan semoga membantu kami men-debug dengan lebih baik.
+
+00:01:58.270 --> 00:02:05.890
+Sekarang di dalam sini saya suka memberi nama hal-hal yang bagus dan bersih dan dalam kasus kami, bukan hanya menanggapi dengan data
+
+00:02:06.010 --> 00:02:09.730
+kami ingin melakukan sesuatu di mana kami membuat sesi pengguna.
+
+00:02:09.730 --> 00:02:14.920
+Jadi saya akan mengubahnya ke fungsi yang akan kita buat yang disebut
+
+00:02:14.980 --> 00:02:18.770
+sesi buat dan sesi ini akan menerima data.
+
+00:02:19.600 --> 00:02:27.910
+Objek dan objek data ini yang diharapkan adalah pengguna akan digunakan dan membuat sesi dan membuat Sesi
+
+00:02:28.270 --> 00:02:35.140
+akan mengembalikan janji yang mencakup semua informasi pengguna yang kita butuhkan ditambah Tokin token
+
+00:02:35.140 --> 00:02:38.160
+baru yang akan kita hasilkan.
+
+00:02:38.210 --> 00:02:47.790
+Jadi mari kita buat fungsi ini saya akan mengatakan Konst membuat sesi yang akan menerima data atau katakan saja pengguna
+
+00:02:49.650 --> 00:02:51.610
+untuk saat ini.
+
+00:02:52.960 --> 00:02:59.840
+Dan fungsi ini sekarang akan membuat sesi kami untuk pengguna.
+
+00:02:59.910 --> 00:03:10.550
+Sekarang di sini kita ingin membuat token JJB dan mengembalikan data pengguna katakanlah dan agar kita membuat token JWT kita perlu menginstal paket JND dari
+
+00:03:10.550 --> 00:03:19.790
+seperti yang Anda ketahui dan B. M. jika kita pergi ke sini, ini adalah paket yang
+
+00:03:19.790 --> 00:03:21.170
+akan kita gunakan.
+
+00:03:21.170 --> 00:03:30.320
+Kami cukup menjalankan NPM menginstal Jason tokin dan mereka memiliki dokumentasi sederhana yang bagus untuk kami gunakan dan Anda dapat melihat bahwa
+
+00:03:30.320 --> 00:03:35.640
+kami dapat membuat token tetapi dengan menjalankan perintah ini bagus dan sederhana.
+
+00:03:35.780 --> 00:03:36.660
+Jadi mari kita lakukan itu.
+
+00:03:36.680 --> 00:03:42.040
+Saya akan menjalankan instalasi NPM ketika saya menutup wadah kami untuk saat ini.
+
+00:03:42.860 --> 00:03:49.940
+Dan Ron dan sebagainya untuk token Jason Webb dan itu bagus dan cepat.
+
+00:03:50.090 --> 00:03:57.050
+Sekarang setelah kita memilikinya juga jika kita gulir ke bawah kita cukup membutuhkannya dan kemudian menandatangani token.
+
+00:03:57.260 --> 00:03:59.560
+Saya akan menyalin ini.
+
+00:03:59.610 --> 00:04:01.420
+Ayo pergi jauh-jauh ke sini.
+
+00:04:03.090 --> 00:04:06.180
+Saya akan memerlukan token dan kemudian saya menggunakan Konst di sini.
+
+00:04:07.140 --> 00:04:17.300
+Baiklah jadi kita memiliki objek JWT sekarang yang dapat kita gunakan untuk membuat token dan di sini mari kita membuat
+
+00:04:17.300 --> 00:04:20.520
+fungsi yang disebut tanda token sekarang.
+
+00:04:20.720 --> 00:04:22.540
+Dan mereka membuat sesi.
+
+00:04:22.790 --> 00:04:32.700
+Saya akan mengambil pengguna atau email dan ID yang lagi dan kami periksa di sini sehingga kami memastikan
+
+00:04:32.700 --> 00:04:41.050
+bahwa kami memiliki data ID data dan email dari parameter pengguna yang kami terima.
+
+00:04:41.270 --> 00:04:47.600
+Dan kami ingin membuat token yang akan menjadi token tanda.
+
+00:04:47.900 --> 00:04:52.670
+Tapi sekali lagi saya ingin menjaga hal-hal sederhana dan
+
+00:04:52.880 --> 00:05:03.990
+berfungsi lagu kecil dan membuat fungsi baru yang disebut token tanda dan token tanda ini akan menerima katakanlah email pengguna untuk digunakan untuk
+
+00:05:03.990 --> 00:05:05.100
+menandatangani token.
+
+00:05:05.320 --> 00:05:14.130
+Baiklah mari kita buat token fungsi tanda Konst baru dan lagi membuat fungsi bagus dan kecil berarti kita bisa
+
+00:05:14.130 --> 00:05:18.420
+mengujinya lebih mudah ketika kita benar-benar menulis tes.
+
+00:05:18.420 --> 00:05:25.340
+Ini akan menjadi lebih sederhana karena sementara ada potongan kecil yang bagus yang dapat
+
+00:05:25.460 --> 00:05:32.290
+kita uji unit dengan benar dan fungsi token tanda ini akan menerima email.
+
+00:05:32.380 --> 00:05:43.720
+Dan mari kita punya muatan JWT yang akan kita gunakan dan muatan JWT ini akan memiliki.
+
+00:05:44.070 --> 00:05:46.110
+Email.
+
+00:05:46.360 --> 00:05:52.660
+Sekarang payload hanya jika Anda melihat dokumentasi ini hanya penamaan yang umum. Jika Anda melihat
+
+00:05:53.260 --> 00:06:00.040
+di sini kita dapat menandatangani token dengan beberapa jenis data karena ingat token GW sebenarnya menyimpan data.
+
+00:06:00.220 --> 00:06:04.540
+Ketika Anda memecahkan kode Anda benar-benar dapat menemukan objek apa yang dikandungnya.
+
+00:06:04.540 --> 00:06:10.430
+Dan saya mengatakan bahwa kami tidak benar-benar menginginkan informasi sensitif dalam catatan JWT dalam kasus kami.
+
+00:06:10.590 --> 00:06:11.550
+Email baik-baik saja.
+
+00:06:11.550 --> 00:06:16.800
+Anda mungkin ingin menggunakan ID tetapi sesuatu yang mungkin berguna bagi Anda jika Anda ingin mendekode token
+
+00:06:16.830 --> 00:06:18.400
+ini dan menggunakannya nanti.
+
+00:06:18.480 --> 00:06:26.250
+Bagi kami, biarkan saja email itu sebagai muatan JWT sehingga kami menandatangani token dengan email pengguna
+
+00:06:27.480 --> 00:06:33.110
+dan kami cukup kembali ke sini dan akhirnya menandatangani token kami.
+
+00:06:33.210 --> 00:06:40.920
+Jadi saya hanya menyalin dari apa pun dokumentasi mengatakan Anda ingin menggunakan tanda JWT dan muatan ini akan menjadi
+
+00:06:41.010 --> 00:06:43.960
+muatan yang baru saja kita buat
+
+00:06:46.030 --> 00:06:51.100
+Dan di sini Anda ingin rahasia untuk menandatangani ini lagi sesuatu yang sangat
+
+00:06:51.100 --> 00:06:58.050
+penting yang Anda tidak ingin orang tahu dan segera setelah saya mengatakan bahwa sesuatu harus kosong di kepala Anda
+
+00:06:58.260 --> 00:07:04.770
+dan itu berarti juga itu adalah hal yang sangat sangat aman Anda mungkin harus memiliki variabel lingkungan untuk.
+
+00:07:04.770 --> 00:07:11.220
+Untuk saat ini meskipun ingat dengan variabel lingkungan Anda harus melakukan proses berpikir dan berpikir
+
+00:07:11.220 --> 00:07:17.640
+katakanlah JWT rahasia atau sesuatu seperti itu tetapi karena kami sudah pernah melalui
+
+00:07:17.640 --> 00:07:27.190
+itu dan kami sudah tahu bagaimana melakukannya saya hanya akan menyimpannya sederhana dan katakan rahasia JWT dan kita akan mendaftar dengan itu.
+
+00:07:27.220 --> 00:07:30.580
+Dan omong-omong dengan GWG Anda dapat melakukan beberapa hal menarik.
+
+00:07:30.580 --> 00:07:40.550
+Misalnya Anda dapat memberikan opsi seperti kedaluwarsa Dan dan kami dapat memberikannya berapa hari atau detik.
+
+00:07:40.570 --> 00:07:43.850
+Token JWT kedaluwarsa yang merupakan fitur yang sangat bagus.
+
+00:07:43.870 --> 00:07:45.820
+Jadi katakan saja dua hari.
+
+00:07:45.880 --> 00:07:51.210
+Untuk saat ini hanya untuk bersenang-senang walaupun dengan JWT Anda dapat melakukan ini.
+
+00:07:51.280 --> 00:07:56.500
+Salah satu kelemahan utama dari mereka adalah bahwa ketika datang ke
+
+00:07:56.500 --> 00:08:04.900
+pengguna yang keluar, agak sulit untuk mencabut token ini dan ada cara di sekitarnya tetapi dengan menggunakan S merah dan
+
+00:08:04.900 --> 00:08:11.950
+metode sesi kami, akan menjadi sangat sangat mudah untuk benar-benar menghapus token kapan saja pengguna mendaftar.
+
+00:08:11.950 --> 00:08:14.250
+Tapi toh untuk sekarang mari kita biarkan saja.
+
+00:08:14.290 --> 00:08:21.310
+Kami hanya mengembalikan token JWT sekarang kami hanya menandatangani token dan sekarang kami memiliki token dan membuat
+
+00:08:21.550 --> 00:08:24.160
+sesi yang bagus dan sederhana.
+
+00:08:24.160 --> 00:08:28.160
+Sekarang biarkan saya menyimpan ini dan menjalankan wadah buruh pelabuhan saya lagi.
+
+00:08:28.420 --> 00:08:30.210
+Kami baru saja membuat buruh pelabuhan.
+
+00:08:30.250 --> 00:08:32.910
+Ini sudah dibangun sehingga kita tidak perlu dash dasbor.
+
+00:08:32.920 --> 00:08:33.220
+Bill baik-baik
+
+00:08:37.640 --> 00:08:37.850
+saja.
+
+00:08:37.850 --> 00:08:39.050
+Sepertinya tidak ada kesalahan.
+
+00:08:39.050 --> 00:08:40.410
+Itu selalu pertanda baik.
+
+00:08:40.730 --> 00:08:41.670
+Ayo kembali ke sini.
+
+00:08:41.690 --> 00:08:48.240
+Kami melihat bahwa kami menandatangani token dan sekarang hal berikutnya yang ingin kami lakukan adalah melakukan sesuatu dengan
+
+00:08:48.240 --> 00:08:54.320
+stok dan untuk memulai mari kembalikan token ini ke depan dan agar kami benar-benar dapat melihat
+
+00:08:54.320 --> 00:08:57.100
+bahwa kami benar-benar menerima token JWT.
+
+00:08:57.300 --> 00:08:59.620
+Saya hanya akan mengatakan kembali.
+
+00:08:59.910 --> 00:09:02.040
+Nah apa yang harus dikembalikan ke sini.
+
+00:09:02.040 --> 00:09:07.530
+Ingat kami tidak benar-benar ingin melakukan respons tetapi Jason karena kami ingin menyimpan semua tanggapan itu
+
+00:09:07.560 --> 00:09:09.250
+untuk ditandatangani dan disahkan.
+
+00:09:09.330 --> 00:09:18.730
+Kami melihat bahwa di sini kami kembali atau kami ingin mengembalikan sesi Buat atau janji tidak menolak dalam kasus
+
+00:09:21.160 --> 00:09:22.000
+kami.
+
+00:09:22.210 --> 00:09:29.610
+Idealnya tidak peduli apa yang ada di sini kita ingin punya anjing maka itu memiliki respons.
+
+00:09:30.640 --> 00:09:39.610
+Jadi mari kita lakukan respons Daut Jaison atau mari kita benar-benar mengembalikan sesi jika kita menerima
+
+00:09:39.610 --> 00:09:45.630
+sesi dari sesi pembuatan dan kita hanya akan mengatakan respon
+
+00:09:45.710 --> 00:09:53.960
+Jaison hanya mengembalikan apa pun sesi itu dan apa pun sesi itu adalah apa pun yang kita kembali
+
+00:09:54.020 --> 00:09:56.280
+dari fungsi sesi ini.
+
+00:09:56.450 --> 00:10:00.510
+Yang ini untuk sekarang karena kita akan mengirim Jaison.
+
+00:10:00.770 --> 00:10:13.270
+Anggap saja kita ingin kesuksesan menjadi kenyataan dan kita akan memberikan katakanlah ID pengguna menjadi gagasan yang
+
+00:10:13.270 --> 00:10:23.490
+kami terima dari pengguna dari basis data dan juga memberikan token begitu saja.
+
+00:10:23.630 --> 00:10:29.930
+Dan hanya untuk membuat ini bagus dan ringkas lagi karena kuncinya sama dengan nilai yang
+
+00:10:29.930 --> 00:10:32.120
+saya bisa tinggalkan di tokin.
+
+00:10:32.140 --> 00:10:37.840
+Jadi sekarang kami mengirim kembali token dan ID pengguna kami.
+
+00:10:37.930 --> 00:10:46.210
+Sekarang pengguna ini keberatan jika Anda ingat Biasanya kami mengembalikan semuanya dan akan memiliki informasi profil seperti
+
+00:10:46.210 --> 00:10:52.360
+nama email sehingga segera setelah kami masuk kami mendapatkan informasi itu.
+
+00:10:52.360 --> 00:10:59.770
+Sekarang inilah hal yang akan kita lakukan karena sampai sekarang ketika pengguna masuk kita akan menjalankan tanda
+
+00:10:59.770 --> 00:11:03.650
+pegangan dan fungsi dan hanya mengembalikan objek pengguna.
+
+00:11:04.690 --> 00:11:10.130
+Tetapi ada cara yang lebih bersih dan lebih baik untuk melakukan ini dan kami ingin menjaga titik akhir Anda tetap deskriptif.
+
+00:11:11.220 --> 00:11:14.730
+Dan Anda ingin memastikan bahwa seinen hanya menangani penandatanganan.
+
+00:11:14.760 --> 00:11:16.450
+Itu benar atau salah.
+
+00:11:16.530 --> 00:11:17.250
+Apakah Anda masuk.
+
+00:11:17.280 --> 00:11:18.460
+Apakah Anda belum masuk?
+
+00:11:18.540 --> 00:11:19.680
+Apakah Anda diautentikasi?
+
+00:11:19.680 --> 00:11:21.050
+Apakah Anda tidak dikonfirmasi?
+
+00:11:21.210 --> 00:11:28.220
+Dan idealnya kami menggunakan sesuatu seperti mendapatkan ID profil untuk benar-benar mendapatkan informasi pengguna.
+
+00:11:28.350 --> 00:11:33.750
+Sekali lagi kita hanya menjadi sangat mirip dengan cara kita melakukan fungsi murni
+
+00:11:33.750 --> 00:11:39.660
+Kami hanya memastikan bahwa setiap titik akhir melakukan satu hal dan satu hal dengan sangat baik dan itu adalah
+
+00:11:39.660 --> 00:11:44.070
+desain yang lebih bagus untuk dimiliki karena lebih masuk akal dan lebih bersih.
+
+00:11:44.100 --> 00:11:48.810
+Dan ketika Anda memperluas hal-hal itu lebih mudah dipahami ketika pengembang baru muncul.
+
+00:11:48.810 --> 00:11:53.170
+Mereka akan bisa mengatakan oh baiklah, inilah yang mungkin kita gunakan untuk mendapatkan profil.
+
+00:11:53.220 --> 00:11:56.540
+Ini mungkin yang kami gunakan untuk masuk.
+
+00:11:56.580 --> 00:12:02.170
+Mungkin mengejutkan bagi sebagian orang untuk mengatakan melihat bahwa kami mengembalikan seluruh objek
+
+00:12:02.230 --> 00:12:10.570
+pengguna dengan masuk dan tunjuk jadi hanya untuk menjaga semuanya tetap bersih dan rasional di kepala kami, saya hanya akan mengembalikan
+
+00:12:10.570 --> 00:12:17.560
+ID dan kemudian di ujung depan Saya benar-benar melakukan permintaan dapatkan ke profil dan karena kami memiliki
+
+00:12:17.950 --> 00:12:22.340
+id pengguna Sekarang kami hanya dapat meminta informasi profil itu.
+
+00:12:22.420 --> 00:12:23.670
+Mari kita coba ini.
+
+00:12:23.680 --> 00:12:29.700
+Saya akan menyimpan dan kembali ke aplikasi saya.
+
+00:12:29.780 --> 00:12:32.060
+Saya akan keluar.
+
+00:12:32.180 --> 00:12:40.400
+Mari kita lakukan satu titik. com a Saya akan membuka alat pengembang pergi
+
+00:12:40.420 --> 00:12:44.860
+ke tab jaringan pastikan semuanya sudah jelas dan klik masuk.
+
+00:12:44.870 --> 00:12:45.620
+Baiklah.
+
+00:12:45.620 --> 00:12:48.790
+Sepertinya kami tidak dapat masuk.
+
+00:12:48.830 --> 00:12:55.040
+Jika saya klik pada masuk oh lihat itu saya sukses.
+
+00:12:55.040 --> 00:12:58.330
+ID pengguna sejati adalah satu.
+
+00:12:58.700 --> 00:13:01.730
+Dan kita punya token sendiri.
+
+00:13:01.730 --> 00:13:02.930
+Fantastis.
+
+00:13:02.930 --> 00:13:09.380
+Jadi ini adalah token kami yang sekarang mengotentikasi kami dan kami memastikan bahwa sekarang server
+
+00:13:09.380 --> 00:13:13.380
+dapat mengidentifikasi browser ini yang juga diinginkan oleh pengguna.
+
+00:13:13.460 --> 00:13:14.400
+Sangat sangat keren.
+
+00:13:14.420 --> 00:13:22.720
+Tetapi mengapa kita tidak dapat login dengan baik ini adalah sesuatu yang harus Anda berhati-hati setiap kali
+
+00:13:22.720 --> 00:13:27.880
+Anda mengubah apa pun pengembalian yang diharapkan hingga titik ini.
+
+00:13:28.180 --> 00:13:33.350
+Kami telah menangani masuk melakukan hal tertentu dan itu mengembalikan seluruh objek pengguna.
+
+00:13:33.370 --> 00:13:38.710
+Segera setelah kami mengubah sesuatu di belakang untuk mengembalikan sesuatu yang klien tidak tahu perubahan itu
+
+00:13:38.710 --> 00:13:40.860
+terjadi, kami mungkin memecahkan banyak hal.
+
+00:13:40.990 --> 00:13:42.610
+Dan kami ingin sadar akan hal itu.
+
+00:13:42.700 --> 00:13:47.640
+Setiap kali Anda mengembalikan sesuatu yang berbeda dari yang diharapkan klien dan apa
+
+00:13:47.650 --> 00:13:51.210
+yang diharapkan oleh pengembang ujung depan, pastikan Anda menyesuaikannya.
+
+00:13:51.220 --> 00:13:56.850
+Jadi jika kita kembali ke kode front end kita, mari kita pergi ke komponen seinen kita.
+
+00:13:56.860 --> 00:14:04.920
+Saya percaya di situlah kita melakukan seinen dan kita lihat di sini bahwa ketika kita gulir ke bawah untuk mengirimkan seinen kita melakukan
+
+00:14:05.270 --> 00:14:09.930
+penandatanganan dan menunjuk dengan posting yang kita kirimi email dan kata sandi.
+
+00:14:10.120 --> 00:14:17.740
+Dan akhirnya di sini ketika kami mendapat respons, kami melakukan pemeriksaan yang mengatakan ID pengguna titik dan kemudian kami memuat pengguna dan melakukan
+
+00:14:17.980 --> 00:14:18.980
+perubahan rute.
+
+00:14:19.030 --> 00:14:24.530
+Tapi kami sebenarnya tidak memiliki pengguna titik I. D. lagi kita.
+
+00:14:24.610 --> 00:14:29.110
+Karena apa yang kita kembalikan sebenarnya adalah objek yang sukses.
+
+00:14:29.110 --> 00:14:32.430
+ID pengguna sejati dan token.
+
+00:14:32.450 --> 00:14:41.150
+Jadi kita sekarang harus mengubah ujung depan ke mungkin mengatakan bahwa ini akan menjadi data
+
+00:14:41.150 --> 00:14:53.060
+dan data ini akan berisi ID pengguna dan jika itu cocok maka kita ingin memuat pengguna yang saat ini kita sebenarnya tidak
+
+00:14:53.060 --> 00:14:54.340
+memiliki .
+
+00:14:54.380 --> 00:14:57.770
+Jadi saya akan pergi seperti itu untuk saat ini.
+
+00:14:57.770 --> 00:15:01.680
+Mungkin tidak memuat pengguna mana pun karena tidak ada objek pengguna.
+
+00:15:01.700 --> 00:15:03.270
+Saya akan mengubahnya ke data untuk saat ini.
+
+00:15:04.230 --> 00:15:09.480
+Dan ini mungkin gagal dan kami akan kembali lagi karena kami mungkin ingin melakukan permintaan
+
+00:15:09.480 --> 00:15:13.070
+dapatkan sekarang ke ID profil dengan gagasan yang kami miliki.
+
+00:15:13.080 --> 00:15:24.220
+Jadi izinkan saya mengatakan bahwa kembali, mari masuk lagi, saya akan menutup ini sampai titik. com masuk.
+
+00:15:24.230 --> 00:15:25.370
+Baiklah.
+
+00:15:25.370 --> 00:15:27.070
+Kami masuk ke aplikasi kami.
+
+00:15:27.260 --> 00:15:32.700
+Kami memiliki token autentikasi kami sekarang tetapi kami memiliki masalah yang belum kami tentukan.
+
+00:15:33.080 --> 00:15:40.250
+Itu tidak ada nama pengguna karena kami hanya mengembalikan ID dan kami hanya mengembalikan ID.
+
+00:15:40.250 --> 00:15:48.520
+Seperti yang saya sebutkan karena kami ingin menggunakan ID untuk benar-benar mendapatkan profil pengguna.
+
+00:15:49.780 --> 00:15:55.750
+Dan alasan kami ingin melakukan ini adalah karena kami tahu bahwa ada hubungannya dengan profil yang ingin kami
+
+00:15:55.750 --> 00:15:58.290
+pastikan ini adalah titik akhir yang dijaga.
+
+00:15:58.330 --> 00:16:05.590
+Itu tidak semua orang bisa mengaksesnya hanya pengguna terotentikasi yang memiliki token yang dapat mengaksesnya berdasarkan token
+
+00:16:05.590 --> 00:16:07.400
+apa yang mereka miliki.
+
+00:16:08.630 --> 00:16:15.570
+Baiklah di video berikutnya kita akan menambahkan ini dan memastikan bahwa sistem otentikasi kami berfungsi
+
+00:16:15.600 --> 00:16:16.840
+dengan baik.
+
+00:16:17.250 --> 00:16:18.670
+Saya akan melihat yang itu.
+
+00:16:18.820 --> 00:16:19.030
+Buh-Bye.

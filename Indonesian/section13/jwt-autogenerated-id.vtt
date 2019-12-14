@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.840 --> 00:00:02.740
+Selamat datang kembali.
+
+00:00:02.980 --> 00:00:08.380
+Sebelum kita mulai dengan beberapa pengkodean dan penerapan ini, saya ingin menyelesaikan
+
+00:00:08.380 --> 00:00:12.000
+pengetahuan dan pemahaman kita tentang cookie dan GW.
+
+00:00:12.430 --> 00:00:19.600
+Jika saya membuka alat pengembang saya di sini dan pergi ke aplikasi Anda akan melihat bahwa di bagian
+
+00:00:19.600 --> 00:00:23.320
+penyimpanan kami memiliki sesuatu yang disebut Cookie dan cookie.
+
+00:00:23.320 --> 00:00:27.680
+Inilah beberapa string yang Anda lihat di sini.
+
+00:00:27.790 --> 00:00:32.540
+Get habbe telah menugaskan saya untuk mengingat sesi kami.
+
+00:00:32.860 --> 00:00:35.720
+Atau mungkin sepotong data lain.
+
+00:00:36.040 --> 00:00:40.040
+Dan jika saya klik di sini saya akan benar-benar menampilkan beberapa cookie ini.
+
+00:00:40.600 --> 00:00:44.050
+Dan itulah cara kami menyimpan cookie di browser.
+
+00:00:44.110 --> 00:00:49.900
+Dan ingat cookie ini tidak berarti apa pun selain seutas tali yang mengidentifikasi kita di
+
+00:00:50.110 --> 00:00:50.960
+server hub.
+
+00:00:51.790 --> 00:00:59.500
+Di sisi lain ketika datang ke JWT dan semua ditautkan ke situs Web ini seperti apa token JWT dan
+
+00:00:59.770 --> 00:01:04.700
+Anda dapat melihat di sini ketika disandikan itu hanya omong kosong.
+
+00:01:04.810 --> 00:01:07.750
+Tetapi ketika diterjemahkan, ia memiliki semua informasi ini.
+
+00:01:07.750 --> 00:01:09.020
+Ia memiliki Hetter.
+
+00:01:09.430 --> 00:01:11.780
+Anda dapat melihat algoritma apa yang kami gunakan.
+
+00:01:11.860 --> 00:01:13.400
+Apa jenis tokennya.
+
+00:01:13.600 --> 00:01:16.480
+Dan Anda juga memiliki muatan informasi.
+
+00:01:16.480 --> 00:01:23.950
+Jadi misalnya jika saya ingin nama mengatakan Andre Anda akan melihat bahwa ketika saya mengetiknya mengubah hal-hal di
+
+00:01:23.950 --> 00:01:24.460
+sini
+
+00:01:27.320 --> 00:01:35.660
+dan token sehingga setiap kali saya men-decode token ini saya hanya dapat mengambil informasi ini mungkin nama pengguna dan Anda
+
+00:01:35.670 --> 00:01:38.140
+melihat di sini tanda tangan diverifikasi.
+
+00:01:38.150 --> 00:01:46.300
+Jadi sekarang yang bisa saya katakan adalah saya bisa menandatangani ini dan benar-benar membuat token ini.
+
+00:01:46.520 --> 00:01:52.610
+Dan karena ini sekarang diverifikasi, saya dapat memverifikasi token ini dan mengambil informasi ini kapan saja saya
+
+00:01:52.610 --> 00:01:53.070
+mau.
+
+00:01:54.920 --> 00:01:57.070
+Jadi Anda lihat di sini bagaimana ini berbeda dari cookie.
+
+00:01:57.110 --> 00:02:02.230
+Ini sebenarnya memiliki makna di sini dan Anda hanya bisa mendekodekannya.
+
+00:02:02.250 --> 00:02:10.320
+Sekarang Anda mungkin memperhatikan di sini bahwa saya hanya dapat mengambil JWT dan hanya menempel di sini dan mengambil
+
+00:02:10.470 --> 00:02:11.410
+informasi segera
+
+00:02:11.730 --> 00:02:17.640
+Dan ini adalah alasan bahwa Anda tidak perlu ingin memasukkan informasi sensitif ke dalam
+
+00:02:17.970 --> 00:02:26.910
+payload karena siapa pun yang memiliki token JWT hanya dapat datang ke situs Web ini dan menempelkan JWT yang disandikan dan semua
+
+00:02:27.030 --> 00:02:28.340
+dapat diterjemahkan lagi.
+
+00:02:28.350 --> 00:02:35.440
+Saya akan menunjukkan kepada Anda cara untuk tidak melakukan ini ketika kami benar-benar mulai mengkodekan dan mengingat bagaimana saya mengatakannya dengan
+
+00:02:35.600 --> 00:02:36.740
+token senjata Jason.
+
+00:02:36.740 --> 00:02:38.450
+Cukup mudah.
+
+00:02:38.810 --> 00:02:49.250
+Nah dengan paket token Jason Webb yang perlu kita lakukan adalah menginstal JWT dan akhirnya kita cukup menandatangani token dengan informasi
+
+00:02:49.970 --> 00:02:52.610
+apa pun yang kita inginkan.
+
+00:02:52.610 --> 00:02:59.060
+Dalam hal ini kita melihat bahwa itu adalah bar foo dan semacam string
+
+00:02:59.060 --> 00:03:09.800
+rahasia dan kemudian setiap kali kita menerimanya kita hanya jika kita gulir ke bawah menjalankan fungsi verifikasi dan kita dapat memverifikasi dan mendekode token.
+
+00:03:09.810 --> 00:03:10.470
+Baiklah.
+
+00:03:10.650 --> 00:03:15.610
+Saya pikir itu sudah cukup bicara kita perlu mulai coding dan kita perlu mulai mengimplementasikan
+
+00:03:15.610 --> 00:03:20.000
+sesi di aplikasi kita ambil terminal Anda ambil editor teks favorit Anda.
+
+00:03:20.160 --> 00:03:21.510
+Kami akan mulai coding.
+
+00:03:21.510 --> 00:03:23.010
+Lihat yang berikutnya oleh.

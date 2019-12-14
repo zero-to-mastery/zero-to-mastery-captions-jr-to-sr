@@ -1,0 +1,382 @@
+﻿WEBVTT
+
+00:00:01.570 --> 00:00:02.780
+Selamat datang kembali.
+
+00:00:02.780 --> 00:00:10.390
+Mari kita lakukan beberapa tes yang sedikit lebih sulit untuk kita lakukan ini membuat tes Sab dan PM
+
+00:00:10.440 --> 00:00:15.340
+yang lebih kecil lebih kecil hanya untuk menjalankannya di latar belakang.
+
+00:00:15.360 --> 00:00:16.770
+Itu selalu baik.
+
+00:00:17.600 --> 00:00:21.460
+Dan mari kita masuk ke kartu kita.
+
+00:00:21.800 --> 00:00:26.890
+Atau tombol penghitung karena ini sedikit lebih unik bukan.
+
+00:00:26.900 --> 00:00:28.820
+Ini bukan komponen tanpa kewarganegaraan lagi.
+
+00:00:28.820 --> 00:00:32.560
+Kami sebenarnya memiliki status dengan penghitungan.
+
+00:00:32.840 --> 00:00:36.500
+Dan ya kita punya sedikit lebih banyak logika.
+
+00:00:37.010 --> 00:00:45.240
+Kami juga memiliki set negara ini yang terjadi di mana kami menambah hitungan negara kami.
+
+00:00:45.540 --> 00:00:50.500
+Dan saya pikir dalam video sebelumnya saya memiliki ini sebagai metode terpisah yang dapat Anda hubungi di sini.
+
+00:00:50.580 --> 00:00:58.510
+Untuk saat ini kita bisa membiarkannya begitu saja, itu adalah ide-ide yang ingin kita uji fungsi negara ini
+
+00:00:58.510 --> 00:01:03.520
+yang benar-benar bertambah karena itu sebabnya Anda harapkan dari sebuah counter.
+
+00:01:03.980 --> 00:01:09.620
+Jadi bagaimana kita akan menguji seperti yang kita tahu langkah pertama adalah untuk
+
+00:01:09.630 --> 00:01:11.880
+benar-benar membuat file pengujian.
+
+00:01:11.880 --> 00:01:18.300
+CONAN Brian mendapat tugas cerdik Ya.
+
+00:01:18.430 --> 00:01:20.430
+Dan hal pertama yang ingin kita lakukan.
+
+00:01:20.500 --> 00:01:26.330
+Yah sekali lagi kita sudah melakukan ini sebelumnya jadi saya akan menyalin dari tes Carlists.
+
+00:01:26.470 --> 00:01:29.570
+Mari kita tutup beberapa ini hanya untuk membersihkan
+
+00:01:32.800 --> 00:01:35.310
+dan menyalin dan menempel ini.
+
+00:01:35.520 --> 00:01:42.200
+Sekarang alih-alih daftar kartu sedang menguji konter Bawden.
+
+00:01:42.450 --> 00:01:46.440
+Dan kita juga tidak benar-benar membutuhkan robot tiruan kita lagi.
+
+00:01:48.300 --> 00:01:57.540
+Dan conurbation ini tidak memiliki alat peraga yang diterima Yah itu sebenarnya memiliki peraga warna.
+
+00:01:57.540 --> 00:02:08.460
+Jadi mari kita lakukan warna tiruan konser dan kita akan mengatakan bahwa warna tiruan ini akan menjadi merah
+
+00:02:08.460 --> 00:02:11.280
+dan kami akan memberikannya.
+
+00:02:11.280 --> 00:02:12.670
+Ini adalah komponen yang sebenarnya.
+
+00:02:12.720 --> 00:02:17.440
+Kami akan memberikan warna warna tiruan.
+
+00:02:19.540 --> 00:02:26.070
+Sekarang ada satu hal meskipun itu komponen stateful kita masih bisa melakukan pencocokan pengujian snapshot untuk
+
+00:02:26.070 --> 00:02:26.660
+itu.
+
+00:02:26.680 --> 00:02:28.770
+Maksud saya masih komponen.
+
+00:02:28.870 --> 00:02:30.100
+Jadi mari
+
+00:02:32.770 --> 00:02:36.680
+kita simpan dan sekarang kita memiliki snapshot baru yang sempurna.
+
+00:02:36.720 --> 00:02:40.830
+Jadi jika kita pernah memodifikasi conurbation dan itu akan kesalahan itu bagus.
+
+00:02:40.840 --> 00:02:42.200
+Mari kita buat ini sedikit lebih kecil.
+
+00:02:45.380 --> 00:02:48.510
+Baiklah mari kita buat sekarang ada tes di sini.
+
+00:02:48.620 --> 00:02:54.890
+Dan omong-omong jika Anda mau, Anda bisa menggunakan uraian dan kemudian kelompokkan semua tes bersama.
+
+00:02:55.260 --> 00:02:57.160
+Tapi saya sudah menunjukkan kepada Anda bagaimana melakukan itu.
+
+00:02:57.170 --> 00:03:02.410
+Anda dapat melakukannya sendiri jika Anda ingin memiliki lebih banyak organisasi untuk pengujian Anda.
+
+00:03:02.420 --> 00:03:09.020
+Mari kita lakukan tes kali ini yang akan mengatakan
+
+00:03:11.470 --> 00:03:17.860
+kita ingin memastikan bahwa penghitung yang benar menambah.
+
+00:03:17.980 --> 00:03:22.780
+Dan lagi sintaks yang biasa kita dan di sini kita bisa menulis tes.
+
+00:03:22.780 --> 00:03:24.080
+Jadi apa yang bisa kita lakukan.
+
+00:03:24.850 --> 00:03:27.890
+Yah pertama-tama berpikir mari kita lakukan konser.
+
+00:03:29.370 --> 00:03:39.340
+Rapper dan ini hanya akan menjadi rendering dangkal dari komponen kami dan kami hanya akan memiliki penelepon palsu
+
+00:03:40.150 --> 00:03:43.360
+juga yang akan kita gunakan.
+
+00:03:43.360 --> 00:03:48.640
+Baiklah sekarang karena kita sudah memiliki ini alih-alih selalu mengetik harapan dan kemudian
+
+00:03:48.640 --> 00:03:55.190
+melakukan ini dangkal kita bisa mengatakan mengharapkan rapper dan kita dapat menulis lebih banyak tes di sini.
+
+00:03:55.250 --> 00:04:05.300
+Katakanlah kita ingin rapper. Daut menemukan hal lain yang kita dapatkan dengan paket enzim.
+
+00:04:05.400 --> 00:04:12.060
+Jadi pada bungkusnya seperti yang kita lakukan dalam permintaan atau
+
+00:04:12.060 --> 00:04:22.960
+pilih semua kita bisa melakukan sesuatu seperti menemukan tempat kita menemukan katakanlah ID dan ini harus kurung
+
+00:04:28.030 --> 00:04:37.410
+siku sebenarnya di mana kita memiliki ID dengan melakukan ini sekarang saya bisa pergi ke
+
+00:04:43.410 --> 00:04:52.710
+saya conurbation dan berikan ID dan kami akan memastikan bahwa kami membuat snapshot berlalu.
+
+00:04:52.930 --> 00:04:58.570
+Dan sekarang kita dapat menemukan penghitung ID ini yang merupakan tombol.
+
+00:04:58.570 --> 00:05:10.190
+Sekarang dan kita dapat melakukan sesuatu yang disebut mensimulasikan dan mensimulasikan suatu peristiwa seperti acara klik yang Konner
+
+00:05:10.670 --> 00:05:12.940
+memiliki acara klik.
+
+00:05:13.010 --> 00:05:19.540
+Jadi kami hanya mensimulasikan klik pada conurbation ini.
+
+00:05:19.600 --> 00:05:27.790
+Jadi jika kita mensimulasikan klik pada penghitung Bawden dan negara bagian atau penghitungan di negara bagian adalah nol,
+
+00:05:27.790 --> 00:05:30.850
+kita berharap penghitungan sekarang menjadi 1.
+
+00:05:30.880 --> 00:05:41.820
+Jadi yang perlu kita lakukan hanyalah mengatakan xpect wrapper kita bisa menggunakan sesuatu yang disebut state.
+
+00:05:41.880 --> 00:05:47.310
+Jadi ini akan merebut negara bagian dan kami berharap negara
+
+00:05:50.950 --> 00:05:54.380
+bagian itu memiliki jumlah yang sama.
+
+00:05:54.400 --> 00:05:55.710
+Mari kita lihat apakah itu benar-benar berfungsi.
+
+00:05:55.710 --> 00:05:57.390
+Ketika Anda keluar beberapa titik koma di sini.
+
+00:05:59.370 --> 00:06:02.240
+Baiklah semuanya lewat.
+
+00:06:02.310 --> 00:06:07.130
+Tetapi sekali lagi kami ingin memastikan bahwa itu benar-benar pengujian sementara
+
+00:06:07.130 --> 00:06:11.500
+Anda ingin katakan ini nol sekarang sekarang oh gagal.
+
+00:06:11.510 --> 00:06:15.410
+Dan mari kita kembali lagi hanya untuk memastikan barang kita lewat.
+
+00:06:15.410 --> 00:06:18.370
+Saya akan mensimulasikan klik lagi.
+
+00:06:18.620 --> 00:06:20.270
+Jadi jika saya pergi.
+
+00:06:20.480 --> 00:06:20.750
+Tidak.
+
+00:06:20.780 --> 00:06:23.260
+Sekarang mengharapkan hitungan dua.
+
+00:06:23.420 --> 00:06:28.670
+Jadi saya mengubahnya agar tes kami lulus.
+
+00:06:28.690 --> 00:06:30.130
+Itu keren sekali.
+
+00:06:30.130 --> 00:06:33.010
+Sekarang jika saya menghapus penghitung ini
+
+00:06:37.070 --> 00:06:43.190
+dan saya memiliki dua tes gagal sekarang karena selain menjalankan snapshot yang gagal sekarang
+
+00:06:43.190 --> 00:06:51.530
+karena kami telah mengubah tampilan komponen. Kami juga menghapus cara bagi kami untuk mengambil komponen itu dengan ID dan Anda
+
+00:06:51.530 --> 00:06:57.410
+dapat melihat bahwa metode mensimulasikan hanya dimaksudkan untuk dijalankan pada satu simpul nol dana
+
+00:06:57.410 --> 00:07:00.610
+karena kita tidak dapat menemukan ID penghitung.
+
+00:07:00.800 --> 00:07:04.640
+Dan Anda dapat melakukan banyak hal di sini untuk mengambil objek.
+
+00:07:04.640 --> 00:07:11.120
+Saya biasanya suka memiliki ID karena well hanya menaikkan dengan baik tapi itu cukup keren.
+
+00:07:11.120 --> 00:07:20.010
+Kami hanya dengan cara yang sangat sederhana menguji keadaan kami dan sekali lagi jangan kewalahan dengan semua ini bekerja dengan hanya
+
+00:07:20.430 --> 00:07:27.600
+lembar contekan dan dokumentasi enzim Anda dapat mengambil ini dalam sehari dengan cukup mudah dan saya tidak
+
+00:07:27.660 --> 00:07:29.300
+ingat semua ini.
+
+00:07:29.310 --> 00:07:33.030
+Saya biasanya pergi ke dokumentasi mereka dan berkata oh ya mereka memiliki metode asimulasi.
+
+00:07:33.150 --> 00:07:38.790
+Oh ya mereka memiliki metode negara untuk mengambil negara dan itulah cara Anda bekerja sebagai pengembang atau
+
+00:07:38.790 --> 00:07:45.540
+Anda tidak memiliki ensiklopedia semua di kepala Anda dari semua metode Anda hanya tahu bahwa ini adalah apa enzim dan
+
+00:07:45.540 --> 00:07:46.230
+lakukan.
+
+00:07:46.410 --> 00:07:50.260
+Biarkan saya pergi memeriksa dokumentasi mereka dan melihat bagaimana saya dapat mengambil status.
+
+00:07:50.640 --> 00:07:57.210
+Oh dan omong-omong jika saya menambahkan lagi ingat ini javascript hanya akan satu per
+
+00:07:57.330 --> 00:08:08.040
+satu jika saya tambahkan di sini klik lain dan bagian bawah di sini saya jalankan lagi berharap saya akan berharap bahwa sekarang tiga.
+
+00:08:08.260 --> 00:08:12.910
+Dan Anda melihat bahwa semua tes saya masih berlalu karena semuanya terjadi secara berurutan.
+
+00:08:14.400 --> 00:08:24.470
+Dan jika saya menambahkan nother klik di sini maka saya bisa atau katakan ini akan menjadi tombol tekan bahkan jika ada tombol tekan
+
+00:08:24.470 --> 00:08:28.300
+di sana karena tidak ada acara tekan tombol.
+
+00:08:28.370 --> 00:08:32.930
+Saya masih mengharapkan keadaan Kaante ketiganya.
+
+00:08:32.930 --> 00:08:34.100
+Ini dia.
+
+00:08:34.190 --> 00:08:40.820
+Sekarang ketika Anda menguji ada banyak hal yang dapat Anda uji untuk Anda bisa terus berjalan
+
+00:08:40.820 --> 00:08:46.040
+dan terus menggambar tetapi Anda ingin menggunakan waktu Anda dengan bijak.
+
+00:08:46.050 --> 00:08:48.020
+Lakukan tes ini.
+
+00:08:48.030 --> 00:08:50.360
+Apakah cukup untuk beralih ke tes lain.
+
+00:08:50.370 --> 00:08:54.680
+Dan itu selalu merupakan kompromi tentang bagaimana proyek Anda lakukan.
+
+00:08:54.680 --> 00:09:00.870
+Berapa banyak tes lain yang dimiliki proyek Anda dan berapa banyak waktu dan sumber daya yang Anda miliki untuk menulis tes.
+
+00:09:00.870 --> 00:09:02.780
+Mari kita lakukan yang terakhir.
+
+00:09:02.910 --> 00:09:11.400
+Saya akan berharap bahwa rapper Daut prop mengatakan
+
+00:09:15.050 --> 00:09:22.920
+sama dengan warna merah yang sama.
+
+00:09:22.980 --> 00:09:24.190
+Mari kita lihat apakah itu berhasil.
+
+00:09:26.700 --> 00:09:28.610
+Baiklah saya mendapat tes gagal.
+
+00:09:28.620 --> 00:09:35.190
+Dan itu karena saya hanya menebak-nebak berdasarkan keadaan apakah memiliki alat peraga dan dua sama.
+
+00:09:35.190 --> 00:09:44.970
+Jadi mari kita meringkuk dan kita melihat bahwa kita mengharapkan warna merah tetapi sebaliknya kita mendapat satu ton alat peraga lain karena sementara
+
+00:09:45.950 --> 00:09:53.070
+kita memiliki warna merah tetapi kita juga mendapatkan anak-anak dan kita juga memiliki Heidi serta acara
+
+00:09:53.250 --> 00:09:53.890
+klik.
+
+00:09:55.770 --> 00:10:05.470
+Hal lain yang bisa kita lakukan di sini adalah mungkin hanya menyimpan warna mari kita simpan dan
+
+00:10:05.650 --> 00:10:12.910
+sekarang kita mendapatkan merah yang bagus jadi kita ingin mengatakan dua sama.
+
+00:10:13.150 --> 00:10:14.280
+Dan begitulah.
+
+00:10:14.410 --> 00:10:20.830
+Tes kami lulus kami memang memiliki log konsol di sini yang agak menjengkelkan
+
+00:10:21.520 --> 00:10:28.900
+Jadi mari kita hapus dari tombol penghitung dan ada tes yang melampaui dan terlihat sangat sangat bagus.
+
+00:10:28.950 --> 00:10:33.290
+Saya harap Anda mendapat gambaran umum tentang cara menguji komponen.
+
+00:10:33.360 --> 00:10:40.860
+Dan omong-omong folder snapshot ini Anda akan benar-benar memasukkannya ke dalam hub dapatkan Anda atau kontrol sumber apa pun
+
+00:10:40.920 --> 00:10:42.110
+yang Anda miliki.
+
+00:10:42.180 --> 00:10:48.210
+Anda akan mendorong itu dan berkomitmen untuk proyek Anda karena setiap pengembang
+
+00:10:48.210 --> 00:10:53.370
+baru yang datang ke proyek akan mengunduh master terbaru.
+
+00:10:53.580 --> 00:10:58.010
+Dan Anda juga ingin memastikan bahwa mereka memiliki snapshot ini ketika mereka menjalankan tes dan
+
+00:10:58.010 --> 00:10:58.980
+mereka memodifikasi komponen.
+
+00:10:58.980 --> 00:11:04.380
+Snapshots ini akan memeriksa versi yang lebih lama dan memastikan bahwa pengembang baru ini tidak
+
+00:11:04.590 --> 00:11:05.690
+mengubah apa pun.
+
+00:11:05.820 --> 00:11:12.170
+Jadi sekali lagi hal-hal ini juga akan masuk ke kontrol sumber atau kontrol versi Anda.
+
+00:11:12.180 --> 00:11:14.470
+Baiklah, sampai jumpa di video berikutnya.
+
+00:11:14.550 --> 00:11:15.160
+Sampai jumpa.

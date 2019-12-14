@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:01.110 --> 00:00:09.870
+Mari kita bicara tentang topik pertama kita pada daftar jaringan pengiriman konten atau TDX dan ini adalah topik yang telah
+
+00:00:09.870 --> 00:00:18.360
+kita bahas sedikit saja dalam hal ini membantu mempercepat hampir semua situs web dengan menyimpan file-nya di server
+
+00:00:18.360 --> 00:00:19.870
+di seluruh dunia.
+
+00:00:21.040 --> 00:00:28.290
+Anda melihat apakah pengunjung Anda datang dari Eropa Asia Amerika Utara di tempat lain.
+
+00:00:28.510 --> 00:00:36.900
+Konten secara otomatis disajikan dari server terdekat untuk Spizz secepat mungkin.
+
+00:00:37.000 --> 00:00:44.500
+Dan diagram ini berasal dari situs web CloudFlare mungkin layanan CDN paling populer di Amerika Utara yang dibuatnya
+
+00:00:45.450 --> 00:00:48.210
+sangat sederhana di situs Web mereka.
+
+00:00:48.210 --> 00:00:50.120
+Anda tidak perlu melakukan apa pun dengan kode.
+
+00:00:50.250 --> 00:00:55.740
+Anda hanya pergi melalui halaman web mereka memberi tahu mereka apa yang perlu Anda lakukan dan mereka melakukan semua kerja keras untuk Anda.
+
+00:00:57.240 --> 00:01:06.050
+Yang perlu Anda lakukan adalah memperbarui server nama DNS Anda untuk menggunakan lawfare dan menendang secara otomatis.
+
+00:01:06.060 --> 00:01:08.090
+Sekarang apa artinya itu.
+
+00:01:08.400 --> 00:01:16.380
+Baik awalnya jika ini adalah server asal kami yang merupakan server kami sendiri di mana
+
+00:01:16.380 --> 00:01:26.600
+kami memiliki semua file kami dan server CDN ini dimiliki oleh CloudFlare Yah awalnya permintaan dari satu pengguna katakanlah pengguna
+
+00:01:26.600 --> 00:01:35.780
+di Alaska ketika pengguna meminta halaman web pengguna meminta karena kami memodifikasi dalam KLOV untuk suar dan katakan
+
+00:01:35.780 --> 00:01:44.510
+hei alih-alih datang langsung ke kami ke server asal kami, kami mengubah konfigurasi DNS kami sehingga
+
+00:01:44.750 --> 00:01:49.000
+pengguna ini akan dialihkan ke server CloudFlare.
+
+00:01:49.220 --> 00:01:56.090
+Jadi mereka pergi ke sini atas permintaan awal server tepi dan ini adalah
+
+00:01:56.480 --> 00:02:06.780
+apa yang kita sebut server CDN terkadang membuat permintaan ke server asal untuk konten yang diminta pengguna dan server asal
+
+00:02:07.050 --> 00:02:09.030
+merespons dengan permintaan.
+
+00:02:09.260 --> 00:02:13.520
+Dan akhirnya server merespons klien.
+
+00:02:13.520 --> 00:02:16.470
+Baiklah jadi sepertinya tidak lebih cepat melakukannya.
+
+00:02:17.340 --> 00:02:26.480
+Nah nilai CDN adalah kedekatan dengan klien terjadi setelah permintaan awal ke server asal.
+
+00:02:26.540 --> 00:02:33.460
+Anda melihat pertama kali di sekitar server ini perlu mendapatkan file dari server asal.
+
+00:02:33.490 --> 00:02:39.420
+Namun itu melakukan sesuatu yang disebut caching di mana lagi kita akan membahas di bagian ini.
+
+00:02:39.880 --> 00:02:48.420
+Setelah permintaan awal, data ini akan di-cache atau diingat ke jaringan Cdn sehingga setiap permintaan
+
+00:02:48.420 --> 00:02:55.350
+berikutnya dari klien hanya perlu sejauh server terdekat yang ada di sini.
+
+00:02:55.740 --> 00:03:02.220
+Jadi setiap permintaan lagi dari klien ini akan selalu pergi ke server ini dan tidak perlu
+
+00:03:02.220 --> 00:03:04.110
+khawatir tentang server asal.
+
+00:03:04.150 --> 00:03:06.370
+Sekarang mengapa ini membantu.
+
+00:03:06.510 --> 00:03:09.540
+Yah jelas itu meningkatkan kecepatan memuat halaman.
+
+00:03:09.540 --> 00:03:12.690
+Ada juga yang mengonfigurasi sehingga menangani beban lalu lintas yang lebih tinggi.
+
+00:03:13.050 --> 00:03:19.380
+Itu dapat memblokir pencakar spammer dan bot buruk lainnya karena sementara CloudFlare dan perusahaan lain yang menawarkan ini
+
+00:03:19.380 --> 00:03:25.230
+mengkhususkan diri dalam hal ini sehingga mereka mendedikasikan banyak waktu untuk tim teknik mereka untuk memperbaiki
+
+00:03:25.230 --> 00:03:26.330
+masalah ini.
+
+00:03:26.340 --> 00:03:33.660
+Ini mengurangi konsumsi bandwidth Anda dan kadang-kadang mereka juga melakukan load balancing antara beberapa server.
+
+00:03:33.810 --> 00:03:37.950
+Sekali lagi load balancing adalah sesuatu yang akan dibahas di bagian ini.
+
+00:03:37.950 --> 00:03:41.010
+Akhirnya itu juga sangat aman.
+
+00:03:41.010 --> 00:03:44.440
+Biasanya mereka memungkinkan Anda untuk mengirim file statis di atas selembar kertas.
+
+00:03:44.520 --> 00:03:45.290
+Iya nih.
+
+00:03:45.300 --> 00:03:53.200
+Dan juga melindungi situs web dari hal-hal seperti serangan OS atau penolakan serangan layanan yang didistribusikan.
+
+00:03:53.220 --> 00:03:55.700
+Jadi ada banyak manfaatnya.
+
+00:03:56.220 --> 00:04:00.310
+Sekarang dalam contoh ini saya menggunakan CloudFlare tetapi ada banyak opsi di luar sana.
+
+00:04:01.300 --> 00:04:07.120
+Kami sudah memiliki CloudFlare dan Anda dapat melihat berapa banyak server yang mereka miliki di seluruh dunia yang
+
+00:04:07.120 --> 00:04:11.840
+didasarkan pada di mana pengguna berada, mereka hanya dapat terhubung ke server terdekat.
+
+00:04:11.860 --> 00:04:20.880
+Ada juga cloud populer Amazon yang berbelok dan kemudian Microsoft juga memiliki jaringan pengiriman konten Microsoft
+
+00:04:20.880 --> 00:04:22.090
+Azure sendiri.
+
+00:04:22.380 --> 00:04:27.500
+Dan ada satu ton sumber daya lain tetapi ketiganya mungkin yang paling populer.
+
+00:04:27.530 --> 00:04:28.760
+Sekarang mari kita
+
+00:04:31.490 --> 00:04:35.720
+kembali ke diagram untuk memahami mengapa iklan CDN begitu populer dan digunakan secara luas.
+
+00:04:35.810 --> 00:04:41.970
+Kita harus mencari tahu apa masalahnya dan masalahnya adalah sesuatu yang disebut latensi.
+
+00:04:42.320 --> 00:04:49.160
+Ini keterlambatan menjengkelkan yang terjadi sejak saya menekan enter untuk meminta halaman web untuk benar-benar mendapatkan halaman
+
+00:04:49.160 --> 00:04:52.140
+web untuk dimuat ke browser saya.
+
+00:04:53.830 --> 00:04:59.410
+Dan penundaan itu dipengaruhi oleh sejumlah faktor dan kami telah membicarakannya
+
+00:04:59.500 --> 00:05:08.270
+dan bagian pengoptimalan jaringan dalam semua kasus meskipun sebagian besar dari itu adalah keterlambatan oleh jarak fisik antara Anda
+
+00:05:08.270 --> 00:05:10.890
+dan server situs web hosting.
+
+00:05:11.070 --> 00:05:14.100
+Mari kita gunakan diagram ini sebagai contoh.
+
+00:05:14.890 --> 00:05:15.910
+Permintaan.
+
+00:05:15.990 --> 00:05:20.640
+Katakanlah saya berada di New York ke Singapura server yang ada di Singapura.
+
+00:05:20.640 --> 00:05:29.360
+Ya itu jarak yang jauh dan permintaan tidak harus langsung ke Singapura.
+
+00:05:29.490 --> 00:05:35.910
+Itu paling sering melompat dari satu router ke router lain ke jam lain sampai sampai ke Singapura dan
+
+00:05:36.270 --> 00:05:39.180
+akhirnya mereka harus mengirim file-file itu kembali.
+
+00:05:40.060 --> 00:05:48.870
+Sekarang cukup jelas bagaimana CDN meningkatkan latensi ini dengan menarik file konten statis dari server asal dan
+
+00:05:48.870 --> 00:05:54.690
+Singapura ke dalam jaringan CDN terdistribusi dan proses yang disebut caching.
+
+00:05:55.020 --> 00:06:01.100
+Sehingga sekarang jika server hanya di Portugal server CDD hanya di Portugal.
+
+00:06:01.170 --> 00:06:03.220
+Kami menghindari semua lompatan ekstra ini.
+
+00:06:04.410 --> 00:06:07.660
+Dan ini adalah poin yang kita tidak perlu melangkah lebih jauh.
+
+00:06:07.770 --> 00:06:14.010
+Sudah cukup jelas mengapa jaringan CDN berharga dan Anda ingin menggunakan perusahaan yang
+
+00:06:14.010 --> 00:06:24.320
+sudah memiliki server di seluruh dunia seperti CloudFlare Amazon dan Microsoft karena mereka sudah memiliki spesialisasi itu dan mereka cukup murah
+
+00:06:24.320 --> 00:06:28.940
+untuk digunakan dan beberapa menawarkan opsi gratis seperti CloudFlare.
+
+00:06:28.940 --> 00:06:30.960
+Jadi, cobalah.
+
+00:06:31.010 --> 00:06:35.710
+Kapan saja Anda perlu mengoptimalkan pengiriman file ke ujung depan.
+
+00:06:35.920 --> 00:06:37.780
+Saya akan melihat yang berikutnya Buh-Bye.

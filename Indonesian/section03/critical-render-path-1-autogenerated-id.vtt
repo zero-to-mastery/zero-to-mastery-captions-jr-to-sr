@@ -1,0 +1,193 @@
+﻿WEBVTT
+
+00:00:01.470 --> 00:00:02.880
+Selamat datang kembali.
+
+00:00:02.880 --> 00:00:12.160
+Ketika pengguna meminta halaman untuk situs Anda, halaman tersebut DML mulai mengalir ke browser
+
+00:00:12.220 --> 00:00:20.320
+segera setelah browser menemukan tag untuk gambar eksternal, skrip file c.
+
+00:00:20.350 --> 00:00:28.750
+Itu akan mulai mengunduh file secara bersamaan ketika browser menerima atau mengirim email itu melakukan
+
+00:00:28.750 --> 00:00:34.980
+sesuatu yang disebut parsing itu memecahnya menjadi kosakata yang dimengerti.
+
+00:00:35.170 --> 00:00:41.690
+Setelah memahami dokumen ini, ia mulai membuat Dom seperti yang telah kami sebutkan
+
+00:00:41.780 --> 00:00:43.450
+model objek dokumen.
+
+00:00:43.970 --> 00:00:51.350
+Dan lagi ketika membangunnya begitu melihat sumber daya eksternal, ia melanjutkan dan mulai mengunduh semua
+
+00:00:51.560 --> 00:00:52.540
+itu.
+
+00:00:52.910 --> 00:01:01.220
+Dan biasanya file CSSA dan javascript mengambil prioritas tinggi dan file lain seperti gambar mengambil
+
+00:01:01.220 --> 00:01:02.890
+prioritas lebih rendah.
+
+00:01:02.990 --> 00:01:04.940
+Jadi bagaimana kita mengoptimalkan proses ini.
+
+00:01:04.940 --> 00:01:11.020
+Bagaimana kami mengoptimalkan HCM Alpha yang merupakan langkah 1.
+
+00:01:12.850 --> 00:01:22.000
+Nah hal pertama yang ingin Anda lakukan adalah memuat gaya yaitu file CSSA sesegera mungkin dan skrip yaitu
+
+00:01:22.120 --> 00:01:27.460
+file javascript selambat mungkin dengan beberapa pengecualian di sana-sini.
+
+00:01:29.150 --> 00:01:29.730
+Mengapa.
+
+00:01:29.900 --> 00:01:37.460
+Nah salah satu prinsip utama kinerja CSSA adalah untuk mendapatkan CSSA ke browser secepat mungkin.
+
+00:01:38.850 --> 00:01:45.370
+Javascript membutuhkan melar CSSA parsing untuk selesai sebelum dapat dijalankan.
+
+00:01:45.430 --> 00:01:46.750
+Itu langkah 4 di sini.
+
+00:01:47.750 --> 00:01:55.270
+Cara ini akan memberi gaya cukup waktu untuk membuat model objek DSS.
+
+00:01:55.380 --> 00:02:02.070
+Jadi jika Anda memasukkan javascript di tag kepala di Mel.
+
+00:02:02.270 --> 00:02:11.860
+Masalah dengan pemosisian itu jika berada di atas adalah ia memblokir skrip rendering halaman yang secara historis memblokir sumber
+
+00:02:11.860 --> 00:02:15.680
+daya tambahan agar tidak diunduh lebih cepat.
+
+00:02:16.910 --> 00:02:23.750
+Dengan menggantinya di bagian bawah atau dengan menempatkannya di bagian bawah, konten gaya Anda dan media
+
+00:02:23.750 --> 00:02:28.760
+dapat mulai mengunduh dengan lebih cepat dengan persepsi peningkatan kinerja.
+
+00:02:29.920 --> 00:02:38.990
+Cara terbaik untuk menunjukkan ini adalah melalui contoh yang saya miliki di sini kartu indeks yang sangat sangat sederhana yang
+
+00:02:38.990 --> 00:02:39.950
+membuatnya pergi.
+
+00:02:40.610 --> 00:02:46.330
+Ini memiliki tag H-1 sederhana tombol yang tidak melakukan apa-apa.
+
+00:02:46.440 --> 00:02:53.980
+Dan kami memiliki tag tautan dengan style sheet eksternal di sini dan tag skrip di bagian
+
+00:02:54.370 --> 00:02:59.470
+bawah seperti yang saya sebutkan yang tidak memberitahukan tanda cek.
+
+00:02:59.480 --> 00:03:04.790
+Jadi jika kita pergi ke browser kita, situs web kita sangat cantik.
+
+00:03:04.880 --> 00:03:16.260
+Tab jaringan kami terbuka dan jika saya klik menyegarkan di sini saya melihat bahwa file indeks saya dan stardate melihat
+
+00:03:17.420 --> 00:03:21.030
+file SS baik sepertinya itu dimuat.
+
+00:03:21.550 --> 00:03:29.890
+Dan karena kami memiliki peringatan di sini, ia memblokir rendering halaman karena javascript sedang berjalan saat
+
+00:03:29.890 --> 00:03:33.070
+ini dan kami akan membahas alasannya.
+
+00:03:33.160 --> 00:03:34.720
+Dan video selanjutnya.
+
+00:03:34.840 --> 00:03:42.850
+Tetapi untuk sekarang saya ingin Anda melihat bahwa indeks dan melihat jatuh di mana keduanya diunduh.
+
+00:03:42.860 --> 00:03:45.770
+Sekarang mari kita coba yang lain.
+
+00:03:45.870 --> 00:03:55.220
+Jika saya memindahkan tag skrip ini di atas stylesheet yang saya simpan.
+
+00:03:55.420 --> 00:03:56.970
+Dan sekarang saya
+
+00:03:59.740 --> 00:04:03.890
+menyegarkan halaman saya, kita melihat bahwa stylesheet sekarang tertunda.
+
+00:04:04.930 --> 00:04:13.690
+Jika saya klik OK maka mulai mengunduh dan kita lihat di sini bahwa style sheet terhenti
+
+00:04:14.110 --> 00:04:21.850
+selama 14 detik karena kami tidak membiarkannya mengunduh terutama karena javascript sedang berjalan.
+
+00:04:22.020 --> 00:04:27.090
+Dan akhirnya dimuat dan diunduh setelah Javascript.
+
+00:04:27.090 --> 00:04:36.440
+Jadi, Anda lihat di sini bagaimana kami memblokir hal-hal lain agar tidak terjadi hanya dengan menyuruh skrip di dek.
+
+00:04:37.750 --> 00:04:44.900
+Jadi sekali lagi kami ingin memastikan bahwa file javascript cenderung di bagian bawah dan sekarang ada beberapa pengecualian
+
+00:04:44.920 --> 00:04:51.940
+katakanlah misalnya Anda memiliki Google Analytics yang merupakan tag skrip dan Anda ingin itu dijalankan segera mungkin
+
+00:04:51.940 --> 00:04:54.910
+Anda ingin tahu apa pengguna melakukannya.
+
+00:04:54.910 --> 00:04:56.570
+Detik pertama di situs Web.
+
+00:04:56.770 --> 00:05:02.800
+Dalam hal ini Anda mungkin ingin meletakkan tag skrip di bagian atas tetapi perlu diingat bahwa itu dapat memperlambat situs
+
+00:05:02.800 --> 00:05:03.520
+Web Anda.
+
+00:05:03.850 --> 00:05:10.070
+Dan kami juga ingin memastikan bahwa gaya sedang diunduh sesegera mungkin.
+
+00:05:10.120 --> 00:05:11.840
+Jadi itu sebabnya kami menempatkan mereka di kepala.
+
+00:05:12.950 --> 00:05:19.350
+Jadi mari kita tinjau apakah Anda meletakkan skrip atau tag skrip Anda di bagian bawah halaman.
+
+00:05:19.490 --> 00:05:21.280
+Mereka akan dimuat terakhir.
+
+00:05:21.380 --> 00:05:25.600
+Dengan kata lain sesuatu dapat muncul di browser lebih cepat.
+
+00:05:25.610 --> 00:05:31.620
+Pengguna Anda tidak perlu menunggu skrip selesai diunduh sebelum mereka melihat sesuatu di aplikasi Anda.
+
+00:05:33.010 --> 00:05:40.540
+Dan Anda juga ingin memuat tag gaya Anda sesegera mungkin sehingga objek dokumen CSSA
+
+00:05:40.540 --> 00:05:43.020
+dapat dibuat sesegera mungkin.
+
+00:05:43.030 --> 00:05:48.270
+Dan ingatlah agar kita membuat pohon render.
+
+00:05:48.350 --> 00:05:48.870
+Baiklah.
+
+00:05:48.870 --> 00:05:50.970
+Jadi itulah bagian pertama.
+
+00:05:51.920 --> 00:05:53.640
+Mari kita lihat langkah kedua.
+
+00:05:54.050 --> 00:06:00.040
+Dan kemudian semua langkah dalam video berikutnya melihatnya.

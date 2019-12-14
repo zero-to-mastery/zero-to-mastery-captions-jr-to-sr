@@ -1,0 +1,124 @@
+﻿WEBVTT
+
+00:00:01.640 --> 00:00:09.830
+Salah satu hal pertama yang akan Anda sadari sebagai pengembang web adalah kecepatan Internet berbeda-beda untuk semua orang.
+
+00:00:09.830 --> 00:00:13.440
+Dan orang-orang tidak punya waktu untuk menunggu situs web Anda dimuat.
+
+00:00:13.490 --> 00:00:16.560
+Kinerja sangat penting.
+
+00:00:17.690 --> 00:00:25.280
+Semua perusahaan besar memprioritaskan pengalaman Pengguna Cepat karena mereka tahu bahwa orang-orang saat ini terbiasa
+
+00:00:25.370 --> 00:00:34.810
+untuk tidak menunggu di sekitar Amazon menghitungnya di situs Web mereka jika memuat halaman melambat hanya satu detik yang
+
+00:00:34.810 --> 00:00:39.040
+bisa menelan biaya 1. 6 miliar dalam penjualan setiap tahun.
+
+00:00:39.040 --> 00:00:46.060
+Google juga melakukan perhitungan dan dengan memperlambat hasil pencariannya hanya dengan empat persepuluh detik mereka dapat kehilangan hingga
+
+00:00:46.060 --> 00:00:52.510
+satu juta pencarian per hari yang berarti mereka akan kehilangan semua uang iklan yang mereka
+
+00:00:52.510 --> 00:00:52.980
+dapatkan.
+
+00:00:54.410 --> 00:01:00.750
+Sekarang ada cara tak terbatas untuk membuat kode Anda lebih berkinerja dan situs web Anda lebih cepat.
+
+00:01:00.770 --> 00:01:06.860
+Jadi di bagian ini kita akan fokus pada hal-hal utama yang memberi Anda 80 persen dari manfaat.
+
+00:01:06.920 --> 00:01:08.320
+Mari kita mulai.
+
+00:01:09.070 --> 00:01:15.440
+Pertama mari kita rekap apa yang terjadi ketika Anda biasanya menjelajah ke situs Web.
+
+00:01:15.520 --> 00:01:17.300
+Kami memiliki klien dan server.
+
+00:01:17.350 --> 00:01:24.430
+Katakanlah Anda berada di Google di sini dan Anda ingin mengunjungi dotcom super segar situs Web yang luar biasa ini.
+
+00:01:24.430 --> 00:01:29.000
+Nah dalam hal ini Anda membuat permintaan ke server.
+
+00:01:29.430 --> 00:01:37.640
+Server itu mengembalikan file ASTM dan kemudian di dalam file email browser mulai membacanya dan menemukan Anda.
+
+00:01:37.720 --> 00:01:40.250
+Saya memiliki style sheet yang perlu saya dapatkan.
+
+00:01:40.270 --> 00:01:48.300
+Jadi pergi ke server sekali lagi meraih stylesheet dan kemudian saat melihat file.
+
+00:01:48.430 --> 00:01:50.860
+Kami juga memiliki gambar yang kami butuhkan.
+
+00:01:50.920 --> 00:01:58.200
+Jadi di latar belakang itu meminta gambar dan lagi-lagi gambar akan ditransfer berulang-ulang.
+
+00:01:58.210 --> 00:02:00.750
+Ada juga skrip yang menandai pekerjaan sebagai file yang aman.
+
+00:02:00.750 --> 00:02:03.220
+Jadi sekali lagi kita membutuhkannya juga.
+
+00:02:05.190 --> 00:02:12.090
+Sekarang ini adalah versi sederhana dari apa yang terjadi dan kita akan masuk ke detail seluk beluk
+
+00:02:12.090 --> 00:02:14.230
+yang bagian kinerja kursus ini.
+
+00:02:14.580 --> 00:02:17.280
+Tetapi konsep inti ada di sini.
+
+00:02:17.280 --> 00:02:25.920
+Kami memiliki hubungan klien dan server dan file email memberi kami indikasi file apa yang kami butuhkan
+
+00:02:26.160 --> 00:02:34.100
+dari server OK tetapi bagaimana kami dapat berpikir kritis tentang kinerja dan meningkatkan proses.
+
+00:02:34.790 --> 00:02:38.390
+Terutama karena aplikasi web kami menjadi lebih besar dan lebih besar.
+
+00:02:38.420 --> 00:02:44.020
+Kebanyakan orang senang menempatkan situs Web secara online tetapi itu tidak benar.
+
+00:02:44.030 --> 00:02:49.820
+Kami ingin mengesankan atasan kami, kami ingin menunjukkan kepada mereka bahwa kami hanya meningkatkan situs Web perusahaan mereka
+
+00:02:49.940 --> 00:02:52.200
+yang menghasilkan lebih banyak pendapatan bagi mereka.
+
+00:02:52.980 --> 00:03:01.080
+Kami ingin menunjukkan kepada Brunow bahwa kami tahu apa yang kami lakukan dan kami adalah superstar, jadi ingat
+
+00:03:02.280 --> 00:03:06.630
+pengunjung Anda berharap situs Anda memuat dalam dua detik.
+
+00:03:07.460 --> 00:03:13.130
+Dan sekitar setengah dari mereka akan pergi jika dibutuhkan lebih dari tiga detik.
+
+00:03:13.990 --> 00:03:19.510
+Sekarang setiap detik keterlambatan mengurangi kepuasan pelanggan dan mungkin uang.
+
+00:03:19.510 --> 00:03:26.590
+Jadi tidak ada sinyal pengembang junior seperti situs web portofolio Anda memuat gambar lima megabyte yang tidak perlu
+
+00:03:26.620 --> 00:03:28.510
+untuk halaman rumah Anda.
+
+00:03:29.180 --> 00:03:36.440
+Jadi di video berikutnya dan yang berikutnya kita akan mempelajari prinsip-prinsip ini sehingga kita tidak pernah
+
+00:03:36.440 --> 00:03:38.510
+membuat kesalahan kinerja lagi.
+
+00:03:38.930 --> 00:03:40.260
+Saya akan melihatnya satu per satu.

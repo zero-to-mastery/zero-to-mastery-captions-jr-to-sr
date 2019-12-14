@@ -1,0 +1,220 @@
+﻿WEBVTT
+
+00:00:01.310 --> 00:00:08.920
+Dengan database ada satu ton dari mereka dan bahkan dalam kursus saya sebelumnya kami telah membahas perbedaan
+
+00:00:09.070 --> 00:00:16.330
+antara database relasional dan tidak ada database Eski Well database relasional berarti bahwa Anda harus menentukan
+
+00:00:16.330 --> 00:00:24.460
+skema Anda atau bagaimana database Anda terlihat sebelumnya dan Anda dapat membangun database yang sangat rumit dengan cara
+
+00:00:24.490 --> 00:00:25.270
+ini.
+
+00:00:25.780 --> 00:00:29.220
+Dan itulah yang postscript adalah database relasional.
+
+00:00:29.380 --> 00:00:35.170
+Ini adalah basis data yang memungkinkan kita untuk memiliki tabel berbeda yang terkait satu sama lain dan
+
+00:00:35.170 --> 00:00:38.980
+kita mendefinisikan hubungan itu dengan apa yang kita sebut skema.
+
+00:00:39.080 --> 00:00:47.400
+Dan lagi-lagi kami menggunakan postscript sebagai basis data relasional untuk menahan pengguna dan kata sandi kami di otak cerdas kami.
+
+00:00:47.490 --> 00:00:53.310
+Tetapi ada alasan mengapa ada begitu banyak basis data di luar sana yang dibuat untuk mengoptimalkan
+
+00:00:53.310 --> 00:00:54.400
+berbagai hal.
+
+00:00:54.450 --> 00:01:04.140
+Amazon Netflix Facebook Toko donat Alibaba Alibaba semuanya memiliki kebutuhan basis data yang berbeda untuk memenuhi semua kebutuhan
+
+00:01:04.140 --> 00:01:04.840
+ini.
+
+00:01:04.980 --> 00:01:07.990
+Satu ton basis data dapat ditemukan online.
+
+00:01:08.490 --> 00:01:16.760
+Dan hari ini kita akan berbicara tentang salah satu database yang paling dicintai dan digunakan yang disebut edit ulang dan
+
+00:01:16.910 --> 00:01:19.310
+mengatakan tidak menyelamatkan semua database.
+
+00:01:19.370 --> 00:01:24.310
+Jadi dengan cara ini kita bisa belajar sedikit basis data relasional dengan postgresql
+
+00:01:24.320 --> 00:01:30.940
+dan juga tahu menyelamatkan semua dengan mata merah merah inilah yang kita sebut Noas condong semua dalam database memori.
+
+00:01:31.250 --> 00:01:36.640
+Dan pada akhir bagian kata-kata itu akan berarti bagi Anda.
+
+00:01:36.700 --> 00:01:37.760
+Jadi mari kita mulai.
+
+00:01:39.610 --> 00:01:46.070
+Berettas adalah basis data sumber terbuka yang sering digunakan untuk membangun aplikasi web yang dapat diskalakan dengan
+
+00:01:46.070 --> 00:01:47.270
+kinerja sangat tinggi.
+
+00:01:47.270 --> 00:01:55.790
+Banyak perusahaan menggunakan sewaan. Sekarang, basis data Nuh yang terampil dapat memiliki banyak jenis.
+
+00:01:55.840 --> 00:01:59.410
+Anda memiliki hal-hal seperti database catatan guild dokumen.
+
+00:01:59.410 --> 00:02:02.660
+Anda mungkin pernah mendengar tentang Mongo D-B atau Koshti.
+
+00:02:02.770 --> 00:02:05.270
+Ini sangat bagus dalam menyimpan dokumen.
+
+00:02:05.290 --> 00:02:12.580
+Jadi jika Anda memikirkan profil Linked-In di mana profil Anda memiliki semua bidang dan kategori yang
+
+00:02:12.580 --> 00:02:17.160
+berbeda ini dan dan satu pengguna memiliki dokumen seperti data.
+
+00:02:17.200 --> 00:02:20.880
+Kalau begitu, ini benar-benar bagus.
+
+00:02:21.030 --> 00:02:27.560
+Anda memiliki hal-hal seperti kolom lebar dengan Cassandra dan hal-hal seperti Graph databases Nio for Jay.
+
+00:02:27.660 --> 00:02:35.680
+Jika Anda memiliki aplikasi media sosial misalnya yang menggambarkan koneksi seperti grafik antara penggunanya.
+
+00:02:35.850 --> 00:02:43.490
+Sekarang red S adalah apa yang kita sebut sebagai key value store dan hubungan nilai kunci
+
+00:02:43.490 --> 00:02:48.380
+ini sedikit mirip dengan bagaimana kita menangani objek dalam javascript.
+
+00:02:48.380 --> 00:02:54.290
+Kami memiliki properti objek yang memiliki nilai yang terkait dengannya kunci dan nilai.
+
+00:02:55.350 --> 00:02:59.790
+Dan kita akan membahas bagaimana kita akan menggunakan rattus di beberapa video berikutnya.
+
+00:02:59.910 --> 00:03:07.950
+Tetapi satu hal yang ingin saya sampaikan adalah bahwa itu adalah basis data dalam memori yang membuatnya sangat
+
+00:03:07.950 --> 00:03:08.670
+cepat.
+
+00:03:09.380 --> 00:03:14.900
+Anda lihat membaca seperti digunakan untuk data berumur pendek di aplikasi kami.
+
+00:03:15.670 --> 00:03:23.500
+Dan itu sering digunakan dengan hal-hal seperti sesi atau jumlah kepala halaman web dan dalam memori berarti Anda tidak
+
+00:03:23.650 --> 00:03:29.630
+memiliki set data besar seperti Anda akan dengan sesuatu seperti Cassandra atau Mongo D-B.
+
+00:03:29.680 --> 00:03:36.430
+Anda memiliki data yang sangat kecil sehingga data yang sangat kecil memungkinkan kami untuk tetap mengingatnya.
+
+00:03:36.430 --> 00:03:38.990
+Itu adalah memori mesin dan bukan pada disk.
+
+00:03:39.040 --> 00:03:47.020
+Jika Anda ingat memori adalah sesuatu yang sangat mudah diakses pada mesin dan disk sedikit lebih
+
+00:03:47.020 --> 00:03:47.650
+lambat.
+
+00:03:47.800 --> 00:03:53.260
+Anda dapat menyimpan lebih banyak informasi pada disk tetapi agak lambat untuk diakses.
+
+00:03:53.270 --> 00:04:00.310
+Jadi dengan sewa Anda ingin menggunakannya ketika Anda memiliki potongan kecil data yang perlu Anda akses.
+
+00:04:00.770 --> 00:04:04.440
+Dan Anda juga tidak peduli jika Anda mungkin kehilangan sebagian data itu.
+
+00:04:06.170 --> 00:04:14.390
+Sekarang meskipun data dalam memori itu mengambil snapshot sesekali untuk menyimpan konten database saat ini ke
+
+00:04:14.510 --> 00:04:21.190
+disk yang bagus untuk pulih dari ketika ada shutdown yang tidak terduga.
+
+00:04:21.250 --> 00:04:26.430
+Di mana pun Anda membaca itu sedang berjalan dan Anda hanya akan kehilangan beberapa menit terakhir dari informasi.
+
+00:04:27.870 --> 00:04:35.280
+Kemudian berdasarkan informasi itu kita harus menggunakan rattus setiap kali kita memiliki data kecil yang
+
+00:04:35.700 --> 00:04:42.570
+tidak super penting sehingga jika layanan macet kita akan dapat kembali ke snapshot dan
+
+00:04:42.570 --> 00:04:45.480
+kita mungkin kehilangan informasi terbaru.
+
+00:04:45.870 --> 00:04:49.420
+Tapi kami mengorbankan semua itu untuk kecepatan layanan.
+
+00:04:49.470 --> 00:04:54.270
+Ini sangat cepat dan sangat terukur.
+
+00:04:55.480 --> 00:05:01.480
+Dan membaca sama seperti semua database lainnya memiliki serangkaian tipe data unik yang dapat disimpannya.
+
+00:05:01.780 --> 00:05:07.120
+Dan kita akan melihat beberapa dari mereka dan video berikutnya dan Anda akan melihat bahwa itu tidak
+
+00:05:07.180 --> 00:05:11.600
+menggunakan Eskew. Yah itu bukan Eskew semua database dan kita akan melihat cara kerjanya.
+
+00:05:13.570 --> 00:05:19.240
+Di bagian ini kita akan terbiasa dengan Rattus dan kemudian muncul ketika kita berbicara
+
+00:05:19.240 --> 00:05:26.800
+tentang sesi dan JWT kita sebenarnya akan menggunakan rattus dengan cara mengelola sesi untuk kita karena pengembang senior kita
+
+00:05:26.800 --> 00:05:30.500
+harus memutuskan alat mana tepat untuk pekerjaan itu.
+
+00:05:30.610 --> 00:05:32.050
+Kita harus tahu ini sekarang.
+
+00:05:32.260 --> 00:05:39.190
+Dan walaupun postscript sangat luar biasa ketika Anda memiliki alat seperti pengujian ulang yang bisa sangat sangat cepat untuk
+
+00:05:39.190 --> 00:05:45.010
+mengelola data kecil, ada beberapa kasus penggunaan di mana Anda mungkin ingin memiliki beberapa informasi
+
+00:05:45.090 --> 00:05:49.650
+iritis dan beberapa informasi bukanlah postscript tergantung pada apa kebutuhan Anda.
+
+00:05:49.960 --> 00:05:57.470
+Dan di sebagian besar perusahaan, Anda akan melihat ini sangat jarang bahwa perusahaan besar hanya memiliki satu jenis database.
+
+00:05:57.520 --> 00:06:04.990
+Sebagian besar waktu mereka memiliki database yang berbeda di sekitar karena mereka memiliki kebutuhan yang berbeda cara yang berbeda yang mereka butuhkan untuk
+
+00:06:04.990 --> 00:06:09.290
+membaca data dan cara yang berbeda yang mereka butuhkan untuk menulis data.
+
+00:06:09.550 --> 00:06:12.730
+Dan sekali lagi berdasarkan alat itu mereka menggunakan alat yang berbeda.
+
+00:06:14.070 --> 00:06:20.520
+Jadi kita akan belajar bahwa keterampilan untuk dapat menggunakan berbagai alat yang berbeda sebagai basis data untuk
+
+00:06:21.060 --> 00:06:21.860
+dikerjakan.
+
+00:06:21.900 --> 00:06:26.960
+Sementara kita baik-baik saja, saatnya untuk memulai dengan Radice.
+
+00:06:26.960 --> 00:06:28.450
+Saya akan melihat yang berikutnya.
+
+00:06:28.630 --> 00:06:28.910
+Buh-Bye.

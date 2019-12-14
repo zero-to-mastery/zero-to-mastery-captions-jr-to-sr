@@ -1,0 +1,163 @@
+﻿WEBVTT
+
+00:00:00.920 --> 00:00:09.050
+Berjalan mundur, kami telah menyiapkan yang bagus di sini tempat kami sekarang memiliki ikon profil dan kami dapat keluar atau
+
+00:00:09.050 --> 00:00:12.870
+melihat profil dengan baik atau setidaknya kami dapat mengkliknya.
+
+00:00:13.010 --> 00:00:15.690
+Tetapi tidak ada fungsi profil tampilan.
+
+00:00:15.800 --> 00:00:16.970
+Kita bisa keluar.
+
+00:00:17.090 --> 00:00:23.810
+Tetapi ketika saya mengklik Lihat Profil, tidak ada yang terjadi sekarang atau kita akan
+
+00:00:23.810 --> 00:00:28.810
+coba dan lakukan adalah ketika kita mengklik Lihat profil.
+
+00:00:29.330 --> 00:00:36.680
+Dan model ini memungkinkan kami untuk mengubah nama kami, mungkin mengubah bidang lain di profil kami dan
+
+00:00:36.740 --> 00:00:37.390
+memperbaruinya.
+
+00:00:37.490 --> 00:00:40.710
+Mungkin nama kami diperbarui di sini.
+
+00:00:42.490 --> 00:00:43.320
+Jadi mari kita lakukan itu.
+
+00:00:43.420 --> 00:00:47.940
+Mari kita membangun komponen yang menciptakan model untuk kita.
+
+00:00:48.400 --> 00:00:53.800
+Beruntung bagi kami kembali berakting dengan fitur baru bernama create portal.
+
+00:00:53.800 --> 00:00:58.450
+Anda melihat modals secara umum dan aplikasi sangat umum.
+
+00:00:58.870 --> 00:01:06.280
+Dan ada masalah sebelumnya di mana kami tidak memiliki portal dan itu adalah masalah besar bagaimana
+
+00:01:06.280 --> 00:01:11.170
+mengatur model dengan cara yang bekerja sangat baik dengan re-act.
+
+00:01:11.210 --> 00:01:16.490
+Sekarang dengan pengenalan portal, ini menjadi sangat mudah dan mereka memiliki dokumentasi yang
+
+00:01:16.490 --> 00:01:17.710
+sangat bagus.
+
+00:01:17.810 --> 00:01:21.610
+Jika Anda ingin membaca lebih lanjut tentang hal ini dan cuplikan kode yang sangat bagus juga.
+
+00:01:21.980 --> 00:01:26.990
+Kita akan membangun model kita sendiri di sini yang berisi profil sehingga ketika kita mengklik
+
+00:01:26.990 --> 00:01:30.940
+halaman profil atau melihat profil kita akan benar-benar mendapatkan model ini.
+
+00:01:30.980 --> 00:01:33.400
+Jadi mari kita mulai bekerja.
+
+00:01:33.540 --> 00:01:38.030
+Hal pertama yang ingin saya lakukan adalah kembali ke file index dodgiest.
+
+00:01:38.070 --> 00:01:41.260
+Saya akan menutup beberapa hal ini hanya untuk menjaga kebersihan.
+
+00:01:42.780 --> 00:01:43.310
+BAIK.
+
+00:01:43.560 --> 00:01:52.290
+Sekarang cara kerja modals adalah bahwa kami ingin memastikan bahwa kami memiliki render aksi ulang yang ada di luar aplikasi dan
+
+00:01:52.290 --> 00:01:55.670
+itulah hal yang paling keren tentang portal.
+
+00:01:55.850 --> 00:02:02.300
+Anda dapat memiliki portal yang benar-benar terpisah dari aplikasi dan sejumlah tindakan Dom render.
+
+00:02:02.310 --> 00:02:13.350
+Jadi anggap itu sebagai reaksi lain pada render yang dapat disebut katakanlah modal dan dengan menggunakan portal aksi ulang kita
+
+00:02:13.380 --> 00:02:19.720
+benar-benar dapat mentransfer prop di antara mereka yang benar-benar keren.
+
+00:02:19.740 --> 00:02:22.080
+Ini seperti portal.
+
+00:02:22.170 --> 00:02:24.050
+Dan itulah mengapa itu disebut Portal.
+
+00:02:24.060 --> 00:02:31.650
+Jadi yang ingin kami lakukan adalah membuat elemen HMO lain yang kami kombinasikan dengan komponen modal.
+
+00:02:31.860 --> 00:02:32.610
+Mari kita mulai.
+
+00:02:33.900 --> 00:02:42.870
+Hal pertama yang akan saya lakukan adalah kembali ke folder publik saya di mana indeks saya mendapat file dan jika saya gulir ke
+
+00:02:42.870 --> 00:02:46.090
+sini kita melihat bahwa kita memiliki root.
+
+00:02:46.110 --> 00:02:53.030
+Di situlah re-aksi mengikat dan merender segalanya tetapi di sini saya ingin membuat
+
+00:02:54.130 --> 00:03:03.110
+portal modal dan saya dapat mengatakan div ID dan kami akan menyebutnya apa pun yang kami inginkan katakanlah modal.
+
+00:03:03.240 --> 00:03:09.000
+Dan sekali lagi saya suka demonstrasi ini karena itu menunjukkan bagaimana aksi ulang bekerja dan bagaimana Anda
+
+00:03:09.000 --> 00:03:10.890
+dapat memperluas fungsionalitas tindakan kembali.
+
+00:03:10.900 --> 00:03:17.950
+Jadi sekarang kita telah menciptakan hal lain yang bisa kita gunakan untuk mengikat makhluk hidup kita dan dengan menggunakan portal kita bisa
+
+00:03:17.950 --> 00:03:23.740
+memastikan bahwa apa pun yang ada di aplikasi alat peraga diturunkan ke apa pun yang ada di rute
+
+00:03:23.860 --> 00:03:24.580
+iring-iringan juga.
+
+00:03:24.640 --> 00:03:29.040
+Katakan saja dan kembali ke apt.
+
+00:03:30.710 --> 00:03:31.700
+Sekarang dalam aplikasi.
+
+00:03:31.730 --> 00:03:38.140
+Ya, misalkan kita akan mengimpor komponen lain yang belum kita buat tetapi kita akan segera.
+
+00:03:38.420 --> 00:03:47.210
+Dan ini akan menjadi komponen modal dan kita akan mengimpornya dari folder komponen kita dan
+
+00:03:48.080 --> 00:03:54.330
+hanya akan disebut motile atau mari kita buat folder modal.
+
+00:03:56.610 --> 00:04:02.450
+Dan saya mendapatkan sedikit kesalahan karena kita belum membuat komponen modal.
+
+00:04:02.460 --> 00:04:02.750
+Baiklah.
+
+00:04:02.790 --> 00:04:03.760
+Ayo lakukan itu.
+
+00:04:03.810 --> 00:04:08.920
+Saya ingin masuk ke komponen membuat folder baru kita akan menyebutnya motile.
+
+00:04:09.480 --> 00:04:16.880
+Dan dalam folder modal saya tahu kita mendapatkan sedikit repetitif di sini tapi itu bagus untuk saat ini.
+
+00:04:16.890 --> 00:04:18.270
+Modal dodgiest Dan
+
+00:04:20.880 --> 00:04:23.720
+mari kita mulai membangun komponen Modal ini.

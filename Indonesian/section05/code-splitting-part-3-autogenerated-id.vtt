@@ -1,0 +1,466 @@
+﻿WEBVTT
+
+00:00:01.360 --> 00:00:03.250
+Dan selamat datang kembali.
+
+00:00:03.250 --> 00:00:10.330
+Kami baru saja selesai dengan pemecahan kode yang sangat menarik tetapi sebenarnya ada cara yang lebih bersih
+
+00:00:10.570 --> 00:00:12.290
+untuk melakukan sesuatu.
+
+00:00:12.380 --> 00:00:13.470
+Ya ada beberapa.
+
+00:00:13.540 --> 00:00:16.370
+Saya akan menunjukkan kepada Anda salah satu dari mereka sekarang.
+
+00:00:16.890 --> 00:00:18.140
+Di sebelah sini.
+
+00:00:18.330 --> 00:00:22.610
+Komponen DOT ini sangat jelek.
+
+00:00:22.650 --> 00:00:27.360
+Dan jika seseorang membutuhkan Anda, tim Anda datang dan mereka tidak terbiasa dengan sintaksis mereka akan
+
+00:00:27.360 --> 00:00:28.990
+sangat bingung dengan kode Anda.
+
+00:00:29.130 --> 00:00:33.000
+Idealnya kita dapat membuat kode kita sangat mudah dimengerti.
+
+00:00:33.150 --> 00:00:40.740
+Jadi mari kita coba dan lakukan itu dengan cara hanya untuk menjaga hal-hal yang konsisten karena
+
+00:00:40.740 --> 00:00:48.430
+komponen sementara ada objek teknis saya akan membuat Noal ini daripada string untuk menjaga hal-hal yang konsisten
+
+00:00:48.450 --> 00:00:54.910
+Sekarang kita di sini dengan versi yang lebih bersih.
+
+00:00:54.910 --> 00:01:03.320
+Bukankah lebih baik jika kita memiliki semacam komponen seperti sinyal Bonan bahwa kita tidak dapat membungkus hal-hal dan
+
+00:01:03.320 --> 00:01:07.970
+hanya mengatakan bahwa komponen ini akan menjadi async Aints.
+
+00:01:07.970 --> 00:01:12.420
+Jadi impor saja dengan baik, mari kita lakukan itu.
+
+00:01:12.430 --> 00:01:19.840
+Saya akan membuat komponen async dan Anda akan melihat mengapa itu membantu di
+
+00:01:19.850 --> 00:01:28.570
+akhir video Boinne untuk masuk ke komponen dan membuat file baru dan kami akan menyebutnya komponen sinkronisasi.
+
+00:01:28.630 --> 00:01:37.630
+Kelicikan di sini kami memiliki reaksi khas impor dan juga komponen dari paket
+
+00:01:42.020 --> 00:01:44.250
+Riak kami.
+
+00:01:44.250 --> 00:01:44.590
+Baiklah.
+
+00:01:44.610 --> 00:01:53.280
+Dan sekarang kita akan membuat sesuatu yang disebut komponen tingkat tinggi dan itu adalah
+
+00:01:53.280 --> 00:01:56.830
+komponen yang mengembalikan komponen nother.
+
+00:01:56.860 --> 00:02:02.410
+Sama seperti fungsi orde tinggi, fungsi orde tinggi yang telah kita bicarakan
+
+00:02:02.410 --> 00:02:04.990
+adalah fungsi yang mengembalikan fungsi.
+
+00:02:04.990 --> 00:02:11.790
+Jadi sekali lagi karena komponen hanyalah fungsi, itu adalah komponen yang mengembalikan komponen lain seperti
+
+00:02:12.780 --> 00:02:15.900
+yang telah kita hubungkan dan redux.
+
+00:02:15.900 --> 00:02:21.930
+Jadi cara kita membuat ini dan omong-omong saat saya menulis ini jika ini melampaui kepala Anda jangan
+
+00:02:22.020 --> 00:02:24.120
+khawatir komponen async cukup standar.
+
+00:02:24.120 --> 00:02:30.810
+Anda dapat online dan mencarinya dan semua kode untuk komponen async ini terlihat hampir
+
+00:02:30.810 --> 00:02:31.650
+sama.
+
+00:02:31.680 --> 00:02:36.750
+Jadi, Anda hanya harus terbiasa jika ingin mempelajari lebih lanjut tentang komponen pesanan lebih tinggi.
+
+00:02:36.750 --> 00:02:43.740
+Dokumen tindakan ulang memiliki bagian komponen pesanan tinggi dan itu akan sangat membantu Anda.
+
+00:02:44.040 --> 00:02:47.190
+Tapi untuk saat ini tetaplah bersamaku itu semua masuk akal.
+
+00:02:47.310 --> 00:02:55.920
+Pertama-tama kita akan memulai dengan mengekspor kesalahan yang kita sebut komponen sinkronisasi dengan
+
+00:02:55.930 --> 00:03:00.050
+huruf kecil yang merupakan fungsi.
+
+00:03:00.150 --> 00:03:08.740
+Jadi anggap saja fungsi default komponen async dan komponen async ini ingat karena ini adalah fungsi urutan yang
+
+00:03:08.750 --> 00:03:16.570
+lebih tinggi itu akan memerlukan komponen sebagai parameter yang akan mengatakan komponen impor sehingga akan menjadi halaman
+
+00:03:16.580 --> 00:03:19.980
+2 dan halaman 3 untuk kita.
+
+00:03:20.060 --> 00:03:27.470
+Dan akhirnya di sini kita kembali ke sintaks yang kita kenal yaitu komponen sinkronisasi kelas
+
+00:03:27.470 --> 00:03:28.260
+A.
+
+00:03:28.310 --> 00:03:35.390
+Tetapi kali ini dengan modal karena kelasnya adalah komponen yang kami buat yang
+
+00:03:35.390 --> 00:03:46.530
+memperluas komponen dari reaksi dan di sini kami memiliki konstruktor yang juga akan menerima prop. Dan lagi-lagi kita harus memanggil super dengan
+
+00:03:46.530 --> 00:03:49.860
+props agar memiliki akses ke mereka.
+
+00:03:53.070 --> 00:04:00.780
+Dan kami hanya akan mengatakan status ini sama dengan komponen sama dengan nihil.
+
+00:04:00.800 --> 00:04:02.890
+Jadi sama seperti kita punya apt.
+
+00:04:02.990 --> 00:04:03.750
+Iya nih.
+
+00:04:06.040 --> 00:04:09.320
+Kami akan memiliki komponen Tidak di sini.
+
+00:04:09.550 --> 00:04:18.060
+Sekarang dalam bagian selanjutnya kita akan melakukan komponen tidak.
+
+00:04:18.150 --> 00:04:26.880
+Sekarang jika Anda ingat kita perlu memuat ph ini ke komponen MP shreik dan mereka punya janji karena kita menggunakan dot dulu
+
+00:04:26.910 --> 00:04:33.500
+dan kemudian kita harus mengatur status ke komponen apa pun yang kita terima hanya untuk bersenang-senang.
+
+00:04:33.510 --> 00:04:40.020
+Saya akan menunjukkan kepada Anda bagaimana melakukannya dengan berat sink hanya agar Anda mendapatkan sedikit info tambahan.
+
+00:04:40.260 --> 00:04:50.840
+Jadi sekali lagi dengan fungsi asinkron apa pun kita bisa mengatakan sinkronisasi dan di sini kita dapat menggunakan
+
+00:04:51.010 --> 00:05:01.850
+keyboard manis sehingga kita dapat mengatakan Konst default dan ini sedikit merusak jika Anda mengingat default di sini kami
+
+00:05:01.850 --> 00:05:09.250
+hanya merusak untuk memastikan kita mendapatkan komponen default dan itu akan menjadi
+
+00:05:09.250 --> 00:05:10.180
+komponen
+
+00:05:13.530 --> 00:05:14.470
+yang sama.
+
+00:05:14.790 --> 00:05:24.860
+Dan bagaimana kita mendapatkannya saat kita menunggu dan melakukan kode asinkron yang akan menjadi komponen impor karena
+
+00:05:25.520 --> 00:05:32.760
+dengan ini kita akan dapat mengimpor komponen push to impeach shreik.
+
+00:05:32.800 --> 00:05:40.930
+Jadi semua yang kami lakukan di sini adalah sementara kami memiliki di sini dengan komponen yang dia sebut halaman dot default, kita
+
+00:05:40.930 --> 00:05:43.380
+sekarang akan memiliki akses ke komponen.
+
+00:05:43.720 --> 00:05:44.790
+Sekarang di dalam sini.
+
+00:05:44.800 --> 00:05:47.980
+Kita akhirnya dapat melakukan komponen status pemikiran
+
+00:05:51.760 --> 00:05:53.470
+ini yang disebutnya
+
+00:05:56.140 --> 00:05:57.070
+komponen.
+
+00:05:57.250 --> 00:06:04.260
+Sekali lagi hal yang sama yang kami lakukan di sini dengan komponen sama dengan toupees ke default hanya cara
+
+00:06:04.270 --> 00:06:06.070
+pembersih singkat untuk melakukannya.
+
+00:06:06.070 --> 00:06:08.410
+Akhirnya kami ingin membuat
+
+00:06:11.300 --> 00:06:12.180
+komponen.
+
+00:06:12.230 --> 00:06:17.930
+Jadi saya akan mengatakan komponen kon karena kita tidak tahu apakah itu akan menjadi halaman 2 atau kue.
+
+00:06:17.930 --> 00:06:20.950
+Kami hanya ingin nama komponen umum yang umum.
+
+00:06:21.500 --> 00:06:27.790
+Dan ini akan menyamai komponen DOT status ini.
+
+00:06:27.830 --> 00:06:38.250
+Dan akhirnya di sini kita hanya dapat kembali jika kita memiliki komponen kita akan mengatakan mewariskan komponen itu dan alat
+
+00:06:38.640 --> 00:06:44.760
+peraga yang mungkin menggunakan sedikit struktur di mana hanya mengatakan jika
+
+00:06:44.760 --> 00:06:53.810
+komponen ini memiliki alat peraga juga termasuk mereka dan kita memiliki untuk memastikan kami membungkusnya seperti ini.
+
+00:06:53.810 --> 00:07:00.440
+Jadi ingat karena kita telah meneruskan komponen async Prossy jika ada sesuatu yang mengalir di masa
+
+00:07:00.440 --> 00:07:02.060
+lalu ke komponen.
+
+00:07:02.060 --> 00:07:06.870
+Kalau tidak, hanya membuat tidak, jangan membuat apa pun.
+
+00:07:09.130 --> 00:07:13.930
+Akhirnya karena kita membungkus ini dalam fungsi kita harus mengembalikan sesuatu dan kita ingin
+
+00:07:13.930 --> 00:07:17.040
+mengembalikan komponen async sehingga kita tidak bisa hanya mengatakan
+
+00:07:20.880 --> 00:07:23.590
+di bagian bawah kita mengaktifkan komponen sinkronisasi.
+
+00:07:23.910 --> 00:07:25.970
+Mari selamatkan.
+
+00:07:26.260 --> 00:07:34.790
+Sekarang saya akan menjalankan NPM mulai di sini supaya memeriksa kesalahan kita masih harus mengimpornya komponen async.
+
+00:07:34.800 --> 00:07:36.580
+Sekarang bisa kita gunakan.
+
+00:07:36.680 --> 00:07:39.950
+Tapi ini mungkin masih terlihat sedikit membingungkan.
+
+00:07:39.980 --> 00:07:42.270
+Mari kita lihat bagaimana kita dapat menggunakan komponen ini sekarang.
+
+00:07:42.320 --> 00:07:44.420
+Komponen pesanan yang lebih tinggi ini.
+
+00:07:44.420 --> 00:07:45.550
+Saya kembali ke APT.
+
+00:07:45.580 --> 00:08:01.550
+Ya dan saya akan mengimpor komponen sinkronisasi dari folder komponen kami.
+
+00:08:01.590 --> 00:08:05.300
+Sekarang kita bisa menggunakan komponen async ini untuk membersihkannya sedikit.
+
+00:08:05.430 --> 00:08:14.110
+Kita bisa mengomentari ini dan kembali ke cara kita memilikinya di awal ketika kita tidak memiliki
+
+00:08:14.110 --> 00:08:15.350
+pemecahan kode
+
+00:08:15.490 --> 00:08:24.820
+Tetapi kali ini untuk pernyataan pengembalian ini kita akan mengatakan bahwa kita ingin memiliki halaman dua
+
+00:08:24.820 --> 00:08:29.100
+async yang sama dengan komponen async.
+
+00:08:29.450 --> 00:08:30.860
+Dan ingat itu suatu fungsi.
+
+00:08:30.860 --> 00:08:42.480
+Jadi kita akan memanggil dalam fungsi ini dengan parameter pertama yang mengingat itu komponen
+
+00:08:42.570 --> 00:08:43.610
+impor.
+
+00:08:43.770 --> 00:08:49.160
+Jadi untuk mengimpor komponen, kita cukup mengimpor komponen da
+
+00:08:52.860 --> 00:08:56.220
+slash ph agar saya membuatnya
+
+00:09:00.260 --> 00:09:02.380
+sedikit lebih kecil.
+
+00:09:04.810 --> 00:09:05.690
+Ini dia.
+
+00:09:05.920 --> 00:09:11.920
+Yang kami lakukan di sini adalah mengatakan komponen async yang merupakan fungsi
+
+00:09:12.220 --> 00:09:20.410
+yang kami buat akan mengambil parameter yang mengimpor komponen dan dari komponen yang diimpor kami akan mengambil
+
+00:09:20.560 --> 00:09:27.730
+default komponen default dan ditambahkan ke negara dan kemudian kita akan kembali dan membuat komponen.
+
+00:09:27.730 --> 00:09:37.100
+Jadi kembali ke sini sekarang saya dapat mengatakan halaman async untuk ini akan mengembalikan halaman async 2 dan kita dapat melakukan
+
+00:09:37.100 --> 00:09:40.070
+hal yang sama untuk halaman 3.
+
+00:09:40.140 --> 00:09:46.560
+Saya dapat mengatakan bahwa di sini kami memiliki halaman sinkronisasi 3.
+
+00:09:46.680 --> 00:09:51.750
+Jadi sekarang komponen kami adalah pastry sinkronisasi.
+
+00:09:51.850 --> 00:09:54.260
+Mari kita simpan dengan benar.
+
+00:09:54.270 --> 00:09:55.830
+Saya tidak mendapatkan kesalahan.
+
+00:09:55.830 --> 00:09:57.840
+Mari kita lihat apakah itu benar-benar berfungsi di browser.
+
+00:09:57.840 --> 00:10:01.290
+Ayo kembali dan menyegarkan.
+
+00:10:01.430 --> 00:10:05.880
+Kami memiliki bundel kami jika saya mengklik klik ini di halaman kedua.
+
+00:10:06.090 --> 00:10:12.070
+Baiklah saya mendapatkan file lain dan file lain.
+
+00:10:12.220 --> 00:10:14.070
+Sempurna.
+
+00:10:14.070 --> 00:10:18.300
+Sekarang Anda perhatikan bagaimana kita memiliki tiga dan empat di sini.
+
+00:10:18.350 --> 00:10:22.860
+Itu karena di sini kita masih memiliki impor.
+
+00:10:22.910 --> 00:10:27.650
+Jadi sekarang kita membuat empat bongkahan yang tidak kita inginkan.
+
+00:10:27.740 --> 00:10:30.750
+Kami sekarang dapat menghapus semua ini.
+
+00:10:30.920 --> 00:10:41.780
+Jadi sekarang kita bisa kembali ke cara kita memiliki hal-hal dengan keadaan set dot ini semua simpan kembali mari kita menyegarkan di
+
+00:10:41.780 --> 00:10:42.750
+sini.
+
+00:10:42.800 --> 00:10:44.630
+Kami memiliki bundel digesti.
+
+00:10:44.900 --> 00:10:52.030
+Jika saya menghapus dan pergi ke halaman 2 Di sana Anda pergi halaman 2 kue.
+
+00:10:52.200 --> 00:10:53.580
+Sangat sangat keren.
+
+00:10:53.580 --> 00:10:54.850
+Dan Anda melihat lampu kilat itu.
+
+00:10:54.870 --> 00:10:56.250
+Anda tidak melihat flash itu lagi.
+
+00:10:56.250 --> 00:11:03.240
+Tapi pada awalnya ketika mereka memuat ada sedikit flash dan itu adalah tradeoff yang harus
+
+00:11:03.240 --> 00:11:11.730
+Anda putuskan apakah saya ingin flash cepat ini di mana pengguna harus menunggu untuk mengimpor file javascript sehingga waktu
+
+00:11:11.850 --> 00:11:16.540
+buka kami waktu buka awal untuk bundel pertama lebih cepat.
+
+00:11:16.650 --> 00:11:19.960
+Dan itu adalah sesuatu yang harus Anda putuskan sebagai pengembang senior.
+
+00:11:20.100 --> 00:11:27.400
+Tetapi sekarang Anda memiliki alat untuk memutuskan mengapa Anda ingin melakukan dan Anda mungkin melihat ini
+
+00:11:27.770 --> 00:11:34.770
+dan mengatakan hmm apakah ini sebenarnya lebih bersih daripada apa yang kami lakukan sebelumnya.
+
+00:11:34.780 --> 00:11:35.640
+Aku rasa ini.
+
+00:11:35.650 --> 00:11:40.370
+Saya pikir komponen async jelas sedikit lebih sulit untuk dipahami.
+
+00:11:40.660 --> 00:11:45.280
+Ngomong-ngomong kalau-kalau Anda bingung tentang ini lagi.
+
+00:11:45.850 --> 00:11:52.870
+Jika saya membiarkannya seperti itu untuk memiliki komponen seperti yang telah kami lakukan sebelumnya.
+
+00:11:52.960 --> 00:11:56.380
+Nah dalam kasus itu lagi itu masih akan berfungsi.
+
+00:11:56.380 --> 00:11:59.360
+Jadi itu hanya cara singkat untuk melakukannya.
+
+00:11:59.620 --> 00:12:05.800
+Tapi bagaimanapun kembali ke titik sekarang kita dapat menggunakan komponen async di mana saja kita inginkan dalam
+
+00:12:05.990 --> 00:12:11.620
+kode kita dan setiap kali kita perlu memuat sesuatu kita bisa membungkusnya dengan komponen async
+
+00:12:11.620 --> 00:12:16.990
+mengimpor nama komponen dan apa pun yang kita inginkan dan menjadikannya satu hal terakhir.
+
+00:12:17.180 --> 00:12:21.080
+Jika saya kembali ke NPM run Bill,
+
+00:12:28.450 --> 00:12:37.990
+kami membuka ini dan kami melihat bahwa dibandingkan terakhir kali kami benar-benar memiliki ukuran Bondel yang lebih besar untuk utama.
+
+00:12:38.080 --> 00:12:45.560
+Kami memiliki satu byte di sini, tetapi kami tidak perlu khawatir tentang itu ukuran bundel kami hanya meningkat.
+
+00:12:45.560 --> 00:12:47.160
+Sekarang kenapa begitu.
+
+00:12:47.180 --> 00:12:54.230
+Karena dalam bundel utama kami sekarang kami telah memasukkan komponen async karena ingat
+
+00:12:54.230 --> 00:12:58.220
+aplikasi Dahlia, kami mengimpor komponen async lagi.
+
+00:12:58.270 --> 00:13:01.160
+Selalu pikirkan pengorbanan.
+
+00:13:01.180 --> 00:13:04.930
+Apakah ini hal terbaik untuk disampaikan kepada pengguna di awal.
+
+00:13:05.110 --> 00:13:09.410
+Dan apakah kita ingin memuat potongan-potongan ini secara tidak sinkron.
+
+00:13:09.590 --> 00:13:17.620
+Tapi saya harap Anda bersenang-senang dan Anda melihat beberapa kekuatan pemuatan asinkron dan pemecahan kode.
+
+00:13:17.770 --> 00:13:24.850
+Ini adalah topik yang cukup baru tapi saya pikir sesuatu yang harus dipertimbangkan oleh setiap perusahaan saat memberikan javascript
+
+00:13:24.940 --> 00:13:25.990
+kepada pengguna.
+
+00:13:26.500 --> 00:13:27.950
+Sampai jumpa di yang berikutnya.
+
+00:13:28.060 --> 00:13:28.250
+Oleh.

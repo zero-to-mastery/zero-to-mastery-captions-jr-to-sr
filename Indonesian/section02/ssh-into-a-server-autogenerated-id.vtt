@@ -1,0 +1,472 @@
+﻿WEBVTT
+
+00:00:00.800 --> 00:00:02.420
+Selamat datang kembali.
+
+00:00:02.420 --> 00:00:02.690
+Baiklah.
+
+00:00:02.690 --> 00:00:09.020
+Hingga saat ini kami mengetahui bahwa pertukaran kunci Diffie Helman memberi kami cara untuk berbagi
+
+00:00:09.530 --> 00:00:10.510
+rahasia bersama.
+
+00:00:10.510 --> 00:00:11.830
+Saya mengatakan banyak berbagi di sana.
+
+00:00:11.950 --> 00:00:16.650
+Oh well sekarang kita masih perlu mengautentikasi.
+
+00:00:16.700 --> 00:00:23.830
+Jadi sekarang saya secara teknis bisa memasukkan kata sandi yang diberikan kepada saya oleh Digital Ocean dan mereka tidak akan muncul
+
+00:00:23.840 --> 00:00:24.880
+di sini.
+
+00:00:24.890 --> 00:00:28.610
+Tapi mari kita coba lagi.
+
+00:00:31.060 --> 00:00:31.720
+Kata sandi.
+
+00:00:31.720 --> 00:00:32.930
+Salin dan tempel.
+
+00:00:35.450 --> 00:00:39.950
+Dan saya akan tetap menggunakan kata sandinya.
+
+00:00:40.040 --> 00:00:45.140
+Saya harus mengubah kata sandi Anda karena mereka hanya memberi saya kata sandi sementara jadi mari kita tetap bagus
+
+00:00:45.140 --> 00:00:45.880
+dan sederhana.
+
+00:00:48.450 --> 00:00:50.020
+Ya ampun, mereka banyak bertanya.
+
+00:00:54.440 --> 00:00:55.130
+Baiklah.
+
+00:00:55.130 --> 00:00:59.150
+Akhirnya bisa masuk dengan kata sandi baru kami.
+
+00:00:59.600 --> 00:01:02.570
+Tapi seperti yang saya katakan sebelumnya itu agak merepotkan.
+
+00:01:02.570 --> 00:01:04.890
+Anda tidak ingin melakukannya setiap waktu.
+
+00:01:05.180 --> 00:01:13.430
+Jadi menggunakan S-sh kita akan menggunakan sesuatu yang disebut RSA yang memungkinkan kita untuk memberikan atau membuktikan identitas
+
+00:01:14.540 --> 00:01:17.180
+orang tersebut tanpa kata sandi.
+
+00:01:17.180 --> 00:01:18.840
+Kedengarannya seperti sulap bukan.
+
+00:01:19.130 --> 00:01:22.590
+Mari kita atur itu dan tunjukkan bagaimana kita bisa melakukan itu.
+
+00:01:23.620 --> 00:01:26.310
+Jadi saya akan keluar dari sini.
+
+00:01:26.680 --> 00:01:34.720
+Mari kita hapus ini untuk saat ini dan saya akan masuk ke folder yang seharusnya ada di komputer Anda jika
+
+00:01:34.990 --> 00:01:37.930
+tidak, Anda mungkin harus membuat folder ini.
+
+00:01:37.930 --> 00:01:46.270
+Dan titik di depannya berarti itu adalah file tersembunyi sehingga Anda mungkin harus mengizinkan file tersembunyi untuk
+
+00:01:46.690 --> 00:01:47.700
+dapat melihatnya.
+
+00:01:47.950 --> 00:01:56.050
+Tetapi jika saya hanya membuka ini Anda akan melihat bahwa itu hanya folder atau seperti di tempat lain di komputer saya direktori
+
+00:01:56.050 --> 00:01:57.160
+root saya.
+
+00:01:57.490 --> 00:02:05.530
+Dan jika saya melihat file-file di dalamnya saya punya beberapa hal yang mungkin tidak Anda miliki karena ini mungkin pertama kalinya
+
+00:02:05.530 --> 00:02:07.930
+Anda membuat kunci yang diperlukan.
+
+00:02:07.990 --> 00:02:11.650
+Dalam kasus saya, saya sudah memiliki beberapa tombol sehingga ada beberapa folder di sana.
+
+00:02:11.650 --> 00:02:13.450
+Jangan khawatir jika Anda tidak melihatnya.
+
+00:02:13.720 --> 00:02:17.370
+Sekarang jika Anda melihat saya. D. atau file yang aman.
+
+00:02:17.560 --> 00:02:20.590
+Jika tidak, Anda harus membuatnya.
+
+00:02:20.680 --> 00:02:25.480
+Jadi mari kita buat kunci seperti yang kita bicarakan di video sebelumnya.
+
+00:02:25.600 --> 00:02:31.700
+Kami akan membuat kunci publik dan pribadi hanya untuk Digital Ocean.
+
+00:02:31.840 --> 00:02:37.510
+Sehingga dengan komputer ini dengan laptop ini saya bisa berkomunikasi dengan server di luar sana di dunia dengan cara
+
+00:02:38.670 --> 00:02:39.930
+yang bisa kita lakukan.
+
+00:02:40.140 --> 00:02:48.830
+Ini cukup sederhana sebenarnya kita bisa menggunakan perintah S-sh keys yang seharusnya Anda miliki di komputer Anda
+
+00:02:48.830 --> 00:02:56.830
+jika tidak, Anda mungkin harus menginstal CLID di mana Anda bisa mendapatkannya beberapa parameter.
+
+00:02:56.870 --> 00:03:02.480
+Ada beberapa yang direkomendasikan secara online tetapi untuk saat ini hanya untuk mempermudah, kita bisa melakukan
+
+00:03:05.360 --> 00:03:09.250
+ini dengan apa pun yang dipecahkan oleh alamat email Anda.
+
+00:03:09.380 --> 00:03:15.510
+Dalam kasus saya, saya hanya akan melakukan tes di gmail dot com ingin menekan enter.
+
+00:03:15.810 --> 00:03:22.560
+Anda akan bertanya di mana Anda ingin menyimpan file dan Anda melihat di sini bahwa itu menyimpan masuk ke folder
+
+00:03:22.620 --> 00:03:23.940
+S-sh data saya.
+
+00:03:24.120 --> 00:03:25.480
+Tapi saya juga tidak mau.
+
+00:03:25.890 --> 00:03:30.900
+Saya sudah memiliki ID atau kata dan saya ingin khusus untuk Digital Ocean.
+
+00:03:31.110 --> 00:03:39.210
+Jadi saya akan melanjutkan dan salin ini dan beri nama Digital Ocean.
+
+00:03:39.810 --> 00:03:46.590
+Jadi saya tahu apa kuncinya untuk pergi ke pusat pers dan Anda memiliki opsi di sini untuk memasukkan frasa sandi hanya
+
+00:03:46.590 --> 00:03:48.700
+untuk keamanan tambahan jika Anda mau.
+
+00:03:48.720 --> 00:03:54.530
+Dalam kasus saya, saya tidak benar-benar ingin mengatakan Anda bisa tekan enter enter dan itu dia.
+
+00:03:54.560 --> 00:03:59.980
+Kami baru saja membuat penyimpanan RSA publik dan swasta.
+
+00:04:01.060 --> 00:04:02.200
+Sangat keren.
+
+00:04:02.200 --> 00:04:04.240
+Dan sekarang mari kita bersihkan ini.
+
+00:04:04.420 --> 00:04:14.970
+Jika saya melihat folder saya, saya memiliki I. D. RSA Digital Ocean dan Id mengatakan Digital Ocean dan pop.
+
+00:04:15.130 --> 00:04:18.320
+Sekarang jika ini pertama kalinya Anda apa S-sh.
+
+00:04:18.580 --> 00:04:19.540
+Ingat ini.
+
+00:04:19.540 --> 00:04:26.230
+Jika Anda mengingat sesuatu dari bagian yang menampilkan pub yang merupakan kunci publik, Anda dapat membagikannya kepada siapa pun
+
+00:04:26.230 --> 00:04:27.500
+yang Anda inginkan.
+
+00:04:28.380 --> 00:04:36.510
+Namun gagasan ini RSA Digital Ocean yang merupakan kunci pribadi tidak pernah dibagikan kepada siapa pun.
+
+00:04:36.510 --> 00:04:40.140
+Ini adalah sesuatu yang hanya harus Anda simpan di komputer Anda.
+
+00:04:40.350 --> 00:04:42.200
+Tidak pernah membagikannya sebaliknya.
+
+00:04:42.220 --> 00:04:47.620
+Yah hampir semua enkripsi Anda akan menjadi tidak berguna, benar.
+
+00:04:47.640 --> 00:04:50.410
+Jadi kami hanya bisa menghasilkan kunci kami.
+
+00:04:50.430 --> 00:04:52.420
+Itu agak keren.
+
+00:04:52.420 --> 00:05:00.580
+Kami sekarang dapat menyalin kunci ini dan membaginya dengan server Digital Ocean kami.
+
+00:05:00.580 --> 00:05:06.220
+Ingatlah dalam diagram yang ingin kami bagikan kunci publik kami dengan menjalankan perintah dan kami dapat menemukannya
+
+00:05:06.220 --> 00:05:07.570
+online jika Anda mau.
+
+00:05:07.600 --> 00:05:14.660
+Jadi jangan terlalu khawatir tentang hal itu jika Anda ingin membaca apa yang dilakukan perintah ini.
+
+00:05:14.800 --> 00:05:22.390
+Cukup banyak menyalin apa pun yang ada di dalamnya meskipun Id mengatakan pengungkapan di God PABX hanya mengingat kunci publik
+
+00:05:22.390 --> 00:05:23.730
+yang kita bagi.
+
+00:05:24.010 --> 00:05:27.150
+Jadi saya akan menekan enter di sini dan saya sudah menyalin ini ke clipboard saya.
+
+00:05:29.570 --> 00:05:42.410
+Sekarang jika saya masuk ke S-sh ke server Digital Ocean saya melihat bahwa saya terhubung di sini dengan cara jika Anda bertanya-tanya mengapa saya bisa
+
+00:05:42.410 --> 00:05:49.750
+login ini karena sesi yang sama benar-benar keluar dari sesi itu akan berlangsung saya
+
+00:05:49.800 --> 00:05:52.370
+untuk mendapatkan kata sandi.
+
+00:05:52.450 --> 00:05:58.350
+Untuk saat ini kita dapat melakukan hal yang sama pada server ini.
+
+00:05:58.420 --> 00:06:07.640
+Kita dapat membuat direktori bernama Dot S-sh seperti yang kita miliki di komputer kita.
+
+00:06:07.730 --> 00:06:09.140
+Dan saya tidak bisa mengeja.
+
+00:06:09.170 --> 00:06:15.920
+Jadi buatlah direktori dan sepertinya file S-sh sudah ada.
+
+00:06:15.920 --> 00:06:20.050
+Jadi mari kita lakukan Alice dan Anda akan melihat di sini bahwa saya tidak bisa melihatnya.
+
+00:06:20.120 --> 00:06:27.430
+Itu karena itu adalah file tersembunyi ingat saya harus melakukan tanda hubung untuk menunjukkan Fox tersembunyi kami
+
+00:06:27.740 --> 00:06:29.570
+yang S-sh di sini.
+
+00:06:29.570 --> 00:06:30.140
+Sangat keren.
+
+00:06:30.140 --> 00:06:34.120
+Biarkan saya membersihkan ini.
+
+00:06:34.320 --> 00:06:39.370
+Sekarang kita masuk ke file DOT S-sh kami dan saya tidak bisa mengetik.
+
+00:06:39.360 --> 00:06:40.610
+Mari kita coba lagi.
+
+00:06:42.380 --> 00:06:42.680
+Baiklah.
+
+00:06:42.680 --> 00:06:52.290
+Kami di sini di S-sh kami. Dan jika kami melihat ke sini, kami sudah secara default dari host
+
+00:06:52.290 --> 00:06:55.310
+Digital Ocean dan kunci resmi.
+
+00:06:55.380 --> 00:07:01.120
+Jika Anda tidak melihat ini berdasarkan pada server apa pun yang Anda miliki, Anda dapat membuat file.
+
+00:07:01.530 --> 00:07:04.550
+Tetapi untuk sekarang kunci yang diotorisasi adalah yang kita inginkan.
+
+00:07:04.620 --> 00:07:14.990
+Jadi kita dapat menggunakan sesuatu seperti nano yang memungkinkan kita untuk menambahkan pajak di dalam kunci resmi sekarang di sini yang harus kita
+
+00:07:15.000 --> 00:07:20.580
+lakukan adalah menyalin dan menempel kunci kita yang telah kita salin sebelumnya.
+
+00:07:20.580 --> 00:07:27.810
+Jadi ini adalah kunci publik kami dari desktop kami yang baru saja kami tempelkan di sini
+
+00:07:27.810 --> 00:07:37.140
+dengan Neno, Anda dapat melihat di sini untuk X, Anda harus menekan perintah X atau kontrol X dan kemudian kami
+
+00:07:37.140 --> 00:07:39.900
+ingin memodifikasi dan menyimpan. memasukkan.
+
+00:07:39.910 --> 00:07:42.580
+Baiklah sekarang jika saya lakukan.
+
+00:07:42.580 --> 00:07:51.130
+LS Saya melihat bahwa saya memiliki kunci yang diotorisasi dan di dalamnya kita memiliki pintu keluar publik yang terbuka.
+
+00:07:51.210 --> 00:07:55.300
+Sekarang mari kita coba ini.
+
+00:07:55.300 --> 00:08:05.750
+Saya akan S-sh ke folder root saya atau mari kita akhiri sesi untuk memastikan bahwa itu tidak meminta kami untuk kata sandi
+
+00:08:05.750 --> 00:08:12.950
+dan saya akan melihat apakah saya bisa memasukkannya langsung melalui S-sh dengan kunci kami tanpa
+
+00:08:12.950 --> 00:08:15.600
+harus khawatir tentang kata sandi.
+
+00:08:15.650 --> 00:08:21.110
+Jadi mari kita tutup ini.
+
+00:08:21.200 --> 00:08:30.310
+Baiklah, seperti yang saya katakan masing-masing dan Anda lihat di sini bahwa kami baru saja mendapat izin yang ditolak dan itu agak
+
+00:08:30.310 --> 00:08:32.020
+rumit di sini.
+
+00:08:32.110 --> 00:08:40.930
+Anda mungkin memiliki ini hanya jika Anda seperti saya dan di S-sh Anda semua ada di folder S-sh, Anda memiliki
+
+00:08:41.320 --> 00:08:43.110
+beberapa esai ID.
+
+00:08:43.330 --> 00:08:50.750
+Jadi, Anda ingin memastikan bahwa itu menggunakan kunci publik yang tepat untuk koneksi ini.
+
+00:08:50.750 --> 00:08:58.100
+Jadi dalam kasus kami, kami cukup melakukan perintah ini seperti yang saya katakan tambahkan lalu ambil kunci publik yang baru
+
+00:08:58.240 --> 00:09:03.430
+saja kami gunakan dan maaf ambil kunci pribadi Anda yang telah Anda buat.
+
+00:09:04.480 --> 00:09:10.420
+Tekan Enter Oh dan Anda tidak ingin memilikinya.
+
+00:09:10.560 --> 00:09:12.610
+Kamu mau ini.
+
+00:09:12.660 --> 00:09:14.350
+Baiklah, jadi identitas saya.
+
+00:09:14.360 --> 00:09:16.350
+Jadi mari kita coba lagi.
+
+00:09:25.170 --> 00:09:26.460
+Lihat lagi.
+
+00:09:26.830 --> 00:09:32.230
+Kami telah puas dalam kotak kami, kami telah membuktikan bahwa ini adalah kami.
+
+00:09:32.230 --> 00:09:38.410
+Komputer ini milik kami dan kami memiliki wewenang untuk terhubung ke server dan
+
+00:09:38.950 --> 00:09:41.870
+menjalankan perintah yang kami inginkan.
+
+00:09:41.870 --> 00:09:46.340
+Baiklah, Hosam, kami sudah melakukan semua ini dan Anda bertanya pada diri sendiri.
+
+00:09:46.460 --> 00:09:51.560
+Saya merasa seperti saya hanya membuang banyak waktu untuk mempelajari ini dan itu tidak benar-benar berhubungan dengan pengembangan web
+
+00:09:51.590 --> 00:09:55.190
+atau bagaimana saya dapat mengatur S-sh dengan mendapatkan Hobb dan itu mudah dilakukan.
+
+00:09:55.190 --> 00:09:59.210
+Andrea kenapa kau menggangguku dengan ini.
+
+00:09:59.230 --> 00:10:03.540
+Jangan khawatir kita akan mengikat semuanya di video berikutnya.
+
+00:10:04.000 --> 00:10:13.500
+Jadi Anda tahu mengapa semua kerja keras ini akan membuahkan hasil ketika kita selesai dengan bagian ini hanya untuk bersenang-senang
+
+00:10:13.500 --> 00:10:16.660
+hanya untuk melihat bahwa ini berhasil.
+
+00:10:16.650 --> 00:10:19.390
+Aku akan jelaskan ini sebenarnya.
+
+00:10:21.080 --> 00:10:34.290
+Saya akan masuk ke folder esai saya dan jika saya pergi ke kunci otorisasi atau kunci resmi
+
+00:10:34.290 --> 00:10:40.790
+saya akan menghapus baris ini saya akan menyimpannya.
+
+00:10:40.890 --> 00:10:45.900
+Dan akhirnya saya akan keluar dari sini. Tutup terminal saya
+
+00:10:49.170 --> 00:10:57.590
+buka kembali terminal di sini. Mari kita bersihkan terminal ini buka kembali di sini dan mari kita coba S-sh.
+
+00:10:57.620 --> 00:11:01.930
+Dan ke server kami.
+
+00:11:02.170 --> 00:11:02.980
+Izin ditolak.
+
+00:11:02.980 --> 00:11:05.550
+Tapi mari kita lakukan perintah ini yang kita lakukan sebelumnya.
+
+00:11:06.600 --> 00:11:12.540
+Kami telah menambahkan identitas S-sh gratis.
+
+00:11:12.920 --> 00:11:15.440
+Izin ditolak.
+
+00:11:16.600 --> 00:11:21.770
+Karena kami tidak lagi memiliki kunci kami.
+
+00:11:22.840 --> 00:11:29.180
+Kami tidak lagi membagikan kunci publik dengan server dan folder kunci yang diotorisasi.
+
+00:11:29.810 --> 00:11:35.120
+Sekarang kita melihat bahwa kita tidak bisa lagi S-sh.
+
+00:11:35.120 --> 00:11:40.630
+Apakah samudera tidak benar-benar berharap setiap pengguna mereka dapat mengetahui cara melakukan ini.
+
+00:11:41.690 --> 00:11:48.410
+Mereka sebenarnya memiliki antarmuka mudah yang sangat bagus yang dapat Anda gunakan untuk menambahkan kunci S-sh yang sebenarnya berfungsi sangat
+
+00:11:48.410 --> 00:11:50.140
+mirip dengan mendapatkan bantuan.
+
+00:11:50.150 --> 00:11:52.550
+Jadi mari kita salin kunci
+
+00:11:55.030 --> 00:11:59.220
+S-sh kami lagi yang kami buat untuk Digital Ocean.
+
+00:11:59.500 --> 00:12:08.400
+Dan jika saya pergi ke Digital Ocean di sini saya bisa pergi ke pengaturan profil saya dan jika kita pergi
+
+00:12:11.500 --> 00:12:16.010
+ke keamanan Anda melihat bahwa mereka memiliki kunci S-sh.
+
+00:12:16.210 --> 00:12:23.300
+Saya bisa menambahkan copy dan paste kunci S-sh saya dan saya akan beri nama saja.
+
+00:12:23.300 --> 00:12:33.330
+Tes memiliki kunci S-sh yang melakukan hal yang sama persis yang kami lakukan dari terminal kecuali juga terlihat lebih bagus.
+
+00:12:33.350 --> 00:12:38.820
+Bagaimana Anda memiliki antarmuka pengguna yang bagus di sini.
+
+00:12:38.830 --> 00:12:39.270
+Baiklah.
+
+00:12:39.340 --> 00:12:41.510
+Jadi begitulah.
+
+00:12:41.650 --> 00:12:51.700
+Kami dapat menggunakan semua alat ini enkripsi simetris hashing enkripsi asimetris untuk terhubung
+
+00:12:51.790 --> 00:13:00.280
+dengan aman ke host dan bahkan dapat mengotentikasi melalui S-sh.
+
+00:13:00.320 --> 00:13:07.790
+Jadi dengan semua pengetahuan itu dalam pikiran kita sekarang akan melihat tugas kita di tangan yang Bruno meminta kita
+
+00:13:07.790 --> 00:13:11.630
+untuk lakukan dan yang mengatur S-sh dengan mendapatkan bantuan.
+
+00:13:11.690 --> 00:13:13.160
+Saya akan melihat yang berikutnya Bebai.

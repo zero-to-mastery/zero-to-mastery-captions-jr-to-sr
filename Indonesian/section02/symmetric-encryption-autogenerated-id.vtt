@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:02.200 --> 00:00:06.710
+Yang pertama akan kita bicarakan adalah enkripsi simetris.
+
+00:00:06.940 --> 00:00:15.850
+Dan hanya sebagai pengingat, enkripsi adalah cara untuk menyembunyikan atau pada dasarnya mencampurkan sebuah teks
+
+00:00:16.150 --> 00:00:24.460
+dan melakukan sesuatu yang tidak mungkin dibaca oleh pihak ketiga atau seseorang tanpa
+
+00:00:24.460 --> 00:00:26.380
+semacam cara mendekripsi.
+
+00:00:26.410 --> 00:00:29.300
+Jadi ini cara untuk memiliki rahasia.
+
+00:00:30.960 --> 00:00:41.190
+Sekarang enkripsi simetris menggunakan satu kunci rahasia untuk enkripsi dan dekripsi oleh kedua belah pihak.
+
+00:00:41.190 --> 00:00:42.130
+Mari saya tunjukkan apa yang saya maksud.
+
+00:00:43.020 --> 00:00:51.780
+Jika saya ingin mengirim halo sebagai pesan ke komputer lain ini, menggunakan enkripsi simetris saya dapat
+
+00:00:51.780 --> 00:00:58.530
+memiliki kunci yang mengubah teks halo ini menjadi sepotong omong kosong.
+
+00:00:58.920 --> 00:01:08.820
+Dan selama teman saya atau komputer saya yang lain memiliki kunci yang sama, saya dapat menggunakan ini untuk mendekripsi dan mendapatkan
+
+00:01:09.410 --> 00:01:10.110
+hello.
+
+00:01:10.470 --> 00:01:16.890
+Dan siapa yang ada di tengah sini, siapa pun yang berada di depan umum di sini yang membaca pesan
+
+00:01:16.890 --> 00:01:23.120
+kami tidak akan mengerti apa yang kami katakan satu sama lain karena mereka tidak memiliki kunci ini.
+
+00:01:23.150 --> 00:01:29.580
+Jadi sekali lagi dengan enkripsi simetris siapa pun yang memiliki kunci dapat mendekripsi pesan yang ditransfer.
+
+00:01:30.360 --> 00:01:34.990
+Dan SSH berkomunikasi melalui kunci bersama ini.
+
+00:01:35.100 --> 00:01:38.640
+Dan begitulah caranya kita bisa berbicara satu sama lain.
+
+00:01:38.660 --> 00:01:44.460
+Begitulah cara bisa berbicara dengan Digital Ocean dengan server itu. BAIK.
+
+00:01:44.630 --> 00:01:45.050
+Luar biasa.
+
+00:01:45.050 --> 00:01:51.910
+Ini terlihat bagus tetapi apa satu masalah yang Anda perhatikan di sini.
+
+00:01:51.960 --> 00:01:53.200
+Bisakah Anda memikirkannya?
+
+00:01:53.580 --> 00:01:57.810
+Siapa pun yang memiliki kunci dapat mendekripsi pesan.
+
+00:01:57.810 --> 00:02:04.020
+Jadi jika saya mengirim kata sandi ke komputer lain ini, bukan hanya menyapa.
+
+00:02:04.020 --> 00:02:06.450
+Sesuatu yang sangat sangat penting.
+
+00:02:07.480 --> 00:02:18.850
+Entah bagaimana tuan orang jahat kebetulan menemukan kunci atau juga tahu kunci ini, dia bisa
+
+00:02:19.680 --> 00:02:26.870
+mengetahui kata sandi saya dia bisa mendekripsi pesan ini hanya dengan menggunakan kunci yang sama seperti kita.
+
+00:02:27.010 --> 00:02:34.540
+Jadi kita harus mendapatkan kunci ini dengan cara yang aman sehingga orang lain tidak dapat menggunakannya juga atau tidak bisa
+
+00:02:34.540 --> 00:02:35.940
+mengetahui apa itu.
+
+00:02:36.070 --> 00:02:45.710
+Dan ini dilakukan melalui apa yang kita sebut algoritma pertukaran kunci. Cara aman untuk bertukar kunci-kunci ini tanpa ada
+
+00:02:46.370 --> 00:02:48.810
+aktor jahat yang menghadangnya.
+
+00:02:49.810 --> 00:02:56.020
+Dan apa yang membuat algoritma ini sangat aman adalah kenyataan bahwa kuncinya tidak pernah benar-benar ditransmisikan antara
+
+00:02:56.140 --> 00:02:57.870
+klien dan tuan rumah.
+
+00:02:57.880 --> 00:03:05.650
+Alih-alih, kedua komputer berbagi data publik, dan kemudian memanipulasinya untuk secara independen menghitung kunci
+
+00:03:05.860 --> 00:03:06.670
+rahasia.
+
+00:03:08.240 --> 00:03:14.840
+Jadi, bahkan jika mesin lain menangkap data yang dibagikan secara publik, itu tidak akan dapat menghitung kunci
+
+00:03:15.350 --> 00:03:22.190
+karena baik algoritma pertukaran kunci ini yang untuk saat ini jenis seperti kotak ungu ajaib ini tidak diketahui.
+
+00:03:23.170 --> 00:03:29.710
+Jadi tanpa mereka memiliki algoritma pertukaran kunci ini, mereka tidak akan pernah dapat menemukan apa kunci kuning
+
+00:03:29.710 --> 00:03:36.100
+kami dan jangan khawatir kita akan membicarakan hal ini di video berikutnya dan bagaimana ini dilakukan.
+
+00:03:37.220 --> 00:03:46.790
+Tetapi harus dicatat bahwa kunci rahasia khusus untuk setiap sesi SSH dan dihasilkan sebelum sesuatu
+
+00:03:47.120 --> 00:03:50.370
+yang disebut otentikasi Kline.
+
+00:03:50.390 --> 00:04:00.310
+Jadi begitu kunci telah dihasilkan antara kedua pihak, semua paket yang bergerak di antara kedua mesin
+
+00:04:00.790 --> 00:04:09.210
+ini harus dienkripsi dengan kunci ini. Jadi menggunakan enkripsi simetris kami dapat berkomunikasi secara pribadi.
+
+00:04:09.210 --> 00:04:14.730
+Tapi sepertinya kita perlu melakukan semacam pertukaran kunci di sini dan di video berikutnya
+
+00:04:14.730 --> 00:04:17.920
+kita akan berbicara tentang bagaimana kita melakukan itu.
+
+00:04:17.970 --> 00:04:19.280
+Saya akan lihat yang itu.
+
+00:04:19.340 --> 00:04:19.590
+Buh-bye.

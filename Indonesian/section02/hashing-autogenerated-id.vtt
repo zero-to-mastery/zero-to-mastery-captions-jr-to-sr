@@ -1,0 +1,211 @@
+﻿WEBVTT
+
+00:00:01.650 --> 00:00:04.950
+Baiklah apa yang telah kita pelajari sejauh ini.
+
+00:00:04.950 --> 00:00:13.550
+S-sh menggunakan enkripsi simetris dan asimetris karena enkripsi asimetris lebih memakan waktu.
+
+00:00:13.610 --> 00:00:17.280
+Sebagian besar koneksi S-sh menggunakan enkripsi simetris.
+
+00:00:17.420 --> 00:00:27.560
+Seperti yang telah kita bahas, ide di baliknya adalah enkripsi asimetris hanya digunakan untuk membagikan kunci rahasia.
+
+00:00:27.910 --> 00:00:35.140
+Dan akhirnya menggunakan kunci yang merupakan enkripsi simetris untuk komunikasi lebih lanjut sehingga cepat sekarang
+
+00:00:37.330 --> 00:00:43.210
+setelah komunikasi simetris yang aman telah dibuat server menggunakan kunci publik klien
+
+00:00:43.300 --> 00:00:49.180
+dan menghasilkan tantangan dan dikirim ke klien untuk otentikasi jika klien berhasil
+
+00:00:49.180 --> 00:00:50.400
+mendekripsi pesan.
+
+00:00:50.530 --> 00:00:56.170
+Yah itu berarti memegang kunci pribadi yang diperlukan untuk koneksi kemudian sesi yang sama akhirnya
+
+00:00:56.170 --> 00:00:56.840
+dimulai.
+
+00:00:56.860 --> 00:01:04.990
+Jadi kami akhirnya memiliki terowongan aman ini semuanya bahagia dan kami dapat berkomunikasi dengan cara yang aman.
+
+00:01:04.990 --> 00:01:06.240
+Namun satu masalah.
+
+00:01:06.580 --> 00:01:15.650
+Seseorang dapat duduk di tengah dan berpura-pura menjadi yang lain dan merusak atau memodifikasi pesan.
+
+00:01:16.780 --> 00:01:22.570
+Jika mereka entah bagaimana meyakinkan klien bahwa mereka adalah tuan rumah dan
+
+00:01:22.570 --> 00:01:32.400
+tuan rumah bahwa mereka adalah klien mereka hanya dapat memiliki pertukaran kunci antara satu sama lain dan informasi datang mengalir melalui perantara.
+
+00:01:32.450 --> 00:01:41.710
+Sekarang untuk menyelesaikan salah satu masalah ini kita akan berbicara tentang sesuatu yang disebut hashing dan hashing adalah bentuk
+
+00:01:41.710 --> 00:01:46.960
+lain dari kriptografi yang digunakan dalam koneksi shell yang aman.
+
+00:01:46.970 --> 00:01:54.410
+Sekarang di kursus saya yang lain, pengembang web lengkap kami menggunakan sesuatu yang disebut mendekripsi kata sandi hash.
+
+00:01:54.410 --> 00:02:01.590
+Jadi, Anda mungkin ingat bahwa sekarang fungsi hash satu arah berbeda dari dua bentuk korupsi di atas.
+
+00:02:01.620 --> 00:02:07.930
+Yang simetris dan asimetris dalam arti mereka tidak pernah dimaksudkan untuk mendekripsi apa pun.
+
+00:02:08.150 --> 00:02:13.320
+Mereka hanya menghasilkan nilai unik dari panjang tetap untuk setiap input.
+
+00:02:14.530 --> 00:02:23.440
+Itu mendapat dan ada satu cara karena jika saya hash Halo itu akan dijalankan melalui fungsi yang
+
+00:02:23.440 --> 00:02:32.170
+meludahkan jibberish dengan sangat cepat dengan triknya adalah bahwa kita tidak tahu bagaimana kembali ke seluruh
+
+00:02:32.230 --> 00:02:33.260
+teks.
+
+00:02:33.280 --> 00:02:35.150
+Jadi jika melalui hash.
+
+00:02:35.470 --> 00:02:42.790
+Jika seseorang melihat ini, maka sangat mustahil bagi siapa pun untuk kembali dan mencari tahu apa
+
+00:02:43.000 --> 00:02:44.390
+artinya ini.
+
+00:02:44.410 --> 00:02:50.150
+Jadi bagaimana itu bermanfaat Nah seperti yang kami sebutkan sebelumnya.
+
+00:02:50.340 --> 00:02:58.590
+S-sh dapat mengirimkan pesan dengan aman tetapi jika pihak ketiga mampu menipu klien dan tuan rumah dengan
+
+00:02:59.160 --> 00:03:01.620
+baik mereka dapat merusak pesan.
+
+00:03:01.620 --> 00:03:06.970
+Mungkin mereka bisa mengubah pesan untuk alasan jahat.
+
+00:03:06.980 --> 00:03:14.780
+Beruntung bagi kami menggunakan hash teknik ketiga kami dapat memverifikasi otentikasi pesan
+
+00:03:14.780 --> 00:03:17.230
+begitu orang jahat.
+
+00:03:17.620 --> 00:03:22.300
+Orang jahat bisa memodifikasi pesan kami.
+
+00:03:22.330 --> 00:03:29.390
+Ini dilakukan menggunakan sesuatu yang disebut HMX atau kode otentikasi pesan berbasis hash.
+
+00:03:29.500 --> 00:03:31.120
+Saya tahu ini seteguk.
+
+00:03:31.150 --> 00:03:41.790
+Nama-nama ini menjadi sangat membingungkan tetapi intinya adalah ini menggunakan fungsi hash setiap pesan yang
+
+00:03:41.790 --> 00:03:53.540
+dikirim harus berisi sesuatu yang disebut Mac dan Mac ini adalah hash yang dihasilkan dari kunci
+
+00:03:53.660 --> 00:03:55.000
+simetris.
+
+00:03:55.190 --> 00:04:00.560
+Nomor urut paket dan isi pesan yang dikirim.
+
+00:04:00.770 --> 00:04:05.810
+Jadi misalkan klien ini mencoba mengirim kata sandi dengan tuan rumah dan mereka
+
+00:04:06.200 --> 00:04:15.890
+telah membuat kunci simetris untuk komunikasi yang aman sambil menggunakan nomor urut paket kunci dan kemudian teks apa pun yang saya kirim dan kasus ini
+
+00:04:15.890 --> 00:04:19.280
+katakan saja kita ' sedang mengirim kata sandi.
+
+00:04:19.370 --> 00:04:27.910
+Saya menggabungkan ini menjadi sebagai input ke fungsi hash dan fungsi ini akan memuntahkan beberapa string.
+
+00:04:27.910 --> 00:04:29.890
+Sama sekali tidak ada artinya.
+
+00:04:30.190 --> 00:04:33.800
+Dan sekarang ini dikirim ke tuan rumah.
+
+00:04:33.980 --> 00:04:35.330
+Tapi ini tidak ada artinya.
+
+00:04:35.370 --> 00:04:40.210
+Jadi, bagaimana tuan rumah dapat memeriksa bahwa pesan tersebut belum diubah.
+
+00:04:41.210 --> 00:04:47.090
+Yang dapat mereka lakukan sekarang adalah karena mereka memiliki informasi yang sama mereka dapat menggunakan kunci
+
+00:04:47.090 --> 00:04:49.820
+simetris mereka sendiri yang sama dengan klien.
+
+00:04:50.120 --> 00:04:57.350
+Mereka dapat menggunakan nomor urutan paket lagi yang mereka berdua tahu dan
+
+00:04:57.620 --> 00:05:04.910
+kemudian karena pesan ini dikirim melalui S-sh mereka juga memiliki pesan yang dikirim.
+
+00:05:04.920 --> 00:05:09.140
+Jadi sekarang mereka menjalankannya melalui fungsi hash yang sama lagi.
+
+00:05:09.570 --> 00:05:20.380
+Dan setelah menghitung itu akan melihat apakah yang baru saja saya hasilkan cocok dengan apa yang hash klien.
+
+00:05:20.550 --> 00:05:27.600
+Dan jika itu cocok dengan baik itu berarti bahwa pesan ini tidak dirusak karena
+
+00:05:27.600 --> 00:05:36.540
+pada setiap titik jika kata sandi bahkan satu huruf bahkan huruf besar diubah, hash ini akan sangat berbeda.
+
+00:05:36.600 --> 00:05:40.440
+Dan itu adalah salah satu karakteristik dari perubahan fungsi hash.
+
+00:05:40.500 --> 00:05:45.040
+Setiap hal tidak peduli seberapa mirip inputnya.
+
+00:05:45.060 --> 00:05:51.720
+Mungkin akan mengeluarkan angka yang sama sekali berbeda sekarang mempelajari semua yang kita miliki sampai
+
+00:05:51.720 --> 00:05:52.750
+saat ini.
+
+00:05:52.950 --> 00:06:02.260
+Kita harus memahami apa yang terjadi ketika kita mengetikkan S-sh di alamat IP atau apakah Anda
+
+00:06:02.260 --> 00:06:09.620
+melihat sampai sekarang saya mungkin berbohong kepada Anda sedikit karena semua yang
+
+00:06:09.620 --> 00:06:21.770
+kita bicarakan jika saya pergi ke terminal saya sekarang dan hanya menerapkan ini dengan baik saya akan S-sh ke server Digital Ocean.
+
+00:06:21.770 --> 00:06:22.460
+Tekan
+
+00:06:26.770 --> 00:06:35.010
+enter dan saya mendapatkan persyaratan kata sandi tetapi itu tidak terjadi ketika saya menunjukkan kepada Anda di video
+
+00:06:35.290 --> 00:06:41.750
+sebelumnya, saya langsung masuk dan saya bisa melakukan apa pun yang saya inginkan.
+
+00:06:41.750 --> 00:06:49.620
+Akan menunjukkan kepada Anda mengapa itu dan mengapa kami akhirnya harus memasukkan kata sandi dan video berikutnya.
+
+00:06:49.700 --> 00:06:51.530
+Saya tahu sedikit tentang cliffhanger.
+
+00:06:51.620 --> 00:06:53.070
+Saya akan lihat di video berikutnya.
+
+00:06:53.240 --> 00:06:53.540
+Bebai.

@@ -1,0 +1,214 @@
+﻿WEBVTT
+
+00:00:00.770 --> 00:00:01.900
+Selamat datang kembali.
+
+00:00:02.060 --> 00:00:06.380
+Hal-hal perlahan mulai mengumpulkan dan mereka mulai bekerja.
+
+00:00:06.380 --> 00:00:07.790
+Rasanya enak bukan.
+
+00:00:07.790 --> 00:00:14.510
+Dan kita menjadi sangat dekat ketika kita memiliki satu hal terakhir yang ingin kita terapkan di backend sebelum kita
+
+00:00:14.510 --> 00:00:19.330
+kembali ke depan dan melakukan beberapa hal seperti memperbaiki masalah profil ini.
+
+00:00:19.370 --> 00:00:28.070
+Sekarang token ini di sini sedang dikirim kepada kami, tetapi kami juga ingin memastikan bahwa setiap kali
+
+00:00:28.090 --> 00:00:37.690
+kami menerima token ini dari klien kami melakukan beberapa pengecekan padanya karena ingat dalam fungsi seinen kami, kami telah menulis
+
+00:00:37.750 --> 00:00:45.100
+fungsi kecil konyol ini yang disebut Dapatkan auth token ID yang hanya melakukan konsol.
+
+00:00:45.380 --> 00:00:53.090
+Dan jika kita kembali ke fungsi utama kita yaitu seinen otentikasi kita melihat bahwa kita memeriksa apakah header
+
+00:00:53.230 --> 00:01:01.210
+permintaan memiliki otorisasi dan jika mereka sudah melakukannya maka kita dapat menjalankan dapatkan ID kaleng otomatis karena kita tidak ingin
+
+00:01:01.210 --> 00:01:03.380
+pengguna untuk masuk dan lebih.
+
+00:01:03.640 --> 00:01:09.370
+Kalau tidak, mereka harus menjalankan melalui tanda pegangan dan langkah yang sudah berfungsi untuk saat ini.
+
+00:01:09.370 --> 00:01:14.500
+Kami memeriksa dan menyimpan informasi yang membuat sesi di server
+
+00:01:14.860 --> 00:01:17.780
+rattus dan mengembalikan informasi sesi.
+
+00:01:17.830 --> 00:01:22.440
+Jadi mari kita selesaikan ini dengan memiliki token ID.
+
+00:01:22.450 --> 00:01:30.760
+Sekarang penamaan ini harus masuk akal sementara yang ingin kita lakukan di sini sebenarnya mendapatkan token atau mendapatkan ID
+
+00:01:30.760 --> 00:01:32.770
+dari database rattus kami.
+
+00:01:32.830 --> 00:01:42.030
+Ingat jika saya mendapatkan token ini yang kami buat dengan pengguna kami. Yah, saya ingin menerima ID
+
+00:01:42.030 --> 00:01:48.840
+profil seseorang sehingga kami dapat meminta dan melakukan permintaan dapatkan ke profil.
+
+00:01:48.840 --> 00:01:53.050
+Ingat di server kami Dutchie kami titik akhir kami.
+
+00:01:53.050 --> 00:01:59.450
+Tujuan kami adalah memiliki penandatanganan yang hanya mengatakan "ya", Anda sudah melihat token Anda.
+
+00:01:59.680 --> 00:02:07.180
+Dan setelah kami menerima token, kami mengirim permintaan untuk benar-benar mendapatkan ID profil dan
+
+00:02:07.360 --> 00:02:17.470
+karena otentikasi masuk ini mengembalikan token dan ID ingat mengembalikan ID dan token sekarang bisa mendapatkan profil dengan ID yang
+
+00:02:17.830 --> 00:02:26.530
+kami terima dan memberikan surat otorisasi token sehingga nanti ketika kami menjadikan ini sebagai terproteksi dan menunjukkan
+
+00:02:26.890 --> 00:02:33.730
+bahwa hanya Autocad yang valid yang dapat mengakses, kami memastikan bahwa ini
+
+00:02:34.450 --> 00:02:36.280
+bekerja dengan baik.
+
+00:02:36.280 --> 00:02:37.760
+Jadi mari kita lakukan itu.
+
+00:02:37.840 --> 00:02:43.880
+Saya akan pergi untuk melihat otentikasi dan memperbaiki mendapatkan token ID.
+
+00:02:43.890 --> 00:02:47.010
+Ini akan menjadi fungsi sederhana yang bagus.
+
+00:02:47.010 --> 00:02:50.550
+Kami hanya mendapatkan nilai dari basis data merah kami.
+
+00:02:52.340 --> 00:03:05.250
+Akan mengatakan otorisasi Konst karena kita akan menerimanya dari permintaan kami bukan pembenci.
+
+00:03:05.290 --> 00:03:08.590
+Dan lagi kita akan menerima benda-benda ini.
+
+00:03:08.590 --> 00:03:16.090
+Jadi di token GET OFF saya. D. Saya akan meneruskan objek respons permintaan ke token
+
+00:03:16.210 --> 00:03:20.930
+gueth mendapatkan token I. D. dan di sini kita harus memiliki akses kepada mereka sekarang.
+
+00:03:23.550 --> 00:03:28.450
+Sekarang dengan redescribe kami itu adalah metode sederhana.
+
+00:03:28.530 --> 00:03:36.090
+Alih-alih itu kita akan menggunakan get seperti yang kita lakukan di rattus dan yang
+
+00:03:36.090 --> 00:03:44.820
+perlu kita lakukan sekarang adalah memberikan kunci dalam kasus kami otorisasi tokin dan permintaan Gebe akan menerima
+
+00:03:45.090 --> 00:03:51.650
+fungsi callback ketika benar-benar menerima ini baik dengan udara sebagai balasan.
+
+00:03:52.050 --> 00:03:58.060
+Jadi, Anda akan mendapatkan nyl atau nomor ID aktual.
+
+00:03:58.150 --> 00:04:00.560
+Jadi mari kita buat fungsi callback itu.
+
+00:04:00.640 --> 00:04:12.620
+Dan dalam akhir pekan ini lakukan pemeriksaan cepat untuk mengatakan apakah ada kesalahan atau mungkin tidak ada balasan
+
+00:04:12.770 --> 00:04:15.350
+Dalam hal ini kita dapat mengatakan
+
+00:04:20.600 --> 00:04:26.190
+kembali dan kita dapat melakukan respons mereka di sini dan menambahkan seekor anjing kemudian.
+
+00:04:26.240 --> 00:04:31.160
+Tetapi hanya karena kita sudah memiliki pegangan masuk dan hanya untuk menjaga kekacauan
+
+00:04:31.160 --> 00:04:38.200
+terjadi walaupun saya suka menjaga tanggapan dalam fungsi ini untuk saat ini, mari kita tambahkan tanggapan yang sebenarnya di sini.
+
+00:04:38.210 --> 00:04:46.340
+Saya akan mengatakan status tanggapan balik 400 dan
+
+00:04:50.270 --> 00:04:58.450
+itu akan mengatakan pada otorisasi suara bagus sangat resmi.
+
+00:04:58.580 --> 00:05:07.430
+Namun jika semuanya berjalan dengan baik dalam hal itu kami ingin mengembalikan respons Jason itu dengan ID yang merupakan balasan
+
+00:05:08.050 --> 00:05:09.910
+yang kami terima.
+
+00:05:09.940 --> 00:05:16.170
+Ingat, balasan akan menjadi string yang akan ditugaskan ke ID.
+
+00:05:16.230 --> 00:05:24.870
+Jadi dengan cara ini kami mendapatkan token saya. D. akan mendapatkan token ID dan ingat karena kami kembali
+
+00:05:24.870 --> 00:05:28.040
+ke sini kami ingin memastikan bahwa fungsi ini benar-benar mengembalikan sesuatu juga.
+
+00:05:28.170 --> 00:05:33.120
+Dalam hal ini kami menambahkan kunci kembali di sini.
+
+00:05:33.180 --> 00:05:36.890
+Jadi, jika kita menyimpan ini, kita seharusnya tidak mendapatkan kesalahan.
+
+00:05:36.900 --> 00:05:38.310
+Kami memiliki kesalahan sintaksis.
+
+00:05:38.550 --> 00:05:39.340
+Aku berbohong.
+
+00:05:41.060 --> 00:05:45.710
+Dan ya itu karena kami ingin mengembalikan objek di sini.
+
+00:05:45.890 --> 00:05:50.950
+Katakanlah semuanya baik-baik saja tampaknya berfungsi.
+
+00:05:50.980 --> 00:06:00.870
+Kami menggunakan GET OFF token ID jika saya gulir ke bawah di sini ini seharusnya masuk akal sekarang masuk otentikasi yang
+
+00:06:01.050 --> 00:06:09.780
+masuk ke masuk dan titik akan melakukan salah satu dari dua hal jika pengguna mengirim token otorisasi kita
+
+00:06:09.780 --> 00:06:15.320
+akan ambil saja id pengguna dan kirim respons kami kembali.
+
+00:06:15.390 --> 00:06:24.410
+Ingat respons Jaison dengan ID pengguna jika tidak ada token otorisasi maka kami akan menangani proses masuk memeriksa kata sandi kami
+
+00:06:24.410 --> 00:06:31.700
+yang digunakan adalah crypt dan database untuk memeriksa kata sandi kami jika semuanya memeriksa dengan baik dan
+
+00:06:31.700 --> 00:06:37.130
+kami memiliki ID dan e -mail maka kita akan membuat sesi dan
+
+00:06:37.130 --> 00:06:42.060
+benar-benar menyimpan membuat token mengatur token di basis data kita.
+
+00:06:42.300 --> 00:06:45.450
+Jika tidak berfungsi dengan baik, kami hanya menolak dengan kesalahan.
+
+00:06:45.570 --> 00:06:53.810
+Kalau tidak, kita akan mengembalikan sesi dengan true true dan ID pengguna dan token sekali lagi.
+
+00:06:53.820 --> 00:07:01.110
+Sehingga pada akhir kedua situasi ini pengguna berakhir dengan ID dan token.
+
+00:07:01.230 --> 00:07:06.750
+Sehingga di masa depan dan apa yang akan kita terapkan di video
+
+00:07:06.750 --> 00:07:12.380
+berikutnya di ujung depan kita bisa menggunakan dot get request untuk mendapatkan profil.
+
+00:07:12.390 --> 00:07:14.790
+Maka dengan itu saya akan melihat di video berikutnya.

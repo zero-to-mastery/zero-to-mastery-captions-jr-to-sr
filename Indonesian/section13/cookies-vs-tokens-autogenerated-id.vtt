@@ -1,0 +1,409 @@
+﻿WEBVTT
+
+00:00:01.640 --> 00:00:07.690
+Saya punya diagram kecil di sini yang menjelaskan dengan sangat baik beberapa metode otentikasi yang dapat
+
+00:00:07.690 --> 00:00:08.880
+kita gunakan.
+
+00:00:08.890 --> 00:00:15.700
+Kami memiliki otentikasi berbasis cookie tradisional yang kami bahas sedikit di bagian keamanan dan
+
+00:00:16.330 --> 00:00:19.700
+juga metode otentikasi berbasis token modern.
+
+00:00:21.530 --> 00:00:28.590
+Dan otentikasi berbasis cookie telah menjadi metode yang sudah dicoba dan benar untuk waktu yang lama.
+
+00:00:29.060 --> 00:00:32.090
+Seperti yang Anda lihat di sini, kami memiliki browser dan server.
+
+00:00:32.090 --> 00:00:40.420
+Kami biasanya memiliki permintaan POST untuk mengautentikasi atau masuk dan kami mengirimkan nama pengguna dan kata sandi
+
+00:00:40.420 --> 00:00:41.460
+ke server.
+
+00:00:41.680 --> 00:00:47.300
+Server memeriksa ini untuk memastikan bahwa kata sandi cocok dan bahwa pengguna ada.
+
+00:00:47.410 --> 00:00:55.270
+Dan jika semuanya berjalan dengan baik mereka mengirim kembali respons yang mengatakan OK Anda bisa masuk tetapi
+
+00:00:55.270 --> 00:00:59.650
+mereka juga mengirim header yang diatur cookie dengan sesi.
+
+00:00:59.650 --> 00:01:05.980
+Itu adalah cookie yang merupakan string acak dan string acak ini akan mengidentifikasi browser
+
+00:01:05.980 --> 00:01:06.910
+ini.
+
+00:01:06.910 --> 00:01:14.520
+Itu akan mengatakan kapan saja Anda ingin permintaan seperti pengguna API di sini mengirimkan saya cookie.
+
+00:01:14.710 --> 00:01:17.160
+Itu adalah cookie yang baru saja saya kirim dari server.
+
+00:01:18.860 --> 00:01:24.890
+Dan dalam hal ini browser ingin mendapatkan pengguna dan mengarahkannya berbicara ke server lagi server melihat
+
+00:01:24.890 --> 00:01:30.350
+bahwa ada cookie yang akan memeriksa cookie ini ke tongkat yang dibuat di sini.
+
+00:01:30.350 --> 00:01:36.320
+Harus mengingat cookie itu dan memastikannya cocok dengan cara kami menggunakan kata sandi
+
+00:01:36.320 --> 00:01:37.740
+yang perlu dicocokkan.
+
+00:01:37.810 --> 00:01:39.390
+Jadi server akan berfungsi di sini.
+
+00:01:39.400 --> 00:01:41.200
+Ini akan menjadi untuk melakukan sedikit pekerjaan.
+
+00:01:41.200 --> 00:01:44.240
+Ini akan mengatakan OK ya aku punya cookie ini.
+
+00:01:44.350 --> 00:01:47.110
+Saya ingat saya menetapkan Anda cookie ini.
+
+00:01:47.110 --> 00:01:48.140
+Aku tahu siapa kamu
+
+00:01:48.250 --> 00:01:51.280
+Jadi, inilah informasi Anda tentang pengguna.
+
+00:01:51.280 --> 00:01:58.570
+Anda mendapatkan umpan balik nama dan otentikasi berbasis cookie adalah apa yang kami sebut stateful.
+
+00:01:58.570 --> 00:02:05.170
+Ini berarti bahwa catatan atau sesi otentikasi harus disimpan baik di browser maupun di
+
+00:02:05.170 --> 00:02:05.840
+server.
+
+00:02:06.160 --> 00:02:14.350
+Browser menyimpan cookie sesi mereka di header dan server harus melacak cookie yang dikirimkan kepada klien di katakanlah database
+
+00:02:14.350 --> 00:02:20.640
+dari beberapa cara lain untuk mengelola data itu karena setiap kali mereka mendapatkan permintaan
+
+00:02:20.660 --> 00:02:25.600
+mereka harus melalui cookie itu dan mencari tahu apakah ada di
+
+00:02:25.600 --> 00:02:33.410
+antara mereka yang valid dan informasi pengguna mana yang mereka berikan berdasarkan cookie itu dan harus melacak sesi
+
+00:02:33.410 --> 00:02:35.720
+aktif ini dalam database.
+
+00:02:35.720 --> 00:02:42.740
+Dan keindahannya adalah begitu pengguna katakanlah log out dari aplikasi, sesi dihancurkan baik di
+
+00:02:42.740 --> 00:02:45.290
+sisi klien dan server.
+
+00:02:46.320 --> 00:02:48.060
+Bagus dan sederhana.
+
+00:02:48.060 --> 00:02:53.270
+Sekarang otentikasi berbasis token sedikit berbeda.
+
+00:02:54.180 --> 00:02:59.280
+Dan itu adalah sesuatu yang semakin populer selama beberapa tahun terakhir dengan
+
+00:02:59.280 --> 00:03:00.970
+aplikasi satu halaman.
+
+00:03:01.180 --> 00:03:08.870
+Dan ketika datang ke otentikasi berbasis token yang paling umum yang kebanyakan orang bicarakan adalah token
+
+00:03:08.960 --> 00:03:15.870
+JWT yang merupakan otentikasi token web Jason yang akan kita bahas dalam kursus ini.
+
+00:03:16.660 --> 00:03:23.530
+Sekarang mari kita lihat otentikasi berbasis token yang digunakan pengguna untuk masuk atau mencoba masuk dan
+
+00:03:23.740 --> 00:03:32.090
+mengautentikasi dengan mengirim nama pengguna dan kata sandi di server memeriksa kata sandi yang memastikan bahwa semuanya berfungsi dengan baik
+
+00:03:32.270 --> 00:03:33.230
+oleh pengguna.
+
+00:03:33.320 --> 00:03:36.320
+Yup pengguna ada ya kata sandinya benar.
+
+00:03:36.320 --> 00:03:39.660
+Dan mereka akan mengirim bukan cookie seperti yang kami lakukan di sini.
+
+00:03:39.710 --> 00:03:41.060
+Mereka akan mengirim token.
+
+00:03:41.060 --> 00:03:48.650
+Token JWT pekerjaan dan token ini yang akan kita bahas memiliki beberapa informasi khusus tetapi kelihatannya
+
+00:03:48.710 --> 00:03:57.840
+sangat mirip dengan cookie karena semuanya digabung menjadi sepotong teks dan token ini alih-alih dalam set cookie seperti yang kita
+
+00:03:57.990 --> 00:04:04.530
+miliki di sini sebenarnya disimpan di browser di sesuatu seperti toko lokal atau penyimpanan
+
+00:04:04.530 --> 00:04:05.460
+sesi.
+
+00:04:05.460 --> 00:04:10.790
+Sekali lagi sesuatu yang akan dibahas tetapi browser ini sekarang mengingat token ini sekarang.
+
+00:04:10.810 --> 00:04:19.200
+Kapan pun browser atau pengguna ini perlu mengakses informasi yang mereka harus kirim dengan permintaan mereka, otorisasi ini yang
+
+00:04:19.320 --> 00:04:26.850
+kami berikan kepada JWT pembawa dan nomor token lagi kami akan membahas ini jadi jangan terlalu
+
+00:04:26.850 --> 00:04:27.540
+stres.
+
+00:04:27.540 --> 00:04:31.220
+Kami hanya ingin mendapatkan alur bagaimana semuanya bekerja di sini.
+
+00:04:31.280 --> 00:04:39.990
+Sekarang bagian yang menarik terjadi di sini ketika token data dikirim dengan permintaan untuk mendapatkan pengguna dan menunjukkan
+
+00:04:39.990 --> 00:04:45.230
+server tidak harus benar-benar menyimpan informasi itu di mana saja.
+
+00:04:45.720 --> 00:04:52.890
+Faktanya server tidak benar-benar peduli tentang sesi apa yang dikirim karena mereka dapat dengan mudah cara
+
+00:04:52.950 --> 00:05:01.620
+kerja token JWT adalah bahwa mereka hanya dapat memverifikasi bahwa apa yang mereka tandatangani dan token yang mereka buat
+
+00:05:01.620 --> 00:05:05.540
+benar tanpa menyentuh database tanpa melakukan apa pun.
+
+00:05:05.550 --> 00:05:14.890
+Mereka hanya menjalankan metode verifikasi titik dan mereka dapat mengirim data apa pun kembali ke browser.
+
+00:05:15.470 --> 00:05:21.540
+Dan bagian yang menarik adalah bahwa dalam token JWT ini ada informasi pengguna yang
+
+00:05:21.660 --> 00:05:23.180
+dapat disimpan juga.
+
+00:05:23.190 --> 00:05:25.240
+Sekali lagi ini adalah sesuatu yang akan kita bahas kembali.
+
+00:05:25.240 --> 00:05:29.520
+Jadi diagram ini akan lebih masuk akal menjelang akhir, tetapi saya ingin memperkenalkan Anda
+
+00:05:29.520 --> 00:05:30.400
+pada konsepnya.
+
+00:05:30.480 --> 00:05:36.660
+Hal utama yang dapat diambil adalah bahwa otentikasi berbasis token dalam teori tidak memiliki kewarganegaraan.
+
+00:05:36.660 --> 00:05:44.450
+Server tidak perlu menyimpan catatan pengguna mana yang masuk atau yang telah dikeluarkan.
+
+00:05:44.550 --> 00:05:51.930
+Sebaliknya semua yang perlu dilakukan server adalah mendekode JWT ini dan memastikan bahwa itu token yang valid.
+
+00:05:51.930 --> 00:06:01.170
+Dengan menjalankan metode ini, verifikasi dan sekali pengguna log keluar token dihancurkan di sisi klien.
+
+00:06:01.960 --> 00:06:06.910
+Tapi tidak ada interaksi yang terjadi pada Bakhit.
+
+00:06:06.930 --> 00:06:11.130
+Sekarang mengapa kita memilih satu dari yang lain.
+
+00:06:11.130 --> 00:06:12.880
+Ada pro dan kontra untuk semuanya.
+
+00:06:13.050 --> 00:06:15.800
+Dan saya ingin memberi Anda petunjuk jika Anda online.
+
+00:06:15.920 --> 00:06:22.760
+Ada banyak perdebatan tentang apa yang orang pikirkan dan beberapa orang berpikir bahwa ini adalah cara terbaik untuk melakukannya.
+
+00:06:22.770 --> 00:06:24.820
+Yang lain berpikir bahwa ini adalah cara terbaik untuk melakukannya.
+
+00:06:25.020 --> 00:06:28.230
+Dan ada perdebatan besar ketika datang ke sesi.
+
+00:06:28.230 --> 00:06:35.790
+Ini adalah topik yang sangat diperdebatkan dan mereka akan menjadi orang-orang yang benar-benar membenci satu arah dan sangat menyukai cara
+
+00:06:35.790 --> 00:06:36.960
+yang lain.
+
+00:06:36.960 --> 00:06:37.880
+Jadi ingatlah itu.
+
+00:06:37.890 --> 00:06:42.930
+Dan saya benar-benar akan memberi Anda sumber daya di seluruh bagian ini yang memperdebatkan kedua topik sehingga Anda
+
+00:06:42.930 --> 00:06:44.850
+dapat membuat keputusan untuk diri sendiri.
+
+00:06:44.850 --> 00:06:50.910
+Cara saya akan mengajarkan bagian ini adalah saya akan menunjukkan kepada Anda bagaimana melakukan otentikasi berbasis
+
+00:06:51.090 --> 00:06:57.210
+token tetapi juga termasuk sesi yang sangat mirip dengan otentikasi berbasis cookie sehingga Anda dapat memutuskan
+
+00:06:57.210 --> 00:06:58.920
+sendiri apa yang terbaik.
+
+00:06:58.970 --> 00:07:04.410
+Saya akan menunjukkan kepada Anda apa yang saya anggap terbaik secara pribadi tetapi itu tidak berarti itu cara yang benar atau
+
+00:07:04.740 --> 00:07:06.580
+Anda hanya perlu melakukannya dengan cara ini.
+
+00:07:06.670 --> 00:07:09.540
+Ada banyak cara untuk melakukannya.
+
+00:07:09.730 --> 00:07:15.100
+Tapi seperti saya katakan jika Anda online dan mulai membaca kepala Anda akan sakit tentang semua pro dan kontra dan
+
+00:07:15.100 --> 00:07:15.600
+opsi
+
+00:07:15.640 --> 00:07:22.280
+Jadi saya akan membahas beberapa dari pro dan kontra sekarang otentikasi berbasis token.
+
+00:07:22.280 --> 00:07:27.400
+Keuntungan terbesar adalah gagasan token dibandingkan cookie.
+
+00:07:27.510 --> 00:07:28.900
+Itu tanpa kewarganegaraan.
+
+00:07:28.940 --> 00:07:34.350
+Backend tidak perlu benar-benar merekam atau menyimpan token dalam database.
+
+00:07:34.370 --> 00:07:42.210
+Setiap token bersifat mandiri dan berisi semua data yang diperlukan untuk memeriksa validitasnya serta menyampaikan
+
+00:07:42.270 --> 00:07:43.660
+informasi pengguna.
+
+00:07:45.200 --> 00:07:47.590
+Jadi pekerjaan server sebenarnya disederhanakan.
+
+00:07:47.660 --> 00:07:50.780
+Maka satu-satunya pekerjaan adalah menandatangani token.
+
+00:07:50.780 --> 00:07:58.400
+Dan setiap kali mendapat permintaan untuk memverifikasi token yang bagus dan mudah kami hanya membuat server bekerja
+
+00:07:58.400 --> 00:08:01.270
+jauh lebih sedikit yang selalu menyenangkan.
+
+00:08:03.580 --> 00:08:10.030
+Bagian lainnya adalah bahwa tidak seperti cookie yang merupakan string tidak berarti di JWT Anda sebenarnya
+
+00:08:10.030 --> 00:08:18.730
+dapat memiliki semua jenis data yang Anda inginkan di dalam JWT sehingga Anda dapat memiliki hal-hal seperti ID pengguna atau nama
+
+00:08:18.820 --> 00:08:25.250
+pengguna di dalam token ini sehingga ketika server menerimanya benar-benar dapat melihat tipe data apa.
+
+00:08:25.270 --> 00:08:32.950
+Token JWT ini berisi hal baik lainnya tentang token adalah bahwa tidak seperti cookie yang berfungsi
+
+00:08:32.950 --> 00:08:41.910
+sangat baik dengan satu domain tunggal, hubungan klien server browser klasik dengan pendekatan token membuatnya sangat mudah bagi Anda
+
+00:08:41.910 --> 00:08:45.060
+untuk bekerja dengan API yang berbeda.
+
+00:08:45.300 --> 00:08:52.620
+Jika perusahaan Anda memiliki beberapa IP, Anda dapat menggunakan token JWT yang sama di API yang berbeda.
+
+00:08:53.620 --> 00:09:02.810
+Karena token JWT diperlukan dan diperiksa dengan masing-masing dan setiap panggilan selama token valid, permintaan dapat
+
+00:09:02.820 --> 00:09:05.870
+benar-benar diproses oleh apa pun.
+
+00:09:06.030 --> 00:09:10.530
+Dan ya ada cara untuk melakukan ini dengan otentikasi berbasis cookie tapi itu pasti
+
+00:09:10.530 --> 00:09:11.550
+lebih rumit.
+
+00:09:12.840 --> 00:09:21.870
+Sekarang hal lain adalah bahwa dengan otentikasi berbasis token dapat melayani browser dan platform seluler asli seperti
+
+00:09:21.870 --> 00:09:23.770
+iOS dan Android.
+
+00:09:25.320 --> 00:09:31.890
+Karena memiliki cookie pada platform seluler asli sebenarnya sementara mereka tidak berbaur dengan baik, adalah
+
+00:09:32.040 --> 00:09:33.850
+mungkin untuk menggunakannya.
+
+00:09:34.080 --> 00:09:40.710
+Tetapi menggunakan cookies dengan platform mobile benar-benar token yang sangat keras di sisi lain bagus dan bekerja dengan
+
+00:09:40.710 --> 00:09:41.850
+cukup baik.
+
+00:09:42.890 --> 00:09:46.560
+Baiklah, token itu luar biasa, mari kita ambil token dan lupakan cookie.
+
+00:09:46.970 --> 00:09:54.870
+Yah sekali lagi seperti yang kita tahu pengembang senior selalu ada pro dan kontra kontra adalah bahwa
+
+00:09:54.870 --> 00:10:03.960
+ukuran JWT dibandingkan dengan cookie sebenarnya sangat berbeda JWT karena mereka menyimpan informasi jauh lebih besar dan karena Anda
+
+00:10:04.470 --> 00:10:09.600
+mengirim mereka pada setiap permintaan pasti meningkatkan jumlah byte yang harus
+
+00:10:09.600 --> 00:10:11.540
+Anda transfer bolak-balik.
+
+00:10:13.800 --> 00:10:19.070
+Jadi tergantung pada situasi Anda, ukuran gim dapat menjadi masalah.
+
+00:10:19.440 --> 00:10:26.250
+Bagian lainnya adalah fakta bahwa kita menyimpan informasi dalam JWT tentang pengguna itu bisa berbahaya jika
+
+00:10:26.250 --> 00:10:31.300
+kita menyimpan sesuatu yang sensitif tentang pengguna jika tanda JWT dicuri.
+
+00:10:31.560 --> 00:10:37.250
+Orang jahat sebenarnya bisa memecahkan kode itu dan melihat apa yang ada di dalam JWT dengan mudah.
+
+00:10:38.020 --> 00:10:43.180
+Dan ada beberapa hal lain dan saya akan meninggalkan sumber daya untuk Anda seperti saya katakan
+
+00:10:43.180 --> 00:10:48.450
+ini adalah topik yang hanya berjalan semakin dalam dan semakin dalam dan ada banyak hal yang perlu dipertimbangkan.
+
+00:10:48.730 --> 00:10:51.690
+Jadi untuk menyederhanakan hal-hal yang saya akan membuatnya mudah bagi Anda.
+
+00:10:51.700 --> 00:10:57.790
+Saya akan menunjukkan kepada Anda bagaimana saya menerapkan otentikasi dan Anda dapat mengambil bagian apa pun yang Anda inginkan untuk
+
+00:10:57.790 --> 00:10:58.890
+aplikasi Anda sendiri.
+
+00:11:00.620 --> 00:11:04.790
+Namun pada akhirnya kami akan memastikan bahwa aplikasi kami akan
+
+00:11:04.780 --> 00:11:12.280
+aman dan mengelola sesi ini dengan cara yang tidak akan membuat aplikasi kami rentan terhadap orang jahat yang menyerang kami.
+
+00:11:13.910 --> 00:11:17.180
+Baiklah, mari kita istirahat dan sampai jumpa di video berikutnya.
+
+00:11:17.200 --> 00:11:17.540
+Sampai jumpa.

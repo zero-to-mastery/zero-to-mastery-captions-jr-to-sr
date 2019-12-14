@@ -1,0 +1,184 @@
+﻿WEBVTT
+
+00:00:01.880 --> 00:00:10.640
+Selamat datang di bantuan bagian Anda dari AWOS Kursus atau Layanan Web Amazon adalah sesuatu yang disediakan
+
+00:00:10.640 --> 00:00:12.360
+oleh perusahaan Amazon.
+
+00:00:12.830 --> 00:00:19.910
+Anda lihat selama bertahun-tahun mereka telah berkembang ke ukuran yang sangat besar dan karena itu mereka memiliki banyak
+
+00:00:19.910 --> 00:00:20.600
+server.
+
+00:00:20.720 --> 00:00:27.380
+Banyak mesin dan mereka menjadi sangat pandai mengelola mesin ini dan memastikan bahwa mereka
+
+00:00:27.380 --> 00:00:28.340
+bekerja bersama.
+
+00:00:29.380 --> 00:00:36.370
+Dan beberapa tahun yang lalu mereka menemukan bahwa keahlian untuk dapat mengelola mesin dan
+
+00:00:36.670 --> 00:00:41.840
+membuat aplikasi skala besar adalah keterampilan yang diinginkan banyak orang.
+
+00:00:42.070 --> 00:00:52.160
+Jadi mereka menciptakan layanan ini Amazon Web Services untuk membantu orang-orang dengan membiarkan kami menyewa beberapa layanan mereka sehingga kami dapat
+
+00:00:52.160 --> 00:00:59.210
+berjalan pada platform yang sama dengan infrastruktur yang sama yang dijalankan Amazon pada perusahaan
+
+00:00:59.210 --> 00:01:00.640
+e-commerce besar-besaran.
+
+00:01:01.890 --> 00:01:07.200
+Dan di bagian ini kita akan mempelajari semua yang Anda lihat dengan AWOS.
+
+00:01:07.220 --> 00:01:13.250
+Anda dapat memilih solusi spesifik yang Anda butuhkan dan hanya membayar untuk apa yang Anda gunakan.
+
+00:01:14.420 --> 00:01:19.180
+Jadi Anda tidak perlu khawatir membeli peralatan yang mengelola segalanya.
+
+00:01:19.640 --> 00:01:22.090
+Anda lihat Amazon memiliki semua itu.
+
+00:01:22.100 --> 00:01:26.960
+Yang perlu Anda khawatirkan adalah memastikan bahwa Anda mengirimi mereka kode yang tepat untuk menghubungkan potongan-potongan itu
+
+00:01:27.440 --> 00:01:29.640
+dan mereka akan menjalankan semuanya untuk Anda.
+
+00:01:30.420 --> 00:01:35.880
+Dan ini berarti bahwa Anda akan memiliki pengeluaran modal yang lebih
+
+00:01:35.880 --> 00:01:42.060
+rendah atau Anda akan menghabiskan banyak uang lebih sedikit mengatur semuanya sendiri serta
+
+00:01:42.060 --> 00:01:49.560
+memiliki waktu lebih cepat untuk benar-benar mulai menyebarkan aplikasi dan aplikasi Anda karena berjalan pada layanan
+
+00:01:49.560 --> 00:01:58.460
+Amazon. sudah keluar dari gerbang untuk kinerja dan menskalakan beberapa hal yang benar-benar kami hargai dan semakin banyak perusahaan
+
+00:01:58.460 --> 00:02:07.070
+mulai membangun infrastruktur mereka sebagian atau seluruhnya di cloud dengan Amazon Web Services dan Anda akan mendengar istilah tentang
+
+00:02:07.070 --> 00:02:14.870
+premis atau lengan kereta bayi pusat data dan saat itulah Anda seperti saya katakan sebelum server Anda
+
+00:02:14.870 --> 00:02:19.960
+sendiri mesin Anda sendiri dan ini menjadi semakin umum.
+
+00:02:20.060 --> 00:02:28.220
+Kami hanya membiarkan perusahaan besar seperti Amazon Google atau Microsoft menangani ini untuk kami dan cloud
+
+00:02:28.490 --> 00:02:36.590
+sekarang memastikan standar keamanan kepatuhan kepatuhan dan kemampuan Insley menumbuhkan dan mengecilkan infrastruktur kami untuk memenuhi
+
+00:02:36.830 --> 00:02:39.560
+kebutuhan kami berdasarkan aplikasi kami.
+
+00:02:39.590 --> 00:02:46.540
+Itu hanya menghilangkan satu ton sakit kepala dan itu tumbuh seperti orang gila karena manfaat yang jelas
+
+00:02:47.840 --> 00:02:50.130
+Sekarang mengapa kita membutuhkan ini lagi.
+
+00:02:50.570 --> 00:02:56.390
+Ingat aplikasi kita bahwa kita sedang mencoba untuk membangun aplikasi otak cerdas kita, kita memiliki semua
+
+00:02:56.390 --> 00:03:01.290
+bagian yang menghubungkan ini dan melihat semua ini, itu banyak waktu rekayasa.
+
+00:03:01.490 --> 00:03:04.880
+Maksud saya kita harus membuat rattus karena.
+
+00:03:04.910 --> 00:03:11.270
+Ya dan dari semua laki-laki, kita dapat memiliki semuanya di bawah satu wadah, tetapi pada kenyataannya dalam produksi kita
+
+00:03:11.270 --> 00:03:17.810
+perlu memastikan bahwa mereka dapat meningkatkan skala dan bahwa kita mungkin menempatkan mereka di lokasi geografis yang berbeda jika kita
+
+00:03:17.810 --> 00:03:22.450
+memiliki pengguna dari berbagai belahan dunia yang perlu memiliki server dekat dengan mereka.
+
+00:03:22.840 --> 00:03:30.710
+Dan kita mungkin perlu mengelola basis data dan mungkin melakukan hal-hal seperti mempersingkat atau menambahkan basis data tambahan yang mungkin
+
+00:03:31.550 --> 00:03:38.640
+ingin kita tambahkan load balancers dan itu hanya menambah banyak kerumitan mengapa kita perlu melakukan dengan Ada.
+
+00:03:38.650 --> 00:03:43.070
+Ya mereka mengurus beberapa poin rasa sakit ini untuk kita.
+
+00:03:43.080 --> 00:03:44.300
+Anda ingin memuat penyeimbang.
+
+00:03:44.390 --> 00:03:45.660
+Mereka akan membereskannya.
+
+00:03:45.710 --> 00:03:52.120
+Anda ingin agar basis data secara otomatis terukur ketika pengguna dan data bertambah.
+
+00:03:52.160 --> 00:03:56.630
+Mereka dapat melakukannya untuk Anda dan semua hal ini dilakukan di luar kotak.
+
+00:03:56.630 --> 00:04:00.440
+Yang kami lakukan adalah memberi mereka beberapa konfigurasi.
+
+00:04:00.620 --> 00:04:01.730
+Dan Anda sudah siap.
+
+00:04:02.600 --> 00:04:06.000
+Sekarang ada dua platform lain yang cukup besar.
+
+00:04:06.170 --> 00:04:11.750
+Sebenarnya empat jika Anda benar-benar ingin masuk ke dalamnya jelas kita sudah
+
+00:04:12.170 --> 00:04:18.470
+bicara tentang Amazon tetapi ada juga Microsoft Azure dan platform Google Cloud atau GCP.
+
+00:04:18.470 --> 00:04:22.870
+Ada juga IBM yang ada di pasaran tetapi ini adalah tiga teratas sekarang.
+
+00:04:23.030 --> 00:04:29.690
+Dan mereka semua bersaing untuk mendapatkan pangsa pasar yang sangat besar ini dan mereka berusaha saling melakukan satu
+
+00:04:29.690 --> 00:04:30.650
+sama lain.
+
+00:04:30.740 --> 00:04:32.240
+Dan bagaimana mereka melakukannya.
+
+00:04:32.570 --> 00:04:39.320
+Yah masing-masing dari mereka memiliki banyak mesin banyak server dan banyak keahlian dalam mengelola skala
+
+00:04:39.320 --> 00:04:47.920
+besar masif ini tetapi mereka mencoba untuk membedakan diri mereka dengan menawarkan layanan yang berbeda dan kemudian video berikutnya
+
+00:04:47.920 --> 00:04:52.550
+kita akan berbicara tentang beberapa layanan yang ditawarkan Amazon.
+
+00:04:52.960 --> 00:04:59.680
+Dan Microsoft dan Google juga menawarkan beberapa layanan ini tetapi juga menawarkan beberapa yang unik.
+
+00:04:59.800 --> 00:05:06.220
+Jadi sebagai pengguna sebagai pengembang, Anda dapat memilih berdasarkan pada jenis layanan apa yang perlu Anda
+
+00:05:06.220 --> 00:05:07.340
+putuskan sendiri.
+
+00:05:07.900 --> 00:05:13.480
+Saya harus pergi dengan salah satu dari mereka dan menjadi lebih mudah dan lebih mudah untuk hanya mentransfer dan mengubah layanan
+
+00:05:13.980 --> 00:05:14.910
+yang Anda inginkan.
+
+00:05:15.340 --> 00:05:21.610
+Jadi dalam video berikutnya mari kita menangani beberapa layanan untuk memiliki gagasan yang lebih baik tentang apa
+
+00:05:21.610 --> 00:05:24.930
+keseluruhan infrastruktur ini sebagai platform layanan sebagai layanan.

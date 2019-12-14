@@ -1,0 +1,1108 @@
+﻿WEBVTT
+
+00:00:01.910 --> 00:00:03.050
+Selamat datang kembali.
+
+00:00:03.050 --> 00:00:03.600
+Baiklah.
+
+00:00:03.890 --> 00:00:10.580
+Mari kita mulai menyiapkan proyek otak cerdas kita sehingga bekerja pada mesin kita sesuatu yang akan kita
+
+00:00:10.580 --> 00:00:17.690
+gunakan untuk beberapa bagian berikutnya untuk benar-benar menambahkan fitur baru ke dalamnya dan melakukan beberapa hal yang sangat sangat
+
+00:00:17.690 --> 00:00:22.190
+rapi dengan beberapa alat modern yang benar-benar meningkatkan kemampuan kita. naik.
+
+00:00:22.190 --> 00:00:26.480
+Hal pertama yang akan saya lakukan adalah berpura-pura ini adalah hari pertama saya bekerja.
+
+00:00:26.480 --> 00:00:33.460
+Saya memiliki proyek otak cerdas dan otak pintar API dan Bruno dan tim baru saja
+
+00:00:33.480 --> 00:00:41.480
+memberi tahu kami bahwa ada aplikasi klien server yang satu ini dan bahwa kami juga perlu mengatur
+
+00:00:41.750 --> 00:00:49.850
+database karena server ini perlu berbicara dengan basis data di mana semua pengguna berada dan tempat kami menyimpan
+
+00:00:49.910 --> 00:00:55.870
+kata sandi hash karena pengguna dapat masuk dan mendaftar ke Facebook kami.
+
+00:00:56.050 --> 00:00:56.770
+Mari kita mulai.
+
+00:00:56.800 --> 00:01:02.620
+Hal pertama yang akan saya lakukan adalah selalu praktik yang baik untuk
+
+00:01:03.460 --> 00:01:08.070
+tidak hanya mengkloning repo asli untuk hanya melupakan.
+
+00:01:08.230 --> 00:01:13.540
+Sekarang dalam kasus saya karena ini pada repo saya, saya akan memojokkan untuk saat ini.
+
+00:01:13.630 --> 00:01:22.250
+Tetapi saya merekomendasikan Anda untuk melakukan fork proyek Anda dan membuat permintaan tarik dari proyek-proyek bercabang itu.
+
+00:01:24.250 --> 00:01:30.630
+Tetapi untuk sekarang saya akan mengkloning aplikasi otak cerdas untuk memulai.
+
+00:01:30.880 --> 00:01:33.930
+Jadi saya akan membuka terminal saya dan di sini.
+
+00:01:33.940 --> 00:01:35.610
+Mari kita buat ini sedikit lebih besar.
+
+00:01:35.980 --> 00:01:40.770
+Dan di sini saya hanya akan dikloning pada repo Anda.
+
+00:01:41.110 --> 00:01:42.250
+Dan saat itu sedang berjalan.
+
+00:01:42.400 --> 00:01:45.560
+Mari kita pergi ke API dan melakukan hal yang sama.
+
+00:01:46.460 --> 00:01:53.340
+Hanya mengkloning Cerebro ini dan mendapatkan untuk mengkloning.
+
+00:01:53.360 --> 00:01:54.060
+Baiklah.
+
+00:01:54.190 --> 00:01:55.830
+Anda dapat meminimalkan jendela ini untuk saat ini.
+
+00:01:56.720 --> 00:02:01.610
+Dan hanya punya dua folder kami di sini.
+
+00:02:01.650 --> 00:02:04.270
+Jadi sekarang mari kita buat ini lebih besar.
+
+00:02:05.240 --> 00:02:12.090
+Sekarang kami ingin melakukannya karena kami memiliki dua hal. Kami mungkin ingin memiliki dua terminal windows di sini.
+
+00:02:12.320 --> 00:02:14.510
+Jadi saya akan menambahkan jendela baru.
+
+00:02:14.510 --> 00:02:22.450
+Itu dia lagi sedikit lebih besar sehingga kita semua bisa melihat dan saya akan punya
+
+00:02:23.020 --> 00:02:27.150
+satu untuk server saya untuk klien saya.
+
+00:02:27.260 --> 00:02:32.390
+Hal pertama yang akan saya lakukan mari kita sedikit membersihkan ini dan menghapus ini juga.
+
+00:02:32.580 --> 00:02:37.020
+Dan saya akan mengatakan bahwa ini akan menjadi aplikasi sisi klien otak cerdas.
+
+00:02:37.380 --> 00:02:42.270
+Dan ini akan menjadi server yang digunakan aplikasi sisi klien.
+
+00:02:42.270 --> 00:02:48.330
+Jadi ini akan menjadi C. D ke API otak pintar.
+
+00:02:48.340 --> 00:02:49.050
+Baiklah.
+
+00:02:49.070 --> 00:02:56.270
+Sekarang biasanya di get hub ada dokumentasi yang baik oleh tim tentang cara menginstal dan melakukan segalanya untuk
+
+00:02:56.270 --> 00:02:57.010
+mengaturnya.
+
+00:02:57.020 --> 00:03:03.020
+Kita bisa memulai dengan melakukan itu dan kemungkinan besar kita harus melakukan instal NPM karena kita
+
+00:03:03.020 --> 00:03:08.250
+memiliki paket yang paling bagus pada file biasanya dengan semua paket NPM kita.
+
+00:03:08.320 --> 00:03:11.710
+Tetapi sebelum kita melakukannya, izinkan saya membuka subline dan saya
+
+00:03:14.430 --> 00:03:18.010
+akan menggabungkan kedua jendela ini hanya untuk membuat hidup saya lebih mudah.
+
+00:03:27.070 --> 00:03:27.540
+Sempurna.
+
+00:03:27.580 --> 00:03:35.110
+Jadi sekarang saya memiliki server saya yang ada di sini. Saya hanya bisa berpura-pura
+
+00:03:35.170 --> 00:03:44.580
+bahwa ini adalah mesinnya sendiri dan kemudian melakukan hal yang sama untuk sisi klien saya lagi. terpisah dan
+
+00:03:44.580 --> 00:03:52.770
+sebelum saya benar-benar bahkan menjalankan NPM dan melihat saya suka melihat paket Jason phó yang biasanya
+
+00:03:52.770 --> 00:04:01.080
+akan memberi tahu Anda perintah bahwa proyek memiliki dependensi seperti apa yang kami gunakan atau dependensi
+
+00:04:01.080 --> 00:04:08.820
+kedalaman seperti apa yang kami gunakan dan hanya dengan melihat ini Saya bisa Google
+
+00:04:08.880 --> 00:04:10.480
+mungkin NPM.
+
+00:04:10.640 --> 00:04:12.170
+Ini adalah salah satu yang dilakukan gnomon.
+
+00:04:12.360 --> 00:04:18.300
+Di sinilah PGE melakukan PGE adalah tulisan tambahan sehingga mereka harus menggunakan database ini dan mengekspresikannya.
+
+00:04:18.390 --> 00:04:25.200
+Mereka menggunakan server Express mungkin mereka menggunakan sesuatu yang disebut klarifikasi pada Wonder apa itu
+
+00:04:25.200 --> 00:04:26.270
+dan kemudian.
+
+00:04:26.490 --> 00:04:26.730
+BAIK.
+
+00:04:26.730 --> 00:04:32.490
+Mereka menggunakan crypt untuk mengetahui J. S. mungkin mem-hash passwordnya jadi
+
+00:04:32.490 --> 00:04:35.700
+saya sudah punya ide apa aplikasi menggunakan sebagai alat.
+
+00:04:36.150 --> 00:04:40.390
+Mari kita instal itu karena untuk suatu aplikasi untuk bekerja kita jelas perlu menginstal paket-paket ini.
+
+00:04:40.410 --> 00:04:47.050
+Dan Anda akan melihat bahwa folder modul simpul akan muncul dan melakukan hal yang sama
+
+00:04:47.050 --> 00:04:50.220
+untuk aplikasi sisi klien akan menginstal NPM.
+
+00:04:50.580 --> 00:04:55.720
+Dan lagi pergi dengan mengemas Jason kami, saya melihat OIA ini adalah proyek Briac.
+
+00:04:55.720 --> 00:05:00.150
+Mereka menggunakan skrip Riak jadi itu pasti aksi ulang.
+
+00:05:00.170 --> 00:05:00.640
+Itu keren.
+
+00:05:00.640 --> 00:05:06.280
+Dan ini semua perintah yang bisa saya gunakan sepertinya mulai NPM adalah apa yang ingin saya gunakan untuk
+
+00:05:06.280 --> 00:05:11.860
+ujung depan dan kemudian ujung belakang saya melihat bahwa hanya ada satu skrip yang mulai NPM.
+
+00:05:11.890 --> 00:05:21.520
+Jadi sebelum saya melakukan apa pun, saya bisa menjalankan NPM mulai dan lihat apakah semua ini berhasil.
+
+00:05:21.520 --> 00:05:23.690
+Aplikasi ini berjalan OK itu bagus.
+
+00:05:24.130 --> 00:05:26.610
+Dan mari kita jalankan NPM mulai dari sini juga.
+
+00:05:30.060 --> 00:05:35.080
+Dan karena kami sudah memiliki server yang berjalan di port tiga ribu
+
+00:05:35.080 --> 00:05:39.330
+kami hanya menekan ya jadi kami mendapatkan port yang berbeda.
+
+00:05:39.540 --> 00:05:42.580
+Dan tanpa melihat satu baris kode pun.
+
+00:05:42.630 --> 00:05:43.210
+Baiklah.
+
+00:05:43.260 --> 00:05:48.030
+Saya memiliki semuanya diatur dan berfungsi atau sepertinya itu.
+
+00:05:48.090 --> 00:05:48.480
+Baiklah.
+
+00:05:48.480 --> 00:05:51.870
+Jadi sepertinya itu berfungsi sekarang.
+
+00:05:52.260 --> 00:05:54.660
+Mari kita coba dan membuat akun.
+
+00:05:54.660 --> 00:05:56.800
+Kami akan bilang hei.
+
+00:05:57.030 --> 00:06:07.440
+Atau namanya hei hei di gmail dot com dan kami akan mengatakan bahwa passwordnya adalah hei register aku bisa mendaftar
+
+00:06:07.740 --> 00:06:10.110
+jika aku membuka konsol.
+
+00:06:10.110 --> 00:06:19.300
+Baiklah, saya melihat ada 400 permintaan buruk di register dan menunjukkan jika saya kembali ke terminal saya.
+
+00:06:19.340 --> 00:06:22.430
+Baiklah saya mendapatkan kesalahan di server.
+
+00:06:22.580 --> 00:06:25.640
+Saya mendapatkan kesalahan koneksi peringatan K'NEX.
+
+00:06:25.640 --> 00:06:28.510
+Koneksi koneksi berakhir secara tak terduga.
+
+00:06:28.580 --> 00:06:28.790
+BAIK.
+
+00:06:28.790 --> 00:06:34.320
+Jadi sepertinya ada semacam koneksi di sana tanpa melihat kode apa pun dan.
+
+00:06:34.540 --> 00:06:40.430
+Yah sepertinya saya tidak bisa mendaftar dan kami tahu bahwa untuk mendapatkan
+
+00:06:40.430 --> 00:06:50.300
+segala bentuk masuk atau pengguna kami memerlukan database untuk mengingat hal-hal untuk kami seperti nama pengguna, kata sandi, informasi profil,
+
+00:06:50.660 --> 00:06:52.730
+semua hal itu.
+
+00:06:52.800 --> 00:06:53.050
+Baiklah.
+
+00:06:53.040 --> 00:06:54.020
+Dan kita tahu ini.
+
+00:06:54.030 --> 00:07:00.020
+Maksudku, Bruno memberi tahu kami bahwa ada aplikasi klien, server dan database.
+
+00:07:00.180 --> 00:07:08.420
+Jadi sepertinya kita perlu mengatur basis data kita sekarang sehingga kita memiliki koneksi ini dan karena saya tidak mendapatkan kesalahan apa
+
+00:07:08.420 --> 00:07:13.180
+pun di ujung depan dan ujung depan biasanya sangat mudah untuk diatur.
+
+00:07:13.950 --> 00:07:21.470
+Saya dapat kembali dan melalui dependensi dan melihat apa yang mereka gunakan dan saya melihat
+
+00:07:21.470 --> 00:07:30.590
+bahwa mereka menggunakan PGE yang merupakan postscript dan kemungkinan besar koneksi database dan pengaturan terjadi di salah satu file
+
+00:07:31.770 --> 00:07:34.360
+utama seperti server yang Jap.
+
+00:07:34.380 --> 00:07:39.590
+Jadi saya akan pergi ke sini mungkin pertama dan segera saya melihatnya.
+
+00:07:39.630 --> 00:07:40.030
+Baiklah.
+
+00:07:40.050 --> 00:07:46.260
+Sepertinya database D-B menggunakan paket K'NEX ini dan K'NEX.
+
+00:07:46.350 --> 00:07:54.270
+Katakanlah saya tidak tahu apa itu, saya hanya akan pergi ke sini dan mengatakan K'NEX dan PM melihat hasil seperti apa yang
+
+00:07:54.270 --> 00:07:55.020
+saya dapatkan.
+
+00:07:56.860 --> 00:08:00.530
+Baterai baik-baik saja termasuk multi dialek.
+
+00:08:00.690 --> 00:08:04.910
+Itu adalah pembuat kueri tanpa G-S dan browser.
+
+00:08:04.920 --> 00:08:05.240
+Baiklah.
+
+00:08:05.250 --> 00:08:07.770
+Baiklah jadi sepertinya kita menggunakannya untuk bertanya.
+
+00:08:07.840 --> 00:08:13.900
+Yah kita pergi untuk mendapatkan hub mungkin mereka akan memberi kita deskripsi yang lebih baik.
+
+00:08:13.900 --> 00:08:17.370
+Sepertinya mereka memiliki situs Web sehingga Lescaut mengeceknya dan.
+
+00:08:17.410 --> 00:08:17.940
+Oh ya.
+
+00:08:17.990 --> 00:08:20.680
+K'NEX lagi termasuk baterai.
+
+00:08:20.680 --> 00:08:28.020
+Tanyakan kepada Anda semua pembuat dan sepertinya kami dapat membuat Eskew semua pernyataan benar-benar bagus. Eskew
+
+00:08:28.020 --> 00:08:30.500
+semua pernyataan dengan menggunakan ini.
+
+00:08:30.540 --> 00:08:36.780
+Jika saya pergi ke sini untuk mengatakan pembangun query katakanlah kita ingin melakukan pilih.
+
+00:08:36.780 --> 00:08:37.300
+Metode.
+
+00:08:37.470 --> 00:08:37.810
+Baiklah.
+
+00:08:37.810 --> 00:08:46.500
+Jadi sepertinya kita menggunakan K'NEX untuk memilih penulis judul setahun dari database buku dan hasilnya
+
+00:08:46.500 --> 00:08:50.770
+adalah pernyataan pilih yang memberi kita ini.
+
+00:08:50.810 --> 00:08:51.090
+Baiklah.
+
+00:08:51.090 --> 00:08:51.690
+Luar biasa.
+
+00:08:51.720 --> 00:08:54.450
+Jadi mungkin Anda tahu apa itu K'NEX.
+
+00:08:54.750 --> 00:09:00.170
+Mungkin Anda tidak tetapi dengan proyek apa pun saya melihat ini dan berkata OK jadi ini yang mereka gunakan
+
+00:09:00.170 --> 00:09:00.950
+untuk itu.
+
+00:09:00.960 --> 00:09:09.930
+Masuk akal bahwa kami sedang membuat database dan menggunakan K'NEX untuk terhubung ke port database SCARUS
+
+00:09:10.320 --> 00:09:17.950
+dan oh sepertinya ada koneksi di sini dan sepertinya ini adalah localhost.
+
+00:09:17.980 --> 00:09:22.260
+Ini ingin 7. 0 Dudd zero Darwan adalah hal yang sama dengan localhost.
+
+00:09:22.270 --> 00:09:28.620
+Jika saya mengubah perubahan ke localhost, itu akan menjadi hal yang sama melihat Funny Cher setelah saya
+
+00:09:28.620 --> 00:09:36.630
+pikir saya sudah mengatakan ini sebelumnya di mana dikatakan tidak ada tempat seperti inginkan 2 7 0 0 1 yang berarti localhost.
+
+00:09:36.660 --> 00:09:38.870
+Jadi rumah tidak ada tempat seperti rumah.
+
+00:09:39.240 --> 00:09:40.360
+Saya pikir itu lucu.
+
+00:09:40.500 --> 00:09:44.670
+Lagi pula kita juga melihat bahwa ada database otak pintar.
+
+00:09:44.700 --> 00:09:45.500
+Baiklah.
+
+00:09:45.540 --> 00:09:51.530
+Dan pengguna di Google yang saya buat tetapi kita akan melihat apakah kita membutuhkannya.
+
+00:09:51.540 --> 00:09:57.720
+Jadi melihat ini, kita perlu terhubung ke database dan kemudian membukanya karena Anda bekerja di
+
+00:09:57.720 --> 00:09:59.070
+komputer Anda sendiri.
+
+00:09:59.190 --> 00:10:05.040
+Anda perlu terhubung ke database yang ada di komputer Anda atau mungkin mereka memiliki database pengujian yang
+
+00:10:05.070 --> 00:10:06.230
+dapat kami sambungkan.
+
+00:10:06.300 --> 00:10:11.970
+Tapi Bruno tidak menyebutkan apa-apa jadi sepertinya kita harus mengatur sendiri databasenya.
+
+00:10:12.090 --> 00:10:17.490
+Dan lagi jika database baru bagi Anda maka saya sarankan Anda memeriksa kursus saya yang lain.
+
+00:10:17.790 --> 00:10:30.690
+Untuk saat ini kita dapat memulai dari database postgresql dan membuat database aplikasi otak cerdas di dalamnya.
+
+00:10:31.640 --> 00:10:39.080
+Pada Mac ini berbeda untuk setiap mesin yang Anda dapat menggunakan sesuatu yang disebut antarmuka pengguna
+
+00:10:39.080 --> 00:10:47.440
+grafis atau lengket untuk benar-benar membuat tabel ini untuk Anda hanya karena itu sedikit lebih mudah daripada menggunakan
+
+00:10:47.440 --> 00:10:48.060
+terminal.
+
+00:10:48.280 --> 00:10:56.230
+Jadi saya memiliki sesuatu yang disebut sekuel Perdamaian yang terhubung ke sumber yang memiliki Gucci untuk Windows dan Linux dan
+
+00:10:56.230 --> 00:10:57.280
+sumber lainnya.
+
+00:10:57.280 --> 00:11:02.770
+Tetapi sekuelnya gratis dan sangat bagus untuk Mac, mari saya tunjukkan.
+
+00:11:06.470 --> 00:11:13.070
+Sekali lagi itu memungkinkan kita untuk menggunakan postscript dan memiliki antarmuka pengguna grafis yang bagus.
+
+00:11:13.160 --> 00:11:17.660
+Jadi mari kita kembali ke database kita dan.
+
+00:11:17.660 --> 00:11:18.060
+Baiklah.
+
+00:11:18.080 --> 00:11:24.810
+Sepertinya di sini kita bisa mencoba menghubungkan ke localhost yang kita inginkan.
+
+00:11:24.980 --> 00:11:29.580
+Dan ke database otak cerdas.
+
+00:11:29.700 --> 00:11:31.030
+Jadi mari kita terhubung di sini.
+
+00:11:32.180 --> 00:11:36.510
+Baiklah kata Eric tidak bisa terhubung ke menolak koneksi server.
+
+00:11:36.860 --> 00:11:42.580
+Apakah server penyajian berjalan pada host lokal host dan nomor port ini.
+
+00:11:42.870 --> 00:11:45.270
+Yah, mungkin tidak.
+
+00:11:45.350 --> 00:11:51.280
+Maksud saya tanpa Anda benar-benar harus memulai server database Anda tidak akan menjalankan ini.
+
+00:11:51.290 --> 00:11:58.680
+Jadi, hal pertama yang perlu Anda lakukan adalah mengatakan hei jalankan server postscript di komputer saya.
+
+00:11:58.950 --> 00:12:03.880
+Lagi-lagi tidak ada yang kami lakukan untuk membuat database, bukan?
+
+00:12:04.070 --> 00:12:09.960
+Yang perlu kita lakukan adalah membuka terminal dan terminal yang baru.
+
+00:12:10.110 --> 00:12:11.710
+Ini mungkin sedikit lebih besar.
+
+00:12:14.200 --> 00:12:23.140
+Dan kita akan mengatakan Drew dan ini adalah sesuatu yang bisa saya gunakan. Brue dibuat sendiri untuk Mac dan dengan
+
+00:12:23.140 --> 00:12:29.040
+menggunakan perintah ini pada Mac saya dapat memulai atau menghentikan tali postscript.
+
+00:12:29.140 --> 00:12:29.770
+Saya
+
+00:12:33.630 --> 00:12:35.970
+dapat mengetik ini karena saya sudah menginstal postscript.
+
+00:12:35.970 --> 00:12:38.970
+Sekali lagi saya akan meninggalkan sumber daya untuk melakukan hal yang sama
+
+00:12:39.120 --> 00:12:42.440
+Jika Anda belum melakukannya dari kursus saya sebelumnya.
+
+00:12:42.780 --> 00:12:46.920
+Jadi, layanan Bruce memulai postscript. Baiklah.
+
+00:12:46.920 --> 00:12:49.730
+Berhasil memulai postscript.
+
+00:12:49.750 --> 00:12:57.710
+Sekarang jika kita kembali dan kita sudah mulai server dan saya mencoba dan terhubung ke database otak
+
+00:12:57.980 --> 00:13:00.540
+pintar yang diam-diam saya buat.
+
+00:13:00.560 --> 00:13:01.130
+Baiklah.
+
+00:13:01.130 --> 00:13:05.130
+Sepertinya saya terhubung ke database.
+
+00:13:05.180 --> 00:13:06.600
+Ada dua meja di sini.
+
+00:13:06.620 --> 00:13:13.080
+Ada tabel log yang memiliki ID versi hash atau kata sandi dan email.
+
+00:13:13.190 --> 00:13:14.890
+Jadi kita bisa menggunakan ini untuk masuk.
+
+00:13:14.900 --> 00:13:15.440
+BAIK.
+
+00:13:15.590 --> 00:13:23.210
+Dan kemudian kita memiliki pengguna yang kita punya nama entri entri email bersama dan hanya dengan melihat database saya agak punya
+
+00:13:23.210 --> 00:13:27.000
+ide tentang informasi apa yang dibutuhkan aplikasi otak cerdas.
+
+00:13:27.080 --> 00:13:32.480
+Dan sepertinya itu hanya memiliki informasi pengguna.
+
+00:13:32.490 --> 00:13:35.300
+Sekarang saya sudah membuat ini.
+
+00:13:35.580 --> 00:13:42.030
+Tetapi bagaimana jika kita belum memiliki ini bagaimana jika kita memiliki database yang berbeda.
+
+00:13:42.090 --> 00:13:44.470
+Jadi mari kita tutup ini sebenarnya dan coba lagi.
+
+00:13:44.620 --> 00:13:50.550
+Saya tidak ingin membuka sekuel lagi dan kali ini mari kita terhubung ke
+
+00:13:50.550 --> 00:13:56.830
+database yang disebut otak cerdas jika saya menghubungkan database otak pintar yang tidak ada.
+
+00:13:56.830 --> 00:14:00.550
+Jadi bagaimana cara membuat database otak cerdas itu.
+
+00:14:00.550 --> 00:14:10.280
+Sekali lagi tergantung pada sistem yang menjalankan postscript Anda untuk Mac saya dapat melakukan Buat D-B dan berikan saja
+
+00:14:10.400 --> 00:14:14.680
+nama apa pun nama yang saya inginkan.
+
+00:14:14.680 --> 00:14:19.620
+Dan lagi ini hadir dengan versi tambahan dari postscript yang dibuat.
+
+00:14:19.660 --> 00:14:21.010
+Sekali lagi saya akan meninggalkan tautan untuk itu.
+
+00:14:21.040 --> 00:14:24.320
+Jadi, Anda dapat melakukannya jika Anda belum memiliki postscript di komputer Anda.
+
+00:14:24.430 --> 00:14:28.260
+Jadi saya akan mengatakan buat database otak cerdas satu.
+
+00:14:28.420 --> 00:14:37.960
+Jika saya sekarang kembali dan mencoba untuk menghubungkan tampilan yang menghubungkan reaking dan kami memiliki kami di dalam database tetapi Anda melihat
+
+00:14:37.990 --> 00:14:40.420
+bahwa kami tidak memiliki tabel.
+
+00:14:40.420 --> 00:14:47.530
+Kami membuat tabel dengan masuk ke permintaan dan di sini saya sebenarnya memiliki riwayat permintaan jadi saya hanya akan
+
+00:14:47.530 --> 00:14:49.000
+menuliskannya untuk Anda.
+
+00:14:49.000 --> 00:14:56.530
+Saya dapat membuat tabel pengguna dan ini hanya sederhana, Eskew semua perintah dan kami akan membahas
+
+00:14:56.530 --> 00:14:57.990
+ini sedikit lebih.
+
+00:14:58.960 --> 00:15:06.520
+Ketika kami benar-benar bekerja dengan buruh pelabuhan tapi kami sedang membuat ID dengan kunci primer serial yang akan digunakan dalam urutan
+
+00:15:06.520 --> 00:15:08.640
+satu dua tiga empat lima.
+
+00:15:08.710 --> 00:15:16.630
+Kami memiliki nama yang membatasi karakter variabel dari 100 email yang harus unik dan tidak semuanya.
+
+00:15:16.630 --> 00:15:25.490
+Dan itu juga harus dalam jenis teks dan entri yang dimulai dimulai dengan default 0 dan bergabung yang merupakan cap
+
+00:15:25.490 --> 00:15:27.710
+waktu yang merupakan tanggal.
+
+00:15:27.710 --> 00:15:35.410
+Dan ini mungkin mengingatkan saya mengingatkan Anda sedikit naskah dan meminta Anda semua dengan cara mengetik tepat sebelum
+
+00:15:35.420 --> 00:15:39.870
+kami dapat mulai menetapkan ID dan nama dan email.
+
+00:15:39.920 --> 00:15:43.870
+Kami harus memberi tahu pada jenis apa ia menerima.
+
+00:15:44.030 --> 00:15:51.740
+Dan inilah cara kerja database untuk mengoptimalkan kueri mereka dan secara keseluruhan memiliki kinerja yang baik yang
+
+00:15:51.740 --> 00:15:53.010
+dimiliki database.
+
+00:15:53.240 --> 00:15:55.100
+Jadi mari kita jalankan kueri ini.
+
+00:15:56.110 --> 00:16:00.090
+Jika saya menyegarkan sekarang, saya memiliki pengguna stabil.
+
+00:16:00.160 --> 00:16:01.080
+Itu luar biasa.
+
+00:16:01.270 --> 00:16:04.770
+Dan kita bisa membuat log dan tabel juga.
+
+00:16:07.260 --> 00:16:10.250
+Sekali lagi hal yang sama Id hash dan email
+
+00:16:10.290 --> 00:16:14.180
+Jika saya menjalankan kueri ini dan menyegarkan.
+
+00:16:14.680 --> 00:16:19.900
+Baiklah, saya memiliki log in dan tabel pengguna yang luar biasa.
+
+00:16:19.940 --> 00:16:23.060
+Jadi ada database saya yang berjalan.
+
+00:16:23.090 --> 00:16:25.200
+Secara teoritis aplikasi kami harus bekerja.
+
+00:16:25.200 --> 00:16:34.050
+Sekarang mari kita kembali ke koneksi kita di sini dan bukannya basis data dan sepertinya kita tidak membutuhkan pengguna karena kita
+
+00:16:34.050 --> 00:16:38.850
+belum menetapkan pengguna dan kita menggunakan lagi host lokal di sini.
+
+00:16:38.850 --> 00:16:43.910
+Saya akan mengatakan otak pintar satu untuk menyelamatkan.
+
+00:16:44.160 --> 00:16:45.720
+Kami telah memulai kembali server kami.
+
+00:16:45.720 --> 00:16:46.770
+Ayo coba ini lagi.
+
+00:16:46.860 --> 00:16:50.450
+Saya akan kembali ke aplikasi kami.
+
+00:16:50.650 --> 00:16:53.470
+Ayo coba ini lagi.
+
+00:16:53.470 --> 00:16:57.580
+Saya ingin mendaftar.
+
+00:16:57.680 --> 00:16:59.710
+Kami baru saja masuk ke aplikasi kami.
+
+00:16:59.730 --> 00:17:01.220
+Jika saya kembali ke database saya
+
+00:17:04.620 --> 00:17:05.880
+dan saya menyegarkan tampilan Anda
+
+00:17:09.360 --> 00:17:10.440
+yang saya miliki.
+
+00:17:10.440 --> 00:17:13.350
+Hei hei di entri nol gmail dot com.
+
+00:17:13.350 --> 00:17:22.600
+Cap waktu ketika saya bergabung dan saya bahkan memiliki kata sandi hash dengan email yang sangat sangat keren.
+
+00:17:22.770 --> 00:17:26.250
+Jadi kita sekarang dapat bekerja dengan aplikasi ini.
+
+00:17:26.280 --> 00:17:26.840
+Kanan.
+
+00:17:27.180 --> 00:17:33.050
+Mari kita tutup konsol dan sepertinya otak ajaib ini akan mendeteksi wajah-wajah pada gambar pilihan.
+
+00:17:33.120 --> 00:17:33.980
+Cobalah.
+
+00:17:34.170 --> 00:17:37.110
+Kita dapat memasukkan kita di sini untuk mendeteksi wajah.
+
+00:17:37.260 --> 00:17:44.370
+Jadi saya punya beberapa wajah di sini yang bisa saya gunakan. Saya akan mengatakan salin alamat gambar yang
+
+00:17:44.400 --> 00:17:49.370
+memberi saya URL dan saya akan menempel di sini dan klik mendeteksi.
+
+00:17:49.390 --> 00:17:49.840
+Baiklah.
+
+00:17:49.870 --> 00:17:56.810
+Lihatlah jumlah entri kami naik satu dan saya dapat memeriksa ini dengan pergi ke pengguna dan kami melihat bahwa
+
+00:17:56.810 --> 00:18:00.020
+entri Anda sekarang sekali sehingga database telah diperbarui.
+
+00:18:00.100 --> 00:18:01.750
+Dan jika saya kembali ke server.
+
+00:18:01.790 --> 00:18:02.110
+Baiklah.
+
+00:18:02.120 --> 00:18:03.970
+Tidak ada kesalahan
+
+00:18:03.980 --> 00:18:04.350
+Baiklah.
+
+00:18:04.370 --> 00:18:07.850
+Dan oh di mana fitur deteksi wajah ini.
+
+00:18:07.850 --> 00:18:09.930
+Kami tidak benar-benar melihatnya, kan?
+
+00:18:09.930 --> 00:18:14.120
+Jika saya membuka konsol saya melihat itu oh.
+
+00:18:14.140 --> 00:18:16.550
+Sekarang kita punya 400 lagi di udara kita.
+
+00:18:16.570 --> 00:18:20.630
+Permintaan yang buruk dan saya melihat itu pada gambar titik akhir Anda nyata.
+
+00:18:20.680 --> 00:18:23.300
+Jadi sesuatu dengan gambar Anda l sedang bekerja.
+
+00:18:25.760 --> 00:18:28.230
+Itu hanya mengatakan tidak bisa mendapatkan gambar Jaro.
+
+00:18:28.580 --> 00:18:31.490
+Jika saya membuka tab jaringan dan mencoba ini
+
+00:18:34.590 --> 00:18:38.340
+lagi kita melihat bahwa gambar Anda Arel ada yang salah di sini.
+
+00:18:38.490 --> 00:18:44.800
+Kami memiliki permintaan 400 persegi dan mengatakan tidak dapat bekerja dengan API.
+
+00:18:45.330 --> 00:18:51.480
+Baiklah, sepertinya kita memiliki satu teka-teki lagi yang perlu kita perbaiki dan
+
+00:18:51.480 --> 00:18:56.660
+itu adalah kita menggunakan API bernama klarifikasi dan klarifikasi
+
+00:19:02.390 --> 00:19:10.370
+adalah API yang memungkinkan kita mengirim URL gambar dan mereka mengembalikan respons untuk kita .
+
+00:19:10.370 --> 00:19:16.280
+Jadi jika saya masuk ke dokumentasi pengembang dan saya masuk mari
+
+00:19:18.990 --> 00:19:25.900
+kita lihat memprediksi kita melihat bahwa melalui sumur Anda, kami dapat memprediksi hal-hal.
+
+00:19:25.990 --> 00:19:26.690
+Apa yang bisa kita lakukan.
+
+00:19:26.800 --> 00:19:32.950
+Sepertinya kami memerlukan kunci API dan dengan API apa pun yang bekerja dengan Anda, Anda memerlukan sesuatu yang disebut kunci
+
+00:19:33.370 --> 00:19:35.650
+API karena ini adalah cara API mengetahui.
+
+00:19:35.890 --> 00:19:36.400
+Oh ya.
+
+00:19:36.460 --> 00:19:37.180
+Ini Andre.
+
+00:19:37.180 --> 00:19:42.810
+Dia sudah membayar layanan kami atau dia punya 1000 gambar gratis yang bisa dia kirimkan kepada kami.
+
+00:19:42.880 --> 00:19:47.290
+Dan omong-omong, klarifikasi gratis untuk entry level jadi jangan khawatir.
+
+00:19:47.290 --> 00:19:50.680
+Ini adalah sesuatu yang Anda dapatkan dari kotak secara gratis.
+
+00:19:50.770 --> 00:19:53.590
+Jadi kita membutuhkan kunci API.
+
+00:19:53.640 --> 00:20:03.270
+Hal terbaik yang bisa saya lakukan adalah kembali ke API saya dan mungkin mencari API katakanlah API untuk saat ini dan
+
+00:20:03.280 --> 00:20:09.250
+situs tempat kami ingin melakukan, kami ingin melakukan pencarian penuh, katakanlah API.
+
+00:20:09.420 --> 00:20:13.450
+Dan jika saya terus menggulir ke bawah, terus menggulir ke bawah saya melihat.
+
+00:20:13.470 --> 00:20:13.840
+Oh ya.
+
+00:20:13.860 --> 00:20:18.630
+Ini kunci API saya untuk klarifikasi.
+
+00:20:18.630 --> 00:20:21.370
+Dan ya saya tunjukkan Anda mungkin Ickey.
+
+00:20:21.660 --> 00:20:22.320
+Dan jangan khawatir.
+
+00:20:22.320 --> 00:20:26.270
+Pada saat Anda melihat video ini, saya akan mengubahnya sehingga Anda tidak memiliki akses ke sana.
+
+00:20:26.280 --> 00:20:30.160
+Ini adalah salah satu hal yang merupakan rahasia yang tidak boleh Anda perlihatkan kepada siapa pun.
+
+00:20:30.180 --> 00:20:33.870
+Anda seharusnya tidak pernah memproduksinya ketika Anda mendorong ini ke hub dapatkan
+
+00:20:33.870 --> 00:20:42.690
+Anda perlu melakukan sesuatu seperti kunci API Anda di sini sehingga orang-orang tidak melihat kunci API Anda karena sebagian besar waktu kunci API sementara
+
+00:20:42.690 --> 00:20:48.840
+mereka berharga Anda membayar uang untuk mereka atau Anda memiliki batas nilai dan Anda hanya dapat
+
+00:20:48.840 --> 00:20:54.750
+menggunakan layanan seribu kali dan jika saya adalah orang jahat saya bisa mencuri ini dan hanya
+
+00:20:54.750 --> 00:20:57.500
+menggunakan semua data klarifikasi Anda lagi.
+
+00:20:57.510 --> 00:20:59.000
+Jangan khawatir saya akan mengubah ini sekarang.
+
+00:20:59.010 --> 00:21:01.360
+Pada saat Anda melihat ini, Anda dapat menggunakannya.
+
+00:21:01.500 --> 00:21:05.380
+Tapi saya sudah memasukkan gambar indie kunci klarifikasi saya.
+
+00:21:05.400 --> 00:21:09.970
+Ya cerdik yang ada di sini.
+
+00:21:10.020 --> 00:21:10.510
+Baiklah.
+
+00:21:10.570 --> 00:21:15.910
+Sekali lagi pada sebagian besar proyek, ini adalah sesuatu yang sudah akan dikatakan oleh pengembang kepada Anda bahwa
+
+00:21:16.210 --> 00:21:19.590
+mereka ada dalam dokumentasi sehingga Anda tidak perlu mencari tahu sendiri.
+
+00:21:20.200 --> 00:21:25.210
+Tetapi bagi Anda yang lagi-lagi belum menjadi bagian dari kursus saya sebelumnya dan
+
+00:21:25.210 --> 00:21:30.420
+belum bekerja untuk menjelaskan yang perlu Anda lakukan hanyalah membuat akun dan sepenuhnya gratis.
+
+00:21:32.220 --> 00:21:39.090
+Dan Anda bisa mengatakan membuat klik aplikasi baru pada aplikasi Anda dan memiliki kunci API di sini dan
+
+00:21:39.810 --> 00:21:44.460
+Kunci API akan dihasilkan untuk Anda dan Anda bisa menyalin ini atau
+
+00:21:47.340 --> 00:21:54.630
+Anda dapat pergi ke kunci API di sini dan klik Buat kunci API baru dan sepertinya ini adalah kunci API
+
+00:21:54.630 --> 00:21:55.150
+saya.
+
+00:21:56.340 --> 00:22:02.380
+Jika saya kembali, Anda dapat melihat bahwa itu sebenarnya berbeda dari yang lebih lama yang tidak berfungsi lagi.
+
+00:22:02.920 --> 00:22:05.710
+Jadi saya hanya menyalin dan menempel ini menyimpannya.
+
+00:22:05.950 --> 00:22:11.570
+Dan sekarang mari kita kembali ke atas.
+
+00:22:11.570 --> 00:22:13.950
+Baiklah mari kita tutup ini dan coba ini lagi.
+
+00:22:13.950 --> 00:22:18.740
+Saya akan mengklik deteksi.
+
+00:22:18.820 --> 00:22:19.440
+Hmm.
+
+00:22:19.590 --> 00:22:20.670
+Ayo kembali ke sini.
+
+00:22:20.670 --> 00:22:23.790
+Baiklah jadi itu tidak berfungsi.
+
+00:22:24.600 --> 00:22:28.910
+Saya masih mendapatkan gambar Anda semua permintaan buruk.
+
+00:22:28.950 --> 00:22:31.020
+Dan inilah masalahnya.
+
+00:22:31.230 --> 00:22:36.870
+Sebagai pengembang selalu ada kesalahan konyol di sana-sini yang kami pikir oh sepertinya ada
+
+00:22:36.870 --> 00:22:38.490
+yang salah dengan pengaturannya.
+
+00:22:38.490 --> 00:22:39.900
+Apa yang saya lakukan salah.
+
+00:22:40.030 --> 00:22:46.110
+Dan hanya salah satu dari hal-hal itu yang harus Anda uji semua asumsi Anda dan Anda akan menyadari bahwa
+
+00:22:46.110 --> 00:22:49.970
+kadang-kadang Anda hanya membuat kesalahan konyol dan Anda berpikir secara logis OK.
+
+00:22:50.070 --> 00:22:56.610
+Kode yang baru saya terima berfungsi karena pengembang lain sedang mengerjakannya dan kami melakukan kasus khusus ketika kami
+
+00:22:56.610 --> 00:22:59.730
+memodifikasi kunci API yang kemungkinan besar tidak akan.
+
+00:22:59.730 --> 00:23:03.790
+Saya hanya ingin menunjukkan kepada Anda bagaimana melakukan itu jika Anda perlu mengaturnya sendiri.
+
+00:23:03.870 --> 00:23:10.710
+Tetapi kami tidak ingin mengubah terlalu banyak kode ini karena kode ini secara hipotesis sudah
+
+00:23:10.710 --> 00:23:11.850
+dalam produksi.
+
+00:23:11.940 --> 00:23:14.400
+Jadi ada sesuatu yang kami lakukan yang kami lakukan salah.
+
+00:23:14.460 --> 00:23:16.070
+Kami telah memasukkan kunci API.
+
+00:23:16.140 --> 00:23:18.430
+Koneksi kami ke database ada.
+
+00:23:18.510 --> 00:23:20.100
+Dan pohon sedang diperbarui.
+
+00:23:20.220 --> 00:23:24.830
+Jadi satu-satunya hal yang secara logis masuk akal adalah ada hubungannya dengan ini.
+
+00:23:24.910 --> 00:23:30.520
+Dan jika Anda benar-benar melihat pesan ini, oh itu bukan Anda.
+
+00:23:30.540 --> 00:23:32.250
+Ya tidak sama sekali.
+
+00:23:32.270 --> 00:23:36.420
+Jika Anda pergi ke awal, mari kita lihat bahwa ini adalah
+
+00:23:41.430 --> 00:23:48.070
+gambar base 64 yang sekali lagi merupakan cara lain untuk mendapatkan gambar tetapi itu bukan Anda R-AL
+
+00:23:48.090 --> 00:23:49.950
+yang ingin kami dengar.
+
+00:23:49.980 --> 00:23:54.720
+Jadi Anda harus berhati-hati dengan itu karena Google menghapus tab gambar tampilan dari sini.
+
+00:23:54.720 --> 00:23:55.850
+Jadi sulit untuk mendapatkanmu.
+
+00:23:55.880 --> 00:23:59.330
+Yah saya sudah menambahkannya di sini karena saya punya plug chrome yang melakukannya.
+
+00:23:59.640 --> 00:24:07.510
+Jadi mari kita pilih gambar lain yang sebenarnya memiliki sumur. Saya akan menyalin alamat gambar salinan ini dan
+
+00:24:07.510 --> 00:24:09.600
+kembali ke aplikasi kita.
+
+00:24:09.610 --> 00:24:09.980
+Baiklah.
+
+00:24:10.000 --> 00:24:13.860
+Sekarang terlihat seperti u dengan l jpeg.
+
+00:24:13.930 --> 00:24:15.150
+Saya akan
+
+00:24:17.930 --> 00:24:24.330
+mengklik deteksi tampilan bahwa kami memiliki deteksi wajah yang berfungsi untuk aplikasi kami dan kami memilikinya.
+
+00:24:24.350 --> 00:24:26.890
+Kami sudah menyiapkan dan semuanya bekerja.
+
+00:24:26.900 --> 00:24:31.250
+Jika kita masuk ke konsol Mari kita bersihkan ini dan coba lagi.
+
+00:24:31.580 --> 00:24:34.790
+Mari kita coba gambar yang berbeda kali ini kita akan coba yang ini.
+
+00:24:36.870 --> 00:24:45.270
+Saya akan mengatakan salin alamat gambar pastikan itu Anda Arel bukan basis 64 Mari kita coba yang
+
+00:24:45.270 --> 00:24:45.840
+lain.
+
+00:24:45.840 --> 00:24:54.050
+Mari kita coba alamat gambar salinan ini.
+
+00:24:54.100 --> 00:24:54.790
+Ini jpeg.
+
+00:24:54.790 --> 00:24:55.270
+Itu bagus.
+
+00:24:55.270 --> 00:24:56.910
+Saya klik.
+
+00:24:56.970 --> 00:24:57.670
+Baiklah.
+
+00:24:57.820 --> 00:25:03.980
+Tidak ada kesalahan di konsol yang jumlah entri meningkat dan mendeteksi wajah.
+
+00:25:04.000 --> 00:25:06.430
+Baiklah, sangat keren, jadi semuanya sudah diatur.
+
+00:25:06.460 --> 00:25:12.310
+Jika kita kembali ke server kita dan kemudian pergi ke aplikasi kita tidak ada kesalahan.
+
+00:25:12.310 --> 00:25:13.270
+Semuanya berfungsi.
+
+00:25:13.270 --> 00:25:18.480
+Semuanya sudah diatur dan saat itulah kita mulai benar-benar melihat kode dan menganalisis hal-hal.
+
+00:25:18.550 --> 00:25:23.710
+Setelah kami mengatur semuanya sehingga semuanya bekerja, kami tahu bahwa inilah yang kami butuhkan.
+
+00:25:23.710 --> 00:25:28.370
+Kita dapat mulai melihat kode sekarang dan mencari tahu apa yang harus dilakukan apa yang tidak bisa kita lakukan.
+
+00:25:29.510 --> 00:25:32.970
+Ngomong-ngomong, catatan singkat untuk tulisan tambahan.
+
+00:25:32.980 --> 00:25:37.650
+Cara lain Anda dapat mengakses database lagi melalui perintah PSU all.
+
+00:25:37.670 --> 00:25:42.230
+Sekali lagi ini adalah sesuatu yang mungkin datang dengan Brinin Anda penuh dengan postscript atau Anda mungkin harus
+
+00:25:42.230 --> 00:25:44.560
+melakukan sesuatu yang berbeda tergantung pada mesin Anda.
+
+00:25:44.660 --> 00:25:52.170
+Tapi saya melakukan postscript dan Anda ingin nama pengguna dan kata sandi host lokal.
+
+00:25:52.180 --> 00:25:59.320
+Dalam kasus kami, angka buruk yang Anda ingat kami defaultnya membuat semua postscript miring, lalu kami
+
+00:25:59.320 --> 00:26:01.600
+memiliki aplikasi otak cerdas kami.
+
+00:26:01.600 --> 00:26:08.110
+Jadi jika saya melakukan Brai yang cerdas di sini dan kami tidak memiliki nama pengguna dan kata sandi, mari kita berhenti di situ
+
+00:26:08.110 --> 00:26:08.570
+saja.
+
+00:26:08.620 --> 00:26:11.220
+Kami akan melihat apakah itu berfungsi tanpa nama pengguna dan kata sandi.
+
+00:26:12.100 --> 00:26:19.230
+Lihat itu saya terhubung ke database dan di sini saya dapat menggunakan beberapa perintah umum seperti Slash d backslash.
+
+00:26:20.230 --> 00:26:26.530
+Yang memberi saya semua tabel yang saya miliki dan saya bisa menjalankan SU semua
+
+00:26:26.530 --> 00:26:34.250
+perintah di sini seperti pilih bintang dari pengguna dan saya melihat bahwa kepala G-mail dot com juga berfungsi.
+
+00:26:34.320 --> 00:26:39.230
+Sekali lagi sesuatu yang kita bahas di kursus saya sebelumnya tetapi setidaknya sekarang Anda tahu bahwa itulah yang kami
+
+00:26:39.240 --> 00:26:41.050
+lakukan dengan antarmuka pengguna grafis kami.
+
+00:26:41.070 --> 00:26:44.610
+Kami hanya terhubung ke database ini dan mengaksesnya.
+
+00:26:44.640 --> 00:26:46.210
+Namun secara lebih ramah.
+
+00:26:46.230 --> 00:26:50.100
+Lebih mudah menggunakan mode.
+
+00:26:50.180 --> 00:26:50.700
+Baiklah.
+
+00:26:50.780 --> 00:26:55.640
+Jadi ini berfungsi dan video berikutnya kita akan mulai melihat kode dan melihat bagaimana
+
+00:26:55.640 --> 00:26:58.210
+kita dapat menerapkan beberapa deteksi wajah.
+
+00:26:58.440 --> 00:27:00.470
+Saya akan melihat yang berikutnya Buh-Bye.

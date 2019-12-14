@@ -1,0 +1,283 @@
+﻿WEBVTT
+
+00:00:02.450 --> 00:00:03.430
+Ini proses yang panjang.
+
+00:00:03.440 --> 00:00:10.730
+Tapi kami sampai di sana kami telah membuat token JWT kami dan sekarang kami juga dapat mengirim token JWT kami
+
+00:00:10.730 --> 00:00:11.540
+ke klien.
+
+00:00:11.630 --> 00:00:16.310
+Tetapi pada saat yang sama kami sekarang memiliki database rattus di wadah kami.
+
+00:00:16.310 --> 00:00:21.270
+Kami sekarang dapat menyimpan token ini ke dalam basis data rattus kami.
+
+00:00:21.470 --> 00:00:23.390
+Dan di sinilah yang akan kita lakukan dalam video ini.
+
+00:00:23.480 --> 00:00:32.510
+Kami akan menyimpan informasi ini dan mengatur token kami sehingga kami memiliki database sesi ini yang sekarang dapat kami awasi dan
+
+00:00:32.510 --> 00:00:39.290
+setiap kali pengguna meminta profil, kami selalu memeriksa server kami yang memuat token yang berisi
+
+00:00:39.590 --> 00:00:42.100
+token itu akan menyenangkan. satu.
+
+00:00:42.230 --> 00:00:43.190
+Mari kita mulai.
+
+00:00:44.650 --> 00:00:54.520
+Mari kita kembali ke fungsi Buat sesi karena sekarang fungsi Buat sesi sebenarnya harus membuat sesi
+
+00:00:54.520 --> 00:00:58.500
+dan menyimpan sesuatu di database rattus.
+
+00:00:58.510 --> 00:01:01.290
+Kami memiliki klien rattus kami sudah siap untuk pergi.
+
+00:01:01.300 --> 00:01:04.730
+Terkoneksi sehingga kami dapat mulai menggunakan beberapa komentar rattus.
+
+00:01:04.840 --> 00:01:13.090
+Jika saya kembali ke dokumentasi kami di sini, kami melihat bahwa kami hanya dapat melakukan titik-titik yang diatur dengan
+
+00:01:13.420 --> 00:01:19.650
+kunci dan nilai serta perintah-perintah lain yang memungkinkan klien kami lakukan dalam kasus kami.
+
+00:01:19.710 --> 00:01:22.920
+Saya ingin memiliki fungsi baru di sini.
+
+00:01:22.950 --> 00:01:29.690
+Kami telah menandatangani token, tetapi sekarang kami juga ingin mengatur token tersebut dalam membaca database ini.
+
+00:01:29.770 --> 00:01:41.880
+Jadi saya akan mengatakan bahwa alih-alih mengembalikan ini, kami ingin mengembalikan fungsi set token dan fungsi set
+
+00:01:42.000 --> 00:01:49.310
+token ini akan menerima token JWT dan ID kami.
+
+00:01:49.520 --> 00:01:57.550
+Dan selama semuanya berjalan dengan baik dan kami dapat menyimpan ini dan
+
+00:01:57.550 --> 00:01:59.830
+membaca database kami
+
+00:02:04.680 --> 00:02:09.030
+maka kami benar-benar akan mengembalikan respons.
+
+00:02:09.070 --> 00:02:13.070
+Jadi begitu token diatur tidak ada udara.
+
+00:02:13.080 --> 00:02:20.150
+Kami akan mengembalikan Hodgett ini dan kami mungkin juga ingin melakukan dot catch.
+
+00:02:20.250 --> 00:02:21.570
+Saya butuh titik di sini.
+
+00:02:21.660 --> 00:02:25.700
+Saya mungkin juga ingin melakukan dot catch jika fungsi token yang disetel tidak berfungsi.
+
+00:02:25.740 --> 00:02:28.110
+Kami tahu bahwa kami ingin mengembalikan janji.
+
+00:02:28.110 --> 00:02:33.600
+Jadi untuk saat ini hanya untuk konsol log sehingga kita dapat men-debug-nya.
+
+00:02:33.620 --> 00:02:44.900
+Sekarang mari kita buat fungsi set token fungsi set token seperti yang kita lihat menerima
+
+00:02:45.260 --> 00:02:49.750
+dua parameter token dan ID.
+
+00:02:50.000 --> 00:02:53.720
+Dan jika kita kembali ke dokumentasi kita dan kita gulir ke bawah
+
+00:02:57.960 --> 00:03:03.440
+kita melihat bahwa jika kita ingin mengembalikan janji yang ingin kita lakukan karena kita menggunakan daat lalu dan
+
+00:03:03.630 --> 00:03:07.060
+tidak menangkapnya lagi ingat kita katakan maka jangan bisa menangkap.
+
+00:03:07.230 --> 00:03:12.750
+Yah itu sebenarnya tidak mengembalikan janji secara default.
+
+00:03:13.140 --> 00:03:20.640
+Dan untuk mengembalikan janji kita harus menggunakan perpustakaan eksternal seperti Bluebird yang benar-benar membuat semuanya
+
+00:03:20.640 --> 00:03:22.080
+menjadi janji.
+
+00:03:22.080 --> 00:03:27.300
+Untungnya bagi kami Bluebird itu adalah sesuatu yang digunakan kembali pada hari ketika
+
+00:03:27.530 --> 00:03:33.430
+janji bukan asli dan simpul tetapi kami benar-benar memiliki cara untuk memastikan bahwa ini mengembalikan janji.
+
+00:03:33.430 --> 00:03:41.870
+Maksudku, kita sudah melakukannya di seluruh basis kode dengan penolakan yang dijanjikan dan kita bisa membungkusnya dengan titik
+
+00:03:42.230 --> 00:03:44.610
+janji untuk sekarang diselesaikan.
+
+00:03:44.960 --> 00:03:48.500
+Jadi kita hanya akan berasumsi bahwa itu akan diselesaikan untuk saat ini.
+
+00:03:48.500 --> 00:03:54.200
+Dan ini adalah sesuatu yang Anda mungkin ingin menambahkan janji dan benar-benar membuat janji baru
+
+00:03:54.200 --> 00:03:56.210
+dengan tekad dan penolakan.
+
+00:03:56.260 --> 00:03:59.390
+Untuk saat ini kita hanya bisa mengatakan janji bahwa tekad.
+
+00:04:00.260 --> 00:04:07.190
+Kita akan mengembalikan janji ketetapan ini dan tekad janji ini akan melakukan
+
+00:04:08.590 --> 00:04:16.360
+set dot klien terbesar dan ingat set dan rattus memungkinkan kita untuk memberinya kekuatan.
+
+00:04:16.520 --> 00:04:28.530
+Saya akan mengaturnya sehingga Tokin akan menjadi kuncinya dan nilainya akan menjadi Heidi dan hanya untuk nama yang lebih baik.
+
+00:04:28.620 --> 00:04:37.200
+Anggap saja ini akan menjadi nilai kunci dan ini akan menjadi kunci dan nilai.
+
+00:04:37.470 --> 00:04:43.110
+Sebenarnya saya tidak tahu apakah ini penamaan yang lebih baik karena kurang deskriptif tapi
+
+00:04:43.110 --> 00:04:51.110
+untuk saat ini kami sedang menetapkan Tokin dengan nilai kunci dan semoga mengembalikan janji yang selama itu menghasilkan yang dilakukannya
+
+00:04:51.170 --> 00:04:56.460
+karena kami kembali berjanji untuk menyelesaikannya. akan mengembalikan token ID pengguna yang sukses.
+
+00:04:56.750 --> 00:04:57.440
+Mari kita
+
+00:05:01.060 --> 00:05:03.080
+simpan itu dan menghirup udara segar di sini.
+
+00:05:04.910 --> 00:05:10.130
+Oh dan saya melihat bahwa Sendak di sini hanya memastikan bahwa kami mengembalikan sebuah objek.
+
+00:05:10.130 --> 00:05:12.530
+Mari kita lakukan pengembalian di sini.
+
+00:05:13.990 --> 00:05:14.780
+Itu jauh lebih baik.
+
+00:05:16.570 --> 00:05:17.430
+Mari kita coba lagi.
+
+00:05:20.510 --> 00:05:21.260
+Baiklah.
+
+00:05:21.260 --> 00:05:22.010
+Itu lebih baik.
+
+00:05:22.010 --> 00:05:24.990
+Kami memastikan bahwa kami mengembalikan objek ini.
+
+00:05:25.010 --> 00:05:26.330
+Sekarang mari kita coba ini.
+
+00:05:27.300 --> 00:05:38.920
+Kami berdua akan kembali ke depan dan ingin keluar dan sekarang saya akan masuk dengan sebuah titik. com a dan saya
+
+00:05:40.110 --> 00:05:46.880
+akan membuka jaringan untuk mengklik Seinen.
+
+00:05:46.890 --> 00:05:47.250
+Baiklah.
+
+00:05:47.250 --> 00:05:48.630
+Kami sudah masuk.
+
+00:05:48.630 --> 00:05:53.310
+Jika saya melihat ke sini, kami memiliki token yang kami terima.
+
+00:05:53.370 --> 00:05:54.330
+Itu keren.
+
+00:05:55.320 --> 00:05:57.430
+Sekarang inilah bagian yang menarik.
+
+00:05:57.660 --> 00:06:07.440
+Jika saya kembali ke server S merah saya, saya harus bisa mengatakan get dan kunci itulah token JWT yang
+
+00:06:07.440 --> 00:06:08.510
+kami simpan.
+
+00:06:08.620 --> 00:06:20.750
+Lihat tampilan yang kami bisa dapatkan karena ingat saya. D. dari pengguna adalah bagaimana jika saya memasukkan
+
+00:06:20.780 --> 00:06:25.850
+kunci get yang tidak ada saya akan mendapatkan nihil.
+
+00:06:25.920 --> 00:06:33.870
+Kami berhasil mengatur token dan menambahkannya ke database rattus.
+
+00:06:34.050 --> 00:06:36.690
+Betapa mudah dan menyenangkannya itu.
+
+00:06:36.810 --> 00:06:43.820
+Kami sekarang memiliki token kami di dalam basis data rattus.
+
+00:06:43.880 --> 00:06:51.590
+Sekarang lagi beberapa dari Anda mungkin bertanya apakah kami menggunakan JWT dengan cara yang benar karena GAAP sudah berisi
+
+00:06:51.590 --> 00:06:53.030
+informasi di dalamnya.
+
+00:06:53.030 --> 00:06:56.600
+Kami hanya bisa memverifikasinya dengan menjalankan metode verifikasi itu.
+
+00:06:56.840 --> 00:07:02.090
+Dan lagi ini akan kembali ke topik yang sangat diperdebatkan.
+
+00:07:02.090 --> 00:07:06.910
+Orang-orang mungkin tidak setuju dengan bagaimana hal-hal bekerja atau bagaimana hal-hal dapat dilakukan.
+
+00:07:07.070 --> 00:07:15.220
+Tetapi bagi saya meskipun ini sedikit lebih lama daripada cookie yang mungkin kami tetapkan, cookie ini masih memiliki fleksibilitas karena
+
+00:07:15.370 --> 00:07:21.840
+kami dapat memiliki informasi yang dapat kami dekode di sini dengan fleksibilitas yang lebih besar.
+
+00:07:21.850 --> 00:07:29.350
+Ada tanggung jawab yang lebih besar namun kami sekarang memiliki kontrol penuh dengan database rattus kami untuk melakukan apa yang
+
+00:07:29.350 --> 00:07:34.760
+kami inginkan jika kami hanya ingin melarang pengguna untuk masuk atau melarang pengguna.
+
+00:07:34.840 --> 00:07:38.580
+Cukup gunakan kata kunci hapus.
+
+00:07:38.710 --> 00:07:42.880
+Dan selama saya menghapus token ini maka saya siap.
+
+00:07:42.940 --> 00:07:49.270
+Tetapi itu juga memungkinkan saya untuk menggunakan informasi ini mungkin di bagian lain dari aplikasi saya dan men-decode token
+
+00:07:49.390 --> 00:07:51.920
+ini dan mendapatkan beberapa informasi tentang pengguna.
+
+00:07:52.030 --> 00:07:59.380
+Tetapi bagaimanapun juga jika kita kembali, kita baru saja mengatur informasi kita di klien baca kami.
+
+00:07:59.470 --> 00:08:01.430
+Sangat sangat mengasyikkan.
+
+00:08:02.650 --> 00:08:07.060
+Dan jika kita kembali ke fungsi kita semuanya mulai terlihat sangat bagus.
+
+00:08:07.700 --> 00:08:13.500
+Saya pikir kita perlu istirahat dan akhirnya menyelesaikan bagian ini dari aplikasi kita.
+
+00:08:13.590 --> 00:08:14.340
+Saya akan melihat yang berikutnya.

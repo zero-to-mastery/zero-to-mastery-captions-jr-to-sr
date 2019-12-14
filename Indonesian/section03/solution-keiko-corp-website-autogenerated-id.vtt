@@ -1,0 +1,388 @@
+﻿WEBVTT
+
+00:00:01.240 --> 00:00:06.790
+Selamat datang kembali, mari kita lihat apa yang akan saya lakukan yang lagi tidak berarti itu benar hanya
+
+00:00:06.790 --> 00:00:10.140
+apa yang akan saya lakukan untuk meningkatkan kinerja situs web.
+
+00:00:10.150 --> 00:00:12.350
+Semoga Anda bersenang-senang dengan tantangan ini.
+
+00:00:12.400 --> 00:00:16.150
+Mudah-mudahan ada beberapa pertanyaan jebakan di sana yang ia harus lewati.
+
+00:00:16.170 --> 00:00:19.270
+Tapi sekali lagi saya yakin semua orang melakukannya dengan baik.
+
+00:00:19.360 --> 00:00:24.890
+Jadi kami berbicara tentang meminimalkan Phylis meminimalkan pengiriman dan jalur render kritis.
+
+00:00:24.940 --> 00:00:28.750
+Itulah hal-hal yang kami fokuskan di bagian ini.
+
+00:00:28.750 --> 00:00:34.990
+Jadi melihat situs web KCl Corp itu tidak terlalu buruk, mari kita segarkan Anda di sini hanya untuk mendapatkan
+
+00:00:34.990 --> 00:00:35.490
+animasi.
+
+00:00:35.670 --> 00:00:36.540
+Ya.
+
+00:00:36.670 --> 00:00:36.970
+Baiklah.
+
+00:00:36.970 --> 00:00:38.700
+Saya membuat situs web jadi saya curang.
+
+00:00:38.710 --> 00:00:43.570
+Saya tahu bagaimana kita dapat meningkatkan kinerja dengan cukup baik di situs Web ini karena
+
+00:00:43.570 --> 00:00:50.890
+saya membuat beberapa hal yang jelas bukan yang paling cantik tetapi Anda dapat lihat di sini bukan situs web yang buruk untuk menjadi
+
+00:00:50.890 --> 00:00:51.920
+seperti itu.
+
+00:00:52.030 --> 00:00:58.040
+Ini memiliki beberapa animasi beberapa gulir bagus yang bisa kita lakukan.
+
+00:00:58.820 --> 00:01:04.480
+Tetapi Anda juga akan melihat di sini bahwa mereka menggunakan beberapa perpustakaan yang bahkan tidak berfungsi.
+
+00:01:04.850 --> 00:01:08.500
+Jadi mari kita lihat kodenya dan lihat apa yang akan saya lakukan untuk memperbaikinya.
+
+00:01:10.140 --> 00:01:18.010
+Hal pertama yang akan saya lakukan adalah melihat file wanita dan file wanita di sini.
+
+00:01:18.150 --> 00:01:25.280
+Hal pertama yang menarik perhatian saya adalah banyaknya lembar gaya yang kita miliki.
+
+00:01:25.300 --> 00:01:32.920
+Kami melihat bahwa mereka memiliki satu ton termasuk bootstrap termasuk transisi carrousel menghidupkan dan jelas file
+
+00:01:32.920 --> 00:01:34.870
+CSSA utama kami.
+
+00:01:34.900 --> 00:01:41.690
+Jika saya melihat angsa-angsa itu, saya melihat bahwa beberapa dari mereka bahkan tidak diminimalkan sehingga kita mungkin harus
+
+00:01:41.710 --> 00:01:42.500
+meminimalkannya.
+
+00:01:42.640 --> 00:01:50.800
+Tetapi pertanyaan pertama saya adalah mengapa kita membutuhkan begitu banyak gaya SS dan apakah kita benar-benar membutuhkannya.
+
+00:01:50.800 --> 00:01:57.640
+Apakah kita benar-benar membutuhkan animasi CSSA atau dapatkah kita melakukan beberapa animasi tersebut hanya dengan animasi dan transisi
+
+00:01:57.730 --> 00:01:59.770
+CSSA yang muncul secara asli.
+
+00:01:59.810 --> 00:02:02.280
+Sekali lagi Anda benar-benar ingin fokus.
+
+00:02:02.390 --> 00:02:03.610
+Apakah kita benar-benar membutuhkan ini?
+
+00:02:03.620 --> 00:02:09.810
+Jangan hanya terus mengerjakan hal-hal yang berbeda hanya karena mudah dilakukan.
+
+00:02:09.960 --> 00:02:16.480
+Jadi sekali lagi saya pasti akan melihat ke dalam ini dan mengatakan saya mungkin bisa menyingkirkan beberapa dari ini.
+
+00:02:16.560 --> 00:02:19.670
+Lalu saya gulir ke bawah dan saya melihat aksen skrip.
+
+00:02:19.700 --> 00:02:25.520
+Oh boy ada banyak tag skrip dan semuanya ada di kepala yang pasti tidak ingin kita lakukan.
+
+00:02:25.530 --> 00:02:32.340
+Kami ingin memindahkan semua ini ke bagian paling bawah tubuh kecuali mereka sangat penting tetapi melihat
+
+00:02:32.340 --> 00:02:39.750
+permintaan Jey ini carallel paralaks gulir ke gulir yang bagus sementara kami pasti dapat meletakkan semua itu di
+
+00:02:39.750 --> 00:02:40.580
+sana.
+
+00:02:41.530 --> 00:02:45.470
+Kami juga ingin bertanya pada diri sendiri lagi apakah kami benar-benar membutuhkan ini.
+
+00:02:45.520 --> 00:02:48.500
+Misalnya gulir ke apa fungsinya.
+
+00:02:48.570 --> 00:02:53.890
+Itu seharusnya membuat kita gulir ke bagian situs web yang kita pedulikan.
+
+00:02:53.890 --> 00:02:56.300
+Tetapi Anda dapat melihat bahwa itu bahkan tidak berfungsi.
+
+00:02:56.380 --> 00:02:58.880
+Jadi mungkin kita bahkan tidak membutuhkannya.
+
+00:02:59.140 --> 00:03:06.490
+Sekali lagi melihat mengapa Anda perlu dan mengapa Anda tidak perlu saya kemudian pikirkan mungkin ini diminimalkan jika mereka
+
+00:03:06.490 --> 00:03:07.400
+tidak diminimalkan.
+
+00:03:07.450 --> 00:03:10.650
+OK yang ini adalah yang ini tapi yang ini tidak.
+
+00:03:10.660 --> 00:03:12.870
+Mungkin kita harus meminimalkan semua itu.
+
+00:03:13.150 --> 00:03:19.480
+Dan akhirnya menggabungkan semua ini menjadi satu file mungkin memiliki satu file bundel utama dan sisanya adalah
+
+00:03:19.780 --> 00:03:24.390
+file vendor semua dalam satu lagi meminimalkan perjalanan kami melalui kabel.
+
+00:03:25.210 --> 00:03:33.920
+Dan kemudian bergulir ke bawah sini Anda tahu tipikal waria tidak ada yang terlalu gila semuanya terlihat
+
+00:03:33.920 --> 00:03:36.160
+cukup bagus di sini.
+
+00:03:36.590 --> 00:03:42.050
+Tetapi sekali lagi mari kita tinjau beberapa poin kami dan lihat apa yang bisa kami tingkatkan di sini.
+
+00:03:42.050 --> 00:03:48.510
+Baiklah jadi kami berbicara tentang memuat tag gaya di skrip pemuatan kepala tepat sebelum badan.
+
+00:03:48.530 --> 00:03:49.040
+Baiklah.
+
+00:03:49.080 --> 00:03:51.700
+Dan kemudian CSSA hanya memuat apa pun yang dibutuhkan.
+
+00:03:51.710 --> 00:03:56.940
+Kami benar-benar berbicara tentang hal yang tidak kami bicarakan di atas pemuatan lipatan.
+
+00:03:57.070 --> 00:04:04.920
+Sekali lagi melihat situs Web kami melihat bahwa kami memiliki situs web gulir yang bagus, tetapi
+
+00:04:04.920 --> 00:04:11.210
+kami tidak membutuhkan gambar ini atau gambar di bawah ini terutama CSSA.
+
+00:04:11.390 --> 00:04:12.640
+Kami hanya membutuhkan bagian atas.
+
+00:04:12.890 --> 00:04:22.720
+Jadi mungkin satu hal yang bisa kita lakukan adalah menambahkan tag gaya Rupes tag jual di situs kita. Sangat sulit untuk mengetik ketika Anda memiliki
+
+00:04:22.720 --> 00:04:26.570
+mikrofon dan Anda berada di wajah Anda seperti saya.
+
+00:04:26.710 --> 00:04:33.310
+Dan Anda tahu itu hanya sebuah catatan jika Anda ingin tahu dengan tag gaya ini, saya
+
+00:04:33.430 --> 00:04:39.070
+dapat memiliki beberapa gaya hanya untuk bagian utama halaman yang langsung dilihat pemirsa.
+
+00:04:39.370 --> 00:04:46.930
+Dan dengan cara ini saya bisa memuat style sheet saya seperti yang saya tunjukkan setelah halaman dimuat dan semua
+
+00:04:46.930 --> 00:04:49.580
+hal di bawah lipatan dimuat sesudahnya.
+
+00:04:49.600 --> 00:04:51.470
+Jadi itu satu arah.
+
+00:04:51.470 --> 00:04:55.440
+Hal lain yang bisa kita lihat adalah atribut media.
+
+00:04:55.510 --> 00:05:02.520
+Melihat gambar latar belakang ini terlihat cukup besar dan saya yakin itu tidak dioptimalkan untuk mobo.
+
+00:05:02.950 --> 00:05:07.150
+Jadi mari kita lihat seberapa besar gambar ini saya ingin membuka bandara.
+
+00:05:07.510 --> 00:05:14.770
+Saya tidak bisa bicara. Saya akan membuka tab jaringan dengan alat pengembang dan kemudian saya akan
+
+00:05:14.800 --> 00:05:19.240
+memfilter untuk gambar dan saya akan menyegarkan dan nak.
+
+00:05:19.420 --> 00:05:20.560
+Itu banyak gambar.
+
+00:05:20.560 --> 00:05:22.470
+Saya pikir itu adalah gambar pahlawan.
+
+00:05:22.460 --> 00:05:23.440
+Ya itu dia.
+
+00:05:23.740 --> 00:05:29.190
+Jadi kita lihat di sini bahwa gambar ini adalah satu megabyte.
+
+00:05:29.210 --> 00:05:31.520
+Itu sangat konyol.
+
+00:05:31.530 --> 00:05:37.590
+Kami pasti dapat mengompresi ini dan meminimalkan dan kami pasti tidak membutuhkan gambar sebesar itu
+
+00:05:37.590 --> 00:05:39.030
+untuk layar ponsel.
+
+00:05:40.010 --> 00:05:44.580
+Mari kita lihat semua permintaan yang dibuat di halaman ini.
+
+00:05:45.080 --> 00:05:46.010
+Oh Boy.
+
+00:05:46.010 --> 00:05:47.920
+Itu 48 permintaan.
+
+00:05:47.990 --> 00:05:50.440
+Kami jelas tidak membutuhkan banyak permintaan.
+
+00:05:50.510 --> 00:05:56.180
+Ngomong-ngomong, ini adalah bagaimana banyak situs Web lama digunakan untuk bekerja dan jelas bukan yang
+
+00:05:56.180 --> 00:05:58.300
+terbaik yang akan saya katakan.
+
+00:05:58.300 --> 00:06:00.760
+Baiklah mari kita lihat apa lagi yang bisa kita tingkatkan di sini.
+
+00:06:03.160 --> 00:06:06.500
+Kami berbicara tentang tiga yang pertama tetapi kurang spesifik.
+
+00:06:06.880 --> 00:06:11.800
+Dan situs web ini mereka tidak terlalu buruk dengan ini dan ini adalah salah satu
+
+00:06:11.800 --> 00:06:14.640
+hal kecil yang Anda tidak ingin terlalu khawatir.
+
+00:06:14.680 --> 00:06:18.900
+Itu memang memengaruhi kinerja tetapi tidak sampai sejauh beberapa hal lainnya.
+
+00:06:18.910 --> 00:06:22.960
+Jadi saya tidak akan terlalu khawatir tentang ini, tetapi saya ingin memasukkannya di sana untuk Anda.
+
+00:06:23.860 --> 00:06:29.260
+Kami juga berbicara tentang memuat skrip tetapi kami tidak membicarakan tentang sinkronisasi atau penundaan skrip
+
+00:06:29.530 --> 00:06:35.210
+tersebut untuk javascript atau untuk permintaan Jay dan semua skrip lain yang tidak benar-benar kami butuhkan.
+
+00:06:35.260 --> 00:06:40.280
+Kami mungkin ingin menambahkan async atau tag yang ditangguhkan kepada mereka jika kami ingin menyimpannya.
+
+00:06:41.280 --> 00:06:48.000
+Kami juga ingin meminimalkan manipulasi DOM dan menghindari Javascript yang lama berjalan.
+
+00:06:48.000 --> 00:06:49.470
+Jadi mari kita lihat di sini.
+
+00:06:50.160 --> 00:06:55.950
+Manipulasi DOM Yah saya pikir itu sering terjadi terutama dengan semua animasi yang kita lihat
+
+00:06:55.950 --> 00:06:57.510
+lagi jika kita menyegarkan.
+
+00:06:57.510 --> 00:07:00.320
+Kami melihat semua animasi yang terjadi di sini.
+
+00:07:01.360 --> 00:07:08.160
+Kami pasti dapat menghindari beberapa ini terutama menggunakan queue Jake fakta bahwa mereka menggunakan J. SEBUAH. G.
+
+00:07:08.260 --> 00:07:09.360
+sekarang juga.
+
+00:07:09.400 --> 00:07:11.440
+Mari kita lihat beberapa hal yang kita lakukan.
+
+00:07:11.500 --> 00:07:13.990
+Paralaks untuk pergi ke Maine.
+
+00:07:14.050 --> 00:07:16.740
+Anda melihat bahwa mereka banyak menggunakan Jacquier.
+
+00:07:16.930 --> 00:07:19.450
+Dan perpustakaan itu hebat.
+
+00:07:19.570 --> 00:07:24.820
+Namun hampir semua yang bisa mereka lakukan di penjara di mana Anda dapat melakukannya dengan Java asli.
+
+00:07:25.270 --> 00:07:27.800
+Saya pikir ada situs Web yang disebut.
+
+00:07:28.060 --> 00:07:31.380
+Anda tidak perlu kueri.
+
+00:07:31.690 --> 00:07:37.690
+Ayo lihat.
+
+00:07:37.900 --> 00:07:44.650
+Atau Anda mungkin tidak perlu Jacqui dan benar-benar menunjukkan kepada Anda semua hal yang dapat Anda lakukan dengan javascript
+
+00:07:44.650 --> 00:07:51.370
+alih-alih menggunakan Jay Querrey sehingga kami dapat menghindari menggunakan perpustakaan besar ini dan hanya menggunakan javascript yang disertakan
+
+00:07:51.370 --> 00:07:51.830
+dengan.
+
+00:07:53.160 --> 00:07:58.710
+Dan lagi kita menggunakan alat seperti gulir ke atau perpustakaan seperti gulir ke.
+
+00:07:58.710 --> 00:08:06.330
+Itu seharusnya membuat situs Web kita dapat diklik dan gulir ke bagian itu tetapi itu bahkan tidak berfungsi.
+
+00:08:06.330 --> 00:08:10.850
+Jadi sekali lagi benar-benar menguji untuk melihat apakah kita benar-benar membutuhkan ini.
+
+00:08:10.950 --> 00:08:13.560
+Dan akhirnya menghindari Javascript lama berjalan.
+
+00:08:13.560 --> 00:08:17.890
+Saya tidak berpikir kita memiliki terlalu banyak tentang itu tetapi dengan animasi yang bisa menjadi sangat rumit.
+
+00:08:18.180 --> 00:08:25.470
+Jadi sekali lagi hal-hal yang dapat Anda tingkatkan dan kami hanya menggaruk permukaan di sini tapi saya harap Anda
+
+00:08:25.470 --> 00:08:27.720
+benar-benar bersenang-senang dengan latihan ini.
+
+00:08:27.720 --> 00:08:34.190
+Sudah pasti menyenangkan membuat situs Web ini dan saya sangat bersemangat melihat seberapa cepat beberapa situs Web ini
+
+00:08:34.190 --> 00:08:35.150
+bisa mendapatkannya.
+
+00:08:35.250 --> 00:08:38.080
+Saat saya melihat Anda mempostingnya dan ke komunitas.
+
+00:08:38.310 --> 00:08:44.650
+Tetapi hal kunci untuk diingat di sini adalah bahwa kinerja adalah permainan yang tidak pernah berakhir.
+
+00:08:44.970 --> 00:08:47.350
+Anda selalu dapat meningkatkan kinerja melalui situs Web.
+
+00:08:47.360 --> 00:08:49.520
+Anda selalu dapat mengubah hal kecil itu.
+
+00:08:49.830 --> 00:08:55.500
+Sebagai pengembang senior, Anda ingin memastikan bahwa Anda menghabiskan waktu dengan bijak untuk hal-hal yang penting.
+
+00:08:55.500 --> 00:09:03.030
+Cari tahu apa yang berharga untuk klien Anda untuk bisnis Anda untuk bos Anda dan lakukan optimasi kinerja itu tetapi hanya
+
+00:09:03.130 --> 00:09:08.250
+sampai pada titik yang diperlukan karena jika tidak, Anda akan membuat diri Anda gila.
+
+00:09:08.250 --> 00:09:09.810
+Ada banyak hal yang dapat Anda lakukan.
+
+00:09:09.840 --> 00:09:11.490
+Fokus pada item tiket besar itu.
+
+00:09:11.490 --> 00:09:15.460
+Fitur utama untuk membuat situs web tampil.
+
+00:09:15.710 --> 00:09:21.250
+Saya harap Anda bersenang-senang dalam tantangan ini dan saya berharap dapat melihat Anda di video Popeye berikutnya.

@@ -1,0 +1,214 @@
+﻿WEBVTT
+
+00:00:01.060 --> 00:00:07.060
+Selamat datang kembali, kita dapat membicarakan semua yang kita inginkan tentang yes dan lambda tetapi tanpa benar-benar mengkodekan
+
+00:00:07.060 --> 00:00:08.470
+dan melihatnya langsung.
+
+00:00:08.590 --> 00:00:10.790
+Kami tidak akan sepenuhnya mengerti.
+
+00:00:10.870 --> 00:00:15.630
+Jadi mari kita bicara tentang apa rencana kita dengan A. W. dan Lamda apa yang akan kita lakukan.
+
+00:00:15.780 --> 00:00:18.340
+Dengan begitu kita bisa mulai mengimplementasikannya.
+
+00:00:18.510 --> 00:00:23.730
+Sekarang saya ingin memberi Anda petunjuk dan saya ingin Anda mengikuti di
+
+00:00:24.210 --> 00:00:31.830
+sini saat Anda melakukan latihan ini karena AWOS memiliki sesuatu yang disebut tingkat gratis yang memberi Anda
+
+00:00:31.830 --> 00:00:40.220
+layanan mereka secara gratis untuk mencobanya sekarang dan di sini Anda dapat melihat bahwa mereka memiliki Esrey dengan lima gigabytes
+
+00:00:40.220 --> 00:00:48.950
+per bulan yang mereka izinkan untuk Anda dan E. C to dan opsi lainnya tetapi juga AWOS Lamda mereka memungkinkan Anda 1 juta permintaan gratis per bulan.
+
+00:00:48.950 --> 00:00:54.770
+Jadi Anda dapat mencoba latihan ini Anda tidak akan membayar uang dan selama Anda memiliki kurang dari satu juta permintaan per
+
+00:00:54.770 --> 00:00:57.590
+bulan yang jika Anda hanya mengembangkan dan bermain bersama.
+
+00:00:57.740 --> 00:00:59.600
+Saya yakin itu lebih dari cukup.
+
+00:01:00.710 --> 00:01:05.360
+Jadi saya sarankan Anda mendaftar sehingga Anda dapat mengikuti dan mengujinya sendiri.
+
+00:01:05.360 --> 00:01:11.740
+Ini sangat mudah ketika Anda memulai dengan Lamda setelah Anda mengetahui konfigurasi.
+
+00:01:11.900 --> 00:01:16.760
+Ini sangat bagus dan sangat menyenangkan dan ada banyak hal yang dapat Anda lakukan.
+
+00:01:16.760 --> 00:01:24.770
+Baru-baru ini saya membangun bot yang mengirimi saya pesan teks setiap kali ada pemberitahuan yang saya minati
+
+00:01:24.770 --> 00:01:32.570
+dengan Bitcoin dan saya mendapatkan pesan teks karena fitnah telah diberitahu bahwa setiap 30 menit saya
+
+00:01:32.570 --> 00:01:34.810
+ingin memeriksa harga bitcoin.
+
+00:01:35.680 --> 00:01:40.310
+Hal-hal seperti itu menjadi sangat super mudah dengan AWOS.
+
+00:01:40.370 --> 00:01:46.680
+Sekarang saya sarankan Anda membuat akun dan memanfaatkan tingkat gratis ini.
+
+00:01:46.910 --> 00:01:54.230
+Dan begitu Anda masuk, Anda akan memiliki sesuatu seperti ini dasbor Anda dan di dalam dasbor Anda dapat meminta
+
+00:01:54.620 --> 00:02:05.250
+layanan AWOS yang dapat Anda lakukan dinamo DB dapat melakukan S-3 Anda dapat melakukan cloud depan yang telah kita bicarakan tetapi kami tertarik pada lambda dan Anda
+
+00:02:05.580 --> 00:02:11.620
+cukup mengklik pada layanan yang Anda inginkan dan benar-benar memberi Anda dashboard yang Anda lihat
+
+00:02:11.620 --> 00:02:17.120
+sudah memiliki beberapa hal di sini, tetapi untuk menunjukkan kepada Anda betapa mudahnya
+
+00:02:17.120 --> 00:02:23.740
+untuk membuat fungsi dengan baik saya bisa beri nama tes atau apa haruskah kita sebutkan ini sebenarnya.
+
+00:02:24.100 --> 00:02:27.060
+Baiklah mari kita kembali ke aplikasi kita dan melihat di mana kita ingin membangun.
+
+00:02:27.140 --> 00:02:35.780
+Jika saya membuka aplikasi saya katakanlah kita ingin menambahkan sistem peringkat seperti yang diminta Bruno mungkin berdasarkan jumlah
+
+00:02:35.780 --> 00:02:37.730
+entri yang Anda miliki.
+
+00:02:37.730 --> 00:02:45.020
+Anda mendapat lencana kecil di sini yang mengatakan Anda tahu Anda adalah lencana roket atau Anda adalah lencana boneka beruang apa
+
+00:02:45.020 --> 00:02:45.740
+pun itu.
+
+00:02:46.560 --> 00:02:49.460
+Dan kami ingin itu diperbarui.
+
+00:02:50.440 --> 00:02:56.660
+Melalui fungsi yang hidup di Amazon Lamda jadi mari kita buat itu.
+
+00:02:56.670 --> 00:03:04.790
+Saya akan menyebutnya peringkat hanya karena semua nama populer dan kemudian Lee tampaknya dan akan digunakan
+
+00:03:04.800 --> 00:03:05.270
+Tidak.
+
+00:03:05.300 --> 00:03:05.940
+Iya nih.
+
+00:03:06.000 --> 00:03:10.680
+Saya pikir versi terbaru dari catatan yang mereka miliki Anda dapat melihat bahasa pemrograman apa yang dapat Anda gunakan.
+
+00:03:10.770 --> 00:03:17.020
+Sepertinya mereka memiliki simpul 8. 10 Berpaling ke Node versi terbaru.
+
+00:03:17.230 --> 00:03:22.270
+Dan Anda juga harus melakukan sesuatu yang disebut gulungan yang akan
+
+00:03:22.270 --> 00:03:31.400
+Anda bicarakan tetapi untuk saat ini hanya untuk tujuan demonstrasi, saya hanya akan memilih gulungan acak klik Buat fungsi dan hanya itu.
+
+00:03:32.230 --> 00:03:39.380
+Kami telah menciptakan fungsi lambda kami dan yang perlu kami lakukan hanyalah menulis fungsi kami di sini.
+
+00:03:39.850 --> 00:03:45.370
+Dan begitu kita selesai kita akan mendapatkan endpoint aturan bahwa kita dapat mengakses dan memicu fungsi ini dan kita
+
+00:03:46.270 --> 00:03:48.190
+dapat menulis fungsi kita di sini.
+
+00:03:48.190 --> 00:03:52.240
+Tetapi saya akan menunjukkan kepada Anda cara yang lebih baik untuk menerapkan sistem peringkat kami.
+
+00:03:53.400 --> 00:03:59.820
+Anda melihat alih-alih menulisnya di sini dan mencari tahu semua konfigurasi yang ada karena ini akan terus
+
+00:03:59.820 --> 00:04:03.990
+berubah dasbor ini selalu akan berubah dan mungkin ketika Anda menonton
+
+00:04:03.990 --> 00:04:07.610
+video ini ini tidak akan benar-benar terlihat seperti ini.
+
+00:04:08.400 --> 00:04:11.930
+Dan Anda tidak benar-benar ingin khawatir tentang konfigurasi Anda hanya ingin menulis kode.
+
+00:04:12.210 --> 00:04:17.200
+Dan untuk ini kita akan menggunakan alat yang disebut Servilius yang sangat membantu satu set.
+
+00:04:17.640 --> 00:04:22.110
+Tetapi saya ingin menunjukkan kepada Anda terlepas dari betapa mudahnya membuat suatu fungsi.
+
+00:04:22.170 --> 00:04:24.310
+Dan di sini.
+
+00:04:24.360 --> 00:04:24.800
+Baiklah.
+
+00:04:24.860 --> 00:04:31.040
+Jadi kami ingin membuat sistem peringkat di sini yang berdasarkan pada jumlah entri entri yang
+
+00:04:31.250 --> 00:04:34.750
+kami miliki, batch kecil kami akan mulai.
+
+00:04:34.760 --> 00:04:41.110
+Kami membutuhkan alat yang disebut Server kurang dan server kurang terlihat seperti ini
+
+00:04:41.120 --> 00:04:46.670
+Namanya sedikit kurang karena nama paketnya adalah server yang kurang tetapi itu membantu dengan apa yang
+
+00:04:46.790 --> 00:04:50.420
+kami sebut server arsitektur yang kurang yang disediakan Amazon.
+
+00:04:50.420 --> 00:04:56.540
+Sekarang nama server kurang sebenarnya sedikit menipu karena perlu diingat layanan ini tidak
+
+00:04:56.540 --> 00:04:59.550
+berarti Anda masih belum memiliki server.
+
+00:04:59.600 --> 00:05:03.980
+Ini hanya berarti Anda tidak perlu khawatir tentang penskalaan dan semua hal yang biasa dilakukan orang
+
+00:05:03.980 --> 00:05:05.450
+saat itu untuk mengelola server.
+
+00:05:05.840 --> 00:05:12.610
+Amazon melakukan itu untuk Anda dan saya menaruh dua logo di sini karena server baru saja memperbarui logo mereka.
+
+00:05:12.620 --> 00:05:20.420
+Jika Anda melihat kedua hal ini adalah hal yang sama sekarang server kurang memungkinkan kami untuk menggunakan fungsi Amazon lambda
+
+00:05:20.750 --> 00:05:23.460
+sangat mudah dari baris perintah kami.
+
+00:05:23.560 --> 00:05:28.580
+Dan kita tidak perlu terlalu khawatir tentang pergi ke dashboard mereka dan mengkonfigurasi semuanya dengan
+
+00:05:28.580 --> 00:05:30.700
+tangan dan itu tidak pernah menyenangkan.
+
+00:05:30.710 --> 00:05:34.470
+Lebih baik ketika kita mengkode dan menggunakan terminal kita.
+
+00:05:34.670 --> 00:05:35.630
+Jadi kita akan melakukannya.
+
+00:05:35.840 --> 00:05:39.470
+Dan video berikutnya kita akan menginstal layanan dimulai.
+
+00:05:39.530 --> 00:05:45.560
+Tapi saya sarankan Anda mendapatkan tingkat gratis untuk Amazon Lamda dan ikuti karena akan
+
+00:05:45.560 --> 00:05:46.750
+sangat menyenangkan.
+
+00:05:46.850 --> 00:05:47.600
+Saya akan melihat yang berikutnya.

@@ -1,0 +1,490 @@
+﻿WEBVTT
+
+00:00:02.480 --> 00:00:03.480
+Selamat datang kembali.
+
+00:00:03.590 --> 00:00:06.420
+Kami telah membahas injeksi perpustakaan pihak ketiga.
+
+00:00:06.440 --> 00:00:14.190
+Sepertinya pemberhentian berikutnya dalam daftar adalah pencatatan dan pencatatan sekali lagi topik penting lainnya.
+
+00:00:14.190 --> 00:00:15.170
+Saya akan memberi Anda petunjuk.
+
+00:00:15.180 --> 00:00:19.810
+Semua ini penting tetapi penebangan bisa sangat rumit.
+
+00:00:19.940 --> 00:00:23.330
+Tidak ada cara yang benar dan salah yang jelas untuk melakukan sesuatu.
+
+00:00:23.360 --> 00:00:24.350
+Ketika datang ke logging.
+
+00:00:24.530 --> 00:00:29.020
+Tapi mari kita bicara tentang apa itu logging.
+
+00:00:29.070 --> 00:00:35.390
+Mendapatkan informasi dari sistem Anda, katakan mesin Anda server Anda tentang apa yang terjadi.
+
+00:00:36.440 --> 00:00:42.620
+Anda ingin mengumpulkan informasi tentang bagaimana pengguna menggunakan layanan Anda.
+
+00:00:42.620 --> 00:00:50.270
+Situs web Anda Mungkin Anda beristirahat API sehingga jika terjadi kesalahan atau Anda melihat sesuatu
+
+00:00:50.720 --> 00:01:00.650
+yang mencurigakan Anda dapat menggunakan logging dan apa pun yang kami telah login untuk menemukan masalah memperbaiki rawa atau mencegah serangan.
+
+00:01:00.710 --> 00:01:07.280
+Dan salah satu masalah keamanan terbesar adalah sesuatu yang disebut penebangan tidak
+
+00:01:07.550 --> 00:01:18.170
+mencukupi Pencatatan dan pemantauan tidak memadai ditambah dengan penebangan yang hilang atau tidak efektif memungkinkan penyerang menyerang sistem sementara
+
+00:01:18.650 --> 00:01:25.040
+tidak terdeteksi sehingga mereka dapat merusak atau mengekstraksi atau menghancurkan data.
+
+00:01:25.040 --> 00:01:31.280
+Yang menarik adalah bahwa jika Anda melihat sebagian besar pelanggaran yang terjadi selama
+
+00:01:31.280 --> 00:01:38.840
+studi sejarah menunjukkan bahwa waktu untuk mendeteksi pelanggaran ketika ada sesuatu yang salah dan mungkin orang
+
+00:01:38.840 --> 00:01:46.970
+jahat telah memasuki sistem Anda database Anda dan mendapat informasi waktu yang dibutuhkan untuk benar-benar terdeteksi adalah
+
+00:01:46.970 --> 00:01:48.500
+sekitar 200 hari.
+
+00:01:48.720 --> 00:01:58.970
+Dan biasanya terdeteksi oleh pihak eksternal seperti tim keamanan daripada pemantauan internal.
+
+00:01:59.010 --> 00:02:07.900
+Jadi memiliki pencatatan yang baik berarti Anda dapat mendeteksi masalah dengan cepat dan mencegah hal-hal buruk
+
+00:02:07.900 --> 00:02:11.380
+yang mungkin terjadi dengan produk Anda.
+
+00:02:11.400 --> 00:02:13.910
+Jadi bagaimana kita bisa melakukan ini.
+
+00:02:13.930 --> 00:02:22.190
+Kami ingin memiliki pengaturan pencatatan yang tepat pada produk kami dan dua alat yang sangat saya nikmati dengan simpul
+
+00:02:22.370 --> 00:02:24.330
+adalah Winston dan Morgan.
+
+00:02:24.410 --> 00:02:25.540
+Jadi mari kita lihat bagaimana mereka bekerja.
+
+00:02:27.570 --> 00:02:28.260
+Baiklah.
+
+00:02:28.260 --> 00:02:32.490
+Jadi mari kita masuk ke server kami.
+
+00:02:34.600 --> 00:02:38.120
+Saya memiliki dua paket yang sangat saya sukai.
+
+00:02:38.380 --> 00:02:42.290
+Ketika datang ke logging dan ada banyak pilihan di sana.
+
+00:02:42.460 --> 00:02:46.770
+Yang pertama akan saya tunjukkan adalah Morgan.
+
+00:02:47.020 --> 00:02:54.380
+Dan seperti yang Anda lihat, ini adalah middleware logger permintaan HGP untuk diperhatikan dan sangat mudah dipasang.
+
+00:02:54.390 --> 00:02:58.810
+Kami hanya dapat menginstal NPM dan kemudian memerlukannya seperti yang kami miliki di sini.
+
+00:02:58.870 --> 00:02:59.990
+Jadi mari kita lakukan itu.
+
+00:03:00.040 --> 00:03:12.070
+Saya akan menjalankan MTM menginstal Morgan dan di atas sini saya akan hanya Konst Morgan dan memerlukannya.
+
+00:03:15.090 --> 00:03:19.920
+Karena kami baru saja menginstalnya.
+
+00:03:20.120 --> 00:03:27.770
+Jadi dengan Morgan kita dapat menggunakannya sebagai middleware lagi untuk mengekspresikan jika Anda ingin menggunakan middleware Anda akan menggunakan
+
+00:03:27.770 --> 00:03:33.800
+sesuatu seperti apt tetapi gunakan seperti yang kita miliki di sini dengan body parser
+
+00:03:33.800 --> 00:03:41.930
+dodgiest Jaison yang dengan cara memungkinkan kita untuk menerima Jaison data dari badan yang diminta seperti yang Anda lihat di sini.
+
+00:03:41.960 --> 00:03:45.350
+Jadi dengan Morgan saya dapat mengatakan Morgan dan
+
+00:03:48.690 --> 00:03:51.640
+kemudian memberikan beberapa opsi, katakanlah kecil.
+
+00:03:51.750 --> 00:03:57.030
+Jadi jika kita gulir ke bawah sini kita melihat bahwa ada opsi yang bisa kita berikan lebih banyak.
+
+00:03:57.120 --> 00:04:00.040
+Jenis logging apa yang harus kita miliki.
+
+00:04:02.580 --> 00:04:12.720
+Jadi dengan kecil sekarang kita memiliki middleware ini mari kita selamatkan Ron NPM mulai aplikasi kita mendengarkan port
+
+00:04:12.750 --> 00:04:13.460
+3000
+
+00:04:16.000 --> 00:04:20.760
+dan mari kita buka dan katakan cek kirim.
+
+00:04:20.770 --> 00:04:21.580
+Baiklah.
+
+00:04:21.580 --> 00:04:24.740
+Kembali ke sini saya melihat bahwa saya mendapatkan opsi.
+
+00:04:24.850 --> 00:04:31.360
+Titik rahasia mendapat status 200 dan butuh 3. 7 Meli detik.
+
+00:04:31.360 --> 00:04:35.200
+Kami mendapat informasi tentang apa yang terjadi dengan permintaan tersebut.
+
+00:04:35.210 --> 00:04:40.560
+Sekarang, inilah sedikit catatan yang perlu kita perbaiki sebelum kita benar-benar dapat menguji ini.
+
+00:04:40.570 --> 00:04:46.340
+Anda melihat bahwa ini adalah opsi alih-alih permintaan pos yang kami harapkan.
+
+00:04:46.690 --> 00:04:52.810
+Nah jika saya membuka konsol di sini saya akan mendapatkan kesalahan yang akan kita bicarakan dalam video
+
+00:04:52.990 --> 00:04:55.350
+keamanan yang akan datang tentang kursus.
+
+00:04:56.230 --> 00:04:58.700
+Jadi untuk saat ini kita akan pergi seperti itu.
+
+00:04:58.720 --> 00:05:04.630
+Kami akan memperbaiki masalah ini dan kembali ke sana dalam video mendatang jadi jangan
+
+00:05:04.630 --> 00:05:10.420
+khawatir dengan cara kami memperbaiki ini, kami memasang NPM menginstal paket yang disebut core's
+
+00:05:14.160 --> 00:05:17.810
+dan kami akan menggunakannya lagi sebagai middleware nother.
+
+00:05:17.880 --> 00:05:21.810
+Jadi tentu saja Konst sama dengan
+
+00:05:27.080 --> 00:05:29.270
+membutuhkan tentunya.
+
+00:05:29.370 --> 00:05:36.050
+Dan sekali lagi kita dapat mengatakan core penggunaan aplikasi seperti ini.
+
+00:05:36.120 --> 00:05:40.510
+Jadi katakanlah mari kita jalankan NPM mulai lagi.
+
+00:05:42.470 --> 00:05:45.090
+Dan kembali ke aplikasi kita.
+
+00:05:45.300 --> 00:05:46.590
+Kami akan mencobanya sekali lagi.
+
+00:05:47.820 --> 00:05:50.430
+Tekan centang atau mari kita ubah keduanya.
+
+00:05:50.440 --> 00:05:51.320
+Halo.
+
+00:05:51.600 --> 00:05:56.010
+Kirim dan kami kembali dan melihat itu.
+
+00:05:56.090 --> 00:06:00.370
+Kami memiliki permintaan pos yang mengenai rahasia titik akhir.
+
+00:06:00.530 --> 00:06:05.010
+Kami mengembalikan status 200 dan Anda dapat melihat waktu di sini juga.
+
+00:06:05.060 --> 00:06:06.710
+Sangat keren.
+
+00:06:06.710 --> 00:06:09.960
+Baiklah, jadi Morgan mendapatkan pencatatan ini.
+
+00:06:09.980 --> 00:06:10.450
+BAIK.
+
+00:06:10.550 --> 00:06:14.590
+Kita bisa melakukan yang lain yang saya suka yang digabungkan dan saya simpan di sini.
+
+00:06:15.050 --> 00:06:16.400
+Kembali.
+
+00:06:16.400 --> 00:06:21.860
+Ketik sesuatu seperti oleh Samit dan lihat itu.
+
+00:06:21.960 --> 00:06:24.180
+Kami mendapat lebih banyak informasi.
+
+00:06:24.180 --> 00:06:30.560
+Saya mendapatkan permintaan posting, saya melihat protokol HTP apa yang saya gunakan.
+
+00:06:30.590 --> 00:06:34.120
+Saya melihat perangkat seperti apa permintaan itu.
+
+00:06:34.190 --> 00:06:36.760
+Dan banyak informasi lainnya.
+
+00:06:37.740 --> 00:06:45.330
+Jadi hanya dengan memiliki Morgan, kita memiliki informasi ini. Misalnya, jika kita memiliki server yang merupakan API, kita sekarang dapat memantau dan jika kita
+
+00:06:45.690 --> 00:06:50.850
+tahu itu pada jam 4:00. m. Sesuatu mungkin telah terjadi, kita dapat kembali ke
+
+00:06:50.850 --> 00:06:51.790
+masa lalu dan melihat.
+
+00:06:52.050 --> 00:06:54.360
+Pada saat ini sesuatu terjadi.
+
+00:06:54.360 --> 00:07:03.120
+Mengapa lebih sedikit pengguna mengirim permintaan posting atau masuk ke situs Web kami atau metrik lain yang mungkin mereka butuhkan.
+
+00:07:03.120 --> 00:07:08.370
+Ingat semakin banyak informasi yang Anda miliki, semakin baik Anda dapat diberitahu tentang apa yang terjadi.
+
+00:07:08.400 --> 00:07:10.360
+Jadi Morgan cukup baik.
+
+00:07:10.410 --> 00:07:11.730
+Mari kita lihat yang lain.
+
+00:07:14.190 --> 00:07:18.160
+Yang berikutnya yang ingin saya perkenalkan kepada Anda disebut Winston.
+
+00:07:18.330 --> 00:07:20.250
+Kita akan menginstal NPM
+
+00:07:23.240 --> 00:07:26.290
+Winston dan kita akan mengambilnya seperti ini.
+
+00:07:26.300 --> 00:07:33.860
+Jadi biarkan saya menutup server run dan PM instal Winston dan saat itu sedang menginstal.
+
+00:07:33.890 --> 00:07:36.860
+Mari kita pergi ke dokumentasi Winston di sini.
+
+00:07:37.010 --> 00:07:40.390
+Dan Anda melihat bahwa itu adalah pencatat untuk hampir semua hal.
+
+00:07:40.680 --> 00:07:47.810
+Ya, Anda dapat menganggap Winston sebagai konsol log yang kami miliki kecuali ia memiliki banyak fitur yang dapat
+
+00:07:48.020 --> 00:07:51.440
+Anda gunakan dan dia dapat membaca semua tentangnya.
+
+00:07:51.470 --> 00:07:53.000
+Sangat bagus.
+
+00:07:53.000 --> 00:07:56.450
+Dan saya telah menggunakan ini dalam produksi dan saya sangat merekomendasikannya.
+
+00:07:56.590 --> 00:08:01.510
+Lihat dengan log konsol Anda hanya dapat melakukan beberapa hal.
+
+00:08:01.550 --> 00:08:06.610
+Ini memiliki batasan dengan Winsted Anda memiliki kekuatan untuk melakukan banyak hal menarik.
+
+00:08:06.710 --> 00:08:15.800
+Jadi mari kita ubah log konsol ini ke Winston karena sekarang kita dapat menggunakan Winston dan melihat jenis log yang
+
+00:08:15.800 --> 00:08:18.290
+kita dapatkan dari input pengguna
+
+00:08:18.350 --> 00:08:21.290
+Kami ingin menyimpan menjalankan NPM ini mulai,
+
+00:08:23.960 --> 00:08:28.960
+mari kita kembali ke aplikasi kita dan mengatakan cek cek kembali kita tidak
+
+00:08:32.340 --> 00:08:32.930
+mendapatkan
+
+00:08:37.140 --> 00:08:42.870
+apa-apa karena dengan Winsted dan kita harus memberi dengan beberapa parameter sehingga yang pertama mengatakan
+
+00:08:42.870 --> 00:08:43.870
+jenis logging.
+
+00:08:43.950 --> 00:08:48.780
+Dan yang kedua adalah log atau yang kita inginkan.
+
+00:08:48.780 --> 00:08:52.880
+Jadi kita coba lagi atau katakanlah dulu kita coba lagi dan
+
+00:08:55.790 --> 00:09:01.080
+di sana Anda pergi memeriksa cek dan kita bisa melakukan beberapa hal yang sangat keren.
+
+00:09:01.250 --> 00:09:10.310
+Sebagai contoh jika ada semacam kesalahan kita dapat memiliki Winston menanggapi dengan mari kita pindahkan ini ke
+
+00:09:10.310 --> 00:09:10.880
+sini.
+
+00:09:12.370 --> 00:09:22.850
+Dan katakan ini ini bagus jika kita mendapatkan pengguna dan meletakkannya.
+
+00:09:23.020 --> 00:09:28.350
+Dan jika itu disiarkan maka kita akan melakukan sesuatu yang berbeda.
+
+00:09:28.360 --> 00:09:39.280
+Kita akan keluar dari udara atau kita bisa melakukan kesalahan form pendek di sini
+
+00:09:42.990 --> 00:09:49.140
+dan mengatakan bahwa orang ini mengacaukan kita.
+
+00:09:49.170 --> 00:09:56.460
+Jadi jika saya katakan bahwa kembali tekan kirim lagi kembali.
+
+00:09:56.460 --> 00:09:59.430
+Saya melihat bahwa input pengguna ampho diperiksa.
+
+00:09:59.430 --> 00:10:00.300
+Itu keren.
+
+00:10:00.300 --> 00:10:07.800
+Jika saya mengacaukan sesuatu, katakanlah kami mengirim permintaan batch dan kami tidak mengirim pengguna dan meletakkannya.
+
+00:10:07.840 --> 00:10:15.980
+Jadi katakan saja di ujung depan saya akan mengirim pengguna dan memberi tanda seru di mana saya
+
+00:10:16.020 --> 00:10:26.730
+bisa melakukan itu dengan satu dan satu untuk menyimpan kembali mari menyegarkan ini dan kita akan mengatakan bagaimana sekarang kirimkan dan kami akan
+
+00:10:28.000 --> 00:10:29.650
+mendapatkan udara itu.
+
+00:10:29.690 --> 00:10:31.670
+Orang ini mengacaukan kita.
+
+00:10:32.680 --> 00:10:41.200
+Jadi Anda lihat di sini bagaimana dengan Winston kita bisa mendapatkan logging yang benar-benar bagus sehingga kita bisa pergi karena ini akan
+
+00:10:41.290 --> 00:10:43.150
+terkunci di suatu tempat.
+
+00:10:43.300 --> 00:10:49.870
+Kita dapat kembali ke masa lalu dan berkata pada jam 4:00 hal. m. layanan kami ditutup atau kami
+
+00:10:49.870 --> 00:10:57.610
+mengalami beberapa masalah, kami dapat kembali dan melihat apa yang terjadi saat ini dan kami bisa mendapatkan petunjuk tentang mungkin beberapa
+
+00:10:57.610 --> 00:11:00.280
+input yang telah dikirim pengguna atau hal-hal lain.
+
+00:11:00.280 --> 00:11:06.640
+Dan Anda dapat melihat di sini bahwa logging tergantung pada Anda informasi apa yang ingin Anda simpan informasi apa
+
+00:11:06.640 --> 00:11:09.070
+yang ingin Anda simpan sepenuhnya terserah Anda.
+
+00:11:09.070 --> 00:11:16.150
+Idenya adalah Anda ingin memiliki informasi yang baik tetapi Anda tidak menyimpan informasi
+
+00:11:16.180 --> 00:11:27.090
+pribadi apa pun di log Anda dan pasti Anda tidak akan mengembalikan input input logging apa pun ke klien karena
+
+00:11:27.450 --> 00:11:35.040
+jika kami mengirim sesuatu katakanlah seorang pengguna mencoba menandatangani di dan jika kami mengirim
+
+00:11:35.040 --> 00:11:41.520
+dengan kesalahan atau kami kembali bukannya mengatakan status pengguna sudah ada.
+
+00:11:41.520 --> 00:11:52.130
+Baik jika kita menanggapi itu dan kita mengirimkannya ke depan dan sekarang saya memberikan informasi tentang sistem saya, saya membiarkan orang di
+
+00:11:52.130 --> 00:12:02.390
+situs Web mengatakan oh saya baru saja menemukan pengguna yang mungkin ada dalam database mungkin saya bisa coba masuk dengan mereka
+
+00:12:02.810 --> 00:12:09.860
+dan gunakan Eskew all injection untuk melihat apakah saya bisa mendapatkan informasi mereka.
+
+00:12:10.160 --> 00:12:13.260
+Jadi ada satu hal dengan logging itu sangat sulit.
+
+00:12:13.340 --> 00:12:19.130
+Anda ingin mencatat informasi sebanyak mungkin sehingga Anda dapat memperoleh pengetahuan ini
+
+00:12:19.130 --> 00:12:28.500
+tentang cara kerja sistem Anda, tetapi Anda juga ingin berhati-hati menyimpan informasi ini hanya pada level yang seharusnya memiliki
+
+00:12:28.500 --> 00:12:30.480
+akses untuk melihatnya.
+
+00:12:30.480 --> 00:12:40.200
+Jadi, Anda tidak pernah ingin keluar dari kesalahan sistem di front end pada konsol karena siapa
+
+00:12:40.200 --> 00:12:43.300
+pun di dunia dapat melihatnya.
+
+00:12:43.310 --> 00:12:45.490
+Akhirnya saya ingin mengakhiri dengan satu hal.
+
+00:12:45.530 --> 00:12:52.550
+Ada masalah besar dengan masuk yang kami mengandalkan log untuk tujuan keamanan tetapi log hanya akan memberi
+
+00:12:52.550 --> 00:12:56.890
+tahu kami tentang peristiwa berbahaya setelah itu sudah terjadi.
+
+00:12:58.080 --> 00:13:04.230
+Dan jika kita hanya memonitor log kita secara berkala maka kita akan kehilangan informasi apa pun yang
+
+00:13:04.440 --> 00:13:06.310
+penting pada saat itu.
+
+00:13:07.430 --> 00:13:12.800
+Lalu ada juga masalah berapa banyak data yang ingin kita rekam jika kita memiliki layanan yang sangat
+
+00:13:12.800 --> 00:13:13.280
+sibuk.
+
+00:13:13.280 --> 00:13:19.460
+File kunci akan menjadi sangat besar karena saya bisa menyimpan semua log ini dalam file teks dan
+
+00:13:19.460 --> 00:13:20.930
+menyimpannya di suatu tempat.
+
+00:13:20.930 --> 00:13:27.510
+Dan semakin banyak informasi yang kita miliki semakin sulit untuk menemukan data yang mungkin kita cari.
+
+00:13:27.560 --> 00:13:31.520
+Penebangan adalah topik yang kompleks tetapi Anda hanya ingin memikirkan hal ini.
+
+00:13:31.550 --> 00:13:37.670
+Informasi apa yang Anda butuhkan sehingga Anda memiliki aplikasi aman yang dapat Anda deteksi ketika masalah
+
+00:13:37.670 --> 00:13:38.460
+keamanan muncul.
+
+00:13:38.810 --> 00:13:46.760
+Tetapi juga jauhkan blogging dari klien atau pengguna karena Anda tidak ingin mengungkapkan informasi apa pun tentang sistem
+
+00:13:46.760 --> 00:13:47.430
+Anda.
+
+00:13:47.510 --> 00:13:53.170
+Informasi kecil apa pun dapat digunakan untuk melawan Anda.
+
+00:13:53.190 --> 00:13:54.330
+Baiklah.
+
+00:13:54.330 --> 00:13:55.410
+Saya pikir kepala saya sakit.
+
+00:13:55.410 --> 00:14:00.020
+Ada banyak informasi tetapi saya harap Anda menemukan ini berguna dan sampai jumpa di yang berikutnya.
+
+00:14:00.320 --> 00:14:00.600
+Namun oleh.

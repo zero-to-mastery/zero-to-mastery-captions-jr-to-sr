@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.750 --> 00:00:05.360
+Siapa yang sudah kehabisan informasi sampai sekarang.
+
+00:00:05.710 --> 00:00:13.210
+Beruntung bagi kami, saya akan mengatakan bagian yang sulit selesai setelah kami mendapat DOM contd dimuat
+
+00:00:13.470 --> 00:00:15.130
+Langkah selanjutnya sederhana.
+
+00:00:15.360 --> 00:00:23.010
+Kami membangun pohon render yang memiliki semua informasi yang kami butuhkan dari DOM dan CSM
+
+00:00:23.010 --> 00:00:29.790
+cara membuat laman dari sana peramban menggambarkan tata letak dan posisi masing-masing elemen
+
+00:00:29.790 --> 00:00:30.700
+ini.
+
+00:00:30.870 --> 00:00:37.800
+Dan akhirnya melukisnya dan kami memiliki acara Load yang terjadi.
+
+00:00:37.870 --> 00:00:40.000
+Sekarang Anda lihat di sini ada satu langkah lagi.
+
+00:00:40.000 --> 00:00:47.080
+Langkah nomor delapan yang merupakan javascript dan ini mungkin hal yang paling Anda kenal jika peristiwa
+
+00:00:47.080 --> 00:00:50.310
+Javascript mengubah bagian halaman mana pun.
+
+00:00:50.410 --> 00:00:59.110
+Ini menyebabkan redraw pohon render dan memaksa kita untuk pergi melalui lay out dan melukis lagi.
+
+00:01:00.390 --> 00:01:02.640
+Dan itulah aplikasi web yang benar.
+
+00:01:02.640 --> 00:01:09.870
+Pengguna berinteraksi dengan halaman dan skrip java terus-menerus memodifikasi halaman dengan bersepeda melalui tata letak render
+
+00:01:09.870 --> 00:01:11.730
+pohon dan cat.
+
+00:01:11.730 --> 00:01:13.490
+Dan kami terus berputar di sini.
+
+00:01:15.990 --> 00:01:24.040
+Sekarang browser modern cukup pintar untuk hanya melakukan redraw sebagian tetapi kita tidak bisa mengandalkan
+
+00:01:24.040 --> 00:01:27.030
+ini sebagai efisien atau pemain.
+
+00:01:27.160 --> 00:01:29.970
+Jadi tugas kita untuk membuat itu efisien.
+
+00:01:30.310 --> 00:01:36.910
+Jadi melihat ini sepertinya kita memang ingin meminimalkan manipulasi DOM dan tidak
+
+00:01:36.910 --> 00:01:38.290
+terlalu terbawa.
+
+00:01:38.290 --> 00:01:45.940
+Setelah mengatakan itu jelas javascript sebagian besar didasarkan pada sisi klien dan kami ingin memanipulasi Don
+
+00:01:45.940 --> 00:01:46.830
+kami.
+
+00:01:47.290 --> 00:01:54.660
+Jadi itu akan melakukan itu tetapi kita hanya perlu membatasi kinerja rendah dan cacat tujuan baik dengannya.
+
+00:01:55.890 --> 00:02:04.530
+Sekarang mari kita rekap sekali lagi apa yang telah kita pelajari dengan jalur render kritis yang telah kita pelajari
+
+00:02:04.770 --> 00:02:11.280
+bagaimana mengoptimalkan masing-masing file ini di jalur render kritis tersebut sehingga browser kami dapat
+
+00:02:11.280 --> 00:02:16.230
+menampilkan halaman web atau aplikasi web secepat mungkin untuk pengguna.
+
+00:02:16.240 --> 00:02:22.270
+Kita juga harus memiliki pemahaman yang lebih baik tentang animasi kecil konyol yang saya buat di awal
+
+00:02:22.600 --> 00:02:23.530
+bagian ini.
+
+00:02:24.540 --> 00:02:31.730
+Kami sekarang mengerti bagaimana seorang waria dan Cs dapat diunduh.
+
+00:02:31.820 --> 00:02:37.850
+Kita juga tahu bagaimana konstruksi pohon DOM dan lengan CSSA sedang dibangun.
+
+00:02:37.880 --> 00:02:43.890
+Kita juga tahu bahwa javascript akan diunduh dan kemudian bertindak atas kedua pohon itu.
+
+00:02:45.310 --> 00:02:54.280
+Dan akhirnya menggunakan keduanya kita bisa membangun pohon render.
+
+00:02:54.480 --> 00:03:00.710
+Dan akhirnya sementara tidak akhirnya dan kemudian kita mendapatkan tata
+
+00:03:00.710 --> 00:03:11.910
+letak dari tata letak kita render piksel kita di layar dan kemudian akhirnya kita memiliki halaman web kami ditampilkan.
+
+00:03:11.960 --> 00:03:17.080
+Dan oh ya, kami juga memiliki gambar kecil kami yang dimuat di latar belakang.
+
+00:03:18.030 --> 00:03:19.520
+T Itu banyak pekerjaan.
+
+00:03:19.530 --> 00:03:22.460
+Cukup mengesankan untuk browser.
+
+00:03:22.590 --> 00:03:28.140
+Sekarang saya akan meninggalkan beberapa file yang digunakan dalam video ini sehingga Anda dapat berlatih dan
+
+00:03:28.320 --> 00:03:29.650
+menguji berbagai hal.
+
+00:03:29.670 --> 00:03:36.510
+Perlu diingat bahwa browser yang berbeda berperilaku berbeda dan browser selalu berusaha untuk meningkatkan kinerja.
+
+00:03:36.540 --> 00:03:37.800
+Segalanya mungkin berubah.
+
+00:03:37.830 --> 00:03:44.310
+Misalnya chrome sekarang sedang berupaya agar javascript tidak menjadi parser memblokir dan merender
+
+00:03:44.310 --> 00:03:51.740
+di latar belakang jadi ingatlah itu ketika Anda menjelajahi beberapa topik berbeda yang kami praktikkan
+
+00:03:51.780 --> 00:03:53.550
+dalam video ini.
+
+00:03:53.550 --> 00:03:56.520
+Selamat bersenang-senang dan saya akan melihat di video berikutnya oleh.

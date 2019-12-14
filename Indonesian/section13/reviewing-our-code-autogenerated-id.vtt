@@ -1,0 +1,103 @@
+﻿WEBVTT
+
+00:00:01.200 --> 00:00:05.470
+Oh boy itu perjalanan yang panjang tapi kami sudah berhasil melakukannya.
+
+00:00:05.640 --> 00:00:13.640
+Kami telah berhasil menambahkan sesi ke dalam aplikasi kami dan membuat semuanya terasa sempurna.
+
+00:00:13.660 --> 00:00:15.130
+Kami telah mengirimkan gambar kami.
+
+00:00:15.130 --> 00:00:22.120
+Kami dapat memperbarui profil kami dapat mengirimkan gambar dan kami memastikan bahwa setiap kali kami menyegarkan kami memiliki akses
+
+00:00:22.120 --> 00:00:23.280
+ke profil kami.
+
+00:00:23.320 --> 00:00:27.310
+Kami telah melindungi rute yang berhasil kami tambahkan sesi.
+
+00:00:27.580 --> 00:00:30.000
+Jadi mari kita ulas apa yang baru saja kita lakukan.
+
+00:00:32.660 --> 00:00:41.210
+Nah di bagian belakang jika kita kembali ke sini kita melihat bahwa kita sekarang telah menambahkan middleware otentikasi untuk memastikan bahwa titik
+
+00:00:41.210 --> 00:00:46.080
+akhir yang dilindungi ini tidak tersentuh oleh siapa pun yang seharusnya tidak.
+
+00:00:46.160 --> 00:00:48.020
+Mereka pasti punya token.
+
+00:00:48.200 --> 00:00:55.820
+Kami juga memasukkan otentikasi masuk dan otentikasi masuk adalah Hendler yang benar-benar bagus yang
+
+00:00:56.180 --> 00:01:00.360
+memungkinkan kami memeriksa apakah ada tajuk otorisasi.
+
+00:01:00.680 --> 00:01:07.400
+Jika ada yang baik dalam kasus itu bicara ke database rattus ambil token dan ambil ide pengguna
+
+00:01:07.880 --> 00:01:12.840
+dan berikan mereka informasi itu sehingga mereka dapat mengambil informasi profil.
+
+00:01:12.890 --> 00:01:20.390
+Lakukan permintaan GET ke ID profil yang sekali lagi dilindungi sehingga mereka harus melewati token otorisasi
+
+00:01:20.390 --> 00:01:21.110
+dengannya.
+
+00:01:21.110 --> 00:01:25.050
+Dan jika mereka tidak memiliki tajuk otorisasi, ini kali pertama mereka masuk.
+
+00:01:25.160 --> 00:01:34.890
+Pastikan bahwa kami menangani masuk untuk memeriksa semua hal ini. Buat sesi, tambahkan titik data dalam database kami, dan akhirnya kembalikan sesi
+
+00:01:35.070 --> 00:01:40.860
+mereka dengan token saya. D. sehingga mereka dapat melakukan apapun
+
+00:01:40.860 --> 00:01:46.710
+yang mereka inginkan seperti mendapatkan profil dan Anda mungkin memperhatikan bahwa kami belum benar-benar melakukan ini untuk mendaftar.
+
+00:01:46.720 --> 00:01:52.030
+Kami mungkin harus menerapkan beberapa hal ini ke dalam register dan point kami juga, tetapi itu adalah sesuatu yang
+
+00:01:52.210 --> 00:01:57.100
+dapat Anda lakukan sendiri dan itu cukup sederhana untuk dilakukan sekarang karena kami memiliki pemahaman dasar tentang bagaimana
+
+00:01:57.100 --> 00:01:57.930
+ini bekerja.
+
+00:02:00.070 --> 00:02:07.750
+Dan semua yang harus kami lakukan di ujung depan adalah pada token kami bahwa kami menerima dua penyimpanan
+
+00:02:07.810 --> 00:02:15.030
+sesi dan kemudian untuk setiap rute yang dilindungi mengakses kami harus memasukkan token ke dalam permintaan kami
+
+00:02:15.030 --> 00:02:17.310
+dan itulah cara sesi bekerja.
+
+00:02:17.310 --> 00:02:22.530
+Kami memastikan bahwa kami melindungi apa yang berharga bagi kami dan hanya orang yang dapat mengaksesnya yang dapat
+
+00:02:22.530 --> 00:02:23.020
+mengaksesnya.
+
+00:02:23.370 --> 00:02:29.700
+Hal menarik yang bisa kita lakukan sekarang adalah kapan saja pengguna keluar, kita cukup memastikan bahwa
+
+00:02:29.700 --> 00:02:36.450
+kita menghapus token dari penyimpanan sesi dalam kode kita, tetapi juga kita dapat mengirim permintaan seorang putra atau
+
+00:02:36.510 --> 00:02:44.370
+permintaan ke kami dan menunjuk untuk memastikan bahwa kami menghapus token itu dari basis data rattus kami sehingga kami memiliki kendali
+
+00:02:44.580 --> 00:02:51.300
+penuh ketika kami mencabut token ketika kami kedaluwarsa saat kami melakukan semua hal ini yang benar-benar bagus.
+
+00:02:52.650 --> 00:02:55.980
+Jadi mari kita pamerkan karya kita ke Bruno.
+
+00:02:55.980 --> 00:02:57.810
+Saya akan melihat di video berikutnya tetapi oleh.

@@ -1,0 +1,403 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:02.120
+Selamat datang kembali.
+
+00:00:02.300 --> 00:00:10.220
+Mari kita selesaikan diskusi kita tentang menguangkan orang buta karena kita sudah tahu bagaimana melakukan caching di sini.
+
+00:00:10.220 --> 00:00:15.470
+Ini benar-benar tergantung pada aplikasi Anda pada bagaimana Anda ingin mengimplementasikannya.
+
+00:00:15.560 --> 00:00:21.950
+Sekarang dengan browser meskipun ada standar bagus yang dapat kita gunakan dan saya tunjukkan kepada Anda dengan halaman
+
+00:00:21.950 --> 00:00:28.880
+yang bagus di aplikasi Robur friends kami bagaimana kami dapat melakukan cache menggunakan membuat kembali aksi aplikasi bundling teknik
+
+00:00:28.880 --> 00:00:30.640
+dan juga pekerja layanan.
+
+00:00:30.730 --> 00:00:37.880
+Tetapi bagaimana jika Anda benar-benar mengendalikan server tidak seperti halaman Roble France yang murni Front-End.
+
+00:00:38.080 --> 00:00:47.190
+Bagaimana jika Anda memiliki server Express dan Anda perlu untuk men-cache konten Yah kita bisa memanfaatkan cache
+
+00:00:47.520 --> 00:00:51.380
+GTP yang datang dengan semua browser.
+
+00:00:51.460 --> 00:00:56.110
+Anda lihat kami memiliki browser di sini dan biru dan server di sini.
+
+00:00:56.620 --> 00:01:03.970
+Dan jika kita melakukan permintaan mendapatkan file dan arahkan browser awalnya membuat permintaan ke server dan
+
+00:01:04.270 --> 00:01:05.140
+server.
+
+00:01:05.140 --> 00:01:12.100
+Jika Anda ingat selalu merespons dengan sesuatu, katakanlah tanggapan Jaisalmer yang mengatakan kesuksesan atau
+
+00:01:12.100 --> 00:01:13.140
+semacam data.
+
+00:01:13.600 --> 00:01:20.560
+Tetapi seiring dengan respons ini biasanya juga mengirim tajuk yang dengan Express datang secara default.
+
+00:01:20.560 --> 00:01:26.230
+Atau Anda bisa mengonfigurasinya secara manual jika Anda memiliki hal-hal seperti Content-Length Tapi kemudian Anda memiliki dua
+
+00:01:26.230 --> 00:01:28.600
+hal ini yang kami gunakan untuk cache.
+
+00:01:28.600 --> 00:01:36.290
+Salah satunya adalah kontrol cache dan yang lainnya adalah E-Tec dan menggunakan header ini yang kami kirim dari server.
+
+00:01:36.420 --> 00:01:41.550
+Kita bisa memberi tahu browser apa yang harus cache bagaimana menangkapnya dan kapan tidak menangkapnya.
+
+00:01:42.030 --> 00:01:45.690
+Jadi mari kita jelajahi topik itu.
+
+00:01:45.770 --> 00:01:50.110
+Di sini saya memiliki server yang sangat sederhana yang saya buat.
+
+00:01:50.120 --> 00:01:53.230
+Sekarang mari kita lihat kodenya.
+
+00:01:53.300 --> 00:01:59.120
+Biasanya saya suka menulis ini sendiri tetapi ini adalah sesuatu yang sudah kami lakukan banyak kali dengan server Express
+
+00:01:59.120 --> 00:02:03.440
+jadi saya tidak ingin membuat Anda bosan dengan Anda baru saja memulai dari awal.
+
+00:02:03.440 --> 00:02:09.300
+Yang kami pedulikan hanyalah dua titik akhir ini yang baru dan kami belum melihat sebelum
+
+00:02:09.860 --> 00:02:13.040
+titik akhir tinggi dan titik akhir statis.
+
+00:02:13.060 --> 00:02:20.140
+Sekarang mungkin ada beberapa kode baru yang belum pernah kita lihat di sini, jadi mari kita membahasnya.
+
+00:02:20.160 --> 00:02:29.560
+Yang statis pertama adalah titik akhir yang kami tambahkan dan ini adalah middleware dan ini adalah bagaimana Anda melayani
+
+00:02:29.680 --> 00:02:37.270
+situs web statis file express atau statis dan mengekspresikan semua yang kami katakan adalah
+
+00:02:37.270 --> 00:02:45.730
+melayani Express menggunakan metode statis express untuk melayani file yang ada di folder publik dan Anda lihat
+
+00:02:45.730 --> 00:02:53.850
+di sini bahwa saya telah membuat folder publik dengan indeks bahwa Shyamal yang sangat sederhana.
+
+00:02:54.180 --> 00:02:56.030
+Sayang sekali Alpha.
+
+00:02:56.230 --> 00:03:00.250
+Jika saya kembali ke server saya akan membuat ini sedikit lebih besar.
+
+00:03:00.260 --> 00:03:02.110
+Saya akan membuat ini sedikit lebih besar.
+
+00:03:02.110 --> 00:03:02.740
+Ini dia.
+
+00:03:03.840 --> 00:03:09.030
+Yang saya katakan adalah pada titik ini melayani indeks ini mulai seteguk.
+
+00:03:09.300 --> 00:03:21.090
+Dan saya juga telah menambahkan opsi yang Max H dan dalam mengekspresikan cara Anda mendefinisikan kontrol cache ini Hetter adalah dengan hanya mengatakan
+
+00:03:21.750 --> 00:03:26.190
+apa yang dimaksud usia maks dan usia maks.
+
+00:03:26.220 --> 00:03:31.530
+Berapa detik Anda ingin browser mengingat konten ini.
+
+00:03:31.560 --> 00:03:33.250
+Data ini yang kami kirim.
+
+00:03:33.720 --> 00:03:41.100
+Jadi dalam kasus kami, kami ingin MacSpeech dua jam dan saya bisa mengatakan dua jam atau dua hari setahun atau saya
+
+00:03:41.280 --> 00:03:42.240
+bisa melakukannya.
+
+00:03:42.330 --> 00:03:44.880
+Saya bisa memberikan nomor dalam milidetik.
+
+00:03:46.060 --> 00:03:48.290
+Dan saya kira mari kita biarkan dua jam.
+
+00:03:48.310 --> 00:03:53.280
+Jadi saya katakan pada titik ini saya ingin Anda mengingat sumber ini selama dua jam.
+
+00:03:54.580 --> 00:03:56.350
+Jadi mari kita coba ini.
+
+00:03:56.350 --> 00:03:58.570
+Ini adalah server sederhana yang menjalankan ini.
+
+00:03:58.690 --> 00:04:01.730
+Itu akan melayani saya indeks Alpha kami.
+
+00:04:02.020 --> 00:04:02.820
+Mari kita lihat.
+
+00:04:05.240 --> 00:04:14.770
+Jika saya pergi ke localhost dan kami pergi ke titik statis dan saya mendapatkan situs web saya yang mengatakan Catch
+
+00:04:14.770 --> 00:04:21.020
+Me Baby Sekali Lagi Jika saya membuka alat pengembang dan saya menyegarkan.
+
+00:04:21.230 --> 00:04:30.260
+Saya melihat bahwa file statis ini di sini mengembalikan tiga atau empat, bukannya 200.
+
+00:04:30.270 --> 00:04:35.430
+Sekarang tiga atau empat jika saya mengarahkan kursor ke sana untuk melihat Anda melihat itu tidak dimodifikasi.
+
+00:04:36.250 --> 00:04:41.400
+Dan jika saya menyegarkan kembali itu kata Keef tidak diubah.
+
+00:04:41.630 --> 00:04:46.700
+Jika saya melakukan penyegaran penyegaran dengan cache MT-NW saya mendapatkan 200.
+
+00:04:46.700 --> 00:04:50.190
+Itu berarti ia pergi ke server dan kembali lagi.
+
+00:04:50.210 --> 00:04:52.390
+Dan kembalikan saya informasi ini.
+
+00:04:52.400 --> 00:05:00.860
+Jadi apa artinya tiga atau empat tidak dimodifikasi jika saya membuka konten statis kami dan saya gulir ke header saya melihat bahwa
+
+00:05:01.940 --> 00:05:05.710
+oh inilah header kontrol cache besar saya yang Avocet.
+
+00:05:05.720 --> 00:05:09.140
+Jadi dua jam adalah ini banyak detik.
+
+00:05:09.290 --> 00:05:19.070
+Dan kita juga melihat bidang e-TAG dan tiga atau empat yang tidak dimodifikasi adalah apa yang kita dapatkan ketika e-TAG secara otomatis dihasilkan melalui Express
+
+00:05:19.070 --> 00:05:26.120
+mengatakan bahwa tidak ada yang dimodifikasi dalam file ini dan dikatakan bahwa biasanya dengan sesuatu yang hash itu
+
+00:05:26.120 --> 00:05:32.590
+adalah nomor yang dibuat secara acak bahwa jika tidak ada perubahan pada file file indeks kami
+
+00:05:32.810 --> 00:05:34.200
+akan tetap sama.
+
+00:05:34.220 --> 00:05:40.420
+Jadi jika kita ingat nomor ini, saya akan mengubah sesuatu dalam indeks kami di shim Alpha. Mari kita indeks
+
+00:05:40.420 --> 00:05:44.350
+itu A. P. M. dan tambahkan beberapa tanda seru di sini.
+
+00:05:44.410 --> 00:05:46.210
+Saya akan menghemat.
+
+00:05:46.430 --> 00:05:49.720
+Dan sekarang ketika saya kembali dan menyegarkan
+
+00:05:52.410 --> 00:05:54.030
+saya mendapatkan 200.
+
+00:05:54.360 --> 00:05:54.900
+Sekali
+
+00:05:58.520 --> 00:06:01.530
+lagi karena e-tag saya sekarang sangat berbeda.
+
+00:06:01.670 --> 00:06:03.350
+Hanya untuk memastikan bahwa kami melakukan itu dengan benar.
+
+00:06:03.350 --> 00:06:04.690
+Saya akan menekan enter lagi.
+
+00:06:05.610 --> 00:06:14.010
+Dan saya mendapatkan tiga atau empat karena sekarang saya sudah mencairkan informasi ini e-tag ini sama lagi
+
+00:06:14.040 --> 00:06:20.980
+jika saya kembali dan mengubahnya hanya periode kembali dan menyegarkan sekarang saya mendapatkan 200
+
+00:06:21.180 --> 00:06:24.400
+Dan e-TAG sekali lagi berakhir pada 3 0.
+
+00:06:27.600 --> 00:06:34.490
+Mengubah tanda seru menjadi lima menyegarkan e-TAG sekarang dan kemudian 5.
+
+00:06:36.960 --> 00:06:42.430
+Baiklah jadi itu tiga atau empat permintaan yang tidak diubah.
+
+00:06:42.580 --> 00:06:49.870
+Dan apa artinya itu adalah browser membuat permintaan itu ke server saya express server dan mengatakan "Hei, tapi saya punya e-tag
+
+00:06:49.870 --> 00:06:56.620
+ini, sumber dayanya berubah". Express server mengatakan tidak, tidak, ini adalah tag yang saya miliki, file yang belum diubah sehingga
+
+00:06:56.620 --> 00:07:01.030
+Anda dapat melanjutkan dan menggunakan apa pun yang ada di cache Anda.
+
+00:07:01.030 --> 00:07:04.500
+Itu adalah cache yang dalam dari situs Web ini.
+
+00:07:04.840 --> 00:07:06.240
+Betapa kerennya itu.
+
+00:07:06.250 --> 00:07:13.270
+Sekarang inilah bagian yang menarik karena saya telah men-cache file ini atau titik akhir ini.
+
+00:07:13.270 --> 00:07:21.290
+Itu memberi saya indeks bukan rasa malu saya akan jatuh selama dua jam jika sekarang saya menutup ini dan membuka jendela baru.
+
+00:07:21.400 --> 00:07:26.980
+Dan saya pergi ke localhost tiga ribu dua statis dan saya membuka
+
+00:07:26.980 --> 00:07:31.090
+alat pengembang pertama dan saya pergi ke statis.
+
+00:07:31.160 --> 00:07:32.980
+Saya mendapat 200.
+
+00:07:33.200 --> 00:07:35.130
+Tapi itu agak diklik.
+
+00:07:35.240 --> 00:07:39.840
+Dan jika saya pergi jauh ke kanan saya melihat bahwa itu dari disk.
+
+00:07:40.190 --> 00:07:46.820
+Karena kami menyimpan ini jika saya tidak mengunjungi situs Web ini selama dua jam dan saya kembali saya tidak akan mendapatkan ini karena
+
+00:07:46.820 --> 00:07:50.960
+saya sudah mengatakannya Hei saya hanya ingin uang tunai hanya selama dua jam.
+
+00:07:50.960 --> 00:07:53.210
+Sangat sangat keren.
+
+00:07:53.210 --> 00:07:55.830
+Sekarang hanya sebagai contoh tambahan.
+
+00:07:55.910 --> 00:08:00.840
+Dan juga hanya untuk memperkenalkan beberapa sintaks baru yang sedikit lebih maju.
+
+00:08:00.890 --> 00:08:04.270
+Apa yang kita miliki di sini tentang melayani indeks bukan rasa malu.
+
+00:08:04.310 --> 00:08:08.840
+Yang bisa saya lakukan dengan cara serupa juga.
+
+00:08:08.850 --> 00:08:16.880
+Saya mengatakan header jadi saya menggunakan header tanggapan dan saya menggunakan Express 4. 00 API di sini.
+
+00:08:16.880 --> 00:08:20.750
+Express telah mengubah ini tergantung pada versi yang Anda gunakan, jadi silakan saja.
+
+00:08:20.750 --> 00:08:23.390
+Anda harus pergi ke dokumentasi Express.
+
+00:08:23.390 --> 00:08:26.210
+Mungkin mengatur tajuk atau metode yang berbeda.
+
+00:08:26.780 --> 00:08:29.780
+Tapi saya bisa mengubah header untuk mengatakan kontrol cache.
+
+00:08:29.780 --> 00:08:38.660
+Saya ingin sumber ini terbuka untuk umum dan usia maksimum saya yakin ini mungkin sehari dan saya juga bisa mengatakan bahwa tajuknya
+
+00:08:38.660 --> 00:08:41.590
+adalah Pajak Jenis Konten dan waria.
+
+00:08:41.720 --> 00:08:48.230
+Dan kemudian saya mengirim respons menggunakan apa yang kita sebut buffer baru dan ini adalah sesuatu
+
+00:08:48.410 --> 00:08:57.950
+yang datang dalam node dan buffer memungkinkan kita untuk mengirim string waria melalui kawat sehingga mereka dapat dibaca oleh browser dan di bawah
+
+00:08:57.980 --> 00:08:58.820
+tenda.
+
+00:08:58.820 --> 00:09:01.130
+Seperti inilah penyajian file statis.
+
+00:09:01.130 --> 00:09:07.550
+Itu menggunakan buffer baru ini tetapi jika saya pergi ke titik akhir yang tinggi sekarang dan ingat Max
+
+00:09:07.550 --> 00:09:17.800
+Page ini yang baru saja saya buat 6 4 0 0 Saya akan pergi ke titik akhir yang tinggi dan saya melihat bahwa titik akhir yang tinggi saya dapatkan
+
+00:09:17.800 --> 00:09:25.060
+kekuatan tes yang baru saja saya kirim dan kemudian saya juga bisa melihat bahwa kontrol cache max usia 8 6
+
+00:09:25.090 --> 00:09:30.320
+4 0 0 dan saya memiliki e-tag saya juga dan di sana Anda memilikinya.
+
+00:09:30.550 --> 00:09:38.560
+Jika saya kembali ke sini untuk pergi ke Perburuan Produk dan produk ini dan jika saya membuka tab Jaringan kita sekarang memiliki
+
+00:09:38.710 --> 00:09:40.930
+gagasan tentang apa yang dilakukannya.
+
+00:09:41.020 --> 00:09:48.480
+Jika saya gulir ke sini untuk mengatakan halaman surat saya dapat melihat bahwa semua di sana melihat itu.
+
+00:09:48.490 --> 00:09:59.460
+Menggunakan CloudFlare sebagai CDN, mereka menggunakan penyandian konten B. R. tetapi jika saya gulir ke bawah saya juga melihat bahwa
+
+00:09:59.460 --> 00:10:02.130
+mereka memiliki kontrol cache Max h 0.
+
+00:10:02.130 --> 00:10:08.190
+Itu berarti mereka tidak ingin di-cache dan kami sekarang memiliki cara untuk membaca header kami dan memahami
+
+00:10:08.280 --> 00:10:11.850
+apa yang terjadi bagaimana dengan API mereka tidak berarti cerdik.
+
+00:10:11.910 --> 00:10:14.150
+Ya saya melihat itu.
+
+00:10:14.160 --> 00:10:17.270
+Oh ya mereka jelas-jelas caching itu.
+
+00:10:17.430 --> 00:10:20.300
+Dan ada juga e-tag yang terkait dengannya.
+
+00:10:20.520 --> 00:10:27.670
+Dan Anda dapat mulai memahami apa yang dilakukan oleh masing-masing situs web dalam hal caching, tetapi
+
+00:10:27.670 --> 00:10:33.880
+untuk menyelesaikannya dalam hal caching, Anda dapat menerapkannya di semua level stack Anda.
+
+00:10:33.910 --> 00:10:35.070
+Bukan hanya satu tempat.
+
+00:10:35.080 --> 00:10:36.610
+Bukan hanya browser.
+
+00:10:36.640 --> 00:10:43.540
+Ini bukan hanya dengan CD dan mereka dapat menyimpannya, ia dapat menyimpan di mana saja yang Anda inginkan untuk aplikasi Anda.
+
+00:10:43.540 --> 00:10:49.570
+Anda kemungkinan besar akan mulai dengan sesuatu seperti ujung depan dengan kontrol cache dan
+
+00:10:49.570 --> 00:10:55.810
+tag dan menggunakan pekerja layanan mungkin menggunakan CDN CloudFlare dan kemudian Anda mungkin ingin pindah ke
+
+00:10:55.810 --> 00:11:03.050
+benar-benar menggunakan rattus untuk caching permintaan basis data atau mungkin caching panggilan API mahal yang membutuhkan waktu lama.
+
+00:11:03.130 --> 00:11:10.060
+Ini benar-benar terserah pada Anda sebagai pengembang untuk diimplementasikan, tetapi seperti yang kami tahu ketika datang ke kinerja
+
+00:11:10.060 --> 00:11:16.660
+Anda hanya ingin mulai bekerja pada masalah pada mungkin solusi cache ketika ada tes terukur yang dapat
+
+00:11:16.660 --> 00:11:23.140
+kami implementasikan yang pasti dapat kami ketahui bahwa jika kami menerapkan metode cache ini, itu akan
+
+00:11:23.140 --> 00:11:29.290
+secara signifikan meningkatkan aplikasi kami dan pengalaman pengguna kami akan saya lihat di video berikutnya.

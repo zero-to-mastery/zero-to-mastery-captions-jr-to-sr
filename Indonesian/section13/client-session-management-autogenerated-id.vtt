@@ -1,0 +1,505 @@
+﻿WEBVTT
+
+00:00:01.870 --> 00:00:05.910
+Selamat datang kembali sekali lagi kami telah membuat token JWT.
+
+00:00:05.980 --> 00:00:08.550
+Kami telah menyimpannya di basis data rattus kami.
+
+00:00:08.620 --> 00:00:10.790
+Kami mengirimkannya kembali ke pengguna.
+
+00:00:10.870 --> 00:00:19.340
+Tetapi sekarang kami memiliki satu masalah terakhir dan itulah bagaimana kami menyimpan informasi ini di komputer pengguna.
+
+00:00:19.420 --> 00:00:25.180
+Karena jika mereka menyegarkan mereka perlu cara untuk menyimpan token ini sehingga mereka tidak perlu masuk
+
+00:00:25.180 --> 00:00:26.120
+berulang kali.
+
+00:00:26.200 --> 00:00:33.600
+Dan kita juga perlu mengirim token ini sebenarnya di header otorisasi sehingga kita bisa mendapatkan profil kita dan
+
+00:00:33.600 --> 00:00:38.080
+kita akan belajar bagaimana melakukannya dan video ini akan terlihat.
+
+00:00:38.150 --> 00:00:41.310
+Sekarang kita akan kembali ke ujung depan di sini dan melakukan beberapa hal.
+
+00:00:41.490 --> 00:00:47.910
+Kami tahu bahwa ketika kami masuk kami menerima id pengguna dan token dan kami membutuhkan cara untuk
+
+00:00:48.000 --> 00:00:54.510
+pertama-tama menyimpan token ini di suatu tempat di browser kami sehingga pada setiap permintaan berikutnya kami akan melampirkannya
+
+00:00:54.600 --> 00:00:55.450
+ke header.
+
+00:00:55.740 --> 00:00:56.960
+Biarkan saya menunjukkan kepada Anda bagaimana hal itu dilakukan.
+
+00:00:58.080 --> 00:00:59.820
+Kami memiliki beberapa jendela di sekitar.
+
+00:01:00.010 --> 00:01:03.420
+Mari kita lakukan jendela ujung depan kita di sini.
+
+00:01:04.970 --> 00:01:11.730
+Dan kita akan menggunakan komponen tanda untuk benar-benar melakukan ini karena melihat pada mengirimkan
+
+00:01:11.780 --> 00:01:17.380
+Di sinilah kami melakukan logika kami di mana kami menerima ID pengguna data.
+
+00:01:17.540 --> 00:01:23.810
+Sekarang hal pertama yang akan kita lakukan adalah kita akan membuat metode baru yang disebut Simpan
+
+00:01:23.810 --> 00:01:31.910
+mari kita sebut itu menyimpan auth token dalam sesi dan nama yang sangat deskriptif tapi mudah-mudahan cara ini akan tetap berlaku.
+
+00:01:32.130 --> 00:01:39.630
+Dan ini akan menerima token yang kita dapatkan dari backend dan token ini akan disimpan dalam
+
+00:01:39.900 --> 00:01:43.260
+sesuatu yang disebut sesi window datt.
+
+00:01:44.350 --> 00:01:45.360
+Penyimpanan.
+
+00:01:45.850 --> 00:01:49.700
+Sekarang apa penyimpanan sesi.
+
+00:01:50.020 --> 00:01:57.550
+Dan itu ada di objek jendela sehingga berarti itu berasal dari browser. Penyimpanan sesi yang baik adalah
+
+00:01:57.550 --> 00:02:05.060
+cara bagi kita untuk menyimpan informasi ke browser sehingga meskipun kita menyegarkan halaman itu masih mengingatnya.
+
+00:02:05.080 --> 00:02:07.750
+Masih ingat sesi.
+
+00:02:07.750 --> 00:02:10.290
+Kita dapat memeriksanya dengan membuka tab Aplikasi.
+
+00:02:10.330 --> 00:02:11.670
+Dan alat pengembang kami.
+
+00:02:11.950 --> 00:02:17.290
+Dan seperti yang telah kita lihat sebelumnya kita memiliki pekerja layanan manifes kita memiliki cookie di sini.
+
+00:02:17.410 --> 00:02:27.050
+Kami juga memiliki penyimpanan lokal dan penyimpanan sesi sekarang sesi toko di sini karena Anda dapat melihat memiliki informasi
+
+00:02:27.090 --> 00:02:35.450
+informasi nilai kunci yang dapat kami simpan dan bahkan jika saya menyegarkan browser akan mengingatnya.
+
+00:02:35.560 --> 00:02:41.780
+Sekarang perbedaan antara sesi dan penyimpanan lokal sebenarnya akan mengeksplorasi sedikit.
+
+00:02:41.840 --> 00:02:47.540
+Tetapi untuk sekarang kita akan menggunakan penyimpanan sesi dan menyimpan kunci dan nilai yang akan kita
+
+00:02:47.720 --> 00:02:50.910
+simpan sesi kita atau tokin kita di sini.
+
+00:02:51.200 --> 00:02:52.520
+Mari kita lihat bagaimana kita bisa melakukan itu.
+
+00:02:52.550 --> 00:03:02.100
+Saya akan mengatakan penyimpanan sesi dan ini adalah API peramban yang dapat kita gunakan dan kami hanya memberikan satu set
+
+00:03:02.420 --> 00:03:02.990
+item.
+
+00:03:04.150 --> 00:03:11.640
+Untuk mengatakan bahwa kunci tersebut akan dipanggil tokin dan nilai kunci tersebut akan menjadi token aktual dan hanya
+
+00:03:13.060 --> 00:03:13.940
+itu.
+
+00:03:14.110 --> 00:03:20.510
+Kami hanya menggunakan API browser ini dan kami tidak menyimpan token.
+
+00:03:20.930 --> 00:03:26.020
+Jadi mari kita gunakan ini pada par di mana kita menerima token.
+
+00:03:26.480 --> 00:03:34.640
+Yang perlu kita lakukan adalah mungkin alih-alih hanya memeriksa data pengguna ID atau kita
+
+00:03:37.300 --> 00:03:42.190
+bahkan dapat menambahkan data titik keberhasilan menjadi sama.
+
+00:03:42.230 --> 00:03:47.060
+Benar karena ingat di situlah kami mengirim dari backend sekarang.
+
+00:03:47.510 --> 00:03:55.420
+Dan di sini sebelum kita melakukan pemuatan pengguna dan pada perubahan rute kita hanya bisa mengatakan titik ini menyimpan
+
+00:03:55.530 --> 00:03:59.240
+token dalam sesi dan kita akan memberikan data.
+
+00:03:59.260 --> 00:04:03.140
+Dot token yang kami terima.
+
+00:04:03.560 --> 00:04:15.230
+Sekali lagi ingat bahwa di tab jaringan kami jika Anda melihat seinen yang kami kehilangan dekat sekali lagi.
+
+00:04:15.370 --> 00:04:22.210
+Kita tidak perlu melakukannya sekali lagi karena kita ingat token diterima dalam token
+
+00:04:22.740 --> 00:04:23.680
+data.
+
+00:04:23.740 --> 00:04:28.230
+Jadi saya akan masuk dan melihat apakah ini berhasil.
+
+00:04:28.510 --> 00:04:29.050
+Mari
+
+00:04:32.210 --> 00:04:35.320
+kita simpan diketahui membuat ini sedikit lebih kecil.
+
+00:04:35.610 --> 00:04:38.000
+Tekan katakan titik. com.
+
+00:04:38.040 --> 00:04:41.120
+Masuk.
+
+00:04:41.240 --> 00:04:49.030
+Baiklah sekarang tidak ada yang gila terjadi tetapi jika kita pergi ke aplikasi melihat bahwa kita memiliki token kita sekarang disimpan
+
+00:04:49.030 --> 00:04:49.900
+di sini.
+
+00:04:49.900 --> 00:05:00.810
+Jadi walaupun saya me-refresh token ini ada dan saya bisa me-refresh token ada jika saya membuka
+
+00:05:00.840 --> 00:05:13.570
+jendela baru dan pergi ke localhost tiga ribu satu dan saya membuka alat pengembang sehingga tidak ada sesi di sini.
+
+00:05:14.260 --> 00:05:15.230
+Itu tidak baik.
+
+00:05:15.610 --> 00:05:22.060
+Tetapi bagaimana jika kita menambahkan penyimpanan lokal ke sini alih-alih penyimpanan sesi.
+
+00:05:22.110 --> 00:05:33.570
+Jika kami melakukan penyimpanan lokal dan masuk lagi Anda akan menutup ini dan mencoba ini lagi.
+
+00:05:33.580 --> 00:05:35.010
+Saya akan menyegarkan.
+
+00:05:35.380 --> 00:05:46.190
+Kita akan membersihkan asap untuk memastikan itu benar-benar kosong dan kemudian saya akan melihat seinen.
+
+00:05:46.300 --> 00:05:46.620
+Baiklah.
+
+00:05:46.660 --> 00:05:53.530
+Sekarang kami tidak memiliki apa pun di penyimpanan sesi, tetapi kami memiliki sesuatu di penyimpanan lokal dan saya suka penyimpanan sesi jika
+
+00:05:53.590 --> 00:05:54.390
+saya menyegarkan.
+
+00:05:54.400 --> 00:06:00.650
+Saya memiliki ini di toko-toko lokal tetapi juga jika saya membuka jendela baru dan melakukan host lokal tiga
+
+00:06:02.710 --> 00:06:10.580
+ribu satu yang saya punya penyimpanan lokal saya di sini dan saya sarankan menggunakan penyimpanan sesi saya pribadi lebih suka itu daripada
+
+00:06:10.730 --> 00:06:11.650
+penyimpanan lokal.
+
+00:06:11.720 --> 00:06:14.860
+Tetapi tergantung pada kebutuhan Anda, Anda dapat menggunakan mana yang Anda inginkan.
+
+00:06:14.960 --> 00:06:20.600
+Sekali lagi penyimpanan lokal bertahan sedikit lebih lama dari penyimpanan sesi
+
+00:06:20.600 --> 00:06:24.370
+penyimpanan sesi hanya untuk satu sesi.
+
+00:06:24.380 --> 00:06:31.490
+Baiklah mari kita tutup ini dan mengubahnya ke penyimpanan sesi.
+
+00:06:31.540 --> 00:06:34.010
+Sekarang kita memiliki sedikit masalah di sini.
+
+00:06:34.030 --> 00:06:39.940
+Kami masih diminta untuk masuk setiap saat dan itu karena di bagian belakang
+
+00:06:40.390 --> 00:06:49.860
+jika Anda ingat kami melakukan pemeriksaan untuk keluar dari token ID dan kami belum benar-benar mengirim header otorisasi kami ketika kami
+
+00:06:49.860 --> 00:06:51.730
+masuk dengan token kami.
+
+00:06:51.900 --> 00:06:58.820
+Saat ini kami selalu melalui tanda pegangan dan karena kami belum pernah menetapkan Hetter otorisasi.
+
+00:06:58.970 --> 00:07:00.800
+Jadi mari kita lakukan itu di ujung depan.
+
+00:07:00.920 --> 00:07:04.890
+Mari atur tajuk otorisasi pada saat masuk.
+
+00:07:05.240 --> 00:07:08.430
+Nah ini untuk mengingat halaman login.
+
+00:07:08.680 --> 00:07:13.390
+Dan halaman masuk hanya muncul jika Anda ingat dan kembali untuk memilih keluar.
+
+00:07:13.430 --> 00:07:14.420
+Iya nih.
+
+00:07:14.420 --> 00:07:17.530
+Dan omong-omong aplikasi ini cerdik semakin besar.
+
+00:07:17.530 --> 00:07:22.430
+Kita mungkin melihat mengapa kita ingin menggabungkan redux atau memisahkan beberapa metode ini.
+
+00:07:22.520 --> 00:07:32.220
+Namun jika kita gulir sepenuhnya ke bawah, kita melihat bahwa halaman masuk muncul setiap kali rute terlihat.
+
+00:07:32.310 --> 00:07:39.190
+Jadi tanda dan halaman hanya akan muncul dalam contoh tersebut ketika pengguna tidak masuk.
+
+00:07:40.180 --> 00:07:52.830
+Jadi mungkin di sini di komponen utama kami yaitu aplikasi sebelum kita melakukan apa-apa ketika komponen itu meningkat.
+
+00:07:52.890 --> 00:07:59.280
+Itu adalah metode siklus hidup pertama yang akan didengar sebelum sesuatu diberikan.
+
+00:07:59.280 --> 00:08:00.490
+Kami ingin memeriksa sesuatu.
+
+00:08:00.540 --> 00:08:06.240
+Kami ingin melihat apakah ada item penyimpanan sesi token yang hanya bisa kami
+
+00:08:06.300 --> 00:08:15.750
+gunakan sehingga kami dapat menghindari semua sinus dan logika dan di sini kita cukup melakukan token konser dan kita akan memeriksa penyimpanan
+
+00:08:15.810 --> 00:08:25.330
+sesi yang akan kita lakukan untuk mengatakan penyimpanan sesi jendela dan di sini kita akan mengatakan mendapatkan barang, bukan barang tersebut dan
+
+00:08:25.330 --> 00:08:28.950
+kita hanya akan mendapatkan token yang kita miliki.
+
+00:08:29.020 --> 00:08:38.170
+Jika mereka memiliki token sekarang di sini kita hanya akan mengatakan jika ada token dengan baik dalam hal itu hanya menjemput kita hal
+
+00:08:38.170 --> 00:08:44.380
+baru dan hal baru ini akan menjadi masuk dan titik kita dan masuk ini dan titik
+
+00:08:49.360 --> 00:08:53.970
+akan memiliki beberapa hal berbeda dari apa yang kami miliki sebelumnya.
+
+00:08:54.970 --> 00:09:02.530
+Pertama itu akan menjadi parameter kedua yang memiliki metode posting yang telah kita lihat sebelumnya.
+
+00:09:03.810 --> 00:09:05.100
+Ini akan memiliki header yang
+
+00:09:09.120 --> 00:09:10.000
+merupakan objek.
+
+00:09:10.000 --> 00:09:12.280
+Nah hal pertama yang kita miliki adalah tipe konten.
+
+00:09:12.300 --> 00:09:14.240
+Kami harus memberi tahu jenisnya.
+
+00:09:14.580 --> 00:09:21.180
+Dan kami akan mengirimkannya aplikasi Jaison lagi karena kami akan mengirimkannya ke
+
+00:09:21.240 --> 00:09:31.180
+badan permintaan tetapi juga edisi baru akan menjadi pembenci otorisasi dan ini hanya tajuk standar yang mengatakan Anda
+
+00:09:31.180 --> 00:09:39.280
+dapat mengatur dengan HGP dan header otorisasi ini hanya akan memiliki token token yang kami
+
+00:09:39.280 --> 00:09:42.510
+miliki di penyimpanan sesi kami.
+
+00:09:42.550 --> 00:09:44.580
+Sekarang hanya kepala di sini.
+
+00:09:44.860 --> 00:09:52.720
+Sebenarnya cara Anda ingin menetapkan otorisasi standar ini adalah dengan melakukan sesuatu seperti tukang cukur dan kemudian ruang
+
+00:09:52.720 --> 00:09:53.410
+menambahkan
+
+00:09:56.180 --> 00:09:57.980
+token ke beruang itu.
+
+00:09:58.200 --> 00:10:01.460
+Dan saya akan memberikan informasi kepada Anda untuk membaca lebih lanjut tentang ini.
+
+00:10:01.860 --> 00:10:04.850
+Dan itu adalah hal yang cukup mudah untuk diterapkan.
+
+00:10:04.950 --> 00:10:10.140
+Untuk saat ini, meskipun hanya untuk menjaga hal-hal sederhana, saya akan membiarkannya seperti itu sehingga kami
+
+00:10:10.140 --> 00:10:12.020
+mengirimkan token dengan header otorisasi.
+
+00:10:12.150 --> 00:10:20.960
+Dan sekarang kita cukup melakukan satu titik saja dan anjing ini kemudian akan menerima datanya.
+
+00:10:21.970 --> 00:10:26.980
+Bahwa kita kembali yang akan menjadi id pengguna ingat.
+
+00:10:27.310 --> 00:10:28.600
+Jadi kita akan lakukan.
+
+00:10:28.630 --> 00:10:32.930
+Ya pernyataan dan pernyataan jika ini akan menjadi data.
+
+00:10:33.040 --> 00:10:37.960
+Jika ada data dan mungkin kita akan melakukan pemeriksaan lagi untuk
+
+00:10:40.990 --> 00:10:49.320
+ID data dan jika itu bekerja dengan baik maka dalam kasus itu saya hanya akan mengatakan sukses untuk saat ini.
+
+00:10:50.550 --> 00:10:58.920
+Kita perlu mendapatkan profil pengguna dan mari kita tambahkan dot catch di sini hanya jika ada sesuatu yang keluar.
+
+00:10:59.080 --> 00:11:01.210
+Dan untuk saat ini saya hanya akan melakukan log konsol.
+
+00:11:03.270 --> 00:11:04.680
+Baiklah, mari kita simpan ini.
+
+00:11:04.680 --> 00:11:11.850
+Pastikan tidak ada kesalahan dan lanjutkan apa yang baru saja terjadi pada saat masuk, mengelak dari kami karena ini
+
+00:11:11.850 --> 00:11:14.620
+akan menjadi pertama kalinya pengguna masuk.
+
+00:11:14.620 --> 00:11:18.110
+Tidak ada token otorisasi yang mereka miliki.
+
+00:11:18.270 --> 00:11:19.310
+Jadi mereka harus masuk.
+
+00:11:19.350 --> 00:11:21.620
+Mereka mengirim email dan kata sandi mereka.
+
+00:11:21.870 --> 00:11:28.950
+Dan jika semuanya memeriksa database akan mengembalikan kepada kita token data yang akan kita simpan
+
+00:11:28.950 --> 00:11:32.350
+ke sesi kami di browser kami.
+
+00:11:32.840 --> 00:11:39.020
+Sekarang jika pengguna menyegarkan dan kembali ke aplikasi kami, hal pertama yang diberikan adalah apt.
+
+00:11:39.140 --> 00:11:43.580
+Ya di sana komponen apa pun yang dipasang sebelum sesuatu terjadi.
+
+00:11:43.700 --> 00:11:45.840
+Kami memeriksa sesi mulai windows.
+
+00:11:45.950 --> 00:11:52.260
+Kita akan mencari dan melihat apakah ada token karena jika tidak ada yang baik tidak akan terjadi dan kita
+
+00:11:52.260 --> 00:11:55.660
+hanya akan melanjutkan hari kita seperti yang kita lakukan sebelumnya.
+
+00:11:55.700 --> 00:12:02.510
+Kalau tidak, jika ada token kita akan menjalankan seinen dan point karena kita tidak perlu lagi
+
+00:12:02.510 --> 00:12:10.490
+mengklik tanda itu di Boston dan untuk memiliki tanda dan fungsi kirim kita secara otomatis mencocokkan dan memberikan otorisasi
+
+00:12:10.490 --> 00:12:18.470
+token Hetter sehingga autokey dan sundulan jika kita pergi ke ujung akan mengatakan oh ada pemindaian otomatis saya hanya
+
+00:12:18.620 --> 00:12:25.520
+akan mendapatkan token otorisasi I. D. dari database rattus kami dan saya
+
+00:12:25.520 --> 00:12:27.170
+hanya akan merespons.
+
+00:12:28.300 --> 00:12:31.570
+Dengan aku D ..
+
+00:12:31.730 --> 00:12:40.690
+Sehingga saat kami kembali ke sini, kami dapat melakukan permintaan baru untuk mendapatkan profil.
+
+00:12:40.690 --> 00:12:41.960
+Baiklah mari kita mencobanya.
+
+00:12:42.340 --> 00:12:43.540
+Mari kita coba ini.
+
+00:12:45.300 --> 00:12:48.200
+Saya akan memastikan bahwa tidak ada token.
+
+00:12:48.600 --> 00:12:51.470
+Mari kita pergi ke sesi dan penyimpanan lokal.
+
+00:12:51.480 --> 00:12:52.990
+Saya akan menghapusnya.
+
+00:12:53.010 --> 00:12:54.160
+Semuanya sudah jelas.
+
+00:12:54.980 --> 00:13:02.320
+Dan saya akan mengatakan COM A Mari kita tandatangani.
+
+00:13:02.520 --> 00:13:02.920
+Baiklah.
+
+00:13:02.930 --> 00:13:09.420
+Saya dapat masuk jika saya pergi ke konsol.
+
+00:13:09.640 --> 00:13:11.140
+Ini terlihat seperti ini.
+
+00:13:11.320 --> 00:13:19.600
+Tidak dijalankan tetapi masuk akal karena kami baru saja masuk kami baru saja menerima token sesi kami.
+
+00:13:19.840 --> 00:13:21.870
+Namun jika saya menyegarkan
+
+00:13:25.030 --> 00:13:29.670
+sekarang dan saya tidak mendapatkan apa-apa karena Anda mungkin telah memperhatikan ini.
+
+00:13:29.670 --> 00:13:39.580
+Saya harus benar-benar menjalankan titik kemudian merespons mengingat semua teman baik kami metode Jason untuk memastikan bahwa kami
+
+00:13:39.580 --> 00:13:41.800
+dapat membaca informasi ini.
+
+00:13:41.910 --> 00:13:47.660
+Katakan saja dan kembali ke sini hei sukses.
+
+00:13:47.890 --> 00:13:53.480
+Kita perlu mendapatkan profil pengguna karena kita memiliki token sukses, kita perlu mendapatkan profil pengguna.
+
+00:13:53.580 --> 00:14:00.610
+Jika saya kembali dan menghapus sesi pergi ke kontra. Dan saya menyegarkan.
+
+00:14:00.730 --> 00:14:01.460
+Tidak.
+
+00:14:01.830 --> 00:14:02.630
+Tidak berhasil
+
+00:14:02.640 --> 00:14:04.660
+Anda harus masuk, teman saya.
+
+00:14:04.710 --> 00:14:06.150
+Sangat sangat keren.
+
+00:14:06.960 --> 00:14:07.410
+Baiklah.
+
+00:14:07.410 --> 00:14:13.880
+Jadi dalam video berikutnya kita akan menerapkan bagian ini untuk mendapatkan profil pengguna kita, saya akan melihat melihat yang
+
+00:14:13.890 --> 00:14:14.280
+itu.

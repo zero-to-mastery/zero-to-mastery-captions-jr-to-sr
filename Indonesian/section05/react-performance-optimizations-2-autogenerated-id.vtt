@@ -1,0 +1,574 @@
+﻿WEBVTT
+
+00:00:01.900 --> 00:00:09.910
+Nah Gombak Setelah Anda mengidentifikasi komponen di aplikasi Anda yang tidak perlu dirender, ada beberapa langkah
+
+00:00:09.910 --> 00:00:12.490
+yang bisa Anda ambil.
+
+00:00:13.220 --> 00:00:23.360
+Mari kita kembali ke OP kita dan kita mengatakan bahwa kepala kita komponen kita agak benar-benar render tidak perlu.
+
+00:00:23.420 --> 00:00:29.330
+Maksud saya ini adalah contoh kecil tetapi Anda dapat membayangkan jika ini adalah bagian lain
+
+00:00:29.330 --> 00:00:36.400
+dari aplikasi yang benar-benar sangat rumit mungkin kita tidak ingin kita Rander setiap kali kita menekan kotak pencarian.
+
+00:00:36.420 --> 00:00:38.950
+Jadi apa yang bisa kita lakukan dengan baik.
+
+00:00:38.970 --> 00:00:42.430
+Pertama mari kita buat komponen header baru.
+
+00:00:45.780 --> 00:00:51.090
+Dan komponen ini lagi-lagi harus mengimpor aksi ulang dan kami semakin
+
+00:01:02.680 --> 00:01:07.600
+pandai membuat komponen Riak karena kami telah menulis berkali-kali.
+
+00:01:07.750 --> 00:01:10.460
+Tapi itu selalu hal yang baik.
+
+00:01:11.430 --> 00:01:21.200
+Dan kami ingin memastikan bahwa kami mengekspor komponen tajuk secara default dan di sini kami hanya dapat mengembalikan
+
+00:01:21.350 --> 00:01:27.460
+atau menggunakan render dan di dalam render kami dapat kembali.
+
+00:01:27.680 --> 00:01:39.620
+Sementara kami memiliki awalnya yang hanya H1 sederhana.
+
+00:01:39.800 --> 00:01:47.490
+Baiklah header yang bagus dan sederhana dan jika kita pergi ke sini kita bisa mengganti ini
+
+00:01:47.510 --> 00:01:51.890
+sekarang dengan komponen header dan kami ingin mengimpor ini
+
+00:01:56.180 --> 00:01:57.970
+dari komponen kami
+
+00:02:02.130 --> 00:02:15.100
+Simpan semuanya dan sekali lagi saya ingin menambahkan log konsol kecil di sini untuk melihat apa yang sedang dirender.
+
+00:02:15.180 --> 00:02:16.920
+Jadi saya simpan di sini.
+
+00:02:17.070 --> 00:02:28.650
+Mari kita juga menambahkan beberapa lagi mari kita tambahkan di cardless akan menambahkan dialog konsol yang sedang diberikan
+
+00:02:28.650 --> 00:02:29.510
+cardless.
+
+00:02:29.760 --> 00:02:31.770
+Dan kami ingin memastikan
+
+00:02:34.330 --> 00:02:39.640
+bahwa ini adalah string dan pelacur menambahkan yang lain untuk kotak pencarian juga.
+
+00:02:44.800 --> 00:02:54.780
+Mari kita simpan untuk kembali ke aplikasi kita dan mari kita pergi ke konsul di sini dan karena logger
+
+00:02:54.780 --> 00:03:04.520
+kami dari Reebok's adalah jenis crowding daftar konsol kami hanya untuk saat ini menonaktifkannya akan kembali ke indeks
+
+00:03:04.520 --> 00:03:16.570
+Hygeia kami dan untuk saat ini hanya menghapus ini dari middleware kami berlaku dan simpan itu dan kembali dan itu jauh lebih baik.
+
+00:03:16.570 --> 00:03:17.470
+Baiklah.
+
+00:03:17.470 --> 00:03:21.070
+Sekarang kita lihat di sini bahwa mereka diberikan dua kali.
+
+00:03:21.130 --> 00:03:24.070
+Dan jika Anda memikirkannya mengapa begitu.
+
+00:03:24.070 --> 00:03:27.480
+Yah itu karena awalnya array robot kosong.
+
+00:03:27.820 --> 00:03:35.470
+Dan kemudian kita membuat API memanggil array robot terisi yang merupakan keadaan kita dan kemudian kita
+
+00:03:35.490 --> 00:03:37.630
+kembali tanpa kartu Smashbox.
+
+00:03:37.840 --> 00:03:48.930
+Jadi bagaimana kita dapat menghindari rendering ulang di sini dari Hetter Well kita memiliki siklus hidup kutu yang dapat
+
+00:03:49.020 --> 00:03:53.130
+kita gunakan disebut Pembaruan komponen Harus.
+
+00:03:54.000 --> 00:04:01.470
+Dan ini hadir dengan setiap komponen Riak sehingga setiap siklus tindakan kaitnya dan
+
+00:04:01.950 --> 00:04:10.440
+mengembalikan true jika mengembalikan true maka ia akan memperbarui komponen jika kembali salah maka ia
+
+00:04:10.440 --> 00:04:17.070
+tidak akan memperbarui komponen komponen ini benar-benar menerima alat peraga berikutnya.
+
+00:04:17.160 --> 00:04:17.650
+Aduh.
+
+00:04:17.700 --> 00:04:24.960
+Alat peraga berikutnya dan kondisi selanjutnya.
+
+00:04:25.080 --> 00:04:29.720
+Tetapi bagi kami, kami tidak benar-benar membutuhkannya, kami hanya tahu bahwa kami tidak ingin
+
+00:04:30.440 --> 00:04:33.650
+merender komponen tajuk sehingga kami dapat mengatakan return false.
+
+00:04:33.800 --> 00:04:34.810
+Mari kita lihat apa yang terjadi di sini.
+
+00:04:37.300 --> 00:04:48.450
+Saya akan menyimpan kembali dan melihat bahwa komponen kepala kita hanya merender waktu asli dan tidak peduli
+
+00:04:48.530 --> 00:04:49.310
+apa.
+
+00:04:49.310 --> 00:04:53.790
+Sekarang kepala atau komponen kita tidak akan pernah ditampilkan.
+
+00:04:53.970 --> 00:04:58.170
+Dan itu karena kami selalu memiliki pembaruan komponen sial.
+
+00:04:58.170 --> 00:04:58.800
+Salah.
+
+00:04:58.890 --> 00:04:59.380
+Tidak.
+
+00:04:59.400 --> 00:05:08.170
+Hanya tidak pernah memperbarui komponen ini dan ini sangat berbahaya karena Anda mengatakan tidak pernah memperbarui ini jika komponen ini benar-benar
+
+00:05:08.170 --> 00:05:14.980
+menerima alat peraga atau keadaan dan salah satu dari perubahan ini tidak akan dirender karena kami
+
+00:05:14.980 --> 00:05:17.210
+baru saja mengatakan return false.
+
+00:05:17.210 --> 00:05:24.040
+Defaultnya sekarang jika kita tidak menambahkan Haruskah pembaruan komponen adalah untuk selalu
+
+00:05:24.070 --> 00:05:31.720
+mengembalikan true tetapi seharusnya pembaruan komponen memberi kita kemampuan untuk mengendalikan siklus pembaruan ini.
+
+00:05:31.740 --> 00:05:37.410
+Biarkan saya memberi Anda contoh yang lebih baik dengan sesuatu yang sedikit lebih rumit daripada teks sederhana.
+
+00:05:37.440 --> 00:05:46.220
+Mari kita buat file baru di sini komponen baru dan kita akan menyebutnya ini kita akan memanggil tombol penghitung ini.
+
+00:05:46.400 --> 00:05:47.300
+Iya nih.
+
+00:05:47.980 --> 00:05:56.070
+Dan sekali lagi melalui gerakan kami, saya sebenarnya hanya akan menyalin header di sini dan
+
+00:05:56.070 --> 00:06:03.740
+mengubah nama hanya untuk membuat semuanya lebih mudah jadi saya tombol penghitung mengatakan.
+
+00:06:03.940 --> 00:06:14.030
+Dan sekarang tombol penghitung ini akan melakukan sedikit lebih banyak daripada hanya memiliki H-1 dalam konstruktor.
+
+00:06:18.160 --> 00:06:24.760
+Kita akan memanggil super Dan kemudian di sini ia akan memiliki keadaan sendiri
+
+00:06:25.540 --> 00:06:34.090
+dan itu akan memiliki keadaan yang mengatakan jumlah sama dengan 1 atau kurang untuk menghitung sama dengan nol.
+
+00:06:34.100 --> 00:06:36.030
+Itu hitungan standar.
+
+00:06:36.170 --> 00:06:39.070
+Dan untuk sekarang mari kita tidak melakukan apa pun di sini.
+
+00:06:39.080 --> 00:06:44.610
+Saya hanya akan membiarkan itu kosong sehingga selalu akan memperbarui komponen.
+
+00:06:44.710 --> 00:06:48.310
+Dan akhirnya di dalam Rander, mari kita serahkan sesuatu yang bermakna.
+
+00:06:49.080 --> 00:06:50.450
+Mari
+
+00:06:55.920 --> 00:06:57.940
+kita render tombol.
+
+00:06:59.170 --> 00:07:09.480
+Katakanlah memiliki properti warna dan properti warna ini akan datang dari barang-barang ini alat peraga
+
+00:07:09.720 --> 00:07:14.230
+warna dot yang akan kita sampaikan.
+
+00:07:14.470 --> 00:07:21.890
+Dan juga jumlah pembaruan acara klik panjang.
+
+00:07:22.100 --> 00:07:29.430
+Dan ini akan menjadi metode yang akan kita buat dan pembaruan ini muncul di sini.
+
+00:07:32.000 --> 00:07:37.540
+Ini akan menjadi fungsi sederhana yang hanya memperbarui negara kita.
+
+00:07:37.660 --> 00:07:54.320
+Jadi set state ini akan memiliki hitungan karena dot state ini menghitung DOT ditambah 1.
+
+00:07:54.340 --> 00:08:04.690
+Sekarang mari kita sekarang kita akan kembali ke ini, tetapi untuk sekarang mari kita hanya memiliki tombol ini tombol penghitung di
+
+00:08:04.730 --> 00:08:10.490
+header dan juga menurunkan alat peraga warna dan sepertinya di sini
+
+00:08:10.490 --> 00:08:11.900
+penyorotannya mati.
+
+00:08:11.900 --> 00:08:15.490
+Jadi saya pikir kami membuat kesalahan kecil.
+
+00:08:15.710 --> 00:08:19.740
+Oh dan itu karena saya harus menutup tombol ini.
+
+00:08:19.730 --> 00:08:32.190
+Mari kita lakukan itu dan mari kita letakkan selembar teks di sini yang hanya mengatakan menghitung mulai
+
+00:08:32.470 --> 00:08:34.900
+Amerika mulai menghitung.
+
+00:08:34.920 --> 00:08:39.340
+Baiklah, mari kita simpan ini dan impor ini ke header.
+
+00:08:41.520 --> 00:08:47.900
+Yah jangan katakan impor Petar untuk tidak mengimpor counter
+
+00:08:51.640 --> 00:08:55.500
+Hetter Bodin dari file conurbation.
+
+00:08:57.350 --> 00:09:12.130
+Dan di dalam sini kita dapat mengembalikan dev yang memiliki tombol penghitung dengan mengatakan warna warna Mysti merah untuk saat ini dan jangan
+
+00:09:13.000 --> 00:09:26.430
+lupa untuk menutup hari mari kita simpan dan kita memiliki beberapa sintaks yang serius di sini jika kita pergi ke Hetter
+
+00:09:26.940 --> 00:09:28.960
+Well ya hari.
+
+00:09:29.190 --> 00:09:30.450
+Lupa braket saya di sini.
+
+00:09:35.240 --> 00:09:38.210
+Baiklah, mari kita kembali ke aplikasi kita.
+
+00:09:38.360 --> 00:09:40.720
+Kami memiliki hitungan nol.
+
+00:09:41.510 --> 00:09:42.940
+Saya tidak suka tempatnya.
+
+00:09:42.970 --> 00:09:47.430
+Jadi mari kita benar-benar meletakkannya di bawah H-1.
+
+00:09:47.630 --> 00:09:48.580
+Mari selamatkan itu.
+
+00:09:48.650 --> 00:09:49.980
+Itu jauh lebih baik.
+
+00:09:50.570 --> 00:09:54.850
+Dan jika kita mengkliknya oh kita mendapatkan beberapa kesalahan.
+
+00:09:56.780 --> 00:09:59.260
+Pembaruan komponen yang pasti tidak terdefinisi.
+
+00:09:59.660 --> 00:10:06.350
+Dan Anda benar karena kami menelepon di konter BOTTEN pasti komponen pembaruan tetapi tidak melakukan
+
+00:10:06.350 --> 00:10:07.260
+apa-apa.
+
+00:10:07.430 --> 00:10:08.180
+Ini tidak bekerja.
+
+00:10:08.180 --> 00:10:11.240
+Jadi untuk
+
+00:10:14.380 --> 00:10:22.690
+mengembalikan true untuk saat ini dan mari klik jumlah
+
+00:10:22.710 --> 00:10:23.490
+Baiklah.
+
+00:10:23.490 --> 00:10:24.330
+Sangat keren.
+
+00:10:24.330 --> 00:10:31.380
+Sepertinya itu berfungsi dan kami sedang merender kombinasi dan jumlah Hitungan bertambah setiap waktu.
+
+00:10:33.470 --> 00:10:42.840
+Sekarang saya sebutkan di sini bahwa kadang-kadang Anda bisa mendapatkan beberapa efek samping lucu ketika Anda memperbarui negara berdasarkan
+
+00:10:44.540 --> 00:10:47.140
+apa status saat ini.
+
+00:10:47.210 --> 00:10:52.330
+Itu karena pembaruan keadaan sebenarnya tidak sinkron.
+
+00:10:52.400 --> 00:10:56.860
+Itu berarti mereka mungkin tidak selalu terjadi ketika Anda berpikir.
+
+00:10:57.080 --> 00:11:04.800
+Jadi, kapan pun Anda menggunakan status seperti ini atau Anda perlu menurunkan status berikutnya dari kondisi saat ini.
+
+00:11:05.210 --> 00:11:11.540
+Dianjurkan agar Anda menggunakan cara lain untuk memperbarui keadaan yaitu mengambil
+
+00:11:16.720 --> 00:11:17.530
+keadaan
+
+00:11:21.270 --> 00:11:26.990
+saat ini dan mengembalikan keadaan baru berdasarkan parameter keadaan ini.
+
+00:11:27.080 --> 00:11:28.010
+Jadi mari kita
+
+00:11:32.400 --> 00:11:33.520
+simpan dan masih berfungsi.
+
+00:11:33.660 --> 00:11:39.620
+Sempurna Mari kita selesaikan ini sekarang hanya untuk bersenang-senang.
+
+00:11:39.780 --> 00:11:51.750
+Mari kita lihat alat peraga berikutnya dan keadaan selanjutnya jika saya pergi ke sini dan melakukan log konsol alat peraga berikutnya
+
+00:11:51.780 --> 00:11:55.890
+dan konsol semua log kondisi berikutnya.
+
+00:11:56.100 --> 00:11:57.450
+Ayo simpan di sini.
+
+00:11:57.450 --> 00:12:03.230
+Kembali dan mari kita hapus penghitungan anti-pers ini.
+
+00:12:03.300 --> 00:12:06.420
+Saya melihat bahwa saya mendapatkan prop berikutnya dibaca.
+
+00:12:06.490 --> 00:12:13.010
+Yah itu tidak akan berubah karena kami belum mengubah salah satu alat peraga tetapi hitungannya sekarang satu.
+
+00:12:13.050 --> 00:12:24.850
+Jika saya klik lagi, hitung sampai tiga dan Anda dapat melihat kami memiliki akses ke properti dan status.
+
+00:12:24.860 --> 00:12:35.780
+Sekarang apa yang terjadi jika karena alasan tertentu keadaan tidak berubah karena kita tidak benar-benar peduli tentang hal
+
+00:12:35.780 --> 00:12:38.300
+lain dalam warna merah.
+
+00:12:38.300 --> 00:12:45.520
+Ini agak statis sekarang dan jika komponen pembaruan kita dapat melakukan sesuatu seperti ini.
+
+00:12:45.660 --> 00:12:53.270
+Kita dapat mengatakan jika kondisi titik ini dihitung tidak
+
+00:12:56.080 --> 00:13:02.950
+sama dengan status DOT negara berikutnya jika berbeda.
+
+00:13:02.990 --> 00:13:16.220
+Dalam hal ini, ya, tolong kembalikan yang benar dan kami render. Jika tidak, kami hanya dapat mengembalikan yang salah.
+
+00:13:16.280 --> 00:13:24.280
+Mari kita simpan kembali, pastikan semuanya masih berfungsi ya semuanya masih berfungsi.
+
+00:13:26.430 --> 00:13:37.750
+Tetapi katakanlah sekarang kita ingin mengubah alat peraga kita, mari kita hapus atau komentari komponen
+
+00:13:37.750 --> 00:13:45.690
+pembaruan yang harus dari Hetter dan segarkan dan ketik sesuatu.
+
+00:13:45.700 --> 00:13:50.810
+Dan kami melihat bahwa tajuk kami memperbarui sekali lagi.
+
+00:13:51.120 --> 00:13:58.890
+Dan jika kita kembali ke conurbation dan dalam render kita melihat coner itu Dan meskipun kita con. logging itu tidak muncul
+
+00:13:58.890 --> 00:14:03.180
+di sini sebagai rendering Nyree.
+
+00:14:03.180 --> 00:14:13.970
+Tetapi jika saya menghapus sepotong kode ini katakanlah kita menghapus pembaruan komponen sheet saya simpan dan kembali kita melihat
+
+00:14:13.970 --> 00:14:17.070
+bahwa conurbation sekarang sedang dirender.
+
+00:14:17.230 --> 00:14:26.570
+Dan meskipun kita tidak menyentuhnya dan tidak peduli karena komponen induk kita sedang dirender,
+
+00:14:27.260 --> 00:14:30.080
+kita juga dirender ulang.
+
+00:14:30.500 --> 00:14:37.680
+Jadi dengan menambahkan seharusnya pembaruan komponen hanya memperbarui jika keadaan berubah.
+
+00:14:37.730 --> 00:14:42.560
+Itulah satu-satunya saat komponen kami harus diperbarui.
+
+00:14:42.680 --> 00:14:45.370
+Sangat keren.
+
+00:14:45.500 --> 00:14:52.550
+Tapi sekarang tidak ada conurbation.
+
+00:14:52.700 --> 00:15:00.880
+Sekarang ada saat-saat ketika Anda memiliki apa yang kita sebut komponen bodoh komponen kewarganegaraan adalah komponen
+
+00:15:00.880 --> 00:15:01.620
+presentasi.
+
+00:15:01.660 --> 00:15:04.370
+Jenis komponen kartu seperti ini di sini.
+
+00:15:04.510 --> 00:15:11.410
+Ini adalah fungsi murni dan hanya berubah ketika prop itu berganti peran, memiliki jenis
+
+00:15:11.680 --> 00:15:18.220
+komponen khusus yang dibangun dalam komponen murni dingin yang sebenarnya dimaksudkan untuk ini.
+
+00:15:18.250 --> 00:15:29.330
+Jadi jika komponen kartu ini seperti komponen jenis ini, kita dapat mengatakan memperluas komponen murni dan kita dapat
+
+00:15:29.690 --> 00:15:33.740
+mengimpor dari komponen murni aksi ulang.
+
+00:15:33.740 --> 00:15:35.500
+Sekarang apa artinya ini.
+
+00:15:35.540 --> 00:15:38.360
+Ini berarti hanya komponen.
+
+00:15:38.360 --> 00:15:43.100
+Mulai sekarang hanya akan membuat ketika prop itu benar-benar berubah.
+
+00:15:43.100 --> 00:15:44.930
+Itu bagus dan sederhana.
+
+00:15:44.990 --> 00:15:52.130
+Jika Anda mengubah komponen mobil ini menjadi kelas dengan komponen
+
+00:15:52.130 --> 00:16:00.040
+murni, maka komponen otomatis hanya akan berubah jika ketiga perubahan ini benar-benar bagus.
+
+00:16:00.050 --> 00:16:07.860
+Sekarang satu peringatan adalah bahwa komponen murni ini melakukan sesuatu yang disebut perbandingan alat peraga dangkal.
+
+00:16:07.880 --> 00:16:14.990
+Jadi, jika Anda menggunakan struktur data yang kompleks seperti objek bersarang yang dalam, mungkin akan kehilangan beberapa perubahan alat
+
+00:16:15.080 --> 00:16:17.360
+peraga dan tidak memperbarui komponen Anda.
+
+00:16:17.360 --> 00:16:20.320
+Jadi saya sebenarnya bukan penggemar menggunakan komponen murni.
+
+00:16:21.770 --> 00:16:27.440
+Saya pribadi suka menggunakan pemutakhiran komponen seharusnya yang melakukan hal yang sama tetapi Anda
+
+00:16:27.740 --> 00:16:36.950
+memiliki sedikit kontrol tetapi Anda tidak boleh menggunakannya secara berlebihan karena sekarang Anda telah menambahkan langkah ekstra dalam pembaruan tindakan ulang untuk memeriksa
+
+00:16:36.950 --> 00:16:37.840
+hal lain.
+
+00:16:37.850 --> 00:16:46.070
+Jadi ini sebenarnya juga memiliki penalti kinerja karena Anda menjalankan fungsi nother untuk memeriksa apakah
+
+00:16:46.160 --> 00:16:54.880
+ada perubahan lain karena pembaruan komponen bersama adalah metode yang dipanggil sebelum membuat render ini di
+
+00:16:54.880 --> 00:16:55.490
+sini.
+
+00:16:56.600 --> 00:16:58.890
+Jadi gunakan ini dengan hati-hati.
+
+00:16:58.880 --> 00:17:05.360
+Jangan hanya menambahkan ini karena oh itu akan meningkatkan kinerja saya benar-benar mengukurnya jika ini membantu untuk kasus-kasus
+
+00:17:05.540 --> 00:17:06.930
+yang jarang terjadi.
+
+00:17:07.070 --> 00:17:13.010
+Pasti menggunakannya tetapi jangan terlalu sering menggunakannya untuk setiap komponen tunggal yang saya lihat di banyak proyek.
+
+00:17:13.130 --> 00:17:19.100
+Ini sebenarnya dapat menghambat kinerja Anda atau terkadang melewatkan beberapa pembaruan karena perbandingan
+
+00:17:19.280 --> 00:17:21.000
+yang dangkal ini.
+
+00:17:21.100 --> 00:17:27.350
+Saya ingin menunjukkan kepada Anda satu alat terakhir yang mungkin benar-benar membantu Anda dengan beberapa hal ini karena
+
+00:17:27.350 --> 00:17:30.130
+agak sulit untuk mengetahui semua ini sendiri.
+
+00:17:32.530 --> 00:17:40.770
+Ini disebut Mengapa Anda memperbarui dan untuk oh mengapa Anda memperbarui.
+
+00:17:40.880 --> 00:17:51.870
+Ini adalah alat yang memberitahu Anda di konsol bahwa hei mengapa Anda merender ini.
+
+00:17:51.880 --> 00:17:56.810
+Tidak ada yang berubah tetapi ini membuat itu menjadi yang harus dihindari.
+
+00:17:56.850 --> 00:18:06.360
+Jadi, ini dilakukan untuk Anda dan semua yang perlu Anda lakukan adalah diterapkan ke dalam aplikasi ulah Anda hanya dengan beberapa baris dan Anda
+
+00:18:07.410 --> 00:18:10.800
+memastikan bahwa itu tidak masuk ke dalam produksi.
+
+00:18:10.800 --> 00:18:13.250
+Anda hanya menggunakannya untuk tujuan pengembangan saja.
+
+00:18:14.270 --> 00:18:20.360
+Karena salah satu masalah paling umum yang mempengaruhi kinerja dan bereaksi adalah siklus render
+
+00:18:20.360 --> 00:18:28.400
+yang tidak perlu ini karena ingat komponen Riak akan membaca Rander setiap kali orangtua mereka membuat secara otomatis bahkan
+
+00:18:29.440 --> 00:18:32.190
+jika alat peraga mereka tidak berubah.
+
+00:18:32.230 --> 00:18:39.220
+Jadi alat ini memungkinkan Anda untuk menjalankan ini dalam pengembangan dan melihat apakah ketika Anda melakukan rendering yang tidak perlu.
+
+00:18:39.520 --> 00:18:45.460
+Dan ini sangat berguna ketika Anda memiliki aplikasi besar di mana sangat sulit bagi Anda untuk
+
+00:18:45.460 --> 00:18:50.000
+hanya melakukan log konsol atau mencari tahu di mana sorotan terjadi.
+
+00:18:50.940 --> 00:18:58.440
+Tetapi sekali lagi dengan semua yang menggunakannya dengan hati-hati gunakan waktu Anda dengan bijak karena kinerja Anda selalu dapat
+
+00:18:58.440 --> 00:19:00.390
+meningkatkan kinerja aplikasi Anda.
+
+00:19:01.130 --> 00:19:05.470
+Anda hanya ingin memiliki gambaran besar ini dan memahami cara kerja aplikasi Anda.
+
+00:19:05.510 --> 00:19:11.990
+Dalam kasus Anda bagaimana ini bereaksi aplikasi redux bekerja dan bagaimana Anda dapat memperbaikinya dengan memahami semua
+
+00:19:11.990 --> 00:19:14.160
+detail kecil tentang cara kerjanya
+
+00:19:14.240 --> 00:19:21.790
+Sekarang Anda dapat membuat keputusan cerdas tentang bagaimana atau kapan menangani masalah kinerja Anda.
+
+00:19:21.800 --> 00:19:23.030
+Itu saja untuk sekarang.
+
+00:19:23.030 --> 00:19:23.860
+Sampai jumpa di yang berikutnya.

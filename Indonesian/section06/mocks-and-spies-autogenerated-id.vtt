@@ -1,0 +1,436 @@
+﻿WEBVTT
+
+00:00:00.780 --> 00:00:02.310
+Selamat datang kembali.
+
+00:00:02.310 --> 00:00:09.120
+Sekarang satu hal yang mungkin Anda perhatikan jika Anda benar-benar memperhatikan adalah bahwa tes
+
+00:00:09.120 --> 00:00:17.490
+ini baik-baik saja untuk saat ini karena Swaby API cukup cepat dan kami mendapatkan data kembali dengan segera.
+
+00:00:17.490 --> 00:00:20.470
+Tetapi bayangkan jika kita memiliki banyak dari tes ini.
+
+00:00:20.490 --> 00:00:28.940
+Bayangkan jika kita memiliki hadiah yang mengembalikan banyak data yang membutuhkan waktu lama untuk benar-benar mencapai Anda dapat membayangkan ini semakin
+
+00:00:28.940 --> 00:00:33.590
+besar dan lebih besar sampai dibutuhkan selamanya untuk menjalankan tes kami.
+
+00:00:33.590 --> 00:00:40.580
+Maksud saya hanya butuh 2. 5 lima tujuh detik tetapi dengan semakin banyak tes yang bernilai
+
+00:00:40.580 --> 00:00:46.950
+semakin banyak tes asinkron yang kita tunggu untuk benar-benar mendapatkan respons data itu akan memakan waktu lebih lama dan lebih lama.
+
+00:00:47.030 --> 00:00:50.740
+Dan jika kami adalah pengembang dan bekerja dan menghemat, kami mahal.
+
+00:00:51.020 --> 00:00:57.650
+Jika kita harus menunggu beberapa menit untuk pengujian kita setiap kali itu benar-benar
+
+00:00:57.650 --> 00:01:06.200
+akan memperlambat kita bagaimana kita dapat meningkatkan ini sehingga kita tidak selalu melakukan fiskal ini Yah kita
+
+00:01:06.590 --> 00:01:17.820
+dapat menggunakan sesuatu yang disebut Mock's dengan tanda kita dapat memalsukan fungsi dan hanya berpura-pura menjalankannya sehingga kita dapat menggunakan uang ini untuk
+
+00:01:17.880 --> 00:01:21.260
+membiarkan kita memata-matai fungsi suatu fungsi.
+
+00:01:22.160 --> 00:01:28.820
+Itu disebut secara tidak langsung oleh beberapa kode lain daripada hanya menguji output dan
+
+00:01:28.820 --> 00:01:31.340
+menunggu kode asinkron untuk menyelesaikan.
+
+00:01:31.480 --> 00:01:35.550
+Dan Anda dapat membuat Mock's dan sangat mudah.
+
+00:01:35.640 --> 00:01:37.420
+Jadi mari kita lakukan itu.
+
+00:01:37.620 --> 00:01:41.060
+Mari buat tanda di sini untuk mempercepat pengujian asinkron kami.
+
+00:01:42.440 --> 00:01:45.860
+Hal pertama yang akan kita lakukan, mari kita ciptakan lebih banyak ruang di sini.
+
+00:01:45.980 --> 00:01:52.610
+Saya akan membuat lagi tes baru yang akan kami sebut ini
+
+00:01:55.420 --> 00:02:01.990
+membuat orang-orang menghitung dan hasil serta berakhir di sini.
+
+00:02:02.880 --> 00:02:04.070
+Kami akan melakukan hal yang sama.
+
+00:02:04.260 --> 00:02:07.080
+Parameter kedua adalah fungsi.
+
+00:02:07.110 --> 00:02:09.520
+Sekarang kita akan membuat sesuatu yang menarik.
+
+00:02:09.720 --> 00:02:18.560
+Kita akan mengejek pengambilan ini karena pertama-tama note mengambil perpustakaan pihak ketiga.
+
+00:02:18.570 --> 00:02:26.040
+Dan jika kami benar-benar menguji kode perpustakaan dan kami memeriksa repo Haab dan mereka memiliki tes, kami
+
+00:02:26.430 --> 00:02:29.460
+tidak perlu menguji apakah itu berfungsi.
+
+00:02:29.460 --> 00:02:34.660
+Kita dapat mengasumsikan bahwa fungsi pengambilan berfungsi sebagaimana dimaksud.
+
+00:02:35.010 --> 00:02:42.140
+Jadi mari kita lakukan mock fetch dan mock fetch.
+
+00:02:42.470 --> 00:02:44.780
+Dan ini akan menjadi variabel.
+
+00:02:44.810 --> 00:02:49.760
+Jadi anggap saja biaya kita bisa mengejek pengambilan dan cara kita bisa bercanda.
+
+00:02:49.760 --> 00:02:55.200
+Sekali lagi jika Anda ingat ini adalah sesuatu yang datang hanya dengan mata-mata tiruan dan barang-barang.
+
+00:02:55.250 --> 00:03:02.990
+Kalau tidak, jika Anda menggunakan sesuatu seperti Moka Anda akan menggunakan masuk tetapi hanya dengan itu kita bisa melakukan fungsi
+
+00:03:05.530 --> 00:03:10.400
+bercanda titik empat dan kita bisa melakukan sesuatu yang disebut lagi.
+
+00:03:10.450 --> 00:03:12.630
+Ini semua dalam dokumentasi mereka.
+
+00:03:12.670 --> 00:03:23.530
+Kita bisa melakukan sesuatu yang disebut nilai balik mock dan kita bisa mengembalikan sesuatu seolah-olah fungsi fecche ini
+
+00:03:23.530 --> 00:03:24.180
+dipanggil.
+
+00:03:24.370 --> 00:03:30.270
+Jadi apa fungsi mengambil biasanya kembali dengan baik.
+
+00:03:30.380 --> 00:03:33.090
+Kita tahu itu mengembalikan janji.
+
+00:03:33.110 --> 00:03:36.050
+Dan mari kita katakan saja bahwa ini akan selalu teratasi.
+
+00:03:36.140 --> 00:03:40.880
+Jadi itu adalah janji yang terselesaikan dan di dalam tekad ini.
+
+00:03:41.060 --> 00:03:45.930
+Biarkan saya membuat ini di baris baru supaya kita bisa melihatnya lebih baik dan lebih baik.
+
+00:03:46.010 --> 00:03:47.000
+Sini.
+
+00:03:47.000 --> 00:03:49.590
+Man, mari kita buat ini sedikit lebih kecil.
+
+00:03:49.670 --> 00:04:01.150
+Kami ingin menyelesaikan ke objek yang bernama Jason karena jika Anda ingat kami harus selalu melakukan debu maka
+
+00:04:01.180 --> 00:04:07.490
+respons dot Jaison sehingga kami bisa mengejek semua ini.
+
+00:04:08.570 --> 00:04:10.120
+Kita bisa mengatakan itu Jason.
+
+00:04:10.280 --> 00:04:14.150
+Jadi objek yang kita kembalikan akan menjadi janji.
+
+00:04:14.180 --> 00:04:22.790
+Jadi kita akan menyelesaikan janji dengan metode Jaison dan metode ini lagi adalah
+
+00:04:25.640 --> 00:04:26.600
+janji.
+
+00:04:26.930 --> 00:04:37.620
+Jadi sekali lagi janjikan dan tekankan, dan janji ini lagi bagian ini yang kita lakukan ini lagu Don
+
+00:04:37.620 --> 00:04:52.000
+J dan kemudian kita dapatkan datanya sehingga kita bisa mengatakan bahwa dalam tekad kita akan memiliki jumlah yang sama dengan 87 dan hasilnya akan mari
+
+00:04:52.000 --> 00:05:04.720
+kita buat array yang mengatakan 0 1 2 3 4 5 katakanlah ini dan dapatkan sedikit kesalahan sintaks, mari kita perbaiki
+
+00:05:04.720 --> 00:05:05.650
+itu.
+
+00:05:07.090 --> 00:05:11.270
+Kami memiliki token yang tidak terduga dan saya lupa untuk datang ke
+
+00:05:14.290 --> 00:05:17.130
+sini, koma klasik yang selalu mereka terima.
+
+00:05:17.280 --> 00:05:17.630
+Baiklah.
+
+00:05:17.650 --> 00:05:20.370
+Jadi sekarang kita baru saja menandai panggilan telepon.
+
+00:05:20.500 --> 00:05:27.670
+Alih-alih menelepon ini membuat orang berjanji dan menunggu data dan mendapatkan data atau data.
+
+00:05:27.670 --> 00:05:34.010
+Hasil mereka sebenarnya hanya melakukan itu secara otomatis dengan asumsi bahwa API berfungsi.
+
+00:05:34.030 --> 00:05:37.690
+Jadi kita bisa menguji bagian fungsi kita yang lain.
+
+00:05:38.380 --> 00:05:47.130
+Sekali lagi karena ini masih asinkron, kami mengembalikan janji, ingat kami ingin melakukan pengembalian
+
+00:05:48.660 --> 00:05:59.700
+Swaby dot membuat orang-orang membuat janji orang dan dan di sini kita alih-alih fecche melakukan jalan-jalan, kita mengejek
+
+00:06:00.180 --> 00:06:10.120
+fungsi ambil dan ini adalah bagaimana ketika kami menguji kami dapat menggunakan injeksi ketergantungan untuk memastikan
+
+00:06:10.390 --> 00:06:14.790
+bahwa kami menguji fungsi yang berbeda.
+
+00:06:14.800 --> 00:06:21.880
+Dan Anda mungkin ingat ini dari tes integrasi tetapi tanpa benar-benar menggunakan semua sumber daya ini kami
+
+00:06:21.880 --> 00:06:24.130
+berusaha untuk menjadi sepintar mungkin
+
+00:06:25.070 --> 00:06:31.350
+Sekarang kita dapat memiliki titik itu dan kita akan melihat data seperti yang kita lakukan di atas di mana kita mendengar sekarang
+
+00:06:34.500 --> 00:06:35.350
+di sini.
+
+00:06:35.370 --> 00:06:37.380
+Mari kita lakukan beberapa tes.
+
+00:06:37.530 --> 00:06:44.260
+Kami ingin mengharapkan maake mengambil.
+
+00:06:44.310 --> 00:06:52.080
+Itu benar karena kami dulu hanya untuk dot F-ed dan kami sekarang memiliki kemampuan untuk mendengarkan karena hanya dalam ini juga
+
+00:06:52.110 --> 00:06:58.170
+mata-mata kita dapat memata-matai ini dan melihat apa fungsi ini lakukan di dalam fungsi ini.
+
+00:06:58.170 --> 00:07:01.530
+Jadi apa yang tidak diambil Mark lakukan di dalam membuat orang berjanji.
+
+00:07:01.560 --> 00:07:06.310
+Saya tidak bisa mengatakan saya berharap mock fetch doc mock.
+
+00:07:06.330 --> 00:07:11.180
+Sekali lagi ini ada dalam dokumentasi untuk memiliki penyebab.
+
+00:07:11.220 --> 00:07:14.330
+Jadi berapa kali ini disebut.
+
+00:07:15.450 --> 00:07:16.440
+Saya akan mengatakan lenth.
+
+00:07:16.560 --> 00:07:24.920
+Jadi berapa kali itu disebut sebagai satu aman mari kita dan
+
+00:07:28.320 --> 00:07:30.000
+ini berlalu.
+
+00:07:30.000 --> 00:07:41.120
+Tapi ingat dengan tes asinkron kami ingin selalu melakukan pernyataan titik harapan untuk memastikan bahwa mereka
+
+00:07:41.120 --> 00:07:42.290
+dipanggil.
+
+00:07:42.290 --> 00:07:47.330
+Jadi dalam hal ini kita hanya memiliki satu semuanya berfungsi.
+
+00:07:47.340 --> 00:07:48.720
+Jika saya mengubah
+
+00:07:52.740 --> 00:07:59.150
+ini ke nol yang gagal karena kami benar-benar memanggil ikan Mach fungsi ini disebut maake fetch sekali.
+
+00:07:59.190 --> 00:08:00.450
+Sangat keren.
+
+00:08:01.080 --> 00:08:04.620
+Apa lagi yang bisa kita lakukan dengan baik.
+
+00:08:04.650 --> 00:08:06.030
+Hal lain yang bisa kita lakukan.
+
+00:08:06.100 --> 00:08:08.740
+Baiklah, saya salin saja ini.
+
+00:08:08.780 --> 00:08:19.710
+Kita dapat berharap maake fetch memiliki metode lain yang dipanggil untuk dipanggil dan kita dapat menguji untuk melihat apa yang disebut
+
+00:08:19.710 --> 00:08:20.770
+dengan ini.
+
+00:08:20.970 --> 00:08:25.580
+Dalam kasus kami itu harus dipanggil dengan ini sendiri.
+
+00:08:25.950 --> 00:08:29.010
+Jadi sekali lagi mari kita taruh di sini.
+
+00:08:29.220 --> 00:08:30.410
+Mari kita coba ini.
+
+00:08:30.480 --> 00:08:43.680
+Aku akan menyelamatkan Oh dan aku benar-benar membuat kesalahan dan kami ingin berharap lagi mengambil
+
+00:08:43.680 --> 00:08:53.660
+mock untuk aku dipanggil dengan menggunakan save dan menghapus braket.
+
+00:08:53.690 --> 00:08:54.270
+Baiklah.
+
+00:08:54.320 --> 00:08:59.270
+Ini benar-benar lewat. Ingat pernyataan kita sekarang mengharapkan dua hal.
+
+00:08:59.300 --> 00:09:00.170
+Jadi saya akan
+
+00:09:04.240 --> 00:09:07.260
+menghemat Anda melihat bagaimana ini mengambil sedikit lebih banyak waktu saat ini.
+
+00:09:07.630 --> 00:09:15.010
+Sekali lagi karena kami berulang kali memanggil API ini, ini mengambil sedikit lebih banyak waktu saat ini 3. 9 81 detik.
+
+00:09:15.280 --> 00:09:20.330
+Tetapi dengan tanda karena kita kembali kita lakukan untuk menyelesaikan segera.
+
+00:09:20.500 --> 00:09:23.830
+Jauh lebih cepat dan itu berlalu.
+
+00:09:23.950 --> 00:09:29.600
+Jika karena alasan tertentu saya mengubahnya ke dan panggilan kami berharap
+
+00:09:32.760 --> 00:09:41.730
+memanggil planet dan mengatakan kami melihat itu gagal karena kami berharap orang-orang benar-benar mendapatkan orang-orang bukan planet ini
+
+00:09:41.730 --> 00:09:42.890
+sangat keren.
+
+00:09:42.900 --> 00:09:43.140
+Baiklah.
+
+00:09:43.170 --> 00:09:44.850
+Mari kita lakukan lagi.
+
+00:09:45.180 --> 00:09:46.650
+Baiklah mari kita tambahkan lagi.
+
+00:09:46.650 --> 00:09:49.410
+Menyalin dan menempel dalam pengujian tidak buruk.
+
+00:09:49.470 --> 00:09:57.990
+Mari kita salin dan tempel ini dan berharap semuanya bekerja sama persis seperti yang mereka lakukan di atas dengan ikan
+
+00:09:57.990 --> 00:09:58.760
+biasa.
+
+00:09:58.770 --> 00:10:03.110
+Tapi kali ini dengan Mach kita. jadi kita bisa menyelamatkan kembali dan
+
+00:10:05.860 --> 00:10:09.760
+saya memiliki tes gagal karena sekarang jumlah pernyataan kami adalah empat
+
+00:10:13.650 --> 00:10:14.500
+Woohoo.
+
+00:10:14.600 --> 00:10:15.840
+Semuanya lewat.
+
+00:10:15.980 --> 00:10:24.600
+Dan jika saya mengubah jumlah ini menjadi delapan puluh sembilan dan saya mengubah ini menjadi delapan puluh sembilan tetapi
+
+00:10:24.600 --> 00:10:27.730
+katakanlah lebih besar dari 10 itu
+
+00:10:30.320 --> 00:10:34.520
+harus gagal karena hasil kami hanya memiliki enam item.
+
+00:10:34.520 --> 00:10:35.130
+Ini dia.
+
+00:10:36.220 --> 00:10:38.130
+Tetapi jika saya
+
+00:10:42.520 --> 00:10:47.580
+mengubahnya lebih dari 5 tes kami lulus sangat sangat keren.
+
+00:10:48.960 --> 00:10:53.030
+Dan di sana Anda memilikinya selain belajar beberapa metode.
+
+00:10:54.040 --> 00:11:00.010
+Seperti menjadi lebih besar dari dua sama yang Anda selalu dapat memeriksa dan dokumentasi
+
+00:11:00.010 --> 00:11:03.670
+ketika Anda menulis tes semuanya sangat sederhana, benar.
+
+00:11:03.670 --> 00:11:09.520
+Setelah Anda menguasainya, kami memiliki tes sinkron yang sangat sangat mudah dan
+
+00:11:09.520 --> 00:11:12.110
+kami hanya belum mengharapkan pernyataan.
+
+00:11:12.260 --> 00:11:18.470
+Dan kemudian kita memiliki tes sinkron yang hanya perlu kita ingat untuk kembali dan memastikan bahwa
+
+00:11:18.470 --> 00:11:22.020
+kita memiliki akses ke janji apa pun yang kembali.
+
+00:11:22.430 --> 00:11:29.240
+Dan kemudian kita juga dapat menghindari lama menjalankan kode sinkron seperti panggilan API atau bahkan
+
+00:11:29.240 --> 00:11:34.830
+panggilan database untuk mengolok-olok dan mengolok-olok fungsi juga dikenal sebagai mata-mata AS.
+
+00:11:34.850 --> 00:11:44.580
+Dan hanya karena mereka membiarkan Anda memata-matai perilaku fungsi dipanggil oleh pengujian kami dan itu akan
+
+00:11:44.580 --> 00:11:47.570
+memata-matai apa yang terjadi.
+
+00:11:47.730 --> 00:11:52.550
+Dan Anda melihat bahwa memberi orang janji sebenarnya menjalankan ikan tiruan ini yang kami buat.
+
+00:11:52.650 --> 00:11:56.140
+Dan yang Anda butuhkan hanyalah sintaks ini.
+
+00:11:56.310 --> 00:12:03.240
+Dan di sini kami hanya menambahkan hal-hal tambahan karena kami menginginkan perilaku tertentu,
+
+00:12:03.240 --> 00:12:14.390
+tetapi bahkan hanya dengan melakukan ini kami dapat melihat bahwa Mach fetch akan dipanggil dengan ini, Anda URL hanya alat yang luar biasa.
+
+00:12:14.500 --> 00:12:19.090
+Jika Anda bekerja dengan perpustakaan lain, Anda akan melihat banyak kesamaan.
+
+00:12:19.090 --> 00:12:25.710
+Seperti yang saya katakan, Mock's Stobb dan rempah-rempah juga dapat dilihat sebagai tanda terutama jika Anda bekerja dengan moka.
+
+00:12:25.780 --> 00:12:32.140
+Tetapi secara keseluruhan prinsip-prinsipnya sama dan Anda dapat melihat bahwa tes bisa menyenangkan karena kami hanya menguji
+
+00:12:32.380 --> 00:12:37.800
+logika dan tidak ada yang terasa lebih baik daripada mendapatkan semua kartu hijau ini.
+
+00:12:39.250 --> 00:12:41.450
+Baiklah itu saja untuk saat ini.
+
+00:12:41.470 --> 00:12:47.000
+Saya pikir inilah saatnya bagi kita untuk melakukan pengujian ulang dan menguji teman-teman robo kita.
+
+00:12:47.110 --> 00:12:48.500
+Saya akan melihat yang berikutnya.
+
+00:12:48.510 --> 00:12:48.990
+Sampai jumpa.

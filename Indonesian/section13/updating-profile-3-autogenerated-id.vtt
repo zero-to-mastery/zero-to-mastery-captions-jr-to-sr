@@ -1,0 +1,301 @@
+﻿WEBVTT
+
+00:00:01.130 --> 00:00:04.970
+Baiklah, kita sudah sangat dekat sehingga saya hampir bisa melihat akhirnya.
+
+00:00:05.030 --> 00:00:13.880
+Jadi akhirnya mari kita simpan tombol simpan agar kita dapat memperbarui informasi pengguna kami.
+
+00:00:13.920 --> 00:00:19.350
+Saya akan kembali ke front end saya dan saya sebenarnya akan memindahkan ini di sini
+
+00:00:19.440 --> 00:00:25.210
+jadi saya tidak harus terus melihat kode back end dan di dalam sini saya ingin membuat metode baru.
+
+00:00:25.370 --> 00:00:31.670
+Saya sekali lagi hanya akan membuat ini sedikit lebih kecil sehingga lebih
+
+00:00:31.670 --> 00:00:40.310
+bersih dan saya akan membuat metode baru yang disebut perubahan profil atau sebut saja pembaruan profil lengan.
+
+00:00:40.650 --> 00:00:46.520
+Dan ini akan menerima semacam data dan data ini.
+
+00:00:46.970 --> 00:00:56.650
+Yah kita akan melakukan persis apa yang diharapkan oleh back end kita adalah mengambil port HTP localhost kami tiga ribu di
+
+00:00:57.910 --> 00:01:04.390
+mana kami memiliki wadah dokter kami dan kami akan melakukan profil dan kami
+
+00:01:04.390 --> 00:01:11.870
+ingin memberikan semacam ide yang baik kita hanya bisa melakukan kekuatan Templi bukan kekuatan di sini
+
+00:01:11.860 --> 00:01:21.830
+dan mengubah perubahan ke tanda dolar Kerley tanda kurung kembali dan berakhir di sini lakukan pengguna kita Id ingat kita mendapatkan mata
+
+00:01:22.010 --> 00:01:29.840
+kita menyangga objek pengguna yang menyertakan ID sehingga kita bisa saja mengatakan berhenti prop pengguna Daut Heidi.
+
+00:01:29.870 --> 00:01:33.770
+Jadi, gagasan pengguna apa pun yang ingin kami kirim.
+
+00:01:33.980 --> 00:01:41.760
+Dan cara kita memposting untuk mengambil adalah kita harus benar-benar mengatakannya karena kalau tidak defaultnya adalah get.
+
+00:01:42.080 --> 00:01:49.570
+Jadi parameter kedua akan menjadi objek yang memiliki metode posting.
+
+00:01:49.720 --> 00:01:52.270
+Kita akan memberikannya tipe
+
+00:01:57.540 --> 00:01:59.250
+konten tajuk
+
+00:02:02.120 --> 00:02:08.390
+dan kita akan memberikannya Jaison Jadi kita akan mengatakan aplikasi Jaison
+
+00:02:08.660 --> 00:02:19.710
+karena kita mengirimkan data Jason dan isi seperti yang akan kita lihat dan seperti kita bahas Jason string ify.
+
+00:02:19.750 --> 00:02:23.470
+Jadi kita mengubah semuanya menjadi string dan apa yang kita ubah menjadi string.
+
+00:02:23.530 --> 00:02:32.340
+Kita akan kembali dan memasukkan data yang menerima fungsi.
+
+00:02:32.350 --> 00:02:38.350
+Jadi tubuh akan mengirim empat orang tetapi sebagai objek yang berisi semua data yang diharapkan bagian
+
+00:02:38.350 --> 00:02:40.510
+belakang yang merupakan usia nama.
+
+00:02:40.690 --> 00:02:48.290
+Dan Pat mari kita lakukan satu titik maka di sini yang akan menerima tanggapan setelah panggilan posting ini
+
+00:02:51.520 --> 00:02:55.920
+dan kita akan mengatakan apa yang harus kita lakukan
+
+00:02:56.780 --> 00:03:02.370
+Nah hal pertama yang ingin kita lakukan adalah beralih modalnya.
+
+00:03:02.610 --> 00:03:03.830
+Kami ingin mematikannya.
+
+00:03:03.840 --> 00:03:14.410
+Sekarang ingat kami menerima itu sebagai bagian dari alat peraga dan kami juga ingin menjalankan fungsi
+
+00:03:14.410 --> 00:03:18.180
+pengguna yang ada di aplikasi.
+
+00:03:18.200 --> 00:03:20.230
+Sekarang apa yang pengguna lakukan lagi.
+
+00:03:20.410 --> 00:03:29.090
+Jika Anda kembali ke Apogee Apogees, kami melihat bahwa memuat fungsi pengguna yang langsung dijalankan untuk mengundurkan
+
+00:03:29.460 --> 00:03:37.600
+diri hanya menetapkan status objek pengguna yang dikembalikan dan kami hanya perlu memberikannya beberapa data yang
+
+00:03:38.770 --> 00:03:40.560
+mencakup hal-hal ini.
+
+00:03:40.600 --> 00:03:48.580
+Jadi dalam kasus kami, kami bisa melakukan cara steno yang bagus dengan operator spread Saya bisa mengatakan ini dot props dot user
+
+00:03:48.580 --> 00:03:53.320
+apa pun yang pernah kami miliki sebelumnya sehingga kami dapat mempertahankan gagasan pengguna.
+
+00:03:53.350 --> 00:03:59.980
+Ingat alat peraga menyertakan id pengguna dan kemudian kami juga akan memperbarui setiap pembaruan yang mungkin termasuk
+
+00:04:00.040 --> 00:04:03.060
+dalam data yang ada di dalam formulir.
+
+00:04:03.070 --> 00:04:05.790
+Jadi itu akan menimpa apa pun yang ada di objek pengguna.
+
+00:04:05.860 --> 00:04:07.380
+Mungkin usianya berubah.
+
+00:04:07.390 --> 00:04:15.240
+Dalam hal ini akan menimpa apa pun yang ada di pengguna prop ini dan kami membuat objek ini.
+
+00:04:15.460 --> 00:04:15.700
+Kanan.
+
+00:04:15.700 --> 00:04:20.270
+Dan akhirnya tangkapan yang sangat bagus.
+
+00:04:20.450 --> 00:04:26.330
+Dan untuk saat ini kami hanya akan melakukan momen log konsol kebenaran akan menyelamatkan segalanya.
+
+00:04:26.330 --> 00:04:29.290
+Lihat apakah ini benar-benar berfungsi.
+
+00:04:30.090 --> 00:04:35.850
+Nah hal pertama yang pertama memastikan bahwa kami melewati pengguna beban dan kami memiliki akses ke pengguna Loew dan prova
+
+00:04:36.490 --> 00:04:37.910
+untuk kembali ke APT.
+
+00:04:38.060 --> 00:04:38.660
+Iya nih.
+
+00:04:40.790 --> 00:04:41.690
+Profil.
+
+00:04:41.890 --> 00:04:42.990
+Tidak memiliki pengguna yang memuat.
+
+00:04:43.000 --> 00:04:44.880
+Jadi mari kita sampaikan itu.
+
+00:04:44.890 --> 00:04:54.340
+Jika kita kembali atau dan di sini kita bisa mengatakan pengguna beban akan menjadi pengguna beban titik ini, mari kita
+
+00:04:54.340 --> 00:04:59.110
+simpan kembali masuk sekali lagi untuk yang kesekian kalinya.
+
+00:05:00.830 --> 00:05:04.390
+Pergi ke profil.
+
+00:05:04.640 --> 00:05:08.760
+Dan saya baru sadar kita lupa melakukan sesuatu bukankah kita rencanakan.
+
+00:05:08.770 --> 00:05:15.700
+Kami mengklik tombol masuk sementara kami benar-benar harus memanggil pembaruan profil pada bukan.
+
+00:05:15.700 --> 00:05:17.220
+Itu bagian terpenting.
+
+00:05:17.260 --> 00:05:18.300
+Jadi mari kita lakukan itu.
+
+00:05:19.290 --> 00:05:20.940
+Saya akan gulir ke bawah.
+
+00:05:21.150 --> 00:05:23.040
+Buka apa pun yang kami render.
+
+00:05:23.050 --> 00:05:25.980
+Gulirkan sepenuhnya ke bawah ke tombol simpan.
+
+00:05:26.310 --> 00:05:31.230
+Dan di sini, di tombol Simpan, mari kita lakukan fungsi klik.
+
+00:05:31.530 --> 00:05:40.470
+Dan ini di klik akan memiliki titik ini pada pembaruan profil.
+
+00:05:40.470 --> 00:05:41.460
+Dan kita akan melewatinya.
+
+00:05:41.500 --> 00:05:45.800
+Sebutkan usia dan hewan peliharaan.
+
+00:05:45.920 --> 00:05:51.020
+Dan jika kita naik, kita melihat bahwa pengguna adalah alat peraga dan ini bisa membingungkan.
+
+00:05:51.020 --> 00:05:53.950
+Kami tidak ingin alat peraga yang kami inginkan apa pun keadaannya.
+
+00:05:53.960 --> 00:05:58.150
+Jadi negara ini yang bernama hewan peliharaan Asia.
+
+00:05:58.190 --> 00:05:59.560
+Jadi mari kita sampaikan itu.
+
+00:05:59.570 --> 00:06:03.400
+Saya akan mengatakan ini.
+
+00:06:03.560 --> 00:06:04.020
+Baiklah.
+
+00:06:04.090 --> 00:06:05.840
+Saya tidak begitu suka dengan tampilannya.
+
+00:06:05.840 --> 00:06:08.960
+Ini harus menjadi sesuatu yang lebih bersih dan lebih deskriptif.
+
+00:06:09.140 --> 00:06:15.200
+Jadi mari kita datang ke sini dan katakan usia nama Konst.
+
+00:06:15.390 --> 00:06:22.470
+Pat akan disebut Stop props atau keadaan awal ini karena kami hanya tertarik pada
+
+00:06:22.860 --> 00:06:30.890
+keadaan bahwa formulir telah diisi dan dan di sini alih-alih keadaan ini, kami hanya dapat
+
+00:06:30.890 --> 00:06:37.270
+menggunakan perusakan dan menyebutkan nama umur prop karena mengharapkan data obyek.
+
+00:06:37.370 --> 00:06:40.550
+Dan lagi kita tidak memanggil fungsi di sini.
+
+00:06:40.550 --> 00:06:43.960
+Kami ingin menetapkan fungsi ke acara klik.
+
+00:06:44.240 --> 00:06:48.290
+Jadi sekali lagi hanya menugaskan fungsi seperti ini.
+
+00:06:48.650 --> 00:06:54.930
+Mari kita simpan dan kita memiliki beberapa masalah dan tidak ada alat peraga.
+
+00:06:54.940 --> 00:06:57.430
+Kami ingin Pat di sini.
+
+00:06:58.860 --> 00:07:02.590
+Mari kita simpan kembali seinen.
+
+00:07:02.830 --> 00:07:07.200
+Sekali lagi momen kebenaran di sini.
+
+00:07:07.250 --> 00:07:08.720
+Semoga semuanya berhasil.
+
+00:07:08.720 --> 00:07:15.160
+Saya mengubah nama saya menjadi hei dengan beberapa tanda seru dan saya akan klik saja kita tidak bisa menjawab apa pun yang kita
+
+00:07:15.170 --> 00:07:18.020
+inginkan di sini tetapi kita tidak melakukan apa-apa pada database.
+
+00:07:18.070 --> 00:07:21.000
+Senin klik save o.
+
+00:07:21.020 --> 00:07:27.320
+Lee Moli moto kami ditutup dan pengguna kami dimuat dengan nama baru.
+
+00:07:27.470 --> 00:07:28.680
+Selamat.
+
+00:07:28.700 --> 00:07:31.740
+Kami baru saja dapat memperbarui profil kami.
+
+00:07:32.910 --> 00:07:40.010
+Dan sekarang setiap kali katakanlah saya keluar dan saya masuk lagi.
+
+00:07:40.230 --> 00:07:41.500
+Nama saya ada di database.
+
+00:07:41.510 --> 00:07:46.880
+Sekarang hei dengan tanda seru atau tanda seru yang sangat bersemangat.
+
+00:07:47.220 --> 00:07:49.260
+Sangat sangat bagus.
+
+00:07:50.190 --> 00:07:50.970
+Baiklah.
+
+00:07:51.090 --> 00:07:57.540
+Kami telah melakukan semua ini hanya untuk menunjukkan sesi tetapi dengan profil kami tanpa
+
+00:07:57.540 --> 00:08:03.080
+semacam informasi pengguna yang diperlukan sulit untuk menunjukkan mengapa kami membutuhkan sesi.
+
+00:08:03.180 --> 00:08:07.230
+Tapi sekarang akhirnya saya tahu itu sudah lama terlambat.
+
+00:08:07.230 --> 00:08:12.270
+Kita akan belajar tentang sesi dan diimplementasikan di sini saya akan melihat di sesi berikutnya.
+
+00:08:12.550 --> 00:08:12.810
+Babai.

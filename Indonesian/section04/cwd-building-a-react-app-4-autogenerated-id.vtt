@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:01.210 --> 00:00:02.380
+Selamat datang kembali.
+
+00:00:02.380 --> 00:00:09.120
+Dalam video ini kita akan berbicara sedikit tentang sesuatu yang maju dan kita belum banyak membahas dalam kursus ini dan
+
+00:00:09.120 --> 00:00:14.980
+kita pasti akan di bagian selanjutnya tetapi saya ingin memulai dengan itu sehingga meskipun itu mungkin baru
+
+00:00:14.980 --> 00:00:20.020
+dan membingungkan pada awalnya ketika kita masuk ke bagian berikutnya kita akan kembali dan
+
+00:00:20.020 --> 00:00:21.940
+meninjau apa yang kita lakukan.
+
+00:00:22.770 --> 00:00:27.820
+Saya ingin membuat aplikasi ini lebih realistis di aplikasi kehidupan nyata.
+
+00:00:27.870 --> 00:00:34.310
+Kami tidak akan selalu memiliki robot ini ditulis seperti yang saya miliki di sini di robot.
+
+00:00:34.380 --> 00:00:36.320
+Ya, saya baru saja membuat musim gugur ini.
+
+00:00:36.330 --> 00:00:42.000
+Namun dalam kehidupan nyata, kami tidak memasukkan pengguna secara manual.
+
+00:00:42.360 --> 00:00:46.570
+Kami menggunakan sesuatu seperti API.
+
+00:00:46.780 --> 00:00:47.980
+Dan apa artinya itu.
+
+00:00:47.980 --> 00:00:56.410
+Kami ingin ketika situs Web ini dimuat untuk membuat permintaan di suatu tempat di dunia Internet dan mengambil robot-robot
+
+00:00:56.410 --> 00:01:06.630
+ini dari server di mana kami benar-benar dapat melakukan itu kami memiliki sesuatu di sini bernama Jason placeholder dan Anda tidak perlu terlalu
+
+00:01:06.630 --> 00:01:12.620
+khawatir tentang hal itu tetapi mereka benar-benar memiliki burung hantu Anda yang
+
+00:01:12.620 --> 00:01:20.990
+benar-benar baik yang dapat kita gunakan dan mereka mengembalikan apa yang kita butuhkan nama atau ID dan nama pengguna.
+
+00:01:21.020 --> 00:01:23.520
+Sisanya dari informasi yang kita tidak benar-benar membutuhkannya.
+
+00:01:23.540 --> 00:01:30.870
+Tapi seperti yang bisa Anda lihat hanya dengan mengetik ini Anda Arel saya mendapatkan ini.
+
+00:01:30.870 --> 00:01:37.010
+Jadi dengan menggunakan ini kita akan membuat aplikasi kita sedikit lebih realistis.
+
+00:01:37.020 --> 00:01:39.710
+Mari kita mulai.
+
+00:01:39.780 --> 00:01:45.850
+Jika saya menutup file CSSA saya karena kami tidak membutuhkannya lagi.
+
+00:01:46.050 --> 00:01:48.220
+Dan mari kita tutup tab lainnya juga.
+
+00:01:49.860 --> 00:01:59.280
+Melihat komponen aplikasi ini kita melihat bahwa itu adalah apa yang kita sebut komponen pintar seperti kotak pencarian atau daftar
+
+00:01:59.280 --> 00:02:04.770
+mobil yang hanya berfungsi murni seperti yang Anda lihat di sini.
+
+00:02:05.950 --> 00:02:06.410
+Tepat.
+
+00:02:06.600 --> 00:02:15.150
+Ya sebenarnya telah menyatakan sepotong data yang menggambarkan aplikasi kami dan karena mereka menyatakan kami menyebutnya
+
+00:02:15.150 --> 00:02:16.830
+komponen pintar.
+
+00:02:17.770 --> 00:02:20.830
+Dan komponen pintar cenderung memiliki sintaksis kelas ini.
+
+00:02:21.250 --> 00:02:30.390
+Sekarang dalam kehidupan nyata ketika kita memulai aplikasi ini robot ini sebenarnya akan menjadi array kosong karena tidak ada apa pun di
+
+00:02:30.430 --> 00:02:31.110
+sana.
+
+00:02:31.150 --> 00:02:33.360
+Kami belum meraih pengguna.
+
+00:02:33.370 --> 00:02:42.650
+Jadi kemungkinan besar jika saya menyimpan robot ini tidak akan ditampilkan sampai saya memuat situs Web dan kemudian segera setelah situs
+
+00:02:42.650 --> 00:02:47.630
+web dimuat saya meminta pengguna dari suatu tempat melalui internet.
+
+00:02:49.970 --> 00:02:53.390
+Di suatu tempat mudah-mudahan di sini.
+
+00:02:53.440 --> 00:02:54.300
+Jadi mari kita lakukan itu.
+
+00:02:56.540 --> 00:03:06.610
+Re-act hadir dengan beberapa hal lain di dalam komponen yang dapat kita gunakan dan mereka disebut metode siklus
+
+00:03:06.760 --> 00:03:07.420
+hidup.
+
+00:03:10.200 --> 00:03:12.490
+Dan terlihat seperti ini.
+
+00:03:13.930 --> 00:03:15.160
+Jangan terlalu kewalahan.
+
+00:03:15.340 --> 00:03:23.510
+Ini hanya metode yang dapat kita gunakan di sini yang datang dengan aksi ulang dan mereka disebut kait siklus hidup
+
+00:03:23.510 --> 00:03:32.180
+karena apa yang mereka lakukan adalah jika kita menjalankan ini, itu akan secara otomatis memicu ketika aplikasi ini dimuat di situs
+
+00:03:32.220 --> 00:03:32.740
+web.
+
+00:03:32.900 --> 00:03:33.630
+Biarkan saya jelaskan.
+
+00:03:34.700 --> 00:03:37.610
+Kami melihat bahwa kami memiliki tiga bagian.
+
+00:03:37.610 --> 00:03:45.810
+Kami telah memperbarui pemasangan dan melepas pemasangan cara kami bertindak berfungsi adalah kami melakukan sesuatu yang disebut pemasangan.
+
+00:03:45.890 --> 00:03:58.880
+Ketika saya mengklik menyegarkan di sini komponen aplikasi komponen ini di sini akan dipasang ke dokumen dengan gagasan
+
+00:03:59.750 --> 00:04:01.160
+rute.
+
+00:04:01.250 --> 00:04:09.910
+Jika kita kembali ke indeks kita bahwa file HMO akan halaman Web kita hanyalah sebuah div dengan ide root.
+
+00:04:10.030 --> 00:04:21.290
+Ketika kami mengatakan kami memasang komponen, kami mengganti ini dan menambahkan seluruh aplikasi kami yang sedang dipasang Jadi pemasangan adalah
+
+00:04:21.290 --> 00:04:31.410
+awal dari aplikasi yang sekarang memasang ini adalah kait siklus hidup yang terkena dan ada dalam urutan.
+
+00:04:31.460 --> 00:04:37.910
+Jadi, hal pertama yang diperiksa Hei apakah komponen ini memiliki konstruktor Bauld memang memiliki konstruktor.
+
+00:04:37.940 --> 00:04:38.300
+Iya nih.
+
+00:04:38.330 --> 00:04:45.680
+OK lalu jalankan bagian kode ini apakah ada komponen yang akan dipasang.
+
+00:04:45.690 --> 00:04:47.850
+Tidak, itu tidak mengabaikannya.
+
+00:04:47.850 --> 00:04:53.180
+Apakah itu memiliki Rander Ya itu memiliki kunci pas menjalankan ini.
+
+00:04:53.180 --> 00:04:55.710
+Apakah ada komponen yang melakukan mount.
+
+00:04:55.730 --> 00:04:58.030
+Tidak, tidak ada komponen yang didemarkasi diabaikan.
+
+00:04:58.910 --> 00:05:01.850
+Dan itu hanya berjalan melalui ini setiap waktu.
+
+00:05:01.850 --> 00:05:08.140
+Itu juga memiliki sesuatu yang disebut memperbarui dan itu setiap kali komponen berubah.
+
+00:05:08.180 --> 00:05:18.600
+Sebagai contoh ketika kita memiliki daftar dengan baik setiap kali saya mengetik sesuatu komponen cardless akan diberikan kembali karena
+
+00:05:18.840 --> 00:05:24.030
+kami memiliki informasi baru fungsi menerima input baru.
+
+00:05:24.030 --> 00:05:27.210
+Sama dengan komponen input.
+
+00:05:27.210 --> 00:05:35.960
+Jadi sekali lagi dalam komponen-komponen itu jika kita ingin kita dapat menambahkan komponen akan menerima pembaruan komponen
+
+00:05:35.960 --> 00:05:38.430
+guncangan prop dan seterusnya.
+
+00:05:39.340 --> 00:05:49.960
+Dan akhirnya dengan unmount adalah ketika komponen dihapus dari halaman misalnya jika kita berubah ke halaman
+
+00:05:49.990 --> 00:05:58.230
+lain di sini komponen akan me-mount komponen aplikasi akan dihapus dari halaman.
+
+00:05:58.230 --> 00:06:05.350
+Ini disebut kait siklus hidup karena mereka dijalankan setiap kali komponen melakukan sesuatu dan ia datang
+
+00:06:05.350 --> 00:06:06.560
+dengan reaksi.
+
+00:06:06.670 --> 00:06:12.420
+Jadi Anda bisa memasukkannya ke dalam komponen kelas Anda dan mereka akan dipicu secara otomatis.
+
+00:06:12.430 --> 00:06:16.250
+Anda tidak perlu khawatir tentang menelepon saya akan menunjukkan ini.
+
+00:06:17.840 --> 00:06:22.770
+Kami ingin menggunakan komponen apakah mount yang dipanggil setelah render.
+
+00:06:22.870 --> 00:06:28.930
+Ini mengatakan bahwa ya komponen aplikasi dipasang pada halaman
+
+00:06:28.930 --> 00:06:43.780
+web dan Sprenger yang menampilkan sesuatu dengan baik, kita dapat melakukannya dengan mengatakan komponen melakukan mount dan karena ini adalah bagian dari reaksi.
+
+00:06:43.830 --> 00:06:46.310
+Perhatikan bahwa saya sekarang menggunakan fungsi aero di sini.
+
+00:06:49.020 --> 00:06:50.510
+Sekarang saya akan berpikir komponen Denn mount.
+
+00:06:50.520 --> 00:06:52.190
+Saya dapat mengatakan log
+
+00:06:55.520 --> 00:07:05.940
+konsol pemikiran jika saya menyegarkan ini dan membuka konsol Anda akan melihat bahwa saya telah memeriksa apakah saya menyegarkan di sana Anda pergi yang benar-benar
+
+00:07:05.940 --> 00:07:06.610
+cepat.
+
+00:07:06.620 --> 00:07:09.590
+Tetapi Anda melihat bahwa itu dipanggil secara otomatis.
+
+00:07:09.590 --> 00:07:11.120
+Meskipun aku belum mengatakan apa-apa.
+
+00:07:12.260 --> 00:07:14.980
+Dengan ini kita bisa melakukan sesuatu yang menarik.
+
+00:07:15.050 --> 00:07:26.440
+Sekarang ketika komponen tidak me-mount, saya dapat mengatakan panah ini mengatur keadaan untuk sekarang memiliki robot
+
+00:07:26.440 --> 00:07:32.430
+untuk robot yang kita dapatkan dari Griffo alami.
+
+00:07:32.640 --> 00:07:39.930
+Jika saya melakukan ini dan menyimpan, mari menyegarkan dan melihat apa yang terjadi.
+
+00:07:40.020 --> 00:07:45.010
+Ini sangat sangat cepat tetapi Anda melihat bahwa kami mendapatkan robot kami.
+
+00:07:45.200 --> 00:07:52.470
+Saya katakan jalankan konstruktor dengan array kosong hanya untuk menunjukkan urutan eksekusi di sini.
+
+00:07:52.670 --> 00:07:57.140
+Jika saya punya log konsol dan kita
+
+00:08:01.180 --> 00:08:18.220
+hanya akan mengatakan satu di sini akan mengatakan dua di sini dan kita hanya akan mengatakan tiga jika saya menyimpan ini dan membuka konsol saya punya 1 3
+
+00:08:18.220 --> 00:08:31.960
+2 3 mari kita periksa kita punya satu Gerrans dulu tiga yang merupakan Rander kemudian dua yang merupakan komponen melakukan mount dan
+
+00:08:31.960 --> 00:08:34.750
+kemudian tiga berjalan lagi.
+
+00:08:35.200 --> 00:08:43.340
+Sebenarnya mari kita ubah ini menjadi kata-kata yang sebenarnya sehingga Anda dapat melihat dengan lebih baik apa yang sebenarnya terjadi.
+
+00:08:46.070 --> 00:08:53.200
+Jika kita menyimpan dan menyegarkan lihat bahwa kita memiliki konstruktor yang berjalan pertama kemudian membuat
+
+00:08:53.200 --> 00:08:57.020
+lalu komponen melakukan mount seperti pesanan ini.
+
+00:08:57.170 --> 00:09:00.460
+Tetapi sekarang kita juga memiliki render.
+
+00:09:00.770 --> 00:09:03.800
+Mengapa membuat berjalan lagi.
+
+00:09:03.840 --> 00:09:14.080
+Jika Anda ingat kami membuat konstruktor, kami menjalankan Brandur dan kemudian kami memperbarui status dan komponen melakukan
+
+00:09:14.080 --> 00:09:14.920
+MT.
+
+00:09:15.010 --> 00:09:24.420
+Jadi karena kita memperbarui negara setiap kali negara berubah Ingat kita pergi ke siklus hidup itu
+
+00:09:24.900 --> 00:09:36.160
+memperbarui render Iran lagi jadi karena ia pergi dari array kosong ke daftar robot membuat rerun dan Dom virtual pemberitahuan
+
+00:09:36.160 --> 00:09:45.500
+bahwa ada perbedaan dan mengecat ulang Web kami browser untuk memasukkan vertikal robot mengetahui yang baru
+
+00:09:46.810 --> 00:09:48.810
+saja kita lakukan.
+
+00:09:48.820 --> 00:09:55.880
+Kami dapat menghapus ini dan akhirnya membuatnya lebih realistis.
+
+00:09:56.000 --> 00:10:03.920
+Alih-alih menggunakan file robot, saya sebenarnya akan menghapus ini dan di sini saya akan menunjukkan
+
+00:10:04.790 --> 00:10:09.170
+cara keren untuk mengambil daftar ini dari sini.
+
+00:10:09.170 --> 00:10:18.630
+Saya akan menyalin tautan dan saya akan mengatakan ambil yang akan kita pelajari di bagian selanjutnya.
+
+00:10:18.650 --> 00:10:25.640
+Kami hanya mengatakan, buat ini permintaan lembar dan ambil menerima ini.
+
+00:10:25.950 --> 00:10:28.280
+Sekali lagi kami hanya mengatakan lewat sini.
+
+00:10:29.540 --> 00:10:33.760
+Maka ini akan menerima respons dan
+
+00:10:38.860 --> 00:10:43.270
+respons ini adalah Yah, bagian ini sedikit rumit.
+
+00:10:43.270 --> 00:10:44.560
+Anda hanya harus terbiasa dengannya.
+
+00:10:46.590 --> 00:10:53.500
+Jason kita hanya perlu mengubah respons menjadi sesuatu yang akan kita bicarakan di sesi berikutnya.
+
+00:10:53.510 --> 00:10:56.900
+Untuk saat ini, Anda hanya dapat menyalin dan mengikuti.
+
+00:10:56.930 --> 00:10:59.280
+Kami akan kembali ke sini dan menjelaskan apa yang terjadi.
+
+00:10:59.660 --> 00:11:05.140
+Dan dari sini ini mengatakan ini pada baris baru sehingga kita tahu persis apa yang terjadi
+
+00:11:06.810 --> 00:11:13.370
+Kami akan mengatakan robot sejauh ini kami dapat mengatakan pengguna karena dalam hal ini kami mendapatkan pengguna.
+
+00:11:13.750 --> 00:11:15.000
+Dan di sini
+
+00:11:18.390 --> 00:11:22.460
+kita dapat mengatakan ini mengatakan robot negara untuk pengguna yang setara.
+
+00:11:22.950 --> 00:11:27.870
+Dan kita harus memastikan bahwa kita mengembalikan brankas ini.
+
+00:11:27.910 --> 00:11:28.910
+Mari kita lihat apakah itu berhasil.
+
+00:11:30.230 --> 00:11:30.950
+Lihat itu.
+
+00:11:31.060 --> 00:11:40.570
+Mari menyegarkan dan Anda melihat kelambatan kecil itu sekarang berfungsi.
+
+00:11:40.650 --> 00:11:47.260
+Jadi di sini kita benar-benar dapat membuat ini lebih kecil dan menguranginya menjadi satu baris.
+
+00:11:47.260 --> 00:11:48.770
+Kita harus ingat bagaimana melakukan itu.
+
+00:11:50.220 --> 00:11:52.680
+Dan kami melihat bahwa
+
+00:11:55.370 --> 00:11:56.390
+kami
+
+00:11:59.320 --> 00:12:01.850
+hanya memperbarui status setelah mengambil
+
+00:12:01.870 --> 00:12:04.680
+Jadi kami mengambil apa pun pengguna.
+
+00:12:05.020 --> 00:12:06.760
+Kami mendapat respons.
+
+00:12:06.760 --> 00:12:10.690
+Kami melakukan sihir di sini dengan Jason yang akan kita bicarakan nanti.
+
+00:12:10.840 --> 00:12:17.820
+Dan kemudian kami mendapatkan pengguna dan memperbarui pengguna dengan kondisi set sejauh ini menyegarkan.
+
+00:12:17.820 --> 00:12:28.200
+Sekali lagi jika saya tidak melakukan ini katakanlah saya hanya di sini tidak melakukan apa-apa dan mengembalikan objek kosong.
+
+00:12:28.330 --> 00:12:37.020
+Anda tahu bahwa saya tidak menerima robot, saya hanya menerima robot setelah saya memperbarui dengan pengguna ini.
+
+00:12:37.060 --> 00:12:38.000
+Betapa kerennya itu.
+
+00:12:42.190 --> 00:12:42.840
+Baiklah.
+
+00:12:42.970 --> 00:12:43.810
+Itu banyak.
+
+00:12:43.810 --> 00:12:50.950
+Dan ini mungkin terlihat sangat menakutkan untuk membuat Anda merasa sedikit lebih nyaman karena saya menggunakan
+
+00:12:50.950 --> 00:12:54.100
+fetch dan tidak ada yang melekat padanya.
+
+00:12:54.100 --> 00:12:58.030
+Apakah ini berarti bahwa itu bagian dari objek jendela.
+
+00:12:58.240 --> 00:13:05.970
+Mari kita periksa apakah saya membuka konsol dan saya lakukan mengambil jendela Daut
+
+00:13:06.430 --> 00:13:07.260
+Ya lihat itu.
+
+00:13:07.270 --> 00:13:12.130
+Ambil adalah metode pada objek jendela.
+
+00:13:12.130 --> 00:13:14.140
+Muncul dengan semua browser sekarang.
+
+00:13:14.320 --> 00:13:17.070
+Ini adalah alat bagi kami untuk membuat permintaan.
+
+00:13:17.980 --> 00:13:26.440
+Dua server dan seperti yang Anda lihat ini adalah server yang kembali untuk kita
+
+00:13:26.440 --> 00:13:35.230
+ketika kita memangkas pengguna daftar pengguna yang bisa kita gunakan yang sempurna untuk bungkus kita.
+
+00:13:35.260 --> 00:13:40.140
+Dan akhirnya Anda bertanya-tanya bagaimana jika ini benar-benar lambat atau bagaimana jika ini terjadi.
+
+00:13:40.210 --> 00:13:40.800
+Saya tidak tahu
+
+00:13:40.930 --> 00:13:41.870
+Lima detik.
+
+00:13:41.890 --> 00:13:44.370
+Dan kami memiliki banyak pengguna.
+
+00:13:44.800 --> 00:13:56.840
+Nah dalam hal ini Anda dapat melakukan sesuatu seperti pernyataan IF jika robot tidak meminjamkan nol.
+
+00:13:57.010 --> 00:14:03.450
+Dalam hal ini kita dapat mengembalikan H1 yang mengatakan memuat
+
+00:14:09.820 --> 00:14:13.060
+lain kita bisa mengatakan
+
+00:14:15.800 --> 00:14:19.310
+mengembalikan ini lagi hanya javascript
+
+00:14:19.310 --> 00:14:20.840
+Itu keindahan di Riyadh.
+
+00:14:22.440 --> 00:14:27.710
+Dan Anda melihat bagaimana kami mendapatkan robot tidak ditentukan karena ini robot dot state DOT.
+
+00:14:27.870 --> 00:14:29.870
+Sekali lagi kami mengacu pada Status aplikasi.
+
+00:14:30.300 --> 00:14:36.330
+Dan di sini jika saya menyegarkan katakan saja kita tidak memperbarui
+
+00:14:36.330 --> 00:14:37.250
+keadaan
+
+00:14:41.340 --> 00:14:48.630
+dan saya akan mengembalikan objek kosong sementara dalam kasus itu saya baru saja memuat.
+
+00:14:48.680 --> 00:14:49.750
+Sangat keren.
+
+00:14:50.240 --> 00:14:55.510
+Dan ini adalah bagaimana Anda membangun operasi nyata dengan kembali bertindak Anda memiliki bilah pemuatan.
+
+00:14:55.500 --> 00:15:05.150
+Mereka cukup menambahkan di sini membuat permintaan pada komponen melakukan mount dan berinteraksi dengan komponen.
+
+00:15:05.240 --> 00:15:06.100
+Sangat keren.
+
+00:15:07.900 --> 00:15:13.280
+Anda tahu apa yang kita miliki sebagai aplikasi kita.
+
+00:15:13.370 --> 00:15:18.830
+Ada satu hal terakhir yang akan saya tunjukkan pada Anda dengan reaksi dan Anda telah mempelajari dasar-dasarnya dan bereaksi.
+
+00:15:18.830 --> 00:15:22.270
+Anda dapat mengambil ini sekarang untuk membangun aplikasi apa pun yang Anda inginkan.
+
+00:15:22.280 --> 00:15:24.120
+Jadi satu hal lagi.
+
+00:15:24.140 --> 00:15:28.110
+Satu lagi potongan kecil untuk melengkapi pengetahuan tindakan ulang kami.
+
+00:15:28.490 --> 00:15:29.820
+Sampai jumpa di yang berikutnya.
+
+00:15:29.830 --> 00:15:30.250
+Sampai jumpa.

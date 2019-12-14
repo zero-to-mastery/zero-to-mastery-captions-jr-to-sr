@@ -1,0 +1,100 @@
+﻿WEBVTT
+
+00:00:01.780 --> 00:00:03.190
+Selamat datang kembali.
+
+00:00:03.190 --> 00:00:08.920
+Melihat kembali bagaimana kita dapat membuat aplikasi kita lebih baik dari bagian sebelumnya Anda
+
+00:00:08.920 --> 00:00:11.010
+ingat jalur render kritis.
+
+00:00:11.210 --> 00:00:16.550
+Anda dapat melihat bahwa ada dua hambatan utama untuk javascript di sini.
+
+00:00:16.550 --> 00:00:22.650
+Nomor tiga dan tepat di sini dan nomor delapan dan empat.
+
+00:00:22.730 --> 00:00:32.060
+Salah satunya adalah untuk meminimalkan manipulasi DOM melalui javascript dan yang lainnya adalah pengiriman javascript bagaimana kami mengirimkan
+
+00:00:32.060 --> 00:00:34.250
+javascript kami ke konten.
+
+00:00:34.280 --> 00:00:40.640
+Sekarang di bagian ini seperti yang saya katakan kita akan membahas bagaimana membangun kembali tindakan sederhana dengan diagram ini hal-hal
+
+00:00:40.640 --> 00:00:41.740
+yang masuk akal.
+
+00:00:41.750 --> 00:00:48.280
+Semakin baik pengiriman javascript kami, semakin cepat kita akan membangun pohon render.
+
+00:00:48.350 --> 00:00:55.100
+Dan kami juga ingin menjadi pintar tentang berapa banyak rendering nyata yang akan kami lakukan karena setiap kali javascript
+
+00:00:55.160 --> 00:01:00.770
+mengubah sesuatu di DOM, kami harus melalui langkah ini lagi ke tata letak pohon dan
+
+00:01:00.770 --> 00:01:02.120
+cat yang diberikan.
+
+00:01:02.120 --> 00:01:09.810
+Jadi jika kita bisa menyelesaikan dua hambatan ini dengan sesuatu seperti re-act. Itu cukup bagus.
+
+00:01:09.950 --> 00:01:11.440
+Dan itulah yang akan kita lakukan.
+
+00:01:11.540 --> 00:01:19.040
+Kami telah bereaksi untuk benar-benar membantu kami keluar dengan siklus render tata letak cat ini dan kemudian
+
+00:01:19.070 --> 00:01:21.610
+memodifikasi render tata letak cat.
+
+00:01:21.670 --> 00:01:29.200
+Kami juga akan belajar sedikit tentang Westpac yang membantu kami dengan pengiriman javascript untuk
+
+00:01:29.200 --> 00:01:30.120
+mengoptimalkannya.
+
+00:01:30.310 --> 00:01:38.860
+Dan akhirnya kita akan berbicara tentang redux dan bagaimana redux menambahkan sedikit untuk bereaksi agar kita dapat
+
+00:01:39.700 --> 00:01:40.290
+meningkat.
+
+00:01:40.300 --> 00:01:47.440
+Sekali lagi proses ini mengubah sesuatu tata letak pohon acak mengubah sesuatu tata
+
+00:01:47.830 --> 00:01:50.190
+letak pohon Redner.
+
+00:01:50.220 --> 00:01:51.590
+Jadi
+
+00:01:54.170 --> 00:02:00.620
+ingat tantangan kita, Kaikohe Corp. memiliki aplikasi teman karet yang akan lebih besar dan
+
+00:02:00.890 --> 00:02:07.160
+mereka ingin menambahkan manajemen negara untuk itu yang dapat kita lakukan melalui redux yang akan kita bicarakan di video berikutnya.
+
+00:02:07.300 --> 00:02:14.560
+Tetapi seperti halnya pengembang senior, kita harus memikirkan mengapa kita ingin belajar redoks
+
+00:02:14.560 --> 00:02:22.630
+mengapa kita dapat meningkatkan proses ini yang kita lihat sebelumnya di sini, di video berikutnya
+
+00:02:22.630 --> 00:02:32.850
+kita akan berbicara tentang manajemen negara dan memahami mengapa redux mungkin tingkatkan reaksi dan sering dengan aplikasi Anda akan
+
+00:02:32.860 --> 00:02:38.290
+melihat keduanya digunakan karena itu benar-benar pengalaman yang menyenangkan.
+
+00:02:38.350 --> 00:02:45.260
+Pada akhirnya Anda akan dapat berbicara dengan cerdas tentang ketiga teknologi ini.
+
+00:02:46.390 --> 00:02:48.000
+Saya akan melihat yang berikutnya.
+
+00:02:48.100 --> 00:02:48.340
+Babai.
