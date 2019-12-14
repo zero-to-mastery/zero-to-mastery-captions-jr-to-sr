@@ -1,0 +1,211 @@
+﻿WEBVTT
+
+00:00:00.950 --> 00:00:02.180
+Selamat datang kembali.
+
+00:00:02.180 --> 00:00:10.590
+Mari kita selesaikan menguji fungsionalitas pencarian Google kami karena dengan pengujian semakin Anda semakin baik.
+
+00:00:10.640 --> 00:00:17.440
+Lagi pula dalam kebanyakan kasus karena ini tidak akan pernah masuk ke produksi hanya untuk tujuan pelepasan.
+
+00:00:17.510 --> 00:00:23.690
+Tidak ada salahnya untuk memiliki banyak tes yang mencakup banyak skenario karena dengan begitu kita hanya dapat menutupi basis kami
+
+00:00:23.690 --> 00:00:24.990
+lebih banyak lagi.
+
+00:00:26.050 --> 00:00:34.380
+Dan jangan terlalu khawatir tentang pengulangan diri Anda atau jangan ulangi aturan sendiri dan pemrograman dengan itu ketika
+
+00:00:34.380 --> 00:00:35.800
+datang ke tes.
+
+00:00:35.890 --> 00:00:42.070
+Tidak apa-apa untuk mengulangi diri Anda sesekali sesekali terutama jika itu membuat tes benar-benar dapat dibaca oleh orang
+
+00:00:42.070 --> 00:00:43.890
+lain yang membaca kode Anda.
+
+00:00:43.900 --> 00:00:46.530
+Sekali lagi ini tidak akan pernah diproduksi.
+
+00:00:46.630 --> 00:00:52.360
+Jadi selalu lebih baik untuk memiliki lebih banyak tes daripada lebih sedikit tes.
+
+00:00:52.590 --> 00:00:56.710
+Jadi mari kita coba beberapa kasus lagi dengan fungsi pencarian Google kami.
+
+00:00:56.880 --> 00:01:11.420
+Katakanlah kita juga ingin agar berfungsi dengan input yang ditentukan dan Nuh dan bahwa kita ingin memastikan bahwa
+
+00:01:11.420 --> 00:01:14.980
+fungsi ini akan berfungsi.
+
+00:01:14.980 --> 00:01:16.350
+Dan biarkan saya salin ini.
+
+00:01:16.360 --> 00:01:17.020
+Harapkan
+
+00:01:19.940 --> 00:01:28.230
+pernyataan dan dalam pencarian Google ini, saya hanya akan mengatakan pada didefinisikan dan kami ingin itu sama dengan array kosong jika
+
+00:01:28.230 --> 00:01:33.720
+kami entah bagaimana mendapatkan jawaban aneh Anda input yang tidak ditentukan dari pengguna.
+
+00:01:33.720 --> 00:01:39.180
+Kami masih ingin mengembalikan array kosong karena mungkin di ujung depan kami masih menampilkan
+
+00:01:39.180 --> 00:01:40.320
+daftar kosong.
+
+00:01:40.350 --> 00:01:43.350
+Mari kita simpan dan itu berlalu.
+
+00:01:43.350 --> 00:01:44.960
+Kami sekarang memiliki tiga tes.
+
+00:01:45.030 --> 00:01:49.110
+Dan mari kita juga menguji untuk kasus nol lagi.
+
+00:01:49.140 --> 00:01:55.700
+Kami akan menyalin ini dan kami akan menguji untuk tidak juga.
+
+00:01:55.700 --> 00:01:56.270
+Baiklah.
+
+00:01:56.270 --> 00:02:03.650
+Tes kami lulus sempurna dan Anda bisa melihat betapa bagusnya hanya ada bagi kami.
+
+00:02:03.660 --> 00:02:09.950
+Akhirnya kami juga ingin memeriksa apakah kami melihat skrip yang kami kembalikan tidak lebih dari tiga pertandingan.
+
+00:02:09.950 --> 00:02:12.770
+Itu fitur penting dari aplikasi kami.
+
+00:02:13.040 --> 00:02:15.650
+Sekali lagi katakanlah
+
+00:02:18.310 --> 00:02:22.690
+itu tidak menghasilkan lebih dari tiga pertandingan.
+
+00:02:25.730 --> 00:02:27.930
+Dan lumpuh membuat lebih banyak ruang untuk ini
+
+00:02:32.090 --> 00:02:35.870
+sehingga kita bisa melihat dan sekali lagi Anda bisa melihat banyak pengulangan di sini tapi bagus.
+
+00:02:35.930 --> 00:02:37.620
+Kami sedang menulis tes.
+
+00:02:37.640 --> 00:02:44.720
+Katakanlah sekali lagi saya hanya akan menyalin ini karena saya malas mengetik dan
+
+00:02:44.780 --> 00:02:57.030
+akan mengatakan bahwa kita ingin ketika kita mencari dotcom yang mana semua ini kita ingin ini sama dengan dinding untuk menyamakan array dengan tiga
+
+00:02:57.030 --> 00:02:57.930
+item.
+
+00:02:57.930 --> 00:02:59.190
+Bagaimana kita bisa melakukan itu.
+
+00:02:59.190 --> 00:03:01.530
+Sekali lagi ini hanyalah javascript sederhana.
+
+00:03:01.530 --> 00:03:10.740
+Kita hanya bisa melakukan panjang titik di braket xpect yang akan mengembalikan semoga 3 walaupun kita melakukan
+
+00:03:10.790 --> 00:03:18.150
+dotcom dan memiliki empat item karena fungsi kita adalah mengembalikan panjang tiga.
+
+00:03:18.260 --> 00:03:19.230
+Jadi mari kita coba.
+
+00:03:21.170 --> 00:03:27.050
+Lihatlah tes lulus kami dan saran lain di sini.
+
+00:03:27.350 --> 00:03:33.380
+Hanya karena tes Anda lulus tidak berarti itu selalu benar, selalu baik untuk memulai dengan
+
+00:03:33.380 --> 00:03:37.120
+membuat tes Anda gagal dan kemudian mencoba membuatnya bekerja.
+
+00:03:37.670 --> 00:03:42.790
+Mari kita membuatnya gagal dengan menambahkan empat di sini dan aman.
+
+00:03:43.220 --> 00:03:50.570
+Dan baiklah kita melihat bahwa kita mengharapkan nilai sama dengan empat tetapi kita menerima 3.
+
+00:03:50.840 --> 00:03:52.010
+Itu bagus.
+
+00:03:52.010 --> 00:03:54.880
+Jika kita ubah ke 3 semuanya baik-baik saja.
+
+00:03:54.980 --> 00:03:57.980
+Dan Anda dapat bermain-main dengan mereka menempatkan sedikit lebih banyak.
+
+00:03:58.140 --> 00:03:59.750
+Saya pikir Anda Sharn untuk mendapatkan ini dengan benar.
+
+00:03:59.760 --> 00:04:01.420
+Tidak seburuk itu.
+
+00:04:01.440 --> 00:04:03.320
+Itu tidak terlihat menakutkan.
+
+00:04:03.420 --> 00:04:09.090
+Namun ketika Anda melihat tes orang lain mungkin ada beberapa metode yang mereka tambahkan selain
+
+00:04:09.090 --> 00:04:10.550
+menjadi dan setara.
+
+00:04:10.560 --> 00:04:12.490
+Tetapi prinsip dasarnya sama.
+
+00:04:12.570 --> 00:04:19.000
+Kami hanya memiliki fungsi yang kami jalankan tes dan hanya itu.
+
+00:04:19.160 --> 00:04:26.120
+Satu hal terakhir kita dapat mengelompokkan semua ini karena ingat dengan aplikasi kita berpikir hal-hal dapat
+
+00:04:26.120 --> 00:04:32.270
+menjadi lebih besar dan lebih besar dan lebih besar kita dapat mengelompokkan tes yang
+
+00:04:32.270 --> 00:04:40.580
+serupa terutama dalam hal ini yang melakukan pencarian Google dengan fungsi nother yang disebut menggambarkan dan menggambarkan kami akan
+
+00:04:41.800 --> 00:04:44.140
+mengatakan menggambarkan pencarian Google.
+
+00:04:44.380 --> 00:04:49.590
+Dan ini adalah cara yang persis sama seperti yang dijelaskan oleh blok.
+
+00:04:49.630 --> 00:04:55.480
+Parameter pertama adalah string yang akan ditampilkan pada tes dan kemudian yang
+
+00:04:56.020 --> 00:05:02.180
+kedua adalah fungsi dan kita bisa memasukkan semua tes ini di dalam blok ini.
+
+00:05:02.230 --> 00:05:11.170
+Jadi sekarang jika saya melihat ini, saya melihat bahwa tes dikelompokkan bersama dan saya tahu bahwa semua tes yang
+
+00:05:11.170 --> 00:05:19.030
+sedang berjalan berada di bawah fungsi pencarian Google sehingga ketika kita memiliki ratusan tes kita dapat melihat
+
+00:05:19.030 --> 00:05:25.380
+mana yang gagal dan di mana kita ingin target untuk memperbaiki tes kami.
+
+00:05:25.480 --> 00:05:26.220
+Baiklah.
+
+00:05:26.270 --> 00:05:28.730
+Lebih banyak hal menarik di video berikutnya.
+
+00:05:28.730 --> 00:05:30.050
+Saya akan melihat yang itu.
+
+00:05:30.210 --> 00:05:30.470
+Babai.

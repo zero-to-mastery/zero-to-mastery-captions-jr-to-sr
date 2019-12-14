@@ -1,0 +1,430 @@
+﻿WEBVTT
+
+00:00:01.040 --> 00:00:05.590
+Dan selamat datang kembali kita kembali ke diagram jalur render kritis kita.
+
+00:00:05.600 --> 00:00:07.730
+Perlahan-lahan mulai masuk akal.
+
+00:00:07.760 --> 00:00:11.000
+Kami sudah bicara tentang waria dan CSSA.
+
+00:00:11.000 --> 00:00:17.730
+Sekarang kita akan berbicara sedikit tentang javascript dan sebelum dia masuk
+
+00:00:17.990 --> 00:00:27.150
+ke pohon yang diberikan sekarang waria dan CSSA saya pikir javascript mungkin lebih buruk karena dapat
+
+00:00:27.270 --> 00:00:31.300
+mengakses dan mengubah DOM dan CSSA.
+
+00:00:31.330 --> 00:00:39.700
+Ini berarti bahwa setelah tag skrip NDA waria ditemukan, konstruksi DOM dijeda dan skrip
+
+00:00:39.760 --> 00:00:42.220
+diminta dari server.
+
+00:00:43.130 --> 00:00:50.240
+Jadi, apa pun yang kami lakukan di mail Hoopes, kami melihat file skrip yang perlu kami
+
+00:00:50.240 --> 00:00:52.430
+minta setelah skrip dimuat.
+
+00:00:52.430 --> 00:00:58.280
+Itu tidak dapat dieksekusi sebelum semua SS juga cepat.
+
+00:00:59.310 --> 00:01:02.040
+Dan C Ss Dom dibangun
+
+00:01:04.630 --> 00:01:07.990
+setelah CEA mengatakan model objek dokumen dibangun.
+
+00:01:07.990 --> 00:01:18.200
+Javascript dijalankan dan ya seperti yang Anda bayangkan Javascript dapat dan dapat mengakses Dom serta bendungan
+
+00:01:18.210 --> 00:01:21.280
+CSSA dan dapat mengubahnya.
+
+00:01:23.140 --> 00:01:29.140
+Dan hanya setelah itu selesai, halaman akhirnya dapat dirender dengan pergi ke tata letak
+
+00:01:29.140 --> 00:01:31.360
+pohon dan cat yang diberikan.
+
+00:01:31.530 --> 00:01:38.780
+Dan itu sebabnya kami menyebut javascript pemblokiran parser mengingat kode peringatan yang kami lakukan sebelumnya di
+
+00:01:38.790 --> 00:01:44.520
+mana kami memiliki tag skrip dengan peringatan dan itu benar-benar memblokir halaman.
+
+00:01:44.620 --> 00:01:49.810
+Sekarang dengan javascript ada beberapa hal yang bisa kita lakukan untuk mengoptimalkannya.
+
+00:01:49.810 --> 00:01:51.050
+Mari kita mulai dengan yang pertama.
+
+00:01:51.130 --> 00:01:55.770
+Memuat skrip secara asinkron untuk membantu hal itu.
+
+00:01:55.810 --> 00:01:59.470
+Punya diagram kecil yang bagus untuk kita.
+
+00:01:59.520 --> 00:02:03.080
+Anda mungkin telah melihat cara paling umum untuk memiliki tag skrip.
+
+00:02:03.090 --> 00:02:07.150
+Yap saja skrip ketika Schmall mulai membaca.
+
+00:02:07.260 --> 00:02:15.680
+Yang berarti mem-parsing file itu akan menemui teknologi skrip dan tag skrip ini perlu diunduh
+
+00:02:15.680 --> 00:02:19.210
+blok mana yang melihat semua parsing.
+
+00:02:19.250 --> 00:02:27.240
+Itu juga perlu dieksekusi yang menghalangi aliran parsing dan akhirnya
+
+00:02:27.410 --> 00:02:31.720
+setelah selesai Schimmel kembali diurai.
+
+00:02:31.720 --> 00:02:38.470
+Sekarang kami memiliki dua properti baru yang dapat kami tambahkan ke tag skrip kami untuk mengubah perilaku ini dan yang
+
+00:02:38.470 --> 00:02:39.760
+pertama adalah async.
+
+00:02:39.790 --> 00:02:44.710
+Jadi memuat skrip secara asinkron dan itu benar.
+
+00:02:44.730 --> 00:02:45.660
+Sangat sederhana.
+
+00:02:45.660 --> 00:02:53.110
+Yang kami lakukan adalah menambahkan atribut ini ke skrip X kami dengan menggunakan async, kami dapat memberi
+
+00:02:53.110 --> 00:02:58.330
+tahu browser untuk melanjutkan dan mengunduh file javascript dengan utas lainnya.
+
+00:02:58.330 --> 00:03:04.330
+Pikirkan utas sebagai orang yang melakukan pekerjaan yang hanya dapat dilakukan satu per satu.
+
+00:03:04.960 --> 00:03:13.030
+Dengan async kita dapat mengatakan hei kepada pekerja lain sementara saya sedang mengerjakan parsing ini, dapatkah
+
+00:03:13.480 --> 00:03:22.100
+Anda mengunduh file javascript dan file javascript ini sedang mengunduh dengan prioritas rendah tetapi tidak memblokir sisa
+
+00:03:22.190 --> 00:03:27.730
+pemuatan halaman dan segera setelah selesai mengunduhnya, itu akan dijalankan.
+
+00:03:27.760 --> 00:03:33.120
+Jadi bagian itu masih menghalangi parsing Shyamal.
+
+00:03:33.140 --> 00:03:35.070
+Sekarang ada masalah untuk ini.
+
+00:03:35.070 --> 00:03:40.810
+Ini berarti bahwa ia dapat mengeksekusi kapan saja yang terdaftar dua masalah yang jelas.
+
+00:03:40.810 --> 00:03:46.590
+Pertama yang mengeksekusi terlalu lama setelah halaman benar-benar memuat.
+
+00:03:46.600 --> 00:03:54.250
+Jadi misalnya untuk berbohong pada skrip async ini untuk melakukan sesuatu dengan pengalaman pengguna kami maka kami
+
+00:03:54.250 --> 00:03:57.670
+dapat memberikan pengguna kami pengalaman sub optimal.
+
+00:03:57.730 --> 00:04:06.070
+Kedua jika itu terjadi untuk dieksekusi sebelum halaman selesai memuat. Kami tidak dapat benar-benar memprediksi jika kami membutuhkan akses
+
+00:04:06.070 --> 00:04:08.590
+ke dom atau beberapa elemen.
+
+00:04:08.680 --> 00:04:16.300
+Jika mulai melakukan manipulasi DOM tanpa Dom sebenarnya ada di sana, kita mungkin mendapatkan beberapa kesalahan.
+
+00:04:17.350 --> 00:04:21.080
+Jadi, inilah aturannya dengan async untuk skrip.
+
+00:04:22.640 --> 00:04:28.670
+Menambahkannya ke apa pun yang tidak mempengaruhi dom atau model objek dokumen CSSA.
+
+00:04:28.820 --> 00:04:36.020
+Jadi async harus digunakan untuk hampir semua skrip eksternal yang tidak memerlukan pengetahuan tentang kode kami dan tidak
+
+00:04:36.050 --> 00:04:38.920
+benar-benar penting untuk pengalaman pengguna kami.
+
+00:04:38.920 --> 00:04:45.920
+Anda dapat menganggap ini sebagai mungkin skrip Google Analytics atau skrip pelacakan.
+
+00:04:45.960 --> 00:04:50.240
+Sekarang ada opsi kedua dan kembali lagi ke poin kami di sini.
+
+00:04:50.400 --> 00:04:57.050
+Pilihan lain dengan javascript adalah kita dapat menunda pemuatan skrip dan menunda pemuatan skrip.
+
+00:04:57.050 --> 00:05:05.680
+Sekali lagi sederhana dengan penangguhan atribut yang satu ini sangat mirip dengan async karena tidak akan memblokir pemuatan halaman
+
+00:05:05.680 --> 00:05:06.370
+kami.
+
+00:05:06.370 --> 00:05:16.670
+Namun itu akan menunggu untuk dieksekusi sampai semua telah diurai dan kami akan mengeksekusi dalam urutan penampilan.
+
+00:05:18.070 --> 00:05:25.070
+Seperti yang Anda lihat di sini, ia akan menunggu hingga waria benar-benar diurai dan kemudian mulai dijalankan.
+
+00:05:25.080 --> 00:05:34.270
+Sekarang ini benar-benar pilihan yang sangat bagus untuk skrip yang akan bertindak pada pohon yang diberikan atau dom tetapi
+
+00:05:34.510 --> 00:05:40.470
+mereka juga tidak penting untuk memuat Mungkin di atas konten flip.
+
+00:05:41.820 --> 00:05:45.870
+Jadi, inilah aturan saya tentang kapan harus menggunakan async dan menunda.
+
+00:05:46.230 --> 00:05:53.970
+Jika fungsionalitas inti memerlukan javascript sementara async adalah yang terbaik jika fungsionalitas inti tidak
+
+00:05:53.970 --> 00:06:00.370
+memerlukan javascript maka javascript harus ditangguhkan di luar jalur render kritis.
+
+00:06:00.870 --> 00:06:04.950
+Skrip kritis Anda Skrip aplikasi Anda harus ada di sini.
+
+00:06:04.950 --> 00:06:08.770
+Skrip pihak ketiga yang tidak memengaruhi DOM.
+
+00:06:08.770 --> 00:06:16.650
+Dia akan berada di sini dan mungkin skrip pihak ketiga yang tidak penting tidak berada di atas flip.
+
+00:06:16.690 --> 00:06:19.130
+Harus menggunakan differe.
+
+00:06:19.300 --> 00:06:22.100
+Mari kita lihat opsi lain.
+
+00:06:22.230 --> 00:06:28.060
+Kami dapat meminimalkan manipulasi Dohm dan menghindari Javascript yang lama berjalan.
+
+00:06:28.200 --> 00:06:30.700
+Jadi mari kita gunakan contoh di sini untuk menunjukkan ini.
+
+00:06:34.350 --> 00:06:37.560
+Kami telah sedikit meningkatkan situs kami.
+
+00:06:37.680 --> 00:06:47.600
+Kami telah menambahkan tombol dengan font merah kali ini dan gambar titik kecil yang lucu dan file di sini lagi.
+
+00:06:47.710 --> 00:06:53.600
+Ini adalah file yang cukup mendasar, kami memiliki tag gambar baru di sini sekarang dan kami memiliki beberapa skrip.
+
+00:06:53.620 --> 00:06:59.410
+Dan jangan khawatir, saya akan memberi Anda akses ke semua file ini di akhir bagian sehingga Anda dapat mulai berlatih
+
+00:06:59.530 --> 00:07:00.070
+juga.
+
+00:07:01.490 --> 00:07:09.140
+Sekarang di sini, di tag skrip Anda melihat kami memiliki beberapa hal yang akan kita bicarakan adalah
+
+00:07:09.140 --> 00:07:11.900
+yang pertama yang merupakan skrip inline.
+
+00:07:12.350 --> 00:07:20.000
+Dan skrip ini bertindak hanya mengambil tombol di halaman kami dan menambahkan gaya warna merah. Mari kita lihat apa yang terjadi
+
+00:07:20.000 --> 00:07:20.820
+di sini.
+
+00:07:21.820 --> 00:07:31.400
+Ketika saya me-refresh halaman dan melihat tombol di sini karena saya me-refresh refresh yang terlalu sulit.
+
+00:07:31.400 --> 00:07:32.550
+Anda disana.
+
+00:07:33.140 --> 00:07:36.970
+Anda melihat bahwa tombol
+
+00:07:40.020 --> 00:07:51.660
+selalu dibaca dan tidak ada gunanya jika saya menghapus ini katakanlah ini hanya akan menjadi default
+
+00:07:51.750 --> 00:07:57.180
+yang hitam karena javascript dijalankan sebelum pohon render.
+
+00:07:57.270 --> 00:08:04.660
+Sama seperti di sini jika kita ingat diagram kita ingin javascript kita dimuat
+
+00:08:04.930 --> 00:08:11.430
+Ini akan membaca browser yang akan membaca di dalam dan melihat apakah perlu memuat lebih banyak hal.
+
+00:08:11.480 --> 00:08:20.030
+Jadi sekali lagi Anda bisa membayangkan di sini jika Anda memodifikasi dom atau mengubah gaya itu hanya
+
+00:08:20.030 --> 00:08:24.430
+kerja ekstra yang harus dilakukan browser untuk membuat.
+
+00:08:24.470 --> 00:08:27.310
+Mari kita lihat file skrip lain yang saya miliki di sini.
+
+00:08:30.230 --> 00:08:37.920
+Ini adalah file skrip pertama yang tentang hal itu beberapa pendengar acara satu konten Dom
+
+00:08:38.460 --> 00:08:41.920
+dimuat dan yang lainnya memuat dan.
+
+00:08:42.010 --> 00:08:47.450
+Saya akan menjelaskan apa yang mereka lakukan dalam sedikit dan akhirnya kita memiliki ini skrip.
+
+00:08:48.670 --> 00:08:51.510
+Untuk sekarang mari kita lihat file skrip ini.
+
+00:08:51.580 --> 00:09:01.060
+Saya akan berkomentar simpan skrip 2 dan 3 dan saya bersedia membuka tab pengembang di sini dan saya akan menyegarkan. Mari kita lihat apa
+
+00:09:01.060 --> 00:09:02.020
+yang baru
+
+00:09:05.600 --> 00:09:07.060
+saja terjadi di sini.
+
+00:09:08.400 --> 00:09:18.790
+Kami memiliki skrip ini untuk satu Dom terisi penuh dan diuraikan dan akhirnya semua sumber daya selesai dimuat.
+
+00:09:18.870 --> 00:09:29.490
+Jika kita melihat file kita, kita memanggil file rahasia apa yang terjadi di sini log konsol pertama.
+
+00:09:29.490 --> 00:09:40.230
+Ini adalah skrip yang dipanggil pertama sebelum Dom Cantet dimuat sebelum halaman dibuka sehingga browser memeriksa skrip untuk memastikan bahwa
+
+00:09:40.470 --> 00:09:45.210
+ia memiliki semua yang diperlukan untuk membangun halaman.
+
+00:09:45.750 --> 00:09:53.870
+Dan jika kita membuka tab Network di sini dan saya menyegarkan kembali, saya melihat bahwa garis biru yang
+
+00:09:54.560 --> 00:10:02.240
+ada di sini adalah konten DOM yang dimuat yang mengambil 14 milidetik cukup cepat dan mengatakan bahwa
+
+00:10:02.240 --> 00:10:04.720
+model objek dokumen telah dimuat.
+
+00:10:05.030 --> 00:10:11.660
+Dan akhirnya memuat yang merupakan garis merah di sini mengatakan bahwa semua
+
+00:10:11.780 --> 00:10:19.290
+konten pada halaman termasuk gambar ini telah dimuat sehingga karena cara jalur render kritis bekerja.
+
+00:10:19.790 --> 00:10:29.410
+Apa yang terjadi adalah bahwa kita sedang membaca file javascript membangun pohon DOM.
+
+00:10:29.830 --> 00:10:37.960
+Akhirnya selesai membangunnya dan akhirnya selesai memuat semua skrip atau
+
+00:10:37.960 --> 00:10:41.560
+semua file termasuk gambar.
+
+00:10:41.590 --> 00:10:48.340
+Jadi jika kita masuk ke script kita dan script tiga seperti yang terlihat sangat sederhana hanya konsol log.
+
+00:10:48.490 --> 00:11:00.280
+Jika saya menambahkannya ke halaman kami dan saya menyegarkan ini, masuklah ke konsol dan kami melihat bahwa kami memiliki 1 2 tiga yang sudah terisi
+
+00:11:00.300 --> 00:11:10.280
+penuh dan mem-parsing semua sumber daya yang selesai dimuat dan hanya untuk bersenang-senang di sini, mari kita tambahkan atribut async
+
+00:11:10.310 --> 00:11:11.470
+ke skrip.
+
+00:11:11.630 --> 00:11:24.880
+Jika saya menyegarkan lihat skrip async atau yang diunduh secara asinkron ke sekarang dimuat setelah DOM dimuat penuh karena itu
+
+00:11:24.880 --> 00:11:27.260
+tidak memblokir lagi.
+
+00:11:27.730 --> 00:11:29.120
+Sangat sangat keren.
+
+00:11:32.660 --> 00:11:33.130
+Baiklah.
+
+00:11:33.230 --> 00:11:40.040
+Hal terakhir yang akan saya tunjukkan kepada Anda adalah menghindari Javascript lama berjalan dan ini adalah sesuatu yang akan
+
+00:11:40.070 --> 00:11:44.830
+kita bicarakan lebih lanjut di bagian dua ketika kita berbicara tentang mengoptimalkan kode.
+
+00:11:44.870 --> 00:11:49.470
+Saya ingin menunjukkan satu poin kepada Anda jika kita kembali ke kode kita di sini.
+
+00:11:49.690 --> 00:11:59.410
+Saya memiliki skrip nother dan skrip ini hanya menambahkan acara klik Lessner yang memiliki klik berhenti klik waspada
+
+00:11:59.470 --> 00:12:02.490
+dan izinkan saya menunjukkan alasannya.
+
+00:12:02.490 --> 00:12:08.700
+File Javascript yang berjalan lama atau sepanjang menjalankan file javascript bukan ide yang baik.
+
+00:12:09.120 --> 00:12:18.780
+Anda lihat sekarang halaman ini tidak terlalu memuat dengan hanya memindahkannya sedikit sehingga saya bisa gulir di sini.
+
+00:12:19.120 --> 00:12:20.610
+Itu keren.
+
+00:12:21.380 --> 00:12:22.600
+Jika saya
+
+00:12:29.420 --> 00:12:36.590
+klik di sini oh dan saya harus menghapus yang pertama karena saya sudah mengeluh tombol yang sudah dinyatakan
+
+00:12:36.670 --> 00:12:40.490
+Jika saya menyegarkan di sini melihat bahwa berkas tidak membaca lagi.
+
+00:12:40.600 --> 00:12:44.510
+Jika saya mengklik saya tidak bisa melakukan apa-apa lagi.
+
+00:12:44.590 --> 00:12:45.760
+Saya tidak dapat mengklik lagi.
+
+00:12:45.760 --> 00:12:47.360
+Saya dapat menggulir lagi.
+
+00:12:47.440 --> 00:12:52.700
+Halaman ini benar-benar diblokir karena kode javascript ini sedang berjalan.
+
+00:12:53.260 --> 00:13:00.400
+Jadi jika Anda memiliki kode javascript yang mengeksekusi untuk waktu yang lama sementara Anda memiliki
+
+00:13:00.400 --> 00:13:07.790
+pengalaman pengguna yang sangat buruk karena rasanya semua diblokir dan Janke baik-baik saja di sana Anda memilikinya.
+
+00:13:07.810 --> 00:13:13.070
+Kita sekarang tahu bagaimana kontrol domus Shyamal dibangun.
+
+00:13:13.210 --> 00:13:17.100
+Kita tahu bagaimana model objek CSSA dibangun.
+
+00:13:17.380 --> 00:13:22.090
+Kita tahu bagaimana javascript dibaca dan dieksekusi.
+
+00:13:22.090 --> 00:13:30.700
+Kita tahu kapan konten Dom dimuat kita akhirnya bisa melakukan beberapa hal lain dan akhirnya kita tahu bahwa ketika halaman
+
+00:13:30.700 --> 00:13:34.570
+web sepenuhnya dimuat kita mendapatkan acara memuat itu.
+
+00:13:34.570 --> 00:13:35.620
+Jadi video selanjutnya.
+
+00:13:35.680 --> 00:13:40.600
+Mari kita bicara tentang beberapa langkah terakhir ini dan melakukan beberapa latihan.
+
+00:13:40.600 --> 00:13:41.790
+Saya akan lihat yang itu.
+
+00:13:41.890 --> 00:13:42.100
+Sampai jumpa.

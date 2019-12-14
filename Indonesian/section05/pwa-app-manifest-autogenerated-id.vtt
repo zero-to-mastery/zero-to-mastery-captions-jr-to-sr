@@ -1,0 +1,208 @@
+﻿WEBVTT
+
+00:00:01.710 --> 00:00:02.710
+Bawa mereka kembali.
+
+00:00:02.970 --> 00:00:10.770
+Mari kita bicara tentang poin kedua membuat webapp progresif dan mungkin ikon kecil yang lucu yang akan
+
+00:00:10.920 --> 00:00:13.620
+saya miliki dalam kursus ini.
+
+00:00:13.620 --> 00:00:23.060
+Manifes aplikasi sekarang untuk aplikasi Web progresif untuk berperilaku seperti aplikasi asli yang kita butuhkan untuk meniru
+
+00:00:23.270 --> 00:00:32.660
+tidak hanya fungsi aplikasi asli tetapi juga beberapa pandangan yang kita dapatkan atau shell misalnya pada ponsel
+
+00:00:32.660 --> 00:00:33.740
+Anda.
+
+00:00:33.740 --> 00:00:40.760
+Anda dapat mengunduh aplikasi dan memiliki ikon aplikasi di perangkat Android Anda memiliki hal-hal seperti layar splash.
+
+00:00:40.940 --> 00:00:49.100
+Idenya adalah untuk membuat aplikasi web menjadi tidak bisa dibedakan dengan aplikasi mobile yang sebenarnya.
+
+00:00:50.600 --> 00:00:55.000
+Dan kita bisa melakukannya dengan manifes aplikasi sebelum kita masuk ke dalamnya.
+
+00:00:55.040 --> 00:01:03.890
+Satu hal yang ingin saya tunjukkan adalah bahwa banyak orang lupa untuk memasukkan dalam indeks mereka memulai file shemale
+
+00:01:03.890 --> 00:01:10.430
+baris ini di sini dan ini keluar dari kotak dengan membuat bereaksi dia bisa
+
+00:01:10.430 --> 00:01:19.370
+melihat bahwa saya di indeks publik folder dan baris ini yang merupakan tag meta dengan viewport mengoptimalkan aplikasi untuk beberapa
+
+00:01:19.370 --> 00:01:20.350
+perangkat.
+
+00:01:20.690 --> 00:01:25.510
+Dan ini mungkin tampak sangat jelas tetapi banyak orang melupakannya.
+
+00:01:25.580 --> 00:01:32.850
+Dan baris ini membantu menyesuaikan ukuran layar berdasarkan perangkat.
+
+00:01:32.860 --> 00:01:35.060
+Jadi ini suatu keharusan.
+
+00:01:35.080 --> 00:01:40.200
+Dan itu akan memperingatkan Anda jika Anda melewatkan baris ini dan laporan mercusuar.
+
+00:01:40.340 --> 00:01:45.110
+Jadi sekarang kita sudah menyiapkan layar untuk perangkat seluler.
+
+00:01:45.110 --> 00:01:47.360
+Mari kita bicara tentang manifes aplikasi.
+
+00:01:47.570 --> 00:01:54.770
+Dan seperti yang dapat Anda lihat di folder publik kami lagi, ini adalah sesuatu yang kami dapatkan secara gratis dari membuat
+
+00:01:56.150 --> 00:01:57.710
+reaktor dan ini dia.
+
+00:01:57.740 --> 00:02:01.430
+Ini adalah manifes nyata yang ada di file.
+
+00:02:01.480 --> 00:02:07.540
+Ini adalah Jaisalmer sederhana yang diajukan yang memberikan pengembang kemampuan untuk mengontrol bagaimana
+
+00:02:07.990 --> 00:02:15.670
+aplikasi akan muncul kepada pengguna di daerah di mana mereka akan melihat aplikasi seperti homescreen perangkat seluler.
+
+00:02:15.910 --> 00:02:21.610
+Dan cukup tentukan bagaimana aplikasi akan diluncurkan dan bagaimana tampilannya.
+
+00:02:21.610 --> 00:02:29.530
+Jadi, jika Anda ingat dalam contoh saya di sini dengan aplikasi berita peretas ini, kami memiliki
+
+00:02:29.800 --> 00:02:36.410
+tombol iklan ke homescreen di tab aplikasi dan Anda mungkin telah memperhatikan bahwa
+
+00:02:36.620 --> 00:02:46.710
+kami benar-benar mengeklik hal yang disebut manifes dan aplikasi ini dan itulah manifes dot Jasonville peramban membaca ini dan meludahkan sepotong
+
+00:02:46.710 --> 00:02:49.380
+kecil informasi ini untuk kita.
+
+00:02:49.500 --> 00:02:58.150
+Dan jika saya gulir ke bawah, Anda melihat bahwa saya memiliki ikon di sini untuk diunduh seperti yang saya lakukan
+
+00:02:58.150 --> 00:03:00.880
+ketika saya mengunduhnya ke layar beranda.
+
+00:03:01.450 --> 00:03:06.690
+Dan ini adalah ikon yang akan Anda lihat ketika Anda mengunduh aplikasi ini di ponsel Anda.
+
+00:03:07.060 --> 00:03:13.820
+Dan itu juga memberi kita fitur kecil yang bagus untuk ditambahkan ke homescreen.
+
+00:03:13.870 --> 00:03:17.350
+Jadi ini adalah file manifes aplikasi dan apa fungsinya.
+
+00:03:17.530 --> 00:03:20.410
+Sekarang bagaimana kita menghasilkan ikon-ikon ini.
+
+00:03:21.460 --> 00:03:31.330
+Kita melihat di sini bahwa membuat aplikasi aksi ulang telah menghasilkan bulu di folder publik tetapi kita kehilangan beberapa
+
+00:03:31.420 --> 00:03:33.030
+hal bukan?
+
+00:03:33.070 --> 00:03:40.150
+Kami tidak memiliki semua ikon ukuran lain untuk ponsel ini karena kami masih perlu membuatnya untuk
+
+00:03:40.150 --> 00:03:48.590
+aplikasi kami dan kami dapat melihat di sini bahwa mereka memiliki ukuran yang berbeda berdasarkan pada perangkat mana ini diunduh.
+
+00:03:50.050 --> 00:03:55.290
+Untungnya bagi kita ada alat hebat yang melakukan ini dengan sangat baik dan mudah.
+
+00:03:55.340 --> 00:03:59.040
+Ini disebut generator con nyata.
+
+00:04:00.640 --> 00:04:10.940
+Dan ini yang perlu kita lakukan adalah memberikan gambar seperti gambar robot dengan hanya
+
+00:04:11.480 --> 00:04:16.230
+mengklik pilih Fab. gambar com dan itu akan membawa Anda melalui langkah-langkah untuk mengunduh ini.
+
+00:04:16.610 --> 00:04:23.600
+Dan semua yang perlu kita lakukan adalah memasukkannya ke dalam folder publik kita seperti halnya undang-undang
+
+00:04:23.600 --> 00:04:27.970
+ikon Fabrikant dan merujuknya ke manifes dot Jaisalmer pintu akhir.
+
+00:04:27.980 --> 00:04:35.240
+Inilah tepatnya yang akan kita lakukan dalam latihan untuk mengubah teman robot kita menjadi aplikasi
+
+00:04:35.320 --> 00:04:36.440
+Web progresif.
+
+00:04:36.470 --> 00:04:46.160
+Hal lain yang dilakukan situs web ini bagi kami adalah melihat dan menyesuaikan layar splash untuk
+
+00:04:46.160 --> 00:04:48.100
+file manifes kami.
+
+00:04:48.100 --> 00:04:50.210
+Sekarang apa itu splash screen.
+
+00:04:51.580 --> 00:04:58.990
+Dalam versi yang lebih lama dari chrome untuk Android, mengetuk ikon layar beranda untuk suatu
+
+00:04:58.990 --> 00:05:04.700
+aplikasi sering membutuhkan beberapa ratus mili detik sebelum layar dimuat.
+
+00:05:04.750 --> 00:05:11.990
+Seorang pengguna akan melihat layar putih yang membuat pengalamannya sedikit menggelegar.
+
+00:05:11.990 --> 00:05:15.560
+Dan sepertinya situs Web memuat sangat lambat.
+
+00:05:15.980 --> 00:05:23.930
+Jadi chrome 47 dan di atasnya mendukung gagasan layar splash di mana Anda dapat menambahkan warna latar
+
+00:05:23.930 --> 00:05:26.440
+belakang saat Anda mengetuk aplikasi.
+
+00:05:26.480 --> 00:05:32.240
+Aplikasi Web progresif alih-alih memuat layar putih itu akan memuat sesuatu yang disebut layar
+
+00:05:32.240 --> 00:05:32.790
+splash.
+
+00:05:33.570 --> 00:05:40.620
+Di mana akan memiliki warna latar belakang nama dan ikon web dan Anda akan mendapatkan itu semua
+
+00:05:40.710 --> 00:05:42.870
+dari Tuhan Jaisalmer manifes kami.
+
+00:05:43.320 --> 00:05:50.320
+Dan ini semua dilakukan hanya untuk membuat aplikasi web Anda merasa lebih dekat dengan apa yang Anda lihat dengan aplikasi asli.
+
+00:05:50.460 --> 00:05:55.860
+Ketika Anda mengklik pada aplikasi asli meskipun mereka memuat mereka memiliki semacam latar belakang dan ikon
+
+00:05:55.860 --> 00:06:00.100
+untuk menunjukkan kepada Anda bahwa itu sedang memuat meskipun hanya itu.
+
+00:06:00.100 --> 00:06:01.510
+Itu benar-benar sederhana.
+
+00:06:01.510 --> 00:06:05.600
+Yang kita butuhkan hanyalah beberapa ikon dan menambahkannya ke manifes.
+
+00:06:05.630 --> 00:06:08.390
+Punya JS di R-Pa.
+
+00:06:08.420 --> 00:06:09.490
+Itu saja untuk sekarang.
+
+00:06:09.500 --> 00:06:11.080
+Saya akan melihat yang berikutnya.
+
+00:06:11.210 --> 00:06:11.530
+Sampai jumpa.

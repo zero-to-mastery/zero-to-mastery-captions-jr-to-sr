@@ -1,0 +1,442 @@
+﻿WEBVTT
+
+00:00:01.500 --> 00:00:02.650
+Selamat datang kembali.
+
+00:00:02.860 --> 00:00:04.630
+Kami sangat dekat.
+
+00:00:04.630 --> 00:00:07.130
+Kami akan berbicara tentang manajemen data sekarang.
+
+00:00:08.060 --> 00:00:14.980
+Dan apa yang dapat kita lakukan untuk meningkatkan keamanan ketika datang ke manajemen data manajemen data mencakup
+
+00:00:14.980 --> 00:00:15.940
+banyak ide.
+
+00:00:15.940 --> 00:00:21.510
+Tetapi ada beberapa topik misalnya Anda ingin memastikan Anda selalu memiliki cadangan.
+
+00:00:21.520 --> 00:00:27.880
+Beberapa orang suka mencadangkan data statis file situs web mereka di tempat yang aman.
+
+00:00:27.880 --> 00:00:29.890
+Tidak pernah memiliki satu titik kegagalan.
+
+00:00:29.980 --> 00:00:36.140
+Itu adalah satu tempat yang lemah dan jika itu turun maka Anda tidak punya tempat lain untuk pulih.
+
+00:00:37.610 --> 00:00:41.570
+Anda ingin memastikan bahwa Anda membatasi paparan data sensitif.
+
+00:00:41.570 --> 00:00:50.330
+Itu adalah Anda ingin mengenkripsi penangkapan data sehingga mengacaukannya sehingga orang dapat melihatnya dan dalam transisi.
+
+00:00:50.330 --> 00:00:51.510
+Nah, inilah masalahnya.
+
+00:00:51.830 --> 00:00:55.700
+Apa yang baru saja saya katakan mengenkripsi data saat istirahat dan dalam transisi.
+
+00:00:55.710 --> 00:01:02.420
+Sebagian besar waktu tidak layak karena mengenkripsi data sisa berarti ketika data hanya duduk di sana
+
+00:01:02.840 --> 00:01:10.100
+cukup banyak katakanlah dalam database mengenkripsi semua data yang menghabiskan banyak uang memerlukan banyak usaha dan tidak layak
+
+00:01:10.100 --> 00:01:15.980
+dan tidak sepenuhnya dan tidak sepenuhnya tutupi pangkalan Anda dalam transisi artinya ketika Anda
+
+00:01:15.980 --> 00:01:16.970
+mengirim data.
+
+00:01:17.000 --> 00:01:22.490
+Jadi ketika Anda mengirim data dari database ke server ketika Anda mengirim data dari server
+
+00:01:22.490 --> 00:01:26.270
+ke klien, kami tahu bahwa sheet digunakan dalam kasus itu.
+
+00:01:27.160 --> 00:01:31.560
+Sekarang Anda ingin selektif dari data apa yang Anda enkripsi dan mengapa Anda tidak.
+
+00:01:31.660 --> 00:01:38.740
+Berdasarkan sumber daya yang Anda miliki, Anda mungkin ingin mengenkripsi informasi sensitif seperti nomor telepon
+
+00:01:38.740 --> 00:01:46.630
+alamat email pengguna Anda, tetapi mungkin tidak perlu khawatir tentang nama hewan peliharaan pengguna yang menulis kolom
+
+00:01:47.090 --> 00:01:51.520
+nama pada database mungkin Anda tidak perlu mengenkripsi.
+
+00:01:51.550 --> 00:01:59.150
+Jadi apa yang bisa kita lakukan dengan manajemen data. Nah, saya akan menunjukkan kepada Anda contoh cepat dari beberapa hal yang dapat Anda
+
+00:01:59.150 --> 00:01:59.810
+lakukan.
+
+00:01:59.810 --> 00:02:07.280
+Tetapi ide-ide utama Anda ingin menggunakan enkripsi untuk data yang mengidentifikasi pengguna dan data sensitif seperti
+
+00:02:07.790 --> 00:02:10.470
+Access token email and billing.
+
+00:02:10.550 --> 00:02:12.120
+Seperti yang saya katakan.
+
+00:02:12.540 --> 00:02:19.140
+Dan akhirnya seperti yang kami sebutkan dengan cadangan, Anda ingin agar cadangan itu disimpan juga dienkripsi
+
+00:02:19.200 --> 00:02:20.060
+secara ideal.
+
+00:02:20.100 --> 00:02:24.760
+Sekali lagi itu mungkin tidak selalu layak tetapi Anda ingin fokus pada data sensitif terlebih dahulu.
+
+00:02:24.780 --> 00:02:26.500
+Dan hal lain yang dapat Anda enkripsi.
+
+00:02:26.580 --> 00:02:27.440
+Anda harus melakukannya.
+
+00:02:28.520 --> 00:02:32.810
+Sekarang saya ingin berbicara tentang dua topik utama.
+
+00:02:32.810 --> 00:02:35.960
+Salah satunya adalah hashing passwords dan cara menyimpannya.
+
+00:02:35.960 --> 00:02:41.840
+Dan yang kedua adalah bagaimana mengenkripsi basis data Anda yang memiliki data sensitif.
+
+00:02:42.230 --> 00:02:46.910
+Bagian kedua di sini benar-benar tergantung pada database Anda, jadi saya tidak akan membahasnya
+
+00:02:46.910 --> 00:02:48.310
+karena terlalu spesifik.
+
+00:02:48.410 --> 00:02:55.160
+Tetapi alat-alat seperti PGE crypto memungkinkan Anda untuk mengenkripsi beberapa kolom pada basis data postscript.
+
+00:02:55.160 --> 00:02:58.590
+Salah satu database favorit saya dan mereka memiliki dokumentasi yang bagus.
+
+00:02:58.610 --> 00:02:59.810
+Jadi itu sesuatu yang bisa kamu lakukan.
+
+00:02:59.930 --> 00:03:09.110
+Tetapi jika saya menggunakan crypto 3G, saya mungkin akan mengenkripsi alamat penagihan atau kolom email pengguna atau apa
+
+00:03:09.440 --> 00:03:12.500
+pun yang sensitif untuk kolom pengguna.
+
+00:03:13.440 --> 00:03:15.930
+Itu hanya latihan yang bagus.
+
+00:03:15.930 --> 00:03:24.060
+Tapi salah satu topik yang benar-benar membuat saya kagum dan benar-benar suka adalah penyimpanan kata sandi.
+
+00:03:24.630 --> 00:03:28.360
+Dan saya tahu itu hal yang aneh untuk dikatakan tetapi itu benar-benar menarik.
+
+00:03:29.170 --> 00:03:34.660
+Saya benar-benar menulis sebuah blog perusahaan di kehidupan saya yang lalu tentang lagu topik ini akan meninggalkannya untuk Anda di
+
+00:03:34.660 --> 00:03:35.580
+akhir kursus ini.
+
+00:03:35.800 --> 00:03:41.290
+Dan itu juga sesuatu yang sudah kita bahas di kursus saya sebelumnya, tetapi saya akan melakukan ikhtisar singkat
+
+00:03:41.290 --> 00:03:44.320
+tentang apa yang harus Anda lakukan dengan kata sandi.
+
+00:03:44.320 --> 00:03:51.100
+Setiap situs web yang memiliki nama pengguna dan kata sandi dan seinen perlu memiliki manajemen data yang baik terutama ketika
+
+00:03:51.100 --> 00:03:52.290
+menyangkut kata sandi.
+
+00:03:52.420 --> 00:03:54.360
+Jadi apa yang bisa kita lakukan.
+
+00:03:54.610 --> 00:04:00.190
+Ya ada tiga perpustakaan yang benar-benar bagus dan ketiga perpustakaan ini sangat bagus
+
+00:04:00.250 --> 00:04:04.830
+karena mereka sudah dicoba dan diuji dalam hal keamanan.
+
+00:04:04.840 --> 00:04:11.860
+Anda ingin memilih paket yang telah ada sejak lama karena para pakar keamanan peretas topi hitam dan peretas topi
+
+00:04:11.860 --> 00:04:15.740
+putih semuanya telah mengujinya dan telah bertahan dalam ujian waktu.
+
+00:04:15.910 --> 00:04:22.330
+Dan ketiganya benar-benar bertahan dalam ujian waktu yang sudah cukup baru tetapi sudah berjalan sangat
+
+00:04:22.330 --> 00:04:23.130
+baik.
+
+00:04:23.140 --> 00:04:30.700
+Saya pribadi suka crypto. Jadi, saya tunjukkan demonstrasi singkat yang saya punya di sini file.
+
+00:04:30.700 --> 00:04:37.030
+Biarkan saya membuat ini sedikit lebih besar bahwa saya mengunduh paket crypt no guess hanya untuk membuatnya bekerja tanpa
+
+00:04:37.030 --> 00:04:38.730
+js dengan sangat mudah.
+
+00:04:38.920 --> 00:04:41.310
+Dan itu sudah cukup.
+
+00:04:41.410 --> 00:04:48.500
+Dan jika saya pergi ke paket mereka di sini kita melihat bahwa mereka memiliki opsi Synchronoss dan
+
+00:04:48.500 --> 00:04:56.640
+opsi asynchronous jadi mari kita salin bagian pertama dan saya akan menjelaskan apa yang dilakukannya dan saya tidak suka daging.
+
+00:04:56.640 --> 00:05:07.430
+Saya akan pergi dengan sup di sini jadi ketika situs Web Anda memiliki nama pengguna dan kata sandi mengapa kami melakukan dengan baik hal pertama
+
+00:05:07.520 --> 00:05:13.940
+yang akan Anda lakukan adalah Anda akan membiarkan pengguna mengetikkan username dan password mereka.
+
+00:05:13.940 --> 00:05:16.960
+Dan kemudian mereka akan mengklik kirim ketika mereka mengklik kirim.
+
+00:05:17.030 --> 00:05:24.310
+Anda akan memastikan bahwa itu adalah CBS sehingga kata sandi dan nama pengguna
+
+00:05:24.590 --> 00:05:33.320
+yang Anda masukkan ke dalam permintaan CBS di tubuh permintaan yang Anda kirim ke backend lalu tiba.
+
+00:05:33.420 --> 00:05:39.930
+Katakanlah ini adalah punggung Anda dan begitu tiba Anda mengambil kata sandi itu dan akan mengatakan bahwa kata sandi yang baru
+
+00:05:39.930 --> 00:05:43.020
+saja Anda ketik adalah kata sandi yang sangat lemah.
+
+00:05:43.020 --> 00:05:46.180
+Saya tahu tetapi kami hanya akan menggunakannya untuk tujuan demonstrasi.
+
+00:05:46.530 --> 00:05:54.180
+Sekarang yang kami lakukan adalah kami tidak pernah menyimpan kata sandi seperti ini di basis data kami karena jika basis data kami dikompromikan
+
+00:05:54.180 --> 00:05:57.940
+atau seseorang memasukinya, mereka memiliki semua kata sandi semua orang.
+
+00:05:58.050 --> 00:05:59.420
+Tidak pernah melakukannya.
+
+00:05:59.430 --> 00:06:05.160
+Sebagai gantinya kita menggunakan B crypt yang memungkinkan kita untuk hash.
+
+00:06:05.270 --> 00:06:11.510
+Dan jika Anda ingat hashing dari bagian S-sh kami itu adalah salah satu cara Fange fungsi
+
+00:06:11.540 --> 00:06:19.750
+yang akan mengambil superstring dan mengubahnya menjadi string yang bercampur dengan baik kita tidak akan pernah tahu bahwa itu berasal dari sup.
+
+00:06:19.760 --> 00:06:20.710
+Jadi, saya tunjukkan.
+
+00:06:20.750 --> 00:06:21.710
+Saya
+
+00:06:24.350 --> 00:06:25.440
+akan mengatakan
+
+00:06:27.730 --> 00:06:30.020
+Konsole log hash mari
+
+00:06:33.810 --> 00:06:35.680
+kita simpan script
+
+00:06:39.000 --> 00:06:41.370
+Ron Noad dan lihat itu.
+
+00:06:41.580 --> 00:06:46.440
+Kami mendapatkan hash ini yang tidak ingin Anda salin.
+
+00:06:46.440 --> 00:06:52.340
+Senar string yang benar-benar sangat campur aduk ini mewakili sup.
+
+00:06:52.440 --> 00:06:57.160
+Bahkan jika aktor jahat masuk ke basis data kami dan melihat oh yeah.
+
+00:06:57.300 --> 00:07:03.000
+Kata sandi adalah ini mereka tidak akan dapat melakukan apa-apa dengan itu karena mereka tidak tahu mereka bisa pergi
+
+00:07:03.000 --> 00:07:06.690
+ke situs web dan ketik ini karena itu tidak akan berhasil.
+
+00:07:06.690 --> 00:07:08.840
+Kata sandi saya adalah sup.
+
+00:07:08.850 --> 00:07:10.260
+Jadi bagaimana cara kerjanya.
+
+00:07:10.260 --> 00:07:13.560
+Kami menyimpan ini dalam database untuk pengguna.
+
+00:07:13.560 --> 00:07:20.290
+Katakanlah Andri dan ketika Andre kembali, saya tidak suka menggunakan nama saya sendiri.
+
+00:07:20.290 --> 00:07:22.170
+Mari kita gunakan Tim sebagai contoh.
+
+00:07:22.270 --> 00:07:29.390
+Ketika Tim kembali, bagaimana kita bisa memeriksa kapan Tim mengetik sup lagi.
+
+00:07:29.650 --> 00:07:33.970
+Itu sama dengan hash yang kita miliki di database.
+
+00:07:33.970 --> 00:07:44.940
+Kita kembali ke ruang bawah tanah mereka memiliki metode nother yang disebut compair dan perbandingan ini akan membandingkan string yang dimasukkan
+
+00:07:44.940 --> 00:07:50.360
+Tim ketika dia kembali ke situs web untuk masuk.
+
+00:07:50.640 --> 00:07:53.880
+Dan hash yang kita simpan di database.
+
+00:07:53.880 --> 00:07:57.160
+Dalam kasus saya katakanlah saya menyimpan ini dalam database.
+
+00:07:57.270 --> 00:08:04.550
+Dan lagi jika Anda tidak terlalu terbiasa dengan database, saya sarankan Anda memeriksa kursus saya sebelumnya.
+
+00:08:04.790 --> 00:08:06.660
+Dan itu milik kita.
+
+00:08:06.670 --> 00:08:09.410
+Mari kita benar-benar membuatnya menjadi string.
+
+00:08:09.460 --> 00:08:12.770
+Jadi itu tag hash kami, kami hanya memo dari database.
+
+00:08:12.790 --> 00:08:13.330
+Baiklah.
+
+00:08:13.420 --> 00:08:18.070
+Sekarang di sini kita mendapat respons jadi mari kita lihat apa yang akan terjadi.
+
+00:08:18.070 --> 00:08:20.050
+Dan kemudian saya katakan menghibur semua.
+
+00:08:22.410 --> 00:08:29.510
+Respons ketika Simpan jalankan ini Anda melihat bahwa saya dapatkan.
+
+00:08:29.510 --> 00:08:30.250
+Benar.
+
+00:08:30.290 --> 00:08:31.450
+Jadi sekarang saya tahu itu.
+
+00:08:31.470 --> 00:08:34.000
+Yup itu kata sandi tenda.
+
+00:08:34.070 --> 00:08:35.240
+Dia bisa masuk.
+
+00:08:35.390 --> 00:08:37.800
+Tetapi jika Tim salah mengeja sesuatu katakanlah saya pergi.
+
+00:08:37.840 --> 00:08:38.290
+Saya lakukan.
+
+00:08:38.290 --> 00:08:39.320
+Modal
+
+00:08:42.290 --> 00:08:44.100
+S dan tanda seru.
+
+00:08:44.210 --> 00:08:47.460
+Saya menyimpan dan menjalankan ini.
+
+00:08:47.510 --> 00:08:49.130
+Tidak, itu bukan kata sandi Anda.
+
+00:08:49.130 --> 00:08:49.900
+Coba lagi.
+
+00:08:51.110 --> 00:08:56.680
+Dan itu cukup bagus bahkan seorang ibu kota pun menyerang.
+
+00:08:56.680 --> 00:08:57.220
+Ini dia.
+
+00:08:57.290 --> 00:08:58.340
+Karena hash.
+
+00:08:58.340 --> 00:09:06.130
+Setiap perubahan kecil pada kata sandi akan memunculkan hash yang sama sekali berbeda.
+
+00:09:06.160 --> 00:09:09.850
+Sekarang kalau-kalau Anda bertanya-tanya apa Non gnoll di sini.
+
+00:09:09.850 --> 00:09:16.560
+Nah dalam artikel saya yang saya tulis saya berbicara tentang menjalankan Salt dan bagaimana ia menambahkan lapisan keamanan tambahan.
+
+00:09:16.570 --> 00:09:21.980
+Ini adalah topik yang kompleks dan di luar cakupan kursus ini, tetapi bacalah jika Anda tertarik.
+
+00:09:22.000 --> 00:09:28.900
+Ini hanya langkah pengamanan tambahan, tetapi apa yang dilakukannya adalah jika Anda melihat betapa lambatnya kami mendapatkan hash dan kemudian butuh sedikit
+
+00:09:28.930 --> 00:09:31.490
+waktu untuk mendapatkan yang benar atau salah.
+
+00:09:31.540 --> 00:09:37.040
+Biarkan saya menunjukkan kepada Anda jika saya menyimpan ini dan menjalankan ini lagi.
+
+00:09:37.260 --> 00:09:39.810
+Anda melihat bahwa jeda di mana hash di-hash.
+
+00:09:39.810 --> 00:09:42.950
+Benar-benar sangat cepat tetapi ini butuh sedikit waktu.
+
+00:09:43.950 --> 00:09:44.710
+Mari kita lihat lagi.
+
+00:09:46.340 --> 00:09:50.610
+Jadi apa yang terjadi ada perlindungan ekstra oleh B crypt.
+
+00:09:50.660 --> 00:09:54.700
+Dikatakan baik-baik saja jika ada orang jahat.
+
+00:09:54.700 --> 00:09:57.120
+Sekali lagi terus mencoba kata sandi sampai saya mendapatkan kecocokan.
+
+00:09:57.170 --> 00:10:04.280
+Jadi jadilah script menggunakan sesuatu yang disebut putaran Salt membuat serangan brute force ini di mana orang itu
+
+00:10:04.280 --> 00:10:08.820
+terus mencoba kata sandi sangat sulit karena butuh waktu lama.
+
+00:10:09.110 --> 00:10:11.380
+Butuh sedikit waktu untuk benar-benar memeriksa.
+
+00:10:11.420 --> 00:10:19.670
+Jadi jika saya adalah seorang penyerang yang buruk saya akan terus mencoba ini tetapi karena B crypt lambat maka akan membutuhkan waktu
+
+00:10:19.670 --> 00:10:24.490
+yang sangat lama bagi saya untuk menebak kata sandi dan itu lapisan perlindungan
+
+00:10:25.130 --> 00:10:29.360
+lain yang datang dengan crypt dan perpustakaan hashing yang paling bagus.
+
+00:10:29.580 --> 00:10:36.100
+Sekali lagi manajemen data benar-benar sangat penting dan ini kembali ke variabel lingkungan juga.
+
+00:10:36.150 --> 00:10:41.120
+Rahasia apa pun termasuk kunci S-sh Anda, Anda ingin mengelolanya dengan benar.
+
+00:10:41.190 --> 00:10:42.900
+Jangan pernah ungkapkan rahasia Anda.
+
+00:10:43.050 --> 00:10:50.270
+Selalu buat sesulit mungkin bagi aktor jahat untuk mengakses informasi sensitif.
+
+00:10:50.320 --> 00:10:51.260
+Saya akan melihat yang berikutnya.

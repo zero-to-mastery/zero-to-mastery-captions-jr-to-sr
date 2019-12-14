@@ -1,0 +1,163 @@
+﻿WEBVTT
+
+00:00:01.500 --> 00:00:07.130
+Ada satu masalah yang kita temui karena aplikasi kita menjadi lebih besar dan lebih besar.
+
+00:00:07.860 --> 00:00:13.620
+Proyek GET CARA kami bertambah banyak kode ditambahkan menjadi monolitik
+
+00:00:13.800 --> 00:00:21.510
+Itulah yang menjadi monster besar ini yang perlu memastikan semuanya berfungsi semua bagiannya
+
+00:00:21.780 --> 00:00:24.150
+berfungsi agar berfungsi.
+
+00:00:24.310 --> 00:00:30.180
+Ini membuat segalanya lebih sulit untuk dikelola dan dipantau secara bersamaan.
+
+00:00:30.350 --> 00:00:36.830
+Anda perlu memastikan bahwa proyek ini tidak hanya berfungsi pada laptop Anda di mana
+
+00:00:36.830 --> 00:00:44.940
+Anda memiliki sistem operasi tertentu, versi tertentu dari sistem operasi Anda, versi node tertentu dan banyak hal lainnya.
+
+00:00:45.200 --> 00:00:51.820
+Banyak perpustakaan lain yang bergantung satu sama lain dan versinya paling sering ketika orang mencoba
+
+00:00:51.820 --> 00:00:58.400
+dan menjalankan proyek mereka pada mesin atau komputer yang berbeda, mereka menjumpai kesalahan karena hanya
+
+00:00:58.420 --> 00:01:04.300
+karena dijalankan di satu komputer tidak berarti itu akan berjalan di yang lain.
+
+00:01:04.310 --> 00:01:09.800
+Inilah yang kami sebut lingkungan lingkungan tempat sepotong kode dijalankan.
+
+00:01:09.800 --> 00:01:16.520
+Kami membutuhkan cara agar kami dapat menjalankan program dan aplikasi kami di semua lingkungan yang memungkinkan.
+
+00:01:16.520 --> 00:01:19.080
+Dan di sinilah wadah masuk.
+
+00:01:20.660 --> 00:01:26.110
+Anda melihat banyak aplikasi web saat ini dibangun di sekitar gagasan wadah.
+
+00:01:26.390 --> 00:01:35.180
+Kotak-kotak kecil yang bagus yang dapat dijalankan di mana saja alih-alih aplikasi monolitik raksasa yang melakukan segalanya.
+
+00:01:35.180 --> 00:01:41.870
+Perusahaan seperti Amazon dan Netflix memiliki produk mereka yang terdiri dari beberapa lapisan.
+
+00:01:41.870 --> 00:01:50.090
+Lapisan-lapisan ini dapat dianggap sebagai layanan masing-masing wadah mereka sendiri melakukan hal sendiri dan berkomunikasi satu sama
+
+00:01:50.090 --> 00:01:53.090
+lain untuk membuat seluruh sistem bekerja
+
+00:01:54.380 --> 00:01:56.090
+Agak seperti ini.
+
+00:01:56.250 --> 00:02:02.950
+Ini adalah aplikasi monolitik dan ini lebih merupakan arsitektur layanan mikro.
+
+00:02:03.890 --> 00:02:08.080
+Anda dapat menganggapnya seperti diskusi kami tentang fungsi murni.
+
+00:02:08.240 --> 00:02:14.900
+Kami mencoba dan menjaga semuanya tetap kecil sehingga kami memiliki fungsi yang dapat diprediksi yang mengambil input dan
+
+00:02:14.900 --> 00:02:18.290
+mengembalikan output dengan Semoga tidak ada efek samping.
+
+00:02:19.100 --> 00:02:22.150
+Dan jangan khawatir, kami akan menunjukkan kepada Anda bagaimana melakukan ini.
+
+00:02:22.160 --> 00:02:30.140
+Dan tentu saja gagasan untuk memecah aplikasi kami menjadi potongan-potongan kecil dipopulerkan oleh layanan kontainer seperti
+
+00:02:30.290 --> 00:02:37.200
+buruh pelabuhan yang akan kita bicarakan Anda lihat dengan jenis sistem ini.
+
+00:02:37.560 --> 00:02:39.650
+Ada masalah besar.
+
+00:02:39.700 --> 00:02:47.430
+Setiap layanan atau wadah mungkin memiliki persyaratan sendiri dari versi node yang berbeda untuk dependensi pustaka
+
+00:02:47.430 --> 00:02:48.940
+yang saling bertentangan.
+
+00:02:48.990 --> 00:02:54.140
+Dan ketika Anda menambahkan fakta bahwa setiap mesin dan lingkungan pengembang
+
+00:02:54.330 --> 00:03:02.180
+berbeda, ia dapat ditantang untuk naik ke pengembang baru dengan cepat atau menjalankan layanan ini di komputer lain.
+
+00:03:02.220 --> 00:03:04.430
+Pikirkan tentang bagian kami sebelumnya.
+
+00:03:04.470 --> 00:03:10.410
+Betapa sulitnya mengatur segala sesuatu dalam proyek di proyek otak cerdas yang tidak terlalu
+
+00:03:10.410 --> 00:03:11.760
+menyenangkan itu.
+
+00:03:11.760 --> 00:03:17.610
+Kami harus memastikan bahwa kami memiliki dokter yang mengatur kemudian kami harus menjalankan database.
+
+00:03:17.610 --> 00:03:25.800
+Kemudian kami juga harus memastikan bahwa kami memiliki versi yang tepat dari simpul yang menjalankan API server kami.
+
+00:03:25.800 --> 00:03:31.930
+Sekarang bayangkan bekerja di perusahaan yang mempekerjakan pengembang baru setiap minggu dan memiliki proyek yang lebih besar.
+
+00:03:32.010 --> 00:03:36.250
+Banyak pekerjaan yang harus dilakukan oleh semua pengembang baru ini.
+
+00:03:36.330 --> 00:03:41.550
+Bukankah lebih baik jika kita hanya bisa bergabung dengan pengembang dan menjalankan aplikasi kita
+
+00:03:42.420 --> 00:03:46.200
+secara konsisten dan dapat diprediksi dengan satu perintah sederhana.
+
+00:03:46.380 --> 00:03:51.420
+Alangkah baiknya jika semuanya diatur untuk produksi sehingga ketika Anda merilis kode Anda ke mesin
+
+00:03:51.420 --> 00:03:55.990
+apa pun dengan versi apa pun yang berfungsi, apa pun yang terjadi.
+
+00:03:56.040 --> 00:03:59.310
+Dan sekali lagi itu sebabnya kami memiliki Dr.
+
+00:03:59.490 --> 00:04:06.060
+Bahkan jika semuanya saling bergantung satu sama lain dan kita memerlukan jenis lingkungan tertentu daquiri memastikan
+
+00:04:06.060 --> 00:04:08.820
+bahwa itu berjalan di mana saja.
+
+00:04:09.580 --> 00:04:10.540
+Dan jangan khawatir.
+
+00:04:10.660 --> 00:04:15.610
+Ini semua adalah hal yang akan kita coba dan pahami selama beberapa S berikutnya.
+
+00:04:15.620 --> 00:04:22.070
+Topik pertama yang kami bahas adalah ide Dr. buruh pelabuhan membantu kami membuat wadah ini di sekitar
+
+00:04:22.070 --> 00:04:23.080
+layanan kami.
+
+00:04:23.090 --> 00:04:29.160
+Seperti yang saya katakan, Jangan takut, kita akan kembali ke titik-titik ini ketika kita melewati setiap bagian.
+
+00:04:29.330 --> 00:04:33.280
+Kami akan mulai membangun ide kami di sekitar arsitektur layanan.
+
+00:04:33.440 --> 00:04:38.700
+Dan ini adalah topik yang sulit tetapi saya berjanji itu akan masuk akal pada akhir dari semua itu.
+
+00:04:38.700 --> 00:04:39.250
+Baiklah.
+
+00:04:39.320 --> 00:04:42.650
+Dalam video berikutnya mari kita lihat lebih dekat pada Dr.

@@ -1,0 +1,871 @@
+﻿WEBVTT
+
+00:00:00.510 --> 00:00:03.900
+Baiklah kita semakin dekat dan dekat untuk memiliki tampilan kita seperti ini
+
+00:00:03.900 --> 00:00:07.730
+Tetapi kami melihat dengan jelas bahwa kami memiliki kotak pencarian di sini.
+
+00:00:07.920 --> 00:00:14.410
+Jadi dalam video ini kita akan berupaya agar interaktif ini melihat kembali ke aplikasinya.
+
+00:00:14.430 --> 00:00:15.100
+Kami melihat itu.
+
+00:00:15.120 --> 00:00:21.230
+Yah kita pasti membutuhkan judul dan kotak pencarian jadi mari kita buat itu.
+
+00:00:21.310 --> 00:00:22.730
+Jika saya pergi ke indeks.
+
+00:00:22.950 --> 00:00:29.560
+Ya saya pikir sekarang bahwa kita secara resmi membangun aplikasi alih-alih memiliki komponen Carlist di
+
+00:00:29.560 --> 00:00:38.200
+sini kita harus memiliki satu komponen besar yang disebut aplikasi dan aplikasi ini akan menjadi bapak dari semua anak kita semua
+
+00:00:38.200 --> 00:00:39.340
+komponen kita.
+
+00:00:39.850 --> 00:00:47.060
+Ayo lakukan itu, mari kita membangun komponen aplikasi terlebih dahulu.
+
+00:00:47.220 --> 00:00:53.010
+Dan komponen aplikasi ini lagi-lagi akan mengimpor aksi ulang
+
+00:00:57.570 --> 00:01:00.420
+dari aksi ulang dan
+
+00:01:06.750 --> 00:01:19.240
+aplikasi akan sama dengan komponen daftar kartu sedangkan kita bisa menyalin dan memasukkannya ke sini dan lagi mengubahnya ke tabel.
+
+00:01:19.500 --> 00:01:20.790
+Kami ingin
+
+00:01:23.790 --> 00:01:25.700
+mengimpor komponen daftar
+
+00:01:30.380 --> 00:01:37.350
+kartu dan kami juga ingin agar robot kami benar-benar diimpor di sini.
+
+00:01:37.490 --> 00:01:38.890
+Jadi kita punya akses ke sana.
+
+00:01:40.070 --> 00:01:45.920
+Dan akhirnya kami sekarang hanya ingin me-render komponen aplikasi sehingga kami
+
+00:01:45.920 --> 00:01:48.470
+bisa mengembalikannya seperti semula.
+
+00:01:48.680 --> 00:01:53.990
+Kami menyimpan, kami harus jelas mengekspor aplikasi kami.
+
+00:01:54.000 --> 00:02:04.130
+Jadi kita akan mengatakan aplikasi default X sports simpan ini mari kita kembali.
+
+00:02:04.380 --> 00:02:04.660
+Ya.
+
+00:02:04.710 --> 00:02:06.210
+Semuanya masih berfungsi.
+
+00:02:07.010 --> 00:02:11.350
+Sekarang dalam Carlist ini kami juga memiliki tajuk.
+
+00:02:11.420 --> 00:02:14.640
+Jadi kita akan melakukan yang kita akan katakan teman
+
+00:02:17.960 --> 00:02:22.810
+Roble dan sekali lagi ingat bahwa kita perlu mengembalikan hanya satu orang tua tunggal.
+
+00:02:22.820 --> 00:02:27.050
+Jadi kita perlu melakukan sesuatu seperti div
+
+00:02:31.550 --> 00:02:37.630
+untuk membungkusnya dan saya harus menutup tag H-1 ini dengan benar.
+
+00:02:37.660 --> 00:02:46.000
+Saya memiliki judul teman robot saya dan kami juga membutuhkan kotak pencarian dan juga H-1 mudah dan kami sekarang harus
+
+00:02:46.000 --> 00:02:48.070
+membangun komponen untuk itu.
+
+00:02:48.100 --> 00:02:56.660
+Sepertinya kami mungkin ingin membuat komponen kotak pencarian untuk aplikasi ini, jadi mari kita lakukan itu.
+
+00:02:56.660 --> 00:03:09.330
+Saya ingin mengatakan impor kotak pencarian dari file yang akan membuat disebut kotak pencarian kita akan membuat file baru.
+
+00:03:19.760 --> 00:03:26.000
+Dan file ini akan meminta impor bertindak ulang dari tindakan kembali dan
+
+00:03:28.980 --> 00:03:30.430
+kotak pencarian.
+
+00:03:32.490 --> 00:03:36.060
+Kami akan memiliki fungsi yang mengembalikan.
+
+00:03:36.090 --> 00:03:38.080
+Mari kita pikirkan apa yang dikembalikan.
+
+00:03:39.360 --> 00:03:43.790
+Yah itu pasti mengembalikan input yang benar.
+
+00:03:43.830 --> 00:03:47.860
+Itu adalah tipe pencarian.
+
+00:03:48.150 --> 00:03:51.520
+Dan mari kita juga memiliki placeholder.
+
+00:03:51.660 --> 00:03:54.300
+Mari kita tutup ini dan placeholder.
+
+00:03:55.490 --> 00:04:02.680
+Yang mengatakan Cari robot.
+
+00:04:02.830 --> 00:04:15.030
+Kami menutup ini dan menyimpan dan kami harus mengekspor Ekspor kotak pencarian default simpan kompilasi.
+
+00:04:15.030 --> 00:04:16.750
+Baiklah kita memiliki kotak pencarian kita.
+
+00:04:16.780 --> 00:04:19.170
+Tapi sementara itu tidak mencari apa-apa
+
+00:04:22.680 --> 00:04:29.080
+sekarang, mari kita tambahkan ini pada baris baru kita supaya terlihat lebih bagus dan itu selalu ide
+
+00:04:29.080 --> 00:04:35.500
+yang baik kalau-kalau Anda ingin menambahkan lebih banyak hal ke kotak pencarian untuk membungkus semuanya dalam div.
+
+00:04:35.620 --> 00:04:37.210
+Jadi saya akan melakukannya sekarang.
+
+00:04:39.620 --> 00:04:47.930
+Dan hari ini kita hanya akan memiliki nama kelas padding untuk menggunakan Tatiana lagi dan dengan
+
+00:04:47.930 --> 00:04:51.120
+input kita dapat melakukan nama kelas.
+
+00:04:51.390 --> 00:04:55.360
+Dan saya tahu ini terlihat bagus jadi saya hanya akan menyalin dan menempel.
+
+00:04:55.380 --> 00:04:58.420
+Anda hanya melapisi dia dengan latar belakang.
+
+00:04:58.430 --> 00:05:00.160
+Cahaya biru.
+
+00:05:00.180 --> 00:05:02.870
+Jika saya melakukan ini dan mari kita kembali.
+
+00:05:02.880 --> 00:05:03.420
+Baiklah.
+
+00:05:03.540 --> 00:05:04.750
+Ini terlihat lebih baik.
+
+00:05:04.770 --> 00:05:06.350
+Kami ingin memusatkan segalanya.
+
+00:05:06.510 --> 00:05:14.530
+Jadi mungkin di aplikasi kita bisa menambahkan nama kelas sama dengan pusat pajak.
+
+00:05:14.530 --> 00:05:15.890
+Lihat apakah itu berhasil.
+
+00:05:16.960 --> 00:05:17.610
+Ini dia.
+
+00:05:17.680 --> 00:05:19.290
+Itu lebih baik.
+
+00:05:19.300 --> 00:05:21.220
+Saya suka ini atau pada.
+
+00:05:21.400 --> 00:05:25.550
+Sekarang bagaimana kita bisa membuat ini interaktif.
+
+00:05:25.610 --> 00:05:30.940
+Hingga saat ini kami baru saja memiliki situs web statis ini tetapi situs web nyata benar interaktif.
+
+00:05:33.600 --> 00:05:36.380
+Mari kita pikirkan hal ini secara logis.
+
+00:05:36.510 --> 00:05:39.330
+Kami punya aplikasi.
+
+00:05:39.540 --> 00:05:51.520
+Kami memiliki kotak pencarian dan kami memiliki daftar kartu tetapi komponen kotak pencarian perlu berkomunikasi dengan Carlist dan
+
+00:05:51.520 --> 00:05:54.830
+sama dengan Carlist Carlist.
+
+00:05:54.910 --> 00:06:03.830
+Senang mengetahui apa yang ada di kotak pencarian sehingga dapat menyaring robot yang sesuai.
+
+00:06:03.830 --> 00:06:10.000
+Mari kita kembali ke gambar kita bahwa kita memiliki aliran data satu arah melihat ini.
+
+00:06:10.000 --> 00:06:20.380
+Kami memiliki komponen aplikasi dan kemudian komponen daftar kartu yang memiliki kartu dan kemudian komponen kotak pencarian yang tidak
+
+00:06:20.860 --> 00:06:22.740
+memiliki anak sekarang.
+
+00:06:22.870 --> 00:06:29.980
+Tetapi agar kedua orang ini dapat berkomunikasi, kami memiliki aliran data satu arah yaitu mereka perlu mengirimkan informasi
+
+00:06:29.980 --> 00:06:36.100
+mereka kepada orang tua mereka dan orang tua memberi tahu mereka apa yang harus dilakukan.
+
+00:06:37.180 --> 00:06:38.990
+Sekarang bagaimana kita bisa melakukan itu.
+
+00:06:40.250 --> 00:06:46.820
+Sampai sekarang kami hanya memiliki beberapa data yang baru saja kami selesaikan tetapi kami tidak pernah memilikinya
+
+00:06:46.970 --> 00:06:51.860
+di mana salah satu anak harus memodifikasi data atau berkomunikasi dengan tetangga
+
+00:06:54.720 --> 00:06:56.680
+untuk melakukan hal ini.
+
+00:06:56.680 --> 00:07:06.700
+Re-act memiliki ide tentang sesuatu yang disebut state hingga sekarang kita belajar tentang alat peraga seperti properti yang
+
+00:07:06.700 --> 00:07:15.120
+terus kita lewati tetapi kita tidak pernah mengubahnya karena bereaksi hanya membaca alat peraga.
+
+00:07:15.130 --> 00:07:24.060
+Jika saya pergi ke Carlist itu hanya mengatur ulang alat peraga yang diterima dan itu hanya membuat
+
+00:07:24.060 --> 00:07:33.280
+sesuatu dan ini aliran data satu arah sangat bagus karena daftar kartu ini adalah fungsi murni itu menerima
+
+00:07:33.340 --> 00:07:37.600
+input dan kemudian selalu mengembalikan output yang sama.
+
+00:07:37.600 --> 00:07:42.590
+Jadi jika robot selalu sama itu akan selalu mengembalikan hal yang sama.
+
+00:07:42.790 --> 00:07:48.400
+Ini adalah fungsi murni deterministik dan ini adalah sesuatu yang telah kita bicarakan sebelumnya dan ini adalah hal
+
+00:07:48.400 --> 00:07:49.680
+yang sangat bagus.
+
+00:07:49.780 --> 00:07:55.800
+Komponen-komponen ini adalah apa yang disebut komponen murni dan beberapa bahkan menyebutnya komponen bodoh.
+
+00:07:56.140 --> 00:08:01.420
+Itu hanya berarti bahwa mereka tidak benar-benar perlu tahu tentang apa pun selain fakta bahwa
+
+00:08:01.420 --> 00:08:04.940
+mereka adalah fungsi murni yang menerima sesuatu dan mengembalikan sesuatu.
+
+00:08:05.140 --> 00:08:08.840
+Dan ini sangat bagus karena kita selalu tahu seperti apa ini nantinya.
+
+00:08:10.490 --> 00:08:12.940
+Dan itulah yang kami miliki sampai saat ini.
+
+00:08:13.160 --> 00:08:21.710
+Tapi sekarang kita harus khawatir tentang sesuatu selain alat peraga alat peraga tidak pernah mengubah alat peraga selalu hanya input yang kita
+
+00:08:21.710 --> 00:08:24.360
+dapatkan dan kita tidak pernah memodifikasinya.
+
+00:08:25.130 --> 00:08:34.610
+Tetapi dalam hal ini kita membutuhkan memori di aplikasi kita, kita perlu ini untuk berkomunikasi dengan ini dan juga mengubah dan
+
+00:08:34.610 --> 00:08:35.940
+memperbarui sesuai.
+
+00:08:36.290 --> 00:08:44.330
+Dan itulah yang sedang dalam kondisi aksi ulang dan Anda akan sering mendengar ini
+
+00:08:45.290 --> 00:08:54.010
+dalam pemrograman komputer hanya berarti deskripsi keadaan aplikasi Anda hanyalah sebuah objek objek yang menggambarkan aplikasi Anda.
+
+00:08:54.380 --> 00:09:02.600
+Dan keadaan ini yang menggambarkan aplikasi kita adalah robot dan barang apa pun yang dimasukkan di kotak
+
+00:09:04.050 --> 00:09:06.980
+pencarian dan status dapat berubah.
+
+00:09:07.050 --> 00:09:12.960
+Kami dapat mengubah nilai kotak pencarian nilai input dan kami dapat mengubah
+
+00:09:12.960 --> 00:09:15.140
+apa arti array robot.
+
+00:09:15.150 --> 00:09:17.140
+Apa yang ditampilkan.
+
+00:09:17.240 --> 00:09:19.350
+Ini adalah aturan yang harus Anda ingat.
+
+00:09:19.520 --> 00:09:26.270
+Alat peraga hanyalah hal-hal yang keluar dari negara.
+
+00:09:26.380 --> 00:09:34.440
+Jadi orang tua memberi makan status menjadi komponen anak dan segera setelah komponen komponen anak menerima
+
+00:09:34.440 --> 00:09:42.100
+keadaan itu adalah properti yang anak tidak pernah dapat mengubah properti itu orang tua hanya mengatakan
+
+00:09:42.100 --> 00:09:47.590
+apa negara itu dan anak yang kita lihat sebagai robot.
+
+00:09:47.590 --> 00:09:58.030
+Jadi hal pertama yang perlu kita lakukan adalah mulai bisa menggunakan status di aplikasi kita deskripsi tentang apa yang
+
+00:09:58.540 --> 00:10:00.610
+seharusnya negara kita.
+
+00:10:00.610 --> 00:10:07.900
+Jadi mari kita lakukan keadaan konstan untuk saat ini dan menunjukkan kepada Anda bahwa keadaan
+
+00:10:08.340 --> 00:10:14.290
+kita perlu memiliki array robot dan perlu kita sebut saja bidang pencarian.
+
+00:10:14.560 --> 00:10:18.660
+Dan ini adalah apa pun yang dibutuhkan bidang pencarian kami.
+
+00:10:18.760 --> 00:10:25.450
+Tetapi untuk menggunakan keadaan kita harus kembali ke cara asli kita bahwa
+
+00:10:25.450 --> 00:10:37.990
+kita menciptakan komponen Riak jika Anda ingat ini ketika kami pertama kali membuat re-act up, kami membuat kelas dan kami melakukannya dengan
+
+00:10:38.340 --> 00:10:40.350
+mengatakan X sport
+
+00:10:46.380 --> 00:10:51.470
+default atau ekspor X Stenz atau bereaksi komponen Daut.
+
+00:10:51.610 --> 00:11:02.590
+Itu memperluas kelas komponen dan lagi kita bisa menggunakan singkatan di sini dan katakan saja sekarang kita bisa menghapus reac dari
+
+00:11:02.590 --> 00:11:03.590
+sini.
+
+00:11:04.460 --> 00:11:14.770
+Dan ini selalu memiliki fungsi render yang harus mengembalikan sesuatu yang ini
+
+00:11:18.940 --> 00:11:25.130
+lagi hanya sintaks yang harus Anda gunakan.
+
+00:11:25.200 --> 00:11:27.070
+Simpan ini.
+
+00:11:27.230 --> 00:11:30.650
+Dan saya membuat kesalahan di sini daripada mengekspor ini harus mengatakan kelas
+
+00:11:30.740 --> 00:11:35.590
+Jadi aplikasi kelas memperluas komponen dan kemudian kami melakukan ekspor.
+
+00:11:35.630 --> 00:11:36.670
+Aplikasi default.
+
+00:11:36.680 --> 00:11:43.700
+Jadi sekali lagi kami hanya mendeklarasikan kelas yang saya simpan dan kami hanya memiliki sesuatu yang mengatakan status
+
+00:11:43.700 --> 00:11:48.220
+diberi nilai tetapi tidak pernah digunakan. Itu karena itu cukup benar.
+
+00:11:48.220 --> 00:11:49.050
+Kami tidak menggunakannya.
+
+00:11:49.150 --> 00:11:52.960
+Jadi bagaimana kita dapat menambahkan status akan bereaksi.
+
+00:11:52.960 --> 00:11:55.990
+Kami hanya melakukan konstruktor.
+
+00:11:55.990 --> 00:12:03.640
+Anda mungkin ingat ini sejak kita berbicara tentang objek dan konstruktor ini dan di sini kita dapat
+
+00:12:03.700 --> 00:12:05.100
+mendeklarasikan keadaan.
+
+00:12:05.280 --> 00:12:21.350
+Kami hanya mengatakan bahwa keadaan titik ini sama dengan tujuan di sini, kami hanya menempatkan apa pun yang kami inginkan dimiliki negara kami.
+
+00:12:21.350 --> 00:12:27.560
+Jadi jika saya menyimpan ini saya mendapatkan ini tidak diperbolehkan sebelum super.
+
+00:12:27.560 --> 00:12:33.960
+Sekali lagi sesuatu yang mungkin Anda ingat dari video objek lanjutan untuk menggunakan ini.
+
+00:12:34.220 --> 00:12:42.910
+Kita harus melakukan hal aneh ini di mana kita memanggil super yang memanggil konstruktor komponen.
+
+00:12:43.020 --> 00:12:48.470
+Jika saya melakukan ini dan menyimpan semuanya bekerja dengan baik.
+
+00:12:49.890 --> 00:13:00.750
+Dan sekarang kita memiliki negara kita yang merupakan robot dan bidang pencarian dan keadaan ini seperti yang saya katakan sebelumnya adalah apa yang
+
+00:13:00.750 --> 00:13:05.820
+menggambarkan atau aplikasi. Ini adalah hal-hal yang dapat berubah dan
+
+00:13:05.820 --> 00:13:11.700
+itu adalah keadaan yang dapat mengubah dan mempengaruhi aplikasi kita biasanya hidup.
+
+00:13:11.790 --> 00:13:19.450
+Komponen induk komponen yang merupakan induk yang hanya melewati status ke komponen yang berbeda.
+
+00:13:19.480 --> 00:13:29.120
+Tapi sekarang saya dapat mengakses robot bukan dari sini tetapi dari robot dot state DOT ini.
+
+00:13:29.250 --> 00:13:34.190
+Dan lagi hanya bereaksi Sendak mengatakan Anda harus terbiasa.
+
+00:13:34.230 --> 00:13:37.150
+Baiklah jadi semuanya bekerja seperti yang diharapkan.
+
+00:13:37.440 --> 00:13:47.160
+Dan apakah Anda melihat bahwa negara kita yang merupakan robot sekarang diturunkan sebagai alat peraga sehingga daftar kartu menerima robot
+
+00:13:47.280 --> 00:13:50.420
+sebagai alat peraga meskipun dalam aplikasi.
+
+00:13:50.640 --> 00:13:51.290
+Iya nih.
+
+00:13:51.390 --> 00:13:59.040
+Itu keadaan dan seperti yang saya katakan karena aplikasi sekarang memiliki negara yang mencakup robot.
+
+00:13:59.140 --> 00:14:02.420
+Itu diizinkan untuk mengubahnya.
+
+00:14:02.580 --> 00:14:11.470
+Sekarang cara kita berkomunikasi mereka, kita memiliki dua lembah ini dan idealnya di kotak pencarian saya memiliki
+
+00:14:11.470 --> 00:14:19.840
+sesuatu yang disebut pada perubahan pencarian yang lagi-lagi adalah fungsi yang saya hanya akan membuat.
+
+00:14:20.440 --> 00:14:23.300
+Ini hanya nama acak yang saya buat.
+
+00:14:23.620 --> 00:14:30.190
+Dan pada perubahan pencarian saya ingin mengatakan bahwa setiap kali input berubah sama seperti yang kami
+
+00:14:30.610 --> 00:14:37.510
+lakukan dengan manipulasi Dom kami mendapatkan sebuah acara dan dalam acara ini saya akan menghibur Dalt log
+
+00:14:41.370 --> 00:14:44.560
+acara ini membuat fungsi dan saya inginkan.
+
+00:14:44.570 --> 00:14:49.050
+Setiap saat input ini berubah untuk memicu konsol semua kecuali.
+
+00:14:49.120 --> 00:14:58.840
+Jadi kita dapat melewati ini sebenarnya sekarang saya dapat mengatakan perubahan pencarian pada perubahan pencarian tapi sekali lagi karena ini adalah objek kita
+
+00:14:58.840 --> 00:15:09.060
+harus mengatakan titik ini sehingga ia mengatakan ini yang merupakan aplikasi Daut jawaban perubahan sedang mencari jika saya menyimpan ini dan sekarang pergi ke
+
+00:15:10.000 --> 00:15:16.970
+kotak pencarian saya sekarang memiliki perubahan pencarian sebagai fungsi jadi saya hanya bisa mengatakan seperti HMO
+
+00:15:21.490 --> 00:15:30.660
+akan ingat dan dia semua melakukan perubahan pada perubahan T. M ..
+
+00:15:30.900 --> 00:15:32.100
+Itu sebuah acara.
+
+00:15:32.160 --> 00:15:35.690
+Kami hanya mendengarkan setiap saat input berubah.
+
+00:15:36.210 --> 00:15:39.660
+Saya bisa katakan pada perubahan sama dengan
+
+00:15:42.370 --> 00:15:43.640
+perubahan pencarian.
+
+00:15:43.930 --> 00:15:45.540
+Mari kita lihat apakah itu berhasil.
+
+00:15:45.640 --> 00:15:46.680
+Saya tidak mendapatkan kesalahan.
+
+00:15:46.690 --> 00:15:53.240
+Jika saya kembali ke aplikasi saya, saya membuka konsol dan mengetik sesuatu seperti itu.
+
+00:15:53.290 --> 00:16:01.090
+Saya mendapatkan acara dan ini adalah sesuatu yang harus Anda ingat adalah bahwa dengan
+
+00:16:01.090 --> 00:16:09.090
+sebuah acara, kami selalu memiliki nilai target acara acara yang harus memberi kami nilai pencarian.
+
+00:16:09.160 --> 00:16:13.350
+Mari kita simpan itu dan ketik sesuatu.
+
+00:16:15.060 --> 00:16:19.000
+Lihat itu kita sekarang memperhatikan perbedaan saat kita mengetik.
+
+00:16:19.970 --> 00:16:22.710
+Jadi mari kita bahas sekali lagi apa yang baru saja terjadi.
+
+00:16:23.600 --> 00:16:25.590
+Dan lagi saya tahu ini sulit.
+
+00:16:25.610 --> 00:16:31.110
+Butuh beberapa saat untuk mendapatkan ketika kami pertama kali memulai tetapi diagram ini benar-benar menjelaskan dengan baik.
+
+00:16:32.020 --> 00:16:34.120
+Saya memiliki komponen aplikasi saya.
+
+00:16:34.120 --> 00:16:43.140
+Kotak pencarian saya dan kartu saya setiap kali kotak pencarian berubah pada perubahan saya akan
+
+00:16:43.680 --> 00:16:48.340
+menjalankan fungsi saya akan memanggil fungsi ini
+
+00:16:48.600 --> 00:16:50.970
+Dan cara kita menyebutnya adalah kita tambahkan ini.
+
+00:16:51.060 --> 00:16:58.170
+Ingat bagaimana ketika kami melakukan acara Dom kami mendefinisikan fungsi dan kemudian setiap kali acara
+
+00:16:58.170 --> 00:16:59.820
+itu akan menyebutnya
+
+00:16:59.850 --> 00:17:08.660
+Jadi kami katakan setiap kali acara pertukaran dipicu memanggil fungsi perubahan pencarian.
+
+00:17:08.880 --> 00:17:16.260
+Dan jika Anda ingat fungsi perubahan pencarian yang merupakan prop adalah fungsi perubahan pencarian yang didefinisikan
+
+00:17:16.260 --> 00:17:17.390
+dalam aplikasi.
+
+00:17:17.400 --> 00:17:19.430
+Itulah cara kami berkomunikasi dengan orang tua.
+
+00:17:19.470 --> 00:17:24.690
+Itu memicu acara yang dikatakan orang tua membantu menjalankan fungsi ini.
+
+00:17:25.020 --> 00:17:29.770
+Dan sekarang fungsi ini membuat Ron.
+
+00:17:29.880 --> 00:17:39.090
+Tetapi sekarang setelah saya memiliki nilai input pencarian, saya sekarang dapat langsung mengkomunikasikan input pencarian itu ke
+
+00:17:39.270 --> 00:17:40.880
+daftar robot.
+
+00:17:41.070 --> 00:17:42.600
+Tetapi lihat bagaimana itu bekerja.
+
+00:17:42.690 --> 00:17:44.510
+Kita bisa buat yang sangat.
+
+00:17:44.550 --> 00:18:00.150
+Katakanlah robot yang difilter dan ini akan sama dengan robot DOT keadaan ini dan robot ini yang merupakan array.
+
+00:18:00.200 --> 00:18:08.150
+Sekali lagi ini adalah bagaimana kita mengakses negara akan menggunakan array filter filtering.
+
+00:18:08.360 --> 00:18:17.240
+Kami memberikannya robot dan sekarang array kami harus mengembalikan suatu kondisi dan kondisinya akan menjadi
+
+00:18:18.770 --> 00:18:19.480
+robot.
+
+00:18:19.490 --> 00:18:28.350
+Dot name dan kita akan melakukan sesuatu yang belum pernah kita lihat sebelumnya yaitu huruf kecil.
+
+00:18:28.660 --> 00:18:33.790
+Dan ini adalah metode yang dilengkapi dengan semua string dan itu hanya membuat semuanya huruf kecil.
+
+00:18:33.820 --> 00:18:39.760
+Dan ini bagus untuk perbandingan sehingga kita tidak harus membandingkan huruf besar atau kecil.
+
+00:18:39.930 --> 00:18:51.590
+Dan jika nama robot yang sekarang termasuk huruf kecil adalah metode lain dan sekali lagi itu
+
+00:18:51.620 --> 00:18:58.400
+pra-dibangun ke dalam javascript jika termasuk bidang pencarian.
+
+00:18:58.550 --> 00:19:02.820
+Dan lagi kami ingin lakukan untuk huruf kecil dalam kasus.
+
+00:19:03.080 --> 00:19:08.080
+Nah kalau-kalau kita menggunakan huruf besar atau huruf kecil itu berfungsi dua arah.
+
+00:19:08.450 --> 00:19:09.210
+Dan itu dia.
+
+00:19:09.410 --> 00:19:16.320
+Jika nama robot dalam huruf kecil termasuk Dan ini melakukan perbandingan.
+
+00:19:16.480 --> 00:19:26.350
+Jika sesuatu dalam string termasuk dua huruf kecil Nah maka hanya mengembalikan robot yang mengembalikan true ke
+
+00:19:26.350 --> 00:19:26.950
+ini.
+
+00:19:26.980 --> 00:19:29.120
+Mari selamatkan.
+
+00:19:29.240 --> 00:19:33.180
+Dan Anda lihat di sini bagaimana kita mendapatkan bidang pencarian di sana karena itu bagian dari negara bagian.
+
+00:19:33.200 --> 00:19:38.150
+Saya harus melakukan bidang pencarian DOT titik keadaan ini.
+
+00:19:38.350 --> 00:19:42.090
+Jika saya menyimpan ini saya mengerti.
+
+00:19:42.090 --> 00:19:44.820
+Filter robot diberi nilai tetapi tidak pernah digunakan.
+
+00:19:44.820 --> 00:19:49.270
+Tapi jangan khawatir, kami tidak bisa sekarang Konsole mencatat ini dan melihat apa yang kami dapatkan.
+
+00:19:51.280 --> 00:19:59.920
+Dengan menyimpan dan mari kita kembali ke aplikasi kita dan jika saya mencari sesuatu di sini saya mendapatkan kesalahan.
+
+00:20:00.060 --> 00:20:03.460
+Dan ini adalah kesalahan yang sangat membingungkan.
+
+00:20:03.480 --> 00:20:05.020
+Ini rumit untuk pertama kalinya.
+
+00:20:05.040 --> 00:20:06.450
+Tapi bersabarlah di sini.
+
+00:20:06.570 --> 00:20:11.560
+Masalahnya sekarang adalah nilai dari ini.
+
+00:20:12.210 --> 00:20:23.160
+Yah itu tidak merujuk ke aplikasi karena peristiwa yang terjadi di input nilai ini adalah input dan input tidak
+
+00:20:23.160 --> 00:20:33.240
+memiliki robot DOT dan ini adalah trik yang selalu Anda lupakan tetapi hanya ingatlah ini sebagai aturan
+
+00:20:33.240 --> 00:20:35.010
+praktis .
+
+00:20:36.010 --> 00:20:44.020
+Dengan apa pun yang berasal dari reaksi maka konstruktor dan render sudah dibuat sebelumnya dan bereaksi setiap
+
+00:20:44.020 --> 00:20:54.560
+kali Anda membuat metode sendiri pada komponen, gunakan sintaks ini begitu juga fungsinya dan ini memastikan bahwa nilai ini sesuai dengan tempat
+
+00:20:54.560 --> 00:20:57.860
+ia dibuat yang merupakan aplikasi .
+
+00:20:58.160 --> 00:20:59.270
+Saya tahu ini membingungkan.
+
+00:20:59.270 --> 00:21:00.560
+Anda dapat membaca lebih lanjut tentang itu.
+
+00:21:00.560 --> 00:21:02.240
+Saya akan meninggalkan sumber daya untuk itu.
+
+00:21:02.240 --> 00:21:04.370
+Ini topik yang sulit didapat.
+
+00:21:04.700 --> 00:21:06.230
+Tapi sekali lagi aturan praktis.
+
+00:21:06.230 --> 00:21:07.210
+Gunakan panah.
+
+00:21:07.250 --> 00:21:10.910
+Jika saya melakukan ini sekarang dan saya klik.
+
+00:21:11.140 --> 00:21:11.760
+Ini dia.
+
+00:21:11.920 --> 00:21:15.090
+Saya sekarang mendapatkan robot.
+
+00:21:16.550 --> 00:21:18.200
+Tapi ini masalahnya.
+
+00:21:18.200 --> 00:21:24.590
+Cari bidang sekarang Anda melihat bahwa saya masih memiliki 10 robot itu tidak benar-benar menyaring apa pun.
+
+00:21:24.830 --> 00:21:31.510
+Dan itu karena bidang pencarian saya selalu berupa string kosong untuk memperbarui status.
+
+00:21:31.610 --> 00:21:40.820
+Sekali lagi aturan lain untuk bertindak kembali adalah melakukan set titik ini negara dan itu lagi metode yang datang dengan bereaksi dan setiap kali Anda ingin
+
+00:21:40.830 --> 00:21:47.630
+mengubah keadaan Anda selalu melakukan ini Anda tidak melakukan ini dot negara bidang pencarian DOT sama dengan Anda tidak
+
+00:21:47.660 --> 00:21:49.240
+pernah melakukan itu .
+
+00:21:49.250 --> 00:21:52.720
+Anda harus melakukan set dot ini.
+
+00:21:53.530 --> 00:22:01.610
+Nyatakan dan di sini kita hanya mengatakan kolom pencarian adalah dan lagi-lagi kita menggunakan objek
+
+00:22:01.940 --> 00:22:08.310
+sehingga bidang pencarian sekarang akan menjadi event dot target dot Valley.
+
+00:22:08.430 --> 00:22:22.620
+Jika saya menyimpan ini dan kembali, Anda melihat bahwa sekarang semuanya difilter dengan mengubah status sehingga bidang
+
+00:22:22.620 --> 00:22:26.070
+pencarian selalu diperbarui.
+
+00:22:26.070 --> 00:22:30.700
+Dan sekarang kami memfilter robot sesuai dengan bidang pencarian yang diubah.
+
+00:22:33.310 --> 00:22:33.570
+BAIK.
+
+00:22:33.590 --> 00:22:37.300
+Jadi satu hal terakhir yang melihat ini.
+
+00:22:37.540 --> 00:22:42.110
+Kami memiliki fakta bahwa filter robot masih bukan pertanda bahwa Anda benar.
+
+00:22:42.340 --> 00:22:48.340
+Jika kita melihat ini, kita sekarang telah mengomunikasikan kotak pencarian dengan OP dan bidang pencarian kita terus
+
+00:22:48.340 --> 00:22:48.880
+berubah.
+
+00:22:48.880 --> 00:22:56.680
+Jadi sekarang kita perlu mengkomunikasikannya kepada robot yang difilter yang dapat kita lakukan adalah robot yang difilter
+
+00:22:56.680 --> 00:23:02.000
+sekarang dapat digunakan sebagai alat peraga alih-alih robot negara ini.
+
+00:23:02.290 --> 00:23:03.070
+Jadi mari kita lakukan itu.
+
+00:23:03.100 --> 00:23:06.760
+Mari kita pindahkan ini ke sini.
+
+00:23:10.390 --> 00:23:16.480
+Dan sekarang kami memiliki akses ke filter robot dan alih-alih mengirimkan status ini ke robot
+
+00:23:16.480 --> 00:23:19.950
+kami, kami hanya melewati robot yang difilter.
+
+00:23:20.080 --> 00:23:23.670
+Jika saya melihat ini pastikan bilah pencarian disimpan juga.
+
+00:23:23.870 --> 00:23:29.950
+Dan sekarang saya kembali, saya akan menutup tab dan mari kita goyang.
+
+00:23:33.140 --> 00:23:34.210
+Lihat itu.
+
+00:23:34.370 --> 00:23:37.550
+Kami memiliki aplikasi kami bekerja.
+
+00:23:37.550 --> 00:23:39.880
+Betapa kerennya itu.
+
+00:23:39.910 --> 00:23:43.180
+Mari kita bahas sekali lagi untuk menunjukkan kepada Anda apa yang dilakukannya.
+
+00:23:45.100 --> 00:23:54.860
+Kami memiliki komponen aplikasi kami yang memiliki dua robot negara dan bidang pencarian dan karena aplikasi memiliki status tersebut.
+
+00:23:54.890 --> 00:24:04.130
+Setiap komponen yang memiliki status menggunakan sintaksis kelas sehingga mereka dapat menggunakan fungsi konstruktor untuk membuat keadaan titik ini dan
+
+00:24:04.220 --> 00:24:08.880
+keadaan ini adalah apa yang berubah dalam suatu aplikasi.
+
+00:24:08.900 --> 00:24:11.310
+Itu yang menggambarkan aplikasi.
+
+00:24:11.330 --> 00:24:16.640
+Ingat ketika saya mengatakan Dom virtual hanya objek javascript Dom
+
+00:24:16.640 --> 00:24:26.930
+virtual hanya objek baru yang mengumpulkan seluruh negara ini dan bertindak kembali menggunakan negara ini untuk membuat dan meneruskannya sebagai alat peraga
+
+00:24:26.930 --> 00:24:32.680
+untuk komponen ini sehingga komponen ini yang hanya fungsi murni bisa membuat.
+
+00:24:32.880 --> 00:24:37.950
+Dan kita selalu tahu bahwa aplikasi akan terlihat sama karena sementara mereka hanya fungsi murni
+
+00:24:39.300 --> 00:24:44.450
+sederhana, kita mengelola keadaan ini dan di sini aplikasi adalah satu-satunya hal yang dapat mengubah keadaan ini.
+
+00:24:44.580 --> 00:24:48.190
+Tapi itu bisa mewariskan hal-hal seperti alat peraga.
+
+00:24:48.390 --> 00:24:53.870
+Jadi kami meneruskan perubahan pertama ke kotak pencarian dan kotak pencarian.
+
+00:24:54.090 --> 00:24:59.700
+Setiap kali ada pertukaran pada input itu memungkinkan aplikasi tahu hei ada perubahan.
+
+00:24:59.760 --> 00:25:00.900
+Jalankan fungsi ini.
+
+00:25:00.990 --> 00:25:05.870
+Ini menjalankan fungsi dengan acara dan memperbarui keadaan bidang pencarian.
+
+00:25:06.000 --> 00:25:13.960
+Untuk apa pun yang kita ketikkan sekarang dengan informasi yang kita miliki dari kotak
+
+00:25:14.380 --> 00:25:24.880
+pencarian, kita sekarang dapat berkomunikasi dengan daftar kartu dan mengatakannya. Hei, aku ingin memfilter keadaan robot untuk sekarang hanya memiliki apa
+
+00:25:25.180 --> 00:25:34.930
+yang termasuk dalam bidang pencarian dan bukannya meneruskan menyatakan kepada robot kami, kami baru saja melewati robot yang difilter.
+
+00:25:35.080 --> 00:25:38.930
+Anda mungkin bertanya pada diri sendiri robot apa yang tidak pernah benar-benar berubah melakukannya.
+
+00:25:38.950 --> 00:25:44.950
+Kami selalu membuat array baru yang disebut Filter robot dan kami selalu menyampaikan apakah ini perlu
+
+00:25:45.220 --> 00:25:46.860
+menjadi bagian dari negara.
+
+00:25:46.990 --> 00:25:53.500
+Dan saat ini bukan karena kita hanya memiliki robot yang dikodekan tetapi ketika kita nanti di kursus Anda
+
+00:25:53.500 --> 00:25:56.040
+akan melihat bahwa itu tidak terjadi.
+
+00:25:56.170 --> 00:26:02.500
+Sebagian besar waktu Anda mendapatkan bahwa pengguna adalah robot dari tempat lain melalui internet dalam
+
+00:26:02.500 --> 00:26:08.540
+hal ini kita akan membutuhkan robot untuk berubah dari array kosong ke array.
+
+00:26:08.540 --> 00:26:14.420
+Setelah kami pergi dan ambil semua pengguna kami.
+
+00:26:14.690 --> 00:26:15.470
+Baiklah.
+
+00:26:15.470 --> 00:26:16.820
+Itu banyak.
+
+00:26:16.820 --> 00:26:22.940
+Saya tahu saya tahu ini banyak informasi, banyak sintaks baru tetapi seperti yang Anda lihat dari beberapa baris
+
+00:26:22.940 --> 00:26:26.110
+kode, kami telah membangun aplikasi yang cukup hebat.
+
+00:26:26.360 --> 00:26:30.590
+Dan video berikutnya kita akan menyelesaikan ini dan menyelesaikan aplikasi kita.
+
+00:26:30.620 --> 00:26:33.430
+Jadi terlihat cantik seperti ini.
+
+00:26:33.490 --> 00:26:34.900
+Saya akan lihat yang itu.

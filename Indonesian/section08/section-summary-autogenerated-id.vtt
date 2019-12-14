@@ -1,0 +1,357 @@
+﻿WEBVTT FILE
+
+1
+00:02.220 --> 00:06.540
+Nah Sugoi selanjutnya ini saja masih terlihat hebat.
+
+2
+00:06.540 --> 00:10.050
+Dan terima kasih atas semua informasi di sisi server rendering.
+
+3
+00:10.050 --> 00:10.760
+Saya pikir kamu benar.
+
+4
+00:10.770 --> 00:15.660
+Saya tidak berpikir kita perlu teman Robur keluar untuk menjadi sisi server yang diberikan untuk saat ini, tetapi mungkin pada proyek masa
+
+5
+00:15.740 --> 00:17.950
+depan kita bisa menggunakan sesuatu seperti selanjutnya Sebenarnya ya.
+
+6
+00:18.210 --> 00:18.990
+Terima kasih lagi.
+
+7
+00:19.110 --> 00:20.250
+Sangat menghargai itu.
+
+8
+00:20.250 --> 00:21.210
+Ya Tuhan, kau mengagumkan.
+
+9
+00:23.640 --> 00:24.230
+Baiklah.
+
+10
+00:24.240 --> 00:25.200
+Kami sudah melakukannya lagi.
+
+11
+00:25.230 --> 00:29.330
+Tugas lain dilakukan untuk Bruno dan Kaikohe Corp ..
+
+12
+00:29.490 --> 00:35.430
+Mudah-mudahan Anda sekarang merasa nyaman dengan gagasan rendering sisi server dan rendering sisi
+
+13
+00:35.660 --> 00:43.840
+klien dan Anda dapat membuat keputusan yang cerdas tentang kapan harus menggunakan apa yang gratis. Ingat rendering sisi server
+
+14
+00:43.840 --> 00:50.450
+bagus untuk situs statis. Muat halaman awal lebih cepat dan SEO pasti lebih baik dengan mereka.
+
+15
+00:51.980 --> 00:59.260
+Kekurangannya adalah masih memuat ulang halaman secara penuh karena proses rendering menjadi lebih lambat.
+
+16
+00:59.660 --> 01:08.000
+Dan kami memiliki beberapa permintaan ke server karena meningkatkan kompleksitas rendering sisi aplikasi klien
+
+17
+01:08.120 --> 01:08.740
+kami.
+
+18
+01:08.780 --> 01:13.250
+Di sisi lain sangat bagus untuk interaksi yang kaya.
+
+19
+01:13.370 --> 01:21.710
+Perenderan situs web yang cepat setelah pemuatan awal dan itu adalah alat yang baik untuk aplikasi web tetapi
+
+20
+01:21.710 --> 01:26.330
+memang ada kekurangannya bahwa MCO sangat sulit untuk diperbaiki.
+
+21
+01:26.660 --> 01:30.020
+Dan Anda memiliki beban awal yang lebih lama.
+
+22
+01:30.240 --> 01:36.530
+Sekarang untuk menyelesaikan, saya ingin menunjukkan kepada Anda tiga grafik yang menurut saya sangat membantu.
+
+23
+01:38.300 --> 01:45.530
+Karakter pertama yang akan kita lihat adalah bagaimana sebuah jape secara teratur memberikan kunci halaman pada permintaan
+
+24
+01:45.530 --> 01:46.620
+awal kita.
+
+25
+01:46.810 --> 01:54.080
+Yang serupa tiba dan mulai dari sana kita mulai meminta semua sumber daya kita
+
+26
+01:54.200 --> 01:58.470
+termasuk file javascript besar kita file javascript tiba.
+
+27
+01:58.470 --> 02:04.210
+Ini kemudian diurai dan dievaluasi dan pandangan kita akhirnya dicat.
+
+28
+02:04.440 --> 02:06.310
+Dan kami memiliki interaktivitas.
+
+29
+02:06.480 --> 02:15.090
+Anda lihat itu membutuhkan waktu lama untuk benar-benar memiliki halaman yang bisa dikerjakan dan kita sudah membahas ini Dua-Bits
+
+30
+02:17.500 --> 02:21.220
+grafik kedua adalah dengan rendering sisi server.
+
+31
+02:21.410 --> 02:31.070
+Kami memiliki permintaan awal HMO kami muncul tetapi karena kami memiliki informasi pada halaman waria kami, kami
+
+32
+02:31.880 --> 02:34.480
+mendapatkan tampilan lebih cepat.
+
+33
+02:34.490 --> 02:40.130
+Masalahnya adalah bahwa kita mungkin memiliki tampilan dicat ke layar tetapi kita harus menunggu
+
+34
+02:40.130 --> 02:43.010
+sampai script java tiba diuraikan dan dievaluasi.
+
+35
+02:43.130 --> 02:49.400
+Jadi kami memiliki hal ini disebut lembah luar biasa di mana halaman web sepertinya sudah
+
+36
+02:49.400 --> 02:56.890
+siap dan Anda mungkin mulai mengklik tombol tetapi tidak akan mulai bekerja sampai semua bisnis javascript ini diurus.
+
+37
+02:56.940 --> 02:59.620
+Jadi mungkin ada solusi yang lebih baik.
+
+38
+03:00.790 --> 03:09.060
+Mungkin kita dapat menggunakan sesuatu yang disebut progresif render ide di balik render progresif dan Anda tahu
+
+39
+03:09.270 --> 03:15.720
+apa yang sebenarnya kita bicarakan selama kursus, kami hanya mengirimkan apa yang Anda
+
+40
+03:15.720 --> 03:18.380
+butuhkan untuk render awal.
+
+41
+03:18.510 --> 03:26.560
+Kemudian Anda secara progresif membuat lebih banyak fitur dan halaman tersedia di latar belakang saat lebih banyak hal tiba.
+
+42
+03:27.120 --> 03:30.260
+Jadi, Anda mungkin ingat pemisahan kode.
+
+43
+03:30.420 --> 03:31.520
+Itu apa adanya.
+
+44
+03:31.770 --> 03:40.260
+Pemecahan kode hanya mengirim apa yang kita butuhkan ke ujung depan di atas pemuatan lipatan yang mengirim semua yang kita butuhkan
+
+45
+03:40.380 --> 03:42.030
+ke ujung depan.
+
+46
+03:42.180 --> 03:48.000
+Dan kemudian setelah halaman web dimuat untuk pengguna maka kami mulai memuat skrip latar belakang apa
+
+47
+03:48.000 --> 03:52.550
+pun mungkin halaman baru Ibby bilah menu hanya ketika pengguna mengkliknya.
+
+48
+03:54.660 --> 04:00.700
+Idenya adalah bahwa kami membuat permintaan awal HMO tiba dan kami tidak memiliki hal-hal lembah
+
+49
+04:00.810 --> 04:07.560
+yang luar biasa bekerja sangat cepat dan kami hanya secara perlahan membuat aplikasi kami mulai bekerja di
+
+50
+04:07.560 --> 04:09.630
+latar belakang tanpa memperhatikan pengguna.
+
+51
+04:09.630 --> 04:18.220
+Dan Anda benar-benar dapat melihat ini di dokumen ulang tindakan sekali lagi jika kita pergi ke halaman Riak dan saya
+
+52
+04:18.220 --> 04:19.510
+membuka tab.
+
+53
+04:19.510 --> 04:26.600
+Jika saya masuk ke jaringan dan menyegarkan, saya melihat bahwa saya mengunduh banyak hal.
+
+54
+04:26.600 --> 04:30.730
+Kami melihat bahwa ada garis beban ini yang merupakan garis merah.
+
+55
+04:30.770 --> 04:32.540
+Jadi halaman web telah dimuat.
+
+56
+04:32.690 --> 04:42.260
+Tetapi kemudian setelah itu kita memiliki semua hal yang tampaknya dimuat di latar belakang mencoba untuk membuat pemuatan
+
+57
+04:42.260 --> 04:44.410
+progresif ini terjadi.
+
+58
+04:44.420 --> 04:53.470
+Sangat keren dan banyak perusahaan menggunakan cara semacam ini untuk membuat situs Web mereka cepat.
+
+59
+04:53.530 --> 04:58.750
+Perusahaan besar seperti Flipkart atau Ali Express.
+
+60
+04:59.020 --> 05:04.660
+Dan kemudian ada ide melayani cangkang atau kerangka seekor.
+
+61
+05:04.930 --> 05:13.330
+Perusahaan seperti Flipkart dan Ali Express menggunakan ini di mana mereka membuat server shell atau layar kerangka
+
+62
+05:14.140 --> 05:21.730
+yang segera dicetak sehingga terasa seperti konten dimuat segera meskipun di latar belakang sebenarnya ada
+
+63
+05:21.730 --> 05:25.390
+pemuatan yang terjadi di sisi klien.
+
+64
+05:26.890 --> 05:32.650
+Sekarang ini adalah kombinasi dan strategi tentang mengapa Anda mengirim ke depan dan mengapa Anda
+
+65
+05:32.650 --> 05:33.820
+membuat di server.
+
+66
+05:33.820 --> 05:35.490
+Dan itu penting untuk dipikirkan.
+
+67
+05:35.530 --> 05:40.190
+Sekali lagi sebagai pengembang senior selalu ada trade off.
+
+68
+05:40.200 --> 05:44.900
+Tidak pernah hitam dan putih benar atau salah untuk setiap situasi.
+
+69
+05:44.920 --> 05:50.590
+Anda mencoba mencari tahu apa hal terbaik yang dapat Anda lakukan dan Anda dapat mengambil bagian dari sisi
+
+70
+05:51.040 --> 05:55.290
+klien dan rendering sisi server untuk membuatnya berfungsi untuk apa pun kebutuhan Anda.
+
+71
+05:55.300 --> 06:03.040
+Misalnya ada alat yang disebut pre-rendered IO dan memungkinkan situs web javascript untuk dijelajahi untuk mesin
+
+72
+06:03.040 --> 06:10.690
+pencari dan mereka melakukannya dengan benar-benar memiliki layanan di mana mereka membuat halaman untuk Anda
+
+73
+06:10.720 --> 06:15.560
+dan Anda dapat menyimpan waria yang diberikan kepada kerupuk.
+
+74
+06:15.760 --> 06:18.400
+Dan ada banyak hal yang dapat Anda lakukan.
+
+75
+06:18.400 --> 06:25.630
+Gagasannya adalah bahwa Anda ingin tahu cara kerja berbagai hal dan kemudian memutuskan sendiri jalan mana yang ingin
+
+76
+06:25.630 --> 06:31.760
+Anda ambil dan bagian mana yang ingin Anda ambil dari masing-masing sehingga untuk menyelesaikannya.
+
+77
+06:31.760 --> 06:35.490
+Kita sudah bicara tentang rendering sisi server rendering sisi klien.
+
+78
+06:35.540 --> 06:42.600
+Kami melihat perpustakaan hebat seperti neckerchiefs yang membuat sisi server membuat aplikasi dinamis menjadi mudah.
+
+79
+06:43.040 --> 06:51.200
+Dan kami juga mengetahui bahwa perusahaan seperti Priceline Walmart Airbnb adalah penggemar berat hal-hal seperti rendering
+
+80
+06:51.200 --> 06:58.910
+sisi server karena mereka sangat peduli dengan pelanggan mereka, banyak yang datang melalui Osseo dan mereka
+
+81
+06:58.910 --> 07:01.920
+ingin memastikan itu secepat mungkin.
+
+82
+07:01.940 --> 07:08.500
+Tetapi situs web lain mungkin tidak tertarik dan menambahkan lapisan kompleksitas tambahan.
+
+83
+07:08.690 --> 07:15.290
+Jadi mereka mencoba dan melakukan sesuatu yang diberikan sisi klien tetapi juga cukup progresif di mana
+
+84
+07:15.290 --> 07:19.370
+mereka meminimalkan jumlah javascript yang kami kirim ke konten.
+
+85
+07:19.390 --> 07:25.210
+Saya pikir Brunos senang dengan keputusan kami bahwa aplikasi Roble friends tidak harus dari sisi server.
+
+86
+07:25.210 --> 07:26.540
+Sudah cukup cepat.
+
+87
+07:26.540 --> 07:32.230
+File javascript kami cukup kecil dan kami tidak terlalu peduli tentang Osseo dengan teman-teman Roble kami.
+
+88
+07:32.230 --> 07:35.640
+Jadi saya pikir kita baik tetap dengan rendering sisi klien.
+
+89
+07:35.740 --> 07:39.170
+Menurut Anda, apa yang akan saya lihat di bagian selanjutnya.

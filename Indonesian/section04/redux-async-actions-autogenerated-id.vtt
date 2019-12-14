@@ -1,0 +1,898 @@
+﻿WEBVTT
+
+00:00:00.900 --> 00:00:02.410
+Selamat datang kembali.
+
+00:00:02.420 --> 00:00:10.380
+Ada satu bagian terakhir dari teka-teki yang kita butuhkan dengan redux dan sesuatu yang kita hindari
+
+00:00:10.710 --> 00:00:12.600
+hingga saat ini.
+
+00:00:12.750 --> 00:00:14.620
+Anda lihat apakah kami akan memilih keluar.
+
+00:00:14.730 --> 00:00:15.620
+Iya nih.
+
+00:00:16.130 --> 00:00:21.840
+Anda ingat bahwa kami melakukan komponen ini yang melakukan mount mengambil permintaan.
+
+00:00:22.000 --> 00:00:23.890
+Kami memiliki permintaan yang tidak sinkron.
+
+00:00:23.890 --> 00:00:34.690
+Kami membuat permintaan ke API yang meraih pengguna mereka dan akhirnya mengatur keadaan itu menjadi robot.
+
+00:00:34.730 --> 00:00:39.890
+Tapi bagaimana cara kerjanya di redux.
+
+00:00:39.970 --> 00:00:49.070
+Karena ingat sampai titik ini semua yang kami lakukan telah sinkron karena jika kami melakukan hal yang
+
+00:00:49.070 --> 00:00:57.850
+sama seperti yang kami lakukan dengan bidang pencarian, itu tidak akan berfungsi dengan mengambil robot karena kami
+
+00:00:57.850 --> 00:01:05.860
+mengirim tindakan katakanlah mengambil robot tetapi karena itu asinkron itu akan pergi di dunia lain
+
+00:01:05.860 --> 00:01:07.810
+ke dalam API.
+
+00:01:08.700 --> 00:01:18.310
+Dan coba dapatkan robot sementara peredam hanya akan memeriksa robot dan mengatakan tidak ada robot.
+
+00:01:18.310 --> 00:01:22.770
+Ya karena pabrik API yang belum kembali.
+
+00:01:22.890 --> 00:01:24.050
+Persis seperti janji.
+
+00:01:24.090 --> 00:01:29.070
+Jadi penelitian terus berjalan dan tidak membuat perubahan karena negara tidak berubah.
+
+00:01:29.100 --> 00:01:36.690
+Jadi bagaimana kita bisa membuat tindakan yang asinkron yang masih melalui peredam toko dan kemudian
+
+00:01:36.690 --> 00:01:37.860
+membuat perubahan.
+
+00:01:39.640 --> 00:01:44.180
+Dan ini adalah tempat kami menggunakan middleware terapkan lagi.
+
+00:01:45.500 --> 00:01:54.400
+Kita dapat menggunakan sesuatu yang disebut redux phunk untuk menangani tindakan asinkron seperti panggilan AJAX.
+
+00:01:54.560 --> 00:02:04.170
+Ini adalah middleware yang menyediakan fungsi get dan fungsi pengiriman yang diteruskan Anda dapat menangani sesuatu
+
+00:02:04.170 --> 00:02:08.840
+yang disebut efek samping seperti panggilan AJAX.
+
+00:02:09.000 --> 00:02:10.440
+Dengan paket ini.
+
+00:02:10.440 --> 00:02:12.020
+Jadi, kami akan menunjukkan cara kerjanya.
+
+00:02:13.520 --> 00:02:18.050
+Hal pertama yang ingin kita lakukan adalah menginstal paket redux thung.
+
+00:02:18.130 --> 00:02:22.690
+Jadi saya akan mengatakan NPM menginstal redux thunk.
+
+00:02:22.940 --> 00:02:29.380
+Dan omong-omong seperti halnya ada banyak cara lain untuk menangani aksi asinkron dan redux
+
+00:02:29.400 --> 00:02:34.190
+tidak dibangun dari gerbang sehingga Anda memerlukan beberapa paket.
+
+00:02:34.190 --> 00:02:42.450
+Ada pilihan lain tetapi Redus redux thunk adalah yang terbaik dan paling sederhana untuk memulai.
+
+00:02:45.140 --> 00:02:45.820
+Baiklah.
+
+00:02:45.980 --> 00:02:52.320
+Kami memiliki redux thunk sekarang dan kami tidak bisa mulai menggunakannya dengan masuk ke indeks.
+
+00:02:52.390 --> 00:03:07.230
+Ya dan dengan hal di sini kita dapat mengatakan bahwa kita ingin mengimpor sesuatu yang disebut middleware thunk dari redux.
+
+00:03:07.760 --> 00:03:13.920
+Sekali lagi Anda dapat membaca semua tentang ini dan ada dokumentasi tentang mendapatkan middleware thunk HTTP.
+
+00:03:13.970 --> 00:03:18.780
+Kami sudah tahu cara menerapkan middleware ke aplikasi redoks kami, benar.
+
+00:03:18.800 --> 00:03:23.330
+Kami memiliki fungsi penerapan middleware kami.
+
+00:03:23.510 --> 00:03:31.480
+Kita bisa menambahkan aplikasi middleware phunk yang diterapkan atau tidak.
+
+00:03:31.690 --> 00:03:35.200
+Dan biarkan saya letakkan ini di baris baru sehingga Anda bisa melihatnya dengan lebih baik.
+
+00:03:36.000 --> 00:03:40.500
+Terima kasih middleware untuk middleware kami yang berlaku.
+
+00:03:40.500 --> 00:03:41.360
+Dan ini adalah pesanan.
+
+00:03:41.370 --> 00:03:48.630
+Jadi itu akan melalui middleware thunked dan kemudian middleware logger sempurna.
+
+00:03:48.840 --> 00:03:54.980
+Jadi mari kita jalankan mulai NPM.
+
+00:03:55.250 --> 00:04:00.820
+Dan saya juga akan mengatakan ini, sepertinya semuanya berjalan lancar.
+
+00:04:02.330 --> 00:04:05.280
+Kami memiliki masalah ini di mana diterapkan sekarang.
+
+00:04:05.840 --> 00:04:11.850
+Tetapi bagaimana kita benar-benar menggunakan Yah, mari kita mulai dengan langkah pertama.
+
+00:04:11.970 --> 00:04:21.310
+Hal pertama yang ingin kita lakukan adalah membuat konstanta jadi konstanta untuk meminta robot kita.
+
+00:04:21.450 --> 00:04:28.160
+Ingat dalam file aplikasi dodgiest kita memiliki larik robot ini yang akan diisi setelah
+
+00:04:28.160 --> 00:04:34.980
+komponen melakukan mount dengan setelah kita melakukan panggilan panggilan dan kita melangkah menyatakan dengan pengguna baru.
+
+00:04:35.040 --> 00:04:39.460
+Jadi konstanta kita dapat melakukan sesuatu yang mirip di atas
+
+00:04:39.470 --> 00:04:49.990
+Kami dapat mengekspor robot permintaan Konst sekarang.
+
+00:04:50.840 --> 00:04:53.780
+Karena ini akan menjadi janji.
+
+00:04:53.900 --> 00:04:58.030
+Ini akan memiliki tiga negara.
+
+00:04:58.190 --> 00:05:06.490
+Jadi yang pertama akan menjadi Pandang yang merupakan pertama kalinya kami mengirim permintaan itu akan ditunda
+
+00:05:06.490 --> 00:05:09.470
+kami menunggu janji untuk kembali.
+
+00:05:09.790 --> 00:05:22.130
+Jadi kita akan kembali menggunakan kekuatan yang sama di sini dan kita juga akan memiliki dua negara setelah pengembalian
+
+00:05:22.340 --> 00:05:25.150
+tertunda yang berhasil dan
+
+00:05:30.250 --> 00:05:31.240
+juga
+
+00:05:39.690 --> 00:05:45.860
+permintaan ini memiliki tiga tindakan yang menunggu keberhasilan gagal.
+
+00:05:45.930 --> 00:05:47.250
+Kami ingin melacak.
+
+00:05:47.730 --> 00:05:53.280
+Dan sekali lagi ini cukup standar dengan semua tindakan asinkron seperti panggilan AJAX.
+
+00:05:53.520 --> 00:06:01.670
+Jadi katakan saja dan langkah selanjutnya seperti yang kita tahu adalah membuat tindakan menggunakan hal-hal ini.
+
+00:06:01.710 --> 00:06:10.080
+Jadi mari kita kembali ke tindakan dan kali ini alih-alih hanya mengimpor bidang pencarian perubahan, mari kita mengimpor beberapa
+
+00:06:10.080 --> 00:06:11.260
+hal lagi.
+
+00:06:17.720 --> 00:06:22.770
+Saya akan mengimpor, mari kita salin dan tempel di sini karena itu banyak mengetik.
+
+00:06:23.030 --> 00:06:27.920
+Ayo pergi ke Constance.
+
+00:06:28.180 --> 00:06:29.590
+Kita
+
+00:06:32.400 --> 00:06:38.150
+akan mengimpor enam SAS yang sedang dalam proses dan
+
+00:06:42.720 --> 00:06:45.140
+akhirnya mari kita simpan.
+
+00:06:45.380 --> 00:06:48.320
+Dan ketika Anda mendapat peringatan bahwa kami sedang tidak, kami tidak menggunakannya.
+
+00:06:48.590 --> 00:06:57.790
+Jadi mari kita buat tindakan ini sekarang seperti yang kita lakukan di atas kita akan mengekspor
+
+00:06:57.790 --> 00:07:06.340
+Konst dan kami akan memberi nama robot permintaan ini dan tindakan ini dilakukan
+
+00:07:06.380 --> 00:07:08.830
+Hmm apa yang akan diambil.
+
+00:07:08.830 --> 00:07:17.810
+Yah ini agak rumit tetapi akan mengambil pengiriman dan pengiriman.
+
+00:07:17.840 --> 00:07:19.530
+Jika Anda ingat dan kami pergi ke APT.
+
+00:07:19.580 --> 00:07:20.650
+Iya nih.
+
+00:07:20.720 --> 00:07:30.580
+Adalah sesuatu yang kita gunakan dalam pengiriman MAP untuk mendukung yang kita dapatkan dari redux untuk mengirimkan tindakan untuk
+
+00:07:30.670 --> 00:07:32.150
+mengurangi kita.
+
+00:07:32.380 --> 00:07:39.100
+Dan ketika kami kembali ke sini, Anda akan melihat bahwa kami akan benar-benar meneruskan ini ke tindakan kami.
+
+00:07:39.100 --> 00:07:40.780
+Jadi kita punya akses ke sana.
+
+00:07:40.960 --> 00:07:50.030
+Tetapi sekali lagi untuk sekarang, ketahuilah bahwa kami akan mengirim dan kami pikir di sini kami akan melakukan beberapa hal
+
+00:07:50.030 --> 00:07:53.540
+yang sedikit berbeda dari yang di atas.
+
+00:07:53.540 --> 00:08:03.820
+Hal pertama ketika kita meminta robot Yah kita ingin mengirimkan tindakan yang tertunda jadi sekali lagi
+
+00:08:03.820 --> 00:08:12.430
+kita bisa melakukan sintaks standar pengiriman objek yang merupakan tipe permintaan robot yang tertunda
+
+00:08:15.020 --> 00:08:16.700
+dan payload.
+
+00:08:17.060 --> 00:08:19.390
+Ya tidak ada payload nyata.
+
+00:08:19.460 --> 00:08:26.780
+Kami hanya memiliki permintaan yang tertunda sehingga kami dapat membiarkannya seperti sekarang tanpa muatan.
+
+00:08:28.340 --> 00:08:35.220
+Selanjutnya kita memiliki sesuatu yang sinkron.
+
+00:08:35.220 --> 00:08:38.230
+Kita perlu melakukan panggilan telepon.
+
+00:08:38.340 --> 00:08:41.710
+Jadi kami memiliki fungsi pengambilan.
+
+00:08:42.060 --> 00:08:43.870
+Dan jika Anda ingat kita pergi ke APT.
+
+00:08:43.980 --> 00:08:44.690
+Iya nih.
+
+00:08:44.730 --> 00:08:52.950
+Kami memiliki API ini yang perlu kami panggil tetapi Anda juga perlu melakukan respons respons terhadap Jaison lagi.
+
+00:08:52.950 --> 00:09:02.580
+Jadi saya hanya akan menyalin semua itu ke tindakan dan hanya menyalin dan menempel ini.
+
+00:09:02.830 --> 00:09:12.600
+Jadi kami mengambil pengguna yang kami lakukan DOD dan Jaison menggunakan metode Jaisalmer pada respon.
+
+00:09:12.600 --> 00:09:17.750
+Dan akhirnya di sini kami memiliki dua pilihan.
+
+00:09:17.880 --> 00:09:23.920
+Kami memiliki DOD lalu dan DOD menangkap jika ada kesalahan atau sesuatu gagal.
+
+00:09:25.060 --> 00:09:30.800
+Dalam DOD maka kami menerima semacam data yang akan menjadi pengguna.
+
+00:09:31.300 --> 00:09:38.530
+Dan setelah kami menerima bahwa kami tidak dapat mengatakan pengiriman, kami akan mengirimkan apa yang Anda pikir
+
+00:09:38.530 --> 00:09:40.050
+akan kami kirim.
+
+00:09:40.060 --> 00:09:47.870
+Yah objek yang jenis robot permintaan diakses dan kali ini payload
+
+00:09:50.660 --> 00:09:53.360
+untuk ini akan
+
+00:09:56.160 --> 00:10:04.310
+menjadi data yang kami terima dari API dan dengan tangkapan sangat mirip.
+
+00:10:04.310 --> 00:10:11.120
+Kami akan mendapatkan semacam kesalahan dan kesalahan ini akan sekali lagi dikirim
+
+00:10:14.800 --> 00:10:18.330
+dan yang lama memiliki jenis permintaan.
+
+00:10:18.340 --> 00:10:19.610
+Robot
+
+00:10:22.460 --> 00:10:30.500
+gagal dengan muatan mari kita berikan udara yang kita terima.
+
+00:10:30.500 --> 00:10:30.950
+Baiklah.
+
+00:10:30.950 --> 00:10:39.260
+Biarkan saya membuat ini sedikit lebih kecil sehingga Anda dapat melihat sehingga kami menyimpannya dan sekarang kami memiliki tindakan kami dan
+
+00:10:39.260 --> 00:10:43.220
+tindakan ini jauh lebih rumit daripada bidang pencarian yang ditetapkan.
+
+00:10:43.220 --> 00:10:50.240
+Kami memiliki hak cara ketika kami menyebut tindakan ini sebagai pengiriman yang meminta
+
+00:10:50.330 --> 00:10:58.490
+pending robot dan kemudian kami mengambil pengguna yang kami terima pengguna dan kemudian kami berhasil
+
+00:10:59.000 --> 00:11:04.180
+dengan muatan pengguna atau kesalahan dengan muatan udara.
+
+00:11:04.230 --> 00:11:12.480
+Akhirnya kita masuk ke reduksi dan dalam pencarian ulang kita tahu bahwa kita ingin mengimpor dari konten tindakan yang sama
+
+00:11:12.780 --> 00:11:14.270
+yang kita miliki.
+
+00:11:14.270 --> 00:11:21.870
+Jadi mari kita pergi ke Constance atau mari kita pergi ke tindakan dan menyalin apa yang kita miliki di sini juga.
+
+00:11:24.720 --> 00:11:27.080
+Karena kita akan membutuhkan semua konstanta itu.
+
+00:11:28.020 --> 00:11:35.640
+Dan sekarang di sini kita akan membuat peredam baru karena alih-alih menggabungkan semua pereduksi ini kami
+
+00:11:35.640 --> 00:11:39.280
+ingin membuatnya masing-masing khusus untuk kasus penggunaannya.
+
+00:11:39.480 --> 00:11:48.490
+Ini mengurangi kekhawatiran kami tentang robot pencarian yang peredam baru akan khawatir tentang permintaan.
+
+00:11:48.630 --> 00:11:57.660
+Robot dan sekali lagi dengan sintaks yang sama kita memiliki negara yang akan Aiko menyamai
+
+00:11:58.560 --> 00:12:06.220
+keadaan awal dan kemudian tindakan yang akan memiliki objek kosong default.
+
+00:12:06.430 --> 00:12:14.390
+Dan di dalam sini objek atau di sini akan memiliki sekali lagi pernyataan beralih yang
+
+00:12:14.390 --> 00:12:22.070
+mendengarkan jenis aksi bebek dan tindakan jenis ini akan memiliki tiga kemungkinan status.
+
+00:12:22.100 --> 00:12:32.590
+Salah satunya adalah case adalah robot permintaan yang tertunda dalam hal ini kita mengembalikan objek.
+
+00:12:32.680 --> 00:12:38.080
+Tetapkan lagi objek kosong.
+
+00:12:38.180 --> 00:12:39.770
+Negara.
+
+00:12:39.980 --> 00:12:47.000
+Dan akhirnya kita akan membuat negara baru bernama sedang menunggu.
+
+00:12:47.330 --> 00:12:50.240
+Dan ini sedang
+
+00:12:53.840 --> 00:13:00.600
+menunggu untuk diatur karena robot permintaan sedang menunggu saat ini.
+
+00:13:00.600 --> 00:13:01.350
+Baiklah.
+
+00:13:01.680 --> 00:13:08.850
+Hal selanjutnya yang akan kita lakukan lagi adalah kita akan memiliki kasing untuk kali ini.
+
+00:13:09.240 --> 00:13:19.130
+Keberhasilan dan ini akan mengembalikan objek untuk menetapkan objek kosong status.
+
+00:13:19.600 --> 00:13:34.310
+Dan ini robot properti baru yang merupakan tindakan yang payload dan juga kami ingin mengubah keadaan yang dihabiskan untuk sekarang menjadi
+
+00:13:34.700 --> 00:13:36.440
+salah karena
+
+00:13:39.550 --> 00:13:43.270
+kami mendapat tanggapan dari janji
+
+00:13:50.350 --> 00:13:56.470
+dan kemudian kasus ketiga adalah ketika ada kesalahan.
+
+00:13:57.040 --> 00:14:00.670
+Dan dalam hal ini kita
+
+00:14:04.180 --> 00:14:16.550
+akan mengembalikan objek untuk menandatangani negara dan kita hanya akan memiliki keadaan udara yang akan membuat yang memiliki payload tindakan dot.
+
+00:14:16.690 --> 00:14:23.260
+Dan sekali lagi kita akan ingin mengubah tertunda
+
+00:14:26.050 --> 00:14:34.010
+sama dengan false dan menutup objek dan ingat selalu dengan peredam.
+
+00:14:34.420 --> 00:14:43.810
+Kami ingin varian selalu mengembalikan status jika tidak cocok dengan kriteria mana pun.
+
+00:14:43.810 --> 00:14:49.250
+Jadi sekali lagi kembali negara yang luar biasa.
+
+00:14:49.620 --> 00:14:53.860
+Sekarang Anda mungkin berpikir untuk diri sendiri keadaan awal.
+
+00:14:54.020 --> 00:14:59.990
+Kami memiliki ini robot permintaan yang dibeli tidak peduli tentang bidang pencarian.
+
+00:14:59.990 --> 00:15:06.860
+Dan dalam hal ini kami ingin membuat dua status awal yang berbeda satu untuk robot pencarian dan satu
+
+00:15:06.860 --> 00:15:08.460
+untuk robot permintaan mereka.
+
+00:15:08.600 --> 00:15:14.560
+Jadi mari kita rename ini menjadi pencarian keadaan
+
+00:15:17.420 --> 00:15:29.000
+awal dan buat negara baru di robot keadaan awal yang sekarang memiliki tiga keadaan ini yang kami
+
+00:15:29.570 --> 00:15:43.360
+sebutkan di sini yang masih menunggu false untuk memulai dengan array robot yang saat ini kosong dan string kesalahan yang
+
+00:15:43.570 --> 00:15:45.350
+juga kosong.
+
+00:15:49.020 --> 00:15:50.010
+Jadi katakan saja
+
+00:15:52.910 --> 00:15:58.810
+dan mari kita lihat beberapa kesalahan yang kita dapatkan di sini dan kita hanya memiliki sedikit kesalahan sintaks.
+
+00:16:02.360 --> 00:16:04.970
+Karena kita tidak membutuhkan braket keriting ini.
+
+00:16:04.970 --> 00:16:08.220
+Ini dia.
+
+00:16:08.280 --> 00:16:11.060
+Dan lagi kami ingin mengubah keadaan awal.
+
+00:16:11.080 --> 00:16:16.050
+Robot dalam fungsi yang satu ini.
+
+00:16:18.250 --> 00:16:21.420
+Kami menyimpan dan semuanya terlihat bagus.
+
+00:16:21.430 --> 00:16:26.770
+Biarkan saya membuat ini sedikit lebih kecil.
+
+00:16:26.830 --> 00:16:28.920
+Sekarang kita punya masalah.
+
+00:16:29.410 --> 00:16:32.970
+Kita harus mengulang Pak sekarang dan jika kita pergi untuk diindeks.
+
+00:16:33.060 --> 00:16:40.360
+J. S. kita melihat bahwa dalam fungsi create store kita hanya menggunakan robot pencarian yang kita lakukan pak.
+
+00:16:40.780 --> 00:16:42.760
+Jadi mari kita impor sekarang.
+
+00:16:42.790 --> 00:16:52.640
+Yang lain membaca Anda mengatakan bahwa kami memiliki robot permintaan dan sekarang menambahkan ini ke toko juga.
+
+00:16:53.020 --> 00:16:55.740
+Tetapi bagaimana kita melakukannya?
+
+00:16:58.080 --> 00:17:08.180
+Yah kita memiliki fungsi yang sekali lagi datang dengan tiga dokumen yang disebut pengurang kombinasikan dan
+
+00:17:08.180 --> 00:17:15.160
+pengurang gabungan ini cukup jelas mengkombinasikan semua pengecil menjadi pengurang akar.
+
+00:17:15.290 --> 00:17:16.380
+Jadi mari kita lakukan itu.
+
+00:17:16.400 --> 00:17:23.380
+Saya akan mengatakan peredam root Konst akan sama dengan peredam gabungan.
+
+00:17:23.750 --> 00:17:32.120
+Dan ini akan dan menerima objek dalam bentuk reduksi.
+
+00:17:32.240 --> 00:17:38.180
+Dalam kasus saya ini adalah robot pencarian dan robot permintaan.
+
+00:17:38.390 --> 00:17:44.630
+Dan sekarang Ruby douceur ini dapat digunakan di toko
+
+00:17:47.720 --> 00:17:51.880
+untuk memasukkan kedua reduksi yang aman.
+
+00:17:51.880 --> 00:17:53.110
+Baiklah.
+
+00:17:53.110 --> 00:17:54.040
+Kita hampir sampai.
+
+00:17:55.720 --> 00:17:58.930
+Sekarang karena kami baru saja menggunakan reduksi kombinasi.
+
+00:17:58.930 --> 00:18:03.180
+Itu adalah sesuatu yang telah kami sebutkan sebelumnya dan itu adalah jika saya masuk ke apt.
+
+00:18:03.340 --> 00:18:14.950
+Ya dan gulir sepenuhnya ke atas untuk memetakan status untuk mendukung negara kami sekarang tidak lagi memiliki bidang pencarian sebagai bagian
+
+00:18:14.950 --> 00:18:16.200
+dari propertinya.
+
+00:18:16.240 --> 00:18:25.780
+Alih-alih itu akan memiliki dua robot pencarian properti dan robot permintaan yang masing-masing memiliki properti mereka
+
+00:18:25.780 --> 00:18:26.920
+sendiri.
+
+00:18:26.920 --> 00:18:29.680
+Jadi sekarang kita harus
+
+00:18:33.370 --> 00:18:40.190
+memperbarui robot pencarian seperti ini yang memiliki properti bidang pencarian.
+
+00:18:40.250 --> 00:18:50.460
+Jadi inilah mengapa Anda kemungkinan besar akan melihat ketika Anda sedang bekerja redoks dan status peta untuk mendukung.
+
+00:18:50.490 --> 00:18:58.270
+Sekarang bagian terakhir dari teka-teki redux thunk bagaimana cara kerjanya.
+
+00:18:58.680 --> 00:19:10.740
+Well redux thunk adalah middleware yang menunggu dan melihat apakah ada tindakan yang mengembalikan fungsi, bukan
+
+00:19:10.740 --> 00:19:12.050
+objek.
+
+00:19:12.440 --> 00:19:13.360
+Apa artinya.
+
+00:19:13.740 --> 00:19:25.740
+Jika kita melakukan tindakan, kita melihat bahwa ini mengembalikan suatu objek, tetapi di sini kita tidak mengembalikan
+
+00:19:26.100 --> 00:19:33.930
+suatu objek. Sebenarnya kita tidak benar-benar mengembalikan apa pun sekarang.
+
+00:19:34.070 --> 00:19:36.820
+Thidded middleware sedang menunggu suatu fungsi.
+
+00:19:36.920 --> 00:19:43.880
+Dan jika suatu tindakan berjalan melaluinya, ingatlah middleware hanyalah sebuah terowongan yang dilalui
+
+00:19:44.660 --> 00:19:49.050
+tindakan dan memperhatikan fungsi yang akan ditindaklanjutinya.
+
+00:19:49.100 --> 00:19:53.130
+Jadi mari kita lakukan itu terlebih dahulu dan saya akan menjelaskan secara detail cara kerjanya.
+
+00:19:54.030 --> 00:19:56.000
+Pertama-tama kita harus pergi ke APT.
+
+00:19:56.070 --> 00:19:57.350
+Iya nih.
+
+00:19:57.420 --> 00:20:01.850
+Dan dengan ini di sini kami ingin memperbarui beberapa hal.
+
+00:20:01.900 --> 00:20:15.460
+Pertama kami ingin memperbarui status untuk sekarang juga menyertakan robot untuk meminta negara DOT robot permintaan dot
+
+00:20:15.500 --> 00:20:16.610
+robot.
+
+00:20:16.640 --> 00:20:19.960
+Sekali lagi ini adalah keadaan dari peredam.
+
+00:20:20.010 --> 00:20:29.630
+Ada juga keadaan tertunda lagi melalui robot permintaan mereka yang tertunda.
+
+00:20:30.050 --> 00:20:43.030
+Dan akhirnya keadaan udara dari sekali lagi negara meminta robot.
+
+00:20:43.060 --> 00:20:51.510
+Bagian kedua dan bagian terpenting adalah aksi robot permintaan.
+
+00:20:51.680 --> 00:20:58.240
+Sekali lagi sesuatu yang menggantikan komponen ini memang memunculkan permintaan.
+
+00:20:58.390 --> 00:21:05.650
+Cara yang bisa kita lakukan adalah dengan menambahkan properti lain yang akan kita sampaikan dan kita dapat menamainya apa
+
+00:21:05.650 --> 00:21:09.350
+pun yang kita inginkan, kita akan mengatakannya berdasarkan permintaan.
+
+00:21:09.520 --> 00:21:17.820
+Robot dan ini akan menjadi fungsi dan fungsi ini.
+
+00:21:17.950 --> 00:21:23.320
+Ingat kami tidak ingin hanya mengirim.
+
+00:21:23.670 --> 00:21:28.670
+Kami ingin mempertahankan dan mengembalikan fungsi darinya.
+
+00:21:28.740 --> 00:21:43.410
+Dalam kasus kami adalah robot permintaan mengurangi kami dan robot permintaan ini mengurangi mereka atau tindakan
+
+00:21:43.980 --> 00:21:47.480
+memiliki metode pengiriman.
+
+00:21:47.510 --> 00:21:48.090
+Baiklah.
+
+00:21:48.090 --> 00:21:49.000
+Saya tahu itu banyak.
+
+00:21:48.990 --> 00:21:51.480
+Jadi mari kita lewati ini sekali lagi.
+
+00:21:52.800 --> 00:21:55.150
+Saat ini kami membutuhkan permintaan itu.
+
+00:21:55.220 --> 00:22:10.620
+Aksi robot dan aksi robot permintaan ini membutuhkan metode pengiriman untuk benar-benar mengirimkan tindakan ini.
+
+00:22:10.920 --> 00:22:22.120
+Jadi di Abdulle Ya kita pertama-tama harus mengimpor tindakan kami yang meminta robot dari
+
+00:22:22.120 --> 00:22:30.750
+file tindakan dan robot permintaan ini harus memiliki metode pengiriman.
+
+00:22:30.760 --> 00:22:42.580
+Ini sama dengan melakukan ini.
+
+00:22:43.190 --> 00:22:54.870
+Dan sekarang pengiriman ini akan berfungsi selama kita menggunakan redux Thankx karena akan menangkap
+
+00:22:54.870 --> 00:23:00.140
+fakta bahwa ini akan mengembalikan fungsi.
+
+00:23:00.170 --> 00:23:07.390
+Jadi jika kita kembali ke tindakan kita sekarang kita bisa melakukan
+
+00:23:13.770 --> 00:23:25.280
+ini dengan benar apa yang baru saja terjadi dengan baik kita telah membuat fungsi orde tinggi fungsi yang mengembalikan fungsi.
+
+00:23:25.280 --> 00:23:28.810
+Dan saya tahu ini bisa sedikit membingungkan tetapi pukulan.
+
+00:23:28.880 --> 00:23:34.950
+Karena sekarang robot permintaan akan kembali lagi karena fungsinya.
+
+00:23:35.000 --> 00:23:42.800
+Ini akan mengisyaratkan bahwa ia mengembalikan ini, ia akan menyediakan fungsi pengiriman ke fungsi lapisan kedua
+
+00:23:42.950 --> 00:23:47.040
+ini sehingga kami dapat menggunakannya di sini.
+
+00:23:47.420 --> 00:23:55.430
+Sekali lagi ini adalah sesuatu yang Anda harus terbiasa tetapi pada akhirnya jika kita menyimpan ini mari kita lihat apakah itu
+
+00:23:55.430 --> 00:23:56.120
+berfungsi.
+
+00:23:56.140 --> 00:24:01.530
+Sekarang saya tahu ini pertama kalinya, jadi kami mungkin mengacaukan sesuatu, tapi mari kita goyang.
+
+00:24:04.000 --> 00:24:07.490
+Saya menyegarkan dan semuanya berfungsi.
+
+00:24:07.490 --> 00:24:08.890
+Kami tidak mendapatkan kesalahan.
+
+00:24:09.020 --> 00:24:19.380
+Tapi ingat kita benar-benar harus terhubung ke aplikasi kita jika kita kembali sekarang kita bisa pergi untuk menculik kita dan kita memiliki semua alat peraga
+
+00:24:19.380 --> 00:24:21.690
+yang dapat kita gunakan sekarang.
+
+00:24:21.960 --> 00:24:31.530
+Jadi komponen MT tidak perlu lagi memanggil semua yang dia butuhkan adalah titik prop atas
+
+00:24:32.760 --> 00:24:42.200
+ini dan tindakan yang kita punya robot permintaan kami pada robot permintaan sempurna.
+
+00:24:42.430 --> 00:24:46.670
+Dan kita juga tidak perlu konstruktor lagi kan.
+
+00:24:46.750 --> 00:24:53.110
+Karena tidak ada lagi negara robot ini sekarang akan dikembalikan sebagai bagian dari alat peraga dari
+
+00:24:53.380 --> 00:24:53.980
+permintaan
+
+00:24:54.070 --> 00:24:56.930
+Robot
+
+00:24:57.040 --> 00:25:01.100
+Jadi sekali lagi kita akan
+
+00:25:03.790 --> 00:25:15.540
+mengubah status ini menjadi robot dan kita juga bisa mendapatkan sedang menunggu untuk memeriksa apakah ditangguhkan itu benar.
+
+00:25:19.140 --> 00:25:25.770
+Untuk membuat jika ini benar maka kami ingin me-render loading.
+
+00:25:25.950 --> 00:25:30.950
+Jika tidak, kami hanya ingin membuat teman robo kami.
+
+00:25:30.970 --> 00:25:33.660
+Jadi itu datang dari kami.
+
+00:25:34.780 --> 00:25:39.230
+Dan sekarang kami hanya memiliki komponen yang terpasang di aplikasi kami.
+
+00:25:39.440 --> 00:25:45.360
+Mari kita simpan dan kembali ke aplikasi kita.
+
+00:25:45.380 --> 00:25:47.490
+Baiklah, lihat itu.
+
+00:25:47.780 --> 00:25:53.990
+Itu tidak sering terjadi tetapi saya entah bagaimana berhasil membuat kode tanpa membuat tanpa membuat kesalahan.
+
+00:25:53.990 --> 00:25:55.250
+Sekali lagi itu jarang terjadi.
+
+00:25:55.250 --> 00:25:56.210
+Nikmati momen ini.
+
+00:25:56.210 --> 00:25:57.780
+Saya pasti menikmatinya.
+
+00:25:57.800 --> 00:26:05.090
+Kami melihat di sini bahwa kami memiliki robot permintaan yang tertunda dipecat dan kemudian berhasil dipecat lagi.
+
+00:26:06.760 --> 00:26:09.070
+Mari menyegarkan dengan cepat.
+
+00:26:09.070 --> 00:26:09.400
+Baiklah.
+
+00:26:09.400 --> 00:26:11.300
+Apa yang terjadi jika permintaan gagal.
+
+00:26:11.320 --> 00:26:13.820
+Ayo kembali ke sini dan pergi ke aksi kita.
+
+00:26:13.920 --> 00:26:14.500
+Iya nih.
+
+00:26:14.560 --> 00:26:18.280
+Dan mari kita ketik sesuatu yang salah di sini kita akan mengatakan seperti itu.
+
+00:26:18.280 --> 00:26:19.510
+Simpan itu.
+
+00:26:19.510 --> 00:26:23.020
+Kembali dan di sana Anda pergi.
+
+00:26:23.120 --> 00:26:27.170
+Kami meminta robot gagal.
+
+00:26:27.190 --> 00:26:31.560
+Sangat keren.
+
+00:26:31.730 --> 00:26:32.640
+Mari kita perbaiki itu.
+
+00:26:33.620 --> 00:26:37.040
+Dan simpan.
+
+00:26:37.090 --> 00:26:37.780
+Baiklah.
+
+00:26:37.960 --> 00:26:44.020
+Kami memiliki aplikasi kami yang melakukan hal yang persis sama seperti sebelumnya.
+
+00:26:45.220 --> 00:26:51.080
+Tidak ada yang terlalu gila hanya menyaring robot kami.
+
+00:26:51.310 --> 00:27:02.760
+Tetapi satu-satunya perbedaan adalah bahwa kami memiliki kemampuan logging yang luar biasa ini dan menggunakan redux.
+
+00:27:02.850 --> 00:27:07.340
+Sangat keren.
+
+00:27:07.350 --> 00:27:10.180
+Saya ingin membahas ini sekali lagi.
+
+00:27:11.850 --> 00:27:16.450
+Dan ini karena ini merupakan titik yang sulit bagi kebanyakan orang.
+
+00:27:18.640 --> 00:27:25.720
+Ingat robot permintaan ini bagaimana ia memiliki dua fungsi ini.
+
+00:27:25.930 --> 00:27:29.210
+Robot permintaan sekarang redux.
+
+00:27:29.220 --> 00:27:36.160
+Out of the box tidak akan mengerti ini karena kami tidak mengembalikan objek seperti yang diharapkan untuk tindakan.
+
+00:27:36.220 --> 00:27:45.210
+Kami mengembalikan fungsi dan fungsi ini akan berarti apa-apa dengan menambahkan muxleware redux
+
+00:27:45.300 --> 00:27:46.090
+thunk.
+
+00:27:46.240 --> 00:27:47.980
+Kami sekarang mendengarkan tindakan.
+
+00:27:48.040 --> 00:27:54.490
+Dan setiap kali aksi robot permintaan dipicu itu akan mengembalikan fungsi dan memicu redux thunk dan
+
+00:27:54.490 --> 00:28:00.780
+redux thunk akan mengatakan oh ini adalah fungsi yang akan saya berikan di sini
+
+00:28:00.790 --> 00:28:08.350
+adalah pengiriman sehingga Anda benar-benar dapat memanggil beberapa tindakan dan kita akhirnya bisa menjalankan tindakan kita seperti ini.
+
+00:28:08.350 --> 00:28:15.240
+Jadi kita kembali ke diagram kita, kita telah membuat sistem di mana tindakan dipicu.
+
+00:28:15.390 --> 00:28:17.310
+Mereka melewati middleware apa saja.
+
+00:28:17.370 --> 00:28:24.030
+Jika ini adalah perubahan istilah pencarian, itu hanya akan langsung berjalan ke peredam melalui
+
+00:28:24.450 --> 00:28:32.730
+fungsi bagus memperbarui toko dan membuat perubahan pada pandangan kami jika kami meminta robot, itu akan melihat bahwa
+
+00:28:32.730 --> 00:28:39.120
+itu adalah fungsi itu akan masuk ke middleware dan redux thunk akan mengatakan.
+
+00:28:39.140 --> 00:28:47.250
+Baiklah, pertama, kirim saja yang menunggu ke peredam dan saya akan memberi tahu Anda setelah saya selesai dengan janji dan saya akan memberi
+
+00:28:48.000 --> 00:28:50.490
+tahu Anda jika saya punya robot.
+
+00:28:50.740 --> 00:28:59.080
+Dan ketika itu kembali itu akan mengirimkan keberhasilan melalui peredam memperbarui toko dan membuat
+
+00:28:59.230 --> 00:29:00.010
+perubahan.
+
+00:29:01.410 --> 00:29:03.570
+Siapa yang banyak.
+
+00:29:03.630 --> 00:29:09.550
+Tetapi jika Anda sampai sejauh ini dan Anda memahaminya, Anda sudah mendapatkan redux.
+
+00:29:09.600 --> 00:29:10.440
+Itu dia.
+
+00:29:10.440 --> 00:29:13.730
+Itu seluruh pustaka redux.
+
+00:29:13.980 --> 00:29:15.230
+Ini sangat sangat sederhana.
+
+00:29:15.240 --> 00:29:20.340
+Dan sekali Anda mulai menggunakannya beberapa kali dan Anda merasa nyaman dengan itu, itu benar-benar
+
+00:29:20.370 --> 00:29:21.850
+indah cara semuanya bekerja.
+
+00:29:21.870 --> 00:29:24.150
+Tapi untuk sekarang mari kita istirahat.
+
+00:29:24.150 --> 00:29:26.240
+Terima kasih telah menonton dan sampai jumpa di yang berikutnya.
+
+00:29:26.550 --> 00:29:27.000
+Sampai jumpa.

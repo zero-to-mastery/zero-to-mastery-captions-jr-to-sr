@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:00.420 --> 00:00:01.180
+Selamat datang kembali.
+
+00:00:01.350 --> 00:00:10.150
+Mari kita lanjutkan membangun teman-teman robot kita sekarang hingga saat ini jika Anda melihat indeks jenius kami Yah ada banyak
+
+00:00:10.250 --> 00:00:13.200
+salinan dan tempel yang kami lakukan.
+
+00:00:13.250 --> 00:00:18.950
+Jika kita memiliki banyak teman robot bayangkan memiliki ratusan robot yang harus kita salin
+
+00:00:18.950 --> 00:00:21.630
+dan tempel yang tidak efisien, kan.
+
+00:00:21.680 --> 00:00:30.110
+Juga jika Anda ingat diagram kami di sini tentang aliran data satu arah, kami selalu memiliki orangtua seperti komponen aplikasi yang
+
+00:00:30.110 --> 00:00:34.930
+memiliki anak yang memiliki anak mereka sendiri dan seterusnya dan seterusnya.
+
+00:00:35.000 --> 00:00:43.250
+Jadi dengan menggunakan pengetahuan itu kita dapat memiliki satu komponen besar yang memiliki anak yang berbeda sehingga
+
+00:00:43.250 --> 00:00:47.920
+kita membuat setiap komponen kecil dan dapat digunakan kembali.
+
+00:00:47.940 --> 00:00:57.110
+Mari kita kembali ke contoh kita sekarang bahwa kita memiliki robot yang J. S. kita idealnya dapat mendaftarkan 10
+
+00:00:58.640 --> 00:01:09.690
+pengguna ini dengan cara yang kita lakukan itu mari kita memiliki komponen daftar kartu sehingga kita mengimpor komponen tanpa kartu
+
+00:01:09.690 --> 00:01:16.920
+yang merupakan induk kartu maka kita dapat merendernya daripada semua kartu ini.
+
+00:01:17.230 --> 00:01:30.340
+Jadi saya akan mengatakan daftar kartu dan sekali lagi kita harus mengatakan kartu file baru ini kegaduhan lagi mengubah Anda sampai ke
+
+00:01:33.010 --> 00:01:42.990
+sintaks meja kami akan melakukan impor re-act dari re-act dan saya akan membuat ini sedikit lebih
+
+00:01:42.990 --> 00:01:43.750
+besar.
+
+00:01:44.980 --> 00:01:52.620
+Dan lagi kita hanya akan mengatakan daftar kartu Konst sama dengan ingin menerima apa pun untuk saat ini.
+
+00:01:54.300 --> 00:01:56.460
+Tapi itu akan kembali.
+
+00:01:56.850 --> 00:02:01.630
+Nah apa yang harus kembali.
+
+00:02:01.800 --> 00:02:05.030
+Seharusnya mengembalikan kartu dengan benar.
+
+00:02:05.860 --> 00:02:07.900
+Kami hanya dapat menyalin dan menempel ini
+
+00:02:11.690 --> 00:02:13.110
+menempatkan ini di sini.
+
+00:02:13.430 --> 00:02:15.690
+Mari kita perbaiki indentasi di
+
+00:02:18.670 --> 00:02:22.920
+sini sedikit sekarang daftar kartu akan menjadi yang mengembalikan kartu-kartu ini.
+
+00:02:24.260 --> 00:02:33.190
+Dan indeks dot simbol hanya akan membuat Carlist.
+
+00:02:33.290 --> 00:02:41.990
+Jika saya menyimpan ini dengan baik, saya kira kartu itu tidak digunakan sehingga kami tidak dapat menghapusnya dan robot tidak
+
+00:02:41.990 --> 00:02:42.560
+digunakan.
+
+00:02:42.560 --> 00:02:56.020
+Tetapi kita dapat menggunakan robot sekarang untuk lulus bahwa sebagai robot sama dengan daftar kartu array robot menerima robot prop Saya mengatakan ini
+
+00:02:56.350 --> 00:03:04.560
+semuanya berfungsi tetapi saya mendapatkan kesalahan karena Anda dapat melihat kami tidak mengekspor jika
+
+00:03:04.800 --> 00:03:12.760
+kami kembali ke daftar ekspor kartu default dan mudah-mudahan sekarang Anda mulai memahami
+
+00:03:12.760 --> 00:03:13.860
+itu.
+
+00:03:13.870 --> 00:03:19.990
+Ada banyak pengulangan di sini, tetapi setiap kali selama Anda mempelajari sintaks kami membuat komponen
+
+00:03:20.470 --> 00:03:28.360
+ini dengan baik dan kami mendapatkan banyak kesalahan karena kami tidak memiliki akses ke robot dan ID dan kartu dalam
+
+00:03:28.780 --> 00:03:30.220
+hal ini juga.
+
+00:03:30.220 --> 00:03:38.340
+Jadi mari kita impor kartu dari Lagi kartu direktori yang sama ya.
+
+00:03:39.230 --> 00:03:40.830
+Robot tidak ditentukan.
+
+00:03:40.880 --> 00:03:45.300
+Kita tahu bahwa daftar kartu menerima robot sekarang.
+
+00:03:45.490 --> 00:03:52.490
+Jadi saya memiliki akses ke alat peraga atau saya dapat disusun dan mengatakan bahwa kami memiliki akses ke sana.
+
+00:03:53.520 --> 00:04:04.900
+Dengan robot jika saya melihat tampilan ini, saya memiliki semuanya kembali seperti semula.
+
+00:04:05.030 --> 00:04:07.320
+Tapi tidak semuanya ya.
+
+00:04:07.340 --> 00:04:10.420
+Kami hanya meraih 0 1 2.
+
+00:04:10.430 --> 00:04:11.750
+Hanya mereka bertiga.
+
+00:04:11.750 --> 00:04:17.910
+Dan seperti yang kita lihat di kuat Ya saya punya 10.
+
+00:04:18.070 --> 00:04:20.660
+Bagaimana kita bisa melakukan ini dengan lebih baik.
+
+00:04:20.980 --> 00:04:28.390
+Mari kita buat ini sedikit lebih kecil sehingga Anda bisa melihat sepertinya kami ingin melakukan semacam loop.
+
+00:04:28.440 --> 00:04:29.340
+Kanan.
+
+00:04:29.370 --> 00:04:35.470
+Kami ingin mengulang robot dan membuat komponen kartu untuk masing-masing.
+
+00:04:35.580 --> 00:04:36.830
+Bagaimana kita bisa melakukannya di sini.
+
+00:04:36.850 --> 00:04:45.010
+Andrea, mari kita mulai dengan menambahkan variabel lain di sini kita akan menyebutnya komponen kartu
+
+00:04:47.690 --> 00:04:48.670
+Konst.
+
+00:04:50.450 --> 00:04:56.580
+Dan di dalam komponen kartu kami ingin mengatakan bahwa robot ingin.
+
+00:04:56.690 --> 00:04:59.330
+Nah apa yang ingin kita lakukan ketika kita melakukan loop.
+
+00:04:59.360 --> 00:05:03.400
+Seperti yang saya katakan sebelumnya, kami ingin memetakan dengan benar.
+
+00:05:03.420 --> 00:05:06.680
+Kita bisa melakukannya untuk masing-masing juga, tetapi saya selalu merekomendasikan itu.
+
+00:05:07.050 --> 00:05:09.240
+Dan dalam peta ini setiap robot
+
+00:05:11.770 --> 00:05:12.860
+mendapat ini.
+
+00:05:12.910 --> 00:05:16.750
+Jadi kami mendapatkan pengguna setiap kali kami memetakannya
+
+00:05:20.040 --> 00:05:26.550
+sehingga kami dapat mengatakan pengguna harus kembali lagi karena peta perlu mengembalikannya mengembalikan hak ini.
+
+00:05:26.550 --> 00:05:32.820
+Kami ingin mengembalikan komponen kartu yang dapat saya salin dan tempel ini di sini.
+
+00:05:34.440 --> 00:05:42.310
+Dan sebagai imbalannya saya hanya bisa mengatakan sekarang, bukan indeks robot 0 kita memiliki indeks Yah ya
+
+00:05:42.390 --> 00:05:48.720
+karena Anda ingat parameter kedua yang kita dapatkan di peta adalah indeks.
+
+00:05:48.740 --> 00:05:52.690
+Jadi saya bisa mengatakan pengguna dan saya untuk indeks.
+
+00:05:52.730 --> 00:06:02.480
+Dan sekarang dalam robot saya akan menyapa empat indeks Ishaan pertama kali sekitar ini akan menjadi nol.
+
+00:06:02.610 --> 00:06:08.760
+Lalu satu kemudian dua sampai ke 9 untuk memasukkan 10 robot kami.
+
+00:06:08.790 --> 00:06:11.200
+Mari kita lihat apakah ini benar-benar berfungsi.
+
+00:06:11.310 --> 00:06:19.210
+Jika saya memiliki komponen kartu di sini, Anda ingat bahwa kita harus membungkusnya dalam kurung keriting karena itu
+
+00:06:19.210 --> 00:06:22.110
+javascript sehingga ia tahu untuk mengevaluasi.
+
+00:06:22.360 --> 00:06:24.680
+Jika saya menyimpan ini.
+
+00:06:24.820 --> 00:06:26.830
+Sepertinya berhasil dikompilasi.
+
+00:06:26.950 --> 00:06:28.270
+Saya kembali dan.
+
+00:06:28.540 --> 00:06:30.110
+Moly suci.
+
+00:06:30.240 --> 00:06:33.630
+Kami mendapat kartu atau kartu.
+
+00:06:33.770 --> 00:06:35.090
+Betapa kerennya itu.
+
+00:06:35.090 --> 00:06:37.060
+Itu sangat cepat untuk dilakukan.
+
+00:06:37.280 --> 00:06:40.820
+Kami hanya menggunakan akal sehat dan pengetahuan Javascript kami.
+
+00:06:40.970 --> 00:06:46.160
+Cukup gunakan peta untuk mengembalikan beberapa komponen.
+
+00:06:46.160 --> 00:06:50.640
+Saya harap Anda menyadari betapa dahsyatnya hal itu dan itulah sebabnya tindakan kembali begitu populer saat ini.
+
+00:06:50.640 --> 00:06:57.440
+Kami dapat menggunakan javascript untuk mengembalikan semua elemen HVM ini dan melakukan berbagai hal dengan sangat cepat.
+
+00:06:59.330 --> 00:07:04.180
+Jika saya membuka konsol di sini saya akan melihat bahwa saya mendapat peringatan.
+
+00:07:04.190 --> 00:07:11.210
+Setiap anak dalam array atau iterator harus memiliki kunci prop yang unik dan ada tautan ke sana jika Anda
+
+00:07:11.210 --> 00:07:12.270
+ingin membacanya.
+
+00:07:13.320 --> 00:07:16.150
+Ini adalah kasus khusus yang harus Anda ingat.
+
+00:07:17.460 --> 00:07:24.030
+Ketika bekerja dengan bereaksi seperti cara kerja virtual Dom itu melacak apa semua kartu ini.
+
+00:07:24.270 --> 00:07:35.240
+Tetapi tanpa memiliki sesuatu yang disebut Propp kunci jika beberapa mobil ini dihapus bereaksi untuk tidak akan tahu yang mana dan harus mengubah seluruh
+
+00:07:36.660 --> 00:07:42.600
+Dom vs Jika mereka memiliki kunci Prabhat mengatakan oh yang ini akan
+
+00:07:42.600 --> 00:07:43.160
+dihapus.
+
+00:07:43.170 --> 00:07:45.930
+Saya bisa menghapus ini dari anggota fajar.
+
+00:07:46.020 --> 00:07:50.130
+Kami ingin meminimalkan jumlah pekerjaan yang kami lakukan pada dump.
+
+00:07:50.250 --> 00:07:53.110
+Jadi ketika Anda melakukan perulangan, itu hanya sesuatu yang harus Anda ingat.
+
+00:07:53.160 --> 00:07:57.060
+Anda harus memberikannya kunci unik dalam kasus kami.
+
+00:07:57.190 --> 00:08:01.160
+Kita hanya bisa menyapa yang merupakan indeks.
+
+00:08:01.170 --> 00:08:02.220
+Jika
+
+00:08:05.240 --> 00:08:10.130
+kita menyimpan ini, kita harus membungkusnya dalam kurung keriting lagi.
+
+00:08:10.970 --> 00:08:14.670
+Karena itu javascript dan begitulah.
+
+00:08:14.690 --> 00:08:16.940
+Sekarang kami tidak lagi memiliki kesalahan.
+
+00:08:22.970 --> 00:08:29.110
+Dan mari kita buat ini pada baris baru hanya semacam terlihat lebih cantik.
+
+00:08:33.600 --> 00:08:39.010
+Dan karena kami mengembalikannya ke beberapa baris, kami ingin membungkusnya dengan braket.
+
+00:08:39.280 --> 00:08:40.150
+Dan itu lebih baik.
+
+00:08:42.060 --> 00:08:45.320
+Jadi ini bekerja dengan baik seperti yang kita inginkan.
+
+00:08:45.390 --> 00:08:49.110
+Saya ingin menunjukkan kepada Anda satu hal karena ini adalah javascript.
+
+00:08:49.200 --> 00:08:53.890
+Apa pun yang kami masukkan ke dalam kurung keriting ini adalah javascript termasuk komentar.
+
+00:08:54.390 --> 00:08:58.660
+Kita bisa menyalin dan menempelkan semua ini.
+
+00:08:58.740 --> 00:09:03.760
+Hapus konstanta dan tambahkan saja di dalam tanda kurung.
+
+00:09:07.690 --> 00:09:14.280
+Jika saya menyimpan ini seharusnya masih berfungsi seperti itu.
+
+00:09:14.450 --> 00:09:20.160
+Dan ini adalah kekuatan lain dari reaksi ulang yang menjadikan Anda programmer javascript yang sangat
+
+00:09:20.880 --> 00:09:25.350
+bagus karena selain dari sintaks GSX ini yang lainnya hanyalah javascript.
+
+00:09:25.350 --> 00:09:32.790
+Jadi kita dapat membuat komponen tanpa kartu yang berisi daftar kartu dan yang perlu kita lakukan
+
+00:09:33.270 --> 00:09:39.380
+hanyalah memberikannya robot dan kita baru saja membuat ini menjadi lebih bersih.
+
+00:09:39.390 --> 00:09:40.830
+Sangat keren.
+
+00:09:40.830 --> 00:09:42.830
+Baiklah itu saja untuk video ini.
+
+00:09:42.840 --> 00:09:45.430
+Lebih banyak hal akan terjadi pada yang berikutnya.
+
+00:09:45.440 --> 00:09:46.540
+Sampai jumpa di sana.
+
+00:09:46.560 --> 00:09:46.830
+Sampai jumpa.

@@ -1,0 +1,190 @@
+﻿WEBVTT
+
+00:00:01.390 --> 00:00:02.380
+Selamat datang kembali.
+
+00:00:02.380 --> 00:00:07.360
+Sebelum kita mulai membangun manajemen sesi kita dan atas kita, saya ingin memastikan bahwa kita jelas tentang
+
+00:00:07.360 --> 00:00:08.630
+apa yang kita bangun.
+
+00:00:08.680 --> 00:00:14.950
+Jadi saya telah membuat beberapa diagram untuk mempelajari langkah-langkahnya sekarang jika Anda ingat ini adalah otentikasi berbasis token yang kami
+
+00:00:15.310 --> 00:00:18.230
+masuk dengan mengirimkan nama pengguna dan kata sandi.
+
+00:00:18.310 --> 00:00:21.890
+Server melakukan beberapa pekerjaan untuk memastikan nama pengguna dan kata sandi mereka cocok.
+
+00:00:21.910 --> 00:00:29.060
+Dan kemudian kita menghasilkan token JWT yang lagi akan kita lakukan dan kemudian kita akan mengirim token
+
+00:00:29.140 --> 00:00:35.380
+GWG itu kembali ke browser dan pada browser kita akan menyimpan token itu sehingga
+
+00:00:35.380 --> 00:00:43.030
+setiap saat kita perlu membuat permintaan seperti X yang mengatakan profil 23 bahwa kita harus memiliki akses ke
+
+00:00:43.090 --> 00:00:51.340
+Saya mengirim token GW di header otorisasi sebagai bagian dari permintaan ke browser bahwa browser hanya Rantz titik verifikasi pada
+
+00:00:51.640 --> 00:00:52.380
+token.
+
+00:00:52.420 --> 00:00:59.640
+Pastikan itu token yang dihasilkan dan akan mengirimkan paket paket yang akan kami sebut
+
+00:01:00.100 --> 00:01:01.210
+sebagai hadiah.
+
+00:01:01.240 --> 00:01:03.170
+Jadi kita punya akses ke sana.
+
+00:01:03.340 --> 00:01:11.860
+Dan sekali lagi dengan otentikasi berbasis cookie kami mengirim nama pengguna dan kata sandi sekali lagi
+
+00:01:12.010 --> 00:01:19.330
+server melakukan pekerjaan memeriksa nama pengguna dan kata sandi menghasilkan cookie sepotong string yang
+
+00:01:19.330 --> 00:01:21.790
+unik mengirimkannya ke browser.
+
+00:01:21.990 --> 00:01:29.580
+Peramban mengingat bahwa itu adalah cookie dan kapan pun ia membutuhkan profil 23 Yah itu akan mengirim
+
+00:01:29.580 --> 00:01:31.620
+informasi itu ke server.
+
+00:01:31.650 --> 00:01:38.420
+Server sekarang akan memeriksa potongan pajak yang merupakan cookie untuk pajak yang disimpannya.
+
+00:01:38.850 --> 00:01:41.470
+Dan ingat itu di katakanlah database.
+
+00:01:41.760 --> 00:01:47.580
+Dan dalam hal ini Anda bisa memiliki sesuatu seperti Pretis di mana Red menyimpan
+
+00:01:47.850 --> 00:01:49.800
+sesi string yang cookie.
+
+00:01:50.040 --> 00:01:54.320
+Jadi server dapat mengatakan apakah cookie ini ada.
+
+00:01:54.320 --> 00:01:58.710
+Dan ya saya telah membuat cookie ini, cookie ini milik pengguna ini.
+
+00:01:58.710 --> 00:02:01.560
+Anda dapat mengirimnya paket.
+
+00:02:01.560 --> 00:02:08.590
+Silakan ya kita akan menagih sebenarnya merupakan implementasi dari keduanya.
+
+00:02:08.700 --> 00:02:14.700
+Dan alasan saya memilih cara ini ada beberapa hal yang saya pikir itu cara aman yang bagus untuk melakukan
+
+00:02:14.700 --> 00:02:15.290
+sesuatu.
+
+00:02:15.300 --> 00:02:17.260
+Ini memberi Anda sedikit fleksibilitas.
+
+00:02:17.460 --> 00:02:23.450
+Dan inilah bagaimana saya benar-benar menerapkan otentikasi dan sesi di aplikasi pribadi saya.
+
+00:02:23.760 --> 00:02:29.130
+Tapi itu juga mengajarkan Anda berdua cara melakukan sesuatu sehingga Anda dapat memilih dan menentukan sendiri
+
+00:02:29.130 --> 00:02:30.970
+apa yang terbaik untuk Anda.
+
+00:02:31.260 --> 00:02:35.880
+Yang akan kita lakukan adalah memeriksa nama pengguna dan kata sandi dari server dan itu
+
+00:02:35.880 --> 00:02:38.770
+sudah kita lakukan dengan tanda dan titik akhir kita.
+
+00:02:38.850 --> 00:02:47.970
+Dan otak cerdas kita memeriksa fungsi membandingkan skrip B dan membandingkan masa lalu kita dengan hash yang disimpan
+
+00:02:47.970 --> 00:02:49.740
+dalam database kita.
+
+00:02:49.740 --> 00:02:53.340
+Kami kemudian akan menghasilkan token.
+
+00:02:53.340 --> 00:03:01.710
+Sekarang tokin ini akan dikirim kembali ke server dan tokin ini sekali lagi akan
+
+00:03:02.100 --> 00:03:03.970
+disimpan di browser.
+
+00:03:04.020 --> 00:03:08.030
+Mereka mengatakan server Ya token akan dikirim kembali ke browser.
+
+00:03:08.600 --> 00:03:14.450
+Peramban akan menyimpannya dan kapan pun kami ingin mengakses profil, kami akan
+
+00:03:14.450 --> 00:03:19.620
+mengirim token itu kembali ke peramban atau kembali ke server.
+
+00:03:21.240 --> 00:03:28.530
+Sekarang perbedaannya di sini adalah sampai titik ini kita telah melakukan semacam JWT tetapi
+
+00:03:28.560 --> 00:03:39.030
+alih-alih hanya menjalankan JWT tokin dot varify kita malah akan memeriksa basis data read us kita yang akan membuat dan terhubung ke
+
+00:03:39.030 --> 00:03:47.970
+API kita dan basis data ini akan untuk memegang kekuatan tokin JWT kami sehingga kami dapat memeriksa untuk melihat
+
+00:03:48.030 --> 00:03:49.600
+di database rattus.
+
+00:03:49.610 --> 00:03:52.180
+Oia kita punya token JWT.
+
+00:03:52.380 --> 00:03:59.100
+Jadi dengan cara yang mirip dengan apa yang kita lakukan dengan cookie dan itu akan mengembalikan benar atau
+
+00:03:59.300 --> 00:04:07.660
+salah server kemudian sekali diperiksa yang mengatakan baik-baik saja ini token JWT yang valid itu belum benar-benar diterjemahkan itu hanya memeriksa sesi ini
+
+00:04:07.660 --> 00:04:13.450
+dan kemudian mengatakan baik-baik saja Anda dapat memiliki hadiah dan Anda lihat di sini bahwa
+
+00:04:13.450 --> 00:04:17.330
+kami semacam menggabungkan dua metode ini daripada hanya memverifikasi GWG.
+
+00:04:17.410 --> 00:04:21.620
+Kami sebenarnya menyimpannya di database dan mengeceknya.
+
+00:04:21.970 --> 00:04:25.490
+Dan seperti yang saya katakan, Anda mendapatkan sedikit manfaat dari keduanya.
+
+00:04:25.630 --> 00:04:32.330
+Dengan melakukannya dengan cara ini kerugian Anda kehilangan manfaat karena tidak harus menyimpan barang.
+
+00:04:32.350 --> 00:04:33.920
+Jika Anda menggunakan JWT.
+
+00:04:34.120 --> 00:04:38.990
+Tetapi sekali lagi saya pikir itu cara yang baik untuk melakukan sesuatu dan itu menunjukkan kedua situasi.
+
+00:04:39.130 --> 00:04:43.270
+Jadi pada akhir bagian ini kita akan menerapkan ini dan kita akan kembali ke
+
+00:04:43.270 --> 00:04:45.220
+diagram ini sehingga semuanya masuk akal.
+
+00:04:45.250 --> 00:04:46.900
+Saya harap Anda senang.
+
+00:04:47.140 --> 00:04:50.370
+Ini akan menjadi banyak pekerjaan tetapi juga akan sangat menyenangkan.
+
+00:04:51.570 --> 00:04:52.680
+Saya akan melihat yang berikutnya.
+
+00:04:52.990 --> 00:04:53.250
+Buh-Bye.

@@ -1,0 +1,544 @@
+﻿WEBVTT
+
+00:00:01.120 --> 00:00:02.500
+Selamat datang kembali.
+
+00:00:02.500 --> 00:00:07.730
+Kami telah menulis beberapa tes sekarang dan juga 13 tes.
+
+00:00:07.780 --> 00:00:09.340
+Itu tidak buruk untuk banyak hal kecil.
+
+00:00:09.340 --> 00:00:13.750
+Pasti ada lagi yang bisa kita lakukan tetapi saya ingin membahas bagian terakhir.
+
+00:00:13.740 --> 00:00:22.680
+Sekarang saya pikir itu penting dan itu sedang menguji tindakan kami sekarang Anda mungkin bertanya pada diri sendiri bagaimana dengan Constance
+
+00:00:22.680 --> 00:00:28.920
+kita tidak menguji file Konstans tetapi Anda dapat melihat di sini bahwa Constance hanya cukup
+
+00:00:29.640 --> 00:00:38.100
+baik hanya menetapkan konstanta string ke variabel dan ketika Anda ' sedang menguji Anda benar-benar ingin memutuskan sendiri apa yang
+
+00:00:38.100 --> 00:00:41.860
+perlu Anda uji dan mengapa Anda tidak menguji.
+
+00:00:41.920 --> 00:00:46.590
+Anda benar-benar masuk ke dalam lubang kelinci yaitu Anda terus bekerja pada tes terus bekerja pada tes.
+
+00:00:46.680 --> 00:00:53.310
+Dan hal berikutnya yang Anda tahu Anda belum benar-benar melakukan apa pun di sisi produksi hal-hal dan
+
+00:00:53.310 --> 00:00:59.940
+tes penting tetapi Anda benar-benar ingin menghindari gagasan bahwa oh saya hanya perlu memiliki tes seratus lulus
+
+00:01:00.030 --> 00:01:05.210
+atau 100 foto atau saya perlu cakupan kode saya menjadi 100 persen.
+
+00:01:05.640 --> 00:01:11.550
+Sebenarnya bukan ide yang baik untuk memiliki cakupan kode 100 persen karena itu berarti
+
+00:01:11.910 --> 00:01:19.680
+Anda menjalankan tes yang kemungkinan besar tidak perlu dijalankan dan waktu Anda dapat dihabiskan dengan bijaksana di area lain
+
+00:01:19.680 --> 00:01:20.960
+aplikasi Anda.
+
+00:01:20.970 --> 00:01:26.490
+Ingat ada hal-hal kecil yang bisa kita lakukan untuk memperbaiki atau membuat kode kita lebih cantik menulis lebih banyak
+
+00:01:26.970 --> 00:01:29.060
+tes tetapi kita memiliki waktu terbatas.
+
+00:01:29.130 --> 00:01:34.310
+Jadi sebagai pengembang senior, Anda harus memutuskan sendiri di mana pengorbanannya.
+
+00:01:35.610 --> 00:01:36.200
+Baiklah.
+
+00:01:36.250 --> 00:01:40.590
+Jadi Konstans mengajukan kita tidak benar-benar membutuhkan tes untuk itu tetapi tindakan.
+
+00:01:40.630 --> 00:01:44.000
+Saya pikir kita perlu beberapa tes untuk tindakan kita.
+
+00:01:44.020 --> 00:01:47.400
+Mari kita membuat tindakan atau tindakan yang menguji jatuh
+
+00:01:51.700 --> 00:01:53.690
+dan di dalam sini.
+
+00:01:53.800 --> 00:01:58.750
+Mari sekali lagi mengimpor bintang sebagai tindakan.
+
+00:02:00.680 --> 00:02:02.410
+Dari file tindakan kami
+
+00:02:06.560 --> 00:02:11.710
+dan dengan tindakan pertama yang kami miliki yang merupakan bidang pencarian yang ditetapkan.
+
+00:02:11.880 --> 00:02:12.920
+Itu yang cukup sederhana.
+
+00:02:12.930 --> 00:02:21.170
+Kami hanya ingin memastikan bahwa fungsi ini mengembalikan objek ini sehingga kami dapat menggunakan fungsionalitas dasar yang adil
+
+00:02:21.170 --> 00:02:22.210
+di sini.
+
+00:02:22.340 --> 00:02:35.180
+Kami hanya dapat memilikinya dan saya tahu saya harus menggunakan yang dijelaskan kepada Anda untuk memisahkan dua tindakan yang kami miliki.
+
+00:02:35.180 --> 00:02:38.380
+Tetapi saya pikir Anda mendapatkan ide bahwa Anda dapat melakukannya sendiri.
+
+00:02:38.420 --> 00:02:50.480
+Saya ingin membuat Anda naik ke sini tapi mari kita buat tindakan untuk
+
+00:02:50.480 --> 00:02:51.770
+mencari
+
+00:02:54.970 --> 00:03:04.980
+robot dan ini akan memiliki tumpukan sederhana yang sangat sederhana
+
+00:03:04.980 --> 00:03:17.760
+dan tindakan yang diharapkan akan menjadi objek kami dan mari mengimpor konstanta kami
+
+00:03:24.090 --> 00:03:27.770
+di sini juga.
+
+00:03:29.000 --> 00:03:31.650
+Jadi kita bisa menggunakannya.
+
+00:03:31.790 --> 00:03:36.650
+Ini akan memiliki jenis bidang pencarian perubahan dan muatan.
+
+00:03:37.160 --> 00:03:39.050
+Dan ini adalah tindakan yang diharapkan.
+
+00:03:39.050 --> 00:03:45.820
+Jadi kami berharap bahwa tindakan akan memasukkan teks atau kita tidak memerlukan karakter string di sini.
+
+00:03:46.010 --> 00:03:47.270
+Ini dia.
+
+00:03:47.270 --> 00:03:52.030
+Jadi kita cukup mengatakan xpect tindakan mencari apa
+
+00:03:56.170 --> 00:03:57.300
+itu.
+
+00:03:57.310 --> 00:04:00.580
+Itu ditetapkan bidang pencarian.
+
+00:04:00.640 --> 00:04:02.370
+Salin yang
+
+00:04:05.530 --> 00:04:12.230
+mengatur bidang pencarian untuk memiliki teks dan memiliki dua yang sama.
+
+00:04:12.280 --> 00:04:18.970
+Jadi kami ingin mengatur bidang pencarian dengan teks itu dan kami membutuhkannya untuk memiliki hasil yang diharapkan
+
+00:04:18.970 --> 00:04:21.570
+dari tindakan sehingga tindakan yang diharapkan.
+
+00:04:21.610 --> 00:04:24.630
+Mari selamatkan.
+
+00:04:24.760 --> 00:04:27.240
+Dan apa yang saya lewatkan di sini.
+
+00:04:27.250 --> 00:04:31.070
+Mari kita tidak melihat koma di sini.
+
+00:04:31.090 --> 00:04:33.030
+Sekarang, lebih dari menggunakan koma.
+
+00:04:33.470 --> 00:04:35.760
+Bagian tes ini sulit bagi saya dengan koma.
+
+00:04:35.790 --> 00:04:36.360
+Kamu benar.
+
+00:04:36.480 --> 00:04:37.080
+Jadi begitulah.
+
+00:04:37.080 --> 00:04:41.580
+Kami memiliki tes baru sekarang dalam tindakan yang berlalu.
+
+00:04:41.580 --> 00:04:43.130
+Sangat sangat bagus.
+
+00:04:43.260 --> 00:04:45.510
+Dan sesederhana itu kita harus tahu bagaimana melakukannya.
+
+00:04:45.810 --> 00:04:46.950
+Tapi inilah bagian yang menantang.
+
+00:04:46.950 --> 00:04:56.460
+Sekarang kami memiliki robot permintaan tindakan ini yang oh boy melakukan pengiriman dan memiliki panggilan API di sini dan ini adalah sesuatu
+
+00:04:56.460 --> 00:04:59.090
+yang mungkin tidak Anda lihat.
+
+00:04:59.100 --> 00:05:04.810
+Saya telah membuat API untuk itu di sini yang hanya mengekstrak panggilan telepon kami.
+
+00:05:05.040 --> 00:05:12.240
+Jadi kita memberikannya dan melakukan respon respon seterusnya sehingga menyederhanakan hal-hal untuk kita sehingga
+
+00:05:12.240 --> 00:05:18.980
+kita tidak harus terus-menerus menjemput mereka respon respon Sardesai Tapi Anda sudah melihat
+
+00:05:19.940 --> 00:05:21.080
+ini sebelumnya
+
+00:05:24.010 --> 00:05:29.580
+sedangkan tindakan itu hanya mereka pengiriman permintaan robot yang tertunda.
+
+00:05:29.710 --> 00:05:34.920
+Dan akhirnya itu akan berhasil atau gagal.
+
+00:05:35.290 --> 00:05:45.510
+Jadi bagaimana kita melakukan ini karena melihat tindakan ini kita perlu mengirim karena ini adalah tindakan asinkron. Ingat kita
+
+00:05:45.720 --> 00:05:48.540
+perlu berterima kasih untuk itu.
+
+00:05:48.550 --> 00:05:52.280
+Kami membutuhkan middleware thunk.
+
+00:05:52.420 --> 00:05:54.900
+Mari kita mulai menulis tes dan lihat apa yang bisa kita tingkatkan.
+
+00:05:54.900 --> 00:05:57.630
+Saya akan menutup beberapa tab ini hanya untuk membersihkannya.
+
+00:06:01.940 --> 00:06:03.010
+Ini dia.
+
+00:06:03.110 --> 00:06:10.160
+Dan kita akan membuat blok baru dan di blok ini kita
+
+00:06:12.870 --> 00:06:20.310
+ingin mengatakan perubahan berubah atau menangani API meminta robot dan kita akan mengatakan
+
+00:06:23.600 --> 00:06:33.400
+di sini bahwa hal pertama yang ingin kita lakukan kita harus mengirimkan kiriman ke berfungsi lagi saya
+
+00:06:33.400 --> 00:06:42.480
+ingat pengiriman di sini dengan baik jika kita melakukannya tanpa ini jadi mari kita coba saja.
+
+00:06:42.600 --> 00:06:53.960
+Jika saya menjalankan tindakan xpect dot request robot's action dan saya percaya itulah yang disebut robot permintaan
+
+00:06:53.960 --> 00:07:04.070
+dan kita biarkan saja dan mari kita katakan bahwa kita mengharapkan jenis tindakan untuk meminta
+
+00:07:09.670 --> 00:07:13.590
+katakana menunggu dan muatan robot.
+
+00:07:13.600 --> 00:07:21.990
+Jika kita melihat tindakan kita, kita tidak mengirimkan muatan apa pun sehingga kita bisa terus maju dan membiarkannya
+
+00:07:21.990 --> 00:07:22.950
+apa adanya.
+
+00:07:23.070 --> 00:07:27.310
+Jika saya menyimpan satu robot permintaan gagal
+
+00:07:30.650 --> 00:07:36.390
+dan di sana Anda pergi saya mendapatkan kesalahan jenis kesalahan.
+
+00:07:36.390 --> 00:07:47.120
+Pengiriman bukan fungsi karena ingat dengan kode asinkron, kita perlu melewati fungsi pengiriman ini untuk benar-benar menjalankan
+
+00:07:47.960 --> 00:07:57.070
+ini dan kami dulu menganggap middleware agar kami melakukan ini jika Anda ingat diindeks.
+
+00:07:57.190 --> 00:08:04.060
+Ya, kami memiliki middleware thunk dan di sini bagaimana kami melakukannya.
+
+00:08:04.470 --> 00:08:07.360
+Nah ada paket khusus yang bisa kita gunakan di sini.
+
+00:08:07.530 --> 00:08:11.250
+Biarkan saya keluar dari ini membuat ini sedikit lebih besar.
+
+00:08:12.240 --> 00:08:18.890
+Mari kita jelaskan kita dapat menginstal paket yang disebut toko redux dan
+
+00:08:22.310 --> 00:08:30.170
+ingat bahwa ini memberi kita akses ke toko palsu yang dapat kita gunakan untuk pengujian.
+
+00:08:30.480 --> 00:08:37.060
+Jadi mari kita lakukan dan PM instal dasbor aman.
+
+00:08:37.370 --> 00:08:53.150
+Def dan sekarang kita memiliki akses ke toko palsu ini dan cara kita dapat menggunakannya adalah jika saya pergi ke sini dan saya katakan import configure
+
+00:08:54.610 --> 00:09:00.780
+store dan sekali lagi ini semua dalam dokumentasi mereka untuk
+
+00:09:00.780 --> 00:09:06.340
+paket yang ingin Anda gunakan dari toko maake redoks.
+
+00:09:06.650 --> 00:09:16.210
+Dan kami juga ingin mengimpor thidd middleware dari paket redox yang jika Anda
+
+00:09:19.030 --> 00:09:27.350
+ingat kami sudah memiliki dalam indeks kami tidak file jazz.
+
+00:09:27.450 --> 00:09:35.460
+Dan hal terakhir yang perlu kita lakukan untuk memastikan bahwa itu sesuai dengan benar adalah mengkonfigurasi
+
+00:09:35.550 --> 00:09:41.200
+dan membuat toko ini sehingga kita bisa mengatakan Konst store terkunci.
+
+00:09:42.700 --> 00:09:55.500
+Sama dengan mengkonfigurasi toko terkunci dan mengkonfigurasi ulang dengan memberikannya beberapa properti yang salah satunya adalah middleware yang akan kita gunakan
+
+00:09:55.500 --> 00:09:58.890
+yang akan menjadi middleware Thankx.
+
+00:09:58.890 --> 00:10:04.280
+Jadi kadang-kadang Anda kemungkinan besar akan menambahkan ini dalam file uji pengaturan.
+
+00:10:04.290 --> 00:10:11.280
+Untuk saat ini saya akan menyimpannya di sini karena kami hanya memiliki satu file tindakan tetapi Anda biasanya dapat mengekspornya.
+
+00:10:11.280 --> 00:10:14.930
+Jadi toko tersedia untuk semua tes Anda.
+
+00:10:16.600 --> 00:10:20.970
+Jadi sekarang kita bisa membuat toko
+
+00:10:24.790 --> 00:10:29.940
+sama dengan toko maake dan kita ada di sana.
+
+00:10:30.190 --> 00:10:42.460
+Dan sekarang saya dapat mengatakan store Daut dispatch dan store dispatch yang mengambil tindakan dot request robot.
+
+00:10:42.580 --> 00:10:46.740
+Jadi kita akan mengirimkan tindakan ini.
+
+00:10:46.870 --> 00:10:52.760
+Ingat itu adalah tindakan di sini.
+
+00:10:52.880 --> 00:11:06.890
+Dan begitu kami mengirim bahwa kami dapat melakukan sesuatu seperti tindakan Konst sama dengan menyimpan Daut mendapatkan tindakan.
+
+00:11:07.010 --> 00:11:09.850
+Dan sekarang tindakan ini akan mengandung apa yang kita butuhkan.
+
+00:11:11.260 --> 00:11:12.900
+Biarkan saya konsol untuk memperlihatkannya kepada Anda.
+
+00:11:12.910 --> 00:11:14.050
+Jadi
+
+00:11:18.340 --> 00:11:30.200
+menghibur aksi log yang akan mengandung aksi mari kita simpan tes NPM Iran.
+
+00:11:30.230 --> 00:11:36.540
+Gulir ke atas dan saya mengalami sedikit kesalahan log konsol di sini.
+
+00:11:36.590 --> 00:11:44.280
+Toko konfigurasikan Mock harus mengkonfigurasi toko Haake di sini.
+
+00:11:44.290 --> 00:11:49.320
+Baiklah jadi kita melihat bahwa pengiriman bukan suatu fungsi.
+
+00:11:49.390 --> 00:11:57.470
+Sekarang kenapa begitu dan ini adalah sesuatu yang mungkin Anda perhatikan saat kita melihat aksinya.
+
+00:11:57.710 --> 00:12:04.960
+J. S. S-5 Anda ingat bahwa terima redux mengharapkan fungsi untuk dikembalikan.
+
+00:12:05.410 --> 00:12:13.750
+Dan meskipun program kami bekerja seperti sekarang, Anda idealnya ingin kembali ke posisi teratas.
+
+00:12:13.740 --> 00:12:14.280
+Iya nih.
+
+00:12:17.270 --> 00:12:21.590
+Anda lihat di sini itu dan ini adalah sesuatu yang kita bicarakan sebelum bagian redux.
+
+00:12:21.590 --> 00:12:28.520
+Anda lihat di sini bahwa kami hanya memberikan pengiriman kepada robot permintaan kami.
+
+00:12:28.940 --> 00:12:38.110
+Tapi cara kerja Thankx adalah kita ingin memastikan bahwa kita mengirim seperti ini menjalankan fungsi di dalamnya sehingga
+
+00:12:38.110 --> 00:12:47.140
+kita dapat menjalankan fungsi pengiriman seperti yang kita miliki dalam pengujian kami di sini dan tindakan meminta
+
+00:12:47.140 --> 00:12:50.900
+robot dan kami ingin mengirim bahwa.
+
+00:12:51.010 --> 00:12:55.280
+Kalau tidak, kita harus melakukan menyimpan Daut pengiriman Midhir yang agak jelek.
+
+00:12:55.360 --> 00:13:01.870
+Sekali lagi untuk memperbaiki itu semua yang perlu kita lakukan adalah dalam tindakan karena jika
+
+00:13:01.870 --> 00:13:07.560
+Anda ingat Apogee Ya kami telah mengirim sekarang dan robot pencarian perlu dijalankan.
+
+00:13:07.630 --> 00:13:16.090
+Jadi kita hanya akan memiliki fungsi di dalam fungsi dan kami ingin memastikan bahwa ini berfungsi
+
+00:13:16.090 --> 00:13:16.660
+juga.
+
+00:13:16.660 --> 00:13:19.060
+Jadi saya akan kembali dan melakukan NPM
+
+00:13:26.170 --> 00:13:28.290
+mulai cerah dan semuanya masih berfungsi.
+
+00:13:28.730 --> 00:13:35.090
+Tapi sekarang kami dapat dengan mudah menjalankan tes dengan lebih baik dan tes PM kembali ke
+
+00:13:38.210 --> 00:13:42.650
+tes kami dan kami melihat bahwa kami mengalami satu kegagalan.
+
+00:13:44.130 --> 00:13:49.630
+Kami memiliki permintaan jenis robot yang menunggu yang kami harapkan tetapi kami mendapat fungsi sebagai gantinya.
+
+00:13:51.590 --> 00:13:59.830
+Dan jika kita mencatat tindakan, kita melihat bahwa kita memiliki jenis tindakan dari permintaan robot yang tertunda yang kita dapatkan.
+
+00:13:59.970 --> 00:14:04.220
+Dan itu karena Anda dapat melihat bahwa tindakan mengembalikan array.
+
+00:14:04.320 --> 00:14:15.170
+Dan kami menginginkan objek aksi di xpect karena kami tidak perlu lagi menjalankan aksi ini.
+
+00:14:15.170 --> 00:14:23.560
+Semuanya dijalankan di sini dan kita bisa mendapatkan tindakan yang bisa kita katakan tindakan
+
+00:14:26.480 --> 00:14:34.320
+xpect item pertama dalam array yang akan dijalankan dan lihat semuanya bekerja
+
+00:14:34.500 --> 00:14:37.650
+Dan saya tahu ini bisa sedikit membingungkan.
+
+00:14:37.710 --> 00:14:42.120
+Dan setiap kali Anda menguji hal-hal yang tidak sinkron itu bisa sangat sulit.
+
+00:14:42.300 --> 00:14:50.670
+Tapi semua yang kami lakukan adalah benar-benar membuat toko palsu yang memiliki middleware thunk sehingga
+
+00:14:51.120 --> 00:14:58.830
+menunggu fungsi apa pun yang dikembalikan dari tindakan yang kami lakukan dengan robot
+
+00:14:58.830 --> 00:15:10.510
+permintaan tindakan kami karena Anda lihat di sini bahwa setiap belokan tindakan mengambil pengiriman dan sekarang kiriman ini mendapat robot permintaan
+
+00:15:10.510 --> 00:15:14.890
+kalimat secara otomatis itu akan menerima tindakan.
+
+00:15:14.890 --> 00:15:17.070
+Dan karena jika kita pergi ke tindakan kita.
+
+00:15:17.230 --> 00:15:17.760
+Iya nih.
+
+00:15:17.770 --> 00:15:26.970
+Hal pertama yang kami kirim adalah tindakan tertunda yang kami terima tindakan nol.
+
+00:15:27.060 --> 00:15:32.270
+Disebut aksi robot yang ditunggu-tunggu.
+
+00:15:32.280 --> 00:15:32.940
+Baiklah.
+
+00:15:32.940 --> 00:15:39.570
+Jadi bagaimana kita menguji keberhasilan robot permintaan dan gagal meminta robot.
+
+00:15:39.900 --> 00:15:45.060
+Dan itu adalah sedikit tantangan yang akan saya tinggalkan bagi Anda untuk memutuskan apa
+
+00:15:45.060 --> 00:15:55.130
+yang harus dilakukan berdasarkan apa yang telah kami pelajari tentang pengujian asinkron dan juga apa yang telah kami pelajari tentang mengejek redux kami atau dan ini adalah
+
+00:15:55.130 --> 00:15:57.430
+masalah yang sulit dan sulit.
+
+00:15:57.440 --> 00:16:04.550
+Jadi, gunakan sumber daya apa pun yang Anda miliki di Internet. Google menumpuk apa pun yang Anda bisa
+
+00:16:04.550 --> 00:16:08.810
+untuk mencoba dan mencari tahu ini karena itu semua pengujian.
+
+00:16:08.810 --> 00:16:17.780
+Pengujian kadang-kadang sangat sederhana ketika Anda memiliki komponen atau fungsi fungsional murni atau itu bisa sangat sulit
+
+00:16:17.780 --> 00:16:23.160
+ketika Anda memiliki semua dependensi yang menjalankan tes Anda.
+
+00:16:23.720 --> 00:16:26.130
+Tetapi setiap situasi berbeda.
+
+00:16:26.210 --> 00:16:33.290
+Dan untungnya bagi kami dengan semua sumber daya ini secara online, Anda dapat mengetahuinya selama Anda memahami bagaimana
+
+00:16:33.290 --> 00:16:39.510
+berbagai hal bekerja dan apa artinya kesalahan yang sebagai pengembang senior adalah yang paling penting.
+
+00:16:39.620 --> 00:16:44.080
+Mereka tidak tahu setiap sintaks di perpustakaan dan tahu semua dokumentasi.
+
+00:16:44.120 --> 00:16:50.770
+Mereka hanya memahami bagaimana segala sesuatu bekerja di bawah tenda sehingga ketika masalah muncul mereka bisa menyelesaikannya.
+
+00:16:52.050 --> 00:16:58.960
+Akhirnya saya ingin menunjukkan kepada Anda dua hal yang dapat membantu Anda atau saya pikir hebat.
+
+00:16:58.980 --> 00:17:07.620
+Setiap kali Anda melakukan tes asinkron, yang pertama adalah pustaka yang disebut ketukan dan ketuk adalah paket
+
+00:17:07.640 --> 00:17:08.600
+kosong.
+
+00:17:08.640 --> 00:17:16.190
+Anda dapat menginstal dan Anda dapat melihat di sini bahwa kami dapat berpura-pura bahwa kami sedang melakukan Anda adalah alkohol.
+
+00:17:16.380 --> 00:17:25.080
+Kami dapat melakukan permintaan dapatkan ke titik akhir dan kami dapat secara otomatis membalas dengan apa pun yang kami inginkan.
+
+00:17:25.200 --> 00:17:32.240
+Kami dapat mengatakan bahwa balasan ini memiliki status 200 dan memberi kami nama pengguna dan email.
+
+00:17:32.610 --> 00:17:40.630
+Dan ini membuat Anda sangat baik untuk pengujian asinkron begitu Anda masuk ke dalam pengujian juga terutama ketika Anda mulai
+
+00:17:40.630 --> 00:17:42.220
+bekerja dengan API.
+
+00:17:43.030 --> 00:17:48.970
+Super Test adalah salah satu alat favorit saya hanya dengan mengimpor tes super seperti di sini.
+
+00:17:49.060 --> 00:17:57.880
+Dan kami memiliki permintaan yang dapat dimintanya, katakanlah aplikasi ekspres dan Anda dapat melakukan semua
+
+00:17:58.120 --> 00:18:05.860
+ucapan ini seperti menjalankan dapatkan dan mengharapkan Tipe-Konten dan status serta banyak hal.
+
+00:18:05.890 --> 00:18:13.170
+Sekarang ini berada di luar cakupan kursus ini dan ini adalah sesuatu yang dapat Anda lihat jika Anda mendapatkan lebih banyak
+
+00:18:13.210 --> 00:18:19.240
+dan lebih dalam pengujian tetapi hanya menyadari bahwa ada banyak alat di luar sana untuk Anda gunakan
+
+00:18:19.240 --> 00:18:21.750
+untuk menulis tes indah bersih yang bagus.
+
+00:18:22.840 --> 00:18:24.420
+Sampai jumpa di yang berikutnya.
+
+00:18:24.430 --> 00:18:24.960
+Sampai jumpa.

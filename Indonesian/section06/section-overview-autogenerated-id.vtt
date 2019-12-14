@@ -1,0 +1,211 @@
+﻿WEBVTT
+
+00:00:02.400 --> 00:00:06.850
+Pengujian adalah konsep penting dalam pemrograman.
+
+00:00:07.090 --> 00:00:13.530
+Meskipun kita mulai menulis skrip dodgiest file sederhana dengan beberapa baris kode.
+
+00:00:13.870 --> 00:00:20.840
+Ketika kita mulai masuk ke dunia Breer Anda mulai mendapatkan ribuan dan jutaan baris
+
+00:00:22.010 --> 00:00:30.730
+kode ratusan file file javascript yang dikerjakan oleh banyak orang dari berbagai divisi di suatu perusahaan dan
+
+00:00:31.360 --> 00:00:36.570
+kemungkinan besar semuanya dimulai pada waktu berbeda di perusahaan.
+
+00:00:36.700 --> 00:00:40.570
+Semua perubahan kode terjadi dari waktu ke waktu di waktu yang berbeda.
+
+00:00:40.570 --> 00:00:49.330
+Ketika orang-orang mengerjakan proyek seiring dengan kompleksitas kode dan ukuran kode yang bertambah, semakin sulit bagi
+
+00:00:49.330 --> 00:00:53.230
+seseorang untuk memperbaiki bug yang mungkin timbul.
+
+00:00:54.040 --> 00:01:00.940
+Jika Anda masuk ke proyek yang telah ada selama bertahun-tahun, Anda dapat memodifikasi sesuatu yang dapat memodifikasi bagian
+
+00:01:00.940 --> 00:01:03.770
+lain dari aplikasi yang tidak Anda pikirkan.
+
+00:01:05.050 --> 00:01:12.840
+Dan Anda mulai membuat semua bug ini dengan fitur-fitur baru yang Anda perkenalkan ke dalam aplikasi.
+
+00:01:12.990 --> 00:01:19.600
+Semakin lama kode disimpan dalam proyek, semakin besar kemungkinan untuk disentuh oleh pengembang yang berbeda.
+
+00:01:20.510 --> 00:01:22.150
+Jadi Anda lihat masalahnya di sini.
+
+00:01:22.430 --> 00:01:30.380
+Untuk perusahaan, ini adalah masalah besar karena Anda kemungkinan besar selalu mengembangkan produk Anda dan menambahkan lebih
+
+00:01:30.500 --> 00:01:32.480
+banyak baris kode.
+
+00:01:32.600 --> 00:01:39.770
+Itu berarti bahwa hanya akan ada terus membuat monster raksasa ini menjadi
+
+00:01:39.770 --> 00:01:45.310
+semakin sulit untuk menjinakkan dan bug biaya banyak perusahaan.
+
+00:01:46.520 --> 00:01:53.790
+Untungnya bagi kami, kami memiliki sesuatu yang disebut pengujian yang dapat membantu kami memecahkan masalah ini.
+
+00:01:55.080 --> 00:02:02.820
+Seperti namanya pengujian adalah suatu metode dalam pengembangan perangkat lunak di mana masing-masing unit aset
+
+00:02:03.270 --> 00:02:11.990
+atau program kode sumber diuji untuk melihat apakah mereka bekerja dengan baik meskipun mungkin bukan bagian besar
+
+00:02:11.990 --> 00:02:13.690
+dari wawancara pengkodean.
+
+00:02:13.760 --> 00:02:20.140
+Ketika pertama kali memulai, ini adalah bagian besar dari perusahaan perangkat lunak besar tempat Anda bekerja.
+
+00:02:21.540 --> 00:02:28.940
+Sebagai contoh dalam kasus saya ketika saya pertama kali memulai sebagai pengembang, saya tidak tahu banyak tentang pengujian dan saya
+
+00:02:29.240 --> 00:02:31.920
+diterima tanpa tahu banyak tentang pengujian.
+
+00:02:32.210 --> 00:02:38.600
+Tetapi pentingnya pengujian tumbuh lebih dan lebih saat mereka mengalami kemajuan dalam karir saya.
+
+00:02:39.170 --> 00:02:44.550
+Dan itu adalah salah satu hal yang sering kita abaikan dan banyak pengembang junior abaikan.
+
+00:02:44.860 --> 00:02:52.990
+Tetapi jika Anda ingin menjadi pengembang senior dan jika Anda ingin memiliki karir yang tahan
+
+00:02:52.990 --> 00:03:03.530
+lama, Anda benar-benar harus menguasai keterampilan mengingat setiap perusahaan yang serius akan memiliki tes dan mereka ingin Anda menulis tes
+
+00:03:03.530 --> 00:03:05.620
+untuk kode Anda.
+
+00:03:06.080 --> 00:03:14.150
+Jadi bagaimana kita dapat melakukan ini dengan baik, sebuah tes hanyalah sebuah file nother di proyek Anda.
+
+00:03:14.170 --> 00:03:19.110
+File ini tidak pernah berjalan di produksi atau di situs web produk.
+
+00:03:19.150 --> 00:03:21.420
+Sebaliknya itu berjalan dalam pengembangan.
+
+00:03:21.460 --> 00:03:26.040
+Ini adalah file yang Anda jalankan untuk memastikan sebelum dirilis untuk produksi.
+
+00:03:26.080 --> 00:03:32.100
+Dengan begitu Anda baru saja menulis karya sebagaimana dimaksud.
+
+00:03:32.130 --> 00:03:37.110
+Sekarang cara terbaik untuk menunjukkan kepada Anda cara kerjanya adalah dengan menunjukkan tes untuk Anda.
+
+00:03:37.530 --> 00:03:42.320
+Jadi mari kita pergi ke teman robo kita.
+
+00:03:42.370 --> 00:03:49.480
+Saya memiliki aplikasi teman-teman robo di sini, tetapi saya telah menyertakan beberapa tes hanya untuk menunjukkan kepada Anda cara kerjanya.
+
+00:03:49.720 --> 00:03:53.510
+Dan pada akhir bagian ini Anda akan dapat menulis ini juga.
+
+00:03:53.650 --> 00:03:55.140
+Dan kita akan menulisnya bersama.
+
+00:03:55.690 --> 00:04:05.240
+Tetapi jika saya menjalankan NPM menjalankan tes lagi perintah yang datang dengan buat bereaksi mari kita lihat apa yang terjadi.
+
+00:04:06.120 --> 00:04:14.050
+Memberi saya beberapa hal yang mengatakan bahwa tidak ada tes yang ditemukan terkait perubahan file file sejak komit terakhir karena saya sudah
+
+00:04:14.050 --> 00:04:15.030
+menjalankan tes.
+
+00:04:15.040 --> 00:04:16.270
+Tetapi
+
+00:04:19.770 --> 00:04:31.790
+jika saya menekan apakah Anda Kassa kami memiliki enam suite tes 16 Tes dan lima foto yang berlalu.
+
+00:04:32.000 --> 00:04:38.070
+Baiklah apa maksud semua ini dan mengapa semua komponen ini memiliki tes titik saya baru saja jatuh di
+
+00:04:38.070 --> 00:04:38.620
+sini.
+
+00:04:38.790 --> 00:04:43.000
+Saya melihat banyak warna hijau yang mungkin bagus tapi apa artinya semua ini.
+
+00:04:44.050 --> 00:04:48.130
+Dan jangan khawatir dari sini kita akan mengemas dan melihat bagaimana semuanya bekerja.
+
+00:04:48.160 --> 00:04:54.130
+Kita akan belajar tentang alat apa yang kita perlukan alat apa yang akan kita gunakan dan bagaimana
+
+00:04:54.160 --> 00:04:55.950
+kita bisa menjadi ninja pengujian.
+
+00:04:56.180 --> 00:05:05.000
+Ngomong-ngomong, Anda mungkin mendengar istilah TDD atau pengembangan yang didorong oleh tes yang merupakan gagasan untuk menulis tes
+
+00:05:05.000 --> 00:05:12.470
+bahkan sebelum Anda benar-benar menulis kode aplikasi sehingga Anda mulai menulis kode berdasarkan tes yang Anda
+
+00:05:12.470 --> 00:05:13.410
+berikan.
+
+00:05:13.790 --> 00:05:20.450
+Dan beberapa orang benar-benar menyukai cara kerja ini dan Anda dapat membacanya dan memutuskan sendiri apakah ini
+
+00:05:20.450 --> 00:05:22.610
+sesuatu yang ingin Anda coba.
+
+00:05:23.610 --> 00:05:24.930
+Sekarang untuk kembali
+
+00:05:27.750 --> 00:05:31.400
+ke titik kita adalah manusia dan sebagai manusia kita membuat kesalahan.
+
+00:05:31.490 --> 00:05:34.930
+Ini tidak dapat dihindari ketika aplikasi tumbuh.
+
+00:05:35.000 --> 00:05:43.280
+Tidak mungkin untuk memikirkan semua kasus dalam kode Anda dan memiliki semua pernyataan if yang menangani semua
+
+00:05:43.280 --> 00:05:44.700
+kasus penggunaan.
+
+00:05:45.140 --> 00:05:52.350
+Terutama bukan sejak awal meskipun menambahkan tes pasti akan mengurangi kecepatan pengembangan
+
+00:05:52.350 --> 00:05:53.220
+kami.
+
+00:05:53.370 --> 00:05:58.260
+Sekarang kami menulis lebih banyak kode hanya untuk tes dalam jangka panjang.
+
+00:05:58.320 --> 00:06:05.250
+Jika proyek Anda dari ukuran tertentu itu selalu lebih baik untuk menulis tes karena Anda menghindari bug dalam
+
+00:06:05.250 --> 00:06:06.440
+jangka panjang.
+
+00:06:06.450 --> 00:06:07.290
+Baiklah.
+
+00:06:07.620 --> 00:06:10.500
+Di bagian ini kita akan mempelajari semua tentang itu.
+
+00:06:10.680 --> 00:06:16.350
+Seperti biasa kita akan melalui beberapa konsep inti dan membangun fondasi kita dan kemudian kita
+
+00:06:16.350 --> 00:06:19.120
+akan mengkodekan beberapa tes kita sendiri.
+
+00:06:19.590 --> 00:06:20.460
+Mari kita mulai.

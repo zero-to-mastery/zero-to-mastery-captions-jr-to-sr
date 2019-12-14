@@ -1,0 +1,202 @@
+﻿WEBVTT
+
+00:00:00.750 --> 00:00:05.650
+Dan selamat datang kembali kami tahu cara kerja aplikasi puing teman.
+
+00:00:05.660 --> 00:00:14.330
+Sekarang dengan tiga babak yang hebat tetapi Bruno meminta kami hal tertentu, kami perlu menambahkan redux ke aplikasi teman-teman
+
+00:00:14.330 --> 00:00:20.860
+robo kami sehingga dapat meningkatkan skala dan menangani manajemen negara dengan lebih baik.
+
+00:00:22.630 --> 00:00:28.960
+Sekarang, video-video selanjutnya akan bekerja bersama langkah demi langkah.
+
+00:00:28.990 --> 00:00:34.630
+Saya akan menunjukkan kepada Anda bagaimana redux diimplementasikan dan cara kerjanya dan Anda akan mengikuti
+
+00:00:35.170 --> 00:00:38.320
+sambil mencoba memastikan bahwa kode Anda juga berfungsi.
+
+00:00:38.770 --> 00:00:42.120
+Baiklah jadi berhentilah sekarang dan siapkan lingkungan Anda.
+
+00:00:42.140 --> 00:00:46.470
+Berbicara kode bersama saya, Anda sudah siap.
+
+00:00:46.510 --> 00:00:46.940
+Baiklah.
+
+00:00:46.960 --> 00:00:48.300
+Dan kita akan memulai.
+
+00:00:48.370 --> 00:00:56.360
+Hal pertama yang akan saya lakukan adalah saya memiliki teman robot saya jadi saya akan mengkloning Ribault
+
+00:00:56.360 --> 00:01:06.650
+ini dan kami hanya akan melakukan pengaturan reguler kami dengan get clone dan kemudian saya akan CD ke teman robot saya sempurna.
+
+00:01:06.690 --> 00:01:09.510
+Mari kita buka ini di editor teks
+
+00:01:14.630 --> 00:01:18.720
+Anda dan sekali lagi saya suka menggabungkan ini sehingga terlihat bagus.
+
+00:01:19.470 --> 00:01:20.670
+Dan bersih.
+
+00:01:20.720 --> 00:01:21.250
+Sempurna.
+
+00:01:22.670 --> 00:01:29.510
+Sekarang jelas hal pertama yang perlu kita lakukan ketika kita mengkloning sesuatu adalah dan kemudian
+
+00:01:29.510 --> 00:01:32.710
+menginstal untuk memastikan kita memiliki semua paket.
+
+00:01:32.920 --> 00:01:38.970
+Dan kami juga ingin memastikan bahwa semuanya berjalan lancar tanpa kesalahan apa pun.
+
+00:01:39.190 --> 00:01:48.410
+Jadi langkah selanjutnya adalah menjalankan NPM start.
+
+00:01:48.460 --> 00:01:49.180
+Baiklah.
+
+00:01:49.180 --> 00:01:49.690
+Sempurna.
+
+00:01:49.690 --> 00:01:50.930
+Semuanya berfungsi.
+
+00:01:51.040 --> 00:01:53.780
+Dan kita harus bisa memfilter.
+
+00:01:53.780 --> 00:01:56.420
+Sempurna.
+
+00:01:56.430 --> 00:01:56.690
+Baiklah.
+
+00:01:56.700 --> 00:01:59.790
+Jadi kita terbiasa dengan basis kode ini.
+
+00:02:01.120 --> 00:02:09.990
+Kami memiliki aksi ulang kami tetapi itu hanya aksi ulang sederhana dengan wadah dan komponen.
+
+00:02:10.040 --> 00:02:19.690
+Hal pertama yang ingin kami lakukan adalah menginstal redux jadi saya akan menutup ini dan MBM
+
+00:02:20.480 --> 00:02:30.990
+Iran menginstal redux paket redux ini akan memberi kami beberapa alat untuk memasukkan redox ke dalam reaktor kami.
+
+00:02:32.220 --> 00:02:33.840
+Tapi inilah bagian yang keren.
+
+00:02:33.840 --> 00:02:37.630
+Dengan paket redoks dan mengapa saya penggemar berat.
+
+00:02:38.690 --> 00:02:45.680
+Itu bahwa 90 persen dari kode Anda masih akan menjadi Javascript redux akan memberi Anda beberapa pembantu
+
+00:02:46.070 --> 00:02:48.620
+tetapi Anda masih menulis javascript.
+
+00:02:48.740 --> 00:02:52.280
+Ini masih meningkatkan keterampilan javascript Anda.
+
+00:02:52.280 --> 00:02:57.470
+Ketika Anda menulis redux dan mengajarkan prinsip-prinsip yang benar-benar sangat bagus
+
+00:02:57.530 --> 00:03:05.630
+itulah sebabnya saya penggemar berat perpustakaan Anda mungkin tidak selalu membutuhkan redux dalam proyek Anda, tetapi itu hanya alat
+
+00:03:05.960 --> 00:03:13.070
+yang bagus untuk belajar karena ia memiliki konsep-konsep hebat yang Anda akan gunakan sepanjang karir Anda.
+
+00:03:13.220 --> 00:03:19.010
+Sekarang hal kedua yang kita butuhkan dan ini adalah sesuatu yang mirip dengan re-act mengingat bagaimana
+
+00:03:19.010 --> 00:03:25.730
+kita menginstal paket re-act dan kemudian kita juga membutuhkan sesuatu yang disebut paket re-act dorm untuk menghubungkan reaksi
+
+00:03:25.730 --> 00:03:29.130
+ke dong dengan baik dengan cara yang sama.
+
+00:03:29.140 --> 00:03:38.770
+Kita perlu menghubungkan redux untuk bereaksi karena redux secara teoritis dapat bekerja dengan perpustakaan lain dengan menambahkan
+
+00:03:38.980 --> 00:03:40.240
+paket lain.
+
+00:03:40.300 --> 00:03:46.600
+Kita dapat kembali berakting kembali mengetahui bahwa hei kita akan menggunakan redoks dengan Anda.
+
+00:03:46.600 --> 00:03:48.050
+Jadi itu sangat mudah dilakukan.
+
+00:03:48.070 --> 00:03:53.080
+Kami hanya akan menginstal NPM dan paket ini disebut aksi
+
+00:03:59.260 --> 00:04:06.570
+ulang dan cara kerja aksi reduks ini berfungsi adalah bahwa ia hanya akan menghubungkan wadah.
+
+00:04:06.760 --> 00:04:14.410
+Jadi dalam hal ini APTA J. S. ke apa yang kita sebut toko redux atau objek javascript besar yang sedang
+
+00:04:14.410 --> 00:04:14.820
+kita bicarakan.
+
+00:04:14.860 --> 00:04:21.110
+Itu menggambarkan keadaan di dan mereka akan berkomunikasi wadah akan berkomunikasi
+
+00:04:21.200 --> 00:04:23.770
+dengan toko dan sebaliknya.
+
+00:04:24.900 --> 00:04:31.410
+Sekarang komponen lain yang kita sebut komponen bodoh atau presentasi.
+
+00:04:31.530 --> 00:04:34.250
+Ketahuilah bahwa redux ada.
+
+00:04:34.320 --> 00:04:41.010
+Satu-satunya koneksi adalah antara sesuatu yang disebut wadah atau komponen pintar dan
+
+00:04:41.100 --> 00:04:42.650
+toko redux.
+
+00:04:42.660 --> 00:04:44.130
+Jadi, saya tunjukkan apa yang saya maksud.
+
+00:04:45.280 --> 00:04:51.040
+Jika Anda ingat diagram ini, kami baru saja menginstal paket redux yang dapat Anda anggap sebagai
+
+00:04:51.040 --> 00:04:51.990
+di sini.
+
+00:04:52.000 --> 00:04:58.300
+Kotak merah ini yang memungkinkan kita untuk membuat toko dan beberapa fungsi bantuan lainnya.
+
+00:04:58.300 --> 00:05:10.310
+Kami juga mengunduh re-act redux yang memungkinkan kami untuk menyambungkan dua bagian ini dan bereaksi redux dapat digunakan untuk mengatakan,
+
+00:05:10.310 --> 00:05:17.090
+hei kami ingin komponen celo menyadari bahwa kami menggunakan redux dan mendapatkan
+
+00:05:17.090 --> 00:05:20.650
+status mereka dari redux toko.
+
+00:05:22.380 --> 00:05:28.020
+Jadi pikirkan saja diagram ini karena kami sedang mengerjakan semua yang kami lakukan pada dasarnya
+
+00:05:28.020 --> 00:05:30.710
+adalah menghubungkan kedua perpustakaan ini bersama-sama.
+
+00:05:30.770 --> 00:05:37.630
+Baiklah sekarang karena kita memiliki dua paket ini kita dapat mulai mengimpornya dan menggunakannya di dalam toko
+
+00:05:37.630 --> 00:05:43.660
+kita, tetapi itu untuk beberapa video berikutnya yang akan saya lihat di yang berikutnya.
+
+00:05:43.770 --> 00:05:44.010
+Buh-Bye.

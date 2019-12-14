@@ -1,0 +1,730 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:02.480
+Selamat datang kembali.
+
+00:00:02.480 --> 00:00:08.280
+Mari kita periksa bagian baru bintang keamanan kita.
+
+00:00:08.290 --> 00:00:16.720
+Kita akan berbicara tentang skrip lintas situs dan pemalsuan permintaan lintas situs dan semuanya serupa.
+
+00:00:16.720 --> 00:00:20.790
+Mereka memiliki beberapa tumpang tindih jadi kita akan membicarakannya bersama.
+
+00:00:20.800 --> 00:00:25.730
+Anda juga akan mulai memperhatikan bahwa banyak dari ini sebenarnya tumpang tindih juga.
+
+00:00:25.810 --> 00:00:32.620
+Beberapa praktik terbaik di sini juga akan memengaruhi bagian bintang lainnya.
+
+00:00:32.640 --> 00:00:36.310
+Jadi apa yang dimaksud dengan scripting lintas situs terlebih dahulu.
+
+00:00:36.450 --> 00:00:44.280
+Skrip lintas situs yang baik terjadi setiap kali suatu aplikasi memasukkan data yang tidak dipercaya dalam halaman
+
+00:00:44.430 --> 00:00:53.850
+web baru tanpa validasi yang tepat atau melarikan diri atau memperbarui halaman web dengan data yang disediakan pengguna menggunakan skrip
+
+00:00:53.850 --> 00:00:59.680
+lintas situs javascript memungkinkan penyerang untuk mengeksekusi skrip di browser korban.
+
+00:01:01.110 --> 00:01:04.130
+Dan Anda dapat melakukan banyak hal buruk dengan melakukan itu.
+
+00:01:04.140 --> 00:01:06.130
+Mari kita gunakan contoh praktis di sini.
+
+00:01:06.900 --> 00:01:15.450
+Bayangkan taman bermain keamanan kami adalah sebuah posting blog dan posting blog ini diperbolehkan untuk komentar dan pengguna dapat
+
+00:01:15.450 --> 00:01:15.960
+berkomentar.
+
+00:01:15.960 --> 00:01:17.400
+Pengguna dapat berkomentar.
+
+00:01:17.670 --> 00:01:26.610
+Sekarang orang jahat dapat masuk dan Anda tahu mencoba untuk mengeksekusi skrip seperti yang kami coba dan itu tidak akan berhasil dan kami telah melihat ini
+
+00:01:26.610 --> 00:01:30.680
+sebelumnya di mana kami dapat mencoba dan memasukkan skrip di sini.
+
+00:01:31.110 --> 00:01:38.320
+Yah ini adalah posting blog dan saya melakukan contoh lama kita seperti ini.
+
+00:01:38.360 --> 00:01:45.080
+Ingat sumber gambar kami yang akan mengudara dan akan mengingatkan satu analis untuk memastikan kami
+
+00:01:45.080 --> 00:01:52.270
+menutup tab klik kirim dan kami telah menjalankan javascript pada browser kami tetapi itu tidak terlalu berarti.
+
+00:01:52.280 --> 00:02:01.220
+Namun jika ini adalah posting blog dengan komentar saya dengan mengirimkan komentar ini orang lain yang melihat browser
+
+00:02:01.220 --> 00:02:09.140
+ini sekarang dapat pergi ke posting blog ini dan karena saya sudah memasukkan komentar ini juga
+
+00:02:09.410 --> 00:02:17.180
+akan dijalankan di browser mereka dan DOM akan mencoba perbarui dan alih-alih jalankan fungsi peringatan
+
+00:02:17.180 --> 00:02:19.400
+ini di browser pengguna.
+
+00:02:19.560 --> 00:02:23.480
+Dan itulah yang dimaksud skrip lintas situs Cross.
+
+00:02:23.660 --> 00:02:34.670
+Saya dapat menjalankan kode lintas situs dua situs berbeda dari browser saya dan apa yang akan dilakukan oleh sebagian besar aktor jahat adalah
+
+00:02:34.880 --> 00:02:37.070
+menggunakan garis seperti lokasi
+
+00:02:39.690 --> 00:02:48.150
+titik jendela ini sama dengan beberapa situs web yang saya buat yang merupakan situs web yang benar-benar buruk.
+
+00:02:48.490 --> 00:02:52.600
+Dan saya akan mengirim sesuatu yang disebut dokumen dot cookie.
+
+00:02:52.600 --> 00:02:54.330
+Baiklah jadi mari kita buka paket ini.
+
+00:02:54.340 --> 00:03:00.470
+Saya hanya akan menghapus ini untuk sekarang dan hanya melakukan lokasi jendela dan itu menunjukkan kepada saya persis
+
+00:03:00.470 --> 00:03:01.900
+di mana saya berada.
+
+00:03:02.020 --> 00:03:10.810
+Jika saya pergi ke situs Web seperti Twitter dan melakukan hal yang sama atau akan melakukan window Lokasi
+
+00:03:11.190 --> 00:03:19.710
+Daut saya mendapatkan peran Twitter dan saya benar-benar dapat mengubah ini dengan baik dan mengirim orang ke situs
+
+00:03:20.010 --> 00:03:24.900
+Web yang berbeda dengan hanya mengatakan lokasi jendela sama.
+
+00:03:24.930 --> 00:03:33.860
+Jadi bagian pertama dari skrip mengatakan pergi ke situs web baru yang saya miliki ini adalah situs web yang buruk dan kemudian
+
+00:03:34.500 --> 00:03:36.990
+saya ingin Anda mengirim saya data.
+
+00:03:37.020 --> 00:03:38.140
+Itu cookie.
+
+00:03:38.190 --> 00:03:41.090
+Apa itu dot cookie dokumen?
+
+00:03:41.580 --> 00:03:45.720
+Dan ini adalah sesuatu yang akan kita bicarakan dalam sesi JWT.
+
+00:03:45.990 --> 00:03:53.400
+Tetapi cookie adalah cara bagi kita ketika kita masuk ke sesuatu, mari kita gunakan Twitter sebagai contoh.
+
+00:03:53.400 --> 00:03:59.270
+Ketika saya login di sini, Twitter sekarang ingat bahwa saya login.
+
+00:03:59.270 --> 00:04:04.340
+Jika saya menyegarkan halaman ini, saya tidak perlu masuk lagi.
+
+00:04:04.640 --> 00:04:09.360
+Saya memiliki sesi dengan Twitter dan banyak situs web.
+
+00:04:09.590 --> 00:04:16.760
+Sebenarnya sebagian besar dari mereka akan membiarkan Anda masuk dengan apa yang kami sebut cookie sepotong
+
+00:04:17.450 --> 00:04:23.910
+teks acak yang saya terima dan potongan teks itu akan dilampirkan ke browser saya.
+
+00:04:24.080 --> 00:04:29.260
+Jadi setiap kali saya pergi ke Twitter. com sekarang dan saya memiliki sepotong teks server dari Twitter
+
+00:04:29.260 --> 00:04:31.450
+akan mengatakan oh ya itu Ondrea Ya.
+
+00:04:31.520 --> 00:04:40.100
+Anda bisa membiarkannya masuk dan seperti yang saya katakan kita akan membicarakan lebih lanjut tentang ini di W. T. dan sesi sesi.
+
+00:04:40.170 --> 00:04:42.730
+Jadi jangan terlalu sering menutup telepon.
+
+00:04:43.490 --> 00:04:49.820
+Tetapi ide di balik itu adalah bahwa jika sepotong teks adalah satu-satunya hal yang Izinkan saya untuk
+
+00:04:50.090 --> 00:04:58.450
+masuk Twitter maka saya masih bisa bahwa saya dapat menyalin dan menempelkan cookie yang membuka jenis browser lain dan login ke Twitter
+
+00:04:58.450 --> 00:04:58.910
+sehingga
+
+00:05:01.650 --> 00:05:07.110
+saya dapat login ke Twitter tanpa mengetahui nama pengguna atau kata sandi saya.
+
+00:05:07.110 --> 00:05:08.350
+Hal yang cukup menakutkan.
+
+00:05:08.700 --> 00:05:15.770
+Jadi jika kita kembali ke contoh ini yang saya katakan adalah saya ingin Anda mengubah lokasi sel saya.
+
+00:05:15.810 --> 00:05:21.350
+Jadi pergi ke situs Web ini dan saya juga akan mengirim ke situs Web saya.
+
+00:05:21.600 --> 00:05:29.160
+Ini informasi cookie Anda sehingga saya dapat memiliki server yang baru saja keluar cookie orang dan sekarang
+
+00:05:30.310 --> 00:05:38.020
+saya memiliki informasi Anda jika saya tahu bahwa Anda berkomentar di Twitter misalnya maka saya bisa mencuri informasi
+
+00:05:38.020 --> 00:05:45.010
+cookie itu dan menandatangani dan skrip lintas situs persis bahwa itu digunakan untuk pembajakan sesi.
+
+00:05:45.050 --> 00:05:48.940
+Itu sebabnya kami menyebutnya Anda sudah tahu bagaimana mencegahnya.
+
+00:05:48.960 --> 00:05:50.600
+Kami membersihkan input.
+
+00:05:50.670 --> 00:05:57.350
+Kami memastikan bahwa Anda tidak bisa hanya memasukkan apa pun yang Anda inginkan di situs web kami dan memasukkannya.
+
+00:05:57.400 --> 00:05:57.750
+Kanan.
+
+00:05:57.760 --> 00:06:00.580
+Itu cukup bagus dan mudah.
+
+00:06:00.590 --> 00:06:02.070
+Mari kita bicara tentang poin selanjutnya.
+
+00:06:03.650 --> 00:06:11.440
+Pendek kata C S R F atau C sirf adalah pemalsuan permintaan lintas situs.
+
+00:06:11.450 --> 00:06:14.750
+Saya tahu nama-nama itu cukup membingungkan. Jangan khawatir.
+
+00:06:14.750 --> 00:06:19.130
+Pengambilan utama dari video ini adalah di akhir Cara mencegah ini.
+
+00:06:19.220 --> 00:06:21.630
+Jadi Anda selalu bisa kembali ke sana jika Anda bingung.
+
+00:06:21.650 --> 00:06:25.420
+Mereka sedikit maju dan Anda tidak perlu mengenalnya dengan hati.
+
+00:06:25.430 --> 00:06:29.870
+Seperti yang saya katakan, Anda hanya ingin tahu cara mencegahnya dan jangan khawatir saya hanya punya slide untuk itu.
+
+00:06:31.510 --> 00:06:34.570
+Jadi kita punya masalah.
+
+00:06:34.780 --> 00:06:36.020
+Kami memiliki klien kami.
+
+00:06:36.190 --> 00:06:39.870
+Dan untungnya bagi kita, kita tahu menggunakan lembar ya saat berkomunikasi.
+
+00:06:39.970 --> 00:06:45.370
+Jadi kami memiliki terowongan kecil ini yang melindungi data kami dari pihak ketiga dan orang-orang yang mencoba
+
+00:06:45.370 --> 00:06:46.100
+memata-matai kami.
+
+00:06:46.150 --> 00:06:53.290
+Klien membuat permintaan ke server yang mungkin mendapatkan profil pengguna dari database dan mengembalikannya ke klien
+
+00:06:53.290 --> 00:06:55.370
+sehingga kami bisa masuk.
+
+00:06:55.720 --> 00:06:58.480
+Dan terkadang Anda juga berbicara dengan API pihak ketiga.
+
+00:06:58.510 --> 00:07:07.500
+Mungkin kami mendapatkan informasi cuaca atau kami mendapatkan robot kami dari API pihak ketiga dan kami membuat permintaan itu
+
+00:07:07.590 --> 00:07:08.540
+melalui studio.
+
+00:07:09.000 --> 00:07:10.930
+Jadi kita semua aman-aman saja.
+
+00:07:12.260 --> 00:07:20.360
+Seperti yang kita lihat dengan pemalsuan permintaan lintas situs jika server dan pihak ketiga mempercayai
+
+00:07:20.720 --> 00:07:30.660
+klien dengan baik maka kita dapat menggunakan cookie itu untuk masuk ke server dan database dan mendapatkan sesi pengguna itu.
+
+00:07:30.680 --> 00:07:38.060
+Jadi itu bukan satu-satunya hal yang perlu kita lakukan di Sisera atau pemalsuan permintaan lintas situs.
+
+00:07:38.060 --> 00:07:44.160
+Kami sebagai orang jahat membuat Anda Arel buruk yang memiliki kode berbahaya di dalamnya.
+
+00:07:45.140 --> 00:07:50.300
+Jadi, Anda kemungkinan besar akan melihat ini dalam sesuatu seperti email penipuan di mana mereka membuat
+
+00:07:50.300 --> 00:07:51.270
+Anda mengklik tautan.
+
+00:07:51.440 --> 00:07:54.880
+Misalnya mereka akan memiliki sesuatu seperti ini.
+
+00:07:54.920 --> 00:07:59.720
+Mari kita kosongkan daftar ini ke bagian teks baru.
+
+00:07:59.930 --> 00:08:07.550
+Jadi ini bisa dalam email hanya teks ini atau mungkin di situs Web yang terlihat seperti Google dot com tetapi sebenarnya
+
+00:08:07.550 --> 00:08:14.850
+memiliki L tambahan dan memiliki API di mana Anda dapat mengklik masuk atau membaca lebih banyak dan membawa Anda
+
+00:08:14.870 --> 00:08:16.880
+ke sini bahwa situs web.
+
+00:08:17.300 --> 00:08:21.330
+Dan tidak sengaja mendengar apa yang mereka lakukan adalah mereka menggunakan parameter kueri juga.
+
+00:08:21.410 --> 00:08:28.790
+Dan ini hanya sebuah contoh yang mengatakan saya ingin akun penyerang dan mengirim jumlah seratus dolar
+
+00:08:28.790 --> 00:08:30.580
+ke akun itu.
+
+00:08:30.740 --> 00:08:35.960
+Dan ini adalah contoh dari serangan surfing menggunakan get DP.
+
+00:08:35.990 --> 00:08:41.220
+Kami sedang melakukan sampai ke parameter kueri.
+
+00:08:41.380 --> 00:08:49.600
+Jika korban mengunjungi kontrol halaman web ini oleh penyerang dan serangan atau korban sudah masuk katakanlah ke bank
+
+00:08:49.600 --> 00:08:56.710
+mereka karena mereka telah mengatur cookie itu dan server berpikir bahwa mereka sudah masuk dan ini
+
+00:08:56.710 --> 00:09:02.060
+sah karena kami baru saja membuat orang itu mengklik tautan itu.
+
+00:09:02.080 --> 00:09:05.290
+Jadi mereka berada di browser yang sama dengan yang mereka masuki.
+
+00:09:05.290 --> 00:09:17.670
+Yah saya baru saja membuat pengguna klik korban pada link yang mengirimi saya uang dan ini bukan hanya Garey karena mereka dapat melakukan ini
+
+00:09:17.680 --> 00:09:18.570
+dengan.
+
+00:09:18.590 --> 00:09:23.270
+Anda juga dapat melakukannya dengan permintaan pos menggunakan I-frame dan itu menjadi sangat rumit.
+
+00:09:23.280 --> 00:09:25.910
+Dan di luar lingkup kursus ini.
+
+00:09:26.300 --> 00:09:28.100
+Jadi itu sangat mengerikan.
+
+00:09:28.100 --> 00:09:31.280
+Bagaimana kita mencegah sesuatu seperti itu.
+
+00:09:33.010 --> 00:09:35.150
+Baiklah mari kita bicara tentang bagaimana kita bisa mencegahnya.
+
+00:09:35.170 --> 00:09:37.910
+Tetapi sebelum saya melakukannya, izinkan saya melakukan sesuatu kutipan.
+
+00:09:38.150 --> 00:09:41.990
+Ayo coba dan serang Twitter.
+
+00:09:42.080 --> 00:09:48.590
+Mari kita tuliskan kode ini permintaan fitur ke situs Web ini yang sebenarnya membuat saya menunjukkan kepada Anda
+
+00:09:48.590 --> 00:09:49.510
+apa fungsinya.
+
+00:09:55.660 --> 00:09:58.900
+Ini adalah permintaan dan respons layanan ACB.
+
+00:09:58.900 --> 00:10:04.320
+Kami pada dasarnya hanya menampilkan ke situs web ini respons apa pun yang kami dapatkan.
+
+00:10:04.360 --> 00:10:05.100
+Atau dimana kita.
+
+00:10:05.200 --> 00:10:08.940
+Apa pun respons yang kita dapatkan dan kita bisa melacaknya.
+
+00:10:08.950 --> 00:10:18.250
+Jadi mari kita coba dan lakukan permintaan posting dan dalam permintaan posting itu kirim dari situs web ini dari Twitter.
+
+00:10:18.320 --> 00:10:28.570
+Mike cookee dari saya sedang login ke Twitter jika saya menekan Enter Whew Saya mendapatkan beberapa kesalahan saya ditolak
+
+00:10:28.570 --> 00:10:34.700
+untuk terhubung ke ini karena melanggar kebijakan keamanan konten berikut.
+
+00:10:36.470 --> 00:10:38.120
+Menolak untuk terhubung.
+
+00:10:38.150 --> 00:10:42.640
+Kami melihat bahwa kami memiliki kebijakan keamanan konten ini yang mencegah saya melakukannya.
+
+00:10:42.890 --> 00:10:46.550
+Dan Twitter di sini menggunakan tindakan keamanan untuk menjadi seperti tidak, tidak, tidak.
+
+00:10:46.670 --> 00:10:53.340
+Kami tidak hanya akan mengirim juru dokumen yang sangat penting bagi situs web lain dengan mudah.
+
+00:10:53.480 --> 00:10:57.470
+Jadi mereka memiliki ukuran keamanan yang baik dan sepertinya mereka menggunakan sesuatu yang disebut kebijakan
+
+00:10:57.470 --> 00:10:58.300
+keamanan konten.
+
+00:10:58.580 --> 00:11:06.050
+Dan semua yang perlu kita lakukan untuk mengatur ini adalah memilikinya di header kita.
+
+00:11:06.130 --> 00:11:07.200
+Sekarang apa artinya itu.
+
+00:11:07.320 --> 00:11:11.950
+Baiklah, mari kita tunjukkan saya memiliki aplikasi ekspres saya di sini.
+
+00:11:12.190 --> 00:11:16.300
+Dan mari kita pergi ke metode get di mana kita hanya mengembalikan Hello world.
+
+00:11:16.360 --> 00:11:24.490
+Jika Anda ingat jika saya pergi ke localhost, saya memiliki hello world di sini sekarang dan di sini.
+
+00:11:26.940 --> 00:11:37.400
+Mari sebelum kita mengirim ini, apakah kita begitu respons dot set dan ini mungkin berbeda jika Anda sekarang menggunakan express atau
+
+00:11:37.400 --> 00:11:38.680
+server lain
+
+00:11:38.690 --> 00:11:44.730
+Tapi idenya sama, 99 persen kodenya sama persis.
+
+00:11:44.920 --> 00:11:52.500
+Yang akan Anda lakukan hanyalah memberinya objek dan objek ini akan memiliki header apa pun yang kita inginkan.
+
+00:11:52.570 --> 00:11:58.360
+Katakanlah kita ingin memiliki kebijakan keamanan konten dan kita akan memberi tahu
+
+00:12:02.330 --> 00:12:11.900
+situs Web ini bahwa satu-satunya tempat yang kita inginkan javascript dijalankan dan mari kita gunakan tanda kutip ganda di
+
+00:12:12.130 --> 00:12:16.930
+sini supaya kita dapat menggunakan tanda kutip tunggal juga.
+
+00:12:16.950 --> 00:12:22.620
+SCO seperti itu dan itu akan menjadi diri sendiri.
+
+00:12:22.650 --> 00:12:26.650
+Jadi nama domain kami yang merupakan host lokal untuk saat ini.
+
+00:12:27.060 --> 00:12:34.690
+Dan katakanlah kita benar-benar mempercayai Google API, jadi mari kita lakukan sesuatu yang buruk.
+
+00:12:34.890 --> 00:12:42.130
+Dan ke Google API sehingga Google kami percaya mereka bisa melakukannya.
+
+00:12:42.570 --> 00:12:47.490
+Mereka dapat menjalankan skrip dan izinkan saya mengatakannya.
+
+00:12:47.900 --> 00:12:49.650
+Sintaks yang tepat untuk Hello world.
+
+00:12:49.660 --> 00:12:55.190
+Kami hanya perlu menambahkan braket ke sini sekarang dengan save.
+
+00:12:55.230 --> 00:12:55.670
+Baiklah.
+
+00:12:55.680 --> 00:12:56.850
+Sekarang lihat ini.
+
+00:12:56.940 --> 00:13:07.190
+Jika saya pergi ke Hello World dan saya menyegarkan atau pergi ke jaringan, ketuk dan segarkan jika kita pergi ke localhost, sekarang kita melihat bahwa kita
+
+00:13:07.190 --> 00:13:14.800
+memiliki skrip kebijakan keamanan sumber sendiri GTP API google. com.
+
+00:13:14.840 --> 00:13:17.620
+Jadi kami hanya menetapkan kebijakan keamanan konten.
+
+00:13:17.690 --> 00:13:18.420
+Itu dia.
+
+00:13:18.500 --> 00:13:19.780
+Sesederhana itu.
+
+00:13:19.880 --> 00:13:24.090
+Dan header ini terlihat sangat luar biasa.
+
+00:13:24.530 --> 00:13:28.550
+Dan jangan khawatir ini sebenarnya jauh lebih sederhana daripada yang Anda pikirkan.
+
+00:13:28.790 --> 00:13:35.000
+Seperti yang Anda ketahui dengan permintaan malu-malu, kami memiliki hal-hal berbeda yang dapat kami kirimkan seperti
+
+00:13:35.240 --> 00:13:41.670
+parameter tubuh dan kami juga memiliki header respons dan saya akan menunjukkan kepada Anda bagaimana menyederhanakan ini.
+
+00:13:41.750 --> 00:13:44.870
+Anda tidak akan melakukan ini secara manual sebagian besar waktu.
+
+00:13:44.960 --> 00:13:50.780
+Untungnya bagi Anda ada paket NPM yang akan kita bicarakan nanti di video di mana ini
+
+00:13:50.780 --> 00:13:52.120
+dilakukan secara otomatis.
+
+00:13:52.430 --> 00:13:59.590
+Tetapi saya ingin menunjukkan kepada Anda agar Anda tahu cara mengatur tajuk dan akhirnya kami
+
+00:13:59.590 --> 00:14:07.840
+ingin memastikan bahwa kuki dokumen ini dapat diakses dengan mudah dan dengan cara saya tidak merekomendasikan menggunakan kuki.
+
+00:14:08.070 --> 00:14:15.040
+Dan sekali lagi semacam perdebatan tentang apa yang harus digunakan sehingga orang mungkin membenci saya karena mengatakan ini, tetapi saya bukan
+
+00:14:15.040 --> 00:14:20.340
+penggemar berat cookie hanya karena itu menambah lapisan tambahan yang perlu Anda lakukan agar aman.
+
+00:14:20.380 --> 00:14:27.400
+Dan saya akan tunjukkan nanti di kursus di JWT dan video sesi bagaimana kita bisa melakukan ini
+
+00:14:27.400 --> 00:14:28.260
+dengan aman.
+
+00:14:28.360 --> 00:14:31.570
+Tetapi katakanlah Anda menggunakan cookie di situs Web Anda.
+
+00:14:31.710 --> 00:14:38.260
+Sekali lagi ini adalah cara yang sangat sederhana untuk mencegah hal ini terjadi dan mencegah kepatuhan.
+
+00:14:38.260 --> 00:14:40.570
+Jadi lintas situs meminta pemalsuan.
+
+00:14:40.660 --> 00:14:46.100
+Yang perlu kita lakukan hanyalah mengatakan bahwa kita benar-benar ingin dengan Express.
+
+00:14:46.110 --> 00:14:47.850
+Kami hanya bisa mengatakan respons.
+
+00:14:47.860 --> 00:14:53.740
+Cookie dot mengatakan ID sesi.
+
+00:14:55.360 --> 00:15:01.780
+Dan omong-omong ini persis bagaimana set cookie dibuat oleh server yang mengatakan saya baru saja memeriksa nama
+
+00:15:01.810 --> 00:15:03.810
+pengguna dan kata sandi Anda.
+
+00:15:03.880 --> 00:15:08.960
+Inilah sesi Anda sehingga mulai sekarang kami tidak perlu memeriksa kata sandi dan nama pengguna Anda.
+
+00:15:09.190 --> 00:15:15.110
+Selama Anda mengirimi kami satu sesi setiap permintaan saya akan memeriksa dan memastikan bahwa itu berfungsi untuk Anda.
+
+00:15:15.740 --> 00:15:23.460
+Jadi di sini saya hanya akan mengatakan itu dan ini adalah dua header yang kami ingin
+
+00:15:24.240 --> 00:15:24.810
+atur
+
+00:15:27.750 --> 00:15:29.630
+untuk cookie GTP saja.
+
+00:15:29.810 --> 00:15:38.990
+Dan kita akan mengatur itu menjadi benar dan aman juga disetel ke true.
+
+00:15:39.150 --> 00:15:45.920
+Jika saya menyimpan ini dengan benar dan sebenarnya saya pikir kita hanya dapat mengaturnya satu per satu.
+
+00:15:45.930 --> 00:15:53.620
+Jadi kita harus menutup ini seperti ini dan kita akan melakukan satu lagi kali ini dengan benar aman
+
+00:15:54.300 --> 00:15:54.810
+mari
+
+00:15:58.900 --> 00:16:01.670
+kita simpan dan kembali ke sini.
+
+00:16:01.730 --> 00:16:07.120
+Buka tab untuk menyegarkan Anda.
+
+00:16:08.370 --> 00:16:09.560
+Atur cookie.
+
+00:16:09.560 --> 00:16:10.190
+Lihat itu.
+
+00:16:10.340 --> 00:16:21.180
+Kami memiliki lembar yang kami miliki dan bagian yang paling keren adalah jika kami membuka aplikasi dan cookie melihat
+
+00:16:21.180 --> 00:16:25.710
+bahwa kami memiliki cookie untuk sesi tersebut.
+
+00:16:25.760 --> 00:16:32.110
+Saya pikir ini dari yang sebelumnya sehingga kita bisa menghapus yang ini tetapi jika kita menyegarkan kita memiliki sesi
+
+00:16:32.120 --> 00:16:39.460
+Jika saya menutup ini dan menyegarkan kembali, sesi kembali sangat dingin lagi.
+
+00:16:39.560 --> 00:16:41.560
+Jangan terlalu takut tentang ini.
+
+00:16:41.570 --> 00:16:43.960
+Kita akan berbicara lebih banyak tentang cookie.
+
+00:16:43.970 --> 00:16:45.480
+Saya tahu itu bisa membingungkan.
+
+00:16:45.500 --> 00:16:53.740
+Tapi ini semua adalah bagian dari saat kita dapat memastikan dan Anda tahu apa yang saya pikir akan meluncur atau meringkas apa
+
+00:16:53.750 --> 00:16:59.700
+yang kita butuhkan untuk mencegah skrip lintas situs dan melihat melayani mungkin merupakan ide terbaik.
+
+00:17:01.470 --> 00:17:03.050
+Jadi, apa yang sudah kita pelajari.
+
+00:17:03.300 --> 00:17:05.780
+Yah kita sudah tahu ini benar.
+
+00:17:05.820 --> 00:17:11.180
+Kami ingin melakukan validasi input sisi klien untuk umpan balik pengguna cepat.
+
+00:17:11.190 --> 00:17:17.850
+Jangan pernah biarkan sesuatu seperti ini bekerja di situs Web Anda dan jangan pernah percaya itu selalu memvalidasi dan menyandikan input
+
+00:17:17.850 --> 00:17:21.430
+pengguna sebelum menampilkan sesuatu yang telah kami diskusikan banyak tentang.
+
+00:17:22.050 --> 00:17:28.010
+Dan omong-omong kerangka kerja modern seperti tampilan reakting sudut semua melakukan sesuatu yang disebut karakter scaping untuk
+
+00:17:28.020 --> 00:17:30.580
+menghindari jenis perilaku ini secara default.
+
+00:17:31.380 --> 00:17:32.860
+Yang benar-benar bagus.
+
+00:17:34.020 --> 00:17:38.310
+Dan input sanitasi adalah sesuatu yang sangat kita kenal.
+
+00:17:38.310 --> 00:17:43.200
+Saya juga ingin menekankan untuk tidak menggunakan fungsi eval di javascript.
+
+00:17:43.200 --> 00:17:47.920
+Ya Javascript memiliki fungsi jahat dan sangat berbahaya.
+
+00:17:47.940 --> 00:17:48.830
+Jangan gunakan itu.
+
+00:17:48.930 --> 00:17:52.470
+Sangat jarang Anda pernah mengalami ini.
+
+00:17:52.500 --> 00:17:54.740
+Ada juga sesuatu yang disebut dot dokumen.
+
+00:17:54.840 --> 00:17:55.520
+Kanan.
+
+00:17:55.740 --> 00:17:58.920
+Jadi itu semacam dokumen interracially M ..
+
+00:17:59.190 --> 00:18:10.540
+Tetapi lebih buruk misalnya jika saya pergi ke sini dan melakukan mendokumentasikan apa yang Cantab dokumen dot benar dan kami melakukan tag skrip yang
+
+00:18:13.150 --> 00:18:19.710
+memiliki peringatan satu dan menutup tag skrip AS sakit itu tidak membiarkan saya
+
+00:18:24.910 --> 00:18:29.020
+melakukannya karena saya baru saja mengatur header .
+
+00:18:29.170 --> 00:18:31.210
+Tetapi jika saya pergi ke tempat bermain
+
+00:18:34.730 --> 00:18:37.190
+keamanan saya yang lain bahwa saya belum melakukan apa-apa.
+
+00:18:37.190 --> 00:18:42.230
+Mari menyegarkan di sini dan menghapus ini.
+
+00:18:42.370 --> 00:18:43.200
+Lihat itu.
+
+00:18:43.210 --> 00:18:50.650
+Saya dapat menjalankan hanya dengan menggunakan Dokumen R8 dan saya bisa memasukkan skrip in-line.
+
+00:18:50.730 --> 00:18:57.330
+Kami belajar bahwa kami harus menetapkan tajuk kebijakan keamanan konten dan tidak khawatir.
+
+00:18:57.350 --> 00:19:03.840
+Ini adalah sesuatu yang saya akan menunjukkan kepada Anda alat yang membuatnya sangat sangat mudah dan mengatur video header.
+
+00:19:04.100 --> 00:19:10.440
+Dan akhirnya kami ingin mengatur secure dan HGP hanya untuk cookie menggunakan beberapa metode yang saya lihat.
+
+00:19:10.460 --> 00:19:13.550
+Saya menunjukkan Anda omong-omong.
+
+00:19:13.870 --> 00:19:22.150
+Seperti apa pun untuk masalah yang terjadi setiap saat ada solusi dan alat yang sudah ada sebelumnya dan salah
+
+00:19:22.150 --> 00:19:25.520
+satunya untuk menghindari melihat surfing dengan baik.
+
+00:19:25.630 --> 00:19:32.950
+Paket ini yang perlu kita lakukan adalah menginstalnya dan kemudian kita dapat menggunakannya di aplikasi apa pun yang kita inginkan.
+
+00:19:32.950 --> 00:19:36.990
+Sebagai contoh di Xpress itu menunjukkan kepada Anda bagaimana menggunakannya.
+
+00:19:37.060 --> 00:19:42.760
+Jika Anda menggunakan cookie tetapi seperti saya katakan saya akan menunjukkan kepada Anda cara yang lebih baik daripada ini, jadi jangan stres tentang
+
+00:19:42.760 --> 00:19:43.190
+itu.
+
+00:19:43.210 --> 00:19:48.030
+Saya tahu video ini agak sulit tetapi tetap saja dengan saya.
+
+00:19:48.030 --> 00:19:48.880
+Percayalah kepadaku.
+
+00:19:48.880 --> 00:19:53.840
+Dengan sesi dan tokin video, video ini akan lebih masuk akal.
+
+00:19:55.000 --> 00:20:02.470
+Ingat hanya atribut HGP yang mencegah cookie diakses oleh skrip sisi klien dan atribut
+
+00:20:02.470 --> 00:20:08.170
+aman dan cookie Sher akan dikirim melalui koneksi yes.
+
+00:20:08.200 --> 00:20:16.970
+Jadi keduanya bekerja sama lagi AC hanya mengatakan hanya metode HGP yang dapat mengakses cookie.
+
+00:20:16.990 --> 00:20:18.400
+Tidak ada javascript yang bisa.
+
+00:20:18.730 --> 00:20:25.370
+Sehingga mengurangi serangan skrip lintas situs kami yang mungkin dapat kami gunakan.
+
+00:20:25.450 --> 00:20:28.760
+Baiklah, kami telah belajar banyak kosakata baru di sini.
+
+00:20:28.780 --> 00:20:33.640
+Ini mungkin video yang harus Anda kembalikan tetapi saya akan membuat daftar beberapa latihan untuk Anda
+
+00:20:33.640 --> 00:20:39.460
+setelah video ini untuk menjadi sedikit lebih akrab dan memainkan beberapa latihan peretasan yang menyenangkan yang akan saya lihat
+
+00:20:39.460 --> 00:20:40.560
+di video berikutnya.
+
+00:20:40.570 --> 00:20:40.810
+Mungkin.

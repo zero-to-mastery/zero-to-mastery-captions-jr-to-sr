@@ -1,0 +1,283 @@
+﻿WEBVTT
+
+00:00:01.220 --> 00:00:10.520
+Hai, itu Bruno di sini, wow, Anda pasti sudah bekerja sangat keras itu banyak kode tapi saya tidak percaya.
+
+00:00:10.520 --> 00:00:12.020
+Kami memiliki sesi.
+
+00:00:12.260 --> 00:00:19.130
+Pengguna kami tidak harus terus-menerus masuk untuk menggunakan aplikasi otak pintar kami dan kami telah melindungi semua rute
+
+00:00:19.130 --> 00:00:21.830
+kami sehingga titik akhir kami sekarang aman.
+
+00:00:21.830 --> 00:00:23.510
+Ini pekerjaan luar biasa.
+
+00:00:23.510 --> 00:00:29.660
+Saya suka bagaimana Anda menggunakan Dreda untuk membuat sesi sangat cepat untuk memeriksa dan tidak bisa cukup berterima kasih.
+
+00:00:29.660 --> 00:00:34.400
+Saya pikir Anda perlu beberapa hari liburan setelah itu karena itu kode yang banyak pula
+
+00:00:34.550 --> 00:00:36.140
+Sangat dihargai.
+
+00:00:36.140 --> 00:00:40.580
+Perusahaan kami berkembang pesat karena Anda, jadi saya pikir akan ada promosi untuk Anda
+
+00:00:40.580 --> 00:00:41.130
+segera.
+
+00:00:41.950 --> 00:00:44.220
+Pokoknya istirahatlah.
+
+00:00:44.230 --> 00:00:45.970
+Sampai jumpa dalam beberapa hari.
+
+00:00:45.970 --> 00:00:47.350
+Kembali bekerja.
+
+00:00:47.440 --> 00:00:47.940
+Sampai jumpa.
+
+00:00:51.300 --> 00:00:52.540
+Baiklah semuanya.
+
+00:00:52.540 --> 00:00:53.330
+Kerja bagus.
+
+00:00:53.350 --> 00:00:58.870
+Kami berhasil mengesankan Bruno dan itu adalah bagian yang sangat sulit tetapi keindahan dari bagian itu
+
+00:00:59.380 --> 00:01:05.620
+adalah bahwa Anda sekarang memiliki basis kode yang dapat Anda gunakan untuk memperluas proyek Anda karena sebagian besar aplikasi
+
+00:01:05.620 --> 00:01:09.640
+yang akan Anda gunakan akan memiliki semacam pengguna dan fungsi masuk.
+
+00:01:09.640 --> 00:01:15.190
+Anda ingin memastikan bahwa ada semacam sesi dan Anda juga ingin melindungi beberapa hak sehingga Anda dapat menggunakan aplikasi otak
+
+00:01:15.190 --> 00:01:20.050
+cerdas dan dengan cara apa pun yang Anda inginkan untuk memperpanjang dan menjadikannya lebih baik atau bahkan
+
+00:01:20.050 --> 00:01:21.510
+membuat sesuatu yang baru sendiri.
+
+00:01:21.670 --> 00:01:28.870
+Tetapi sekarang Anda memiliki pemahaman yang baik tentang bagaimana menggunakan sesi dan JWT untuk memiliki akses dan kontrol
+
+00:01:29.140 --> 00:01:30.760
+penuh atas pengguna Anda.
+
+00:01:31.240 --> 00:01:37.990
+Kami telah berhasil membuat rute masuk kami tempat kami menyimpan nama pengguna dan kata sandi
+
+00:01:38.050 --> 00:01:47.650
+kata sandi hash di basis data kami jika pengguna masuk kami menghasilkan token dan token itu juga disimpan dalam basis data
+
+00:01:47.800 --> 00:01:48.850
+Dreda kami.
+
+00:01:48.850 --> 00:01:54.840
+Sekarang Anda mungkin bertanya pada diri sendiri apakah ini tidak membuatnya sangat rumit dan juga memakan waktu lebih lama.
+
+00:01:55.060 --> 00:02:01.450
+Nah karena itu rattus adalah penyimpanan memori yang disimpan dalam memori sangat cepat.
+
+00:02:01.450 --> 00:02:08.500
+Salah satu database tercepat yang dapat Anda miliki untuk mengakses data kecil seperti token Sesi.
+
+00:02:08.500 --> 00:02:14.680
+Jadi ini benar-benar sangat cepat dan Anda dapat mengukur karena Anda hanya dapat memiliki beberapa basis data rattus
+
+00:02:14.710 --> 00:02:16.360
+dan beberapa server API.
+
+00:02:16.390 --> 00:02:24.460
+Jadi Anda membangun sistem yang sangat skalabel, Anda bisa terus menambahkan mesin ke dalamnya dan itu akan bekerja dengan cepat tidak
+
+00:02:24.460 --> 00:02:32.560
+peduli berapa banyak pengguna juga dapat memiliki JWT yang berisi beberapa tanda informasi sehingga jika kita memiliki API lain yang kita
+
+00:02:32.860 --> 00:02:38.980
+butuhkan untuk diajak bicara dan itu bukan hubungan server klien yang sederhana, kita dapat menggunakan
+
+00:02:38.980 --> 00:02:44.410
+token ini untuk benar-benar berbicara dengan titik akhir API lain dari server kami.
+
+00:02:44.410 --> 00:02:51.460
+Sekali lagi ini dapat diperluas karena kami pindah ke server yang lebih banyak dan lebih dalam dan bersarang arsitektur yang lagi berada di
+
+00:02:51.490 --> 00:02:53.060
+luar ruang lingkup wacana.
+
+00:02:53.080 --> 00:03:01.270
+Tetapi ini mengajarkan cara yang bagus untuk memperluas dan mungkin memiliki solusi yang dapat diukur untuk arsitektur Anda.
+
+00:03:01.270 --> 00:03:07.690
+Bagaimanapun kami menyimpan token ini ke server Retta kami dan kami mengembalikannya ke klien, klien kemudian
+
+00:03:07.690 --> 00:03:15.270
+menyimpannya di toko sesi atau penyimpanan lokal mereka dan dari sana pengguna dapat melakukan apa pun yang mereka inginkan
+
+00:03:15.280 --> 00:03:21.190
+kapan saja mereka membutuhkan sesuatu seperti memperbarui profil atau mendapatkan profil atau rute lainnya.
+
+00:03:21.190 --> 00:03:28.330
+Mereka hanya mengambil token itu dari penyimpanan sesi mereka yang dikirimkan kepada kami, kami ucapkan Oh terima kasih atas tokennya.
+
+00:03:28.330 --> 00:03:29.980
+Saya melihat header otorisasi.
+
+00:03:30.160 --> 00:03:31.730
+Saya akan memeriksa baca ini.
+
+00:03:32.020 --> 00:03:35.970
+Hai tuan rattus atau Mrs. rattus Anda punya token itu.
+
+00:03:36.280 --> 00:03:37.200
+Ya saya lakukan.
+
+00:03:37.270 --> 00:03:39.350
+Jika mereka melakukannya di sini adalah aku. D ..
+
+00:03:39.400 --> 00:03:45.130
+Dan sekali cek itu masuk ke server mengatakan baik-baik saja Anda mengatakan siapa yang
+
+00:03:45.130 --> 00:03:48.420
+Anda katakan Anda dapat memiliki hadiah bagus Anda.
+
+00:03:48.500 --> 00:03:54.710
+Sekarang melihat kode ini ada banyak hal yang bisa kita perbaiki dan banyak hal yang bisa
+
+00:03:54.710 --> 00:03:55.540
+kita refactor.
+
+00:03:55.670 --> 00:03:58.930
+Dan jika Anda mulai memperhatikan melihat Sink, itu benar-benar bagus.
+
+00:03:59.000 --> 00:04:03.180
+Itu berarti Anda mulai memahami bagaimana titik-titik terhubung bagaimana hal-hal terhubung.
+
+00:04:03.470 --> 00:04:08.990
+Dan saya mendorong Anda untuk membersihkan kode dan melihat di mana Anda dapat meningkatkan mengapa Anda bisa melakukannya.
+
+00:04:09.020 --> 00:04:15.950
+Saya juga ingin Anda melakukan sedikit latihan dan itu jika Anda ingat di apt kami.
+
+00:04:16.040 --> 00:04:19.490
+Ya, kami memiliki bidang baru yang kami buat di negara bagian.
+
+00:04:19.640 --> 00:04:24.110
+Pat dan status usia yang dimiliki pengguna.
+
+00:04:24.320 --> 00:04:33.110
+Tetapi kita harus benar-benar menambahkan kolom itu ke tabel kita dan memiliki kemampuan untuk memperbaruinya.
+
+00:04:33.270 --> 00:04:34.510
+Mungkin di pembaruan profil.
+
+00:04:34.510 --> 00:04:38.770
+Kami juga dapat mengirim pat dan usia untuk mendapatkan nilai-nilai ini.
+
+00:04:38.770 --> 00:04:46.210
+Jadi ini adalah tantangan Anda mengetahui apa yang baru saja kami lakukan menggabungkan pembaruan profil dan menunjuk juga akun
+
+00:04:46.210 --> 00:04:49.000
+untuk hewan peliharaan dan usia sebagai petunjuk.
+
+00:04:49.030 --> 00:04:56.380
+Anda mungkin perlu memperbarui tabel buat sedangkan di post gresse tepat di sini di tabel Anda mungkin harus
+
+00:04:56.410 --> 00:05:02.320
+menambahkan beberapa kolom tambahan di sini seperti Pat dan H dan Anda mungkin harus mengambil
+
+00:05:02.320 --> 00:05:05.020
+wadah Anda dan membangun kembali semuanya.
+
+00:05:05.200 --> 00:05:11.890
+Tapi begitu Anda melakukan itu dan Anda pergi melalui langkah-langkah Anda dapat memperluas pembaruan posting
+
+00:05:11.890 --> 00:05:16.120
+profil untuk juga memasukkan usia dan hewan peliharaan.
+
+00:05:16.120 --> 00:05:22.450
+Sekarang kami akhirnya memasukkan semua hal yang telah kami pelajari di beberapa bagian terakhir dan Anda dapat
+
+00:05:22.450 --> 00:05:26.230
+melihat sekarang betapa bersih dan baiknya lingkungan kerja kami.
+
+00:05:26.290 --> 00:05:31.050
+Kami menempatkan basis data rattus kami API ke dalam satu wadah ini.
+
+00:05:31.090 --> 00:05:39.650
+Jadi dari satu perintah dan waktu pengembangan, kami hanya dapat membuat berbagai hal berfungsi dan benar-benar memiliki perkembangan yang cepat.
+
+00:05:39.670 --> 00:05:41.210
+Saya harap Anda melihat manfaatnya.
+
+00:05:41.350 --> 00:05:47.620
+Dan sebagai pengembang Anda sekarang memiliki kemampuan untuk memasukkan ini ke dalam tim Anda, atasan Anda, klien Anda.
+
+00:05:47.710 --> 00:05:50.020
+Perusahaan Anda hanya akan mencintaimu karenanya.
+
+00:05:50.020 --> 00:05:53.730
+Jadi saya sangat menyarankan Anda melakukan ini dan sesuatu seperti ini.
+
+00:05:53.740 --> 00:06:02.680
+Kami juga menggunakan hal-hal seperti rattus untuk dapat membuat aplikasi besar yang dapat diskalakan karena kami tahu
+
+00:06:02.680 --> 00:06:04.660
+cara menggunakan wadah.
+
+00:06:04.660 --> 00:06:10.420
+Sekarang kita dapat membuat beberapa replikasi dari server API kita.
+
+00:06:10.600 --> 00:06:16.960
+Kita dapat membuat beberapa replikasi dari basis data kita dan beberapa replikasi dari basis data rattus kita
+
+00:06:16.960 --> 00:06:18.480
+yang sangat cepat.
+
+00:06:18.490 --> 00:06:27.490
+Jadi meskipun API mengantri rattus untuk ID dan memeriksa token sesi itu sangat cepat sehingga kami dapat terus menambahkan
+
+00:06:27.490 --> 00:06:29.320
+mesin ke dalamnya.
+
+00:06:29.320 --> 00:06:33.170
+Terus tambahkan mesin ke dalamnya dan skala dalam produksi.
+
+00:06:33.190 --> 00:06:39.010
+Seiring semakin banyak pengguna yang tumbuh dan kami akan membahas tentang penyeimbangan muatan dan bagaimana hal itu dapat berfungsi dalam kinerja
+
+00:06:39.010 --> 00:06:39.870
+bagian 3.
+
+00:06:40.120 --> 00:06:46.270
+Tetapi diagram ini sekarang harusnya masuk akal bagi Anda dan bagaimana semua bagian ini terhubung adalah salah satu hal
+
+00:06:46.270 --> 00:06:48.040
+yang paling sulit untuk dipahami.
+
+00:06:48.040 --> 00:06:53.500
+Jadi, jika Anda dapat memahami ini jika Anda dapat mengikuti kode bersama dengan saya dan memahami
+
+00:06:53.710 --> 00:07:01.780
+apa yang telah saya lakukan sampai sekarang Anda jauh di atas pengembang web biasa, Anda sekarang memiliki gambar tingkat tinggi sehingga Anda dapat memutuskan untuk
+
+00:07:01.990 --> 00:07:06.460
+diri Anda sendiri jenis arsitektur apa yang Anda inginkan apa yang ingin Anda
+
+00:07:06.460 --> 00:07:12.580
+lakukan ketika Anda membangun sebuah aplikasi sehingga menyenangkan untuk bekerja dengan untuk pengembang tetapi juga datang waktu produksi.
+
+00:07:12.610 --> 00:07:20.430
+Ini berani untuk skala dan memiliki fleksibilitas untuk tumbuh dan dengan itu saya pikir kita semua perlu istirahat.
+
+00:07:20.730 --> 00:07:22.830
+Saya akan lihat di bagian selanjutnya Buh-Bye.

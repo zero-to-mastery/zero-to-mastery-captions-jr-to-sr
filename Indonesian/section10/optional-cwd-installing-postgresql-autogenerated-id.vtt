@@ -1,0 +1,253 @@
+﻿WEBVTT
+
+00:00:02.070 --> 00:00:02.840
+Selamat datang kembali.
+
+00:00:02.850 --> 00:00:08.760
+Kita akan mulai mengatur postingan pada komputer kita sehingga seperti yang kita lakukan
+
+00:00:08.770 --> 00:00:16.020
+dengan server Front-End kita akan memiliki terminal yang menjalankan ujung depan kita dan belakang dan yang menjalankan server
+
+00:00:16.020 --> 00:00:22.860
+kita tetapi juga terminal lain yang menjalankan database karena seperti yang Anda ingat ini hanyalah komputer yang
+
+00:00:22.860 --> 00:00:28.880
+menjalankan suatu tempat dengan cara yang sama seperti kami menjalankan server kami di komputer kami.
+
+00:00:28.880 --> 00:00:35.440
+Kami juga dapat menjalankan basis data kami di komputer kami dan dalam video ini kami akan menyiapkan perangkat kami dengan postscript.
+
+00:00:35.670 --> 00:00:38.690
+Sekarang Mongo D-B menjadi populer.
+
+00:00:38.820 --> 00:00:44.950
+Namun tidak ada yang mengalahkan database relasional untuk benar-benar mengembangkan pengetahuan Anda tentang database.
+
+00:00:44.970 --> 00:00:52.080
+Setelah Anda memahami basis data relasional, ini memberi Anda alat yang sangat bagus dan model mental
+
+00:00:52.080 --> 00:00:56.550
+untuk bekerja dengan Mongo D-B Mongo DD sangat sangat sederhana.
+
+00:00:56.670 --> 00:01:02.640
+Anda dapat menganggapnya sebagai wajah pada struktur data di mana kami hanya memiliki Jaison yang
+
+00:01:03.030 --> 00:01:09.390
+terlihat seperti objek dan kami menyimpan informasi itu di sana dengan basis data relasional dan juga.
+
+00:01:09.390 --> 00:01:11.000
+Lebih kompleks dari itu.
+
+00:01:11.160 --> 00:01:17.060
+Jadi, jika Anda memahami ini, Anda berada beberapa mil di depan dalam hal memahami database.
+
+00:01:17.100 --> 00:01:23.660
+Jadi kita akan fokus pada itu karena prinsipnya masih sama untuk Mongo D-B.
+
+00:01:23.670 --> 00:01:23.990
+Baiklah.
+
+00:01:24.050 --> 00:01:30.110
+Jadi mari kita siapkan postscript di komputer kita.
+
+00:01:30.150 --> 00:01:34.840
+Hal pertama yang ingin kita lakukan adalah mengunduh sesuatu yang disebut lengket.
+
+00:01:34.860 --> 00:01:42.290
+Jadi antarmuka pengguna grafis untuk postscript dan ini ada untuk hampir semua database di luar sana.
+
+00:01:42.600 --> 00:01:45.000
+Saya suka PC quoll karena gratis.
+
+00:01:45.000 --> 00:01:49.050
+Ini sangat bagus untuk Mac dan sangat ringan dan sederhana.
+
+00:01:49.050 --> 00:01:55.500
+Saya juga akan memastikan untuk menambahkan catatan tentang cara mengunduh sesuatu seperti ini dan memposting tulisan pada umumnya
+
+00:01:55.560 --> 00:02:00.480
+jika Anda menggunakan mesin Windows, tetapi jika tidak cukup klik tautan unduh.
+
+00:02:01.520 --> 00:02:03.050
+Akan sangat cepat.
+
+00:02:03.060 --> 00:02:08.290
+Buka saja dan Anda akan memiliki sesuatu seperti ini yang akan digunakan sepanjang kursus.
+
+00:02:08.520 --> 00:02:11.090
+Tetapi ada banyak banyak pilihan dan dapat mencarinya.
+
+00:02:11.280 --> 00:02:14.720
+Anda hanya mencari kemajuan juga.
+
+00:02:15.300 --> 00:02:23.380
+Dan begitu sekuel bahagia terpasang Anda akan memilikinya di folder aplikasi Anda dan Anda dapat mengikuti.
+
+00:02:23.380 --> 00:02:28.970
+Sekarang, mari kita kembali ke terminal untuk menginstal postscript yang ada banyak cara dan lagi saya
+
+00:02:28.970 --> 00:02:32.240
+akan memberikan beberapa catatan tentang bagaimana Anda dapat melakukannya.
+
+00:02:32.480 --> 00:02:37.520
+Tapi cara terbaik terutama Omak adalah menggunakan Brue yang sudah kita bicarakan.
+
+00:02:37.640 --> 00:02:44.240
+Setiap kali Anda melakukan sesuatu dengan homebrew lagi itu adalah cara untuk mengunduh paket dari Internet di
+
+00:02:44.240 --> 00:02:45.310
+terminal Anda.
+
+00:02:45.320 --> 00:02:49.890
+Anda selalu ingin memastikan bahwa Anda melakukan pembaruan minuman untuk memastikan bahwa semuanya diperbarui.
+
+00:02:53.370 --> 00:02:59.730
+Dan juga seorang dokter kelompok hanya memastikan semuanya bekerja pada sistem Anda
+
+00:03:03.780 --> 00:03:06.480
+yang jelas itu sempurna.
+
+00:03:06.480 --> 00:03:12.470
+Setelah Anda mengaturnya, kita akan mengatakan Brue menginstal skua pasca-krisis
+
+00:03:14.970 --> 00:03:19.400
+dan ini akan menginstal untuk kita.
+
+00:03:19.620 --> 00:03:24.340
+Tulisan dan Anda lihat di sini bahwa saya sudah memasang kartu pos.
+
+00:03:24.340 --> 00:03:30.070
+Tetapi jika ini pertama kalinya Anda akan menjalankan perintah dan kemudian pada akhirnya
+
+00:03:30.070 --> 00:03:32.940
+memberitahu Anda bagaimana untuk mulai menggunakannya.
+
+00:03:33.020 --> 00:03:37.340
+Tetapi dalam kasus kami juga Stelly akan jauh lebih mudah untuk memulai postscript.
+
+00:03:37.340 --> 00:03:46.800
+Anda perlu melakukan brew layanan mulai postscripts dan jangan khawatir ini bukan postscript spesifik database apa pun yang mereka unduh Anda
+
+00:03:46.820 --> 00:03:52.080
+pada dasarnya mengunduh perangkat lunak dan kemudian Anda ingin memulai layanan.
+
+00:03:52.190 --> 00:03:58.480
+Masing-masing memiliki perintah sendiri tetapi sesederhana Googling dan mencari tahu cara menjalankan database.
+
+00:03:58.490 --> 00:04:02.880
+Jadi kita sudah mulai postkrip Eskew semua sepertinya.
+
+00:04:02.880 --> 00:04:13.250
+Saya sudah memulai layanan dan hanya untuk menunjukkan kepada Anda jika saya benar-benar berhenti di sini, itu akan menghentikan layanan teroris dan hanya untuk
+
+00:04:16.040 --> 00:04:24.470
+memulai lagi dan Anda dapat melihat bahwa itu mulai sekarang agar kita dapat menggunakan postscript yang kita butuhkan untuk
+
+00:04:24.470 --> 00:04:26.200
+membuat database. .
+
+00:04:26.630 --> 00:04:35.200
+Dan cara kita melakukannya adalah dengan menggunakan perintah Create D-B yang muncul setelah kita menginstal postscript.
+
+00:04:35.380 --> 00:04:37.050
+Dan di sini kita dapat menyebutnya apa pun yang kita inginkan.
+
+00:04:37.090 --> 00:04:40.700
+Jadi mari kita sebut tes itu.
+
+00:04:40.840 --> 00:04:44.400
+Ini akan membuat D-B Dan begitulah.
+
+00:04:44.440 --> 00:04:45.810
+Inilah bagian kutipan.
+
+00:04:45.820 --> 00:04:53.010
+Jika saya kembali ke PC saya dia akan membuka ini ketika kita menutup ini.
+
+00:04:53.110 --> 00:04:55.420
+Saya punya sekuel di sini.
+
+00:04:55.600 --> 00:04:59.880
+Dan ia meminta host yang merupakan tautan ke tempat database berada.
+
+00:05:00.010 --> 00:05:04.160
+Dalam kasus saya ini terletak di localhost saya tepat.
+
+00:05:04.180 --> 00:05:07.680
+Ini berjalan di komputer saya.
+
+00:05:07.770 --> 00:05:10.740
+Jadi Anda ingin menjadi localhost dan nomor port.
+
+00:05:10.740 --> 00:05:17.220
+Ini adalah jumlah standar buruk 5:43 untuk mengingat bagaimana kami memiliki port 3.000 satu untuk
+
+00:05:17.220 --> 00:05:19.250
+front end dan backend.
+
+00:05:19.290 --> 00:05:20.150
+Ini mirip dengan itu.
+
+00:05:20.160 --> 00:05:22.940
+Ini membuka port untuk mendengarkan database.
+
+00:05:23.160 --> 00:05:28.050
+Dan ini adalah port standar untuk skrip posting yang akan Anda lihat.
+
+00:05:28.050 --> 00:05:36.000
+Jadi ketika saya melakukan progress Dimulai dan membuat D-B default atau 5 4 3 2 sudah ditetapkan.
+
+00:05:36.000 --> 00:05:41.100
+Saya benar-benar dapat mengatur port apa dan mengubahnya tetapi kami ingin menjaga semuanya tetap standar
+
+00:05:41.100 --> 00:05:43.400
+sehingga kami akan tetap seperti itu.
+
+00:05:43.550 --> 00:05:52.260
+Jika saya sekarang pergi ke database dan kami memanggil tes itu jadi sekali lagi kami akan melakukan tes database hit connect.
+
+00:05:52.270 --> 00:05:52.750
+Baiklah.
+
+00:05:52.750 --> 00:05:58.840
+Kami terhubung ke database tetapi tidak banyak di sini.
+
+00:05:59.090 --> 00:06:03.060
+Tapi setidaknya kita tahu bahwa kita terhubung ke tes localhost.
+
+00:06:03.160 --> 00:06:08.560
+Dan cara lain untuk terhubung dengan ini ingat ini adalah antarmuka pengguna grafis yang lengket dan saya
+
+00:06:08.560 --> 00:06:12.760
+menunjukkan ini karena sangat bagus untuk keperluan demo tapi saya ingin merasa nyaman
+
+00:06:12.760 --> 00:06:20.740
+bekerja dengan terminal dengan baik untuk melakukan hal yang sama seperti yang baru saja kita lakukan lakukan dengan Guti kita bisa mengetikkan PSU Well lagi yang
+
+00:06:20.740 --> 00:06:26.530
+merupakan perintah yang akan kita dapatkan ketika kita menginstal postscript dan kita akan mengatakan basis data yang ingin
+
+00:06:26.530 --> 00:06:27.250
+kita sambungkan.
+
+00:06:27.340 --> 00:06:30.640
+Dalam kasus kami akan menjadi ujian.
+
+00:06:30.830 --> 00:06:32.150
+Dan begitulah.
+
+00:06:32.330 --> 00:06:34.990
+Sama seperti ketika kita menjalankan node dan terminal berubah.
+
+00:06:35.000 --> 00:06:42.440
+Sekarang kita berada di dalam postscript yang berjalan di komputer kita tetapi kita belum tahu perintah apa pun.
+
+00:06:42.440 --> 00:06:48.850
+Dewey Jadi dalam video berikutnya kita akan mempelajari beberapa perintah bascule dan akhirnya membuat beberapa tabel
+
+00:06:49.270 --> 00:06:51.070
+di database postscript kami.
+
+00:06:51.100 --> 00:06:52.780
+Saya akan melihatnya satu per satu.

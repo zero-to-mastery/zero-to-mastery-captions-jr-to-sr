@@ -1,0 +1,523 @@
+﻿WEBVTT
+
+00:00:01.920 --> 00:00:02.840
+Selamat datang kembali.
+
+00:00:03.090 --> 00:00:08.950
+Dalam video ini, mari kita bicara tentang semua alat yang dapat kita gunakan untuk benar-benar menjalankan tes kita.
+
+00:00:09.210 --> 00:00:17.800
+Ingat tes jantung hanya javascript sehingga kita bisa menulis file javascript sederhana dengan pernyataan if jika
+
+00:00:17.820 --> 00:00:25.880
+mengatakan Anda tahu jika beberapa fungsi sebagai dua angka ini bersama-sama maka mengembalikan kesuksesan.
+
+00:00:25.890 --> 00:00:28.270
+Kalau tidak, tes pengembalian gagal.
+
+00:00:28.410 --> 00:00:36.150
+Jadi kami bisa melakukan itu tetapi itu membosankan dan sebagai pengembang kami ingin menggunakan alat yang ada untuk
+
+00:00:36.300 --> 00:00:39.980
+membuat pengalaman atau kecepatan pengembangan kami lebih cepat.
+
+00:00:39.980 --> 00:00:41.390
+Jadi ini akan menjadi luar biasa.
+
+00:00:41.390 --> 00:00:42.960
+Tapi mari kita lihat alat pengujian.
+
+00:00:44.430 --> 00:00:52.110
+Saya mencoba mengatur cara berpikir tentang pengujian, lingkungan pengujian, dan pengembangan web untuk Anda.
+
+00:00:52.380 --> 00:00:58.290
+Jadi saya akan menjelaskan ini dan jika ini sedikit rumit di pintu pertama Anda akan kembali ke
+
+00:00:58.290 --> 00:01:02.500
+ini dan membahas ini di akhir bagian dan semuanya masuk akal
+
+00:01:03.310 --> 00:01:09.550
+Jadi hal pertama yang kita butuhkan dalam alat pengujian adalah sesuatu yang disebut pustaka pengujian.
+
+00:01:09.550 --> 00:01:11.310
+Cukup jelas.
+
+00:01:11.350 --> 00:01:18.880
+Ini adalah scaffolding yang memberi kita kemampuan untuk menggunakan beberapa panggilan fungsi dan beberapa metode baru bagi kita
+
+00:01:18.880 --> 00:01:21.320
+untuk benar-benar menulis tes kita.
+
+00:01:21.550 --> 00:01:26.620
+Sekali lagi pikirkan ini sebagai perancah atau bangunan struktur ini di sekitar pengujian kami.
+
+00:01:27.500 --> 00:01:31.340
+Mungkin tiga perpustakaan teratas untuk itu adalah jazzmen.
+
+00:01:31.640 --> 00:01:36.290
+Hanya ada dan kemudian ada sesuatu yang disebut moka.
+
+00:01:36.460 --> 00:01:43.330
+Dan seperti yang saya katakan ini hanya NPM menginstal perpustakaan sehingga mereka tersedia di NPM dan Anda
+
+00:01:43.510 --> 00:01:46.350
+dapat menambahkannya untuk membangun perancah Anda.
+
+00:01:46.410 --> 00:01:53.830
+Hal berikutnya yang Anda butuhkan di sini adalah sesuatu yang disebut perpustakaan bagian perawat dan di sini
+
+00:01:53.830 --> 00:01:58.420
+kami memiliki lagi Jasmine yang dilengkapi dengan perpustakaan pernyataannya sendiri.
+
+00:01:58.420 --> 00:02:04.990
+Kami memiliki sekali lagi yang datang dengan perpustakaan pernyataan sendiri dan kemudian
+
+00:02:04.990 --> 00:02:14.790
+Chye di sini yang biasanya dipasangkan dengan Moka untuk memiliki perpustakaan pernyataan perpustakaan pernyataan untuk menyediakan fungsi yang berfungsi
+
+00:02:14.800 --> 00:02:16.280
+pernyataan kami.
+
+00:02:16.320 --> 00:02:17.670
+Saya tahu itu membingungkan.
+
+00:02:17.670 --> 00:02:25.580
+Ini pada dasarnya alat untuk memungkinkan Anda menguji bahwa variabel berisi nilai yang diharapkan.
+
+00:02:25.590 --> 00:02:33.140
+Sekarang masih terdengar membingungkan, jadi saya tunjukkan di mana di perpustakaan pernyataan Chye di sini.
+
+00:02:33.280 --> 00:02:40.690
+Dan Anda dapat melihat di sini bahwa mereka menggunakan sesuatu yang disebut BDD atau behavioured devolvement
+
+00:02:40.840 --> 00:02:49.730
+dan dengan menginstal perpustakaan ini kita dapat menggunakan semua kata-kata ini dan mereka hanya terlihat seperti bahasa Inggris dasar
+
+00:02:49.730 --> 00:02:59.220
+apa pernyataan di perpustakaan lakukan adalah berharap bahwa objek ini hanya berisi yang sama satu dan kemudian semua kata-kata ini
+
+00:02:59.220 --> 00:03:02.670
+Cheyne bersama untuk menguji asumsi kita.
+
+00:03:02.670 --> 00:03:11.530
+Jadi katakan saja berharap bahwa objek ini untuk tidak memiliki properti semudah bahasa Inggris.
+
+00:03:11.640 --> 00:03:15.500
+Ini hanya menguji kondisi satu terhadap kondisi dua.
+
+00:03:15.780 --> 00:03:23.240
+Jadi ini akan mengembalikan false karena Anda benar objek ini tidak akan memiliki properti
+
+00:03:23.270 --> 00:03:28.940
+dan mereka memiliki banyak hal yang tidak dapat kita tambahkan.
+
+00:03:28.960 --> 00:03:36.670
+Kita melihat bahwa orang lain mengharapkan objek ini memiliki semua kunci dan b seperti membaca dalam bahasa
+
+00:03:36.880 --> 00:03:41.880
+Inggris dan ini membuat tes kami sangat mudah dibaca dan dipahami.
+
+00:03:42.000 --> 00:03:49.470
+Hal berikutnya yang kita butuhkan untuk pengujian kita adalah sesuatu yang disebut pelari ujian dan pelari ujian adalah sesuatu
+
+00:03:49.470 --> 00:03:52.330
+yang memungkinkan kita untuk menjalankan tes kita.
+
+00:03:52.500 --> 00:03:59.910
+Ingat jika kita kembali ke aplikasi kita harus menjalankan NPM dan ini menjalankan
+
+00:04:03.190 --> 00:04:12.910
+tes kita mari kita tekan a untuk menjalankan semua tes dan ada yang secara ajaib menjalankan semua tes ini.
+
+00:04:12.910 --> 00:04:14.930
+Itulah yang dilakukan seorang pelari ujian.
+
+00:04:16.140 --> 00:04:23.010
+Kembali ke slide kami lagi sekarang kita melihat bahwa jazzmen dan hanya memasukkan test runner di perpustakaan mereka
+
+00:04:23.430 --> 00:04:26.560
+dan kemudian Moka juga memiliki test runner sendiri.
+
+00:04:26.670 --> 00:04:30.210
+Dan kemudian saya telah menambahkan satu lagi di sini yang disebut karma.
+
+00:04:30.370 --> 00:04:31.220
+Iya nih.
+
+00:04:31.440 --> 00:04:36.990
+Dan ini memungkinkan Anda untuk menjalankan tes di browser.
+
+00:04:38.900 --> 00:04:40.020
+Apa artinya.
+
+00:04:40.870 --> 00:04:45.310
+Nah seorang pelari ujian dapat menjalankan tes di lingkungan yang berbeda.
+
+00:04:45.310 --> 00:04:46.830
+Mari kita lihat.
+
+00:04:46.910 --> 00:04:54.960
+Anda biasanya melihat javascript kami bekerja dengan Dom untuk membuat webapp kami seperti apa.
+
+00:04:56.220 --> 00:05:04.010
+Tetapi ketika kita sedang menjalankan tes dan inilah yang karma memungkinkan Anda untuk menjalankan tes Anda di browser.
+
+00:05:05.140 --> 00:05:09.870
+Tapi mengapa kita tidak selalu menjalankan pengujian di browser saja.
+
+00:05:09.880 --> 00:05:12.730
+Nah itu karena butuh banyak waktu.
+
+00:05:12.730 --> 00:05:17.380
+Kami harus menjalankan setiap pengujian tunggal melalui peramban menggunakan API peramban.
+
+00:05:18.700 --> 00:05:20.150
+Idealnya saat kita menjalankan tes.
+
+00:05:20.170 --> 00:05:27.280
+Ini super super cepat karena sebagian besar tes diatur sehingga jika pengembang menekan simpan di terminal mereka itu akan
+
+00:05:27.490 --> 00:05:28.860
+berjalan ke tes.
+
+00:05:29.020 --> 00:05:33.410
+Jika setiap kali mereka perlu memulai browser dan menjalankan semuanya.
+
+00:05:33.670 --> 00:05:36.070
+Yah itu akan sangat sangat lambat.
+
+00:05:36.460 --> 00:05:44.290
+Jadi ada opsi lain seperti dalang oleh Google yang kami sebut browser tanpa kepala.
+
+00:05:44.380 --> 00:05:52.640
+Ini adalah pustaka simpul yang menyediakan API tingkat tinggi untuk mengontrol versi tanpa kepala dari peramban mereka.
+
+00:05:52.660 --> 00:05:58.690
+Jadi anggap itu sebagai peramban stripped yang membuat tes Anda sedikit lebih cepat.
+
+00:05:58.900 --> 00:06:05.870
+Tetapi juga dapat dikonfigurasi untuk melakukan hal-hal seperti menghasilkan screenshot PDSA halaman.
+
+00:06:06.130 --> 00:06:08.580
+Itu dapat mengotomatiskan pengiriman formulir.
+
+00:06:08.620 --> 00:06:10.930
+Anda dapat melakukan pengujian UI dengannya.
+
+00:06:10.930 --> 00:06:13.420
+Anda dapat memonitor input keyboard.
+
+00:06:13.450 --> 00:06:15.710
+Anda dapat melakukan banyak hal keren dengannya.
+
+00:06:15.820 --> 00:06:18.290
+Dan akhirnya kita punya sesuatu yang disebut jape dong.
+
+00:06:18.550 --> 00:06:24.390
+Dan seperti namanya adalah implementasi javascript dari DOM.
+
+00:06:24.460 --> 00:06:29.130
+Jadi itu bukan Dom asli tetapi AFAIK versi javascript itu.
+
+00:06:29.940 --> 00:06:37.950
+Saya ingat DOM adalah struktur seperti pohon yang menunjukkan node pada halaman web kami dan itulah yang membentuk
+
+00:06:37.950 --> 00:06:39.220
+UI kami.
+
+00:06:39.450 --> 00:06:46.170
+Jadi cukup bodoh mengimplementasikan ini dalam javascript sehingga kita dapat memiliki dom seperti API untuk bekerja
+
+00:06:46.170 --> 00:06:47.890
+tanpa benar-benar membutuhkan browser.
+
+00:06:48.010 --> 00:06:57.480
+Jika kita kembali ke tes kita dan mari kita jalankan ini lagi saya akan menjalankan tes lari NPM Anda akan melihat di
+
+00:06:57.480 --> 00:07:05.200
+sini bahwa script tes dasbor dasbor dan kepala berjalan dengan cepat tetapi Anda melihat bahwa kami menggunakan
+
+00:07:07.240 --> 00:07:11.400
+japes Dom sana sehingga tes kami berjalan sangat cepat.
+
+00:07:11.410 --> 00:07:11.940
+Baiklah.
+
+00:07:13.910 --> 00:07:16.200
+Jadi itu adalah pelari ujian.
+
+00:07:16.250 --> 00:07:21.470
+Selanjutnya kita memiliki sesuatu yang disebut mata-mata tiruan dan Stubb.
+
+00:07:21.570 --> 00:07:25.800
+Dan di sini lagi Jasmine dan hanya datang dengan versi mereka sendiri.
+
+00:07:26.640 --> 00:07:32.730
+Dan kemudian jika Anda menggunakan sesuatu seperti Mocha seperti Anda harus menambahkan pernyataan di perpustakaan Anda harus
+
+00:07:32.730 --> 00:07:35.610
+menambahkan sesuatu yang disebut Sign on God.
+
+00:07:35.660 --> 00:07:39.780
+Ya jelas ada perpustakaan lain tapi ini yang paling populer.
+
+00:07:39.920 --> 00:07:47.900
+Sekarang apa semua mata-mata tiruan ini dan bisnis Stob apa yang disediakan mata-mata untuk kita.
+
+00:07:47.900 --> 00:07:50.360
+Informasi tentang fungsi.
+
+00:07:50.360 --> 00:07:54.650
+Berapa kali mereka dipanggil dalam kasus apa dan oleh siapa.
+
+00:07:54.650 --> 00:08:03.710
+Stubbing menggantikan fungsi yang dipilih dengan fungsi untuk memastikan bahwa perilaku yang diharapkan terjadi dan kemudian
+
+00:08:03.710 --> 00:08:11.380
+Mock adalah jenis seperti memalsukan fungsi atau perilaku untuk menguji berbagai bagian proses.
+
+00:08:11.390 --> 00:08:14.870
+Jadi ini mungkin sangat bagus untuk tes integrasi.
+
+00:08:14.870 --> 00:08:21.950
+Sekarang saya tahu itu bisa sedikit membingungkan, jadi mari kita lihat tanda masuk di sini jika Anda pergi
+
+00:08:21.950 --> 00:08:28.050
+ke dokumentasi mereka mari klik pada scroll gratis Stubb ke bawah kita melihat itu.
+
+00:08:28.250 --> 00:08:30.850
+Apa yang dilakukan rintisan.
+
+00:08:30.890 --> 00:08:36.260
+Kami hanya menggunakan tanda pustaka pada Dot stub yang merupakan fungsi.
+
+00:08:36.290 --> 00:08:45.920
+Sekarang kita dapat menggunakannya dengan cara di mana fungsi ini dapat dipanggil dengan argumen 42 dan membuat
+
+00:08:45.920 --> 00:08:51.680
+kembali sehingga ketika kita menjalankan callback 42 ia mengembalikan 1.
+
+00:08:51.940 --> 00:08:57.120
+Dan ketika kita melakukan callback dot dengan arx itu melempar kesalahan.
+
+00:08:57.220 --> 00:09:00.950
+Sekali lagi ini adalah sesuatu yang akan dibahas nanti dalam video.
+
+00:09:01.090 --> 00:09:06.830
+Tapi Anda lihat di sini bahwa rintisan adalah fungsi palsu di akhir pekan dan membuat mereka melakukan apa yang mereka harapkan.
+
+00:09:08.840 --> 00:09:13.950
+Misalnya masuk dapat digunakan untuk memalsukan server selama pengujian kami.
+
+00:09:14.060 --> 00:09:18.890
+Kami tidak selalu ingin mengirim permintaan ke server setiap kali kami menjalankan tes.
+
+00:09:18.890 --> 00:09:26.540
+Tetapi idealnya jika suatu fungsi menggunakan server, kita dapat memalsukannya dengan sebuah rintisan sehingga fungsi tersebut tetap berjalan
+
+00:09:26.540 --> 00:09:30.660
+dan kita hanya dapat menguji satu potong kode itu.
+
+00:09:30.710 --> 00:09:36.430
+Seperti yang saya katakan ini sangat sulit untuk dijelaskan tanpa sedikit demo tetapi jangan khawatir kita akan
+
+00:09:36.430 --> 00:09:39.670
+sampai di sana dan kemudian bagian terakhir dari teka-teki.
+
+00:09:39.740 --> 00:09:45.960
+Kami telah berbicara tentang perancah tentang perpustakaan pernyataan kami berbicara tentang pelari tes kami
+
+00:09:45.980 --> 00:09:48.820
+berbicara tentang mata-mata Stobbs Moxon ini.
+
+00:09:48.830 --> 00:09:55.670
+Akhirnya kami memiliki sesuatu yang disebut cakupan kode dan cakupan kode disediakan oleh perpustakaan seperti
+
+00:09:55.880 --> 00:10:02.410
+Istanbul hanya memiliki cakupan kode sudah termasuk tetapi sebenarnya Istanbul berjalan di bawah tenda.
+
+00:10:04.010 --> 00:10:07.230
+Dan saya akan tunjukkan seperti apa cakupan kode itu.
+
+00:10:09.450 --> 00:10:15.690
+Untungnya bagi kami, kami hanya dapat melakukan pengujian dasbor dash dasbor NPM dan jangan khawatir kami akan berbicara tentang bagaimana
+
+00:10:15.930 --> 00:10:18.550
+kami dapat melakukan ini di aplikasi kami.
+
+00:10:18.630 --> 00:10:21.730
+Tetapi jika saya menjalankan ini, Anda melihat Dom adil di sini.
+
+00:10:23.630 --> 00:10:31.670
+Saya mendapatkan file keluaran dari cakupan dan Anda lihat di sini bahwa saya memiliki teman Roble saya dan saya memiliki beberapa hijau
+
+00:10:31.670 --> 00:10:38.600
+beberapa merah beberapa kuning dan ini adalah tes cakupan yang menunjukkan kepada saya berapa persen dari pernyataan cabang cabang
+
+00:10:38.660 --> 00:10:44.300
+fungsi yang tercakup dengan tes yang Anda lihat di sini bahwa saya telah menulis beberapa
+
+00:10:44.330 --> 00:10:51.860
+tes untuk Konstans berpikir mengajukan beberapa tindakan yang hanya mengajukan dan juga untuk beberapa komponen kami dari komponen daftar kartu kami
+
+00:10:51.860 --> 00:10:55.640
+dan bahwa kami memiliki cakupan 100 persen untuk itu.
+
+00:10:55.640 --> 00:11:02.840
+Tetapi kemudian kita juga memiliki hal-hal seperti file heterogen yang tidak ada beberapa tes dan bahkan menunjukkan kepada
+
+00:11:02.840 --> 00:11:05.350
+kita baris mana yang hilang.
+
+00:11:05.930 --> 00:11:14.600
+Dan itu adalah Istanbul di bawah tenda yang memberi kami laporan tentang di mana kami melewatkan tes sekarang.
+
+00:11:14.810 --> 00:11:21.740
+Meskipun ini banyak perpustakaan, mereka semua memiliki tujuan yang sama dalam pikiran dan mereka semua sebenarnya
+
+00:11:21.740 --> 00:11:24.640
+ditulis dengan cara yang sangat mirip.
+
+00:11:24.680 --> 00:11:30.190
+Jadi, begitu Anda tahu satu, sangat mudah untuk mengambil yang lain.
+
+00:11:30.200 --> 00:11:31.970
+Jangan kewalahan dengan ini.
+
+00:11:32.060 --> 00:11:36.950
+Sama seperti apa pun ada banyak alat untuk pekerjaan itu, tetapi kami akan kembali ke sini sehingga semuanya masuk
+
+00:11:36.950 --> 00:11:37.740
+akal pada akhirnya.
+
+00:11:37.820 --> 00:11:41.330
+Dan perlu diingat bahwa sintaksnya sangat mirip.
+
+00:11:41.570 --> 00:11:42.750
+Jadi kamu akan baik-baik saja.
+
+00:11:43.640 --> 00:11:49.370
+Dan saya juga ingin memberi tahu Anda bahwa mungkin Jasmine yang paling populer harus sangat populer
+
+00:11:49.430 --> 00:11:52.280
+tetapi sekarang telah dikalahkan oleh dua hal.
+
+00:11:52.280 --> 00:11:58.280
+Satu sama seperti yang Anda lihat sama bagusnya karena ia memiliki segalanya di satu tempat.
+
+00:11:58.310 --> 00:12:04.530
+Anda bisa menginstal pustaka ini dan memiliki semua fitur kecil yang Anda butuhkan dalam kerangka pengujian.
+
+00:12:04.880 --> 00:12:14.170
+Satu lagi yang populer adalah Moka dikombinasikan dengan Chye dan masuk dan ini lagi mungkin yang paling populer mengatur tetapi itu juga
+
+00:12:14.170 --> 00:12:17.690
+karena sama seperti banyak yang lebih baru.
+
+00:12:17.710 --> 00:12:24.460
+Sebagian besar perpustakaan ini mengikuti gagasan pengembangan yang didorong oleh perilaku, yang kami jelaskan tentang
+
+00:12:24.460 --> 00:12:28.340
+fungsi dan perilaku apa yang kami harapkan darinya.
+
+00:12:28.350 --> 00:12:31.390
+Anda ingat pernyataan Chye yang benar.
+
+00:12:31.660 --> 00:12:40.200
+Jika objek memiliki properti ini, kami berharap memiliki properti ini a.
+
+00:12:40.440 --> 00:12:42.610
+Baiklah kepala Anda belum sakit.
+
+00:12:43.870 --> 00:12:51.130
+Untungnya bagi kita jika bukan karena bereaksi kita harus menginstal NPM semua ini lagi mengaturnya dan
+
+00:12:51.130 --> 00:12:56.940
+menambahkannya ke skrip NPM kami untuk menjalankan semua tes dan cakupan uji.
+
+00:12:56.960 --> 00:13:02.940
+Tapi seperti yang Anda lihat dengan membuat kembali bertingkah, kami memiliki semuanya di luar kotak.
+
+00:13:04.120 --> 00:13:09.790
+Lagi-lagi, para pemikir terbaik di komunitas berupaya menjaga CCRI bereaksi untuk selalu
+
+00:13:09.790 --> 00:13:13.330
+memperbarui karena semua perpustakaan ini memperbarui juga.
+
+00:13:14.360 --> 00:13:18.650
+Namun jangan khawatir, saya akan menunjukkan kepada Anda di video-video yang akan datang bagaimana cara mengaturnya sendiri.
+
+00:13:19.800 --> 00:13:25.400
+Satu catatan lain dalam tes kami di sini CCRI bereaksi.
+
+00:13:25.400 --> 00:13:32.950
+Penggunaannya adil dan itu karena baru saja dibuat oleh Facebook dan jika Anda ingat kembali beraksi juga
+
+00:13:32.950 --> 00:13:40.450
+default oleh Facebook yang agak menyenangkan karena mereka menggunakannya di lingkungan produksi mereka sendiri dan alat
+
+00:13:40.450 --> 00:13:45.030
+ini digunakan bersama untuk bekerja dengan sangat sangat baik.
+
+00:13:45.210 --> 00:13:52.650
+Dan omong-omong ada perpustakaan pengujian lain kami memiliki Eva yang melakukan paralelisme dengan sangat baik yang berarti
+
+00:13:52.650 --> 00:13:55.720
+menjalankan tes menjalankan tes sangat cepat.
+
+00:13:55.860 --> 00:14:00.660
+Dan kemudian Anda memiliki sesuatu seperti tape yang benar-benar rendah perpustakaan cahaya sederhana.
+
+00:14:00.660 --> 00:14:03.400
+Tapi seperti yang saya katakan sebelumnya, jangan dibanjiri.
+
+00:14:03.570 --> 00:14:10.290
+Singkatnya jika Anda mendapatkan sesuatu dari video ini adalah jika Anda hanya ingin memulai dan
+
+00:14:10.290 --> 00:14:17.690
+mencari kerangka kerja cepat yang dapat menangani semuanya dan memiliki semuanya dalam satu dinding, gunakan saja jika
+
+00:14:17.700 --> 00:14:27.290
+Anda menginginkan konfigurasi yang dapat diperpanjang yang sangat fleksibel di mana Anda dapat memasang beberapa hal kemudian menggunakan Moka Moka sedikit lebih
+
+00:14:27.290 --> 00:14:33.590
+sulit untuk diatur karena semua hal ini perlu kita tambahkan tetapi lebih fleksibel.
+
+00:14:33.740 --> 00:14:36.560
+Dan seperti saya katakan buka dua ekstensi.
+
+00:14:36.590 --> 00:14:43.180
+Satu catatan terakhir dalam pengujian kami, kami akan menggunakan dua hal yang agak unik untuk bereaksi.
+
+00:14:43.220 --> 00:14:49.190
+Salah satunya adalah sesuatu yang disebut pengujian snapshot yang hadir dengan hanya yang memungkinkan kita untuk melakukan beberapa hal
+
+00:14:49.190 --> 00:14:52.110
+yang sangat keren yang akan menunjukkan kepada Anda nanti.
+
+00:14:52.550 --> 00:14:59.810
+Dan kemudian perpustakaan lain yang disebut enzim yang dibuat oleh udara BMB dan membantu kita menulis tes lebih baik
+
+00:14:59.810 --> 00:15:01.220
+untuk komponen Riak.
+
+00:15:01.520 --> 00:15:07.840
+Jangan khawatir, saya tidak hanya menunjukkan kepada Anda hal-hal ini karena saya pikir mereka keren dan trendi ini
+
+00:15:07.930 --> 00:15:13.260
+dilaksanakan dan sebagian besar proyek Riak yang Anda temui dan itu cukup banyak menjadi standar
+
+00:15:13.300 --> 00:15:16.000
+dalam ekosistem tindakan ulang untuk menggunakan perpustakaan.
+
+00:15:16.000 --> 00:15:17.270
+Jadi kita akan menggunakannya juga.
+
+00:15:17.520 --> 00:15:21.500
+Namun pada akhirnya kami dapat menyetujui satu hal.
+
+00:15:21.550 --> 00:15:26.020
+Semua perpustakaan ini memiliki logo Hosie yang sangat keren dan yang berikutnya.
+
+00:15:26.350 --> 00:15:26.620
+Namun oleh.

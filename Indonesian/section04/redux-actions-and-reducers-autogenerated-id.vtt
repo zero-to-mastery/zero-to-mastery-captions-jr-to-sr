@@ -1,0 +1,448 @@
+﻿WEBVTT
+
+00:00:01.220 --> 00:00:03.020
+Dan selamat datang kembali.
+
+00:00:03.020 --> 00:00:11.230
+Sekarang kita telah menginstal ulang redux dan Riak. Mari kita mulai menulis beberapa kode dan mengimplementasikan redux.
+
+00:00:11.430 --> 00:00:19.700
+Sekarang hal pertama yang ingin kita lakukan adalah membuat sesuatu yang disebut aksi dan juga peredam.
+
+00:00:19.980 --> 00:00:30.040
+Jika Anda ingat diagram ini, kami menyebutkan bahwa Reebok's memiliki dua komponen ini tindakan dan pengurangan.
+
+00:00:30.050 --> 00:00:33.820
+Jadi kita akan membangun keduanya dan menunjukkan apa yang saya maksud.
+
+00:00:35.460 --> 00:00:39.440
+Hal pertama yang ingin kita lakukan adalah membuat file baru.
+
+00:00:39.630 --> 00:00:45.930
+Mari kita simpan saja di folder sumber dan kita akan mengatakan bahwa ini akan disebut
+
+00:00:47.940 --> 00:00:54.020
+Tindakan pikir James dan di sini kita akan membuat tindakan menggunakan javascript lama biasa.
+
+00:00:54.090 --> 00:01:03.680
+Kami akan mengatakan bahwa ekspor Konst dan tindakan pertama yang akan kami lakukan adalah bidang pencarian.
+
+00:01:03.750 --> 00:01:09.810
+Jadi ingat ketika kita mengetik ke dalam kotak pencarian kita dapat
+
+00:01:09.810 --> 00:01:17.100
+memfilter robot akan mengatakan bahwa tindakan yang sedang pencarian berubah yang kita miliki di
+
+00:01:17.100 --> 00:01:31.180
+aplikasi tindakan ulang akan mengatakan bahwa ini akan disebut Setel bidang pencarian dan bidang pencarian ini menerima input teks yang diketik pengguna dan karena kami ingin menyimpannya
+
+00:01:31.180 --> 00:01:37.840
+sekecil mungkin, kami dapat membungkusnya dengan kurung keriting sehingga kami dapat menghindari pernyataan
+
+00:01:37.840 --> 00:01:38.540
+kembali.
+
+00:01:38.560 --> 00:01:45.100
+Kami baru saja mengembalikan objek dan objek ini
+
+00:01:47.810 --> 00:01:54.430
+akan memiliki tipe yang disebut katakanlah ubah bidang pencarian.
+
+00:01:57.540 --> 00:02:06.070
+Dan kami juga akan memiliki muatan yang disebut pajak.
+
+00:02:06.210 --> 00:02:13.980
+Sehingga tindakan ini akan yang disebut Set bidang pencarian akan mengambil pajak yang merupakan input pengguna
+
+00:02:13.980 --> 00:02:20.060
+dan itu akan mengembalikan objek yang memiliki jenis bidang pencarian yang diubah.
+
+00:02:20.460 --> 00:02:28.200
+Jadi itulah tindakan yang sedang diambil dan akan dikirim dan payload adalah nama umum yang digunakan
+
+00:02:28.200 --> 00:02:36.750
+dan redoks jadi biasakan saja payload itu adalah kami mengirimkan data apa pun yang diperlukan untuk melanjutkan ke
+
+00:02:36.750 --> 00:02:41.680
+produsen yang hanya akan menjadi apa pun yang dimasukkan pengguna.
+
+00:02:42.750 --> 00:02:43.120
+Baiklah.
+
+00:02:43.150 --> 00:02:45.220
+Kami baru saja menciptakan tindakan kami.
+
+00:02:45.340 --> 00:02:46.030
+Itu dia.
+
+00:02:46.180 --> 00:02:47.800
+Itu tindakan kita.
+
+00:02:47.800 --> 00:02:49.390
+Bagus dan sederhana.
+
+00:02:49.390 --> 00:02:57.640
+Sekarang di sini saya telah memanfaatkan ini karena itu adalah konstanta dan konstanta biasanya dikapitalisasi.
+
+00:02:57.640 --> 00:03:07.720
+Semua batas dalam javascript hanyalah standar tapi saya suka menggunakan variabel konstan aktual karena hanya dengan string kita dapat
+
+00:03:07.720 --> 00:03:12.960
+salah mengeja sesuatu dan kita mungkin tidak mendapatkan udara.
+
+00:03:13.000 --> 00:03:18.220
+Tetapi jika kita menggunakan variabel dan kita salah mengeja itu akan benar-benar mendapatkan kesalahan saat kita menjalankan aplikasi.
+
+00:03:18.220 --> 00:03:21.210
+Jadi ini trik bagus yang bagus.
+
+00:03:21.220 --> 00:03:27.990
+Dan sebagian besar demo redoks memiliki biaya dan mengikuti dinding tempat mereka melacak semua tindakan ini.
+
+00:03:28.240 --> 00:03:34.480
+Dan juga menyenangkan memiliki file di mana Anda dapat melihat apa tindakan Anda.
+
+00:03:34.480 --> 00:03:39.630
+Baris demi baris karena sebagian besar aplikasi akan memiliki lebih dari satu tindakan seperti yang akan Anda lihat.
+
+00:03:39.700 --> 00:03:44.010
+Jadi mari kita buat file baru dan kita akan menyebutnya konstan.
+
+00:03:44.250 --> 00:03:46.130
+Iya nih.
+
+00:03:46.330 --> 00:03:51.390
+Dan di dalam sini hanya dalam ekspor Mari kita buat ini sedikit lebih besar sehingga Anda bisa melihat.
+
+00:03:51.500 --> 00:03:52.740
+Ini dia.
+
+00:03:52.780 --> 00:03:58.650
+Kami akan mengekspor perubahan konstan.
+
+00:03:59.690 --> 00:04:02.070
+Bidang pencarian.
+
+00:04:02.310 --> 00:04:04.290
+Dan itu akan menyamai kekuatan kita.
+
+00:04:05.180 --> 00:04:10.250
+Sekali lagi bidang pencarian perubahan hal yang sama persis membeli string tampaknya sedikit berlebihan
+
+00:04:13.060 --> 00:04:16.520
+tapi itu hanya praktik yang baik untuk dimiliki.
+
+00:04:16.810 --> 00:04:23.380
+Jadi sekarang kita memiliki variabel ini yang merupakan konstanta dan karena kita mengekspornya, kita bisa
+
+00:04:23.380 --> 00:04:24.510
+mengimpornya di
+
+00:04:29.680 --> 00:04:38.070
+sini dan kita akan mengatakan ganti bidang pencarian pastikan bahwa tidak ada kesalahan ejaan dengan cara ini dan kita akan
+
+00:04:38.490 --> 00:04:41.080
+mengatakan impor itu dari file Konstans.
+
+00:04:45.710 --> 00:04:49.630
+Dan mari kita buat ini sedikit lebih kecil supaya semuanya cocok.
+
+00:04:49.710 --> 00:04:52.930
+Dan begitulah.
+
+00:04:52.940 --> 00:04:59.640
+Jadi sekarang kita bisa menggunakan bidang pencarian yang berubah, bukan teks.
+
+00:04:59.780 --> 00:05:00.660
+Dan begitulah.
+
+00:05:00.730 --> 00:05:08.650
+Kami memiliki file tindakan yang bagus dan tampan dengan aksi bidang pencarian yang ditetapkan dan dapat Anda bayangkan di sini karena
+
+00:05:08.650 --> 00:05:14.680
+kami mendapatkan lebih banyak tindakan, kami dapat terus menambahkan hal-hal dan kami terus menambahkan semua konstanta
+
+00:05:14.680 --> 00:05:18.460
+yang kami butuhkan untuk tindakan yang diperlukan aplikasi .
+
+00:05:18.460 --> 00:05:18.660
+Baiklah.
+
+00:05:18.670 --> 00:05:22.020
+Hal berikutnya yang kita ingat dengan redoks adalah setelah aksi.
+
+00:05:22.030 --> 00:05:30.190
+Kami juga memiliki peredam yang saya katakan adalah fungsi besar yang hanya membaca tindakan dan meludahkan apa
+
+00:05:30.190 --> 00:05:32.420
+yang kita sebut keadaan.
+
+00:05:32.530 --> 00:05:38.560
+Jadi mari kita lakukan, mari kita buat file lain di sini
+
+00:05:42.040 --> 00:05:53.670
+kita akan menyebutnya reduksi yang menghindari kita dan kita pikir di sini mari kita buat itu atau kita mulai dengan mengatakan keadaan awal Konst.
+
+00:05:54.050 --> 00:05:56.030
+Jadi kita perlu semacam titik awal.
+
+00:05:56.030 --> 00:06:00.790
+Jadi, Anda mungkin ingat di file aplikasi dodgiest kami dengan membuat aksi ulang.
+
+00:06:00.860 --> 00:06:08.220
+Jika saya membukanya, kita melihat bahwa kita memiliki keadaan awal dengan bidang pencarian yang kosong.
+
+00:06:08.240 --> 00:06:15.400
+Jadi mirip dengan itu kita perlu mengatakan bahwa tahap awal di sini akan memiliki bidang pencarian yang
+
+00:06:18.290 --> 00:06:20.390
+sama dengan string kosong.
+
+00:06:22.080 --> 00:06:23.510
+Jadi itulah kondisi awal.
+
+00:06:23.550 --> 00:06:28.050
+Itulah objek awal yang akan kita miliki di toko redux.
+
+00:06:28.530 --> 00:06:31.850
+Dan sekarang kita perlu membuat peredam lagi.
+
+00:06:31.920 --> 00:06:38.190
+Ingat itu adalah fungsi yang sangat mudah dilakukan lagi karena kita akan menggunakannya di tempat lain.
+
+00:06:38.190 --> 00:06:46.780
+Kami akan mengekspornya dan kami akan mengatakan bahwa ini akan disebut robot pencarian karena itulah
+
+00:06:46.780 --> 00:06:52.640
+tindakan yang mengambilnya akan mencari robot menggunakan bidang pencarian.
+
+00:06:52.660 --> 00:06:58.980
+Jadi robot pencarian ini mengurangi jumlah mereka dalam beberapa hal.
+
+00:06:59.030 --> 00:07:09.470
+Pertama adalah keadaan yang merupakan keadaan aplikasi kita dan kemudian yang kedua adalah tindakan.
+
+00:07:09.490 --> 00:07:11.720
+Jadi itulah tindakan yang baru saja terjadi.
+
+00:07:13.630 --> 00:07:20.440
+Dan menggunakan ESX, mari kita beri saja parameter default untuk memastikan bahwa jika ini kosong atau tindakan kosong, kami tidak
+
+00:07:20.440 --> 00:07:21.890
+akan masuk ke sana.
+
+00:07:21.910 --> 00:07:30.340
+Jadi kita akan mengatakan bahwa keadaan akan menjadi keadaan awal yang mengapa kita miliki di sini dan kemudian tindakan hanya
+
+00:07:30.340 --> 00:07:32.110
+akan menjadi objek kosong.
+
+00:07:32.110 --> 00:07:38.790
+Ingat tindakan kita hanyalah benda yang kembali.
+
+00:07:38.820 --> 00:07:48.690
+Jadi dari sini menggunakan fungsi udara kami memiliki peredam pertama kami dan mengurangi geser apa yang mereka lakukan adalah mereka mendapatkan
+
+00:07:48.780 --> 00:07:52.190
+input ini dari keadaan dan tindakan.
+
+00:07:52.230 --> 00:07:58.680
+Dan jika mereka peduli dengan tindakan yang mereka terima dalam kasus kami jika kami peduli jika kami menerima tindakan
+
+00:07:58.680 --> 00:08:04.980
+apa pun yang terkait dengan pencarian robot, kami akan melakukan sesuatu yang kami akan bertindak berdasarkan negara seperti
+
+00:08:04.980 --> 00:08:09.820
+yang akan kami lakukan lakukan itu kita akan menggunakan pernyataan switch dan kita akan
+
+00:08:09.820 --> 00:08:12.960
+mengatakan dalam pernyataan switch bahwa kita akan melakukan jenis
+
+00:08:15.650 --> 00:08:17.370
+tindakan mengingat jenis tindakan.
+
+00:08:17.480 --> 00:08:20.280
+Itu adalah sesuatu yang kami gunakan dalam aksi Dodge.
+
+00:08:20.510 --> 00:08:25.480
+Ingat kami memiliki jenis bidang pencarian perubahan.
+
+00:08:25.610 --> 00:08:31.390
+Jadi melihat ini sepertinya kita akan peduli dengan jenis tindakan bidang pencarian perubahan.
+
+00:08:31.430 --> 00:08:41.910
+Jadi mari kita impor file Constance di sini untuk redoks karena orang miskin kita juga sudah siap.
+
+00:08:42.050 --> 00:08:51.530
+Dan di sini kita dapat mengatakan bahwa jika jenis tindakan.
+
+00:08:51.730 --> 00:08:54.730
+Aduh, mari kita ganti bidang pencarian.
+
+00:08:56.370 --> 00:09:07.100
+Jika itu masalahnya kita ingin mengembalikan negara baru dan ini kembali ke tiga prinsip yang kita
+
+00:09:07.100 --> 00:09:08.060
+bicarakan.
+
+00:09:08.060 --> 00:09:08.850
+Mari kita lihat.
+
+00:09:10.240 --> 00:09:15.610
+Tiga pelaku dalam bereaksi adalah bahwa kita memiliki satu-satunya sumber kebenaran yang merupakan satu-satunya objek besar yang
+
+00:09:15.610 --> 00:09:16.690
+menggambarkan aplikasi kita.
+
+00:09:16.840 --> 00:09:22.490
+Jadi kami memiliki variabel keadaan awal kami yang kami katakan negara hanya baca.
+
+00:09:22.540 --> 00:09:26.880
+Itu berarti kita tidak pernah bisa memodifikasi objek itu.
+
+00:09:26.900 --> 00:09:37.170
+Satu-satunya hal yang dapat kita lakukan adalah membuat objek baru yang memiliki sama seperti sebelum objek sebelumnya keadaan sebelumnya yang kita
+
+00:09:37.200 --> 00:09:43.670
+miliki dengan modifikasi apa pun yang kita miliki sehingga statusnya adalah Read-Only.
+
+00:09:43.740 --> 00:09:50.190
+Dan kemudian hal ketiga adalah bahwa perubahan hanya menggunakan fungsi murni. Saya ingat fungsi
+
+00:09:50.430 --> 00:09:59.520
+murni adalah fungsi yang mendapatkan semacam input seperti yang kita miliki di reducer dan mengembalikan output yang tidak memiliki efek
+
+00:09:59.520 --> 00:10:00.440
+samping.
+
+00:10:00.450 --> 00:10:03.120
+Itu tidak mengubah apa pun.
+
+00:10:03.300 --> 00:10:07.940
+Setiap kali kita memasukkan input, hasilnya selalu sama.
+
+00:10:08.400 --> 00:10:15.310
+Jadi berdasarkan pada prinsip-prinsip ini jika kita kembali kita tahu bahwa kita ingin
+
+00:10:15.310 --> 00:10:22.270
+ini direduksi menjadi fungsi murni yaitu mengambil semacam input dan itu harus mengembalikan negara
+
+00:10:22.270 --> 00:10:32.800
+baru dan cara kita melakukannya tanpa hanya melakukan keadaan bidang pencarian Daut dan memodifikasi properti yang akan kita lakukan objek dot assign.
+
+00:10:32.960 --> 00:10:43.970
+Dan cara kita melakukan ini adalah kurung keriting koma keadaan yang kita terima yang merupakan keadaan awal awal dan
+
+00:10:43.970 --> 00:10:50.270
+akhirnya apa pun yang ingin kita ubah pada objek itu.
+
+00:10:50.270 --> 00:10:58.280
+Dalam kasus kami, kami tertarik untuk mengubah properti bidang pencarian dan properti
+
+00:10:58.280 --> 00:11:03.690
+bidang pencarian akan memiliki aksi Daut payload.
+
+00:11:03.790 --> 00:11:06.800
+Sekali lagi saya akan membuat ini sedikit lebih kecil.
+
+00:11:06.970 --> 00:11:13.920
+Kami mengembalikan negara baru seperti yang Anda lihat di sini dengan desain objek yang akan memiliki segalanya di
+
+00:11:13.920 --> 00:11:14.730
+negara bagian.
+
+00:11:14.880 --> 00:11:22.050
+Plus kita akan memperbarui properti bidang pencarian apa pun properti bidang pencarian baru yang kita miliki dengan
+
+00:11:22.150 --> 00:11:23.070
+aksi payload.
+
+00:11:23.130 --> 00:11:28.760
+Ingat tindakan memiliki dua hal yang mengirim objek dengan mengetikkan objek dengan payload.
+
+00:11:28.780 --> 00:11:32.310
+Jika kita kembali dengan tipe laut dan muatan.
+
+00:11:32.450 --> 00:11:37.370
+Jadi ini hanya mengatakan kami menerima tindakan yang disebut Change Sarsfield.
+
+00:11:37.490 --> 00:11:45.280
+Jika itu masalahnya, kembalikan negara baru dengan muatan tindakan apa pun yang dimasukkan pengguna.
+
+00:11:45.320 --> 00:11:50.510
+Saya tahu ini bisa sedikit membingungkan tetapi ini hanya sintaks redux standar yang Anda
+
+00:11:50.510 --> 00:11:51.330
+harus terbiasa.
+
+00:11:52.550 --> 00:11:53.400
+Hanya kepala.
+
+00:11:53.400 --> 00:11:57.050
+Ada cara lain untuk melakukan ini yang disukai beberapa orang dan lebih bersih.
+
+00:11:57.050 --> 00:12:05.760
+Pilihan lain adalah melakukan perusakan objek atau operator penyebaran objek yang artinya kita bisa melakukan sesuatu seperti
+
+00:12:06.150 --> 00:12:06.810
+ini.
+
+00:12:10.550 --> 00:12:12.370
+Yang bekerja dengan baik juga.
+
+00:12:12.410 --> 00:12:15.230
+Untuk saat ini, mari kita tetap
+
+00:12:18.720 --> 00:12:23.960
+seperti itu dan selalu ingat bahwa fungsi murni selalu perlu mengembalikan sesuatu.
+
+00:12:23.960 --> 00:12:39.640
+Jadi, jika jenis tindakannya tidak seperti ini, kami juga ingin mengatakan default untuk selalu mengembalikan status.
+
+00:12:39.640 --> 00:12:40.130
+Ini dia.
+
+00:12:40.150 --> 00:12:41.790
+Kami telah membuat ulang Pak.
+
+00:12:42.040 --> 00:12:44.830
+Itu adalah fungsi murni.
+
+00:12:44.830 --> 00:12:52.990
+Sekarang di sini kita bisa menggunakan pernyataan if jika kita mau, tetapi saya suka menggunakan sakelar dan dokumentasi Riak
+
+00:12:52.990 --> 00:12:59.550
+juga merekomendasikan sakelar karena Anda dapat memiliki banyak kasus beberapa tindakan yang bertindak atas peredam
+
+00:12:59.560 --> 00:13:06.040
+robot pencarian dan jauh lebih mudah untuk hanya menambahkan dan menambahkan yang berbeda hal-hal
+
+00:13:06.250 --> 00:13:08.590
+yang mempengaruhi keadaan robot.
+
+00:13:08.590 --> 00:13:09.100
+Baiklah.
+
+00:13:09.160 --> 00:13:10.830
+Itu tidak terlalu buruk, benar.
+
+00:13:10.930 --> 00:13:21.170
+Kami telah membuat peredam dengan beberapa kondisi awal dan kami juga memiliki konstanta dan tindakan kami.
+
+00:13:21.300 --> 00:13:28.530
+Jadi diagram yang saya tunjukkan kepada Anda mulai sedikit lebih masuk akal di video berikutnya.
+
+00:13:28.530 --> 00:13:33.870
+Mari kita sambungkan ini karena saat ini tidak terhubung ke apa pun yang tidak terhubung
+
+00:13:33.870 --> 00:13:36.520
+ke aplikasi kita untuk bertindak kembali.
+
+00:13:36.570 --> 00:13:39.850
+Kami baru saja membuat file-file semacam ini hidup sendiri.
+
+00:13:40.380 --> 00:13:42.030
+Sampai jumpa di yang berikutnya.
+
+00:13:42.050 --> 00:13:42.590
+Sampai jumpa.

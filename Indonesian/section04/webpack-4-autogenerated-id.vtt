@@ -1,0 +1,1330 @@
+﻿WEBVTT
+
+00:00:00.830 --> 00:00:02.640
+Dan selamat datang kembali.
+
+00:00:02.750 --> 00:00:07.010
+Mari kita mulai dengan pengkodean menarik menggunakan apa yang sekarang.
+
+00:00:07.190 --> 00:00:11.210
+Ingat aplikasi akting ulang kredo menggunakan paket web di bawah tenda.
+
+00:00:11.240 --> 00:00:18.590
+Jadi mari kita lihat pengaturan seperti apa yang mereka miliki dengan mencoba membuat sendiri atau setidaknya versi yang
+
+00:00:18.590 --> 00:00:19.350
+disederhanakan.
+
+00:00:20.830 --> 00:00:28.690
+Jadi hal pertama yang ingin kita lakukan adalah mari kita membuat proyek sederhana. Kita hanya akan membuat
+
+00:00:28.690 --> 00:00:29.630
+direktori,
+
+00:00:32.390 --> 00:00:36.640
+kita akan menyebutnya proyek apa dan semua Cdn juga.
+
+00:00:37.930 --> 00:00:45.370
+Sekarang hal pertama yang ingin kita lakukan adalah mengatur NPM sehingga saya dapat melakukan NPM di dalamnya dengan Dash
+
+00:00:45.550 --> 00:00:49.260
+Y yang berarti katakan saja ya untuk semua konfigurasi.
+
+00:00:49.300 --> 00:00:49.690
+Baiklah.
+
+00:00:49.690 --> 00:00:54.770
+Dan kami telah menyiapkan semuanya dan menghapus ini.
+
+00:00:54.880 --> 00:01:00.870
+Dan sekarang mari kita buka proyek untuk memastikan bahwa kita memiliki semua file yang kita butuhkan.
+
+00:01:00.900 --> 00:01:05.540
+Saya menggunakan subline tetapi Anda jelas dapat menggunakan editor teks apa pun yang Anda pilih.
+
+00:01:11.190 --> 00:01:13.310
+Dan mari kita buat layarnya bagus.
+
+00:01:14.520 --> 00:01:16.750
+Suka ini bersama sehingga kita bisa melihat semuanya.
+
+00:01:16.950 --> 00:01:17.530
+Bagus.
+
+00:01:17.610 --> 00:01:18.310
+Sempurna.
+
+00:01:19.270 --> 00:01:24.120
+Baiklah jadi kami punya proyek paket web kami dengan paket dot Gees kami di file.
+
+00:01:24.130 --> 00:01:27.390
+Tidak banyak di dalamnya untuk saat ini tetapi ini adalah awal yang baik.
+
+00:01:27.580 --> 00:01:33.630
+Sekarang seluruh aplikasi satu halaman yang akan kita buat akan berisi dua
+
+00:01:34.030 --> 00:01:42.780
+file file HMO dan file javascript sementara file javascript akan dihasilkan secara otomatis dari semua file lain
+
+00:01:43.080 --> 00:01:46.270
+yang kita miliki melalui ratpack.
+
+00:01:46.380 --> 00:01:55.830
+Kemudian kita dapat mulai membuat file XML secara manual sebagai titik masuk untuk aplikasi kita sehingga kita cukup membuat
+
+00:01:55.830 --> 00:02:02.760
+direktori lain di sini kita akan menyebutnya membangun atau katakanlah dua disk untuk
+
+00:02:04.020 --> 00:02:12.810
+distribusi dan semua CD ke dalam distribusi itu dan kita hanya buat indeks dot file shim sempurna.
+
+00:02:12.860 --> 00:02:15.960
+Jika kita periksa di sini, indeks kita bukan waria.
+
+00:02:15.970 --> 00:02:17.630
+Baiklah, mari kita kembali.
+
+00:02:18.380 --> 00:02:24.210
+Untuk rute proyek kami di sini, di indeks mulai musim gugur yang sama.
+
+00:02:24.220 --> 00:02:28.790
+Kita cukup membuat templat dasar sederhana.
+
+00:02:29.170 --> 00:02:36.100
+Saya dapat benar-benar dan pajak luhur melakukan ini dan kemudian jika saya menekan tab sama sekali populer bagi
+
+00:02:36.100 --> 00:02:42.760
+saya yang merupakan fitur kecil yang bagus akan memberikan judul paket apa dan di dalam tubuh karena
+
+00:02:43.150 --> 00:02:48.540
+kita akan menggunakan tindakan ulang dan kita perlu semacam titik masuk untuk bereaksi.
+
+00:02:48.540 --> 00:02:58.610
+Kami hanya dapat memiliki div dengan ide katakanlah aplikasi dan kami dapat menutup div itu dan kami juga dapat memiliki file
+
+00:02:58.610 --> 00:03:07.580
+skrip dan file skrip akan memuat Ya kita yang dibundel yang belum kita miliki tetapi kita akan pergi
+
+00:03:07.580 --> 00:03:08.840
+untuk membuat.
+
+00:03:08.840 --> 00:03:19.100
+Jadi, kami hanya akan mengatakan bahwa sumber untuk file skrip ini akan berada di bundle dodginess.
+
+00:03:19.200 --> 00:03:22.700
+Baiklah ada aplikasi yang bagus dan sederhana.
+
+00:03:23.160 --> 00:03:29.060
+Kita akan memiliki titik masuk untuk bereaksi dan kita juga akan memiliki semua file javascript kita
+
+00:03:29.070 --> 00:03:31.510
+dalam satu pemikiran yang disebut bundle.
+
+00:03:32.710 --> 00:03:37.590
+Sekarang Anda akan menggunakan wetback sebagai bonder modul dan alat build.
+
+00:03:37.720 --> 00:03:44.650
+Lebih dari apa yang akan Anda gunakan sesuatu yang disebut server dev paket web untuk melayani paket
+
+00:03:44.650 --> 00:03:53.150
+ini yang mereka miliki di lingkungan lokal sehingga kami dapat menjalankan perintah di sini dan kami dapat menguji rap pada laptop kami.
+
+00:03:53.440 --> 00:03:57.280
+Kalau tidak, Anda tidak akan dapat melihatnya di browser.
+
+00:03:57.340 --> 00:04:05.250
+Dan akhirnya kita juga membutuhkan wetbacks untuk melihat kebohongan atau antarmuka baris perintah untuk mengkonfigurasi pengaturan wetbacks
+
+00:04:05.350 --> 00:04:06.060
+kita.
+
+00:04:06.070 --> 00:04:12.620
+Jadi mari kita instal ketiga paket ini sehingga kita benar-benar dapat mulai menggunakan kembali
+
+00:04:12.790 --> 00:04:15.130
+Kita bisa lakukan NPM tidak di sana.
+
+00:04:15.130 --> 00:04:27.810
+Kita dapat melakukan instal NPM dan karena ini untuk tujuan pengembangan, kita dapat mengatakan dasbor saja simpan Dev
+
+00:04:28.810 --> 00:04:40.160
+dan di dalam sini kita akan menginstal apa Pak server kematian paket web sehingga kita benar-benar
+
+00:04:40.160 --> 00:04:44.610
+dapat menguji proyek kami secara lokal.
+
+00:04:44.690 --> 00:04:46.460
+Dan akhirnya
+
+00:04:49.650 --> 00:04:53.960
+paket web CLIA mari kita instal ini.
+
+00:04:54.090 --> 00:05:01.230
+Dan saat ini sedang menginstal saya ingin memperingatkan Anda dengan video ini jika Anda tidak terbiasa basah
+
+00:05:01.230 --> 00:05:05.040
+kembali Anda akan merasa sedikit apa kata di sini.
+
+00:05:05.130 --> 00:05:10.170
+Sedikit lelah dari semua paket kita akan menginstal semua pengaturan.
+
+00:05:10.200 --> 00:05:14.260
+Ini benar-benar luar biasa ketika Anda pertama kali memulai.
+
+00:05:14.510 --> 00:05:21.020
+Dan inilah tepatnya alasan buat reaksi ada karena pengaturan ini dan konfigurasi semuanya dan memastikan semuanya
+
+00:05:21.020 --> 00:05:24.680
+up to date adalah tugas besar yang besar.
+
+00:05:24.830 --> 00:05:31.100
+Jadi tonton video ini bukan karena Anda harus tahu segalanya dan jika Anda tidak mengerti semuanya maka Anda
+
+00:05:31.100 --> 00:05:32.030
+bisa melanjutkan.
+
+00:05:32.030 --> 00:05:37.780
+Tontonlah sebagai cara untuk memahami sedikit tentang apa yang terjadi di balik tudung reaksi create.
+
+00:05:37.880 --> 00:05:44.240
+Tetapi seperti yang saya katakan sebelumnya perlu diingat bahwa konfigurasi selalu berubah sehingga ketika tiba saatnya bagi Anda untuk
+
+00:05:44.300 --> 00:05:48.620
+mengimplementasikan kembali, mereka memiliki dokumentasi online yang bagus yang dapat ia gunakan.
+
+00:05:48.740 --> 00:05:52.200
+Tetapi untuk sekarang pahami saja mengapa.
+
+00:05:52.280 --> 00:05:55.960
+Tidak setiap detail seperti yang selalu saya katakan.
+
+00:05:55.960 --> 00:06:00.090
+Baiklah sekarang kita sudah menginstal ini. Mari kita selesaikan ini.
+
+00:06:00.650 --> 00:06:06.560
+Dan hal pertama yang ingin kita lakukan adalah masuk ke file Jaisalmer paket
+
+00:06:07.100 --> 00:06:12.800
+kami dan dalam tahun script kita akan mengubah tes untuk memulai.
+
+00:06:13.070 --> 00:06:14.640
+Dan kita akan mengatakan itu.
+
+00:06:14.750 --> 00:06:17.790
+Biarkan saya membuat ini lebih kecil sehingga kita bisa melihat.
+
+00:06:18.080 --> 00:06:23.910
+Kami ingin menghapus teks tiruan ini yang mereka miliki dan kami akan taruh di sini.
+
+00:06:24.010 --> 00:06:34.660
+Das dev server dasbor ruang konfigurasi dasbor dan file yang belum kita miliki yang akan kita bangun.
+
+00:06:34.730 --> 00:06:38.060
+Ini akan disebut paket web Daut config dot.
+
+00:06:38.140 --> 00:06:46.590
+J. S. dan kemudian dasbor homeboy pengembangan mode dasbor.
+
+00:06:46.690 --> 00:06:48.390
+Biarkan saya membuat ini sedikit lebih kecil.
+
+00:06:49.760 --> 00:06:50.390
+Baiklah.
+
+00:06:50.490 --> 00:06:54.550
+Itu banyak, izinkan saya menjelaskan apa yang terjadi di sini.
+
+00:06:54.690 --> 00:07:02.430
+Script di sini mendefinisikan bahwa Anda ingin menggunakan server paket basah dengan file konfigurasi yang disebut
+
+00:07:02.600 --> 00:07:10.380
+dodginess konfigurasi penuh yang akan kita buat dan pelepasan mode dasbor dasbor sebenarnya adalah fitur baru yang
+
+00:07:10.380 --> 00:07:15.270
+datang dengan kembali empat yang sebelumnya baru-baru ini dirilis.
+
+00:07:15.270 --> 00:07:23.310
+Dan ini hanya menambah default untuk konfigurasi paket web yang datang dengan get baru sebelum kita benar-benar dengan
+
+00:07:23.310 --> 00:07:26.580
+satu dua dan tiga versi belakang.
+
+00:07:26.580 --> 00:07:30.690
+Kami sekarang memiliki ini dan Anda harus melakukan lebih banyak pengaturan manual.
+
+00:07:30.930 --> 00:07:37.770
+Untungnya dengan versi 4 mereka telah menyadari bahwa orang tidak ingin melakukan semuanya dengan tangan sehingga mereka memiliki
+
+00:07:37.770 --> 00:07:44.550
+beberapa tanggal default yang bagus sehingga mereka memiliki satu untuk produksi juga yang sangat sangat membantu.
+
+00:07:44.550 --> 00:07:47.550
+Baiklah jadi sekarang kita sudah menyiapkan ini, mari kita simpan ini.
+
+00:07:47.550 --> 00:07:53.400
+Dan di dalam terminal kami, saya akan membuat file konfigurasi ini.
+
+00:07:53.490 --> 00:08:04.430
+Jadi kita akan mengatakan sentuh paket basah dot config dodginess dan kita lihat di sini bahwa kita memiliki apa backdoor config dodgiest dan
+
+00:08:04.430 --> 00:08:07.540
+saya memiliki plug kecil yang bagus.
+
+00:08:07.540 --> 00:08:09.850
+Itu memberi saya simbol di sini.
+
+00:08:09.850 --> 00:08:11.080
+Sangat keren.
+
+00:08:11.080 --> 00:08:16.090
+Baiklah sekarang mari kita pergi ke file ini karena kita benar-benar dapat melakukan apa pun.
+
+00:08:16.090 --> 00:08:20.760
+Kita akan pergi ke file dan kita akan menambahkan konfigurasi paket web.
+
+00:08:21.280 --> 00:08:24.580
+Dan di sinilah sebagian besar keajaiban dikemas dengan baik terjadi.
+
+00:08:25.710 --> 00:08:35.910
+Kami di sini hal pertama yang ingin kami lakukan adalah mengatakan ekspor modul datt.
+
+00:08:36.100 --> 00:08:40.150
+Dan kemudian ada tiga hal utama yang ingin kita tambahkan ke ekspor.
+
+00:08:40.180 --> 00:08:50.440
+Salah satunya adalah entri yang mana kita ingin wetback mulai mencari melalui iman kita.
+
+00:08:50.610 --> 00:08:59.400
+Dalam kasus kami, entri ini akan menjadi file indeks js yang akan kita buat.
+
+00:08:59.480 --> 00:09:10.080
+Jadi katakanlah di folder sumber itu akan menjadi indeks dot J. S. file dan kemudian hal kedua kita
+
+00:09:10.500 --> 00:09:17.220
+akan mengatakan bahwa output yang dari server entri membaca semua file dan
+
+00:09:17.220 --> 00:09:25.700
+bundling semuanya dan semua output Anda memasukkannya ke lokasi ini dan kami dapat melakukannya hanya dengan
+
+00:09:25.700 --> 00:09:33.390
+mendefinisikan output dengan path dher yang merupakan nama direktori yang kami miliki saat ini.
+
+00:09:35.760 --> 00:09:39.340
+Dan gunakan d'Este atau folder distribusi kami.
+
+00:09:39.480 --> 00:09:45.530
+Tepat di sini dan kemudian kita juga akan memiliki publik dan Plath
+
+00:09:49.810 --> 00:09:55.930
+publik ini akan menjadi seperti ini karena ini hanya rel Anda ke direktori
+
+00:09:55.930 --> 00:09:59.040
+output diselesaikan relatif terhadap usia kepadanya.
+
+00:09:59.060 --> 00:10:04.840
+Saya akan halaman lagi dan membaca lebih lanjut tentang ini di halaman dokumentasi mereka.
+
+00:10:04.840 --> 00:10:08.760
+Dan akhirnya kami ingin output menjadi file bundel.
+
+00:10:08.770 --> 00:10:16.900
+Jadi kami ingin mengatakan bahwa nama file akan menjadi Bondel God ya.
+
+00:10:18.010 --> 00:10:18.730
+Luar biasa.
+
+00:10:18.820 --> 00:10:23.890
+Dan hal terakhir adalah sesuatu yang disebut server dev.
+
+00:10:23.890 --> 00:10:31.230
+Jadi ini adalah saat kami ingin menjalankan sementara kami bekerja di
+
+00:10:31.240 --> 00:10:40.890
+situs Web kami secara lokal dan server def akan memiliki basis konten dengan folder distribusi.
+
+00:10:40.910 --> 00:10:43.740
+Jadi ini memberi tahu kami server tempat melayani konten.
+
+00:10:43.880 --> 00:10:50.410
+Jadi dari folder distribusi ketika kita bekerja di lingkungan lokal kita.
+
+00:10:50.480 --> 00:10:50.990
+Baiklah.
+
+00:10:51.020 --> 00:10:59.330
+Meskipun ada banyak tetapi secara keseluruhan gambaran besarnya adalah ada entri di sana dan ada output dan kami juga memberi
+
+00:10:59.330 --> 00:11:05.330
+tahu def server di mana mencarinya sehingga menampilkan situs web untuk kami ketika kami sedang
+
+00:11:05.330 --> 00:11:06.080
+mengerjakannya.
+
+00:11:06.080 --> 00:11:12.800
+Jadi sekali lagi kami hanya mengatakan kami ingin menggunakan file indeks sumber digest sebagai titik masuk untuk
+
+00:11:12.890 --> 00:11:14.900
+menggabungkan semua file penting ini.
+
+00:11:15.110 --> 00:11:20.370
+Kita perlu Bondel mati ya jadi kita akan pergi melalui indeks semuanya ya.
+
+00:11:20.420 --> 00:11:22.900
+Apa pun yang diimpor lewat sana.
+
+00:11:23.060 --> 00:11:27.060
+Kami akan mengkompilasi dan meludahkannya ke dalam anggaran yang dibundel.
+
+00:11:27.090 --> 00:11:27.760
+Iya nih.
+
+00:11:28.130 --> 00:11:35.810
+Dan kemudian kita akan menghasilkan sudah mengatur folder ini sebagai titik melayani dengan indeks bukan file
+
+00:11:35.920 --> 00:11:38.280
+waria untuk aplikasi kita.
+
+00:11:38.510 --> 00:11:41.600
+Jadi kita kehilangan folder sumber di sini, jadi mari kita lakukan itu.
+
+00:11:41.600 --> 00:11:49.530
+Saya akan membuat sumber Anda sehingga kami memiliki folder sumber berita dan di sini
+
+00:11:49.530 --> 00:11:58.520
+kita bisa masuk ke folder sumber dan membuat file indeks yang kami miliki di konfigurasi paket basah kami.
+
+00:11:59.460 --> 00:12:00.480
+Ayo kembali.
+
+00:12:01.540 --> 00:12:13.140
+Dan hanya untuk bersenang-senang dalam indeks Jasc katakan saja log dog console dan saya akan mengatakan apa pak Wizards.
+
+00:12:13.330 --> 00:12:14.530
+Hal yang sangat menarik.
+
+00:12:14.530 --> 00:12:15.210
+Baiklah.
+
+00:12:15.430 --> 00:12:17.700
+Mari jalankan NPM mulai dan lihat apa yang terjadi.
+
+00:12:18.040 --> 00:12:25.770
+Saya akan mengatakan NPM mulai karena jika Anda ingat pergi ke Pakistan pada file, kami memiliki perintah ini paket server DEP
+
+00:12:25.780 --> 00:12:27.710
+yang akan kami jalankan.
+
+00:12:28.080 --> 00:12:33.300
+Jadi saya akan mengatakan mulai NPM.
+
+00:12:33.350 --> 00:12:40.590
+Baiklah jadi kami mendapatkan beberapa output di sini, tetapi di bagian bawah Anda akan melihat bahwa kami telah berhasil dikompilasi.
+
+00:12:40.700 --> 00:12:46.880
+Dan jika kita gulir ke atas kita melihat bahwa proyek ini menjalankan localhost lokal yang menyebalkan.
+
+00:12:46.940 --> 00:12:48.290
+Jadi mari kita lakukan itu.
+
+00:12:48.290 --> 00:12:50.930
+Mari kita pergi ke host lokal di sini.
+
+00:12:51.770 --> 00:12:55.110
+Dan lakukan 80.
+
+00:12:55.130 --> 00:12:55.360
+Baiklah.
+
+00:12:55.370 --> 00:13:02.810
+Dan kami memiliki apa yang PAC wizard di konsol yang berfungsi tidak
+
+00:13:02.810 --> 00:13:13.110
+ada yang ditampilkan pada halaman karena halaman e-mail kami tidak benar-benar memiliki apa pun yang kami inginkan.
+
+00:13:13.120 --> 00:13:15.720
+yakin itu berhasil.
+
+00:13:18.170 --> 00:13:19.320
+Dan jika kita menyegarkan.
+
+00:13:19.370 --> 00:13:20.060
+Ini dia.
+
+00:13:20.120 --> 00:13:24.870
+Kami memiliki apa yang kembali dengan penyihir paket basah bekerja.
+
+00:13:24.950 --> 00:13:25.880
+Sangat keren.
+
+00:13:26.590 --> 00:13:38.810
+Jadi sekali lagi kita melihat bahwa kontennya adalah Sam dari folder dist dan bahwa waktu kita membangun semuanya begitu
+
+00:13:38.810 --> 00:13:40.040
+bundel.
+
+00:13:40.040 --> 00:13:49.550
+Butuh 337 mili detik dan bahwa kita memiliki Bondel DOD J. S. file yang kami buat itu
+
+00:13:49.610 --> 00:13:54.910
+cukup kecil dengan hanya 300 kilobyte sangat sangat keren.
+
+00:13:54.920 --> 00:13:55.170
+Baiklah.
+
+00:13:55.190 --> 00:13:58.640
+Sekarang mari kita sedikit lebih jauh ke dalam topik di sini
+
+00:13:59.570 --> 00:14:07.920
+Kita juga membutuhkan sesuatu yang disebut Bible Bible memungkinkan kita untuk menulis kode kita dalam enam atau tujuh atau delapan.
+
+00:14:08.060 --> 00:14:15.950
+Dan dengan Alkitab kode ini akan dipindahkan atau diubah kembali ke ya lima sehingga setiap peramban
+
+00:14:15.950 --> 00:14:22.900
+tanpa memiliki semua 6 fitur yang sudah diterapkan pada mereka masih dapat menafsirkannya.
+
+00:14:23.120 --> 00:14:28.050
+Jadi kami menulis sebagai pengembang di tahun 6 memasukkannya melalui baseball.
+
+00:14:28.070 --> 00:14:34.490
+Ini akan memuntahkan kode yang sama persis tetapi dengan E. S. Versi 5 sehingga semua browser
+
+00:14:34.520 --> 00:14:40.670
+tidak peduli berapa lama mereka masih dapat mengimplementasikannya sehingga kita masih dapat menggunakan hal-hal keren seperti fungsi Aero
+
+00:14:40.670 --> 00:14:45.890
+dan perusakan objek dan hal-hal keren lainnya yang kita juga dapat menguji fitur baru javascript yang
+
+00:14:45.890 --> 00:14:48.220
+akan datang yang bahkan belum telah diimplementasikan.
+
+00:14:48.260 --> 00:14:50.270
+Jadi mari kita mulai dengan itu.
+
+00:14:50.480 --> 00:14:54.470
+Mari kita mengatur bisbol ke proyek Roopak kami.
+
+00:14:54.600 --> 00:15:06.400
+Saya akan menutup ini dan menghapus dan saya akan mengatakan NPM menginstal lagi kita hanya akan mengatakan save def karena kita hanya melakukan ini di
+
+00:15:06.400 --> 00:15:10.450
+sisi tuli ketika kita benar-benar mengeluarkannya ke publik.
+
+00:15:10.460 --> 00:15:17.700
+Kami tidak memerlukan tabel karena kami melakukan ini sebelum meletakkan file ke server.
+
+00:15:17.750 --> 00:15:27.650
+Jadi katakan saja di sini kita akan membutuhkan sesuatu yang disebut celoteh inti Whoops yang merupakan paket kabel
+
+00:15:27.650 --> 00:15:28.670
+utama.
+
+00:15:28.820 --> 00:15:35.910
+Kami membutuhkan sesuatu yang disebut Babel Lowder dan Lowder adalah sesuatu yang digunakan di Westpac.
+
+00:15:36.020 --> 00:15:38.010
+Ini mengkompilasi kode.
+
+00:15:38.010 --> 00:15:45.320
+Jadi Babel loader dalam paket basah bekerja javascript Sutekh dan
+
+00:15:45.320 --> 00:15:53.050
+membawanya melalui kompiler Babel dan kemudian kita perlu sesuatu panggilan meja dan.
+
+00:15:53.520 --> 00:16:01.890
+Dan ini adalah paket keren yang dilakukannya adalah memeriksa peramban apa pun yang kami jalankan dan berdasarkan
+
+00:16:01.890 --> 00:16:09.330
+pada versi peramban itu dan berapa usianya ia akan tahu persis fitur apa yang belum
+
+00:16:09.330 --> 00:16:15.140
+mereka implementasikan di peramban dan membuatnya perubahan ke S-5 untuk browser.
+
+00:16:15.210 --> 00:16:20.190
+Jadi cukup pintar untuk mendeteksi browser dan hanya mengubah sedikit kode yang tidak dimengerti
+
+00:16:20.190 --> 00:16:20.940
+oleh browser.
+
+00:16:20.940 --> 00:16:23.840
+Baiklah sangat keren jadi mari kita instal itu.
+
+00:16:23.940 --> 00:16:24.220
+Baiklah.
+
+00:16:24.230 --> 00:16:26.410
+Luar biasa jadi kami telah menginstal babbel.
+
+00:16:26.540 --> 00:16:33.680
+Tetapi juga kita mungkin ingin menggunakan beberapa fitur eksperimental javascript yang dapat diaktifkan melalui
+
+00:16:33.950 --> 00:16:36.180
+sesuatu yang disebut tahapan.
+
+00:16:36.230 --> 00:16:37.460
+Jadi apa artinya itu.
+
+00:16:37.460 --> 00:16:45.600
+Nah, jika kita pergi ke situs web Babel dan mari kita tutup ini untuk sekarang kita melihat
+
+00:16:45.780 --> 00:16:54.960
+bahwa kita memiliki tahapan preset yang berbeda dan ini adalah hal-hal dalam javascript yang diusulkan yang mungkin atau mungkin tidak diimplementasikan.
+
+00:16:54.960 --> 00:17:00.470
+Tetapi jika Anda benar-benar bersemangat, Anda dapat mulai menggunakannya dengan menggunakan tahap yang telah ditetapkan.
+
+00:17:00.810 --> 00:17:06.450
+Dan lagi karena babbel transport adalah kode yang berarti kita dapat menulis apa pun
+
+00:17:06.450 --> 00:17:13.910
+yang kita inginkan dan selama celoteh AS memahaminya akan mengeluarkan versi dalam S-5 untuk kita sehingga semua browser memahaminya.
+
+00:17:14.190 --> 00:17:22.110
+Jadi untuk bersenang-senang sekarang katakanlah kita juga ingin menguji fitur javascript baru jadi kita akan
+
+00:17:22.110 --> 00:17:24.380
+mengatakan NPM install dan.
+
+00:17:24.580 --> 00:17:36.050
+Dan kita akan mengunduh paket yang sudah diatur oleh Babel sehingga kita dapat menginstalnya.
+
+00:17:36.320 --> 00:17:39.480
+Jadi sekarang kita memiliki semua paket ini. Bagaimana kita dapat menggunakannya.
+
+00:17:39.890 --> 00:17:53.160
+Baik kita masuk ke Jaison yang sudah dikemas dan kemudian di sini kita bisa menambahkan properti kabel dan di sini kita bisa mengatakan
+
+00:17:53.160 --> 00:17:56.360
+itu dan pastikan kita menambahkan
+
+00:18:00.150 --> 00:18:08.390
+koma pra-set yang mengapa kita baru saja mengunduh kita akan memiliki tiga dari mereka.
+
+00:18:08.530 --> 00:18:10.110
+Jadi mari kita kembali ke sini.
+
+00:18:10.120 --> 00:18:11.650
+Harus berupa array.
+
+00:18:11.950 --> 00:18:16.770
+Dan di dalam sini kita akan mengatakan bahwa kita memiliki preset.
+
+00:18:16.900 --> 00:18:24.820
+Kami juga akan menggunakan panggung untuk mengatur Anda tahu apa.
+
+00:18:24.830 --> 00:18:26.150
+Mari kita tambahkan satu lagi.
+
+00:18:26.150 --> 00:18:33.030
+Sekali lagi jika kita ingin menggunakan reaksi dalam aplikasi kita, kita juga menginginkan preset aksi ulang.
+
+00:18:33.050 --> 00:18:41.660
+Jadi sekali lagi di sini kita bisa menginstal NPM dan alih-alih tahap precess ke apa pun yang kita hanya Scott akan
+
+00:18:41.660 --> 00:18:45.440
+mengatakan bahwa akan mendapatkan reaksi yang telah ditetapkan.
+
+00:18:45.460 --> 00:18:51.360
+Jadi ada satu ton yang bisa Anda gunakan.
+
+00:18:51.650 --> 00:18:54.430
+Dan sekarang kita akan memiliki ini tersedia untuk kita juga.
+
+00:18:55.310 --> 00:19:02.000
+Yang terakhir ini adalah bagi kita untuk dapat mengubah file GSX yang kadang-kadang datang secara alami dengan bereaksi
+
+00:19:02.240 --> 00:19:06.200
+terhadap file Jeff sehingga lebih demi kenyamanan daripada apa pun.
+
+00:19:06.200 --> 00:19:10.040
+Biarkan saya menghapus ini dan ya kita bisa memuatnya kembali.
+
+00:19:10.350 --> 00:19:12.990
+Oh dan saya lupa menyimpannya jadi mari kita kembali ke sini.
+
+00:19:13.230 --> 00:19:15.600
+Saya akan menyalin ini.
+
+00:19:15.600 --> 00:19:18.100
+Dan lagi kita hanya akan meletakkannya di sini.
+
+00:19:18.140 --> 00:19:22.260
+Pengaturan bisbol kami dan pastikan kami menghematnya kali ini.
+
+00:19:23.600 --> 00:19:30.110
+Baiklah jadi sekarang kita bisa kembali ke halaman konfigurasi kita dan kita bisa mengatakannya dengan baik kepada mereka juga
+
+00:19:30.110 --> 00:19:32.450
+menggunakan bisbol ketika pergi dengan entri.
+
+00:19:32.450 --> 00:19:38.650
+Dan sebelum Anda memasukkan semuanya, pasanglah melalui baseball dan Jaspal, segala sesuatu yang sangat mudah dilakukan.
+
+00:19:38.690 --> 00:19:44.390
+Kita dapat menambahkan modul di sini untuk menentukan apa yang harus dilakukan dengan modul kita.
+
+00:19:44.480 --> 00:19:47.830
+Dan di sini kita hanya perlu menyebutkan beberapa hal.
+
+00:19:47.840 --> 00:19:49.870
+Jadi yang pertama adalah aturan.
+
+00:19:49.970 --> 00:19:52.450
+Jadi aturan apa yang perlu kita ikuti.
+
+00:19:52.550 --> 00:19:57.630
+Jadi aturannya adalah untuk menguji.
+
+00:19:58.060 --> 00:20:01.280
+Jadi itu untuk mencari file.
+
+00:20:02.380 --> 00:20:06.790
+Dan kita akan menggunakan beberapa ekspresi penolakan di sini
+
+00:20:09.980 --> 00:20:16.810
+yang merupakan javascript atau menggunakan tanda kurung di sini yang merupakan file javascript atau GSX.
+
+00:20:16.850 --> 00:20:20.460
+Jadi itu default re-act false.
+
+00:20:20.610 --> 00:20:25.080
+Dan omong-omong Anda bisa melihat sintaks ini regex dan Anda bisa belajar tentang
+
+00:20:25.080 --> 00:20:31.590
+sintaks tapi kami cukup banyak mengatakan apa pun yang cocok dengan dodgiest atau dot GSX Jadi cukup banyak javascript.
+
+00:20:31.590 --> 00:20:40.280
+Kami ingin menggunakan Babel loader di atasnya.
+
+00:20:40.370 --> 00:20:42.580
+Jadi jalankan melalui Babel.
+
+00:20:42.590 --> 00:20:47.210
+Sekarang kami jelas tidak ingin melakukan ini dengan modul tanpa kami sehingga Anda dapat melihat folder modul yang dikenal.
+
+00:20:47.210 --> 00:20:52.940
+Ada banyak tapi itu semua file itu adalah pihak ketiga
+
+00:20:53.180 --> 00:21:02.070
+dan kami tidak tertarik pada mereka jadi saya bisa mengatakan kecualikan dan kami akan mengecualikan modul yang dikenal.
+
+00:21:02.080 --> 00:21:02.350
+Baiklah.
+
+00:21:02.350 --> 00:21:03.070
+Sempurna.
+
+00:21:03.340 --> 00:21:10.860
+Dan hal lain yang juga ingin saya lakukan adalah saya ingin menggunakan tekad dan ini adalah sesuatu yang mungkin Anda perhatikan
+
+00:21:10.860 --> 00:21:16.370
+ketika kami sedang bekerja dengan membuat kembali bertindak ketika kami memasukkan file file komponen.
+
+00:21:16.380 --> 00:21:23.280
+Kami tidak pernah menempatkan Ya yang cerdik pada akhirnya karena buat bereaksi secara otomatis tahu bahwa itu Javascript.
+
+00:21:23.280 --> 00:21:26.480
+Jadi ini dilakukan dengan menggunakan sesuatu yang disebut tekad.
+
+00:21:26.520 --> 00:21:29.140
+Dan kita bisa mengatakan itu dengan tekad.
+
+00:21:29.370 --> 00:21:31.110
+Kami ingin ekstensi
+
+00:21:36.380 --> 00:21:44.860
+J kita dan GSX dibiarkan dan anggap saja itu akan menjadi javascript atau hanya File X.
+
+00:21:45.040 --> 00:21:51.820
+Jadi kita tidak perlu melakukan dodgiest ketika mengimpor di bagian atas file yang bagus dan bagus.
+
+00:21:51.820 --> 00:21:54.550
+Baiklah jadi mari kita simpan itu dan.
+
+00:21:54.730 --> 00:21:55.300
+Baiklah.
+
+00:21:55.330 --> 00:22:01.150
+Kami belum selesai karena katakanlah ini adalah aplikasi reaktor, kami membutuhkan beberapa paket untuk bereaksi.
+
+00:22:01.240 --> 00:22:07.180
+Tapi yang ini kita sudah tahu kita bisa melakukan instalasi NPM dan kali ini angsa akan diselamatkan
+
+00:22:07.750 --> 00:22:11.140
+bukan untuk DAPH tetapi ketergantungan aktual mereka dari proyek.
+
+00:22:11.140 --> 00:22:22.190
+Jadi kita tidak perlu melakukan dasbor, simpan dev, kita bisa mengatakan kita ingin menginstal bereaksi dan bereaksi dong.
+
+00:22:22.560 --> 00:22:25.210
+Dan saya tidak bisa mengeja Mari kita coba lagi.
+
+00:22:25.370 --> 00:22:26.120
+Reaksi.
+
+00:22:27.820 --> 00:22:28.120
+Baiklah.
+
+00:22:28.120 --> 00:22:28.560
+Luar biasa.
+
+00:22:28.570 --> 00:22:29.990
+Kami punya reaksi.
+
+00:22:29.990 --> 00:22:31.000
+Stahl Bagus sekali.
+
+00:22:31.000 --> 00:22:37.030
+Kami semakin dekat dan lebih dekat ke bagaimana membuat reaksi bekerja di bawah tenda.
+
+00:22:37.030 --> 00:22:37.480
+Itu bagus.
+
+00:22:37.480 --> 00:22:43.820
+Jadi sekarang kita menggunakan reaksi dan semua kebaikan GSX ke file kita.
+
+00:22:44.140 --> 00:22:52.090
+Tetapi hal lain yang mungkin Anda ingat adalah bahwa kami dapat menggunakan sesuatu yang disebut Ya lint atau setiap kali kami memberi
+
+00:22:52.090 --> 00:22:57.360
+peringkat kami bereaksi kapan saja kami memiliki kesalahan sintaksis atau sesuatu seperti itu.
+
+00:22:57.370 --> 00:23:02.760
+Ini ditampilkan di terminal kami yang sangat sangat membantu.
+
+00:23:03.620 --> 00:23:09.020
+Dan mereka menggunakan sesuatu yang disebut E. S. lint yang pinjaman yang memeriksa sintaks Anda
+
+00:23:09.020 --> 00:23:09.860
+memastikan semuanya memeriksa.
+
+00:23:09.860 --> 00:23:11.430
+Anggap saja sebagai pemeriksa ejaan.
+
+00:23:12.200 --> 00:23:19.430
+Dan itu memungkinkan Anda untuk menjaga javascript dan kode reac yang konsisten dalam proyek Anda dan hampir
+
+00:23:19.760 --> 00:23:28.250
+semua perusahaan yang Anda gunakan menggunakan semacam Lanting sehingga untuk melakukan ini izinkan saya menghapus ini terlebih dahulu lagi karena Anda
+
+00:23:28.250 --> 00:23:30.390
+dapat membayangkan kita menginstal Muhl.
+
+00:23:30.420 --> 00:23:31.150
+Morse.
+
+00:23:31.340 --> 00:23:32.840
+Sekali lagi ini sedikit sakit kepala.
+
+00:23:32.840 --> 00:23:36.510
+Saya tahu karena ini hanya untuk tujuan pengembangan.
+
+00:23:36.620 --> 00:23:44.990
+Akan mengatakan save def dan kita akan menginstal paket Slint.
+
+00:23:45.380 --> 00:23:51.200
+Dan saat ini sedang dimuat, Anda mungkin telah menyadari untuk saat ini karena kami menggunakan paket
+
+00:23:51.200 --> 00:23:56.600
+web, kami membutuhkan sesuatu yang disebut loader yang membuat semua file melewati ini.
+
+00:23:56.600 --> 00:24:00.530
+Mereka pergi melalui babbel untuk membawanya ke iOS 5.
+
+00:24:00.530 --> 00:24:03.170
+Jadi ini kompatibel dengan semua browser.
+
+00:24:03.170 --> 00:24:07.790
+Tapi kami juga ingin melalui Slint untuk memeriksa kesalahan.
+
+00:24:07.790 --> 00:24:17.060
+Jadi sekali lagi kita membutuhkan sesuatu yang disebut Ya lint loader.
+
+00:24:17.100 --> 00:24:17.500
+Baiklah.
+
+00:24:17.580 --> 00:24:23.690
+Dan sekarang kita bisa menggunakan ini di konfigurasi kita untuk memastikan bahwa itu melewati Slint.
+
+00:24:23.820 --> 00:24:26.790
+Mari kita lakukan itu dengan menambahkan aturan lain di sini.
+
+00:24:26.880 --> 00:24:34.200
+Dan sebenarnya saya membuat kesalahan di sini ini harus menjadi objek karena kita bisa punya banyak aturan jadi mari kita
+
+00:24:35.420 --> 00:24:36.830
+letakkan di sana.
+
+00:24:36.980 --> 00:24:43.740
+Dan Angsa berikutnya Dan kita akan mengatakan bahwa di sini kita akan melakukan hal yang sama.
+
+00:24:43.740 --> 00:24:53.460
+Kami akan menyalin properti ini kecuali kali ini kami ingin menggunakan Slint loader lagi melalui file
+
+00:24:53.460 --> 00:24:55.130
+javascript kami.
+
+00:24:55.170 --> 00:24:58.980
+Jadi mari kita mulai aplikasi kita dan lihat apakah ini berfungsi.
+
+00:24:59.040 --> 00:25:03.180
+Saya agak pergi tanpa memeriksa pekerjaan saya sehingga kami akan melihat apakah saya membuat kesalahan di sini.
+
+00:25:03.260 --> 00:25:04.950
+Saya akan menjalankan start NPM dan saya
+
+00:25:10.000 --> 00:25:11.500
+mendapat sedikit kesalahan di sini.
+
+00:25:11.500 --> 00:25:17.540
+Jika kita gulir ke atas, Anda akan melihat bahwa saya membuat kesalahan kecil yang konyol di sini.
+
+00:25:17.590 --> 00:25:23.190
+Saya perlu koma setelah server kematian.
+
+00:25:23.190 --> 00:25:24.750
+Katakan saja dan mulai
+
+00:25:27.630 --> 00:25:29.360
+lagi dan kita punya yang lain.
+
+00:25:29.700 --> 00:25:32.390
+Saya penuh kesalahan hari ini.
+
+00:25:32.460 --> 00:25:33.090
+Ini dia.
+
+00:25:33.090 --> 00:25:35.730
+Koma lain yang saya lewatkan.
+
+00:25:40.110 --> 00:25:40.560
+Baiklah.
+
+00:25:40.560 --> 00:25:42.640
+Jadi kompilasi sekarang.
+
+00:25:42.900 --> 00:25:44.920
+Namun dikatakan gagal dikompilasi.
+
+00:25:44.920 --> 00:25:45.140
+Baiklah.
+
+00:25:45.150 --> 00:25:52.440
+Dan saya ingin menunjukkan kepada Anda sesuatu yang cukup rumit dengan paket dan mengapa begitu banyak orang merasa frustrasi dengan
+
+00:25:52.440 --> 00:25:53.200
+itu.
+
+00:25:53.310 --> 00:26:03.130
+Jadi saya sengaja membuat beberapa kesalahan di sini bahwa jika Anda melihat ke sini dengan baik itu tidak benar-benar jelas
+
+00:26:03.220 --> 00:26:05.020
+apa yang terjadi.
+
+00:26:05.050 --> 00:26:13.100
+Maksud saya, saya melihat bahwa saya tidak memiliki konfigurasi lahan ya tetapi ada juga semua hal lain yang terjadi di sini dan
+
+00:26:13.910 --> 00:26:16.090
+hanya mengatakan modul tidak ditemukan.
+
+00:26:17.100 --> 00:26:21.300
+Dan sekali lagi ini adalah salah satu hal di mana Anda benar-benar ingin memastikan bahwa
+
+00:26:21.540 --> 00:26:24.880
+sintaks yang Anda gunakan dalam paket basah dan thig benar-benar benar.
+
+00:26:24.900 --> 00:26:30.920
+Itu sebabnya melihat dokumentasi mereka dan memeriksa contoh mereka sangat penting.
+
+00:26:30.930 --> 00:26:40.290
+Sebagai contoh di sini kita benar-benar membutuhkan tekad di ekstensi untuk memiliki titik di depan dan
+
+00:26:40.620 --> 00:26:43.760
+kemudian dengan tes dengan penolakan.
+
+00:26:43.830 --> 00:26:50.080
+Sebenarnya kita tidak membutuhkan titik-titik karena kita memiliki bagian depan ini juga.
+
+00:26:50.990 --> 00:26:53.710
+Biarkan saya menyimpannya dan mari kita coba ini lagi.
+
+00:26:58.360 --> 00:27:04.660
+Baiklah saya masih mendapatkan beberapa kesalahan tetapi jika saya gulir ke atas saya tidak memiliki semua modulars itu
+
+00:27:05.170 --> 00:27:09.850
+dan sepertinya saya mendapatkan 1 kesalahan dari tidak ada konfigurasi Eastland ditemukan.
+
+00:27:09.940 --> 00:27:16.870
+Itu cukup standar. Ya Linta membutuhkan semacam konfigurasi, semacam aturan yang dapat kami
+
+00:27:16.880 --> 00:27:21.480
+katakan padanya, hei periksa jenis kesalahan ini.
+
+00:27:21.510 --> 00:27:23.370
+Lagi file konfigurasi lain.
+
+00:27:23.500 --> 00:27:28.000
+Saya bilang ini bisa menjadi sangat berbulu, tapi itu hanya cara kerjanya.
+
+00:27:28.000 --> 00:27:34.940
+Jadi dengan setiap kemiringannya sangat sederhana, kita hanya dapat membuat sesuatu yang disebut file rc sehingga kita dapat mengatakan sentuhan.
+
+00:27:34.990 --> 00:27:36.110
+Ya serat
+
+00:27:36.270 --> 00:27:46.330
+RC dan ini dilakukan di sini adalah menjadikannya file dot dan RC berarti bahwa ketika proyek dimulai itu akan
+
+00:27:46.780 --> 00:27:54.190
+membaca Slint RC dan mengatur setiap Slint sehingga aturan apa pun di sana itu
+
+00:27:54.190 --> 00:27:55.530
+akan instantiate.
+
+00:27:55.630 --> 00:28:01.220
+Sekarang saya bisa melakukan hal yang sama dengan bisbol juga daripada memasukkannya ke dalam paket.
+
+00:28:01.250 --> 00:28:09.380
+Jason seperti yang saya miliki di sini saya bisa saja mengambil semua ini dan membuat titik dot adalah Sharifah.
+
+00:28:09.730 --> 00:28:12.370
+Tetapi untuk saat ini kami dapat meninggalkannya untuk Anda.
+
+00:28:12.360 --> 00:28:13.170
+Slint.
+
+00:28:13.360 --> 00:28:15.410
+Mari kita buat file ramping baru.
+
+00:28:16.280 --> 00:28:22.940
+Dan untuk memulai di sini kita tidak perlu sesuatu yang gila kita akan membiarkannya kosong dan
+
+00:28:23.150 --> 00:28:26.930
+hanya menyimpan sintaks default dari mendefinisikan aturan seperti ini.
+
+00:28:27.200 --> 00:28:31.610
+Tapi membiarkan benda itu kosong akan menyelamatkan.
+
+00:28:31.880 --> 00:28:33.370
+Dan mari kita mulai lagi.
+
+00:28:37.300 --> 00:28:42.150
+Rahu semuanya sepertinya telah dimuat dan semuanya terlihat bagus.
+
+00:28:42.150 --> 00:28:48.130
+Sekali lagi kami memiliki host lokal kami 1881 yang mendistribusikan Facebook kami.
+
+00:28:48.250 --> 00:28:49.360
+Jadi mari kita periksa.
+
+00:28:50.920 --> 00:28:53.150
+Baiklah semuanya terlihat bagus.
+
+00:28:53.170 --> 00:28:54.330
+Abaikan 4 atau 4.
+
+00:28:54.320 --> 00:28:59.750
+Ini hanya Falvey penipu yang tidak perlu kita khawatirkan tetapi paket apa yang berfungsi.
+
+00:28:59.950 --> 00:29:08.110
+Dan jika kita pergi ke jaringan dan menyegarkan kita melihat bahwa kita mendapatkan file bundel dodgiest yang memiliki semua
+
+00:29:08.110 --> 00:29:13.770
+hal ekstra ini yang disertakan dengan paket basah untuk bekerja seperti yang dilakukannya.
+
+00:29:15.900 --> 00:29:22.320
+Di dalam sini kami memiliki log konsol kami yang memberi tahu kami untuk mencetak paket apa.
+
+00:29:22.360 --> 00:29:23.890
+Sangat keren.
+
+00:29:23.890 --> 00:29:24.750
+Baiklah.
+
+00:29:24.850 --> 00:29:28.470
+Apakah Anda sakit kepala karena semua ini.
+
+00:29:28.660 --> 00:29:31.050
+Karena kita punya satu hal lagi untuk ditambahkan.
+
+00:29:31.060 --> 00:29:34.170
+Anda lihat Anda harus menggunakan sesuatu yang disebut Babel.
+
+00:29:34.190 --> 00:29:36.250
+Ya lint di konfigurasi Anda.
+
+00:29:36.250 --> 00:29:38.410
+Jadi itu membatasi.
+
+00:29:38.410 --> 00:29:43.750
+Juga termasuk iOS 6 dan 7 dan iOS 8.
+
+00:29:43.750 --> 00:29:46.390
+Jadi sekali lagi kita sudah melakukan ini sebelumnya.
+
+00:29:46.480 --> 00:29:54.430
+Kita akan membersihkan di sini dan hanya menginstal NPM dan lagi menyimpan
+
+00:29:54.430 --> 00:30:02.210
+Dev dan kali ini kita akan melakukan keduanya ya biarkan.
+
+00:30:02.340 --> 00:30:08.220
+Dan lagi saya tidak bisa mengeja itu lagi enggak dengan sekarang.
+
+00:30:08.430 --> 00:30:20.490
+Dan lagi di sini sekarang bahwa saya sudah mengunduh ini saya dapat menggunakan properti lain yang disebut parser dan parser ini akan
+
+00:30:20.490 --> 00:30:26.050
+memiliki tabel E. S. serat
+
+00:30:26.140 --> 00:30:28.560
+Baiklah, mari kita simpan ini dan pastikan masih berfungsi
+
+00:30:28.570 --> 00:30:29.500
+NPM strt
+
+00:30:34.970 --> 00:30:38.560
+juga untuk undang-undang itu datang ke sini mari kita coba lagi.
+
+00:30:46.460 --> 00:30:52.790
+Dan semuanya bekerja tetapi sekarang kami memiliki Bible Slint juga.
+
+00:30:52.800 --> 00:31:01.360
+Mari kita coba sesuatu yang menyenangkan katakanlah saya ingin aturan no con untuk memiliki peringatan katakanlah itu dan saya akan
+
+00:31:05.100 --> 00:31:08.080
+menjalankan NPM mulai lagi.
+
+00:31:11.050 --> 00:31:12.190
+Lihat itu.
+
+00:31:12.190 --> 00:31:20.970
+Kami memiliki peringatan karena aturannya mengatakan bahwa kami tidak ingin ada pernyataan konsol dalam file javascript kami.
+
+00:31:21.160 --> 00:31:26.560
+Jadi jika saya pergi ke indeks menyarankan kami memiliki pernyataan kunci konsol yang kadang-kadang dalam produksi Anda tidak
+
+00:31:26.560 --> 00:31:31.480
+benar-benar ingin mungkin Anda tidak ingin keluar kesalahan apa pun yang Anda miliki kepada pengguna.
+
+00:31:31.480 --> 00:31:36.580
+Dan sekarang saya telah menambahkan aturan ini yang mengatakan beri saya peringatan jika ada konsol.
+
+00:31:36.580 --> 00:31:39.590
+Sangat keren juga bisa melakukan kesalahan.
+
+00:31:39.820 --> 00:31:48.970
+Dan jika saya mengudara dan memulainya lagi saya mendapatkan kesalahan karena menggunakan pernyataan kunci konsol.
+
+00:31:49.040 --> 00:31:49.580
+Sangat keren.
+
+00:31:49.580 --> 00:31:58.130
+Fungsionalitas yang mirip dengan apa yang kita miliki dan ciptakan bereaksi, tetapi sekarang kita juga memiliki kemampuan untuk meminjamkan ya enam
+
+00:31:58.220 --> 00:32:05.690
+fitur baru sekarang menambahkan aturan sendiri baris demi baris itu membosankan dan sebagai pengembang kita tidak ingin melakukan
+
+00:32:05.690 --> 00:32:08.230
+hal-hal yang telah dilakukan sebelumnya .
+
+00:32:08.570 --> 00:32:12.980
+Beruntung bagi kami Anda tidak harus menentukan aturan Anda sendiri setiap saat.
+
+00:32:12.980 --> 00:32:18.950
+Ada banyak rekomendasi di luar sana dan Anda sebenarnya sudah terbiasa untuk berakting menggunakan
+
+00:32:18.950 --> 00:32:25.320
+reaksi buat yang benar-benar bagus yang saya suka adalah panduan gaya Airbnb yang bersumber terbuka.
+
+00:32:25.320 --> 00:32:30.890
+Konfigurasi Eastlink dan cukup populer banyak proyek menggunakannya banyak proyek besar untuk
+
+00:32:30.890 --> 00:32:31.450
+menggunakannya
+
+00:32:31.490 --> 00:32:33.260
+Kita sebenarnya bisa menginstalnya.
+
+00:32:33.290 --> 00:32:43.760
+Jadi sekali lagi kembali ke konsol kami karena kami mengunduh semua yang dapat kami lakukan dan PM menginstal
+
+00:32:43.760 --> 00:32:48.030
+dasbor, simpan Dev dan kami ingin menginstal.
+
+00:32:48.030 --> 00:32:54.840
+Katakanlah BMB config ya dipinjamkan dan katakanlah kita ingin beberapa fitur
+
+00:32:58.600 --> 00:33:07.050
+lagi mungkin kita ingin memastikan bahwa dengan ya Slint pernyataan impor dan pernyataan
+
+00:33:07.050 --> 00:33:08.820
+ekspor berfungsi.
+
+00:33:08.940 --> 00:33:20.130
+Dalam hal ini kami akan mengurangi impor dan katakanlah kami juga ingin memastikan bahwa kami memiliki Lentini untuk memastikan bahwa kode
+
+00:33:20.390 --> 00:33:26.720
+memiliki aksesibilitas dalam pikiran yang diarahkan untuk orang-orang yang memiliki pembaca layar
+
+00:33:26.720 --> 00:33:33.290
+melihat halaman web sehingga dapat diakses oleh semua orang dan kita bisa
+
+00:33:33.290 --> 00:33:37.690
+menggunakan plug in yang ada ya Slint plug
+
+00:33:40.050 --> 00:33:43.590
+di GSX ally dan sebagainya.
+
+00:33:43.600 --> 00:33:53.250
+Jadi untuk mengetik dengan mikrofon di depan Anda bukan ide terbaik.
+
+00:33:53.300 --> 00:34:03.550
+Kami membuat kesalahan jenis lain di sini dan mari memperbaikinya sekarang sekarang Anda lihat di sini banyak plug-in dan
+
+00:34:03.550 --> 00:34:04.450
+konfigurasi.
+
+00:34:04.450 --> 00:34:10.510
+Dan untungnya bagi kita ada banyak alat di luar sana dan banyak dokumentasi tentang cara melakukan praktik
+
+00:34:10.510 --> 00:34:11.530
+terbaik ini.
+
+00:34:11.710 --> 00:34:18.220
+Tapi sekali lagi inilah yang terjadi di balik tenda dengan membuat Briac tap semua pengembang pintar
+
+00:34:18.220 --> 00:34:23.440
+ini bekerja untuk Anda untuk mengatur ini dengan cara terbaik untuk Anda.
+
+00:34:23.440 --> 00:34:27.460
+Baiklah jadi sekarang kita sudah memiliki ini mari kita tambahkan MBBS Len Twan hanya untuk sekarang.
+
+00:34:27.460 --> 00:34:36.150
+Saya tahu kami menginstal beberapa hal lagi tetapi untuk sekarang hanya tampilan FBM pada kita tidak bisa hanya mengatakan memperluas
+
+00:34:38.860 --> 00:34:44.370
+dan memperluas aturan apa pun yang kita miliki dengan array apa pun.
+
+00:34:44.530 --> 00:34:51.700
+Ya liberal. Kami telah mengunduh dalam kasus kami bahwa ini adalah aturan berbasis Airbnb.
+
+00:34:51.710 --> 00:34:56.430
+Sekali lagi ini adalah sesuatu yang dapat Anda baca ketika Anda mengunduh paket
+
+00:34:56.460 --> 00:35:00.840
+yang Anda kunjungi, dapatkan Hobb dan lihat Eastlink yang samar-samar menayangkan BMB.
+
+00:35:01.060 --> 00:35:02.790
+Saya menyelamatkan proses ini.
+
+00:35:02.800 --> 00:35:03.880
+NPM mulai
+
+00:35:08.880 --> 00:35:14.630
+dan Anda melihat bahwa karena kami telah memperpanjang peraturan kami, kami memiliki beberapa jam lagi.
+
+00:35:14.640 --> 00:35:21.720
+Kami memiliki pernyataan konsol tak terduga yang telah kami tambahkan tetapi kami juga memiliki udara titik koma yang hilang dan
+
+00:35:21.810 --> 00:35:24.670
+baris baru yang diperlukan di akhir file.
+
+00:35:25.050 --> 00:35:27.040
+Mari kita kembali ke indeks kita.
+
+00:35:27.060 --> 00:35:34.230
+Yesus memiliki titik koma dan baris baru di akhir file, simpan dan lihat bahwa secara otomatis pembaruan
+
+00:35:34.230 --> 00:35:40.890
+itu hanya menjadi satu kesalahan yang kami buat yang merupakan pernyataan kunci konsol tetapi semuanya
+
+00:35:40.890 --> 00:35:41.590
+berfungsi.
+
+00:35:41.610 --> 00:35:43.730
+Abaikan beberapa hal ini.
+
+00:35:43.960 --> 00:35:55.840
+Jika saya menyegarkan kami mendapatkan semuanya tetapi kami mendapatkan kesalahan dari pernyataan kunci konsol yang kami katakan sebelumnya.
+
+00:35:55.870 --> 00:35:56.880
+Baiklah.
+
+00:35:57.220 --> 00:35:59.970
+Mari kita kembali ke konfigurasi paket Web kami.
+
+00:36:00.800 --> 00:36:02.210
+Apa yang telah kita pelajari di sini.
+
+00:36:02.210 --> 00:36:06.910
+Yah kami belajar bahwa web back cukup rumit.
+
+00:36:07.100 --> 00:36:12.340
+Untungnya mereka memiliki dokumentasi online yang sangat bagus yang dapat Anda baca.
+
+00:36:12.590 --> 00:36:14.930
+Tetapi prinsip-prinsip utama tetap berlaku.
+
+00:36:14.930 --> 00:36:24.010
+Yang kami lakukan hanyalah membuat kepala pelayan yang mengambil semua file kami dalam indeks kasus kami.
+
+00:36:24.120 --> 00:36:29.850
+Ya jika RJ yang diindeks telah memiliki pernyataan impor yang mengarah ke file lain dan file itu telah mendukungnya dan melihat
+
+00:36:29.850 --> 00:36:31.240
+mengarah ke file lain.
+
+00:36:31.400 --> 00:36:39.790
+Yah itu akan membaca semua dari mereka melalui entri yang kami berikan itu kemudian akan berjalan melalui modul-modul dan menguji apakah ada di
+
+00:36:39.790 --> 00:36:45.450
+antara mereka berakhir di J. S. atau ekstensi GSX.
+
+00:36:45.460 --> 00:36:49.100
+Kita akan menjalankannya melalui Babel dan kemudian kita juga akan menghubungkan mereka juga.
+
+00:36:50.080 --> 00:36:58.990
+Dan akhirnya kita akan meletakkan itu ke folder distribusi dan untuk VOLP atau tujuan kita juga dapat memiliki server
+
+00:36:58.990 --> 00:37:06.970
+berjalan seperti yang kita miliki di sini dan itu selalu memeriksa untuk memastikan bahwa situs web kita
+
+00:37:06.970 --> 00:37:08.200
+bebas serat.
+
+00:37:08.200 --> 00:37:10.240
+Saya pikir itu cukup cadangan untuk saat ini.
+
+00:37:10.390 --> 00:37:12.430
+Kita semua perlu istirahat setelah ini.
+
+00:37:12.430 --> 00:37:13.960
+Semoga Anda bersenang-senang.
+
+00:37:13.960 --> 00:37:19.050
+Saya pikir ini mungkin bagian tersulit dari kursus untuk benar-benar didapatkan.
+
+00:37:19.090 --> 00:37:25.900
+Saya pribadi hal bahwa konfigurasi seperti ini di masa depan akan menjadi kurang dan kurang penting ketika komunitas
+
+00:37:25.900 --> 00:37:30.670
+bergerak ke arah konfigurasi yang semakin sedikit karena seperti yang Anda lihat
+
+00:37:30.670 --> 00:37:37.330
+itu banyak sakit kepala dan Anda benar-benar coding Anda hanya mengikuti dokumentasi perpustakaan yang secara pribadi saya
+
+00:37:37.330 --> 00:37:39.720
+bukan penggemar terbesar tetapi terserah Anda.
+
+00:37:39.720 --> 00:37:41.930
+Itu masih alat yang berguna.
+
+00:37:41.950 --> 00:37:47.900
+Rekomendasi saya menggunakan buat aplikasi aksi ulang jika Anda perlu menyesuaikan kembali.
+
+00:37:47.920 --> 00:37:55.410
+Anda dapat menjalankan NPM run eject dan membuat aksi ulang dan mereka akan memberi Anda akses ke file konfigurasi paket web ini.
+
+00:37:55.540 --> 00:38:00.670
+Untuk saat ini saya perlu istirahat dan begitu juga Anda melihat yang berikutnya Buh-Bye.

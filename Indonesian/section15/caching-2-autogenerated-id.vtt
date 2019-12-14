@@ -1,0 +1,292 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:07.220
+Teman-teman robo kami, kami telah melewatkannya, bukan kami, kami belum melihat teman-teman robo kami dalam
+
+00:00:07.220 --> 00:00:13.010
+waktu yang lama, tetapi saya ingin menunjukkan beberapa hal caching terjadi di belakang layar dengan teman-teman karet.
+
+00:00:13.130 --> 00:00:19.700
+Jika saya membuka alat pengembang, ingat bagaimana saya mengatakan bahwa sisi klien atau browser memiliki banyak
+
+00:00:19.730 --> 00:00:24.930
+mekanisme caching untuk memastikan bahwa aplikasi teman-teman robo kami secepat mungkin.
+
+00:00:26.370 --> 00:00:29.620
+Baik jika saya menyegarkan.
+
+00:00:29.860 --> 00:00:37.090
+Saya mendapatkan semua permintaan ini tetapi periksa tab ukuran untuk membuatnya sedikit lebih besar.
+
+00:00:37.930 --> 00:00:46.830
+Kami melihat bahwa dikatakan bahwa HMO kami menyimpan file CSSA kami dan file javascript kami berasal dari pekerja layanan.
+
+00:00:46.860 --> 00:00:53.390
+Tidak ada ukuran yang terkait dengannya karena ini di-cache oleh pekerja layanan.
+
+00:00:53.440 --> 00:01:01.630
+Ingat bagaimana pekerja layanan adalah sesuatu yang memungkinkan kita untuk mencegat permintaan SCDP dan itu akan memeriksa cache dan mengatakan
+
+00:01:01.630 --> 00:01:06.850
+hei apakah saya sudah memiliki ini apakah saya sudah memiliki CSSA apakah saya
+
+00:01:07.120 --> 00:01:11.570
+sudah memiliki javascript dan hanya mengembalikannya tanpa benar-benar memukul server.
+
+00:01:12.480 --> 00:01:14.400
+Ya itu yang benar.
+
+00:01:14.460 --> 00:01:22.250
+Jika kita kembali ke tab aplikasi, kita melihat bahwa oh yeah, kita memiliki cache yang disediakan oleh browser.
+
+00:01:22.440 --> 00:01:28.890
+Penyimpanan uang tunai dingin dan di sini lihat bahwa saya memiliki semua file yang telah di-cache saya termasuk font saya javascript saya jatuh CSSA
+
+00:01:29.220 --> 00:01:31.970
+saya saya H. T. surat.
+
+00:01:32.160 --> 00:01:35.390
+Semua ini di-cache disimpan di browser.
+
+00:01:36.260 --> 00:01:42.500
+Dan kami juga memiliki sesuatu yang disebut cache aplikasi yang merupakan bentuk cerita cache yang lebih lama yang tidak
+
+00:01:42.500 --> 00:01:43.970
+banyak digunakan orang lagi.
+
+00:01:44.150 --> 00:01:51.230
+Tetapi Anda melihat bahwa kami memiliki kemampuan ini di browser untuk mengingat sesuatu tetapi bukan hanya serangan ini.
+
+00:01:51.430 --> 00:01:57.430
+Kami juga memiliki hal-hal seperti penyimpanan sesi yang telah kami bicarakan di mana saya dapat menyimpan informasi
+
+00:01:57.430 --> 00:02:03.280
+seperti informasi nilai kunci seperti memegang token tetapi dia dapat melakukan beberapa hal menarik di
+
+00:02:03.490 --> 00:02:10.300
+sini di mana Anda menyimpan mungkin benda dan informasi lain yang mungkin berguna untuk diingat oleh aplikasi Anda tanpa
+
+00:02:10.300 --> 00:02:13.420
+harus kembali ke server atau melakukan permintaan itu.
+
+00:02:13.420 --> 00:02:15.490
+Dan lagi sama untuk penyimpanan lokal.
+
+00:02:15.490 --> 00:02:23.050
+Dan Anda bahkan dapat menggunakan hal-hal seperti IDB yang diindeks atau indeks D-B yang banyak digunakan dalam aplikasi
+
+00:02:23.770 --> 00:02:31.030
+seluler di mana Anda memiliki basis data mini kecil di browser untuk memastikan bahwa Anda tidak bepergian
+
+00:02:31.270 --> 00:02:34.770
+untuk membuat permintaan melalui kabel jarak jauh.
+
+00:02:36.290 --> 00:02:43.220
+Sekarang jika kita kembali ke tab Jaringan Kita juga melihat bahwa jika saya gulir ke bawah setengah dari cache memori yang
+
+00:02:43.280 --> 00:02:49.460
+ini diakses karena refresh ini terjadi ketika saya sudah mengunjungi situs ini sebelumnya dan ia mengingat dan Anda
+
+00:02:50.210 --> 00:02:52.700
+melihat bahwa itu semua dari memori .
+
+00:02:52.700 --> 00:02:54.260
+Jadi sangat cepat.
+
+00:02:54.260 --> 00:03:01.400
+Dan kemudian saya juga memiliki pengiriman dan kita tahu semua tentang ini kita tahu tentang memori kita tahu tentang disk dan
+
+00:03:01.460 --> 00:03:03.800
+kita juga belajar tentang pekerja layanan.
+
+00:03:03.800 --> 00:03:12.350
+Dan jika saya me-refresh lagi saya memiliki semua hal ini masih di-cache jika saya melakukan refresh keras jadi saya
+
+00:03:12.350 --> 00:03:17.740
+katakan benar saya ingin mengosongkan cache dan sulit untuk memuat ulang.
+
+00:03:17.740 --> 00:03:18.520
+Ini dia.
+
+00:03:18.610 --> 00:03:20.970
+Situs Web itu butuh waktu sedikit lebih lama untuk memuat.
+
+00:03:21.070 --> 00:03:21.940
+Dan kita melihatnya.
+
+00:03:21.970 --> 00:03:22.290
+Ya.
+
+00:03:22.300 --> 00:03:29.200
+Kami sebenarnya telah meminta semua hal ini untuk dimuat lagi dengan pengecualian beberapa hal yang telah saya jalankan di
+
+00:03:29.200 --> 00:03:34.030
+latar belakang yang hanya plug in yang saya miliki tetapi semua materi
+
+00:03:34.360 --> 00:03:40.630
+situs Web di mana diminta dari Bakken atau apa pun Layanan kami memiliki lima refresh lagi.
+
+00:03:40.780 --> 00:03:42.220
+Lagi jauh lebih cepat.
+
+00:03:42.220 --> 00:03:44.560
+Semuanya di-cache sekarang.
+
+00:03:44.770 --> 00:03:50.770
+Kita sudah tahu bagaimana melakukan hal-hal pekerja layanan ini tetapi bagaimana kita menguangkannya.
+
+00:03:51.850 --> 00:03:53.270
+Manual sendiri.
+
+00:03:53.430 --> 00:03:59.100
+Saya merasa ini dilakukan oleh browser secara otomatis dan ya browser dikonfigurasikan untuk melakukan ini secara
+
+00:03:59.100 --> 00:04:02.130
+otomatis untuk kami, tetapi kami tidak dapat mengendalikannya.
+
+00:04:02.130 --> 00:04:05.710
+Dan di video berikutnya saya akan menunjukkan kepada Anda bagaimana melakukan ini.
+
+00:04:05.850 --> 00:04:12.750
+Tapi sebelum saya melakukan ini, Anda mungkin bertanya pada diri sendiri ada masalah di sini bagaimana jika
+
+00:04:13.530 --> 00:04:21.000
+seorang desainer atau tim saya memutuskan untuk mengubah file CSSA ini dan membuat misalkan latar belakang robot itu merah,
+
+00:04:22.240 --> 00:04:28.970
+bukannya hijau, pengguna mana pun yang akan menyegarkan maka tidak akan melihat latar belakang merah itu
+
+00:04:29.170 --> 00:04:36.950
+karena mereka menggunakannya mereka menggunakan informasi ini dari cache dan karena itu dari cache, ia tidak akan tahu bahwa perubahan
+
+00:04:36.950 --> 00:04:38.020
+telah dilakukan.
+
+00:04:38.060 --> 00:04:43.530
+Dan sementara situs web saya benar-benar berbeda dalam pandangan saya, versi yang lebih lama dari situs Web.
+
+00:04:43.670 --> 00:04:45.630
+Bagaimana kita menangani ini?
+
+00:04:45.860 --> 00:04:48.570
+Dan ini adalah sesuatu yang disebut penghilang uang tunai.
+
+00:04:48.830 --> 00:04:52.220
+Saya tahu itu nama yang terdengar keren tapi sangat sederhana.
+
+00:04:52.280 --> 00:05:00.020
+Anda melihat angka acak ini yang dihasilkan untuk kami dan Anda ingat ketika kami kembali ke teman
+
+00:05:00.230 --> 00:05:10.550
+robo kami PWI ketika kami melakukan NPM run build paket apa yang membuat semuanya dioptimalkan untuk produksi menggabungkan semua file CSSA semua
+
+00:05:10.550 --> 00:05:19.100
+file javascript menjadi satu dan dua dioptimalkan file dan kita melihat bahwa itu semua sangat zip yang kita
+
+00:05:19.160 --> 00:05:20.070
+ketahui.
+
+00:05:20.120 --> 00:05:27.580
+Itu hebat tetapi kami juga melihat bahwa itu membangun SS utama baru dan.
+
+00:05:28.900 --> 00:05:34.980
+Dan angka-angka ini dibuat oleh Crea bereaksi atas semua kita dapat membuatnya secara manual juga.
+
+00:05:34.990 --> 00:05:38.690
+Kami hanya dapat mengubah file nama untuk ini.
+
+00:05:38.700 --> 00:05:39.980
+Nah, inilah yang keren.
+
+00:05:40.030 --> 00:05:42.430
+Jika saya menjalankan NPM run build
+
+00:05:45.510 --> 00:05:50.760
+lagi dan saya merilis file-file ini untuk produksi, katakanlah saya meletakkannya di halaman panas yang bagus.
+
+00:05:50.760 --> 00:05:55.690
+Nah, Anda melihat bahwa angka-angka ini sama persis seperti sebelumnya.
+
+00:05:56.070 --> 00:06:02.600
+Jadi pengguna hanya akan melihat versi cache dari phos lama saya karena mereka belum berubah.
+
+00:06:02.880 --> 00:06:04.400
+Bagaimana jika kita mengubah sesuatu.
+
+00:06:04.590 --> 00:06:14.690
+Bagaimana jika saya membuka teks yang agung dan di sini saya hanya akan mengubah katakanlah
+
+00:06:14.690 --> 00:06:22.150
+CSSA kami dan indekskan bahwa CSSA memiliki bantalan 50 piksel.
+
+00:06:22.250 --> 00:06:30.620
+Saya akan menyimpan kembali dan menjalankan NPM run build lagi.
+
+00:06:30.630 --> 00:06:31.470
+Baiklah.
+
+00:06:31.470 --> 00:06:37.320
+Kami melihat bahwa paket web telah membuat Bondel dan kami melihat bahwa itu dua byte lebih
+
+00:06:37.410 --> 00:06:44.690
+besar karena kami baru saja menambahkan beberapa karakter tambahan dan file javascript kami jika kami naik sedikit kami melihat nama yang
+
+00:06:45.300 --> 00:06:50.860
+persis sama tetapi file CSSA kami sekarang memiliki nomor yang berbeda dari yang di atas.
+
+00:06:51.180 --> 00:06:57.270
+Dan lagi dikemas dengan baik melakukan ini secara otomatis untuk Anda jika sudah ada perubahan.
+
+00:06:57.480 --> 00:07:05.470
+Nah dalam hal ini saya akan mengubah nomor ini sehingga lain kali saya kembali ke teman Roble dan katakanlah
+
+00:07:05.470 --> 00:07:13.060
+saya membuat ini di produksi tentang bagaimana halaman ketika saya me-refresh halaman ini file CSSA akan memiliki nomor
+
+00:07:13.060 --> 00:07:14.340
+yang berbeda
+
+00:07:14.470 --> 00:07:18.140
+Dan cara browser mengetahui file CSSA telah berubah.
+
+00:07:18.160 --> 00:07:25.490
+Saya akan mengambil yang terbaru dan itulah yang penghilang cache selama Anda memberi nama file Anda berbeda.
+
+00:07:25.930 --> 00:07:28.060
+Ini akan meraihnya bagaimanapun juga.
+
+00:07:28.090 --> 00:07:30.970
+Apakah itu secara tunai atau tidak.
+
+00:07:30.970 --> 00:07:32.320
+Sangat sangat keren.
+
+00:07:32.350 --> 00:07:37.300
+Sekarang bahkan jika Anda tidak memiliki membuat aplikasi aksi ulang itu adalah sesuatu yang mudah yang dapat Anda terapkan sendiri.
+
+00:07:37.300 --> 00:07:37.870
+Kanan.
+
+00:07:38.170 --> 00:07:44.500
+Jika seorang desainer membuat gaya CSSA baru dengan latar belakang merah, mereka cukup mengubah nomor ini secara manual
+
+00:07:44.500 --> 00:07:48.550
+menjadi sesuatu yang berbeda sebelum mungkin Anda dapat menyimpan versi 5.
+
+00:07:48.760 --> 00:07:53.710
+Dan sekarang Anda memastikan bahwa semua pengguna Anda akan memiliki versi terbaru.
+
+00:07:53.800 --> 00:07:58.720
+Mereka akan mengambil versi terbaru dan kemudian ketika mereka me-refresh lagi mereka akan menggunakannya dari cache tetapi
+
+00:07:58.720 --> 00:08:00.530
+mereka akan memiliki latar belakang merah.
+
+00:08:00.950 --> 00:08:07.120
+Baiklah di video berikutnya kita akan berbicara tentang bagaimana Anda dapat menerapkan caching sendiri tanpa
+
+00:08:07.120 --> 00:08:12.120
+hanya menggunakan perilaku default ini dari aplikasi re-bertindak Craig dan browser.
+
+00:08:13.150 --> 00:08:14.080
+Sampai jumpa di yang berikutnya.

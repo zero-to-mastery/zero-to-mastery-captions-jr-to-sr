@@ -1,0 +1,433 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:07.520
+Pekerjaan yang bagus untuk mencapai sejauh ini hal-hal akan menjadi semakin menyenangkan dimulai di bagian ini karena
+
+00:00:07.760 --> 00:00:15.470
+kita sekarang mempelajari alat nyata yang digunakan perusahaan nyata dan yang akan membuat Anda dipekerjakan pada tahun 2018 dan devolvement
+
+00:00:15.500 --> 00:00:23.490
+juga menjadi jauh lebih cepat karena kami Kami menggunakan alat-alat ini untuk membuat kami membangun situs web lebih cepat dan lebih baik.
+
+00:00:23.490 --> 00:00:28.670
+Jadi mari kita bicara tentang bertindak kembali Apa yang kita miliki sebelum bertindak.
+
+00:00:28.780 --> 00:00:36.840
+Yah seperti yang saya sebutkan sebelumnya, kami punya Jay queery Jake di mana dia seperti yang Anda ingat
+
+00:00:36.840 --> 00:00:41.090
+sangat penting menulis kode seperti mencampur bahan secara berurutan.
+
+00:00:41.220 --> 00:00:44.420
+Jika ini terjadi maka lakukan ini dan kemudian lakukan itu.
+
+00:00:44.430 --> 00:00:50.020
+Tetapi juga jika ini terjadi maka lakukan ini dan itu menciptakan banyak ketidakkonsistenan.
+
+00:00:50.250 --> 00:00:57.990
+Dan jika Anda ingat bagian manipulasi DOM Nah itu benar-benar sangat sulit dan terus-menerus melacak
+
+00:00:57.990 --> 00:01:06.230
+apa yang berubah dan apa yang harus diubah adalah kekacauan besar dan itu menciptakan perkembangan yang sangat lambat.
+
+00:01:06.690 --> 00:01:12.780
+Dan ketika situs web Anda semakin kompleks, menjadi sangat sulit untuk mengukur yang berarti
+
+00:01:12.780 --> 00:01:16.290
+sangat sulit bagi tim pengembang untuk mengelolanya.
+
+00:01:17.400 --> 00:01:24.000
+Sekarang re-act dibuat di Facebook karena Anda tahu Facebook adalah aplikasi yang cukup besar dan banyak hal perlu terjadi agar
+
+00:01:24.000 --> 00:01:25.620
+bisa berfungsi dengan baik.
+
+00:01:25.770 --> 00:01:33.180
+Dan mereka memiliki masalah ini dan pembuatnya bereaksi sebagai cara untuk memecahkan masalah ini dan dapat memiliki alat yang memungkinkannya untuk membangun
+
+00:01:33.240 --> 00:01:39.360
+situs web dengan cara yang dapat diprediksi yang bagus sehingga Anda dapat membuat banyak pengembang mengerjakannya pada
+
+00:01:39.360 --> 00:01:40.580
+saat yang bersamaan.
+
+00:01:42.370 --> 00:01:45.210
+Dan saya suka menggunakan analogi mesin roti.
+
+00:01:46.290 --> 00:01:47.900
+Menggunakan re-act agak seperti itu.
+
+00:01:47.910 --> 00:01:58.910
+Anda cukup melempar bahan-bahan dan bereaksi melakukan semua keajaiban di bawah tenda dan membuat situs web.
+
+00:01:59.020 --> 00:02:06.980
+Jadi ini sangat andal dan sangat konsisten dan melakukan satu hal dengan sangat sangat baik dan itu
+
+00:02:07.550 --> 00:02:17.050
+adalah pandangan yang dikelolanya untuk membuat situs Web kami DOM berubah dengan cara yang dapat diprediksi, yang mudah diukur dan
+
+00:02:17.050 --> 00:02:17.780
+dikelola.
+
+00:02:18.610 --> 00:02:24.640
+Dan keindahan dari berakting kembali adalah karena itu hanya tampilan, tidak berarti hanya untuk
+
+00:02:24.640 --> 00:02:25.520
+browser.
+
+00:02:25.960 --> 00:02:32.150
+Faktanya sebuah reaktor dapat digunakan dengan perangkat seluler untuk membangun aplikasi asli.
+
+00:02:32.170 --> 00:02:40.120
+Ini digunakan dalam aplikasi realitas virtual Anda dapat membangun aplikasi desktop dengan bertindak kembali di mana saja yang memiliki tampilan reaksi yang baik
+
+00:02:40.210 --> 00:02:41.260
+dapat menggunakannya.
+
+00:02:41.290 --> 00:02:48.400
+Dan perusahaan besar seperti yang saya sebutkan sebelumnya menggunakan Facebook dan Instagram bereaksi dan pengguna Netflix bereaksi setiap kali Anda
+
+00:02:48.400 --> 00:02:52.700
+menelusuri pilihan film. Nah itu menggunakan aksi ulang di bawah tenda.
+
+00:02:52.990 --> 00:02:57.100
+Ini adalah alat yang sangat berguna dan sangat diminati.
+
+00:02:57.160 --> 00:03:03.310
+Jadi saya senang berbicara tentang bereaksi dan mengajari Anda keterampilan yang berharga ini di bagian ini.
+
+00:03:03.310 --> 00:03:09.340
+Sekarang untuk memahami aksi ulang ada beberapa hal yang ingin kita bahas dan ini
+
+00:03:09.340 --> 00:03:14.760
+adalah prinsip yang sangat berharga yang telah dipelajari selama bertahun-tahun oleh pengembang.
+
+00:03:14.770 --> 00:03:21.320
+Salah satunya adalah ide untuk memikirkan komponen hingga saat ini kami baru saja membangun situs web.
+
+00:03:21.570 --> 00:03:27.170
+Semuanya hanya satu file javascript, satu file CSSA, satu ASTM Alpha.
+
+00:03:27.330 --> 00:03:34.310
+Tapi bukankah lebih baik jika web adalah jaringan dari komponen-komponen kecil ini.
+
+00:03:34.320 --> 00:03:41.130
+Anggap saja sebagai blok Lego di mana semua orang membangun blok Lego tertentu dan Anda hanya menggabungkan
+
+00:03:41.130 --> 00:03:44.650
+blok Lego ini untuk membuat situs web Anda.
+
+00:03:44.730 --> 00:03:50.850
+Itu adalah gagasan yang bertindak kembali didirikan mari kita gunakan ini sebagai contoh.
+
+00:03:50.850 --> 00:04:00.750
+Pertama-tama Anda memiliki atom yang seperti yang Anda lihat di sini adalah ikon dan elemen kecil dan dapat dibagi di
+
+00:04:00.750 --> 00:04:03.300
+situs web Anda seperti gambar.
+
+00:04:03.420 --> 00:04:07.720
+Ada pajak dan Anda membaginya menjadi atom.
+
+00:04:07.740 --> 00:04:15.990
+Dari sana Anda membentuk molekul atau menggabungkan atom yang memiliki fungsi serupa seperti bilah navigasi di
+
+00:04:15.990 --> 00:04:16.960
+sini.
+
+00:04:17.040 --> 00:04:25.220
+Anda menggabungkan masing-masing atom untuk mengeluarkan beberapa fungsionalitas dan kemudian Anda memiliki organisme lagi sedikit lebih besar dari
+
+00:04:25.220 --> 00:04:29.420
+molekul yang bergabung dengan fungsionalitas skala yang lebih besar.
+
+00:04:29.510 --> 00:04:31.790
+Dan akhirnya memiliki template.
+
+00:04:31.790 --> 00:04:37.900
+Kombinasi organisme ini memberi Anda gambaran tentang bagaimana tampilan aplikasi atau situs web Anda.
+
+00:04:37.910 --> 00:04:43.050
+Akhirnya Anda memiliki halaman Anda yang merupakan halaman aplikasi Anda.
+
+00:04:43.290 --> 00:04:52.600
+Dan jika Anda berpikir dalam komponen karena gambar ini menunjukkan apa yang Anda bisa membangun komponen kecil yang dapat
+
+00:04:53.140 --> 00:04:58.130
+Anda gunakan kembali dan diletakkan di berbagai bagian halaman web.
+
+00:04:58.210 --> 00:05:05.110
+Misalnya tulang punggung ini di sini jika saya membangun komponen aksi ulang yang merupakan tulang punggung saya sekarang dapat menggunakannya
+
+00:05:05.110 --> 00:05:06.550
+pada beberapa halaman.
+
+00:05:06.550 --> 00:05:13.030
+Dan saya tidak perlu menulis ulang kode jika saya ingin bilah navigasi digunakan di berbagai area
+
+00:05:13.030 --> 00:05:13.540
+aplikasi.
+
+00:05:13.540 --> 00:05:19.640
+Yah sekali lagi saya tidak perlu menulis ulang kode yang saya tulis sekaligus dan saya dapat menggunakannya kembali bahkan
+
+00:05:19.660 --> 00:05:20.970
+berbagi dengan dunia.
+
+00:05:21.250 --> 00:05:28.820
+Dan gagasan komponen ini bereaksi terhadap Maisy karena di sini saya memiliki situs Web yang memiliki tiga komponen yang
+
+00:05:28.840 --> 00:05:32.240
+dibangun oleh seseorang dan kita dapat menggunakannya kembali.
+
+00:05:32.440 --> 00:05:36.160
+Dan bukan hanya CSX dan waria.
+
+00:05:36.280 --> 00:05:42.280
+Tetapi fungsi nyata seperti bilah navigasi dan formulir penandatanganan.
+
+00:05:42.280 --> 00:05:51.400
+Saya hanya bisa mengunduh komponen Riak ini dan melampirkannya di situs web saya dan karena cara bereaksi terhadap struktur itu tidak
+
+00:05:51.400 --> 00:05:56.640
+benar-benar perlu tahu tentang sisa halaman web hanya blok lokal sendiri
+
+00:05:56.830 --> 00:06:02.280
+yang bekerja sendiri dengan mengurangi ketergantungan pada bagian lain dari situs Web.
+
+00:06:02.530 --> 00:06:06.340
+Saya bisa pasang ini di mana saja saya mau.
+
+00:06:06.350 --> 00:06:10.740
+Konsep penting lainnya dengan React adalah ide aliran data satu arah.
+
+00:06:12.340 --> 00:06:19.150
+Cara terbaik untuk menggambarkannya adalah dengan melihat struktur seperti pohon ini di sini Anda melihat bahwa kita memiliki orangtua
+
+00:06:19.150 --> 00:06:25.060
+beberapa anak dan kemudian anak-anak itu memiliki anak mereka sendiri dan anak-anak itu memiliki anak mereka
+
+00:06:25.060 --> 00:06:25.570
+sendiri.
+
+00:06:26.600 --> 00:06:34.190
+Dan gagasan dengan reaktor bahwa data mengalir dari atas ke bawah dan tidak pernah sebaliknya jika
+
+00:06:34.520 --> 00:06:38.310
+itu merah, sebut saja komponen ini berubah.
+
+00:06:38.480 --> 00:06:44.120
+Dalam hal ini hanya anak-anak mereka yang tahu tentang perubahan itu.
+
+00:06:44.120 --> 00:06:50.570
+Orang tua tidak terlalu peduli dengan perubahan itu karena arah dari aliran data selalu
+
+00:06:50.570 --> 00:06:51.420
+hilir.
+
+00:06:51.440 --> 00:06:58.690
+Jadi kita kembali ke ide komponen jika kita memiliki situs web yang dibangun
+
+00:06:58.930 --> 00:07:06.270
+berdasarkan komponen dan ini adalah halaman dan ini adalah organisme dan molekul daripada atom.
+
+00:07:06.330 --> 00:07:11.050
+Dalam hal itu komponen merah berubah dan kemudian hanya yang di bawahnya.
+
+00:07:11.070 --> 00:07:18.240
+Seperti yang Anda lihat di sini dengan warna biru tahu tentang perubahan ini dan berdasarkan pada itu mereka akan bertindak sesuai dan
+
+00:07:18.240 --> 00:07:19.120
+berubah juga.
+
+00:07:19.290 --> 00:07:25.770
+Sekarang tanpa benar-benar memiliki masalah, sulit untuk memahami konsep ini, tetapi percayalah ini adalah konsep
+
+00:07:25.770 --> 00:07:29.450
+yang sangat penting yang dibawa kembali oleh tindakan.
+
+00:07:29.460 --> 00:07:35.820
+Ini menciptakan banyak kode bebas bug yang sangat bagus dan merupakan ide bahwa
+
+00:07:35.850 --> 00:07:41.250
+Anda akan semakin mengerti ketika kita mulai mengkodekan dan bereaksi.
+
+00:07:41.490 --> 00:07:49.560
+Hal berikutnya adalah ide anjing virtual Anda tahu apa Dahmus model objek dokumen.
+
+00:07:49.680 --> 00:07:54.900
+Dan kami juga belajar bahwa salah satu hal terpenting sebagai pengembang adalah meminimalkan
+
+00:07:54.900 --> 00:08:00.960
+jumlah manipulasi bodoh yang kami lakukan karena browser web yang baik harus bekerja sangat keras
+
+00:08:00.960 --> 00:08:05.240
+untuk mencapainya dan itu mengurangi kinerja halaman web plus meningkat.
+
+00:08:05.250 --> 00:08:11.110
+Tapi saya pikir gambar ini menunjukkan apa yang bereaksi dengan sangat baik sebelumnya.
+
+00:08:11.150 --> 00:08:15.800
+Kami adalah pelukis yang kami beri tahu asrama apa yang harus dilakukan.
+
+00:08:15.860 --> 00:08:23.130
+Hapus elemen ini kemudian masukkan ini dan kemudian tambahkan ini dan warna ini dengan reaksi
+
+00:08:23.150 --> 00:08:29.940
+Kami memiliki aksi ulang ini dibeli dan Riak kembali membuat sesuatu yang disebut anjing
+
+00:08:30.020 --> 00:08:36.970
+virtual Virtual Dom hanyalah sebuah objek javascript dan objek javascript ini hanya menggambarkan situs web kami.
+
+00:08:37.260 --> 00:08:45.180
+Keadaan saat ini dari situs Web dan kami hanya memberikan objek itu untuk bereaksi dan kemudian bereaksi dengan
+
+00:08:45.270 --> 00:08:53.160
+itu secara otomatis akan membuat perubahan pada Dom dan melukis gambar dengan cara yang paling optimal.
+
+00:08:53.190 --> 00:08:56.420
+Jadi kita katakan saja hei ini objeknya.
+
+00:08:56.580 --> 00:09:02.910
+Inilah yang kami inginkan dan DOM serta yang ditanyakan mengurus manipulasi Dom untuk Anda.
+
+00:09:02.910 --> 00:09:10.560
+Ingat betapa menyebalkannya melakukan keberuntungan Quesada bagi semua orang lalu mendapatkan hadiah dari id dan kemudian melakukan
+
+00:09:10.710 --> 00:09:14.390
+semua penangan acara ini akan bereaksi mengurusnya.
+
+00:09:14.400 --> 00:09:22.380
+Jadi sekali lagi Dom virtual hanyalah salinan dom yang ada di objek javascript dan mereka bereaksi di bawah tenda
+
+00:09:22.380 --> 00:09:28.860
+hanya mengubah tampilan dan itu sebabnya dapat bekerja di luar browser dan Anda dapat menggunakan
+
+00:09:28.860 --> 00:09:33.740
+hal-hal seperti VR dan perangkat seluler karena bereaksi sebagai mesin.
+
+00:09:33.750 --> 00:09:35.330
+Dan apa yang Camus aktifkan.
+
+00:09:35.350 --> 00:09:38.910
+Kita dapat mengubah kanvas menjadi apa pun yang kita inginkan.
+
+00:09:38.910 --> 00:09:43.620
+Akhirnya bertindak kembali memiliki ekosistem yang hebat.
+
+00:09:43.700 --> 00:09:49.460
+Ini mungkin salah satu ekosistem dan Javascript terbesar saat ini dan ada begitu banyak alat
+
+00:09:49.460 --> 00:09:56.760
+yang bekerja dengan re-act sebagai fakta, komunitas pengembangnya sangat besar sehingga masalah apa pun yang Anda miliki ada kemungkinan
+
+00:09:56.850 --> 00:10:02.200
+besar kemungkinan orang lain memiliki memilikinya dan telah mempostingnya di Internet dan Anda
+
+00:10:02.200 --> 00:10:03.560
+dapat menemukan solusinya.
+
+00:10:03.630 --> 00:10:09.730
+Anda dapat menemukannya bereaksi paket dan 21:00 Anda dapat menggunakannya dengan Noad ada wetback dalam bisbol yang dapat
+
+00:10:09.730 --> 00:10:10.820
+Anda gunakan dengannya.
+
+00:10:10.960 --> 00:10:17.980
+Ini hanya ekosistem yang sangat bagus yang menggunakan teknologi javascript terbaru untuk membangun situs web dengan cara
+
+00:10:17.980 --> 00:10:20.440
+yang benar-benar bagus dan elegan.
+
+00:10:20.440 --> 00:10:26.700
+Sekarang satu hal yang ingin saya peringatkan pada Anda di bagian ini kita akan melihat kode seperti ini.
+
+00:10:27.520 --> 00:10:30.050
+Dan itu akan terlihat sangat aneh pada awalnya.
+
+00:10:30.220 --> 00:10:34.860
+Ini seperti cara yang sama ketika Anda melihat javascript titik pertama.
+
+00:10:34.980 --> 00:10:37.350
+Sepertinya dunia yang sama sekali berbeda.
+
+00:10:37.350 --> 00:10:43.080
+Itu akan ketika Anda pertama kali melihat ini tetapi percayalah mengetahui apa yang Anda ketahui tentang javascript ini
+
+00:10:43.170 --> 00:10:44.640
+menjadi sangat sangat mudah.
+
+00:10:44.670 --> 00:10:51.710
+Anda memiliki kelas yang memperluas komponen Riak dan ini adalah bagaimana kami membangun komponen.
+
+00:10:51.930 --> 00:10:59.970
+Kami memiliki konstruktor lagi yang telah kami lihat dan memajukan objek dan kemudian setiap kelas memiliki fungsi render wajib, Anda
+
+00:11:00.060 --> 00:11:03.840
+hanya memberi tahu apa yang harus diberikan jam ini.
+
+00:11:03.840 --> 00:11:06.930
+Dan seperti yang Anda lihat, terlihat seperti laki-laki di dalamnya.
+
+00:11:07.350 --> 00:11:11.970
+Ini bukan laki-laki tetapi sintaksnya sangat mirip.
+
+00:11:11.970 --> 00:11:16.420
+Jadi bahkan dengan melihat ini Anda melihat komponen jam ini.
+
+00:11:16.440 --> 00:11:20.110
+Sekali lagi blok logo ini hanya mengembalikan Hello World.
+
+00:11:20.130 --> 00:11:23.640
+Tag H-1 dengan H2 yang mengatakan itu.
+
+00:11:23.640 --> 00:11:30.630
+Dan kemudian waktu lagi hanya untuk memberi Anda kepala Anda akan mendengar kata-kata seperti alat peraga dan
+
+00:11:30.750 --> 00:11:36.540
+komponen negara dan Riak tetapi ini hanya sintaks bahasa sehingga Anda akan belajar.
+
+00:11:36.810 --> 00:11:39.490
+Dan itu sebenarnya cukup mudah setelah Anda terbiasa.
+
+00:11:39.840 --> 00:11:43.690
+Jadi jangan khawatir ini semua masuk akal.
+
+00:11:43.800 --> 00:11:49.120
+Pada akhirnya, Anda tahu apa yang akan kita buat dengan OP yang keren.
+
+00:11:49.300 --> 00:11:57.120
+Ini disebut teman-teman Brabo dan kami akan membangun aplikasi ini yang mencari dengan baik melalui teman-teman robot Anda dan Anda
+
+00:11:57.630 --> 00:11:59.670
+dapat menemukan informasi kontak mereka.
+
+00:11:59.730 --> 00:12:02.970
+Dan seperti yang Anda lihat, pembaruan langsung.
+
+00:12:03.240 --> 00:12:04.680
+Ini sangat cepat.
+
+00:12:04.890 --> 00:12:06.400
+Itu responsif.
+
+00:12:06.750 --> 00:12:08.540
+Ini akan sangat menyenangkan.
+
+00:12:08.640 --> 00:12:14.920
+Dan kami akan membangun ini cukup cepat hanya untuk menunjukkan seberapa kuat reaksi Anda.
+
+00:12:14.970 --> 00:12:15.470
+Baiklah.
+
+00:12:15.510 --> 00:12:17.790
+Saya sangat senang bisa masuk ke bagian ini.
+
+00:12:17.790 --> 00:12:19.350
+Anda akan bersenang-senang.
+
+00:12:19.470 --> 00:12:20.970
+Sampai jumpa di yang berikutnya.
+
+00:12:21.000 --> 00:12:21.270
+Sampai jumpa.

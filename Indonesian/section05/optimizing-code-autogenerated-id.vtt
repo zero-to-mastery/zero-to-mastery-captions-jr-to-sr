@@ -1,0 +1,397 @@
+﻿WEBVTT
+
+00:00:01.190 --> 00:00:02.340
+Selamat datang kembali.
+
+00:00:02.350 --> 00:00:05.560
+Mari kita bicara sedikit tentang optimasi kode.
+
+00:00:06.380 --> 00:00:15.670
+Jika Anda ingat dari jalur render penting kami, javascript dijalankan atau dijalankan dan memungkinkan pengguna untuk berinteraksi
+
+00:00:15.760 --> 00:00:26.950
+dengan halaman web seperti mengklik menu dropdown atau menambahkan item ke daftar yang harus dilakukan setelah mengunduh salah satu biaya terberat
+
+00:00:27.010 --> 00:00:35.550
+javascript adalah waktu untuk javascript adalah waktu untuk javascript mesin yang ada di dalam browser untuk
+
+00:00:35.560 --> 00:00:44.100
+mem-parsing dan menyusun kode ini yaitu membaca dan memahami kode yang merupakan bagian ini di
+
+00:00:44.250 --> 00:00:44.900
+sini.
+
+00:00:45.870 --> 00:00:53.550
+Untungnya bagi kami dengan browser seperti chrome, kami dapat menggunakan alat pengembang mereka untuk menganalisis parse dan
+
+00:00:53.550 --> 00:00:54.440
+kompilasi.
+
+00:00:54.900 --> 00:00:55.780
+Mari kita lihat.
+
+00:00:57.480 --> 00:01:04.620
+Saya membuka halaman Twitter saya di sini tetapi jika saya membuka alat pengembang dan pergi
+
+00:01:04.620 --> 00:01:13.900
+ke tab kinerja saya dapat mencapai rekor untuk benar-benar melihat apa yang terjadi di balik layar dalam hal kinerja di halaman
+
+00:01:13.900 --> 00:01:14.920
+web ini.
+
+00:01:14.920 --> 00:01:21.240
+Jadi saya akan mencapai rekor dan kemudian me-refresh halaman setelah selesai.
+
+00:01:21.380 --> 00:01:22.130
+Segar.
+
+00:01:22.160 --> 00:01:34.470
+Saya akan menekan berhenti dan sekarang dapat menampilkan apa pun yang terjadi dalam periode waktu yang kami rekam.
+
+00:01:34.510 --> 00:01:38.720
+Jadi melihat ini bisa sedikit berlebihan.
+
+00:01:38.860 --> 00:01:45.840
+Ada banyak penelepon banyak grafik dan ada banyak untuk menerima.
+
+00:01:46.100 --> 00:01:49.750
+Tetapi saya ingin menunjukkan kepada Anda bagian-bagian utama yang mungkin menarik bagi Anda.
+
+00:01:50.620 --> 00:01:57.070
+Yang pertama adalah kami memiliki timeline rekaman ini dan Anda dapat melihat di sini bahwa ketika saya
+
+00:01:57.820 --> 00:02:01.280
+menggulirnya, ini menunjukkan apa yang dimuat di halaman.
+
+00:02:01.450 --> 00:02:05.350
+Anda dapat melihat bahwa semakin banyak hal yang ditampilkan.
+
+00:02:07.810 --> 00:02:15.010
+Sempurna dan kami memiliki garis hijau ini yang menunjukkan cat pertama yang bisa Anda lihat di sini bagaimana cat itu
+
+00:02:16.210 --> 00:02:22.430
+dan kemudian kami memiliki garis biru yang merupakan konten DOM dimuat yang telah kita bicarakan sebelumnya.
+
+00:02:22.450 --> 00:02:29.260
+Dan akhirnya garis merah yang memuat halaman web acara.
+
+00:02:29.380 --> 00:02:36.250
+Jadi itu sangat bagus dan bagus kita bisa melihat berapa lama waktu yang dibutuhkan untuk halaman web kita muncul di layar.
+
+00:02:36.520 --> 00:02:43.540
+Tetapi hal yang lebih menarik dan menarik untuk dilihat adalah di tab Summary dan saya akan membuat ini sedikit
+
+00:02:43.630 --> 00:02:47.830
+lebih besar sehingga kita bisa melihat di tab Summary di sini.
+
+00:02:47.830 --> 00:02:53.710
+Kami melihat bahwa ada pemuatan yang sedang kami tunggu untuk memuat file.
+
+00:02:54.540 --> 00:03:00.180
+Ada scripting ada rendering dan kemudian ada lukisan dan beberapa hal lainnya.
+
+00:03:00.880 --> 00:03:09.310
+Tetapi bagian kuning skrip itu adalah javascript, bagian kuning ini termasuk parse dan
+
+00:03:10.210 --> 00:03:19.430
+kompilasi dan menunjukkan bahwa butuh satu titik delapan detik untuk bagian javascript situs Web untuk bekerja.
+
+00:03:19.480 --> 00:03:29.460
+Kita juga dapat pergi ke bawah ke atas dan melihat waktu total dan kita melihat sekali lagi bagian kuning javascript
+
+00:03:30.180 --> 00:03:39.510
+yang berjalan untuk mengevaluasi skrip dan panggilan fungsi dan kemudian kita juga memiliki pohon colt yang lagi-lagi memberi
+
+00:03:39.520 --> 00:03:46.470
+kita informasi yang sangat bagus tetapi jangan terlalu terpaku pada hal ini.
+
+00:03:46.490 --> 00:03:55.290
+Saya ingin menunjukkan ini kepada Anda hanya untuk menunjukkan kepada Anda bahwa javascript adalah bagian besar dari pemuatan situs Web ini sehingga
+
+00:03:55.320 --> 00:04:03.360
+menghabiskan waktu yang lama untuk menguraikan dan menyusun kode untuk peramban dapat sangat menunda seberapa cepat pengguna dapat berinteraksi dengan
+
+00:04:03.630 --> 00:04:04.640
+situs Anda.
+
+00:04:05.010 --> 00:04:11.460
+Topik yang telah kita diskusikan sebelumnya adalah semakin banyak Javascript yang Anda kirim,
+
+00:04:11.460 --> 00:04:18.460
+semakin lama waktu yang diperlukan untuk mengurai dan mengkompilasi sebelum situs Web Anda menjadi interaktif.
+
+00:04:18.470 --> 00:04:27.410
+Sekarang bukan hanya kompilasi parsing yang memiliki biaya eksekusi javascript yang menjalankan kode ingin parsing kompilasi
+
+00:04:27.570 --> 00:04:34.470
+terjadi adalah salah satu operasi yang harus terjadi pada utas utama.
+
+00:04:34.610 --> 00:04:39.130
+Dan jika Anda ingat utas utama adalah jenis seperti pekerja di browser.
+
+00:04:39.200 --> 00:04:45.050
+Hanya ada satu pekerja yang melakukan semua pekerjaan dan kita dapat memblokirnya dengan javascript yang berat.
+
+00:04:45.080 --> 00:04:50.130
+Ingat ketika kami melakukan lansiran di skrip kami bertindak di demo.
+
+00:04:50.710 --> 00:04:56.290
+Itu memblokir eksekusi dan kami tidak dapat menggulir atau mengklik tombol apa pun sampai kami menekan OK.
+
+00:04:56.660 --> 00:05:01.220
+Jadi kami memiliki javascript di halaman Web kami di sini.
+
+00:05:01.240 --> 00:05:07.780
+Kami meminta file javascript karena kami telah menemukan tag skrip dan kemudian javascript
+
+00:05:07.990 --> 00:05:09.430
+akhirnya tiba.
+
+00:05:09.480 --> 00:05:17.880
+Kita kemudian harus menjalankan eksekusi parse kompilasi dan kemudian kita temui o ada panggilan ambil dan file
+
+00:05:17.880 --> 00:05:18.520
+javascript.
+
+00:05:18.540 --> 00:05:26.700
+Jadi sekali lagi kita harus menunggu konten itu tiba untuk mengisi javascript kita dan mungkin kemudian kita memiliki lagi
+
+00:05:26.700 --> 00:05:29.340
+bagian yang dikompilasi kita jalankan.
+
+00:05:29.340 --> 00:05:37.110
+Dan akhirnya halaman kami menjadi interaktif dan saya ingin menunjukkan kepada Anda alat lain yang sangat bagus untuk dapat melihat
+
+00:05:37.110 --> 00:05:39.270
+ini beraksi di situs Web.
+
+00:05:41.240 --> 00:05:46.670
+Jika kita kembali ke halaman Web kita setengah di sini, lebih mudah untuk menguasai situs web di sini yang sebenarnya bersumber
+
+00:05:46.670 --> 00:05:47.110
+terbuka.
+
+00:05:47.120 --> 00:05:52.560
+Dan ini dibuat oleh siswa yang berkontribusi pada proyek open source.
+
+00:05:52.850 --> 00:05:58.340
+Sangat sangat keren dan kemudian memiliki tautan ke beberapa proyek sumber terbuka kami yang dapat Anda akses.
+
+00:05:58.340 --> 00:06:03.920
+Anggap saja sebagai taman bermain bagi Anda untuk hanya menguji apa pun yang Anda inginkan.
+
+00:06:04.770 --> 00:06:12.960
+Menggunakan situs Web ini di mana dia bisa pergi ke sesuatu seperti tes
+
+00:06:13.140 --> 00:06:19.600
+senjata ph kita bisa memasukkan URL dan kemudian tekan start.
+
+00:06:19.700 --> 00:06:20.510
+Baiklah.
+
+00:06:20.510 --> 00:06:21.200
+Sempurna.
+
+00:06:21.250 --> 00:06:26.910
+Taruhannya sedikit waktu tetapi setelah selesai kami memiliki laporan bagus tentang apa yang telah terjadi.
+
+00:06:27.320 --> 00:06:31.240
+Tapi yang ingin saya tunjukkan adalah gangguan pemrosesan ini.
+
+00:06:31.490 --> 00:06:39.050
+Jika Anda mengklik di sini itu akan menunjukkan kepada Anda jenis kerusakan seperti yang dilakukan portal Google Devol.
+
+00:06:39.210 --> 00:06:42.870
+Tetapi dengan cara yang sangat bagus untuk melihat apa yang sebenarnya terjadi.
+
+00:06:44.050 --> 00:06:48.580
+Kita kembali melihat skrip tata letak lukisan yang membutuhkan waktu.
+
+00:06:48.660 --> 00:06:50.060
+Pemuatan.
+
+00:06:50.080 --> 00:06:55.990
+Dan kita juga melihat hal-hal seperti mengevaluasi skrip berapa lama untuk mengevaluasi skrip berapa
+
+00:06:55.990 --> 00:06:59.140
+lama mesin V-8 untuk mengkompilasi kode.
+
+00:06:59.380 --> 00:07:08.870
+Dan jika kita kembali ke alat def kita melihat lagi sesuatu yang mirip bahwa kita memiliki skrip
+
+00:07:08.870 --> 00:07:13.420
+Evaluasi yang skrip dievaluasi dan butuh banyak waktu
+
+00:07:13.460 --> 00:07:20.090
+Kami memiliki panggilan fungsi yang mengukur panggilan fungsi javascript tingkat atas yang hanya muncul ketika browser
+
+00:07:20.090 --> 00:07:25.790
+memasuki mesin javascript dan ada banyak hal yang dapat Anda lakukan di sini dan
+
+00:07:25.820 --> 00:07:26.600
+menganalisis.
+
+00:07:26.630 --> 00:07:31.870
+Anda dapat menghabiskan banyak waktu hanya mempelajari setiap fitur yang dimiliki Chrome.
+
+00:07:31.880 --> 00:07:38.600
+Tapi jangan terlalu jauh ke dalam lubang kelinci di sini karena hal utama yang ingin kita fokuskan adalah
+
+00:07:38.600 --> 00:07:42.540
+gagasan bahwa eksekusi kompilasi Barra ini membutuhkan banyak waktu.
+
+00:07:42.710 --> 00:07:44.510
+Ini banyak usaha.
+
+00:07:44.510 --> 00:07:53.300
+Keuntungan utama di sini adalah dibutuhkan waktu yang signifikan bagi browser untuk bekerja dengan javascript dan dapat menunda seberapa
+
+00:07:53.300 --> 00:07:57.120
+cepat pengguna dapat berinteraksi dengan situs web kami.
+
+00:07:57.140 --> 00:08:02.510
+Bayangkan jika mereka dapat melihat tombol tetapi tidak mengkliknya atau menyentuhnya selama beberapa detik.
+
+00:08:02.510 --> 00:08:05.680
+Ini jelas dapat menurunkan pengalaman pengguna.
+
+00:08:07.520 --> 00:08:15.110
+Satu catatan kecil yang ingin saya buat adalah benda ini juga bersudut dan sekarang versi bersudut empat atau lima
+
+00:08:15.410 --> 00:08:19.150
+apa pun yang mereka miliki memiliki ide ini sebelumnya.
+
+00:08:19.220 --> 00:08:27.170
+Kompilasi Anda melihat browser melakukan sesuatu yang disebut git hanya dalam kompilasi waktu ketika file javascript
+
+00:08:27.290 --> 00:08:29.350
+dimuat ke browser.
+
+00:08:29.420 --> 00:08:34.910
+Mereka mengkompilasinya di sana dan kemudian sementara kami menunggu untuk memuat tim
+
+00:08:34.920 --> 00:08:42.860
+sudut datang dengan perhitungan di depan waktu hanya dari terminal kami mengkompilasi sebelumnya dan kemudian hanya mengirimkan
+
+00:08:42.860 --> 00:08:47.860
+kode bahwa browser dapat bekerja dengan ke browser lurus jauh.
+
+00:08:47.870 --> 00:08:53.910
+Dan Anda dapat melihat di sini bahwa mereka dapat menurunkan skrip secara signifikan.
+
+00:08:54.320 --> 00:09:00.590
+Sekarang ada pro dan kontra untuk semua ini dan ada alasan bahwa tidak semua orang melakukan kompilasi sebelumnya
+
+00:09:01.190 --> 00:09:03.170
+tetapi Anda dapat membacanya sendiri.
+
+00:09:03.170 --> 00:09:07.420
+Saya hanya ingin menunjukkan kepada Anda bahwa ada beberapa solusi untuk masalah ini.
+
+00:09:07.730 --> 00:09:10.430
+Dan kemudian hal lain yang mungkin Anda pikirkan adalah.
+
+00:09:10.580 --> 00:09:13.190
+OK jadi javascript Anda baru saja dimuat.
+
+00:09:13.460 --> 00:09:20.240
+Dan bagaimana Anda bisa menjaga halaman Anda tajam bahkan setelah itu dimuat ke halaman web dan itu
+
+00:09:20.300 --> 00:09:24.730
+semua tentang membatasi jumlah pekerjaan pemrosesan yang perlu dilakukan komputer.
+
+00:09:24.740 --> 00:09:27.950
+Terutama ini berarti membatasi animasi.
+
+00:09:28.040 --> 00:09:35.110
+Anda ingat Corp Kaikohe situs web dan berapa banyak animasi yang kita miliki tidak
+
+00:09:35.110 --> 00:09:42.390
+terlalu berat pada mereka animasi memerlukan banyak kekuatan pemrosesan dan grafis dan dapat menyebabkan serius seperti Anda tahu Anda dapat memercikkannya
+
+00:09:42.390 --> 00:09:45.260
+di sana-sini tetapi jangan berlebihan dengan mereka.
+
+00:09:45.330 --> 00:09:52.430
+Dan ini terutama benar ketika datang ke perangkat seluler yang biasanya memiliki kekuatan pemrosesan yang lebih lemah.
+
+00:09:52.740 --> 00:09:59.130
+Jadi ingatlah bahwa salah satu penyebab kinerja terbesar adalah memicu animasi
+
+00:09:59.130 --> 00:10:07.270
+selama acara bergulir atau memindahkan elemen halaman atau memudar mereka mengubah tata letak situs Web.
+
+00:10:07.290 --> 00:10:13.400
+Peramban tidak hanya harus memproses perubahan visual yang terkait dengan pengguliran halaman dinamis tetapi
+
+00:10:13.590 --> 00:10:17.390
+juga harus memproses semua animasi Anda secara bersamaan.
+
+00:10:17.700 --> 00:10:23.990
+Jadi sekali lagi pikirkan pekerja yang satu ini yang terus bekerja agar Anda tidak membuatnya mulai.
+
+00:10:24.060 --> 00:10:25.440
+Mari saya tunjukkan satu hal lagi.
+
+00:10:27.540 --> 00:10:31.020
+Ketika Anda memasukkan javascript dalam HMO Anda.
+
+00:10:31.080 --> 00:10:37.390
+Jadi itu adalah Anda meletakkan tag skrip dan Anda simbol dengan katakanlah sumber diindeks.
+
+00:10:37.500 --> 00:10:45.990
+Ya ini adalah operasi pemblokiran render jika Anda ingat browser harus menjalankan skrip ini sampai selesai sebelum
+
+00:10:45.990 --> 00:10:48.560
+kami dapat melanjutkan menguraikan HTML.
+
+00:10:48.630 --> 00:10:50.910
+Jadi jika kita pergi untuk mengevaluasi skrip di sini.
+
+00:10:51.090 --> 00:10:55.990
+Jika Anda membuka ini, Anda melihat bahwa Parsa H. T. M-L ada di dalamnya.
+
+00:10:56.100 --> 00:10:59.430
+Lagi saya tahu saya mengulangi diri saya sendiri tetapi itu masuk akal.
+
+00:10:59.430 --> 00:11:06.060
+Jika Anda membangun sebuah situs dan mungkin bahkan menargetkan banyak pengguna perangkat seluler melakukan
+
+00:11:06.060 --> 00:11:14.580
+yang terbaik untuk pertama-tama membuat dan mengerjakan perangkat keras Perwakilan yang menggunakan sesuatu seperti pengujian halaman web untuk menguji
+
+00:11:14.880 --> 00:11:19.710
+kekuatan perangkat seluler yang mungkin dapat dilakukan pengguna Anda memiliki.
+
+00:11:21.490 --> 00:11:28.820
+Anda ingin agar javascript Anda tetap parse dan waktu kompilasi rendah dan idealnya mengadopsi sesuatu seperti
+
+00:11:28.820 --> 00:11:37.460
+anggaran kinerja untuk tim Anda yang memastikan Anda mengawasi kode javascript dan biaya dan Anda tidak hanya terus menumpuk
+
+00:11:37.460 --> 00:11:40.950
+kode coding dan kode tanpa menguji kinerja.
+
+00:11:41.930 --> 00:11:48.530
+Dan pada akhirnya kami memiliki Cawan Suci apa yang ingin kami capai dengan kode kami.
+
+00:11:48.590 --> 00:11:55.670
+Kami ingin memiliki waktu yang cepat untuk pertama-tama melukis bermakna yang merupakan sesuatu yang langsung disorotkan
+
+00:11:55.760 --> 00:11:57.940
+ke layar untuk pengguna.
+
+00:11:58.010 --> 00:12:04.580
+Dan akhirnya waktu yang sangat cepat interaktif untuk dapat berinteraksi dengan situs web kami sesegera
+
+00:12:04.580 --> 00:12:05.430
+mungkin.
+
+00:12:05.750 --> 00:12:11.970
+Dan dalam video berikutnya kita akan berbicara tentang bagaimana kita bisa melakukan ini dan menunjukkan kepada Anda beberapa contoh yang sangat bagus.
+
+00:12:12.380 --> 00:12:13.690
+Saya akan melihat yang berikutnya.
+
+00:12:13.930 --> 00:12:14.190
+Polisi.

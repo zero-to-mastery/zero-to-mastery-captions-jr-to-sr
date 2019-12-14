@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.320 --> 00:00:02.460
+Selamat datang kembali.
+
+00:00:02.460 --> 00:00:08.520
+Kami menjalankan tes kami dan pencarian Google saat ini bekerja dengan sangat baik.
+
+00:00:08.520 --> 00:00:10.750
+Saya cukup senang dengan itu.
+
+00:00:10.980 --> 00:00:12.460
+Dan saya pikir kita bisa melanjutkan.
+
+00:00:12.750 --> 00:00:22.500
+Mari kita buat skrip nother dan mungkin fungsi yang lebih realistis atau lebih sulit untuk diuji.
+
+00:00:22.550 --> 00:00:31.400
+Jadi saya akan menambahkan file baru dan memanggil skrip itu untuk menghindari Ya dan kami pasti ingin menulis beberapa tes untuk
+
+00:00:31.400 --> 00:00:32.170
+itu.
+
+00:00:32.180 --> 00:00:36.260
+Tetapi untuk sekarang mari kita tulis fungsi kita dan apa yang akan dilakukan.
+
+00:00:37.560 --> 00:00:44.660
+Sekarang salah satu tes sulit untuk menulis dan sesuatu yang Anda mungkin pikirkan adalah tes sinkron.
+
+00:00:44.830 --> 00:00:52.140
+Maksud saya sekarang Anda dapat melihat bahwa dengan pencarian google kita dapat menyalin ini dengan hampir semua fungsi dan Anda mungkin
+
+00:00:52.800 --> 00:00:56.050
+melihat mengapa fungsi murni sangat baik untuk diuji.
+
+00:00:56.070 --> 00:00:58.020
+Maksud saya Anda hanya menguji fungsi.
+
+00:00:58.110 --> 00:01:05.030
+Anda hanya menambahkan beberapa input acak dan memastikan bahwa output sesuai dengan yang diharapkan.
+
+00:01:05.040 --> 00:01:12.090
+Sangat bagus dan sederhana dan mereka semua hanya tes bagus sinkron tetapi dalam kehidupan nyata kita kemungkinan besar
+
+00:01:12.840 --> 00:01:16.770
+memiliki panggilan fecche atau panggilan API yang tidak sinkron.
+
+00:01:16.800 --> 00:01:18.930
+Bagaimana kami menguji mereka.
+
+00:01:18.930 --> 00:01:23.940
+Nah dalam video ini mari kita atasi itu untuk latihan ini.
+
+00:01:23.940 --> 00:01:31.000
+Saya akan menggunakan API mereka benar-benar sangat suka disebut Swaby Dan ya itu singkatan dari Star
+
+00:01:31.120 --> 00:01:32.170
+Wars API.
+
+00:01:32.170 --> 00:01:34.200
+Ini gratis dan mengagumkan.
+
+00:01:34.240 --> 00:01:36.280
+Saya merekomendasikannya di kursus lain juga.
+
+00:01:36.280 --> 00:01:39.930
+Jadi beberapa orang mungkin akrab dengan itu tapi ya itu hebat.
+
+00:01:39.930 --> 00:01:46.600
+Anda dapat melihat di sini bahwa Anda dapat meminta Planet Anda dapat meminta orang yang Anda dapat meminta kapal luar angkasa semua
+
+00:01:46.630 --> 00:01:47.550
+dari Star Wars.
+
+00:01:47.650 --> 00:01:49.570
+Ya, cukup mengagumkan.
+
+00:01:49.600 --> 00:01:59.050
+Menggunakan API Star Wars Anda dapat melihat bahwa ini adalah titik akhir yang dapat kami tekan untuk mendapatkan respons yang sama.
+
+00:01:59.050 --> 00:02:10.150
+Mari kita buat fungsi kecil yang bagus untuk kita gunakan yang bisa kita uji sekarang, ambil tidak, itu tidak akan berhasil karena
+
+00:02:10.480 --> 00:02:18.360
+jika Anda ingat mengambil adalah sesuatu yang diimplementasikan oleh browser dan itu pada objek jendela.
+
+00:02:18.480 --> 00:02:22.410
+Tetapi dalam simpul tidak ada yang namanya objek jendela.
+
+00:02:22.530 --> 00:02:24.400
+Jadi tidak ada jendela.
+
+00:02:24.510 --> 00:02:25.620
+Mengambil.
+
+00:02:25.650 --> 00:02:29.190
+Untuk itu kita perlu menginstal sesuatu yang
+
+00:02:31.740 --> 00:02:36.700
+disebut node fetch dan ada beberapa perpustakaan lain yang bisa mereka gunakan.
+
+00:02:36.700 --> 00:02:40.830
+Anda dapat melakukan pengambilan panggilan dari node tetapi mari kita tetap dengan ini untuk saat ini.
+
+00:02:42.250 --> 00:02:52.110
+Dengan cara ini kita sekarang dapat mengambil dalam simpul dan lagi kita mengimpornya dengan cara yang umum karena impor
+
+00:02:52.110 --> 00:02:55.610
+dan ekspor belum tersedia dalam simpul.
+
+00:02:55.890 --> 00:02:58.320
+Dan kemudian hanya impor simpul ambil semua
+
+00:03:02.180 --> 00:03:03.540
+berakhir di sini.
+
+00:03:03.540 --> 00:03:14.630
+Mari kita lakukan Konst mendapatkan orang-orang dari Star Wars dan katakanlah ini akan menerima Fach.
+
+00:03:14.670 --> 00:03:20.430
+Ingat kami melakukan sedikit suntikan ketergantungan di sini sehingga kami bisa mengujinya, kami bisa menjaga ini
+
+00:03:20.430 --> 00:03:22.640
+tetap bagus dan mudah untuk diuji.
+
+00:03:23.080 --> 00:03:29.850
+Dan di sini kita tidak dapat mengatakan bahwa kita akan mengembalikannya.
+
+00:03:30.150 --> 00:03:38.790
+Dan saya tahu saya tahu ini sedikit berlebihan karena kita tidak bisa memiliki input dan fach tetapi itu hanya menunjukkan
+
+00:03:38.830 --> 00:03:45.800
+saya pikir ketergantungan injeksi sangat baik dan ini bukan sesuatu yang selalu perlu Anda lakukan tetapi
+
+00:03:45.800 --> 00:03:51.350
+untuk tujuan ini saya pikir itu cara yang baik bagi Anda untuk
+
+00:03:51.350 --> 00:03:54.010
+mengenal injeksi ketergantungan di sini.
+
+00:03:54.060 --> 00:03:58.950
+Kita akan memiliki Star Wars API. Mari kita kembali
+
+00:04:01.540 --> 00:04:10.070
+ke apa yang mereka miliki dan mari kita salin ini dan katakan bahwa kita ingin meminta API orang.
+
+00:04:10.390 --> 00:04:15.490
+Dan jika Anda ingat kita selalu perlu melakukan tanggapan
+
+00:04:18.960 --> 00:04:23.590
+klasik Dadds Kemudian menjalankan metode Jaison pada respons.
+
+00:04:25.370 --> 00:04:32.310
+Dan akhirnya kami memiliki data kami yang akan menjadi orang-orang yang dikembalikan.
+
+00:04:32.330 --> 00:04:40.100
+Jadi katakanlah di sini kita hanya akan mengembalikan objek yang memiliki hitungan karena jika kita
+
+00:04:40.100 --> 00:04:49.370
+pergi ke orang-orang di sini karena kita ingin mendapatkan semua karakter kita mendapatkan variabel jumlah semua karakter di API
+
+00:04:49.380 --> 00:04:54.590
+jadi mari kita lakukan itu dan kami akan mengatakan hitungan.
+
+00:04:54.660 --> 00:04:58.070
+Dan sebenarnya ini seharusnya data pada hitungan itu.
+
+00:04:59.230 --> 00:05:07.780
+Dan kemudian kita akan melakukan hasil yang kita hanya akan memiliki data hasil Daut yang akan memiliki
+
+00:05:07.780 --> 00:05:13.080
+semua orang dalam array dan setiap orang dalam suatu objek.
+
+00:05:13.090 --> 00:05:14.710
+Baiklah, mari kita simpan itu.
+
+00:05:14.730 --> 00:05:22.800
+Dan saya ingin memastikan ini berfungsi sehingga kita hanya akan melakukan dialog konsol membuat orang dan mengirimkan fungsi pertama
+
+00:05:22.800 --> 00:05:23.990
+untuk itu.
+
+00:05:24.110 --> 00:05:30.140
+Saya akan menyimpan dan mari kita jalankan simpul biarkan saya menghapus ini untuk saat ini.
+
+00:05:30.390 --> 00:05:38.520
+Dan sebenarnya hanya karena ini adalah cara yang sinkron dan lebih baik untuk melakukan ini, hanya
+
+00:05:39.090 --> 00:05:45.300
+di sini menghibur data log menyimpan dan menjalankan skrip NPM untuk menghindari.
+
+00:05:45.320 --> 00:05:46.060
+Iya nih.
+
+00:05:47.570 --> 00:05:54.040
+Dan kita harus menunggu sedikit tetapi Anda lihat di sini bahwa baiklah kita punya semua karakter
+
+00:05:54.060 --> 00:05:57.750
+dengan hitungan 87 dan kita punya Luke Skywalker.
+
+00:05:57.950 --> 00:05:58.630
+Apa lagi yang kita punya.
+
+00:05:58.630 --> 00:06:01.250
+Lihat Threepio R2-D2.
+
+00:06:01.460 --> 00:06:02.550
+Semua kucing utama.
+
+00:06:02.570 --> 00:06:03.740
+Luar biasa.
+
+00:06:03.800 --> 00:06:05.560
+Ini bekerja.
+
+00:06:05.950 --> 00:06:07.010
+Dan kamu tahu.
+
+00:06:07.010 --> 00:06:12.900
+Sementara kita melakukannya hanya untuk bersenang-senang karena ini menggunakan janji.
+
+00:06:12.980 --> 00:06:17.180
+Mari kita juga menambahkan kode versi async
+
+00:06:20.470 --> 00:06:29.450
+weight dan mari kita hapus panggilannya dan panggil saja orang yang mau menggunakan async menunggu.
+
+00:06:29.480 --> 00:06:34.740
+Jadi itu artinya di depan fungsi kita akan melakukan sinkronisasi.
+
+00:06:34.970 --> 00:06:45.630
+Dan sekarang kita bisa menggunakan kata kunci bobot sehingga kita bisa mengatakan Konst mendapatkan permintaan sama dengan menunggu panggilan pertama.
+
+00:06:45.830 --> 00:06:54.770
+Dan sekarang kita dapat mengatakan bahwa data konser sekali lagi sama dengan
+
+00:06:59.870 --> 00:07:03.470
+permintaan berat yang dihabiskan.
+
+00:07:03.700 --> 00:07:12.040
+Dan sekarang kita bisa mengeluarkan anjing itu dan menjaga semuanya seperti yang kita miliki.
+
+00:07:12.040 --> 00:07:16.780
+Biarkan saya menambahkan semi-titik dua dan mari kita buat ini lebih kecil sehingga Anda dapat melihat lebih
+
+00:07:20.220 --> 00:07:21.540
+baik dan kita bisa
+
+00:07:24.560 --> 00:07:28.330
+memindahkan ini pada baris ini Anda dapat memutuskan sendiri apa yang terlihat lebih bersih.
+
+00:07:28.490 --> 00:07:32.330
+Tapi mari kita coba ini juga untuk memastikan itu berhasil.
+
+00:07:32.330 --> 00:07:38.400
+Jadi dapatkan orang dan kami akan menambahkan mengambil akan menyimpan.
+
+00:07:38.400 --> 00:07:41.920
+Dan Ron NPM Whoops tidak ada di sana.
+
+00:07:41.960 --> 00:07:44.650
+Jalankan di sini NPM Ron.
+
+00:07:44.940 --> 00:07:48.670
+Tidak ada skrip simpul yang harus dihindari.
+
+00:07:48.680 --> 00:07:51.710
+Ya, tunggu sebentar dan ini dia.
+
+00:07:51.710 --> 00:07:52.870
+Semuanya berfungsi.
+
+00:07:55.460 --> 00:08:00.770
+Saya tidak tahu mengapa saya memutuskan untuk menunjukkan bahwa dalam video uji tapi saya yakin seseorang di
+
+00:08:00.770 --> 00:08:07.400
+luar sana akan menemukan ini berguna untuk membandingkan janji dan Eysenck sedikit menyinggung tapi mari kita kembali ke jalur di
+
+00:08:07.400 --> 00:08:08.060
+sini.
+
+00:08:08.060 --> 00:08:13.980
+Mari kita mulai menulis tes untuk kode async kita.
+
+00:08:14.330 --> 00:08:20.060
+Sekali lagi hal pertama yang akan kita lakukan dan saya akan menghapus
+
+00:08:20.060 --> 00:08:23.240
+get orang dan konsol log dari
+
+00:08:26.120 --> 00:08:32.710
+sini mari kita simpan dan saya akan membuat file baru menyebutnya script untuk menguji titik
+
+00:08:32.740 --> 00:08:33.240
+Seamus dan
+
+00:08:36.180 --> 00:08:38.120
+satu hal di sini kami ingin melakukan beberapa hal.
+
+00:08:38.130 --> 00:08:45.600
+Pertama kita ingin menggunakan fungsi ambil jadi kita perlu meminta
+
+00:08:48.320 --> 00:09:00.650
+simpul mengambil lagi karena kita telah menggunakan injeksi dependensi dan kita perlu parameter mengambil untuk Dapatkan
+
+00:09:00.720 --> 00:09:14.140
+orang dan kemudian kita juga membutuhkan fungsi dari swap API yang mengembalikan get orang untuk dianalogikan katakanlah membutuhkan
+
+00:09:14.140 --> 00:09:26.730
+skrip untuk menghindari kita atau kita tidak membutuhkan GS Tapi ingat karena ini bukan paket simpul kita
+
+00:09:26.850 --> 00:09:30.350
+harus benar-benar memberikan jalannya.
+
+00:09:30.360 --> 00:09:36.880
+Baiklah jadi mari kita ekspor fungsi, mari kita ekspor keduanya untuk saat ini.
+
+00:09:36.900 --> 00:09:44.850
+Kami akan mengatakan modul yang mengekspor dan kami mengekspornya dalam suatu objek akan mengatakan Dapatkan orang.
+
+00:09:44.980 --> 00:09:52.840
+Dan alih-alih membuat orang membuat orang lagi menyingkat dengan E6 adalah dengan hanya mendapatkan lebih sedikit orang
+
+00:09:52.840 --> 00:10:00.430
+dan membuat janji orang yang sama dengan membuat orang-orang titik koma mendapatkan properti orang dan menghargai
+
+00:10:00.460 --> 00:10:01.820
+nilai properti.
+
+00:10:02.440 --> 00:10:10.810
+Baiklah sekarang di sini kita akan memiliki akses ke fungsi kita berdua.
+
+00:10:10.820 --> 00:10:14.860
+Mari kita istirahat dan di video berikutnya kita akan menyelesaikan tes ini.
+
+00:10:15.020 --> 00:10:16.770
+Aku akan melihatnya satu per satu.

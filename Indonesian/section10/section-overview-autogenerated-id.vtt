@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.990 --> 00:00:11.730
+Selamat datang kembali ke bagian bonus khusus dan bit tambahan dan kita akan berbicara tentang analisis kode.
+
+00:00:11.770 --> 00:00:19.210
+Anda melihat sebagian besar waktu sebagai pengembang, Anda akan mulai mengerjakan proyek sejak
+
+00:00:19.210 --> 00:00:20.210
+awal.
+
+00:00:20.230 --> 00:00:27.150
+Maksud saya, sangat jarang Anda ada di awal pengaturan struktur folder asli dalam kode
+
+00:00:27.150 --> 00:00:28.870
+dan paket web.
+
+00:00:29.230 --> 00:00:36.100
+Sebagian besar waktu jika Anda bekerja di perusahaan besar, mereka biasanya sudah memiliki proyek yang
+
+00:00:36.100 --> 00:00:39.020
+telah mereka bangun dan Anda diberitahu.
+
+00:00:39.070 --> 00:00:39.560
+Baiklah.
+
+00:00:40.500 --> 00:00:41.520
+Pergi ambil file.
+
+00:00:41.550 --> 00:00:43.660
+Ambil kodenya dan mulai.
+
+00:00:44.460 --> 00:00:51.700
+Anda harus mulai meninjau ulang kode yang menganalisisnya dan mencari tahu cara kerja semuanya.
+
+00:00:52.080 --> 00:01:00.380
+Tetapi hanya dengan melihat kode dan mungkin beberapa dokumentasi yang dibuat oleh rekan kerja Anda di bagian ini kita akan
+
+00:01:00.380 --> 00:01:06.920
+menggunakan otak cerdas untuk aplikasi yang kami bangun dari awal di kursus saya sebelumnya, pengembang web
+
+00:01:06.920 --> 00:01:08.790
+lengkap nol untuk penguasaan.
+
+00:01:09.950 --> 00:01:16.770
+Dalam kursus ini kita akan menambahkan banyak fitur ke dalamnya seperti yang kita lakukan di kehidupan nyata.
+
+00:01:17.150 --> 00:01:22.730
+Kami akan menambahkan beberapa deteksi wajah. Kami akan membuat profil pengguna dan
+
+00:01:22.760 --> 00:01:29.780
+kemampuan untuk menyimpan dan memodifikasi profil pengguna, menambahkan sesi untuk manajemen, menambahkan wadah dok untuk pengembangan
+
+00:01:29.780 --> 00:01:37.650
+kami dan banyak lagi, tetapi agar kami dapat melakukannya untuk menganalisis basis kode dan memahami apa yang sedang
+
+00:01:37.650 --> 00:01:38.530
+terjadi.
+
+00:01:39.430 --> 00:01:45.190
+Dalam video berikutnya saya akan membawa Anda melalui proses saya ketika saya pertama
+
+00:01:45.190 --> 00:01:53.010
+kali mulai mengerjakan proyek yang sudah dimulai sebelum saya tiba dan ini adalah keterampilan penting yang sering diabaikan.
+
+00:01:53.810 --> 00:02:01.350
+Pengembang senior kami, kami dapat menelusuri kode secara logis dan mengetahui bagaimana segala sesuatunya bekerja sehingga kami
+
+00:02:01.440 --> 00:02:04.530
+dapat mulai berkontribusi langsung ke proyek.
+
+00:02:04.530 --> 00:02:10.650
+Kita dapat mengambil tampilan tingkat tinggi dan memahami bagaimana masing-masing bagian cocok dan kita akan belajar bagaimana
+
+00:02:10.650 --> 00:02:12.340
+melakukannya di bagian ini.
+
+00:02:13.230 --> 00:02:20.000
+Lalu kita akan menerapkan fitur deteksi wajah multipel baru seperti yang diminta Bruno.
+
+00:02:20.120 --> 00:02:25.010
+Kami akan mengikuti praktik terbaik untuk membuat permintaan tarik untuk berkontribusi ke proyek dan melakukan
+
+00:02:25.010 --> 00:02:26.260
+banyak hal menyenangkan.
+
+00:02:26.450 --> 00:02:28.040
+Jadi, mari kita mulai.
+
+00:02:28.250 --> 00:02:35.720
+Nah sebelum kita melakukannya, saya hanya ingin memberi Anda kepala mengatur proyek saat ini pada mesin
+
+00:02:35.720 --> 00:02:37.540
+Anda akan frustasi.
+
+00:02:37.610 --> 00:02:44.290
+Anda harus mengatur server database dan klien Anda dan saya akan menunjukkan kepada Anda bagaimana melakukan ini.
+
+00:02:44.480 --> 00:02:50.510
+Tetapi karena kita semua memiliki mesin laptop yang berbeda dan sistem operasi yang berbeda
+
+00:02:50.510 --> 00:02:57.020
+itu akan benar-benar membuat frustasi dan akan ada saat-saat di mana Anda harus berkeliling google atau Anda
+
+00:02:57.020 --> 00:03:04.190
+mungkin memiliki kesalahan yang tidak Anda pahami dan saya melakukan ini dengan sengaja karena ini sangat umum di industri.
+
+00:03:04.490 --> 00:03:10.790
+Tapi saya akan menunjukkan kepada Anda bagaimana mengatur seluruh proyek ini dan di bagian yang akan datang kita
+
+00:03:10.790 --> 00:03:16.460
+akan menggunakan contoh ini tentang betapa frustasinya mengatur semua database server klien dan kemudian menggunakan
+
+00:03:17.270 --> 00:03:23.050
+buruh pelabuhan dan menunjukkan kepada Anda mengapa daquiri sangat menakjubkan dan mengapa itu memecahkan masalah ini.
+
+00:03:23.810 --> 00:03:26.360
+Karena itu membuat proses ini sangat mudah.
+
+00:03:26.360 --> 00:03:34.550
+Tetapi sebelum saya melakukan itu dan hanya menyelam Anda ke buruh pelabuhan Anda harus memahami frustrasi jadi diperingatkan.
+
+00:03:34.570 --> 00:03:41.320
+Saya akan memberikan sumber daya selama bagian ini sehingga proyek ini bekerja pada semua sistem operasi
+
+00:03:41.710 --> 00:03:48.520
+tetapi gunakan ini sebagai cara bagi Anda untuk mempraktikkan sesuatu yang harus Anda lakukan ketika Anda mulai
+
+00:03:48.700 --> 00:03:51.340
+sebagai pengembang web dan perusahaan Anda.
+
+00:03:51.400 --> 00:03:52.700
+Mari kita mulai menunjukkan.
+
+00:03:53.080 --> 00:03:54.000
+Saya akan melihat yang berikutnya.

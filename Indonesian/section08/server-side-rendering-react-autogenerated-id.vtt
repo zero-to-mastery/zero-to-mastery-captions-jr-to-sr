@@ -1,0 +1,346 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:11.940
+Selamat datang kembali di sini untuk Anda. Saya memiliki server kilat sederhana yang menunjukkan cara kerja sisi server
+
+00:00:11.940 --> 00:00:13.770
+rendering akan bekerja.
+
+00:00:15.090 --> 00:00:19.410
+Mari kita pergi satu per satu untuk mencari tahu apa yang terjadi.
+
+00:00:19.500 --> 00:00:25.710
+Omong-omong, jika Anda tidak terlalu terbiasa menggunakan knode dan express, saya sarankan Anda memeriksa kursus saya
+
+00:00:25.710 --> 00:00:26.890
+yang lain.
+
+00:00:27.040 --> 00:00:30.850
+Kalau tidak dengan asumsi kita merasa nyaman dengan ini, itu cukup mudah.
+
+00:00:30.850 --> 00:00:35.570
+Yang kami lakukan adalah mengimpor perpustakaan Express untuk membuat server kami.
+
+00:00:35.650 --> 00:00:46.510
+Jadi kami hanya mengekspresikan untuk membuat server aplikasi kami dan dalam jalur kami sendiri 10 saya katakan aplikasi menggunakan Xpress dot statis dan
+
+00:00:46.840 --> 00:00:51.130
+saya tidak perlu tanda plus ke folder publik
+
+00:00:51.130 --> 00:00:52.740
+Sekarang apa artinya itu.
+
+00:00:52.840 --> 00:01:02.000
+Ini mengatakan bahwa saya ingin melayani file statis seperti gambar file CSSA dan file javascript menggunakan
+
+00:01:02.000 --> 00:01:06.190
+Express yang dibangun di middleware statis.
+
+00:01:06.230 --> 00:01:13.190
+Jadi, jika Anda pernah bekerja dengan EXPRESS, ini hanya standar melayani semua jenis file yang ingin kami lakukan.
+
+00:01:13.190 --> 00:01:20.360
+Jadi sekali lagi jika aplikasi kita memiliki file CSSA maka kita perlu menambahkan ini ke bagian atas server kita dan kita akan
+
+00:01:20.720 --> 00:01:26.930
+menggunakan folder publik yang dapat saya beri nama ini apa pun yang saya inginkan tetapi folder publik itulah
+
+00:01:27.140 --> 00:01:29.740
+yang kami akan memiliki file statis kami.
+
+00:01:31.050 --> 00:01:37.200
+Dan mari kita abaikan jalur 12 untuk saat ini dan beralih ke jalur 13 di sini.
+
+00:01:38.480 --> 00:01:47.390
+Kita lihat di sini bahwa kita memiliki aksi ulang titik buat makanan dan kita sebenarnya tidak perlu melakukan ini seperti
+
+00:01:47.390 --> 00:01:48.080
+namanya.
+
+00:01:48.140 --> 00:01:55.760
+Ini hanya mengatakan kita ingin membuat elemen elemen aksi ulang dari aplikasi sehingga aplikasi di sini yang saya
+
+00:01:56.120 --> 00:02:03.350
+impor dapat menjadi file Apogee kami dengan komponen Riak kami dalam hal ini kami tidak perlu
+
+00:02:03.770 --> 00:02:09.650
+melakukan ini atau itu bisa menjadi file yang memiliki beberapa tampilan mesin seperti.
+
+00:02:09.750 --> 00:02:17.070
+Ya dan kami ingin mengonversi waria seperti sintaks dan menjadi sintaks aksi ulang.
+
+00:02:17.610 --> 00:02:20.510
+Either way baris 13 hanya berarti adil.
+
+00:02:20.520 --> 00:02:22.380
+Kami memiliki aplikasi teman robo kami.
+
+00:02:22.380 --> 00:02:27.600
+Dalam kasus kami, kami hanya dapat memiliki file js kami seperti yang kami miliki di ujung depan kami.
+
+00:02:27.870 --> 00:02:36.000
+Sekarang dari sini semua yang kita lakukan adalah dengan Express kita bisa melakukan DOT get mengatakan bahwa
+
+00:02:36.000 --> 00:02:44.370
+di direktori root jadi jika saya melakukan Roble friends dot com slash saya akan melakukan permintaan get dan
+
+00:02:44.370 --> 00:02:49.760
+itu akan mengembalikan server akan mengembalikan respons yang membuat indeks.
+
+00:02:49.770 --> 00:02:53.040
+Jadi sekali lagi kami mengembalikan waria di sini.
+
+00:02:53.040 --> 00:02:57.930
+Kami akan membuat indeks dengan konten.
+
+00:02:58.440 --> 00:03:06.040
+Dan di sinilah segalanya berbeda dari sisi klien yang Anda lihat dengan teman-teman Robur yang tidak pernah kami
+
+00:03:06.040 --> 00:03:08.110
+perlukan untuk memiliki server.
+
+00:03:08.110 --> 00:03:11.880
+Kami baru saja mendapatkan file Cline yang dikirim.
+
+00:03:11.890 --> 00:03:20.740
+Dan kita bisa meletakkannya di suatu tempat seperti mendapatkan halaman yang menampung file-file statis Sir.
+
+00:03:20.890 --> 00:03:24.680
+Sekarang di sini kita menggunakan sesuatu yang disebut render to string.
+
+00:03:24.880 --> 00:03:32.380
+Dan Anda lihat di sini bahwa render to string berasal dari sesuatu yang disebut re-act dash
+
+00:03:32.380 --> 00:03:40.730
+Dohm server dan ini adalah paket khusus yang Anda gunakan ketika Anda melakukan rendering sisi server dengan re-act seperti
+
+00:03:40.730 --> 00:03:41.570
+namanya.
+
+00:03:41.570 --> 00:03:44.290
+Semua yang dilakukannya dan sebenarnya cukup sederhana.
+
+00:03:44.290 --> 00:03:52.310
+Yang dilakukannya hanyalah mengatakan hei baru saja membuat aplikasi teman-teman robo, cukup cetak seluruh tampilan teman-teman pemberontak dan
+
+00:03:52.310 --> 00:03:54.720
+baru saja dikonversi menjadi String.
+
+00:03:54.740 --> 00:04:00.930
+Karena ketika kita berbicara antara server dan klien kita harus mengirim teks.
+
+00:04:00.950 --> 00:04:04.870
+Kami tidak bisa begitu saja mengirimkan yang sebenarnya karena hal itu tidak akan berhasil.
+
+00:04:05.030 --> 00:04:11.300
+Setiap kali kami mengirim informasi melalui kawat, kami harus mengirim teks yang mengapa kami
+
+00:04:11.300 --> 00:04:19.560
+menggunakan hal-hal seperti Jason Parsons Nah dan di sini pada teman-teman robo kami sampai kami juga memberikan beberapa alat peraga.
+
+00:04:19.580 --> 00:04:25.700
+Jadi proses ini sepertinya kita hanya memberikan beberapa data dalam kasus kita hanya karena kita sedang
+
+00:04:25.700 --> 00:04:32.990
+melakukan rendering sisi server mari kita kirim beberapa robot beberapa Jaison Jadi itu mungkin robot yang sangat sangat umum bahwa
+
+00:04:32.990 --> 00:04:39.920
+ketika kita ingin menampilkan ke pengguna tanpa mengirim permintaan API atau melakukan panggilan telepon mungkin kami memilikinya di folder
+
+00:04:39.920 --> 00:04:46.460
+publik kami dan kami hanya menulis robot yang ada di file dan memberikannya mungkin tiga objek robot
+
+00:04:46.460 --> 00:04:50.790
+yang dapat kami bagikan sebagai alat bantu untuk teman yang kuat.
+
+00:04:50.960 --> 00:04:52.650
+Dan itulah yang kami lakukan di sini.
+
+00:04:52.790 --> 00:05:02.980
+Yang kami lakukan di sini adalah menggunakan modul FS dari node yang mengatakan hei baru saja membaca file ini dan format pengodean
+
+00:05:03.000 --> 00:05:05.220
+ini yang cukup standar.
+
+00:05:05.250 --> 00:05:10.690
+Saya pikir jika Anda membiarkan ini kosong Anda akan tetap sama karena ini adalah default.
+
+00:05:10.830 --> 00:05:17.800
+Dan kemudian kita melakukan parce Jason lagi karena kita perlu mengirim sesuatu melalui teks.
+
+00:05:17.880 --> 00:05:23.760
+Kami ingin memastikan bahwa ini diuraikan dan siap sehingga kami dapat mengirimkannya melalui kabel
+
+00:05:23.910 --> 00:05:25.370
+ke browser klien.
+
+00:05:26.350 --> 00:05:31.660
+Sekarang meskipun beberapa dari ini mungkin baru, itu tidak terlalu buruk kan.
+
+00:05:31.680 --> 00:05:34.880
+Hanya ada beberapa baris kode di akhir hari.
+
+00:05:34.890 --> 00:05:45.280
+Yang kami lakukan hanyalah mengonversi aplikasi aksi ulang aplikasi kami dengan hanya memanggil Rander ke string untuk mengonversinya menjadi string
+
+00:05:45.270 --> 00:05:49.700
+sehingga kami dapat mengirimkannya melalui kabel ke browser.
+
+00:05:49.710 --> 00:05:59.530
+Idenya adalah bahwa jika kita membuat aplikasi ini di server alih-alih hanya memiliki div itu dengan aplikasi ID di ujung
+
+00:05:59.530 --> 00:06:06.270
+depan seperti yang biasanya kita lakukan dengan aplikasi re-bertindak, kita dapat mengirimkan HDMI.
+
+00:06:06.400 --> 00:06:15.580
+Itu sudah diisi dengan semua elemen robot kami sehingga halaman web dapat segera menampilkan aplikasi teman-teman robo
+
+00:06:15.580 --> 00:06:20.200
+kami dan membuat halaman memuat tampak lebih cepat.
+
+00:06:20.350 --> 00:06:23.560
+Dan kami juga mengirimkan beberapa robot pada awalnya.
+
+00:06:23.560 --> 00:06:27.600
+Sehingga lagi bagi pengguna tampilannya jauh lebih cepat.
+
+00:06:27.610 --> 00:06:37.440
+Sekarang inilah trik dengan rendering sisi server dan reaksi Anda lihat kami perlu bereaksi pada server
+
+00:06:37.860 --> 00:06:43.470
+dan browser karena pada awalnya kami mengirimkan versi string.
+
+00:06:43.500 --> 00:06:52.020
+Jadi, ulangi tindakan server Dom membuat string yang akan mengubah reaksi kami menjadi string, mengirimnya melalui
+
+00:06:52.020 --> 00:06:52.820
+kabel.
+
+00:06:52.860 --> 00:06:56.220
+Dan itu tiba di browser tetapi di browser.
+
+00:06:56.220 --> 00:07:00.010
+Sekarang kita perlu melakukan sesuatu yang disebut ulangan Dom.
+
+00:07:00.030 --> 00:07:01.650
+Hidrasi dan.
+
+00:07:01.890 --> 00:07:05.750
+Ini hanya digunakan untuk rendering sisi server.
+
+00:07:05.940 --> 00:07:08.490
+Dan Anda hanya perlu tahu dua hal ini.
+
+00:07:09.480 --> 00:07:17.140
+Jika Anda menelepon ulang tindakan Dom Daut Hydroid, itu seperti memanggil metode render dalam komponen kami.
+
+00:07:17.260 --> 00:07:24.670
+Kecuali bahwa dengan tindakan ini kembali, Ahmad hidrat ketika kita menyebut ini pada simpul yang sudah memiliki
+
+00:07:24.670 --> 00:07:32.500
+server ini rendering markup yang telah kita buat, tindakan ulang akan melestarikannya mempertahankan markup dan hanya melampirkan event
+
+00:07:32.650 --> 00:07:37.620
+handler sehingga kita benar-benar dapat berinteraksi dengan situs web kami.
+
+00:07:37.780 --> 00:07:44.140
+Kami masih perlu menjalankan ini karena jika kami hanya mengirim apa pun yang kami dapatkan dari server, itu masih
+
+00:07:44.170 --> 00:07:46.770
+belum interaktif hanya teks yang kami terima.
+
+00:07:47.110 --> 00:07:55.840
+Dan saya tahu ini tampaknya sangat spesifik untuk bereaksi tetapi prinsip-prinsip dan ide-ide berlaku untuk semua perpustakaan dan kerangka
+
+00:07:55.840 --> 00:08:02.900
+kerja termasuk pemancing termasuk melihat apa pun yang bekerja dengan aplikasi halaman tunggal satu sisi.
+
+00:08:03.100 --> 00:08:12.370
+Gunakan sesuatu seperti ini yang akan Anda render halaman Anda atau tampilan di server yang Anda
+
+00:08:12.700 --> 00:08:17.470
+kirimkan sebagai teks dan kemudian di ujung
+
+00:08:17.470 --> 00:08:24.430
+depan Anda akan melampirkan pendengar acara atau fungsi javascript yang Anda butuhkan.
+
+00:08:24.590 --> 00:08:31.280
+Sekali lagi itu diberikan di sini javascript mengambil alih dengan melakukan sesuatu yang disebut hydrating yang
+
+00:08:31.340 --> 00:08:34.420
+memberikan interaktivitas semua halaman yang kita inginkan.
+
+00:08:34.580 --> 00:08:41.180
+Sekarang Anda mungkin berpikir menunggu apakah saya berpotensi membuat halaman web berfungsi tanpa javascript.
+
+00:08:41.180 --> 00:08:44.350
+Mungkin mereka tidak memiliki banyak interaktivitas sehingga kita bahkan tidak perlu javascript.
+
+00:08:44.340 --> 00:08:52.120
+Dan ya satu hal yang dapat Anda lakukan dengan rendering sisi server adalah membuat halaman web yang berfungsi bahkan tanpa Javascript.
+
+00:08:55.690 --> 00:09:01.930
+Dan juga saya ingin menunjukkan dalam versi baru di sana bereaksi pada server ada sesuatu yang disebut
+
+00:09:01.930 --> 00:09:08.620
+render to node stream yang sangat sangat mirip dengan render to string kecuali untuk fakta bahwa kami menggunakan sesuatu
+
+00:09:08.620 --> 00:09:12.700
+yang disebut node stream yang membuat proses ini jauh lebih cepat.
+
+00:09:12.700 --> 00:09:16.720
+Jadi ini sedikit peningkatan kinerja.
+
+00:09:16.720 --> 00:09:24.060
+Tetapi mari kita kembali ke kode kita sebagai tanggapan dengan rendering sisi server dan rendering sisi klien.
+
+00:09:24.080 --> 00:09:32.250
+Anda lihat bahwa kita perlu bereaksi karena kita perlu membangun dong itu.
+
+00:09:32.300 --> 00:09:37.880
+Satu-satunya perbedaan adalah bahwa alih-alih mengirim halaman shemale dengan hanya satu hari yang
+
+00:09:37.880 --> 00:09:44.540
+memiliki gagasan tentang aplikasi yang bertindak kembali akan dilampirkan pada sisi klien pada rendering sisi server.
+
+00:09:44.540 --> 00:09:53.600
+Kita benar-benar dapat melakukannya di sini, jalankan dan render ke string sehingga alih-alih browser melakukan pekerjaan pemasangan
+
+00:09:53.600 --> 00:10:00.740
+semua komponen Riak yang telah dilakukan server untuk kita dan hanya itu.
+
+00:10:00.740 --> 00:10:05.150
+Itulah prinsip utama rendering sisi server.
+
+00:10:05.150 --> 00:10:08.470
+Kedengarannya jauh lebih rumit daripada yang sebenarnya.
+
+00:10:08.570 --> 00:10:17.450
+Kami hanya mengubah beberapa langkah sekarang menggunakan rendering sisi server dengan re-act memang memiliki beberapa kasus tepi dan
+
+00:10:17.690 --> 00:10:23.600
+itu cukup sulit karena re-act awalnya dibangun untuk aplikasi satu halaman.
+
+00:10:23.600 --> 00:10:28.970
+Jadi ada banyak manuver yang harus Anda lakukan dalam banyak kesalahan yang didapat orang ketika bekerja
+
+00:10:28.970 --> 00:10:30.650
+dengan rendering sisi server.
+
+00:10:30.650 --> 00:10:36.400
+Dan dalam video yang akan datang kita akan berbicara tentang alternatif yang lebih baik untuk melakukan ini.
+
+00:10:36.680 --> 00:10:42.200
+Tetapi untuk sekarang saya pikir dalam video berikutnya kita harus berbicara tentang pro dan kontra dari melakukan sesuatu seperti
+
+00:10:42.200 --> 00:10:42.790
+ini.
+
+00:10:43.790 --> 00:10:50.090
+Karena sekali lagi ingat walaupun saya dulu bereaksi sebagai contoh di sini prinsipnya semua sama
+
+00:10:50.090 --> 00:10:51.840
+untuk semua jenis aplikasi.
+
+00:10:52.670 --> 00:10:53.450
+Saya akan melihat yang berikutnya.

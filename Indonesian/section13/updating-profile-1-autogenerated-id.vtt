@@ -1,0 +1,292 @@
+﻿WEBVTT
+
+00:00:00.720 --> 00:00:01.770
+Selamat datang kembali.
+
+00:00:01.770 --> 00:00:09.330
+Mari kita bekerja pada fungsi pembaruan profil, poin yang sangat penting itu baik kami ingin memastikan
+
+00:00:09.330 --> 00:00:14.130
+kami melindungi Kami tidak ingin siapa pun dapat memperbarui profil.
+
+00:00:14.460 --> 00:00:19.210
+Dan kami akhirnya bisa bekerja sedikit dari backend.
+
+00:00:19.370 --> 00:00:21.420
+Sekarang apa yang ingin kita lakukan di sini.
+
+00:00:21.500 --> 00:00:23.630
+Saya akan meminimalkan ini.
+
+00:00:23.830 --> 00:00:37.910
+Dan dalam rute kami dan aplikasi kilat kami akan membuat aplikasi titik pos yang merupakan profil dengan parameter
+
+00:00:37.910 --> 00:00:39.850
+yang Heidi.
+
+00:00:40.040 --> 00:00:49.350
+Dan ini akan memiliki respons permintaan yang akan memiliki apa yang seharusnya.
+
+00:00:49.370 --> 00:01:00.720
+Kami ingin profil menangani pembaruan profil dan kami mengirimkan objek respons permintaan serta objek D-B kami sehingga
+
+00:01:00.750 --> 00:01:08.360
+kami dapat terhubung ke database dan benar-benar memperbarui database pengguna.
+
+00:01:08.370 --> 00:01:11.480
+Jadi mintalah respons D. B mari
+
+00:01:14.320 --> 00:01:24.630
+kita selamatkan Anda melihat bahwa kami telah melihat perubahan dalam wadah Daker kami yang sangat sangat bagus.
+
+00:01:24.640 --> 00:01:32.110
+Sekarang mari kita benar-benar membangun pembaruan profil pegangan ini kita sekali lagi
+
+00:01:32.140 --> 00:01:42.610
+pergi ke pengontrol kami untuk profil dan bukannya menangani profil kita akan membuat fungsi baru yang disebut pembaruan
+
+00:01:42.610 --> 00:01:51.910
+profil pegangan dan itu akan menjadi fungsi sederhana meminta tanggapan dan db yang baru saja kami
+
+00:01:51.910 --> 00:01:53.100
+sampaikan.
+
+00:01:53.320 --> 00:02:04.360
+Dan di dalam sini kita akan mengambil ID dari titik permintaan.
+
+00:02:04.720 --> 00:02:08.550
+Ingat itu bidang di sini yang kami sediakan.
+
+00:02:08.590 --> 00:02:15.920
+Jadi bisa diprofilkan 23 file yang buruk satu jika itu profil satu akan ambil pengguna yang kita miliki.
+
+00:02:16.270 --> 00:02:22.540
+Dan di bagian keamanan kami membahas gagasan tentang input yang tidak pernah dipercaya dan apa yang dikirimkan pengguna kepada Anda.
+
+00:02:22.540 --> 00:02:28.060
+Dan kita dapat melakukan beberapa pemeriksaan di sini untuk memastikan bahwa ada Purana memastikan bahwa apa pun yang kita
+
+00:02:28.210 --> 00:02:30.100
+harapkan dari sisi klien sudah benar.
+
+00:02:30.100 --> 00:02:33.670
+Tetapi demi waktu, kita akan fokus hanya pada pembaruan profil.
+
+00:02:33.700 --> 00:02:36.340
+Kalau tidak, kita hanya akan menghabiskan terlalu lama.
+
+00:02:36.340 --> 00:02:37.750
+Anda menonton Yumiko.
+
+00:02:38.140 --> 00:02:38.650
+Baiklah.
+
+00:02:38.650 --> 00:02:50.660
+Kami juga ingin mengambil nama umur dan objek peliharaan yang akan kami kirim dari permintaan input bentuk
+
+00:02:51.280 --> 00:02:52.300
+tubuh.
+
+00:02:52.450 --> 00:02:58.480
+Sekarang kami belum benar-benar melakukan ini di sisi klien tetapi kami ingin mengirim formulir dan
+
+00:02:58.480 --> 00:03:01.820
+meletakkan objek yang berisi usia nama dan Pat.
+
+00:03:01.910 --> 00:03:09.730
+Dan sekarang dengan objek D-B kami, kami dapat menggunakan Carnac untuk hanya mengatakan saya ingin pengguna D-B.
+
+00:03:09.830 --> 00:03:14.900
+Dan sekali lagi jika Anda tidak terbiasa dengan K'NEX Anda bisa langsung pergi ke dokumentasi mereka dan itu sangat
+
+00:03:14.900 --> 00:03:15.590
+sangat sederhana.
+
+00:03:15.590 --> 00:03:18.380
+Bunyinya seperti bahasa Inggris dan Anda akan mengerti apa yang saya maksud sekarang.
+
+00:03:18.710 --> 00:03:30.870
+Saya akan mengatakan ambil stabil pengguna di mana ID sudah.
+
+00:03:30.920 --> 00:03:34.590
+Saya bisa membuatnya sederhana dan tetap seperti ini.
+
+00:03:34.610 --> 00:03:41.970
+Jadi di mana ID cocok dengan apa pun yang kami sediakan dan dalam hal ini kami ingin memperbarui.
+
+00:03:42.290 --> 00:03:50.130
+Dan untuk saat ini karena kami tidak memiliki kolom usia, kolom hewan peliharaan di basis data kami namun itu akan menjadi
+
+00:03:50.130 --> 00:03:54.770
+salah satu latihan Anda, kami hanya akan khawatir tentang memperbarui nama.
+
+00:03:54.790 --> 00:04:00.330
+Jadi saya hanya akan mengatakan nama pembaruan lagi saya hanya bisa menyederhanakannya dan melakukan
+
+00:04:04.200 --> 00:04:08.280
+nama karena itu adalah nama kolom dari tabel pengguna.
+
+00:04:08.280 --> 00:04:14.810
+Akhirnya kita bisa melakukan satu titik lalu dan setelah kita mendapat tanggapan dari itu kita akan mengatakan
+
+00:04:21.060 --> 00:04:21.870
+itu.
+
+00:04:21.890 --> 00:04:24.360
+Ups bukan itu yang ingin kami lakukan.
+
+00:04:24.930 --> 00:04:27.160
+Kami akan mengatakan bahwa kami ingin.
+
+00:04:27.360 --> 00:04:32.080
+Nah jika ada semacam respons dan kita bisa melakukan sedikit pengecekan di sini.
+
+00:04:32.100 --> 00:04:38.260
+Tetapi jika ada respons dari basis data yang kami inginkan, kami akan merespons.
+
+00:04:38.850 --> 00:04:48.770
+Jason katakan saja sukses karena kami berhasil memperbarui pengguna.
+
+00:04:49.010 --> 00:05:03.420
+Kalau tidak, kita hanya akan merespons dengan status 400 dan kita bisa mengatakan Jason selama satu jam biarkan saja.
+
+00:05:03.420 --> 00:05:10.410
+Itu tidak ditemukan atau katakan saja pada tidak dapat memperbarui
+
+00:05:13.540 --> 00:05:20.380
+dan tentu saja dengan janji kami ingin melakukan penangkapan
+
+00:05:20.380 --> 00:05:37.860
+untuk menangkap kesalahan dan dalam kasus kami kami hanya akan mengatakan bahwa udara hanya akan melakukan status respon 400 sehari dan respons pengguna yang memperbarui kesalahan.
+
+00:05:37.860 --> 00:05:39.660
+Baiklah, mari kita simpan di sini.
+
+00:05:41.490 --> 00:05:42.780
+Lihat apakah kami mendapatkan kesalahan.
+
+00:05:42.780 --> 00:05:43.620
+Belum ada kesalahan.
+
+00:05:43.620 --> 00:05:44.910
+Itu selalu pertanda baik.
+
+00:05:44.910 --> 00:05:53.050
+Jadi mari kita beri pegangan pembaruan profil di sini untuk memastikan bahwa kami mengekspor.
+
+00:05:53.210 --> 00:05:56.650
+Dan sekarang kita harus memiliki ini tersedia di server kita.
+
+00:05:57.090 --> 00:06:05.510
+JS sekarang untuk menguji ini untuk melakukan permintaan posting kita bisa mulai bekerja di sisi ujung depan dan melakukan permintaan Fettes
+
+00:06:05.510 --> 00:06:12.650
+atau kita dapat menggunakan sesuatu seperti Postman dan Postman adalah sesuatu yang telah kita gunakan sebelumnya dalam kursus
+
+00:06:12.650 --> 00:06:13.830
+saya sebelumnya.
+
+00:06:13.850 --> 00:06:21.600
+Sangat luar biasa jika Anda pernah bekerja dengan mata API dan membuat API Anda sendiri dengan tenang.
+
+00:06:21.770 --> 00:06:27.890
+Anda harus sementara Anda harus menggunakan tukang pos itu benar-benar hebat dan Anda akan mengerti mengapa sekarang.
+
+00:06:28.220 --> 00:06:34.400
+Saya akan melakukan permintaan posting ke localhost dan Olby 3000.
+
+00:06:34.790 --> 00:06:43.010
+Dan itu akan menjadi profil Heidi dari satu karena kita hanya memiliki satu pengguna sekarang di tubuh.
+
+00:06:43.010 --> 00:06:48.590
+Kami ingin mengatakan bahwa itu akan menjadi Jaison mentah yang kami kirim.
+
+00:06:48.820 --> 00:06:55.370
+Ini akan memiliki formulir dan memastikan bahwa ini adalah Jason.
+
+00:06:55.530 --> 00:06:57.200
+Katakanlah
+
+00:07:00.050 --> 00:07:05.910
+form and put dan input form ini
+
+00:07:09.150 --> 00:07:15.660
+akan memiliki nama katakanlah Johnny page 54.
+
+00:07:15.840 --> 00:07:21.110
+Dan akhirnya Pat yang hanya mengatakan
+
+00:07:24.460 --> 00:07:30.970
+kirim lima klik di sini saya mendapatkan sukses.
+
+00:07:30.970 --> 00:07:41.840
+Saya bisa masuk ke tubuh dan memberikan beberapa masukan dan jika kami kembali kami melihat
+
+00:07:41.840 --> 00:07:49.210
+bahwa baik-baik saja ada permintaan posting ke profil satu.
+
+00:07:49.220 --> 00:07:50.830
+Inilah bagian yang menyenangkan.
+
+00:07:50.840 --> 00:07:53.850
+Ayo kembali ke akun kita
+
+00:07:57.030 --> 00:07:59.370
+dan masuk lagi.
+
+00:07:59.550 --> 00:08:07.780
+Kami akan mengatakan pada hari Tom Pastore dan melihat bahwa nama pengguna kami sekarang adalah Johnny.
+
+00:08:07.850 --> 00:08:13.680
+Kami telah berhasil membuat fungsi pembaruan profil pegangan.
+
+00:08:13.810 --> 00:08:15.520
+Itu luar biasa.
+
+00:08:16.230 --> 00:08:18.410
+Dan dalam beberapa baris kode.
+
+00:08:18.440 --> 00:08:20.160
+Itu tidak seburuk itu.
+
+00:08:20.280 --> 00:08:30.480
+Kami baru saja membuat permintaan posting dan permintaan posting itu hanya menunggu parameter umur nama ID dan Pat dari
+
+00:08:30.480 --> 00:08:36.510
+form input semua badan dan kemudian kami hanya memperbarui database pengguna.
+
+00:08:36.660 --> 00:08:44.310
+Selama ID cocok dengan apa yang Anda berikan dan pembaruan dalam kasus kami, hanya nama itu akan mengembalikan keberhasilan
+
+00:08:44.310 --> 00:08:48.980
+atau tidak dapat memperbarui berdasarkan pada saat kami sudah selesai.
+
+00:08:49.100 --> 00:08:49.340
+Baiklah.
+
+00:08:49.340 --> 00:08:51.260
+Hanya saja, supaya kita tidak bingung.
+
+00:08:51.290 --> 00:08:58.680
+Mari kita kembali ke tukang pos dan pastikan kita mengubah nama Johnny menjadi kalau-kalau itu berhasil lagi.
+
+00:08:58.850 --> 00:09:06.010
+Jika saya menyegarkan kami telah masuk.
+
+00:09:06.060 --> 00:09:08.230
+Baiklah kita kembali normal.
+
+00:09:08.250 --> 00:09:09.420
+Semuanya baik-baik saja.
+
+00:09:10.460 --> 00:09:14.520
+Kami memiliki pengguna kami seperti yang kami butuhkan bermusuhan.
+
+00:09:14.740 --> 00:09:19.960
+Jadi sekarang setelah kita memiliki pembaruan profil pegangan ini, kita benar-benar akan menghubungkannya
+
+00:09:20.230 --> 00:09:27.580
+ke sisi klien sehingga ketika kita menekan save pada halaman profil kita itu akan berfungsi itu akan sangat menyenangkan.
+
+00:09:27.720 --> 00:09:29.820
+Saya akan melihat di video berikutnya oleh.

@@ -1,0 +1,559 @@
+﻿WEBVTT
+
+00:00:01.680 --> 00:00:02.840
+Bawa mereka kembali.
+
+00:00:02.860 --> 00:00:06.540
+Jadi kita telah melalui langkah pertama tetapi mari kita lihat langkah kedua.
+
+00:00:06.540 --> 00:00:16.340
+Sekarang dengan CSSA CSSA disebut render blocking karena untuk membangun pohon yang diberikan ingat yang ini di
+
+00:00:16.340 --> 00:00:20.410
+sini dan mencetak sesuatu ke layar.
+
+00:00:20.420 --> 00:00:26.840
+Kami sedang menunggu CIA mengatakan Dom untuk melengkapi dan menggabungkannya dengan Dom
+
+00:00:27.840 --> 00:00:32.820
+untuk membuat pohon render sehingga CSSA diberikan pemblokiran.
+
+00:00:32.830 --> 00:00:38.470
+Jadi dengan pemikiran itu masuk akal bahwa kami ingin menjadikannya seringan mungkin sehingga pengguna
+
+00:00:38.560 --> 00:00:44.320
+melihat sesuatu sesegera mungkin dan dengan CSSA di sini hanya ada beberapa hal yang perlu
+
+00:00:44.320 --> 00:00:45.180
+kami pertimbangkan.
+
+00:00:47.420 --> 00:00:50.350
+Kami hanya ingin memuat apa pun yang diperlukan.
+
+00:00:50.630 --> 00:00:54.140
+Kami ingin memasukkan di atas pemuatan lipatan.
+
+00:00:54.140 --> 00:01:00.010
+Kami ingin menambahkan atribut media dan kami ingin kurang spesifik untuk meningkatkan kinerja.
+
+00:01:00.350 --> 00:01:03.190
+Mari kita bahas satu per satu untuk menunjukkan kepada Anda apa yang saya maksud.
+
+00:01:06.070 --> 00:01:10.270
+Kami memiliki contoh super luar biasa yang kami gunakan terakhir kali juga.
+
+00:01:10.270 --> 00:01:16.750
+Kali ini kami telah menambahkan teknik mengoptimalkan keberhasilan yang baru saja kita bahas.
+
+00:01:16.840 --> 00:01:23.010
+Yang pertama hanya memuat apa yang dibutuhkan sudah cukup jelas.
+
+00:01:23.140 --> 00:01:31.330
+CSSA benar-benar sangat mudah untuk terus menambahkan hal-hal ke kita dapat menambahkan lebih banyak gaya mungkin menyalin beberapa gaya yang kita lihat
+
+00:01:31.330 --> 00:01:37.210
+online dan menempelkannya di sini dan kita dapat membuat file ini ratusan jika tidak ribuan baris
+
+00:01:37.420 --> 00:01:38.040
+panjang.
+
+00:01:39.660 --> 00:01:45.870
+Tetapi dengan hanya memuat apa yang sebenarnya dibutuhkan dan mencegah file membengkak, Anda menghindari waktu pengunduhan yang
+
+00:01:45.870 --> 00:01:46.680
+lebih banyak.
+
+00:01:47.780 --> 00:01:48.580
+Kanan.
+
+00:01:48.650 --> 00:01:50.670
+Jika kita kembali ke contoh kita.
+
+00:01:50.750 --> 00:01:59.180
+Beruntung bagi kita, kita hanya memiliki satu style sheet yang sangat kecil yang mengatakan itu nol dengan kereta sekarang membutuhkan satu
+
+00:01:59.420 --> 00:02:01.200
+mili detik untuk mengunduh.
+
+00:02:01.220 --> 00:02:02.220
+Cukup bagus.
+
+00:02:05.160 --> 00:02:07.270
+Jadi yang pertama bagus dan mudah.
+
+00:02:07.380 --> 00:02:11.010
+Hanya memuat saat Anda membutuhkan.
+
+00:02:11.030 --> 00:02:15.380
+Sekarang titik kedua di atas pemuatan lipatan.
+
+00:02:15.970 --> 00:02:17.520
+Dan ini sangat menarik.
+
+00:02:20.000 --> 00:02:27.820
+Saya seorang pengguna sekarang dan saya me-refresh halaman. Saya hanya tertarik pada apa yang dapat saya lihat jika halaman web ini dengan scrollable mungkin kita memiliki
+
+00:02:27.820 --> 00:02:33.470
+gambar di bawahnya atau itu adalah salah satu dari satu ukuran halaman web yang saya dapat terus menggulir ke
+
+00:02:33.470 --> 00:02:34.370
+bawah di.
+
+00:02:34.380 --> 00:02:36.540
+Semakin banyak informasi.
+
+00:02:36.710 --> 00:02:40.330
+Secara teknis saya tidak perlu melihatnya sampai saya mulai menggulir.
+
+00:02:40.760 --> 00:02:48.860
+Jadi prioritasnya adalah untuk melihat apa pun yang ada di atas flip halaman utama jika kita dapat mengoptimalkan ini
+
+00:02:48.860 --> 00:02:54.930
+dan hanya memuat sementara kita perlu di atas flip akan ada cukup bagus bukan.
+
+00:02:54.930 --> 00:03:00.100
+Mungkin kita hanya perlu CSX yang kita gunakan sekarang di atas kesalahan.
+
+00:03:00.120 --> 00:03:01.790
+Mari saya tunjukkan bagaimana cara melakukannya.
+
+00:03:02.400 --> 00:03:14.820
+Jadi katakanlah kita memiliki style 3 ini dan style tiga ini adalah file CSSA tetapi kita tidak benar-benar membutuhkannya untuk
+
+00:03:15.270 --> 00:03:27.380
+halaman utama situs web kita jadi di sini mari kita buat kelas H-2 dan kelas H2 ini akan menyebutnya.
+
+00:03:27.380 --> 00:03:30.940
+Ini penting.
+
+00:03:34.850 --> 00:03:45.180
+Dan di sini kita akan mengatakan kita hanya akan memuat sepotong Texas mengatakan penting di atas konten flip dan kita bisa
+
+00:03:47.850 --> 00:03:56.810
+menyalin ini lagi dan mengatakan bahwa kita juga memiliki tag H2 lain dan yang ini hanya akan mengatakan
+
+00:03:56.810 --> 00:03:58.350
+itu sekunder.
+
+00:03:58.520 --> 00:04:05.990
+Dan yang ini tidak penting itu di bawah konten kesalahan.
+
+00:04:06.770 --> 00:04:13.450
+Anda ingin melihat ini sampai setelah memuat halaman.
+
+00:04:16.570 --> 00:04:23.440
+Dan katakanlah masing-masing penting dan sekunder memiliki kacamata gaya mereka sendiri, Anda dapat melihat bahwa dalam titik-titik gaya
+
+00:04:23.440 --> 00:04:29.340
+CSSA saya memiliki kelas penting yang memiliki latar belakang kuning dan bergaya tiga 3.
+
+00:04:29.380 --> 00:04:33.700
+SS saya punya sekunder dengan latar belakang merah muda.
+
+00:04:33.780 --> 00:04:39.790
+Sekarang file gaya ini cukup kecil tetapi Anda dapat membayangkan bagaimana cara kerjanya jika aplikasi kita lebih besar.
+
+00:04:42.010 --> 00:04:49.340
+Tetapi sekarang jika saya memuat ini ke halaman Web saya dan saya menyegarkan.
+
+00:04:49.450 --> 00:04:55.890
+Baiklah, saya tidak mendapatkan Stahl karena saya perlu memiliki file dan saya juga salah
+
+00:04:55.900 --> 00:04:57.270
+mengeja penting.
+
+00:04:57.310 --> 00:04:58.070
+Saya konyol.
+
+00:04:58.300 --> 00:04:59.710
+Mari menyegarkan.
+
+00:04:59.710 --> 00:05:05.860
+Baiklah, jadi CSSA pertama berfungsi, yang kedua bukan karena kita perlu mengimpornya.
+
+00:05:05.880 --> 00:05:14.090
+Jadi sekali lagi mari kita tambahkan tiga file gaya baru jika saya menyegarkan.
+
+00:05:14.590 --> 00:05:17.220
+Baiklah semuanya dimuat.
+
+00:05:17.410 --> 00:05:22.310
+Tapi seperti yang Anda lihat di tab jaringan kami, kami mendapat sedikit petunjuk.
+
+00:05:22.570 --> 00:05:27.530
+Jika Anda melihat garis merah di sini dikatakan memuat sembilan mili detik.
+
+00:05:27.610 --> 00:05:31.500
+Jadi itu berarti situs web kami dimuat dalam sembilan milidetik cukup cepat.
+
+00:05:31.720 --> 00:05:37.800
+Namun kedua stylesheet dimuat sebelum kami melihat sesuatu.
+
+00:05:37.910 --> 00:05:44.600
+Tetapi jika ini seperti ini dan latar belakang pink tidak diperlukan karena sebagai pengguna saya hanya akan
+
+00:05:44.600 --> 00:05:46.370
+melihat konten pertama ini.
+
+00:05:46.370 --> 00:05:55.190
+Mari kita lihat apakah kita bisa memindahkan gaya tiga yang akan dimuat setelah garis beban.
+
+00:05:55.330 --> 00:06:00.700
+Garis merah dengan sedikit javascript ini sebenarnya cukup sederhana dan Anda bahkan dapat mengambil skrip ini
+
+00:06:00.810 --> 00:06:01.850
+secara online.
+
+00:06:01.900 --> 00:06:03.100
+Jangan terlalu menekankan hal itu.
+
+00:06:03.100 --> 00:06:11.130
+Jika Anda tidak sepenuhnya mendapatkannya, tetapi sekali lagi menggunakan skrip AG. Kita bisa
+
+00:06:14.790 --> 00:06:25.400
+menggabungkan ini dengan cukup mudah. Beberapa benar-benar memiliki lembar gaya beban biaya dan yang akan menerima parameter
+
+00:06:29.040 --> 00:06:41.220
+sumber dan kita akan mengatakan jika dokumen Daut membuat lembar gaya dan kami hanya ingin memastikan bahwa properti ini atau
+
+00:06:41.220 --> 00:06:43.890
+metode ini benar-benar ada.
+
+00:06:43.890 --> 00:06:50.010
+Jika itu masalahnya karena beberapa browser memiliki ini, kita bisa saja mengatakan membuat style sheet
+
+00:06:50.010 --> 00:06:51.370
+dan memberikan jalannya.
+
+00:06:51.820 --> 00:06:52.390
+Kalau
+
+00:06:56.180 --> 00:06:58.250
+tidak, kita bisa melakukan ini sendiri.
+
+00:06:58.370 --> 00:07:07.820
+Kita dapat mengatakan style sheet sama dengan dokumen yang membuat elemen dan kita
+
+00:07:11.420 --> 00:07:26.320
+akan membuat tag tautan dan tag tautan ini akan memiliki ATF yang dia panggil ke jalur yang sumbernya juga akan memberinya
+
+00:07:29.480 --> 00:07:31.260
+jenis teks.
+
+00:07:31.520 --> 00:07:33.940
+CSX lagi seperti yang kita
+
+00:07:36.570 --> 00:07:39.030
+miliki di sini tipe style sheet.
+
+00:07:39.300 --> 00:07:51.800
+Dan akhirnya kita bisa mengatakan dokumen dot dapatkan elemen dengan ID atau setidaknya dua dengan nama tag dan kita hanya akan mengambil tag
+
+00:07:51.800 --> 00:07:58.760
+kepala dan karena mengembalikan array kita harus mendapatkan elemen array sehingga ini meraih
+
+00:07:59.000 --> 00:08:08.640
+tag kepala kita di Ishmail dan untuk itu kita akan menambahkan anak style sheet dan kita hanya membuat
+
+00:08:08.650 --> 00:08:12.000
+dan kita tidak perlu Cotes yang
+
+00:08:14.900 --> 00:08:15.720
+sempurna.
+
+00:08:15.830 --> 00:08:18.960
+Jadi itu akan membuat style sheet.
+
+00:08:19.520 --> 00:08:23.950
+Jadi kita tidak perlu mengimpornya lagi di sini.
+
+00:08:24.120 --> 00:08:27.100
+Gaya 3.
+
+00:08:27.310 --> 00:08:34.840
+Dan sekarang dengan style sheet kita dimuat atau fungsi yang memuat style sheet kita, kita sekarang dapat memasukkannya ke
+
+00:08:34.840 --> 00:08:38.450
+dalam sesuatu yang disebut data Window pada beban.
+
+00:08:38.650 --> 00:08:40.240
+Jadi saat itulah ia dimuat.
+
+00:08:40.240 --> 00:08:45.230
+Ingatlah bahwa garis merah ketika jendela memuat.
+
+00:08:45.480 --> 00:08:46.440
+Kami hanya
+
+00:08:51.580 --> 00:08:57.120
+dapat menjalankan fungsinya dan kami hanya akan menghibur di sini hanya untuk melihat itu berfungsi.
+
+00:08:57.160 --> 00:09:00.830
+Jendela Will Say selesai.
+
+00:09:02.620 --> 00:09:09.970
+Dan dengan di sini kita bisa melakukan load sheet style kita dengan path file
+
+00:09:09.970 --> 00:09:17.730
+yang akan kita berikan yang akan menjadi Rupes yang akan menjadi style three dot see menilai.
+
+00:09:17.740 --> 00:09:19.420
+Baiklah, mari kita simpan ini.
+
+00:09:19.420 --> 00:09:26.540
+Lihat apakah kami membuat kesalahan dan ingin menyegarkan dan saya melihat Anda mendapatkan kesalahan.
+
+00:09:27.560 --> 00:09:30.240
+Dan buat makanan yang tidak bisa saya eja.
+
+00:09:30.350 --> 00:09:31.210
+Mari kita perbaiki itu.
+
+00:09:31.220 --> 00:09:39.920
+Buat undang-undang berarti simpan. Mari kita coba lagi dan untuk mendapatkan elemen dengan nama tag karena ini harus
+
+00:09:40.700 --> 00:09:43.230
+mendapatkan elemen dengan nama tag.
+
+00:09:43.380 --> 00:09:44.880
+Saya melakukan ini sepanjang waktu.
+
+00:09:44.880 --> 00:09:54.170
+Nah, mari kita refresh rate-nya, kita melihat bahwa di bawah konten flip dan kita tidak mendapatkan udara tetapi kita tidak mendapatkan
+
+00:09:54.200 --> 00:09:57.020
+latar belakang merah muda di sini.
+
+00:09:57.890 --> 00:10:05.010
+Dan kita juga benar-benar membutuhkan style sheet.
+
+00:10:09.080 --> 00:10:15.420
+Gulung yang akan menjadi lembaran gaya.
+
+00:10:15.590 --> 00:10:23.650
+Jadi sekarang kita pergi dan menyegarkan Ceara bagian bawah jika saya menyegarkan kembali.
+
+00:10:24.900 --> 00:10:32.970
+Kami melihat bahwa indeks dan gaya dimuat sebelum peristiwa jendela memuat jadi memuat halaman web dan
+
+00:10:33.330 --> 00:10:36.410
+gaya akhir tiga dimuat sesudahnya.
+
+00:10:37.230 --> 00:10:44.260
+Dan jika saya gulir ke sana Anda akan ada latar belakang merah muda saya dari gaya saya tiga titik.
+
+00:10:44.280 --> 00:10:53.290
+SS Mari kita tutup ini dan kita hanya perlu memuat ulang rambut dan kita melihat itu kosong karena gaya
+
+00:10:53.290 --> 00:10:55.900
+sedang dimuat setelah halaman web.
+
+00:10:55.900 --> 00:11:02.600
+Jadi setelah itu ditampilkan maka gaya akan dimuat versus kuning yang selalu ada.
+
+00:11:05.410 --> 00:11:06.610
+Dari yang sangat
+
+00:11:11.140 --> 00:11:12.240
+sangat keren.
+
+00:11:12.330 --> 00:11:14.890
+Jadi kami baru saja melakukannya di atas pemuatan lipatan.
+
+00:11:15.090 --> 00:11:20.420
+Sekarang ada dua hal lagi dan ada jauh lebih cepat untuk menunjukkan atribut media.
+
+00:11:20.460 --> 00:11:24.960
+Baik Anda telah melakukan ini sebelum kami menunjukkan kepada Anda
+
+00:11:28.840 --> 00:11:36.710
+bagaimana melakukan atribut media dengan media dalam file CSSA Anda, tetapi Anda sebenarnya dapat melakukannya dalam file email Anda.
+
+00:11:38.470 --> 00:11:46.970
+Jadi katakanlah misalnya Anda memiliki beberapa media yang hanya diperlukan untuk dinding ukuran layar tertentu dalam hal ini,
+
+00:11:46.970 --> 00:11:54.190
+mari kita salin semua ini dan kami akan mengatakan media yang omong-omong ini default
+
+00:11:54.190 --> 00:12:00.380
+jika Anda tidak memasukkan tag tautan menganggap bahwa media sama dengan semua.
+
+00:12:00.580 --> 00:12:13.040
+Tetapi dalam kasus kami katakanlah gaya kita pada Dotsie SS Yang ini akan memiliki media di layar.
+
+00:12:13.270 --> 00:12:14.650
+Saya tidak menggunakan media di sini.
+
+00:12:14.650 --> 00:12:15.410
+Ini dia.
+
+00:12:15.760 --> 00:12:17.820
+Jadi itu hanya layar.
+
+00:12:17.830 --> 00:12:31.120
+Jadi untuk layar apa pun dan kami akan katakan dan laki-laki dengan akan menjadi 500 piksel.
+
+00:12:31.210 --> 00:12:42.890
+Jadi jika saya melakukan ini dan menyimpan dan akan melihat gaya itu juga memiliki warna H-1 merah saya kembali ke sini dan saya menyegarkan akan
+
+00:12:43.940 --> 00:12:47.650
+melihat bahwa yang mengatakan Hi merahnya harus
+
+00:12:50.310 --> 00:13:02.200
+berubah kembali ke seberapa cepat mari kita menyegarkan dan jika saya gulir lebih dekat sama kita melihat bahwa itu hijau sekarang dan Anda juga melihat
+
+00:13:02.200 --> 00:13:06.760
+di bagian bawah bahwa kita memiliki ketiga style sheet.
+
+00:13:10.050 --> 00:13:10.920
+Sangat keren.
+
+00:13:10.920 --> 00:13:14.240
+Dan kemudian hal terakhir adalah kurang spesifik.
+
+00:13:14.340 --> 00:13:22.990
+Dan ini sangat kecil tetapi mungkin hanya perlu diingat bahwa jika kita pergi ke style 2 di sini kita
+
+00:13:23.380 --> 00:13:26.440
+memiliki yang baik dan yang buruk.
+
+00:13:26.470 --> 00:13:28.780
+Sekarang mengapa ini terjadi.
+
+00:13:28.810 --> 00:13:33.750
+Karena ingat browser adalah komputer yang perlu dikerjakan.
+
+00:13:33.820 --> 00:13:41.140
+Pertama-tama, semakin banyak informasi yang kami kirim, semakin banyak byte yang dikirim.
+
+00:13:41.200 --> 00:13:44.210
+Ini jauh lebih sedikit karakter dari yang ini.
+
+00:13:44.470 --> 00:13:52.570
+Tetapi juga ketika tiba di browser, browser harus menghitung gaya untuk membuat dom CSSA itu
+
+00:13:52.570 --> 00:13:53.620
+benar.
+
+00:13:53.620 --> 00:14:01.360
+Jadi perlu melakukan sedikit lebih banyak pekerjaan jika kekhususannya benar-benar rumit dibandingkan jika
+
+00:14:01.360 --> 00:14:03.460
+hanya seperti ini.
+
+00:14:03.460 --> 00:14:08.800
+Jadi sekali lagi yang kecil tetapi penting untuk memahami cara kerja rendering di browser.
+
+00:14:10.870 --> 00:14:12.760
+Ok saya bohong.
+
+00:14:12.760 --> 00:14:19.010
+Ada satu hal terakhir yang ingin saya tunjukkan ketika kita mengatakan memuat hanya apa yang dibutuhkan
+
+00:14:19.090 --> 00:14:22.380
+Beberapa dari Anda mungkin berpikir ada trik yang bisa kita lakukan.
+
+00:14:23.200 --> 00:14:34.380
+Mungkin alih-alih memuat style sheet eksternal, kita cukup membuat yang internal yang merupakan tag gaya dan tag gaya
+
+00:14:34.380 --> 00:14:35.070
+ini
+
+00:14:40.960 --> 00:14:46.030
+di sini kita bisa meletakkan semua CSSA kita.
+
+00:14:46.110 --> 00:14:56.890
+Sebagai contoh jika saya ingin H-1 memiliki gaya tertentu, katakanlah gaya font 30 piksel dan sebenarnya hanya untuk membuatnya lebih jelas,
+
+00:14:56.890 --> 00:15:03.340
+kita dapat mengatakan bahwa kita hanya akan mengatakan bahwa warna adalah Bulley,
+
+00:15:06.450 --> 00:15:15.790
+semua simpan dan segarkan dan kita lihat di sini kami dapat mengubah gaya tetapi kami tidak memuat
+
+00:15:15.850 --> 00:15:17.790
+lembar gaya baru.
+
+00:15:17.980 --> 00:15:24.370
+Jadi secara teoritis kita bisa meletakkan semua gaya di sini dan di sini hanya mengambil semua itu
+
+00:15:24.520 --> 00:15:27.180
+dan menempatkannya di dalam blok ini.
+
+00:15:27.430 --> 00:15:28.260
+Dan itu sangat bagus.
+
+00:15:28.300 --> 00:15:31.780
+Kami menghindari permintaan yang sebenarnya.
+
+00:15:32.030 --> 00:15:34.490
+Namun Anda mungkin melihat ada masalah di sini.
+
+00:15:34.490 --> 00:15:37.510
+Jika kami memiliki beberapa halaman Ishimaru.
+
+00:15:37.670 --> 00:15:42.700
+Kita harus menyalin dan menempel ini ke halaman lain.
+
+00:15:42.790 --> 00:15:47.120
+Jadi ini hanya bekerja pada satu.
+
+00:15:47.230 --> 00:15:54.020
+Tim Page dan ini sebenarnya adalah hal yang baik untuk dilakukan jika Anda melakukan pemuatan penuh dengan
+
+00:15:54.020 --> 00:15:57.350
+internal Cs hanya untuk lipatan di atas.
+
+00:15:57.420 --> 00:15:59.930
+C Ss itu trik yang baik untuk dilakukan.
+
+00:15:59.930 --> 00:16:05.450
+Pilihan lain adalah memiliki sesuatu yang disebut dalam baris C Ss dan N line C Ss.
+
+00:16:05.460 --> 00:16:20.610
+Sekali lagi adalah atribut style kali ini dan kita dapat mengatakan bahwa style ini memiliki latar belakang Stu caller berwarna kuning.
+
+00:16:20.820 --> 00:16:24.560
+Jika saya menyimpan dan menyegarkan kembali, tidak ada yang baru.
+
+00:16:24.840 --> 00:16:28.860
+Kami memiliki Bob kuning latar belakang kami tanpa lembaran gaya baru.
+
+00:16:28.860 --> 00:16:31.530
+Dan sekali lagi ini cukup bagus.
+
+00:16:31.620 --> 00:16:36.180
+Dan browser ini mampu membaca ini dengan sangat sangat cepat dan menerapkan gaya cukup cepat.
+
+00:16:36.180 --> 00:16:43.410
+Tetapi sekali lagi batasan ini adalah kenyataan bahwa kita harus melakukannya untuk setiap elemen dan kita tidak bisa benar-benar
+
+00:16:43.410 --> 00:16:45.940
+memiliki kelas atau ID untuk itu.
+
+00:16:47.860 --> 00:16:55.220
+Tetapi secara strategis jika Anda menggunakan ini, Anda dapat membuat situs web Anda lebih cepat tergantung pada situasi Anda.
+
+00:16:56.240 --> 00:17:00.470
+Baiklah itu saja untuk saat ini untuk ditinjau.
+
+00:17:00.580 --> 00:17:04.850
+Kami telah belajar bahwa dengan CSSA kami hanya ingin memuat apa pun yang dibutuhkan.
+
+00:17:05.170 --> 00:17:06.370
+Kami ingin mempertimbangkan.
+
+00:17:06.370 --> 00:17:08.200
+Di atas pemuatan lipatan.
+
+00:17:08.200 --> 00:17:15.610
+Kami ingin bekerja dengan atribut media untuk memastikan kami membuat spesifik untuk ukuran layar dan kami juga
+
+00:17:15.610 --> 00:17:20.150
+mungkin ingin mempertimbangkan kurang spesifik ketika datang ke CSSA kami.
+
+00:17:20.150 --> 00:17:21.760
+Baiklah itu sudah cukup untuk saat ini.
+
+00:17:21.890 --> 00:17:25.280
+Saya akan melihat di video berikutnya di mana kita berbicara tentang javascript Buh-Bye.

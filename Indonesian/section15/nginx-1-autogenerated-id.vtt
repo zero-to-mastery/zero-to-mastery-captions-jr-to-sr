@@ -1,0 +1,235 @@
+﻿WEBVTT
+
+00:00:00.640 --> 00:00:01.600
+Selamat datang kembali.
+
+00:00:01.790 --> 00:00:03.950
+Mari kita lakukan sesuatu yang menyenangkan di sini.
+
+00:00:04.100 --> 00:00:10.200
+Kita dapat membuat penyeimbang rendah kita sendiri sekarang ketika datang ke load balancing.
+
+00:00:10.210 --> 00:00:18.040
+Kita akan menggunakan engine X dan ada beberapa opsi yang memungkinkan mereka melakukan akses engine yang populer tetapi juga sesuatu yang
+
+00:00:18.040 --> 00:00:20.740
+disebut H. SEBUAH. proxy banyak digunakan.
+
+00:00:21.590 --> 00:00:27.050
+Sebagian besar alat ini hanya memerlukan file konfigurasi dan ada banyak sumber daya di luar sana untuk membantu
+
+00:00:27.050 --> 00:00:27.940
+Anda online.
+
+00:00:28.820 --> 00:00:34.690
+Tetapi juga membuat penyeimbang rendah sendiri menjadi semakin jarang terjadi.
+
+00:00:34.730 --> 00:00:42.920
+Anda melihat sebagian besar perusahaan seperti Amazon Digital Ocean dan sebagian besar penyedia yang menyediakan infrastruktur sudah
+
+00:00:42.920 --> 00:00:50.420
+memuat pengaturan penyeimbang yang dapat mereka implementasikan dengan mudah misalnya tindakan digital memiliki penyeimbang rendah yang
+
+00:00:50.420 --> 00:00:53.750
+dapat mereka tambahkan ke server Anda.
+
+00:00:53.830 --> 00:00:55.180
+Ini sangat sangat sederhana.
+
+00:00:55.180 --> 00:01:00.340
+Anda tidak benar-benar perlu kode dan Anda cukup mengklik beberapa tombol dan semuanya turun untuk Anda.
+
+00:01:00.340 --> 00:01:08.460
+Anda juga memiliki Amazon yang memiliki penyeimbangan beban elastis yang lagi Anda hanya menerapkan dan mengonfigurasi.
+
+00:01:08.580 --> 00:01:14.940
+Namun saya ingin kita membangun penyeimbang beban hanya untuk memahami cara kerjanya dan hanya memiliki
+
+00:01:14.940 --> 00:01:21.420
+pengetahuan tentang bagaimana hal-hal ini seperti Amazon dan Digital Ocean bagaimana perusahaan-perusahaan ini dapat menerapkan load balancing.
+
+00:01:21.690 --> 00:01:23.200
+Jadi mari kita mencobanya.
+
+00:01:23.250 --> 00:01:29.790
+Saya punya di sini file kecil yang menyenangkan dan Anda akan memiliki akses ke ini di akhir video ini sehingga Anda
+
+00:01:30.000 --> 00:01:34.200
+dapat menguji beberapa teknik penyeimbangan rendah dan dan pengujian rendah yang akan kami
+
+00:01:34.230 --> 00:01:36.390
+lakukan karena ini adalah sangat menyenangkan.
+
+00:01:36.390 --> 00:01:38.700
+Sekarang jangan kewalahan dengan kode di sini.
+
+00:01:38.700 --> 00:01:46.260
+Saya tidak menggunakan Express dan menggunakan modul dan node GTP asli untuk hanya membuat server sederhana yang
+
+00:01:46.290 --> 00:01:48.980
+mengembalikan malapetaka palsu pada ikon.
+
+00:01:48.990 --> 00:01:57.060
+Dan saya melakukan ini hanya untuk memastikan bahwa kami tidak mendapatkan log aneh dari Fabrikant yang hilang dan
+
+00:01:57.060 --> 00:01:59.370
+kemudian kami hanya membatalkan logging.
+
+00:01:59.370 --> 00:02:05.010
+Kami menambahkan beberapa header respons, tetapi sekali lagi ini adalah penting, kami hanya melakukan logging konsol
+
+00:02:05.100 --> 00:02:07.190
+setiap kali satu ampli terkena.
+
+00:02:07.200 --> 00:02:12.040
+Saya telah terkena dan server kami akan berjalan di sini.
+
+00:02:12.140 --> 00:02:18.670
+Tidak ada yang terlalu gila tapi saya juga memiliki file yang disusun buruh pelabuhan lagi sesuatu yang telah kita
+
+00:02:18.790 --> 00:02:22.140
+lihat sebelumnya dan file kompos penguntit ini cukup menarik.
+
+00:02:22.150 --> 00:02:24.310
+Kami memiliki beberapa layanan.
+
+00:02:24.310 --> 00:02:29.380
+Satu adalah web pada yang lain Web 2 dan web 3.
+
+00:02:29.470 --> 00:02:31.180
+Sangat kreatif dengan nama saya di sini.
+
+00:02:31.360 --> 00:02:39.190
+Tapi Anda lihat di sini bahwa mereka hanya memiliki port 3000 dan mari kita benar-benar mengubah dua port yang berbeda ini supaya
+
+00:02:39.400 --> 00:02:42.950
+kami memiliki ide yang lebih baik bagaimana mereka bekerja
+
+00:02:42.950 --> 00:02:51.620
+Jadi setiap layanan pada port yang berbeda dan semua yang akan mereka lakukan adalah menjalankan perintah build.
+
+00:02:51.670 --> 00:02:53.770
+Perhatikan juga di sini bahwa kita sekarang sedang melakukan port forwarding.
+
+00:02:53.770 --> 00:02:59.890
+Jadi itu berarti mereka hanya sendirian, apa yang ada di dalam dermaga atau kontainer akan memiliki akses
+
+00:02:59.890 --> 00:03:00.660
+kepada mereka.
+
+00:03:00.790 --> 00:03:05.170
+Jika kita pergi ke build itu adalah dock atau file yang membangun ini.
+
+00:03:05.330 --> 00:03:09.890
+Saya melihat bahwa kita hanya menggunakan simpul, kita mengekspos port tiga ribu.
+
+00:03:09.920 --> 00:03:15.890
+Kami sedang membuat aplikasi direktori bernama dan kami memindahkan server file GS yang telah saya
+
+00:03:15.890 --> 00:03:24.170
+tunjukkan kepada Anda dan juga paket dodgiest pada file untuk menjalankan instalasi NPM dan kemudian kami hanya memiliki titik masuk dan
+
+00:03:24.170 --> 00:03:28.220
+perintah yang dijalankan server yang kita miliki di sini.
+
+00:03:31.260 --> 00:03:34.340
+Dan tidak ada yang terlalu gila terjadi di sini.
+
+00:03:34.350 --> 00:03:41.940
+Tapi kemudian kita memiliki sesuatu yang disebut load balancer dan load balancer ini dibangun dari folder berikutnya yang
+
+00:03:41.940 --> 00:03:44.050
+marah yang belum kita buat.
+
+00:03:44.130 --> 00:03:51.700
+Ini akan mengekspos port 80 dan kita akan memiliki akses ke localhost aty dan menghubungkan web satu
+
+00:03:51.880 --> 00:04:00.590
+ke tiga dan juga menggunakan volume dan memiliki komentar ini sekarang saya akan meninggalkan sumber daya dalam proyek ini untuk Anda
+
+00:04:00.590 --> 00:04:01.960
+baca hal ini.
+
+00:04:01.970 --> 00:04:07.370
+Yang dilakukannya adalah memungkinkan kami menjalankan perintah Dokter di dalam wadah dan saya telah menautkan ke artikel
+
+00:04:07.370 --> 00:04:09.760
+yang dapat Anda baca informasi lebih lanjut.
+
+00:04:09.770 --> 00:04:12.200
+Sekarang ini bukan pengaturan yang umum.
+
+00:04:12.200 --> 00:04:20.370
+Ketika Anda melakukan penyeimbang beban karena kami memiliki semuanya di bawah satu wadah jika Anda ingat kami ingin
+
+00:04:20.370 --> 00:04:25.100
+memiliki penyeimbang beban dengan sendirinya dengan server yang berbeda.
+
+00:04:25.290 --> 00:04:30.510
+Saat ini kami memiliki semuanya hanya dalam satu wadah raksasa dan saya hanya melakukan ini sehingga
+
+00:04:30.540 --> 00:04:37.350
+kami dapat menunjukkan tanpa saya harus memutar semua layanan yang berbeda ini di laptop saya dan hanya mengetuk semuanya di dalam
+
+00:04:37.450 --> 00:04:39.800
+atau menulis file untuk tujuan demonstrasi.
+
+00:04:39.900 --> 00:04:46.260
+Tetapi dalam kehidupan nyata kita memiliki mesin penyeimbang beban pada server sendiri pada
+
+00:04:46.290 --> 00:04:56.230
+server sendiri pada server sendiri tiga tetapi dengan file ini kita sekarang memiliki cara untuk memiliki penyeimbang beban yang dapat dipukul
+
+00:04:56.230 --> 00:05:05.260
+melalui port 80 dan kemudian mendistribusikan jalan ke server 1 2 dan 3 yang akan menjadi masing-masing menjalankan
+
+00:05:05.540 --> 00:05:07.510
+salinan server ini.
+
+00:05:07.640 --> 00:05:13.840
+Jadi mari kita benar-benar membuat folder engine X ini dan membuat bouncer beban Angie Nax kami.
+
+00:05:13.890 --> 00:05:24.550
+Saya akan mengatakan folder baru kemudian engine X dan di folder berikutnya ini kita harus membuat dua hal.
+
+00:05:24.760 --> 00:05:33.700
+Pertama kita perlu membuat file buruh pelabuhan karena ingat kita harus membangun sesuai dengan Dr. sekarang dan musim gugur ini kita akan
+
+00:05:33.700 --> 00:05:36.970
+melakukan komentar file doc sederhana.
+
+00:05:37.060 --> 00:05:42.050
+Kami hanya akan menggunakan mesin gambar berikutnya yang sudah ada di sana.
+
+00:05:42.130 --> 00:05:44.050
+Terima kasih Sudhakar hub.
+
+00:05:44.320 --> 00:05:45.700
+Dan kemudian kita
+
+00:05:49.130 --> 00:05:54.680
+akan menyalin file Kita akan membuat disebut Engine X dot com yang merupakan
+
+00:05:54.680 --> 00:06:04.010
+file konfigurasi dan mesin X yang akan kita buat segera dan memindahkannya ke wadah kami di lokasi default bahwa mesin X Files konfigurasi
+
+00:06:04.010 --> 00:06:06.280
+file harus dalam kasus kami.
+
+00:06:06.350 --> 00:06:09.020
+Kami hanya akan memberi nama seperti ini.
+
+00:06:13.360 --> 00:06:14.310
+Itu dia.
+
+00:06:14.470 --> 00:06:19.780
+Kita bisa menggunakan Dr. Howard hanya mengambil wadah atau mengambil gambar dan kemudian kita bisa
+
+00:06:19.960 --> 00:06:21.190
+mengkonfigurasinya dari pihak kita.
+
+00:06:21.340 --> 00:06:29.370
+Jadi mari kita buat file baru sekarang dan ini akan menjadi mesin X dot com kami di sini.
+
+00:06:29.510 --> 00:06:31.820
+Mari kita mulai bekerja pada konfigurasi kami untuk.

@@ -1,0 +1,196 @@
+﻿WEBVTT
+
+00:00:01.330 --> 00:00:09.730
+Seperti yang telah kami sebutkan sebelumnya header atau HTP benar-benar sangat penting dalam memberi tahu browser apa yang harus dilakukan dengan
+
+00:00:10.000 --> 00:00:12.880
+beberapa konten yang telah kami kirimkan.
+
+00:00:13.240 --> 00:00:18.720
+Dan terkadang untuk memberi tahu server apa yang harus dilakukan juga dengan ini harus menjadi permintaan.
+
+00:00:18.730 --> 00:00:24.910
+Ada satu ton dari mereka dan saya akan meninggalkan sumber daya bagi Anda untuk membaca mereka karena itu adalah
+
+00:00:24.940 --> 00:00:27.010
+di luar ruang lingkup kursus ini.
+
+00:00:27.550 --> 00:00:32.500
+Tetapi Anda akan benar-benar menyukai saya karena saya akan membuat proses ini sangat sederhana untuk Anda.
+
+00:00:33.310 --> 00:00:39.420
+Untuk memiliki header yang aman dalam sesuatu seperti express up, hanya itu yang perlu kita lakukan.
+
+00:00:39.420 --> 00:00:46.180
+Sekali lagi ini adalah masalah yang dimiliki semua orang di aplikasi mereka sehingga ada paket yang membantu
+
+00:00:46.180 --> 00:00:47.330
+Anda mempermudah.
+
+00:00:48.880 --> 00:00:51.430
+Jadi kita hanya perlu NPM memasang helm.
+
+00:00:51.430 --> 00:00:53.090
+Sekarang, saya tunjukkan cara kerjanya.
+
+00:00:54.960 --> 00:01:02.120
+Jika saya kembali ke aplikasi saya di sini dan mari kita meminimalkan ini untuk saat ini sehingga kita dapat melihat semuanya mari
+
+00:01:02.270 --> 00:01:05.570
+kita lihat apa yang terjadi tanpa helm yang digunakan.
+
+00:01:05.570 --> 00:01:14.800
+Saya akan mengetik sesuatu di sini dan mari kita buka tab Network dan hanya mengirim beberapa omong kosong.
+
+00:01:14.800 --> 00:01:15.260
+Baiklah.
+
+00:01:15.260 --> 00:01:17.480
+Saya mendapatkan rahasia saya
+
+00:01:20.170 --> 00:01:28.870
+dan saya melihat di header saya bahwa saya memiliki semua informasi kecil ini oh lihatlah bahwa saya
+
+00:01:29.170 --> 00:01:33.690
+memiliki informasi bahwa situs web ini didukung oleh Xpress.
+
+00:01:33.730 --> 00:01:40.750
+Sekarang itu mungkin tidak tampak seperti informasi penting tetapi bagi peretas yang berpengetahuan luas mungkin sekarang saya
+
+00:01:40.880 --> 00:01:48.670
+bisa Google dia kerentanan dan mengekspresikan dan mungkin jika saya belum memperbarui server ekspres saya bahwa aktor buruk sekarang dapat
+
+00:01:48.940 --> 00:01:51.210
+menggunakan kerentanan itu terhadap saya.
+
+00:01:51.430 --> 00:01:58.270
+Dan ada banyak header seperti itu yang benar-benar memengaruhi keamanan aplikasi.
+
+00:01:58.540 --> 00:02:06.520
+Dan kami memiliki paket hebat bernama Hammad yang saya instal di setiap server yang saya buat dan helmkan seperti
+
+00:02:06.670 --> 00:02:14.050
+yang Anda lihat membantu Anda mengamankan aplikasi ekspres Anda dengan mengatur berbagai header dan ada alat
+
+00:02:14.110 --> 00:02:21.520
+untuk hal-hal selain express tetapi Express umumnya yang paling umum dan paling didokumentasikan dengan baik di masyarakat.
+
+00:02:23.210 --> 00:02:25.480
+Dan seperti yang Anda lihat di sini, itu sangat mudah.
+
+00:02:25.520 --> 00:02:28.420
+Jadi mari kita salin dan tempel ini.
+
+00:02:28.490 --> 00:02:31.100
+Saya akan menginstal Helmut.
+
+00:02:31.110 --> 00:02:46.920
+Mari kita kembali ke sini dan PM menginstal Helmut dan kita hanya bisa memasukkannya karena helm sama membutuhkan helm.
+
+00:02:46.920 --> 00:02:47.820
+Sempurna.
+
+00:02:47.820 --> 00:02:56.990
+Dan kemudian jika kita melihat dokumentasi tepat setelah aplikasi sama dengan
+
+00:02:57.030 --> 00:03:05.890
+Express, kita bisa menggunakan Helmut lagi dan middleware lain.
+
+00:03:05.900 --> 00:03:13.890
+Ingat daripada melakukan hal semacam ini di mana kita harus mengatur helm header melakukan ini untuk kita.
+
+00:03:14.240 --> 00:03:15.860
+Jadi bertarung selamatkan.
+
+00:03:16.180 --> 00:03:24.080
+Ron NPM mulai dan kembali ke aplikasi kami dan mari kita segarkan di sini.
+
+00:03:24.370 --> 00:03:29.380
+Dan saya hanya akan mengirimkan sesuatu yang lain.
+
+00:03:29.390 --> 00:03:35.780
+Baiklah saya mendapatkan permintaan pencari nother tapi periksa ini.
+
+00:03:35.780 --> 00:03:43.540
+Tidak ada X par lagi, tetapi kami memiliki semua tajuk ini seperti opsi pengunduhan
+
+00:03:43.610 --> 00:03:48.710
+skrip lintas-situs, opsi pengunduhan, DNS, kontrol prefetch, Opsi Jenis-Konten.
+
+00:03:48.710 --> 00:03:54.370
+Kami bahkan telah memiliki keamanan transportasi yang ketat, Max Saige.
+
+00:03:54.740 --> 00:03:57.050
+Itu hukum hal.
+
+00:03:57.050 --> 00:04:04.250
+Dan Anda tahu apa yang hametz atur semua ini untuk kami jika kami menggulir ke bawah, Anda melihat
+
+00:04:04.250 --> 00:04:12.340
+Anda dapat mengklik semua ini dan menunjukkan kepada Anda apa yang diatur dan apa yang ditetapkan secara default karena beberapa hal
+
+00:04:12.340 --> 00:04:16.650
+ini tidak diatur sehingga Anda memiliki beberapa kebebasan untuk menyesuaikannya.
+
+00:04:16.900 --> 00:04:22.360
+Tapi di luar kotak hanya dengan menjalankan helm tanpa melakukan konfigurasi, kami memiliki semua penjaga
+
+00:04:22.390 --> 00:04:23.800
+ini di tempat.
+
+00:04:23.800 --> 00:04:31.990
+Misalnya H. S. TS atau keamanan transportasi ketat yang kami lihat di sini.
+
+00:04:32.160 --> 00:04:33.410
+Dimana itu.
+
+00:04:33.420 --> 00:04:34.680
+Ini dia.
+
+00:04:34.710 --> 00:04:44.100
+Ini mengatakan bahwa dengan situs web ini kami hanya akan mengizinkan AC DC di server dan mengalihkan semua panggilan yang dilakukan
+
+00:04:44.790 --> 00:04:53.370
+oleh klien ini ke CBS dan memiliki usia maksimum yang mengatakan saya ingin Anda mengingat ini selama ini
+
+00:04:53.370 --> 00:04:55.560
+dan terasa ini setahun.
+
+00:04:55.560 --> 00:04:56.410
+Sudah lama.
+
+00:04:56.760 --> 00:05:05.030
+Dan opsi berdaya tinggi itulah X yang didukung oleh tajuk yang telah dihapus.
+
+00:05:05.070 --> 00:05:09.050
+Ingat itu menunjukkan Xpress karena Helmut.
+
+00:05:09.050 --> 00:05:09.700
+Ini dia.
+
+00:05:09.710 --> 00:05:11.610
+Solusi yang bagus dan sederhana.
+
+00:05:11.690 --> 00:05:15.530
+Anda dapat melanjutkan dan membaca semua ini dan header keamanan lainnya.
+
+00:05:15.590 --> 00:05:23.360
+Tapi Helmut jujur mencakup sebagian besar dari masalah ini dan jika Anda memiliki helm sebagai bagian dari aplikasi Anda saat itu maka
+
+00:05:23.360 --> 00:05:24.850
+Anda sudah cukup siap.
+
+00:05:26.240 --> 00:05:29.470
+Anda tahu saya katakan ini akan menjadi video yang bagus dan mudah.
+
+00:05:29.930 --> 00:05:32.570
+Saya pikir kita pantas mendapatkannya sesekali.
+
+00:05:32.570 --> 00:05:33.140
+Baiklah.
+
+00:05:33.230 --> 00:05:34.560
+Sampai jumpa di yang berikutnya.
+
+00:05:34.560 --> 00:05:35.020
+Sampai jumpa.

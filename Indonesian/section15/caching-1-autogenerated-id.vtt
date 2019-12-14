@@ -1,0 +1,232 @@
+﻿WEBVTT
+
+00:00:00.980 --> 00:00:04.640
+Caching adalah proses menyimpan beberapa data.
+
+00:00:05.410 --> 00:00:14.430
+In cash cash adalah area komponen penyimpanan sementara tempat data disimpan sehingga di masa depan saya bisa
+
+00:00:14.470 --> 00:00:16.590
+dilayani lebih cepat.
+
+00:00:16.630 --> 00:00:23.050
+Anggap saja sebagai kotak paket kecil tempat kita menyimpan informasi sehingga kita tidak perlu melakukan perjalanan kembali
+
+00:00:23.050 --> 00:00:26.560
+ke mana pun kita akan mengambil informasi ini.
+
+00:00:26.590 --> 00:00:33.150
+Kami memiliki paket yang jauh lebih dekat dengan kami yang dapat memberi kami informasi ini lebih cepat.
+
+00:00:33.170 --> 00:00:40.890
+Sekarang agar kita benar-benar memahami caching kita harus pergi ke langkah-langkah yang sangat mendasar yang berbicara tentang C-p menggunakan memori
+
+00:00:40.890 --> 00:00:52.420
+akses acak atau RAM dan hard disk sekarang C. P. penggunaan dibangun dengan memori chip
+
+00:00:52.690 --> 00:00:59.940
+khusus yang disebut register yang biasanya terdiri dari sejumlah kecil penyimpanan cepat.
+
+00:01:00.030 --> 00:01:07.260
+Jadi penggunaan C-p saat ini sebenarnya memiliki sedikit memori juga selain hanya melakukan semua pekerjaan atau
+
+00:01:07.260 --> 00:01:09.330
+menjadi otak komputer kita.
+
+00:01:10.400 --> 00:01:16.760
+Mereka adalah penyimpanan memori terdekat dan terkecil di komputer kita, tetapi juga yang tercepat.
+
+00:01:16.940 --> 00:01:26.300
+Terkadang Anda mungkin pernah mendengar register ini adalah Zero Cash. ALSWANG cash L-3 untuk uang tunai dan semua
+
+00:01:26.310 --> 00:01:31.520
+cache ini tergantung apakah ada atau tidak pada arsitektur chip.
+
+00:01:31.760 --> 00:01:35.210
+Tapi mereka digunakan sebagai cara supercepat untuk mengakses memori.
+
+00:01:35.210 --> 00:01:36.730
+Yang tercepat yang bisa kita tuju.
+
+00:01:37.220 --> 00:01:41.120
+Dan kemudian kita memiliki sesuatu seperti Ramm atau memori akses acak.
+
+00:01:41.200 --> 00:01:48.470
+Ada lagi yang lebih dekat ke CPI tidak sedekat register di mana potongan-potongan kecil memori
+
+00:01:48.470 --> 00:01:56.960
+yang Cp Anda miliki tetapi cukup besar yang dapat menyimpan informasi penting yang dapat Anda akses informasi
+
+00:01:56.960 --> 00:02:03.990
+dan menggunakannya lagi karena ini ada dalam memori karena daya padam komputer kita.
+
+00:02:04.000 --> 00:02:05.660
+Nah informasi itu hilang.
+
+00:02:05.930 --> 00:02:13.080
+Tetapi karena itu adalah memori Yah itu juga cepat diakses.
+
+00:02:13.320 --> 00:02:16.570
+Dan kemudian kita memiliki sesuatu seperti hard disk drive.
+
+00:02:16.980 --> 00:02:20.550
+Dan ini adalah disk fisik yang kami miliki di komputer kami.
+
+00:02:20.580 --> 00:02:26.820
+Sekarang pak ini di komputer Anda, Anda akan menemukan sesuatu seperti solid state drive yang sebenarnya membuat
+
+00:02:27.060 --> 00:02:29.110
+mengakses informasi jauh lebih cepat.
+
+00:02:29.930 --> 00:02:37.880
+Tetapi perbedaan antara RAM dan hard disk drive ini adalah biaya kinerja dan kedekatan dengan CPE yang Anda
+
+00:02:37.880 --> 00:02:46.670
+lihat saat kami turun ke garis menjadi lebih murah dan lebih murah tetapi juga menjadi lebih lambat dan dijual lebih
+
+00:02:46.670 --> 00:02:52.420
+lambat untuk mengakses memori ini untuk CPQ Anda untuk mengakses memori disk.
+
+00:02:52.640 --> 00:02:59.300
+Yah itu harus menempuh jarak yang lebih jauh dan disk membutuhkan waktu lebih lama untuk
+
+00:02:59.340 --> 00:03:06.470
+mendapatkan informasi itu ke CPQ tetapi manfaat tambahannya adalah meskipun daya padam disk ini akan mengingat informasi
+
+00:03:07.870 --> 00:03:12.220
+kita lagi versus ram yang hanya menyimpan data sementara.
+
+00:03:12.220 --> 00:03:15.090
+Disk ini mampu menyimpan data jangka panjang.
+
+00:03:16.660 --> 00:03:16.970
+BAIK.
+
+00:03:16.980 --> 00:03:20.150
+Tetapi mengapa kita baru belajar tentang ini.
+
+00:03:20.310 --> 00:03:22.170
+Bagaimana ini berguna bagi kita.
+
+00:03:22.850 --> 00:03:30.560
+Anda tahu karena caching sebenarnya ada di mana-mana dan kebanyakan orang mungkin tidak menyadari berapa banyak
+
+00:03:30.560 --> 00:03:39.500
+tempat yang dapat kita cache dengan cara yang serupa di mana kita dapat mengakses memori atau mengakses data lebih cepat
+
+00:03:39.560 --> 00:03:43.910
+di komputer kita menggunakan RAM CPQ dan hard disk.
+
+00:03:43.910 --> 00:03:54.210
+Apa yang bisa kita lakukan dengan prinsip serupa yang sama dalam aplikasi kita misalnya kita menggunakan CD berakhir untuk cache adalah file
+
+00:03:54.270 --> 00:04:00.810
+CSSA waria dan javascript sehingga alih-alih browser akan kembali ke server di seluruh
+
+00:04:00.840 --> 00:04:08.700
+negara di seluruh dunia itu hanya dapat mengakses CDN server terdekat dan gunakan file yang di-cache.
+
+00:04:09.830 --> 00:04:14.600
+Ada juga hal-hal yang kita dapat uang tunai di server misalnya di server.
+
+00:04:14.600 --> 00:04:20.720
+Jika saya mengakses semacam API yang mengembalikan saya robot dengan baik sehingga saya tidak perlu
+
+00:04:20.720 --> 00:04:28.930
+meminta setiap kali mungkin saya dapat menguangkan informasi robot itu mungkin dalam suatu variabel, mungkin dalam penyimpanan memori seperti rattus
+
+00:04:28.940 --> 00:04:31.750
+atau mungkin bahkan dalam database .
+
+00:04:31.760 --> 00:04:38.810
+Jika API sangat lambat, kami juga dapat menggunakan caching di sisi basis data dan server basis data akan
+
+00:04:38.810 --> 00:04:45.200
+dikonfigurasikan di luar kotak biasanya untuk caching yang optimal tetapi mereka juga memungkinkan Anda untuk
+
+00:04:45.200 --> 00:04:48.280
+mengontrol dan mengubah parameter berdasarkan kebutuhan Anda.
+
+00:04:48.430 --> 00:04:54.400
+Dan kemudian kami juga berbicara tentang rattus dan kami tahu tentang semua rattus kami sekarang kami menggunakannya untuk
+
+00:04:54.550 --> 00:04:56.300
+mengelola token sesi kami.
+
+00:04:56.390 --> 00:04:58.230
+Ketika saya berbicara dengan Anda tentang Reddy, dia berpikir.
+
+00:04:58.300 --> 00:05:01.880
+Baiklah Andre dia mengajari saya tentang database lain yang tidak berguna.
+
+00:05:01.880 --> 00:05:03.140
+Ini buang-buang waktu.
+
+00:05:03.200 --> 00:05:07.990
+Tapi kemudian Anda perlahan mulai datang dan saya menunjukkan kepada Anda bahwa Anda dapat mengelola sesi
+
+00:05:07.990 --> 00:05:09.730
+menggunakan baca dan sangat cepat.
+
+00:05:09.730 --> 00:05:15.380
+Bagaimana jika saya katakan kepada Anda bahwa kami dapat menggunakan S merah untuk caching permintaan basis data itu semua
+
+00:05:15.380 --> 00:05:19.240
+adalah sesuatu yang telah kami bicarakan sedikit dalam video penskalaan basis data.
+
+00:05:19.290 --> 00:05:24.830
+Sebagai contoh jika kita memiliki server simpul dan kita harus membuat permintaan ke database.
+
+00:05:25.170 --> 00:05:32.850
+Yah pertama-tama saya dapat menempatkan server roti saya tepat di antara kami dan saya dapat meminta server Hei apakah Anda memiliki
+
+00:05:32.850 --> 00:05:34.370
+informasi pengguna ini.
+
+00:05:34.530 --> 00:05:40.020
+Jika tidak saat kita pergi ke database mengambil informasi itu melalui Dinding penyelamatan dan mengirimkannya
+
+00:05:40.020 --> 00:05:41.190
+kembali ke catatan.
+
+00:05:41.550 --> 00:05:47.970
+Tetapi sebelum kita langsung mengirimnya kembali kita pergi melalui rattus menyimpan informasi itu dalam memori dan
+
+00:05:47.970 --> 00:05:54.840
+kemudian meneruskannya kembali ke server sehingga saat berikutnya server meminta informasi yang sama kita pergi melalui rattus Retta
+
+00:05:54.840 --> 00:05:57.060
+mengatakan oh ya aku memilikinya.
+
+00:05:57.060 --> 00:06:03.120
+Ini dia dan kami menghindari pernyataan penyelamatan semua dan akses disk yang kemungkinan
+
+00:06:03.570 --> 00:06:06.030
+besar akan terjadi dengan database.
+
+00:06:06.180 --> 00:06:11.100
+Dan itu sesuatu yang benar-benar ingin Anda lakukan sebelum Anda melakukan penskalaan basis data di mana
+
+00:06:11.100 --> 00:06:13.320
+kami mulai bekerja dengan basis data.
+
+00:06:13.320 --> 00:06:21.900
+Anda ingin mencari tahu hai, bisakah saya menguangkan saya dapat menggunakan rattus atau memcached untuk menguangkan permintaan kami atau pertanyaan kami dan
+
+00:06:22.500 --> 00:06:26.830
+ada begitu banyak tempat lain sehingga Anda dapat menguangkan barang-barang.
+
+00:06:27.000 --> 00:06:33.870
+Misalnya yang paling umum dan yang mungkin paling Anda kenal adalah caching di sisi klien
+
+00:06:33.900 --> 00:06:35.750
+atau di browser.
+
+00:06:36.060 --> 00:06:42.870
+Anda melihat browser memberi kami banyak cara untuk menyimpan informasi dan kami akan menyelami sedikit lebih dalam
+
+00:06:42.870 --> 00:06:48.820
+topik ini karena Anda dapat melakukan beberapa optimasi kinerja yang sangat menarik dengannya.
+
+00:06:49.200 --> 00:06:54.670
+Jadi untuk yang satu itu Anda harus menunggu sampai video berikutnya begitu Anda.

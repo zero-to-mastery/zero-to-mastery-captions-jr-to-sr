@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.960 --> 00:00:03.290
+Selamat datang kembali.
+
+00:00:03.340 --> 00:00:09.760
+Sekarang kita telah masuk ke dalam rumput liar tentang bagaimana mengoptimalkan kode kita, mari kita bicara secara khusus
+
+00:00:10.300 --> 00:00:18.720
+tentang bereaksi bagaimana kita dapat mengoptimalkan kode kita dalam bertindak kembali seperti teman-teman robo kita akan atas bantuan reaktif atau hal pertama yang
+
+00:00:18.720 --> 00:00:24.750
+ingin Anda checkout sebuah fitur yang telah muncul sejak kembali berakting lima belas koma empat koma
+
+00:00:24.750 --> 00:00:25.420
+nol.
+
+00:00:25.830 --> 00:00:29.100
+Dan itu adalah alat kinerja kami.
+
+00:00:29.220 --> 00:00:39.090
+Yang perlu kita lakukan adalah di host lokal kami memberikan parameter string kueri re-act perf re-act menggarisbawahi
+
+00:00:39.180 --> 00:00:40.970
+Perth dari sini.
+
+00:00:41.130 --> 00:00:53.270
+Jika Anda menekan enter tidak ada yang terjadi tetapi jika Anda membuka alat pengembang Anda dan pergi ke kinerja sekarang kita dapat melakukan sesuatu
+
+00:00:53.270 --> 00:00:55.190
+yang sangat menarik.
+
+00:00:55.280 --> 00:01:01.400
+Saya akan mencapai rekor ketik beberapa hal di kotak pencarian dan kemudian
+
+00:01:01.400 --> 00:01:11.720
+tekan berhenti dan kemudian kita akan menganalisis mereka atau menganalisis kinerja aplikasi kita mari kita merekam dan mengetikkan hal-hal yang sangat
+
+00:01:11.750 --> 00:01:17.140
+sangat cepat dan mengubah hal-hal dan berhenti hanya tujuh detik.
+
+00:01:18.650 --> 00:01:28.340
+Sekarang dengan menggunakan reaksi ini untuk menggarisbawahi perf kita sekarang dapat melihat komponen kami dan apa yang mereka lakukan dalam
+
+00:01:28.340 --> 00:01:29.680
+kinerja turun.
+
+00:01:29.900 --> 00:01:34.260
+Sekarang saya tahu ini luar biasa jadi mari kita coba dan lalui.
+
+00:01:34.430 --> 00:01:35.650
+Baik dan mudah.
+
+00:01:35.810 --> 00:01:44.760
+Kami melihat bahwa kami memiliki aplikasi kami yang merender dan difilter dan kami ingin melihatnya
+
+00:01:44.820 --> 00:01:51.410
+di C-p U. S. kami melihat bahwa ada beberapa bilah kuning bagus di sini yang berarti beberapa javascript terjadi.
+
+00:01:51.570 --> 00:01:58.940
+Jadi saya akan menyorotnya dengan mengklik dan kemudian mengklik dan Anda melihat di bagian waktu pengguna di
+
+00:01:59.630 --> 00:02:03.470
+sini di bagian waktu pengguna jika saya menggulirkan
+
+00:02:10.710 --> 00:02:15.910
+Lin terlihat seperti itu dengan menggunakan reaksi terhadap perf garis bawah.
+
+00:02:16.220 --> 00:02:22.640
+Sekarang alat pengembang chrome mengenali komponen Riak, Anda dapat melihat logo aksi ulang di sini dan menunjukkan kepada kami
+
+00:02:22.640 --> 00:02:24.770
+jenis pekerjaan apa yang dikerjakannya.
+
+00:02:24.770 --> 00:02:28.830
+Kami melihat bahwa kami memiliki reaksi untuk membuat pohon tepat pada saat ini.
+
+00:02:29.100 --> 00:02:30.510
+Kami memiliki aplikasi yang terhubung.
+
+00:02:30.500 --> 00:02:32.360
+Ingat kami menggunakan redoks.
+
+00:02:32.360 --> 00:02:40.700
+Kami memiliki aplikasi sebagai komponen wadah utama kami dan di bawahnya kami melihat bahwa kami memiliki komponen
+
+00:02:40.820 --> 00:02:46.910
+batas udara dan gulir Carlist dan di bawahnya kami melihat komponen kartu kami
+
+00:02:49.590 --> 00:02:51.600
+sangat sangat keren.
+
+00:02:51.600 --> 00:02:57.100
+Dan kita benar-benar melihat di sini apa yang mereka lakukan di kurung siku yang kita lihat sedang diperbarui.
+
+00:02:57.120 --> 00:03:02.800
+Jadi karena saya mungkin mengetik sesuatu di sini Anda dapat melihat saya telah mengetik sesuatu di bagian ini.
+
+00:03:02.940 --> 00:03:12.760
+Komponen-komponen ini memperbarui di setiap bilah warna menunjukkan waktu bahwa komponen melakukan pekerjaan sejak javascript berulir
+
+00:03:12.790 --> 00:03:22.090
+tunggal setiap kali komponen sedang memasang atau rendering atau memperbarui itu memikul benang utama.
+
+00:03:22.100 --> 00:03:29.220
+Ingat pekerja utama peramban dan mencegah kode lain dari menjalankan tanda kurung ini mengatakan
+
+00:03:29.330 --> 00:03:34.030
+pembaruan dan terkadang mereka akan mengatakan Brandur dan pemasangan.
+
+00:03:34.140 --> 00:03:38.280
+Mereka menjelaskan bagian mana dari siklus hidup komponen yang terjadi.
+
+00:03:39.420 --> 00:03:41.940
+Dan timeline memecah setiap langkah.
+
+00:03:42.000 --> 00:03:46.190
+Anda dapat melihat waktu berbutir halus pada metode yang Anda gunakan.
+
+00:03:46.230 --> 00:03:53.610
+Aplikasi kami cukup kecil sehingga Anda tidak melihat terlalu banyak lompatan di sini, tetapi saat Anda mendapatkan lebih banyak
+
+00:03:53.670 --> 00:03:59.680
+komponen, Anda dapat membayangkan bagaimana ini akan semakin dalam dan semakin dalam ke render tree.
+
+00:03:59.730 --> 00:04:08.000
+Saya suka menyebut ini pohon Natal terbalik dan semakin besar pohon Natal mereka semakin banyak komponen
+
+00:04:08.000 --> 00:04:15.350
+yang perlu di render karena ingat cara bertindak kembali bekerja jika ada pembaruan di
+
+00:04:15.440 --> 00:04:25.250
+aplikasi, itu akan memperbarui dan meneruskan alat peraga itu ke semua komponen di bawahnya dan semua komponen yang berfungsi
+
+00:04:25.520 --> 00:04:28.170
+perlu menjalankan render Embrey.
+
+00:04:28.200 --> 00:04:31.600
+Jadi, Anda ingin menghindari sesuatu yang benar-benar dalam.
+
+00:04:31.650 --> 00:04:38.110
+Mereka tampak seperti hanya piramida malapetaka hanya piramida besar atau membalik pohon Natal.
+
+00:04:38.940 --> 00:04:45.090
+Sekarang biasanya memiliki komponen pohon yang cukup dalam di reac. Tetapi jika
+
+00:04:45.570 --> 00:04:52.890
+Anda mengoptimalkan komponen yang sering dipasang dapat membantu mengurangi jumlah komponen pembungkus seperti komponen
+
+00:04:52.890 --> 00:04:54.000
+penghubung.
+
+00:04:54.330 --> 00:04:59.240
+Karena masing-masing menambah kinerja kecil dan hukuman memori.
+
+00:04:59.320 --> 00:05:06.910
+Sekarang satu hal yang perlu diingat di sini adalah bahwa ketika Anda menjalankan ini berjalan pada versi devolvement dari tindakan yang
+
+00:05:06.910 --> 00:05:12.730
+jauh lebih lambat karena Anda mendapatkan X Akshara tooling Plus bahkan menjalankan kinerja ulang ini memperlambat
+
+00:05:12.890 --> 00:05:14.040
+aplikasi Anda.
+
+00:05:14.320 --> 00:05:19.810
+Jadi itu tidak persis sama dengan produksi Anda kemungkinan besar akan lebih cepat tetapi
+
+00:05:19.870 --> 00:05:27.310
+merupakan indikator yang baik mengapa aplikasi Anda lakukan dan Anda dapat mengujinya untuk melihat di mana kemacetan saya sekarang.
+
+00:05:27.510 --> 00:05:33.740
+Melihat ini, kita mungkin menyadari sesuatu.
+
+00:05:33.840 --> 00:05:45.030
+Bagaimana kami dapat membantu proses ini dengan redux dengan baik dengan menggunakan redux looking. Cerdik tentang pembaruan komponen apa saja karena jika
+
+00:05:45.480 --> 00:05:53.370
+komponen tingkat atas ini diperbarui, ia akan membuat semua anak-anaknya atau mengulangi kembali semua anak
+
+00:05:53.370 --> 00:05:54.200
+itu.
+
+00:05:54.420 --> 00:06:02.790
+Tetapi jika kita memiliki redux dan alih-alih menggunakan komponen kasar ini untuk memperbarui keadaan kita bisa langsung menghubungkan
+
+00:06:02.790 --> 00:06:11.700
+komponen yang lebih rendah mengingat dengan menggunakan koneksi kita dapat terhubung ke keadaan sehingga kita sekarang dapat menghubungkan komponen di
+
+00:06:11.970 --> 00:06:19.380
+sini dan hanya dua di bawah ini akan memperbarui versus jika ia memiliki komponen tingkat atas
+
+00:06:19.380 --> 00:06:23.580
+terhubung yang benar-benar akan membuat lebih banyak komponen.
+
+00:06:23.580 --> 00:06:25.320
+Jadi itulah strateginya.
+
+00:06:25.380 --> 00:06:32.070
+Apakah Anda ingin memiliki hanya satu wadah atau komponen tingkat atas atau hanya beberapa komponen di bagian atas
+
+00:06:32.070 --> 00:06:38.220
+yang terhubung ke redoks atau untuk menghindari menumbangkan alat peraga dan pohon-pohon bersarang yang sangat dalam.
+
+00:06:38.220 --> 00:06:46.800
+Apakah Anda ingin menggunakan koneksi lebih dekat ke node daun dan itu adalah keputusan arsitektur yang Anda dan tim
+
+00:06:46.800 --> 00:06:50.000
+Anda buat berdasarkan pro dan kontra.
+
+00:06:51.790 --> 00:06:56.430
+Akhirnya saya juga ingin menunjukkan kepada Anda alat bertindak kembali pengembang.
+
+00:06:56.590 --> 00:06:59.680
+Ini adalah colokan krom yang bisa Anda dapatkan.
+
+00:06:59.680 --> 00:07:04.950
+Anda cukup mengklik Tambahkan ke Chrome dan Anda akan memilikinya dan itu sangat sangat berguna.
+
+00:07:05.220 --> 00:07:14.490
+Jika saya pergi ke sini untuk tab tindakan ulang Anda melihat bahwa itu menunjukkan aplikasi saya, saya memiliki alat peraga dan toko saya memiliki
+
+00:07:14.490 --> 00:07:20.970
+penyedia saya Aplikasi saya yang terhubung aplikasi saya dan kemudian saya melihat kotak pencarian saya gulir.
+
+00:07:20.970 --> 00:07:24.460
+Dan akhirnya semua komponen anak-anak saya.
+
+00:07:24.540 --> 00:07:31.860
+Hal yang keren tentang ini adalah ia menunjukkan kepada Anda alat peraga apa yang Anda miliki untuk anak-anak Anda memiliki semua
+
+00:07:31.860 --> 00:07:32.730
+hal ini.
+
+00:07:32.820 --> 00:07:39.650
+Dan saat kami mengubah hal-hal yang Anda benar-benar dapat melihat perubahan.
+
+00:07:39.790 --> 00:07:46.900
+Tetapi untuk kinerja alat-alat listrik reaktif benar-benar bagus ketika Anda mengklik pembaruan highlight ini
+
+00:07:47.050 --> 00:07:54.490
+dan apa yang akan terjadi adalah setiap kali aplikasi Anda berubah atau komponen ditampilkan kembali itu
+
+00:07:54.490 --> 00:07:55.740
+akan menyorotnya.
+
+00:07:55.840 --> 00:07:56.660
+Mari kita periksa.
+
+00:07:56.680 --> 00:08:01.100
+Saya akan mulai mengetik dan melihat itu.
+
+00:08:01.220 --> 00:08:09.600
+Ini menunjukkan apa yang sedang diganti merek yang hampir semua aplikasi kami dan menonton ini saat saya mengetik lebih cepat.
+
+00:08:10.670 --> 00:08:11.810
+Apakah kamu melihat itu.
+
+00:08:11.870 --> 00:08:17.390
+Saya menjadi sangat agresif dengan pengetikan di sana, tetapi Anda melihat bagaimana
+
+00:08:17.390 --> 00:08:22.090
+warna mengubah apa warna mewakili seberapa sering hal-hal yang diberikan.
+
+00:08:22.140 --> 00:08:26.720
+Mereka lebih cepat mereka diberikan semakin dekat dengan warna merah
+
+00:08:26.730 --> 00:08:33.750
+Jadi pikirkan warna-warna panas dan semakin lambat mereka semakin dekat dengan biru.
+
+00:08:33.830 --> 00:08:38.300
+Sekarang ini bermanfaat untuk mendeteksi siklus render yang tidak perlu.
+
+00:08:38.510 --> 00:08:48.090
+Misalnya saat saya mengetik di sini saya melihat bahwa tajuk saya sedang diperbarui tetapi mengapa saya maksud itu sama saja
+
+00:08:48.090 --> 00:08:49.410
+sepanjang waktu.
+
+00:08:49.470 --> 00:08:54.560
+Mengapa saya perlu membaca membuat ini fungsi yang berjalan yang tidak perlu.
+
+00:08:54.670 --> 00:08:57.810
+Dan ketika kita melihat kembali kode kita di aplikasi.
+
+00:08:57.900 --> 00:08:59.710
+Ya, kami melihatnya.
+
+00:08:59.880 --> 00:09:08.960
+Yah itu masuk akal karena setiap kali saya melakukan acara pencarian saya harus membenci tindakan ssion dan
+
+00:09:08.990 --> 00:09:10.720
+memperbarui bidang pencarian.
+
+00:09:10.880 --> 00:09:20.230
+Jadi komponen aplikasi ini akan ditampilkan kembali karena ada perubahan di toko redock.
+
+00:09:20.240 --> 00:09:27.690
+Dan karena tajuk adalah bagian dari ini, itu juga akan ditampilkan.
+
+00:09:29.130 --> 00:09:32.820
+Jadi ini adalah hal-hal yang ingin Anda sadari.
+
+00:09:32.940 --> 00:09:38.640
+Sekarang ingatlah bahwa melihat kuning atau merah saat Anda menyorot atau ketika komponen dirender tidak selalu
+
+00:09:39.030 --> 00:09:40.740
+merupakan hal yang buruk.
+
+00:09:41.520 --> 00:09:48.660
+Ini akan diharapkan ketika Anda melakukan hal-hal seperti slider atau scrolling atau elemen UI apa saja
+
+00:09:49.170 --> 00:09:50.960
+yang memicu pembaruan sering.
+
+00:09:51.360 --> 00:09:57.240
+Jadi Anda tidak dapat sepenuhnya menghindarinya tetapi jika Anda hanya mengklik tombol dan Anda tiba-tiba dan melihat
+
+00:09:57.240 --> 00:10:01.140
+merah itu berarti ada sesuatu yang terjadi yang ingin Anda perbaiki.
+
+00:10:01.820 --> 00:10:10.330
+Jadi alat di sini pembaruan utama terutama digunakan untuk melihat apa yang sedang diperbarui pada yang tidak perlu dan sebagai
+
+00:10:10.330 --> 00:10:17.070
+pengembang aplikasi Anda ingin memiliki ide umum tentang bagaimana aplikasi tindakan ulang Anda sedang dibuat.
+
+00:10:17.170 --> 00:10:24.310
+Karena ingat kita ingin menghindari manipulasi bodoh yang tidak perlu karena kita tahu sekarang bahwa itu benar-benar
+
+00:10:24.310 --> 00:10:25.750
+menghambat kinerja kita.
+
+00:10:26.430 --> 00:10:32.560
+Jadi dalam video berikutnya saya akan menunjukkan kepada Anda bagaimana kita dapat menghindari beberapa penyaji yang tidak perlu ini.
+
+00:10:32.730 --> 00:10:33.540
+Saya akan melihat yang berikutnya.

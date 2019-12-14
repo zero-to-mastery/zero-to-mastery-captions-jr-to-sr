@@ -1,0 +1,355 @@
+﻿WEBVTT
+
+00:00:01.860 --> 00:00:10.290
+Semua perusahaan menyimpan data dari buku catatan sederhana dari sebuah bisnis kecil bahkan mungkin di jurnal atau
+
+00:00:10.290 --> 00:00:17.650
+selembar kertas dua perusahaan besar seperti Amazon yang membutuhkan komputer untuk menyimpan petabyte data.
+
+00:00:17.760 --> 00:00:25.950
+Sekarang untuk menyimpan informasi ini cukup banyak setiap perusahaan dan kadang-kadang individu membutuhkan sesuatu
+
+00:00:25.950 --> 00:00:27.870
+yang disebut database.
+
+00:00:27.990 --> 00:00:31.960
+Kami melihat di bagian terakhir betapa sulitnya memiliki server kami.
+
+00:00:32.040 --> 00:00:35.760
+Ingat pengguna baru setiap kali server macet.
+
+00:00:35.760 --> 00:00:40.090
+Variabel akan mendapatkan reset dan kemudian akan mulai dari awal.
+
+00:00:40.410 --> 00:00:48.340
+Atau jika kita ingin melakukan log in atau masuk dan memeriksa dan beralih melalui email dan kata sandi
+
+00:00:48.420 --> 00:00:51.900
+selama perulangan melalui javascript itu tidak efisien.
+
+00:00:52.110 --> 00:00:54.070
+Di situlah basis data datang untuk menyelamatkan.
+
+00:00:54.960 --> 00:00:58.800
+Jadi mari kita bertanya pada diri sendiri apa itu database.
+
+00:00:58.830 --> 00:01:01.900
+Database adalah kumpulan data.
+
+00:01:01.990 --> 00:01:03.480
+Dan apa yang kami maksud dengan data.
+
+00:01:03.790 --> 00:01:05.670
+Ada banyak bentuknya yang benar.
+
+00:01:05.710 --> 00:01:10.180
+Mungkin ada angka, bisa ada tanggal, mungkin ada hash kata sandi.
+
+00:01:10.300 --> 00:01:17.390
+Mungkin ada basis data informasi pengguna yang memungkinkan kami untuk mengatur data ini dengan cara
+
+00:01:17.390 --> 00:01:24.290
+yang bermanfaat bagi kami dan membuat pengelolaan data mudah dan sesuatu keluar dari sana.
+
+00:01:24.600 --> 00:01:29.890
+Singkatnya, ini disebut sistem manajemen basis data atau DBMS.
+
+00:01:29.960 --> 00:01:35.060
+Ini adalah kumpulan program yang memungkinkan kita mengakses basis data dan bekerja dengan data.
+
+00:01:35.390 --> 00:01:47.140
+Dan itu juga memungkinkan akses kontrol ke pengguna basis data sehingga 8 massa DBI adalah sesuatu dalam kotak ini sesuatu yang memungkinkan
+
+00:01:47.140 --> 00:01:55.290
+kita menjadi alat atau perangkat lunak yang memungkinkan kita berkomunikasi dengan informasi penyimpanan basis
+
+00:01:55.290 --> 00:02:05.790
+data yang berguna bagi kita dan juga memungkinkan kita untuk memperbarui penyisipan hapus lihat apa saja yang ada di database.
+
+00:02:05.790 --> 00:02:12.930
+Dan gagasan tentang DBMS ini mulai terbentuk pada tahun 1960-an dan sekarang menjadi yang terdepan dalam banyak
+
+00:02:12.930 --> 00:02:14.080
+hal menarik.
+
+00:02:14.100 --> 00:02:19.760
+Ada seluruh industri Insinyur yang bekerja dengan database karena itu sangat penting.
+
+00:02:21.040 --> 00:02:27.070
+Sekarang ada dua jenis DBMS yang sangat populer saat ini dan yang akan kita bahas dalam
+
+00:02:27.070 --> 00:02:27.890
+kursus ini.
+
+00:02:29.740 --> 00:02:36.070
+Dan kedua tipe ini diwakili dengan sangat baik oleh postscript dan Mongo DB.
+
+00:02:36.400 --> 00:02:43.150
+Mari kita bicara tentang yang pertama yang merupakan basis data relasional dan ini mungkin yang paling populer seperti yang Anda
+
+00:02:43.150 --> 00:02:44.550
+lihat di sisi kanan.
+
+00:02:44.560 --> 00:02:49.570
+Anda melihat bahwa semua ini adalah basis data relasional.
+
+00:02:49.570 --> 00:02:56.890
+Postscript Oracle meminta Anda semua server Anda mungkin pernah mendengar tentang saya meminta Anda, saya akan meminta Anda cahaya.
+
+00:02:57.150 --> 00:03:03.790
+Ini semua jenis database yang memiliki tag basis data relasional ini.
+
+00:03:04.050 --> 00:03:06.720
+Dan keindahannya adalah mereka semua sangat mirip.
+
+00:03:06.720 --> 00:03:10.580
+Mereka semua mengikuti format standar yang sama.
+
+00:03:10.590 --> 00:03:19.460
+Database relasional terdiri dari dua tabel atau lebih dengan kolom dan baris.
+
+00:03:19.480 --> 00:03:27.790
+Jadi dalam hal ini pengguna adalah tabel dan nama lengkap pajak nama pengguna dibuat di kolom kami dan nilai apa
+
+00:03:27.790 --> 00:03:31.160
+pun yang mereka miliki di sini adalah baris.
+
+00:03:31.180 --> 00:03:37.930
+Setiap baris mewakili entri dan setiap kolom mengurutkan jenis informasi yang sangat spesifik seperti alamat nama atau
+
+00:03:37.930 --> 00:03:38.890
+nomor telepon.
+
+00:03:39.880 --> 00:03:47.960
+Dan kemudian hubungan antara tabel dan bidang disebut skema dalam basis data relasional.
+
+00:03:48.120 --> 00:03:55.430
+Skema harus didefinisikan dengan jelas sebelum informasi apa pun dapat ditambahkan dan jika ini membingungkan sekarang jangan khawatir, kami benar-benar
+
+00:03:55.430 --> 00:03:59.110
+akan membuat database ini sehingga masuk akal bagi Anda.
+
+00:03:59.450 --> 00:04:05.420
+Jika kami memiliki Twitter misalnya, Anda dapat melihat di sini jenis tabel yang akan kami miliki dan
+
+00:04:05.420 --> 00:04:07.080
+bagaimana kami akan mengaturnya.
+
+00:04:07.190 --> 00:04:15.350
+Kami akan meminta pengguna menstabilkan tabel tweet di tabel berikut dan kami dapat menghubungkan semua informasi ini.
+
+00:04:15.360 --> 00:04:23.160
+Misalnya dengan menghubungkan potongan tabel yang berbeda, misalnya nama pengguna akan sama di
+
+00:04:23.160 --> 00:04:27.500
+tabel Users seperti di tabel tweets.
+
+00:04:27.510 --> 00:04:37.470
+Dengan begitu kita dapat mengatakan bahwa nama pengguna dan tabel tweet adalah kunci asing dari nama pengguna di
+
+00:04:37.470 --> 00:04:46.040
+tabel Pengguna dan kemudian dari pengguna akan menjadi kunci asing nama pengguna dan tabel berikut.
+
+00:04:46.060 --> 00:04:56.350
+Sekarang hal-hal seperti nama lengkap atau ID sesuatu yang mengidentifikasi setiap baris dalam tabel disebut kunci utama
+
+00:04:57.010 --> 00:05:01.890
+dan kita akan membahasnya nanti di bagian ini.
+
+00:05:01.890 --> 00:05:07.080
+Baiklah, jadi semua basis data ini akan kita pelajari tentang skrip postskrip, tetapi semuanya hampir
+
+00:05:07.080 --> 00:05:07.620
+sama.
+
+00:05:07.620 --> 00:05:14.760
+Jadi, begitu Anda tahu tentang itu, cukup mudah untuk mengambil yang lain bagaimana mereka benar-benar berkomunikasi dengan
+
+00:05:15.610 --> 00:05:22.030
+server dengan Bakken dengan baik semua database relasional menggunakan sesuatu yang disebut Eskew dengan baik
+
+00:05:26.460 --> 00:05:34.500
+dan Escudero memungkinkan kita untuk berkomunikasi seperti halnya CTP yang dilakukan antara ujung depan dan Bakhit dengan Eskew atau
+
+00:05:34.500 --> 00:05:43.080
+kami dapat berkomunikasi dengan database dan memodifikasi atau mendapatkan atau memperbarui di mana pun kami inginkan dan kami akan memiliki
+
+00:05:43.080 --> 00:05:45.570
+video tentang topik ini juga.
+
+00:05:45.570 --> 00:05:49.760
+Baiklah jadi itu database relasional.
+
+00:05:49.760 --> 00:05:51.700
+Bagaimana dengan tipe kedua.
+
+00:05:51.760 --> 00:05:58.440
+Tipe kedua disebut basis data non relasional atau basis data tanpa penyelamatan.
+
+00:05:58.960 --> 00:06:04.960
+Dan sekali lagi ada banyak banyak jenis database dengan beberapa nama keren seperti Koshti
+
+00:06:04.960 --> 00:06:06.650
+dan hyper table.
+
+00:06:06.760 --> 00:06:12.760
+Sekarang mongo D-B atau database non-relasional memungkinkan Anda membangun aplikasi tanpa harus
+
+00:06:12.760 --> 00:06:14.840
+menentukan skema terlebih dahulu.
+
+00:06:14.920 --> 00:06:26.340
+Tidak seperti database relasional jika kita kembali ke database relasional, skema ini atau tabel ini harus jenis tingkat yang
+
+00:06:26.430 --> 00:06:27.680
+telah ditentukan.
+
+00:06:27.690 --> 00:06:35.860
+Kita perlu tahu bagaimana aplikasi kita akan terlihat membuat tabel-tabel ini sehingga setelah aplikasi bersifat
+
+00:06:35.880 --> 00:06:44.910
+publik kita dapat mulai memasukkan informasi pengguna dan tweet dan pengikut tanpa penyelamatan semua atau database non-relasional.
+
+00:06:44.970 --> 00:06:51.660
+Kita tidak bisa mendefinisikannya begitu saja dan mereka semua memiliki cara yang berbeda untuk menyimpan informasi ini sehingga
+
+00:06:51.660 --> 00:06:53.180
+masing-masing sangat berbeda.
+
+00:06:53.430 --> 00:06:58.590
+Dan ini adalah alasan kuat lainnya untuk menggunakan database non relasional adalah
+
+00:06:58.590 --> 00:07:05.880
+bahwa jika persyaratan data Anda tidak jelas pada awal proyek Anda dan mungkin memiliki sejumlah besar data struktur,
+
+00:07:05.880 --> 00:07:11.350
+Anda mungkin tidak memiliki kemewahan mengembangkan database relasional dengan skema yang didefinisikan dengan jelas.
+
+00:07:11.460 --> 00:07:18.330
+Sebagai gantinya mereka menawarkan fleksibilitas yang lebih besar karena database non-relasional lebih seperti folder yang hanya
+
+00:07:18.330 --> 00:07:21.160
+mengumpulkan informasi terkait dari semua jenis.
+
+00:07:22.290 --> 00:07:26.470
+Tidak ada Mongo D-B adalah sesuatu yang disebut berorientasi dokumen.
+
+00:07:26.550 --> 00:07:31.690
+Ia menyimpan informasi sebagai dokumen.
+
+00:07:31.700 --> 00:07:33.490
+Biarkan saya menggambarkan hal ini untuk Anda.
+
+00:07:33.650 --> 00:07:37.110
+Saya memiliki desktop saya di sini dengan dua folder.
+
+00:07:37.490 --> 00:07:40.020
+Salah satunya adalah database yang sangat relasional.
+
+00:07:40.280 --> 00:07:48.860
+Dan di sini saya memiliki pengguna yang mengikuti profil tweet dan Anda dapat memikirkan database relasional dengan jenis penyimpanan ini di
+
+00:07:48.860 --> 00:07:56.480
+mana folder ini tinggal di suatu tempat di komputer yang menyimpan informasi ini dan setiap saat kami perlu
+
+00:07:56.480 --> 00:08:02.540
+meminta database untuk sesuatu sementara kami meraih pengguna dan jika kami Anda juga
+
+00:08:02.540 --> 00:08:09.620
+ingin mengambil tweet dari pengguna kami menemukan pengguna yang kami tertarik kemudian menemukan tweets dari pengguna yang
+
+00:08:09.620 --> 00:08:17.450
+kami juga tertarik dengan kunci asing yang terhubung ke pengguna dan kami juga dapat menemukan namun banyak pengikut yang
+
+00:08:17.480 --> 00:08:18.470
+dimiliki pengguna.
+
+00:08:18.620 --> 00:08:22.730
+Kami mengambil informasi itu dan menampilkannya
+
+00:08:25.430 --> 00:08:34.230
+di web kami. Mongo D-B di sisi lain sebenarnya akan memiliki setiap pengguna sebagai dokumen.
+
+00:08:34.240 --> 00:08:36.950
+Jadi jika saya ingin meraih pengguna pertama.
+
+00:08:37.360 --> 00:08:43.930
+Yah saya hanya mengambil dokumen ini dan memiliki semua pengikut tweet profil semuanya ada dalam
+
+00:08:43.930 --> 00:08:53.260
+dokumen yang satu ini dan Anda mungkin berpikir Mongo D-MI terlihat seperti pilihan yang lebih baik daripada memiliki cara melakukan hal
+
+00:08:53.260 --> 00:08:54.330
+yang benar.
+
+00:08:55.510 --> 00:08:59.950
+Yah itu tergantung pada kebutuhan Anda dan itu sebabnya database adalah topik yang kompleks.
+
+00:08:59.980 --> 00:09:02.410
+Itu benar-benar tergantung pada situasi Anda.
+
+00:09:02.440 --> 00:09:08.620
+Anda dapat melihat cara D-B Mongo ini menjadi sangat berguna jika Anda memiliki sesuatu seperti profil, mungkin tautan
+
+00:09:08.620 --> 00:09:09.390
+di profil.
+
+00:09:09.580 --> 00:09:15.340
+Tetapi jika Anda membutuhkan sesuatu di mana Anda bekerja hanya mengikuti data atau hanya data tweet mungkin
+
+00:09:15.360 --> 00:09:18.980
+dengan tweet yang ingin Anda lihat berapa ukuran rata-rata tweet.
+
+00:09:19.100 --> 00:09:25.480
+Yah sangat mudah untuk hanya mengambil file ini dan menghitung dibandingkan dengan cara ini di mana
+
+00:09:25.480 --> 00:09:28.750
+Anda mungkin harus mengekstraknya dari masing-masing pengguna.
+
+00:09:28.960 --> 00:09:30.740
+Jadi itu sangat tergantung dengan kebutuhan Anda.
+
+00:09:31.940 --> 00:09:37.360
+Michelle Anda diagram lain yang mungkin berguna.
+
+00:09:38.860 --> 00:09:44.900
+Ketika kita melihat database relasional versus non relasional, Anda dapat menganggap relasional sebagai.
+
+00:09:44.980 --> 00:09:54.190
+Setiap tabel memiliki blok posting tag blok komentar blok dan itu menghubungkan kandang untuk memberikan informasi blog versus non-relasional yang
+
+00:09:54.970 --> 00:10:02.110
+menyimpan seluruh posting blok ini dalam entri dan memiliki komentar kategori pajak dan semua data terkait
+
+00:10:02.530 --> 00:10:05.700
+lainnya hanya dalam satu tunggal tempat.
+
+00:10:05.890 --> 00:10:08.690
+Jadi apa yang digunakan Mongo DB untuk berkomunikasi.
+
+00:10:09.390 --> 00:10:16.080
+Jika kami kembali ke contoh kami di sini, kami telah meminta Anda semua untuk database relasional seperti postscript.
+
+00:10:16.170 --> 00:10:26.710
+Mongo D-B memiliki apa yang kita sebut bahasa query dan itu hanya bahasa query Mongo D-B tetapi mereka berdua bertujuan untuk melakukan
+
+00:10:31.640 --> 00:10:33.640
+hal yang sama.
+
+00:10:33.650 --> 00:10:40.010
+Yaitu untuk berkomunikasi dengan database menyediakan cara yang mudah bagi server untuk berkomunikasi
+
+00:10:40.010 --> 00:10:41.550
+dengan database.
+
+00:10:41.760 --> 00:10:46.230
+Dan di bagian ini kita akan berbicara tentang itu dan kita akhirnya
+
+00:10:46.800 --> 00:10:51.460
+akan menghubungkan titik-titik dan menunjukkan kepada Anda kekuatan database begitu mereka terhubung ke server.
+
+00:10:51.510 --> 00:10:53.020
+Saya akan melihat yang berikutnya.
+
+00:10:53.300 --> 00:10:53.550
+Namun oleh.

@@ -1,0 +1,736 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:10.010
+Hal pertama yang ingin kami lakukan seperti yang kami lakukan pada semua komponen adalah re-act yang buruk. Namun kami
+
+00:00:10.610 --> 00:00:19.140
+juga ingin mengimpor reaksi dari paket re-act down dan saya merasa kami akan memerlukan beberapa styling CSSA dengan motile kami.
+
+00:00:19.140 --> 00:00:19.930
+.
+
+00:00:20.140 --> 00:00:25.850
+Jadi saya akan membuat file CSSA juga untuk motil kami.
+
+00:00:26.080 --> 00:00:34.560
+Dan sebelum saya lupa dan kita akan pergi ke depan sekali lagi dan memastikan bahwa saya
+
+00:00:34.660 --> 00:00:36.200
+membuat titik
+
+00:00:40.330 --> 00:00:45.920
+motil file CSSA baru dan memastikan bahwa saya menggunakan titik koma.
+
+00:00:45.980 --> 00:00:50.910
+Sekarang hal pertama yang akan kita lakukan adalah kita benar-benar perlu mengikat motile ini.
+
+00:00:50.930 --> 00:00:57.860
+Ingat kami membuat komponen div lain yang dapat kami gunakan untuk menggunakan reaksi karena komponen
+
+00:00:57.860 --> 00:01:01.670
+itu akan sepenuhnya terpisah dari komponen aplikasi kami.
+
+00:01:02.420 --> 00:01:16.440
+Mari kita lakukan, katakanlah Konst model root akan menyamakan dot dokumen mendapatkan elemen dengan id dan kita akan mengambil semua
+
+00:01:16.440 --> 00:01:18.890
+modal root berarti.
+
+00:01:18.900 --> 00:01:26.640
+Saya pikir itulah yang kami sebut dan sekarang kami memiliki akses ke komentar ini pada indeks kami
+
+00:01:26.700 --> 00:01:28.330
+memulai halaman waria.
+
+00:01:28.330 --> 00:01:29.530
+Sekarang inilah bagian yang menyenangkan.
+
+00:01:29.800 --> 00:01:37.050
+Kami akan membuat model kami yang memperluas komponen reaksi ulang
+
+00:01:37.180 --> 00:01:39.920
+Tidak ada yang baru di sini yang pernah kami lakukan sebelumnya.
+
+00:01:39.940 --> 00:01:41.440
+Kami juga ingin mengekspornya sekarang
+
+00:01:46.900 --> 00:01:47.560
+di sini.
+
+00:01:47.560 --> 00:01:49.210
+Di sinilah rumit.
+
+00:01:49.240 --> 00:01:53.740
+Kami ingin memiliki konstruktor reguler kami dan kami ingin menerima
+
+00:01:57.220 --> 00:01:58.620
+panggilan prop super.
+
+00:01:59.050 --> 00:02:07.790
+Jadi kita bisa menggunakan kata kunci ini dan kemudian di sini saya ingin memiliki referensi ke sesuatu yang disebut elemen
+
+00:02:08.630 --> 00:02:13.760
+dan elemen ini akan menjadi dokumen dot elemen buat dan saya
+
+00:02:17.060 --> 00:02:19.580
+akan menjelaskan apa yang dilakukannya.
+
+00:02:19.610 --> 00:02:25.940
+Dan lagi maju dengan model ini mungkin akan sedikit membingungkan jika ini adalah pertama kalinya Anda melihat
+
+00:02:25.940 --> 00:02:26.890
+kode ini.
+
+00:02:27.200 --> 00:02:32.960
+Sekali lagi re-act memiliki dokumentasi yang sangat bagus sehingga Anda dapat pergi dan Anda akan melihat beberapa kode ini di situs web
+
+00:02:32.960 --> 00:02:35.880
+mereka karena itu adalah cara yang disarankan untuk melakukan modals.
+
+00:02:35.900 --> 00:02:41.200
+Jadi Anda mungkin harus bermain-main dengannya beberapa kali tetapi Anda akan terbiasa.
+
+00:02:41.270 --> 00:02:42.520
+Saya berjanji.
+
+00:02:42.590 --> 00:02:50.290
+Sekarang apa yang ingin kita lakukan pertama adalah kita ingin membuat moto.
+
+00:02:50.790 --> 00:03:02.570
+Dan cara kita melakukan ini ketika kita menggunakan portal adalah kita katakan kembali bertindak Dom dot buat portal di
+
+00:03:05.420 --> 00:03:09.240
+sini itu akan menerima dua parameter.
+
+00:03:09.320 --> 00:03:19.070
+Ini akan menerima titik berhenti prop anak-anak ini apa pun yang ada di dalam komponen modal
+
+00:03:19.070 --> 00:03:28.330
+dan juga akan menerima elemen titik ini elemen yang baru saja kita buat elemen
+
+00:03:28.330 --> 00:03:32.820
+div dan potongan terakhir dari teka-teki
+
+00:03:35.340 --> 00:03:41.550
+adalah untuk membuat komponen yang dipasang bahwa ketika modal terbuka.
+
+00:03:41.650 --> 00:03:48.360
+Kami ingin melampirkan ke root modal yaitu kartu indeks file waria.
+
+00:03:48.460 --> 00:03:49.630
+Kami ingin menambahkan
+
+00:03:54.400 --> 00:03:55.210
+elemen.
+
+00:03:55.410 --> 00:04:05.310
+Jadi kami menambahkan elemen ini pengembangan ke root modal dan pengembangan ini akan melilit apa pun yang kami masukkan
+
+00:04:05.310 --> 00:04:08.320
+ke dalam komponen Modal ini.
+
+00:04:08.580 --> 00:04:10.590
+Itu anak-anak.
+
+00:04:10.690 --> 00:04:16.130
+Kami juga ingin berhati-hati dengan model karena mereka menutup dan kami ingin keluar dari mereka.
+
+00:04:16.420 --> 00:04:20.630
+Kami tidak ingin meninggalkan sampah di file indeks kami.
+
+00:04:20.710 --> 00:04:30.470
+Kita bisa bersih-bersih setelah diri kita sendiri dengan melakukan komponen akan di mount saya kira tidak ada modal M di sana.
+
+00:04:33.290 --> 00:04:39.460
+Dan di sini kita hanya mengatakan modal root Daut menghapus anak.
+
+00:04:39.710 --> 00:04:46.790
+Elemen titik ini begitu dan saya harus melakukan elemen pemikiran ini di
+
+00:04:46.880 --> 00:04:56.140
+sini untuk geng karena kita merujuk pada brankas utama dan hanya itu yang baru saja kita buat modal.
+
+00:04:56.350 --> 00:05:02.590
+Saya tahu ini bisa sedikit membingungkan tetapi menganggapnya sebagai cara standar untuk membuat modal dan bereaksi.
+
+00:05:02.620 --> 00:05:08.870
+Yang kami lakukan hanyalah membuat portal metode kecil yang menyenangkan yang disertai dengan reaksi.
+
+00:05:09.370 --> 00:05:12.920
+Dan itu akan dipasang ketika kita menghapusnya.
+
+00:05:12.970 --> 00:05:18.040
+Ini akan membuka beberapa simbol untuk kita ketika kita mount.
+
+00:05:18.230 --> 00:05:19.870
+Juga akan menambahkan sedikit.
+
+00:05:19.990 --> 00:05:26.460
+Mereka melihat SS Hanya untuk memastikan bahwa modal keluar dan kami melihatnya dengan benar.
+
+00:05:26.560 --> 00:05:37.280
+Saya akan menggunakan ide bruit moral yang kita miliki dalam file DML dan memberikannya posisi relatif
+
+00:05:37.700 --> 00:05:41.220
+dan indeks z 9 9.
+
+00:05:41.220 --> 00:05:50.790
+Jadi untuk memastikan bahwa itu di bagian paling depan dari semua yang lain itu hanya akan menyelamatkan yang kembali ke
+
+00:05:50.790 --> 00:05:52.560
+modal logika ya
+
+00:05:52.770 --> 00:06:00.810
+Dan sekarang jika kita kembali ke aplikasi di mana kita sudah mengimpor motile kita, kita dapat menguji ini
+
+00:06:00.810 --> 00:06:02.340
+dengan menggunakan komponen.
+
+00:06:02.490 --> 00:06:08.390
+Jadi mari kita gulir ke bawah ke bawah ke tempat kita render dan mungkin hanya pada halaman utama hanya untuk
+
+00:06:08.390 --> 00:06:08.900
+bersenang-senang.
+
+00:06:08.900 --> 00:06:16.890
+Katakan motile dan ingat itu menerima anak-anak jadi saya hanya akan mengatakan halo dan tutup mari
+
+00:06:19.550 --> 00:06:22.670
+kita simpan halo yang tidak didefinisikan
+
+00:06:25.790 --> 00:06:28.300
+karena harus berupa string.
+
+00:06:28.640 --> 00:06:29.500
+Ayo kembali.
+
+00:06:30.860 --> 00:06:37.840
+Dan di mana Modal Phi ini membuka alat pengembang saya.
+
+00:06:38.000 --> 00:06:43.360
+Mari kita pergi ke elemen atau menggunakannya untuk bertindak kembali alat pengembang.
+
+00:06:43.420 --> 00:06:49.900
+Saya melihat bahwa ada aplikasi tetapi saya tidak melihat model saya.
+
+00:06:51.550 --> 00:06:57.900
+Jika saya pergi ke elemen pesawat saya melihat bahwa saya memiliki rute model ID.
+
+00:06:57.950 --> 00:06:58.820
+Saya
+
+00:07:01.460 --> 00:07:09.710
+punya div OK tapi tidak ada yang benar-benar di dalamnya kecuali untuk dif.
+
+00:07:09.860 --> 00:07:13.380
+Dan kita perlu melakukan beberapa hal di sini untuk benar-benar membuat model bekerja.
+
+00:07:13.730 --> 00:07:15.260
+Ayo kembali.
+
+00:07:15.260 --> 00:07:22.490
+Hal pertama yang ingin kita lakukan adalah apa yang kita inginkan untuk dapat membuka model ini dan menghidupkan dan mematikannya.
+
+00:07:22.770 --> 00:07:29.210
+Dan karena itu fungsionalitas yang cukup besar mari kita tambahkan ke bagian paling atas dari Abdulle
+
+00:07:29.210 --> 00:07:39.130
+kita di mana kita memiliki negara kita dan membuat negara baru yang disebut adalah profil terbuka dan kita akan menetapkannya sebagai salah untuk saat ini.
+
+00:07:40.450 --> 00:07:47.080
+Dan sekarang kita dapat meneruskan ini sebagai alat untuk komponen apa pun yang kita inginkan.
+
+00:07:47.490 --> 00:07:51.260
+Jadi mari kita tambahkan saja apakah profil ini terbuka
+
+00:07:54.010 --> 00:08:00.680
+untuk keadaan kita dan dalam navigasi sebelum kita benar-benar memeriksa apakah router kita ada di rumah.
+
+00:08:01.090 --> 00:08:02.920
+Mari kita naikkan ini dan
+
+00:08:07.880 --> 00:08:09.540
+melakukan sesuatu seperti ini.
+
+00:08:09.560 --> 00:08:16.320
+Gunakan ekspresi javascript dengan membungkusnya dalam kurung keriting kemudian katakan adalah profil terbuka.
+
+00:08:16.340 --> 00:08:21.760
+Dan jika itu membuat modal Jika tidak kita dapat mengatakan tidak.
+
+00:08:22.190 --> 00:08:29.540
+Cara lain yang mudah untuk melakukan ini sebenarnya jauh lebih bersih adalah dengan menggunakan dan ini sedikit singkatan dengan melakukan ini mari
+
+00:08:30.590 --> 00:08:34.720
+kita selesaikan ini sedikit lebih baik sehingga kita bisa melihat lebih baik.
+
+00:08:38.020 --> 00:08:45.230
+Saya mengatakan jika profil benar maka teruskan dan buat profil modal terbuka menjadi salah.
+
+00:08:45.250 --> 00:08:50.030
+Nah itu akan kesalahan sehingga bahkan tidak akan pergi ke modal dan membacanya.
+
+00:08:50.030 --> 00:08:57.850
+Jadi ini adalah cara singkat melakukan jika Anda ingin melakukan pergantian operator di mana opsi terakhir adalah
+
+00:08:57.930 --> 00:08:58.540
+tidak.
+
+00:08:58.650 --> 00:08:59.190
+Baiklah.
+
+00:08:59.200 --> 00:09:05.530
+Dan di sini dalam modal Mari kita membuat komponen lain dan
+
+00:09:05.530 --> 00:09:18.380
+kita akan memanggil profil komponen ini karena ini adalah di mana kita ingin profil ditampilkan dan profil ini akan mendapatkan status terbuka profil Is.
+
+00:09:18.460 --> 00:09:19.030
+Mari
+
+00:09:22.310 --> 00:09:25.610
+kita simpan dan kita mendapatkan profil tidak ditentukan karena kita perlu mendefinisikannya.
+
+00:09:25.910 --> 00:09:29.170
+Tetapi sebelum kita melakukan itu saya ingin melakukan satu hal kecil.
+
+00:09:29.450 --> 00:09:37.430
+Saya juga ingin benar-benar menggunakan profil terbuka untuk mengaktifkan modem untuk menyalakan atau mematikan pemasangan
+
+00:09:37.430 --> 00:09:47.990
+atau pemasangan itu dan kita bisa datang ke sini dan menambahkan pemanggilan metode baru dan mendapatkan beralih motil dan
+
+00:09:48.000 --> 00:09:54.150
+motil beralih ini akan berfungsi itu hanya akan melakukan ini.
+
+00:09:54.210 --> 00:10:09.490
+Tetapkan status dan itu akan diperbarui adalah profil terbuka ke status DOT adalah profil terbuka.
+
+00:10:09.550 --> 00:10:10.720
+Jadi itu hanya beralih saja.
+
+00:10:10.720 --> 00:10:12.740
+Benar atau Salah Benar atau salah setiap saat.
+
+00:10:13.090 --> 00:10:19.180
+Sekarang ingat di sini setiap kali saya menyentuh keadaan dan ini harus menjadi keadaan ini
+
+00:10:19.180 --> 00:10:26.060
+setiap kali saya menyentuh keadaan dalam keadaan tertentu yang sedikit tidak, tidak, karena cara bertindak kembali bekerja.
+
+00:10:26.060 --> 00:10:34.410
+Kami ingin selalu memastikan bahwa kami menggunakan cara fungsi memperbarui keadaan dan itu adalah untuk melakukan sesuatu
+
+00:10:34.410 --> 00:10:35.520
+seperti ini.
+
+00:10:35.870 --> 00:10:45.220
+Dan kita bisa membungkusnya dengan kurung keriting sehingga kita mengembalikan objek ini sebelumnya ketika
+
+00:10:45.520 --> 00:10:49.000
+kita benar-benar melakukan ini
+
+00:10:51.600 --> 00:11:01.800
+di Saya percaya Seinen atau kita melakukan ini di ikon profil yang kita tinggalkan seperti ini.
+
+00:11:02.030 --> 00:11:09.740
+Tapi apa yang sebenarnya ingin kita lakukan adalah mengembalikan status penuh yang ingin kita perbarui dan
+
+00:11:09.860 --> 00:11:15.290
+cara kita melakukannya adalah dengan sedikit merusak atau menyebar operator.
+
+00:11:15.410 --> 00:11:18.200
+Ini adalah kondisi dot dot.
+
+00:11:18.200 --> 00:11:26.240
+Jadi sekarang saya mengembalikan seluruh negara serta memperbarui apa pun keadaan saat ini dengan
+
+00:11:26.360 --> 00:11:29.160
+profil IS terbuka diperbarui.
+
+00:11:30.280 --> 00:11:40.280
+Mari kita simpan ini dan keadaan kita tidak akan ditentukan karena kita harus memperbaruinya ke parameter kondisi sebelumnya.
+
+00:11:40.520 --> 00:11:47.540
+Dan ini harus menjadi yang sebelumnya.
+
+00:11:47.550 --> 00:11:48.390
+Baiklah.
+
+00:11:48.590 --> 00:11:53.940
+Dan saya masih mendapatkan profil tidak didefinisikan tetapi lagi
+
+00:11:53.940 --> 00:12:06.330
+karena kami belum memiliki komponen tetapi kami ingin meneruskan metode modal beralih ke profil juga karena kami dapat menutup profil dari halaman
+
+00:12:06.330 --> 00:12:11.880
+profil tetapi kami juga dapat membuka dari halaman navigasi kami.
+
+00:12:11.940 --> 00:12:22.530
+Saya akan mengatakan titik ini Tongo fana katakanlah jika dan mari kita mulai membuat komponen profil kami, kami memiliki kemampuan untuk mungkin menggunakan
+
+00:12:22.530 --> 00:12:29.280
+ini dan menutup model tetapi juga dalam navigasi di mana kami melakukan ikon profil klik
+
+00:12:29.280 --> 00:12:35.160
+dan kemudian melihat profil dengan menu dropdown yang kemungkinan besar akan kita butuhkan
+
+00:12:35.160 --> 00:12:36.000
+juga.
+
+00:12:36.000 --> 00:12:39.760
+Jadi saya hanya akan menambahkannya di baris baru supaya sedikit lebih bersih.
+
+00:12:39.780 --> 00:12:48.450
+Saya akan mengatakan beralih motile lagi mewariskan mode dot toggle ini.
+
+00:12:48.470 --> 00:12:48.730
+Baiklah.
+
+00:12:48.770 --> 00:12:51.770
+Mari kita membangun komponen profil.
+
+00:12:51.860 --> 00:12:57.850
+Saya akan menambahkan file baru di sini ke folder profil kami dan ini hanya akan disebut Profil.
+
+00:12:57.960 --> 00:12:58.780
+Iya nih.
+
+00:13:00.400 --> 00:13:01.460
+Sekarang dalam profil.
+
+00:13:01.520 --> 00:13:06.520
+Ya saya akan mengimpor re-act dari re-act dan kami
+
+00:13:11.030 --> 00:13:14.640
+hanya akan melakukan fungsi stateless.
+
+00:13:15.080 --> 00:13:21.240
+Jadi kami hanya akan mengatakan profil Konst akan menerima.
+
+00:13:21.360 --> 00:13:29.460
+Yah yang kita miliki adalah profil terbuka yang kita terima. Saya percaya jika kita kembali adalah profil terbuka dan beralih motile
+
+00:13:29.550 --> 00:13:31.050
+yang kita terima.
+
+00:13:31.050 --> 00:13:33.300
+Jadi mari kita pastikan bahwa kita
+
+00:13:39.330 --> 00:13:42.290
+memiliki itu dan di sini kita ingin mengembalikan beberapa barang.
+
+00:13:42.450 --> 00:13:48.520
+Sekarang untuk sekarang saya ingin memastikan bahwa ini berfungsi jadi saya hanya akan mengatakan DIVX dan katakanlah
+
+00:13:49.360 --> 00:13:50.270
+Jack Jack.
+
+00:13:50.300 --> 00:13:52.220
+Atau operasi yang lebih rendah hanya untuk memastikan bahwa itu adalah string.
+
+00:13:52.230 --> 00:13:53.550
+Periksa
+
+00:13:56.440 --> 00:14:05.340
+cek tutup hari memastikan kami mengekspor profil.
+
+00:14:05.430 --> 00:14:08.820
+Mari selamatkan.
+
+00:14:09.030 --> 00:14:11.270
+Dan kami juga ingin kembali ke APT.
+
+00:14:11.300 --> 00:14:21.920
+Ya saya pastikan kami mengimpor komponen profil jadi saya akan menambahkan profil dari folder profil, mari kita
+
+00:14:22.890 --> 00:14:30.840
+simpan C, lupakan 10 tahun belum, mari kita kembali ke aplikasi kita.
+
+00:14:30.850 --> 00:14:34.320
+Jika saya mengklik Lihat Profil, tidak ada yang terjadi.
+
+00:14:34.330 --> 00:14:42.330
+Dan itu karena jika kita pergi ke Deval pro-tools kita bertindak dan kita lihat adalah profil terbuka.
+
+00:14:42.330 --> 00:14:44.180
+Ketika saya mengklik Lihat Profil.
+
+00:14:44.280 --> 00:14:46.380
+Yah kita tidak mengubah apa pun.
+
+00:14:46.410 --> 00:14:49.130
+Profil kami terbuka selalu salah.
+
+00:14:52.180 --> 00:14:55.620
+Tetapi jika saya kembali dan hanya mengatur apt.
+
+00:14:55.660 --> 00:14:56.050
+Iya nih.
+
+00:14:56.050 --> 00:15:02.320
+Apakah Profar terbuka untuk kembali sejati.
+
+00:15:02.420 --> 00:15:09.810
+Kami melihat bahwa profil terbuka sama dengan true dan kami membuka aplikasi kami oh lihat itu.
+
+00:15:09.810 --> 00:15:17.210
+Kami melihat motil kami dan motil ini memiliki komponen profil dan komponen profil ini memiliki div.
+
+00:15:17.310 --> 00:15:18.240
+Periksa cek.
+
+00:15:18.660 --> 00:15:23.610
+Tetapi CSSA kami sedikit tidak aktif dan tidak terlihat tetapi kami melihat bahwa ini berfungsi, kami hanya
+
+00:15:23.610 --> 00:15:26.170
+perlu memastikan bahwa kami dapat menghidupkan dan mematikannya.
+
+00:15:26.190 --> 00:15:27.030
+Mari kita kerjakan itu.
+
+00:15:28.690 --> 00:15:36.290
+Saya ingin mengembalikan ini ke false dan di dalam bagian profil mari membuatnya sedikit lebih menarik.
+
+00:15:37.080 --> 00:15:47.080
+Saya akan membuat div dengan nama kelas dari beberapa gaya yang akan saya dapatkan dari Ptak Kyon.
+
+00:15:47.250 --> 00:15:51.930
+Mari kita lakukan div tertutup.
+
+00:15:51.950 --> 00:15:56.870
+Letakkan ini di baris baru dan di sini.
+
+00:15:57.130 --> 00:16:00.830
+Mari kita benar-benar menambahkan apa yang seharusnya.
+
+00:16:01.240 --> 00:16:09.180
+Yah saya hanya ingin memastikan bahwa modal beralih berfungsi jadi mari kita tambahkan tombol dan tombol
+
+00:16:10.140 --> 00:16:11.700
+ini hanya akan
+
+00:16:16.220 --> 00:16:23.140
+mengatakan klik akan memiliki fungsi klik mungkin tidak melihat model sehingga mungkin tidak berfungsi.
+
+00:16:23.140 --> 00:16:26.580
+Kami mungkin harus menambahkan beberapa sel CSSA terlebih dahulu, tetapi mari kita coba ini.
+
+00:16:26.590 --> 00:16:34.810
+Saya akan mengatakan toggle modem. Mari kita benar-benar menambahkan beberapa CSSA yang tepat di sini sehingga Anda dapat melihat Modal
+
+00:16:34.830 --> 00:16:37.600
+ini akan membuat file CSSA baru.
+
+00:16:37.600 --> 00:16:43.610
+Mari kita lakukan ini profil impor pertama mendapat SS dan mari kita
+
+00:16:47.120 --> 00:16:49.700
+tambahkan itu file SS sekarang.
+
+00:16:52.470 --> 00:17:03.810
+Dan mari kita hanya memiliki kelas modal profil yang akan memiliki warna latar belakang karena hanya membuatnya
+
+00:17:03.810 --> 00:17:05.230
+sedikit melihat.
+
+00:17:05.250 --> 00:17:09.300
+Katakanlah nol koma delapan untuk opacity.
+
+00:17:09.810 --> 00:17:17.780
+Kami akan memberikannya posisi yang diperbaiki kembali sesuatu yang pasti kami perlukan.
+
+00:17:17.810 --> 00:17:21.890
+Mari kita beri ketinggian 100
+
+00:17:24.570 --> 00:17:28.400
+persen, mungkin katakan dengan
+
+00:17:31.450 --> 00:17:35.770
+100 persen teratas juga tertawa.
+
+00:17:36.010 --> 00:17:40.360
+Banyak CSSA juga menambahkan tampilan Flack yang ingin
+
+00:17:43.760 --> 00:17:45.860
+Anda selaraskan item.
+
+00:17:45.860 --> 00:17:49.290
+Sekali lagi kami hanya menggunakan Fluxbox di sini untuk dipusatkan.
+
+00:17:49.310 --> 00:17:54.630
+Dan akhirnya kami ingin juga membenarkan pusat konten, mari
+
+00:17:59.250 --> 00:18:08.520
+aman di sini, mari kembali dan sebenarnya Anda tahu, alih-alih nama kelas ini, izinkan saya mengubah semua
+
+00:18:08.670 --> 00:18:15.540
+ini menjadi kelas kami yang baru saja kami buat yang merupakan motil profil.
+
+00:18:15.950 --> 00:18:21.310
+Jadi saya akan mengatakan motil profil. Mari kita kembali dan saya baru sadar
+
+00:18:24.150 --> 00:18:29.670
+dengan profil tampilan ketika kita klik, kita ingin memastikan bahwa kita dapat mengaktifkan dan
+
+00:18:29.850 --> 00:18:30.750
+menonaktifkan ini.
+
+00:18:30.750 --> 00:18:34.230
+Jadi mari kita kembali ke navigasi kita di sini.
+
+00:18:35.750 --> 00:18:38.610
+Di mana kita mengklik profil tampilan.
+
+00:18:38.900 --> 00:18:48.790
+Jadi kita memiliki ikon profil dan ikon profil ketika kita mengklik tampilan profil.
+
+00:18:49.040 --> 00:18:57.680
+Kami juga ingin memiliki acara klik dan acara Klik Klik ini akan
+
+00:18:57.720 --> 00:19:02.790
+memiliki toggle alat peraga Dopp ini.
+
+00:19:02.920 --> 00:19:06.820
+Itulah yang mungkin seharusnya dilakukan sejak awal tetapi kami melakukan
+
+00:19:06.820 --> 00:19:11.830
+kesalahan ini sesekali dan menyimpannya memastikan kami mendapatkan motil pengalih dari ikon profil.
+
+00:19:13.740 --> 00:19:16.590
+Jadi mari kita kembali ke navigasi.
+
+00:19:16.860 --> 00:19:20.070
+Mari kita bersihkan ini jadi sedikit berantakan sekali lagi.
+
+00:19:22.930 --> 00:19:26.020
+Dan mulai dari atas jika Anda pergi ke
+
+00:19:29.090 --> 00:19:32.980
+navigasi kita melihat bahwa dalam navigasi kita memiliki ini mulai beralih motil.
+
+00:19:33.080 --> 00:19:50.300
+Jadi jika Anda pergi ke komponen navigasi dan ikon profil memungkinkan juga meneruskan properti moral toggle.
+
+00:19:50.400 --> 00:19:55.070
+Mari kita mulai.
+
+00:19:55.070 --> 00:19:55.770
+Baiklah.
+
+00:19:55.880 --> 00:20:00.030
+Jika Anda melihat bagian bawah di sini itu sedang melakukan sesuatu.
+
+00:20:00.100 --> 00:20:06.160
+Itu toggling tapi kami mendapatkan kesalahan tidak asyik Felty mengeksekusi anak yang dihapus di Node, not yang akan dihapus
+
+00:20:06.160 --> 00:20:07.700
+bukan anak dari ini.
+
+00:20:07.700 --> 00:20:10.850
+Tidak, itu adalah beban yang membingungkan di udara.
+
+00:20:10.870 --> 00:20:16.550
+Tapi mari kita lihat apa yang terjadi di sini.
+
+00:20:16.580 --> 00:20:19.850
+Saya yakin saya membuat kesalahan konyol di suatu tempat.
+
+00:20:20.800 --> 00:20:22.020
+Dan.
+
+00:20:22.170 --> 00:20:22.960
+Baiklah.
+
+00:20:24.130 --> 00:20:25.730
+Kesalahan klasik.
+
+00:20:25.750 --> 00:20:30.160
+Ini adalah salah satu hal yang ketika Anda seorang pengembang Anda hanya harus terbiasa dengannya dan merangkul.
+
+00:20:30.250 --> 00:20:34.460
+Anda lihat di sini bahwa saya benar-benar salah mengeja komponen.
+
+00:20:34.480 --> 00:20:39.040
+Dan beberapa dari Anda mungkin tertawa sekarang karena mereka bertanya-tanya mengapa saya mengejanya seperti itu.
+
+00:20:39.040 --> 00:20:41.050
+Mudah-mudahan itu alasannya.
+
+00:20:41.050 --> 00:20:42.580
+Mari kita coba lagi.
+
+00:20:43.120 --> 00:20:46.020
+Ayo pergi ke profil.
+
+00:20:46.420 --> 00:20:47.920
+Hei lihat itu.
+
+00:20:49.810 --> 00:20:54.170
+Kami memiliki motel sendiri yang hanya memiliki fungsi klik untuk saat ini.
+
+00:20:54.520 --> 00:20:56.730
+Tapi ini bagus.
+
+00:20:56.740 --> 00:20:57.990
+Bekerja.
+
+00:20:58.300 --> 00:21:00.120
+Sangat sangat keren.
+
+00:21:00.120 --> 00:21:03.050
+Sekarang Anda melihat betapa konyolnya itu.
+
+00:21:03.050 --> 00:21:09.890
+Itu hanya kesalahan pengejaan yang sederhana tetapi Anda tidak benar-benar mendapatkan kesalahan yang jelas.
+
+00:21:09.890 --> 00:21:16.280
+Sulit untuk mengetahui apa yang sedang terjadi tetapi hanya dengan melihat fakta bahwa tidak ada yang
+
+00:21:16.820 --> 00:21:22.670
+memasang makanan, jadi ada alasan mengapa saya memutuskan untuk melihat modal Geass dan tentu saja
+
+00:21:22.670 --> 00:21:24.500
+itu adalah kesalahan pengejaan.
+
+00:21:25.040 --> 00:21:31.460
+Sekarang saya benar-benar ingin menarik perhatian kita ke file ini karena saya sedikit mengabaikan
+
+00:21:31.460 --> 00:21:33.130
+apa yang dilakukannya.
+
+00:21:33.170 --> 00:21:42.270
+Anda melihat elemen Port-Au di Briac memasukkan ke dalam memperlakukan anjing setelah anak-anak Modals meningkat.
+
+00:21:42.650 --> 00:21:48.860
+Sehingga yang kami lakukan di sini adalah tempat pemasangan komponen modal.
+
+00:21:48.860 --> 00:21:52.100
+Jika saya kembali ke sini, buka alat
+
+00:21:55.180 --> 00:21:58.120
+pengembang saya, skoter bereaksi di sini.
+
+00:21:58.360 --> 00:22:06.220
+Jika saya melihat ke sini segera setelah saya mengklik Lihat Profil, saya mendapatkan komponen
+
+00:22:06.220 --> 00:22:16.250
+modal dan segera setelah saya klik komponen moral hilang dan benar-benar dilepas dari sini dan itu melekat pada
+
+00:22:16.490 --> 00:22:20.530
+root ke elemen sederhana yang kami buat.
+
+00:22:20.540 --> 00:22:29.810
+Sekali lagi jika kita pergi ke elemen dan kita pergi ke motil root di sinilah div kita diciptakan yang kita miliki di sini.
+
+00:22:29.830 --> 00:22:30.390
+Baiklah.
+
+00:22:30.480 --> 00:22:33.710
+Sekarang kita sudah sejauh ini, kita memiliki modal sendiri.
+
+00:22:33.900 --> 00:22:40.070
+Mari kita membuatnya sedikit lebih cantik di video berikutnya sehingga kita bisa mulai mengerjakan sesi kita.
+
+00:22:40.380 --> 00:22:41.330
+Saya akan lihat yang itu.

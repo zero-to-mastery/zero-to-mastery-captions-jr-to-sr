@@ -1,0 +1,418 @@
+﻿WEBVTT
+
+00:00:01.260 --> 00:00:02.070
+Selamat datang kembali.
+
+00:00:02.130 --> 00:00:06.310
+Sudah waktunya untuk membangun aplikasi teman-teman robo kami untuk memulai.
+
+00:00:06.450 --> 00:00:08.810
+Baiklah mari kita buka terminal kita.
+
+00:00:08.820 --> 00:00:11.220
+Kita harus merasa nyaman dengan itu sekarang.
+
+00:00:11.400 --> 00:00:17.910
+Untuk bagian ini saya benar-benar sangat merekomendasikan coding sepanjang dan mengikuti sepanjang proses karena
+
+00:00:17.910 --> 00:00:23.260
+Anda akan belajar jauh lebih baik dengan benar-benar melakukan ini sendiri.
+
+00:00:23.310 --> 00:00:24.390
+Dan seperti yang saya janjikan.
+
+00:00:24.480 --> 00:00:28.700
+Ini cukup mudah dan kami akan memiliki aplikasi yang indah di akhir itu.
+
+00:00:28.800 --> 00:00:35.400
+Tetapi bagi mereka yang menikmati hanya menonton dan bekerja setelah itu saya akan memberikan file
+
+00:00:35.490 --> 00:00:40.520
+aplikasi teman-teman robo terakhir untuk Anda di akhir bagian ini.
+
+00:00:40.810 --> 00:00:41.920
+Jadi kita belum punya apa-apa.
+
+00:00:41.920 --> 00:00:43.350
+Kami berada di desktop.
+
+00:00:43.390 --> 00:00:52.740
+Kita harus benar-benar membuat folder proyek dan kita perlu menginstal reaksi.
+
+00:00:52.820 --> 00:01:01.320
+Sekarang jika Anda ingat di NPM kita bisa menginstal reaksi dan memilikinya sebagai bagian dari paket kami di Arjay dikemas
+
+00:01:01.320 --> 00:01:02.000
+seterusnya
+
+00:01:02.480 --> 00:01:07.370
+Tetapi ada alat lagi karena jenis tindakan ulang sangat umum.
+
+00:01:07.420 --> 00:01:15.260
+Ada alat yang memungkinkan kita menulis cara membuat reaksi dengan semua file kita sudah terpasang.
+
+00:01:15.320 --> 00:01:21.440
+Itu disebut membuat aplikasi aksi ulang.
+
+00:01:21.630 --> 00:01:29.730
+Alat ini adalah paket global yang ingin Anda instal dari NPM dan itu menciptakan proyek pemula yang
+
+00:01:29.760 --> 00:01:36.320
+berisi paket apa yang berisi bisbol sehingga kami dapat menggunakan fitur javascript terbaru.
+
+00:01:36.570 --> 00:01:41.810
+Ini berisi Linton dan debugging yang belum benar-benar kita lihat.
+
+00:01:41.940 --> 00:01:46.830
+Ini menciptakan semua infrastruktur ini untuk Anda sehingga Anda dapat segera mulai menulis aplikasi dan itu adalah
+
+00:01:46.830 --> 00:01:51.670
+alat yang sangat bagus yang digunakan banyak orang sehingga kita akan menginstal create react up.
+
+00:01:51.690 --> 00:01:55.830
+Jika Anda ingat kami cukup menginstal NPM Dashti dan
+
+00:01:59.050 --> 00:02:04.020
+ini akan memberi kami reaksi buat lagi jika Anda mendapatkan kesalahan ini.
+
+00:02:04.120 --> 00:02:07.180
+Ingatlah selalu untuk melakukan sudo sekarang karena
+
+00:02:14.500 --> 00:02:20.870
+kami telah membuat aksi ulang, kami hanya mengatakan membuat aplikasi aksi ulang dan nama aplikasi kami.
+
+00:02:20.890 --> 00:02:25.360
+Dalam kasus kami, kami akan menyebutnya teman robo.
+
+00:02:29.130 --> 00:02:35.960
+Anda lihat itu sedang menginstal banyak hal yang kita butuhkan.
+
+00:02:36.350 --> 00:02:44.210
+Sepertinya ini adalah kesuksesan yang dibuat teman-teman Roble di direktori saya dan itu bahkan memberi Anda
+
+00:02:44.240 --> 00:02:52.550
+beberapa komentar bagus NPM mulai NPM run build NPM test NPM Ranja didongkrak tetapi kita akan membahasnya nanti.
+
+00:02:52.550 --> 00:02:55.790
+Mari kita lihat apa yang kita miliki di folder desktop kita.
+
+00:02:57.070 --> 00:03:01.200
+Kami memiliki teman robo yang sudah dibuat untuk kami.
+
+00:03:01.590 --> 00:03:04.800
+OK, mari C. D ke dalamnya.
+
+00:03:04.950 --> 00:03:14.280
+Dan sekarang jika saya lakukan ls yang terlihat seperti kita memiliki banyak folder dan file seperti yang berbatasan dengan Pakistan yang telah dibuat
+
+00:03:14.430 --> 00:03:18.100
+untuk kita dan tidak ada modul. Betapa mengagumkannya itu.
+
+00:03:18.120 --> 00:03:23.880
+Itu sudah menginstal bereaksi di semua dependensi yang kita butuhkan.
+
+00:03:23.880 --> 00:03:28.780
+Sebenarnya jika kita pergi ke desktop kita melihat folder di sini.
+
+00:03:28.920 --> 00:03:36.120
+Jadi mari kita seret ini ke Sublime Text untuk membukanya dan saya akan mengubah layar sekitar
+
+00:03:36.120 --> 00:03:36.690
+supaya
+
+00:03:40.230 --> 00:03:42.370
+kita bisa melihat keduanya sekaligus.
+
+00:03:47.630 --> 00:03:56.130
+Sekarang sebelum saya tunjukkan apa yang ada di folder kita melihat bahwa jika kita pergi ke paket Jason kita, kita melihat dependensi
+
+00:03:56.130 --> 00:03:57.480
+kita harus bereaksi.
+
+00:03:57.480 --> 00:04:04.830
+Kami memiliki sesuatu yang disebut skrip aksi ulang dan aksi ulang dan kami juga memiliki banyak skrip yang
+
+00:04:04.890 --> 00:04:07.120
+telah mereka buat untuk kami.
+
+00:04:07.110 --> 00:04:10.790
+Kami mulai membangun tes dan Egypte.
+
+00:04:10.960 --> 00:04:16.660
+Mari kita mulai dengan permulaan karena walaupun sepertinya mulai membaca skrip aksi ulang dan
+
+00:04:16.660 --> 00:04:17.890
+memulai server kami.
+
+00:04:18.150 --> 00:04:19.750
+Jadi saya
+
+00:04:26.840 --> 00:04:35.940
+akan mengatakan NPM mulai melihat bahwa kami memiliki host lokal kami sampel bereaksi sehingga semuanya bekerja.
+
+00:04:35.980 --> 00:04:40.420
+Kami tidak perlu melakukan apa pun kecuali menjalankan hanya dua perintah saja.
+
+00:04:40.420 --> 00:04:41.330
+Sangat keren.
+
+00:04:41.360 --> 00:04:46.480
+OK mari kita lihat apa yang diciptakan tab reaksi Crea untuk kita.
+
+00:04:46.480 --> 00:04:52.560
+Kami telah membaca saya yang hanya informasi yang Anda ingat ketika kami letakkan di get hub.
+
+00:04:52.660 --> 00:05:01.000
+Ini akan ditampilkan di folder proyek yang kita miliki paket Jaison yang lagi masuk akal.
+
+00:05:01.230 --> 00:05:03.390
+Saya akan menjelaskan kepada Anda apa arti ketergantungan itu.
+
+00:05:03.450 --> 00:05:04.550
+Dan video selanjutnya.
+
+00:05:04.890 --> 00:05:12.080
+Tetapi kita melihat bahwa skrip disediakan untuk dan semuanya menggunakan skrip ulangan.
+
+00:05:12.360 --> 00:05:21.450
+Sekarang skrip Riak adalah apa yang membuat KHRAIS bereaksi sangat mengagumkan alih-alih kami memasang hal-hal seperti paket basah
+
+00:05:21.720 --> 00:05:22.910
+dan baseball.
+
+00:05:22.920 --> 00:05:29.270
+Apakah Anda ingat berapa banyak pengaturan yang harus kami lakukan untuk menjalankan ESX javascript.
+
+00:05:29.430 --> 00:05:36.120
+Dan kemudian kami juga menggunakan ephi browser untuk digabungkan dengan bot javascript akan bereaksi skrip melakukan
+
+00:05:36.120 --> 00:05:42.860
+segalanya untuk Anda dan menggunakan yang terbaru dan terhebat yang kami tidak perlu khawatir tentang hal itu.
+
+00:05:42.900 --> 00:05:48.480
+Sehingga memungkinkan orang untuk membuat aplikasi yang sangat sangat cepat dan Anda dapat menggunakan ject.
+
+00:05:48.510 --> 00:05:53.970
+Jika Anda akhirnya ingin menyesuaikan skrip ulangan dan lanjutkan sendiri.
+
+00:05:53.970 --> 00:06:00.660
+Agar proyek Anda semakin besar dan semakin besar, Anda selalu dapat mengeluarkan dan menyesuaikan aplikasi Anda adalah cara terbaik untuk
+
+00:06:00.660 --> 00:06:02.390
+memulai setiap proyek tindakan.
+
+00:06:02.400 --> 00:06:06.870
+Ini dikelola oleh tim Facebook dan itu benar-benar bagus.
+
+00:06:08.530 --> 00:06:09.000
+BAIK.
+
+00:06:09.150 --> 00:06:16.860
+Kami juga melihat bahwa ada basis data yang terkunci pada file dan ini adalah file yang secara otomatis dihasilkan
+
+00:06:16.860 --> 00:06:18.280
+oleh paket Jaison.
+
+00:06:18.570 --> 00:06:25.950
+Itu memastikan bahwa nomor versi dependensi Anda terkunci sehingga jika saya memberikan proyek ini kepada
+
+00:06:25.950 --> 00:06:33.300
+siapa pun di seluruh dunia, kami memastikan bahwa versinya benar sehingga bekerja 100 persen
+
+00:06:34.080 --> 00:06:35.270
+dari waktu.
+
+00:06:36.310 --> 00:06:40.830
+Kami juga memiliki sesuatu yang disebut pengabaian yang baik dan ada titik di depannya.
+
+00:06:40.840 --> 00:06:42.520
+Ini sebenarnya disebut file dot.
+
+00:06:42.820 --> 00:06:47.180
+Dan sebelum kita menjalankan, dapatkan dan dorong proyek ini untuk mendapatkan bantuan.
+
+00:06:47.530 --> 00:06:54.430
+Yah, periksa file ini dan jika melihat sesuatu di sini yang seharusnya tidak termasuk itu secara otomatis
+
+00:06:54.430 --> 00:06:56.130
+mengatakan abaikan file-file ini.
+
+00:06:56.140 --> 00:07:01.690
+Jadi ingat bagaimana saya mengatakan modul simpul kita tidak ingin mendorong itu ke repo karena sementara kita
+
+00:07:01.780 --> 00:07:09.140
+memiliki Pakistan Jason dan itu menciptakan pekerjaan yang tidak perlu dan menunggu untuk mendorong proyek kita. Sekali lagi kita tidak peduli tentang folder
+
+00:07:09.140 --> 00:07:10.240
+terbesar yang diketahui.
+
+00:07:10.240 --> 00:07:14.810
+Kami tidak peduli tentang folder sampul yang lagi tentang pengujian kami tidak perlu membahas itu.
+
+00:07:15.040 --> 00:07:20.160
+Dan kami juga tidak peduli dengan folder build dan beberapa folder lainnya.
+
+00:07:20.530 --> 00:07:25.870
+Itu hanya secara otomatis menghasilkan ini untuk kita, kita tidak perlu menyentuh.
+
+00:07:26.070 --> 00:07:32.760
+Kami kemudian memiliki modul node kami dengan baik dan Anda dapat melihat di sini ada banyak dari
+
+00:07:32.790 --> 00:07:36.890
+mereka yang lagi-lagi membuat kembali bertindak hanya untuk kami.
+
+00:07:36.940 --> 00:07:41.770
+Kami juga memiliki folder publik dan di sini kami pikir harus terbiasa.
+
+00:07:41.770 --> 00:07:48.770
+Kami telah mengindeks bahwa H. M. kami memiliki sesuatu yang disebut manifes d'Agde Jaison.
+
+00:07:49.050 --> 00:07:56.250
+Ini adalah fitur baru yang memungkinkan orang untuk mengunduh pintasan ke situs web Anda dan memiliki ikon di desktop
+
+00:07:56.250 --> 00:07:56.700
+mereka.
+
+00:07:56.700 --> 00:07:58.590
+Tetapi sekali lagi kita tidak perlu khawatir tentang hal itu.
+
+00:07:58.710 --> 00:08:06.750
+Dan kemudian kita memiliki Traficon ICAO yang merupakan ikon kecil yang muncul di atas sini dan dia dapat mengubahnya dengan file
+
+00:08:06.750 --> 00:08:12.990
+iso apa pun yang Anda inginkan dan ada alat online untuk menghasilkan ini untuk Anda.
+
+00:08:12.990 --> 00:08:14.900
+Sekali lagi sesuatu yang tidak perlu kita khawatirkan.
+
+00:08:16.470 --> 00:08:21.210
+Dan akhirnya kita memiliki folder SIRC yang merupakan folder sumber.
+
+00:08:21.350 --> 00:08:25.020
+Di sinilah semua keajaiban aksi ulang terjadi.
+
+00:08:25.320 --> 00:08:29.580
+Jika Anda melihat Ya diindeks itu adalah file skrip utama.
+
+00:08:29.610 --> 00:08:37.050
+Kami melakukan beberapa impor yang Anda ingat kami hanya mengimpor skrip yang berbeda dan kami hanya mengatakan
+
+00:08:37.050 --> 00:08:40.640
+sintaks baru yang belum pernah kami lihat sebelumnya.
+
+00:08:40.650 --> 00:08:45.250
+Tindakan ulang dokumen aplikasi Dom Rander mendapatkan LMM dengan ID.
+
+00:08:45.270 --> 00:08:46.850
+OK kita tahu ini.
+
+00:08:46.950 --> 00:08:55.380
+Jadi kami mengambil elemen ID root dan kami mengatakan ulang bertindak aplikasi Dom Brender.
+
+00:08:55.650 --> 00:09:03.350
+Jika kita pergi ke indeks pikir file ASTM yang kita lihat di sini dan mereka memiliki komentar yang sangat
+
+00:09:03.350 --> 00:09:12.190
+bagus sehingga Anda dapat membaca kita melihat bahwa di dalam tubuh hanya ada satu div tidak ada file skrip jika browser tidak
+
+00:09:12.190 --> 00:09:13.220
+menggunakan javascript.
+
+00:09:13.230 --> 00:09:15.610
+Sekali lagi kita tidak perlu khawatir tentang itu.
+
+00:09:15.640 --> 00:09:22.030
+Itu hanya datang dengan file karena itu praktik yang baik tetapi dalam tubuh kita hanya memiliki div ini dengan ID root
+
+00:09:22.030 --> 00:09:23.920
+dan tidak ada yang lain.
+
+00:09:23.940 --> 00:09:26.140
+Namun ketika kita pergi ke aplikasi kita melihat itu.
+
+00:09:26.320 --> 00:09:28.190
+Yah pasti ada sesuatu di sana.
+
+00:09:28.300 --> 00:09:36.260
+Ada pajak paling sedikit dan logo di sana jadi kembali ke sini tanpa mengetahui dan Anda bereaksi kita bisa mengatakan bahwa
+
+00:09:36.260 --> 00:09:47.240
+OK kita mengambil ide ini dengan indeks dot J. S. file dan kami katakan kami ingin merender
+
+00:09:47.540 --> 00:09:54.050
+komponen aplikasi ini dan inilah yang kami sebut sintaks GSX yang akan kita bahas nanti.
+
+00:09:54.840 --> 00:10:01.240
+Aplikasi ini bereaksi dengan cara mengatakan ini adalah komponen Riak dan saya ingin Anda menampilkan di
+
+00:10:01.260 --> 00:10:06.210
+layar di badan ini sehingga saya benar-benar dapat mengubah ini juga.
+
+00:10:06.510 --> 00:10:13.300
+Sementara kita bisa mengatakan H-1 Hello World.
+
+00:10:13.930 --> 00:10:14.640
+Halo.
+
+00:10:18.120 --> 00:10:18.710
+H-1.
+
+00:10:19.600 --> 00:10:30.120
+Dan sekarang jika saya menyimpan ini, Anda akan melihat bahwa bertindak kembali secara otomatis mengkompilasi ini untuk kami jadi saya tidak menyegarkan
+
+00:10:30.150 --> 00:10:35.190
+dan melihatnya di situs Web kami, kami memiliki hello world.
+
+00:10:35.230 --> 00:10:36.460
+Sangat keren.
+
+00:10:36.460 --> 00:10:39.400
+Sekarang lagi hal hebat lain tentang Creba bereaksi.
+
+00:10:39.400 --> 00:10:43.590
+Ini juga memberi Anda peringatan yang mengatakan aplikasi didefinisikan tetapi tidak pernah digunakan.
+
+00:10:43.600 --> 00:10:48.870
+Jadi jika saya pergi ke sini saya mengimpor aplikasi tetapi saya tidak pernah menggunakannya.
+
+00:10:48.880 --> 00:10:56.690
+Jadi kami juga mendapatkan saran yang sangat bagus di terminal kami tentang bagaimana kami dapat meningkatkan aplikasi.
+
+00:10:56.960 --> 00:10:57.430
+BAIK.
+
+00:10:57.700 --> 00:11:02.110
+Hal terakhir yang ingin saya tunjukkan kepada Anda sebelum kita masuk ke bagian berikutnya kita benar-benar
+
+00:11:02.110 --> 00:11:05.740
+mulai menggali ke dalam kode karena Anda dapat melihat pewarnaannya agak tidak aktif.
+
+00:11:05.760 --> 00:11:12.210
+Dan itu karena Sublime Text tidak begitu mengerti apa yang terjadi di sini.
+
+00:11:13.740 --> 00:11:26.640
+Jika kita mengubahnya ke Babel javascript di sana kamu mendapatkan sintaks yang bagus dan semuanya terlihat baik-baik saja.
+
+00:11:27.630 --> 00:11:28.440
+Sempurna.
+
+00:11:28.500 --> 00:11:33.230
+Kami sudah menyiapkan aplikasi, saya juga ingin mengubah Taghavi di sini.
+
+00:11:33.240 --> 00:11:33.840
+Halo Dunia.
+
+00:11:33.840 --> 00:11:37.500
+Untuk saat ini hanya memastikan bahwa semuanya berfungsi.
+
+00:11:37.600 --> 00:11:44.370
+Tetapi untuk sekarang Anda memiliki pengaturan di video berikutnya, kita akan melihat seluruh file dan
+
+00:11:44.370 --> 00:11:47.080
+benar-benar mulai membangun komponen pertama kami.
+
+00:11:47.220 --> 00:11:48.370
+Ini akan sangat menyenangkan.
+
+00:11:48.420 --> 00:11:49.360
+Saya akan melihat yang itu.

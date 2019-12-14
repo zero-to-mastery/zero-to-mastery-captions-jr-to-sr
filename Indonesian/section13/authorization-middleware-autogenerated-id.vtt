@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:01.040 --> 00:00:02.120
+Selamat datang kembali.
+
+00:00:02.150 --> 00:00:10.820
+Akhirnya mari kita selesaikan latihan ini dan apa yang ingin kita lakukan di sini adalah menggunakan kata tengah di mana
+
+00:00:10.820 --> 00:00:19.310
+kata tengah sangat berguna dalam sesuatu seperti server karena kami memastikan bahwa kami dapat menangani kasus di mana
+
+00:00:19.670 --> 00:00:22.550
+kami selalu perlu bertindak berdasarkan permintaan.
+
+00:00:22.610 --> 00:00:30.470
+Misalnya pengurai tubuh yang dilakukan Jaison memungkinkan kami untuk menambahkan Jason ke badan permintaan kami dan memiliki akses ke sana.
+
+00:00:30.680 --> 00:00:38.390
+Jadi akan sangat bagus jika kita memiliki metode non-aktif atau middleware yang dapat kita gunakan
+
+00:00:38.450 --> 00:00:45.230
+yang selalu memeriksa dan melindungi titik akhir yang seharusnya sangat sensitif dan hanya
+
+00:00:45.460 --> 00:00:47.340
+memiliki wewenang mengakses.
+
+00:00:47.400 --> 00:00:49.350
+Jadi mari kita tulis itu dulu.
+
+00:00:49.500 --> 00:00:54.950
+Saya ingin memastikan bahwa saya akan membuat Auth. layanan.
+
+00:00:54.990 --> 00:00:57.330
+Katakanlah yang mengatakan membutuhkan
+
+00:01:01.800 --> 00:01:06.730
+dan titik akhir yang membutuhkan Auth. bisa menggunakan ini.
+
+00:01:06.960 --> 00:01:12.840
+Dalam kasus saya, mungkin kami tidak menginginkannya untuk didaftarkan karena orang yang mendaftar tidak
+
+00:01:12.840 --> 00:01:13.930
+memiliki otorisasi.
+
+00:01:14.280 --> 00:01:20.310
+Namun saya ingin ID profil untuk mendapatkan profil saya ingin juga untuk profil.
+
+00:01:22.050 --> 00:01:29.280
+Pembaruan dan mungkin untuk gambar juga kami ingin memastikan siapa pun yang menggunakan layanan pengenalan gambar kami
+
+00:01:29.310 --> 00:01:37.080
+adalah pengguna yang sebenarnya sehingga menggunakan middleware baru ini bahwa kami akan menerapkan siapa pun kecuali Anda pengguna
+
+00:01:37.080 --> 00:01:43.680
+terdaftar yang memiliki sesi dengan kami yang sudah masuk dan ada di database kami.
+
+00:01:43.680 --> 00:01:47.000
+Nah, jika Anda bukan salah satu dari mereka Anda tidak mendapatkan akses di sini.
+
+00:01:47.960 --> 00:01:52.840
+Jadi mari kita pergi dan benar-benar membuat ini sekarang.
+
+00:01:52.880 --> 00:02:00.890
+Biasanya saya suka membuat folder middleware tetapi untuk sekarang mari kita buat file
+
+00:02:00.890 --> 00:02:07.090
+controller dan kita akan memanggil otorisasi file ini cerdik Ya.
+
+00:02:07.440 --> 00:02:08.870
+Dan otorisasi ini.
+
+00:02:09.090 --> 00:02:09.840
+Iya nih.
+
+00:02:09.930 --> 00:02:14.830
+Ya, hal pertama yang kita butuhkan adalah klien S merah.
+
+00:02:14.850 --> 00:02:24.200
+Kami perlu memastikan bahwa kami dapat melakukan pemeriksaan ke klien Radice bahwa kami memiliki pengguna itu
+
+00:02:24.200 --> 00:02:28.290
+dan karena klien Radice adalah penandatanganan.
+
+00:02:28.350 --> 00:02:34.080
+Doug Ya kita bisa mengimpor di sini untuk saat ini tetapi untuk masa depan kita mungkin ingin memindahkannya
+
+00:02:34.080 --> 00:02:39.310
+ke server sehingga file lain yang saya butuhkan pengontrol dan middleware lain hanya dapat mengimpor.
+
+00:02:39.540 --> 00:02:44.130
+Untuk saat ini, mari kita tambahkan klien Berettas ke
+
+00:02:47.780 --> 00:02:55.860
+ekspor untuk memastikan kita menambahkan komentar di sini dan mari kita ambil klien rattus dari jalur
+
+00:03:01.170 --> 00:03:09.460
+relatif kita yang merupakan tanda dodginess dan kita hanya akan memanggil metode klien S merah pada saya
+
+00:03:09.460 --> 00:03:09.980
+t.
+
+00:03:12.380 --> 00:03:14.040
+Dan mari kita buat middleware ini sekarang.
+
+00:03:14.180 --> 00:03:20.610
+Saya akan mengatakan biaya membutuhkan Auth. sama dengan.
+
+00:03:21.090 --> 00:03:30.560
+Itu akan menerima permintaan dan tanggapan karena ingatlah menjawab bahwa Yesus setiap
+
+00:03:30.560 --> 00:03:39.150
+kali dipanggil Mereka akan menerima parameter respons permintaan di sini.
+
+00:03:39.250 --> 00:03:42.710
+Sekarang izinkan saya memastikan saya mengatakan ini.
+
+00:03:42.760 --> 00:03:46.040
+Jadi kami sudah memilikinya sekarang di sini.
+
+00:03:46.170 --> 00:03:52.610
+Sebenarnya ada parameter ketiga yang Anda dapatkan dengan Express dan itu disebut selanjutnya.
+
+00:03:52.900 --> 00:03:59.960
+Dan selanjutnya seperti namanya memungkinkan kita untuk terus turun rantai di sini dengan menggunakan berikutnya.
+
+00:03:59.980 --> 00:04:04.570
+Saya katakan OK lakukan sesuatu dalam fungsi ini.
+
+00:04:04.750 --> 00:04:09.990
+Setelah itu selesai jika saya menjalankan berikutnya itu terus ke bagian berikutnya yang ada di sini
+
+00:04:10.890 --> 00:04:17.760
+Jadi kami ingin memastikan bahwa di dalam sini di akhir apa pun yang kami lakukan kami akan memanggil
+
+00:04:17.760 --> 00:04:19.450
+berikutnya dengan kembali berikutnya.
+
+00:04:19.470 --> 00:04:25.800
+Jadi ini adalah middleware, middleware. Hanya sedikit hal yang melewati modifikasi saya atau memeriksa hal-hal di
+
+00:04:25.800 --> 00:04:26.390
+tengah.
+
+00:04:26.610 --> 00:04:34.770
+Sama seperti paket Kursus atau postur tubuh atau Morgan apakah ia mengawasi respons permintaan melakukan sesuatu untuk itu
+
+00:04:34.770 --> 00:04:37.870
+seperti keluar dan kemudian memanggil berikutnya.
+
+00:04:37.890 --> 00:04:39.770
+Jadi itu terus melewatinya.
+
+00:04:41.340 --> 00:04:49.780
+Untuk saat ini dan memerlukan auth kita akan melakukan logika sederhana di sini yang mengatakan jika ada otorisasi maka
+
+00:04:53.680 --> 00:04:58.200
+kita akan meminta atau kita akan mengambil yang dari header.
+
+00:04:59.750 --> 00:05:06.020
+Dan sekarang kita bisa melakukan pemeriksaan jika tidak ada otorisasi.
+
+00:05:06.170 --> 00:05:11.140
+Dalam hal ini saya ingin kembali dan bahkan tidak repot melanjutkan yang berikutnya.
+
+00:05:11.470 --> 00:05:17.090
+Cukup kembalikan status respons yang 401.
+
+00:05:18.250 --> 00:05:27.600
+Dan kami hanya akan mengatakan bahwa ini akan mengatakan Jaison di resmi.
+
+00:05:27.660 --> 00:05:35.100
+Namun jika mereka memiliki tokin otorisasi dan permintaan mereka dalam hal itu kami ingin mengembalikan apa pun yang
+
+00:05:35.100 --> 00:05:37.290
+diberikan klien Radice kepada kami.
+
+00:05:37.290 --> 00:05:45.570
+Jadi jika kita melakukan permintaan dapatkan, kita akan memiliki otorisasi sebagai kunci dan kita akan mencoba dan
+
+00:05:45.570 --> 00:05:46.070
+mendapatkannya.
+
+00:05:46.110 --> 00:05:54.050
+Dan berdasarkan pada Get kita akan mendapatkan balasan kesalahan dan kami telah melakukan ini sebelumnya
+
+00:05:54.650 --> 00:06:01.560
+dan balasan kesalahan ini akan memiliki katakanlah jika ada atau tidak ada balasan
+
+00:06:01.560 --> 00:06:07.230
+Dalam hal ini kita akan sekali lagi mari kita kembalikan 401 hal yang sama.
+
+00:06:08.930 --> 00:06:22.040
+Kalau tidak, kita hanya akan benar-benar membiarkannya seperti itu atau bahkan kita bisa memasangnya.
+
+00:06:22.080 --> 00:06:23.610
+Jadi apa yang terjadi di sini.
+
+00:06:24.030 --> 00:06:30.780
+Yah semua yang kami lakukan mengharuskan penulis lakukan adalah mencoba untuk memblokir permintaan dari melangkah lebih jauh kecuali
+
+00:06:30.780 --> 00:06:32.410
+kami memenuhi semua kriteria.
+
+00:06:32.730 --> 00:06:39.780
+Jika ada cukup otorisasi. Lebih baik jika tidak ada yang baik katakan saja pada yang berwenang jika
+
+00:06:39.780 --> 00:06:46.320
+ada header otorisasi kita akan memeriksa rattus memastikan bahwa kita benar-benar memiliki sesuatu di sana.
+
+00:06:46.560 --> 00:06:49.170
+Jika kita tidak berhasil maka tidak sah.
+
+00:06:49.560 --> 00:06:52.050
+Kalau tidak, kita tidak akan melakukan apa pun.
+
+00:06:52.050 --> 00:06:58.200
+Kami hanya akan melewati itu dan lakukan selanjutnya untuk mendapatkan titik akhir apa pun yang dibutuhkan pengguna.
+
+00:06:59.810 --> 00:07:05.390
+Dan itu demonstrasi sederhana yang bagus dari middleware dan kita bisa menggunakan ini dengan cara yang bagus sekarang.
+
+00:07:05.570 --> 00:07:08.740
+Seperti yang saya tunjukkan kepada Anda
+
+00:07:13.800 --> 00:07:26.580
+dengan melakukan ekspor modul dan log konsol legist di sini sehingga kita dapat melihat bahwa ini adalah fakta yang harus Anda sampaikan di sini akan mengatakan harus di lepas.
+
+00:07:26.620 --> 00:07:27.770
+Katakan saja itu.
+
+00:07:28.170 --> 00:07:29.670
+Dan akhirnya di server.
+
+00:07:29.730 --> 00:07:31.090
+Ya cerdik.
+
+00:07:31.120 --> 00:07:35.820
+Sebenarnya impor ini.
+
+00:07:35.920 --> 00:07:44.090
+Dan mari kita batalkan itu dan itu akan datang dari otorisasi berpikir ya atau kita tidak perlu ya untuk
+
+00:07:44.100 --> 00:07:45.240
+saat ini.
+
+00:07:45.240 --> 00:07:46.820
+Biarkan saja seperti itu.
+
+00:07:46.860 --> 00:07:50.550
+Sekarang kita bisa menggunakan Daut, minta semua.
+
+00:07:51.000 --> 00:07:55.440
+Jadi jika saya simpan di sini mudah-mudahan kami tidak mendapatkan tempat, kami mendapatkan beberapa tahun.
+
+00:07:55.440 --> 00:07:56.940
+Mari kita lihat apa yang telah kita mainkan di sini.
+
+00:07:57.870 --> 00:08:01.620
+Kebutuhan udara jenis pada kliennya bukan fungsi.
+
+00:08:02.180 --> 00:08:04.820
+Jadi saya mungkin belum memanfaatkannya dengan baik.
+
+00:08:04.820 --> 00:08:06.440
+Mari kita periksa.
+
+00:08:06.520 --> 00:08:11.040
+Gratis pergi ke Seinen.
+
+00:08:11.110 --> 00:08:20.830
+Kami ingin memastikan bahwa klien S merah diekspor dan kami sebenarnya tidak perlu menjalankan fungsi ini
+
+00:08:20.850 --> 00:08:23.610
+sebagaimana mestinya seperti ini.
+
+00:08:23.640 --> 00:08:24.990
+Pastikan semuanya berjalan OK.
+
+00:08:24.990 --> 00:08:26.840
+Aplikasi berjalan pada port tiga ribu.
+
+00:08:27.030 --> 00:08:30.850
+Jika saya kembali ke terminal, klik masuk.
+
+00:08:30.870 --> 00:08:36.290
+Baiklah, saya bisa masuk dan saya beri Anda izin.
+
+00:08:36.290 --> 00:08:36.920
+Baiklah.
+
+00:08:36.920 --> 00:08:37.520
+Sempurna.
+
+00:08:37.640 --> 00:08:39.550
+Bagaimana jika saya mencoba mendapatkan gambar.
+
+00:08:39.590 --> 00:08:40.980
+Mari kita lakukan
+
+00:08:44.090 --> 00:08:45.170
+gambar wajah.
+
+00:08:46.540 --> 00:08:47.840
+Yah saya akan menggunakan ini
+
+00:08:51.200 --> 00:08:52.330
+kembali ke sini.
+
+00:08:54.010 --> 00:09:00.900
+Deteksi bocah di otorisasi dan kami mendapatkan beberapa kesalahan di sini.
+
+00:09:00.970 --> 00:09:03.900
+Sekarang kenapa begitu.
+
+00:09:04.420 --> 00:09:06.980
+Dan ada beberapa penanganan kesalahan yang bisa kita tingkatkan di sini.
+
+00:09:07.030 --> 00:09:09.630
+Tetapi yang utama adalah kita mencapai titik akhir ini.
+
+00:09:09.760 --> 00:09:15.270
+Bayangkan gambar L Anda dengan baik, itu tidak sah.
+
+00:09:15.280 --> 00:09:18.650
+Kami sebenarnya bukan kami belum menerapkannya di front end.
+
+00:09:18.730 --> 00:09:27.480
+Apa yang terjadi ketika kita melakukan handle gambar dan menangani panggilan API karena kita ingin benar-benar mengirim token.
+
+00:09:28.080 --> 00:09:33.950
+Dan jika kita tidak mengirim token, kita seharusnya tidak mengharapkan balasan.
+
+00:09:34.320 --> 00:09:37.890
+Jadi mari kita kembali ke ujung depan kita dan memperbaikinya.
+
+00:09:37.950 --> 00:09:44.520
+Kami perlu menambahkan header otorisasi ke gambar kami dan gambar Anda berada di titik akhir.
+
+00:09:44.520 --> 00:09:50.860
+Jadi izinkan saya salin ini dan turun ke laptop.
+
+00:09:50.910 --> 00:09:51.960
+Iya nih.
+
+00:09:52.060 --> 00:09:52.730
+Dan apt.
+
+00:09:52.840 --> 00:09:55.680
+Ya temukan tempat kami memanggil gambar kami dan kami melihatnya.
+
+00:09:55.690 --> 00:09:56.230
+Baiklah.
+
+00:09:56.230 --> 00:10:04.830
+Di sini, di Bunz, kami menyebut gambar Jaro dan titik akhir gambar dan mereka tidak memiliki set header
+
+00:10:04.830 --> 00:10:05.720
+otorisasi.
+
+00:10:06.000 --> 00:10:07.030
+Jadi mari kita lakukan itu.
+
+00:10:07.050 --> 00:10:11.990
+Saya akan mengatakan otorisasi dan di sini kita harus mendapatkan.
+
+00:10:11.990 --> 00:10:20.020
+Jadi kita hanya akan melakukan penyimpanan sesi jendela mendapatkan item dan kita hanya akan mendapatkan
+
+00:10:22.780 --> 00:10:23.350
+token
+
+00:10:23.800 --> 00:10:28.680
+Dan semoga ada sesuatu yang bisa kita periksa jika tidak baik juga.
+
+00:10:29.680 --> 00:10:42.770
+Dan kita akan melakukan hal yang sama persis di sini juga untuk gambar Anda semua
+
+00:10:43.000 --> 00:10:44.290
+Jadi mari kita coba itu.
+
+00:10:44.350 --> 00:10:45.800
+Pastikan semuanya bekerja.
+
+00:10:47.730 --> 00:10:57.960
+Kembali ke aplikasi kita akan menyegarkan pastikan bahwa kita memiliki token kita kita ingin mengambil wajah yang bisa
+
+00:10:57.960 --> 00:11:01.130
+kita uji ditempelkan di sini
+
+00:11:03.680 --> 00:11:05.890
+Baiklah semuanya bekerja.
+
+00:11:05.990 --> 00:11:11.220
+Jika kita kembali ke aplikasi kita dikatakan Anda akan lulus sempurna.
+
+00:11:11.240 --> 00:11:13.460
+Kami memiliki permintaan yang tepat.
+
+00:11:14.330 --> 00:11:22.990
+Tetapi untuk beberapa alasan jika saya menghapus ini dan mencoba untuk mengirimkan wajah yang berbeda untuk yang satu ini di
+
+00:11:29.550 --> 00:11:37.100
+sini dan tekan deteksi pergi resmi dan kami mendapat beberapa kesalahan pada yang berwenang dan kami melihat bahwa
+
+00:11:37.130 --> 00:11:44.530
+di Abdulle Ya ada sedikit kesalahan karena di menghitung lokasi wajah Nah ada masalah di sana mari
+
+00:11:44.530 --> 00:11:45.740
+kita memeriksanya.
+
+00:11:47.880 --> 00:11:53.150
+Pada baris 97 kami berharap menghitung wajah untuk mengembalikan sesuatu.
+
+00:11:53.340 --> 00:11:56.890
+Tetapi dalam kasus kami, kami bukan karena sementara kami tidak menguasainya.
+
+00:11:57.000 --> 00:11:59.650
+Jadi saya bisa melakukan pernyataan IF sederhana di sini.
+
+00:12:00.180 --> 00:12:02.640
+Jika katakanlah
+
+00:12:05.550 --> 00:12:11.130
+data atau data dan output data.
+
+00:12:11.500 --> 00:12:14.290
+Dalam hal melakukan
+
+00:12:19.320 --> 00:12:24.160
+beberapa ini sebaliknya baik kembali saja.
+
+00:12:24.370 --> 00:12:24.940
+Ayo
+
+00:12:28.160 --> 00:12:29.590
+simpan dan kita harus masuk lagi.
+
+00:12:33.410 --> 00:12:35.620
+Mari kita pastikan token kita hilang.
+
+00:12:39.310 --> 00:12:45.240
+Takht.
+
+00:12:45.290 --> 00:12:47.130
+Oh nak, kita punya beberapa jam lagi.
+
+00:12:47.180 --> 00:12:52.730
+Dan ini adalah sesuatu yang Anda benar-benar ingin berhati-hati dengan memastikan
+
+00:12:52.940 --> 00:13:03.250
+bahwa kami memvalidasi apa pun yang kami lakukan di sini karena menghitung lokasi wajah sedang digunakan di sini untuk menampilkan kotak wajah.
+
+00:13:03.470 --> 00:13:12.920
+Jadi sekali lagi kami ingin memastikan bahwa ini tidak gagal dan mungkin memberinya opsi lain untuk tidak memperbarui
+
+00:13:12.920 --> 00:13:15.680
+keadaan jika kotak tidak ada.
+
+00:13:18.160 --> 00:13:25.210
+Jadi kita tidak bisa mengatakan pengembalian seperti apa yang bisa kita dapatkan kembali di sini dan
+
+00:13:26.830 --> 00:13:34.640
+kita bisa mengatakan jika tidak ada kotak atau jika ada kotak kita akan melakukan pembaruan dengan baik ini.
+
+00:13:34.880 --> 00:13:41.930
+Kami akan memperbarui status menyimpan lagi untuk yang terakhir kalinya.
+
+00:13:42.080 --> 00:13:46.600
+Mari kita lihat apakah semua ini berhasil masuk.
+
+00:13:46.940 --> 00:13:48.860
+Hapus token kami.
+
+00:13:48.860 --> 00:13:50.180
+Pastikan kami memiliki
+
+00:13:55.940 --> 00:13:58.600
+wajah coba lagi, pastikan kami memiliki informasi ini.
+
+00:14:02.430 --> 00:14:05.120
+Dan mendeteksi.
+
+00:14:05.180 --> 00:14:05.650
+Baiklah.
+
+00:14:05.660 --> 00:14:07.260
+Itu tidak sah.
+
+00:14:07.460 --> 00:14:10.980
+Kami memiliki yang tidak sah, tidak sah, tidak sempurna, sempurna.
+
+00:14:11.090 --> 00:14:16.560
+Dan titik akhir kecil kami adalah memberi tahu kami bahwa Anda tidak akan lulus dengan sempurna.
+
+00:14:16.560 --> 00:14:17.320
+Baiklah.
+
+00:14:17.400 --> 00:14:22.100
+Itu banyak tetapi kami telah berhasil melakukan beberapa hal yang sangat menarik.
+
+00:14:22.230 --> 00:14:27.620
+Dan dalam video berikutnya kita akan meninjau semua hal yang telah kita lakukan menyatukan semuanya sehingga kita
+
+00:14:27.660 --> 00:14:32.240
+memiliki ide bagus dari semua pekerjaan yang telah kita buat untuk mengatur ini.
+
+00:14:33.390 --> 00:14:35.040
+Saya akan melihat yang berikutnya.

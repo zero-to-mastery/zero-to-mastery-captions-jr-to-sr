@@ -1,0 +1,271 @@
+﻿WEBVTT
+
+00:00:01.100 --> 00:00:02.210
+Selamat datang kembali.
+
+00:00:02.210 --> 00:00:08.780
+Sekarang kita memiliki tindakan kita, Constance dan reducers. Mari kita mulai menghubungkan bagian redux aplikasi kita
+
+00:00:09.170 --> 00:00:11.540
+ini dengan aplikasi re-action kita.
+
+00:00:13.290 --> 00:00:16.630
+Sekarang cara kita dapat melakukannya cukup sederhana.
+
+00:00:17.520 --> 00:00:25.260
+Jika Anda ingat kami mengunduh paket yang disebut re-act redux dan paket ini mari kita impor di
+
+00:00:26.910 --> 00:00:32.840
+sini dilengkapi dengan API yang bagus dan mudah hanya dari dua hal.
+
+00:00:32.920 --> 00:00:40.540
+Satu adalah penyedia dan satunya lagi terhubung dan menggunakan dua hal ini kita akan dapat menghubungkan kedua
+
+00:00:40.780 --> 00:00:42.900
+bagian dari aplikasi mereka.
+
+00:00:43.570 --> 00:00:52.660
+Jadi saya akan mengatakan impor dari ulangan.
+
+00:00:52.870 --> 00:00:58.520
+Sekarang dalam video ini kita akan berbicara tentang penyedia dan dalam pembicaraan video berikutnya tentang menghubungkan.
+
+00:00:58.540 --> 00:01:04.560
+Jadi untuk sekarang mari kita minta provider mengimpornya.
+
+00:01:04.780 --> 00:01:13.300
+Sekarang di sini ada beberapa hal yang perlu kita lakukan pertama adalah membuat toko jika kita
+
+00:01:13.300 --> 00:01:23.510
+kembali ke diagram kita, kita ingat bahwa ada sesuatu yang disebut toko dan redoks yang merupakan sumber dari semua kebenaran.
+
+00:01:23.800 --> 00:01:32.530
+Itu adalah objek javascript objek besar yang menggambarkan keadaan tumpang tindih sehingga bertindak kembali dapat membuat
+
+00:01:32.530 --> 00:01:36.010
+perubahan dan menampilkannya kepada pengguna.
+
+00:01:36.010 --> 00:01:43.330
+Jadi kami telah membuat tindakan yang kami buat dan mengurangi peredam dan kami juga membutuhkan toko.
+
+00:01:43.510 --> 00:01:45.900
+Jadi mari kita lakukan itu dulu.
+
+00:01:46.020 --> 00:01:53.600
+Kita dapat menggunakan paket redux untuk ini dan mengatakan import dan ia memiliki fungsi yang disebut create store.
+
+00:01:53.670 --> 00:01:54.920
+Nama yang bagus dan mudah.
+
+00:01:55.170 --> 00:02:00.620
+Dan kita akan mengimpornya dari paket redox.
+
+00:02:00.660 --> 00:02:06.570
+Sekarang cara kita membuat toko cukup mudah dan kita dapat mengatakan Konst
+
+00:02:09.780 --> 00:02:19.940
+store sama dengan membuat toko dan di sini kita menempatkan apa yang kita sebut root REDUCE-IT yang merupakan peredam aplikasi kita sekarang
+
+00:02:20.570 --> 00:02:22.390
+dalam kehidupan nyata.
+
+00:02:22.460 --> 00:02:25.420
+Kami memiliki banyak banyak reduksi.
+
+00:02:25.730 --> 00:02:34.230
+Jika kami kembali ke produsen kami sekarang, kami hanya punya satu robot yang mengurangi robot pencarian kami.
+
+00:02:34.430 --> 00:02:41.240
+Tetapi seperti yang saya katakan sebelumnya aplikasi menjadi semakin kompleks dan Anda akan memiliki lebih banyak tindakan yang
+
+00:02:41.360 --> 00:02:42.450
+perlu diambil.
+
+00:02:42.890 --> 00:02:50.420
+Dan kami dapat terus mencantumkan tindakan yang terkait dengan robot pencarian di sini, tetapi nanti di
+
+00:02:50.420 --> 00:02:54.840
+video kami juga perlu mendapatkan robot dari API.
+
+00:02:55.280 --> 00:03:05.870
+Jika Anda ingat sekarang karena itu kita akan memiliki banyak banyak reduksi dan di toko kami
+
+00:03:05.870 --> 00:03:15.820
+ingin menggabungkan semua reduksi ini untuk membuat satu peredam root yang akan kita lakukan nanti.
+
+00:03:16.650 --> 00:03:25.080
+Tetapi untuk saat ini karena kami hanya memiliki satu produsen, mari kita gunakan robot pencarian
+
+00:03:25.080 --> 00:03:31.580
+mengurangi dia untuk membuat toko dan kita perlu mengimpor ini.
+
+00:03:31.600 --> 00:03:32.880
+Jadi mari kita lanjutkan dan lakukan itu.
+
+00:03:33.680 --> 00:03:34.920
+Dan
+
+00:03:38.010 --> 00:03:44.470
+saya katakan impor robot pencarian dari Rafal pengurangan kami.
+
+00:03:44.480 --> 00:03:44.970
+Baiklah.
+
+00:03:45.020 --> 00:03:51.930
+Jadi saya punya robot pencarian di sini untuk membuat toko dan hanya itu.
+
+00:03:51.950 --> 00:04:00.560
+Kami memiliki toko. Sekarang toko ini sekarang dapat diakses dan diturunkan ke aplikasi kami.
+
+00:04:00.650 --> 00:04:08.110
+Ingat dengan redux secara hipotetis kita dapat menghapus semua status dari aksi ulang kita dan menyimpannya
+
+00:04:08.110 --> 00:04:11.850
+di dalam toko dan meneruskan toko sebagai penyangga.
+
+00:04:11.890 --> 00:04:21.590
+Jadi mari kita lihat apa yang terjadi jika saya melakukan itu jika saya pergi ke toko sama dengan toko yang kita miliki dan saya simpan.
+
+00:04:21.740 --> 00:04:23.670
+Dan mari kita juga buka apt.
+
+00:04:23.760 --> 00:04:24.460
+Iya nih.
+
+00:04:25.360 --> 00:04:26.780
+Dan indie.
+
+00:04:26.810 --> 00:04:27.690
+Apakah mount.
+
+00:04:27.890 --> 00:04:29.240
+Mari
+
+00:04:32.000 --> 00:04:40.060
+kita konsol log dot dot prop ini saja.
+
+00:04:40.100 --> 00:04:41.460
+Baiklah mari kita jalankan NPM
+
+00:04:48.270 --> 00:04:49.630
+akan membuka konsol dan
+
+00:04:52.820 --> 00:04:57.800
+kita memiliki sedikit sempit di sini itu hanya kesalahan sintaks dalam kasus kita maka pernyataan jadi mari
+
+00:04:57.800 --> 00:04:58.550
+kita memperbaikinya
+
+00:05:01.540 --> 00:05:03.150
+Pergi untuk mengurangi milikmu.
+
+00:05:03.240 --> 00:05:09.420
+Kami tidak memerlukan tanda kutip ganda di sini untuk tanda titik koma di sini karena kami memilikinya di sini.
+
+00:05:09.500 --> 00:05:17.770
+Mari kita simpan itu dan kita mendapatkan kesalahan mengatakan bahwa bidang pencarian tidak didefinisikan dalam file reduksi kami.
+
+00:05:17.840 --> 00:05:20.720
+Dan lagi sedikit kesalahan kecil di sini.
+
+00:05:20.720 --> 00:05:30.370
+Cara kita ingin melewatkan parameter ketiga ke desain objek adalah sebagai objek jadi kita ingin pergi seperti
+
+00:05:30.370 --> 00:05:31.020
+ini.
+
+00:05:32.880 --> 00:05:39.790
+Dan lupa untuk kesalahan kecil kecil yang konstan di sini untuk menyimpan semua benar.
+
+00:05:39.840 --> 00:05:40.950
+Jadi semuanya bekerja.
+
+00:05:40.950 --> 00:05:46.700
+Kami memiliki peringatan yang mengatakan bahwa penyedia didefinisikan tetapi tidak pernah menggunakan itu baik-baik saja.
+
+00:05:47.570 --> 00:05:49.180
+Karena sementara kita belum menggunakannya.
+
+00:05:49.250 --> 00:05:51.390
+Tapi mari kita pergi ke konsol log dan lihat apa yang terjadi.
+
+00:05:52.750 --> 00:06:01.570
+Baiklah kita melihat bahwa toko kita di sini memiliki kode log dan kita memiliki beberapa fungsi yang dapat kita gunakan termasuk get
+
+00:06:01.870 --> 00:06:05.860
+state, mari kita gunakan dan lihat apa yang terjadi.
+
+00:06:05.890 --> 00:06:15.750
+Sekali lagi pergi ke file indeks saya, saya akan mengatakan atau di apt O. J. File saya akan mengatakan
+
+00:06:15.760 --> 00:06:20.490
+negara satu untuk menyimpan kembali dan melihat itu
+
+00:06:20.550 --> 00:06:27.190
+Kami memiliki status kami yang hanya memiliki bidang pencarian sekarang.
+
+00:06:27.190 --> 00:06:27.620
+Baiklah.
+
+00:06:27.760 --> 00:06:36.910
+Jadi kami menekan toko kami sebagai penyangga dan kami bisa menggunakan get state dengan baik, mari kita hapus log konsol
+
+00:06:36.910 --> 00:06:37.750
+ini.
+
+00:06:37.750 --> 00:06:43.120
+Karena kita tidak membutuhkannya, kita mengerti apa yang sedang terjadi sekarang dan file indeks
+
+00:06:43.120 --> 00:06:45.820
+kita perlu meneruskan toko ke aplikasi.
+
+00:06:45.920 --> 00:06:52.900
+Sekarang kita tidak benar-benar ingin meneruskan toko semua komponen kita ke komponen yang lebih kecil
+
+00:06:53.200 --> 00:07:01.170
+berulang-ulang dan bereaksi redoks memberi kita komponen bagus yang dapat kita gunakan untuk melakukan ini dengan sangat mudah.
+
+00:07:01.280 --> 00:07:06.770
+Kami cukup membungkus komponen aplikasi kami dalam komponen penyedia ini.
+
+00:07:06.770 --> 00:07:07.770
+Mari ku tunjukkan.
+
+00:07:08.300 --> 00:07:24.180
+Kita akan memiliki komponen penyedia dan komponen aplikasi ini akan berada di dalamnya
+
+00:07:24.180 --> 00:07:27.150
+begitu saja.
+
+00:07:27.160 --> 00:07:31.540
+Sekarang format mengambil di sini sedikit tidak aktif tapi tidak apa-apa untuk saat ini.
+
+00:07:31.540 --> 00:07:39.220
+Saya hanya ingin melihat bahwa penyedia membungkus aplikasi dan sekarang alih-alih meneruskan toko
+
+00:07:39.220 --> 00:07:47.440
+ke aplikasi, kita cukup memasukkannya ke dalam komponen penyedia dan komponen penyedia akan mengurus
+
+00:07:47.440 --> 00:07:56.410
+mewariskan toko ke semua komponen ke bawah komponen dari aplikasi dan kami menggunakan sesuatu yang
+
+00:07:56.410 --> 00:08:02.730
+disebut Connect yang kami bicarakan untuk menyelesaikan koneksi ini.
+
+00:08:02.750 --> 00:08:04.530
+Jadi begitulah.
+
+00:08:04.610 --> 00:08:14.000
+Kami telah membuat komponen penyedia yang melewati toko dan toko menggunakan peredam atau pengurang apa pun yang kami
+
+00:08:14.000 --> 00:08:19.660
+miliki untuk membuat toko dan membuat pohon objek negara kami.
+
+00:08:20.820 --> 00:08:28.950
+Jadi dalam video berikutnya biarkan saya menyimpan ini di video berikutnya kita akan menggunakan bagian lain dari Riak redux
+
+00:08:29.100 --> 00:08:31.520
+untuk akhirnya menghubungkan semuanya bersama.
+
+00:08:32.270 --> 00:08:34.070
+Saya akan melihat yang Babai.

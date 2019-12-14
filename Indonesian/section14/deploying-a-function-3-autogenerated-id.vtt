@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:02.330 --> 00:00:03.290
+Selamat datang kembali.
+
+00:00:03.320 --> 00:00:09.710
+Sekarang kami memiliki fungsi menjalankan kami melakukan pekerjaan yang fantastis bagi kami saatnya untuk menyelesaikan aplikasi
+
+00:00:09.830 --> 00:00:13.810
+kami dan menambahkan lencana kami di sebelah nomor kami.
+
+00:00:13.900 --> 00:00:18.550
+Mari kita kembali ke depan dan kita tidak perlu khawatir tentang fungsi lambda kita karena kita tahu
+
+00:00:18.550 --> 00:00:19.160
+itu berjalan.
+
+00:00:19.200 --> 00:00:20.990
+Amazon yang mengurusnya untuk kita.
+
+00:00:21.130 --> 00:00:26.540
+Terima kasih Amazon dan kami dapat kembali melakukan pengkodean sekarang.
+
+00:00:26.580 --> 00:00:32.980
+Dan di sini saya ingin menambahkan status baru yaitu keadaan emoji yang bisa saya tambahkan ke aplikasi.
+
+00:00:33.100 --> 00:00:39.030
+Ya, tetapi emoji itu bukan keadaan penting dan itu seharusnya hanya ditangani oleh peringkat.
+
+00:00:39.040 --> 00:00:51.220
+Jadi mari kita ubah ini menjadi komponen stateful yang akan mengatakan peringkat kelas memperluas komponen aksi ulang dan kita akan
+
+00:00:53.670 --> 00:00:57.090
+menyingkirkan ini untuk saat ini.
+
+00:00:58.570 --> 00:01:05.700
+Pindahkan semua yang tidak kita butuhkan dan pindahkan semuanya ke dalam.
+
+00:01:09.250 --> 00:01:14.940
+Dan pastikan kita melakukan fungsi render di sini.
+
+00:01:16.970 --> 00:01:24.400
+Dan bungkus dengan baik.
+
+00:01:24.470 --> 00:01:31.450
+Jadi sekarang kita memiliki komponen kelas, kita dapat mulai menggunakan keadaan awal
+
+00:01:33.920 --> 00:01:42.900
+dengan menambahkan konstruktor dan di sini lagi memanggil Super yang default dan kemudian keadaan titik ini
+
+00:01:43.200 --> 00:01:48.690
+akan disebut emoji yang akan kosong untuk memulai dengan.
+
+00:01:48.730 --> 00:01:50.060
+Sekarang apa saja di sini.
+
+00:01:50.470 --> 00:01:56.510
+Katakanlah ketika komponen mount, mari kita lakukan komponen melakukan mount.
+
+00:01:56.620 --> 00:02:01.150
+Jadi saat itulah pengguna awalnya melihat ini.
+
+00:02:01.410 --> 00:02:07.040
+Mari kita buat fungsi And And Moji kita.
+
+00:02:07.040 --> 00:02:17.030
+Jadi kami belum membuat ini di sini, tetapi saya akan mengatakan bahwa kami memiliki emoji menghasilkan yang menerima entri
+
+00:02:17.180 --> 00:02:18.900
+dot prop ini.
+
+00:02:20.290 --> 00:02:25.570
+Karena itulah yang akan memberi kita informasi pangkat.
+
+00:02:25.740 --> 00:02:33.810
+Dan lagi karena kita sekarang menggunakan struktur kelas kita harus memastikan bahwa hal-hal ini dinamai dengan
+
+00:02:33.810 --> 00:02:37.950
+benar dengan alat peraga titik entri titik.
+
+00:02:41.080 --> 00:02:45.090
+Mari kita simpan ini dan lakukan beberapa hal lagi.
+
+00:02:45.090 --> 00:02:57.810
+Mari kita buat metode menghasilkan emoji yang menghasilkan dalam metode Moji akan menghitung atau entri.
+
+00:02:58.060 --> 00:03:02.670
+Dan apa yang akan kita lakukan di sini adalah melakukan panggilan cepat ke fungsi lambda kita.
+
+00:03:02.670 --> 00:03:10.410
+Kami akan menyalin dan menempelkan apa pun yang kami miliki yang merupakan titik akhir yang kami dapatkan dari penerapan kami
+
+00:03:10.470 --> 00:03:12.270
+melalui server lebih sedikit.
+
+00:03:12.440 --> 00:03:17.840
+Dan kami ingin memastikan bahwa kami menambahkan pada akhir di sini parameter string kueri Jonge Under do Templi
+
+00:03:17.840 --> 00:03:18.440
+string.
+
+00:03:18.500 --> 00:03:25.970
+Ingatlah kutipan khusus di sini sehingga kami dapat menggunakan tanda tanya daripada melihat dolar atau
+
+00:03:27.500 --> 00:03:31.200
+peringkat tanda tanya untuk menyamai tanda dolar.
+
+00:03:32.360 --> 00:03:46.450
+Entri dan sekarang kami sedang melakukan permintaan Gabb dan kami hanya bisa mengatakan maka kami ingin mendapatkan tanggapan.
+
+00:03:46.590 --> 00:03:55.260
+Dan ingat dengan permintaan fitur kami harus memastikan bahwa kami melakukan respons terhadap Jason kami.
+
+00:03:55.410 --> 00:03:58.510
+Dan akhirnya lakukanlah mendapatkan data.
+
+00:03:58.980 --> 00:04:03.440
+Dan dengan data ini yang diharapkan emoji akan melakukan set pemikiran ini.
+
+00:04:03.900 --> 00:04:16.380
+Menyatakan bahwa emoji akan diperbarui dengan input data titik karena ingat ketika kita kembali ke fungsi kita sedang
+
+00:04:16.380 --> 00:04:23.350
+melakukan tubuh dengan input dan input datang dengan peringkat emoji.
+
+00:04:23.460 --> 00:04:31.430
+Jadi kita melakukan data pada input dan untuk amannya mari kita lakukan menangkap sini mengatakan membatalkan log
+
+00:04:31.440 --> 00:04:33.390
+jika ada kesalahan.
+
+00:04:33.480 --> 00:04:35.280
+Mari selamatkan ini.
+
+00:04:35.280 --> 00:04:36.840
+Lihat apakah kami mendapatkan kesalahan.
+
+00:04:37.200 --> 00:04:38.400
+Kami punya beberapa hal.
+
+00:04:38.400 --> 00:04:43.840
+Mari kita lihat koma di suatu tempat yang seharusnya tidak ada.
+
+00:04:43.840 --> 00:04:45.240
+Dimanakah itu.
+
+00:04:45.700 --> 00:04:49.060
+Dan itu karena ini harus memiliki titik koma sebagai objek.
+
+00:04:49.060 --> 00:04:49.510
+Ini dia.
+
+00:04:49.540 --> 00:04:53.460
+Kami sedang mengatur emoji negara dari sini dengan input data.
+
+00:04:53.500 --> 00:04:55.940
+Mari kita simpan sempurna.
+
+00:04:55.960 --> 00:05:00.230
+Dan kemudian jika kita gulir ke bawah mari tambahkan lencana baru di sini.
+
+00:05:00.280 --> 00:05:06.910
+Saya akan menyalin dan menempelkan nother diff di sini dan tepat di bawah entri akan dibuat.
+
+00:05:06.910 --> 00:05:07.720
+Mari kita buat yang besar.
+
+00:05:07.750 --> 00:05:13.930
+Saya akan melakukan EF 3 atau tidak sebesar membuatnya sedikit lebih kecil
+
+00:05:13.930 --> 00:05:31.040
+dan saya akan mengatakan bahwa ini akan menjadi lencana peringkat yang sama atau kita harus memastikan itu adalah string katakanlah lencana peringkat akan menjadi alat peraga titik ini atau pastikan mereka menggunakan string
+
+00:05:31.040 --> 00:05:32.890
+template di sini.
+
+00:05:32.900 --> 00:05:35.060
+Jadi kita mendapatkan sorotan yang tepat.
+
+00:05:35.060 --> 00:05:36.150
+Mari kita coba lagi.
+
+00:05:38.180 --> 00:05:39.280
+Itu lebih baik.
+
+00:05:39.280 --> 00:05:40.070
+Lencana peringkat.
+
+00:05:40.180 --> 00:05:43.450
+Dan kemudian ini harus menjadi titik ini.
+
+00:05:44.050 --> 00:05:44.590
+Emoji.
+
+00:05:47.500 --> 00:05:50.100
+Baiklah, mari kita simpan dan lihat apa yang terjadi di sini.
+
+00:05:50.130 --> 00:05:51.540
+Belajarlah untuk kembali.
+
+00:05:52.610 --> 00:05:57.300
+Dan saya memiliki lencana pangkat di sini tetapi tidak ada yang ditampilkan.
+
+00:05:57.560 --> 00:06:01.940
+Mari kita lihat kontra. Dan saya mendapatkan sedikit kesalahan.
+
+00:06:02.090 --> 00:06:09.540
+Saya tidak mendapatkan kontrol akses memungkinkan asal Hetter hadir atas permintaan sumber asal.
+
+00:06:09.560 --> 00:06:10.920
+Jadi kita pernah melihat ini sebelumnya.
+
+00:06:10.970 --> 00:06:11.490
+Kanan.
+
+00:06:11.510 --> 00:06:15.500
+Ini adalah kesalahan inti yang telah kita bicarakan di bagian keamanan.
+
+00:06:15.500 --> 00:06:23.510
+Dan hanya untuk menyederhanakan hal-hal perbaikan termudah yang dapat kita lakukan di sini kita dapat memastikan bahwa dalam
+
+00:06:23.510 --> 00:06:27.210
+fungsi handler kita akan menambahkan header baru.
+
+00:06:27.380 --> 00:06:31.870
+Dan lagi ini adalah sesuatu yang untuk saat ini hanya karena kita bermain-main tidak masalah.
+
+00:06:31.880 --> 00:06:32.970
+Tetapi Anda mungkin ingin menyesuaikannya.
+
+00:06:33.020 --> 00:06:35.790
+Peneliti sebenarnya mengatakan Anda ingin mendapatkan akses.
+
+00:06:36.170 --> 00:06:41.430
+Tetapi kita akan memiliki akses.
+
+00:06:41.460 --> 00:06:43.080
+Aduh, mari kita coba lagi.
+
+00:06:45.730 --> 00:06:58.100
+Kontrol mengizinkan asal Hetter Dan untuk saat ini kita akan mengizinkan siapa saja untuk mengaksesnya dengan menggunakan bintang.
+
+00:06:58.240 --> 00:07:05.390
+Jadi siapa pun dapat mengakses fungsi lambda ini ketika kami benar-benar menggunakan layanan kami.
+
+00:07:05.390 --> 00:07:11.720
+Ujung depan kami Anda mungkin benar-benar ingin menempelkan domain yang digunakan yang kami miliki untuk saat ini, mari biarkan
+
+00:07:11.720 --> 00:07:12.370
+bintang.
+
+00:07:12.440 --> 00:07:19.670
+Siapa saja dapat mengakses kontrol akses ini, mengizinkan asal dan memastikan kami memiliki kolom di sini, yang aman
+
+00:07:19.670 --> 00:07:20.680
+di sini.
+
+00:07:21.170 --> 00:07:28.180
+Dan sebenarnya ini harus menjadi tajuk dan pastikan sistem produksi kita berfungsi di sini.
+
+00:07:31.240 --> 00:07:31.980
+Itu lebih baik.
+
+00:07:32.130 --> 00:07:34.870
+Jadi Kontrol Akses memungkinkan asal.
+
+00:07:34.890 --> 00:07:41.240
+Kami hanya akan mengizinkan siapa saja untuk mengakses kami saat ini untuk menyimpan dan mari kita pindahkan ini.
+
+00:07:41.830 --> 00:07:48.480
+Dan sementara itu penggelaran, mari kita pastikan kita memiliki segalanya di sini kita melihat bahwa kita
+
+00:07:48.480 --> 00:07:56.310
+sedang melakukan panggilan baru ke peringkat kita dengan parameter kueri dan tanggapan pohon Jaison memperbarui keadaan yang ditetapkan dan
+
+00:07:56.310 --> 00:07:59.740
+memastikan kita dapat mengeja emoji dengan benar.
+
+00:07:59.760 --> 00:08:00.530
+Ini dia.
+
+00:08:01.180 --> 00:08:02.610
+Baiklah mari kita simpan itu.
+
+00:08:02.640 --> 00:08:04.620
+Semuanya terlihat bagus.
+
+00:08:04.620 --> 00:08:08.100
+Kami masih menyebarkan di sini.
+
+00:08:08.120 --> 00:08:08.680
+Baiklah.
+
+00:08:08.750 --> 00:08:10.460
+Kami memiliki semua yang digunakan.
+
+00:08:10.460 --> 00:08:12.940
+Sekarang mari kita coba ini.
+
+00:08:12.940 --> 00:08:15.780
+Kami akan kembali dan menyegarkan dan melihat itu.
+
+00:08:15.800 --> 00:08:17.480
+Kami memiliki lencana pangkat kami.
+
+00:08:17.480 --> 00:08:19.470
+Itu benar-benar luar biasa.
+
+00:08:19.700 --> 00:08:23.660
+Mari kita lihat apakah kita dapat memperbarui ini dan mendapatkan peringkat yang lebih baik.
+
+00:08:23.660 --> 00:08:30.150
+Saya akan memotret saja dan mari kita lihat yang ini karena kami sudah sering menggunakannya.
+
+00:08:31.300 --> 00:08:31.710
+Aduh.
+
+00:08:31.730 --> 00:08:41.800
+Itu yang ingin kami lakukan hanyalah menyalin alamat gambar datang ke sini dan tempelkan.
+
+00:08:41.830 --> 00:08:42.640
+Baiklah.
+
+00:08:42.640 --> 00:08:46.040
+Wajah terdeteksi badge bangun melakukannya.
+
+00:08:46.060 --> 00:08:53.590
+Atau entri mendapat pembaruan tetapi lencana tidak karena kami perlu memastikan bahwa pembaruan kami terjadi dan kami
+
+00:08:53.590 --> 00:08:54.580
+memanggil fungsi.
+
+00:08:54.580 --> 00:08:59.760
+Jadi mari kita kembali dan memperbaikinya.
+
+00:09:00.010 --> 00:09:10.140
+Apa yang ingin kita lakukan di sini adalah membuat kait siklus hidup dan kait ini akan menjadi komponen yang
+
+00:09:11.310 --> 00:09:20.400
+melakukan mount dan komponen ini melakukan mount atau saya harus mengatakan komponen memperbarui kita akan melakukan sedikit
+
+00:09:21.360 --> 00:09:30.850
+pemeriksaan jika komponen ini diperbarui karena ingat komponen ini hanya diperbarui ketika emoji atau ketika props berubah
+
+00:09:30.850 --> 00:09:33.040
+atau emoji berubah.
+
+00:09:33.840 --> 00:09:38.880
+Tapi Anda lihat di sini bahwa emoji yang dihasilkan hanya dipanggil pada komponen yang jumlahnya banyak.
+
+00:09:38.940 --> 00:09:42.790
+Jadi, jika itu tidak dipasang kembali, itu tidak akan diperbarui.
+
+00:09:42.810 --> 00:09:44.220
+Jadi itu perbaikan sederhana.
+
+00:09:44.220 --> 00:09:50.340
+Setiap saat ada komponen yang memperbarui acara.
+
+00:09:50.360 --> 00:09:59.310
+Saya hanya akan mengatakan jika sebelumnya dan komponen melakukan pembaruan menerima alat peraga sebelumnya dan keadaan sebelumnya
+
+00:10:01.050 --> 00:10:06.750
+dan kami hanya akan mengambil titik alat peraga sebelumnya dan.
+
+00:10:07.230 --> 00:10:12.730
+Jika itu akan sama persis dengan berhenti Propst mendapat entri.
+
+00:10:12.780 --> 00:10:17.640
+Jika tidak ada perubahan pada entri, maka kita tidak benar-benar peduli hanya kembali.
+
+00:10:17.640 --> 00:10:22.620
+Tidak, Anda seharusnya tidak benar-benar memperbarui apa pun karena nama dan entri yang baik.
+
+00:10:22.620 --> 00:10:24.170
+Itulah satu-satunya hal yang kami pedulikan.
+
+00:10:25.650 --> 00:10:27.510
+Dan mungkin memeriksa nama juga.
+
+00:10:27.570 --> 00:10:32.520
+Jadi kita akan mengatakan nama titik prop sebelumnya
+
+00:10:36.670 --> 00:10:40.190
+dan menghentikan nama dot prop.
+
+00:10:40.390 --> 00:10:48.720
+Dan akhirnya di sini kita dapat mengatakan jika tidak ada perubahan itu baik-baik saja kembalikan tidak.
+
+00:10:48.730 --> 00:10:59.160
+Kalau tidak, saya ingin Anda selalu ketika entri berubah untuk melakukan ini menghasilkan emoji dengan
+
+00:10:59.260 --> 00:11:03.720
+dot props ini entri baru.
+
+00:11:03.780 --> 00:11:09.070
+Jadi kami ingin memastikan bahwa kami menghasilkan emoji itu dan memanggil fungsi lambda itu.
+
+00:11:09.080 --> 00:11:10.390
+Baiklah mari kita mulai.
+
+00:11:10.400 --> 00:11:12.140
+Saya akan kembali.
+
+00:11:12.170 --> 00:11:12.740
+Baiklah.
+
+00:11:12.740 --> 00:11:18.040
+Emoji kami berubah tetapi mari tambahkan gambar lain.
+
+00:11:18.140 --> 00:11:19.420
+Hei, lihat itu.
+
+00:11:19.550 --> 00:11:22.140
+Kami sudah naik ke kapal roket.
+
+00:11:22.160 --> 00:11:22.990
+Itu luar biasa.
+
+00:11:23.120 --> 00:11:29.200
+Mari kita klik deteksi lagi dan pohon sembilan tetapi kita tidak terdefinisi.
+
+00:11:29.330 --> 00:11:30.120
+Mengapa demikian.
+
+00:11:31.570 --> 00:11:36.410
+Seharusnya memberi kita kapal roket selama kita memiliki entri
+
+00:11:36.460 --> 00:11:44.550
+Jadi mari kita periksa bahwa kita pergi ke jaringan dan klik deteksi lagi.
+
+00:11:44.550 --> 00:11:46.140
+Baiklah, jadi itu berhasil.
+
+00:11:46.140 --> 00:11:47.210
+Jika kita
+
+00:11:50.170 --> 00:11:52.270
+klik lagi itu agak aneh.
+
+00:11:52.370 --> 00:11:55.260
+Baiklah, semuanya tampaknya bekerja.
+
+00:11:55.270 --> 00:11:58.670
+Kami memiliki kapal roket.
+
+00:11:58.790 --> 00:11:59.900
+Semuanya baik-baik saja.
+
+00:12:00.140 --> 00:12:09.760
+Jika kita naik ke profil kita lakukan lihat profil dan mari kita ubah nama kita menjadi Teti simpan.
+
+00:12:09.820 --> 00:12:18.640
+Baiklah Teddy, jumlah entri Anda saat ini adalah 15 dan kami memiliki lencana peringkat dinding, lencana tertinggi yang bisa
+
+00:12:18.640 --> 00:12:19.630
+kami dapatkan.
+
+00:12:19.630 --> 00:12:21.440
+Betapa kerennya itu.
+
+00:12:21.460 --> 00:12:25.330
+Kami memiliki aplikasi yang berfungsi penuh.
+
+00:12:25.490 --> 00:12:26.910
+Game dan keluar.
+
+00:12:27.000 --> 00:12:38.030
+Dan hanya untuk bersenang-senang mari kita masukkan pengguna baru saya akan memanggilnya Bobby dan dia akan berada di gmail dot
+
+00:12:38.030 --> 00:12:38.860
+com.
+
+00:12:38.990 --> 00:12:42.610
+Kata sandi adalah register B.
+
+00:12:42.630 --> 00:12:44.520
+Hei Bobby, kamu masih pemula.
+
+00:12:44.520 --> 00:12:46.700
+Anda harus mengerjakan akun entri Anda.
+
+00:12:46.750 --> 00:12:52.300
+Itu mendeteksi dan semuanya berfungsi.
+
+00:12:52.530 --> 00:12:56.430
+Mari kita coba ini sekali lagi karena jenis lencana pertama dan kedua terlihat mirip jika saya
+
+00:12:56.430 --> 00:12:57.330
+melakukan ini lagi.
+
+00:12:57.330 --> 00:12:57.930
+Ini dia.
+
+00:12:57.930 --> 00:12:59.760
+Mata berubah.
+
+00:12:59.760 --> 00:13:00.290
+Ini dia.
+
+00:13:00.290 --> 00:13:03.490
+Ari Moji saat ini sedang meningkatkan dan mengubah.
+
+00:13:03.540 --> 00:13:04.650
+Selamat.
+
+00:13:04.770 --> 00:13:07.200
+Kami telah menggunakan Amazon Lamda.

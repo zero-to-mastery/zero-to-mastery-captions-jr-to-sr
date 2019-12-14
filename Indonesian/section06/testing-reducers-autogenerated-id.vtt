@@ -1,0 +1,505 @@
+﻿WEBVTT
+
+00:00:01.250 --> 00:00:02.450
+Selamat datang kembali.
+
+00:00:02.960 --> 00:00:11.720
+Kami memiliki ide bagus tentang bagaimana menguji komponen Riak tetapi bagaimana dengan redux dan beberapa aksi dan
+
+00:00:11.720 --> 00:00:14.630
+konsep reduksi yang kami miliki.
+
+00:00:14.650 --> 00:00:22.660
+Mari kita mulai dengan reduksi dan Anda akan sangat menyukai bagian ini karena ingat reduksi
+
+00:00:22.660 --> 00:00:28.390
+kami adalah fungsi murni dan fungsi murni adalah impian penguji.
+
+00:00:28.420 --> 00:00:32.750
+Mereka yang paling mudah untuk diuji jadi mari kita lakukan itu.
+
+00:00:32.770 --> 00:00:37.770
+Saya akan membuat file baru menyebutnya tes reduksi.
+
+00:00:37.910 --> 00:00:38.670
+Iya nih.
+
+00:00:40.280 --> 00:00:48.040
+Dan kemudian di sini saya akan mengimpor sementara kita membutuhkan konstanta.
+
+00:00:48.210 --> 00:00:56.970
+Jadi saya akan mengimpor konstanta dan jelas reduksi kami jadi impor akan melakukan impor bintang sebagai sintaks baru
+
+00:00:56.970 --> 00:01:01.210
+sebagai reduksi dari seducers dengan sintaks ini
+
+00:01:05.750 --> 00:01:12.710
+sehingga kami bisa melakukan reduksi dot apa pun yang kami lakukan sehingga kami mengekspornya.
+
+00:01:12.780 --> 00:01:19.910
+Jadi, dalam kasus kami, pengurang pemikiran adalah pengurang sherbets robot dot permintaan yang berbunyi dengan baik.
+
+00:01:19.930 --> 00:01:20.390
+Baiklah.
+
+00:01:20.560 --> 00:01:26.080
+Mari kita kelompokkan reduksi ini kali ini dengan menggunakan blok uraikan Celeste untuk
+
+00:01:28.410 --> 00:01:30.120
+menggambarkan robot pencarian.
+
+00:01:30.180 --> 00:01:34.270
+Kami akan melakukan peredam pertama kami di sini dan di sini.
+
+00:01:34.320 --> 00:01:38.140
+Ups bukan itu yang ingin saya lakukan dengan hal di sini.
+
+00:01:38.160 --> 00:01:39.680
+Kami akan melakukan tes.
+
+00:01:39.810 --> 00:01:55.540
+Tes pertama yang mengatakan harus mengembalikan keadaan awal.
+
+00:01:55.590 --> 00:02:03.270
+Sekarang keadaan awal dalam reducer robot pencarian dapat diuji seperti ini sehingga kita
+
+00:02:06.290 --> 00:02:09.940
+dapat mengharapkan reduksi robot pencarian dot.
+
+00:02:09.940 --> 00:02:20.310
+Jadi itu peredam kami ingat peredam kami mengambil dua hal keadaan dan tindakan dan karena jika keadaan tidak
+
+00:02:20.610 --> 00:02:25.560
+ada atau ditentukan kami memberikannya pencarian keadaan awal.
+
+00:02:25.590 --> 00:02:26.230
+Ayo lakukan itu.
+
+00:02:26.250 --> 00:02:31.150
+Saya akan mengatakan bahwa peredam robot pencarian tidak terdefinisi.
+
+00:02:31.530 --> 00:02:36.750
+Jadi tidak ada status di awal dan tidak akan ada tindakan.
+
+00:02:36.780 --> 00:02:43.170
+Tetapi diberikan tindakan kosong untuk saat ini kami ingin menguji untuk kasus-kasus di mana.
+
+00:02:43.390 --> 00:02:45.540
+Kami memiliki kondisi yang tidak ditentukan.
+
+00:02:45.620 --> 00:02:46.530
+Apa yang terjadi.
+
+00:02:46.790 --> 00:03:00.740
+Yah kami ingin menyamakan keadaan ideal kami dan keadaan ideal kami dan kasus ini adalah memiliki bidang pencarian menjadi string
+
+00:03:00.740 --> 00:03:02.170
+kosong.
+
+00:03:03.470 --> 00:03:08.660
+Jadi izinkan saya mengatakan bahwa buka suite pengujian kami
+
+00:03:16.110 --> 00:03:18.780
+dan Arita semuanya berlalu.
+
+00:03:18.780 --> 00:03:28.410
+Jika saya tekan katakan melihat bahwa ya semuanya sudah keluar dengan baik termasuk uji reduksi dart kami jika kami dimasukkan
+
+00:03:28.980 --> 00:03:31.250
+ke dalam bidang pencarian.
+
+00:03:31.320 --> 00:03:32.420
+Itu akan gagal.
+
+00:03:32.430 --> 00:03:35.190
+Baiklah jadi bagus.
+
+00:03:35.190 --> 00:03:37.180
+Itu super sangat mudah.
+
+00:03:37.200 --> 00:03:38.470
+Apa lagi yang bisa kita lakukan.
+
+00:03:38.880 --> 00:03:50.890
+Yah kami berharap produser ini ketika kami melihat acara perubahan bidang pencarian kami yang mengembalikan status
+
+00:03:50.890 --> 00:03:51.820
+baru.
+
+00:03:51.820 --> 00:04:01.350
+Jadi sekali lagi kita dapat mengatakan bahwa itu harus menangani acara perubahan bidang pencarian dan kita dapat mengatakan reduksi
+
+00:04:01.350 --> 00:04:03.240
+robot pencarian itu.
+
+00:04:03.310 --> 00:04:04.630
+Mari kita
+
+00:04:07.360 --> 00:04:14.570
+buat ini sedikit lebih kecil akan mendapatkan status katakanlah keadaan kosong atau Anda tahu.
+
+00:04:14.620 --> 00:04:26.990
+Mari kita tambahkan pencarian keadaan awal konser di sini dan katakan bahwa pencarian keadaan awal ini adalah bidang pencarian yang
+
+00:04:28.750 --> 00:04:31.010
+dia sebut ini.
+
+00:04:31.230 --> 00:04:35.020
+Baiklah, jadi kita bisa menggunakan pencarian awal saja.
+
+00:04:35.040 --> 00:04:41.670
+Jadi ini akan menjadi kondisi awal yang sama dengan string kosong dan akan
+
+00:04:42.180 --> 00:04:43.620
+menerima tindakan.
+
+00:04:43.650 --> 00:04:46.430
+Dan tindakan apa yang akan diterimanya.
+
+00:04:46.430 --> 00:04:48.370
+Saya akan menghapus ini untuk saat ini.
+
+00:04:48.780 --> 00:04:53.460
+Nah jika Anda ingat tindakan kami akan memiliki tipe.
+
+00:04:54.000 --> 00:05:00.060
+Dan dalam hal ini kita akan mengatakan tipe yang akan diubah bidang pencarian yang berasal dari
+
+00:05:00.060 --> 00:05:04.300
+file Konstans kita dan kita dapat membuat payload yang akan dikirim.
+
+00:05:04.300 --> 00:05:10.580
+Jadi katakan saja untuk sekarang bahwa payload akan menjadi b c.
+
+00:05:10.670 --> 00:05:13.720
+Sekarang apa yang kita harapkan dari output itu.
+
+00:05:14.030 --> 00:05:25.860
+Kami berharap bahwa setelah melewati tinjauan ini, yakin bahwa nuansa pencarian akan sama dengan b c sehingga kami
+
+00:05:25.860 --> 00:05:31.460
+dapat mengatakan bahwa kolom pencarian haruslah ABC lagi.
+
+00:05:31.590 --> 00:05:35.460
+Kami memiliki pencarian keadaan awal kami yang merupakan string kosong.
+
+00:05:35.550 --> 00:05:43.940
+Ini melewati apakah Anda pak dengan tindakan ini dan kami sekarang perlu negara karena ingat peredam ini hanya akan
+
+00:05:43.940 --> 00:05:45.770
+kembali ke negara.
+
+00:05:45.870 --> 00:05:54.320
+Kami ingin negara menjadi a c a mari kita selamatkan dan kita punya sedikit kegagalan di sini kita akan melihat jenis Nera yang
+
+00:05:54.330 --> 00:05:55.170
+kita dapatkan
+
+00:05:55.470 --> 00:06:03.400
+Dan sepertinya hanya tanda Oh yang tak terduga dan kita perlu braket tambahan di sini.
+
+00:06:04.940 --> 00:06:10.800
+Dan kami mendapatkan Knerr kami mengatakan bahwa tipe tidak didefinisikan karena karena kita tidak perlu mengetik di sini.
+
+00:06:10.870 --> 00:06:12.220
+Itu hanya kesalahan ketik di pihak saya.
+
+00:06:13.670 --> 00:06:14.060
+Baiklah.
+
+00:06:14.120 --> 00:06:15.620
+Jadi itu sudah lewat.
+
+00:06:15.620 --> 00:06:17.160
+Betapa sederhananya itu.
+
+00:06:17.210 --> 00:06:23.270
+Ruth mengurangi semua yang perlu kita lakukan hanyalah memberi kita semacam input dan mengharapkan output dan
+
+00:06:23.270 --> 00:06:25.760
+Anda bisa terus seperti ini selamanya.
+
+00:06:25.760 --> 00:06:28.070
+Jadikan tes Anda lebih baik dan lebih baik.
+
+00:06:29.130 --> 00:06:30.600
+Mari kita lakukan review selanjutnya.
+
+00:06:30.600 --> 00:06:34.190
+Sekarang katakanlah kita ingin membuat lebih banyak ruang di sini.
+
+00:06:35.160 --> 00:06:36.990
+Kami
+
+00:06:40.000 --> 00:06:44.890
+ingin menjelaskan permintaan peredam robot.
+
+00:06:45.060 --> 00:06:50.150
+Dalam hal ini kita dapat mengatakan bahwa kita memiliki apa yang kita buat sebagai keadaan awal.
+
+00:06:50.160 --> 00:06:58.420
+Jadi saya akan kembali mengatakan keadaan awal Konst untuk robot.
+
+00:06:58.810 --> 00:07:07.470
+Dan jika Anda ingat kami memiliki ini sebagai keadaan awal jadi saya hanya akan benar-benar menyalin ini.
+
+00:07:07.500 --> 00:07:11.990
+Jadi ini adalah kondisi awal kami untuk ujian.
+
+00:07:14.000 --> 00:07:15.890
+Dan kami ingin melakukan hal yang sama seperti di atas.
+
+00:07:16.080 --> 00:07:18.960
+Seharusnya mengembalikan keadaan awal.
+
+00:07:18.960 --> 00:07:27.750
+Jadi mari kita salin dan tempel di atas dan ubah robot pencarian untuk
+
+00:07:27.750 --> 00:07:35.120
+meminta robot dan kami ingin itu sama dengan keadaan awal.
+
+00:07:35.190 --> 00:07:39.320
+Mari kita simpan dan kita memiliki tes yang gagal.
+
+00:07:39.320 --> 00:07:40.910
+Mari kita lihat apa yang kita gagal di sini.
+
+00:07:42.710 --> 00:07:47.010
+Robot Status Awal tidak ditentukan.
+
+00:07:49.110 --> 00:07:52.320
+Karena saya perlu menambahkan biaya di sini.
+
+00:07:52.320 --> 00:07:53.880
+Mari selamatkan.
+
+00:07:53.880 --> 00:07:54.310
+Baiklah.
+
+00:07:54.330 --> 00:07:55.780
+Semuanya lewat.
+
+00:07:56.100 --> 00:07:59.310
+Kami mendapatkan kondisi awal kami seperti yang diharapkan.
+
+00:07:59.310 --> 00:08:00.180
+Itu bagus.
+
+00:08:00.330 --> 00:08:12.610
+Tapi mari kita lakukan tes nother dan katakan bahwa kita ingin tiga kasus di sini untuk diuji.
+
+00:08:12.770 --> 00:08:15.770
+Jadi mari kita lakukan inisial itu
+
+00:08:18.530 --> 00:08:28.290
+harus menangani daftar permintaan robot untuk tindakan pertama yang tertunda dan itu akan memiliki sesuatu yang mirip
+
+00:08:31.510 --> 00:08:33.160
+di sini.
+
+00:08:33.160 --> 00:08:38.300
+Jadi sekali lagi kita akan menggunakan pernyataan xpect.
+
+00:08:38.450 --> 00:08:46.790
+Ini akan memiliki reduksi Daut kali ini meminta robot.
+
+00:08:46.970 --> 00:08:55.390
+Ini akan menerima keadaan awal dari robot dan kemudian kami
+
+00:08:58.020 --> 00:09:10.310
+akan memberikannya tindakan robot permintaan tipe yang tertunda dan payload dari mari berikan itu tertunda terlalu benar.
+
+00:09:10.480 --> 00:09:18.290
+Jadi kami berharap bahwa ketika ini terjadi sebenarnya jika kita melihat pengurangan Di sini kita melihat bahwa secara otomatis
+
+00:09:18.800 --> 00:09:22.180
+merasakan pengeluaran terlalu benar dan tidak ada muatan.
+
+00:09:22.250 --> 00:09:28.730
+Jadi kita tidak perlu menetapkan bahwa kita tidak perlu mengirim payload tetapi
+
+00:09:29.470 --> 00:09:35.570
+kami berharap payload itu berubah dari memperluas semua kita ke
+
+00:09:38.600 --> 00:09:49.930
+false di sini karena memperluas ketika kita memulai selalu salah dan di sini kita ingin ini sama dengan keadaan robot.
+
+00:09:51.130 --> 00:09:56.610
+Dengan array kosong, pengeluaran disetel ke true.
+
+00:09:56.690 --> 00:09:58.730
+Jadi mari kita simpan.
+
+00:09:58.750 --> 00:09:59.170
+Baiklah.
+
+00:09:59.180 --> 00:10:07.030
+Semuanya berlalu tetapi saya hanya memperhatikan di sini bahwa kita tidak benar-benar ingin defaultnya
+
+00:10:07.030 --> 00:10:08.020
+benar.
+
+00:10:08.050 --> 00:10:13.010
+Kami ingin menjadi salah karena ketika kami pertama kali memiliki keadaan awal.
+
+00:10:13.060 --> 00:10:15.130
+Kami belum mengirim janji.
+
+00:10:15.130 --> 00:10:17.900
+Kami belum meminta apa pun dari API.
+
+00:10:18.070 --> 00:10:24.280
+Jika kita masuk ke reduksi jatuh kita melihat bahwa kita memiliki tahap awal di sini secara tidak sengaja.
+
+00:10:24.280 --> 00:10:30.820
+Kami hanya bisa mengubahnya ke false akan menyimpan dan di sini mari kita simpan di sini.
+
+00:10:31.990 --> 00:10:32.810
+Sempurna.
+
+00:10:32.980 --> 00:10:34.700
+Semuanya berfungsi.
+
+00:10:34.720 --> 00:10:41.160
+Dan pembelanjaan robot permintaan mengubah kondisi pembelanjaan kami menjadi kenyataan.
+
+00:10:41.160 --> 00:10:42.810
+Baiklah, mari kita lanjutkan.
+
+00:10:42.810 --> 00:10:47.150
+Kami memiliki kasus kedua yang merupakan keberhasilan.
+
+00:10:47.370 --> 00:10:58.340
+Jadi saya hanya akan menyalin dan menempel di sini dan kali ini mengatakan permintaan robot menghabiskan
+
+00:10:58.490 --> 00:11:02.200
+kesuksesan dan kesuksesan ini seharusnya.
+
+00:11:02.480 --> 00:11:03.620
+Nah apa yang seharusnya.
+
+00:11:03.620 --> 00:11:12.820
+Yah kita perlu semacam muatan karena sekali lagi dalam reduksi kita, kita memiliki muatan aksi robot yang kita kembalikan
+
+00:11:13.210 --> 00:11:17.060
+atau kirim ke negara bagian setelah berhasil.
+
+00:11:17.080 --> 00:11:19.920
+Jadi mari kita buat itu dalam tipe kita.
+
+00:11:19.930 --> 00:11:25.400
+Kita akan melihat muatan dan aku akan kembali.
+
+00:11:25.900 --> 00:11:47.880
+Mari kita ambil mereka yang baru saja membuat ide Dommy 2:59 katakanlah nama tes dan akhirnya email tes di gmail dot
+
+00:11:47.940 --> 00:11:49.850
+com
+
+00:11:50.180 --> 00:11:56.340
+Anda lihat di sini bahwa ini adalah string dan bukan angka Saya percaya pada komponen kami, kami sebenarnya tidak membedakan
+
+00:11:56.340 --> 00:12:01.740
+antara angka dalam string sehingga itu adalah sesuatu yang mungkin ingin kami perbaiki di masa mendatang.
+
+00:12:02.730 --> 00:12:09.410
+Tetapi untuk saat ini kami berharap bahwa jika payloadnya adalah negara sekarang diperbarui dengan payload itu.
+
+00:12:09.480 --> 00:12:13.020
+Jadi mari kita salin itu.
+
+00:12:13.140 --> 00:12:17.920
+Dan kami juga berharap bahwa pending akan palsu lagi jika kami mengingat penggoda kami.
+
+00:12:17.970 --> 00:12:21.660
+Kami juga mengubah kami menunggu untuk salah pada kesuksesan.
+
+00:12:21.660 --> 00:12:26.950
+Jadi mari kita simpan dan ada sedikit kesalahan di sini.
+
+00:12:29.760 --> 00:12:33.900
+Itu adalah musuh bebuyutan Khama yang sederhana jika kita berlaku di sana.
+
+00:12:33.900 --> 00:12:36.750
+Itu melewati satu tes akhir.
+
+00:12:36.840 --> 00:12:42.600
+Anda dapat melihat bahwa Anda bisa mendapatkan pengulangan yang cukup dengan tes tetapi ini adalah hal yang baik
+
+00:12:42.600 --> 00:12:49.950
+dengan reduksi, mereka sangat mudah untuk diuji sehingga Anda hanya menyalin dan menempelkan banyak kode yang lagi baik untuk pengujian karena kode
+
+00:12:50.160 --> 00:12:52.770
+ini tidak akan pernah pergi dalam produksi.
+
+00:12:53.010 --> 00:12:55.880
+Jadi mari kita lakukan kasus gagal di sini.
+
+00:12:55.890 --> 00:13:01.680
+Itu yang gagal.
+
+00:13:01.870 --> 00:13:05.360
+Dan dalam hal ini kami ingin payload.
+
+00:13:05.360 --> 00:13:09.660
+Jika kita kembali ke fungsi kita, kita ingin payload hanya memiliki kesalahan.
+
+00:13:09.680 --> 00:13:19.340
+Jadi sekali lagi kembali ke sini kita bisa mengatakan sangat kesal bahwa kita masuk ke sana dan kami berharap negara sekarang
+
+00:13:19.340 --> 00:13:22.250
+memiliki udara yang ada padamu
+
+00:13:26.070 --> 00:13:29.640
+dan pengeluaran yang salah meskipun saya melihat di
+
+00:13:32.450 --> 00:13:38.410
+sini bahwa kita sebenarnya tidak mengubah itu tertunda palsu yang seharusnya kita.
+
+00:13:38.410 --> 00:13:43.210
+Jadi jika kita menyelamatkan Atacama.
+
+00:13:43.440 --> 00:13:47.550
+Tapi kami juga berharap array robot dikembalikan mengingat.
+
+00:13:47.550 --> 00:13:56.230
+Jadi susunan robot harus kosong dan sekarang kita memiliki passing ini.
+
+00:13:56.340 --> 00:13:58.020
+Sangat keren.
+
+00:13:58.020 --> 00:13:59.450
+Baiklah itu cukup untukmu.
+
+00:13:59.470 --> 00:14:04.680
+Apakah Anda melihat betapa sederhananya mereka untuk menguji hanya memeriksa input mereka terhadap output.
+
+00:14:04.710 --> 00:14:11.640
+Dan itulah mengapa Anda ingin memiliki reduksi ini di mana-mana dan mengapa redux sangat luar biasa sehingga sangat mudah
+
+00:14:11.640 --> 00:14:12.390
+untuk diuji.
+
+00:14:12.500 --> 00:14:16.570
+Dan jika Anda memikirkannya semua logika kita ada dalam reduksi kami.
+
+00:14:16.680 --> 00:14:25.080
+Jadi jika kita memiliki tes yang benar-benar bagus untuk reduksi kita, kita membahas banyak logika aplikasi kita karena
+
+00:14:25.080 --> 00:14:29.830
+reduksi adalah hal yang mengambil tindakan dan mengeluarkan keadaan.
+
+00:14:29.950 --> 00:14:38.570
+Mereka cukup banyak pengontrol atau otak redux aplikasi kami memungkinkan kami untuk memiliki tes yang benar-benar bagus dan
+
+00:14:38.590 --> 00:14:47.160
+menjaga hal-hal sederhana di sisi reac dengan hanya melakukan pengujian snapshot atau tes enzim sederhana dan menguji
+
+00:14:47.490 --> 00:14:51.860
+fungsi murni yang sekali lagi sangat berguna .
+
+00:14:52.200 --> 00:14:54.100
+Tapi untuk sekarang itu untukku.
+
+00:14:54.180 --> 00:14:55.760
+Saya akan melihat yang berikutnya.

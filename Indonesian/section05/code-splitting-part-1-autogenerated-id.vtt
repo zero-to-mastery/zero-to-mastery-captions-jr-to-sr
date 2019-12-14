@@ -1,0 +1,466 @@
+﻿WEBVTT
+
+00:00:02.090 --> 00:00:02.680
+Baiklah.
+
+00:00:02.710 --> 00:00:03.660
+Selamat datang kembali.
+
+00:00:03.760 --> 00:00:08.530
+Baiklah, mari kita tunjukkan beberapa pemisahan kode dan cara kerjanya dalam video ini.
+
+00:00:08.530 --> 00:00:14.010
+Sekarang di sini saya baru saja membuat proyek reaksi Creve.
+
+00:00:14.020 --> 00:00:17.920
+Jadi saya hanya berlari buat bereaksi memecah kode.
+
+00:00:17.920 --> 00:00:21.670
+Ini hanyalah proyek default yang kami dapatkan di luar kotak.
+
+00:00:21.670 --> 00:00:29.710
+Jika saya mulai NPM Anda akan melihat bahwa tidak ada yang istimewa hanya yang bagus dan sederhana buat bereaksi
+
+00:00:31.710 --> 00:00:34.730
+sempurna untuk memulai dengan pemecahan kode kami.
+
+00:00:34.830 --> 00:00:42.800
+Pertama-tama saya akan menghentikan ini yang jelas di sini dan saya hanya akan menghapus semuanya di sini.
+
+00:00:42.860 --> 00:00:52.830
+Selain tajuk dan idealnya kita mungkin ingin memiliki tiga tombol atau tiga tempat yang dapat kita klik untuk memberi
+
+00:00:52.830 --> 00:00:57.180
+kita halaman baru akan memiliki komponen halaman satu.
+
+00:00:59.650 --> 00:01:13.760
+Kami akan memiliki halaman ke komponen dan akhirnya komponen tetapi jelas kami harus membuat komponen ini terlebih
+
+00:01:13.760 --> 00:01:15.040
+dahulu.
+
+00:01:15.050 --> 00:01:17.690
+Jadi mari kita lanjutkan dan lakukan itu.
+
+00:01:17.750 --> 00:01:30.190
+Saya akan membuat folder baru menyebutnya komponen dan di sini kita hanya akan membuat halaman Ron
+
+00:01:31.560 --> 00:01:32.520
+file
+
+00:01:35.560 --> 00:01:41.700
+javascript paste ke file javascript dan akhirnya javascript.
+
+00:01:42.130 --> 00:01:52.060
+Sekarang di halaman-halaman ini kami hanya akan mengimpor aksi ulang dari aksi ulang yang cukup standar tetapi Anda tahu apa yang harus
+
+00:01:52.120 --> 00:01:56.620
+kita ambil juga logo yang kita miliki di sini.
+
+00:01:56.620 --> 00:02:00.900
+Logo tindakan ulang akan mengimpor itu juga.
+
+00:02:01.080 --> 00:02:07.690
+Dan karena kita berada di folder komponen sekarang dan logo tinggal di folder sumber yang harus kita lakukan
+
+00:02:07.690 --> 00:02:08.750
+dot dot.
+
+00:02:08.770 --> 00:02:14.230
+Dan sebenarnya kita ingin folder komponen berada di dalam sumber agar tidak ada di sini.
+
+00:02:14.230 --> 00:02:24.980
+Jadi mari kita pindah yang akan memasukkannya ke dalam folder sumber.
+
+00:02:25.010 --> 00:02:28.270
+Sekarang di halaman ini akan menyimpan fungsi ini.
+
+00:02:28.310 --> 00:02:39.390
+Jadi kita akan menyebutnya biaya halaman 1 akan sama dengan itu tidak akan memiliki alat peraga yang semua terima untuk sekarang dan di
+
+00:02:39.450 --> 00:02:44.640
+sini kita bisa melakukan pengembalian atau hanya mengembalikan komponen sederhana.
+
+00:02:44.640 --> 00:02:49.200
+Saya bisa membiarkannya seperti sekarang dan mengatakan Divx
+
+00:02:52.160 --> 00:03:01.890
+akan memberikannya nama kelas aplikasi hanya supaya kita mendapatkan nama kelas yang sama dengan yang kita miliki sebelumnya.
+
+00:03:02.170 --> 00:03:05.910
+Dan Anda tidak, kami hanya akan menyalin tajuk juga.
+
+00:03:06.250 --> 00:03:09.820
+Jadi halaman ini akan memiliki dan
+
+00:03:17.760 --> 00:03:24.290
+akan menutup div tetapi juga di sini kita ingin memiliki dua tombol.
+
+00:03:24.490 --> 00:03:33.760
+Jadi tombol pertama akan memiliki acara klik dan untuk saat ini hanya akan kosong.
+
+00:03:38.530 --> 00:03:42.450
+Dan katakanlah di dalam tombol ini saya akan memiliki tag.
+
+00:03:42.460 --> 00:03:44.500
+Ini akan memiliki teks tempel juga.
+
+00:03:44.530 --> 00:03:53.340
+Jadi ketika kita mengklik tombol ini dan membawa kita ke halaman 2 dan kita dapat melakukan hal yang sama untuk halaman 3.
+
+00:03:53.360 --> 00:03:56.290
+Jadi mari kita lanjutkan dan simpan itu.
+
+00:03:56.660 --> 00:04:00.780
+Hal terakhir yang ingin kita lakukan adalah jika kita memilih keluar.
+
+00:04:00.860 --> 00:04:07.970
+Ya baik kami masih memiliki Halaman 2 dan halaman 3 tetapi idealnya kami memiliki semacam perutean.
+
+00:04:08.000 --> 00:04:16.100
+Jadi kita akan menampilkan halaman pada halaman 2 pada pastry tetapi tidak pada saat yang sama berdasarkan pada rute yang ingin kita render hanya pada
+
+00:04:16.430 --> 00:04:23.540
+halaman jika kita pada halaman 1 hanya halaman 2 jika kita pada halaman 2 dan hanya pastry jika kita ada di
+
+00:04:23.540 --> 00:04:24.460
+halaman 3.
+
+00:04:24.500 --> 00:04:33.470
+Jadi mari kita buat logika perutean sederhana di sini kita dapat memulai dengan membuat keadaan di mana kita
+
+00:04:33.470 --> 00:04:36.040
+melakukannya dengan memiliki konstruktor.
+
+00:04:36.140 --> 00:04:38.300
+Ingat kita harus memanggil super.
+
+00:04:38.300 --> 00:04:44.420
+Jadi kita bisa menggunakan kata kunci ini dan di sini akan mengatakan
+
+00:04:47.460 --> 00:04:51.830
+titik ini sama dengan rute dan rute default.
+
+00:04:51.870 --> 00:04:57.370
+Ketika aplikasi ini diinisialisasi, kami hanya akan salah membayar.
+
+00:04:58.750 --> 00:05:05.740
+Dan berdasarkan di mana kita klik ingat di halaman 1 bagaimana kita harus Bundes yang akan memiliki semacam acara yang jika kita
+
+00:05:05.740 --> 00:05:10.850
+klik pada halaman 2 itu akan membawa kita ke halaman dua jika kita mengklik halaman 3.
+
+00:05:10.900 --> 00:05:12.840
+Ini akan membawa kita ke halaman 3.
+
+00:05:13.070 --> 00:05:19.130
+Jadi mari kita buat acara yang akan kita sebut perubahan rute
+
+00:05:22.550 --> 00:05:25.240
+dan perubahan rute ini.
+
+00:05:25.520 --> 00:05:33.110
+Mari kita perbaiki ejaan yang akan memulai metode perubahan jalan yang akan kita buat sekarang
+
+00:05:33.110 --> 00:05:34.830
+di aplikasi ini
+
+00:05:34.850 --> 00:05:42.270
+Jadi mari kita lanjutkan dan lakukan maka kita akan mengatakan tentang perubahan rute dan perubahan Andreae ini akan menerima rute
+
+00:05:42.990 --> 00:05:45.070
+parameter dan saya menggunakan fungsi
+
+00:05:48.440 --> 00:05:51.920
+era di sini sehingga kita tidak harus mengikat konstruktor.
+
+00:05:51.920 --> 00:05:54.890
+Kalau tidak, kita harus menggunakan dot bind pada perubahan rute.
+
+00:05:54.890 --> 00:05:56.450
+Jika kami tidak melakukan fungsi kesalahan.
+
+00:05:56.460 --> 00:05:58.780
+Tapi saya suka cara ini, saya pikir itu terlihat lebih bersih.
+
+00:05:59.660 --> 00:06:12.460
+Sekarang di sini kita hanya bisa mengatakan keadaan titik sat ini untuk memiliki rute yang dia panggil ke rute apa
+
+00:06:13.060 --> 00:06:13.970
+pun.
+
+00:06:14.260 --> 00:06:23.060
+Jadi kita sebenarnya bisa hanya menggunakan istilah ini tapi itu lebih deskriptif jadi saya suka saya suka metode ini lebih baik.
+
+00:06:23.360 --> 00:06:25.830
+Jadi kita tahu apa yang terjadi.
+
+00:06:25.910 --> 00:06:31.190
+Jadi sekarang kita melewati perubahan rute ke komponen satu halaman.
+
+00:06:31.190 --> 00:06:31.620
+Baiklah.
+
+00:06:31.630 --> 00:06:40.000
+Jadi dengan logika itu kita bisa menyalin dan menempel ke halaman 2 dan halaman 3 lagi.
+
+00:06:40.310 --> 00:06:49.200
+Hal yang sama dan semua yang kami lakukan adalah kapan saja kami mengklik kami memperbarui rute ke rute apa pun yang kami minta.
+
+00:06:49.280 --> 00:06:56.870
+Mari kita kembali atau menyimpannya dan pergi ke halaman Halaman Ron sekarang akan menerima prop perubahan rute dan ini
+
+00:06:57.320 --> 00:07:01.300
+pada perubahan rute dan saya menggunakan perusakan di sini.
+
+00:07:01.310 --> 00:07:04.890
+Jadi saya tidak perlu melakukan alat peraga pada perubahan rute.
+
+00:07:05.000 --> 00:07:12.860
+Saya hanya bisa mengatakan pada perubahan rute akan memiliki fungsi yang dijalankan dan perubahan rute
+
+00:07:12.860 --> 00:07:15.800
+ini akan mengirim halaman rute
+
+00:07:15.890 --> 00:07:19.860
+Karena kita akan ke halaman dua ketika kita membuatnya sedikit lebih kecil.
+
+00:07:20.060 --> 00:07:32.010
+Jadi Anda dapat melihat dan lagi kita akan melakukan hal yang sama ke halaman 3 kali ini dengan mengklik pada halaman 3.
+
+00:07:32.270 --> 00:07:42.060
+Dan akhirnya kita bisa menambahkan halaman olahraga standar Ron dan aku akan pergi ke depan dan hanya menyalin semua ini karena
+
+00:07:42.060 --> 00:07:45.400
+halaman kita cukup banyak akan terlihat
+
+00:07:48.900 --> 00:07:56.140
+sama kecuali untuk fakta bahwa nama akan berbeda sehingga memiliki Halaman 3 dan untuk klik
+
+00:07:56.140 --> 00:08:05.530
+saat bukan halaman 2 dan 3 kita akan memiliki halaman pada halaman ke halaman ke halaman Ron kita akan menyimpannya.
+
+00:08:05.560 --> 00:08:15.520
+Dan kemudian sama dengan Halaman 2 akan mengubah nama ini ke komponen halaman 2 yang memiliki akses ke halaman satu dan halaman
+
+00:08:15.520 --> 00:08:16.020
+3.
+
+00:08:17.890 --> 00:08:24.720
+Bagian terakhirnya jelas kami ingin mengimpor komponen ini.
+
+00:08:24.720 --> 00:08:34.070
+Jadi saya akan mengatakan impor satu halaman dari atau hanya komponen komponen.
+
+00:08:34.220 --> 00:08:35.370
+Pastikan kita melakukannya dengan benar.
+
+00:08:39.840 --> 00:08:42.320
+Halaman Ron.
+
+00:08:42.410 --> 00:08:53.570
+Dan akhirnya menyalin sisanya ke sini untuk memastikan kami cocok dengan halaman adalah Sri ke halaman 3
+
+00:08:53.790 --> 00:08:58.300
+Saya ingin hanya menyimpan ini dan menjalankan NPM mulai melihat apakah kami mendapatkan kesalahan.
+
+00:09:06.390 --> 00:09:07.130
+Baiklah.
+
+00:09:07.350 --> 00:09:15.000
+Kami memiliki halaman web yang cukup jelek dengan rendering komponen kami, tetapi sepertinya berfungsi.
+
+00:09:15.000 --> 00:09:21.480
+Kami memiliki halaman yang berjalan tetapi kami jelas tidak ingin menampilkan semuanya pada saat yang
+
+00:09:21.480 --> 00:09:28.890
+sama kami ingin memiliki semacam logika routing dan defaultnya harus halaman 1 karena ingat rute kami saat
+
+00:09:28.890 --> 00:09:30.660
+ini halaman aktif.
+
+00:09:30.950 --> 00:09:32.720
+Dan ini cukup mudah dilakukan.
+
+00:09:32.720 --> 00:09:42.660
+Kita tidak lagi membutuhkan tajuk karena juga karena tajuk dan bagian atas semuanya ada dalam komponen ini.
+
+00:09:42.710 --> 00:09:44.480
+Jadi mari kita
+
+00:09:49.270 --> 00:09:50.650
+hapus ini
+
+00:09:57.510 --> 00:10:12.410
+dan tambahkan logika di sini kita akan mengatakan jika rute negara ini sama dengan halaman 1 maka kita kembali halaman Anda ingin mendengar Feltz jika kita memiliki rute
+
+00:10:20.270 --> 00:10:26.700
+sebagai halaman untuk kemudian kita bisa membuat halaman ke dan Saya yakin
+
+00:10:29.490 --> 00:10:31.920
+ada cara yang lebih
+
+00:10:35.820 --> 00:10:38.440
+bersih untuk melakukan ini sekarang.
+
+00:10:38.460 --> 00:10:43.100
+Tetapi untuk tujuan demonstrasi ini ini akan baik-baik saja.
+
+00:10:43.380 --> 00:10:45.960
+Bagus pastry routing logika
+
+00:10:49.870 --> 00:10:51.000
+sederhana.
+
+00:10:51.190 --> 00:10:56.610
+Kami akhirnya mengembalikannya tepat di sini.
+
+00:11:04.550 --> 00:11:05.780
+Baiklah mari kita mencobanya.
+
+00:11:05.810 --> 00:11:12.290
+Menyimpan logo itu didefinisikan sebagai tidak pernah digunakan karena kita tidak menggunakannya pada halaman utama lagi.
+
+00:11:12.320 --> 00:11:15.670
+Mari kita simpan kembali.
+
+00:11:15.680 --> 00:11:16.550
+Baiklah.
+
+00:11:16.550 --> 00:11:18.530
+Sepertinya kita memiliki semuanya berjalan.
+
+00:11:18.530 --> 00:11:25.880
+Mari kita lihat apakah saya mengklik halaman 2 Ini berubah menjadi perubahan halaman 1 pastry ke halaman 2.
+
+00:11:25.880 --> 00:11:31.130
+Jadi kami mengubah halaman sekarang, tetapi ini agak sulit untuk diceritakan, jadi mari kita sukses untuk membuatnya terlihat
+
+00:11:31.130 --> 00:11:31.820
+lebih baik.
+
+00:11:35.690 --> 00:11:41.510
+Dan saya sebenarnya sudah memiliki beberapa gaya CSSA yang dapat kita gunakan karena sementara
+
+00:11:41.510 --> 00:11:45.940
+kita sekarang belajar CSSA sekarang saya memiliki kelas tombol.
+
+00:11:45.950 --> 00:11:48.830
+Tidak ada yang terlalu gila hanya bosan atau membuat yang lebih besar.
+
+00:11:48.950 --> 00:12:00.000
+Dan kami juga memiliki kelas yang dinonaktifkan sehingga sekarang kami dapat menambahkan kelas penonaktifan pada tombol kami untuk melihat yang mana yang
+
+00:12:00.000 --> 00:12:01.590
+sebenarnya kami klik.
+
+00:12:01.600 --> 00:12:10.720
+Jadi izinkan saya menyimpannya dan kali ini saya hanya akan memiliki tombol tombol yang memiliki nama kelas.
+
+00:12:13.500 --> 00:12:21.780
+Dinonaktifkan dan tidak akan melakukan apa pun Anda hanya akan memiliki satu halaman karena kami saat ini di halaman
+
+00:12:21.780 --> 00:12:22.410
+satu.
+
+00:12:22.470 --> 00:12:25.410
+Kami hanya ingin halaman dan tempel tombol aktif.
+
+00:12:25.650 --> 00:12:30.540
+Dan saya akan menyimpan dan melakukan hal yang sama untuk semua yang lain juga.
+
+00:12:30.570 --> 00:12:36.270
+Akan mengatakan Halaman dua karena kita berada di halaman dua dinonaktifkan.
+
+00:12:36.370 --> 00:12:42.740
+Dan akhirnya untuk halaman 3 Kita akan menonaktifkannya juga.
+
+00:12:42.740 --> 00:12:44.300
+Baiklah mari kita lihat apakah itu terlihat lebih baik.
+
+00:12:44.300 --> 00:12:46.500
+Ayo kembali.
+
+00:12:46.510 --> 00:12:47.110
+Baiklah.
+
+00:12:47.110 --> 00:12:48.820
+Jadi kita ada di halaman 1.
+
+00:12:48.850 --> 00:12:50.740
+Anda dapat melihat seberapa baik keterampilan CSSA saya.
+
+00:12:50.740 --> 00:12:52.690
+Ini terlihat sangat indah.
+
+00:12:53.170 --> 00:12:57.380
+Dan jika kita klik pada halaman 2 Anda pergi ke halaman untuk pergi ke pastry.
+
+00:12:57.520 --> 00:12:59.540
+Kita pergi ke halaman 3.
+
+00:12:59.560 --> 00:13:00.970
+Sangat keren.
+
+00:13:00.970 --> 00:13:01.460
+Baiklah.
+
+00:13:01.540 --> 00:13:03.720
+Jadi kami melakukan semua itu.
+
+00:13:03.790 --> 00:13:04.690
+Itu luar biasa.
+
+00:13:04.690 --> 00:13:07.670
+Tapi di mana pemisahan kode ini.
+
+00:13:07.900 --> 00:13:16.320
+Nah ini adalah aplikasi yang akan kita gunakan untuk membagi kode dan karena sekarang jika
+
+00:13:16.890 --> 00:13:25.180
+saya membuka tab alat pengembang dan pergi ke jaringan dan saya cukup klik refresh.
+
+00:13:25.370 --> 00:13:27.170
+Saya melihat bahwa saya mendapatkan bundel.
+
+00:13:27.290 --> 00:13:27.630
+Iya nih.
+
+00:13:27.650 --> 00:13:29.400
+Abaikan semua hal lain ini.
+
+00:13:29.420 --> 00:13:34.650
+Ini hanya hal-hal aktual yang datang dengan plug chrome saya dan juga membuat kembali bertindak.
+
+00:13:34.700 --> 00:13:38.190
+Tapi yang kami tertarik tertarik adalah bundel.
+
+00:13:38.300 --> 00:13:43.460
+Ya, di sinilah kami memiliki komponen kami dan Anda lihat inilah komponen yang membutuhkan waktu paling
+
+00:13:43.460 --> 00:13:44.540
+lama untuk dimuat.
+
+00:13:44.540 --> 00:13:48.470
+Sekarang bundel J. ini S. hanya satu file tunggal.
+
+00:13:48.650 --> 00:13:56.300
+Dan jika saya klik pada halaman 2 tidak ada yang terjadi karena semua javascript yang kita butuhkan sudah
+
+00:13:56.750 --> 00:14:00.500
+dimuat di Bondel mencerna dengan pemecahan kode sekarang.
+
+00:14:00.620 --> 00:14:07.190
+Kita akan benar-benar dapat memuat file setiap kali kita mengklik halaman karena kita belum
+
+00:14:07.190 --> 00:14:15.920
+memuat di sana dan dengan cara ini kita dapat membuat bundel ini seperti 354 kilobyte sekarang jauh lebih kecil.
+
+00:14:15.970 --> 00:14:22.770
+Saya tahu saya sedang membangun ketegangan tetapi dalam video berikutnya kita akan membuat ini memiliki pemecahan kode dan
+
+00:14:23.680 --> 00:14:24.850
+itu sangat mudah.
+
+00:14:24.930 --> 00:14:26.920
+Jadi semua terlihat bahwa Buh-Bye.

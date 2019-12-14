@@ -1,0 +1,652 @@
+﻿WEBVTT
+
+00:00:00.760 --> 00:00:01.530
+Selamat datang kembali.
+
+00:00:01.840 --> 00:00:08.700
+Mari kita mulai menambahkan fitur baru ini yaitu membuat beberapa deteksi wajah.
+
+00:00:08.800 --> 00:00:11.350
+Sekarang bagaimana kita memulai ini?
+
+00:00:11.360 --> 00:00:15.320
+Hal pertama yang ingin saya lakukan adalah hanya memindahkan barang.
+
+00:00:15.500 --> 00:00:20.310
+Mari kita memiliki Front-End kita di sini.
+
+00:00:20.370 --> 00:00:23.230
+Jadi saya tidak terus-menerus bolak-balik di sini.
+
+00:00:23.670 --> 00:00:32.400
+Dan hal yang paling pertama adalah ketika kita bergantung pada API ini, ini memperjelas API sehingga saya bisa masuk ke dokumentasi dan
+
+00:00:32.400 --> 00:00:39.830
+melihat jenis respon yang kita dapatkan di mana saya mungkin bisa logout apa pun yang backend lakukan ketika
+
+00:00:39.840 --> 00:00:44.020
+kita menekan mendeteksi dan mengklarifikasi mengirimkan tanggapan kepada kami.
+
+00:00:44.100 --> 00:00:44.970
+Jadi mari kita lihat.
+
+00:00:46.700 --> 00:00:53.900
+Jika saya pergi ke bagian belakang ke gambar saya melihat bahwa jawaban yang diklarifikasi ada di sini dalam data.
+
+00:00:53.900 --> 00:01:01.090
+Jadi mari kita batalkan saja log data ini dan lihat jenis informasi apa yang kita dapatkan.
+
+00:01:01.130 --> 00:01:09.200
+Saya akan menghemat dan suka saya katakan mungkin ada cara yang lebih mudah bagi saya hanya pergi ke dokumentasi untuk melihat
+
+00:01:09.410 --> 00:01:11.150
+apa yang mereka respons.
+
+00:01:11.150 --> 00:01:16.370
+Tapi saya pikir cara ini lebih umum sehingga saya pikir akan lebih bermanfaat untuk melihat melalui sini.
+
+00:01:16.370 --> 00:01:17.800
+Jadi ayo kembali.
+
+00:01:17.970 --> 00:01:22.830
+Ia mendeteksi memastikan bahwa asumsi kami benar dan kami mengembalikan sesuatu.
+
+00:01:22.970 --> 00:01:23.420
+Baiklah.
+
+00:01:23.430 --> 00:01:25.480
+Sepertinya kita mendapat respons.
+
+00:01:26.790 --> 00:01:33.330
+Deskripsi OK kita mendapatkan ID yang dibuat pada data input model.
+
+00:01:33.330 --> 00:01:37.820
+Semua data yang tepat mungkin sesuatu yang kami minati.
+
+00:01:37.950 --> 00:01:42.160
+Jadi mari kita masuk ke dalam mari kita pergi dengan sebenarnya sebelum kita melakukan itu.
+
+00:01:42.270 --> 00:01:48.720
+Mari kita lihat karena kita baru mengembalikan data pesawat ini, mari kita lihat apa yang dilakukan front end dengan
+
+00:01:48.720 --> 00:01:49.580
+informasi ini.
+
+00:01:50.580 --> 00:01:59.740
+Jadi di ujung depan jika kita melihat di mana itu menghitung lokasi wajah.
+
+00:01:59.940 --> 00:02:02.430
+Kami melihat bahwa kami menerima beberapa data di sini.
+
+00:02:02.430 --> 00:02:03.620
+Saya ingin tahu apakah ini mungkin.
+
+00:02:03.660 --> 00:02:09.420
+Jadi, mari kita hitung lokasi wajah, temukan di mana kita benar-benar menyebutnya, namun kita melihat bahwa
+
+00:02:09.420 --> 00:02:15.130
+ada respons yang datang dari sini di mana kita membuat gambar Anda adalah alkohol.
+
+00:02:15.240 --> 00:02:19.440
+Baiklah jadi ini menurut saya mungkin jawaban dari klarifikasi.
+
+00:02:19.710 --> 00:02:24.290
+Mari kita lihat apa ujung depan kembali.
+
+00:02:24.420 --> 00:02:27.270
+Saya akan di sini
+
+00:02:31.040 --> 00:02:42.400
+mengatakan dialog konsol dan menjelaskan respons yang akan disimpan dan saya harus masuk karena kami baru saja menyegarkan
+
+00:02:44.460 --> 00:02:51.770
+sehingga G-mail dot Hei seinen dan mari kita salin dan tempel.
+
+00:02:51.840 --> 00:02:53.620
+Saya harus mendapatkan gambar lagi.
+
+00:02:58.010 --> 00:03:01.220
+Salin dan tempel deteksi dan buka konsol.
+
+00:03:04.620 --> 00:03:04.880
+Baiklah.
+
+00:03:04.890 --> 00:03:10.700
+Jadi ini adalah respon yang kita dapatkan dari output dengan ID.
+
+00:03:11.000 --> 00:03:16.820
+Mari lihat kita mendapat input data input data.
+
+00:03:16.880 --> 00:03:23.800
+Ada banyak hal yang mungkin bisa kita buka pada dokumentasi mereka dan mencari tahu apa yang kita butuhkan.
+
+00:03:24.870 --> 00:03:27.910
+Mari kita lihat apakah kita mendapat nol.
+
+00:03:28.150 --> 00:03:28.370
+BAIK.
+
+00:03:28.380 --> 00:03:29.820
+Jadi ini banyak informasi.
+
+00:03:29.820 --> 00:03:32.500
+Mari kita lihat bagaimana kita menggunakannya di ujung depan.
+
+00:03:33.030 --> 00:03:40.110
+Jadi di ujung depan jika saya pergi ke tampilan kotak wajah yang adalah apa yang kami gunakan atau menghitung lokasi
+
+00:03:40.110 --> 00:03:46.290
+wajah yang mengapa kami menggunakan data untuk saya naik ke sini dan saya melihat bahwa saya mendapatkan
+
+00:03:46.310 --> 00:03:49.830
+data output ayah kami daerah kotak pembatas ampho daerah.
+
+00:03:49.890 --> 00:03:51.300
+Jadi mari kita salin
+
+00:03:54.120 --> 00:03:58.010
+itu atau mari kita lintasi bahwa data Celso kami mengeluarkan wilayah data.
+
+00:03:58.020 --> 00:04:00.300
+Jadi mari kita pergi
+
+00:04:07.310 --> 00:04:18.560
+ke output data sehingga data output nol daerah data dan betapa menariknya kita memiliki array di sini dua tetapi jika kita kembali
+
+00:04:18.560 --> 00:04:26.920
+ke kode itu tampak seperti daerah kita hanya menggunakan satu dan kita mendapatkan info wilayah dan
+
+00:04:26.920 --> 00:04:29.880
+kotak pembatas untuk menghitung lokasi wajah.
+
+00:04:29.890 --> 00:04:40.150
+Jadi jika saya pergi di sini saya melihat bahwa OK ini adalah kotak paling atas baris kiri kolom kanan bawah kolom
+
+00:04:40.480 --> 00:04:42.530
+baris dan yang kedua.
+
+00:04:42.570 --> 00:04:42.810
+Baiklah.
+
+00:04:42.810 --> 00:04:43.800
+Kami memiliki hal yang sama.
+
+00:04:43.810 --> 00:04:44.040
+BAIK.
+
+00:04:44.050 --> 00:04:51.810
+Itu menarik bagaimana jika kita hanya memiliki gambar dengan hanya satu orang.
+
+00:04:51.810 --> 00:04:55.240
+Mari kita klik itu lagi.
+
+00:04:55.250 --> 00:04:57.630
+Kami selalu ingin menguji asumsi kami.
+
+00:04:57.630 --> 00:05:06.270
+Jadi saya akan menyalin ini dan itu lagu yang populer.
+
+00:05:06.290 --> 00:05:08.920
+Baiklah kita mendapat tanggapan kedua di sini.
+
+00:05:08.930 --> 00:05:17.060
+Sekali lagi mari kita uji itu dengan asumsi kita benar jadi jika saya pergi semua menempatkan wilayah data euro hanya ada
+
+00:05:17.060 --> 00:05:20.260
+satu wilayah karena hanya ada satu wajah.
+
+00:05:20.270 --> 00:05:20.690
+Baiklah.
+
+00:05:20.780 --> 00:05:29.430
+Jadi tanpa pengkodean apa pun, kita dapat mengasumsikan bahwa mungkin daerahlah yang memberi kita informasi wajah.
+
+00:05:29.460 --> 00:05:35.280
+Sekali lagi ini bahkan tanpa melihat dokumen atau API yang direferensikan dengan jelas.
+
+00:05:35.380 --> 00:05:36.370
+Mari kita coba itu.
+
+00:05:36.910 --> 00:05:44.940
+Mari kita mungkin memiliki satu lingkaran, bukan hanya mengembalikan satu hal.
+
+00:05:44.950 --> 00:05:46.270
+Atau bahkan lebih baik.
+
+00:05:46.300 --> 00:05:49.540
+Mari kita ubah wilayah data ini 1.
+
+00:05:49.600 --> 00:05:54.220
+Mari kita lihat apakah di sini dan jika saya kembali saya harus masuk lagi.
+
+00:05:57.460 --> 00:06:01.840
+Masuk dan gunakan gambar yang kami miliki di sini.
+
+00:06:01.840 --> 00:06:02.890
+Ingat terakhir
+
+00:06:05.930 --> 00:06:09.740
+kali kami mendeteksi wajah ini tetapi tidak pada yang ini.
+
+00:06:09.740 --> 00:06:15.680
+Jadi sekali lagi kembali ke tempat kami mengubah satu baris yang kami katakan bahwa kami
+
+00:06:17.310 --> 00:06:24.650
+ingin deteksi fase kedua semua terlihat bahwa wajahnya sekarang terdeteksi dan bukan miliknya hanya dengan mengubah angka itu dalam array.
+
+00:06:24.890 --> 00:06:29.710
+Jadi segera sebelum kita menjalankan baris kode apa pun yang kita tahu di mana kita dapat memperbaikinya.
+
+00:06:29.750 --> 00:06:31.770
+Tapi hanya mengujinya.
+
+00:06:31.860 --> 00:06:40.840
+Jadi sepertinya kita perlu mengulang ini dan bukannya mengembalikan objek mungkin kita
+
+00:06:40.840 --> 00:06:51.450
+bisa mengembalikan array objek dan ketika kita menampilkan wajah atau ingat kita memiliki kotak tampilan wajah.
+
+00:06:51.650 --> 00:07:01.270
+Kita harus mengembalikan beberapa objek di mana wajah-wajah itu mungkin mari kita mulai lakukan sekarang yang biasanya ingin Anda lakukan adalah membuat cabang
+
+00:07:01.270 --> 00:07:05.080
+baru ketika Anda mulai bekerja pada fitur Anda.
+
+00:07:05.080 --> 00:07:11.560
+Sekarang mereka memiliki gagasan besar tentang di mana Anda ingin mulai menguji kode Anda dan memulai cabang Anda
+
+00:07:11.560 --> 00:07:15.490
+dan mulai bekerja di sana dan membuat komitmen bertahap kecil.
+
+00:07:15.490 --> 00:07:22.890
+Tetapi untuk saat ini saya hanya akan melewati proses itu karena kami ingin fokus pada hanya menciptakan fitur baru ini.
+
+00:07:22.960 --> 00:07:33.200
+Jadi hal pertama yang ingin kita lakukan adalah memetakan ini alih-alih memiliki item survei pertama karena saya tahu ini
+
+00:07:33.200 --> 00:07:42.250
+adalah array sekarang saya akan mengatakan peta dan saya tahu itu akan mengembalikan beberapa informasi deteksi
+
+00:07:42.250 --> 00:07:44.800
+wajah di brankas menghadapi.
+
+00:07:44.860 --> 00:07:47.510
+Dan mari kita mulai baris baru di sini sehingga kita bisa melihatnya dengan lebih baik.
+
+00:07:49.350 --> 00:07:52.120
+Tutup kurung.
+
+00:07:53.170 --> 00:07:59.350
+Baiklah dan kami memiliki informasi ini dari masing-masing wajah jadi jika saya memiliki dua wajah saya akan memiliki dua
+
+00:07:59.350 --> 00:08:00.610
+item dalam array.
+
+00:08:02.550 --> 00:08:02.790
+BAIK.
+
+00:08:02.800 --> 00:08:11.110
+Jadi kita memiliki ini sekarang karena kita mengulanginya dan kita ingin mengembalikan sebuah objek setiap kali kita benar-benar bisa
+
+00:08:11.140 --> 00:08:14.170
+memindahkan semua ini ke dalam sini.
+
+00:08:17.960 --> 00:08:24.530
+Dan kotak boning info wilayah wajah sekarang sesuai dengan yang diharapkan.
+
+00:08:24.560 --> 00:08:31.370
+Mari kita tetapkan variabel untuk ini yaitu wajah klarifikasi yang kita gunakan di sini untuk mengukur di mana kita harus
+
+00:08:31.370 --> 00:08:35.520
+menampilkan kotak biru itu di mana wajah-wajah itu adalah lagu yang disebabkan.
+
+00:08:35.810 --> 00:08:38.570
+Klarifikasi tatap muka
+
+00:08:42.950 --> 00:08:49.910
+sama dengan ini dan ubah variabel di atas.
+
+00:08:49.910 --> 00:08:58.770
+Untuk memperjelas wajah Tapi sebenarnya saya melihat bahwa karena kami ingin mengembalikan wajah-wajah yang akan
+
+00:08:58.770 --> 00:09:02.130
+menjadi array dari objek-objek ini.
+
+00:09:02.310 --> 00:09:06.430
+Saya mungkin juga mengambil ini dan mengatakan kembali.
+
+00:09:06.540 --> 00:09:17.050
+Jadi ini menghitung lokasi wajah yang mungkin ingin kita beri nama untuk menyusun wajah atau lokasi wajah dan mengubahnya di tempat lain
+
+00:09:17.050 --> 00:09:18.520
+yang kita lihat.
+
+00:09:18.520 --> 00:09:22.980
+Jadi katakanlah di mana lagi kita punya ini.
+
+00:09:23.020 --> 00:09:26.730
+Jadi hanya dua tempat ini saya akan mengubahnya untuk menghadapi lokasi.
+
+00:09:27.700 --> 00:09:29.860
+Ingin menabung sekarang.
+
+00:09:31.990 --> 00:09:35.170
+Bagian selanjutnya adalah tampilan Facebook jadi kami sudah.
+
+00:09:35.290 --> 00:09:38.620
+Kami mengembalikan array dari objek-objek ini.
+
+00:09:38.770 --> 00:09:46.450
+Jika kita pergi untuk menampilkan kotak wajah yang merupakan nama variabel yang sangat lucu sedangkan kotak tampilan wajah kita melihat bahwa kita
+
+00:09:46.450 --> 00:09:47.410
+sedang mengatur.
+
+00:09:47.410 --> 00:09:51.970
+Jadi kami memisahkan kotak ke kotak yang sama.
+
+00:09:51.990 --> 00:09:57.790
+Baiklah tapi ini mengharapkan objek dan kami mengembalikan array sekarang.
+
+00:09:59.270 --> 00:10:00.740
+Jadi mari kita ubah itu.
+
+00:10:00.740 --> 00:10:02.390
+Kami punya kotak sekarang.
+
+00:10:02.720 --> 00:10:05.610
+Dan ini seharusnya kotak.
+
+00:10:05.750 --> 00:10:14.720
+Dan hanya untuk menjaga standar nama kita harus mengubah nama negara kita menjadi kotak dan Ophir di mana kita
+
+00:10:14.720 --> 00:10:18.650
+memiliki perubahan keadaan awal untuk kotak lagi.
+
+00:10:18.830 --> 00:10:21.950
+Kami sekarang mengembalikan array bukan objek.
+
+00:10:21.950 --> 00:10:25.590
+Jadi mari kita ubah ini menjadi sebuah array.
+
+00:10:26.620 --> 00:10:28.680
+Baiklah, saya simpan, lihat apakah ada kesalahan.
+
+00:10:28.680 --> 00:10:29.680
+Belum ada apa-apa.
+
+00:10:30.600 --> 00:10:33.390
+Di mana kita menggunakan kotak-kotak ini.
+
+00:10:33.390 --> 00:10:35.730
+Kami ingin memastikan bahwa nama-nama ini juga cocok untuk dilakukan.
+
+00:10:35.730 --> 00:10:39.190
+Jadi mari kita cari penyebutan kotak di sini.
+
+00:10:39.210 --> 00:10:44.050
+Kami memiliki kotak pembatas yang dari memperjelas itu tampilan wajah baik-baik saja.
+
+00:10:44.310 --> 00:10:47.170
+Mungkin kita bisa mengubah namanya menjadi kotak.
+
+00:10:47.610 --> 00:10:57.440
+Biarkan saya menutup kotak tampilan itu dan menggunakannya di sini dan memperbarui itu juga.
+
+00:10:57.440 --> 00:11:00.090
+Di mana lagi kita menyebutkan kotak kata.
+
+00:11:00.090 --> 00:11:07.160
+Kami telah melihat render kami memiliki kotak keadaan ini, tetapi sekali lagi kami memiliki beberapa kotak yang akan dikatakan Nasaw kotak dan mari
+
+00:11:07.850 --> 00:11:11.220
+kita simpan hanya untuk memastikan bahwa kami tidak membuat kesalahan.
+
+00:11:11.330 --> 00:11:14.360
+Dan kita melihat bahwa kotak 1:38 tidak didefinisikan.
+
+00:11:14.360 --> 00:11:22.510
+Jika saya masuk ke 1:38 saya melihat bahwa komponen pengenalan wajah yang menerima informasi kotak ini sekarang
+
+00:11:22.510 --> 00:11:27.450
+harus benar-benar menerima kotak dan mungkin kita harus mengganti namanya.
+
+00:11:27.640 --> 00:11:30.270
+Alat peraga untuk kotak juga.
+
+00:11:30.370 --> 00:11:31.280
+Jadi mari kita simpan.
+
+00:11:31.360 --> 00:11:36.520
+Semuanya berfungsi tetapi kita segera tahu bahwa karena kita melewati kotak sebagai alat untuk menghadapi pengakuan, kita
+
+00:11:36.940 --> 00:11:38.810
+harus masuk ke komponen ini.
+
+00:11:39.080 --> 00:11:43.060
+Anda lihat saya mengambil langkah demi langkah untuk melihat ke mana variabel-variabel ini menuntun saya.
+
+00:11:43.390 --> 00:11:51.320
+Saya pergi ke pengenalan wajah dan segera saya melihat saya harus mengubah hanya dua kotak.
+
+00:11:52.200 --> 00:12:04.680
+Dan saya juga ingin mengubah dua kotak ini menjadi kotak dan kotak.
+
+00:12:04.920 --> 00:12:06.810
+Baiklah mari kita simpan dan lihat apa yang terjadi di sini.
+
+00:12:06.810 --> 00:12:09.240
+Selalu baik untuk memeriksa pekerjaan kita dan melihat di mana kita berada.
+
+00:12:09.330 --> 00:12:13.910
+Jadi saya akan mengatakan hei di gmail dot com.
+
+00:12:14.200 --> 00:12:16.680
+Hei, mari kita lihat.
+
+00:12:16.910 --> 00:12:19.870
+Dan lagi gunakan gambar pasangan
+
+00:12:23.230 --> 00:12:25.820
+favorit kami untuk menempel.
+
+00:12:25.880 --> 00:12:28.560
+Gulir ke bawah.
+
+00:12:29.040 --> 00:12:29.910
+Tidak ada tampilan.
+
+00:12:29.910 --> 00:12:31.790
+Sekarang kita baru saja merusak aplikasi.
+
+00:12:31.980 --> 00:12:33.840
+Tapi mari kita kembali ke sini.
+
+00:12:33.870 --> 00:12:42.440
+Mari kita lihat apakah ada kesalahan pada tab Network seseorang untuk mengklik lagi dan kami membuatnya sedikit lebih
+
+00:12:42.440 --> 00:12:43.010
+besar.
+
+00:12:43.010 --> 00:12:44.900
+Kami melihat bahwa semuanya berfungsi.
+
+00:12:45.080 --> 00:12:48.320
+Jadi kita mungkin melakukan sesuatu di sini.
+
+00:12:48.970 --> 00:12:55.900
+Dan alat lain yang saya suka gunakan mungkin adalah alat pengembang alat tindakan ulang
+
+00:12:55.900 --> 00:13:03.520
+pengembang yang lagi-lagi merupakan colokan krom yang dapat Anda pasang dan jika katakanlah mencari komponen pengenal
+
+00:13:04.480 --> 00:13:13.480
+wajah, saya melihat bahwa komponen pengenalan wajah ini harus memiliki kotak pembatas di sini bahwa tidak ada yang masuk
+
+00:13:13.480 --> 00:13:15.370
+akal di sana.
+
+00:13:15.370 --> 00:13:22.400
+Tetapi jika kita pergi ke sini dan melihat kotak-kotak kita melihat itu benar.
+
+00:13:22.490 --> 00:13:25.150
+Ia menerima alat peraga dari sobekan air
+
+00:13:28.640 --> 00:13:31.440
+mata. Nah, dana itu toko saya penuh saat merekam.
+
+00:13:31.500 --> 00:13:32.670
+Tapi saya kembali.
+
+00:13:32.790 --> 00:13:39.840
+Baiklah jadi kita memiliki array sekarang yang memiliki dua kotak dan sepertinya itu kembali.
+
+00:13:39.840 --> 00:13:41.020
+Apa yang kita inginkan.
+
+00:13:41.010 --> 00:13:50.070
+Jadi mari kita kembali ke aplikasi kita dan perhatikan di sini bahwa OK jadi kita mengubah array di sini yang memiliki indeks 0 dan
+
+00:13:50.070 --> 00:13:57.230
+1 tetapi dalam kotak pembatas kita melakukan kotak yang kotak atas baris kolom kanan yang tidak ada karena
+
+00:13:57.270 --> 00:14:00.230
+ini bukan objek lagi ini adalah array.
+
+00:14:00.310 --> 00:14:06.300
+Benar jadi ada perbaikan kecil yang bagus yang bisa kita lakukan di sini lagi dan kita bisa membuat
+
+00:14:06.510 --> 00:14:09.040
+ekspresi javascript dengan membungkusnya dalam kurung keriting.
+
+00:14:09.290 --> 00:14:10.620
+Tidak, bukan itu yang ingin kita lakukan.
+
+00:14:10.620 --> 00:14:11.750
+Kurung keriting.
+
+00:14:11.880 --> 00:14:17.040
+Dan karena kotak sekarang array saya hanya bisa mengatakan kotak.
+
+00:14:17.100 --> 00:14:28.270
+Petakan pemetaan fungsi kesukaan kami yang pada setiap iterasi memiliki sebuah kotak yang jika Anda ingat memberi kami properti-properti tersebut
+
+00:14:28.270 --> 00:14:37.490
+div dengan baris atas kotak atau baris teratas kotak dan dimensi lain yang kami butuhkan.
+
+00:14:37.510 --> 00:14:43.800
+Jadi mari kita kembalikan ini dan saya akan menjaga ini pada satu baris meskipun agak panjang.
+
+00:14:43.930 --> 00:14:48.690
+Jadi dengan begitu kita bisa mengatakan return dan elemen yang kita inginkan.
+
+00:14:48.700 --> 00:14:57.070
+Dan karena ini adalah kotak sekarang kita bisa kembali menggunakan Box yang memiliki properti ini dari kolom kiri kolom
+
+00:14:57.400 --> 00:15:01.380
+kanan bawah dan mari kita amankan di sini.
+
+00:15:03.380 --> 00:15:03.750
+BAIK.
+
+00:15:03.910 --> 00:15:04.890
+Mari kita lihat tabel di sini.
+
+00:15:04.900 --> 00:15:09.700
+Dan lagi kita hanya akan selangkah demi selangkah hanya berbicara secara logis kepada diri kita sendiri dan mencari tahu apa yang perlu
+
+00:15:09.700 --> 00:15:10.330
+kita lakukan.
+
+00:15:10.450 --> 00:15:11.920
+Ayo kembali.
+
+00:15:11.920 --> 00:15:14.540
+Kami harus masuk lagi.
+
+00:15:15.280 --> 00:15:15.740
+Ayo pergi.
+
+00:15:15.740 --> 00:15:18.680
+Hai, masuk cepat.
+
+00:15:18.860 --> 00:15:21.030
+Dan saya akan menutup ini untuk saat ini.
+
+00:15:21.080 --> 00:15:23.080
+Mari kita ambil gambarnya lagi.
+
+00:15:25.340 --> 00:15:26.250
+Kembali kesini.
+
+00:15:26.270 --> 00:15:29.270
+Tempelkan.
+
+00:15:29.320 --> 00:15:30.930
+Lihat dua gambar itu.
+
+00:15:30.940 --> 00:15:35.060
+Mari kita pastikan bahwa kita tidak mendapatkan kesalahan untuk pergi ke konsol.
+
+00:15:35.080 --> 00:15:35.650
+Oh
+
+00:15:35.710 --> 00:15:42.520
+Setiap anak dalam array atau iterator harus memiliki kunci prop yang unik dan ini adalah peringatan dan reaksi yang sangat
+
+00:15:42.550 --> 00:15:43.080
+umum.
+
+00:15:43.090 --> 00:15:44.710
+Dan itu mudah diperbaiki.
+
+00:15:44.710 --> 00:15:51.370
+Setiap kali Anda memetakan atas aliments dan bertindak kembali Anda ingin menambahkan prop kunci yang unik.
+
+00:15:51.520 --> 00:16:00.190
+Kunci untuk saat ini hanya akan menjadi baris kotak dot atas mungkin bisa menjadi sesuatu yang lebih baik tetapi setidaknya kita tahu bahwa itu
+
+00:16:00.190 --> 00:16:01.540
+akan menjadi unik.
+
+00:16:01.540 --> 00:16:06.990
+Untuk sekarang, mari kita kembali lagi karena kita harus terus-menerus masuk.
+
+00:16:07.030 --> 00:16:11.250
+Kami mungkin hanya ingin mengubah rute negara di jalan untuk pembangunan.
+
+00:16:11.260 --> 00:16:21.540
+Jadi kita tidak perlu melakukan ini berulang-ulang tetapi jika kita kembali mendeteksi dua wajah Tidak ada tempat jika kita pergi
+
+00:16:21.540 --> 00:16:25.700
+ke jaringan sepertinya semuanya bekerja dengan sempurna.
+
+00:16:25.710 --> 00:16:31.350
+Saya pikir kami telah mengimplementasikan fitur dan sekarang yang ingin kami lakukan sebenarnya menguji hal-hal yang berbeda dan
+
+00:16:31.620 --> 00:16:34.490
+mencoba untuk memecahkannya dan melihat apakah kami mendapatkan kesalahan.
+
+00:16:34.530 --> 00:16:38.540
+Mungkin mungkin menulis beberapa tes untuk ini membuat pengujian snapshot
+
+00:16:50.380 --> 00:16:51.700
+dan begitulah.
+
+00:16:51.700 --> 00:16:57.640
+Kami memiliki fitur baru diimplementasikan, pastikan kami membuat cabang baru, membuat permintaan tarik, Anda tahu, tes, mulai
+
+00:16:57.660 --> 00:17:02.080
+berbagai hal, coba dan pecahkan ini, bahwa fitur ini sebenarnya berfungsi, kami belum
+
+00:17:02.080 --> 00:17:06.130
+membuat kesalahan, dan kami mendapatkan fitur pertama di musim panas .
+
+00:17:06.140 --> 00:17:11.260
+Sekarang mudah-mudahan ini memberi Anda ide yang baik tentang bagaimana aplikasi bekerja karena kita akan menggunakannya
+
+00:17:11.260 --> 00:17:14.670
+di bagian selanjutnya untuk melakukan beberapa hal yang sangat menyenangkan.
+
+00:17:14.680 --> 00:17:19.080
+Jadi untuk saat ini saya akan melihat di video berikutnya oleh.

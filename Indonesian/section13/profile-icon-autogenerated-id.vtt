@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:00.920 --> 00:00:02.210
+Selamat datang kembali.
+
+00:00:02.210 --> 00:00:09.670
+Saya ingin menggunakan perpustakaan baru di sini sekarang di aplikasi kami tepat di sini ketika kita masuk.
+
+00:00:09.800 --> 00:00:15.560
+Idealnya saya ingin memiliki mungkin gambar profil dan kemudian jika saya mengklik
+
+00:00:15.560 --> 00:00:25.370
+dan memiliki dropdown di mana saya dapat mengatakan keluar atau mungkin profil dan profil muncul dari pengguna dan saya ingin menggunakan
+
+00:00:25.640 --> 00:00:33.770
+perpustakaan komponen re-act tali ini kita dapat instal dengan menggunakan paket strap aksi ulang dan selama kita
+
+00:00:33.770 --> 00:00:34.910
+menggunakan reaksi.
+
+00:00:34.910 --> 00:00:38.350
+Ini memungkinkan kita untuk menggunakan Boost Japp untuk komponen.
+
+00:00:38.540 --> 00:00:45.590
+Dan jika Anda pergi ke komponen Anda akan melihat bahwa kita dapat menggunakan banyak hal termasuk
+
+00:00:45.590 --> 00:00:47.820
+dropdown yang saya tertarik lihat.
+
+00:00:48.080 --> 00:00:53.700
+Itu akan sangat bagus untuk ada di profil kami dan kami melihat itu memberi kami demo
+
+00:00:53.700 --> 00:01:00.270
+bagus tentang apa yang bisa kami lakukan dan memberi Anda cukup banyak copy dan paste kode yang benar-benar bagus
+
+00:01:00.950 --> 00:01:05.900
+Sekarang beberapa dari Anda mungkin bertanya mengapa tidak membuat sendiri ini.
+
+00:01:06.880 --> 00:01:13.770
+Pertama adalah bahwa hal itu akan jauh lebih cepat daripada membangunnya sendiri.
+
+00:01:13.810 --> 00:01:21.430
+Dan ini adalah sesuatu yang bisa kita lakukan dengan cukup sederhana dengan beberapa javascript dan CSSA sesuatu yang telah kita
+
+00:01:21.430 --> 00:01:23.900
+bahas sebelumnya dalam kursus saya sebelumnya.
+
+00:01:24.870 --> 00:01:31.170
+Tetapi juga dalam hal membangun dengan cepat dan memastikan bahwa aplikasi kita berfungsi, kita tidak benar-benar ingin
+
+00:01:31.170 --> 00:01:34.810
+terlalu khawatir tentang memiliki fungsi drop down yang tepat.
+
+00:01:34.920 --> 00:01:43.360
+Kita bisa memasukkan beberapa bagian ke dalam aplikasi kita dan kemudian jika kita benar-benar ingin menghapus pustaka kita dapat melakukannya setelah itu.
+
+00:01:43.470 --> 00:01:50.190
+Tapi saya juga ingin menunjukkan kepada Anda bahaya menambahkan perpustakaan pihak ketiga seperti yang akan Anda lihat saat kami menambahkan
+
+00:01:50.190 --> 00:01:50.910
+Riak strop.
+
+00:01:50.970 --> 00:01:53.470
+Ini akan bertentangan dengan perpustakaan.
+
+00:01:53.490 --> 00:02:01.200
+Kami sudah memiliki satu yang disebut Jika kita kembali ke aplikasi Front-End dan masuk ke sumber kami
+
+00:02:01.500 --> 00:02:02.170
+diindeks.
+
+00:02:02.310 --> 00:02:06.290
+Ya, kami menggunakan pustaka SPSS Tatiana.
+
+00:02:06.300 --> 00:02:07.940
+Itu telah memecahkan aplikasi mereka.
+
+00:02:07.980 --> 00:02:13.470
+Sampai saat ini dan saya akan menunjukkan kepada Anda mengapa kami ingin berhati-hati ketika kami hanya mengambil perpustakaan lebih
+
+00:02:13.950 --> 00:02:16.460
+banyak dan lebih banyak menambahkannya ke proyek kami.
+
+00:02:16.590 --> 00:02:19.290
+Jadi saya pikir ini akan menjadi pelajaran yang baik bagi kita juga.
+
+00:02:19.290 --> 00:02:24.660
+Baiklah, kita tahu bahwa kita ingin menginstal paket ini, jadi katakan
+
+00:02:24.660 --> 00:02:29.830
+saja NPM install dan itu akan disebut re-act strap.
+
+00:02:29.840 --> 00:02:30.420
+Baiklah.
+
+00:02:30.470 --> 00:02:31.190
+Sempurna.
+
+00:02:31.190 --> 00:02:32.610
+Hal selanjutnya yang ingin kita lakukan.
+
+00:02:32.660 --> 00:02:41.750
+Sekali lagi kembali ke situs Web kita juga melihat di sini bahwa kita perlu menambahkan bootstrap karena paket strap
+
+00:02:41.810 --> 00:02:47.060
+re-act datang dengan komponen tetapi tidak dengan styling yang bootstrap.
+
+00:02:47.060 --> 00:02:52.230
+Jadi hanya untuk mendapatkan style yang sudah mereka miliki, sepertinya kita bisa menginstal NPM
+
+00:02:52.230 --> 00:02:53.010
+boot strap.
+
+00:02:53.060 --> 00:02:58.310
+Dan jika Anda menggunakan versi NPM yang lebih baru, Anda tidak perlu melakukan dash dash save tetapi hanya untuk menunjukkan kepada Anda bahwa itu
+
+00:02:58.310 --> 00:02:59.200
+adalah hal yang sama.
+
+00:02:59.200 --> 00:03:00.560
+Saya akan menyalinnya.
+
+00:03:00.860 --> 00:03:04.180
+Dan mari kita bawa ujung depan kita ke sini.
+
+00:03:04.190 --> 00:03:08.100
+Jadi ini sedikit lebih dekat karena kita akan mengerjakannya di video ini.
+
+00:03:08.420 --> 00:03:14.360
+Jadi kami memasang bootstrap dan kemudian kembali ke sini kami melihat bahwa kami perlu mengimpor CSA kami.
+
+00:03:14.780 --> 00:03:20.390
+Dan dari sana kita dapat mulai mengimpor komponen apa pun yang mengakses kembali kebutuhan toko.
+
+00:03:21.820 --> 00:03:24.230
+Sekarang mari kita mengimpor file CSSA.
+
+00:03:24.430 --> 00:03:38.160
+Dan jika Anda melihat di sini kita sekarang bisa masuk ke halaman indeks kami ya dan impor bootstrap dengan M. lihat SS.
+
+00:03:38.200 --> 00:03:45.430
+Sekarang inilah masalahnya dan inilah cara kerja dengan membuat kembali bertindak dan mereka mengambil semua file
+
+00:03:45.580 --> 00:03:48.430
+CSSA yang ditemukannya dan menggabungkannya.
+
+00:03:48.880 --> 00:03:55.600
+Jadi sekarang cara kita memiliki petugas pajak yang sudah memiliki beberapa kelas CSSA
+
+00:03:55.600 --> 00:04:03.580
+yang akan kita gunakan jika Anda masuk ke dodgiest misalnya atau benar-benar mari kita masuk ke
+
+00:04:03.580 --> 00:04:12.270
+komponen katakanlah kita akan pergi ke pengenalan wajah kita lihat di sini bahwa kami menggunakan kelas-kelas ini
+
+00:04:12.290 --> 00:04:18.040
+seperti kosong ke pusat Amay yang merupakan kelas Tatian sebenarnya.
+
+00:04:18.040 --> 00:04:24.760
+Sekarang karena cara membuat reaksi bekerja, sidang ini dibundel dan kemudian sel bootstrap akan dibundel
+
+00:04:24.790 --> 00:04:29.080
+dan apa pun nama bentrok yang mungkin mereka miliki.
+
+00:04:29.080 --> 00:04:32.520
+Katakanlah keduanya memiliki kelas tombol.
+
+00:04:32.530 --> 00:04:37.220
+Nah, bootstrap yang akan ditimpa karena akan setelah Tatiana.
+
+00:04:37.590 --> 00:04:39.770
+Dan kita tahu bahwa kita menyukai aplikasi kita sebagaimana adanya.
+
+00:04:39.790 --> 00:04:46.420
+Jadi mari kita pindahkan ini ke sini sehingga jika ada sesuatu yang ditimpa dengan DSS,
+
+00:04:46.960 --> 00:04:48.690
+Tatiana akan menang.
+
+00:04:48.760 --> 00:04:54.090
+Jadi katakanlah kita memiliki bootstrap yang sudah dimuat dan siap untuk digunakan.
+
+00:04:54.100 --> 00:04:57.960
+Saya pikir ini saatnya bagi kami untuk membangun fungsionalitas drop down kami.
+
+00:04:58.030 --> 00:05:01.870
+Jadi sekarang kita memiliki beberapa komponen yang akan dapat kita gunakan.
+
+00:05:02.170 --> 00:05:04.210
+Kami juga menyiapkan Takiyama.
+
+00:05:04.300 --> 00:05:11.260
+Hal pertama yang ingin saya lakukan adalah membuat mungkin avatar atau ikon lingkaran kecil profil di kanan
+
+00:05:11.260 --> 00:05:17.230
+atas sehingga ketika kita klik itu akan memiliki kotak drop down yang mengatakan Lihat
+
+00:05:17.230 --> 00:05:19.520
+profil atau keluar sekarang.
+
+00:05:19.960 --> 00:05:26.110
+Beruntung bagi kami, kami juga akan menggunakan petugas pajak karena mereka sudah memiliki beberapa CSSA yang sudah dibuat
+
+00:05:26.170 --> 00:05:27.260
+sebelumnya untuk kami.
+
+00:05:27.260 --> 00:05:35.020
+Jika saya kembali ke sini, saya telah menempelkan Kyon's. Dan jika kita pergi ke Avatar, kita melihat bahwa baik-baik saja kita
+
+00:05:35.020 --> 00:05:37.750
+memiliki beberapa opsi yang dapat kita gunakan.
+
+00:05:37.880 --> 00:05:44.630
+Jadi katakanlah kita ingin menggunakan perbatasan lingkaran dan lihat bahwa kita sudah memiliki CSSA yang kita butuhkan untuk itu.
+
+00:05:44.660 --> 00:05:52.560
+Mari kita kembali ke aplikasi kita dan membuat lingkaran ini muncul jika kita login di sini tepat di sini dan melihat
+
+00:05:56.180 --> 00:06:01.910
+bahwa dari keluar dan supaya kita tidak harus terus masuk dan keluar masuk dan keluar
+
+00:06:01.910 --> 00:06:03.490
+masuk dan keluar.
+
+00:06:03.560 --> 00:06:07.210
+Ayo kembali dan buka aplikasi kita.
+
+00:06:07.360 --> 00:06:21.570
+Ya dan dalam keadaan awal kami membuat rute kami sama dengan rumah saya menyimpan ini dan kembali mari menyegarkan Lupe saya harus melakukan NPM
+
+00:06:22.850 --> 00:06:24.560
+mulai lagi
+
+00:06:25.710 --> 00:06:29.670
+Yah saya harus mulai NPM lagi karena kami sudah menginstal beberapa
+
+00:06:32.880 --> 00:06:34.760
+hal ya olahraga 3000
+
+00:06:38.630 --> 00:06:41.110
+dan menang dan di sana kami pergi.
+
+00:06:41.210 --> 00:06:43.280
+Kami sudah masuk sekarang.
+
+00:06:43.490 --> 00:06:47.750
+Kami tidak memiliki pengguna yang Anda lihat benar-benar kosong karena kami belum masuk dengan apa pun.
+
+00:06:47.750 --> 00:06:54.350
+Kita semua memiliki informasi profil itu tetapi kita juga melihat bahwa kemacetan kita baru saja benar-benar
+
+00:06:54.350 --> 00:06:55.040
+kacau.
+
+00:06:55.100 --> 00:06:58.690
+Kami tidak memiliki gaya yang bagus yang kami miliki sebelumnya.
+
+00:06:58.880 --> 00:07:00.090
+Apa yang sedang terjadi disini.
+
+00:07:02.170 --> 00:07:05.290
+Kembali lagi ke diskusi kita tentang CSSA
+
+00:07:05.410 --> 00:07:09.850
+Anda melihat bahwa indeks memulai CSSA tepat di atas sini.
+
+00:07:09.850 --> 00:07:17.800
+Dan jika Anda melihat indeks Nazi SS, keluarga telepon kami dijelaskan di sini dan perpustakaan bootstrap yang
+
+00:07:17.800 --> 00:07:25.110
+baru saja kami instal dan ditambahkan ke situs Web kami menimpa keluarga font kami lagi.
+
+00:07:25.200 --> 00:07:29.860
+Yang ingin Anda lakukan adalah membawa CSSA secara ideal ke bawah.
+
+00:07:29.920 --> 00:07:38.130
+Dan juga simpan CSSA bersama di bagian kecil yang terpisah sehingga Anda tahu apa yang menimpa apa.
+
+00:07:38.200 --> 00:07:41.970
+Dan kembali lagi hanya terus menambahkan hal-hal.
+
+00:07:42.070 --> 00:07:45.270
+Ini adalah aplikasi yang cukup kecil sehingga kami melihat perubahannya segera.
+
+00:07:45.340 --> 00:07:53.410
+Tetapi begitu Anda memperkenalkan perpustakaan pihak ketiga dan khususnya yang memengaruhi CSSA, Anda mungkin secara tidak sengaja mengubah
+
+00:07:53.800 --> 00:07:58.000
+beberapa fungsionalitas aplikasi web Anda dan juga melihatnya.
+
+00:07:58.000 --> 00:08:01.480
+Jadi, Anda benar-benar ingin berhati-hati dengan ini dalam proyek nyata.
+
+00:08:01.480 --> 00:08:07.210
+Saya mungkin tidak akan menggunakan banyak perpustakaan ini tetapi saya ingin menunjukkan bahwa betapa
+
+00:08:07.270 --> 00:08:11.110
+berbahayanya jika saya menyimpan ini sekarang dan kembali.
+
+00:08:11.110 --> 00:08:12.080
+Baiklah.
+
+00:08:12.400 --> 00:08:14.840
+Semuanya bagus dan lancar.
+
+00:08:14.860 --> 00:08:20.950
+Kami belum memiliki pengguna karena kami agak curang dan masuk tetapi kami telah menyiapkan
+
+00:08:21.040 --> 00:08:21.710
+semuanya.
+
+00:08:21.820 --> 00:08:28.120
+Dan idealnya kita menginginkan profil ini seperti pada saat kita melihat serangan terhadap kita di sini di atas
+
+00:08:28.120 --> 00:08:31.950
+dan kemudian jika saya klik di atasnya menu dropdown muncul.
+
+00:08:31.960 --> 00:08:37.450
+Jadi mari kita pikirkan tentang ini hal pertama yang mungkin ingin kita lakukan adalah membuat ikon
+
+00:08:37.540 --> 00:08:39.660
+profil itu menjadi ikon lingkaran.
+
+00:08:39.900 --> 00:08:48.670
+Dan untuk menjaga semuanya tetap bersih, mari buat folder baru bernama Profile dan di dalam folder ini kita akan
+
+00:08:48.670 --> 00:08:50.080
+membuat komponen baru.
+
+00:08:50.290 --> 00:08:58.820
+Kami akan mengatakan bahwa ini akan menjadi komponen ikon profil mereka dan kami di sini kami dapat melakukan komponen reguler kami dan membangun
+
+00:08:58.820 --> 00:09:00.710
+yang kami lakukan dengan reaksi.
+
+00:09:00.710 --> 00:09:07.010
+Kami ingin mengimpor ulangan dari paket reata mereka.
+
+00:09:07.030 --> 00:09:13.180
+Kami juga ingin mengimpor beberapa item dari re-act bootstrap.
+
+00:09:13.300 --> 00:09:19.240
+Tapi fungsi doggo jangan khawatir tentang hal itu untuk saat ini, mari kita bekerja untuk mendapatkan avatar bundar itu
+
+00:09:19.390 --> 00:09:20.370
+di halaman kita.
+
+00:09:20.410 --> 00:09:35.530
+Kami hanya bisa mengatakan ikon profil kelas memperpanjang komponen re-act dot atau saya bisa melakukan sesuatu seperti ini juga.
+
+00:09:35.640 --> 00:09:37.460
+Tetapi untuk sekarang ini baik-baik saja.
+
+00:09:39.050 --> 00:09:44.230
+Dan kami ingin mengekspor ikon profil default.
+
+00:09:44.290 --> 00:09:44.980
+Baiklah.
+
+00:09:45.010 --> 00:09:49.460
+Sekarang, pikirkan tentang ikon ini. Ikon ini di sini memiliki status bit yang benar.
+
+00:09:49.480 --> 00:09:59.150
+Itu baik atau diklik dan sakelar terbuka atau ditutup dan idealnya yang saya maksud adalah bendera Boolean benar
+
+00:09:59.150 --> 00:10:01.410
+atau salah yang sederhana.
+
+00:10:01.640 --> 00:10:08.620
+Kita bisa memindahkannya sampai ke anjing ya atau menyertakan toko redux untuk memuat keadaan itu
+
+00:10:08.630 --> 00:10:16.500
+tetapi untuk keadaan kecil yang benar-benar sangat spesifik untuk ikon profil ini dan tidak memengaruhi komponen lainnya.
+
+00:10:16.520 --> 00:10:22.100
+Saya suka mempertahankan keadaan di sini karena siapa pun yang datang ke proyek dan perlu sesuatu
+
+00:10:22.100 --> 00:10:24.890
+di ikon profil memiliki segalanya di satu tempat.
+
+00:10:25.610 --> 00:10:39.570
+Jadi mari kita buat metode konstruktor kami yang akan menerima prop dan melakukan panggilan super biasa kami.
+
+00:10:39.790 --> 00:10:50.170
+Dan katakan saja bahwa kondisi titik ini akan sama dengan mari kita sebut drop down terbuka dan kita akan mengaturnya
+
+00:10:50.170 --> 00:10:52.290
+menjadi false untuk memulai.
+
+00:10:55.080 --> 00:10:55.670
+Baiklah.
+
+00:10:55.740 --> 00:11:01.060
+Dan kami juga memiliki fungsi render kami dan dalam fungsi render ini apa yang harus kami lakukan.
+
+00:11:01.290 --> 00:11:06.530
+Baiklah, dapatkan avatar profil kami dari Tatiana's Well yang dikembalikan
+
+00:11:12.570 --> 00:11:20.520
+dan katakanlah di sini jika kita kembali ke perpajakan, kita cukup menyalin dan menempelkan potongan kecil
+
+00:11:21.030 --> 00:11:24.770
+ini di sini, Anda harus memperbaikinya.
+
+00:11:25.020 --> 00:11:30.350
+Dan Anda melihat bahwa div tidak disorot dan roti dan itu karena ini adalah GSX.
+
+00:11:30.360 --> 00:11:33.210
+Ingat kita harus memastikan bahwa kita menutup tag kita.
+
+00:11:33.300 --> 00:11:40.260
+Meskipun ini berlaku baginya untuk kelima tanpa slash penutup dan GSX kita harus menutup tag kita tidak
+
+00:11:40.890 --> 00:11:42.080
+peduli apa
+
+00:11:42.240 --> 00:11:42.450
+Kanan.
+
+00:11:42.450 --> 00:11:44.070
+Jadi katakan saja itu.
+
+00:11:44.370 --> 00:11:45.770
+Dan jika saya kembali.
+
+00:11:45.900 --> 00:11:47.460
+Yah tidak ada yang akan ditampilkan.
+
+00:11:47.460 --> 00:11:51.530
+Kami harus benar-benar mengimpor ini di beranda kami.
+
+00:11:51.660 --> 00:11:55.200
+Sebenarnya mari kita impor ini di halaman kami.
+
+00:11:55.530 --> 00:12:05.100
+Jika kita kembali ke aplikasi kita, kita melihat bahwa kita memiliki area yang ingin kita lakukan dan area ini
+
+00:12:05.100 --> 00:12:08.590
+adalah tempat komponen sign and register.
+
+00:12:08.650 --> 00:12:13.430
+Untungnya bagi kita itu tepat di bagian atas sini dan komponen navigasi.
+
+00:12:13.450 --> 00:12:20.980
+Dan karena sebuah nama itu cukup mudah untuk dilihat dan kita lihat di sini bahwa ini hanya
+
+00:12:20.980 --> 00:12:23.670
+menambahkan sign out komponen register.
+
+00:12:23.700 --> 00:12:39.050
+Mari kita benar-benar menambahkan ini mari kita tambahkan import whoops dan port ikon profil dari
+
+00:12:39.050 --> 00:12:46.420
+profil modal profil dan katakanlah profil.
+
+00:12:46.510 --> 00:12:51.850
+Sekarang kami memiliki akses ke komponen ini dalam proses masuk.
+
+00:12:52.020 --> 00:12:59.430
+Alih-alih memiliki keluar atau selama satu jam kita dapat menyimpan keluar hanya untuk memilikinya
+
+00:12:59.460 --> 00:13:03.340
+di sana, kita akan menambahkan ikon profil.
+
+00:13:03.570 --> 00:13:06.190
+Dan sekarang ini tidak benar-benar melakukan apa pun.
+
+00:13:06.210 --> 00:13:08.460
+Jadi kita hanya akan lulus begitu saja.
+
+00:13:08.490 --> 00:13:11.770
+Mari kita simpan sepertinya semuanya baik-baik saja.
+
+00:13:11.780 --> 00:13:22.430
+Jika saya kembali dan menyegarkan. Mari kita lihat di sini dan Anda melihat bahwa pengecekan sudah masuk, kami tidak memeriksa rute yang kami
+
+00:13:22.430 --> 00:13:25.850
+periksa untuk memastikan bahwa masuk itu benar.
+
+00:13:25.850 --> 00:13:35.530
+Jadi kita harus kembali ke kita untuk memastikan bahwa yang masuk diatur ke true sehingga bilah navigasi kita juga
+
+00:13:35.530 --> 00:13:36.200
+berubah.
+
+00:13:36.220 --> 00:13:37.260
+Hei lihat itu.
+
+00:13:37.420 --> 00:13:39.170
+Kami punya avatar kecil yang menyenangkan di sini.
+
+00:13:39.220 --> 00:13:41.470
+Semua diatur untuk kita.
+
+00:13:41.470 --> 00:13:43.270
+Mari kita istirahat di video berikutnya.
+
+00:13:43.270 --> 00:13:48.100
+Kami akan terus menambahkan ke fungsionalitas ini membuatnya terlihat sedikit cantik tahun dan semoga
+
+00:13:48.110 --> 00:13:49.950
+di menu dropdown kami.
+
+00:13:50.260 --> 00:13:51.480
+Sampai jumpa satu itu.
+
+00:13:51.590 --> 00:13:52.060
+Baiklah.

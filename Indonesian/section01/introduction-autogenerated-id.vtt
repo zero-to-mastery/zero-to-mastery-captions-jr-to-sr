@@ -1,0 +1,403 @@
+﻿WEBVTT
+
+00:00:00.770 --> 00:00:04.980
+Hellooo! Mari kita berjalan melalui kurikulum kursus.
+
+00:00:05.070 --> 00:00:09.330
+Jadi, Anda memiliki gagasan tentang apa yang diharapkan dalam kursus ini.
+
+00:00:09.330 --> 00:00:16.410
+Sekarang beberapa dari topik ini mungkin tampak menakutkan pada awalnya, tetapi mereka semua terhubung dan mereka semua adalah
+
+00:00:16.410 --> 00:00:20.220
+komponen kunci yang membuat Anda menjadi pengembang tingkat atas.
+
+00:00:20.230 --> 00:00:27.780
+Kita akan pergi selangkah demi selangkah, mengerjakan masalah kehidupan nyata, menulis kode, berlatih sehingga kita bisa
+
+00:00:27.780 --> 00:00:31.790
+merasa percaya diri dengan masing-masing topik ini.
+
+00:00:31.800 --> 00:00:39.030
+Sekarang bagian pertama tentu saja akan membahas SSH. Dan di bagian SSH
+
+00:00:39.030 --> 00:00:47.760
+ini, kita akan belajar tentang perintah SSH. Cara mengakses komputer jarak jauh cara menyambung ke server yang ada di
+
+00:00:47.760 --> 00:00:49.200
+bagian lain dunia.
+
+00:00:49.500 --> 00:00:55.680
+Kita akan belajar tentang enkripsi tentang enkripsi simetris dan asimetris serta hashing.
+
+00:00:56.490 --> 00:01:03.630
+Dan kita juga akan belajar tentang kunci SSH tentang menghasilkan kunci SSH, apa kunci publik dan pribadi,
+
+00:01:03.630 --> 00:01:06.690
+dan bagaimana cara mengelolanya di server.
+
+00:01:06.690 --> 00:01:12.420
+Kami akan melakukan beberapa latihan yang menyenangkan di mana aplikasi Anda baru saja dihapus
+
+00:01:12.420 --> 00:01:18.980
+dari server di tengah malam dan Anda harus memindahkan semua proyek Anda jatuh kembali ke server menggunakan SSH.
+
+00:01:19.170 --> 00:01:25.390
+Dan kita juga akan menyiapkan GitHub dengan SSH, setelah bagian pendek yang bagus untuk memulai kita.
+
+00:01:25.440 --> 00:01:32.850
+Kami kemudian akan terjun ke topik besar besar optimasi kinerja. Dan ini sangat besar sehingga saya membagi ini
+
+00:01:32.850 --> 00:01:34.930
+menjadi tiga bagian.
+
+00:01:35.280 --> 00:01:38.450
+Bagian pertama adalah optimasi jaringan.
+
+00:01:38.730 --> 00:01:45.420
+Kami akan berbicara tentang bagaimana kami dapat meminimalkan file kami dan meningkatkan pengiriman aplikasi kami. Dan kemudian kita akan
+
+00:01:45.420 --> 00:01:51.390
+belajar tentang optimisasi tentang jalur render kritis cara memperbaikinya.
+
+00:01:51.420 --> 00:01:54.120
+Jadi situs web kami dapat memuat dengan cepat.
+
+00:01:54.120 --> 00:01:59.370
+Kami akan belajar tentang webapp progresif, dan tentang mengoptimalkan kode, dan
+
+00:01:59.370 --> 00:02:04.440
+kami akan membantu Kaiko Corp. sebenarnya memperbaiki situs web perusahaan mereka serta aplikasi robofriends mereka.
+
+00:02:04.650 --> 00:02:10.500
+Kami akan membuat webapp progresif yang bekerja offline dan bahkan dapat dikirimkan ke App
+
+00:02:10.800 --> 00:02:14.160
+Store hanya menggunakan javascript, HTML, dan CSS.
+
+00:02:14.250 --> 00:02:20.370
+Tapi kita juga akan belajar tentang topik menarik seperti pemecahan kode dan membuat aplikasi reaktif
+
+00:02:20.370 --> 00:02:23.490
+/ redux dengan cepat melalui rendering pintar.
+
+00:02:23.580 --> 00:02:29.750
+Kami kemudian akan menyelesaikan pemahaman lengkap kami tentang optimasi kinerja dengan bekerja pada optimasi
+
+00:02:29.870 --> 00:02:30.950
+back end.
+
+00:02:31.020 --> 00:02:39.510
+Berbicara tentang jaringan pengiriman konten, penskalaan basis data, mengompresi tanggapan kami, caching, dan akhirnya memuat penyeimbangan di mana
+
+00:02:39.570 --> 00:02:46.500
+kami akan menerapkan penyeimbang beban dan benar-benar melakukan beberapa pengujian beban pada proyek kami.
+
+00:02:46.500 --> 00:02:50.360
+Pada akhirnya Anda akan menjadi guru kinerja.
+
+00:02:50.850 --> 00:02:53.740
+Kami kemudian akan bereaksi dan redux.
+
+00:02:54.030 --> 00:03:00.960
+Pustaka konten paling populer untuk membangun aplikasi satu halaman. Kami pertama-tama akan memiliki pengantar yang bagus untuk
+
+00:03:00.960 --> 00:03:01.590
+bereaksi
+
+00:03:01.590 --> 00:03:07.560
+jika ini adalah pertama kalinya Anda mempelajarinya. Dan kemudian kita akan dengan cepat beralih ke
+
+00:03:07.560 --> 00:03:12.530
+redux berbicara tentang manajemen negara dan bagaimana menyusun aplikasi Anda sehingga mereka dapat tumbuh.
+
+00:03:12.540 --> 00:03:18.930
+Dan kami juga menambahkan bagian kecil yang bagus tentang bundling, tentang penggunaan webapp terbaru, serta paket up dan comer
+
+00:03:18.930 --> 00:03:26.410
+seperti untuk menggabungkan file kami dan membuat bundel produksi kami dioptimalkan. Pada akhirnya, Anda akan merasa nyaman
+
+00:03:26.550 --> 00:03:32.730
+dengan reaksi / reduks serta mengatur proyek Anda dengan hal-hal seperti
+
+00:03:32.930 --> 00:03:33.810
+itu.
+
+00:03:34.260 --> 00:03:39.970
+Kami kemudian masuk ke topik yang sangat penting tetapi juga sering dilupakan
+
+00:03:40.080 --> 00:03:47.160
+ketika Anda pertama kali memulai, pengujian. Perusahaan suka pengujian, dan jika Anda tahu cara menguji,
+
+00:03:47.160 --> 00:03:51.950
+cara menulis tes unit, tes integrasi Anda menulis perangkat lunak yang lebih baik.
+
+00:03:52.080 --> 00:03:56.850
+Kita akan memulai dengan mempelajari tentang lanskap pengujian di dunia pengembang web saat ini.
+
+00:03:57.210 --> 00:04:02.730
+Alat apa yang digunakan, perpustakaan apa yang ada, bagaimana mengatur semuanya, dan kemudian kita akan bekerja
+
+00:04:02.790 --> 00:04:06.240
+dengan hanya satu perpustakaan teratas yang akan digunakan untuk pengujian
+
+00:04:06.270 --> 00:04:08.850
+Tes sinkron dan asinkron.
+
+00:04:09.000 --> 00:04:09.420
+Kanan.
+
+00:04:09.440 --> 00:04:17.940
+Mock dan punya laporan liputan. Kami kemudian akan terjun ke tes menulis untuk aplikasi reaksi
+
+00:04:17.940 --> 00:04:25.350
+kami dan memastikan bahwa kami menggunakan hal-hal seperti pengujian snapshot, enzim untuk menulis tes cerdas yang menghindari bug
+
+00:04:25.350 --> 00:04:26.810
+dalam aplikasi kami.
+
+00:04:27.000 --> 00:04:33.420
+Pada akhirnya, Anda bisa mengetahui seluruh lanskap pengujian, dan merasa nyaman membaca setiap tes yang
+
+00:04:33.420 --> 00:04:34.500
+mendatangi Anda.
+
+00:04:36.360 --> 00:04:43.500
+Kami kemudian menyelami salah satu topik terpanas yang keluar dari lingkungan pengembang web tahun lalu, naskah.
+
+00:04:43.510 --> 00:04:49.450
+Kita akan belajar tentang pengetikan statis dan mengapa javascript tidak memiliki pengetikan statis, dan sebagai gantinya diketik
+
+00:04:49.450 --> 00:04:55.120
+secara dinamis, dan kemudian kita akan belajar bagaimana menggunakan skrip, jenis apa yang ada, dan bagaimana
+
+00:04:55.120 --> 00:04:56.980
+menambahkannya ke Anda proyek.
+
+00:04:56.980 --> 00:05:03.310
+Kami akhirnya akan menambahkan naskah dalam proyek reaksi kami dan melihat bagaimana menambahkannya ke proyek Anda
+
+00:05:03.310 --> 00:05:04.060
+sendiri.
+
+00:05:04.210 --> 00:05:07.770
+Pada akhirnya, sekali lagi, Anda akan menguasai topik ini.
+
+00:05:10.060 --> 00:05:14.800
+Dari sana kami terjun ke bagian singkat pada aplikasi satu halaman.
+
+00:05:14.800 --> 00:05:19.890
+Kita akan berbicara tentang sisi server yang memberikan cara asli untuk menampilkan situs web.
+
+00:05:19.960 --> 00:05:25.020
+Mengapa itu berguna dan mengapa masih mungkin berguna di beberapa perusahaan masih membutuhkannya.
+
+00:05:25.510 --> 00:05:30.500
+Kita akan berbicara tentang aplikasi satu halaman dan rendering sisi klien.
+
+00:05:30.500 --> 00:05:35.380
+Lagi-lagi manfaatnya dibebankan ketika Anda ingin menerapkan satu di atas yang lain.
+
+00:05:35.410 --> 00:05:38.560
+Saya akan menunjukkan kepada Anda bagaimana menerapkan rendering sisi server dan bereaksi.
+
+00:05:38.560 --> 00:05:42.220
+Dan lagi, apa kelebihan dan kelemahan masing-masing.
+
+00:05:42.220 --> 00:05:44.920
+Kita akan terjun cepat ke yang berikutnya. Ya Ya
+
+00:05:45.010 --> 00:05:51.600
+perpustakaan yang memungkinkan kita untuk menulis aplikasi dinamis sisi server dengan sangat baik.
+
+00:05:51.740 --> 00:05:57.730
+Pada akhirnya Anda akan siap untuk membuat keputusan apakah Anda ingin aplikasi satu halaman
+
+00:05:57.820 --> 00:06:02.070
+atau aplikasi yang diberikan sisi server untuk proyek Anda.
+
+00:06:02.110 --> 00:06:06.120
+Dari sana kami menyelami salah satu topik favorit saya, keamanan.
+
+00:06:06.130 --> 00:06:12.130
+Kita akan membahas beragam topik termasuk keamanan ujung depan di mana kita berbicara
+
+00:06:12.130 --> 00:06:18.340
+tentang lintas situs samar, serangan injeksi seperti injeksi SQL dan benar-benar akan mempraktekkannya untuk melihat
+
+00:06:18.340 --> 00:06:19.300
+cara kerjanya.
+
+00:06:19.390 --> 00:06:25.660
+Kita dapat berbicara tentang keamanan back end dan apa praktik terbaik agar kita mengelola data sensitif.
+
+00:06:26.110 --> 00:06:26.800
+Dari
+
+00:06:26.800 --> 00:06:31.960
+sana kita belajar juga beberapa teknik peretasan etis sehingga kita dapat melindungi diri kita sendiri
+
+00:06:31.960 --> 00:06:38.350
+ketika kita membangun diri kita sehingga Anda merasa yakin pada akhirnya bahwa Anda sedang membangun aplikasi yang aman
+
+00:06:38.470 --> 00:06:40.230
+menggunakan tips dan trik terbaru.
+
+00:06:40.390 --> 00:06:45.830
+Dan kemudian kita masuk ke buruh pelabuhan, alat yang akan sangat memukau Anda.
+
+00:06:46.150 --> 00:06:52.600
+Kita akan belajar tentang wadah dan bagaimana wadah sekarang merevolusi cara
+
+00:06:52.600 --> 00:06:57.510
+perusahaan menyusun aplikasi mereka. Kita sebenarnya akan menulis file buruh pelabuhan dan
+
+00:06:57.520 --> 00:07:05.950
+membuat wadah kita sendiri dan kemudian kita akan menggunakan komposisi buruh pelabuhan untuk menyusun server yang siap pakai, database postgres dan server API semuanya menjadi satu sehingga
+
+00:07:05.950 --> 00:07:09.920
+semuanya dijalankan dari satu koneksi. Pada akhirnya kita akan
+
+00:07:10.000 --> 00:07:14.570
+merasa sangat nyaman dengan buruh pelabuhan setiap kali kita menggunakan aplikasi kita.
+
+00:07:17.500 --> 00:07:21.040
+Kami kemudian mulai belajar tentang database baru.
+
+00:07:21.060 --> 00:07:24.540
+Redis adalah salah satu database yang paling populer dan
+
+00:07:24.650 --> 00:07:30.560
+sering digunakan yang merupakan penyimpanan nilai kunci. Pertama-tama kita akan membahas topik basis data dan jenis basis data yang
+
+00:07:30.560 --> 00:07:31.160
+kita miliki.
+
+00:07:31.330 --> 00:07:39.290
+Dari sana kita akan memutar server redis kita sendiri belajar cara menggunakan redis bagaimana menggunakan Redis CLI sehingga kita dapat menggunakan Redis sekarang untuk caching
+
+00:07:39.380 --> 00:07:46.400
+untuk membuat situs web kita lebih cepat, serta untuk manajemen sesi. Sesuatu yang akan dibahas
+
+00:07:46.400 --> 00:07:52.380
+dalam topik selanjutnya. Menggunakan aplikasi otak cerdas kami, kami
+
+00:07:52.490 --> 00:07:58.120
+akan membuat seluruh bagian dinamis dari situs Web yang merupakan manajemen pengguna.
+
+00:07:58.160 --> 00:08:03.890
+Kita akan memulai dengan membuat halaman profil baru, dan menggunakan halaman profil ini
+
+00:08:03.890 --> 00:08:11.030
+kita akan belajar tentang otentikasi berbasis sesi di mana cookie akan digunakan dan juga tentang otentikasi
+
+00:08:11.030 --> 00:08:13.790
+token seperti menggunakan token JWT.
+
+00:08:13.940 --> 00:08:18.140
+Kita akan belajar tentang masing-masing dari mereka apa pro dan kontra dari masing-masing.
+
+00:08:18.140 --> 00:08:23.080
+Dan kemudian kita benar-benar akan menerapkan aliran otentikasi aman yang dapat Anda terapkan dan aplikasi apa pun
+
+00:08:23.090 --> 00:08:24.310
+yang Anda pilih.
+
+00:08:24.420 --> 00:08:29.610
+Kami akan menggunakan Redis untuk manajemen sesi sehingga kami memiliki rute yang dilindungi.
+
+00:08:29.660 --> 00:08:35.450
+Dan dengan cara ini setiap kali kami memiliki fungsi masuk, kami memiliki anggota kami dapat menggunakan sistem ini
+
+00:08:35.450 --> 00:08:40.600
+mengetahui bahwa itu aman dan mengikuti praktik terbaik. Iya nih!
+
+00:08:40.640 --> 00:08:41.990
+Kami masih memiliki banyak topik.
+
+00:08:41.990 --> 00:08:44.670
+Kursus ini cukup luas.
+
+00:08:44.690 --> 00:08:52.250
+Kami kemudian akan berbicara tentang AWS. Apa itu Amazon Web Services dan juga apa infrastruktur
+
+00:08:52.380 --> 00:08:59.960
+sebagai layanan dan platform sebagai layanan yang telah dilakukan dalam hal memungkinkan perusahaan untuk benar-benar skala atau bekerja
+
+00:09:00.050 --> 00:09:03.290
+seefisien Google atau Amazon atau Microsoft.
+
+00:09:03.560 --> 00:09:09.890
+Dan kemudian kita akan belajar tentang teknologi tanpa server yang menarik ini disebut AWS Lambda yang
+
+00:09:09.890 --> 00:09:16.190
+memungkinkan kita menjalankan fungsi sederhana di cloud dan kita akan menggunakan kerangka tanpa server untuk benar-benar
+
+00:09:16.190 --> 00:09:20.290
+mengimplementasikan AWS Lambda ke dalam aplikasi otak cerdas kita.
+
+00:09:20.300 --> 00:09:26.030
+Pada akhirnya Anda akan merasa percaya diri bekerja dengan AWS
+
+00:09:26.030 --> 00:09:35.080
+dan menciptakan fungsi yang hidup di cloud. Setelah kami mencoba semuanya bersama-sama dan menciptakan gambaran keseluruhan tentang bagaimana menulis perangkat lunak yang baik, aplikasi
+
+00:09:35.260 --> 00:09:42.220
+yang baik, kami kemudian akan berbicara tentang bagaimana sebenarnya menciptakan proses yang baik. Cara benar-benar digunakan
+
+00:09:42.220 --> 00:09:44.860
+untuk produksi.
+
+00:09:44.860 --> 00:09:49.930
+Kita akan berbicara tentang praktik integrasi berkelanjutan yang baik dan kemudian juga tentang pengiriman berkelanjutan
+
+00:09:49.990 --> 00:09:56.320
+dan penerapan berkelanjutan sehingga ketika Anda ditempatkan pada suatu proyek, Anda tahu bagaimana menerapkan praktik yang baik dan alat
+
+00:09:56.710 --> 00:10:03.700
+yang bagus seperti Circle CI untuk memastikannya dari awal. Tim pengembang Anda memiliki alat yang tepat
+
+00:10:03.700 --> 00:10:10.120
+dan proses yang tepat untuk berhasil menulis aplikasi dengan bug dan kode pembersih yang lebih
+
+00:10:10.120 --> 00:10:10.620
+sedikit.
+
+00:10:12.500 --> 00:10:20.160
+Dan kemudian sedikit tambahan area di mana saya berbicara tentang beberapa pengalaman dan pendapat pribadi saya.
+
+00:10:20.180 --> 00:10:26.060
+Saya berbicara tentang analisis kode dan apa yang harus dilakukan ketika Anda pertama kali memulai proyek di mana Anda
+
+00:10:26.060 --> 00:10:28.850
+memiliki banyak file dan Anda tidak menulis kode sendiri.
+
+00:10:28.880 --> 00:10:33.240
+Kami akan berbicara tentang tips dan trik untuk mengoptimalkannya.
+
+00:10:33.470 --> 00:10:38.270
+Saya akan berbicara sedikit tentang praktik terbaik yang tidak dapat kami sertakan di bagian lain.
+
+00:10:38.270 --> 00:10:45.590
+Dan kemudian beberapa bit tambahan lainnya sehingga pada akhirnya pada akhir seluruh kursus semua hal ini
+
+00:10:45.590 --> 00:10:48.190
+akan masuk akal bagi Anda.
+
+00:10:48.380 --> 00:10:53.390
+Anda akan dapat menerapkan semua ucapan ini ke dalam proyek Anda sendiri ke perusahaan Anda sendiri dan
+
+00:10:53.390 --> 00:10:55.940
+Anda akan tahu bagaimana masing-masing dari mereka terhubung.
+
+00:10:56.030 --> 00:11:02.080
+Tetapi yang paling penting pada akhirnya Anda akan belajar hal-hal yang membuat saya bertahun-tahun untuk belajar.
+
+00:11:02.600 --> 00:11:07.030
+Dan video berikutnya hari kerja pertama Anda akhirnya akan memulai Kaiko Corp.
+
+00:11:07.340 --> 00:11:10.320
+Nikmati proyek, nikmati latihan.
+
+00:11:10.340 --> 00:11:15.300
+Kita akan membangun banyak hal menyenangkan bersenang-senang dan menikmati perjalanan.

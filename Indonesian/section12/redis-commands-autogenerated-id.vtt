@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:01.000 --> 00:00:02.150
+Selamat datang kembali.
+
+00:00:02.320 --> 00:00:09.910
+Sekarang ingat dengan database ada 800 yang masing-masing baik untuk masalah tertentu memiliki beberapa
+
+00:00:09.910 --> 00:00:13.340
+manfaat dan beberapa kontra juga.
+
+00:00:13.360 --> 00:00:19.860
+Sekarang dengan database Anda selalu ingin memikirkan gambaran besar dan apa manfaat dari database itu.
+
+00:00:19.870 --> 00:00:24.230
+Dalam kasus kami, kami tahu bahwa kemerahan adalah penyimpanan memori.
+
+00:00:24.280 --> 00:00:27.760
+Jadi itu berarti sangat cepat untuk kita akses.
+
+00:00:27.850 --> 00:00:36.010
+Kita bisa mendapatkan nilai sangat cepat dari itu tetapi memiliki kelemahan di mana ia hanya mengambil snapshot dan menulisnya pada
+
+00:00:36.220 --> 00:00:40.730
+disk sesekali sehingga Anda mungkin kehilangan beberapa data jika server turun.
+
+00:00:41.730 --> 00:00:48.030
+Dan kita tahu bahwa rattus sering digunakan untuk data kecil seperti manajemen sesi atau bahkan mungkin
+
+00:00:48.030 --> 00:00:51.210
+menyimpan beberapa data kecil yang akan kita bicarakan.
+
+00:00:51.210 --> 00:00:58.250
+Tetapi bagian lain dari database yang ingin Anda lihat adalah jenis data apa yang dapat mereka dukung dan berdasarkan pada tipe
+
+00:00:58.250 --> 00:01:00.950
+data ini yang sesuai dengan kebutuhan Anda.
+
+00:01:01.040 --> 00:01:04.590
+Database mungkin baik atau buruk untuk proyek Anda.
+
+00:01:06.160 --> 00:01:11.770
+Jadi, dalam video ini di video pasangan berikutnya kita akan berbicara tentang apa beberapa tipe data ini
+
+00:01:12.450 --> 00:01:13.580
+yang luas digunakan.
+
+00:01:13.630 --> 00:01:21.940
+Dan apa yang akan kita gunakan di bagian sesi berikutnya dan JACT yang sangat mendasar dan jika Anda
+
+00:01:21.940 --> 00:01:27.590
+ingat rattus adalah penyimpanan nilai kunci yang kami berikan kunci dan nilai.
+
+00:01:28.120 --> 00:01:32.090
+Dan kita akan dapat mengakses nilai itu dari kunci itu.
+
+00:01:32.110 --> 00:01:39.790
+Jadi izinkan saya menunjukkan kepada Anda perintah yang paling mendasar dengan utas adalah untuk mengatur dan melihat bahwa itu sudah memberi
+
+00:01:39.790 --> 00:01:48.160
+saya opsi dan karenanya oleh Dollon ini membaca CLID apa yang bisa saya masukkan sehingga saya dapat mengatur kunci dan nilai serta beberapa opsi
+
+00:01:48.250 --> 00:01:48.800
+juga.
+
+00:01:49.570 --> 00:02:01.710
+Jadi katakanlah saya ingin menetapkan nama ke Godzilla membuat sebuah string jika saya menekan enter saya mendapatkan OK.
+
+00:02:01.840 --> 00:02:11.350
+Sekarang kita sama di sini sekarang saya bisa mendapatkan nama ini kapan pun saya mau dengan mengatakan Dapatkan nama dan saya mendapatkan Godzilla dan hanya
+
+00:02:11.360 --> 00:02:11.960
+itu.
+
+00:02:11.960 --> 00:02:16.500
+Penyimpanan nilai kunci hanyalah bahwa Anda memberinya kunci, Anda memberinya nilai.
+
+00:02:16.550 --> 00:02:19.930
+Dan sekarang kita bisa menggunakan perintah get untuk mendapatkan nilai itu kembali.
+
+00:02:21.230 --> 00:02:23.990
+Perintah lain yang Anda aktif adalah untuk melihat apakah ada sesuatu.
+
+00:02:24.170 --> 00:02:27.930
+Jadi jika saya memang ada nama saya dapatkan.
+
+00:02:28.340 --> 00:02:34.960
+Saya memiliki satu nama dan saya juga dapat menjalankan perintah hapus sehingga saya dapat menghapus perintah nama.
+
+00:02:35.850 --> 00:02:39.280
+Sekarang nama fibrin ada.
+
+00:02:39.600 --> 00:02:41.140
+Tidak ada tidak ada nama di sana.
+
+00:02:41.190 --> 00:02:43.280
+Dan jika saya mendapatkan nama.
+
+00:02:43.570 --> 00:02:46.530
+Tidak, tidak, saya tidak punya apa-apa.
+
+00:02:46.530 --> 00:02:53.810
+Sebelum saya melanjutkan ke lebih banyak komentar saya ingin menunjukkan kepada Anda bahwa sekali lagi dokumentasi adalah teman Anda.
+
+00:02:53.820 --> 00:03:00.090
+Jika Anda pergi ke tab dokumentasi mereka yang telah saya buka di sini, mereka memiliki banyak sumber daya untuk
+
+00:03:00.090 --> 00:03:00.490
+Anda.
+
+00:03:00.570 --> 00:03:04.070
+Tapi yang kami tertarik adalah daftar lengkap perintah.
+
+00:03:04.350 --> 00:03:09.560
+Dan seperti yang Anda lihat di sini, mereka memberi Anda uraian yang sangat bagus tentang apa yang semuanya lakukan.
+
+00:03:11.880 --> 00:03:13.390
+Jadi mari kita lihat salah satunya.
+
+00:03:13.500 --> 00:03:16.270
+Kami melihat bahwa kami ingin mencoba komentar yang kedaluwarsa.
+
+00:03:16.890 --> 00:03:22.590
+Dan jika saya klik di sini akan melihat bahwa itu menetapkan waktu pada kunci setelah waktu telah
+
+00:03:22.590 --> 00:03:25.270
+habis kunci akan secara otomatis menjadi pemimpin.
+
+00:03:25.280 --> 00:03:25.540
+Baiklah.
+
+00:03:25.550 --> 00:03:28.900
+Jadi katakanlah kita ingin mencoba ini.
+
+00:03:29.120 --> 00:03:39.210
+Kita bisa saja mengatakan kedaluwarsa atau kita harus menetapkan sesuatu terlebih dahulu jadi mari kita atur set
+
+00:03:40.480 --> 00:03:51.470
+sesi say dan sesi Obi Jenny dan akan mengatakan bahwa sesi kedaluwarsa dan berapa detik tetapi katakanlah kita ingin memilikinya
+
+00:03:51.470 --> 00:03:54.590
+dalam 10 detik untuk berakhir.
+
+00:03:56.630 --> 00:04:08.340
+Sekarang jika saya mendapatkan sesi saya mendapatkan Gennie, saya menunggu 10 detik dan mencoba
+
+00:04:08.370 --> 00:04:12.300
+untuk mendapatkan sesi lagi.
+
+00:04:12.450 --> 00:04:13.210
+Betapa kerennya itu.
+
+00:04:13.230 --> 00:04:19.980
+Sekali lagi setiap database memiliki set fitur sendiri dan Rhetors memiliki masa berlaku yang bagus ini di mana Anda dapat dengan mudah
+
+00:04:19.980 --> 00:04:23.800
+berakhir hal-hal yang akan dihapus dari database kapan pun Anda mau.
+
+00:04:23.880 --> 00:04:30.840
+Alat lain yang sangat berguna adalah sesuatu seperti mungkin sesi jika Anda ingin
+
+00:04:31.410 --> 00:04:38.490
+berakhir sesi misalnya pengguna di mana setelah katakanlah sehari mereka harus mengundurkan diri ke OP.
+
+00:04:38.550 --> 00:04:43.020
+Itu hal yang mudah yang bisa kita lakukan segera dengan X.
+
+00:04:43.170 --> 00:04:45.490
+Mari kita coba beberapa perintah lagi.
+
+00:04:45.630 --> 00:04:49.890
+Kita dapat mengatur penghitung ke 100.
+
+00:04:49.990 --> 00:04:54.160
+Dan kami hanya melakukan penyimpanan nilai kunci sederhana.
+
+00:04:54.210 --> 00:04:59.790
+Sekarang kita bisa melakukan penambahan perintah Anke lainnya.
+
+00:04:59.890 --> 00:05:06.160
+Itu agak sulit untuk dieja, tetapi selisih dengan kita berikan penghitung kunci dan kita
+
+00:05:06.160 --> 00:05:09.480
+akan mendapatkan 50 atau kurang 33.
+
+00:05:09.740 --> 00:05:10.320
+Lihat itu.
+
+00:05:10.340 --> 00:05:15.920
+Sekarang penghitung kami bertambah
+
+00:05:20.160 --> 00:05:22.040
+33.
+
+00:05:22.050 --> 00:05:23.270
+Sangat keren.
+
+00:05:23.310 --> 00:05:31.100
+Dan seperti yang dapat Anda bayangkan ada juga kunci pengurangan atau penurunan dan kami akan mendokumentasikan
+
+00:05:31.130 --> 00:05:40.620
+penghitung dan kami dapat memberikannya katakanlah 33 dan ya itu benar-benar dengan penurunan default dan satu-satunya default yang berfungsi
+
+00:05:40.680 --> 00:05:43.670
+adalah hanya direkomendasikan oleh satu.
+
+00:05:43.960 --> 00:05:50.130
+Jika saya menjalankan ini, Anda melihat bahwa integer sekarang telah didokumentasikan oleh satu.
+
+00:05:50.150 --> 00:05:50.600
+Baiklah.
+
+00:05:50.690 --> 00:05:52.180
+Beberapa hal lagi yang harus dilalui.
+
+00:05:52.200 --> 00:05:55.070
+Tapi mari kita istirahat dan sampai jumpa di video berikutnya.

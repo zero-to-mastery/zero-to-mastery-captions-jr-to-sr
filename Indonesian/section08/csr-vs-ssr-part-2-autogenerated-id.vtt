@@ -1,0 +1,388 @@
+﻿WEBVTT
+
+00:00:02.000 --> 00:00:03.550
+Apa yang telah kita pelajari sejauh ini.
+
+00:00:05.060 --> 00:00:11.960
+Nah ketika pengembang berbicara tentang rendering sisi klien mereka biasanya berbicara tentang rendering
+
+00:00:11.990 --> 00:00:15.250
+konten di browser menggunakan javascript.
+
+00:00:15.380 --> 00:00:17.450
+Aplikasi satu halaman.
+
+00:00:17.780 --> 00:00:25.400
+Jadi, alih-alih mendapatkan semua konten dari dokumen shemale itu sendiri Anda mendapatkan dokumen
+
+00:00:25.400 --> 00:00:34.070
+kecil yang sangat kecil dengan file javascript yang akan membuat sisa situs untuk Anda di browser.
+
+00:00:34.070 --> 00:00:38.870
+Dengan ini kami dapat memiliki interaksi yang sangat kaya yang membuat aplikasi kami terasa cepat.
+
+00:00:38.870 --> 00:00:40.300
+Jadi mari kita bicara tentang itu.
+
+00:00:40.310 --> 00:00:47.900
+Kita akan berbicara tentang pro dan kontra dari sisi server versus sisi klien seperti yang baru saja saya sebutkan.
+
+00:00:48.130 --> 00:00:55.570
+Salah satu hal besar dengan rendering sisi klien adalah kenyataan bahwa interaksi ini sangat kaya.
+
+00:00:55.710 --> 00:01:03.040
+Anda dapat memuat sebagian halaman dan merasa seperti kami bekerja dengan aplikasi alih-alih halaman
+
+00:01:03.040 --> 00:01:06.870
+web yang melakukan penyegaran penuh setiap saat.
+
+00:01:07.030 --> 00:01:14.110
+Mereka benar-benar bagus untuk aplikasi modern ini seperti merasa yang kami miliki di rendering sisi
+
+00:01:14.110 --> 00:01:21.970
+klien situs web kami juga memiliki respons yang lebih cepat dari server karena server tidak harus merender halaman
+
+00:01:22.360 --> 00:01:29.590
+HTML dan Anda tahu lakukan Render untuk merangkai itu re-act server Dom memiliki atau melakukan pekerjaan ekstra.
+
+00:01:29.590 --> 00:01:33.670
+Yang perlu dilakukan hanyalah mengirim file Steimle kecil itu.
+
+00:01:33.670 --> 00:01:38.770
+Server sebenarnya merespons jauh lebih cepat dengan rendering sisi klien.
+
+00:01:38.950 --> 00:01:47.230
+Dan akhirnya itu bagus untuk aplikasi web bukan hanya karena memiliki interaksi yang kaya tetapi karena itu adalah pengalaman
+
+00:01:47.230 --> 00:01:49.950
+situs Web yang lebih cepat.
+
+00:01:49.990 --> 00:01:51.440
+Setelah memuat awal.
+
+00:01:51.550 --> 00:01:59.260
+Jadi setelah Javascript telah bekerja dan telah menciptakan tampilan untuk kita karena kita sudah memiliki semuanya
+
+00:01:59.260 --> 00:02:05.850
+dimuat seperti rendering sisi server di mana kita harus kembali lagi ke server dan
+
+00:02:06.950 --> 00:02:14.960
+membuat permintaan itu semua javascript kita dimuat semua pandangan kita ada begitu bahwa kami dapat berinteraksi sangat
+
+00:02:15.290 --> 00:02:19.410
+cepat dan hanya memodifikasi bagian halaman berdasarkan tampilan.
+
+00:02:19.610 --> 00:02:24.710
+Dan kami cukup akrab dengan manfaatnya karena kami bekerja dengan aplikasi yang
+
+00:02:24.710 --> 00:02:29.010
+diberikan sisi klien dan benar-benar melihatnya setiap hari di Internet.
+
+00:02:29.200 --> 00:02:37.190
+Tetapi ada beberapa kontra dengan aplikasi semacam ini dan mungkin yang terbesar yang harus Anda pertimbangkan adalah
+
+00:02:37.190 --> 00:02:44.030
+bahwa dengan rendering sisi klien itu sangat sulit atau pasti lebih sulit untuk memiliki
+
+00:02:44.060 --> 00:02:47.070
+SEO atau optimasi mesin pencari.
+
+00:02:48.040 --> 00:02:49.850
+Sekarang kenapa begitu.
+
+00:02:50.200 --> 00:02:55.900
+Yah karena dengan aplikasi ini kami hanya membuat file kecil sederhana.
+
+00:02:55.930 --> 00:03:02.860
+Jadi dengan reaksi kami terhadap aplikasi, kami hanya memiliki div sederhana dan cara optimisasi mesin pencari bekerja
+
+00:03:03.100 --> 00:03:10.750
+adalah bahwa browser seperti Google dan semua browser lain ini memiliki cruller atau program mereka sendiri yang mencari melalui
+
+00:03:10.750 --> 00:03:11.680
+situs Web.
+
+00:03:11.800 --> 00:03:17.770
+Lihat apa yang dimaksud dengan situs Web dan kemudian masukkan ke dalam database mereka untuk memahami tentang apa itu.
+
+00:03:17.770 --> 00:03:25.350
+Jadi saat itulah pengguna mencari resep super semua tahu situs web ini tentang sup.
+
+00:03:25.470 --> 00:03:26.980
+Situs web ini tentang sup.
+
+00:03:27.000 --> 00:03:28.250
+Ini bukan tentang sup.
+
+00:03:28.260 --> 00:03:35.340
+Saya akan memberikan pengguna ini 10 hasil ini dan itulah cara mereka dapat melakukan pencarian.
+
+00:03:35.400 --> 00:03:44.020
+Sekarang crawler ini karena mereka hanya program yang mengalami kesulitan bekerja dengan aplikasi yang diberikan sisi Klein
+
+00:03:44.020 --> 00:03:52.290
+karena sesuatu seperti Googlebot akan memuat halaman web dan kemudian melihat bahwa situs web ini hanya
+
+00:03:52.290 --> 00:03:56.470
+memiliki div dengan gagasan aplikasi yang itu.
+
+00:03:56.850 --> 00:04:03.180
+Dan itu akan mengatakan baik-baik saja, Anda tahu itu mungkin memiliki beberapa deskripsi bahwa tag meta yang mengatakan oh yeah
+
+00:04:03.270 --> 00:04:05.100
+halaman web ini tentang robot.
+
+00:04:05.100 --> 00:04:11.350
+Tetapi ketika bot Google melihat halaman web, ia hanya melihat tag diff.
+
+00:04:11.400 --> 00:04:13.240
+Jadi dikatakan baik-baik saja ini tentang situs Web.
+
+00:04:13.260 --> 00:04:20.380
+Saya tidak tertarik untuk memeringkatnya tinggi untuk SEO dan kemudian kami juga memiliki aplikasi kami membuat
+
+00:04:20.380 --> 00:04:26.280
+permintaan Ajax untuk mendapatkan robot sehingga sekali lagi renderingnya membutuhkan waktu lebih lama.
+
+00:04:26.440 --> 00:04:31.540
+Jadi pada saat Googlebot benar-benar memeriksa, mungkin kami belum merender semuanya dan ia akan memiliki
+
+00:04:31.540 --> 00:04:34.680
+gagasan bagus tentang apa yang dilakukan laman web kami.
+
+00:04:35.230 --> 00:04:41.440
+Sekarang Googlebot sebenarnya berbobot antara 5 dan 20 detik sebelum mengambil apa yang kami sebut snapshot dari
+
+00:04:41.440 --> 00:04:44.400
+setiap halaman sehingga mereka dapat mengindeksnya untuk MCO.
+
+00:04:44.560 --> 00:04:48.120
+Tetapi ini tidak selalu berhasil.
+
+00:04:48.250 --> 00:04:57.280
+Dan ini hanya berlaku untuk Chrome seperti Bing atau browser Yahoo atau Baidu.
+
+00:04:57.280 --> 00:04:58.460
+Ini sangat berbeda.
+
+00:04:58.480 --> 00:05:03.700
+Jadi, bekerja dengan bot-bot ini yang merayapi situs Web Anda benar-benar sangat sulit untuk menunjukkan kepada mereka tentang apa situs web
+
+00:05:03.700 --> 00:05:06.450
+Anda sehingga Anda memiliki yang terbaik seperti yang ia mau.
+
+00:05:06.670 --> 00:05:13.630
+Dan ini banyak pekerjaan dengan aplikasi yang diberikan sisi klien dan sangat mudah untuk memiliki kesepakatan yang
+
+00:05:13.660 --> 00:05:14.640
+buruk dengannya.
+
+00:05:14.680 --> 00:05:17.590
+Jadi jika Anda memiliki situs web yang benar-benar tergantung pada Nescio.
+
+00:05:17.740 --> 00:05:22.710
+Katakanlah Anda adalah perusahaan hotel yang mencantumkan hotel di seluruh dunia.
+
+00:05:22.870 --> 00:05:28.330
+Nah, seorang CEO mungkin penting bagi Anda karena Anda mendapatkan banyak pelanggan melalui pencarian Google di
+
+00:05:28.330 --> 00:05:35.200
+mana orang mengatakan saya menginginkan sebuah hotel di Milan, mereka mungkin menganggap bahwa aplikasi yang diberikan sisi server mungkin lebih baik
+
+00:05:35.200 --> 00:05:36.040
+bagi mereka.
+
+00:05:38.020 --> 00:05:41.300
+Dan akhirnya ini jelas yang telah kita bicarakan.
+
+00:05:41.410 --> 00:05:48.280
+Ini adalah gagasan bahwa ia memiliki beban awal yang lebih lama walaupun kami mendapatkan respons yang lebih
+
+00:05:48.280 --> 00:05:53.700
+cepat dari server karena kami memiliki javascript yang perlu merender halaman Web kami.
+
+00:05:53.800 --> 00:05:57.750
+Kami memiliki pemuatan awal yang lebih cepat daripada aplikasi yang diberikan sisi server.
+
+00:05:57.760 --> 00:06:04.600
+Jadi kita melihat bahwa memuat layar atau halaman kosong jauh lebih lama daripada sisi server
+
+00:06:04.600 --> 00:06:13.310
+yang diberikan pada awalnya untuk sebagian besar pengguna jenis aplikasi ini akan terasa jauh lebih lambat. Bagaimana dengan sisi lain.
+
+00:06:13.700 --> 00:06:17.140
+Bagaimana dengan sisi server membuat aplikasi dengan baik.
+
+00:06:17.200 --> 00:06:23.830
+Hal pertama adalah aplikasi sisi server yang diberikan benar-benar bagus di SEO untuk poin yang baru
+
+00:06:23.830 --> 00:06:30.270
+saja saya sebutkan karena itu diberikan di server tetapi waktu itu tiba di browser tempat google
+
+00:06:30.270 --> 00:06:31.510
+bot mencarinya.
+
+00:06:31.660 --> 00:06:37.900
+Sudah memiliki semua yang dirender dan Google Googlebot bisa seperti oh yeah, ini jelas
+
+00:06:37.900 --> 00:06:39.960
+situs web resep sup.
+
+00:06:40.210 --> 00:06:48.460
+Saya akan peringkat tinggi karena konten disajikan sebelum Anda benar-benar melihatnya.
+
+00:06:48.470 --> 00:06:55.280
+Ini juga sangat bagus dengan apa yang kita sebut situs statis hanya situs web sederhana yang tidak dinamis.
+
+00:06:55.280 --> 00:07:01.280
+Ada situs Web yang memiliki banyak informasi berbasis teks seperti dokumentasi.
+
+00:07:01.310 --> 00:07:06.640
+Mereka benar-benar bagus dan membuat situs statis terlihat sangat bagus.
+
+00:07:06.800 --> 00:07:13.340
+Sebagai contoh, halaman dokumentasi aksi ulang adalah contoh yang bagus untuk ini.
+
+00:07:13.490 --> 00:07:19.850
+Jika kita pergi ke halaman dokumentasi untuk bertindak kembali, kita melihat bahwa itu terutama teks dan kami menggunakannya rendering
+
+00:07:19.850 --> 00:07:22.510
+sisi server untuk membuat semua halaman ini.
+
+00:07:22.700 --> 00:07:26.430
+Anda melihat bagaimana M-L berubah dari atas.
+
+00:07:26.430 --> 00:07:26.990
+Saat
+
+00:07:30.690 --> 00:07:33.120
+saya beralih di antara halaman.
+
+00:07:33.270 --> 00:07:37.470
+Jadi ini kasus penggunaan yang bagus untuk sisi server yang diberikan.
+
+00:07:38.510 --> 00:07:45.470
+Dan akhirnya pro besar lainnya adalah memuat halaman awal karena sisi server diberikan DAP
+
+00:07:45.470 --> 00:07:47.970
+diberikan pada server kepada pengguna.
+
+00:07:48.140 --> 00:07:52.810
+Sebagian besar waktu tampaknya situs Web ini memuat sedikit lebih cepat.
+
+00:07:53.930 --> 00:08:01.790
+Nah, bagaimana dengan kesimpulannya Nah, hal pertama adalah kenyataan bahwa kita harus melakukan pemuatan ulang satu halaman penuh
+
+00:08:02.030 --> 00:08:09.750
+karena kita harus meminta halaman baru dari server dan Anda dapat mempercepat dan terlihat bagus dengan ini.
+
+00:08:09.860 --> 00:08:15.830
+Tapi itu juga sulit dilakukan terutama jika sebagian besar halaman Anda terlihat sama tetapi Anda masih meminta
+
+00:08:15.830 --> 00:08:19.530
+hal yang sama berulang-ulang untuk setiap halaman yang berbeda.
+
+00:08:20.580 --> 00:08:24.650
+Dan kemudian kami juga memiliki rendering halaman yang lebih lambat dengan cut off di sini.
+
+00:08:24.690 --> 00:08:25.070
+Aduh.
+
+00:08:25.080 --> 00:08:34.990
+Tapi saya yakin Anda masih bisa melihat bahwa Anda melihat dengan waktu rendering sisi server ke byte pertama yaitu
+
+00:08:34.990 --> 00:08:41.940
+kapan informasi pertama dari server yang diterima lebih lambat daripada rendering sisi klien.
+
+00:08:41.950 --> 00:08:48.160
+Karena seperti yang saya sebutkan server Anda perlu menghabiskan waktu untuk membuat email untuk
+
+00:08:48.160 --> 00:08:56.330
+halaman Anda, alih-alih hanya mengirimkan respons cepat seperti dengan rendering sisi klien, ingat kembali aksi server Dom render render
+
+00:08:56.330 --> 00:09:01.780
+ke metode string. P. Anda Bankole.
+
+00:09:01.800 --> 00:09:08.100
+Yang berarti bahwa CPQ harus bekerja untuk membuat aplikasi Anda di server yang jika itu adalah aplikasi besar bisa
+
+00:09:08.100 --> 00:09:12.640
+memakan waktu lama itu menahan apa yang kita sebut sebagai loop acara.
+
+00:09:12.670 --> 00:09:18.530
+Jadi server tidak dapat memproses permintaan lain sampai ini selesai.
+
+00:09:19.030 --> 00:09:22.200
+Dan ini bisa menjadi pemecah masalah bagi sebagian orang.
+
+00:09:22.330 --> 00:09:30.030
+Jika aplikasi kita benar-benar besar dan kita perlu membuat halaman rumah kita katakan untuk waktu yang sangat
+
+00:09:30.300 --> 00:09:36.050
+lama bahwa server hanya akan duduk di sana menunggu server menyelesaikan pekerjaannya.
+
+00:09:37.070 --> 00:09:43.820
+Dan ini bisa menjadi pemecah masalah besar bagi kebanyakan orang rendering sisi server pasti berarti lebih banyak pekerjaan untuk
+
+00:09:43.820 --> 00:09:44.840
+server Anda.
+
+00:09:45.560 --> 00:09:49.940
+Tetapi tidak hanya untuk server tetapi juga untuk pengembang.
+
+00:09:50.090 --> 00:09:56.870
+Anda meningkatkan kompleksitas basis kode Anda karena komponen reaktor Anda sekarang akan memerlukan
+
+00:09:56.900 --> 00:10:02.320
+server simpul seperti yang saya tunjukkan agar tersedia agar berfungsi.
+
+00:10:02.350 --> 00:10:05.800
+Begitu juga dengan kompleksitas yang ditambahkan ke aplikasi Anda.
+
+00:10:05.920 --> 00:10:13.660
+Ingatlah bahwa sekarang lebih banyak waktu pengembang Anda dan modal dan sumber daya akan pergi untuk mendapatkan
+
+00:10:14.320 --> 00:10:20.260
+rendering sisi server untuk bekerja versus bekerja pada fitur-fitur baru atau melakukan hal-hal
+
+00:10:20.260 --> 00:10:24.170
+lain yang bisa lebih penting untuk aplikasi Anda.
+
+00:10:24.300 --> 00:10:29.220
+Dan tentu saja kami memiliki jumlah permintaan ke server setiap kali kami membutuhkan halaman baru atau
+
+00:10:29.220 --> 00:10:30.980
+kami perlu berkomunikasi dengan server.
+
+00:10:31.110 --> 00:10:37.620
+Bergantung pada koneksi internet, mungkin itu sebenarnya akan lebih buruk bagi Anda daripada memiliki waktu muat
+
+00:10:37.650 --> 00:10:41.480
+awal yang lebih lama dengan rendering sisi klien.
+
+00:10:42.340 --> 00:10:49.510
+Akhirnya perlu diingat bahwa rendering sisi server dapat membuat situs web Anda terlihat lebih cepat tetapi itu
+
+00:10:49.510 --> 00:10:56.740
+tidak berarti pengguna dapat berinteraksi dengannya karena ingat sampai kita mendapatkan interaktivitas itu, kita masih perlu memuat
+
+00:10:57.010 --> 00:10:57.700
+Javascript.
+
+00:10:57.700 --> 00:11:01.080
+Jadi, Anda harus berhati-hati dengan itu.
+
+00:11:01.090 --> 00:11:01.880
+Baiklah.
+
+00:11:01.880 --> 00:11:06.960
+Kita harus memiliki gagasan bagus tentang apa yang baik, apa yang buruk kapan harus menggunakan yang satu dari yang lain.
+
+00:11:07.420 --> 00:11:11.820
+Mari kita lihat di video berikutnya beberapa cara yang dapat Anda lakukan rendering sisi server dengan benar.
+
+00:11:11.830 --> 00:11:15.240
+Karena kita semua sudah tahu bagaimana melakukan rendering sisi klien.
+
+00:11:15.640 --> 00:11:16.400
+Saya akan lihat yang itu.

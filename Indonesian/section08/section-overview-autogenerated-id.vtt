@@ -1,0 +1,253 @@
+﻿WEBVTT
+
+00:00:01.860 --> 00:00:12.810
+Awalnya halaman web ditampilkan dengan cara yang sangat sederhana, Anda memiliki satu halaman per tahun sekarang jika situs web Anda memiliki
+
+00:00:12.810 --> 00:00:19.830
+banyak halaman, Anda cukup menambahkan HVM Alpha Multipel ke file yang serupa.
+
+00:00:19.830 --> 00:00:28.920
+Misalnya jika Anda memiliki beranda dan tentang beranda Anda akan memiliki beranda Daut HMO dan sekitar 8 halaman surel dan Anda akan
+
+00:00:29.790 --> 00:00:36.480
+memiliki jangkar atau delapan tag dan Anda seorang waria yang akan menghubungkan kedua halaman bersama.
+
+00:00:37.610 --> 00:00:46.850
+Ini berarti bahwa jika Anda mengklik tautan tentang di laman beranda maka permintaan akan diajukan
+
+00:00:46.850 --> 00:00:55.400
+ke server untuk mendapatkan tentang waria dan menampilkannya di peramban, tetapi itu dulu.
+
+00:00:55.790 --> 00:01:01.030
+Dan sekarang ada banyak cara untuk melakukan hal seperti ini.
+
+00:01:01.120 --> 00:01:08.270
+Dan di bagian ini kita akan membahas tentang aplikasi halaman tunggal versus aplikasi yang diberikan
+
+00:01:08.450 --> 00:01:09.730
+sisi server.
+
+00:01:10.740 --> 00:01:18.270
+Mari kita lihat bagaimana situs Web dulu ada di sini, kita memiliki halaman web pertama
+
+00:01:18.270 --> 00:01:24.260
+yang pernah dibuat oleh Tim Berners-Lee saat dia bekerja di CERN.
+
+00:01:24.340 --> 00:01:30.010
+Jika Anda melihat pada Anda Albar di sini karena saya mengklik pada hal-hal yang berbeda.
+
+00:01:30.040 --> 00:01:32.880
+File baru dibuat dan
+
+00:01:36.230 --> 00:01:41.910
+setiap kali saya berganti tautan, permintaan dibuat ke browser.
+
+00:01:42.200 --> 00:01:42.990
+Mari kita lihat.
+
+00:01:45.690 --> 00:01:53.000
+Jika saya pergi ke tab jaringan saya dan saya klik pada apa yang ada di sana saya mendapatkan halaman wanita telanjang
+
+00:01:53.010 --> 00:01:57.400
+lain halaman waria jika saya kembali lagi permintaan lain dan permintaan lain.
+
+00:02:00.390 --> 00:02:03.520
+Dan ini adalah cara kerjanya.
+
+00:02:03.550 --> 00:02:04.500
+Hidup itu baik.
+
+00:02:04.540 --> 00:02:13.920
+Hidup itu mudah karena ini adalah metode konvensional untuk mendapatkan HMO Anda ke layar dengan menggunakan rendering sisi server.
+
+00:02:14.220 --> 00:02:19.930
+Rendering sisi server bekerja dengan baik pada saat itu juga.
+
+00:02:20.630 --> 00:02:27.850
+Karena yang kami lakukan hanyalah merender ASTM, saya akan mengirimkannya ke klien yang merupakan browser web mereka dan
+
+00:02:27.850 --> 00:02:31.600
+browser akan membuat Dom itu dan merendernya di halaman.
+
+00:02:32.620 --> 00:02:34.840
+Dan rendering sisi server berfungsi dengan baik.
+
+00:02:34.840 --> 00:02:44.050
+Pada saat itu juga karena sebagian besar halaman web saat itu hanya menampilkan gambar statis dan teks dengan
+
+00:02:44.050 --> 00:02:46.270
+sedikit hubungannya dengan interaktivitas.
+
+00:02:47.250 --> 00:02:55.740
+Setelah saya klik pada tautan di sini dan permintaan pergi ke server, permintaan kemudian selesai diproses
+
+00:02:56.220 --> 00:03:03.460
+dan browser Anda mendapatkan kembali sepenuhnya dia sehingga dapat ditampilkan di layar.
+
+00:03:05.010 --> 00:03:10.740
+Dan seperti yang Anda lihat sebelumnya jika saya mengklik halaman berbeda dari browser Anda akan melakukan proses yang
+
+00:03:10.740 --> 00:03:12.090
+sama lagi membuat permintaan.
+
+00:03:12.240 --> 00:03:18.420
+Server akan selalu memproses permintaan, mengirim kembali Jimoh yang telah diterjemahkan sepenuhnya dan kemudian browser akan membaca
+
+00:03:18.420 --> 00:03:19.830
+ASTM Alpha itu.
+
+00:03:20.160 --> 00:03:27.960
+Dan ini terjadi setiap kali Anda mengunjungi halaman, bahkan tidak masalah jika salah satu halaman ini sangat mirip
+
+00:03:27.960 --> 00:03:34.930
+dengan yang lain dan mungkin kita tidak perlu judul ini untuk dibaca lagi, itu tidak
+
+00:03:34.930 --> 00:03:35.460
+masalah.
+
+00:03:35.500 --> 00:03:41.770
+Browser akan selalu meminta seluruh halaman dan akan membuat semuanya pada halaman.
+
+00:03:42.790 --> 00:03:44.570
+Jadi semuanya baik-baik saja saat itu.
+
+00:03:44.650 --> 00:03:51.220
+Tapi tunggu CSSA dan Javascript muncul dan orang-orang mulai membuat situs web mereka melakukan lebih banyak
+
+00:03:51.220 --> 00:03:54.120
+hal daripada sekadar menampilkan teks dan gambar.
+
+00:03:54.400 --> 00:03:56.610
+CSSA menambahkan gaya dan warna.
+
+00:03:57.420 --> 00:04:01.200
+Tapi javascript datang dan menambahkan lebih banyak lagi.
+
+00:04:01.740 --> 00:04:09.150
+Sejak itu, sesuatu yang disebut aplikasi satu halaman atau mata-mata menjadi semakin populer.
+
+00:04:09.240 --> 00:04:17.740
+Sesuatu seperti produk di sini aplikasi halaman tunggal ini hanya akan memiliki satu ACM
+
+00:04:17.740 --> 00:04:22.150
+Alpha dan sisanya seperti menavigasi antar
+
+00:04:25.670 --> 00:04:32.150
+tautan atau menavigasi antar halaman dilakukan di dalam javascript secara terprogram.
+
+00:04:32.150 --> 00:04:36.620
+Anda tidak perlu lagi pergi ke server untuk meminta halaman baru setiap saat.
+
+00:04:36.620 --> 00:04:38.980
+Kedengarannya cukup manis.
+
+00:04:38.990 --> 00:04:46.160
+Saya hanya bisa bermain-main dan halaman tidak me-refresh hanya bagian-bagian dari halaman yang saya butuhkan dan semuanya
+
+00:04:46.160 --> 00:04:53.760
+bagus dan cepat jadi karena ini aplikasi halaman tunggal menjadi lebih dan lebih kuat karena Anda bisa berpendapat bahwa
+
+00:04:54.150 --> 00:05:00.360
+situs Web saat ini adalah lebih mirip aplikasi daripada hanya situs Web yang kami miliki
+
+00:05:00.360 --> 00:05:01.360
+saat itu.
+
+00:05:02.660 --> 00:05:10.760
+Dan gagasan aplikasi halaman tunggal atau aplikasi yang diberikan sisi klien vs aplikasi sisi server benar-benar dipopulerkan dalam
+
+00:05:11.300 --> 00:05:19.670
+javascript yang dipinjam oleh perpustakaan seperti sudut satu tulang punggung dan reac karena Anda menghindari permintaan konstan ini kepada
+
+00:05:19.670 --> 00:05:25.850
+server untuk mengubah halaman dan memperbarui hanya bagian dari halaman yang sebenarnya Anda butuhkan
+
+00:05:25.850 --> 00:05:29.100
+dan banyak hal tampak lebih cepat.
+
+00:05:29.180 --> 00:05:37.250
+Seperti yang Anda lihat di sini lagi situs web modern bukanlah situs web modern sederhana yang memiliki
+
+00:05:37.250 --> 00:05:44.970
+ratusan baris kode dan jauh lebih rumit membayangkan bagaimana kita akan meramban halaman web dan harus
+
+00:05:45.000 --> 00:05:52.140
+menunggu setiap halaman untuk ditampilkan saat menavigasi situs seperti kita harus dengan rendering sisi server
+
+00:05:52.140 --> 00:05:54.810
+akan menjadi sakit kepala besar.
+
+00:05:54.980 --> 00:05:59.930
+Ngomong-ngomong, ini adalah pengalaman yang Anda dapatkan dengan situs web WordPress lama di mana setiap kali
+
+00:05:59.930 --> 00:06:04.710
+Anda mengklik halaman yang Anda tunggu menatap layar kosong untuk memuat halaman baru itu.
+
+00:06:05.960 --> 00:06:11.520
+Mereka memiliki satu ton javascript tetapi itu adalah situs Web yang diberikan sisi server.
+
+00:06:11.620 --> 00:06:11.990
+Baiklah.
+
+00:06:11.990 --> 00:06:19.040
+Jadi rendering sisi klien adalah cara aplikasi halaman tunggal masa depan ketika Mari kita memo rendering sisi
+
+00:06:19.040 --> 00:06:19.960
+server selamanya.
+
+00:06:19.970 --> 00:06:21.020
+Kami sudah selesai di sini.
+
+00:06:21.020 --> 00:06:23.320
+Tunggu sebentar.
+
+00:06:23.480 --> 00:06:29.990
+Kita harus tahu sekarang bahwa terlalu banyak hal tidak baik untuk Anda.
+
+00:06:30.060 --> 00:06:36.850
+Anda melihat ada dua masalah utama ketika datang ke aplikasi satu halaman.
+
+00:06:36.870 --> 00:06:41.920
+Pertama, lebih banyak Javascript dikirim ke klien berdasarkan permintaan awal.
+
+00:06:42.880 --> 00:06:48.850
+Karena sekali lagi kami memiliki ratusan baris kode karena javascript menangani perutean dan halaman
+
+00:06:48.850 --> 00:06:57.530
+serta tampilan untuk kami sehingga diperlukan waktu lebih lama untuk javascript untuk dikirim dan kemudian untuk mengeksekusi halaman menjadi lebih membengkak
+
+00:06:57.530 --> 00:07:00.120
+dan lebih lambat untuk memuat.
+
+00:07:00.410 --> 00:07:08.900
+Karena ini masalah kedua adalah kinerja SVO atau optimisasi mesin pencari.
+
+00:07:08.920 --> 00:07:16.060
+Jauh lebih sulit untuk melakukan SEO yang baik pada aplikasi satu halaman daripada aplikasi yang diberikan sisi server
+
+00:07:16.540 --> 00:07:18.270
+dan kita akan membahasnya.
+
+00:07:18.400 --> 00:07:23.820
+Kita akan berbicara tentang semua perincian antara apa yang kita sebut rendering
+
+00:07:24.040 --> 00:07:30.970
+sisi klien yang merupakan aplikasi halaman tunggal dan aplikasi rendering sisi server dengan masing-masing dari mereka
+
+00:07:30.970 --> 00:07:34.680
+memiliki pro dan kontra di bagian ini.
+
+00:07:34.800 --> 00:07:41.280
+Kita akan dapat memutuskan kapan kita perlu melakukan satu dari yang lain dan memberi Brunow
+
+00:07:41.610 --> 00:07:44.700
+keputusan yang tepat untuk produk jalan pertemanan.
+
+00:07:44.710 --> 00:07:49.570
+Kami juga akan bermain dengan beberapa perpustakaan rendering sisi server yang sangat menyenangkan.
+
+00:07:49.570 --> 00:07:50.960
+Saatnya memulai.
+
+00:07:51.010 --> 00:07:51.780
+Sampai jumpa di situs.

@@ -1,0 +1,199 @@
+﻿WEBVTT
+
+00:00:01.390 --> 00:00:01.980
+Baiklah.
+
+00:00:02.080 --> 00:00:09.490
+Jadi kami berhenti mengatakan bahwa kami perlu memberikan javascript dengan cara yang baik sehingga kami dapat memiliki
+
+00:00:09.670 --> 00:00:17.290
+waktu yang cepat untuk cat yang bermakna dan waktu untuk interaktif dan kami juga berbicara tentang bagaimana kita
+
+00:00:17.620 --> 00:00:21.730
+perlu meningkatkan pelaksanaan javascript yang kita inginkan. halaman.
+
+00:00:22.060 --> 00:00:28.030
+Untuk memulai, kita akan fokus pada awal bagaimana mengirimkan file javascript dengan cara yang
+
+00:00:28.030 --> 00:00:29.280
+seefisien mungkin.
+
+00:00:29.340 --> 00:00:33.680
+Anda melihat situs web modern mengirimkan banyak javascript.
+
+00:00:33.800 --> 00:00:42.020
+Adalah umum untuk menggabungkan skrip ke dalam file besar atau file yang dibundel dalam lingkungan GDP satu.
+
+00:00:42.240 --> 00:00:43.370
+Agak seperti ini.
+
+00:00:43.560 --> 00:00:51.390
+Kami hanya memiliki satu file javascript besar yang dibuat dengan menggabungkan semua yang lebih kecil dan mengirimkannya segera setelah
+
+00:00:51.390 --> 00:00:58.300
+pengguna memasuki situs web kami dan kemudian file javascript ini juga akan berfungsi pada halaman Tentang
+
+00:00:58.300 --> 00:01:02.360
+jika mereka membuka halaman Tentang atau mungkin kontak halaman.
+
+00:01:02.370 --> 00:01:09.040
+Sekarang ini dilakukan karena sejumlah besar permintaan di mana pada awalnya merusak
+
+00:01:09.820 --> 00:01:17.010
+kinerja Anda ketika garis JavaScript meningkat, file-file tersebut menjadi semakin besar dan semakin besar.
+
+00:01:17.080 --> 00:01:24.060
+Jadi mengapa mengirim javascript jika pengguna tidak akan membutuhkannya sampai dia mengunjungi halaman kedua.
+
+00:01:24.070 --> 00:01:29.260
+Mungkin ada beberapa javascript di sini yang hanya berfungsi di halaman Tentang atau halaman kontak.
+
+00:01:29.260 --> 00:01:30.860
+Kenapa kita harus mengirimnya.
+
+00:01:31.090 --> 00:01:36.730
+Jika pengguna tidak membutuhkannya dan tidak pernah mengunjungi halaman Tentang atau halaman kontak yang merupakan
+
+00:01:37.000 --> 00:01:38.590
+pemborosan sumber daya.
+
+00:01:38.620 --> 00:01:46.150
+Selain itu dengan opsi TTP yang baru namun melambat untuk hal ini tidak lagi hanya mengirim semua
+
+00:01:46.150 --> 00:01:48.360
+javascript dalam sekali jalan.
+
+00:01:48.370 --> 00:01:55.870
+Seringkali Anda ingin mengirimkan beberapa permintaan secara bersamaan yang menjadi jauh lebih murah secara teoritis di sini.
+
+00:01:55.960 --> 00:02:04.470
+Aplikasi modern seharusnya tidak melakukan manfaat javascript ini dari potongan kecil untuk menghindari mengunci
+
+00:02:04.470 --> 00:02:05.770
+ancaman utama.
+
+00:02:05.990 --> 00:02:14.270
+Dan kita bisa melakukan ini melalui sesuatu yang disebut Code splitting yang memungkinkan kita mengurangi jumlah pekerjaan
+
+00:02:14.450 --> 00:02:16.640
+yang dilakukan selama eksekusi.
+
+00:02:16.970 --> 00:02:18.330
+Mari kita lihat tampilannya.
+
+00:02:24.620 --> 00:02:25.430
+Itu dia.
+
+00:02:25.670 --> 00:02:29.010
+Kami menyebutnya pemecahan kode atau bootstrap progresif.
+
+00:02:30.300 --> 00:02:38.080
+Kami ingin mengirimkan halaman fungsional minimal yang hanya terdiri dari javascript shemale dan sesuai kebutuhan
+
+00:02:38.080 --> 00:02:40.800
+untuk saat ini menulis beranda.
+
+00:02:41.020 --> 00:02:47.740
+Dan saat lebih banyak sumber daya tiba aplikasi dapat malas memuat atau membuka lebih banyak fitur.
+
+00:02:47.740 --> 00:02:54.940
+Mungkin sebagai pengguna mengklik pada halaman Tentang, itu dapat memuat file javascript atau mungkin ingin halaman rumah
+
+00:02:54.940 --> 00:03:01.630
+semua dimuat dan browser tidak melakukan banyak pekerjaan di latar belakang saat pengguna mengunjungi halaman
+
+00:03:02.080 --> 00:03:02.830
+rumah.
+
+00:03:03.010 --> 00:03:11.550
+Ini dapat memuat akhir file javascript file Tentang dengan membagi ini hingga masing-masing kompartemen kami memberikan browser lebih sedikit
+
+00:03:12.360 --> 00:03:14.390
+pekerjaan yang harus dilakukan.
+
+00:03:14.610 --> 00:03:22.440
+Ngomong-ngomong jika Anda bertanya-tanya apa artinya javascript merah ini dengan baik, ini biasanya merupakan javascript vendor.
+
+00:03:22.650 --> 00:03:32.940
+Sebagai contoh jika halaman web kita menggunakan aksi ulang Yah kita tahu bahwa kita perlu bereaksi pada setiap halaman.
+
+00:03:32.960 --> 00:03:40.670
+Kita dapat membuat file vendor ini yang juga dimuat dan ini adalah semua file skrip pihak
+
+00:03:40.670 --> 00:03:45.680
+ketiga yang dibutuhkan seluruh situs web atau seluruh aplikasi kita.
+
+00:03:45.830 --> 00:03:51.430
+Dan hanya catatan singkat tentang perpustakaan pihak ketiga ini yang kita semua gunakan.
+
+00:03:51.710 --> 00:03:57.890
+Mereka biasanya memiliki tagihan produksi dalam membangun produksi adalah sesuatu yang dapat Anda gunakan yang
+
+00:03:57.890 --> 00:04:00.380
+jauh lebih cepat daripada pembangunan mereka.
+
+00:04:00.410 --> 00:04:08.150
+Itu berarti file yang dimodifikasi yang menghapus alat apa pun seperti alat debugging yang mungkin datang dengan
+
+00:04:08.150 --> 00:04:09.630
+perpustakaan pihak ketiga.
+
+00:04:10.010 --> 00:04:14.100
+Dan ini keluar dari kotak dengan buat bereaksi.
+
+00:04:14.150 --> 00:04:21.680
+Kami menjalankan NPM run built itu sebenarnya akan membangun versi produksi bereaksi dan bereaksi.
+
+00:04:21.890 --> 00:04:28.690
+Jadi tidak termasuk apa pun yang sebenarnya tidak kita butuhkan dan produksi jika Anda bertanya-tanya bagaimana ini bekerja.
+
+00:04:28.740 --> 00:04:30.720
+Mereka hanya pernyataan sederhana.
+
+00:04:30.720 --> 00:04:39.450
+Sebagai contoh jika Anda memiliki redux slugger kami yang saya tunjukkan di bagian sebelumnya di mana kami
+
+00:04:39.450 --> 00:04:47.580
+dapat masuk ke konsol semua tindakan kami tetapi dalam produksi Anda tidak akan benar-benar menginginkannya.
+
+00:04:47.580 --> 00:04:48.890
+Itu hanya baris kode aktual.
+
+00:04:48.900 --> 00:04:53.510
+Dan Anda juga tidak ingin semua tindakan Anda dicatat untuk pengguna.
+
+00:04:53.600 --> 00:04:57.350
+Jadi alih-alih Anda akan mengatakan jika lingkungan.
+
+00:04:57.350 --> 00:05:04.560
+Jadi jika ini adalah produksi yang dibangun maka jangan gunakan logger.
+
+00:05:04.620 --> 00:05:12.000
+Jika itu adalah pengembangan, gunakan logika sederhana dan Javascript yang lebih panjang, tetapi untuk
+
+00:05:12.000 --> 00:05:20.780
+kembali ke poin kami, kami ingin mengirimkan halaman fungsional minimal terdiri dari javascript Ishmail dan CSSA yang kami
+
+00:05:21.050 --> 00:05:23.730
+butuhkan untuk halaman saat ini.
+
+00:05:23.750 --> 00:05:24.800
+Kekeringan saat ini.
+
+00:05:25.310 --> 00:05:35.270
+Dan ketika lebih banyak sumber daya tiba aplikasi dapat malas memuat dan membuka lebih banyak fitur dan memuat malas berarti hanya memuat
+
+00:05:35.360 --> 00:05:42.200
+mereka setelah halaman Anda menjadi interaktif sehingga pengguna dapat merasa seperti aplikasi cepat dan dalam
+
+00:05:42.210 --> 00:05:48.090
+video berikutnya kita akan mencoba tangan kita di pemisahan kode kita sendiri.
+
+00:05:48.240 --> 00:05:49.190
+Anda tahu saya mengatakan hukum ini.
+
+00:05:49.200 --> 00:05:52.670
+Tapi itu akan menyenangkan jadi saya akan melihatnya.
+
+00:05:52.760 --> 00:05:52.960
+Babai.

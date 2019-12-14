@@ -1,0 +1,511 @@
+﻿WEBVTT
+
+00:00:00.710 --> 00:00:06.290
+Selamat datang kembali, kami telah membuat situs web yang sangat mendasar.
+
+00:00:06.650 --> 00:00:15.470
+Dan sampai sekarang jika kita melihat kode kita dapat membangun mungkin platform blog kita sendiri di mana kita hanya memiliki halaman
+
+00:00:15.680 --> 00:00:23.030
+untuk posting blog kita atau informasi perusahaan kita dan kita bangun dan berjalan dengan sangat cepat.
+
+00:00:23.850 --> 00:00:29.370
+Tapi seperti yang kita tahu sebagian besar aplikasi waktu jauh lebih kompleks dari itu.
+
+00:00:29.370 --> 00:00:30.590
+Mereka dinamis.
+
+00:00:30.690 --> 00:00:37.590
+Mereka memiliki panggilan API yang mereka butuhkan untuk membuat dan mendapatkan data dan mengubah bagian situs Web berdasarkan data
+
+00:00:37.590 --> 00:00:38.150
+itu.
+
+00:00:38.280 --> 00:00:40.530
+Seperti yang kami lakukan dengan aplikasi robo friends.
+
+00:00:40.890 --> 00:00:49.840
+Kami harus mengambil robot di komponen kami yang dipasang dan kemudian membuatnya di halaman kami.
+
+00:00:49.860 --> 00:00:59.460
+Jadi dalam video ini, mari kita lihat bagaimana kita bisa melakukan itu, bagaimana kita dapat memiliki aplikasi dinamis dengan sumur selanjutnya
+
+00:00:59.460 --> 00:01:09.130
+memungkinkan kita untuk melakukan ini dengan API yang disebut Dapatkan alat peraga awal dan dengan itu kita dapat mengambil data untuk
+
+00:01:09.370 --> 00:01:17.320
+halaman tertentu, katakanlah halaman baru atau kita akan membangun dan akan meneruskannya ke komponen sebagai penyangga.
+
+00:01:17.330 --> 00:01:19.730
+Sekali lagi cukup bereaksi saja.
+
+00:01:19.790 --> 00:01:27.320
+Hal keren tentang ini yang akan kita lihat adalah kita dapat memutuskan untuk melakukan panggilan API di server
+
+00:01:27.320 --> 00:01:30.190
+sebelum diberikan dan dikirim ke klien.
+
+00:01:30.350 --> 00:01:38.210
+Atau kita bisa melakukan panggilan API ini di ujung depan ke semua klien di mana begitu kita memberikan halaman itu akan
+
+00:01:38.200 --> 00:01:39.560
+memuatnya secara terpisah.
+
+00:01:40.290 --> 00:01:41.980
+Jadi mari kita mulai.
+
+00:01:42.150 --> 00:01:48.120
+Hal pertama yang perlu kita lakukan adalah agar kita dapat melakukan panggilan karena itu
+
+00:01:48.120 --> 00:01:53.160
+hanya tersedia di browser dan kita tidak menjalankan ini di browser.
+
+00:01:53.160 --> 00:01:55.970
+Ini akan berada di sisi server.
+
+00:01:56.070 --> 00:02:00.930
+Kami harus memiliki akses untuk mengambil dan kami hanya dapat menginstal paket yang direkomendasikan.
+
+00:02:00.930 --> 00:02:10.120
+Jika Anda bekerja dengan sisi berikutnya dan server itu disebut baik mari kita jalankan NPM bukan
+
+00:02:10.120 --> 00:02:19.500
+modal menginstal NPM dan itu disebut tinggi jadi morf pada mengambil Kami adalah nama yang saya tahu.
+
+00:02:19.520 --> 00:02:24.790
+Baiklah sekarang kita bisa menggunakan fetch di sisi klien mari kita buat halaman baru di sini.
+
+00:02:24.860 --> 00:02:29.710
+Saya akan mengatakan file baru akan disebut
+
+00:02:32.400 --> 00:02:38.180
+robot ya robot bahwa Yesus akan memiliki beberapa hal.
+
+00:02:38.180 --> 00:02:50.720
+Ini pertama-tama akan menggunakan tautan dari tautan berikutnya komponen tautan dan juga akan mengimpor Thach yang baru saja
+
+00:02:51.200 --> 00:02:59.740
+kami unduh dari isomorfik pada paket fetch dan kami cukup akrab dengan
+
+00:03:03.240 --> 00:03:09.160
+sintaksis sekarang saya hanya dapat melakukan robot konser.
+
+00:03:09.200 --> 00:03:14.650
+Dia menelepon tidak akan tanda tanya seperti ini.
+
+00:03:14.650 --> 00:03:15.270
+Ini dia.
+
+00:03:15.430 --> 00:03:26.250
+Dan kita akan kembali ke sini komponen dan katakanlah bahwa komponen ini akan menjadi
+
+00:03:26.250 --> 00:03:40.360
+div yang memiliki tag H1 yang mengatakan robot dan div nother bahwa di dalamnya akan memiliki semacam data robot.
+
+00:03:40.360 --> 00:03:42.400
+Untuk saat ini kami hanya akan mengetiknya.
+
+00:03:42.420 --> 00:03:45.960
+Tapi semoga kita dapat mengambil dan merender beberapa data di sini.
+
+00:03:47.830 --> 00:03:58.540
+Dan kita dapat menutup ini seperti ini dan mungkin di bagian bawah atau di atas kita dapat menambahkan tautan yang merujuk ke halaman rumah sehingga kita
+
+00:03:58.540 --> 00:04:02.010
+dapat kembali ke halaman rumah jika kita mau.
+
+00:04:04.400 --> 00:04:11.560
+Dan ini hanya akan menjadi tombol yang mengatakan rumah.
+
+00:04:11.680 --> 00:04:24.620
+Dan akhirnya tutup tautan kami dan jangan lupa untuk mengekspor robot default.
+
+00:04:24.780 --> 00:04:29.580
+Mari kita simpan itu dan juga kembali ke halaman
+
+00:04:32.330 --> 00:04:40.320
+utama kami dan di halaman utama pastikan bahwa kami menambahkan tag tautan nother ke halaman robot.
+
+00:04:41.470 --> 00:04:46.730
+Dan itu akan menjadi referensi robot.
+
+00:04:46.890 --> 00:04:52.650
+Dan sebenarnya empat halaman default adalah untuk atau standar hanya untuk
+
+00:04:52.650 --> 00:04:59.590
+menjaga file huruf kecil akan mengubah dua robot huruf kecil hanya untuk menjaga standar.
+
+00:05:01.580 --> 00:05:02.030
+Baiklah.
+
+00:05:02.090 --> 00:05:07.120
+Jadi mari kita ubah tautan di sini ke halaman robot kami.
+
+00:05:07.260 --> 00:05:10.220
+Sekali lagi itu sebabnya kami memiliki huruf kecil.
+
+00:05:10.560 --> 00:05:17.250
+Jadi sepertinya Gneisenau, Anda semua harus menyimpan dan memastikan bahwa halaman robot juga memiliki
+
+00:05:17.250 --> 00:05:17.910
+tautan.
+
+00:05:18.120 --> 00:05:24.140
+Mari jalankan PM start yang menjalankan selanjutnya dan lihat apa yang terjadi di sini.
+
+00:05:28.570 --> 00:05:28.850
+Baiklah.
+
+00:05:28.870 --> 00:05:32.260
+Kami memiliki dua band sekarang tetapi mereka berdua mengatakan robot.
+
+00:05:32.260 --> 00:05:34.020
+Ayo kembali ke sini.
+
+00:05:34.390 --> 00:05:42.240
+Jika kita pergi ke sisi indeks kita ya mari kita lanjutkan tentang boot.
+
+00:05:42.340 --> 00:05:43.790
+Bagaimanapun juga, saya dari Kanada.
+
+00:05:43.930 --> 00:05:44.470
+Baiklah.
+
+00:05:46.650 --> 00:05:54.450
+Kami memiliki halaman Tentang dan halaman robot dan kami memiliki panah di sini mengatakan sintaks di sini.
+
+00:05:54.450 --> 00:05:58.470
+Saya sangat suka kesalahan yang mereka tampilkan di sini tak terduga.
+
+00:05:58.830 --> 00:06:00.970
+Jadi mari kita kembali ke robot kita.
+
+00:06:04.060 --> 00:06:06.710
+Dan ya satu set kurung keriting.
+
+00:06:06.960 --> 00:06:08.610
+Anda sebenarnya membutuhkan tanda kurung di sini.
+
+00:06:10.330 --> 00:06:13.090
+Mari selamatkan.
+
+00:06:13.090 --> 00:06:13.780
+Ini dia.
+
+00:06:13.810 --> 00:06:15.240
+Halaman kami yang kuat berfungsi.
+
+00:06:15.250 --> 00:06:21.830
+Ini sangat jelek sekarang, tetapi semuanya bekerja setidaknya jika Anda ingat dengan aplikasi robot
+
+00:06:21.830 --> 00:06:31.520
+teman kami, kami menggunakan sesuatu yang disebut Jason placeholder dan placeholder Jaisalmer ini memberi kami titik akhir pengguna yang dapat
+
+00:06:31.550 --> 00:06:34.030
+kami gunakan di sini.
+
+00:06:34.040 --> 00:06:42.350
+Dia bisa melihat Jason yang kita dapatkan ketika kita mendapatkan permintaan menggunakan ini, kamu.
+
+00:06:42.530 --> 00:06:45.110
+Mari memuat beberapa data di sini.
+
+00:06:45.500 --> 00:06:53.480
+Dan cara kita melakukan ini di sini adalah menambahkan mendapatkan alat peraga awal dari robot sehingga kita dapat melewatkan
+
+00:06:53.480 --> 00:06:55.840
+robot ini sebagai alat peraga.
+
+00:06:55.840 --> 00:06:58.480
+Tetap bersamaku di sini dan kami akan menjelaskannya saat kami pergi.
+
+00:06:58.510 --> 00:07:00.590
+Saya akan menambahkan metode baru.
+
+00:07:01.440 --> 00:07:07.620
+Disebut mendapat alat peraga awal dan ya kami hanya menambahkan metode untuk robot.
+
+00:07:07.620 --> 00:07:12.980
+Ini adalah cara lain untuk melakukannya daripada mungkin metode kelas yang pernah Anda lihat sebelumnya.
+
+00:07:13.900 --> 00:07:22.400
+Dan di sini kita akan menggunakan async Oh, tunggu, kita bisa melakukan janji tapi mari kita gunakan fungsi async.
+
+00:07:24.560 --> 00:07:32.120
+Dan di sini kita akan melakukan tanggapan kita.
+
+00:07:32.340 --> 00:07:39.200
+Tanggapan whoops yang akan mengatakan tunggu ambil yang kita miliki akses sekarang dan itu akan berada di sana
+
+00:07:39.200 --> 00:07:39.650
+Anda.
+
+00:07:39.650 --> 00:07:47.910
+Yah kami baru saja menyalin placeholder Jason dan hanya untuk memiliki sedikit pandangan yang lebih baik.
+
+00:07:47.910 --> 00:07:48.850
+Saya akan katakan.
+
+00:07:48.900 --> 00:07:54.050
+Maka kita tidak membutuhkannya karena kita sudah menunggu sekarang.
+
+00:07:54.310 --> 00:08:01.370
+Mulai sekarang kita akan mengatakan bahwa data konser akan dinamai The wait response dot.
+
+00:08:01.790 --> 00:08:06.160
+Jason.
+
+00:08:06.220 --> 00:08:09.130
+Dan akhirnya kita bisa
+
+00:08:11.910 --> 00:08:15.830
+kembali sehingga kita bisa mengembalikan data ini.
+
+00:08:16.160 --> 00:08:21.760
+Katakanlah robot akan dikembalikan dengan data.
+
+00:08:25.510 --> 00:08:28.300
+Seperti namanya, kami memiliki beberapa kesalahan di sini.
+
+00:08:28.310 --> 00:08:30.100
+Dan mari kita lihat apa yang telah kita lakukan.
+
+00:08:30.160 --> 00:08:32.130
+Kami tidak membutuhkan titik koma di sini.
+
+00:08:32.140 --> 00:08:35.440
+Semuanya berfungsi seperti namanya.
+
+00:08:35.440 --> 00:08:41.760
+Yang kami katakan hanyalah, Hei, sebelum kita memuat robot ini, mari kita ambil beberapa alat bantu untuk itu.
+
+00:08:41.770 --> 00:08:43.560
+Kami akan melakukan alat peraga awal.
+
+00:08:43.690 --> 00:08:47.920
+Kami akan melakukan panggilan API untuk ini dan mengarahkan semua data kami.
+
+00:08:47.920 --> 00:08:56.230
+Ingat ini adalah data yang kami dapatkan dan kemudian dimuat sebagai robot dan apa yang dapat kami lakukan sekarang adalah
+
+00:08:56.230 --> 00:08:57.820
+di dalam robot.
+
+00:08:57.820 --> 00:09:04.780
+Saya memiliki alat peraga sekarang karena sekali lagi namanya menyarankan mendapatkan alat peraga awal dan alat peraga ini sekarang memiliki properti robot
+
+00:09:04.900 --> 00:09:05.850
+pada mereka.
+
+00:09:06.680 --> 00:09:13.600
+Jadi sekarang katakanlah alih-alih memiliki data robot di sini kita sebenarnya akan menggunakan loop.
+
+00:09:13.610 --> 00:09:19.270
+Kami sebenarnya akan menggunakan sintaks yang lebih baik.
+
+00:09:19.430 --> 00:09:26.420
+Dan lagi kurung keriting jadi itu adalah ekspresi javascript dan kita akan mengatakan robot dot prop itu.
+
+00:09:26.420 --> 00:09:34.940
+Kita akan memetakan robot-robot ini dan ini sangat mirip dengan apa yang
+
+00:09:34.940 --> 00:09:50.820
+telah kita lakukan di aplikasi aksi ulang kita di mana kita mengambil robot-robot itu dan kita dapat katakanlah membuat sekutu yang memiliki kunci robot.
+
+00:09:50.910 --> 00:09:58.500
+ID Sekali lagi ingat kami memiliki ID nama pengguna, email di sini yang kami terima.
+
+00:09:58.690 --> 00:10:00.340
+Dan kamu tahu.
+
+00:10:00.340 --> 00:10:05.130
+Untuk sekarang mari kita lakukan itu dan lihat apa yang terjadi untuk memastikan itu berfungsi.
+
+00:10:05.250 --> 00:10:08.180
+Mari kita simpan itu untuk melihat apakah kita mendapatkan kesalahan.
+
+00:10:08.380 --> 00:10:19.770
+Tidak, mari kita kembali ke halaman kita dan klik pada robot dan kita hanya perlu menyegarkan sedikit dan melihat apa yang kita dapatkan di sini.
+
+00:10:19.770 --> 00:10:21.160
+Mari kita lihat apakah ada kesalahan.
+
+00:10:22.090 --> 00:10:24.020
+Sumber daya yang gagal terlalu rendah sisanya.
+
+00:10:24.270 --> 00:10:26.250
+Oh ok itu Fab. com kita baik-baik saja.
+
+00:10:26.260 --> 00:10:26.500
+Baiklah.
+
+00:10:26.500 --> 00:10:28.270
+Semuanya berfungsi.
+
+00:10:28.330 --> 00:10:34.610
+Kami hanya tidak memuat ID seperti yang kami pikirkan meskipun kami memuat 10 item daftar.
+
+00:10:34.810 --> 00:10:39.640
+Dan jika kita benar-benar kembali itu karena saya tidak memberikan apa-apa jadi katakan saja.
+
+00:10:39.670 --> 00:10:47.420
+Dan di sini kita akan memuat robot atau nama robot.
+
+00:10:47.520 --> 00:10:52.140
+Mari kita simpan kembali ke sini dan lihat itu.
+
+00:10:52.570 --> 00:10:59.720
+Data kami dimuat dan Anda dapat melihat bahwa ini sangat mirip dengan apa yang kami lakukan di aplikasi teman robot kami.
+
+00:10:59.740 --> 00:11:06.160
+Kami hanya menggunakan placeholder Jaisalmer ini untuk mengambil robot kami dan
+
+00:11:06.160 --> 00:11:15.800
+kemudian menggunakan API lain untuk mengambil gambar robot dan saya kurang sedikit perawatan CSSA tetapi idenya sama.
+
+00:11:15.930 --> 00:11:18.470
+Mari kita buat ini sedikit lebih cantik.
+
+00:11:18.570 --> 00:11:25.050
+Bagaimana jika kami ingin memiliki tautan ke masing-masing robot ini, misalnya profil robot.
+
+00:11:25.050 --> 00:11:27.490
+Kita bisa menggunakan tag tautan lagi.
+
+00:11:28.420 --> 00:11:36.060
+Set kali ini kita bisa mengatakan tautan Tref akan terhubung dan saya menggunakan string
+
+00:11:38.730 --> 00:11:40.900
+Templi di sini.
+
+00:11:40.910 --> 00:11:48.610
+Ada kutipan ini tepat di atas tab keyboard Anda dan string Templi by the way adalah fitur
+
+00:11:48.610 --> 00:11:51.790
+ESX jadi mudah-mudahan Anda terbiasa dengan mereka.
+
+00:11:52.270 --> 00:11:53.900
+Kita akan mengatakan robot.
+
+00:11:54.460 --> 00:11:56.920
+Dan kemudian saya akan memberikan ide.
+
+00:11:56.980 --> 00:11:58.000
+Jadi
+
+00:12:00.840 --> 00:12:04.090
+misalkan robot mendapat ID.
+
+00:12:04.260 --> 00:12:15.330
+Jadi kami katakan buka tautan atau Jarrell railed itu robot atau kita harus membuat robot di sini karena itulah yang kita miliki di sini
+
+00:12:15.330 --> 00:12:17.160
+untuk halaman ini.
+
+00:12:17.550 --> 00:12:26.420
+Dan kemudian di dalam sini kita akan meninggalkan nama robot seperti itu tetapi tutup tag tautan seperti jadi mari kita simpan dan lihat apa yang
+
+00:12:26.430 --> 00:12:27.760
+terjadi di sini.
+
+00:12:32.950 --> 00:12:35.930
+Masuklah ke sini karena saya harus menutup komponen
+
+00:12:38.790 --> 00:12:44.670
+ini, dan saya mendapatkan pesan kesalahan yang mengatakan bahwa Anda menggunakan string langsung di dalam tautan.
+
+00:12:44.690 --> 00:12:50.510
+Penggunaan ini telah ditinggalkan karena kami harus membungkus ini dalam semacam tag.
+
+00:12:50.510 --> 00:12:53.010
+Jadi anggap saja ATAC untuk saat ini.
+
+00:12:55.910 --> 00:13:00.280
+Mari kita simpan dan kembali atau lihat itu.
+
+00:13:00.280 --> 00:13:04.070
+Sekarang saya memiliki tautan ini tetapi lihat Albar ini saat saya mengkliknya.
+
+00:13:05.610 --> 00:13:06.010
+Lihat itu.
+
+00:13:06.030 --> 00:13:11.340
+Saya pergi ke robot satu dengan kembali saya pergi ke robot ke halaman.
+
+00:13:11.520 --> 00:13:16.200
+Dan jelas kami belum memiliki halaman tersebut karena kami belum membuat file-file itu di folder halaman.
+
+00:13:16.200 --> 00:13:21.510
+Tapi Anda lihat di sini betapa mudahnya kami dapat terhubung ke profil jika kami mau.
+
+00:13:21.510 --> 00:13:22.460
+Betapa kerennya itu.
+
+00:13:25.240 --> 00:13:32.160
+Sekali lagi hal-hal bekerja sangat cepat dan sangat mudah berikutnya.
+
+00:13:32.170 --> 00:13:33.740
+Sekarang mari kita lakukan satu hal terakhir.
+
+00:13:34.120 --> 00:13:39.030
+Saya ingin konsol mencatat data di sini.
+
+00:13:39.160 --> 00:13:47.670
+Jika saya menyimpan di sini sekarang karena kami memiliki data konsol atau log, mari kita lihat apa yang terjadi di sisi browser.
+
+00:13:47.890 --> 00:13:53.480
+Jika saya membuka konsol lagi saya melihat bahwa ada Amaar yang merupakan singkatan dari hot module.
+
+00:13:53.500 --> 00:13:58.430
+Reload hanya selalu melihat perubahan sehingga kita tidak perlu khawatir tentang itu.
+
+00:13:58.510 --> 00:14:08.500
+Jika saya mengklik robot baik-baik saja saya mendapatkan log konsol di ujung depan tidak ada pada server berdasarkan permintaan tetapi
+
+00:14:08.500 --> 00:14:12.230
+jika saya menyegarkan ini lagi Anda melihat bahwa
+
+00:14:15.060 --> 00:14:18.520
+tidak ada yang terjadi pada konsol.
+
+00:14:18.520 --> 00:14:29.750
+Tetapi jika saya kembali Anda melihat bahwa di server itu telah dicatat sebagai konsul untuk mencatat data apa yang baru saja terjadi di
+
+00:14:29.750 --> 00:14:30.650
+sini.
+
+00:14:30.800 --> 00:14:38.600
+Anda lihat itu karena ketika kami membuat halaman di server kami sudah memiliki data dan tidak ada
+
+00:14:38.600 --> 00:14:41.510
+alasan untuk mengambilnya lagi pada klien.
+
+00:14:41.510 --> 00:14:48.490
+Jadi dalam hal ini menyegarkan halaman tidak pernah mengambil data pada klien yang sangat keren.
+
+00:14:56.300 --> 00:14:57.710
+Baiklah.
+
+00:14:57.710 --> 00:15:04.570
+Saya pikir Anda mulai mendapatkan ide ya berikutnya dan betapa mudahnya melakukan rendering sisi server.
+
+00:15:06.120 --> 00:15:14.130
+Sekarang Anda mungkin dapat mematikannya sendiri dan membangun kembali seluruh teman Roble menggunakan berikutnya dan membandingkan perbedaan
+
+00:15:14.130 --> 00:15:15.320
+di sana.
+
+00:15:15.750 --> 00:15:18.230
+Saya sangat menyarankan Anda melihat perpustakaan ini.
+
+00:15:18.270 --> 00:15:25.170
+Seperti biasa mereka memiliki dokumentasi yang bagus dan saya harap Anda menjelajahi bagaimana Anda dapat membuat aplikasi yang lebih besar
+
+00:15:25.170 --> 00:15:25.890
+dari ini.
+
+00:15:27.120 --> 00:15:28.120
+Saya akan melihat yang berikutnya.
+
+00:15:28.360 --> 00:15:28.640
+Namun oleh.

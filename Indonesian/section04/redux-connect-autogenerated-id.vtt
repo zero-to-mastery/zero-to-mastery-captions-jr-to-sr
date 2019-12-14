@@ -1,0 +1,499 @@
+﻿WEBVTT
+
+00:00:01.160 --> 00:00:02.750
+Dan selamat datang kembali.
+
+00:00:02.750 --> 00:00:10.130
+Satu hal yang saya perhatikan dari video sebelumnya adalah dalam file Konstans saya, saya harus memastikan bahwa variabel
+
+00:00:10.130 --> 00:00:12.260
+saya dan string saya sama.
+
+00:00:12.260 --> 00:00:16.910
+Jadi hanya menambahkan garis bawah di sini benar.
+
+00:00:16.940 --> 00:00:27.200
+Jadi mari kita bicara tentang bagian selanjutnya yang menggunakan metode lain yang datang dengan reac redux yang terhubung
+
+00:00:30.310 --> 00:00:39.170
+sekarang fungsi koneksi ini dioptimalkan agar kita tidak menggunakan sesuatu yang disebut subscript titik toko.
+
+00:00:39.310 --> 00:00:44.490
+Jadi jika Anda ingat ketika kami membatalkan login toko di apt.
+
+00:00:44.590 --> 00:00:50.960
+Ya, kami memiliki beberapa fungsi termasuk fungsi get state yang kami kunci.
+
+00:00:50.960 --> 00:00:55.430
+Sekarang ada juga fungsi titik berlangganan yang berlangganan.
+
+00:00:55.480 --> 00:01:02.510
+Setiap komponen yang tertarik untuk menyadari redux dan mendengarkan perubahan apa pun.
+
+00:01:03.680 --> 00:01:10.400
+Tapi itu sedikit membosankan dan koneksi menyederhanakan proses hanya dengan mengatakan menggunakan fungsi koneksi.
+
+00:01:10.400 --> 00:01:17.220
+Dan dengan itu kita akan membuat komponen redux sadar.
+
+00:01:17.430 --> 00:01:25.740
+Jika Anda ingat komponen Kinect akan menjadi komponen kecil berwarna kuning yang tahu tentang redux.
+
+00:01:25.740 --> 00:01:33.470
+Jadi kami telah membuat komponen penyedia yang pada dasarnya meneruskan toko ke komponen.
+
+00:01:33.510 --> 00:01:35.180
+Tapi sekarang kita harus mengatakan yang mana.
+
+00:01:35.220 --> 00:01:45.870
+Yang salah satu komponen Riak ini kami ingin menjadi pintar atau menyadari bahwa pustaka redoks ada dan mereka dapat
+
+00:01:45.870 --> 00:01:47.560
+berlangganan perubahan.
+
+00:01:47.580 --> 00:01:49.230
+Jadi saya akan menunjukkan kepada
+
+00:01:52.380 --> 00:01:59.040
+Anda bagaimana melakukan itu dan video ini dan omong-omong standar ini di industri adalah bahwa kita menyebut wadah komponen pintar
+
+00:01:59.040 --> 00:02:00.340
+ini semacam apt.
+
+00:02:00.450 --> 00:02:01.310
+Iya nih.
+
+00:02:01.410 --> 00:02:08.080
+Jadi kita kemungkinan besar akan menghubungkan file digest aplikasi karena itu adalah sebuah wadah.
+
+00:02:08.210 --> 00:02:15.680
+Jadi hal pertama yang akan kita lakukan adalah pergi ke APT O. J. File dan di sini
+
+00:02:15.740 --> 00:02:18.590
+kami ingin mengimpor beberapa hal.
+
+00:02:18.620 --> 00:02:21.490
+Mari kita mulai dengan mengimpor tindakan.
+
+00:02:21.530 --> 00:02:26.250
+Jadi saya akan mengimpor tindakan yang kita miliki.
+
+00:02:26.480 --> 00:02:27.770
+Mari kita ke sini.
+
+00:02:28.620 --> 00:02:32.300
+Kami memiliki tindakan bidang pencarian yang ditetapkan.
+
+00:02:32.310 --> 00:02:41.210
+Jadi kita akan melakukan tindakan set pencarian bidang dan kita akan mengimpor dari tindakan
+
+00:02:41.210 --> 00:02:51.030
+yang vap Jap dan karena tindakan menyarankan jatuh adalah tingkat folder karena dodgiest ada di wadah.
+
+00:02:51.120 --> 00:02:56.740
+Saya akan melakukan periode ganda.
+
+00:02:56.850 --> 00:03:03.720
+Mari kita simpan itu dan kita mendapatkan peringatan kecil yang bagus yang mengatakan bahwa set adalah bidang pencarian bidang didefinisikan tetapi
+
+00:03:03.720 --> 00:03:04.800
+tidak pernah digunakan.
+
+00:03:04.920 --> 00:03:11.330
+Itu juga aman file indeksnya sempurna.
+
+00:03:11.370 --> 00:03:16.120
+Sekarang mari kita gunakan metode hubungkan ini yang telah saya bicarakan.
+
+00:03:16.140 --> 00:03:32.540
+Jadi sekarang yang teratas di sini saya akan mengatakan impor metode koneksi dari re-act redux dan metode koneksi ini.
+
+00:03:32.540 --> 00:03:33.570
+Cara kerjanya.
+
+00:03:33.590 --> 00:03:40.140
+Dan lagi dan Anda hanya harus terbiasa di bagian paling bawah di mana kami melakukan ekspor standar.
+
+00:03:40.710 --> 00:03:50.820
+Kita akan mengatakan connect akan menjadi fungsi dan kemudian aplikasi lain atau braket lain di sekitar.
+
+00:03:50.840 --> 00:03:58.550
+Sekarang sintaks ini mungkin terlihat sedikit membingungkan dan terhubung ke sesuatu yang kita sebut fungsi
+
+00:03:58.940 --> 00:04:09.130
+orde tinggi dalam fungsi orde tinggi adalah fungsi yang mengembalikan fungsi lain sehingga koneksi akan berjalan dan apa pun
+
+00:04:09.160 --> 00:04:15.500
+yang terkoneksi di dalam fungsi ini akan mengembalikan fungsi lain .
+
+00:04:15.640 --> 00:04:22.250
+Dan karena mengembalikan fungsi lain, itu akan menjalankan bagian ini dengan aplikasi.
+
+00:04:22.280 --> 00:04:28.190
+Jadi begitulah komponen orde tinggi bekerja dan Anda akan belajar lebih banyak tentang ini nanti dalam karier Anda.
+
+00:04:28.190 --> 00:04:35.330
+Tetapi untuk sekarang ketahuilah bahwa ini adalah sintaksis yang harus Anda gunakan dan buat daftar baris baru sehingga kita bisa melihatnya dengan lebih
+
+00:04:35.430 --> 00:04:36.560
+baik di sini.
+
+00:04:37.410 --> 00:04:47.250
+Sekarang di sini terhubung menerima dua parameter yang lagi standar saya bisa beri nama apa pun
+
+00:04:47.470 --> 00:04:58.750
+yang saya inginkan, tetapi kami hanya mengikuti standar redux yang yang pertama adalah status peta untuk props dan
+
+00:04:58.750 --> 00:05:02.210
+yang kedua adalah peta pengiriman.
+
+00:05:02.880 --> 00:05:08.520
+Dua tanaman.
+
+00:05:08.580 --> 00:05:09.100
+Baiklah.
+
+00:05:09.100 --> 00:05:17.560
+Jadi sekarang kita baru saja menghubungkan komponen ini komponen aplikasi ini dan berkata hei
+
+00:05:17.560 --> 00:05:21.240
+berlangganan perubahan negara di toko redux.
+
+00:05:22.090 --> 00:05:28.930
+Dan sekarang aplikasi tahu bahwa ada toko redux di suatu tempat dan setiap kali
+
+00:05:28.930 --> 00:05:31.330
+ada perubahan mungkin tertarik.
+
+00:05:31.390 --> 00:05:35.470
+Tapi sekarang kita perlu mengatakannya apa yang menarik.
+
+00:05:35.500 --> 00:05:42.230
+Itulah kondisi yang harus saya dengarkan untuk satu pengiriman atau tindakan apa yang harus saya dengarkan.
+
+00:05:42.250 --> 00:05:46.820
+Jadi mari kita kembali ke atas dan paling atas di sini.
+
+00:05:46.910 --> 00:05:55.750
+Kami ingin mendefinisikan fungsi-fungsi ini yang atau parameter-parameter ini untuk semua yang akan kita lakukan adalah
+
+00:05:55.840 --> 00:06:04.410
+mengatakan keadaan peta Konst untuk alat peraga dan ini akan menerima status dan oops.
+
+00:06:04.520 --> 00:06:06.980
+Dan itu akan mengembalikan objek dan seperti yang
+
+00:06:09.850 --> 00:06:10.480
+saya katakan
+
+00:06:13.730 --> 00:06:19.310
+sebelumnya Anda dapat memberi nama ini apa pun yang Anda inginkan, tetapi ini adalah standar dan aplikasi redoks apa pun yang
+
+00:06:19.310 --> 00:06:22.040
+Anda hanya akan melihat ini atau hanya terbiasa dengan sintaks.
+
+00:06:22.100 --> 00:06:25.340
+Setelah Anda melakukannya beberapa kali, itu menjadi kebiasaan.
+
+00:06:25.340 --> 00:06:25.690
+Baiklah.
+
+00:06:25.690 --> 00:06:30.950
+Dan di sini kita ingin mengatakan bahwa negara bidang
+
+00:06:35.270 --> 00:06:41.690
+pencarian yang lagi jika kita pergi ke reduksi kita memiliki bidang
+
+00:06:44.530 --> 00:06:53.260
+pencarian di sini negara bidang pencarian ini akan sama dengan negara yang kita terima dot bagian
+
+00:06:53.260 --> 00:07:01.120
+dari peredam yang lagi jika kita pergi untuk reduksi adalah robot pencarian, jadi robot pencarian
+
+00:07:05.330 --> 00:07:06.550
+mencari bidang.
+
+00:07:06.560 --> 00:07:13.580
+Jadi sekali lagi itu mengatakan bahwa bidang pencarian yang akan kita kembalikan yang
+
+00:07:13.970 --> 00:07:24.560
+akan digunakan sebagai alat peraga oleh komponen hop akan berasal dari negara bukan negara Stata DOT robot pencarian dot bidang
+
+00:07:25.010 --> 00:07:33.980
+pencarian yang lagi-lagi berasal dari produsen kami karena ingat dalam indeks file jazz kami, kami telah membuat
+
+00:07:34.070 --> 00:07:37.220
+toko dengan robot pencarian MENGURANGI-IT.
+
+00:07:37.250 --> 00:07:45.980
+Jadi jika kita kembali ke sini, mari kita simpan itu dan kami telah mengirimkan pertandingan ke prop tidak ditentukan.
+
+00:07:46.160 --> 00:07:53.690
+Dan lagi karena kita membutuhkan bagian kedua yang dikirim Matt ke prop. Jadi
+
+00:07:56.970 --> 00:08:07.700
+mari kita buat lagi yang akan mengatakan bahwa peta Konst dikirim ke prop akan menerima sesuatu yang disebut dispatch.
+
+00:08:07.830 --> 00:08:14.730
+Dan lagi sesuatu yang Anda hanya harus terbiasa untuk mengirim jika Anda ingat dalam diskusi kami tentang
+
+00:08:14.730 --> 00:08:21.510
+kawanan adalah apa yang memicu tindakan sehingga tidak bertindak hanya sebuah objek yang kami buat.
+
+00:08:21.510 --> 00:08:29.330
+Sekali lagi jika Anda ingat tetapi untuk mengirim tindakan ini kami masih memerlukan sesuatu yang disebut pengiriman.
+
+00:08:29.360 --> 00:08:35.250
+Jadi akan dikirim ke peredam.
+
+00:08:35.330 --> 00:08:44.750
+Jadi pengiriman ini sekarang dapat digunakan untuk mengirim tindakan dan cara kita melakukannya, kita dapat mengatakan tentang perubahan pencarian yang hanya nama yang
+
+00:08:46.040 --> 00:08:48.350
+bisa saya katakan apa saja.
+
+00:08:48.360 --> 00:08:51.950
+Jadi ingat ini prop yang akan diterima.
+
+00:08:51.950 --> 00:08:58.230
+Tapi kita akan tetap sama dengan yang ada di aplikasi re-action kami pada perubahan pencarian.
+
+00:08:58.260 --> 00:09:05.910
+Dan inilah Propp yang akan dinamai dan perubahan pencarian on akan menerima
+
+00:09:06.390 --> 00:09:15.270
+sebuah event karena ingat itu adalah kotak input yang diketikkan pengguna dan event ini lagi
+
+00:09:15.270 --> 00:09:26.840
+karena pada search search adalah fungsi akan mengirimkan set tindakan mencari bidang karena ingat tindakan itu hanya objek hanya fungsi
+
+00:09:26.870 --> 00:09:28.870
+yang mengembalikan objek.
+
+00:09:28.940 --> 00:09:30.530
+Kami ingin mengirim itu.
+
+00:09:30.620 --> 00:09:39.950
+Jadi produsen menyadarinya dan bidang pencarian ini ketika dikirim akan mendengarkan.
+
+00:09:40.100 --> 00:09:47.590
+Jika Anda ingat dalam tindakan kami, ia akan menerima teks yang memiliki apa pun yang
+
+00:09:48.220 --> 00:09:59.100
+dimiliki pengguna dan meletakkannya dalam hal ini kami hanya dapat melakukan event dot target dot value lagi seperti yang kami miliki pada
+
+00:09:59.100 --> 00:10:03.520
+acara tahun perubahan pencarian yang menargetkan de-value .
+
+00:10:03.530 --> 00:10:07.970
+Jadi, jika saya menyimpan ini, izinkan saya membuat ini sedikit lebih kecil dan simpan.
+
+00:10:07.970 --> 00:10:11.390
+Sekarang saya punya beberapa peringatan.
+
+00:10:11.390 --> 00:10:17.100
+Pertama, ingat bahwa kita perlu mengembalikan ini sebagai objek.
+
+00:10:17.180 --> 00:10:30.930
+Jadi kami ingin mengatakan kembali seperti yang kami lakukan di atas dengan menyatakan objek yang berisi semua tindakan kami.
+
+00:10:30.950 --> 00:10:38.340
+Sekali lagi peta keadaan ke prop adalah beri tahu saya keadaan bagian mana dan saya perlu mendengarkan dan mengirim kami alat
+
+00:10:38.350 --> 00:10:46.270
+peraga dan peta yang dikirim ke prop mengatakan, "Hei, beri tahu saya alat peraga apa yang harus saya dengarkan yang merupakan tindakan
+
+00:10:46.300 --> 00:10:47.720
+yang perlu dikirim".
+
+00:10:49.160 --> 00:10:52.170
+Baiklah semuanya bekerja.
+
+00:10:52.670 --> 00:10:54.640
+Kami tidak mendapatkan kesalahan apa pun di sini.
+
+00:10:55.070 --> 00:11:01.520
+Dan ingat sekarang bahwa di sini di terhubung kita tahu apa peta negara untuk
+
+00:11:01.530 --> 00:11:08.120
+prop adalah peta dikirim ke proses dan terhubung akan menjalankan bagian pertama dari fungsi dan berkata
+
+00:11:08.120 --> 00:11:15.950
+Oke saya mendengarkan bagian ini negara dan saya tertarik pada tindakan ini dan kemudian akan memberikan alat peraga
+
+00:11:16.010 --> 00:11:17.460
+itu ke aplikasi.
+
+00:11:17.480 --> 00:11:19.260
+Inilah bagian yang menarik.
+
+00:11:20.160 --> 00:11:24.850
+Karena ingat saya katakan redoks dapat menggantikan keadaan Anda di aplikasi Anda.
+
+00:11:24.990 --> 00:11:36.490
+Secara teknis saya sekarang dapat menghapus bidang pencarian dari keadaan ini dari aplikasi dan saya juga dapat menghapus pada perubahan pencarian karena
+
+00:11:36.510 --> 00:11:40.290
+sekali lagi yang turun sebagai alat peraga.
+
+00:11:40.290 --> 00:11:45.860
+Kami tidak perlu mendeklarasikannya sebagai metode aplikasi sehingga saya dapat menghapusnya sekarang.
+
+00:11:46.760 --> 00:11:52.660
+Dan kemudian di sini saya tidak tertarik pada bidang pencarian keadaan ini lagi.
+
+00:11:52.790 --> 00:11:56.780
+Saya bisa menghapus itu karena sekarang turun sebagai alat peraga.
+
+00:11:56.990 --> 00:11:59.570
+Jadi alih-alih, saya
+
+00:12:02.890 --> 00:12:16.180
+dapat mengatakan bahwa kolom pencarian Konst dengan modal F berasal dari alat peraga berhenti ini dan akhirnya perubahan pencarian tidak berasal
+
+00:12:16.180 --> 00:12:21.350
+dari perubahan pencarian ini yang merupakan metode aplikasi.
+
+00:12:21.370 --> 00:12:22.520
+Itu berasal dari alat peraga.
+
+00:12:22.600 --> 00:12:31.650
+Jadi sekali lagi saya bisa mengatakan pada perubahan pencarian dan menghapus titik ini katakanlah itu dan lagi saya
+
+00:12:35.740 --> 00:12:42.040
+akan mendapatkan kesalahan mengatakan bahwa bidang pencarian tidak didefinisikan karena ingat dengan kondisi
+
+00:12:42.040 --> 00:12:47.730
+redux kami, kami mengubah bidang pencarian untuk memiliki jalur modal.
+
+00:12:47.750 --> 00:12:52.480
+Jadi jika saya mengubahnya maka itu mengerti bahwa itulah yang kami minati
+
+00:12:53.860 --> 00:12:57.080
+Semuanya berfungsi.
+
+00:12:57.110 --> 00:13:06.950
+Sekarang inilah sedikit gotcha sekarang karena dalam indeks kami musim gugur lalu, kami hanya memiliki satu pengirim.
+
+00:13:06.980 --> 00:13:11.440
+Kami menciptakan toko dari ini jika kami kembali ke APT.
+
+00:13:11.490 --> 00:13:17.460
+Ya negara sebenarnya hanya memiliki satu bidang dan itu adalah bidang pencarian.
+
+00:13:17.570 --> 00:13:21.950
+Jadi kita harus melakukan sesuatu seperti ini.
+
+00:13:22.830 --> 00:13:28.680
+Agar itu berfungsi sekarang kita akan kembali ke titik ini karena begitu kita
+
+00:13:29.190 --> 00:13:37.470
+mulai menambahkan lebih banyak kedamaian negara dan lebih banyak reduksi kita harus mendapatkan keadaan dari setiap bagian yang kita minati.
+
+00:13:37.860 --> 00:13:42.510
+Tetapi untuk sekarang kita akan kembali ke itu kita hanya akan mengatakan
+
+00:13:42.510 --> 00:13:47.630
+bidang pencarian negara karena jika Anda ingat dan toko dot log Konsole tidak mendapatkan negara.
+
+00:13:47.700 --> 00:13:49.230
+Kami baru saja memiliki kolom pencarian.
+
+00:13:49.530 --> 00:13:54.730
+Jadi mari kita simpan itu dan kembali.
+
+00:13:54.750 --> 00:13:55.850
+Baiklah.
+
+00:13:55.950 --> 00:13:58.160
+Tidak ada di konsol yang bagus.
+
+00:13:58.230 --> 00:14:03.530
+Momen kebenaran jika saya mengetikkan sesuatu di sini.
+
+00:14:03.610 --> 00:14:04.340
+Lihat itu.
+
+00:14:04.360 --> 00:14:11.140
+Semuanya berfungsi terlepas dari kenyataan bahwa kami tidak lagi memiliki keadaan untuk bidang pencarian
+
+00:14:11.440 --> 00:14:13.910
+di sini atau metode.
+
+00:14:14.050 --> 00:14:16.570
+Alih-alih semuanya berjalan melalui redux.
+
+00:14:16.570 --> 00:14:28.090
+Dan hanya untuk menguji teori itu jika saya masuk ke sini ke dalam set pencarian saya dan alih-alih memiliki pengembalian otomatis
+
+00:14:28.090 --> 00:14:37.240
+ini saya akan mengatakan konsol atau log teks dan saya akan kembali dari sini objek jadi kita
+
+00:14:37.240 --> 00:14:44.110
+hanya akan pergi untuk menghibur log untuk melihat apakah tindakan tersebut masuk.
+
+00:14:44.140 --> 00:14:46.480
+Saya simpan dan kembali.
+
+00:14:46.480 --> 00:14:51.290
+Mari kita buka alat konsol dan lihat itu.
+
+00:14:51.370 --> 00:14:55.890
+Semua yang saya ketik sedang dikirim melalui tindakan.
+
+00:14:55.900 --> 00:15:01.660
+Dan bagian keren lainnya adalah jika saya pergi ke peredam dan sekali lagi saya menguji
+
+00:15:01.750 --> 00:15:11.340
+semuanya dan saya katakan jenis konsol anjing log dot tindakan saya menyimpan ini dan kembali kita melihat bahwa kita memiliki tindakan lucu kecil yang terjadi.
+
+00:15:11.340 --> 00:15:13.980
+Dan ini adalah default saat redoks dimulai.
+
+00:15:14.100 --> 00:15:20.520
+Sekarang jika saya mengklik pada sesuatu atau mengetik sesuatu, saya mendapatkan pencarian perubahan bidang pencarian
+
+00:15:20.520 --> 00:15:27.390
+perubahan nyata karena peredam pada setiap tindakan dijalankan dan mengatakan apakah perubahan perubahan pencarian harus tindakan terjadi.
+
+00:15:27.420 --> 00:15:29.960
+Jika itu masalahnya saya akan mengembalikan negara baru.
+
+00:15:29.970 --> 00:15:31.050
+Sangat keren.
+
+00:15:31.050 --> 00:15:37.820
+Kami baru saja menghubungkan reaksi kami hingga redoks dan semuanya bekerja dengan baik.
+
+00:15:38.850 --> 00:15:44.370
+Ada sedikit boilerplate di sini dan Anda tahu Anda harus mengingat
+
+00:15:44.370 --> 00:15:53.040
+status peta untuk mendukung peta yang dikirim ke prop, tetapi begitu Anda terbiasa dengan sintaks itu benar-benar bagus
+
+00:15:53.250 --> 00:16:01.710
+dan indah cara kerja redoks dan bagaimana kami telah membersihkan segala sesuatu di mana semuanya mengalir baik seperti
+
+00:16:01.710 --> 00:16:10.320
+yang kami sebutkan kami telah membuat interaksi yang dikirim ke pengurangan atau fungsi yang didasarkan pada tindakan yang
+
+00:16:10.320 --> 00:16:13.710
+mengambil status dan mengubahnya di toko.
+
+00:16:13.710 --> 00:16:19.200
+Dan karena toko mendapat pembaruan komponen tindakan yang tertarik akan mendengarkan
+
+00:16:19.200 --> 00:16:22.040
+perubahan itu dan melakukan perubahan.
+
+00:16:23.460 --> 00:16:25.260
+Sangat keren.
+
+00:16:25.260 --> 00:16:28.430
+Baiklah, beberapa hal yang lebih menarik akan muncul di video berikutnya.
+
+00:16:28.620 --> 00:16:30.080
+Saya akan lihat yang itu.
+
+00:16:30.080 --> 00:16:30.390
+Sampai jumpa.

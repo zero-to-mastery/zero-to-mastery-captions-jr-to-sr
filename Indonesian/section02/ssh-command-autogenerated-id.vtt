@@ -1,0 +1,259 @@
+﻿WEBVTT
+
+00:00:01.830 --> 00:00:02.750
+Selamat datang kembali.
+
+00:00:02.970 --> 00:00:07.730
+Jadi saya hanya berbicara banyak tentang SSH dan kedengarannya cukup menarik.
+
+00:00:07.740 --> 00:00:10.840
+Tapi bagaimana tepatnya kita menggunakannya?
+
+00:00:11.070 --> 00:00:13.530
+Sebenarnya ini cukup sederhana.
+
+00:00:13.590 --> 00:00:22.950
+Kami hanya menjalankan perintah SSH dengan pengguna apa pun yang ingin kami hubungi di host mana pun yang merupakan alamat
+
+00:00:22.950 --> 00:00:27.270
+IP komputer mana pun yang ingin kami tuju.
+
+00:00:27.270 --> 00:00:33.070
+Mari saya tunjukkan apa yang saya maksudkan dengan sedikit demonstrasi. Tepat di sini saya pergi ke
+
+00:00:33.090 --> 00:00:41.940
+Digital Ocean dot com dan Digital Ocean adalah penyedia yang memberi kami server untuk benar-benar sangat murah
+
+00:00:41.940 --> 00:00:44.330
+sebenarnya sangat sangat menyukainya.
+
+00:00:44.340 --> 00:00:49.920
+Dan jika Anda pernah menguji hal-hal dan Anda sedang mencari opsi yang baik untuk memiliki server
+
+00:00:49.920 --> 00:00:53.790
+di suatu tempat di cloud. Well Digital Ocean itu luar biasa.
+
+00:00:53.820 --> 00:00:59.550
+Saya pergi ke depan dan benar-benar menciptakan sesuatu yang disebut tetesan dan itulah yang mereka sebut versi
+
+00:00:59.550 --> 00:01:02.000
+server mereka yang dapat Anda beli.
+
+00:01:02.020 --> 00:01:09.540
+Saya memilih Ubuntu yang bagi mereka yang tidak tahu, itu adalah sistem operasi open source yang dibangun di
+
+00:01:09.540 --> 00:01:10.760
+atas Linux.
+
+00:01:10.890 --> 00:01:16.460
+Sebagian besar server di dunia menggunakan Ubuntu sehingga standar.
+
+00:01:16.470 --> 00:01:21.470
+Saya hanya akan mendapatkan opsi termurah di sini seharga $ 5 sebulan hanya dengan sedikit memori.
+
+00:01:21.630 --> 00:01:27.360
+CPU Anda kami tidak akan menggunakannya untuk apa pun yang terlalu gila jadi ini bagus.
+
+00:01:27.450 --> 00:01:29.790
+Saya memilih San Francisco sebagai daerah saya.
+
+00:01:29.790 --> 00:01:33.190
+Sebenarnya saya akan memilih New York karena lebih dekat dengan saya.
+
+00:01:33.210 --> 00:01:35.670
+Jadi di situlah server akan ditempatkan.
+
+00:01:35.850 --> 00:01:45.070
+Dan saya hanya akan menekan create, dan sekali saya menekan create itu hanya akan memberi saya server yang bisa saya akses.
+
+00:01:45.090 --> 00:01:51.720
+Jadi di sini dengan sedikit omong kosong tentang nama yang merupakan server saya, dan Anda
+
+00:01:51.720 --> 00:02:00.960
+lihat di sini bagaimana mereka memberi saya alamat IP server saya sementara saya bisa menyalin ini dan saya hanya pergi ke
+
+00:02:00.960 --> 00:02:11.640
+terminal saya sekarang saya bisa, menggunakan perintah SSH, akses rute yang merupakan pengguna yang mereka berikan kepada kami secara default dan salin dan tempel alamat
+
+00:02:11.700 --> 00:02:14.530
+IP yang mereka berikan kepada kami.
+
+00:02:14.700 --> 00:02:18.180
+Tekan enter dan lihat itu.
+
+00:02:18.260 --> 00:02:22.120
+Saya sekarang melihat server itu.
+
+00:02:22.370 --> 00:02:26.400
+Di dalam terminal itu dan saya dapat mengakses apa pun yang saya inginkan.
+
+00:02:26.450 --> 00:02:31.500
+Jadi jika saya klik "ls" saya lihat di sini bahwa saya telah membuat direktori hello.
+
+00:02:31.640 --> 00:02:33.260
+Saya juga bisa melakukan direktori lain.
+
+00:02:33.260 --> 00:02:41.350
+Mari kita jalankan direktori make dan kita akan menyebutnya "woohooo" karena kami sangat bersemangat.
+
+00:02:41.510 --> 00:02:46.670
+Jadi sekarang jika saya melihat LS, saya memiliki direktori bernama Woohoo.
+
+00:02:46.670 --> 00:02:50.400
+Dan saya memiliki akses penuh ke server.
+
+00:02:50.420 --> 00:02:51.900
+Sangat sangat keren.
+
+00:02:51.980 --> 00:02:56.870
+Dan jangan khawatir saya akan menunjukkan kepada Anda bagaimana sebenarnya mengatur ini dan bagaimana saya membuat semuanya bekerja
+
+00:02:56.900 --> 00:02:58.930
+Dan kemudian pada video.
+
+00:02:59.030 --> 00:03:02.310
+Tetapi untuk sekarang mari kita kembali ke slide ini.
+
+00:03:03.280 --> 00:03:10.120
+Sekarang jika Anda menggunakan Linux atau Mac maka menggunakan SSH sangat sederhana. Jika Anda menggunakan Windows, Anda harus menggunakan
+
+00:03:10.160 --> 00:03:16.990
+klien SSH untuk membuka koneksi SSH, dan yang paling populer untuk Windows disebut "dempul" yang akan
+
+00:03:16.990 --> 00:03:24.100
+saya sertakan dalam sumber daya untuk pelajaran ini. Sekarang dengan menggunakan SSH kita dapat terhubung ke
+
+00:03:24.100 --> 00:03:29.820
+komputer jarak jauh ini dan menjalankan perintah di atasnya seperti yang saya tunjukkan.
+
+00:03:29.980 --> 00:03:37.090
+Sekarang betapa kerennya dengan menggunakan SSH kita dapat terhubung ke komputer mana saja yang memungkinkan koneksi SSH ini di mana
+
+00:03:37.990 --> 00:03:39.450
+saja di dunia.
+
+00:03:39.520 --> 00:03:46.060
+Jadi mari kita tinjau, perintah kunci SSH dan struktur sistem Anda bahwa Anda ingin
+
+00:03:46.060 --> 00:03:51.340
+membuka koneksi shell aman terenkripsi. Pengguna mewakili akun yang ingin Anda akses.
+
+00:03:51.340 --> 00:03:58.630
+Misalnya Anda mungkin ingin mengakses pengguna root yang pada dasarnya sama dengan administrator sistem dengan
+
+00:03:58.930 --> 00:04:05.210
+hak penuh untuk memodifikasi apa pun pada sistem yang kadang-kadang bisa berbahaya.
+
+00:04:05.990 --> 00:04:09.370
+Host merujuk ke komputer yang ingin Anda akses.
+
+00:04:09.440 --> 00:04:15.280
+Ini bisa berupa alamat IP seperti yang kami gunakan atau nama domain.
+
+00:04:15.510 --> 00:04:24.310
+Dan begitu Anda menekan enter, Anda akan disambut dengan jendela terminal jarak jauh seperti kami berada di contoh itu. BAIK.
+
+00:04:24.630 --> 00:04:32.460
+Jadi Anda berpikir sendiri, keren Andrei, tapi bagaimana ini berlaku untuk pengembangan web?
+
+00:04:32.950 --> 00:04:39.760
+Baiklah izinkan saya menceritakan sebuah kisah dan mengapa saya mulai dengan pelajaran ini dalam kursus ini. Pada hari pertama saya sebagai pengembang penuh
+
+00:04:39.850 --> 00:04:41.690
+waktu, saya diminta
+
+00:04:41.770 --> 00:04:45.960
+untuk membuat kunci SSH dan terhubung untuk mendapatkan bantuan.
+
+00:04:46.480 --> 00:04:47.640
+Dan coba tebak.
+
+00:04:47.770 --> 00:04:50.340
+Saya tidak tahu bagaimana melakukannya.
+
+00:04:50.410 --> 00:04:58.840
+Saya tahu semua tentang HTML, CSS, javascript dan semua itu, tetapi tidak ada yang memberi tahu saya apa pun tentang menggunakan kunci
+
+00:04:58.840 --> 00:05:00.280
+SSH untuk pulang.
+
+00:05:00.330 --> 00:05:01.580
+Apa itu tadi?
+
+00:05:01.630 --> 00:05:04.570
+Anda lihat saya tidak tahu bagaimana melakukannya.
+
+00:05:05.420 --> 00:05:11.420
+SSH adalah konsep yang sangat penting yang tidak banyak dibicarakan tetapi sebagai pengembang web Anda benar-benar
+
+00:05:11.420 --> 00:05:16.330
+perlu memahami karena, Anda akan menggunakan SSH sepanjang waktu dalam karier Anda.
+
+00:05:16.430 --> 00:05:24.660
+Jadi beberapa contoh ini termasuk, menghubungkan ke GitHub, mengkloning, mendorong, menarik file dari server
+
+00:05:24.660 --> 00:05:27.510
+mereka ke komputer Anda.
+
+00:05:27.620 --> 00:05:33.900
+Ingat bagaimana ketika kami mengkloning sesuatu dari GitHub, kami memiliki dua opsi yang kami
+
+00:05:33.920 --> 00:05:43.450
+gunakan HTTPS yang kemungkinan besar pernah Anda gunakan sebelumnya, dan menggunakan SSH dan ingat bagaimana dengan HTTPS Anda harus memasukkan kata sandi Anda
+
+00:05:43.450 --> 00:05:45.700
+setiap saat untuk mengkloning repo?
+
+00:05:46.060 --> 00:05:48.250
+Anda tidak harus melakukan itu dengan SSH.
+
+00:05:48.550 --> 00:05:52.590
+Dan ada beberapa manfaat lain yang akan dibahas nanti.
+
+00:05:52.620 --> 00:05:56.760
+Kedua, Anda dapat mengakses komputer lain dari jarak jauh.
+
+00:05:56.760 --> 00:06:02.200
+Jadi, jika Anda berada di rumah ketika Anda perlu mengakses pekerjaan komputer Anda, Anda bisa memasukkan SSH ke dalamnya.
+
+00:06:03.770 --> 00:06:11.360
+Akhirnya mungkin use case terpenting adalah Anda memiliki aplikasi produksi di suatu tempat di server, dan
+
+00:06:11.360 --> 00:06:17.510
+di tengah malam Anda mendapat panggilan. Hei, kami menghapus aplikasi Anda secara tidak sengaja.
+
+00:06:17.510 --> 00:06:19.700
+Bisakah Anda menginstalnya kembali di server?
+
+00:06:20.950 --> 00:06:25.530
+Sekarang ini kedengarannya konyol tetapi sebenarnya sesuatu telah terjadi pada saya.
+
+00:06:25.660 --> 00:06:33.100
+Saya harus SSH ke server mendapatkan file proyek ke server lagi dan pergi
+
+00:06:33.370 --> 00:06:42.020
+melalui semua langkah menjalankan menginstal NPM, membangun NPM, mulai NPM, untuk mendapatkan aplikasi kembali dan berjalan.
+
+00:06:42.030 --> 00:06:48.450
+Jadi dengan sisa video saya akan menunjukkan kepada Anda bagaimana menguasai SSH tidak pernah mengalami apa yang saya
+
+00:06:48.510 --> 00:06:50.690
+lakukan pada hari pertama pekerjaan saya.
+
+00:06:50.700 --> 00:06:57.960
+Anda akan belajar cara enkripsi bekerja menggunakan SSH untuk menyelesaikan masalah di atas, dan juga
+
+00:06:57.960 --> 00:07:01.600
+cara mengatur server untuk memungkinkan koneksi SSH.
+
+00:07:01.650 --> 00:07:03.500
+Ini adalah keterampilan yang sangat penting.
+
+00:07:03.570 --> 00:07:05.900
+Saya ingin menjadi bagian pertama dari kursus.
+
+00:07:06.200 --> 00:07:07.860
+Ini akan sangat menyenangkan.
+
+00:07:07.980 --> 00:07:10.390
+Jadi saya akan lihat di video berikutnya. Buh-Bye.
