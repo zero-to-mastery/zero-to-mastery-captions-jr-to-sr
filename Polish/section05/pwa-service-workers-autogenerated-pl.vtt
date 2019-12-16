@@ -1,0 +1,403 @@
+﻿WEBVTT
+
+00:00:01.660 --> 00:00:01.950
+W porządku.
+
+00:00:01.960 --> 00:00:10.170
+Nadszedł czas, aby porozmawiać o ostatnim punkcie, w którym pracownik serwisu tworzy naszą progresywną sieć w miejscu, w którym
+
+00:00:10.170 --> 00:00:11.890
+jest pracownikiem serwisu.
+
+00:00:12.000 --> 00:00:19.730
+Brzmi jak coś pożytecznego, czy pracownik serwisowy to skrypt, który przeglądarka działa w
+
+00:00:20.210 --> 00:00:24.510
+tle oddzielnie od aplikacji internetowej strony.
+
+00:00:24.740 --> 00:00:31.270
+Zwykle jest używany do funkcji, które nie wymagają strony internetowej lub interakcji użytkownika.
+
+00:00:31.280 --> 00:00:38.030
+Zapamiętaj główny wątek, o którym mówiłem, że jest jeden pracownik, który próbuje
+
+00:00:38.510 --> 00:00:47.590
+pracować z prostym CSX i JavaScriptem, pomyśl o pracowniku obsługi jako innym pracowniku, który masz teraz w przeglądarce.
+
+00:00:48.490 --> 00:00:59.040
+Pracujący w tle i działający jako programowalny serwer proxy, który pozwala nam kontrolować to, co dzieje się
+
+00:00:59.400 --> 00:01:08.530
+na żądanie, na podstawie żądania, i dlatego możemy sprawić, że nasze aplikacje progresywne będą działać
+
+00:01:08.740 --> 00:01:10.870
+w trybie offline.
+
+00:01:10.870 --> 00:01:13.090
+To brzmi całkiem interesująco.
+
+00:01:14.040 --> 00:01:22.720
+Teraz, jeśli pracownicy usług zostali ostatnio dodani do przeglądarek, w tym safari i poza doświadczeniami w trybie offline,
+
+00:01:22.900 --> 00:01:27.610
+pomagają także w zlewach w tle i powiadomieniach push.
+
+00:01:27.610 --> 00:01:34.330
+Ale będziemy rozmawiać tylko o tym, jak pracownik serwisu zezwala na nasze doświadczenia w trybie
+
+00:01:34.330 --> 00:01:40.720
+offline, ponieważ jest to jego główna funkcja, a takie rzeczy, jak synchronizacja w tle i
+
+00:01:40.720 --> 00:01:46.850
+powiadomienia wypychane są nadal dość nowe, a wokół nich wciąż tworzą się najlepsze
+
+00:01:46.850 --> 00:01:54.350
+praktyki. to dalej, jeśli jesteś zainteresowany tymi tematami, ale na razie wróćmy do najważniejszej części. Jak dobrze
+
+00:01:54.380 --> 00:02:02.710
+wykorzystać pracownika serwisu, jeśli wrócimy do naszej aplikacji do tworzenia reakcji, możesz pamiętać, że stworzyliśmy naszą aplikację reaguj dobrze
+
+00:02:02.710 --> 00:02:05.160
+tak naprawdę go nie stworzyliśmy.
+
+00:02:05.170 --> 00:02:06.620
+Stworzyło to dla nas.
+
+00:02:06.730 --> 00:02:16.260
+Ten plik o nazwie register service worker i przechodzimy do indeksu przechowywanego tak, pamiętamy, że w naszej głównej aplikacji,
+
+00:02:16.350 --> 00:02:24.690
+którą renderujemy, mieliśmy naszą reakcję na renderowaniu, ale także mieliśmy tę funkcję rejestrującego usługę, którą w pewnym
+
+00:02:25.170 --> 00:02:26.670
+sensie usunąłem.
+
+00:02:26.670 --> 00:02:35.010
+Do tej pory ten pracownik usługi rejestrującej został zaimportowany z yep. Zgadłeś, że to jest nasz plik rejestrującego pracownika serwisowego,
+
+00:02:35.010 --> 00:02:41.040
+a gdy przechodzisz przez ten plik, może on wyglądać dość przytłaczająco, ale ma świetny handel,
+
+00:02:41.040 --> 00:02:43.020
+aby pokazać, co robi.
+
+00:02:44.140 --> 00:02:47.860
+Ale pozwól, że pokażę ci istotę tego i co robi ten cały plik.
+
+00:02:47.860 --> 00:02:57.030
+To znacznie prostsze niż myślisz, otwórzmy tutaj nową kartę i otwórz naszą konsolę.
+
+00:02:57.080 --> 00:03:00.830
+To właśnie robi pracownik serwisu rejestrującego.
+
+00:03:00.860 --> 00:03:02.000
+To trochę za duże.
+
+00:03:02.000 --> 00:03:03.200
+Zobaczmy, czy
+
+00:03:06.050 --> 00:03:09.960
+to działa, sprawdza, czy przeglądarka obsługuje serwisanta.
+
+00:03:09.980 --> 00:03:16.910
+Mówi więc, że rzeczywiście mamy pracownika serwisu w naszym nawigatorze lub w naszej przeglądarce.
+
+00:03:17.150 --> 00:03:25.520
+I pamiętaj, że każda przeglądarka ma własne zespoły programistów w każdej przeglądarce może zdecydować się na wdrożenie tej nowej funkcji
+
+00:03:25.520 --> 00:03:27.770
+zwanej pracownikiem serwisowym, czy nie.
+
+00:03:28.290 --> 00:03:36.370
+Jest naprawdę dobrze nazwana strona internetowa, pracownik serwisu jest gotowy do połączenia, z którego
+
+00:03:36.370 --> 00:03:42.960
+można zobaczyć, które wersje przeglądarek wdrożyły pracowników usług, jeśli wrócimy.
+
+00:03:43.310 --> 00:03:49.520
+Robimy to, ponieważ chcemy mieć pewność, że kiedy wykonamy usługę nawigatora dot
+
+00:03:49.520 --> 00:03:56.270
+nie będziemy mieć błędu mówiącego, że nie wiemy o pracowniku serwisowym, dlaczego mówisz o tym,
+
+00:03:56.270 --> 00:04:03.000
+więc mówimy, czy chcemy mieć pracownika serwisu aby użyć tej właściwości pracownika serwisu nawigatora.
+
+00:04:03.000 --> 00:04:09.970
+To jest przeglądarka i chcemy zrobić coś o nazwie rejestr i chcemy go zarejestrować za pomocą tego
+
+00:04:09.970 --> 00:04:10.380
+pliku.
+
+00:04:10.390 --> 00:04:18.100
+Plik kropki pracownika serwisu i rejestracja to zwykły sposób na stworzenie pracownika
+
+00:04:18.250 --> 00:04:21.920
+serwisu na swojej stronie internetowej.
+
+00:04:22.150 --> 00:04:31.800
+Tymczasem ten pracownik służby J. S. pochodzący z powrotu do naszej aplikacji pracownik serwisu J. S. jest tworzony
+
+00:04:31.800 --> 00:04:36.330
+z tego pliku w naszym folderze kompilacji.
+
+00:04:36.510 --> 00:04:45.450
+Kiedy uruchamiamy aplikację do budowania i tworzenia reakcji NPM, widzimy, że mamy teraz kropkowanego pracownika serwisu J. S. plik i jest
+
+00:04:46.140 --> 00:04:47.450
+zmodyfikowany.
+
+00:04:47.460 --> 00:04:55.590
+Tak więc naprawdę trudno jest czytać, ale wszystko, co robi, to domyślna rejestracja pracownika serwisu,
+
+00:04:55.590 --> 00:04:58.860
+którą można prawie wszędzie pobrać i
+
+00:05:01.770 --> 00:05:03.330
+to wszystko.
+
+00:05:03.360 --> 00:05:11.310
+Jest to dosłownie jedna pojedyncza linia, którą widzisz, że jest to obietnica, która zwraca rejestrację i możemy po
+
+00:05:11.310 --> 00:05:14.070
+prostu wylogować się z niektórych właściwości.
+
+00:05:14.090 --> 00:05:21.240
+Ale rejestracja zakończyła się sukcesem, a jeśli się nie powiedzie, to zawodzi i możemy powiedzieć,
+
+00:05:21.240 --> 00:05:26.940
+że rejestracja pracownika serwisu kończy się niepowodzeniem z tym tylko stwierdzeniem if
+
+00:05:26.940 --> 00:05:36.670
+sprawdzamy, czy przeglądarka ma pracownika serwisu, a jeśli tak, to po prostu wystarczy uruchomić rejestrację dość łatwo teraz rejestrując pracownik serwisu
+
+00:05:36.670 --> 00:05:41.770
+spowoduje, że przeglądarka uruchomi krok instalacji pracownika serwisowego w tle.
+
+00:05:41.770 --> 00:05:52.740
+Ponownie wraz z innym pracownikiem i po aktywowaniu pracownika serwisu i zarejestrowaniu tego pomyślnego przypadku, będzie on
+
+00:05:53.250 --> 00:06:02.550
+w jednym z dwóch stanów: albo zostanie przerwany, aby zaoszczędzić pamięć, albo będzie działał w
+
+00:06:02.550 --> 00:06:10.300
+tle, aby pobrać wiadomości i zdarzenia, które występuje w żądaniu sieci.
+
+00:06:10.310 --> 00:06:13.480
+Co to znaczy, zanim do tego dojdę.
+
+00:06:13.590 --> 00:06:16.580
+Wróćmy do naszej aplikacji.
+
+00:06:16.650 --> 00:06:18.570
+Pozwól mi to zrobić.
+
+00:06:18.720 --> 00:06:25.170
+Przejdź do karty aplikacji i zobaczysz tutaj poniższy manifest.
+
+00:06:25.310 --> 00:06:32.130
+Karta pracownika serwisu i teraz widzimy tego pracownika serwisu.
+
+00:06:32.130 --> 00:06:33.580
+Tu nic nie ma.
+
+00:06:33.860 --> 00:06:42.350
+Ale jeśli przejdę do naszej aplikacji demonstracyjnej, która jest progresywną aplikacją internetową i klikam pracowników serwisu, widzimy, że
+
+00:06:42.550 --> 00:06:44.420
+coś tu jest.
+
+00:06:44.420 --> 00:06:49.700
+Wygląda na to, że jest pracownik serwisu zarejestrowany przez pracownika obsługi Dodge.
+
+00:06:49.710 --> 00:06:50.880
+Tak.
+
+00:06:50.930 --> 00:06:58.130
+Pokazuje nam, kiedy został zarejestrowany i status, a teraz jest zatrzymany, ponieważ podczas gdy nie robimy niczego z
+
+00:06:58.130 --> 00:07:05.140
+tą stroną, możemy zarejestrować się, aby zarejestrować pracownika serwisu, jeśli chcemy, ale wygląda na to, że na
+
+00:07:05.140 --> 00:07:08.350
+tej stronie mamy tego pracownika serwisu bieganie.
+
+00:07:08.410 --> 00:07:16.060
+Pozwólcie, że pokażę wam diagram ilustrujący, co to wszystko oznacza i dlaczego nas to obchodzi.
+
+00:07:16.190 --> 00:07:22.460
+Widzisz bez pracownika serwisu nasza przeglądarka wysyła żądanie do sieci.
+
+00:07:22.460 --> 00:07:26.690
+Ta mała ikona może być traktowana jako sieć internetowa.
+
+00:07:26.690 --> 00:07:31.750
+Wysyłamy żądanie znalezienia serwera, a serwer odpowiada z powrotem niektórymi plikami.
+
+00:07:31.790 --> 00:07:39.080
+Powiedzmy, że plik javascript, ale teraz, gdy mamy zarejestrowanego pracownika serwisu, informujemy przeglądarkę Hej,
+
+00:07:39.320 --> 00:07:41.470
+zanim to zrobisz.
+
+00:07:41.780 --> 00:07:48.020
+Porozmawiaj najpierw z pracownikiem serwisu, może wie coś, co widzisz w progresywnej aplikacji internetowej.
+
+00:07:48.040 --> 00:07:56.950
+Pracownik serwisu działa jak to, co nazywamy serwerem sieciowym, przechwytuje wszelkie żądania wysłane do
+
+00:07:56.950 --> 00:07:57.610
+sieci.
+
+00:07:57.610 --> 00:08:05.700
+Tak jak powiedziałem pierwszy krok tutaj i sprawdzam, czy naprawdę musisz komunikować się z siecią, ponieważ może
+
+00:08:05.910 --> 00:08:08.920
+on już ma te pliki.
+
+00:08:09.060 --> 00:08:16.500
+Gdy użytkownik otwiera nowy ekran progresywnej aplikacji internetowej, żądanie tej strony najpierw trafia do pracownika
+
+00:08:16.560 --> 00:08:19.440
+serwisu, a nie do sieci.
+
+00:08:19.440 --> 00:08:27.890
+Pracownik serwisu próbuje następnie uzyskać dostęp do czegoś, co nazywa się interfejsem API pamięci podręcznej i jest to coś, co
+
+00:08:27.890 --> 00:08:29.030
+daje przeglądarka.
+
+00:08:29.060 --> 00:08:35.360
+Ponownie większość przeglądarek ma taką możliwość, ponieważ zawierała tę funkcję w pracowniku serwisowym, a
+
+00:08:35.360 --> 00:08:44.840
+ten interfejs API pamięci podręcznej jest podobny do skrzynki, w której przeglądarka przechowuje pliki, takie jak pliki JavaScript Pliki SS wszelkie
+
+00:08:44.840 --> 00:08:53.090
+statyczne pliki mogą być obrazami, które mogą być dowolne, co pracownik próbuje dostęp zaznacz pole i zobacz to, czego
+
+00:08:54.350 --> 00:09:02.120
+żądam w tym polu, jeśli zawartość jest dostępna, a my otrzymamy nową stronę tutaj i pracownik serwisu
+
+00:09:02.540 --> 00:09:08.780
+zwróci stronę bez względu na aktywność sieciową, której nigdy nie będziemy prośba do sieci,
+
+00:09:08.780 --> 00:09:17.210
+ale jeśli pracownik serwisu wróci i powie pan przeglądarka Nie mam pliku, o który prosisz, że
+
+00:09:17.270 --> 00:09:22.850
+będziesz musiał porozmawiać z siecią, a potem wrócimy do rozmowy z siecią
+
+00:09:22.850 --> 00:09:27.550
+w stary sposób, dzięki któremu zrobiliśmy to i otrzymaliśmy te pliki.
+
+00:09:27.640 --> 00:09:31.100
+Co teraz robi ten interfejs pamięci podręcznej pamięci podręcznej.
+
+00:09:31.100 --> 00:09:41.920
+Ponownie, jeśli wrócimy do naszego przykładu i przewiniemy w dół do pamięci podręcznej, mamy coś, co nazywa się pamięcią podręczną pamięci podręcznej,
+
+00:09:41.920 --> 00:09:47.590
+a to przechowywanie gotówki jest dokładnie tym, co sprawdza pracownik serwisu.
+
+00:09:47.590 --> 00:09:49.780
+Jeśli kliknę tutaj, zobaczymy to.
+
+00:09:49.990 --> 00:09:50.470
+O tak.
+
+00:09:50.560 --> 00:10:03.480
+Mamy gotówkę z kilku plików JavaScript, a także trochę HMO, jeśli przejdę do drugiego.
+
+00:10:03.490 --> 00:10:09.800
+Widzę także niektóre ikony, które również są
+
+00:10:12.920 --> 00:10:20.200
+spieniężone, więc przechodzimy na stronę internetową lub powłokę strony internetowej.
+
+00:10:20.210 --> 00:10:22.020
+Pamiętaj o tym, co chcieliśmy.
+
+00:10:22.040 --> 00:10:30.750
+Chcemy pracować w trybie offline w tym interfejsie API do przechowywania gotówki za pośrednictwem pracownika serwisu, aby podczas kolejnych
+
+00:10:30.750 --> 00:10:36.870
+wizyt, nawet gdy użytkownik przegląda i przechodzi do witryny sieci Web, musieli
+
+00:10:36.900 --> 00:10:44.620
+przejść do sieci, ponieważ ten interfejs API pamięci podręcznej będzie pusty gdy sieć powróci z tymi plikami,
+
+00:10:44.830 --> 00:10:51.230
+możemy buforować te pliki i po wielokrotnych odwiedzinach powłoka aplikacji może zostać załadowana natychmiast.
+
+00:10:51.230 --> 00:10:54.260
+Przestań mówić Andre pokaż mi, jak możemy to zrobić.
+
+00:10:54.260 --> 00:10:55.450
+Pokaż mi jakiś kod.
+
+00:10:55.460 --> 00:11:02.000
+Cóż, masz szczęście w następnych kilku filmach, przez które przejdziemy przez te kroki, a na
+
+00:11:02.210 --> 00:11:06.410
+koniec zmienimy naszą aplikację w progresywną aplikację internetową.
+
+00:11:06.420 --> 00:11:14.010
+Chcę tylko pokazać, jak wszystko działa pod maską, jeśli wrócimy do naszej aplikacji do tworzenia reakcji.
+
+00:11:14.070 --> 00:11:18.860
+Chciałem ci pokazać, jak to zadziała, zanim zaimplementujesz aplikację reaguj.
+
+00:11:18.900 --> 00:11:24.060
+Pracownicy serwisu, ponieważ w tej chwili jest to dla was coś w tle, co jest naprawdę
+
+00:11:24.060 --> 00:11:24.720
+miłe.
+
+00:11:25.740 --> 00:11:32.500
+Ale co, jeśli musiałbyś go wdrożyć samodzielnie, jest to całkiem proste i możesz spojrzeć na
+
+00:11:32.500 --> 00:11:38.810
+tę stronę, do której będę linkować, aby pokazać, co byś zrobił, gdybyś tu był.
+
+00:11:38.840 --> 00:11:46.960
+Widzimy, że wszystko, co musieliśmy zrobić, to pobrać coś, co nazywa się pracownikiem serwisu przed gotówką, aw naszym zbudowanym
+
+00:11:46.960 --> 00:11:51.380
+kroku, gdzie mówimy, że reagujemy budowaniem skryptów, uruchomilibyśmy to polecenie.
+
+00:11:51.400 --> 00:12:01.050
+Pracownik serwisu Prakash z konfiguracją tego pliku jest podobny do tego, jak działała konfiguracja pakietu Web.
+
+00:12:01.390 --> 00:12:08.890
+Dajemy temu plikowi konfiguracyjnemu w naszym indeksie nie H2 AML robimy klasyczne, jeśli pracownik serwisu
+
+00:12:08.950 --> 00:12:17.270
+istnieje w przeglądarce, będziemy rejestrować pracownika serwisu, mamy nasz plik manifestu, który dodajemy, a na końcu ten
+
+00:12:17.270 --> 00:12:27.500
+pakiet, który zainstalowaliśmy sw Prakash tutaj wszystko, co robimy, to konfiguracja, która mówi, że chcemy użyć wbudowanego folderu i chcę, abyś
+
+00:12:27.500 --> 00:12:34.550
+umieścił w pamięci podręcznej dowolny plik, który jest problemem w moim pliku i jakimkolwiek
+
+00:12:34.550 --> 00:12:42.440
+pliku dźwiękowym J lub zamanifestował ten Jason Plik i wszystko w folderze statycznym, a my użyjemy
+
+00:12:42.620 --> 00:12:49.030
+kropki serwisanta J. S. pomyślałem, że to wszystko.
+
+00:12:49.250 --> 00:12:57.240
+A jeśli pamiętasz w folderze statycznym, aby utworzyć aplikację reaguj, mamy nasz javascript CSX
+
+00:12:57.240 --> 00:13:03.120
+i niektóre pliki multimedialne, które są tak proste w obsłudze.
+
+00:13:03.350 --> 00:13:11.430
+Ponownie pamiętajmy, że używamy tylko narzędzi, które przeglądarki umożliwiają nam przyspieszenie naszych stron internetowych.
+
+00:13:11.510 --> 00:13:12.200
+To wszystko na teraz.
+
+00:13:13.070 --> 00:13:14.900
+Zobaczę w następnym.

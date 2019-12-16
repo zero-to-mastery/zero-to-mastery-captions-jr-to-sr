@@ -1,0 +1,181 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:10.430
+Witamy ponownie po długiej długiej przerwie, w końcu dodamy kilka ekscytujących funkcji do naszej inteligentnej
+
+00:00:10.430 --> 00:00:11.930
+aplikacji mózgowej.
+
+00:00:11.930 --> 00:00:16.900
+A tak przy okazji, gdy cię nie było, udało mi się oszukać nasze API wyjaśniające.
+
+00:00:16.970 --> 00:00:21.100
+Najwyraźniej potrafi rozpoznać twarze odwrócone.
+
+00:00:21.350 --> 00:00:27.510
+Ale wracajmy do Marka, teraz mamy już nasze treści.
+
+00:00:27.550 --> 00:00:28.780
+To jest inteligentny mózg.
+
+00:00:28.810 --> 00:00:35.600
+To jest reakcja w górę i działa na localhostu trzy tysiące jeden, więc port trzy tysiące jeden.
+
+00:00:35.830 --> 00:00:40.350
+A potem mamy również nasze inteligentne API mózgu, nad którym pracowaliśmy.
+
+00:00:40.390 --> 00:00:46.960
+W rzeczywistości opisaliśmy, że ma teraz psa lub spada z doku lub komponuje i robi dla nas
+
+00:00:46.960 --> 00:00:52.110
+te wszystkie niesamowite rzeczy, zamiast martwić się o bazy danych i konfigurowanie wszystkiego.
+
+00:00:52.240 --> 00:00:57.110
+Mamy teraz ten doc od tyłu i API z niektórymi danymi.
+
+00:00:57.610 --> 00:01:04.330
+A teraz uprościliśmy wszystko i po prostu wysłałem użytkownikowi wiadomość e-mail z hasłem.
+
+00:01:04.340 --> 00:01:14.310
+A To jest hasło hashujące użycia kryptki B, które w porównaniu z literą A będzie pasować.
+
+00:01:14.340 --> 00:01:22.820
+Odkąd mamy skonfigurowane środowisko programistów i pozwolę sobie to wyjaśnić, możemy teraz wykonać naprawdę dobrą pracę
+
+00:01:22.850 --> 00:01:30.320
+i wdrożyć sesje, ponieważ najlepiej, jeśli wrócimy do naszego najwolniejszego pliku na naszych końcach
+
+00:01:30.350 --> 00:01:36.900
+w tym miejscu, zróbmy to trochę mniejszy, więc możemy zobaczyć, że do
+
+00:01:37.680 --> 00:01:46.020
+tej pory mieliśmy ten darmowy dostęp do logowania i rejestrowania identyfikatorów profili, na przykład nikt ich
+
+00:01:46.250 --> 00:01:47.420
+nie sprawdza.
+
+00:01:47.670 --> 00:01:55.440
+Jeśli na przykład ten identyfikator profilu ktoś dostał prośbę z dowolnego miejsca na świecie, będzie miał do tego dostęp,
+
+00:01:55.440 --> 00:02:00.890
+ponieważ tak naprawdę nie pytamy o nazwę użytkownika ani hasło w tym momencie.
+
+00:02:00.900 --> 00:02:05.760
+Chodzi o to, że jesteśmy na seinen, ale każdy może się tu zalogować.
+
+00:02:06.160 --> 00:02:15.250
+Idealnie mamy tutaj coś, co mówi, że musimy wymagać auth, ponieważ sposób, w jaki ekspres działa tak,
+
+00:02:15.520 --> 00:02:22.930
+jak coreowy ucieleśniający parser, a Morgan pracuje z oprogramowaniem pośredniczącym, przechwytuje wszystkie otrzymane
+
+00:02:22.930 --> 00:02:23.950
+odpowiedzi.
+
+00:02:23.950 --> 00:02:31.860
+Robią coś dookoła i robią coś, a potem ciągle je wypychają do końca cyklu.
+
+00:02:31.870 --> 00:02:38.590
+W naszym przypadku dla identyfikatora profilu jest to, aby obsłużyć profil get, ale nie byłoby miło mieć
+
+00:02:38.590 --> 00:02:46.000
+coś takiego jak wymagać i dla każdego punktu końcowego, który potrzebujemy uwierzytelnienia, użytkownik musi faktycznie mieć pozwolenie na dostęp
+
+00:02:46.000 --> 00:02:47.400
+do punktu ustawienia.
+
+00:02:47.470 --> 00:02:52.670
+Możemy po prostu zaimplementować tutaj i właśnie to zrobimy w następnych kilku filmach.
+
+00:02:53.570 --> 00:03:01.280
+Zamierzamy użyć JWT przeczytać nas i wszystkie te rzeczy, których nauczyliśmy się razem, aby w końcu stworzyć aplikację, która
+
+00:03:01.700 --> 00:03:06.170
+faktycznie działa jak aplikacje, które widzimy w naszym codziennym życiu.
+
+00:03:06.560 --> 00:03:12.690
+I fajna część tego jest pod koniec tego będziesz mieć aplikację, taką jak aplikacja na smartfona.
+
+00:03:12.800 --> 00:03:21.440
+Mogą zawsze naśladować kopiowanie i modyfikowanie w zależności od Twoich potrzeb, ale będziesz mieć możliwość zalogowania się.
+
+00:03:21.440 --> 00:03:26.510
+Będziesz mieć stronę logowania, aby wznowić swoją stronę wyszukiwania już skonfigurowaną i masz już
+
+00:03:26.510 --> 00:03:30.690
+serwer i lekarza, przeczytaj nam lub przeczytaj bazę danych wszystkie skonfigurowane.
+
+00:03:30.800 --> 00:03:31.940
+Będzie dużo zabawy.
+
+00:03:31.940 --> 00:03:38.990
+I pod koniec tego będziemy mieć wspaniałe narzędzie, które możemy umieścić w naszym portfolio lub wykorzystać
+
+00:03:38.990 --> 00:03:40.810
+do naszych przyszłych projektów.
+
+00:03:40.940 --> 00:03:45.680
+Teraz pierwszą rzeczą, którą zrobimy, to usunięcie tego, co właśnie napisałem, ponieważ jeszcze tego
+
+00:03:45.680 --> 00:03:46.490
+nie mamy.
+
+00:03:47.460 --> 00:03:49.950
+Chcemy mieć pewność, że możemy uruchomić nasze bacot.
+
+00:03:49.950 --> 00:03:52.050
+Więc znowu będziemy biegać do naszego Dr.
+
+00:03:54.990 --> 00:04:04.290
+skomponuj z budową kreski, aby upewnić się, że dane mogą być tworzone przez moje bazy danych.
+
+00:04:04.410 --> 00:04:06.750
+I dopóki to działa, zamierzam wrócić.
+
+00:04:06.750 --> 00:04:12.490
+Widzimy, że front już działa i wszystko powinno działać poprawnie.
+
+00:04:13.540 --> 00:04:19.250
+Wystarczy przetestować wszystko, gdy wszystko działa, a my mamy aplikację działającą na porcie 3 0 0
+
+00:04:19.320 --> 00:04:20.060
+0 0.
+
+00:04:20.620 --> 00:04:22.400
+Odświeżmy tutaj.
+
+00:04:23.730 --> 00:04:31.960
+Jeśli zaloguję się przy pomocy kropki com OK, która jest podanymi przez nas danymi C, możemy się zalogować.
+
+00:04:32.490 --> 00:04:37.020
+I jeszcze raz możemy po prostu wprowadzić zdjęcie i będzie działać dla nas.
+
+00:04:37.110 --> 00:04:41.880
+Ale znowu naszym problemem jest to, że za każdym razem odświeżamy to, co musimy podpisać.
+
+00:04:42.090 --> 00:04:45.880
+To trochę denerwujące, jeśli jesteś użytkownikiem, nie jest to.
+
+00:04:45.930 --> 00:04:46.430
+W porządku.
+
+00:04:46.650 --> 00:04:53.190
+A następne wideo, które zamierzamy rozpocząć, budować stronę profilu, ponieważ abyśmy mogli
+
+00:04:53.340 --> 00:05:00.420
+budować sesje i wymagać Auth. o którym mówiliśmy, musimy mieć jakiś sensowny powód, aby
+
+00:05:00.420 --> 00:05:01.680
+to zrobić.
+
+00:05:01.770 --> 00:05:08.280
+Stworzymy więc stronę profilu, na której będziecie mogli faktycznie edytować swoje nazwisko, być może niektóre pola
+
+00:05:08.280 --> 00:05:12.910
+formularzy dotyczące Twojego profilu, abyśmy mogli nieco bardziej dynamicznie się rozwijać.
+
+00:05:13.020 --> 00:05:17.570
+A potem dodamy sesje do tego w następnym.
+
+00:05:17.750 --> 00:05:18.090
+Babai.

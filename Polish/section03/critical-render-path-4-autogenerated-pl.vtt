@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.750 --> 00:00:05.360
+Kto do tej pory nie znał wszystkich informacji.
+
+00:00:05.710 --> 00:00:13.210
+Szczęśliwie dla nas powiedziałbym, że trudniejsza część kończy się, gdy załadujemy DOM.
+
+00:00:13.470 --> 00:00:15.130
+Następny krok jest prosty.
+
+00:00:15.360 --> 00:00:23.010
+Budujemy drzewo renderowania, które zawiera wszystkie potrzebne informacje z DOM i CSM, jak
+
+00:00:23.010 --> 00:00:29.790
+zbudować stronę, z której przeglądarka odczytuje układ i pozycjonowanie każdego z tych
+
+00:00:29.790 --> 00:00:30.700
+elementów.
+
+00:00:30.870 --> 00:00:37.800
+I wreszcie maluje to i mamy zdarzenie Load, które się dzieje.
+
+00:00:37.870 --> 00:00:40.000
+Teraz widzisz, tutaj jest jeszcze jeden krok.
+
+00:00:40.000 --> 00:00:47.080
+Krok ósmy, który jest javascriptem i to prawdopodobnie najbardziej znane rzeczy, jeśli zdarzenia
+
+00:00:47.080 --> 00:00:50.310
+JavaScript zmieniają jakąkolwiek część strony.
+
+00:00:50.410 --> 00:00:59.110
+Powoduje odrysowanie drzewa renderowania i zmusza nas do przejścia przez układ i malowania.
+
+00:01:00.390 --> 00:01:02.640
+I to właśnie aplikacje internetowe mają rację.
+
+00:01:02.640 --> 00:01:09.870
+Użytkownicy wchodzą w interakcję ze stroną, a skrypt java nieustannie modyfikuje stronę, przechodząc przez układ drzewa
+
+00:01:09.870 --> 00:01:11.730
+renderowania i malując.
+
+00:01:11.730 --> 00:01:13.490
+I ciągle tu krąg.
+
+00:01:15.990 --> 00:01:24.040
+Teraz nowoczesne przeglądarki są wystarczająco inteligentne, aby przeprowadzić tylko częściowe przerysowanie, ale nie możemy polegać na tym,
+
+00:01:24.040 --> 00:01:27.030
+że jest wydajny lub wydajny.
+
+00:01:27.160 --> 00:01:29.970
+Tak więc naszym zadaniem jest sprawić, by było to skuteczne.
+
+00:01:30.310 --> 00:01:36.910
+Patrząc na to wygląda na to, że zdecydowanie chcemy zminimalizować manipulację DOM i nie dać
+
+00:01:36.910 --> 00:01:38.290
+się ponieść emocjom.
+
+00:01:38.290 --> 00:01:45.940
+Powiedziawszy, że oczywiście javascript jest w dużej mierze wydarzeniem opartym na stronie klienta i chcieliśmy zmanipulować naszego
+
+00:01:45.940 --> 00:01:46.830
+Dona.
+
+00:01:47.290 --> 00:01:54.660
+Więc to zrobi, ale musimy po prostu ograniczyć niedostateczne wykonanie i wady dobrej sprawy.
+
+00:01:55.890 --> 00:02:04.530
+Teraz jeszcze raz podsumujmy to, czego się nauczyliśmy dzięki krytycznej ścieżce renderowania, której nauczyliśmy się optymalizować każdy z
+
+00:02:04.770 --> 00:02:11.280
+tych plików w tej krytycznej ścieżce renderowania, aby nasze przeglądarki mogły wyświetlać stronę internetową
+
+00:02:11.280 --> 00:02:16.230
+lub aplikację internetową tak szybko, jak to możliwe. użytkownik.
+
+00:02:16.240 --> 00:02:22.270
+Powinniśmy również lepiej zrozumieć tę głupią animację, którą zrobiłem na początku
+
+00:02:22.600 --> 00:02:23.530
+sekcji.
+
+00:02:24.540 --> 00:02:31.730
+Teraz rozumiemy, jak pobiera się shemale i C Ss.
+
+00:02:31.820 --> 00:02:37.850
+Wiemy również, w jaki sposób konstruowana jest konstrukcja drzewa DOM i ramię CSSA.
+
+00:02:37.880 --> 00:02:43.890
+Wiemy również, że javascript jest pobierany, a następnie działa na tych dwóch drzewach.
+
+00:02:45.310 --> 00:02:54.280
+A potem ostatecznie wykorzystując oba te elementy, jesteśmy w stanie zbudować drzewo renderowania.
+
+00:02:54.480 --> 00:03:00.710
+A na koniec, gdy nie jest to koniec, a następnie
+
+00:03:00.710 --> 00:03:11.910
+otrzymujemy rozkładany układ z drzewa renderowania, na którym malujemy piksele na ekranie, a na końcu wyświetlana jest nasza strona internetowa.
+
+00:03:11.960 --> 00:03:17.080
+I tak, mamy też nasz mały obraz, który zostaje załadowany w tle.
+
+00:03:18.030 --> 00:03:19.520
+Q To dużo pracy.
+
+00:03:19.530 --> 00:03:22.460
+Dość imponujące dla przeglądarek.
+
+00:03:22.590 --> 00:03:28.140
+Teraz zamierzam zostawić niektóre z tych plików, które są używane w tych filmach, abyś mógł ćwiczyć i
+
+00:03:28.320 --> 00:03:29.650
+testować różne rzeczy.
+
+00:03:29.670 --> 00:03:36.510
+Pamiętaj, że różne przeglądarki zachowują się inaczej, a przeglądarki zawsze próbują poprawić wydajność.
+
+00:03:36.540 --> 00:03:37.800
+Sprawy mogą się zmienić.
+
+00:03:37.830 --> 00:03:44.310
+Na przykład w tej chwili chrome pracuje nad tym, aby javascript nie blokował parsera i
+
+00:03:44.310 --> 00:03:51.740
+nie renderował go w tle, więc miej to na uwadze podczas odkrywania niektórych z tych różnych tematów, które
+
+00:03:51.780 --> 00:03:53.550
+ćwiczyliśmy w tych filmach.
+
+00:03:53.550 --> 00:03:56.520
+Baw się dobrze, a zobaczę w następnym wideo.

@@ -1,0 +1,244 @@
+﻿WEBVTT
+
+00:00:01.430 --> 00:00:02.550
+Bine ai revenit.
+
+00:00:02.900 --> 00:00:07.850
+Să vorbim despre ceva pe care vom lucra în această secțiune și probabil despre cele mai interesante lucruri
+
+00:00:07.850 --> 00:00:10.090
+Elise pentru mine când vine vorba de Ada.
+
+00:00:10.130 --> 00:00:10.790
+Da.
+
+00:00:10.820 --> 00:00:17.180
+Și aceasta este funcția lambda pe care o vedeți în mod tradițional că am construit și implementat
+
+00:00:17.180 --> 00:00:23.940
+aplicații web în care avem un anumit control asupra cererii de ovine, așa cum am construit aplicația creierului inteligent.
+
+00:00:24.010 --> 00:00:25.680
+Noi controlăm totul.
+
+00:00:25.690 --> 00:00:34.210
+Fiecare bucată mică este responsabilă pentru serverul respectiv pentru implementarea acelui server expres și asigurarea faptului că
+
+00:00:34.210 --> 00:00:36.710
+resursele noastre sunt setate.
+
+00:00:36.820 --> 00:00:41.440
+Am fost responsabili pentru ceea ce numim provizionare și gestionare a resurselor care ne
+
+00:00:41.440 --> 00:00:47.380
+asigură că ne detașăm la mașina potrivită și pe care le putem scala și toate aceste elemente de configurare.
+
+00:00:47.410 --> 00:00:54.860
+Acum, există câteva probleme cu această metodă de a face doar tot ceea ce sunteți pe unul au fost taxate pentru
+
+00:00:54.860 --> 00:01:01.760
+păstrarea serverului chiar și atunci când nu suntem de fapt, de fapt, care folosesc sau servind și vă cere, de
+
+00:01:01.790 --> 00:01:07.490
+exemplu, dacă nimeni nu verifică site-ul nostru inteligent creierul și serverul este încă în funcțiune.
+
+00:01:07.490 --> 00:01:14.740
+Ascultarea conexiunilor în timp ce plătim bani pentru a avea acel server care rulează nu este eficient.
+
+00:01:15.950 --> 00:01:21.560
+Suntem, de asemenea, responsabili pentru asigurarea faptului că serverul rulează că există o întreținere făcută pe acesta, făcând
+
+00:01:21.740 --> 00:01:25.910
+upgrade-uri ori de câte ori trebuie să existe upgrade-uri și toate aceste resurse.
+
+00:01:25.910 --> 00:01:33.800
+Din nou, un alt strat de dureri de cap și apoi trebuie să ne îngrijorăm de securitate, asigurându-ne că tot ceea
+
+00:01:33.800 --> 00:01:40.260
+ce facem cu serverul este sigur și nu vom avea oameni răi care să îl poată accesa.
+
+00:01:42.180 --> 00:01:44.410
+Deci, Azara folosește abilitățile.
+
+00:01:44.520 --> 00:01:50.700
+Și apoi, în timp ce din ce în ce mai mulți utilizatori încep să utilizeze serviciul nostru, trebuie să ne asigurăm că serverul nostru
+
+00:01:50.700 --> 00:01:52.090
+se poate adapta la acesta.
+
+00:01:52.290 --> 00:01:58.260
+Dar, în același timp, când nu este folosit, nu ne plătește atât de mulți bani pentru că trebuie să-l menținem în stare
+
+00:01:58.260 --> 00:01:58.980
+de funcționare.
+
+00:02:00.450 --> 00:02:05.810
+Și mai ales pentru companiile mai mici și dezvoltatorii individuali, aceasta poate fi o durere de cap imensă.
+
+00:02:06.000 --> 00:02:11.370
+Începeți să vă distrați de toată această gestionare a resurselor dvs. de la alte lucruri
+
+00:02:11.370 --> 00:02:17.150
+mai importante, cum ar fi de fapt construirea aplicației și scrierea codului acum la companii mai mari.
+
+00:02:17.190 --> 00:02:22.840
+Acest lucru pe care îl numim infrastructură are de obicei o echipă numită echipa de infrastructură.
+
+00:02:23.010 --> 00:02:29.430
+Deci, ce aceste companii mari își pot folosi expertiza și echipele lor, astfel încât să ne putem concentra doar pe cod și
+
+00:02:29.460 --> 00:02:31.100
+să ne despărțim de ele.
+
+00:02:32.360 --> 00:02:38.080
+Și, în calitate de dezvoltatori, am căutat soluții ca acestea la aceste probleme de foarte mult
+
+00:02:38.930 --> 00:02:45.830
+timp și aici este locul în care ideea de server mai puțin vine în Servilius ne permite să construim aplicații
+
+00:02:45.830 --> 00:02:49.260
+în care purtăm pur și simplu furnizorul de nor.
+
+00:02:49.370 --> 00:02:52.360
+Deci Google Amazon sau Microsoft codul nostru.
+
+00:02:52.400 --> 00:02:57.140
+Și o conduce pentru noi doar spune că-i spune-mi ce trebuie să alerg și voi avea grijă de tot
+
+00:02:57.140 --> 00:02:57.760
+pentru tine.
+
+00:02:57.770 --> 00:03:03.770
+Ei se asigură, de asemenea, că ne percepem doar ceea ce folosim de fapt, deoarece ei
+
+00:03:03.770 --> 00:03:08.850
+pot monitoriza ce cod se execută și ce resurse consumă de fapt.
+
+00:03:08.870 --> 00:03:13.900
+De exemplu, pentru lucruri sezoniere cum ar fi cumpărăturile de Crăciun
+
+00:03:14.080 --> 00:03:19.910
+Ei bine, furnizorul de cloud poate adăuga pur și simplu mai multe servere mai multă putere cererilor.
+
+00:03:20.960 --> 00:03:27.080
+Iar când moare, poate elimina acele servere și pentru că pot folosi acele servere pentru alte companii, nu le
+
+00:03:27.500 --> 00:03:29.850
+pasă că nu le mai folosim.
+
+00:03:29.870 --> 00:03:35.360
+Și apoi, în cele din urmă, codul nostru rulează într-un mediu securizat în care furnizorul de cloud are grijă de
+
+00:03:35.360 --> 00:03:36.220
+tot pentru noi.
+
+00:03:36.230 --> 00:03:38.730
+Ele se asigură că totul este actualizat și sigur.
+
+00:03:39.770 --> 00:03:41.630
+Bine, asta suna foarte bine.
+
+00:03:41.630 --> 00:03:42.350
+Sunt vândut.
+
+00:03:42.410 --> 00:03:43.570
+Să începem să facem asta.
+
+00:03:43.680 --> 00:03:47.230
+Să folosim Amazon Lamda și LAMDA.
+
+00:03:47.230 --> 00:03:52.270
+Asa cum am spus va permite sa executati o functie si acesta este modul in care va functiona si
+
+00:03:52.270 --> 00:03:55.650
+vom implementa aceasta in cursul in care un utilizator face o cerere.
+
+00:03:55.710 --> 00:03:58.030
+Să presupunem că avem doar o funcție care consolează jurnalele.
+
+00:03:58.140 --> 00:04:00.320
+Sunt FANCY.
+
+00:04:00.480 --> 00:04:08.400
+Tot ce trebuie să facem este să facem un cuvânt de spus Să luăm apelul de la aplicația noastră la regula pe care ne-o
+
+00:04:08.400 --> 00:04:15.880
+oferă Amazon Lamda și am încărcat acest cod la Amazon Lamda și imediat ce vom face un apel de astăzi, tu Arel se
+
+00:04:16.200 --> 00:04:17.110
+va Buturuga.
+
+00:04:17.190 --> 00:04:18.480
+Sunt atât de fantezistă.
+
+00:04:18.620 --> 00:04:19.860
+Acum, cum funcționează acest lucru.
+
+00:04:19.860 --> 00:04:26.220
+Sub capota vedeți că furnizorul de cloud creează un container pe care îl cunoaștem și pe care l-am
+
+00:04:26.220 --> 00:04:30.060
+învățat în doc și execută această funcție în interiorul acestuia.
+
+00:04:31.280 --> 00:04:36.230
+Și ce se întâmplă dacă cinci utilizatori în același timp solicită această funcție.
+
+00:04:36.440 --> 00:04:43.220
+Ei bine, vor crea cinci containere separate pentru fiecare utilizator și vor răspunde cu dialogul consolei.
+
+00:04:43.300 --> 00:04:45.680
+Sunt atât de fantezistă.
+
+00:04:45.850 --> 00:04:52.900
+Tot ce fac este să păstreze pur și simplu funcția pe care o oferim în baza lor de date și ori de câte ori se
+
+00:04:53.200 --> 00:04:57.340
+numește, o va apuca din baza de date și de fapt o va rula.
+
+00:04:57.340 --> 00:05:02.240
+Acum puteți vedea o problemă cu această problemă și aceasta se numește de fapt problema de pornire la rece.
+
+00:05:02.290 --> 00:05:07.600
+Asta este că ei trebuie să apuce această funcție din baza de date care este stocată doar ca un șir și
+
+00:05:07.630 --> 00:05:09.220
+apoi execută-o în interiorul unui container.
+
+00:05:09.300 --> 00:05:17.770
+Asta e nevoie de timp și asta este dezavantajul cu Amazon Lamda, atunci când acesta rulează pentru prima oară, are nevoie de
+
+00:05:17.770 --> 00:05:18.630
+puțin timp.
+
+00:05:18.640 --> 00:05:22.900
+Vreau sa spun ca atunci cand spunem un pic de timp este inca Amazon, asa ca este rapid.
+
+00:05:23.230 --> 00:05:28.750
+Dar odată ce funcția a fost rulată și acum tot mai mulți utilizatori o folosesc, atunci este bine
+
+00:05:28.750 --> 00:05:30.310
+pentru că este într-un container.
+
+00:05:30.310 --> 00:05:31.800
+Deci, este un lucru pe care să-l țineți minte.
+
+00:05:32.680 --> 00:05:38.650
+Dar frumusețea acestui lucru este că această funcție va fi executată doar atunci când o declanșăm și
+
+00:05:38.650 --> 00:05:42.180
+când nu este executată Amazon nu ne-a încărcat deloc.
+
+00:05:42.190 --> 00:05:48.640
+Deci, acest lucru este minunat dacă aveți nașteri sezoniere în compania dvs. sau doriți să faceți ceva
+
+00:05:48.640 --> 00:05:53.540
+care nu rulează în mod constant ceva ce se execută doar ocazional.
+
+00:05:53.550 --> 00:05:54.150
+In regula.
+
+00:05:54.150 --> 00:05:57.750
+Trebuie să vorbim destul de mult pentru a înțelege acest concept.
+
+00:05:57.810 --> 00:06:01.410
+În următorul videoclip, vom începe cu Amazon Lamda.

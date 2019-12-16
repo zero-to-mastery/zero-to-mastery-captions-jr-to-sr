@@ -1,0 +1,433 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:07.520
+O bună treabă care face acest lucru departe va deveni din ce în ce mai distractivă începând
+
+00:00:07.760 --> 00:00:15.470
+din această secțiune deoarece învățăm acum instrumente reale pe care le folosesc companiile reale și care te vor angaja în 2018,
+
+00:00:15.500 --> 00:00:23.490
+iar devolvementul devine mult mai rapid, folosiți aceste instrumente pentru a ne face să construim site-uri web mai rapid și mai bine.
+
+00:00:23.490 --> 00:00:28.670
+Deci, hai să vorbim despre re-act Ce avem înainte de a acționa.
+
+00:00:28.780 --> 00:00:36.840
+Așa cum am menționat mai devreme, am avut Jake queery Jake unde era așa cum îți amintești că scrisul foarte
+
+00:00:36.840 --> 00:00:41.090
+imperativ a fost ca și cum ai amesteca ingredientele succesiv.
+
+00:00:41.220 --> 00:00:44.420
+Dacă se întâmplă acest lucru, faceți acest lucru și apoi faceți acest lucru.
+
+00:00:44.430 --> 00:00:50.020
+Dar, de asemenea, dacă se întâmplă acest lucru, faceți acest lucru și creează o mare inconsistență.
+
+00:00:50.250 --> 00:00:57.990
+Și dacă vă amintiți secțiunea de manipulare DOM Ei bine, este într-adevăr foarte greu și în mod constant
+
+00:00:57.990 --> 00:01:06.230
+să urmăriți ce sa schimbat și ce să schimbeți este o mare dezordine și se creează pentru o dezvoltare foarte lentă.
+
+00:01:06.690 --> 00:01:12.780
+Și pe măsură ce site-ul dvs. devine din ce în ce mai complex, devine foarte greu la scară, ceea ce înseamnă
+
+00:01:12.780 --> 00:01:16.290
+că devine foarte greu pentru echipele de dezvoltatori să o gestioneze.
+
+00:01:17.400 --> 00:01:24.000
+Acum, re-actul a fost creat la Facebook, deoarece știți că Facebook este o aplicație destul de mare și multe lucruri trebuie să se întâmple pentru
+
+00:01:24.000 --> 00:01:25.620
+ca aceasta să funcționeze bine.
+
+00:01:25.770 --> 00:01:33.180
+Și au avut această problemă și creatorul reacționează ca o modalitate de a rezolva această problemă și de a avea un instrument care să
+
+00:01:33.240 --> 00:01:39.360
+îi permită să construiască site-uri într-un mod frumos previzibil, încât să puteți avea mai mulți dezvoltatori care să lucreze
+
+00:01:39.360 --> 00:01:40.580
+în același timp.
+
+00:01:42.370 --> 00:01:45.210
+Și îmi place să folosesc analogia unei mașini de paine.
+
+00:01:46.290 --> 00:01:47.900
+Folosirea reactului este cam așa.
+
+00:01:47.910 --> 00:01:58.910
+Trebuie doar să arunci ingredientele și să reacționezi la această magie sub capotă și să scoți un site web.
+
+00:01:59.020 --> 00:02:06.980
+Deci, este foarte fiabil și foarte consistent și face un lucru într-adevăr foarte bine și că este punctul
+
+00:02:07.550 --> 00:02:17.050
+de vedere în care reușește să facă site-urile noastre schimbarea DOM în moduri previzibile, care este ușor de scalare și ușor de
+
+00:02:17.050 --> 00:02:17.780
+gestionat.
+
+00:02:18.610 --> 00:02:24.640
+Și frumusețea reactului este că pentru că este doar vederea, aceasta nu înseamnă neapărat că este doar
+
+00:02:24.640 --> 00:02:25.520
+pentru browsere.
+
+00:02:25.960 --> 00:02:32.150
+De fapt, un reactor poate fi utilizat cu dispozitive mobile pentru a construi aplicații native.
+
+00:02:32.170 --> 00:02:40.120
+Este folosit în aplicații de realitate virtuală pe care le puteți construi aplicații desktop cu re-acționa oriunde, care are o viziune și să reacționeze bine
+
+00:02:40.210 --> 00:02:41.260
+să o folosească.
+
+00:02:41.290 --> 00:02:48.400
+Și companiile mari pe care le-am menționat înainte de folosirea Facebook și Instagram reacționează, iar utilizatorii Netflix reacționează ori de
+
+00:02:48.400 --> 00:02:52.700
+câte ori navigați prin alegerile filmului Ei bine, folosiți repetarea sub capota.
+
+00:02:52.990 --> 00:02:57.100
+Este un instrument foarte util și foarte solicitat.
+
+00:02:57.160 --> 00:03:03.310
+Deci, sunt încântat să vorbesc despre reacție și să vă învăț această abilitate valoroasă în această secțiune.
+
+00:03:03.310 --> 00:03:09.340
+Acum, pentru a înțelege reactivitatea, există câteva lucruri pe care vrem să le depășim și
+
+00:03:09.340 --> 00:03:14.760
+acestea sunt principii foarte valoroase pe care le-au învățat de-a lungul anilor dezvoltatorii.
+
+00:03:14.770 --> 00:03:21.320
+Una este ideea de a gândi în componente până la acest punct am construit site-uri web.
+
+00:03:21.570 --> 00:03:27.170
+Totul este doar un fișier javascript un fișier CSSA un ASTM Alpha.
+
+00:03:27.330 --> 00:03:34.310
+Dar nu ar fi bine dacă internetul ar fi o rețea a acestor mici componente.
+
+00:03:34.320 --> 00:03:41.130
+Gândiți-vă la ele ca blocuri Lego unde toată lumea construiește un anumit bloc Lego și tocmai combinați
+
+00:03:41.130 --> 00:03:44.650
+aceste blocuri Lego pentru a crea site-ul dvs.
+
+00:03:44.730 --> 00:03:50.850
+Aceasta este ideea că re-actul stabilit să folosim acest lucru ca un exemplu.
+
+00:03:50.850 --> 00:04:00.750
+Mai întâi aveți atomi care, după cum puteți vedea aici, sunt icoane și elemente mici și divizibile pe site-ul dvs.,
+
+00:04:00.750 --> 00:04:03.300
+cum ar fi imagini.
+
+00:04:03.420 --> 00:04:07.720
+Există o taxă și le împărțiți în atomi.
+
+00:04:07.740 --> 00:04:15.990
+De acolo formați molecule sau combinați atomi care au funcționalități similare, cum ar fi bara de navigare
+
+00:04:15.990 --> 00:04:16.960
+aici.
+
+00:04:17.040 --> 00:04:25.220
+Combinați atomii individuali cu unele funcționalități și apoi aveți organisme din nou puțin mai mari decât moleculele care
+
+00:04:25.220 --> 00:04:29.420
+se combină cu o mai mare funcționalitate la scară.
+
+00:04:29.510 --> 00:04:31.790
+Și, în sfârșit, au șabloane.
+
+00:04:31.790 --> 00:04:37.900
+Combinația acestor organisme pentru a vă oferi o idee despre cum ar trebui să arate aplicația sau site-ul dvs.
+
+00:04:37.910 --> 00:04:43.050
+În cele din urmă, aveți paginile dvs. care reprezintă pagina aplicației dvs.
+
+00:04:43.290 --> 00:04:52.600
+Și dacă vă gândiți la componente, această imagine demonstrează ceea ce puteți construi mici componente mici pe care le
+
+00:04:53.140 --> 00:04:58.130
+puteți reutiliza și pune pe diferite părți ale paginii web.
+
+00:04:58.210 --> 00:05:05.110
+De exemplu, această coloană vertebrală aici dacă construiesc o componentă re-act care este coloana vertebrală pe care o pot folosi acum
+
+00:05:05.110 --> 00:05:06.550
+pe mai multe pagini.
+
+00:05:06.550 --> 00:05:13.030
+Și nu trebuie să rescriu codul dacă vreau ca bara de navigare să fie utilizată în diferite zone ale
+
+00:05:13.030 --> 00:05:13.540
+aplicației.
+
+00:05:13.540 --> 00:05:19.640
+Ei bine, din nou nu am nevoie să rescriu codul pe care îl scriu imediat și să îl reutilizez ca o chestiune de fapt
+
+00:05:19.660 --> 00:05:20.970
+chiar împărtășită cu lumea.
+
+00:05:21.250 --> 00:05:28.820
+Iar această idee a componentelor face ca Maisy să reacționeze, pentru că chiar aici am un site web care are trei
+
+00:05:28.840 --> 00:05:32.240
+componente construite de cineva și le putem reutiliza.
+
+00:05:32.440 --> 00:05:36.160
+Și nu este doar CSX și un shemale.
+
+00:05:36.280 --> 00:05:42.280
+Dar funcții reale, cum ar fi barele de navigare și formularele de semnare.
+
+00:05:42.280 --> 00:05:51.400
+Pot să descarc această componentă Riak și să o atașez la site-ul meu și din cauza modului în care reacționează la structurat nu
+
+00:05:51.400 --> 00:05:56.640
+prea are nevoie să știe despre restul paginii web este doar propriul
+
+00:05:56.830 --> 00:06:02.280
+bloc local care funcționează singur prin reducerea dependențelor de alte părți ale site-ului Web.
+
+00:06:02.530 --> 00:06:06.340
+Pot doar conectați acest lucru oriunde vreau.
+
+00:06:06.350 --> 00:06:10.740
+Un alt concept important cu React este ideea fluxului de date într-o singură direcție.
+
+00:06:12.340 --> 00:06:19.150
+Cea mai bună modalitate de a descrie acest lucru este prin a privi acest structură de copac ca aici, vedeți că
+
+00:06:19.150 --> 00:06:25.060
+avem un părinte niște copii și atunci acești copii au copii proprii și acești copii au copii
+
+00:06:25.060 --> 00:06:25.570
+proprii.
+
+00:06:26.600 --> 00:06:34.190
+Iar ideea cu reactoarele că datele curg de sus în jos și niciodată invers în jurul lor,
+
+00:06:34.520 --> 00:06:38.310
+dacă aceste roșu le numim componentele se schimbă.
+
+00:06:38.480 --> 00:06:44.120
+Ei bine, în acest caz, doar copiii lor știu despre schimbare.
+
+00:06:44.120 --> 00:06:50.570
+Părinții nu-i pasă de schimbare, deoarece direcția fluxului de date este doar întotdeauna în
+
+00:06:50.570 --> 00:06:51.420
+aval.
+
+00:06:51.440 --> 00:06:58.690
+Așa că ne întoarcem la ideea de componente dacă am avea un site construit
+
+00:06:58.930 --> 00:07:06.270
+pe componente și aceasta a fost pagina și acestea erau organisme și apoi molecule decât atomi.
+
+00:07:06.330 --> 00:07:11.050
+În acest caz, componentele roșii se schimbă și apoi numai cele de sub ea.
+
+00:07:11.070 --> 00:07:18.240
+Așa cum puteți vedea aici în albastru, știți despre această schimbare și pe baza căreia ei vor acționa în consecință și se vor schimba
+
+00:07:18.240 --> 00:07:19.120
+și ei.
+
+00:07:19.290 --> 00:07:25.770
+Acum, fără a avea o problemă, este greu să înțelegeți acest concept, dar credeți-mă că acesta este un
+
+00:07:25.770 --> 00:07:29.450
+concept foarte important pe care îl aduceți din nou.
+
+00:07:29.460 --> 00:07:35.820
+Creează o mulțime de coduri cu adevărat nepotrivite și este o idee pe care o veți înțelege din
+
+00:07:35.850 --> 00:07:41.250
+ce în ce mai mult pe măsură ce începem să codificăm și să reacționăm.
+
+00:07:41.490 --> 00:07:49.560
+Următorul lucru este ideea câinelui virtual pe care îl cunoașteți modelul Dahmus model obiect.
+
+00:07:49.680 --> 00:07:54.900
+Și am aflat de asemenea că unul dintre cele mai importante lucruri ca dezvoltator este acela de a
+
+00:07:54.900 --> 00:08:00.960
+minimiza cantitatea de manipulare proastă pe care o facem pentru că browserele web bine trebuie să aibă de lucru foarte
+
+00:08:00.960 --> 00:08:05.240
+greu pentru a realiza acest lucru și reduc performanța paginii web plus crește.
+
+00:08:05.250 --> 00:08:11.110
+Dar cred că această imagine demonstrează ceea ce reacționează foarte bine în prealabil.
+
+00:08:11.150 --> 00:08:15.800
+Am fost pictorii pe care i-am spus dormitorului exact ce să facă.
+
+00:08:15.860 --> 00:08:23.130
+Eliminați acest element apoi puneți-l înăuntru și apoi adăugați și acesta și culoarea, astfel reacționați.
+
+00:08:23.150 --> 00:08:29.940
+Avem acest re-act cumpărat și Riak înapoi crează ceva numit Câine virtuală virtual
+
+00:08:30.020 --> 00:08:36.970
+Dom este doar un obiect javascript și acest obiect javascript care descrie doar site-ul nostru.
+
+00:08:37.260 --> 00:08:45.180
+Starea actuală a site-ului Web și-i dăm doar obiectului de a reacționa și apoi să reacționăm prin acesta
+
+00:08:45.270 --> 00:08:53.160
+va face automat modificări în Dom și va picta imaginea în modul cel mai optim posibil.
+
+00:08:53.190 --> 00:08:56.420
+Așa că spunem doar că acesta este obiectul.
+
+00:08:56.580 --> 00:09:02.910
+Aceasta este ceea ce dorim și DOM și re-întrebat are grijă de manipularea Dom pentru tine.
+
+00:09:02.910 --> 00:09:10.560
+Amintiți-vă cât de enervant a fost să faceți norocul Quesada pentru toți, apoi să luați alimente prin id și apoi să faceți toate
+
+00:09:10.710 --> 00:09:14.390
+aceste manipulatoare de evenimente va reacționa are grijă de asta.
+
+00:09:14.400 --> 00:09:22.380
+Deci, din nou, Domul virtual este doar o copie a domului care se află într-un obiect javascript și reacționează sub
+
+00:09:22.380 --> 00:09:28.860
+capotă doar schimbă vederea și de aceea este capabil să lucreze în afara browserelor și puteți
+
+00:09:28.860 --> 00:09:33.740
+utiliza lucruri precum VR și dispozitive mobile pentru că reacționați ca mașină.
+
+00:09:33.750 --> 00:09:35.330
+Și ce e Camus?
+
+00:09:35.350 --> 00:09:38.910
+Ei bine, putem schimba pânza la ceea ce dorim.
+
+00:09:38.910 --> 00:09:43.620
+În cele din urmă re-actul are un mare ecosistem.
+
+00:09:43.700 --> 00:09:49.460
+Acesta este probabil unul dintre cele mai mari ecosisteme și Javascript chiar acum și există atât de multe instrumente
+
+00:09:49.460 --> 00:09:56.760
+care au lucrat cu reacționarea, de fapt, comunitatea dezvoltatorilor este atât de mare încât orice problemă pe care o aveți acolo este cel mai
+
+00:09:56.850 --> 00:10:02.200
+probabil o șansă pe care o are altcineva a avut și a postat-o ​​pe Internet și
+
+00:10:02.200 --> 00:10:03.560
+puteți găsi soluții pentru.
+
+00:10:03.630 --> 00:10:09.730
+Poți să-l găsești și să reacționezi la pachete și la ora 21:00 să-l folosești cu Noad, în baseball pe care îl poți
+
+00:10:09.730 --> 00:10:10.820
+folosi cu ea.
+
+00:10:10.960 --> 00:10:17.980
+Este doar un ecosistem foarte bun care utilizează cea mai recentă tehnologie javascript pentru a construi site-uri
+
+00:10:17.980 --> 00:10:20.440
+web într-un mod elegant frumos.
+
+00:10:20.440 --> 00:10:26.700
+Acum, un lucru despre care vreau să vă avertizez în această secțiune este că vom vedea un cod ca acesta.
+
+00:10:27.520 --> 00:10:30.050
+Și va fi foarte ciudat la început.
+
+00:10:30.220 --> 00:10:34.860
+Este la fel ca atunci când te uiți la javascript primul punct.
+
+00:10:34.980 --> 00:10:37.350
+Părea ca o lume cu totul nouă.
+
+00:10:37.350 --> 00:10:43.080
+Când vă veți uita prima dată la acest lucru, dar aveți încredere în mine știind ce știți despre javascript, acest
+
+00:10:43.170 --> 00:10:44.640
+lucru devine foarte ușor.
+
+00:10:44.670 --> 00:10:51.710
+Aveți clase care extind componenta Riak și acesta este modul în care construim componente.
+
+00:10:51.930 --> 00:10:59.970
+Avem din nou constructor că am văzut și am avansat obiecte și apoi fiecare clasă are o funcție obligatorie de redare pe care
+
+00:11:00.060 --> 00:11:03.840
+o spuneți doar ce ar trebui să facă acest ceas.
+
+00:11:03.840 --> 00:11:06.930
+Și după cum puteți vedea, se pare că un bărbat este în el.
+
+00:11:07.350 --> 00:11:11.970
+Nu este exact un bărbat, dar sintaxa este foarte asemănătoare.
+
+00:11:11.970 --> 00:11:16.420
+Deci chiar dacă te uiți la asta vezi că această componentă de ceas.
+
+00:11:16.440 --> 00:11:20.110
+Din nou, acest bloc de logo-uri întoarce doar o Hello World.
+
+00:11:20.130 --> 00:11:23.640
+H-1 etichetă cu un H2 care spune că este.
+
+00:11:23.640 --> 00:11:30.630
+Și apoi, din nou, doar pentru a vă da un heads-up, veți auzi cuvinte precum recuzita și componentele
+
+00:11:30.750 --> 00:11:36.540
+de stat și Riak, dar acestea sunt doar sintaxa limbajului, astfel încât veți învăța.
+
+00:11:36.810 --> 00:11:39.490
+Și de fapt este destul de ușor când te obișnuiești cu asta.
+
+00:11:39.840 --> 00:11:43.690
+Deci, nu vă faceți griji că toate acestea vor avea sens.
+
+00:11:43.800 --> 00:11:49.120
+Până la sfârșitul ei știi ce vom construi un OP destul de cool.
+
+00:11:49.300 --> 00:11:57.120
+Se numește prieteni Brabo și vom construi această aplicație care caută bine prin prietenii tăi robot și îi poți
+
+00:11:57.630 --> 00:11:59.670
+găsi informațiile de contact.
+
+00:11:59.730 --> 00:12:02.970
+Și după cum puteți vedea actualizările live.
+
+00:12:03.240 --> 00:12:04.680
+Este super rapid.
+
+00:12:04.890 --> 00:12:06.400
+Este receptiv.
+
+00:12:06.750 --> 00:12:08.540
+Va fi foarte distractiv.
+
+00:12:08.640 --> 00:12:14.920
+Și vom construi acest lucru destul de rapid pentru a vă arăta cât de puternic este reacția.
+
+00:12:14.970 --> 00:12:15.470
+In regula.
+
+00:12:15.510 --> 00:12:17.790
+Sunt foarte încântat să intru în această secțiune.
+
+00:12:17.790 --> 00:12:19.350
+Vei fi foarte distractiv.
+
+00:12:19.470 --> 00:12:20.970
+Ne vedem în următorul.
+
+00:12:21.000 --> 00:12:21.270
+Pa! Pa.

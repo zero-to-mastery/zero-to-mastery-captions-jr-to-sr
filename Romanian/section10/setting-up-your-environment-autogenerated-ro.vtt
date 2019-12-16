@@ -1,0 +1,1108 @@
+﻿WEBVTT
+
+00:00:01.910 --> 00:00:03.050
+Bine ai revenit.
+
+00:00:03.050 --> 00:00:03.600
+In regula.
+
+00:00:03.890 --> 00:00:10.580
+Să începem să ne pregătim proiectele creierului inteligent, astfel încât să funcționeze pe mașinile noastre ceva pe care
+
+00:00:10.580 --> 00:00:17.690
+îl vom folosi pentru următoarele două secțiuni pentru a adăuga noi caracteristici noi și pentru a face niște lucruri
+
+00:00:17.690 --> 00:00:22.190
+foarte frumoase cu niște instrumente moderne care îmbunătățesc cu adevărat sus.
+
+00:00:22.190 --> 00:00:26.480
+Primul lucru pe care îl voi face eu o să pretind că aceasta este prima mea zi de lucru.
+
+00:00:26.480 --> 00:00:33.460
+Am proiectul creierului inteligent și inteligentul API al creierului și Bruno, iar echipa ne-a spus că
+
+00:00:33.480 --> 00:00:41.480
+există o aplicație client un server care este acesta și că avem nevoie și de a configura baza
+
+00:00:41.750 --> 00:00:49.850
+de date deoarece acest server trebuie să vorbească cu baza de date unde toți utilizatorii sunt și unde stocăm
+
+00:00:49.910 --> 00:00:55.870
+parolele hashed, deoarece utilizatorii se pot conecta și se pot înregistra în sus.
+
+00:00:56.050 --> 00:00:56.770
+Hai să ajungem la asta.
+
+00:00:56.800 --> 00:01:02.620
+Primul lucru pe care îl voi face este că este întotdeauna o practică
+
+00:01:03.460 --> 00:01:08.070
+bună să nu uitați doar să clonați repo originalul.
+
+00:01:08.230 --> 00:01:13.540
+Acum, în cazul meu, pentru că aceasta este pe repo mea, mă duc doar la colț pentru moment.
+
+00:01:13.630 --> 00:01:22.250
+Dar îți recomand să renunți la proiectele tale și să îți faci cererile de tragere din proiectele furccate.
+
+00:01:24.250 --> 00:01:30.630
+Dar deocamdată voi clona aplicația inteligentă a creierului pentru a ne începe.
+
+00:01:30.880 --> 00:01:33.930
+Așa că am să-mi deschid terminalul și aici.
+
+00:01:33.940 --> 00:01:35.610
+Să facem asta puțin mai mare.
+
+00:01:35.980 --> 00:01:40.770
+Și aici o să mă clonez în repo.
+
+00:01:41.110 --> 00:01:42.250
+Și în timp ce asta se întâmplă.
+
+00:01:42.400 --> 00:01:45.560
+Să mergem la API și să facem același lucru.
+
+00:01:46.460 --> 00:01:53.340
+Trebuie doar să clonați acest Cerebro și să ajungeți la clonare.
+
+00:01:53.360 --> 00:01:54.060
+In regula.
+
+00:01:54.190 --> 00:01:55.830
+Puteți minimiza această fereastră pentru moment.
+
+00:01:56.720 --> 00:02:01.610
+Și avem doar două dosare aici.
+
+00:02:01.650 --> 00:02:04.270
+Deci, acum să facem acest lucru și mai mare.
+
+00:02:05.240 --> 00:02:12.090
+Acum vrem să facem, de fapt, pentru că avem două lucruri pe care ar trebui să le avem pentru a avea două ferestre terminale aici.
+
+00:02:12.320 --> 00:02:14.510
+Așa că am să adaug o fereastră nouă.
+
+00:02:14.510 --> 00:02:22.450
+Acolo, du-te din nou, face-o un pic mai mare, astfel încât să putem vedea toate și am de gând să aibă unul
+
+00:02:23.020 --> 00:02:27.150
+pentru serverul meu unul pentru partea mea de client în sus.
+
+00:02:27.260 --> 00:02:32.390
+Primul lucru pe care îl voi face să clarificăm acest lucru și să clarificăm și acest lucru.
+
+00:02:32.580 --> 00:02:37.020
+Și am de gând să spun că aceasta va fi partea clientului și creierul inteligent.
+
+00:02:37.380 --> 00:02:42.270
+Și acesta va fi serverul folosit de aplicația de pe partea clientului.
+
+00:02:42.270 --> 00:02:48.330
+Deci, asta va fi C. D în API creier inteligent.
+
+00:02:48.340 --> 00:02:49.050
+In regula.
+
+00:02:49.070 --> 00:02:56.270
+Acum, de obicei, pe hub există o documentație bună de către echipa despre cum să instalezi și să faci totul pentru
+
+00:02:56.270 --> 00:02:57.010
+ao configura.
+
+00:02:57.020 --> 00:03:03.020
+Putem incepe sa facem acest lucru si cel mai probabil va trebui sa facem instalarea NPM
+
+00:03:03.020 --> 00:03:08.250
+deoarece avem un pachet dodgiest in dosar, de obicei cu toate pachetele NPM.
+
+00:03:08.320 --> 00:03:11.710
+Dar înainte de a face asta, lasă-mă să deschid sublinierea
+
+00:03:14.430 --> 00:03:18.010
+și voi pune aceste două ferestre împreună doar pentru a-mi ușura viața.
+
+00:03:27.070 --> 00:03:27.540
+Perfect.
+
+00:03:27.580 --> 00:03:35.110
+Deci, acum am serverul meu care este chiar aici, mă pot pretinde că aceasta este mașina proprie și
+
+00:03:35.170 --> 00:03:44.580
+apoi face același lucru pentru clientul meu de sus din nou doar punând aceste două împreună doar pentru a organiza ecranul meu, așa că
+
+00:03:44.580 --> 00:03:52.770
+știu că aceste două sunt complet separat și înainte de a-mi rula chiar și NPM și am văzut că îmi
+
+00:03:52.770 --> 00:04:01.080
+place să mă uit la pachetul Jason phó care de obicei îți va spune comenzile pe care proiectul le are ce
+
+00:04:01.080 --> 00:04:08.820
+fel de dependență folosim sau ce fel de dependență de adâncime pe care o folosim și doar privindu- Pot
+
+00:04:08.880 --> 00:04:10.480
+Google probabil NPM.
+
+00:04:10.640 --> 00:04:12.170
+Acesta este un singur gnomon.
+
+00:04:12.360 --> 00:04:18.300
+Acesta este locul în care PGE face PGE ca postscript, deci trebuie să folosească această bază de date și să exprime.
+
+00:04:18.390 --> 00:04:25.200
+Ei folosesc serverul Express, probabil că folosesc ceva numit clarificați pe Wonder ce este
+
+00:04:25.200 --> 00:04:26.270
+și apoi.
+
+00:04:26.490 --> 00:04:26.730
+O.K.
+
+00:04:26.730 --> 00:04:32.490
+Ei folosesc cripta ca să știe J. S. pentru a-și dezmembra parola, așa
+
+00:04:32.490 --> 00:04:35.700
+că am deja o idee despre ce folosesc aplicația ca instrumente.
+
+00:04:36.150 --> 00:04:40.390
+Să le instalăm, pentru că pentru o aplicație să lucrăm, evident că trebuie să instalăm aceste pachete.
+
+00:04:40.410 --> 00:04:47.050
+Și veți vedea că dosarul modulelor de nod va apărea și va face același lucru pentru aplicația de
+
+00:04:47.050 --> 00:04:50.220
+pe partea clientului care va instala instalarea NPM.
+
+00:04:50.580 --> 00:04:55.720
+Și din nou, mergând la pachetul nostru Jason văd OIA, acesta este un proiect Briac.
+
+00:04:55.720 --> 00:05:00.150
+Folosesc scripturile Riak, astfel că este cu siguranță o creație re-acționează.
+
+00:05:00.170 --> 00:05:00.640
+Grozav.
+
+00:05:00.640 --> 00:05:06.280
+Și acestea sunt toate comenzile pe care le pot folosi se pare că start NPM este ceea ce vreau să folosesc
+
+00:05:06.280 --> 00:05:11.860
+pentru partea din față și apoi partea din spate văd că există doar un script care este NPM începe.
+
+00:05:11.890 --> 00:05:21.520
+Așa că înainte de a face chiar tot ce pot face să pornească NPM și să vadă dacă toate acestea funcționează pe care le face.
+
+00:05:21.520 --> 00:05:23.690
+Aplicația rulează OK, asta e minunat.
+
+00:05:24.130 --> 00:05:26.610
+Și să începem și NPM aici.
+
+00:05:30.060 --> 00:05:35.080
+Și pentru că avem deja serverul care rulează pe portul de trei mii,
+
+00:05:35.080 --> 00:05:39.330
+am lovit da, așa că am obținut un port diferit.
+
+00:05:39.540 --> 00:05:42.580
+Și fără a privi la o singură linie de cod.
+
+00:05:42.630 --> 00:05:43.210
+In regula.
+
+00:05:43.260 --> 00:05:48.030
+Am totul înființat și de lucru sau se pare ca asta.
+
+00:05:48.090 --> 00:05:48.480
+In regula.
+
+00:05:48.480 --> 00:05:51.870
+Se pare că funcționează chiar acum.
+
+00:05:52.260 --> 00:05:54.660
+Să încercăm doar să creăm un cont.
+
+00:05:54.660 --> 00:05:56.800
+Vom spune hei la.
+
+00:05:57.030 --> 00:06:07.440
+Sau numele este hei hey la gmail dot com și vom spune că parola este hey register Mă pot
+
+00:06:07.740 --> 00:06:10.110
+înscrie dacă deschid consola.
+
+00:06:10.110 --> 00:06:19.300
+În regulă, văd că există o cerere de 400 de erori la registru și arată dacă mă întorc la terminalul meu.
+
+00:06:19.340 --> 00:06:22.430
+În regulă, am o eroare pe server.
+
+00:06:22.580 --> 00:06:25.640
+Am o eroare de conectare de avertizare K'NEX.
+
+00:06:25.640 --> 00:06:28.510
+Conectarea conexiunii sa încheiat în mod neașteptat.
+
+00:06:28.580 --> 00:06:28.790
+O.K.
+
+00:06:28.790 --> 00:06:34.320
+Se pare că există o conexiune acolo fără a se uita la vreun cod și.
+
+00:06:34.540 --> 00:06:40.430
+Ei bine, se pare că nu mă pot înscrie cu adevărat și știm că pentru a avea
+
+00:06:40.430 --> 00:06:50.300
+orice formă de conectare sau utilizatori avem nevoie de o bază de date pentru a ne aminti lucrurile pentru noi, cum ar fi numele de utilizator parole informații
+
+00:06:50.660 --> 00:06:52.730
+de profil toate aceste lucruri.
+
+00:06:52.800 --> 00:06:53.050
+In regula.
+
+00:06:53.040 --> 00:06:54.020
+Și știm asta.
+
+00:06:54.030 --> 00:07:00.020
+Adică Bruno ne-a spus că există o aplicație client un server și o bază de date.
+
+00:07:00.180 --> 00:07:08.420
+Se pare că avem nevoie să înființăm baza noastră de date acum, astfel încât să avem această conexiune și pentru că nu primesc nicio
+
+00:07:08.420 --> 00:07:13.180
+eroare în partea frontală și frontul este de obicei foarte ușor de configurat.
+
+00:07:13.950 --> 00:07:21.470
+Mă pot întoarce și să trec prin dependențe și să văd ce folosesc și văd că folosesc PGE,
+
+00:07:21.470 --> 00:07:30.590
+care este postscript și cel mai probabil conexiunea la baza de date și configurarea se întâmplă la unul dintre fișierele principale, cum
+
+00:07:31.770 --> 00:07:34.360
+ar fi serverul lui Jap.
+
+00:07:34.380 --> 00:07:39.590
+Așa că aș merge aici, probabil, imediat și imediat, văd asta.
+
+00:07:39.630 --> 00:07:40.030
+In regula.
+
+00:07:40.050 --> 00:07:46.260
+Se pare că baza de date D-B utilizează acest pachet K'NEX și K'NEX.
+
+00:07:46.350 --> 00:07:54.270
+Să spunem că nu știu ce înseamnă să merg aici și să spun K'NEX și PM să văd ce rezultate
+
+00:07:54.270 --> 00:07:55.020
+obțin.
+
+00:07:56.860 --> 00:08:00.530
+Toate bateriile au fost incluse în mai multe dialecte.
+
+00:08:00.690 --> 00:08:04.910
+Acesta este un constructor de interogări pentru nici un G-S și browser.
+
+00:08:04.920 --> 00:08:05.240
+In regula.
+
+00:08:05.250 --> 00:08:07.770
+În regulă, se pare că îl folosim pentru a cere.
+
+00:08:07.840 --> 00:08:13.900
+Ei bine, mergem la hub, poate că ne vor da o descriere mai bună.
+
+00:08:13.900 --> 00:08:17.370
+Se pare că au un site Web, astfel încât Lescaut să verifice și să o facă.
+
+00:08:17.410 --> 00:08:17.940
+Oh da.
+
+00:08:17.990 --> 00:08:20.680
+K'NEX din nou cu baterii incluse.
+
+00:08:20.680 --> 00:08:28.020
+Întrebați-vă pe toți constructorii și se pare că suntem capabili să creăm toate declarațiile lui
+
+00:08:28.020 --> 00:08:30.500
+Eskew cu adevărat plăcute curate.
+
+00:08:30.540 --> 00:08:36.780
+Dacă mă duc aici ca să spun că constructorul de interogări să spunem că dorim să facem o selectare.
+
+00:08:36.780 --> 00:08:37.300
+Metodă.
+
+00:08:37.470 --> 00:08:37.810
+In regula.
+
+00:08:37.810 --> 00:08:46.500
+Se pare că folosim K'NEX pentru a selecta autorul titlului de un an din baza de date a cărților, iar ieșirea
+
+00:08:46.500 --> 00:08:50.770
+este o instrucțiune selectată care ne dă acest lucru.
+
+00:08:50.810 --> 00:08:51.090
+In regula.
+
+00:08:51.090 --> 00:08:51.690
+Minunat.
+
+00:08:51.720 --> 00:08:54.450
+Poate că ați știut ce era K'NEX.
+
+00:08:54.750 --> 00:09:00.170
+Poate că nu ați făcut-o, dar cu orice proiect, arunc o privire la acest lucru și spuneți OK, de aceea pentru
+
+00:09:00.170 --> 00:09:00.950
+asta le folosesc.
+
+00:09:00.960 --> 00:09:09.930
+Asta inseamna ca cream o baza de date si folosim K'NEX pentru a ne conecta la baza de date port SCARUS
+
+00:09:10.320 --> 00:09:17.950
+si se pare ca exista o conexiune aici si se pare ca acest lucru este localhost apropo.
+
+00:09:17.980 --> 00:09:22.260
+Vreau să 7. 0 Dudd zero Darwan este același lucru cu localhost.
+
+00:09:22.270 --> 00:09:28.620
+Dacă schimbați modificările la localhost, va fi același lucru văzut Cher amuzant odată ce cred că am spus acest
+
+00:09:28.620 --> 00:09:36.630
+lucru înainte de unde a spus că nu există niciun loc cum ar fi dorit 2 7 0 0 1 ceea ce înseamnă localhost.
+
+00:09:36.660 --> 00:09:38.870
+Deci acasă nu există nici un loc ca acasă.
+
+00:09:39.240 --> 00:09:40.360
+Am crezut că e amuzant.
+
+00:09:40.500 --> 00:09:44.670
+Oricum vedem și că există o bază de date creier inteligent.
+
+00:09:44.700 --> 00:09:45.500
+In regula.
+
+00:09:45.540 --> 00:09:51.530
+Și utilizatorul este pe Google pe care l-am creat, dar vom vedea dacă chiar avem nevoie de asta.
+
+00:09:51.540 --> 00:09:57.720
+Deci, uita-te la acest lucru trebuie să ne conectăm la o bază de date și apoi să le divulgăm pentru că
+
+00:09:57.720 --> 00:09:59.070
+lucrați pe calculatorul propriu.
+
+00:09:59.190 --> 00:10:05.040
+Trebuie să vă conectați la o bază de date care este pe computerul dvs. sau poate să aibă o bază de date de testare la
+
+00:10:05.070 --> 00:10:06.230
+care ne putem conecta.
+
+00:10:06.300 --> 00:10:11.970
+Dar Bruno nu a menționat nimic, așa că pare că trebuie să înființăm baza de date.
+
+00:10:12.090 --> 00:10:17.490
+Și din nou, dacă bazele de date sunt noi pentru tine, atunci vă recomand să verificați alt curs.
+
+00:10:17.790 --> 00:10:30.690
+Deocamdată putem începe o bază de date postgresql și să creăm baza de date inteligentă pentru aplicații din interiorul acesteia.
+
+00:10:31.640 --> 00:10:39.080
+Pe un Mac acest lucru este diferit pentru fiecare mașină pe care o puteți folosi ceva numit
+
+00:10:39.080 --> 00:10:47.440
+interfață gooey sau grafică pentru a crea acele tabele pentru dvs. doar pentru că este puțin mai ușor decât utilizarea
+
+00:10:47.440 --> 00:10:48.060
+terminalului.
+
+00:10:48.280 --> 00:10:56.230
+Deci, am ceva numit continuarea Păcii sunt legate de surse care au Gucci pentru Windows și Linux și
+
+00:10:56.230 --> 00:10:57.280
+alte surse.
+
+00:10:57.280 --> 00:11:02.770
+Dar continuarea este gratuită și într-adevăr foarte plăcută pentru Mac vă permite să vă arăt.
+
+00:11:06.470 --> 00:11:13.070
+Din nou, aceasta ne permite să folosim postscript-uri și să avem o interfață grafică frumoasă.
+
+00:11:13.160 --> 00:11:17.660
+Deci, să ne întoarcem la baza noastră de date și.
+
+00:11:17.660 --> 00:11:18.060
+In regula.
+
+00:11:18.080 --> 00:11:24.810
+Se pare că putem încerca doar să ne conectăm la localhost, ceea ce ne dorim.
+
+00:11:24.980 --> 00:11:29.580
+Și la baza de date inteligentă a creierului.
+
+00:11:29.700 --> 00:11:31.030
+Hai să ne conectăm aici.
+
+00:11:32.180 --> 00:11:36.510
+Bine, Eric spune că nu se poate conecta la refuzul de conectare la server.
+
+00:11:36.860 --> 00:11:42.580
+Se execută serverul de difuzare pe gazda gazdă locală și numărul acestui port.
+
+00:11:42.870 --> 00:11:45.270
+Probabil că nu.
+
+00:11:45.350 --> 00:11:51.280
+Vreau să spun că fără ca tu să trebuiască să începi un server de baze de date, nu vei avea parte de asta.
+
+00:11:51.290 --> 00:11:58.680
+Deci, primul lucru pe care trebuie să-l faceți este să spuneți că rulați un server postscripts pe calculatorul meu.
+
+00:11:58.950 --> 00:12:03.880
+Din nou, nu am făcut nimic pentru a crea o bază de date.
+
+00:12:04.070 --> 00:12:09.960
+Tot ce trebuie să facem este să deschidem terminalul și să fie unul nou.
+
+00:12:10.110 --> 00:12:11.710
+Acest lucru poate deveni un pic mai mare.
+
+00:12:14.200 --> 00:12:23.140
+Și o să spunem lui Drew și acesta este un lucru pe care îl pot folosi pe Brue pentru Mac și folosind
+
+00:12:23.140 --> 00:12:29.040
+această comandă pe un Mac, pot să pornesc sau să opresc funiile postscript.
+
+00:12:29.140 --> 00:12:29.770
+Pot
+
+00:12:33.630 --> 00:12:35.970
+să scriu asta deoarece deja am instalat postscript-uri.
+
+00:12:35.970 --> 00:12:38.970
+Din nou, voi lăsa resurse pentru tine să faceți același lucru.
+
+00:12:39.120 --> 00:12:42.440
+Dacă nu ați făcut deja acest lucru din cursul meu anterior.
+
+00:12:42.780 --> 00:12:46.920
+Deci serviciile lui Bruce încep posturi.
+
+00:12:46.920 --> 00:12:49.730
+Au început cu succes postscript-urile.
+
+00:12:49.750 --> 00:12:57.710
+Acum, dacă ne întoarcem și am pornit serverul și încerc să mă conectez la baza de date creier inteligent
+
+00:12:57.980 --> 00:13:00.540
+pe care am creat-o în secret.
+
+00:13:00.560 --> 00:13:01.130
+In regula.
+
+00:13:01.130 --> 00:13:05.130
+Se pare că sunt conectat la baza de date.
+
+00:13:05.180 --> 00:13:06.600
+Sunt două mese aici.
+
+00:13:06.620 --> 00:13:13.080
+Există un tabel de jurnal care are ID-uri versiunea hash sau parola și e-mail-uri.
+
+00:13:13.190 --> 00:13:14.890
+Deci, putem folosi aceasta pentru a vă conecta.
+
+00:13:14.900 --> 00:13:15.440
+O.K.
+
+00:13:15.590 --> 00:13:23.210
+Apoi, avem utilizatorii pe care le avem intrări de nume de e-mail în comun și doar uitandu-mă la baza de date am un fel
+
+00:13:23.210 --> 00:13:27.000
+de a avea o idee despre ce informații cere inteligent creier.
+
+00:13:27.080 --> 00:13:32.480
+Și se pare că are doar informații despre utilizator.
+
+00:13:32.490 --> 00:13:35.300
+Acum am creat deja asta.
+
+00:13:35.580 --> 00:13:42.030
+Dar dacă nu am avea deja acest lucru dacă avem o bază de date diferită.
+
+00:13:42.090 --> 00:13:44.470
+Deci, să închidem acest lucru și să încercăm din nou.
+
+00:13:44.620 --> 00:13:50.550
+Nu vreau să deschid din nou continuarea și de data aceasta să ne conectăm la o
+
+00:13:50.550 --> 00:13:56.830
+bază de date denumită creier inteligent, dacă am conecta creierul inteligent la baza de date, nu există.
+
+00:13:56.830 --> 00:14:00.550
+Deci, cum creez baza de date creier inteligent.
+
+00:14:00.550 --> 00:14:10.280
+Din nou, în funcție de sistemul în care rulează postscript-urile dvs. pentru Mac, pot să fac Crearea D-B și să-i dau
+
+00:14:10.400 --> 00:14:14.680
+numele indiferent de numele pe care îl vreau.
+
+00:14:14.680 --> 00:14:19.620
+Și din nou, aceasta are o versiune instalată de PostScript.
+
+00:14:19.660 --> 00:14:21.010
+Din nou voi lăsa legături cu asta.
+
+00:14:21.040 --> 00:14:24.320
+Deci, puteți să o faceți dacă nu aveți deja postscript-uri pe computerul dvs.
+
+00:14:24.430 --> 00:14:28.260
+Așa că am de gând să spun creează o bază de date creier inteligent.
+
+00:14:28.420 --> 00:14:37.960
+Dacă acum mă întorc și încerc să vă conectez aspectul care reacționează conectați și avem că suntem în interiorul bazei de date, dar
+
+00:14:37.990 --> 00:14:40.420
+vedeți că nu avem tabele.
+
+00:14:40.420 --> 00:14:47.530
+Noi cream tabele intrăm în interogare și aici am de fapt un istoric al interogărilor, așa că am să-l
+
+00:14:47.530 --> 00:14:49.000
+scriu pentru tine.
+
+00:14:49.000 --> 00:14:56.530
+Eu pot crea tabelul de utilizatori și acest lucru este simplu Eskew toate comenzile și vom trece peste asta un
+
+00:14:56.530 --> 00:14:57.990
+pic mai mult.
+
+00:14:58.960 --> 00:15:06.520
+Când lucrăm cu docker, dar creăm un ID cu o cheie primară serială, care va merge în ordine
+
+00:15:06.520 --> 00:15:08.640
+unu două, trei patru cinci.
+
+00:15:08.710 --> 00:15:16.630
+Avem un nume care limitează caracterele variabile de 100 de e-mailuri care trebuie să fie unice și nu toate.
+
+00:15:16.630 --> 00:15:25.490
+Și, de asemenea, trebuie să fie în tipul de text și intrările care încep să fi început cu implicit 0 și s-au alăturat care este o ștampilă
+
+00:15:25.490 --> 00:15:27.710
+de timp care este o dată.
+
+00:15:27.710 --> 00:15:35.410
+Și asta poate să-mi amintească să vă reamintesc puțin tipografia și să vă întreb pe toți într-un fel este tastat chiar
+
+00:15:35.420 --> 00:15:39.870
+înainte de a începe să atribuim ID-uri și nume și e-mailuri.
+
+00:15:39.920 --> 00:15:43.870
+Trebuie să spunem la ce tip acceptă.
+
+00:15:44.030 --> 00:15:51.740
+Iată cum funcționează bazele de date pentru a-și optimiza interogările și, în general, au performanțele bune pe care le au
+
+00:15:51.740 --> 00:15:53.010
+bazele de date.
+
+00:15:53.240 --> 00:15:55.100
+Deci, să rulați această interogare.
+
+00:15:56.110 --> 00:16:00.090
+Dacă actualizez acum, am utilizator stabil.
+
+00:16:00.160 --> 00:16:01.080
+Asta e uimitor.
+
+00:16:01.270 --> 00:16:04.770
+Și putem crea jurnalul și masa, de asemenea.
+
+00:16:07.260 --> 00:16:10.250
+Din nou același lucru Id hash și e-mail.
+
+00:16:10.290 --> 00:16:14.180
+Dacă am rula această interogare și reîmprospătează.
+
+00:16:14.680 --> 00:16:19.900
+În regulă, am un jurnal și un tabel de utilizator minunat.
+
+00:16:19.940 --> 00:16:23.060
+Deci este baza mea de date care rulează.
+
+00:16:23.090 --> 00:16:25.200
+Teoretic, aplicația noastră ar trebui să funcționeze.
+
+00:16:25.200 --> 00:16:34.050
+Acum, să ne întoarcem la conexiunea noastră aici și în loc de baza de date și se pare că nu avem nevoie de un utilizator
+
+00:16:34.050 --> 00:16:38.850
+deoarece nu am setat un utilizator și folosim din nou gazdă locală aici.
+
+00:16:38.850 --> 00:16:43.910
+O să spun creierul inteligent pe care să-l salvez.
+
+00:16:44.160 --> 00:16:45.720
+Am restartat serverul nostru.
+
+00:16:45.720 --> 00:16:46.770
+Să încercăm din nou asta.
+
+00:16:46.860 --> 00:16:50.450
+Mă voi întoarce la aplicația noastră.
+
+00:16:50.650 --> 00:16:53.470
+Să încercăm din nou asta.
+
+00:16:53.470 --> 00:16:57.580
+Vreau să mă înregistrez grozav.
+
+00:16:57.680 --> 00:16:59.710
+Tocmai ne-am conectat la aplicația noastră.
+
+00:16:59.730 --> 00:17:01.220
+Dacă mă întorc la baza mea de
+
+00:17:04.620 --> 00:17:05.880
+date și îmi reîmprospătesc aspectul
+
+00:17:09.360 --> 00:17:10.440
+pe care îl am.
+
+00:17:10.440 --> 00:17:13.350
+Hei hei la gmail dot com intrări zero.
+
+00:17:13.350 --> 00:17:22.600
+O ștampilă de timp când am intrat și am chiar o parolă hashed cu e-mail care este foarte foarte cool.
+
+00:17:22.770 --> 00:17:26.250
+Deci, ar trebui să putem lucra acum cu această aplicație.
+
+00:17:26.280 --> 00:17:26.840
+Dreapta.
+
+00:17:27.180 --> 00:17:33.050
+Hai să închidem consola și arată că acest creier magic va detecta fețele în imaginea de tipar.
+
+00:17:33.120 --> 00:17:33.980
+Incearca.
+
+00:17:34.170 --> 00:17:37.110
+Putem intra aici pentru a detecta chipurile.
+
+00:17:37.260 --> 00:17:44.370
+Așa că am o față pe care o pot folosi și o să spun adresa de copiere a imaginii care îmi
+
+00:17:44.400 --> 00:17:49.370
+dă URL-ul și o să-l lipesc aici și să dau clic pe detectare.
+
+00:17:49.390 --> 00:17:49.840
+In regula.
+
+00:17:49.870 --> 00:17:56.810
+Uită-te la numărul de intrări noastre a crescut de unul și pot verifica acest lucru prin a merge la utilizatori și vedem că intrările dvs.
+
+00:17:56.810 --> 00:18:00.020
+este acum odată, astfel încât baza de date a fost actualizat.
+
+00:18:00.100 --> 00:18:01.750
+Și dacă mă întorc la server.
+
+00:18:01.790 --> 00:18:02.110
+In regula.
+
+00:18:02.120 --> 00:18:03.970
+Nu există erori.
+
+00:18:03.980 --> 00:18:04.350
+In regula.
+
+00:18:04.370 --> 00:18:07.850
+Și unde este această caracteristică de detectare a feței.
+
+00:18:07.850 --> 00:18:09.930
+Nu vedem cu adevărat că noi facem asta.
+
+00:18:09.930 --> 00:18:14.120
+Dacă deschid consola, văd asta.
+
+00:18:14.140 --> 00:18:16.550
+Acum avem încă 400 de oameni în aerul nostru.
+
+00:18:16.570 --> 00:18:20.630
+O cerere greșită și văd că e la sfârșitul imaginii că ești real.
+
+00:18:20.680 --> 00:18:23.300
+Deci, ceva cu imaginea pe care o faci este de lucru.
+
+00:18:25.760 --> 00:18:28.230
+Pur și simplu spune că nu poate obține imaginea Jaro.
+
+00:18:28.580 --> 00:18:31.490
+Dacă deschid fila de rețea și încerc din nou
+
+00:18:34.590 --> 00:18:38.340
+acest lucru, vedem că imaginea în care sunteți Arel este ceva greșit aici.
+
+00:18:38.490 --> 00:18:44.800
+Avem o cerere de 400 de pătrat și spune că nu putem lucra cu API.
+
+00:18:45.330 --> 00:18:51.480
+Sună bine că avem încă o piesă a puzzle-ului pe care trebuie să o rezolvăm
+
+00:18:51.480 --> 00:18:56.660
+și că folosim un API numit clarificat și clarificat este un
+
+00:19:02.390 --> 00:19:10.370
+API care ne permite să trimitem o adresă URL a imaginii și ei trimit un răspuns pentru noi .
+
+00:19:10.370 --> 00:19:16.280
+Deci, dacă intru în documentația dezvoltatorilor și mă duc
+
+00:19:18.990 --> 00:19:25.900
+să vedem că vedem că prin binele tău putem prezice lucrurile.
+
+00:19:25.990 --> 00:19:26.690
+Ce putem face.
+
+00:19:26.800 --> 00:19:32.950
+Se pare că avem nevoie de o cheie API și cu orice API cu care lucrați aveți nevoie de ceva numit
+
+00:19:33.370 --> 00:19:35.650
+cheie API, pentru că așa cunoaște API-ul.
+
+00:19:35.890 --> 00:19:36.400
+Oh da.
+
+00:19:36.460 --> 00:19:37.180
+Acesta este Andre.
+
+00:19:37.180 --> 00:19:42.810
+El a plătit deja pentru serviciile noastre sau are 1000 de imagini gratuite pe care ni le poate trimite.
+
+00:19:42.880 --> 00:19:47.290
+Și, prin clarificare, este liberă pentru nivelul de intrare, așa că nu vă faceți griji.
+
+00:19:47.290 --> 00:19:50.680
+Acesta este ceva ce ieșiți din cutie gratuit.
+
+00:19:50.770 --> 00:19:53.590
+Avem nevoie de o cheie API.
+
+00:19:53.640 --> 00:20:03.270
+Cel mai bun lucru pe care îl pot face este să mă întorc la interfața mea API și poate caută API-ul să spun API pentru acum și
+
+00:20:03.280 --> 00:20:09.250
+site-ul în care vrem să facem că dorim să facem o căutare pe deplin pe API.
+
+00:20:09.420 --> 00:20:13.450
+Și dacă mă duc să scot în jos, mă duc în jos, văd.
+
+00:20:13.470 --> 00:20:13.840
+Oh da.
+
+00:20:13.860 --> 00:20:18.630
+Iată cheia mea API pentru clarificare.
+
+00:20:18.630 --> 00:20:21.370
+Și da, vă arăt că ați putea fi Ickey.
+
+00:20:21.660 --> 00:20:22.320
+Și nu-ți face griji.
+
+00:20:22.320 --> 00:20:26.270
+În momentul în care vedeți acest videoclip aș fi schimbat acest lucru, astfel încât să nu aveți acces la acesta.
+
+00:20:26.280 --> 00:20:30.160
+Acesta este unul dintre acele lucruri care este un secret pe care nu ar trebui să-i arătați nimănui.
+
+00:20:30.180 --> 00:20:33.870
+N-ar trebui să o puneți în producție atunci când împingeți acest lucru în hub.
+
+00:20:33.870 --> 00:20:42.690
+Trebuie să faceți ceva de genul cheii dvs. API aici, astfel încât utilizatorii să nu vă vadă cheia dvs. API, deoarece în majoritatea timpurilor cheile API în timp
+
+00:20:42.690 --> 00:20:48.840
+ce acestea sunt valoroase fie plătiți bani pentru ele, fie aveți limite de rată și puteți utiliza numai serviciul de
+
+00:20:48.840 --> 00:20:54.750
+o mie de ori și dacă aș fi o persoană rea, pot să fure doar asta și să
+
+00:20:54.750 --> 00:20:57.500
+folosesc din nou toate datele dvs. de clarificare.
+
+00:20:57.510 --> 00:20:59.000
+Nu vă faceți griji că voi schimba asta până acum.
+
+00:20:59.010 --> 00:21:01.360
+În momentul în care vedeți acest lucru, puteți să-l utilizați.
+
+00:21:01.500 --> 00:21:05.380
+Dar am introdus clarificarea mea indie indie cheie.
+
+00:21:05.400 --> 00:21:09.970
+Dodgy Da, care există pe aici.
+
+00:21:10.020 --> 00:21:10.510
+In regula.
+
+00:21:10.570 --> 00:21:15.910
+Din nou, în majoritatea proiectelor, acesta este un lucru pe care dezvoltatorii îl vor spune deja că sunt
+
+00:21:16.210 --> 00:21:19.590
+în documentație, astfel încât să nu trebuie să vă aflați singur.
+
+00:21:20.200 --> 00:21:25.210
+Dar pentru aceia dintre voi care din nou nu au făcut parte din cursul meu anterior și
+
+00:21:25.210 --> 00:21:30.420
+nu au lucrat cu clarificați tot ce trebuie să faceți este să creați un cont și este complet gratuit.
+
+00:21:32.220 --> 00:21:39.090
+Și puteți spune că creați o nouă aplicație faceți clic pe aplicația dvs. și are cheile API aici și cheile
+
+00:21:39.810 --> 00:21:44.460
+API vor fi generate pentru dvs. și puteți doar să copiați acest lucru sau
+
+00:21:47.340 --> 00:21:54.630
+puteți merge la cheile API aici și faceți clic pe Creați noua cheie API și se pare că aceasta este cheia mea
+
+00:21:54.630 --> 00:21:55.150
+API.
+
+00:21:56.340 --> 00:22:02.380
+Dacă mă întorc, puteți vedea că este de fapt diferită de cea veche, care nu mai funcționează.
+
+00:22:02.920 --> 00:22:05.710
+Așa că am copiat-o și l-am lipit.
+
+00:22:05.950 --> 00:22:11.570
+Și acum să ne întoarcem la noi.
+
+00:22:11.570 --> 00:22:13.950
+Bine, să închidem acest lucru și să încercăm din nou acest lucru.
+
+00:22:13.950 --> 00:22:18.740
+Mă duc să detectez.
+
+00:22:18.820 --> 00:22:19.440
+Hmm.
+
+00:22:19.590 --> 00:22:20.670
+Să ne întoarcem aici.
+
+00:22:20.670 --> 00:22:23.790
+Bine, ca să nu funcționeze.
+
+00:22:24.600 --> 00:22:28.910
+Inca primesc imaginea pe care o cereti rau.
+
+00:22:28.950 --> 00:22:31.020
+Și iată ce e.
+
+00:22:31.230 --> 00:22:36.870
+În calitate de dezvoltator, există greșeli mereu prostești aici și acolo, care credem că există ceva cu totul
+
+00:22:36.870 --> 00:22:38.490
+în neregulă cu configurația.
+
+00:22:38.490 --> 00:22:39.900
+Ce fac greșit.
+
+00:22:40.030 --> 00:22:46.110
+Și este doar unul din acele lucruri pe care trebuie să-i testezi toate ipotezele și vei realiza că uneori
+
+00:22:46.110 --> 00:22:49.970
+faci doar o greșeală prostească și te gândești logic la asta.
+
+00:22:50.070 --> 00:22:56.610
+Codul pe care tocmai l-am primit lucra pentru că alți dezvoltatori lucrează la el și am făcut un caz special în care am modificat
+
+00:22:56.610 --> 00:22:59.730
+cheia API, care cel mai probabil nu o va face.
+
+00:22:59.730 --> 00:23:03.790
+Vroiam doar să vă arăt cum să faceți asta, în cazul în care trebuie să-l setați singur.
+
+00:23:03.870 --> 00:23:10.710
+Dar nu vrem să schimbăm prea mult din acest cod, deoarece acest cod este deja ipotetic
+
+00:23:10.710 --> 00:23:11.850
+în producție.
+
+00:23:11.940 --> 00:23:14.400
+Deci, facem ceva ce facem greșit.
+
+00:23:14.460 --> 00:23:16.070
+Am introdus cheia API.
+
+00:23:16.140 --> 00:23:18.430
+Legătura noastră cu baza de date există.
+
+00:23:18.510 --> 00:23:20.100
+Și copacii sunt actualizați.
+
+00:23:20.220 --> 00:23:24.830
+Deci, singurul lucru care are logic logic este ceva de a face cu asta.
+
+00:23:24.910 --> 00:23:30.520
+Și dacă vă uitați la acest mesaj, nu sunteți voi.
+
+00:23:30.540 --> 00:23:32.250
+Ei bine, nu deloc.
+
+00:23:32.270 --> 00:23:36.420
+Dacă mergeți la început, să vedem că vedem că este o imagine
+
+00:23:41.430 --> 00:23:48.070
+de bază 64 care, din nou, este un alt mod de a obține imagini, dar nu este un R-AL pe
+
+00:23:48.090 --> 00:23:49.950
+care ne așteptăm să-l auzim.
+
+00:23:49.980 --> 00:23:54.720
+Deci trebuie să fii atent cu asta, deoarece Google a eliminat fila de vizualizare de aici.
+
+00:23:54.720 --> 00:23:55.850
+Deci e greu să te arestezi.
+
+00:23:55.880 --> 00:23:59.330
+Ei bine, l-am adăugat aici pentru că am un conector crom în care funcționează.
+
+00:23:59.640 --> 00:24:07.510
+Deci, haideți să alegeți o altă imagine care are de fapt un bine. Am să copiez această adresă de copie a
+
+00:24:07.510 --> 00:24:09.600
+imaginii înapoi la aplicația noastră.
+
+00:24:09.610 --> 00:24:09.980
+In regula.
+
+00:24:10.000 --> 00:24:13.860
+Acum arata ca un u r l cu Dot jpeg.
+
+00:24:13.930 --> 00:24:15.150
+Mă duc să
+
+00:24:17.930 --> 00:24:24.330
+dau clic pe detectați aspectul că avem o detectare a feței care funcționează pentru aplicația noastră și acolo o avem.
+
+00:24:24.350 --> 00:24:26.890
+Suntem pregătiți și totul funcționează.
+
+00:24:26.900 --> 00:24:31.250
+Dacă mergem la consolă Să clarificăm acest lucru și să încercăm din nou.
+
+00:24:31.580 --> 00:24:34.790
+Să încercăm o altă imagine de data asta, vom încerca asta.
+
+00:24:36.870 --> 00:24:45.270
+Am de gând să spun adresa de copiere a imaginii Asigurați-vă că ești tu Arel nu e baza ei 64 Să încercăm
+
+00:24:45.270 --> 00:24:45.840
+altceva.
+
+00:24:45.840 --> 00:24:54.050
+Să încercăm această adresă de imagine pentru o copie.
+
+00:24:54.100 --> 00:24:54.790
+E un jpeg.
+
+00:24:54.790 --> 00:24:55.270
+Asta e bine.
+
+00:24:55.270 --> 00:24:56.910
+Dă-mi clic.
+
+00:24:56.970 --> 00:24:57.670
+In regula.
+
+00:24:57.820 --> 00:25:03.980
+Nu există erori în consola, numărul de intrări a crescut și detectează fețele.
+
+00:25:04.000 --> 00:25:06.430
+În regulă, foarte bine, deci avem totul înființat.
+
+00:25:06.460 --> 00:25:12.310
+Dacă ne întoarcem la serverul nostru și apoi mergem la aplicația noastră nu există erori.
+
+00:25:12.310 --> 00:25:13.270
+Totul funcționează.
+
+00:25:13.270 --> 00:25:18.480
+Totul este setat și atunci începem să privim codul și să analizăm lucrurile.
+
+00:25:18.550 --> 00:25:23.710
+Odată ce am înființat totul, astfel încât lucrurile funcționează, știm că acesta este ceea ce avem nevoie.
+
+00:25:23.710 --> 00:25:28.370
+Putem începe să ne uităm la cod și să ne imaginăm ce să facem ceea ce nu putem face.
+
+00:25:29.510 --> 00:25:32.970
+Apropo, o notă rapidă pentru postscript-uri.
+
+00:25:32.980 --> 00:25:37.650
+Un alt mod în care puteți accesa baza de date este din nou prin comanda tuturor dispozitivelor PSU.
+
+00:25:37.670 --> 00:25:42.230
+Din nou, acesta este ceva care ar putea să vină cu mesajele dvs. postate de Bruin sau ar putea fi
+
+00:25:42.230 --> 00:25:44.560
+necesar să faceți ceva diferit în funcție de mașina dvs.
+
+00:25:44.660 --> 00:25:52.170
+Dar eu fac postscripts și vrei numele de utilizator și parola gazdele locale.
+
+00:25:52.180 --> 00:25:59.320
+În cazul nostru, numărul slab pe care-l aducem aminte că am creat implicit postscript-urile cu toate acestea și
+
+00:25:59.320 --> 00:26:01.600
+apoi avem aplicația creierului inteligent.
+
+00:26:01.600 --> 00:26:08.110
+Deci, dacă fac inteligent Brai unul aici și nu avem un nume de utilizator și o parolă, așa că să lăsăm doar la
+
+00:26:08.110 --> 00:26:08.570
+asta.
+
+00:26:08.620 --> 00:26:11.220
+Vom vedea dacă funcționează fără un nume de utilizator și o parolă.
+
+00:26:12.100 --> 00:26:19.230
+Uită-te la faptul că sunt conectat la baza de date și pot folosi câteva comenzi comune precum backlash-ul Slash d.
+
+00:26:20.230 --> 00:26:26.530
+Ceea ce îmi dă toate tabelele pe care le am la dispoziție și pot rula toate
+
+00:26:26.530 --> 00:26:34.250
+comenzile SU aici, ca un star select de la utilizatori și văd că un G-mail dot com de asemenea lucrează.
+
+00:26:34.320 --> 00:26:39.230
+Din nou, ceva pe care îl acoperim în cursul meu anterior, dar cel puțin acum știi că asta facem
+
+00:26:39.240 --> 00:26:41.050
+cu interfața noastră grafică de utilizator.
+
+00:26:41.070 --> 00:26:44.610
+Suntem doar conectați la această bază de date și accesând-o.
+
+00:26:44.640 --> 00:26:46.210
+Dar într-un prieten mai prietenos.
+
+00:26:46.230 --> 00:26:50.100
+Ușor de folosit în modă.
+
+00:26:50.180 --> 00:26:50.700
+In regula.
+
+00:26:50.780 --> 00:26:55.640
+Deci, acest lucru este de lucru, iar următorul videoclip vom începe să uităm la cod și să
+
+00:26:55.640 --> 00:26:58.210
+vedem cum putem implementa detectarea mai multor fețe.
+
+00:26:58.440 --> 00:27:00.470
+Voi vedea în următorul Buh-Bye.

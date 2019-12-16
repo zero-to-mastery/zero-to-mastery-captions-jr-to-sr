@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.750 --> 00:00:05.360
+Cine a rămas fără informații până acum.
+
+00:00:05.710 --> 00:00:13.210
+Din fericire pentru noi, aș spune că partea grea se termină odată ce am încărcat DOM.
+
+00:00:13.470 --> 00:00:15.130
+Următorul pas este simplu.
+
+00:00:15.360 --> 00:00:23.010
+Construim arborele de randare care are toate informațiile de care avem nevoie de DOM și CSM
+
+00:00:23.010 --> 00:00:29.790
+cum să construim pagina de acolo browserul precizează aspectul și poziționarea fiecăruia dintre aceste
+
+00:00:29.790 --> 00:00:30.700
+elemente.
+
+00:00:30.870 --> 00:00:37.800
+Și apoi, în final, o vopsește și avem evenimentul Load care se întâmplă.
+
+00:00:37.870 --> 00:00:40.000
+Acum vedeți aici un pas mai departe.
+
+00:00:40.000 --> 00:00:47.080
+Pasul numărul opt, care este javascript și este probabil lucruri pe care le cunoașteți cel mai bine dacă
+
+00:00:47.080 --> 00:00:50.310
+evenimentele Javascript modifică orice parte a paginii.
+
+00:00:50.410 --> 00:00:59.110
+Aceasta provoacă o redresare a copacului de randare și ne obligă să trecem prin așezarea și vopsirea din nou.
+
+00:01:00.390 --> 00:01:02.640
+Aplicațiile web au dreptate.
+
+00:01:02.640 --> 00:01:09.870
+Utilizatorii interacționează cu pagina și script-ul java modifică în mod constant pagina prin ciclism prin aspectul arborelui
+
+00:01:09.870 --> 00:01:11.730
+de randare și vopsea.
+
+00:01:11.730 --> 00:01:13.490
+Și continuăm să mergem într-un cerc aici.
+
+00:01:15.990 --> 00:01:24.040
+Acum, browserele moderne sunt destul de inteligente pentru a efectua doar o redirectionare partiala, dar nu ne putem baza
+
+00:01:24.040 --> 00:01:27.030
+pe aceasta fiind eficienta sau performanta.
+
+00:01:27.160 --> 00:01:29.970
+Deci este treaba noastră să facem asta eficient.
+
+00:01:30.310 --> 00:01:36.910
+Privind astfel, se pare că cu siguranță ne dorim să minimalizăm manipularea DOM și să nu
+
+00:01:36.910 --> 00:01:38.290
+fim prea agitați.
+
+00:01:38.290 --> 00:01:45.940
+Acestea fiind spuse, evident, javascriptul este în mare parte eveniment bazat pe partea clientului și am vrut să manipulăm
+
+00:01:45.940 --> 00:01:46.830
+Donul nostru.
+
+00:01:47.290 --> 00:01:54.660
+Deci, va face acest lucru, dar trebuie doar să limităm sub-performanța și defectele unei cauze bune cu ea.
+
+00:01:55.890 --> 00:02:04.530
+Acum, să recapitulăm încă o dată ceea ce am învățat prin calea de redare critică pe care am învățat-o să optimizăm
+
+00:02:04.770 --> 00:02:11.280
+fiecare dintre aceste fișiere în acea cale de redare critică, astfel încât browserele noastre să poată
+
+00:02:11.280 --> 00:02:16.230
+afișa pagina Web sau aplicația web cât mai curând posibil utilizatorul.
+
+00:02:16.240 --> 00:02:22.270
+De asemenea, ar trebui să înțelegem mai bine această animație proastă pe care am făcut-o la
+
+00:02:22.600 --> 00:02:23.530
+începutul secțiunii.
+
+00:02:24.540 --> 00:02:31.730
+Înțelegem acum cum se descarcă un shemale și Cs.
+
+00:02:31.820 --> 00:02:37.850
+De asemenea, știm cum se construiește construcția arborelui DOM și a brațului CSSA.
+
+00:02:37.880 --> 00:02:43.890
+De asemenea, știm că javascriptul este descărcat și apoi acționează asupra celor doi copaci.
+
+00:02:45.310 --> 00:02:54.280
+Și apoi, folosind în cele din urmă ambele, putem construi arborele de randare.
+
+00:02:54.480 --> 00:03:00.710
+Și apoi, în cele din urmă, în timp ce nu în cele din urmă și
+
+00:03:00.710 --> 00:03:11.910
+apoi vom obține lay out figura layout lor de la arborele de rand noi vopsi pixeli pe ecran și apoi în cele din urmă avem pagina noastră Web afișate.
+
+00:03:11.960 --> 00:03:17.080
+Și, da, avem și imaginea noastră mică încărcată în fundal.
+
+00:03:18.030 --> 00:03:19.520
+Asta e multă muncă.
+
+00:03:19.530 --> 00:03:22.460
+Destul de impresionant pentru browsere.
+
+00:03:22.590 --> 00:03:28.140
+Acum voi lăsa câteva dintre aceste fișiere care sunt folosite în aceste videoclipuri, astfel încât să puteți exersa și
+
+00:03:28.320 --> 00:03:29.650
+să testați diferite lucruri.
+
+00:03:29.670 --> 00:03:36.510
+Rețineți că diferite browsere se comportă diferit și că browserele încearcă întotdeauna să îmbunătățească performanța.
+
+00:03:36.540 --> 00:03:37.800
+Lucrurile se pot schimba.
+
+00:03:37.830 --> 00:03:44.310
+De exemplu, cromul chiar acum lucrează la faptul că javascriptul nu este blocarea parserului și
+
+00:03:44.310 --> 00:03:51.740
+redarea în fundal, așa că țineți minte în timp ce explorați câteva din subiectele diferite pe care le-am
+
+00:03:51.780 --> 00:03:53.550
+practicat în aceste videoclipuri.
+
+00:03:53.550 --> 00:03:56.520
+Distrează-te și o să văd în următorul videoclip.

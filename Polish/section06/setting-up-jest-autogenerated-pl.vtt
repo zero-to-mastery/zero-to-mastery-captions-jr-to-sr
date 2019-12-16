@@ -1,0 +1,406 @@
+﻿WEBVTT
+
+00:00:01.010 --> 00:00:07.060
+Teraz już wiem, że reagują już na nowe narzędzia testowe.
+
+00:00:07.190 --> 00:00:13.190
+Sądzę jednak, że ważne jest, abyśmy zrozumieli, jak to działa, abyśmy mogli stworzyć coś takiego, jak
+
+00:00:13.190 --> 00:00:14.690
+stworzyć własną reakcję.
+
+00:00:14.870 --> 00:00:20.020
+Więc zacznę od zera i przygotuję dla ciebie kilka przykładów testowych.
+
+00:00:21.460 --> 00:00:24.770
+Teraz właśnie tutaj jest świetna dokumentacja.
+
+00:00:24.820 --> 00:00:32.490
+Po raz kolejny w każdej bibliotece przejdziemy przez ich przewodnik i udostępnimy wiele informacji, ponieważ zmiany w bibliotece pokazują, że
+
+00:00:32.490 --> 00:00:36.850
+jest to wersja 20 2. 4 teraz rzeczy mogą zostać zaktualizowane.
+
+00:00:36.970 --> 00:00:40.280
+Ale ich główne koncepcje się nie zmienią.
+
+00:00:40.360 --> 00:00:46.990
+Zacznijmy od zainstalowania właśnie lub przede wszystkim stwórzmy folder projektu.
+
+00:00:47.350 --> 00:00:54.940
+Zamierzam utworzyć folder projektu o nazwie test, a my po prostu wejdziemy do tego folderu i uruchomimy w
+
+00:00:55.210 --> 00:00:56.490
+nim zwykłego PM.
+
+00:00:56.530 --> 00:00:59.540
+Dash y, aby utworzyć pakiet NPM.
+
+00:01:00.160 --> 00:01:08.220
+Chcielibyśmy także utworzyć skryptowy plik JSE z kropką i otwórzmy to.
+
+00:01:08.310 --> 00:01:10.190
+A nasz ulubiony edytor
+
+00:01:18.200 --> 00:01:20.880
+tekstu wygląda ładnie i całkiem idealnie.
+
+00:01:20.890 --> 00:01:29.480
+Spójrzmy teraz na zapakowane Jaison i oczywiście pierwszym krokiem, który chcemy zrobić, jest uruchomienie instalacji NPM i faktycznie pozwolę sobie
+
+00:01:33.580 --> 00:01:35.360
+na anulowanie tego.
+
+00:01:35.420 --> 00:01:39.830
+Pamiętaj, że tylko do celów programistycznych.
+
+00:01:39.950 --> 00:01:45.380
+Naprawdę nie potrzebujemy tego jako zależności od naszej.
+
+00:01:45.380 --> 00:01:48.860
+Tak więc zazwyczaj po instalacji wystarczy, że
+
+00:01:52.790 --> 00:01:58.590
+chcesz wykonać instalację NPM, aby zainstalować kreskę w desce rozdzielczej, aby zapisać pętle def.
+
+00:01:58.940 --> 00:02:00.330
+Spróbujmy jeszcze raz.
+
+00:02:00.380 --> 00:02:09.210
+Pamiętaj tylko, że przy używanej wersji NPM, gdy instalujesz grom instalowane przez NPM, zakłada ona, że kreska musi
+
+00:02:09.270 --> 00:02:13.280
+być zapisana jako dev lub jako zależność.
+
+00:02:13.290 --> 00:02:15.710
+Dlatego właśnie koniec tutaj jest bezpieczny.
+
+00:02:15.750 --> 00:02:25.410
+Teraz, gdy jest to ładowanie Przejdźmy do naszych skryptów i zmieńmy to na polecenie testowe.
+
+00:02:27.250 --> 00:02:36.640
+I wszystko, co musimy zrobić, jest uruchamiane zaraz po zainstalowaniu.
+
+00:02:36.730 --> 00:02:42.160
+Nie jestem pewien, co się tutaj dzieje wygląda na trochę wąskiego. Po prostu zamknij to
+
+00:02:42.440 --> 00:02:48.100
+i uruchom teraz teraz, podczas gdy to ładuje. Przejdźmy do pliku naszej spódniczki i zastanówmy się,
+
+00:02:48.100 --> 00:02:49.550
+jakie ćwiczenia chcielibyśmy włączyć.
+
+00:02:49.840 --> 00:02:57.910
+Myślę, że posiadanie prostej funkcji wyszukiwania w Google może być zabawnym ćwiczeniem.
+
+00:02:57.910 --> 00:02:59.670
+Zróbmy to.
+
+00:02:59.910 --> 00:03:05.900
+Wygląda na to, że wszystko zostało dodane. Syllis właśnie trafił, aby było trochę mniejsze.
+
+00:03:06.390 --> 00:03:12.660
+I znowu, jeśli pójdziemy do Pakistanu Jason, widzimy, że jest to część zależności od
+
+00:03:12.690 --> 00:03:20.960
+deweloperów, a nie zależności, ale Dev, ponieważ robisz to, ponieważ zrobiliśmy kreskę, kropkę, zapisz lub skryj, ratując śmierć w skrypcie.
+
+00:03:20.990 --> 00:03:21.890
+Plik JS.
+
+00:03:22.130 --> 00:03:25.720
+Powiedzmy, że to Google i mamy zmienną.
+
+00:03:25.850 --> 00:03:32.330
+To będzie uproszczona wersja ich algorytmu wyszukiwania, ale zasady będą
+
+00:03:32.330 --> 00:03:33.630
+takie same.
+
+00:03:33.650 --> 00:03:42.150
+Załóżmy więc, że baza danych Google ma zestaw wszystkich zaindeksowanych witryn sieci Web.
+
+00:03:42.350 --> 00:03:45.460
+Powiedzmy, że pierwszą jest Catts dot com.
+
+00:03:45.740 --> 00:03:48.710
+Oczywiście to przecież internet.
+
+00:03:48.710 --> 00:03:56.710
+Mamy również przepisy na zupy Dawk na wszystkich uwielbia zupę.
+
+00:03:56.710 --> 00:04:04.940
+Mamy kwiaty dot com, a dodajmy jeszcze jedno, powiemy, że mamy też zwierzęta dot com.
+
+00:04:04.950 --> 00:04:11.550
+Dość podstawowe strony internetowe i te są wszystkie strony internetowe, które Google może wyszukać w sposób oczywisty w prawdziwym życiu.
+
+00:04:11.550 --> 00:04:16.200
+Ta lista może być trochę większa.
+
+00:04:16.210 --> 00:04:16.750
+W porządku.
+
+00:04:16.800 --> 00:04:19.340
+Mamy więc naszą bazę danych Google.
+
+00:04:19.470 --> 00:04:20.490
+Wiesz co.
+
+00:04:20.640 --> 00:04:24.380
+Kiedy już jesteśmy, powiedzmy, że jeszcze kilka zdjęć kotów.
+
+00:04:24.530 --> 00:04:32.140
+Kropka. com, a może mój ulubiony, i
+
+00:04:38.220 --> 00:04:45.840
+dodałem te dwa ostatnie, ponieważ być może, jeśli ktoś szuka kotów w przeglądarce
+
+00:04:45.840 --> 00:04:51.170
+Google Chrome, możemy chcieć ponownie pokazać te trzy linki.
+
+00:04:51.180 --> 00:04:56.810
+Stwórzmy funkcję, a to będzie po prostu funkcja wyszukiwania Google.
+
+00:04:59.230 --> 00:05:04.450
+Ta funkcja przeszuka dane przez
+
+00:05:08.350 --> 00:05:10.240
+użytkownika.
+
+00:05:10.240 --> 00:05:15.380
+Więc cokolwiek oni szukają i stamtąd, robi to kilka rzeczy.
+
+00:05:15.400 --> 00:05:20.910
+Najpierw chcemy powiedzieć, że będzie to bardzo prosty algorytm.
+
+00:05:21.010 --> 00:05:27.290
+Oczywiście może to być bardziej skomplikowane w Google, ale pomysł jest czymś, a jeśli jest
+
+00:05:27.290 --> 00:05:30.240
+jakiś rodzaj dopasowania, to chcemy go zwrócić.
+
+00:05:30.400 --> 00:05:41.040
+Powiedzmy, że baza danych Google zostanie przefiltrowana, a użycie funkcji filtru powie, że każdy element
+
+00:05:41.040 --> 00:05:49.940
+w bazie danych jest witryną sieci Web, która ma zostać przefiltrowana, a
+
+00:05:50.090 --> 00:05:53.300
+my musimy zwrócić
+
+00:05:55.990 --> 00:05:59.220
+witrynę sieci Web, która zawiera.
+
+00:05:59.260 --> 00:06:12.610
+Więc to znaczy, że koty dot com, jeśli zawiera to, co szuka, ale było jak powiedziałem bardzo ładny
+
+00:06:12.610 --> 00:06:16.820
+i podstawowy algorytm wyszukiwania Google.
+
+00:06:17.120 --> 00:06:23.680
+Chcemy też zwrócić te dopasowania użytkownikowi, ponieważ tak właśnie robi Google.
+
+00:06:23.870 --> 00:06:31.370
+Ale załóżmy, że chcemy się upewnić, ponieważ hipotetycznie ta baza danych może być naprawdę bardzo duża,
+
+00:06:31.670 --> 00:06:39.290
+chcemy tylko zwrócić trzy najlepsze wyniki, więc możemy powiedzieć, że pozwolę sobie upewnić się, że to jest
+
+00:06:39.290 --> 00:06:40.170
+właściwe.
+
+00:06:40.190 --> 00:06:49.290
+Chcemy powiedzieć, że jeśli ta długość kropki jest większa niż trzy, jeśli masz więcej niż trzy
+
+00:06:49.290 --> 00:06:57.030
+mecze, to po prostu powiemy dopasowywanie kropek i właśnie zwrócimy pierwsze trzy wyniki.
+
+00:06:58.660 --> 00:07:01.480
+W przeciwnym razie po prostu zwróć regularne mecze.
+
+00:07:02.690 --> 00:07:07.060
+Zróbmy to mniejszym, abyśmy mogli zobaczyć.
+
+00:07:07.110 --> 00:07:07.530
+W porządku.
+
+00:07:07.530 --> 00:07:10.680
+Przetestujmy to i zobaczmy, czy to faktycznie działa.
+
+00:07:10.680 --> 00:07:20.360
+Mam zamiar uruchomić funkcję wyszukiwania Google i załóżmy, że dane wejściowe wyszukiwania, które zamierzam wprowadzić, będą zupą, a mniej
+
+00:07:20.360 --> 00:07:23.720
+po prostu anulowane przez cały czas, aby
+
+00:07:26.940 --> 00:07:32.940
+upewnić się, że niezależnie od wyniku, gdy logujemy go do naszego terminala
+
+00:07:32.940 --> 00:07:35.070
+pozwól mi oszczędzać.
+
+00:07:35.340 --> 00:07:41.520
+I znowu z węzłem możemy po prostu uruchomić ten skrypt węzła.
+
+00:07:41.620 --> 00:07:42.120
+JOT. S.
+
+00:07:44.950 --> 00:07:46.300
+Dobra, spójrz na to.
+
+00:07:46.300 --> 00:07:48.130
+Mam przepisy na zupy.
+
+00:07:48.250 --> 00:07:50.430
+Jeśli to zmieni się w koty, dostanę
+
+00:07:54.800 --> 00:07:56.140
+rzeczy dla kotów.
+
+00:07:56.270 --> 00:08:02.530
+A moje ulubione koty są spokojne, ale nie są kropkami, ponieważ nie pasują do kotów.
+
+00:08:02.660 --> 00:08:11.230
+Gdybyśmy mieli tam inną stronę, nazwijmy ją moimi ulubionymi kotami, a ja szukam tylko kota O i
+
+00:08:13.980 --> 00:08:18.380
+dopilnuję, żeby dodać przecinek. Zawsze zapominam o przecinku.
+
+00:08:18.380 --> 00:08:20.980
+Pozwól, że to wyjaśnię i spróbuj ponownie.
+
+00:08:24.080 --> 00:08:24.450
+W porządku.
+
+00:08:24.500 --> 00:08:31.340
+Dostaję tylko jedno dwa i trzy wyniki, ponieważ robimy ten mały kawałek.
+
+00:08:31.340 --> 00:08:34.190
+Zwracamy tylko pierwsze trzy wyniki.
+
+00:08:34.190 --> 00:08:34.790
+Niesamowite.
+
+00:08:34.940 --> 00:08:42.950
+Właśnie wdrożyliśmy Google w prostszej skali, ale pamiętajmy, że tak właśnie działa Google.
+
+00:08:42.950 --> 00:08:48.050
+W porządku, więc było fajnie, ale jak możemy to przetestować.
+
+00:08:48.050 --> 00:08:54.890
+Załóżmy, że jesteśmy Google i chcemy się upewnić, że ta funkcja wyszukiwania Google działa poprawnie,
+
+00:08:54.890 --> 00:09:02.880
+ponieważ jest to ważna funkcja dla naszej aplikacji, ponieważ właśnie ją zainstalowaliśmy, przetestujmy test NPM i zobaczmy, co się
+
+00:09:02.880 --> 00:09:03.530
+stanie.
+
+00:09:05.490 --> 00:09:07.020
+Test NPM
+
+00:09:11.310 --> 00:09:17.440
+po prostu mówi, że nie znaleziono testów, ponieważ nie przeprowadziliśmy żadnych testów.
+
+00:09:17.850 --> 00:09:25.740
+Ale widzisz tutaj, że po prostu automatycznie szuka się czegoś, co ma albo folder, który ma podkreślenie
+
+00:09:25.740 --> 00:09:32.310
+w testach przekroju poprzecznego, i wszystko, co znajduje się w nim, albo zajrzy do
+
+00:09:32.310 --> 00:09:36.550
+dowolnego pliku, który ma składnię spec lub testową kropkę.
+
+00:09:36.780 --> 00:09:46.380
+Zgodnie z tą logiką mogę po prostu stworzyć nowy test skryptowy dodgy nas lub mogę umieścić Spack i tutaj, co jest
+
+00:09:46.380 --> 00:09:47.300
+również powszechne.
+
+00:09:47.820 --> 00:09:49.530
+I uderzyłem enter.
+
+00:09:49.530 --> 00:09:50.870
+I jeśli znów
+
+00:09:57.070 --> 00:09:58.730
+to uruchomię, otrzymam błąd.
+
+00:09:58.810 --> 00:10:04.600
+Mówi, że twój zestaw testów musi zawierać przynajmniej jeden test w porządku.
+
+00:10:04.600 --> 00:10:05.800
+Oczyśćmy to.
+
+00:10:06.190 --> 00:10:12.100
+Jak więc możesz napisać test do wyszukiwarki Google, a my to zrobimy w następnym wideo.
+
+00:10:12.130 --> 00:10:18.880
+Ale żeby się upewnić, że nasze testy się sprawdzą, pokażę wam jeden szybki sposób, w
+
+00:10:18.910 --> 00:10:26.250
+jaki możemy pisać testy jednostkowe i właśnie to. Mamy teraz funkcję informatyczną i pierwszy parametr tej funkcji.
+
+00:10:26.320 --> 00:10:28.020
+I znowu to przychodzi po prostu.
+
+00:10:28.150 --> 00:10:33.730
+Ale jeśli pobierzesz inne biblioteki testowe, prawie wszystkie z nich również mają tę funkcję.
+
+00:10:33.730 --> 00:10:37.300
+Tak jak powiedziałem, wszystkie te biblioteki mają bardzo podobną składnię.
+
+00:10:37.330 --> 00:10:43.480
+Więc jeśli znasz jedno, możesz łatwo przejść do drugiego z kilkoma niewielkimi zmianami.
+
+00:10:43.540 --> 00:10:49.570
+Więc pierwszym parametrem i tutaj jest jakiś ciąg, który pojawi się tutaj, powiedzmy, że
+
+00:10:49.660 --> 00:10:51.040
+to jest test.
+
+00:10:51.430 --> 00:10:59.240
+A następnie drugi parametr jest funkcją, która jest testem, który musi zostać uruchomiony.
+
+00:10:59.240 --> 00:11:04.990
+W naszym przypadku tak naprawdę nie mamy nic, ale oszczędźmy to i uruchom test NPM
+
+00:11:07.600 --> 00:11:08.110
+Whoa.
+
+00:11:08.260 --> 00:11:09.490
+Spójrz na to.
+
+00:11:09.490 --> 00:11:11.980
+Mamy nasz pierwszy test.
+
+00:11:13.030 --> 00:11:14.140
+To było całkiem proste, prawda.
+
+00:11:14.140 --> 00:11:23.050
+Wszystko co zrobiliśmy to NPM i właśnie i mamy już tę nową funkcję i nie możemy uruchomić testów i widzimy, że
+
+00:11:23.050 --> 00:11:27.000
+jest to test przekazany w ciągu jednej milisekundy.
+
+00:11:27.070 --> 00:11:28.540
+To dość szybki test.
+
+00:11:28.570 --> 00:11:31.210
+Wszystko jest zielone i ładne.
+
+00:11:31.210 --> 00:11:32.730
+Coś dobrego.
+
+00:11:33.070 --> 00:11:35.270
+Daje ci niezły zastrzyk dopaminy.
+
+00:11:35.350 --> 00:11:36.250
+W porządku.
+
+00:11:36.250 --> 00:11:41.500
+W następnym filmie zamierzamy zacząć pisać testy dla naszej wyszukiwarki Google.
+
+00:11:41.500 --> 00:11:42.250
+Zobaczę w następnym.

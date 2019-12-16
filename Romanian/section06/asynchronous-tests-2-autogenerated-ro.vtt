@@ -1,0 +1,415 @@
+﻿WEBVTT
+
+00:00:01.330 --> 00:00:02.080
+Bine ai revenit.
+
+00:00:02.230 --> 00:00:07.190
+Să începem să scriem câteva teste care sunt pentru codul asincron.
+
+00:00:07.640 --> 00:00:20.800
+Dacă ne întoarcem la scenariul nostru pentru a testa da-ul nostru, putem începe primul nostru test spunând că îl cheamă
+
+00:00:21.160 --> 00:00:27.110
+pe API-ul Swaby starwars pentru a obține oameni.
+
+00:00:27.300 --> 00:00:31.790
+Și din nou aceeași sintaxă pe care am văzut-o în primul nostru test.
+
+00:00:31.830 --> 00:00:47.450
+Ce putem face bine nu putem spune schimbarea Daut a lua oamenii vor da API fetch sau funcția de preluare.
+
+00:00:48.590 --> 00:00:56.430
+Și apoi faceți DOD atunci și așa cum am spus că ați putea trece prin tine sau altceva aici și am putea face ceva numit batjocură
+
+00:00:56.430 --> 00:00:58.620
+la care vom vorbi mai târziu.
+
+00:00:58.650 --> 00:01:02.480
+Deocamdată ne lipim de această metodă.
+
+00:01:03.700 --> 00:01:05.200
+Dar să vedem ce putem testa.
+
+00:01:06.070 --> 00:01:09.790
+Avem API pe care îl sunăm din nou.
+
+00:01:09.820 --> 00:01:14.020
+Va întoarce o tona de date.
+
+00:01:14.020 --> 00:01:22.430
+Deci, din nou, facem DOT decât simpla javascript și asta ne va aduce niște date.
+
+00:01:24.120 --> 00:01:32.570
+Amintiți-vă că va returna datele noastre sau că vom reveni la numărul și rezultatele noastre.
+
+00:01:32.610 --> 00:01:42.400
+Deci aici, în interiorul blocului DOD, atunci putem face afirmațiile noastre de așteptat ca datele să fie egale
+
+00:01:46.320 --> 00:01:47.190
+cu
+
+00:01:50.120 --> 00:01:57.990
+un 7 deoarece amintesc dacă ne întoarcem la site-ul Web numarul este de 87.
+
+00:01:58.120 --> 00:02:02.980
+Deci, sperăm că numărul de date se potrivește 87.
+
+00:02:03.000 --> 00:02:09.600
+Să vedem dacă așa o să salvez și să mă întorc la testele noastre.
+
+00:02:09.600 --> 00:02:12.450
+Permiteți-mi să clar acest lucru și să ruleze
+
+00:02:17.080 --> 00:02:21.560
+testul NPM și trebuie să apăsăm pe toate pentru a rula toate testele pentru aceasta.
+
+00:02:21.560 --> 00:02:28.120
+Așa că funcționează, dar nu este prea tare, nu facem prea mult prea nebun.
+
+00:02:28.120 --> 00:02:30.580
+Dacă adăugăm un test de notare.
+
+00:02:30.650 --> 00:02:37.010
+Vom adăuga un alt test aici și va spune că e vorba de frigul Swaby pentru a-i
+
+00:02:37.010 --> 00:02:39.310
+face pe oameni cu promisiunea.
+
+00:02:39.360 --> 00:02:49.410
+Acum de data asta vom folosi oamenii care promit să salvăm.
+
+00:02:49.530 --> 00:02:50.520
+Dreapta.
+
+00:02:50.550 --> 00:02:53.840
+Lucrează de fapt.
+
+00:02:53.850 --> 00:02:54.900
+Se pare că funcționează.
+
+00:02:54.900 --> 00:02:59.620
+Vreau să spun că avem șase teste care au trecut.
+
+00:02:59.800 --> 00:03:07.150
+Dar amintiți-vă ce am spus că întotdeauna vrem să ne asigurăm că nu reușim testele și să verificăm dacă testele
+
+00:03:07.270 --> 00:03:11.320
+verifică în timp ce suntem ceea ce vrem să verificăm.
+
+00:03:11.430 --> 00:03:25.950
+Un instrument pe care îl putem folosi cu geste este ceva numit afirmații xpect punct și afirmațiile sunt amintiți biblioteca
+
+00:03:25.980 --> 00:03:27.390
+afirmații.
+
+00:03:27.450 --> 00:03:31.610
+Aceste lucruri sunt aserțiuni.
+
+00:03:31.640 --> 00:03:40.200
+Prin urmare, folosind aserțiunile așteptate nu putem spune în acest bloc așteptăm una sau afirmație.
+
+00:03:40.460 --> 00:03:49.460
+Dacă ar fi trebuit atunci să spunem că ne așteptăm și aceasta este o modalitate bună de a testa că aceste lucruri se
+
+00:03:49.460 --> 00:03:52.630
+desfășoară în special cu un cod sincron.
+
+00:03:52.670 --> 00:03:54.180
+Lasă-mă să fac una aici.
+
+00:03:54.320 --> 00:03:55.130
+O
+
+00:03:57.780 --> 00:03:59.410
+să salvez ce sa întâmplat.
+
+00:04:00.770 --> 00:04:06.960
+Punctul nostru xpect afirmă un câmp.
+
+00:04:07.110 --> 00:04:09.920
+Au existat apeluri de afirmare zero.
+
+00:04:10.080 --> 00:04:14.110
+Deci, se întâmplă ceva aici, unde trece acest test.
+
+00:04:14.220 --> 00:04:22.870
+Dar acest lucru nu este niciodată chemat și acest lucru este un pic primit cu teste asincrone.
+
+00:04:23.830 --> 00:04:31.930
+Vedeți când se întâmplă acest lucru în timpul testelor, este foarte greu de depanat deoarece este ușor să
+
+00:04:31.960 --> 00:04:34.470
+nu verificați dacă funcționează corect.
+
+00:04:34.480 --> 00:04:43.600
+Problema este că testele sunt de fapt completate de îndată ce primesc oamenii primiți.
+
+00:04:43.780 --> 00:04:47.560
+Și amintiți-vă că o promisiune întoarce o stare în așteptare.
+
+00:04:47.580 --> 00:04:52.940
+Deci, acest lucru va fi returnat înainte de a primi efectiv datele.
+
+00:04:52.960 --> 00:04:54.780
+Cum facem asta?
+
+00:04:54.880 --> 00:05:01.420
+Cum putem spune testul că nu trece doar acest test pentru că nu sa întâmplat nimic și tocmai am revenit la o
+
+00:05:01.450 --> 00:05:03.440
+promisiune cu un stat în așteptare.
+
+00:05:03.700 --> 00:05:08.070
+Așteptați până se face acest lucru și apoi continuați.
+
+00:05:09.690 --> 00:05:11.360
+Există câteva moduri de a face acest lucru.
+
+00:05:11.400 --> 00:05:21.780
+Primul mod de a face acest lucru este să folosiți un singur argument numit făcut, în loc de a avea
+
+00:05:21.780 --> 00:05:31.680
+un parametru gol aici pentru funcția pe care am putut-o face, care devine automat trecută la un test.
+
+00:05:31.940 --> 00:05:41.460
+Și asta spune că doar așteptați până când se face apelul înainte de a vă spune că testul
+
+00:05:41.460 --> 00:05:42.630
+este terminat.
+
+00:05:42.630 --> 00:05:50.170
+Și, de obicei, o puneți imediat după apel, deci să spunem că acest lucru este acum făcut.
+
+00:05:50.220 --> 00:05:51.300
+Așa că lasă-mă să salvez
+
+00:05:54.710 --> 00:05:55.390
+ce funcționează.
+
+00:05:55.530 --> 00:05:56.460
+A trecut.
+
+00:05:56.460 --> 00:06:00.100
+Acum spunem că nu trece testul până nu se termină.
+
+00:06:01.100 --> 00:06:10.840
+Doar pentru a testa dacă mă schimb ca la zero. Acest lucru nu reușește, deoarece avem un apel de afirmație minunat.
+
+00:06:10.850 --> 00:06:14.150
+Acum, aceasta este o modalitate de a face acest lucru.
+
+00:06:14.480 --> 00:06:22.460
+Iar lucrul perfect cu asta este că, dacă dintr-un anumit motiv, acest gând, dacă acest testicul nu reușește,
+
+00:06:22.460 --> 00:06:30.340
+să spunem că în scenariul lui J, acesta este de fapt un parametru u r l incorect.
+
+00:06:30.410 --> 00:06:33.250
+Erau alții Poate ne-am spus greșit oamenii.
+
+00:06:33.250 --> 00:06:43.290
+Dacă vă spun asta, veți vedea că am primit un apel telefonic B pentru a atrage oamenii și am o eroare aici, astfel încât testul
+
+00:06:43.290 --> 00:06:46.800
+să aștepte până când am terminat de fapt.
+
+00:06:46.800 --> 00:06:47.820
+Foarte frumos.
+
+00:06:50.720 --> 00:06:51.960
+Acum să rezolvăm asta.
+
+00:06:52.010 --> 00:06:59.030
+Aduceți acest lucru înapoi la Juan și discutați despre cealaltă modalitate prin care puteți face acest lucru și acest lucru este foarte ușor.
+
+00:06:59.030 --> 00:07:04.820
+Dacă codul dvs. folosește promisiuni ca și noi, există o modalitate mai simplă, care este probabil
+
+00:07:04.820 --> 00:07:12.640
+mai puțin confuză pentru majoritatea oamenilor de a face față testului asincron și acest lucru este un alt lucru care îmi place
+
+00:07:12.730 --> 00:07:15.430
+cu adevărat despre faptul că pur și
+
+00:07:17.950 --> 00:07:26.200
+simplu putem pur și simplu să nu reluăm promisiunea și doar acest lucru destul de inteligent să spunem că pentru că ne întoarcem, o
+
+00:07:26.200 --> 00:07:29.200
+să aștept până se va întoarce această promisiune.
+
+00:07:29.200 --> 00:07:35.410
+Și dacă promisiunea este respinsă testul va eșua automat, ceea ce este foarte frumos.
+
+00:07:35.410 --> 00:07:46.510
+Din nou, să spunem că tot ceea ce depășește dacă scriu în mod greșit API-ul din nou vedeți că testul
+
+00:07:47.110 --> 00:07:49.300
+devine automat eșuat.
+
+00:07:55.420 --> 00:07:56.910
+Acum este un pic dificil.
+
+00:07:56.910 --> 00:08:02.280
+Trebuie să vă asigurați întotdeauna că veți reveni la promisiune dacă recunoașteți că această declarație revine
+
+00:08:02.320 --> 00:08:09.660
+la Simien, pe măsură ce ați văzut că testul dvs. va fi încheiat înainte ca promisiunea să fie efectiv rezolvată sau respinsă.
+
+00:08:09.670 --> 00:08:18.030
+Deci, iată un sfat atunci când rulați un test Synchronoss face întotdeauna acest lucru întotdeauna așteptați afirmații.
+
+00:08:18.190 --> 00:08:23.660
+Verificați întotdeauna că afirmațiile dvs. sunt testate.
+
+00:08:24.040 --> 00:08:25.290
+Deci, să terminăm asta.
+
+00:08:25.510 --> 00:08:27.450
+Să adăugăm încă câteva linii.
+
+00:08:27.550 --> 00:08:30.880
+Vom spune că aici.
+
+00:08:32.290 --> 00:08:34.540
+Vom adăuga două afirmații.
+
+00:08:34.840 --> 00:08:37.740
+Și din nou vrem să ne întoarcem aici.
+
+00:08:38.710 --> 00:08:44.650
+Și vom adăuga o altă afirmație care spune că ne așteptăm ca
+
+00:08:48.910 --> 00:08:52.340
+rezultatele datelor să aibă o lenth și
+
+00:08:56.800 --> 00:08:59.060
+ce putem folosi aici.
+
+00:08:59.110 --> 00:09:05.800
+Vrem să verificăm că rezultatele pe care le primim cel puțin cinci persoane sunt că lungimea
+
+00:09:05.830 --> 00:09:08.950
+este mai mare decât să spunem cinci.
+
+00:09:09.090 --> 00:09:14.510
+Din fericire pentru noi există o foaie de înșelăciune și această foaie de înșelăciune.
+
+00:09:14.620 --> 00:09:16.560
+Încearcă să spui asta repede de cinci ori.
+
+00:09:16.560 --> 00:09:23.400
+Este destul de greu să aveți toate aceste lucruri pe care le puteți folosi pentru testul de aici.
+
+00:09:23.400 --> 00:09:25.310
+Super super utile.
+
+00:09:25.380 --> 00:09:30.120
+Acestea sunt aproape tot ceea ce aveți nevoie pentru a scrie testele perfecte.
+
+00:09:30.120 --> 00:09:34.070
+Și vedem aici că trebuie să fim mai mari decât metodele.
+
+00:09:34.140 --> 00:09:35.220
+Deci, să folosim asta.
+
+00:09:35.310 --> 00:09:45.170
+Voi spune să fiu mai mare din nou și din acest motiv îmi place chiar în majoritatea bibliotecilor de afirmare.
+
+00:09:45.180 --> 00:09:49.840
+Ele fac doar ca totul să fie citit frumos în limba engleză, astfel încât să înțelegeți exact ce se întâmplă.
+
+00:09:49.860 --> 00:09:52.130
+Așa că am să spun că sunt mai mare de cinci.
+
+00:09:52.260 --> 00:09:56.610
+Să salvăm.
+
+00:09:56.770 --> 00:09:57.200
+In regula.
+
+00:09:57.210 --> 00:10:02.820
+Am avut câteva erori, astfel încât să rezolvăm acest test două afirmații care urmează să fie chemați, dar avem doar unul.
+
+00:10:03.150 --> 00:10:04.980
+De ce este asta.
+
+00:10:04.980 --> 00:10:12.900
+Și eu nu aterizează pământ de date nedefinite și mai puțin deconectați datele pentru a vedea ce ajungem aici să
+
+00:10:12.930 --> 00:10:16.060
+lăsăm să consoleze dialogul cu tata și să
+
+00:10:20.930 --> 00:10:23.040
+obțin un rezultat nedefinit.
+
+00:10:23.090 --> 00:10:26.210
+Asa arata ca aici.
+
+00:10:26.240 --> 00:10:28.380
+O să observați eroarea mea.
+
+00:10:28.600 --> 00:10:31.390
+Am scos greșit rezultatele aici.
+
+00:10:31.460 --> 00:10:32.980
+Probabil că râzi de mine chiar acum.
+
+00:10:32.990 --> 00:10:35.830
+Dar asta se întâmplă mult mai mult decât crezi.
+
+00:10:35.950 --> 00:10:37.040
+Dreapta.
+
+00:10:37.130 --> 00:10:39.530
+Să vedem asta.
+
+00:10:39.530 --> 00:10:40.520
+Bine, asta e bine.
+
+00:10:40.520 --> 00:10:45.820
+Am primit un răspuns să eliminăm salvarea jurnalului consolei.
+
+00:10:45.980 --> 00:10:51.110
+Și din nou, acesta este un alt motiv bun pentru a scrie teste, deoarece nu aș
+
+00:10:51.140 --> 00:10:53.770
+fi prins greșeala până nu am rula aplicația.
+
+00:10:53.910 --> 00:11:04.700
+Așadar, văd aici că am doar o eroare de tip simplu care să fie mai mare decât din nou în engleză.
+
+00:11:04.760 --> 00:11:05.950
+Acesta este dreptul
+
+00:11:09.530 --> 00:11:10.190
+ei.
+
+00:11:10.260 --> 00:11:16.510
+Totul trece și ceea ce tocmai ați fost martor este cum funcționează de obicei testele.
+
+00:11:16.560 --> 00:11:21.050
+În mod constant, ei rupe că se rup în mod constant și încercați să ajungeți la această stare verde.
+
+00:11:21.060 --> 00:11:27.450
+Și când ajungi la această stare verde, e ca și în alluia, e atât de drăguț încât se simte atât
+
+00:11:27.450 --> 00:11:30.380
+de bine să ai totul verde și lucrurile funcționează.
+
+00:11:30.410 --> 00:11:31.830
+Minunat.
+
+00:11:31.840 --> 00:11:32.470
+In regula.
+
+00:11:32.470 --> 00:11:35.440
+Cred că e bine pentru acum în următorul videoclip.
+
+00:11:35.440 --> 00:11:38.670
+Vreau să vorbesc puțin despre batjocură.
+
+00:11:38.760 --> 00:11:39.850
+Ne vedem în acel.
+
+00:11:40.140 --> 00:11:40.600
+Pa! Pa.

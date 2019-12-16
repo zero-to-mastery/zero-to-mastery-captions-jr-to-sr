@@ -1,0 +1,565 @@
+﻿WEBVTT
+
+00:00:01.180 --> 00:00:05.790
+Odpuść ich teraz, gdy mamy ładny znak funkcji uwierzytelniania.
+
+00:00:06.070 --> 00:00:12.220
+Nadszedł czas, abyśmy wygenerowali token JWT i faktycznie wysłali go do użytkownika, abyśmy mogli zacząć go używać.
+
+00:00:12.220 --> 00:00:15.270
+Możesz zobaczyć, jak działają tokeny JWT.
+
+00:00:15.460 --> 00:00:25.800
+Teraz najlepiej, abyśmy chcieli coś takiego, zamiast zwracać tylko obiekt danych, który jest obiektem użytkownika
+
+00:00:25.800 --> 00:00:34.310
+z identyfikatorem adresu e-mail i innymi polami, które może mieć baza danych.
+
+00:00:34.620 --> 00:00:37.690
+Dodajmy teraz inną logikę tutaj.
+
+00:00:37.830 --> 00:00:39.390
+Powiem, że tutaj chcemy
+
+00:00:43.400 --> 00:00:44.910
+najpierw coś sprawdzić.
+
+00:00:44.960 --> 00:00:51.920
+Najpierw chcemy sprawdzić, czy dysponujemy identyfikatorem danych niezależnie od odpowiedzi, aby upewnić się, że rzeczywiście mamy
+
+00:00:51.920 --> 00:00:57.020
+użytkownika, którego potrzebujemy, lub baza danych zwraca coś, co możemy wykorzystać.
+
+00:00:57.050 --> 00:01:03.590
+I dodajmy jeszcze jeden czek, który znajduje się w naszym e-mailu do DOT, a my możemy wykonać inne kontrole tutaj, ale
+
+00:01:03.590 --> 00:01:09.240
+to powinno wystarczyć, aby zweryfikować, że te dane są w rzeczywistości użytkownikiem, a my zrobimy potrójnego operatora.
+
+00:01:09.260 --> 00:01:17.540
+Powiem, że jeśli to istnieje, chcę, żebyś odpowiedział danymi użytkownika, a jeśli nie.
+
+00:01:17.540 --> 00:01:22.420
+Po raz kolejny możemy po prostu użyć obietnicy, która odrzuca.
+
+00:01:22.500 --> 00:01:29.950
+Naprawdę bardzo przydatna funkcja do wykorzystania i na razie tylko po to, aby uprościć rzeczy, na które zamierzamy odpowiedzieć,
+
+00:01:30.070 --> 00:01:36.470
+niezależnie od tego, jakie dane otrzymamy, może w istocie chcieć zwrócić odpowiedź łańcuchową, która nie ujawnia
+
+00:01:36.470 --> 00:01:42.470
+zbyt wielu informacji, ponieważ teraz bylibyśmy potencjalnie wysyłając dane z przodu iz bazy danych, których
+
+00:01:42.470 --> 00:01:44.620
+tak naprawdę nie chcemy robić.
+
+00:01:44.630 --> 00:01:50.960
+Ale do celów debugowania miło jest mieć teraz, ponieważ jeśli coś jakoś się nie powiedzie, to mogę to zobaczyć.
+
+00:01:50.960 --> 00:01:54.550
+W porządku, z czym się odrzucaję.
+
+00:01:54.680 --> 00:01:56.750
+Miejmy nadzieję, że pomoże nam to lepiej debugować.
+
+00:01:58.270 --> 00:02:05.890
+Teraz tutaj lubię nazywać rzeczy ładnymi i czystymi, a w naszym przypadku zamiast odpowiadać na dane,
+
+00:02:06.010 --> 00:02:09.730
+które chcemy zrobić, gdy tworzymy sesję użytkownika.
+
+00:02:09.730 --> 00:02:14.920
+Zamierzam to zmienić na funkcję, którą zamierzamy utworzyć, nazywając sesje tworzenia,
+
+00:02:14.980 --> 00:02:18.770
+a to spowoduje, że sesje będą otrzymywać dane.
+
+00:02:19.600 --> 00:02:27.910
+Obiekt i ten obiekt danych, który mam nadzieję, że użytkownik zostanie użyty i utworzy sesje i
+
+00:02:28.270 --> 00:02:35.140
+utworzy Sesje, zwróci obietnicę obietnicę zawierającą wszystkie potrzebne nam informacje o użytkowniku oraz Tokin
+
+00:02:35.140 --> 00:02:38.160
+nowy token, który będziemy generować.
+
+00:02:38.210 --> 00:02:47.790
+Stwórzmy więc tę funkcję. Zamierzam powiedzieć, że Konst tworzy sesje, które będą odbierać dane, lub powiedzmy
+
+00:02:49.650 --> 00:02:51.610
+teraz, dla użytkownika.
+
+00:02:52.960 --> 00:02:59.840
+Ta funkcja teraz utworzy sesję dla użytkownika.
+
+00:02:59.910 --> 00:03:10.550
+Teraz tutaj chcemy utworzyć token JJB i zwrócić dane użytkownika, abyśmy mogli stworzyć token JWT, musimy zainstalować pakiet
+
+00:03:10.550 --> 00:03:19.790
+JND od ciebie i B. M. jeśli przejdziemy tutaj, to jest pakiet, który
+
+00:03:19.790 --> 00:03:21.170
+zamierzamy użyć.
+
+00:03:21.170 --> 00:03:30.320
+Po prostu uruchamiamy instalację NPM Jason tokin i mamy dla Ciebie prostą, prostą dokumentację, a widzisz, że możemy po
+
+00:03:30.320 --> 00:03:35.640
+prostu utworzyć token, ale uruchamiając to polecenie jest ładne i proste.
+
+00:03:35.780 --> 00:03:36.660
+Zróbmy to.
+
+00:03:36.680 --> 00:03:42.040
+Mam zamiar uruchomić instalację NPM, kiedy zamknę teraz nasz kontener.
+
+00:03:42.860 --> 00:03:49.940
+I Ron, a więc i Jason Webb, to było miłe i szybkie.
+
+00:03:50.090 --> 00:03:57.050
+Teraz, gdy już to mamy, jeśli przewijamy w dół, po prostu go wymagamy, a następnie podpisujemy token.
+
+00:03:57.260 --> 00:03:59.560
+Zamierzam to skopiować.
+
+00:03:59.610 --> 00:04:01.420
+Pójdźmy aż tutaj.
+
+00:04:03.090 --> 00:04:06.180
+Będę wymagał tokena, a potem używam Konsta tutaj.
+
+00:04:07.140 --> 00:04:17.300
+W porządku, więc mamy obiekt JWT teraz, kiedy możemy go użyć do utworzenia tokena i tutaj, teraz
+
+00:04:17.300 --> 00:04:20.520
+stwórzmy funkcję zwaną tokenem znaku.
+
+00:04:20.720 --> 00:04:22.540
+I tworzą sesję.
+
+00:04:22.790 --> 00:04:32.700
+Zamierzam pobrać użytkownika lub e-mail i identyfikator, które ponownie sprawdzimy tutaj, abyśmy upewnili się, że
+
+00:04:32.700 --> 00:04:41.050
+mamy dane ID danych i wiadomości e-mail od użytkownika parametru, który otrzymujemy.
+
+00:04:41.270 --> 00:04:47.600
+I chcemy stworzyć token, który będzie tokenem znaku.
+
+00:04:47.900 --> 00:04:52.670
+Ale znowu chciałbym zachować prostotę i funkcjonować małą piosenkę
+
+00:04:52.880 --> 00:05:03.990
+i stworzyć nową funkcję zwaną tokenem znaku, a ten token znaku otrzyma, powiedzmy, e-mail użytkownika, którego użyje do podpisania
+
+00:05:03.990 --> 00:05:05.100
+tokena.
+
+00:05:05.320 --> 00:05:14.130
+W porządku, stwórzmy nową funkcję tokara znaku Konst i ponownie sprawianie, że funkcje są ładne i małe, oznacza to,
+
+00:05:14.130 --> 00:05:18.420
+że możemy je testować łatwiej, gdy faktycznie piszemy testy.
+
+00:05:18.420 --> 00:05:25.340
+To będzie prostsze, ponieważ podczas gdy są ładne małe kawałki, które
+
+00:05:25.460 --> 00:05:32.290
+możemy przetestować w prawo, a funkcja tokenu znaku otrzyma e-mail.
+
+00:05:32.380 --> 00:05:43.720
+I po prostu załadujmy ładunek JWT, którego użyjemy, a ładunek JWT będzie miał.
+
+00:05:44.070 --> 00:05:46.110
+E-mail.
+
+00:05:46.360 --> 00:05:52.660
+Teraz ładunek jest po prostu, jeśli spojrzysz na dokumentację, to jest zwykłe nazewnictwo
+
+00:05:53.260 --> 00:06:00.040
+Jeśli zobaczysz tutaj, możemy podpisać tokena pewnymi danymi, ponieważ pamiętamy, że tokeny GW rzeczywiście przechowują dane.
+
+00:06:00.220 --> 00:06:04.540
+Kiedy ją odkodujesz, możesz dowiedzieć się, jaki obiekt zawiera.
+
+00:06:04.540 --> 00:06:10.430
+Powiedziałem, że w naszym przypadku tak naprawdę nie chcemy wrażliwych informacji w torze JWT.
+
+00:06:10.590 --> 00:06:11.550
+E-mail jest w porządku.
+
+00:06:11.550 --> 00:06:16.800
+Możesz użyć ID, ale coś, co może być przydatne, jeśli chcesz dekodować ten token
+
+00:06:16.830 --> 00:06:18.400
+i używać go później.
+
+00:06:18.480 --> 00:06:26.250
+Dla nas zachowajmy wiadomość e-mail jako ładunek JWT, abyśmy mogli podpisać token za pomocą wiadomości e-mail użytkownika,
+
+00:06:27.480 --> 00:06:33.110
+a my po prostu wrócimy tutaj i w końcu podpiszemy nasz token.
+
+00:06:33.210 --> 00:06:40.920
+Więc właśnie kopiuję z jakiejkolwiek dokumentacji, która mówi, że chcesz używać znaku JWT, a ta ładunek
+
+00:06:41.010 --> 00:06:43.960
+będzie ładunkiem, który właśnie stworzyliśmy.
+
+00:06:46.030 --> 00:06:51.100
+A tu chcesz sekret, aby podpisać to jeszcze raz, coś bardzo ważnego,
+
+00:06:51.100 --> 00:06:58.050
+czego nie chcesz, żeby ludzie się dowiedzieli i jak tylko powiem, że coś powinno w twojej głowie
+
+00:06:58.260 --> 00:07:04.770
+zapaść w puste, a to oznacza, że to bardzo bezpieczna rzecz, powinieneś mieć zmienną środowiskową dla.
+
+00:07:04.770 --> 00:07:11.220
+Na razie jednak pamiętajcie o zmiennych środowiskowych, że musicie wykonać proces myślenia i
+
+00:07:11.220 --> 00:07:17.640
+myśli, powiedzmy, sekret JWT lub coś podobnego, ale ponieważ już to przeszliśmy
+
+00:07:17.640 --> 00:07:27.190
+i już wiemy, jak to zrobić, zamierzam to zachować proste i powiedz sekret JWT, a my się z tym zarejestrujemy.
+
+00:07:27.220 --> 00:07:30.580
+A przy okazji z GWG możesz robić ciekawe rzeczy.
+
+00:07:30.580 --> 00:07:40.550
+Na przykład możesz dać mu opcje, takie jak wygasa Dan, a my możemy podać, ile dni lub sekund.
+
+00:07:40.570 --> 00:07:43.850
+Token JWT wygasa, co jest naprawdę fajną funkcją.
+
+00:07:43.870 --> 00:07:45.820
+Powiedzmy więc dwa dni.
+
+00:07:45.880 --> 00:07:51.210
+Na razie tylko dla zabawy, mimo że z JWT możesz to zrobić.
+
+00:07:51.280 --> 00:07:56.500
+Jedną z głównych wad jest to, że jeśli chodzi o wylogowanie
+
+00:07:56.500 --> 00:08:04.900
+się użytkowników, trudno jest cofnąć te żetony i istnieją sposoby na ich obejście, ale dzięki zastosowaniu czerwonej metody S i
+
+00:08:04.900 --> 00:08:11.950
+naszej metody sesji naprawdę łatwo będzie je usunąć. token za każdym razem, gdy użytkownik zarejestruje się.
+
+00:08:11.950 --> 00:08:14.250
+Ale na razie zostawmy to w ten sposób.
+
+00:08:14.290 --> 00:08:21.310
+Właśnie zwracamy token JWT, teraz właśnie podpisujemy token i teraz mamy token i tworzymy
+
+00:08:21.550 --> 00:08:24.160
+sesje ładne i proste.
+
+00:08:24.160 --> 00:08:28.160
+Teraz pozwól mi zapisać to i ponownie uruchomić mój kontener dokowania.
+
+00:08:28.420 --> 00:08:30.210
+Po prostu uruchamiamy komponowanie dockera.
+
+00:08:30.250 --> 00:08:32.910
+Jest już zbudowany, więc nie potrzebujemy deski rozdzielczej.
+
+00:08:32.920 --> 00:08:33.220
+Rachunek w
+
+00:08:37.640 --> 00:08:37.850
+porządku.
+
+00:08:37.850 --> 00:08:39.050
+Wygląda na to, że nie ma błędów.
+
+00:08:39.050 --> 00:08:40.410
+To zawsze dobry znak.
+
+00:08:40.730 --> 00:08:41.670
+Wróćmy tutaj.
+
+00:08:41.690 --> 00:08:48.240
+Widzimy, że podpisujemy token, a teraz następną rzeczą, którą chcemy zrobić, to zrobić coś z
+
+00:08:48.240 --> 00:08:54.320
+zapasami i zacząć od razu, po prostu zwróć ten token na początek, abyśmy mogli
+
+00:08:54.320 --> 00:08:57.100
+zobaczyć, że faktycznie otrzymujemy token JWT.
+
+00:08:57.300 --> 00:08:59.620
+Po prostu powiem "powrót".
+
+00:08:59.910 --> 00:09:02.040
+Cóż, co powinieneś tu zwrócić.
+
+00:09:02.040 --> 00:09:07.530
+Pamiętaj, że tak naprawdę nie chcemy robić odpowiedzi, ale Jason, ponieważ chcemy zachować wszystkie odpowiedzi
+
+00:09:07.560 --> 00:09:09.250
+na znak i uwierzytelnienie.
+
+00:09:09.330 --> 00:09:18.730
+Widzimy, że wracamy lub chcemy zwrócić sesje Create lub obietnicę nie odrzucamy w naszym
+
+00:09:21.160 --> 00:09:22.000
+przypadku.
+
+00:09:22.210 --> 00:09:29.610
+Idealnie bez względu na to, co tutaj chcemy mieć psa, to ma odpowiedź.
+
+00:09:30.640 --> 00:09:39.610
+Zróbmy więc odpowiedź Daut Jaison albo zwróćmy sesję, jeśli otrzymamy sesję z
+
+00:09:39.610 --> 00:09:45.630
+sesji tworzenia, a my po prostu odpowiemy.
+
+00:09:45.710 --> 00:09:53.960
+Jaison po prostu wraca, cokolwiek jest sesja i cokolwiek jest sesja, to cokolwiek wrócimy z
+
+00:09:54.020 --> 00:09:56.280
+tego tworzy funkcję sesji.
+
+00:09:56.450 --> 00:10:00.510
+Ten na razie, bo mamy zamiar wysłać Jaisona.
+
+00:10:00.770 --> 00:10:13.270
+Powiedzmy, że chcemy, aby sukces był prawdziwy, a podamy, powiedzmy, identyfikator użytkownika, który jest pomysłem,
+
+00:10:13.270 --> 00:10:23.490
+który otrzymaliśmy od użytkownika z bazy danych, i podarujemy mu również token.
+
+00:10:23.630 --> 00:10:29.930
+I po prostu sprawić, by było to miłe i zwięzłe, ponieważ to klucz jest równy wartości, którą mogę
+
+00:10:29.930 --> 00:10:32.120
+po prostu zostawić na skórze.
+
+00:10:32.140 --> 00:10:37.840
+Teraz wysyłamy token i nasz identyfikator użytkownika.
+
+00:10:37.930 --> 00:10:46.210
+Teraz ten obiekt użytkownika, jeśli pamiętasz Zwykle zwracamy całą rzecz i będziemy mieć informacje o profilu, takie
+
+00:10:46.210 --> 00:10:52.360
+jak nazwa e-mail, aby od razu, gdy się logujemy, otrzymujemy te informacje.
+
+00:10:52.360 --> 00:10:59.770
+Oto, co mamy zamiar zrobić, ponieważ do tej pory, kiedy użytkownik się zalogował, uruchomilibyśmy znak i
+
+00:10:59.770 --> 00:11:03.650
+funkcję handle i właśnie zwrócili obiekt użytkownika.
+
+00:11:04.690 --> 00:11:10.130
+Jest jednak ładniejszy sposób, aby to zrobić i chcemy, aby punkty końcowe były naprawdę opisowe.
+
+00:11:11.220 --> 00:11:14.730
+I chcesz się upewnić, że seinen tylko obsługuje podpisywanie.
+
+00:11:14.760 --> 00:11:16.450
+Jest to prawda lub fałsz.
+
+00:11:16.530 --> 00:11:17.250
+Jesteś zalogowany?
+
+00:11:17.280 --> 00:11:18.460
+Nie jesteś zalogowany.
+
+00:11:18.540 --> 00:11:19.680
+Jesteś uwierzytelniony.
+
+00:11:19.680 --> 00:11:21.050
+Nie jesteś uwierzytelniony.
+
+00:11:21.210 --> 00:11:28.220
+Najlepiej użyć czegoś w rodzaju identyfikatora profilu, aby uzyskać informacje o użytkownikach.
+
+00:11:28.350 --> 00:11:33.750
+Ponownie jesteśmy po prostu bardzo opisowi, podobnie jak robimy czyste funkcje.
+
+00:11:33.750 --> 00:11:39.660
+Po prostu upewniamy się, że każdy punkt końcowy wykonuje jedną rzecz i jedną rzecz naprawdę dobrze, a
+
+00:11:39.660 --> 00:11:44.070
+to ładniejszy projekt, ponieważ ma więcej sensu i jest o wiele czystszy.
+
+00:11:44.100 --> 00:11:48.810
+A w miarę rozszerzania rzeczy łatwiej jest zrozumieć, kiedy pojawia się nowy programista.
+
+00:11:48.810 --> 00:11:53.170
+Będą mogli powiedzieć: ok, no i właśnie tego prawdopodobnie używamy, aby uzyskać profil.
+
+00:11:53.220 --> 00:11:56.540
+Jest to prawdopodobnie to, czego używamy do logowania.
+
+00:11:56.580 --> 00:12:02.170
+Może być zaskakujące dla niektórych, aby powiedzieć, że zwracamy cały obiekt użytkownika
+
+00:12:02.230 --> 00:12:10.570
+za pomocą loginu i wskazujemy, że aby zachować czystość i racjonalność w naszych głowach, zwrócę tylko identyfikator, a
+
+00:12:10.570 --> 00:12:17.560
+następnie na front Właściwie robię żądanie pobrania do profilu i ponieważ mamy identyfikator użytkownika Teraz
+
+00:12:17.950 --> 00:12:22.340
+możemy po prostu poprosić o informacje o profilu.
+
+00:12:22.420 --> 00:12:23.670
+Wypróbujmy to.
+
+00:12:23.680 --> 00:12:29.700
+Zamierzam zapisać i wrócić do mojej aplikacji.
+
+00:12:29.780 --> 00:12:32.060
+Mam zamiar się wylogować.
+
+00:12:32.180 --> 00:12:40.400
+Zróbmy kropkę. com a mam zamiar otworzyć narzędzia deweloperskie przejdź do zakładki
+
+00:12:40.420 --> 00:12:44.860
+sieci upewnij się, że wszystko jest wyczyszczone i kliknij zaloguj się.
+
+00:12:44.870 --> 00:12:45.620
+W porządku.
+
+00:12:45.620 --> 00:12:48.790
+Wygląda na to, że nie mogliśmy się zalogować.
+
+00:12:48.830 --> 00:12:55.040
+Jeśli kliknę na znak w oh spójrz na to, mam powodzenie.
+
+00:12:55.040 --> 00:12:58.330
+Prawdziwy identyfikator użytkownika to jeden.
+
+00:12:58.700 --> 00:13:01.730
+I mamy sobie token.
+
+00:13:01.730 --> 00:13:02.930
+Fantastyczny.
+
+00:13:02.930 --> 00:13:09.380
+Jest to więc nasz token, który teraz uwierzytelnia nas i upewniamy się, że teraz serwer
+
+00:13:09.380 --> 00:13:13.380
+może zidentyfikować tę przeglądarkę, której ten klient chce używać.
+
+00:13:13.460 --> 00:13:14.400
+Bardzo bardzo fajne.
+
+00:13:14.420 --> 00:13:22.720
+Ale dlaczego nie byliśmy w stanie dobrze się zalogować, jest to coś, na co trzeba uważać za każdym
+
+00:13:22.720 --> 00:13:27.880
+razem, gdy zmienia się to, co oczekiwano, aż do tego momentu.
+
+00:13:28.180 --> 00:13:33.350
+Mieliśmy do czynienia z logowaniem się, wykonując pewną rzecz i to jest to, że zwrócił cały obiekt użytkownika.
+
+00:13:33.370 --> 00:13:38.710
+Gdy tylko zmieniamy coś na odwrocie, by zwrócić coś, o czym klient nie wiedział, że
+
+00:13:38.710 --> 00:13:40.860
+nastąpiła zmiana, możemy zepsuć rzeczy.
+
+00:13:40.990 --> 00:13:42.610
+I chcemy być tego świadomi.
+
+00:13:42.700 --> 00:13:47.640
+Za każdym razem, gdy zwrócisz coś innego niż oczekiwał klient i co programiści oczekują
+
+00:13:47.650 --> 00:13:51.210
+od ciebie, upewnij się, że dostosujesz się do tego.
+
+00:13:51.220 --> 00:13:56.850
+Jeśli więc wrócimy do naszego kodu front endowego, przejdźmy do naszego seinen komponentu.
+
+00:13:56.860 --> 00:14:04.920
+Uważam, że tam właśnie robimy seinen i widzimy tutaj, że kiedy przewijamy w dół, przesyłajmy podpisy
+
+00:14:05.270 --> 00:14:09.930
+i wskażemy post, do którego wysłaliśmy e-mail i hasło.
+
+00:14:10.120 --> 00:14:17.740
+A w końcu, gdy otrzymamy odpowiedź, sprawdzamy, czy użytkownik jest identyfikatorem dot, a następnie załadujemy użytkownika i
+
+00:14:17.980 --> 00:14:18.980
+zmieniamy trasę.
+
+00:14:19.030 --> 00:14:24.530
+Ale w rzeczywistości nie mamy kropki użytkownika I. RE. już to robimy.
+
+00:14:24.610 --> 00:14:29.110
+Ponieważ to, co zwracamy, jest w rzeczywistości obiektem sukcesu.
+
+00:14:29.110 --> 00:14:32.430
+Prawdziwy identyfikator użytkownika i token.
+
+00:14:32.450 --> 00:14:41.150
+Musimy więc zmienić front, aby być może powiedzieć, że to będą dane, a te
+
+00:14:41.150 --> 00:14:53.060
+dane będą zawierały identyfikator użytkownika, a jeśli to się zgadza, to chcemy załadować użytkownika, którego w rzeczywistości nie mamy.
+
+00:14:53.060 --> 00:14:54.340
+.
+
+00:14:54.380 --> 00:14:57.770
+Tak więc zamierzam odejść tak, jak mamy to na razie.
+
+00:14:57.770 --> 00:15:01.680
+Może nie załadować żadnego z użytkowników, ponieważ nie ma obiektu użytkownika.
+
+00:15:01.700 --> 00:15:03.270
+Na razie zmienię to na dane.
+
+00:15:04.230 --> 00:15:09.480
+A to może się nie udać i jest to coś, do czego wrócimy, ponieważ możemy chcieć
+
+00:15:09.480 --> 00:15:13.070
+teraz wysłać żądanie do identyfikatora profilu z pomysłem, który mamy.
+
+00:15:13.080 --> 00:15:24.220
+Pozwolę sobie tylko powiedzieć, że wróćmy, zalogujmy się ponownie. Zamierzam zamknąć to do kropki. com zaloguj się.
+
+00:15:24.230 --> 00:15:25.370
+W porządku.
+
+00:15:25.370 --> 00:15:27.070
+Jesteśmy zalogowani do naszej aplikacji.
+
+00:15:27.260 --> 00:15:32.700
+Mamy teraz token uwierzytelniania, ale mamy problem, którego nie zdefiniowaliśmy.
+
+00:15:33.080 --> 00:15:40.250
+To jest brak nazwy użytkownika, ponieważ zwróciliśmy tylko identyfikator, a my zwróciliśmy tylko identyfikator.
+
+00:15:40.250 --> 00:15:48.520
+Tak jak wspomniałem, ponieważ chcemy użyć identyfikatora, aby uzyskać profil użytkownika.
+
+00:15:49.780 --> 00:15:55.750
+A powodem, dla którego chcemy to zrobić, jest fakt, że wiemy, że cokolwiek ma wspólnego z profilem, chcemy się
+
+00:15:55.750 --> 00:15:58.290
+upewnić, że są to strzeżone punkty końcowe.
+
+00:15:58.330 --> 00:16:05.590
+To nie wszyscy mają dostęp do nich tylko uwierzytelnieni użytkownicy, których tokeny mają dostęp do nich na
+
+00:16:05.590 --> 00:16:07.400
+podstawie posiadanych tokenów.
+
+00:16:08.630 --> 00:16:15.570
+W następnym filmie będziemy dodawać do tego i upewnić się, że nasz system uwierzytelniania
+
+00:16:15.600 --> 00:16:16.840
+działa dobrze.
+
+00:16:17.250 --> 00:16:18.670
+Zobaczę w tym.
+
+00:16:18.820 --> 00:16:19.030
+Buh-Bye.

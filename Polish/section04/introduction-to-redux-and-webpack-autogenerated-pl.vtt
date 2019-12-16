@@ -1,0 +1,100 @@
+﻿WEBVTT
+
+00:00:01.780 --> 00:00:03.190
+Witamy spowrotem.
+
+00:00:03.190 --> 00:00:08.920
+Patrząc wstecz na to, jak możemy ulepszyć nasze aplikacje z poprzedniej sekcji,
+
+00:00:08.920 --> 00:00:11.010
+zapamiętujesz krytyczną ścieżkę renderowania.
+
+00:00:11.210 --> 00:00:16.550
+Widać, że tutaj są dwa główne wąskie gardła dla javascript.
+
+00:00:16.550 --> 00:00:22.650
+Numer trzy i prawo tutaj i numer osiem i cztery.
+
+00:00:22.730 --> 00:00:32.060
+Jedną z nich jest minimalizacja manipulacji DOM za pomocą javascript, a druga to dostarczanie javascript, w jaki sposób dostarczamy
+
+00:00:32.060 --> 00:00:34.250
+nasz javascript do treści.
+
+00:00:34.280 --> 00:00:40.640
+Teraz w tej sekcji, jak już mówiłem, omówimy, jak zbudować prosty schemat działania z
+
+00:00:40.640 --> 00:00:41.740
+tym schematem.
+
+00:00:41.750 --> 00:00:48.280
+Im lepiej dostarczymy javascript, tym szybciej zbudujemy drzewo renderowania.
+
+00:00:48.350 --> 00:00:55.100
+Chcemy też być mądrzy co do rzeczywistego renderowania, ponieważ w dowolnym momencie javascript zmienia
+
+00:00:55.160 --> 00:01:00.770
+coś w DOM, musimy przejść przez ten etap ponownie do renderowanego drzewa
+
+00:01:00.770 --> 00:01:02.120
+i malować.
+
+00:01:02.120 --> 00:01:09.810
+Więc jeśli uda nam się rozwiązać te dwa wąskie gardła z czymś takim jak re-act To całkiem nieźle.
+
+00:01:09.950 --> 00:01:11.440
+I to właśnie zamierzamy zrobić.
+
+00:01:11.540 --> 00:01:19.040
+Reagowaliśmy, aby naprawdę nam pomóc z tym cyklem renderowania layoutu, a następnie
+
+00:01:19.070 --> 00:01:21.610
+modyfikując rendering layoutu renderowania.
+
+00:01:21.670 --> 00:01:29.200
+Dowiemy się też trochę o Westpacu, który pomaga nam w dostarczaniu javascript, aby to
+
+00:01:29.200 --> 00:01:30.120
+zoptymalizować.
+
+00:01:30.310 --> 00:01:38.860
+A potem wreszcie porozmawiamy o reduxie i o tym, jak redux dodaje trochę, aby zareagować, abyśmy mogli
+
+00:01:39.700 --> 00:01:40.290
+poprawić.
+
+00:01:40.300 --> 00:01:47.440
+Znowu ten proces zmiany coś losowego układ drzewa farba zmienić coś Redner
+
+00:01:47.830 --> 00:01:50.190
+drzewa układ farby.
+
+00:01:50.220 --> 00:01:51.590
+Więc pamiętaj
+
+00:01:54.170 --> 00:02:00.620
+o naszym wyzwaniu, Kaikohe Corp. ma aplikację z gumowymi przyjaciółmi, która będzie większa i
+
+00:02:00.890 --> 00:02:07.160
+będą chcieli dodać do niej zarządzanie państwem, które możemy zrobić dzięki reduxowi, o którym będziemy mówić w kolejnym filmie.
+
+00:02:07.300 --> 00:02:14.560
+Ale tak jak w przypadku starszych programistów, musimy zastanowić się, dlaczego chcielibyśmy nauczyć się
+
+00:02:14.560 --> 00:02:22.630
+redox, dlaczego moglibyśmy ulepszyć ten proces, który widzimy już tutaj, w następnym filmie, o którym będziemy
+
+00:02:22.630 --> 00:02:32.850
+rozmawiać na temat zarządzania państwem i zrozumieć, dlaczego redux może poprawi się po reakcji i często z aplikacjami zobaczysz, że
+
+00:02:32.860 --> 00:02:38.290
+oba są używane, ponieważ naprawdę jest to miłe doświadczenie.
+
+00:02:38.350 --> 00:02:45.260
+Na koniec będziesz w stanie inteligentnie mówić o wszystkich trzech technologiach.
+
+00:02:46.390 --> 00:02:48.000
+Zobaczę w następnym.
+
+00:02:48.100 --> 00:02:48.340
+Babai.

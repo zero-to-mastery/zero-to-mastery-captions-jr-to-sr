@@ -1,0 +1,148 @@
+﻿WEBVTT
+
+00:00:01.050 --> 00:00:03.840
+Cześć, tu Andre z przyszłości w następnym filmie.
+
+00:00:03.900 --> 00:00:10.740
+Pokażę wam nasze następne ćwiczenie, polegające na przekształceniu naszej aplikacji przyjaciół robo w projekt maszynopisu, który
+
+00:00:10.740 --> 00:00:13.810
+ma na celu dodanie do niego maszynopisu.
+
+00:00:13.820 --> 00:00:19.880
+Teraz, kiedy utworzyłem następny maszynopis wideo nie był częścią tworzenia zareaguj.
+
+00:00:20.000 --> 00:00:26.470
+Nie było łatwego sposobu na dodanie maszynopisu do naszego projektu tworzenia aplikacji reagowania.
+
+00:00:26.600 --> 00:00:32.180
+Teraz od tamtej pory od wersji drugiej punkt jeden z aplikacji Create React.
+
+00:00:32.420 --> 00:00:36.350
+Teraz możemy bardzo łatwo dodać maszynopis.
+
+00:00:36.350 --> 00:00:40.980
+Więc naprawdę pokażę ci, jak możesz to zrobić, aby zacząć.
+
+00:00:41.060 --> 00:00:47.450
+Ale polecam, abyś nadal oglądał następny film, abyś wiedział, jak wcześniej wszystko zostało zrobione.
+
+00:00:47.450 --> 00:00:53.270
+Pod koniec dnia wszystko, co ta konfiguracja zrobi, to zautomatyzować wiele kroków, które
+
+00:00:53.450 --> 00:00:55.550
+pokażę w następnym filmie.
+
+00:00:55.550 --> 00:00:59.240
+Jak więc bardzo łatwo zainstalować skrypt maszynowy?
+
+00:00:59.240 --> 00:01:10.860
+Używamy polecenia MP X, które ponownie widzieliśmy w naszym utworze zareaguj do 3 wideo, więc używamy MP X, aby to uruchomić.
+
+00:01:12.030 --> 00:01:15.500
+Zróbmy więc MP X, stwórz aplikację reagującą.
+
+00:01:15.510 --> 00:01:21.320
+Możesz zadzwonić do swojej aplikacji, jak chcesz, a ja zadzwonię do mojej aplikacji, a następnie po prostu pisz na desce rozdzielczej.
+
+00:01:22.690 --> 00:01:29.010
+Podczas wczytywania przejdźmy jeszcze raz do dokumentacji, jedną rzeczą, którą zauważysz, jest to, że aby MP X
+
+00:01:29.010 --> 00:01:34.560
+działał poprawnie, musisz się upewnić, że nie masz żadnych starszych wersji aplikacji create reag.
+
+00:01:34.620 --> 00:01:39.320
+Więc możesz chcieć zrobić NPM po instalacji dash G create reaguj.
+
+00:01:39.690 --> 00:01:45.690
+Chcesz więc upewnić się, że MP X zawsze używa najnowszej wersji, ponieważ
+
+00:01:45.720 --> 00:01:54.120
+ponownie potrzebujemy reagować na skrypty wskazujące jeden lub więcej w celu uruchomienia TypeScript, a następnie musimy poprawnie zainstalować maszynopis.
+
+00:01:54.450 --> 00:02:00.630
+Chcemy więc powiedzieć, że npm install lub możesz użyć stoczni kreski zapisz kreskę, aby dodać TypeScript, a
+
+00:02:00.630 --> 00:02:08.890
+następnie kilka rodzajów węzłów zareaguje i dostosuje się do testów, więc mogę po prostu skopiować i wkleić to, a ja połączę się z
+
+00:02:08.890 --> 00:02:10.080
+tym zasobem .
+
+00:02:10.080 --> 00:02:16.830
+Tworzy to zasób aplikacji reagowania dla Ciebie, a następnie po prostu kopiujemy i wklejamy.
+
+00:02:16.950 --> 00:02:19.640
+Nie chcemy tego wszystkiego kopiować.
+
+00:02:19.690 --> 00:02:20.770
+Tak lepiej
+
+00:02:20.770 --> 00:02:24.660
+Naciśnij Enter, a zainstaluje wszystko dla nas.
+
+00:02:24.820 --> 00:02:25.190
+W porządku.
+
+00:02:25.210 --> 00:02:27.900
+Wygląda na to, że wszystko jest już ustawione.
+
+00:02:27.910 --> 00:02:33.920
+Jeśli przejdę teraz do mojej aplikacji, powinniśmy mieć wszystko, co działa teraz.
+
+00:02:33.940 --> 00:02:42.330
+Ostatnim elementem jest zmiana nazwy naszych plików JavaScript z DOD J. S. do kropki TSX.
+
+00:02:42.430 --> 00:02:49.510
+Chcemy więc upewnić się, że są to pliki maszynopisu, więc przejdźmy do folderu źródłowego i po prostu zmień nazwę niektórych
+
+00:02:49.510 --> 00:02:51.080
+z nich na TSX.
+
+00:02:51.100 --> 00:02:57.260
+Zróbmy to, więc powiem zmianę nazwy TSX.
+
+00:02:57.330 --> 00:02:58.920
+To samo dotyczy pliku pracownika serwisu.
+
+00:02:58.920 --> 00:03:01.830
+W rzeczywistości plik roboczy usługi możemy po prostu zostawić tak, jak jest.
+
+00:03:01.830 --> 00:03:09.390
+I w końcu jest też po prostu zbyt trafny JSA.
+
+00:03:09.400 --> 00:03:11.100
+Jeśli to zrobimy, rozpocznij teraz NPM.
+
+00:03:14.040 --> 00:03:21.760
+Zauważysz, że wygenerowano dla nas konfigurację ruchu T S.
+
+00:03:21.860 --> 00:03:23.030
+Jakie to jest świetne.
+
+00:03:23.030 --> 00:03:31.120
+Więc ta konfiguracja T S ma właściwie wszystkie domyślne konfiguracje, takie jak Jess ex reagują na wszystkie te ustawienia
+
+00:03:31.180 --> 00:03:34.440
+dla nas, co zobaczysz w następnym filmie.
+
+00:03:34.520 --> 00:03:40.660
+Musiałem zrobić teraz ręcznie, chociaż było to naprawdę bardzo łatwe.
+
+00:03:40.660 --> 00:03:43.150
+Polecam skorzystanie z repozytorium Hub.
+
+00:03:43.150 --> 00:03:50.200
+Przedstawię cię w następnym filmie, ponieważ w następnym filmie będziemy mieli konfigurację maszynopisu specjalnie dla naszej
+
+00:03:50.200 --> 00:03:51.790
+aplikacji Robo Friends.
+
+00:03:51.790 --> 00:03:57.610
+Jednak w przypadku przyszłych projektów, kiedy zaczynasz projekt reagowania i chcesz do niego dodać
+
+00:03:57.850 --> 00:04:00.280
+maszynopis, jest to zalecany sposób.
+
+00:04:00.310 --> 00:04:02.020
+Zobaczę w następnym przez.

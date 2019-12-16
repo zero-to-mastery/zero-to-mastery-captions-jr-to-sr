@@ -1,0 +1,154 @@
+﻿WEBVTT
+
+00:00:02.690 --> 00:00:09.140
+Teraz, gdy dobrze rozumiemy optymalizacje sieci, porozmawiajmy o tym, co się stanie, gdy pliki
+
+00:00:09.350 --> 00:00:11.530
+pojawią się w przeglądarce.
+
+00:00:12.140 --> 00:00:14.600
+Jak możemy zoptymalizować ten krok.
+
+00:00:16.550 --> 00:00:17.160
+Widzieć.
+
+00:00:17.180 --> 00:00:23.810
+Do tego momentu mamy dość uproszczony widok tego, co dzieje się w przeglądarce.
+
+00:00:26.140 --> 00:00:32.170
+Pojawia się HTML, a następnie wszystkie te inne pliki pojawiają się w magiczny sposób.
+
+00:00:32.230 --> 00:00:35.220
+Ale co tak naprawdę dzieje się wewnątrz kaptura.
+
+00:00:35.380 --> 00:00:37.510
+Chwyć kurtki przeciwdeszczowe, które nurkujemy głęboko.
+
+00:00:37.630 --> 00:00:40.130
+Odkryjmy.
+
+00:00:40.170 --> 00:00:47.660
+Mamy więc typowy schemat klienta i serwera, a pierwszym krokiem jest dobrze prosić o
+
+00:00:47.660 --> 00:00:54.220
+witrynę sieci Web, a następnie serwer zwraca i ASTM cały plik.
+
+00:00:54.400 --> 00:01:03.600
+Wewnątrz tej przeglądarki pojawia się plik HTML i przeglądarka zaczyna go czytać, a gdy tylko pojawi
+
+00:01:03.630 --> 00:01:10.110
+się shim, zaczyna tworzyć coś, co nazywa się modelem obiektu dokumentu.
+
+00:01:10.350 --> 00:01:18.540
+A kiedy przeglądarka analizuje lub czyta T. M. stopniowo generuje ten model drzewa znaczników
+
+00:01:19.200 --> 00:01:22.480
+HTML, które musimy zbudować dla witryny sieci Web.
+
+00:01:22.950 --> 00:01:30.780
+A ten Dom opisuje zawartość strony, ale zaraz potem zaczyna robić, że napotyka
+
+00:01:30.810 --> 00:01:34.430
+link stylu, aby pobrać CSSA.
+
+00:01:34.830 --> 00:01:43.620
+Więc prosi o plik CSSA z serwera, a następnie powstaje plik CSSA i wraca
+
+00:01:43.620 --> 00:01:49.140
+do pracy nad Domem, tworząc strukturę strony internetowej.
+
+00:01:49.240 --> 00:02:01.560
+Teraz, gdy przeglądarka otrzyma cały CSX, zaczyna również generować model drzewa o nazwie CSX i ten model obiektowy CSSA ma informacje
+
+00:02:01.560 --> 00:02:10.410
+o stylu dołączone do węzłów drzewa, a to drzewo opisuje, w jaki sposób treść
+
+00:02:10.950 --> 00:02:17.550
+jest stylizowana i działa oraz działa i buduje to drzewo,
+
+00:02:17.550 --> 00:02:28.070
+a potem nagle widzi znacznik skryptu javascript jako znacznik skryptu, więc pobiera go z serwera i wyprowadza javascript.
+
+00:02:28.270 --> 00:02:30.780
+Ale to także przeczyta plik javascript.
+
+00:02:31.180 --> 00:02:40.030
+Ten plik javascript jest odczytywany przez przeglądarkę i wykonuje wszelkie zmiany, które
+
+00:02:40.030 --> 00:02:44.540
+może chcieć na DOM i CSSA.
+
+00:02:44.580 --> 00:02:53.840
+Teraz, gdy wszystko, co zostało zrobione, przeglądarka łączy DOM i ramię CSS w drzewo renderowania.
+
+00:02:55.050 --> 00:03:02.460
+I to drzewo renderowania zawiera zarówno informacje z HTML, jak i informacje o stylu i
+
+00:03:04.110 --> 00:03:12.030
+układzie CSS, łącząc DOM, a sukces w przeglądarce tworzy to drzewo renderowania, więc wie dokładnie, co
+
+00:03:12.030 --> 00:03:14.120
+renderować na stronie.
+
+00:03:14.130 --> 00:03:19.050
+Teraz przeglądarka korzysta z tego drzewa renderowania, aby
+
+00:03:21.830 --> 00:03:29.400
+dowiedzieć się, że układ zapomni o wszystkich tych plikach, a następnie odkryje układ.
+
+00:03:29.400 --> 00:03:33.120
+Gdzie należy umieścić te przedmioty w jednym miejscu.
+
+00:03:33.450 --> 00:03:42.330
+Co z wysokością i potrzebami wynika z tego, że pomaluje wszystkie piksele w
+
+00:03:42.420 --> 00:03:47.040
+zgadywaniu, co na końcu tego wszystkiego.
+
+00:03:47.180 --> 00:03:52.350
+W końcu mamy naszą stronę internetową wyświetlaną w przeglądarce.
+
+00:03:52.890 --> 00:04:01.260
+Teraz możesz zastanawiać się, co z obrazami, gdy dzieje się to za każdym razem, gdy przeglądarka
+
+00:04:01.260 --> 00:04:02.960
+napotka tag obrazu.
+
+00:04:02.970 --> 00:04:06.120
+Zacznie je pobierać, gdy tylko go zobaczy.
+
+00:04:07.180 --> 00:04:14.690
+Ale fajna rzecz o obrazach, że to nie jest część tego procesu, obrazy są po prostu pobierane
+
+00:04:14.690 --> 00:04:15.880
+w tle.
+
+00:04:16.010 --> 00:04:19.340
+Po załadowaniu pojawią się na ekranie.
+
+00:04:19.520 --> 00:04:26.540
+Widzisz, co właśnie się dowiedzieliśmy, nazywa się krytyczną ścieżką renderowania i jest to jedna
+
+00:04:26.540 --> 00:04:29.990
+z najważniejszych koncepcji optymalizacji wydajności przeglądarki.
+
+00:04:30.630 --> 00:04:36.110
+Ta ścieżka pokazuje, co trzeba zrobić, aby pomalować witrynę sieci Web na ekranie.
+
+00:04:36.390 --> 00:04:41.380
+Wygląda to tak wiele kroków, ale w prawdziwym życiu, które zdarza się dość szybko.
+
+00:04:41.430 --> 00:04:47.640
+Zaskakujące, że tak wiele rzeczy musi się wydarzyć, abyśmy mogli zobaczyć stronę internetową i po raz kolejny
+
+00:04:47.640 --> 00:04:51.100
+tak, jak byliśmy w stanie zoptymalizować wydajność sieci.
+
+00:04:51.270 --> 00:04:58.340
+Możemy teraz zoptymalizować tę ścieżkę, aw kolejnych filmach właśnie to zrobimy.
+
+00:04:58.360 --> 00:05:05.470
+Przejdźmy jeden po drugim i zobaczmy, jak możemy poprawić każdy krok krytycznej ścieżki renderowania.
+
+00:05:05.500 --> 00:05:06.730
+Do zobaczenia w następnym filmie.

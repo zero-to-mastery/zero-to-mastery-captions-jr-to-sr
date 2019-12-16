@@ -1,0 +1,559 @@
+﻿WEBVTT
+
+00:00:00.810 --> 00:00:04.840
+Stwórzmy naszą aplikację robo friends, którą myślę zacząć.
+
+00:00:04.870 --> 00:00:07.310
+Chcemy ponownie pomyśleć o komponencie.
+
+00:00:07.450 --> 00:00:10.690
+I jakie komponenty chcemy zbudować.
+
+00:00:10.690 --> 00:00:16.660
+Patrząc na tę stronę internetową, najmniejszym elementem, który prawdopodobnie chcielibyśmy rozpocząć, jest prawdopodobnie ten element
+
+00:00:16.960 --> 00:00:21.970
+koszyka, który można tu kupić, jeśli możemy zbudować jeden z tych elementów.
+
+00:00:21.970 --> 00:00:29.280
+Następnie, zgodnie z tym, co powiedziałem wcześniej, możemy po prostu skopiować wszystkie te komponenty i dodać je do strony.
+
+00:00:29.290 --> 00:00:31.370
+Zacznijmy od tego.
+
+00:00:31.600 --> 00:00:34.490
+Element karty.
+
+00:00:34.550 --> 00:00:36.350
+W porządku.
+
+00:00:36.530 --> 00:00:40.640
+Teraz nie będziemy już używać komponentu halo.
+
+00:00:40.640 --> 00:00:43.730
+A jeśli pamiętasz, to tak wyglądało.
+
+00:00:43.730 --> 00:00:48.700
+Po prostu wiem, że to smutne, ale usuniemy to, gdy usuniemy helos.
+
+00:00:48.700 --> 00:00:51.870
+SS startuje czysto.
+
+00:00:52.290 --> 00:00:53.810
+Utwór utworu do usunięcia.
+
+00:00:54.190 --> 00:01:00.020
+DOBRZE.
+
+00:01:00.300 --> 00:01:03.750
+Usuniemy również wydrążony CSX.
+
+00:01:03.800 --> 00:01:08.970
+Wiem, że cała nasza ciężka praca całkowicie zniknęła.
+
+00:01:09.130 --> 00:01:15.010
+Wiesz, że zaczniemy usuwać rzeczy, których nie potrzebujemy w tym projekcie, na przykład ta aplikacja jest najgorsza,
+
+00:01:15.010 --> 00:01:16.830
+jaką mieliśmy na początku.
+
+00:01:16.840 --> 00:01:28.390
+Cóż możemy usunąć, że można również usunąć Abdollah
+
+00:01:32.320 --> 00:01:40.970
+CSX lub test i logo.
+
+00:01:40.990 --> 00:01:41.430
+W porządku.
+
+00:01:41.470 --> 00:01:44.350
+Teraz wszystko wygląda teraz bardzo niedużo.
+
+00:01:44.410 --> 00:01:52.750
+Mamy prosty i ex-nazistowski indeks SS Rajai ass i tego pracownika usługi rejestru, który przychodzi z zapytaniem,
+
+00:01:52.750 --> 00:01:54.880
+że nie musimy dotykać.
+
+00:01:54.900 --> 00:02:00.910
+OK, oczywiście, nie udało nam się skompilować, ponieważ importowane przez Walder Hello tak naprawdę nie
+
+00:02:00.910 --> 00:02:02.560
+działa, nie mamy nic.
+
+00:02:02.720 --> 00:02:03.910
+Zacznijmy od tego.
+
+00:02:03.950 --> 00:02:15.780
+Zacznijmy od stworzenia komponentu karty, a ten komponent samochodu będzie musiał zaimportować go z karty.
+
+00:02:15.890 --> 00:02:22.850
+JOT. S. ponownie, jeśli zapiszę to nadal otrzymuję błąd, ponieważ nie istnieje.
+
+00:02:22.950 --> 00:02:23.690
+Utwórzmy to.
+
+00:02:23.700 --> 00:02:27.380
+Zamierzam powiedzieć nową kartę pliku.
+
+00:02:27.510 --> 00:02:28.070
+Tak.
+
+00:02:30.060 --> 00:02:35.480
+Następnie upewnij się, że używasz tabeli.
+
+00:02:35.660 --> 00:02:38.810
+I róbmy to, co zrobiliśmy, zanim zrobimy import
+
+00:02:42.130 --> 00:02:43.840
+ponownie, zamiast robić
+
+00:02:47.000 --> 00:02:51.480
+sposób CLO na razie będziemy tylko martwić się o budowanie funkcji.
+
+00:02:51.530 --> 00:02:57.380
+Więc powiem, że karta Konst jest równa.
+
+00:02:57.380 --> 00:02:59.350
+Na razie nie będzie miał żadnych właściwości.
+
+00:03:00.430 --> 00:03:05.350
+A to powróci w nawiasach.
+
+00:03:11.480 --> 00:03:21.270
+I tutaj powiemy, że ma div w tym divie, będzie miał obraz, a ten obraz będzie miał jakieś źródło, którego jeszcze
+
+00:03:21.270 --> 00:03:26.100
+nie wiemy, więc zachowamy go tak, jak jest. .
+
+00:03:26.200 --> 00:03:29.790
+Zamknięcie tagu i będziemy mieć tutaj innego
+
+00:03:34.720 --> 00:03:35.460
+diva.
+
+00:03:35.470 --> 00:03:46.930
+Jeśli pamiętasz, mamy tu swoje imię i adres e-mail, więc zrobimy tylko H-2, więc napiszemy tutaj zapisane
+
+00:03:46.940 --> 00:03:48.020
+wartości.
+
+00:03:48.240 --> 00:03:49.280
+Cóż, Jane
+
+00:03:52.040 --> 00:04:00.270
+Jane Doe, a na końcu tag p, który ma trochę adresu e-mail Jane Robe w Gmailu dot com.
+
+00:04:01.500 --> 00:04:03.540
+Zamknij tag.
+
+00:04:03.590 --> 00:04:03.900
+W porządku.
+
+00:04:03.920 --> 00:04:08.000
+Mamy więc prosty komponent, który zwraca kartę.
+
+00:04:08.060 --> 00:04:10.880
+I pamiętajmy, że chcemy to wyeksportować.
+
+00:04:10.880 --> 00:04:14.480
+Chcemy więc powiedzieć, że domyślna karta eksportowa
+
+00:04:17.320 --> 00:04:21.440
+jest zapisana, ale jestem geomancja musi mieć właściwość alt.
+
+00:04:21.580 --> 00:04:23.320
+Znowu daje mi fajną rękę.
+
+00:04:23.350 --> 00:04:29.540
+Dodajmy więc właściwość alt, którą mówimy, co to za zdjęcie.
+
+00:04:29.590 --> 00:04:38.820
+Więc na razie powiem zdjęcie lub powiem, że roboty na razie się kompilują, jeśli spojrzymy
+
+00:04:38.820 --> 00:04:46.050
+na naszą aplikację, mamy roboty Jane Doe i Jane Doe doskonałe.
+
+00:04:46.080 --> 00:04:52.800
+W porządku mamy komponent koszyka i musicie zadać sobie pytanie, dlaczego używamy tu ponownie, jeśli tak
+
+00:04:52.800 --> 00:04:54.610
+naprawdę go nie używamy.
+
+00:04:54.780 --> 00:04:56.320
+Zobaczmy, co się stanie, jeśli ją usunę.
+
+00:04:58.070 --> 00:05:07.850
+Dostaję całą masę błędów, które mówią, że ponowne działanie musi być w zasięgu, kiedy używasz GSX pamiętaj GSX jest to.
+
+00:05:07.850 --> 00:05:16.620
+Nie piszemy shemale, piszemy GSX i musimy zaimportować reagować, aby nasz program zrozumiał GSX, że
+
+00:05:16.680 --> 00:05:20.090
+jest to składnia typu "shemale".
+
+00:05:20.190 --> 00:05:20.650
+DOBRZE.
+
+00:05:20.880 --> 00:05:27.390
+Teraz potrzebujemy obrazu i do tego ćwiczenia mam coś o nazwie Roble hash dla ciebie, to
+
+00:05:27.390 --> 00:05:28.990
+naprawdę fajne API.
+
+00:05:29.070 --> 00:05:33.180
+A dla tych, którzy nie wiedzą, co to API, lub nie martw się, masz sesję wymyślania
+
+00:05:33.180 --> 00:05:35.300
+wszystkich tych informacji, a dowiesz się o tym.
+
+00:05:35.490 --> 00:05:45.510
+Ale fajną rzeczą w haszach Roba mogę po prostu powiedzieć cokolwiek tutaj, a to zwróci losowy robot
+
+00:05:45.510 --> 00:05:47.370
+dla mnie.
+
+00:05:47.410 --> 00:05:49.450
+Potrzebujemy tylko tego.
+
+00:05:49.590 --> 00:05:59.080
+Jesteś elem i mogę tylko powiedzieć, że teraz test.
+
+00:05:59.320 --> 00:06:05.780
+Jeśli to zapiszę i wrócę do mojego przykładu.
+
+00:06:05.960 --> 00:06:06.580
+Proszę bardzo.
+
+00:06:06.590 --> 00:06:08.140
+Mamy naszego losowego robota.
+
+00:06:08.390 --> 00:06:17.710
+Gdybym to zmienił, powiedzmy test testowy, zapisałam Dobrze teraz dostaję kolejnego robota.
+
+00:06:17.730 --> 00:06:18.750
+Jakie to jest świetne.
+
+00:06:20.450 --> 00:06:27.560
+W porządku. Chcę się upewnić, że rozmiar jest nieco mały, więc możesz tu zrobić znak zapytania i podać mu
+
+00:06:27.560 --> 00:06:29.080
+szerokość i wysokość.
+
+00:06:29.150 --> 00:06:32.810
+Więc zamierzam zrobić 200 na 200.
+
+00:06:32.810 --> 00:06:36.100
+I znowu to jest coś, co robisz z tym.
+
+00:06:36.260 --> 00:06:40.940
+Jesteś wszystkim, co ci podają, a informacje tutaj, jak sprawią, że przez to przejdziesz.
+
+00:06:44.890 --> 00:06:48.910
+Wszystko powinno wyglądać ładnie.
+
+00:06:48.960 --> 00:07:00.380
+Teraz powiedzmy, że chciałem dodać tytuł i zrobię coś takiego, jak przyjaciele Divx lub H-1 Pro Bowl.
+
+00:07:06.900 --> 00:07:08.130
+Widzisz, pojawia się tutaj błąd.
+
+00:07:08.340 --> 00:07:17.380
+Jest tak, ponieważ pamiętajmy, że musimy zwrócić jedną rzecz, a my możemy zwrócić wiele elementów.
+
+00:07:17.560 --> 00:07:21.490
+Jeśli chcemy zwrócić coś, upewnijmy się, że to jedna rzecz lub tablica.
+
+00:07:21.490 --> 00:07:25.470
+Ale na razie martwimy się o tytuł później.
+
+00:07:25.480 --> 00:07:29.590
+Chcemy się upewnić, że zwracamy tylko jeden element.
+
+00:07:29.590 --> 00:07:35.510
+Więc w tym przypadku element div, który ma mnóstwo rzeczy wewnątrz, które jest elementem karty.
+
+00:07:35.650 --> 00:07:38.880
+Dobra, oszczędzajmy.
+
+00:07:38.910 --> 00:07:41.570
+W porządku mamy nasz składnik karty.
+
+00:07:41.670 --> 00:07:45.690
+Wygląda ładnie, ale co jeśli chciałbym mieć wiele kart.
+
+00:07:45.700 --> 00:07:50.270
+Teraz zgodnie z tym, co wiemy, ponieważ mamy składnik karty.
+
+00:07:50.280 --> 00:08:00.750
+Jeśli przejdę do indeksu, tak, mogę powiedzieć, że umieściłem to w nowej linii, więc widzę, że mogę po prostu
+
+00:08:00.750 --> 00:08:09.030
+ponownie zawinąć to w div, ponieważ chcemy zwrócić tylko jeden element i mogę powiedzieć Kartę
+
+00:08:12.020 --> 00:08:15.980
+i zamknąć Tag DIV pozwala zaoszczędzić
+
+00:08:18.620 --> 00:08:26.400
+i sprawdzić, że mamy wiele samochodów, ponieważ każdy z nich jest ich własnym składnikiem.
+
+00:08:26.490 --> 00:08:32.370
+Ale spójrzmy na to, żeby wyglądać jeszcze ładniej, ponieważ mamy Takio.
+
+00:08:32.700 --> 00:08:38.220
+Możemy użyć naprawdę fajnej składni, jeśli przejdziemy do komponentu samochodu w div.
+
+00:08:38.220 --> 00:08:40.250
+Mogę ponownie wymówić nazwę klasy.
+
+00:08:40.290 --> 00:08:47.350
+Pamiętaj, że możemy użyć klasy B. SOL. jasnozielony, dzięki czemu tło jest jasnozielone.
+
+00:08:47.400 --> 00:08:51.780
+Jest to po prostu niepoprawne na zajęciach, które są już dla nas ponownie zdefiniowane.
+
+00:08:52.020 --> 00:08:54.900
+Sekcja CSSA to nie to.
+
+00:08:54.900 --> 00:08:57.060
+Dlatego nie będziemy zbytnio koncentrować się na CSSA.
+
+00:08:57.090 --> 00:08:59.850
+Po prostu dam ci stylizację, której potrzebujesz.
+
+00:08:59.880 --> 00:09:07.510
+Obowiązujemy również granicę, w której mamy obstawę o trzech dużych marginesach.
+
+00:09:07.530 --> 00:09:10.020
+A potem będzie rosnąć, co jest animacją.
+
+00:09:10.020 --> 00:09:16.460
+Jeśli więc zachowam to spojrzenie, to jest całkiem niezłe.
+
+00:09:19.160 --> 00:09:29.930
+Wiesz, że patrzy na kilka więcej, zrobimy P. W. dwa i cień 5, aby dodać im trochę zamków.
+
+00:09:29.930 --> 00:09:30.560
+Proszę bardzo.
+
+00:09:30.570 --> 00:09:32.430
+Teraz wyglądają bardziej 3D.
+
+00:09:32.660 --> 00:09:33.880
+To wygląda bardzo ładnie.
+
+00:09:35.150 --> 00:09:35.480
+Proszę bardzo.
+
+00:09:35.480 --> 00:09:37.360
+Znów mamy nasze karty.
+
+00:09:37.370 --> 00:09:44.020
+Nie chcemy tej statycznej karty, w której jest napisane: Jane Doe Jane Doe Jane Doe, chcemy, żeby była dynamiczna.
+
+00:09:44.050 --> 00:09:52.990
+Wygląda więc na to, że potrzebujemy tego, co nazywamy właściwościami prop, i faktycznie mamy dla ciebie obiekt robota, który
+
+00:09:52.990 --> 00:09:53.980
+stworzyłem.
+
+00:09:53.980 --> 00:10:00.580
+Zamierzam tylko dodać nowy plik, który mówi, że roboty podstępują nam i jedna rzecz tutaj.
+
+00:10:00.580 --> 00:10:06.760
+Zamierzam tylko skopiować i wkleić to, ponieważ widzisz, że to tylko stały
+
+00:10:06.790 --> 00:10:16.350
+obiekt, to roboty, to tablica obiektów i ma adres e-mail z nazwą użytkownika, a te są po prostu przypadkowe, że zrobiłem.
+
+00:10:16.470 --> 00:10:21.380
+Jeśli chcesz ten plik, możesz pobrać pliki z końca tej sekcji.
+
+00:10:21.550 --> 00:10:26.170
+Ale na razie w ten sposób mam coś, czego mogę użyć i widzisz, że eksportuję to.
+
+00:10:26.350 --> 00:10:35.990
+Mogę powiedzieć, że importuję roboty z Dot, ponieważ jesteśmy w tym samym katalogu.
+
+00:10:36.430 --> 00:10:38.940
+Roboty.
+
+00:10:39.020 --> 00:10:48.740
+Teraz, jeśli zapiszę to, mamy roboty zdefiniowane przez nigdy nie używane, ale ponieważ używa się eksportu zamiast eksportu
+
+00:10:48.740 --> 00:10:52.580
+domyślnie ten plik może mieć wiele eksportów.
+
+00:10:52.640 --> 00:10:54.670
+Tak się składa, że mam tylko jeden.
+
+00:10:54.830 --> 00:11:01.910
+Zasada dotyczy tych telefonów, ponieważ są one domyślne. Można po prostu kupić te, które nie są
+
+00:11:01.910 --> 00:11:02.590
+domyślne.
+
+00:11:02.690 --> 00:11:05.470
+Musisz to zrestrukturyzować.
+
+00:11:05.630 --> 00:11:06.970
+Tak jest.
+
+00:11:06.980 --> 00:11:14.890
+Jeśli więc mam inną zmienną, powiedzmy, że Katz, to będę musiał to zrobić, aby ją pobrać.
+
+00:11:16.160 --> 00:11:21.880
+Więc mamy roboty i teraz nie mogę dać im pewnych właściwości.
+
+00:11:21.890 --> 00:11:24.290
+Mogę powiedzieć, że ID jest równy.
+
+00:11:24.320 --> 00:11:33.080
+I znowu mamy te nawiasy, które są wyrażeniem w języku javascript, a my
+
+00:11:34.540 --> 00:11:44.010
+powiemy robotom, ale pierwszy identyfikator psa w robotach ma ID, a my mamy nazwę roboty.
+
+00:11:44.100 --> 00:11:50.890
+Ponownie pierwszy użytkownik wymyślił nazwę blisko wspornika.
+
+00:11:51.160 --> 00:12:03.280
+A potem mamy również e-mail, który wywołuje roboty jako pierwsze i e-mail z tablicą dot.
+
+00:12:03.390 --> 00:12:10.500
+Święty Moly to dużo pisania i zamierzam to uczynić bardziej sprawiedliwym, więc widzisz, że
+
+00:12:10.500 --> 00:12:15.600
+będę kopiować i wklejać dla innych również z wyjątkiem.
+
+00:12:15.630 --> 00:12:27.770
+Zmień to na drugiego użytkownika, a trzecie na drugiego. Teraz, jeśli zapiszę, to zostało skompilowane pomyślnie, ale nic się
+
+00:12:31.720 --> 00:12:39.700
+nie zmieniło, ponieważ musimy przejść do kart i uzyskać teraz dokładny efekt
+
+00:12:39.700 --> 00:12:46.750
+dodge, ponieważ karty muszą teraz akceptować parametry i jakie są
+
+00:12:46.750 --> 00:12:47.770
+parametry.
+
+00:12:47.770 --> 00:12:56.200
+Podczas gdy to właściwości i te rekwizyty są teraz rekwizytami Daut imiona rekwizytów
+
+00:13:01.120 --> 00:13:02.390
+kropka
+
+00:13:05.730 --> 00:13:08.600
+ja oszczędzam, które wracają.
+
+00:13:08.780 --> 00:13:13.370
+To nie działa dobrze, ponieważ jest to wyrażenie javascript.
+
+00:13:13.370 --> 00:13:13.880
+Dobrze.
+
+00:13:13.910 --> 00:13:17.740
+Muszę więc zawinąć go w nawiasy klamrowe.
+
+00:13:18.760 --> 00:13:23.660
+Dokładnie tak, jak to działa w GSX. Zapamiętaj to.
+
+00:13:23.700 --> 00:13:29.910
+Mamy dynamiczne nazwy, które przekazujemy jako właściwości każdemu.
+
+00:13:29.940 --> 00:13:31.860
+Dodajmy tutaj centrum technologii.
+
+00:13:33.750 --> 00:13:34.620
+I proszę.
+
+00:13:34.620 --> 00:13:35.840
+Teraz mamy wszystko Centrum.
+
+00:13:35.910 --> 00:13:38.440
+O wiele lepiej OK.
+
+00:13:38.450 --> 00:13:42.170
+Ale przekazaliśmy też ID, że możemy użyć ID, aby zrobić coś fajnego.
+
+00:13:42.200 --> 00:13:47.800
+Jeśli pamiętasz w tej sekcji ESX mamy łańcuchy szablonów.
+
+00:13:48.080 --> 00:13:55.060
+A ponieważ jest to szablonowy ciąg, musimy go zawinąć w nawias klamrowy, aby był wyrażeniem javascript.
+
+00:13:55.310 --> 00:14:03.380
+A teraz w haso robo zamiast używać tutaj testu, możemy losowo określić, jakie roboty otrzymamy, używając tej składni,
+
+00:14:03.860 --> 00:14:05.330
+o czym pamiętasz.
+
+00:14:05.450 --> 00:14:08.530
+I tutaj możemy po prostu powiedzieć "Propst dot ID".
+
+00:14:08.870 --> 00:14:15.970
+Więc teraz powie to, że Roble zaimportował identyfikator org niezależnie od wielkości robota.
+
+00:14:15.970 --> 00:14:20.170
+Dlatego upewniamy się, że identyfikatory są zawsze dynamiczne i zmieniają się.
+
+00:14:20.170 --> 00:14:28.940
+Jeśli to zapiszę i zobaczę ponownie, okaże się, że jest trochę opóźnienia, ponieważ rozmawiamy z
+
+00:14:28.940 --> 00:14:31.370
+API i API powraca.
+
+00:14:31.370 --> 00:14:33.740
+Odpowiedz nam, ale jak to jest fajne.
+
+00:14:33.770 --> 00:14:37.330
+Właśnie stworzyliśmy własne karty dynamiczne.
+
+00:14:39.330 --> 00:14:46.060
+Ostatnią rzeczą, chociaż działa to o wiele przyjemniej, że można zrobić, to coś, co nazywa się destructuring.
+
+00:14:46.290 --> 00:14:48.450
+Możemy zrobić
+
+00:14:50.880 --> 00:15:00.010
+coś takiego, jak email z nazwą Konst, równy rekwizytom, jak pamiętacie z E6.
+
+00:15:00.320 --> 00:15:05.400
+Teraz mogę dobrze wykorzystać pomysły spoza firmy i
+
+00:15:11.220 --> 00:15:12.600
+nadal działa.
+
+00:15:14.190 --> 00:15:21.100
+Kolejną fajną rzeczą, którą możesz zrobić, a to jest nawet czystsze, jest to, że możesz dokonać destrukturyzacji.
+
+00:15:21.570 --> 00:15:23.790
+Znowu możesz dodać to tutaj teraz.
+
+00:15:28.660 --> 00:15:34.730
+A teraz, jeśli go uratuję, powinno nadal działać i działa.
+
+00:15:34.920 --> 00:15:42.030
+Może to być mylące, jeśli jesteś nowy na niszczenie. Ale gdy zobaczyłeś krok po kroku, właśnie
+
+00:15:42.030 --> 00:15:46.150
+odbieramy rekwizyty i niszczymy rekwizyty bezpośrednio w nawiasach.
+
+00:15:47.400 --> 00:15:50.390
+To jest o wiele czystsze.
+
+00:15:50.700 --> 00:15:51.420
+W porządku.
+
+00:15:51.420 --> 00:15:54.150
+To była świetna zabawa w naprawdę bardzo szybki sposób.
+
+00:15:54.150 --> 00:16:00.150
+Właśnie stworzyliśmy własne karty w następnej sekcji, którą zamierzamy rozwinąć i jeszcze
+
+00:16:00.150 --> 00:16:01.050
+lepiej.
+
+00:16:01.140 --> 00:16:02.790
+Zobaczę to, ale przez.

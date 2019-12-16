@@ -1,0 +1,115 @@
+﻿WEBVTT
+
+00:00:01.620 --> 00:00:03.000
+Witamy spowrotem.
+
+00:00:03.000 --> 00:00:06.360
+W końcu to zrobiliśmy, a przynajmniej prawie na miejscu.
+
+00:00:06.360 --> 00:00:10.970
+Jeszcze jeden temat, a my skończymy z gwiazdą bezpieczeństwa.
+
+00:00:11.190 --> 00:00:15.280
+Porozmawiajmy o uwierzytelnianiu i możesz myśleć o sobie.
+
+00:00:15.500 --> 00:00:15.840
+Czekaj.
+
+00:00:15.840 --> 00:00:19.460
+Zrobiliśmy to już dzięki przechowywaniu haseł.
+
+00:00:19.530 --> 00:00:27.230
+Przy odrobinie zastrzyku i użyciu zaktualizowanych bibliotek i rejestrowania HSDPA nas i wszystkich tych rzeczy.
+
+00:00:27.290 --> 00:00:30.140
+Być może zauważyłeś, że niektóre z nich nakładają się na siebie.
+
+00:00:30.260 --> 00:00:31.720
+Tak jest w przypadku bezpieczeństwa.
+
+00:00:32.180 --> 00:00:39.270
+Kiedy jedna część systemu jest podatna na atak, wpływa na inne części i tak właśnie jest teraz.
+
+00:00:39.290 --> 00:00:46.070
+Uwierzytelnienie oznacza upewnienie się, że osoba na drugim końcu jest tym, za kogo się podaje.
+
+00:00:47.780 --> 00:00:54.410
+Robi się to za pomocą haseł, aby potwierdzić, że użytkownicy mówią, że są osobami, które mają dostęp
+
+00:00:54.410 --> 00:00:55.930
+do tego konta.
+
+00:00:57.250 --> 00:01:00.600
+A potem musimy zarządzać ich sesją.
+
+00:01:00.730 --> 00:01:07.080
+Chodzi o to, aby upewnić się, że mówimy, że to Tim tutaj wysyła mi ich prośbę.
+
+00:01:07.120 --> 00:01:14.450
+Pamiętaj, że na Twitterze nie musisz się logować za każdym razem, gdy odświeżasz i uwierzytelnianie jest
+
+00:01:14.480 --> 00:01:22.550
+naprawdę ważne, ponieważ może to mieć naprawdę duże konsekwencje, pozwalając intruzom na włamanie się na hasła klucze tokeny
+
+00:01:22.550 --> 00:01:28.300
+sesji lub inne wady mogą oznaczać, że gra spersonalizuje innych użytkowników.
+
+00:01:29.490 --> 00:01:30.780
+I o to chodzi.
+
+00:01:31.550 --> 00:01:36.710
+Ten diagram jest czymś, do czego wracamy, ponieważ jeśli chodzi o
+
+00:01:36.710 --> 00:01:42.770
+uwierzytelnianie, mamy całą sekcję poświęconą temu zagadnieniu, gdzie przechodzimy przez najlepsze praktyki, uczymy się
+
+00:01:42.770 --> 00:01:49.270
+o uwierzytelnianiu opartym na sesji i uwierzytelnianiu opartym na tokenach oraz o tym, jak one działają.
+
+00:01:49.460 --> 00:01:51.410
+Ale pomysły są takie same.
+
+00:01:51.410 --> 00:01:59.270
+Upewniamy się, że hasła pasują do siebie i że użytkownik jest tym, za kogo się podaje, a
+
+00:01:59.600 --> 00:02:07.490
+następnie przekazujemy im plik cookie lub token do zarządzania sesją za każdym razem, gdy zgłoszą żądanie i wiemy,
+
+00:02:07.500 --> 00:02:09.650
+kim oni są .
+
+00:02:09.860 --> 00:02:11.510
+To Tim składa twoją prośbę.
+
+00:02:11.540 --> 00:02:19.680
+Dajmy Timowi odpowiednie zasoby, których potrzebuje dobre uwierzytelnienie, oznacza wdrożenie prostych, ale odpowiednich reguł haseł, które
+
+00:02:19.680 --> 00:02:26.430
+zachęcają użytkowników do posiadania długich losowych haseł, zamiast głupich haseł, takich jak 2:59,
+
+00:02:26.430 --> 00:02:33.810
+które chcą używać uwierzytelniania wieloskładnikowego w swoich logach, np. zalogowanie się na Twitterze wymaga również
+
+00:02:33.810 --> 00:02:39.270
+uwierzytelnienia dwuetapowego w telefonie, w którym musisz powiedzieć "tak", jestem tym,
+
+00:02:39.510 --> 00:02:41.900
+za kogo się podaje.
+
+00:02:41.910 --> 00:02:43.860
+Pozwól mi się zalogować.
+
+00:02:43.890 --> 00:02:51.050
+Dowiadujemy się również, że przy ciasteczkach, które chcesz ustawić, powinny być prawdziwe i bezpieczne tylko nagłówki.
+
+00:02:51.090 --> 00:02:56.430
+Ale jak powiedziałem, jest to temat, który moim zdaniem jest naprawdę ważny i mamy całą sekcję poświęconą temu
+
+00:02:56.430 --> 00:02:56.880
+tematowi.
+
+00:02:57.180 --> 00:03:04.080
+Chodzi o to, że potrzebujemy sposobu, aby upewnić się, że ktokolwiek znajduje się po drugiej stronie, wierzymy i
+
+00:03:04.080 --> 00:03:06.390
+możemy ufać, że mówią, kim są.

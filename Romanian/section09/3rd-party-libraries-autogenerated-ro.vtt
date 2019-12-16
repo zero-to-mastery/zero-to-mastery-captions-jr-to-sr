@@ -1,0 +1,388 @@
+﻿WEBVTT
+
+00:00:01.510 --> 00:00:02.460
+Bine ai revenit.
+
+00:00:02.770 --> 00:00:10.840
+Să continuăm să respectăm liniile directoare privind securitatea și să mergem împreună cu bibliotecile noastre terțe părți pentru a vedea ce
+
+00:00:10.840 --> 00:00:11.800
+este vorba.
+
+00:00:15.080 --> 00:00:17.170
+Aplicațiile noastre cresc.
+
+00:00:17.270 --> 00:00:24.920
+Depindem de tot mai multe biblioteci de terțe părți și puteți vedea că imediat, dacă mergeți în orice proiect și vă uitați
+
+00:00:24.920 --> 00:00:31.520
+la dosarul modulelor de noduri, folosim o tonă de cod de la alți oameni și acest lucru nu este
+
+00:00:31.520 --> 00:00:32.840
+un lucru rău.
+
+00:00:32.870 --> 00:00:38.490
+Nu vrem să continuăm să scriem propriile noastre funcții propriile noastre soluții care au fost deja descoperite.
+
+00:00:38.600 --> 00:00:44.720
+Ideea lui A. P. M. este de a putea împărți codul cu alte persoane, astfel încât să putem construi aplicațiile mai repede.
+
+00:00:44.720 --> 00:00:47.230
+Vreau să vă uit ce reacție de creare poate face pentru noi.
+
+00:00:48.010 --> 00:00:55.910
+Acum, când se întâmplă asta, întâmpinați această altă problemă în care încă o dată utilizați codul pe care nu
+
+00:00:55.910 --> 00:00:56.860
+l-ați scris.
+
+00:00:57.690 --> 00:01:04.980
+Și asta poate că nu ar fi cel mai sigur și când vine vorba de biblioteci de terțe părți, întotdeauna doriți
+
+00:01:04.980 --> 00:01:11.990
+să vă asigurați că dacă îl adăugați la proiectul dvs. că este o bibliotecă bună, este o bibliotecă în care puteți
+
+00:01:12.000 --> 00:01:18.770
+avea încredere și este o bibliotecă care este sigur deoarece oricine poate încărca orice pachet pe care îl vrea
+
+00:01:18.790 --> 00:01:19.690
+pe NPM.
+
+00:01:19.890 --> 00:01:28.560
+Și dacă sunt o persoană rea, pot încărca o bibliotecă foarte proastă, care spune că te ajută cu o problemă,
+
+00:01:28.680 --> 00:01:35.040
+dar de fapt colectează informațiile despre utilizator probabil sau poate ieșirile de logare.
+
+00:01:35.370 --> 00:01:39.000
+Deci, întotdeauna vrei să fii atent cu bibliotecile terților acum.
+
+00:01:39.420 --> 00:01:46.920
+Din fericire pentru tine există un sistem destul de bun pe care îl puteți pune în aplicare și acesta este doar asigurați-vă că mergeți la pagina
+
+00:01:46.920 --> 00:01:52.710
+GET HELP de la orice bibliotecă de terțe părți pe care o utilizați și uitați-vă la stelele lor și
+
+00:01:52.710 --> 00:01:54.610
+de câte ori au fost forked.
+
+00:01:54.620 --> 00:02:02.790
+Și, în general, marea comunitate din jurul ei, puteți avea încredere în bibliotecile mari, cum ar fi reacția sau reducerea, deoarece acestea sunt bine
+
+00:02:02.820 --> 00:02:06.150
+dezvoltate de companii pe care le puteți avea încredere.
+
+00:02:06.150 --> 00:02:08.000
+Bine, poți doar.
+
+00:02:08.430 --> 00:02:14.070
+Dar ei au, de asemenea, o mulțime de stele pentru a obține Hobb mulți oameni lucrează la ea și o mulțime
+
+00:02:14.070 --> 00:02:19.410
+de timp comunității sursă deschisă a intrat în ea pentru a face mai bine și în condiții de siguranță.
+
+00:02:19.410 --> 00:02:28.040
+Deci, folosiți pachete bine cunoscute și respectate în mod constant.
+
+00:02:28.050 --> 00:02:34.190
+Acum vreau să vă arăt două lucruri pe care le puteți face imediat pentru a vă îmbunătăți cu adevărat
+
+00:02:34.190 --> 00:02:40.900
+practicile privind părțile de securitate atunci când vine vorba de bibliotecile terților și care sunt aceste două instrumente NSB și șarpele.
+
+00:02:40.910 --> 00:02:42.160
+Cred că spui Snick.
+
+00:02:42.200 --> 00:02:48.040
+Nu sunteți sigur cum este pronunțată, dar vă vom arăta cum funcționează aceasta pentru a verifica bibliotecile dvs. terțe părți.
+
+00:02:49.570 --> 00:02:54.890
+Am aici aplicația Web progresivă a prietenilor noștri și aici.
+
+00:02:54.910 --> 00:02:56.730
+Să facem asta puțin mai mare.
+
+00:02:57.800 --> 00:03:05.750
+Voi instala aceste două pachete pe care tocmai le-am vorbit despre instalarea NPM pentru globală, pentru
+
+00:03:05.750 --> 00:03:10.970
+a putea folosi comanda NSB și pentru a intra.
+
+00:03:11.010 --> 00:03:13.760
+Acum probabil că îmi va da o eroare.
+
+00:03:13.800 --> 00:03:14.510
+Iata.
+
+00:03:14.610 --> 00:03:16.950
+Veți obține o eroare de acces ușor.
+
+00:03:17.250 --> 00:03:18.930
+Aveți permisiunea respinsă.
+
+00:03:18.930 --> 00:03:24.370
+Din nou, dacă primiți această eroare, înseamnă că nu aveți permisiunea de a instala un pachet global.
+
+00:03:24.450 --> 00:03:29.780
+Deci, uneori ar trebui să faceți sudo sau să executați comanda în modul admin.
+
+00:03:31.080 --> 00:03:36.180
+Deci, să facem asta cu NSB și va trebui să introduceți parola.
+
+00:03:36.210 --> 00:03:41.220
+Asigurați-vă că ați spus că sunteți cine spuneți că sunteți și că ați instalat pachetul.
+
+00:03:41.400 --> 00:03:44.650
+Prin urmare, A. B. ce putem face cu ea.
+
+00:03:45.680 --> 00:03:52.390
+Ei bine, putem rula o comandă numită verificare NSB și va verifica prietenii noștri P. W ..
+
+00:03:52.700 --> 00:03:53.710
+Să vedem ce face.
+
+00:03:59.370 --> 00:04:06.690
+Se pare că avem o vulnerabilitate și verificarea NSB este minunată, deoarece vă oferă
+
+00:04:06.960 --> 00:04:09.750
+informații utile despre problemele dvs.
+
+00:04:10.470 --> 00:04:17.160
+Vedeți că oamenii găsesc în mod constant vulnerabilități în cod și cum pot face lucruri rele cu el.
+
+00:04:17.430 --> 00:04:20.020
+Și oamenii buni încearcă mereu să repare aceste lucruri.
+
+00:04:20.100 --> 00:04:24.410
+Și asta e tot ce aveți pe telefonul dvs. iPhone sau Android.
+
+00:04:24.420 --> 00:04:32.280
+Actualizări constante deoarece companiile actualizează software-ul în mod constant pentru a fi mai sigure.
+
+00:04:32.280 --> 00:04:38.070
+Dacă cineva găsește o vulnerabilitate, trebuie să remedieze acest lucru imediat, pentru că toți atacatorii vor fi ca și
+
+00:04:38.070 --> 00:04:39.950
+cum ar exista o nouă vulnerabilitate.
+
+00:04:39.960 --> 00:04:45.310
+O să încerc asta și să văd dacă pot face lucruri rele cu asta.
+
+00:04:45.780 --> 00:04:53.730
+Deci întotdeauna actualizați întotdeauna și aveți cele mai recente actualizări de software, deoarece de cele mai multe ori există actualizări de securitate
+
+00:04:53.730 --> 00:04:56.590
+pentru a evita aceste tipuri de vulnerabilități.
+
+00:04:56.730 --> 00:05:02.800
+Și cu verificarea NSB vedem că avem un pachet numit Hoek Hoek Hoek.
+
+00:05:02.820 --> 00:05:06.990
+Nu știu cum să spun asta și vedeți că este un nivel mediu.
+
+00:05:06.990 --> 00:05:14.690
+Avem 4. 2 versiune instalată și vulnerabilitatea afectează toate lucrurile care sunt 4. 2 sau mai jos.
+
+00:05:15.450 --> 00:05:21.690
+Apoi vă arată cum este versiunea de patch-uri și, de asemenea, ce folosește acest pachet.
+
+00:05:21.690 --> 00:05:28.430
+Vreau să spun că vedem că prietenul robot care a dat fiorul întregului pachet este folosit de scenariile de reactare doar de mediul
+
+00:05:28.440 --> 00:05:29.030
+Seelye.
+
+00:05:29.040 --> 00:05:32.750
+Bouvard JS Dom cere Hawk Hoek.
+
+00:05:32.910 --> 00:05:36.360
+Deci este folosit, puteți vedea cuibăritul care se întâmplă aici.
+
+00:05:36.360 --> 00:05:42.510
+Deci, chiar dacă nu știm în mod direct despre el este folosit de doar Domm care utilizează cererea și ei
+
+00:05:42.510 --> 00:05:43.450
+folosesc Hok.
+
+00:05:43.460 --> 00:05:44.910
+Ei au această speranță.
+
+00:05:45.210 --> 00:05:51.910
+Și, de asemenea, oferă informații despre unde puteți găsi mai multe detalii despre această vulnerabilitate.
+
+00:05:52.350 --> 00:05:58.490
+Și dacă te duci de fapt la site-ul Web Hoque să sperăm și PM vom
+
+00:06:01.890 --> 00:06:12.360
+vedea că oh da există o versiune apropiată 5 punct 0. 3 și că avem cu siguranță o versiune depășită.
+
+00:06:12.420 --> 00:06:13.460
+Foarte tare.
+
+00:06:13.500 --> 00:06:18.030
+Vrem să actualizăm acest lucru schimbând pachetul nostru.
+
+00:06:18.150 --> 00:06:26.970
+Jason Faltu o versiune mai nouă sau, probabil, doar folosind comanda de instalare NPM din nou pentru a reinstala ceea ce avem
+
+00:06:26.970 --> 00:06:27.560
+nevoie.
+
+00:06:29.130 --> 00:06:29.370
+In regula.
+
+00:06:29.370 --> 00:06:33.860
+Ce-i cu celelalte două despre care vorbesc despre NPM instalat dashi.
+
+00:06:33.900 --> 00:06:38.890
+Dar de data aceasta se numește Snick Snick.
+
+00:06:38.940 --> 00:06:47.010
+Vom merge cu Nick și povestea asta va cere să vă conectați de fapt la contul
+
+00:06:47.010 --> 00:06:48.030
+dvs. Halba.
+
+00:06:48.060 --> 00:06:53.530
+Asta pentru că, cu NSB, verificăm Dumnezeul nostru împachetat.
+
+00:06:53.600 --> 00:07:00.120
+Jason phó șarpele va verifica directorul dvs. de module de nod folosind această comandă a sarcinii nick.
+
+00:07:00.170 --> 00:07:01.830
+Și acesta este un instrument foarte bun.
+
+00:07:02.710 --> 00:07:12.740
+Deci, dacă ne-am lăsat să clar acest lucru, dacă vom executa testul Snick, veți vedea că avem nevoie de un cont de autentificare.
+
+00:07:12.750 --> 00:07:17.100
+Așa că trebuie să conectăm-o la ajutorul nostru pentru a putea face
+
+00:07:21.820 --> 00:07:27.660
+Snick off și o să mă conectez cu ajutorul contului meu de ajutor. Vreau să îl autorizez.
+
+00:07:29.940 --> 00:07:31.170
+Da, sigur că sunt de acord.
+
+00:07:34.770 --> 00:07:36.570
+În regulă, suntem gata să fim folosiți.
+
+00:07:36.720 --> 00:07:41.420
+Deci, să mergem cu testul Snick.
+
+00:07:41.650 --> 00:07:44.230
+Trebuie să executăm NPM și să rezolvăm mai întâi.
+
+00:07:44.440 --> 00:07:51.370
+Și din nou pentru că eu doar am clonat acest pachet nu am rula NPM instala, astfel încât nu există dosar module de
+
+00:07:51.370 --> 00:07:52.020
+nod încă.
+
+00:07:52.060 --> 00:08:00.100
+Și acest proiect, dar NSB a fost capabil să execute testele, deoarece testează pachetul Jasonville.
+
+00:08:00.390 --> 00:08:04.900
+În regulă, așa că hai să ne instalăm NPM.
+
+00:08:04.960 --> 00:08:05.330
+In regula.
+
+00:08:05.340 --> 00:08:07.350
+Și acum să alergăm să ne conducem comanda.
+
+00:08:07.350 --> 00:08:15.290
+Voi clarifica acest lucru și vom relua și vom respinge testul și în timp ce acesta se execută, va trece
+
+00:08:15.290 --> 00:08:17.110
+o tona de teste.
+
+00:08:17.120 --> 00:08:23.520
+Există și alte instrumente de genul asta, dar ideea și scopul final sunt întotdeauna aceleași.
+
+00:08:23.600 --> 00:08:29.750
+Asigurați-vă că bibliotecile terțelor părți pe care le utilizați sunt întotdeauna actualizate și că
+
+00:08:29.750 --> 00:08:33.630
+nu utilizați niciun pachet care are vulnerabilități cunoscute.
+
+00:08:33.740 --> 00:08:41.350
+Și există o mulțime de informații online despre cum să le găsiți.
+
+00:08:41.360 --> 00:08:41.950
+In regula.
+
+00:08:42.840 --> 00:08:45.990
+Testează multe dependențe.
+
+00:08:46.080 --> 00:08:55.030
+O mie patruzeci și nouă de ani au fost dependențe și au găsit 13 vulnerabilități cu 528 de drumuri vulnerabile.
+
+00:08:55.030 --> 00:08:57.930
+Sfânt moli care este o mulțime.
+
+00:08:58.390 --> 00:09:06.990
+Și vă oferă o tonă de ieșire, care vă oferă informații despre modul în care puteți remedia acest lucru.
+
+00:09:07.000 --> 00:09:11.920
+Vedeți că dependențele tale sunt depășite, altfel vei folosi un cookie
+
+00:09:11.920 --> 00:09:19.320
+nou sau dur, apoi un cookie dur 2. 3 pentru a evalua din nou șterse șterse Nici un modul și re-instalarea lor de funcționare teste șarpe
+
+00:09:19.320 --> 00:09:19.960
+din nou.
+
+00:09:21.230 --> 00:09:26.590
+Și dacă problema persistă și probabil că se întâmplă pentru că am instalat doar una
+
+00:09:26.590 --> 00:09:29.660
+dintre dependențele dvs., se pot grupa module învechite.
+
+00:09:29.660 --> 00:09:34.730
+Așadar, ar trebui să continuați și să remediați acest lucru și să instalați pachete noi.
+
+00:09:34.820 --> 00:09:37.200
+Dar tu vezi că avem un timp.
+
+00:09:37.700 --> 00:09:38.840
+Și iată ce e.
+
+00:09:38.870 --> 00:09:46.940
+Cu siguranță că atunci când executați acest lucru este foarte rar că veți obține 100%, dar cel puțin acum
+
+00:09:46.940 --> 00:09:52.280
+știm de unde să începem și unde să ne actualizăm pachetele.
+
+00:09:52.280 --> 00:09:58.700
+Problema cu unele dintre acestea este că pachetul de cookie dur, de exemplu, este necesar de pachetul de
+
+00:09:58.700 --> 00:10:05.690
+cereri și, probabil, dacă actualizăm pachetul de cookie dur, pachetul de cerere nu va putea să funcționeze cu versiunea
+
+00:10:05.690 --> 00:10:07.820
+mai nouă a cookie-ului dur.
+
+00:10:08.060 --> 00:10:14.990
+Și știți care este una dintre marile probleme cu premierul și având acești copaci de dependență cu adevărat
+
+00:10:14.990 --> 00:10:15.720
+adânci.
+
+00:10:16.250 --> 00:10:22.000
+Și există numeroase discuții on-line despre cum să rezolve acest lucru și despre cele mai bune practici.
+
+00:10:22.190 --> 00:10:28.390
+Dar sper că, folosind aceste două instrumente, poți decide pentru tine ce vrei să rezolvi.
+
+00:10:30.110 --> 00:10:36.410
+Sper că acest lucru v-a învățat că trebuie să aveți grijă de toate aceste pachete și este bine să aveți
+
+00:10:36.410 --> 00:10:42.860
+aceste teste în desfășurare și poate ca o echipă să decidă când să remedieze ceva și când să nu vrea
+
+00:10:42.860 --> 00:10:47.700
+să includă o bibliotecă terță parte din cauza unei vulnerabilități sau când ar trebui.
+
+00:10:47.940 --> 00:10:48.810
+Ne vedem în următorul videoclip.

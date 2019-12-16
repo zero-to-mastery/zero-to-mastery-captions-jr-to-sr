@@ -1,0 +1,571 @@
+﻿WEBVTT
+
+00:00:01.900 --> 00:00:09.910
+Dobrze Gombak Po zidentyfikowaniu komponentów w aplikacji, które są niepotrzebnie renderowane, możesz
+
+00:00:09.910 --> 00:00:12.490
+wykonać kilka kroków.
+
+00:00:13.220 --> 00:00:23.360
+Wróćmy do naszego PO i powiedzieliśmy, że nasza głowa to komponent niepotrzebnie.
+
+00:00:23.420 --> 00:00:29.330
+Chodzi mi o to, że jest to mały przykład, ale możesz sobie wyobrazić, czy to była
+
+00:00:29.330 --> 00:00:36.400
+inna część aplikacji, która jest naprawdę bardzo skomplikowana, może nie chcemy, żebyśmy Rander za każdym razem, gdy trafialiśmy w pole wyszukiwania.
+
+00:00:36.420 --> 00:00:38.950
+Więc co możemy zrobić dobrze.
+
+00:00:38.970 --> 00:00:42.430
+Najpierw utwórzmy nowy komponent nagłówka.
+
+00:00:45.780 --> 00:00:51.090
+I ten komponent znowu będzie musiał zaimportować ponowne wprowadzanie zmian i
+
+00:01:02.680 --> 00:01:07.600
+będziemy naprawdę dobrze tworzyć komponenty Riak, ponieważ pisaliśmy wiele razy.
+
+00:01:07.750 --> 00:01:10.460
+Ale to zawsze jest dobre.
+
+00:01:11.430 --> 00:01:21.200
+Chcemy mieć pewność, że wyeksportujemy domyślny komponent nagłówka i tutaj możemy po prostu zwrócić lub
+
+00:01:21.350 --> 00:01:27.460
+użyć renderowania i wewnątrz renderowania, który możemy zwrócić.
+
+00:01:27.680 --> 00:01:39.620
+Chociaż początkowo mieliśmy tylko prosty H1.
+
+00:01:39.800 --> 00:01:47.490
+W porządku ładny i prosty nagłówek, a jeśli przejdziemy tutaj, możemy po prostu zastąpić to
+
+00:01:47.510 --> 00:01:51.890
+teraz komponentem nagłówka, a będziemy chcieli zaimportować to
+
+00:01:56.180 --> 00:01:57.970
+z naszych komponentów.
+
+00:02:02.130 --> 00:02:15.100
+Zapisz wszystko i jeszcze raz chcę dodać mały dziennik konsoli, aby zobaczyć, co jest renderowane.
+
+00:02:15.180 --> 00:02:16.920
+Więc zapiszę to tutaj.
+
+00:02:17.070 --> 00:02:28.650
+Dodajmy jeszcze kilka, dodajmy do tego, że bez karty doda okno dialogowe konsoli, w którym jest wyrenderowane urządzenie
+
+00:02:28.650 --> 00:02:29.510
+cardless.
+
+00:02:29.760 --> 00:02:31.770
+Chcemy się upewnić, że
+
+00:02:34.330 --> 00:02:39.640
+jest to ciąg znaków, a slut dodaje jeszcze jedną dla pola wyszukiwania.
+
+00:02:44.800 --> 00:02:54.780
+Zapiszmy, aby powrócić do naszej aplikacji i chodźmy do konsul tu, a ponieważ nasz rejestrator z Reebok's
+
+00:02:54.780 --> 00:03:04.520
+jest rodzajem tłumu na naszej liście konsoli, na razie wyłącz go, powróci do indeksu Hygeia nas
+
+00:03:04.520 --> 00:03:16.570
+i na razie po prostu usuń to z naszego oprogramowania pośredniego i uratuj to i wróć i to o wiele lepiej.
+
+00:03:16.570 --> 00:03:17.470
+W porządku.
+
+00:03:17.470 --> 00:03:21.070
+Teraz widzimy, że są renderowane dwa razy.
+
+00:03:21.130 --> 00:03:24.070
+A jeśli myślisz o tym, dlaczego tak jest.
+
+00:03:24.070 --> 00:03:27.480
+Cóż, ponieważ początkowo układ robota jest pusty.
+
+00:03:27.820 --> 00:03:35.470
+A potem wywołujemy to wywołanie API, a tablica robota zostaje wypełniona, co jest naszym stanem, a my ponownie otrzymujemy
+
+00:03:35.490 --> 00:03:37.630
+Rander Hetter Smashbox bez karty.
+
+00:03:37.840 --> 00:03:48.930
+Więc jak możemy uniknąć ponownego renderowania tutaj Hettera Mamy cykl życia wszy, którego możemy użyć o
+
+00:03:49.020 --> 00:03:53.130
+nazwie Powinno się zaktualizować składnik.
+
+00:03:54.000 --> 00:04:01.470
+I to ma miejsce w każdym pojedynczym komponencie Riaka, więc każdy jego cykl życia
+
+00:04:01.950 --> 00:04:10.440
+działa i zwraca wartość true, jeśli zwraca true, to zaktualizuje komponent, jeśli zwróci wartość false, a
+
+00:04:10.440 --> 00:04:17.070
+następnie nie zaktualizuje komponentu, który ten komponent faktycznie otrzymuje następne rekwizyty.
+
+00:04:17.160 --> 00:04:17.650
+Whoops.
+
+00:04:17.700 --> 00:04:24.960
+Następne rekwizyty i następny stan.
+
+00:04:25.080 --> 00:04:29.720
+Ale dla nas tak naprawdę nie potrzebujemy, abyśmy wiedzieli, że nie chcemy renderować komponentu
+
+00:04:30.440 --> 00:04:33.650
+nagłówka, więc możemy po prostu powiedzieć return false.
+
+00:04:33.800 --> 00:04:34.810
+Zobaczmy, co się tutaj stanie.
+
+00:04:37.300 --> 00:04:48.450
+Zamierzam zaoszczędzić czas i spojrzeć na to, że nasz komponent głowy renderuje się po pierwotnym czasie i bez względu na
+
+00:04:48.530 --> 00:04:49.310
+wszystko.
+
+00:04:49.310 --> 00:04:53.790
+Teraz nasza głowa lub komponent nigdy się nie wyrenderuje.
+
+00:04:53.970 --> 00:04:58.170
+A to dlatego, że zawsze mamy aktualizację komponentu shit.
+
+00:04:58.170 --> 00:04:58.800
+Fałszywy.
+
+00:04:58.890 --> 00:04:59.380
+Nie.
+
+00:04:59.400 --> 00:05:08.170
+Po prostu nigdy nie aktualizuj tego składnika i jest to dość niebezpieczne, ponieważ mówisz, że nigdy nie aktualizujesz tego, jeśli ten
+
+00:05:08.170 --> 00:05:14.980
+komponent faktycznie otrzymał rekwizyty lub stan i żadna z tych zmian, które nie zostaną wyświetlone, ponieważ
+
+00:05:14.980 --> 00:05:17.210
+właśnie powiedzieliśmy, że zwracamy fałsz.
+
+00:05:17.210 --> 00:05:24.040
+Domyślnie teraz, jeśli nie dodajemy Aktualizacji składnika powinna zawsze zwracać wartość
+
+00:05:24.070 --> 00:05:31.720
+true, ale w przypadku aktualizacji składnika daje nam możliwość kontrolowania tego cyklu aktualizacji.
+
+00:05:31.740 --> 00:05:37.410
+Pozwól, że dam ci lepszy przykład z czymś nieco bardziej skomplikowanym niż prosty tekst.
+
+00:05:37.440 --> 00:05:46.220
+Stwórzmy tutaj nowy plik, a my go nazwiemy tym przyciskiem licznika.
+
+00:05:46.400 --> 00:05:47.300
+Tak.
+
+00:05:47.980 --> 00:05:56.070
+I po raz kolejny przechodzimy przez nasz ruch, tak naprawdę po prostu skopiuję nagłówek
+
+00:05:56.070 --> 00:06:03.740
+tutaj i zmieniam imiona, aby ułatwić sobie sprawę, więc mówię przycisk licznika.
+
+00:06:03.940 --> 00:06:14.030
+A teraz ten przycisk licznika ma zamiar zrobić coś więcej niż tylko H-1 w konstruktorze.
+
+00:06:18.160 --> 00:06:24.760
+Zamierzamy zadzwonić super A następnie tutaj będzie miał swój własny stan i
+
+00:06:25.540 --> 00:06:34.090
+będzie miał stan, który mówi, że liczba jest równa 1 lub mniej, aby policzyć jest równa zero.
+
+00:06:34.100 --> 00:06:36.030
+To jest domyślna liczba.
+
+00:06:36.170 --> 00:06:39.070
+A na razie nic tu nie róbmy.
+
+00:06:39.080 --> 00:06:44.610
+Zamierzam zachować to puste, więc zawsze będzie aktualizować komponent.
+
+00:06:44.710 --> 00:06:48.310
+A potem w końcu w Randerze oddajmy coś znaczącego.
+
+00:06:49.080 --> 00:06:57.940
+Róbmy przycisk.
+
+00:06:59.170 --> 00:07:09.480
+To znaczy, że ma właściwość koloru, a ta własność koloru będzie pochodzić z tego materiału, który ma
+
+00:07:09.720 --> 00:07:14.230
+kolor kropki, który będziemy przekazywać dalej.
+
+00:07:14.470 --> 00:07:21.890
+A także licznik aktualizacji długich kliknięć.
+
+00:07:22.100 --> 00:07:29.430
+I to będzie metoda, którą zamierzamy stworzyć i ta aktualizacja pojawi się tutaj.
+
+00:07:32.000 --> 00:07:37.540
+Będzie to prosta funkcja, która po prostu zaktualizuje nasz stan.
+
+00:07:37.660 --> 00:07:54.320
+Tak więc ten ustawiony stan będzie liczony jako ta liczba kropek DOT plus 1.
+
+00:07:54.340 --> 00:08:04.690
+Teraz wróćmy do tego, ale na razie pozwólmy po prostu przycisnąć przycisk licznika w nagłówku, a także
+
+00:08:04.730 --> 00:08:10.490
+przekazać kolorowe rekwizyty i wygląda na to, że podświetlenie
+
+00:08:10.490 --> 00:08:11.900
+jest wyłączone.
+
+00:08:11.900 --> 00:08:15.490
+Więc myślę, że popełniliśmy mały błąd.
+
+00:08:15.710 --> 00:08:19.740
+Aha, bo muszę zamknąć ten przycisk.
+
+00:08:19.730 --> 00:08:32.190
+Zróbmy to i po prostu umieśćmy tutaj fragment tekstu, który mówi, że liczy się początek Liczy
+
+00:08:32.470 --> 00:08:34.900
+się stan.
+
+00:08:34.920 --> 00:08:39.340
+W porządku, po prostu zapiszmy to i zaimportujmy do nagłówka.
+
+00:08:41.520 --> 00:08:47.900
+Cóż, nie powiem, że Petar nie importuje Hettera licznika
+
+00:08:51.640 --> 00:08:55.500
+Bodina z pliku konurbacji.
+
+00:08:57.350 --> 00:09:12.130
+A w środku możemy zwrócić dev, który ma teraz przycisk licznika z powiedzmy kolorem Mysti w kolorze czerwonym i
+
+00:09:13.000 --> 00:09:26.430
+nie zapominajmy o zamknięciu dnia oszczędzania, a mamy kilka poważnych składni, jeśli pójdziemy do Hetter Well yeah
+
+00:09:26.940 --> 00:09:28.960
+90 dzień.
+
+00:09:29.190 --> 00:09:30.450
+Zapomniałem tutaj o moim nawiasie.
+
+00:09:35.240 --> 00:09:38.210
+W porządku, wróćmy do naszej aplikacji.
+
+00:09:38.360 --> 00:09:40.720
+Mamy nasze zero zerowe.
+
+00:09:41.510 --> 00:09:42.940
+Nie podoba mi się, gdzie to jest.
+
+00:09:42.970 --> 00:09:47.430
+Tak więc ustawmy to poniżej H-1.
+
+00:09:47.630 --> 00:09:48.580
+Zapiszmy to.
+
+00:09:48.650 --> 00:09:49.980
+To o wiele lepiej.
+
+00:09:50.570 --> 00:09:54.850
+A jeśli klikniemy na to, dostaniemy jakieś błędy.
+
+00:09:56.780 --> 00:09:59.260
+Z pewnością aktualizacja składnika zwraca wartość undefined.
+
+00:09:59.660 --> 00:10:06.350
+I masz rację, ponieważ dzwonimy do licznika BOTTEN, pewna aktualizacja składnika, ale nic nie
+
+00:10:06.350 --> 00:10:07.260
+robimy.
+
+00:10:07.430 --> 00:10:08.180
+To nie działa.
+
+00:10:08.180 --> 00:10:11.240
+Tak więc, aby
+
+00:10:14.380 --> 00:10:22.690
+na razie powrócić do prawdy i policzmy liczbę kliknięć.
+
+00:10:22.710 --> 00:10:23.490
+W porządku.
+
+00:10:23.490 --> 00:10:24.330
+Bardzo fajny.
+
+00:10:24.330 --> 00:10:31.380
+Wygląda na to, że działa i renderujemy kombajn, a liczba haseł rośnie za każdym razem.
+
+00:10:33.470 --> 00:10:42.840
+Teraz wspominałem o tym, że czasami można uzyskać zabawne efekty uboczne po aktualizacji stanu na
+
+00:10:44.540 --> 00:10:47.140
+podstawie bieżącego stanu.
+
+00:10:47.210 --> 00:10:52.330
+To dlatego, że aktualizacje stanu nie są w rzeczywistości synchroniczne.
+
+00:10:52.400 --> 00:10:56.860
+Oznacza to, że nie zawsze mogą się zdarzyć, gdy myślisz.
+
+00:10:57.080 --> 00:11:04.800
+Tak więc za każdym razem, gdy używasz stanu takiego jak ten lub musisz wyprowadzić następny stan z bieżącego stanu.
+
+00:11:05.210 --> 00:11:11.540
+Zalecane jest użycie innego sposobu aktualizowania stanu, który polega na przechwyceniu
+
+00:11:16.720 --> 00:11:17.530
+bieżącego
+
+00:11:21.270 --> 00:11:26.990
+stanu i zwrocie nowego stanu na podstawie tego parametru stanu.
+
+00:11:27.080 --> 00:11:28.010
+Oszczędzajmy więc
+
+00:11:32.400 --> 00:11:33.520
+i nadal działa.
+
+00:11:33.660 --> 00:11:39.620
+Doskonałe Oczyśćmy to teraz dla zabawy.
+
+00:11:39.780 --> 00:11:51.750
+Rzućmy okiem na następne rekwizyty i następny stan, jeśli przejdę tutaj i zrobię konsolę, zapisz kolejne rekwizyty i
+
+00:11:51.780 --> 00:11:55.890
+zapisz wszystkie logowania na następny stan.
+
+00:11:56.100 --> 00:11:57.450
+Zapiszmy tutaj.
+
+00:11:57.450 --> 00:12:03.230
+Wróć i wyczyść tę liczbę antyprasową.
+
+00:12:03.300 --> 00:12:06.420
+Widzę, że dostaję następny dowód.
+
+00:12:06.490 --> 00:12:13.010
+Cóż, to się nie zmieni, ponieważ nie zmieniliśmy żadnego z rekwizytów, ale teraz liczy się jeden.
+
+00:12:13.050 --> 00:12:24.850
+Jeśli kliknę ponownie, policz, aby policzyć do trzech, a zobaczysz, że mamy dostęp do obu rekwizytów i stan.
+
+00:12:24.860 --> 00:12:35.780
+Co się stanie, jeśli z jakiegoś powodu stan się nie zmieni, ponieważ nie interesuje nas nic innego w
+
+00:12:35.780 --> 00:12:38.300
+naszym rekwiacie koloru czerwonego.
+
+00:12:38.300 --> 00:12:45.520
+W tej chwili jest trochę statycznych i po aktualizacji składników możemy zrobić coś takiego.
+
+00:12:45.660 --> 00:12:53.270
+Możemy powiedzieć, że jeśli ten stan kropki nie jest równy,
+
+00:12:56.080 --> 00:13:02.950
+następny stan licznika DOT, jeśli są one różne.
+
+00:13:02.990 --> 00:13:16.220
+W takim przypadku dobrze, tak, zwróćmy prawdę i wyświetlmy. W przeciwnym razie możemy po prostu zwrócić false.
+
+00:13:16.280 --> 00:13:24.280
+Zachowajmy to, wróćmy, upewnijmy się, że wszystko nadal działa, tak, wszystko nadal działa.
+
+00:13:26.430 --> 00:13:37.750
+Ale załóżmy, że teraz chcemy zmienić nasze rekwizyty, usuńmy lub skomentuj aktualizację komponentu
+
+00:13:37.750 --> 00:13:45.690
+powinna pochodzić z Hettera, odśwież i wpisz coś.
+
+00:13:45.700 --> 00:13:50.810
+I widzimy, że nasz nagłówek jest aktualizowany jeszcze raz.
+
+00:13:51.120 --> 00:13:58.890
+A jeśli wrócimy do naszej aglomeracji i do renderingu, zobaczymy, że coner I chociaż jesteśmy con. rejestrując go, nie pojawia
+
+00:13:58.890 --> 00:14:03.180
+się tutaj jako rendering Nyree.
+
+00:14:03.180 --> 00:14:13.970
+Ale jeśli usunę ten fragment kodu, powiedzmy, że usuwam aktualizację komponentu arkusza, którą zapisuję i wracam, widzimy, że
+
+00:14:13.970 --> 00:14:17.070
+konurbacja jest teraz renderowana.
+
+00:14:17.230 --> 00:14:26.570
+I chociaż tego nie dotykamy i nie przejmujemy się tym, ponieważ nasz nadrzędny komponent jest
+
+00:14:27.260 --> 00:14:30.080
+renderowany, dostaniemy ponownie renderowanie.
+
+00:14:30.500 --> 00:14:37.680
+Tak więc, dodając aktualizację składnika, aktualizuj tylko wtedy, gdy zmieni się stan.
+
+00:14:37.730 --> 00:14:42.560
+To jedyny moment, w którym nasz komponent powinien się zaktualizować.
+
+00:14:42.680 --> 00:14:45.370
+Bardzo fajny.
+
+00:14:45.500 --> 00:14:52.550
+Ale teraz nie ma konurbacji.
+
+00:14:52.700 --> 00:15:00.880
+Teraz są chwile, kiedy masz proste to, co nazywamy głupimi składnikami, a składniki bezstanowe są elementami
+
+00:15:00.880 --> 00:15:01.620
+prezentacji.
+
+00:15:01.660 --> 00:15:04.370
+Trochę jak ten składnik karty tutaj.
+
+00:15:04.510 --> 00:15:11.410
+Jest to funkcja czysta i zmienia się tylko wtedy, gdy zmiana rekwizytów polega na specjalnym
+
+00:15:11.680 --> 00:15:18.220
+typie komponentu zbudowanym z zimnego czystego komponentu, który jest właśnie przeznaczony do tego celu.
+
+00:15:18.250 --> 00:15:29.330
+Więc jeśli ten element karty był podobny do tego rodzaju komponentu, możemy powiedzieć, że rozszerza czysty komponent i możemy
+
+00:15:29.690 --> 00:15:33.740
+po prostu zaimportować z czystego komponentu.
+
+00:15:33.740 --> 00:15:35.500
+Co to oznacza?
+
+00:15:35.540 --> 00:15:38.360
+Oznacza to, że tylko składnik.
+
+00:15:38.360 --> 00:15:43.100
+Odtąd będzie się wyświetlać tylko wtedy, gdy faktycznie ulegnie zmianie.
+
+00:15:43.100 --> 00:15:44.930
+To jest ładne i proste.
+
+00:15:44.990 --> 00:15:52.130
+Jeśli zmienisz ten składnik samochodu tak, by miał klasę, która jest czystym komponentem, to automatycznie zmienia
+
+00:15:52.130 --> 00:16:00.040
+się aktualizacja komponentu powinna zmieniać się tylko wtedy, gdy te trzy rzeczy ulegną zmianie, co jest naprawdę bardzo miłe.
+
+00:16:00.050 --> 00:16:07.860
+Teraz jedynym zastrzeżeniem jest to, że ten czysty składnik robi coś, co wymaga płytkiego porównania rekwizytów.
+
+00:16:07.880 --> 00:16:14.990
+Jeśli więc używasz złożonych struktur danych, takich jak obiekty głęboko zagnieżdżone, może to spowodować pominięcie niektórych
+
+00:16:15.080 --> 00:16:17.360
+zmian rekwizytów i nieaktualizować składników.
+
+00:16:17.360 --> 00:16:20.320
+Więc nie jestem wielkim fanem używania czystych komponentów.
+
+00:16:21.770 --> 00:16:27.440
+Osobiście lubię używać aktualizacji składników, która robi to samo, ale masz
+
+00:16:27.740 --> 00:16:36.950
+trochę kontroli, ale nie powinieneś nadużywać tego, ponieważ teraz dodałeś dodatkowy krok do swojej ponownej aktualizacji, aby sprawdzić coś
+
+00:16:36.950 --> 00:16:37.840
+innego.
+
+00:16:37.850 --> 00:16:46.070
+Tak więc faktycznie ma to również wpływ na wydajność, ponieważ używasz innej funkcji, aby sprawdzić, czy
+
+00:16:46.160 --> 00:16:54.880
+cokolwiek innego się zmieni, ponieważ aktualizacja składników udostępnionych to metoda, która jest wywoływana przed renderowaniem tego renderowania
+
+00:16:54.880 --> 00:16:55.490
+tutaj.
+
+00:16:56.600 --> 00:16:58.890
+Więc używaj tego ostrożnie.
+
+00:16:58.880 --> 00:17:05.360
+Nigdy nie dodawaj tego, ponieważ poprawi moją wydajność, pomierz ją, jeśli pomoże to w
+
+00:17:05.540 --> 00:17:06.930
+rzadkich przypadkach.
+
+00:17:07.070 --> 00:17:13.010
+Zdecydowanie używaj go, ale nie nadużywaj go dla każdego komponentu, który widziałem w wielu projektach.
+
+00:17:13.130 --> 00:17:19.100
+Może to faktycznie utrudnić twoją wydajność lub czasami przegapić jakieś aktualizacje z powodu tego
+
+00:17:19.280 --> 00:17:21.000
+płytkiego porównania, które robi.
+
+00:17:21.100 --> 00:17:27.350
+Chcę ci pokazać ostatnie narzędzie, które może ci w tym pomóc, ponieważ jest to trochę
+
+00:17:27.350 --> 00:17:30.130
+bolesne, aby samemu to wszystko zrozumieć.
+
+00:17:32.530 --> 00:17:40.770
+Nazywa się to: Dlaczego zaktualizowałeś i oh, dlaczego aktualizujesz.
+
+00:17:40.880 --> 00:17:51.870
+To jest narzędzie, które mówi ci w konsoli, dlaczego to renderujesz.
+
+00:17:51.880 --> 00:17:56.810
+Nic się nie zmieniło, ale renderuje, że jest renderowaniem możliwym do uniknięcia.
+
+00:17:56.850 --> 00:18:06.360
+Robi to za Ciebie i wszystko, co musisz zrobić, jest zaimplementowane w twojej aplikacji re-act z kilkoma liniami i upewniasz
+
+00:18:07.410 --> 00:18:10.800
+się, że nie wchodzi ona do produkcji.
+
+00:18:10.800 --> 00:18:13.250
+Używasz go tylko do celów programistycznych.
+
+00:18:14.270 --> 00:18:20.360
+Ponieważ jednym z najczęstszych problemów wpływających na wydajność i reagowanie jest niepotrzebne
+
+00:18:20.360 --> 00:18:28.400
+cykle renderowania, ponieważ pamiętaj, że komponenty Riak będą czytać Randera, gdy ich rodzic renderuje się automatycznie, nawet
+
+00:18:29.440 --> 00:18:32.190
+jeśli rekwizyty się nie zmieniły.
+
+00:18:32.230 --> 00:18:39.220
+Dzięki temu narzędziu możesz uruchomić to w fazie rozwoju i sprawdzić, czy robisz niepotrzebne renderowanie.
+
+00:18:39.520 --> 00:18:45.460
+Jest to bardzo przydatne, gdy masz dużą aplikację, w której naprawdę trudno jest po prostu
+
+00:18:45.460 --> 00:18:50.000
+zrobić log konsoli lub dowiedzieć się, gdzie znajdują się najciekawsze momenty.
+
+00:18:50.940 --> 00:18:58.440
+Ale znowu przy użyciu wszystkiego, zachowaj ostrożność, mądrze wykorzystaj czas, ponieważ wydajność zawsze możesz poprawić
+
+00:18:58.440 --> 00:19:00.390
+wydajność swoich aplikacji.
+
+00:19:01.130 --> 00:19:05.470
+Po prostu chcesz mieć to duże zdjęcie i zrozumieć, jak działa Twoja aplikacja.
+
+00:19:05.510 --> 00:19:11.990
+W twoim przypadku, jak reaguje aplikacja redux i jak możesz ją poprawić, rozumiejąc wszystkie
+
+00:19:11.990 --> 00:19:14.160
+drobne szczegóły jej działania.
+
+00:19:14.240 --> 00:19:21.790
+Możesz teraz podejmować mądre decyzje o tym, jak i kiedy radzić sobie z problemami z wydajnością.
+
+00:19:21.800 --> 00:19:23.030
+To tyle na teraz.
+
+00:19:23.030 --> 00:19:23.860
+Do zobaczenia w następnym.

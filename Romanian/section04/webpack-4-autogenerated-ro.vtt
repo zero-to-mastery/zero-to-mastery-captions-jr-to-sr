@@ -1,0 +1,1333 @@
+﻿WEBVTT
+
+00:00:00.830 --> 00:00:02.640
+Și bine ai venit înapoi.
+
+00:00:02.750 --> 00:00:07.010
+Să ajungem la o codificare interesantă folosind ceea ce acum.
+
+00:00:07.190 --> 00:00:11.210
+Amintiți-vă că aplicația re-act crede folosește pachetul web sub capotă.
+
+00:00:11.240 --> 00:00:18.590
+Așadar, să vedem ce tip de instalare au încercat să construiască una singură sau cel puțin versiunea simplificată a
+
+00:00:18.590 --> 00:00:19.350
+acesteia.
+
+00:00:20.830 --> 00:00:28.690
+Deci, primul lucru pe care vrem să-l facem este să facem un simplu proiect pe care îl vom face doar
+
+00:00:28.690 --> 00:00:29.630
+să-l numim
+
+00:00:32.390 --> 00:00:36.640
+ceea ce proiect și toate Cdn la asta, de asemenea.
+
+00:00:37.930 --> 00:00:45.370
+Acum, primul lucru pe care vrem să-l facem este să ne pregătim NPM pentru a putea face NPM în el cu Dash
+
+00:00:45.550 --> 00:00:49.260
+Y, ceea ce înseamnă doar să spui da tuturor configurațiilor.
+
+00:00:49.300 --> 00:00:49.690
+In regula.
+
+00:00:49.690 --> 00:00:54.770
+Și avem totul înființat și clar asta.
+
+00:00:54.880 --> 00:01:00.870
+Și acum să deschidem proiectul pentru a ne asigura că avem toate fișierele de care avem nevoie.
+
+00:01:00.900 --> 00:01:05.540
+Eu folosesc subliniere dar, evident, puteți folosi orice editor de text pe care îl alegeți.
+
+00:01:11.190 --> 00:01:13.310
+Și să facem ecrane frumos.
+
+00:01:14.520 --> 00:01:16.750
+Asa ca impreuna putem vedea totul.
+
+00:01:16.950 --> 00:01:17.530
+Frumos.
+
+00:01:17.610 --> 00:01:18.310
+Perfect.
+
+00:01:19.270 --> 00:01:24.120
+Bine, deci avem proiectul nostru de pachet web cu pachetul nostru dot Gees în dosar.
+
+00:01:24.130 --> 00:01:27.390
+Nu prea mult în acest moment, dar acesta este un început bun.
+
+00:01:27.580 --> 00:01:33.630
+Acum, întreaga aplicație cu o singură pagină pe care o vom construi va conține
+
+00:01:34.030 --> 00:01:42.780
+două fișiere, un fișier HMO și un fișier javascript, în timp ce fișierul javascript va fi generat automat din toate celelalte
+
+00:01:43.080 --> 00:01:46.270
+fișiere pe care le avem prin ratpack.
+
+00:01:46.380 --> 00:01:55.830
+Mai târziu putem începe să creăm fișierul XML manual ca punct de intrare pentru aplicația noastră, astfel încât să putem pur
+
+00:01:55.830 --> 00:02:02.760
+și simplu face alt director aici, îl vom numi construi sau să spunem două
+
+00:02:04.020 --> 00:02:12.810
+discuri pentru distribuție și toate CD-urile în acea distribuție și vom creați un index indice perfect un fișier shim.
+
+00:02:12.860 --> 00:02:15.960
+Dacă verificăm aici, indicele nostru nu este un shemale.
+
+00:02:15.970 --> 00:02:17.630
+Să ne întoarcem.
+
+00:02:18.380 --> 00:02:24.210
+La ruta noastră de proiect aici în index începe o scădere similară.
+
+00:02:24.220 --> 00:02:28.790
+Putem crea doar un simplu șablon de bază.
+
+00:02:29.170 --> 00:02:36.100
+Pot chiar impozit sublim și face acest lucru și apoi dacă am lovit tab-ul de la toate sunt populare pentru
+
+00:02:36.100 --> 00:02:42.760
+mine, care este o trăsătură frumos puțin va da titlul de ce ambalaj și în interiorul organismului, deoarece vom
+
+00:02:43.150 --> 00:02:48.540
+fi folosind re-act și avem nevoie un fel de punct de intrare pentru a reacționa.
+
+00:02:48.540 --> 00:02:58.610
+Putem avea doar un div cu ideea de a spune app și putem închide acel div și putem avea și un
+
+00:02:58.610 --> 00:03:07.580
+fișier de script și fișierul script va încărca pachetul nostru Da pe care nu-l avem încă, dar vom merge
+
+00:03:07.580 --> 00:03:08.840
+a face.
+
+00:03:08.840 --> 00:03:19.100
+Deci, vom spune că sursa pentru acest fișier de script va fi în balonul de dodginess.
+
+00:03:19.200 --> 00:03:22.700
+În regulă, există o aplicație frumoasă și simplă.
+
+00:03:23.160 --> 00:03:29.060
+Vom avea un punct de intrare pentru a reacționa și, de asemenea, vom avea toate fișierele noastre
+
+00:03:29.070 --> 00:03:31.510
+de javascript într-un singur pachet numit gândit.
+
+00:03:32.710 --> 00:03:37.590
+Acum veți folosi umedul ca un bonder de module și un instrument de construcție.
+
+00:03:37.720 --> 00:03:44.650
+Mai multe din ceea ce veți folosi ceva numit server de pachete web dev pentru a servi acest
+
+00:03:44.650 --> 00:03:53.150
+pachet pe care îl aveți într-un mediu local, astfel încât să putem rula o comandă aici și putem testa un rap pe laptopul nostru.
+
+00:03:53.440 --> 00:03:57.280
+În caz contrar, nu veți putea să-l vedeți în browser.
+
+00:03:57.340 --> 00:04:05.250
+Și apoi, în final, avem nevoie și de umezeală pentru a vedea o interfață de minciună sau linie de comandă pentru a configura configurația noastră
+
+00:04:05.350 --> 00:04:06.060
+de umezire.
+
+00:04:06.070 --> 00:04:12.620
+Deci, să instalăm aceste trei pachete, astfel încât să putem începe să le folosim înapoi.
+
+00:04:12.790 --> 00:04:15.130
+Putem face NPM nu acolo.
+
+00:04:15.130 --> 00:04:27.810
+Putem face instalarea NPM și pentru că acestea sunt în scopuri de dezvoltare, putem spune că bordul Dash salvează Dev
+
+00:04:28.810 --> 00:04:40.160
+și că aici vom instala ceea ce Pak serverul de deces al pachetului web, astfel încât să putem
+
+00:04:40.160 --> 00:04:44.610
+testa de fapt proiectul nostru local.
+
+00:04:44.690 --> 00:04:46.460
+Și apoi, în
+
+00:04:49.650 --> 00:04:53.960
+sfârșit, pachetul web CLIA să instalam acest lucru.
+
+00:04:54.090 --> 00:05:01.230
+Și în timp ce se instalează acest lucru, vreau să vă avertizez cu acest videoclip, dacă nu vă obișnuiți
+
+00:05:01.230 --> 00:05:05.040
+să vă umeziți, veți simți puțin ce este cuvântul aici.
+
+00:05:05.130 --> 00:05:10.170
+Puțin extenuat de la toate pachetele pe care le vom instala toate setările.
+
+00:05:10.200 --> 00:05:14.260
+Este sincer copleșitoare când porniți pentru prima oară.
+
+00:05:14.510 --> 00:05:21.020
+Și acesta este exact motivul pentru care creați reacția există deoarece stabilirea acestui lucru și configurarea totului și
+
+00:05:21.020 --> 00:05:24.680
+asigurarea că totul este actualizat este o sarcină mare.
+
+00:05:24.830 --> 00:05:31.100
+Deci nu urmăriți acest videoclip, nu ca un lucru pe care trebuie să îl cunoașteți și dacă nu înțelegeți totul, puteți
+
+00:05:31.100 --> 00:05:32.030
+trece mai departe.
+
+00:05:32.030 --> 00:05:37.780
+Urmăriți-o ca o modalitate de a înțelege puțin din ceea ce se întâmplă sub capota creației reacționa.
+
+00:05:37.880 --> 00:05:44.240
+Dar după cum am spus înainte, rețineți că configurațiile se schimbă mereu, astfel că atunci când vine timpul să implementați
+
+00:05:44.300 --> 00:05:48.620
+unul înapoi, aceștia au o documentație online excelentă pe care o poate utiliza.
+
+00:05:48.740 --> 00:05:52.200
+Dar, pentru moment, trebuie doar să înțelegeți de ce.
+
+00:05:52.280 --> 00:05:55.960
+Nu fiecare detaliu așa cum îmi place mereu să spun.
+
+00:05:55.960 --> 00:06:00.090
+În regulă acum că am instalat acest lucru Să clarificăm acest lucru.
+
+00:06:00.650 --> 00:06:06.560
+Și primul lucru pe care vrem să-l facem este să intrăm în fișierul nostru
+
+00:06:07.100 --> 00:06:12.800
+Jaisalmer ambalat și în anul scrierilor vom schimba testul pentru a începe.
+
+00:06:13.070 --> 00:06:14.640
+Și o să spunem asta.
+
+00:06:14.750 --> 00:06:17.790
+Permiteți-mi să fac acest lucru mai mic pentru a putea vedea.
+
+00:06:18.080 --> 00:06:23.910
+Vrem să eliminăm acest text inactiv și pe care îl vom pune aici.
+
+00:06:24.010 --> 00:06:34.660
+Pac dev server dash dash spațiu config și un fișier pe care nu avem încă pe care o să construim.
+
+00:06:34.730 --> 00:06:38.060
+Va fi numit pachet web Daut config dot.
+
+00:06:38.140 --> 00:06:46.590
+J. S. și apoi linia de bord linie de dezvoltare homeboy.
+
+00:06:46.690 --> 00:06:48.390
+Lasă-mă să fac asta puțin mai mic.
+
+00:06:49.760 --> 00:06:50.390
+In regula.
+
+00:06:50.490 --> 00:06:54.550
+Asta a fost mult să-mi explic ce se întâmplă aici.
+
+00:06:54.690 --> 00:07:02.430
+Scenariul de aici definește faptul că doriți să utilizați serverul de pachete de tip wet pack cu un fișier
+
+00:07:02.600 --> 00:07:10.380
+de configurare numit dodginess config bine configurat pe care o vom crea și devolvementul cu linia de liniuță este de
+
+00:07:10.380 --> 00:07:15.270
+fapt o nouă caracteristică care a venit cu revenit patru, recent lansat.
+
+00:07:15.270 --> 00:07:23.310
+Și asta doar adaugă implicit configurațiile de pachete web care vin cu noul înapoi înainte de a ne de fapt cu o
+
+00:07:23.310 --> 00:07:26.580
+versiune de două și trei versiuni de spate.
+
+00:07:26.580 --> 00:07:30.690
+Acum avem acest lucru și a trebuit să faceți mai multe setări manuale.
+
+00:07:30.930 --> 00:07:37.770
+Din fericire cu versiunea 4, ei și-au dat seama că oamenii nu vor să facă în mod necesar totul cu mâna, astfel
+
+00:07:37.770 --> 00:07:44.550
+încât să aibă unele defecte de dată frumoasă, astfel încât să aibă și una pentru producție, care este foarte utilă.
+
+00:07:44.550 --> 00:07:47.550
+Bine, acum că avem acest set, să salvăm asta.
+
+00:07:47.550 --> 00:07:53.400
+Și în terminalul nostru vom crea acest fișier de configurare.
+
+00:07:53.490 --> 00:08:04.430
+Așa că vom spune să vă spunem că atingeți umedul pachet dot config dodginess și vedem aici că avem ceea ce backdoor config dodgiest și
+
+00:08:04.430 --> 00:08:07.540
+am un plug mic frumos in.
+
+00:08:07.540 --> 00:08:09.850
+Asta îmi dă un simbol aici.
+
+00:08:09.850 --> 00:08:11.080
+Foarte tare.
+
+00:08:11.080 --> 00:08:16.090
+Acum, hai să mergem la acest dosar, pentru că putem face ceva cu adevărat.
+
+00:08:16.090 --> 00:08:20.760
+Vom merge la fișier și vom adăuga configurația pachetului web.
+
+00:08:21.280 --> 00:08:24.580
+Și aici se întâmplă cea mai mare parte a magiei bine ambalate.
+
+00:08:25.710 --> 00:08:35.910
+Suntem aici primul lucru pe care dorim să-l facem este să spunem exporturile de date datt.
+
+00:08:36.100 --> 00:08:40.150
+Și apoi sunt trei lucruri principale pe care vrem să le adăugăm exporturilor.
+
+00:08:40.180 --> 00:08:50.440
+Una dintre ele este intrarea unde ne dorim umed să începem să ne uităm prin credința noastră.
+
+00:08:50.610 --> 00:08:59.400
+În cazul nostru, această intrare va fi un fișier index js pe care îl vom crea.
+
+00:08:59.480 --> 00:09:10.080
+Deci, să spunem în dosarul sursă că va fi indexul J. S. fișierul și apoi cel de-al doilea lucru
+
+00:09:10.500 --> 00:09:17.220
+pe care o să spunem că ieșirea care este de la serverul de intrare care citește
+
+00:09:17.220 --> 00:09:25.700
+toate fișierele și care leagă totul și toată ieșirea dvs. a pus-o în această locație și putem face acest lucru
+
+00:09:25.700 --> 00:09:33.390
+prin definirea unei ieșiri cu o cale dher care este numele directorului pe care îl avem în prezent.
+
+00:09:35.760 --> 00:09:39.340
+Și folosiți dosarul nostru d'Este sau de distribuție.
+
+00:09:39.480 --> 00:09:45.530
+Chiar aici și apoi vom avea de asemenea un public și acest public Plath
+
+00:09:49.810 --> 00:09:55.930
+va fi doar așa, pentru că acesta este doar directorul tău în directorul de ieșire
+
+00:09:55.930 --> 00:09:59.040
+rezolvat în funcție de vârsta lui.
+
+00:09:59.060 --> 00:10:04.840
+Voi reveni la pagina și citiți mai multe despre acestea pe pagina de documentare.
+
+00:10:04.840 --> 00:10:08.760
+Și apoi, în final, dorim ca ieșirea să fie fișierul pachet.
+
+00:10:08.770 --> 00:10:16.900
+Vrem să spunem că numele fișierului va fi Bondel Dumnezeu da.
+
+00:10:18.010 --> 00:10:18.730
+Minunat.
+
+00:10:18.820 --> 00:10:23.890
+Și ultimul lucru va fi ceva numit serverul dev.
+
+00:10:23.890 --> 00:10:31.230
+Deci, acest lucru este în timp ce vrem să fugă în timp ce
+
+00:10:31.240 --> 00:10:40.890
+lucrăm pe site-ul nostru Web local, iar serverul def va avea o bază de conținut cu dosarul de distribuție.
+
+00:10:40.910 --> 00:10:43.740
+Deci, acest lucru ne spune serverul de unde să servească conținutul.
+
+00:10:43.880 --> 00:10:50.410
+Deci, din dosarul de distribuție când lucrăm în mediul nostru local.
+
+00:10:50.480 --> 00:10:50.990
+In regula.
+
+00:10:51.020 --> 00:10:59.330
+Nu a fost însă mult, dar în ansamblu, imaginea de ansamblu este că există o intrare cu o ieșire și, de asemenea, îi spunem
+
+00:10:59.330 --> 00:11:05.330
+serverului def unde să se uite astfel încât să afișeze site-ul Web pentru noi când lucrăm
+
+00:11:05.330 --> 00:11:06.080
+la el.
+
+00:11:06.080 --> 00:11:12.800
+Deci, din nou, spunem doar că dorim să folosim fișierul digest al indexului sursă ca punct de intrare pentru a
+
+00:11:12.890 --> 00:11:14.900
+lega toate aceste fișiere importante.
+
+00:11:15.110 --> 00:11:20.370
+Avem nevoie ca Bondel să moară da, așa că vom trece prin toate indiciile da.
+
+00:11:20.420 --> 00:11:22.900
+Orice este importat acolo.
+
+00:11:23.060 --> 00:11:27.060
+O vom compila și o vom scuipa într-un buget bundled.
+
+00:11:27.090 --> 00:11:27.760
+Da.
+
+00:11:28.130 --> 00:11:35.810
+Și apoi vom genera deja setat acest dosar ca punct de servire cu indexul nu este un
+
+00:11:35.920 --> 00:11:38.280
+fișier shemale pentru aplicația noastră.
+
+00:11:38.510 --> 00:11:41.600
+Așa că ne lipsește dosarul sursă aici, așa că hai să facem asta.
+
+00:11:41.600 --> 00:11:49.530
+O să fac sursa pentru a avea un dosar de surse de știri, iar aici
+
+00:11:49.530 --> 00:11:58.520
+putem intra în directorul sursă și putem crea fișierul index care avem în config-ul nostru de pachete umede.
+
+00:11:59.460 --> 00:12:00.480
+Să ne întoarcem.
+
+00:12:01.540 --> 00:12:13.140
+Și doar pentru distracție în indexul Jasc hai să spunem doar consolă de jurnal de câini și voi spune ce Pack Wizards.
+
+00:12:13.330 --> 00:12:14.530
+Lucru foarte interesant.
+
+00:12:14.530 --> 00:12:15.210
+In regula.
+
+00:12:15.430 --> 00:12:17.700
+Să începem NPM și să vedem ce se întâmplă.
+
+00:12:18.040 --> 00:12:25.770
+Voi spune NPM, pentru că dacă vă aduceți aminte că mergeți în Pakistan, avem comanda serverului DEP de pachete web pe
+
+00:12:25.780 --> 00:12:27.710
+care o vom rula.
+
+00:12:28.080 --> 00:12:33.300
+Așa că am de gând să spun că NPM începe.
+
+00:12:33.350 --> 00:12:40.590
+Bine, deci vom obține o ieșire aici, dar în partea de jos veți vedea că am compilat cu succes.
+
+00:12:40.700 --> 00:12:46.880
+Și dacă mergem în sus, vedem că proiectul rulează un localnic local local.
+
+00:12:46.940 --> 00:12:48.290
+Deci, să facem asta.
+
+00:12:48.290 --> 00:12:50.930
+Să mergem la gazdele locale aici.
+
+00:12:51.770 --> 00:12:55.110
+Și face 80.
+
+00:12:55.130 --> 00:12:55.360
+In regula.
+
+00:12:55.370 --> 00:13:02.810
+Și avem ce vrăjitor PAC din consola care funcționează nu este nimic afișat pe pagină deoarece
+
+00:13:02.810 --> 00:13:13.110
+pagina noastră de e-mail nu are nimic de dorit, putem avea doar o etichetă H-1 care spune că pachetul Web aici doar pentru
+
+00:13:13.120 --> 00:13:15.720
+a face sigur că funcționează.
+
+00:13:18.170 --> 00:13:19.320
+Și dacă ne reîmprospătăm.
+
+00:13:19.370 --> 00:13:20.060
+Acolo te duci.
+
+00:13:20.120 --> 00:13:24.870
+Avem ceea ce înapoi cu vrăjitorul de pachete umede de lucru.
+
+00:13:24.950 --> 00:13:25.880
+Foarte tare.
+
+00:13:26.590 --> 00:13:38.810
+Deci, din nou vedem că conținutul este Sam din dosarul dist și că timpul nostru de construcție a fost atât de
+
+00:13:38.810 --> 00:13:40.040
+bundling totul.
+
+00:13:40.040 --> 00:13:49.550
+A obținut 337 milli secunde și că avem un Bondel DOD J. S. fișier pe care l-am creat, care
+
+00:13:49.610 --> 00:13:54.910
+este destul de mic, cu doar 300 de kilobyte foarte foarte cool.
+
+00:13:54.920 --> 00:13:55.170
+In regula.
+
+00:13:55.190 --> 00:13:58.640
+Acum, hai să ajungem puțin mai adânc în acest subiect aici.
+
+00:13:59.570 --> 00:14:07.920
+Avem nevoie și de ceva numit Biblie Biblică care ne permite să scriem codul nostru în șase sau șapte sau opt.
+
+00:14:08.060 --> 00:14:15.950
+Și cu Biblia, codul se va transpune sau se va schimba înapoi la cinci, astfel încât fiecare browser fără
+
+00:14:15.950 --> 00:14:22.900
+a avea toate cele 6 funcții deja implementate pe ele poate totuși să o interpreteze.
+
+00:14:23.120 --> 00:14:28.050
+Deci, scriem ca dezvoltatori în anul 6 punându-l prin baseball.
+
+00:14:28.070 --> 00:14:34.490
+O să scape exact același cod, dar cu E. S. 5, astfel încât toate browserele, indiferent
+
+00:14:34.520 --> 00:14:40.670
+cât de vechi sunt, pot să le pună în aplicare, astfel încât să putem folosi lucruri reci ca funcțiile Aero și
+
+00:14:40.670 --> 00:14:45.890
+distrugerea obiectelor și alte lucruri interesante pe care le putem testa și noi caracteristici viitoare ale javascript
+
+00:14:45.890 --> 00:14:48.220
+care nu au nici măcar fost implementat încă.
+
+00:14:48.260 --> 00:14:50.270
+Deci, să începem cu asta.
+
+00:14:50.480 --> 00:14:54.470
+Să punem bazele unui baseball în proiectul nostru Roopak.
+
+00:14:54.600 --> 00:15:06.400
+Am de gând să închid acest lucru și clar și am de gând să spun NPM instalați din nou vom spune doar salvați def, deoarece facem doar acest
+
+00:15:06.400 --> 00:15:10.450
+lucru pe surd atunci când am pus-o în public.
+
+00:15:10.460 --> 00:15:17.700
+Nu avem nevoie de o masă deoarece facem acest lucru înainte de a pune fișierele pe un server.
+
+00:15:17.750 --> 00:15:27.650
+Deci, să spunem doar că vom avea nevoie de ceva numit Whoops babble core, care este pachetul principal de
+
+00:15:27.650 --> 00:15:28.670
+cabluri.
+
+00:15:28.820 --> 00:15:35.910
+Avem nevoie de ceva numit Babel Lowder, iar Lowder este ceva folosit în Westpac.
+
+00:15:36.020 --> 00:15:38.010
+Se compilează codul.
+
+00:15:38.010 --> 00:15:45.320
+Deci încărcătorul Babel în pachetul umed funcționează Sutekh javascript și îl trece
+
+00:15:45.320 --> 00:15:53.050
+prin compilatorul Babel și apoi avem nevoie de presetare și de preselectare a mesei.
+
+00:15:53.520 --> 00:16:01.890
+Și acesta este pachetul răcoros pe care îl face dacă verifică browserul în care rulează și pe baza
+
+00:16:01.890 --> 00:16:09.330
+acestei versiuni de browsere și cât de vechi va cunoaște exact ce caracteristici nu au implementat
+
+00:16:09.330 --> 00:16:15.140
+încă în browser și le fac se schimbă la S-5 pentru browser.
+
+00:16:15.210 --> 00:16:20.190
+Deci, este destul de inteligent pentru a detecta browser-ul și pentru a schimba doar o bucată din codul pe care browserul
+
+00:16:20.190 --> 00:16:20.940
+nu îl înțelege.
+
+00:16:20.940 --> 00:16:23.840
+În regulă foarte cool, așa că să instalăm asta.
+
+00:16:23.940 --> 00:16:24.220
+In regula.
+
+00:16:24.230 --> 00:16:26.410
+Awesome așa că am instalat Babbel.
+
+00:16:26.540 --> 00:16:33.680
+Dar, în plus, am putea dori să folosim mai multe caracteristici experimentale ale javascript care se pot activa
+
+00:16:33.950 --> 00:16:36.180
+prin intermediul unor etape numite.
+
+00:16:36.230 --> 00:16:37.460
+Deci, ce înseamnă asta.
+
+00:16:37.460 --> 00:16:45.600
+Ei bine, dacă mergem la site-ul Web Babel și să închidem acest lucru pentru moment, vedem că
+
+00:16:45.780 --> 00:16:54.960
+avem diferite etape presetate și acestea sunt lucruri în javascript care sunt propuse care ar putea sau nu să fie implementate.
+
+00:16:54.960 --> 00:17:00.470
+Dar dacă sunteți cu adevărat dornici, puteți începe să le folosiți utilizând stadiul presetat.
+
+00:17:00.810 --> 00:17:06.450
+Și din nou, pentru că transportul babbel este codul, înseamnă că putem scrie ceea ce dorim
+
+00:17:06.450 --> 00:17:13.530
+și cât de mult timp americanii vor înțelege că va scuipa versiunea în S-5 pentru noi, astfel încât toate browserele să o
+
+00:17:13.530 --> 00:17:13.910
+înțeleagă.
+
+00:17:14.190 --> 00:17:22.110
+Deci, pentru distracție acum, să spunem că dorim să testam și o nouă caracteristică a javascript, așa că
+
+00:17:22.110 --> 00:17:24.380
+vom spune instalarea și.
+
+00:17:24.580 --> 00:17:36.050
+Și vom descărca un pachet care este presetat Babel, spuneți etapa, pentru a putea instala acest lucru.
+
+00:17:36.320 --> 00:17:39.480
+Deci, acum că avem toate aceste pachete Cum le putem folosi.
+
+00:17:39.890 --> 00:17:53.160
+Ei bine, mergem în Jaison ambalate și apoi aici putem adăuga o proprietate de cablu și aici putem să spunem asta
+
+00:17:53.160 --> 00:17:56.360
+și să ne asigurăm că
+
+00:18:00.150 --> 00:18:08.390
+adăugăm virgula pre-seturile, de aceea tocmai am descărcat, vom avea trei dintre ele.
+
+00:18:08.530 --> 00:18:10.110
+Deci, să ne întoarcem aici.
+
+00:18:10.120 --> 00:18:11.650
+Ar trebui să fie o matrice.
+
+00:18:11.950 --> 00:18:16.770
+Și aici vom spune că avem presetări.
+
+00:18:16.900 --> 00:18:24.820
+De asemenea, vom folosi scena pentru a preseta că știi ce.
+
+00:18:24.830 --> 00:18:26.150
+Să mai adăugăm încă unul.
+
+00:18:26.150 --> 00:18:33.030
+Din nou, dacă vrem să folosim reacția în aplicația noastră, dorim și re-actul presetat.
+
+00:18:33.050 --> 00:18:41.660
+Deci, din nou aici, putem instala doar NPM și în loc de etapa precess la ceea ce doar Scott
+
+00:18:41.660 --> 00:18:45.440
+va spune că va primi presetate reacționa.
+
+00:18:45.460 --> 00:18:51.360
+Deci, există o tonă pe care le puteți folosi.
+
+00:18:51.650 --> 00:18:54.430
+Și acum o vom avea la dispoziție și nouă.
+
+00:18:55.310 --> 00:19:02.000
+Această ultimă este pentru noi să putem transforma fișierele GSX, care uneori vin în mod firesc, reacționând la fișierele lui
+
+00:19:02.240 --> 00:19:06.200
+Jeff, deci este mai mult de dragul comodității decât orice altceva.
+
+00:19:06.200 --> 00:19:10.040
+Lasă-mă să clar acest lucru și da putem reîncărca.
+
+00:19:10.350 --> 00:19:12.990
+Oh, și am uitat să o salvez, așa că să ne întoarcem aici.
+
+00:19:13.230 --> 00:19:15.600
+Am de gând să copiez asta.
+
+00:19:15.600 --> 00:19:18.100
+Și din nou o vom pune aici.
+
+00:19:18.140 --> 00:19:22.260
+Setarea noastră de baseball și asigurați-vă că o salvăm de data aceasta.
+
+00:19:23.600 --> 00:19:30.110
+În regulă, acum putem să ne întoarcem la config-ul nostru de pagină Web și putem să spunem că sunt bine pregătiți să folosească
+
+00:19:30.110 --> 00:19:32.450
+de asemenea baseball atunci când merg cu intrarea.
+
+00:19:32.450 --> 00:19:38.650
+Și înainte de a pune totul pune-l prin baseball și Jaspal tot ceea ce este foarte ușor de făcut.
+
+00:19:38.690 --> 00:19:44.390
+Putem adăuga un modul aici pentru a le spune ce să facă cu modulele noastre.
+
+00:19:44.480 --> 00:19:47.830
+Și aici trebuie doar să menționăm câteva lucruri.
+
+00:19:47.840 --> 00:19:49.870
+Deci, primul este reguli.
+
+00:19:49.970 --> 00:19:52.450
+Deci, ce reguli trebuie să urmăm.
+
+00:19:52.550 --> 00:19:57.630
+Deci regulile vor fi testate.
+
+00:19:58.060 --> 00:20:01.280
+Așa că este să căutați fișiere.
+
+00:20:02.380 --> 00:20:06.790
+Și vom folosi câteva expresii respinse aici
+
+00:20:09.980 --> 00:20:16.810
+care sunt javascript sau folosiți paranteze aici, care sunt fișiere javascript sau GSX.
+
+00:20:16.850 --> 00:20:20.460
+Deci, aceștia sunt implicit re-act false.
+
+00:20:20.610 --> 00:20:25.080
+Si de modul in care te poti uita la sintaxa aceasta este regex si poti
+
+00:20:25.080 --> 00:20:31.590
+afla despre sintaxa dar suntem destul de mult spunand orice se potriveste cu dodgiest sau dot GSX Deci, destul de mult toate javascript.
+
+00:20:31.590 --> 00:20:40.280
+Am vrut să folosim încărcătorul Babel pe el.
+
+00:20:40.370 --> 00:20:42.580
+Așa că alerga prin Babel.
+
+00:20:42.590 --> 00:20:47.210
+Acum, evident, nu vrem să facem acest lucru cu modulele noastre, astfel încât să puteți vedea folderele modulelor cunoscute.
+
+00:20:47.210 --> 00:20:52.940
+Există o tonă, dar acestea sunt fișiere întregi, acestea sunt părți
+
+00:20:53.180 --> 00:21:02.070
+terțe și nu suntem interesați de ele, așa că pot spune că exclud și vom exclude modulele cunoscute.
+
+00:21:02.080 --> 00:21:02.350
+In regula.
+
+00:21:02.350 --> 00:21:03.070
+Perfect.
+
+00:21:03.340 --> 00:21:10.860
+Și apoi celălalt lucru pe care vreau să îl fac este și vreau să folosesc rezolvarea și acesta este ceva ce ați
+
+00:21:10.860 --> 00:21:16.370
+observat când lucrăm cu creați reacționa atunci când am introdus un fișier un fișier component.
+
+00:21:16.380 --> 00:21:23.280
+Nu am pus niciodata Da-ul supravietuitor la sfarsit, deoarece reactia de creare a stiut automat ca a fost Javascript.
+
+00:21:23.280 --> 00:21:26.480
+Deci, acest lucru se face folosind ceva numit rezolva.
+
+00:21:26.520 --> 00:21:29.140
+Și putem spune asta cu hotărâre.
+
+00:21:29.370 --> 00:21:31.110
+Vrem ca extensiile
+
+00:21:36.380 --> 00:21:44.860
+J us și GSX să fie lăsate și să presupunem că va fi un javascript sau doar fișierele X.
+
+00:21:45.040 --> 00:21:51.820
+Deci, nu trebuie să facem niciodată mai multe lucruri atunci când imporăm în partea de sus a fișierului, care este frumos și deștept.
+
+00:21:51.820 --> 00:21:54.550
+Bine, să salvăm asta și.
+
+00:21:54.730 --> 00:21:55.300
+In regula.
+
+00:21:55.330 --> 00:22:01.150
+Încă nu am terminat, pentru că spunem că este vorba despre o aplicație a reactorului, avem nevoie de câteva pachete pentru a reacționa.
+
+00:22:01.240 --> 00:22:07.180
+Dar pe aceștia deja știm că putem doar să instalăm NPM și de data aceasta lebedele vor fi
+
+00:22:07.750 --> 00:22:11.140
+salvate nu pentru DAPH, ci pentru dependențele actuale ale proiectului.
+
+00:22:11.140 --> 00:22:22.190
+Așa că nu trebuie să facem bordură dash save dev ne putem spune că vrem să instaleză reacție și să reacționăm dong.
+
+00:22:22.560 --> 00:22:25.210
+Și nu pot spune că să încercăm din nou.
+
+00:22:25.370 --> 00:22:26.120
+Reacţiona.
+
+00:22:27.820 --> 00:22:28.120
+In regula.
+
+00:22:28.120 --> 00:22:28.560
+Minunat.
+
+00:22:28.570 --> 00:22:29.990
+Avem o reacție.
+
+00:22:29.990 --> 00:22:31.000
+Stahl E minunat.
+
+00:22:31.000 --> 00:22:37.030
+Ne apropiem și mai aproape de modul în care creați reacționează lucrând sub capotă.
+
+00:22:37.030 --> 00:22:37.480
+Asta e bine.
+
+00:22:37.480 --> 00:22:43.820
+Deci, acum folosim reacția și toată bunătatea GSX în fișierele noastre.
+
+00:22:44.140 --> 00:22:52.090
+Dar un alt lucru pe care vi-l aduci aminte este ca putem folosi ceva numit Da scame sau de fiecare data cand ne
+
+00:22:52.090 --> 00:22:57.360
+rancam reactionam oricand cand am avut o eroare de sintaxa sau ceva de genul asta.
+
+00:22:57.370 --> 00:23:02.760
+A arătat-o ​​în terminalul nostru foarte util.
+
+00:23:03.620 --> 00:23:09.020
+Și folosesc ceva numit E. S. scame care este împrumut care verifică sintaxa ta asigurându-vă
+
+00:23:09.020 --> 00:23:09.860
+că totul verifică afară.
+
+00:23:09.860 --> 00:23:11.430
+Gândește-te la asta ca la un verificator de ortografie.
+
+00:23:12.200 --> 00:23:19.430
+Și vă permite să păstrați un javascript consecvent și un cod de reacție Sol în proiectul dvs. și, practic, orice companie
+
+00:23:19.760 --> 00:23:28.250
+pe care o desfășurați utilizează un fel de Lanting, așa că pentru a face asta, permiteți-mi să clarific acest lucru din nou, deoarece vă
+
+00:23:28.250 --> 00:23:30.390
+puteți imagina instalarea lui Muhl.
+
+00:23:30.420 --> 00:23:31.150
+Morse.
+
+00:23:31.340 --> 00:23:32.840
+Din nou, este un pic de durere de cap.
+
+00:23:32.840 --> 00:23:36.510
+Știu că acest lucru este doar pentru scopuri de dezvoltare.
+
+00:23:36.620 --> 00:23:44.990
+Va spune salvați def și vom instala pachetul Slint.
+
+00:23:45.380 --> 00:23:51.200
+Și în timp ce acest lucru este de încărcare s-ar putea să fi realizat pentru moment, deoarece vom folosi pachet
+
+00:23:51.200 --> 00:23:56.600
+de web avem nevoie de ceva numit încărcător, care este de a avea toate fișierele trece prin aceasta.
+
+00:23:56.600 --> 00:24:00.530
+Ei trec prin Babbel pentru a le transporta la iOS 5.
+
+00:24:00.530 --> 00:24:03.170
+Deci, este compatibil cu toate browserele.
+
+00:24:03.170 --> 00:24:07.790
+Dar am vrut, de asemenea, să mergem ca Slint pentru a verifica orice greșeală.
+
+00:24:07.790 --> 00:24:17.060
+Așadar, avem nevoie de ceva numit Încărcător de scame.
+
+00:24:17.100 --> 00:24:17.500
+In regula.
+
+00:24:17.580 --> 00:24:23.690
+Și acum putem folosi acest lucru în configurația noastră pentru a ne asigura că trece prin Slint.
+
+00:24:23.820 --> 00:24:26.790
+Să facem asta prin adăugarea unei alte reguli aici.
+
+00:24:26.880 --> 00:24:34.200
+Și, de fapt, am făcut o greșeală aici, acesta ar trebui să fie un obiect, deoarece bine putem să avem mai multe reguli, așa că
+
+00:24:35.420 --> 00:24:36.830
+să punem asta acolo.
+
+00:24:36.980 --> 00:24:43.740
+Și următoarea lebădă Și vom spune că aici vom face același lucru.
+
+00:24:43.740 --> 00:24:53.460
+Vom copia aceste proprietăți, cu excepția momentului în care dorim să folosim din nou încărcătorul Slint prin
+
+00:24:53.460 --> 00:24:55.130
+fișierele javascript.
+
+00:24:55.170 --> 00:24:58.980
+Deci, să începem cererea și să vedem dacă funcționează.
+
+00:24:59.040 --> 00:25:03.180
+M-am descurcat fără să-mi verific munca, așa că vom vedea dacă am făcut vreo eroare aici.
+
+00:25:03.260 --> 00:25:04.950
+Mă duc să încep NPM și
+
+00:25:10.000 --> 00:25:11.500
+am ceva greșeli aici.
+
+00:25:11.500 --> 00:25:17.540
+Dacă mergem în sus, veți vedea că am făcut o mică greșeală aici.
+
+00:25:17.590 --> 00:25:23.190
+Am nevoie de o virgulă după serverul de moarte.
+
+00:25:23.190 --> 00:25:24.750
+Să spunem asta și să
+
+00:25:27.630 --> 00:25:29.360
+începem din nou și avem un altul.
+
+00:25:29.700 --> 00:25:32.390
+Sunt plin de greșeli astăzi.
+
+00:25:32.460 --> 00:25:33.090
+Acolo te duci.
+
+00:25:33.090 --> 00:25:35.730
+O altă virgulă pe care mi-am pierdut-o.
+
+00:25:40.110 --> 00:25:40.560
+In regula.
+
+00:25:40.560 --> 00:25:42.640
+Deci se compilează acum.
+
+00:25:42.900 --> 00:25:44.920
+Dar se spune că nu reușesc să compileze.
+
+00:25:44.920 --> 00:25:45.140
+In regula.
+
+00:25:45.150 --> 00:25:52.440
+Și vreau să vă arăt ceva care este destul de complicat cu pachetul și de ce atât de mulți oameni sunt frustrați
+
+00:25:52.440 --> 00:25:53.200
+cu asta.
+
+00:25:53.310 --> 00:26:03.130
+Așadar, intenționat am făcut câteva greșeli aici, că dacă vă uitați aici, nu este foarte clar ce
+
+00:26:03.220 --> 00:26:05.020
+se întâmplă.
+
+00:26:05.050 --> 00:26:13.100
+Vreau să spun că văd că nu am o configurație de teren da, dar există și toate celelalte lucruri care se întâmplă aici și doar spune
+
+00:26:13.910 --> 00:26:16.090
+că modulul nu a fost găsit.
+
+00:26:17.100 --> 00:26:21.300
+Și din nou, acesta este unul dintre acele lucruri în care într-adevăr doriți să vă asigurați că sintaxa
+
+00:26:21.540 --> 00:26:24.880
+pe care o utilizați în ambalajul umed și în tig este cu adevărat corectă.
+
+00:26:24.900 --> 00:26:30.920
+De aceea, privirea la documentația lor și verificarea exemplului lor este cu adevărat importantă.
+
+00:26:30.930 --> 00:26:40.290
+De exemplu, aici avem de fapt nevoie pentru rezolvarea extensiilor să aibă un punct în față și
+
+00:26:40.620 --> 00:26:43.760
+apoi cu testele cu respingere.
+
+00:26:43.830 --> 00:26:50.080
+Ei bine, de fapt nu avem nevoie de puncte, pentru că avem și acest front.
+
+00:26:50.990 --> 00:26:53.710
+Lasă-mă să salvez asta și să încercăm din nou asta.
+
+00:26:58.360 --> 00:27:04.660
+În regulă, încă mai am greșeli, dar dacă scot în sus nu am toate modulele respective și
+
+00:27:05.170 --> 00:27:09.850
+se pare că am o eroare de 1 configurație din Eastland găsită.
+
+00:27:09.940 --> 00:27:16.870
+Asta e destul de standard Da Linta are nevoie de un fel de configuratie un fel de reguli pe
+
+00:27:16.880 --> 00:27:21.480
+care sa-i putem spune hei verifica pentru aceste tipuri de erori.
+
+00:27:21.510 --> 00:27:23.370
+Din nou, un alt fișier de configurare.
+
+00:27:23.500 --> 00:27:28.000
+Ți-am spus că asta poate deveni destul de păros, dar așa funcționează.
+
+00:27:28.000 --> 00:27:34.940
+Deci, cu fiecare înclinare este foarte simplu putem crea doar ceva numit fișier r c, astfel încât să putem spune atingere.
+
+00:27:34.990 --> 00:27:36.110
+Da.
+
+00:27:36.270 --> 00:27:46.330
+R C și acest lucru făcut aici este un fișier punct și R C înseamnă că atunci când începe proiectul va
+
+00:27:46.780 --> 00:27:54.190
+citi Slint R C și va configura fiecare Slint, astfel încât orice regulă să fie acolo,
+
+00:27:54.190 --> 00:27:55.530
+va instanțiate.
+
+00:27:55.630 --> 00:28:01.220
+Acum aș putea să fac același lucru și cu baseball-ul în loc să îl pun în pachet.
+
+00:28:01.250 --> 00:28:09.380
+Jason, așa cum o am aici, aș fi putut să iau toate astea și să creez un punct punct, sunt Sharifah.
+
+00:28:09.730 --> 00:28:12.370
+Dar acum putem să-i lăsăm acolo.
+
+00:28:12.360 --> 00:28:13.170
+Slint, totuși.
+
+00:28:13.360 --> 00:28:15.410
+Să creați un nou fișier subțire.
+
+00:28:16.280 --> 00:28:22.940
+Și aici, pentru a începe, nu avem nevoie de nimic nebun, o să o lăsăm goală și să
+
+00:28:23.150 --> 00:28:26.930
+păstrăm sintaxa implicită de definire a unor reguli ca aceasta.
+
+00:28:27.200 --> 00:28:31.610
+Dar păstrarea obiectului gol va salva.
+
+00:28:31.880 --> 00:28:33.370
+Și să începem din nou.
+
+00:28:37.300 --> 00:28:42.150
+Rahu totul pare să fi încărcat și totul arată bine.
+
+00:28:42.150 --> 00:28:48.130
+Din nou, avem gazda noastră locală 1881, care ne distribuie.
+
+00:28:48.250 --> 00:28:49.360
+Așa că hai să verificăm.
+
+00:28:50.920 --> 00:28:53.150
+Totul arata bine.
+
+00:28:53.170 --> 00:28:54.330
+Ignorați 4 sau 4.
+
+00:28:54.320 --> 00:28:59.750
+Acesta este doar Falvey con că nu trebuie să ne facem griji, dar ce pachet este de lucru.
+
+00:28:59.950 --> 00:29:08.110
+Și dacă mergem la rețea și reîmprospătăm, vedem că primim dosarul suplimentar al pachetului care are toate aceste lucruri suplimentare
+
+00:29:08.110 --> 00:29:13.770
+pe care le conține ambalajul umed pentru a funcționa așa cum se întâmplă.
+
+00:29:15.900 --> 00:29:22.320
+În interiorul nostru avem jurnalul consolei care ne spune să tipărim ce vrăjitor de pachete.
+
+00:29:22.360 --> 00:29:23.890
+Foarte tare.
+
+00:29:23.890 --> 00:29:24.750
+In regula.
+
+00:29:24.850 --> 00:29:28.470
+Mai ai o durere de cap din toate astea.
+
+00:29:28.660 --> 00:29:31.050
+Pentru că mai avem încă de adăugat.
+
+00:29:31.060 --> 00:29:34.170
+Vezi că trebuie să folosești ceva numit Babel.
+
+00:29:34.190 --> 00:29:36.250
+Da, în configurația ta.
+
+00:29:36.250 --> 00:29:38.410
+Deci sunt limitate.
+
+00:29:38.410 --> 00:29:43.750
+De asemenea, include iOS 6 și 7 și iOS 8.
+
+00:29:43.750 --> 00:29:46.390
+Deci, încă o dată am făcut acest lucru înainte.
+
+00:29:46.480 --> 00:29:54.430
+Vom clarifica aici și doar vom instala NPM și vom salva din
+
+00:29:54.430 --> 00:30:02.210
+nou Dev și de data aceasta vom face ambele da da.
+
+00:30:02.340 --> 00:30:08.220
+Și din nou, nu pot să scriu o minge de baseball cu acum.
+
+00:30:08.430 --> 00:30:20.490
+Și din nou, acum că am descărcat acest lucru, pot folosi o altă proprietate numită parser și acest parser va avea
+
+00:30:20.490 --> 00:30:26.050
+un tabel E. S. puf.
+
+00:30:26.140 --> 00:30:28.560
+Hai să salvăm asta și să ne asigurăm că mai funcționează.
+
+00:30:28.570 --> 00:30:29.500
+De asemenea,
+
+00:30:34.970 --> 00:30:38.560
+NPM strt pentru ca legea să vină aici să încercăm din nou.
+
+00:30:46.460 --> 00:30:52.790
+Și totul funcționează, dar acum avem și Slint Biblic.
+
+00:30:52.800 --> 00:31:01.360
+Să încercăm ceva distractiv să spunem că vreau regula fără con. pentru a avea un avertisment, să spunem asta și
+
+00:31:05.100 --> 00:31:08.080
+o să încep din nou NPM.
+
+00:31:11.050 --> 00:31:12.190
+Verifica asta.
+
+00:31:12.190 --> 00:31:20.970
+Avem un avertisment, deoarece regula spune că nu dorim nicio declarație de consolă în fișierul nostru javascript.
+
+00:31:21.160 --> 00:31:26.560
+Deci, dacă mă duc la index sugerează că avem o declarație de blocare a consolei care, uneori, în producție
+
+00:31:26.560 --> 00:31:31.480
+pe care nu doriți cu adevărat, poate că nu doriți să deconectați orice erori aveți pentru utilizator.
+
+00:31:31.480 --> 00:31:36.580
+Și acum am adăugat această regulă care spune că dați-mi un avertisment dacă există o consolă.
+
+00:31:36.580 --> 00:31:39.590
+Foarte cool se poate face, de asemenea, eroare.
+
+00:31:39.820 --> 00:31:48.970
+Și dacă fac aer și o pornesc din nou, am o eroare pentru folosirea unei instrucțiuni de blocare a consolei.
+
+00:31:49.040 --> 00:31:49.580
+Foarte tare.
+
+00:31:49.580 --> 00:31:58.130
+Funcționalitate similară cu ceea ce am avut și creăm reacționăm, dar acum avem și această capacitate de a împrumuta noi da șase caracteristici
+
+00:31:58.220 --> 00:32:05.690
+care acum adaugă reguli de la tine în mod liniar este obositoare și ca dezvoltatori nu vrem să facem lucruri
+
+00:32:05.690 --> 00:32:08.230
+care s-au făcut deja înainte .
+
+00:32:08.570 --> 00:32:12.980
+Din fericire pentru noi nu trebuie să specificați de fiecare dată setul propriu de reguli.
+
+00:32:12.980 --> 00:32:18.950
+Există o mulțime de recomandări acolo și de fapt ați folosit deja pentru a re-acționa
+
+00:32:18.950 --> 00:32:25.320
+folosind creați reacționa la unul foarte bun care îmi place este ghidul de stil Airbnb fiind deschis.
+
+00:32:25.320 --> 00:32:30.890
+Este configurația Eastlink și este destul de popular că multe proiecte utilizează o mulțime de proiecte mari pentru ao
+
+00:32:30.890 --> 00:32:31.450
+folosi.
+
+00:32:31.490 --> 00:32:33.260
+De fapt, putem să îl instalăm.
+
+00:32:33.290 --> 00:32:43.760
+Așa că revenim din nou la consola noastră, deoarece descărcăm tot ce putem face și linia de bord instalează linia de
+
+00:32:43.760 --> 00:32:48.030
+bord și salvează Dev și vrem să instalez.
+
+00:32:48.030 --> 00:32:54.840
+Să presupunem că da împrumut config BMB și să spunem că vrem alte
+
+00:32:58.600 --> 00:33:07.050
+câteva caracteristici, poate că vrem să ne asigurăm că cu da Slint declarațiile de import și declarațiile
+
+00:33:07.050 --> 00:33:08.820
+de export funcționează.
+
+00:33:08.940 --> 00:33:20.130
+În acest caz, ne-ar scăpa plug-in de import și să spunem că, de asemenea, vrem să ne asigurăm că avem Lentini să se asigure că
+
+00:33:20.390 --> 00:33:26.720
+codul are accesibilitate în minte, care este orientat spre persoanele care au cititori de
+
+00:33:26.720 --> 00:33:33.290
+ecran vizionarea paginilor web, astfel încât să fie accesibile pentru toată lumea și putem
+
+00:33:33.290 --> 00:33:37.690
+folosi un conector acolo, care este da Slint plug
+
+00:33:40.050 --> 00:33:43.590
+în alianță GSX și așa mai departe.
+
+00:33:43.600 --> 00:33:53.250
+Și astfel, pentru a scrie corect cu un microfon în fața dvs. nu este cea mai bună idee.
+
+00:33:53.300 --> 00:34:03.550
+Am făcut o altă eroare de tip aici și să rezolvăm faptul că acum acum vedeți aici este o mulțime de plug-ins și
+
+00:34:03.550 --> 00:34:04.450
+de configurare.
+
+00:34:04.450 --> 00:34:10.510
+Și din fericire pentru noi există o mulțime de instrumente acolo și o mulțime de documentații despre cum să facem
+
+00:34:10.510 --> 00:34:11.530
+aceste bune practici.
+
+00:34:11.710 --> 00:34:18.220
+Dar din nou, acest lucru se întâmplă sub capota cu creați-l pe Briac. Toate dezvoltatorii inteligenți lucrează pentru
+
+00:34:18.220 --> 00:34:23.440
+a vă oferi acest lucru în cel mai bun mod posibil pentru dvs.
+
+00:34:23.440 --> 00:34:27.460
+În regulă, acum, când avem acest lucru, să adăugăm doar aerul MBBS Len Twan doar pentru moment.
+
+00:34:27.460 --> 00:34:36.150
+Știu că am instalat mai multe lucruri, dar deocamdată doar punctul de vedere al FBM nu putem doar să spunem că
+
+00:34:38.860 --> 00:34:44.370
+extinde și extinde regulile pe care le avem cu o gamă de lucruri.
+
+00:34:44.530 --> 00:34:51.700
+Da, liberalii pe care i-am descărcat în cazul nostru sunt regulile bazate pe Airbnb.
+
+00:34:51.710 --> 00:34:56.430
+Din nou, acest lucru este ceva pe care îl puteți citi când descărcați pachetul pe care
+
+00:34:56.460 --> 00:35:00.840
+îl veți duce acolo și primiți Hobb și examinați airbag-ul BMB de la Eastlink.
+
+00:35:01.060 --> 00:35:02.790
+Am salvat această fugă.
+
+00:35:02.800 --> 00:35:03.880
+NPM începe
+
+00:35:08.880 --> 00:35:14.630
+și vedeți că pentru că ne-am extins regulile, avem încă câteva ore.
+
+00:35:14.640 --> 00:35:21.720
+Avem constatarea neașteptată a consolei pe care am adăugat-o, dar avem, de asemenea, un aer cu punct și virgulă lipsă
+
+00:35:21.810 --> 00:35:24.670
+și o nouă linie necesară la sfârșitul fișierului.
+
+00:35:25.050 --> 00:35:27.040
+Să ne întoarcem la indexul nostru.
+
+00:35:27.060 --> 00:35:34.230
+Isus a avut un semi-colon și o nouă linie la sfârșitul fișierului salvați-l și uitați-vă la faptul că în mod automat
+
+00:35:34.230 --> 00:35:40.890
+se actualizează la o singură eroare pe care am creat-o, care este declarația de blocare a consolei, dar totul
+
+00:35:40.890 --> 00:35:41.590
+funcționează.
+
+00:35:41.610 --> 00:35:43.730
+Ignoră unele dintre aceste lucruri.
+
+00:35:43.960 --> 00:35:55.840
+Dacă am reîmprospătare obținem totul, dar obținem acea eroare a declarației de blocare a consolei pe care am spus-o mai devreme.
+
+00:35:55.870 --> 00:35:56.880
+In regula.
+
+00:35:57.220 --> 00:35:59.970
+Să ne întoarcem la configurația noastră de pachete Web.
+
+00:36:00.800 --> 00:36:02.210
+Ce am învățat aici.
+
+00:36:02.210 --> 00:36:06.910
+Ei bine, am aflat că back-ul web este destul de complicat.
+
+00:36:07.100 --> 00:36:12.340
+Din fericire au o documentație online foarte bună pe care o puteți citi.
+
+00:36:12.590 --> 00:36:14.930
+Dar principiile principale stau la baza.
+
+00:36:14.930 --> 00:36:24.010
+Tot ce facem este că noi creăm un majordom care să ia toate fișierele noastre în indexul nostru de caz.
+
+00:36:24.120 --> 00:36:29.850
+Da, dacă indexate RJ a avut declarații de import care au condus la un alt dosar și dosarul îl aprobase și a văzut că a
+
+00:36:29.850 --> 00:36:31.240
+condus la un alt dosar.
+
+00:36:31.400 --> 00:36:39.790
+Ei bine, le-ar citi pe toate prin intrarea pe care i-am dat-o, pe care apoi le-ar trece prin acele module și încercând dacă oricare dintre
+
+00:36:39.790 --> 00:36:45.450
+ele se termină în J. S. sau extensie GSX.
+
+00:36:45.460 --> 00:36:49.100
+Vom alerga prin Babel și apoi le vom lega de asemenea.
+
+00:36:50.080 --> 00:36:58.990
+Și în sfârșit o vom pune într-un dosar de distribuție, iar pentru VOLP sau în scopuri putem avea și un server
+
+00:36:58.990 --> 00:37:06.970
+care rulează ca și noi și verifică în mod constant pentru a ne asigura că site-ul nostru Web nu
+
+00:37:06.970 --> 00:37:08.200
+este sclipitor.
+
+00:37:08.200 --> 00:37:10.240
+Cred că e destul de umed pentru acum.
+
+00:37:10.390 --> 00:37:12.430
+Toți avem nevoie de o pauză după asta.
+
+00:37:12.430 --> 00:37:13.960
+Sper ca te-ai distrat.
+
+00:37:13.960 --> 00:37:19.050
+Cred că aceasta este probabil cea mai dificilă parte a cursului de a obține cu adevărat.
+
+00:37:19.090 --> 00:37:25.900
+Personal, configurația de genul asta în viitor va fi din ce în ce mai puțin importantă, deoarece comunitatea se îndreaptă către
+
+00:37:25.900 --> 00:37:30.670
+o configurație mai mică și mai mică, deoarece după cum puteți vedea că este
+
+00:37:30.670 --> 00:37:37.330
+o mulțime de dureri de cap și sunteți cu adevărat codificați, purtați doar documentația unei biblioteci care personal nu sunt cel
+
+00:37:37.330 --> 00:37:39.720
+mai mare fan, dar depinde de tine.
+
+00:37:39.720 --> 00:37:41.930
+Este încă un instrument util.
+
+00:37:41.950 --> 00:37:47.900
+Recomandarea mea a fost aceea de a crea o aplicație re-act dacă vreți vreodată să vă personalizați înapoi.
+
+00:37:47.920 --> 00:37:55.410
+Puteți executa eșecul de executare al NPM și creați reactivarea și vă vor oferi acces la acest fișier de configurare a pachetului web.
+
+00:37:55.540 --> 00:38:00.670
+Pentru moment am nevoie de o pauză și așa vedeți în următoarea Buh-Bye.

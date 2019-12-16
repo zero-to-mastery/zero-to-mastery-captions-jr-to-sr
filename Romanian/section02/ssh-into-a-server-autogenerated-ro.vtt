@@ -1,0 +1,472 @@
+﻿WEBVTT
+
+00:00:00.800 --> 00:00:02.420
+Bine ai revenit.
+
+00:00:02.420 --> 00:00:02.690
+In regula.
+
+00:00:02.690 --> 00:00:09.020
+Până în acest moment am aflat că schimbul de chei Diffie Helman ne oferă o modalitate de a împărtăși un
+
+00:00:09.530 --> 00:00:10.510
+secret comun.
+
+00:00:10.510 --> 00:00:11.830
+Am spus multe lucruri acolo.
+
+00:00:11.950 --> 00:00:16.650
+Ei bine, acum trebuie să ne autentificăm.
+
+00:00:16.700 --> 00:00:23.830
+Așa că acum aș putea să introduc tehnic parola care mi-a fost dată de Digital Ocean și nu vor
+
+00:00:23.840 --> 00:00:24.880
+apărea aici.
+
+00:00:24.890 --> 00:00:28.610
+Dar să încercăm din nou asta.
+
+00:00:31.060 --> 00:00:31.720
+Parola.
+
+00:00:31.720 --> 00:00:32.930
+Copiaza si lipeste.
+
+00:00:35.450 --> 00:00:39.950
+Și voi păstra parola la fel.
+
+00:00:40.040 --> 00:00:45.140
+Va trebui să vă schimbați parola, deoarece tocmai mi-a dat un caracter temporar, așa că să-i păstrăm frumos
+
+00:00:45.140 --> 00:00:45.880
+și simplu.
+
+00:00:48.450 --> 00:00:50.020
+Băieți cer multe.
+
+00:00:54.440 --> 00:00:55.130
+In regula.
+
+00:00:55.130 --> 00:00:59.150
+În cele din urmă au putut să se conecteze cu noua noastră parolă.
+
+00:00:59.600 --> 00:01:02.570
+Dar, după cum am spus mai devreme, este un pic cam greu.
+
+00:01:02.570 --> 00:01:04.890
+Nu vrei să faci asta de fiecare dată.
+
+00:01:05.180 --> 00:01:13.430
+Deci, folosind S-sh vom folosi ceva numit RSA, care ne permite să furnizăm sau să dovedim
+
+00:01:14.540 --> 00:01:17.180
+identitatea persoanei fără parolă.
+
+00:01:17.180 --> 00:01:18.840
+Sună ca magia nu-i așa.
+
+00:01:19.130 --> 00:01:22.590
+Să facem asta și să vă arătăm cum putem face asta.
+
+00:01:23.620 --> 00:01:26.310
+Așa că am să plec de aici.
+
+00:01:26.680 --> 00:01:34.720
+Să ștergem acest lucru deocamdată și voi intra într-un folder care ar trebui să existe pe computerul dvs. dacă nu este posibil
+
+00:01:34.990 --> 00:01:37.930
+să fie necesar să creați acest dosar.
+
+00:01:37.930 --> 00:01:46.270
+Punctul din fața lui înseamnă că este un fișier ascuns, astfel încât este posibil să fiți nevoit să permiteți fișierele ascunse să le
+
+00:01:46.690 --> 00:01:47.700
+poată vedea.
+
+00:01:47.950 --> 00:01:56.050
+Dar dacă deschid doar acest lucru veți vedea că este doar un folder sau ca oriunde altundeva pe computerul meu
+
+00:01:56.050 --> 00:01:57.160
+directorul rădăcină.
+
+00:01:57.490 --> 00:02:05.530
+Și dacă mă uit la fișierele din el, am câteva lucruri pe care probabil că nu le aveți, pentru că ar putea fi prima
+
+00:02:05.530 --> 00:02:07.930
+dată când ați generat o cheie necesară.
+
+00:02:07.990 --> 00:02:11.650
+În cazul meu, am deja niște chei, așa că sunt niște foldere acolo.
+
+00:02:11.650 --> 00:02:13.450
+Nu vă faceți griji dacă nu le vedeți.
+
+00:02:13.720 --> 00:02:17.370
+Acum, dacă vedeți un I. D. sau un fișier sigur.
+
+00:02:17.560 --> 00:02:20.590
+Dacă nu, va trebui să generați una.
+
+00:02:20.680 --> 00:02:25.480
+Deci, să generăm o cheie exact așa cum am vorbit în videoclipurile anterioare.
+
+00:02:25.600 --> 00:02:31.700
+Vom genera o cheie publică și privată doar pentru Oceanul Digital.
+
+00:02:31.840 --> 00:02:37.510
+În felul acesta, cu acest computer cu acest laptop, pot comunica cu serverul din lume așa cum
+
+00:02:38.670 --> 00:02:39.930
+putem face asta.
+
+00:02:40.140 --> 00:02:48.830
+Este destul de simplu de fapt, putem folosi comanda pentru chei S-sh pe care ar trebui să o aveți
+
+00:02:48.830 --> 00:02:56.830
+pe computer, dacă nu este posibil să fie nevoie să instalați CLID unde puteți obține câțiva parametri.
+
+00:02:56.870 --> 00:03:02.480
+Există câteva care sunt recomandate online, dar pentru moment doar pentru a păstra lucrurile simple putem
+
+00:03:05.360 --> 00:03:09.250
+face acest lucru cu orice fel de adrese de e-mail rezolvați.
+
+00:03:09.380 --> 00:03:15.510
+În cazul meu, am de gând să fac un test la gmail dot com dorește să apese pe Enter.
+
+00:03:15.810 --> 00:03:22.560
+Veți fi întrebat în cazul în care doriți să salvați fișierul și veți vedea aici că salvarea ajunge în dosarul meu
+
+00:03:22.620 --> 00:03:23.940
+de date S-sh.
+
+00:03:24.120 --> 00:03:25.480
+Dar, de asemenea, nu vreau.
+
+00:03:25.890 --> 00:03:30.900
+Am deja un ID sau un cuvânt și vreau în mod special pentru Digital Ocean.
+
+00:03:31.110 --> 00:03:39.210
+Așa că am de gând să mergem mai departe și să copiem acest lucru și să-i numim Oceanul Digital.
+
+00:03:39.810 --> 00:03:46.590
+Așadar, știu care este cheia pentru a ajunge la centrul de presă și aveți o opțiune aici pentru a introduce o frază de acces
+
+00:03:46.590 --> 00:03:48.700
+doar pentru o securitate suplimentară, dacă doriți.
+
+00:03:48.720 --> 00:03:54.530
+În cazul meu, nu vreau să spun că poți doar să apăsați introduceți intra și să mergeți acolo.
+
+00:03:54.560 --> 00:03:59.980
+Tocmai am generat o păstrare publică și privată a RSA.
+
+00:04:01.060 --> 00:04:02.200
+Foarte tare.
+
+00:04:02.200 --> 00:04:04.240
+Și acum să clarificăm asta.
+
+00:04:04.420 --> 00:04:14.970
+Dacă mă uit la dosarul meu, am eu. D. RSA Digital Ocean și Id spun Digital Ocean și pop.
+
+00:04:15.130 --> 00:04:18.320
+Acum, dacă aceasta este prima dată, ce S-sh.
+
+00:04:18.580 --> 00:04:19.540
+Tine minte asta.
+
+00:04:19.540 --> 00:04:26.230
+Dacă vă aduceți aminte de ceva din secțiunea care este pub-ul, care este o cheie publică, puteți să o împărțiți
+
+00:04:26.230 --> 00:04:27.500
+cu oricine doriți.
+
+00:04:28.380 --> 00:04:36.510
+Dar această idee RSA Digital Ocean, care este o cheie privată, nu a mai fost vreodată împărtășită vreodată cu nimeni.
+
+00:04:36.510 --> 00:04:40.140
+Acesta este un lucru pe care numai dvs. ar trebui să-l păstrați pe computer.
+
+00:04:40.350 --> 00:04:42.200
+Niciodată nu-l împărtășiți altfel.
+
+00:04:42.220 --> 00:04:47.620
+Ei bine, destul de mult va fi criptarea ta va fi inutil dreapta.
+
+00:04:47.640 --> 00:04:50.410
+Așa că am reușit să ne producăm cheile.
+
+00:04:50.430 --> 00:04:52.420
+Asta-i bine.
+
+00:04:52.420 --> 00:05:00.580
+Acum putem copia această cheie și o putem partaja cu serverul nostru Digital Ocean.
+
+00:05:00.580 --> 00:05:06.220
+Amintiți-vă în diagramele pe care vrem să le împărtășim cheile publice executând comanda și găsim acest lucru
+
+00:05:06.220 --> 00:05:07.570
+online, dacă doriți.
+
+00:05:07.600 --> 00:05:14.660
+Deci, nu vă îngrijorați prea mult despre asta dacă vreți să citiți ce face această comandă.
+
+00:05:14.800 --> 00:05:22.390
+Este destul de mult doar copiază ce este înăuntru, deși Id spune dezvăluirea în God PABX amintesc doar cheia publică pe
+
+00:05:22.390 --> 00:05:23.730
+care o împărtășim.
+
+00:05:24.010 --> 00:05:27.150
+Așa că am de gând să apăs pe aici și am copiat-o în clipboard-ul meu.
+
+00:05:29.570 --> 00:05:42.410
+Acum, dacă mă duc în S-sh pe serverul meu Digital Ocean, văd că sunt conectat aici, apropo, dacă te întrebi de ce am putut să mă
+
+00:05:42.410 --> 00:05:49.750
+înregistrez, pentru că este aceeași sesiune de ieșire de fapt, sesiunea va dura eu pentru
+
+00:05:49.800 --> 00:05:52.370
+parola pentru a obține.
+
+00:05:52.450 --> 00:05:58.350
+Deocamdată putem face același lucru pe acest server.
+
+00:05:58.420 --> 00:06:07.640
+Putem face un director numit Dot S-sh la fel ca pe calculatorul nostru.
+
+00:06:07.730 --> 00:06:09.140
+Și nu pot spune.
+
+00:06:09.170 --> 00:06:15.920
+Așa că faceți directorul și se pare că fișierul S-sh există deja.
+
+00:06:15.920 --> 00:06:20.050
+Deci, hai să o facem pe Alice și vei vedea că nu-l văd.
+
+00:06:20.120 --> 00:06:27.430
+Asta pentru că este un fișier ascuns Amintiți-vă că va trebui să faceți o linie pentru a arăta Fox-ul nostru
+
+00:06:27.740 --> 00:06:29.570
+ascuns, care este S-sh aici.
+
+00:06:29.570 --> 00:06:30.140
+Foarte tare.
+
+00:06:30.140 --> 00:06:34.120
+Lasă-mă să clar asta.
+
+00:06:34.320 --> 00:06:39.370
+Acum intrăm în dosarul nostru DOT S-sh și nu pot să tip.
+
+00:06:39.360 --> 00:06:40.610
+Să încercăm din nou asta.
+
+00:06:42.380 --> 00:06:42.680
+In regula.
+
+00:06:42.680 --> 00:06:52.290
+Suntem aici în S-sh noastre Și dacă ne uităm aici am deja deja în mod implicit de la Digital Ocean
+
+00:06:52.290 --> 00:06:55.310
+gazdele cunoscute și chei autorizate.
+
+00:06:55.380 --> 00:07:01.120
+Dacă nu vedeți acest lucru pe baza serverului pe care îl aveți, puteți să creați fișierul.
+
+00:07:01.530 --> 00:07:04.550
+Dar, pentru moment, cheile autorizate sunt ceea ce ne dorim.
+
+00:07:04.620 --> 00:07:14.990
+Deci, putem folosi ceva de genul nano care ne permite să adăugăm o taxă în interiorul cheilor autorizate acum, tot ce trebuie să facem
+
+00:07:15.000 --> 00:07:20.580
+este să copiem și să lipim cheia pe care am copiat-o anterior.
+
+00:07:20.580 --> 00:07:27.810
+Deci, aceasta este cheia noastră publică de pe desktop-ul nostru pe care tocmai am lipit-o aici cu Neno pe
+
+00:07:27.810 --> 00:07:37.140
+care o poți vedea aici la X trebuie să-l atingi comanda X sau să controlezi X și apoi să schimbăm și să salvăm Vom
+
+00:07:37.140 --> 00:07:39.900
+apăsa Y și apoi apasă introduce.
+
+00:07:39.910 --> 00:07:42.580
+Bine, acum, dacă o fac.
+
+00:07:42.580 --> 00:07:51.130
+LS Am văzut că am cheile autorizate și că în ea avem ieșirea publică de infracțiuni.
+
+00:07:51.210 --> 00:07:55.300
+Acum, bine să încercăm asta.
+
+00:07:55.300 --> 00:08:05.750
+Mă duc la S-sh în directorul meu rădăcină sau să terminăm sesiunea pentru a ne asigura că nu ne cere o parolă și o să
+
+00:08:05.750 --> 00:08:12.950
+văd dacă pot intra direct prin S-sh cu cheile noastre fără a fi nevoie să vă faceți
+
+00:08:12.950 --> 00:08:15.600
+griji cu privire la parole.
+
+00:08:15.650 --> 00:08:21.110
+Să închidem asta.
+
+00:08:21.200 --> 00:08:30.310
+În regulă, așa cum spun fiecare și vedeți aici că tocmai am primit o permisiune refuzată și asta e puțin
+
+00:08:30.310 --> 00:08:32.020
+cam complicat aici.
+
+00:08:32.110 --> 00:08:40.930
+S-ar putea să aveți acest lucru numai dacă sunteți ca mine și în S-sh dvs. este tot în dosarul S-sh aveți
+
+00:08:41.320 --> 00:08:43.110
+mai multe eseuri ID.
+
+00:08:43.330 --> 00:08:50.750
+Deci, doriți să vă asigurați că utilizează cheia publică potrivită pentru această conexiune.
+
+00:08:50.750 --> 00:08:58.100
+Deci, în cazul nostru putem pur și simplu face această comandă care este așa cum spun adăugați și apoi apucați cheia publică pe
+
+00:08:58.240 --> 00:09:03.430
+care tocmai am folosit-o și îmi pare rău apuca cheia privată pe care ați creat-o.
+
+00:09:04.480 --> 00:09:10.420
+Apăsați Enter Oh și nu doriți să aveți.
+
+00:09:10.560 --> 00:09:12.610
+Vrei asta.
+
+00:09:12.660 --> 00:09:14.350
+În regulă, așa a fost identitatea mea.
+
+00:09:14.360 --> 00:09:16.350
+Deci, să încercăm din nou
+
+00:09:25.170 --> 00:09:26.460
+să privim mâna.
+
+00:09:26.830 --> 00:09:32.230
+Avem la fel de insatiat în cutia noastră am dovedit că suntem noi.
+
+00:09:32.230 --> 00:09:38.410
+Acest computer ne aparține și avem autoritatea de a ne conecta la server și de a
+
+00:09:38.950 --> 00:09:41.870
+rula toate comenzile pe care le dorim.
+
+00:09:41.870 --> 00:09:46.340
+Bine, Hosam, am făcut toate astea și te întrebi pe tine însuți.
+
+00:09:46.460 --> 00:09:51.560
+Mă simt de parcă am pierdut o grămadă de timp învățând acest lucru și nu se referă într-adevăr la dezvoltarea
+
+00:09:51.590 --> 00:09:55.190
+web-ului sau cum pot configura S-sh cu Hobb și asta e ușor de făcut.
+
+00:09:55.190 --> 00:09:59.210
+Andrea de ce mă deranjezi cu asta.
+
+00:09:59.230 --> 00:10:03.540
+Nu vă faceți griji că vom lega totul împreună în următorul videoclip.
+
+00:10:04.000 --> 00:10:13.500
+Deci, vedeți de ce toată această muncă grea va plăti în cele din urmă atunci când vom termina cu această secțiune pe calea distracției doar
+
+00:10:13.500 --> 00:10:16.660
+pentru a vedea că acest lucru funcționează.
+
+00:10:16.650 --> 00:10:19.390
+Voi permite să clarificăm asta.
+
+00:10:21.080 --> 00:10:34.290
+O să intru în dosarul meu de eseuri și dacă intru în cheile de autorizare sau cheile autorizate
+
+00:10:34.290 --> 00:10:40.790
+voi șterge această linie o să o salvez.
+
+00:10:40.890 --> 00:10:45.900
+Și apoi, în cele din urmă, voi ieși din această
+
+00:10:49.170 --> 00:10:57.590
+apropiere, terminalul meu va redeschide terminalul aici, să clarificăm acest lucru redeschiderea terminalului de aici și să încercăm S-sh.
+
+00:10:57.620 --> 00:11:01.930
+Și la serverul nostru.
+
+00:11:02.170 --> 00:11:02.980
+Acces refuzat.
+
+00:11:02.980 --> 00:11:05.550
+Dar să facem această comandă pe care am făcut-o înainte.
+
+00:11:06.600 --> 00:11:12.540
+Am adăugat identitatea liberă S-sh.
+
+00:11:12.920 --> 00:11:15.440
+Permisiunea este refuzată.
+
+00:11:16.600 --> 00:11:21.770
+Pentru că nu mai avem cheile noastre.
+
+00:11:22.840 --> 00:11:29.180
+Nu mai împărtășim cheia publică cu serverul și dosarul chei autorizate.
+
+00:11:29.810 --> 00:11:35.120
+Acum vedem că nu mai putem pleca S-sh.
+
+00:11:35.120 --> 00:11:40.630
+Oceanul nu așteaptă de fapt pe fiecare dintre utilizatorii săi să știe cum să facă acest lucru.
+
+00:11:41.690 --> 00:11:48.410
+Ei au de fapt o interfață foarte frumoasă ușor pe care o puteți utiliza pentru a adăuga chei S-sh care de fapt
+
+00:11:48.410 --> 00:11:50.140
+funcționează foarte asemănătoare cu ajutor.
+
+00:11:50.150 --> 00:11:52.550
+Deci, să ne copiem din
+
+00:11:55.030 --> 00:11:59.220
+nou cheia S-sh pe care am creat-o pentru Oceanul Digital.
+
+00:11:59.500 --> 00:12:08.400
+Și dacă mă duc la Oceanul Digital de aici, pot merge la setările profilului meu și dacă
+
+00:12:11.500 --> 00:12:16.010
+mergem la securitate, vezi că au chei S-sh.
+
+00:12:16.210 --> 00:12:23.300
+Pot adăuga copia cheii mele S-sh și să o lipesc și o voi spune doar.
+
+00:12:23.300 --> 00:12:33.330
+Testul a avut cheia S-sh care face exact același lucru pe care l-am făcut de la terminal, cu excepția faptului că arată mai bine.
+
+00:12:33.350 --> 00:12:38.820
+Cum să aveți o interfață utilă aici.
+
+00:12:38.830 --> 00:12:39.270
+In regula.
+
+00:12:39.340 --> 00:12:41.510
+Deci, tu o ai.
+
+00:12:41.650 --> 00:12:51.700
+Suntem capabili să folosim toate aceste instrumente de criptare simetrică criptare asimetrică pentru a se conecta
+
+00:12:51.790 --> 00:13:00.280
+în siguranță la o gazdă și chiar să se poată autentifica prin S-sh.
+
+00:13:00.320 --> 00:13:07.790
+Deci, având în vedere toate aceste cunoștințe, acum ne vom uita la sarcina pe care ne-o cere Bruno să o
+
+00:13:07.790 --> 00:13:11.630
+facem și acest lucru este înființat S-sh cu ajutor.
+
+00:13:11.690 --> 00:13:13.160
+Voi vedea în următorul Bebai.

@@ -1,0 +1,109 @@
+﻿WEBVTT
+
+00:00:01.900 --> 00:00:09.850
+Testy integracji z powrotem na powitanie polegają na komunikacji między różnymi jednostkami kodu w porównaniu do
+
+00:00:09.850 --> 00:00:11.140
+testów jednostkowych.
+
+00:00:11.140 --> 00:00:18.340
+Prawdopodobnie używałbyś czegoś takiego jak szpiedzy z kpiny z biblioteki, aby zapewnić oczekiwane efekty
+
+00:00:18.790 --> 00:00:21.580
+uboczne, zamiast tylko potwierdzać wynik.
+
+00:00:22.810 --> 00:00:31.540
+Lub możesz użyć Stubb do kpić i modyfikować części procesu, które nie znajdują się w konkretnym teście.
+
+00:00:32.170 --> 00:00:35.100
+Takich jak oznaczenie połączenia z bazą danych.
+
+00:00:35.260 --> 00:00:43.480
+Nie możemy powiedzieć, że wykonujemy test funkcji, która mówi, że geje mają fałszywe połączenie z bazą danych i po prostu
+
+00:00:43.480 --> 00:00:44.820
+podrabiają i zwracają.
+
+00:00:44.830 --> 00:00:53.170
+Powiedzmy, że fałszywy użytkownik tylko do testu, w przeciwieństwie do testów jednostkowych, przeglądarka lub środowisko
+
+00:00:53.260 --> 00:00:58.870
+przeglądarki może pomóc w procesach zależnych od obiektu okna.
+
+00:00:58.960 --> 00:01:04.130
+Jest to szczególnie ważne, gdy pracujemy z reagowaniem i renderowaniem komponentów.
+
+00:01:04.220 --> 00:01:11.120
+Test integracji jest jedną z tych rzeczy, która ma wiele różnych definicji i każdy ma
+
+00:01:11.120 --> 00:01:18.960
+swoje własne preferencje co do tego, co ogólnie rozumiemy, ale pomyśl o testach integracyjnych jako o
+
+00:01:18.960 --> 00:01:27.270
+łączeniu komponentów, aby zobaczyć, jak działają razem, zamiast pojedynczych małych jednostek, które testują jednostki i sprawdzają, czy testujesz
+
+00:01:27.270 --> 00:01:29.240
+połączenie między nimi.
+
+00:01:29.250 --> 00:01:32.950
+Minusem dla nich jest to, że są drogie.
+
+00:01:33.030 --> 00:01:34.090
+Są wolniejsze.
+
+00:01:34.200 --> 00:01:39.360
+Jest więcej czasu wolnego na zastanawianie się nad nimi i pisanie ich w porównaniu do testów jednostkowych, które są
+
+00:01:39.360 --> 00:01:40.130
+znacznie szybsze.
+
+00:01:40.150 --> 00:01:43.440
+Spróbuj i mają też wiele ruchomych części.
+
+00:01:43.600 --> 00:01:49.330
+Jeśli zmienisz coś dobrze, to test się zepsuje i będziesz musiał zmienić te testy, które zależą od
+
+00:01:49.330 --> 00:01:50.620
+tego, co zmieniłeś.
+
+00:01:51.010 --> 00:01:58.060
+Testy integracyjne mogą więc być czymś, co nazywamy kruchym, naprawdę bardzo delikatnym Sontagiem i są znacznie trudniejsze
+
+00:01:58.060 --> 00:01:58.980
+do odczytania.
+
+00:01:59.350 --> 00:02:05.250
+W przeciwieństwie do testów jednostkowych można napisać nieskończoną liczbę testów integracyjnych.
+
+00:02:05.530 --> 00:02:11.650
+Trudno powiedzieć, kiedy skończysz je pisać lub masz 100% ukończenia.
+
+00:02:12.670 --> 00:02:15.930
+Ponieważ niemożliwe jest pokrycie wszystkiego i każdego przypadku testowego.
+
+00:02:16.110 --> 00:02:22.870
+A ponieważ są one również droższe, po prostu mówią, że rzadko zdarza się, aby firma miała
+
+00:02:22.870 --> 00:02:29.950
+naprawdę dobre testy integracyjne, chyba że jest ogromną, masywną firmą z silnym zespołem inżynierów i ogromną ilością
+
+00:02:29.950 --> 00:02:33.010
+pieniędzy do wydania na ten zespół inżynierów.
+
+00:02:33.230 --> 00:02:38.540
+Zalecam jednak, aby zawsze zaczynać od testów jednostkowych, a następnie rozpoczynać także testy
+
+00:02:38.540 --> 00:02:39.050
+integracyjne.
+
+00:02:39.180 --> 00:02:41.130
+Ale oboje dobrze ze sobą współpracują.
+
+00:02:41.150 --> 00:02:43.910
+Po prostu wybierz swoje bitwy.
+
+00:02:44.060 --> 00:02:45.340
+Do zobaczenia w następnym.
+
+00:02:45.460 --> 00:02:45.780
+Cześć.

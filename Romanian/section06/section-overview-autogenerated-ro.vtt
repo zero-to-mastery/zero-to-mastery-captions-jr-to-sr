@@ -1,0 +1,211 @@
+﻿WEBVTT
+
+00:00:02.400 --> 00:00:06.850
+Testarea este un concept important în programare.
+
+00:00:07.090 --> 00:00:13.530
+Deși începem să scriem un fișier simplu de tip dodgiest cu câteva linii de cod.
+
+00:00:13.870 --> 00:00:20.840
+Când începem să intrăm în lumea lui Breer, începeți să obțineți mii și milioane de linii
+
+00:00:22.010 --> 00:00:30.730
+de coduri sute de fișiere de fișiere javascript lucrate de mulți oameni din diferite divizii dintr-o companie și, cel mai
+
+00:00:31.360 --> 00:00:36.570
+probabil, toți dintre ei începând la un moment diferit la companie.
+
+00:00:36.700 --> 00:00:40.570
+Toate schimbările de cod se întâmplă în timp în momente diferite.
+
+00:00:40.570 --> 00:00:49.330
+Pe măsură ce oamenii lucrează la proiect deoarece complexitatea codului și mărimea codului crește, devine mai greu și mai greu pentru
+
+00:00:49.330 --> 00:00:53.230
+cineva să repare un bug care ar putea apărea.
+
+00:00:54.040 --> 00:01:00.940
+Dacă veniți într-un proiect care a fost în jur de ani de zile, puteți modifica ceva care ar putea modifica o altă
+
+00:01:00.940 --> 00:01:03.770
+parte a aplicației pe care nu v-ați gândit-o.
+
+00:01:05.050 --> 00:01:12.840
+Și începeți să creați toate aceste bug-uri cu noi caracteristici pe care le introduceți în aplicație.
+
+00:01:12.990 --> 00:01:19.600
+Cu cât codul rămâne mai lung într-un proiect, cu atât este mai probabil ca acesta să fie atins de diferiți dezvoltatori.
+
+00:01:20.510 --> 00:01:22.150
+Așa că vedeți problema aici.
+
+00:01:22.430 --> 00:01:30.380
+Pentru companii, aceasta este o problemă uriașă, deoarece cel mai probabil creșteți întotdeauna produsul și adăugați tot mai
+
+00:01:30.500 --> 00:01:32.480
+multe linii de cod.
+
+00:01:32.600 --> 00:01:39.770
+Asta înseamnă că va continua să facă acest monstru gigantic, care devine mai greu și mai
+
+00:01:39.770 --> 00:01:45.310
+greu de îmblânzit, iar bug-urile îi costă companiile o mulțime de bani.
+
+00:01:46.520 --> 00:01:53.790
+Din fericire pentru noi avem ceva numit testare care ne poate ajuta să rezolvăm această problemă.
+
+00:01:55.080 --> 00:02:02.820
+După cum sugerează numele, testarea este o metodă în dezvoltarea de software în care unitățile individuale de
+
+00:02:03.270 --> 00:02:11.990
+active sau programe sursă sunt testate pentru a vedea dacă funcționează corespunzător, deși nu este o parte importantă a unui
+
+00:02:11.990 --> 00:02:13.690
+interviu de codificare.
+
+00:02:13.760 --> 00:02:20.140
+Când începe pentru prima oară, este o mare parte a oricărei companii importante de software pentru care lucrați.
+
+00:02:21.540 --> 00:02:28.940
+De exemplu, în cazul meu când am început să lucrez ca dezvoltator, nu știam prea multe despre teste și am fost angajat
+
+00:02:29.240 --> 00:02:31.920
+fără să știu prea multe despre teste.
+
+00:02:32.210 --> 00:02:38.600
+Dar importanța testelor a crescut din ce în ce mai mult pe măsură ce au progresat în cariera mea.
+
+00:02:39.170 --> 00:02:44.550
+Și este unul dintre acele lucruri pe care le uităm adesea și o mulțime de dezvoltatori juniori ignoră.
+
+00:02:44.860 --> 00:02:52.990
+Dar dacă vrei să devii un dezvoltator senior și dacă vrei să ai o carieră de lungă
+
+00:02:52.990 --> 00:03:03.530
+durată, cu adevărat trebuie să-ți stăpânești abilitatea de a ține minte că fiecare companie serioasă va avea teste și vor să-ți scrie
+
+00:03:03.530 --> 00:03:05.620
+teste pentru codul tău.
+
+00:03:06.080 --> 00:03:14.150
+Deci, cum putem face acest lucru bine un test este pur și simplu un fișier nother în proiectul dumneavoastră.
+
+00:03:14.170 --> 00:03:19.110
+Acest fișier nu se execută niciodată în producție sau pe un site web al produsului.
+
+00:03:19.150 --> 00:03:21.420
+În schimb, este în curs de dezvoltare.
+
+00:03:21.460 --> 00:03:26.040
+Este un fișier pe care îl executați pentru a vă asigura că înainte să vă lansați la producție.
+
+00:03:26.080 --> 00:03:32.100
+În acest fel tocmai ați scris lucrări conform intenției.
+
+00:03:32.130 --> 00:03:37.110
+Acum, cel mai bun mod de a vă arăta cum funcționează este să vă demonstrați un test.
+
+00:03:37.530 --> 00:03:42.320
+Deci haideți să mergem la prietenii noștri robo.
+
+00:03:42.370 --> 00:03:49.480
+Am aplicația de prieteni robo aici, dar am inclus câteva teste doar pentru a demonstra pentru tine cum funcționează.
+
+00:03:49.720 --> 00:03:53.510
+Și până la sfârșitul acestei secțiuni veți putea să scrieți și acest lucru.
+
+00:03:53.650 --> 00:03:55.140
+Și le vom scrie împreună.
+
+00:03:55.690 --> 00:04:05.240
+Dar dacă am rula testul NPM rulați din nou o comandă care vine cu crea reacționează să vedem ce se întâmplă.
+
+00:04:06.120 --> 00:04:14.050
+Mi-a dat câteva lucruri spunând că nici un test nu a găsit modificări ale fișierelor legate de fișiere de la ultima comitere pentru că am
+
+00:04:14.050 --> 00:04:15.030
+executat deja testul.
+
+00:04:15.040 --> 00:04:16.270
+Dar
+
+00:04:19.770 --> 00:04:31.790
+dacă am apăsa pe o Kassa avem șase seturi de teste 16 Teste și cinci instantanee care au trecut.
+
+00:04:32.000 --> 00:04:38.070
+În regulă, ce înseamnă toate acestea și de ce toate aceste componente au testul punctului pe care tocmai l-aș pune
+
+00:04:38.070 --> 00:04:38.620
+aici.
+
+00:04:38.790 --> 00:04:43.000
+Văd o mulțime de verde, care este probabil bun, dar ce înseamnă toate acestea.
+
+00:04:44.050 --> 00:04:48.130
+Și nu vă faceți griji de aici, vom merge la pachet și vom vedea cum funcționează totul.
+
+00:04:48.160 --> 00:04:54.130
+Vom afla despre ce instrumente avem nevoie de instrumentele pe care le vom folosi și
+
+00:04:54.160 --> 00:04:55.950
+cum putem testa ninja.
+
+00:04:56.180 --> 00:05:05.000
+Prin modul în care ați putea auzi termenul TDD sau dezvoltarea testată, care este ideea de a scrie teste chiar înainte de
+
+00:05:05.000 --> 00:05:12.470
+a scrie efectiv codul de aplicație, astfel încât să începeți să scrieți codul pe baza testelor pe care
+
+00:05:12.470 --> 00:05:13.410
+le furnizați.
+
+00:05:13.790 --> 00:05:20.450
+Iar unii oameni iubesc cu adevărat acest mod de lucru și puteți să citiți despre el și să vă decideți dacă este
+
+00:05:20.450 --> 00:05:22.610
+ceva ce ați vrea să încercați.
+
+00:05:23.610 --> 00:05:24.930
+Acum, pentru a ne
+
+00:05:27.750 --> 00:05:31.400
+întoarce la punctul în care suntem oameni și ca oameni facem greșeli.
+
+00:05:31.490 --> 00:05:34.930
+Este inevitabil ca o aplicație crește.
+
+00:05:35.000 --> 00:05:43.280
+Este imposibil să vă gândiți la toate cazurile din codul dvs. și să aveți toate declarațiile dacă aveți grijă de toate
+
+00:05:43.280 --> 00:05:44.700
+cazurile de utilizare.
+
+00:05:45.140 --> 00:05:52.350
+Mai ales că nu de la început, deși adăugarea de teste va scădea cu siguranță viteza noastră
+
+00:05:52.350 --> 00:05:53.220
+de dezvoltare.
+
+00:05:53.370 --> 00:05:58.260
+Acum scriem mai multe coduri doar pentru teste pe termen lung.
+
+00:05:58.320 --> 00:06:05.250
+Dacă proiectul dvs. are o anumită dimensiune, este întotdeauna mai bine să scrieți teste deoarece evitați bug-urile pe
+
+00:06:05.250 --> 00:06:06.440
+termen lung.
+
+00:06:06.450 --> 00:06:07.290
+In regula.
+
+00:06:07.620 --> 00:06:10.500
+În această secțiune vom învăța totul despre asta.
+
+00:06:10.680 --> 00:06:16.350
+Ca întotdeauna, vom trece prin câteva concepte de bază și vom construi fundația noastră și apoi vom
+
+00:06:16.350 --> 00:06:19.120
+ajunge să codificăm câteva din propriile noastre teste.
+
+00:06:19.590 --> 00:06:20.460
+Să începem.

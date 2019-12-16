@@ -1,0 +1,160 @@
+﻿WEBVTT
+
+00:00:01.810 --> 00:00:08.740
+Witajcie z powrotem, jak dotąd rozmawialiśmy o Honey Skurczyłem te pliki, zmniejszając rozmiar tych
+
+00:00:09.040 --> 00:00:14.390
+pobrań, kompresując obrazy powiększające CSX i Javascript i tak dalej.
+
+00:00:14.860 --> 00:00:21.390
+Ale oprócz zmniejszenia rozmiaru pobieranego jest jeszcze bardziej fundamentalne podejście.
+
+00:00:21.400 --> 00:00:29.130
+Rozważmy także zmniejszenie częstotliwości pobierania, którą widzący podróżujący dostrzega, zmniejszając
+
+00:00:29.130 --> 00:00:38.290
+liczbę komponentów, których wymaga strona, proporcjonalnie zmniejsza liczbę żądań TTP, które musi wykonać.
+
+00:00:38.290 --> 00:00:43.840
+Nie oznacza to, że emitowanie treści oznacza po prostu bardziej wydajną strukturę.
+
+00:00:44.670 --> 00:00:50.310
+Pamiętaj, że nasz podróżny człowiek dostawczy jest zmęczony i jest tylko jeden z nich.
+
+00:00:52.300 --> 00:00:53.360
+Więc spójrzmy tutaj.
+
+00:00:54.460 --> 00:01:02.950
+Przy mniejszych wycieczkach idealnie, gdy minimalizujemy nasze pliki, ale nie wysyłamy każdego pojedynczego pliku w
+
+00:01:03.520 --> 00:01:04.480
+dół.
+
+00:01:04.780 --> 00:01:07.400
+Tylko te, których potrzebujemy.
+
+00:01:07.480 --> 00:01:08.760
+Jak możemy to zrobić.
+
+00:01:09.790 --> 00:01:18.160
+Na przykład, jeśli używasz bootstrapu lub fundacji lub czegoś, co pomaga ci w używaniu interfejsu użytkownika
+
+00:01:18.850 --> 00:01:28.000
+i dodaje nowe pliki CSSA, zadaj sobie pytanie, czy są one naprawdę potrzebne, czy możesz użyć fluxboksa, albo mówi
+
+00:01:28.780 --> 00:01:33.540
+siatkę, która jest świetną alternatywą i obie są natywne.
+
+00:01:33.760 --> 00:01:37.920
+Nie musisz pobierać tych masywnych pasków do bootowania ani plików Fondation.
+
+00:01:38.790 --> 00:01:46.650
+To samo dotyczy bibliotek javascript i Javascript, które są wygodne, ale nie zawsze są konieczne. Weź przykład
+
+00:01:46.650 --> 00:01:54.060
+Jake'a, np. Wybór elementów, dzięki czemu zapytanie J było początkowo tak popularne, zostało znacznie uproszczone dzięki
+
+00:01:54.060 --> 00:02:00.150
+nowym metodom w javascriptie, takim jak Querrey selektor wyboru zapytania są wszystkie.
+
+00:02:00.750 --> 00:02:07.710
+I nawet wiązanie zdarzeń jest łatwe dzięki ADD i zestawom atrybutów klas listenerów tak i tak
+
+00:02:07.710 --> 00:02:08.180
+dalej.
+
+00:02:09.590 --> 00:02:16.550
+Więc jeśli musisz korzystać z biblioteki, znajdź może biblioteki, które są lekkie i pomyśl dwa razy, zanim po prostu kupisz na
+
+00:02:16.840 --> 00:02:22.330
+innym skrypcie lub innej bibliotece tylko po to, by zobaczyć fajne animacje na twojej stronie.
+
+00:02:22.340 --> 00:02:23.930
+Wreszcie z obrazami.
+
+00:02:23.960 --> 00:02:27.790
+Zachowaj ostrożność i nie twórz witryny pełnej ich zawartości.
+
+00:02:28.100 --> 00:02:34.400
+W przeszłości mieliśmy takie rzeczy jak sprite'y, w których miałeś jeden obraz i
+
+00:02:34.400 --> 00:02:42.800
+na podstawie pozycjonowania CSSA możesz mieć na tym jednym obrazie wiele obrazów, które wyświetlają się tylko na podstawie CSSA, której
+
+00:02:42.800 --> 00:02:49.280
+używasz, ale dostajesz sedno, masz mniej plików i Sprawia, że człowiek od dostawy ciężko pracuje.
+
+00:02:49.560 --> 00:02:55.420
+Teraz musisz zadać sobie pytanie, czy nie możemy po prostu powiedzieć im, aby nieśli wszystkie pliki naraz.
+
+00:02:55.810 --> 00:02:57.090
+Ale o co chodzi.
+
+00:02:57.900 --> 00:03:00.380
+Po raz kolejny życie nie jest takie proste.
+
+00:03:00.450 --> 00:03:08.490
+Dzięki protokołowi DB nasze przeglądarki pobierają jednocześnie tylko określoną maksymalną liczbę plików z jednej
+
+00:03:09.030 --> 00:03:10.530
+domeny naraz.
+
+00:03:10.890 --> 00:03:14.850
+A to waha się od 2 do 6 w zależności od przeglądarki.
+
+00:03:15.240 --> 00:03:21.600
+Zostawię dla ciebie zasób w tym filmie, aby zobaczyć, ile żądań Max lub Max współbieżnych żądań
+
+00:03:21.600 --> 00:03:23.420
+może wykonać twoja przeglądarka.
+
+00:03:23.700 --> 00:03:25.530
+Ale znowu bądź ostrożny.
+
+00:03:25.530 --> 00:03:29.110
+Ma również ograniczenia dotyczące całkowitego rozmiaru, jaki może przenosić.
+
+00:03:29.130 --> 00:03:31.020
+Dostawcą nie jest Superman.
+
+00:03:31.200 --> 00:03:38.110
+Więc znowu chcemy zminimalizować pliki i chcemy ograniczyć paski, które produkuje dostawca.
+
+00:03:38.370 --> 00:03:42.020
+Być może więc możemy połączyć nasze pliki CSSA w jeden.
+
+00:03:42.330 --> 00:03:51.830
+Połącz nasze pliki javascript w jeden, o którym opowiem o rytmie nadchodzącego wideo i dlaczego ten proces może zostać
+
+00:03:51.860 --> 00:03:53.660
+ulepszony w przyszłości.
+
+00:03:53.780 --> 00:03:57.480
+Ale na razie sprawdźmy.
+
+00:03:57.670 --> 00:04:05.530
+Kiedy otwieramy Google Chrome i wpisujemy super świeże dotcom, żądamy od serwera kilku rzeczy, ale
+
+00:04:06.040 --> 00:04:12.000
+wiedząc, czego właśnie się dowiedzieliśmy, możemy zoptymalizować ten proces właściwie.
+
+00:04:12.040 --> 00:04:19.810
+Możemy zminimalizować nasze pliki, a następnie możemy ograniczyć liczbę dostarczanych plików i korzystać
+
+00:04:22.780 --> 00:04:24.950
+z prostych metod.
+
+00:04:25.090 --> 00:04:28.360
+Już sprawiłeś, że twoja strona internetowa była niesamowicie szybsza.
+
+00:04:28.390 --> 00:04:34.560
+Teraz nie martw się, że jest jeszcze dużo do zrobienia, a rzeczy będą jeszcze bardziej zabawne.
+
+00:04:36.000 --> 00:04:40.010
+Tylko po to, aby upewnić się, że naprawdę nauczyliśmy się tych pojęć.
+
+00:04:40.010 --> 00:04:41.790
+Mam dla ciebie zabawne małe ćwiczenie.
+
+00:04:42.620 --> 00:04:44.610
+Więc zobaczę na tym.

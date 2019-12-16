@@ -1,0 +1,178 @@
+﻿WEBVTT
+
+00:00:01.020 --> 00:00:06.320
+Powitanie z powrotem zaszczytów zajmuje trochę czasu, aby porozmawiać o systemie nadzoru
+
+00:00:06.330 --> 00:00:12.750
+i czymś, co mogłem przeskoczyć nieco zbyt szybko i poprzednim filmem, a to, że serwer mniej
+
+00:00:12.990 --> 00:00:18.580
+służy nie tylko serwisom Amazon Web, z których można korzystać. z mnóstwem rzeczy.
+
+00:00:18.780 --> 00:00:21.280
+Widzisz to w komendzie less create command.
+
+00:00:21.300 --> 00:00:27.480
+Mamy wszystkie te szablony i używamy Amazon znającego Jamesa.
+
+00:00:27.730 --> 00:00:30.830
+Jest też Amazon z maszynopisem.
+
+00:00:30.880 --> 00:00:34.910
+W Pythonie jest Java.
+
+00:00:35.080 --> 00:00:36.480
+Są te wszystkie inne rzeczy.
+
+00:00:36.760 --> 00:00:42.700
+Ale także, jeśli idziemy dalej, widzimy otwarty wisk, którym jest IBM.
+
+00:00:42.790 --> 00:00:49.990
+Więc IBM to serwisy internetowe, a jeśli idziemy dalej, widzimy, że jest też Azure.
+
+00:00:50.150 --> 00:00:53.400
+To właśnie Microsoft oferuje te usługi.
+
+00:00:53.420 --> 00:00:54.600
+Masz również Google.
+
+00:00:54.710 --> 00:01:01.330
+Servilius współpracuje ze wszystkimi tymi dostawcami usług, co jest naprawdę bardzo miłe.
+
+00:01:01.340 --> 00:01:07.520
+Innym powodem, dla którego lubię pokazywać tę metodę gyud jest to, że uczymy się używać nie tylko
+
+00:01:07.520 --> 00:01:12.170
+AWOS, ale także wszystkich innych usług, które mogą lepiej spełniać Twoje potrzeby.
+
+00:01:12.330 --> 00:01:21.000
+Teraz, odkąd dostaliśmy to poprzez drugą rzecz, którą chcę zrobić, to chcę się upewnić, że mój ranking, który pamięta
+
+00:01:21.000 --> 00:01:27.630
+tutaj naszą wersję węzła, wynosi 6. 10 i dlatego, że będziemy wdrażać go z
+
+00:01:28.200 --> 00:01:37.300
+naszego serwera, mniej framework będzie musiał wrócić do naszego pulpitu i usunąć tę funkcję rangi lambda, ponieważ nie chcemy go tworzyć
+
+00:01:37.300 --> 00:01:40.220
+tutaj, tworzymy go przez serwer mniej.
+
+00:01:40.300 --> 00:01:50.970
+Więc wrócę do funkcji i po prostu pozbędę się rangi pożegnania, twoje życie było krótkotrwałe.
+
+00:01:50.980 --> 00:01:56.310
+W porządku, zminimalizujmy to i porozmawiajmy trochę o pliku YAML.
+
+00:01:57.660 --> 00:02:03.470
+Dokumentacja bez serwera jest naprawdę dobra w wyjaśnianiu wszystkiego.
+
+00:02:03.560 --> 00:02:08.970
+Więc nie zamierzam zajmować się tym zbyt długo, ponieważ każdy z nich jest inny, ale możesz
+
+00:02:09.230 --> 00:02:11.840
+napisać kilka domyślnych ustawień, które już mają.
+
+00:02:11.900 --> 00:02:18.380
+Na przykład tutaj, jeśli pominiemy to, zobaczymy, że mamy regiony, w których chcemy, aby
+
+00:02:19.850 --> 00:02:26.270
+nasz serwer był, jeśli mieszkasz w innym miejscu niż północnoamerykański, możesz to zmienić,
+
+00:02:26.270 --> 00:02:34.380
+aby serwer był bliżej Twoich użytkowników, jeśli przewijając w dół widzimy, że mamy również zmienne środowiskowe, które
+
+00:02:34.380 --> 00:02:37.140
+możemy dodać do naszych funkcji.
+
+00:02:38.010 --> 00:02:45.220
+Być może być może upewnienie się, że sekrety pozostają poza naszymi funkcjami, a następnie oczywiście rozmawialiśmy
+
+00:02:45.240 --> 00:02:52.770
+o funkcjach, zanim zdefiniujemy nasze funkcje, które nazywamy Hello, więc możemy uzyskać do nich dostęp za pomocą
+
+00:02:52.770 --> 00:02:58.840
+nazwy Hello i można to zmienić na odwołuje się do unikalnej funkcji obsługi
+
+00:03:02.330 --> 00:03:04.250
+w pliku YAML.
+
+00:03:04.260 --> 00:03:09.960
+Poniżej znajduje się kilka przykładowych zdarzeń, które można skonfigurować, abyśmy mogli skonfigurować różne
+
+00:03:09.960 --> 00:03:13.080
+zdarzenia, z którymi zostanie wywołana funkcja helo.
+
+00:03:13.080 --> 00:03:17.630
+Na przykład możemy zrobić owcy, co możemy zrobić jako trzy.
+
+00:03:17.630 --> 00:03:24.470
+Powiedzmy, że ktoś ładuje obraz do klamry S3, jak na obrazie profilowym,
+
+00:03:24.470 --> 00:03:32.840
+i powiedzmy, powiedzmy, zmień rozmiar, a wyzwalacz będzie obrazem ESRI, który zostanie przesłany, a następnie
+
+00:03:32.840 --> 00:03:36.940
+uruchomi funkcję helo do zrobienia czegoś.
+
+00:03:36.970 --> 00:03:42.400
+A tak przy okazji, będziemy używać CGP w naszym przypadku, ale chciałem wam pokazać, że możemy
+
+00:03:42.400 --> 00:03:44.190
+robić na przykład różne rzeczy.
+
+00:03:44.200 --> 00:03:47.570
+Innym, który bardzo lubię używać, jest harmonogram.
+
+00:03:47.770 --> 00:03:51.130
+I tutaj mogę powiedzieć, jak często chcę uruchomić funkcję.
+
+00:03:51.130 --> 00:03:57.570
+Na przykład, jeśli chcę uruchomić funkcję co godzinę, może sprawdzić cenę na giełdzie.
+
+00:03:57.640 --> 00:04:01.690
+Mogę powiedzieć, żeby biegała co godzinę i co godzinę.
+
+00:04:01.690 --> 00:04:03.390
+Funkcja zostanie uruchomiona.
+
+00:04:03.580 --> 00:04:09.740
+A jeśli używasz API takiego jak Twilio, który wysyła Ci wiadomości tekstowe, możesz co godzinę wysłać
+
+00:04:09.740 --> 00:04:15.990
+wiadomość tekstową, która mówi, że cena akcji jest taka lub taka, lub cena akcji wzrosła o 100 procent.
+
+00:04:16.000 --> 00:04:18.180
+Teraz masz Richa coś podobnego.
+
+00:04:20.390 --> 00:04:23.420
+I jest wiele rzeczy, które możemy przejść tutaj.
+
+00:04:23.570 --> 00:04:29.420
+Ale jak już powiedziałem, są to wszystkie elementy konfiguracji, które napotkasz, gdy
+
+00:04:29.420 --> 00:04:35.900
+faktycznie masz określoną potrzebę funkcji, podczas gdy teraz będziemy robić to, budujemy naszą funkcję.
+
+00:04:36.010 --> 00:04:42.460
+Ale mamy jeszcze jeden element konfiguracji, który musimy zrobić z serwerem mniej, zanim będziemy mieli
+
+00:04:42.460 --> 00:04:44.640
+dostęp do naszego konta AWOS.
+
+00:04:44.740 --> 00:04:53.020
+Widzisz teraz stworzyłem ten framework usługowy, który żyje na moim laptopie, ale tak naprawdę nie wie, że
+
+00:04:53.020 --> 00:04:54.370
+to istnieje.
+
+00:04:54.370 --> 00:04:59.860
+Muszę połączyć moje konto z tą strukturą listy serwerów, aby móc napisać funkcję, a
+
+00:05:00.010 --> 00:05:01.470
+następnie ją wdrożyć.
+
+00:05:01.480 --> 00:05:04.030
+Zróbmy to w następnym filmie.
+
+00:05:04.070 --> 00:05:04.920
+Do zobaczenia w tym.

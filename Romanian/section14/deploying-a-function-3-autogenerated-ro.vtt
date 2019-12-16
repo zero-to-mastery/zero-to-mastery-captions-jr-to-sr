@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:02.330 --> 00:00:03.290
+Bine ai revenit.
+
+00:00:03.320 --> 00:00:09.710
+Acum că avem funcția noastră de a face o lucrare fantastică pentru noi, este timpul să finalizăm
+
+00:00:09.830 --> 00:00:13.810
+aplicația noastră și să adăugăm insigna noastră lângă numărul nostru.
+
+00:00:13.900 --> 00:00:18.550
+Să ne întoarcem la fața noastră și nu trebuie să ne îngrijorăm de funcția noastră lambda, pentru că știm
+
+00:00:18.550 --> 00:00:19.160
+că rulează.
+
+00:00:19.200 --> 00:00:20.990
+Amazon are grijă de asta pentru noi.
+
+00:00:21.130 --> 00:00:26.540
+Mulțumesc lui Amazon și ne putem întoarce să facem codificare acum.
+
+00:00:26.580 --> 00:00:32.980
+Și aici vreau să adaug un nou stat care este statul emoji pe care l-aș putea adăuga la aplicație.
+
+00:00:33.100 --> 00:00:39.030
+Da, dar emoji nu este un stat important și ar trebui să fie manipulat doar prin rang oricum.
+
+00:00:39.040 --> 00:00:51.220
+Deci, haideți să schimbați acest aspect într-o componentă statală care spune că rangul de clasă extinde componenta re-act dot și vom
+
+00:00:53.670 --> 00:00:57.090
+scăpa de acest lucru deocamdată.
+
+00:00:58.570 --> 00:01:05.700
+Mutați tot ceea ce nu avem nevoie și nu mutați totul înăuntru.
+
+00:01:09.250 --> 00:01:14.940
+Și asigurați-vă că facem funcția de redare aici.
+
+00:01:16.970 --> 00:01:24.400
+Și înfășurați-o frumos.
+
+00:01:24.470 --> 00:01:31.450
+Deci, acum că avem componenta de clasă, putem începe să folosim starea de start
+
+00:01:33.920 --> 00:01:42.900
+prin adăugarea constructorului și aici din nou apelând Super care este implicit și apoi această punct punct va fi
+
+00:01:43.200 --> 00:01:48.690
+numit emoji care va fi doar gol pentru a porni cu.
+
+00:01:48.730 --> 00:01:50.060
+Acum, oricare aici.
+
+00:01:50.470 --> 00:01:56.510
+Să spunem că atunci când componenta mounts să facem componenta nu a montat.
+
+00:01:56.620 --> 00:02:01.150
+Deci, atunci când utilizatorul vede inițial acest lucru.
+
+00:02:01.410 --> 00:02:07.040
+Să avem funcția de generare și Moji.
+
+00:02:07.040 --> 00:02:17.030
+Deci nu am făcut acest lucru aici, dar voi spune că avem un emoji generator care acceptă înscrierile
+
+00:02:17.180 --> 00:02:18.900
+punctului punctului prop.
+
+00:02:20.290 --> 00:02:25.570
+Pentru că asta ne va da informațiile despre rang.
+
+00:02:25.740 --> 00:02:33.810
+Și din nou, pentru că folosim acum structura de clasă, trebuie să ne asigurăm că aceste
+
+00:02:33.810 --> 00:02:37.950
+lucruri sunt denumite corect cu ajutorul acestui punct.
+
+00:02:41.080 --> 00:02:45.090
+Să salvăm asta și să facem mai multe lucruri.
+
+00:02:45.090 --> 00:02:57.810
+Să creăm metoda emoji de generare generată în metoda Moji va lua un număr sau intrări.
+
+00:02:58.060 --> 00:03:02.670
+Și ceea ce vom face aici este un apel rapid la funcția noastră lambda.
+
+00:03:02.670 --> 00:03:10.410
+Vom copia și lipi ceea ce am avut, care a fost punctul final pe care l-am obținut de la implementarea noastră
+
+00:03:10.470 --> 00:03:12.270
+prin server mai puțin.
+
+00:03:12.440 --> 00:03:17.840
+Și vrem să ne asigurăm că adăugăm la sfârșit aici parametrii șirului de interogare Jonge Under do Templi
+
+00:03:17.840 --> 00:03:18.440
+strings.
+
+00:03:18.500 --> 00:03:25.970
+Amintiți-vă aici citate speciale, astfel încât să putem folosi semnul de întrebare decât cel văzut în dolari sau un rang de
+
+00:03:27.500 --> 00:03:31.200
+semne de întrebare pentru a fi egal cu semnul dolarului.
+
+00:03:32.360 --> 00:03:46.450
+Intră și acum facem o solicitare Gabb și putem pur și simplu să spunem că vrem să răspundem.
+
+00:03:46.590 --> 00:03:55.260
+Și amintiți-vă cu o cerere de caracteristică, trebuie să ne asigurăm că facem răspunsul la Jason.
+
+00:03:55.410 --> 00:03:58.510
+Și apoi, în final, obțineți datele.
+
+00:03:58.980 --> 00:04:03.440
+Și cu aceste date sperăm că emoji-ul va face acest gând stabilit.
+
+00:04:03.900 --> 00:04:16.380
+Stare care va avea emoji actualizată cu intrarea punctului de date, deoarece amintesc când ne întoarcem la funcția noastră, facem
+
+00:04:16.380 --> 00:04:23.350
+corp cu o intrare, iar intrarea vine cu emoji de rang.
+
+00:04:23.460 --> 00:04:31.430
+Deci, facem date la intrare și așa că doar pentru a fi siguri să facem o captură aici spunând că anulați
+
+00:04:31.440 --> 00:04:33.390
+jurnalul dacă există erori.
+
+00:04:33.480 --> 00:04:35.280
+Să salvăm asta.
+
+00:04:35.280 --> 00:04:36.840
+Vedeți dacă avem erori.
+
+00:04:37.200 --> 00:04:38.400
+Avem câteva lucruri.
+
+00:04:38.400 --> 00:04:43.840
+Să vedem undeva o virgulă care nu ar trebui să fie acolo.
+
+00:04:43.840 --> 00:04:45.240
+Unde este aia.
+
+00:04:45.700 --> 00:04:49.060
+Și asta pentru că trebuie să aibă un semi-colon ca obiect.
+
+00:04:49.060 --> 00:04:49.510
+Acolo te duci.
+
+00:04:49.540 --> 00:04:53.460
+Am setat emoji-ul de stat de aici cu introducerea datelor.
+
+00:04:53.500 --> 00:04:55.940
+Să salvăm perfect.
+
+00:04:55.960 --> 00:05:00.230
+Și apoi, dacă mergem în jos, să adăugăm aici noua insignă.
+
+00:05:00.280 --> 00:05:06.910
+Am de gând să copiez și să lipesc un difuzor nother aici și chiar sub intrările va crea.
+
+00:05:06.910 --> 00:05:07.720
+Să facem un mare.
+
+00:05:07.750 --> 00:05:13.930
+Am de gând să fac EF 3 sau nu la fel de mare a face
+
+00:05:13.930 --> 00:05:31.040
+un pic mai mic și am de gând să spun că acest lucru este de gând să egal clasa insigna sau trebuie să ne asigurăm că este un șir de cuvânt spune rang va fi acest punct de recuzită sau asigurați-vă că folosesc
+
+00:05:31.040 --> 00:05:32.890
+șirul de șabloane aici.
+
+00:05:32.900 --> 00:05:35.060
+Așa că obținem evidențierea corectă.
+
+00:05:35.060 --> 00:05:36.150
+Să încercăm din nou asta.
+
+00:05:38.180 --> 00:05:39.280
+Asa e mai bine.
+
+00:05:39.280 --> 00:05:40.070
+Insigna de inscriere.
+
+00:05:40.180 --> 00:05:43.450
+Și atunci ar trebui să fie acest punct-punct.
+
+00:05:44.050 --> 00:05:44.590
+Emoji.
+
+00:05:47.500 --> 00:05:50.100
+Să salvăm și să vedem ce se întâmplă aici.
+
+00:05:50.130 --> 00:05:51.540
+Învață să te întorci.
+
+00:05:52.610 --> 00:05:57.300
+Și am un ecuson de rang aici, dar nu se afișează nimic.
+
+00:05:57.560 --> 00:06:01.940
+Să aruncăm o privire la contra. Și am un pic de eroare.
+
+00:06:02.090 --> 00:06:09.540
+Nu primesc niciun control de acces care să permită originea Hetter este prezent la cererea originii sursei.
+
+00:06:09.560 --> 00:06:10.920
+Așa că am mai văzut asta înainte.
+
+00:06:10.970 --> 00:06:11.490
+Dreapta.
+
+00:06:11.510 --> 00:06:15.500
+Aceasta este eroarea de coreeană despre care am vorbit în secțiunea de securitate.
+
+00:06:15.500 --> 00:06:23.510
+Și doar pentru a simplifica cele mai ușoare soluții pe care le putem face aici putem să ne asigurăm că în cadrul
+
+00:06:23.510 --> 00:06:27.210
+funcției noastre de handler vom adăuga un nou antet.
+
+00:06:27.380 --> 00:06:31.870
+Și din nou, acest lucru este ceva care pentru moment doar pentru că ne jucăm în jur este bine.
+
+00:06:31.880 --> 00:06:32.970
+Dar ați putea dori să o ajustați.
+
+00:06:33.020 --> 00:06:35.790
+Cercetătorii actuali spun că doriți să obțineți accesul.
+
+00:06:36.170 --> 00:06:41.430
+Dar vom avea acces.
+
+00:06:41.460 --> 00:06:43.080
+Oare să încercăm din nou asta.
+
+00:06:45.730 --> 00:06:58.100
+Controlul permite originea Hetter Și pentru moment, vom permite oricui să acceseze acest lucru folosind o stea.
+
+00:06:58.240 --> 00:07:05.390
+Deci, oricine poate accesa această funcție lambda când desfășurăm efectiv serviciul nostru.
+
+00:07:05.390 --> 00:07:11.720
+Partea frontală pe care ați putea dori să o lipiți de domeniul folosit pentru moment, să lăsăm o
+
+00:07:11.720 --> 00:07:12.370
+stea.
+
+00:07:12.440 --> 00:07:19.670
+Oricine poate accesa acest control de acces care să permită originea și să vă asigurați că avem o coloană aici, care este
+
+00:07:19.670 --> 00:07:20.680
+în siguranță aici.
+
+00:07:21.170 --> 00:07:28.180
+Și, de fapt, aceasta ar trebui să fie anteturile și să ne asigurăm că sistemul nostru de producție lucrează aici.
+
+00:07:31.240 --> 00:07:31.980
+Asa e mai bine.
+
+00:07:32.130 --> 00:07:34.870
+Deci, controlul accesului permite originea.
+
+00:07:34.890 --> 00:07:41.240
+Vom permite oricui să ne acceseze acum pentru a salva și să redistribuim acest lucru.
+
+00:07:41.830 --> 00:07:48.480
+Și în timp ce aceasta se desfășoară, asigurați-vă că avem totul bine aici, vedem că facem
+
+00:07:48.480 --> 00:07:56.310
+un nou apel la rangul nostru, cu ajutorul parametrilor de interogare și a răspunsului copacilor, Jaison, actualizând starea setată
+
+00:07:56.310 --> 00:07:59.740
+și asigurați-vă că putem scrie corect emoji-ul corect.
+
+00:07:59.760 --> 00:08:00.530
+Acolo te duci.
+
+00:08:01.180 --> 00:08:02.610
+Ei bine, să salvăm asta.
+
+00:08:02.640 --> 00:08:04.620
+Totul arată bine.
+
+00:08:04.620 --> 00:08:08.100
+Încă mai mergem aici.
+
+00:08:08.120 --> 00:08:08.680
+In regula.
+
+00:08:08.750 --> 00:08:10.460
+Avem totul dislocat.
+
+00:08:10.460 --> 00:08:12.940
+Acum, să testați asta.
+
+00:08:12.940 --> 00:08:15.780
+Vom reveni și vom reîmprospăta și vom privi asta.
+
+00:08:15.800 --> 00:08:17.480
+Avem insigna noastră de rang.
+
+00:08:17.480 --> 00:08:19.470
+Asta este absolut minunat.
+
+00:08:19.700 --> 00:08:23.660
+Să vedem dacă putem actualiza acest lucru și să obținem un rang mai bun.
+
+00:08:23.660 --> 00:08:30.150
+Mă voi imagina și vom vedea că este aceasta deoarece am folosit-o de atâtea ori.
+
+00:08:31.300 --> 00:08:31.710
+Hopa.
+
+00:08:31.730 --> 00:08:41.800
+Asta e tot ce am vrut să facem doar să copiem adresa de imagine vin aici să o lipiți să-l detecteze.
+
+00:08:41.830 --> 00:08:42.640
+In regula.
+
+00:08:42.640 --> 00:08:46.040
+Fața a fost detectată, insigna sa ridicat și a făcut-o.
+
+00:08:46.060 --> 00:08:53.590
+Sau intrarea a fost actualizată, dar insigna nu a făcut-o deoarece trebuie să ne asigurăm că actualizarea noastră se întâmplă și
+
+00:08:53.590 --> 00:08:54.580
+numim funcția.
+
+00:08:54.580 --> 00:08:59.760
+Deci, să ne întoarcem și să rezolvăm asta.
+
+00:09:00.010 --> 00:09:10.140
+Ceea ce vrem să facem aici este să creeze un cârlig de viață și acest cârlig va fi component a făcut mount
+
+00:09:11.310 --> 00:09:20.400
+și această componentă a fost montată sau ar trebui să spun că componenta sa actualizat vom face un pic de
+
+00:09:21.360 --> 00:09:30.850
+verificare dacă această componentă se actualizează deoarece această componentă este actualizată numai atunci când emoji sau atunci când schimbarea elementelor de
+
+00:09:30.850 --> 00:09:33.040
+recuzită sau modificările emoji.
+
+00:09:33.840 --> 00:09:38.880
+Dar vedeți aici că emoji-ul de generare este doar apelat pe componenta a făcut suma.
+
+00:09:38.940 --> 00:09:42.790
+Deci, dacă nu reamintește din nou, nu se va actualiza.
+
+00:09:42.810 --> 00:09:44.220
+Deci asta e un remediu simplu.
+
+00:09:44.220 --> 00:09:50.340
+Ori de câte ori există un eveniment de actualizare a componentelor.
+
+00:09:50.360 --> 00:09:59.310
+Voi spune doar dacă versiunea anterioară și cea de componentă a fost actualizată primesc recuză anterioară și
+
+00:10:01.050 --> 00:10:06.750
+starea anterioară și vom ajunge doar la recuzele anterioare și.
+
+00:10:07.230 --> 00:10:12.730
+Dacă asta va fi exact la fel ca oprirea Propst a primit înregistrări.
+
+00:10:12.780 --> 00:10:17.640
+Dacă nu se schimbă nimic în intrările Ei bine, atunci nu ne pasă să ne întoarcem.
+
+00:10:17.640 --> 00:10:22.620
+Nu trebuie să actualizați nimic pentru numele și înregistrările.
+
+00:10:22.620 --> 00:10:24.170
+Acesta este singurul lucru de care ne interesează.
+
+00:10:25.650 --> 00:10:27.510
+Și poate căutați și numele.
+
+00:10:27.570 --> 00:10:32.520
+Așa că vom spune numele punctului precedent al propunerii
+
+00:10:36.670 --> 00:10:40.190
+și opriți numele punctului prop.
+
+00:10:40.390 --> 00:10:48.720
+Și apoi, în cele din urmă, putem spune dacă nici una dintre aceste schimbări nu este bine să reveniți nu.
+
+00:10:48.730 --> 00:10:59.160
+În caz contrar, vreau să vă întotdeauna atunci când intrările se schimbă pentru a face acest gând genera emoji cu
+
+00:10:59.260 --> 00:11:03.720
+acest punct prop a punct de noi intrări.
+
+00:11:03.780 --> 00:11:09.070
+Așadar, vrem să ne asigurăm că generăm acel emoji și numim această funcție lambda.
+
+00:11:09.080 --> 00:11:10.390
+Bine, hai să mergem.
+
+00:11:10.400 --> 00:11:12.140
+Mă voi întoarce.
+
+00:11:12.170 --> 00:11:12.740
+In regula.
+
+00:11:12.740 --> 00:11:18.040
+Emoția noastră se schimbă, dar să adăugăm o altă imagine.
+
+00:11:18.140 --> 00:11:19.420
+Hei, uite asta.
+
+00:11:19.550 --> 00:11:22.140
+Ne-am îndreptat până la nava rachetei.
+
+00:11:22.160 --> 00:11:22.990
+Asta-i grozav.
+
+00:11:23.120 --> 00:11:29.200
+Să facem clic din nou detectați și copacii nouă, dar ne-am definit nedefinit.
+
+00:11:29.330 --> 00:11:30.120
+De ce este asta.
+
+00:11:31.570 --> 00:11:36.410
+Ar trebui să ne dea o navă de rachete atâta timp cât avem înregistrările.
+
+00:11:36.460 --> 00:11:44.550
+Deci, haideți să verificăm dacă mergem la rețea și faceți clic pe detectare din nou.
+
+00:11:44.550 --> 00:11:46.140
+Bine, ca să funcționeze.
+
+00:11:46.140 --> 00:11:47.210
+Dacă faceți
+
+00:11:50.170 --> 00:11:52.270
+clic din nou, este puțin ciudat.
+
+00:11:52.370 --> 00:11:55.260
+În regulă, totul pare să funcționeze.
+
+00:11:55.270 --> 00:11:58.670
+Avem nava de rachete.
+
+00:11:58.790 --> 00:11:59.900
+Totul e bine.
+
+00:12:00.140 --> 00:12:09.760
+Dacă mergem până la profilul nostru, nu ne vizionăm profilul și să ne schimbăm numele pentru a salva Teti.
+
+00:12:09.820 --> 00:12:18.640
+În regulă, Teddy numărul tău de intrare curent este de 15 și avem o insignă de clasă a peretelui cea mai mare insignă pe care o
+
+00:12:18.640 --> 00:12:19.630
+putem obține.
+
+00:12:19.630 --> 00:12:21.440
+Cat de tare e asta.
+
+00:12:21.460 --> 00:12:25.330
+Avem o aplicație pe deplin funcțională.
+
+00:12:25.490 --> 00:12:26.910
+Joc și ieșiți.
+
+00:12:27.000 --> 00:12:38.030
+Și doar pentru distracție, să intrăm la un nou utilizator pe care îl voi numi Bobby și el va fi la gmail dot
+
+00:12:38.030 --> 00:12:38.860
+com.
+
+00:12:38.990 --> 00:12:42.610
+Parola este B registru.
+
+00:12:42.630 --> 00:12:44.520
+Bobby Bobby ești încă un începător.
+
+00:12:44.520 --> 00:12:46.700
+Trebuie să lucrezi la contul tău de intrare.
+
+00:12:46.750 --> 00:12:52.300
+Asta este detectat și totul funcționează.
+
+00:12:52.530 --> 00:12:56.430
+Să încercăm încă o dată acest lucru, deoarece primul și al doilea fel de semne arată asemănător dacă
+
+00:12:56.430 --> 00:12:57.330
+o fac din nou.
+
+00:12:57.330 --> 00:12:57.930
+Acolo te duci.
+
+00:12:57.930 --> 00:12:59.760
+Ochii s-au schimbat.
+
+00:12:59.760 --> 00:13:00.290
+Acolo te duci.
+
+00:13:00.290 --> 00:13:03.490
+Ari Moji actualizează și se schimbă.
+
+00:13:03.540 --> 00:13:04.650
+Felicitări.
+
+00:13:04.770 --> 00:13:07.200
+Am folosit Amazon Lamda.

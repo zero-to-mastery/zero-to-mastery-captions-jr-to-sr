@@ -1,0 +1,601 @@
+﻿WEBVTT
+
+00:00:01.310 --> 00:00:06.020
+Teraz zamierzam zostawić zasób działania pliku konfiguracyjnego w X silnika.
+
+00:00:06.020 --> 00:00:11.290
+W Internecie jest świetna dokumentacja i jak w przypadku wszystkich konfiguracji, nie musisz zapamiętywać synchronizacji.
+
+00:00:11.300 --> 00:00:16.250
+Są to tylko rzeczy, które masz zamiar sprawdzić, gdy faktycznie zaimplementujesz system równoważenia obciążenia.
+
+00:00:16.250 --> 00:00:20.030
+Więc najpierw zacznę od podstawowej konfiguracji.
+
+00:00:20.090 --> 00:00:27.130
+Powiem, że proces roboczy będzie taki, w którym nie będę potrzebował połączenia.
+
+00:00:27.540 --> 00:00:28.770
+Co to znaczy.
+
+00:00:28.890 --> 00:00:35.170
+Cóż, liczba procesów roboczych jest określona przez ten plik i może być dowolna, możemy dodać 2
+
+00:00:35.170 --> 00:00:36.140
+3 cztery.
+
+00:00:36.150 --> 00:00:37.850
+Są to procesy robocze.
+
+00:00:39.560 --> 00:00:43.100
+I zwykle pasuje do liczby użycia C-P, którego chcesz użyć.
+
+00:00:43.100 --> 00:00:46.910
+Na przykład, jeśli miałeś użyć na swoim komputerze, którego możesz użyć.
+
+00:00:46.910 --> 00:00:48.880
+Na razie zamierzam to porzucić.
+
+00:00:48.980 --> 00:00:51.020
+Następnie definiujemy zdarzenia,
+
+00:00:53.620 --> 00:01:02.320
+a te wydarzenia będą miały coś, co nazywa się powiązaniami pracownika i zamierzam powiedzieć,
+
+00:01:02.320 --> 00:01:04.790
+że będzie miało 1024.
+
+00:01:05.070 --> 00:01:08.870
+I widzisz tu tysiąc dwadzieścia cztery lub pięć 16 jako domyślne.
+
+00:01:08.880 --> 00:01:09.900
+Sporo.
+
+00:01:09.900 --> 00:01:17.010
+Ponownie ustawia maksymalną liczbę równoczesnych połączeń, które mogą zostać otwarte przez proces roboczy.
+
+00:01:17.010 --> 00:01:23.070
+Mamy więc jeden proces roboczy i są to maksymalne równoczesne połączenia, jakie możemy mieć.
+
+00:01:23.200 --> 00:01:25.180
+A potem w końcu trafiamy na zabawną część.
+
+00:01:25.180 --> 00:01:26.670
+Zdefiniowaliśmy HP
+
+00:01:29.710 --> 00:01:31.600
+i to TTP.
+
+00:01:31.810 --> 00:01:38.950
+Cóż, musimy powiedzieć, że chcemy, aby moduł równoważenia obciążenia i Gen X przekazał
+
+00:01:38.950 --> 00:01:40.840
+serwery, które mamy.
+
+00:01:40.860 --> 00:01:48.660
+Tak więc w naszym przypadku powiem, że serwer WWW ma być na porcie trzy tysiące.
+
+00:01:48.860 --> 00:01:56.500
+A te będą pasować do nazw, które mamy tutaj i portów z nimi związanych.
+
+00:01:57.310 --> 00:02:03.760
+Więc zamierzam powiedzieć, że serwer ma być dobrze jeden trzy tysiące.
+
+00:02:03.930 --> 00:02:08.510
+Następny będzie dwa trzy tysiące jeden.
+
+00:02:08.700 --> 00:02:20.220
+I wreszcie serwer web 3 będzie na porcie trzy tysiące dwa.
+
+00:02:20.300 --> 00:02:27.380
+A teraz, gdy pomyślimy o tym, najprawdopodobniej te serwery internetowe będą otwierane na ten sam port, ponieważ
+
+00:02:27.440 --> 00:02:30.930
+właśnie je replikujemy, replikując je, replikując je.
+
+00:02:31.130 --> 00:02:36.340
+Przez większość czasu będą one miały port, powiedzmy, 3000 spójnie otwarte.
+
+00:02:36.440 --> 00:02:41.030
+Zamierzam zmienić to z powrotem na 3000 3000 i zrobić to samo.
+
+00:02:41.030 --> 00:02:41.750
+I mój
+
+00:02:46.630 --> 00:02:52.700
+doktor Rafał wróci tutaj, teraz zamierzamy upewnić się, że możemy ich użyć i jakoś się do nich odwołać.
+
+00:02:53.170 --> 00:02:59.340
+I domyślny sposób, w jaki to robimy, polega na tym, że używamy upstream i upstream, możemy
+
+00:02:59.470 --> 00:03:08.480
+to nazwać, cokolwiek chcemy, nazwijmy to moją aplikacją 1, a my zamierzamy ją tutaj zawrzeć, a ja pokażę ci, co to zrobi w
+
+00:03:08.590 --> 00:03:09.510
+następnej życie.
+
+00:03:10.090 --> 00:03:16.180
+Powiedzieliśmy więc, że pierwsza wersja będzie moją aplikacją, która będzie zawierać
+
+00:03:16.180 --> 00:03:20.030
+te trzy serwery, a nie serwer.
+
+00:03:20.080 --> 00:03:25.390
+Możemy teraz powiedzieć, że serwer będzie słuchał portu
+
+00:03:28.500 --> 00:03:33.770
+80 i upewniłem się, że nie zapomnę
+
+00:03:38.150 --> 00:03:49.770
+tutaj półkolonów, a potem powiem, że lokalizacja domyślnej trasy poprowadzi nas do tego, co nazywamy Przepustką
+
+00:03:49.770 --> 00:03:50.990
+Proxy.
+
+00:03:51.010 --> 00:03:58.620
+Więc pamiętaj, że powiedział, że będzie to proxy proxy Proxy Pass po prostu mówi, że chcę, abyś uzyskał
+
+00:04:01.190 --> 00:04:02.890
+dostęp do mojej aplikacji.
+
+00:04:02.890 --> 00:04:05.060
+Ten, który właśnie stworzyliśmy.
+
+00:04:05.120 --> 00:04:10.420
+Tak więc do tej upstream mojej aplikacji można teraz odwoływać się w tym miejscu.
+
+00:04:10.490 --> 00:04:16.670
+Więc mówimy po prostu, hej, jeśli trafimy na główną trasę w ten sposób, po prostu przekazujemy wszystkie
+
+00:04:16.670 --> 00:04:19.580
+te serwery do jednego serwera na serwer trzeci.
+
+00:04:19.680 --> 00:04:24.020
+Znowu wszystko to jest dobrze udokumentowane i ich konfiguracja.
+
+00:04:24.030 --> 00:04:25.660
+Jest unikalny dla silnika x.
+
+00:04:25.800 --> 00:04:31.740
+Teraz może wydawać się zagmatwana, ale jest to domyślny sposób skonfigurowania systemu równoważenia obciążenia.
+
+00:04:31.890 --> 00:04:33.920
+A teraz wszystko mamy ustawione.
+
+00:04:34.260 --> 00:04:41.040
+Ale możemy również zrobić kilka fajnych rzeczy z silnikiem X,
+
+00:04:41.040 --> 00:04:55.440
+na przykład, gdy podawałem statyczne pliki, mogę powiedzieć, że lokalizacja i używając tej małej składni, mogę powiedzieć, że obsługuję dowolny plik gifa javascript CSX.
+
+00:04:55.510 --> 00:04:56.310
+Co jeszcze mamy.
+
+00:04:56.320 --> 00:05:01.600
+Mamy JPEG, mamy pliki PMG i
+
+00:05:04.180 --> 00:05:11.830
+wszystko, co zawiera te, które chcesz, aby po prostu cache.
+
+00:05:11.890 --> 00:05:16.450
+Więc jeśli kiedykolwiek będziemy mieć któryś z tych plików z tymi rozszerzeniami.
+
+00:05:16.450 --> 00:05:25.330
+Cóż, w takim przypadku po prostu buforuj je, używając parametru wygasania i możemy powiedzieć, że chcesz co najmniej 168
+
+00:05:25.510 --> 00:05:27.830
+godzin i to wszystko.
+
+00:05:27.870 --> 00:05:31.000
+Upewnijmy się, że pamiętam wszystkie półkolonie tutaj.
+
+00:05:31.170 --> 00:05:35.490
+Jest to typowy plik konfiguracyjny silnika X.
+
+00:05:35.520 --> 00:05:40.380
+Znowu wszystko, co naprawdę robimy, to po prostu powiedzenie hej odwołującej się do mojej
+
+00:05:40.380 --> 00:05:47.280
+aplikacji 1, a to będzie obejmować te serwery i zamierzamy przejść przez te proxy, a my po prostu wysłuchamy portu 80.
+
+00:05:47.280 --> 00:05:48.700
+W porządku, więc uratujmy to.
+
+00:05:48.720 --> 00:05:52.070
+Idę do doktora komponować.
+
+00:05:52.190 --> 00:05:58.850
+Mamy teraz folder silnika X, który uruchomi plik doc i przeniesie nasz plik konfiguracyjny,
+
+00:05:59.240 --> 00:06:02.420
+który właśnie utworzyliśmy na naszym kontenerze.
+
+00:06:02.540 --> 00:06:04.900
+Tak więc dajmy sobie spokój i zobaczmy, jak to działa.
+
+00:06:06.610 --> 00:06:17.890
+Najpierw uruchommy NPM dla dockera, skomponuj kompozycję kreski i sprawdź, czy wszystko działa.
+
+00:06:20.240 --> 00:06:27.830
+I dostaliśmy tutaj trochę błędu, ponieważ popełniłem mały błąd i to tutaj powinny być
+
+00:06:27.830 --> 00:06:34.520
+procesy robocze, chociaż to jeden, ponieważ oczekuje on niekiedy więcej niż jednego
+
+00:06:34.520 --> 00:06:36.250
+procesu roboczego.
+
+00:06:36.380 --> 00:06:38.600
+Zapiszmy więc i spróbujmy jeszcze raz.
+
+00:06:38.600 --> 00:06:43.520
+Zamierzam zamknąć i ponowić to wszystko, patrząc na
+
+00:06:47.340 --> 00:06:51.210
+serwer działający w tych portach.
+
+00:06:51.210 --> 00:06:55.630
+Pamiętaj, że host lokalny znajduje się w kontenerze, więc nie możemy uzyskać do niego dostępu.
+
+00:06:55.890 --> 00:06:59.160
+Ale mamy uruchomione nasze serwery internetowe.
+
+00:06:59.180 --> 00:07:02.570
+Więc jeśli przejdę do lokalnego portu hosta 80 Teraz dajmy sobie spokój.
+
+00:07:07.350 --> 00:07:13.110
+Localhost i zamiast Port 3000 zrobi port 80.
+
+00:07:13.110 --> 00:07:16.720
+W porządku, mamy jakąś odpowiedź.
+
+00:07:16.860 --> 00:07:18.910
+Jeśli otworzę konsolę, nie ma błędów.
+
+00:07:19.090 --> 00:07:20.140
+Ale sprawdź to.
+
+00:07:20.260 --> 00:07:23.900
+Jeśli wrócę, widzę ruch drogowy. com wymagany.
+
+00:07:24.040 --> 00:07:29.690
+A także zostałem trafiony w sieci jeden został trafiony.
+
+00:07:29.830 --> 00:07:33.450
+Więc po prostu odpowiada.
+
+00:07:33.530 --> 00:07:37.870
+Teraz, jeśli wrócimy i odświeżymy, wróćmy, widzimy
+
+00:07:41.390 --> 00:07:42.040
+to.
+
+00:07:42.070 --> 00:07:42.900
+Och, OK.
+
+00:07:42.920 --> 00:07:44.940
+Teraz też mamy.
+
+00:07:44.960 --> 00:07:51.120
+To był również head z trzema głównymi i Fabrikant na żądanie od Webba wygrał i
+
+00:07:51.200 --> 00:07:56.180
+load balancer po prostu w celu trafienia każdego z tych serwerów.
+
+00:07:56.300 --> 00:08:02.660
+A jeśli wrócimy do pliku konfiguracyjnego, możesz zdefiniować tutaj, w jaki sposób chcesz dystrybuować
+
+00:08:02.660 --> 00:08:03.130
+wagę.
+
+00:08:03.140 --> 00:08:08.950
+Na przykład, że chcesz, aby WEP miał więcej, otrzymasz dwa razy więcej żądań niż dwa i trzy.
+
+00:08:09.050 --> 00:08:10.000
+Możesz to zrobić.
+
+00:08:10.040 --> 00:08:11.440
+Możesz mieć różne zamówienia.
+
+00:08:11.450 --> 00:08:14.230
+Ale na razie po prostu uderza się je po kolei.
+
+00:08:14.240 --> 00:08:15.140
+Raz Dwa Trzy.
+
+00:08:15.140 --> 00:08:16.320
+Potem jeden dwa trzy.
+
+00:08:16.460 --> 00:08:20.020
+Jeden dwa trzy bardzo fajne.
+
+00:08:20.020 --> 00:08:22.440
+To było bardzo trudne do zrealizowania.
+
+00:08:22.490 --> 00:08:23.700
+Dobrze.
+
+00:08:23.930 --> 00:08:25.550
+Oto ekscytująca część.
+
+00:08:25.550 --> 00:08:27.550
+Zabawmy się z tym.
+
+00:08:27.560 --> 00:08:30.600
+Mamy teraz system równoważenia obciążenia, który przekazuje żądania.
+
+00:08:30.770 --> 00:08:35.980
+Co, jeśli trafimy na nią z mnóstwem próśb z setkami i setkami wniosków.
+
+00:08:36.140 --> 00:08:41.440
+Cóż, możemy zrobić trochę wyważenia obciążenia testowanie obciążenia.
+
+00:08:41.750 --> 00:08:45.720
+I na szczęście dla nas jest mnóstwo zasobów, które możemy wykorzystać tutaj.
+
+00:08:45.740 --> 00:08:52.670
+Użyjemy niskonakładowego pakietu NPM, ale jest dużo zabawnych brzmiących jak artyleria.
+
+00:08:52.740 --> 00:09:01.280
+Jest oblężona, z której możesz korzystać, a także bardzo popularny w, i wszystkie z nich robią to
+
+00:09:01.280 --> 00:09:01.810
+samo.
+
+00:09:01.850 --> 00:09:07.220
+Symulują żądania i możemy im powiedzieć, ile żądań chcemy trafić w punkcie końcowym,
+
+00:09:07.220 --> 00:09:09.000
+więc użyjmy niskiego testu.
+
+00:09:09.010 --> 00:09:13.730
+Wszystko, co musimy zrobić, to po prostu zainstalować na całym świecie test, który już mam.
+
+00:09:13.730 --> 00:09:19.550
+I może będziesz musiał uruchomić polecenie sudo, a następnie będziesz miał dostępne niskie polecenie
+
+00:09:19.550 --> 00:09:20.000
+testowania.
+
+00:09:20.300 --> 00:09:22.210
+Więc pozwól mi coś zademonstrować.
+
+00:09:22.640 --> 00:09:27.170
+Zamierzam powiedzieć niski test i uruchomić to polecenie.
+
+00:09:27.170 --> 00:09:28.650
+Pozwól, że to trochę większe.
+
+00:09:29.870 --> 00:09:36.190
+Teraz niska kreska testowa mówi po prostu o czterech ograniczeniach czasowych.
+
+00:09:36.190 --> 00:09:44.750
+Chcę, abyś wykonał ten niski test przez pięć sekund, a następnie myślnik C oznacza liczbę klientów, którą
+
+00:09:44.750 --> 00:09:45.930
+chcemy utworzyć.
+
+00:09:46.280 --> 00:09:54.260
+Dlatego tworzymy 100 klientów, a 100 z nich pojawi się jednocześnie na serwerze.
+
+00:09:56.510 --> 00:10:00.790
+A potem w końcu mamy kreskę i nasz P. S. I to oznacza.
+
+00:10:00.870 --> 00:10:02.840
+Szybkość żądań na sekundę.
+
+00:10:02.870 --> 00:10:07.930
+Tak więc wysyłamy 100 żądań na sekundę do localhosta 80.
+
+00:10:08.120 --> 00:10:11.120
+Po naciśnięciu Enter sprawdź, co dzieje się po prawej stronie.
+
+00:10:11.640 --> 00:10:14.360
+Gotowy, dajmy sobie spokój.
+
+00:10:16.510 --> 00:10:18.900
+Jakie to jest świetne.
+
+00:10:18.940 --> 00:10:25.270
+Widać tu, że dzieje się to naprawdę szybko, ale odwraca się od sieci jeden dwa trzy
+
+00:10:25.270 --> 00:10:27.700
+jeden dwa trzy jeden dwa trzy.
+
+00:10:27.810 --> 00:10:30.810
+Otrzymujemy także małe podsumowanie tego, co zrobiliśmy.
+
+00:10:31.730 --> 00:10:34.800
+Jeśli zrobię to trochę mniej, abyśmy mogli lepiej widzieć.
+
+00:10:34.910 --> 00:10:40.290
+Widzimy, że ukończyliśmy czterysta dziewięćdziesiąt dziewięć próśb o 100 żądań na sekundę.
+
+00:10:40.370 --> 00:10:46.850
+Jak już powiedzieliśmy sto poziomów współbieżności ponownie, gdy parametry, które daliśmy, mieliśmy localhost 80, przeprowadziliśmy test przez pięć
+
+00:10:48.080 --> 00:10:56.830
+sekund, a średni czas oczekiwania na odpowiedź wynosił 5. 1 milisekundy dość szybko.
+
+00:10:56.830 --> 00:11:03.590
+I pokazuje ci więcej informacji o tym, ile żądań zostało dostarczonych w określonym czasie, więc wyglądało
+
+00:11:03.770 --> 00:11:04.940
+całkiem nieźle.
+
+00:11:04.940 --> 00:11:06.640
+Oto mały zabawny eksperyment.
+
+00:11:07.760 --> 00:11:14.020
+Co jeśli zamknę to i zamiast kontenera dokowanego, który ma wykrywacz obciążenia.
+
+00:11:14.140 --> 00:11:17.560
+Co jeśli po prostu uruchomimy NPM start.
+
+00:11:17.560 --> 00:11:24.700
+Ustawiłem to tak, że serwer, który jest tylko jednym serwerem, nasłuchuje localhosta trzy tysiące
+
+00:11:24.700 --> 00:11:29.230
+Teraz pamiętaj, nasz dodgiest serwer jest prostym serwerem.
+
+00:11:29.230 --> 00:11:35.200
+Teraz, gdy używam go na localhost 3000, możemy przetestować, co dzieje się, gdy nie ma niskiego równoważnika i
+
+00:11:35.200 --> 00:11:36.380
+tylko jednego serwera.
+
+00:11:36.640 --> 00:11:42.220
+Wszystko, co musimy zrobić, to uruchomić ten sam test, ale tym razem zamiast portu 80 robimy port trzy tysiące.
+
+00:11:42.400 --> 00:11:43.220
+Spróbujmy.
+
+00:11:45.260 --> 00:11:48.370
+I widzisz, że serwer odpowiada, rejestrując go w konsoli.
+
+00:11:48.410 --> 00:11:55.430
+Zostało uderzone przez pięć sekund, a potem mamy odpowiedź.
+
+00:11:55.770 --> 00:11:56.520
+To interesujące.
+
+00:11:56.520 --> 00:12:00.130
+Więc spójrzmy na to.
+
+00:12:00.230 --> 00:12:06.460
+Widzimy tutaj, że mamy ponownie 500 pełnych zadań bez błędów.
+
+00:12:06.460 --> 00:12:14.920
+Tak jak wcześniej, ale średnie opóźnienie wynosiło 2. 3 milisekundy w porównaniu z 5. 1 milisekundy, gdy mieliśmy system
+
+00:12:14.920 --> 00:12:16.350
+równoważenia obciążenia.
+
+00:12:16.360 --> 00:12:18.000
+Hmm interesujące.
+
+00:12:18.430 --> 00:12:24.370
+Zatem brak niskiego balansu tutaj był tutaj szybszy, ponieważ wszystkie dane są takie same, z wyjątkiem
+
+00:12:24.370 --> 00:12:27.710
+faktu, że średnia opóźnienie było o wiele szybsze.
+
+00:12:28.090 --> 00:12:30.130
+I to może mieć sens.
+
+00:12:30.130 --> 00:12:36.190
+Jeden, ponieważ nie trafiliśmy zbytnio w zbyt duży ruch.
+
+00:12:36.370 --> 00:12:42.370
+A także fakt, że używamy tego niskiego balansera w jednym pojemniku, który ma niski balanser i trzy
+
+00:12:42.370 --> 00:12:45.790
+serwery w rzeczywistości, tak naprawdę byśmy tego nie zrobili.
+
+00:12:45.790 --> 00:12:53.140
+Każda z tych usług będzie znajdować się na różnych maszynach w różnych pojemnikach, tak że powoduje to
+
+00:12:53.140 --> 00:12:54.790
+również niewielkie opóźnienie.
+
+00:12:54.790 --> 00:12:56.580
+Ale zwiększmy jeszcze kilka rzeczy.
+
+00:12:56.590 --> 00:12:58.840
+Powiedzmy, że teraz chcę mieć
+
+00:13:02.290 --> 00:13:04.340
+500 żądań na sekundę.
+
+00:13:04.510 --> 00:13:07.830
+Wciśnij enter.
+
+00:13:07.850 --> 00:13:08.290
+W porządku.
+
+00:13:08.300 --> 00:13:08.810
+Dobre.
+
+00:13:08.810 --> 00:13:10.050
+Nie dostaniemy żadnych błędów.
+
+00:13:10.070 --> 00:13:12.290
+Jest w stanie ukończyć żądania.
+
+00:13:12.290 --> 00:13:13.020
+To wspaniale.
+
+00:13:13.130 --> 00:13:13.840
+Co jeśli zrobię.
+
+00:13:13.850 --> 00:13:18.160
+Nawet więcej, jeśli zrobię tysiąc równoległych żądań.
+
+00:13:22.070 --> 00:13:23.630
+W porządku, więc to trochę działa.
+
+00:13:23.630 --> 00:13:26.900
+Ma dwa tysiące dziewięćset osiemdziesiąt dziewięć pełnych próśb.
+
+00:13:26.900 --> 00:13:32.240
+Uruchommy dokument lub skomponuj load balancera i zobaczmy, jak to zadziała.
+
+00:13:37.440 --> 00:13:41.550
+Znowu mam zamiar uruchomić to samo, ale tym razem na porcie 80.
+
+00:13:41.730 --> 00:13:43.170
+Ukończmy to.
+
+00:13:43.380 --> 00:13:45.500
+Nasza głowa robi trochę pracy, wykonując jakąś
+
+00:13:49.280 --> 00:13:50.680
+pracę i homeboy.
+
+00:13:50.780 --> 00:13:53.860
+Te liczby nie wyglądają zbyt dobrze.
+
+00:13:54.650 --> 00:14:04.970
+Mamy średnią opóźnienie 140 milisekund w porównaniu do 2. 9 sekund, a wypełnione żądania są właściwie mniejsze niż wtedy,
+
+00:14:05.030 --> 00:14:07.850
+gdy mieliśmy jeden serwer.
+
+00:14:08.390 --> 00:14:16.010
+I znowu, ponieważ uruchamiamy to na kontenerze, jest wolniejsze, niż gdyby właściwie zaimplementował równoważenie obciążenia,
+
+00:14:16.010 --> 00:14:23.530
+ale używając tego narzędzia, chcę, abyś bawiła się i eksperymentowała z różnymi rzeczami.
+
+00:14:23.580 --> 00:14:30.450
+Sprawdź, czy może uczynić ten moduł równoważenia obciążenia szybciej niż metoda lokalnego hosta.
+
+00:14:30.450 --> 00:14:35.850
+Pamiętaj, że jeśli używasz kontenera, możesz go nie dostać, ale zobacz, jak daleko musisz się posunąć, aby to się nie
+
+00:14:35.850 --> 00:14:36.370
+udało.
+
+00:14:37.710 --> 00:14:44.850
+Mam nadzieję, że masz dobry pomysł na uruchamianie systemu równoważenia obciążenia, jak to może działać, jak możesz zaimplementować, a także
+
+00:14:44.850 --> 00:14:51.150
+jak zrobić coś takiego jak testowanie obciążenia, aby zobaczyć, jak dobry jest twój serwer przy otrzymywaniu żądania
+
+00:14:51.150 --> 00:14:56.580
+i kiedy może potrzebujesz zaktualizować, może mieć więcej serwery mogą mieć system równoważenia obciążenia przed
+
+00:14:56.580 --> 00:14:57.160
+serwerem.
+
+00:14:59.130 --> 00:14:59.700
+W porządku.
+
+00:14:59.700 --> 00:15:04.230
+Idź, baw się dobrze i wypróbuj niski test i baw się dobrze z niskim narzędziem testowym.
+
+00:15:04.410 --> 00:15:05.650
+Zobaczę w następnym.
+
+00:15:05.920 --> 00:15:06.460
+PA pa.

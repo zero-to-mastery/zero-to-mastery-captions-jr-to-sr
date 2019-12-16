@@ -1,0 +1,721 @@
+﻿WEBVTT
+
+00:00:01.510 --> 00:00:12.490
+Hai să vorbim despre primul subiect din steaua noastră de securitate sau steaua securității și aici se injectează
+
+00:00:13.150 --> 00:00:14.030
+aici.
+
+00:00:14.880 --> 00:00:25.330
+Și începem cu injecții, deoarece acestea sunt cele mai frecvente atacuri pentru ultimii
+
+00:00:25.330 --> 00:00:29.550
+ani din toate aceste tehnici.
+
+00:00:29.580 --> 00:00:31.670
+Aceasta este cea mai comună.
+
+00:00:31.710 --> 00:00:40.770
+Lucru care duce la cea mai mare pierdere financiară și aș spune cam 50% din timp dacă
+
+00:00:40.830 --> 00:00:42.500
+preveniți injectarea.
+
+00:00:42.870 --> 00:00:47.750
+Ai acoperit o bucată mare de îmbunătățire a securității.
+
+00:00:47.800 --> 00:00:52.450
+Deci, probabil, cel mai important subiect și este, de asemenea, foarte distractiv de a preda.
+
+00:00:52.530 --> 00:00:53.840
+Așa că vom începe cu asta.
+
+00:00:55.310 --> 00:01:02.460
+Acum injecțiile înseamnă introducerea codului într-o altă bucată de cod.
+
+00:01:02.690 --> 00:01:08.090
+Și există câteva moduri în care puteți face acest lucru, dar este un principiu important ideea că
+
+00:01:08.090 --> 00:01:15.680
+am primit codul pe care nu l-am dorit cu adevărat de la o terță parte unui utilizator sau altcuiva și încearcă să ne încurce
+
+00:01:15.680 --> 00:01:19.430
+codul și să ne schimbe cod și poate face lucruri rele.
+
+00:01:20.840 --> 00:01:27.680
+Și așa cum am spus înainte, este cel mai frecvent atac și una dintre cele
+
+00:01:27.680 --> 00:01:35.710
+mai cunoscute injecții este ceva numit injectare Eskew bine și acestea sunt două exemple de tratament pentru toate injecțiile.
+
+00:01:36.220 --> 00:01:39.400
+Dar știi ce căutăm doar o bucată de text chiar acum.
+
+00:01:39.460 --> 00:01:41.150
+Nu prea înseamnă nimic.
+
+00:01:41.530 --> 00:01:45.300
+Să facem, de fapt, următoarea injecție de combustibil și să vedem cum funcționează.
+
+00:01:48.200 --> 00:01:55.970
+Am de gând să folosesc continuarea care este o bază de date pentru Mac, dar sunt multe alte versiuni pentru Windows și
+
+00:01:55.970 --> 00:01:57.950
+Linux pe care le folosiți.
+
+00:01:57.950 --> 00:02:04.360
+Este, în esență, o interfață grafică de utilizator pentru a vă juca cu baza de date.
+
+00:02:04.430 --> 00:02:12.420
+Deci, o să folosesc acest lucru și ar trebui să îl deschid chiar aici, după cum vedeți că am două mese aici
+
+00:02:12.520 --> 00:02:14.260
+și loghează-i pe utilizatori.
+
+00:02:14.420 --> 00:02:20.560
+Înainte de acest exercițiu, să creăm doar o masă nouă și deja am creat declarația Eskew
+
+00:02:20.560 --> 00:02:21.240
+aici.
+
+00:02:22.230 --> 00:02:28.560
+Și din nou, dacă nu sunteți 100% confortabil cu SU toate încă atunci am acoperi acel subiect în alt curs,
+
+00:02:28.560 --> 00:02:30.810
+așa că am recomandăm să verificați asta.
+
+00:02:30.810 --> 00:02:33.840
+Sau puteți găsi câteva resurse foarte bune online pentru asta.
+
+00:02:33.840 --> 00:02:38.410
+Tot ce vreau să spun este că vreau să creez un nou tabel numit să vă întreb toate injecțiile.
+
+00:02:38.520 --> 00:02:44.620
+Va avea o coloană de ID și o coloană de e-mail dacă dau clic.
+
+00:02:44.660 --> 00:02:48.410
+Ron Querrey Acolo te duci.
+
+00:02:48.660 --> 00:02:55.810
+Dacă actualizez acum, văd că am creat un nou tabel numit salvare toate injecțiile.
+
+00:02:55.950 --> 00:02:59.460
+Acum nu este nimic în grajd, dar avem coloana idee și e-mail.
+
+00:02:59.490 --> 00:03:03.030
+Deci, să adăugăm un nou rând aici.
+
+00:03:03.330 --> 00:03:12.670
+Ei bine, și de fapt am pregătit-o aici, așa că vom face inserția în Eskew toată injecția.
+
+00:03:12.810 --> 00:03:18.180
+Așa că vom introduce în tabel câmpul de e-mail.
+
+00:03:18.270 --> 00:03:19.710
+Vom adăuga.
+
+00:03:19.850 --> 00:03:21.530
+Pai la asta.
+
+00:03:21.590 --> 00:03:23.210
+Deci, să rulați această interogare.
+
+00:03:24.410 --> 00:03:24.990
+In regula.
+
+00:03:25.070 --> 00:03:33.570
+Și dacă ne întoarcem la masă, vedem că avem un nou rând o idee despre unul pentru că l-am pregătit, deci este
+
+00:03:33.570 --> 00:03:34.550
+doar secvențial.
+
+00:03:34.590 --> 00:03:40.870
+Voi continua să adaug două două patru sau cinci și apoi un e-mail de la EHLO bine.
+
+00:03:40.930 --> 00:03:43.670
+Acum, unii vă întreabă cu toții de injectare pe care o putem face.
+
+00:03:44.110 --> 00:03:47.590
+Și vrem să facem ceva de genul asta.
+
+00:03:47.590 --> 00:03:52.870
+Să presupunem că actualizăm acest câmp de e-mail deoarece utilizatorul tocmai v-a schimbat e-mailul.
+
+00:03:52.870 --> 00:04:02.200
+Deci, dacă spun să actualizez e-mailul meu la ceva de genul asta pe care îl avem de la masa noastră și să ne asigurăm că
+
+00:04:05.400 --> 00:04:07.140
+am un citat aici.
+
+00:04:07.200 --> 00:04:17.000
+Deci, ceea ce am intrat este că am introdus valoarea mea de e-mail nou pentru a avea acest cod de cod și vedeți că este un fel
+
+00:04:17.010 --> 00:04:23.450
+de subliniat totul în loc de a fi doar un șir ca și cum ar fi fost dacă
+
+00:04:23.480 --> 00:04:25.290
+am făcut acest lucru.
+
+00:04:25.570 --> 00:04:28.090
+Deci, prin modificarea acelei bucăți de cod
+
+00:04:31.400 --> 00:04:36.240
+ca asta și asigurați-vă că avem acel citat pentru a vedea cum se schimbă culorile.
+
+00:04:36.590 --> 00:04:43.130
+Ceea ce vreau să spun este că am jucat în jurul acestei instrucțiuni Eskew și am făcut-o astfel încât să actualizăm
+
+00:04:43.160 --> 00:04:47.030
+valorile într-un șir gol, dar apoi să adăugăm punct și virgulă.
+
+00:04:47.030 --> 00:04:53.150
+Avem o altă declarație care lasă pe utilizatorii mesei sau să renunțăm la masă.
+
+00:04:53.150 --> 00:04:56.410
+Q Injectarea bine.
+
+00:04:56.590 --> 00:05:00.170
+Apoi închei declarația cu această linie și nu mai
+
+00:05:05.130 --> 00:05:07.080
+avem nevoie de citate.
+
+00:05:07.930 --> 00:05:17.110
+Vedeți că a fost subliniată ca și cum ar fi o salvare sau o interogare și pur și simplu facem drop-ul de masă Escorial
+
+00:05:17.110 --> 00:05:17.650
+injecție.
+
+00:05:17.650 --> 00:05:26.300
+Dacă dau clic pe interogare și acum am reîmprospătat Wu-Wo Ai văzut că sunt askew toate injecțiile.
+
+00:05:26.300 --> 00:05:29.050
+Tabelul a fost abandonat.
+
+00:05:29.050 --> 00:05:29.830
+Asta e corect.
+
+00:05:29.830 --> 00:05:34.840
+Prin adăugarea acestei bucăți de linie am reușit să întocmesc o masă întreagă.
+
+00:05:34.840 --> 00:05:39.560
+Deci puteți vedea cât de vicios ar putea fi dacă aș fi schimbat doar pentru a vă conecta sau pentru utilizatori.
+
+00:05:39.580 --> 00:05:45.440
+Pot trage baza de date a întregii companii și asta pentru că am intrat în această linie.
+
+00:05:45.640 --> 00:05:52.690
+Deci, chiar dacă ne așteptam la o valoare de e-mail în loc să furnizăm un e-mail pe
+
+00:05:52.690 --> 00:06:01.400
+care tocmai l-am trimis peste acest cod care a extins în mod esențial declarația școlii pentru a renunța la masa extrem de periculoasă.
+
+00:06:01.400 --> 00:06:06.570
+Tocmai a fost martorul uneia dintre cele mai comune metode prin care site-urile Web sunt atacate.
+
+00:06:06.650 --> 00:06:12.740
+Oamenii continuă să copieze și să lipsească aceste linii în diferite intrări pe site-uri web și aplicații și să vadă dacă
+
+00:06:12.890 --> 00:06:14.670
+face ceva și scade tabelele.
+
+00:06:17.030 --> 00:06:23.310
+Și dacă ne întoarcem aici, vedem și acest top pe virgul Says sau vrea să fie egal cu unul.
+
+00:06:23.300 --> 00:06:25.950
+Din nou, linia de bord ignoră totul după.
+
+00:06:26.230 --> 00:06:29.620
+Ei bine, acest lucru poate fi pus într-o simt parolă.
+
+00:06:29.620 --> 00:06:36.610
+De exemplu, trebuie să vă conectați la un site web și acesta să menționeze numele dvs. de utilizator și
+
+00:06:36.610 --> 00:06:44.080
+parola dvs. prin adăugarea acestei linii pe care o spuneți în câmpul de parolă Aștept o parolă și o voi transmite
+
+00:06:44.350 --> 00:06:51.640
+acesteia în declarația școlii, O să-i las doar un șir gol și apoi să spun sau unul este egal cu unul
+
+00:06:51.640 --> 00:06:52.880
+care este adevărat.
+
+00:06:53.260 --> 00:07:00.130
+Deci, ceea ce inseamna aceasta este skewl baza de date este de gând să verifice hei există acest utilizator există și face
+
+00:07:00.130 --> 00:07:01.430
+această parolă meci.
+
+00:07:01.480 --> 00:07:07.330
+Dar atunci pentru că nu suntem noi adăugăm acest lucru sau spunem că se potrivește parola sau nu o
+
+00:07:07.530 --> 00:07:15.220
+ECO una și returnează informațiile complete de utilizator și vă loghează și nu vă faceți griji am de gând să plece și exercițiu distractiv pentru tine
+
+00:07:15.220 --> 00:07:19.520
+după acest videoclip, astfel încât să puteți practica acest lucru pe cont propriu.
+
+00:07:19.990 --> 00:07:26.590
+Acest lucru a evitat toate injecțiile și acest lucru se întâmplă cu bazele de date, dar injecțiile se pot
+
+00:07:26.680 --> 00:07:32.500
+întâmpla oriunde în momentul în care un utilizator trebuie să introducă ceva ce puteți face injecții.
+
+00:07:32.960 --> 00:07:40.190
+Permiteți-mi să vă arăt un alt exemplu pe care l-am creat aici, un exercițiu de securitate și nu vă faceți griji că vă voi da acces
+
+00:07:40.190 --> 00:07:43.130
+la aceste fișiere pentru a putea să jucați cu ei.
+
+00:07:43.430 --> 00:07:46.000
+Dar am creat un site web foarte simplu.
+
+00:07:46.010 --> 00:07:48.200
+Dacă te uiți la index nu este un shemale.
+
+00:07:48.200 --> 00:07:49.940
+Nu se petrece prea mult aici.
+
+00:07:50.510 --> 00:07:54.570
+Și avem doar un buton care la clic trimite informații la server.
+
+00:07:54.860 --> 00:07:57.340
+Și am instalat și un server.
+
+00:07:57.380 --> 00:07:59.580
+Și nu-ți face griji că vom trece peste asta.
+
+00:07:59.600 --> 00:08:05.110
+Acesta este un server expres și tot ceea ce facem este că suntem trimisi.
+
+00:08:05.120 --> 00:08:07.010
+Avem o cerere de gol.
+
+00:08:07.010 --> 00:08:14.420
+Deci, dacă mă duc să încep serverul, să spunem că NPM începe.
+
+00:08:14.550 --> 00:08:16.470
+Ascultăm portul 3000.
+
+00:08:16.470 --> 00:08:19.860
+Deci, dacă mă duc la browserul meu
+
+00:08:23.680 --> 00:08:31.300
+Chrome și să deschid localhost trei mii opt vom vedea textul Hello World, deoarece End Point va
+
+00:08:31.300 --> 00:08:32.860
+reveni Hello world.
+
+00:08:32.860 --> 00:08:38.830
+Și apoi avem și un alt punct final care este o solicitare de post secret și vă
+
+00:08:38.830 --> 00:08:41.740
+voi arăta ce se întâmplă pe front.
+
+00:08:42.770 --> 00:08:49.970
+Putem să deschidem indexul care arată un fișier în browserul nostru care arată așa.
+
+00:08:50.040 --> 00:08:51.810
+Foarte simplu site web.
+
+00:08:51.840 --> 00:08:56.510
+Tot ce am este un câmp de intrare și pot lovi trimite.
+
+00:08:56.850 --> 00:09:03.080
+Acum, acest buton de trimitere, dacă ne întoarcem la cod, pur și simplu spune trimite la server.
+
+00:09:03.390 --> 00:09:12.150
+Vom lua valoarea de intrare și apoi o voi executa prin această funcție, care pur și
+
+00:09:12.150 --> 00:09:17.050
+simplu nu adaugă textul la pagina noastră Web.
+
+00:09:17.130 --> 00:09:28.620
+Deci, din nou, dacă scriu salut, Samit văd textul Hello pe pagina web și după ce facem că facem și o preluare a unui apel
+
+00:09:28.620 --> 00:09:37.620
+API către serverul nostru și trimitem secretul prin metoda POST folosind șirul de phi al lui Jay Saunders.
+
+00:09:37.670 --> 00:09:40.780
+Trimitem intrarea utilizatorului.
+
+00:09:40.980 --> 00:09:42.720
+Și ca Jason.
+
+00:09:42.860 --> 00:09:45.660
+Așa că îl trimitem în corp.
+
+00:09:45.710 --> 00:09:53.230
+Odată ce faceți clic pe salut și deschideți fila Rețea, lăsați să faceți clic din
+
+00:09:53.320 --> 00:09:57.180
+nou, vedem că trimitem secretul la Bacchante.
+
+00:09:57.370 --> 00:09:57.790
+Asta e.
+
+00:09:57.790 --> 00:10:02.580
+Nimic prea nebun dacă nu sunteți prea familiarizat cu serverele de noduri.
+
+00:10:02.590 --> 00:10:08.530
+Apoi, din nou, vă recomand să verificați alt curs, dar nu trebuie să vă faceți griji prea multe despre
+
+00:10:08.530 --> 00:10:09.090
+asta.
+
+00:10:09.100 --> 00:10:13.270
+Ceea ce vrem să facem aici este să practicăm o altă formă de injectare.
+
+00:10:13.660 --> 00:10:21.490
+Ne așteptăm ca utilizatorii noștri să se joace și să introducă ceea ce vor, dar ce se întâmplă dacă o persoană rău vine și spune
+
+00:10:21.490 --> 00:10:27.810
+ce se întâmplă dacă fac doar un etichetă de script aici pentru că îl adăugăm la el în regulă.
+
+00:10:27.820 --> 00:10:31.470
+Pur și simplu adăugăm tot ce am ajuns aici la echipa noastră de mai multe săptămâni.
+
+00:10:31.750 --> 00:10:34.170
+Deci, haideți să facem
+
+00:10:37.740 --> 00:10:47.740
+acest boom de alertă auto script și apoi vom închide această filă tag-ul script și acum sperăm să rulați scenariul aici.
+
+00:10:47.740 --> 00:10:48.920
+Să vedem dacă funcționează.
+
+00:10:51.660 --> 00:10:53.010
+Nimic nu se intampla.
+
+00:10:53.010 --> 00:10:55.420
+Considerăm și imprimăm orice.
+
+00:10:55.560 --> 00:11:03.750
+Acum, dacă ne întoarcem la cod, vedem că primim contribuția și apoi folosim LMD interior care este rău așa cum puteți
+
+00:11:04.230 --> 00:11:12.480
+vedea aici la un P-TECH, dar din fericire pentru noi când scenele sunt injectate în zorii zilei scenariul lui Dag este așa
+
+00:11:12.540 --> 00:11:14.120
+cum îl avem.
+
+00:11:14.250 --> 00:11:16.830
+Și folosim interfața shemale.
+
+00:11:17.050 --> 00:11:24.010
+De fapt, ei nu au un timp când au fost injectați, deoarece Domul a alergat deja și o șmecherie este suficient de inteligentă pentru
+
+00:11:24.010 --> 00:11:26.140
+a spune că nu voi face asta.
+
+00:11:26.130 --> 00:11:34.740
+Sună ca o idee proastă, deoarece scripturile de genul asta, care se numesc script inline, se execută numai
+
+00:11:34.740 --> 00:11:37.530
+la momentul analizării paginii originale.
+
+00:11:37.530 --> 00:11:45.830
+Deci, dacă voi reîmprospăta acest lucru, care nu va funcționa pe de altă parte, este ceva ce putem face.
+
+00:11:46.930 --> 00:11:47.920
+Verifică asta.
+
+00:11:48.160 --> 00:11:58.930
+Dacă intrăm ceva asemănător cu o etichetă de imagine, cu o sursă de nimic, nu e doar o tăietură și pentru că nu există nici o sursă, asta se
+
+00:11:58.950 --> 00:12:00.810
+va face în aer.
+
+00:12:00.840 --> 00:12:11.590
+Putem face un eveniment pe aer care vine în mod standard cu un shemale și aici pot spune Alert.
+
+00:12:11.780 --> 00:12:15.330
+Boom și închideți faptul că, dacă fac acest lucru,
+
+00:12:19.500 --> 00:12:25.350
+o etichetă de imagine care nu va putea prelua nicio imagine și va avea o eroare
+
+00:12:25.380 --> 00:12:26.310
+de alertă.
+
+00:12:26.370 --> 00:12:35.740
+Boom dacă fac clic pe trimiteți și să deschidem consola și neașteptate și să avem o intrare, deoarece ar trebui să
+
+00:12:35.740 --> 00:12:37.540
+folosim ghilimele duble aici.
+
+00:12:40.660 --> 00:12:41.740
+Așa că încercați din nou.
+
+00:12:45.640 --> 00:12:54.430
+Tocmai am rulat un scenariu pe care l-am injectat în browserul nostru și acest lucru se datorează faptului că imaginile
+
+00:12:54.430 --> 00:12:58.140
+sunt injectate în DOM în momentul întâlnirii imaginilor.
+
+00:12:58.330 --> 00:13:04.770
+Și dacă încărcarea eșuează așa cum vedeți aici la fiecare eveniment, apelantul este chemat.
+
+00:13:05.020 --> 00:13:13.580
+Ceea ce am făcut acum este că am injectat o bucată de cod care este cu adevărat rău într-un site web.
+
+00:13:13.750 --> 00:13:19.660
+Deci, dacă mergeți pe site-uri web și copiați și lipiți acest lucru și încercați să-l trimiteți și nu
+
+00:13:19.660 --> 00:13:25.030
+au bune practici de securitate, puteți injecta toate scripturile pe care le doriți într-un site web.
+
+00:13:25.180 --> 00:13:27.520
+Folosiți din nou aceste informații cu înțelepciune.
+
+00:13:27.520 --> 00:13:29.960
+Nu fi rău cu aceste informații.
+
+00:13:30.040 --> 00:13:34.200
+Folosim acest lucru ca o modalitate de a învăța cum să prevenim astfel de atacuri.
+
+00:13:36.030 --> 00:13:38.230
+Deci, cum prevenim acest lucru.
+
+00:13:38.580 --> 00:13:40.470
+Destul de simplu.
+
+00:13:40.560 --> 00:13:45.810
+În loc să folosim acest stimulent energetic și de aceea spun că Inari shemale este rău, nu-l folosești.
+
+00:13:45.810 --> 00:13:49.130
+Vrem să folosim așa ceva.
+
+00:13:49.150 --> 00:13:56.340
+Un ultim comentariu care afișează acest lucru creează un nod de text care este de intrare.
+
+00:13:56.400 --> 00:14:03.180
+Deci, indiferent de ce input este acest nod de creare a textului, o va converti într-un text pur și
+
+00:14:03.180 --> 00:14:05.300
+face ceva care îl dezavantajează.
+
+00:14:05.340 --> 00:14:13.290
+Și din acest motiv nu putem atașa doar un nod de text la etichetă și nu contează cât de răi suntem cu
+
+00:14:13.290 --> 00:14:14.310
+codul nostru.
+
+00:14:14.430 --> 00:14:16.090
+Nu va face nimic.
+
+00:14:16.530 --> 00:14:19.860
+Lasă-mă să salvez și să-ți arăt dacă rezolvă asta.
+
+00:14:19.890 --> 00:14:27.760
+Deci o să mă supun din nou Oh și trebuie să reîmprospătesc pagina să mă reîmprospătesc și să încercăm din nou asta din
+
+00:14:28.540 --> 00:14:29.230
+nou.
+
+00:14:29.230 --> 00:14:30.900
+O să copiez și să o lipesc din nou.
+
+00:14:30.910 --> 00:14:39.730
+Același lucru, dacă dau clic pe Trimiteți inima nu se întâmplă nimic și aceasta este doar convertiți-l în text.
+
+00:14:39.800 --> 00:14:41.090
+A fost destul de răcoros.
+
+00:14:42.160 --> 00:14:42.640
+In regula.
+
+00:14:42.700 --> 00:14:44.940
+Am aflat despre injecții.
+
+00:14:44.950 --> 00:14:47.060
+Ce putem face pentru a le rezolva?
+
+00:14:47.590 --> 00:14:50.770
+Ei bine, sunt trei lucruri principale pe care am vrut să le amintesc.
+
+00:14:50.770 --> 00:14:57.850
+Unul este de a face ceva numit input de dezintoxicare și asta este ceva ce am făcut cu câmpul de intrare
+
+00:14:57.880 --> 00:14:58.910
+de pe site.
+
+00:14:59.260 --> 00:15:03.790
+Ideea se numește filozofia listei albe.
+
+00:15:04.150 --> 00:15:11.170
+Și ceea ce înseamnă aceasta este pentru validarea datelor sau orice altceva ce permite utilizatorilor să introducă
+
+00:15:11.200 --> 00:15:17.380
+date despre tipul dvs. de așteptat numai dacă vă așteptați la introducerea unui text.
+
+00:15:17.380 --> 00:15:25.270
+Un e-mail pentru a introduce un număr de telefon vă asigură că verificați folosind javascript că numai acele lucruri sunt
+
+00:15:25.270 --> 00:15:25.760
+folosite.
+
+00:15:25.780 --> 00:15:32.320
+De exemplu, cu un număr de telefon, asigurați-vă că sunt doar numere care să spunem 10 cifre.
+
+00:15:32.860 --> 00:15:35.460
+Dacă nu este tipul potrivit, aruncați-o.
+
+00:15:35.470 --> 00:15:36.790
+Așa că îl dezinfectăm.
+
+00:15:36.790 --> 00:15:37.750
+Îl curățăm.
+
+00:15:37.960 --> 00:15:45.100
+Și prin dezinfectarea și curățarea într-un format pe care dorim să-l folosim cum ar fi javascript ne asigurăm că indiferent
+
+00:15:45.100 --> 00:15:50.980
+de ce pot introduce toate aceste coduri proaste nu contează pentru că deja am curățat contribuția
+
+00:15:50.980 --> 00:15:54.560
+dvs. și nu va face nimic la sistemul meu.
+
+00:15:55.620 --> 00:15:59.570
+De asemenea, dezinfecția este efectuată prin utilizarea fie a acestora.
+
+00:15:59.700 --> 00:16:02.680
+Cum am spus o listă albă sau o listă neagră.
+
+00:16:02.700 --> 00:16:04.830
+Deci, de ce lista este lucruri bune pe care le poți face.
+
+00:16:04.830 --> 00:16:08.340
+Lista neagră este despre lucruri pe care nu ar trebui să le faceți.
+
+00:16:08.400 --> 00:16:14.550
+Deci, unele dintre lucrurile pe care le putem face este eliminarea unei etichete shemale, păstrând probabil conținutul
+
+00:16:14.970 --> 00:16:18.010
+sau păstrând tot conținutul efectiv al unei etichete.
+
+00:16:19.530 --> 00:16:25.120
+Sau împiedicați utilizatorul să primească o notificare care să spună că nu puteți pune acele informații acolo.
+
+00:16:25.170 --> 00:16:27.200
+Încercați din nou să puneți ceva.
+
+00:16:27.240 --> 00:16:33.290
+Al doilea punct este ceva numit interogare parametrizată și se mai numește și declarații pregătite.
+
+00:16:34.230 --> 00:16:42.080
+Și este o modalitate de a preveni injecțiile Eskew Ei bine, așa cum am văzut-o precompilați și Eskew toate afirmațiile,
+
+00:16:42.080 --> 00:16:45.890
+astfel încât tot ce trebuie să furnizați sunt parametrii.
+
+00:16:45.890 --> 00:16:47.560
+Gândiți-vă la aceasta ca o funcție.
+
+00:16:47.650 --> 00:16:56.070
+Dacă ne întoarcem la exemplul nostru, în loc să permitem utilizatorului să intre pe orice vreau ceea ce dorim să facem este să
+
+00:16:56.070 --> 00:16:58.050
+avem un fel de funcție.
+
+00:16:58.050 --> 00:17:05.490
+Deci, permiteți-mi să deschid o filă aici o consolă fila și aveți o funcție
+
+00:17:05.490 --> 00:17:15.680
+să spunem că este a cere bine selectați declarație și în interiorul aici vă dau variabilei numele e-mail, probabil, ID variabilă
+
+00:17:15.680 --> 00:17:26.070
+și în interiorul acestei funcții ai avea ceva de genul Dacă numele este egal cu numărul pe care îl puteți exprima.
+
+00:17:26.080 --> 00:17:34.190
+Sau puteți spune că dacă numele nu are lungimea acestui nume sau dacă numele include caractere ale acestuia, aveți
+
+00:17:34.640 --> 00:17:37.790
+control asupra a ceea ce intră utilizatorul.
+
+00:17:37.790 --> 00:17:44.990
+Acum, aceasta este o problemă destul de mare că există deja o mulțime de soluții
+
+00:17:44.990 --> 00:17:48.920
+foarte bune și se numesc carturari relaționali obiect.
+
+00:17:49.070 --> 00:17:54.860
+Asta este faptul că acestea oferă aceste declarații pregătite Eskew toate declarațiile pentru tine, astfel încât tot ce ai nevoie
+
+00:17:54.860 --> 00:17:56.560
+pentru a furniza sunt parametrii.
+
+00:17:56.630 --> 00:18:00.920
+Așa cum am arătat că vă gândiți la ele ca la variabile care trebuie introduse în Steelmen pentru
+
+00:18:01.010 --> 00:18:02.480
+ca acestea să fie executate.
+
+00:18:02.720 --> 00:18:08.510
+Și astfel împiedică lucrurile pe care nu le place să cadă masa și să putem intra în
+
+00:18:08.510 --> 00:18:09.340
+orice vrem.
+
+00:18:09.440 --> 00:18:17.510
+Și așa cum afirmați toate, unul dintre exemplele foarte bune ale acestui lucru este K'NEX, care ne-a adus la o parte, pe
+
+00:18:17.510 --> 00:18:26.450
+care o folosim cu creierul nostru inteligent, acum, unde putem folosi lucrurile ca și cum am merge să selectăm că putem să-i dăm parametrii pe
+
+00:18:26.450 --> 00:18:32.030
+care îi spunem este conectați punctele selectați și îi oferim parametrii de care avem nevoie.
+
+00:18:32.030 --> 00:18:35.860
+Să spunem că vrem să obținem autorul titlului în anul din tabelul cărții.
+
+00:18:35.990 --> 00:18:38.370
+Și acesta este singurul lucru pe care îl putem face.
+
+00:18:38.540 --> 00:18:43.260
+K'NEX are grijă să construiască toate declarațiile ASCII pentru noi.
+
+00:18:43.340 --> 00:18:46.030
+Dar parametrizarea este totul.
+
+00:18:46.040 --> 00:18:51.550
+Așadar putem furniza parametrii numai în declarație.
+
+00:18:51.570 --> 00:18:52.320
+In regula.
+
+00:18:52.530 --> 00:18:53.750
+Deci, tu o ai.
+
+00:18:53.790 --> 00:18:55.470
+Acestea sunt injecții.
+
+00:18:55.470 --> 00:19:02.730
+Îi împiedici pe aceștia și tu să te asiguri că orice intrare a utilizatorului este ceva pe care programul tău îl așteaptă
+
+00:19:03.730 --> 00:19:07.120
+atunci vei evita majoritatea problemelor de securitate care sunt acolo.
+
+00:19:07.120 --> 00:19:16.980
+Asa cum am spus ca injectiile sunt cauza numarul unu de atacuri pe site-uri Web, astfel validate fiecare ultimul bit de intrare
+
+00:19:16.980 --> 00:19:17.900
+de utilizator.
+
+00:19:18.030 --> 00:19:26.430
+Folosind y liste pe partea clientului, precum și serverul și niciodată nu injectați direct la conținutul de utilizator în ceva
+
+00:19:26.520 --> 00:19:27.820
+din nou.
+
+00:19:27.900 --> 00:19:30.780
+Intrarea utilizatorilor trebuie întotdeauna de încredere.
+
+00:19:30.810 --> 00:19:36.580
+Singurul lucru pe care îl pot controla pe care îl puteți controla este modul în care executați programul, astfel încât să puteți
+
+00:19:36.600 --> 00:19:39.730
+modifica orice date neîncrezătoare și să aveți încredere în acest lucru.
+
+00:19:39.950 --> 00:19:41.740
+Voi vedea în următorul Buh-Bye.

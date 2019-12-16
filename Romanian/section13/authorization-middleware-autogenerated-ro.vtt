@@ -1,0 +1,502 @@
+﻿WEBVTT
+
+00:00:01.040 --> 00:00:02.120
+Bine ai revenit.
+
+00:00:02.150 --> 00:00:10.820
+Să terminăm în final acest exercițiu și ceea ce vrem să facem aici este să folosim un mijloc în care cuvintele de
+
+00:00:10.820 --> 00:00:19.310
+mijloc sunt foarte utile în ceva de genul unui server pentru că ne asigurăm că putem rezolva cazurile în care întotdeauna
+
+00:00:19.670 --> 00:00:22.550
+trebuie să acționăm în baza cererii.
+
+00:00:22.610 --> 00:00:30.470
+De exemplu, analizorul corporal nu ne permite Jaison să adăugăm Jason corpului nostru de solicitare și să avem acces la el.
+
+00:00:30.680 --> 00:00:38.390
+Deci, ar fi cu adevărat plăcut dacă avem o metodă de necesitate sau un middleware pe care îl putem folosi care
+
+00:00:38.450 --> 00:00:45.230
+întotdeauna verifică și protejează orice puncte finale care ar trebui să fie foarte sensibile și ar trebui să aibă
+
+00:00:45.460 --> 00:00:47.340
+acces doar la autoritate.
+
+00:00:47.400 --> 00:00:49.350
+Deci, să scriem asta mai întâi.
+
+00:00:49.500 --> 00:00:54.950
+Vreau să mă asigur că voi crea un Auth. serviciu.
+
+00:00:54.990 --> 00:00:57.330
+Să spunem că se cere acest
+
+00:01:01.800 --> 00:01:06.730
+lucru și orice punct final care necesită Auth. poate folosi doar acest lucru.
+
+00:01:06.960 --> 00:01:12.840
+În cazul meu, poate că nu o vrem pentru registru, deoarece oamenii bine se înregistrează că nu
+
+00:01:12.840 --> 00:01:13.930
+au autorizație.
+
+00:01:14.280 --> 00:01:20.310
+Totuși, vreau să obțin un profil pentru obținerea profilului pe care îl vreau și pentru profil.
+
+00:01:22.050 --> 00:01:29.280
+Actualizări și poate și pentru imagini vrem să ne asigurăm că utilizatorul care utilizează serviciul nostru de recunoaștere a imaginilor
+
+00:01:29.310 --> 00:01:37.080
+este un utilizator actual, astfel încât utilizarea acestui nou middleware pe care o vom implementa pe nimeni dacă nu sunteți un
+
+00:01:37.080 --> 00:01:43.680
+utilizator înregistrat care are sesiuni cu noi care este conectat și este în baza noastră de date.
+
+00:01:43.680 --> 00:01:47.000
+Ei bine, dacă nu sunteți unul dintre ei, nu aveți acces aici.
+
+00:01:47.960 --> 00:01:52.840
+Deci, să mergem mai departe și de fapt să creăm asta acum.
+
+00:01:52.880 --> 00:02:00.890
+De obicei, îmi place să creez un folder middleware, dar pentru moment să creăm doar un
+
+00:02:00.890 --> 00:02:07.090
+fișier de controler și vom numi această autorizație de fișiere nedreptătoare Da.
+
+00:02:07.440 --> 00:02:08.870
+Și această autorizație.
+
+00:02:09.090 --> 00:02:09.840
+Da.
+
+00:02:09.930 --> 00:02:14.830
+Primul lucru de care avem nevoie este clientul roșu S.
+
+00:02:14.850 --> 00:02:24.200
+Trebuie să ne asigurăm că putem verifica clientul Radice pe care îl avem pe acel utilizator și
+
+00:02:24.200 --> 00:02:28.290
+pentru că clientul Radice este o semnătură.
+
+00:02:28.350 --> 00:02:34.080
+Doug Da, putem doar să importăm aici pentru moment, dar pentru viitor am putea să-l mutăm pe server astfel
+
+00:02:34.080 --> 00:02:39.310
+încât alte fișiere de care aveam nevoie de alți controlori și middleware să poată fi doar importate.
+
+00:02:39.540 --> 00:02:44.130
+Pentru moment, totuși, să adăugăm clientul Berettas exporturilor noastre
+
+00:02:47.780 --> 00:02:55.860
+pentru a ne asigura că adăugăm un comentariu aici și să lăsăm pe clientul rattus din calea
+
+00:03:01.170 --> 00:03:09.460
+noastră relativă, care este semnul în dodginess și vom numi pur și simplu metoda roșie a clientului S
+
+00:03:09.460 --> 00:03:09.980
+aceasta.
+
+00:03:12.380 --> 00:03:14.040
+Și să creăm acest middleware acum.
+
+00:03:14.180 --> 00:03:20.610
+Voi spune că costul necesită Auth. este egal.
+
+00:03:21.090 --> 00:03:30.560
+Va primi cererea și răspunsul, deoarece amintiți-vă că a răspuns că Isus de fiecare dată când
+
+00:03:30.560 --> 00:03:39.150
+acest lucru devine numit Ei vor primi un parametru de răspuns cerere aici.
+
+00:03:39.250 --> 00:03:42.710
+Acum permiteți-mi să fiu sigur că spun asta.
+
+00:03:42.760 --> 00:03:46.040
+Așa că avem acum disponibilitatea aici.
+
+00:03:46.170 --> 00:03:52.610
+Există de fapt un al treilea parametru pe care îl obțineți cu Express și se numește următorul.
+
+00:03:52.900 --> 00:03:59.960
+Iar după cum sugerează și numele, ne permite să continuăm să mergem în lanț aici folosind următoarea.
+
+00:03:59.980 --> 00:04:04.570
+Spun OK face ceva în această funcție.
+
+00:04:04.750 --> 00:04:09.990
+Odată ce am terminat, dacă alerg după aceea, el continuă să meargă la următoarea parte, care este aici.
+
+00:04:10.890 --> 00:04:17.760
+Așadar, vrem să ne asigurăm că aici, chiar la sfârșit, vom face tot ce vom face, urmând să
+
+00:04:17.760 --> 00:04:19.450
+ne întoarcem în continuare.
+
+00:04:19.470 --> 00:04:25.800
+Deci, este un middleware un middleware doar lucrurile trec prin lucrurile mele modifica sau verifica lucrurile in
+
+00:04:25.800 --> 00:04:26.390
+mijloc.
+
+00:04:26.610 --> 00:04:34.770
+La fel ca pachetul de curs sau postura corpului sau Morgan face ceasuri răspunsul la cerere face ceva ca să
+
+00:04:34.770 --> 00:04:37.870
+se deconecteze și apoi sună la următoarea.
+
+00:04:37.890 --> 00:04:39.770
+Așa că continuă să o treacă.
+
+00:04:41.340 --> 00:04:49.780
+Pentru moment și necesită auth vom face o logică simplă aici care spune că dacă există autorizație, atunci o
+
+00:04:53.680 --> 00:04:58.200
+să cerem sau o vom lua de la anteturi.
+
+00:04:59.750 --> 00:05:06.020
+Și acum putem face o verificare dacă nu există nicio autorizație.
+
+00:05:06.170 --> 00:05:11.140
+În acest caz, vreau să mă întorc și nici măcar nu mă deranjează să mă descurc cu următorul.
+
+00:05:11.470 --> 00:05:17.090
+Doar returnați o stare de răspuns care este 401.
+
+00:05:18.250 --> 00:05:27.600
+Și vom spune că asta va spune Jaison că este autorizat.
+
+00:05:27.660 --> 00:05:35.100
+Cu toate acestea, dacă au autorizația și cererea lor, în acest caz vrem să ne întoarcem orice
+
+00:05:35.100 --> 00:05:37.290
+ne dă clientul Radice.
+
+00:05:37.290 --> 00:05:46.070
+Deci, dacă facem o cerere, vom avea autorizarea ca cheia și vom încerca să obținem asta.
+
+00:05:46.110 --> 00:05:54.050
+Și bazându-ne pe Get, vom primi un răspuns de eroare și am făcut acest lucru înainte și
+
+00:05:54.650 --> 00:06:01.560
+acest răspuns de eroare va trebui să spunem dacă există sau nu răspuns.
+
+00:06:01.560 --> 00:06:07.230
+În acest caz, vom reveni din nou la același lucru cu 401.
+
+00:06:08.930 --> 00:06:22.040
+În caz contrar, doar o să lăsăm așa sau chiar să o punem în scenă.
+
+00:06:22.080 --> 00:06:23.610
+Deci, ce se întâmplă aici.
+
+00:06:24.030 --> 00:06:30.780
+Ei bine, tot ceea ce facem ca autorii să facă este încercarea de a bloca cererea de a merge mai departe
+
+00:06:30.780 --> 00:06:32.410
+dacă nu îndeplinim toate criteriile.
+
+00:06:32.730 --> 00:06:39.780
+Dacă există suficientă autorizație Hetter dacă nu există niciunul care să spună doar dacă este autorizat dacă
+
+00:06:39.780 --> 00:06:46.320
+există un antet de autorizare, vom verifica dacă rattul va avea ceva de fapt acolo.
+
+00:06:46.560 --> 00:06:49.170
+Dacă nu bine, atunci neautorizat.
+
+00:06:49.560 --> 00:06:52.050
+Altfel nu vom face absolut nimic.
+
+00:06:52.050 --> 00:06:58.200
+Vom trece doar prin asta și vom proceda în continuare pentru a obține orice punct final de care are nevoie utilizatorul.
+
+00:06:59.810 --> 00:07:05.390
+Și aceasta este o simplă demonstrație simplă a middleware-ului și o putem folosi într-un mod frumos acum.
+
+00:07:05.570 --> 00:07:08.740
+Asa cum ti-am aratat facand exporturile
+
+00:07:13.800 --> 00:07:26.580
+de module si logoul consolei legist aici, ca sa vedem ca este un fapt pe care il vei transfera aici, va spune sa ceri cererea.
+
+00:07:26.620 --> 00:07:27.770
+Să spunem asta.
+
+00:07:28.170 --> 00:07:29.670
+Și în cele din urmă pe server.
+
+00:07:29.730 --> 00:07:31.090
+Da, da.
+
+00:07:31.120 --> 00:07:35.820
+Importă-l de fapt.
+
+00:07:35.920 --> 00:07:44.090
+Și să o sunăm și va veni de la autorizarea gândită da sau nu avem nevoie de da
+
+00:07:44.100 --> 00:07:45.240
+pentru moment.
+
+00:07:45.240 --> 00:07:46.820
+Lasă-l așa.
+
+00:07:46.860 --> 00:07:50.550
+Acum putem să-l folosim pe Daut să cerem totul.
+
+00:07:51.000 --> 00:07:55.440
+Deci, dacă salvez aici, sperăm că vom ajunge acum, câțiva ani.
+
+00:07:55.440 --> 00:07:56.940
+Să vedem ce am făcut aici.
+
+00:07:57.870 --> 00:08:01.620
+Tipul de aer necesar de la clientul său nu este o funcție.
+
+00:08:02.180 --> 00:08:04.820
+Deci nu mi-ar fi putut exploata așa cum trebuie.
+
+00:08:04.820 --> 00:08:06.440
+Să verificăm asta.
+
+00:08:06.520 --> 00:08:11.040
+Du-te gratuit la seinen.
+
+00:08:11.110 --> 00:08:20.830
+Vrem să ne asigurăm că clientul roșu S este exportat și de fapt nu avem nevoie să executați această funcție, așa cum
+
+00:08:20.850 --> 00:08:23.610
+ar trebui să fie așa.
+
+00:08:23.640 --> 00:08:24.990
+Asigurați-vă că totul funcționează OK.
+
+00:08:24.990 --> 00:08:26.840
+Aplicația rulează pe portul trei mii.
+
+00:08:27.030 --> 00:08:30.850
+Dacă mă întorc la terminalul meu, faceți clic pe conectați-vă.
+
+00:08:30.870 --> 00:08:36.290
+În regulă, mă pot conecta și îți dau trecătoare.
+
+00:08:36.290 --> 00:08:36.920
+In regula.
+
+00:08:36.920 --> 00:08:37.520
+Perfect.
+
+00:08:37.640 --> 00:08:39.550
+Dacă încerc să obțin o imagine.
+
+00:08:39.590 --> 00:08:40.980
+Să facem doar imagini
+
+00:08:44.090 --> 00:08:45.170
+cu fața.
+
+00:08:46.540 --> 00:08:47.840
+Ei bine, o să-l folosesc pe
+
+00:08:51.200 --> 00:08:52.330
+cel care se întoarce aici.
+
+00:08:54.010 --> 00:09:00.900
+Detectați-i pe băiat pe autorizat, iar aici avem câteva erori.
+
+00:09:00.970 --> 00:09:03.900
+De ce este asta?
+
+00:09:04.420 --> 00:09:06.980
+Și există o eroare în ceea ce privește modul în care ne putem îmbunătăți aici.
+
+00:09:07.030 --> 00:09:09.630
+Dar principalul lucru este că atingem aceste obiective.
+
+00:09:09.760 --> 00:09:15.270
+Imaginați-vă imaginea L că sunt bine neautorizate.
+
+00:09:15.280 --> 00:09:18.650
+Nu suntem de fapt nu am implementat pe front.
+
+00:09:18.730 --> 00:09:27.480
+Ce se întâmplă atunci când realizăm imaginea mânerului și manipulăm apelul API, deoarece vrem să trimitem tokenul.
+
+00:09:28.080 --> 00:09:33.950
+Și dacă nu trimitem un simbol, nu ar trebui să așteptăm nimic înapoi.
+
+00:09:34.320 --> 00:09:37.890
+Deci, să ne întoarcem la capătul din față și să rezolvăm unele dintre acestea.
+
+00:09:37.950 --> 00:09:44.520
+Trebuie să adăugăm antetul de autorizare imaginii și imaginii pe care ni le găsiți.
+
+00:09:44.520 --> 00:09:50.860
+Deci, permiteți-mi să copiez acest lucru și să vin la laptop.
+
+00:09:50.910 --> 00:09:51.960
+Da.
+
+00:09:52.060 --> 00:09:52.730
+Și un apt.
+
+00:09:52.840 --> 00:09:55.680
+Da, găsiți unde ne numim imaginile noastre și noi vedem asta.
+
+00:09:55.690 --> 00:09:56.230
+In regula.
+
+00:09:56.230 --> 00:10:04.830
+Este aici pe Bunz trimiteți am sunat imaginea Jaro și obiective de imagine și nu au antete de autorizare
+
+00:10:04.830 --> 00:10:05.720
+stabilite.
+
+00:10:06.000 --> 00:10:07.030
+Deci, să facem asta.
+
+00:10:07.050 --> 00:10:11.990
+O să spun autorizare și aici trebuie să-l luăm.
+
+00:10:11.990 --> 00:10:23.350
+Deci, vom face doar stocarea sesiunii de ferestre și vom primi pur și simplu simbolul.
+
+00:10:23.800 --> 00:10:28.680
+Și sperăm că este ceva pentru noi să verificăm dacă nu este bine și asta este bine.
+
+00:10:29.680 --> 00:10:42.770
+Și vom face exact același lucru aici și pentru imaginea pe care o aveți toți.
+
+00:10:43.000 --> 00:10:44.290
+Așa că hai să încercăm asta.
+
+00:10:44.350 --> 00:10:45.800
+Asigurați-vă că totul funcționează.
+
+00:10:47.730 --> 00:10:57.960
+Întoarceți-vă la aplicația noastră pentru a vă reîmprospăta, asigurați-vă că avem tokenul pe care îl facem, vrem să luăm o față
+
+00:10:57.960 --> 00:11:01.130
+pe care o putem testa aici.
+
+00:11:03.680 --> 00:11:05.890
+În regulă, totul funcționează.
+
+00:11:05.990 --> 00:11:11.220
+Dacă ne întoarcem la aplicația noastră, spune că vei trece perfect.
+
+00:11:11.240 --> 00:11:13.460
+Avem o cerere corectă.
+
+00:11:14.330 --> 00:11:22.990
+Dar, dintr-un anumit motiv, dacă șterg acest lucru și am încercat să trimit o față diferită la aceasta aici și apăsați
+
+00:11:29.550 --> 00:11:37.100
+pe detectare continuați pe autorizată și avem unele erori asupra autorizației neautorizate și vedem că în Abdulle Da
+
+00:11:37.130 --> 00:11:44.530
+există un pic de eroare, deoarece în calculează locația feței Ei bine, este o problemă acolo să mergem
+
+00:11:44.530 --> 00:11:45.740
+să verificăm.
+
+00:11:47.880 --> 00:11:53.150
+Pe linia 97 ne așteptăm ca fața de calcul să returneze ceva.
+
+00:11:53.340 --> 00:11:56.890
+Dar în cazul nostru nu suntem pentru că în timp ce nu suntem autorizați.
+
+00:11:57.000 --> 00:11:59.650
+Deci, pot face doar o simplă declarație IF aici.
+
+00:12:00.180 --> 00:12:02.640
+Dacă spunem
+
+00:12:05.550 --> 00:12:11.130
+date sau date și date.
+
+00:12:11.500 --> 00:12:14.290
+În acest caz faceți
+
+00:12:19.320 --> 00:12:24.160
+o parte din această întoarcere, altfel bine just.
+
+00:12:24.370 --> 00:12:24.940
+Să salvăm
+
+00:12:28.160 --> 00:12:29.590
+și trebuie să ne conectează din nou.
+
+00:12:33.410 --> 00:12:35.620
+Să ne asigurăm că tokenul nostru a dispărut.
+
+00:12:39.310 --> 00:12:45.240
+The Takht.
+
+00:12:45.290 --> 00:12:47.130
+Oh, băieți, mai avem câteva ore.
+
+00:12:47.180 --> 00:12:52.730
+Și acesta este ceva cu care doriți cu adevărat să fiți
+
+00:12:52.940 --> 00:13:03.250
+atenți, asigurându-vă că validăm ceea ce facem aici, deoarece locația de calculare a feței este utilizată aici pentru a afișa cutiile cu fața.
+
+00:13:03.470 --> 00:13:12.920
+Așadar, din nou, dorim să ne asigurăm că acest lucru nu va eșua și poate să-i dați o altă opțiune de a nu
+
+00:13:12.920 --> 00:13:15.680
+actualiza statul dacă nu există casete.
+
+00:13:18.160 --> 00:13:25.210
+Deci nu putem spune o întoarcere ca ceva ce putem avea doar o întoarcere aici
+
+00:13:26.830 --> 00:13:34.640
+și putem spune doar dacă nu există cutii sau dacă există cutii vom face această actualizare foarte bună.
+
+00:13:34.880 --> 00:13:41.930
+Vom actualiza starea salvați din nou o ultima dată.
+
+00:13:42.080 --> 00:13:46.600
+Să vedem dacă toate acestea funcționează.
+
+00:13:46.940 --> 00:13:48.860
+Ștergeți simbolul nostru.
+
+00:13:48.860 --> 00:13:50.180
+Asigurați-vă că am încercat
+
+00:13:55.940 --> 00:13:58.600
+din nou să ne asigurăm că avem aceste informații.
+
+00:14:02.430 --> 00:14:05.120
+Și detectează.
+
+00:14:05.180 --> 00:14:05.650
+In regula.
+
+00:14:05.660 --> 00:14:07.260
+E neautorizat.
+
+00:14:07.460 --> 00:14:10.980
+Am neautorizat neautorizat neautorizat perfect.
+
+00:14:11.090 --> 00:14:16.560
+Și obiectivul nostru mic ne spune că nu vei trece perfect.
+
+00:14:16.560 --> 00:14:17.320
+In regula.
+
+00:14:17.400 --> 00:14:22.100
+A fost mult, dar am reușit să facem lucruri foarte interesante.
+
+00:14:22.230 --> 00:14:27.620
+Și în următorul videoclip vom revizui toate lucrurile pe care le-am făcut și le-am pus pe toate împreună, astfel încât să
+
+00:14:27.660 --> 00:14:32.240
+avem o idee bună despre toată munca pe care am pus-o pentru a stabili acest lucru.
+
+00:14:33.390 --> 00:14:35.040
+Voi vedea în următoarea.

@@ -1,0 +1,415 @@
+﻿WEBVTT
+
+00:00:01.330 --> 00:00:02.080
+Witamy spowrotem.
+
+00:00:02.230 --> 00:00:07.190
+Zacznijmy pisać niektóre testy dla asynchronicznego kodu.
+
+00:00:07.640 --> 00:00:20.800
+Jeśli wrócimy do naszego skryptu, aby przetestować nasze "Tak", możemy rozpocząć nasz pierwszy test, mówiąc, że wywołuje
+
+00:00:21.160 --> 00:00:27.110
+interfejs Swaby starwars API, aby przyciągnąć ludzi.
+
+00:00:27.300 --> 00:00:31.790
+I znowu ta sama składnia, którą widzieliśmy wcześniej w naszym pierwszym teście.
+
+00:00:31.830 --> 00:00:47.450
+Co możemy zrobić dobrze, nie możemy powiedzieć, że zamieniamy Daut, aby ludzie nadali mu API pobierania lub funkcję pobierania.
+
+00:00:48.590 --> 00:00:56.430
+A potem wykonaj DOD i tak jak powiedziałem, możesz przekazać ci, albo tu, i możemy zrobić coś, co nazywa się
+
+00:00:56.430 --> 00:00:58.620
+szyderstwem, o czym porozmawiamy później.
+
+00:00:58.650 --> 00:01:02.480
+Na razie trzymamy się tej metody.
+
+00:01:03.700 --> 00:01:05.200
+Ale zobaczmy, co możemy przetestować.
+
+00:01:06.070 --> 00:01:09.790
+Mamy API, do którego dzwonimy ponownie.
+
+00:01:09.820 --> 00:01:14.020
+To zwróci nam mnóstwo danych.
+
+00:01:14.020 --> 00:01:22.430
+Więc znowu robimy DOT niż zwykły javascript, a to zwróci nam trochę danych.
+
+00:01:24.120 --> 00:01:32.570
+Pamiętaj, że zwrócą one nasze dane lub zwrócą naszą liczbę i wyniki.
+
+00:01:32.610 --> 00:01:42.400
+Tak więc wewnątrz DOD, a następnie zablokować możemy wykonać nasze twierdzenia, że dane liczą się równe
+
+00:01:46.320 --> 00:01:47.190
+7,
+
+00:01:50.120 --> 00:01:57.990
+ponieważ pamiętaj, że jeśli wrócimy do strony internetowej, liczba ta wynosi 87.
+
+00:01:58.120 --> 00:02:02.980
+Miejmy nadzieję, że liczba danych odpowiada 87.
+
+00:02:03.000 --> 00:02:09.600
+Zobaczmy, czy to jest sytuacja, którą zamierzam ocalić i wrócić do prowadzenia naszych testów.
+
+00:02:09.600 --> 00:02:12.450
+Pozwól, że wyjaśnię to i uruchom test
+
+00:02:17.080 --> 00:02:21.560
+NPM i wszyscy musimy nacisnąć a, aby uruchomić dla niego wszystkie testy.
+
+00:02:21.560 --> 00:02:28.120
+To działa, ale nie jest zbyt trudne, nie robimy niczego zbyt szalonego.
+
+00:02:28.120 --> 00:02:30.580
+Co się stanie, jeśli dodamy test NUTERA?
+
+00:02:30.650 --> 00:02:37.010
+Zamierzamy tu dodać kolejny test i będzie to oznaczać, że to zimne rozmowy Swaby'ego,
+
+00:02:37.010 --> 00:02:39.310
+aby pozyskać ludzi z obietnicą.
+
+00:02:39.360 --> 00:02:49.410
+Teraz tym razem użyjemy obietnic ludzi, oszczędzajmy.
+
+00:02:49.530 --> 00:02:50.520
+Dobrze.
+
+00:02:50.550 --> 00:02:53.840
+Czy to faktycznie działa.
+
+00:02:53.850 --> 00:02:54.900
+Wygląda na to, że działa.
+
+00:02:54.900 --> 00:02:59.620
+Mam na myśli testy sześciu z nich, które przeszły.
+
+00:02:59.800 --> 00:03:07.150
+Ale pamiętajcie, co powiedziałem, że zawsze chcemy się upewnić, że zawiedliśmy nasze testy i sprawdzić, czy testy
+
+00:03:07.270 --> 00:03:11.320
+faktycznie sprawdzają, podczas gdy jesteśmy tym, co chcemy sprawdzić.
+
+00:03:11.430 --> 00:03:25.950
+Jednym z narzędzi, z których możemy korzystać w geste, jest coś, co nazywa się asercją xpect dot, a asercje to biblioteka
+
+00:03:25.980 --> 00:03:27.390
+asercji Remember.
+
+00:03:27.450 --> 00:03:31.610
+Czy to są te twierdzenia.
+
+00:03:31.640 --> 00:03:40.200
+Więc używając twierdzeń o oczekiwaniach, których nie możemy powiedzieć w tym bloku, oczekujemy jednego lub zapewnienia.
+
+00:03:40.460 --> 00:03:49.460
+Jeśli musielibyśmy wtedy, powinniśmy powiedzieć, że spodziewamy się, i jest to dobry sposób na sprawdzenie, czy te rzeczy
+
+00:03:49.460 --> 00:03:52.630
+rzeczywiście działają, zwłaszcza z synchronicznym kodem.
+
+00:03:52.670 --> 00:03:54.180
+Pozwól mi to zrobić tutaj.
+
+00:03:54.320 --> 00:03:55.130
+Uratuję,
+
+00:03:57.780 --> 00:03:59.410
+co się stało.
+
+00:04:00.770 --> 00:04:06.960
+Nasze asercje punktów Xpect w jednym polu.
+
+00:04:07.110 --> 00:04:09.920
+Było zero wywołań asercji.
+
+00:04:10.080 --> 00:04:14.110
+Coś się tutaj dzieje, gdy ten test się kończy.
+
+00:04:14.220 --> 00:04:22.870
+Ale to nigdy nie jest wywoływane i jest to trochę kłopotliwe z testami asynchronicznymi.
+
+00:04:23.830 --> 00:04:31.930
+Widzisz, kiedy to się dzieje podczas testów, naprawdę ciężko jest debugować, ponieważ łatwo nie
+
+00:04:31.960 --> 00:04:34.470
+sprawdzić, czy działają poprawnie.
+
+00:04:34.480 --> 00:04:43.600
+Problem polega na tym, że testy kończą się tak szybko, jak tylko wezwani zostaną ludzie.
+
+00:04:43.780 --> 00:04:47.560
+I pamiętaj, że obietnica zwraca stan oczekiwania.
+
+00:04:47.580 --> 00:04:52.940
+Więc to zostanie zwrócone, zanim faktycznie otrzymamy dane.
+
+00:04:52.960 --> 00:04:54.780
+Jak sobie z tym poradzimy.
+
+00:04:54.880 --> 00:05:01.420
+Jak możemy powiedzieć testowi? Nie tylko zdać ten test, ponieważ nic się nie stało i właśnie zwróciliśmy
+
+00:05:01.450 --> 00:05:03.440
+obietnicę w stanie oczekiwania.
+
+00:05:03.700 --> 00:05:08.070
+Poczekaj, aż to rzeczywiście nastąpi, a następnie idź dalej.
+
+00:05:09.690 --> 00:05:11.360
+Jest na to kilka sposobów.
+
+00:05:11.400 --> 00:05:21.780
+Pierwszym sposobem jest użycie pojedynczego argumentu o nazwie done, zamiast mieć tutaj pusty
+
+00:05:21.780 --> 00:05:31.680
+parametr dla funkcji, którą możemy wykonać, która automatycznie zostanie przekazana do testu.
+
+00:05:31.940 --> 00:05:41.460
+A to oznacza, że hej, po prostu poczekaj, aż wywołane wywołanie zwrotne zostanie wywołane, zanim faktycznie powiesz, że test
+
+00:05:41.460 --> 00:05:42.630
+się zakończył.
+
+00:05:42.630 --> 00:05:50.170
+Zwykle umieszczasz to tuż po zakończeniu połączenia, powiedzmy, że to już się stało.
+
+00:05:50.220 --> 00:05:51.300
+Więc pozwól mi oszczędzić,
+
+00:05:54.710 --> 00:05:55.390
+że działają.
+
+00:05:55.530 --> 00:05:56.460
+Przeszło.
+
+00:05:56.460 --> 00:06:00.100
+Teraz mówimy, że nie zdasz tego testu, dopóki to nie zostanie zrobione.
+
+00:06:01.100 --> 00:06:10.840
+Wystarczy przetestować, czy zmieniam się tak samo jak zero. To się nie udaje, bo mamy jedno wezwanie potwierdzające.
+
+00:06:10.850 --> 00:06:14.150
+Teraz jest to jeden ze sposobów robienia tego.
+
+00:06:14.480 --> 00:06:22.460
+I zgrabną rzeczą jest to, że jeśli z jakiegoś powodu ta myśl, jeśli to jądro się
+
+00:06:22.460 --> 00:06:30.340
+nie powiedzie, powiedzmy, że w skrypcie J to jest właściwie niepoprawny parametr u r l.
+
+00:06:30.410 --> 00:06:33.250
+Były jakieś Może pomyliliśmy ludzi.
+
+00:06:33.250 --> 00:06:43.290
+Jeśli to powiem, widzisz, że dostaję połączenie powietrzne, widzę B, żeby dostać ludzi, i dostaję tutaj błąd, więc
+
+00:06:43.290 --> 00:06:46.800
+test czeka, aż faktycznie skończę.
+
+00:06:46.800 --> 00:06:47.820
+Bardzo dobrze.
+
+00:06:50.720 --> 00:06:51.960
+Teraz naprawmy to.
+
+00:06:52.010 --> 00:06:59.030
+Wróć do Juana i porozmawiaj o innym sposobie, w jaki możesz to zrobić, a to jest naprawdę łatwe.
+
+00:06:59.030 --> 00:07:04.820
+Jeśli twój kod zawiera obietnice, takie jak my, istnieje prostszy sposób, który
+
+00:07:04.820 --> 00:07:12.640
+dla większości osób jest mniej kłopotliwy w obsłudze testu asynchronicznego i jest to kolejna rzecz, którą
+
+00:07:12.730 --> 00:07:15.430
+naprawdę lubię, po prostu możemy
+
+00:07:17.950 --> 00:07:26.200
+po prostu zamiast tego zrobić, tylko zwrócić obietnicę i tylko to wystarczająco inteligentne. żeby powiedzieć, och, ponieważ wrócimy
+
+00:07:26.200 --> 00:07:29.200
+to, czekam, aż ta obietnica powróci.
+
+00:07:29.200 --> 00:07:35.410
+A jeśli obietnica zostanie odrzucona, test zawiedzie się automatycznie, co jest bardzo miłe.
+
+00:07:35.410 --> 00:07:46.510
+Ponownie, powiedzmy, że wszystko przewyższające, jeśli źle wypiszę API, ponownie widzisz, że test automatycznie kończy
+
+00:07:47.110 --> 00:07:49.300
+się niepowodzeniem.
+
+00:07:55.420 --> 00:07:56.910
+To trochę trudne.
+
+00:07:56.910 --> 00:08:02.280
+Musisz zawsze upewnić się, że zwrócisz obietnicę, jeśli przyjmiesz to
+
+00:08:02.320 --> 00:08:09.660
+oświadczenie Simien, gdy zobaczysz, że twój test zostanie zakończony, zanim obietnica zostanie rozwiązana lub odrzucona.
+
+00:08:09.670 --> 00:08:18.030
+Oto wskazówka podczas uruchamiania testów Synchronoss, zawsze rób to zawsze, oczekując asercji.
+
+00:08:18.190 --> 00:08:23.660
+Zawsze sprawdzaj, czy twoje twierdzenia są testowane.
+
+00:08:24.040 --> 00:08:25.290
+Skończmy to.
+
+00:08:25.510 --> 00:08:27.450
+Dodajmy jeszcze kilka linii.
+
+00:08:27.550 --> 00:08:30.880
+Powiemy to tutaj.
+
+00:08:32.290 --> 00:08:34.540
+Zamierzamy dodać dwa twierdzenia.
+
+00:08:34.840 --> 00:08:37.740
+I znowu chcemy naszego powrotu tutaj.
+
+00:08:38.710 --> 00:08:44.650
+Dodamy kolejne stwierdzenie, które mówi, że spodziewamy się, że wyniki danych
+
+00:08:48.910 --> 00:08:52.340
+będą miały wartość 15. i co
+
+00:08:56.800 --> 00:08:59.060
+możemy tutaj użyć.
+
+00:08:59.110 --> 00:09:05.800
+Chcielibyśmy sprawdzić, czy wyniki, które otrzymujemy, co najmniej pięciu osób, to że długość
+
+00:09:05.830 --> 00:09:08.950
+jest większa niż powiedzmy pięć.
+
+00:09:09.090 --> 00:09:14.510
+Na szczęście dla nas jest po prostu ściągnięty arkusz i to tylko ściągnięcie kartki.
+
+00:09:14.620 --> 00:09:16.560
+Dobrze postaraj się powiedzieć to szybko pięć razy.
+
+00:09:16.560 --> 00:09:23.400
+To naprawdę trudne, ma wszystkie te rzeczy, które możesz wykorzystać do testu tutaj.
+
+00:09:23.400 --> 00:09:25.310
+Super super przydatne.
+
+00:09:25.380 --> 00:09:30.120
+To wszystko, czego potrzeba do napisania doskonałych testów.
+
+00:09:30.120 --> 00:09:34.070
+I widzimy tutaj, że musimy być większą niż metoda.
+
+00:09:34.140 --> 00:09:35.220
+Więc użyjmy tego.
+
+00:09:35.310 --> 00:09:45.170
+Zamierzam powiedzieć, że jestem większy niż kiedykolwiek i dlatego właśnie uwielbiam właśnie w większości bibliotek asercji.
+
+00:09:45.180 --> 00:09:49.840
+Sprawiają, że wszystko czyta się dobrze po angielsku, więc dokładnie wiesz, co się dzieje.
+
+00:09:49.860 --> 00:09:52.130
+Powiem więc, że mam więcej niż pięć.
+
+00:09:52.260 --> 00:09:56.610
+Uratujmy.
+
+00:09:56.770 --> 00:09:57.200
+W porządku.
+
+00:09:57.210 --> 00:10:02.820
+Mieliśmy kilka błędów, więc naprawmy to dwa twierdzenia, które można nazwać, ale mamy tylko jeden.
+
+00:10:03.150 --> 00:10:04.980
+Dlaczego.
+
+00:10:04.980 --> 00:10:12.900
+I nie wylatuję ziemi o niezdefiniowanych i mniej wylogowanych danych, aby zobaczyć, co tu robimy, pozwólmy,
+
+00:10:12.930 --> 00:10:16.060
+aby konsola dialogowa wyświetliła wyniki kropek
+
+00:10:20.930 --> 00:10:23.040
+i otrzymuję niezdefiniowane.
+
+00:10:23.090 --> 00:10:26.210
+Tak to wygląda tutaj.
+
+00:10:26.240 --> 00:10:28.380
+Och, zauważysz mój błąd.
+
+00:10:28.600 --> 00:10:31.390
+Wprowadziłem błędne wyniki tutaj.
+
+00:10:31.460 --> 00:10:32.980
+Prawdopodobnie śmiejesz się teraz ze mnie.
+
+00:10:32.990 --> 00:10:35.830
+Ale dzieje się o wiele więcej, niż myślisz.
+
+00:10:35.950 --> 00:10:37.040
+Dobrze.
+
+00:10:37.130 --> 00:10:39.530
+Zobaczmy to.
+
+00:10:39.530 --> 00:10:40.520
+W porządku, to dobrze.
+
+00:10:40.520 --> 00:10:45.820
+Otrzymujemy odpowiedź, usuńmy zapisywanie zapisu w dzienniku konsoli.
+
+00:10:45.980 --> 00:10:51.110
+I znowu jest to kolejny dobry powód do napisania testów, ponieważ nie popełniłbym
+
+00:10:51.140 --> 00:10:53.770
+tego błędu, dopóki nie uruchomię aplikacji.
+
+00:10:53.910 --> 00:11:04.700
+Widzę więc, że mam prosty błąd typu, który jest większy niż znowu okropny angielski.
+
+00:11:04.760 --> 00:11:05.950
+To jest jej
+
+00:11:09.530 --> 00:11:10.190
+prawo.
+
+00:11:10.260 --> 00:11:16.510
+Wszystko przechodzi, a to, co właśnie widzieliście, to jak zwykle testy działają.
+
+00:11:16.560 --> 00:11:21.050
+Ciągle się łamią, ciągle się łamią i próbujesz dostać się do tego zielonego stanu.
+
+00:11:21.060 --> 00:11:27.450
+A kiedy dojdziesz do tego zielonego stanu, to jak alleluja, to jest tak miłe, że dobrze
+
+00:11:27.450 --> 00:11:30.380
+jest mieć wszystko, co zielone i działa.
+
+00:11:30.410 --> 00:11:31.830
+Niesamowite.
+
+00:11:31.840 --> 00:11:32.470
+W porządku.
+
+00:11:32.470 --> 00:11:35.440
+Myślę, że na razie jest to dobre w następnym filmie.
+
+00:11:35.440 --> 00:11:38.670
+Chcę z tobą porozmawiać trochę o szyderstwie.
+
+00:11:38.760 --> 00:11:39.850
+Do zobaczenia w tym.
+
+00:11:40.140 --> 00:11:40.600
+PA pa.

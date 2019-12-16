@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:01.000 --> 00:00:09.000
+Witamy ponownie teraz powinniśmy lepiej zrozumieć, co jest zobacz-I CD jest ciągła integracja
+
+00:00:09.000 --> 00:00:11.850
+ciągłe dostarczanie ciągłe wdrażanie.
+
+00:00:11.850 --> 00:00:14.240
+Przyjrzyjmy się temu, czego dotychczas się nauczyliśmy.
+
+00:00:14.250 --> 00:00:21.200
+Teraz możesz nie zdawać sobie z tego sprawy, ale właśnie nauczyłeś się podstawowych praktyk, które sprawiają, że
+
+00:00:21.200 --> 00:00:22.480
+jesteś programistą rocka.
+
+00:00:22.500 --> 00:00:23.490
+Czemu.
+
+00:00:23.490 --> 00:00:31.380
+Ponieważ wiesz, jak powinien wyglądać dobry projekt oprogramowania, jakich narzędzi użyć, jakie praktyki należy wykonać, aby upewnić
+
+00:00:31.380 --> 00:00:35.290
+się, że nie jest to mały, głupiutki projekt.
+
+00:00:36.740 --> 00:00:38.740
+Wiesz, co robią niektóre firmy.
+
+00:00:38.750 --> 00:00:43.580
+Niektóre z największych firm na świecie dbają o to, aby mogły skalować się do
+
+00:00:44.420 --> 00:00:48.400
+milionów użytkowników i tysięcy pracowników pracujących w tym samym kodzie źródłowym.
+
+00:00:48.440 --> 00:00:55.160
+Widzieliśmy, że mamy dobry system PR kodu, w którym stale wprowadzamy zmiany i małe funkcje
+
+00:00:55.310 --> 00:01:03.590
+oraz codziennie otrzymujemy żądania ściągania, które teraz automatycznie uruchamiają kroki Billa i sprawdzają kroki Lanting i wszelkie inne
+
+00:01:03.620 --> 00:01:05.250
+kontrole, jakich oczekujemy.
+
+00:01:05.330 --> 00:01:10.010
+Następnie wykonujemy recenzje kodu i łączymy codziennie nowe funkcje.
+
+00:01:10.010 --> 00:01:16.250
+Następnie możemy badać różne rzeczy, takie jak dostarczanie i wdrażanie rozwiązań ciągłych, w których mamy testy
+
+00:01:16.250 --> 00:01:22.220
+akceptacyjne lub testery, które testują nasze oprogramowanie, a następnie możemy ręcznie wdrożyć do produkcji dla
+
+00:01:22.220 --> 00:01:25.910
+naszych rzeczywistych użytkowników lub możemy je również zautomatyzować.
+
+00:01:25.910 --> 00:01:35.330
+I ten diagram jest tym, co najlepsze firmy śledzą ten proces, który zajmuje sporo czasu, dopóki
+
+00:01:35.330 --> 00:01:38.360
+nie masz kodu w produkcji.
+
+00:01:38.420 --> 00:01:45.890
+Piszemy nasz kod na naszych maszynach jako programiści używający narzędzi takich jak maszynopis Lanting i testów, aby upewnić się,
+
+00:01:45.890 --> 00:01:47.870
+że nasze kody mijają.
+
+00:01:47.900 --> 00:01:53.560
+Możemy wtedy mieć coś takiego jak Huck, który sprawdza nasz kod, może czyni to całkiem
+
+00:01:53.570 --> 00:01:57.470
+sprawiedliwie, tak że mamy spójny format z resztą projektu.
+
+00:01:57.530 --> 00:02:04.250
+Następnie tworzymy tę prośbę o pulę, aby otrzymać Hobb i krąg. gdy tylko przyjdzie ta prośba o pulę, powie: "OK,
+
+00:02:04.320 --> 00:02:09.980
+pozwól, że uruchomię jakieś testy, bo upewnisz się, że nie zepsujesz naszego kodu uruchomionych kilka
+
+00:02:09.980 --> 00:02:10.770
+testów.
+
+00:02:10.790 --> 00:02:12.110
+Wszystko przemija.
+
+00:02:12.110 --> 00:02:16.490
+Następnie udajesz się do swoich kolegów z drużyny i inni ludzie sprawdzają twój kod.
+
+00:02:16.490 --> 00:02:18.020
+Dokonujemy przeglądu kodu.
+
+00:02:18.020 --> 00:02:24.830
+Mówią, że może to naprawimy, może uda nam się to zrobić, jeśli nie zaakceptują, że zaczniesz od tego miejsca
+
+00:02:24.830 --> 00:02:26.030
+i wszystko przerobisz.
+
+00:02:26.120 --> 00:02:30.530
+Jeśli zaakceptują, połączą twoje zmiany i uzyskają pomoc.
+
+00:02:30.770 --> 00:02:34.780
+W większości firm zobaczysz coś w rodzaju wdrażania do inscenizacji.
+
+00:02:34.790 --> 00:02:40.400
+Inscenizacja to rodzaj pola treningowego, aby upewnić się, że zanim wyślemy je do prawdziwego
+
+00:02:40.400 --> 00:02:43.280
+świata, wszystko działa tak, jak powinno.
+
+00:02:43.640 --> 00:02:48.470
+Możemy dodać proces, a nie równą zmienną środowiskową.
+
+00:02:48.650 --> 00:02:54.980
+I możemy mieć pewne instrukcje if w naszej bazie kodu, które mówią, że jeśli jest to przetestowanie,
+
+00:02:54.980 --> 00:02:58.190
+może przetestuj szybkość naszej aplikacji ile CPQ używasz.
+
+00:02:58.190 --> 00:03:03.380
+Jeśli jest poprawnie podłączony do bazy danych i chcesz naśladować inscenizację tak bardzo, jak
+
+00:03:03.380 --> 00:03:07.920
+to tylko możliwe, np. Mając podobne informacje o podobnych bazach danych.
+
+00:03:08.030 --> 00:03:13.690
+Im więcej inscenizacja ma związek z produkcją, tym bardziej możemy założyć, że wszystko pójdzie
+
+00:03:13.700 --> 00:03:15.770
+dobrze, kiedy popchniemy produkcję.
+
+00:03:15.770 --> 00:03:23.450
+Następnie mamy coś w rodzaju testów akceptacyjnych, w których być może tester lub toner produktu, a nawet testy Brunowa testują na
+
+00:03:23.660 --> 00:03:29.020
+serwerze testowym, aby upewnić się, że wszystko działa zgodnie z naszą nową funkcją.
+
+00:03:29.210 --> 00:03:35.580
+A kiedy wszystko zostanie już przyjęte, w końcu możemy założyć, że kod jest bezpieczny.
+
+00:03:35.630 --> 00:03:44.060
+Zastosujmy do produkcji z produkcją zmienną środowiskową i wszystko jest w porządku, ale jeszcze nie
+
+00:03:44.150 --> 00:03:45.340
+skończyliśmy.
+
+00:03:45.380 --> 00:03:48.660
+Mamy coś, co nazywa się testami dymu i dymem.
+
+00:03:48.680 --> 00:03:55.190
+Tak, jeśli zamierzasz automatycznie wdrożyć każde zatwierdzenie do produkcji, musisz upewnić się, że masz dobry
+
+00:03:55.190 --> 00:03:59.020
+sposób na ostrzeżenie, jeśli coś pójdzie nie tak.
+
+00:03:59.810 --> 00:04:03.000
+Tak więc czasami nowa zmiana nie zostanie przerwana.
+
+00:04:03.050 --> 00:04:04.100
+Produkcja od razu.
+
+00:04:04.100 --> 00:04:11.630
+I zdał wszystkie te testy, ale wszystkie powodują być może CPQ lub zużycie pamięci, aby pójść
+
+00:04:11.630 --> 00:04:13.600
+naprawdę wysoko i zerwać.
+
+00:04:13.760 --> 00:04:19.610
+Więc możesz chcieć mieć cztery testy dymu w czasie rzeczywistym monitorujące serwery produkcyjne, aby
+
+00:04:19.610 --> 00:04:27.380
+móc śledzić nieprawidłowości lub dane, które pokazują, że coś nie idzie dobrze i masz firmy, które nie lubią nowych
+
+00:04:27.380 --> 00:04:30.890
+reliktów, które pozwalają ci monitorować twoją usługę.
+
+00:04:30.890 --> 00:04:37.420
+Znowu mamy zawsze narzędzia i widać tutaj, że to ciągła bitwa to ciągła bitwa,
+
+00:04:37.420 --> 00:04:44.710
+aby upewnić się, że bez względu na to, ilu programistów nie ma znaczenia, jak duży jest
+
+00:04:44.710 --> 00:04:51.670
+kod, mamy ładnie gładki proces, aby wszystko było ładnie przepływać, aby czas, który dostajemy na
+
+00:04:51.670 --> 00:04:59.090
+produkcję, pozwala zminimalizować ryzyko, że możemy stracić przychody lub użytkowników, a nawet zwykłą satysfakcję z naszych klientów.
+
+00:05:00.680 --> 00:05:09.260
+A jeśli wszystko to działa i jesteśmy w stanie pomóc w tym starszym programistom, a potem wszyscy cieszymy
+
+00:05:09.530 --> 00:05:15.820
+się i to jest celem starszego programisty, starszy programista niekoniecznie jest osobą, która zna
+
+00:05:16.060 --> 00:05:19.900
+najfajniejsze funkcje i potrafi napisać najmądrzejszy kod.
+
+00:05:20.140 --> 00:05:27.370
+Żaden starszy programista nie jest kimś, kto rozumie, że ten proces może sprawić, że proces ten przebiega płynnie,
+
+00:05:27.370 --> 00:05:33.820
+tak że wszystko działa dobrze z kręgi. i sprawiamy, że wszystkie testy są konieczne.
+
+00:05:33.820 --> 00:05:40.750
+Mamy wszystkie testy dymu w miejscu, w którym starszy programista to ktoś, kto jest w stanie
+
+00:05:40.750 --> 00:05:49.800
+uzyskać duży obraz tego, w jaki sposób możemy uzyskać ten przepływ, pisząc kod na laptopie programisty, aby wprowadzić go do produkcji.
+
+00:05:49.960 --> 00:05:58.350
+Jeśli jesteś w stanie to zrozumieć, możesz zarządzać zespołami i zarządzać projektami, a
+
+00:05:58.350 --> 00:06:01.470
+wtedy wszyscy będą zadowoleni.
+
+00:06:01.530 --> 00:06:02.300
+Zobaczę w następnym.

@@ -1,0 +1,211 @@
+﻿WEBVTT
+
+00:00:00.950 --> 00:00:02.180
+Witamy spowrotem.
+
+00:00:02.180 --> 00:00:10.590
+Zakończmy testowanie naszej funkcji wyszukiwania Google, ponieważ przy testach im więcej masz, tym lepiej.
+
+00:00:10.640 --> 00:00:17.440
+W większości przypadków tak czy inaczej, ponieważ nigdy nie wejdą one do produkcji, to tylko dla celów związanych z rozwojem.
+
+00:00:17.510 --> 00:00:23.690
+Nigdy nie boli wiele testów obejmujących wiele scenariuszy, ponieważ w ten sposób po prostu pokrywamy
+
+00:00:23.690 --> 00:00:24.990
+nasze bazy.
+
+00:00:26.050 --> 00:00:34.380
+I nie przejmuj się zbytnio powtarzaniem samego siebie lub powtarzaniem sobie reguł i programowania z nim, jeśli chodzi
+
+00:00:34.380 --> 00:00:35.800
+o testy.
+
+00:00:35.890 --> 00:00:42.070
+Możesz powtarzać się raz na jakiś czas, zwłaszcza jeśli sprawi, że testy będą naprawdę czytelne dla innych
+
+00:00:42.070 --> 00:00:43.890
+osób czytających Twój kod.
+
+00:00:43.900 --> 00:00:46.530
+Po raz kolejny nigdy nie zostaną wprowadzone do produkcji.
+
+00:00:46.630 --> 00:00:52.360
+Więc zawsze lepiej mieć więcej testów niż mniej testów.
+
+00:00:52.590 --> 00:00:56.710
+Warto więc przetestować jeszcze kilka przypadków dzięki naszej funkcji wyszukiwania Google.
+
+00:00:56.880 --> 00:01:11.420
+Powiedzmy, że chcemy również, aby działała na zdefiniowanym i Noalnym wejściu i chcemy się upewnić, że
+
+00:01:11.420 --> 00:01:14.980
+ta funkcja zadziała.
+
+00:01:14.980 --> 00:01:16.350
+I pozwól mi to skopiować.
+
+00:01:16.360 --> 00:01:17.020
+Oczekuj
+
+00:01:19.940 --> 00:01:28.230
+asercji i tutaj w wyszukiwarce Google, którą zamierzam powiedzieć na zdefiniowanym i chcemy, aby to było równe pustej tablicy,
+
+00:01:28.230 --> 00:01:33.720
+jeśli w jakiś sposób dostaniemy dziwną odpowiedź na nieokreślone dane wejściowe od użytkownika.
+
+00:01:33.720 --> 00:01:39.180
+Nadal chcemy zwrócić pustą tablicę, ponieważ być może z przodu nadal wyświetlamy
+
+00:01:39.180 --> 00:01:40.320
+pustą listę.
+
+00:01:40.350 --> 00:01:43.350
+Oszczędzajmy i to przemija.
+
+00:01:43.350 --> 00:01:44.960
+Teraz mamy trzy testy.
+
+00:01:45.030 --> 00:01:49.110
+I jeszcze raz przetestujmy dla przypadku zerowego.
+
+00:01:49.140 --> 00:01:55.700
+Skopiujemy to, a my też nie będziemy testować.
+
+00:01:55.700 --> 00:01:56.270
+W porządku.
+
+00:01:56.270 --> 00:02:03.650
+Nasze testy sprawdzają się perfekcyjnie i możesz zobaczyć, jak ładnie nakreślono je dla nas.
+
+00:02:03.660 --> 00:02:09.950
+Na koniec chcemy również sprawdzić, czy patrzymy na nasz skrypt, że zwracamy nie więcej niż trzy dopasowania.
+
+00:02:09.950 --> 00:02:12.770
+To ważna cecha naszej aplikacji.
+
+00:02:13.040 --> 00:02:15.650
+Jeszcze raz powiedzmy,
+
+00:02:18.310 --> 00:02:22.690
+że nie powraca więcej niż trzy mecze.
+
+00:02:25.730 --> 00:02:27.930
+I chromi robią więcej miejsca na to,
+
+00:02:32.090 --> 00:02:35.870
+abyśmy mogli zobaczyć i znowu można zobaczyć wiele powtórzeń tutaj, ale to jest dobre.
+
+00:02:35.930 --> 00:02:37.620
+Piszemy testy.
+
+00:02:37.640 --> 00:02:44.720
+Powiedzmy, że po prostu skopiuję to, ponieważ jestem leniwy, aby pisać i
+
+00:02:44.780 --> 00:02:57.030
+powiemy, że chcemy, aby podczas wyszukiwania dotcomu, które to wszystko chcemy, aby był równy ścianie, aby był równy tablicy z trzema
+
+00:02:57.030 --> 00:02:57.930
+elementami.
+
+00:02:57.930 --> 00:02:59.190
+Jak możemy to zrobić.
+
+00:02:59.190 --> 00:03:01.530
+Znowu jest to po prostu javascript.
+
+00:03:01.530 --> 00:03:10.740
+Możemy po prostu zrobić długość kropki w nawiasie xpect, który powróci miejmy nadzieję 3, mimo że
+
+00:03:10.790 --> 00:03:18.150
+robimy dotcom i ma cztery elementy, ponieważ nasza funkcja zwraca liczbę trzy.
+
+00:03:18.260 --> 00:03:19.230
+Więc sprawdźmy to.
+
+00:03:21.170 --> 00:03:27.050
+Zobacz naszą przepustkę testową i inną poradę tutaj.
+
+00:03:27.350 --> 00:03:33.380
+Tylko dlatego, że Twój test kończy się, nie oznacza, że zawsze jest poprawny, zawsze dobrze jest
+
+00:03:33.380 --> 00:03:37.120
+zacząć od niepowodzenia testów, a następnie próbując je uruchomić.
+
+00:03:37.670 --> 00:03:42.790
+Zróbmy to po prostu przez dodanie czterech tutaj i jest to bezpieczne.
+
+00:03:43.220 --> 00:03:50.570
+I dobrze, widzimy, że oczekiwaliśmy wartości równej cztery, ale otrzymaliśmy 3.
+
+00:03:50.840 --> 00:03:52.010
+Dobre.
+
+00:03:52.010 --> 00:03:54.880
+Jeśli zmienimy to na 3, wszystko jest dobrze.
+
+00:03:54.980 --> 00:03:57.980
+A zabawa z nimi może trochę więcej.
+
+00:03:58.140 --> 00:03:59.750
+Myślę, że jesteś Sharnem, żeby to naprawić.
+
+00:03:59.760 --> 00:04:01.420
+Nie jest tak źle.
+
+00:04:01.440 --> 00:04:03.320
+To nie wygląda tak onieśmielająco.
+
+00:04:03.420 --> 00:04:09.090
+A jednak, gdy patrzysz na testy innych ludzi, może istnieć kilka innych metod, które dodają innym
+
+00:04:09.090 --> 00:04:10.550
+niż być równymi.
+
+00:04:10.560 --> 00:04:12.490
+Ale podstawowa zasada jest taka sama.
+
+00:04:12.570 --> 00:04:19.000
+Mamy tylko funkcję, którą przeprowadzamy testy i to wszystko.
+
+00:04:19.160 --> 00:04:26.120
+Ostatnią rzeczą, jaką możemy pogrupować, jest to, że dzięki naszym aplikacjom, które myślą, że
+
+00:04:26.120 --> 00:04:32.270
+rzeczy mogą być coraz większe i większe, możemy grupować testy, które są podobne,
+
+00:04:32.270 --> 00:04:40.580
+szczególnie w tym przypadku te, które robią wyszukiwarkę Google z dodatkową funkcją o nazwie opisującej i opisującej powiemy,
+
+00:04:41.800 --> 00:04:44.140
+że opisuje wyszukiwarkę Google.
+
+00:04:44.380 --> 00:04:49.590
+I to jest dokładnie ten sam sposób, w jaki blok został opisany.
+
+00:04:49.630 --> 00:04:55.480
+Pierwszym parametrem jest ciąg, który zostanie wyświetlony w teście, a
+
+00:04:56.020 --> 00:05:02.180
+drugi jest funkcją i możemy wprowadzić wszystkie te testy wewnątrz tego bloku.
+
+00:05:02.230 --> 00:05:11.170
+Jeśli teraz to zobaczę, widzę, że testy są pogrupowane i wiem, że wszystkie te testy, które
+
+00:05:11.170 --> 00:05:19.030
+działały, są w funkcji wyszukiwania Google, więc gdy mamy setki testów, możemy zobaczyć, które
+
+00:05:19.030 --> 00:05:25.380
+z nich zawodzą i gdzie chcemy cel, aby naprawić nasz test.
+
+00:05:25.480 --> 00:05:26.220
+W porządku.
+
+00:05:26.270 --> 00:05:28.730
+Bardziej ekscytujące rzeczy w następnym wideo.
+
+00:05:28.730 --> 00:05:30.050
+Zobaczę to.
+
+00:05:30.210 --> 00:05:30.470
+Babai.

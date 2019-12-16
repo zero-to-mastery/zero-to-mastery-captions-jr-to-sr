@@ -1,0 +1,634 @@
+﻿WEBVTT
+
+00:00:01.080 --> 00:00:02.010
+Bine ai revenit.
+
+00:00:02.070 --> 00:00:06.840
+Este timpul să implementăm o integrare continuă în proiectul nostru.
+
+00:00:06.870 --> 00:00:11.460
+Vom folosi cercul C. I. si vom invata cateva trucuri de-a
+
+00:00:11.460 --> 00:00:14.480
+lungul drumului si o sa ne pregatim pe noi insine, asa ca sa incepem.
+
+00:00:16.260 --> 00:00:22.980
+Acum vom folosi cercul C. I. care gestionează serverul pentru noi.
+
+00:00:22.980 --> 00:00:29.930
+Deci, ei dețin serverele și pur și simplu le folosim serviciul pentru a rula câteva teste pentru proiectul nostru.
+
+00:00:31.180 --> 00:00:36.210
+Acum cercul C. I. este de fapt gratuit pentru un proiect simplu ca al nostru.
+
+00:00:36.220 --> 00:00:41.530
+Deci, sunteți mai mult decât bineveniți să urmați și să implementați cercul C. I. în proiectele tale.
+
+00:00:41.710 --> 00:00:48.490
+Dacă lucrați vreodată pe ceva în echipe, recomand să le folosiți pentru că sunt foarte frumoase și simple
+
+00:00:48.490 --> 00:00:55.810
+de folosit și trebuie doar să faceți clic pe Explorați docs și doar un heads up pe care l-au recent
+
+00:00:55.810 --> 00:01:00.280
+actualizat la un 2 . 0 care folosește containerele daquiri.
+
+00:01:00.280 --> 00:01:05.770
+Deci, doar ca un heads-up pentru că pentru documentația dvs. vrem să ne asigurăm că vom folosi cele mai recente.
+
+00:01:05.770 --> 00:01:09.280
+Mulți s-au schimbat de la 1. 0 eliberare.
+
+00:01:09.290 --> 00:01:12.350
+Bine, să vorbim despre câteva lucruri pe care le vom face.
+
+00:01:12.710 --> 00:01:14.600
+Ei bine, avem prietenii nostri robo.
+
+00:01:14.630 --> 00:01:15.610
+Ține minte.
+
+00:01:15.800 --> 00:01:18.980
+Și această aplicație simplă funcționează în continuare.
+
+00:01:18.980 --> 00:01:20.180
+Totul este bine.
+
+00:01:20.360 --> 00:01:25.250
+Dar Bruno ne-a cerut să implementăm o integrare continuă în acest proiect.
+
+00:01:25.520 --> 00:01:31.590
+Acum, folosind acest depozit, vom încerca să includem și cercul - vezi aici.
+
+00:01:31.670 --> 00:01:37.010
+Deci de fiecare dată există un nou cerc al cercului de sondaj C. I. Vom alerga peste tot și vom
+
+00:01:37.340 --> 00:01:39.620
+fi siguri că este chiar gata să fuzioneze.
+
+00:01:39.860 --> 00:01:46.110
+Deci, hai să începem cu cercul C. I. astfel încât să o putem implementa în proiectul nostru.
+
+00:01:47.210 --> 00:01:50.180
+Acum cercul C. I. utilizează un fișier YAML.
+
+00:01:50.180 --> 00:01:57.940
+Ceva pe care l-am vazut inainte cu Dharker ca atunci cand am lucrat cu AWOS lambda si foloseste un fisier YAML pentru
+
+00:01:57.940 --> 00:02:04.110
+a indrepta modul in care vrei sa configurezi mediul de testare si ce teste vrei sa rulezi.
+
+00:02:04.150 --> 00:02:05.580
+Deci, să construim mai întâi.
+
+00:02:05.590 --> 00:02:12.730
+Primul lucru pe care dorim să-l facem este să vă creați un nou director în rădăcina proiectului nostru și,
+
+00:02:12.730 --> 00:02:24.490
+în mod implicit, trebuie să îl numim cerc S. I. cu un punct în fața lui și asta pentru că pe orice
+
+00:02:24.820 --> 00:02:31.930
+mașină, cum ar fi Mac Linux sau Windows fișiere sau folder ale căror nume au un punct în fața ei fișierele noastre
+
+00:02:31.990 --> 00:02:35.610
+de sistem rece și sunt automat l-au lovit de utilizatori implicit.
+
+00:02:35.620 --> 00:02:40.770
+Dar acesta este un standard pe care îl vedeți cercul - pe care trebuie să-l aibă pentru cei doi. 0 versiune.
+
+00:02:40.990 --> 00:02:49.250
+Și aici vom crea un fișier nou și acest fișier va trebui să fie numit config dot YAML fișier.
+
+00:02:49.500 --> 00:02:56.670
+Și aici vom configura ceea ce vrem ca cercurile serverelor să vină pentru noi pentru a începe lucrurile.
+
+00:02:56.740 --> 00:03:04.620
+Deci, hai să facem un simplu fișier YAML care circulară C pot rula și doar un heads up în cazul în care vă întrebați unde
+
+00:03:04.710 --> 00:03:06.590
+puteți găsi mai multe informații.
+
+00:03:06.690 --> 00:03:08.810
+Bineînțeles, dacă parcurgi în jos.
+
+00:03:08.850 --> 00:03:15.400
+Ei au o documentație excelentă despre ceea ce puteți face să copiem și să lipim câteva dintre exemplele
+
+00:03:16.590 --> 00:03:20.390
+lor aici și să le lipim în fișierul configurat YAML.
+
+00:03:20.460 --> 00:03:24.730
+Vedem că definim versiunea noastră în cazul nostru că folosim cercul CO2.
+
+00:03:24.760 --> 00:03:28.350
+Așadar, avem nevoie de versiunea 2 și apoi definim locuri de muncă.
+
+00:03:28.380 --> 00:03:29.910
+Ceea ce vrem.
+
+00:03:29.910 --> 00:03:39.650
+Serverul pe care trebuie să-l facă bine am vrut să facem o construcție și această construcție va avea o imagine mai închisă.
+
+00:03:39.650 --> 00:03:44.930
+Amintiți-vă că am spus versiunea 2 a cercului C. I. utilizează docer și știm totul despre asta deoarece
+
+00:03:44.930 --> 00:03:52.490
+am învățat despre el în secțiunea noastră de docare ce cerc C. I. se face este crearea unei imagini în care se poate executa testul nostru și putem
+
+00:03:52.880 --> 00:04:00.170
+vedea aici că utilizează hub docher și au o imagine personalizată numită Cercul C. I. și se pare
+
+00:04:00.170 --> 00:04:05.930
+că utilizează Ruby ca container pentru a rula testele noastre.
+
+00:04:05.930 --> 00:04:09.740
+Acum nu trebuie să fie un nod sau ceva specific javascriptului.
+
+00:04:09.740 --> 00:04:12.520
+Acesta este doar mediul în care se va desfășura testul.
+
+00:04:12.710 --> 00:04:20.700
+Și puteți vedea că aceasta este imaginea lor particularizată, astfel încât cercul va folosi acest container pentru a crea
+
+00:04:20.700 --> 00:04:22.640
+mediul pentru testele dvs.
+
+00:04:22.740 --> 00:04:28.710
+Și apoi avem pași de ce trebuie să facem și vedem aici că rula pur și simplu spune să ecou
+
+00:04:28.710 --> 00:04:33.580
+un prim salut și asta este doar pentru a imprima un prim salut la proiectul nostru.
+
+00:04:33.730 --> 00:04:44.020
+Acum pentru noi să implementăm cercul C. I. trebuie să mergem la înscriere și apoi trebuie să
+
+00:04:44.140 --> 00:04:52.300
+faceți clic pe înscrieți-vă cu ajutor și, odată ce faceți acest lucru, veți putea să vă conectați la panoul de bord Haab
+
+00:04:52.300 --> 00:04:58.730
+și veți vedea aici că am deja niște proiecte anterioare care rulează deja, iar acestea sunt toate
+
+00:04:58.760 --> 00:05:00.800
+etapele mele de integrare continuă.
+
+00:05:00.800 --> 00:05:07.650
+Dar pentru moment, dacă aceasta este prima dată, ar putea fi necesar să oferiți accesul la cercul C. I. de la dvs. primiți un cont.
+
+00:05:07.670 --> 00:05:11.610
+În caz contrar, ar trebui să vedeți un tablou de bord al unei clădiri goale.
+
+00:05:11.660 --> 00:05:17.300
+Următorul lucru pe care dorim să-l facem este de fapt să adăugăm un proiect pe care vrem să ne asigurăm că adăugăm prietenii noștri robot care testează
+
+00:05:17.420 --> 00:05:20.960
+repo, astfel încât cercul C. I. știe despre asta.
+
+00:05:20.960 --> 00:05:27.140
+Am de gând să faceți clic pe adăugați proiecte și aici uita-te la faptul că am toate repots meu enumerate aici.
+
+00:05:27.140 --> 00:05:36.170
+Mă duc să fac clic pe proiectul de instalare a proiectelor de testare a prietenilor, vezi că și aici avem câteva lucruri implicite pe care ar trebui să
+
+00:05:36.170 --> 00:05:37.070
+le folosim.
+
+00:05:37.070 --> 00:05:38.410
+Sau putem schimba lucrurile.
+
+00:05:38.630 --> 00:05:44.970
+De exemplu, proiectul nostru va avea diferite sisteme de operare pe care le putem folosi diferite limbi.
+
+00:05:46.330 --> 00:05:53.500
+Vă recomandăm să lăsați implicit pe proiectul nostru ca nod și putem avea doar un sistem de operare
+
+00:05:53.500 --> 00:05:58.510
+Linux și apoi vă va arăta ce urmează să fie pașii următori.
+
+00:05:58.890 --> 00:06:03.270
+Dar vom ignora toate acestea și vom lăsa totul așa cum este acum.
+
+00:06:04.040 --> 00:06:07.100
+Puteți vedea aici că ei chiar vă dau un exemplu de fișier pe care îl pot folosi.
+
+00:06:07.100 --> 00:06:09.360
+Ele fac foarte ușor să începeți.
+
+00:06:09.380 --> 00:06:18.940
+Voi face doar clic pe Start construire și voi vedea imediat că aplicația mea de prieteni robo începe să se construiască.
+
+00:06:18.940 --> 00:06:20.360
+Totul este pregătit.
+
+00:06:24.950 --> 00:06:30.950
+Acum, containerul pe care îl puteți vedea începe containerul va trece prin anumite comenzi în mod automat.
+
+00:06:30.950 --> 00:06:43.530
+Deci, acest lucru se execută pe serverele lor pe prietenii mei răzvrătit robot testarea Ribault.
+
+00:06:43.540 --> 00:06:44.090
+In regula.
+
+00:06:44.110 --> 00:06:50.270
+A trebuit să fac o pauză video acolo, deoarece durează puțin timp ca cercul CII să ruleze totul.
+
+00:06:50.530 --> 00:06:53.810
+Puteți vedea că a durat aproximativ cinci minute pentru a obține totul.
+
+00:06:53.860 --> 00:06:56.100
+Dar să aruncăm o privire la ceea ce a făcut.
+
+00:06:56.230 --> 00:06:59.630
+De fapt, nici măcar nu i-am dat-o configurării YAML.
+
+00:06:59.650 --> 00:07:04.980
+Pentru că amintiți-vă acest lucru este doar pe desktop-ul meu și nu l-am angajat încă pentru a obține ajutor.
+
+00:07:05.100 --> 00:07:06.000
+Ne întoarcem.
+
+00:07:06.130 --> 00:07:12.340
+Vedem că există câteva lucruri care s-au întâmplat cu un cerc vezi-I fără să-i dau chiar căderea galbenă
+
+00:07:12.370 --> 00:07:13.400
+pentru configurație.
+
+00:07:14.600 --> 00:07:24.300
+Vedem că suntem capabili să stabilim mediul în care folosim cercul, să vedem - I Ruby pentru a arăta o imagine de patru puncte pe
+
+00:07:24.570 --> 00:07:28.460
+care am văzut-o pentru a lansa un mediu pentru noi.
+
+00:07:28.560 --> 00:07:32.880
+Putem vedea aici și să începem containerul cu toate lucrurile pe care le-a făcut.
+
+00:07:32.910 --> 00:07:36.100
+De asemenea, a permis S-sh.
+
+00:07:36.510 --> 00:07:41.680
+După cum vă amintiți din secțiunea SSA, putem folosi acum S-sh.
+
+00:07:41.820 --> 00:07:49.680
+Uită-te aici pentru a intra S-sh în acest container și a vedea cum merge totul, poate că trebuie să depanem ceva
+
+00:07:49.680 --> 00:07:57.450
+ce putem să-l însuți din nou ceva ce va trebui să adăugăm efectiv cheii noastre publice la container, dacă vrem
+
+00:07:57.450 --> 00:07:58.910
+să facem acea.
+
+00:07:58.920 --> 00:08:04.100
+Și aceasta este puțin avansată și poate citi pe cont propriu, dar există o opțiune care este drăguță.
+
+00:08:04.410 --> 00:08:10.410
+Și apoi facem ceva numit verificarea codului care este vizibil în cerc - verific, așa că faceți depozitul
+
+00:08:10.860 --> 00:08:12.200
+Haab și clonați-l.
+
+00:08:12.270 --> 00:08:18.880
+Puteți vedea aici Colon este depozitul complet și de fapt, ne trece prin niște pași în mod implicit.
+
+00:08:18.960 --> 00:08:23.400
+Se execută NPM instalează testul NPM.
+
+00:08:23.400 --> 00:08:29.370
+Dacă dăm clic pe aici, vedem că testele pe care le avem pe proiectul nostru sunt proiectul Wrubel France.
+
+00:08:29.430 --> 00:08:38.900
+Există 16 de teste, cinci instantanee toate trecute, iar noi continuăm să derulăm și totul se termină
+
+00:08:39.050 --> 00:08:39.680
+complet.
+
+00:08:39.680 --> 00:08:44.330
+Avem verde peste tot și spune succesul.
+
+00:08:44.420 --> 00:08:52.170
+Dacă mă întorc la clădiri, vedem că prietenii noștri de robot testează, iar Maestrul trece acum cu succes.
+
+00:08:52.170 --> 00:08:58.740
+Acum, să adăugăm de fapt o funcționalitate mai mică decât funcția implicită pe care o primim, care
+
+00:08:58.740 --> 00:09:03.960
+rulează doar instalarea NPM și testul NPM doar pentru a pregăti lucrurile.
+
+00:09:04.150 --> 00:09:06.140
+Să extindem puțin acest lucru.
+
+00:09:06.160 --> 00:09:10.300
+Chiar acum vom vedea că vom face o construcție în crearea unui container de doc.
+
+00:09:10.330 --> 00:09:14.100
+Vom verifica codul și vom rula Ecko un prim salut.
+
+00:09:14.110 --> 00:09:21.310
+Aceasta este doar de gând să imprimați acest text, dar cercul C. I. are această idee de fluxuri de lucru, ca să
+
+00:09:21.850 --> 00:09:22.630
+pot adăuga
+
+00:09:25.920 --> 00:09:27.880
+un alt pas sau poate chiar acum.
+
+00:09:28.230 --> 00:09:30.040
+Deci, acesta este un alt container.
+
+00:09:30.880 --> 00:09:39.580
+Iar acest container din nou pot să păstrez totul la fel, dar asta o voi spune dublu de necazuri pentru a
+
+00:09:41.120 --> 00:09:44.840
+fi corect că acum trebuie să le redenumim.
+
+00:09:44.860 --> 00:09:49.270
+Și aceasta este ceea ce fluxurile de lucru se află în cercul C. I. astfel încât să le putem distinge.
+
+00:09:49.270 --> 00:09:53.050
+Deci, hai să spunem că ăsta va fi Bobby.
+
+00:09:53.440 --> 00:10:03.550
+Aceasta va fi Sally și, folosind aceste două, pot defini ceea ce numim un flux de lucru sau fluxuri de lucru și aici pur și simplu spunem din
+
+00:10:05.460 --> 00:10:11.280
+nou ce versiune dorim să folosim fluxul de lucru și îl putem numi ceea ce
+
+00:10:11.280 --> 00:10:11.760
+dorim.
+
+00:10:11.760 --> 00:10:12.940
+O să-i spun.
+
+00:10:13.030 --> 00:10:22.710
+Bobby subliniază Sally pentru că le vom scrie pe amândouă și vor avea locuri de muncă pe care ar trebui
+
+00:10:22.710 --> 00:10:24.210
+să le îndeplinească.
+
+00:10:25.330 --> 00:10:32.030
+Și aceste slujbe vor fi slujba lui Babi.
+
+00:10:32.210 --> 00:10:33.750
+Asigurați-vă că adaug un spațiu aici.
+
+00:10:36.110 --> 00:10:46.710
+Și Sally, astfel încât acest flux de lucru să spună hei să ruleze acest flux de lucru Bobby și Sally și acelea includ aceste lucruri.
+
+00:10:46.710 --> 00:10:51.560
+Deci, rulați două containere care rulează checkout-ul și apoi executați comanda ecou.
+
+00:10:52.050 --> 00:10:54.840
+Să salvăm doar asta pentru a ne asigura că totul funcționează.
+
+00:10:54.840 --> 00:10:57.790
+Avem fișierul de configurare din cercul nostru.
+
+00:10:57.870 --> 00:11:06.420
+Să adăugăm de fapt acest lucru pentru a ajunge la acel cerc vezi-am un fișier de configurare pentru a juca de fapt cu.
+
+00:11:06.420 --> 00:11:18.670
+Am de gând să fac anunț și apoi să mă angajez. Voi adăuga cercul C. I. la mesajul nostru de comitere.
+
+00:11:18.860 --> 00:11:22.950
+Și apoi, în cele din urmă, obțineți master de origine.
+
+00:11:22.970 --> 00:11:29.930
+Acum folosesc maß și nu am creat o filială sau pentru acest proiect care nu este recomandat, dar pentru scopuri demonstrative
+
+00:11:29.930 --> 00:11:34.390
+pentru moment am încredere în mine ca pe mine în acest proiect.
+
+00:11:34.400 --> 00:11:38.110
+Mă duc doar la stăpân.
+
+00:11:38.130 --> 00:11:47.260
+În regulă, să ne întoarcem pentru a afla cum avem acum patru secunde ceva ce deja nu a reușit.
+
+00:11:47.260 --> 00:11:50.110
+Bine, să ne întoarcem să ne ridicăm și să vedem ce se întâmplă.
+
+00:11:50.120 --> 00:12:01.080
+Doriți să vă reîmprospătați mergeți la comitete și văd că am un gigant X acum lângă comiterea mea.
+
+00:12:01.360 --> 00:12:02.370
+Dă-mi clic pe ea.
+
+00:12:03.390 --> 00:12:03.780
+In regula.
+
+00:12:03.780 --> 00:12:10.000
+Ne-am angajat fișierul configurat de YAML și m-am întors aici și am făcut clic pe eșuat.
+
+00:12:10.380 --> 00:12:15.500
+Văd că config-ul dvs. are erori și este posibil să nu funcționeze corect.
+
+00:12:15.510 --> 00:12:16.040
+Minunat.
+
+00:12:16.140 --> 00:12:23.760
+Așa că vreau să spun că nu este grozav, dar cel puțin știm că cercul C. I. poate detecta fișierul nostru de configurare și vedem
+
+00:12:23.760 --> 00:12:30.690
+aici că acesta oferă un aer destul de frumos de ceea ce ar putea avea o eroare la scară migrand config la versiunea
+
+00:12:30.690 --> 00:12:31.400
+2. 0.
+
+00:12:32.200 --> 00:12:35.490
+Și erorile au avut loc în fluxurile de lucru Job.
+
+00:12:35.500 --> 00:12:37.840
+Etapele nu sunt o listă.
+
+00:12:37.930 --> 00:12:42.040
+Deci, să ne întoarcem și să rezolvăm acest lucru cu un fișier YAML.
+
+00:12:42.040 --> 00:12:44.250
+Chiar trebuie să ai grijă de indentare.
+
+00:12:44.270 --> 00:12:49.690
+Deci, ori de câte ori lucrați cu fișierele YAML asigurați-vă că ați urmărit documentația
+
+00:12:50.050 --> 00:12:58.840
+și ce așteaptă în acest caz, că indentația trebuie să fie recuperată ca aceasta să o salvăm, din nou, să ne împingem sau
+
+00:12:59.110 --> 00:13:01.570
+G. M. deși știi ce.
+
+00:13:01.630 --> 00:13:04.540
+Doar pentru a demonstra ce cerc C. I. o face.
+
+00:13:04.540 --> 00:13:05.860
+Să creăm o nouă ramură.
+
+00:13:05.890 --> 00:13:12.250
+Am de gând să spun că a lua checkout fi pentru o mână scurtă pentru a crea o nouă filială și o voi
+
+00:13:12.520 --> 00:13:14.600
+numi cerc C. I ..
+
+00:13:14.620 --> 00:13:15.120
+In regula.
+
+00:13:15.160 --> 00:13:16.450
+Am creat o nouă filială.
+
+00:13:16.450 --> 00:13:23.410
+Dacă primesc starea, văd că avem fișierul configurat YAML care a fost actualizat.
+
+00:13:23.410 --> 00:13:32.530
+Am de gând să spun că mă angajez Am să mă descurc cu cercul să-l încerc.
+
+00:13:33.060 --> 00:13:35.760
+Și apoi voi
+
+00:13:38.300 --> 00:13:41.260
+obține originea Cercului C.
+
+00:13:41.460 --> 00:13:43.600
+Așadar, împingeți-ne la filiala noastră și faceți-mi
+
+00:13:47.260 --> 00:13:50.540
+prostii că mi-am dat seama că am uitat să mă întâlnesc.
+
+00:13:50.700 --> 00:13:51.420
+Încearcă din nou.
+
+00:13:51.420 --> 00:13:56.640
+Obțineți anunțul de obținere a unui cerc.
+
+00:13:56.640 --> 00:13:57.150
+Acolo te duci.
+
+00:13:57.150 --> 00:13:58.260
+E mult mai bine.
+
+00:13:58.320 --> 00:14:05.970
+Și apoi veți rula să obțineți cercul de origine push C. I ..
+
+00:14:05.970 --> 00:14:08.580
+Bine, hai să mergem să te ajutăm.
+
+00:14:08.580 --> 00:14:10.650
+Bine, avem o cerere.
+
+00:14:10.650 --> 00:14:12.420
+Să aruncăm o privire aici.
+
+00:14:14.390 --> 00:14:15.990
+Mai întâi totul arată bine.
+
+00:14:15.990 --> 00:14:17.830
+Acestea sunt schimbările pe care le vreau.
+
+00:14:18.000 --> 00:14:25.900
+Mă duc doar cu comentariul nostru și spun doar să creez cereri de tragere și să privim acel cerc C. I.
+
+00:14:25.900 --> 00:14:29.380
+acum îmi conduc toate solicitările mele proaste.
+
+00:14:29.470 --> 00:14:32.460
+Vedeți că testul dvs. a trecut pe Sally.
+
+00:14:32.590 --> 00:14:35.410
+Dar acum Bauby încă mai lucrează.
+
+00:14:35.410 --> 00:14:39.010
+Așa că a făcut jumătate cât de ușor a fost asta.
+
+00:14:39.260 --> 00:14:42.800
+Și odată ce au trecut toate verificările, am primit aceste mărci verzi.
+
+00:14:42.800 --> 00:14:46.170
+Și acum este gata să fuzioneze cererile.
+
+00:14:46.170 --> 00:14:48.060
+Haideți să mergem la cercul C. I. aici.
+
+00:14:48.080 --> 00:14:51.800
+Mă voi întoarce la Bill și vom vedea asta.
+
+00:14:51.860 --> 00:14:53.870
+Oh, da, uita-te la asta.
+
+00:14:53.870 --> 00:14:55.590
+Avem un succes.
+
+00:14:55.820 --> 00:14:58.970
+Am întors mediul înconjurător.
+
+00:14:59.070 --> 00:15:01.410
+Am verificat codul.
+
+00:15:01.530 --> 00:15:02.710
+Grozav.
+
+00:15:02.820 --> 00:15:06.350
+Și avem și ecoul.
+
+00:15:06.380 --> 00:15:09.290
+Dubla problema.
+
+00:15:09.700 --> 00:15:14.030
+Dacă ne întoarcem aici, vedem că am făcut dublu probleme cu ecoul.
+
+00:15:14.170 --> 00:15:18.060
+Dar ce zici de un prim salut de Bobbie.
+
+00:15:18.340 --> 00:15:26.890
+Dacă ne întoarcem, vedem că există două locuri de muncă.
+
+00:15:26.990 --> 00:15:34.910
+Dacă mă duc să fac clic pe fluxul de lucru Bobby Sally, vedem că există două locuri de muncă în acest flux de lucru.
+
+00:15:35.040 --> 00:15:39.410
+Dacă fac clic pe Bobby, primesc Bobby Acco mai întâi.
+
+00:15:39.460 --> 00:15:40.650
+Bine, asta e minunat.
+
+00:15:40.650 --> 00:15:44.770
+Și apoi, dacă mă întorc la fluxul de lucru, văd asta.
+
+00:15:44.770 --> 00:15:45.250
+O.K.
+
+00:15:45.370 --> 00:15:48.900
+Sally și Bobby și am văzut exact la ce oră a trecut.
+
+00:15:48.970 --> 00:15:53.410
+Dacă mă întorc să construiesc, văd că de asta am două verde aici.
+
+00:15:53.410 --> 00:15:58.860
+Fiecare dintre ei a fugit în recipientul lor foarte foarte rece.
+
+00:15:59.280 --> 00:16:06.900
+De asemenea, ați observat că nu mai executăm testul NPM pentru instalarea NPM, deoarece acum îi dăm un fișier de configurare
+
+00:16:06.930 --> 00:16:11.520
+și aceste fișiere de configurare vor spune exact ce vrem să facă.
+
+00:16:11.550 --> 00:16:16.620
+Deci, acum trebuie să implementăm propriile noastre pentru a ne asigura că ne testați codul nostru.
+
+00:16:16.710 --> 00:16:21.900
+Noi NPM instala codul nostru și totul se execută fără probleme.
+
+00:16:21.940 --> 00:16:22.740
+In regula.
+
+00:16:22.840 --> 00:16:27.070
+Cred că este timpul ca noi să implementăm ceva valoros aici.
+
+00:16:27.070 --> 00:16:31.600
+Doar repetarea Double Trouble nu ne ajută cu prietenii noștri robo.
+
+00:16:31.930 --> 00:16:36.700
+Dar acum că vedem puterea cercului C. I. în următorul videoclip, vom configura acest lucru.
+
+00:16:36.790 --> 00:16:38.640
+Deci, are un flux de lucru frumos.
+
+00:16:38.680 --> 00:16:44.120
+Eu pentru a fuziona o solicitare de tragere a confirmat îmbinarea și vă voi vedea în următorul video.
+
+00:16:44.210 --> 00:16:44.470
+Buh-Pa.

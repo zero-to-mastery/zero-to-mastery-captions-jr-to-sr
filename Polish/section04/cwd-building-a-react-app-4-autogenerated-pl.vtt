@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:01.210 --> 00:00:02.380
+Witamy spowrotem.
+
+00:00:02.380 --> 00:00:09.120
+W tym filmie porozmawiamy trochę o czymś zaawansowanym i nie omówiliśmy zbyt wiele w tym kursie, a
+
+00:00:09.120 --> 00:00:14.980
+na pewno przejdziemy do następnej sekcji, ale chcę zacząć od tego, aby to było choć
+
+00:00:14.980 --> 00:00:20.020
+nowe i mylące. na początku, zanim przejdziemy do następnej sekcji, wrócimy i
+
+00:00:20.020 --> 00:00:21.940
+dokładnie sprawdzimy, co robimy.
+
+00:00:22.770 --> 00:00:27.820
+Chcę, aby ta aplikacja była bardziej realistyczna w aplikacji z prawdziwego życia.
+
+00:00:27.870 --> 00:00:34.310
+Nie musielibyśmy pisać tych robotów tak jak robiłem to w robotach.
+
+00:00:34.380 --> 00:00:36.320
+Tak, właśnie stworzyłem tę jesień.
+
+00:00:36.330 --> 00:00:42.000
+Ale w prawdziwym życiu nie wchodzimy ręcznie do użytkowników.
+
+00:00:42.360 --> 00:00:46.570
+Używamy czegoś takiego jak API.
+
+00:00:46.780 --> 00:00:47.980
+I co to oznacza.
+
+00:00:47.980 --> 00:00:56.410
+Chcemy, gdy ta strona internetowa zostanie załadowana, aby wysłać zapytanie gdzieś tam w świecie Internetu i zabrać te
+
+00:00:56.410 --> 00:01:06.630
+roboty z serwera, na którym faktycznie możemy zrobić, że mamy tutaj coś, co nazywa się symbol zastępczy Jason i nie trzeba
+
+00:01:06.630 --> 00:01:12.620
+zbytnio się o to martwią, ale naprawdę mają naprawdę dobrą sowę,
+
+00:01:12.620 --> 00:01:20.990
+z której możemy skorzystać i zwracają to, czego potrzebujemy, imię lub nazwisko oraz imię i nazwisko użytkownika.
+
+00:01:21.020 --> 00:01:23.520
+Reszta informacji, której naprawdę nie potrzebujemy.
+
+00:01:23.540 --> 00:01:30.870
+Ale jak widać po prostu wpisując to jesteś Arel, rozumiem.
+
+00:01:30.870 --> 00:01:37.010
+Używając tego, sprawimy, że nasza aplikacja będzie trochę bardziej realistyczna.
+
+00:01:37.020 --> 00:01:39.710
+Zacznijmy.
+
+00:01:39.780 --> 00:01:45.850
+Jeśli zamknę plik CSSA, ponieważ już ich nie potrzebujemy.
+
+00:01:46.050 --> 00:01:48.220
+I zamknijmy też pozostałe karty.
+
+00:01:49.860 --> 00:01:59.280
+Patrząc na ten składnik aplikacji, widzimy, że jest to coś, co nazywamy inteligentnym komponentem, takim jak pole wyszukiwania lub
+
+00:01:59.280 --> 00:02:04.770
+lista samochodów, które są tylko czystymi funkcjami, jak widać tutaj.
+
+00:02:05.950 --> 00:02:06.410
+Trafny.
+
+00:02:06.600 --> 00:02:15.150
+Tak, faktycznie istnieje stan danych, które opisują naszą aplikację, a ponieważ mają stan, nazywamy je
+
+00:02:15.150 --> 00:02:16.830
+inteligentnymi komponentami.
+
+00:02:17.770 --> 00:02:20.830
+A inteligentne komponenty zwykle mają składnię tej klasy.
+
+00:02:21.250 --> 00:02:30.390
+Teraz, gdy uruchamiamy tę aplikację, roboty będą w rzeczywistości pustą tablicą, ponieważ nic tam nie
+
+00:02:30.430 --> 00:02:31.110
+ma.
+
+00:02:31.150 --> 00:02:33.360
+Nie złapaliśmy użytkowników.
+
+00:02:33.370 --> 00:02:42.650
+Więc najprawdopodobniej, jeśli zapiszę te roboty, nie wyświetli się, dopóki nie załaduję strony internetowej, a gdy tylko strona
+
+00:02:42.650 --> 00:02:47.630
+internetowa zostanie załadowana, pytam o użytkowników skądś przez Internet.
+
+00:02:49.970 --> 00:02:53.390
+Miejmy nadzieję, że tutaj.
+
+00:02:53.440 --> 00:02:54.300
+Zróbmy to.
+
+00:02:56.540 --> 00:03:06.610
+Re-act zawiera kilka innych rzeczy wewnątrz komponentów, z których możemy korzystać i nazywa się je metodami cyklu
+
+00:03:06.760 --> 00:03:07.420
+życia.
+
+00:03:10.200 --> 00:03:12.490
+I wygląda to mniej więcej tak.
+
+00:03:13.930 --> 00:03:15.160
+Nie przejmuj się zbytnio.
+
+00:03:15.340 --> 00:03:23.510
+Są to tylko metody, których możemy użyć tutaj, które są dostarczane z ponownym uruchomieniem i są one nazywane
+
+00:03:23.510 --> 00:03:32.180
+hakami cyklu życia, ponieważ to, co robią, to jeśli uruchomimy te, uruchomi się automatycznie, gdy ta aplikacja zostanie załadowana na
+
+00:03:32.220 --> 00:03:32.740
+stronę.
+
+00:03:32.900 --> 00:03:33.630
+Pozwól mi wyjaśnić.
+
+00:03:34.700 --> 00:03:37.610
+Widzimy, że mamy trzy sekcje.
+
+00:03:37.610 --> 00:03:45.810
+Aktualizujemy montaż i odmontujemy sposób, w jaki działamy, robimy coś, co nazywa się montażem.
+
+00:03:45.890 --> 00:03:58.880
+Kiedy kliknę tutaj odśwież komponent aplikacji, ten komponent zostanie tutaj podłączony do dokumentu z myślą o
+
+00:03:59.750 --> 00:04:01.160
+trasie.
+
+00:04:01.250 --> 00:04:09.910
+Jeśli wrócimy do naszego indeksu, że plik HMO będzie naszą stroną internetową jest tylko div z ideą root.
+
+00:04:10.030 --> 00:04:21.290
+Kiedy mówimy, że montujemy komponent, wymieniamy to i dodajemy całą naszą aplikację, która jest montowana. Montaż jest początkiem
+
+00:04:21.290 --> 00:04:31.410
+aplikacji, a teraz są to haki cyklu życia, które zostają trafione i są w porządku.
+
+00:04:31.460 --> 00:04:37.910
+Pierwszą rzeczą jest to, że sprawdza Hey, czy ten komponent ma konstruktora Bauld ma konstruktora.
+
+00:04:37.940 --> 00:04:38.300
+Tak.
+
+00:04:38.330 --> 00:04:45.680
+OK, uruchom ten fragment kodu, czy ma on zamontowane komponenty.
+
+00:04:45.690 --> 00:04:47.850
+Nie, to go nie ignoruje.
+
+00:04:47.850 --> 00:04:53.180
+Czy to ma Rander? Tak, to on to przejął.
+
+00:04:53.180 --> 00:04:55.710
+Czy ma komponent zamontowany?
+
+00:04:55.730 --> 00:04:58.030
+Nie, nie ma ignorowanego komponentu.
+
+00:04:58.910 --> 00:05:01.850
+I to za każdym razem przechodzi przez to.
+
+00:05:01.850 --> 00:05:08.140
+Ma również coś, co nazywa się aktualizacją i to jest, gdy tylko jakiś składnik się zmienia.
+
+00:05:08.180 --> 00:05:18.600
+Na przykład, gdy mamy listę dobrze za każdym razem, gdy wpisuję coś, komponent bez karty zostaje ponownie wyświetlony, ponieważ
+
+00:05:18.840 --> 00:05:24.030
+mamy nowe informacje, funkcja otrzymuje nowe dane wejściowe.
+
+00:05:24.030 --> 00:05:27.210
+To samo dotyczy komponentu wejściowego.
+
+00:05:27.210 --> 00:05:35.960
+Tak więc w tych komponentach, jeśli chcemy, abyśmy mogli dodać komponent, otrzymamy aktualizację komponentów wstrząsanych,
+
+00:05:35.960 --> 00:05:38.430
+tak i tak dalej.
+
+00:05:39.340 --> 00:05:49.960
+I na koniec, gdy odmontowujemy, gdy komponent zostanie usunięty ze strony, na przykład, jeśli zmienimy na
+
+00:05:49.990 --> 00:05:58.230
+inną stronę, komponent zostanie zamontowany, a składnik aplikacji zostanie usunięty ze strony.
+
+00:05:58.230 --> 00:06:05.350
+Są one nazywane hakami cyklu życia, ponieważ są uruchamiane za każdym razem, gdy komponent coś robi i przychodzi
+
+00:06:05.350 --> 00:06:06.560
+z reakcją.
+
+00:06:06.670 --> 00:06:12.420
+Możesz więc umieścić je w komponencie klasowym i automatycznie zostaną uruchomione.
+
+00:06:12.430 --> 00:06:16.250
+Nie musisz się martwić, że zadzwonisz, pozwól mi to zademonstrować.
+
+00:06:17.840 --> 00:06:22.770
+Chcemy użyć komponentu mount, który zostanie wywołany po renderowaniu.
+
+00:06:22.870 --> 00:06:28.930
+To mówi, że tak komponent aplikacji jest zamontowany
+
+00:06:28.930 --> 00:06:43.780
+na stronie internetowej, a to Sprenger, że wyświetla coś, co możemy zrobić, mówiąc, że komponent się zamontował i ponieważ to jest część reakcji.
+
+00:06:43.830 --> 00:06:46.310
+Zauważ, że teraz używam tutaj funkcji aero.
+
+00:06:49.020 --> 00:06:50.510
+Teraz myślę, że komponent Denn zamontować.
+
+00:06:50.520 --> 00:06:52.190
+Mogę powiedzieć log
+
+00:06:55.520 --> 00:07:05.940
+myślowy na konsoli, jeśli odświeżę to i otworzę konsolę, zobaczysz, że sprawdziłem czy odświeżam. Idziesz, to było naprawdę
+
+00:07:05.940 --> 00:07:06.610
+szybkie.
+
+00:07:06.620 --> 00:07:09.590
+Ale widzisz, że to się nazywa automatycznie.
+
+00:07:09.590 --> 00:07:11.120
+Chociaż nic nie powiedziałem.
+
+00:07:12.260 --> 00:07:14.980
+Korzystając z tego możemy zrobić coś interesującego.
+
+00:07:15.050 --> 00:07:26.440
+Teraz, gdy komponent się zamontuje, mogę powiedzieć, że ten stan zestawu dart ma teraz roboty
+
+00:07:26.440 --> 00:07:32.430
+dla robotów, które otrzymujemy z naturalnego Griffo.
+
+00:07:32.640 --> 00:07:39.930
+Jeśli to zrobię i zapiszę, odświeżmy i zobaczmy, co się stanie.
+
+00:07:40.020 --> 00:07:45.010
+Jest naprawdę szybki, ale widzisz, że dostajemy nasze roboty.
+
+00:07:45.200 --> 00:07:52.470
+Mówię, że uruchom konstruktor z pustą tablicą, aby pokazać tutaj kolejność wykonywania.
+
+00:07:52.670 --> 00:07:57.140
+Gdybym miał log konsoli, a my
+
+00:08:01.180 --> 00:08:18.220
+po prostu powiemy, że jeden tutaj powie dwa, a my powiemy trzy, jeśli to zapiszę i otworzę konsolę mam 1 3 2 3
+
+00:08:18.220 --> 00:08:31.960
+sprawdźmy najpierw, czy mamy jednego Gerransa trzy, które jest Rander, a następnie dwa, które jest elementem zamontowane, a następnie
+
+00:08:31.960 --> 00:08:34.750
+trzy działa ponownie.
+
+00:08:35.200 --> 00:08:43.340
+Właściwie, zmieńmy to na rzeczywiste słowa, aby lepiej widzieć, co się właściwie dzieje.
+
+00:08:46.070 --> 00:08:53.200
+Jeśli zapiszemy i odświeżymy, zobaczymy, że mamy konstruktor, który uruchamia się jako pierwszy, a następnie
+
+00:08:53.200 --> 00:08:57.020
+komponent jest montowany tak, jak ta kolejność.
+
+00:08:57.170 --> 00:09:00.460
+Ale teraz mamy również render.
+
+00:09:00.770 --> 00:09:03.800
+Dlaczego renderowanie zostało ponownie uruchomione.
+
+00:09:03.840 --> 00:09:14.080
+Jeśli pamiętasz, że stworzyliśmy konstruktora, uruchomiliśmy Brandur, a następnie zaktualizowaliśmy stan i komponent zrobiliśmy
+
+00:09:14.080 --> 00:09:14.920
+MT.
+
+00:09:15.010 --> 00:09:24.420
+Ponieważ aktualizowaliśmy stan za każdym razem, gdy zmienia się stan Pamiętaj, że przechodzimy do cyklu życia,
+
+00:09:24.900 --> 00:09:36.160
+aktualizujemy renderowanie Iranu ponownie, ponieważ przechodzi z pustej tablicy do listy robotów, render ponownie się uruchamia, a wirtualny Dom
+
+00:09:36.160 --> 00:09:45.500
+zauważa, że jest różnica i odświeża naszą Sieć przeglądarka, aby uwzględnić pionowy układ robota, wiedząc, że
+
+00:09:46.810 --> 00:09:48.810
+właśnie to zrobiliśmy.
+
+00:09:48.820 --> 00:09:55.880
+Możemy to usunąć i ostatecznie uczynić to bardziej realistycznym.
+
+00:09:56.000 --> 00:10:03.920
+Zamiast używać pliku robota, zamierzam go usunąć i tutaj pokażę ci fajny
+
+00:10:04.790 --> 00:10:09.170
+sposób na pobranie tej listy stąd.
+
+00:10:09.170 --> 00:10:18.630
+Zamierzam skopiować link i zamierzam powiedzieć "pobierz", o czym dowiemy się w następnej sekcji.
+
+00:10:18.650 --> 00:10:25.640
+Mówimy tylko, aby to było żądanie arkusza, a pobieranie to otrzymało.
+
+00:10:25.950 --> 00:10:28.280
+Znowu mówimy tylko, że przejdziemy tutaj.
+
+00:10:29.540 --> 00:10:33.760
+Wtedy to otrzyma odpowiedź i ta
+
+00:10:38.860 --> 00:10:43.270
+odpowiedź jest dobrze Ta część jest trochę trudna.
+
+00:10:43.270 --> 00:10:44.560
+Musisz się do tego przyzwyczaić.
+
+00:10:46.590 --> 00:10:53.500
+Jason musimy po prostu zamienić odpowiedź na coś, o czym będziemy rozmawiać w następnej sesji.
+
+00:10:53.510 --> 00:10:56.900
+Na razie możesz po prostu skopiować i podstawić.
+
+00:10:56.930 --> 00:10:59.280
+Wrócimy do tego i wyjaśnimy, co się dzieje.
+
+00:10:59.660 --> 00:11:05.140
+I stąd to powiedziane to na nowej linii, abyśmy dokładnie wiedzieli, co się dzieje.
+
+00:11:06.810 --> 00:11:13.370
+Powiedzmy, że roboty do tej pory możemy powiedzieć użytkownikom, ponieważ w tym przypadku otrzymujemy użytkowników.
+
+00:11:13.750 --> 00:11:15.000
+I tutaj możemy
+
+00:11:18.390 --> 00:11:22.460
+powiedzieć, że mówi to, że roboty stanowe są równe użytkownikom.
+
+00:11:22.950 --> 00:11:27.870
+I musimy upewnić się, że zwrócimy to bezpieczne.
+
+00:11:27.910 --> 00:11:28.910
+Zobaczmy, czy to działa.
+
+00:11:30.230 --> 00:11:30.950
+Spójrz na to.
+
+00:11:31.060 --> 00:11:40.570
+Odświeżmy i widzimy to małe opóźnienie, które teraz działa.
+
+00:11:40.650 --> 00:11:47.260
+Więc tutaj możemy zmniejszyć rozmiar i zmniejszyć go do jednej linii.
+
+00:11:47.260 --> 00:11:48.770
+Powinniśmy pamiętać, jak to zrobić.
+
+00:11:50.220 --> 00:11:52.680
+Widzimy, że po
+
+00:11:55.370 --> 00:11:56.390
+pobraniu
+
+00:11:59.320 --> 00:12:01.850
+po prostu aktualizujemy stan.
+
+00:12:01.870 --> 00:12:04.680
+Więc pobieramy cokolwiek użytkownicy.
+
+00:12:05.020 --> 00:12:06.760
+Otrzymujemy odpowiedź.
+
+00:12:06.760 --> 00:12:10.690
+Robimy tu trochę magii z Jasonem, o czym porozmawiamy później.
+
+00:12:10.840 --> 00:12:17.820
+A potem otrzymujemy użytkowników i aktualizujemy użytkowników z ustawionym stanem do tej pory odświeżonym.
+
+00:12:17.820 --> 00:12:28.200
+Znowu, jeśli tego nie zrobię, załóżmy, że po prostu nic nie robię i zwracam pusty obiekt.
+
+00:12:28.330 --> 00:12:37.020
+Widzisz, że nie otrzymuję robotów, które otrzymują roboty tylko po ich aktualizacji.
+
+00:12:37.060 --> 00:12:38.000
+Jakie to jest świetne.
+
+00:12:42.190 --> 00:12:42.840
+W porządku.
+
+00:12:42.970 --> 00:12:43.810
+To było dużo.
+
+00:12:43.810 --> 00:12:50.950
+I prawdopodobnie wygląda to dość przerażająco, abyś czuł się trochę bardziej komfortowo, ponieważ używam pobierania i
+
+00:12:50.950 --> 00:12:54.100
+nie ma z tym nic wspólnego.
+
+00:12:54.100 --> 00:12:58.030
+Czy to oznacza, że jest częścią obiektu okna.
+
+00:12:58.240 --> 00:13:05.970
+Sprawdźmy, czy otworzę konsolę i wykonuję okno Daut Fetch.
+
+00:13:06.430 --> 00:13:07.260
+Tak, popatrz na to.
+
+00:13:07.270 --> 00:13:12.130
+Pobierz jest metodą na obiekcie okna.
+
+00:13:12.130 --> 00:13:14.140
+Teraz jest dostępny we wszystkich przeglądarkach.
+
+00:13:14.320 --> 00:13:17.070
+Jest to narzędzie do zgłaszania próśb.
+
+00:13:17.980 --> 00:13:26.440
+Dwa serwery i jak widać jest to serwer, który zwraca się do nas,
+
+00:13:26.440 --> 00:13:35.230
+gdy robimy slash użytkowników listę użytkowników, których możemy użyć, co jest idealne dla naszego wrap.
+
+00:13:35.260 --> 00:13:40.140
+I w końcu zastanawiasz się, co by było, gdyby to było naprawdę powolne, albo co by było, gdyby tak się stało.
+
+00:13:40.210 --> 00:13:40.800
+Nie wiem
+
+00:13:40.930 --> 00:13:41.870
+Pięć sekund.
+
+00:13:41.890 --> 00:13:44.370
+I mieliśmy całą masę użytkowników.
+
+00:13:44.800 --> 00:13:56.840
+Cóż, w takim przypadku możesz zrobić coś w stylu instrukcji JEŻELI, jeśli roboty nie mają wartości równej zero.
+
+00:13:57.010 --> 00:14:03.450
+W takim przypadku możemy zwrócić H1, który mówi, że ładowanie innego
+
+00:14:09.820 --> 00:14:13.060
+może po prostu powiedzieć,
+
+00:14:15.800 --> 00:14:19.310
+że powrót to znowu jest javascript.
+
+00:14:19.310 --> 00:14:20.840
+To piękno w Rijadzie.
+
+00:14:22.440 --> 00:14:27.710
+I widzisz, jak robimy roboty nie jest zdefiniowany, ponieważ są to roboty DOT z kropką.
+
+00:14:27.870 --> 00:14:29.870
+Ponownie odnosimy się do stanu aplikacji.
+
+00:14:30.300 --> 00:14:36.330
+A tutaj, jeśli odświeżam, powiedzmy, że nie aktualizujemy stanu, a
+
+00:14:36.330 --> 00:14:37.250
+ja
+
+00:14:41.340 --> 00:14:48.630
+po prostu zwrócę pusty obiekt, gdy w tym przypadku właśnie się ładuję.
+
+00:14:48.680 --> 00:14:49.750
+Bardzo fajny.
+
+00:14:50.240 --> 00:14:55.510
+I w ten sposób budujesz prawdziwe operacje z ponownym działaniem, masz pasek ładowania.
+
+00:14:55.500 --> 00:15:05.150
+Mogą po prostu dodać tutaj, aby żądania dotyczące komponentu były montowane i wchodzić w interakcję z komponentami.
+
+00:15:05.240 --> 00:15:06.100
+Bardzo fajny.
+
+00:15:07.900 --> 00:15:13.280
+Wiesz, co mamy sami dla naszej aplikacji.
+
+00:15:13.370 --> 00:15:18.830
+Jest jeszcze jedna rzecz, którą pokażę ci z reakcją, a ty nauczysz się podstaw i zareagujesz.
+
+00:15:18.830 --> 00:15:22.270
+Możesz teraz zrobić to, aby zbudować dowolną aplikację.
+
+00:15:22.280 --> 00:15:24.120
+Jeszcze jedna rzecz do zrobienia.
+
+00:15:24.140 --> 00:15:28.110
+Jeszcze jeden mały kawałek, aby uzupełnić naszą wiedzę o ponownym działaniu.
+
+00:15:28.490 --> 00:15:29.820
+Do zobaczenia w następnym.
+
+00:15:29.830 --> 00:15:30.250
+PA pa.

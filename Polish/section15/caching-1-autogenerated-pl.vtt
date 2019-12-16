@@ -1,0 +1,232 @@
+﻿WEBVTT
+
+00:00:00.980 --> 00:00:04.640
+Buforowanie to proces przechowywania niektórych danych.
+
+00:00:05.410 --> 00:00:14.430
+W gotówce gotówkowej znajduje się obszar składowania tymczasowego, w którym przechowywane są dane, dzięki czemu w przyszłości mogę
+
+00:00:14.470 --> 00:00:16.590
+być obsługiwany szybciej.
+
+00:00:16.630 --> 00:00:23.050
+Pomyśl o tym jako o małym pudełku, w którym przechowujemy informacje, abyśmy nie musieli podróżować
+
+00:00:23.050 --> 00:00:26.560
+aż do miejsca, w którym pobieramy te informacje.
+
+00:00:26.590 --> 00:00:33.150
+Mamy pakiet, który jest o wiele bliższy nam, który może dać nam tę informację dużo wcześniej.
+
+00:00:33.170 --> 00:00:40.890
+Teraz, aby naprawdę zrozumieć buforowanie, musimy przejść do bardzo podstawowych kroków, które mówią o wykorzystaniu pamięci losowej C-p
+
+00:00:40.890 --> 00:00:52.420
+lub pamięci RAM i dyskach twardych teraz C. P. są zbudowane ze specjalnej pamięci na
+
+00:00:52.690 --> 00:00:59.940
+chipy zwanej rejestrem, która zwykle składa się z niewielkiej ilości szybkiego przechowywania.
+
+00:01:00.030 --> 00:01:07.260
+Tak więc korzystanie z C-p ma w dzisiejszych czasach trochę pamięci, poza zwykłą pracą lub
+
+00:01:07.260 --> 00:01:09.330
+byciem mózgiem naszych komputerów.
+
+00:01:10.400 --> 00:01:16.760
+Są to najbliższe i najmniejsze pamięci w naszych komputerach, ale także najszybsze.
+
+00:01:16.940 --> 00:01:26.300
+Czasami słyszałeś o tych rejestrach: l Zero Cash ALSWANG gotówka L-3 za gotówkę i wszystkie te pamięci zależą
+
+00:01:26.310 --> 00:01:31.520
+od tego, czy istnieją, czy nie od architektury chipu.
+
+00:01:31.760 --> 00:01:35.210
+Ale są one używane jako superszybki sposób dostępu do pamięci.
+
+00:01:35.210 --> 00:01:36.730
+Najszybciej możemy iść.
+
+00:01:37.220 --> 00:01:41.120
+A potem mamy coś takiego jak Ramm lub pamięć o dostępie swobodnym.
+
+00:01:41.200 --> 00:01:48.470
+Ponownie są bliżej CPI, nie tak blisko, jak rejestry, w których znajdują się małe, małe fragmenty pamięci,
+
+00:01:48.470 --> 00:01:56.960
+które posiadaliście Cp, ale wystarczająco duże, aby mogły pomieścić istotne informacje, z których można uzyskać dostęp do informacji i ponownie z
+
+00:01:56.960 --> 00:02:03.990
+nich korzystać, ponieważ jest to w pamięci w niedługim czasie. jak moc spada z naszych komputerów.
+
+00:02:04.000 --> 00:02:05.660
+Cóż, ta informacja zniknęła.
+
+00:02:05.930 --> 00:02:13.080
+Ale ponieważ jest to pamięć Cóż, jest także szybki dostęp.
+
+00:02:13.320 --> 00:02:16.570
+A potem mamy coś takiego jak dyski twarde.
+
+00:02:16.980 --> 00:02:20.550
+A to były dyski fizyczne, które mieliśmy w naszym komputerze.
+
+00:02:20.580 --> 00:02:26.820
+Teraz na twoich komputerach znajdziesz coś w rodzaju dysków SSD, które znacznie przyspieszają
+
+00:02:27.060 --> 00:02:29.110
+dostęp do informacji.
+
+00:02:29.930 --> 00:02:37.880
+Ale różnica między pamięcią RAM a tym dyskiem twardym to koszty wydajności i bliskość CPE, które widzisz,
+
+00:02:37.880 --> 00:02:46.670
+gdy idziemy w dół, staje się tańsze i tańsze, ale także staje się wolniejsze i sprzedaje się wolniej, aby uzyskać
+
+00:02:46.670 --> 00:02:52.420
+dostęp do tej pamięci dla CPQ aby uzyskać dostęp do pamięci dyskowej.
+
+00:02:52.640 --> 00:02:59.300
+Cóż, musi podróżować na dłuższą odległość, a dysk potrzebuje więcej czasu, aby uzyskać te informacje do
+
+00:02:59.340 --> 00:03:06.470
+CPQ, ale dodatkową korzyścią jest to, że nawet jeśli zasilanie zostanie wyłączone, ten dysk zapamięta nasze informacje ponownie
+
+00:03:07.870 --> 00:03:12.220
+w stosunku do pamięci RAM, która przechowuje tylko tymczasowe dane.
+
+00:03:12.220 --> 00:03:15.090
+Dysk jest w stanie przechowywać dane długoterminowe.
+
+00:03:16.660 --> 00:03:16.970
+DOBRZE.
+
+00:03:16.980 --> 00:03:20.150
+Ale dlaczego właśnie się o tym dowiadujemy.
+
+00:03:20.310 --> 00:03:22.170
+Jak to nam się przydaje.
+
+00:03:22.850 --> 00:03:30.560
+Widzisz, ponieważ buforowanie jest właściwie wszędzie i większość ludzi może nie zdawać sobie sprawy z tego, ile miejsc
+
+00:03:30.560 --> 00:03:39.500
+możemy rzeczywiście buforować w podobny sposób, w jaki jesteśmy w stanie uzyskać dostęp do pamięci lub uzyskać dostęp do danych o wiele
+
+00:03:39.560 --> 00:03:43.910
+szybciej na naszych komputerach, używając CPQ RAM i dysków twardych.
+
+00:03:43.910 --> 00:03:54.210
+To, co możemy zrobić w odniesieniu do naszych aplikacji na przykład, że używamy końcówek dysków CD do pamięci podręcznej, to pliki CSSA
+
+00:03:54.270 --> 00:04:00.810
+i javascript dla shemale, więc zamiast przeglądarki będącej w drodze do serwera w
+
+00:04:00.840 --> 00:04:08.700
+całym kraju, mogą po prostu uzyskać dostęp najbliższy serwer CDN i użyj plików z pamięci podręcznej.
+
+00:04:09.830 --> 00:04:14.600
+Są też rzeczy, które możemy zarobić na serwerze, na przykład na serwerze.
+
+00:04:14.600 --> 00:04:20.720
+Gdybym miał dostęp do jakiegoś API, który zwróci mi dobrze roboty, więc nie będę
+
+00:04:20.720 --> 00:04:28.930
+musiał za każdym razem żądać, by informacje o robocie były dostępne w zmiennej, być może w pamięci, takiej jak rattus
+
+00:04:28.940 --> 00:04:31.750
+lub nawet w bazie danych .
+
+00:04:31.760 --> 00:04:38.810
+Jeśli interfejs API jest naprawdę powolny, możemy również użyć buforowania po stronie bazy danych, a serwery baz danych
+
+00:04:38.810 --> 00:04:45.200
+zostaną skonfigurowane po wyjęciu z pudełka, zwykle w celu optymalnego buforowania, ale pozwalają także kontrolować
+
+00:04:45.200 --> 00:04:48.280
+i zmieniać parametry w zależności od potrzeb.
+
+00:04:48.430 --> 00:04:54.400
+Potem rozmawialiśmy również o grzechotce i wiemy o całej naszej grzechotce, teraz używamy jej do
+
+00:04:54.550 --> 00:04:56.300
+zarządzania naszymi tokenami sesji.
+
+00:04:56.390 --> 00:04:58.230
+Kiedy mówię do ciebie o Reddy, pomyślał.
+
+00:04:58.300 --> 00:05:01.880
+W porządku Andrea uczy mnie o innej bezużytecznej bazie danych.
+
+00:05:01.880 --> 00:05:03.140
+To jest strata czasu.
+
+00:05:03.200 --> 00:05:07.990
+Ale powoli zacząłeś się pojawiać, a ja pokazałem ci, że możesz zarządzać sesjami za pomocą
+
+00:05:07.990 --> 00:05:09.730
+readów i jest naprawdę szybki.
+
+00:05:09.730 --> 00:05:15.380
+Co, jeśli powiem ci, że możemy użyć czerwonego S do buforowania żądań bazy danych, to jest
+
+00:05:15.380 --> 00:05:19.240
+coś, o czym mówiliśmy trochę w skalowaniu bazy danych wideo.
+
+00:05:19.290 --> 00:05:24.830
+Na przykład, gdybyśmy mieli serwer węzłowy i musieliśmy zwrócić się do bazy danych.
+
+00:05:25.170 --> 00:05:32.850
+Cóż, mogę najpierw umieścić mój serwer chlebowy pomiędzy nami i mogę zapytać serwer. Hej, masz te
+
+00:05:32.850 --> 00:05:34.370
+informacje o użytkowniku.
+
+00:05:34.530 --> 00:05:40.020
+Jeśli tak nie jest, podczas gdy idziemy do bazy danych, pobierz tę informację przez ścianę ratunkową i odeślij
+
+00:05:40.020 --> 00:05:41.190
+ją do notatek.
+
+00:05:41.550 --> 00:05:47.970
+Ale zanim po prostu odeślemy ją bezpośrednio z powrotem, przechodzimy przez magazyn rattus, przechowujemy te informacje w pamięci, a
+
+00:05:47.970 --> 00:05:54.840
+następnie przekazujemy je z powrotem do serwera, aby następnym razem, gdy serwer poprosi o te same informacje, które przechodzą przez
+
+00:05:54.840 --> 00:05:57.060
+grzechotkę, Retta mówi: tak, mam to.
+
+00:05:57.060 --> 00:06:03.120
+Idziemy i unikamy ratowania wszystkich instrukcji i dostępu do dysku, które najprawdopodobniej miałyby
+
+00:06:03.570 --> 00:06:06.030
+miejsce w przypadku bazy danych.
+
+00:06:06.180 --> 00:06:11.100
+I to jest coś, co naprawdę chcesz zrobić, zanim zrobisz jakiekolwiek skalowanie bazy danych,
+
+00:06:11.100 --> 00:06:13.320
+gdzie zaczniemy pracę z bazą danych.
+
+00:06:13.320 --> 00:06:21.900
+Chcesz dowiedzieć się, czy mogę gotówkę, czy mogę użyć programu rattus lub memcached, aby spieniężyć nasze zapytania lub nasze zapytania, a
+
+00:06:22.500 --> 00:06:26.830
+jest tak wiele innych miejsc, w których możesz robić gotówkę.
+
+00:06:27.000 --> 00:06:33.870
+Na przykład najbardziej popularnym i najbardziej znanym jest buforowanie po stronie klienta
+
+00:06:33.900 --> 00:06:35.750
+lub w przeglądarce.
+
+00:06:36.060 --> 00:06:42.870
+Widzisz, że przeglądarki dają nam mnóstwo sposobów na przechowywanie informacji w pamięci podręcznej, a my zagłębimy się
+
+00:06:42.870 --> 00:06:48.820
+nieco w ten temat, ponieważ dzięki niemu możesz dokonać naprawdę ekscytujących optymalizacji wydajności.
+
+00:06:49.200 --> 00:06:54.670
+Więc do tego będziesz musiał poczekać do następnego wideo, aby to zrobić.

@@ -1,0 +1,184 @@
+﻿WEBVTT
+
+00:00:01.090 --> 00:00:09.890
+Întoarceți-vă să instalați rattus pe laptopul sau calculatoarele noastre pentru a le folosi și a testa câteva
+
+00:00:09.890 --> 00:00:10.940
+comenzi.
+
+00:00:10.940 --> 00:00:16.880
+Acum, rețineți când vine vorba de bazele de date, de cele mai multe ori, nu veți fi difuzate de
+
+00:00:16.880 --> 00:00:17.680
+la computer.
+
+00:00:18.580 --> 00:00:26.120
+În majoritatea cazurilor, va fi pe un server sau pe o altă mașină dedicată acestei baze de date.
+
+00:00:26.260 --> 00:00:31.540
+Și vom face același lucru și pentru Radice, dar pentru că vrem să-l testăm, asigurați-vă că știm
+
+00:00:31.540 --> 00:00:34.940
+comenzile și că o putem executa și pe plan local.
+
+00:00:34.960 --> 00:00:39.920
+Este bine să exersați abilitățile acum pentru al descărca.
+
+00:00:39.920 --> 00:00:41.380
+Este foarte simplu.
+
+00:00:41.420 --> 00:00:43.510
+Pur și simplu mergem la fila lor
+
+00:00:48.430 --> 00:00:53.470
+de descărcare și vedem aici că au și imagini de tip daquiri pe care le-am putea folosi mai târziu.
+
+00:00:53.470 --> 00:00:54.280
+Indiciu de indiciu.
+
+00:00:54.430 --> 00:01:03.450
+Dar pentru moment vom obține versiunea stabilă 4. 0 și puteți face clic pe descărcare aici sau dacă continuă să derulați,
+
+00:01:03.450 --> 00:01:08.140
+veți vedea că aveți niște comenzi pe care le puteți utiliza pentru a le obține.
+
+00:01:08.200 --> 00:01:09.300
+Deci aveți două opțiuni.
+
+00:01:09.310 --> 00:01:15.640
+Puteți să dați clic pe link-ul de descărcare care va apărea care va descărca un fișier așa cum puteți
+
+00:01:15.640 --> 00:01:16.490
+vedea aici.
+
+00:01:17.970 --> 00:01:23.240
+Și odată cu căderea puteți să o deschideți și apoi să rulați aceste comenzi.
+
+00:01:24.200 --> 00:01:29.100
+Dar deocamdată doar pentru că le avem la dispoziție, o să conduc comenzile.
+
+00:01:29.150 --> 00:01:33.820
+Deci, primul este de a obține acest lucru care ne va pune Radice instalat.
+
+00:01:35.100 --> 00:01:38.820
+Deci, să deschidem un terminal aici și să conducem comanda.
+
+00:01:38.820 --> 00:01:42.050
+Vezi că instalează și vrea fiul lor.
+
+00:01:42.180 --> 00:01:53.770
+Trebuie să o deschidem cu comanda tar și apoi să luăm CD-ul în roșu S4. 0 0. 9.
+
+00:01:53.790 --> 00:01:59.240
+S-ar putea să aveți o versiune diferită atâta timp cât este peste 4. Ar trebui să fii bine.
+
+00:01:59.350 --> 00:02:02.560
+Și acest dosar a fost creat pentru noi, așa că să mergem acolo.
+
+00:02:02.600 --> 00:02:03.950
+Vreau să clar.
+
+00:02:04.660 --> 00:02:11.180
+Și apoi vedem că comanda finală de care avem nevoie este cea care execută ceva numit Makefile.
+
+00:02:11.670 --> 00:02:15.850
+Deci, să facem asta.
+
+00:02:16.050 --> 00:02:21.900
+Și asta se va întâmpla să ne pregătim pentru noi dacă ne întoarcem la documentație.
+
+00:02:21.900 --> 00:02:30.170
+Vedem că singurul lucru pe care îl putem face acum este rularea serverului sursă Retta, care este de a rula un server roșu la
+
+00:02:30.210 --> 00:02:36.960
+fel cum am făcut cu postscript-urile pentru a ne asigura că serverul Postgres rulează și se întinde și că
+
+00:02:36.960 --> 00:02:43.080
+rulam pe un port și atunci putem rula comanda roșie SC ca să avem acces la această
+
+00:02:43.530 --> 00:02:47.030
+bază de date și să executăm câteva comenzi ratt.
+
+00:02:47.040 --> 00:02:50.970
+Să ne deschidem să minimizăm acest lucru și să ne întoarcem.
+
+00:02:51.000 --> 00:02:51.560
+In regula.
+
+00:02:51.630 --> 00:02:53.890
+Vedem că totul a fost încărcat.
+
+00:02:53.910 --> 00:03:01.580
+Aceasta ne dă o sugestie pentru a executa testul pentru a vă asigura că totul a fost instalat corect.
+
+00:03:03.050 --> 00:03:05.630
+Și totul a trecut prin câteva teste aici.
+
+00:03:05.690 --> 00:03:10.760
+Nu voi trece prin asta doar pentru că am încredere că totul a fost spus, dar este întotdeauna
+
+00:03:10.760 --> 00:03:12.880
+bine să fugi să faci un test.
+
+00:03:12.930 --> 00:03:21.820
+Bine, deci vedeți că am descărcat fișierul tar care l-am deschis în dosarul Radice și acum sunt în
+
+00:03:21.910 --> 00:03:25.990
+interiorul dosarului cu fundal frumos de astăzi.
+
+00:03:27.650 --> 00:03:31.080
+Pentru oricare dintre cei care se întreabă de unde primesc aceste medii.
+
+00:03:31.080 --> 00:03:37.610
+De ce această aplicație desktop numită Art Pipp care are o pictura diferită în fiecare zi, care este plăcută.
+
+00:03:37.610 --> 00:03:44.060
+Oricum, înapoi la ceea ce facem, pot să merg aici și să tip sursă, să-mi amintesc exact cum a
+
+00:03:44.240 --> 00:03:44.980
+sugerat documentația.
+
+00:03:45.370 --> 00:03:50.390
+Citiți serverul pentru a porni serverul pentru Precentor.
+
+00:03:50.810 --> 00:03:57.230
+Veți vedea că se cere de pe computerul meu dacă au dacă pot da acces, astfel încât să accepte conexiunile
+
+00:03:57.230 --> 00:03:59.750
+de rețea pe care le voi permite.
+
+00:03:59.960 --> 00:04:06.460
+Și veți vedea că acum suntem pregătiți să acceptați conexiuni și vă oferă și aici un grafic
+
+00:04:06.460 --> 00:04:08.980
+frumos, pe care îl puteți vedea.
+
+00:04:09.010 --> 00:04:09.900
+In regula.
+
+00:04:10.210 --> 00:04:11.740
+Voi muta acest lucru pe această parte.
+
+00:04:11.800 --> 00:04:18.040
+Deci, serverele rulează acum și voi deschide o altă fereastră și cu aceasta o să
+
+00:04:18.040 --> 00:04:19.090
+conducem CLID.
+
+00:04:19.240 --> 00:04:28.940
+Voi spune sursa că trebuie să intru în cel mai roșu dosar și apoi să rulez sursa rattus să vadă foarte mult.
+
+00:04:29.590 --> 00:04:30.640
+Și acolo mergem.
+
+00:04:30.700 --> 00:04:35.610
+Suntem conectați la acest server și putem începe difuzarea unor comenzi Radice.
+
+00:04:35.980 --> 00:04:40.840
+În următorul videoclip vom învăța câteva dintre aceste comenzi și cum putem introduce datele în serverul
+
+00:04:40.840 --> 00:04:42.020
+nostru de rattus.
+
+00:04:42.490 --> 00:04:43.210
+Voi vedea unul.

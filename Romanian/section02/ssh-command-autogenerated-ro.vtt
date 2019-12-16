@@ -1,0 +1,259 @@
+﻿WEBVTT
+
+00:00:01.830 --> 00:00:02.750
+Bine ai revenit.
+
+00:00:02.970 --> 00:00:07.730
+Așa că am vorbit mult despre SSH și suna destul de interesant.
+
+00:00:07.740 --> 00:00:10.840
+Dar cum îl folosim?
+
+00:00:11.070 --> 00:00:13.530
+Ei bine, de fapt este destul de simplu.
+
+00:00:13.590 --> 00:00:22.950
+Tocmai rulați comanda SSH cu orice utilizator dorim să ajungem la oricare gazdă care este oricare dintre adresele
+
+00:00:22.950 --> 00:00:27.270
+IP de la care vrem să ajungem.
+
+00:00:27.270 --> 00:00:33.070
+Permiteți-mi să vă arăt ce vreau să spun printr-o demonstrație. Chiar aici m-am dus la Digital
+
+00:00:33.090 --> 00:00:41.940
+Ocean dot com și Digital Ocean este un furnizor care ne oferă servere pentru într-adevăr într-adevăr ieftine, de fapt
+
+00:00:41.940 --> 00:00:44.330
+într-adevăr într-adevăr le place.
+
+00:00:44.340 --> 00:00:49.920
+Și dacă încercați vreodată lucruri și sunteți în căutarea unei opțiuni bune de a avea
+
+00:00:49.920 --> 00:00:53.790
+un server undeva în nor. Ei bine, Oceanul Digital este grozav.
+
+00:00:53.820 --> 00:00:59.550
+M-am dus înainte și am creat ceva numit picături și așa numesc versiunea de servere
+
+00:00:59.550 --> 00:01:02.000
+pe care o puteți cumpăra.
+
+00:01:02.020 --> 00:01:09.540
+Am selectat Ubuntu care pentru cei care nu știu, este un sistem de operare open source care este construit
+
+00:01:09.540 --> 00:01:10.760
+pe Linux.
+
+00:01:10.890 --> 00:01:16.460
+Cele mai multe servere din lume folosesc Ubuntu, deci este standardul.
+
+00:01:16.470 --> 00:01:21.470
+Voi face doar cea mai ieftină opțiune aici pentru 5 dolari pe lună doar puțină memorie.
+
+00:01:21.630 --> 00:01:27.360
+CPU, nu o vom folosi pentru nimic prea nebun, așa că este minunat.
+
+00:01:27.450 --> 00:01:29.790
+Am ales San Francisco ca regiunea mea.
+
+00:01:29.790 --> 00:01:33.190
+De fapt am de gând să aleg New York, pentru că e mai aproape de mine.
+
+00:01:33.210 --> 00:01:35.670
+Deci, acolo vor fi localizate serverele.
+
+00:01:35.850 --> 00:01:45.070
+Iar eu doar o să lovesc crea, și o dată ce am lovit creați-mi va da doar un server pe care am acces.
+
+00:01:45.090 --> 00:01:51.720
+Deci, chiar aici, cu un pic de jibberish de un nume care este serverul meu, și
+
+00:01:51.720 --> 00:02:00.960
+veți vedea aici cum ei îmi dau adresa IP a serverului meu în timp ce eu pot copia doar acest lucru și eu
+
+00:02:00.960 --> 00:02:11.640
+doar du-te la terminalul meu pot acum, folosind comanda SSH, calea de acces care este utilizatorul pe care ni-l dau în mod implicit și copiați și inserați
+
+00:02:11.700 --> 00:02:14.530
+adresa IP pe care ne-au dat-o.
+
+00:02:14.700 --> 00:02:18.180
+Apăsați Enter și uita-te la asta.
+
+00:02:18.260 --> 00:02:22.120
+Acum sunt în vizorul acelui server.
+
+00:02:22.370 --> 00:02:26.400
+În interiorul terminalului respectiv și pot accesa orice vreau.
+
+00:02:26.450 --> 00:02:31.500
+Deci, dacă fac clic pe "ls", văd aici că am creat un director de salut.
+
+00:02:31.640 --> 00:02:33.260
+De asemenea, pot să fac un alt director.
+
+00:02:33.260 --> 00:02:41.350
+Să facem doar un director și să îl numim "woohooo" pentru că suntem foarte entuziasmați.
+
+00:02:41.510 --> 00:02:46.670
+Deci, dacă mă duc să văd LS, am un director numit Woohoo.
+
+00:02:46.670 --> 00:02:50.400
+Și am acces complet la server.
+
+00:02:50.420 --> 00:02:51.900
+Foarte foarte rece.
+
+00:02:51.980 --> 00:02:56.870
+Și nu vă faceți griji că vă voi arăta cum să setați acest lucru și cum am făcut totul de lucru.
+
+00:02:56.900 --> 00:02:58.930
+Și mai târziu pe videoclipuri.
+
+00:02:59.030 --> 00:03:02.310
+Dar, pentru moment, să ne întoarcem la acest diapozitiv.
+
+00:03:03.280 --> 00:03:10.120
+Acum, dacă utilizați Linux sau Mac, atunci utilizarea SSH este foarte simplă. Dacă utilizați Windows, va trebui să utilizați un
+
+00:03:10.160 --> 00:03:16.990
+client SSH pentru a deschide o conexiune SSH, iar cea mai populară pentru Windows se numește "putty" pe
+
+00:03:16.990 --> 00:03:24.100
+care o voi include în resursele pentru această lecție. Acum, folosind SSH, ne putem conecta la acest
+
+00:03:24.100 --> 00:03:29.820
+computer la distanță și putem rula comenzi pe el la fel cum ți-am arătat.
+
+00:03:29.980 --> 00:03:37.090
+Acum, cât de cool este faptul că folosind SSH ne putem conecta la orice computer care permite aceste conexiuni SSH
+
+00:03:37.990 --> 00:03:39.450
+oriunde în lume.
+
+00:03:39.520 --> 00:03:46.060
+Deci, să revizuiască, comanda cheie SSH și structura sistemului dvs. pe care doriți să deschideți
+
+00:03:46.060 --> 00:03:51.340
+o conexiune criptată shell protejate. Utilizatorul reprezintă contul pe care doriți să îl accesați.
+
+00:03:51.340 --> 00:03:58.630
+De exemplu, este posibil să doriți să accesați utilizatorul rădăcină, care este, în principiu, sinonim pentru administratorul de
+
+00:03:58.930 --> 00:04:05.210
+sistem, cu drepturi complete de a modifica nimic pe sistem, care poate fi uneori periculos.
+
+00:04:05.990 --> 00:04:09.370
+Gazdă se referă la computerul pe care doriți să îl accesați.
+
+00:04:09.440 --> 00:04:15.280
+Aceasta poate fi o adresă IP ca cea pe care am folosit-o sau un nume de domeniu.
+
+00:04:15.510 --> 00:04:24.310
+Iar odată ce ați dat clic pe intrare, sunteți întâmpinați cu o fereastră terminată la distanță ca și noi. O.K.
+
+00:04:24.630 --> 00:04:32.460
+Deci, te gândești la tine, cool, Andrei, dar cum se aplică acest lucru pentru dezvoltarea web?
+
+00:04:32.950 --> 00:04:39.760
+Permiteți-mi să vă spun o poveste și de ce încep cu această lecție în acest curs. În prima mea zi ca dezvoltator de normă întreagă,
+
+00:04:39.850 --> 00:04:41.690
+mi sa cerut să
+
+00:04:41.770 --> 00:04:45.960
+creez o cheie SSH și să mă conectez pentru a obține ajutor.
+
+00:04:46.480 --> 00:04:47.640
+Si ghici ce.
+
+00:04:47.770 --> 00:04:50.340
+Nu știam cum să fac asta.
+
+00:04:50.410 --> 00:04:58.840
+Știam totul despre HTML, CSS, javascript și toate chestiile astea, dar nimeni nu mi-a spus nimic despre folosirea cheii SSH pentru
+
+00:04:58.840 --> 00:05:00.280
+a ajunge acasă.
+
+00:05:00.330 --> 00:05:01.580
+Ce a fost asta?
+
+00:05:01.630 --> 00:05:04.570
+Vezi că nu am nici o idee cum să o fac.
+
+00:05:05.420 --> 00:05:11.420
+SSH este un concept foarte important pe care mulți nu-l vorbește, ci ca un dezvoltator web pe
+
+00:05:11.420 --> 00:05:16.330
+care trebuie să-l înțelegeți pentru că veți folosi SSH tot timpul în carieră.
+
+00:05:16.430 --> 00:05:24.660
+Deci, unele dintre aceste exemple includ conectarea la GitHub, clonarea, împingerea, tragerea fișierelor de pe
+
+00:05:24.660 --> 00:05:27.510
+serverele lor pe computer.
+
+00:05:27.620 --> 00:05:33.900
+Rețineți că atunci când clonăm ceva de la un GitHub avem două opțiuni pe care le
+
+00:05:33.920 --> 00:05:43.450
+folosim HTTPS pe care le-ați folosit cel mai probabil înainte și utilizați SSH și amintiți-vă cum a trebuit pentru HTTPS să introduceți parola tot timpul
+
+00:05:43.450 --> 00:05:45.700
+pentru a clona un repo?
+
+00:05:46.060 --> 00:05:48.250
+Nu trebuie să faci asta cu SSH.
+
+00:05:48.550 --> 00:05:52.590
+Și există și alte câteva beneficii care vor trece mai târziu.
+
+00:05:52.620 --> 00:05:56.760
+În al doilea rând, puteți accesa de la distanță un alt computer.
+
+00:05:56.760 --> 00:06:02.200
+Deci, dacă sunteți acasă când aveți nevoie să accesați calculatorul dvs., puteți să faceți SSH.
+
+00:06:03.770 --> 00:06:11.360
+În cele din urmă probabil că cel mai important caz de utilizare este că aveți aplicația de producție undeva pe un
+
+00:06:11.360 --> 00:06:17.510
+server și în mijlocul nopții primiți un apel. Ne-am șters din greșeală aplicația.
+
+00:06:17.510 --> 00:06:19.700
+Puteți să-l reinstalați pe server?
+
+00:06:20.950 --> 00:06:25.530
+Acum sună ridicol, dar de fapt este ceva ce mi sa întâmplat.
+
+00:06:25.660 --> 00:06:33.100
+A trebuit ca SSH să primească din nou fișierele de proiect pe server și să treacă prin toate
+
+00:06:33.370 --> 00:06:42.020
+etapele de rulare a instalării NPM, a construi NPM, a începe NPM, pentru a face aplicația să se întoarcă și să funcționeze.
+
+00:06:42.030 --> 00:06:48.450
+Deci, cu restul videoclipurilor, vă voi arăta cum să conduc SSH nu trebuie să experimenteze ceea ce am făcut
+
+00:06:48.510 --> 00:06:50.690
+în prima mea zi de lucru.
+
+00:06:50.700 --> 00:06:57.960
+Veți afla cum funcționează criptarea cum să utilizați SSH pentru a rezolva problemele de mai sus și cum
+
+00:06:57.960 --> 00:07:01.600
+să configurați un server pentru a permite conexiuni SSH.
+
+00:07:01.650 --> 00:07:03.500
+Este o abilitate atât de importantă.
+
+00:07:03.570 --> 00:07:05.900
+Am vrut să fiu prima parte a cursului.
+
+00:07:06.200 --> 00:07:07.860
+Va fi foarte distractiv.
+
+00:07:07.980 --> 00:07:10.390
+Așa că o să văd în următorul videoclip. Buh-Pa.

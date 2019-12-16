@@ -1,0 +1,301 @@
+﻿WEBVTT
+
+00:00:01.130 --> 00:00:04.970
+W porządku, zbliżamy się tak blisko, że prawie widzę koniec.
+
+00:00:05.030 --> 00:00:13.880
+A więc wreszcie wybierz przycisk Zapisz, abyśmy mogli zaktualizować informacje o użytkowniku.
+
+00:00:13.920 --> 00:00:19.350
+Mam zamiar wrócić do mojego interfejsu i zamierzam przenieść to tutaj,
+
+00:00:19.440 --> 00:00:25.210
+więc nie muszę ciągle widzieć kodu końca i tutaj chcę stworzyć nową metodę.
+
+00:00:25.370 --> 00:00:31.670
+Jeszcze raz zamierzam po prostu uczynić to trochę mniejszym, więc jest
+
+00:00:31.670 --> 00:00:40.310
+czystszy i mam zamiar stworzyć nową metodę nazywaną zmianą profilu lub nazwijmy ją aktualizacją profilu ramienia.
+
+00:00:40.650 --> 00:00:46.520
+A to otrzyma pewnego rodzaju dane i te dane.
+
+00:00:46.970 --> 00:00:56.650
+Cóż, zamierzamy zrobić dokładnie to, czego oczekuje nas back-end, to pobrać nasz lokalny port HTP trzy tysiące, gdzie mamy
+
+00:00:57.910 --> 00:01:04.390
+nasz pojemnik z lekarzem, a my zrobimy profil i chcemy dać mu
+
+00:01:04.390 --> 00:01:11.870
+coś w rodzaju pomysł, możemy po prostu zrobić mocne strony Templi zamiast mocnych stron
+
+00:01:11.860 --> 00:01:21.830
+i zmienić zmiany na znak dolara Uchwyty Kerleya i koniec tutaj robią nasi użytkownicy Pamiętam, że dostajemy nasze rekwizyty na
+
+00:01:22.010 --> 00:01:29.840
+obiekt użytkownika, który zawiera identyfikator, abyśmy mogli po prostu powiedzieć zatrzymanie wniosku użytkownik Daut Heidi.
+
+00:01:29.870 --> 00:01:33.770
+Więc niezależnie od tego, jaki jest pomysł użytkownika, to ten, który chcemy opublikować.
+
+00:01:33.980 --> 00:01:41.760
+A sposób, w jaki publikujemy do pobrania, jest konieczny, ponieważ w przeciwnym razie domyślnie otrzymujemy.
+
+00:01:42.080 --> 00:01:49.570
+Drugi parametr będzie obiektem, który ma metodę postu.
+
+00:01:49.720 --> 00:01:52.270
+Zamierzamy nadać mu typ
+
+00:01:57.540 --> 00:01:59.250
+zawartości nagłówka,
+
+00:02:02.120 --> 00:02:08.390
+a my damy to Jaison. Powiemy więc, że to
+
+00:02:08.660 --> 00:02:19.710
+aplikacja Jaison, ponieważ wysyłamy dane Jason'a i ciało, jak zobaczymy i tak jak omawialiśmy Jason string ify.
+
+00:02:19.750 --> 00:02:23.470
+Więc zamieniamy wszystko w strunę i co zamieniamy w strunę.
+
+00:02:23.530 --> 00:02:32.340
+Cóż, wrócimy i wykorzystamy dane, które otrzymuje funkcja.
+
+00:02:32.350 --> 00:02:38.350
+Tak więc ciało wyśle czterech ludzi, ale jako obiekt zawierający wszystkie dane, których oczekuje
+
+00:02:38.350 --> 00:02:40.510
+klient końcowy, czyli wiek imion.
+
+00:02:40.690 --> 00:02:48.290
+A Pat załatwmy kropkę, która otrzyma odpowiedź po tym poście, a
+
+00:02:51.520 --> 00:02:55.920
+my powiemy, co powinniśmy zrobić.
+
+00:02:56.780 --> 00:03:02.370
+Pierwszą rzeczą, którą chcemy zrobić, to zdecydowanie zmienić modalność.
+
+00:03:02.610 --> 00:03:03.830
+Chcemy to wyłączyć.
+
+00:03:03.840 --> 00:03:14.410
+Teraz pamiętamy, że otrzymaliśmy to jako część rekwizytów i chcemy również uruchomić funkcję użytkownika obciążenia,
+
+00:03:14.410 --> 00:03:18.180
+którą mamy w aplikacji.
+
+00:03:18.200 --> 00:03:20.230
+Teraz co robi użytkownik obciążenia ponownie.
+
+00:03:20.410 --> 00:03:29.090
+Jeśli wrócisz do Apogee Apogees zobaczysz, że funkcja użytkownika, która zostanie uruchomiona od razu, aby zrezygnować, po prostu
+
+00:03:29.460 --> 00:03:37.600
+ustawia stan obiektu użytkownika, który zostanie zwrócony, a my po prostu musimy przekazać mu niektóre dane, które
+
+00:03:38.770 --> 00:03:40.560
+obejmują te rzeczy.
+
+00:03:40.600 --> 00:03:48.580
+Tak więc w naszym przypadku możemy po prostu zrobić fajny skrót z operatorem rozprzestrzeniania się. Mogę powiedzieć, że ta
+
+00:03:48.580 --> 00:03:53.320
+kropka rekwizytuje użytkownika dot, cokolwiek mieliśmy wcześniej, więc utrzymujemy ideę użytkownika.
+
+00:03:53.350 --> 00:03:59.980
+Pamiętaj, że rekwizyty obejmują identyfikator użytkownika, a następnie będziemy także nadpisywać wszelkie aktualizacje, które
+
+00:04:00.040 --> 00:04:03.060
+mogą zawierać dane zawarte w formularzu.
+
+00:04:03.070 --> 00:04:05.790
+Tak więc nadpisze to, co jest w obiekcie użytkownika.
+
+00:04:05.860 --> 00:04:07.380
+Może wiek się zmienił.
+
+00:04:07.390 --> 00:04:15.240
+W takim przypadku nadpisze to, co jest w tym rekwiycielu, a my stworzymy ten obiekt.
+
+00:04:15.460 --> 00:04:15.700
+Dobrze.
+
+00:04:15.700 --> 00:04:20.270
+I wreszcie super miły połów.
+
+00:04:20.450 --> 00:04:26.330
+A na razie zrobimy po prostu chwila na konsolę, a chwila prawdy uratuje wszystko.
+
+00:04:26.330 --> 00:04:29.290
+Sprawdź, czy to faktycznie działa.
+
+00:04:30.090 --> 00:04:35.850
+Przede wszystkim upewnij się, że przekazujemy użytkownikowi ładunek, a my mamy dostęp do użytkownika Loew i prova
+
+00:04:36.490 --> 00:04:37.910
+do powrotu do APT.
+
+00:04:38.060 --> 00:04:38.660
+Tak.
+
+00:04:40.790 --> 00:04:41.690
+Profil.
+
+00:04:41.890 --> 00:04:42.990
+Nie ma użytkownika obciążenia.
+
+00:04:43.000 --> 00:04:44.880
+Przełóżmy to.
+
+00:04:44.890 --> 00:04:54.340
+Jeśli wrócimy lub i tutaj możemy po prostu powiedzieć, że użytkownik obciążenia będzie tym użytkownikiem ładowania punktów,
+
+00:04:54.340 --> 00:04:59.110
+oszczędzajmy ponownie, zaloguj się po raz milion razy.
+
+00:05:00.830 --> 00:05:04.390
+Przejdź do profilu.
+
+00:05:04.640 --> 00:05:08.760
+I właśnie uświadomiłem sobie, że zapomnieliśmy zrobić coś, czego nie planowaliśmy.
+
+00:05:08.770 --> 00:05:15.700
+Kliknęliśmy przycisk logowania, gdy potrzebujemy wywołać aktualizację profilu, prawda?
+
+00:05:15.700 --> 00:05:17.220
+To najważniejsza część.
+
+00:05:17.260 --> 00:05:18.300
+Zróbmy to.
+
+00:05:19.290 --> 00:05:20.940
+Mam zamiar przewinąć całą drogę w dół.
+
+00:05:21.150 --> 00:05:23.040
+Otwórz wszystko, co będziemy renderować.
+
+00:05:23.050 --> 00:05:25.980
+Przewiń całą drogę do przycisku zapisu.
+
+00:05:26.310 --> 00:05:31.230
+A tutaj, w przycisku Zapisz, włączmy funkcję kliknięcia.
+
+00:05:31.530 --> 00:05:40.470
+I to po kliknięciu będzie miało tę kropkę przy aktualizacji profilu.
+
+00:05:40.470 --> 00:05:41.460
+I my to miniemy.
+
+00:05:41.500 --> 00:05:45.800
+Wymień wiek i zwierzaka.
+
+00:05:45.920 --> 00:05:51.020
+A jeśli pójdziemy w górę, widzimy, że użytkownik jest rekwizytem i może to być mylące.
+
+00:05:51.020 --> 00:05:53.950
+Nie chcemy rekwizytów, których chcemy, bez względu na stan.
+
+00:05:53.960 --> 00:05:58.150
+A więc ten stan, który jest imieniem azjatyckiego zwierzaka.
+
+00:05:58.190 --> 00:05:59.560
+Przekażmy to dalej.
+
+00:05:59.570 --> 00:06:03.400
+Zamierzam powiedzieć ten stan.
+
+00:06:03.560 --> 00:06:04.020
+W porządku.
+
+00:06:04.090 --> 00:06:05.840
+Naprawdę nie podoba mi się to, jak to wygląda.
+
+00:06:05.840 --> 00:06:08.960
+Powinno to być coś czystszego i bardziej opisowego.
+
+00:06:09.140 --> 00:06:15.200
+Więc chodźmy tutaj i powiedzmy, że ma na imię Konst.
+
+00:06:15.390 --> 00:06:22.470
+Pat będzie nazywać się Stop props lub ten stan początkowy, ponieważ jesteśmy zainteresowani tylko
+
+00:06:22.860 --> 00:06:30.890
+stanem, w którym formularz został wypełniony, i tutaj zamiast tego stanu możemy po prostu użyć
+
+00:06:30.890 --> 00:06:37.270
+destrukturyzacji i powiedzieć, że wniosek o nazwę, ponieważ oczekuje danych obiekt.
+
+00:06:37.370 --> 00:06:40.550
+I znowu nie wzywamy tutaj tej funkcji.
+
+00:06:40.550 --> 00:06:43.960
+Chcemy przypisać funkcję do zdarzenia po kliknięciu.
+
+00:06:44.240 --> 00:06:48.290
+Więc jeszcze raz po prostu przypisanie funkcji w ten sposób.
+
+00:06:48.650 --> 00:06:54.930
+Uratujmy i mamy pewne problemy i nie mamy rekwizytów.
+
+00:06:54.940 --> 00:06:57.430
+Chcemy Pat tutaj.
+
+00:06:58.860 --> 00:07:02.590
+Zapiszmy ponownie seinen.
+
+00:07:02.830 --> 00:07:07.200
+Tu znowu chwila prawdy.
+
+00:07:07.250 --> 00:07:08.720
+Mam nadzieję, że wszystko działa.
+
+00:07:08.720 --> 00:07:15.160
+Zmieniłem moje nazwisko na hej z kilkoma wykrzyknikami i zamierzam po prostu kliknąć, aby uzyskać odpowiedź na to, co
+
+00:07:15.170 --> 00:07:18.020
+chcemy, ale nic nie robimy w bazie danych.
+
+00:07:18.070 --> 00:07:21.000
+Poniedziałkowe kliknięcie zapisz o.
+
+00:07:21.020 --> 00:07:27.320
+Lee Moli nasze moto zamknięte, a nasz użytkownik został załadowany nową nazwą.
+
+00:07:27.470 --> 00:07:28.680
+Gratulacje.
+
+00:07:28.700 --> 00:07:31.740
+Właśnie udało nam się zaktualizować nasz profil.
+
+00:07:32.910 --> 00:07:40.010
+A teraz za każdym razem, powiedzmy, wypisuję się i ponownie się loguję.
+
+00:07:40.230 --> 00:07:41.500
+Moje imię jest w bazie danych.
+
+00:07:41.510 --> 00:07:46.880
+Teraz jest bardzo podekscytowany lub bardzo podekscytowany.
+
+00:07:47.220 --> 00:07:49.260
+Bardzo bardzo dobrze.
+
+00:07:50.190 --> 00:07:50.970
+W porządku.
+
+00:07:51.090 --> 00:07:57.540
+Zrobiliśmy to wszystko wyłącznie w celu demonstracji sesji, ale z naszym profilem bez
+
+00:07:57.540 --> 00:08:03.080
+koniecznych informacji o użytkowniku trudno jest wykazać, dlaczego potrzebujemy sesji.
+
+00:08:03.180 --> 00:08:07.230
+Ale teraz w końcu wiem, że to już dawno.
+
+00:08:07.230 --> 00:08:12.270
+Dowiemy się o sesjach i zaimplementowani tutaj, zobaczę w następnym.
+
+00:08:12.550 --> 00:08:12.810
+Babai.

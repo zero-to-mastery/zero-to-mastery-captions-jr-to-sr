@@ -1,0 +1,310 @@
+﻿WEBVTT
+
+00:00:01.430 --> 00:00:07.730
+Vreau să adaug un ultim lucru pe care l-am trecut cu vederea până acum, pentru că nu vreau
+
+00:00:07.730 --> 00:00:10.250
+să vă împușc cu prea multe lucruri.
+
+00:00:10.250 --> 00:00:21.470
+Dacă ne uităm la proiectul nostru Ei bine, este o mulțime de fals, chiar dacă este o aplicație simplă vă puteți imagina cât de mare și
+
+00:00:21.470 --> 00:00:26.310
+mai mare și mai mare acest fișier sursă poate obține.
+
+00:00:26.490 --> 00:00:30.960
+O organizație este o mare parte din lucrul la proiecte.
+
+00:00:30.980 --> 00:00:36.860
+Majoritatea aplicațiilor vor fi mult mai mari decât cele pe care le-am construit și avem nevoie de o modalitate bună de a
+
+00:00:36.860 --> 00:00:40.590
+le organiza, iar structura de directoare este unul dintre cele mai importante lucruri.
+
+00:00:40.610 --> 00:00:42.480
+Deci, să clarificăm acest cod.
+
+00:00:42.500 --> 00:00:48.710
+Vă voi arăta ce aș face dacă am lucra la această aplicație și vreau să o fac mai accesibilă, care este mai curată,
+
+00:00:48.740 --> 00:00:52.590
+astfel încât atunci când alți oameni vin în echipa pe care o înțeleg.
+
+00:00:52.620 --> 00:00:56.050
+Și, de asemenea, eu pot continua să crească
+
+00:00:59.220 --> 00:01:09.270
+acest codebase primul lucru pe care îl voi face este că voi crea câteva foldere unul se va numi componente și acestea sunt componentele pe
+
+00:01:09.270 --> 00:01:14.190
+care le-am construit, cum ar fi caseta de căutare Carlist și defilați.
+
+00:01:14.250 --> 00:01:20.510
+Al doilea va fi numit containere și containere.
+
+00:01:20.940 --> 00:01:28.950
+Aceste componente inteligente sunt componentele care conțin state și cele care au cârlige cu ciclu de viață
+
+00:01:29.070 --> 00:01:31.750
+care au sintaxa de clasă.
+
+00:01:31.830 --> 00:01:35.440
+Vedeți aceste componente sau aceste recipiente.
+
+00:01:35.610 --> 00:01:39.620
+Nu putem folosi o funcție pură cu ei, deoarece din punct de vedere tehnic ei nu sunt puri.
+
+00:01:39.690 --> 00:01:45.580
+Ei au spus că modifică în cadrul acestor funcții și că este OK.
+
+00:01:45.630 --> 00:01:52.620
+Este imposibil să avem doar funcții pure, deoarece, de cele mai multe ori, în timp ce este posibil să avem
+
+00:01:52.770 --> 00:01:58.540
+nevoie de a face cereri către lumea exterioară, dar aceste componente sunt speciale, le vom numi
+
+00:01:58.540 --> 00:02:03.540
+containere care conțin lucruri și ele vor trece doar la stat la componente.
+
+00:02:03.550 --> 00:02:14.830
+Acum putem spune că o să ne mutăm la SS-urile naziste pentru a fi acum în containere.
+
+00:02:14.880 --> 00:02:21.720
+Vom spune, de asemenea, că o vom muta și pentru a fi un container.
+
+00:02:25.390 --> 00:02:32.260
+Și apoi componentele funcțiile simple pur funcțiile pe care le-am creat caseta de căutare parcurgere și
+
+00:02:32.710 --> 00:02:33.310
+cardless.
+
+00:02:33.350 --> 00:02:40.160
+În timp ce acestea pot fi în componente, să deschidem folderul și să facem acest lucru mai simplu.
+
+00:02:41.090 --> 00:02:51.380
+Punctul pentru a închide fila deschide prietenii robo și să ne deschidem sursa va spune că defilare carte de căsuță de căutare și
+
+00:02:52.730 --> 00:02:58.310
+liste de carduri, care sunt doar funcții pure sunt în interiorul componentelor.
+
+00:02:59.370 --> 00:03:05.370
+Acum, dacă vă amintiți, Funt este, de asemenea, parte din fișierul Dotsie SS din aplicație.
+
+00:03:05.400 --> 00:03:09.720
+Așa că o să mutăm și acolo, pentru că este definită acolo.
+
+00:03:09.970 --> 00:03:12.990
+Cu asta să ne întoarcem la aplicația noastră și.
+
+00:03:13.150 --> 00:03:20.230
+Ei bine, acum avem o mulțime de eșecuri, deoarece acestea se referă acum la diferite părți pe care nu le facem.
+
+00:03:20.260 --> 00:03:20.950
+App.
+
+00:03:21.480 --> 00:03:27.980
+Ei bine, trăiește într-un alt dosar decât Carlist în căsuța de căutare și derulați
+
+00:03:28.400 --> 00:03:37.890
+modul în care facem că este folosim dot dot care înseamnă să părăsească dosarul sau du-te la dosar și apoi de acolo
+
+00:03:40.340 --> 00:03:44.070
+du-te în containere sau scuze du-te din containere.
+
+00:03:44.150 --> 00:03:52.130
+Deci, în cazul în care apt WSS am de gând să plece, care este punct dot și apoi o dată pe cineva aici
+
+00:03:52.130 --> 00:03:58.640
+pentru nivel complet voi spune componente și eu pot face același lucru pentru restul lor, de asemenea.
+
+00:04:05.380 --> 00:04:15.290
+Salvați și am indexat și faptul că G-S se referă acum la viața și containerele noastre.
+
+00:04:15.310 --> 00:04:21.490
+Deci, din nou, pentru că acum părăsim un dosar, suntem în același
+
+00:04:22.300 --> 00:04:30.180
+cartier, în timp ce putem să facem doar containere cu puncte, să salvăm și am spus greșit.
+
+00:04:30.180 --> 00:04:31.710
+Bună ortografie de mine.
+
+00:04:31.710 --> 00:04:32.870
+Totul arată bine.
+
+00:04:33.030 --> 00:04:36.040
+Să ne întoarcem la site-ul nostru Web.
+
+00:04:36.040 --> 00:04:36.790
+Acolo te duci.
+
+00:04:36.790 --> 00:04:38.620
+Totul se plimba frumos.
+
+00:04:39.820 --> 00:04:40.040
+O.K.
+
+00:04:40.040 --> 00:04:43.430
+Deci avem o structură de dosare frumoasă aici.
+
+00:04:43.610 --> 00:04:45.140
+Lucrurile s-au curățat.
+
+00:04:45.350 --> 00:04:47.650
+De asemenea, am derulat.
+
+00:04:47.770 --> 00:04:48.340
+Da.
+
+00:04:48.400 --> 00:04:55.460
+Și cred că avem doar o copie suplimentară, așa că am putea face o copie a acestui lucru.
+
+00:04:55.710 --> 00:04:57.760
+Asigurați-vă că totul funcționează.
+
+00:04:57.930 --> 00:04:59.030
+Totul funcționează.
+
+00:05:01.600 --> 00:05:05.390
+Vrem să eliminăm câteva spații aici pe care le-am făcut.
+
+00:05:05.410 --> 00:05:10.070
+De asemenea, observăm câteva erori, deci nu neapărat erori, ci lucruri stilistice.
+
+00:05:10.090 --> 00:05:16.660
+De exemplu, cu filtrul spun că filtru roboții și iterați prin robot nu prea are sens nu ar
+
+00:05:16.660 --> 00:05:18.190
+trebui să fie.
+
+00:05:18.220 --> 00:05:23.440
+Fiecare element este un utilizator de robot pe care îl primim.
+
+00:05:23.530 --> 00:05:27.430
+Așa că am salvat că încă nu același lucru nici o eroare.
+
+00:05:28.360 --> 00:05:35.710
+De asemenea, văd un pic de curățare care se poate face cu folosirea acestei stări de pornire foarte mult.
+
+00:05:35.710 --> 00:05:39.430
+Putem doar să spunem din nou folosind distrugerea, spunem roboți
+
+00:05:42.050 --> 00:05:44.280
+Konst și câmp de căutare.
+
+00:05:44.300 --> 00:05:45.600
+Facem distrugerea.
+
+00:05:45.690 --> 00:05:50.750
+El numește acest punct punct.
+
+00:05:50.940 --> 00:05:54.520
+Și acum pot elimina această stare de aici.
+
+00:05:54.750 --> 00:06:04.200
+Pot să îndepărtez acest praf de aici și din toate celelalte locuri pe care le folosim în acest stadiu,
+
+00:06:04.200 --> 00:06:08.570
+iar redarea prin salvarea totului funcționează în continuare.
+
+00:06:08.700 --> 00:06:11.630
+Dar codul este mult mai curat.
+
+00:06:11.650 --> 00:06:19.000
+De asemenea, am observat că aici talentul roboților este egal cu zero, de fapt există o modalitate mai ușoară de a face acest lucru.
+
+00:06:19.000 --> 00:06:20.980
+Și din nou este doar stilist.
+
+00:06:21.100 --> 00:06:23.880
+Aceasta va fi numită zero.
+
+00:06:23.920 --> 00:06:29.020
+Deci, dacă acest lucru este zero, care va evalua în javascript la fals.
+
+00:06:29.020 --> 00:06:31.210
+Așa că putem spune exact opusul.
+
+00:06:31.210 --> 00:06:36.430
+Amintiți-vă de sintaxă, deci dacă aceasta este zero, care va fi falsă.
+
+00:06:36.430 --> 00:06:45.330
+Transformați-l într-adevăr, astfel încât, dacă nu există roboți, încărcăm în siguranță și ar trebui să funcționeze în continuare.
+
+00:06:45.330 --> 00:06:52.210
+Și apoi, în cele din urmă, dacă vedeți și dacă o altă declarație bine, putem face o schimbare, nu putem.
+
+00:06:52.250 --> 00:06:58.910
+Nu putem spune ca vom roti robotii daca se vor intoarce
+
+00:07:02.480 --> 00:07:07.020
+roboti si sa vedem daca inca functioneaza.
+
+00:07:08.980 --> 00:07:10.120
+Nu avem nevoie de acel
+
+00:07:14.090 --> 00:07:15.730
+X sau înapoi, dar acest lucru încă funcționează.
+
+00:07:15.920 --> 00:07:19.090
+Și puteți vedea acum că lucrurile sunt mult mai curate.
+
+00:07:19.160 --> 00:07:26.620
+Avem o aplicație care ne face toate lucrurile pentru noi.
+
+00:07:26.620 --> 00:07:36.070
+Și pentru a finaliza amintiți-vă ambalate Jaison cum am avut unele script-uri pre-construit și am avut această comandă de construcție.
+
+00:07:36.250 --> 00:07:46.960
+Dacă o opresc acum și fac NPM sau NPM Bruhn, o să verifice asta.
+
+00:07:47.210 --> 00:07:57.220
+În timp ce se construiește, au creat un nou dosar numit construit, iar în interiorul acestuia avem toate fișierele noastre.
+
+00:07:57.350 --> 00:08:00.040
+Dar de această dată optimizat Ce înseamnă asta.
+
+00:08:00.050 --> 00:08:10.370
+Dacă mergem la statică și mergem la J. S. uita-te la faptul că totul este Minah fied pentru noi CSSA
+
+00:08:11.260 --> 00:08:19.480
+nostru este optimizat și tot ceea ce avem nevoie pentru a implementa site-ul este în acest dosar, astfel încât să putem lua acum acest folder construit și
+
+00:08:19.780 --> 00:08:21.020
+a pus-o oriunde.
+
+00:08:21.040 --> 00:08:24.480
+Deci, este pe internet și chiar vă oferă câteva informații bune.
+
+00:08:24.640 --> 00:08:28.730
+Deci acum avem acest optimizat construit nu trebuie să minimalizăm acest lucru.
+
+00:08:28.750 --> 00:08:31.360
+Nu trebuie să facem această optimizare.
+
+00:08:31.480 --> 00:08:35.200
+Trebuie să fie capabil să putem folosi declarațiile de import în browsere.
+
+00:08:35.230 --> 00:08:38.490
+Și acum acest dosar de facturare poate fi acum implementat oriunde.
+
+00:08:40.380 --> 00:08:44.730
+Așa cum am spus, creați aplicația re-act ia toată durerea din configurație.
+
+00:08:44.760 --> 00:08:51.090
+Totul se face pentru dvs. puteți scrie codul folosind componentele Briac din întreaga lume pentru a construi
+
+00:08:51.300 --> 00:08:52.640
+site-uri web frumoase.
+
+00:08:55.240 --> 00:08:57.490
+Sper că ești încântat să reacționezi așa cum sunt eu.
+
+00:08:57.490 --> 00:09:03.610
+Acesta este motivul pentru care este un instrument atât de popular și de aceea multe companii o utilizează acum.
+
+00:09:03.660 --> 00:09:04.730
+Voi vedea în următorul.
+
+00:09:04.960 --> 00:09:05.270
+Dar prin.

@@ -1,0 +1,868 @@
+﻿WEBVTT
+
+00:00:00.510 --> 00:00:03.900
+W porządku, zbliżamy się coraz bardziej do tego, jak wyglądamy.
+
+00:00:03.900 --> 00:00:07.730
+Ale wyraźnie widzimy, że mamy tutaj pole wyszukiwania.
+
+00:00:07.920 --> 00:00:14.410
+W tym filmie zamierzamy popracować nad interaktywnym spojrzeniem na jej aplikację.
+
+00:00:14.430 --> 00:00:15.100
+Widzimy to.
+
+00:00:15.120 --> 00:00:21.230
+Cóż, zdecydowanie potrzebujemy tytułu i pola wyszukiwania, więc stwórzmy to.
+
+00:00:21.310 --> 00:00:22.730
+Jeśli przejdę do indeksu.
+
+00:00:22.950 --> 00:00:29.560
+Tak, myślę, że teraz, gdy oficjalnie budujemy aplikację zamiast komponentu Carlist, powinniśmy
+
+00:00:29.560 --> 00:00:38.200
+mieć jeden duży komponent zwany aplikacją, a ta aplikacja będzie ojcem wszystkich naszych dzieci, wszystkich naszych
+
+00:00:38.200 --> 00:00:39.340
+komponentów.
+
+00:00:39.850 --> 00:00:47.060
+Zróbmy to, najpierw zbudujmy komponent aplikacji.
+
+00:00:47.220 --> 00:00:53.010
+I ten komponent aplikacji ponownie zaimportuje powtórzenie z ponownego
+
+00:00:57.570 --> 00:01:00.420
+aktu, a aplikacja będzie
+
+00:01:06.750 --> 00:01:19.240
+równa składnikowi listy kart, podczas gdy my możemy po prostu skopiować i wstawić tu i znowu zmieniając to na tabelę.
+
+00:01:19.500 --> 00:01:20.790
+Chcemy
+
+00:01:23.790 --> 00:01:25.700
+zaimportować komponent listy
+
+00:01:30.380 --> 00:01:37.350
+kart i chcemy również, aby nasze roboty zostały zaimportowane tutaj.
+
+00:01:37.490 --> 00:01:38.890
+Więc mamy do niego dostęp.
+
+00:01:40.070 --> 00:01:45.920
+I na koniec chcemy teraz renderować komponent aplikacji, abyśmy mogli przywrócić to
+
+00:01:45.920 --> 00:01:48.470
+do stanu, w jakim było.
+
+00:01:48.680 --> 00:01:53.990
+Oszczędzamy, musimy oczywiście wyeksportować naszą aplikację.
+
+00:01:54.000 --> 00:02:04.130
+Powiedzmy więc, że X domyślna aplikacja sportowa to wróćmy.
+
+00:02:04.380 --> 00:02:04.660
+Tak.
+
+00:02:04.710 --> 00:02:06.210
+Wszystko nadal działa.
+
+00:02:07.010 --> 00:02:11.350
+Teraz w tym Carlist mamy również nagłówek.
+
+00:02:11.420 --> 00:02:14.640
+Więc zrobimy nasz, powiedzą Roble przyjaciół
+
+00:02:17.960 --> 00:02:22.810
+i znowu pamiętaj, że musimy zwrócić tylko jednego samotnego rodzica.
+
+00:02:22.820 --> 00:02:27.050
+Musimy więc zrobić coś takiego, jak
+
+00:02:31.550 --> 00:02:37.630
+element div, aby go zawinąć, i muszę zamknąć ten tag H-1.
+
+00:02:37.660 --> 00:02:46.000
+Mam tytuł mojego przyjaciela robota i potrzebujemy również pola wyszukiwania, a także H-1 było łatwe i teraz musimy
+
+00:02:46.000 --> 00:02:48.070
+zbudować dla niego komponent.
+
+00:02:48.100 --> 00:02:56.660
+Wygląda na to, że prawdopodobnie chcemy utworzyć komponent pola wyszukiwania dla tej aplikacji, więc zróbmy to.
+
+00:02:56.660 --> 00:03:09.330
+Mam na myśli pole importu wyszukiwania z pliku, który utworzy pole o nazwie search, a my utworzymy nowy plik.
+
+00:03:19.760 --> 00:03:26.000
+Plik ten będzie ponownie importowany z ponownego użycia i
+
+00:03:28.980 --> 00:03:30.430
+pola wyszukiwania.
+
+00:03:32.490 --> 00:03:36.060
+Będziemy mieć funkcję, która powróci.
+
+00:03:36.090 --> 00:03:38.080
+Pomyślmy o tym, co powraca.
+
+00:03:39.360 --> 00:03:43.790
+Cóż, zdecydowanie zwraca prawo do wprowadzania danych.
+
+00:03:43.830 --> 00:03:47.860
+To jest rodzaj wyszukiwania.
+
+00:03:48.150 --> 00:03:51.520
+I miejmy również zastępczy.
+
+00:03:51.660 --> 00:03:54.300
+Zamknijmy to i zastępcze.
+
+00:03:55.490 --> 00:04:02.680
+To mówi roboty wyszukiwania.
+
+00:04:02.830 --> 00:04:15.030
+Zamykamy to i zapisujemy, a my musimy wyeksportować Domyślne okno eksportu domyślnie zapisz kompilację.
+
+00:04:15.030 --> 00:04:16.750
+W porządku mamy nasze pole wyszukiwania.
+
+00:04:16.780 --> 00:04:19.170
+Ale teraz, gdy nic nie
+
+00:04:22.680 --> 00:04:29.080
+szukamy, dodajmy to do naszej nowej linii, aby wyglądała ładniej i zawsze jest to dobry
+
+00:04:29.080 --> 00:04:35.500
+pomysł, na wypadek gdybyś chciał dodać więcej rzeczy do pola wyszukiwania, aby zawinąć wszystko w div.
+
+00:04:35.620 --> 00:04:37.210
+Więc zrobię to teraz.
+
+00:04:39.620 --> 00:04:47.930
+A w tym dniu będziemy mieli po prostu klasową nazwę dopełnienia, używając metody Tatiana i przy
+
+00:04:47.930 --> 00:04:51.120
+wprowadzaniu możemy nadać nazwę klasie.
+
+00:04:51.390 --> 00:04:55.360
+I po prostu wiem, że wyglądają dobrze, więc po prostu skopiuję i wkleję.
+
+00:04:55.380 --> 00:04:58.420
+Po prostu dopełniasz ją z tłem.
+
+00:04:58.430 --> 00:05:00.160
+Światło jest niebieskie.
+
+00:05:00.180 --> 00:05:02.870
+Jeśli to zrobię i wrócimy.
+
+00:05:02.880 --> 00:05:03.420
+W porządku.
+
+00:05:03.540 --> 00:05:04.750
+To wygląda lepiej.
+
+00:05:04.770 --> 00:05:06.350
+Chcemy wszystko skupić.
+
+00:05:06.510 --> 00:05:14.530
+Być może w aplikacji możemy po prostu dodać nazwę klasy równą centrum podatkowemu.
+
+00:05:14.530 --> 00:05:15.890
+Sprawdź, czy to działa.
+
+00:05:16.960 --> 00:05:17.610
+Proszę bardzo.
+
+00:05:17.680 --> 00:05:19.290
+Tak jest dużo lepiej.
+
+00:05:19.300 --> 00:05:21.220
+Podoba mi się to lub w.
+
+00:05:21.400 --> 00:05:25.550
+Jak możemy to uczynić interaktywnym.
+
+00:05:25.610 --> 00:05:30.940
+Do tej pory właśnie mieliśmy te statyczne strony internetowe, ale prawdziwe strony internetowe są interaktywne.
+
+00:05:33.600 --> 00:05:36.380
+Pomyślmy o tym logicznie.
+
+00:05:36.510 --> 00:05:39.330
+Mamy aplikację.
+
+00:05:39.540 --> 00:05:51.520
+Mamy pole wyszukiwania i mamy listę kart, ale komponent pola wyszukiwania musi komunikować się z Carlist i to
+
+00:05:51.520 --> 00:05:54.830
+samo z Carlist Carlist.
+
+00:05:54.910 --> 00:06:03.830
+Dobrze wiedzieć, co znajduje się w polu wyszukiwania, aby odpowiednio odfiltrować roboty.
+
+00:06:03.830 --> 00:06:10.000
+Wróćmy do naszego wizerunku, który mamy w jedną stronę, patrząc na to.
+
+00:06:10.000 --> 00:06:20.380
+Mamy komponent aplikacji, a następnie składnik listy kart, który ma karty, a następnie komponent pola wyszukiwania, który nie ma
+
+00:06:20.860 --> 00:06:22.740
+teraz żadnych dzieci.
+
+00:06:22.870 --> 00:06:29.980
+Jednak aby obaj mogli się komunikować, mamy jednokierunkowy przepływ danych, który polega na tym, że muszą
+
+00:06:29.980 --> 00:06:36.100
+wysłać swoje informacje do rodzica, a rodzic mówi im, co mają robić.
+
+00:06:37.180 --> 00:06:38.990
+Jak możemy to zrobić?
+
+00:06:40.250 --> 00:06:46.820
+Do tej pory mieliśmy tylko trochę danych, które po prostu spłynęły, ale nigdy nie mieliśmy tego,
+
+00:06:46.970 --> 00:06:51.860
+gdzie jedno z dzieci musiało zmodyfikować dane lub komunikować się z
+
+00:06:54.720 --> 00:06:56.680
+sąsiadem, aby to zrobić.
+
+00:06:56.680 --> 00:07:06.700
+Re-act ma pomysł na coś, co nazywa się stanem, do tej pory dowiedzieliśmy się o rekwizytach, takich jak
+
+00:07:06.700 --> 00:07:15.120
+właściwości, które ciągle przekazujemy, ale nigdy ich nie zmieniliśmy, ponieważ reagują po prostu czytając rekwizyty.
+
+00:07:15.130 --> 00:07:24.060
+Jeśli pójdę do Carlist, to po prostu zresetować rekwizyty, które są odbierane i po prostu renderuje coś,
+
+00:07:24.060 --> 00:07:33.280
+a ten jednokierunkowy przepływ danych jest naprawdę przyjemny, ponieważ ta lista kart jest czystą funkcją, która otrzymuje dane
+
+00:07:33.340 --> 00:07:37.600
+wejściowe, a następnie zawsze zwraca to samo wyjście.
+
+00:07:37.600 --> 00:07:42.590
+Więc jeśli roboty są zawsze takie same, zawsze powróci to samo.
+
+00:07:42.790 --> 00:07:48.400
+To deterministyczne, czyste funkcje i jest to coś, o czym mówiliśmy wcześniej i jest to naprawdę
+
+00:07:48.400 --> 00:07:49.680
+bardzo dobra rzecz.
+
+00:07:49.780 --> 00:07:55.800
+Te komponenty są tak zwanymi czystymi komponentami, a niektóre nawet nazywają je głupimi składnikami.
+
+00:07:56.140 --> 00:08:01.420
+Oznacza to po prostu, że tak naprawdę nie muszą wiedzieć o niczym innym, niż o tym,
+
+00:08:01.420 --> 00:08:04.940
+że są czystymi funkcjami, które otrzymują coś i zwracają coś.
+
+00:08:05.140 --> 00:08:08.840
+I to jest naprawdę miłe, ponieważ zawsze wiemy, jak to będzie wyglądać.
+
+00:08:10.490 --> 00:08:12.940
+I to właśnie mieliśmy do tej pory.
+
+00:08:13.160 --> 00:08:21.710
+Ale teraz musimy się martwić czymś innym niż rekwizyty rekwizyty nigdy się nie zmieniają, rekwizyty są zawsze tylko wkładem, który
+
+00:08:21.710 --> 00:08:24.360
+dostajemy i nigdy ich nie modyfikowaliśmy.
+
+00:08:25.130 --> 00:08:34.610
+Ale w tym przypadku potrzebujemy pamięci w naszej aplikacji, potrzebujemy tego, aby się z tym komunikować, a także odpowiednio zmienić
+
+00:08:34.610 --> 00:08:35.940
+i zaktualizować.
+
+00:08:36.290 --> 00:08:44.330
+I to jest stan w stanie re-act i usłyszysz to w programowaniu komputerowym
+
+00:08:45.290 --> 00:08:54.010
+po prostu oznacza, że opis stanu aplikacji jest po prostu obiektem obiektu opisującego twoją aplikację.
+
+00:08:54.380 --> 00:09:02.600
+I ten stan, który opisuje naszą aplikację, to roboty i whatevers wprowadzone w polu wyszukiwania, a stan
+
+00:09:04.050 --> 00:09:06.980
+jest w stanie się zmienić.
+
+00:09:07.050 --> 00:09:12.960
+Jesteśmy w stanie zmienić wartość pola wyszukiwania na wartość danych wejściowych i jesteśmy w stanie zmienić
+
+00:09:12.960 --> 00:09:15.140
+to, co oznacza układ robota.
+
+00:09:15.150 --> 00:09:17.140
+Co zostanie wyświetlone.
+
+00:09:17.240 --> 00:09:19.350
+Jest to reguła, którą po prostu trzeba pamiętać.
+
+00:09:19.520 --> 00:09:26.270
+Rekwizyty są po prostu rzeczami, które wychodzą z państwa.
+
+00:09:26.380 --> 00:09:34.440
+Tak więc rodzic przekazuje stan do komponentu potomnego i gdy tylko komponent komponentu potomnego otrzymuje stan,
+
+00:09:34.440 --> 00:09:42.100
+jest to właściwość, której dziecko nigdy nie może zmienić tej właściwości, rodzic po prostu mówi
+
+00:09:42.100 --> 00:09:47.590
+mu, jaki jest stan i dziecko, które widzimy jako roboty.
+
+00:09:47.590 --> 00:09:58.030
+Tak więc pierwszą rzeczą, którą musimy zrobić, to zacząć używać stanu w naszej aplikacji opis tego, jaki powinien
+
+00:09:58.540 --> 00:10:00.610
+być nasz stan.
+
+00:10:00.610 --> 00:10:07.900
+Więc po prostu róbmy teraz stały stan i pokażemy, że nasz stan musi
+
+00:10:08.340 --> 00:10:14.290
+mieć tablicę robotów i musi to nazwać pole wyszukiwania.
+
+00:10:14.560 --> 00:10:18.660
+I to jest właśnie to, czego potrzebuje nasze pole wyszukiwania.
+
+00:10:18.760 --> 00:10:25.450
+Ale żeby użyć stanu, musimy powrócić do naszego oryginalnego sposobu, w
+
+00:10:25.450 --> 00:10:37.990
+jaki stworzyliśmy komponenty Riak, jeśli pamiętasz to, kiedy po raz pierwszy stworzyliśmy re-act, tworzymy klasę i robimy to, mówiąc: X sport
+
+00:10:38.340 --> 00:10:40.350
+default lub
+
+00:10:46.380 --> 00:10:51.470
+export X Stenz lub reaguj z komponentem Daut.
+
+00:10:51.610 --> 00:11:02.590
+Rozszerza klasę komponentów i znowu możemy użyć skrótów tutaj i po prostu powiedzieć, że teraz możemy po prostu usunąć reac
+
+00:11:02.590 --> 00:11:03.590
+stąd.
+
+00:11:04.460 --> 00:11:14.770
+A to zawsze ma funkcję renderowania, która musi zwrócić coś, co znowu jest
+
+00:11:18.940 --> 00:11:25.130
+tylko składnią, do której musisz się przyzwyczaić.
+
+00:11:25.200 --> 00:11:27.070
+Zachowaj to.
+
+00:11:27.230 --> 00:11:30.650
+I tutaj popełniłem błąd, zamiast eksportować, to powinien powiedzieć klasa.
+
+00:11:30.740 --> 00:11:35.590
+Tak więc aplikacja klasy rozszerza komponent, a następnie eksportujemy.
+
+00:11:35.630 --> 00:11:36.670
+Domyślna aplikacja.
+
+00:11:36.680 --> 00:11:43.700
+Więc znowu deklarujemy klasę, którą zapisuję i mamy coś, co mówi, że stan ma przypisaną wartość, ale nigdy
+
+00:11:43.700 --> 00:11:48.220
+nie jest używany. To dlatego, że to jest całkiem prawdą.
+
+00:11:48.220 --> 00:11:49.050
+Nie używamy go.
+
+00:11:49.150 --> 00:11:52.960
+Jak więc możemy dodać państwo zareaguje.
+
+00:11:52.960 --> 00:11:55.990
+Po prostu robimy konstruktora.
+
+00:11:55.990 --> 00:12:03.640
+Możecie o tym pamiętać, kiedy mówiliśmy o obiektach i tym konstruktorze, a tutaj możemy
+
+00:12:03.700 --> 00:12:05.100
+zadeklarować stan.
+
+00:12:05.280 --> 00:12:21.350
+Po prostu mówimy, że ten punkt dotacji jest końcem, tutaj po prostu wkładamy to, co chcemy, aby nasz stan miał.
+
+00:12:21.350 --> 00:12:27.560
+Więc jeśli to zapisałem, to nie jest to dozwolone przed super.
+
+00:12:27.560 --> 00:12:33.960
+Znowu coś, co możesz zapamiętać z filmu obiektów zaawansowanych, aby móc z niego korzystać.
+
+00:12:34.220 --> 00:12:42.910
+Musimy wykonać tę dziwną rzecz, w której nazywamy super, która wywołuje konstruktor komponentu.
+
+00:12:43.020 --> 00:12:48.470
+Jeśli to zrobię i zapiszę wszystko działa dobrze.
+
+00:12:49.890 --> 00:13:00.750
+A teraz mamy nasz stan, który jest robotem i polem wyszukiwania, a ten stan, jak już mówiłem, jest tym, co opisuje lub aplikacja.
+
+00:13:00.750 --> 00:13:05.820
+Są to rzeczy, które mogą się zmienić, a to, co
+
+00:13:05.820 --> 00:13:11.700
+to jest stan, może zmienić i wpłynąć na naszą aplikację. zwykle żyją.
+
+00:13:11.790 --> 00:13:19.450
+Komponent macierzysty komponent, który jest rodzajem, który po prostu przechodzi, przekazuje stan innym komponentom.
+
+00:13:19.480 --> 00:13:29.120
+Ale teraz mogę uzyskać dostęp do robotów nie stąd, ale z tego robotów DOT z kropkami.
+
+00:13:29.250 --> 00:13:34.190
+I znów po prostu reagujcie na Sendaka, powiedz, że musicie się przyzwyczaić.
+
+00:13:34.230 --> 00:13:37.150
+W porządku, więc wszystko działa zgodnie z oczekiwaniami.
+
+00:13:37.440 --> 00:13:47.160
+Czy widzisz, że nasz stan, który jest robotem, jest teraz przekazywany jako rekwizyty, więc lista kart akceptuje roboty
+
+00:13:47.280 --> 00:13:50.420
+jako rekwizyty, nawet w aplikacji.
+
+00:13:50.640 --> 00:13:51.290
+Tak.
+
+00:13:51.390 --> 00:13:59.040
+To stan i tak jak powiedziałem, ponieważ aplikacja ma teraz stany, które zawierają roboty.
+
+00:13:59.140 --> 00:14:02.420
+Można to zmienić.
+
+00:14:02.580 --> 00:14:11.470
+Teraz, w jaki sposób możemy je przekazać, mamy te dwie doliny i idealnie w polu wyszukiwania
+
+00:14:11.470 --> 00:14:19.840
+mam coś, co nazywa się zmianą wyszukiwania, co znowu jest funkcją, którą zamierzam nadrobić.
+
+00:14:20.440 --> 00:14:23.300
+To jest po prostu losowa nazwa, którą utworzyłem.
+
+00:14:23.620 --> 00:14:30.190
+A przy zmianie wyszukiwania chcę powiedzieć, że za każdym razem, gdy dane wejściowe zmieniają się
+
+00:14:30.610 --> 00:14:37.510
+tak, jak zrobiliśmy z manipulacją Domem, otrzymujemy zdarzenie, a w ramach tego wydarzenia piszę Dalt log,
+
+00:14:41.370 --> 00:14:44.560
+że to wydarzenie stworzyło funkcję i chcę.
+
+00:14:44.570 --> 00:14:49.050
+Za każdym razem, gdy to wejście zmieni się w konsolę wyzwalacza, wszystkie oprócz.
+
+00:14:49.120 --> 00:14:58.840
+Tak więc możemy to teraz przekazać, ale mogę powiedzieć, że zmiana wyszukiwania dotyczy zmian w wyszukiwaniu, ale znowu dlatego, że jest to
+
+00:14:58.840 --> 00:15:09.060
+obiekt, który musimy wypowiedzieć, tak aby było napisane, że jest to aplikacja Daut odpowiada, że zmiana jest wyszukiwaniem, jeśli to zapiszę i teraz do
+
+00:15:10.000 --> 00:15:16.970
+pola wyszukiwania zmieniłem teraz funkcję jako funkcję, więc mogę po prostu powiedzieć, że tak jak HMO
+
+00:15:21.490 --> 00:15:30.660
+będzie pamiętać, a on cały czas będzie robił zmiany T. M ..
+
+00:15:30.900 --> 00:15:32.100
+To wydarzenie.
+
+00:15:32.160 --> 00:15:35.690
+Po prostu słuchamy każdej chwili, gdy dane wejściowe ulegną zmianie.
+
+00:15:36.210 --> 00:15:39.660
+Mogę powiedzieć, że zmiana jest równa
+
+00:15:42.370 --> 00:15:43.640
+zmianie wyszukiwania.
+
+00:15:43.930 --> 00:15:45.540
+Zobaczmy, czy to działa.
+
+00:15:45.640 --> 00:15:46.680
+Nie dostaję żadnych błędów.
+
+00:15:46.690 --> 00:15:53.240
+Jeśli wrócę do mojej aplikacji, otworzę konsolę i wpisuję coś takiego.
+
+00:15:53.290 --> 00:16:01.090
+Dostaję to wydarzenie i jest to coś, o czym musisz pamiętać, że w
+
+00:16:01.090 --> 00:16:09.090
+przypadku wydarzenia zawsze mamy wartość docelową myśli zdarzenia, która powinna dać nam wartość wyszukiwania.
+
+00:16:09.160 --> 00:16:13.350
+Zapiszmy to i wpisz coś.
+
+00:16:15.060 --> 00:16:19.000
+Spójrz na to, że zauważamy różnicę podczas pisania.
+
+00:16:19.970 --> 00:16:22.710
+Pójdźmy jeszcze raz, co się właśnie wydarzyło.
+
+00:16:23.600 --> 00:16:25.590
+I znowu wiem, że to trudne.
+
+00:16:25.610 --> 00:16:31.110
+Zajęło mi to trochę czasu, kiedy zaczęliśmy, ale ten schemat naprawdę to wyjaśnia.
+
+00:16:32.020 --> 00:16:34.120
+Mam swój komponent aplikacji.
+
+00:16:34.120 --> 00:16:43.140
+Moje pole wyszukiwania i moja karta bez względu na to, jak zmieni się pole wyszukiwania po zmianie Mam
+
+00:16:43.680 --> 00:16:48.340
+zamiar uruchomić funkcję, którą mam zamiar nazwać tą funkcją.
+
+00:16:48.600 --> 00:16:50.970
+A sposób, w jaki to nazywamy, dodajemy to.
+
+00:16:51.060 --> 00:16:58.170
+Pamiętaj, że kiedy robiliśmy zdarzenia Dom zdefiniowaliśmy funkcję, a za każdym razem, gdy zdarzenie się
+
+00:16:58.170 --> 00:16:59.820
+wydarzy, wywołałoby to.
+
+00:16:59.850 --> 00:17:08.660
+Mówimy więc, że za każdym razem, gdy wywoływane jest zdarzenie onchange, wywołaj funkcję zmiany wyszukiwania.
+
+00:17:08.880 --> 00:17:16.260
+A jeśli pamiętasz funkcję zmiany wyszukiwania, która jest rekwizytem, jest funkcja zmiany wyszukiwania zdefiniowana
+
+00:17:16.260 --> 00:17:17.390
+w aplikacji.
+
+00:17:17.400 --> 00:17:19.430
+W ten sposób komunikujemy się z rodzicem.
+
+00:17:19.470 --> 00:17:24.690
+Wywołuje zdarzenie, o którym rodzic mówi, że pomaga uruchomić tę funkcję.
+
+00:17:25.020 --> 00:17:29.770
+A teraz ta funkcja dostaje Rona.
+
+00:17:29.880 --> 00:17:39.090
+Ale teraz, gdy mam wartość wejścia wyszukiwania, mogę teraz bezpośrednio przekazać dane wejściowe wyszukiwania do
+
+00:17:39.270 --> 00:17:40.880
+listy robotów.
+
+00:17:41.070 --> 00:17:42.600
+Ale zobacz, jak to działa.
+
+00:17:42.690 --> 00:17:44.510
+Możemy stworzyć bardzo.
+
+00:17:44.550 --> 00:18:00.150
+Powiedzmy, że robotów filtrowane i to będzie równa tego stanu roboty DOT i te roboty, które jest tablica.
+
+00:18:00.200 --> 00:18:08.150
+Znowu w ten sposób uzyskujemy dostęp do stanu będzie korzystać z macierzy filtrowania filtru.
+
+00:18:08.360 --> 00:18:17.240
+Dajemy robotom, a teraz nasza tablica będzie musiała zwrócić warunek, a stanem będą
+
+00:18:18.770 --> 00:18:19.480
+roboty.
+
+00:18:19.490 --> 00:18:28.350
+Nazwę kropki, a my zrobimy coś, czego nie widzieliśmy wcześniej, czyli małą literę.
+
+00:18:28.660 --> 00:18:33.790
+Jest to metoda, która zawiera wszystkie ciągi znaków i sprawia, że wszystko jest małe.
+
+00:18:33.820 --> 00:18:39.760
+I to jest dobre dla porównania, więc nie musimy porównywać wielkich i małych liter.
+
+00:18:39.930 --> 00:18:51.590
+A jeśli nazwa robotów, która jest teraz pisana małymi literami, jest inną metodą i ponownie
+
+00:18:51.620 --> 00:18:58.400
+jest wbudowana w javascript, jeśli zawiera pole wyszukiwania.
+
+00:18:58.550 --> 00:19:02.820
+I znowu chcemy zrobić, aby zmniejszyć wielkość liter w przypadku.
+
+00:19:03.080 --> 00:19:08.080
+Jeśli używamy wielkich liter lub małych liter, działa to w obie strony.
+
+00:19:08.450 --> 00:19:09.210
+I oto jest.
+
+00:19:09.410 --> 00:19:16.320
+Jeśli zawiera nazwy robotów pisanych małymi literami A to robi porównanie.
+
+00:19:16.480 --> 00:19:26.950
+Jeśli cokolwiek w ciągu zawiera dwie małe litery, to tylko zwróć roboty, które zwracają do tego prawdziwe.
+
+00:19:26.980 --> 00:19:29.120
+Uratujmy.
+
+00:19:29.240 --> 00:19:33.180
+I widzisz tutaj, jak mamy tam pole wyszukiwania, ponieważ dobrze jest częścią państwa.
+
+00:19:33.200 --> 00:19:38.150
+Muszę zrobić to pole wyszukiwania DOT w kropce.
+
+00:19:38.350 --> 00:19:42.090
+Jeśli to zapiszę, otrzymam to.
+
+00:19:42.090 --> 00:19:44.820
+Filtrujące roboty mają przypisaną wartość, ale nigdy nie są używane.
+
+00:19:44.820 --> 00:19:49.270
+Ale nie martw się, nie możemy teraz Konsole logować tego i zobaczyć, co otrzymujemy.
+
+00:19:51.280 --> 00:19:59.920
+Po zapisaniu wróćmy do naszej aplikacji i jeśli coś tu znajdę, pojawia się błąd.
+
+00:20:00.060 --> 00:20:03.460
+I jest to błąd bardzo dezorientujący.
+
+00:20:03.480 --> 00:20:05.020
+Po raz pierwszy jest to trudne.
+
+00:20:05.040 --> 00:20:06.450
+Ale niedźdź tu ze mną.
+
+00:20:06.570 --> 00:20:11.560
+Problem w tym momencie polega na wartości tego.
+
+00:20:12.210 --> 00:20:23.160
+Cóż, nie chodzi o aplikację, ponieważ zdarzenie miało miejsce na wejściu, wartość tego jest wejściowa, a dane wejściowe
+
+00:20:23.160 --> 00:20:33.240
+nie mają robotów DOT, a to jest sztuczka, którą zawsze zapominasz, ale pamiętaj o tym z
+
+00:20:33.240 --> 00:20:35.010
+reguły .
+
+00:20:36.010 --> 00:20:44.020
+Z wszystkim, co pochodzi z reakcji, konstruktor i rendering są wstępnie budowane i reagować za każdym razem,
+
+00:20:44.020 --> 00:20:54.560
+gdy tworzysz własne metody na komponencie, używając tej składni, więc są funkcje i to zapewnia, że ta wartość jest zgodna z miejscem, w
+
+00:20:54.560 --> 00:20:57.860
+którym została utworzona, czyli z aplikacją .
+
+00:20:58.160 --> 00:20:59.270
+Wiem, że to jest mylące.
+
+00:20:59.270 --> 00:21:00.560
+Możesz przeczytać więcej na ten temat.
+
+00:21:00.560 --> 00:21:02.240
+Zostawię dla niego zasób.
+
+00:21:02.240 --> 00:21:04.370
+To trudny temat.
+
+00:21:04.700 --> 00:21:06.230
+Ale znowu zasada.
+
+00:21:06.230 --> 00:21:07.210
+Użyj strzałek.
+
+00:21:07.250 --> 00:21:10.910
+Jeśli zrobię to teraz i kliknę.
+
+00:21:11.140 --> 00:21:11.760
+Proszę bardzo.
+
+00:21:11.920 --> 00:21:15.090
+Teraz dostaję roboty.
+
+00:21:16.550 --> 00:21:18.200
+Ale o to chodzi.
+
+00:21:18.200 --> 00:21:24.590
+W polu wyszukiwania widać, że wciąż mam 10 robotów, które tak naprawdę nie filtrują niczego.
+
+00:21:24.830 --> 00:21:31.510
+A to dlatego, że moje pole wyszukiwania jest zawsze pustym łańcuchem w celu aktualizacji stanu.
+
+00:21:31.610 --> 00:21:40.820
+Ponownie inną regułą ponownego aktu jest zrobienie tego stanu ustawionego kropką i to znów jest metoda, która przychodzi z reakcją i kiedy tylko chcesz
+
+00:21:40.830 --> 00:21:47.630
+zmienić stan zawsze robisz to nie robisz tego punktu kropki Pole wyszukiwania DOT jest równe, że nigdy tego
+
+00:21:47.660 --> 00:21:49.240
+nie robisz .
+
+00:21:49.250 --> 00:21:52.720
+Musisz zrobić ten zestaw punktów.
+
+00:21:53.530 --> 00:22:01.610
+Stan i tutaj po prostu mówimy, że pole wyszukiwania jest i znowu używamy obiektu,
+
+00:22:01.940 --> 00:22:08.310
+więc pole wyszukiwania będzie teraz punktem docelowym kropka docelowa kropka Valley.
+
+00:22:08.430 --> 00:22:22.620
+Jeśli zapiszę to i powrócę, zobaczysz, że teraz wszystko jest filtrowane przez zmianę stanu, aby pole wyszukiwania
+
+00:22:22.620 --> 00:22:26.070
+było zawsze aktualizowane.
+
+00:22:26.070 --> 00:22:30.700
+A teraz filtrujemy roboty zgodnie ze zmienionym polem wyszukiwania.
+
+00:22:33.310 --> 00:22:33.570
+DOBRZE.
+
+00:22:33.590 --> 00:22:37.300
+A więc ostatnia rzecz, patrząc na to.
+
+00:22:37.540 --> 00:22:42.110
+Mamy fakt, że roboty filtrujące wciąż nie są oznaką, że masz rację.
+
+00:22:42.340 --> 00:22:48.340
+Jeśli spojrzymy na to, teraz przekazaliśmy pole wyszukiwania z OP i mamy ciągle zmieniające się pole
+
+00:22:48.340 --> 00:22:48.880
+wyszukiwania.
+
+00:22:48.880 --> 00:22:56.680
+Teraz musimy przekazać to filtrowanym robotom, co możemy zrobić, to, że odfiltrowane roboty mogą
+
+00:22:56.680 --> 00:23:02.000
+być teraz używane jako rekwizyty zamiast tego stanu.
+
+00:23:02.290 --> 00:23:03.070
+Zróbmy to.
+
+00:23:03.100 --> 00:23:06.760
+Przenieśmy to tutaj.
+
+00:23:10.390 --> 00:23:16.480
+Teraz mamy dostęp do filtrowania robotów i zamiast przekazywać te informacje naszym
+
+00:23:16.480 --> 00:23:19.950
+robotom, po prostu przekazujemy filtrowane roboty.
+
+00:23:20.080 --> 00:23:23.670
+Jeśli widzę to, upewnij się, że pasek wyszukiwania jest również zapisany.
+
+00:23:23.870 --> 00:23:29.950
+A teraz wracam, zamierzam zamknąć kartę i potrząśnij nią.
+
+00:23:33.140 --> 00:23:34.210
+Spójrz na to.
+
+00:23:34.370 --> 00:23:37.550
+Nasza aplikacja działa.
+
+00:23:37.550 --> 00:23:39.880
+Jakie to jest świetne.
+
+00:23:39.910 --> 00:23:43.180
+Przyjrzyjmy się jeszcze raz, aby pokazać dokładnie, co robi.
+
+00:23:45.100 --> 00:23:54.860
+Mamy nasz komponent aplikacji, który ma dwa stany robotów i pole wyszukiwania, a ponieważ aplikacja jest właścicielem stanu.
+
+00:23:54.890 --> 00:24:04.130
+Każdy komponent, który ma stan, używa składni klasy, więc może użyć funkcji konstruktora do utworzenia tego stanu kropek, a
+
+00:24:04.220 --> 00:24:08.880
+ten stan jest tym, co zmienia się w aplikacji.
+
+00:24:08.900 --> 00:24:11.310
+To właśnie opisuje tę aplikację.
+
+00:24:11.330 --> 00:24:16.640
+Zapamiętaj kiedy powiedziałem, że wirtualny Dom jest po prostu obiektem javascript, wirtualny
+
+00:24:16.640 --> 00:24:26.930
+Dom to tylko nowy obiekt, który zbiera cały ten stan i ponownie wykorzystuje ten stan, aby renderować i przekazywać je jako rekwizyty do tych komponentów,
+
+00:24:26.930 --> 00:24:32.680
+tak aby te komponenty były po prostu czyste funkcje mogą po prostu renderować.
+
+00:24:32.880 --> 00:24:37.950
+I zawsze wiemy, że aplikacja będzie wyglądać tak samo, ponieważ gdy są tylko prostymi
+
+00:24:39.300 --> 00:24:44.450
+funkcjami, zarządzamy tym stanem i tutaj aplikacja jest jedyną rzeczą, która może zmienić ten stan.
+
+00:24:44.580 --> 00:24:48.190
+Ale może przekazać rzeczy takie jak rekwizyty.
+
+00:24:48.390 --> 00:24:53.870
+Przekazaliśmy pierwszą zmianę w polu wyszukiwania i polu wyszukiwania.
+
+00:24:54.090 --> 00:24:59.700
+Za każdym razem, gdy na wejściu jest zmiana, pozwala ona aplikacji rozpoznać, że nastąpiła zmiana.
+
+00:24:59.760 --> 00:25:00.900
+Uruchom tę funkcję.
+
+00:25:00.990 --> 00:25:05.870
+Uruchamia funkcję ze zdarzeniem i aktualizuje stan pola wyszukiwania.
+
+00:25:06.000 --> 00:25:13.960
+Do tego, co teraz wpisujemy, z informacjami, które mamy z pola wyszukiwania,
+
+00:25:14.380 --> 00:25:24.880
+możemy teraz przekazać listę kart i powiedzieć mu: Hej, chcę odfiltrować stan robotów, aby teraz zawierał tylko to,
+
+00:25:25.180 --> 00:25:34.930
+co zawiera w polu wyszukiwania, i zamiast tego przekazywać do naszych robotów właśnie minęliśmy przefiltrowane roboty.
+
+00:25:35.080 --> 00:25:38.930
+Być może zastanawiasz się, co robią roboty, które nigdy się nie zmieniają.
+
+00:25:38.950 --> 00:25:44.950
+Zawsze tworzymy po prostu nową tablicę o nazwie "Filtruj roboty" i zawsze przekazujemy ją, ponieważ musi
+
+00:25:45.220 --> 00:25:46.860
+to być część stanu.
+
+00:25:46.990 --> 00:25:53.500
+W tej chwili nie tak naprawdę dlatego, że mamy po prostu ciężko zakodowane roboty, ale kiedy dojdziemy do tego
+
+00:25:53.500 --> 00:25:56.040
+później, przekonacie się, że tak nie jest.
+
+00:25:56.170 --> 00:26:02.500
+Przez większość czasu użytkownicy są robotami z innego miejsca za pośrednictwem Internetu, w którym
+
+00:26:02.500 --> 00:26:08.540
+to przypadku będziemy potrzebować robotów do zmiany z pustej tablicy na tablicę.
+
+00:26:08.540 --> 00:26:14.420
+Po przejściu i chwyceniu wszystkich naszych użytkowników.
+
+00:26:14.690 --> 00:26:15.470
+W porządku.
+
+00:26:15.470 --> 00:26:16.820
+To było dużo.
+
+00:26:16.820 --> 00:26:22.940
+Wiem, że wiem, że jest dużo informacji, dużo nowej składni, ale jak widać z
+
+00:26:22.940 --> 00:26:26.110
+kilku linijek kodu, stworzyliśmy niesamowitą aplikację.
+
+00:26:26.360 --> 00:26:30.590
+I kolejne wideo, które skończymy i sfinalizujemy naszą aplikację.
+
+00:26:30.620 --> 00:26:33.430
+Więc wygląda tak pięknie.
+
+00:26:33.490 --> 00:26:34.900
+Zobaczę na tym.

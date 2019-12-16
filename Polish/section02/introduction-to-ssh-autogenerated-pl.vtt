@@ -1,0 +1,145 @@
+﻿WEBVTT
+
+00:00:01.240 --> 00:00:08.170
+Witam i zapraszam na pierwszą część kursu. Omówimy wiele tematów od
+
+00:00:08.170 --> 00:00:11.190
+Front-end do backendu.
+
+00:00:11.440 --> 00:00:17.920
+Ale do końca tego kursu powinieneś czuć się komfortowo, używając wszystkich tych narzędzi i technologii.
+
+00:00:17.920 --> 00:00:21.450
+Chociaż tematy te mogą wydawać się zupełnie różne od
+
+00:00:21.700 --> 00:00:26.530
+siebie, kurs został zaprojektowany w taki sposób, aby wszystko było ze sobą powiązane.
+
+00:00:27.240 --> 00:00:33.630
+Chociaż możesz pominąć sekcje, polecam je obejrzeć w kolejności, ponieważ pokażę ci, jak
+
+00:00:33.630 --> 00:00:41.580
+połączyć kropki na wszystkich tych technologiach i co możesz zrobić, aby zbudować świetne profesjonalne oprogramowanie i oprogramowanie,
+
+00:00:41.870 --> 00:00:46.420
+które może konkurować z jednymi z największych firmy technologiczne.
+
+00:00:46.440 --> 00:00:53.100
+Więc trzymaj się mocno, bo jedziemy na przejażdżkę. Pierwszym tematem, który
+
+00:00:53.130 --> 00:01:01.990
+omówimy, jest ekscytujący temat SSH. SSH lub bezpieczna powłoka to protokół.
+
+00:01:02.210 --> 00:01:11.690
+Co to znaczy? Być może słyszałeś o innych protokołach, takich jak HTTP, HTTPS, FTP. Są to wszystkie sposoby
+
+00:01:11.690 --> 00:01:17.620
+łączenia się z komputerami i mają wspólną zgodę na komunikację.
+
+00:01:17.810 --> 00:01:26.630
+To jest ich protokół lub język, w którym mogą mówić, a SSH jest sposobem
+
+00:01:26.630 --> 00:01:29.160
+komunikacji między maszynami.
+
+00:01:29.230 --> 00:01:38.530
+Na przykład protokół HTTP lub Hypertext Transfer Protocol umożliwia wysyłanie plików przez Internet, takich jak pliki
+
+00:01:38.530 --> 00:01:48.250
+HTML, CSS i javascript między przeglądarkami i serwerami. Protokół FTP lub transfer plików pozwala również
+
+00:01:48.250 --> 00:01:55.810
+wysyłać pliki i jest często używany podczas przesyłania plików typu hostgator
+
+00:01:55.810 --> 00:02:05.490
+lub ogólnej platformy hostingowej z komputera. HTTPS jest podobny do protokołu HTTP, ale jest zaszyfrowany.
+
+00:02:05.800 --> 00:02:10.740
+Oznacza to, że osoby trzecie nie mogą
+
+00:02:10.790 --> 00:02:19.560
+odczytać przesyłanych plików, jeśli przechwytują wiadomości. Istnieje wiele innych protokołów, takich jak IMAP, które pozwalają
+
+00:02:19.560 --> 00:02:28.560
+użytkownikom wysyłać wiadomości e-mail i wiele innych. Tak samo SSH to kolejny protokół, który pozwala nam komunikować się
+
+00:02:28.740 --> 00:02:31.400
+między dwoma komputerami przez Internet.
+
+00:02:32.400 --> 00:02:41.230
+Pozwala użytkownikom udostępniać pliki, a także kontrolować i modyfikować zdalne komputery przez Internet.
+
+00:02:41.250 --> 00:02:43.550
+Brzmi całkiem fajnie, prawda.
+
+00:02:43.550 --> 00:02:51.860
+Został stworzony jako bezpieczna metoda komunikacji, która ponownie szyfruje wszystkie dane, więc źli aktorzy nie mogą Cię monitorować
+
+00:02:51.860 --> 00:02:58.540
+i nie martw się, zagłębię się w każdy z tych punktów później w filmach.
+
+00:02:58.580 --> 00:03:04.410
+Teraz możesz myśleć, OK, więc jaka jest różnica dokładnie od HTTPS?
+
+00:03:04.970 --> 00:03:09.620
+Mam na myśli, że oba są formą komunikacji i oba są zaszyfrowane.
+
+00:03:10.760 --> 00:03:18.230
+Podobnie jak przeglądarka internetowa używa protokołu HTTPS do rozmów z serwerami i wyświetlania witryn sieci Web.
+
+00:03:18.230 --> 00:03:26.210
+Powłoka potrzebuje określonego protokołu, aby umożliwić wymianę danych lub komunikację między dwoma urządzeniami, a
+
+00:03:26.210 --> 00:03:29.510
+nie tylko przeglądarką i serwerem.
+
+00:03:29.560 --> 00:03:34.820
+I dlatego SSH nazywa się protokołem bezpiecznej powłoki.
+
+00:03:34.890 --> 00:03:42.510
+Jest to protokół do użycia przez powłokę i jeśli pamiętasz powłokę w przeciwieństwie do przeglądarki,
+
+00:03:42.510 --> 00:03:48.690
+możesz rozmawiać z systemem operacyjnym. Tak, użyłeś wiersza poleceń przed prawej?
+
+00:03:50.030 --> 00:03:56.450
+Dzięki SSH mogę używać mojego terminalu tutaj, który reprezentuje mój komputer.
+
+00:03:57.280 --> 00:04:03.000
+Aby porozmawiać z innym komputerem. Powiedzmy, że był to inny komputer gdzieś na świecie.
+
+00:04:03.180 --> 00:04:07.760
+Cóż, mogę teraz komunikować się za pomocą SSH z mojego komputera.
+
+00:04:08.570 --> 00:04:13.940
+Do tego komputera przez nasz terminal.
+
+00:04:14.020 --> 00:04:21.280
+Obecnie znaczną przewagą oferowaną przez SSH nad poprzednimi jest użycie szyfrowania w celu
+
+00:04:21.280 --> 00:04:26.140
+zapewnienia bezpiecznego przesyłania informacji między hostem a klientem.
+
+00:04:26.140 --> 00:04:33.300
+Host odnosi się do zdalnego serwera, do którego próbujesz uzyskać dostęp, podczas gdy klient
+
+00:04:33.310 --> 00:04:38.160
+jest komputerem, którego używasz do uzyskania dostępu do hosta.
+
+00:04:38.270 --> 00:04:44.210
+A jak widzisz tego złego faceta, który wygląda na bardzo podejrzanego, nie może
+
+00:04:44.390 --> 00:04:47.480
+odczytać naszych wiadomości z powodu szyfrowania.
+
+00:04:47.600 --> 00:04:49.220
+Jest bezpieczny.
+
+00:04:49.220 --> 00:04:53.030
+Teraz w następnym filmie pokażę, jak używać SSH.
+
+00:04:53.030 --> 00:04:58.620
+I na koniec porozmawiaj o tym, dlaczego jest to przydatne dla twórców stron internetowych.
+
+00:04:58.690 --> 00:05:02.530
+Zaufaj mi, że będzie fajnie. Do zobaczenia w następnym. Buh-Bye.

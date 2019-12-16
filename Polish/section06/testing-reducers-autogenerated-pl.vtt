@@ -1,0 +1,505 @@
+﻿WEBVTT
+
+00:00:01.250 --> 00:00:02.450
+Witam ponownie.
+
+00:00:02.960 --> 00:00:11.720
+Mamy dobry pomysł, jak przetestować komponenty Riak, ale co z reduxem i niektórymi działaniami i
+
+00:00:11.720 --> 00:00:14.630
+koncepcjami reduktorów, które mamy.
+
+00:00:14.650 --> 00:00:22.660
+Zacznijmy od reduktorów i pokochasz tę sekcję, ponieważ pamiętajcie, że nasze reduktory są
+
+00:00:22.660 --> 00:00:28.390
+czystymi funkcjami, a czyste funkcje są marzeniem testera.
+
+00:00:28.420 --> 00:00:32.750
+Najłatwiej je przetestować, więc zróbmy to.
+
+00:00:32.770 --> 00:00:37.770
+Zamierzam stworzyć nowy plik, wywołaj go testem reduktorów.
+
+00:00:37.910 --> 00:00:38.670
+Tak.
+
+00:00:40.280 --> 00:00:48.040
+A potem będę importował, a my potrzebujemy stałych.
+
+00:00:48.210 --> 00:00:56.970
+Zamierzam więc zaimportować stałe i oczywiście nasze reduktory, więc importowanie spowoduje zaimportowanie gwiazdy jako nowej składni
+
+00:00:56.970 --> 00:01:01.210
+jako reduktorów z uwodzicieli o tej składni,
+
+00:01:05.750 --> 00:01:12.710
+więc możemy po prostu zrobić reduktory kropki, co robimy, abyśmy je wyeksportowali.
+
+00:01:12.780 --> 00:01:19.910
+Tak więc w naszym przypadku myśli reduktorów to reduktory sorbetów, które wymagają robotów, które ładnie się czytają.
+
+00:01:19.930 --> 00:01:20.390
+W porządku.
+
+00:01:20.560 --> 00:01:26.080
+Pogrupujmy te reduktory tym razem, używając opisowego bloku Celeste do
+
+00:01:28.410 --> 00:01:30.120
+opisania robotów poszukiwawczych.
+
+00:01:30.180 --> 00:01:34.270
+Zrobimy nasz pierwszy reduktor tutaj i tutaj.
+
+00:01:34.320 --> 00:01:38.140
+Ups, to nie jest to, co chciałem zrobić z rzeczami tutaj.
+
+00:01:38.160 --> 00:01:39.680
+Będziemy mieć test.
+
+00:01:39.810 --> 00:01:55.540
+Pierwszy test, który mówi, powinien przywrócić stan początkowy.
+
+00:01:55.590 --> 00:02:03.270
+Teraz początkowy stan w reduktorze robotów poszukiwawczych może być testowany w ten sposób, więc możemy
+
+00:02:06.290 --> 00:02:09.940
+oczekiwać, że reduktory będą wyszukiwać robotów.
+
+00:02:09.940 --> 00:02:20.310
+Więc to nasz reduktor pamiętaj, że nasz reduktor bierze dwie rzeczy w stan i działanie, a ponieważ jeśli stan nie
+
+00:02:20.610 --> 00:02:25.560
+istnieje lub jest zdefiniowany, dajemy mu początkowe przeszukanie stanu.
+
+00:02:25.590 --> 00:02:26.230
+Zróbmy to.
+
+00:02:26.250 --> 00:02:31.150
+Powiem, że reduktor szuka robotów nieokreślonych.
+
+00:02:31.530 --> 00:02:36.750
+Więc nie ma stanu na początku i nie będzie żadnego działania.
+
+00:02:36.780 --> 00:02:43.170
+Ale biorąc pod uwagę pustą akcję, teraz chcemy przetestować te przypadki, w których.
+
+00:02:43.390 --> 00:02:45.540
+Cóż, mamy nieokreślony stan.
+
+00:02:45.620 --> 00:02:46.530
+Co się dzieje.
+
+00:02:46.790 --> 00:03:00.740
+Chcieliśmy porównać nasz idealny stan i nasz idealny stan, a ta sprawa ma mieć puste pole
+
+00:03:00.740 --> 00:03:02.170
+wyszukiwania.
+
+00:03:03.470 --> 00:03:08.660
+Więc pozwól mi powiedzieć, że otwieramy nasz pakiet testowy
+
+00:03:16.110 --> 00:03:18.780
+i Arita wszystko mija.
+
+00:03:18.780 --> 00:03:28.410
+Jeśli nacisnę przycisk, powiedz, że wszystko jest dobrze wylogowane, w tym nasz test reduktorów, jeśli umieścimy go
+
+00:03:28.980 --> 00:03:31.250
+w polu wyszukiwania.
+
+00:03:31.320 --> 00:03:32.420
+To się nie uda.
+
+00:03:32.430 --> 00:03:35.190
+W porządku, to świetnie.
+
+00:03:35.190 --> 00:03:37.180
+To było super super łatwe.
+
+00:03:37.200 --> 00:03:38.470
+Co jeszcze możemy zrobić.
+
+00:03:38.880 --> 00:03:50.890
+Cóż, spodziewaliśmy się tego producenta, gdy widzimy nasze zdarzenie w polu wyszukiwania zmian, które zwraca nowy
+
+00:03:50.890 --> 00:03:51.820
+stan.
+
+00:03:51.820 --> 00:04:01.350
+Tak więc raz jeszcze możemy powiedzieć, że powinien obsłużyć zmianę pola wyszukiwania zdarzeń i możemy powiedzieć, że
+
+00:04:01.350 --> 00:04:03.240
+reduktory szukają robotów.
+
+00:04:03.310 --> 00:04:04.630
+Zróbmy
+
+00:04:07.360 --> 00:04:14.570
+to trochę mniej, aby stan, powiedzmy, był pusty, albo wiesz co.
+
+00:04:14.620 --> 00:04:26.990
+Dodajmy tutaj wstępne wyszukiwanie stanu koncertu i powiedzmy, że to początkowe wyszukiwanie stanu to pole wyszukiwania, które
+
+00:04:28.750 --> 00:04:31.010
+on nazywa.
+
+00:04:31.230 --> 00:04:35.020
+W porządku, więc możemy po prostu użyć wstępnego wyszukiwania.
+
+00:04:35.040 --> 00:04:41.670
+To będzie stan początkowy, który jest równy pustemu ciągowi i
+
+00:04:42.180 --> 00:04:43.620
+otrzyma akcję.
+
+00:04:43.650 --> 00:04:46.430
+I jaki rodzaj działania otrzyma.
+
+00:04:46.430 --> 00:04:48.370
+Na razie to usunę.
+
+00:04:48.780 --> 00:04:53.460
+Cóż, jeśli pamiętasz, nasze działania będą miały charakter.
+
+00:04:54.000 --> 00:05:00.060
+W tym przypadku powiemy, że zmienimy typ pola wyszukiwania, które pochodzi z naszego pliku
+
+00:05:00.060 --> 00:05:04.300
+Constans i możemy skomponować ładunek, który ma zamiar wysłać.
+
+00:05:04.300 --> 00:05:10.580
+Powiedzmy teraz, że ładunek będzie b c.
+
+00:05:10.670 --> 00:05:13.720
+Czego oczekujemy od tego wyniku?
+
+00:05:14.030 --> 00:05:25.860
+Spodziewamy się, że po przejściu tej kontroli upewnimy się, że odczucia wyszukiwania będą miały wartość b c, więc możemy
+
+00:05:25.860 --> 00:05:31.460
+powiedzieć, że pole wyszukiwania powinno znów być ABC.
+
+00:05:31.590 --> 00:05:35.460
+Mamy wstępne wyszukiwanie stanu, które jest pustym ciągiem.
+
+00:05:35.550 --> 00:05:43.940
+Czy to przez ciebie postępujecie, a teraz potrzebujemy państwa, ponieważ pamiętajcie, że ten reduktor po prostu
+
+00:05:43.940 --> 00:05:45.770
+wróci do stanu.
+
+00:05:45.870 --> 00:05:54.320
+Chcemy, aby państwo zostało ocalone, a my mamy trochę porażki, zobaczymy, jakiego rodzaju Nera
+
+00:05:54.330 --> 00:05:55.170
+otrzymamy.
+
+00:05:55.470 --> 00:06:03.400
+I wygląda na to, że nieoczekiwany token O, i potrzebujemy tu dodatkowego wspornika.
+
+00:06:04.940 --> 00:06:10.800
+I dostajemy naszego Knerra mówiącego, że ten typ nie jest zdefiniowany, ponieważ dobrze nie musimy tu pisać.
+
+00:06:10.870 --> 00:06:12.220
+To tylko literówka z mojej strony.
+
+00:06:13.670 --> 00:06:14.060
+W porządku.
+
+00:06:14.120 --> 00:06:15.620
+To mija.
+
+00:06:15.620 --> 00:06:17.160
+Jak proste jest to.
+
+00:06:17.210 --> 00:06:23.270
+Reduktory Ruth wszystko, co musimy zrobić, to podać nam jakieś dane wejściowe i oczekiwać wyników, a Ty możesz
+
+00:06:23.270 --> 00:06:25.760
+tak po prostu kontynuować to na zawsze.
+
+00:06:25.760 --> 00:06:28.070
+Spraw, by twoje testy były coraz lepsze.
+
+00:06:29.130 --> 00:06:30.600
+Zróbmy następną recenzję.
+
+00:06:30.600 --> 00:06:34.190
+Teraz powiedzmy, że chcemy, abyśmy zrobili więcej miejsca tutaj.
+
+00:06:35.160 --> 00:06:36.990
+Chcemy
+
+00:06:40.000 --> 00:06:44.890
+opisać reduktor robotów żądań.
+
+00:06:45.060 --> 00:06:50.150
+W takim przypadku możemy po prostu powiedzieć, że mamy to, co tworzymy stan początkowy.
+
+00:06:50.160 --> 00:06:58.420
+Tak więc powiem jeszcze raz stan początkowy Konst dla robotów.
+
+00:06:58.810 --> 00:07:07.470
+A jeśli pamiętasz, mamy to jako stan początkowy, więc po prostu to skopiuję.
+
+00:07:07.500 --> 00:07:11.990
+To jest nasz początkowy stan testu.
+
+00:07:14.000 --> 00:07:15.890
+I chcemy zrobić to samo, co powyżej.
+
+00:07:16.080 --> 00:07:18.960
+Powinien przywrócić stan początkowy.
+
+00:07:18.960 --> 00:07:27.750
+Więc po prostu skopiuj i wklej powyższe i po prostu zmień roboty wyszukiwania, aby
+
+00:07:27.750 --> 00:07:35.120
+zażądać robotów i chcemy, aby to było równe stanowi początkowemu.
+
+00:07:35.190 --> 00:07:39.320
+Zapiszmy i mamy nieudany test.
+
+00:07:39.320 --> 00:07:40.910
+Zobaczmy, co tu się nie udało.
+
+00:07:42.710 --> 00:07:47.010
+Początkowe roboty stanowe nie są zdefiniowane.
+
+00:07:49.110 --> 00:07:52.320
+Ponieważ muszę tu dodać koszt.
+
+00:07:52.320 --> 00:07:53.880
+Uratujmy.
+
+00:07:53.880 --> 00:07:54.310
+W porządku.
+
+00:07:54.330 --> 00:07:55.780
+Wszystko przemija.
+
+00:07:56.100 --> 00:07:59.310
+Otrzymujemy nasz początkowy stan zgodnie z oczekiwaniami.
+
+00:07:59.310 --> 00:08:00.180
+Dobre.
+
+00:08:00.330 --> 00:08:12.610
+Ale zróbmy kolejny test i powiedz, że chcemy przetestować trzy przypadki tutaj.
+
+00:08:12.770 --> 00:08:15.770
+Zróbmy więc inicjał, który
+
+00:08:18.530 --> 00:08:28.290
+powinien obsłużyć listę robotów prośby do oczekującej pierwszej akcji i będzie miał coś podobnego do
+
+00:08:31.510 --> 00:08:33.160
+tego tutaj.
+
+00:08:33.160 --> 00:08:38.300
+Więc znowu użyjemy instrukcji xpect.
+
+00:08:38.450 --> 00:08:46.790
+Będzie miał teraz reduktory Daut tym razem o roboty.
+
+00:08:46.970 --> 00:08:55.390
+Będzie odbierać początkowy stan robotów, a my damy
+
+00:08:58.020 --> 00:09:10.310
+mu akcję oczekujących robotów typu żądanie, a ładunek jej podania jest zbyt prawdziwy.
+
+00:09:10.480 --> 00:09:18.290
+Więc spodziewamy się, że kiedy tak się stanie, jeśli spojrzymy na zredukowaną wartość, zauważymy, że to automatycznie powoduje, że
+
+00:09:18.800 --> 00:09:22.180
+wydatki są zbyt prawdziwe i nie ma ładunku.
+
+00:09:22.250 --> 00:09:28.730
+Nie musimy więc ustawiać, że nie musimy wysyłać ładunku, ale spodziewamy
+
+00:09:29.470 --> 00:09:35.570
+się, że ładunek zmieni się z rozszerzania nas wszystkich
+
+00:09:38.600 --> 00:09:49.930
+na fałszywe, ponieważ rozszerzanie się, gdy zaczynamy, jest zawsze fałszywe i tutaj chcemy, aby było to równe stan robotów.
+
+00:09:51.130 --> 00:09:56.610
+Z pustą tablicą wydatki są ustawione na true.
+
+00:09:56.690 --> 00:09:58.730
+Więc oszczędzajmy.
+
+00:09:58.750 --> 00:09:59.170
+W porządku.
+
+00:09:59.180 --> 00:10:07.030
+Wszystko mija się, ale właśnie zauważyłem, że nie chcemy, aby domyślne wydatki były
+
+00:10:07.030 --> 00:10:08.020
+prawdziwe.
+
+00:10:08.050 --> 00:10:13.010
+Chcieliśmy być fałszywi, ponieważ kiedy pierwszy raz mamy stan początkowy.
+
+00:10:13.060 --> 00:10:15.130
+Cóż, nie wysłaliśmy jeszcze obietnicy.
+
+00:10:15.130 --> 00:10:17.900
+Nie wymagaliśmy niczego od API.
+
+00:10:18.070 --> 00:10:24.280
+Jeśli wejdziemy do naszych reduktorów, zauważymy, że mamy tu początkowy etap przez prawdziwe przez pomyłkę.
+
+00:10:24.280 --> 00:10:30.820
+Możemy po prostu zmienić to na false, a tutaj zaoszczędzimy tutaj.
+
+00:10:31.990 --> 00:10:32.810
+Idealny.
+
+00:10:32.980 --> 00:10:34.700
+Wszystko działa.
+
+00:10:34.720 --> 00:10:41.160
+A wydatki robotów na żądanie zmieniają nasz stan wydatków na prawdziwy.
+
+00:10:41.160 --> 00:10:42.810
+W porządku, kontynuujmy.
+
+00:10:42.810 --> 00:10:47.150
+Mamy drugą sprawę, która jest sukcesem.
+
+00:10:47.370 --> 00:10:58.340
+Zamierzam tylko skopiować i wkleić tutaj i tym razem powiedzieć, że roboty powinny wydawać sukcesy
+
+00:10:58.490 --> 00:11:02.200
+i ten sukces powinien mieć.
+
+00:11:02.480 --> 00:11:03.620
+Cóż powinno to mieć.
+
+00:11:03.620 --> 00:11:12.820
+Cóż, potrzebujemy jakiegoś ładunku, ponieważ znowu w naszych reduktorach mamy ładunek działania robota, który
+
+00:11:13.210 --> 00:11:17.060
+wracamy do stanu po powodzeniu.
+
+00:11:17.080 --> 00:11:19.920
+Stwórzmy to w naszym typie.
+
+00:11:19.930 --> 00:11:25.400
+Zobaczymy ładunek i wrócę.
+
+00:11:25.900 --> 00:11:47.880
+Weźmy po prostu tych, którzy właśnie tworzą pomysł Dommy'ego o 2:59 powiedzmy nazwę testu, a na końcu e-mail z testem na gmail dot
+
+00:11:47.940 --> 00:11:49.850
+com.
+
+00:11:50.180 --> 00:11:56.340
+Widzisz tutaj, że jest to ciąg znaków zamiast liczby Wierzę w nasz komponent, że właściwie nie rozróżniamy
+
+00:11:56.340 --> 00:12:01.740
+liczby w ciągu znaków, więc jest to coś, co moglibyśmy chcieć naprawić w przyszłości.
+
+00:12:02.730 --> 00:12:09.410
+Ale na razie spodziewamy się, że jeśli ładunek jest taki, że stan jest teraz aktualizowany za pomocą tego ładunku.
+
+00:12:09.480 --> 00:12:13.020
+Skopiujmy to.
+
+00:12:13.140 --> 00:12:17.920
+I oczekujemy również, że to jest w toku, aby znów być fałszywe, jeśli pamiętamy naszego uwodziciela.
+
+00:12:17.970 --> 00:12:21.660
+Zmieniamy także nasze oczekiwania na sukces.
+
+00:12:21.660 --> 00:12:26.950
+Więc oszczędzajmy i mamy tu trochę błędu.
+
+00:12:29.760 --> 00:12:33.900
+To jest prosty Khama nemesis, jeśli będziemy się zachowywać.
+
+00:12:33.900 --> 00:12:36.750
+To przechodzi jeden końcowy test.
+
+00:12:36.840 --> 00:12:42.600
+Możesz zobaczyć, że możesz uzyskać bardzo powtarzalne testy, ale jest to dobre z reduktorami, które są
+
+00:12:42.600 --> 00:12:49.950
+tak proste do przetestowania, że po prostu kopiujesz i wklejasz dużo kodu, który znowu jest dobry do testowania, ponieważ ten kod
+
+00:12:50.160 --> 00:12:52.770
+nigdy nie będzie działał do produkcji.
+
+00:12:53.010 --> 00:12:55.880
+Zróbmy tutaj nieudany przypadek.
+
+00:12:55.890 --> 00:13:01.680
+To się nie udało.
+
+00:13:01.870 --> 00:13:05.360
+I w tym przypadku chcemy ładunek.
+
+00:13:05.360 --> 00:13:09.660
+Jeśli wrócimy do naszej funkcji, chcemy, aby ładunek zawierał tylko błąd.
+
+00:13:09.680 --> 00:13:19.340
+Więc znowu tutaj możemy powiedzieć, że jesteśmy bardzo zdenerwowani, że tam dotarliśmy i spodziewamy się, że stan będzie teraz miał
+
+00:13:19.340 --> 00:13:22.250
+atmosferę, która jest z tobą
+
+00:13:26.070 --> 00:13:29.640
+i wydatki fałszywe, chociaż widzę tutaj, że
+
+00:13:32.450 --> 00:13:38.410
+w rzeczywistości nie zwracamy się ku oczekiwaniu na fałsz którym powinniśmy być.
+
+00:13:38.410 --> 00:13:43.210
+Więc jeśli uratujemy Atakamę.
+
+00:13:43.440 --> 00:13:47.550
+Ale oczekujemy również, że tablica robotów zostanie zwrócona.
+
+00:13:47.550 --> 00:13:56.230
+Więc tablice robotów powinny być puste i teraz mamy to przejście.
+
+00:13:56.340 --> 00:13:58.020
+Bardzo fajny.
+
+00:13:58.020 --> 00:13:59.450
+Wszystko, co wystarczy dla ciebie.
+
+00:13:59.470 --> 00:14:04.680
+Czy widzisz, jak proste są testy, po prostu sprawdzając, czy wprowadzają dane na wyjściu.
+
+00:14:04.710 --> 00:14:11.640
+Właśnie dlatego chcesz mieć te reduktory wszędzie i dlaczego redux jest tak niesamowity, że bardzo łatwo go
+
+00:14:11.640 --> 00:14:12.390
+przetestować.
+
+00:14:12.500 --> 00:14:16.570
+A jeśli o tym pomyślisz, cała nasza logika jest w naszych reduktorach.
+
+00:14:16.680 --> 00:14:25.080
+Jeśli więc mamy naprawdę dobry test dla naszych reduktorów, pokrywamy wiele logiki naszych aplikacji, ponieważ reduktory
+
+00:14:25.080 --> 00:14:29.830
+to rzecz, która podjęła działania i wypluła stan.
+
+00:14:29.950 --> 00:14:38.570
+Są one w zasadzie kontrolerem lub mózgiem naszego reduxu aplikacji, co pozwala nam naprawdę dobrze testować i
+
+00:14:38.590 --> 00:14:47.160
+utrzymywać rzeczy proste po stronie reac, po prostu wykonując testy migawkowe lub proste testy enzymatyczne i testując
+
+00:14:47.490 --> 00:14:51.860
+czyste funkcje, które znowu są bardzo przydatne .
+
+00:14:52.200 --> 00:14:54.100
+Ale na razie to dla mnie.
+
+00:14:54.180 --> 00:14:55.760
+Zobaczę w następnym.

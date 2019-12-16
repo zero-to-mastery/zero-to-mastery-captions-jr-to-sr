@@ -1,0 +1,109 @@
+﻿WEBVTT
+
+00:00:01.270 --> 00:00:02.260
+Witamy spowrotem.
+
+00:00:02.260 --> 00:00:08.890
+Właśnie napisaliśmy kilka linii kodu maszynopisu, ale jedną z irytujących rzeczy było to, że musieliśmy
+
+00:00:08.890 --> 00:00:12.710
+ciągle uruchamiać to polecenie, aby skompilować nasz kod.
+
+00:00:12.820 --> 00:00:17.760
+Idealnie możemy po prostu uruchomić i wykonać automatycznie.
+
+00:00:18.130 --> 00:00:20.470
+I w ten sposób możemy to zrobić jest całkiem proste.
+
+00:00:20.470 --> 00:00:33.480
+Możemy zainicjować nasz projekt jako projekt maszynopisu, po prostu uruchamiając w nim deskę rozdzielczą TS C.
+
+00:00:33.560 --> 00:00:37.570
+Widzimy, że utworzono konfigurację TS opartą na pliku.
+
+00:00:37.820 --> 00:00:48.250
+Jeśli przejdziemy do tego pliku, widzimy, że utworzono plik konfiguracyjny dla maszynopisu i widać tutaj,
+
+00:00:48.340 --> 00:00:58.330
+że ten plik daje nam mnóstwo opcji do sprawdzenia przez kompilator, a opcje kompilatora
+
+00:00:58.360 --> 00:01:01.380
+mogą zrobić wiele rzeczy.
+
+00:01:01.390 --> 00:01:05.220
+Widzimy, że naszym celem jest "tak" 5.
+
+00:01:05.440 --> 00:01:11.140
+I mówi, że należy podać wersję ECMAScript i można zobaczyć, ile mają wartości domyślnych.
+
+00:01:11.140 --> 00:01:15.910
+Jeśli na przykład zmieniłem to, aby zobaczyć, że są opcje, które nam dają, zmieńmy je
+
+00:01:15.910 --> 00:01:18.180
+na E. S. 2017.
+
+00:01:18.580 --> 00:01:22.040
+Tak więc powiem tak 20 17.
+
+00:01:22.270 --> 00:01:25.620
+Jakiego rodzaju modułów chcemy użyć, możemy zrobić wspólny gaz.
+
+00:01:25.720 --> 00:01:27.760
+A może chcesz to zrobić.
+
+00:01:27.760 --> 00:01:32.770
+Tak 2015 i mnóstwo opcji.
+
+00:01:32.830 --> 00:01:40.510
+Zasadniczo możesz zdecydować, jaki rodzaj pracy chcesz wykonać i jaki rodzaj wyjścia potrzebujesz.
+
+00:01:40.600 --> 00:01:45.850
+Wielką zaletą tego pliku konfiguracyjnego jest to, że opisuje on wszystko, co
+
+00:01:45.850 --> 00:01:53.680
+można zrobić w Internecie, a także ma świetną dokumentację na pliku konfiguracyjnym TS, jeśli chcesz się w nią naprawdę zaangażować.
+
+00:01:56.310 --> 00:02:03.060
+Ale nie martw się później, pokażę ci, jak faktycznie uprościć ten krok lub jak
+
+00:02:03.060 --> 00:02:04.950
+został już uproszczony.
+
+00:02:04.950 --> 00:02:12.260
+Na razie jednak mamy plik konfiguracyjny TS, który jest teraz domyślną konfiguracją.
+
+00:02:12.370 --> 00:02:18.650
+Jeśli przejdziemy do maszynopisu, więc właśnie wyczyściliśmy nasz terminal.
+
+00:02:18.780 --> 00:02:23.760
+Sposób, w jaki jesteśmy w stanie uruchomić ten tryb oglądania jest dość prosty.
+
+00:02:23.760 --> 00:02:36.120
+Nie potrzebujemy tutaj wszystkiego, czego potrzebujemy, to TSC maszynopis dot TS, a następnie dash dash oglądać w trybie oglądania i można zobaczyć
+
+00:02:36.120 --> 00:02:41.770
+tutaj zaczyna kompilację Kompilacja Kham jest kompletna i teraz obserwuje
+
+00:02:41.770 --> 00:02:42.580
+zmiany.
+
+00:02:43.000 --> 00:02:48.520
+I za każdym razem mówię, czy ma zamiar przekompilować i wykryć te zmiany.
+
+00:02:48.790 --> 00:02:55.730
+Na przykład, jeśli zmienię to teraz na wartość boolowską, spowoduje to błąd.
+
+00:02:55.860 --> 00:02:59.440
+A kompilator mówi, że robisz coś złego tutaj.
+
+00:02:59.580 --> 00:03:00.060
+W porządku.
+
+00:03:00.120 --> 00:03:03.540
+Więc mamy to działa i wszystko jest skonfigurowane.
+
+00:03:03.600 --> 00:03:09.280
+Myślę, że nadszedł czas, abyśmy przejrzeli wszystkie rodzaje maszynopisu i zrobili trochę kodu.
+
+00:03:09.420 --> 00:03:14.880
+Zrób to na swoim komputerze, a zobaczę w następnym wideo.

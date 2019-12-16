@@ -1,0 +1,574 @@
+﻿WEBVTT
+
+00:00:01.900 --> 00:00:09.910
+Ei bine, după ce ați identificat componentele din aplicație care sunt redate inutil, există câțiva pași
+
+00:00:09.910 --> 00:00:12.490
+pe care îi puteți lua.
+
+00:00:13.220 --> 00:00:23.360
+Să ne întoarcem la operațiunea noastră și am spus că capul nostru componenta noastră este un fel de redare în mod inutil.
+
+00:00:23.420 --> 00:00:29.330
+Vreau să spun că acesta este un mic exemplu, dar vă puteți imagina dacă aceasta ar fi o altă
+
+00:00:29.330 --> 00:00:36.400
+parte a aplicației care este într-adevăr foarte complicată, poate că nu dorim ca noi să Rander de fiecare dată când apăsăm caseta de căutare.
+
+00:00:36.420 --> 00:00:38.950
+Deci, ce putem face bine.
+
+00:00:38.970 --> 00:00:42.430
+În primul rând, să creați o nouă componentă a antetului.
+
+00:00:45.780 --> 00:00:51.090
+Și această componentă din nou va trebui să importe re-act și suntem foarte buni
+
+00:01:02.680 --> 00:01:07.600
+la crearea componentelor Riak pentru că am scris atât de multe ori.
+
+00:01:07.750 --> 00:01:10.460
+Dar acesta este întotdeauna un lucru bun.
+
+00:01:11.430 --> 00:01:21.200
+Și vrem să ne asigurăm că vom exporta implicit componenta antet și că, în interiorul nostru, putem doar să întoarcem
+
+00:01:21.350 --> 00:01:27.460
+sau să folosim renderul, iar în interiorul randului ne putem întoarce.
+
+00:01:27.680 --> 00:01:39.620
+În timp ce am avut inițial ceea ce este doar H1 simplu.
+
+00:01:39.800 --> 00:01:47.490
+În regulă, un antet frumos și simplu și dacă mergem aici, putem înlocui acest lucru acum cu
+
+00:01:47.510 --> 00:01:51.890
+componenta antet și vom dori să importem acest lucru
+
+00:01:56.180 --> 00:01:57.970
+din componentele noastre.
+
+00:02:02.130 --> 00:02:15.100
+Salvați totul și încă o dată vreau să adaug un mic jurnal de consolă aici pentru a vedea ce este redat.
+
+00:02:15.180 --> 00:02:16.920
+Așa că o salvez aici.
+
+00:02:17.070 --> 00:02:28.650
+Să adăugăm, de asemenea, câteva altele să adăugăm în cardless va adăuga un dialog de consolă că fără card este
+
+00:02:28.650 --> 00:02:29.510
+redat.
+
+00:02:29.760 --> 00:02:31.770
+Și vrem să ne asigurăm
+
+00:02:34.330 --> 00:02:39.640
+că acesta este un șir și căsuța adaugă și o altă căsuță pentru căsuța de căutare.
+
+00:02:44.800 --> 00:02:54.780
+Să salvăm pentru a merge înapoi la aplicația noastră și să mergem la consul aici și pentru că loggerul nostru de
+
+00:02:54.780 --> 00:03:04.520
+la Reebok este un fel de aglomerare lista noastră de console doar pentru că acum dezactiva ea va merge înapoi
+
+00:03:04.520 --> 00:03:16.570
+la index Hygeia noi și pentru moment, doar eliminați acest lucru de la nostru aplica middleware și salvați-le și reveniți și asta este mult mai bine.
+
+00:03:16.570 --> 00:03:17.470
+In regula.
+
+00:03:17.470 --> 00:03:21.070
+Acum vedem că sunt redate de două ori.
+
+00:03:21.130 --> 00:03:24.070
+Și dacă te gândești la asta de ce e asta?
+
+00:03:24.070 --> 00:03:27.480
+Ei bine, pentru că inițial matricea robotului este goală.
+
+00:03:27.820 --> 00:03:35.470
+Apoi facem ca apelul API să se umple cu matricea robotului, ceea ce este starea noastră și apoi
+
+00:03:35.490 --> 00:03:37.630
+ne reîncarcă Hetter Smashbox cardless.
+
+00:03:37.840 --> 00:03:48.930
+Deci, cum putem evita renunțarea la Hetter? Ei bine, avem un ciclu de viață de păduchi pe care îl
+
+00:03:49.020 --> 00:03:53.130
+putem folosi numit Actualizare componentă ar trebui.
+
+00:03:54.000 --> 00:04:01.470
+Și acest lucru vine cu fiecare componentă Riak, astfel încât fiecare său act de ciclu de viață
+
+00:04:01.950 --> 00:04:10.440
+cârlig și se întoarce adevărat în cazul în care se întoarce adevărat, atunci va actualiza componenta în cazul în care
+
+00:04:10.440 --> 00:04:17.070
+se întoarce fals, atunci obiceiul de a actualiza componenta această componentă primeste efectiv următor.
+
+00:04:17.160 --> 00:04:17.650
+Hopa.
+
+00:04:17.700 --> 00:04:24.960
+Următoarea recuzită și următoarea stare.
+
+00:04:25.080 --> 00:04:29.720
+Dar pentru noi nu avem nevoie de faptul că știm doar că nu vrem să facem
+
+00:04:30.440 --> 00:04:33.650
+componenta antetului și deci putem spune că returnul este fals.
+
+00:04:33.800 --> 00:04:34.810
+Să vedem ce se întâmplă aici.
+
+00:04:37.300 --> 00:04:48.450
+Am de gând să salvez du-te înapoi și uita-te la faptul că componenta noastră cap doar redă o dată la timp original și indiferent de
+
+00:04:48.530 --> 00:04:49.310
+ce.
+
+00:04:49.310 --> 00:04:53.790
+Acum capul sau componenta noastra nu va reda niciodata.
+
+00:04:53.970 --> 00:04:58.170
+Și asta pentru că întotdeauna avem o actualizare a componentelor de rahat.
+
+00:04:58.170 --> 00:04:58.800
+Fals.
+
+00:04:58.890 --> 00:04:59.380
+Nu.
+
+00:04:59.400 --> 00:05:08.170
+Nu actualizați niciodată această componentă și acest lucru este destul de periculos, deoarece spuneți că nu veți actualiza niciodată acest lucru dacă această componentă
+
+00:05:08.170 --> 00:05:14.980
+a primit efectiv elemente de recuzită sau de stat și oricare dintre acestea nu se va schimba, deoarece
+
+00:05:14.980 --> 00:05:17.210
+am spus doar return false.
+
+00:05:17.210 --> 00:05:24.040
+Implicit acum, dacă nu adăugăm actualizarea componentei ar trebui să se întoarcă
+
+00:05:24.070 --> 00:05:31.720
+întotdeauna adevărat, dar actualizarea componentelor ne dă posibilitatea de a controla acest ciclu de actualizare.
+
+00:05:31.740 --> 00:05:37.410
+Permiteți-mi să vă dau un exemplu mai bun cu ceva mai complicat decât un simplu text.
+
+00:05:37.440 --> 00:05:46.220
+Să creați un fișier nou aici, o componentă nouă și vom numi acest lucru vom numi acest buton counter.
+
+00:05:46.400 --> 00:05:47.300
+Da.
+
+00:05:47.980 --> 00:05:56.070
+Și din nou, prin mișcarea noastră, de fapt, voi doar să copiați antetul aici și să
+
+00:05:56.070 --> 00:06:03.740
+schimbați numele doar pentru a face lucrurile mai ușoare, așa că eu spun butonul contra.
+
+00:06:03.940 --> 00:06:14.030
+Și acum acest buton contra va face ceva mai mult decât să aibă H-1 în constructor.
+
+00:06:18.160 --> 00:06:24.760
+Vom numi super și apoi aici va avea propriul stat și va avea o
+
+00:06:25.540 --> 00:06:34.090
+stare care spune că numărul este egal cu 1 sau mai mic pentru a număra este egal cu zero.
+
+00:06:34.100 --> 00:06:36.030
+Acesta este numărul implicit.
+
+00:06:36.170 --> 00:06:39.070
+Și pentru moment, să nu facem nimic aici.
+
+00:06:39.080 --> 00:06:44.610
+Voi pur și simplu să păstrez acel gol, așa că întotdeauna va actualiza componenta.
+
+00:06:44.710 --> 00:06:48.310
+Și apoi, în cele din urmă, în Rander să renunțăm la ceva semnificativ.
+
+00:06:49.080 --> 00:06:50.450
+Să
+
+00:06:55.920 --> 00:06:57.940
+facem un buton.
+
+00:06:59.170 --> 00:07:09.480
+Că să spunem că are o proprietate de culoare și această proprietate a culorilor va veni din această chestie de
+
+00:07:09.720 --> 00:07:14.230
+culori props dot pe care o să trecem.
+
+00:07:14.470 --> 00:07:21.890
+Și, de asemenea, un număr de actualizare a evenimentului cu clic lung.
+
+00:07:22.100 --> 00:07:29.430
+Și aceasta va fi o metodă pe care o vom crea și această actualizare va veni aici.
+
+00:07:32.000 --> 00:07:37.540
+Va fi o funcție simplă care ne va actualiza starea.
+
+00:07:37.660 --> 00:07:54.320
+Deci, această stare setată va fi luată ca număr de puncte DOT plus 1.
+
+00:07:54.340 --> 00:08:04.690
+Acum, acum doar să ne întoarcem la acest lucru, dar deocamdată să lăsăm doar acest buton contra-butonul în antet și să trecem
+
+00:08:04.730 --> 00:08:10.490
+de asemenea pe culorile de culori și se pare că aici nu este
+
+00:08:10.490 --> 00:08:11.900
+evidențiată evidențierea.
+
+00:08:11.900 --> 00:08:15.490
+Cred că am făcut o mică greșeală.
+
+00:08:15.710 --> 00:08:19.740
+Oh, și pentru că trebuie să închid acest buton.
+
+00:08:19.730 --> 00:08:32.190
+Hai să facem asta și să punem doar o bucată de text aici, care spune doar să numeri începutul pe care
+
+00:08:32.470 --> 00:08:34.900
+statele îl numără.
+
+00:08:34.920 --> 00:08:39.340
+Bine, să salvăm asta și să importăm acest lucru în antet.
+
+00:08:41.520 --> 00:08:47.900
+Ei bine, nu spuneți importurile Petar pentru importul de la Hetter de
+
+00:08:51.640 --> 00:08:55.500
+la Bodin din dosarul de conurbație.
+
+00:08:57.350 --> 00:09:12.130
+Și înăuntru de aici putem să întoarcem un dev care are contul de buton cu o culoare roșie de culoare roșie a lui Mysti pentru
+
+00:09:13.000 --> 00:09:26.430
+moment și să nu uităm să închidem ziua de salvare și avem câteva sintaxe serioase aici dacă mergem la Hetter Ei bine
+
+00:09:26.940 --> 00:09:28.960
+da 90 zi.
+
+00:09:29.190 --> 00:09:30.450
+Mi-ai uitat parola aici.
+
+00:09:35.240 --> 00:09:38.210
+În regulă, să ne întoarcem la aplicația noastră.
+
+00:09:38.360 --> 00:09:40.720
+Avem numărul nostru zero.
+
+00:09:41.510 --> 00:09:42.940
+Nu-mi place unde este.
+
+00:09:42.970 --> 00:09:47.430
+Deci, să-l punem de fapt sub H-1.
+
+00:09:47.630 --> 00:09:48.580
+Să salvăm asta.
+
+00:09:48.650 --> 00:09:49.980
+E mult mai bine.
+
+00:09:50.570 --> 00:09:54.850
+Și dacă faceți clic pe ea, vom obține unele erori.
+
+00:09:56.780 --> 00:09:59.260
+Sigur, actualizarea componentei revine undefined.
+
+00:09:59.660 --> 00:10:06.350
+Și ai dreptate pentru că sunăm în cadrul contorului BOTTEN, dar nu facem
+
+00:10:06.350 --> 00:10:07.260
+nimic.
+
+00:10:07.430 --> 00:10:08.180
+Nu functioneaza.
+
+00:10:08.180 --> 00:10:11.240
+Deci, doar pentru
+
+00:10:14.380 --> 00:10:22.690
+a reveni adevărat pentru acum și să faceți clic pe număr.
+
+00:10:22.710 --> 00:10:23.490
+In regula.
+
+00:10:23.490 --> 00:10:24.330
+Foarte tare.
+
+00:10:24.330 --> 00:10:31.380
+Se pare că funcționează și renunțăm la combinație, iar numărul contelui crește de fiecare dată.
+
+00:10:33.470 --> 00:10:42.840
+Acum am menționat aici că uneori puteți obține niște efecte secundare amuzante când actualizați starea
+
+00:10:44.540 --> 00:10:47.140
+pe baza stării actuale.
+
+00:10:47.210 --> 00:10:52.330
+Aceasta deoarece actualizările de stare nu sunt de fapt sincrone.
+
+00:10:52.400 --> 00:10:56.860
+Asta inseamna ca nu s-ar intampla intotdeauna cand te-ai gandi.
+
+00:10:57.080 --> 00:11:04.800
+Deci, de fiecare dată când utilizați statul de genul acesta sau trebuie să derivați următoarea stare de la starea actuală.
+
+00:11:05.210 --> 00:11:11.540
+Se recomandă să utilizați celălalt mod de actualizare a stării care trebuie să apucați
+
+00:11:16.720 --> 00:11:17.530
+de
+
+00:11:21.270 --> 00:11:26.990
+starea curentă și să returnați noua stare pe baza acestui parametru de stare.
+
+00:11:27.080 --> 00:11:28.010
+Asa ca sa
+
+00:11:32.400 --> 00:11:33.520
+salvam si inca functioneaza.
+
+00:11:33.660 --> 00:11:39.620
+Perfect Să clarificăm acest lucru acum doar pentru distracție.
+
+00:11:39.780 --> 00:11:51.750
+Să aruncăm o privire la recuzele următoare și la următoarea stare dacă mă duc aici și fac consola de recuză următoare recuzită
+
+00:11:51.780 --> 00:11:55.890
+și consolidează tot statul de stare următoare.
+
+00:11:56.100 --> 00:11:57.450
+Să salvăm aici.
+
+00:11:57.450 --> 00:12:03.230
+Întoarceți-vă și să lămurim acest număr anti-presă.
+
+00:12:03.300 --> 00:12:06.420
+Văd că am citit următorul proiector.
+
+00:12:06.490 --> 00:12:13.010
+Ei bine, nu se va schimba pentru că nu am schimbat niciun fel de recuzită, dar contele este acum unul.
+
+00:12:13.050 --> 00:12:24.850
+Dacă dau din nou clic pe conta pentru a număra până la trei și puteți vedea că avem acces atât la recuzită cât și la stat.
+
+00:12:24.860 --> 00:12:35.780
+Acum, ce se întâmplă dacă dintr-un anumit motiv statul nu se schimbă pentru că nu ne pasă de nimic altceva în propulsa
+
+00:12:35.780 --> 00:12:38.300
+noastră de culoare roșie.
+
+00:12:38.300 --> 00:12:45.520
+Este un fel de static chiar acum și ar trebui să actualizați componentele putem face ceva de genul asta.
+
+00:12:45.660 --> 00:12:53.270
+Putem spune dacă această stare punctuală nu conta nu este egală cu
+
+00:12:56.080 --> 00:13:02.950
+numărul următor de stare DOT, dacă acestea sunt diferite.
+
+00:13:02.990 --> 00:13:16.220
+În acest caz bine da, vă rugăm să reveniți la adevărat și vom face altfel ne putem întoarce false.
+
+00:13:16.280 --> 00:13:24.280
+Să salvăm că merge înapoi asigurați-vă că tot totul funcționează Da tot totul funcționează.
+
+00:13:26.430 --> 00:13:37.750
+Dar să spunem că acum vrem să ne schimbăm recuzita, să eliminăm sau să comentăm actualizarea componentei
+
+00:13:37.750 --> 00:13:45.690
+de la Hetter și să ne actualizăm și să tipăm ceva.
+
+00:13:45.700 --> 00:13:50.810
+Și vedem că antetul nostru se actualizează încă o dată.
+
+00:13:51.120 --> 00:13:58.890
+Și dacă ne întoarcem în conurbația noastră și în redarea vedem acel conar Și deși suntem con. vă că nu
+
+00:13:58.890 --> 00:14:03.180
+apare aici ca redare Nyree.
+
+00:14:03.180 --> 00:14:13.970
+Dar dacă am elimina această bucată de cod, să presupunem că eliminăm actualizarea componentelor de foi. Salvez și mă întorc, vedem
+
+00:14:13.970 --> 00:14:17.070
+că acum conurbarea este redată.
+
+00:14:17.230 --> 00:14:26.570
+Și chiar dacă nu-l atingem și nu-i pasă de ea, deoarece componenta părinte este redată, noi
+
+00:14:27.260 --> 00:14:30.080
+suntem și noi redați.
+
+00:14:30.500 --> 00:14:37.680
+Deci, prin adăugarea ar trebui să actualizați componenta doar actualizarea în cazul în care numărul de stare de schimbări.
+
+00:14:37.730 --> 00:14:42.560
+Numai momentul în care componenta noastră ar trebui să se actualizeze.
+
+00:14:42.680 --> 00:14:45.370
+Foarte tare.
+
+00:14:45.500 --> 00:14:52.550
+Dar acum nici o conurbație.
+
+00:14:52.700 --> 00:15:00.880
+Acum sunt momente când ai simplu ceea ce numim componentele prost sunt componente fără stat sunt componente de
+
+00:15:00.880 --> 00:15:01.620
+prezentare.
+
+00:15:01.660 --> 00:15:04.370
+Un fel de componentă a cardului aici.
+
+00:15:04.510 --> 00:15:11.410
+Este o funcție pură și se schimbă numai atunci când schimbarea propului său re-act are un tip
+
+00:15:11.680 --> 00:15:18.220
+special de component construit în componentă rece rece, care este menit exact pentru acest lucru.
+
+00:15:18.250 --> 00:15:29.330
+Deci, dacă această componentă a cardului a fost un fel de acest tip de componentă, putem spune că extinde componenta pură și
+
+00:15:29.690 --> 00:15:33.740
+putem doar să importăm din componenta re-act pură.
+
+00:15:33.740 --> 00:15:35.500
+Ce înseamnă asta?
+
+00:15:35.540 --> 00:15:38.360
+Aceasta înseamnă că numai componenta.
+
+00:15:38.360 --> 00:15:43.100
+De acum înainte se va face numai atunci când propunerea se va schimba de fapt.
+
+00:15:43.100 --> 00:15:44.930
+E un lucru frumos și simplu.
+
+00:15:44.990 --> 00:15:52.130
+Dacă schimbați această componentă a mașinii pentru a avea o clasă cu faptul că aceasta este o componentă pură, aceasta
+
+00:15:52.130 --> 00:16:00.040
+face în mod automat actualizarea componentei ar trebui să se schimbe numai dacă aceste trei lucruri se schimbă, ceea ce este într-adevăr foarte plăcut.
+
+00:16:00.050 --> 00:16:07.860
+Acum, un singur avertisment este că această componentă pură face ceva numit comparație superficială a recuzităților.
+
+00:16:07.880 --> 00:16:14.990
+Deci, dacă utilizați structuri complexe de date precum obiecte imbricate adânc, s-ar putea să lipsească unele modificări de recuzită
+
+00:16:15.080 --> 00:16:17.360
+și să nu actualizați componentele.
+
+00:16:17.360 --> 00:16:20.320
+Deci, de fapt nu sunt un mare fan al folosirii componentelor pure.
+
+00:16:21.770 --> 00:16:27.440
+Îmi place personal să folosiți actualizarea componentei care face același lucru, dar aveți un pic
+
+00:16:27.740 --> 00:16:36.950
+de control, dar nu ar trebui să excesați acest lucru deoarece acum ați adăugat un pas în plus în actualizarea dvs. de reacție pentru a
+
+00:16:36.950 --> 00:16:37.840
+verifica altceva.
+
+00:16:37.850 --> 00:16:46.070
+Deci, de fapt, aceasta are și o pedeapsă de performanță pentru că executați o funcție nother pentru a verifica
+
+00:16:46.160 --> 00:16:54.880
+dacă altceva se schimba deoarece actualizarea componentei partajate este o metodă care este chemată înainte de a face această render chiar
+
+00:16:54.880 --> 00:16:55.490
+aici.
+
+00:16:56.600 --> 00:16:58.890
+Utilizați acest lucru cu precauție.
+
+00:16:58.880 --> 00:17:05.360
+Nu adăugați niciodată acest lucru pentru că o să-mi îmbunătățească performanța, măsoară-o efectiv, dacă acest lucru ajută pentru
+
+00:17:05.540 --> 00:17:06.930
+acele cazuri rare.
+
+00:17:07.070 --> 00:17:13.010
+Folosiți-o cu siguranță, dar nu o excesați pentru fiecare componentă pe care am văzut-o în multe proiecte.
+
+00:17:13.130 --> 00:17:19.100
+S-ar putea să vă împiedice performanțele sau uneori să pierdeți unele actualizări din cauza acestei comparații superficiale
+
+00:17:19.280 --> 00:17:21.000
+pe care o are.
+
+00:17:21.100 --> 00:17:27.350
+Vreau să vă arăt un ultim instrument care ar putea să vă ajute cu unele dintre aceste lucruri, deoarece este un pic de durere de
+
+00:17:27.350 --> 00:17:30.130
+cap să vă gândiți la toate acestea pe cont propriu.
+
+00:17:32.530 --> 00:17:40.770
+Se numește De ce ați actualizat și de ce actualizați.
+
+00:17:40.880 --> 00:17:51.870
+Acesta este un instrument care vă spune în consolă că hei de ce faceți acest lucru.
+
+00:17:51.880 --> 00:17:56.810
+Nimic nu s-a schimbat, dar face ca este o renderare care poate fi evitată.
+
+00:17:56.850 --> 00:18:06.360
+Deci, acest lucru se întâmplă pentru dvs. și tot ceea ce trebuie să faceți este implementat în aplicația dvs. re-act cu doar câteva rânduri
+
+00:18:07.410 --> 00:18:10.800
+și vă asigurați că nu intră în producție.
+
+00:18:10.800 --> 00:18:13.250
+Folosiți-o doar pentru scopuri de dezvoltare.
+
+00:18:14.270 --> 00:18:20.360
+Deoarece una dintre problemele cele mai frecvente care afectează performanța și reacționează este acest cicluri
+
+00:18:20.360 --> 00:18:28.400
+de redactare inutile, deoarece amintim că componentele Riak vor citi Rander ori de câte ori părintele lor se rotește automat
+
+00:18:29.440 --> 00:18:32.190
+chiar dacă recuzita nu sa schimbat.
+
+00:18:32.230 --> 00:18:39.220
+Deci, acest instrument vă permite să rulați acest lucru în dezvoltare și să vedeți dacă atunci când faceți orice redare inutilă.
+
+00:18:39.520 --> 00:18:45.460
+Și acest lucru este extrem de util atunci când aveți o aplicație mare în cazul în care este foarte greu pentru tine de a face
+
+00:18:45.460 --> 00:18:50.000
+doar consola jurnal sau dau seama în cazul în care în cazul în care cele mai importante se întâmplă.
+
+00:18:50.940 --> 00:18:58.440
+Dar, din nou, cu toate acestea, folosiți cu prudență utilizarea timpului cu înțelepciune, deoarece performanța vă poate
+
+00:18:58.440 --> 00:19:00.390
+îmbunătăți mereu performanța aplicațiilor.
+
+00:19:01.130 --> 00:19:05.470
+Vrei doar să ai această imagine mare și să înțelegi cum funcționează aplicația ta.
+
+00:19:05.510 --> 00:19:11.990
+În cazul tău, modul în care reacționează lucrările aplicației redux și cum o poți îmbunătăți, înțelegând toate
+
+00:19:11.990 --> 00:19:14.160
+detaliile mici ale funcționării acesteia.
+
+00:19:14.240 --> 00:19:21.790
+Acum puteți lua decizii inteligente cu privire la cum și când să rezolvați problemele de performanță.
+
+00:19:21.800 --> 00:19:23.030
+Atât deocamdată.
+
+00:19:23.030 --> 00:19:23.860
+Ne vedem în următorul.

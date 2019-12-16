@@ -1,0 +1,430 @@
+﻿WEBVTT
+
+00:00:01.040 --> 00:00:05.590
+Și bine ați venit înapoi, ne-am întors la diagrama critică a traseului nostru.
+
+00:00:05.600 --> 00:00:07.730
+A început încet să aibă sens.
+
+00:00:07.760 --> 00:00:11.000
+Am vorbit despre o șmecherie și despre CSSA.
+
+00:00:11.000 --> 00:00:17.730
+Acum vom vorbi puțin despre javascript și înainte ca el să intre în copacul
+
+00:00:17.990 --> 00:00:27.150
+redat acum al unei shemale și CSSA, cred că javascriptul este probabil mai rău pentru că poate accesa
+
+00:00:27.270 --> 00:00:31.300
+și schimba atât DOM, cât și CSSA.
+
+00:00:31.330 --> 00:00:39.700
+Aceasta înseamnă că, odată ce este descoperită o etichetă script NDA shemale, construcția DOM este întreruptă și scriptul
+
+00:00:39.760 --> 00:00:42.220
+este solicitat de la server.
+
+00:00:43.130 --> 00:00:50.240
+Deci, indiferent de ceea ce facem în corespondență, vom vedea un fișier script pe care trebuie să-l
+
+00:00:50.240 --> 00:00:52.430
+solicităm după încărcarea scriptului.
+
+00:00:52.430 --> 00:00:58.280
+Nu poate fi executat înainte ca tot SS să fie rapid.
+
+00:00:59.310 --> 00:01:02.040
+Și Cs Dom este construit după ce
+
+00:01:04.630 --> 00:01:07.990
+CEA spune că modelul de obiect al documentului este construit.
+
+00:01:07.990 --> 00:01:18.200
+Javascript este executat și da, după cum vă puteți imagina că Javascript poate și poate accesa barajul Dom, precum și
+
+00:01:18.210 --> 00:01:21.280
+barajul CSSA și îl poate modifica.
+
+00:01:23.140 --> 00:01:29.140
+Și numai o dată ce se face acest lucru, pagina poate fi renderată în cele din urmă prin accesarea
+
+00:01:29.140 --> 00:01:31.360
+layout-ului de arbori prestate și a vopsirii.
+
+00:01:31.530 --> 00:01:38.780
+De aceea am numit javascript un parser care blochează amintesc codul de alertă pe care l-am făcut înainte
+
+00:01:38.790 --> 00:01:44.520
+de unde aveam o etichetă de script cu alertă și blocarea completă a paginii.
+
+00:01:44.620 --> 00:01:49.810
+Acum, cu javascript există câteva lucruri pe care le putem face pentru ao optimiza.
+
+00:01:49.810 --> 00:01:51.050
+Să începem cu prima.
+
+00:01:51.130 --> 00:01:55.770
+Se încarcă scripturi asincron pentru a ajuta la asta.
+
+00:01:55.810 --> 00:01:59.470
+Aveți o diagramă minunată pentru noi.
+
+00:01:59.520 --> 00:02:03.080
+Este posibil să fi văzut cel mai comun mod de a avea etichete de script care este.
+
+00:02:03.090 --> 00:02:07.150
+Da, doar scenariul când Schmall începe să citească.
+
+00:02:07.260 --> 00:02:15.680
+Ceea ce înseamnă parsarea fișierului pe care va întâlni un tech script și această etichetă de script trebuie
+
+00:02:15.680 --> 00:02:19.210
+să fie descărcată, care blochează toate parsarea.
+
+00:02:19.250 --> 00:02:27.240
+De asemenea, trebuie să fie executat care blochează fluxul de parsare și apoi, în sfârșit, odată ce
+
+00:02:27.410 --> 00:02:31.720
+sa făcut acest lucru, Schimmel este din nou analizat.
+
+00:02:31.720 --> 00:02:38.470
+Acum avem două proprietăți noi pe care le putem adăuga la etichetele de script pentru a modifica acest comportament, iar
+
+00:02:38.470 --> 00:02:39.760
+primul este async.
+
+00:02:39.790 --> 00:02:44.710
+Deci, încărcarea script-urilor în mod asincron și corect.
+
+00:02:44.730 --> 00:02:45.660
+Este foarte simplu.
+
+00:02:45.660 --> 00:02:53.110
+Tot ce facem este să adăugăm acest atribut scriptului nostru X, folosind async, putem spune browserului
+
+00:02:53.110 --> 00:02:58.330
+să meargă înainte și să descarce fișierul javascript cu alt fir.
+
+00:02:58.330 --> 00:03:04.330
+Gândiți-vă la un fir ca o persoană care lucrează el sau ea poate face doar un singur lucru la un moment dat.
+
+00:03:04.960 --> 00:03:13.030
+Cu async putem spune hei unui alt lucrător în timp ce lucrez la acest lucru o parsare poți
+
+00:03:13.480 --> 00:03:22.100
+descărca fișierul javascript și acest fișier javascript se descarcă acum pe o prioritate scăzută dar nu blochează restul de
+
+00:03:22.190 --> 00:03:27.730
+încărcare a paginii și ca curând după terminarea descărcării, va executa.
+
+00:03:27.760 --> 00:03:33.120
+Deci, o parte încă blochează analiza Shyamal.
+
+00:03:33.140 --> 00:03:35.070
+Acum este o prindere la asta.
+
+00:03:35.070 --> 00:03:40.810
+Aceasta înseamnă că poate executa în orice moment care a enumerat două probleme evidente.
+
+00:03:40.810 --> 00:03:46.590
+În primul rând, excede executa mult timp după încărcarea paginii.
+
+00:03:46.600 --> 00:03:54.250
+Deci, de exemplu, pentru că stăteam pe acest script de asincie pentru a face ceva cu experiența noastră de utilizator, atunci
+
+00:03:54.250 --> 00:03:57.670
+am putea oferi utilizatorului nostru o experiență sub optimă.
+
+00:03:57.730 --> 00:04:06.070
+În al doilea rând, dacă se întâmplă să se execute înainte de finalizarea încărcării paginii. Nu putem anticipa cu adevărat dacă avem nevoie de
+
+00:04:06.070 --> 00:04:08.590
+acces la dom sau la unele elemente.
+
+00:04:08.680 --> 00:04:16.300
+Dacă începe să facă niște manipulări DOM, fără ca actualul Dom să fie acolo, s-ar putea să ajungem la unele erori.
+
+00:04:17.350 --> 00:04:21.080
+Deci, aici este regula cu asincia pentru scripturi.
+
+00:04:22.640 --> 00:04:28.670
+Adăugați-le la orice lucru care nu afectează modelul obiect sau document CSSA.
+
+00:04:28.820 --> 00:04:36.020
+Async ar trebui să fie folosit pentru aproape toate scenariile externe care nu necesită cunoaștere a codului nostru și nu sunt
+
+00:04:36.050 --> 00:04:38.920
+cu adevărat esențiale pentru experiența noastră de utilizare.
+
+00:04:38.920 --> 00:04:45.920
+Vă puteți gândi la acest lucru, probabil ca script-uri Google Analytics sau scripturi de urmărire.
+
+00:04:45.960 --> 00:04:50.240
+Acum există oa doua opțiune și revenim din nou la punctul nostru de vedere.
+
+00:04:50.400 --> 00:04:57.050
+Cealaltă opțiune cu javascript este că putem amâna încărcarea de script-uri și amâna încărcarea de script-uri.
+
+00:04:57.050 --> 00:05:05.680
+Din nou, este simplu cu acest atribut de amânare este foarte asemănător asincron cu faptul că nu va bloca încărcarea paginii
+
+00:05:05.680 --> 00:05:06.370
+noastre.
+
+00:05:06.370 --> 00:05:16.670
+Cu toate acestea, va aștepta să se execute până după ce toate au fost analizate și vom executa în ordinea apariției.
+
+00:05:18.070 --> 00:05:25.070
+După cum puteți vedea aici, va aștepta până când o ședință este complet analizată și apoi va începe executarea.
+
+00:05:25.080 --> 00:05:34.270
+Acum, aceasta este o opțiune cu adevărat bună pentru scripturile care vor acționa pe arborele rendered sau pe dom, dar ele nu sunt, de
+
+00:05:34.510 --> 00:05:40.470
+asemenea, importante pentru a încărca Poate conținutul de mai sus de mai multe ori.
+
+00:05:41.820 --> 00:05:45.870
+Deci aici este regula mea pentru când să folosească async și să amâne.
+
+00:05:46.230 --> 00:05:53.970
+Dacă funcția de bază necesită javascript în timp ce async este cel mai bine dacă funcționalitatea de bază
+
+00:05:53.970 --> 00:06:00.370
+nu necesită javascript atunci javascript ar trebui amânată în afara căii critice de redare.
+
+00:06:00.870 --> 00:06:04.950
+Scripturile dvs. critice scriptul aplicației dvs. ar trebui să fie aici.
+
+00:06:04.950 --> 00:06:08.770
+Scripturi de la terțe părți care nu afectează DOM.
+
+00:06:08.770 --> 00:06:16.650
+Ea va fi aici și orice scenarii de terță parte care nu sunt atât de importante nu sunt deasupra ori.
+
+00:06:16.690 --> 00:06:19.130
+Ar trebui să se diferențieze.
+
+00:06:19.300 --> 00:06:22.100
+Să ne uităm la celelalte opțiuni.
+
+00:06:22.230 --> 00:06:28.060
+Putem minimiza manipulările lui Dohm și evităm JavaScript de lungă durată.
+
+00:06:28.200 --> 00:06:30.700
+Deci, să folosim un exemplu aici pentru a demonstra acest lucru.
+
+00:06:34.350 --> 00:06:37.560
+Am îmbunătățit puțin site-ul nostru.
+
+00:06:37.680 --> 00:06:47.600
+Am adăugat un buton cu font roșu de această dată și o imagine drăguță cu picătură mică și fișierul aici din nou.
+
+00:06:47.710 --> 00:06:53.600
+Este un dosar destul de de bază, avem acum o nouă etichetă de imagine și avem câteva scenarii.
+
+00:06:53.620 --> 00:06:59.410
+Și nu vă faceți griji vă voi da acces la toate aceste fișiere la sfârșitul secțiunii, astfel încât să puteți începe să
+
+00:06:59.530 --> 00:07:00.070
+practicați.
+
+00:07:01.490 --> 00:07:09.140
+Acum, aici, în etichetele scriptului, vedeți că avem câteva lucruri despre care vom vorbi despre primul,
+
+00:07:09.140 --> 00:07:11.900
+care este un script inline.
+
+00:07:12.350 --> 00:07:20.000
+Și acest script acționează pur și simplu apucă butonul de pe pagina noastră și adaugă culoarea roșie a stilului Să vedem ce se
+
+00:07:20.000 --> 00:07:20.820
+întâmplă aici.
+
+00:07:21.820 --> 00:07:31.400
+Când reîmprospătesc pagina și aruncă o privire la butonul de aici, deoarece îmi reîmprospătesc reîmprospătarea prea tare.
+
+00:07:31.400 --> 00:07:32.550
+Acolo ești.
+
+00:07:33.140 --> 00:07:36.970
+Vedeți că butonul este întotdeauna citit
+
+00:07:40.020 --> 00:07:51.660
+și nu are niciun punct dacă îl șterg să spunem că aceasta va fi doar cea implicită care este neagră
+
+00:07:51.750 --> 00:07:57.180
+deoarece javascript este executat înainte de arborele de redare.
+
+00:07:57.270 --> 00:08:04.660
+Ca și în cazul în care ne amintim diagrama noastră vrea javascript nostru este încărcat.
+
+00:08:04.930 --> 00:08:11.430
+O să citească browserele care urmează să citească în interior și să vadă dacă are nevoie să încarce mai multe lucruri.
+
+00:08:11.480 --> 00:08:20.030
+Deci, vă puteți imagina încă o dată dacă modificați domul sau schimbați stilurile care sunt doar lucruri suplimentare pe
+
+00:08:20.030 --> 00:08:24.430
+care browserul trebuie să le facă pentru a face.
+
+00:08:24.470 --> 00:08:27.310
+Să aruncăm o privire la celelalte fișiere de script pe care le am aici.
+
+00:08:30.230 --> 00:08:37.920
+Acesta este primul fișier script care despre el un cuplu de ascultători de eveniment la unul este încărcat de
+
+00:08:38.460 --> 00:08:41.920
+conținut Dom și cealaltă este de încărcare și.
+
+00:08:42.010 --> 00:08:47.450
+Îți voi explica ce fac aceștia într-un pic și apoi în sfârșit avem acest scenariu.
+
+00:08:48.670 --> 00:08:51.510
+Pentru moment, să ne uităm la acest fișier de script.
+
+00:08:51.580 --> 00:09:01.060
+Voi comenta scenariul 2 și 3 salvați și sunt dispus să deschid fila dezvoltatorului aici și voi reîmprospăta Să vedem
+
+00:09:01.060 --> 00:09:02.020
+ce
+
+00:09:05.600 --> 00:09:07.060
+sa întâmplat aici.
+
+00:09:08.400 --> 00:09:18.790
+Avem acest script pentru un Dom complet încărcat și analizat și apoi, în final, toate resursele au terminat de încărcat.
+
+00:09:18.870 --> 00:09:29.490
+Dacă ne uităm la fișierul nostru am sunat dosarul secret ce sa întâmplat aici primul jurnal al consolei.
+
+00:09:29.490 --> 00:09:40.230
+Acesta este scriptul pe care unul l-a sunat mai întâi înainte ca Dom Cantet să fie încărcat înainte ca pagina să fie încărcată, astfel că browserul verifică scripturile pentru a
+
+00:09:40.470 --> 00:09:45.210
+se asigura că are tot ce are nevoie pentru a construi pagina.
+
+00:09:45.750 --> 00:09:53.870
+Și dacă deschidem fila Rețea aici și am reîmprospătare din nou, văd că linia albastră care este aici
+
+00:09:54.560 --> 00:10:02.240
+este conținutul DOM încărcat care a luat 14 milisecunde destul de repede și care spune că modelul
+
+00:10:02.240 --> 00:10:04.720
+obiect document a fost încărcat.
+
+00:10:05.030 --> 00:10:11.660
+Apoi, în cele din urmă, sarcina care este linia roșie afirmă aici că tot conținutul
+
+00:10:11.780 --> 00:10:19.290
+de pe pagină, inclusiv această imagine, a fost încărcat din cauza modului în care funcționează calea critică de redare.
+
+00:10:19.790 --> 00:10:29.410
+Ce se întâmplă este că citim fișierul javascript care construiește arborele DOM.
+
+00:10:29.830 --> 00:10:37.960
+În cele din urmă a terminat construirea și apoi în cele din urmă a terminat de încărcare
+
+00:10:37.960 --> 00:10:41.560
+toate script-urile sau toate fișierele, inclusiv imaginea.
+
+00:10:41.590 --> 00:10:48.340
+Deci, dacă mergem la script-ul nostru și script-ul trei ca se poate vedea vazut foarte simplu doar consola busteni.
+
+00:10:48.490 --> 00:11:00.280
+Dacă le adaug în pagina noastră și am reîmprospătat acest lucru du-te la consola și vedem că avem 1 2 trei în jos complet
+
+00:11:00.300 --> 00:11:10.280
+încărcate și analizate toate resursele terminat de încărcare și doar pentru distracție aici să adăugăm un atribut async script-ul
+
+00:11:10.310 --> 00:11:11.470
+pentru a.
+
+00:11:11.630 --> 00:11:24.880
+Dacă refresh, uitați la acea asincronă sau scriptul descărcat asincron care se încarcă acum după ce DOM este încărcat complet, deoarece nu
+
+00:11:24.880 --> 00:11:27.260
+mai blochează încă.
+
+00:11:27.730 --> 00:11:29.120
+Foarte foarte rece.
+
+00:11:32.660 --> 00:11:33.130
+In regula.
+
+00:11:33.230 --> 00:11:40.040
+Ultimul lucru pe care vi-l voi arăta este să evitați Javascript de lungă durată și acest lucru este ceva despre care
+
+00:11:40.070 --> 00:11:44.830
+vom vorbi mai multe în partea a doua atunci când vorbim despre optimizarea codului.
+
+00:11:44.870 --> 00:11:49.470
+Vreau să vă arăt un punct dacă ne întoarcem la codul nostru aici.
+
+00:11:49.690 --> 00:11:59.410
+Am un script nother și acest script adaugă pur și simplu un eveniment Lessner clic care are un avertisment stop faceți clic pe faceți clic pe
+
+00:11:59.470 --> 00:12:02.490
+fi și permiteți-mi să vă arăt de ce.
+
+00:12:02.490 --> 00:12:08.700
+Fișierele Javascript de lungă durată sau de-a lungul executării fișierelor javascript nu sunt o idee bună.
+
+00:12:09.120 --> 00:12:18.780
+Veți vedea chiar acum că această pagină nu este prea încărcată, doar mișcați un pic, pentru a putea derula aici.
+
+00:12:19.120 --> 00:12:20.610
+Grozav.
+
+00:12:21.380 --> 00:12:22.600
+Dacă fac clic
+
+00:12:29.420 --> 00:12:36.590
+pe aici și ar trebui să-l elimină pe primul, pentru că m-am plâns că butonul a fost deja declarat.
+
+00:12:36.670 --> 00:12:40.490
+Dacă reîmprospătesc aici, vezi că bund-urile nu mai citesc.
+
+00:12:40.600 --> 00:12:44.510
+Dacă fac clic, nu mai pot face nimic.
+
+00:12:44.590 --> 00:12:45.760
+Nu mai pot face niciun click.
+
+00:12:45.760 --> 00:12:47.360
+Pot mai defila mai mult.
+
+00:12:47.440 --> 00:12:52.700
+Pagina este blocată complet deoarece acest cod javascript rulează.
+
+00:12:53.260 --> 00:13:00.400
+Deci, dacă aveți cod javascript care se execută pentru o lungă perioadă de timp în timp
+
+00:13:00.400 --> 00:13:07.790
+ce aveți o experiență destul de slabă pentru utilizatori, deoarece se simte blocată și Janke totul acolo.
+
+00:13:07.810 --> 00:13:13.070
+Acum știm cum este construit controlul Shyamal domus.
+
+00:13:13.210 --> 00:13:17.100
+Știm cum este construit modelul obiect CSSA.
+
+00:13:17.380 --> 00:13:22.090
+Știm cum este citit și executat javascript.
+
+00:13:22.090 --> 00:13:30.700
+Știm când este încărcat conținutul Dom, putem face în cele din urmă alte lucruri și în final știm că atunci când
+
+00:13:30.700 --> 00:13:34.570
+pagina web este complet încărcată, primim evenimentul de încărcare.
+
+00:13:34.570 --> 00:13:35.620
+Deci, următorul videoclip.
+
+00:13:35.680 --> 00:13:40.600
+Să vorbim despre acești ultimii pași și să facem niște exerciții.
+
+00:13:40.600 --> 00:13:41.790
+O să văd pe asta.
+
+00:13:41.890 --> 00:13:42.100
+Pa.

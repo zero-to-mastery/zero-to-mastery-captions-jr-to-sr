@@ -1,0 +1,403 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:02.120
+Bine ai revenit.
+
+00:00:02.300 --> 00:00:10.220
+Să terminăm discuția noastră cu privire la încasarea pe partea orb, deoarece deja știm cum să facem cache-ul aici.
+
+00:00:10.220 --> 00:00:15.470
+De fapt depinde într-adevăr de cererea dvs. cu privire la modul în care doriți să o implementați.
+
+00:00:15.560 --> 00:00:21.950
+Acum, cu browser-ul, deși există un standard frumos pe care îl putem folosi și am arătat-vă cu pagini bune
+
+00:00:21.950 --> 00:00:28.880
+în aplicația prietenilor noștri Robur cum putem să stocăm memoria cache folosind tehnici de asamblare a aplicațiilor re-act și, de
+
+00:00:28.880 --> 00:00:30.640
+asemenea, lucrător de serviciu.
+
+00:00:30.730 --> 00:00:37.880
+Dar dacă de fapt controlați serverul spre deosebire de modul în care paginile sunt Roble France care este pur Front-End.
+
+00:00:38.080 --> 00:00:47.190
+Ce se întâmplă dacă aveți un server Express și aveți nevoie să cache conținutul Ei bine, putem profita de
+
+00:00:47.520 --> 00:00:51.380
+cache-ul GTP care vine cu toate browserele.
+
+00:00:51.460 --> 00:00:56.110
+Vezi că avem browser-ul aici și albastru și serverul aici.
+
+00:00:56.620 --> 00:01:03.970
+Și dacă facem o solicitare de a primi un fișier și a puncta browser-ul inițial face o cerere la server
+
+00:01:04.270 --> 00:01:05.140
+și server.
+
+00:01:05.140 --> 00:01:12.100
+Dacă vă aduceți aminte întotdeauna răspunde cu ceva să spun un răspuns Jaisalmer care spune succesul sau un fel
+
+00:01:12.100 --> 00:01:13.140
+de date.
+
+00:01:13.600 --> 00:01:20.560
+Dar, împreună cu acest răspuns, trimiteți, de obicei, și antete, care, în mod implicit, se livrează cu Express.
+
+00:01:20.560 --> 00:01:26.230
+Sau puteți să le configurați manual dacă aveți elemente precum Content-Length Dar apoi aveți aceste două lucruri
+
+00:01:26.230 --> 00:01:28.600
+pe care le folosim pentru cache.
+
+00:01:28.600 --> 00:01:36.290
+Una este controlul cache-ului, iar cealaltă este E-Tec și folosind aceste anteturi pe care le trimitem de la server.
+
+00:01:36.420 --> 00:01:41.550
+Putem spune browser-ului ce să stocheze cache-ul și când să nu-l prindă.
+
+00:01:42.030 --> 00:01:45.690
+Hai să explorăm acel subiect.
+
+00:01:45.770 --> 00:01:50.110
+Am aici un server foarte simplu pe care l-am creat.
+
+00:01:50.120 --> 00:01:53.230
+Acum să trecem prin cod.
+
+00:01:53.300 --> 00:01:59.120
+De obicei, îmi place să scriu asta singură, dar asta a fost ceva pe care deja l-am făcut o mulțime de ori
+
+00:01:59.120 --> 00:02:03.440
+cu serverele Express, așa că nu vreau să te plictisesc cu începutul de la zero.
+
+00:02:03.440 --> 00:02:09.300
+Tot ceea ce ne interesează sunt cele două puncte finale noi și nu am văzut
+
+00:02:09.860 --> 00:02:13.040
+înainte de punctul final și de starea finală.
+
+00:02:13.060 --> 00:02:20.140
+Acum s-ar putea să existe un cod nou pe care nu l-am mai văzut aici, așa că să trecem peste el.
+
+00:02:20.160 --> 00:02:29.560
+Primul static este un punct final pe care îl adăugăm și este un middleware și acesta este modul în care
+
+00:02:29.680 --> 00:02:37.270
+deservi site-uri web statice un fișier expres sau static și exprimă tot ceea ce spunem
+
+00:02:37.270 --> 00:02:45.730
+este servi Expresul utilizează metoda statică expresă pentru a servi fișierul care este în dosarul public și vedeți
+
+00:02:45.730 --> 00:02:53.850
+aici că am creat un dosar public cu index care arată că un Shyamal este foarte simplu.
+
+00:02:54.180 --> 00:02:56.030
+O rușine Alpha.
+
+00:02:56.230 --> 00:03:00.250
+Dacă mă întorc la server, o să fac puțin mai mare.
+
+00:03:00.260 --> 00:03:02.110
+O să fac un pic mai mare.
+
+00:03:02.110 --> 00:03:02.740
+Acolo te duci.
+
+00:03:03.840 --> 00:03:09.030
+Tot ce spun este că, în acest moment, servesc acest indice, începe o gură.
+
+00:03:09.300 --> 00:03:21.090
+Și am adăugat, de asemenea, opțiunea care este Max H și în exprimarea modului în care definiți acest control al cache-ului. Hetter este de a spune pur
+
+00:03:21.750 --> 00:03:26.190
+și simplu ce înseamnă vârsta maximă și vârsta maximă.
+
+00:03:26.220 --> 00:03:31.530
+Câte secunde doriți ca browserul să rețină acest conținut.
+
+00:03:31.560 --> 00:03:33.250
+Aceste date pe care le trimitem.
+
+00:03:33.720 --> 00:03:41.100
+Deci, în cazul nostru, spunem că vreau ca MacSpeech să fie de două ore și pot spune două ore sau două zile pe an sau
+
+00:03:41.280 --> 00:03:42.240
+o pot face.
+
+00:03:42.330 --> 00:03:44.880
+Pot să-i dau un număr care este în milisecunde.
+
+00:03:46.060 --> 00:03:48.290
+Și cred că să lăsăm doar două ore.
+
+00:03:48.310 --> 00:03:53.280
+Deci spun că în acest moment vreau să vă amintiți această resursă timp de două ore.
+
+00:03:54.580 --> 00:03:56.350
+Deci, să testați asta.
+
+00:03:56.350 --> 00:03:58.570
+Este un server simplu care rulează acest lucru.
+
+00:03:58.690 --> 00:04:01.730
+Asta îmi va servi indexul Alpha.
+
+00:04:02.020 --> 00:04:02.820
+Haideți să aruncăm o privire.
+
+00:04:05.240 --> 00:04:14.770
+Dacă mă duc la localhost și du-te la static și punctul I a lua site-ul meu care spune Catch Me Baby
+
+00:04:14.770 --> 00:04:21.020
+Un Mai mult timp Dacă eu deschid instrumentele de dezvoltator și am reîmprospătare.
+
+00:04:21.230 --> 00:04:30.260
+Văd că dosarul static de aici a returnat trei sau patru în loc de 200.
+
+00:04:30.270 --> 00:04:35.430
+Acum, trei sau patru, dacă aș trece peste ea, văd că vedeți că nu este modificat.
+
+00:04:36.250 --> 00:04:41.400
+Și dacă mă reîmprospătesc din nou, spunea Keef nu a fost modificat.
+
+00:04:41.630 --> 00:04:46.700
+Dacă fac o reîmprospătare reînnoită greu cu cache-ul MT-NW, obțin 200.
+
+00:04:46.700 --> 00:04:50.190
+Asta înseamnă că a mers până la server și înapoi.
+
+00:04:50.210 --> 00:04:52.390
+Și returnează-mi aceste informații.
+
+00:04:52.400 --> 00:05:00.860
+Deci, ce înseamnă trei sau patru nu modificate înseamnă că dacă deschid conținutul static și derulez la anteturi, văd că aici este antetul
+
+00:05:01.940 --> 00:05:05.710
+meu mare de control al cache-ului, care este Avocet.
+
+00:05:05.720 --> 00:05:09.140
+Deci, două ore sunt multe secunde.
+
+00:05:09.290 --> 00:05:19.070
+Și vedem și câmpul e-TAG, iar cele trei sau patru nu sunt modificate atunci când e-TAG generat automat prin Express spune că nimic nu
+
+00:05:19.070 --> 00:05:26.120
+sa modificat în acest fișier și spune că, de obicei, cu ceva ce este un hash este
+
+00:05:26.120 --> 00:05:32.590
+un numărul generat la întâmplare că dacă nu se schimbă nimic în fișierul index, fișierul
+
+00:05:32.810 --> 00:05:34.200
+va rămâne același.
+
+00:05:34.220 --> 00:05:40.420
+Deci, dacă ne amintim numărul ăsta, voi schimba ceva în indexul nostru la un alfa Alpha Să mergem să
+
+00:05:40.420 --> 00:05:44.350
+indice că A. P. M. și adăugați aici câteva semne de exclamare.
+
+00:05:44.410 --> 00:05:46.210
+O să salvez.
+
+00:05:46.430 --> 00:05:49.720
+Și acum, când mă întorc și mă
+
+00:05:52.410 --> 00:05:54.030
+reîmprospătesc, obțin 200.
+
+00:05:54.360 --> 00:05:54.900
+Încă
+
+00:05:58.520 --> 00:06:01.530
+o dată, deoarece e-tag-ul meu este acum complet diferit.
+
+00:06:01.670 --> 00:06:03.350
+Doar pentru a ne asigura că am făcut acest drept.
+
+00:06:03.350 --> 00:06:04.690
+Voi apăsa din nou pe Enter.
+
+00:06:05.610 --> 00:06:14.010
+Și am trei sau patru, pentru că acum am încasat deja această informație e-tag-ul este același din nou
+
+00:06:14.040 --> 00:06:20.980
+dacă mă întorc și o schimb în perioada înapoi și reîmprospătează acum acum 200.
+
+00:06:21.180 --> 00:06:24.400
+Și e-TAG se termină încă o dată în 3 0.
+
+00:06:27.600 --> 00:06:34.490
+Schimbând semnele de exclamație cinci, reîmprospătați e-TAG din când în când 5.
+
+00:06:36.960 --> 00:06:42.430
+În regulă, așa că sunt trei sau patru cererile nu modificate.
+
+00:06:42.580 --> 00:06:49.870
+Și ceea ce înseamnă că browser-ul face ca cererea pe serverul meu să exprime serverul și spune Hey dar am acest lucru e-tag-ul
+
+00:06:49.870 --> 00:06:56.620
+a schimbat resursa serverul Express spune nu nu nu aceasta este eticheta pe care am fișierul nu sa schimbat astfel
+
+00:06:56.620 --> 00:07:01.030
+încât să puteți continua și să utilizați tot ce este în memoria cache.
+
+00:07:01.030 --> 00:07:04.500
+Aceasta este memoria cache a acestui site web.
+
+00:07:04.840 --> 00:07:06.240
+Cat de tare e asta.
+
+00:07:06.250 --> 00:07:13.270
+Acum, aici este partea interesantă pentru că am cache-ul acestui fișier sau acest punct final care este.
+
+00:07:13.270 --> 00:07:21.290
+Asta-mi dă indicele nu o rușine Voi cădea timp de două ore dacă închid acum acest lucru și deschid o fereastră nouă.
+
+00:07:21.400 --> 00:07:26.980
+Și mă duc la localhost trei mii două statice și deschid
+
+00:07:26.980 --> 00:07:31.090
+instrumentele dezvoltatorului și mă duc la statică.
+
+00:07:31.160 --> 00:07:32.980
+Am 200.
+
+00:07:33.200 --> 00:07:35.130
+Dar este puțin cam înnegrit.
+
+00:07:35.240 --> 00:07:39.840
+Și dacă mă duc până la dreapta, văd că e de pe disc.
+
+00:07:40.190 --> 00:07:46.820
+Pentru că am cache-ul asta dacă nu vizitez acest site Web timp de două ore și mă întorc Nu voi obține asta
+
+00:07:46.820 --> 00:07:50.960
+pentru că i-am spus că am vrut doar să-mi plătesc doar două ore.
+
+00:07:50.960 --> 00:07:53.210
+Foarte foarte rece.
+
+00:07:53.210 --> 00:07:55.830
+Acum, doar ca un exemplu suplimentar.
+
+00:07:55.910 --> 00:08:00.840
+Și, de asemenea, doar pentru a introduce o nouă sintaxă care este puțin mai avansată.
+
+00:08:00.890 --> 00:08:04.270
+Ceea ce avem aici de a servi indexul nu este o rușine.
+
+00:08:04.310 --> 00:08:08.840
+Tot ce pot face și în mod similar în acest fel.
+
+00:08:08.850 --> 00:08:16.880
+Am spus anteturi, așa că folosesc anteturi de răspuns și folosesc Express 4. 00 API aici.
+
+00:08:16.880 --> 00:08:20.750
+Express a schimbat acest lucru în funcție de versiunea pe care o utilizați, așa că mergeți direct în heads-up.
+
+00:08:20.750 --> 00:08:23.390
+Va trebui să mergeți la documentația Express.
+
+00:08:23.390 --> 00:08:26.210
+S-ar putea seta anteturi sau o altă metodă diferită.
+
+00:08:26.780 --> 00:08:29.780
+Dar pot schimba antetul pentru a spune controlul cache-ului.
+
+00:08:29.780 --> 00:08:38.660
+Vreau ca această resursă să fie publică și vârsta maximă să cred că este poate o zi și pot spune și că
+
+00:08:38.660 --> 00:08:41.590
+antetul este o taxă de tip Content-Type.
+
+00:08:41.720 --> 00:08:48.230
+Apoi am trimis răspunsul folosind ceea ce numim un tampon nou și acesta este ceva care vine
+
+00:08:48.410 --> 00:08:57.950
+în nod și un tampon ne permite să trimitem un șir de shemale peste fir astfel încât să poată fi citit de browser și de
+
+00:08:57.980 --> 00:08:58.820
+sub capotă.
+
+00:08:58.820 --> 00:09:01.130
+Aceasta este ceea ce servesc fișiere statice este ca.
+
+00:09:01.130 --> 00:09:07.550
+Folosesc acest tampon nou, dar dacă mă duc la punctul final și îmi amintesc această pagină
+
+00:09:07.550 --> 00:09:17.800
+Max pe care tocmai am creat-o 6 4 0 0 Voi merge la punctul final și văd că punctul final extrem de important puterea testului pe
+
+00:09:17.800 --> 00:09:25.060
+care tocmai am trimis-o și apoi mă uit și la acel control de cache maxim de vârstă 8 6
+
+00:09:25.090 --> 00:09:30.320
+4 0 0 și am și e-tag-ul meu și acolo îl ai.
+
+00:09:30.550 --> 00:09:38.560
+Dacă mă întorc aici pentru a merge la Product Hunt și pentru acest produs și dacă deschid fila Network, avem acum o
+
+00:09:38.710 --> 00:09:40.930
+idee despre ceea ce face.
+
+00:09:41.020 --> 00:09:48.480
+Dacă mă defilez aici pentru a zice pagina de poștă, pot să văd că e bine să te uiți la asta.
+
+00:09:48.490 --> 00:09:59.460
+Folosind CloudFlare ca CDN, ei folosesc codificarea conținutului B. R. dar dacă scot în jos văd, de asemenea, că au
+
+00:09:59.460 --> 00:10:02.130
+controlul cache al Max h 0.
+
+00:10:02.130 --> 00:10:08.190
+Asta inseamna ca nu doresc sa fie stocate in cache si acum avem o modalitate de a citi anteturile noastre si
+
+00:10:08.280 --> 00:10:11.850
+de a intelege ce se intampla despre API-ul lor nu inseamna suparat.
+
+00:10:11.910 --> 00:10:14.150
+Da, văd asta.
+
+00:10:14.160 --> 00:10:17.270
+Oh, da, cu siguranță, asta e cache.
+
+00:10:17.430 --> 00:10:20.300
+Și există și un e-tag asociat cu acesta.
+
+00:10:20.520 --> 00:10:27.670
+Și puteți începe să înțelegeți ceea ce face fiecare site web în ceea ce privește caching-ul, dar să încheiați acest
+
+00:10:27.670 --> 00:10:33.880
+lucru atunci când vine vorba de cache-ul pe care îl puteți implementa în toate nivelurile stack-ului.
+
+00:10:33.910 --> 00:10:35.070
+Nu este doar un singur loc.
+
+00:10:35.080 --> 00:10:36.610
+Nu este doar browserul.
+
+00:10:36.640 --> 00:10:43.540
+Nu este vorba doar de un CD și pot cache-ul poate cache-ul oriunde vedeți potrivit pentru aplicația dvs.
+
+00:10:43.540 --> 00:10:49.570
+Veți începe cel mai probabil cu ceva de genul front-end cu controlul cache-ului și
+
+00:10:49.570 --> 00:10:55.810
+etichetele și folosind lucrătorii de serviciu, poate folosind un CDN CloudFlare și apoi ați putea
+
+00:10:55.810 --> 00:11:03.050
+dori să vă deplasați într-adevăr folosind ratt pentru cache interogări de baze de date sau, ia mult timp.
+
+00:11:03.130 --> 00:11:10.060
+Este într-adevăr la latitudinea dvs. ca dezvoltator să implementați, dar, după cum știm când vine vorba de performanță, doriți doar să începeți
+
+00:11:10.060 --> 00:11:16.660
+să lucrați la o problemă cu privire la o soluție de memorie cache atunci când există un test măsurabil pe
+
+00:11:16.660 --> 00:11:23.140
+care îl putem implementa pe care îl putem ști sigur că, dacă am implementat această metodă de cache, vom îmbunătăți
+
+00:11:23.140 --> 00:11:29.290
+în mod semnificativ aplicația noastră și experiența noastră de utilizare pe care o vom vedea în următorul videoclip.

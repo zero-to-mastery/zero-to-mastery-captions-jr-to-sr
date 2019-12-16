@@ -1,0 +1,409 @@
+﻿WEBVTT
+
+00:00:01.640 --> 00:00:07.690
+Mam tutaj mały diagram, który bardzo dobrze wyjaśnia niektóre metody uwierzytelniania, z których
+
+00:00:07.690 --> 00:00:08.880
+możemy skorzystać.
+
+00:00:08.890 --> 00:00:15.700
+Mamy tradycyjne uwierzytelnianie oparte na plikach cookie, które omówiliśmy nieco w sekcji dotyczącej bezpieczeństwa, a
+
+00:00:16.330 --> 00:00:19.700
+także nowoczesną metodę uwierzytelniania opartą na tokenie.
+
+00:00:21.530 --> 00:00:28.590
+A uwierzytelnianie oparte na plikach cookie jest od dawna standardową i sprawdzoną metodą.
+
+00:00:29.060 --> 00:00:32.090
+Jak widać tutaj mamy przeglądarkę i serwer.
+
+00:00:32.090 --> 00:00:40.420
+Zwykle mamy żądanie POST do uwierzytelnienia lub logowania, a my wyślemy nazwę użytkownika i hasło do
+
+00:00:40.420 --> 00:00:41.460
+serwera.
+
+00:00:41.680 --> 00:00:47.300
+Serwer sprawdza, czy hasła pasują do siebie i czy istnieje użytkownik.
+
+00:00:47.410 --> 00:00:55.270
+A jeśli wszystko pójdzie dobrze, odsyłają odpowiedź mówiąc, że możesz się zalogować, ale wysyłają również
+
+00:00:55.270 --> 00:00:59.650
+nagłówek, który jest ustawiony jako cookie w sesji.
+
+00:00:59.650 --> 00:01:05.980
+To jest ciasteczko, które jest losowym kawałkiem napisu, a ten losowy kawałek sznurka będzie identyfikował
+
+00:01:05.980 --> 00:01:06.910
+tę przeglądarkę.
+
+00:01:06.910 --> 00:01:14.520
+Powie Ci, że kiedykolwiek chcesz, aby prośba taka jak użytkownicy API wysłała mi plik cookie.
+
+00:01:14.710 --> 00:01:17.160
+To jest ciasteczko, które właśnie wysłałem z serwera.
+
+00:01:18.860 --> 00:01:24.890
+I w tym przypadku przeglądarka chce uzyskać użytkownika i nakazać mu, aby ponownie porozmawiał z serwerem, serwer
+
+00:01:24.890 --> 00:01:30.350
+widzi, że jest plik cookie, który sprawdzi plik cookie do różdżki, która została tutaj utworzona.
+
+00:01:30.350 --> 00:01:36.320
+Musi pamiętać to ciasteczko i upewnić się, że pasuje do tego, jak mieliśmy hasło,
+
+00:01:36.320 --> 00:01:37.740
+które trzeba dopasować.
+
+00:01:37.810 --> 00:01:39.390
+Więc serwer będzie działał tutaj.
+
+00:01:39.400 --> 00:01:41.200
+To będzie trochę pracy.
+
+00:01:41.200 --> 00:01:44.240
+To znaczy, że tak, mam to ciasteczko.
+
+00:01:44.350 --> 00:01:47.110
+Pamiętam, że przypisałem ci to ciasteczko.
+
+00:01:47.110 --> 00:01:48.140
+Wiem, kim jesteś.
+
+00:01:48.250 --> 00:01:51.280
+Oto twoje informacje o użytkowniku.
+
+00:01:51.280 --> 00:01:58.570
+Otrzymujesz informacje zwrotne od nazw, a uwierzytelnianie oparte na plikach cookie jest to, co nazywamy stanowym.
+
+00:01:58.570 --> 00:02:05.170
+Oznacza to, że rekord uwierzytelniania lub sesja muszą być przechowywane zarówno w przeglądarce, jak i na
+
+00:02:05.170 --> 00:02:05.840
+serwerze.
+
+00:02:06.160 --> 00:02:14.350
+Przeglądarka przechowuje pliki cookie sesji w nagłówku, a serwer musi śledzić pliki cookie wysyłane do klientów, na przykład
+
+00:02:14.350 --> 00:02:20.640
+bazę danych innego sposobu zarządzania tymi danymi, ponieważ gdy tylko otrzymają żądanie, muszą
+
+00:02:20.660 --> 00:02:25.600
+przejść przez pliki cookie i sprawdzenie, czy którekolwiek z nich
+
+00:02:25.600 --> 00:02:33.410
+są ważne i jakie dane użytkownika przekazują na podstawie tego pliku cookie i musi śledzić te aktywne
+
+00:02:33.410 --> 00:02:35.720
+sesje w bazie danych.
+
+00:02:35.720 --> 00:02:42.740
+A piękność polega na tym, że gdy użytkownik powie, że wyloguje się z aplikacji, sesja jest niszczona zarówno
+
+00:02:42.740 --> 00:02:45.290
+po stronie klienta, jak i serwera.
+
+00:02:46.320 --> 00:02:48.060
+Ładne i proste.
+
+00:02:48.060 --> 00:02:53.270
+Z drugiej strony uwierzytelnianie oparte na tokenach jest nieco inne.
+
+00:02:54.180 --> 00:02:59.280
+Jest to coś, co zyskało na popularności w ciągu ostatnich kilku lat dzięki
+
+00:02:59.280 --> 00:03:00.970
+aplikacjom na jedną stronę.
+
+00:03:01.180 --> 00:03:08.870
+A jeśli chodzi o uwierzytelnianie oparte na tokenach, najczęstszym, o którym mówi większość ludzi, jest
+
+00:03:08.960 --> 00:03:15.870
+token JWT, czyli uwierzytelnianie tokenów internetowych Jason, które omówimy na tym kursie.
+
+00:03:16.660 --> 00:03:23.530
+Teraz spójrzmy na uwierzytelnianie oparte na tokenie, w którym użytkownik się loguje lub próbuje się
+
+00:03:23.740 --> 00:03:32.090
+zalogować i uwierzytelnić, wysyłając nazwę użytkownika i hasło na serwerze, sprawdza, czy hasło zapewnia, że wszystko działa z
+
+00:03:32.270 --> 00:03:33.230
+użytkownikiem.
+
+00:03:33.320 --> 00:03:36.320
+Tak, jeśli użytkownik istnieje, tak, hasło jest prawidłowe.
+
+00:03:36.320 --> 00:03:39.660
+I wyślą zamiast ciasteczka, jak my tutaj.
+
+00:03:39.710 --> 00:03:41.060
+Oni wyślą token.
+
+00:03:41.060 --> 00:03:48.650
+Żeton zadania JWT i ten token, który będziemy omawiać, zawiera pewne specjalne informacje, ale wygląda podobnie
+
+00:03:48.710 --> 00:03:57.840
+do plików cookie, ponieważ jest to pomieszany fragment tekstu i ten token zamiast być w ustawionym pliku cookie, tak
+
+00:03:57.990 --> 00:04:04.530
+jak tutaj mamy przechowywane w przeglądarce w takich sklepach lokalnych lub w pamięci
+
+00:04:04.530 --> 00:04:05.460
+sesji.
+
+00:04:05.460 --> 00:04:10.790
+Znowu coś, co obejmie, ale ta przeglądarka zapamiętuje teraz ten token.
+
+00:04:10.810 --> 00:04:19.200
+Za każdym razem, gdy ta przeglądarka lub użytkownik musi uzyskać dostęp do informacji, które muszą przesłać wraz z wnioskami,
+
+00:04:19.320 --> 00:04:26.850
+do tej autoryzacji, którą podamy właścicielowi JWT i numerowi tokena, ponownie to omówimy, więc nie stresuj się
+
+00:04:26.850 --> 00:04:27.540
+zbytnio.
+
+00:04:27.540 --> 00:04:31.220
+Chcemy tylko uzyskać informacje o tym, jak wszystko tu działa.
+
+00:04:31.280 --> 00:04:39.990
+Teraz interesująca część dzieje się tutaj, gdy token danych jest wysyłany z żądaniem, aby uzyskać użytkownika i wskazać, że
+
+00:04:39.990 --> 00:04:45.230
+serwer nie musi faktycznie przechowywać tych informacji w dowolnym miejscu.
+
+00:04:45.720 --> 00:04:52.890
+W rzeczywistości serwer tak naprawdę nie dba o to, jakie sesje wysyła, ponieważ mogą po prostu
+
+00:04:52.950 --> 00:05:01.620
+funkcjonować tokeny JWT, że po prostu mogą sprawdzić, że to, co podpisali i token, który utworzyli jest poprawne bez
+
+00:05:01.620 --> 00:05:05.540
+dotykania bazy danych bez robienia czegoś byle co.
+
+00:05:05.550 --> 00:05:14.890
+Po prostu uruchamiają na nim metodę weryfikacji kropek i mogą wysyłać dowolne dane z powrotem do przeglądarki.
+
+00:05:15.470 --> 00:05:21.540
+Ciekawe jest to, że w tym tokenie JWT znajdują się również informacje o użytkowniku, które mogą
+
+00:05:21.660 --> 00:05:23.180
+być również przechowywane.
+
+00:05:23.190 --> 00:05:25.240
+Znowu to jest coś, do czego wrócimy.
+
+00:05:25.240 --> 00:05:29.520
+Tak więc ten schemat będzie miał dużo więcej sensu pod koniec, ale chcę przedstawić wam
+
+00:05:29.520 --> 00:05:30.400
+tę koncepcję.
+
+00:05:30.480 --> 00:05:36.660
+Głównym wyjściem jest to, że uwierzytelnianie oparte na tokenach w teorii jest bezpaństwowcem.
+
+00:05:36.660 --> 00:05:44.450
+Serwer nie musi prowadzić rejestru, który użytkownik jest zalogowany lub który został wydany.
+
+00:05:44.550 --> 00:05:51.930
+Zamiast tego, wszystko, co musi zrobić serwer, to dekodowanie tego JWT i upewnienie się, że jest to poprawny token.
+
+00:05:51.930 --> 00:06:01.170
+Po uruchomieniu tej metody sprawdź i po wylogowaniu użytkownika token jest niszczony po stronie klienta.
+
+00:06:01.960 --> 00:06:06.910
+Ale niekoniecznie interakcja ma miejsce w przypadku Bakhita.
+
+00:06:06.930 --> 00:06:11.130
+Teraz, dlaczego mielibyśmy wybrać jedną z drugą.
+
+00:06:11.130 --> 00:06:12.880
+Na wszystko są plusy i minusy.
+
+00:06:13.050 --> 00:06:15.800
+I chcę dać ci przewagę, jeśli przejdziesz online.
+
+00:06:15.920 --> 00:06:22.760
+Jest mnóstwo debat na temat tego, co ludzie myślą, a niektórzy uważają, że jest to najlepszy sposób na zrobienie tego.
+
+00:06:22.770 --> 00:06:24.820
+Inni uważają, że jest to najlepszy sposób na zrobienie tego.
+
+00:06:25.020 --> 00:06:28.230
+I jest tylko ogromna debata, jeśli chodzi o sesję.
+
+00:06:28.230 --> 00:06:35.790
+To naprawdę gorący temat, a oni będą ludźmi, którzy naprawdę nienawidzą w jedną stronę i naprawdę lubią w
+
+00:06:35.790 --> 00:06:36.960
+inny sposób.
+
+00:06:36.960 --> 00:06:37.880
+Miej to na uwadze.
+
+00:06:37.890 --> 00:06:42.930
+I zamierzam przekazać wam zasoby w tej sekcji, które omawiają oba tematy, abyście mogli
+
+00:06:42.930 --> 00:06:44.850
+podjąć decyzję dla siebie.
+
+00:06:44.850 --> 00:06:50.910
+Sposób, w jaki zamierzam nauczać tej sekcji, to pokazanie, jak przeprowadzić uwierzytelnianie oparte na tokenach,
+
+00:06:51.090 --> 00:06:57.210
+ale także sesje bardzo podobne do uwierzytelniania opartego na plikach cookie, abyś mógł sam zdecydować,
+
+00:06:57.210 --> 00:06:58.920
+co jest najlepsze.
+
+00:06:58.970 --> 00:07:04.410
+Pokażę ci, co uważam za najlepsze osobiście, ale to nie znaczy, że jest to właściwa droga, lub że musisz
+
+00:07:04.740 --> 00:07:06.580
+to robić tylko w ten sposób.
+
+00:07:06.670 --> 00:07:09.540
+Istnieje wiele sposobów na zrobienie tego.
+
+00:07:09.730 --> 00:07:15.100
+Ale jak powiedziałem, jeśli przejdziesz do trybu online i zaczniesz czytać, twoja głowa będzie bolała o wszystkie plusy i minusy oraz
+
+00:07:15.100 --> 00:07:15.600
+opcje.
+
+00:07:15.640 --> 00:07:22.280
+Tak więc zamierzam omówić kilka z tych argumentów za i przeciw teraz w oparciu o token.
+
+00:07:22.280 --> 00:07:27.400
+Największą zaletą jest pomysł tokenów na pliki cookie.
+
+00:07:27.510 --> 00:07:28.900
+Jest bezpaństwowcem.
+
+00:07:28.940 --> 00:07:34.350
+Backend nie musi faktycznie zapisywać ani przechowywać tokenów w bazie danych.
+
+00:07:34.370 --> 00:07:42.210
+Każdy token jest samodzielny i zawiera wszystkie dane niezbędne do sprawdzenia jego ważności oraz przekazania informacji
+
+00:07:42.270 --> 00:07:43.660
+o użytkowniku.
+
+00:07:45.200 --> 00:07:47.590
+Tak więc zadanie serwera jest rzeczywiście uproszczone.
+
+00:07:47.660 --> 00:07:50.780
+Jedyną pracą jest wtedy podpisanie tokenów.
+
+00:07:50.780 --> 00:07:58.400
+Za każdym razem, gdy otrzymujemy prośbę o sprawdzenie, czy token jest miły i łatwy, sprawiliśmy, że serwer działa
+
+00:07:58.400 --> 00:08:01.270
+znacznie mniej, co zawsze jest miłe.
+
+00:08:03.580 --> 00:08:10.030
+Druga część to to, że w przeciwieństwie do ciasteczek, które są bezsensownymi ciągami w JWT,
+
+00:08:10.030 --> 00:08:18.730
+możesz faktycznie mieć dowolny rodzaj danych, które chcesz w JWT, abyś mógł mieć takie identyfikatory jak ID użytkownika lub nazwę użytkownika
+
+00:08:18.820 --> 00:08:25.250
+w tym tokenie, aby serwer był odbiera go, może rzeczywiście zobaczyć, jaki typ danych.
+
+00:08:25.270 --> 00:08:32.950
+Ten JWT tokin zawiera inną dobrą rzecz o tokenach, ponieważ w odróżnieniu od ciasteczek,
+
+00:08:32.950 --> 00:08:41.910
+które działają naprawdę dobrze z jedną domeną, klasyczna relacja klienta serwera przeglądarki tokenem sprawia, że praca z
+
+00:08:41.910 --> 00:08:45.060
+różnymi API jest naprawdę łatwa.
+
+00:08:45.300 --> 00:08:52.620
+Jeśli Twoja firma ma wiele adresów IP, możesz użyć tego samego tokenu JWT w różnych interfejsach API.
+
+00:08:53.620 --> 00:09:02.810
+Ponieważ tokena JWT jest wymagana i sprawdzana przy każdym wywołaniu, tak długo, jak token jest ważny, żądania mogą być
+
+00:09:02.820 --> 00:09:05.870
+w rzeczywistości przetwarzane przez cokolwiek.
+
+00:09:06.030 --> 00:09:10.530
+I tak są sposoby, aby to zrobić z uwierzytelnianiem opartym na cookie, ale jest to
+
+00:09:10.530 --> 00:09:11.550
+zdecydowanie bardziej skomplikowane.
+
+00:09:12.840 --> 00:09:21.870
+Drugą rzeczą jest to, że dzięki uwierzytelnianiu opartemu na tokenach może obsługiwać zarówno przeglądarkę, jak i natywne platformy mobilne, takie
+
+00:09:21.870 --> 00:09:23.770
+jak iOS i Android.
+
+00:09:25.320 --> 00:09:31.890
+Ponieważ posiadanie plików cookie na macierzystych platformach mobilnych jest rzeczywiście możliwe, podczas gdy po prostu nie mieszają się ze
+
+00:09:32.040 --> 00:09:33.850
+sobą, można z nim pracować.
+
+00:09:34.080 --> 00:09:40.710
+Ale używanie ciasteczek na platformach mobilnych to naprawdę naprawdę trudne tokeny, z drugiej strony jest ładne i proste
+
+00:09:40.710 --> 00:09:41.850
+działa całkiem nieźle.
+
+00:09:42.890 --> 00:09:46.560
+W porządku, więc żetony są niesamowite, po prostu wybierzmy żetony i zapomnij o ciasteczkach.
+
+00:09:46.970 --> 00:09:54.870
+No cóż, jak wiemy, starsi programiści zawsze są plusy i minusy, a to dlatego, że rozmiar JWT
+
+00:09:54.870 --> 00:10:03.960
+w porównaniu z ciasteczkiem to w rzeczywistości zupełnie inne JWT, ponieważ zawierają one dużo więcej informacji i dlatego, że przesyłasz je
+
+00:10:04.470 --> 00:10:09.600
+na każde żądanie zdecydowanie zwiększa liczbę bajtów, które musisz przesyłać do
+
+00:10:09.600 --> 00:10:11.540
+przodu i do tyłu.
+
+00:10:13.800 --> 00:10:19.070
+Tak więc w zależności od sytuacji rozmiar gry może stać się problematyczny.
+
+00:10:19.440 --> 00:10:26.250
+Druga część jest taka, że fakt, że przechowujemy informacje w JWT o użytkowniku, może być niebezpieczny, jeśli
+
+00:10:26.250 --> 00:10:31.300
+przechowujemy coś poufnego na temat użytkownika, jeśli token JWT zostanie skradziony.
+
+00:10:31.560 --> 00:10:37.250
+Zli ludzie mogą go w prosty sposób rozszyfrować i zobaczyć to, co jest w środku JWT.
+
+00:10:38.020 --> 00:10:43.180
+Jest jeszcze kilka innych rzeczy i zamierzam zostawić dla ciebie zasoby, tak jak powiedziałem, że jest
+
+00:10:43.180 --> 00:10:48.450
+to temat, który po prostu idzie coraz głębiej i głębiej, i jest wiele rzeczy do wzięcia pod uwagę.
+
+00:10:48.730 --> 00:10:51.690
+Aby uprościć sprawy, ułatwię ci to.
+
+00:10:51.700 --> 00:10:57.790
+Pokażę ci, jak zaimplementować uwierzytelnianie i możesz pobrać dowolne elementy do swojej
+
+00:10:57.790 --> 00:10:58.890
+aplikacji.
+
+00:11:00.620 --> 00:11:04.790
+Jednak pod koniec dnia upewnimy się, że nasza aplikacja będzie
+
+00:11:04.780 --> 00:11:12.280
+bezpieczna i zarządzać tymi sesjami w sposób, który nie spowoduje, że nasza aplikacja będzie podatna na ataki złych ludzi.
+
+00:11:13.910 --> 00:11:17.180
+W porządku, zróbmy sobie przerwę, a do zobaczenia w następnym wideo.
+
+00:11:17.200 --> 00:11:17.540
+PA.

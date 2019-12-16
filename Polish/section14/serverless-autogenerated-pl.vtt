@@ -1,0 +1,202 @@
+﻿WEBVTT
+
+00:00:02.030 --> 00:00:08.450
+Witamy ponownie, zainstaluj framework Servilius, abyśmy mogli rozpocząć zabawę z Amazon Lamda i
+
+00:00:08.660 --> 00:00:13.230
+włączyć tę funkcję systemu wsadowego do naszego inteligentnego mózgu.
+
+00:00:13.490 --> 00:00:22.430
+Pierwszą rzeczą, którą musimy zrobić, to uruchomić NPM install Server less za pomocą polecenia D-G.
+
+00:00:22.430 --> 00:00:27.280
+Teraz G jest globalne i użyliśmy poprzedniej.
+
+00:00:27.280 --> 00:00:32.170
+To daje nam dostęp do serwera mniej na całym naszym komputerze na całym świecie.
+
+00:00:32.230 --> 00:00:39.760
+Zatem przed tym poleceniem może być konieczne dodanie sudo, aby upewnić się, że masz dostęp do pakietu
+
+00:00:39.760 --> 00:00:40.490
+globalnego.
+
+00:00:40.480 --> 00:00:42.220
+Upewnij się, że dobrze znasz swoje hasło.
+
+00:00:44.440 --> 00:00:47.410
+A serwer mniej będzie instalował dla nas.
+
+00:00:47.530 --> 00:00:53.920
+I tak jak powiedziałem serwerowi, to zajmie się całą konfiguracją na tak dla nas, wszystko,
+
+00:00:53.920 --> 00:01:01.120
+o co musimy się martwić, to nasz własny kod i odrobina konfiguracji YAML, która nie będzie taka zła.
+
+00:01:01.360 --> 00:01:05.870
+Pozwól, że to wyjaśnię i przetestuj nasze polecenie.
+
+00:01:05.900 --> 00:01:11.410
+Zmniejszmy serwer.
+
+00:01:11.450 --> 00:01:12.130
+W porządku.
+
+00:01:12.150 --> 00:01:15.650
+I daje nam fajny wynik wszystkich poleceń, jakie możemy mieć.
+
+00:01:15.870 --> 00:01:17.330
+I to całkiem miłe.
+
+00:01:17.340 --> 00:01:24.660
+Widzimy, że możemy uruchomić wdrożenie możemy uruchomić, możemy uruchamiać logi, wszystkie te różne rzeczy do
+
+00:01:24.870 --> 00:01:27.360
+monitorowania naszej aplikacji usług.
+
+00:01:27.360 --> 00:01:36.850
+Na przykład, jeśli jesteśmy zainteresowani mniejszym tworzeniem serwera poleceń, możemy również użyć pomocnika w desce rozdzielczej i uzyskać więcej
+
+00:01:36.860 --> 00:01:39.400
+szczegółów na temat tego polecenia.
+
+00:01:39.500 --> 00:01:41.430
+I pozwól mi uczynić to trochę większym.
+
+00:01:42.270 --> 00:01:42.970
+Widzimy to.
+
+00:01:42.990 --> 00:01:43.430
+DOBRZE.
+
+00:01:43.500 --> 00:01:49.620
+Tworzy nową usługę serwisową i informuje nas, jakie opcje, jakie możemy mieć, teraz
+
+00:01:49.620 --> 00:01:57.170
+jest trochę za daleko, ponieważ sprawiłem, że rozmiar tekstu był trochę duży, ale wygląda na całkiem miły
+
+00:01:57.170 --> 00:01:58.120
+i łatwy.
+
+00:01:58.160 --> 00:02:07.100
+Widzimy, że za pomocą poleceń możemy zrobić tak, żaden akt gazu nie musi skryptować AWOS Python i mieć różne szablony
+
+00:02:07.100 --> 00:02:08.510
+do pracy.
+
+00:02:08.510 --> 00:02:14.210
+W porządku, wyjaśnijmy to, tak jak jest wersja skrócona, której możesz użyć, która jest s. mniej, więc nie musisz pisać bez
+
+00:02:14.450 --> 00:02:19.120
+obawy o to, który z nich po pewnym czasie się wyczerpuje.
+
+00:02:21.350 --> 00:02:28.020
+Teraz chcemy tylko napisać tworzenie Salles i nadać mu szablon.
+
+00:02:28.700 --> 00:02:31.200
+Możesz też zrobić Dashti.
+
+00:02:33.530 --> 00:02:38.990
+Powiemy, że nasz szablon, który będziemy używać, będzie nazywany AWOS, a otrzymałem go
+
+00:02:39.020 --> 00:02:42.830
+z funkcji pomocy, którą właśnie uruchomiłem, zwanej węzłem.
+
+00:02:42.980 --> 00:02:47.930
+Tak, nie będę uruchamiał js, więc mogę kodować w javascript.
+
+00:02:47.930 --> 00:02:49.050
+Wciśnij enter.
+
+00:02:50.380 --> 00:02:51.410
+I spójrz na to.
+
+00:02:51.460 --> 00:02:57.220
+Otrzymujemy niezłe wyniki i udało nam się wygenerować szablon szablonu.
+
+00:02:57.220 --> 00:03:01.680
+Możesz zobaczyć, że na moim pulpicie mam teraz dobrą obsługę plików ignorujących.
+
+00:03:01.770 --> 00:03:02.120
+Tak.
+
+00:03:02.140 --> 00:03:04.660
+I serwer mniej pliku YAML.
+
+00:03:06.080 --> 00:03:08.060
+Więc otwórzmy to.
+
+00:03:08.090 --> 00:03:12.580
+Zamierzam ci powiedzieć, co mam zamiar umieścić w folderze, żeby było trochę czystsze.
+
+00:03:12.590 --> 00:03:17.730
+Zamierzam utworzyć katalog, który nazwiemy to w sposób
+
+00:03:21.160 --> 00:03:29.660
+rangowy i mamy ten mały folder, w którym możemy po prostu przenieść wszystkie nasze pliki.
+
+00:03:29.870 --> 00:03:37.790
+O wiele lepiej było tylko wsiąść w naszą małą, gorliwą aplikację i otworzyć wysublimowany tekst i zobaczyć, co możemy
+
+00:03:37.790 --> 00:03:38.830
+tutaj zrobić.
+
+00:03:43.090 --> 00:03:43.430
+W porządku.
+
+00:03:43.450 --> 00:03:44.440
+To o wiele lepiej.
+
+00:03:45.770 --> 00:03:51.750
+Teraz mamy nasz dobry plik zignorowania, który jest dość standardowy.
+
+00:03:51.800 --> 00:03:59.390
+Mamy podejrzanego handlarza, który, jeśli rzeczywiście spojrzymy, jest dokładnie taką samą funkcją lub podobny do
+
+00:03:59.390 --> 00:04:03.110
+tego, który mieliśmy na desce rozdzielczej.
+
+00:04:03.110 --> 00:04:12.300
+Funkcja Hello, która bierze zdarzenie kontekst i wywołanie zwrotne i widzimy, że i tutaj nasz callback po prostu
+
+00:04:12.300 --> 00:04:21.000
+mówi callback i dajemy odpowiedź o statusie 200 i Jasonowi, który mówi, że Go podaje mniej.
+
+00:04:21.210 --> 00:04:23.180
+I ze zdarzeniem wejściowym.
+
+00:04:23.310 --> 00:04:30.670
+To jest miejsce, w którym zamierzamy napisać nasze wydarzenie lub naszą funkcję, a na koniec mamy plik
+
+00:04:30.670 --> 00:04:34.000
+YAML i mamy tutaj bardzo dobrą dokumentację.
+
+00:04:34.180 --> 00:04:40.130
+I to są konfiguracje, które możesz mieć na tak, a my trochę to przejdziemy.
+
+00:04:41.530 --> 00:04:49.630
+Ale widzimy, że do tej pory podkreśliliśmy, że używamy A. W. s nie znany jako dostawca
+
+00:04:49.630 --> 00:04:59.050
+będzie AWOS i używamy czasu uruchomienia sześć punktów dziesięć, który wygląda tak, jakbyśmy chcieli wcześniejszej wersji lub późniejszej wersji Romley,
+
+00:04:59.050 --> 00:05:05.130
+ponieważ na desce rozdzielczej wybraliśmy 8. 10.
+
+00:05:05.450 --> 00:05:09.030
+Więc możemy potrzebować zaktualizować to wszystko.
+
+00:05:09.220 --> 00:05:15.070
+Widzimy, że istnieją także funkcje hello i handler, ponieważ jest to program obsługi.
+
+00:05:15.140 --> 00:05:16.640
+Witaj ponownie obsługi.
+
+00:05:16.640 --> 00:05:17.260
+Dodgy Tak.
+
+00:05:17.270 --> 00:05:24.410
+Witam, w następnym filmie zajmiemy się nieco większą szczegółowością.
+
+00:05:25.330 --> 00:05:27.180
+Zobaczę to przez.

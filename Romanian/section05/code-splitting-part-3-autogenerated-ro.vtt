@@ -1,0 +1,469 @@
+﻿WEBVTT
+
+00:00:01.360 --> 00:00:03.250
+Și bine ai venit înapoi.
+
+00:00:03.250 --> 00:00:10.330
+Tocmai am rămas cu divizarea codului, care a fost foarte interesantă, dar de fapt există un mod mai curat
+
+00:00:10.570 --> 00:00:12.290
+de a face lucrurile.
+
+00:00:12.380 --> 00:00:13.470
+Ei bine, sunt mai multe.
+
+00:00:13.540 --> 00:00:16.370
+Îți voi arăta unul dintre ei acum.
+
+00:00:16.890 --> 00:00:18.140
+Aici, aici.
+
+00:00:18.330 --> 00:00:22.610
+Această componentă DOT de stat este destul de urâtă.
+
+00:00:22.650 --> 00:00:27.360
+Și dacă cineva are nevoie de echipa ta, vine și nu sunt familiarizați cu sintaxa, ei vor fi
+
+00:00:27.360 --> 00:00:28.990
+într-adevăr derutați de codul tău.
+
+00:00:29.130 --> 00:00:33.000
+În mod ideal, putem face codul nostru foarte simplu de înțeles.
+
+00:00:33.150 --> 00:00:40.740
+Așa că hai să încercăm să facem acest lucru doar pentru a păstra lucrurile consecvente, deoarece componentele în
+
+00:00:40.740 --> 00:00:48.430
+timp ce există obiecte tehnice o să fac acest Noal în loc de șir pentru a păstra lucrurile consecvente.
+
+00:00:48.450 --> 00:00:54.910
+Acum suntem aici cu versiunea mai curată.
+
+00:00:54.910 --> 00:01:03.320
+Nu ar fi bine dacă am avea un fel de componentă, cum ar fi un semnal Bonan, că nu putem împrăștia
+
+00:01:03.320 --> 00:01:07.970
+lucrurile și doar spunem că această componentă va fi asincronă Aints.
+
+00:01:07.970 --> 00:01:12.420
+Deci, doar importați bine să facem asta.
+
+00:01:12.430 --> 00:01:19.840
+Voi crea o componentă asincronă și veți vedea de ce este util la sfârșitul videoclipului
+
+00:01:19.850 --> 00:01:28.570
+Boinne să accesați componentele și să creați un fișier nou și îl vom numi o componentă de sincronizare.
+
+00:01:28.630 --> 00:01:37.630
+Dodginess în interiorul nostru avem reacții tipice de import și, de asemenea, componenta din
+
+00:01:42.020 --> 00:01:44.250
+pachetul nostru Riak.
+
+00:01:44.250 --> 00:01:44.590
+In regula.
+
+00:01:44.610 --> 00:01:53.280
+Și acum vom crea ceva numit componentă de ordin superior și care este o componentă
+
+00:01:53.280 --> 00:01:56.830
+care returnează o componentă mai mică.
+
+00:01:56.860 --> 00:02:02.410
+Este ca și cum o funcție de ordin superior o funcție de ordin superior despre care am vorbit
+
+00:02:02.410 --> 00:02:04.990
+este o funcție care returnează o funcție.
+
+00:02:04.990 --> 00:02:11.790
+Deci, din nou, deoarece componentele sunt doar funcții care este ceea ce este o componentă care returnează o altă componentă
+
+00:02:12.780 --> 00:02:15.900
+la fel cum am avut legătura și redux.
+
+00:02:15.900 --> 00:02:21.930
+Deci, modul în care creăm acest lucru și de modul în care scriu acest lucru, dacă acest lucru merge peste capul dvs. nu vă
+
+00:02:22.020 --> 00:02:24.120
+faceți griji componentă async este destul de standard.
+
+00:02:24.120 --> 00:02:30.810
+Puteți merge online și căutați-l și tot codul pentru această componentă async pare destul de
+
+00:02:30.810 --> 00:02:31.650
+asemănător.
+
+00:02:31.680 --> 00:02:36.750
+Deci, trebuie să vă obișnuiți dacă doriți să aflați mai multe despre componentele de ordin superior.
+
+00:02:36.750 --> 00:02:43.740
+Documentul re-act are o secțiune de componente de ordin înalt și vă va ajuta cu adevărat.
+
+00:02:44.040 --> 00:02:47.190
+Dar acum, stai cu mine, totul va avea sens.
+
+00:02:47.310 --> 00:02:55.920
+Vom începe mai întâi cu exportul defecțiunii pe care o vom numi o componentă de sincronizare
+
+00:02:55.930 --> 00:03:00.050
+cu litere mici, care este o funcție.
+
+00:03:00.150 --> 00:03:08.740
+Deci, să spunem doar funcția async funcția implicită implicită și această componentă de asincron amintesc pentru că este o funcție de
+
+00:03:08.750 --> 00:03:16.570
+ordin superior va avea nevoie de o componentă ca parametru care va spune componenta de import, astfel că va
+
+00:03:16.580 --> 00:03:19.980
+fi pagina 2 și pagina 3 pentru noi.
+
+00:03:20.060 --> 00:03:27.470
+Și acum, în cele din urmă, ne întoarcem la sintaxa pe care suntem familiarizați cu faptul că este o componentă de sincronizare de
+
+00:03:27.470 --> 00:03:28.260
+clasă A.
+
+00:03:28.310 --> 00:03:35.390
+Dar de data asta cu capital, pentru că este o clasă, este o componentă pe care o creează,
+
+00:03:35.390 --> 00:03:46.530
+care extinde o componentă de reacție, iar în interiorul ei avem constructorul care va primi și proiectele. Și din nou trebuie să sunăm super cu elemente de
+
+00:03:46.530 --> 00:03:49.860
+recuzită pentru a avea acces la lor.
+
+00:03:53.070 --> 00:04:00.780
+Și vom spune că această componentă este echivalentă cu zero.
+
+00:04:00.800 --> 00:04:02.890
+Deci, așa cum am avut un apt.
+
+00:04:02.990 --> 00:04:03.750
+Da.
+
+00:04:06.040 --> 00:04:09.320
+Vom avea componenta Nu aici.
+
+00:04:09.550 --> 00:04:18.060
+Acum, în această parte următoare, vom face o componentă nu a făcut-o.
+
+00:04:18.150 --> 00:04:26.880
+Acum, dacă vă amintiți că trebuie să încărcați aceste ph în MP shreik componente și ei au fost promisiuni pentru că am folosit punctul
+
+00:04:26.910 --> 00:04:33.500
+apoi și apoi am avut de a stabili stat la orice componentă am primit doar pentru distracție.
+
+00:04:33.510 --> 00:04:40.020
+Îți voi arăta cum să faci cu o chiuveta o greutate, doar ca să ai puțină informație suplimentară.
+
+00:04:40.260 --> 00:04:50.840
+Deci, din nou, cu orice funcție asincronă, putem spune doar o sincronizare și aici putem folosi tastatura dulce, astfel încât
+
+00:04:51.010 --> 00:05:01.850
+să putem spune implicit Konst și asta este un pic de distrugere dacă vă amintiți implicit de aici aici suntem
+
+00:05:01.850 --> 00:05:09.250
+doar destructuring pentru a vă asigura doar primim componenta implicită și asta merge
+
+00:05:09.250 --> 00:05:10.180
+la
+
+00:05:13.530 --> 00:05:14.470
+componenta egală.
+
+00:05:14.790 --> 00:05:24.860
+Și cum le obținem în timp ce facem așteptarea și facem codul asincron care va fi component de import, pentru
+
+00:05:25.520 --> 00:05:32.760
+că prin aceasta vom putea să importăm împingerea noastră pentru a compromite componenta shreik.
+
+00:05:32.800 --> 00:05:40.930
+Deci, tot ceea ce facem aici este in timp ce am avut aici cu componenta pe care o numeste page dot default,
+
+00:05:40.930 --> 00:05:43.380
+acum vom avea acces la componenta.
+
+00:05:43.720 --> 00:05:44.790
+Acum aici.
+
+00:05:44.800 --> 00:05:47.980
+Putem în sfârșit să facem acest lucru cu gândul la componenta
+
+00:05:51.760 --> 00:05:53.470
+de stat satt pe care o
+
+00:05:56.140 --> 00:05:57.070
+numește componentă.
+
+00:05:57.250 --> 00:06:04.260
+Din nou, același lucru pe care îl facem aici, cu componenta, este egal cu toupe-urile care nu sunt implicate decât cu cea mai curată
+
+00:06:04.270 --> 00:06:06.070
+metodă de a face acest lucru.
+
+00:06:06.070 --> 00:06:08.410
+În cele din urmă vrem să
+
+00:06:11.300 --> 00:06:12.180
+facem componenta.
+
+00:06:12.230 --> 00:06:17.930
+Așa că am de gând să spun conc componenta pentru că nu știm dacă va fi pagina 2 sau patiserie.
+
+00:06:17.930 --> 00:06:20.950
+Vrem doar o denumire generală a componentelor generice.
+
+00:06:21.500 --> 00:06:27.790
+Și asta va egala această componentă DOT de stat.
+
+00:06:27.830 --> 00:06:38.250
+Și în cele din urmă aici ne putem întoarce dacă avem o componentă pe care o vom spune că treci pe acea componentă și orice recuzită
+
+00:06:38.640 --> 00:06:44.760
+pe care o poate folosi folosind un pic de structură în care doar spun
+
+00:06:44.760 --> 00:06:53.810
+dacă această componentă are și alte elemente de recuză le include și le avem pentru a ne asigura că am înfășurat așa.
+
+00:06:53.810 --> 00:07:00.440
+Deci, amintiți-vă pentru că am trecut componenta Async Prossy, dacă într-un fel ceva se scurge în trecut,
+
+00:07:00.440 --> 00:07:02.060
+până la componenta.
+
+00:07:02.060 --> 00:07:06.870
+În caz contrar, pur și simplu face nu da nimic.
+
+00:07:09.130 --> 00:07:13.930
+În sfîrșit, pentru că împachetăm această funcție într-o funcție, trebuie să returnăm ceva și dorim să returnez
+
+00:07:13.930 --> 00:07:17.040
+componenta asincronă, astfel încât să nu putem spune doar în partea
+
+00:07:20.880 --> 00:07:23.590
+de jos vom transforma o componentă de sincronizare.
+
+00:07:23.910 --> 00:07:25.970
+Să salvăm.
+
+00:07:26.260 --> 00:07:34.790
+Acum am de gând să rulați NPM începeți aici doar pentru a verifica erorile pe care trebuie să le importăm în continuare async component.
+
+00:07:34.800 --> 00:07:36.580
+Acum putem folosi.
+
+00:07:36.680 --> 00:07:39.950
+Dar asta ar putea părea puțin confuz, așa că vezi.
+
+00:07:39.980 --> 00:07:42.270
+Să vedem cum putem folosi această componentă acum.
+
+00:07:42.320 --> 00:07:44.420
+Această componentă de ordin superior.
+
+00:07:44.420 --> 00:07:45.550
+Mă întorc la APT.
+
+00:07:45.580 --> 00:08:01.550
+Da și voi importa o componentă de sincronizare din folderul componentelor noastre.
+
+00:08:01.590 --> 00:08:05.300
+Acum putem folosi această componentă asincronă pentru a curăța acest lucru puțin.
+
+00:08:05.430 --> 00:08:14.110
+Putem să comentăm acest lucru și să ne întoarcem la modul în care am avut-o la început, când nu am avut niciun
+
+00:08:14.110 --> 00:08:15.350
+cod de divizare.
+
+00:08:15.490 --> 00:08:24.820
+Dar de data aceasta, pentru această declarație de returnare, vom spune că vrem să avem o pagină de asincronă
+
+00:08:24.820 --> 00:08:29.100
+doi care să fie egală cu componenta asincronă.
+
+00:08:29.450 --> 00:08:30.860
+Și amintiți-vă că este o funcție.
+
+00:08:30.860 --> 00:08:42.480
+Așa că vom apela în cadrul acestei funcții, primul parametru fiind faptul că amintesc că este o componentă de
+
+00:08:42.570 --> 00:08:43.610
+import.
+
+00:08:43.770 --> 00:08:49.160
+Deci, pentru a importa componenta vom face doar componente de import da
+
+00:08:52.860 --> 00:08:56.220
+slash ph să mă lase să fac asta
+
+00:09:00.260 --> 00:09:02.380
+un pic mai mic.
+
+00:09:04.810 --> 00:09:05.690
+Acolo te duci.
+
+00:09:05.920 --> 00:09:11.920
+Tot ce am făcut aici a fost să spunem că componenta asincronă, care este
+
+00:09:12.220 --> 00:09:20.410
+o funcție pe care am creat-o, va lua un parametru care importează componenta și din acea componentă importată, vom obține
+
+00:09:20.560 --> 00:09:27.730
+standardul implicit și vom adăuga la stat și apoi suntem se va întoarce și va reda componenta.
+
+00:09:27.730 --> 00:09:37.100
+Deci, întorcându-mă aici, pot spune că pagina asincronă la aceasta va reveni la pagina asincronă 2 și putem face
+
+00:09:37.100 --> 00:09:40.070
+același lucru pentru pagina 3.
+
+00:09:40.140 --> 00:09:46.560
+Pot spune că aici avem o pagină de sincronizare 3.
+
+00:09:46.680 --> 00:09:51.750
+Deci, acum componenta noastră este o cofetărie de sincronizare.
+
+00:09:51.850 --> 00:09:54.260
+Să salvăm bine.
+
+00:09:54.270 --> 00:09:55.830
+Nu primesc vreo eroare.
+
+00:09:55.830 --> 00:09:57.840
+Să vedem dacă funcționează în browser.
+
+00:09:57.840 --> 00:10:01.290
+Să ne întoarcem și să ne reîmprospătăm.
+
+00:10:01.430 --> 00:10:05.880
+Avem pachetul nostru dacă fac clic pe acest clic pe a doua pagină.
+
+00:10:06.090 --> 00:10:12.070
+Bine, am un alt dosar și un alt dosar.
+
+00:10:12.220 --> 00:10:14.070
+Perfect.
+
+00:10:14.070 --> 00:10:18.300
+Acum observi cum avem trei și patru aici.
+
+00:10:18.350 --> 00:10:22.860
+Asta pentru că aici mai avem importurile.
+
+00:10:22.910 --> 00:10:27.650
+Deci, acum creăm patru bucăți pe care nu le dorim cu adevărat.
+
+00:10:27.740 --> 00:10:30.750
+Acum putem elimina toate astea.
+
+00:10:30.920 --> 00:10:41.780
+Deci, acum ne putem întoarce la modul în care avem lucrurile cu acest punct set de stat toate salvați întoarceți-vă să refresh
+
+00:10:41.780 --> 00:10:42.750
+aici.
+
+00:10:42.800 --> 00:10:44.630
+Avem digesturile alăturate.
+
+00:10:44.900 --> 00:10:52.030
+Dacă eu clar și du-te la pagina 2 Acolo te duci pagina 2 patiserie.
+
+00:10:52.200 --> 00:10:53.580
+Foarte foarte rece.
+
+00:10:53.580 --> 00:10:54.850
+Și ați văzut că blițul.
+
+00:10:54.870 --> 00:10:56.250
+Nu mai vezi blițul ăsta.
+
+00:10:56.250 --> 00:11:03.240
+Dar inițial când se încarcă, există un pic de flash și este un compromis pe care trebuie să
+
+00:11:03.240 --> 00:11:11.730
+decideți dacă vreau acest flash rapid în cazul în care utilizatorul trebuie să aștepte pentru a importa fișiere javascript, astfel încât timpul
+
+00:11:11.850 --> 00:11:16.540
+de încărcare inițială de încărcare pentru primul pachet este mai rapid.
+
+00:11:16.650 --> 00:11:19.960
+Și asta e ceva ce trebuie să decidă ca dezvoltator senior.
+
+00:11:20.100 --> 00:11:27.400
+Dar acum aveți instrumentele necesare pentru a decide de ce vreți să faceți și ați putea să vă uitați la
+
+00:11:27.770 --> 00:11:34.770
+acest lucru și să spuneți că acest lucru este cu adevărat mai curat decât ceea ce am făcut înainte.
+
+00:11:34.780 --> 00:11:35.640
+Cred că este.
+
+00:11:35.650 --> 00:11:40.370
+Cred că componenta de asincracție este cu siguranță un pic mai dificil de înțeles.
+
+00:11:40.660 --> 00:11:45.280
+Apropo doar în cazul în care sunteți confuz în legătură cu acest lucru din nou.
+
+00:11:45.850 --> 00:11:52.870
+Dacă l-aș lăsa așa cum ar fi să aibă o componentă ca și noi.
+
+00:11:52.960 --> 00:11:56.380
+Ei bine, în acel caz, încă o să funcționeze.
+
+00:11:56.380 --> 00:11:59.360
+Deci, a fost doar o modalitate de a face acest lucru.
+
+00:11:59.620 --> 00:12:05.800
+Dar, oricum, revenind la punctul acum suntem capabili să folosim componenta de asincron oriunde vrem în codul
+
+00:12:05.990 --> 00:12:11.620
+nostru și oricând trebuie să încărcăm ceva ce îl putem împacheta în componenta de asincronă
+
+00:12:11.620 --> 00:12:16.990
+importă numele componentei și orice ne dorim și o facem una ultimul lucru.
+
+00:12:17.180 --> 00:12:21.080
+Dacă mă întorc la NPM-ul pe care îl conduc
+
+00:12:28.450 --> 00:12:37.510
+Bill, deschidem acest lucru și vedem că în comparație cu ultima oară avem de fapt o dimensiune mai mare a Bondel-ului pentru
+
+00:12:37.540 --> 00:12:37.990
+principal.
+
+00:12:38.080 --> 00:12:45.560
+Avem un octet aici, dar nu trebuie să ne facem griji că mărimea pachetului nostru a crescut.
+
+00:12:45.560 --> 00:12:47.160
+De ce este asta?
+
+00:12:47.180 --> 00:12:54.230
+Pentru că în pachetul nostru principal am inclus componenta asincronă deoarece amintim o aplicație
+
+00:12:54.230 --> 00:12:58.220
+Dahlia care importem componenta asincronă din nou.
+
+00:12:58.270 --> 00:13:01.160
+Întotdeauna gândiți-vă la compromisuri.
+
+00:13:01.180 --> 00:13:04.930
+Este cel mai bun lucru pe care trebuie să-l oferiți utilizatorului la început.
+
+00:13:05.110 --> 00:13:09.410
+Și vrem să încărcăm asincron aceste bucăți.
+
+00:13:09.590 --> 00:13:17.620
+Dar sper că v-ați distrat și veți vedea o parte din puterea încărcării asincrone și divizarea codului.
+
+00:13:17.770 --> 00:13:24.850
+Este un subiect destul de nou, dar cred ca ceva ce fiecare companie ar trebui sa ia in considerare atunci cand livrarea
+
+00:13:24.940 --> 00:13:25.990
+javascript la utilizator.
+
+00:13:26.500 --> 00:13:27.950
+Ne vedem în următorul.
+
+00:13:28.060 --> 00:13:28.250
+De.

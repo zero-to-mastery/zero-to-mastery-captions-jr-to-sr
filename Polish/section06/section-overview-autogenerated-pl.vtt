@@ -1,0 +1,211 @@
+﻿WEBVTT
+
+00:00:02.400 --> 00:00:06.850
+Testowanie jest ważną koncepcją programowania.
+
+00:00:07.090 --> 00:00:13.530
+Chociaż zaczynamy od napisania prostego skryptu dodgiest pliku z kilkoma liniami kodu.
+
+00:00:13.870 --> 00:00:20.840
+Kiedy zaczynamy wkraczać w świat Breer, zaczynasz otrzymywać tysiące i miliony linii
+
+00:00:22.010 --> 00:00:30.730
+kodu setek plików z plikami javascript, nad którymi pracowało wielu ludzi z różnych działów firmy i
+
+00:00:31.360 --> 00:00:36.570
+najprawdopodobniej wszyscy zaczynają w innym czasie w firmie.
+
+00:00:36.700 --> 00:00:40.570
+Wszystkie zmiany kodu zachodzą z czasem w różnych momentach.
+
+00:00:40.570 --> 00:00:49.330
+Ponieważ ludzie pracują nad projektem, ponieważ złożoność kodu i rozmiar kodu zwiększa się, staje się coraz trudniejsze dla
+
+00:00:49.330 --> 00:00:53.230
+kogoś, aby naprawić błąd, który może się pojawić.
+
+00:00:54.040 --> 00:01:00.940
+Jeśli wejdziesz w projekt, który istnieje od lat, możesz zmodyfikować coś, co może zmodyfikować inną
+
+00:01:00.940 --> 00:01:03.770
+część aplikacji, o której nie myślałeś.
+
+00:01:05.050 --> 00:01:12.840
+Zaczynasz tworzyć wszystkie te błędy dzięki nowym funkcjom wprowadzanym do aplikacji.
+
+00:01:12.990 --> 00:01:19.600
+Im dłużej ten kod pozostaje w projekcie, tym bardziej prawdopodobne jest, że zostanie dotknięty przez różnych programistów.
+
+00:01:20.510 --> 00:01:22.150
+Więc widzisz problem tutaj.
+
+00:01:22.430 --> 00:01:30.380
+Dla firm jest to ogromny problem, ponieważ najprawdopodobniej zawsze rozwijasz swój produkt i dodajesz coraz
+
+00:01:30.500 --> 00:01:32.480
+więcej linii kodu.
+
+00:01:32.600 --> 00:01:39.770
+Oznacza to, że nadal będzie się robić tego gigantycznego potwora, który staje się
+
+00:01:39.770 --> 00:01:45.310
+trudniejszy do oswojenia, a bugi kosztują firmy dużo pieniędzy.
+
+00:01:46.520 --> 00:01:53.790
+Na szczęście dla nas mamy coś, co nazywa się testowaniem, co może nam pomóc rozwiązać ten problem.
+
+00:01:55.080 --> 00:02:02.820
+Jak sugeruje nazwa, testowanie jest metodą opracowywania oprogramowania, w którym testowane są poszczególne jednostki aktywów
+
+00:02:03.270 --> 00:02:11.990
+lub programów z kodem źródłowym, aby sprawdzić, czy działają prawidłowo, chociaż może to nie być duża część
+
+00:02:11.990 --> 00:02:13.690
+wywiadu z kodowaniem.
+
+00:02:13.760 --> 00:02:20.140
+Kiedy zaczyna pracę, jest dużą częścią każdej dużej firmy programistycznej, dla której pracujesz.
+
+00:02:21.540 --> 00:02:28.940
+Na przykład w moim przypadku, gdy zaczynałem jako programista, nie wiedziałem zbyt wiele o testowaniu i zostałem zatrudniony,
+
+00:02:29.240 --> 00:02:31.920
+nie wiedząc zbyt wiele o testowaniu.
+
+00:02:32.210 --> 00:02:38.600
+Ale znaczenie testów rosło wraz z rozwojem mojej kariery.
+
+00:02:39.170 --> 00:02:44.550
+I jest to jedna z tych rzeczy, które często przeoczamy, a wielu młodszych programistów przeoczyło.
+
+00:02:44.860 --> 00:02:52.990
+Ale jeśli chcesz zostać starszym programistą i chcesz mieć długotrwałą karierę, naprawdę
+
+00:02:52.990 --> 00:03:03.530
+musisz opanować umiejętność, pamiętaj, że każda poważna firma będzie miała testy i będą chcieli, abyś napisał
+
+00:03:03.530 --> 00:03:05.620
+testy kodu.
+
+00:03:06.080 --> 00:03:14.150
+Więc jak możemy to zrobić dobrze, test jest po prostu plikiem Nothera w twoim projekcie.
+
+00:03:14.170 --> 00:03:19.110
+Ten plik nigdy nie jest uruchamiany w wersji produkcyjnej ani w witrynie produktu.
+
+00:03:19.150 --> 00:03:21.420
+Zamiast tego działa w fazie rozwoju.
+
+00:03:21.460 --> 00:03:26.040
+Jest to plik, który uruchamiasz, aby upewnić się, że zostałeś zwolniony do produkcji.
+
+00:03:26.080 --> 00:03:32.100
+W ten sposób po prostu napisałeś prace zgodnie z przeznaczeniem.
+
+00:03:32.130 --> 00:03:37.110
+Teraz najlepszym sposobem, aby pokazać, jak to działa, jest zademonstrowanie testu.
+
+00:03:37.530 --> 00:03:42.320
+Więc chodźmy do naszych przyjaciół Robo.
+
+00:03:42.370 --> 00:03:49.480
+Mam aplikację robo friends tutaj, ale dodałem kilka testów, aby pokazać, jak to działa.
+
+00:03:49.720 --> 00:03:53.510
+I pod koniec tej sekcji będziesz mógł napisać to również.
+
+00:03:53.650 --> 00:03:55.140
+I zamierzamy je razem napisać.
+
+00:03:55.690 --> 00:04:05.240
+Ale jeśli ponownie uruchomię NPM, uruchom komendę, która przychodzi z tworzeniem reakcji, sprawdźmy, co się stanie.
+
+00:04:06.120 --> 00:04:14.050
+Dałem mi kilka rzeczy mówiących, że żaden test nie odnosił się do powiązanych zmian plików pliku od ostatniego zatwierdzenia, ponieważ już
+
+00:04:14.050 --> 00:04:15.030
+uruchomiłem test.
+
+00:04:15.040 --> 00:04:16.270
+Ale
+
+00:04:19.770 --> 00:04:31.790
+jeśli naciśniesz a zrobiłeś Kassę, mamy sześć testowych zestawów 16 testów i pięć migawek, które minęły.
+
+00:04:32.000 --> 00:04:38.070
+W porządku, co to wszystko znaczy i dlaczego wszystkie te elementy mają test kropkowy, w którym po prostu tu
+
+00:04:38.070 --> 00:04:38.620
+wpadnę.
+
+00:04:38.790 --> 00:04:43.000
+Widzę dużo zieleni, która jest prawdopodobnie dobra, ale co to wszystko znaczy.
+
+00:04:44.050 --> 00:04:48.130
+I nie martwcie się stąd, idziemy do pakietu i widzimy, jak wszystko działa.
+
+00:04:48.160 --> 00:04:54.130
+Dowiemy się, jakich narzędzi potrzebujemy, jakich narzędzi zamierzamy użyć i jak możemy
+
+00:04:54.160 --> 00:04:55.950
+zostać testującymi ninja.
+
+00:04:56.180 --> 00:05:05.000
+Przy okazji można usłyszeć termin TDD lub rozwój oparty na testach, który jest pomysłem pisania testów,
+
+00:05:05.000 --> 00:05:12.470
+zanim jeszcze faktycznie napiszesz swój kod aplikacji, aby rozpocząć pisanie kodu na podstawie dostarczonych
+
+00:05:12.470 --> 00:05:13.410
+testów.
+
+00:05:13.790 --> 00:05:20.450
+Niektórzy ludzie naprawdę uwielbiają ten sposób pracy i możesz o tym przeczytać i samemu zdecydować, czy jest
+
+00:05:20.450 --> 00:05:22.610
+to coś, co chciałbyś wypróbować.
+
+00:05:23.610 --> 00:05:24.930
+Teraz, aby
+
+00:05:27.750 --> 00:05:31.400
+powrócić do punktu, w którym jesteśmy ludźmi, popełniamy błędy.
+
+00:05:31.490 --> 00:05:34.930
+Jest to nieuniknione, ponieważ aplikacja rośnie.
+
+00:05:35.000 --> 00:05:43.280
+Nie można myśleć o wszystkich przypadkach w kodzie i mieć wszystkie instrukcje if, które zajmują się wszystkimi
+
+00:05:43.280 --> 00:05:44.700
+przypadkami użycia.
+
+00:05:45.140 --> 00:05:52.350
+Zwłaszcza nie od samego początku, choć dodanie testów zdecydowanie zmniejszy tempo
+
+00:05:52.350 --> 00:05:53.220
+rozwoju.
+
+00:05:53.370 --> 00:05:58.260
+Teraz piszemy więcej kodu tylko do testów na dłuższą metę.
+
+00:05:58.320 --> 00:06:05.250
+Jeśli twój projekt ma pewną wielkość, zawsze lepiej pisać testy, ponieważ unikasz błędów na
+
+00:06:05.250 --> 00:06:06.440
+dłuższą metę.
+
+00:06:06.450 --> 00:06:07.290
+W porządku.
+
+00:06:07.620 --> 00:06:10.500
+W tej sekcji dowiemy się wszystkiego na ten temat.
+
+00:06:10.680 --> 00:06:16.350
+Jak zwykle przejdziemy do kilku podstawowych pojęć i zbudujemy naszą podstawę, a następnie
+
+00:06:16.350 --> 00:06:19.120
+zakodujemy niektóre z naszych własnych testów.
+
+00:06:19.590 --> 00:06:20.460
+Zacznijmy.

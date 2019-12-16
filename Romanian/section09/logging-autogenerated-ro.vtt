@@ -1,0 +1,490 @@
+﻿WEBVTT
+
+00:00:02.480 --> 00:00:03.480
+Bine ai revenit.
+
+00:00:03.590 --> 00:00:06.420
+Am acoperit bibliotecile de la terți pentru injecții.
+
+00:00:06.440 --> 00:00:14.190
+Se pare că următoarea oprire din listă este înregistrarea și logarea este din nou un alt subiect important.
+
+00:00:14.190 --> 00:00:15.170
+Îți dau un indiciu.
+
+00:00:15.180 --> 00:00:19.810
+Toate acestea sunt importante, dar logarea poate fi destul de complicată.
+
+00:00:19.940 --> 00:00:23.330
+Nu există un mod clar și corect de a face lucrurile.
+
+00:00:23.360 --> 00:00:24.350
+Când vine vorba de logare.
+
+00:00:24.530 --> 00:00:29.020
+Dar să vorbim despre ce înseamnă logarea.
+
+00:00:29.070 --> 00:00:35.390
+Obținerea de informații de la sistemul dvs., să spunem mașinii dvs. serverul dvs. cu privire la ceea ce se întâmplă.
+
+00:00:36.440 --> 00:00:42.620
+Doriți să obțineți informații despre modul în care utilizatorii utilizează serviciul dvs.
+
+00:00:42.620 --> 00:00:50.270
+Site-ul dvs. Web-ul dvs. Poate odihna API-ul, astfel încât, dacă ceva nu merge bine sau dacă vedeți
+
+00:00:50.720 --> 00:01:00.650
+ceva suspect, sunteți capabili să utilizați înregistrarea și tot ceea ce am înregistrat pentru a găsi problema remediați mlaștinile sau pentru a preveni atacurile.
+
+00:01:00.710 --> 00:01:07.280
+Iar una dintre cele mai mari probleme de securitate este ceva numit logare
+
+00:01:07.550 --> 00:01:18.170
+insuficientă, logarea insuficientă și monitorizarea, împreună cu logarea lipsă sau ineficientă, permite atacatorilor să atace sistemele în timp ce nu sunt
+
+00:01:18.650 --> 00:01:25.040
+detectate, astfel încât să poată manipula sau extrage sau distruge date.
+
+00:01:25.040 --> 00:01:31.280
+Lucrul interesant este că, dacă te uiți la cele mai multe încălcări care s-au întâmplat peste studii
+
+00:01:31.280 --> 00:01:38.840
+de istorie arată că un moment pentru a detecta o încălcare atunci când ceva a mers în ordine și poate o
+
+00:01:38.840 --> 00:01:46.970
+persoană rău a intrat în sistemul dvs. baza de date și a primit o informație timpul necesar pentru a detecta efectiv este de
+
+00:01:46.970 --> 00:01:48.500
+aproximativ 200 de zile.
+
+00:01:48.720 --> 00:01:58.970
+Și este, de obicei, detectat de către părți externe, cum ar fi echipe de securitate, mai degrabă decât de monitorizare internă.
+
+00:01:59.010 --> 00:02:07.900
+A avea o logare bună înseamnă că puteți detecta problemele rapid și puteți preveni orice lucru rău care
+
+00:02:07.900 --> 00:02:11.380
+s-ar putea întâmpla cu produsul dvs.
+
+00:02:11.400 --> 00:02:13.910
+Deci, cum putem face asta?
+
+00:02:13.930 --> 00:02:22.190
+Vrem să avem o logare potrivită pentru produsul nostru și cele două instrumente pe care le place cu nodul
+
+00:02:22.370 --> 00:02:24.330
+sunt Winston și Morgan.
+
+00:02:24.410 --> 00:02:25.540
+Să vedem cum funcționează.
+
+00:02:27.570 --> 00:02:28.260
+In regula.
+
+00:02:28.260 --> 00:02:32.490
+Deci, hai să ne logăm pe serverul nostru.
+
+00:02:34.600 --> 00:02:38.120
+Am două pachete pe care îmi place foarte mult.
+
+00:02:38.380 --> 00:02:42.290
+Când vine vorba de logare și există o mulțime de opțiuni acolo.
+
+00:02:42.460 --> 00:02:46.770
+Primul pe care ți-o voi arăta este unul numit Morgan.
+
+00:02:47.020 --> 00:02:54.380
+Și, după cum puteți vedea, este un middleware de înregistrare a cererilor HGP pentru note și este foarte ușor de instalat.
+
+00:02:54.390 --> 00:02:58.810
+Putem doar să ne instalăm NPM și apoi să o cerem așa cum o avem aici.
+
+00:02:58.870 --> 00:02:59.990
+Deci, să facem asta.
+
+00:03:00.040 --> 00:03:12.070
+Voi rula MTM să instalez Morgan, iar în partea de sus aici voi merge doar la Konst Morgan și o voi cere.
+
+00:03:15.090 --> 00:03:19.920
+De când am instalat-o.
+
+00:03:20.120 --> 00:03:27.770
+Deci, cu Morgan îl putem folosi ca un middleware din nou pentru expres dacă vrei să folosești un middleware pe
+
+00:03:27.770 --> 00:03:33.800
+care să-l folosești ca apt dar să folosești exact așa cum avem aici cu parserul
+
+00:03:33.800 --> 00:03:41.930
+corpului dodgiest Jaison care, apropo, ne permite sau să primești Jaison datele de la organismul solicitat, după cum puteți vedea aici.
+
+00:03:41.960 --> 00:03:45.350
+Deci, cu Morgan pot să-i spun lui Morgan și apoi
+
+00:03:48.690 --> 00:03:51.640
+să-i dau câteva opțiuni, să zicem puțin.
+
+00:03:51.750 --> 00:03:57.030
+Dacă parcurgem aici, vedem că există opțiuni pe care le putem da mai mult.
+
+00:03:57.120 --> 00:04:00.040
+Ce fel de exploatare ar trebui să avem.
+
+00:04:02.580 --> 00:04:12.720
+Deci, cu puțin acum că avem acest middleware să salvăm Ron NPM începe aplicația noastră este de a asculta la portul
+
+00:04:12.750 --> 00:04:13.460
+3000
+
+00:04:16.000 --> 00:04:20.760
+și să ne deschidem sus și să spun supunere.
+
+00:04:20.770 --> 00:04:21.580
+In regula.
+
+00:04:21.580 --> 00:04:24.740
+Mergând înapoi, văd că am opțiuni.
+
+00:04:24.850 --> 00:04:31.360
+Punctul secret a primit un statut de 200 și a durat 3. 7 Meli secunde.
+
+00:04:31.360 --> 00:04:35.200
+Am înregistrat ce sa întâmplat cu cererea.
+
+00:04:35.210 --> 00:04:40.560
+Acum, este o mică notă laterală pe care trebuie să o rezolvăm înainte de a putea încerca acest lucru.
+
+00:04:40.570 --> 00:04:46.340
+Vedeți că aceasta este o opțiune în loc de solicitarea de post pe care o așteptăm.
+
+00:04:46.690 --> 00:04:52.810
+Dacă deschid consola aici, voi primi o eroare despre care vom vorbi într-un
+
+00:04:52.990 --> 00:04:55.350
+video de securitate despre curs.
+
+00:04:56.230 --> 00:04:58.700
+Deci, pentru moment, vom pleca asa cum este.
+
+00:04:58.720 --> 00:05:04.630
+Vom rezolva această problemă și vom reveni la ea într-un videoclip viitoare, astfel încât să nu vă faceți griji în
+
+00:05:04.630 --> 00:05:10.420
+ceea ce privește modul în care reparăm acest lucru este să instalăm NPM să instalați un pachet numit core's
+
+00:05:14.160 --> 00:05:17.810
+și vom folosi din nou acest lucru ca un middleware nother.
+
+00:05:17.880 --> 00:05:21.810
+Deci, cursul Konst este egal
+
+00:05:27.080 --> 00:05:29.270
+cu cerințele.
+
+00:05:29.370 --> 00:05:36.050
+Și încă o dată putem spune că aplicațiile utilizează astfel de nuclee.
+
+00:05:36.120 --> 00:05:40.510
+Să spunem că să începem din nou NPM.
+
+00:05:42.470 --> 00:05:45.090
+Și du-te înapoi la aplicația noastră.
+
+00:05:45.300 --> 00:05:46.590
+O să încercăm încă o dată.
+
+00:05:47.820 --> 00:05:50.430
+Verificați sau schimbați cele două.
+
+00:05:50.440 --> 00:05:51.320
+Salut.
+
+00:05:51.600 --> 00:05:56.010
+Trimiteți-ne și ne întoarcem și ne uităm la asta.
+
+00:05:56.090 --> 00:06:00.370
+Avem o solicitare de post care a lovit secretul final.
+
+00:06:00.530 --> 00:06:05.010
+Returnați statutul de 200 și puteți vedea și orele aici.
+
+00:06:05.060 --> 00:06:06.710
+Foarte tare.
+
+00:06:06.710 --> 00:06:09.960
+În regulă, Morgan are această înregistrare pe care o obținem.
+
+00:06:09.980 --> 00:06:10.450
+O.K.
+
+00:06:10.550 --> 00:06:14.590
+Putem face un altul care îmi place, care este combinat și salvez aici.
+
+00:06:15.050 --> 00:06:16.400
+Întoarce-te.
+
+00:06:16.400 --> 00:06:21.860
+Puneți ceva de genul lui Samit și uitați-vă la asta.
+
+00:06:21.960 --> 00:06:24.180
+Avem mult mai multe informații.
+
+00:06:24.180 --> 00:06:30.560
+Obțineți o cerere de post I se vedea ce tip de protocol HTP am folosit.
+
+00:06:30.590 --> 00:06:34.120
+M-am uitat la ce fel de dispozitiv a venit solicitarea.
+
+00:06:34.190 --> 00:06:36.760
+Și o mulțime de informații.
+
+00:06:37.740 --> 00:06:45.330
+Deci, doar prin faptul că avem Morgan avem această informație că, de exemplu, dacă am avea un server care a fost un API, putem monitoriza acum și dacă
+
+00:06:45.690 --> 00:06:50.850
+știam că la ora 4:00 p. m. S-ar putea să se întâmple ceva, să ne întoarcem la
+
+00:06:50.850 --> 00:06:51.790
+timp și să vedem.
+
+00:06:52.050 --> 00:06:54.360
+În acest moment sa întâmplat ceva.
+
+00:06:54.360 --> 00:07:03.120
+De ce utilizatorii mai puțini au trimis cereri de postare sau s-au logat în site-ul nostru Web sau alte metrice de care au nevoie.
+
+00:07:03.120 --> 00:07:08.370
+Amintiți-vă mai multe informații pe care le aveți cu atât mai bine puteți fi informat despre ceea ce se întâmplă.
+
+00:07:08.400 --> 00:07:10.360
+Deci Morgan e destul de frumos.
+
+00:07:10.410 --> 00:07:11.730
+Să ne uităm la alta.
+
+00:07:14.190 --> 00:07:18.160
+Următorul pe care vreau să vi-l prezint se numește Winston.
+
+00:07:18.330 --> 00:07:20.250
+Vom instala NPM
+
+00:07:23.240 --> 00:07:26.290
+pe Winston și o vom lua așa.
+
+00:07:26.300 --> 00:07:33.860
+Așadar, permiteți-mi să închid serverele și să instalez Winston și în timp ce se instalează.
+
+00:07:33.890 --> 00:07:36.860
+Să mergem la documentația Winston aici.
+
+00:07:37.010 --> 00:07:40.390
+Și vedeți că este un logger pentru aproape orice.
+
+00:07:40.680 --> 00:07:47.810
+Da, vă puteți gândi la Winston ca pe logoul consolei pe care îl avem, cu excepția faptului că vine cu o mulțime de caracteristici pe
+
+00:07:48.020 --> 00:07:51.440
+care le puteți utiliza și el poate citi totul despre el.
+
+00:07:51.470 --> 00:07:53.000
+Este foarte bine.
+
+00:07:53.000 --> 00:07:56.450
+Și am folosit acest lucru în producție și îl recomand.
+
+00:07:56.590 --> 00:08:01.510
+Consultați cu jurnalul consolei puteți face doar câteva lucruri.
+
+00:08:01.550 --> 00:08:06.610
+Are limitare cu Winsted, ai puterea de a face multe lucruri interesante.
+
+00:08:06.710 --> 00:08:15.800
+Deci, să schimbăm acest jurnal de console pentru Winston, deoarece acum putem folosi Winston și să vedem ce tip de jurnal
+
+00:08:15.800 --> 00:08:18.290
+primim de la intrarea utilizatorului.
+
+00:08:18.350 --> 00:08:21.290
+Vrem să salvăm această alergare NPM începeți să
+
+00:08:23.960 --> 00:08:28.960
+ne întoarcem la aplicația noastră și să spunem că verificați verificați că nu ne-am
+
+00:08:32.340 --> 00:08:32.930
+înregistrat
+
+00:08:37.140 --> 00:08:42.870
+nimic, deoarece cu Winsted și trebuie să dăm cu niște parametri, astfel încât primul să spună ce
+
+00:08:42.870 --> 00:08:43.870
+tip de logare.
+
+00:08:43.950 --> 00:08:48.780
+Și al doilea este jurnalul pe care îl dorim.
+
+00:08:48.780 --> 00:08:52.880
+Așa că încercăm din nou sau să spunem mai întâi că încercăm
+
+00:08:55.790 --> 00:09:01.080
+din nou și că vă duceți la verificarea ampho și putem face niște lucruri foarte interesante.
+
+00:09:01.250 --> 00:09:10.310
+De exemplu, dacă există un fel de eroare, putem să-l răspundem pe Winston să o mutați
+
+00:09:10.310 --> 00:09:10.880
+aici.
+
+00:09:12.370 --> 00:09:22.850
+Și spune că acest lucru este bun dacă primim utilizatorul și îl punem.
+
+00:09:23.020 --> 00:09:28.350
+Și dacă va ieși, atunci vom merge la noi, vom face ceva diferit.
+
+00:09:28.360 --> 00:09:39.280
+Vom deconecta aerul sau putem să facem o eroare de formă doar aici și să
+
+00:09:42.990 --> 00:09:49.140
+spunem că tipul ăsta se poartă cu noi.
+
+00:09:49.170 --> 00:09:56.460
+Deci, dacă spun că merge înapoi lovit trimiteți din nou du-te înapoi.
+
+00:09:56.460 --> 00:09:59.430
+Văd că intrarea utilizatorului amfo a fost verificată.
+
+00:09:59.430 --> 00:10:00.300
+Grozav.
+
+00:10:00.300 --> 00:10:07.800
+Dacă aș mizeria ceva, să spunem că trimitem o cerere de lot și nu trimitem utilizatorul și nu îl punem.
+
+00:10:07.840 --> 00:10:15.980
+Deci, să spunem doar că la capătul frontal am să trimit un utilizator și să pun cu un semn de
+
+00:10:16.020 --> 00:10:26.730
+exclamare unde pot face asta cu unul și unul pentru a salva întoarce-te să refacem acest lucru și vom spune cum să prezentăm acum și noi Voi
+
+00:10:28.000 --> 00:10:29.650
+primi aerul ăsta.
+
+00:10:29.690 --> 00:10:31.670
+Tipul ăsta se poartă cu noi.
+
+00:10:32.680 --> 00:10:41.200
+Deci, vedeți aici cum putem obține cu Winston niște logări cu adevărat bune, astfel încât să putem merge pentru că acestea
+
+00:10:41.290 --> 00:10:43.150
+vor fi blocate undeva.
+
+00:10:43.300 --> 00:10:49.870
+Putem să ne întoarcem în timp și să spunem la ora 4:00 p. m. serviciul nostru se închide sau ne confruntăm
+
+00:10:49.870 --> 00:10:57.610
+cu unele probleme pe care le putem reveni și să vedem ce sa întâmplat de data aceasta și suntem capabili să obținem sugestii despre unele dintre
+
+00:10:57.610 --> 00:11:00.280
+inputurile pe care le-au trimis utilizatorii sau alte lucruri.
+
+00:11:00.280 --> 00:11:06.640
+Și puteți vedea aici că logarea depinde de ce informații doriți să păstrați informațiile pe care doriți
+
+00:11:06.640 --> 00:11:09.070
+să le salvați, depinde de dvs.
+
+00:11:09.070 --> 00:11:16.150
+Ideea este că doriți să aveți informații bune, dar nu stocați niciun fel de informații personale
+
+00:11:16.180 --> 00:11:27.090
+în jurnalele dvs. și, cu siguranță, nu vă întoarceți nici o intrare de introducere a datelor de intrare pentru client, deoarece dacă trimitem ceva,
+
+00:11:27.450 --> 00:11:35.040
+să spunem că un utilizator încearcă să semneze în și dacă am trimis cu o eroare sau
+
+00:11:35.040 --> 00:11:41.520
+ne întoarcem în loc de o stare care spune că utilizatorul există deja.
+
+00:11:41.520 --> 00:11:52.130
+Ei bine, dacă răspundem la asta și îl trimitem în față și acum dau informații despre sistemul meu lăsăm persoana de pe site-ul
+
+00:11:52.130 --> 00:12:02.390
+Web să spună oh Tocmai am găsit un utilizator care ar putea fi într-o bază de date poate că pot încercați să
+
+00:12:02.810 --> 00:12:09.860
+vă conectați la ele și să utilizați Eskew pentru a vedea dacă pot obține informațiile.
+
+00:12:10.160 --> 00:12:13.260
+Deci aici este chestia cu logarea este foarte complicat.
+
+00:12:13.340 --> 00:12:19.130
+Doriți să înregistrați informații cât de mult puteți, astfel încât să puteți obține aceste cunoștințe despre
+
+00:12:19.130 --> 00:12:28.500
+modul în care sistemul dvs. funcționează, dar doriți, de asemenea, să aveți grijă să păstrați aceste informații numai la nivelurile care ar trebui să aibă acces
+
+00:12:28.500 --> 00:12:30.480
+pentru a vedea acest lucru.
+
+00:12:30.480 --> 00:12:40.200
+Deci, niciodată nu doriți să deconectați erorile de sistem într-un capăt frontal pe consola, deoarece atunci oricine
+
+00:12:40.200 --> 00:12:43.300
+din lume o poate vedea.
+
+00:12:43.310 --> 00:12:45.490
+În cele din urmă, vreau să închei cu un singur lucru.
+
+00:12:45.530 --> 00:12:52.550
+Există o problemă majoră în logarea în care ne bazăm pe jurnalele din motive de securitate, dar jurnalele ne vor
+
+00:12:52.550 --> 00:12:56.890
+spune doar despre un eveniment rău intenționat odată ce sa întâmplat deja.
+
+00:12:58.080 --> 00:13:04.230
+Și dacă monitorizăm periodic numai jurnalele noastre, atunci vom pierde orice informație a fost importantă
+
+00:13:04.440 --> 00:13:06.310
+în acel moment oricum.
+
+00:13:07.430 --> 00:13:12.800
+Și apoi există și problema cât de mult datele dorim să înregistrăm efectiv dacă avem un serviciu foarte
+
+00:13:12.800 --> 00:13:13.280
+ocupat.
+
+00:13:13.280 --> 00:13:19.460
+Sunt fișierele de blocare vor fi enorme, deoarece pot salva toate aceste jurnale într-un fișier text
+
+00:13:19.460 --> 00:13:20.930
+și păstrați-le undeva.
+
+00:13:20.930 --> 00:13:27.510
+Și mai multe informații pe care le avem mai greu este de a găsi date pe care am putea căuta oricum.
+
+00:13:27.560 --> 00:13:31.520
+Logarea este un subiect complex, dar vrei să te gândești doar la asta.
+
+00:13:31.550 --> 00:13:37.670
+Ce informații aveți nevoie pentru a avea o aplicație sigură pe care o puteți detecta atunci când apar probleme
+
+00:13:37.670 --> 00:13:38.460
+de securitate.
+
+00:13:38.810 --> 00:13:46.760
+Dar, de asemenea, păstrați bloggingul departe de clienți sau utilizatori, deoarece nu doriți să dezvăluiți nicio informație despre sistemul
+
+00:13:46.760 --> 00:13:47.430
+dvs.
+
+00:13:47.510 --> 00:13:53.170
+Orice informație mică ar putea fi folosită împotriva dvs.
+
+00:13:53.190 --> 00:13:54.330
+In regula.
+
+00:13:54.330 --> 00:13:55.410
+Cred că doare capul meu.
+
+00:13:55.410 --> 00:14:00.020
+Au fost multe informații, dar sper că ați găsit acest lucru util și vă voi vedea în următorul.
+
+00:14:00.320 --> 00:14:00.600
+Dar prin.

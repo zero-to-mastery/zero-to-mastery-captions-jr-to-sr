@@ -1,0 +1,424 @@
+﻿WEBVTT
+
+00:00:01.520 --> 00:00:02.880
+Witamy spowrotem.
+
+00:00:02.880 --> 00:00:10.620
+Widzieliśmy, że mamy tu problem, w którym musimy stworzyć nasze bazy danych Daquiri lub nasze bazy danych
+
+00:00:11.000 --> 00:00:12.850
+postscript w Dr.
+
+00:00:12.990 --> 00:00:20.910
+I kiedy zrobiliśmy to po raz pierwszy na naszym komputerze musieliśmy otworzyć sequel i ręcznie utworzyć go
+
+00:00:20.910 --> 00:00:22.960
+przy pomocy tabeli zapytań.
+
+00:00:23.490 --> 00:00:29.550
+I znowu kolejny powód, dla którego używamy dockera, aby programiści nie musieli robić tego
+
+00:00:29.550 --> 00:00:32.480
+w kółko, kiedy dołączają do zespołu.
+
+00:00:32.670 --> 00:00:36.540
+Więc zbudujmy to jako część dokumentu lub ustawy,
+
+00:00:40.020 --> 00:00:42.010
+aby trochę to zminimalizować.
+
+00:00:42.320 --> 00:00:48.280
+Przejdę do naszego folderu projektu i utworzę nowy folder.
+
+00:00:49.590 --> 00:00:56.950
+Będzie się to nazywać postscriptami. To wideo może być trochę trudne, ale jest to świetna konfiguracja, która po przypomnieniu
+
+00:00:56.950 --> 00:01:02.380
+sobie, wystarczy powtórzyć ją w wielu projektach i po prostu zrobić to tak,
+
+00:01:02.680 --> 00:01:04.030
+jak jest teraz.
+
+00:01:04.090 --> 00:01:08.680
+Więc zawsze możesz wrócić do tego filmu, pod warunkiem, że podążasz za nim i rozumiesz,
+
+00:01:08.680 --> 00:01:10.800
+co próbujemy zrobić, jak łączymy kropki.
+
+00:01:10.810 --> 00:01:12.040
+To jest ważna część.
+
+00:01:14.040 --> 00:01:17.730
+Więc właśnie stworzyłem tutaj folder postscript.
+
+00:01:17.820 --> 00:01:22.520
+Zamierzamy utworzyć nowy plik i będzie to plik dokowania.
+
+00:01:22.580 --> 00:01:29.750
+Teraz ten plik prześladowcy zrobi teraz coś naprawdę interesującego zamiast dokera, w
+
+00:01:29.750 --> 00:01:36.680
+którym właśnie ustawiliśmy nasz obraz bez żadnych innych kroków Builth.
+
+00:01:36.850 --> 00:01:39.490
+W rzeczywistości dostosujemy to.
+
+00:01:39.670 --> 00:01:43.540
+Powiem, że chcę wersji postscripts dziesięć punkt trzy.
+
+00:01:43.810 --> 00:01:46.580
+I to może być cokolwiek chcesz.
+
+00:01:46.690 --> 00:01:51.870
+Tutaj chcę dodać kilka plików wewnątrz doku lub kontenera.
+
+00:01:51.930 --> 00:01:58.900
+Zamierzam użyć polecenia dodaj, ponieważ chcę dodać folder tabel, który tutaj
+
+00:01:58.900 --> 00:02:02.260
+utworzymy, do okna dokowanego.
+
+00:02:02.440 --> 00:02:07.610
+Nazwijmy to punktem wejścia.
+
+00:02:07.950 --> 00:02:14.810
+RE. B i to będą tabele z kropkami.
+
+00:02:16.970 --> 00:02:17.800
+W porządku.
+
+00:02:17.990 --> 00:02:19.280
+Co się tutaj stało.
+
+00:02:19.940 --> 00:02:26.680
+Ten pierwszy plik mówi, że chcemy utworzyć naszych użytkowników i zalogować się do tabeli.
+
+00:02:27.260 --> 00:02:32.840
+A w ten sposób zamierzamy stworzyć nowy folder w
+
+00:02:33.110 --> 00:02:39.240
+naszym folderze postscripts o nazwie Tables, do którego się tutaj odwołujemy.
+
+00:02:39.320 --> 00:02:48.630
+Teraz w folderze tej tabeli będę miał dwa pliki, w których będę miał tabelę
+
+00:02:48.630 --> 00:03:00.840
+logowania, która używa kropki oraz typu pliku i innej tabeli o nazwie użytkownicy, która ponownie używa pliku ratunkowego do.
+
+00:03:00.850 --> 00:03:08.010
+Teraz typ pliku, po prostu jesteśmy w stanie napisać wszystkie polecenia wewnątrz tego.
+
+00:03:08.060 --> 00:03:13.280
+Jeśli więc powrócimy do tego, jak tworzymy tabelę użytkowników, po prostu skopiuję i wkleję to,
+
+00:03:16.210 --> 00:03:18.610
+co mogę powiedzieć, stwórz użytkowników tabel.
+
+00:03:18.820 --> 00:03:24.130
+Ponownie mam dobrą składnię Id seryjnego klucza podstawowego.
+
+00:03:24.130 --> 00:03:30.940
+Mamy nazwę, która ma zmienny charakter z limitem 100 wiadomości e-mail, który jest tekstem, który musi być unikalny i
+
+00:03:30.940 --> 00:03:32.600
+nie może być numerem.
+
+00:03:32.860 --> 00:03:38.800
+Mamy drzewa, które są dużą liczbą całkowitą, co oznacza, że liczba ta może być dość wysoka, a wartość
+
+00:03:38.800 --> 00:03:39.810
+domyślna to 0.
+
+00:03:39.820 --> 00:03:46.800
+Tak więc, kiedy pierwszy rejestr będzie miał 0, a następnie nasz wspólny znacznik czasu nie będzie.
+
+00:03:47.110 --> 00:03:52.960
+Są to tylko podstawowe, niejasne polecenia, aby zacząć tworzyć coś, na co możesz spojrzeć i
+
+00:03:52.960 --> 00:03:54.980
+naprawdę zależy od każdej sytuacji.
+
+00:03:55.050 --> 00:04:01.680
+Kolejną dobrą praktyką, gdy pracujesz z niejasnymi wszystkimi plikami, jest zrobienie czegoś, co nazywa się transakcjami, które mają
+
+00:04:01.690 --> 00:04:08.830
+zagwarantować, że transakcja zostanie ukończona i nie wypełni się w połowie tabeli użytkowników, lub chcemy się upewnić, że te
+
+00:04:08.830 --> 00:04:12.280
+rzeczy są tym, czym jesteśmy. zadzwoń do atomu.
+
+00:04:12.280 --> 00:04:18.880
+Oznacza to, że jeśli to zawiedzie lub jego część się nie powiedzie, po prostu nie rób sobie kłopotu z tworzeniem tabeli użytkowników,
+
+00:04:19.090 --> 00:04:20.380
+ponieważ tylko zepsujesz wszystko.
+
+00:04:20.620 --> 00:04:27.100
+Więc składnia tego oznacza, że zaczyna się transakcja.
+
+00:04:27.200 --> 00:04:35.190
+I znowu jest to po prostu dobra praktyka, że składnia, z której musisz skorzystać, aby upewnić się, że prawo to
+
+00:04:35.220 --> 00:04:36.140
+zaczęło transakcję.
+
+00:04:36.390 --> 00:04:39.960
+I wreszcie pod koniec transakcji mówimy "commit".
+
+00:04:40.060 --> 00:04:44.640
+Powiedziałem "tak" zatwierdzić zmiany w tabeli tworzenia.
+
+00:04:44.850 --> 00:04:49.350
+Mamy więc tabelę użytkowników, jeśli wrócimy, chwyć również nasze tabele logowania.
+
+00:04:49.410 --> 00:04:56.850
+Jeśli wrócę do mojej historii, nie mam historii, więc będziemy
+
+00:04:57.000 --> 00:05:00.240
+musieli napisać wszystko
+
+00:05:04.360 --> 00:05:08.350
+ręcznie, pamiętając o rozpoczęciu transakcji
+
+00:05:10.910 --> 00:05:21.740
+i zacząć tworzyć luggin tabeli, a te grupy dzienników i tabel będą teraz czymś,
+
+00:05:21.740 --> 00:05:28.720
+co chcieliśmy Wracając do okrągłych nawiasów, będzie mieć identyfikator
+
+00:05:35.630 --> 00:05:47.790
+ponownie seryjnego pierwiastka, który będzie miał mieszankę o zmiennej liczbie znaków i nie może być liczbą.
+
+00:05:47.860 --> 00:05:58.730
+I wreszcie, wiadomość e-mail zawierająca tekst musi być niepowtarzalna i nie może mieć wartości null, a my nie potrzebujemy
+
+00:05:58.730 --> 00:06:00.050
+tu przecinka.
+
+00:06:02.230 --> 00:06:07.190
+Wreszcie średnik i chcemy to wszystko zatwierdzić.
+
+00:06:07.340 --> 00:06:13.700
+Więc właśnie stworzyliśmy, aby uratować wszystkie pliki, ale tak naprawdę nie robią teraz niczego.
+
+00:06:14.440 --> 00:06:21.400
+Na szczęście dla nas jest jeszcze jeden plik Escorial, którego możemy użyć i ten, który zamierzamy umieścić w
+
+00:06:21.400 --> 00:06:23.380
+katalogu głównym foldera po awarii.
+
+00:06:23.590 --> 00:06:32.170
+I zamierzam nazwać to wdrażaniem schematów, ponieważ są to schematy, które wdrażamy.
+
+00:06:32.430 --> 00:06:35.250
+I znowu będzie to
+
+00:06:38.070 --> 00:06:49.430
+kropka Eskew wszystkie pliki tutaj teraz mogę komentować i po prostu powiedzieć, że to wdrażanie tabel bazy danych Frash
+
+00:06:52.300 --> 00:06:56.290
+teraz tutaj będziemy robić odwrotny ukośnik.
+
+00:06:56.960 --> 00:07:05.900
+I to będzie uruchamiać nowy plik, który teraz utworzymy, a tutaj, w naszym Dokumencie, pamiętamy dobrze, jak napisaliśmy w
+
+00:07:05.900 --> 00:07:13.610
+folderze tabeli, który właśnie utworzyliśmy w jego tabeli, więc upewnij się, że mówię tu o tabelach
+
+00:07:13.610 --> 00:07:18.440
+do okna dokowanego i punktu styku Dush Doddie tego stołu.
+
+00:07:18.440 --> 00:07:23.920
+To jest folder, który utworzymy w naszym pojemniku.
+
+00:07:24.000 --> 00:07:33.010
+Mogę po prostu skopiować to wrócić do schematu wdrażania i powiedz, uruchom tabel.
+
+00:07:33.020 --> 00:07:36.750
+To jest użycie i uruchommy użytkowników.
+
+00:07:36.940 --> 00:07:43.160
+Jak wszyscy stawiacie, ponieważ w dokumencie lub pliku do komponowania lub dokumencie lub pliku Przesuwamy wszystko, co jest
+
+00:07:43.160 --> 00:07:46.720
+w tabelach, które jest zalogowane, a użytkownicy do tego stołu.
+
+00:07:46.790 --> 00:07:50.820
+Dlatego wdrożenie polega po prostu na uruchomieniu tego bezpiecznego polecenia.
+
+00:07:50.900 --> 00:07:51.660
+Po prostu tworzymy.
+
+00:07:51.770 --> 00:07:54.000
+Co znowu jest tabelą użytkowników.
+
+00:07:54.410 --> 00:08:07.520
+I możemy zrobić to samo dla dziennika i tabeli.
+
+00:08:07.540 --> 00:08:11.000
+Teraz mamy tabele, które mamy wdrożone.
+
+00:08:11.170 --> 00:08:15.430
+Ostatnią rzeczą, którą musimy zrobić, to uruchomić ten plik w kontenerze.
+
+00:08:15.430 --> 00:08:22.360
+I sposób, w jaki to nazwaliśmy, po raz kolejny w profilu doktora dodajemy
+
+00:08:22.360 --> 00:08:31.220
+kolejną linijkę mówiącą "dodaj" i tym razem, ponieważ właśnie dodajemy schemat wdrażania Eskew, wszystko co zamierzam powiedzieć,
+
+00:08:32.350 --> 00:08:38.160
+rozmieść schematy Don Pascual w głównym folderze w ten sposób.
+
+00:08:38.210 --> 00:08:41.330
+Teraz zapiszmy i zobaczmy, czy są jakieś błędy.
+
+00:08:42.080 --> 00:08:50.310
+Gdy uruchomimy to, zamknę wszystko, co zostanie skompilowane,
+
+00:08:50.790 --> 00:08:58.010
+a następnie przejdź z Docem lub skompiluj.
+
+00:08:58.030 --> 00:08:58.840
+W porządku.
+
+00:08:58.840 --> 00:09:07.860
+Jeśli rzeczywiście zobaczysz tutaj, zobaczysz utworzoną bazę danych, która została utworzona.
+
+00:09:07.950 --> 00:09:08.340
+W porządku.
+
+00:09:08.340 --> 00:09:10.260
+Zobaczmy więc, czy rzeczywiście działa.
+
+00:09:10.260 --> 00:09:16.690
+Teraz, gdy wrócę do mojej aplikacji, dajmy sobie jeszcze jedną szansę.
+
+00:09:16.740 --> 00:09:21.130
+Zobaczmy, czy możemy się teraz zarejestrować.
+
+00:09:21.480 --> 00:09:22.510
+Mamy złe żądania.
+
+00:09:22.510 --> 00:09:24.180
+Zobaczmy, co mamy tutaj źle.
+
+00:09:29.650 --> 00:09:33.630
+I znowu musimy myśleć o tym, co robimy.
+
+00:09:33.630 --> 00:09:40.950
+Frigo do dokowania komponują pamiętają, jak budujemy postscripts z obrazu.
+
+00:09:41.430 --> 00:09:42.750
+I nie chcemy tego więcej robić.
+
+00:09:42.780 --> 00:09:50.300
+Mamy plik dokowania i pamiętam, kiedy potrzebujemy pliku dokera, który chcemy uruchomić.
+
+00:09:50.610 --> 00:09:53.230
+Więc zamiast obrazu mogę powiedzieć, kompilacja.
+
+00:09:53.370 --> 00:09:54.640
+I co chcemy zbudować.
+
+00:09:54.640 --> 00:09:59.610
+Chcemy zbudować wszystko, co jest w środku postscriptów lub jakikolwiek dokument podąża za korzeniami postscriptów
+
+00:10:00.120 --> 00:10:03.330
+w naszym przypadku możemy po prostu napisać to tak.
+
+00:10:03.360 --> 00:10:05.790
+Powiedzmy, że to znów spowoduje spadek usługi.
+
+00:10:09.830 --> 00:10:13.330
+Aha i upewnij się, że dodaję tu kropki.
+
+00:10:16.560 --> 00:10:23.310
+I wróć z powrotem.
+
+00:10:23.310 --> 00:10:26.770
+W porządku, sprawmy, żeby wyjście było trochę większe.
+
+00:10:27.110 --> 00:10:33.170
+A jeśli przejrzymy to w wynikach postscriptowych, mamy kreatywną rolę, tworzymy bazę danych,
+
+00:10:33.170 --> 00:10:40.810
+ale także zaczynamy, ponieważ pamiętajmy, że rozpoczęliśmy transakcję, w której stworzyliśmy tabelę, z której popełniliśmy kolejną transakcję,
+
+00:10:41.080 --> 00:10:43.230
+która stworzyła inną tabelę.
+
+00:10:43.360 --> 00:10:46.670
+Wygląda na to, że wszystko działa.
+
+00:10:46.690 --> 00:10:48.250
+Bazy danych zostały utworzone.
+
+00:10:48.310 --> 00:10:54.430
+Jeśli wrócę ponownie i uruchomimy ponownie, otwórzmy terminal, upewnij się, że
+
+00:10:57.380 --> 00:11:08.850
+nie mamy żadnych błędów, i nie trafię do rejestru WOO-HOO, którego właśnie zarejestrowaliśmy, a my mamy tutaj 10 i
+
+00:11:08.850 --> 00:11:11.840
+dodajmy tylko obraz tutaj.
+
+00:11:11.880 --> 00:11:16.000
+Chodźmy z każdą twarzą, jaką możemy znaleźć.
+
+00:11:20.160 --> 00:11:27.890
+Użyjmy tego.
+
+00:11:28.010 --> 00:11:29.300
+Spójrz na to.
+
+00:11:29.520 --> 00:11:33.040
+Jej inteligentna aplikacja do mózgu wreszcie działa.
+
+00:11:33.090 --> 00:11:35.750
+To dokładnie to samo, co wcześniej.
+
+00:11:36.090 --> 00:11:42.780
+Na Front-End nic się nie zmieniło, ale oh zmienił się bardzo z
+
+00:11:42.900 --> 00:11:51.680
+tyłu i teraz mamy to niesamowite logowanie, ale postujemy z Chrisem iz powrotem i używamy tego samego polecenia.
+
+00:11:51.970 --> 00:11:59.830
+Nie tylko nie musimy się martwić o konfigurację tabeli, aby upewnić się, że programista ma zainstalowane postscripty
+
+00:12:00.040 --> 00:12:01.870
+na swoim komputerze.
+
+00:12:01.930 --> 00:12:04.450
+Prawo nie ma dywersji na swoim komputerze.
+
+00:12:04.510 --> 00:12:12.490
+Wszystko, co musieli zrobić, to po prostu uruchomić tę komendę docker, skomponować kompilację, a nasz
+
+00:12:13.300 --> 00:12:17.400
+cały system zaplecza był już tak skonfigurowany.
+
+00:12:17.500 --> 00:12:23.590
+Teraz piękno polega na tym, że ponieważ uruchamiamy dokowanie, budujemy kompilację Toccara cały czas, to wymaga
+
+00:12:23.590 --> 00:12:24.390
+czasu.
+
+00:12:24.760 --> 00:12:30.160
+Ale tak naprawdę, kiedy raz go skompilujesz i nie będzie żadnych zmian, które chcesz wprowadzić.
+
+00:12:30.190 --> 00:12:34.110
+Potrafi po prostu otoczyć dokumentację i jest o wiele szybszy w ten sposób.
+
+00:12:35.110 --> 00:12:39.150
+Nie odbudowuje wszystkiego od Rockefellera.
+
+00:12:39.180 --> 00:12:40.230
+Bardzo fajny.
+
+00:12:40.260 --> 00:12:43.890
+Mam nadzieję, że jesteś podekscytowany, ponieważ jestem o Dr ...
+
+00:12:43.970 --> 00:12:47.370
+Jest jeszcze jedna rzecz, którą chcę dodać, a zobaczę w następnym filmie.

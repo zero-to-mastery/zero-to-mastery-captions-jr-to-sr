@@ -1,0 +1,100 @@
+﻿WEBVTT
+
+00:00:01.970 --> 00:00:06.880
+Înainte de a ne scufunda în codificare, să vorbim cu atenție despre fiecare dintre aceste tipuri.
+
+00:00:07.070 --> 00:00:12.490
+Testarea unităților ar trebui să acopere toate funcțiile mici ale unei aplicații.
+
+00:00:12.560 --> 00:00:18.560
+S-ar putea să fi auzit să spun că niște mici funcții pure care iau o intrare și retur o ieșire și care fac
+
+00:00:18.560 --> 00:00:20.450
+un lucru cu adevărat foarte bine.
+
+00:00:20.450 --> 00:00:23.380
+Un lucru la un moment dat este calea de urmat.
+
+00:00:23.630 --> 00:00:27.350
+Și este principiul principal în programarea funcțională.
+
+00:00:27.470 --> 00:00:36.050
+Acum, efectul secundar minunat al acestui lucru este că ne permite să scriem teste unitare într-adevăr foarte ușor deoarece funcțiile noastre
+
+00:00:36.050 --> 00:00:37.880
+sunt atât de simple.
+
+00:00:37.880 --> 00:00:43.220
+Dați-i o intrare și obțineți o ieșire și pur și simplu testați că pe baza unei intrări
+
+00:00:44.150 --> 00:00:50.010
+obțineți această ieșire și aceasta este una dintre cele mai mari beneficii ale programării funcționale versus programarea orientată pe obiecte.
+
+00:00:50.060 --> 00:00:56.840
+Dar pentru a recupera o funcție pură este o funcție care nu are efecte secundare ca afectând o altă parte a unui
+
+00:00:56.840 --> 00:00:59.920
+program și întoarce întotdeauna ceva bazat pe o intrare.
+
+00:01:00.750 --> 00:01:07.260
+Este un sens determinist pe care îl puteți pune în aceeași intrare un milion de ori și veți obține în același
+
+00:01:07.260 --> 00:01:14.590
+timp aceeași ieșire de un milion de ori exact același mod pe care, după cum îl credeți, face ca testarea să fie foarte ușoară.
+
+00:01:15.960 --> 00:01:19.980
+Iar prin modul în care re-acționăm componentele sunt în mare parte funcții pure.
+
+00:01:20.010 --> 00:01:26.820
+Componentele fără stat care nu au cicluri de viață sau state și ei primesc o intrare care sunt elemente de recuzită
+
+00:01:26.820 --> 00:01:30.180
+și returnează o ieșire care este punctul de vedere.
+
+00:01:30.180 --> 00:01:37.620
+Acestea sunt într-adevăr foarte ușor de testat cu ceva de genul test de unitate, astfel încât testele unității sunt extrem de utile, cum am spus că acestea sunt
+
+00:01:37.630 --> 00:01:43.090
+lucrurile pe care le veți vedea 90 la sută din timp și, de cele mai multe ori, veți fi un teste
+
+00:01:43.090 --> 00:01:44.620
+de unitate de scris .
+
+00:01:44.620 --> 00:01:47.280
+Deci, vom face și asta în acest curs.
+
+00:01:47.290 --> 00:01:52.390
+Singurul lucru pe care trebuie să-l țineți cont este faptul că testele unității nu testează contractul.
+
+00:01:52.690 --> 00:01:54.420
+Și ce vreau să spun prin contract.
+
+00:01:54.520 --> 00:01:57.400
+Contractul este legătura dintre lucruri.
+
+00:01:57.580 --> 00:02:00.960
+Ar putea fi un contract între un server și o bază de date.
+
+00:02:00.970 --> 00:02:04.910
+Ar putea fi un contract între o funcție și o altă funcție.
+
+00:02:05.000 --> 00:02:13.720
+Poate că funcția mea de sign in solicită un test de sarcină a unității de funcții de testare ar testa semnul și funcția și
+
+00:02:13.960 --> 00:02:17.470
+o funcție de încărcare, dar nu contractul dintre ele.
+
+00:02:17.470 --> 00:02:24.890
+Fie că acestea integrează toate împreună Takeaway important este acest lucru atunci când vine vorba de teste unitate scrie
+
+00:02:24.900 --> 00:02:32.280
+cod care este separat de departe frumos componente funcționale curat sunt funcții care fac mai ușoară la teste
+
+00:02:32.280 --> 00:02:35.100
+unitate, deoarece totul este mici bucăți.
+
+00:02:35.220 --> 00:02:39.020
+Și acest lucru va duce la un cod frumos întreținut pe termen lung.
+
+00:02:40.420 --> 00:02:42.280
+Voi vedea în următorul Buh-Bye.

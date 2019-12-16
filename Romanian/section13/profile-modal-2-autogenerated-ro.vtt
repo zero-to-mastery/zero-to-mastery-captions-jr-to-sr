@@ -1,0 +1,739 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:10.010
+Primul lucru pe care dorim să-l facem ca și noi cu toate componentele este re-acționarea săracă Dar, de asemenea, vrem să
+
+00:00:10.610 --> 00:00:19.140
+reacționăm cu importul din pachetul de re-act și am sentimentul că vom avea nevoie de un stil CSSA cu ajutorul nostru
+
+00:00:19.140 --> 00:00:19.930
+.
+
+00:00:20.140 --> 00:00:25.850
+Așa că am de gând să creez un fișier CSSA și pentru motilul nostru.
+
+00:00:26.080 --> 00:00:34.560
+Și înainte de a uita și vom merge din nou în continuare și asigurați-vă că am crea
+
+00:00:34.660 --> 00:00:36.200
+un nou dosar
+
+00:00:40.330 --> 00:00:45.920
+motil punct CSSA și asigurați-vă că folosesc un punct și virgulă.
+
+00:00:45.980 --> 00:00:50.910
+Acum, primul lucru pe care îl vom face este că trebuie să legăm acest lucru.
+
+00:00:50.930 --> 00:00:57.860
+Amintiți-vă că am creat o altă componentă div care ne putem angaja să folosim reacția, deoarece va
+
+00:00:57.860 --> 00:01:01.670
+fi complet separată de componenta noastră de aplicație.
+
+00:01:02.420 --> 00:01:16.440
+Să facem asta, să spunem că rădăcina modelului Konst va ajunge la un punct de document egal cu elementul de obținere a elementelor de id și
+
+00:01:16.440 --> 00:01:18.890
+vom apuca rădăcina modală.
+
+00:01:18.900 --> 00:01:26.640
+Cred că asta l-am numit și acum avem acces la acest comentariu pe indexul nostru începe
+
+00:01:26.700 --> 00:01:28.330
+o pagină shemale.
+
+00:01:28.330 --> 00:01:29.530
+Acum e partea distractivă.
+
+00:01:29.800 --> 00:01:37.050
+Vom crea modelul care se extinde și va reacționa în reacție.
+
+00:01:37.180 --> 00:01:39.920
+Nimic nou aici nu am făcut asta înainte.
+
+00:01:39.940 --> 00:01:41.440
+De asemenea, dorim să-l exporăm
+
+00:01:46.900 --> 00:01:47.560
+acum aici.
+
+00:01:47.560 --> 00:01:49.210
+Aici devine complicat.
+
+00:01:49.240 --> 00:01:53.740
+Vrem să avem constructorul nostru regulat și dorim să acceptăm
+
+00:01:57.220 --> 00:01:58.620
+apelul propului super.
+
+00:01:59.050 --> 00:02:07.790
+Deci, putem folosi acest cuvânt cheie și apoi aici vreau să am o referință la ceva numit element
+
+00:02:08.630 --> 00:02:13.760
+și acest element va fi elementul document dot create și
+
+00:02:17.060 --> 00:02:19.580
+voi explica ce face.
+
+00:02:19.610 --> 00:02:25.940
+Și din nou, mergând mai departe cu acest model, s-ar putea să fie puțin confuz dacă vedeți acest cod pentru
+
+00:02:25.940 --> 00:02:26.890
+prima oară.
+
+00:02:27.200 --> 00:02:32.960
+Din nou, re-actul are o documentație într-adevăr foarte bună, astfel încât să puteți merge și veți vedea o parte din acest cod
+
+00:02:32.960 --> 00:02:35.880
+pe site-ul lor, deoarece este modul recomandat de a face modals.
+
+00:02:35.900 --> 00:02:41.200
+Așa că ar trebui să jucați cu ea de câteva ori, dar vă veți obișnui.
+
+00:02:41.270 --> 00:02:42.520
+Iți promit.
+
+00:02:42.590 --> 00:02:50.290
+Acum, ceea ce vrem să facem mai întâi este că vrem să facem moto-ul.
+
+00:02:50.790 --> 00:03:02.570
+Și felul în care facem acest lucru când folosim un portal este să spunem că întoarce-te acasă dom dot crează portal
+
+00:03:05.420 --> 00:03:09.240
+aici, el va accepta doi parametri.
+
+00:03:09.320 --> 00:03:19.070
+O să accepte acest punct de vedere al copiilor de la oprire, indiferent de interiorul componentei modal și
+
+00:03:19.070 --> 00:03:28.330
+de asemenea va accepta acest punct element elementul pe care tocmai l-am creat un element div și
+
+00:03:28.330 --> 00:03:32.820
+piesa finală a puzzle-ului este de a
+
+00:03:35.340 --> 00:03:41.550
+crea o componentă a făcut mount că atunci când modulul este deschis.
+
+00:03:41.650 --> 00:03:48.360
+Vrem să atașăm la rădăcina modală care este cartea indexului un fișier shemale.
+
+00:03:48.460 --> 00:03:49.630
+Vrem să adăugăm
+
+00:03:54.400 --> 00:03:55.210
+un element.
+
+00:03:55.410 --> 00:04:05.310
+Așa că adăugăm acest element unei dezvoltări rădăcinii modale și această dezvoltare va fi înfășurată în jurul a ceea ce vom
+
+00:04:05.310 --> 00:04:08.320
+pune în interiorul acestei componente modale.
+
+00:04:08.580 --> 00:04:10.590
+Sunt copii.
+
+00:04:10.690 --> 00:04:16.130
+De asemenea, dorim să fim atenți la modele deoarece se apropie și vrem să ieșim din ele.
+
+00:04:16.420 --> 00:04:20.630
+Nu vrem să lăsăm în urmă niciun junk în fișierul index.
+
+00:04:20.710 --> 00:04:30.470
+Putem să ne curățăm după noi înșine, făcând o componentă de voință pe munte, nu cred că există o capitală M acolo.
+
+00:04:33.290 --> 00:04:39.460
+Și în interiorul nostru pur și simplu spunem că rădăcina modală Daut îndepărtează copilul.
+
+00:04:39.710 --> 00:04:46.790
+Acest element dot și așa trebuie să fac acest element de gândire aici
+
+00:04:46.880 --> 00:04:56.140
+pentru a face o bandă, pentru că ne referim la siguranța ultimă și că tocmai am creat un modal.
+
+00:04:56.350 --> 00:05:02.590
+Știu că acest lucru poate deveni puțin confuz, dar gândiți-vă la acesta ca la un mod standard de a crea modal și de a reacționa.
+
+00:05:02.620 --> 00:05:08.870
+Tot ce facem este să creați un portal o metodă minunată care vine cu reacție.
+
+00:05:09.370 --> 00:05:12.920
+Și o să se ridice când o eliminăm.
+
+00:05:12.970 --> 00:05:18.040
+Va deschide un simbol pentru noi când vom merge.
+
+00:05:18.230 --> 00:05:19.870
+De asemenea, adăugați un pic.
+
+00:05:19.990 --> 00:05:26.460
+Ei vad SS Doar pentru a ne asigura ca modalitatea iese si o vedem cum trebuie.
+
+00:05:26.560 --> 00:05:37.280
+Voi folosi ideea de brute morale pe care o avem în dosarul DML și îi vom da o poziție relativă și
+
+00:05:37.700 --> 00:05:41.220
+un indice z de 9 9.
+
+00:05:41.220 --> 00:05:50.790
+Deci, pentru a vă asigura că este chiar în fața celorlalți, va salva doar acelea care se întorc la
+
+00:05:50.790 --> 00:05:52.560
+logica modală da.
+
+00:05:52.770 --> 00:06:00.810
+Și acum, dacă ne întoarcem la o aplicație supărătoare, unde am importat deja produsul nostru mobil, putem testa acest
+
+00:06:00.810 --> 00:06:02.340
+lucru folosind componenta.
+
+00:06:02.490 --> 00:06:08.390
+Deci, să parcurgem totul până la locul unde redăm și, poate, doar pe pagina principală doar pentru
+
+00:06:08.390 --> 00:06:08.900
+distracție.
+
+00:06:08.900 --> 00:06:16.890
+Spuneți motil și amintiți-vă acceptă copii, așa că am de gând să spun salut și aproape de a
+
+00:06:19.550 --> 00:06:22.670
+salva Hello nu este definită, deoarece trebuie
+
+00:06:25.790 --> 00:06:28.300
+să fie un șir.
+
+00:06:28.640 --> 00:06:29.500
+Să ne întoarcem.
+
+00:06:30.860 --> 00:06:37.840
+Și unde este acest Modal Phi să-mi deschidă instrumentele de dezvoltare?
+
+00:06:38.000 --> 00:06:43.360
+Să mergem la elemente sau să-l folosim pentru a reacta instrumentele de dezvoltare.
+
+00:06:43.420 --> 00:06:49.900
+Vad ca exista o aplicatie dar nu-mi vad modelul.
+
+00:06:51.550 --> 00:06:57.900
+Dacă mă duc la planul elementelor, văd că am un model de traseu.
+
+00:06:57.950 --> 00:06:58.820
+Am
+
+00:07:01.460 --> 00:07:09.710
+o div OK, dar nu e nimic cu adevărat în ea, cu excepția dif.
+
+00:07:09.860 --> 00:07:13.380
+Și trebuie să facem câteva lucruri aici pentru a face modelul să funcționeze.
+
+00:07:13.730 --> 00:07:15.260
+Să ne întoarcem.
+
+00:07:15.260 --> 00:07:22.490
+Primul lucru pe care dorim să-l facem este ceea ce vrem să putem deschide acest model și să îl pornim și oprit.
+
+00:07:22.770 --> 00:07:29.210
+Și pentru că aceasta este o funcționalitate destul de mare, să adăugăm chiar la partea
+
+00:07:29.210 --> 00:07:39.130
+de sus a lui Abdulle, unde avem statul nostru și să creăm un nou stat numit profil deschis și îl vom considera fals pentru acum.
+
+00:07:40.450 --> 00:07:47.080
+Și acum putem trece acest lucru ca elemente de recuzită la orice componentă dorim.
+
+00:07:47.490 --> 00:07:51.260
+Deci, să adăugăm doar acest lucru este profilul deschis
+
+00:07:54.010 --> 00:08:00.680
+pentru statul nostru și în cadrul navigației înainte de a verifica chiar dacă router-ul nostru este acasă.
+
+00:08:01.090 --> 00:08:02.920
+Să ne mișcăm și să facem
+
+00:08:07.880 --> 00:08:09.540
+ceva de genul asta.
+
+00:08:09.560 --> 00:08:16.320
+Utilizați o expresie javascript prin împachetarea în paranteze curbate, apoi spuneți că profilul este deschis.
+
+00:08:16.340 --> 00:08:21.760
+Și dacă se face modal În caz contrar putem spune nu.
+
+00:08:22.190 --> 00:08:29.540
+Un alt mod ușor de a face acest lucru este de fapt mult mai curat este de a utiliza și și aceasta este o mică stenotă de a face
+
+00:08:30.590 --> 00:08:34.720
+acest lucru să vânt acest lucru un pic mai bine pentru a putea vedea mai bine.
+
+00:08:38.020 --> 00:08:45.230
+Vreau să spun că dacă profilul este adevărat atunci continuați și faceți profilul deschis deschis la fals atunci.
+
+00:08:45.250 --> 00:08:50.030
+Ei bine, asta va duce la eroare, astfel încât nici măcar nu va merge la modal și să o citească.
+
+00:08:50.030 --> 00:08:57.850
+Deci, aceasta este o modalitate scurtă de a face dacă doriți să faceți un rând un operator unde ultima opțiune este doar
+
+00:08:57.930 --> 00:08:58.540
+nu.
+
+00:08:58.650 --> 00:08:59.190
+In regula.
+
+00:08:59.200 --> 00:09:05.530
+Și aici, în modal Modul Să creați o altă componentă și vom
+
+00:09:05.530 --> 00:09:18.380
+numi acest profil component deoarece aici este locul în care dorim ca profilul să fie afișat și acest profil va obține starea deschisă a profilului Is.
+
+00:09:18.460 --> 00:09:19.030
+Să salvăm
+
+00:09:22.310 --> 00:09:25.610
+și să obținem profilul nu este definit deoarece trebuie să îl definim.
+
+00:09:25.910 --> 00:09:29.170
+Dar înainte de a face asta vreau să fac un lucru mic.
+
+00:09:29.450 --> 00:09:37.430
+De asemenea, vreau să folosesc profilul este deschis pentru a comuta modem-ul pentru a porni sau
+
+00:09:37.430 --> 00:09:47.990
+opri montarea sau montarea și putem veni doar aici și adăugăm un nou apel și apelați comutator mobil și acest switch motil
+
+00:09:48.000 --> 00:09:54.150
+va fi o funcție că pur și simplu va face acest lucru.
+
+00:09:54.210 --> 00:10:09.490
+Setați starea și se va actualiza profilul deschis la starea DOT este profilul deschis.
+
+00:10:09.550 --> 00:10:10.720
+Deci este doar un fel de a comuta.
+
+00:10:10.720 --> 00:10:12.740
+Adevărat sau Fals Adevărat sau fals de fiecare dată.
+
+00:10:13.090 --> 00:10:19.180
+Acum, amintiti-va aici de fiecare data cand ating starea si aceasta ar trebui sa fie aceasta stare
+
+00:10:19.180 --> 00:10:26.060
+de fiecare data cand ating starea intr-o stare stabilita care este un pic de nu nu, din cauza modului de re-actiune.
+
+00:10:26.060 --> 00:10:34.410
+Vrem să ne asigurăm întotdeauna că folosim modul funcțional de actualizare a stării și că este de a face ceva de
+
+00:10:34.410 --> 00:10:35.520
+genul acesta.
+
+00:10:35.870 --> 00:10:45.220
+Și putem să-l înfășurăm în paranteze curbate, astfel încât să ne întoarcem acest obiect anterior
+
+00:10:45.520 --> 00:10:49.000
+când am făcut-o de fapt
+
+00:10:51.600 --> 00:11:01.800
+în asta cred că seinen sau am făcut-o în iconul de profil pe care l-am lăsat așa.
+
+00:11:02.030 --> 00:11:09.740
+Dar ceea ce dorim să facem este să returnați starea completă pe care vrem să o actualizăm, iar modul în
+
+00:11:09.860 --> 00:11:15.290
+care facem acest lucru este cu un pic de operator de distrugere sau răspândire.
+
+00:11:15.410 --> 00:11:18.200
+Este punct punct punct.
+
+00:11:18.200 --> 00:11:26.240
+Așa că acum revin întreaga stare, precum și actualizarea oricarei stări actuale cu
+
+00:11:26.360 --> 00:11:29.160
+profilul IS deschis actualizat.
+
+00:11:30.280 --> 00:11:39.800
+Să salvăm acest lucru și vom obține statul nu este definit deoarece trebuie să îl actualizăm la starea anterioară a
+
+00:11:39.800 --> 00:11:40.280
+parametrului.
+
+00:11:40.520 --> 00:11:47.540
+Și asta trebuie să fie acum anterioară.
+
+00:11:47.550 --> 00:11:48.390
+In regula.
+
+00:11:48.590 --> 00:11:53.940
+Si inca obtinerea profilului nu este definita, dar din nou
+
+00:11:53.940 --> 00:12:06.330
+pentru ca nu avem componenta inca dar dorim sa trecem prin metoda modalitatii de comutare pana la profil, pentru ca putem inchide profilul din pagina de
+
+00:12:06.330 --> 00:12:11.880
+profil dar putem, de asemenea, sa deschidem din pagina noastră de navigare.
+
+00:12:11.940 --> 00:12:22.530
+Am de gând să spun acest punct Tongo muritor să spunem dacă și să începem să creăm componenta noastră de profil avem posibilitatea de a folosi probabil acest lucru
+
+00:12:22.530 --> 00:12:29.280
+și de a închide modelul, dar și în cadrul navigării unde facem clic pe iconul de profil și
+
+00:12:29.280 --> 00:12:35.160
+apoi vizualizăm profilul cu dropdown meniu vom avea cel mai probabil nevoie de faptul că,
+
+00:12:35.160 --> 00:12:36.000
+de asemenea.
+
+00:12:36.000 --> 00:12:39.760
+Așa că o să o adaug pe o linie nouă, așa că este puțin mai curată.
+
+00:12:39.780 --> 00:12:48.450
+Voi spune să comutați mișcarea din nou, trecând prin acest mod de comutare.
+
+00:12:48.470 --> 00:12:48.730
+In regula.
+
+00:12:48.770 --> 00:12:51.770
+Să construim componenta de profil.
+
+00:12:51.860 --> 00:12:57.850
+Voi adăuga un fișier nou aici în dosarul nostru de profil și acest lucru va fi numit Profiles.
+
+00:12:57.960 --> 00:12:58.780
+Da.
+
+00:13:00.400 --> 00:13:01.460
+Acum, în profil.
+
+00:13:01.520 --> 00:13:06.520
+Da, voi importa re-acționa din re-act și vom
+
+00:13:11.030 --> 00:13:14.640
+face doar o funcție apatridă.
+
+00:13:15.080 --> 00:13:21.240
+Așa că vom spune că profilul Konst va primi.
+
+00:13:21.360 --> 00:13:29.460
+Ei bine, avem un profil deschis pe care îl primim. Cred că dacă ne întoarcem, profilul este deschis și se schimbă mobilul
+
+00:13:29.550 --> 00:13:31.050
+pe care îl primim.
+
+00:13:31.050 --> 00:13:33.300
+Deci, să ne asigurăm că avem aceleași
+
+00:13:39.330 --> 00:13:42.290
+lucruri și aici, unde vrem să ne întoarcem câteva lucruri.
+
+00:13:42.450 --> 00:13:48.520
+Acum, pentru moment, vreau să mă asigur că funcționează, așa că am să spun DIVX și să spun
+
+00:13:49.360 --> 00:13:50.270
+Jack Jack.
+
+00:13:50.300 --> 00:13:52.220
+Sau mai mic decât pentru a vă asigura că este șirul.
+
+00:13:52.230 --> 00:13:53.550
+Verificați
+
+00:13:56.440 --> 00:14:05.340
+dacă închideți ziua, asigurați-vă că exportați profilul.
+
+00:14:05.430 --> 00:14:08.820
+Să salvăm.
+
+00:14:09.030 --> 00:14:11.270
+Și vrem să ne întoarcem și la APT.
+
+00:14:11.300 --> 00:14:21.920
+Da, asigurați-vă că importem componenta de profil, așa că am să adaug un profil din dosarul profilului Să salvăm
+
+00:14:22.890 --> 00:14:30.840
+C Să uităm 10 ani nimic încă să ne întoarcem la aplicația noastră.
+
+00:14:30.850 --> 00:14:34.320
+Dacă fac clic pe Vizualizare profil Nu se întâmplă nimic.
+
+00:14:34.330 --> 00:14:42.330
+Și asta pentru că dacă mergem la re-actul nostru Deval pro-tools și ne uităm la profilul deschis.
+
+00:14:42.330 --> 00:14:44.180
+Când fac clic pe Vizualizare profil.
+
+00:14:44.280 --> 00:14:46.380
+Ei bine, nu vom face nimic.
+
+00:14:46.410 --> 00:14:49.130
+Profilul nostru este deschis este întotdeauna fals.
+
+00:14:52.180 --> 00:14:55.620
+Dar dacă mă întorc și ne-am stabilit apt.
+
+00:14:55.660 --> 00:14:56.050
+Da.
+
+00:14:56.050 --> 00:15:02.320
+Este Profar deschis pentru a merge adevărat înapoi.
+
+00:15:02.420 --> 00:15:09.810
+Vedem că, pe măsură ce profilul deschis este egal cu adevărat și ne deschidem aplicația noastră, uităm la asta.
+
+00:15:09.810 --> 00:15:17.210
+Vom vedea motile noastre și acest motile are o componentă de profil și această componentă de profil are un div.
+
+00:15:17.310 --> 00:15:18.240
+Verificați verificarea.
+
+00:15:18.660 --> 00:15:23.610
+Dar CSSA este puțin cam oprită și nu este afișată, dar vedem că acest lucru este de lucru, trebuie doar să ne
+
+00:15:23.610 --> 00:15:26.170
+asigurăm că putem să o pornim și să o oprim.
+
+00:15:26.190 --> 00:15:27.030
+Să lucrăm la asta.
+
+00:15:28.690 --> 00:15:36.290
+Vreau să aduc acest lucru la fals și, în secțiunea de profil, să-l facem puțin mai interesant.
+
+00:15:37.080 --> 00:15:47.080
+Voi crea un div cu un nume de clasă a unor stiluri pe care le voi obține de la Ptak Kyon.
+
+00:15:47.250 --> 00:15:51.930
+Să facem un div închis.
+
+00:15:51.950 --> 00:15:56.870
+Pune-o pe o linie nouă și aici.
+
+00:15:57.130 --> 00:16:00.830
+Să adăugăm de fapt ce ar trebui să fie.
+
+00:16:01.240 --> 00:16:09.180
+Ei bine, vreau doar sa ma asigur ca modalitatea de comutare functioneaza asa ca sa adaugam doar un buton si acest buton va
+
+00:16:10.140 --> 00:16:11.700
+spune doar ca click
+
+00:16:16.220 --> 00:16:23.140
+va avea o functie pe click nu s-ar putea sa vada modelul asa ca s-ar putea sa nu functioneze.
+
+00:16:23.140 --> 00:16:26.580
+S-ar putea să trebuiască să adăugăm mai întâi câteva celule CSSA, dar să încercăm.
+
+00:16:26.590 --> 00:16:34.810
+Am de gând să spun modem de schimbare Să adunăm de fapt un CSSA propriu-zis aici, astfel încât să puteți vedea acest Modal
+
+00:16:34.830 --> 00:16:37.600
+pentru a crea un nou fișier CSSA.
+
+00:16:37.600 --> 00:16:43.610
+Să facem acest prim profil de import luat SS și să adăugăm că
+
+00:16:47.120 --> 00:16:49.700
+acesta este fișierul SS acum.
+
+00:16:52.470 --> 00:17:03.810
+Și hai să avem doar o clasă modală de profil, care va avea o culoare de fundal ca și cum ar face puțin să
+
+00:17:03.810 --> 00:17:05.230
+vedem prin ea.
+
+00:17:05.250 --> 00:17:09.300
+Să spunem zero punct opt ​​pentru opacitate.
+
+00:17:09.810 --> 00:17:17.780
+Îi vom da o pozitie de fixat din nou ceva ce cu siguranta vom avea nevoie.
+
+00:17:17.810 --> 00:17:21.890
+Să-i dăm o înălțime de 100 la sută,
+
+00:17:24.570 --> 00:17:28.400
+poate să spunem că și cu
+
+00:17:31.450 --> 00:17:35.770
+o răsplată de 100 la sută a râs 0.
+
+00:17:36.010 --> 00:17:40.360
+O mulțime de CSSA adaugă, de asemenea, un afișaj al lui Flack,
+
+00:17:43.760 --> 00:17:45.860
+pe care doriți să-l aliniați.
+
+00:17:45.860 --> 00:17:49.290
+Din nou, folosim doar Fluxbox aici pentru a fi centrat.
+
+00:17:49.310 --> 00:17:54.630
+Și, în final, dorim să justificăm, de asemenea, centrul de conținut
+
+00:17:59.250 --> 00:18:08.520
+să fim în siguranță aici să ne întoarcem și, de fapt, știi ce, în loc de acest nume de clasă, permiteți-mi doar
+
+00:18:08.670 --> 00:18:15.540
+să schimb toate aceste lucruri în clasa pe care tocmai am creat, care este profilul motil.
+
+00:18:15.950 --> 00:18:21.310
+Așa că am să spun profilul motil Să ne întoarcem și tocmai mi-am dat seama cu un
+
+00:18:24.150 --> 00:18:29.670
+profil de vizualizare atunci când faceți clic pe noi vrem să ne asigurăm că putem schimba acest lucru
+
+00:18:29.850 --> 00:18:30.750
+și dezactivați.
+
+00:18:30.750 --> 00:18:34.230
+Deci, să ne întoarcem la navigația noastră aici.
+
+00:18:35.750 --> 00:18:38.610
+În cazul în care faceți clic pe profilul de vizualizare.
+
+00:18:38.900 --> 00:18:48.790
+Deci, avem iconița profilului și pictograma profilului când faceți clic pe profilul de vizualizare.
+
+00:18:49.040 --> 00:18:57.680
+De asemenea, dorim să avem un eveniment pe clic și acest eveniment On Click
+
+00:18:57.720 --> 00:19:02.790
+va avea ca efect acest popup pentru Dopp.
+
+00:19:02.920 --> 00:19:06.820
+Probabil că ar fi trebuit să facem de la început, dar facem aceste
+
+00:19:06.820 --> 00:19:11.830
+greșeli din când în când și salvează-ne să fim siguri că vom face schimbarea din iconița profilului.
+
+00:19:13.740 --> 00:19:16.590
+Deci, să ne întoarcem la navigație.
+
+00:19:16.860 --> 00:19:20.070
+Să curățăm asta, se face din nou un pic dezorientat.
+
+00:19:22.930 --> 00:19:26.020
+Și pornind de la vârf, dacă mergeți la
+
+00:19:29.090 --> 00:19:32.980
+navigație, vedem că în navigație acest început începe să se miște.
+
+00:19:33.080 --> 00:19:50.300
+Deci, dacă mergeți la componenta de navigare, iar pictograma profilului permite și trecerea în jos a proprietății morale de comutare.
+
+00:19:50.400 --> 00:19:55.070
+Să dăm asta.
+
+00:19:55.070 --> 00:19:55.770
+In regula.
+
+00:19:55.880 --> 00:20:00.030
+Dacă te uiți la partea de jos aici, faci ceva.
+
+00:20:00.100 --> 00:20:06.160
+Se schimbă, dar avem o eroare nu distractivă Felty execută copilul eliminat pe Node, biletul care trebuie eliminat nu este
+
+00:20:06.160 --> 00:20:07.700
+un copil al acestui lucru.
+
+00:20:07.700 --> 00:20:10.850
+Nu este o sarcină confuză pe aer.
+
+00:20:10.870 --> 00:20:16.550
+Dar să vedem ce se întâmplă aici.
+
+00:20:16.580 --> 00:20:19.850
+Pun pariu că am făcut o greșeală proastă undeva.
+
+00:20:20.800 --> 00:20:22.020
+Și.
+
+00:20:22.170 --> 00:20:22.960
+In regula.
+
+00:20:24.130 --> 00:20:25.730
+Greșeală clasică.
+
+00:20:25.750 --> 00:20:30.160
+Este unul dintre acele lucruri care, atunci când ești dezvoltator, trebuie să te obișnuiești cu asta și să îți îmbrățișezi.
+
+00:20:30.250 --> 00:20:34.460
+Vedeți aici că am completat greșit componenta.
+
+00:20:34.480 --> 00:20:39.040
+Și unii dintre voi probabil râdeți chiar acum, pentru că se întreabă de ce am scris-o așa.
+
+00:20:39.040 --> 00:20:41.050
+Sper că acesta este motivul.
+
+00:20:41.050 --> 00:20:42.580
+Să încercăm încă o dată.
+
+00:20:43.120 --> 00:20:46.020
+Să mergem la profil.
+
+00:20:46.420 --> 00:20:47.920
+Hei uita la asta.
+
+00:20:49.810 --> 00:20:54.170
+Noi avem un motel care are doar o funcție de clic pentru acum.
+
+00:20:54.520 --> 00:20:56.730
+Dar este frumos.
+
+00:20:56.740 --> 00:20:57.990
+Functioneaza.
+
+00:20:58.300 --> 00:21:00.120
+Foarte foarte rece.
+
+00:21:00.120 --> 00:21:03.050
+Acum ai văzut cât de prost a fost.
+
+00:21:03.050 --> 00:21:09.890
+Aceasta a fost doar o eroare simplă de ortografie, dar nu aveți cu adevărat erori clare.
+
+00:21:09.890 --> 00:21:16.280
+Era greu să-mi dau seama ce se întâmpla, dar doar uitându-mă la faptul că nimic nu a fost în
+
+00:21:16.820 --> 00:21:22.670
+creștere alimentul a fost oprit, de aceea am decis să mă uit la modul Geass și, bineînțeles,
+
+00:21:22.670 --> 00:21:24.500
+era o eroare de ortografie.
+
+00:21:25.040 --> 00:21:31.460
+Acum, de fapt, vreau să ne atrag atenția asupra acestui dosar, pentru că m-am strălucit puțin asupra
+
+00:21:31.460 --> 00:21:33.130
+a ceea ce face.
+
+00:21:33.170 --> 00:21:42.270
+Vedeți un element Port-Au în inserțiile Briac în tratamentul câinelui după ce copiii Modals se montează.
+
+00:21:42.650 --> 00:21:48.860
+Deci, ceea ce facem aici este locul în care se montează componenta modală.
+
+00:21:48.860 --> 00:21:52.100
+Dacă mă întorc aici, deschideți-mi instrumentele
+
+00:21:55.180 --> 00:21:58.120
+pentru dezvoltatori, scoateți reacția aici.
+
+00:21:58.360 --> 00:22:06.220
+Dacă mă uit aici de îndată ce fac clic pe Vizualizare profil primesc componenta modală și
+
+00:22:06.220 --> 00:22:16.250
+imediat ce fac clic pe componentul moral este plecat și este complet dezasamblat de aici și este atașat la rădăcina la
+
+00:22:16.490 --> 00:22:20.530
+acel element simplu pe care l-am creat.
+
+00:22:20.540 --> 00:22:29.810
+Din nou, dacă mergem la elemente și mergem la rădăcină motiva, aici este locul în care div a fost creat pe care îl avem aici.
+
+00:22:29.830 --> 00:22:30.390
+In regula.
+
+00:22:30.480 --> 00:22:33.710
+Acum că am ajuns până acum, avem un modal.
+
+00:22:33.900 --> 00:22:40.070
+Să facem un pic mai frumos în următorul videoclip, astfel încât să putem începe să lucrăm la sesiunile noastre.
+
+00:22:40.380 --> 00:22:41.330
+O să văd pe asta.

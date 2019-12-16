@@ -1,0 +1,505 @@
+﻿WEBVTT
+
+00:00:01.250 --> 00:00:02.450
+Bine ai revenit.
+
+00:00:02.960 --> 00:00:11.720
+Avem o idee bună despre cum să testăm componentele Riak, dar despre redux și despre unele dintre acțiunile și
+
+00:00:11.720 --> 00:00:14.630
+conceptele reductorilor pe care le avem.
+
+00:00:14.650 --> 00:00:22.660
+Să începem cu reductoare și veți plăcea absolut această secțiune, deoarece amintiți-vă că reductoarele noastre
+
+00:00:22.660 --> 00:00:28.390
+sunt funcții pure, iar funcțiile pure sunt visul unui tester.
+
+00:00:28.420 --> 00:00:32.750
+Sunt cel mai ușor de testat, așa că hai să facem asta.
+
+00:00:32.770 --> 00:00:37.770
+Am de gând să creez un nou dosar numesc testul reducerilor.
+
+00:00:37.910 --> 00:00:38.670
+Da.
+
+00:00:40.280 --> 00:00:48.040
+Și apoi, aici voi importa în timp ce avem nevoie de constante.
+
+00:00:48.210 --> 00:00:56.970
+Așa că voi importa constantele și, evident, reducerii noștri, astfel încât importul va face importul de stele ca o nouă
+
+00:00:56.970 --> 00:01:01.210
+sintaxă ca reductori de la seducători cu această sintaxă,
+
+00:01:05.750 --> 00:01:12.710
+astfel încât să putem face doar reductorii de puncte indiferent ce facem astfel încât să-l exportăm.
+
+00:01:12.780 --> 00:01:19.910
+Deci, în cazul nostru, gândurile reductorilor sunt reductoare de șarpe, care solicită roboți care citește frumos.
+
+00:01:19.930 --> 00:01:20.390
+In regula.
+
+00:01:20.560 --> 00:01:26.080
+Să grupăm acești reductori de această dată folosind un bloc de descriere Celeste pentru a
+
+00:01:28.410 --> 00:01:30.120
+descrie roboții de căutare.
+
+00:01:30.180 --> 00:01:34.270
+Vom face primul reducator aici și aici.
+
+00:01:34.320 --> 00:01:38.140
+Oare nu asta am vrut să fac cu lucrurile aici.
+
+00:01:38.160 --> 00:01:39.680
+Vom face un test.
+
+00:01:39.810 --> 00:01:55.540
+Primul test care spune că ar trebui să returneze starea inițială.
+
+00:01:55.590 --> 00:02:03.270
+Acum, starea inițială a reductorului roboților de căutare poate fi testată astfel încât să ne putem
+
+00:02:06.290 --> 00:02:09.940
+aștepta la roboți de căutare cu reductori.
+
+00:02:09.940 --> 00:02:20.310
+Așa că reductorul nostru ne amintim că reductorul nostru are două lucruri un stat și o acțiune și pentru că dacă statul nu există
+
+00:02:20.610 --> 00:02:25.560
+sau este definit, noi îi oferim căutarea inițială de stat.
+
+00:02:25.590 --> 00:02:26.230
+Hai să facem asta.
+
+00:02:26.250 --> 00:02:31.150
+Am de gând să spun că reductorul roboții de căutare devine nedefinit.
+
+00:02:31.530 --> 00:02:36.750
+Deci nici un stat la început și nu va lua nicio măsură.
+
+00:02:36.780 --> 00:02:43.170
+Dar având în vedere o acțiune goală pentru moment, vrem să încercăm pentru acele cazuri în care.
+
+00:02:43.390 --> 00:02:45.540
+Ei bine, avem o stare nedefinită.
+
+00:02:45.620 --> 00:02:46.530
+Ce se întâmplă.
+
+00:02:46.790 --> 00:03:00.740
+Ei bine, am vrut să egalăm starea noastră ideală și starea noastră ideală, iar acest caz este ca câmpul de căutare să fie un
+
+00:03:00.740 --> 00:03:02.170
+șir gol.
+
+00:03:03.470 --> 00:03:08.660
+Deci, permiteți-mi să spun că deschideți suita noastră de testare
+
+00:03:16.110 --> 00:03:18.780
+și Arita totul trece.
+
+00:03:18.780 --> 00:03:28.410
+Dacă am apăsa spun spune că da totul este logat frumos, inclusiv testarea noastră darts reductor dacă am pus
+
+00:03:28.980 --> 00:03:31.250
+într-un câmp de căutare.
+
+00:03:31.320 --> 00:03:32.420
+O să eșueze.
+
+00:03:32.430 --> 00:03:35.190
+Bine, așa e minunat.
+
+00:03:35.190 --> 00:03:37.180
+A fost super super ușor.
+
+00:03:37.200 --> 00:03:38.470
+Ce altceva putem face.
+
+00:03:38.880 --> 00:03:50.890
+Ei bine, ne-am asteptat ca acest producator, cand vom vedea evenimentul nostru de cautare a schimbarii, va intoarce un nou
+
+00:03:50.890 --> 00:03:51.820
+stat.
+
+00:03:51.820 --> 00:04:01.350
+Așadar, încă o dată putem spune că ar trebui să se ocupe de evenimentul câmpului de căutare de schimbare și putem spune reductori
+
+00:04:01.350 --> 00:04:03.240
+ca roboții de căutare.
+
+00:04:03.310 --> 00:04:04.630
+Să facem acest
+
+00:04:07.360 --> 00:04:14.570
+lucru puțin mai mic va ajunge la starea de a spune un stat gol sau știi ce.
+
+00:04:14.620 --> 00:04:26.990
+Să adăugăm aici o căutare inițială a concertului și să spunem că această căutare inițială de stat este un câmp de căutare pe care
+
+00:04:28.750 --> 00:04:31.010
+îl numește acest lucru.
+
+00:04:31.230 --> 00:04:35.020
+În regulă, putem folosi căutarea inițială.
+
+00:04:35.040 --> 00:04:41.670
+Deci, aceasta va fi starea inițială care este egală cu șirul gol și va
+
+00:04:42.180 --> 00:04:43.620
+primi o acțiune.
+
+00:04:43.650 --> 00:04:46.430
+Și ce fel de acțiune va primi?
+
+00:04:46.430 --> 00:04:48.370
+Voi elimina acest lucru deocamdată.
+
+00:04:48.780 --> 00:04:53.460
+Ei bine, dacă vă amintiți că acțiunile noastre vor avea un tip.
+
+00:04:54.000 --> 00:05:00.060
+Și în acest caz, vom spune că tipul va fi schimbat în câmpul de căutare care vine din fișierul
+
+00:05:00.060 --> 00:05:04.300
+nostru Constans și putem alcătui sarcina utilă pe care o va trimite.
+
+00:05:04.300 --> 00:05:10.580
+Deci, să spunem doar pentru moment că sarcina utilă va fi b c.
+
+00:05:10.670 --> 00:05:13.720
+Acum, ce ne așteptăm de la această ieșire.
+
+00:05:14.030 --> 00:05:25.860
+Ne așteptăm ca, odată ce trece prin această revizuire, să se asigure că simțul căutării va fi egal cu un b c, deci putem spune
+
+00:05:25.860 --> 00:05:31.460
+că câmpul de căutare ar trebui să fie din nou ABC.
+
+00:05:31.590 --> 00:05:35.460
+Avem căutarea inițială de stat, care este un șir gol.
+
+00:05:35.550 --> 00:05:43.940
+Trece prin asta, domnule, cu această acțiune și acum avem nevoie de stat, pentru că amintesc că acest reductor se
+
+00:05:43.940 --> 00:05:45.770
+va întoarce la stat.
+
+00:05:45.870 --> 00:05:54.320
+Vrem ca statul să fie un b c să salvăm și avem un pic de eșec aici, vom vedea ce fel de
+
+00:05:54.330 --> 00:05:55.170
+Nera ajungem.
+
+00:05:55.470 --> 00:06:03.400
+Și seamănă tocmai cu tovarășul neașteptat Oh și avem nevoie de un suport suplimentar aici.
+
+00:06:04.940 --> 00:06:10.800
+Iar Knerr-ul nostru spune că acest tip nu este definit deoarece, pentru că nu trebuie să tipăm aici.
+
+00:06:10.870 --> 00:06:12.220
+Asta e doar o greșeală din partea mea.
+
+00:06:13.670 --> 00:06:14.060
+In regula.
+
+00:06:14.120 --> 00:06:15.620
+Așa că trece.
+
+00:06:15.620 --> 00:06:17.160
+Cât de simplu este asta.
+
+00:06:17.210 --> 00:06:23.270
+Ruth reducer tot ce trebuie să facem este doar să ne dăm un fel de intrare și să ne așteptăm la o
+
+00:06:23.270 --> 00:06:25.760
+ieșire și puteți continua să continuați așa pentru totdeauna.
+
+00:06:25.760 --> 00:06:28.070
+Faceți testele dvs. mai bune și mai bune.
+
+00:06:29.130 --> 00:06:30.600
+Să facem următoarea revizuire.
+
+00:06:30.600 --> 00:06:34.190
+Acum să spunem că vrem să lăsăm mai mult spațiu aici.
+
+00:06:35.160 --> 00:06:36.990
+Vrem
+
+00:06:40.000 --> 00:06:44.890
+să descriem reductorul roboților de cerere.
+
+00:06:45.060 --> 00:06:50.150
+În acest caz, putem spune doar că avem ceea ce să creăm o stare inițială.
+
+00:06:50.160 --> 00:06:58.420
+Așa că am să spun din nou statul inițial Konst pentru roboți.
+
+00:06:58.810 --> 00:07:07.470
+Și dacă vă amintiți că avem acest lucru ca statul inițial, așa că o să copiez de fapt acest lucru.
+
+00:07:07.500 --> 00:07:11.990
+Deci, aceasta este starea noastră inițială pentru test.
+
+00:07:14.000 --> 00:07:15.890
+Și vrem să facem același lucru ca mai sus.
+
+00:07:16.080 --> 00:07:18.960
+Ar trebui să returneze starea inițială.
+
+00:07:18.960 --> 00:07:27.750
+Deci, să copiem și să lipim doar cele de mai sus și să schimbăm doar roboții de căutare
+
+00:07:27.750 --> 00:07:35.120
+pentru a cere roboți și dorim ca aceasta să fie egală cu starea inițială.
+
+00:07:35.190 --> 00:07:39.320
+Să salvăm și avem un test eșuat.
+
+00:07:39.320 --> 00:07:40.910
+Să vedem ce am eșuat aici.
+
+00:07:42.710 --> 00:07:47.010
+Roboții inițiali nu sunt definiți.
+
+00:07:49.110 --> 00:07:52.320
+Pentru că trebuie să adaug un cost aici.
+
+00:07:52.320 --> 00:07:53.880
+Să salvăm.
+
+00:07:53.880 --> 00:07:54.310
+In regula.
+
+00:07:54.330 --> 00:07:55.780
+Totul trece.
+
+00:07:56.100 --> 00:07:59.310
+Obținem starea inițială așa cum era de așteptat.
+
+00:07:59.310 --> 00:08:00.180
+Asta e bine.
+
+00:08:00.330 --> 00:08:12.610
+Dar să facem un test și să spunem că dorim ca cele trei cazuri de aici să fie testate.
+
+00:08:12.770 --> 00:08:15.770
+Deci, hai să facem un proces
+
+00:08:18.530 --> 00:08:28.290
+inițial care ar trebui să gestioneze lista roboților cereri în așteptarea primei acțiuni și va avea ceva similar
+
+00:08:31.510 --> 00:08:33.160
+cu aici.
+
+00:08:33.160 --> 00:08:38.300
+Așa că din nou vom folosi declarația xpect.
+
+00:08:38.450 --> 00:08:46.790
+O să aibă reductorii Daut de această dată cere roboți.
+
+00:08:46.970 --> 00:08:55.390
+Va primi starea inițială a roboților și apoi îi vom da o acțiune
+
+00:08:58.020 --> 00:09:10.310
+de tip roboți de cerere în așteptare și o sarcină utilă de a-i da este în așteptare prea adevărată.
+
+00:09:10.480 --> 00:09:18.290
+Asadar, ne asteptam ca atunci cand se intampla acest lucru, daca vom arunca o privire la reduse Aici vedem ca simt automat cheltuielile
+
+00:09:18.800 --> 00:09:22.180
+prea adevarate si nu exista nici o sarcina utila.
+
+00:09:22.250 --> 00:09:28.730
+Deci nu trebuie să stabilim că nu este nevoie să trimitem o sarcină utilă,
+
+00:09:29.470 --> 00:09:35.570
+dar ne așteptăm ca volumul util să se schimbe de la extinderea
+
+00:09:38.600 --> 00:09:49.930
+tuturor la falsă aici, deoarece extinderea atunci când începem este întotdeauna falsă și aici dorim ca aceasta să fie egală cu starea de roboți.
+
+00:09:51.130 --> 00:09:56.610
+Cu o matrice goală, cheltuirea este setată la adevărat.
+
+00:09:56.690 --> 00:09:58.730
+Deci, să salvăm.
+
+00:09:58.750 --> 00:09:59.170
+In regula.
+
+00:09:59.180 --> 00:10:07.030
+Totul trece, dar tocmai am observat aici că nu vrem de fapt că implicit este cheltuirea pentru a
+
+00:10:07.030 --> 00:10:08.020
+fi adevărată.
+
+00:10:08.050 --> 00:10:13.010
+Am vrut să fim falsi pentru că atunci când avem prima stare inițială.
+
+00:10:13.060 --> 00:10:15.130
+Ei bine, nu am trimis încă promisiunea.
+
+00:10:15.130 --> 00:10:17.900
+Nu am cerut nimic de la API.
+
+00:10:18.070 --> 00:10:24.280
+Dacă intrăm în scăderea reducerilor noastre, vedem că avem etapa inițială aici prin adevărat din greșeală.
+
+00:10:24.280 --> 00:10:30.820
+Putem doar să o schimbăm în fals se salvează și aici să salvăm aici.
+
+00:10:31.990 --> 00:10:32.810
+Perfect.
+
+00:10:32.980 --> 00:10:34.700
+Totul funcționează.
+
+00:10:34.720 --> 00:10:41.160
+Iar cheltuielile robotului de cerere schimbă starea noastră de cheltuieli la adevărat.
+
+00:10:41.160 --> 00:10:42.810
+Hai să continuăm.
+
+00:10:42.810 --> 00:10:47.150
+Avem al doilea caz care este succesul.
+
+00:10:47.370 --> 00:10:58.340
+Așa că am să copiez și să lipesc aici și de data aceasta spun că roboții trebuie să cheltuie succesul și
+
+00:10:58.490 --> 00:11:02.200
+acest succes ar trebui să aibă.
+
+00:11:02.480 --> 00:11:03.620
+Ei bine, ce ar trebui să aibă.
+
+00:11:03.620 --> 00:11:12.820
+Ei bine, avem nevoie de un fel de sarcină utilă deoarece din reductoarele noastre avem sarcina utilă pentru roboți pe care o vom
+
+00:11:13.210 --> 00:11:17.060
+întoarce sau o vom scoate la stat după succes.
+
+00:11:17.080 --> 00:11:19.920
+Deci, să creăm asta în tipul nostru.
+
+00:11:19.930 --> 00:11:25.400
+Vom vedea o sarcină utilă și o să mă întorc.
+
+00:11:25.900 --> 00:11:47.880
+Să luăm doar aceia care au creat doar o idee Dommy de 2:59 să spunem numele testului și apoi în final e-mailul testului la gmail
+
+00:11:47.940 --> 00:11:49.850
+dot com.
+
+00:11:50.180 --> 00:11:56.340
+Veți vedea aici că este un șir în loc de un număr pe care cred că în componenta noastră
+
+00:11:56.340 --> 00:12:01.740
+nu distingem de fapt un număr dintr-un șir, deci este posibil să ne fixăm în viitor.
+
+00:12:02.730 --> 00:12:09.410
+Dar, pentru moment, ne așteptăm ca în cazul în care sarcina utilă este ca statul să se actualizeze acum cu sarcina utilă.
+
+00:12:09.480 --> 00:12:13.020
+Deci, să copiem asta.
+
+00:12:13.140 --> 00:12:17.920
+Și ne așteptăm, de asemenea, să așteptăm din nou să fim din nou falsi dacă ne amintim de seducătorul nostru.
+
+00:12:17.970 --> 00:12:21.660
+De asemenea, ne schimbăm, așteptând să falsăm cu succes.
+
+00:12:21.660 --> 00:12:26.950
+Asa ca sa salvam si avem o eroare aici.
+
+00:12:29.760 --> 00:12:33.900
+Acesta este un simplu nemesis arc Khama dacă ne comportăm acolo.
+
+00:12:33.900 --> 00:12:36.750
+Ea trece un test final.
+
+00:12:36.840 --> 00:12:42.600
+Puteți vedea că puteți obține destul de repetitive cu teste, dar acest lucru este un lucru bun cu reductori
+
+00:12:42.600 --> 00:12:49.950
+sunt atât de simplu pentru a testa că vă copiați și lipiți o mulțime de cod, care din nou este bine pentru testare, deoarece acest
+
+00:12:50.160 --> 00:12:52.770
+cod nu a fost niciodată mergi în producție.
+
+00:12:53.010 --> 00:12:55.880
+Deci, hai să facem cazul eșuat aici.
+
+00:12:55.890 --> 00:13:01.680
+Acesta este eșecul.
+
+00:13:01.870 --> 00:13:05.360
+Și în acest caz dorim sarcina utilă.
+
+00:13:05.360 --> 00:13:09.660
+Dacă revenim la funcția noastră, vrem ca sarcina utilă să aibă doar o eroare.
+
+00:13:09.680 --> 00:13:19.340
+Deci, din nou aici, putem spune super supărat că am intrat acolo și ne așteptăm ca statul să aibă acum un aer care
+
+00:13:19.340 --> 00:13:22.250
+este de la tine și o
+
+00:13:26.070 --> 00:13:29.640
+cheltuială de falsă, deși văd aici că nu
+
+00:13:32.450 --> 00:13:38.410
+ne întoarcem de fapt, este în așteptarea unei false care ar trebui să fim.
+
+00:13:38.410 --> 00:13:43.210
+Dacă salvează Atacama.
+
+00:13:43.440 --> 00:13:47.550
+Dar ne așteptăm de asemenea ca matricea roboților să fie returnată.
+
+00:13:47.550 --> 00:13:56.230
+Deci, matricele de roboți ar trebui să fie goale și acum avem această trecere.
+
+00:13:56.340 --> 00:13:58.020
+Foarte tare.
+
+00:13:58.020 --> 00:13:59.450
+Bine, asta e de ajuns pentru tine.
+
+00:13:59.470 --> 00:14:04.680
+Vedeți cât de simplu este de a testa pur și simplu verificarea lor de intrare împotriva ieșirii.
+
+00:14:04.710 --> 00:14:11.640
+Și de aceea doriți să aveți reductorii de pretutindeni și de ce este atât de uimitor că este ușor
+
+00:14:11.640 --> 00:14:12.390
+de testat.
+
+00:14:12.500 --> 00:14:16.570
+Și dacă te gândești la asta, toată logica noastră este în reducerea noastră.
+
+00:14:16.680 --> 00:14:25.080
+Deci, dacă avem un test cu adevărat bun pentru reductorii noștri, acoperim o mulțime de logică a aplicațiilor noastre, deoarece
+
+00:14:25.080 --> 00:14:29.830
+reductoarele sunt acelea care au luat măsuri și au scuipat statul.
+
+00:14:29.950 --> 00:14:38.570
+Sunt destul de mult controlerul sau creierul aplicației noastre redux ne permite să avem un test cu adevărat foarte frumos
+
+00:14:38.590 --> 00:14:47.160
+și să păstrăm lucrurile simple pe partea de reacție doar făcând teste instantanee sau teste de enzime simple și testarea
+
+00:14:47.490 --> 00:14:51.860
+funcțiilor pure care din nou este foarte util .
+
+00:14:52.200 --> 00:14:54.100
+Dar pentru moment asta e pentru mine.
+
+00:14:54.180 --> 00:14:55.760
+Voi vedea în următoarea.

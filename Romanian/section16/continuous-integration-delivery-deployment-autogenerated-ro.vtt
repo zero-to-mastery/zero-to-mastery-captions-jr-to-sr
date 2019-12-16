@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.230 --> 00:00:02.440
+Bine ai revenit.
+
+00:00:02.460 --> 00:00:09.630
+Să începem cu integrarea continuă cu integrarea continuă a primului subiect.
+
+00:00:09.790 --> 00:00:11.890
+Această cutie albastră este aici.
+
+00:00:12.760 --> 00:00:22.150
+Este o practică de devolvement în care dezvoltatorii integrează codul într-un depozit partajat frecvent de preferință
+
+00:00:22.150 --> 00:00:32.310
+de câteva ori pe zi și fiecare integrare poate fi apoi verificată printr-o testare automată a unui test automatizat.
+
+00:00:32.310 --> 00:00:40.170
+Acum, să dezarhivați această declarație, astfel încât aceasta să aibă sens în integrarea continuă în limba engleză este o modalitate pentru
+
+00:00:40.170 --> 00:00:48.440
+dezvoltatori de a utiliza un magazin partajat cum ar fi obține un loc de muncă și știm totul despre cum până acum și
+
+00:00:48.440 --> 00:00:52.200
+acest magazin partajat va fi folosit pe tot parcursul zilei.
+
+00:00:52.380 --> 00:01:02.070
+Fiecare solicitări de tragere a unei corecții de erori sau a unei noi caracteristici trebuie să treacă printr-un pas Builth automat care poate include
+
+00:01:02.070 --> 00:01:09.360
+elemente precum testele și Linked-In pentru a vă asigura că toate testele trec toate testele unității noastre trec.
+
+00:01:09.360 --> 00:01:17.410
+Poate că nu am făcut nici o eroare de creditare sau de sintaxă și că tot ceea ce construiește proiectul nostru se construiește așa cum era de așteptat.
+
+00:01:17.630 --> 00:01:23.200
+Ne asigurăm că codul este compatibil cu restul codului.
+
+00:01:23.290 --> 00:01:31.270
+Acum, unul dintre avantajele cheie ale integrării în mod regulat este că puteți detecta rapid erorile și
+
+00:01:31.270 --> 00:01:38.530
+le puteți localiza mai ușor, deoarece fiecare schimbare introdusă va fi mică și va identifica
+
+00:01:38.710 --> 00:01:41.950
+schimbările specifice care introduc un defect.
+
+00:01:41.950 --> 00:01:48.960
+Dacă facem un PR sau o solicitare de tragere pe Hobb, conducem testele și acele teste eșuează.
+
+00:01:49.120 --> 00:01:57.510
+Știm imediat că PR trebuie să fie fixat și chiar dacă introduce un bug după ce a fost fuzionat dacă
+
+00:01:58.140 --> 00:01:59.950
+apare brusc un bug.
+
+00:01:59.970 --> 00:02:07.030
+Știm că acest sondaj de opinie cel mai probabil a făcut-o pentru că a fost recent introdus.
+
+00:02:07.080 --> 00:02:09.750
+Deci, care este motivul pentru toate astea.
+
+00:02:09.750 --> 00:02:16.110
+Ideea este ca firmele să se asigure că codul de la mulți dezvoltatori are cât mai puține erori
+
+00:02:16.530 --> 00:02:18.480
+și că rămâne în concordanță.
+
+00:02:18.480 --> 00:02:20.870
+Cat mai mult posibil.
+
+00:02:21.070 --> 00:02:27.190
+Acum o să vă conduc printr-o serie de astfel de lucruri, astfel încât să puteți vedea ce vreau să spun atunci când spun că rulați
+
+00:02:27.190 --> 00:02:29.870
+un pas de construcție cum ar fi testele și construcțiile.
+
+00:02:29.890 --> 00:02:33.330
+Nu vă faceți griji că vom ajunge la asta.
+
+00:02:33.370 --> 00:02:42.460
+Vreau să aveți doar acest punct în ciuda faptului că acest proces se asigură că codul dezvoltatorilor individuali întrunește un
+
+00:02:42.460 --> 00:02:49.480
+anumit standard și că în acest fel indiferent cât de mari echipele noastre putem să ne
+
+00:02:49.600 --> 00:02:55.560
+asigurăm că dezvoltatorii individuali lucrează nu se abate de la original codebase.
+
+00:02:55.660 --> 00:03:04.960
+Păstrăm lucrurile în linie și în control și integrarea continuă este că atunci când combinați procesul de
+
+00:03:05.050 --> 00:03:14.910
+realizare a unui PR adesea rar cu testarea automată, care este testarea care rulează automat și includeți lucruri ca
+
+00:03:14.910 --> 00:03:20.100
+clădire automată și apoi alți dezvoltatori care verifică PR.
+
+00:03:20.100 --> 00:03:27.240
+Și apoi, mergând în cele din urmă, făcând asta, evitați iadul de integrare care se întâmplă de obicei atunci când
+
+00:03:27.240 --> 00:03:30.820
+oamenii așteaptă ziua de eliberare pentru a îmbina totul.
+
+00:03:31.110 --> 00:03:37.680
+Să spunem cu o zi înainte de eliberarea mare toată lumea care a fost de lucru pe o caracteristică toată lumea pe
+
+00:03:37.680 --> 00:03:43.430
+caracteristici diferite va merge la toate din nou și din nou, fără a se confrunta de fapt cu problema.
+
+00:03:43.440 --> 00:03:45.430
+Va fi greu să explic asta.
+
+00:03:45.480 --> 00:03:51.130
+Deci, de fapt, o vom implementa în prietenii noștri robo.
+
+00:03:51.320 --> 00:03:57.770
+Dar vreau să vă amintiți că această integrare continuă pune un accent deosebit pe testarea automatizării pentru a
+
+00:03:58.130 --> 00:04:00.350
+verifica dacă aplicația nu este ruptă.
+
+00:04:00.350 --> 00:04:07.910
+Ori de câte ori o nouă comitere sau o solicitare de tragere PR este integrată în sucursala principală vedeți
+
+00:04:08.120 --> 00:04:15.880
+aici că facem un PR testele rulează automat pentru noi și conducem construirea și asigurați-vă că totul trece și acest
+
+00:04:16.100 --> 00:04:22.520
+lucru este făcut automat pentru a vă asigura că înainte fuzionăm înainte ca cineva să revadă
+
+00:04:23.030 --> 00:04:25.720
+solicitarea de piscină a acestor teste.
+
+00:04:25.720 --> 00:04:27.790
+Hai să mergem la următoarea.
+
+00:04:27.970 --> 00:04:34.930
+Următorul este acest pătrat galben care, prin integrarea continuă a lui Lap, numită livrare continuă și
+
+00:04:36.130 --> 00:04:42.520
+livrare continuă, este practica de a vă menține baza de cod în orice moment.
+
+00:04:43.510 --> 00:04:51.630
+Dincolo de faptul că cererea dvs. din această parte albastră este integrată în ramura principală,
+
+00:04:51.630 --> 00:04:54.500
+avem câțiva pași suplimentari.
+
+00:04:54.730 --> 00:05:02.530
+Vedeți că trebuie să aibă toate configurațiile necesare pentru a împinge în producție ori de câte ori dorim livrarea
+
+00:05:02.530 --> 00:05:03.130
+continuă.
+
+00:05:03.160 --> 00:05:10.540
+Este ideea că vom continua să ținem lucrurile gata, astfel încât atunci când dorim ca un produs livrat pentru producție să aibă
+
+00:05:10.540 --> 00:05:17.140
+o actualizare a produsului nostru, putem face acest lucru și avem acest pas suplimentar de teste de acceptare, așa
+
+00:05:17.140 --> 00:05:24.190
+cum dorim această caracteristică pentru a face acest lucru și ați putea avea pe cineva care este o metodă drăguță sau
+
+00:05:24.190 --> 00:05:31.690
+un analist de calitate sau cine face teste sau un proprietar de produs care verifică pentru a vă asigura că toate caracteristicile sunt
+
+00:05:31.750 --> 00:05:38.860
+implementate și apoi manual un dezvoltator sau un conducător de echipă face clic pe un buton care spune că desfășoară livrarea
+
+00:05:40.380 --> 00:05:41.660
+continuă la producție.
+
+00:05:41.700 --> 00:05:47.310
+După cum puteți vedea, este o extensie a integrării continue, pentru a vă asigura că puteți
+
+00:05:47.310 --> 00:05:50.710
+aduce clienților noștri noi modificări rapide într-un mod durabil.
+
+00:05:51.560 --> 00:05:58.910
+Aceasta înseamnă că, pe lângă automatizarea testelor dvs., trebuie să automatizați procesul de lansare, astfel încât să
+
+00:05:59.570 --> 00:06:01.330
+puteți implementa producția.
+
+00:06:01.340 --> 00:06:09.270
+Așa cum am spus mai înainte, în orice moment în timp, în teorie cu livrarea continuă a procesului de livrare în compania
+
+00:06:09.300 --> 00:06:16.300
+dvs., puteți decide să lansați zilnic săptămânal în fiecare noapte sau orice altfel se potrivește cerințelor dvs. de afaceri.
+
+00:06:17.120 --> 00:06:22.040
+Dar ideea de livrare continuă este cea ideală, la fel ca și noi, cu integrarea continuă
+
+00:06:22.040 --> 00:06:29.030
+și realizarea de mașini mici, dar adesea de mașini, și îmbinarea cererilor și a caracteristicilor noastre de sondaj cât mai des posibil cu
+
+00:06:29.030 --> 00:06:29.770
+livrarea continuă.
+
+00:06:29.900 --> 00:06:31.490
+Funcționează foarte bine.
+
+00:06:31.640 --> 00:06:39.530
+Când începeți să faceți mici loturi de lansare pe care le-ați observat pe telefonul dvs. cu privire la modul în care aplicațiile
+
+00:06:39.530 --> 00:06:46.220
+dvs. se actualizează mereu, aveți noi patch-uri noi versiuni aproape în fiecare săptămână și aceștia practică livrarea continuă
+
+00:06:46.220 --> 00:06:52.910
+de a face mici modificări incrementale ale aplicației ușor de depanat în cazul în care există o problemă.
+
+00:06:52.910 --> 00:06:56.160
+Trebuie să se întoarcă și să repare lucrurile.
+
+00:06:56.210 --> 00:06:57.310
+In regula.
+
+00:06:57.480 --> 00:06:58.700
+Nu sunt doar cei doi.
+
+00:06:58.710 --> 00:07:02.040
+Știu că titlul spune că vezi CD-ul și luminez puțin.
+
+00:07:02.040 --> 00:07:12.110
+Există încă unul și este o desfășurare continuă, este strâns legată de livrarea continuă și se referă la păstrarea aplicației dvs.
+
+00:07:12.110 --> 00:07:17.900
+disponibilă în orice moment în timp, la fel cum o avem cu
+
+00:07:17.900 --> 00:07:19.270
+livrarea continuă.
+
+00:07:19.360 --> 00:07:27.500
+Dar există o mică diferență și, ca și desfășurarea continuă, desfășurarea continuă merge direct în
+
+00:07:27.500 --> 00:07:28.400
+producție.
+
+00:07:28.400 --> 00:07:34.730
+Nu este nici un dezvoltator manual sau Manager de echipă sau manager care face clic pe abandonat, spune
+
+00:07:34.730 --> 00:07:37.510
+că toate încercările de acceptare au trecut.
+
+00:07:37.610 --> 00:07:38.790
+Totul se verifică.
+
+00:07:38.810 --> 00:07:45.860
+Am de gând să desfășoare la producție continuă desfășurarea este o filozofie în cazul în care tu spui dacă
+
+00:07:45.920 --> 00:07:53.530
+testele acceptant sunt trecute automat bine în mod automat se va desfășura la producție și s-ar putea să fi observat de
+
+00:07:53.530 --> 00:07:54.600
+livrare continuă.
+
+00:07:54.610 --> 00:08:02.700
+Când te uiți la paginile GET HOT cu pagini cum ar fi prietenii robo, redux vedem că am
+
+00:08:02.700 --> 00:08:04.220
+implementat aplicația noastră.
+
+00:08:04.590 --> 00:08:10.230
+Și oricând mă voi îmbina pentru a stăpâni o nouă versiune, poate vreau să o desemnez la
+
+00:08:11.170 --> 00:08:16.840
+ceva diferit, am putea dori să facem niște schimbări aici, poate că schimbăm titlul, poate că schimbăm
+
+00:08:16.930 --> 00:08:23.980
+o culoare, dar oricând mă voi îmbina în master, acest link va fi actualizat pentru că se referă la orice Master Zen
+
+00:08:23.980 --> 00:08:26.890
+și acest lucru este similar cu desfășurarea continuă.
+
+00:08:26.890 --> 00:08:35.520
+De fiecare dată când este fuzionat și toate testele mele trec, în timp ce utilizatorii văd sau sunt utilizați în mod automat
+
+00:08:35.520 --> 00:08:37.110
+se va schimba automat.
+
+00:08:38.450 --> 00:08:41.810
+Acum, de ce am învățat Google asta.
+
+00:08:41.960 --> 00:08:48.590
+Acest lucru se datorează faptului că implementarea continuă și livrarea continuă s-au dezvoltat ca cele mai bune practici
+
+00:08:48.590 --> 00:08:53.910
+pentru păstrarea aplicației dvs. într-o stare bună într-o stare dislocabilă în orice moment.
+
+00:08:54.290 --> 00:08:57.800
+Și aceasta este doar o bună practică de a avea.
+
+00:08:57.860 --> 00:09:04.270
+Acest lucru permite echipei dvs. să se miște rapid, păstrând în același timp standarde de înaltă calitate care pot fi verificate automat.
+
+00:09:04.310 --> 00:09:09.940
+Vedeți că o mulțime de companii de top practică acest mod de a-și dezvolta baza de coduri ca o chestiune de fapt.
+
+00:09:09.950 --> 00:09:16.980
+Dacă sunteți primele dvs. de două zile la o companie mare, veți fi probabil introduși în acest proces, astfel încât să
+
+00:09:17.060 --> 00:09:18.510
+fiți familiarizați cu aceasta.
+
+00:09:18.860 --> 00:09:27.110
+Deci, amintiți-vă că această desfășurare continuă merge cu un pas mai departe decât livrarea continuă cu această
+
+00:09:27.110 --> 00:09:27.890
+practică.
+
+00:09:28.100 --> 00:09:36.340
+Fiecare schimbare care trece toate etapele producției dvs., ceea ce noi numim conducte acest proces este pusă la
+
+00:09:36.550 --> 00:09:38.180
+dispoziția clienților dvs.
+
+00:09:38.200 --> 00:09:44.170
+Nu există nici o intervenție umană și doar o încercare nereușită nu va împiedica o nouă schimbare să
+
+00:09:44.170 --> 00:09:45.790
+se desfășoare în producție.
+
+00:09:45.820 --> 00:09:52.050
+Acum, încă o dată, acest lucru va fi cu adevărat confuz dacă vedeți acest lucru pentru prima dată.
+
+00:09:52.230 --> 00:09:59.070
+De fapt, vom construi o conductă un pas important, o etapă de integrare continuă, astfel încât să înțelegeți ce beneficii
+
+00:09:59.130 --> 00:10:01.530
+sunt și cum să faceți acest lucru.
+
+00:10:01.570 --> 00:10:07.220
+Cu toate acestea, compania dvs. va vorbi puțin despre acest lucru în următorul videoclip.
+
+00:10:07.330 --> 00:10:09.070
+O să văd în asta.

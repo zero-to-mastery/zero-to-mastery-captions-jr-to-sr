@@ -1,0 +1,526 @@
+﻿WEBVTT
+
+00:00:01.170 --> 00:00:08.130
+Witamy ponownie, czas zacząć wdrażanie sesji, ponieważ mamy teraz profil do
+
+00:00:08.160 --> 00:00:14.300
+pracy i pamiętajmy, że naszym celem jest wykonanie tego.
+
+00:00:14.360 --> 00:00:17.310
+Zalogujemy się do naszej aplikacji.
+
+00:00:17.540 --> 00:00:20.920
+Użytkownik wyśle nazwę użytkownika i hasło.
+
+00:00:21.110 --> 00:00:32.830
+Serwer wygeneruje wówczas token JWT, a my wyślemy to do użytkownika, aby następnym razem uzyskać dostęp do którejkolwiek
+
+00:00:32.830 --> 00:00:40.960
+z tras, które są chronione lub wymagają uwierzytelnienia, takiego jak profil 23,
+
+00:00:40.960 --> 00:00:51.070
+będą musieli wysłać token JWT z tak, aby użytkownik otrzymywał profil lub aktualizował profil, wykonując żądanie
+
+00:00:51.070 --> 00:00:52.270
+POST.
+
+00:00:52.390 --> 00:00:57.160
+Cóż, muszą wysłać token JWT na serwer.
+
+00:00:57.460 --> 00:01:05.290
+Następnie serwer może zweryfikować token za pomocą metody weryfikacji DOD lub w naszym przypadku może faktycznie
+
+00:01:05.290 --> 00:01:11.960
+przechowywać token w bazie danych do odczytu, aby upewnić się, że jest poprawny.
+
+00:01:12.190 --> 00:01:18.580
+A jeśli wszystko się zgadza, możesz mieć swój profil lub zaktualizować swój profil.
+
+00:01:18.670 --> 00:01:20.910
+I w tym wideo będziemy pracować nad tą częścią.
+
+00:01:20.950 --> 00:01:27.150
+Zamierzamy wygenerować token JWT po tym, jak użytkownik zarejestruje się i zacznijmy.
+
+00:01:28.840 --> 00:01:36.250
+Teraz, jeśli wrócimy do naszego serwera Tak, mamy już skompresowaną dokowanie działającą w tle, tutaj wszystko
+
+00:01:36.250 --> 00:01:41.970
+sprawdza, czy punktem końcowym, z którym chcemy pracować, jest znak końcowy.
+
+00:01:42.010 --> 00:01:48.070
+Kiedy więc się zalogujemy, wywołujemy tę funkcję seinen i widzimy tutaj, że jest trochę
+
+00:01:48.370 --> 00:01:50.040
+inna niż pozostałe.
+
+00:01:50.110 --> 00:01:57.660
+Widzisz, że wszystkie inne punkty końcowe otrzymują odpowiedź żądania, a następnie mają funkcję, która odbiera
+
+00:01:57.660 --> 00:01:59.770
+odpowiedź na żądania reszty.
+
+00:01:59.770 --> 00:02:05.300
+Przechodzimy również do bazy danych i skryptu będącego biblioteką haszującą.
+
+00:02:05.320 --> 00:02:09.390
+Teraz jest trochę inaczej, ponieważ chcę pokazać różne sposoby robienia tego.
+
+00:02:09.550 --> 00:02:16.000
+W takim przypadku, gdy podpis zostanie nazwany dobrze, znak dojścia zostanie wywołany z bazą danych i
+
+00:02:16.000 --> 00:02:18.480
+zostanie uchwycony za pomocą wtrysku zależności.
+
+00:02:18.520 --> 00:02:24.830
+To dajemy zależność od bazy danych i jesteśmy skorumpowani, aby obsłużyć seinen, tak, że gdy podpisywanie uchwytów jest
+
+00:02:24.850 --> 00:02:26.720
+tu wywoływane i loguje się.
+
+00:02:26.840 --> 00:02:30.330
+Tak, jest wywoływane za pomocą skryptu DB.
+
+00:02:30.640 --> 00:02:36.060
+A potem, gdy pojawi się żądanie postu, funkcja zostanie uruchomiona ponownie.
+
+00:02:36.070 --> 00:02:38.330
+Więc znowu jest to funkcja wysokiego rzędu.
+
+00:02:38.440 --> 00:02:43.150
+Funkcja, która zwraca funkcję i odbiera odpowiedź żądania.
+
+00:02:44.790 --> 00:02:47.120
+Działa to w obie strony.
+
+00:02:47.130 --> 00:02:54.810
+Możesz to zrobić w ten sposób lub możemy to zrobić w ten sposób i jest to po
+
+00:02:55.080 --> 00:03:04.650
+prostu czystsze, ponieważ podczas uruchamiania tej funkcji, gdy tylko post zostanie trafiony za każdym razem, gdy użytkownik będzie świecił, automatycznie dodamy odpowiedź
+
+00:03:05.040 --> 00:03:08.230
+na żądanie do tego programu obsługi.
+
+00:03:08.230 --> 00:03:10.720
+A teraz o to chodzi.
+
+00:03:10.720 --> 00:03:11.520
+Obsługa logowania.
+
+00:03:11.530 --> 00:03:13.900
+Chcemy, aby było lepiej.
+
+00:03:14.110 --> 00:03:19.620
+Nie chcemy po prostu używać znaku i metod, które mamy przed wygenerowaniem tokena.
+
+00:03:19.630 --> 00:03:22.250
+Zmieńmy to na coś innego.
+
+00:03:22.390 --> 00:03:29.680
+Zmieńmy to na, powiedzmy, podpisanie uwierzytelnienia.
+
+00:03:29.840 --> 00:03:31.380
+Brzmi trochę bardziej oficjalne.
+
+00:03:32.520 --> 00:03:32.990
+DOBRZE.
+
+00:03:33.120 --> 00:03:34.560
+I jest uwierzytelnianie.
+
+00:03:34.570 --> 00:03:36.910
+Będziemy musieli stworzyć.
+
+00:03:36.930 --> 00:03:43.350
+Więc chodźmy do seinen podejrzany Tak i zaloguj się.
+
+00:03:43.410 --> 00:03:51.730
+Tak, zmieńmy teraz lub dodajmy podpisany certyfikat do uwierzytelniania, a to uwierzytelnianie będzie
+
+00:03:54.240 --> 00:03:59.320
+działało zgodnie z tym, co robił seinen.
+
+00:03:59.430 --> 00:04:05.370
+Otrzyma bazę danych i skrypt B z cegieł poprzez wtrysk zależności.
+
+00:04:05.370 --> 00:04:08.610
+Następnie otrzyma odpowiedź na żądanie, a następnie
+
+00:04:12.000 --> 00:04:14.640
+zrobi tu trochę rzeczy.
+
+00:04:15.820 --> 00:04:22.870
+Na razie jednak upewnijmy się, że eksportujemy tę nową funkcję zamiast logowania za pomocą uchwytów.
+
+00:04:23.030 --> 00:04:31.170
+I porozmawiajmy o tym, co zrobimy wewnątrz ciebie, jeśli zapamiętamy nasz diagram. Chcemy oczywiście sprawdzić hasła i
+
+00:04:31.680 --> 00:04:37.940
+wszystko, co sprawdzamy w bazie danych, i rób to, co robi seinen.
+
+00:04:38.010 --> 00:04:46.340
+Ale chcemy też wygenerować token JWT, jeśli wszystko się sprawdzi, a sposób, w jaki lubię pisać, to myśleć
+
+00:04:46.340 --> 00:04:49.220
+o tym, co robi funkcja.
+
+00:04:49.370 --> 00:04:52.090
+Napisz rzeczy za pomocą funkcji, które jeszcze nie istnieją.
+
+00:04:52.130 --> 00:04:54.750
+Możemy więc powoli to budować.
+
+00:04:55.900 --> 00:04:57.290
+Spróbujmy tutaj.
+
+00:04:57.340 --> 00:05:03.100
+Najpierw sprawdzimy, czy w tym przypadku chcemy mieć pewność, że przede
+
+00:05:03.100 --> 00:05:06.950
+wszystkim otrzymamy odpowiedź na żądanie od klienta.
+
+00:05:06.970 --> 00:05:19.280
+Sprawdźmy więc, czy pächter autoryzacji jest ustawiony przez klienta, ponieważ pamiętamy, że mogą wysyłać tokeny JWT
+
+00:05:19.280 --> 00:05:21.970
+w nagłówku autoryzacji.
+
+00:05:22.190 --> 00:05:24.690
+I nie martw się, zobaczymy, jak to się robi po stronie klienta.
+
+00:05:24.800 --> 00:05:31.400
+Ale chcemy to sprawdzić, ponieważ jeśli mają już ten token autoryzacji, nie powinni mieć możliwości ponownego zalogowania się,
+
+00:05:31.400 --> 00:05:37.570
+mogą po prostu iść do przodu i po prostu wejść na stronę, chwytając swój profil.
+
+00:05:37.640 --> 00:05:42.350
+Chodzi mi o to, że jednym z głównych powodów, dla których to robimy, jest to, że nie chcemy, aby użytkownik
+
+00:05:42.350 --> 00:05:43.330
+stale musiał to podpisywać.
+
+00:05:43.850 --> 00:05:50.610
+A tutaj powróćmy do myślenia lub mamy dwie opcje.
+
+00:05:50.620 --> 00:05:57.060
+Jedną z nich jest autoryzacja w nagłówkach i podpisywanie.
+
+00:05:57.510 --> 00:06:04.400
+Jeśli tak jest dobrze, to możemy powiedzieć coś w stylu "chwyć profil użytkownika", po prostu go nazwijmy.
+
+00:06:04.410 --> 00:06:12.790
+Zyskaj identyfikator tokena i jest to funkcja, która nie istnieje.
+
+00:06:13.060 --> 00:06:22.920
+Tak więc po prostu zostawię to tak, jak jest, i wydaje się, że po prostu wywołuje koncert,
+
+00:06:22.920 --> 00:06:32.870
+a otrzymasz token ID, a ta funkcja będzie głupią funkcją, która nie robi absolutnie nic poza wylogowaniem z konsoli.
+
+00:06:32.910 --> 00:06:39.170
+OK, powiedzmy to.
+
+00:06:39.260 --> 00:06:46.320
+Teraz mówimy, że mamy drugą opcję, drugą opcję jest, jeśli nie mają autoryzacji.
+
+00:06:46.520 --> 00:06:49.300
+Cóż, chcemy obsłużyć podpisanie.
+
+00:06:49.640 --> 00:06:57.250
+Więc jeszcze raz powiemy o obsłudze seinen i pamiętajmy, że seinen obsługi wymaga bazy danych
+
+00:06:57.250 --> 00:07:00.680
+jako obiektu zapytań i odpowiedzi kryptograficznych.
+
+00:07:01.190 --> 00:07:11.180
+Tak więc zamierzam wyrazić tę prośbę lub zacznijmy od obiektów B B Script request i response.
+
+00:07:11.360 --> 00:07:16.610
+A ponieważ nie jest to już funkcja wyższego rzędu, po prostu ją wywołujemy raz.
+
+00:07:16.820 --> 00:07:24.620
+Po prostu zmieńmy to z funkcji, która zwraca funkcję, aby po prostu dobrze funkcjonować w zwykły
+
+00:07:25.310 --> 00:07:26.090
+sposób.
+
+00:07:28.430 --> 00:07:30.850
+Dodajmy to do twojej linii, abyśmy mogli zobaczyć,
+
+00:07:34.100 --> 00:07:35.050
+co jest lepsze.
+
+00:07:35.050 --> 00:07:41.660
+Musimy więc mieć autoryzację w tym przypadku pobrać identyfikator automatyczny może i mam nadzieję złapać profil użytkownika.
+
+00:07:41.860 --> 00:07:46.950
+W przeciwnym razie chcemy obsługiwać seinen, który jest już domyślnie.
+
+00:07:47.260 --> 00:07:55.360
+Teraz tutaj, z seinen uchwytem, chciałbym przejść do ważnej koncepcji i właśnie
+
+00:07:55.720 --> 00:08:06.040
+zmieniliśmy obsługę rdzenia z domyślnego programu obsługi tego punktu końcowego na teraz posiadający znak i uwierzytelnienie.
+
+00:08:06.040 --> 00:08:12.630
+I kiedy robimy to mentalnie, aby uprościć rzeczy i uniknąć przyszłych błędów, chcę to powiedzieć.
+
+00:08:12.640 --> 00:08:13.160
+DOBRZE.
+
+00:08:13.210 --> 00:08:15.950
+Ponieważ jest to obsługa punktu końcowego.
+
+00:08:16.000 --> 00:08:22.400
+To powinno być rzeczą, która zwraca odpowiedź status 200 a Jaison.
+
+00:08:22.660 --> 00:08:30.910
+Nie chcemy, aby znak końca klamki zwracał odpowiedź kropka Jaison lub status odpowiedzi błędu 400, ponieważ jest
+
+00:08:31.120 --> 00:08:37.720
+to po prostu funkcja pomocnicza, którą teraz używamy w głównym programie obsługi.
+
+00:08:37.720 --> 00:08:43.030
+Jeśli z jakiegoś powodu pojawi się nowy programista i zobaczy to i powie "och, zwrócę
+
+00:08:43.030 --> 00:08:43.870
+tu odpowiedź".
+
+00:08:43.910 --> 00:08:48.960
+Cóż, będzie to błąd, ponieważ możemy wysłać wiele odpowiedzi.
+
+00:08:49.010 --> 00:08:55.310
+Tak więc lubię dbać o czystość rzeczy, a to, na czym polega rzeczywisty punkt końcowy, powinno być tym,
+
+00:08:55.310 --> 00:08:56.970
+które faktycznie zwraca odpowiedź.
+
+00:08:57.940 --> 00:09:01.530
+Teraz jest fajny sposób, żebyśmy mogli posprzątać.
+
+00:09:01.540 --> 00:09:08.350
+Wróćmy do znaku uchwytu i funkcjonujmy tutaj i zmieńmy wszystkie nasze odpowiedzi, aby po prostu
+
+00:09:08.740 --> 00:09:14.240
+zwrócić obietnicę, ponieważ na koniec dnia obsługa podpisywania jest rodzajem obietnicy obsługi.
+
+00:09:14.260 --> 00:09:20.890
+Robi bazę danych wybierając sprawdzanie bazy danych, która zwraca obietnicę, a ilekroć mamy jakąś
+
+00:09:20.890 --> 00:09:26.620
+funkcję, chcemy się upewnić, że pozostajemy zgodni, że funkcja powinna zawsze zwracać oczekiwane
+
+00:09:26.980 --> 00:09:27.910
+wyniki.
+
+00:09:28.180 --> 00:09:33.070
+I to jest coś, czego nauczyliśmy się wcześniej w tym kursie, że nie chcemy wysłać
+
+00:09:33.190 --> 00:09:34.190
+obietnicy ani strumienia.
+
+00:09:34.450 --> 00:09:40.090
+Chcemy trzymać się czegoś przewidywalnego, więc jeśli inna funkcja, na przykład znak i uwierzytelnienie,
+
+00:09:40.090 --> 00:09:46.930
+używa go dobrze, upewniamy się, że uwierzytelnianie logowania, ktokolwiek to pisze, nie musi martwić się o znak
+
+00:09:46.930 --> 00:09:52.540
+i funkcję uchwytu, którym możemy ufać, że działa i to tylko zwrot obietnicy.
+
+00:09:52.540 --> 00:09:59.260
+W porządku, zmieńmy to tak, abyśmy teraz otrzymali odpowiedź, która pochodzi z seinen uwierzytelniania i zmiany seinen,
+
+00:09:59.260 --> 00:10:04.750
+aby upewnić się, że nie robi żadnych odpowiedzi i po prostu zwraca obietnice.
+
+00:10:04.760 --> 00:10:12.230
+Teraz pierwszą rzeczą, którą zamierzam zrobić, to seinen, który musimy zwrócić klientowi na
+
+00:10:12.250 --> 00:10:13.030
+front.
+
+00:10:13.180 --> 00:10:16.260
+Tak wiele odpowiedzi, które odsyłają.
+
+00:10:16.720 --> 00:10:24.490
+Powiedzmy, że w tym miejscu dodam kropkę, a następnie seinen do obsługi, a może zachowam to w jednym wierszu, aby
+
+00:10:24.490 --> 00:10:26.080
+łatwiej było to zobaczyć.
+
+00:10:26.500 --> 00:10:33.310
+Tak więc uchwyt sygnalizuje, że będzie kropka, a następnie otrzyma użytkownika, jak widać tutaj.
+
+00:10:33.310 --> 00:10:40.760
+Zamierzamy zwrócić użytkownika stąd i temu użytkownikowi lub zostawmy na razie dane.
+
+00:10:42.120 --> 00:10:52.140
+Te dane będą na razie, po prostu zrób odpowiedź Daut Jaison i właśnie zwróciły dane.
+
+00:10:52.490 --> 00:11:01.350
+To jest użytkownik, którego jesteśmy zainteresowani iz jakiegoś powodu, jeśli to nie działa dobrze, możemy
+
+00:11:01.350 --> 00:11:09.830
+po prostu zrobić głupi połów, a ich zapasy gotówki otrzymają status odpowiedzi powietrznej.
+
+00:11:11.070 --> 00:11:18.120
+400 i na razie możemy po prostu oddać rzeczywiste powietrze.
+
+00:11:18.120 --> 00:11:19.400
+W porządku.
+
+00:11:19.570 --> 00:11:26.070
+Teraz, gdy wrócę tu teraz, musimy się upewnić, że znak z napisem "uchwyt" jest obietnicą,
+
+00:11:26.220 --> 00:11:32.160
+ponieważ podczas gdy my robimy 8. 10 połowów tu wracamy patrzymy na znak i funkcję uchwytu.
+
+00:11:32.250 --> 00:11:38.880
+Pierwszą rzeczą, którą zauważam, jest fakt, że jeśli nie podamy dobrego adresu e-mail i
+
+00:11:38.880 --> 00:11:43.310
+hasła, zwrócimy status Hodgin, którego nie chcemy robić.
+
+00:11:43.320 --> 00:11:50.880
+Być może zamiast tego chcemy odrzucić obietnicę, aby znalazła się tutaj w znaku dojścia.
+
+00:11:51.720 --> 00:12:02.490
+Zamierzam to zmienić zamiast statusu odpowiedzi na obiecujące odrzucenie kropki, które automatycznie odrzuca
+
+00:12:02.490 --> 00:12:05.320
+i zwraca obietnicę.
+
+00:12:05.340 --> 00:12:06.580
+Ładne i proste.
+
+00:12:06.930 --> 00:12:10.090
+Jeśli będziemy dalej schodzić tutaj, zobaczymy następny krok.
+
+00:12:10.170 --> 00:12:14.640
+W porządku, sprawdzamy tę bazę danych, ale w rzeczywistości nic nie zwracamy.
+
+00:12:14.640 --> 00:12:16.470
+Nie widzę słowa kluczowego return.
+
+00:12:16.520 --> 00:12:18.910
+Wracamy do środka, ale nie tutaj.
+
+00:12:18.990 --> 00:12:21.260
+I jest to powszechny błąd z obietnicami.
+
+00:12:21.280 --> 00:12:24.990
+Zawsze chcemy mieć pewność, że zwrócisz swoje obietnice.
+
+00:12:24.990 --> 00:12:29.390
+W naszym przypadku dodajmy tutaj słowo kluczowe return.
+
+00:12:29.400 --> 00:12:31.250
+Teraz zwracamy tę obietnicę.
+
+00:12:31.440 --> 00:12:34.220
+A kiedy wchodzimy w to, widzimy to.
+
+00:12:34.230 --> 00:12:34.480
+DOBRZE.
+
+00:12:34.500 --> 00:12:37.050
+Cóż, nie chcemy mieć odpowiedzi.
+
+00:12:37.050 --> 00:12:41.790
+Chcemy tylko zwrócić użytkownika i być może warto nawet
+
+00:12:41.790 --> 00:12:47.970
+zmienić nazwę, aby obsługiwać znak i ewentualnie sprawdzić hasło użytkownika lub coś podobnego.
+
+00:12:47.970 --> 00:12:56.760
+Na razie jednak, zmieńmy to na ładną, małą linijkę, lub chwyćmy to w ten sposób i zwróćmy
+
+00:12:57.750 --> 00:12:58.370
+użytkownika.
+
+00:12:58.420 --> 00:13:05.070
+Teraz pamiętaj, że zwraca tablicę użytkownika, w naszym przypadku jednego użytkownika, który wraca po sprawdzeniu hasła
+
+00:13:05.250 --> 00:13:07.760
+i e-maila, który wygląda nieco czystszy.
+
+00:13:08.030 --> 00:13:15.400
+A potem, aby złapać DOT, chcemy się upewnić, że zamiast statusu ponownie
+
+00:13:15.400 --> 00:13:18.920
+możemy po prostu powiedzieć obietnicę.
+
+00:13:19.000 --> 00:13:21.220
+Odrzucać.
+
+00:13:21.430 --> 00:13:27.160
+I jeszcze raz tutaj dla wszelkich błędów, które po prostu zrobimy, obiecuję nie odrzucać.
+
+00:13:27.490 --> 00:13:28.030
+W porządku.
+
+00:13:28.030 --> 00:13:34.450
+Więc bez względu na to, jaka funkcja powinna być teraz zwrot obietnicy teraz tak, że ze znakiem obsługi i
+
+00:13:34.450 --> 00:13:39.280
+możemy po prostu obsługiwać to tak, a następnie wyślij nam dane, które są użytkownik.
+
+00:13:39.310 --> 00:13:42.550
+W przeciwnym razie wykryjemy wszelkie otrzymane przez nas błędy.
+
+00:13:42.610 --> 00:13:48.580
+W naszym przypadku mogliśmy uzyskać referencje użytkownika Ron i właśnie zwróciliśmy odpowiedź Jaisona.
+
+00:13:48.880 --> 00:13:51.860
+Teraz chodźmy tutaj i przetestuj nasz kod.
+
+00:13:51.860 --> 00:13:54.830
+Napisaliśmy trochę kodu bez jego testowania.
+
+00:13:54.950 --> 00:14:02.830
+Więc wróćmy tutaj i wylogujmy się i przetestujmy z naszym dobrym starym przyjacielem kropkę. com lub osiem godzin dziennie i otwórz konsolę, upewnij
+
+00:14:03.570 --> 00:14:06.820
+się, że nie ma tu błędów.
+
+00:14:07.090 --> 00:14:09.040
+Po kliknięciu zalogowałem się.
+
+00:14:09.070 --> 00:14:10.950
+Dobrze spojrzeć na to Nigdzie.
+
+00:14:10.960 --> 00:14:12.960
+Nadal możemy się zalogować.
+
+00:14:13.030 --> 00:14:18.620
+Nie osiągnęliśmy absolutnie niczego pod względem funkcjonalności na frontowym końcu.
+
+00:14:18.760 --> 00:14:21.820
+Ale teraz mamy większą elastyczność.
+
+00:14:21.850 --> 00:14:29.280
+Nadal wracamy do użytkownika, gdy logują się do niego z bazy danych.
+
+00:14:29.560 --> 00:14:36.490
+Ale rozszerzyliśmy także teraz, gdy sprawdzamy nagłówki autoryzacji, a jeśli tak jest, możemy po
+
+00:14:36.580 --> 00:14:39.600
+prostu pobrać token autoryzacji Heidi.
+
+00:14:39.820 --> 00:14:47.190
+Teraz, gdy mamy to ustawione w następnym wideo, chcę wygenerować token JWT dla tego użytkownika.
+
+00:14:47.290 --> 00:14:51.640
+Jeśli jest to ich pierwsza loggia, nie mają tokena autoryzacyjnego.
+
+00:14:51.640 --> 00:15:00.970
+Chcę poradzić sobie z seinenem, chwytając użytkownika, ale także gdy zwrócę dane użytkownika, chcę również zwrócić token JWT, aby
+
+00:15:00.970 --> 00:15:06.570
+w przyszłych odwiedzinach nie musieli ponownie przechodzić przez ten krok.
+
+00:15:07.530 --> 00:15:08.160
+Zobaczę na tym.

@@ -1,0 +1,427 @@
+﻿WEBVTT
+
+00:00:01.160 --> 00:00:02.180
+Odprowadź ich z powrotem.
+
+00:00:02.290 --> 00:00:08.320
+Teraz, gdy mamy fajną ikonę profilu i ładne menu rozwijane, chcę się upewnić, że te rzeczy
+
+00:00:08.320 --> 00:00:08.840
+działają.
+
+00:00:08.860 --> 00:00:14.650
+Wypracujmy więc funkcję wylogowania i tego wideo, a także usuńmy to tutaj, ponieważ
+
+00:00:14.650 --> 00:00:16.720
+już tego nie potrzebujemy.
+
+00:00:16.720 --> 00:00:18.750
+Wróćmy do naszego centrum technicznego.
+
+00:00:18.910 --> 00:00:26.200
+Pierwszą rzeczą, której chcemy, jest funkcja zmiany drogi, którą już używamy w naszej aplikacji w
+
+00:00:26.200 --> 00:00:31.230
+naszym wylogowaniu tutaj i zmienmy się, aby wylogować się idealnie.
+
+00:00:31.860 --> 00:00:39.550
+I tutaj, jeśli wrócimy do naszej nawigacji, zobaczymy, że wszystkie te trasy mają propozycję zmiany trasy, którą otrzymujemy
+
+00:00:39.640 --> 00:00:43.980
+z aplikacji i która po prostu zmienia trasę dla nas.
+
+00:00:45.480 --> 00:00:47.450
+Chwyćmy zmianę trasy.
+
+00:00:47.460 --> 00:00:49.090
+Załóżmy, że otrzymujemy to jako rekwizyty.
+
+00:00:49.110 --> 00:01:01.030
+Popracujemy trochę nad tym i powiemy, że to Daut prop lub musimy faktycznie mieć funkcję enklawy i ta funkcja unclick
+
+00:01:01.810 --> 00:01:10.390
+będzie miała te dobrane rekwizyty zaczynające się od zmiany wiersza wywołanej z wylogowaniem, ponieważ
+
+00:01:10.390 --> 00:01:17.270
+chcemy zarejestruj się i my również musimy teraz przekazać tę propp.
+
+00:01:17.310 --> 00:01:23.970
+Wróćmy więc do naszej nawigacji i tutaj możemy to zmienić.
+
+00:01:23.970 --> 00:01:31.830
+Możemy całkowicie usunąć tekst, który się wypisał, ponieważ nie jest nam potrzebny, ale chcemy, aby
+
+00:01:31.830 --> 00:01:34.850
+działała tutaj funkcja zmiany drogi.
+
+00:01:34.920 --> 00:01:42.060
+Przełóżmy więc zmianę trasy na profil, tak jak teraz, ponieważ mamy już do niej
+
+00:01:42.060 --> 00:01:51.430
+dostęp i nawigację, i po prostu całkowicie wymazujemy prędkość, pozwalając mi zaoszczędzić, wracając i mamy tu trochę problemu, a
+
+00:01:59.030 --> 00:02:06.490
+to dlatego, że jeśli przejdź do naszej ikony profilu Mogę po prostu zadzwonić do
+
+00:02:06.760 --> 00:02:08.770
+tego wewnątrz funkcji.
+
+00:02:08.770 --> 00:02:12.240
+Mam jeszcze dwa wewnątrz kliknięcia.
+
+00:02:12.280 --> 00:02:13.330
+Muszę
+
+00:02:16.730 --> 00:02:24.110
+faktycznie przypisać funkcję, aby po kliknięciu funkcja działała nie tylko natychmiast po uruchomieniu.
+
+00:02:24.110 --> 00:02:30.330
+W porządku, powiedzmy, że wracamy do tego szybko.
+
+00:02:30.340 --> 00:02:30.620
+Pośpiech.
+
+00:02:30.620 --> 00:02:31.190
+Idealny.
+
+00:02:31.190 --> 00:02:35.860
+Jeśli kliknę przycisk wyloguj się, wyloguj się.
+
+00:02:35.880 --> 00:02:36.640
+To cudownie.
+
+00:02:36.860 --> 00:02:39.630
+Teraz jest kilka rzeczy, które tutaj dostrzegam.
+
+00:02:39.650 --> 00:02:44.260
+Jednym z nich jest to, że moje menu rozwijane jest trochę tutaj.
+
+00:02:44.270 --> 00:02:45.950
+Musimy dostosować VSS.
+
+00:02:45.980 --> 00:02:49.220
+A także kiedy się wyloguję, nie chcę iść na stronę rejestru.
+
+00:02:49.250 --> 00:02:55.640
+Chcę iść do znaku i strona najpierw to załatwmy.
+
+00:02:55.670 --> 00:03:02.570
+Chcemy zrobić, jeśli pójdziemy do aplikacji, którą J. S. Zobaczymy, czy uda mi się go znaleźć, czy
+
+00:03:04.090 --> 00:03:09.260
+też pójdziemy na górę i na zmianę drogi, jeśli przewijamy w dół, widzimy, że jest to bardzo prosty router.
+
+00:03:09.430 --> 00:03:19.060
+Kiedy wylogowujemy się, ustawiamy stan na stan początkowy, w którym to przypadku jest to nasze wylogowanie lub w
+
+00:03:19.060 --> 00:03:24.980
+naszym przypadku jest to dom, który zmieniamy tylko w celu przeniesienia.
+
+00:03:27.450 --> 00:03:29.250
+Istnieje wiele sposobów, aby to naprawić.
+
+00:03:29.250 --> 00:03:32.100
+Przede wszystkim ta logika routingu mogłaby zostać ulepszona.
+
+00:03:32.100 --> 00:03:37.980
+Widzimy, że faktycznie mamy tę samą trasę, która mówi stan do stanu początkowego, a
+
+00:03:37.980 --> 00:03:39.250
+następnie, ponieważ trwa.
+
+00:03:39.330 --> 00:03:48.510
+Prowadzi ona również trasę do ustawienia trasy, którą do tej pory przejedziemy w naszym przypadku, ponieważ przejeżdżamy
+
+00:03:48.510 --> 00:03:55.900
+trasę wyjazdu i jeśli przewijamy tutaj, mamy znak trasy i to właśnie sprawdzamy.
+
+00:03:55.920 --> 00:03:59.150
+W takim przypadku otrzymamy podpis i inaczej otrzymamy rejestr.
+
+00:03:59.160 --> 00:04:05.600
+Cóż, logika tutaj jest trochę krótka, ale szybka naprawa, którą moglibyśmy chcieć tutaj dodać możemy dodać tutaj faktyczną
+
+00:04:05.600 --> 00:04:11.790
+logikę, więc może jeśli jest to znak, czy najgłośniejszy znak możemy po prostu przejść do znaku i
+
+00:04:12.360 --> 00:04:17.940
+strony, albo możemy po prostu po prostu zadzwoń tutaj, abyśmy nawet nie zaktualizowali trasy.
+
+00:04:17.970 --> 00:04:25.050
+Zaraz po wylogowaniu dojdziemy do stanu początkowego, który w naszym przypadku będzie oznaczał stronę
+
+00:04:25.050 --> 00:04:25.600
+logowania.
+
+00:04:25.620 --> 00:04:30.560
+A to nigdy nie będzie się nazywać Oszczędzajmy i po prostu przetestujmy to.
+
+00:04:32.100 --> 00:04:40.190
+Zamierzam zmienić trasę do tego, co mieliśmy, przed którym był znak i wszystkie zmiany zostały
+
+00:04:40.190 --> 00:04:41.490
+również podpisane.
+
+00:04:41.660 --> 00:04:44.810
+Wracam, zrobię to.
+
+00:04:44.810 --> 00:04:51.170
+Hej, wrzuć kropkę i zauważ, że moja kariera stylizacji znowu się zmieniła z powodu pasków do
+
+00:04:51.170 --> 00:04:55.550
+bootowania, coś, co będzie musiało naprawić. Jestem podpisany w pliku.
+
+00:04:55.550 --> 00:04:58.800
+Kliknij tutaj i wyloguj się.
+
+00:04:58.850 --> 00:04:59.500
+Idealny.
+
+00:04:59.510 --> 00:05:02.460
+Jestem Allenem na stronie logowania.
+
+00:05:02.520 --> 00:05:03.150
+W porządku.
+
+00:05:03.150 --> 00:05:07.160
+Wiesz w tym roku, że mamy inny problem z formularzem.
+
+00:05:07.440 --> 00:05:11.100
+To trochę trudne, bo dlaczego tak się dzieje.
+
+00:05:11.100 --> 00:05:19.170
+Kładziemy nasze style po bootstrapie w naszym halsie Kyon's, a nasz indeks Nazi SS jest po bootstrapie. Ale to jest
+
+00:05:19.170 --> 00:05:21.270
+zabawne, co się naprawdę dzieje.
+
+00:05:21.270 --> 00:05:23.600
+I kolejny powód, dla którego chcesz zachować ostrożność.
+
+00:05:23.600 --> 00:05:26.190
+Wszystko, co możesz przenieść do swojego projektu.
+
+00:05:26.310 --> 00:05:30.920
+Jeśli tutaj przewińę, widzę, że podczas
+
+00:05:33.870 --> 00:05:44.020
+gdy tutaj tło jest przezroczyste, jeśli przewińę w dół i przełączę, zobaczy, że na to popatrz.
+
+00:05:44.500 --> 00:05:51.730
+To jest teraz, kiedy chcemy wyjść z naszych rzeczy, ale ktoś nazywa tło przezroczystym z ważną
+
+00:05:51.730 --> 00:05:52.640
+klasą.
+
+00:05:53.050 --> 00:05:54.180
+A jeśli kliknę
+
+00:05:56.960 --> 00:05:58.990
+tutaj, to wygląda jak ten tekst CSSA.
+
+00:05:59.060 --> 00:06:01.110
+O tak, to jest bootstrap.
+
+00:06:01.280 --> 00:06:07.360
+Tak więc bootstrap automatycznie przypisuje ważne, ale nie miejsce.
+
+00:06:07.730 --> 00:06:13.650
+Wróćmy do bootstrapu elementu inspect.
+
+00:06:13.660 --> 00:06:19.330
+Automatycznie przypisuje ważną flagę, która ponownie zastępuje wszystkie C S.
+
+00:06:19.520 --> 00:06:20.240
+Gdzie jesteśmy.
+
+00:06:20.240 --> 00:06:21.190
+Wróćmy, aby przewinąć
+
+00:06:24.670 --> 00:06:26.080
+w górę i oto jest.
+
+00:06:28.600 --> 00:06:31.200
+Widzisz tutaj, że nie czyta się.
+
+00:06:31.340 --> 00:06:37.900
+Chociaż mamy z Kyon, a zamiast tego jest on zapisywany nadpisany przez tę samą klasę
+
+00:06:37.990 --> 00:06:39.480
+w klasie bootstrap.
+
+00:06:39.520 --> 00:06:48.180
+Znów kolejny powód, dla którego chcesz trzymać się zwykle z biblioteką VSS, ponieważ nigdy nie wiesz, co
+
+00:06:48.180 --> 00:06:48.880
+robią.
+
+00:06:49.710 --> 00:06:54.570
+Naprawmy to bardzo szybko, ponieważ lubię czarne tło, które mieliśmy.
+
+00:06:56.330 --> 00:07:03.800
+A prostą poprawką, jaką możemy zrobić, to może dla seinen możemy stworzyć nowy plik, do którego
+
+00:07:04.000 --> 00:07:15.040
+zadzwonimy, aby zapisać się w kropce C Ss i możemy po prostu nadpisać wszystko, więc nazwijmy to po prostu czarnym na hover, a powiemy, że
+
+00:07:15.040 --> 00:07:17.880
+to jest zawsze, gdy się unosi.
+
+00:07:17.890 --> 00:07:21.140
+Chcę, aby kolor tła
+
+00:07:25.460 --> 00:07:27.450
+był czarny.
+
+00:07:27.460 --> 00:07:33.440
+Teraz Bruce Shepp nadal będzie to przesłonił, ponieważ ma ważną flagę, więc możemy dodać naszą własną
+
+00:07:33.440 --> 00:07:36.060
+flagę mówiąc, że jest to ważne.
+
+00:07:36.060 --> 00:07:37.730
+Teraz ostrzegam cię tutaj.
+
+00:07:37.910 --> 00:07:43.820
+Jest to tylko do celów demonstracyjnych, na wypadek gdybyś doświadczył czegoś podobnego, co często się zdarza,
+
+00:07:43.820 --> 00:07:48.110
+gdy miksujesz i dopasowuję. Osobiście nigdy nie lubię tego używać.
+
+00:07:48.130 --> 00:07:51.060
+Jeśli używasz tego, coś jest nie tak.
+
+00:07:51.060 --> 00:07:52.930
+Może są lepsze sposoby na zrobienie tego.
+
+00:07:52.930 --> 00:07:58.870
+W naszym przypadku może zamiast używać Buscema możemy zrobić coś innego, aby nie zastąpić wszystkich naszych stylów
+
+00:07:58.900 --> 00:08:01.760
+lub nie używać halsowania Collinsa i bootstrapu.
+
+00:08:02.230 --> 00:08:10.310
+Ale na razie mamy ten blok Hover, który możemy zastosować do każdej z naszych klas, w
+
+00:08:10.310 --> 00:08:21.060
+naszym przypadku możemy przejść do rejestru lub zalogować się, a w znaku możemy po prostu mieć klasę, którą dodajemy do wszystkich naszych
+
+00:08:21.060 --> 00:08:22.110
+danych wejściowych.
+
+00:08:22.290 --> 00:08:24.440
+Mamy już wiele stylów CSSA.
+
+00:08:24.480 --> 00:08:26.830
+I powinniśmy KPRC SSL.
+
+00:08:26.940 --> 00:08:29.130
+Pójdźmy za pomocą bloku Hover
+
+00:08:32.000 --> 00:08:34.770
+Clott, aby usłyszeć, jakie inne narzuciliśmy, jakie mamy.
+
+00:08:35.090 --> 00:08:38.090
+Mamy ten tutaj.
+
+00:08:38.360 --> 00:08:40.520
+Oszczędzajmy, wróć,
+
+00:08:43.780 --> 00:08:46.870
+o co tu tęsknię.
+
+00:08:46.990 --> 00:08:55.230
+Wróćmy, a to dlatego, że musimy zaimportować nasz plik CSSA, który właśnie utworzyliśmy.
+
+00:08:56.330 --> 00:09:01.810
+Więc znowu większość podpisuje ocenę Daut see.
+
+00:09:01.850 --> 00:09:06.080
+Więc przetestujmy to, obejrzyjmy to.
+
+00:09:06.210 --> 00:09:08.960
+Mamy ustawione tło.
+
+00:09:09.000 --> 00:09:11.220
+Możemy zrobić to samo dla rejestru.
+
+00:09:11.220 --> 00:09:13.530
+Widzimy, że wciąż jest to dotknięte.
+
+00:09:13.620 --> 00:09:16.480
+Ale to jest coś, co możesz zrobić w swoim własnym czasie.
+
+00:09:16.530 --> 00:09:20.950
+Przepisaliśmy fryzury.
+
+00:09:20.980 --> 00:09:25.720
+W porządku, więc teraz, kiedy to wszystko zrozumieliśmy, wróćmy, żeby trochę posprzątać.
+
+00:09:27.400 --> 00:09:30.820
+Zamierzam uprowadzić Yes wszystkie nasze ubrania, niektóre z
+
+00:09:35.070 --> 00:09:42.800
+tych zakładek i pójść do naszego domu i jest podpisany zgodnie z prawdą, abyśmy mogli się z tym bawić.
+
+00:09:42.900 --> 00:09:45.030
+Jeśli tam wrócę, idziemy.
+
+00:09:45.060 --> 00:09:50.080
+Myślę, że ostatnią poprawką, jaką chcemy zrobić, jest takie ustawienie pudełka.
+
+00:09:50.100 --> 00:09:52.070
+Naprawmy to.
+
+00:09:52.250 --> 00:09:58.370
+I to jest naprawdę fajna mała poprawka, którą możemy zrobić ponownie, jeśli przejdziemy do profilu.
+
+00:09:58.670 --> 00:10:06.080
+Na szczęście dla nas z menu rozwijanego jest atrybut, którego możemy użyć ponownie, jeśli
+
+00:10:06.500 --> 00:10:09.180
+wrócimy do naszej pułapki re-act.
+
+00:10:09.340 --> 00:10:13.710
+Mamy pozycję let's see, która znajduje się w prawym dolnym
+
+00:10:17.350 --> 00:10:24.400
+rogu i możesz zobaczyć tutaj, że możesz dopasowywać elementy w zależności od tego, jak chcesz je
+
+00:10:24.400 --> 00:10:24.980
+mieć.
+
+00:10:25.000 --> 00:10:29.210
+W naszym przypadku chcemy użyć właściwego atrybutu.
+
+00:10:29.420 --> 00:10:35.720
+Mogę więc wrócić tutaj i po prostu zachować spójność, aby Klaas trzymał podwójne cytaty, tak jak
+
+00:10:35.720 --> 00:10:36.590
+tutaj mamy.
+
+00:10:36.620 --> 00:10:38.330
+Mimo że możesz używać obu.
+
+00:10:38.330 --> 00:10:45.500
+Dodajmy tutaj odpowiedni atrybut, który ma 3. x chape.
+
+00:10:45.540 --> 00:10:46.320
+Jeśli
+
+00:10:49.250 --> 00:10:52.920
+wrócę, to osiem. Mamy wszystko, co dobre i działa.
+
+00:10:52.920 --> 00:10:56.150
+Myślę, że nadszedł czas dla nas, ponieważ nasz znak działa na naszą funkcjonalność.
+
+00:10:56.220 --> 00:10:58.580
+Czas zbudować nasz profil.
+
+00:10:58.690 --> 00:10:59.810
+To będzie zabawne.
+
+00:11:00.090 --> 00:11:01.190
+Zobaczę w tym.
+
+00:11:01.570 --> 00:11:01.860
+Lecz przez.

@@ -1,0 +1,430 @@
+﻿WEBVTT
+
+00:00:01.040 --> 00:00:05.590
+Witamy ponownie wracamy do naszego diagramu ścieżki renderowania krytycznego.
+
+00:00:05.600 --> 00:00:07.730
+To powoli zaczęło mieć sens.
+
+00:00:07.760 --> 00:00:11.000
+Rozmawialiśmy o shemale i CSSA.
+
+00:00:11.000 --> 00:00:17.730
+Teraz porozmawiamy trochę o javascript i zanim dostanie się do renderowanego drzewa,
+
+00:00:17.990 --> 00:00:27.150
+teraz z shemale i CSSA, myślę, że javascript jest prawdopodobnie gorszy, ponieważ może uzyskać dostęp i
+
+00:00:27.270 --> 00:00:31.300
+zmienić zarówno DOM, jak i CSSA.
+
+00:00:31.330 --> 00:00:39.700
+Oznacza to, że po wykryciu shemale skryptu NDA konstrukcja DOM zostaje wstrzymana, a skrypt
+
+00:00:39.760 --> 00:00:42.220
+jest żądany z serwera.
+
+00:00:43.130 --> 00:00:50.240
+Tak więc bez względu na to, co robimy w mailu Hoopes, widzimy plik skryptu, który musimy
+
+00:00:50.240 --> 00:00:52.430
+pobrać po załadowaniu skryptu.
+
+00:00:52.430 --> 00:00:58.280
+Nie można go wykonać, zanim wszystkie SS będą również szybkie.
+
+00:00:59.310 --> 00:01:02.040
+A C Ss Dom jest skonstruowany po
+
+00:01:04.630 --> 00:01:07.990
+tym, jak CEA mówi, że konstruowany jest obiektowy model dokumentu.
+
+00:01:07.990 --> 00:01:18.200
+JavaScript jest wykonywany i tak, jak można sobie wyobrazić, JavaScript może i może uzyskać dostęp do Dom, jak również zapory
+
+00:01:18.210 --> 00:01:21.280
+CSSA i może go zmienić.
+
+00:01:23.140 --> 00:01:29.140
+I tylko raz, gdy to zrobisz, strona może być ostatecznie renderowana poprzez przejście do
+
+00:01:29.140 --> 00:01:31.360
+renderowanego układu drzewa i malowanie.
+
+00:01:31.530 --> 00:01:38.780
+I dlatego właśnie nazwaliśmy javascript blokowaniem parsera, pamiętając o kodzie alertu, który napisaliśmy wcześniej,
+
+00:01:38.790 --> 00:01:44.520
+gdy mieliśmy tag skryptu z ostrzeżeniem i całkowicie zablokował on stronę.
+
+00:01:44.620 --> 00:01:49.810
+Teraz z javascript możemy zrobić kilka rzeczy, aby go zoptymalizować.
+
+00:01:49.810 --> 00:01:51.050
+Zacznijmy od pierwszego.
+
+00:01:51.130 --> 00:01:55.770
+Ładowanie asynchronicznie skryptów, aby pomóc w tym.
+
+00:01:55.810 --> 00:01:59.470
+Życzymy miłego małego diagramu dla nas.
+
+00:01:59.520 --> 00:02:03.080
+Być może widziałeś najczęstszy sposób posiadania znaczników skryptu.
+
+00:02:03.090 --> 00:02:07.150
+Tak, po prostu scenariusz, kiedy Schmall zaczyna czytać.
+
+00:02:07.260 --> 00:02:15.680
+Co oznacza parsowanie pliku, w którym napotkasz skrypt, a ten znacznik skryptu musi zostać pobrany,
+
+00:02:15.680 --> 00:02:19.210
+co blokuje zobaczenie całego parsowania.
+
+00:02:19.250 --> 00:02:27.240
+Musi również zostać wykonany, co blokuje strumień analizowania, a następnie, gdy to
+
+00:02:27.410 --> 00:02:31.720
+zrobi, Schimmel powraca do przetworzenia.
+
+00:02:31.720 --> 00:02:38.470
+Teraz mamy dwie nowe właściwości, które możemy dodać do naszych znaczników skryptu, aby zmienić to zachowanie, a
+
+00:02:38.470 --> 00:02:39.760
+pierwsze to asynchronizacja.
+
+00:02:39.790 --> 00:02:44.710
+A więc ładowanie skryptów asynchronicznie i to prawda.
+
+00:02:44.730 --> 00:02:45.660
+To bardzo proste.
+
+00:02:45.660 --> 00:02:53.110
+Jedyne, co możemy zrobić, to dodać ten atrybut do naszego skryptu X, używając asynchronizacji, możemy powiedzieć
+
+00:02:53.110 --> 00:02:58.330
+przeglądarce, aby kontynuowała i pobrać plik javascript z innym wątkiem.
+
+00:02:58.330 --> 00:03:04.330
+Pomyśl o wątku jako o osobie wykonującej pracę, którą może wykonać tylko jedna rzecz na raz.
+
+00:03:04.960 --> 00:03:13.030
+Z async możemy powiedzieć hej do innego pracownika, podczas gdy pracuję nad tym parsowaniem można
+
+00:03:13.480 --> 00:03:22.100
+pobrać plik javascript i ten plik javascript jest teraz pobierany na niskim priorytecie, ale nie blokuje reszty
+
+00:03:22.190 --> 00:03:27.730
+strony ładowanie i jako wkrótce po zakończeniu pobierania zostanie wykonane.
+
+00:03:27.760 --> 00:03:33.120
+Ta część nadal blokuje analizę Shyamala.
+
+00:03:33.140 --> 00:03:35.070
+Teraz jest pewien haczyk.
+
+00:03:35.070 --> 00:03:40.810
+Oznacza to, że może on zostać uruchomiony w dowolnym momencie, w którym wymienione są dwa oczywiste problemy.
+
+00:03:40.810 --> 00:03:46.590
+Najpierw wykonaj exeve długo po tym, jak strona się załaduje.
+
+00:03:46.600 --> 00:03:54.250
+Na przykład, aby znaleźć się na tym skrypcie asynchronicznym, aby zrobić coś z naszym doświadczeniem,
+
+00:03:54.250 --> 00:03:57.670
+możemy dać naszym użytkownikom optymalne wrażenia.
+
+00:03:57.730 --> 00:04:06.070
+Po drugie, jeśli zdarzy się, że wykonamy, zanim strona się załaduje. Nie możemy przewidzieć, czy potrzebujemy dostępu
+
+00:04:06.070 --> 00:04:08.590
+do domeny lub niektórych elementów.
+
+00:04:08.680 --> 00:04:16.300
+Jeśli zacznie robić jakąś manipulację DOM bez faktycznego istnienia Dom, możemy uzyskać pewne błędy.
+
+00:04:17.350 --> 00:04:21.080
+Oto reguła z asynchronizacją skryptów.
+
+00:04:22.640 --> 00:04:28.670
+Dodaj je do wszystkiego, co nie ma wpływu na model obiektu DOM lub CSSA.
+
+00:04:28.820 --> 00:04:36.020
+Tak więc async powinien być używany praktycznie dla wszystkich zewnętrznych skryptów, które nie wymagają znajomości naszego kodu i nie są
+
+00:04:36.050 --> 00:04:38.920
+tak naprawdę niezbędne dla naszego doświadczenia użytkownika.
+
+00:04:38.920 --> 00:04:45.920
+Możesz myśleć o tym jako o skryptach Google Analytics lub skryptach śledzenia.
+
+00:04:45.960 --> 00:04:50.240
+Teraz jest druga opcja i znowu wracamy do naszego punktu tutaj.
+
+00:04:50.400 --> 00:04:57.050
+Inną opcją z javascript jest to, że możemy odłożyć ładowanie skryptów i odłożyć ładowanie skryptów.
+
+00:04:57.050 --> 00:05:05.680
+Ponownie jest prosty z tym jednym odroczeniem atrybutu jest bardzo podobny do asynchronizmu, ponieważ nie blokuje ładowania naszej
+
+00:05:05.680 --> 00:05:06.370
+strony.
+
+00:05:06.370 --> 00:05:16.670
+Jednak będzie czekać na wykonanie, dopóki nie zostanie przeanalizowany, a my wykonamy w kolejności pojawienia się.
+
+00:05:18.070 --> 00:05:25.070
+Jak widać tutaj, zaczekać, aż shemale zostanie całkowicie sparsowane, a następnie zacznie działać.
+
+00:05:25.080 --> 00:05:34.270
+Teraz jest to naprawdę dobra opcja dla skryptów, które będą działały na renderowanym drzewie lub domie, ale
+
+00:05:34.510 --> 00:05:40.470
+nie są również ważne do wczytania. Może powyższa zawartość jest zwinięta.
+
+00:05:41.820 --> 00:05:45.870
+Oto moja reguła dotycząca używania asynchronizacji i odraczania.
+
+00:05:46.230 --> 00:05:53.970
+Jeśli podstawowa funkcjonalność wymaga javascript, a async jest najlepsza, jeśli podstawowa funkcjonalność nie wymaga
+
+00:05:53.970 --> 00:06:00.370
+javascript, to javascript powinien zostać odroczony poza krytyczną ścieżkę renderowania.
+
+00:06:00.870 --> 00:06:04.950
+Twoje krytyczne skrypty powinny być tutaj.
+
+00:06:04.950 --> 00:06:08.770
+Skrypty stron trzecich, które nie mają wpływu na DOM.
+
+00:06:08.770 --> 00:06:16.650
+Ona będzie tutaj, a wszelkie scenariusze stron trzecich, które nie są tak ważne, nie są widoczne na ekranie.
+
+00:06:16.690 --> 00:06:19.130
+Powinien używać differe.
+
+00:06:19.300 --> 00:06:22.100
+Spójrzmy na inne opcje.
+
+00:06:22.230 --> 00:06:28.060
+Możemy zminimalizować manipulacje Dohm i uniknąć długiego uruchamiania Javascript.
+
+00:06:28.200 --> 00:06:30.700
+Warto więc posłużyć się przykładem, aby to pokazać.
+
+00:06:34.350 --> 00:06:37.560
+Podnieśliśmy nieco naszą stronę.
+
+00:06:37.680 --> 00:06:47.600
+Tym razem dodaliśmy przycisk z czerwoną czcionką i uroczy mały obrazek oraz plik tutaj ponownie.
+
+00:06:47.710 --> 00:06:53.600
+To całkiem podstawowy plik, mamy teraz nowy tag obrazu i mamy kilka skryptów.
+
+00:06:53.620 --> 00:06:59.410
+I nie martw się, dam ci dostęp do wszystkich tych plików na końcu sekcji, abyś mógł także zacząć
+
+00:06:59.530 --> 00:07:00.070
+ćwiczyć.
+
+00:07:01.490 --> 00:07:09.140
+Teraz w tagach skryptu widzimy, że mamy kilka rzeczy, o których będziemy mówić, to
+
+00:07:09.140 --> 00:07:11.900
+pierwszy, który jest skryptem wbudowanym.
+
+00:07:12.350 --> 00:07:20.000
+A ten skrypt działa po prostu chwytając przycisk na naszej stronie i dodaje kolor stylu czerwony Zobaczmy, co się
+
+00:07:20.000 --> 00:07:20.820
+tutaj stanie.
+
+00:07:21.820 --> 00:07:31.400
+Kiedy odświeżam stronę i patrzę na przycisk tutaj, ponieważ odświeżam zbyt intensywne odświeżanie.
+
+00:07:31.400 --> 00:07:32.550
+Tutaj jesteś.
+
+00:07:33.140 --> 00:07:36.970
+Widzisz, że przycisk jest
+
+00:07:40.020 --> 00:07:51.660
+zawsze czytany i nie ma sensu, jeśli usunę to, powiedzmy, że to będzie domyślnie czarne,
+
+00:07:51.750 --> 00:07:57.180
+ponieważ javascript zostanie wykonany przed drzewem renderowania.
+
+00:07:57.270 --> 00:08:04.660
+Tak jak tutaj, jeśli pamiętamy, nasz diagram chce załadować nasz javascript.
+
+00:08:04.930 --> 00:08:11.430
+Będzie czytać przeglądarki, które będą czytać w środku i sprawdzać, czy musi załadować więcej rzeczy.
+
+00:08:11.480 --> 00:08:20.030
+Tak więc możesz sobie wyobrazić, jeśli modyfikujesz dom lub zmieniasz style, które są dodatkowymi
+
+00:08:20.030 --> 00:08:24.430
+czynnościami, które przeglądarka musi wykonać, aby renderować.
+
+00:08:24.470 --> 00:08:27.310
+Rzućmy okiem na te inne pliki skryptów, które mam tutaj.
+
+00:08:30.230 --> 00:08:37.920
+Jest to pierwszy plik skryptu, który dotyczy kilku detektorów zdarzeń dla jednego z załadowanych
+
+00:08:38.460 --> 00:08:41.920
+treści Dom, a drugi dla obciążenia.
+
+00:08:42.010 --> 00:08:47.450
+Wyjaśnię, co one robią, a potem wreszcie mamy ten skrypt.
+
+00:08:48.670 --> 00:08:51.510
+Na razie spójrzmy tylko na ten plik skryptu.
+
+00:08:51.580 --> 00:09:01.060
+Zamierzam skomentować skrypty 2 i 3 i chcę otworzyć tutaj kartę dewelopera i zamierzam odświeżyć Zobaczmy, co
+
+00:09:01.060 --> 00:09:02.020
+się
+
+00:09:05.600 --> 00:09:07.060
+tutaj właśnie wydarzyło.
+
+00:09:08.400 --> 00:09:18.790
+Mamy ten skrypt do jednego z Domów w pełni załadowanych i przeanalizowanych, a na końcu wszystkie zasoby zostały załadowane.
+
+00:09:18.870 --> 00:09:29.490
+Jeśli spojrzymy na nasz plik, nazwaliśmy ten tajny plik, co się stało tutaj pierwszy dziennik konsoli.
+
+00:09:29.490 --> 00:09:40.230
+Jest to skrypt, który pierwszy został wywołany zanim Dom Cantet został załadowany przed załadowaniem strony, więc przeglądarka sprawdza skrypty, aby upewnić
+
+00:09:40.470 --> 00:09:45.210
+się, że ma wszystko, czego potrzebuje do zbudowania strony.
+
+00:09:45.750 --> 00:09:53.870
+Jeśli otworzymy tu kartę Sieć i ponownie się odświeżam, widzę, że niebieska linia, która jest tutaj,
+
+00:09:54.560 --> 00:10:02.240
+to załadowana zawartość DOM, która zajęła 14 milisekund dość szybko i która mówi, że został
+
+00:10:02.240 --> 00:10:04.720
+załadowany model obiektu dokumentu.
+
+00:10:05.030 --> 00:10:11.660
+A następnie w końcu ładowanie, które jest czerwoną linią, mówi, że cała treść
+
+00:10:11.780 --> 00:10:19.290
+na stronie zawierająca ten obraz została załadowana tak ze względu na sposób działania krytycznej ścieżki renderowania.
+
+00:10:19.790 --> 00:10:29.410
+Co się dzieje, jest to, że czytamy plik javascript budujący drzewo DOM.
+
+00:10:29.830 --> 00:10:37.960
+W końcu skończyłem ją budować, a na końcu skończyłem ładowanie wszystkich skryptów lub
+
+00:10:37.960 --> 00:10:41.560
+wszystkich plików, w tym obrazu.
+
+00:10:41.590 --> 00:10:48.340
+Więc jeśli przejdziemy do naszego skryptu i piszemy trzy, jak widać, bardzo proste logi konsoli.
+
+00:10:48.490 --> 00:11:00.280
+Jeśli dodam je do naszej strony i odświeżam to przejdź do konsoli i widzimy, że mamy 1 2 trzy w
+
+00:11:00.300 --> 00:11:10.280
+pełni załadowane i parsowane wszystkie zasoby zakończone ładowaniem i dla zabawy tutaj dodajmy asynchroniczny atrybut do
+
+00:11:10.310 --> 00:11:11.470
+skryptu.
+
+00:11:11.630 --> 00:11:24.880
+Jeśli odświeżę spójrz na ten asynchroniczny lub asynchronicznie pobrany skrypt, teraz ładuje się po pełnym załadowaniu modelu DOM, ponieważ nie jest
+
+00:11:24.880 --> 00:11:27.260
+on już blokowany.
+
+00:11:27.730 --> 00:11:29.120
+Bardzo bardzo fajne.
+
+00:11:32.660 --> 00:11:33.130
+W porządku.
+
+00:11:33.230 --> 00:11:40.040
+Ostatnią rzeczą, którą wam pokażę, jest unikanie długiego kodu Javascript i jest to coś, o czym
+
+00:11:40.070 --> 00:11:44.830
+będziemy mówić w części drugiej, gdy mówimy o optymalizacji kodu.
+
+00:11:44.870 --> 00:11:49.470
+Chcę ci pokazać jeden punkt, jeśli wrócimy do naszego kodu tutaj.
+
+00:11:49.690 --> 00:11:59.410
+Mam skrypt piszący, a ten skrypt dodaje po prostu kliknięcie Lessner zdarzenia, które ma kliknięcie stop kliknij
+
+00:11:59.470 --> 00:12:02.490
+i pozwól mi pokazać dlaczego.
+
+00:12:02.490 --> 00:12:08.700
+Długie uruchamianie plików JavaScript lub uruchamianie plików javascript nie jest dobrym pomysłem.
+
+00:12:09.120 --> 00:12:18.780
+Widzisz, że ta strona nie jest zbyt obciążona, po prostu przesuń ją w górę, aby przewinąć tutaj.
+
+00:12:19.120 --> 00:12:20.610
+To wspaniale.
+
+00:12:21.380 --> 00:12:22.600
+Jeśli kliknę
+
+00:12:29.420 --> 00:12:36.590
+tutaj, oh i powinienem usunąć pierwszy, ponieważ skarżyłem się, że przycisk został już zadeklarowany.
+
+00:12:36.670 --> 00:12:40.490
+Jeśli odświeżę, zobacz, że bundy nie są już czytane.
+
+00:12:40.600 --> 00:12:44.510
+Jeśli kliknę, nie będę mógł nic więcej robić.
+
+00:12:44.590 --> 00:12:45.760
+Nie mogę już kliknąć.
+
+00:12:45.760 --> 00:12:47.360
+Mogę przewijać więcej.
+
+00:12:47.440 --> 00:12:52.700
+Strona jest całkowicie zablokowana, ponieważ ten kod javascript jest uruchomiony.
+
+00:12:53.260 --> 00:13:00.400
+Więc jeśli masz kod javascript, który jest wykonywany przez długi czas, podczas gdy
+
+00:13:00.400 --> 00:13:07.790
+masz bardzo słabe doświadczenie dla użytkownika, ponieważ czuje się zablokowany i Janke wszystko tam jest.
+
+00:13:07.810 --> 00:13:13.070
+Teraz wiemy, jak zbudowana jest kontrola domysłów Shyamala.
+
+00:13:13.210 --> 00:13:17.100
+Wiemy, jak zbudowany jest model obiektowy CSSA.
+
+00:13:17.380 --> 00:13:22.090
+Wiemy, jak czytać i wykonywać javascript.
+
+00:13:22.090 --> 00:13:30.700
+Wiemy, że po załadowaniu zawartości Dom możemy wreszcie zrobić kilka innych rzeczy i na koniec wiemy, że kiedy
+
+00:13:30.700 --> 00:13:34.570
+strona jest całkowicie załadowana, otrzymamy to zdarzenie load.
+
+00:13:34.570 --> 00:13:35.620
+A więc następne wideo.
+
+00:13:35.680 --> 00:13:40.600
+Porozmawiajmy o tych kilku ostatnich krokach i przejdźmy do ćwiczeń.
+
+00:13:40.600 --> 00:13:41.790
+Zobaczę na tym.
+
+00:13:41.890 --> 00:13:42.100
+PA.

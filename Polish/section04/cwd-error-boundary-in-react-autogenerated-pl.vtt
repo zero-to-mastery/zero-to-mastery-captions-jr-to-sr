@@ -1,0 +1,271 @@
+﻿WEBVTT
+
+00:00:01.650 --> 00:00:10.830
+Dodajmy jeszcze jedno narzędzie do naszej wiedzy, a następnie ponownie opracowujemy i odnawiamy 16, która była nową wersją ponownego wprowadzenia, wprowadzając coś,
+
+00:00:11.010 --> 00:00:18.780
+co nazywa się granicami błędu, a Isold jest problemem, który ponownie nastąpił wcześniej, jeśli istniało coś w rodzaju
+
+00:00:19.110 --> 00:00:25.110
+powietrze wewnątrz komponentu z jakiegoś powodu nie było zgrabnego sposobu poradzenia sobie z
+
+00:00:25.110 --> 00:00:32.370
+nim przy następnej wielkiej ławie przysięgłych, że dostaniesz wszystkie te tajemnicze błędy i rzeczy po prostu nie
+
+00:00:32.370 --> 00:00:34.710
+będą ładnie działać dla użytkownika.
+
+00:00:35.130 --> 00:00:42.900
+Chcesz się upewnić, że nawet jeśli część podzespołów ulegnie uszkodzeniu, nadal możesz mieć niezły interfejs użytkownika, może kawałek
+
+00:00:42.910 --> 00:00:48.780
+Teksasu mówi coś, w czym bronk, ale nie ma przerwy w aplikacji.
+
+00:00:48.780 --> 00:00:54.520
+W tym filmie porozmawiamy o granicach powietrznych i zastosujemy go do naszych przyjaciół.
+
+00:00:54.600 --> 00:00:55.500
+Zacznijmy.
+
+00:00:57.140 --> 00:01:04.370
+Pierwszą rzeczą, którą chcę zrobić, jest to, że w komponencie mam zamiar dodać nowy plik,
+
+00:01:04.760 --> 00:01:13.330
+a my nazwiemy tę granicę błędu komponentu i przypomnimy o potrzebie ponownego pytania 16 lub wyższej, aby to zadziałało.
+
+00:01:13.430 --> 00:01:21.930
+Upewnij się więc, że w pliku pakietu, w którym masz teraz poprawną wersję, teraz
+
+00:01:22.110 --> 00:01:25.980
+możemy zrobić nasz regularny komponent
+
+00:01:28.960 --> 00:01:33.620
+ponownego importu i importujemy go z pakietu ponownie.
+
+00:01:34.050 --> 00:01:41.000
+I wreszcie mamy klasę granicy błędu, która rozszerza komponent Riak i tutaj
+
+00:01:43.830 --> 00:01:45.840
+mamy konstruktora i
+
+00:01:48.960 --> 00:01:51.460
+znowu nazywamy supre tutaj.
+
+00:01:52.610 --> 00:02:03.420
+I po prostu mamy dostęp do podpory, która w konstruktorze będzie miała lepszy sprad.
+
+00:02:03.560 --> 00:02:11.880
+I w końcu dla tego stanu stworzymy własność zwaną powietrzem.
+
+00:02:12.370 --> 00:02:16.190
+A na razie będzie to nieprawda.
+
+00:02:16.260 --> 00:02:26.310
+I nie zapominajmy również o eksportowaniu domyślnych granic błędów, więc mamy do nich dostęp i mamy tutaj domyślny
+
+00:02:26.520 --> 00:02:29.760
+rendering, który powróci dla nas.
+
+00:02:30.830 --> 00:02:32.760
+Hmm, co powinien powrócić.
+
+00:02:33.170 --> 00:02:41.300
+Idealnie z tym komponentem granicy powietrznej możemy owinąć komponent lub możemy owinąć komponent, taki
+
+00:02:41.300 --> 00:02:48.890
+jak komponent bezkręgowy, komponentem ograniczającym powietrze, a jeśli komponent Carlista zawiedzie, możemy go
+
+00:02:48.890 --> 00:02:51.340
+złapać na granicy powietrza.
+
+00:02:52.390 --> 00:02:57.790
+Wiem, że to trochę trudne do naśladowania. Riak ma naprawdę dobrą dokumentację, więc zawsze możesz
+
+00:02:57.790 --> 00:02:59.520
+o tym później przeczytać.
+
+00:02:59.530 --> 00:03:01.150
+Ale trzymaj się mnie.
+
+00:03:01.150 --> 00:03:03.220
+Zaufaj mi, że to ma sens.
+
+00:03:03.220 --> 00:03:14.080
+Pierwszą rzeczą, którą chcemy zrobić, jest sprawdzenie, czy ten stan DOT ma wartość równą true.
+
+00:03:14.150 --> 00:03:23.000
+Jeśli więc wystąpił jakiś błąd, to chcemy zwrócić ten domyślny stan, w jaki sposób możemy wyświetlać użytkownikowi wdzięcznie coś, co sprawia,
+
+00:03:24.330 --> 00:03:29.670
+że jest dla niego znaczący, mimo że nie byliśmy w stanie wyświetlić tego,
+
+00:03:29.670 --> 00:03:31.190
+co pierwotnie zamierzaliśmy.
+
+00:03:32.040 --> 00:03:44.590
+W naszym przypadku możemy po prostu powiedzieć, że mamy H1 oops, który nie jest dobry dla użytkownika.
+
+00:03:44.620 --> 00:03:52.760
+Tak więc mówimy tutaj, że jeśli z jakiegoś powodu jest powietrze, wyplujemy tag wygrany H
+
+00:03:53.940 --> 00:03:54.870
+inaczej.
+
+00:03:55.100 --> 00:03:58.460
+I możemy po prostu tu wrócić.
+
+00:03:58.560 --> 00:04:06.150
+Zamierzamy powiedzieć, że dzieci z kropką, które są w kropce, znów będą pamiętać, ponieważ dzieci będą
+
+00:04:06.150 --> 00:04:09.070
+czymś, co jest pomiędzy granicami powietrznymi.
+
+00:04:09.090 --> 00:04:16.050
+W naszym przypadku prawdopodobnie prawdopodobnie będzie to bezksięgowa, tak jak ich dzieci, niezależnie od tego, co znajduje
+
+00:04:16.140 --> 00:04:17.410
+się w powietrzu.
+
+00:04:17.470 --> 00:04:19.330
+W przeciwnym razie Rander H-1.
+
+00:04:19.710 --> 00:04:28.390
+Teraz, jak będziemy w stanie to zmienić, mamy dobre powietrze z ponownym działaniem 16 i
+
+00:04:28.390 --> 00:04:38.270
+wprowadziliśmy nową metodę cyklu życia, która została nazwana komponentem, który złapał i ten komponent złapał coś w
+
+00:04:38.270 --> 00:04:49.390
+rodzaju bloku catch catch in javascript jeśli cokolwiek wydarzy się heir, Ill uruchomię ten cykl życia i ten hak w
+
+00:04:49.400 --> 00:04:52.420
+cyklu życia dostaje parę parametrów.
+
+00:04:52.450 --> 00:04:55.690
+To jest błąd i informacje.
+
+00:04:55.830 --> 00:05:03.540
+Ale w naszym przypadku chcemy tylko powiedzieć, że to się zaczyna, że stan będzie teraz,
+
+00:05:03.590 --> 00:05:08.230
+jeśli błędy tego komponentu będą miały błąd równy prawdzie.
+
+00:05:08.280 --> 00:05:13.760
+Więc jeśli kiedykolwiek zostanie wywołany, to wyrenderujemy tag H-1.
+
+00:05:13.870 --> 00:05:14.190
+W porządku.
+
+00:05:14.230 --> 00:05:17.490
+Uratujmy i chodźmy do APT.
+
+00:05:17.580 --> 00:05:20.730
+Tak, importujmy nasze granice powietrzne z
+
+00:05:25.190 --> 00:05:26.630
+naszych komponentów.
+
+00:05:32.210 --> 00:05:34.030
+A teraz możemy tego użyć.
+
+00:05:34.100 --> 00:05:38.740
+Użyjmy go tutaj, by zobaczyć listę kart.
+
+00:05:38.900 --> 00:05:46.370
+Więc jeśli coś dzieje się z Carlistą, chcemy mieć jakąś wdzięczną granicę wyjścia.
+
+00:05:46.580 --> 00:05:55.340
+Powiemy więc, że granica powietrzna i dlatego, że renderujemy to myślowe rekwizyty, dzieci są tak owinięte w ten
+
+00:05:55.340 --> 00:05:55.970
+sposób.
+
+00:05:57.250 --> 00:06:00.450
+I nic nie pójdzie dalej, to nadal stanie się bez karty.
+
+00:06:00.490 --> 00:06:03.030
+Więc oszczędzajmy Zobaczmy, czy popełniliśmy jakieś błędy.
+
+00:06:03.130 --> 00:06:04.570
+Jak na razie dobrze.
+
+00:06:04.690 --> 00:06:08.320
+Wróćmy do naszej aplikacji i.
+
+00:06:08.380 --> 00:06:10.400
+W porządku spójrzmy na konsolę.
+
+00:06:10.410 --> 00:06:17.280
+Nigdzie w tym roku, jeśli odświeżymy Nigdzie tu nie ma, jeśli wpisuję rzeczy Nigdzie nie jest dobrze.
+
+00:06:19.190 --> 00:06:26.840
+Teraz z tą granicą powietrza, jeśli coś nie działa w Carlistzie, to złapie to i wyświetli nasz komunikat
+
+00:06:26.840 --> 00:06:28.000
+o błędzie.
+
+00:06:28.070 --> 00:06:29.420
+Zobaczmy co mam na myśli.
+
+00:06:29.710 --> 00:06:39.420
+Jeśli przejdę do listy kart tutaj i teraz tutaj, jeśli powiemy, że na razie powiemy prawdę.
+
+00:06:39.660 --> 00:06:48.440
+Zakładamy, że był tam ktoś bez karty, więc możemy to zrobić, mówiąc, że rzucamy nowe powietrze, powiedzmy, że
+
+00:06:51.790 --> 00:06:54.850
+jeśli uratujemy to wszystko nadal działa.
+
+00:06:54.850 --> 00:06:59.750
+Jeśli wrócę, zobaczysz, że wciąż dostaję powietrze, które mówi o błędzie cięcia.
+
+00:06:59.800 --> 00:07:00.620
+Nie.
+
+00:07:00.910 --> 00:07:07.030
+A na dole jest napisane, że powyższy błąd wystąpił w komponencie Carlists, będziemy próbować odtworzyć
+
+00:07:07.030 --> 00:07:11.950
+ten komponent od podstaw, używając powietrza Bhandari, które dostarczyłeś w powietrzu.
+
+00:07:12.360 --> 00:07:16.670
+OK, to świetnie, ale wciąż widzę powietrze.
+
+00:07:16.900 --> 00:07:23.770
+A to dlatego, że pracujemy teraz nad rozwojem, aby móc zareagować.
+
+00:07:23.770 --> 00:07:29.780
+Chcą nam pokazać, ilekroć wystąpi błąd w naszych komponentach, granice powietrzne
+
+00:07:29.780 --> 00:07:38.750
+są naprawdę użyteczne, gdy umieszczasz swoje aplikacje w produkcji, gdzie nie masz szczegółowych dzienników, o których twoich użytkownikach
+
+00:07:38.750 --> 00:07:40.540
+nigdy nie zobaczymy.
+
+00:07:40.550 --> 00:07:45.040
+Więc jeśli odświeżę Cię naprawdę szybko, zobaczysz to tutaj.
+
+00:07:45.050 --> 00:07:48.320
+Jak powiedział oops, że nie jest dobrze.
+
+00:07:48.470 --> 00:07:49.010
+Ups.
+
+00:07:49.100 --> 00:07:50.450
+To nie jest dobre.
+
+00:07:50.450 --> 00:07:54.820
+Tak więc w produkcji użytkownicy to zobaczą.
+
+00:07:55.040 --> 00:08:01.640
+Ale w naszym przypadku zamierzonym zachowaniem twórców zamkniętych w rozwoju jest pokazanie nam błędów, ale
+
+00:08:01.910 --> 00:08:05.770
+przy granicach powietrznych mamy dodatkowe bezpieczeństwo podczas produkcji.
+
+00:08:07.830 --> 00:08:08.890
+To tyle na teraz.
+
+00:08:08.890 --> 00:08:10.800
+Zobaczę w następnej prawdopodobnie.

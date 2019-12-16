@@ -1,0 +1,904 @@
+﻿WEBVTT
+
+00:00:00.900 --> 00:00:02.410
+Bine ai revenit.
+
+00:00:02.420 --> 00:00:10.380
+Există o ultimă piesă a puzzle-ului de care avem nevoie cu redux și ceva pe care l-am
+
+00:00:10.710 --> 00:00:12.600
+evitat până acum.
+
+00:00:12.750 --> 00:00:14.620
+Vedeți dacă mergem să renunțați.
+
+00:00:14.730 --> 00:00:15.620
+Da.
+
+00:00:16.130 --> 00:00:21.840
+Vă amintiți că facem această componentă a făcut cerere de preluare mount.
+
+00:00:22.000 --> 00:00:23.890
+Avem o cerere asincronă.
+
+00:00:23.890 --> 00:00:34.690
+Facem o cerere către un API prin care să-i apucă pe utilizatori și, în final, stabilind acel stat la roboți.
+
+00:00:34.730 --> 00:00:39.890
+Dar cum ar funcționa asta în redux.
+
+00:00:39.970 --> 00:00:49.070
+Deoarece ne amintim până acum, tot ceea ce am făcut a fost sincron, deoarece dacă facem același lucru
+
+00:00:49.070 --> 00:00:57.850
+ca și în cazul câmpului de căutare, nu ar funcționa cu preluarea roboților, deoarece trimitem o acțiune
+
+00:00:57.850 --> 00:01:05.860
+de a spune că aducem roboți, ci pentru că care este asincronă, va merge în altă
+
+00:01:05.860 --> 00:01:07.810
+lume în API.
+
+00:01:08.700 --> 00:01:17.720
+Încercați să obțineți roboții între timp, reductorul va verifica roboții și va spune că nu există
+
+00:01:17.730 --> 00:01:18.310
+roboți.
+
+00:01:18.310 --> 00:01:22.770
+Da, pentru că o instalație API care nu sa întors încă.
+
+00:01:22.890 --> 00:01:24.050
+Ca o promisiune.
+
+00:01:24.090 --> 00:01:29.070
+Deci cercetarea continuă și nu face nicio schimbare deoarece statul nu sa schimbat.
+
+00:01:29.100 --> 00:01:36.690
+Deci, cum putem crea acțiuni care sunt asincrone care încă trec prin reductorul magazinului și apoi se
+
+00:01:36.690 --> 00:01:37.860
+fac schimbări.
+
+00:01:39.640 --> 00:01:44.180
+Și aici folosim din nou aplicația middleware.
+
+00:01:45.500 --> 00:01:54.400
+Putem folosi ceva numit redux phunk pentru a gestiona acțiuni asincrone cum ar fi apelurile AJAX.
+
+00:01:54.560 --> 00:02:04.170
+Este un middleware care oferă funcții de obținere de stare și de expediere care sunt transmise pe măsură ce
+
+00:02:04.170 --> 00:02:08.840
+puteți gestiona ceva numit efecte secundare precum apelurile AJAX.
+
+00:02:09.000 --> 00:02:10.440
+Cu acest pachet.
+
+00:02:10.440 --> 00:02:12.020
+Așa că vă vom arăta cum funcționează.
+
+00:02:13.520 --> 00:02:18.050
+Primul lucru pe care vrem să-l facem este să instalați pachetul redux thung.
+
+00:02:18.130 --> 00:02:22.690
+Așa că am de gând să spun NPM instala redux thunk.
+
+00:02:22.940 --> 00:02:29.380
+Și de modul în care, ca și în orice, există multe alte modalități de a face față acțiunii asincrone,
+
+00:02:29.400 --> 00:02:34.190
+iar reduxul nu este construit din poartă, deci aveți nevoie de niște pachete.
+
+00:02:34.190 --> 00:02:42.450
+Există și alte opțiuni, dar Redx redux thunk este cel mai bun și mai simplu pentru a începe cu.
+
+00:02:45.140 --> 00:02:45.820
+In regula.
+
+00:02:45.980 --> 00:02:52.320
+Avem un redux thunk acum și nu putem pur și simplu începe să-l folosească, mergând la index.
+
+00:02:52.390 --> 00:03:07.230
+Da și cu lucru aici putem spune că vrem să importăm ceva de la redux, numit middleware thunk.
+
+00:03:07.760 --> 00:03:13.920
+Din nou, puteți citi totul despre acest lucru și există documentație despre obținerea middleware HTTP thunk.
+
+00:03:13.970 --> 00:03:18.780
+Știm deja cum să aplicăm middleware aplicației noastre redox.
+
+00:03:18.800 --> 00:03:23.330
+Avem funcția de middleware aplicată.
+
+00:03:23.510 --> 00:03:31.480
+Putem pur și simplu adăuga aplicarea sau nu a aplicat middleware phunk.
+
+00:03:31.690 --> 00:03:35.200
+Și lasă-mă să o pun pe o linie nouă pentru a putea vedea mai bine.
+
+00:03:36.000 --> 00:03:40.500
+Mulțumim middleware pentru aplicația noastră middleware.
+
+00:03:40.500 --> 00:03:41.360
+Și aceasta este ordinea.
+
+00:03:41.370 --> 00:03:48.630
+Deci, va trece prin middleware thunked și apoi middleware logger perfectă.
+
+00:03:48.840 --> 00:03:54.980
+Deci, să începem NPM.
+
+00:03:55.250 --> 00:04:00.820
+Si voi spune si ca totul arata ca totul merge bine.
+
+00:04:02.330 --> 00:04:05.280
+Avem această chestiune acolo unde am implementat-o ​​acum.
+
+00:04:05.840 --> 00:04:11.850
+Dar cum să folosim de fapt Ei bine, să începem cu primii pași.
+
+00:04:11.970 --> 00:04:21.310
+Primul lucru pe care dorim să-l facem este să creăm o constantă, deci constantă, pentru a cere roboților noștri.
+
+00:04:21.450 --> 00:04:28.160
+Amintiți-vă în fișierul Dodgiest al aplicației că avem matricea robotului care este populată după ce componenta sa
+
+00:04:28.160 --> 00:04:34.980
+montat după ce vom efectua apelul de preluare și vom trece la starea de lucru cu noii utilizatori.
+
+00:04:35.040 --> 00:04:39.460
+Deci, constanta putem face ceva similar cu cel de mai sus.
+
+00:04:39.470 --> 00:04:49.990
+Acum putem exporta roboți de cerere Konst.
+
+00:04:50.840 --> 00:04:53.780
+Pentru că asta va fi o promisiune.
+
+00:04:53.900 --> 00:04:58.030
+Va avea trei stări.
+
+00:04:58.190 --> 00:05:06.490
+Deci, prima va fi Pandang, care este prima dată când trimitem această solicitare, va fi în așteptarea
+
+00:05:06.490 --> 00:05:09.470
+așteptării promisiunii de a reveni.
+
+00:05:09.790 --> 00:05:22.130
+Așadar, vom folosi din nou aceeași putere și, de asemenea, vom avea două state după revenirea în așteptare
+
+00:05:22.340 --> 00:05:25.150
+care este succes și,
+
+00:05:30.250 --> 00:05:31.240
+de
+
+00:05:39.690 --> 00:05:45.860
+asemenea, această cerere are trei acțiuni în așteptarea succesului.
+
+00:05:45.930 --> 00:05:47.250
+Vrem să urmărim.
+
+00:05:47.730 --> 00:05:53.280
+Și din nou, acest lucru este destul de standard, cu toate acțiunile asincrone ca apelurile AJAX.
+
+00:05:53.520 --> 00:06:01.670
+Deci, să spunem asta și următorul pas, după cum știm, este de a crea acțiunile care utilizează aceste lucruri.
+
+00:06:01.710 --> 00:06:10.080
+Deci, să ne întoarcem la acțiuni și de data aceasta, în loc să importim câmpul de căutare al schimbării, să importăm câteva
+
+00:06:10.080 --> 00:06:11.260
+alte lucruri.
+
+00:06:17.720 --> 00:06:22.770
+Voi importa să copiem și să lipim doar aici pentru că este o mulțime de scriere.
+
+00:06:23.030 --> 00:06:27.920
+Să mergem la Constance.
+
+00:06:28.180 --> 00:06:29.590
+Vom
+
+00:06:32.400 --> 00:06:38.150
+importa șase succese SAS și apoi vom salva
+
+00:06:42.720 --> 00:06:45.140
+în cele din urmă.
+
+00:06:45.380 --> 00:06:48.320
+Și când primești un avertisment că nu suntem noi nu le folosim.
+
+00:06:48.590 --> 00:06:57.790
+Deci, să creăm aceste acțiuni acum, așa cum am făcut mai sus, vom exporta
+
+00:06:57.790 --> 00:07:06.340
+Konst și vom numi această cerere de roboți și această acțiune va dura.
+
+00:07:06.380 --> 00:07:08.830
+Ce va face?
+
+00:07:08.830 --> 00:07:17.810
+Ei bine, acest lucru este un pic complicat, dar va lua expedierea și expedierea.
+
+00:07:17.840 --> 00:07:19.530
+Dacă vă amintiți și mergem la APT.
+
+00:07:19.580 --> 00:07:20.650
+Da.
+
+00:07:20.720 --> 00:07:30.580
+Este ceva pe care îl folosim în expedierea MAP pentru a propune că ajungem de la redux pentru a trimite acțiunile pentru
+
+00:07:30.670 --> 00:07:32.150
+a ne reduce.
+
+00:07:32.380 --> 00:07:39.100
+Și când ne întoarcem aici, veți vedea că de fapt vom trece la acțiunea noastră.
+
+00:07:39.100 --> 00:07:40.780
+Deci avem acces la ea.
+
+00:07:40.960 --> 00:07:50.030
+Dar, din nou, pentru moment doar știți că vom avea dispatch și credem că vom face câteva lucruri care sunt
+
+00:07:50.030 --> 00:07:53.540
+puțin diferite de cele de mai sus.
+
+00:07:53.540 --> 00:08:03.820
+Primul lucru când cerem roboți Ei bine, vrem să expediem acțiunea în așteptare din nou, putem face doar sintaxa
+
+00:08:03.820 --> 00:08:12.430
+standard a expedierii unui obiect care este în așteptarea robotului de tip de cerere și a
+
+00:08:15.020 --> 00:08:16.700
+încărcăturii utile.
+
+00:08:17.060 --> 00:08:19.390
+Ei bine, nu există nici o sarcină reală.
+
+00:08:19.460 --> 00:08:26.780
+Avem doar o cerere în așteptare, așa că putem să o lăsăm așa cum este acum, fără o sarcină utilă.
+
+00:08:28.340 --> 00:08:35.220
+Apoi avem ceva ce este sincron.
+
+00:08:35.220 --> 00:08:38.230
+Trebuie să facem un apel.
+
+00:08:38.340 --> 00:08:41.710
+Așa că avem funcția noastră de preluare.
+
+00:08:42.060 --> 00:08:43.870
+Și dacă vă aduceți aminte că mergem la APT.
+
+00:08:43.980 --> 00:08:44.690
+Da.
+
+00:08:44.730 --> 00:08:52.950
+Avem acest API pe care trebuie să-l sunăm, dar, de asemenea, trebuie să răspundeți repede la Jaison.
+
+00:08:52.950 --> 00:09:02.580
+Deci, voi copia tot ce merg la acțiuni și doar copiați și lipiți acest lucru.
+
+00:09:02.830 --> 00:09:12.600
+Așadar, noi luăm pe utilizatorii pe care îi facem DOD atunci și pe Jaison folosind acea metodă Jaisalmer cu privire la răspuns.
+
+00:09:12.600 --> 00:09:17.750
+Și apoi, în cele din urmă, avem două opțiuni.
+
+00:09:17.880 --> 00:09:23.920
+Avem DOD atunci și DOD captura în cazul în care există o eroare sau ceva nu reușește.
+
+00:09:25.060 --> 00:09:30.800
+În DOD primim apoi un fel de date care vor fi utilizatori.
+
+00:09:31.300 --> 00:09:38.530
+Și odată ce am primit că nu putem spune expedierea, vom trimite ceea ce crezi
+
+00:09:38.530 --> 00:09:40.050
+că vom expedia.
+
+00:09:40.060 --> 00:09:47.870
+Ei bine, obiectul care este de tip roboți de cerere a accesat și de data
+
+00:09:50.660 --> 00:09:53.360
+aceasta sarcina utilă pentru
+
+00:09:56.160 --> 00:10:04.310
+aceasta va fi datele pe care le primim de la API și cu captura foarte asemănătoare.
+
+00:10:04.310 --> 00:10:11.120
+Vom primi un fel de eroare și această eroare se va expedia din nou și
+
+00:10:14.800 --> 00:10:18.330
+vechile vor avea un tip de solicitări.
+
+00:10:18.340 --> 00:10:19.610
+Roboții
+
+00:10:22.460 --> 00:10:30.500
+nu reușesc cu o sarcină utilă să-i dăm aerul pe care îl primim.
+
+00:10:30.500 --> 00:10:30.950
+In regula.
+
+00:10:30.950 --> 00:10:39.260
+Permiteți-mi să fac acest lucru un pic mai mic pentru a putea vedea astfel încât să salvăm asta și acum avem acțiunile noastre și
+
+00:10:39.260 --> 00:10:43.220
+această acțiune este mult mai complicată decât câmpul de căutare setat.
+
+00:10:43.220 --> 00:10:50.240
+Avem dreptul la calea când numim această acțiune o expediere care cere ca robotul să fie în
+
+00:10:50.330 --> 00:10:58.490
+așteptare și apoi să preluăm utilizatorii pe care îi primim pe utilizatori și apoi fie că avem succes cu sarcina utilă
+
+00:10:59.000 --> 00:11:04.180
+a utilizatorilor, fie că avem o eroare cu sarcina utilă a aerului.
+
+00:11:04.230 --> 00:11:12.480
+În cele din urmă, intrăm în reductoare și în căutările de recuperare știm că vrem să importăm din conținut aceleași acțiuni pe
+
+00:11:12.780 --> 00:11:14.270
+care le-am avut.
+
+00:11:14.270 --> 00:11:21.870
+Deci, hai să mergem la Constance sau să mergem la acțiuni și să copiem exact ceea ce avem aici, de asemenea.
+
+00:11:24.720 --> 00:11:27.080
+Pentru că vom avea nevoie de toate acele constante.
+
+00:11:28.020 --> 00:11:35.640
+Și acum, aici vom crea un nou reductor deoarece, în loc să combinăm toți acești reductori, dorim să-i facem pe
+
+00:11:35.640 --> 00:11:39.280
+fiecare să fie specific în cazul lor de utilizare.
+
+00:11:39.480 --> 00:11:48.490
+Acest lucru ne reduce îngrijorarea cu privire la robotul de căutare, noul reductor se va îngrijora cu privire la cerere.
+
+00:11:48.630 --> 00:11:57.660
+Roboții și încă o dată cu aceeași sintaxă avem statul în care merge Aiko la egal
+
+00:11:58.560 --> 00:12:06.220
+cu starea inițială și apoi cu acțiunea care va avea obiect gol implicit.
+
+00:12:06.430 --> 00:12:14.390
+Iar aici un obiect sau aici va avea din nou o declarație de comutare care ascultă tipul
+
+00:12:14.390 --> 00:12:22.070
+de acțiune de rață și această acțiune pe care tipul va avea trei stări posibile.
+
+00:12:22.100 --> 00:12:32.590
+Unul este cazul în care un robot de cerere este în așteptare, caz în care returnăm obiectul.
+
+00:12:32.680 --> 00:12:38.080
+Alocați din nou un obiect gol.
+
+00:12:38.180 --> 00:12:39.770
+Statul.
+
+00:12:39.980 --> 00:12:47.000
+Și apoi, în sfârșit, vom crea un nou stat numit este în așteptare.
+
+00:12:47.330 --> 00:12:50.240
+Și acest lucru este în așteptare
+
+00:12:53.840 --> 00:13:00.600
+va fi setat la faptul că roboții de cerere este în așteptare în prezent.
+
+00:13:00.600 --> 00:13:01.350
+In regula.
+
+00:13:01.680 --> 00:13:08.850
+Următorul lucru pe care îl vom face din nou este că vom avea un caz pentru acest moment.
+
+00:13:09.240 --> 00:13:19.130
+Succesul și acest lucru va reveni la obiect pentru a atribui un obiect gol unei stări.
+
+00:13:19.600 --> 00:13:34.310
+Iar acești noi roboți de proprietate care sunt acțiuni care au o încărcătură utilă și, de asemenea, dorim să schimbăm statul, cheltuim acum pentru a fi
+
+00:13:34.700 --> 00:13:36.440
+falsi pentru
+
+00:13:39.550 --> 00:13:43.270
+că am primit răspunsul din promisiune și
+
+00:13:50.350 --> 00:13:56.470
+apoi cel de-al treilea caz este atunci când există o eroare.
+
+00:13:57.040 --> 00:14:00.670
+Și în acest caz vom reveni
+
+00:14:04.180 --> 00:14:16.550
+la obiect pentru a semna statul și vom avea doar o stare de aer care va crea acea sarcină utilă de acțiune.
+
+00:14:16.690 --> 00:14:23.260
+Și din nou vom dori să schimbați este în așteptarea de a
+
+00:14:26.050 --> 00:14:34.010
+fi egal cu fals și de a închide obiectul și amintiți-vă întotdeauna cu un reductor.
+
+00:14:34.420 --> 00:14:43.810
+Vrem ca varianta să întoarcă întotdeauna starea dacă nu corespunde niciunui criteriu.
+
+00:14:43.810 --> 00:14:49.250
+Așa că reveniți din nou la stat minunat.
+
+00:14:49.620 --> 00:14:53.860
+Acum te-ai gândi la starea inițială.
+
+00:14:54.020 --> 00:14:59.990
+Avem această cerere cumpărată roboții nu le pasă de câmpul de căutare.
+
+00:14:59.990 --> 00:15:06.860
+Și în acest caz vrem să creăm două stări inițiale diferite pentru roboții de căutare și unul pentru
+
+00:15:06.860 --> 00:15:08.460
+roboții lor de cerere.
+
+00:15:08.600 --> 00:15:14.560
+Deci, să redenumim acest lucru la căutarea inițială de stat și
+
+00:15:17.420 --> 00:15:29.000
+să creeze o nouă stare în roboții de stare inițială, care are acum aceste trei stări pe care le-am menționat
+
+00:15:29.570 --> 00:15:43.360
+aici că este în așteptarea false pentru a începe cu o matrice a robotului care este momentan goală și un șir de erori de
+
+00:15:43.570 --> 00:15:45.350
+asemenea goale.
+
+00:15:49.020 --> 00:15:50.010
+Deci, să spunem
+
+00:15:52.910 --> 00:15:58.810
+asta și să vedem câteva erori pe care le avem aici și avem doar o mică eroare de sintaxă.
+
+00:16:02.360 --> 00:16:04.970
+Pentru că nu avem nevoie de acest suport curat.
+
+00:16:04.970 --> 00:16:08.220
+Acolo te duci.
+
+00:16:08.280 --> 00:16:11.060
+Și din nou vrem să schimbăm starea inițială.
+
+00:16:11.080 --> 00:16:16.050
+Roboții în funcție de acesta.
+
+00:16:18.250 --> 00:16:21.420
+Salvăm și totul arată bine.
+
+00:16:21.430 --> 00:16:26.770
+Lasă-mă să fac asta puțin mai mic.
+
+00:16:26.830 --> 00:16:28.920
+Acum avem o problemă.
+
+00:16:29.410 --> 00:16:32.970
+Trebuie să-l repetăm ​​acum pe Sir și dacă mergem la indexare.
+
+00:16:33.060 --> 00:16:40.360
+J. S. vedem că în funcția de creare a magazinelor folosim doar roboții de căutare pe care-i facem domnule.
+
+00:16:40.780 --> 00:16:42.760
+Deci, să importăm acum.
+
+00:16:42.790 --> 00:16:52.640
+Cealaltă citiți că spuneți că avem ceea ce cerem roboți și adăugați acum și în magazin.
+
+00:16:53.020 --> 00:16:55.740
+Dar cum facem asta?
+
+00:16:58.080 --> 00:17:08.180
+Ei bine, avem o funcție care vine din nou cu trei documente care se numesc reductoare combinate și acest
+
+00:17:08.180 --> 00:17:15.160
+reductor combinat, destul de explicativ, combină toți reductorii într-un reductor de rădăcină.
+
+00:17:15.290 --> 00:17:16.380
+Deci, să facem asta.
+
+00:17:16.400 --> 00:17:23.380
+Voi spune că reductorul de rădăcină Konst va echivala cu reductorul combinat.
+
+00:17:23.750 --> 00:17:32.120
+Și asta se întâmplă și acceptăm într-o formă de obiect toate reductoarele.
+
+00:17:32.240 --> 00:17:38.180
+În cazul meu sunt roboții de căutare și roboții de cerere.
+
+00:17:38.390 --> 00:17:44.630
+Și acum acest Ruby Douceur poate fi folosit în magazin pentru a
+
+00:17:47.720 --> 00:17:51.880
+include atât reductorii care sunt în siguranță.
+
+00:17:51.880 --> 00:17:53.110
+In regula.
+
+00:17:53.110 --> 00:17:54.040
+Suntem aproape acolo.
+
+00:17:55.720 --> 00:17:58.930
+Acum, pentru că am folosit doar reductoare combinate.
+
+00:17:58.930 --> 00:18:03.180
+Este ceva pe care l-am menționat mai devreme și asta este dacă mă duc în apt.
+
+00:18:03.340 --> 00:18:14.950
+Da și derulați tot drumul până la starea hărții până la prop, statul nostru nu mai are un câmp de căutare ca parte a
+
+00:18:14.950 --> 00:18:16.200
+proprietății sale.
+
+00:18:16.240 --> 00:18:25.780
+În schimb, vor avea două roboți de căutare de proprietăți și vor cere roboți care au proprietăți
+
+00:18:25.780 --> 00:18:26.920
+proprii.
+
+00:18:26.920 --> 00:18:29.680
+Deci, acum trebuie să
+
+00:18:33.370 --> 00:18:40.190
+actualizăm roboții de căutare ca acesta, care au proprietatea câmpului de căutare.
+
+00:18:40.250 --> 00:18:50.460
+Acesta este motivul pentru care veți vedea cel mai probabil când lucrați un redox și o stare de hartă la prop.
+
+00:18:50.490 --> 00:18:58.270
+Acum, piesa finală a puzzle-ului redux thunk cum funcționează acest lucru.
+
+00:18:58.680 --> 00:19:10.740
+Ei bine, redux thunk este un middleware care asteapta si vede vede daca orice actiune returneaza o functie in locul
+
+00:19:10.740 --> 00:19:12.050
+unui obiect.
+
+00:19:12.440 --> 00:19:13.360
+Ce inseamna asta.
+
+00:19:13.740 --> 00:19:25.740
+Dacă mergem la acțiuni, vedem că acest lucru întoarce un obiect, dar chiar aici nu ne
+
+00:19:26.100 --> 00:19:33.930
+întoarcem un obiect. De fapt, nu ne întoarcem nimic acum.
+
+00:19:34.070 --> 00:19:36.820
+Thinked middleware așteaptă o funcție.
+
+00:19:36.920 --> 00:19:43.880
+Și dacă vreodată o acțiune care trece prin ea amintesc că un middleware este doar un tunel pe care acțiunile
+
+00:19:44.660 --> 00:19:49.050
+trec prin și observă o funcție pe care o va acționa.
+
+00:19:49.100 --> 00:19:53.130
+Deci, să o facem mai întâi și o să explic în detaliu cum funcționează.
+
+00:19:54.030 --> 00:19:56.000
+Mai întâi trebuie să mergem la APT.
+
+00:19:56.070 --> 00:19:57.350
+Da.
+
+00:19:57.420 --> 00:20:01.850
+Și cu thaim aici vrem să actualizăm câteva lucruri.
+
+00:20:01.900 --> 00:20:15.460
+Mai întâi dorim să actualizăm starea pentru a include și roboții pentru a avea roboți dot dotați de
+
+00:20:15.500 --> 00:20:16.610
+stat.
+
+00:20:16.640 --> 00:20:19.960
+Din nou, acesta este statul de la reductor.
+
+00:20:20.010 --> 00:20:29.630
+Există, de asemenea, starea în așteptare din nou prin robotul de cerere care este în așteptare.
+
+00:20:30.050 --> 00:20:43.030
+Și apoi, în cele din urmă, starea aerului afirmă din nou cererea de roboți.
+
+00:20:43.060 --> 00:20:51.510
+A doua parte și cea mai importantă parte este acțiunea robotului de cerere.
+
+00:20:51.680 --> 00:20:58.240
+Din nou, ceva care înlocuiește această componentă a făcut o solicitare de montare.
+
+00:20:58.390 --> 00:21:05.650
+Modul în care putem face asta este în interiorul nostru, adăugăm o altă proprietate pe care o vom transmite și o
+
+00:21:05.650 --> 00:21:09.350
+putem numi ceea ce ne dorim, vom spune la cerere.
+
+00:21:09.520 --> 00:21:17.820
+Roboții și aceasta va fi o funcție și această funcție.
+
+00:21:17.950 --> 00:21:23.320
+Amintiți-vă că nu vrem să ne trimitem în mod necesar.
+
+00:21:23.670 --> 00:21:28.670
+Vrem să păstrăm și să returnez o funcție de la ea.
+
+00:21:28.740 --> 00:21:43.410
+În cazul nostru, cererea de roboți reduce cererea noastră și această cerere de roboți reduce sau acțiunea
+
+00:21:43.980 --> 00:21:47.480
+are metoda de expediere.
+
+00:21:47.510 --> 00:21:48.090
+In regula.
+
+00:21:48.090 --> 00:21:49.000
+Știu că sunt multe.
+
+00:21:48.990 --> 00:21:51.480
+Deci, hai să trecem prin asta încă o dată.
+
+00:21:52.800 --> 00:21:55.150
+Acum avem nevoie de această solicitare.
+
+00:21:55.220 --> 00:22:10.620
+Acțiunea robotului și această acțiune robot de cerere necesită o metodă de expediere pentru a trimite efectiv aceste acțiuni.
+
+00:22:10.920 --> 00:22:22.120
+Deci, în Abdulle Da, mai întâi trebuie să importem acțiunea noastră care cere robotilor din fișierul de
+
+00:22:22.120 --> 00:22:30.750
+acțiuni și această cerere de roboți trebuie să aibă metoda de expediere.
+
+00:22:30.760 --> 00:22:42.580
+Acest lucru este același lucru cu a face acest lucru.
+
+00:22:43.190 --> 00:22:54.870
+Și acum această expediție va funcționa atâta timp cât vom folosi reduxul Thankx pentru că va prinde faptul
+
+00:22:54.870 --> 00:23:00.140
+că aceasta va reveni la o funcție.
+
+00:23:00.170 --> 00:23:07.390
+Deci, dacă ne întoarcem la acțiunile noastre, acum putem face acest lucru
+
+00:23:13.770 --> 00:23:25.280
+în regulă ceea ce sa întâmplat bine, am creat o funcție de ordin superior, o funcție care readuce o funcție.
+
+00:23:25.280 --> 00:23:28.810
+Și știu că acest lucru poate deveni un pic confuz, dar un thunk.
+
+00:23:28.880 --> 00:23:34.950
+Deoarece acum roboții de cerere se vor întoarce din nou datorită funcțiilor lor.
+
+00:23:35.000 --> 00:23:42.800
+Aceasta va însemna că va reveni acest lucru, va oferi funcția de dispecerizare la această funcție de al
+
+00:23:42.950 --> 00:23:47.040
+doilea strat, astfel încât să putem folosi aici.
+
+00:23:47.420 --> 00:23:55.430
+Din nou, acesta este un lucru pe care tocmai trebuie să vă obișnuiți, dar în cele din urmă dacă salvez acest lucru, să vedem
+
+00:23:55.430 --> 00:23:56.120
+dacă funcționează.
+
+00:23:56.140 --> 00:24:01.530
+Acum știu că este prima oară în jur, așa că am greșit probabil ceva, dar să-l scuturăm.
+
+00:24:04.000 --> 00:24:07.490
+Refresh și totul funcționează.
+
+00:24:07.490 --> 00:24:08.890
+Nu primim erori.
+
+00:24:09.020 --> 00:24:19.380
+Dar amintiți-vă că de fapt trebuie să ne conectăm la aplicația noastră, dacă ne întoarcem acum, putem să ne rătăciți și avem toate aceste elemente de recuzită
+
+00:24:19.380 --> 00:24:21.690
+pe care le putem folosi acum.
+
+00:24:21.960 --> 00:24:31.530
+Deci componenta pe care MT nu mai are nevoie să o apeleze la fecche, tot ce are nevoie este acest punct de
+
+00:24:32.760 --> 00:24:38.940
+vârf al propulsei și acțiunea pe care o propunem robotilor noștri, la cererea
+
+00:24:41.590 --> 00:24:42.200
+robotilor.
+
+00:24:42.430 --> 00:24:46.670
+De asemenea, nu mai avem nevoie de constructor pentru noi.
+
+00:24:46.750 --> 00:24:53.110
+Deoarece nu mai există stări, acești roboți vor fi acum returnați ca parte a recuzităților, la
+
+00:24:53.380 --> 00:24:53.980
+cerere.
+
+00:24:54.070 --> 00:24:56.930
+Roboți.
+
+00:24:57.040 --> 00:25:01.100
+Deci, din nou vom schimba această
+
+00:25:03.790 --> 00:25:15.540
+stare la roboți și putem, de asemenea, ajunge în așteptare pentru a verifica dacă este în așteptare este adevărat.
+
+00:25:19.140 --> 00:25:25.770
+Pentru a reda dacă este adevărat, atunci vrem să facem încărcarea.
+
+00:25:25.950 --> 00:25:30.950
+Dacă nu vrem să facem doar prietenii noștri robo.
+
+00:25:30.970 --> 00:25:33.660
+Deci, aceștia vin de la noi.
+
+00:25:34.780 --> 00:25:39.230
+Și acum avem doar componente care au fost montate în aplicația noastră.
+
+00:25:39.440 --> 00:25:45.360
+Să salvăm și să ne întoarcem la aplicația noastră.
+
+00:25:45.380 --> 00:25:47.490
+Uită-te bine la asta.
+
+00:25:47.780 --> 00:25:53.990
+Asta nu se întâmplă foarte des, dar am reușit cumva să codific fără să fac nicio eroare.
+
+00:25:53.990 --> 00:25:55.250
+Din nou, aceasta este o raritate.
+
+00:25:55.250 --> 00:25:56.210
+Bucură-te de această clipă.
+
+00:25:56.210 --> 00:25:57.780
+Cu siguranță mă bucur.
+
+00:25:57.800 --> 00:26:05.090
+Vedem aici că avem roboți care solicită să fie concediați și că succesul este dat din nou.
+
+00:26:06.760 --> 00:26:09.070
+Să ne reîmprospătăm rapid.
+
+00:26:09.070 --> 00:26:09.400
+In regula.
+
+00:26:09.400 --> 00:26:11.300
+Ce se întâmplă dacă cererea nu reușește.
+
+00:26:11.320 --> 00:26:13.820
+Să ne întoarcem aici și să mergem la acțiunea noastră.
+
+00:26:13.920 --> 00:26:14.500
+Da.
+
+00:26:14.560 --> 00:26:18.280
+Și să notăm doar ceva greșit aici vom spune așa.
+
+00:26:18.280 --> 00:26:19.510
+Salvați-l.
+
+00:26:19.510 --> 00:26:23.020
+Du-te înapoi și mergeți acolo.
+
+00:26:23.120 --> 00:26:27.170
+Avem cereri de roboți eșuat.
+
+00:26:27.190 --> 00:26:31.560
+Foarte tare.
+
+00:26:31.730 --> 00:26:32.640
+Să rezolvăm asta.
+
+00:26:33.620 --> 00:26:37.040
+Și salvați.
+
+00:26:37.090 --> 00:26:37.780
+In regula.
+
+00:26:37.960 --> 00:26:44.020
+Avem aplicația noastră care face exact același lucru ca înainte.
+
+00:26:45.220 --> 00:26:51.080
+Nimic prea nebun doar ne-a filtrat roboții.
+
+00:26:51.310 --> 00:27:02.760
+Dar singura diferență este că avem această abilitate extraordinară de înregistrare și folosim redux.
+
+00:27:02.850 --> 00:27:07.340
+Foarte tare.
+
+00:27:07.350 --> 00:27:10.180
+Vreau să mai trec peste asta.
+
+00:27:11.850 --> 00:27:16.450
+Și acest lucru se datorează faptului că este un pic de punct de lipit pentru majoritatea oamenilor.
+
+00:27:18.640 --> 00:27:25.720
+Amintiți-vă această cerere roboților cum au aceste două funcții.
+
+00:27:25.930 --> 00:27:29.210
+Robotul de cerere chiar acum redux.
+
+00:27:29.220 --> 00:27:36.160
+Din cutie nu s-ar înțelege acest lucru, deoarece nu întoarcem un obiect așa cum se așteaptă la o acțiune.
+
+00:27:36.220 --> 00:27:45.210
+Vom reveni la o funcție și această funcție va însemna ceva prin adăugarea middleware redux
+
+00:27:45.300 --> 00:27:46.090
+thunk.
+
+00:27:46.240 --> 00:27:47.980
+Acum ascultăm acțiunile.
+
+00:27:48.040 --> 00:27:54.490
+Și oricând ar fi declanșat acțiunea robotului cererii va reveni o funcție și va declanșa redux thunk și
+
+00:27:54.490 --> 00:28:00.780
+redux thunk se va spune că aceasta este o funcție pe care o voi da aici este
+
+00:28:00.790 --> 00:28:08.350
+expedierea, astfel încât să puteți numi efectiv unele acțiuni și putem să ne conducem în cele din urmă astfel de acțiuni.
+
+00:28:08.350 --> 00:28:15.240
+Așa că revenim la diagrama noastră am creat un sistem în care acțiunile sunt declanșate.
+
+00:28:15.390 --> 00:28:17.310
+Ei trec prin orice middleware.
+
+00:28:17.370 --> 00:28:24.030
+Dacă este vorba de o schimbare a termenului de căutare, este doar să mergem direct la reductor,
+
+00:28:24.450 --> 00:28:32.730
+să trecem printr-o funcție frumoasă, să actualizăm magazinul și să facem schimbări în privința noastră, dacă cerem roboților să observe că
+
+00:28:32.730 --> 00:28:39.120
+este o funcție pe care o va duce în middleware și redux thunk va spune.
+
+00:28:39.140 --> 00:28:47.250
+În primul rând, trimiteți doar în așteptare la reductor și vă voi anunța când voi termina cu promisiunea și vă
+
+00:28:48.000 --> 00:28:50.490
+voi anunța dacă primesc roboți.
+
+00:28:50.740 --> 00:28:59.080
+Iar atunci când se întoarce, va expedia succesul, trece prin actualizarea reductorului și va face
+
+00:28:59.230 --> 00:29:00.010
+schimbări.
+
+00:29:01.410 --> 00:29:03.570
+Cine naiba a fost mult.
+
+00:29:03.630 --> 00:29:09.550
+Dar dacă ai ajuns atât de departe și înțelegi că ai obținut destul de mult redux.
+
+00:29:09.600 --> 00:29:10.440
+Asta e.
+
+00:29:10.440 --> 00:29:13.730
+Aceasta este întreaga bibliotecă redux.
+
+00:29:13.980 --> 00:29:15.230
+Este foarte simplu.
+
+00:29:15.240 --> 00:29:20.340
+Iar odata ce ai inceput sa o folosesti de cateva ori si te simti confortabil cu ea este cu
+
+00:29:20.370 --> 00:29:21.850
+adevarat frumoasa cum functioneaza totul.
+
+00:29:21.870 --> 00:29:24.150
+Dar pentru moment, hai să facem o pauză.
+
+00:29:24.150 --> 00:29:26.240
+Mulțumesc că te uiți și te voi vedea în următorul.
+
+00:29:26.550 --> 00:29:27.000
+Pa! Pa.

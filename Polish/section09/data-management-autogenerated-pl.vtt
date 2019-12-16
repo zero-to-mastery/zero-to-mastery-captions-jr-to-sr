@@ -1,0 +1,442 @@
+﻿WEBVTT
+
+00:00:01.500 --> 00:00:02.650
+Witam ponownie.
+
+00:00:02.860 --> 00:00:04.630
+Jesteśmy tak blisko.
+
+00:00:04.630 --> 00:00:07.130
+Porozmawiamy teraz o zarządzaniu danymi.
+
+00:00:08.060 --> 00:00:14.980
+A co możemy zrobić, aby poprawić bezpieczeństwo, jeśli chodzi o zarządzanie danymi zarządzania danymi, obejmuje
+
+00:00:14.980 --> 00:00:15.940
+wiele pomysłów.
+
+00:00:15.940 --> 00:00:21.510
+Ale jest kilka tematów, na przykład chcesz mieć pewność, że zawsze masz kopie zapasowe.
+
+00:00:21.520 --> 00:00:27.880
+Niektórzy ludzie lubią tworzyć kopie zapasowe swoich danych statycznych w bezpiecznym miejscu.
+
+00:00:27.880 --> 00:00:29.890
+Nigdy nie ma jednego punktu awarii.
+
+00:00:29.980 --> 00:00:36.140
+To jest jedno miejsce, które jest słabe, a jeśli to zejdzie, to nie masz innego miejsca, z którego można by się wyleczyć.
+
+00:00:37.610 --> 00:00:41.570
+Chcesz mieć pewność, że ograniczysz ekspozycję na wrażliwe dane.
+
+00:00:41.570 --> 00:00:50.330
+To znaczy, że chcesz zaszyfrować aresztowanie danych, aby je zepsuć, aby ludzie mogli je zobaczyć i przejść.
+
+00:00:50.330 --> 00:00:51.510
+A teraz o to chodzi.
+
+00:00:51.830 --> 00:00:55.700
+To, co właśnie powiedziałem, szyfrowanie danych w spoczynku i podczas przejścia.
+
+00:00:55.710 --> 00:01:02.420
+W większości przypadków nie jest to możliwe, ponieważ szyfrowanie odpoczynku w pamięci oznacza, że gdy dane właśnie się
+
+00:01:02.840 --> 00:01:10.100
+tam znajdują, powiedzmy, że w bazie danych szyfrującej wszystko, co kosztuje dane, dużo pieniędzy wymaga dużego nakładu pracy i
+
+00:01:10.100 --> 00:01:15.980
+jest po prostu niewykonalne i nie jest całkowicie pokrycie twoich baz w przejściu oznacza, kiedy
+
+00:01:15.980 --> 00:01:16.970
+wysyłasz dane.
+
+00:01:17.000 --> 00:01:22.490
+Kiedy więc przesyłasz dane z bazy danych na serwer podczas wysyłania danych z serwera do
+
+00:01:22.490 --> 00:01:26.270
+klienta, wiemy, że w tym przypadku jest używany arkusz.
+
+00:01:27.160 --> 00:01:31.560
+Teraz chcesz być selektywny, jakie dane są szyfrowane i dlaczego tego nie robisz.
+
+00:01:31.660 --> 00:01:38.740
+Na podstawie dostępnych zasobów możesz chcieć zaszyfrować poufne informacje, takie jak numery telefonów,
+
+00:01:38.740 --> 00:01:46.630
+adresy e-mail użytkowników, ale być może nie muszą niepokoić się nazwiskami zwierząt użytkowników kolumny z nazwą
+
+00:01:47.090 --> 00:01:51.520
+pióra w bazie danych, może nie trzeba szyfrować.
+
+00:01:51.550 --> 00:01:59.150
+Więc co możemy zrobić z zarządzaniem danymi? Dobrze, pokażę ci szybki przykład niektórych z rzeczy, które możesz
+
+00:01:59.150 --> 00:01:59.810
+zrobić.
+
+00:01:59.810 --> 00:02:07.280
+Ale główne idee, które chcesz zastosować do szyfrowania, obejmują dane identyfikujące użytkowników i wrażliwe dane, takie jak
+
+00:02:07.790 --> 00:02:10.470
+wiadomości e-mail z dostępem i fakturowanie.
+
+00:02:10.550 --> 00:02:12.120
+Tak jak powiedziałem.
+
+00:02:12.540 --> 00:02:19.140
+I w końcu, jak wspominaliśmy przy tworzeniu kopii zapasowych, chcemy, aby te kopie były również idealnie
+
+00:02:19.200 --> 00:02:20.060
+zaszyfrowane.
+
+00:02:20.100 --> 00:02:24.760
+Ponownie, nie zawsze może to być możliwe, ale najpierw należy skoncentrować się na poufnych danych.
+
+00:02:24.780 --> 00:02:26.500
+I wszystko, co możesz zaszyfrować.
+
+00:02:26.580 --> 00:02:27.440
+Powinieneś to zrobić.
+
+00:02:28.520 --> 00:02:32.810
+Teraz chcę porozmawiać o dwóch głównych tematach.
+
+00:02:32.810 --> 00:02:35.960
+Jednym z nich jest hashowanie haseł i sposób ich przechowywania.
+
+00:02:35.960 --> 00:02:41.840
+Drugim jest szyfrowanie bazy danych zawierającej poufne dane.
+
+00:02:42.230 --> 00:02:46.910
+Druga część tutaj jest naprawdę zależna od twojej bazy danych, więc nie zamierzam jej omawiać,
+
+00:02:46.910 --> 00:02:48.310
+ponieważ jest zbyt szczegółowa.
+
+00:02:48.410 --> 00:02:55.160
+Ale narzędzia takie jak krypto PGE umożliwiają szyfrowanie kilku kolumn w bazie danych postscript.
+
+00:02:55.160 --> 00:02:58.590
+Jedna z moich ulubionych baz danych i mają świetną dokumentację.
+
+00:02:58.610 --> 00:02:59.810
+To jest coś, co możesz zrobić.
+
+00:02:59.930 --> 00:03:09.110
+Ale jeśli korzystałem z szyfrowania 3G, prawdopodobnie zaszyfruję adres rozliczeniowy lub kolumnę e-mail użytkowników lub
+
+00:03:09.440 --> 00:03:12.500
+cokolwiek wrażliwego dla kolumny użytkownika.
+
+00:03:13.440 --> 00:03:15.930
+To tylko dobra praktyka.
+
+00:03:15.930 --> 00:03:24.060
+Ale jednym z tematów, który naprawdę mnie fascynuje i tak naprawdę kocha, jest przechowywanie haseł.
+
+00:03:24.630 --> 00:03:28.360
+Wiem, że to jest geekowe, ale naprawdę ekscytujące.
+
+00:03:29.170 --> 00:03:34.660
+Naprawdę napisałem bloga firmowego w moim poprzednim życiu na ten temat, który opuści to dla ciebie na końcu
+
+00:03:34.660 --> 00:03:35.580
+tego kursu.
+
+00:03:35.800 --> 00:03:41.290
+I to jest również coś, co już omówiliśmy w poprzednim kursie, ale zamierzam zrobić szybki
+
+00:03:41.290 --> 00:03:44.320
+przegląd tego, co powinieneś zrobić z hasłami.
+
+00:03:44.320 --> 00:03:51.100
+Każda strona internetowa, która ma nazwę użytkownika i hasło oraz seinen musi mieć dobre zarządzanie danymi, zwłaszcza jeśli
+
+00:03:51.100 --> 00:03:52.290
+chodzi o hasła.
+
+00:03:52.420 --> 00:03:54.360
+Więc co możemy zrobić.
+
+00:03:54.610 --> 00:04:00.190
+Cóż, są trzy biblioteki, które są naprawdę dobre, a te trzy biblioteki
+
+00:04:00.250 --> 00:04:04.830
+są naprawdę dobre, ponieważ są sprawdzane pod kątem bezpieczeństwa.
+
+00:04:04.840 --> 00:04:11.860
+Chcesz wybrać pakiety, które były od dawna, ponieważ hackerzy bezpieczeństwa, hakerzy czarnego kapelusza i hakerzy
+
+00:04:11.860 --> 00:04:15.740
+białego kapelusza, przetestowali go i przetrwali próbę czasu.
+
+00:04:15.910 --> 00:04:22.330
+I te trzy naprawdę przetrwały próbę czasu, który minął, jest całkiem nowy, ale radził sobie naprawdę
+
+00:04:22.330 --> 00:04:23.130
+dobrze.
+
+00:04:23.140 --> 00:04:30.700
+Osobiście lubię krypto Więc pozwól mi pokazać szybką demonstrację Mam tutaj plik.
+
+00:04:30.700 --> 00:04:37.030
+Pozwólcie, że zrobię to trochę lepiej, że pobrałem pakiet crypt no guess, po prostu bardzo
+
+00:04:37.030 --> 00:04:38.730
+łatwo działający bez js.
+
+00:04:38.920 --> 00:04:41.310
+I to już prawie wszystko.
+
+00:04:41.410 --> 00:04:48.500
+A jeśli przejdę do ich pakietów, zobaczymy, że mają opcję Synchronoss i opcję
+
+00:04:48.500 --> 00:04:56.640
+asynchroniczną, więc po prostu skopiujmy pierwszą część i wyjaśnię, co robi i nie lubię bekonu.
+
+00:04:56.640 --> 00:05:07.430
+Mam zamiar iść z zupą tutaj, więc kiedy twoja strona internetowa ma nazwę użytkownika i hasło, dlaczego powinniśmy zrobić dobrze, pierwszą rzeczą,
+
+00:05:07.520 --> 00:05:13.940
+którą masz zamiar zrobić, to pozwolić użytkownikowi wpisać swoją nazwę użytkownika i hasło.
+
+00:05:13.940 --> 00:05:16.960
+Następnie klikną przycisk Prześlij po kliknięciu przycisku Prześlij.
+
+00:05:17.030 --> 00:05:24.310
+Upewnisz się, że jest to CBS, aby hasło i nazwa użytkownika
+
+00:05:24.590 --> 00:05:33.320
+umieścić go w żądaniu CBS w treści żądania, które wysłałeś na serwer, a następnie nadejdzie.
+
+00:05:33.420 --> 00:05:39.930
+Powiedzmy, że to twoja odwaga, a kiedy nadejdzie, złapiesz to hasło i powiesz, że twoje hasło,
+
+00:05:39.930 --> 00:05:43.020
+które właśnie wpisałeś, jest bardzo słabym hasłem.
+
+00:05:43.020 --> 00:05:46.180
+Wiem, ale użyjemy tego tylko do celów demonstracyjnych.
+
+00:05:46.530 --> 00:05:54.180
+Teraz to, co robimy, nigdy nie przechowujemy takich haseł w naszej bazie danych, ponieważ jeśli nasza baza danych zostanie
+
+00:05:54.180 --> 00:05:57.940
+naruszona lub ktoś ją wprowadzi, mają wszystkie hasła wszystkich.
+
+00:05:58.050 --> 00:05:59.420
+Nigdy tego nie rób.
+
+00:05:59.430 --> 00:06:05.160
+Zamiast tego korzystamy z krypta B, która pozwala nam na mieszanie.
+
+00:06:05.270 --> 00:06:11.510
+A jeśli pamiętasz mieszankę z naszej sekcji S-sh, to jest to Fadia w jedną
+
+00:06:11.540 --> 00:06:19.750
+stronę, która przejmie superstruny i zamieni je w pogmatwany sznur, o którym nigdy nie dowiemy się, że pochodzi z zupy.
+
+00:06:19.760 --> 00:06:20.710
+Więc pozwól, że ci pokażę.
+
+00:06:20.750 --> 00:06:21.710
+Mam
+
+00:06:24.350 --> 00:06:25.440
+zamiar powiedzieć,
+
+00:06:27.730 --> 00:06:30.020
+że Konsole loguje hasz,
+
+00:06:33.810 --> 00:06:35.680
+uratujmy scenariusz Rona
+
+00:06:39.000 --> 00:06:41.370
+Noada i spójrzmy na to.
+
+00:06:41.580 --> 00:06:46.440
+Mamy mieszankę, której nie chcesz kopiować.
+
+00:06:46.440 --> 00:06:52.340
+To naprawdę pomieszane ciągi znaków, które reprezentują zupę.
+
+00:06:52.440 --> 00:06:57.160
+Nawet jeśli zły aktor dostanie się do naszej bazy danych i widzi oh tak.
+
+00:06:57.300 --> 00:07:03.000
+Hasło jest takie, że nie będą one w stanie nic z nim zrobić, ponieważ nie wiedzą, że mogą
+
+00:07:03.000 --> 00:07:06.690
+wejść na stronę internetową i wpisują to, ponieważ to nie zadziała.
+
+00:07:06.690 --> 00:07:08.840
+Moje hasło to zupa.
+
+00:07:08.850 --> 00:07:10.260
+Jak to działa.
+
+00:07:10.260 --> 00:07:13.560
+Przechowujemy to w bazie danych dla użytkownika.
+
+00:07:13.560 --> 00:07:20.290
+Powiedzmy, że Andri i kiedy Andre wraca, nie lubię używać własnego nazwiska.
+
+00:07:20.290 --> 00:07:22.170
+Wykorzystajmy Tima jako przykład.
+
+00:07:22.270 --> 00:07:29.390
+Kiedy Tim wraca, jak możemy to sprawdzić, kiedy Tim znowu zupiuje.
+
+00:07:29.650 --> 00:07:33.970
+To jest to samo, co hasz, który mamy w bazie danych.
+
+00:07:33.970 --> 00:07:44.940
+Cóż, wracamy do krypty, mają one inną metodę zwaną compair, a to porównanie porówna ciąg, który Tim wstawi,
+
+00:07:44.940 --> 00:07:50.360
+gdy ponownie wróci do witryny, aby się zalogować.
+
+00:07:50.640 --> 00:07:53.880
+I hash, który zapisaliśmy w bazie danych.
+
+00:07:53.880 --> 00:07:57.160
+W moim przypadku załóżmy, że mam to zapisane w bazie danych.
+
+00:07:57.270 --> 00:08:04.550
+I znowu, jeśli nie znasz baz danych, polecam sprawdzić mój poprzedni kurs.
+
+00:08:04.790 --> 00:08:06.660
+I jest nasz.
+
+00:08:06.670 --> 00:08:09.410
+Zróbmy z tego ciąg znaków.
+
+00:08:09.460 --> 00:08:12.770
+To jest nasz tag hashowy, który po prostu wyskakujemy z bazy danych.
+
+00:08:12.790 --> 00:08:13.330
+W porządku.
+
+00:08:13.420 --> 00:08:18.070
+Teraz otrzymujemy odpowiedź, więc zobaczmy, jaka będzie odpowiedź.
+
+00:08:18.070 --> 00:08:20.050
+A potem mówię całą konsolę.
+
+00:08:22.410 --> 00:08:29.510
+Odpowiedź, kiedy Save uruchomisz to widzisz, że mam.
+
+00:08:29.510 --> 00:08:30.250
+Prawdziwe.
+
+00:08:30.290 --> 00:08:31.450
+Więc teraz to wiem.
+
+00:08:31.470 --> 00:08:34.000
+Tak, to hasło namiotu.
+
+00:08:34.070 --> 00:08:35.240
+Może się zalogować.
+
+00:08:35.390 --> 00:08:37.800
+Ale jeśli Tim coś wypisze, powiedzmy, że odejdę.
+
+00:08:37.840 --> 00:08:38.290
+Ja robię.
+
+00:08:38.290 --> 00:08:39.320
+Kapitał
+
+00:08:42.290 --> 00:08:44.100
+S i wykrzyknik.
+
+00:08:44.210 --> 00:08:47.460
+Oszczędzam i uruchamiam to.
+
+00:08:47.510 --> 00:08:49.130
+Nie, to nie jest twoje hasło.
+
+00:08:49.130 --> 00:08:49.900
+Spróbuj ponownie.
+
+00:08:51.110 --> 00:08:56.680
+I wystarczająco dobrze, że nawet kapitał został zaatakowany.
+
+00:08:56.680 --> 00:08:57.220
+Proszę bardzo.
+
+00:08:57.290 --> 00:08:58.340
+Ponieważ hash.
+
+00:08:58.340 --> 00:09:06.130
+Każda drobna zmiana hasła wypluje zupełnie inny hasz.
+
+00:09:06.160 --> 00:09:09.850
+Teraz na wypadek, gdybyś zastanawiał się, co to jest Gnoll Noal.
+
+00:09:09.850 --> 00:09:16.560
+W moim artykule, który napisałem, mówię o biegach Salt i o tym, jak dodaje dodatkowe warstwy bezpieczeństwa.
+
+00:09:16.570 --> 00:09:21.980
+Jest to złożony temat i wykracza poza zakres tego kursu, ale przeczytaj go, jeśli jesteś zainteresowany.
+
+00:09:22.000 --> 00:09:28.900
+Jest to tylko dodatkowy środek bezpieczeństwa, ale to, co robi, to jeśli zauważysz, jak powolne otrzymujemy hasz, a wtedy potrzeba
+
+00:09:28.930 --> 00:09:31.490
+trochę czasu, aby uzyskać prawdziwą lub fałszywą.
+
+00:09:31.540 --> 00:09:37.040
+Pozwól, że ci pokażę, jeśli to zapiszę i uruchomię to ponownie.
+
+00:09:37.260 --> 00:09:39.810
+Widzisz tę przerwę, gdy hash został zahartowany.
+
+00:09:39.810 --> 00:09:42.950
+Naprawdę bardzo szybko, ale zajęło to trochę czasu.
+
+00:09:43.950 --> 00:09:44.710
+Zobaczmy jeszcze raz.
+
+00:09:46.340 --> 00:09:50.610
+Więc, co się dzieje, jest dodatkowa ochrona przez B Crypt.
+
+00:09:50.660 --> 00:09:54.700
+Mówi w porządku, jeśli była zła osoba.
+
+00:09:54.700 --> 00:09:57.120
+Ponownie po prostu próbuj haseł, dopóki nie otrzymam zapałki.
+
+00:09:57.170 --> 00:10:04.280
+Skrypty z użyciem czegoś, co nazywa się rundami Salt, powodują ataki z użyciem brutalnej siły, w których osoba
+
+00:10:04.280 --> 00:10:08.820
+po prostu próbuje haseł naprawdę ciężko, ponieważ trwa to długo.
+
+00:10:09.110 --> 00:10:11.380
+Sprawdzanie wymaga trochę czasu.
+
+00:10:11.420 --> 00:10:19.670
+Więc jeśli byłbym złym napastnikiem, próbowałem dalej, ale ponieważ krypta B jest wolna, zabrałoby mi naprawdę bardzo dużo
+
+00:10:19.670 --> 00:10:24.490
+czasu na odgadnięcie hasła, a to kolejna warstwa ochrony, która
+
+00:10:25.130 --> 00:10:29.360
+jest dostarczana z kryptą i najlepszymi bibliotekami haszowania.
+
+00:10:29.580 --> 00:10:36.100
+Ponownie zarządzanie danymi jest naprawdę bardzo ważne i wraca również do zmiennych środowiskowych.
+
+00:10:36.150 --> 00:10:41.120
+Wszelkie sekrety, nawet zawierające Twój klucz S-sh, którym chcesz odpowiednio zarządzać.
+
+00:10:41.190 --> 00:10:42.900
+Nigdy nie ujawniaj swoich sekretów.
+
+00:10:43.050 --> 00:10:50.270
+Zawsze staraj się, aby złe podmioty miały dostęp do poufnych informacji.
+
+00:10:50.320 --> 00:10:51.260
+Zobaczę w następnym.

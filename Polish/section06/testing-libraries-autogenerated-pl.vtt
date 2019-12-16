@@ -1,0 +1,523 @@
+﻿WEBVTT
+
+00:00:01.920 --> 00:00:02.840
+Witamy spowrotem.
+
+00:00:03.090 --> 00:00:08.950
+W tym filmie porozmawiajmy o wszystkich narzędziach, z których możemy korzystać w celu przeprowadzenia naszych testów.
+
+00:00:09.210 --> 00:00:17.800
+Pamiętaj, że testy serca są po prostu javascript, więc moglibyśmy po prostu pisać proste pliki javascript z, być
+
+00:00:17.820 --> 00:00:25.880
+może, instrukcjami, które mówią, że jeśli niektóre funkcjonują jako te dwie liczby razem, to zwrócą sukces.
+
+00:00:25.890 --> 00:00:28.270
+W przeciwnym razie testy powrotu zakończą się niepowodzeniem.
+
+00:00:28.410 --> 00:00:36.150
+Mogliśmy to zrobić, ale jest to nużące i jako programiści chcemy korzystać z istniejących narzędzi,
+
+00:00:36.300 --> 00:00:39.980
+aby przyspieszyć nasze doświadczenia lub przyspieszyć rozwój.
+
+00:00:39.980 --> 00:00:41.390
+Więc to będzie przytłaczające.
+
+00:00:41.390 --> 00:00:42.960
+Ale spójrzmy na narzędzia do testowania.
+
+00:00:44.430 --> 00:00:52.110
+Próbowałem zorganizować dla ciebie sposób myślenia o testach i środowisku testowym oraz tworzeniu stron internetowych.
+
+00:00:52.380 --> 00:00:58.290
+Wyjaśnię to, a jeśli jest to nieco skomplikowane przy pierwszych drzwiach, powrócisz do tego i przejdziesz
+
+00:00:58.290 --> 00:01:02.500
+do tego na końcu sekcji, a to wszystko ma sens.
+
+00:01:03.310 --> 00:01:09.550
+Pierwszą rzeczą, której potrzebujemy w narzędziu do testowania, jest coś, co nazywa się biblioteką testową.
+
+00:01:09.550 --> 00:01:11.310
+Dość samo wyjaśniające.
+
+00:01:11.350 --> 00:01:18.880
+Jest to rusztowanie dające nam możliwość użycia niektórych funkcji i nowych metod, abyśmy
+
+00:01:18.880 --> 00:01:21.320
+mogli napisać nasze testy.
+
+00:01:21.550 --> 00:01:26.620
+Znowu pomyśl o tym jako o rusztowaniu lub budowaniu tej struktury wokół naszych testów.
+
+00:01:27.500 --> 00:01:31.340
+Prawdopodobnie trzy najlepsze biblioteki to jazzmani.
+
+00:01:31.640 --> 00:01:36.290
+Po prostu jest coś, co nazywa się moka.
+
+00:01:36.460 --> 00:01:43.330
+I tak jak powiedziałem, są to po prostu biblioteki instalacyjne NPM, więc są dostępne na NPM i możesz
+
+00:01:43.510 --> 00:01:46.350
+je dodać, aby budować na swoim rusztowaniu.
+
+00:01:46.410 --> 00:01:53.830
+Następną rzeczą, której potrzebujesz tutaj, jest coś, co nazywa się biblioteką sekcji pielęgniarek i tutaj
+
+00:01:53.830 --> 00:01:58.420
+znowu mamy Jasmine, która ma własną bibliotekę asercji.
+
+00:01:58.420 --> 00:02:04.990
+Po raz kolejny mamy do czynienia z własną biblioteką asercji, a
+
+00:02:04.990 --> 00:02:14.790
+następnie Chye, która zazwyczaj łączy się z Moka, aby mieć bibliotekę asercji jako bibliotekę zapewniającą funkcje, które spełnia
+
+00:02:14.800 --> 00:02:16.280
+nasze działanie.
+
+00:02:16.320 --> 00:02:17.670
+Wiem, że to jest mylące.
+
+00:02:17.670 --> 00:02:25.580
+Zasadniczo jest to narzędzie umożliwiające testowanie, czy zmienne zawierają oczekiwaną wartość.
+
+00:02:25.590 --> 00:02:33.140
+To wciąż brzmi myląco, więc pokażę ci, gdzie znajduje się biblioteka twierdzeń Chye.
+
+00:02:33.280 --> 00:02:40.690
+I widzicie tutaj, że używają czegoś zwanego BDD lub rozwijania opartego na zachowaniu, a
+
+00:02:40.840 --> 00:02:49.730
+instalując tę bibliotekę możemy użyć wszystkich tych słów i po prostu wyglądają jak podstawowy angielski, co to
+
+00:02:49.730 --> 00:02:59.220
+jest stwierdzenie w bibliotece, należy oczekiwać, że ten obiekt zawiera tylko równe jeden, a następnie to Cheyne wszystkie te
+
+00:02:59.220 --> 00:03:02.670
+słowa razem, aby przetestować nasze założenie.
+
+00:03:02.670 --> 00:03:11.530
+Powiedzmy, że ten obiekt nie będzie miał własności, jak prawo angielskie.
+
+00:03:11.640 --> 00:03:15.500
+Po prostu testuje warunek jeden pod warunkiem drugim.
+
+00:03:15.780 --> 00:03:23.240
+Więc to zwróci wynik fałszywy, ponieważ masz rację, ten obiekt nie będzie miał własności,
+
+00:03:23.270 --> 00:03:28.940
+a oni mają wiele rzeczy, których nie możemy dodać.
+
+00:03:28.960 --> 00:03:36.670
+Widzimy, że inny oczekuje, że ten obiekt będzie miał wszystkie klucze aib, które czytają jak angielski, a to
+
+00:03:36.880 --> 00:03:41.880
+sprawia, że nasze testy są naprawdę łatwe do odczytania i zrozumienia.
+
+00:03:42.000 --> 00:03:49.470
+Następną rzeczą, której potrzebujemy do naszych testów, jest coś, co nazywa się biegiem testowym, a biegacz testowy to coś,
+
+00:03:49.470 --> 00:03:52.330
+co pozwala nam przeprowadzać nasze testy.
+
+00:03:52.500 --> 00:03:59.910
+Pamiętaj, że jeśli wrócimy do naszej aplikacji, musieliśmy uruchomić NPM i to
+
+00:04:03.190 --> 00:04:12.910
+uruchamia nasz test, naciśnij a, aby uruchomić wszystkie testy i coś jest magicznie uruchomione we wszystkich tych testach.
+
+00:04:12.910 --> 00:04:14.930
+To właśnie robi biegacz testowy.
+
+00:04:16.140 --> 00:04:23.010
+Wracając do naszego slajdu, widzimy teraz, że jazzmani po prostu włączają biegacza do testów w swojej bibliotece, a
+
+00:04:23.430 --> 00:04:26.560
+następnie Moka ma również własnego biegacza testowego.
+
+00:04:26.670 --> 00:04:30.210
+A potem dodałem jeszcze jeden, który nazywa się karmą.
+
+00:04:30.370 --> 00:04:31.220
+Tak.
+
+00:04:31.440 --> 00:04:36.990
+A to pozwala na uruchamianie testów w przeglądarce.
+
+00:04:38.900 --> 00:04:40.020
+Co to znaczy.
+
+00:04:40.870 --> 00:04:45.310
+Cóż biegacz testowy może wykonywać testy w innym środowisku.
+
+00:04:45.310 --> 00:04:46.830
+Spójrzmy.
+
+00:04:46.910 --> 00:04:54.960
+Zazwyczaj nasz javascript działa z Domem, aby uczynić naszą aplikację internetową tym, czym jest.
+
+00:04:56.220 --> 00:05:04.010
+Ale kiedy przeprowadzamy testy i to właśnie karma pozwala na uruchomienie testów w przeglądarce.
+
+00:05:05.140 --> 00:05:09.870
+Ale dlaczego nie mielibyśmy zawsze uruchamiać naszych testów w przeglądarce?
+
+00:05:09.880 --> 00:05:12.730
+To dlatego, że zajmuje dużo czasu.
+
+00:05:12.730 --> 00:05:17.380
+Musimy uruchomić każdy test za pomocą przeglądarki przy użyciu interfejsu API przeglądarki.
+
+00:05:18.700 --> 00:05:20.150
+Idealnie, gdy przeprowadzamy testy.
+
+00:05:20.170 --> 00:05:27.280
+Jest super super szybki, ponieważ większość testów jest tak skonfigurowana, że jeśli programista trafi zapisać na swoim terminalu, zostanie
+
+00:05:27.490 --> 00:05:28.860
+uruchomiony na próbę.
+
+00:05:29.020 --> 00:05:33.410
+Jeśli za każdym razem trzeba było uruchomić przeglądarkę i uruchomić wszystko.
+
+00:05:33.670 --> 00:05:36.070
+Cóż, byłoby to naprawdę bardzo powolne.
+
+00:05:36.460 --> 00:05:44.290
+Więc istnieją inne opcje, takie jak lalkarz Google'a, który nazywamy przeglądarką bezgłową.
+
+00:05:44.380 --> 00:05:52.640
+Jest to biblioteka węzłów zapewniająca interfejs API wysokiego poziomu do kontrolowania bezgłowej wersji przeglądarki.
+
+00:05:52.660 --> 00:05:58.690
+Pomyśl o tym jako o uproszczonej przeglądarce, która sprawia, że twoje testy są trochę szybsze.
+
+00:05:58.900 --> 00:06:05.870
+Ale może być również skonfigurowany do robienia rzeczy takich jak generowanie zrzutów ekranu PDSA stron.
+
+00:06:06.130 --> 00:06:08.580
+Może zautomatyzować przesyłanie formularzy.
+
+00:06:08.620 --> 00:06:10.930
+Możesz przeprowadzić test interfejsu użytkownika za jego pomocą.
+
+00:06:10.930 --> 00:06:13.420
+Możesz monitorować wejście klawiatury.
+
+00:06:13.450 --> 00:06:15.710
+Możesz zrobić z nim wiele fajnych rzeczy.
+
+00:06:15.820 --> 00:06:18.290
+I wreszcie mamy coś, co nazywa się dong japonski.
+
+00:06:18.550 --> 00:06:24.390
+I tak jak sugeruje nazwa, jest to implementacja DOM w javascript.
+
+00:06:24.460 --> 00:06:29.130
+Więc nie jest to prawdziwa wersja DOM, ale AFAIK javascript.
+
+00:06:29.940 --> 00:06:37.950
+Pamiętam, że DOM to struktura podobna do drzewa, która pokazuje węzły na naszej stronie i to właśnie tworzy
+
+00:06:37.950 --> 00:06:39.220
+nasz interfejs.
+
+00:06:39.450 --> 00:06:46.170
+Tak po prostu głupie wdraża to w javascript, więc możemy mieć dom jak API do pracy
+
+00:06:46.170 --> 00:06:47.890
+bez potrzeby przeglądarki.
+
+00:06:48.010 --> 00:06:57.480
+Jeśli wrócimy do naszych testów i uruchommy to ponownie, mam zamiar uruchomić test uruchamiania NPM, zobaczysz tutaj,
+
+00:06:57.480 --> 00:07:05.200
+że test skryptów testowych i kreska poszły szybko, ale zobaczyłeś, że używamy japes Dom
+
+00:07:07.240 --> 00:07:11.400
+tam, aby nasz test jest naprawdę szybki.
+
+00:07:11.410 --> 00:07:11.940
+W porządku.
+
+00:07:13.910 --> 00:07:16.200
+To jest biegacz testowy.
+
+00:07:16.250 --> 00:07:21.470
+Następnie mamy coś, co nazywa się fałszywymi szpiegami i Stubbami.
+
+00:07:21.570 --> 00:07:25.800
+I tu znowu Jasmine i po prostu przyjdźcie z własną wersją.
+
+00:07:26.640 --> 00:07:32.730
+A jeśli używasz czegoś podobnego do Mocha, tak jakbyś musiał dodać twierdzenie o bibliotece, musisz dodać
+
+00:07:32.730 --> 00:07:35.610
+coś o nazwie "Zaloguj się na Boga".
+
+00:07:35.660 --> 00:07:39.780
+Tak, są oczywiście inne biblioteki, ale jest to najbardziej popularne.
+
+00:07:39.920 --> 00:07:47.900
+Teraz, co to za drobne szpiedzy i biznes Stobów, dostarczają nam szpiedzy.
+
+00:07:47.900 --> 00:07:50.360
+Informacje o funkcjach.
+
+00:07:50.360 --> 00:07:54.650
+Ile razy zostali wezwani w jakich przypadkach i przez kogo.
+
+00:07:54.650 --> 00:08:03.710
+Stubbing zastępuje wybrane funkcje za pomocą funkcji zapewniającej, że oczekiwane zachowanie ma miejsce, a następnie Mock-a
+
+00:08:03.710 --> 00:08:11.380
+jest jak fałszowanie funkcji lub zachowania w celu przetestowania różnych części procesu.
+
+00:08:11.390 --> 00:08:14.870
+To może być naprawdę dobre dla testów integracyjnych.
+
+00:08:14.870 --> 00:08:21.950
+Teraz wiem, że może to być trochę mylące, więc spójrzmy na znak logowania tutaj,
+
+00:08:21.950 --> 00:08:28.050
+jeśli przejdziesz do ich dokumentacji, kliknij na wolny przewijak Stubba, który widzimy.
+
+00:08:28.250 --> 00:08:30.850
+Co robi stub.
+
+00:08:30.890 --> 00:08:36.260
+Po prostu używamy znaku biblioteki na kropce, która jest funkcją.
+
+00:08:36.290 --> 00:08:45.920
+Teraz możemy go użyć w taki sposób, w jaki funkcja ta może zostać wywołana z argumentami 42 i
+
+00:08:45.920 --> 00:08:51.680
+przywrócić jeden, aby po uruchomieniu wywołania zwrotnego 42 zwracało 1.
+
+00:08:51.940 --> 00:08:57.120
+A kiedy robimy callback dot z arx, to generuje błąd.
+
+00:08:57.220 --> 00:09:00.950
+Znowu to jest coś, co przejdzie później w filmach.
+
+00:09:01.090 --> 00:09:06.830
+Ale widzisz tutaj, że "stub" jest weekendowym fałszywym funkcjami i sprawia, że robią to, czego oczekują.
+
+00:09:08.840 --> 00:09:13.950
+Na przykład można się zalogować, aby sfałszować serwer podczas naszego testu.
+
+00:09:14.060 --> 00:09:18.890
+Niekoniecznie chcemy wysyłać żądania do serwera za każdym razem, gdy przeprowadzamy testy.
+
+00:09:18.890 --> 00:09:26.540
+Ale najlepiej jeśli funkcja korzysta z serwera, możemy zmywać ją za pomocą kodu pośredniczącego, aby funkcja nadal działała
+
+00:09:26.540 --> 00:09:30.660
+i możemy po prostu przetestować ten jeden fragment kodu.
+
+00:09:30.710 --> 00:09:36.430
+Tak jak powiedziałem, trudno to wyjaśnić bez odrobiny dema, ale nie martw się, dotrzemy do
+
+00:09:36.430 --> 00:09:39.670
+tego, a potem do ostatniego elementu układanki.
+
+00:09:39.740 --> 00:09:45.960
+Rozmawialiśmy o rusztowaniach o bibliotekach asercji, o których mówiliśmy o testach biegaczy, o których
+
+00:09:45.980 --> 00:09:48.820
+rozmawialiśmy o szpiegach Stobbsa Moxona.
+
+00:09:48.830 --> 00:09:55.670
+Nareszcie mamy coś, co nazywa się zasięgiem kodu, a biblioteki kodują takie biblioteki, jak Stambuł,
+
+00:09:55.880 --> 00:10:02.410
+ale obejmuje ono już tylko zasięg kodu, ale faktycznie jest to Stambuł pod maską.
+
+00:10:04.010 --> 00:10:07.230
+Pozwól mi pokazać, jak może wyglądać kodowanie.
+
+00:10:09.450 --> 00:10:15.690
+Na szczęście dla nas możemy po prostu wykonać test NPM na desce rozdzielczej i sprawdzić, jak
+
+00:10:15.930 --> 00:10:18.550
+możemy to zrobić w naszych aplikacjach.
+
+00:10:18.630 --> 00:10:21.730
+Ale jeśli to zrobię, zobaczysz tutaj właśnie Dom.
+
+00:10:23.630 --> 00:10:31.670
+Dostaję plik wyjściowy z zakresu i widzisz tutaj, że mam moich Roble przyjaciół i mam trochę zielonego trochę
+
+00:10:31.670 --> 00:10:38.600
+czerwonych żółtych i to jest pokrowiec testowy, który pokazuje mi, jaki procent oświadczeń oddziałów funkcje
+
+00:10:38.660 --> 00:10:44.300
+są pokryte z testy tutaj widzisz, że napisałem kilka testów dla pliku
+
+00:10:44.330 --> 00:10:51.860
+myśli Constansa, niektóre akcje, które właśnie zarchiwizują, a także dla niektórych z naszych składników składników listy kart
+
+00:10:51.860 --> 00:10:55.640
+i że mamy dla nich 100 procent pokrycia.
+
+00:10:55.640 --> 00:11:02.840
+Ale mamy też coś takiego jak heterogeniczny plik, któremu brakuje jakiegoś testu, a nawet pokazuje
+
+00:11:02.840 --> 00:11:05.350
+nam, których linii brakowało.
+
+00:11:05.930 --> 00:11:14.600
+I to jest Stambuł pod maską, dający nam raport o tym, gdzie obecnie brakuje testów.
+
+00:11:14.810 --> 00:11:21.740
+Mimo że są to liczne biblioteki, mają na uwadze ten sam cel i wszystkie są
+
+00:11:21.740 --> 00:11:24.640
+napisane w bardzo podobny sposób.
+
+00:11:24.680 --> 00:11:30.190
+Więc gdy już się go zna, naprawdę łatwo jest wybrać inny.
+
+00:11:30.200 --> 00:11:31.970
+Nie przejmuj się tym.
+
+00:11:32.060 --> 00:11:36.950
+Podobnie jak w przypadku wszystkiego, istnieje wiele narzędzi do pracy, ale wrócimy do tego, aby wszystko
+
+00:11:36.950 --> 00:11:37.740
+miało sens.
+
+00:11:37.820 --> 00:11:41.330
+I pamiętaj, że składnia jest bardzo podobna.
+
+00:11:41.570 --> 00:11:42.750
+Więc będziesz w porządku.
+
+00:11:43.640 --> 00:11:49.370
+Chcę też, abyście wiedzieli, że najprawdopodobniej najbardziej popularna Jasmine musi być bardzo popularna, ale
+
+00:11:49.430 --> 00:11:52.280
+teraz została wyprzedzona przez dwie rzeczy.
+
+00:11:52.280 --> 00:11:58.280
+Jeden jest tak samo dobry, ponieważ ma wszystko w jednym miejscu.
+
+00:11:58.310 --> 00:12:04.530
+Możesz po prostu zainstalować tę bibliotekę i mieć wszystkie te małe funkcje, które potrzebujesz w ramach testowania.
+
+00:12:04.880 --> 00:12:14.170
+Inną popularną jest Moka połączona z Chye i wpisanie się na nią, a to znów jest prawdopodobnie najbardziej popularna konfiguracja, ale to
+
+00:12:14.170 --> 00:12:17.690
+także dlatego, że jest o wiele nowsza.
+
+00:12:17.710 --> 00:12:24.460
+Większość z tych bibliotek kieruje się ideą rozwoju opartego na behawiorze, który opisujemy, co robi
+
+00:12:24.460 --> 00:12:28.340
+funkcja i mówimy, jakie zachowania oczekujemy od nich.
+
+00:12:28.350 --> 00:12:31.390
+Pamiętasz prawo asercji Chye.
+
+00:12:31.660 --> 00:12:40.200
+Jeśli obiekt ma te właściwości, oczekujemy, że będzie posiadał tę właściwość.
+
+00:12:40.440 --> 00:12:42.610
+W porządku, boli cię jeszcze głowa.
+
+00:12:43.870 --> 00:12:51.130
+Na szczęście dla nas, gdyby nie była to reakcja, musielibyśmy zainstalować NPM ponownie wszystkie te ustawienia i dodać
+
+00:12:51.130 --> 00:12:56.940
+je do naszych skryptów NPM, aby uruchomić wszystkie te testy i testy pokrycia.
+
+00:12:56.960 --> 00:13:02.940
+Ale jak widzisz, po ponownym uruchomieniu mamy wszystko gotowe.
+
+00:13:04.120 --> 00:13:09.790
+Znowu najlepsi umysły w społeczności pracują nad utrzymaniem reakcji CCRI, aby zawsze była na
+
+00:13:09.790 --> 00:13:13.330
+bieżąco, ponieważ wszystkie te biblioteki również się aktualizują.
+
+00:13:14.360 --> 00:13:18.650
+Nie martw się, chociaż pokażę ci w filmach, które chcesz obejrzeć, sam też możesz to ustawić.
+
+00:13:19.800 --> 00:13:25.400
+Jeszcze jedna uwaga w naszych testach tutaj CCRI reaguje w górę.
+
+00:13:25.400 --> 00:13:32.950
+Użytkowanie jest słuszne, a to dlatego, że właśnie zostało stworzone przez Facebooka, a jeśli pamiętasz, ponowne przebieranie
+
+00:13:32.950 --> 00:13:40.450
+było również domyślne dla Facebooka, co jest miłe, ponieważ używa go w swoim własnym środowisku produkcyjnym i
+
+00:13:40.450 --> 00:13:45.030
+te narzędzia są używane razem, aby działać naprawdę naprawdę ładnie.
+
+00:13:45.210 --> 00:13:52.650
+A tak przy okazji, istnieją inne biblioteki testowe, w których mamy Evę, która bardzo dobrze radzi sobie z paralelizmem,
+
+00:13:52.650 --> 00:13:55.720
+co oznacza, że testy przebiegają naprawdę szybko.
+
+00:13:55.860 --> 00:14:00.660
+A potem masz coś takiego jak taśma, która jest naprawdę prostą biblioteką niskiego poziomu.
+
+00:14:00.660 --> 00:14:03.400
+Ale jak już powiedziałem wcześniej, nie dajcie się nabrać.
+
+00:14:03.570 --> 00:14:10.290
+W skrócie, jeśli dostaniesz coś z tego filmu, to jeśli chcesz po prostu zacząć i
+
+00:14:10.290 --> 00:14:17.690
+szukać szybkiej architektury, która poradzi sobie z wszystkim i ma wszystko w jednej ścianie, po prostu
+
+00:14:17.700 --> 00:14:27.290
+użyj, jeśli chcesz bardzo elastyczną, rozszerzalną konfigurację, do której możesz podłączyć niektóre rzeczy wykorzystują Moka Moka jest nieco trudniejsza do ustawienia
+
+00:14:27.290 --> 00:14:33.590
+ze względu na te wszystkie rzeczy, które musimy dodać, ale jest bardziej elastyczna.
+
+00:14:33.740 --> 00:14:36.560
+I jak powiedziałem, otwórz dwa rozszerzenia.
+
+00:14:36.590 --> 00:14:43.180
+Jeszcze jedna uwaga w naszych testach wykorzystamy dwie rzeczy, które są unikatowe do reagowania.
+
+00:14:43.220 --> 00:14:49.190
+Jednym z nich jest tzw. Test snapshot, który pozwala nam robić naprawdę
+
+00:14:49.190 --> 00:14:52.110
+fajne rzeczy, które później pokażemy.
+
+00:14:52.550 --> 00:14:59.810
+A następnie inna biblioteka o nazwie enzym, która została stworzona przez BMB powietrza i pomaga nam pisać testy lepiej
+
+00:14:59.810 --> 00:15:01.220
+dla komponentów Riak.
+
+00:15:01.520 --> 00:15:07.840
+Nie martw się, nie pokazuję ci tych rzeczy, ponieważ uważam, że są one fajne i
+
+00:15:07.930 --> 00:15:13.260
+modne, i zostały zaimplementowane, i większość projektów Riak, z którymi się spotykasz, i
+
+00:15:13.300 --> 00:15:16.000
+to jest standardem w ekosystemie biblioteki.
+
+00:15:16.000 --> 00:15:17.270
+Więc użyjemy ich również.
+
+00:15:17.520 --> 00:15:21.500
+Pod koniec dnia jednak możemy się zgodzić na jedną rzecz.
+
+00:15:21.550 --> 00:15:26.020
+Wszystkie te biblioteki mają naprawdę fajne logo Hosie i następne.
+
+00:15:26.350 --> 00:15:26.620
+Lecz przez.

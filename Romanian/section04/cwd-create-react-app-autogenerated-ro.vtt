@@ -1,0 +1,418 @@
+﻿WEBVTT
+
+00:00:01.260 --> 00:00:02.070
+Bine ai revenit.
+
+00:00:02.130 --> 00:00:06.310
+Este timpul să construim aplicația noastră de prieteni robo pentru a începe.
+
+00:00:06.450 --> 00:00:08.810
+Să ne deschidem terminalul.
+
+00:00:08.820 --> 00:00:11.220
+Ar trebui să ne simțim confortabil până acum.
+
+00:00:11.400 --> 00:00:17.910
+Pentru această secțiune, într-adevăr recomand codificarea de-a lungul și urmărirea de-a lungul proceselor, pentru
+
+00:00:17.910 --> 00:00:23.260
+că veți învăța mult mai bine făcând-o de la sine.
+
+00:00:23.310 --> 00:00:24.390
+Și cum am promis.
+
+00:00:24.480 --> 00:00:28.700
+Este destul de ușor și vom avea o aplicație frumoasă la sfârșitul acesteia.
+
+00:00:28.800 --> 00:00:35.400
+Dar pentru cei care se bucură doar de vizionarea și de a lucra după aceea, vă voi oferi
+
+00:00:35.490 --> 00:00:40.520
+fișierele finale de aplicații de prieteni robo pentru dvs. la sfârșitul acestei secțiuni.
+
+00:00:40.810 --> 00:00:41.920
+Deci nu avem încă nimic.
+
+00:00:41.920 --> 00:00:43.350
+Suntem pe desktop.
+
+00:00:43.390 --> 00:00:52.740
+Trebuie să creați un dosar de proiect și trebuie să instalați reacția.
+
+00:00:52.820 --> 00:01:01.320
+Acum, dacă vă amintiți în NPM, am putea instala reacții și să le includem ca parte a pachetelor noastre în ambalajul Arjay și așa mai
+
+00:01:01.320 --> 00:01:02.000
+departe.
+
+00:01:02.480 --> 00:01:07.370
+Dar există din nou o unealtă deoarece tipurile de reacturi sunt atât de comune.
+
+00:01:07.420 --> 00:01:15.260
+Există un instrument care ne permite să scriem o modalitate de a crea o reacție cu toate fișierele noastre deja puse în aplicare.
+
+00:01:15.320 --> 00:01:21.440
+Se numește a crea aplicația re-act.
+
+00:01:21.630 --> 00:01:29.730
+Acest instrument este un pachet global pe care doriți să îl instalați de la NPM și creează un proiect de pornire
+
+00:01:29.760 --> 00:01:36.320
+care conține ce pachet conține baseball, astfel încât să putem folosi cele mai recente funcții javascript.
+
+00:01:36.570 --> 00:01:41.810
+Acesta conține Linton și depanare pe care nu ne-am uitat încă.
+
+00:01:41.940 --> 00:01:46.830
+Creează toată această infrastructură pentru dvs. atât de departe încât puteți începe să scrieți aplicația și este
+
+00:01:46.830 --> 00:01:51.670
+un instrument foarte bun pe care mulți o folosesc, astfel încât vom instala instalarea reacționa.
+
+00:01:51.690 --> 00:01:55.830
+Dacă vă amintiți că pur și simplu facem NPM, instalați Dashti și
+
+00:01:59.050 --> 00:02:04.020
+acest lucru ne va da posibilitatea să creați o reacție din nou dacă primiți aceste erori.
+
+00:02:04.120 --> 00:02:07.180
+Întotdeauna amintiți-vă să faceți sudo acum că
+
+00:02:14.500 --> 00:02:20.870
+am crea re-act, spunem pur și simplu să creați aplicația re-act și numele aplicației noastre.
+
+00:02:20.890 --> 00:02:25.360
+În cazul nostru îl vom numi prieteni robo.
+
+00:02:29.130 --> 00:02:35.960
+Vedeți că instalează o grămadă de lucruri de care avem nevoie.
+
+00:02:36.350 --> 00:02:44.210
+Se pare că este un succes creat prieteni Roble la directorul meu și chiar vă oferă unele
+
+00:02:44.240 --> 00:02:52.550
+comentarii bune NPM NPM începe rula NPM construi NPM test NPM Ranja conectat, dar vom ajunge la asta mai târziu.
+
+00:02:52.550 --> 00:02:55.790
+Să vedem ce avem în dosarul nostru desktop.
+
+00:02:57.070 --> 00:03:01.200
+Avem prieteni prieteni care au fost deja creați pentru noi.
+
+00:03:01.590 --> 00:03:04.800
+OK hai sa C. D în asta.
+
+00:03:04.950 --> 00:03:14.280
+Și acum dacă fac ls care arată ca avem o tona de dosare și fișiere cum ar fi Pakistan adiacente care au fost deja create pentru
+
+00:03:14.430 --> 00:03:18.100
+noi și nici un modul Cât de minunat este asta.
+
+00:03:18.120 --> 00:03:23.880
+Se instalează deja reacționează în toate dependențele de care avem nevoie.
+
+00:03:23.880 --> 00:03:28.780
+De fapt, dacă mergem pe desktop, vedem dosarul aici.
+
+00:03:28.920 --> 00:03:36.120
+Așa că haideți să trageți acest text Sublime Text deschideți-l și voi schimba ecrane în jurul valorii doar pentru
+
+00:03:36.120 --> 00:03:36.690
+a
+
+00:03:40.230 --> 00:03:42.370
+putea vedea ambele în același timp.
+
+00:03:47.630 --> 00:03:56.130
+Acum, înainte de a vă arăta ce se află în dosar, vedem că dacă vom merge la pachetul nostru, vom vedea dependențele pe care trebuie
+
+00:03:56.130 --> 00:03:57.480
+să le reacționăm.
+
+00:03:57.480 --> 00:04:04.830
+Avem ceva numit barajul de reactare și reactarea scripturilor și avem, de asemenea, o grămadă de scripturi pe care
+
+00:04:04.890 --> 00:04:07.120
+le-au creat deja pentru noi.
+
+00:04:07.110 --> 00:04:10.790
+Începem testul de construcție și Egipte.
+
+00:04:10.960 --> 00:04:16.660
+Să începem cu începutul deoarece, deși pare să începeți să citească scripturile de reacție și să
+
+00:04:16.660 --> 00:04:17.890
+pornim serverul nostru.
+
+00:04:18.150 --> 00:04:19.750
+Așa că am
+
+00:04:26.840 --> 00:04:35.940
+să spun că NPM începe să arate că avem pe gazda noastră locală un eșantion de reacție pentru ca totul să funcționeze.
+
+00:04:35.980 --> 00:04:40.420
+Nu trebuia să facem nimic altceva decât pentru a rula cu adevărat doar două comenzi.
+
+00:04:40.420 --> 00:04:41.330
+Foarte tare.
+
+00:04:41.360 --> 00:04:46.480
+OK, să vedem ce a creat fila Creați reacție pentru noi.
+
+00:04:46.480 --> 00:04:52.560
+Am citit-o pe mine care este doar informație pe care o ții minte atunci când o punem pe hub.
+
+00:04:52.660 --> 00:05:01.000
+Acest lucru va afișa în dosarul proiectului avem pachetul Jaison care are din nou sens.
+
+00:05:01.230 --> 00:05:03.390
+Îți voi explica dependențele.
+
+00:05:03.450 --> 00:05:04.550
+Și următorul videoclip.
+
+00:05:04.890 --> 00:05:12.080
+Dar vedem că scripturile au fost prevăzute și toți folosesc scripturi react.
+
+00:05:12.360 --> 00:05:21.450
+Acum, scenariile lui Riak fac ceea ce face KHRAIS să reacționeze așa de minunat, în loc să instaleze lucruri cum ar fi pachetul
+
+00:05:21.720 --> 00:05:22.910
+umed și baseball-ul.
+
+00:05:22.920 --> 00:05:29.270
+Vă amintiți cât de mult a trebuit să facem pentru a face ESS javascript de lucru.
+
+00:05:29.430 --> 00:05:36.120
+Apoi, de asemenea, vom folosi ephi-ul browser-ului în pachet cu javascript roboții vor reacționa scripturile face totul pentru tine
+
+00:05:36.120 --> 00:05:42.860
+și folosește cele mai recente și cele mai mari care nu trebuie să ne facem griji pentru oricare dintre ele.
+
+00:05:42.900 --> 00:05:48.480
+Deci, permite oamenilor să construiască aplicații cu adevărat foarte rapide și puteți folosi jectul.
+
+00:05:48.510 --> 00:05:53.970
+Dacă ajungeți să doriți să personalizați scripturile de reacție și să mergeți pe cont propriu.
+
+00:05:53.970 --> 00:06:00.660
+Deci, pe măsură ce proiectul dvs. devine tot mai mare și mai mare, puteți oricând să vă scoateți și să vă personalizați aplicația este cea mai bună modalitate
+
+00:06:00.660 --> 00:06:02.390
+de a începe fiecare proiect de act.
+
+00:06:02.400 --> 00:06:06.870
+Este gestionat de echipa Facebook și este într-adevăr foarte bun.
+
+00:06:08.530 --> 00:06:09.000
+O.K.
+
+00:06:09.150 --> 00:06:16.860
+De asemenea, vedem că există o bază de date cu pachete blocate în fișier și acesta este un fișier care este generat
+
+00:06:16.860 --> 00:06:18.280
+automat de pachetul Jaison.
+
+00:06:18.570 --> 00:06:25.950
+Vă asigură că numerele de versiuni ale dependențelor dvs. sunt blocate astfel încât, dacă dau acest proiect
+
+00:06:25.950 --> 00:06:33.300
+altor persoane oriunde în lume, ne asigurăm că versiunile sunt corecte, astfel încât să funcționeze 100%
+
+00:06:34.080 --> 00:06:35.270
+din timp.
+
+00:06:36.310 --> 00:06:40.830
+Avem de asemenea ceva numit bun ignorat și are un punct în fața acestuia.
+
+00:06:40.840 --> 00:06:42.520
+Este numit dosarul dot.
+
+00:06:42.820 --> 00:06:47.180
+Și înainte de a alerga ajunge și împinge acest proiect pentru a obține ajutor.
+
+00:06:47.530 --> 00:06:54.430
+Ei bine, verificați acest fișier și dacă vede ceva aici că nu ar trebui să îl includă automat, spune
+
+00:06:54.430 --> 00:06:56.130
+că ignoră aceste fișiere.
+
+00:06:56.140 --> 00:07:01.690
+Așadar, amintiți-vă cum am spus modulele de noduri pe care nu dorim să le împingem la un repo deoarece
+
+00:07:01.780 --> 00:07:09.140
+în timp ce avem Pakistanul Jason și creează muncă inutilă și așteaptă să ne împingem proiectul Ei bine, din nou nu ne pasă de cel mai
+
+00:07:09.140 --> 00:07:10.240
+mare dosar cunoscut.
+
+00:07:10.240 --> 00:07:14.810
+Nu ne pasă de dosarul cu coperți, care din nou este despre testare, nu avem nevoie să acoperim acest lucru.
+
+00:07:15.040 --> 00:07:20.160
+De asemenea, nu ne interesează și folderele de construire și alte câteva.
+
+00:07:20.530 --> 00:07:25.870
+Aceasta generează automat acest lucru pentru noi, nu trebuie să atingem.
+
+00:07:26.070 --> 00:07:32.760
+Apoi, avem în mod evident modulele noastre de noduri și puteți vedea aici că există o mulțime de ele care,
+
+00:07:32.790 --> 00:07:36.890
+din nou, creează o nouă acțiune se construiește automat pentru noi.
+
+00:07:36.940 --> 00:07:41.770
+Avem, de asemenea, un dosar public și aici credem că ar trebui să fie familiari.
+
+00:07:41.770 --> 00:07:48.770
+Am indexat faptul că H. M. avem ceva numit manifest d'Agde Jaison.
+
+00:07:49.050 --> 00:07:56.250
+Este o caracteristică nouă care permite utilizatorilor să descarce o comandă rapidă pe site-ul dvs. și să aibă o pictogramă pe
+
+00:07:56.250 --> 00:07:56.700
+desktop.
+
+00:07:56.700 --> 00:07:58.590
+Dar din nou nu trebuie să ne îngrijorăm.
+
+00:07:58.710 --> 00:08:06.750
+Și apoi avem Traficon ICAO, care este pictograma mică care apare în partea de sus aici și el poate schimba asta
+
+00:08:06.750 --> 00:08:12.990
+cu orice fișier iso doriți și există instrumente online pentru a le genera pentru dvs.
+
+00:08:12.990 --> 00:08:14.900
+Din nou ceva la care nu trebuie să ne facem griji.
+
+00:08:16.470 --> 00:08:21.210
+Și în sfârșit avem folderul SIRC care este dosarul sursă.
+
+00:08:21.350 --> 00:08:25.020
+Aici se intampla toata magia.
+
+00:08:25.320 --> 00:08:29.580
+Dacă te uiți la Da indexată, care este fișierul script principal.
+
+00:08:29.610 --> 00:08:37.050
+Facem cateva importuri pe care le aducem aminte ca doar importam diferite scripturi si pur si simplu spunem aceasta sintaxa
+
+00:08:37.050 --> 00:08:40.640
+noua pe care nu am mai vazut-o pana acum.
+
+00:08:40.650 --> 00:08:45.250
+Re-acționați documentul de documentare Dom Rander obține LMM prin ID.
+
+00:08:45.270 --> 00:08:46.850
+OK, știm asta.
+
+00:08:46.950 --> 00:08:55.380
+Așa că luăm un element de identitate rădăcină și spunem că re-acționăm aplicația Dom Brender.
+
+00:08:55.650 --> 00:09:03.350
+Dacă mergem la indicele de gândire ASTM fișier vedem aici și ei au foarte frumos comentarii, astfel încât să puteți citi
+
+00:09:03.350 --> 00:09:12.190
+vom vedea că în interiorul corpului există doar o div nu există nici un fișier script este în cazul în care un browser nu este
+
+00:09:12.190 --> 00:09:13.220
+folosind javascript.
+
+00:09:13.230 --> 00:09:15.610
+Din nou, nu trebuie să ne îngrijorăm.
+
+00:09:15.640 --> 00:09:22.030
+Acesta vine doar cu fișierul, deoarece este o practică bună, dar în organism avem doar această div cu
+
+00:09:22.030 --> 00:09:23.920
+ID rădăcină și nimic altceva.
+
+00:09:23.940 --> 00:09:26.140
+Totuși, când mergem la aplicația noastră, vedem asta.
+
+00:09:26.320 --> 00:09:28.190
+Ei bine, cu siguranță e ceva acolo.
+
+00:09:28.300 --> 00:09:36.260
+Există cel puțin un impozit și cel puțin un logo acolo, așa că ne întoarcem aici fără să știm și reacționăm, putem spune că
+
+00:09:36.260 --> 00:09:47.240
+suntem capabili să luăm această idee pe un indice dot J. S. fișier și spunem că dorim să prezentăm această componentă
+
+00:09:47.540 --> 00:09:54.050
+a aplicației și aceasta este ceea ce am numit sintaxa GSX la care vom ajunge mai târziu.
+
+00:09:54.840 --> 00:10:01.240
+Această aplicație reacționează prin a spune că aceasta este o componentă Riak și vreau să redați pe
+
+00:10:01.260 --> 00:10:06.210
+ecran în organism, astfel încât să pot schimba de fapt și acest lucru.
+
+00:10:06.510 --> 00:10:13.300
+În timp ce putem spune H-1 Hello World.
+
+00:10:13.930 --> 00:10:14.640
+Salut.
+
+00:10:18.120 --> 00:10:18.710
+H-1.
+
+00:10:19.600 --> 00:10:30.120
+Și acum, dacă salvez acest lucru, veți observa că reactul compilează automat acest lucru pentru noi, așa că nu trebuie să reîmprospătesc și să
+
+00:10:30.150 --> 00:10:35.190
+privesc la faptul că pe site-ul nostru avem o lume bună.
+
+00:10:35.230 --> 00:10:36.460
+Foarte tare.
+
+00:10:36.460 --> 00:10:39.400
+Acum încă o dată un alt lucru minunat despre Creba reacționează.
+
+00:10:39.400 --> 00:10:43.590
+De asemenea, vă oferă avertismente care spun că aplicația este definită, dar nu este utilizată niciodată.
+
+00:10:43.600 --> 00:10:48.870
+Deci, dacă mă duc aici, importez aplicație, dar nu o folosesc.
+
+00:10:48.880 --> 00:10:56.690
+Așadar, avem și un sfat foarte bun în terminalul nostru despre cum putem îmbunătăți aplicația.
+
+00:10:56.960 --> 00:10:57.430
+O.K.
+
+00:10:57.700 --> 00:11:02.110
+Ultimul lucru pe care vreau să-ți arăt înainte să intrăm în secțiunea următoare este să începem
+
+00:11:02.110 --> 00:11:05.740
+să săpăm codul, așa cum puteți vedea că colorarea este cam oprită.
+
+00:11:05.760 --> 00:11:12.210
+Și asta pentru că Sublime Text nu înțelege cu adevărat ce se întâmplă aici.
+
+00:11:13.740 --> 00:11:26.640
+Dacă vom schimba acest lucru la Babel javascript acolo veți obține sintaxa frumoasă și totul arata bine.
+
+00:11:27.630 --> 00:11:28.440
+Perfect.
+
+00:11:28.500 --> 00:11:33.230
+Avem setările aplicațiilor noastre Am vrut să schimb și Taghavi aici.
+
+00:11:33.240 --> 00:11:33.840
+Salut Lume.
+
+00:11:33.840 --> 00:11:37.500
+Pentru moment, doar pentru a vă asigura că totul funcționează.
+
+00:11:37.600 --> 00:11:44.370
+Dar pentru moment aveți o configurație în următoarea înregistrare pe care o vom trece prin restul fișierelor și vom începe
+
+00:11:44.370 --> 00:11:47.080
+de fapt să construim prima noastră componentă.
+
+00:11:47.220 --> 00:11:48.370
+Va fi foarte distractiv.
+
+00:11:48.420 --> 00:11:49.360
+O să văd asta.

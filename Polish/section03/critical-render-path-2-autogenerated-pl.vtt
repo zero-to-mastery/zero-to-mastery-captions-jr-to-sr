@@ -1,0 +1,559 @@
+﻿WEBVTT
+
+00:00:01.680 --> 00:00:02.840
+Odprowadź ich z powrotem.
+
+00:00:02.860 --> 00:00:06.540
+Przeszliśmy pierwszy krok, ale spójrzmy na drugi krok.
+
+00:00:06.540 --> 00:00:16.340
+Teraz CSSA CSSA nazywa się blokowaniem renderowania, ponieważ aby skonstruować renderowane drzewo, zapamiętaj to tutaj
+
+00:00:16.340 --> 00:00:20.410
+i wydrukuj coś na ekranie.
+
+00:00:20.420 --> 00:00:26.840
+Czekamy, aż CIA poinformuje Dom, aby dokończyć i połączyć go z Domem,
+
+00:00:27.840 --> 00:00:32.820
+aby utworzyć drzewo renderowania, aby CSSA została zablokowana.
+
+00:00:32.830 --> 00:00:38.470
+Mając to na uwadze, ma to sens, abyśmy byli jak najlżejsi, aby użytkownik zobaczył coś
+
+00:00:38.560 --> 00:00:44.320
+tak szybko, jak to możliwe, a dzięki CSSA tutaj jest tylko kilka rzeczy, które musimy wziąć
+
+00:00:44.320 --> 00:00:45.180
+pod uwagę.
+
+00:00:47.420 --> 00:00:50.350
+Chcemy załadować tylko to, co jest potrzebne.
+
+00:00:50.630 --> 00:00:54.140
+Chcemy ewentualnie włączyć powyżej krotności ładowania.
+
+00:00:54.140 --> 00:01:00.010
+Chcemy dodać atrybuty mediów i chcemy uzyskać mniejszą specyfikę, aby poprawić wydajność.
+
+00:01:00.350 --> 00:01:03.190
+Przejdźmy do tego jeden po drugim, aby pokazać, co mam na myśli.
+
+00:01:06.070 --> 00:01:10.270
+Mamy świetny przykład, który wykorzystaliśmy również ostatnim razem.
+
+00:01:10.270 --> 00:01:16.750
+Tym razem dodaliśmy techniki optymalizacji sukcesu, które właśnie omówiliśmy.
+
+00:01:16.840 --> 00:01:23.010
+Pierwszy ładuje tylko to, co jest potrzebne, jest dość oczywisty.
+
+00:01:23.140 --> 00:01:31.330
+CSSA jest naprawdę łatwa po prostu dodawać rzeczy, abyśmy mogli dodać więcej stylów, może skopiować niektóre style, które widzieliśmy
+
+00:01:31.330 --> 00:01:37.210
+online i wkleić je tutaj, i możemy zrobić ten plik setki, jeśli nie tysiące
+
+00:01:37.420 --> 00:01:38.040
+linii.
+
+00:01:39.660 --> 00:01:45.870
+Ale tylko ładując to, co jest rzeczywiście potrzebne i zapobiegając przepełnieniu pliku, unikasz więcej czasu
+
+00:01:45.870 --> 00:01:46.680
+pobierania.
+
+00:01:47.780 --> 00:01:48.580
+Dobrze.
+
+00:01:48.650 --> 00:01:50.670
+Jeśli wrócimy do naszego przykładu.
+
+00:01:50.750 --> 00:01:59.180
+Na szczęście dla nas mamy tylko jeden arkusz stylów, który jest tak mały, że mówi, że jest zero w pociągu, teraz potrzeba jednej
+
+00:01:59.420 --> 00:02:01.200
+milli sekundy do pobrania.
+
+00:02:01.220 --> 00:02:02.220
+To całkiem miłe.
+
+00:02:05.160 --> 00:02:07.270
+Tak więc pierwszy jest miły i łatwy.
+
+00:02:07.380 --> 00:02:11.010
+Wystarczy załadować, gdy potrzebujesz.
+
+00:02:11.030 --> 00:02:15.380
+Teraz drugi punkt powyżej obciążenia zakładki.
+
+00:02:15.970 --> 00:02:17.520
+I to jest całkiem interesujące.
+
+00:02:20.000 --> 00:02:27.820
+Jestem teraz użytkownikiem i odświeżam stronę. Interesuje mnie tylko to, co mogę zobaczyć, jeśli ta strona z przewijaniem mogłaby mieć obrazy
+
+00:02:27.820 --> 00:02:33.470
+pod spodem lub był to jeden z tych rozmiarów strony, które mogę przewijać w
+
+00:02:33.470 --> 00:02:34.370
+dół na.
+
+00:02:34.380 --> 00:02:36.540
+Jest coraz więcej informacji.
+
+00:02:36.710 --> 00:02:40.330
+Technicznie nie muszę tego widzieć, dopóki nie zacznę przewijać.
+
+00:02:40.760 --> 00:02:48.860
+Priorytetem jest więc zobaczenie tego, co znajduje się powyżej strony głównej, jeśli jesteśmy w stanie to zoptymalizować i
+
+00:02:48.860 --> 00:02:54.930
+po prostu wczytać, gdy potrzebujemy powyżej zakładki, będzie to całkiem miłe, czyż nie?
+
+00:02:54.930 --> 00:03:00.100
+Być może potrzebujemy tylko CSX, którego używamy teraz powyżej błędu.
+
+00:03:00.120 --> 00:03:01.790
+Pozwól mi pokazać, jak to zrobić.
+
+00:03:02.400 --> 00:03:14.820
+Powiedzmy, że mamy ten styl 3, a ten styl trzy to plik CSSA, ale tak naprawdę nie potrzebujemy
+
+00:03:15.270 --> 00:03:27.380
+go do głównej strony naszej witryny, więc stwórzmy teraz klasę H-2 i ta klasa H2 ją nazwie.
+
+00:03:27.380 --> 00:03:30.940
+To jest ważne.
+
+00:03:34.850 --> 00:03:45.180
+I tutaj powiemy, że po prostu załadujemy kawałek Teksasu, który jest ważny powyżej zawartości folderów i możemy po prostu skopiować
+
+00:03:47.850 --> 00:03:56.810
+to jeszcze raz i powiedzieć, że mamy też kolejny znacznik H2, a ten po prostu powie, że
+
+00:03:56.810 --> 00:03:58.350
+jest wtórny.
+
+00:03:58.520 --> 00:04:05.990
+A to nie jest ważne, to jest poniżej zawartości błędu.
+
+00:04:06.770 --> 00:04:13.450
+Chcesz to zobaczyć, dopóki strona się nie załaduje.
+
+00:04:16.570 --> 00:04:23.440
+Powiedzmy, że każdy z ważnych i drugorzędnych ma swoje własne okulary stylów, które można zobaczyć w CSSA
+
+00:04:23.440 --> 00:04:29.340
+w stylowej kropce. Mam ważną klasę, która ma żółte tło i trzy trójki.
+
+00:04:29.380 --> 00:04:33.700
+SS Mam wtórne z różowym tłem.
+
+00:04:33.780 --> 00:04:39.790
+Teraz te pliki stylu są dość małe, ale możesz sobie wyobrazić, jak by działały, gdyby nasza aplikacja była większa.
+
+00:04:42.010 --> 00:04:49.340
+Ale teraz, jeśli załaduję to na moją stronę internetową i odświeżam.
+
+00:04:49.450 --> 00:04:55.890
+W porządku, nie dostaję Stahl, ponieważ potrzebuję plików i błędnie
+
+00:04:55.900 --> 00:04:57.270
+napisałem ważne.
+
+00:04:57.310 --> 00:04:58.070
+Głupi ja.
+
+00:04:58.300 --> 00:04:59.710
+Odświeżmy.
+
+00:04:59.710 --> 00:05:05.860
+W porządku, więc pierwszy CSSA działa drugi nie dlatego, że musimy go zaimportować.
+
+00:05:05.880 --> 00:05:14.090
+Więc ponownie dodajmy nowy plik stylu, jeśli odświeżę twoje.
+
+00:05:14.590 --> 00:05:17.220
+W porządku wszystko jest ładowane.
+
+00:05:17.410 --> 00:05:22.310
+Ale jak widać tutaj w naszej zakładce sieci dostajemy fajną małą wskazówkę.
+
+00:05:22.570 --> 00:05:27.530
+Jeśli spojrzysz na czerwoną linię tutaj, oznacza to, że obciążenie wynosi dziewięć milli sekund.
+
+00:05:27.610 --> 00:05:31.500
+Oznacza to, że nasza strona internetowa została załadowana dość szybko w ciągu dziewięciu milisekund.
+
+00:05:31.720 --> 00:05:37.800
+Ale oba arkusze stylów zostały wczytane, zanim cokolwiek zobaczyliśmy.
+
+00:05:37.910 --> 00:05:44.600
+Ale jeśli tak było, to różowe tło jest niepotrzebne, ponieważ jako użytkownik zobaczę
+
+00:05:44.600 --> 00:05:46.370
+tylko pierwszą treść.
+
+00:05:46.370 --> 00:05:55.190
+Zobaczmy, czy możemy przenieść styl trzy, który ma być załadowany po linii ładunkowej.
+
+00:05:55.330 --> 00:06:00.700
+Czerwona linia z małym javascriptem jest całkiem prosta i możesz nawet pobrać ten
+
+00:06:00.810 --> 00:06:01.850
+skrypt on-line.
+
+00:06:01.900 --> 00:06:03.100
+Nie stresuj się zbytnio.
+
+00:06:03.100 --> 00:06:11.130
+Jeśli nie w pełni go dostaniesz, ale ponownie za pomocą skryptu AG Możemy
+
+00:06:14.790 --> 00:06:25.400
+po prostu włączyć to dość łatwo Cóż, niektóre naprawdę mają arkusz stylów obciążenia kosztami i które przyjmą
+
+00:06:29.040 --> 00:06:41.220
+parametr źródła i powiemy, jeśli dokument Daut utworzy arkusz stylów i chcemy tylko upewnić się, że ta właściwość lub ta
+
+00:06:41.220 --> 00:06:43.890
+metoda faktycznie istnieje.
+
+00:06:43.890 --> 00:06:50.010
+Jeśli tak jest, ponieważ niektóre przeglądarki tego wymagają, możemy po prostu utworzyć arkusz stylów i
+
+00:06:50.010 --> 00:06:51.370
+nadać mu ścieżkę.
+
+00:06:51.820 --> 00:06:52.390
+W
+
+00:06:56.180 --> 00:06:58.250
+przeciwnym razie możemy to zrobić samodzielnie.
+
+00:06:58.370 --> 00:07:07.820
+Możemy powiedzieć, że arkusz stylów jest równy dokumentowi, który tworzy element, a my utworzymy
+
+00:07:11.420 --> 00:07:26.320
+znacznik odnośnika, a ten tag linku będzie miał ATF, do którego on odwołuje się do ścieżki, z której źródło również da jej
+
+00:07:29.480 --> 00:07:31.260
+rodzaj tekstu.
+
+00:07:31.520 --> 00:07:33.940
+CSX ponownie, tak jak
+
+00:07:36.570 --> 00:07:39.030
+my mamy tutaj typ arkusza stylów.
+
+00:07:39.300 --> 00:07:51.800
+I na koniec możemy po prostu powiedzieć, że dokument dot otrzymuje element według ID lub przynajmniej dwa według nazwy znacznika, a my po prostu
+
+00:07:51.800 --> 00:07:58.760
+pobieramy znacznik head, a ponieważ zwraca on tablicę, musimy pobrać elementy tablicy, aby
+
+00:07:59.000 --> 00:08:08.640
+pobrać nasz tag head w Ishmail i do tego po prostu dołączymy dziecku arkusz stylów, a my po
+
+00:08:08.650 --> 00:08:12.000
+prostu tworzymy i nie potrzebujemy Cotes
+
+00:08:14.900 --> 00:08:15.720
+idealnie.
+
+00:08:15.830 --> 00:08:18.960
+To stworzy arkusz stylów.
+
+00:08:19.520 --> 00:08:23.950
+Więc nie musimy już tego tutaj więcej importować.
+
+00:08:24.120 --> 00:08:27.100
+Styl 3.
+
+00:08:27.310 --> 00:08:34.840
+Teraz, gdy mamy załadowany arkusz stylów lub funkcję, która ładuje nasz arkusz stylów, możemy teraz włączyć go do
+
+00:08:34.840 --> 00:08:38.450
+czegoś, co nazywa się danymi okna przy obciążeniu.
+
+00:08:38.650 --> 00:08:40.240
+Tak to się dzieje, gdy się ładuje.
+
+00:08:40.240 --> 00:08:45.230
+Pamiętaj, że czerwona linia po załadowaniu okna.
+
+00:08:45.480 --> 00:08:46.440
+Możemy po
+
+00:08:51.580 --> 00:08:57.120
+prostu uruchomić tę funkcję, a my po prostu pocieszymy tutaj tylko po to, żeby zobaczyć, że działa.
+
+00:08:57.160 --> 00:09:00.830
+Czy zrobi to okno Say.
+
+00:09:02.620 --> 00:09:09.970
+I tutaj możemy po prostu zrobić nasz arkusz stylów ładunków ze
+
+00:09:09.970 --> 00:09:17.730
+ścieżką pliku, którą zamierzamy nadać, czyli Rupes, który oceni się jako trzy kropki.
+
+00:09:17.740 --> 00:09:19.420
+W porządku, oszczędzajmy to.
+
+00:09:19.420 --> 00:09:26.540
+Sprawdź, czy popełniliśmy błędy i chcemy odświeżyć system i widzę, że wystąpił błąd.
+
+00:09:27.560 --> 00:09:30.240
+I utwórz żywność, której nie potrafię przeliterować.
+
+00:09:30.350 --> 00:09:31.210
+Naprawmy to.
+
+00:09:31.220 --> 00:09:39.920
+Utwórz prawo oznaczające save Spróbujmy jeszcze raz i pobierz element według nazwy tagu, ponieważ powinno to być pobranie
+
+00:09:40.700 --> 00:09:43.230
+elementów według nazwy tagu.
+
+00:09:43.380 --> 00:09:44.880
+Robię to cały czas.
+
+00:09:44.880 --> 00:09:54.170
+Proszę, odświeżmy jej stawkę, widzimy to poniżej zawartości folderów i nie dostajemy powietrza, ale nie
+
+00:09:54.200 --> 00:09:57.020
+dostaniemy tutaj różowego tła.
+
+00:09:57.890 --> 00:10:05.010
+Potrzebujemy również arkusza stylów.
+
+00:10:09.080 --> 00:10:15.420
+Roll, który będzie arkuszem stylu.
+
+00:10:15.590 --> 00:10:23.650
+Więc teraz odświeżamy Cearę na dole, jeśli znów się odświeżę.
+
+00:10:24.900 --> 00:10:32.970
+Widzimy, że indeks i styl są ładowane przed zdarzeniem onload okna, więc ładowanie strony internetowej i
+
+00:10:33.330 --> 00:10:36.410
+późniejsze jest kończenie trzeciego stylu.
+
+00:10:37.230 --> 00:10:44.260
+A jeśli przewińę tam, zobaczysz moje różowe tło z mojego stylu trzy kropki.
+
+00:10:44.280 --> 00:10:53.290
+SS Zamknijmy to, a my po prostu zrobimy przeładowanie włosów i zobaczymy, że puste, ponieważ styl jest
+
+00:10:53.290 --> 00:10:55.900
+ładowany po stronie internetowej.
+
+00:10:55.900 --> 00:11:02.600
+Więc po tym, jak jest wyświetlany, style są ładowane w przeciwieństwie do koloru żółtego, który jest zawsze obecny.
+
+00:11:05.410 --> 00:11:06.610
+Od bardzo
+
+00:11:11.140 --> 00:11:12.240
+fajnego.
+
+00:11:12.330 --> 00:11:14.890
+Więc po prostu zrobiliśmy powyżej zakładki.
+
+00:11:15.090 --> 00:11:20.420
+Teraz są jeszcze dwie rzeczy i znacznie szybciej można zademonstrować atrybuty mediów.
+
+00:11:20.460 --> 00:11:24.960
+Zrobiłeś to, zanim pokazaliśmy ci, jak robić atrybuty
+
+00:11:28.840 --> 00:11:36.710
+multimediów z mediami w twoich plikach CSSA, ale możesz to zrobić również w swoich plikach e-mail.
+
+00:11:38.470 --> 00:11:46.970
+Załóżmy na przykład, że masz trochę multimediów, których potrzebujesz tylko dla niektórych rozmiarów ekranu, w takim przypadku możemy
+
+00:11:46.970 --> 00:11:54.190
+pozwolić, że po prostu skopiujemy to wszystko, a powiemy, że media są przy tym domyślne,
+
+00:11:54.190 --> 00:12:00.380
+jeśli niczego nie wstawisz tag linku zakładał, że media są równe wszystkim.
+
+00:12:00.580 --> 00:12:13.040
+Ale w naszym przypadku powiedzmy, że nasz styl do Dotsie SS Ten będzie miał media na ekranie.
+
+00:12:13.270 --> 00:12:14.650
+Nie używam tutaj mediów.
+
+00:12:14.650 --> 00:12:15.410
+Proszę bardzo.
+
+00:12:15.760 --> 00:12:17.820
+Więc to tylko ekran.
+
+00:12:17.830 --> 00:12:31.120
+Tak więc na każdym ekranie, a powiemy, a mężczyźni będą mieć 500 pikseli.
+
+00:12:31.210 --> 00:12:42.890
+Więc jeśli zrobię to i zapiszę i zobaczę, że ten styl też ma kolor czerwony H-1, wracam tutaj i odświeżam, zobaczę, że
+
+00:12:43.940 --> 00:12:47.650
+ten, który mówi: Cześć, jego czerwony
+
+00:12:50.310 --> 00:13:02.200
+musi się zmienić, to jak szybko odświeżmy i jeśli przewińcie tak samo bliżej, że widzimy, że teraz jest zielony, a na samym
+
+00:13:02.200 --> 00:13:06.760
+dole zauważycie, że mamy wszystkie trzy arkusze stylów.
+
+00:13:10.050 --> 00:13:10.920
+Bardzo fajny.
+
+00:13:10.920 --> 00:13:14.240
+Ostatnią rzeczą jest mniejsza specyficzność.
+
+00:13:14.340 --> 00:13:22.990
+Jest to bardzo drobna sprawa, ale warto pamiętać, że jeśli przejdziemy do stylu 2,
+
+00:13:23.380 --> 00:13:26.440
+mamy dobre i złe.
+
+00:13:26.470 --> 00:13:28.780
+Dlaczego tak się stało?
+
+00:13:28.810 --> 00:13:33.750
+Ponieważ pamiętaj, że przeglądarki to komputery, które muszą działać.
+
+00:13:33.820 --> 00:13:41.140
+Przede wszystkim im więcej informacji wysyłamy przez kabel, tym więcej bajtów.
+
+00:13:41.200 --> 00:13:44.210
+To jest o wiele mniej znaków niż ten.
+
+00:13:44.470 --> 00:13:52.570
+Ale także kiedy pojawia się w przeglądarce, przeglądarka musi obliczyć styl, aby stworzyć prawidłowy dom
+
+00:13:52.570 --> 00:13:53.620
+CSSA.
+
+00:13:53.620 --> 00:14:01.360
+Musi więc wykonać nieco więcej pracy, jeśli specyfika jest naprawdę bardzo skomplikowana, a
+
+00:14:01.360 --> 00:14:03.460
+jeśli tak jest.
+
+00:14:03.460 --> 00:14:08.800
+Znowu mały, ale kluczowy dla zrozumienia, jak renderowanie działa w przeglądarce.
+
+00:14:10.870 --> 00:14:12.760
+Ok, kłamałem.
+
+00:14:12.760 --> 00:14:19.010
+Jest jeszcze jedna rzecz, którą chcę wskazać, gdy mówimy, że ładujemy tylko to, co jest potrzebne.
+
+00:14:19.090 --> 00:14:22.380
+Niektórzy z was mogą pomyśleć, że możemy zrobić sztuczkę.
+
+00:14:23.200 --> 00:14:34.380
+Być może zamiast ładowania zewnętrznego arkusza stylów możemy po prostu utworzyć wewnętrzny jeden, który jest tagiem stylu, a ten tag stylu
+
+00:14:34.380 --> 00:14:35.070
+w
+
+00:14:40.960 --> 00:14:46.030
+tym miejscu możemy po prostu umieścić cały nasz CSSA.
+
+00:14:46.110 --> 00:14:56.890
+Na przykład, jeśli chciałem, aby H-1 miał określony styl, powiedzmy, że styl czcionki wynosi 30 pikseli, a tak naprawdę, aby uczynić
+
+00:14:56.890 --> 00:15:03.340
+go bardziej zrozumiałym, możemy po prostu powiedzieć, że powiemy, że kolor to
+
+00:15:06.450 --> 00:15:15.790
+Bulley - wszystkie zapisują i odświeżają, a my widzimy tutaj możemy zmienić styl, ale nie ładujemy żadnych
+
+00:15:15.850 --> 00:15:17.790
+nowych arkuszy stylów.
+
+00:15:17.980 --> 00:15:24.370
+Więc teoretycznie możemy po prostu umieścić wszystkie style tutaj i tutaj, po prostu weź to wszystko
+
+00:15:24.520 --> 00:15:27.180
+i umieść je w tym bloku.
+
+00:15:27.430 --> 00:15:28.260
+I to naprawdę dobrze.
+
+00:15:28.300 --> 00:15:31.780
+Unikamy tego, o które faktycznie prosimy.
+
+00:15:32.030 --> 00:15:34.490
+Jednak możesz zauważyć tutaj problem.
+
+00:15:34.490 --> 00:15:37.510
+Gdybyśmy mieli wiele stron Ishimaru.
+
+00:15:37.670 --> 00:15:42.700
+Cóż, będziemy musieli skopiować i wkleić to na inne strony.
+
+00:15:42.790 --> 00:15:47.120
+Więc działa tylko na jeden.
+
+00:15:47.230 --> 00:15:54.020
+Tim Page i jest to naprawdę dobra rzecz, jeśli robisz pełne ładowanie za pomocą wewnętrznego
+
+00:15:54.020 --> 00:15:57.350
+C-s tylko dla powyższej części ekranu.
+
+00:15:57.420 --> 00:15:59.930
+C Ss to dobra sztuczka.
+
+00:15:59.930 --> 00:16:05.450
+Inną opcją jest mieć coś nazywane w linii C S i N linii C S.
+
+00:16:05.460 --> 00:16:20.610
+Ponownie jest to atrybut stylu tym razem i możemy powiedzieć, że ten styl ma tło wywołującego Stu żółtego.
+
+00:16:20.820 --> 00:16:24.560
+Jeśli zapiszę i odświeżę ponownie nic nowego.
+
+00:16:24.840 --> 00:16:28.860
+Mamy na naszym tle żółty Bob bez nowych arkuszy stylów.
+
+00:16:28.860 --> 00:16:31.530
+I znowu jest to świetne.
+
+00:16:31.620 --> 00:16:36.180
+Przeglądarka potrafi to naprawdę szybko przeczytać i szybko zastosować ten styl.
+
+00:16:36.180 --> 00:16:43.410
+Ale znowu ograniczeniem tego jest fakt, że musimy to zrobić dla każdego elementu i nie możemy naprawdę mieć
+
+00:16:43.410 --> 00:16:45.940
+klas ani identyfikatorów dla niego.
+
+00:16:47.860 --> 00:16:55.220
+Ale strategicznie, jeśli skorzystasz z nich, będziesz w stanie zrobić swoją stronę szybciej w zależności od twojej sytuacji.
+
+00:16:56.240 --> 00:17:00.470
+W porządku to wszystko na razie do przejrzenia.
+
+00:17:00.580 --> 00:17:04.850
+Dowiedzieliśmy się, że w CSSA chcemy załadować tylko to, co jest potrzebne.
+
+00:17:05.170 --> 00:17:06.370
+Chcemy rozważyć.
+
+00:17:06.370 --> 00:17:08.200
+Powyżej obciążenia krotnie.
+
+00:17:08.200 --> 00:17:15.610
+Chcemy pracować z atrybutami mediów, aby mieć pewność, że będziemy renderować konkretne rozmiary ekranów, a także
+
+00:17:15.610 --> 00:17:20.150
+możemy rozważyć mniejszą specyfikę, jeśli chodzi o naszą CSSA.
+
+00:17:20.150 --> 00:17:21.760
+Wszystko na razie wystarczy.
+
+00:17:21.890 --> 00:17:25.280
+Zobaczę w następnym filmie, w którym mówimy o javascript Buh-Bye.

@@ -1,0 +1,253 @@
+﻿WEBVTT
+
+00:00:02.870 --> 00:00:03.670
+Bine ai revenit.
+
+00:00:03.680 --> 00:00:05.810
+Ne apropiem și mai aproape de final.
+
+00:00:05.960 --> 00:00:07.830
+Să vorbim despre controlul accesului.
+
+00:00:08.990 --> 00:00:17.310
+Controlul accesului are restricții asupra a ceea ce utilizatorii autentificați sunt autorizați să facă sau nu.
+
+00:00:18.610 --> 00:00:23.260
+Deci, asta este ceva ce se întâmplă după ce dai autentificare.
+
+00:00:23.260 --> 00:00:30.340
+Acesta este modul în care știm utilizatorul, dar ce au acces pentru a vedea atacatorii pot exploata
+
+00:00:30.400 --> 00:00:39.450
+aceste defecțiuni pentru a accesa datele de funcționalitate neautorizate și alte puncte de acces care pot vedea utilizatorii conturilor vizualizării fișierelor
+
+00:00:39.450 --> 00:00:42.350
+sensibile, poate chiar modifica datele utilizatorului.
+
+00:00:42.720 --> 00:00:50.760
+Deci, doriți să vă asigurați că controlul accesului sau drepturile de acces sunt verificate pentru proiectul dvs.
+
+00:00:51.880 --> 00:00:59.440
+Acum, cu controlul accesului ideea principală este acest principiu de privilegiu cel mai mic pe care îl veți auzi
+
+00:00:59.440 --> 00:01:00.240
+peste tot.
+
+00:01:00.280 --> 00:01:07.700
+Acordați întotdeauna cea mai mică cantitate de privilegiu posibil dați doar suficient pentru ca oamenii să își poată face munca.
+
+00:01:08.490 --> 00:01:14.400
+Și un exemplu extraordinar al acestui lucru este ceva pe care deja l-am făcut deja.
+
+00:01:14.440 --> 00:01:20.590
+Dacă vă amintiți în serviciul nostru de securitate că lucrăm, știu că este un pic dezordonat,
+
+00:01:20.590 --> 00:01:22.830
+așa că să-l curățim deocamdată.
+
+00:01:22.980 --> 00:01:30.080
+Vom elimina acest lucru și ne vom aminti de cursul pe care am spus
+
+00:01:30.080 --> 00:01:39.670
+că ne vom întoarce la el, vom vorbi bine. Corpul este foarte important pentru securitate și, mai ales, pentru controlul accesului.
+
+00:01:39.680 --> 00:01:42.460
+Să vă arătăm ce se întâmplă când nu vom folosi cursul.
+
+00:01:42.500 --> 00:01:50.210
+Așa că voi comenta acest lucru pe care o voi salva și apoi mă voi întoarce la locația noastră de securitate, să-mi asigur locul de
+
+00:01:50.220 --> 00:01:56.780
+joc aici și să tipăm ceva ce scriu ceva și apoi să ne uităm la consola așa cum o prezint.
+
+00:01:58.040 --> 00:02:06.380
+Avem unele erori spunând că treci controlul de acces nu permite controlul accesului de origine.
+
+00:02:06.410 --> 00:02:07.380
+Ce inseamna asta.
+
+00:02:07.420 --> 00:02:09.040
+Spune setul de cerere motu.
+
+00:02:09.050 --> 00:02:12.360
+Nici un curs pentru resursele Fessor.
+
+00:02:12.380 --> 00:02:13.450
+In regula.
+
+00:02:13.470 --> 00:02:18.070
+Core înseamnă distribuirea resurselor de origine transversală.
+
+00:02:18.380 --> 00:02:23.020
+Știu că toate aceste nume nu au sens la început, dar permiteți-mi să simplific acest lucru.
+
+00:02:23.120 --> 00:02:30.520
+Tot ce spun este că trebuie să am nu am acces pentru a accesa serverul.
+
+00:02:30.680 --> 00:02:40.730
+Vedeți dacă tocmai am creat servere de genul acesta și tocmai am lăsat-o fără cauză și atunci nimeni nu le poate
+
+00:02:40.730 --> 00:02:41.260
+accesa.
+
+00:02:41.360 --> 00:02:48.170
+Poate că acest server este menit să fie numai pentru mine pentru scopurile mele speciale, dar dacă
+
+00:02:48.170 --> 00:02:56.030
+am oameni aleatorii accesând serverul folosind mașina și folosind resurse care ar putea costa o mulțime de bani și din
+
+00:02:56.450 --> 00:03:02.380
+motive de securitate nu vrem să dăm doar accesul oricui la aceste obiective.
+
+00:03:02.420 --> 00:03:07.100
+Vreau să spun chiar chiar și pentru acest server întreg poate poate acest obiectiv secret.
+
+00:03:07.130 --> 00:03:15.690
+Vrem doar ca un anumit domeniu sau un anumit site să fie capabil să trimită secretele.
+
+00:03:15.920 --> 00:03:19.900
+Nu vrem ca oamenii răi să poată trimite secrete.
+
+00:03:19.910 --> 00:03:30.770
+Noi facem acest lucru prin adăugarea de cursuri și prin adăugarea de nuclee spun eu da da să lăsăm să se întâmple această schimbare a resurselor de
+
+00:03:30.770 --> 00:03:31.970
+origine cruce.
+
+00:03:31.970 --> 00:03:33.150
+Nu mă deranjează deloc.
+
+00:03:33.440 --> 00:03:34.760
+Și dacă
+
+00:03:37.590 --> 00:03:45.000
+îți reîmprospătesc și simt ceva în regulă, funcționează bine, dar asta nu e bine.
+
+00:03:45.060 --> 00:03:51.210
+Vreau să spun că dorim principiul celui mai mic privilegiu, acela că vrem să obținem cea mai mică cantitate de acces pentru a
+
+00:03:51.210 --> 00:03:56.220
+face ca aplicațiile noastre să funcționeze și, în cazul nostru, nu vrem să oferim acces doar tuturor.
+
+00:03:56.370 --> 00:04:01.160
+Vrem să oferim acces numai oamenilor în care avem încredere.
+
+00:04:01.230 --> 00:04:03.520
+Deci, nucleele în documentația lor.
+
+00:04:03.780 --> 00:04:10.140
+Dacă te duci la pachetul lor de NPM are de fapt niște documente foarte bune și fragmente de cod foarte bune pe care
+
+00:04:10.140 --> 00:04:10.980
+le poți folosi.
+
+00:04:11.310 --> 00:04:13.030
+Dar permiteți-mi să vă arăt una dintre ele.
+
+00:04:14.280 --> 00:04:21.260
+Dacă copiați și lipiți acest lucru din documentația lor, ei au, în esență, ceva numit opțiuni de bază și acestea
+
+00:04:21.640 --> 00:04:26.860
+sunt doar opțiuni pe care le oferim ca să verificăm acest lucru fără fir.
+
+00:04:26.860 --> 00:04:34.910
+Aceasta este o listă bună de domenii pe care le oferim accesul pentru a ne atinge obiectivele finale în serverul nostru, iar opțiunea
+
+00:04:34.910 --> 00:04:41.780
+de nucleu are doar o funcție de origine care verifică această listă largă și tot ce trebuie să facem
+
+00:04:41.780 --> 00:04:44.760
+este să adăugăm opțiunile acestui nucleu ca parametru.
+
+00:04:45.020 --> 00:04:56.450
+Deci acum dacă salvez acest lucru și mă întorc pe site-ul meu de web, să reîmprospătăm și să scriu ceva oh nu nu nu nu nu sunteți din acele site-uri pe
+
+00:04:56.450 --> 00:05:00.230
+care am așteptat că nu vă vom lăsa să intrați.
+
+00:05:01.180 --> 00:05:01.820
+Minunat.
+
+00:05:02.110 --> 00:05:04.830
+Deci, să ne dăm accesul doar nouă.
+
+00:05:05.050 --> 00:05:11.530
+Chiar acum am doar o funcționare la nivel local așa cum puteți vedea în dosarul meu, dar pentru a obține ajutor aici, la care
+
+00:05:11.530 --> 00:05:12.790
+aveți acces, de asemenea.
+
+00:05:12.920 --> 00:05:17.500
+Am pus-o în sus pentru a obține paginile ei, astfel încât am un frumos tine.
+
+00:05:17.680 --> 00:05:21.960
+Deci, să spunem că vrem să negociem.
+
+00:05:22.160 --> 00:05:22.950
+Dodd greu.
+
+00:05:22.970 --> 00:05:26.550
+Mă duc să am acces, ca să putem trimite informații.
+
+00:05:26.830 --> 00:05:31.670
+Haideți să deschidem consola pentru a testa cazul în care nu avem permisiunea.
+
+00:05:32.180 --> 00:05:33.740
+Da, ne facem mai bine.
+
+00:05:34.150 --> 00:05:38.710
+Și să adăugăm acest lucru la lista albă.
+
+00:05:38.720 --> 00:05:39.500
+In regula.
+
+00:05:39.500 --> 00:05:42.300
+Salvez asta și mă întorc.
+
+00:05:42.320 --> 00:05:45.490
+Să reîmprospătăm doar să avem o ardezie curată.
+
+00:05:45.510 --> 00:05:47.590
+Voi tipi ceva.
+
+00:05:47.800 --> 00:05:49.620
+Boom avem acces.
+
+00:05:49.750 --> 00:05:50.960
+Nu există probleme aici.
+
+00:05:50.980 --> 00:05:52.170
+Ați primit de fapt.
+
+00:05:52.180 --> 00:05:53.000
+Uită-te la asta.
+
+00:05:53.020 --> 00:05:55.560
+De fapt, am primit această intrare pentru utilizator.
+
+00:05:55.720 --> 00:05:58.270
+Foarte foarte rece.
+
+00:05:58.280 --> 00:06:06.890
+Acum, acesta este un principiu în controlul accesului, dar se poate aplica oricăror privilegii administratorului la accesul
+
+00:06:06.890 --> 00:06:09.970
+la baza de date pentru orice.
+
+00:06:09.980 --> 00:06:15.080
+Ideea principală este acest principiu de o singură linie, cel mai puțin privilegiat.
+
+00:06:15.290 --> 00:06:21.060
+Nu acordați niciodată mai multă privilegiu decât trebuie doar pentru o sumă corectă.
+
+00:06:21.220 --> 00:06:25.180
+În acest fel, oferim puncte de atac mai puțin oamenilor răi.
+
+00:06:27.300 --> 00:06:27.820
+In regula.
+
+00:06:27.960 --> 00:06:29.060
+Atât deocamdată.
+
+00:06:29.070 --> 00:06:30.690
+Ne vedem în următoarea.

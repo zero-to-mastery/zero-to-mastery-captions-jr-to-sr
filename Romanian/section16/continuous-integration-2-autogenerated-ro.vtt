@@ -1,0 +1,325 @@
+﻿WEBVTT
+
+00:00:01.410 --> 00:00:02.460
+Bine ai revenit.
+
+00:00:02.460 --> 00:00:08.640
+Am implementat serverul CII din cercul nostru, care nu a fost prea rău, era doar un fișier YAML cu cerc
+
+00:00:08.640 --> 00:00:13.700
+simplu pe care l-am configurat, iar acum avem totul în desfășurare și conducem testele noastre.
+
+00:00:13.710 --> 00:00:19.680
+Noi facem cateva Lanting daca vreti sa facem si un tip de script care verifica totul functioneaza frumos
+
+00:00:20.370 --> 00:00:27.240
+astfel incat acum de fiecare data cand un PR este pregatit sa fie revizuit Shergill CII trece totul astfel incat recenziile codului
+
+00:00:27.240 --> 00:00:33.630
+sa se intample si apoi ne putem imbogati schimbarile nu codurile sunt cu adevărat necesare până când toate testele de
+
+00:00:33.630 --> 00:00:40.280
+tip see-I din cerc trec și putem fi cu adevărat elaborate cu aceste teste pentru a testa tot felul de lucruri.
+
+00:00:40.290 --> 00:00:46.410
+Acum vreau să adaug încă un lucru înțelegerii noastre de integrare continuă și asta este ceva numit
+
+00:00:46.410 --> 00:00:54.690
+un cârlig de pre-angajare Ce se întâmplă dacă putem executa niște sarcini înainte de a ne angaja chiar să ne închidem aici și
+
+00:00:55.130 --> 00:00:58.910
+vom folosi purtier pentru a demonstra aceasta să începem.
+
+00:01:00.220 --> 00:01:05.880
+Prettier este un instrument nou nou, care, așa cum sugerează și numele, face ca codul tău să fie mai frumos.
+
+00:01:05.890 --> 00:01:07.590
+Este un codificator de coduri.
+
+00:01:07.750 --> 00:01:13.720
+Luați o bucată de cod pe care o puneți prin mai frumoase și mai frumoase formate și apoi o face să
+
+00:01:13.720 --> 00:01:18.130
+arate destul ce trebuie să se întâmple pentru a face mai ușor de citit.
+
+00:01:18.130 --> 00:01:20.750
+De ce avem nevoie de asta din nou.
+
+00:01:20.800 --> 00:01:23.690
+Pentru că avem atât de mulți dezvoltatori care lucrează la un proiect.
+
+00:01:23.770 --> 00:01:28.720
+Nu ar fi frumos dacă ar exista un format standard pe care toată lumea la urmat.
+
+00:01:28.720 --> 00:01:35.230
+În loc să avem reguli stricte, nu putem toți să codificăm modul pe care îl dorim și apoi să-l facem mai frumos
+
+00:01:35.230 --> 00:01:37.940
+înainte să-l împingem chiar și să ajungem la hub.
+
+00:01:38.050 --> 00:01:45.520
+Așa că destul de mult o face mai frumoasă și puteți vedea aici că funcționează cu o grămadă de instrumente,
+
+00:01:45.550 --> 00:01:53.740
+inclusiv alte limbi precum Java ph p funcționează cu scriptul de tip GSX, care este ceea ce folosim pentru a reacta o tona
+
+00:01:53.740 --> 00:01:57.430
+de unelte și care au o mulțime de plug-ins.
+
+00:01:57.490 --> 00:02:01.330
+Este într-adevăr foarte bun și foarte recomandat să-l utilizați.
+
+00:02:01.330 --> 00:02:08.660
+Am lucrat pentru companii care au folosit acest lucru, iar formatarea codului pe acele proiecte este semnificativ mai bună.
+
+00:02:08.740 --> 00:02:11.090
+Așa că vă voi arăta cum să implementați rapid acest lucru.
+
+00:02:11.170 --> 00:02:16.180
+Dar dacă vrei să citești mai mult, poți să-i dai clic pe zeul lor și au informații foarte bune
+
+00:02:16.270 --> 00:02:17.850
+despre ceea ce poți face.
+
+00:02:17.860 --> 00:02:19.060
+In regula.
+
+00:02:19.190 --> 00:02:27.290
+Deci, haideți să ne întoarcem la aplicația noastră și de aici am creat de fapt o nouă componentă numită contra-buton
+
+00:02:27.530 --> 00:02:36.460
+pentru a contracara buntu este o componentă nouă pe care am copiat-o pur și simplu de la contractorul nostru anterioară pe care am
+
+00:02:36.470 --> 00:02:40.530
+avut-o chiar aici și de fapt, format un pic ciudat.
+
+00:02:40.790 --> 00:02:45.140
+Am toate problemele spațiere și e destul de urât.
+
+00:02:46.500 --> 00:02:53.790
+Și vreau să o iau prin aer destul, așa că, până când ajunge pentru Hobb, e destul să-i
+
+00:02:54.790 --> 00:02:55.670
+dăm drumul.
+
+00:02:55.840 --> 00:02:59.430
+Mă voi întoarce la site-ul Web doar pentru a vă arăta asta.
+
+00:02:59.470 --> 00:03:01.090
+Da, avem asta pentru a contrabalansa.
+
+00:03:01.090 --> 00:03:03.550
+Ei lucrează că nu există erori.
+
+00:03:03.670 --> 00:03:10.490
+Așa că am să închid acest lucru și să instalez câteva pachete pentru a avea o muncă mai frumoasă.
+
+00:03:10.510 --> 00:03:20.460
+Acum, dacă mergi la instalarea lor acum, putem instala Ebbe în mod regulat și poate avem o comandă CLIA care rulează
+
+00:03:20.610 --> 00:03:21.320
+totul.
+
+00:03:21.360 --> 00:03:27.540
+Dar vrem să facem un cârlig de tipar înainte să se întâmple o comitere pe care o dorim să o facem prin frumos
+
+00:03:28.080 --> 00:03:29.550
+și avem câteva opțiuni aici.
+
+00:03:29.550 --> 00:03:35.970
+Îmi place opțiunea lor destul de rapid și puteți vedea aici că putem folosi doar destul de rapid Huskie
+
+00:03:36.030 --> 00:03:44.250
+dash dash def și am de gând să folosească NPM în loc de fire așa că am de gând să tastați NPM instalați și
+
+00:03:44.340 --> 00:03:52.230
+apoi a alerga destul de repede Huskie dash dash dev Acum, in timp ce se descarca Sa revenim si sa vedem ca tot
+
+00:03:52.230 --> 00:03:58.560
+ce trebuie sa facem este in fisierul nostru de configurare in pachetul nostru de start Jaison adauga in
+
+00:03:58.560 --> 00:04:01.740
+scripturile pre-copilul sa intalnit destul de repede la bord.
+
+00:04:01.840 --> 00:04:03.030
+Deci, să ne întoarcem.
+
+00:04:04.750 --> 00:04:05.610
+Dacă o puteți crede.
+
+00:04:05.620 --> 00:04:07.780
+Da, este atât de simplu.
+
+00:04:07.870 --> 00:04:15.910
+Adăugăm la scenariile noastre o altă linie și vom spune că comiterea pre-comită acum va fi
+
+00:04:15.970 --> 00:04:18.450
+detectată și executată automat.
+
+00:04:18.580 --> 00:04:28.110
+De fiecare dată când facem o comitere și o să pornească o comandă destul de rapidă cu opțiunea de bord din bord.
+
+00:04:28.130 --> 00:04:33.690
+Celălalt lucru pe care trebuie să-l facem este că trebuie să ne asigurăm că avem un fair fair instalat.
+
+00:04:33.890 --> 00:04:40.400
+Deci, din nou, ne întoarcem și putem adăuga instalarea NPM sau doar pentru a salva exact
+
+00:04:43.200 --> 00:04:44.320
+mai frumos.
+
+00:04:45.320 --> 00:04:52.550
+Bine, așa că am instalat mai frumos și am uitat să salvez acest lucru în timp ce am adăugat noul scenariu, așa că să mai facem asta
+
+00:04:52.550 --> 00:04:53.300
+din nou.
+
+00:04:53.300 --> 00:04:56.250
+Mă voi întoarce la cârligul pre-angajat.
+
+00:04:56.480 --> 00:05:04.510
+Asigurați-vă că avem aici comanda pre-commit.
+
+00:05:04.720 --> 00:05:08.650
+Să salvăm și voi spune să primesc statut.
+
+00:05:08.650 --> 00:05:10.030
+Asigurați-vă că avem acele modificări.
+
+00:05:10.040 --> 00:05:13.730
+Voi crea o nouă filială doar pentru scopuri de testare.
+
+00:05:13.750 --> 00:05:22.680
+O să spun mai frumoasă și aici voi ajunge să mă duc să mă angajez Am să mă angajez spunând
+
+00:05:23.400 --> 00:05:24.990
+destul de mult.
+
+00:05:27.820 --> 00:05:32.490
+Și uită-te la faptul că sa întâmplat un cârlig de pre-angajare.
+
+00:05:32.560 --> 00:05:38.830
+Puteti vedea ca acum isi conduc situatia dificila si gaseste schimbari gasite pentru schimbarile
+
+00:05:38.830 --> 00:05:46.110
+care sunt necesare de fixare si rezolva cateva indentari, inclusiv Hetter Dodgy Da si cumparat pe Dodgy Da.
+
+00:05:46.180 --> 00:05:53.710
+Acum, acest instrument mai frumos rulează doar pe fișierele pe care le-am schimbat de fapt.
+
+00:05:53.710 --> 00:06:00.480
+Deci, nu se va schimba de fapt pe nici unul dintre fișierele noastre preexistente, care este cel mai probabil de ce vrem să facem.
+
+00:06:00.700 --> 00:06:05.830
+Este un instrument frumos de a avea de la începutul proiectului să vă asigurați că totul este consecvent.
+
+00:06:05.890 --> 00:06:14.260
+Acum, dacă mergem cu adevărat la Connor cumpărat, vedem atât de bine că toată indentarea noastră este fixă.
+
+00:06:15.350 --> 00:06:16.510
+Asta am avut înainte.
+
+00:06:16.550 --> 00:06:22.220
+Dacă mă întorc și de aceea avem totul frumos, curat și neted.
+
+00:06:22.580 --> 00:06:24.060
+Cat de tare e asta.
+
+00:06:24.080 --> 00:06:24.510
+In regula.
+
+00:06:24.530 --> 00:06:28.570
+Așa că tocmai am adăugat mai frumos extrem de ușor.
+
+00:06:28.790 --> 00:06:41.790
+Și acum pot rula doar să mă împingeți de origine mai frumoasă și vom avea un nou PR sau o cerere proastă.
+
+00:06:41.790 --> 00:06:48.610
+Du-te înapoi la sondajul nostru Get Harbury, click pe compararea cererilor de sondaj.
+
+00:06:48.780 --> 00:06:49.560
+Vedem asta.
+
+00:06:49.620 --> 00:06:50.160
+Oh da.
+
+00:06:50.190 --> 00:06:53.570
+Uite totul este frumos și curat și cu contrabandă.
+
+00:06:53.580 --> 00:07:01.460
+Și acum, dacă creez cerere de tragere, avem testele noastre de tip "see-I".
+
+00:07:01.490 --> 00:07:03.230
+Cat de tare e asta.
+
+00:07:05.390 --> 00:07:12.110
+Tocmai am implementat o integrare continuă și pariez că imaginația ta este sălbatică.
+
+00:07:12.110 --> 00:07:14.500
+Am făcut doar testarea un pic de Lanting.
+
+00:07:14.510 --> 00:07:21.050
+Am avut-o mai frumoasă și am construit proiectul nostru pe Cercul C. I. dar există atât de multe lucruri pe care
+
+00:07:21.050 --> 00:07:24.300
+le putem face complet până la tine și complet până la proiectul tău.
+
+00:07:24.320 --> 00:07:31.100
+Orice puteți face programabil, puteți verifica cu cercul C. I. de exemplu, ceva
+
+00:07:31.160 --> 00:07:40.660
+asemănător unui analizor de pachet de pachete web care analizează pachetele dvs. poate fi folosit ca ceva
+
+00:07:40.660 --> 00:07:48.290
+numit artefacte și cerc C. I. și artefactele sunt date pe care le adăugăm sau persistăm în fluxul nostru de lucru.
+
+00:07:48.500 --> 00:07:56.510
+Deci, atunci când cercul nostru se vedea - am rulat și sa terminat, puteți avea un fișier care transmite această imagine și o
+
+00:07:56.510 --> 00:07:58.270
+stochează undeva pe server.
+
+00:07:59.740 --> 00:08:05.900
+Și acum acest fișier este disponibil ca un artefact mult timp după ce lucrarea reușește cu succes pe Circle CII.
+
+00:08:05.900 --> 00:08:09.980
+Deci, puteți să vă întoarceți și să vă asigurați că averea dvs. are valoarea corespunzătoare.
+
+00:08:10.330 --> 00:08:16.810
+De asemenea, puteți adăuga un test în cerc pentru a vă asigura că aveți anumite acoperire pe testele dvs. sau
+
+00:08:16.810 --> 00:08:20.790
+chiar puteți verifica sau limita cât de mari sunt fișierele javascript.
+
+00:08:20.890 --> 00:08:26.110
+Dacă doriți să vă limitați fișierele javascript la 100 megaocteți, puteți rula aceste teste și oricând
+
+00:08:26.110 --> 00:08:30.460
+este adăugată o nouă caracteristică care vă poate împinge peste 100 megaocteți.
+
+00:08:30.550 --> 00:08:32.570
+Puteți face testul să eșueze.
+
+00:08:32.620 --> 00:08:35.300
+Sunt atât de multe lucruri pe care le pot face.
+
+00:08:35.490 --> 00:08:42.090
+Și eu personal am avut o experiență foarte bună cu cercul C. I. dar cu orice platformă de integrare
+
+00:08:42.120 --> 00:08:49.140
+continuă puteți face atât de multe lucruri pentru a vă face viața mai ușoară pentru a evita producerea de bug-uri în producție.
+
+00:08:49.380 --> 00:08:53.150
+Deci vă îndemn să încercați să vedeți cât de simplu a fost.
+
+00:08:53.220 --> 00:08:58.770
+Și de acum înainte orice proiecte pe care sunteți în încercarea de integrare continuă să o implementați de la început.
+
+00:08:58.860 --> 00:09:06.120
+Este un pic de configurare la început, dar odată ce ai o echipă de lucru în echipă
+
+00:09:06.240 --> 00:09:08.160
+devine mult mai ușoară.
+
+00:09:08.180 --> 00:09:11.180
+Bine, o să văd în următorul videoclip Buh-Bye.

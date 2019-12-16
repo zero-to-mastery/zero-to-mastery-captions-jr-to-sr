@@ -1,0 +1,505 @@
+﻿WEBVTT
+
+00:00:02.330 --> 00:00:03.290
+Witamy spowrotem.
+
+00:00:03.320 --> 00:00:09.710
+Teraz, gdy mamy już działającą funkcję wykonującą dla nas fantastyczną pracę, nadszedł czas, aby sfinalizować
+
+00:00:09.830 --> 00:00:13.810
+naszą aplikację i dodać naszą plakietkę obok naszego numeru.
+
+00:00:13.900 --> 00:00:18.550
+Wróćmy do naszego przodu i nie musimy się martwić o naszą funkcję lambda, ponieważ wiemy, że
+
+00:00:18.550 --> 00:00:19.160
+działa.
+
+00:00:19.200 --> 00:00:20.990
+Amazon zaopiekuje się nami dla nas.
+
+00:00:21.130 --> 00:00:26.540
+Dziękuję Amazon i możemy teraz wrócić do pisania kodu.
+
+00:00:26.580 --> 00:00:32.980
+I tutaj chcę dodać nowy stan, który jest stanem emoji, który mogłem dodać do aplikacji.
+
+00:00:33.100 --> 00:00:39.030
+Tak, ale emoji nie jest ważnym stanem i powinno być obsługiwane tylko według rangi.
+
+00:00:39.040 --> 00:00:51.220
+Zmieńmy to w stanowy komponent, który twierdzi, że klasa rangi rozszerza komponent dot-dot, a na
+
+00:00:53.670 --> 00:00:57.090
+razie pozbędziemy się tego.
+
+00:00:58.570 --> 00:01:05.700
+Przenieś wszystko, czego nie potrzebujemy, i przenieś wszystko do środka.
+
+00:01:09.250 --> 00:01:14.940
+I upewnij się, że robimy tutaj funkcję renderowania.
+
+00:01:16.970 --> 00:01:24.400
+I ładnie to zapakuj.
+
+00:01:24.470 --> 00:01:31.450
+Skoro mamy już komponent klasy, możemy zacząć używać stanu początkowego przez dodanie
+
+00:01:33.920 --> 00:01:42.900
+konstruktora i tutaj ponownie wywołanie Super, które jest domyślne, a następnie ten stan kropki zostanie nazwany
+
+00:01:43.200 --> 00:01:48.690
+emoji, który będzie po prostu pusty, aby rozpocząć z.
+
+00:01:48.730 --> 00:01:50.060
+Teraz każdy tutaj.
+
+00:01:50.470 --> 00:01:56.510
+Powiedzmy, że montujemy komponenty do komponentu let's do.
+
+00:01:56.620 --> 00:02:01.150
+Tak jest, gdy użytkownik początkowo to widzi.
+
+00:02:01.410 --> 00:02:07.040
+Miejmy naszą funkcję generowania i Moji.
+
+00:02:07.040 --> 00:02:17.030
+Więc nie zrobiliśmy tego tutaj, ale powiem, że mamy emoji generujące, która akceptuje wpisy kropki
+
+00:02:17.180 --> 00:02:18.900
+dot prop.
+
+00:02:20.290 --> 00:02:25.570
+Ponieważ właśnie to da nam informacje o randze.
+
+00:02:25.740 --> 00:02:33.810
+I znowu, ponieważ używamy teraz struktury klas, musimy upewnić się, że te rzeczy są
+
+00:02:33.810 --> 00:02:37.950
+poprawnie nazwane tymi kropkowymi podpunktami dot dot.
+
+00:02:41.080 --> 00:02:45.090
+Zapiszmy to i jeszcze kilka rzeczy.
+
+00:02:45.090 --> 00:02:57.810
+Stwórzmy metodę generowania emoji, którą wygenerujemy w metodzie Moji, która zajmie liczbę lub wpisy.
+
+00:02:58.060 --> 00:03:02.670
+I to, co tutaj zrobimy, to szybkie wywołanie naszej funkcji lambda.
+
+00:03:02.670 --> 00:03:10.410
+Zamierzamy skopiować i wkleić to, co mieliśmy, co było punktem końcowym, który otrzymaliśmy od naszego wdrożenia
+
+00:03:10.470 --> 00:03:12.270
+przez serwer mniej.
+
+00:03:12.440 --> 00:03:17.840
+Chcemy się upewnić, że na końcu tutaj dodamy parametry ciągu zapytań Jonge Under do
+
+00:03:17.840 --> 00:03:18.440
+Templi.
+
+00:03:18.500 --> 00:03:25.970
+Zapamiętaj specjalne cytaty tutaj, abyśmy mogli użyć znaku zapytania niż piły dolarowej lub znaku
+
+00:03:27.500 --> 00:03:31.200
+zapytania o rangę równą znakowi dolara.
+
+00:03:32.360 --> 00:03:46.450
+Entry's, a teraz robimy prośbę Gabba i możemy po prostu powiedzieć, że chcemy uzyskać odpowiedź.
+
+00:03:46.590 --> 00:03:55.260
+I pamiętaj, że z prośbą o funkcję musimy upewnić się, że zrobimy odpowiedź na naszego Jasona.
+
+00:03:55.410 --> 00:03:58.510
+A potem wreszcie zdobądź dane.
+
+00:03:58.980 --> 00:04:03.440
+I z tymi danymi, mamy nadzieję, że emoji zrobi tę myśl.
+
+00:04:03.900 --> 00:04:16.380
+Stan, w którym emoji zostanie zaktualizowany wprowadzeniem danych, ponieważ pamiętamy, kiedy wracamy do naszej funkcji, robimy ciało z
+
+00:04:16.380 --> 00:04:23.350
+danymi wejściowymi, a dane wejściowe przychodzą z emoji rangi.
+
+00:04:23.460 --> 00:04:31.430
+Więc robimy dane na wejściu i dlatego dla bezpieczeństwa zróbmy tu połówkę mówiąc: anuluj dziennik, jeśli
+
+00:04:31.440 --> 00:04:33.390
+są jakieś błędy.
+
+00:04:33.480 --> 00:04:35.280
+Zapiszmy to.
+
+00:04:35.280 --> 00:04:36.840
+Sprawdź, czy dostaniemy jakieś błędy.
+
+00:04:37.200 --> 00:04:38.400
+Mamy kilka rzeczy.
+
+00:04:38.400 --> 00:04:43.840
+Zobaczmy gdzieś, gdzie nie powinno być przecinka.
+
+00:04:43.840 --> 00:04:45.240
+Gdzie to jest.
+
+00:04:45.700 --> 00:04:49.060
+A to dlatego, że musi to być średnik jako obiekt.
+
+00:04:49.060 --> 00:04:49.510
+Proszę bardzo.
+
+00:04:49.540 --> 00:04:53.460
+Ustawiamy tutaj emoji stanu z wprowadzaniem danych.
+
+00:04:53.500 --> 00:04:55.940
+Zapiszmy idealnie.
+
+00:04:55.960 --> 00:05:00.230
+A następnie, jeśli przewijamy w dół, dodajmy tutaj nową odznakę.
+
+00:05:00.280 --> 00:05:06.910
+Zamierzam po prostu skopiować i wkleić "Nother diff" tutaj, a tuż poniżej zostaną utworzone wpisy.
+
+00:05:06.910 --> 00:05:07.720
+Zróbmy duży.
+
+00:05:07.750 --> 00:05:13.930
+Mam zamiar zrobić EF 3 lub nie tak duży, aby był
+
+00:05:13.930 --> 00:05:31.040
+trochę mniejszy i powiem, że będzie to równoznaczna z odznaką rangi lub musimy upewnić się, że jest to łańcuch znaczników powiedz, że będzie to kropka rekwizyty lub upewnij się, że używają
+
+00:05:31.040 --> 00:05:32.890
+tutaj ciągów szablonów.
+
+00:05:32.900 --> 00:05:35.060
+Dostajemy odpowiednie podświetlenie.
+
+00:05:35.060 --> 00:05:36.150
+Spróbujmy jeszcze raz.
+
+00:05:38.180 --> 00:05:39.280
+Tak jest lepiej.
+
+00:05:39.280 --> 00:05:40.070
+Odznaka rangi.
+
+00:05:40.180 --> 00:05:43.450
+A potem powinien to być stan kropkowy.
+
+00:05:44.050 --> 00:05:44.590
+Emoji.
+
+00:05:47.500 --> 00:05:50.100
+W porządku, oszczędzajmy i zobaczmy, co się tutaj stanie.
+
+00:05:50.130 --> 00:05:51.540
+Naucz się wracać.
+
+00:05:52.610 --> 00:05:57.300
+I mam tu znaczek rangi, ale nic nie jest wyświetlane.
+
+00:05:57.560 --> 00:06:01.940
+Spójrzmy na minusy. I dostaję trochę błędu.
+
+00:06:02.090 --> 00:06:09.540
+Nie mam kontroli dostępu zezwalaj na pochodzenie Hetter jest obecny na żądanie pochodzenia źródłowego.
+
+00:06:09.560 --> 00:06:10.920
+Więc już to widzieliśmy.
+
+00:06:10.970 --> 00:06:11.490
+Dobrze.
+
+00:06:11.510 --> 00:06:15.500
+To jest błąd rdzenia, o którym mówiliśmy w sekcji dotyczącej bezpieczeństwa.
+
+00:06:15.500 --> 00:06:23.510
+Aby uprościć najprostsze poprawki, które możemy tutaj wykonać, możemy upewnić się, że w
+
+00:06:23.510 --> 00:06:27.210
+ramach funkcji obsługi dodamy nowy nagłówek.
+
+00:06:27.380 --> 00:06:31.870
+I znowu jest to coś, co na razie tylko dlatego, że się bawimy, jest w porządku.
+
+00:06:31.880 --> 00:06:32.970
+Ale możesz to zmienić.
+
+00:06:33.020 --> 00:06:35.790
+Właściwi naukowcy mówią, że chcesz uzyskać dostęp.
+
+00:06:36.170 --> 00:06:41.430
+Ale będziemy mieli dostęp.
+
+00:06:41.460 --> 00:06:43.080
+Whoops, spróbujmy jeszcze raz.
+
+00:06:45.730 --> 00:06:58.100
+Kontrola zezwala na pochodzenie Hettera. Na razie pozwolimy każdemu, aby uzyskał do niego dostęp za pomocą gwiazdki.
+
+00:06:58.240 --> 00:07:05.390
+Tak więc każdy, kto faktycznie wdroży naszą usługę, może uzyskać dostęp do tej funkcji lambda.
+
+00:07:05.390 --> 00:07:11.720
+Naszym front-endem możesz chcieć wkleić użytą domenę, którą mamy na razie zostawmy po prostu
+
+00:07:11.720 --> 00:07:12.370
+gwiazdę.
+
+00:07:12.440 --> 00:07:19.670
+Każdy, kto ma dostęp do tej kontroli dostępu, pozwala na pochodzenie i upewnia się, że mamy tutaj kolumnę, która jest
+
+00:07:19.670 --> 00:07:20.680
+tu bezpieczna.
+
+00:07:21.170 --> 00:07:28.180
+I faktycznie powinny to być nagłówki i upewnić się, że nasz system produkcyjny działa tutaj.
+
+00:07:31.240 --> 00:07:31.980
+Tak jest lepiej.
+
+00:07:32.130 --> 00:07:34.870
+Tak Kontrola dostępu pozwala na pochodzenie.
+
+00:07:34.890 --> 00:07:41.240
+Pozwolimy każdemu, aby uzyskał dostęp do nas, aby zapisać teraz punkt, a teraz po prostu przeprowadź to ponownie.
+
+00:07:41.830 --> 00:07:48.480
+Podczas gdy to wdrażanie, upewnijmy się, że mamy wszystko dokładnie tutaj, widzimy, że robimy
+
+00:07:48.480 --> 00:07:56.310
+nowe połączenie z naszą pozycją z parametrami zapytań i odpowiedzią Jaison na aktualizowanie stanu zestawu i upewniamy
+
+00:07:56.310 --> 00:07:59.740
+się, że możemy poprawnie oznaczać generowanie emoji.
+
+00:07:59.760 --> 00:08:00.530
+Proszę bardzo.
+
+00:08:01.180 --> 00:08:02.610
+Cóż, zachowajmy to.
+
+00:08:02.640 --> 00:08:04.620
+Wszystko wygląda dobrze.
+
+00:08:04.620 --> 00:08:08.100
+Wciąż tu wdrażamy.
+
+00:08:08.120 --> 00:08:08.680
+W porządku.
+
+00:08:08.750 --> 00:08:10.460
+Mamy wszystko wdrożone.
+
+00:08:10.460 --> 00:08:12.940
+Teraz przetestujmy to.
+
+00:08:12.940 --> 00:08:15.780
+Zamierzamy wrócić i odświeżyć i spojrzeć na to.
+
+00:08:15.800 --> 00:08:17.480
+Posiadamy naszą odznakę rangową.
+
+00:08:17.480 --> 00:08:19.470
+To jest absolutnie niesamowite.
+
+00:08:19.700 --> 00:08:23.660
+Zobaczmy, czy możemy to zaktualizować i uzyskać lepszą pozycję.
+
+00:08:23.660 --> 00:08:30.150
+Zamierzam po prostu zrobić zdjęcie i zobaczmy to, ponieważ używaliśmy go tak wiele razy.
+
+00:08:31.300 --> 00:08:31.710
+Whoops.
+
+00:08:31.730 --> 00:08:41.800
+To wszystko, co chcieliśmy zrobić, to po prostu skopiować adres obrazu tutaj wklej go wykryj.
+
+00:08:41.830 --> 00:08:42.640
+W porządku.
+
+00:08:42.640 --> 00:08:46.040
+Twarz została wykryta, że odznaka się podniosła.
+
+00:08:46.060 --> 00:08:53.590
+Lub wpis został zaktualizowany, ale odznaka nie, ponieważ musimy upewnić się, że nasza aktualizacja się dzieje i
+
+00:08:53.590 --> 00:08:54.580
+wywołujemy funkcję.
+
+00:08:54.580 --> 00:08:59.760
+Więc wróćmy i naprawmy to.
+
+00:09:00.010 --> 00:09:10.140
+To, co chcemy tutaj zrobić, to stworzyć hak w całym cyklu życia, a ten hak będzie komponentem, który zamontowaliśmy,
+
+00:09:11.310 --> 00:09:20.400
+a ten komponent zamontował lub powinienem powiedzieć, że komponent zaktualizował, że zrobimy trochę czeku, jeśli ten
+
+00:09:21.360 --> 00:09:30.850
+komponent zostanie zaktualizowany, ponieważ pamiętamy ten komponent aktualizuje się tylko w przypadku zmiany emoji lub zmiany rekwizytów
+
+00:09:30.850 --> 00:09:33.040
+lub zmiany emoji.
+
+00:09:33.840 --> 00:09:38.880
+Ale widzisz tutaj, że generowany emoji jest wywoływany tylko na komponencie.
+
+00:09:38.940 --> 00:09:42.790
+Jeśli więc ponownie się nie powtórzy, nie zaktualizuje się.
+
+00:09:42.810 --> 00:09:44.220
+To prosta naprawa.
+
+00:09:44.220 --> 00:09:50.340
+Za każdym razem, gdy komponent zaktualizował wydarzenie.
+
+00:09:50.360 --> 00:09:59.310
+Powiem tylko, czy poprzednie i komponent zaktualizowały poprzednie rekwizyty i poprzedni stan, a
+
+00:10:01.050 --> 00:10:06.750
+my po prostu zdobędziemy poprzednie rekwizyty kropki i.
+
+00:10:07.230 --> 00:10:12.730
+Jeśli to będzie dokładnie to samo, co stop Propst dostał wpisy.
+
+00:10:12.780 --> 00:10:17.640
+Jeśli nic się nie zmieni we wpisach, to tak naprawdę nie zależy nam na zwykłym powrocie.
+
+00:10:17.640 --> 00:10:22.620
+Nie, nie powinieneś aktualizować niczego, ponieważ dobrze nazwa i wpisy.
+
+00:10:22.620 --> 00:10:24.170
+Tylko na tym zależy.
+
+00:10:25.650 --> 00:10:27.510
+I może sprawdź też imię.
+
+00:10:27.570 --> 00:10:32.520
+Więc powiemy nazwę kropki w poprzednim wniosku
+
+00:10:36.670 --> 00:10:40.190
+i nazwę kropki wniosku.
+
+00:10:40.390 --> 00:10:48.720
+I wreszcie tutaj możemy powiedzieć, że jeśli żadna z tych zmian nie jest w porządku, po prostu nie wrócimy.
+
+00:10:48.730 --> 00:10:59.160
+W przeciwnym razie chcę, żebyś zawsze, gdy wpisy zmieniają się, aby ta myśl generowała emoji z
+
+00:10:59.260 --> 00:11:03.720
+tą kropką wniosku dot. Nowych wpisów.
+
+00:11:03.780 --> 00:11:09.070
+Chcemy więc upewnić się, że wygenerujemy tego emoji i zadzwonimy do tej funkcji lambda.
+
+00:11:09.080 --> 00:11:10.390
+W porządku, dajmy sobie spokój.
+
+00:11:10.400 --> 00:11:12.140
+Mam zamiar wrócić.
+
+00:11:12.170 --> 00:11:12.740
+W porządku.
+
+00:11:12.740 --> 00:11:18.040
+Zmienia się nasz emoji, ale dodajmy kolejny obraz.
+
+00:11:18.140 --> 00:11:19.420
+Hej, patrz na to.
+
+00:11:19.550 --> 00:11:22.140
+Zbliżyliśmy się do statku rakietowego.
+
+00:11:22.160 --> 00:11:22.990
+To cudownie.
+
+00:11:23.120 --> 00:11:29.200
+Kliknijmy ponownie, aby wykryć i drzewa dziewięć, ale jesteśmy niezdefiniowani.
+
+00:11:29.330 --> 00:11:30.120
+Dlaczego.
+
+00:11:31.570 --> 00:11:36.410
+Powinien dawać nam rakietowy statek tak długo, jak mamy zapisy.
+
+00:11:36.460 --> 00:11:44.550
+Sprawdźmy więc, czy idziemy do sieci i kliknij ponownie, aby wykryć.
+
+00:11:44.550 --> 00:11:46.140
+W porządku, więc to działa.
+
+00:11:46.140 --> 00:11:47.210
+Jeśli klikniemy
+
+00:11:50.170 --> 00:11:52.270
+ponownie, to trochę dziwne.
+
+00:11:52.370 --> 00:11:55.260
+W porządku wszystko działa.
+
+00:11:55.270 --> 00:11:58.670
+Mamy statek rakietowy.
+
+00:11:58.790 --> 00:11:59.900
+Wszystko w porządku.
+
+00:12:00.140 --> 00:12:09.760
+Jeśli przejdziemy do naszego profilu, zobaczmy profil i zmienmy naszą nazwę na Teti save.
+
+00:12:09.820 --> 00:12:18.640
+W porządku Teddy, twój aktualny licznik jest 15 i mamy znaczek rangi na ścianie, najwyższą odznakę, którą możemy
+
+00:12:18.640 --> 00:12:19.630
+zdobyć.
+
+00:12:19.630 --> 00:12:21.440
+Jakie to jest świetne.
+
+00:12:21.460 --> 00:12:25.330
+Mamy w pełni funkcjonującą aplikację.
+
+00:12:25.490 --> 00:12:26.910
+Gra i wyloguj się.
+
+00:12:27.000 --> 00:12:38.860
+I dla zabawy, wprowadźmy nowego użytkownika, którego nazwiemy Bobby, a on będzie w Gmailu.
+
+00:12:38.990 --> 00:12:42.610
+Hasło to rejestr B.
+
+00:12:42.630 --> 00:12:44.520
+Hej, Bobby, wciąż jesteś początkującym.
+
+00:12:44.520 --> 00:12:46.700
+Musisz pracować na swoim koncie wstępnym.
+
+00:12:46.750 --> 00:12:52.300
+To wykrywa i wszystko działa.
+
+00:12:52.530 --> 00:12:56.430
+Spróbujmy jeszcze raz, ponieważ pierwszy i drugi rodzaj znaczka wyglądają podobnie, jeśli zrobię
+
+00:12:56.430 --> 00:12:57.330
+to ponownie.
+
+00:12:57.330 --> 00:12:57.930
+Proszę bardzo.
+
+00:12:57.930 --> 00:12:59.760
+Oczy się zmieniły.
+
+00:12:59.760 --> 00:13:00.290
+Proszę bardzo.
+
+00:13:00.290 --> 00:13:03.490
+Ari Moji obecnie aktualizuje i zmienia.
+
+00:13:03.540 --> 00:13:04.650
+Gratulacje.
+
+00:13:04.770 --> 00:13:07.200
+Użyliśmy Amazon Lamda.

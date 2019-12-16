@@ -1,0 +1,1330 @@
+﻿WEBVTT
+
+00:00:00.830 --> 00:00:02.640
+I witaj z powrotem.
+
+00:00:02.750 --> 00:00:07.010
+Przejdźmy do ekscytującego kodowania przy użyciu tego, co teraz.
+
+00:00:07.190 --> 00:00:11.210
+Pamiętaj, że creed re-act używa pakietu internetowego pod maską.
+
+00:00:11.240 --> 00:00:18.590
+Zobaczmy więc, jaki rodzaj konfiguracji mają, starając się zbudować go sami lub przynajmniej jego uproszczoną
+
+00:00:18.590 --> 00:00:19.350
+wersję.
+
+00:00:20.830 --> 00:00:28.690
+Pierwszą rzeczą, którą chcemy zrobić, to po prostu zrobić prosty projekt, a my po prostu utworzymy
+
+00:00:28.690 --> 00:00:29.630
+katalog,
+
+00:00:32.390 --> 00:00:36.640
+który nazwiemy także tym projektem i całym Cdn.
+
+00:00:37.930 --> 00:00:45.370
+Teraz pierwszą rzeczą, którą chcemy zrobić, jest ustawienie NPM, aby móc wykonać NPM z Dash Y, co
+
+00:00:45.550 --> 00:00:49.260
+oznacza po prostu powiedzieć "tak" dla wszystkich konfiguracji.
+
+00:00:49.300 --> 00:00:49.690
+W porządku.
+
+00:00:49.690 --> 00:00:54.770
+Mamy wszystko przygotowane i to wyjaśnimy.
+
+00:00:54.880 --> 00:01:00.870
+A teraz otwórzmy projekt, aby upewnić się, że mamy wszystkie potrzebne pliki.
+
+00:01:00.900 --> 00:01:05.540
+Używam subline, ale możesz oczywiście użyć dowolnego edytora tekstu.
+
+00:01:11.190 --> 00:01:13.310
+I sprawmy, żeby ekrany były ładne.
+
+00:01:14.520 --> 00:01:16.750
+Tak jak to razem, abyśmy mogli zobaczyć wszystko.
+
+00:01:16.950 --> 00:01:17.530
+Ładny.
+
+00:01:17.610 --> 00:01:18.310
+Idealny.
+
+00:01:19.270 --> 00:01:24.120
+W porządku, więc mamy nasz projekt pakietu internetowego z naszym pakietem dot Gees w pliku.
+
+00:01:24.130 --> 00:01:27.390
+Na razie niewiele, ale to dobry początek.
+
+00:01:27.580 --> 00:01:33.630
+Teraz cała obsługiwana aplikacja do obsługi pojedynczych stron, którą będziemy budować, będzie
+
+00:01:34.030 --> 00:01:42.780
+zawierała dwa pliki, plik HMO i plik javascript, podczas gdy plik javascript będzie generowany automatycznie ze wszystkich innych
+
+00:01:43.080 --> 00:01:46.270
+plików, które mamy przez pakiet ratpack.
+
+00:01:46.380 --> 00:01:55.830
+Później możemy uruchomić ręczne tworzenie pliku XML jako punktu wejścia dla naszej aplikacji, abyśmy mogli po prostu utworzyć inny
+
+00:01:55.830 --> 00:02:02.760
+katalog tutaj, nazwijmy go kompilacją lub powiedzmy dwa dyski do dystrybucji i
+
+00:02:04.020 --> 00:02:12.810
+wszystkie CD do tej dystrybucji, a my po prostu utwórz plik indeksu, a plik shim jest idealny.
+
+00:02:12.860 --> 00:02:15.960
+Jeśli sprawdzimy tutaj, nasz indeks nie jest shemale.
+
+00:02:15.970 --> 00:02:17.630
+Cóż, wróćmy.
+
+00:02:18.380 --> 00:02:24.210
+Na naszą trasę projektu tutaj w indeksie zaczyna się podobny spadek.
+
+00:02:24.220 --> 00:02:28.790
+Możemy po prostu stworzyć prosty podstawowy szablon.
+
+00:02:29.170 --> 00:02:36.100
+Mogę faktycznie i wzniosły podatek zrobić to, a potem, jeśli w ogóle trafię na kartę, są dla
+
+00:02:36.100 --> 00:02:42.760
+mnie popularne, co jest fajną małą cechą, da tytuł tego, co paczka i wewnątrz ciała,
+
+00:02:43.150 --> 00:02:48.540
+ponieważ będziemy używać ponownego aktu i potrzebujemy jakiś punkt wejścia do reagowania.
+
+00:02:48.540 --> 00:02:58.610
+Możemy po prostu użyć div z pomysłem powiedzmy aplikacji i możemy zamknąć ten div i możemy również
+
+00:02:58.610 --> 00:03:07.580
+mieć plik skryptu, a plik skryptu załaduje nasz pakiet Yes, którego jeszcze nie mamy, ale
+
+00:03:07.580 --> 00:03:08.840
+idziemy robić.
+
+00:03:08.840 --> 00:03:19.100
+Powiemy tylko, że źródło tego pliku skryptu znajdzie się w zbiorze dodginess.
+
+00:03:19.200 --> 00:03:22.700
+W porządku jest fajna i prosta aplikacja.
+
+00:03:23.160 --> 00:03:29.060
+Będziemy mieli punkt wyjścia do reagowania, a my również będziemy mieć wszystkie nasze pliki
+
+00:03:29.070 --> 00:03:31.510
+javascript w jednym, zwanym pakietem.
+
+00:03:32.710 --> 00:03:37.590
+Teraz użyjesz funkcji wet back jako modułu bonder i narzędzia do budowania.
+
+00:03:37.720 --> 00:03:44.650
+Więcej tego, co zamierzasz użyć, zwanego serwerem pakietów webowych, aby obsługiwać ten pakiet,
+
+00:03:44.650 --> 00:03:53.150
+który masz w lokalnym środowisku, abyśmy mogli uruchomić polecenie tutaj i przetestować rapowanie na naszym laptopie.
+
+00:03:53.440 --> 00:03:57.280
+W przeciwnym razie nie byłbyś w stanie zobaczyć go w przeglądarce.
+
+00:03:57.340 --> 00:04:05.250
+I w końcu potrzebujemy również wilgoci zobaczyć kłamstwo lub interfejs wiersza poleceń, aby skonfigurować naszą konfigurację
+
+00:04:05.350 --> 00:04:06.060
+wilgoci.
+
+00:04:06.070 --> 00:04:12.620
+Zainstalujmy więc te trzy pakiety, abyśmy mogli zacząć ponownie używać.
+
+00:04:12.790 --> 00:04:15.130
+Nie możemy zrobić NPM.
+
+00:04:15.130 --> 00:04:27.810
+Możemy zainstalować NPM i ponieważ są one przeznaczone do celów rozwojowych, możemy po prostu powiedzieć "Dash
+
+00:04:28.810 --> 00:04:40.160
+dash", aby zapisać Dev, a tutaj zainstalujemy pakiet, który przetestujemy na serwerze, abyśmy
+
+00:04:40.160 --> 00:04:44.610
+mogli przetestować nasz projekt lokalnie.
+
+00:04:44.690 --> 00:04:46.460
+A potem
+
+00:04:49.650 --> 00:04:53.960
+w końcu pakiet internetowy CLIA zainstalujmy to.
+
+00:04:54.090 --> 00:05:01.230
+I podczas gdy to jest instalacja Chcę ostrzec cię tym filmem, jeśli nie jesteś przyzwyczajony
+
+00:05:01.230 --> 00:05:05.040
+do zawilgocenia, poczujesz, co słychać w tym miejscu.
+
+00:05:05.130 --> 00:05:10.170
+Trochę wyczerpany ze wszystkich pakietów, które zamierzamy zainstalować wszystkie ustawienia.
+
+00:05:10.200 --> 00:05:14.260
+Jest naprawdę przytłaczający przy pierwszym uruchomieniu.
+
+00:05:14.510 --> 00:05:21.020
+I właśnie dlatego tworzenie reakcji istnieje, ponieważ konfigurowanie i konfigurowanie wszystkiego oraz upewnianie się,
+
+00:05:21.020 --> 00:05:24.680
+że wszystko jest aktualne, jest dużym zadaniem.
+
+00:05:24.830 --> 00:05:31.100
+Oglądaj ten film nie dlatego, że musisz wszystko wiedzieć, a jeśli nie wszystko rozumiesz, możesz
+
+00:05:31.100 --> 00:05:32.030
+iść dalej.
+
+00:05:32.030 --> 00:05:37.780
+Obejrzyj to jako sposób na zrozumienie tego, co dzieje się pod maską reakcji tworzenia.
+
+00:05:37.880 --> 00:05:44.240
+Ale jak już wcześniej wspomniałem, należy pamiętać, że konfiguracje zawsze się zmieniają, więc gdy nadejdzie czas, aby zaimplementować
+
+00:05:44.300 --> 00:05:48.620
+jedną z nich, mają świetną dokumentację online, z której może korzystać.
+
+00:05:48.740 --> 00:05:52.200
+Ale na razie wystarczy zrozumieć, dlaczego.
+
+00:05:52.280 --> 00:05:55.960
+Nie każdy szczegół, jak zawsze uwielbiam mówić.
+
+00:05:55.960 --> 00:06:00.090
+W tej chwili, gdy mamy to zainstalowane. Wyjaśnijmy to.
+
+00:06:00.650 --> 00:06:06.560
+Pierwszą rzeczą, którą chcemy zrobić, to przejść do naszego spakowanego pliku
+
+00:06:07.100 --> 00:06:12.800
+Jaisalmer iw ciągu roku skryptów zamierzamy zmienić test, aby rozpocząć.
+
+00:06:13.070 --> 00:06:14.640
+I zamierzamy to powiedzieć.
+
+00:06:14.750 --> 00:06:17.790
+Pozwól, że to pomniejszę, żebyśmy mogli zobaczyć.
+
+00:06:18.080 --> 00:06:23.910
+Chcemy usunąć ten fałszywy tekst, który mamy, a my zamierzamy go tutaj umieścić.
+
+00:06:24.010 --> 00:06:34.660
+Pac dev server dash dash config space i plik, którego jeszcze nie mamy, który będziemy budować.
+
+00:06:34.730 --> 00:06:38.060
+Będzie to nazywane Daut config kropka.
+
+00:06:38.140 --> 00:06:46.590
+JOT. S. a następnie w desce rozdzielczej dash rozwój tryb domu.
+
+00:06:46.690 --> 00:06:48.390
+Pozwól, że to trochę mniej.
+
+00:06:49.760 --> 00:06:50.390
+W porządku.
+
+00:06:50.490 --> 00:06:54.550
+To było dużo, pozwól mi wyjaśnić, co tu się dzieje.
+
+00:06:54.690 --> 00:07:02.430
+Skrypt tutaj definiuje, że chcesz użyć serwera def. Pack pack z plikiem konfiguracyjnym o nazwie dobrze
+
+00:07:02.600 --> 00:07:10.380
+zapełnione konfigurowanie dodginess, które zamierzamy stworzyć, a tryb dash Dash devolvement jest w rzeczywistości nową funkcją, która
+
+00:07:10.380 --> 00:07:15.270
+pojawiła się z powrotem cztery, które było niedawno wydany.
+
+00:07:15.270 --> 00:07:23.310
+I to właśnie dodaje domyślne konfiguracje pakietów internetowych, które pochodzą z powrotem, zanim faktycznie będziemy
+
+00:07:23.310 --> 00:07:26.580
+mieli jedną i dwie wersje wstecz.
+
+00:07:26.580 --> 00:07:30.690
+Teraz to mamy i musieliście zrobić jeszcze więcej ręcznej konfiguracji.
+
+00:07:30.930 --> 00:07:37.770
+Na szczęście w wersji 4 zdali sobie sprawę, że ludzie nie chcą robić wszystkiego ręcznie, więc mają
+
+00:07:37.770 --> 00:07:44.550
+jakieś fajne domyślne ustawienia daty, więc mają też jeden do produkcji, co jest bardzo pomocne.
+
+00:07:44.550 --> 00:07:47.550
+W porządku, więc teraz, gdy mamy tę konfigurację, uratujmy to.
+
+00:07:47.550 --> 00:07:53.400
+I w naszym terminalu zamierzam stworzyć ten plik konfiguracyjny.
+
+00:07:53.490 --> 00:08:04.430
+Więc mówimy, że touch mokry pack dot config dodginess i widzimy tutaj, że mamy to, co konfiguracja backdoora dodgiest
+
+00:08:04.430 --> 00:08:07.540
+i mam fajną małą wtyczkę.
+
+00:08:07.540 --> 00:08:09.850
+To daje mi tutaj symbol.
+
+00:08:09.850 --> 00:08:11.080
+Bardzo fajny.
+
+00:08:11.080 --> 00:08:16.090
+W tej chwili przejdźmy do tego pliku, ponieważ naprawdę możemy zrobić jeszcze wszystko.
+
+00:08:16.090 --> 00:08:20.760
+Przejdziemy do pliku, a my dodamy konfigurację pakietu internetowego.
+
+00:08:21.280 --> 00:08:24.580
+I tu właśnie dzieje się większość dobrze zapełnionej magii.
+
+00:08:25.710 --> 00:08:35.910
+Jesteśmy tutaj pierwszą rzeczą, którą chcemy zrobić, to wyeksportować moduł datt.
+
+00:08:36.100 --> 00:08:40.150
+A ponadto są trzy główne rzeczy, które chcemy dodać do eksportu.
+
+00:08:40.180 --> 00:08:50.440
+Jednym z nich jest wejście, w którym chcemy, aby wilgotność zaczęła wyglądać przez naszą wiarę.
+
+00:08:50.610 --> 00:08:59.400
+W naszym przypadku ten wpis będzie plikiem indeksu js, który zamierzamy stworzyć.
+
+00:08:59.480 --> 00:09:10.080
+Powiedzmy, że w folderze źródłowym będzie to indeks kropka J. S. plik, a następnie druga rzecz, którą
+
+00:09:10.500 --> 00:09:17.220
+zamierzamy powiedzieć, że dane wyjściowe pochodzące z serwera wejściowego odczytują wszystkie pliki
+
+00:09:17.220 --> 00:09:25.700
+i łączą wszystko, a wszystkie dane wyjściowe umieszczają je w tym miejscu i możemy to zrobić
+
+00:09:25.700 --> 00:09:33.390
+po prostu definiując wynik za pomocą ścieżka dher, która jest nazwą katalogu, którą obecnie posiadamy.
+
+00:09:35.760 --> 00:09:39.340
+I użyj naszego katalogu d'Este lub dystrybucji.
+
+00:09:39.480 --> 00:09:45.530
+Tutaj, a potem zamierzamy również mieć publiczność, a ten publiczny Plath będzie
+
+00:09:49.810 --> 00:09:55.930
+po prostu taki, ponieważ jest to tylko twój odnośnik do katalogu wyjściowego
+
+00:09:55.930 --> 00:09:59.040
+rozwiązany w odniesieniu do wieku.
+
+00:09:59.060 --> 00:10:04.840
+Będę ponownie przeglądać strony i przeczytać więcej na ich temat na stronie z dokumentacją.
+
+00:10:04.840 --> 00:10:08.760
+I wreszcie chcemy, aby wyjście było plikiem pakunku.
+
+00:10:08.770 --> 00:10:16.900
+Więc chcemy powiedzieć, że nazwa pliku będzie tak jak Bondel God.
+
+00:10:18.010 --> 00:10:18.730
+Niesamowite.
+
+00:10:18.820 --> 00:10:23.890
+A ostatnią rzeczą będzie coś, co nazywa się serwerem dev.
+
+00:10:23.890 --> 00:10:31.230
+Tak więc chcemy kontynuować, gdy pracujemy na naszej witrynie
+
+00:10:31.240 --> 00:10:40.890
+internetowej lokalnie, a serwer def będzie miał bazę zawartości z folderem dystrybucyjnym.
+
+00:10:40.910 --> 00:10:43.740
+Więc to nam mówi serwer, z którego treści ma służyć.
+
+00:10:43.880 --> 00:10:50.410
+Więc z folderu dystrybucyjnego, kiedy pracujemy w naszym lokalnym środowisku.
+
+00:10:50.480 --> 00:10:50.990
+W porządku.
+
+00:10:51.020 --> 00:10:59.330
+Było jednak dużo, ale ogólnie rzecz biorąc, najważniejszy jest fakt, że istnieje zapis, który jest wyjściem, i mówimy
+
+00:10:59.330 --> 00:11:05.330
+serwerowi Def, gdzie ma wyglądać, aby wyświetlał nam stronę internetową, kiedy pracujemy nad
+
+00:11:05.330 --> 00:11:06.080
+nią.
+
+00:11:06.080 --> 00:11:12.800
+Ponownie mówimy, że chcemy użyć pliku podsumowania indeksu źródłowego jako punktu wejścia do pakowania
+
+00:11:12.890 --> 00:11:14.900
+wszystkich tych ważnych plików.
+
+00:11:15.110 --> 00:11:20.370
+Potrzebujemy, żeby Bondel umarł tak, więc przejdziemy przez wszystko tak, tak.
+
+00:11:20.420 --> 00:11:22.900
+Wszystko, co zostało zaimportowane.
+
+00:11:23.060 --> 00:11:27.060
+Zamierzamy skompilować i wypluć go w pakiecie budżetu.
+
+00:11:27.090 --> 00:11:27.760
+Tak.
+
+00:11:28.130 --> 00:11:35.810
+A potem będziemy generować już skonfigurowaliśmy ten folder jako punkt serwujący z indeksem, a nie plikiem
+
+00:11:35.920 --> 00:11:38.280
+shemale dla naszej aplikacji.
+
+00:11:38.510 --> 00:11:41.600
+Tak więc brakuje tu folderu źródłowego, więc zróbmy to.
+
+00:11:41.600 --> 00:11:49.530
+Zamierzam zrobić twoje źródło, więc mamy folder źródła wiadomości i tutaj możemy po
+
+00:11:49.530 --> 00:11:58.520
+prostu wejść do folderu źródłowego i utworzyć plik indeksu, który mamy w naszej konfiguracji mokrego pakietu.
+
+00:11:59.460 --> 00:12:00.480
+Wracajmy.
+
+00:12:01.540 --> 00:12:13.140
+I dla zabawy w indeksie Jasc powiedzmy po prostu psie konsole, a ja powiem, co czarodzieje w paczce.
+
+00:12:13.330 --> 00:12:14.530
+Bardzo ekscytujące rzeczy.
+
+00:12:14.530 --> 00:12:15.210
+W porządku.
+
+00:12:15.430 --> 00:12:17.700
+Uruchommy NPM start i zobaczmy, co się stanie.
+
+00:12:18.040 --> 00:12:25.770
+Zamierzam powiedzieć, że start NPM, ponieważ jeśli pamiętasz, że wybierasz się do Pakistanu, mamy tę komendę serwera DEP dla serwera
+
+00:12:25.780 --> 00:12:27.710
+internetowego, którą będziemy uruchamiać.
+
+00:12:28.080 --> 00:12:33.300
+Powiem więc, że start NPM.
+
+00:12:33.350 --> 00:12:40.590
+W porządku, więc otrzymamy tutaj trochę wyników, ale na dole zobaczysz, że udało nam się skompilować pomyślnie.
+
+00:12:40.700 --> 00:12:46.880
+A jeśli przewijamy w górę, widzimy, że projekt uruchamia gówniany lokalny serwer lokalny.
+
+00:12:46.940 --> 00:12:48.290
+Zróbmy to.
+
+00:12:48.290 --> 00:12:50.930
+Chodźmy do lokalnych gospodarzy tutaj.
+
+00:12:51.770 --> 00:12:55.110
+I zrób 80.
+
+00:12:55.130 --> 00:12:55.360
+W porządku.
+
+00:12:55.370 --> 00:13:02.810
+I mamy kreatora PAC w konsoli, który tam działa, nic nie jest wyświetlane na stronie,
+
+00:13:02.810 --> 00:13:13.110
+ponieważ nasza strona e-mailowa naprawdę nie ma niczego, czego chcemy, możemy po prostu mieć tag H-1, który mówi, że tutaj jest pakiet
+
+00:13:13.120 --> 00:13:15.720
+internetowy pewnie, że to działa.
+
+00:13:18.170 --> 00:13:19.320
+A jeśli odświeżymy.
+
+00:13:19.370 --> 00:13:20.060
+Proszę bardzo.
+
+00:13:20.120 --> 00:13:24.870
+Wracamy do pracy z kreatora instalacji mokrej.
+
+00:13:24.950 --> 00:13:25.880
+Bardzo fajny.
+
+00:13:26.590 --> 00:13:38.810
+Znowu widzimy, że zawartość jest Sam z folderu dist i że nasz czas budowania był tak
+
+00:13:38.810 --> 00:13:40.040
+wielki.
+
+00:13:40.040 --> 00:13:49.550
+Zajęło 337 milli sekund i że mamy Bondel DOD J. S. Plik, który stworzyliśmy, jest
+
+00:13:49.610 --> 00:13:54.910
+dość mały, a 300 kilobajtów jest bardzo fajny.
+
+00:13:54.920 --> 00:13:55.170
+W porządku.
+
+00:13:55.190 --> 00:13:58.640
+Teraz przejdźmy do tematu nieco głębiej.
+
+00:13:59.570 --> 00:14:07.920
+Potrzebujemy też czegoś, co nazywa się Biblią Biblii, co pozwala nam napisać nasz kod za sześć, siedem lub osiem.
+
+00:14:08.060 --> 00:14:15.950
+W Biblii kod zostanie zamieniony lub zmieniony z powrotem na tak pięć, aby
+
+00:14:15.950 --> 00:14:22.900
+każda przeglądarka bez wszystkich 6 już zaimplementowanych funkcji mogła je zinterpretować.
+
+00:14:23.120 --> 00:14:28.050
+Piszemy więc jako programiści w 6 roku, grając w baseball.
+
+00:14:28.070 --> 00:14:34.490
+Wypisze dokładnie ten sam kod, ale z E. S. 5 wersji, dzięki czemu wszystkie przeglądarki
+
+00:14:34.520 --> 00:14:40.670
+bez względu na to, ile mają lat, nadal mogą ją zaimplementować, abyśmy mogli nadal używać fajnych rzeczy, takich jak funkcje
+
+00:14:40.670 --> 00:14:45.890
+Aero i destrukturyzacja obiektu oraz inne fajne rzeczy, które możemy przetestować na nowe, nadchodzące funkcje javascript,
+
+00:14:45.890 --> 00:14:48.220
+które nie mają nawet został już wdrożony.
+
+00:14:48.260 --> 00:14:50.270
+Zacznijmy od tego.
+
+00:14:50.480 --> 00:14:54.470
+Załóżmy baseball w naszym projekcie Roopak.
+
+00:14:54.600 --> 00:15:06.400
+Zamierzam to zamknąć i wyjaśnić, a ja powiem, że ponownie zainstaluję NPM, po prostu powiemy "save def", ponieważ robimy to tylko
+
+00:15:06.400 --> 00:15:10.450
+po stronie niesłyszących, kiedy udostępniamy je publicznie.
+
+00:15:10.460 --> 00:15:17.700
+Nie potrzebujemy tabeli, ponieważ robimy to przed umieszczeniem plików na serwerze.
+
+00:15:17.750 --> 00:15:27.650
+Powiedzmy, że potrzebujemy czegoś o nazwie "Whoops bełkotać rdzeń", który jest głównym pakietem
+
+00:15:27.650 --> 00:15:28.670
+kabli.
+
+00:15:28.820 --> 00:15:35.910
+Potrzebujemy czegoś, co nazywa się Babel Lowder, a Lowder to coś, co jest używane w Westpac.
+
+00:15:36.020 --> 00:15:38.010
+Kompiluje kod.
+
+00:15:38.010 --> 00:15:45.320
+Więc program ładujący Babel w mokrym paczku działa Sutekh javascript i
+
+00:15:45.320 --> 00:15:53.050
+przenosi go przez kompilator Babel, a następnie potrzebujemy czegoś presetu i wywołania.
+
+00:15:53.520 --> 00:16:01.890
+A to jest świetny pakiet, który sprawdza, niezależnie od tego, w jakiej przeglądarce jest uruchomiona i na podstawie
+
+00:16:01.890 --> 00:16:09.330
+tej wersji przeglądarki i ile ma lat, będzie dokładnie wiedział, które funkcje nie zostały jeszcze
+
+00:16:09.330 --> 00:16:15.140
+zaimplementowane w przeglądarce i sprawiają, że zmiany w S-5 dla przeglądarki.
+
+00:16:15.210 --> 00:16:20.190
+Jest więc wystarczająco inteligentny, aby wykryć przeglądarkę i zmienić tylko fragment kodu, którego przeglądarka
+
+00:16:20.190 --> 00:16:20.940
+nie rozumie.
+
+00:16:20.940 --> 00:16:23.840
+W porządku, bardzo fajne, więc zainstalujmy to.
+
+00:16:23.940 --> 00:16:24.220
+W porządku.
+
+00:16:24.230 --> 00:16:26.410
+Wspaniale, więc zainstalowaliśmy babbel.
+
+00:16:26.540 --> 00:16:33.680
+Ale dodatkowo możemy chcieć użyć bardziej eksperymentalnych funkcji javascript, które mogą zostać aktywowane
+
+00:16:33.950 --> 00:16:36.180
+przez coś zwanego etapami.
+
+00:16:36.230 --> 00:16:37.460
+Więc, co to znaczy.
+
+00:16:37.460 --> 00:16:45.600
+Cóż, jeśli przejdziemy do strony internetowej Babel i zamkniemy to teraz, widzimy, że mamy różne
+
+00:16:45.780 --> 00:16:54.960
+wstępnie ustawione etapy i są to rzeczy w javascript, które są proponowane, które mogą, ale nie muszą zostać zaimplementowane.
+
+00:16:54.960 --> 00:17:00.470
+Ale jeśli naprawdę chcesz, możesz zacząć z nich korzystać, korzystając z gotowych ustawień.
+
+00:17:00.810 --> 00:17:06.450
+I znowu dlatego, że transport Babbel jest kodem, który oznacza, że możemy pisać,
+
+00:17:06.450 --> 00:17:13.910
+co chcemy i jak długo amerykański bełkot zrozumie, że wypisze nam wersję S-5, aby wszystkie przeglądarki ją zrozumiały.
+
+00:17:14.190 --> 00:17:22.110
+Więc dla zabawy powiedzmy teraz, że chcemy przetestować nową funkcję javascript, więc powiemy, że
+
+00:17:22.110 --> 00:17:24.380
+instalujemy NPM i.
+
+00:17:24.580 --> 00:17:36.050
+I pobierzemy pakiet, który jest presetem Babel, powiedz etap, abyśmy mogli go zainstalować.
+
+00:17:36.320 --> 00:17:39.480
+Teraz, gdy mamy wszystkie te pakiety, jak możemy z nich korzystać.
+
+00:17:39.890 --> 00:17:53.160
+No cóż, idziemy do zapakowanego Jaison, a tu możemy dodać właściwość kabla i tutaj możemy to powiedzieć i
+
+00:17:53.160 --> 00:17:56.360
+upewnić się, że dodamy
+
+00:18:00.150 --> 00:18:08.390
+przecinek do pre-setów, dlatego właśnie pobraliśmy, będziemy mieli trzy z nich.
+
+00:18:08.530 --> 00:18:10.110
+Więc wróćmy tutaj.
+
+00:18:10.120 --> 00:18:11.650
+Powinien być tablicą.
+
+00:18:11.950 --> 00:18:16.770
+I tutaj powiemy, że mamy preset.
+
+00:18:16.900 --> 00:18:24.820
+Zamierzamy również użyć sceny, aby ustawić, co wiesz.
+
+00:18:24.830 --> 00:18:26.150
+Dodajmy jeszcze jeden.
+
+00:18:26.150 --> 00:18:33.030
+Ponownie, jeśli chcemy zastosować reakcję w naszej aplikacji, chcemy również ustawić pre-act ponownie.
+
+00:18:33.050 --> 00:18:41.660
+Znowu tutaj możemy po prostu zainstalować NPM i zamiast wstępnego etapu do tego, co tylko
+
+00:18:41.660 --> 00:18:45.440
+Scott powie, że zostanie ustawione, zareaguje.
+
+00:18:45.460 --> 00:18:51.360
+Jest ich mnóstwo, z których możesz skorzystać.
+
+00:18:51.650 --> 00:18:54.430
+A teraz będziemy mieli ten również dostępny dla nas.
+
+00:18:55.310 --> 00:19:02.000
+Ta ostatnia jest dla nas zdolna do przekształcania plików GSX, które czasami przychodzą naturalnie w reakcji na pliki
+
+00:19:02.240 --> 00:19:06.200
+Jeffa, więc jest to bardziej dla wygody niż cokolwiek innego.
+
+00:19:06.200 --> 00:19:10.040
+Pozwól, że to wyjaśnię i tak, możemy przeładować to.
+
+00:19:10.350 --> 00:19:12.990
+Och i zapomniałem go zapisać, więc wróćmy tutaj.
+
+00:19:13.230 --> 00:19:15.600
+Zamierzam to skopiować.
+
+00:19:15.600 --> 00:19:18.100
+I znowu po prostu to tutaj zostawimy.
+
+00:19:18.140 --> 00:19:22.260
+Nasza konfiguracja baseballu i upewnij się, że tym razem ją zachowamy.
+
+00:19:23.600 --> 00:19:30.110
+W porządku, więc teraz możemy wrócić do naszej konfiguracji strony internetowej i możemy powiedzieć dobrze zapakowane, aby
+
+00:19:30.110 --> 00:19:32.450
+również użyć baseballu przy wejściu.
+
+00:19:32.450 --> 00:19:38.650
+A zanim wszystko położysz przez baseball i Jaspal wszystko, co bardzo łatwe do zrobienia.
+
+00:19:38.690 --> 00:19:44.390
+Możemy dodać moduł, aby powiedzieć, co zrobić z naszymi modułami.
+
+00:19:44.480 --> 00:19:47.830
+I tutaj musimy tylko wspomnieć o kilku rzeczach.
+
+00:19:47.840 --> 00:19:49.870
+Pierwszym z nich są zasady.
+
+00:19:49.970 --> 00:19:52.450
+Jakie zasady musimy przestrzegać.
+
+00:19:52.550 --> 00:19:57.630
+Zasady będą więc testowane.
+
+00:19:58.060 --> 00:20:01.280
+To znaczy szukać plików.
+
+00:20:02.380 --> 00:20:06.790
+I użyjemy tutaj niektórych wyrażeń odrzucających, które
+
+00:20:09.980 --> 00:20:16.810
+są javascript lub używają nawiasów, które są plikami javascript lub GSX.
+
+00:20:16.850 --> 00:20:20.460
+Więc są to domyślne powtórzenia fałszywe.
+
+00:20:20.610 --> 00:20:25.080
+A tak przy okazji możesz spojrzeć na składnię, to jest regex i możesz
+
+00:20:25.080 --> 00:20:31.590
+się nauczyć o składni, ale mówimy prawie wszystko co pasuje do dodgiest lub dot. GSX. Tak, prawie wszystkie javascript.
+
+00:20:31.590 --> 00:20:40.280
+Chcieliśmy użyć na tym ładowarce Babel.
+
+00:20:40.370 --> 00:20:42.580
+Przeprowadź go przez Babel.
+
+00:20:42.590 --> 00:20:47.210
+Teraz oczywiście nie chcemy tego robić bez naszych modułów, dzięki czemu można zobaczyć nasze znane foldery modułów.
+
+00:20:47.210 --> 00:20:52.940
+Jest tona, ale są to całe pliki, które są stronami
+
+00:20:53.180 --> 00:21:02.070
+trzecimi i nie jesteśmy nimi zainteresowani, więc mogę po prostu powiedzieć exclude, a my wykluczyć znane moduły.
+
+00:21:02.080 --> 00:21:02.350
+W porządku.
+
+00:21:02.350 --> 00:21:03.070
+Idealny.
+
+00:21:03.340 --> 00:21:10.860
+Drugą rzeczą, którą chcę również zrobić, to użyć rozwiązania, które zauważyliście, gdy pracowaliśmy
+
+00:21:10.860 --> 00:21:16.370
+z tworzeniem ponownie, po wprowadzeniu pliku pliku komponentu.
+
+00:21:16.380 --> 00:21:23.280
+Nigdy nie dodawaliśmy podstępnego Yes na końcu, ponieważ tworzenie reakcji automatycznie wiedziało, że to jest JavaScript.
+
+00:21:23.280 --> 00:21:26.480
+Robi się to przy użyciu czegoś, co nazywa się rozwiązaniem.
+
+00:21:26.520 --> 00:21:29.140
+I możemy to powiedzieć z determinacją.
+
+00:21:29.370 --> 00:21:31.110
+Chcemy, aby rozszerzenia
+
+00:21:36.380 --> 00:21:44.860
+J us i GSX zostały pominięte i po prostu założymy, że będzie to javascript lub po prostu X-pliki.
+
+00:21:45.040 --> 00:21:51.820
+Tak więc nigdy nie musimy robić dziwnych rzeczy podczas importowania na górze pliku, który jest miły i sprytny.
+
+00:21:51.820 --> 00:21:54.550
+W porządku, więc uratujmy to i.
+
+00:21:54.730 --> 00:21:55.300
+W porządku.
+
+00:21:55.330 --> 00:22:01.150
+Nie skończyliśmy jeszcze, ponieważ załóżmy, że jest to aplikacja reaktora, potrzebujemy kilku pakietów do reakcji.
+
+00:22:01.240 --> 00:22:07.180
+Ale te, które już wiemy, możemy po prostu zainstalować NPM i tym razem łabędzie zostaną zapisane
+
+00:22:07.750 --> 00:22:11.140
+nie dla DAPH, ale ich rzeczywistych zależności projektu.
+
+00:22:11.140 --> 00:22:22.190
+Nie musimy więc używać kreatora deskryptora, aby zapisać dev możemy po prostu powiedzieć, że chcemy zainstalować reagować i reagować dongiem.
+
+00:22:22.560 --> 00:22:25.210
+Nie mogę przeliterować Spróbujmy jeszcze raz.
+
+00:22:25.370 --> 00:22:26.120
+Reagować.
+
+00:22:27.820 --> 00:22:28.120
+W porządku.
+
+00:22:28.120 --> 00:22:28.560
+Niesamowite.
+
+00:22:28.570 --> 00:22:29.990
+Mamy reakcję.
+
+00:22:29.990 --> 00:22:31.000
+Stahl To wspaniale.
+
+00:22:31.000 --> 00:22:37.030
+Zbliżamy się coraz bardziej do tego, jak reagujemy na działania pod maską.
+
+00:22:37.030 --> 00:22:37.480
+Dobre.
+
+00:22:37.480 --> 00:22:43.820
+Teraz używamy reagowania i całej dobroci GSX do naszych plików.
+
+00:22:44.140 --> 00:22:52.090
+Ale inną rzeczą, którą możesz zapamiętać, jest to, że jesteśmy w stanie użyć czegoś, co nazywa się Yes lint, lub za każdym razem,
+
+00:22:52.090 --> 00:22:57.360
+gdy jesteśmy w rankingu, reagujemy w każdym momencie, gdy mamy błąd składniowy lub coś podobnego.
+
+00:22:57.370 --> 00:23:02.760
+Wyświetliło to w naszym terminalu, co było bardzo pomocne.
+
+00:23:03.620 --> 00:23:09.020
+I używają czegoś zwanego E. S. lint czyli pożyczanie, które sprawdza twoją składnię upewniając się,
+
+00:23:09.020 --> 00:23:09.860
+że wszystko się zgadza.
+
+00:23:09.860 --> 00:23:11.430
+Pomyśl o tym jako o sprawdzaniu pisowni.
+
+00:23:12.200 --> 00:23:19.430
+Pozwala to na zachowanie spójnego kodu javascript i kodu Reac w swoim projekcie, a
+
+00:23:19.760 --> 00:23:28.250
+każda firma, którą wyprowadzacie, używa jakiegoś Lantinga, aby to zrobić, pozwólcie mi najpierw to wyjaśnić, ponieważ możecie sobie
+
+00:23:28.250 --> 00:23:30.390
+wyobrazić, że instalujemy Muhl.
+
+00:23:30.420 --> 00:23:31.150
+Morse.
+
+00:23:31.340 --> 00:23:32.840
+Znowu to trochę ból głowy.
+
+00:23:32.840 --> 00:23:36.510
+Wiem, ponieważ jest to tylko do celów programistycznych.
+
+00:23:36.620 --> 00:23:44.990
+Powie "save def", a my zainstalujemy pakiet Slint.
+
+00:23:45.380 --> 00:23:51.200
+I chociaż jest to ładowanie, które mogłeś sobie teraz uświadomić, ponieważ używamy pakietu internetowego,
+
+00:23:51.200 --> 00:23:56.600
+potrzebujemy czegoś, co nazywa się ładowaczem, aby wszystkie pliki przez to przeszły.
+
+00:23:56.600 --> 00:24:00.530
+Przechodzą przez babbel, aby przenieść ich na system iOS 5.
+
+00:24:00.530 --> 00:24:03.170
+Jest więc zgodny ze wszystkimi przeglądarkami.
+
+00:24:03.170 --> 00:24:07.790
+Ale chcieliśmy również przejść przez Slint, aby sprawdzić, czy nie ma błędów.
+
+00:24:07.790 --> 00:24:17.060
+Tak więc potrzebujemy czegoś, co nazywa się ładowaczem Lint Yes.
+
+00:24:17.100 --> 00:24:17.500
+W porządku.
+
+00:24:17.580 --> 00:24:23.690
+Teraz możemy użyć tego w naszej konfiguracji, aby upewnić się, że przechodzi przez Slint.
+
+00:24:23.820 --> 00:24:26.790
+Zróbmy to, dodając kolejną regułę tutaj.
+
+00:24:26.880 --> 00:24:34.200
+I rzeczywiście popełniłem błąd, to powinien być obiekt, ponieważ możemy mieć wiele reguł, więc umieśćmy
+
+00:24:35.420 --> 00:24:36.830
+to tam.
+
+00:24:36.980 --> 00:24:43.740
+I następny Łabędź I powiemy, że tutaj zrobimy to samo.
+
+00:24:43.740 --> 00:24:53.460
+Zamierzamy skopiować te właściwości, z wyjątkiem tego, że chcemy ponownie użyć programu ładującego Slint za pośrednictwem naszych
+
+00:24:53.460 --> 00:24:55.130
+plików javascript.
+
+00:24:55.170 --> 00:24:58.980
+Zacznijmy więc naszą aplikację i zobaczmy, czy to działa.
+
+00:24:59.040 --> 00:25:03.180
+W pewnym sensie poszedłem bez sprawdzania mojej pracy, więc zobaczymy, czy tutaj popełniłem jakieś błędy.
+
+00:25:03.260 --> 00:25:04.950
+Mam zamiar uruchomić NPM start i
+
+00:25:10.000 --> 00:25:11.500
+mam tu trochę błędu.
+
+00:25:11.500 --> 00:25:17.540
+Jeśli przejdziemy w górę, zobaczysz, że popełniłem tu głupi mały błąd.
+
+00:25:17.590 --> 00:25:23.190
+Potrzebuję przecinka po serwerze śmierci.
+
+00:25:23.190 --> 00:25:24.750
+Powiedzmy to i zacznijmy
+
+00:25:27.630 --> 00:25:29.360
+od nowa, a my mamy kolejne.
+
+00:25:29.700 --> 00:25:32.390
+Dzisiaj jestem pełen błędów.
+
+00:25:32.460 --> 00:25:33.090
+Proszę bardzo.
+
+00:25:33.090 --> 00:25:35.730
+Kolejny przecinek, który przeoczyłem.
+
+00:25:40.110 --> 00:25:40.560
+W porządku.
+
+00:25:40.560 --> 00:25:42.640
+Więc teraz się kompiluje.
+
+00:25:42.900 --> 00:25:44.920
+Ale mówi, że nie kompiluje.
+
+00:25:44.920 --> 00:25:45.140
+W porządku.
+
+00:25:45.150 --> 00:25:52.440
+Chcę ci pokazać coś, co jest dość skomplikowane w paczce i dlaczego tak wielu ludzi denerwuje się
+
+00:25:52.440 --> 00:25:53.200
+tym.
+
+00:25:53.310 --> 00:26:03.130
+Więc celowo popełniłem tu kilka błędów, że jeśli dobrze się tutaj przejrzysz, nie jest jasne, co
+
+00:26:03.220 --> 00:26:05.020
+się dzieje.
+
+00:26:05.050 --> 00:26:13.100
+Chodzi mi o to, że widzę, że nie mam takiej konfiguracji lądowej, ale jest tu także wszystko inne i po
+
+00:26:13.910 --> 00:26:16.090
+prostu nie można znaleźć modułu.
+
+00:26:17.100 --> 00:26:21.300
+I znowu jest to jedna z tych rzeczy, gdzie naprawdę chcesz się upewnić, że
+
+00:26:21.540 --> 00:26:24.880
+składnia, której używasz w mokrym opakowaniu i thig jest naprawdę prawidłowa.
+
+00:26:24.900 --> 00:26:30.920
+Dlatego tak ważne jest spojrzenie na ich dokumentację i sprawdzanie ich przykładu.
+
+00:26:30.930 --> 00:26:40.290
+Na przykład tutaj naprawdę potrzebujemy, aby w rozszerzeniach znalazła się kropka z przodu, a
+
+00:26:40.620 --> 00:26:43.760
+następnie testy z odrzutami.
+
+00:26:43.830 --> 00:26:50.080
+Cóż, właściwie nie potrzebujemy kropek, ponieważ mamy ten front również.
+
+00:26:50.990 --> 00:26:53.710
+Pozwól mi to zapisać i spróbujmy jeszcze raz.
+
+00:26:58.360 --> 00:27:04.660
+W porządku, wciąż dostaję błędy, ale jeśli przewijam w górę, nie mam tych wszystkich modularów i
+
+00:27:05.170 --> 00:27:09.850
+wygląda na to, że dostaję 1 błąd braku znalezionej konfiguracji Eastland.
+
+00:27:09.940 --> 00:27:16.870
+To dość standardowy Tak Linta potrzebuje jakiejś konfiguracji jakiejś reguły, którą
+
+00:27:16.880 --> 00:27:21.480
+możemy powiedzieć, sprawdźmy te typy błędów.
+
+00:27:21.510 --> 00:27:23.370
+Znowu kolejny plik konfiguracyjny.
+
+00:27:23.500 --> 00:27:28.000
+Powiedziałem ci, że to może być dość włochate, ale tak po prostu działa.
+
+00:27:28.000 --> 00:27:34.940
+Tak więc przy każdym skosie jest bardzo prosty, możemy po prostu stworzyć coś zwanego plikiem rc, abyśmy mogli powiedzieć dotyk.
+
+00:27:34.990 --> 00:27:36.110
+Tak, szarpie.
+
+00:27:36.270 --> 00:27:46.330
+R C i to zrobione tutaj sprawia, że jest to plik kropkowy, a R C oznacza, że kiedy projekt się
+
+00:27:46.780 --> 00:27:54.190
+uruchomi, będzie czytał Slint R C i konfigurował każdy Slint tak, aby jakikolwiek reguły tam
+
+00:27:54.190 --> 00:27:55.530
+się tworzyły.
+
+00:27:55.630 --> 00:28:01.220
+Teraz mogę zrobić to samo z baseballem, zamiast umieszczać go w paczce.
+
+00:28:01.250 --> 00:28:09.380
+Jason, jak to mam tutaj, mógłbym to wszystko wziąć i stworzył kropkę to Sharifah.
+
+00:28:09.730 --> 00:28:12.370
+Ale na razie możemy zostawić to dla ciebie.
+
+00:28:12.360 --> 00:28:13.170
+Slint jednak.
+
+00:28:13.360 --> 00:28:15.410
+Stwórzmy nowy cienki plik.
+
+00:28:16.280 --> 00:28:22.940
+I tutaj, aby rozpocząć, nie potrzebujemy niczego szalonego, zostawimy to puste i po
+
+00:28:23.150 --> 00:28:26.930
+prostu zachowamy domyślną składnię definiowania takich reguł.
+
+00:28:27.200 --> 00:28:31.610
+Ale utrzymanie pustego obiektu będzie oszczędzać.
+
+00:28:31.880 --> 00:28:33.370
+I zacznijmy to jeszcze raz.
+
+00:28:37.300 --> 00:28:42.150
+Rahu wszystko wydaje się być załadowane i wszystko wygląda dobrze.
+
+00:28:42.150 --> 00:28:48.130
+Znowu mamy naszego lokalnego hosta 1881, który dystrybuuje nasze produkty.
+
+00:28:48.250 --> 00:28:49.360
+Więc sprawdźmy to.
+
+00:28:50.920 --> 00:28:53.150
+W porządku wszystko wygląda ładnie.
+
+00:28:53.170 --> 00:28:54.330
+Zignoruj 4 lub 4.
+
+00:28:54.320 --> 00:28:59.750
+To tylko oszustwo Falvey, którego nie musimy się martwić, ale jaki pakiet działa.
+
+00:28:59.950 --> 00:29:08.110
+A jeśli przejdziemy do sieci i odświeżymy, zobaczymy, że otrzymujemy plik dodgiest, który ma wszystko,
+
+00:29:08.110 --> 00:29:13.770
+co ma do zaoferowania, aby działać tak, jak to robi.
+
+00:29:15.900 --> 00:29:22.320
+Tutaj mamy nasz dziennik konsoli, który mówi nam, aby wydrukować jakiego kreatora pakietu.
+
+00:29:22.360 --> 00:29:23.890
+Bardzo fajny.
+
+00:29:23.890 --> 00:29:24.750
+W porządku.
+
+00:29:24.850 --> 00:29:28.470
+Czy kiedykolwiek dostałeś bóle głowy z tego wszystkiego.
+
+00:29:28.660 --> 00:29:31.050
+Ponieważ mamy jeszcze jedną rzecz do dodania.
+
+00:29:31.060 --> 00:29:34.170
+Widzisz, musisz użyć czegoś, co nazywa się Babel.
+
+00:29:34.190 --> 00:29:36.250
+Tak, lint w twojej konfiguracji.
+
+00:29:36.250 --> 00:29:38.410
+To ogranicza.
+
+00:29:38.410 --> 00:29:43.750
+Obejmuje również iOS 6 i 7 oraz iOS 8.
+
+00:29:43.750 --> 00:29:46.390
+Więc po raz kolejny zrobiliśmy to wcześniej.
+
+00:29:46.480 --> 00:29:54.430
+Zamierzamy tu oczyścić i po prostu zrobić instalację NPM i ponownie
+
+00:29:54.430 --> 00:30:02.210
+zapisać Dev i tym razem zamierzamy zrobić oba tak niech.
+
+00:30:02.340 --> 00:30:08.220
+I znowu nie mogę teraz przeliterować tego znowu w baseball.
+
+00:30:08.430 --> 00:30:20.490
+I znowu tutaj, teraz, gdy już to pobrałem, mogę użyć innej właściwości zwanej parserem, a ten parser będzie miał
+
+00:30:20.490 --> 00:30:26.050
+tabelę E. S. szarpie.
+
+00:30:26.140 --> 00:30:28.560
+Zapiszmy to i upewnij się, że nadal działa.
+
+00:30:28.570 --> 00:30:29.500
+Tutaj też
+
+00:30:34.970 --> 00:30:38.560
+przychodzi NPM strt dla tego prawa, spróbujmy jeszcze raz.
+
+00:30:46.460 --> 00:30:52.790
+I wszystko działa, ale teraz mamy również aplikację do bibuły.
+
+00:30:52.800 --> 00:31:01.360
+Spróbujemy czegoś zabawnego powiedzmy, że chcę, żeby reguła nie była oszustwem. mieć ostrzeżenie, powiedzmy to i zamierzam
+
+00:31:05.100 --> 00:31:08.080
+uruchomić ponownie NPM.
+
+00:31:11.050 --> 00:31:12.190
+Sprawdź to.
+
+00:31:12.190 --> 00:31:20.970
+Mamy ostrzeżenie, ponieważ reguła mówi, że nie chcemy żadnych instrukcji konsolowych w naszym pliku javascript.
+
+00:31:21.160 --> 00:31:26.560
+Więc jeśli przejdę do indeksu, sugerujemy, że mamy instrukcję lock lock, która czasami w produkcji naprawdę
+
+00:31:26.560 --> 00:31:31.480
+nie chcesz, może nie chcesz wylogowywać się z błędów, które masz do użytkownika.
+
+00:31:31.480 --> 00:31:36.580
+Teraz dodałem tę regułę, która mówi: daj mi ostrzeżenie, jeśli masz konsolę.
+
+00:31:36.580 --> 00:31:39.590
+Bardzo fajny może również powodować błąd.
+
+00:31:39.820 --> 00:31:48.970
+A jeśli robię powietrze i rozpoczynam od nowa, pojawia się błąd przy korzystaniu z instrukcji blokowania konsoli.
+
+00:31:49.040 --> 00:31:49.580
+Bardzo fajny.
+
+00:31:49.580 --> 00:31:58.130
+Podobna funkcjonalność do tego, co mieliśmy i tworzymy, reaguje, ale teraz mamy również możliwość pożyczania nowych tak szóstek funkcji,
+
+00:31:58.220 --> 00:32:05.690
+teraz dodając własne reguły wiersz po linii jest nudne i jako programiści nie chcemy robić rzeczy, które
+
+00:32:05.690 --> 00:32:08.230
+już zostały zrobione przed .
+
+00:32:08.570 --> 00:32:12.980
+Na szczęście dla nas nie trzeba za każdym razem określać własnego zestawu reguł.
+
+00:32:12.980 --> 00:32:18.950
+Istnieje wiele zaleceń, a do tej pory używałeś już do ponownego użycia, aby zareagować
+
+00:32:18.950 --> 00:32:25.320
+na naprawdę dobry, który podoba mi się, ponieważ przewodnik po stylu Airbnb jest dostępny na otwartej przestrzeni.
+
+00:32:25.320 --> 00:32:30.890
+Jest to konfiguracja Eastlink i jest dość popularna, ponieważ wiele projektów wykorzystuje ją do wielu dużych
+
+00:32:30.890 --> 00:32:31.450
+projektów.
+
+00:32:31.490 --> 00:32:33.260
+Możemy go po prostu zainstalować.
+
+00:32:33.290 --> 00:32:43.760
+Więc znowu wracamy do naszej konsoli, ponieważ pobieramy wszystko, co możemy zrobić i PM zainstalujemy deskę
+
+00:32:43.760 --> 00:32:48.030
+rozdzielczą, zapisz Dev'a i chcemy zainstalować.
+
+00:32:48.030 --> 00:32:54.840
+Powiedzmy, że tak pożyczyliśmy config BMB i załóżmy, że chcemy jeszcze kilku
+
+00:32:58.600 --> 00:33:07.050
+funkcji, być może chcemy się upewnić, że przy tak Slint będą działały instrukcje importu i
+
+00:33:07.050 --> 00:33:08.820
+instrukcje eksportu.
+
+00:33:08.940 --> 00:33:20.130
+W takim przypadku powinniśmy zaimportować wtyczkę do importu i załóżmy, że chcemy również upewnić się, że mamy Lentini, aby mieć pewność, że
+
+00:33:20.390 --> 00:33:26.720
+kod jest dostępny pod kątem dostępności, ponieważ jest przeznaczony dla osób, które
+
+00:33:26.720 --> 00:33:33.290
+mają czytniki ekranu wyświetlające strony internetowe, dzięki czemu są dostępne dla wszystkich i
+
+00:33:33.290 --> 00:33:37.690
+możemy użyć wtyczki, która jest tak wtyk Slint
+
+00:33:40.050 --> 00:33:43.590
+w sojuszniku GSX i tak dalej.
+
+00:33:43.600 --> 00:33:53.250
+A więc dobrze pisać z mikrofonem przed tobą nie jest najlepszym pomysłem.
+
+00:33:53.300 --> 00:34:03.550
+Zrobiliśmy tutaj inny błąd i naprawmy to teraz, teraz widzisz tutaj wiele wtyczek i
+
+00:34:03.550 --> 00:34:04.450
+konfiguracji.
+
+00:34:04.450 --> 00:34:10.510
+I na szczęście dla nas istnieje wiele narzędzi i wiele dokumentacji, jak zrobić to
+
+00:34:10.510 --> 00:34:11.530
+najlepsze praktyki.
+
+00:34:11.710 --> 00:34:18.220
+Ale znowu to, co dzieje się pod maską, z kreacją Briac tap, wszyscy ci inteligentni programiści
+
+00:34:18.220 --> 00:34:23.440
+pracują dla ciebie, aby ustawić to w najlepszy możliwy sposób dla ciebie.
+
+00:34:23.440 --> 00:34:27.460
+W porządku, więc teraz, kiedy to mamy, dodajmy do tej pory tylko MBBS LenBana.
+
+00:34:27.460 --> 00:34:36.150
+Wiem, że zainstalowaliśmy jeszcze kilka rzeczy, ale na razie tylko pogląd FBM na nie możemy po prostu powiedzieć,
+
+00:34:38.860 --> 00:34:44.370
+rozszerza i rozszerza wszelkie zasady, które mamy z tablicy cokolwiek.
+
+00:34:44.530 --> 00:34:51.700
+Tak, liberałowie Pobraliśmy w naszym przypadku zasady oparte na Airbnb.
+
+00:34:51.710 --> 00:34:56.430
+Znowu jest to coś, o czym można przeczytać po pobraniu pakietu, do którego
+
+00:34:56.460 --> 00:35:00.840
+się udajemy, aby dostać się do Hobb i sprawdzić niewygodne BMB Eastlink.
+
+00:35:01.060 --> 00:35:02.790
+Uratowałem ten bieg.
+
+00:35:02.800 --> 00:35:03.880
+Rozpocznij NPM
+
+00:35:08.880 --> 00:35:14.630
+i widzisz, że ponieważ rozszerzyliśmy nasze zasady, mamy jeszcze kilka godzin.
+
+00:35:14.640 --> 00:35:21.720
+Mamy nieoczekiwane oświadczenie konsoli, które dodaliśmy, ale mamy również brakujące średnikowe powietrze i nową
+
+00:35:21.810 --> 00:35:24.670
+linię wymaganą na końcu pliku.
+
+00:35:25.050 --> 00:35:27.040
+Wróćmy do naszego indeksu.
+
+00:35:27.060 --> 00:35:34.230
+Jezus miał średnik i nową linię na końcu pliku, zapisz go i spójrz, że
+
+00:35:34.230 --> 00:35:40.890
+automatycznie aktualizuje tylko jeden błąd, który stworzyliśmy, który jest blokadą konsoli, ale wszystko
+
+00:35:40.890 --> 00:35:41.590
+działa.
+
+00:35:41.610 --> 00:35:43.730
+Zignoruj niektóre z tych rzeczy.
+
+00:35:43.960 --> 00:35:55.840
+Jeśli odświeżę, otrzymamy wszystko, ale otrzymamy błąd instrukcji blokowania konsoli, o którym mówiliśmy wcześniej.
+
+00:35:55.870 --> 00:35:56.880
+W porządku.
+
+00:35:57.220 --> 00:35:59.970
+Wróćmy do naszej konfiguracji pakietu internetowego.
+
+00:36:00.800 --> 00:36:02.210
+Czego się tutaj nauczyliśmy.
+
+00:36:02.210 --> 00:36:06.910
+Dowiedzieliśmy się, że powrót do internetu jest dość skomplikowany.
+
+00:36:07.100 --> 00:36:12.340
+Na szczęście mają naprawdę dobrą dokumentację online, którą można przeczytać.
+
+00:36:12.590 --> 00:36:14.930
+Ale główne zasady stoją.
+
+00:36:14.930 --> 00:36:24.010
+Wszystko, co robimy, to tworzenie kamerdynera, który bierze wszystkie nasze pliki w naszym indeksie sprawy.
+
+00:36:24.120 --> 00:36:29.850
+Tak, jeśli indeksowane RJ zawierało instrukcje importu, które prowadziły do innego pliku, który go zatwierdził i zobaczył, że
+
+00:36:29.850 --> 00:36:31.240
+prowadzi do innego pliku.
+
+00:36:31.400 --> 00:36:39.790
+Cóż, przeczytałoby to wszystko przez wpis, który daliśmy, przejdzie przez te moduły i sprawdzi, czy któryś z nich
+
+00:36:39.790 --> 00:36:45.450
+kończy się w J. S. lub rozszerzenie GSX.
+
+00:36:45.460 --> 00:36:49.100
+Poprowadzimy ich przez Babel, a potem również je połączymy.
+
+00:36:50.080 --> 00:36:58.990
+I na koniec zamierzamy umieścić to w folderze dystrybucyjnym, a dla VOLP lub celów możemy również
+
+00:36:58.990 --> 00:37:06.970
+uruchomić serwer działający tak, jak tutaj mieliśmy i stale sprawdza, czy nasza strona internetowa
+
+00:37:06.970 --> 00:37:08.200
+jest niestrzępiąca.
+
+00:37:08.200 --> 00:37:10.240
+Myślę, że na razie wystarczająco dużo mokrych pleców.
+
+00:37:10.390 --> 00:37:12.430
+Po tym wszystkim potrzebujemy przerwy.
+
+00:37:12.430 --> 00:37:13.960
+Mam nadzieję, że dobrze się bawiłeś.
+
+00:37:13.960 --> 00:37:19.050
+Myślę, że to chyba najtrudniejsza część kursu, którą naprawdę można dostać.
+
+00:37:19.090 --> 00:37:25.900
+Osobiście uważam, że taka konfiguracja w przyszłości będzie coraz mniej istotna, gdy społeczność będzie zmierzać w
+
+00:37:25.900 --> 00:37:30.670
+kierunku coraz mniejszej konfiguracji, ponieważ jak widać, jest dużo bólu
+
+00:37:30.670 --> 00:37:37.330
+głowy, a ty naprawdę kodujesz, tylko śledzisz dokumentację biblioteki który osobiście nie jestem największym fanem,
+
+00:37:37.330 --> 00:37:39.720
+ale to zależy od ciebie.
+
+00:37:39.720 --> 00:37:41.930
+To wciąż przydatne narzędzie.
+
+00:37:41.950 --> 00:37:47.900
+Wykorzystane przeze mnie rekomendacje tworzą ponownie aplikację, jeśli kiedykolwiek będziesz potrzebować dostosować swoje plecy.
+
+00:37:47.920 --> 00:37:55.410
+Możesz uruchomić uruchamianie NPM i utworzyć ponownie, aby uzyskać dostęp do tego pliku konfiguracji pakietu internetowego.
+
+00:37:55.540 --> 00:38:00.670
+Na razie potrzebuję przerwy i tak widzisz w następnym Buh-Bye.

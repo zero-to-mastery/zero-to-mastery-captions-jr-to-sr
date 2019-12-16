@@ -1,0 +1,253 @@
+﻿WEBVTT
+
+00:00:01.860 --> 00:00:12.810
+Początkowo strony internetowe wyświetlane w bardzo prosty sposób miały jedną stronę na rok teraz, jeśli witryna ma
+
+00:00:12.810 --> 00:00:19.830
+wiele stron, po prostu dodajesz kolejne podobne pliki HVM Alpha.
+
+00:00:19.830 --> 00:00:28.920
+Na przykład, gdybyś miał stronę główną i stronę, miałbyś domową Daut HMO i około 8 stron e-mail, a miałbyś znacznik
+
+00:00:29.790 --> 00:00:36.480
+zakotwiczenia lub ośmiu tagów i byłbyś shemale, który łączyłby te dwie strony razem.
+
+00:00:37.610 --> 00:00:46.850
+Oznacza to, że jeśli kliknąłeś na odnośnik o stronie głównej, to żądanie zostało wysłane do serwera,
+
+00:00:46.850 --> 00:00:55.400
+aby uzyskać informacje o shemale i wyświetlić je w przeglądarce, ale to była przeszłość.
+
+00:00:55.790 --> 00:01:01.030
+A teraz jest wiele sposobów na zrobienie czegoś takiego.
+
+00:01:01.120 --> 00:01:08.270
+W tej sekcji będziemy mówić o aplikacjach pojedynczej strony w porównaniu do aplikacji renderowanych po
+
+00:01:08.450 --> 00:01:09.730
+stronie serwera.
+
+00:01:10.740 --> 00:01:18.270
+Przyjrzyjmy się, jak wyglądały strony internetowe tutaj, mamy pierwszą stronę, która została
+
+00:01:18.270 --> 00:01:24.260
+stworzona przez Tima Bernersa-Lee podczas pracy w CERN.
+
+00:01:24.340 --> 00:01:30.010
+Jeśli spojrzysz na Albar, tutaj, gdy klikam na różne rzeczy.
+
+00:01:30.040 --> 00:01:32.880
+Nowy plik jest generowany i
+
+00:01:36.230 --> 00:01:41.910
+za każdym razem, gdy przełączam łącza, żądanie jest wysyłane do przeglądarki.
+
+00:01:42.200 --> 00:01:42.990
+Spójrzmy.
+
+00:01:45.690 --> 00:01:53.000
+Jeśli przejdę do zakładki mojej sieci i kliknę na to, co tam jest, dostaję nagą stronę żeńską
+
+00:01:53.010 --> 00:01:57.400
+inną stronę shemale, jeśli wrócę jeszcze raz i kolejne żądanie.
+
+00:02:00.390 --> 00:02:03.520
+I tak wszystko działało.
+
+00:02:03.550 --> 00:02:04.500
+Życie było dobre.
+
+00:02:04.540 --> 00:02:13.920
+Życie było łatwe, ponieważ była to tradycyjna metoda przenoszenia HMO na ekran przy użyciu
+
+00:02:14.220 --> 00:02:19.930
+renderowania po stronie serwera renderującego po stronie serwera.
+
+00:02:20.630 --> 00:02:27.850
+Ponieważ wszystko, co zrobiliśmy, po prostu wyrenderowaliśmy ASTM, wyślę to do klienta, którym jest ich przeglądarka internetowa, a
+
+00:02:27.850 --> 00:02:31.600
+przeglądarka utworzy Dom i wyrenderuje go na stronie.
+
+00:02:32.620 --> 00:02:34.840
+Renderowanie po stronie serwera działa świetnie.
+
+00:02:34.840 --> 00:02:44.050
+W tamtym czasie, ponieważ większość stron internetowych wyświetlała tylko statyczne obrazy i tekst, niewiele miało to
+
+00:02:44.050 --> 00:02:46.270
+wspólnego z interaktywnością.
+
+00:02:47.250 --> 00:02:55.740
+Gdy kliknę link tutaj, a żądanie trafi do serwera, żądanie zostanie zakończone, a twoja
+
+00:02:56.220 --> 00:03:03.460
+przeglądarka odzyska w pełni go, aby mógł wyświetlić go na ekranie.
+
+00:03:05.010 --> 00:03:10.740
+I tak jak wcześniej widziałeś, jeśli kliknę na inną stronę niż twoja przeglądarka, sprawi, że ten sam
+
+00:03:10.740 --> 00:03:12.090
+proces ponownie zażąda.
+
+00:03:12.240 --> 00:03:18.420
+Serwer zawsze przetworzy żądanie odesłania w pełni renderowanego Jimoh, a następnie przeglądarka odczyta to
+
+00:03:18.420 --> 00:03:19.830
+ASTM Alpha.
+
+00:03:20.160 --> 00:03:27.960
+I to się dzieje za każdym razem, gdy odwiedzasz stronę, nie ma nawet znaczenia, czy jedna z tych stron jest
+
+00:03:27.960 --> 00:03:34.930
+bardzo podobna do drugiej i być może nie potrzebujemy tego tytułu do ponownego odczytania, co nie ma
+
+00:03:34.930 --> 00:03:35.460
+znaczenia.
+
+00:03:35.500 --> 00:03:41.770
+Przeglądarka zawsze prosi o całą stronę i wyrenderuje wszystko na stronie.
+
+00:03:42.790 --> 00:03:44.570
+Więc wszystko było wtedy dobre.
+
+00:03:44.650 --> 00:03:51.220
+Ale poczekaj, aż CSSA i JavaScript pojawią się, a ludzie zaczną tworzyć swoje witryny, robiąc więcej
+
+00:03:51.220 --> 00:03:54.120
+rzeczy, niż tylko wyświetlać tekst i obrazy.
+
+00:03:54.400 --> 00:03:56.610
+CSSA dodał style i kolory.
+
+00:03:57.420 --> 00:04:01.200
+Ale javascript pojawił się i dodał o wiele więcej.
+
+00:04:01.740 --> 00:04:09.150
+Odtąd coś, co nazywa się aplikacjami na jednej stronie lub espies, stało się coraz bardziej popularne.
+
+00:04:09.240 --> 00:04:17.740
+Coś jak produkt na tej stronie, te aplikacje na jednej stronie będą miały po prostu
+
+00:04:17.740 --> 00:04:22.150
+jedną ACM Alpha, a reszta, taka jak
+
+00:04:25.670 --> 00:04:32.150
+nawigacja pomiędzy linkami lub nawigacja między stronami, odbywa się programowo w javascript.
+
+00:04:32.150 --> 00:04:36.620
+Nie musisz już wchodzić na serwer, aby za każdym razem żądać nowej strony.
+
+00:04:36.620 --> 00:04:38.980
+Brzmi całkiem nieźle.
+
+00:04:38.990 --> 00:04:46.160
+Mogę po prostu grać, a strona nie odświeża tylko części odświeżania strony, które są mi potrzebne, a
+
+00:04:46.160 --> 00:04:53.760
+wszystko jest miłe i szybkie, dlatego że aplikacje tej strony stały się coraz potężniejsze, ponieważ można twierdzić, że
+
+00:04:54.150 --> 00:05:00.360
+witryny te są obecnie o wiele bardziej przypominają aplikacje niż tylko witryny internetowe, które
+
+00:05:00.360 --> 00:05:01.360
+mieliśmy wtedy.
+
+00:05:02.660 --> 00:05:10.760
+Pomysł zastosowania jednej strony lub strony po stronie klienta, która jest aplikacją a aplikacją po stronie serwera,
+
+00:05:11.300 --> 00:05:19.670
+został spopularyzowany w javascriptu przez biblioteki takie jak kanciasty kręgosłup i reak, ponieważ unikałeś tego stałego żądania do
+
+00:05:19.670 --> 00:05:25.850
+serwera, aby zmienić strony i zaktualizować tylko części strona, której naprawdę potrzebujesz,
+
+00:05:25.850 --> 00:05:29.100
+a rzeczy wyglądały o wiele szybciej.
+
+00:05:29.180 --> 00:05:37.250
+Jak można zobaczyć tutaj, współczesne strony internetowe nie są proste, nowoczesne witryny internetowe mają setki linii
+
+00:05:37.250 --> 00:05:44.970
+kodu i są znacznie bardziej złożone, wyobrażając sobie, jak przeglądać stronę internetową i czekając na
+
+00:05:45.000 --> 00:05:52.140
+wyświetlanie każdej strony podczas nawigacji po witrynie, np. musielibyśmy z renderingiem po stronie serwera
+
+00:05:52.140 --> 00:05:54.810
+byłoby ogromnym bólem głowy.
+
+00:05:54.980 --> 00:05:59.930
+Przy okazji jest to doświadczenie, które można uzyskać ze starszymi witrynami WordPress, gdzie za każdym razem,
+
+00:05:59.930 --> 00:06:04.710
+gdy klikasz na stronę, czekasz, patrząc na pusty ekran, aby załadować tę nową stronę.
+
+00:06:05.960 --> 00:06:11.520
+Mają mnóstwo javascript, ale jest to strona internetowa renderowana po stronie serwera.
+
+00:06:11.620 --> 00:06:11.990
+W porządku.
+
+00:06:11.990 --> 00:06:19.040
+Tak więc renderowanie po stronie klienta jest sposobem przyszłych aplikacji pojedynczej strony, gdy odkładamy renderowanie po stronie serwera
+
+00:06:19.040 --> 00:06:19.960
+na zawsze.
+
+00:06:19.970 --> 00:06:21.020
+Skończyliśmy tutaj.
+
+00:06:21.020 --> 00:06:23.320
+Zaczekaj chwilkę.
+
+00:06:23.480 --> 00:06:29.990
+Powinniśmy już wiedzieć, że zbyt wiele niczego nie jest dla ciebie dobre.
+
+00:06:30.060 --> 00:06:36.850
+Widzisz, istnieją dwa główne problemy, jeśli chodzi o aplikacje z jedną stroną.
+
+00:06:36.870 --> 00:06:41.920
+Jednym z nich jest to, że więcej JavaScript jest wysyłane do klienta na wstępne żądanie.
+
+00:06:42.880 --> 00:06:48.850
+Ponownie mamy setki linii kodu, ponieważ javascript zajmuje się routingiem oraz stronami
+
+00:06:48.850 --> 00:06:57.530
+i widokami dla nas, więc wysyłanie javascript trwa dłużej, a następnie wykonanie stron staje się bardziej rozdętymi
+
+00:06:57.530 --> 00:07:00.120
+i wolniejszymi do załadowania.
+
+00:07:00.410 --> 00:07:08.900
+Z tego powodu drugim problemem jest wydajność SVO lub optymalizacja pod kątem wyszukiwarek.
+
+00:07:08.920 --> 00:07:16.060
+O wiele trudniej jest zrobić dobre SEO na jednej stronie niż aplikacji renderowanej po stronie serwera, a
+
+00:07:16.540 --> 00:07:18.270
+my to zrobimy.
+
+00:07:18.400 --> 00:07:23.820
+Porozmawiamy o wszystkich szczegółach między tym, co lubimy wywoływać renderowaniem po stronie
+
+00:07:24.040 --> 00:07:30.970
+klienta, czyli tym, jakie są aplikacje pojedynczej strony a aplikacjami po stronie serwera, z których każda
+
+00:07:30.970 --> 00:07:34.680
+ma swoje zalety i wady w tej sekcji.
+
+00:07:34.800 --> 00:07:41.280
+Będziemy w stanie zdecydować, kiedy musimy zrobić jedno nad drugim i dać Brunow właściwą decyzję,
+
+00:07:41.610 --> 00:07:44.700
+aby droga zaprzyjaźniła się z produktem.
+
+00:07:44.710 --> 00:07:49.570
+Będziemy także grać z naprawdę fajnymi bibliotekami renderującymi po stronie serwera.
+
+00:07:49.570 --> 00:07:50.960
+Czas zacząć.
+
+00:07:51.010 --> 00:07:51.780
+Do zobaczenia na miejscu.

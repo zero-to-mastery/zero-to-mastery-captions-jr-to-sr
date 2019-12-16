@@ -1,0 +1,94 @@
+﻿WEBVTT
+
+00:00:00.420 --> 00:00:01.980
+Witaj z powrotem.
+
+00:00:01.980 --> 00:00:09.530
+Naprawdę zapomnieliśmy przetestować jeden ostatni punkt i naprawić ostatni punkt, a to jest profil aktualizacji.
+
+00:00:09.900 --> 00:00:16.260
+Jeśli sprawdziłem, zmieniłem moją nazwę użytkownika na boo i zapisz wszystko działa.
+
+00:00:16.350 --> 00:00:27.310
+Jeśli pójdę na konsolę i wszystko działa lub działa, otrzymuję autoryzację i po stronie klienta otrzymuję aktualizację.
+
+00:00:27.320 --> 00:00:29.660
+Ale jeśli odświeżę rok 0.
+
+00:00:29.780 --> 00:00:32.270
+Mój profil się nie zmienił.
+
+00:00:32.270 --> 00:00:39.980
+A to dlatego, że zapomnieliśmy udzielić autoryzacji, ponieważ żądania pocztowe muszą przesłać nagłówek autoryzacji
+
+00:00:39.980 --> 00:00:50.440
+przez identyfikator profilu, więc z przodu musimy również przejść do naszego komponentu i przejść do naszego profilu oraz przycisku
+
+00:00:53.090 --> 00:00:58.700
+z informacją o aktualizacji profilu, którą musimy dodaj nagłówki.
+
+00:00:58.790 --> 00:01:05.330
+A więc chodźmy do naszego hopu, Doug A-S, skopiuj to, co już mamy.
+
+00:01:05.340 --> 00:01:09.760
+Przewińmy dalej, skopiujmy ten fragment kodu do nagłówków.
+
+00:01:11.270 --> 00:01:18.210
+Teraz, jeśli przejdziemy do profilu, możemy się upewnić, że aktualizacja profilu będzie miała nagłówki
+
+00:01:18.330 --> 00:01:20.350
+autoryzacji z sesji Windows.
+
+00:01:20.720 --> 00:01:31.340
+Zdobądź item tokin, a my chcemy się upewnić, że na podstawie odpowiedzi powiedzmy, że jeśli odpowiedź ma
+
+00:01:31.580 --> 00:01:46.410
+status 200, a także status punktu odpowiedzi wynoszący trzy lub cztery, oznacza to, że odpowiedź została buforowana przez przeglądarkę, a przeglądarka jest po prostu
+
+00:01:46.410 --> 00:01:49.600
+zwracanie wersji z pamięci podręcznej.
+
+00:01:49.620 --> 00:01:55.560
+Jeśli wszystko działa w tym przypadku, proszę.
+
+00:01:56.640 --> 00:01:57.480
+Wszystkie
+
+00:02:03.820 --> 00:02:09.290
+te rzeczy, więc załadujemy tylko użytkowników, jeśli rzeczywiście otrzymamy te informacje.
+
+00:02:09.340 --> 00:02:13.270
+A teraz, gdy wysyłamy autoryzację dokin ten punkt końcowy powinien działać.
+
+00:02:13.270 --> 00:02:19.750
+W porządku, przetestujmy to, oszczędzając wracając do naszego sklepu.
+
+00:02:19.770 --> 00:02:21.320
+Zróbmy to trochę mniejszym.
+
+00:02:21.360 --> 00:02:26.860
+Mam zamiar zaktualizować mój profil w końcu, aby zapisać kliknięcie.
+
+00:02:27.040 --> 00:02:28.140
+Wszystko się aktualizuje.
+
+00:02:28.140 --> 00:02:37.190
+Brak tutaj błędów, jeśli odświeżam boom twój obecny wpis wynosi 6 i zaktualizowaliśmy nasz profil.
+
+00:02:37.190 --> 00:02:37.990
+W porządku.
+
+00:02:38.150 --> 00:02:39.260
+Fajnie to zdobyć.
+
+00:02:39.260 --> 00:02:41.020
+To dobrze.
+
+00:02:41.090 --> 00:02:42.690
+Czas na kolejny film.
+
+00:02:42.950 --> 00:02:44.360
+Zobaczę w następnym.
+
+00:02:44.600 --> 00:02:44.900
+PA pa.

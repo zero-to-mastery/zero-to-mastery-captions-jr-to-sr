@@ -1,0 +1,172 @@
+﻿WEBVTT
+
+00:00:01.550 --> 00:00:02.770
+Witamy spowrotem.
+
+00:00:02.770 --> 00:00:10.360
+Użyjmy testów migawkowych, aby przetestować niektóre z tych prostych elementów prezentacji, które są całkowicie
+
+00:00:10.360 --> 00:00:11.290
+bezpaństwowcami.
+
+00:00:11.480 --> 00:00:13.190
+Więc zobaczyliśmy, jakie to łatwe.
+
+00:00:13.450 --> 00:00:16.020
+Więc pozwól mi zrobić to trochę mniej.
+
+00:00:17.220 --> 00:00:21.420
+Upewnij się, że test NPM został przeprowadzony w tle.
+
+00:00:25.770 --> 00:00:31.960
+Widzimy, że nasz test lub nasz komponent samochodowy jest obecnie testowany.
+
+00:00:32.070 --> 00:00:34.340
+Stwórzmy więc kolejny.
+
+00:00:35.570 --> 00:00:39.520
+Stwórzmy test dla składnika Carlist.
+
+00:00:39.660 --> 00:00:45.230
+Mam zamiar usunąć dziennik konsoli tutaj, ponieważ nie jest nam potrzebny i stwórzmy listę samochodów.
+
+00:00:45.320 --> 00:00:52.180
+Przetestuj listę kart plików, która testuje niestosowność. I znowu się to nie udaje, ponieważ musimy
+
+00:00:55.880 --> 00:00:59.720
+upewnić się, że mamy przynajmniej jeden test.
+
+00:01:00.770 --> 00:01:09.650
+Możemy rzeczywiście wrócić do karty, która nas przetestuje i po prostu skopiować i wkleić to przejść do komponentu Carlists
+
+00:01:09.650 --> 00:01:16.510
+skopiować i wkleić to, co mieliśmy i po prostu zmienić nasz składnik na cardless.
+
+00:01:16.540 --> 00:01:18.200
+Zróbmy to szybko.
+
+00:01:19.020 --> 00:01:28.870
+Możesz po prostu wybrać wszystkie listy kart sensei, pozwól mi zapisać, a my mamy jakiegoś Filchera.
+
+00:01:28.990 --> 00:01:37.880
+Zobaczmy, dlaczego widzimy, że dostaniemy błąd typu, nie każda mapa właściwości nieokreślonego, a to dlatego, że lista kart, którą widzisz
+
+00:01:38.240 --> 00:01:45.170
+Komponent karty to tylko renderowanie nazwy i adresu e-mail, ale nic z tym nie robi.
+
+00:01:45.170 --> 00:01:51.740
+Więc jeśli nie otrzymam nazwy w e-mailu, po prostu pokażę niezdefiniowaną kiedy przejdziemy do listy
+
+00:01:51.740 --> 00:01:56.170
+kart, widzimy, że faktycznie otrzymujemy roboty i musimy je zamapować.
+
+00:01:56.510 --> 00:02:01.190
+Ale w naszym teście wystawiamy kartę lub Musco na Carlist.
+
+00:02:01.190 --> 00:02:04.280
+Zamierzam to zamknąć, żebyście się nie pogubili.
+
+00:02:04.370 --> 00:02:06.390
+Nie przepuszczamy robotów.
+
+00:02:06.590 --> 00:02:16.050
+Więc w tym teście, kiedy spróbujemy wyrenderować Carlista, to się nie uda, ponieważ nie ma robotów do mapowania.
+
+00:02:16.230 --> 00:02:18.860
+Naprawmy to.
+
+00:02:18.930 --> 00:02:30.310
+Wszystko, co musimy tutaj zrobić, to po prostu kpić z naszych robotów, więc możemy powiedzieć, że roboty Konst lub roboty Legera mówią, że
+
+00:02:30.910 --> 00:02:35.590
+będzie to odpowiednik szeregu fałszywych danych, które możemy stworzyć.
+
+00:02:35.590 --> 00:02:47.740
+Powiedzmy, że będzie to identyfikator jednego z nich, a my będziemy mieli imię John Snow.
+
+00:02:50.510 --> 00:02:57.120
+Załóżmy, że nazwa użytkownika to John John.
+
+00:02:57.760 --> 00:02:59.500
+I powiedzmy, że e-mail.
+
+00:02:59.600 --> 00:03:03.270
+Nie sądzę, że używamy Twojej nazwy użytkownika, ale mimo to chciałem podać nazwę tego użytkownika.
+
+00:03:03.620 --> 00:03:08.520
+To będzie na stronie gmail dot com.
+
+00:03:08.530 --> 00:03:11.500
+Teraz możemy po prostu przekazać nasze
+
+00:03:15.060 --> 00:03:17.480
+symulowane roboty jako roboty.
+
+00:03:20.760 --> 00:03:21.940
+Zobaczmy więc, czy to działa.
+
+00:03:21.960 --> 00:03:24.080
+Uratuję.
+
+00:03:24.140 --> 00:03:24.880
+W porządku.
+
+00:03:24.950 --> 00:03:33.300
+I nasze testy mijają, a jeśli przejdziemy do naszej migawki, zobaczymy, że mamy także snapshot na liście
+
+00:03:33.360 --> 00:03:33.940
+kart.
+
+00:03:35.110 --> 00:03:35.590
+Dobre.
+
+00:03:35.590 --> 00:03:38.220
+Nasze testy nie powiodły się, ponieważ nie przejeżdżaliśmy przez roboty.
+
+00:03:38.230 --> 00:03:44.860
+I chociaż chcemy mieć pewność, że faktycznie przekazujemy te właściwości i możesz sobie wyobrazić,
+
+00:03:44.860 --> 00:03:52.900
+że prawdopodobnie możesz zrobić to samo z kartą, lub może mieć domyślne ustawienie w tym komponencie, jeśli nie
+
+00:03:52.900 --> 00:04:00.520
+otrzymasz nazwy e-maila i I. RE. że ma jakąś granicę błędu lub wyjście, które robi dla użytkownika.
+
+00:04:02.460 --> 00:04:12.150
+Teraz widzimy siłę testowania snapshotów, widzimy, jak możemy kpić z niektórych naszych właściwości i możesz chcieć po prostu wykonać testy
+
+00:04:12.450 --> 00:04:19.320
+migawkowe dla niektórych z tych innych przypadków, które są dość łatwe do zrobienia w
+
+00:04:19.320 --> 00:04:21.920
+celu zwiększenia zasięgu testowania.
+
+00:04:22.020 --> 00:04:24.190
+I zamierzam ci to zostawić, ponieważ.
+
+00:04:24.300 --> 00:04:27.400
+Cóż, aby dać ci trochę dodatkowej praktyki.
+
+00:04:27.600 --> 00:04:32.890
+Przejdźmy więc do następnego filmu, w którym robimy pewne rzeczy, które są trochę trudniejsze.
+
+00:04:33.120 --> 00:04:34.650
+Ale żeby sprawdzić.
+
+00:04:34.650 --> 00:04:38.790
+Zróbmy naszą relację, aby upewnić się, że nasz zasięg dla Carlist teraz wygląda dobrze.
+
+00:04:40.350 --> 00:04:44.020
+W porządku, uczyńmy to trochę większym i widzimy to.
+
+00:04:44.080 --> 00:04:45.550
+Tak, popatrz na to.
+
+00:04:45.550 --> 00:04:47.770
+Czujesz, że masz 100 procent, prawda?
+
+00:04:47.770 --> 00:04:50.190
+Komponent Carlists jest teraz dobrze przetestowany.
+
+00:04:51.270 --> 00:04:52.970
+Zobaczę w następnym.

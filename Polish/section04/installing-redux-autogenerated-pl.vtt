@@ -1,0 +1,202 @@
+﻿WEBVTT
+
+00:00:00.750 --> 00:00:05.650
+I witamy z powrotem, wiemy, jak działa aplikacja przyjaciół gruzów.
+
+00:00:05.660 --> 00:00:14.330
+Teraz z trzema aktami, które są świetne, ale Bruno poprosił nas o konkretną rzecz, której potrzebujemy, aby dodać redux
+
+00:00:14.330 --> 00:00:20.860
+do naszej aplikacji Robo Friends, aby mógł skalować się i lepiej zarządzać stanem.
+
+00:00:22.630 --> 00:00:28.960
+Teraz te kolejne filmy będą współpracować krok po kroku.
+
+00:00:28.990 --> 00:00:34.630
+Pokażę Wam, w jaki sposób redux jest zaimplementowany i jak działa i będziecie podążali za nim,
+
+00:00:35.170 --> 00:00:38.320
+starając się upewnić, że również twój kod działa.
+
+00:00:38.770 --> 00:00:42.120
+W porządku, więc zatrzymaj się teraz i skonfiguruj swoje środowisko.
+
+00:00:42.140 --> 00:00:46.470
+Mówiąc kod razem ze mną, wszystko gotowe.
+
+00:00:46.510 --> 00:00:46.940
+W porządku.
+
+00:00:46.960 --> 00:00:48.300
+I zaczniemy.
+
+00:00:48.370 --> 00:00:56.360
+Pierwszą rzeczą, którą mam zamiar zrobić, to sprawić, że zaprosiłem moich robotów, więc
+
+00:00:56.360 --> 00:01:06.650
+sklonuję tego Ribaulta, a zrobimy zwykłą konfigurację z klonem, a potem pójdę na CD do moich robotów. idealny.
+
+00:01:06.690 --> 00:01:09.510
+Otwórzmy to w edytorze tekstu
+
+00:01:14.630 --> 00:01:18.720
+i znów uwielbiam dołączać do nich, żeby wyglądało ładnie.
+
+00:01:19.470 --> 00:01:20.670
+I czysty.
+
+00:01:20.720 --> 00:01:21.250
+Idealny.
+
+00:01:22.670 --> 00:01:29.510
+Teraz oczywiście pierwszą rzeczą, którą musimy zrobić, gdy coś sklonujemy, jest instalacja, aby
+
+00:01:29.510 --> 00:01:32.710
+upewnić się, że mamy wszystkie pakiety.
+
+00:01:32.920 --> 00:01:38.970
+Chcemy również upewnić się, że wszystko działa sprawnie, bez żadnych błędów.
+
+00:01:39.190 --> 00:01:48.410
+Następnym krokiem będzie uruchomienie NPM start.
+
+00:01:48.460 --> 00:01:49.180
+W porządku.
+
+00:01:49.180 --> 00:01:49.690
+Idealny.
+
+00:01:49.690 --> 00:01:50.930
+Wszystko działa.
+
+00:01:51.040 --> 00:01:53.780
+I powinniśmy być w stanie filtrować.
+
+00:01:53.780 --> 00:01:56.420
+Idealny.
+
+00:01:56.430 --> 00:01:56.690
+W porządku.
+
+00:01:56.700 --> 00:01:59.790
+Więc znamy ten kod źródłowy.
+
+00:02:01.120 --> 00:02:09.990
+Reagujemy na nasze działania, ale to jest po prostu prosta re-akcja z kontenerami i komponentami.
+
+00:02:10.040 --> 00:02:19.690
+Pierwszą rzeczą, którą chcielibyśmy zrobić, to zainstalować redux, więc zamierzam zamknąć to i Iran
+
+00:02:20.480 --> 00:02:30.990
+MBM install redux pakiet redux daje nam kilka narzędzi w celu włączenia redox do naszego reaktora.
+
+00:02:32.220 --> 00:02:33.840
+Ale tu jest fajna część.
+
+00:02:33.840 --> 00:02:37.630
+Z pakietem redoks i dlaczego jestem tak wielkim fanem.
+
+00:02:38.690 --> 00:02:45.680
+To, że 90 procent twojego kodu nadal będzie miało JavaScript redux ma ci kilka
+
+00:02:46.070 --> 00:02:48.620
+pomocników, ale wciąż piszesz javascript.
+
+00:02:48.740 --> 00:02:52.280
+Wciąż poprawia twoje umiejętności javascript.
+
+00:02:52.280 --> 00:02:57.470
+Kiedy piszesz redux i uczysz naprawdę dobrych zasad, dlatego jestem
+
+00:02:57.530 --> 00:03:05.630
+tak wielkim fanem biblioteki, że nie zawsze potrzebujesz redux w swoich projektach, ale jest to po prostu dobre,
+
+00:03:05.960 --> 00:03:13.070
+dobre narzędzie do nauki, ponieważ ma tak świetne koncepcje, że będziesz używać w swojej karierze.
+
+00:03:13.220 --> 00:03:19.010
+Teraz druga rzecz, której potrzebujemy, i to jest coś podobnego w przypadku ponownego zapamiętania,
+
+00:03:19.010 --> 00:03:25.730
+pamiętajmy, jak zainstalowaliśmy pakiet re-act, a następnie potrzebowaliśmy czegoś, co nazywa się pakietem akademika re-act, aby
+
+00:03:25.730 --> 00:03:29.130
+połączyć reakcję z dongiem w podobny sposób.
+
+00:03:29.140 --> 00:03:38.770
+Musimy połączyć redux, aby zareagować, ponieważ redux teoretycznie może współpracować z dowolną inną biblioteką poprzez dodanie
+
+00:03:38.980 --> 00:03:40.240
+innego pakietu.
+
+00:03:40.300 --> 00:03:46.600
+Możemy ponownie pozwolić sobie na ponowne zapoznanie się z tym, że zamierzamy używać z tobą redoksu.
+
+00:03:46.600 --> 00:03:48.050
+To bardzo łatwe zadanie.
+
+00:03:48.070 --> 00:03:53.080
+Instalujemy tylko NPM, a pakiet nazywa się "re-act" i sposób,
+
+00:03:59.260 --> 00:04:06.570
+w jaki ten reduktor będzie działał, polega na tym, że będzie on łączyć tylko te kontenery.
+
+00:04:06.760 --> 00:04:14.410
+W tym przypadku APTA J. S. do tego, co nazywamy sklepem redux lub tym wielkim obiektem javascript, o którym
+
+00:04:14.410 --> 00:04:14.820
+mówimy.
+
+00:04:14.860 --> 00:04:21.110
+To opisuje stan nad i będą komunikować kontener będzie komunikował się ze
+
+00:04:21.200 --> 00:04:23.770
+sklepem i na odwrót.
+
+00:04:24.900 --> 00:04:31.410
+Teraz pozostałe komponenty, które nazywamy głupimi lub prezentacyjnymi składnikami.
+
+00:04:31.530 --> 00:04:34.250
+Wiedz, że redux istnieje.
+
+00:04:34.320 --> 00:04:41.010
+Jedyne połączenie będzie między czymś zwanym kontenerem lub inteligentnym komponentem a
+
+00:04:41.100 --> 00:04:42.650
+sklepem redux.
+
+00:04:42.660 --> 00:04:44.130
+Pokażę ci, co mam na myśli.
+
+00:04:45.280 --> 00:04:51.040
+Jeśli pamiętasz ten schemat, właśnie zainstalowaliśmy pakiet redux, o którym możesz myśleć, że
+
+00:04:51.040 --> 00:04:51.990
+jest tutaj.
+
+00:04:52.000 --> 00:04:58.300
+To czerwone pole, które pozwala nam stworzyć sklep i kilka innych funkcji pomocy.
+
+00:04:58.300 --> 00:05:10.310
+Pobraliśmy również reduktory re-act, które pozwalają nam połączyć te dwie części i reagować na redux można używać, aby powiedzieć, że
+
+00:05:10.310 --> 00:05:17.090
+chcemy, aby komponenty celo były świadome, że używamy redux i aby uzyskać
+
+00:05:17.090 --> 00:05:20.650
+ich stan z redux sklep.
+
+00:05:22.380 --> 00:05:28.020
+Pomyśl o tym schemacie, ponieważ pracujemy nad tym wszystkim, co robimy, to
+
+00:05:28.020 --> 00:05:30.710
+połączenie tych dwóch bibliotek razem.
+
+00:05:30.770 --> 00:05:37.630
+W porządku, więc teraz, kiedy mamy te dwa pakiety, możemy zacząć je importować i używać w
+
+00:05:37.630 --> 00:05:43.660
+naszym sklepie, ale to jest dla następnej pary filmów, które zobaczę w następnym.
+
+00:05:43.770 --> 00:05:44.010
+Buh-Bye.

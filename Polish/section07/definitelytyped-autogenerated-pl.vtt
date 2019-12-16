@@ -1,0 +1,184 @@
+﻿WEBVTT
+
+00:00:00.650 --> 00:00:02.030
+Witamy spowrotem.
+
+00:00:02.030 --> 00:00:09.350
+Chcę porozmawiać o jeszcze jednej rzeczy, zanim przejdziemy do naszego ćwiczenia, które jest bibliotekami stron
+
+00:00:09.350 --> 00:00:12.650
+trzecich i jak działają z maszynopisami.
+
+00:00:12.650 --> 00:00:17.730
+Chodzi mi o to, że do tej pory używaliśmy javascriptu, który rozumie maszynopis.
+
+00:00:17.870 --> 00:00:25.920
+Ale co, jeśli używamy czegoś takiego jak Jay Querrey lub reagujemy albo jakąkolwiek inną bibliotekę.
+
+00:00:25.980 --> 00:00:31.670
+Przez większość czasu używaliśmy składni, która nie jest tak naprawdę Javascriptem.
+
+00:00:31.700 --> 00:00:41.120
+Na przykład, zamierzamy użyć projektu skryptowego typu "zareaguj w górę", aby dodać skrypt typu
+
+00:00:41.120 --> 00:00:43.500
+do naszej reakcji.
+
+00:00:43.660 --> 00:00:45.510
+I to jest prawie standard.
+
+00:00:45.510 --> 00:00:51.730
+Nie chcesz się rozwijać, tak jak w przypadku repozytorium repo, które, jak widać, jest bardzo
+
+00:00:51.730 --> 00:00:52.550
+popularne.
+
+00:00:53.590 --> 00:01:00.240
+Ustawia wszystko dla Ciebie, w tym kompilator, w tym wszystkie konfiguracje.
+
+00:01:00.340 --> 00:01:07.930
+Problem polega jednak na tym, że kiedy zaczniemy od zwykłego maszynopisu, nie zrozumiemy,
+
+00:01:08.500 --> 00:01:11.440
+czym jest ponowne działanie.
+
+00:01:11.440 --> 00:01:16.730
+JF sex ma na myśli, że ten pakiet robi to za Ciebie, ale jak to działa.
+
+00:01:17.010 --> 00:01:22.750
+Cóż, maszynopis pozwala na użycie czegoś, co nazywa się plikami deklaracji,
+
+00:01:22.750 --> 00:01:32.660
+które są plikami, które pozwalają opisać kształt kodu, w którym został napisany, dzięki czemu można dodawać pliki, do których możemy
+
+00:01:32.660 --> 00:01:40.330
+się odwoływaćprzypisując maszynopis Hej Używam również tej biblioteki używam tych typów które właśnie nadrobiłem dla ciebie.
+
+00:01:40.370 --> 00:01:41.480
+Pozwól, że ci pokażę, co mam na myśli.
+
+00:01:41.520 --> 00:01:50.780
+Istnieje zdecydowanie wypunktowany system dot, który jest standardowym miejscem do wyszukiwania dowolnych typów bibliotek
+
+00:01:50.780 --> 00:01:51.470
+zewnętrznych.
+
+00:01:51.710 --> 00:01:59.840
+Tutaj możesz po prostu wpisać search i przejść do rzeczy typu "reaguj" i chwyć pakiet "re-act",
+
+00:01:59.840 --> 00:02:09.020
+a widzisz, że ma on typ "re-act", a to przy zmianie typu daje nam plik deklaracji, aby upewnić
+
+00:02:09.170 --> 00:02:13.410
+się, że nasz kompilator maszynopisów rozumie, że reaguje.
+
+00:02:13.490 --> 00:02:23.400
+Tak więc w projekcie tutaj, który właśnie sklonowałem, jeśli przejdę do folderu modułów węzłów, zobaczymy, że automatycznie mają
+
+00:02:23.400 --> 00:02:29.610
+one folder o nazwie, który jest wstępnie zainstalowany dla nas.
+
+00:02:29.610 --> 00:02:37.080
+Jeśli kliknę na to, widzę, że wszystko w porządku Mam właśnie węzeł, na który zareagowałem i reaguję.
+
+00:02:37.320 --> 00:02:44.500
+Wygląda na to, że jesteśmy w stanie zrozumieć składnię ponownego działania, taką jak GSX, ponieważ mamy takie typy.
+
+00:02:44.580 --> 00:02:53.580
+Jeśli kliknę na tatusiu indeksowym TS, który jest głównym plikiem, który mam tutaj, widzę, że mam na górze tę
+
+00:02:53.580 --> 00:02:57.280
+małą rzecz, którą mam wszystkie moje pliki.
+
+00:02:57.390 --> 00:03:01.410
+Co daje nam globalny dostęp do niektórych z tych typów.
+
+00:03:01.410 --> 00:03:05.610
+Oznacza to, że możemy ich użyć w dowolnym pliku, a widzisz tutaj i nie daj się przytłoczyć.
+
+00:03:05.610 --> 00:03:12.840
+To dużo, ale ponowne wprowadzenie daje nam typy, takie jak reagowanie, że mamy typ
+
+00:03:15.570 --> 00:03:21.120
+elementu reakcji, który postrzegamy jako interfejs, który ma właściwość rekwizytów.
+
+00:03:21.360 --> 00:03:32.570
+Możemy dalej przewijać i widzieć, że istnieje również reakcja typu dziecka, która reaguje nie i jest tona i nie chcę się tu
+
+00:03:32.600 --> 00:03:38.510
+przytłoczyć, ponieważ przez większość czasu naprawdę nie przeglądasz tych plików, których
+
+00:03:38.510 --> 00:03:44.540
+szukasz w Internecie z tego, co ludzie zrobili dokumentację i przykłady kodu.
+
+00:03:44.540 --> 00:03:51.950
+Prawdopodobnie wykorzystasz tylko kilka z tych regularnie występujących, ale zauważysz również, że mamy takie
+
+00:03:51.950 --> 00:04:00.770
+rzeczy jak wydarzenie na klawiaturze zdarzenia zdarzenia myszy, wszystkie te typy są teraz dostępne dla nas, gdy
+
+00:04:00.770 --> 00:04:03.690
+dołączymy maszynopis do naszego projektu.
+
+00:04:04.770 --> 00:04:15.140
+I ten plik został pobrany tak jak tutaj przez NPM przez zdecydowanie wpisaną stronę internetową.
+
+00:04:15.340 --> 00:04:21.640
+A to jest najbardziej popularne repozytorium dla tych deklaracji, ponieważ dla wielu bibliotek
+
+00:04:21.640 --> 00:04:25.660
+javascript nie dostarczają one własnych plików deklaracji.
+
+00:04:25.690 --> 00:04:32.520
+Są to pulsy deklaracji stworzonych przez społeczność, ponieważ większość tych bibliotek nie jest opracowywana
+
+00:04:32.520 --> 00:04:38.880
+za pomocą maszynopisu, które są napisane w javascript, ale szczęśliwie społeczność to utrzymuje
+
+00:04:38.880 --> 00:04:46.320
+i stara się nadążyć za bibliotekami i dostarczać pliki deklaracji dla nich i przy użyciu zdecydowanie
+
+00:04:46.320 --> 00:04:52.920
+wpisanych i pliki deklaracji, które otrzymujemy, jesteśmy w stanie korzystać z najbardziej popularnych bibliotek
+
+00:04:52.920 --> 00:05:00.180
+javascript, takich jak np. pisanie maszynopis w tym sensie, że faktycznie masz typ sprawdzania poprawności,
+
+00:05:00.180 --> 00:05:05.050
+który kompilator sprawdzałby w przypadku typów ponownego wprowadzania .
+
+00:05:05.070 --> 00:05:08.440
+Teraz sobie myślisz o chłopcze. Och, chłopcze.
+
+00:05:08.580 --> 00:05:12.920
+Dodajemy tutaj wiele komplikacji i zamierzam dać ci ostrzeżenie.
+
+00:05:12.960 --> 00:05:16.420
+To skomplikowany maszynopis naprawdę wiele dodaje.
+
+00:05:16.470 --> 00:05:23.780
+Teraz nie tylko musimy upewnić się, że mamy te pliki dla naszych bibliotek zewnętrznych.
+
+00:05:23.850 --> 00:05:28.390
+Musimy nauczyć się nowych typów, które zapewniają te biblioteki stron trzecich.
+
+00:05:28.440 --> 00:05:35.310
+Mamy również nadzieję, że te pliki deklaracji będą aktualizowane, a aktualny pakiet aktualizacji zostanie
+
+00:05:35.610 --> 00:05:36.620
+zaktualizowany.
+
+00:05:36.620 --> 00:05:42.760
+Znowu dodajemy więcej elementów do układanki, co nie zawsze jest dobre.
+
+00:05:44.810 --> 00:05:47.320
+Ale przejdźmy do następnej sekcji.
+
+00:05:47.450 --> 00:05:54.510
+Rozpoczniemy nasze ćwiczenie i zaczniemy pisać maszynopis w naszym ponawianiu.
+
+00:05:54.620 --> 00:05:56.050
+Zobaczę w następnym.
+
+00:05:56.250 --> 00:05:56.520
+Buh-Bye.

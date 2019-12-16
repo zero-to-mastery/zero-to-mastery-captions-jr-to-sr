@@ -1,0 +1,331 @@
+﻿WEBVTT
+
+00:00:01.440 --> 00:00:09.600
+Bine ați venit înapoi dacă vă aduceți aminte de discuțiile noastre despre testare am menționat că re-actul are aceste două caracteristici
+
+00:00:09.600 --> 00:00:13.450
+speciale pe care le vedeți adesea în testele lor.
+
+00:00:13.470 --> 00:00:20.790
+Una este biblioteca de enzime care ne permite să facem componentele noastre într-un mediu de testare pe care
+
+00:00:22.120 --> 00:00:30.810
+l-am văzut și apoi putem folosi orice fel de metode xpect pe care le dorim doar pentru a testa ceea ce se face.
+
+00:00:30.850 --> 00:00:35.070
+Dar există și un alt lucru numit testarea instantanee.
+
+00:00:35.230 --> 00:00:43.060
+Și din nou, aceasta este o unealtă cu adevărat bună, care vine cu acest lucru într-adevăr într-adevăr ne ajută să
+
+00:00:43.060 --> 00:00:44.760
+testați componentele noastre re-act.
+
+00:00:44.770 --> 00:00:50.160
+Hai să vorbim despre asta în acest videoclip dacă ne întoarcem la aplicația noastră.
+
+00:00:50.250 --> 00:00:52.970
+S-ar putea să te întrebi pe tine însuți.
+
+00:00:53.070 --> 00:00:53.560
+In regula.
+
+00:00:53.700 --> 00:01:01.980
+Pot continua să merg cu această componentă a mașinii și folosiți doar sintaxa obișnuită, pentru a vă asigura că componenta mașinii
+
+00:01:01.980 --> 00:01:10.010
+are tot ceea ce am nevoie, inclusiv poate o etichetă de imagine pentru o etichetă def nume și e-mailuri.
+
+00:01:10.260 --> 00:01:12.690
+Dar iată ce e.
+
+00:01:12.810 --> 00:01:20.450
+Am lucrat cu adevărat foarte greu pentru a păstra aceste componente ceea ce noi numim componente cele mai vechi.
+
+00:01:20.550 --> 00:01:25.940
+Nu folosesc sintaxa de clasă pentru a extinde componenta Riak.
+
+00:01:25.980 --> 00:01:27.540
+Nu au stat.
+
+00:01:27.540 --> 00:01:32.410
+Sunt doar funcții pure pe care le-am creat.
+
+00:01:32.430 --> 00:01:38.940
+Deci, dacă scriem teste, pariez că vom repeta mult cod aici.
+
+00:01:39.040 --> 00:01:44.960
+Întotdeauna vom încerca dacă tipul ăsta îl face pe acest dumnezeu să fie făcut.
+
+00:01:45.040 --> 00:01:54.000
+Și aceasta este o mulțime de lucruri repetate pentru un dezvoltator bine dau seama că aceasta ar fi o mulțime de timp
+
+00:01:54.450 --> 00:01:55.710
+redundant pierdut.
+
+00:01:55.860 --> 00:02:04.100
+Nu ar fi minunat dacă putem face un instantaneu cu privire la ceea ce face această componentă de coș
+
+00:02:04.110 --> 00:02:12.270
+Și oricând în timp ce ne îndreptăm componentele mașinii, orice lucru se schimbă și componenta nu arată așa
+
+00:02:12.270 --> 00:02:21.730
+cum ne-am așteptat ca pe instantaneu pe care l-am luat o imagine de bine dacă ar părea diferită atunci nu reușim testul.
+
+00:02:21.800 --> 00:02:24.280
+Aceasta este testarea instantanee.
+
+00:02:24.560 --> 00:02:25.750
+Și este foarte ușor.
+
+00:02:25.760 --> 00:02:28.490
+Lasă-mă să demonstrez și vei vedea cât de simplu este.
+
+00:02:28.730 --> 00:02:30.500
+Să ne întoarcem la testul nostru de mașină aici.
+
+00:02:31.750 --> 00:02:37.900
+În loc să facem o lungime egală cu una și multe alte teste, putem chiar aici.
+
+00:02:37.900 --> 00:02:39.550
+Să facem ceva diferit aici.
+
+00:02:39.580 --> 00:02:41.160
+Am de gând să scriu.
+
+00:02:41.160 --> 00:02:45.260
+Suntem în cartea noastră superficială și spune că nu folosim Rander aici.
+
+00:02:45.380 --> 00:02:53.060
+Doar pentru a elimina acest lucru din importurile noastre acum am prestate componenta de coș de gunoi.
+
+00:02:53.080 --> 00:02:57.520
+Putem folosi testarea instantanee
+
+00:02:59.930 --> 00:03:04.930
+pentru a spune să potrivească instantaneu.
+
+00:03:04.960 --> 00:03:06.030
+Asta e.
+
+00:03:06.150 --> 00:03:07.650
+Deci ce face asta?
+
+00:03:07.740 --> 00:03:09.040
+Hai să salvăm aici.
+
+00:03:10.470 --> 00:03:11.870
+Și vezi ce sa întâmplat.
+
+00:03:13.300 --> 00:03:21.280
+Avem un rezumat instantaneu care a apărut pe care scrie un instantaneu scris într-o singură suită de testare și
+
+00:03:21.280 --> 00:03:23.170
+vedem că a trecut.
+
+00:03:23.170 --> 00:03:24.060
+Asta e bine.
+
+00:03:24.610 --> 00:03:32.940
+Dar un lucru pe care l-ați observat este că acum avem un dosar cu un folder instantaneu care a apărut magic
+
+00:03:33.090 --> 00:03:35.150
+prin rularea acestei metode.
+
+00:03:35.670 --> 00:03:44.520
+Dacă deschid acest lucru, văd că tocmai am luat un instantaneu și puteți citi mai multe despre el aici.
+
+00:03:44.660 --> 00:03:52.510
+Dar arata ca un fisier text sau un fisier text simplu care are toate aceste lucruri.
+
+00:03:52.520 --> 00:03:57.740
+Vedeți obiectul învelitor de mică adâncime care are lenth 1.
+
+00:03:57.960 --> 00:04:03.900
+Are numele de clasă pe care îl avem în div.
+
+00:04:03.940 --> 00:04:15.000
+Dacă pășesc în jos, vedem că avem o mulțime de informații, cum ar fi tipul de div ..
+
+00:04:15.100 --> 00:04:17.720
+Avem, de asemenea, un tip de paragraf.
+
+00:04:17.720 --> 00:04:21.420
+Acum, ce înseamnă acest lucru.
+
+00:04:21.430 --> 00:04:30.580
+Acest lucru a facut o imagine a acestei componente atunci cand am superficial redat-o astfel incat acum sa pot pastra economisiti sa
+
+00:04:30.580 --> 00:04:37.420
+zicem ca lucrez la aplicatia mea care lucreaza pe componenta masina si pastrez economisirea continua
+
+00:04:37.420 --> 00:04:46.840
+sa salvez, dar eu decid sa scot aceasta clasa de clasa de calcul, care o să schimb asta și să o salvez acum.
+
+00:04:46.860 --> 00:04:58.610
+Testele mele eșuează și se spune că un test instantaneu a eșuat deoarece tocmai am schimbat ce se aștepta instantaneu.
+
+00:04:58.650 --> 00:05:01.770
+Componenta de masina pentru a face.
+
+00:05:01.770 --> 00:05:02.920
+Cat de tare e asta.
+
+00:05:03.060 --> 00:05:09.320
+Magic detectează orice schimbări și, dacă spunem că un dezvoltator intră și ne confruntă cu componenta
+
+00:05:09.750 --> 00:05:12.660
+noastră de cart, testele vor eșua imediat.
+
+00:05:12.810 --> 00:05:16.750
+Vom vedea că se așteaptă să citească componenta mașinii eșuează.
+
+00:05:18.810 --> 00:05:24.890
+Este foarte cool și chiar vă spune unde s-au făcut schimbările.
+
+00:05:25.110 --> 00:05:33.020
+Acest lucru este același cu să spunem că, din greșeală, nu facem componenta noastră e-mailul robotului.
+
+00:05:33.140 --> 00:05:36.570
+Dacă văd asta, vedem că ne lipsește.
+
+00:05:36.650 --> 00:05:37.310
+Dacă
+
+00:05:41.680 --> 00:05:42.770
+vă gândiți foarte bine.
+
+00:05:42.770 --> 00:05:45.820
+Acum, să ne întoarcem la primirea e-mailului aici.
+
+00:05:45.950 --> 00:05:46.560
+Să o salvăm.
+
+00:05:46.600 --> 00:05:46.840
+O.K.
+
+00:05:46.850 --> 00:05:53.610
+Totul trece, dar să spunem că bine de fapt nu vreau ca impozitul să fie centrat.
+
+00:05:53.650 --> 00:05:54.220
+Fac.
+
+00:05:54.220 --> 00:05:55.270
+Aceasta a fost intenționată.
+
+00:05:55.270 --> 00:05:59.550
+Am vrut să mut numele de clasă și să fac o schimbare.
+
+00:05:59.840 --> 00:06:07.230
+Ei bine, cu testarea instantanee dacă salvez acest lucru vedem că am apăsat pe w pentru a arăta mai mult.
+
+00:06:07.230 --> 00:06:16.860
+Voi conecta Pressey WG și aici vedem că avem opțiunea de a vă apăsa pentru a actualiza
+
+00:06:16.860 --> 00:06:18.240
+instantaneele nereușite.
+
+00:06:18.240 --> 00:06:24.590
+Dacă vă apăs aici, va lua un alt instantaneu și va spune că da, am făcut acest lucru intenționat să ia
+
+00:06:24.600 --> 00:06:27.730
+un alt instantaneu și să o folosesc ca referință.
+
+00:06:27.750 --> 00:06:31.480
+Deci o să-ți spun și tu te duci.
+
+00:06:31.530 --> 00:06:34.320
+Snapshot-ul meu este acum actualizat.
+
+00:06:35.250 --> 00:06:41.410
+Și dacă mă întorc la modul în care am avut-o înainte de a nu eșua, deoarece așteaptă un
+
+00:06:41.410 --> 00:06:42.220
+instantaneu diferit.
+
+00:06:42.220 --> 00:06:45.660
+Snapshot-ul a fost actualizat aici.
+
+00:06:47.020 --> 00:06:51.030
+Acum cât de simplu este asta.
+
+00:06:51.040 --> 00:06:52.660
+Este foarte frumos.
+
+00:06:52.700 --> 00:07:00.770
+Și, de altfel, pentru că am făcut această componentă a cardului atât de simplă, încât doar o funcție este o
+
+00:07:00.770 --> 00:07:07.740
+funcție pură care are nevoie de o intrare și produce întotdeauna aceeași ieșire utilizând doar testarea instantanee.
+
+00:07:07.970 --> 00:07:10.610
+Nu avem nevoie să mai testeze mai mult.
+
+00:07:10.820 --> 00:07:16.070
+Testează exact ce trebuie să facă, ceea ce înseamnă că componenta mașinii face tot
+
+00:07:16.100 --> 00:07:17.900
+ce-i spunem să facă.
+
+00:07:18.170 --> 00:07:23.950
+Și asta este frumusețea testării instantanee și crearea acestor mici componente fără stat.
+
+00:07:24.890 --> 00:07:33.050
+Putem avea teste cu adevarat placute, care sunt o linie pentru a rula doar un test instantaneu si doua pe care le-am acoperit destul
+
+00:07:33.050 --> 00:07:35.230
+de mult baza noastra pentru cart.
+
+00:07:36.960 --> 00:07:43.330
+Un lucru pe care nu l-am arătat și lăsați-mă să mă întorc la actualizarea imaginii noastre aici.
+
+00:07:43.380 --> 00:07:48.520
+Doriți să vă apăsați este acoperire de cod.
+
+00:07:48.640 --> 00:07:59.830
+De unde știm că fotografia de hărți sau imaginea care se potrivește este, de fapt, testarea completă a componentei mașinii.
+
+00:08:00.230 --> 00:08:11.570
+Ei bine, eu nu pot rula spargerea bordului de probă pentru bordul testului NPM și îmi va arăta un raport de acoperire și permiteți-mi să fac
+
+00:08:14.510 --> 00:08:20.640
+acest lucru un pic mai mare, astfel încât să putem vedea uita-te la asta.
+
+00:08:20.640 --> 00:08:27.740
+Avem teste absolut zero, altele decât testul de configurare.
+
+00:08:27.760 --> 00:08:32.020
+Doug Da, dar asta pentru că nu facem nimic în acel dosar.
+
+00:08:32.070 --> 00:08:33.700
+Deci, nu e prea mult de testat acolo.
+
+00:08:33.930 --> 00:08:39.390
+Dar dacă ne uităm la componenta cărucioare, deși toate celelalte componente au
+
+00:08:39.390 --> 00:08:47.440
+doar zero la sută zero procent acoperire de testare componenta de card acum are o acoperire 100 la sută cod.
+
+00:08:47.440 --> 00:08:48.850
+Cat de tare e asta.
+
+00:08:49.000 --> 00:08:54.920
+O linie simplă și ne-am acoperit bazele cu componenta cardului.
+
+00:08:54.990 --> 00:09:01.440
+Din nou, voi continua să spun asta în toate videoclipurile, dar scrierea de teste nu ar trebui să fie complicată.
+
+00:09:01.440 --> 00:09:08.010
+Încercați să vă structurați aplicația într-un mod care testele scrise sunt într-adevăr foarte simple și modul în care faceți acest
+
+00:09:08.010 --> 00:09:14.790
+lucru este scriind aceste funcții pure care păstrează lucrurile simple și nu aveți aceste funcții masive care fac o mulțime de
+
+00:09:14.970 --> 00:09:20.270
+lucruri care devin mai grele și mai greu de testat cu mai multe linii de cod.
+
+00:09:22.710 --> 00:09:24.590
+În regulă asta este pentru moment.
+
+00:09:24.870 --> 00:09:28.390
+Să continuăm să scriem mai multe teste și următorul videoclip.

@@ -1,0 +1,295 @@
+﻿WEBVTT
+
+00:00:00.720 --> 00:00:01.770
+Witamy spowrotem.
+
+00:00:01.770 --> 00:00:09.330
+Pracujmy nad funkcją aktualizacji profilu, co jest bardzo ważnym punktem, który chcemy chronić.
+
+00:00:09.330 --> 00:00:14.130
+Nie chcemy, aby ktokolwiek mógł aktualizować profil.
+
+00:00:14.460 --> 00:00:19.210
+I w końcu musimy trochę popracować.
+
+00:00:19.370 --> 00:00:21.420
+Teraz to, co chcemy tutaj zrobić.
+
+00:00:21.500 --> 00:00:23.630
+Zamierzam to zminimalizować.
+
+00:00:23.830 --> 00:00:37.910
+W naszych trasach i naszej ekspresowej aplikacji zostanie utworzony punkt dot aplikacji, który jest profilem z parametrem, którym
+
+00:00:37.910 --> 00:00:39.850
+jest Heidi.
+
+00:00:40.040 --> 00:00:49.350
+Będzie to miało odpowiedź na żądanie, która będzie miała to, co powinno.
+
+00:00:49.370 --> 00:01:00.720
+Chcemy, aby profil obsługiwał aktualizację profilu i przekazywaliśmy obiekt odpowiedzi na żądanie, jak również nasz obiekt D-B, abyśmy
+
+00:01:00.750 --> 00:01:08.360
+mogli połączyć się z bazą danych i faktycznie zaktualizować bazę danych użytkowników.
+
+00:01:08.370 --> 00:01:11.480
+Poproś o odpowiedź D. B,
+
+00:01:14.320 --> 00:01:24.630
+oszczędzajmy, zauważ, że zauważyliśmy zmianę w naszym pojemniku Daker, który jest bardzo miły.
+
+00:01:24.640 --> 00:01:32.110
+Teraz budujmy teraz aktualizację profilu uchwytu, abyśmy ponownie przejrzeli nasze kontrolery do
+
+00:01:32.140 --> 00:01:42.610
+profilu, a zamiast profili obsługi otrzymamy nową funkcję o nazwie aktualizacja profilu obsługi i będzie to prosta
+
+00:01:42.610 --> 00:01:51.910
+funkcja, którą ta prosta funkcja zaakceptuje poproś o odpowiedź i bazę danych, którą właśnie
+
+00:01:51.910 --> 00:01:53.100
+przekazaliśmy.
+
+00:01:53.320 --> 00:02:04.360
+I w tym miejscu pobieramy identyfikator z prośby dot.
+
+00:02:04.720 --> 00:02:08.550
+Pamiętaj, że to pole, które oferujemy.
+
+00:02:08.590 --> 00:02:15.920
+Więc może być profilowany 23 słabe plik jeden, jeśli jest to profil jeden złapie użytkownika, który mamy.
+
+00:02:16.270 --> 00:02:22.540
+A w dziale bezpieczeństwa omawialiśmy tę ideę zawsze nie ufających wejściom i co użytkownik wysyła.
+
+00:02:22.540 --> 00:02:28.060
+I możemy sprawdzić tutaj, aby upewnić się, że Purany istnieją, aby upewnić się, że wszystko, czego oczekujemy
+
+00:02:28.210 --> 00:02:30.100
+od strony klienta, jest poprawne.
+
+00:02:30.100 --> 00:02:33.670
+Ale na czas skupimy się tylko na aktualizacji profilu.
+
+00:02:33.700 --> 00:02:36.340
+W przeciwnym razie spędzimy zbyt długo.
+
+00:02:36.340 --> 00:02:37.750
+Oglądasz Yumiko.
+
+00:02:38.140 --> 00:02:38.650
+W porządku.
+
+00:02:38.650 --> 00:02:50.660
+Chcemy również pobrać nazwę wieku i obiekt dla zwierząt domowych, które wyślemy z prośby o podanie formy
+
+00:02:51.280 --> 00:02:52.300
+ciała.
+
+00:02:52.450 --> 00:02:58.480
+Teraz nie zrobiliśmy tego po stronie klienta, ale chcemy wysłać formularz i umieścić
+
+00:02:58.480 --> 00:03:01.820
+obiekt zawierający wiek nazwy i Pat.
+
+00:03:01.910 --> 00:03:09.730
+A teraz z naszym obiektem D-B możemy użyć Carnac po prostu powiedzieć, że chcę użytkowników D-B.
+
+00:03:09.830 --> 00:03:14.900
+I znowu, jeśli nie znasz K'NEX, możesz po prostu przejść do ich dokumentacji i jest to
+
+00:03:14.900 --> 00:03:15.590
+bardzo proste.
+
+00:03:15.590 --> 00:03:18.380
+To brzmi jak angielski, a zobaczysz, co mam na myśli teraz.
+
+00:03:18.710 --> 00:03:26.560
+Zamierzam powiedzieć, że zabieram użytkownika stabilnego tam, gdzie jest już
+
+00:03:30.080 --> 00:03:30.870
+identyfikator.
+
+00:03:30.920 --> 00:03:34.590
+Mogę to uprościć i zachować to w ten sposób.
+
+00:03:34.610 --> 00:03:41.970
+Tak więc, jeśli identyfikator pasuje do tego, co podaliśmy, w takim przypadku chcemy go zaktualizować.
+
+00:03:42.290 --> 00:03:50.130
+I na razie, ponieważ nie mamy kolumny wieku kolumna zwierząt domowych w naszej bazie danych, ale to będzie jedno
+
+00:03:50.130 --> 00:03:54.770
+z twoich ćwiczeń, będziemy tylko martwić się o aktualizację nazwy.
+
+00:03:54.790 --> 00:04:00.330
+Zamierzam ponownie podać nazwę aktualizacji Mogę tylko uprościć i nazwać,
+
+00:04:04.200 --> 00:04:08.280
+ponieważ jest to nazwa kolumny tabeli użytkowników.
+
+00:04:08.280 --> 00:04:14.810
+Wreszcie możemy zrobić kropkę, a gdy tylko otrzymamy odpowiedź, powiemy
+
+00:04:21.060 --> 00:04:21.870
+to.
+
+00:04:21.890 --> 00:04:24.360
+Ups, to nie jest to, co chcieliśmy zrobić.
+
+00:04:24.930 --> 00:04:27.160
+Powiemy, że chcemy.
+
+00:04:27.360 --> 00:04:32.080
+Cóż, jeśli istnieje jakaś odpowiedź i możemy zrobić tu trochę sprawdzenia.
+
+00:04:32.100 --> 00:04:38.260
+Ale jeśli istnieje odpowiedź z bazy danych, na co mamy ochotę, odpowiemy.
+
+00:04:38.850 --> 00:04:48.770
+Jason, powiedzmy, sukces, ponieważ pomyślnie zaktualizowaliśmy użytkownika.
+
+00:04:49.010 --> 00:05:03.420
+W przeciwnym razie po prostu odpowiemy statusem 400 i możemy po prostu powiedzieć Jasonowi przez godzinę.
+
+00:05:03.420 --> 00:05:10.410
+Nie znaleziono go lub powiedzmy, że nie można go zaktualizować
+
+00:05:13.540 --> 00:05:20.380
+i oczywiście obietnicę, że chcemy zrobić połowę, aby
+
+00:05:20.380 --> 00:05:37.860
+złapać jakiekolwiek błędy, a w naszym przypadku powiemy po prostu, że powietrze po prostu zareaguje 400 razy dziennie i odpowiedź błędu aktualizacji użytkownika.
+
+00:05:37.860 --> 00:05:39.660
+Dobra, oszczędzajmy tutaj.
+
+00:05:41.490 --> 00:05:42.780
+Sprawdź, czy dostaniemy jakieś błędy.
+
+00:05:42.780 --> 00:05:43.620
+Brak błędów.
+
+00:05:43.620 --> 00:05:44.910
+To zawsze dobry znak.
+
+00:05:44.910 --> 00:05:53.050
+Prześlijmy teraz aktualizację profilu tutaj, upewnij się, że eksportujemy.
+
+00:05:53.210 --> 00:05:56.650
+A teraz powinniśmy mieć to dostępne na naszym serwerze.
+
+00:05:57.090 --> 00:06:05.510
+JS teraz, aby przetestować to, aby wykonać żądanie postu, możemy zacząć pracę na stronie frontowej i wykonać polecenie Fettes
+
+00:06:05.510 --> 00:06:12.650
+lub możemy użyć czegoś takiego jak Postman i Listonosz to coś, czego użyliśmy wcześniej w moim
+
+00:06:12.650 --> 00:06:13.830
+poprzednim kursie.
+
+00:06:13.850 --> 00:06:21.600
+To absolutnie niesamowite, jeśli kiedykolwiek pracujesz z oczami API i budujesz własne, niezmiennie API.
+
+00:06:21.770 --> 00:06:27.890
+Musisz być, kiedy musisz korzystać z listonosza, jest absolutnie świetny, a zobaczysz, dlaczego teraz.
+
+00:06:28.220 --> 00:06:34.400
+Zamierzam wysłać prośbę o dodanie do localhosta i Olby'ego 3000.
+
+00:06:34.790 --> 00:06:43.010
+I będzie to profilować Heidi jednego, ponieważ mamy tylko jednego użytkownika w ciele.
+
+00:06:43.010 --> 00:06:48.590
+Chcemy powiedzieć, że to surowe Jaison, które wysyłamy.
+
+00:06:48.820 --> 00:06:55.370
+Będzie mieć formę i upewnić się, że to Jason.
+
+00:06:55.530 --> 00:06:57.200
+Załóżmy,
+
+00:07:00.050 --> 00:07:05.910
+że formularz i dane wejściowe formularza będą
+
+00:07:09.150 --> 00:07:15.660
+miały nazwę np. Strona Johnny z 54.
+
+00:07:15.840 --> 00:07:21.110
+I na koniec Pat to tylko
+
+00:07:24.460 --> 00:07:30.970
+powiedzieć, że pięć kliknięć tutaj wysłałem, że odniosłem sukces.
+
+00:07:30.970 --> 00:07:41.840
+Udało mi się wejść do ciała, dać mu trochę informacji i jeśli
+
+00:07:41.840 --> 00:07:49.210
+wrócimy, widzimy, że wszystko było w porządku.
+
+00:07:49.220 --> 00:07:50.830
+Oto zabawna część.
+
+00:07:50.840 --> 00:07:53.850
+Wróćmy do naszego i po prostu
+
+00:07:57.030 --> 00:07:59.370
+zaloguj się ponownie.
+
+00:07:59.550 --> 00:08:07.780
+Powiemy w dniu Toma Pastore'a i popatrzymy, że naszym użytkownikiem jest teraz Johnny.
+
+00:08:07.850 --> 00:08:13.680
+Udało nam się utworzyć funkcję aktualizacji profilu obsługi.
+
+00:08:13.810 --> 00:08:15.520
+To naprawdę niesamowite.
+
+00:08:16.230 --> 00:08:18.410
+I w kilku liniach kodu.
+
+00:08:18.440 --> 00:08:20.160
+Nie było tak źle.
+
+00:08:20.280 --> 00:08:30.480
+Po prostu utworzyliśmy prośbę o wysłanie postu, a ta prośba o wpis po prostu czeka na parametr nazwy ID wieku i Pat
+
+00:08:30.480 --> 00:08:36.510
+z formularza, który wprowadza cały obiekt, a następnie aktualizujemy bazę danych użytkowników.
+
+00:08:36.660 --> 00:08:44.310
+Dopóki identyfikator pasuje do tego, co podałeś, i aktualizuje w naszym przypadku tylko nazwę, która ma odnieść sukces lub
+
+00:08:44.310 --> 00:08:48.980
+nie może być aktualizowana w oparciu o to, co zrobiliśmy.
+
+00:08:49.100 --> 00:08:49.340
+W porządku.
+
+00:08:49.340 --> 00:08:51.260
+Nie tylko dlatego, że się nie myli.
+
+00:08:51.290 --> 00:08:58.680
+Wróćmy do listonosza i upewnijmy się, że zmieniamy imię Johnny'ego na słuszne, na wypadek, gdyby to był sukces.
+
+00:08:58.850 --> 00:09:06.010
+Jeśli odświeżę, będziemy musieli się zalogować.
+
+00:09:06.060 --> 00:09:08.230
+W porządku, wracamy do normalności.
+
+00:09:08.250 --> 00:09:09.420
+Wszystko w porządku.
+
+00:09:10.460 --> 00:09:14.520
+Mamy naszego użytkownika tak, jak potrzebujemy go wrogo.
+
+00:09:14.740 --> 00:09:19.960
+Teraz, gdy mamy aktualizację profilu uchwytu, zamierzamy połączyć ją
+
+00:09:20.230 --> 00:09:27.580
+ze stroną klienta, aby po zapisaniu na stronie naszego profilu działała dużo zabawy.
+
+00:09:27.720 --> 00:09:29.820
+Zobaczę w następnym wideo przez.

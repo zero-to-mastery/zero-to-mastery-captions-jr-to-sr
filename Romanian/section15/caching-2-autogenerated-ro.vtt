@@ -1,0 +1,292 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:07.220
+Prietenii nostri robo ne-au ratat, nu ne-am mai vazut prietenii nostri de mult timp, dar
+
+00:00:07.220 --> 00:00:13.010
+vreau sa demonstrez cateva lucruri de caching care se intampla in spatele scenei cu prietenii din cauciuc.
+
+00:00:13.130 --> 00:00:19.700
+Dacă deschid instrumentele pentru dezvoltatori, amintiți-mi cum am spus că partea clientului sau browserul are o tona de mecanisme de caching
+
+00:00:19.730 --> 00:00:24.930
+pentru a vă asigura că aplicația noastră de prieteni robo este cât mai rapidă posibil.
+
+00:00:26.370 --> 00:00:29.620
+Ei bine, dacă vă reîmprospătesc.
+
+00:00:29.860 --> 00:00:37.090
+Obțineți toate aceste solicitări, dar verificați fila de mărime pentru a face acest lucru un pic mai mare.
+
+00:00:37.930 --> 00:00:46.830
+Vedem că se spune că fișierul nostru HMO conține fișierul nostru CSSA, iar fișierul javascript a fost de la serviciul de serviciu.
+
+00:00:46.860 --> 00:00:53.390
+Nu există nicio mărime asociată cu aceasta deoarece acesta este stocat în cache de către lucrătorul de serviciu.
+
+00:00:53.440 --> 00:01:01.630
+Amintiți-vă cum funcționarul de serviciu este ceva care ne permite să interceptați cererile SCDP și acesta va verifica memoria cache și
+
+00:01:01.630 --> 00:01:06.850
+va spune că are deja deja acest lucru am deja CSSA am deja
+
+00:01:07.120 --> 00:01:11.570
+javascript și tocmai l-am întors fără a lovi efectiv serverul.
+
+00:01:12.480 --> 00:01:14.400
+Ei bine, da, asta este bine.
+
+00:01:14.460 --> 00:01:22.250
+Dacă ne întoarcem la fila aplicației vedem că da avem o memorie cache furnizată de browser.
+
+00:01:22.440 --> 00:01:28.890
+Depozitul de bani la rece și aici uita-te la faptul că am toate aceste fișiere pe care le-am cachezat, inclusiv fontul meu javascript mea toamna mea
+
+00:01:29.220 --> 00:01:31.970
+CSSA meu H. T. Poștă.
+
+00:01:32.160 --> 00:01:35.390
+Toate acestea sunt stocate în memoria cache salvate în browser.
+
+00:01:36.260 --> 00:01:42.500
+Și avem, de asemenea, ceva numit cache de aplicații, care este o formă mai veche de povesti de cache pe care mulți
+
+00:01:42.500 --> 00:01:43.970
+nu o mai folosesc.
+
+00:01:44.150 --> 00:01:51.230
+Dar vedeți că avem această abilitate în browser pentru a ne aminti de lucruri, dar nu este doar acest raid.
+
+00:01:51.430 --> 00:01:57.430
+Avem, de asemenea, lucruri cum ar fi spațiul de stocare pe care am vorbit despre unde pot să dețin informații
+
+00:01:57.430 --> 00:02:03.280
+cum ar fi informații de valoare cheie, cum ar fi deținerea jetoanelor, dar el poate face câteva lucruri interesante
+
+00:02:03.490 --> 00:02:10.300
+aici unde dețineți probabil obiecte și alte informații care ar putea fi utile pentru ca aplicația dvs. să-și amintească fără a trebui să
+
+00:02:10.300 --> 00:02:13.420
+se întoarcă la server sau să facă acele solicitări.
+
+00:02:13.420 --> 00:02:15.490
+Și din nou pentru depozitarea locală.
+
+00:02:15.490 --> 00:02:23.050
+Și puteți chiar să folosiți lucruri cum ar fi IDB-ul indexat sau indexul D-B, care este folosit foarte mult în
+
+00:02:23.770 --> 00:02:31.030
+aplicațiile mobile, unde aveți o mică bază de date mini în browser pentru a vă asigura că nu călătoriți
+
+00:02:31.270 --> 00:02:34.770
+în a face cereri prin fire pe distanțe lungi.
+
+00:02:36.290 --> 00:02:43.220
+Acum, dacă ne întoarcem la fila Rețea De asemenea, vedem că dacă scot în jos o jumătate din cache-ul de memorie în care a
+
+00:02:43.280 --> 00:02:49.460
+fost accesat pentru că această reîmprospătare sa întâmplat în timp ce am vizitat deja acest site înainte și își amintește și
+
+00:02:50.210 --> 00:02:52.700
+vedeți că asta e tot din memorie .
+
+00:02:52.700 --> 00:02:54.260
+Deci este extrem de rapid.
+
+00:02:54.260 --> 00:03:01.400
+Și apoi dispun de asemenea și știm totul despre acestea știm despre memoria pe care o cunoaștem despre disc și am învățat
+
+00:03:01.460 --> 00:03:03.800
+și despre lucrătorii din domeniul serviciilor.
+
+00:03:03.800 --> 00:03:12.350
+Și dacă reîncărcați din nou, am toate aceste lucruri încorporate în continuare dacă fac o reîmprospătare tare, așa că eu
+
+00:03:12.350 --> 00:03:17.740
+spun bine că vreau să gol gheață și greu să reîncărcați.
+
+00:03:17.740 --> 00:03:18.520
+Acolo te duci.
+
+00:03:18.610 --> 00:03:20.970
+Site-ul Web a luat ceva mai mult timp să se încarce.
+
+00:03:21.070 --> 00:03:21.940
+Și noi vedem asta.
+
+00:03:21.970 --> 00:03:22.290
+Da.
+
+00:03:22.300 --> 00:03:29.200
+De fapt, am cerut ca toate aceste lucruri să fie încărcate din nou, cu excepția câtorva lucruri pe care le-am
+
+00:03:29.200 --> 00:03:34.030
+rulat în fundal, care este doar plug-in-urile pe care le am, ci toate
+
+00:03:34.360 --> 00:03:40.630
+materialele de pe site-ul Web, unde sunt solicitate de la Bakken sau serviciu avem cinci reîmprospătare din nou.
+
+00:03:40.780 --> 00:03:42.220
+Din nou mult mai repede.
+
+00:03:42.220 --> 00:03:44.560
+Totul este stocat în cache acum.
+
+00:03:44.770 --> 00:03:50.770
+Știm deja cum să facem acest lucru, dar cum să plătim aceste lucruri.
+
+00:03:51.850 --> 00:03:53.270
+Noi suntem manuali.
+
+00:03:53.430 --> 00:03:59.100
+Mă simt ca acest lucru este făcut de browser în mod automat și da browsere sunt configurate pentru a face acest
+
+00:03:59.100 --> 00:04:02.130
+lucru în mod automat pentru noi, dar nu putem controla.
+
+00:04:02.130 --> 00:04:05.710
+Și în următorul videoclip îți voi arăta cum să faci asta.
+
+00:04:05.850 --> 00:04:12.750
+Dar inainte de a face acest lucru s-ar putea sa te intrebi acolo este o problema aici, daca un
+
+00:04:13.530 --> 00:04:21.000
+designer sau echipa mea decide sa schimbe acest fisier CSSA si sa spunem sa spunem robotii de fundal in rosu in
+
+00:04:22.240 --> 00:04:28.970
+loc de verde orice utilizator care ar redevine atunci bine nu ar vedea acel fundal roșu pentru că o
+
+00:04:29.170 --> 00:04:36.950
+utilizează pentru a obține că utilizează aceste informații din memoria cache și deoarece este din cache nu va ști că au fost
+
+00:04:36.950 --> 00:04:38.020
+făcute schimbările.
+
+00:04:38.060 --> 00:04:43.530
+Și în timp ce site-ul meu este complet diferit, în opinia mea, o versiune mai veche a site-ului Web.
+
+00:04:43.670 --> 00:04:45.630
+Cum facem acest lucru?
+
+00:04:45.860 --> 00:04:48.570
+Și aceasta este ceva numit Cash busting.
+
+00:04:48.830 --> 00:04:52.220
+Știu că este un nume destul de rece, dar este foarte simplu.
+
+00:04:52.280 --> 00:05:00.020
+Vedeți aceste numere aleatoare generate pentru noi pe care le aducem aminte când ne întoarcem la prieteni
+
+00:05:00.230 --> 00:05:10.550
+PWI de la robo atunci când facem NPM rulați construi ceea ce pachetul obține totul optimizat pentru producție combină toate fișierele CSSA toate
+
+00:05:10.550 --> 00:05:19.100
+fișierele javascript într-un capăt și două optimizate fișiere și vedem că totul este atât de zip despre care știm
+
+00:05:19.160 --> 00:05:20.070
+despre.
+
+00:05:20.120 --> 00:05:27.580
+Asta e minunat, dar vedem si ca este construirea unui nou SS principal si.
+
+00:05:28.900 --> 00:05:34.980
+Iar aceste numere sunt create de Crea reacționează tot ce le putem crea manual.
+
+00:05:34.990 --> 00:05:38.690
+Putem schimba doar fișierul cu nume.
+
+00:05:38.700 --> 00:05:39.980
+Iată ce e minunat.
+
+00:05:40.030 --> 00:05:42.430
+Dacă rulau NPM rulați din nou
+
+00:05:45.510 --> 00:05:50.760
+construi și am elibera aceste fișiere la producție, să zicem că le-am pus pe pagini fierbinți.
+
+00:05:50.760 --> 00:05:55.690
+Ei bine, vedeți că aceste numere sunt exact la fel ca înainte.
+
+00:05:56.070 --> 00:06:02.600
+Deci, utilizatorul va vedea o versiune în cache a phos-ului meu mai vechi, pentru că nu s-au schimbat.
+
+00:06:02.880 --> 00:06:04.400
+Dacă schimbăm ceva.
+
+00:06:04.590 --> 00:06:14.690
+Ce se întâmplă dacă voi deschide un text sublim și aici voi schimba tocmai să spunem CSSA și
+
+00:06:14.690 --> 00:06:22.150
+să indice că CSSA va avea un padding de 50 de pixeli.
+
+00:06:22.250 --> 00:06:30.620
+Am de gând să salvez du-te înapoi și rula NPM rula construi din nou.
+
+00:06:30.630 --> 00:06:31.470
+In regula.
+
+00:06:31.470 --> 00:06:37.320
+Vedem că pachetul web a creat Bondel-ul și vedem că este vorba de doi octeți mai
+
+00:06:37.410 --> 00:06:44.690
+mari, pentru că tocmai am adăugat câteva caractere suplimentare și fișierul javascript dacă mergem puțin când vedem exact același nume,
+
+00:06:45.300 --> 00:06:50.860
+dar fișierul nostru CSSA are acum un număr diferit de cel de mai sus.
+
+00:06:51.180 --> 00:06:57.270
+Și din nou bine ambalat face acest lucru automat pentru tine, dacă a fost deja o schimbare.
+
+00:06:57.480 --> 00:07:05.470
+Ei bine, în acest caz voi schimba acest număr, astfel încât data viitoare să mă întorc la prieteni de la Roble și să spun
+
+00:07:05.470 --> 00:07:13.060
+că am pus acest lucru în producție cu privire la modul în care paginile când am reîmprospătarea acestei pagini fișierul CSSA va avea
+
+00:07:13.060 --> 00:07:14.340
+un număr diferit.
+
+00:07:14.470 --> 00:07:18.140
+Și modul în care browserul cunoaște fișierul CSSA sa schimbat.
+
+00:07:18.160 --> 00:07:25.490
+Am de gând să iau cea mai recentă și asta este ceea ce bustul cache-ului este atâta timp cât numiți fișierele în mod diferit.
+
+00:07:25.930 --> 00:07:28.060
+O va apuca indiferent de ce.
+
+00:07:28.090 --> 00:07:30.970
+Fie că o are în numerar sau nu.
+
+00:07:30.970 --> 00:07:32.320
+Foarte foarte rece.
+
+00:07:32.350 --> 00:07:37.300
+Acum, chiar dacă nu aveți o aplicație de creare a re-actului, este ceva ușor pe care îl puteți implementa singur.
+
+00:07:37.300 --> 00:07:37.870
+Dreapta.
+
+00:07:38.170 --> 00:07:44.500
+Dacă un designer creează un nou stil CSSA cu fundal roșu, acesta poate doar să modifice manual acest
+
+00:07:44.500 --> 00:07:48.550
+număr în altul înainte de a putea salva versiunea 5.
+
+00:07:48.760 --> 00:07:53.710
+Și acum vă asigurați că toți utilizatorii dvs. vor avea cea mai recentă versiune.
+
+00:07:53.800 --> 00:07:58.720
+Ei vor lua cea mai recentă versiune și atunci când se vor reîmprospăta din nou, o vor folosi din
+
+00:07:58.720 --> 00:08:00.530
+cache, dar vor avea fundal roșu.
+
+00:08:00.950 --> 00:08:07.120
+Bine, în următorul videoclip, vom vorbi despre modul în care puteți implementa cache-ul dvs. fără a
+
+00:08:07.120 --> 00:08:12.120
+utiliza doar acest comportament implicit din aplicația Craig re-act și din browser.
+
+00:08:13.150 --> 00:08:14.080
+Ne vedem în următorul.

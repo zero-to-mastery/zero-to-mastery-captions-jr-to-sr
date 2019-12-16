@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:02.200 --> 00:00:06.710
+Pierwszy, o którym będziemy mówić, to symetryczne szyfrowanie.
+
+00:00:06.940 --> 00:00:15.850
+Przypominamy również, że szyfrowanie to sposób na ukrycie lub zasadniczo wymieszanie się, powiedzmy, fragmentu tekstu i zrobienie
+
+00:00:16.150 --> 00:00:24.460
+czegoś, co nie jest możliwe dla osoby trzeciej lub kogoś, kto mógłby czytać bez jakiejś
+
+00:00:24.460 --> 00:00:26.380
+metody jej odszyfrowania.
+
+00:00:26.410 --> 00:00:29.300
+To sposób na posiadanie tajemnic.
+
+00:00:30.960 --> 00:00:41.190
+Teraz szyfrowanie symetryczne wykorzystuje jeden tajny klucz do szyfrowania i odszyfrowywania przez obie strony.
+
+00:00:41.190 --> 00:00:42.130
+Pozwól, że ci pokażę, co mam na myśli.
+
+00:00:43.020 --> 00:00:51.780
+Jeśli chciałem wysłać cześć jako wiadomość do tego drugiego komputera, używając szyfrowania symetrycznego, mogę
+
+00:00:51.780 --> 00:00:58.530
+mieć klucz, który zamienia ten tekst powitalny w kawałek jibberish.
+
+00:00:58.920 --> 00:01:08.820
+I tak długo jak mój przyjaciel lub mój drugi komputer ma ten sam klucz, mogę go użyć do odszyfrowania go i przywitania
+
+00:01:09.410 --> 00:01:10.110
+się.
+
+00:01:10.470 --> 00:01:16.890
+A kto jest tutaj pośrodku, ktokolwiek tu jest, czytając nasze przesłanie, nie zrozumie
+
+00:01:16.890 --> 00:01:23.120
+tego, co do siebie mówimy, ponieważ oni nie mają tego klucza.
+
+00:01:23.150 --> 00:01:29.580
+Tak więc z symetrycznym szyfrowaniem każdy, kto posiada klucz, może odszyfrować przesyłaną wiadomość.
+
+00:01:30.360 --> 00:01:34.990
+A SSH komunikuje się za pośrednictwem tego wspólnego klucza.
+
+00:01:35.100 --> 00:01:38.640
+I właśnie w ten sposób jesteśmy w stanie rozmawiać ze sobą.
+
+00:01:38.660 --> 00:01:44.460
+Dzięki temu serwerowi można było rozmawiać z Digital Ocean. DOBRZE.
+
+00:01:44.630 --> 00:01:45.050
+Niesamowite.
+
+00:01:45.050 --> 00:01:51.910
+To ładnie wygląda, ale na czym polega problem, który tutaj zauważasz.
+
+00:01:51.960 --> 00:01:53.200
+Czy możesz wymyślić jakieś?
+
+00:01:53.580 --> 00:01:57.810
+Każdy, kto ma klucz, może odszyfrować wiadomość.
+
+00:01:57.810 --> 00:02:04.020
+Więc jeśli wysyłałem moje hasło do tego komputera zamiast po prostu cześć.
+
+00:02:04.020 --> 00:02:06.450
+Coś bardzo ważnego.
+
+00:02:07.480 --> 00:02:18.850
+Jeśli w jakiś sposób Mr. zły facet zdarza się znaleźć klucz lub też zna ten klucz, on lub
+
+00:02:19.680 --> 00:02:26.870
+ona może znaleźć moje hasło, że może odszyfrować tę wiadomość za pomocą tego samego klucza co my.
+
+00:02:27.010 --> 00:02:34.540
+Musimy więc zabezpieczyć ten klucz w bezpieczny sposób, aby inni nie mogli go używać, lub nie mogli dowiedzieć się,
+
+00:02:34.540 --> 00:02:35.940
+co to jest.
+
+00:02:36.070 --> 00:02:45.710
+A dzieje się tak dzięki tak zwanemu algorytmowi wymiany kluczy. Bezpieczny sposób na wymianę tych kluczy bez przechwytywania
+
+00:02:46.370 --> 00:02:48.810
+przez złych aktorów.
+
+00:02:49.810 --> 00:02:56.020
+A to, co czyni ten algorytm szczególnie bezpiecznym, to fakt, że klucz nigdy nie jest faktycznie przesyłany
+
+00:02:56.140 --> 00:02:57.870
+między klientem a hostem.
+
+00:02:57.880 --> 00:03:05.650
+Zamiast tego dwa komputery udostępniają publiczne pliki danych, a następnie manipulują nimi, aby niezależnie obliczyć tajny
+
+00:03:05.860 --> 00:03:06.670
+klucz.
+
+00:03:08.240 --> 00:03:14.840
+Więc nawet jeśli inna maszyna przechwytuje publicznie udostępniane dane, nie będzie w stanie obliczyć klucza, ponieważ
+
+00:03:15.350 --> 00:03:22.190
+dobrze ten algorytm wymiany kluczy, który na razie jest podobny do tego magicznego fioletowego pudełka, nie jest znany.
+
+00:03:23.170 --> 00:03:29.710
+Bez tego algorytmu wymiany kluczy nie będą w stanie dowiedzieć się, czym jest nasz żółty klucz i
+
+00:03:29.710 --> 00:03:36.100
+nie martw się, będziemy rozmawiać o tym w następnym filmie i jak to się robi.
+
+00:03:37.220 --> 00:03:46.790
+Należy jednak zauważyć, że tajny klucz jest specyficzny dla każdej sesji SSH i jest generowany przed czymś,
+
+00:03:47.120 --> 00:03:50.370
+co nazywa się uwierzytelnianiem Kline.
+
+00:03:50.390 --> 00:04:00.310
+Tak więc po wygenerowaniu klucza między tymi dwoma stronami wszystkie pakiety przechodzące między tymi dwoma komputerami muszą
+
+00:04:00.790 --> 00:04:09.210
+zostać zaszyfrowane za pomocą tego klucza. Używając szyfrowania symetrycznego jesteśmy w stanie komunikować się w sposób prywatny.
+
+00:04:09.210 --> 00:04:14.730
+Wygląda jednak na to, że musimy przeprowadzić jakąś kluczową wymianę tutaj, aw następnym filmie
+
+00:04:14.730 --> 00:04:17.920
+będziemy mówić o tym, jak to robimy.
+
+00:04:17.970 --> 00:04:19.280
+Zobaczę na tym.
+
+00:04:19.340 --> 00:04:19.590
+Buh.

@@ -1,0 +1,214 @@
+﻿WEBVTT
+
+00:00:00.770 --> 00:00:01.900
+Witamy spowrotem.
+
+00:00:02.060 --> 00:00:06.380
+Sprawy powoli zaczynają się układać i zaczynają działać.
+
+00:00:06.380 --> 00:00:07.790
+Czuje się dobrze, prawda?
+
+00:00:07.790 --> 00:00:14.510
+I stajemy się tak blisko, kiedy mamy ostatnią rzecz, którą chcemy wdrożyć na zapleczu, zanim wrócimy na
+
+00:00:14.510 --> 00:00:19.330
+front i zrobimy kilka rzeczy, takich jak naprawienie tego problemu z profilem.
+
+00:00:19.370 --> 00:00:28.070
+Teraz ten token jest wysyłany do nas, ale chcemy również upewnić się, że za każdym razem,
+
+00:00:28.090 --> 00:00:37.690
+gdy otrzymamy token od klienta, sprawdzimy go, ponieważ pamiętamy w naszej funkcji seinen napisaliśmy tę małą, głupią
+
+00:00:37.750 --> 00:00:45.100
+funkcję o nazwie Uzyskaj identyfikator tokena uwierzytelnienia, który po prostu robi konsolę.
+
+00:00:45.380 --> 00:00:53.090
+A jeśli wrócimy do naszej głównej funkcji, jaką jest uwierzytelnianie seinen, widzimy, że sprawdzamy, czy nagłówki żądań mają
+
+00:00:53.230 --> 00:01:01.210
+autoryzację, a jeśli już to zrobimy, możemy uruchomić polecenie get auto can ID, ponieważ nie chcemy, aby użytkownik
+
+00:01:01.210 --> 00:01:03.380
+się logował i koniec.
+
+00:01:03.640 --> 00:01:09.370
+W przeciwnym razie muszą przejść przez znak i krok, który już działa.
+
+00:01:09.370 --> 00:01:14.500
+Sprawdziliśmy i przechowujemy informacje tworzące sesję na serwerze rattusa
+
+00:01:14.860 --> 00:01:17.780
+i zwracając informacje o sesji.
+
+00:01:17.830 --> 00:01:22.440
+Zakończmy to, otrzymując identyfikator tokena.
+
+00:01:22.450 --> 00:01:30.760
+Teraz to nazewnictwo ma sens, kiedy chcemy to zrobić, to zdobyć token lub pobrać identyfikator z naszej
+
+00:01:30.760 --> 00:01:32.770
+bazy danych rattus.
+
+00:01:32.830 --> 00:01:42.030
+Pamiętaj, jeśli otrzymam token, który utworzyliśmy u naszego użytkownika. Chcę otrzymać identyfikator profilu jednego z nich,
+
+00:01:42.030 --> 00:01:48.840
+abyśmy mogli poprosić o podanie profilu i poprosić o jego przesłanie.
+
+00:01:48.840 --> 00:01:53.050
+Zapamiętaj na naszym serwerze Dutchie nam nasze punkty końcowe.
+
+00:01:53.050 --> 00:01:59.450
+Naszym celem jest podpisanie, które mówi po prostu, że jesteś seinen heres token.
+
+00:01:59.680 --> 00:02:07.180
+A kiedy otrzymamy token, wysyłamy żądanie, aby rzeczywiście uzyskać identyfikator profilu, a ponieważ
+
+00:02:07.360 --> 00:02:17.470
+to samo uwierzytelnienie zwraca token, a identyfikator pamięta, zwraca identyfikator i token, który może teraz uzyskać profil z identyfikatorem,
+
+00:02:17.830 --> 00:02:26.530
+który otrzymaliśmy i podanie pisma upoważniającego tokena, aby w późniejszym czasie, gdy zrobimy to jako chronione
+
+00:02:26.890 --> 00:02:33.730
+i wskazywać, że tylko ważny Autocad może uzyskać dostęp, upewniamy się, że
+
+00:02:34.450 --> 00:02:36.280
+to działa poprawnie.
+
+00:02:36.280 --> 00:02:37.760
+Zróbmy to.
+
+00:02:37.840 --> 00:02:43.880
+Przejdę do uwierzytelniania seinen i naprawię token ID.
+
+00:02:43.890 --> 00:02:47.010
+To będzie przyjemna prosta funkcja.
+
+00:02:47.010 --> 00:02:50.550
+Otrzymaliśmy po prostu wartość z naszej czerwonej bazy danych.
+
+00:02:52.340 --> 00:03:05.250
+Chcielibyśmy zezwolić na Konstytucję, ponieważ otrzymamy to z naszej prośby, a nie na czapkę.
+
+00:03:05.290 --> 00:03:08.590
+I znowu otrzymamy te obiekty.
+
+00:03:08.590 --> 00:03:16.090
+A więc w żetonie GET OFF I. RE. Zamierzam przekazać obiekt odpowiedzi żądania do tokena
+
+00:03:16.210 --> 00:03:20.930
+gueth, otrzymuję token I. RE. i tutaj powinniśmy mieć do nich dostęp.
+
+00:03:23.550 --> 00:03:28.450
+Teraz z naszym odświeżeniem jest to prosta metoda.
+
+00:03:28.530 --> 00:03:36.090
+Zamiast tego będziemy używać get, tak jak zrobiliśmy to w rattusie i wszystko,
+
+00:03:36.090 --> 00:03:44.820
+co musimy teraz zrobić, to dać klucz w naszym przypadku autoryzację tokin, a żądanie Gebe
+
+00:03:45.090 --> 00:03:51.650
+otrzyma funkcję zwrotną, gdy faktycznie otrzyma to z powietrzem na odpowiedź.
+
+00:03:52.050 --> 00:03:58.060
+Otrzymasz nyl lub aktualny numer identyfikacyjny.
+
+00:03:58.150 --> 00:04:00.560
+Stwórzmy więc tę funkcję zwrotną.
+
+00:04:00.640 --> 00:04:12.620
+A w ciągu tego weekendu szybko sprawdź, czy w przypadku błędu, czy też nie ma odpowiedzi.
+
+00:04:12.770 --> 00:04:15.350
+W takim przypadku możemy powiedzieć,
+
+00:04:20.600 --> 00:04:26.190
+że wrócimy i możemy wykonać ich odpowiedź tutaj, a następnie dodać psa.
+
+00:04:26.240 --> 00:04:31.160
+Ale tylko dlatego, że mamy już podpis na klamce i tylko po to,
+
+00:04:31.160 --> 00:04:38.200
+żeby nie dopuścić do tego bałaganu, chociaż lubię utrzymywać odpowiedzi w ramach tej funkcji, teraz dodajmy tu aktualną odpowiedź.
+
+00:04:38.210 --> 00:04:46.340
+Zamierzam powiedzieć, że odpowiedź zwrotna ma status 400,
+
+00:04:50.270 --> 00:04:58.450
+a to oznacza, że autoryzuje ładne dźwięki bardzo oficjalnie.
+
+00:04:58.580 --> 00:05:07.430
+Jeśli jednak wszystko dobrze się sprawdzi w tym przypadku, chcemy zwrócić odpowiedź Jasonowi z identyfikatorem, który jest
+
+00:05:08.050 --> 00:05:09.910
+odpowiedzią, którą otrzymujemy.
+
+00:05:09.940 --> 00:05:16.170
+Pamiętaj, że odpowiedź będzie ciągiem, który zostanie przypisany do ID.
+
+00:05:16.230 --> 00:05:24.870
+W ten sposób otrzymujemy nasz token I. RE. dostanie identyfikator tokena i zapamięta, ponieważ wracamy tutaj,
+
+00:05:24.870 --> 00:05:28.040
+chcemy się upewnić, że ta funkcja faktycznie zwraca również coś.
+
+00:05:28.170 --> 00:05:33.120
+W takim przypadku dodajemy tutaj klucz powrotu.
+
+00:05:33.180 --> 00:05:36.890
+Więc jeśli to zapiszemy, nie powinniśmy mieć żadnych błędów.
+
+00:05:36.900 --> 00:05:38.310
+Mamy błąd składni.
+
+00:05:38.550 --> 00:05:39.340
+Kłamałem.
+
+00:05:41.060 --> 00:05:45.710
+I tak, dlatego, że chcemy zwrócić tutaj przedmiot.
+
+00:05:45.890 --> 00:05:50.950
+Powiedzmy, że wszystko dobrze działa.
+
+00:05:50.980 --> 00:06:00.870
+Używamy identyfikatora tokena GET OFF, jeśli przewijam w dół, to powinno mieć sens, teraz jesteś zalogowany i zalogujesz się
+
+00:06:01.050 --> 00:06:09.780
+do logowania, a punkt zrobi jedną z dwóch rzeczy, jeśli użytkownik wyśle token autoryzacji, który zamierzamy
+
+00:06:09.780 --> 00:06:15.320
+po prostu pobierz identyfikator użytkownika i odeślij naszą odpowiedź.
+
+00:06:15.390 --> 00:06:24.410
+Zapamiętaj odpowiedź Jaison z identyfikatorem użytkownika, jeśli nie ma tokena autoryzacji, wtedy zajmiemy się logowaniem, sprawdźmy nasze hasła
+
+00:06:24.410 --> 00:06:31.700
+to krypta i baza danych, aby sprawdzić nasze hasła, jeśli wszystko dobrze się sprawdzi, a
+
+00:06:31.700 --> 00:06:37.130
+my mamy identyfikator i e -mail następnie utworzymy sesję i faktycznie
+
+00:06:37.130 --> 00:06:42.060
+przechowujemy tworzenie tokena ustawiającego token w naszej bazie danych.
+
+00:06:42.300 --> 00:06:45.450
+Jeśli to nie działa dobrze, po prostu odrzucamy z błędem.
+
+00:06:45.570 --> 00:06:53.810
+W przeciwnym razie zwrócimy sesję z sukcesem true, a identyfikator użytkownika i token jeszcze raz.
+
+00:06:53.820 --> 00:07:01.110
+Tak więc na końcu obu tych sytuacji użytkownik otrzymuje identyfikator i token.
+
+00:07:01.230 --> 00:07:06.750
+Tak więc w przyszłości i to, co zamierzamy zaimplementować w
+
+00:07:06.750 --> 00:07:12.380
+następnym filmie z przodu, możemy użyć żądania dot get, aby uzyskać profil.
+
+00:07:12.390 --> 00:07:14.790
+Z tym zobaczę w następnym wideo.

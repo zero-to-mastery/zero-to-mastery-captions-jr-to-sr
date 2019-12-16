@@ -1,0 +1,652 @@
+﻿WEBVTT
+
+00:00:00.760 --> 00:00:01.530
+Witamy spowrotem.
+
+00:00:01.840 --> 00:00:08.700
+Zacznijmy dodawać tę nową funkcję, która ma na celu wykrywanie wielu twarzy.
+
+00:00:08.800 --> 00:00:11.350
+Teraz, jak powinniśmy zacząć o tym.
+
+00:00:11.360 --> 00:00:15.320
+Pierwszą rzeczą, którą chcę zrobić, to po prostu przenieść sprawy.
+
+00:00:15.500 --> 00:00:20.310
+Załóżmy tutaj nasz Front-End.
+
+00:00:20.370 --> 00:00:23.230
+Więc nie będę tu ciągle wracał.
+
+00:00:23.670 --> 00:00:32.400
+Przede wszystkim zależy to od tego interfejsu API, aby wyjaśnić interfejs API, dzięki czemu mogę przejść do dokumentacji i
+
+00:00:32.400 --> 00:00:39.830
+zobaczyć, jaka odpowiedź uzyskujemy tam, gdzie mogę po prostu wylogować się z tego, co robi
+
+00:00:39.840 --> 00:00:44.020
+backend, kiedy wykryjemy i wyjaśnimy wysyła nam odpowiedź.
+
+00:00:44.100 --> 00:00:44.970
+Więc spójrzmy.
+
+00:00:46.700 --> 00:00:53.900
+Jeśli przejdę do tyłu do obrazu, widzę, że wyjaśniona odpowiedź znajduje się w danych.
+
+00:00:53.900 --> 00:01:01.090
+Po prostu anuluj logowanie tych danych i zobaczmy, jakie informacje otrzymujemy.
+
+00:01:01.130 --> 00:01:09.200
+Uratuję i jak powiedziałem, prawdopodobnie łatwiej będzie mi przejść do dokumentacji, aby zobaczyć, na
+
+00:01:09.410 --> 00:01:11.150
+co reagują.
+
+00:01:11.150 --> 00:01:16.370
+Ale myślę, że ta droga jest bardziej ogólna, więc uważam, że byłoby bardziej korzystne spojrzenie tutaj.
+
+00:01:16.370 --> 00:01:17.800
+Wróćmy więc.
+
+00:01:17.970 --> 00:01:22.830
+Wykryto, upewnij się, że nasze założenie jest poprawne i że zwracamy coś.
+
+00:01:22.970 --> 00:01:23.420
+W porządku.
+
+00:01:23.430 --> 00:01:25.480
+Wygląda na to, że dostaliśmy odpowiedź.
+
+00:01:26.790 --> 00:01:33.330
+Opis OK otrzymujemy identyfikator utworzony w danych wejściowych modelu.
+
+00:01:33.330 --> 00:01:37.820
+Właściwe dane mogą być czymś, co nas interesuje.
+
+00:01:37.950 --> 00:01:42.160
+A więc zacznijmy od rzeczywistości, zanim to zrobimy.
+
+00:01:42.270 --> 00:01:48.720
+Zobaczmy, ponieważ właśnie zwracamy dane tego samolotu, zobaczmy, co robi front z tymi
+
+00:01:48.720 --> 00:01:49.580
+informacjami.
+
+00:01:50.580 --> 00:01:59.740
+Więc na pierwszym planie, jeśli przyjrzymy się miejscu, w którym znajduje się obliczenie położenia twarzy.
+
+00:01:59.940 --> 00:02:02.430
+Widzimy, że otrzymujemy tu pewne dane.
+
+00:02:02.430 --> 00:02:03.620
+Zastanawiam się, czy to możliwe.
+
+00:02:03.660 --> 00:02:09.420
+Przejdźmy więc do obliczenia położenia twarzy znajdźmy to, gdzie tak naprawdę to nazywamy, a jednak
+
+00:02:09.420 --> 00:02:15.130
+widzimy, że istnieje odpowiedź, która pochodzi stąd, gdzie robimy obraz, że jesteś alkoholem.
+
+00:02:15.240 --> 00:02:19.440
+W porządku, więc myślę, że to może być odpowiedź z wyjaśnienia.
+
+00:02:19.710 --> 00:02:24.290
+Zobaczmy, co zwraca front.
+
+00:02:24.420 --> 00:02:27.270
+Zamierzam tu po
+
+00:02:31.040 --> 00:02:42.400
+prostu powiedzieć dialog konsoli i opisać odpowiedź, którą zamierzam zapisać, i muszę się zalogować, ponieważ
+
+00:02:44.460 --> 00:02:51.770
+właśnie odświeżyliśmy kropkę G-mail Hey seinen i skopiujmy i wklejmy.
+
+00:02:51.840 --> 00:02:53.620
+Muszę ponownie uzyskać obraz.
+
+00:02:58.010 --> 00:03:01.220
+Skopiuj i wklej wykryć i otwórz konsolę.
+
+00:03:04.620 --> 00:03:04.880
+W porządku.
+
+00:03:04.890 --> 00:03:10.700
+To jest odpowiedź, którą otrzymujemy z identyfikatorem.
+
+00:03:11.000 --> 00:03:16.820
+Zobaczmy, że otrzymujemy dane wejściowe danych wejściowych.
+
+00:03:16.880 --> 00:03:23.800
+Jest wiele rzeczy, które możemy prawdopodobnie przejść do ich dokumentacji i dowiedzieć się, czego potrzebujemy.
+
+00:03:24.870 --> 00:03:27.910
+Zobaczmy, czy uzyskamy zero.
+
+00:03:28.150 --> 00:03:28.370
+DOBRZE.
+
+00:03:28.380 --> 00:03:29.820
+Jest to dużo informacji.
+
+00:03:29.820 --> 00:03:32.500
+Zobaczmy, jak faktycznie używamy go na przednim końcu.
+
+00:03:33.030 --> 00:03:40.110
+Tak więc na pierwszym końcu, jeśli przejdę do wyświetlania skrzynki na twarzy, której używamy, lub
+
+00:03:40.110 --> 00:03:46.290
+obliczamy lokalizację twarzy, dlatego używamy danych, bo idę tutaj i widzę, że otrzymuję
+
+00:03:46.310 --> 00:03:49.830
+dane wyjściowe region obramowania regionu regionu.
+
+00:03:49.890 --> 00:03:51.300
+Skopiujmy to
+
+00:03:54.120 --> 00:03:58.010
+lub przejdźmy przez nasze dane wyjściowe danych Celso.
+
+00:03:58.020 --> 00:04:00.300
+Przejdźmy więc do
+
+00:04:07.310 --> 00:04:18.560
+danych wyjściowych, więc dane wyprowadzają zero regionów danych i jak ciekawie mamy tu tablicę dwóch, ale jeśli wrócimy do kodu,
+
+00:04:18.560 --> 00:04:26.920
+wygląda jak regiony, z których właśnie korzystamy, a my otrzymujemy informacje o regionie i
+
+00:04:26.920 --> 00:04:29.880
+obwiednia do obliczania położenia twarzy.
+
+00:04:29.890 --> 00:04:40.150
+Więc jeśli tu pojadę, widzę, że to jest górna linia graniczna, górny wiersz, lewa kolumna, dolny wiersz, prawa kolumna,
+
+00:04:40.480 --> 00:04:42.530
+a na drugim.
+
+00:04:42.570 --> 00:04:42.810
+W porządku.
+
+00:04:42.810 --> 00:04:43.800
+Mamy to samo.
+
+00:04:43.810 --> 00:04:44.040
+DOBRZE.
+
+00:04:44.050 --> 00:04:51.810
+To ciekawe, jeśli mamy tylko obraz z jedną osobą.
+
+00:04:51.810 --> 00:04:55.240
+Kliknijmy to jeszcze raz.
+
+00:04:55.250 --> 00:04:57.630
+Zawsze chcemy przetestować nasze założenia.
+
+00:04:57.630 --> 00:05:06.270
+Więc mam zamiar to skopiować i to jest piosenka u r l wykrywana przez hit.
+
+00:05:06.290 --> 00:05:08.920
+W porządku, otrzymujemy tutaj drugą odpowiedź.
+
+00:05:08.930 --> 00:05:17.060
+Znowu przetestujmy to na podstawie naszych założeń, więc jeśli pójdę na wszystkie lokalizacje danych euro, istnieje tylko jeden
+
+00:05:17.060 --> 00:05:20.260
+region, ponieważ jest tylko jedna twarz.
+
+00:05:20.270 --> 00:05:20.690
+W porządku.
+
+00:05:20.780 --> 00:05:29.430
+Więc bez kodowania czegokolwiek możemy założyć, że być może regiony dają nam informacje o twarzy.
+
+00:05:29.460 --> 00:05:35.280
+Znowu to nie jest nawet przeglądanie dokumentów lub API, do których się odwołuje, wyjaśnienie.
+
+00:05:35.380 --> 00:05:36.370
+Sprawdźmy to.
+
+00:05:36.910 --> 00:05:44.940
+Załóżmy może pętlę zamiast po prostu zwrócić jedną rzecz.
+
+00:05:44.950 --> 00:05:46.270
+Lub jeszcze lepiej.
+
+00:05:46.300 --> 00:05:49.540
+Zmieńmy ten region danych 1.
+
+00:05:49.600 --> 00:05:54.220
+Zobaczmy, czy tutaj i jeśli wrócę, muszę się ponownie zalogować.
+
+00:05:57.460 --> 00:06:01.840
+Zaloguj się i użyj obrazu, który mieliśmy tutaj.
+
+00:06:01.840 --> 00:06:02.890
+Pamiętasz ostatni
+
+00:06:05.930 --> 00:06:09.740
+raz, kiedy wykryliśmy tę twarz, ale nie tę.
+
+00:06:09.740 --> 00:06:15.680
+Więc znowu wracając do miejsca, w którym zmieniliśmy tę jedną linię, powiedzieliśmy, że chcemy, aby wykrywanie
+
+00:06:17.310 --> 00:06:24.650
+drugiej fazy wyglądało tak, że jego twarz jest teraz wykrywana, a nie jej, tylko poprzez zmianę tej liczby w tablicy.
+
+00:06:24.890 --> 00:06:29.710
+Tak więc zanim uruchomimy jakąkolwiek linię kodu, wiemy, gdzie możemy to naprawić.
+
+00:06:29.750 --> 00:06:31.770
+Ale po prostu testuję to.
+
+00:06:31.860 --> 00:06:40.840
+Wygląda więc na to, że musimy się nad tym zapętlić i zamiast zwracać
+
+00:06:40.840 --> 00:06:51.450
+obiekt, być może zwrócimy tablicę obiektów i kiedy wyświetlimy twarz lub pamiętamy, że mamy okienko wyświetlania.
+
+00:06:51.650 --> 00:07:01.270
+Powinniśmy powrócić, być może, do wielu obiektów, w których mogą być twarze, zacznijmy to robić teraz, co zwykle chcesz zrobić, to stworzyć
+
+00:07:01.270 --> 00:07:05.080
+nową gałąź, gdy zaczniesz pracować nad swoją funkcją.
+
+00:07:05.080 --> 00:07:11.560
+Teraz mają świetny pomysł, gdzie chcesz zacząć testować swój kod i założyć swój oddział i
+
+00:07:11.560 --> 00:07:15.490
+zacząć nad nim pracować, a także stopniowo wprowadzać zmiany.
+
+00:07:15.490 --> 00:07:22.890
+Ale na razie po prostu pominę ten proces, ponieważ chcemy skupić się tylko na stworzeniu tej nowej funkcji.
+
+00:07:22.960 --> 00:07:33.200
+Pierwszą rzeczą, którą chcemy zrobić, to zmapować to, zamiast mieć pierwszy element ankiety, ponieważ wiem, że jest to
+
+00:07:33.200 --> 00:07:42.250
+tablica, teraz mam zamiar powiedzieć mapę i wiem, że zwróci ona niektóre informacje o wykryciu twarzy
+
+00:07:42.250 --> 00:07:44.800
+w bezpiecznym miejscu. Twarz.
+
+00:07:44.860 --> 00:07:47.510
+I zacznijmy tutaj nową linię, abyśmy mogli lepiej to zobaczyć.
+
+00:07:49.350 --> 00:07:52.120
+Zamknij nawiasy.
+
+00:07:53.170 --> 00:07:59.350
+W porządku i mamy te informacje z każdej z twarzy, więc jeśli mam dwie twarze, będę mieć dwie
+
+00:07:59.350 --> 00:08:00.610
+pozycje w tablicy.
+
+00:08:02.550 --> 00:08:02.790
+DOBRZE.
+
+00:08:02.800 --> 00:08:11.110
+Tak więc mamy to teraz, ponieważ przejmujemy się tym i chcemy zwrócić obiekt za każdym razem, gdy możemy
+
+00:08:11.140 --> 00:08:14.170
+po prostu przenieść to wszystko tutaj.
+
+00:08:17.960 --> 00:08:24.530
+A pole informacji na temat regionu regionu twarzy jest teraz tym, czego oczekuje.
+
+00:08:24.560 --> 00:08:31.370
+Przypiszmy do tego zmienną, która jest klarowną twarzą, której używamy tutaj do zmierzenia miejsca, w którym powinniśmy
+
+00:08:31.370 --> 00:08:35.520
+wyświetlić niebieskie pole, w którym twarze są powodowane przez piosenki.
+
+00:08:35.810 --> 00:08:38.570
+Wyjaśnienie "twarzą w
+
+00:08:42.950 --> 00:08:49.910
+twarz" jest równe temu i zmień powyższą zmienną.
+
+00:08:49.910 --> 00:08:58.770
+Wyjaśnić twarz Ale faktycznie widzę, że skoro chcemy zwrócić te wyjaśnienia twarze, które
+
+00:08:58.770 --> 00:09:02.130
+będzie tablicą tych obiektów.
+
+00:09:02.310 --> 00:09:06.430
+Równie dobrze mogę to po prostu powiedzieć i powiedzieć "wróć".
+
+00:09:06.540 --> 00:09:17.050
+Więc obliczmy położenie twarzy, którą możemy nazwać, aby zestawiać twarze lub lokalizacje twarzy i zmieniać to wszędzie, gdzie
+
+00:09:17.050 --> 00:09:18.520
+to widzimy.
+
+00:09:18.520 --> 00:09:22.980
+Powiedzmy, gdzie indziej mamy to.
+
+00:09:23.020 --> 00:09:26.730
+Tak więc tylko te dwa miejsca zamierzam zmienić to, aby stawić czoła lokalizacjom.
+
+00:09:27.700 --> 00:09:29.860
+Chcesz zapisać teraz.
+
+00:09:31.990 --> 00:09:35.170
+Następną częścią jest wyświetlenie Facebooka, więc mamy.
+
+00:09:35.290 --> 00:09:38.620
+Zwracamy teraz tablicę tych obiektów.
+
+00:09:38.770 --> 00:09:46.450
+Jeśli przejdziemy do wyświetlania skrzynki na twarzy, która jest naprawdę zabawną nazwą zmiennej, podczas gdy wyświetla ona okienko twarzy, widzimy, że
+
+00:09:46.450 --> 00:09:47.410
+to ustawienie.
+
+00:09:47.410 --> 00:09:51.970
+Rozdzielamy pole na równe pole.
+
+00:09:51.990 --> 00:09:57.790
+W porządku, ale to oczekuje obiektu i teraz zwracamy tablicę.
+
+00:09:59.270 --> 00:10:00.740
+Zmieńmy to.
+
+00:10:00.740 --> 00:10:02.390
+Mamy teraz pudła.
+
+00:10:02.720 --> 00:10:05.610
+I to powinny być pudełka.
+
+00:10:05.750 --> 00:10:14.720
+Aby zachować standardowe nazwy, powinniśmy zmienić nazwę naszego stanu na pola i Ophir, gdzie ponownie
+
+00:10:14.720 --> 00:10:18.650
+mamy wstępne zmiany stanu na pola.
+
+00:10:18.830 --> 00:10:21.950
+Teraz zwracamy tablicę zamiast obiektu.
+
+00:10:21.950 --> 00:10:25.590
+Zmieńmy to na tablicę.
+
+00:10:26.620 --> 00:10:28.680
+W porządku, pozwól mi zapisać, czy dostaniemy jakieś błędy.
+
+00:10:28.680 --> 00:10:29.680
+Jeszcze nic.
+
+00:10:30.600 --> 00:10:33.390
+Gdzie używamy tych skrzynek.
+
+00:10:33.390 --> 00:10:35.730
+Chcemy mieć pewność, że te nazwy również będą w stanie to zrobić.
+
+00:10:35.730 --> 00:10:39.190
+Więc szukajmy tutaj wzmianki o pudełkach.
+
+00:10:39.210 --> 00:10:44.050
+Mamy obwiednię, która wyjaśnia, że to świetna powierzchnia wystawowa.
+
+00:10:44.310 --> 00:10:47.170
+Być może możemy zmienić nazwę na skrzynki.
+
+00:10:47.610 --> 00:10:57.440
+Pozwól mi zamknąć te ramki na twarz i użyj go tutaj i zaktualizuj to również.
+
+00:10:57.440 --> 00:11:00.090
+Gdzie jeszcze wspominamy o polu słowa.
+
+00:11:00.090 --> 00:11:07.160
+Widzieliśmy render, jakiemu dysponujemy, ale znowu mamy wiele skrzynek, którymi Nasaw chce powiedzieć pudełka, i oszczędzajmy tylko po to,
+
+00:11:07.850 --> 00:11:11.220
+by upewnić się, że nie popełniamy żadnych błędów.
+
+00:11:11.330 --> 00:11:14.360
+I widzimy, że linia 1:38 nie jest zdefiniowana.
+
+00:11:14.360 --> 00:11:22.510
+Jeśli przejdę do 1:38, widzę, że komponent rozpoznawania twarzy, który otrzymał tę informację, teraz musi odbierać
+
+00:11:22.510 --> 00:11:27.450
+pola i być może powinniśmy zmienić nazwę tego elementu.
+
+00:11:27.640 --> 00:11:30.270
+Rekwizyty do pudeł również.
+
+00:11:30.370 --> 00:11:31.280
+Więc oszczędzajmy.
+
+00:11:31.360 --> 00:11:36.520
+Wszystko działa, ale wiemy od razu, że skoro mijamy pudła jako rekwizyty do rozpoznania,
+
+00:11:36.940 --> 00:11:38.810
+musimy przejść do tego komponentu.
+
+00:11:39.080 --> 00:11:43.060
+Widzisz, że robię krok po kroku, widząc, dokąd te zmienne mnie prowadzą.
+
+00:11:43.390 --> 00:11:51.320
+Idę do rozpoznawania twarzy i OK od razu widzę, że powinienem zmienić tylko dwa pudełka.
+
+00:11:52.200 --> 00:12:04.680
+Chcę również zmienić te dwa pudełka i pudełka.
+
+00:12:04.920 --> 00:12:06.810
+Cóż, zapiszmy i zobaczmy, co się tutaj stanie.
+
+00:12:06.810 --> 00:12:09.240
+Zawsze dobrze jest sprawdzić naszą pracę i zobaczyć, gdzie jesteśmy.
+
+00:12:09.330 --> 00:12:13.910
+Więc powiem hej w com gmail dot.
+
+00:12:14.200 --> 00:12:16.680
+Hej, seinen.
+
+00:12:16.910 --> 00:12:19.870
+I ponownie użyj naszego ulubionego
+
+00:12:23.230 --> 00:12:25.820
+zdjęcia do wklejenia.
+
+00:12:25.880 --> 00:12:28.560
+Przewiń w dół.
+
+00:12:29.040 --> 00:12:29.910
+Nic nie wyświetla.
+
+00:12:29.910 --> 00:12:31.790
+Teraz po prostu zerwaliśmy aplikację.
+
+00:12:31.980 --> 00:12:33.840
+Ale wróćmy tutaj.
+
+00:12:33.870 --> 00:12:42.440
+Zobaczmy, czy dostaniemy jakieś błędy na karcie Sieć, aby ktoś ponownie kliknął, a my zrobimy to trochę
+
+00:12:42.440 --> 00:12:43.010
+lepiej.
+
+00:12:43.010 --> 00:12:44.900
+Widzimy, że wszystko działa.
+
+00:12:45.080 --> 00:12:48.320
+Więc możemy coś tutaj zrobić.
+
+00:12:48.970 --> 00:12:55.900
+Innym narzędziem, które lubię używać, to być może narzędzia programistyczne, które ponownie obsługują narzędzia
+
+00:12:55.900 --> 00:13:03.520
+programistyczne, które ponownie są wtyczką chrome, którą można zainstalować, i jeśli na przykład poszukaj komponentu
+
+00:13:04.480 --> 00:13:13.480
+rozpoznawania twarzy, widzę, że ten komponent rozpoznawania twarzy musi ma tu prostokąt ograniczający, że nie ma tam nic,
+
+00:13:13.480 --> 00:13:15.370
+co miałoby sens.
+
+00:13:15.370 --> 00:13:22.400
+Ale jeśli przejdziemy tutaj i spojrzymy na skrzynki, widzimy to dobrze.
+
+00:13:22.490 --> 00:13:25.150
+Otrzymuje rekwizyty promienia łez Cóż, te
+
+00:13:28.640 --> 00:13:31.440
+fundusze moje sklepy są pełne podczas nagrywania.
+
+00:13:31.500 --> 00:13:32.670
+Ale wróciłem do tego.
+
+00:13:32.790 --> 00:13:39.840
+W porządku, mamy teraz tablicę, która ma dwa pola i wygląda na to, że powraca.
+
+00:13:39.840 --> 00:13:41.020
+Czego chcemy.
+
+00:13:41.010 --> 00:13:50.070
+Wróćmy więc do naszej aplikacji i zauważmy, że jest OK, więc zmieniamy tablicę o indeksie 0 i 1, ale
+
+00:13:50.070 --> 00:13:57.230
+w polu granicznym robimy pola w prawym górnym rogu, które nie istnieją, ponieważ to już
+
+00:13:57.270 --> 00:14:00.230
+nie jest obiekt, to tablica.
+
+00:14:00.310 --> 00:14:06.300
+Tak więc mamy tutaj niezłą poprawkę, którą możemy zrobić tutaj ponownie i możemy po prostu utworzyć wyrażenie
+
+00:14:06.510 --> 00:14:09.040
+javascript przez zawijanie go w nawiasy klamrowe.
+
+00:14:09.290 --> 00:14:10.620
+Nie, to nie jest to, co chcemy robić.
+
+00:14:10.620 --> 00:14:11.750
+Kręcone nawiasy.
+
+00:14:11.880 --> 00:14:17.040
+A ponieważ pola są teraz tablicą, mogę po prostu powiedzieć pola.
+
+00:14:17.100 --> 00:14:28.270
+Mapuj nasze mapowanie funkcji favor, które w każdej iteracji ma pudełko, które jeśli pamiętasz, daje nam te właściwości
+
+00:14:28.270 --> 00:14:37.490
+div z górnym wierszem pola lub górnym wierszem pudełka i inne wymiary, których potrzebujemy.
+
+00:14:37.510 --> 00:14:43.800
+Więc po prostu wróćmy do tego i zamierzam zachować to w jednym wierszu, chociaż to trochę długo.
+
+00:14:43.930 --> 00:14:48.690
+W ten sposób możemy po prostu powiedzieć return, a następnie element, który chcemy.
+
+00:14:48.700 --> 00:14:57.070
+A ponieważ jest to teraz pole, możemy po prostu wrócić do korzystania z Boxa, który ma te właściwości w prawym dolnym wierszu
+
+00:14:57.400 --> 00:15:01.380
+kolumny po lewej stronie kolumny i bądźmy tutaj bezpieczni.
+
+00:15:03.380 --> 00:15:03.750
+DOBRZE.
+
+00:15:03.910 --> 00:15:04.890
+Przejdźmy do wykresu tutaj.
+
+00:15:04.900 --> 00:15:09.700
+I znowu idziemy krok po kroku, logicznie mówiąc do siebie i zastanawiając się, co musimy
+
+00:15:09.700 --> 00:15:10.330
+zrobić.
+
+00:15:10.450 --> 00:15:11.920
+Wracajmy.
+
+00:15:11.920 --> 00:15:14.540
+Musimy się zalogować ponownie.
+
+00:15:15.280 --> 00:15:15.740
+Chodźmy.
+
+00:15:15.740 --> 00:15:18.680
+Hej, zaloguj się szybko.
+
+00:15:18.860 --> 00:15:21.030
+I na razie to zamknę.
+
+00:15:21.080 --> 00:15:23.080
+Złapmy obrazek ponownie.
+
+00:15:25.340 --> 00:15:26.250
+Wróć tutaj.
+
+00:15:26.270 --> 00:15:29.270
+Wkleić to.
+
+00:15:29.320 --> 00:15:30.930
+Spójrz na te dwa obrazy.
+
+00:15:30.940 --> 00:15:35.060
+Upewnijmy się, że nie dostaniemy żadnych błędów, aby przejść do konsoli.
+
+00:15:35.080 --> 00:15:35.650
+O.
+
+00:15:35.710 --> 00:15:42.520
+Każde dziecko w tablicy lub iteratorze powinno mieć unikalny klawisz wsparcia i jest to bardzo częste ostrzeżenie i
+
+00:15:42.550 --> 00:15:43.080
+reagować.
+
+00:15:43.090 --> 00:15:44.710
+A to łatwa do naprawienia.
+
+00:15:44.710 --> 00:15:51.370
+Za każdym razem, gdy odwzorowujesz aliments i ponownie je tworzysz, chcesz dodać unikalny klucz.
+
+00:15:51.520 --> 00:16:00.190
+Kluczem do tej pory będzie właśnie górny rząd, prawdopodobnie prawdopodobnie coś lepszego, ale przynajmniej wiemy, że
+
+00:16:00.190 --> 00:16:01.540
+będzie wyjątkowy.
+
+00:16:01.540 --> 00:16:06.990
+Na razie wróćmy, bo musimy ciągle się logować.
+
+00:16:07.030 --> 00:16:11.250
+Możemy chcieć po prostu zmienić trasę, którą stanie się państwo na drodze do rozwoju.
+
+00:16:11.260 --> 00:16:21.540
+Więc nie musimy tego robić w kółko, ale jeśli wrócimy, wykryjemy dwie twarze Nigdzie, jeśli idziemy do sieci,
+
+00:16:21.540 --> 00:16:25.700
+wygląda na to, że wszystko działa idealnie.
+
+00:16:25.710 --> 00:16:31.350
+Wydaje mi się, że zaimplementowaliśmy tę funkcję, a teraz to, co chcemy zrobić, to przetestować różne rzeczy i
+
+00:16:31.620 --> 00:16:34.490
+spróbować przełamać to i zobaczyć, czy dostaniemy jakieś błędy.
+
+00:16:34.530 --> 00:16:38.540
+Być może może napiszesz kilka testów, które pozwolą ci wykonać
+
+00:16:50.380 --> 00:16:51.700
+test snapshotów.
+
+00:16:51.700 --> 00:16:57.640
+Mamy zaimplementowaną nową funkcję, upewnijmy się, że tworzymy nowy oddział robimy żądanie ściągania wiesz, że test startowy
+
+00:16:57.660 --> 00:17:02.080
+różne rzeczy próbuj i przełamuj to, że ta funkcja działa, nie popełniliśmy
+
+00:17:02.080 --> 00:17:06.130
+żadnych błędów i dostaliśmy naszą pierwszą funkcję w lecie .
+
+00:17:06.140 --> 00:17:11.260
+Miejmy nadzieję, że dzięki temu dowiesz się, jak działa ta aplikacja, ponieważ będziemy jej
+
+00:17:11.260 --> 00:17:14.670
+używać w późniejszych sekcjach, by robić naprawdę zabawne rzeczy.
+
+00:17:14.680 --> 00:17:19.080
+Więc na razie zobaczę w następnym wideo.

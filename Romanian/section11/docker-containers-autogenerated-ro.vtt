@@ -1,0 +1,373 @@
+﻿WEBVTT
+
+00:00:01.570 --> 00:00:02.640
+Bine ai revenit.
+
+00:00:02.890 --> 00:00:04.970
+Să trecem printr-o lecție de istorie.
+
+00:00:05.020 --> 00:00:06.590
+Știi cât îmi plac acele.
+
+00:00:06.640 --> 00:00:10.210
+Este întotdeauna important să întrebați de ce a fost construit acest instrument.
+
+00:00:10.270 --> 00:00:16.650
+De ce oamenii au petrecut timp și bani creând-o cu orice instrumente pe care le folosim.
+
+00:00:16.660 --> 00:00:25.120
+Deci, înainte de a avea doctorul am avut ceva numit mașini de virtualizare și asta este tot aici pe partea
+
+00:00:25.120 --> 00:00:25.570
+stângă.
+
+00:00:27.130 --> 00:00:35.590
+Am avut instrumente cum ar fi VM ware sau virtual box, iar mașinile virtuale sunt ceea ce am numit medii de
+
+00:00:36.550 --> 00:00:43.510
+tip sandbox, care conține un computer complet cu software-ul kernel al sistemului de operare hardware virtual.
+
+00:00:43.510 --> 00:00:49.900
+Și după cum puteți vedea în această diagramă este ca și cum ați putea să vă imaginați că este vorba despre un
+
+00:00:50.230 --> 00:00:55.360
+computer pe care o mașină virtuală a fost ca și cum ai avea un computer deasupra ei.
+
+00:00:55.540 --> 00:01:01.730
+Deci ai avut o aplicație care rulează pe un sistem de operare pe acest computer, până când rulează pe același computer.
+
+00:01:01.780 --> 00:01:04.330
+Dar din nou un alt sistem de operare.
+
+00:01:04.570 --> 00:01:07.590
+Și puteți vedea că a fost destul de mare.
+
+00:01:07.600 --> 00:01:13.780
+Dar acest lucru ne-a permis să rezolvăm această problemă de a avea lucruri într-un
+
+00:01:13.780 --> 00:01:20.580
+mediu care este mediul albastru aici mediul portocaliu mediul roșu într-o manieră previzibilă consistentă și pentru
+
+00:01:20.580 --> 00:01:28.380
+că există lucruri atât de mari care aveau propriul lor sistem de operare și bibliotecile care uneori a
+
+00:01:28.380 --> 00:01:38.000
+durat câteva minute pentru a încărca chiar și aceste aplicații, acum a venit docerul și a schimbat ideea că vedeți cu containere
+
+00:01:38.060 --> 00:01:45.110
+mai întunecate pe care le înfășoară software-ul într-un sistem complet de fișiere care conține totul și
+
+00:01:45.130 --> 00:01:50.300
+trebuie să ruleze exact așa cum am avut cu mașinile virtuale.
+
+00:01:50.550 --> 00:01:57.760
+Aveați coduri de timp ale sistemului de biblioteci de sistem care pot fi instalate pe un server.
+
+00:01:57.930 --> 00:02:00.320
+Puteți folosi cu docul.
+
+00:02:00.510 --> 00:02:05.880
+Și din nou, acest lucru garantează că va funcționa întotdeauna
+
+00:02:05.880 --> 00:02:16.400
+la fel, indiferent de mediul pe care îl rulează acum, containerele reprezintă o alternativă ușoară la virtualizarea mașinii sau mașinile virtuale.
+
+00:02:16.400 --> 00:02:26.130
+Prin urmare, sunt proiectate spre deosebire de mașinile virtuale pentru a rula doar aplicații unice pe fiecare container.
+
+00:02:26.900 --> 00:02:35.560
+Deoarece sunt atât de mici și subțiri și acesta este un concept popular de micro servicii despre care am vorbit despre
+
+00:02:36.520 --> 00:02:43.390
+containerele care utilizează sistemul de operare gazdă, acestea nu au propriul sistem de operare ca și noi
+
+00:02:43.390 --> 00:02:44.800
+cu mașinile virtuale.
+
+00:02:44.800 --> 00:02:47.270
+Ei folosesc sistemul de operare gazdă.
+
+00:02:47.860 --> 00:02:53.230
+Și din acest motiv au nevoie doar de câteva secunde și aplicația dvs. de
+
+00:02:53.230 --> 00:03:00.390
+container se execută mult mai repede decât am avut cu mașinile virtuale, deci cu containerele mai întunecate putem avea acces
+
+00:03:00.390 --> 00:03:07.500
+rapid și ușor pentru a rula aceste mici aplicații unice și doar aveți mai multe dintre aceste lucruri doar a
+
+00:03:07.500 --> 00:03:16.080
+crea cât mai multe containere pe care le doriți sunt ușor să crească și să crească în timp ce scară ca ai mai mulți utilizatori.
+
+00:03:16.310 --> 00:03:21.320
+Și atunci începeți să ajungeți la lucruri precum orchestrarea containerului, unde acum trebuie
+
+00:03:21.590 --> 00:03:27.910
+să gestionați toate aceste containere care, apropo, dacă ați auzit vreodată despre Cabernets este ceea ce face.
+
+00:03:30.050 --> 00:03:31.660
+Așa că cred că am ajuns la punctul ăsta.
+
+00:03:31.730 --> 00:03:33.950
+Darker este o platformă pentru containere.
+
+00:03:34.190 --> 00:03:41.880
+Spre deosebire de consolele de mașini virtuale, acestea cuprind doar bibliotecile și setările necesare pentru aplicația dvs.
+
+00:03:42.050 --> 00:03:48.650
+Sunt eficiente din punct de vedere al greutății și sunt autonome și acest lucru vă asigură că aplicația dvs.
+
+00:03:48.650 --> 00:03:51.540
+va funcționa la fel oriunde și peste tot.
+
+00:03:51.650 --> 00:03:53.580
+Deci containerele sunt bune.
+
+00:03:53.990 --> 00:03:55.160
+Absolut.
+
+00:03:56.460 --> 00:04:00.860
+Acum că am reușit să vorbim despre containerele de fapt.
+
+00:04:00.860 --> 00:04:05.250
+Am dat peste cuvântul R, dar nu am explicat cu adevărat ce este.
+
+00:04:06.250 --> 00:04:10.530
+Ei bine, un container poate fi explicat prin diagrama.
+
+00:04:10.870 --> 00:04:17.980
+Mai întâi avem o gazdă care este o mașină sau un computer pe care vom putea să-i găzduim containerul.
+
+00:04:17.980 --> 00:04:25.870
+Deci, din nou în această secțiune vom folosi laptopul nostru ca gazdă sau computer ca gazdă.
+
+00:04:25.900 --> 00:04:33.640
+Acum, pe partea de sus a acestei gazde avem ceea ce numim containerul pe care îl creăm cu Dr.
+
+00:04:33.730 --> 00:04:41.000
+Și din fericire pentru noi, cu un comentariu din cauza lui Dharker, putem crea doar
+
+00:04:41.000 --> 00:04:48.670
+acest container și în interiorul acestuia avem ceva numit imagine și un container constă într-o imagine.
+
+00:04:49.090 --> 00:04:57.910
+Vedeți o imagine pe care medicul o folosește pentru a împleti aplicația într-un pachet independent care poate trăi în interiorul
+
+00:04:57.910 --> 00:04:59.140
+unui container.
+
+00:04:59.140 --> 00:05:07.810
+Deci, în această imagine pot să spun că vreau un server de noduri și această imagine este citită de către medic, deoarece din
+
+00:05:07.840 --> 00:05:12.820
+nou este doar un fișier și acest fișier generează acest container care rulează.
+
+00:05:12.820 --> 00:05:15.420
+Notă pentru noi.
+
+00:05:15.660 --> 00:05:23.760
+Acum partea cheie este că mediul din interiorul containerului este complet izolat de cel al
+
+00:05:23.850 --> 00:05:25.030
+mașinii gazdă.
+
+00:05:25.110 --> 00:05:29.440
+Deci nu contează ce conducem aici, atâta timp cât această mașină poate executa un docer.
+
+00:05:29.770 --> 00:05:36.540
+Apoi, în acest container putem avea toate bibliotecile și dependențele pe care le dorim ca serverul
+
+00:05:36.810 --> 00:05:39.160
+nostru de note să funcționeze.
+
+00:05:39.230 --> 00:05:46.310
+Și de modul în care această imagine are, de asemenea, ceva numit un sistem de fișiere scârbos la fel cum
+
+00:05:46.310 --> 00:05:51.970
+avem fișiere de pe computerul nostru și este adăugat pe docker automat în interiorul containerului.
+
+00:05:52.060 --> 00:05:54.110
+Și asta numim un volum.
+
+00:05:54.400 --> 00:06:02.020
+Așadar, avem imaginea care este fișierul care descrie ce ar trebui să facă containerul și în interiorul acelui container avem și opțiunea
+
+00:06:02.020 --> 00:06:08.170
+de a folosi ceva asemănător unui sistem de fișiere, la fel cum avem fișiere de pe laptop-ul nostru
+
+00:06:08.170 --> 00:06:09.400
+pentru funcționalitate suplimentară.
+
+00:06:11.810 --> 00:06:20.020
+Pentru a examina pachetele de andocare aplicația dvs. într-o imagine un pachet executabil independent și Dharker
+
+00:06:20.020 --> 00:06:27.340
+execută această imagine în acest container și mediul din interiorul containerului este complet izolat de
+
+00:06:27.610 --> 00:06:30.090
+cel al mașinii gazdă.
+
+00:06:30.090 --> 00:06:32.580
+Din nou, acesta este ceva la care ne vom întoarce.
+
+00:06:32.650 --> 00:06:36.430
+Vă voi demonstra cum vom face acest lucru și vom lucra împreună pentru a crea
+
+00:06:36.430 --> 00:06:37.750
+un câine în pericol.
+
+00:06:37.750 --> 00:06:41.800
+Și apoi ne vom întoarce la această imagine și veți realiza că da, da, totul are
+
+00:06:41.800 --> 00:06:42.430
+sens acum.
+
+00:06:42.490 --> 00:06:43.270
+Deci, stai cu mine.
+
+00:06:43.270 --> 00:06:45.410
+Crede-mă că o vei lua.
+
+00:06:45.700 --> 00:06:50.650
+Acum, toată imaginea asta pare destul de complicată.
+
+00:06:51.100 --> 00:06:58.020
+Din fericire pentru tine este ceva numit Dharker hop și este ceea ce face docker un produs uimitor.
+
+00:06:59.990 --> 00:07:11.440
+Tu vezi doctorul Hobb pur și simplu hub dot dot dot com este un fel de NPM și Javascript și cu
+
+00:07:11.440 --> 00:07:16.810
+hubul Doctor oferă un magazin ca site-ul Web unde puteți căuta și descărca imagini de utilizat.
+
+00:07:16.810 --> 00:07:23.800
+Au fost deja pre-scrise de oameni și este foarte adoptat de o mulțime de oameni și de multe organizații,
+
+00:07:23.800 --> 00:07:28.350
+deci este ceva ce majoritatea oamenilor care o folosesc pe Dharker.
+
+00:07:28.450 --> 00:07:34.780
+De exemplu, dacă scot în jos, văd bine că există o imagine de nod pe care o pot folosi dacă fac
+
+00:07:34.900 --> 00:07:35.820
+clic pe detalii.
+
+00:07:36.160 --> 00:07:37.090
+Vad asta.
+
+00:07:37.270 --> 00:07:40.370
+În regulă, am diferite versiuni de noduri pe care le pot folosi.
+
+00:07:40.390 --> 00:07:46.840
+Să zicem că vreau să folosesc nouă puncte unsprezece pe care le pot face clic pe docul sau fișierul aici și uita-te la asta.
+
+00:07:46.990 --> 00:07:53.050
+Deși acest lucru ar putea părea jibberish acum vom merge peste acest lucru un pic și
+
+00:07:53.050 --> 00:07:59.910
+târziu pe clipuri video, dar aceasta este imaginea docer de doar folosind acest fișier și de funcționare docer cu ea.
+
+00:08:00.030 --> 00:08:07.590
+Se va crea un container care are deja configurația nodului 9 pentru noi și puteți vedea aici că avem o mulțime de lucruri pe care le
+
+00:08:07.590 --> 00:08:12.380
+putem executa și putem post-script-uri pe care le putem rula Monga putem rula să ne ferim
+
+00:08:12.390 --> 00:08:17.170
+să citim S pe care noi o să vorbească și multe lucruri atât de multe.
+
+00:08:17.630 --> 00:08:22.250
+Deci, la fel ca NPM puteți folosi aceste pachete deja predefinite pentru noi.
+
+00:08:22.350 --> 00:08:25.720
+Și de cele mai multe ori o să faceți asta în loc să scrieți propria voastră.
+
+00:08:26.100 --> 00:08:31.060
+Dar am să vă arăt cum să scrieți câteva dintre fișierele Daco, de ce nu.
+
+00:08:33.170 --> 00:08:39.350
+Deci, acum că avem o înțelegere de bază a ceea ce face medicul și ce containere
+
+00:08:39.350 --> 00:08:45.450
+sunt în restul secțiunii, vom face ceva de genul asta în configurația noastră de dezvoltare.
+
+00:08:45.530 --> 00:08:52.490
+Vom crea un container de docare care este conectat la capătul din față, aplicația creier inteligent
+
+00:08:52.490 --> 00:08:53.720
+din față.
+
+00:08:53.750 --> 00:08:59.450
+Acum, în cadrul acestui container Stockard avem deja API-ul nostru de nod expres, dar
+
+00:08:59.450 --> 00:09:04.760
+vom aduce, de asemenea, post-scripturile noastre, precum și eventual rattus pentru managementul sesiunilor.
+
+00:09:04.790 --> 00:09:13.160
+Din nou, vine în secțiuni viitoare și prin a pune toate acestea într-un container putem rula doar o singură comandă și să
+
+00:09:13.160 --> 00:09:21.020
+aibă baza de date API-ul bazei de date citit toate pe care rulează începe să se boot și începe să
+
+00:09:21.020 --> 00:09:23.780
+se adune în acest singur container.
+
+00:09:23.780 --> 00:09:25.280
+Va fi ca magia.
+
+00:09:25.850 --> 00:09:32.240
+Și apropo, în majoritatea setărilor de producție pe care le vedeți cu companiile moderne, veți vedea ceva de
+
+00:09:32.240 --> 00:09:38.270
+genul acesta, unde aveți aplicația noastră de client creierul nostru inteligent, care are un fel de
+
+00:09:38.930 --> 00:09:45.260
+balancer de sarcină, iar acest balancer de încărcare se distribuie doar pe diferite servere API că dacă avem
+
+00:09:45.680 --> 00:09:52.940
+o mulțime de trafic nu blocăm un server API și avem aceste servere API clonate deoarece sunt doar simple imagini
+
+00:09:53.510 --> 00:09:54.110
+Gawker.
+
+00:09:54.200 --> 00:09:57.690
+Deci, doar creând tot mai multe containere ușor de făcut.
+
+00:09:57.950 --> 00:10:02.240
+Și nu vă faceți griji vă voi arăta cum să faceți un balancer de sarcină, precum și într-un videoclip viitoare.
+
+00:10:02.750 --> 00:10:09.350
+Și aceste servere API se conectează acum la baze de date cum ar fi postscript-uri și putem avea din nou mai multe baze de date pentru
+
+00:10:09.350 --> 00:10:10.730
+a face față tuturor sarcinilor.
+
+00:10:10.970 --> 00:10:18.440
+Și, de asemenea, se pot conecta la ceva de genul Pretis despre care vom vorbi despre gestionarea gestionării
+
+00:10:18.440 --> 00:10:27.020
+cache-urilor sau a sesiunilor și puteți vedea că, având un doc, suntem în măsură să clonăm și să creăm cu ușurință
+
+00:10:27.020 --> 00:10:30.110
+mai multe copii pe măsură ce creștem.
+
+00:10:30.240 --> 00:10:36.080
+Dar vreau să vă arăt diagrama doar pentru a vă arăta cum arată o aplicație de producție.
+
+00:10:36.080 --> 00:10:43.790
+Ideea fiind că suntem capabili să creăm aceste mici servicii pe care le putem duplica, pentru ca cererea noastră de aplicație să crească,
+
+00:10:43.820 --> 00:10:48.140
+pe măsură ce baza noastră de utilizatori crește, putem crește cu aceasta.
+
+00:10:49.290 --> 00:10:50.250
+In regula.
+
+00:10:50.580 --> 00:10:54.030
+Este timpul să începeți cu docul și următoarele videoclipuri.
+
+00:10:55.490 --> 00:10:56.810
+O să văd pe asta.
+
+00:10:56.850 --> 00:10:57.140
+Bebai.

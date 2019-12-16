@@ -1,0 +1,172 @@
+﻿WEBVTT
+
+00:00:01.550 --> 00:00:02.770
+Bine ai revenit.
+
+00:00:02.770 --> 00:00:10.360
+Să folosim testarea instantanee pentru a testa câteva din aceste componente simple de prezentare simple, care sunt
+
+00:00:10.360 --> 00:00:11.290
+complet apatride.
+
+00:00:11.480 --> 00:00:13.190
+Așa că am văzut cât de ușor este asta.
+
+00:00:13.450 --> 00:00:16.020
+Așadar, permiteți-mi să fac asta puțin mai mic.
+
+00:00:17.220 --> 00:00:21.420
+Și asigurați-vă că am fost la testul NPM pentru al rula în fundal.
+
+00:00:25.770 --> 00:00:31.960
+Vedem că testul nostru sau componenta noastră de mașină este testată acum.
+
+00:00:32.070 --> 00:00:34.340
+Deci, să creăm un altul.
+
+00:00:35.570 --> 00:00:39.520
+Să facem un test pentru componenta Carlist.
+
+00:00:39.660 --> 00:00:45.230
+Voi elimina jurnalul consolei aici pentru că nu avem nevoie de ea și să creăm o listă de mașini.
+
+00:00:45.320 --> 00:00:52.180
+Testați fișierele de cărți de fișiere pe care le-ați provocat și, din nou, eșuează, pentru că trebuie să
+
+00:00:55.880 --> 00:00:59.720
+ne asigurăm că avem cel puțin un singur test.
+
+00:01:00.770 --> 00:01:09.650
+De fapt, putem să ne întoarcem la cardul care ne testează și să copiem și să lipim această opțiune pentru a copia și
+
+00:01:09.650 --> 00:01:16.510
+lipi componenta Carlists, indiferent ce am avut și doar pentru a schimba componenta noastră fără carduri.
+
+00:01:16.540 --> 00:01:18.200
+Deci, hai să facem asta repede.
+
+00:01:19.020 --> 00:01:28.870
+Puteți selecta doar lista de cărți sensei, permiteți-mi să salvez și avem niște Filcher.
+
+00:01:28.990 --> 00:01:37.880
+Să vedem de ce vedem că avem o eroare de tip nu poate fiecare hartă a proprietăților nedefinite și asta se datorează faptului că lista de
+
+00:01:38.240 --> 00:01:45.170
+cărți pe care o vedeți Componenta Card este doar redarea numelui și a e-mailului, dar nu face nimic pentru el.
+
+00:01:45.170 --> 00:01:51.740
+Deci, dacă nu primesc nume în e-mail, voi face doar nedefinit când mergem la lista de
+
+00:01:51.740 --> 00:01:56.170
+cărți, vedem că primim efectiv roboții și trebuie să-i mapăm.
+
+00:01:56.510 --> 00:02:01.190
+Dar în testul nostru facem cărți sau Musco la Carlist.
+
+00:02:01.190 --> 00:02:04.280
+Voi încheia acest lucru, ca să nu vă confundați.
+
+00:02:04.370 --> 00:02:06.390
+Nu trecem prin roboți.
+
+00:02:06.590 --> 00:02:16.050
+Deci, în acest test, când încercăm să-l facem pe Carlist, acesta va eșua, pentru că nu există roboți pe care să-i facem harta.
+
+00:02:16.230 --> 00:02:18.860
+Deci, să rezolvăm asta.
+
+00:02:18.930 --> 00:02:30.310
+Tot ce trebuie să facem aici este doar să ne batem roboții, așa că putem spune doar roboți Konst sau roboții de zumzet de la Leger spun că vor echivala
+
+00:02:30.910 --> 00:02:35.590
+cu o serie de date fictive pe care le putem crea.
+
+00:02:35.590 --> 00:02:47.740
+Deci, să spunem că acesta va avea o identitate de unul și vom avea numele lui John Snow.
+
+00:02:50.510 --> 00:02:57.120
+Să spunem că numele de utilizator va fi John John.
+
+00:02:57.760 --> 00:02:59.500
+Și să spunem e-mailul.
+
+00:02:59.600 --> 00:03:03.270
+Nu cred că folosim numele dvs. de utilizator, dar am vrut să-i dau numele de utilizator oricum.
+
+00:03:03.620 --> 00:03:08.520
+Va fi la gmail dot com.
+
+00:03:08.530 --> 00:03:11.500
+Acum putem doar să trecem roboții
+
+00:03:15.060 --> 00:03:17.480
+noștri roboți ca roboți.
+
+00:03:20.760 --> 00:03:21.940
+Să vedem dacă funcționează.
+
+00:03:21.960 --> 00:03:24.080
+O să salvez.
+
+00:03:24.140 --> 00:03:24.880
+In regula.
+
+00:03:24.950 --> 00:03:33.300
+Și avem testele noastre trecute și, dacă mergem la instantaneu, vedem că avem și o listă a listei de
+
+00:03:33.360 --> 00:03:33.940
+cărți.
+
+00:03:35.110 --> 00:03:35.590
+Asta e bine.
+
+00:03:35.590 --> 00:03:38.220
+Testele noastre au eșuat, deoarece nu mergeam prin roboți.
+
+00:03:38.230 --> 00:03:44.860
+Și în timp ce vrem să ne asigurăm că noi trecem de fapt acele proprietăți și
+
+00:03:44.860 --> 00:03:52.900
+vă puteți imagina că puteți face același lucru și cu cardul, sau poate aveți implicit în această componentă dacă nu primiți
+
+00:03:52.900 --> 00:04:00.520
+un e-mail cu numele și I. D. că are un fel de limită de eroare sau o ieșire pe care o face pentru utilizator.
+
+00:04:02.460 --> 00:04:12.150
+Acum vedem puterea testelor instantanee, vedem cum putem bate unele dintre proprietățile noastre și ați putea dori doar să mergeți mai departe și să
+
+00:04:12.450 --> 00:04:19.320
+faceți teste instantanee pentru unele din aceste alte cazuri, care sunt destul de simple de făcut pentru
+
+00:04:19.320 --> 00:04:21.920
+a crește acoperirea noastră de testare.
+
+00:04:22.020 --> 00:04:24.190
+Și o să-ți las asta pentru că.
+
+00:04:24.300 --> 00:04:27.400
+Ei bine, doar pentru a vă oferi o practică suplimentară.
+
+00:04:27.600 --> 00:04:32.890
+Deci, hai să mergem la următorul videoclip, unde facem câteva lucruri care sunt puțin mai dificile.
+
+00:04:33.120 --> 00:04:34.650
+Dar doar pentru a verifica.
+
+00:04:34.650 --> 00:04:38.790
+Să facem acoperirea noastră pentru a vă asigura că acoperirea noastră pentru Carlist este acum binefăcătoare.
+
+00:04:40.350 --> 00:04:44.020
+Bine, face acest lucru un pic mai mare și noi vedem asta.
+
+00:04:44.080 --> 00:04:45.550
+Da, uita-te la asta.
+
+00:04:45.550 --> 00:04:47.770
+Se simte bine obtinerea 100 la suta nu-i asa.
+
+00:04:47.770 --> 00:04:50.190
+Componenta Carlists este acum bine testată.
+
+00:04:51.270 --> 00:04:52.970
+Voi vedea în următoarea.

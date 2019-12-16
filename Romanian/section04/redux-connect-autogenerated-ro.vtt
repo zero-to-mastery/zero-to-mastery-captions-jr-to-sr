@@ -1,0 +1,505 @@
+﻿WEBVTT
+
+00:00:01.160 --> 00:00:02.750
+Și bine ai venit înapoi.
+
+00:00:02.750 --> 00:00:10.130
+Un lucru pe care l-am observat din videoclipul anterior este în fișierul meu Constans, ar trebui să mă asigur că variabila
+
+00:00:10.130 --> 00:00:12.260
+mea și șirurile mele sunt aceleași.
+
+00:00:12.260 --> 00:00:16.910
+Deci, doar adăugarea unei subliniere aici are dreptate.
+
+00:00:16.940 --> 00:00:26.360
+Deci, haideți să vorbim despre următoarea parte care folosește cealaltă metodă care vine cu reacx redux, care este conectat acum această
+
+00:00:26.660 --> 00:00:27.200
+funcție
+
+00:00:30.310 --> 00:00:39.170
+de conectare este optimizată pentru ca noi să evităm utilizarea unui lucru numit indicele de stocare a punctelor.
+
+00:00:39.310 --> 00:00:44.490
+Deci, dacă vă amintiți când am anulat logul magazinului în apt.
+
+00:00:44.590 --> 00:00:50.960
+Da, am avut câteva funcții, inclusiv funcția de obținere de stat pe care am blocat-o.
+
+00:00:50.960 --> 00:00:55.430
+Acum există și o funcție de abonare punct care subscrie.
+
+00:00:55.480 --> 00:01:02.510
+Orice componentă care este interesată să fie conștientă de redux și să asculte orice schimbare.
+
+00:01:03.680 --> 00:01:10.400
+Dar este un pic obositor și se conectează simplifică procesul spunând pur și simplu utilizarea funcției de conectare.
+
+00:01:10.400 --> 00:01:17.220
+Și cu asta vom conștientiza componenta redux.
+
+00:01:17.430 --> 00:01:25.740
+Dacă vă amintiți că componentele Kinect ar fi componentele galbene care știu despre redux.
+
+00:01:25.740 --> 00:01:33.470
+Așadar, am creat componenta furnizorului care trece în mod substanțial în jos la magazin către componente.
+
+00:01:33.510 --> 00:01:35.180
+Dar acum trebuie să spunem ce.
+
+00:01:35.220 --> 00:01:45.870
+Care dintre aceste componente Riak vrem să fim inteligenți sau să fim conștienți de existența bibliotecii redox și să se
+
+00:01:45.870 --> 00:01:47.560
+aboneze la schimbări.
+
+00:01:47.580 --> 00:01:49.230
+Așa că vă voi arăta cum
+
+00:01:52.380 --> 00:01:59.040
+să faceți acest lucru și acest videoclip și de modul în care acest standard în industrie este că noi numim aceste containere de componente inteligente,
+
+00:01:59.040 --> 00:02:00.340
+cum ar fi apt.
+
+00:02:00.450 --> 00:02:01.310
+Da.
+
+00:02:01.410 --> 00:02:08.080
+Deci, cel mai probabil, vom conecta fișierul digest al aplicației, deoarece este un container.
+
+00:02:08.210 --> 00:02:15.680
+Deci, primul lucru pe care îl vom face este să mergeți la APT O. J. iar în interiorul nostru
+
+00:02:15.740 --> 00:02:18.590
+vrem să importăm câteva lucruri.
+
+00:02:18.620 --> 00:02:21.490
+Să începem cu importul acțiunilor.
+
+00:02:21.530 --> 00:02:26.250
+Deci voi importa acțiunile pe care le avem.
+
+00:02:26.480 --> 00:02:27.770
+Să mergem aici.
+
+00:02:28.620 --> 00:02:32.300
+Avem acțiunea câmpului de căutare setat.
+
+00:02:32.310 --> 00:02:41.210
+Așa că vom face acțiunea câmpului de căutare setat și vom importa asta din acțiunile pe care le-a
+
+00:02:41.210 --> 00:02:51.030
+sugerat Jap și din cauza faptului că acțiunile sugerează că scad nivelul dosarului, din moment ce celelalte sunt în containere.
+
+00:02:51.120 --> 00:02:56.740
+Am de gând să fac două perioade.
+
+00:02:56.850 --> 00:03:03.720
+Să salvăm asta și vom primi un avertisment minunat spunând că seturile sunt câmpuri câmpul de căutare este definit, dar nu
+
+00:03:03.720 --> 00:03:04.800
+este folosit niciodată.
+
+00:03:04.920 --> 00:03:11.330
+Asta este, de asemenea, în condiții de siguranță fișierul index perfect.
+
+00:03:11.370 --> 00:03:16.120
+Să folosim acum metoda de conectare despre care am vorbit.
+
+00:03:16.140 --> 00:03:32.540
+Deci, acum deasupra aici voi spune să importați metoda de conectare de la re-act redux și această metodă de conectare.
+
+00:03:32.540 --> 00:03:33.570
+Modul în care funcționează.
+
+00:03:33.590 --> 00:03:40.140
+Și din nou și trebuie doar să vă obișnuiți cu faptul că este în partea de jos în cazul în care facem default de export.
+
+00:03:40.710 --> 00:03:50.820
+Vom spune că conectarea va fi o funcție și apoi o altă aplicație sau o altă aplicație.
+
+00:03:50.840 --> 00:03:58.550
+Acum, această sintaxă ar putea părea puțin confuză și se va conecta la ceva ce numim funcția de
+
+00:03:58.940 --> 00:04:09.130
+ordin superior într-o funcție de ordin superior este o funcție care returnează o altă funcție, astfel încât conexiunea se va executa și indiferent de
+
+00:04:09.160 --> 00:04:15.500
+conectarea se face în interiorul acestei funcții se va întoarce o altă funcție .
+
+00:04:15.640 --> 00:04:22.250
+Și pentru că se întoarce o altă funcție, aceasta va executa această parte cu aplicația.
+
+00:04:22.280 --> 00:04:28.190
+Deci, așa funcționează componentele de comandă superioară și veți afla mai multe despre acestea mai târziu în cariera dvs.
+
+00:04:28.190 --> 00:04:35.330
+Dar, deocamdată, știți că aceasta este sintaxa pe care tocmai trebuie să o obișnuiți și enumerați o linie nouă pentru a putea vedea
+
+00:04:35.430 --> 00:04:36.560
+mai bine aici.
+
+00:04:37.410 --> 00:04:47.250
+Acum, aici conectați acceptă doi parametri care, din nou, sunt standard, îi pot numi ceea
+
+00:04:47.470 --> 00:04:58.750
+ce vreau, dar urmăm doar standardele redux care prima este starea hărții în poziții de susținere, iar cea
+
+00:04:58.750 --> 00:05:02.210
+de-a doua este expedierea hărții.
+
+00:05:02.880 --> 00:05:08.520
+Două culturi.
+
+00:05:08.580 --> 00:05:09.100
+In regula.
+
+00:05:09.100 --> 00:05:17.560
+Deci, chiar acum am conectat această componentă această componentă de aplicație și am spus că abonați la
+
+00:05:17.560 --> 00:05:21.240
+orice schimbări de stat în magazinul redux.
+
+00:05:22.090 --> 00:05:28.930
+Și acum App știe că există un magazin redux undeva și în orice moment că există schimbări la
+
+00:05:28.930 --> 00:05:31.330
+care ar putea fi interesat.
+
+00:05:31.390 --> 00:05:35.470
+Dar acum trebuie să-i spunem ce să ne intereseze.
+
+00:05:35.500 --> 00:05:42.230
+Acesta este motivul pentru care ar trebui să ascult o expediere sau ce acțiune să ascult.
+
+00:05:42.250 --> 00:05:46.820
+Deci, să ne întoarcem la vârf și la vârf aici.
+
+00:05:46.910 --> 00:05:55.750
+Vrem să definim aceste funcții ca acești parametri sau toți acești parametri pentru tot ce vom face este
+
+00:05:55.840 --> 00:06:04.410
+să spunem că starea hărții Konst la recuzită și asta va primi o stare și oops.
+
+00:06:04.520 --> 00:06:06.980
+Și va reveni la un obiect și așa cum
+
+00:06:09.850 --> 00:06:10.480
+am spus
+
+00:06:13.730 --> 00:06:19.310
+înainte de a putea să le numiți așa cum doriți, dar acesta este standardul și orice aplicație redox pe care o
+
+00:06:19.310 --> 00:06:22.040
+veți vedea sau dacă vă veți obișnui doar cu sintaxa.
+
+00:06:22.100 --> 00:06:25.340
+Odată ce o faci de câteva ori, devine a doua natură.
+
+00:06:25.340 --> 00:06:25.690
+In regula.
+
+00:06:25.690 --> 00:06:30.950
+Și aici vrem să spunem că câmpul de căutare afirmă,
+
+00:06:35.270 --> 00:06:41.690
+din nou, dacă mergem la reductorii noștri, avem un câmp de căutare aici,
+
+00:06:44.530 --> 00:06:53.260
+această stare a câmpului de căutare va egala o stare pe care o primim cu o parte a
+
+00:06:53.260 --> 00:07:01.120
+reductorului care, din nou, dacă mergem la reductori este robotul de căutare, astfel căutarea câmpului de
+
+00:07:05.330 --> 00:07:06.550
+căutare roboți.
+
+00:07:06.560 --> 00:07:13.580
+Așa că din nou se spune că câmpul de căutare pe
+
+00:07:13.970 --> 00:07:24.560
+care vom reveni, care va fi folosit ca elemente de recuzită de către componenta hop, va veni
+
+00:07:25.010 --> 00:07:33.980
+de la statul Stata, amintiți-vă în indexul fișierului nostru de jazz am creat magazinul cu
+
+00:07:34.070 --> 00:07:37.220
+roboții de căutare REDUCE-IT.
+
+00:07:37.250 --> 00:07:45.980
+Deci, dacă ne întoarcem aici să o salvăm și avem meciul expediat la prop, nu este definit.
+
+00:07:46.160 --> 00:07:53.690
+Și din nou pentru că avem nevoie de cea de-a doua parte pe care Matt a
+
+00:07:56.970 --> 00:08:07.700
+trimis-o să o aducă. Deci, să mai creăm din nou ceea ce va spune că harta Konst expediată la prop, va primi ceva numit expediere.
+
+00:08:07.830 --> 00:08:14.730
+Și din nou ceva care va trebui să vă obișnuiți să expediați dacă vă amintiți în discuția noastră despre
+
+00:08:14.730 --> 00:08:21.510
+turma este ceea ce declanșează acțiunea, astfel încât inacțiunea este doar un obiect pe care l-am creat.
+
+00:08:21.510 --> 00:08:29.330
+Din nou, dacă vă amintiți, dar pentru a trimite această acțiune avem nevoie de ceva numit expediție în continuare.
+
+00:08:29.360 --> 00:08:35.250
+Deci, este trimis în reductor.
+
+00:08:35.330 --> 00:08:44.750
+Deci, această expediție poate fi acum folosită pentru a trimite acțiuni și modul în care facem acest lucru pe care îl putem spune în schimbarea căutării, care este doar
+
+00:08:46.040 --> 00:08:48.350
+numele pe care pot să spun orice.
+
+00:08:48.360 --> 00:08:51.950
+Așadar, amintiți-vă că aceasta este o propunere pe care o va primi.
+
+00:08:51.950 --> 00:08:58.230
+Dar o vom păstra la fel ca cea pe care am avut-o în aplicația noastră de re-acțiune privind modificarea căutării.
+
+00:08:58.260 --> 00:09:05.910
+Și așa se va numi Propp-ul și schimbarea de căutare va primi un eveniment deoarece amintesc
+
+00:09:06.390 --> 00:09:15.270
+că este o casetă de intrare pe care utilizatorii o introduc și acest eveniment din nou, deoarece schimbarea căutării
+
+00:09:15.270 --> 00:09:26.840
+este o funcție care va expedia setul de acțiuni câmpul de căutare deoarece amintesc că acțiunea este doar un obiect doar o funcție care
+
+00:09:26.870 --> 00:09:28.870
+returnează un obiect.
+
+00:09:28.940 --> 00:09:30.530
+Vrem să trimitem asta.
+
+00:09:30.620 --> 00:09:39.950
+Astfel, producătorii sunt conștienți de acest lucru și acest câmp de căutare, atunci când este trimis, va asculta.
+
+00:09:40.100 --> 00:09:47.590
+Dacă vă aduceți aminte în acțiunile noastre, veți primi un text care este oricare dintre utilizatori are
+
+00:09:48.220 --> 00:09:59.100
+și l-am pus, caz în care putem să facem din nou valoarea evenimentului punct dot dot din nou la fel ca în cazul evenimentului de schimbare
+
+00:09:59.100 --> 00:10:03.520
+a căutării pe care se urmărește valoarea de valoare .
+
+00:10:03.530 --> 00:10:07.970
+Deci, dacă salvez acest lucru, lasă-mă să fac acest lucru un pic mai mic și să salvez.
+
+00:10:07.970 --> 00:10:11.390
+Acum am câteva avertismente puțin.
+
+00:10:11.390 --> 00:10:17.100
+Unul este că amintiți-ne că trebuie să returnați acest lucru ca obiect.
+
+00:10:17.180 --> 00:10:30.930
+Așadar, vrem să spunem întoarcerea, așa cum am făcut mai sus, cu statul, un obiect care conține toată acțiunea noastră.
+
+00:10:30.950 --> 00:10:38.340
+Din nou, starea hărții la propulsoare este să-mi spui ce stat ce piesă de stat și eu trebuie să asculte și
+
+00:10:38.350 --> 00:10:46.270
+să ne trimită recuzită și hartă expediate la proiectile spune hei spune-mi ce prop, ar trebui să asculte că sunt acțiuni care trebuie
+
+00:10:46.300 --> 00:10:47.720
+să fie expediate.
+
+00:10:49.160 --> 00:10:52.170
+În regulă, totul funcționează.
+
+00:10:52.670 --> 00:10:54.640
+Nu avem erori aici.
+
+00:10:55.070 --> 00:11:01.520
+Și amintiți-vă acum că aici, în conexiune, știm ce stație de hartă la prop, este hartă
+
+00:11:01.530 --> 00:11:08.120
+expediată la procese și conectați se va executa prima parte a funcției și să spunem Bine
+
+00:11:08.120 --> 00:11:15.950
+că ascult această parte a statului și eu sunt interesat de aceste acțiuni și apoi va da acele elemente de
+
+00:11:16.010 --> 00:11:17.460
+recuzită la aplicație.
+
+00:11:17.480 --> 00:11:19.260
+Iată partea interesantă.
+
+00:11:20.160 --> 00:11:24.850
+Deoarece am amintit că am spus că redox-ul poate înlocui starea în aplicația ta.
+
+00:11:24.990 --> 00:11:36.490
+Pot elimina tehnic acum câmpul de căutare din această stare din aplicație și pot, de asemenea, să-l elimină pe schimbarea căutării, deoarece
+
+00:11:36.510 --> 00:11:40.290
+din nou că vine ca recuzită.
+
+00:11:40.290 --> 00:11:45.860
+Nu este nevoie să o declarăm ca o metodă de aplicație, așa că pot să o șterg acum.
+
+00:11:46.760 --> 00:11:52.660
+Și apoi, aici, nu mă mai interesează acest câmp de căutare de stat.
+
+00:11:52.790 --> 00:11:56.780
+Pot elimina acest lucru, deoarece acum vine ca recuzită.
+
+00:11:56.990 --> 00:11:59.570
+Așadar, aș putea spune
+
+00:12:02.890 --> 00:12:16.180
+câmpul de căutare Konst cu capitalul F care provine de la recuzita oprire și, în cele din urmă, modificarea căutării nu provine din această schimbare
+
+00:12:16.180 --> 00:12:21.350
+de căutare care a fost o metodă a aplicației.
+
+00:12:21.370 --> 00:12:22.520
+Acesta provine din recuzită.
+
+00:12:22.600 --> 00:12:31.650
+Deci, din nou, pot spune în schimbarea căutării și eliminați punctul, să spunem că și din nou voi primi o eroare
+
+00:12:35.740 --> 00:12:42.040
+spunând că câmpul de căutare nu este definit deoarece amintesc cu statul nostru redux
+
+00:12:42.040 --> 00:12:47.730
+că am schimbat câmpul de căutare pentru a avea calea de capital.
+
+00:12:47.750 --> 00:12:52.480
+Deci, dacă am schimbat acest lucru, înțelege că suntem interesați de asta.
+
+00:12:53.860 --> 00:12:57.080
+Totul funcționează.
+
+00:12:57.110 --> 00:13:06.950
+Acum, iată-mă puțin acum, pentru că în indexul nostru în ultima noastră cădere avem doar un singur releaser.
+
+00:13:06.980 --> 00:13:11.440
+Creăm magazinul de pe urma asta dacă ne întoarcem la APT.
+
+00:13:11.490 --> 00:13:17.460
+Starea "Da" are de fapt un singur câmp și acesta este câmpul de căutare.
+
+00:13:17.570 --> 00:13:21.950
+Așa că ar trebui să facem așa ceva.
+
+00:13:22.830 --> 00:13:28.680
+Pentru ca aceasta să funcționeze acum, vom reveni la acest punct, pentru că, odată ce vom
+
+00:13:29.190 --> 00:13:37.080
+începe să adăugăm mai mult pace de stat și mai mulți reduceri, va trebui să obținem stat din fiecare piesă despre care suntem
+
+00:13:37.080 --> 00:13:37.470
+interesați.
+
+00:13:37.860 --> 00:13:42.510
+Dar, pentru moment, ne vom întoarce la asta că vom spune câmpul de
+
+00:13:42.510 --> 00:13:47.630
+căutare de stat, deoarece dacă vă amintiți și magazinul Konsole dot log nu ajunge la stat.
+
+00:13:47.700 --> 00:13:49.230
+Tocmai am avut câmpul de căutare.
+
+00:13:49.530 --> 00:13:54.730
+Deci, să salvăm asta și să ne întoarcem.
+
+00:13:54.750 --> 00:13:55.850
+In regula.
+
+00:13:55.950 --> 00:13:58.160
+Nimic din consola nu este bună.
+
+00:13:58.230 --> 00:14:03.530
+Momentul adevărului dacă scriu ceva aici.
+
+00:14:03.610 --> 00:14:04.340
+Uită-te la asta.
+
+00:14:04.360 --> 00:14:11.140
+Totul funcționează, în ciuda faptului că nu mai avem statul pentru câmpul de
+
+00:14:11.440 --> 00:14:13.910
+căutare aici sau metoda.
+
+00:14:14.050 --> 00:14:16.570
+În schimb totul trece prin redux.
+
+00:14:16.570 --> 00:14:28.090
+Și doar pentru a testa această teorie dacă intru aici în câmpul meu de căutare setat și în loc de a avea aceste
+
+00:14:28.090 --> 00:14:37.240
+întoarcere automată voi spune consola sau textul de jurnal și voi reveni de aici obiectul, așa că vom
+
+00:14:37.240 --> 00:14:44.110
+merge pentru a consola jurnalul pentru a vedea dacă acțiunea se apropie.
+
+00:14:44.140 --> 00:14:46.480
+Salvez și mă întorc.
+
+00:14:46.480 --> 00:14:51.290
+Să deschidem instrumentul consola și să privim la asta.
+
+00:14:51.370 --> 00:14:55.890
+Tot ce scriu este trimis prin acțiune.
+
+00:14:55.900 --> 00:15:01.660
+Și o altă parte interesantă este dacă mă duc la reductor și din nou testez
+
+00:15:01.750 --> 00:15:11.340
+totul și spun consolă câine log tip acțiune tip I salva acest lucru și du-te înapoi vedem că avem o mică acțiune amuzant care se întâmplă.
+
+00:15:11.340 --> 00:15:13.980
+Și aceasta este setarea implicită atunci când este inițiată redox.
+
+00:15:14.100 --> 00:15:20.520
+Până acum, dacă dau clic pe ceva sau tastez ceva, obțin schimb de căutări în câmpul de căutare
+
+00:15:20.520 --> 00:15:27.390
+real, deoarece reductorul la fiecare acțiune se execută și spune că a schimbat căutarea de schimbare ar trebui să se întâmple.
+
+00:15:27.420 --> 00:15:29.960
+Dacă este cazul, voi reveni la un nou stat.
+
+00:15:29.970 --> 00:15:31.050
+Foarte tare.
+
+00:15:31.050 --> 00:15:37.820
+Tocmai ne-am conectat reacționăm la redox și totul funcționează frumos.
+
+00:15:38.850 --> 00:15:44.370
+Există un pic de boilerplate aici și știi că trebuie să-ți amintești
+
+00:15:44.370 --> 00:15:53.040
+starea hărții pe harta propului expediată la prop, dar odată ce te obișnuiești cu acea sintaxă este într-adevăr foarte frumos
+
+00:15:53.250 --> 00:16:01.710
+și frumos felul în care funcționează redoxul și cum am curățat totul în care totul curge frumos, așa cum
+
+00:16:01.710 --> 00:16:10.320
+am menționat, am creat o interacțiune care devine expediată într-o reducere sau o funcție care, bazată pe acea acțiune,
+
+00:16:10.320 --> 00:16:13.710
+ia starea și o schimbă în magazin.
+
+00:16:13.710 --> 00:16:19.200
+Și pentru că magazinul a fost actualizat, componentele re-act care sunt interesate vor asculta
+
+00:16:19.200 --> 00:16:22.040
+aceste schimbări și vor face o schimbare.
+
+00:16:23.460 --> 00:16:25.260
+Foarte tare.
+
+00:16:25.260 --> 00:16:28.430
+Bineînțeles, niște chestii interesante vor apărea în următorul videoclip.
+
+00:16:28.620 --> 00:16:30.080
+O să văd pe asta.
+
+00:16:30.080 --> 00:16:30.390
+Pa! Pa.

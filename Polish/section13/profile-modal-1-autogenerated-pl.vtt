@@ -1,0 +1,163 @@
+﻿WEBVTT
+
+00:00:00.920 --> 00:00:09.050
+Wracajmy, mamy tu fajną konfigurację, w której mamy teraz ikonę profilu i możemy wylogować się lub
+
+00:00:09.050 --> 00:00:12.870
+wyświetlić profil, albo przynajmniej możemy go kliknąć.
+
+00:00:13.010 --> 00:00:15.690
+Ale nie ma funkcji profilu widoku.
+
+00:00:15.800 --> 00:00:16.970
+Możemy się wylogować.
+
+00:00:17.090 --> 00:00:23.810
+Ale kiedy klikam "Wyświetl profil" nic się nie dzieje teraz lub zamierzamy to zrobić, gdy klikniemy Wyświetl
+
+00:00:23.810 --> 00:00:28.810
+profil, myślę, że byłoby miło, gdybyśmy mieli model, który się pojawi.
+
+00:00:29.330 --> 00:00:36.680
+Ten model pozwala nam zmienić naszą nazwę, może zmienić inne pola w naszym profilu i odpowiednio je
+
+00:00:36.740 --> 00:00:37.390
+zaktualizować.
+
+00:00:37.490 --> 00:00:40.710
+Być może nasza nazwa jest aktualizowana tutaj.
+
+00:00:42.490 --> 00:00:43.320
+Zróbmy to.
+
+00:00:43.420 --> 00:00:47.940
+Zbudujmy komponent, który tworzy dla nas model.
+
+00:00:48.400 --> 00:00:53.800
+Na szczęście dla nas re-act pojawiła się nowa funkcja o nazwie portal tworzenia.
+
+00:00:53.800 --> 00:00:58.450
+Widzisz modały w ogóle, a aplikacje są bardzo powszechne.
+
+00:00:58.870 --> 00:01:06.280
+Wcześniej nie było problemu, w którym nie mieliśmy portali i był to duży problem z konfigurowaniem modeli
+
+00:01:06.280 --> 00:01:11.170
+w taki sposób, który działa bardzo dobrze przy ponownym wprowadzaniu zmian.
+
+00:01:11.210 --> 00:01:16.490
+Teraz wraz z wprowadzeniem portali stało się to naprawdę bardzo proste i mają
+
+00:01:16.490 --> 00:01:17.710
+naprawdę dobrą dokumentację.
+
+00:01:17.810 --> 00:01:21.610
+Jeśli chcesz przeczytać więcej na ten temat i naprawdę ładne fragmenty kodu, jak również.
+
+00:01:21.980 --> 00:01:26.990
+Zamierzamy tutaj zbudować własny model, który zawiera profil, więc gdy klikniemy
+
+00:01:26.990 --> 00:01:30.940
+na profil lub profil profilu, otrzymamy ten model.
+
+00:01:30.980 --> 00:01:33.400
+A więc przejdźmy do pracy.
+
+00:01:33.540 --> 00:01:38.030
+Pierwszą rzeczą, którą chcę zrobić, jest powrót do pliku dodgiest index.
+
+00:01:38.070 --> 00:01:41.260
+Zamierzam zamknąć niektóre z tych rzeczy tylko po to, aby zachować porządek.
+
+00:01:42.780 --> 00:01:43.310
+DOBRZE.
+
+00:01:43.560 --> 00:01:52.290
+Teraz sposób działania modów polega na tym, że chcemy mieć pewność, że mamy nowy, re-actowy render, który jest poza aplikacją
+
+00:01:52.290 --> 00:01:55.670
+i to jest fajne w przypadku portali.
+
+00:01:55.850 --> 00:02:02.300
+Możesz mieć portal, który jest całkowicie oddzielony od aplikacji i kilka ponownie renderować Dom.
+
+00:02:02.310 --> 00:02:13.350
+Pomyśl o tym, jako o innym reagowaniu na render, który można nazwać modalnym, i korzystając z portalu "re-act create"
+
+00:02:13.380 --> 00:02:19.720
+możemy faktycznie przenieść rekordy pomiędzy nimi, co jest naprawdę fajne.
+
+00:02:19.740 --> 00:02:22.080
+To trochę jak portal.
+
+00:02:22.170 --> 00:02:24.050
+I dlatego nazywa się Portal.
+
+00:02:24.060 --> 00:02:31.650
+Chcemy stworzyć kolejny element HMO, do którego połączyliśmy moduł modalny.
+
+00:02:31.860 --> 00:02:32.610
+Weźmy się za to.
+
+00:02:33.900 --> 00:02:42.870
+Pierwszą rzeczą, którą mam zamiar zrobić, to wrócić do mojego publicznego folderu, w którym mój indeks ma pliki i jeśli
+
+00:02:42.870 --> 00:02:46.090
+przewinę tutaj, zobaczymy, że mamy podziały root.
+
+00:02:46.110 --> 00:02:53.030
+To tam jest ponowne wiązanie i renderowanie wszystkiego, ale tutaj chcę
+
+00:02:54.130 --> 00:03:03.110
+utworzyć portal modalny i mogę powiedzieć div ID, a my nazwiemy to, co chcemy, powiedzmy, modalne.
+
+00:03:03.240 --> 00:03:09.000
+I znowu podoba mi się ta demonstracja, ponieważ pokazuje, jak działa ponowne działanie i jak można
+
+00:03:09.000 --> 00:03:10.890
+rozszerzyć funkcjonalność ponownego działania.
+
+00:03:10.900 --> 00:03:17.950
+Teraz stworzyliśmy kolejną rzecz, do której możemy powiązać naszego śmiertelnika i używając portalu tworzenia, możemy po prostu upewnić się, że
+
+00:03:17.950 --> 00:03:23.740
+wszystko, co znajduje się w aplikacji, przekazuje rekwizyty także do tego, co znajduje się na trasie przejazdu
+
+00:03:23.860 --> 00:03:24.580
+samochodowego.
+
+00:03:24.640 --> 00:03:29.040
+Powiedzmy to i wróćmy do naszego apt.
+
+00:03:30.710 --> 00:03:31.700
+Teraz w aplikacji.
+
+00:03:31.730 --> 00:03:38.140
+Tak, powiedzmy, że zamierzamy zaimportować kolejny komponent, który nie został jeszcze stworzony, ale niedługo.
+
+00:03:38.420 --> 00:03:47.210
+I to będzie modalny komponent i zamierzamy go zaimportować z naszego folderu komponentów
+
+00:03:48.080 --> 00:03:54.330
+i będzie to nazywane ruchliwym lub stwórzmy folder modalny.
+
+00:03:56.610 --> 00:04:02.450
+I dostaję trochę błędu, ponieważ nie stworzyliśmy jeszcze modalnych komponentów.
+
+00:04:02.460 --> 00:04:02.750
+W porządku.
+
+00:04:02.790 --> 00:04:03.760
+Zróbmy to.
+
+00:04:03.810 --> 00:04:08.920
+Chcę przejść do komponentów, stworzyć nowy folder, który nazwiemy ruchliwym.
+
+00:04:09.480 --> 00:04:16.880
+W folderze modalnym wiem, że robimy tu trochę powtórnie, ale na razie wszystko w porządku.
+
+00:04:16.890 --> 00:04:18.270
+Modal dodgiest
+
+00:04:20.880 --> 00:04:23.720
+I zacznijmy budować ten komponent Modalu.

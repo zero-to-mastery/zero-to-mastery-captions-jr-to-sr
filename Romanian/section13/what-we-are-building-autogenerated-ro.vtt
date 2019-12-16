@@ -1,0 +1,190 @@
+﻿WEBVTT
+
+00:00:01.390 --> 00:00:02.380
+Bine ai revenit.
+
+00:00:02.380 --> 00:00:07.360
+Înainte de a începe să ne construim managementul sesiunilor și în sus, vreau să fiu sigur că suntem clari
+
+00:00:07.360 --> 00:00:08.630
+de ceea ce construim.
+
+00:00:08.680 --> 00:00:14.950
+Așadar, am creat câteva diagrame pentru a trece peste pașii acum acum dacă vă amintiți că aceasta este o autentificare bazată pe token pe
+
+00:00:15.310 --> 00:00:18.230
+care o conectăm prin trimiterea numelui de utilizator și a parolei.
+
+00:00:18.310 --> 00:00:21.890
+Serverul face unele eforturi pentru a se asigura că numele de utilizator și parola se potrivesc.
+
+00:00:21.910 --> 00:00:29.060
+Apoi vom genera un jeton JWT pe care o vom face din nou și apoi vom trimite acel cod
+
+00:00:29.140 --> 00:00:35.380
+GWG înapoi la browser și pe browserul pe care îl vom păstra, astfel încât oricând trebuie
+
+00:00:35.380 --> 00:00:43.030
+să facem o cerere cum ar fi X spunând profilului 23 că ar trebui să avem acces la el trimit
+
+00:00:43.090 --> 00:00:51.340
+tokenul GW în antetul de autorizare ca parte a cererii către browser-ul pe care browser-ul pur și simplu Rantz punctul verifică pe
+
+00:00:51.640 --> 00:00:52.380
+token.
+
+00:00:52.420 --> 00:00:59.640
+Asigurați-vă că este un semn că a fost generat și ne va trimite pachetul cu pachetul de profil pe care îl vom
+
+00:01:00.100 --> 00:01:01.210
+numi un cadou.
+
+00:01:01.240 --> 00:01:03.170
+Deci avem acces la ea.
+
+00:01:03.340 --> 00:01:11.860
+Și din nou, cu o autentificare bazată pe cookie, trimitem numele de utilizator și parola din nou serverul face
+
+00:01:12.010 --> 00:01:19.330
+verificările de lucru numele de utilizator și parola generează un cookie o bucată de șir care
+
+00:01:19.330 --> 00:01:21.790
+este unică îl trimite browserului.
+
+00:01:21.990 --> 00:01:29.580
+Browserul își amintește că este cookie și ori de câte ori are nevoie de profil 23 Ei bine, va
+
+00:01:29.580 --> 00:01:31.620
+trimite aceste informații către server.
+
+00:01:31.650 --> 00:01:38.420
+Serverul va verifica acum taxa care este cookie-ul la taxa pe care o stochează.
+
+00:01:38.850 --> 00:01:41.470
+Și amintiți-vă să spunem o bază de date.
+
+00:01:41.760 --> 00:01:47.580
+Și în acest caz ar trebui să aveți ceva de genul Pretis unde Red stochează sesiunea bucla de
+
+00:01:47.850 --> 00:01:49.800
+șir pe care se află cookie-ul.
+
+00:01:50.040 --> 00:01:54.320
+Deci, serverul poate spune că există acest cookie.
+
+00:01:54.320 --> 00:01:58.710
+Și da, am creat acest modul cookie, acest cookie aparține acestui utilizator.
+
+00:01:58.710 --> 00:02:01.560
+Îi poți trimite pachetul.
+
+00:02:01.560 --> 00:02:08.590
+Mergeți bine că vom factura este de fapt o implementare a celor două.
+
+00:02:08.700 --> 00:02:14.700
+Și motivul pentru care am ales acest lucru este că există câteva lucruri care cred că este un mod sigur și sigur de a
+
+00:02:14.700 --> 00:02:15.290
+face lucrurile.
+
+00:02:15.300 --> 00:02:17.260
+Vă oferă o anumită flexibilitate.
+
+00:02:17.460 --> 00:02:23.450
+Și așa am implementat autentificarea și sesiunile personale în aplicațiile mele.
+
+00:02:23.760 --> 00:02:29.130
+Dar, de asemenea, vă învață ambele moduri de a face lucruri, astfel încât să puteți alege și să alegeți și să determinați pentru dvs.
+
+00:02:29.130 --> 00:02:30.970
+ceea ce este mai bine pentru dvs.
+
+00:02:31.260 --> 00:02:35.880
+Ei bine, vom face este că vom avea un nume de utilizator și o parolă de verificare de către server
+
+00:02:35.880 --> 00:02:38.770
+și asta e ceva ce facem deja cu semnul și obiectivul nostru.
+
+00:02:38.850 --> 00:02:47.970
+Și creierul inteligent verificăm funcția de comparare a scriptului B și comparăm trecutul cu hașul stocat în baza
+
+00:02:47.970 --> 00:02:49.740
+noastră de date.
+
+00:02:49.740 --> 00:02:53.340
+Atunci vom genera un simbol.
+
+00:02:53.340 --> 00:03:01.710
+Acum acest tokin va fi trimis înapoi la server și acest tokin va fi din nou
+
+00:03:02.100 --> 00:03:03.970
+salvat în browser.
+
+00:03:04.020 --> 00:03:08.030
+Ei spun serverul Da, jetonul este trimis înapoi la browser.
+
+00:03:08.600 --> 00:03:14.450
+Browserul o salvează și apoi, în orice moment, dorim să accesăm profilul pe
+
+00:03:14.450 --> 00:03:19.620
+care îl vom trimite înapoi în browser sau înapoi la server.
+
+00:03:21.240 --> 00:03:28.530
+Acum diferența este până în acest moment am făcut un fel de JWT, dar în loc de a
+
+00:03:28.560 --> 00:03:39.030
+rula doar JWT tokin dot varify noi în schimb, vom verifica noastre de a citi noi baza de date care va crea și conecta la API
+
+00:03:39.030 --> 00:03:47.970
+noastre și această bază de date se merge să ne menținem rezistența JWT, astfel încât să putem verifica pentru a vedea în baza
+
+00:03:48.030 --> 00:03:49.600
+de date rattus.
+
+00:03:49.610 --> 00:03:52.180
+Oia avem jetonul JWT.
+
+00:03:52.380 --> 00:03:59.100
+Deci, în feluri similare cu ceea ce facem cu cookie-urile și se va întoarce adevărat sau fals, serverul
+
+00:03:59.300 --> 00:04:07.660
+este verificat odată ce spune că este corect un jwt valid că nu a decodat-o de fapt pur și simplu verifică această
+
+00:04:07.660 --> 00:04:13.450
+sesiune și apoi spune bine că puteți avea prezent și vedeți aici că vom combina
+
+00:04:13.450 --> 00:04:17.330
+aceste două metode în loc să verificăm doar GWG.
+
+00:04:17.410 --> 00:04:21.620
+De fapt, stocăm-o pe baza de date și verificăm-o.
+
+00:04:21.970 --> 00:04:25.490
+Și cum am spus că beneficiezi de avantajele ambelor.
+
+00:04:25.630 --> 00:04:32.330
+Făcând-o în acest fel cu dezavantajul de care pierdeți din avantajele lipsei de a stoca lucruri.
+
+00:04:32.350 --> 00:04:33.920
+Dacă utilizați JWT.
+
+00:04:34.120 --> 00:04:38.990
+Dar încă o dată cred că este o modalitate bună de a face lucrurile și demonstrează ambele situații.
+
+00:04:39.130 --> 00:04:43.270
+Deci, până la sfârșitul acestei secțiuni, vom avea implementat acest lucru și vom reveni la
+
+00:04:43.270 --> 00:04:45.220
+această diagramă, astfel încât totul are sens.
+
+00:04:45.250 --> 00:04:46.900
+Sper că sunteți încântat.
+
+00:04:47.140 --> 00:04:50.370
+Va fi o mulțime de muncă, dar, de asemenea, va fi o mulțime de distracție.
+
+00:04:51.570 --> 00:04:52.680
+Voi vedea în următorul.
+
+00:04:52.990 --> 00:04:53.250
+Buh-Pa.

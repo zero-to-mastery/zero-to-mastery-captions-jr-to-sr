@@ -1,0 +1,235 @@
+﻿WEBVTT
+
+00:00:00.640 --> 00:00:01.600
+Bine ai revenit.
+
+00:00:01.790 --> 00:00:03.950
+Să facem ceva distractiv aici.
+
+00:00:04.100 --> 00:00:10.200
+Putem crea propriul nostru balancer slab atunci când vine vorba de echilibrarea încărcării.
+
+00:00:10.210 --> 00:00:18.040
+Vom folosi motorul X și există câteva opțiuni posibile pe care le pot face accesul motorului popular, dar și ceva
+
+00:00:18.040 --> 00:00:20.740
+numit H. A. proxy-ul este folosit foarte mult.
+
+00:00:21.590 --> 00:00:27.050
+Cele mai multe dintre aceste instrumente necesită doar un fișier de configurare și există o mulțime de resurse acolo pentru a
+
+00:00:27.050 --> 00:00:27.940
+vă ajuta online.
+
+00:00:28.820 --> 00:00:34.690
+Dar, în plus, crearea unui echilibru scăzut de către dvs. devine din ce în ce mai puțin obișnuită.
+
+00:00:34.730 --> 00:00:42.920
+Puteți vedea cele mai multe companii ca Amazon Digital Ocean și majoritatea furnizorilor care furnizează infrastructură au deja configurații de
+
+00:00:42.920 --> 00:00:50.420
+echilibrare a încărcăturilor pe care le pot implementa cu ușurință, de exemplu, acțiunea digitală are balansoare scăzute pe
+
+00:00:50.420 --> 00:00:53.750
+care le pot adăuga pe serverele dvs.
+
+00:00:53.830 --> 00:00:55.180
+Este foarte simplu.
+
+00:00:55.180 --> 00:01:00.340
+Nu aveți nevoie de cod și faceți clic pe câteva butoane și totul este în jos pentru tine.
+
+00:01:00.340 --> 00:01:08.460
+Aveți, de asemenea, Amazon care are o echilibrare a încărcării elastice, care din nou pur și simplu pur și simplu implementați și configurați.
+
+00:01:08.580 --> 00:01:14.940
+Cu toate acestea, vreau să construim un balancer de sarcină doar pentru a înțelege cum funcționează și pentru a avea cunoștințe
+
+00:01:14.940 --> 00:01:21.420
+despre modul în care aceste lucruri, cum ar fi Amazon și Digital Ocean, cum aceste companii sunt capabile să implementeze echilibrarea încărcării.
+
+00:01:21.690 --> 00:01:23.200
+Deci, hai să mergem.
+
+00:01:23.250 --> 00:01:29.790
+Am aici un fișier de distracție mic și veți avea acces la acest lucru la sfârșitul acestui videoclip, astfel încât să puteți
+
+00:01:30.000 --> 00:01:34.200
+testa câteva dintre tehnicile de echilibrare scăzută și testarea scăzută pe care o vom
+
+00:01:34.230 --> 00:01:36.390
+face pentru că este un multă distracție.
+
+00:01:36.390 --> 00:01:38.700
+Acum nu fi coplesiti de codul de aici.
+
+00:01:38.700 --> 00:01:46.260
+Nu am folosit expresia și folosesc modulul și nodul GTP nativ pentru a crea doar un server simplu care
+
+00:01:46.290 --> 00:01:48.980
+returnează o pacoste falsă pe pictogramă.
+
+00:01:48.990 --> 00:01:57.060
+Și fac asta doar pentru a fi siguri că nu avem niciun jurnal ciudat de a pierde Fabrikant și apoi pur
+
+00:01:57.060 --> 00:01:59.370
+și simplu suntem doar anulați logarea.
+
+00:01:59.370 --> 00:02:05.010
+Adăugăm o serie de anteturi de răspuns, dar din nou este important că suntem mereu logați la consola de
+
+00:02:05.100 --> 00:02:07.190
+fiecare dată când suntem atacați de amperi.
+
+00:02:07.200 --> 00:02:12.040
+Am fost lovit și serverul nostru va fi difuzat aici.
+
+00:02:12.140 --> 00:02:18.670
+Nimic prea nebun, dar am și un docier compuse din nou un fișier pe care l-am văzut mai devreme și
+
+00:02:18.790 --> 00:02:22.140
+acest fișier compost de stalker este destul de interesant.
+
+00:02:22.150 --> 00:02:24.310
+Avem câteva servicii.
+
+00:02:24.310 --> 00:02:29.380
+Unul este web pe cealaltă Web 2 și web 3.
+
+00:02:29.470 --> 00:02:31.180
+Foarte creativ cu numele meu aici.
+
+00:02:31.360 --> 00:02:39.190
+Dar vedeți aici că pur și simplu au porturi de 3000 și să schimbăm de fapt aceste două porturi diferite, așa
+
+00:02:39.400 --> 00:02:42.950
+că avem o idee mai bună despre cum funcționează.
+
+00:02:42.950 --> 00:02:51.620
+Deci, fiecare serviciu de pe diferite porturi și tot ce urmează să facă este să executați comanda de construire.
+
+00:02:51.670 --> 00:02:53.770
+De asemenea, observați aici că acum facem redirecționarea porturilor.
+
+00:02:53.770 --> 00:02:59.890
+Deci, asta inseamna ca sunt doar pe cont propriu, numai ceea ce este in doc sau container va avea acces
+
+00:02:59.890 --> 00:03:00.660
+la ele.
+
+00:03:00.790 --> 00:03:05.170
+Dacă mergem la construirea care este docul sau fișierul care construiește aceste.
+
+00:03:05.330 --> 00:03:09.890
+Văd că pur și simplu folosim un nod pe care îl expunem la port trei mii.
+
+00:03:09.920 --> 00:03:15.890
+Creăm un director numit aplicație și ne mișcăm serverul care conține fișierul GS pe care vi
+
+00:03:15.890 --> 00:03:24.170
+l-am arătat deja și, de asemenea, pachetul dodgiest în fișier pentru a rula instalarea NPM și apoi avem doar punctul de intrare și
+
+00:03:24.170 --> 00:03:28.220
+comanda care trebuie executată serverul pe care îl avem aici.
+
+00:03:31.260 --> 00:03:34.340
+Și nu se întâmplă nimic prea nebun aici.
+
+00:03:34.350 --> 00:03:41.940
+Dar atunci avem ceva numit balancer de sarcină și acest balancer de sarcină se construiește dintr-un dosar următor furios pe
+
+00:03:41.940 --> 00:03:44.050
+care nu l-am creat încă.
+
+00:03:44.130 --> 00:03:51.700
+Acesta va expune portul 80 și vom avea acces la localhost ay și va lega web unul până
+
+00:03:51.880 --> 00:04:00.590
+la trei și de asemenea folosește volume și are acest comentariu acum Voi părăsi o resursă în acest proiect pentru a vă
+
+00:04:00.590 --> 00:04:01.960
+citi pe aceasta.
+
+00:04:01.970 --> 00:04:07.370
+Tot ce face este că ne permite să executați comenzi Doctor în interiorul containerului și am legat de un articol
+
+00:04:07.370 --> 00:04:09.760
+despre care puteți citi mai multe informații despre.
+
+00:04:09.770 --> 00:04:12.200
+Acum aceasta nu este o configurație tipică.
+
+00:04:12.200 --> 00:04:20.370
+Când faci un balancer de încărcare pentru că avem totul sub un singur container dacă îți amintești că vrem să avem
+
+00:04:20.370 --> 00:04:25.100
+un balancer de sarcină care este pe cont propriu cu servere diferite.
+
+00:04:25.290 --> 00:04:30.510
+Chiar acum avem totul într-un singur container gigant și fac doar acest lucru pentru a demonstra
+
+00:04:30.540 --> 00:04:37.350
+că fără să fiu nevoit să rotesc toate aceste servicii diferite pe laptopul meu și să apuc toate elementele dintr-un
+
+00:04:37.450 --> 00:04:39.800
+fișier sau să compun pentru demonstrații.
+
+00:04:39.900 --> 00:04:46.260
+Dar în viața reală avem o mașină de echilibrare a încărcăturii pe cont propriu un server pe
+
+00:04:46.290 --> 00:04:56.230
+cont propriu un server pe cont propriu un server trei pe cont propriu dar cu acest fișier avem acum o modalitate de a avea balancer de încărcare
+
+00:04:56.230 --> 00:05:05.260
+să fie ranne să fie lovit prin portul 80 și apoi să distribuiți calea către serverul 1 2 și 3 care vor fi fiecare
+
+00:05:05.540 --> 00:05:07.510
+executând această copie a serverului.
+
+00:05:07.640 --> 00:05:13.840
+Deci, să creați de fapt acest dosar al motorului X și să creați un bouncer de sarcină Angie Nax.
+
+00:05:13.890 --> 00:05:24.550
+Voi spune folderul nou, apoi motorul X, iar în următorul dosar trebuie să creăm două lucruri.
+
+00:05:24.760 --> 00:05:33.700
+Mai intai avem nevoie sa creem un fisier docker deoarece amintim ca trebuie sa construim in conformitate cu Dr. acum și în această toamnă vom face un
+
+00:05:33.700 --> 00:05:36.970
+simplu comentariu la fișier doc.
+
+00:05:37.060 --> 00:05:42.050
+Vom folosi doar imaginea următoarei motoare care este deja acolo.
+
+00:05:42.130 --> 00:05:44.050
+Mulțumim hub-ului Sudhakar.
+
+00:05:44.320 --> 00:05:45.700
+Și apoi vom
+
+00:05:49.130 --> 00:05:54.680
+copia un fișier pe care îl vom crea numit Motor X dot com care este fișierul de
+
+00:05:54.680 --> 00:06:04.010
+configurare și motorul X pe care îl vom crea în scurt timp și îl vom muta în containerul nostru în locația implicită pe care configurația motorului X Files fișiere
+
+00:06:04.010 --> 00:06:06.280
+ar trebui să fie în cazul nostru.
+
+00:06:06.350 --> 00:06:09.020
+O să-i spunem așa.
+
+00:06:13.360 --> 00:06:14.310
+Asta e.
+
+00:06:14.470 --> 00:06:19.780
+Putem folosi Dr. Howard să luăm containerul sau să luăm imaginea și apoi îl
+
+00:06:19.960 --> 00:06:21.190
+putem configura din capătul nostru.
+
+00:06:21.340 --> 00:06:29.370
+Deci, să creăm un fișier nou acum și acesta va fi motorul nostru X dot com fine aici.
+
+00:06:29.510 --> 00:06:31.820
+Să începem să lucrăm la configurația noastră.

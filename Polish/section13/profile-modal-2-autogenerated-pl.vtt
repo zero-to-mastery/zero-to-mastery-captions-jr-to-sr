@@ -1,0 +1,736 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:10.010
+Pierwszą rzeczą, którą chcemy zrobić, jak robimy ze wszystkimi komponentami, jest słaba reaktywacja. Ale chcemy też
+
+00:00:10.610 --> 00:00:19.140
+zaimportować reakcję z pakietu "odśwież" i mam wrażenie, że będziemy potrzebować stylu CSSA z naszą ruchliwością.
+
+00:00:19.140 --> 00:00:19.930
+.
+
+00:00:20.140 --> 00:00:25.850
+Dlatego zamierzam stworzyć plik CSSA również dla naszej mobilności.
+
+00:00:26.080 --> 00:00:34.560
+I zanim zapomnę, a my jeszcze raz pójdziemy dalej i upewnimy się, że utworzę
+
+00:00:34.660 --> 00:00:36.200
+nowy plik
+
+00:00:40.330 --> 00:00:45.920
+ruchliwej kropki CSSA i upewnij się, że używam średnika.
+
+00:00:45.980 --> 00:00:50.910
+Teraz pierwszą rzeczą, którą zamierzamy zrobić, jest to, że musimy związać ten ruch.
+
+00:00:50.930 --> 00:00:57.860
+Pamiętajmy, że stworzyliśmy inny element div, do którego możemy się przyłączyć, wykorzystując reakcję, ponieważ
+
+00:00:57.860 --> 00:01:01.670
+będzie całkowicie oddzielony od naszego komponentu aplikacji.
+
+00:01:02.420 --> 00:01:16.440
+Zróbmy to, powiedzmy, że korzeń modelu Konst będzie równy elementom dokumentu dot get według id, a my weźmiemy za
+
+00:01:16.440 --> 00:01:18.890
+to modalny root.
+
+00:01:18.900 --> 00:01:26.640
+Myślę, że właśnie to nazwaliśmy, a teraz mamy dostęp do tego komentarza na naszym indeksie, który
+
+00:01:26.700 --> 00:01:28.330
+rozpoczyna stronę shemale.
+
+00:01:28.330 --> 00:01:29.530
+Oto część zabawna.
+
+00:01:29.800 --> 00:01:37.050
+Zamierzamy stworzyć nasz model, który rozszerza komponent "reaguj ponownie".
+
+00:01:37.180 --> 00:01:39.920
+Nic nowego tutaj już wcześniej nie robiliśmy.
+
+00:01:39.940 --> 00:01:41.440
+Chcemy również wyeksportować go
+
+00:01:46.900 --> 00:01:47.560
+tutaj.
+
+00:01:47.560 --> 00:01:49.210
+To jest problematyczne.
+
+00:01:49.240 --> 00:01:53.740
+Chcemy mieć naszego regularnego konstruktora i chcemy zaakceptować
+
+00:01:57.220 --> 00:01:58.620
+superfony rekwizytów.
+
+00:01:59.050 --> 00:02:07.790
+Możemy więc użyć tego słowa kluczowego, a następnie tutaj chcę mieć odniesienie do czegoś zwanego elementem,
+
+00:02:08.630 --> 00:02:13.760
+a ten element będzie elementem dokumentu dot, a ja
+
+00:02:17.060 --> 00:02:19.580
+wyjaśnię, co to oznacza.
+
+00:02:19.610 --> 00:02:25.940
+I znów idąc z tym modelem może się trochę zagmatwać, jeśli po raz pierwszy widzisz
+
+00:02:25.940 --> 00:02:26.890
+ten kod.
+
+00:02:27.200 --> 00:02:32.960
+Ponownie przeinaczaj naprawdę dobrą dokumentację, więc możesz iść i zobaczysz część tego kodu na swojej stronie internetowej,
+
+00:02:32.960 --> 00:02:35.880
+ponieważ jest to zalecany sposób na zrobienie modów.
+
+00:02:35.900 --> 00:02:41.200
+Być może będziesz musiał się z tym bawić kilka razy, ale przyzwyczaisz się do tego.
+
+00:02:41.270 --> 00:02:42.520
+Obiecuję.
+
+00:02:42.590 --> 00:02:50.290
+To, co chcemy najpierw zrobić, to wyrenderować moto.
+
+00:02:50.790 --> 00:03:02.570
+A sposób, w jaki to robimy, kiedy korzystamy z portalu, oznacza, że powracamy do ponownego utworzenia portalu Dom dot
+
+00:03:05.420 --> 00:03:09.240
+create, w którym przyjmujemy dwa parametry.
+
+00:03:09.320 --> 00:03:19.070
+Przyjmie to kropkę na dzieci z tym co jest w środku modalnego komponentu,
+
+00:03:19.070 --> 00:03:28.330
+a także zaakceptuje ten element kropki, element, który właśnie utworzyliśmy element div,
+
+00:03:28.330 --> 00:03:32.820
+a ostatecznym elementem układanki jest
+
+00:03:35.340 --> 00:03:41.550
+stworzenie komponentu zamontowanego że kiedy modal jest otwarty.
+
+00:03:41.650 --> 00:03:48.360
+Chcemy dołączyć do modalnego katalogu głównego, czyli karty indeksu, pliku shemale.
+
+00:03:48.460 --> 00:03:49.630
+Chcemy dopisać
+
+00:03:54.400 --> 00:03:55.210
+element.
+
+00:03:55.410 --> 00:04:05.310
+Dodajemy ten element do modalnego katalogu głównego, a rozwój ten zostanie zawarty wokół tego, co wstawimy
+
+00:04:05.310 --> 00:04:08.320
+do tego komponentu Modalu.
+
+00:04:08.580 --> 00:04:10.590
+To dzieci.
+
+00:04:10.690 --> 00:04:16.130
+Chcemy też uważać na modele, ponieważ są blisko i chcemy z nich wyjść.
+
+00:04:16.420 --> 00:04:20.630
+Nie chcemy zostawiać żadnych śmieci w naszym pliku indeksu.
+
+00:04:20.710 --> 00:04:30.470
+Możemy posprzątać po sobie, wykonując komponent na górze, chyba nie ma tam kapitału.
+
+00:04:33.290 --> 00:04:39.460
+I tutaj po prostu mówimy modalny root Daut usuń dziecko.
+
+00:04:39.710 --> 00:04:46.790
+Ten element kropki więc i muszę zrobić ten element
+
+00:04:46.880 --> 00:04:56.140
+myślowy tutaj, ponieważ odnosimy się do ostatecznego sejfu i to właśnie stworzyliśmy modal.
+
+00:04:56.350 --> 00:05:02.590
+Wiem, że to może trochę dezorientować, ale myślę o tym jako o standardowym sposobie tworzenia modalu i reagowania.
+
+00:05:02.620 --> 00:05:08.870
+Wszystko, co robimy, to stworzenie portalu, fajnej, małej metody, która przychodzi z reakcją.
+
+00:05:09.370 --> 00:05:12.920
+I wzniesie się, kiedy go usuniemy.
+
+00:05:12.970 --> 00:05:18.040
+Otwarcie dla nas jakiegoś symbolu, kiedy się zamontujemy.
+
+00:05:18.230 --> 00:05:19.870
+Dodam też trochę.
+
+00:05:19.990 --> 00:05:26.460
+Widzą SS Tylko po to, aby upewnić się, że modal wyskoczy i widzimy to poprawnie.
+
+00:05:26.560 --> 00:05:37.280
+Zamierzam wykorzystać pomysł moralnego bruita, który mamy w pliku DML i nadać mu pozycję względną i
+
+00:05:37.700 --> 00:05:41.220
+indeks z 9 9.
+
+00:05:41.220 --> 00:05:50.790
+Tak więc, aby upewnić się, że jest na samym początku, to po prostu zaoszczędzimy, że wracamy do
+
+00:05:50.790 --> 00:05:52.560
+logiki modalnej tak.
+
+00:05:52.770 --> 00:06:00.810
+A teraz, jeśli wrócimy do aplikacji dodgy nas, gdzie już importowaliśmy naszą ruchliwość, możemy przetestować to
+
+00:06:00.810 --> 00:06:02.340
+za pomocą komponentu.
+
+00:06:02.490 --> 00:06:08.390
+Przewińmy wszystko w dół do miejsca, w którym renderujemy, a może tylko na stronie głównej dla
+
+00:06:08.390 --> 00:06:08.900
+zabawy.
+
+00:06:08.900 --> 00:06:16.890
+Powiedz, że jesteś ruchliwy i pamiętaj, że akceptuje on dzieci, więc po prostu powiem "cześć" i zamknij "let's
+
+00:06:19.550 --> 00:06:22.670
+save" Hello nie jest zdefiniowany, ponieważ musi
+
+00:06:25.790 --> 00:06:28.300
+to być ciąg znaków.
+
+00:06:28.640 --> 00:06:29.500
+Wracajmy.
+
+00:06:30.860 --> 00:06:37.840
+I gdzie jest to Modal Phi, otwórz moje narzędzia programistyczne.
+
+00:06:38.000 --> 00:06:43.360
+Przejdźmy do elementów lub użyjmy go ponownie uruchom narzędzia programistyczne.
+
+00:06:43.420 --> 00:06:49.900
+Widzę, że jest aplikacja, ale nie widzę mojego modelu.
+
+00:06:51.550 --> 00:06:57.900
+Jeśli przejdę do płaszczyzny elementów, widzę, że mam trasę modelu ID.
+
+00:06:57.950 --> 00:06:58.820
+Mam
+
+00:07:01.460 --> 00:07:09.710
+div OK, ale nie ma w nim nic poza wyjątkiem dif.
+
+00:07:09.860 --> 00:07:13.380
+I musimy zrobić tutaj kilka rzeczy, aby rzeczywiście uzyskać odpowiedni model.
+
+00:07:13.730 --> 00:07:15.260
+Wracajmy.
+
+00:07:15.260 --> 00:07:22.490
+Pierwszą rzeczą, którą chcemy zrobić, jest to, co chcemy móc otworzyć ten model i włączać go i wyłączać.
+
+00:07:22.770 --> 00:07:29.210
+A ponieważ jest to całkiem spora funkcjonalność, dodajmy ją na samym szczycie
+
+00:07:29.210 --> 00:07:39.130
+Abdulle nas, gdzie mamy nasz stan i stwórzmy nowy stan o nazwie profil otwarty, a na razie ustawimy go jako fałszywy.
+
+00:07:40.450 --> 00:07:47.080
+A teraz możemy przekazać to jako rekwizyty do dowolnego komponentu, który chcemy.
+
+00:07:47.490 --> 00:07:51.260
+Dodajmy więc, że jest to profil otwarty
+
+00:07:54.010 --> 00:08:00.680
+dla naszego stanu i nawigacji, zanim jeszcze sprawdzimy, czy nasz router jest w domu.
+
+00:08:01.090 --> 00:08:02.920
+Przenieśmy to i zrobimy
+
+00:08:07.880 --> 00:08:09.540
+coś takiego.
+
+00:08:09.560 --> 00:08:16.320
+Użyj wyrażenia javascript, zawijając je w nawiasy klamrowe, a następnie wypowiadając profil otwarty.
+
+00:08:16.340 --> 00:08:21.760
+A jeśli jest to render modal W przeciwnym razie możemy powiedzieć nie.
+
+00:08:22.190 --> 00:08:29.540
+Innym łatwym sposobem na to jest użycie dużo czystszego, a to trochę stenograficznego, robiąc
+
+00:08:30.590 --> 00:08:34.720
+to trochę lepiej, żebyśmy mogli lepiej widzieć.
+
+00:08:38.020 --> 00:08:45.230
+Mówię, że jeśli profil jest prawdziwy, to idź dalej i spraw, by profil modalny był otwarty na fałsz.
+
+00:08:45.250 --> 00:08:50.030
+Cóż, to spowoduje błąd, więc nawet nie pójdzie do modalu i nie przeczyta go.
+
+00:08:50.030 --> 00:08:57.850
+Tak więc jest to skrótowy sposób robienia, jeśli chcesz zrobić skrętu operator, którego ostatnią opcją jest po prostu
+
+00:08:57.930 --> 00:08:58.540
+nie.
+
+00:08:58.650 --> 00:08:59.190
+W porządku.
+
+00:08:59.200 --> 00:09:05.530
+I tutaj w modalu Stwórzmy kolejny komponent, a
+
+00:09:05.530 --> 00:09:18.380
+my nazwiemy ten profil komponentu, ponieważ właśnie tam chcemy wyświetlić profil, a profil ten otrzyma stan Otwarty profil.
+
+00:09:18.460 --> 00:09:19.030
+Zapiszmy,
+
+00:09:22.310 --> 00:09:25.610
+a profil nie zostanie zdefiniowany, ponieważ musimy go zdefiniować.
+
+00:09:25.910 --> 00:09:29.170
+Ale zanim to zrobimy, chcę zrobić jedną małą rzecz.
+
+00:09:29.450 --> 00:09:37.430
+Chcę również użyć profilu otwartego, aby przełączyć modem, aby go włączyć lub wyłączyć, lub
+
+00:09:37.430 --> 00:09:47.990
+go zamontować, a my możemy po prostu podejść tutaj i dodać nowe wywołanie metody i uzyskać ruchomy ruch, a
+
+00:09:48.000 --> 00:09:54.150
+to przełączenie ruchliwe będzie funkcją to po prostu to zrobi.
+
+00:09:54.210 --> 00:10:09.490
+Ustaw stan i zostanie zaktualizowany profil otwarty do stanu DOT jest otwarty profil.
+
+00:10:09.550 --> 00:10:10.720
+Więc to po prostu przełącza.
+
+00:10:10.720 --> 00:10:12.740
+Prawda czy Fałsz Prawda czy fałsz za każdym razem.
+
+00:10:13.090 --> 00:10:19.180
+Teraz pamiętajcie o tym za każdym razem, gdy dotykam stanu i taki powinien być stan za
+
+00:10:19.180 --> 00:10:26.060
+każdym razem, gdy dotykam stanu w ustalonym stanie, który jest trochę nie, nie z powodu sposobu, w jaki działa ponownie.
+
+00:10:26.060 --> 00:10:34.410
+Chcemy zawsze upewnić się, że używamy funkcji sposobu aktualizowania stanu, a mianowicie, aby zrobić coś
+
+00:10:34.410 --> 00:10:35.520
+takiego.
+
+00:10:35.870 --> 00:10:45.220
+I możemy po prostu zawinąć je w nawiasy klamrowe, abyśmy zwrócili ten
+
+00:10:45.520 --> 00:10:49.000
+obiekt wcześniej, kiedy faktycznie
+
+00:10:51.600 --> 00:11:01.800
+zrobiliśmy to w "Wierzę, że seinen" lub zrobiliśmy to w ikonie profilu, którą zostawiliśmy.
+
+00:11:02.030 --> 00:11:09.740
+Ale to, co faktycznie chcemy zrobić, to zwrócić pełny stan, który chcemy zaktualizować, i sposób,
+
+00:11:09.860 --> 00:11:15.290
+w jaki robimy to przy odrobinie destrukturyzacji lub rozpowszechniania operatora.
+
+00:11:15.410 --> 00:11:18.200
+To jest punkt dot kropki.
+
+00:11:18.200 --> 00:11:26.240
+W tej chwili zwracam cały stan, a także aktualizuję bieżący stan z
+
+00:11:26.360 --> 00:11:29.160
+zaktualizowanym profilem IS.
+
+00:11:30.280 --> 00:11:40.280
+Zapiszmy to, a otrzymamy stan nie jest zdefiniowany, ponieważ musimy go zaktualizować do poprzedniego stanu parametru.
+
+00:11:40.520 --> 00:11:47.540
+I to musi być teraz poprzednio.
+
+00:11:47.550 --> 00:11:48.390
+W porządku.
+
+00:11:48.590 --> 00:11:53.940
+I nadal otrzymuję profil nie jest zdefiniowany, ale
+
+00:11:53.940 --> 00:12:06.330
+znowu, ponieważ nie mamy jeszcze komponentu, ale chcemy przekazać modalną metodę przełączania również do profilu, ponieważ możemy zamknąć profil ze strony
+
+00:12:06.330 --> 00:12:11.880
+profilu, ale możemy również otworzyć to z naszej strony nawigacyjnej.
+
+00:12:11.940 --> 00:12:22.530
+Zamierzam powiedzieć tę kropkę Tongo mortal powiedzmy, czy i zacznijmy tworzyć nasz komponent profilu, możemy to prawdopodobnie użyć i
+
+00:12:22.530 --> 00:12:29.280
+zamknąć model, ale także w nawigacji, gdzie robimy ikonę profilu, kliknij, a
+
+00:12:29.280 --> 00:12:35.160
+następnie wyświetl profil z menu rozwijane najprawdopodobniej też będzie tego
+
+00:12:35.160 --> 00:12:36.000
+potrzebować.
+
+00:12:36.000 --> 00:12:39.760
+Zamierzam więc dodać ją w nowej linii, żeby była trochę czystsza.
+
+00:12:39.780 --> 00:12:48.450
+Zamierzam powiedzieć, że znów się ruszam, przechodząc w dół tego trybu przełączania kropek.
+
+00:12:48.470 --> 00:12:48.730
+W porządku.
+
+00:12:48.770 --> 00:12:51.770
+Zbudujmy komponent profilu.
+
+00:12:51.860 --> 00:12:57.850
+Zamierzam dodać nowy plik tutaj do naszego folderu profilu, a to zostanie właśnie nazwane Profiliami.
+
+00:12:57.960 --> 00:12:58.780
+Tak.
+
+00:13:00.400 --> 00:13:01.460
+Teraz w profilu.
+
+00:13:01.520 --> 00:13:06.520
+Tak, zamierzam zaimportować powtórkę z ponownego aktu, a my
+
+00:13:11.030 --> 00:13:14.640
+po prostu wykonamy funkcję bezpaństwową.
+
+00:13:15.080 --> 00:13:21.240
+Powiemy tylko, że otrzyma profil Konst.
+
+00:13:21.360 --> 00:13:29.460
+Mamy otwarty profil, który otrzymujemy, wierzę, że jeśli wrócimy, profil jest otwarty i przełączany ruchowo,
+
+00:13:29.550 --> 00:13:31.050
+który otrzymujemy.
+
+00:13:31.050 --> 00:13:33.300
+Upewnijmy się więc, że mamy
+
+00:13:39.330 --> 00:13:42.290
+te i tam, gdzie chcemy zwrócić niektóre rzeczy.
+
+00:13:42.450 --> 00:13:48.520
+Teraz na razie chcę się upewnić, że to działa, więc powiem tylko DIVX i powiedzmy
+
+00:13:49.360 --> 00:13:50.270
+Jack Jack.
+
+00:13:50.300 --> 00:13:52.220
+Lub mniejszy, aby upewnić się, że to ciąg.
+
+00:13:52.230 --> 00:13:53.550
+Sprawdź
+
+00:13:56.440 --> 00:14:05.340
+sprawdź zamknij dzień upewnij się, że eksportujemy profil.
+
+00:14:05.430 --> 00:14:08.820
+Uratujmy.
+
+00:14:09.030 --> 00:14:11.270
+I chcemy też wrócić do APT.
+
+00:14:11.300 --> 00:14:21.920
+Tak, upewniam się, że importujemy komponent profilu, więc dodam profil z folderu profilu, oszczędzmy C,
+
+00:14:22.890 --> 00:14:30.840
+zapomnijmy o 10 latach, a teraz wróćmy do naszej aplikacji.
+
+00:14:30.850 --> 00:14:34.320
+Jeśli kliknę opcję Wyświetl profil, nic się nie dzieje.
+
+00:14:34.330 --> 00:14:42.330
+A to dlatego, że jeśli przejdziemy do naszych re-actowych pro-narzędzi Deval i patrzymy na to profil jest otwarty.
+
+00:14:42.330 --> 00:14:44.180
+Po kliknięciu Wyświetl profil.
+
+00:14:44.280 --> 00:14:46.380
+Cóż, niczego nie przełączamy.
+
+00:14:46.410 --> 00:14:49.130
+Nasz profil jest otwarty zawsze jest fałszywy.
+
+00:14:52.180 --> 00:14:55.620
+Ale jeśli wrócę i po prostu ustawię nasze apt.
+
+00:14:55.660 --> 00:14:56.050
+Tak.
+
+00:14:56.050 --> 00:15:02.320
+Czy Profar jest otwarty na prawdziwy powrót.
+
+00:15:02.420 --> 00:15:09.810
+Widzimy, że otwarty profil jest równy prawdzie, a my otwieramy naszą aplikację, patrz na to.
+
+00:15:09.810 --> 00:15:17.210
+Widzimy naszą ruchliwość i ten ruch ma komponent profilu, a ten komponent profilu ma div.
+
+00:15:17.310 --> 00:15:18.240
+Sprawdź czek.
+
+00:15:18.660 --> 00:15:23.610
+Ale nasza CSSA jest trochę wyłączona i nie jest wyświetlana, ale widzimy, że to działa, musimy tylko
+
+00:15:23.610 --> 00:15:26.170
+upewnić się, że możemy ją włączać i wyłączać.
+
+00:15:26.190 --> 00:15:27.030
+Pracujmy nad tym.
+
+00:15:28.690 --> 00:15:36.290
+Chcę przywrócić to do fałszywości iw sekcji profilu, sprawmy, że będzie to trochę bardziej interesujące.
+
+00:15:37.080 --> 00:15:47.080
+Zamierzam stworzyć div z klasą niektórych stylów, które otrzymam od Ptaka Kyona.
+
+00:15:47.250 --> 00:15:51.930
+Zróbmy zamknięty div.
+
+00:15:51.950 --> 00:15:56.870
+Umieść to w nowej linii i tutaj.
+
+00:15:57.130 --> 00:16:00.830
+Dodajmy, co powinno być.
+
+00:16:01.240 --> 00:16:09.180
+Po prostu chcę się upewnić, że modulator przełączania działa, więc dodajmy przycisk, a ten przycisk
+
+00:16:10.140 --> 00:16:11.700
+po prostu
+
+00:16:16.220 --> 00:16:23.140
+kliknie, że funkcja kliknięcia może nie widzieć modelu, więc może nie działać.
+
+00:16:23.140 --> 00:16:26.580
+Być może najpierw będziemy musieli dodać komórki CSSA, ale spróbujmy.
+
+00:16:26.590 --> 00:16:34.810
+Zamierzam powiedzieć, aby zmienić modem Dodajmy teraz odpowiednią CSSA, aby zobaczyć, jak Modal zamierza
+
+00:16:34.830 --> 00:16:37.600
+utworzyć nowy plik CSSA.
+
+00:16:37.600 --> 00:16:43.610
+Zróbmy ten pierwszy profil importu, otrzymamy SS i dodajmy
+
+00:16:47.120 --> 00:16:49.700
+teraz plik SS.
+
+00:16:52.470 --> 00:17:03.810
+I po prostu poprośmy klasę modalną profilu, która będzie miała kolor tła, a po prostu sprawi, że
+
+00:17:03.810 --> 00:17:05.230
+trochę przejrzysz.
+
+00:17:05.250 --> 00:17:09.300
+Powiedzmy zero punktu osiem dla krycia.
+
+00:17:09.810 --> 00:17:17.780
+Damy mu pozycję naprawioną ponownie coś, co na pewno będziemy potrzebować.
+
+00:17:17.810 --> 00:17:21.890
+Powiedzmy, że może to wynosić
+
+00:17:24.570 --> 00:17:28.400
+100 procent, a 100%
+
+00:17:31.450 --> 00:17:35.770
+top 0 śmiałoby się 0.
+
+00:17:36.010 --> 00:17:40.360
+Wiele CSSA dodaje również wyświetlacz Flack, który
+
+00:17:43.760 --> 00:17:45.860
+chcesz wyrównać elementy.
+
+00:17:45.860 --> 00:17:49.290
+Znowu używamy Fluxboksa tutaj, aby był wyśrodkowany.
+
+00:17:49.310 --> 00:17:54.630
+I na koniec chcemy również usprawiedliwione centrum treści,
+
+00:17:59.250 --> 00:18:08.520
+które byłoby bezpieczne tutaj, wróćmy, a właściwie wiesz, co zamiast tego nazwy klasy, po prostu zmienię
+
+00:18:08.670 --> 00:18:15.540
+to na naszą klasę, którą właśnie stworzyliśmy, która jest mobilna profilem.
+
+00:18:15.950 --> 00:18:21.310
+Powiem więc, że profil jest ruchliwy. Wróćmy, a po kliknięciu my
+
+00:18:24.150 --> 00:18:29.670
+zobaczyliśmy profil widoku. Chcemy mieć pewność, że możemy go włączać i
+
+00:18:29.850 --> 00:18:30.750
+wyłączać.
+
+00:18:30.750 --> 00:18:34.230
+Wróćmy więc do naszej nawigacji tutaj.
+
+00:18:35.750 --> 00:18:38.610
+Gdzie klikamy profil widoku.
+
+00:18:38.900 --> 00:18:48.790
+Mamy więc ikonę profilu i ikonę profilu po kliknięciu profilu widoku.
+
+00:18:49.040 --> 00:18:57.680
+Chcemy również mieć wydarzenie typu "kliknij, aby kliknąć", a wydarzenie On Click
+
+00:18:57.720 --> 00:19:02.790
+będzie miało wpływ na to rekwizyty Dopp.
+
+00:19:02.920 --> 00:19:06.820
+To prawdopodobnie powinno być robione od samego początku, ale robimy te
+
+00:19:06.820 --> 00:19:11.830
+błędy co jakiś czas i oszczędzamy, upewniając się, że mamy ruchomy ruch z ikony profilu.
+
+00:19:13.740 --> 00:19:16.590
+Wróćmy więc do nawigacji.
+
+00:19:16.860 --> 00:19:20.070
+Oczyśćmy to, znowu stajemy się trochę nieporządni.
+
+00:19:22.930 --> 00:19:26.020
+Zaczynamy od góry, jeśli idziemy do nawigacji,
+
+00:19:29.090 --> 00:19:32.980
+widzimy, że w nawigacji mamy ten początek, by się poruszać.
+
+00:19:33.080 --> 00:19:50.300
+Więc jeśli przejdziesz do komponentu nawigacji, a ikona profilu pozwoli ci przekazać również moralną właściwość przełączania.
+
+00:19:50.400 --> 00:19:55.070
+Dajmy sobie spokój.
+
+00:19:55.070 --> 00:19:55.770
+W porządku.
+
+00:19:55.880 --> 00:20:00.030
+Jeśli spojrzeć na dno, to robi coś.
+
+00:20:00.100 --> 00:20:06.160
+To się przełącza, ale dostajemy błąd, a nie zabawę. Felty wykonuje usunięte dziecko na węźle, którego notatka do usunięcia
+
+00:20:06.160 --> 00:20:07.700
+nie jest dzieckiem tego.
+
+00:20:07.700 --> 00:20:10.850
+Nie jest to mylące obciążenie na powietrze.
+
+00:20:10.870 --> 00:20:16.550
+Ale zobaczmy, co się tutaj dzieje.
+
+00:20:16.580 --> 00:20:19.850
+Założę się, że gdzieś popełniłem głupi błąd.
+
+00:20:20.800 --> 00:20:22.020
+I.
+
+00:20:22.170 --> 00:20:22.960
+W porządku.
+
+00:20:24.130 --> 00:20:25.730
+Klasyczny błąd.
+
+00:20:25.750 --> 00:20:30.160
+To jedna z tych rzeczy, że kiedy jesteś programistą, musisz się do tego przyzwyczaić i trochę objąć.
+
+00:20:30.250 --> 00:20:34.460
+Widzisz tutaj, że całkowicie błędnie napisałem komponent.
+
+00:20:34.480 --> 00:20:39.040
+A niektórzy z was prawdopodobnie śmieją się właśnie teraz, ponieważ zastanawiają się, dlaczego tak pisałem.
+
+00:20:39.040 --> 00:20:41.050
+Mam nadzieję, że to jest powód.
+
+00:20:41.050 --> 00:20:42.580
+Spróbujmy jeszcze raz.
+
+00:20:43.120 --> 00:20:46.020
+Przejdźmy do profilu.
+
+00:20:46.420 --> 00:20:47.920
+Hej, spójrz na to.
+
+00:20:49.810 --> 00:20:54.170
+Mamy motel, który ma teraz funkcję klikania.
+
+00:20:54.520 --> 00:20:56.730
+Ale to jest miłe.
+
+00:20:56.740 --> 00:20:57.990
+To działa.
+
+00:20:58.300 --> 00:21:00.120
+Bardzo bardzo fajne.
+
+00:21:00.120 --> 00:21:03.050
+Teraz zobaczyłeś, jakie to było głupie.
+
+00:21:03.050 --> 00:21:09.890
+To był po prostu prosty błąd w pisowni, ale tak naprawdę nie masz żadnych wyraźnych błędów.
+
+00:21:09.890 --> 00:21:16.280
+Ciężko było zorientować się, co się dzieje, ale patrząc na to, że nic nie było na
+
+00:21:16.820 --> 00:21:22.670
+stole, coś było nie tak, dlatego zdecydowałem się spojrzeć na modalny Geass i oczywiście
+
+00:21:22.670 --> 00:21:24.500
+był to błąd ortograficzny.
+
+00:21:25.040 --> 00:21:31.460
+Teraz naprawdę chcę zwrócić naszą uwagę na ten plik, ponieważ trochę pomału o tym,
+
+00:21:31.460 --> 00:21:33.130
+co to robi.
+
+00:21:33.170 --> 00:21:42.270
+Widzisz element Port-Au we wkładkach Briaca do smakołyka psa po montażu Modali.
+
+00:21:42.650 --> 00:21:48.860
+Tak więc to, co tu robimy, to miejsce, w którym montujemy komponent modalny.
+
+00:21:48.860 --> 00:21:52.100
+Jeśli wrócę tutaj, otwórz moje narzędzia
+
+00:21:55.180 --> 00:21:58.120
+programistyczne, scoter zareaguj tutaj.
+
+00:21:58.360 --> 00:22:06.220
+Jeśli spojrzę tutaj, gdy tylko kliknę "Wyświetl profil", otrzymam komponent modalny i
+
+00:22:06.220 --> 00:22:16.250
+jak tylko kliknę, składnik moralny zniknie i zostanie całkowicie odmontowany stąd i jest dołączony do katalogu głównego
+
+00:22:16.490 --> 00:22:20.530
+do tego prostego elementu, który stworzyliśmy.
+
+00:22:20.540 --> 00:22:29.810
+Znowu, jeśli przejdziemy do elementów i przejdziemy do ruchu root, to tutaj powstał nasz div, który mamy tutaj.
+
+00:22:29.830 --> 00:22:30.390
+W porządku.
+
+00:22:30.480 --> 00:22:33.710
+Teraz, gdy dotarliśmy tak daleko, mamy sam modal.
+
+00:22:33.900 --> 00:22:40.070
+Ułóżmy to nieco ładniej w następnym filmie, abyśmy mogli rozpocząć pracę nad naszymi sesjami.
+
+00:22:40.380 --> 00:22:41.330
+Zobaczę na tym.

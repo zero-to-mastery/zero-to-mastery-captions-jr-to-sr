@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.320 --> 00:00:02.460
+Bine ai revenit.
+
+00:00:02.460 --> 00:00:08.520
+Avem testele noastre de lucru și căutarea Google chiar acum funcționează destul de frumos.
+
+00:00:08.520 --> 00:00:10.750
+Sunt destul de fericit cu asta.
+
+00:00:10.980 --> 00:00:12.460
+Și cred că putem merge mai departe.
+
+00:00:12.750 --> 00:00:22.500
+Să creăm un scenariu nother și poate o funcție mai realistă sau mai dificilă decât să încercăm.
+
+00:00:22.550 --> 00:00:31.400
+Așa că am să adaug un fișier nou și să strig acel scenariu pentru a evita Da și cu siguranță vom dori să scriem câteva teste
+
+00:00:31.400 --> 00:00:32.170
+pentru el.
+
+00:00:32.180 --> 00:00:36.260
+Dar, pentru moment, să ne scriem doar funcția noastră și ceea ce va face.
+
+00:00:37.560 --> 00:00:44.660
+Acum, unul dintre cele mai dificile teste pentru a scrie și ceva despre care vă gândiți este un test sincron.
+
+00:00:44.830 --> 00:00:52.140
+Vreau să spun că acum puteți vedea că cu ajutorul căutării pe Google putem copia acest lucru cu aproape orice funcție și ați putea vedea
+
+00:00:52.800 --> 00:00:56.050
+de ce funcțiile pure sunt atât de bune pentru a testa.
+
+00:00:56.070 --> 00:00:58.020
+Vreau să spun că doar testezi funcția.
+
+00:00:58.110 --> 00:01:05.030
+Adăugați doar câteva intrări aleatorii și asigurați-vă că rezultatele sunt cele așteptate.
+
+00:01:05.040 --> 00:01:12.090
+Foarte frumos și simplu și toate sunt doar teste de sincronizare frumos, dar în viața reală avem cel
+
+00:01:12.840 --> 00:01:16.770
+mai probabil apeluri fecche sau apeluri API care sunt asincron.
+
+00:01:16.800 --> 00:01:18.930
+Cum să testam pentru aceștia.
+
+00:01:18.930 --> 00:01:23.940
+În acest film, să abordăm acest lucru pentru acest exercițiu.
+
+00:01:23.940 --> 00:01:31.000
+Am de gând să folosesc un API cu adevărat cum se numește Swaby și da, care este reprezentat de API-ul
+
+00:01:31.120 --> 00:01:32.170
+Star Wars.
+
+00:01:32.170 --> 00:01:34.200
+Este gratuit și este minunat.
+
+00:01:34.240 --> 00:01:36.280
+Îl recomand și în celălalt curs.
+
+00:01:36.280 --> 00:01:39.930
+Deci, unii oameni ar putea fi familiarizați cu ea, dar da este minunat.
+
+00:01:39.930 --> 00:01:46.600
+Puteți vedea aici că puteți cere Planetați să puteți solicita persoanelor pe care le puteți cere de la
+
+00:01:46.630 --> 00:01:47.550
+Star Wars.
+
+00:01:47.650 --> 00:01:49.570
+Da, chiar minunat.
+
+00:01:49.600 --> 00:01:59.050
+Folosind API-ul Star Wars puteți vedea că acesta este punctul final pe care îl putem lovi pentru a obține același răspuns.
+
+00:01:59.050 --> 00:02:10.150
+Să creăm o funcție minunată pentru noi, pe care să o putem testa, să o luăm acum, dar nu va funcționa, deoarece
+
+00:02:10.480 --> 00:02:18.360
+dacă vă amintiți că fetch este ceva implementat de browser și este pe obiectul ferestrei.
+
+00:02:18.480 --> 00:02:22.410
+Dar în nod nu există nici un obiect de fereastră.
+
+00:02:22.530 --> 00:02:24.400
+Deci, nu există fereastră.
+
+00:02:24.510 --> 00:02:25.620
+Fetch.
+
+00:02:25.650 --> 00:02:29.190
+Pentru asta trebuie să instalăm ceva numit
+
+00:02:31.740 --> 00:02:36.700
+nod preluat și există câteva alte biblioteci pe care le pot folosi.
+
+00:02:36.700 --> 00:02:40.830
+Puteți face apeluri din nod, dar să rămânem cu asta acum.
+
+00:02:42.250 --> 00:02:52.110
+În acest fel putem acum să preluăm nodul și din nou îl vom importa în mod obișnuit, deoarece importurile și
+
+00:02:52.110 --> 00:02:55.610
+exporturile nu sunt încă disponibile în nod.
+
+00:02:55.890 --> 00:02:58.320
+Apoi, doar nodul de import a ajuns
+
+00:03:02.180 --> 00:03:03.540
+la capăt aici.
+
+00:03:03.540 --> 00:03:14.630
+Să facem un Konst pentru a atrage oameni de la Star Wars și să spunem că asta va primi Fach.
+
+00:03:14.670 --> 00:03:20.430
+Ține minte că facem un pic de injecție de dependență aici, astfel încât să putem testa că putem păstra acest lucru
+
+00:03:20.430 --> 00:03:22.640
+frumos și ușor de testat pe cât posibil.
+
+00:03:23.080 --> 00:03:29.850
+Și aici nu putem spune că vom reveni la asta.
+
+00:03:30.150 --> 00:03:38.790
+Și știu că știu că este puțin redundant pentru că am putea să nu avem o contribuție și să avem fach, dar arată doar
+
+00:03:38.830 --> 00:03:45.800
+că cred că injecția de dependență este foarte bună și acest lucru nu este ceva ce trebuie întotdeauna necesar
+
+00:03:45.800 --> 00:03:51.350
+să faceți, dar pentru acest scop am cred că este o modalitate bună de a
+
+00:03:51.350 --> 00:03:54.010
+vă familiariza cu injecția de dependență aici.
+
+00:03:54.060 --> 00:03:58.950
+Vom avea API-ul Star Wars. Să ne întoarcem la ceea
+
+00:04:01.540 --> 00:04:10.070
+ce au avut și să copiem acest lucru și să spunem că vrem să cerem API pentru oameni.
+
+00:04:10.390 --> 00:04:15.490
+Și dacă vă amintiți că întotdeauna trebuie să ne facem pe tații noștri clasici.
+
+00:04:18.960 --> 00:04:23.590
+Apoi răspundeți și apoi executați metoda Jaison cu privire la răspuns.
+
+00:04:25.370 --> 00:04:32.310
+Și apoi, în sfârșit, avem datele noastre care vor fi oamenii pe care îi revine.
+
+00:04:32.330 --> 00:04:40.100
+Deci, să spunem că aici vom reveni la un obiect care are un contor, deoarece dacă mergem
+
+00:04:40.100 --> 00:04:49.370
+la oameni de aici pentru că vrem să obținem toate personajele obținem o variabilă de numărare a tuturor personajelor din
+
+00:04:49.380 --> 00:04:54.590
+API, așa că hai să facem asta și vom spune conteaza.
+
+00:04:54.660 --> 00:04:58.070
+Și, de fapt, ar trebui să fie date despre acel număr.
+
+00:04:59.230 --> 00:05:07.780
+Și apoi vom face rezultate că vom avea doar rezultatele Daut de date care vor avea
+
+00:05:07.780 --> 00:05:13.080
+toți oamenii într-o matrice și fiecare persoană într-un obiect.
+
+00:05:13.090 --> 00:05:14.710
+Să salvăm asta.
+
+00:05:14.730 --> 00:05:22.800
+Și vreau să fiu sigur că funcționează așa că vom face doar dialogul consola pentru a primi oameni și a trece în prima
+
+00:05:22.800 --> 00:05:23.990
+funcție la ea.
+
+00:05:24.110 --> 00:05:30.140
+Am de gând să salvez și să lăsăm doar să fug nod să mă las să clar asta deocamdată.
+
+00:05:30.390 --> 00:05:38.520
+Și de fapt, doar pentru că acest lucru este un mod sincron și mai frumos de a face acest lucru
+
+00:05:39.090 --> 00:05:45.300
+este doar aici consol logarea datelor salvați și executați script-ul NPM pentru a se evita.
+
+00:05:45.320 --> 00:05:46.060
+Da.
+
+00:05:47.570 --> 00:05:54.040
+Și trebuie să așteptăm un pic, dar tu vezi că bine avem toate personajele cu
+
+00:05:54.060 --> 00:05:57.750
+numărătoarea 87 și l-am prins pe Luke Skywalker.
+
+00:05:57.950 --> 00:05:58.630
+Ce altceva mai avem.
+
+00:05:58.630 --> 00:06:01.250
+Vedeți Threepio R2-D2.
+
+00:06:01.460 --> 00:06:02.550
+Toate pisicile principale.
+
+00:06:02.570 --> 00:06:03.740
+Minunat.
+
+00:06:03.800 --> 00:06:05.560
+Acest lucru funcționează.
+
+00:06:05.950 --> 00:06:07.010
+Și știi ce.
+
+00:06:07.010 --> 00:06:12.900
+În timp ce suntem la ea doar pentru distracție, deoarece aceasta folosește o promisiune.
+
+00:06:12.980 --> 00:06:17.180
+Să adăugăm, de asemenea, versiunea cu greutate
+
+00:06:20.470 --> 00:06:29.450
+asincronă a codului și să eliminăm apelul și să sunăm doar spunând că oamenii vor folosi asyncul așteaptă.
+
+00:06:29.480 --> 00:06:34.740
+Asta inseamna ca in fata functiei vom face o sincronizare.
+
+00:06:34.970 --> 00:06:45.630
+Și acum putem folosi cuvântul cheie greutate pentru a putea spune că Konst obține cererea egală așteaptă primul apel.
+
+00:06:45.830 --> 00:06:54.770
+Iar acum putem spune că datele concertului sunt din nou egale cu o
+
+00:06:59.870 --> 00:07:03.470
+cerere de greutate suplimentară.
+
+00:07:03.700 --> 00:07:12.040
+Și acum putem să îndepărtăm câinele și să păstrăm totul așa cum am avut-o.
+
+00:07:12.040 --> 00:07:16.780
+Permiteți-mi să adaug semicolonii și să facem acest lucru mai mic astfel încât să puteți vedea mai
+
+00:07:20.220 --> 00:07:21.540
+bine și putem muta
+
+00:07:24.560 --> 00:07:28.330
+acest lucru pe această linie puteți decide pentru dvs. ceea ce pare mai curat.
+
+00:07:28.490 --> 00:07:32.330
+Dar să încercăm și acest lucru pentru a ne asigura că funcționează.
+
+00:07:32.330 --> 00:07:38.400
+Deci, adu oamenii și vom adăuga o fetch pentru a salva.
+
+00:07:38.400 --> 00:07:41.920
+Și Ron NPM nu se află acolo.
+
+00:07:41.960 --> 00:07:44.650
+Fugiți aici NPM Ron.
+
+00:07:44.940 --> 00:07:48.670
+Nici un script de nod pentru a eschiva.
+
+00:07:48.680 --> 00:07:51.710
+Da, așteaptă puțin și te duci acolo.
+
+00:07:51.710 --> 00:07:52.870
+Totul funcționează.
+
+00:07:55.460 --> 00:08:00.770
+Nu stiu de ce am decis sa arat ca in filmul test, dar sunt sigur ca cineva
+
+00:08:00.770 --> 00:08:07.400
+de acolo va gasi acest lucru folositor pentru a compara promisiunile si Eysenck un pic cam tangent, dar sa ne intoarcem
+
+00:08:07.400 --> 00:08:08.060
+aici.
+
+00:08:08.060 --> 00:08:13.980
+Să începem de fapt să scriem teste pentru codul asincron.
+
+00:08:14.330 --> 00:08:20.060
+Din nou, primul lucru pe care îl vom face și voi elimina jurnalele
+
+00:08:20.060 --> 00:08:23.240
+de obținere a oamenilor și consola de
+
+00:08:26.120 --> 00:08:32.710
+aici, să salvăm și voi crea un fișier nou numit-l script pentru a testa puncte.
+
+00:08:32.740 --> 00:08:33.240
+Seamus și
+
+00:08:36.180 --> 00:08:38.120
+un lucru aici, vrem să facem câteva lucruri.
+
+00:08:38.130 --> 00:08:45.600
+Mai întâi dorim să folosim funcția de preluare, așa că avem nevoie de
+
+00:08:48.320 --> 00:09:00.650
+necesitatea preluării noului nod pentru că am folosit injectarea de dependență și avem nevoie de parametrul de preluare pentru cei Get
+
+00:09:00.720 --> 00:09:14.140
+people și apoi avem nevoie și de funcția de la swap API care returnează oamenii pentru analogie spuneți că aveți nevoie de un
+
+00:09:14.140 --> 00:09:26.730
+script pentru a ne supăra sau că nu avem nevoie de GS. Dar amintiți-vă pentru că nu este un pachet de noduri
+
+00:09:26.850 --> 00:09:30.350
+care trebuie să-i dăm calea.
+
+00:09:30.360 --> 00:09:36.880
+Așa că hai să exportim funcția, să exporăm amândouă pentru moment.
+
+00:09:36.900 --> 00:09:44.850
+Vom spune un modul care exportă și le exportăm într-un obiect va spune "Obțineți oameni".
+
+00:09:44.980 --> 00:09:52.840
+Și în loc să faci oamenii să-ți facă din nou stenograma cu E6 este doar să-i faci pe oameni mai puțini și
+
+00:09:52.840 --> 00:10:00.430
+să-i promiți pe oameni care este același lucru ca și cum ai obține semicolonul oamenilor, pentru a obține oameni de proprietate și
+
+00:10:00.460 --> 00:10:01.820
+valoare de proprietate.
+
+00:10:02.440 --> 00:10:10.810
+În regulă, acum, în interiorul nostru, vom avea voința de a avea acces la funcțiile noastre, ambele.
+
+00:10:10.820 --> 00:10:14.860
+Să facem o pauză și în următorul videoclip vom termina acest test.
+
+00:10:15.020 --> 00:10:16.770
+O să văd în asta.

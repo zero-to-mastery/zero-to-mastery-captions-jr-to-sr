@@ -1,0 +1,100 @@
+﻿WEBVTT
+
+00:00:01.970 --> 00:00:06.880
+Zanim zajmiemy się kodowaniem, porozmawiajmy ostrożnie o każdym z typów.
+
+00:00:07.070 --> 00:00:12.490
+Testy jednostkowe powinny obejmować wszystkie małe, czyste funkcje aplikacji.
+
+00:00:12.560 --> 00:00:18.560
+Być może słyszałeś, jak mówię, że małe, czyste funkcje, które pobierają dane wejściowe i zwracają dane wyjściowe, i
+
+00:00:18.560 --> 00:00:20.450
+które naprawdę robią naprawdę dobrze.
+
+00:00:20.450 --> 00:00:23.380
+Jedna rzecz na raz to droga.
+
+00:00:23.630 --> 00:00:27.350
+I to jest główna zasada programowania funkcjonalnego.
+
+00:00:27.470 --> 00:00:36.050
+Teraz niesamowitym efektem ubocznym tego jest to, że pozwala nam pisać testy jednostek naprawdę bardzo łatwo, ponieważ nasze funkcje
+
+00:00:36.050 --> 00:00:37.880
+są tak proste.
+
+00:00:37.880 --> 00:00:43.220
+Po prostu daj mu dane wejściowe i uzyskaj dane wyjściowe i po prostu przetestuj, czy na podstawie
+
+00:00:44.150 --> 00:00:50.010
+danych wejściowych otrzymujesz to wyjście i jest to jedna z największych korzyści programowania funkcjonalnego w porównaniu do programowania obiektowego.
+
+00:00:50.060 --> 00:00:56.840
+Ale podsumowanie czystej funkcji jest funkcją, która nie ma skutków ubocznych, takich jak wpływ na inną część programu
+
+00:00:56.840 --> 00:00:59.920
+i zawsze zwraca coś na podstawie danych wejściowych.
+
+00:01:00.750 --> 00:01:07.260
+To deterministyczne znaczenie, że możesz umieścić to samo wejście milion razy, a ty będziesz nadal uzyskiwał
+
+00:01:07.260 --> 00:01:14.590
+tę samą wydajność miliony razy dokładnie w ten sam sposób, co według ciebie sprawia, że testowanie jest bardzo łatwe.
+
+00:01:15.960 --> 00:01:19.980
+A przy okazji re-act komponenty są w większości czystymi funkcjami.
+
+00:01:20.010 --> 00:01:26.820
+Te bezpaństwowe komponenty, które nie mają żadnych cykli życia lub stanów, uzyskują dane wejściowe będące
+
+00:01:26.820 --> 00:01:30.180
+rekwizytami i zwracają wynik, który jest widokiem.
+
+00:01:30.180 --> 00:01:37.620
+Testy jednostkowe są naprawdę łatwe do wykonania, więc testy jednostkowe są niezwykle użyteczne, tak jak powiedziałem, są to
+
+00:01:37.630 --> 00:01:43.090
+rzeczy, które można zobaczyć w 90 procentach czasu i przez większość czasu będziesz
+
+00:01:43.090 --> 00:01:44.620
+testować jednostki .
+
+00:01:44.620 --> 00:01:47.280
+Więc zrobimy to również w tym kursie.
+
+00:01:47.290 --> 00:01:52.390
+Należy pamiętać, że testy jednostkowe nie testują umowy.
+
+00:01:52.690 --> 00:01:54.420
+I co mam na myśli w umowie?
+
+00:01:54.520 --> 00:01:57.400
+Umowa jest łącznikiem między rzeczami.
+
+00:01:57.580 --> 00:02:00.960
+Może to być umowa między serwerem a bazą danych.
+
+00:02:00.970 --> 00:02:04.910
+Może to być umowa między funkcją a inną funkcją.
+
+00:02:05.000 --> 00:02:13.720
+Może funkcja mojego logowania wywoła test jednostki funkcji profilu obciążenia testowałby znak i funkcję oraz funkcję
+
+00:02:13.960 --> 00:02:17.470
+obciążenia, ale nie kontrakt między nimi.
+
+00:02:17.470 --> 00:02:24.890
+Niezależnie od tego, czy integrują one razem ważne miejsce na wynos, to jeśli chodzi o testy
+
+00:02:24.900 --> 00:02:32.280
+jednostkowe, napisz kod, który jest oddzielony ładnie czyste komponenty funkcjonalne to funkcje, które ułatwiają testy
+
+00:02:32.280 --> 00:02:35.100
+jednostkowe, ponieważ wszystko jest małe.
+
+00:02:35.220 --> 00:02:39.020
+A to na dłuższą metę doprowadzi do miłego, możliwego do utrzymania kodu.
+
+00:02:40.420 --> 00:02:42.280
+Zobaczę w następnym Buh-Bye.

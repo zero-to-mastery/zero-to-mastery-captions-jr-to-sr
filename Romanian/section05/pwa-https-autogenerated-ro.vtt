@@ -1,0 +1,202 @@
+﻿WEBVTT
+
+00:00:02.230 --> 00:00:03.230
+Bine ai revenit.
+
+00:00:03.520 --> 00:00:06.540
+În acest videoclip vom vorbi despre acest prim punct.
+
+00:00:06.670 --> 00:00:07.780
+Da.
+
+00:00:08.230 --> 00:00:10.610
+Și de ce am avut nevoie pentru progresul webapps-urilor.
+
+00:00:10.990 --> 00:00:19.670
+Acum, webapps-urile progresive au o anumită listă de verificări pe care le puteți verifica în lista progresivă de verificare a aplicațiilor Web.
+
+00:00:19.850 --> 00:00:23.030
+Și știu că știu că am spus că nu există o listă de verificare.
+
+00:00:23.030 --> 00:00:28.970
+Gândiți-vă că gândiți-vă la webapps-urile progresive ca pe o listă de alergări, dar asta pentru că acestea
+
+00:00:28.970 --> 00:00:32.330
+vor fi probabil actualizate și schimbate în mod constant.
+
+00:00:32.330 --> 00:00:37.860
+Acum, această listă de verificare, pe măsură ce treceți prin ea, arată puțin copleșitoare.
+
+00:00:38.890 --> 00:00:44.780
+Dar am urmat bunele practici în timp ce construim aplicațiile noastre, așa cum am făcut cu prietenii lui
+
+00:00:44.800 --> 00:00:48.200
+Robur, și de fapt am făcut majoritatea acestor lucruri.
+
+00:00:48.590 --> 00:00:58.800
+De aceea, în loc să vă arătăm acest lucru, trebuie doar să ne concentrăm asupra a trei aspecte principale pe care trebuie să le facă
+
+00:00:58.880 --> 00:01:00.930
+o aplicație web progresivă.
+
+00:01:01.140 --> 00:01:07.890
+Acum, pe lângă acestea Există câteva caracteristici, dar adoptarea pentru ele, cum ar fi Push
+
+00:01:07.890 --> 00:01:13.560
+Notifications nu au fost atât de netedă sau sunt încă în fabricație.
+
+00:01:13.560 --> 00:01:19.770
+Deci, pentru moment, ne vom concentra pe lucrurile pe care le puteți implementa pe deplin pe deplin și veți avea
+
+00:01:19.770 --> 00:01:22.190
+încredere că vor lucra în aplicația dvs.
+
+00:01:22.230 --> 00:01:32.940
+Deci da HEG P. S. Așa cum știți de când am menționat-o puțin
+
+00:01:33.210 --> 00:01:41.750
+în secțiunea SSA, previne actorii răi să manipuleze comunicările dintre aplicația noastră și browserul nostru, astfel încât, dacă trimitem
+
+00:01:41.750 --> 00:01:49.940
+să spunem un nume de utilizator și o parolă pe serverul nostru, îl putem cripta astfel încât
+
+00:01:50.180 --> 00:01:59.450
+mesajul care include parola noastră călătorește către server într-un mod criptat, astfel încât, dacă Bob, terțul hacker rău încearcă să
+
+00:01:59.630 --> 00:02:06.230
+intercepteze mesajele și să le citească chiar dacă interceptează mesajul, nu-l va înțelege, deoarece
+
+00:02:06.260 --> 00:02:07.750
+este criptat.
+
+00:02:08.120 --> 00:02:11.920
+Și din nou, acesta este un lucru despre care am vorbit în cursul meu anterior.
+
+00:02:11.960 --> 00:02:22.360
+Acum, Google este într-adevăr împinge pentru această criptare TTP SUA și, dacă ne întoarcem la site-urile noastre Web, vedem că da
+
+00:02:23.100 --> 00:02:28.100
+avem această mică mică pictogramă de blocare cu siguranta.
+
+00:02:28.310 --> 00:02:29.660
+E un semn bun.
+
+00:02:29.690 --> 00:02:34.910
+Chrome a fost actualizat, astfel încât, dacă aveți orice fel de formulare pe site-ul dvs. Web și
+
+00:02:34.910 --> 00:02:38.930
+nu sunt un shitty B-S, acestea vor apărea aici, nu sunt sigure.
+
+00:02:39.110 --> 00:02:42.650
+Destul de mult, site-urile de ștergere utilizează acum un DBMS.
+
+00:02:42.650 --> 00:02:49.220
+Deci, oricând trimiteți date din Cline către server, ar trebui să utilizați o foaie pentru a le apăsa.
+
+00:02:49.250 --> 00:02:53.030
+De ce avem nevoie de acest lucru, deși pentru aplicații web progresive.
+
+00:02:53.240 --> 00:02:58.370
+Și acest lucru se datorează faptului că aplicațiile Web progresive utilizează câteva funcții
+
+00:02:59.360 --> 00:03:08.230
+despre care vom vorbi în alte videoclipuri care necesită Da din motive de securitate, deși aceasta este o cerință pentru progresul aplicației web.
+
+00:03:08.540 --> 00:03:14.240
+În general, ar trebui să serviți întotdeauna site-urile dvs. web dacă există vreun
+
+00:03:14.690 --> 00:03:22.720
+fel de comunicare cu serverul și dacă mergem la raportul nostru de lumină, veți vedea că atunci când defilați la
+
+00:03:22.720 --> 00:03:28.810
+aplicația Web progresivă și verificăm cele nouă audituri pe care le-am avut folosește HTP Da.
+
+00:03:28.960 --> 00:03:32.710
+Ca una dintre cerințe, dar cum sa întâmplat acest lucru.
+
+00:03:32.710 --> 00:03:34.960
+Cum avem pregătit un DiPiazza?
+
+00:03:34.990 --> 00:03:41.350
+Și, din fericire pentru noi, scoatem acest lucru din cutie și înțelegem cum puteți vedea paginile aici că
+
+00:03:41.350 --> 00:03:50.410
+acest link care a fost generat este un GTP s, de aceea, ori de câte ori plasați un site web despre modul în care paginile primesc automat
+
+00:03:51.040 --> 00:03:52.870
+această criptare, care este fantastic.
+
+00:03:55.030 --> 00:04:02.080
+Nu toate site-urile web pot fi găzduite pe paginile pe care probabil că doriți să le
+
+00:04:02.080 --> 00:04:13.660
+aveți propriul server propriul nume de domeniu și cel mai simplu mod de a obține o piesă HEG este, probabil, prin Să cripteze Să criptați este gratuit
+
+00:04:14.120 --> 00:04:21.380
+și în drepturi se spune aici este gratuit autoritate automată și deschisă a certificatului și sunt fantastice
+
+00:04:21.530 --> 00:04:29.300
+de folosit și o autoritate de certificare este doar această autoritate care spune că vă dau un certificat pentru
+
+00:04:29.330 --> 00:04:36.710
+a certifica că da, într-adevăr, sunteți oricine spuneți că sunteți orice nume al domeniului dvs. și să-l
+
+00:04:36.710 --> 00:04:39.040
+cripteză dă vă eliberați certificate.
+
+00:04:39.230 --> 00:04:43.550
+Acest lucru este într-adevăr foarte ușor de configurat și au o documentație excelentă pentru a vă folosi.
+
+00:04:43.970 --> 00:04:45.970
+Îi recomand foarte mult.
+
+00:04:46.020 --> 00:04:54.210
+De asemenea, aveți ceva de genul CloudFlare și CloudFlare este o rețea Cdn sau o rețea de distribuire a conținutului
+
+00:04:54.210 --> 00:04:57.440
+despre care vom vorbi în secțiunile următoare.
+
+00:04:57.660 --> 00:05:03.870
+Dar deocamdată vă puteți gândi la ele ca la un server pe care puteți
+
+00:05:03.870 --> 00:05:14.370
+pune fișierele dvs. și, la fel ca la paginile care găzduiesc fișierele pe serverele lor, CloudFlare găzduiește site-ul dvs. pe paginile lor și automat prin
+
+00:05:14.370 --> 00:05:16.210
+ele obțineți o foaie.
+
+00:05:16.280 --> 00:05:17.270
+Da.
+
+00:05:17.460 --> 00:05:23.880
+Și dacă te duci la prețurile lor sunt de fapt foarte foarte generos și există un plan gratuit pentru posturi personale
+
+00:05:23.880 --> 00:05:27.630
+de blog și orice site-uri web simplu pe care le aveți.
+
+00:05:27.630 --> 00:05:33.180
+Din nou, le recomand foarte mult și de fapt îmbunătățesc și performanța site-ului web.
+
+00:05:33.180 --> 00:05:39.770
+Din nou ceva la care intrăm și secțiunea de performanță 3 se întorc pe site-ul nostru Web.
+
+00:05:39.970 --> 00:05:46.740
+Acesta este ceva ce ieșim din cutie aplicația noastră va funcționa cu toate celelalte funcții ale aplicației Web progresive, deoarece este pe
+
+00:05:46.740 --> 00:05:54.720
+pagini și vom obține automat această aplicație B. S. de asemenea, și putem
+
+00:05:54.720 --> 00:06:04.610
+verifica aici aici cu știri hacker pre-ambalate că într-adevăr, ei folosesc și o foaie CPS.
+
+00:06:05.730 --> 00:06:06.170
+In regula.
+
+00:06:06.240 --> 00:06:07.680
+Atât deocamdată.
+
+00:06:07.680 --> 00:06:09.200
+Ne vedem în următorul.
+
+00:06:09.200 --> 00:06:09.710
+Pa! Pa.

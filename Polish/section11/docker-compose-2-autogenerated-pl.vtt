@@ -1,0 +1,109 @@
+﻿WEBVTT
+
+00:00:01.280 --> 00:00:08.240
+Przyjrzyjmy się, jak poinstruowaliśmy nasz plik do komponowania, aby utworzyć usługę o nazwie inteligentne API mózgu.
+
+00:00:08.750 --> 00:00:14.420
+A to posłużyło do pliku docket przy użyciu kompilacji.
+
+00:00:14.420 --> 00:00:19.340
+W przeciwnym razie moglibyśmy użyć czegoś podobnego do obrazu i potrzebowalibyśmy tego parametru.
+
+00:00:19.340 --> 00:00:25.210
+Zmapował on wewnętrzne porty kontenerów 3000 na port Horsta.
+
+00:00:25.220 --> 00:00:33.820
+To jest mój komputer i na wszystkich sześciu połączeniach, które uruchamiamy, NPM zaczynają nasz serwer.
+
+00:00:33.850 --> 00:00:41.450
+Dowiedzieliśmy się także o dokowaniu poleceń lub uruchomieniu komponentu, w którym możemy uruchomić tę usługę, która
+
+00:00:41.450 --> 00:00:44.120
+uruchomi polecenie, które tutaj ustanowiliśmy.
+
+00:00:44.180 --> 00:00:51.150
+Jednak przy uruchamianiu komponentu Dharker nie jest to użyteczne, ponieważ w idealnym przypadku mamy tutaj wiele usług.
+
+00:00:52.240 --> 00:01:01.360
+Zamiast tego używamy czegoś, co nazywa się Dharker compose up, a dock lub compose up pozwala nam wyświetlić wszystkie
+
+00:01:01.360 --> 00:01:06.940
+usługi, które tutaj wymieniliśmy, i zdefiniuje wszystkie usługi działające według nazwy kontenera,
+
+00:01:07.000 --> 00:01:09.220
+tak jak tutaj mamy.
+
+00:01:09.670 --> 00:01:18.120
+I właśnie teraz, mimo że mamy tylko jedną usługę naszego interfejsu API, wystarczy pokazać, że działa i jak
+
+00:01:18.330 --> 00:01:22.230
+możemy teraz dodać więcej rzeczy do tego pliku.
+
+00:01:23.490 --> 00:01:31.770
+Teraz możesz zauważyć jeden problem tutaj i to jest fakt, że za każdym razem, gdy wprowadzamy zmianę
+
+00:01:32.220 --> 00:01:40.000
+do naszego pliku, kiedy dodaliśmy Morgana, musieliśmy przebudować wszystko ponownie uruchomić wszystko, aby nas uruchomić.
+
+00:01:43.620 --> 00:01:53.340
+Na przykład, jeśli pójdę do niechcianego serwera i powiedzmy, że tutaj zrobię dziennik konsoli sprawdzenia, to nie odświeża
+
+00:01:53.340 --> 00:02:02.060
+gnomon tak naprawdę nie obserwuje tej zmiany, ponieważ te pliki, które zmieniłem, są na mojej lokalnej maszynie,
+
+00:02:02.180 --> 00:02:08.580
+a nie na pojemnik, ale jest sposób, aby rozwiązać ten problem.
+
+00:02:08.780 --> 00:02:13.200
+Wracamy do dokowania lub komponowania Mogę dodać wolumin
+
+00:02:15.790 --> 00:02:23.580
+iw woluminach mogę podać mój bieżący katalog na mojej lokalnej maszynie, w którym to przypadku
+
+00:02:23.580 --> 00:02:26.080
+będzie to katalog główny.
+
+00:02:26.080 --> 00:02:33.860
+Chcemy, aby został on zmapowany do katalogu roboczego, który mamy w kontenerze właśnie tutaj.
+
+00:02:33.920 --> 00:02:40.580
+A jeśli pamiętasz pojemność, pozwala nam uzyskać dostęp do systemu plików stacji dokującej lub kontenera, w którym znajduje się
+
+00:02:40.580 --> 00:02:42.270
+stacja dokująca lub kontener.
+
+00:02:42.290 --> 00:02:51.290
+W ten sposób, kopiując lub zamieniając te pliki na miejsce, w którym kontener jest systemem
+
+00:02:51.290 --> 00:02:56.010
+plików kontenera, zobaczą zmiany i zaktualizują gnomon.
+
+00:02:56.130 --> 00:02:57.610
+Więc oszczędzajmy tutaj.
+
+00:02:57.630 --> 00:03:03.090
+Zamierzam zamknąć i ponownie uruchomić NPM lub kaczkę do komponowania desce rozdzielczej.
+
+00:03:03.100 --> 00:03:15.650
+Rachunek Dostaję polecenie sprawdzenia, ale to dlatego, że przebudowałem je, gdy zmieniłem to, aby wyglądało, że teraz słucha
+
+00:03:20.480 --> 00:03:27.740
+zmian i mogę zaktualizować mój plik, a kontener dokera zostanie
+
+00:03:27.740 --> 00:03:28.810
+zaktualizowany.
+
+00:03:29.660 --> 00:03:34.610
+Tomy to trochę skomplikowany temat, a ja zostawię dla miłego zasobu do przeczytania.
+
+00:03:34.670 --> 00:03:42.350
+Ale pomyślcie o woluminach jako sposobie połączenia lub zamontowania tego, co mamy na naszym
+
+00:03:42.860 --> 00:03:46.230
+komputerze, do pojemnika z lekarzem.
+
+00:03:46.300 --> 00:03:52.870
+Ale na razie mamy fajną konfigurację z tyłu i myślę, że musimy dodać nasze postscripts.
+
+00:03:52.900 --> 00:03:55.930
+Wreszcie zobaczę w następnym.

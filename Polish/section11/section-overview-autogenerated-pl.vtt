@@ -1,0 +1,163 @@
+﻿WEBVTT
+
+00:00:01.500 --> 00:00:07.130
+Mamy jeden problem, ponieważ nasze aplikacje stają się coraz większe.
+
+00:00:07.860 --> 00:00:13.620
+Nasz projekt GET HOW rośnie, dodaje się więcej kodu, staje się monolityczny.
+
+00:00:13.800 --> 00:00:21.510
+To staje się tym jednym wielkim potworem, który musi upewnić się, że wszystko działa, wszystkie części
+
+00:00:21.780 --> 00:00:24.150
+działają tak, że działa.
+
+00:00:24.310 --> 00:00:30.180
+Utrudnia to zarządzanie i monitorowanie w tym samym czasie.
+
+00:00:30.350 --> 00:00:36.830
+Musisz upewnić się, że ten projekt działa nie tylko na twoim laptopie,
+
+00:00:36.830 --> 00:00:44.940
+gdzie masz określony system operacyjny danej wersji systemu operacyjnego, pewną wersję węzła i wiele innych rzeczy.
+
+00:00:45.200 --> 00:00:51.820
+Wiele innych bibliotek, które są zależne od siebie nawzajem i ich wersji najczęściej, gdy ludzie próbują i
+
+00:00:51.820 --> 00:00:58.400
+mają swoje projekty uruchomione na innym komputerze lub komputerze, z którym spotykają się błędy, ponieważ tylko dlatego,
+
+00:00:58.420 --> 00:01:04.300
+że działa na jednym komputerze, nie musi oznaczać, że będzie działał na innym komputerze.
+
+00:01:04.310 --> 00:01:09.800
+To właśnie nazywamy środowiskiem środowisko, w którym działa kod.
+
+00:01:09.800 --> 00:01:16.520
+Potrzebujemy sposobu, abyśmy mogli uruchamiać nasze programy i nasze aplikacje we wszystkich możliwych środowiskach.
+
+00:01:16.520 --> 00:01:19.080
+I tu właśnie pojawiają się pojemniki.
+
+00:01:20.660 --> 00:01:26.110
+Wiele dzisiejszych aplikacji internetowych jest zbudowanych na idei kontenerów.
+
+00:01:26.390 --> 00:01:35.180
+Ładne małe pudełka, które można uruchomić w dowolnym miejscu zamiast gigantycznej monolitycznej aplikacji, która robi wszystko.
+
+00:01:35.180 --> 00:01:41.870
+Firmy takie jak Amazon i Netflix mają swoje produkty złożone z wielu warstw.
+
+00:01:41.870 --> 00:01:50.090
+Warstwy te można uznać za usługi, z których każdy ich własny pojemnik wykonuje swoje własne zadanie i komunikuje się
+
+00:01:50.090 --> 00:01:53.090
+ze sobą, aby cały system działał.
+
+00:01:54.380 --> 00:01:56.090
+Coś w tym stylu.
+
+00:01:56.250 --> 00:02:02.950
+Jest to monolityczna aplikacja, a jest to bardziej architektura mikro usług.
+
+00:02:03.890 --> 00:02:08.080
+Możesz myśleć o nich jak o naszej dyskusji na temat czystych funkcji.
+
+00:02:08.240 --> 00:02:14.900
+Staramy się, aby wszystko było małe, abyśmy mieli przewidywalną funkcję, która pobiera dane wejściowe i zwraca wynik
+
+00:02:14.900 --> 00:02:18.290
+z nadzieją, że nie wystąpią żadne efekty uboczne.
+
+00:02:19.100 --> 00:02:22.150
+I nie martw się, pokażemy ci, jak to zrobić.
+
+00:02:22.160 --> 00:02:30.140
+I oczywiście pomysł rozbicia naszej aplikacji na małe kawałki został spopularyzowany przez usługi kontenerowe, takie jak
+
+00:02:30.290 --> 00:02:37.200
+doker, o których będziemy rozmawiać o tym, co widzisz w tego typu systemie.
+
+00:02:37.560 --> 00:02:39.650
+Istnieje duży problem.
+
+00:02:39.700 --> 00:02:47.430
+Każda usługa lub kontener może mieć własne wymagania od różnych wersji węzłów do zależnych od
+
+00:02:47.430 --> 00:02:48.940
+siebie bibliotek.
+
+00:02:48.990 --> 00:02:54.140
+A kiedy dodajesz, że każda maszyna programisty i środowisko
+
+00:02:54.330 --> 00:03:02.180
+jest inne, może zostać szybko zakwestionowane przez nowych programistów lub uruchomić tę usługę na innej maszynie.
+
+00:03:02.220 --> 00:03:04.430
+Pomyśl o naszej poprzedniej sekcji.
+
+00:03:04.470 --> 00:03:10.410
+Jak trudno było ustawić wszystko w projekcie w projekcie inteligentnego mózgu, co nie było
+
+00:03:10.410 --> 00:03:11.760
+zbyt zabawne.
+
+00:03:11.760 --> 00:03:17.610
+Musieliśmy się upewnić, że mamy lekarza, a potem musimy uruchomić bazę danych.
+
+00:03:17.610 --> 00:03:25.800
+Następnie musieliśmy się upewnić, że mamy odpowiednią wersję węzła, bez naszego serwera API.
+
+00:03:25.800 --> 00:03:31.930
+Teraz wyobraź sobie, że pracujesz w firmie, która co tydzień wynajmuje nowego programistę i ma jeszcze większy projekt.
+
+00:03:32.010 --> 00:03:36.250
+To dużo pracy dla tych nowych programistów.
+
+00:03:36.330 --> 00:03:41.550
+Czy nie byłoby miło, gdybyśmy mogli tylko wbudować programistów i aby nasza aplikacja
+
+00:03:42.420 --> 00:03:46.200
+działała konsekwentnie i przewidywalnie za pomocą jednego prostego polecenia.
+
+00:03:46.380 --> 00:03:51.420
+Byłoby miło mieć wszystko przygotowane do produkcji, aby po zwolnieniu kodu do dowolnej
+
+00:03:51.420 --> 00:03:55.990
+maszyny z dowolnymi wersjami, które działają bez względu na wszystko.
+
+00:03:56.040 --> 00:03:59.310
+I znowu dlatego mamy dr.
+
+00:03:59.490 --> 00:04:06.060
+Nawet jeśli wszystko zależy od siebie i potrzebujemy pewnego rodzaju środowiska, daquiri dba o to,
+
+00:04:06.060 --> 00:04:08.820
+aby działało w dowolnym miejscu.
+
+00:04:09.580 --> 00:04:10.540
+I nie martw się.
+
+00:04:10.660 --> 00:04:15.610
+Oto wszystko, co spróbujemy zrozumieć w ciągu kilku następnych S ..
+
+00:04:15.620 --> 00:04:22.070
+Pierwszy temat, który omawiamy, to pomysł Dr. dokowanie pomaga nam tworzyć te kontenery wokół
+
+00:04:22.070 --> 00:04:23.080
+naszych usług.
+
+00:04:23.090 --> 00:04:29.160
+Tak jak powiedziałem Nie bój się, że wracamy do tych punktów, kiedy przechodzimy przez każdą sekcję.
+
+00:04:29.330 --> 00:04:33.280
+Zaczniemy budować nasz pomysł wokół architektury usług.
+
+00:04:33.440 --> 00:04:38.700
+I to jest trudny temat, ale obiecuję, że na końcu tego wszystkiego będzie sens.
+
+00:04:38.700 --> 00:04:39.250
+W porządku.
+
+00:04:39.320 --> 00:04:42.650
+W następnym wideo przyjrzyjmy się bliżej Dr.

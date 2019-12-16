@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:01.870 --> 00:00:05.910
+Bine ați venit din nou, am creat un jken de JWT.
+
+00:00:05.980 --> 00:00:08.550
+Am stocat-o în baza noastră de date rattus.
+
+00:00:08.620 --> 00:00:10.790
+Îl trimitem înapoi utilizatorului.
+
+00:00:10.870 --> 00:00:19.340
+Dar acum avem o ultimă problemă și așa stăm aceste informații pe computerul utilizatorului.
+
+00:00:19.420 --> 00:00:25.180
+Pentru că dacă se reîmprospătează, au nevoie de o modalitate de a stoca acest jeton, astfel încât să nu fie nevoiți să
+
+00:00:25.180 --> 00:00:26.120
+se conecteze mereu.
+
+00:00:26.200 --> 00:00:33.600
+Și, de asemenea, trebuie să trimitem acest jeton în antetul de autorizare, astfel încât să putem obține profilul nostru și
+
+00:00:33.600 --> 00:00:38.080
+vom învăța cum să facem acest lucru și acest videoclip va arăta.
+
+00:00:38.150 --> 00:00:41.310
+Acum ne vom întoarce la capătul din față și vom face câteva lucruri.
+
+00:00:41.490 --> 00:00:47.910
+Știm că atunci când ne conectăm, primim ID-ul de utilizator și jetonul și avem nevoie de o modalitate de
+
+00:00:48.000 --> 00:00:54.510
+a salva mai întâi acest jeton undeva în browserul nostru, astfel încât, pentru fiecare solicitare ulterioară, să o atașăm
+
+00:00:54.600 --> 00:00:55.450
+la antet.
+
+00:00:55.740 --> 00:00:56.960
+Lasă-mă să-ți arăt cum sa făcut asta.
+
+00:00:58.080 --> 00:00:59.820
+Avem niște ferestre în jur.
+
+00:01:00.010 --> 00:01:03.420
+Să facem fereastra din fața noastră aici.
+
+00:01:04.970 --> 00:01:11.730
+Și vom folosi componenta semn pentru a face acest lucru pentru că seinen pe submit seinen.
+
+00:01:11.780 --> 00:01:17.380
+Aici ne facem logica în care am primit ID-ul de utilizator de date.
+
+00:01:17.540 --> 00:01:23.810
+Acum, primul lucru pe care îl vom face este că vom crea o nouă metodă numită Salvați
+
+00:01:23.810 --> 00:01:31.910
+să o numim salvați jetonul auth în sesiuni și un nume foarte descriptiv, dar sperăm că în felul acesta se va lipi.
+
+00:01:32.130 --> 00:01:39.630
+Și acesta va primi un simbol pe care îl obținem din backend și acest jeton va fi
+
+00:01:39.900 --> 00:01:43.260
+stocat în ceva numit sesiune datt fereastră.
+
+00:01:44.350 --> 00:01:45.360
+Depozitare.
+
+00:01:45.850 --> 00:01:49.700
+Acum ce este depozitarea sesiunii.
+
+00:01:50.020 --> 00:01:57.550
+Și este pe obiect fereastră, așa că înseamnă că vine de la browser-ul de stocare a sesiunii este o modalitate pentru
+
+00:01:57.550 --> 00:02:05.060
+noi de a salva informații pe un browser, astfel încât, chiar dacă vom reîmprospăta pagina încă îl mai amintește.
+
+00:02:05.080 --> 00:02:07.750
+Încă își amintește sesiunea.
+
+00:02:07.750 --> 00:02:10.290
+Putem verifica acest lucru accesând fila Aplicații.
+
+00:02:10.330 --> 00:02:11.670
+Și instrumentele noastre pentru dezvoltatori.
+
+00:02:11.950 --> 00:02:17.290
+Și așa cum am văzut înainte de a avea muncitorul de serviciu manifest, avem cookie-uri aici.
+
+00:02:17.410 --> 00:02:27.050
+Avem, de asemenea, stocare locală și spațiu de stocare acum sesiuni de magazine aici, după cum puteți vedea are informații o valoare
+
+00:02:27.090 --> 00:02:35.450
+cheie informații pe care le putem stoca și chiar dacă am reîmprospăta browser-ul este de gând să-l amintesc.
+
+00:02:35.560 --> 00:02:41.780
+Acum, diferența dintre sesiune și spațiul de stocare local va explora de fapt, într-un pic.
+
+00:02:41.840 --> 00:02:47.540
+Dar deocamdată vom folosi stocarea sesiunii și vom stoca o cheie și o valoare care este că
+
+00:02:47.720 --> 00:02:50.910
+vom stoca sesiunea noastră sau tokinul nostru aici.
+
+00:02:51.200 --> 00:02:52.520
+Să vedem cum putem face asta.
+
+00:02:52.550 --> 00:03:02.100
+Am de gând să spun stocarea sesiunii și acesta este un API de browser pe care îl putem folosi și îi dăm pur și simplu un element
+
+00:03:02.420 --> 00:03:02.990
+stabilit.
+
+00:03:04.150 --> 00:03:11.640
+Pentru a spune că cheia va fi numită tokin și valoarea cheii va fi tokenul propriu-zis și asta-i
+
+00:03:13.060 --> 00:03:13.940
+tot.
+
+00:03:14.110 --> 00:03:20.510
+Folosim doar acest API de browser și nu am salvat jetonul.
+
+00:03:20.930 --> 00:03:26.020
+Deci, hai să folosim de fapt acest lucru în par, unde am primit jetonul.
+
+00:03:26.480 --> 00:03:34.640
+Tot ce trebuie să facem este, probabil, în loc să verificăm doar datele de identificare a utilizatorilor
+
+00:03:37.300 --> 00:03:42.190
+sau chiar să adăugăm un succes punct de date egal.
+
+00:03:42.230 --> 00:03:47.060
+Adevărat, deoarece amintiți-vă că acolo suntem trimisi din backend acum.
+
+00:03:47.510 --> 00:03:55.420
+Iar înainte de a face utilizatorul de sarcină și de la schimbarea rutei putem spune pur și simplu că acest punct
+
+00:03:55.530 --> 00:03:59.240
+salvează tokenul în sesiuni și îi vom da datele.
+
+00:03:59.260 --> 00:04:03.140
+Indicativul pe care îl primim.
+
+00:04:03.560 --> 00:04:14.770
+Țineți minte din nou că în fila noastră de rețea, dacă vă uitați la seinen pe care l-am pierdut aproape de faptul că încă o
+
+00:04:14.770 --> 00:04:15.230
+dată.
+
+00:04:15.370 --> 00:04:22.210
+Ei bine, nu mai avem nevoie să facem asta încă o dată, deoarece ne amintim că tokenul este primit în tokenul
+
+00:04:22.740 --> 00:04:23.680
+de date.
+
+00:04:23.740 --> 00:04:28.230
+Așa că o să mă conectez și să văd dacă funcționează.
+
+00:04:28.510 --> 00:04:29.050
+Să
+
+00:04:32.210 --> 00:04:35.320
+știm că facem acest lucru puțin mai mic.
+
+00:04:35.610 --> 00:04:38.000
+Apăsați tasta punct. com.
+
+00:04:38.040 --> 00:04:41.120
+Un semn.
+
+00:04:41.240 --> 00:04:49.030
+În acest moment nu sa întâmplat nimic nebun, dar dacă mergem la aplicații, uităm la faptul că avem acum jetonul nostru
+
+00:04:49.030 --> 00:04:49.900
+stocat aici.
+
+00:04:49.900 --> 00:05:00.810
+Deci, chiar dacă am reîmprospăta acest simbol există și pot reîmprospăta tokenul de reîmprospătare dacă deschid
+
+00:05:00.840 --> 00:05:13.570
+o fereastră nouă și du-te la localhost trei mii una și deschid instrumentele dezvoltatorului, astfel că nu există sesiune aici.
+
+00:05:14.260 --> 00:05:15.230
+Asta nu e bine.
+
+00:05:15.610 --> 00:05:22.060
+Dar dacă adăugăm spațiu de stocare local în loc de stocare a sesiunii.
+
+00:05:22.110 --> 00:05:33.570
+Dacă facem stocarea locală și vă conectăm din nou, veți închide acest lucru și veți încerca acest lucru din nou.
+
+00:05:33.580 --> 00:05:35.010
+Mă voi reîmprospăta.
+
+00:05:35.380 --> 00:05:46.190
+Vom elimina fumul pentru a ne asigura că este complet gol și apoi o să mă duc.
+
+00:05:46.300 --> 00:05:46.620
+In regula.
+
+00:05:46.660 --> 00:05:53.530
+Acum nu avem nimic în stocarea sesiunii, dar avem ceva în spațiul de stocare local și îmi place să stochez sesiunea
+
+00:05:53.590 --> 00:05:54.390
+dacă refresh.
+
+00:05:54.400 --> 00:06:00.650
+Am acest lucru în magazinele locale, dar și dacă deschid o fereastră nouă și fac o gazdă locală de
+
+00:06:02.710 --> 00:06:10.580
+trei mii pe care am stocarea locală aici și vă recomand să folosiți un depozit de sesiuni pe care eu îl prefer personal personalului de
+
+00:06:10.730 --> 00:06:11.650
+stocare local.
+
+00:06:11.720 --> 00:06:14.860
+Dar, în funcție de nevoia dvs., puteți utiliza oricare doriți.
+
+00:06:14.960 --> 00:06:20.600
+Din nou, stocarea locală persistă puțin mai mult decât stocarea sesiunii de stocare a sesiunii
+
+00:06:20.600 --> 00:06:24.370
+este pur și simplu doar pentru o singură sesiune.
+
+00:06:24.380 --> 00:06:31.490
+În regulă, să închidem acest lucru și să îl schimbăm în spațiul de stocare a sesiunii.
+
+00:06:31.540 --> 00:06:34.010
+Acum avem o problemă aici.
+
+00:06:34.030 --> 00:06:39.940
+Încă suntem rugați să ne conectăm de fiecare dată și asta pentru că în spate
+
+00:06:40.390 --> 00:06:49.860
+dacă ne amintim că facem un cec pentru a ieși din codul de identificare și nu am trimis într-adevăr antetele de autorizare atunci când ne
+
+00:06:49.860 --> 00:06:51.730
+conectăm cu tokenul nostru.
+
+00:06:51.900 --> 00:06:58.820
+Chiar acum intrăm întotdeauna prin semnul mânerului și pentru că nu am stabilit niciodată autorizația Hetter.
+
+00:06:58.970 --> 00:07:00.800
+Deci, hai să facem asta la capătul din față.
+
+00:07:00.920 --> 00:07:04.890
+Să setăm antetul de autorizare în semnal.
+
+00:07:05.240 --> 00:07:08.430
+Ei bine, acest lucru este pentru pagina de semn în memorie.
+
+00:07:08.680 --> 00:07:13.390
+Și pagina semnului se afișează numai dacă vă aduceți aminte și reveniți pentru a renunța.
+
+00:07:13.430 --> 00:07:14.420
+Da.
+
+00:07:14.420 --> 00:07:17.530
+Și de modul în care acest app dodgy devine un pic mare.
+
+00:07:17.530 --> 00:07:22.430
+S-ar putea să vedem de ce vrem să încorporăm redux sau să separăm unele dintre aceste metode.
+
+00:07:22.520 --> 00:07:32.220
+Cu toate acestea, dacă parcurgem tot drumul în jos, vedem că pagina de conectare apare ori de câte ori este parcurs.
+
+00:07:32.310 --> 00:07:39.190
+Deci semnul și pagina ar trebui să apară doar în acele cazuri în care utilizatorul nu este conectat.
+
+00:07:40.180 --> 00:07:52.830
+Deci, probabil, aici, în componenta noastră principală, care este aplicația, înainte de a face ceva când componentul a fost montat.
+
+00:07:52.890 --> 00:07:59.280
+Aceasta este prima metodă a ciclului de viață care va fi auzită înainte ca ceva să fie redat.
+
+00:07:59.280 --> 00:08:00.490
+Vrem să verificăm ceva.
+
+00:08:00.540 --> 00:08:06.240
+Vrem să vedem dacă există un element de stocare a sesiunii, un simbol pe care
+
+00:08:06.300 --> 00:08:15.750
+îl putem folosi, pentru a evita toate sinusurile și logica și aici putem face un simbol de concert și vom verifica stocarea sesiunii pe care
+
+00:08:15.810 --> 00:08:25.330
+o vom merge să spunem stocarea sesiunii de ferestre și aici mergem să spunem să obținem elementul în loc de elementul menționat și pur și
+
+00:08:25.330 --> 00:08:28.950
+simplu vom obține simbolul pe care îl avem.
+
+00:08:29.020 --> 00:08:38.170
+Dacă ei au un token acum înăuntru, vom spune pur și simplu dacă există un simbol bine în acest caz doar să ne aducă un lucru
+
+00:08:38.170 --> 00:08:44.380
+nou și acest lucru nou va fi semnalul nostru și indicați și acest semn și punctul va
+
+00:08:49.360 --> 00:08:53.970
+merge au câteva lucruri diferite de cele pe care le-am avut înainte.
+
+00:08:54.970 --> 00:09:02.530
+În primul rând va fi un al doilea parametru care are o metodă de postări pe care am văzut-o înainte.
+
+00:09:03.810 --> 00:09:05.100
+Va avea antete care este
+
+00:09:09.120 --> 00:09:10.000
+un obiect.
+
+00:09:10.000 --> 00:09:12.280
+Primul lucru pe care îl avem este un tip de conținut.
+
+00:09:12.300 --> 00:09:14.240
+Trebuie să-i spunem ce tip va fi.
+
+00:09:14.580 --> 00:09:21.180
+Și o să-i trimitem din nou aplicația Jaison pentru că o vom trimite
+
+00:09:21.240 --> 00:09:31.180
+în corpul solicitării, dar și o nouă ediție va fi autorizația și ar fi doar titlurile implicite spun că poți
+
+00:09:31.180 --> 00:09:39.280
+stabili cu HGP iar aceste antete de autorizare vor avea pur și simplu tokenul pe care
+
+00:09:39.280 --> 00:09:42.510
+îl avem în stocarea sesiunii.
+
+00:09:42.550 --> 00:09:44.580
+Acum, doar un capete sus aici.
+
+00:09:44.860 --> 00:09:52.720
+De fapt, modul în care doriți să stabiliți autorizarea acestui standard este de a face ceva de genul "barer" și apoi
+
+00:09:52.720 --> 00:09:53.410
+de
+
+00:09:56.180 --> 00:09:57.980
+a adăuga spațiu pentru token.
+
+00:09:58.200 --> 00:10:01.460
+Și voi lăsa informații pentru tine să citești mai multe despre asta.
+
+00:10:01.860 --> 00:10:04.850
+Și este un lucru destul de ușor de pus în aplicare.
+
+00:10:04.950 --> 00:10:10.140
+Deocamdată, tocmai pentru a păstra lucrurile simple, o să o las așa ca să trimitem
+
+00:10:10.140 --> 00:10:12.020
+tokenul cu antetele de autorizare.
+
+00:10:12.150 --> 00:10:20.960
+Și acum facem doar un punct și atunci acest câine va primi datele.
+
+00:10:21.970 --> 00:10:26.980
+Că vom reveni, care va fi id-ul de utilizator amintesc.
+
+00:10:27.310 --> 00:10:28.600
+Așa că o să facem.
+
+00:10:28.630 --> 00:10:32.930
+Da și această declarație if va fi date.
+
+00:10:33.040 --> 00:10:37.960
+Dacă există date și, probabil, vom face o altă verificare
+
+00:10:40.990 --> 00:10:49.320
+pentru ID-ul de date și dacă aceasta funcționează bine, atunci în acest caz voi spune doar succesul pentru moment.
+
+00:10:50.550 --> 00:10:58.920
+Trebuie să obținem profilul de utilizator și să adăugăm doar un punct de captură aici doar incase orice este în afara.
+
+00:10:59.080 --> 00:11:01.210
+Și pentru moment voi face un jurnal de consolă.
+
+00:11:03.270 --> 00:11:04.680
+Bine, să salvăm asta.
+
+00:11:04.680 --> 00:11:11.850
+Asigurați-vă că nu există erori și treceți peste ceea ce tocmai sa întâmplat când v-ați conectat, deoarece aceasta va
+
+00:11:11.850 --> 00:11:14.620
+fi prima dată când utilizatorul intră.
+
+00:11:14.620 --> 00:11:18.110
+Nu există nici un jurnal de autorizare pe care îl au.
+
+00:11:18.270 --> 00:11:19.310
+Deci trebuie să se conecteze.
+
+00:11:19.350 --> 00:11:21.620
+Ei trimit email-ul și parola.
+
+00:11:21.870 --> 00:11:28.950
+Și dacă totul verifică, baza de date va întoarce pentru noi tokenul de date pe care o
+
+00:11:28.950 --> 00:11:32.350
+vom salva în sesiunile noastre din browserul nostru.
+
+00:11:32.840 --> 00:11:39.020
+Acum, dacă un utilizator se reîmprospătează și se întoarce la aplicația noastră, primul lucru care este redat este apt.
+
+00:11:39.140 --> 00:11:43.580
+Da, există o componentă care a fost montată înainte de a se întâmpla ceva.
+
+00:11:43.700 --> 00:11:45.840
+Verificăm sesiunile de pornire a ferestrelor.
+
+00:11:45.950 --> 00:11:52.260
+Vom lua ceva și vom vedea dacă există un jeton, deoarece dacă nu este bine nu se va întâmpla nimic și vom
+
+00:11:52.260 --> 00:11:55.660
+continua să continuăm cu ziua noastră, așa cum am făcut înainte.
+
+00:11:55.700 --> 00:12:02.510
+În caz contrar, dacă există un jeton pe care îl vom rula și vom arăta că nu mai trebuie
+
+00:12:02.510 --> 00:12:10.490
+să faceți clic pe acel semn în Boston și să avem semnul și funcția de trimitere, vom potrivi automat și vom da
+
+00:12:10.490 --> 00:12:18.470
+jetonul de autorizare Hetter astfel încât autokey și antet dacă mergem la spate se va spune că există o scanare automată Voi
+
+00:12:18.620 --> 00:12:25.520
+primi doar tokenul de autorizare I. D. din baza noastră de date rattus
+
+00:12:25.520 --> 00:12:27.170
+și voi răspunde.
+
+00:12:28.300 --> 00:12:31.570
+Cu dvs. I. D ..
+
+00:12:31.730 --> 00:12:40.690
+Așa că, atunci când ne întoarcem aici, putem face o nouă solicitare de a obține un profil.
+
+00:12:40.690 --> 00:12:41.960
+Bine, hai să o dăm.
+
+00:12:42.340 --> 00:12:43.540
+Să testați asta.
+
+00:12:45.300 --> 00:12:48.200
+Mă voi asigura că nu există jetoane.
+
+00:12:48.600 --> 00:12:51.470
+Să mergem la sesiuni și la spațiul de stocare local.
+
+00:12:51.480 --> 00:12:52.990
+Voi șterge asta.
+
+00:12:53.010 --> 00:12:54.160
+Totul e clar.
+
+00:12:54.980 --> 00:13:02.320
+Și am de gând să spun o COM A Să semneze un.
+
+00:13:02.520 --> 00:13:02.920
+In regula.
+
+00:13:02.930 --> 00:13:09.420
+Pot să mă conectez dacă mă duc la consola.
+
+00:13:09.640 --> 00:13:11.140
+Arată așa.
+
+00:13:11.320 --> 00:13:19.600
+Nu a fost rulat, dar are sens pentru că tocmai am semnat, tocmai am primit jetonul de sesiune.
+
+00:13:19.840 --> 00:13:21.870
+Cu toate acestea, dacă am
+
+00:13:25.030 --> 00:13:29.670
+reîmprospăta acum și nu primesc nimic pentru că ați fi observat acest lucru.
+
+00:13:29.670 --> 00:13:39.580
+Trebuie să execut punctul, apoi răspunsul să-și amintească toată metoda prietenului nostru bun Jason pentru a ne asigura că
+
+00:13:39.580 --> 00:13:41.800
+putem citi aceste informații.
+
+00:13:41.910 --> 00:13:47.660
+Să spunem asta și să ne întoarcem aici succesul.
+
+00:13:47.890 --> 00:13:53.480
+Trebuie să obținem profilul utilizatorului deoarece avem succesul de jetoane de care avem nevoie pentru a obține profilul utilizatorului.
+
+00:13:53.580 --> 00:14:00.610
+Dacă mă întorc și șterg sesiunea du-te la cons. Și eu reîmprospătesc.
+
+00:14:00.730 --> 00:14:01.460
+Nu.
+
+00:14:01.830 --> 00:14:02.630
+Fara succes.
+
+00:14:02.640 --> 00:14:04.660
+Trebuie să vă conectați prietenul meu.
+
+00:14:04.710 --> 00:14:06.150
+Foarte foarte rece.
+
+00:14:06.960 --> 00:14:07.410
+In regula.
+
+00:14:07.410 --> 00:14:13.880
+Deci, în următorul videoclip vom implementa această parte a obținerii profilului de utilizator pe care îl voi vedea văd
+
+00:14:13.890 --> 00:14:14.280
+unul.

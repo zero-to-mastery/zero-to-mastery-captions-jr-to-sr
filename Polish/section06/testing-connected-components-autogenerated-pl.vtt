@@ -1,0 +1,796 @@
+﻿WEBVTT
+
+00:00:02.400 --> 00:00:05.230
+Stawki, które na pewno przeczytamy więcej testów.
+
+00:00:05.230 --> 00:00:09.340
+Ale do tej pory pracowaliśmy tylko z kilkoma prostymi komponentami.
+
+00:00:09.470 --> 00:00:15.940
+Co jeśli chcemy pracować z czymś podobnym do kontenera, którego używa ten topowy pies Mamy cały ten stan map
+
+00:00:15.940 --> 00:00:17.000
+dla rekwizytów.
+
+00:00:17.200 --> 00:00:23.890
+Jest to również podłączony element.
+
+00:00:23.930 --> 00:00:27.870
+Jak to przetestujemy.
+
+00:00:28.030 --> 00:00:29.380
+Spróbujmy.
+
+00:00:30.290 --> 00:00:34.980
+Mam zamiar stworzyć nowy plik i nazwać go testem umiejętności.
+
+00:00:35.050 --> 00:00:35.700
+Tak.
+
+00:00:37.810 --> 00:00:46.400
+I ten test umiejętności, który znowu brzmi tak i nie możemy po prostu przejść przez ruchy i skopiować ostatniego
+
+00:00:46.400 --> 00:00:46.870
+testu.
+
+00:00:46.880 --> 00:00:56.140
+Po prostu róbmy to i tym razem, zamiast konurbacji, to się skończy.
+
+00:00:56.260 --> 00:01:01.410
+I znowu nie otrzymamy żadnych kolorów.
+
+00:01:01.480 --> 00:01:03.580
+Po prostu uruchom to i zobaczmy, co się stanie.
+
+00:01:03.580 --> 00:01:04.240
+Och, właściwie.
+
+00:01:04.300 --> 00:01:05.780
+Pozwól mi to również usunąć.
+
+00:01:05.860 --> 00:01:08.510
+Zapisać.
+
+00:01:08.760 --> 00:01:09.390
+W porządku.
+
+00:01:09.390 --> 00:01:11.020
+Dostaję jakieś błędy.
+
+00:01:11.130 --> 00:01:17.960
+Mówi się, że oczekuję renderowania składnika aplikacji, który jest tutaj, ale dostaję błąd, mówiąc,
+
+00:01:17.970 --> 00:01:24.920
+że niezmienne naruszenie nie może znaleźć magazynu ani w kontekście, ani w aplikacji aplikacji połączenia.
+
+00:01:24.930 --> 00:01:36.070
+W porządku, po prostu zamknijmy magazyn, który możesz powiedzieć, że sklep z zamkiem Konst jest równy, powiedz teraz pusty obiekt.
+
+00:01:36.430 --> 00:01:47.550
+Albo po prostu wykonujmy roboty z pustej tablicy i zróbmy to sir, czy pole wyszukiwania.
+
+00:01:47.990 --> 00:01:52.410
+To jest pusty ciąg znaków, a my po prostu przekażemy
+
+00:01:55.250 --> 00:01:56.080
+ten
+
+00:02:01.460 --> 00:02:07.180
+fałszywy sklep, ponieważ proces sklepu i cały Chłopiec, którego otrzymuję, nie jest funkcją.
+
+00:02:07.310 --> 00:02:09.350
+I to ma sens.
+
+00:02:09.350 --> 00:02:17.330
+Jeśli pamiętasz nasz sklep to nie tylko pusty obiekt czy obojętny obiekt.
+
+00:02:17.390 --> 00:02:23.690
+Chodzi mi o to, że jest to termin redoks, ale przyszedł także z tymi wszystkimi innymi rzeczami, o
+
+00:02:23.690 --> 00:02:26.620
+których tak naprawdę nie myśleliśmy, kiedy zainstalowaliśmy.
+
+00:02:26.720 --> 00:02:32.390
+Otrzymaliśmy subskrypcję stanu i wszystkie inne metody, które do niego dołączono.
+
+00:02:32.420 --> 00:02:40.420
+Oznacza to, że musimy kpić z całej listy metod sklepu, które redukuje.
+
+00:02:40.460 --> 00:02:45.930
+A jeśli aktualizacje będą redukowane i dodane coś nowego w przyszłości, będziemy musieli to również zaktualizować.
+
+00:02:46.280 --> 00:02:51.390
+I na szczęście dla nas są narzędzia, które już to robią dla ciebie.
+
+00:02:51.650 --> 00:03:02.810
+Na przykład istnieje pakiet o nazwie redux lock store, którego można użyć do sfałszowania tego sklepu
+
+00:03:02.810 --> 00:03:06.320
+i posiadania odpowiednich metod.
+
+00:03:06.320 --> 00:03:08.780
+Jest to pakiet NPM, który możemy zainstalować.
+
+00:03:08.780 --> 00:03:11.500
+Ale chcę wybrać inną trasę.
+
+00:03:11.600 --> 00:03:20.480
+Chcę wybrać drogę prostoty, ponieważ teraz patrzę na tę aplikację kropka J. S. plik Robimy wiele
+
+00:03:20.480 --> 00:03:27.890
+rzeczy i lubię proste testy testów, które testują proste rzeczy.
+
+00:03:28.130 --> 00:03:35.540
+A ta aplikacja jest trochę skomplikowana, ponieważ mamy takie połączenie, więc technicznie nie jest
+
+00:03:35.540 --> 00:03:40.050
+to nawet renderowanie aplikacji, która renderuje Canet.
+
+00:03:40.290 --> 00:03:42.270
+A to jest szczur.
+
+00:03:42.810 --> 00:03:50.280
+Pozwól, że ci pokażę, co mam na myśli, gdy wrócę do naszej aplikacji i otworzę nasze narzędzia do ponownego programowania,
+
+00:03:50.280 --> 00:03:57.510
+które możesz potrzebować, aby pobrać tę wtyczkę, a jeśli jej nie masz, widzę, że moja aplikacja jest dostawcą,
+
+00:03:57.540 --> 00:03:59.990
+a następnie połącz się z aplikacją.
+
+00:04:00.130 --> 00:04:09.620
+Ta aplikacja, którą właśnie testujemy, jest komponentem Kinect, który owija aplikację i tylko ją zawiera.
+
+00:04:09.640 --> 00:04:14.970
+Mamy aplikację, a następnie przewijamy pole wyszukiwania Hettera i tak dalej i tak dalej.
+
+00:04:16.430 --> 00:04:17.650
+Uprość to.
+
+00:04:17.660 --> 00:04:23.910
+Dlaczego nie po prostu przetestować naszą aplikację zamiast testowania są połączone komponent.
+
+00:04:24.560 --> 00:04:33.400
+I to jest to, co chciałbym robić, gdy testuję rzeczy zamiast próbować testować naprawdę skomplikowany komponent.
+
+00:04:33.490 --> 00:04:39.640
+Zadaję sobie pytanie, czy ten komponent jest tak prosty, jak to tylko możliwe, czy istnieją lepsze rzeczy, które mogę zrobić
+
+00:04:40.090 --> 00:04:42.760
+za pomocą kodu, aby uczynić go bardziej sprawdzalnym.
+
+00:04:42.850 --> 00:04:45.800
+Który zwykle powoduje lepszy ogólny kod.
+
+00:04:55.350 --> 00:05:00.010
+Patrząc na to, ten składnik aplikacji robi dwie główne rzeczy.
+
+00:05:00.060 --> 00:05:04.430
+Jeden łączy się ze sklepem z pudełkiem do czytania.
+
+00:05:04.530 --> 00:05:08.100
+Przez wszystkie te mapy wypowiadane są dwa rekwizyty i mapa wysyłana do rekwizytów.
+
+00:05:08.310 --> 00:05:11.900
+Ale to także sprawia, że ton zlewozmywaków.
+
+00:05:11.940 --> 00:05:14.550
+Rozdzielmy to.
+
+00:05:14.550 --> 00:05:23.220
+Mam zamiar stworzyć nowy plik składowy i nazwać go głównym przeglądem strony, abyście mogli myśleć o tym jako o stronie
+
+00:05:23.220 --> 00:05:25.020
+głównej naszych znajomych
+
+00:05:28.260 --> 00:05:32.910
+Robur, a teraz ta strona główna będzie miała również plik testowy.
+
+00:05:32.970 --> 00:05:35.400
+Więc zamierzam przenieść aplikację.
+
+00:05:35.600 --> 00:05:45.400
+Przetestowano tak, aby rzeczywiście zmienić nazwę na stronę główną i umieścić w folderze składników.
+
+00:05:48.210 --> 00:05:48.920
+W porządku.
+
+00:05:48.990 --> 00:05:53.500
+Nasze testy kończą się niepowodzeniem, ale to dlatego, że mamy wszystkie nazwy.
+
+00:05:53.510 --> 00:05:55.660
+Przejdźmy więc krok po kroku.
+
+00:05:55.850 --> 00:06:03.110
+Sprawmy, żeby w aptece Rajai martwiło nas, że po prostu podłączamy i odbieramy
+
+00:06:03.110 --> 00:06:12.360
+tylko odbieranie rekwizytów ze sklepu i sprawiamy, że nasza strona główna zajmuje się renderowaniem całej tej strony głównej.
+
+00:06:12.410 --> 00:06:14.030
+Jak możemy to zrobić?
+
+00:06:14.570 --> 00:06:21.550
+Cóż, pierwszym krokiem jest skopiowanie całego pliku dodgiest do naszej głównej strony.
+
+00:06:21.770 --> 00:06:23.030
+Skopiuj i wklej to.
+
+00:06:23.240 --> 00:06:29.190
+I od razu usuń wszystkie rzeczy redux, ponieważ nie potrzebuję niczego redux.
+
+00:06:29.240 --> 00:06:33.440
+To będzie prosty komponent, który nie jest połączony ze sklepem redux.
+
+00:06:33.620 --> 00:06:43.160
+Tak więc zamierzam usunąć Connect, który zamierzam usunąć którekolwiek z akcji i po prostu zostawić nasze komponenty.
+
+00:06:43.160 --> 00:06:54.210
+Zamierzam usunąć stan mapy do wysyłki wniosku do wniosku rekwizytów, a ja zmienię nazwę na składnik głównej
+
+00:06:54.600 --> 00:06:59.850
+strony i tam, gdzie nie ma CSSA.
+
+00:07:00.040 --> 00:07:04.510
+A może powinniśmy przenieść tę aplikację dodgiest na naszą stronę główną.
+
+00:07:04.520 --> 00:07:06.980
+Więc na razie zamierzam coś szybko stworzyć.
+
+00:07:07.100 --> 00:07:15.410
+Mam zamiar powiedzieć nową stronę główną pliku dot C Ss i przy okazji zaczynasz rozumieć, dlaczego możemy chcieć mieć
+
+00:07:15.410 --> 00:07:18.950
+lepszą strukturę folderów niż pliki plików tylko.
+
+00:07:19.010 --> 00:07:24.490
+Możemy chcieć mieć komponenty i folder komponentów dla każdego z tych komponentów.
+
+00:07:24.890 --> 00:07:30.280
+Zamierzam tylko skopiować i wkleić tutaj i wrócić do naszej głównej strony.
+
+00:07:30.290 --> 00:07:33.380
+Mamy teraz ten DSS,
+
+00:07:36.170 --> 00:07:42.910
+mamy konstruktora i nie wiem, dlaczego mamy tutaj swój licznik.
+
+00:07:42.990 --> 00:07:45.670
+Nie sądzę, żebyśmy teraz potrzebowali tego hrabiego.
+
+00:07:45.750 --> 00:07:48.210
+Usuńmy to.
+
+00:07:48.480 --> 00:07:50.460
+Nie potrzebujemy więc
+
+00:07:53.560 --> 00:08:00.430
+konstruktora, a na naszej stronie głównej nie ma konstruktora, do którego
+
+00:08:00.430 --> 00:08:09.760
+został zamontowany komponent, ponieważ chcemy prosić o roboty i mamy nasze standardowe renderowanie, ale nie
+
+00:08:09.760 --> 00:08:16.090
+mamy też naszego połączenia. po prostu renderowanie naszej głównej strony.
+
+00:08:16.150 --> 00:08:16.690
+W porządku.
+
+00:08:16.690 --> 00:08:26.310
+Usunęliśmy to i stworzyliśmy prostą aplikację, która wciąż zawiera komponent, ale to tylko propozycja,
+
+00:08:26.430 --> 00:08:29.360
+którą otrzymaliśmy ze sklepu.
+
+00:08:30.910 --> 00:08:31.540
+W porządku.
+
+00:08:31.570 --> 00:08:33.550
+Więc przejdźmy do APTA.
+
+00:08:33.580 --> 00:08:39.900
+Tak, a teraz usuń część up, ponieważ tak naprawdę już tego nie potrzebujemy lub nie potrzebujemy
+
+00:08:39.900 --> 00:08:43.260
+części renderowania, której potrzebujemy po prostu połączonego komponentu.
+
+00:08:43.290 --> 00:08:45.240
+Więc znowu tutaj.
+
+00:08:45.240 --> 00:08:54.920
+Teraz dla naszego renderowania wszystko, co naprawdę musimy zrobić, to dobrze usunąć wszystko, co wydaje się miłe, usuwając pliki
+
+00:08:54.920 --> 00:09:01.940
+i zmniejszając pliki, a wszystko, czego potrzebujemy, to główny składnik strony do renderowania.
+
+00:09:02.180 --> 00:09:02.960
+Dobrze.
+
+00:09:03.740 --> 00:09:16.200
+Usuwamy więc wszystkie te importowane komponenty i po prostu importujemy ponownie główny składnik strony.
+
+00:09:16.310 --> 00:09:17.780
+Inny powód, dla którego kocham, reaguje.
+
+00:09:17.810 --> 00:09:21.110
+Wszystko jest takie proste i łatwe do przenoszenia komponentów.
+
+00:09:21.200 --> 00:09:24.310
+Ale spójrz, co zrobiliśmy naprawdę szybko.
+
+00:09:24.470 --> 00:09:31.640
+Och, zdecydowanie nie potrzebujemy komponentu, który montujemy, ponieważ robimy to na stronie głównej.
+
+00:09:31.640 --> 00:09:36.410
+Spójrz, jak mały jest ten komponent, jaki jest ładny.
+
+00:09:37.380 --> 00:09:43.220
+A teraz ten składnik aplikacji właśnie stał się bardzo prostym komponentem kontenerowym.
+
+00:09:43.380 --> 00:09:50.850
+I to jest decyzja architektoniczna, która naprawdę mi się podoba, ponieważ tak naprawdę nie musimy nawet tego
+
+00:09:51.090 --> 00:09:52.020
+testować.
+
+00:09:52.050 --> 00:09:53.590
+Czy my.
+
+00:09:53.710 --> 00:10:03.130
+Ponieważ wszystko, co robimy, to po prostu użycie funkcji łączenia, aby pobrać stan i wywołać zdarzenia z
+
+00:10:03.190 --> 00:10:05.240
+naszego magazynu redock.
+
+00:10:05.260 --> 00:10:10.480
+Więc nawet pisanie testów na to, chociaż moglibyśmy to zrobić, po prostu testujemy funkcjonalność
+
+00:10:10.720 --> 00:10:11.290
+redux.
+
+00:10:11.290 --> 00:10:17.500
+I to jest coś, co biblioteka redux już posiada już testy i ludzie pracujący, aby upewnić
+
+00:10:17.500 --> 00:10:19.110
+się, że działa poprawnie.
+
+00:10:20.230 --> 00:10:25.290
+Ten komponent staje się teraz czymś tak prostym, że nawet nie musimy go testować.
+
+00:10:25.810 --> 00:10:33.550
+Przenieśliśmy całą naszą logikę, którą możemy przetestować na głównym elemencie strony i jest to coś bardzo ważnego
+
+00:10:33.760 --> 00:10:34.790
+do przemyślenia.
+
+00:10:34.810 --> 00:10:39.400
+Zawsze staraj się, aby twoje testy były łatwe.
+
+00:10:39.580 --> 00:10:44.620
+Jeśli tak nie jest, być może jest coś w twoim kodzie, co możesz uprościć Nganowi, jak
+
+00:10:44.620 --> 00:10:45.880
+elegancko wygląda to rozwiązanie.
+
+00:10:46.030 --> 00:10:51.770
+Ostatnią rzeczą, którą naprawdę chcemy zrobić, to po prostu przekazać te rekwizyty do głównej strony.
+
+00:10:52.180 --> 00:11:05.240
+Aby to zrobić, możemy po prostu użyć destrukturyzacji lub rozprzestrzeniania obiektu, co podpowiada ta kropka.
+
+00:11:05.410 --> 00:11:10.210
+Zobaczmy, czy faktycznie nie przetestowaliśmy tego kodu, więc upewnij się, że nadal działa.
+
+00:11:10.300 --> 00:11:11.890
+Uruchommy uruchomienie NPM.
+
+00:11:11.920 --> 00:11:14.920
+Pewnie jest coś, co mogliśmy przegapić.
+
+00:11:15.990 --> 00:11:19.490
+Zamknijmy to.
+
+00:11:19.540 --> 00:11:26.840
+W porządku, twoja metoda renderowania powinna mieć instrukcję return i tak naprawdę musimy powrócić z
+
+00:11:26.900 --> 00:11:31.350
+tej instrukcji renderowania jako głupia z nas Sless return.
+
+00:11:34.720 --> 00:11:41.870
+Mamy też problem z CSSA, a to dlatego, że nie może znaleźć czcionki Segev.
+
+00:11:41.930 --> 00:11:43.610
+To prosta naprawa.
+
+00:11:43.700 --> 00:11:51.110
+Po prostu idziemy do studni i robimy to, ponieważ czcionka Segev znajduje się w pojemnikach.
+
+00:11:51.320 --> 00:11:59.340
+Możemy po prostu zrobić pojemniki na razie, nawet jeśli prawdopodobnie chcemy to teraz przenieść do celów
+
+00:11:59.340 --> 00:12:02.360
+demonstracyjnych, które są w porządku.
+
+00:12:02.400 --> 00:12:03.600
+Wszystko przemija.
+
+00:12:03.600 --> 00:12:07.380
+Jeśli wrócę, widzę, że jest kilka innych błędów.
+
+00:12:07.530 --> 00:12:17.800
+Mamy numer Noala i przechodzimy tutaj do stanu count w komponencie nagłówka.
+
+00:12:18.120 --> 00:12:26.460
+Ale jeśli pamiętasz, nasz komponent Hetter ma przeciw-baterię, która faktycznie ma swój własny stan.
+
+00:12:26.470 --> 00:12:29.770
+Wygląda na to, że robimy to bez powodu.
+
+00:12:30.130 --> 00:12:36.460
+Usuńmy to po raz pierwszy z głównej strony.
+
+00:12:36.530 --> 00:12:37.120
+Tak.
+
+00:12:37.190 --> 00:12:42.310
+Więc możemy po prostu usunąć ten zapis, wrócić.
+
+00:12:42.390 --> 00:12:42.840
+W porządku.
+
+00:12:42.840 --> 00:12:45.890
+Wszystko działa, upewnij się, że nasze wyszukiwanie działa.
+
+00:12:46.020 --> 00:12:46.430
+Tak.
+
+00:12:46.470 --> 00:12:49.200
+Wszystko działa Liczenie działa.
+
+00:12:49.200 --> 00:13:00.410
+Jeśli otworzę moje narzędzia programistyczne, które nie będą działać ponownie, nie będziemy chcieli ponownie działać, mamy dostawcę, do którego mamy podłączoną
+
+00:13:00.410 --> 00:13:01.500
+aplikację.
+
+00:13:01.550 --> 00:13:02.510
+Ale sprawdź to.
+
+00:13:03.700 --> 00:13:14.210
+Mamy teraz stronę główną, którą możemy przetestować, a ta strona główna jest teraz bardziej dostępna dla nas z użyciem enzymu
+
+00:13:14.210 --> 00:13:15.620
+niż tylko.
+
+00:13:15.790 --> 00:13:17.300
+Napiszmy więc tutaj kilka testów.
+
+00:13:19.270 --> 00:13:23.130
+Przejdziemy na stronę główną, aby przejść testy.
+
+00:13:23.200 --> 00:13:31.890
+W porządku, najpierw zmieńmy nazwę na stronę główną, która jest teraz testowana teraz i ponieważ czuję, że
+
+00:13:31.890 --> 00:13:38.370
+będziemy robili to dużo i przekazywanie kilku rekwizytów Istnieje pewien mały
+
+00:13:38.430 --> 00:13:46.220
+sztuczka, którą możemy zrobić, powiedzmy, że "Będziesz miał dużo wrappera i na razie go usunę.
+
+00:13:48.440 --> 00:13:55.670
+I możemy użyć czegoś, co zostało wywołane, zanim ponownie pojawi się system just i innych frameworków testowych, a
+
+00:13:55.760 --> 00:14:00.400
+to zapewni, że będzie działał przed każdym z naszych testów.
+
+00:14:00.410 --> 00:14:08.300
+Teraz tutaj po prostu nadajemy mu funkcję, a wewnątrz tej funkcji możemy powiedzieć, co należy uruchomić przed każdym
+
+00:14:08.300 --> 00:14:10.100
+z naszych testów.
+
+00:14:10.100 --> 00:14:15.460
+W naszym przypadku chcemy wyśmiewać rekwizyty i te fałszywe rekwizyty.
+
+00:14:15.460 --> 00:14:17.030
+Cóż, gdzie będziemy mieli.
+
+00:14:17.170 --> 00:14:28.910
+Będziemy mieli roboty na żądanie, które jeśli pamiętasz, zamknijmy to i zamknijmy, żeby było
+
+00:14:28.910 --> 00:14:31.020
+trochę czystsze.
+
+00:14:31.240 --> 00:14:37.300
+Jeśli pamiętasz stronę główną ma funkcję robot na żądanie.
+
+00:14:37.300 --> 00:14:43.930
+Więc nie możemy tak po prostu zrobić tej właśnie funkcji, którą widzieliśmy wcześniej z kpiną.
+
+00:14:43.930 --> 00:14:46.780
+Więc mówimy tylko, że to tylko ta prosta funkcja.
+
+00:14:46.780 --> 00:14:49.520
+Nie przejmuj się faktycznym wykonywaniem połączenia API.
+
+00:14:49.720 --> 00:14:52.260
+Powiemy, że roboty to pusta tablica.
+
+00:14:54.410 --> 00:15:08.230
+To pole wyszukiwania będzie pustym łańcuchem, a wartość oczekująca zostanie ustawiona na wartość false.
+
+00:15:08.320 --> 00:15:15.850
+I wreszcie, ponieważ mamy to dla każdego lub przed każdym. Zamierzamy powiedzieć,
+
+00:15:15.850 --> 00:15:19.420
+że raper będzie równy płytkiej,
+
+00:15:22.120 --> 00:15:30.190
+renderowanej stronie głównej i tej stronie głównej, tak jak robiliśmy to w naszym apt.
+
+00:15:30.280 --> 00:15:35.400
+Tak, po prostu można otrzymać rekwizyty.
+
+00:15:35.640 --> 00:15:42.680
+To jest fałszywe rekwizyty.
+
+00:15:42.720 --> 00:15:47.490
+Więc to otrzyma wszystkie te właściwości, tak jak zrobiliśmy to w apt.
+
+00:15:47.610 --> 00:15:48.260
+Tak.
+
+00:15:48.360 --> 00:15:49.220
+Zobacz tę kość słoniową tutaj.
+
+00:15:54.040 --> 00:15:54.380
+W porządku.
+
+00:15:54.420 --> 00:16:02.770
+Powiedzmy więc, że jeśli wrócimy do testu NPM i mamy kilka błędów, to dobrze, że nie jest to średnik,
+
+00:16:02.770 --> 00:16:04.240
+który jest przecinkiem.
+
+00:16:04.240 --> 00:16:12.110
+Mój arch nemesis przecinek i otrzymujemy błąd, mówiąc, że nasze zestawy testów muszą zawierać jeden test, ponieważ nie
+
+00:16:12.170 --> 00:16:13.490
+czytaliśmy jeszcze.
+
+00:16:13.850 --> 00:16:16.580
+Właśnie napisaliśmy przed każdym.
+
+00:16:16.590 --> 00:16:18.330
+Teraz zacznijmy od podstaw.
+
+00:16:18.350 --> 00:16:31.530
+To sprawia, że strona główna nie ulega awarii, a my powiemy, że podczas gdy możemy użyć naszego ulubionego testowania migawkowego narzędzia testowego możemy po prostu
+
+00:16:31.830 --> 00:16:38.820
+powiedzieć, że oczekujemy opakowania, ponieważ teraz mamy dostęp do tego opakowania, które
+
+00:16:38.820 --> 00:16:47.780
+jest płytko renderowane, ponieważ przed każdym będzie działało przed tym przetestuj i powiem, że pasuje do migawki.
+
+00:16:48.270 --> 00:16:54.750
+Uwielbiam, jak łatwo to oszczędzamy.
+
+00:16:54.910 --> 00:16:57.270
+I co tu robiłem?
+
+00:16:57.490 --> 00:16:57.860
+Łał.
+
+00:16:57.910 --> 00:17:00.290
+Jestem okropnym pisaniem przecinków.
+
+00:17:01.600 --> 00:17:03.090
+W porządku, proszę.
+
+00:17:03.160 --> 00:17:07.650
+Musisz się teraz ze mnie śmiać ze wszystkimi przecinkami, za którymi tęsknię, kiedy koduję.
+
+00:17:07.660 --> 00:17:10.790
+Ale hej, wszyscy jesteśmy ludźmi, wszyscy popełniamy błędy.
+
+00:17:10.810 --> 00:17:16.100
+Nie sądzę, żeby kiedykolwiek powstał idealny programista, który nie popełnia błędów podczas kodowania.
+
+00:17:16.210 --> 00:17:16.730
+Jeśli tam są.
+
+00:17:16.730 --> 00:17:19.030
+Cóż, jestem bardzo zazdrosny o nich.
+
+00:17:19.030 --> 00:17:19.360
+W porządku.
+
+00:17:19.390 --> 00:17:24.140
+Przetestujmy inną rzecz, powiedzmy, że chciałem się upewnić, że poprawnie filtruje roboty.
+
+00:17:24.160 --> 00:17:28.640
+Więc powiem, że to robota filtru poprawnie.
+
+00:17:29.570 --> 00:17:42.770
+Powiem tylko, że tutaj spodziewamy się rapera i jak to zrobimy.
+
+00:17:42.800 --> 00:17:44.450
+Jeśli przejdziemy do strony głównej da J. S.
+
+00:17:47.240 --> 00:17:55.990
+mamy tu roboty filtrujące, ale dzieje się to w funkcji renderowania.
+
+00:17:56.030 --> 00:18:07.500
+Więc posprzątajmy to i powiedzmy, że mamy roboty filtrujące, a roboty filtrujące otrzymają roboty i będzie to
+
+00:18:07.520 --> 00:18:13.000
+prawie działać albo funkcja Nera i możemy po
+
+00:18:18.590 --> 00:18:21.020
+prostu wziąć to i
+
+00:18:25.010 --> 00:18:26.480
+odesłać
+
+00:18:29.770 --> 00:18:32.170
+nasze przefiltrowane roboty.
+
+00:18:32.170 --> 00:18:40.870
+Będziemy potrzebować pola wyszukiwania w tym utworze i powiedzieć, że to kropka rekwizyty kropkuje pole wyszukiwania na małe litery.
+
+00:18:41.060 --> 00:18:51.610
+A teraz w tym miejscu możemy powiedzieć, że roboty filtrujące pochodzą z robotów z filtrem punktowym.
+
+00:18:51.620 --> 00:18:53.330
+Po prostu upewnijmy się, że to działa.
+
+00:18:53.330 --> 00:18:55.810
+Mam zamiar wrócić i uruchomić start
+
+00:18:59.740 --> 00:19:03.420
+NPM i wygląda na to, że gdzieś tu popełniłem błąd.
+
+00:19:03.730 --> 00:19:10.840
+Musimy faktycznie przekazać robotowi siebie lub powiedzieć, że dostanie roboty, albo możemy to zrobić
+
+00:19:10.840 --> 00:19:17.490
+tutaj, abyśmy mogli to analizować i upewnić się, że mamy tutaj poprawne nazewnictwo.
+
+00:19:17.530 --> 00:19:19.540
+Filtruj roboty Wróćmy.
+
+00:19:20.800 --> 00:19:22.290
+W porządku, nadal działa.
+
+00:19:23.070 --> 00:19:30.400
+Więc teraz, gdy zrobiłem to trochę czystsze w naszej funkcji renderowania, a teraz po prostu
+
+00:19:30.400 --> 00:19:36.430
+usuń pole wyszukiwania z twojego wesołego celu, jak mogę to przetestować.
+
+00:19:36.430 --> 00:19:47.990
+Możemy teraz po prostu przetestować tę metodę na głównej stronie klasy i możemy teraz użyć właściwości instancji, która
+
+00:19:49.050 --> 00:19:51.600
+pochodzi z enzymem.
+
+00:19:51.990 --> 00:19:58.530
+A teraz ta instancja da nam dostęp do wszystkich metod, jakie zawiera strona główna, w tym roboty z
+
+00:19:58.530 --> 00:19:59.220
+folderami.
+
+00:19:59.430 --> 00:20:10.470
+Powiedzmy, że w naszym teście zamierzam to zrobić, powiem, że roboty z filtrem Dot będą uruchamiać roboty filtrujące
+
+00:20:10.500 --> 00:20:13.470
+z, powiedzmy, pustą tablicą.
+
+00:20:15.260 --> 00:20:20.660
+Oczekujemy, że będzie to równa pusta tablica.
+
+00:20:20.750 --> 00:20:31.020
+Zapiszmy więc i uruchom test NPM start lub NPM.
+
+00:20:31.260 --> 00:20:32.760
+Mamy nieudany test.
+
+00:20:35.220 --> 00:20:38.040
+I popełniłem tu trochę błąd.
+
+00:20:38.130 --> 00:20:43.010
+Xpect powinien znajdować się wokół tej całej rzeczy.
+
+00:20:43.020 --> 00:20:48.320
+Chcemy oczekiwać, że roboty filtrujące będą działać, a my chcemy równać się pustej macierzy.
+
+00:20:48.390 --> 00:20:51.130
+Uratujmy zranić.
+
+00:20:51.150 --> 00:20:52.560
+Wszystko przemija.
+
+00:20:52.830 --> 00:20:59.460
+Ale przetestujmy inne przypadki, bo chociaż najprawdopodobniej tak nie będzie, powiedzmy, że
+
+00:20:59.550 --> 00:21:04.860
+tym razem w tym oświadczeniu tylko wtedy, gdy dostajemy
+
+00:21:04.860 --> 00:21:13.020
+przed każdym i mamy dostęp do opakowania, tym razem chcemy mieć specjalny przypadek, w którym
+
+00:21:13.020 --> 00:21:16.760
+pozorowane rekwizyty będą miały pole wyszukiwania.
+
+00:21:16.960 --> 00:21:34.670
+I tutaj mamy robota, który powiedzmy, id Trzeci z imieniem Johna i e-mail Wilk zwalniają nazwę użytkownika z tego na
+
+00:21:34.670 --> 00:21:41.080
+razie John w Gmail kropka com.
+
+00:21:41.240 --> 00:21:45.510
+Zapiszmy to i utwórzmy nową instrukcję xpect.
+
+00:21:45.510 --> 00:22:02.240
+Teraz i tylko dla tego testu użyjemy innego opakowania tak leniwego, by powiedzieć opakowanie z Wiem, że to nie jest najczystsze, ale próbując zilustrować punkt tutaj,
+
+00:22:02.240 --> 00:22:06.220
+więc nie przejmuj się mną.
+
+00:22:06.320 --> 00:22:08.500
+Zróbmy więc fałszywe rekwizyty.
+
+00:22:09.590 --> 00:22:11.480
+Dwa fałszywe rekwizyty.
+
+00:22:11.720 --> 00:22:14.120
+I to też będzie raper.
+
+00:22:14.120 --> 00:22:24.870
+Powiedzmy, że jeśli raper będzie poprawnie zapisywać i oceniać mechanizmy filtrujące i wiesz, co właśnie sobie uświadomiłem, myślę, że
+
+00:22:24.930 --> 00:22:33.900
+lepszym sposobem na wykonanie robotów filtrujących jest przynajmniej, że możemy zapomnieć o rekwizytach i możemy po
+
+00:22:33.900 --> 00:22:39.380
+prostu zrobić to kropką w tę kropkę Roboty rekwizytów.
+
+00:22:41.980 --> 00:22:47.480
+Wracając tutaj możemy teraz usunąć tablice, więc wygląda trochę czystsze.
+
+00:22:48.840 --> 00:22:52.710
+I przeprowadźmy ten test.
+
+00:22:52.710 --> 00:22:58.860
+Dostajemy tutaj trochę błędu, ponieważ musimy też zrobić opakowanie Konst, ponieważ Rapparee nie jest zdefiniowany.
+
+00:22:58.860 --> 00:23:05.480
+Pamiętajmy, że musimy to zdefiniować, a nasze testy mijają, ponieważ nasze pole wyszukiwania to.
+
+00:23:05.540 --> 00:23:09.410
+Mamy tylko roboty z Johnem i Johnem Ajimobi.
+
+00:23:09.620 --> 00:23:19.300
+Ale jeśli zmienię to na Johna O-ho, to się nie uda, ponieważ spodziewaliśmy się, że uda się zrównać rzeczywiste
+
+00:23:19.300 --> 00:23:21.070
+roboty z Johnem.
+
+00:23:21.220 --> 00:23:31.140
+Na razie możemy po prostu powiedzieć, że oczekujemy, że ta tablica zostanie zwrócona, a ja usunę pierwszą.
+
+00:23:31.660 --> 00:23:37.820
+Oszczędzajmy i korzystajmy.
+
+00:23:38.000 --> 00:23:39.130
+Tutaj znajdziesz nawiasy Blarta.
+
+00:23:39.130 --> 00:23:40.000
+Znowu to jest dobre.
+
+00:23:40.000 --> 00:23:42.720
+Nasze testy kończą się niepowodzeniem i pracujemy nad ich przekazaniem.
+
+00:23:43.030 --> 00:23:47.670
+W porządku, a teraz wiemy, że roboty filtru działają poprawnie.

@@ -1,0 +1,388 @@
+﻿WEBVTT
+
+00:00:01.240 --> 00:00:06.790
+Bine ați venit înapoi să vedem ce aș fi făcut, ceea ce din nou nu înseamnă că este corect este
+
+00:00:06.790 --> 00:00:10.140
+exact ceea ce aș fi făcut pentru a îmbunătăți performanța site-ului.
+
+00:00:10.150 --> 00:00:12.350
+Sper că te-ai distrat cu această provocare.
+
+00:00:12.400 --> 00:00:16.150
+Sperăm că există câteva întrebări despre trucuri pe care trebuia să le depășească.
+
+00:00:16.170 --> 00:00:19.270
+Dar din nou, sunt sigur că toată lumea a făcut minunat.
+
+00:00:19.360 --> 00:00:24.890
+Deci, am vorbit despre minimizarea Phylis minimizând livrarea și calea critică de randare.
+
+00:00:24.940 --> 00:00:28.750
+Acestea sunt lucrurile pe care ne-am concentrat în această secțiune.
+
+00:00:28.750 --> 00:00:34.990
+Deci, uitandu-ne la site-ul web KCI Corp, nu este prea rau sa ne reimprospatam aici doar pentru a obtine acele
+
+00:00:34.990 --> 00:00:35.490
+animatii.
+
+00:00:35.670 --> 00:00:36.540
+Da.
+
+00:00:36.670 --> 00:00:36.970
+In regula.
+
+00:00:36.970 --> 00:00:38.700
+Am facut site-ul web asa ca am inselat.
+
+00:00:38.710 --> 00:00:43.570
+Știu cum putem îmbunătăți performanța destul de bine pe acest site Web pentru că am făcut
+
+00:00:43.570 --> 00:00:50.890
+câteva lucruri care cu siguranță nu erau cele mai frumoase, dar puteți vedea aici că nu este un site web rău pentru a fi
+
+00:00:50.890 --> 00:00:51.920
+ceea ce este.
+
+00:00:52.030 --> 00:00:58.040
+Ea are unele animații unele scrolling frumos pe care o putem face.
+
+00:00:58.820 --> 00:01:04.480
+Dar veți observa și aici că folosesc unele biblioteci care nici nu funcționează.
+
+00:01:04.850 --> 00:01:08.500
+Așadar, să aruncăm o privire la cod și să vedem ce am fi făcut pentru ao îmbunătăți.
+
+00:01:10.140 --> 00:01:18.010
+Primul lucru pe care l-aș face este să mă uit cu siguranță la dosarul feminin și dosarul feminin de aici.
+
+00:01:18.150 --> 00:01:25.280
+Primul lucru care îmi atrage ochii este cantitatea masivă de foi de stil pe care le avem.
+
+00:01:25.300 --> 00:01:32.920
+Vedem că au o tonă, inclusiv bootstrap, inclusiv caruseluri de tranziții animate și, evident, fișierul
+
+00:01:32.920 --> 00:01:34.870
+nostru principal CSSA.
+
+00:01:34.900 --> 00:01:41.690
+Dacă mă uit la acele lebede, văd că unele dintre ele nu sunt nici măcar minimizate, astfel încât probabil ar trebui să
+
+00:01:41.710 --> 00:01:42.500
+le minimizăm.
+
+00:01:42.640 --> 00:01:50.800
+Dar prima mea întrebare este de fapt de ce avem nevoie de atâtea stiluri SS și avem într-adevăr nevoie de ele.
+
+00:01:50.800 --> 00:01:57.640
+Chiar avem nevoie de animație CSSA sau putem face unele dintre aceste animații cu doar animații și
+
+00:01:57.730 --> 00:01:59.770
+tranziții CSSA care vin nativ.
+
+00:01:59.810 --> 00:02:02.280
+Din nou, chiar vrei să te concentrezi.
+
+00:02:02.390 --> 00:02:03.610
+Chiar avem nevoie de asta.
+
+00:02:03.620 --> 00:02:09.810
+Nu trebuie doar să păstrați legătura pe diferite lucruri doar pentru că este ușor de făcut.
+
+00:02:09.960 --> 00:02:16.480
+Asa ca din nou, cu siguranta, ar fi sa ma uit la asta si sa spun ca as putea sa scap de ceva din asta.
+
+00:02:16.560 --> 00:02:19.670
+Apoi scot în jos și văd un accent de scenariu.
+
+00:02:19.700 --> 00:02:25.520
+Oh, băieți, există o mulțime de etichete de script și sunt toate în cap, ceea ce cu siguranță nu vrem să facem.
+
+00:02:25.530 --> 00:02:32.340
+Vrem să ne mișcăm toate aceste lucruri până la capătul corpului, dacă nu sunt super importante, dar dacă
+
+00:02:32.340 --> 00:02:39.750
+ne uităm la aceste paragate de carusel Jey, parcurgeți o parcurgere frumoasă, în timp ce cu siguranță le putem pune
+
+00:02:39.750 --> 00:02:40.580
+pe toate.
+
+00:02:41.530 --> 00:02:45.470
+De asemenea, dorim să ne întrebăm din nou, chiar avem nevoie de acest lucru.
+
+00:02:45.520 --> 00:02:48.500
+De exemplu, defilați la ceea ce face.
+
+00:02:48.570 --> 00:02:53.890
+Ar trebui să ne facă să navigăm la partea din site-ul pe care ne pasă.
+
+00:02:53.890 --> 00:02:56.300
+Dar puteți vedea că nici măcar nu funcționează.
+
+00:02:56.380 --> 00:02:58.880
+Deci, poate că nici nu avem nevoie de asta.
+
+00:02:59.140 --> 00:03:06.490
+Din nou căutând de ce aveți nevoie și de ce nu aveți nevoie, atunci mă gândesc că poate că acestea sunt minimizate dacă nu sunt
+
+00:03:06.490 --> 00:03:07.400
+reduse la minimum.
+
+00:03:07.450 --> 00:03:10.650
+OK asta este una, dar asta nu este.
+
+00:03:10.660 --> 00:03:12.870
+Poate că ar trebui să minimalizăm toate astea.
+
+00:03:13.150 --> 00:03:19.480
+Și apoi, în final, combinați toate acestea într-un singur fișier, poate aveți un fișier principal de pachet, iar
+
+00:03:19.780 --> 00:03:24.390
+restul sunt fișierele furnizorilor toate într-un nou minimizând călătoriile noastre prin cablu.
+
+00:03:25.210 --> 00:03:33.920
+Apoi, defilați aici, știi tipic tipic un shemale nimic prea nebun totul arata destul
+
+00:03:33.920 --> 00:03:36.160
+de bine aici.
+
+00:03:36.590 --> 00:03:42.050
+Dar, din nou, să revedem câteva dintre punctele noastre și să vedem ce putem îmbunătăți aici.
+
+00:03:42.050 --> 00:03:48.510
+În regulă, am vorbit despre încărcarea etichetelor de stil în scripturile de încărcare a capului chiar înaintea corpului.
+
+00:03:48.530 --> 00:03:49.040
+In regula.
+
+00:03:49.080 --> 00:03:51.700
+Apoi, CSSA doar încărca ceea ce este necesar.
+
+00:03:51.710 --> 00:03:56.940
+Cu siguranta am vorbit despre faptul ca nu am vorbit mai sus de incarcare ori.
+
+00:03:57.070 --> 00:04:04.920
+Din nou căutând pe site-ul web, vedem că avem cu siguranță un site de navigare frumos, dar nu avem nevoie
+
+00:04:04.920 --> 00:04:11.210
+de aceste imagini sau de oricare dintre acestea în jos mai ales în special CSSA.
+
+00:04:11.390 --> 00:04:12.640
+Avem nevoie doar de partea de sus.
+
+00:04:12.890 --> 00:04:22.720
+Deci, poate că un lucru pe care îl putem face este de fapt să adăugăm o etichetă de stil Rupes vinde etichetă pe site-ul nostru este foarte greu de tip atunci
+
+00:04:22.720 --> 00:04:26.570
+când aveți un mic și sunteți în fața voastră ca mine.
+
+00:04:26.710 --> 00:04:33.310
+Și știți că este doar o notă laterală în cazul în care doriți să știți cu această etichetă de
+
+00:04:33.430 --> 00:04:39.070
+stil pot avea unele stiluri doar pentru partea principală a paginii pe care privitorul vede imediat.
+
+00:04:39.370 --> 00:04:46.930
+Și astfel pot să-mi încarc foile de stil așa cum ți-am arătat după încărcarea paginii și după aceea toate
+
+00:04:46.930 --> 00:04:49.580
+lucrurile de sub fold se încarcă.
+
+00:04:49.600 --> 00:04:51.470
+Deci, într-un fel.
+
+00:04:51.470 --> 00:04:55.440
+Un alt lucru la care ne putem uita este atributele mass-media.
+
+00:04:55.510 --> 00:05:02.520
+Privind la această imagine de fundal pare destul de mare și pun pariu că nu este optimizat pentru mobo.
+
+00:05:02.950 --> 00:05:07.150
+Deci, haideți să aruncăm o privire la cât de mare este această imagine, vreau să deschid aeroportul.
+
+00:05:07.510 --> 00:05:14.770
+Nu pot să vorbesc, voi deschide fila de rețea cu ajutorul instrumentelor pentru dezvoltatori și
+
+00:05:14.800 --> 00:05:19.240
+apoi voi filtrează imagini și voi reîmprospăta și băieți.
+
+00:05:19.420 --> 00:05:20.560
+Sunt o mulțime de imagini.
+
+00:05:20.560 --> 00:05:22.470
+Cred că e imaginea eroului.
+
+00:05:22.460 --> 00:05:23.440
+Da, acolo este.
+
+00:05:23.740 --> 00:05:29.190
+Așa că vedem aici că această imagine este de un megabyte.
+
+00:05:29.210 --> 00:05:31.520
+Asta e destul de ridicol.
+
+00:05:31.530 --> 00:05:37.590
+Putem să comprimăm cu siguranță acest lucru și să minimizăm și cu siguranță nu avem nevoie de acea imagine mare
+
+00:05:37.590 --> 00:05:39.030
+pentru un ecran mobil.
+
+00:05:40.010 --> 00:05:44.580
+De asemenea, să aruncăm o privire la toate solicitările făcute pe această pagină.
+
+00:05:45.080 --> 00:05:46.010
+Oh baiete.
+
+00:05:46.010 --> 00:05:47.920
+Sunt 48 de cereri.
+
+00:05:47.990 --> 00:05:50.440
+Cu siguranță nu avem nevoie de multe solicitări.
+
+00:05:50.510 --> 00:05:56.180
+Apropo de modul în care funcționează o mulțime de site-uri web mai vechi și cu siguranță nu sunt cele
+
+00:05:56.180 --> 00:05:58.300
+mai bune pe care le-aș spune.
+
+00:05:58.300 --> 00:06:00.760
+Bine, să vedem ce altceva mai putem îmbunătăți aici.
+
+00:06:03.160 --> 00:06:06.500
+Am vorbit despre primele trei, dar mai puțin specifice.
+
+00:06:06.880 --> 00:06:11.800
+Și acest site web nu sunt prea rău cu acest lucru și acesta este unul din acele lucruri
+
+00:06:11.800 --> 00:06:14.640
+minore pe care nu doriți să vă îngrijorați prea mult.
+
+00:06:14.680 --> 00:06:18.900
+Ea afectează performanța, dar nu și în măsura în care o parte din alte lucruri.
+
+00:06:18.910 --> 00:06:22.960
+Asa ca nu mi-ar face griji prea mult despre asta, dar am vrut sa-l includ acolo oricum pentru tine.
+
+00:06:23.860 --> 00:06:29.260
+De asemenea, am vorbit despre încărcarea scripturilor, dar nu am vorbit despre asincronă sau despre amânarea
+
+00:06:29.530 --> 00:06:35.210
+acestor scripturi pentru javascript sau pentru interogarea Jay și toate celelalte scripturi pe care nu am avut nevoie.
+
+00:06:35.260 --> 00:06:40.280
+Probabil că dorim să adăugăm o etichetă asincronă sau etichetă amânată dacă le dorim să le păstram în jur.
+
+00:06:41.280 --> 00:06:48.000
+De asemenea, dorim să minimalizăm manipularea DOM și să evităm JavaScript lung.
+
+00:06:48.000 --> 00:06:49.470
+Deci, haideți să aruncăm o privire aici.
+
+00:06:50.160 --> 00:06:55.950
+Manipulare DOM Ei bine, cred că se întâmplă foarte mult cu toate aceste animații pe care le vedem din
+
+00:06:55.950 --> 00:06:57.510
+nou dacă ne reîmprospăteazăm.
+
+00:06:57.510 --> 00:07:00.320
+Vedem toate animațiile care se întâmplă aici.
+
+00:07:01.360 --> 00:07:08.160
+Putem evita cu siguranta o parte din acest lucru, mai ales folosind Jake queery faptul ca folosesc J. A. G.
+
+00:07:08.260 --> 00:07:09.360
+chiar acum.
+
+00:07:09.400 --> 00:07:11.440
+Să aruncăm o privire la unele lucruri pe care le facem.
+
+00:07:11.500 --> 00:07:13.990
+Parallaxul să meargă la Maine.
+
+00:07:14.050 --> 00:07:16.740
+Vedeți că o folosesc foarte mult pe Jacquier.
+
+00:07:16.930 --> 00:07:19.450
+Și biblioteca asta e minunată.
+
+00:07:19.570 --> 00:07:24.820
+Cu toate acestea, destul de mult se poate face în închisoare, unde se poate face cu Java nativ.
+
+00:07:25.270 --> 00:07:27.800
+Cred că există un site Web numit.
+
+00:07:28.060 --> 00:07:31.380
+Nu aveți nevoie de o interogare.
+
+00:07:31.690 --> 00:07:37.690
+Sa vedem.
+
+00:07:37.900 --> 00:07:44.650
+Sau poate că nu aveți nevoie de Jacqui și de fapt vă arată toate lucrurile pe care le puteți face cu javascript
+
+00:07:44.650 --> 00:07:51.370
+în loc să utilizați Jay Querrey pentru a evita utilizarea acestei biblioteci masive și pur și simplu utilizați javascript care vine
+
+00:07:51.370 --> 00:07:51.830
+cu.
+
+00:07:53.160 --> 00:07:58.710
+Și din nou folosim instrumente cum ar fi defilați la sau biblioteci, cum ar fi defilați la.
+
+00:07:58.710 --> 00:08:06.330
+Aceasta ar trebui să facă clic pe site-ul nostru Web și să defilați la acea secțiune, dar nici măcar nu funcționează.
+
+00:08:06.330 --> 00:08:10.850
+Deci, din nou, testarea pentru a vedea chiar avem nevoie de acest lucru.
+
+00:08:10.950 --> 00:08:13.560
+Și apoi evitați în cele din urmă Javascript de lungă durată.
+
+00:08:13.560 --> 00:08:17.890
+Nu cred că avem prea multe lucruri, dar cu animații care pot fi destul de complicate.
+
+00:08:18.180 --> 00:08:25.470
+Deci, din nou lucruri pe care le puteți îmbunătăți și doar zgâriem suprafața aici, dar sper că
+
+00:08:25.470 --> 00:08:27.720
+v-ați distrat cu acest exercițiu.
+
+00:08:27.720 --> 00:08:34.190
+A fost cu siguranță distractiv realizarea acestui site Web și sunt foarte încântat să văd cât de repede pot fi obținute unele dintre
+
+00:08:34.190 --> 00:08:35.150
+aceste site-uri web.
+
+00:08:35.250 --> 00:08:38.080
+Vă uit la postarea lor și la comunitate.
+
+00:08:38.310 --> 00:08:44.650
+Dar cheia care trebuie amintită aici este că performanța este un joc fără sfârșit.
+
+00:08:44.970 --> 00:08:47.350
+Puteți îmbunătăți întotdeauna performanța pe site-ul web.
+
+00:08:47.360 --> 00:08:49.520
+Puteți oricând să tweak acest lucru mic.
+
+00:08:49.830 --> 00:08:55.500
+Ca dezvoltator senior doriți să vă asigurați că vă petreceți timpul cu înțelepciune asupra lucrurilor care contează.
+
+00:08:55.500 --> 00:09:03.030
+Aflați ce este important pentru clientul dvs. pentru afacerea dvs. pentru șeful dvs. și faceți acele optimizări de performanță, dar numai
+
+00:09:03.130 --> 00:09:08.250
+la punctul care este necesar deoarece, altfel, vă veți conduce pe voi înșivă.
+
+00:09:08.250 --> 00:09:09.810
+Sunt multe lucruri pe care le poți face.
+
+00:09:09.840 --> 00:09:11.490
+Concentrați-vă pe acele bilete mari.
+
+00:09:11.490 --> 00:09:15.460
+Caracteristicile cheie pentru a face un site web performant.
+
+00:09:15.710 --> 00:09:21.250
+Sper că te-ai distrat în această provocare și aștept cu nerăbdare să te văd în următorul videoclip Popeye.

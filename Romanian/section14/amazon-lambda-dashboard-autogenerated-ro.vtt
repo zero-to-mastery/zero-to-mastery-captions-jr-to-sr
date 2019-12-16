@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:01.060 --> 00:00:07.060
+Bine ați venit înapoi, putem vorbi tot ce ne dorim despre da și lambda, dar fără să-l codificăm
+
+00:00:07.060 --> 00:00:08.470
+și să-l vedem live.
+
+00:00:08.590 --> 00:00:10.790
+Nu o să înțelegem pe deplin.
+
+00:00:10.870 --> 00:00:15.630
+Deci, hai sa vorbim despre ceea ce planul nostru este cu A. W. și Lamda ce vom face.
+
+00:00:15.780 --> 00:00:18.340
+În felul acesta putem începe să o punem în aplicare.
+
+00:00:18.510 --> 00:00:23.730
+Acum vreau să vă dau un heads-up și vreau să vă urmați
+
+00:00:24.210 --> 00:00:31.830
+aici, pe măsură ce faceți acest exercițiu, deoarece AWOS are ceva numit un nivel liber, care vă
+
+00:00:31.830 --> 00:00:40.220
+oferă servicii gratuite pentru a le încerca acum și aici puteți vezi că au Esrey cu cinci gigaocteți pe
+
+00:00:40.220 --> 00:00:48.950
+lună pe care le permit și tu și E. C și alte opțiuni, dar, de asemenea, AWOS Lamda vă permit să primiți 1 milion de solicitări gratuite pe lună.
+
+00:00:48.950 --> 00:00:54.770
+Deci, puteți încerca acest exercițiu, nu veți plăti bani și atâta timp cât aveți mai puțin de un milion de solicitări
+
+00:00:54.770 --> 00:00:57.590
+pe lună, ceea ce, dacă vă dezvoltați și jucați.
+
+00:00:57.740 --> 00:00:59.600
+Sunt sigur că e mai mult decât suficient.
+
+00:01:00.710 --> 00:01:05.360
+Vă recomandăm să vă înscrieți, astfel încât să puteți urmări și să vă puteți testa singur.
+
+00:01:05.360 --> 00:01:11.740
+Este incredibil de ușor când începeți cu Lamda odată ce ați dat seama de configurație.
+
+00:01:11.900 --> 00:01:16.760
+Este atât de frumos și atât de distractiv și există atât de multe lucruri pe care le puteți face.
+
+00:01:16.760 --> 00:01:24.770
+Recent am construit un bot care îmi trimite un mesaj text ori de câte ori există o notificare că sunt interesată de Bitcoin
+
+00:01:24.770 --> 00:01:32.570
+și primesc un mesaj text pentru că o calomnie a fost informată că la fiecare 30 de minute am vrut să
+
+00:01:32.570 --> 00:01:34.810
+verific un anumit preț de bitcoin.
+
+00:01:35.680 --> 00:01:40.310
+Lucruri de genul asta devin super usor cu AWOS.
+
+00:01:40.370 --> 00:01:46.680
+Acum vă recomand să creați un cont și să profitați de acest nivel gratuit.
+
+00:01:46.910 --> 00:01:54.230
+Iar odata ce te-ai logat, vei avea ceva de genul asta in tabloul de bord si in tabloul de bord poti
+
+00:01:54.620 --> 00:02:05.250
+cere orice serviciu AWOS pe care il poti face dynamo DB poate face S-3 poti face frontul despre care am vorbit dar suntem interesat de lambda și faceți doar clic
+
+00:02:05.580 --> 00:02:11.620
+pe serviciul pe care doriți și de fapt vă oferă un tablou de bord vedeți că deja
+
+00:02:11.620 --> 00:02:17.120
+aveți câteva lucruri aici, dar pentru a vă arăta cât de ușor este să
+
+00:02:17.120 --> 00:02:23.740
+creați o funcție bine pot să-i denumesc doar testul sau ce ar trebui să numim asta de fapt.
+
+00:02:24.100 --> 00:02:27.060
+Să revenim la aplicația noastră și să vedem unde vrem să construim.
+
+00:02:27.140 --> 00:02:35.780
+Dacă mă duc la aplicația mea, să spunem că vrem să adăugăm un sistem de clasificare așa cum a solicitat Bruno, probabil pe baza numărului de
+
+00:02:35.780 --> 00:02:37.730
+intrări pe care le aveți.
+
+00:02:37.730 --> 00:02:45.020
+Ai un semn mic care spune că știi că ești o insignă de rachetă sau ești insigna unui ursuleț de pluș, indiferent de ce ar
+
+00:02:45.020 --> 00:02:45.740
+putea fi.
+
+00:02:46.560 --> 00:02:49.460
+Și vrem să avem această actualizare.
+
+00:02:50.440 --> 00:02:56.660
+Printr-o funcție care trăiește în Amazon Lamda, așa că lăsăm doar să creăm asta.
+
+00:02:56.670 --> 00:03:04.380
+O să spun doar că este vorba doar pentru că toate numele populare și apoi Lee aparent și va
+
+00:03:04.380 --> 00:03:04.790
+folosi.
+
+00:03:04.800 --> 00:03:05.270
+Nu.
+
+00:03:05.300 --> 00:03:05.940
+Da.
+
+00:03:06.000 --> 00:03:10.680
+Cred că cea mai recentă versiune a notei că ei văd ce limbi de programare poți folosi.
+
+00:03:10.770 --> 00:03:17.020
+Se pare că au nod 8. 10 Salles la ultima versiune a nodului.
+
+00:03:17.230 --> 00:03:22.270
+Și trebuie să faci și ceva numit rulouri despre care urmează să
+
+00:03:22.270 --> 00:03:31.400
+vorbești, dar deocamdată doar pentru scopuri demonstrative, am să aleg doar o selecție de clicuri aleatorie pe Creează funcția și asta-i tot.
+
+00:03:32.230 --> 00:03:39.380
+Am creat funcția noastră lambda și tot ceea ce trebuie să facem este să ne scriem funcția aici.
+
+00:03:39.850 --> 00:03:45.370
+Și odată ce am terminat, vom obține un punct final în care putem accesa și declanșa această funcție
+
+00:03:46.270 --> 00:03:48.190
+și ne putem scrie funcția aici.
+
+00:03:48.190 --> 00:03:52.240
+Dar vă voi arăta o modalitate mai bună de a implementa sistemul nostru de clasificare.
+
+00:03:53.400 --> 00:03:59.820
+Veți vedea în loc să scrieți aici și să imaginați toată configurația care există deoarece aceasta va schimba în mod
+
+00:03:59.820 --> 00:04:03.990
+constant acest tablou de bord va fi întotdeauna schimbat și poate că atunci
+
+00:04:03.990 --> 00:04:07.610
+când veți viziona acest videoclip, acest lucru nu va arăta așa.
+
+00:04:08.400 --> 00:04:11.930
+Și nu vreți să vă faceți griji cu privire la configurația pe care doriți doar să o scrieți.
+
+00:04:12.210 --> 00:04:17.200
+Și pentru asta vom folosi un instrument numit Servilius care ajută cu adevărat un set.
+
+00:04:17.640 --> 00:04:22.110
+Dar am vrut să vă arăt, indiferent cât de ușor este să creați o funcție.
+
+00:04:22.170 --> 00:04:24.310
+Si aici.
+
+00:04:24.360 --> 00:04:24.800
+In regula.
+
+00:04:24.860 --> 00:04:31.040
+Așadar, vrem să creăm un sistem de clasificare aici, care bazându-ne pe numărul pe care îl avem
+
+00:04:31.250 --> 00:04:34.750
+la actualizările de înregistrări, lotul nostru mic va începe.
+
+00:04:34.760 --> 00:04:41.110
+Avem nevoie de un instrument numit Server mai puțin și serverul mai puțin arată așa.
+
+00:04:41.120 --> 00:04:46.670
+Numele este puțin mai mic, deoarece numele pachetului este mai puțin server, dar ajută la ceea ce
+
+00:04:46.790 --> 00:04:50.420
+numim arhitectura mai puțin server pe care Amazon o oferă.
+
+00:04:50.420 --> 00:04:56.540
+Acum, serverul de nume mai puțin este, de fapt, un pic înșelător, deoarece rețineți că serviciul nu
+
+00:04:56.540 --> 00:04:59.550
+înseamnă că nu aveți încă un server.
+
+00:04:59.600 --> 00:05:03.980
+Înseamnă doar că nu trebuie să vă faceți griji cu privire la scalarea și la toate lucrurile pe care oamenii le
+
+00:05:03.980 --> 00:05:05.450
+foloseau atunci pentru a gestiona serverul.
+
+00:05:05.840 --> 00:05:12.610
+Amazon face asta pentru tine și am pus două semne aici pentru că serverul și-a actualizat mai târziu logo-urile.
+
+00:05:12.620 --> 00:05:20.420
+Dacă vedeți amândouă aceste lucruri este același lucru acum, serverul mai puțin ne permite să implementăm funcțiile Amazon lambda într-adevăr foarte
+
+00:05:20.750 --> 00:05:23.460
+ușor de la linia noastră de comandă.
+
+00:05:23.560 --> 00:05:28.580
+Și nu trebuie să ne îngrijorăm prea mult să mergem la tabloul de bord și să configurăm totul
+
+00:05:28.580 --> 00:05:30.700
+manual și asta nu este niciodată distractiv.
+
+00:05:30.710 --> 00:05:34.470
+E mai bine când codificăm și folosim terminalul nostru.
+
+00:05:34.670 --> 00:05:35.630
+Așa că o să facem asta.
+
+00:05:35.840 --> 00:05:39.470
+Apoi începe următorul videoclip pe care urmează să-l instalez.
+
+00:05:39.530 --> 00:05:45.560
+Dar eu vă recomand să obțineți un nivel liber pentru Amazon Lamda și urmați-l pentru că va fi o
+
+00:05:45.560 --> 00:05:46.750
+mulțime de distracție.
+
+00:05:46.850 --> 00:05:47.600
+Voi vedea în următorul.

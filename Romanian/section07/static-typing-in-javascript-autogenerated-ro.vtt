@@ -1,0 +1,334 @@
+﻿WEBVTT
+
+00:00:02.080 --> 00:00:02.710
+In regula.
+
+00:00:02.710 --> 00:00:03.700
+Bine ai revenit.
+
+00:00:03.700 --> 00:00:08.390
+Să ajungem în cele din urmă în lucruri și să vorbim despre tipografia acum.
+
+00:00:08.440 --> 00:00:10.600
+De ce au ales tipografia.
+
+00:00:10.600 --> 00:00:16.770
+Deoarece există de fapt multe modalități prin care putem introduce tastarea statică în javascript.
+
+00:00:16.780 --> 00:00:27.720
+Există instrumente cum ar fi fluxul Elm, motivul M-L și, evident, tipar, de exemplu, motivul M-L și fluxul au
+
+00:00:27.750 --> 00:00:38.380
+fost create de Facebook și dezvoltatorii de pe Facebook și tipăriți de către Microsoft, dar toți fac
+
+00:00:38.380 --> 00:00:39.740
+același lucru.
+
+00:00:39.790 --> 00:00:43.830
+Ei toți încearcă și fac javascript un limbaj static tipărite.
+
+00:00:44.840 --> 00:00:47.890
+Acum hai să vorbim despre rațiune.
+
+00:00:48.410 --> 00:00:55.940
+Motivul se bazează pe un limbaj de programare numit Camel și așa cum am spus anterior este creat de Facebook
+
+00:00:55.940 --> 00:00:59.800
+pentru a face mai ușor pentru programatorii javascript să ridice.
+
+00:00:59.890 --> 00:01:07.400
+Este o limbă proprie, dar destul de asemănătoare cu javascript-ul, că este ușor de preluat și Facebook o folosește de
+
+00:01:07.400 --> 00:01:10.070
+fapt cu unele dintre proiectele lor.
+
+00:01:10.100 --> 00:01:17.290
+Și în prezent, 50% din mesagerii lor din tango este scris cu motive.
+
+00:01:17.360 --> 00:01:20.900
+Deci, aceasta este o limbă populară care iese din Facebook.
+
+00:01:21.750 --> 00:01:25.810
+În regulă, din nou, încă nu înțeleg ce înseamnă asta.
+
+00:01:25.930 --> 00:01:27.920
+Ce poate fi următorul diapozitiv vă va ajuta.
+
+00:01:30.500 --> 00:01:32.260
+Din nou, toate aceste instrumente.
+
+00:01:32.270 --> 00:01:40.100
+Scopul lor este de a face javascript scris un pic mai frumos, un pic mai puțin buggy și introducerea de tipărire
+
+00:01:40.100 --> 00:01:40.660
+statică.
+
+00:01:41.940 --> 00:01:50.890
+Și fluxul care este utilizat foarte frecvent cu proiectele de reactare este ceea ce noi numim un controler de tip static.
+
+00:01:51.120 --> 00:01:52.920
+Să începem cu asta.
+
+00:01:53.100 --> 00:02:03.780
+Flow este capabil să adauge tipuri în javascript scriind un cod care funcționează cu flux și apoi introducându-l printr-un compilator cum
+
+00:02:03.780 --> 00:02:11.580
+ar fi balerul sau compilatorul B-ball care scapă javascript și știm ce face Biblia
+
+00:02:11.580 --> 00:02:13.380
+din secțiunile anterioare.
+
+00:02:13.440 --> 00:02:22.290
+Este nevoie de Da 6 cod sau da 7 sau da un cod și îl schimbă în E. S. 5, astfel încât toate browserele să o poată
+
+00:02:22.320 --> 00:02:23.120
+înțelege.
+
+00:02:24.060 --> 00:02:31.650
+Acum fluxul este static un tip de verificare statică, ceea ce înseamnă că de fapt scriem ceva de genul acesta în partea de sus
+
+00:02:31.650 --> 00:02:32.760
+a fișierelor noastre.
+
+00:02:34.790 --> 00:02:43.250
+În partea de sus a fișierelor noastre va face ceva de genul liniuță dash la flux și fluxul va fi capabil să spună ah acest
+
+00:02:43.880 --> 00:02:48.380
+fișier are tipuri de flux și am de gând să-l verificați pentru tine.
+
+00:02:48.380 --> 00:02:51.150
+Verifică din nou tipurile.
+
+00:02:51.470 --> 00:02:55.850
+Nu vă faceți griji atunci când vorbim despre tipurile pe care le veți afla de fapt, pe care le veți învăța și le veți pune pe videoclipuri.
+
+00:02:55.850 --> 00:02:58.550
+Dar din nou vrem să construim prima fundație.
+
+00:02:58.550 --> 00:03:08.470
+Dacă vă întoarceți aici, ceea ce facem de fapt cu fluxul este că verifică totul și se bazează pe a putea
+
+00:03:09.340 --> 00:03:16.990
+să elimine efectiv acel flux și toate celelalte tipuri pe care le-am introdus în codul nostru.
+
+00:03:16.990 --> 00:03:26.820
+Înainte de producție, înainte de a le trimite utilizatorilor noștri și fluxul vine, de fapt, pre-construit în reactorul Cray.
+
+00:03:26.980 --> 00:03:35.700
+Dacă mergem la documentația fluxului care curge dot org văd asta și creăm reacționarea.
+
+00:03:35.700 --> 00:03:43.220
+Pur și simplu rulam aceste comenzi și putem începe să scriem verificarea tipului în codul nostru.
+
+00:03:43.320 --> 00:03:53.450
+Din nou, ceva care va acoperi tipurile diferă de flux, deoarece scripturile de conducte au propriul compilator.
+
+00:03:53.450 --> 00:04:00.500
+Nu este ca un flux care depinde de a fi capabil de a elimina toate acest cod suplimentar înainte de a scuipa-l în
+
+00:04:00.500 --> 00:04:02.810
+javascript că vrem să trimitem la front-end.
+
+00:04:03.590 --> 00:04:10.080
+Typescript este ceea ce noi numim superset de javascript.
+
+00:04:10.080 --> 00:04:13.220
+Acesta adaugă funcționalitate în partea de sus a javascript.
+
+00:04:13.330 --> 00:04:23.220
+Asta inseamna ca javascript este tipar si tipar doar adauga cateva caracteristici in plus fata de
+
+00:04:23.220 --> 00:04:24.170
+Javascript.
+
+00:04:24.300 --> 00:04:26.130
+Dar are și propriul compilator.
+
+00:04:26.190 --> 00:04:31.490
+Așadar, scriem codul tipcript, care apoi este rulat prin compilator.
+
+00:04:31.520 --> 00:04:38.250
+Îmi amintesc că un compilator este pur și simplu o mașină care ia o intrare a unei anumite bucăți de cod și
+
+00:04:38.310 --> 00:04:40.230
+scoate o bucată diferită de cod.
+
+00:04:40.230 --> 00:04:47.440
+În cazul nostru, o vom converti de la tipărire la javascript pe care browserele noastre o pot citi exact așa cum
+
+00:04:47.440 --> 00:04:49.540
+am vorbit mai devreme despre motiv.
+
+00:04:49.550 --> 00:04:56.230
+M-L are același lucru cu propriul compilator și va trece prin compilator și va scuipa codul
+
+00:04:56.230 --> 00:04:56.820
+Javascript.
+
+00:04:56.830 --> 00:05:06.070
+Diferența dintre tipografia și motivul M-L este că motivul este un limbaj complet separat de javascript pe propria sa tipetă
+
+00:05:06.070 --> 00:05:10.690
+care încearcă să imite javascript și să crească cu javascript.
+
+00:05:10.690 --> 00:05:12.430
+Cum am spus că este o superset.
+
+00:05:12.430 --> 00:05:16.110
+Dar motivul M-L este doar o limbă cu totul diferită pe cont propriu.
+
+00:05:16.210 --> 00:05:20.900
+Nu depinde de modificările făcute în javascript în ecosistem.
+
+00:05:20.900 --> 00:05:29.410
+Oricare dintre aceste lucruri și Elm este cam exact același lucru ca rațiunea. M-L este limbajul propriu, care este un tip
+
+00:05:29.420 --> 00:05:32.880
+care are propriul său compilator și scuipă Javascript.
+
+00:05:33.260 --> 00:05:37.290
+Deci, ați putea auzi în javascript oameni care folosesc aceste instrumente.
+
+00:05:37.310 --> 00:05:42.710
+Singurul lucru pe care ar trebui să te concentrezi cu adevărat pentru că Elm și rațiunea M-L sunt încă destul de noi.
+
+00:05:42.830 --> 00:05:47.330
+Nu veți găsi multe locuri de muncă acolo, care de fapt o cer.
+
+00:05:47.330 --> 00:05:55.190
+Este frumos să înveți un interesant, dar din nou, de cele mai multe ori, te uiți la fluxul
+
+00:05:55.520 --> 00:05:57.600
+de învățare sau tipografia.
+
+00:05:57.660 --> 00:06:04.950
+Acum, motivul pentru care scriu tip de script în loc să curg în acest curs este că creșterea tiparului
+
+00:06:05.220 --> 00:06:09.560
+depășește toate celelalte pe care le-am învățat în această secțiune.
+
+00:06:09.570 --> 00:06:18.560
+Toate acestea, o dată în prezent, o mare parte din acest lucru este faptul că unghiul este construit cu ajutorul tiparului și cu ajutorul tiparului.
+
+00:06:18.630 --> 00:06:24.090
+Deci, dacă ești un dezvoltator unghiular, deja folosești tipcript destul de mult în mod implicit.
+
+00:06:25.400 --> 00:06:32.480
+Cu toate acestea, o mulțime de comunitate Riak este, de asemenea, a început să folosească tipar și doar comunitatea
+
+00:06:32.480 --> 00:06:41.320
+comunității javascript începe să se utilizeze din ce în ce mai mult pentru a utiliza acest lucru și, deși fluxul a fost creat
+
+00:06:41.320 --> 00:06:46.360
+special pentru a lucra cu re-act typcript în prezent depășește popularitatea sa.
+
+00:06:46.360 --> 00:06:48.660
+Așadar, am vrut să învățăm acest lucru în schimb.
+
+00:06:48.910 --> 00:06:55.840
+În plus, odată ce ați învățat la fel ca în cele mai multe lucruri odată ce ați învățat o metodă, este destul de ușor să
+
+00:06:55.840 --> 00:06:59.050
+ridicați fluxul și modul în care tastele statice funcționează în flux.
+
+00:06:59.140 --> 00:07:06.340
+Apropo, daca nu ai incredere in mine daca aruncam o privire la sondajul unui dezvoltator de santier
+
+00:07:08.160 --> 00:07:16.200
+din acest an, vedem ca cele mai iubite limbi in timp ce avem Python Russ Codlin avem javascript acolo, dar
+
+00:07:16.190 --> 00:07:19.170
+vezi tipul, pentru ca este propriu limba.
+
+00:07:19.170 --> 00:07:22.230
+Adică este o superset de javascript, dar e acolo sus.
+
+00:07:22.230 --> 00:07:33.310
+Este foarte foarte iubit și este, de asemenea, destul de mare în secțiunea dorită, deci este foarte important și dacă privești oriunde, toată
+
+00:07:33.310 --> 00:07:36.380
+lumea e foarte încântată de tipografia.
+
+00:07:37.270 --> 00:07:42.590
+O notă rapidă despre felul în care credeți că unghiul este un fan atât de mare de tipografia.
+
+00:07:44.170 --> 00:07:45.540
+Acum este doar opinia mea.
+
+00:07:45.550 --> 00:07:49.840
+S-ar putea să fiu greșit, dar dacă vă amintiți, am spus că unghiul este cam ca bucătăria.
+
+00:07:49.870 --> 00:07:56.440
+Este minunat pentru companiile mari, cum ar fi băncile, să se asigure că echipele lor masive de dezvoltatori
+
+00:07:56.620 --> 00:08:04.060
+lucrează într-o bucătărie care are deja tot ceea ce este definită pentru modul de gătire a pâinii sau cum să gătească un
+
+00:08:04.480 --> 00:08:13.050
+tipar de aplicații, care adaugă o scriere statică care adaugă un strat suplimentar de securitate sau un strat suplimentar de siguranță de tip în cod.
+
+00:08:13.180 --> 00:08:17.730
+Din nou, extinderea bucătăriei pentru a vă asigura că codurile sau codoarele.
+
+00:08:17.740 --> 00:08:21.160
+Dezvoltatorii echipei se joacă în cadrul regulilor.
+
+00:08:21.220 --> 00:08:23.230
+Cred că este destul de interesant.
+
+00:08:23.290 --> 00:08:25.080
+Deci, să ne întoarcem la subiectul la îndemână.
+
+00:08:25.920 --> 00:08:30.360
+În calitate de dezvoltatori, trebuie să înțelegem de ce punem lucrurile în proiectele noastre.
+
+00:08:30.570 --> 00:08:36.200
+Nu vrem să urmăm această tendință, pentru că tocmai v-am arătat diavolul unui sondaj și toată lumea
+
+00:08:36.210 --> 00:08:41.780
+a folosit tiparul și tocmai a sărit pe cea mai recentă bandwagon ca dezvoltatori seniori.
+
+00:08:41.820 --> 00:08:48.490
+Trebuie să decidem pentru noi ce anume funcționează pentru proiectul nostru și echipa noastră și ce are sens.
+
+00:08:49.190 --> 00:08:55.350
+Deci, iată conturul meu când să folosiți verificarea tipului static ca tipărirea.
+
+00:08:55.470 --> 00:09:03.980
+Proiectul dvs. devine din ce în ce mai mare. Aveți deja teste scrise și când mai mulți dezvoltatori se alătură
+
+00:09:03.980 --> 00:09:04.570
+echipei.
+
+00:09:04.700 --> 00:09:11.600
+Doriți ca codul să fie auto-documentat și, de asemenea, să evite erorile deoarece oamenii trebuie să atingă codul.
+
+00:09:11.600 --> 00:09:18.740
+Aveți, de asemenea, bugetul în cadrul companiei pentru a instrui noi angajați pentru a învăța această nouă limbă și a aștepta ca
+
+00:09:18.950 --> 00:09:20.450
+ciclul nostru de dezvoltare.
+
+00:09:20.450 --> 00:09:26.210
+Asta este cât de repede putem scrie caracteristici și codul dvs. va fi mai lent pentru că scriem mai
+
+00:09:26.210 --> 00:09:27.360
+multe coduri acum.
+
+00:09:27.830 --> 00:09:28.780
+Aceasta este lista dvs. de verificare.
+
+00:09:28.790 --> 00:09:30.770
+Dacă este cazul, atunci trebuie să adăugăm un tip.
+
+00:09:30.770 --> 00:09:32.140
+Dacă nu ar trebui să nu.
+
+00:09:32.330 --> 00:09:37.960
+Dar, pentru a înțelege cu adevărat, trebuie să scriem tipar și să trecem prin proces,
+
+00:09:39.140 --> 00:09:42.330
+astfel încât să ajungem în sfârșit la codificare.
+
+00:09:42.360 --> 00:09:44.400
+Voi vedea în următorul videoclip.

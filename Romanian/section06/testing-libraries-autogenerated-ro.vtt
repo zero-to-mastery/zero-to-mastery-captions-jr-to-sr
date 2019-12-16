@@ -1,0 +1,523 @@
+﻿WEBVTT
+
+00:00:01.920 --> 00:00:02.840
+Bine ai revenit.
+
+00:00:03.090 --> 00:00:08.950
+În acest videoclip, să vorbim despre toate instrumentele pe care le putem folosi pentru a ne rula efectiv testele.
+
+00:00:09.210 --> 00:00:17.800
+Amintiți-vă că testele de inimă sunt doar javascript, așa că am putea scrie doar fișiere simple javascript cu poate
+
+00:00:17.820 --> 00:00:25.880
+dacă afirmații care spun că știi dacă unii funcționează ca aceste două numere împreună apoi întoarce succesul.
+
+00:00:25.890 --> 00:00:28.270
+În caz contrar, încercările de returnare eșuează
+
+00:00:28.410 --> 00:00:36.150
+Așadar, am putea face acest lucru, dar asta e plictisitor și ca dezvoltatori vrem să folosim instrumentele existente pentru a
+
+00:00:36.300 --> 00:00:39.980
+face mai rapidă experiența noastră sau viteza de dezvoltare.
+
+00:00:39.980 --> 00:00:41.390
+Deci, asta va deveni copleșitor.
+
+00:00:41.390 --> 00:00:42.960
+Dar să ne uităm la instrumentele de testare.
+
+00:00:44.430 --> 00:00:52.110
+Am încercat să vă organizez o modalitate de a vă gândi la teste, la mediul de testare și la dezvoltarea web-ului.
+
+00:00:52.380 --> 00:00:58.290
+Așa că am să explic acest lucru și dacă acest lucru este puțin complicat la prima ușă, v-ați întors la acest
+
+00:00:58.290 --> 00:01:02.500
+lucru și treceți peste acest lucru la sfârșitul secțiunii și totul va avea sens.
+
+00:01:03.310 --> 00:01:09.550
+Deci, primul lucru de care avem nevoie într-un instrument de testare este ceva numit bibliotecă de testare.
+
+00:01:09.550 --> 00:01:11.310
+Destul de explicativ.
+
+00:01:11.350 --> 00:01:18.880
+Aceasta este schema care ne oferă posibilitatea de a utiliza anumite apeluri de funcții și câteva metode noi pentru
+
+00:01:18.880 --> 00:01:21.320
+a ne scrie efectiv testele noastre.
+
+00:01:21.550 --> 00:01:26.620
+Din nou, gândiți-vă la acest lucru ca schele sau construirea acestei structuri în jurul testelor noastre.
+
+00:01:27.500 --> 00:01:31.340
+Probabil primele trei biblioteci pentru asta sunt jazzmenii.
+
+00:01:31.640 --> 00:01:36.290
+Există doar și apoi ceva numit moka.
+
+00:01:36.460 --> 00:01:43.330
+Și cum am spus că acestea sunt doar NPM instala biblioteci astfel încât acestea să fie disponibile pe NPM și le
+
+00:01:43.510 --> 00:01:46.350
+puteți adăuga pentru a construi la schele dumneavoastră.
+
+00:01:46.410 --> 00:01:53.830
+Următorul lucru de care aveți nevoie chiar aici este ceva numit biblioteca secțiunii asistente medicale și aici avem
+
+00:01:53.830 --> 00:01:58.420
+din nou Jasmine care vine cu propria bibliotecă de afirmații.
+
+00:01:58.420 --> 00:02:04.990
+Avem tocmai din nou, care vine cu propria bibliotecă de afirmații și apoi cu Chye
+
+00:02:04.990 --> 00:02:14.790
+aici, care de obicei se îmbină cu Moka pentru a avea o bibliotecă de afirmație o bibliotecă de afirmații pentru funcțiile care
+
+00:02:14.800 --> 00:02:16.280
+asigură afirmația noastră.
+
+00:02:16.320 --> 00:02:17.670
+Știu că este confuz.
+
+00:02:17.670 --> 00:02:25.580
+Este în esență un instrument care vă permite să testați că variabilele conțin valoarea așteptată.
+
+00:02:25.590 --> 00:02:33.140
+Acum, că sună încă confuz, permiteți-mi să vă arăt unde în biblioteca de afirmare Chye aici.
+
+00:02:33.280 --> 00:02:40.690
+Și puteți vedea aici că ei folosesc ceva numit BDD sau comportament condus de devolvement și
+
+00:02:40.840 --> 00:02:49.730
+prin instalarea acestei biblioteci putem folosi toate aceste cuvinte și ele arata doar ca engleza de bază ceea ce
+
+00:02:49.730 --> 00:02:59.220
+afirmația în bibliotecă face este că se așteaptă ca acest obiect să conțină doar egal unul și apoi Cheyne toate aceste
+
+00:02:59.220 --> 00:03:02.670
+cuvinte împreună pentru a testa ipoteza noastră.
+
+00:03:02.670 --> 00:03:11.530
+Deci să presupunem că se așteaptă ca acest obiect să nu aibă proprietatea să fie o briză ca limba engleză.
+
+00:03:11.640 --> 00:03:15.500
+Pur și simplu testează condiția 1 împotriva condiției a doua.
+
+00:03:15.780 --> 00:03:23.240
+Deci, acest lucru se va întoarce la fals deoarece aveți dreptate că acest obiect nu va avea
+
+00:03:23.270 --> 00:03:28.940
+proprietatea și că au multe lucruri pe care nu le putem adăuga.
+
+00:03:28.960 --> 00:03:36.670
+Vedem că altul se așteaptă ca acest obiect să aibă toate cheile a și b pe care le citește ca engleza și
+
+00:03:36.880 --> 00:03:41.880
+acest lucru face ca testele noastre să fie ușor de citit și de înțeles.
+
+00:03:42.000 --> 00:03:49.470
+Următorul lucru de care avem nevoie pentru testele noastre este ceva numit alergator de test și un alergator de testare este
+
+00:03:49.470 --> 00:03:52.330
+ceva care ne permite să ne executăm testele.
+
+00:03:52.500 --> 00:03:59.910
+Amintiți-vă dacă ne întoarcem la aplicația noastră pe care trebuie să o facem pentru NPM și
+
+00:04:03.190 --> 00:04:12.910
+acest test rulează testul să îl apăsăm pe a pentru a rula toate testele și ceva rulează în mod magic toate aceste teste.
+
+00:04:12.910 --> 00:04:14.930
+Asta face un alergător de test.
+
+00:04:16.140 --> 00:04:23.010
+Revenind din nou la diapozitivul nostru, acum vedem că jazzmenii și doar includ un alergător de test în biblioteca lor
+
+00:04:23.430 --> 00:04:26.560
+și apoi Moka are și un testament propriu.
+
+00:04:26.670 --> 00:04:30.210
+Și apoi am adăugat un altul aici, care se numește karma.
+
+00:04:30.370 --> 00:04:31.220
+Da.
+
+00:04:31.440 --> 00:04:36.990
+Și aceasta vă permite să executați teste în browser.
+
+00:04:38.900 --> 00:04:40.020
+Ce inseamna asta.
+
+00:04:40.870 --> 00:04:45.310
+Ei bine, un alergator de test poate rula teste în medii diferite.
+
+00:04:45.310 --> 00:04:46.830
+Haideți să aruncăm o privire.
+
+00:04:46.910 --> 00:04:54.960
+Vedeți de obicei javascriptul nostru lucrează cu Domul pentru a face ca webapp-ul nostru să fie.
+
+00:04:56.220 --> 00:05:04.010
+Dar când executăm teste și asta este ceea ce karma vă permite să executați testele pe browser.
+
+00:05:05.140 --> 00:05:09.870
+Dar de ce nu ne-am rula mereu testele pe browser.
+
+00:05:09.880 --> 00:05:12.730
+Ei bine, asta se datorează faptului că durează mult timp.
+
+00:05:12.730 --> 00:05:17.380
+Trebuie să executăm fiecare test prin browser utilizând API-ul browserului.
+
+00:05:18.700 --> 00:05:20.150
+Ideal când conducem teste.
+
+00:05:20.170 --> 00:05:27.280
+Este super super rapid, deoarece cele mai multe teste sunt configurate astfel încât dacă un dezvoltator ajunge să salveze pe terminalul lor,
+
+00:05:27.490 --> 00:05:28.860
+va trece la test.
+
+00:05:29.020 --> 00:05:33.410
+Dacă de fiecare dată aveau nevoie să pornească browserul și să treacă prin tot.
+
+00:05:33.670 --> 00:05:36.070
+Ei bine, ar fi foarte lent.
+
+00:05:36.460 --> 00:05:44.290
+Există și alte opțiuni, cum ar fi căpitanul Google, care este ceea ce numim un browser fără cap.
+
+00:05:44.380 --> 00:05:52.640
+Este o bibliotecă de noduri care oferă un API la nivel înalt pentru a controla versiunea fără cap a browserului.
+
+00:05:52.660 --> 00:05:58.690
+Deci, gândiți-vă la acest lucru ca la un browser dezbrăcat care face testele dvs. un pic mai repede.
+
+00:05:58.900 --> 00:06:05.870
+Dar poate fi, de asemenea, configurat să facă lucruri cum ar fi generarea capturilor de ecran PDSA ale paginilor.
+
+00:06:06.130 --> 00:06:08.580
+Poate automatiza trimiterile de formular.
+
+00:06:08.620 --> 00:06:10.930
+Puteți face testarea UI cu ea.
+
+00:06:10.930 --> 00:06:13.420
+Puteți monitoriza introducerea tastaturii.
+
+00:06:13.450 --> 00:06:15.710
+Poți face multe lucruri minunate cu asta.
+
+00:06:15.820 --> 00:06:18.290
+Și, în final, avem ceva numit japes dong.
+
+00:06:18.550 --> 00:06:24.390
+Și așa cum sugerează și numele, este o implementare javascript a DOM.
+
+00:06:24.460 --> 00:06:29.130
+Deci nu este versiunea reală a lui Dom, dar AFAIK javascript.
+
+00:06:29.940 --> 00:06:37.950
+Îmi amintesc că DOM este acea structură arborescentă care arată nodurile de pe pagina noastră de web și asta este ceea ce
+
+00:06:37.950 --> 00:06:39.220
+face interfața noastră.
+
+00:06:39.450 --> 00:06:46.170
+Deci, doar prost pune în aplicare acest lucru în javascript, astfel încât să putem avea un API ca dom pentru a lucra fără
+
+00:06:46.170 --> 00:06:47.890
+a avea nevoie de browser.
+
+00:06:48.010 --> 00:06:57.480
+Dacă ne întoarcem la testele noastre și vom rula din nou, am de gând să rulez testul NPM, veți vedea aici că
+
+00:06:57.480 --> 00:07:05.200
+risul scripturilor testul liniuță și capul a trecut rapid, dar ați văzut că vom folosi Jap dom
+
+00:07:07.240 --> 00:07:11.400
+acolo, astfel încât testul nostru de testare foarte rapid.
+
+00:07:11.410 --> 00:07:11.940
+In regula.
+
+00:07:13.910 --> 00:07:16.200
+Deci este un alergător de test.
+
+00:07:16.250 --> 00:07:21.470
+Mai avem ceva numit spioni martori și Stubb.
+
+00:07:21.570 --> 00:07:25.800
+Și iarăși iarăși Jasmine și tocmai vin cu versiunea proprie.
+
+00:07:26.640 --> 00:07:32.730
+Apoi, dacă folosiți ceva asemănător cu Mocha, așa cum a trebuit să adăugați o afirmație în bibliotecă, va
+
+00:07:32.730 --> 00:07:35.610
+trebui să adăugați ceva numit Semn la Dumnezeu.
+
+00:07:35.660 --> 00:07:39.780
+Da, există în mod evident alte biblioteci, dar acesta este cel mai popular.
+
+00:07:39.920 --> 00:07:47.900
+Acum, ce-i cu toți spionii ăștia bătrâni și cu Stob care ne oferă spionii.
+
+00:07:47.900 --> 00:07:50.360
+Informații despre funcții.
+
+00:07:50.360 --> 00:07:54.650
+De câte ori au fost chemați în ce cazuri și prin cine.
+
+00:07:54.650 --> 00:08:03.710
+Stubbing înlocuiește funcțiile selectate cu o funcție pentru a se asigura că comportamentul așteptat se întâmplă și apoi Mock's este un fel
+
+00:08:03.710 --> 00:08:11.380
+de falsificare a unei funcții sau a unui comportament pentru a testa diferite părți ale unui proces.
+
+00:08:11.390 --> 00:08:14.870
+Deci, acest lucru ar putea fi cu adevarat bun pentru testele de integrare.
+
+00:08:14.870 --> 00:08:21.950
+Acum știu că poate deveni puțin confuză, așa că să aruncăm o privire la semnul de pe semn aici,
+
+00:08:21.950 --> 00:08:28.050
+dacă mergi la documentația lor să faceți clic pe scroll liber Stubb jos vom vedea că.
+
+00:08:28.250 --> 00:08:30.850
+Ce face un stub.
+
+00:08:30.890 --> 00:08:36.260
+Folosim pur și simplu semnul bibliotecii pe stubul Dot, care este o funcție.
+
+00:08:36.290 --> 00:08:45.920
+Acum o putem folosi într-un mod în care această funcție poate fi apelată cu argumentele 42 și să se întoarcă
+
+00:08:45.920 --> 00:08:51.680
+una astfel încât atunci când rulați callback-ul 42 se întoarce 1.
+
+00:08:51.940 --> 00:08:57.120
+Și când facem callback cu arx, aruncă o eroare.
+
+00:08:57.220 --> 00:09:00.950
+Din nou, acesta este un lucru care va trece mai târziu în videoclipuri.
+
+00:09:01.090 --> 00:09:06.830
+Dar vedeți aici că stub este un funcții false de weekend și să le facă să facă ceea ce se așteaptă.
+
+00:09:08.840 --> 00:09:13.950
+De exemplu, semnarea poate fi folosită pentru a falsifica un server în timpul testului nostru.
+
+00:09:14.060 --> 00:09:18.890
+Nu dorim neapărat să trimitem cereri către server de fiecare dată când executăm teste.
+
+00:09:18.890 --> 00:09:26.540
+Dar, în mod ideal, dacă o funcție utilizează un server, o putem falsifica cu un stub, astfel încât funcția să
+
+00:09:26.540 --> 00:09:30.660
+funcționeze și putem testa doar o singură bucată de cod.
+
+00:09:30.710 --> 00:09:36.430
+Cum am spus că este foarte greu de explicat fără un pic de demo, dar nu vă faceți griji
+
+00:09:36.430 --> 00:09:39.670
+că vom ajunge acolo și apoi ultima piesă a puzzle-ului.
+
+00:09:39.740 --> 00:09:45.960
+Am vorbit despre schele cu privire la bibliotecile de afirmare despre care am vorbit despre testele de alergare despre
+
+00:09:45.980 --> 00:09:48.820
+care am vorbit despre spionii lui Stobbs Moxon.
+
+00:09:48.830 --> 00:09:55.670
+În cele din urmă, avem ceva numit cod de acoperire și acoperirea codului este furnizată de bibliotecile ca
+
+00:09:55.880 --> 00:10:02.410
+Istanbul, are doar o acoperire de cod deja inclusă, dar de fapt Istanbul rulează sub capotă.
+
+00:10:04.010 --> 00:10:07.230
+Și să vă arăt cum ar putea arăta o acoperire de cod.
+
+00:10:09.450 --> 00:10:15.690
+Din fericire pentru noi putem face doar testul NPM de bordură bordură liniuță bord acoperire și nu vă faceți griji vom vorbi despre modul
+
+00:10:15.930 --> 00:10:18.550
+în care putem face acest lucru în aplicațiile noastre.
+
+00:10:18.630 --> 00:10:21.730
+Dar dacă conduc asta, îl vezi pe Domul cel drept.
+
+00:10:23.630 --> 00:10:31.670
+Am un fișier de ieșire din acoperire și tu vezi că am prietenii mei Roble și am ceva verde niște roșii niște
+
+00:10:31.670 --> 00:10:38.600
+galben și aceasta este o acoperire de testare care îmi arată ce procent din afirmațiile ramurile pe care funcțiile
+
+00:10:38.660 --> 00:10:44.300
+sunt acoperite testele pe care le vedeți aici că am scris câteva teste pentru fișierul
+
+00:10:44.330 --> 00:10:51.860
+Constans gândit unele acțiuni care doar fișier și, de asemenea, pentru unele componente ale componentelor noastre lista de card și că
+
+00:10:51.860 --> 00:10:55.640
+avem o acoperire de 100 la sută pentru aceia.
+
+00:10:55.640 --> 00:11:02.840
+Dar, de asemenea, avem și alte lucruri ca fișierul eterogen, care lipsește de la un test și ne
+
+00:11:02.840 --> 00:11:05.350
+arată chiar și ce linii lipsesc.
+
+00:11:05.930 --> 00:11:14.600
+Și asta este Istanbulul sub capota, oferindu-ne un raport despre locul în care lipsesc testele acum.
+
+00:11:14.810 --> 00:11:21.740
+Deși acestea sunt o mulțime de biblioteci, toate au același scop în minte și toate sunt de
+
+00:11:21.740 --> 00:11:24.640
+fapt scrise în mod foarte asemănător.
+
+00:11:24.680 --> 00:11:30.190
+Deci, odată ce știți unul, este cu adevărat ușor să ridicați unul.
+
+00:11:30.200 --> 00:11:31.970
+Nu te copleși de asta.
+
+00:11:32.060 --> 00:11:36.950
+La fel ca și în orice, există multe instrumente pentru acest loc de muncă, dar vom reveni la acest lucru, astfel încât totul are sens
+
+00:11:36.950 --> 00:11:37.740
+în cele din urmă.
+
+00:11:37.820 --> 00:11:41.330
+Și rețineți că sintaxa este foarte asemănătoare.
+
+00:11:41.570 --> 00:11:42.750
+Deci vei fi bine.
+
+00:11:43.640 --> 00:11:49.370
+Și vreau să vă spun că probabil cea mai populară Jasmine trebuie să fie foarte populară, dar
+
+00:11:49.430 --> 00:11:52.280
+acum a fost depășită de două lucruri.
+
+00:11:52.280 --> 00:11:58.280
+Unul este la fel de frumos pentru că are totul într-un singur loc.
+
+00:11:58.310 --> 00:12:04.530
+Puteți instala această bibliotecă și aveți toate aceste mici caracteristici de care aveți nevoie într-un cadru de testare.
+
+00:12:04.880 --> 00:12:14.170
+Un altul popular este Moka combinat cu Chye și semn și acesta este, din nou, probabil cel mai popular set, dar asta e și
+
+00:12:14.170 --> 00:12:17.690
+pentru că, la fel de mult mai nou.
+
+00:12:17.710 --> 00:12:24.460
+Cele mai multe dintre aceste biblioteci urmează ideea dezvoltării bazate pe comportament, care este ceea ce descriem ceea
+
+00:12:24.460 --> 00:12:28.340
+ce facem și spunem ce comportament ne așteptăm din ele.
+
+00:12:28.350 --> 00:12:31.390
+Îți amintești dreptul de afirmare Chye.
+
+00:12:31.660 --> 00:12:40.200
+Dacă obiectul are aceste proprietăți, ne așteptăm ca acesta să aibă această proprietate a.
+
+00:12:40.440 --> 00:12:42.610
+Încă ți-a rănit capul.
+
+00:12:43.870 --> 00:12:51.130
+Din fericire pentru noi, dacă nu ar fi reacționat, va trebui să le instalăm din nou și să
+
+00:12:51.130 --> 00:12:56.940
+le adăugăm în script-urile NPM pentru a rula toate aceste teste și teste.
+
+00:12:56.960 --> 00:13:02.940
+Dar, după cum puteți vedea cu creați reactivarea, avem totul din cutie.
+
+00:13:04.120 --> 00:13:09.790
+Din nou, cei mai buni minți din comunitate lucrează la menținerea reacției CCRI, pentru a
+
+00:13:09.790 --> 00:13:13.330
+fi mereu la curent cu actualizarea tuturor acestor biblioteci.
+
+00:13:14.360 --> 00:13:18.650
+Nu vă faceți griji, deși vă voi arăta în videoclipurile viitoare cum să vă configurați și dumneavoastră acest lucru.
+
+00:13:19.800 --> 00:13:25.400
+O altă notă din testele noastre aici CCRI reacționează.
+
+00:13:25.400 --> 00:13:32.950
+Foloseste doar si asta pentru ca tocmai a fost creat de Facebook si daca iti aduci aminte ca re-actul a fost de
+
+00:13:32.950 --> 00:13:40.450
+asemenea implicit de Facebook, care este un fel de frumos pentru ca il folosesc in mediul lor de productie proprie si
+
+00:13:40.450 --> 00:13:45.030
+aceste unelte sunt folosite impreuna pentru a functiona intr-adevar cu adevarat frumos.
+
+00:13:45.210 --> 00:13:52.650
+Și, apropo, există și alte biblioteci de testare, avem Eva care face paralelismul într-adevăr foarte bine, ceea ce înseamnă că
+
+00:13:52.650 --> 00:13:55.720
+a alergat testele de testare într-adevăr foarte repede.
+
+00:13:55.860 --> 00:14:00.660
+Și apoi ai ceva de genul banda care este biblioteca simplă de lumină cu nivel scăzut.
+
+00:14:00.660 --> 00:14:03.400
+Dar, după cum am spus înainte, nu se depășesc.
+
+00:14:03.570 --> 00:14:10.290
+Pe scurt, dacă obțineți ceva de la acest videoclip este că dacă doriți doar să începeți și căutați
+
+00:14:10.290 --> 00:14:17.690
+un cadru rapid care să se ocupe de tot și să aibă totul într-un singur perete utilizați doar dacă doriți
+
+00:14:17.700 --> 00:14:27.290
+o configurație foarte flexibilă extensibilă în care puteți conecta unele lucruri pe care le folosești apoi Moka Moka este un pic mai greu de configurat
+
+00:14:27.290 --> 00:14:33.590
+din cauza tuturor acestor lucruri pe care trebuie să le adaugăm, dar e mai flexibilă.
+
+00:14:33.740 --> 00:14:36.560
+Și cum am spus două extensii deschise.
+
+00:14:36.590 --> 00:14:43.180
+O ultimă notă din testele noastre o să folosim două lucruri care sunt unice de reacție.
+
+00:14:43.220 --> 00:14:49.190
+Una este ceva numit testarea instantanee care vine cu doar care ne permite să facem lucruri foarte
+
+00:14:49.190 --> 00:14:52.110
+reci care vă vor arăta mai târziu.
+
+00:14:52.550 --> 00:14:59.810
+Și apoi o altă bibliotecă numită enzimă care a fost creată de BMB cu aer și ne ajută să scriem mai bine
+
+00:14:59.810 --> 00:15:01.220
+teste pentru componentele Riak.
+
+00:15:01.520 --> 00:15:07.840
+Nu vă faceți griji că nu vă arăt doar aceste lucruri, deoarece cred că ele sunt reci și moderne acestea au fost puse
+
+00:15:07.930 --> 00:15:13.260
+în aplicare și cele mai multe proiecte Riak pe care le întâlniți și este destul de mult a devenit
+
+00:15:13.300 --> 00:15:16.000
+standard în ecosistem re-act de a utiliza aceste biblioteci.
+
+00:15:16.000 --> 00:15:17.270
+Deci le vom folosi și ele.
+
+00:15:17.520 --> 00:15:21.500
+La sfârșitul zilei, totuși, putem fi de acord cu un singur lucru.
+
+00:15:21.550 --> 00:15:26.020
+Toate aceste biblioteci au logouri foarte reci Hosie și următoarea.
+
+00:15:26.350 --> 00:15:26.620
+Dar prin.

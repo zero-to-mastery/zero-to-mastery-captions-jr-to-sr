@@ -1,0 +1,478 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:06.660
+Witamy ponownie, dodajmy opcję rozwijaną do tej ikony profilu.
+
+00:00:08.370 --> 00:00:15.480
+I na szczęście dla nas, jeśli wrócimy do reakcji, którą użyliśmy i przejdziemy do
+
+00:00:15.480 --> 00:00:24.740
+komponentów ładnie i łatwo wykonanych za pomocą rozwijanego przycisku, widzimy tutaj, że potrzebujemy kilku elementów i mogę nawet
+
+00:00:24.740 --> 00:00:27.520
+skopiować cały ten fragment kodu.
+
+00:00:27.590 --> 00:00:29.040
+Ale chodźmy jeden po drugim.
+
+00:00:29.060 --> 00:00:37.390
+Pierwszą rzeczą, którą chcę zrobić, to zaimportować niektóre elementy i wypuścić je poprawnie, abyśmy mogli je
+
+00:00:37.390 --> 00:00:38.230
+zobaczyć.
+
+00:00:42.940 --> 00:00:43.830
+Teraz jest lepiej.
+
+00:00:44.720 --> 00:00:48.970
+I tak naprawdę teraz, kiedy wracam, naprawdę nie chcemy menu z przyciskami.
+
+00:00:48.980 --> 00:00:52.780
+Mamy już przycisk, który jest naszym awatarem, który ma być rozwijany.
+
+00:00:52.910 --> 00:00:58.250
+Więc chodźmy po prostu tutaj, bez martwienia się o przycisk.
+
+00:00:58.670 --> 00:01:04.490
+Znowu mam zamiar skopiować i wkleić to i zmieńmy to.
+
+00:01:04.520 --> 00:01:08.690
+Więc chcesz się upewnić, że używasz tylko tego, czego potrzebujesz.
+
+00:01:08.840 --> 00:01:14.010
+W naszym przypadku wygląda na to, że potrzebujemy tych czterech elementów.
+
+00:01:14.020 --> 00:01:14.820
+W porządku.
+
+00:01:14.890 --> 00:01:23.770
+I znowu wracając do tego, widzimy, że musimy mieć otwarty stan otwarty, który faktycznie
+
+00:01:23.770 --> 00:01:24.410
+mamy.
+
+00:01:24.700 --> 00:01:30.720
+Musimy związać to wydarzenie i zamierzam o tym porozmawiać w zaledwie sekundę.
+
+00:01:30.910 --> 00:01:33.790
+Jeśli nie widziałeś go wcześniej, nie martw się.
+
+00:01:33.820 --> 00:01:37.130
+Porozmawiamy o tym.
+
+00:01:37.250 --> 00:01:39.220
+A teraz po prostu skopiujmy.
+
+00:01:39.230 --> 00:01:43.360
+Ten składany element powrotu.
+
+00:01:43.570 --> 00:01:45.150
+Zamierzam tu przyjść.
+
+00:01:45.430 --> 00:01:46.930
+A teraz po prostu
+
+00:01:51.730 --> 00:01:55.200
+plop to w prawo po lub tuż przed naszą ikonę.
+
+00:01:55.530 --> 00:01:55.750
+W porządku.
+
+00:01:55.750 --> 00:02:02.830
+Pierwszą rzeczą, którą chcemy sprawdzić, jest otwartość, która pochodzi z tego otwartego menu stanu, które już
+
+00:02:02.830 --> 00:02:03.770
+mamy.
+
+00:02:04.000 --> 00:02:11.320
+Ma też funkcję przełączania, do której wrócimy, jeśli przejdziemy do menu rozwijanego,
+
+00:02:12.370 --> 00:02:21.940
+mamy kilka opcji, a następnie nasze pozycje rozwijane, ponieważ możemy mieć rozwijane menu z naszymi produktami.
+
+00:02:22.190 --> 00:02:32.780
+Teraz w naszym przypadku mamy dwie rzeczy, które chcemy, abyśmy chcieli zobaczyć profil, a my chcemy zarejestrować się, nie potrzebujemy żadnych niepełnosprawnych
+
+00:02:32.780 --> 00:02:36.500
+i nie musimy się martwić o Hetter.
+
+00:02:36.620 --> 00:02:41.290
+I to są takie rzeczy, które mają pewne działania.
+
+00:02:41.300 --> 00:02:48.670
+Chcemy tylko normalnej, kolejnej akcji WAHM, która jest tutaj bez żadnych atrybutów.
+
+00:02:48.750 --> 00:02:51.670
+Usuńmy więc te, których nie potrzebujemy.
+
+00:02:53.430 --> 00:02:55.920
+I zostaw to.
+
+00:02:55.970 --> 00:03:05.220
+Teraz, jeśli po prostu zapiszę to w ten sposób, otrzymam kilka błędów, a jednym z błędów będzie fakt,
+
+00:03:05.220 --> 00:03:07.360
+że zwracamy wiele rzeczy.
+
+00:03:07.380 --> 00:03:10.220
+Idealnie są one opakowane w coś.
+
+00:03:10.230 --> 00:03:11.390
+Więc zawiń to wszystko.
+
+00:03:11.400 --> 00:03:17.590
+Ponieważ pamiętaj, reagując na ciebie, chcesz zwrócić jedną rzecz zwykłą z elementów.
+
+00:03:17.640 --> 00:03:20.400
+Więc zamierzam po prostu opakować go w
+
+00:03:23.090 --> 00:03:26.870
+znacznik div i przy nazwie klasy, zamierzam ponownie nadać mu styl.
+
+00:03:26.900 --> 00:03:30.080
+Wypróbowałem już to.
+
+00:03:30.080 --> 00:03:37.460
+To jest dopełnienie lub centrum tekstowe, ponieważ niekoniecznie jest to kurs CSSA, w którym używam Tatiany, aby uprościć rzeczy
+
+00:03:37.700 --> 00:03:40.890
+i nie spędzać zbyt wiele czasu na CSX.
+
+00:03:40.940 --> 00:03:48.020
+Więc jeśli kiedykolwiek zobaczysz, że piszę te P-A w poszukiwaniu TCB, kursy Tatian po prostu automatycznie wstrzykną nam fajną
+
+00:03:48.020 --> 00:03:50.350
+CSSA, więc wszystko wygląda dobrze.
+
+00:03:50.390 --> 00:03:56.210
+Jeśli naprawdę chcesz dowiedzieć się o nich więcej niż ja, po prostu idź do Tatiana i mają świetną
+
+00:03:56.210 --> 00:03:57.880
+dokumentację, z której możesz skorzystać.
+
+00:03:57.880 --> 00:04:03.660
+W porządku, więc teraz jest ładnie zapakowany w dziób,
+
+00:04:06.810 --> 00:04:08.330
+wszystko działa.
+
+00:04:08.370 --> 00:04:17.780
+Jeśli wrócę teraz do mojej aplikacji, więc mamy nieokreślone powiązanie, nie zdefiniowaliśmy tej umiejętności Tuggle, a to dlatego,
+
+00:04:17.780 --> 00:04:24.960
+że ponownie, jeśli wrócimy do reakcji na Schrempp, mamy tę funkcję przełączania.
+
+00:04:25.220 --> 00:04:29.900
+Znowu możemy po prostu go skopiować, a funkcja przełączania jest bardzo prosta.
+
+00:04:29.900 --> 00:04:33.820
+Po prostu ustawia stan za pomocą metody zwrotnej.
+
+00:04:33.920 --> 00:04:40.910
+I jest to po prostu sposób, w którym zawsze aktualizujesz stan, aby upewnić się, że jeśli kiedykolwiek będziesz
+
+00:04:40.910 --> 00:04:46.670
+w stanie ustawić funkcję stanu aktualizacji, dotkniesz stanu, ponieważ może działać w przewidywalny sposób.
+
+00:04:46.670 --> 00:04:52.730
+Chcesz mieć to, co nazywamy funkcją wywołania zwrotnego, gdzie upewniamy się, że otrzymujemy poprzedni stan, abyśmy mogli
+
+00:04:53.330 --> 00:04:54.620
+na nim działać.
+
+00:04:54.710 --> 00:05:00.470
+W tym przypadku mówimy po prostu, że chcemy to zmienić i chcemy po prostu
+
+00:05:00.470 --> 00:05:02.590
+zmienić to, co jest obecnie.
+
+00:05:02.690 --> 00:05:09.410
+Robimy to w ten sposób, ponieważ aktualizacje stanu miasta lub stanu nie są uruchamiane natychmiast po ich
+
+00:05:09.410 --> 00:05:10.210
+wywołaniu.
+
+00:05:10.640 --> 00:05:17.870
+Dlatego chcemy się upewnić, że w celu uniknięcia błędów błędów za każdym razem, gdy
+
+00:05:18.170 --> 00:05:28.070
+używamy stanu do aktualizacji, masz tę składnię funkcji wywołania zwrotnego i to powiązanie dzieje się znowu z powodu małego dziwactwa,
+
+00:05:28.070 --> 00:05:32.460
+w którym ten rodzaj klawiatury dostaje pomieszane wokół.
+
+00:05:32.930 --> 00:05:38.450
+Innym sposobem, aby to zrobić, zobaczysz to w wielu projektach Riak używania wiązania, aby upewnić się,
+
+00:05:38.450 --> 00:05:40.620
+że jest on powiązany z komponentem.
+
+00:05:41.000 --> 00:05:49.070
+Ale innym sposobem, który podoba mi się, że jest o wiele czystszy, jest po prostu wykorzystanie
+
+00:05:49.070 --> 00:05:56.350
+naszych funkcji i to implicite wiąże to dla nas i wygląda po prostu czystsze.
+
+00:05:56.360 --> 00:06:06.540
+Powiedzmy to i wróćmy do Legault, że mamy nasze menu rozwijane, które wygląda całkiem nieźle, ale to nie jest to, co
+
+00:06:06.540 --> 00:06:11.760
+chcemy, żebyśmy mogli po prostu kliknąć na awatara i nie mieć
+
+00:06:11.770 --> 00:06:13.310
+tego upuszczenia.
+
+00:06:13.700 --> 00:06:21.870
+Na szczęście dla nas, jeśli wrócimy do naszej pułapki Riak, jeśli przewiniesz w dół, jest obszar o nazwie Custom dropdown
+
+00:06:22.030 --> 00:06:28.960
+content i widzisz tutaj właśnie stworzyłem niestandardową zawartość, która po prostu tworzy listę rozwijaną i jest bardzo
+
+00:06:30.130 --> 00:06:31.710
+łatwa do wdrożenia.
+
+00:06:31.720 --> 00:06:41.560
+Po prostu używamy przełącznika rozwijanego i przełączamy listę rozwijaną wewnątrz menu, aby wybrać dowolną
+
+00:06:41.860 --> 00:06:43.150
+treść.
+
+00:06:43.150 --> 00:06:44.980
+Zamierzam to
+
+00:06:50.010 --> 00:06:53.300
+po prostu skopiować i zamiast tego przełączania
+
+00:06:56.460 --> 00:06:58.940
+tutaj wkleję ten fragment kodu.
+
+00:07:02.720 --> 00:07:06.570
+A teraz ten fragment kodu możemy po prostu zachować tak, jak jest.
+
+00:07:06.800 --> 00:07:15.050
+Ale zamiast niestandardowej zawartości rozwijanej możemy prawdopodobnie wstawić naszą małą ikonę, którą mamy.
+
+00:07:15.050 --> 00:07:19.340
+Po prostu chwyć obraz lub skorzystaj z dev.
+
+00:07:19.340 --> 00:07:25.830
+Zobaczmy, co się stanie, jeśli po prostu dodamy programistę ponownie w naszym niestandardowym komponencie rozwijanym.
+
+00:07:26.030 --> 00:07:28.500
+Upewnij się, że wszystko jest dobrze dopasowane.
+
+00:07:29.510 --> 00:07:35.370
+Zapiszmy wrócić do naszej aplikacji.
+
+00:07:35.590 --> 00:07:39.370
+Kliknięcie nie działa.
+
+00:07:39.560 --> 00:07:40.620
+Co tu się stało.
+
+00:07:40.930 --> 00:07:42.530
+Cóż, wróćmy.
+
+00:07:42.540 --> 00:07:46.480
+Pierwszą rzeczą, o której tutaj wspomniałem, jest to, że używam klasy zamiast nazwy klasy.
+
+00:07:46.550 --> 00:07:51.020
+I pamiętajmy, że chcemy się upewnić, że do reagowania używamy nazwy klasy.
+
+00:07:51.170 --> 00:07:58.540
+Założę się, że jeśli otworzymy terminal i sprawimy, że będzie trochę większy, wygląda jak klasa własności.
+
+00:07:58.530 --> 00:07:59.990
+Miałeś na myśli imię i nazwisko klasy.
+
+00:08:00.470 --> 00:08:01.700
+Naprawmy to.
+
+00:08:01.700 --> 00:08:07.070
+Widzę też, że skoro używamy tego div tutaj, tak naprawdę nie musimy robić wyściółki.
+
+00:08:07.100 --> 00:08:11.390
+Chcemy, aby obraz był trochę wyższy i możemy
+
+00:08:14.850 --> 00:08:21.880
+po prostu usunąć div i ponownie dla klasy upewnij się, że używamy nazwy klasy.
+
+00:08:21.890 --> 00:08:28.790
+Wróćmy i jeszcze raz sprawdźmy, czy wszystko działa, i zastanówmy się, dlaczego przełącznik przełączania
+
+00:08:29.240 --> 00:08:30.920
+nie działa teraz.
+
+00:08:30.920 --> 00:08:42.410
+Znowu wracamy, a jeśli rzeczywiście tu pójdziemy, zobaczymy, że robimy coś dziwnego, jeśli pójdziemy.
+
+00:08:42.520 --> 00:08:50.070
+Widzimy, że na liście rozwijanej znajduje się również przełącznik, a także przełącznik, który ma kliknięcie.
+
+00:08:50.310 --> 00:09:00.300
+A jeśli faktycznie piszemy jak tutaj, to co się dzieje, powiedzmy, że to jest stan
+
+00:09:00.350 --> 00:09:12.160
+DOT stan DOT spadł w dół i wracam i otwieram konsolę i klikam raz otrzymuję to wywoływane dwa razy.
+
+00:09:12.560 --> 00:09:16.610
+I to jest naprawdę zabawna sprawa z ich dokumentacją.
+
+00:09:16.610 --> 00:09:19.580
+Widzisz to dla niestandardowej zawartości rozwijanej.
+
+00:09:19.580 --> 00:09:29.910
+W rzeczywistości robią ustawiony stan w funkcji przełączania, aby wykonać typowy dostęp do stanu wewnątrz ustawionej funkcji stanu,
+
+00:09:29.980 --> 00:09:33.760
+czego tak naprawdę nie chcemy robić.
+
+00:09:33.840 --> 00:09:42.510
+Ich obejście polega na wykonaniu tego, ale zalecam, aby po prostu usunąć to z funkcji kliknięcia, ponieważ
+
+00:09:43.200 --> 00:09:45.340
+to już się dzieje.
+
+00:09:45.810 --> 00:09:55.160
+I w takim wypadku, jeśli wrócę i kliknę, to zdarza się tylko raz i widzisz to.
+
+00:09:55.290 --> 00:09:55.770
+O tak.
+
+00:09:55.820 --> 00:10:00.730
+Teraz nasz profil działa, a my mamy fajny mały przełącznik.
+
+00:10:00.730 --> 00:10:01.510
+Jakie to jest świetne.
+
+00:10:01.510 --> 00:10:03.220
+To jest ładne i proste.
+
+00:10:03.220 --> 00:10:06.950
+Teraz usuń rejestrowanie.
+
+00:10:08.830 --> 00:10:12.280
+Możesz eksperymentować, aby zobaczyć, jak to działa.
+
+00:10:12.280 --> 00:10:21.070
+Ponownie, jeśli po prostu wycofasz kliknięcie i dodasz ten stan DOT, rozwiń i po prostu zaktualizuj obiekt, który będzie działał
+
+00:10:21.620 --> 00:10:23.420
+w ten sposób.
+
+00:10:23.500 --> 00:10:25.750
+Ale to po prostu czystszy sposób robienia tego.
+
+00:10:25.750 --> 00:10:27.620
+Polecam zrobić to w ten sposób.
+
+00:10:27.640 --> 00:10:35.080
+Możesz przeczytać o używaniu stanu wewnątrz stanu Seth w swoim własnym czasie, to tylko
+
+00:10:35.080 --> 00:10:36.300
+dobra praktyka.
+
+00:10:36.310 --> 00:10:36.970
+W porządku.
+
+00:10:36.970 --> 00:10:41.920
+Mamy rozwijaną funkcjonalność, ale stylizacja jest jakby wyłączona.
+
+00:10:41.950 --> 00:10:46.210
+Po prostu naprawmy to, więc zamiast mieć to wszystko aż tutaj jest trochę niżej, może
+
+00:10:46.210 --> 00:10:47.830
+masz jakieś przejrzeć obok niego.
+
+00:10:49.100 --> 00:10:56.540
+Och, mam dla nas kilka nazw klasowych, które możemy wykorzystać w menu lub w dwóch listach menu.
+
+00:10:56.880 --> 00:10:58.720
+Mogę nadać mu nazwę klasy.
+
+00:10:58.810 --> 00:11:06.440
+Ponownie używając Tatiany powiem, że będzie to przezroczyste tło.
+
+00:11:06.520 --> 00:11:11.260
+Będzie miał cień, co daje wrażenie 3D.
+
+00:11:11.310 --> 00:11:17.620
+A5, a następnie po prostu pokazać, jak to się robi, gdybyśmy również chcieli stylizować.
+
+00:11:17.620 --> 00:11:22.200
+Możemy również zrobić lub chcemy mieć własne style.
+
+00:11:22.210 --> 00:11:25.390
+Nie mogę mieć tutaj tylko atrybutu stylu.
+
+00:11:25.420 --> 00:11:27.940
+I po prostu dajmy mu margines.
+
+00:11:28.400 --> 00:11:38.860
+Początek 20 pikseli zaczął się po prostu nieco obniżać, a ja potrzebowałam przejrzystości,
+
+00:11:38.860 --> 00:11:44.090
+więc powiedzmy, że chcemy kolor tła.
+
+00:11:44.120 --> 00:11:46.340
+Pozwolę sobie po prostu przenieść to na nową linię.
+
+00:11:46.340 --> 00:11:46.870
+Proszę bardzo.
+
+00:11:46.940 --> 00:11:49.730
+To dużo czystsze.
+
+00:11:49.830 --> 00:11:55.590
+I znowu, ponieważ to javascript nie robimy koloru kreski, tak jak robimy to w
+
+00:11:56.410 --> 00:12:03.400
+CSSA, to wielbłąda, a kolor tła będzie po prostu dajmy mu spadek, albo to musi być ciąg znaków.
+
+00:12:03.750 --> 00:12:05.740
+Zrobimy R G B.
+
+00:12:05.790 --> 00:12:12.070
+Więc możemy mieć trochę przejrzystości, a my zrobimy 2:55 2:55 2:55.
+
+00:12:12.240 --> 00:12:21.290
+Więc będzie biały z 0. 5 Alfa, które jest przezroczyste.
+
+00:12:21.290 --> 00:12:23.530
+W porządku, uratujmy to i zobaczmy, czy to działa.
+
+00:12:23.560 --> 00:12:25.240
+Spójrzmy.
+
+00:12:25.240 --> 00:12:26.250
+Dobra, spójrz na to.
+
+00:12:26.290 --> 00:12:28.090
+To wygląda o wiele lepiej, prawda.
+
+00:12:28.090 --> 00:12:30.400
+Jak powiedziałem, trochę oszukany ze sprzedaży tutaj.
+
+00:12:30.400 --> 00:12:31.630
+Zrobiłem to przed ręką.
+
+00:12:31.630 --> 00:12:35.220
+Zwykle lubię kodować na żywo i debugować przy tobie, gdy jestem w drodze.
+
+00:12:35.220 --> 00:12:39.430
+Ale jeśli chodzi o stylizację to tylko jedna z tych rzeczy, które dobrze mieć przed ręką.
+
+00:12:39.430 --> 00:12:45.070
+Możesz bawić się i dodawać własne stylizacje, jak chcesz, ale wiesz, co to wygląda całkiem nieźle.
+
+00:12:45.070 --> 00:12:47.470
+Jestem całkiem zadowolony z tego, jak mamy rzeczy.
+
+00:12:47.500 --> 00:12:52.720
+Myślę, że musimy dodać trochę funkcjonalności, aby po kliknięciu tych rzeczy zrobić coś, co
+
+00:12:53.040 --> 00:12:54.910
+zrobię w kolejnym filmie.
+
+00:12:55.210 --> 00:12:55.990
+Zobaczę na tym.

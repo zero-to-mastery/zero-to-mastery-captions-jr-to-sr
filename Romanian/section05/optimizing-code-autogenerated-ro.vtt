@@ -1,0 +1,397 @@
+﻿WEBVTT
+
+00:00:01.190 --> 00:00:02.340
+Bine ai revenit.
+
+00:00:02.350 --> 00:00:05.560
+Să vorbim puțin despre optimizările codului.
+
+00:00:06.380 --> 00:00:15.670
+Dacă vă aduceți aminte de dictarea critică a javascript-ului, executați sau executați și permiteți utilizatorilor să interacționeze cu pagina web,
+
+00:00:15.760 --> 00:00:26.950
+cum ar fi făcând clic pe un meniu drop-down sau adăugând elemente într-o listă de a face o listă odată descărcată unul dintre cele mai
+
+00:00:27.010 --> 00:00:35.550
+grele costuri ale javascriptului este timpul pentru javascript motorul care se află în interiorul browserului pentru a analiza
+
+00:00:35.560 --> 00:00:44.100
+și a compila acest cod, care este de a citi și de a înțelege codul care face parte
+
+00:00:44.250 --> 00:00:44.900
+aici.
+
+00:00:45.870 --> 00:00:53.550
+Din fericire pentru noi, cu browsere, cum ar fi cromul, putem folosi instrumentele lor de dezvoltare pentru a analiza analiza
+
+00:00:53.550 --> 00:00:54.440
+și compilarea.
+
+00:00:54.900 --> 00:00:55.780
+Haideți să aruncăm o privire.
+
+00:00:57.480 --> 00:01:04.620
+Am pagina mea de Twitter deschisă aici, dar dacă deschid instrumentele pentru dezvoltatori și merg la fila
+
+00:01:04.620 --> 00:01:13.900
+de performanță, pot înregistra înregistrări pentru a vedea efectiv ceea ce se întâmplă în spatele scenei în termeni de performanță pe această
+
+00:01:13.900 --> 00:01:14.920
+pagină web.
+
+00:01:14.920 --> 00:01:21.240
+Așa că am de gând să înregistrez și apoi să reîmprospătesc pagina după ce a terminat.
+
+00:01:21.380 --> 00:01:22.130
+Reconfortantă.
+
+00:01:22.160 --> 00:01:34.470
+Am de gând să opresc și acum este capabil să scoatem tot ceea ce sa întâmplat în acea perioadă de timp pe care am înregistrat-o.
+
+00:01:34.510 --> 00:01:38.720
+Deci, privirea la asta poate deveni un pic copleșitoare.
+
+00:01:38.860 --> 00:01:45.840
+Există o mulțime de persoane care au apelat la o mulțime de grafice și sunt multe de luat.
+
+00:01:46.100 --> 00:01:49.750
+Dar vreau să vă arăt principalele părți care ar putea fi interesante pentru dvs.
+
+00:01:50.620 --> 00:01:57.070
+Primul este că avem această cronologie a înregistrării noastre și puteți vedea aici că, pe măsură ce
+
+00:01:57.820 --> 00:02:01.280
+defilam prin ea, arată ce se încarcă pe pagină.
+
+00:02:01.450 --> 00:02:05.350
+Puteți vedea că sunt afișate tot mai multe lucruri.
+
+00:02:07.810 --> 00:02:15.010
+Perfect și avem această linie verde care arată prima vopsea pe care o puteți vedea aici cum se vopsește
+
+00:02:16.210 --> 00:02:22.430
+și apoi avem linia albastră care este conținutul DOM încărcat despre care am vorbit înainte.
+
+00:02:22.450 --> 00:02:29.260
+Apoi, în cele din urmă, a fost încărcată linia roșie care este pagina Web a evenimentului de încărcare.
+
+00:02:29.380 --> 00:02:36.250
+Deci, este destul de drăguț și frumos, putem vedea cât timp este nevoie ca pagina noastră web să apară pe ecran.
+
+00:02:36.520 --> 00:02:43.540
+Dar lucrurile mai interesante și interesante pe care trebuie să le analizăm sunt în fila Rezumat și voi face acest lucru un
+
+00:02:43.630 --> 00:02:47.830
+pic mai mare, astfel încât să putem vedea în fila Rezumat de aici.
+
+00:02:47.830 --> 00:02:53.710
+Vedem că există încărcare în care așteptăm ca fișierele să se încarce.
+
+00:02:54.540 --> 00:03:00.180
+Există scripturi acolo redarea și apoi există pictura și alte câteva lucruri.
+
+00:03:00.880 --> 00:03:09.310
+Dar partea galbenă a scriptului care este javascript această parte galbenă include parsarea și
+
+00:03:10.210 --> 00:03:19.430
+compilarea și arată că a durat un punct opt ​​secunde pentru ca javascriptul site-ului Web să funcționeze.
+
+00:03:19.480 --> 00:03:29.460
+Putem merge, de asemenea, la partea de jos în sus și uita-te la timpul total și vom vedea din nou, din nou,
+
+00:03:30.180 --> 00:03:39.510
+piese galben javascript care rulează pentru evaluarea script-uri și funcția apel și apoi avem, de asemenea, copac care ne dă din
+
+00:03:39.520 --> 00:03:46.470
+nou unele informații foarte bune, dar Să nu ne grăbim prea mult de asta.
+
+00:03:46.490 --> 00:03:55.290
+Vreau să vă arăt acest lucru doar pentru a vă arăta că javascriptul este o mare parte a încărcării site-ului Web, astfel încât petrecerea
+
+00:03:55.320 --> 00:04:03.360
+timpului lung de parsare și compilarea codului pentru browser poate întârzia foarte mult cât de curând un utilizator poate interacționa cu
+
+00:04:03.630 --> 00:04:04.640
+site-ul dvs.
+
+00:04:05.010 --> 00:04:11.460
+Un subiect pe care l-am discutat mai devreme este cu cât mai mult Javascript trimiteți
+
+00:04:11.460 --> 00:04:18.460
+cu atât mai mult va fi nevoie pentru a parsa și compila înainte de site-ul dvs. devine interactiv.
+
+00:04:18.470 --> 00:04:27.410
+Acum nu este doar compilarea parsarea care are o execuție javascript cost care rulează codul dorește ca parsarea compilată să
+
+00:04:27.570 --> 00:04:34.470
+se întâmple este una dintre operațiile care trebuie să se întâmple pe firul principal.
+
+00:04:34.610 --> 00:04:39.130
+Și dacă vă aduceți aminte că firul principal este un fel de lucrător în browser.
+
+00:04:39.200 --> 00:04:45.050
+Există un singur lucrător care face toată munca și îl putem bloca cu javascript greu.
+
+00:04:45.080 --> 00:04:50.130
+Amintiți-vă când am făcut alerta în scenariul nostru pe un demo.
+
+00:04:50.710 --> 00:04:56.290
+A blocat execuția și nu am putut derula sau nu apăsa pe niciun buton până când nu am apăsat OK.
+
+00:04:56.660 --> 00:05:01.220
+Deci avem javascript pe pagina noastra de web aici.
+
+00:05:01.240 --> 00:05:07.780
+Solicităm fișierul javascript pentru că am întâlnit eticheta de script și apoi ajunge în
+
+00:05:07.990 --> 00:05:09.430
+sfârșit javascript.
+
+00:05:09.480 --> 00:05:17.880
+Apoi trebuie să executăm executarea parcelei de compilare și apoi vom întâlni o există un apel de preluare și fișierul
+
+00:05:17.880 --> 00:05:18.520
+javascript.
+
+00:05:18.540 --> 00:05:26.700
+Deci, din nou, trebuie să așteptăm ca acel conținut să ajungă să populeze javascript-ul nostru și poate că apoi vom reuși să
+
+00:05:26.700 --> 00:05:29.340
+executăm din nou componentele noastre compilate.
+
+00:05:29.340 --> 00:05:37.110
+În final, pagina noastră devine interactivă și vreau să vă arăt un alt instrument foarte bun pentru a putea vedea acest lucru
+
+00:05:37.110 --> 00:05:39.270
+în acțiune pe un site Web.
+
+00:05:41.240 --> 00:05:46.670
+Dacă ne întoarcem la pagina noastră web o jumătate aici, site-ul mai ușor de masterat de aici, care este de fapt
+
+00:05:46.670 --> 00:05:47.110
+deschis.
+
+00:05:47.120 --> 00:05:52.560
+Și acest lucru a fost creat doar de studenții care au contribuit la proiecte cu sursă deschisă.
+
+00:05:52.850 --> 00:05:58.340
+Foarte foarte cool și apoi are legături cu unele dintre proiectele noastre open source la care aveți acces.
+
+00:05:58.340 --> 00:06:03.920
+Gândește-te la asta ca la un loc de joacă pentru ca tu să testezi orice vrei oricum.
+
+00:06:04.770 --> 00:06:12.960
+Folosind acest site unde poate merge la ceva de genul testului ph weap,
+
+00:06:13.140 --> 00:06:19.600
+putem intra în U R L și apoi apăsăm startul.
+
+00:06:19.700 --> 00:06:20.510
+In regula.
+
+00:06:20.510 --> 00:06:21.200
+Perfect.
+
+00:06:21.250 --> 00:06:26.910
+Mizele un pic de timp, dar odată ce am terminat, avem un raport frumos despre ceea ce sa întâmplat.
+
+00:06:27.320 --> 00:06:31.240
+Dar cel pe care vreau să-ți arăt este această defalcare de procesare.
+
+00:06:31.490 --> 00:06:39.050
+Dacă dați clic pe aici, vă va arăta un fel de defalcare ca în cazul portalurilor Google Devol.
+
+00:06:39.210 --> 00:06:42.870
+Dar într-un mod foarte frumos pentru a vedea ce se întâmplă exact.
+
+00:06:44.050 --> 00:06:48.580
+Vom vedea din nou scenariul aspectului pictura care a luat timp.
+
+00:06:48.660 --> 00:06:50.060
+Încărcarea.
+
+00:06:50.080 --> 00:06:55.990
+De asemenea, vedem lucruri cum ar fi evaluarea scripturilor cât timp a durat evaluarea scripturilor cât timp
+
+00:06:55.990 --> 00:06:59.140
+a durat motorul V-8 pentru a compila codul.
+
+00:06:59.380 --> 00:07:08.870
+Și dacă ne întoarcem la instrumentele noastre de def, vedem din nou ceva similar ca avem scriptul Evaluați, care este
+
+00:07:08.870 --> 00:07:13.420
+scenariul a fost evaluat și a durat mult timp.
+
+00:07:13.460 --> 00:07:20.090
+Avem un apel de funcție care măsoară apelul de nivel înalt al funcției javascript care apare numai când browserul intră
+
+00:07:20.090 --> 00:07:25.790
+în motorul javascript și există o mulțime de lucruri pe care le puteți face aici și
+
+00:07:25.820 --> 00:07:26.600
+puteți analiza.
+
+00:07:26.630 --> 00:07:31.870
+Puteți petrece o tona de timp învățând doar fiecare caracteristică pe care o are Chrome.
+
+00:07:31.880 --> 00:07:38.600
+Dar nu intra prea adânc în gaura de iepure, pentru că principalul lucru pe care vrem să ne
+
+00:07:38.600 --> 00:07:42.540
+concentrăm este ideea că executarea compilării lui Barra durează mult.
+
+00:07:42.710 --> 00:07:44.510
+E mult efort.
+
+00:07:44.510 --> 00:07:53.300
+Tasta principală aici este că durează un timp semnificativ pentru ca browserul să lucreze cu javascript și poate întârzia cât de
+
+00:07:53.300 --> 00:07:57.120
+curând un utilizator poate interacționa cu site-ul nostru.
+
+00:07:57.140 --> 00:08:02.510
+Imaginați-vă dacă pot vedea un buton, dar nu faceți clic pe el sau atingeți-l pentru mai multe secunde.
+
+00:08:02.510 --> 00:08:05.680
+Acest lucru poate degrada cu siguranță experiența utilizatorului.
+
+00:08:07.520 --> 00:08:15.110
+O mică notă laterală pe care vreau să o fac este acest lucru atât de unghiular și acum de unghiurile sale patru sau cinci, indiferent
+
+00:08:15.410 --> 00:08:19.150
+de versiunea pe care o au, are această idee înainte de timp.
+
+00:08:19.220 --> 00:08:27.170
+Compilarea pe care o vedeți browsere face ceva numit git doar la timp de compilare ca fișier
+
+00:08:27.290 --> 00:08:29.350
+javascript încărcat în browser.
+
+00:08:29.420 --> 00:08:34.910
+Îl compilează exact acolo și apoi, în timp ce așteptăm să se încarce, echipa
+
+00:08:34.920 --> 00:08:42.860
+unghiulară a venit cu calculul timpului de la terminarea compilației înainte de timp și apoi a trimis doar acel
+
+00:08:42.860 --> 00:08:47.860
+cod pe care browserul îl poate lucra în browser-ul drept departe.
+
+00:08:47.870 --> 00:08:53.910
+Și puteți vedea aici că au reușit să-și reducă semnificativ scripturile.
+
+00:08:54.320 --> 00:09:00.590
+Acum există argumente pro și contra pentru toate acestea și există un motiv că nu toată lumea face înainte de compilație de timp,
+
+00:09:01.190 --> 00:09:03.170
+dar puteți citi asta pe cont propriu.
+
+00:09:03.170 --> 00:09:07.420
+Vreau doar să vă arăt că există unele soluții în jurul problemei.
+
+00:09:07.730 --> 00:09:10.430
+Și apoi celălalt lucru la care te gândești este.
+
+00:09:10.580 --> 00:09:13.190
+OK, deci javascript-ul a fost încărcat.
+
+00:09:13.460 --> 00:09:20.240
+Și cum poți păstra pagina ta fermecătoare chiar și după ce a fost încărcată pe o pagină web și asta e
+
+00:09:20.300 --> 00:09:24.730
+totul despre limitarea cantității de procesare pe care computerul trebuie să o facă.
+
+00:09:24.740 --> 00:09:27.950
+În primul rând, aceasta înseamnă limitarea animațiilor.
+
+00:09:28.040 --> 00:09:35.110
+Îți amintești de Kaikohe Corp. site-ul web și cât de multe animații nu avem atât de grele
+
+00:09:35.110 --> 00:09:42.390
+pe ele animațiile necesită o mulțime de procesare și puterea grafică și poate provoca grave, cum ar fi știți că puteți să le presărați aici
+
+00:09:42.390 --> 00:09:45.260
+și acolo, dar nu trece peste bord cu ei.
+
+00:09:45.330 --> 00:09:52.430
+Și acest lucru este valabil mai ales atunci când vine vorba de dispozitive mobile care au de obicei o putere de procesare mai slabă.
+
+00:09:52.740 --> 00:09:59.130
+Așadar, ținând seama de acest lucru, unul dintre cei mai mari indivizi de performanță declanșează animații
+
+00:09:59.130 --> 00:10:07.270
+în timpul derulării evenimentelor sau al deplasării elementelor de pagină în jurul lor sau al decolorării acestora în schimbarea aspectului site-ului Web.
+
+00:10:07.290 --> 00:10:13.400
+Nu numai că un browser trebuie să proceseze modificările vizuale asociate cu derularea unei pagini dinamice, dar
+
+00:10:13.590 --> 00:10:17.390
+trebuie, de asemenea, să proceseze toate animațiile în același timp.
+
+00:10:17.700 --> 00:10:23.990
+Deci, gândiți-vă din nou la acest muncitor care lucrează în mod constant pentru dvs., nu-l faceți să înceapă.
+
+00:10:24.060 --> 00:10:25.440
+Lasă-mă să-ți arăt un alt lucru.
+
+00:10:27.540 --> 00:10:31.020
+Când includeți linia javascript în HMO.
+
+00:10:31.080 --> 00:10:37.390
+Așa că ați pus o etichetă de script și sunteți un simbol cu ​​să spunem că sursa este indexată.
+
+00:10:37.500 --> 00:10:45.990
+Da, aceasta este o operație de blocare a redării, dacă vă amintiți că browserul trebuie să execute acest script pentru a fi finalizat înainte de
+
+00:10:45.990 --> 00:10:48.560
+a putea continua să analizăm codul HTML.
+
+00:10:48.630 --> 00:10:50.910
+Deci, dacă mergem să evaluăm scripturile aici.
+
+00:10:51.090 --> 00:10:55.990
+Dacă deschideți acest lucru, veți vedea că Parsa H. T. M-L este înăuntru.
+
+00:10:56.100 --> 00:10:59.430
+Din nou, știu că repet, dar are sens.
+
+00:10:59.430 --> 00:11:06.060
+Dacă construiți un site și poate chiar că vizează chiar și o mulțime de utilizatori de dispozitive
+
+00:11:06.060 --> 00:11:14.580
+mobile, faceți tot ce este mai bine pentru a construi și sarcina pe hardware-ul Reprezentant, care utilizează ceva de genul testării paginilor
+
+00:11:14.880 --> 00:11:19.710
+web pentru a testa puterea dispozitivului mobil pe care utilizatorii dvs. avea.
+
+00:11:21.490 --> 00:11:28.820
+Doriți să vă păstrați javascriptul parse și să compilați timpurile scăzute și, în mod ideal, să adoptați ceva asemănător cu
+
+00:11:28.820 --> 00:11:37.460
+un buget de performanță pentru echipa dvs., care vă asigură că vă țineți cont de codul javascript și costul și nu purtați doar codul
+
+00:11:37.460 --> 00:11:40.950
+de cod și codul fără să vă testați performanţă.
+
+00:11:41.930 --> 00:11:48.530
+Și, la sfârșitul zilei, avem Sfântul Graal a ceea ce dorim să obținem prin codul nostru.
+
+00:11:48.590 --> 00:11:55.670
+Vrem să avem un timp rapid pentru prima vopsea semnificativă, care este ceva care strălucea imediat
+
+00:11:55.760 --> 00:11:57.940
+pe ecran pentru utilizator.
+
+00:11:58.010 --> 00:12:04.580
+Și apoi, în cele din urmă, un timp foarte rapid interactiv pentru a putea interacționa cu site-urile noastre web cât mai
+
+00:12:04.580 --> 00:12:05.430
+curând posibil.
+
+00:12:05.750 --> 00:12:11.970
+Și în videoclipurile următoare vom vorbi despre cum putem face acest lucru și vom arăta câteva exemple foarte bune.
+
+00:12:12.380 --> 00:12:13.690
+Voi vedea în următorul.
+
+00:12:13.930 --> 00:12:14.190
+Bobby.

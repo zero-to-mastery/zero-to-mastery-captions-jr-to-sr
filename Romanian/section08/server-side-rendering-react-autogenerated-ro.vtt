@@ -1,0 +1,346 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:11.940
+Bine ați venit înapoi aici pentru dvs. Am un server de expresie simplu, care arată cum ar funcționa repornirea pe
+
+00:00:11.940 --> 00:00:13.770
+partea de server.
+
+00:00:15.090 --> 00:00:19.410
+Să mergem unul câte unul să ne dăm seama ce se întâmplă.
+
+00:00:19.500 --> 00:00:25.710
+Și, apropo, dacă nu ești prea familiar folosind knode și exprimați vă recomand să verificați altul
+
+00:00:25.710 --> 00:00:26.890
+meu curs.
+
+00:00:27.040 --> 00:00:30.850
+În caz contrar, presupunând că ne simțim confortabil, este destul de ușor.
+
+00:00:30.850 --> 00:00:35.570
+Tot ceea ce facem este importul bibliotecii Express pentru a crea serverul nostru.
+
+00:00:35.650 --> 00:00:46.510
+Deci, pur și simplu ne exprimăm pentru a crea serverul nostru de aplicații și în linia noastră proprie 10 spun utilizarea app Xpress punct static și
+
+00:00:46.840 --> 00:00:51.130
+nu am nevoie de acest semn plus în folderul public.
+
+00:00:51.130 --> 00:00:52.740
+Ce înseamnă asta?
+
+00:00:52.840 --> 00:01:02.000
+Acest lucru spune că vreau să servească fișiere statice, cum ar fi fișiere CSSA imagini și fișiere
+
+00:01:02.000 --> 00:01:06.190
+javascript folosind Express construit în middleware static.
+
+00:01:06.230 --> 00:01:13.190
+Deci, dacă lucrați vreodată cu EXPRESS Acesta este doar standardul care servește vreun fișier pe care vrem să-l facem.
+
+00:01:13.190 --> 00:01:20.360
+Deci, din nou, dacă aplicația noastră are fișiere CSSA, va trebui să adăugați acest lucru în partea superioară a serverului nostru
+
+00:01:20.720 --> 00:01:26.930
+și vom folosi dosarul public pe care îl pot numi așa cum vreau, dar este dosarul public pe
+
+00:01:27.140 --> 00:01:29.740
+care l- vom avea fișierele noastre statice.
+
+00:01:31.050 --> 00:01:37.200
+Și să ignorăm linia 12 acum și să mergem la linia 13 aici.
+
+00:01:38.480 --> 00:01:47.390
+Vedem aici că am re-act dot crea alimente și de fapt nu avem nevoie să facem acest lucru așa cum sugerează și
+
+00:01:47.390 --> 00:01:48.080
+numele.
+
+00:01:48.140 --> 00:01:55.760
+Acest lucru spune doar că vrem să creăm un element un element de re-act din aplicație, astfel că aplicația aici pe
+
+00:01:56.120 --> 00:02:03.350
+care o importe poate fi fișierul nostru Apogee cu componenta noastră Riak, caz în care nu avem nevoie să facem
+
+00:02:03.770 --> 00:02:09.650
+acest lucru sau ar putea fi fișier care are unele motor de vizualizare, cum ar fi.
+
+00:02:09.750 --> 00:02:17.070
+Da și vrem să convertim o sintaxă asemănătoare shemale și o sintaxă de reactare.
+
+00:02:17.610 --> 00:02:20.510
+În orice caz, linia 13 înseamnă pur și simplu.
+
+00:02:20.520 --> 00:02:22.380
+Avem aplicația noastră pentru prieteni roboți.
+
+00:02:22.380 --> 00:02:27.600
+În cazul nostru, putem avea doar fișierul nostru apt noastre js ca avem la capătul nostru.
+
+00:02:27.870 --> 00:02:36.000
+Acum de aici tot ce facem este cu Express putem face DOT spune că la directorul rădăcină, așa că dacă
+
+00:02:36.000 --> 00:02:44.370
+fac prieteni Roble dot com slash voi face o cerere de a lua și este de gând să se întoarcă
+
+00:02:44.370 --> 00:02:49.760
+serverul este de gând să se întoarcă un răspuns care face indexul.
+
+00:02:49.770 --> 00:02:53.040
+Așa că din nou ne întoarcem o șmecherie aici.
+
+00:02:53.040 --> 00:02:57.930
+Vom face un index cu conținutul.
+
+00:02:58.440 --> 00:03:06.040
+Și acesta este locul în care lucrurile diferă de la o parte a clientului făcută pe care o vedeți cu prietenii lui Robur că niciodată nu
+
+00:03:06.040 --> 00:03:08.110
+aveam nevoie să avem un server.
+
+00:03:08.110 --> 00:03:11.880
+Am avut doar fișierele Cline care au fost livrate.
+
+00:03:11.890 --> 00:03:20.740
+Și am putea să o punem undeva ca niște pagini care găzduiesc fișiere statice.
+
+00:03:20.890 --> 00:03:24.680
+Acum, în interiorul nostru, folosim ceva numit render to string.
+
+00:03:24.880 --> 00:03:32.380
+Și vedeți aici că render to string provine de la ceva numit re-act dash server Dohm și acesta
+
+00:03:32.380 --> 00:03:40.730
+este un pachet special pe care îl folosiți când faci rendering pe partea de server cu re-act așa cum sugerează și
+
+00:03:40.730 --> 00:03:41.570
+numele.
+
+00:03:41.570 --> 00:03:44.290
+Tot ceea ce face și este de fapt destul de simplu.
+
+00:03:44.290 --> 00:03:52.310
+Tot ce se întâmplă este să spui că hei tocmai a redat aplicația prietenilor robo doar imprimă întregul aspect al prietenilor rebeli în
+
+00:03:52.310 --> 00:03:54.720
+sus și doar convertit în String.
+
+00:03:54.740 --> 00:04:00.930
+Pentru că atunci când vorbim între server și client trebuie să trimitem text.
+
+00:04:00.950 --> 00:04:04.870
+Nu putem trimite chiar realitatea, pentru că bine că nu va funcționa.
+
+00:04:05.030 --> 00:04:11.300
+De fiecare dată când trimitem informații despre fir, trebuie să trimitem texte, de
+
+00:04:11.300 --> 00:04:19.560
+aceea folosim lucruri precum Jason Parsons Ei bine și aici, pe prietenii noștri roboți, îi oferim și câteva recuzită.
+
+00:04:19.580 --> 00:04:25.700
+Deci, acest proces pare să ne dăm doar niște date în cazul nostru doar pentru că facem rendering pe
+
+00:04:25.700 --> 00:04:32.990
+partea de server să le trimitem niște roboți unele Jaison Deci, probabil că sunt roboți care sunt foarte frecvente atunci când vrem să
+
+00:04:32.990 --> 00:04:39.920
+afișăm utilizatorul fără a trimite o solicitare API sau a efectua un apel la preluare poate că îl avem în dosarul nostru
+
+00:04:39.920 --> 00:04:46.460
+public și doar scriem un robot care este în fișiere și să-i dăm poate trei obiecte de roboți pe care
+
+00:04:46.460 --> 00:04:50.790
+le putem trece în jos ca elemente de recuzită pentru prieteni puternici.
+
+00:04:50.960 --> 00:04:52.650
+Și asta facem noi aici.
+
+00:04:52.790 --> 00:05:02.980
+Tot ceea ce facem aici este folosirea modulului FS din nod care spune că a citit doar acest fișier și acest format de codare, care este
+
+00:05:03.000 --> 00:05:05.220
+destul de mult un standard.
+
+00:05:05.250 --> 00:05:10.690
+Cred că, dacă lăsați acest lucru gol, veți fi în continuare aceleași deoarece aceasta este implicit.
+
+00:05:10.830 --> 00:05:17.800
+Și apoi facem din nou Jason parca pentru că trebuie să trimitem lucrurile prin text.
+
+00:05:17.880 --> 00:05:23.760
+Vrem să ne asigurăm că acest lucru este analizat și pregătit, astfel încât să îl putem trimite pe fire
+
+00:05:23.910 --> 00:05:25.370
+până la browser-ul clientului.
+
+00:05:26.350 --> 00:05:31.660
+Acum, deși unele dintre acestea ar putea fi noi, nu este prea rău.
+
+00:05:31.680 --> 00:05:34.880
+Există doar câteva linii de cod la sfârșitul zilei, totuși.
+
+00:05:34.890 --> 00:05:45.280
+Tot ceea ce facem este să convertim aplicația noastră de re-act în aplicația noastră, chemând-o doar pe Rander la șir pentru ao transforma în șiruri de
+
+00:05:45.270 --> 00:05:49.700
+caractere, astfel încât să o putem trimite pe fir în browser.
+
+00:05:49.710 --> 00:05:59.530
+Ideea fiind că dacă facem această aplicație pe server în loc să purtăm acel div cu aplicația ID de pe
+
+00:05:59.530 --> 00:06:06.270
+front, cum facem de obicei cu aplicațiile re-act, putem trimite în jos HDMI.
+
+00:06:06.400 --> 00:06:15.580
+Aceasta este deja completă cu toate elementele robotului nostru, astfel încât pagina web să poată afișa imediat aplicația noastră de prieteni robo
+
+00:06:15.580 --> 00:06:20.200
+și să facă încărcarea paginii să pară mult mai rapidă.
+
+00:06:20.350 --> 00:06:23.560
+De asemenea, trimitem inițial niște roboți.
+
+00:06:23.560 --> 00:06:27.600
+Deci, din nou, pentru utilizator se pare că este mult mai rapid.
+
+00:06:27.610 --> 00:06:37.440
+Acum, iată trucul cu randarea de pe server și reacționați dacă vedeți că avem nevoie de reacție atât pe server,
+
+00:06:37.860 --> 00:06:43.470
+cât și pe browser, deoarece inițial trimitem o versiune de șir.
+
+00:06:43.500 --> 00:06:52.020
+Deci re-acționăm serverul Dom face un șir care va converti reacția noastră în sus în șiruri să-l trimită pe
+
+00:06:52.020 --> 00:06:52.820
+fir.
+
+00:06:52.860 --> 00:06:56.220
+Și ajunge în browser, dar în browser.
+
+00:06:56.220 --> 00:07:00.010
+Acum trebuie să facem ceva numit re-act Dom.
+
+00:07:00.030 --> 00:07:01.650
+Hidratează și.
+
+00:07:01.890 --> 00:07:05.750
+Acestea sunt utilizate numai pentru redarea pe server.
+
+00:07:05.940 --> 00:07:08.490
+Și trebuie doar să știi aceste două lucruri.
+
+00:07:09.480 --> 00:07:17.140
+Dacă ați chemat să reactați Dom Daut Hydroid, sunați destul de mult ca metoda de randare a componentelor noastre.
+
+00:07:17.260 --> 00:07:24.670
+Cu excepția faptului că prin acest re-act Ahmad hidratează atunci când numim acest lucru pe un nod care
+
+00:07:24.670 --> 00:07:32.500
+are deja acest server redat de markup pe care l-am creat re-act va păstra păstrarea marcajului și va atașa doar
+
+00:07:32.650 --> 00:07:37.620
+manipulatorii evenimentelor astfel încât să putem interacționa efectiv cu site-ul nostru Web.
+
+00:07:37.780 --> 00:07:44.140
+Trebuie să executați acest lucru, deoarece dacă trimitem tot ce primim de la server, nu este încă interactiv
+
+00:07:44.170 --> 00:07:46.770
+este doar text pe care îl primim.
+
+00:07:47.110 --> 00:07:55.840
+Și știu că acest lucru pare cu adevărat specific pentru a reacționa, dar principiile și ideile se aplică tuturor bibliotecilor și
+
+00:07:55.840 --> 00:08:02.900
+cadrelor, inclusiv angler, inclusiv vizualizarea oricărui lucru care funcționează cu aplicații single-page pe o singură pagină.
+
+00:08:03.100 --> 00:08:12.370
+Utilizați ceva de genul ăsta ar face ca pagina sau vizualizarea pe serverul pe care o trimiteți să fie redată
+
+00:08:12.700 --> 00:08:17.470
+sub formă de text și apoi pe partea frontală
+
+00:08:17.470 --> 00:08:24.430
+pe care ați atașa ascultătorii de evenimente sau orice funcționalitate javascript de care aveți nevoie.
+
+00:08:24.590 --> 00:08:31.280
+Din nou, odată ce este redat aici, javascript preia prin a face ceva numit hidratare, care dă
+
+00:08:31.340 --> 00:08:34.420
+interactivității toată pagina pe care o dorim.
+
+00:08:34.580 --> 00:08:41.180
+Acum s-ar putea să vă gândiți să așteptați, aș putea apoi să fac pagini web să funcționeze fără javascript.
+
+00:08:41.180 --> 00:08:44.350
+Poate că nu au o interactivitate atât de mare încât nu avem nevoie de javascript.
+
+00:08:44.340 --> 00:08:52.120
+Și da, un lucru pe care îl puteți face cu randarea de pe partea de server este de a face pagini web care funcționează chiar și fără Javascript.
+
+00:08:55.690 --> 00:09:01.930
+Și, de asemenea, am vrut să subliniez în noua versiune de acolo reacționa pe server există ceva numit
+
+00:09:01.930 --> 00:09:08.620
+render la fluxul de nod care este foarte foarte asemănător cu render la șir, cu excepția faptului că folosim ceva
+
+00:09:08.620 --> 00:09:12.700
+numit flux de noduri care face acest proces mult mai repede.
+
+00:09:12.700 --> 00:09:16.720
+Deci este un pic de îmbunătățire a performanței.
+
+00:09:16.720 --> 00:09:24.060
+Dar să ne întoarcem la codul nostru, să reacționăm cu randarea pe partea de server și redarea pe partea clientului.
+
+00:09:24.080 --> 00:09:32.250
+Vedeți că avem nevoie de reacție, pentru că trebuie să construim acel dong.
+
+00:09:32.300 --> 00:09:37.880
+Singura diferență este că, în loc de a trimite o pagină shemale cu o singură zi
+
+00:09:37.880 --> 00:09:44.540
+din acea idee despre o aplicație care se va atașa din nou pe partea clientului pe partea de redare a serverului.
+
+00:09:44.540 --> 00:09:53.600
+Putem de fapt face ca tot aici să alergem și să facem șir, astfel încât, în loc de browser care face munca
+
+00:09:53.600 --> 00:10:00.740
+de a monta toate componentele Riak serverul a făcut deja acest lucru pentru noi și asta-i tot.
+
+00:10:00.740 --> 00:10:05.150
+Acestea sunt principiile principale ale randării pe servere.
+
+00:10:05.150 --> 00:10:08.470
+Suna mult mai complicat decât este de fapt.
+
+00:10:08.570 --> 00:10:17.450
+Vom schimba câțiva pași acum, folosind redarea de la server cu re-act, are unele cazuri de margine și este destul de
+
+00:10:17.690 --> 00:10:23.600
+dificil deoarece re-actul a fost inițial construit pentru aplicații de o singură pagină.
+
+00:10:23.600 --> 00:10:28.970
+Deci, există o mulțime de manevre pe care trebuie să le faceți în multe erori pe care oamenii le întâmpină atunci când
+
+00:10:28.970 --> 00:10:30.650
+lucrează cu redarea de la server.
+
+00:10:30.650 --> 00:10:36.400
+Și într-un videoclip viitoare vom vorbi despre alternative mai bune pentru a face acest lucru.
+
+00:10:36.680 --> 00:10:42.200
+Dar pentru moment cred că în următorul videoclip trebuie să vorbim despre argumentele pro și contra de a face ceva de
+
+00:10:42.200 --> 00:10:42.790
+genul acesta.
+
+00:10:43.790 --> 00:10:50.090
+Deoarece din nou am amintit deși am folosit reacția ca exemplu aici, principiile sunt aceleași pentru
+
+00:10:50.090 --> 00:10:51.840
+toate tipurile de aplicații.
+
+00:10:52.670 --> 00:10:53.450
+Voi vedea în următorul.

@@ -1,0 +1,283 @@
+﻿WEBVTT
+
+00:00:02.450 --> 00:00:03.430
+To długi proces.
+
+00:00:03.440 --> 00:00:10.730
+Ale docieramy tam, stworzyliśmy nasz token JWT, a teraz jesteśmy w stanie wysłać nasz token JWT do
+
+00:00:10.730 --> 00:00:11.540
+klienta.
+
+00:00:11.630 --> 00:00:16.310
+Ale w tym samym czasie mamy teraz bazę danych rattus w naszym pojemniku.
+
+00:00:16.310 --> 00:00:21.270
+Możemy teraz przechowywać ten token w naszej bazie danych rattus.
+
+00:00:21.470 --> 00:00:23.390
+I właśnie to zrobimy w tym filmie.
+
+00:00:23.480 --> 00:00:32.510
+Będziemy przechowywać te informacje i ustawić nasz token, abyśmy mieli tę bazę danych sesji, którą możemy teraz oglądać, i za
+
+00:00:32.510 --> 00:00:39.290
+każdym razem, gdy użytkownik prosi o profil, zawsze sprawdzamy nasz odczyt serwera, który zawierał
+
+00:00:39.590 --> 00:00:42.100
+token, to będzie zabawa jeden.
+
+00:00:42.230 --> 00:00:43.190
+Zacznijmy.
+
+00:00:44.650 --> 00:00:54.520
+Wróćmy do funkcji Utwórz sesje, ponieważ teraz funkcja Utwórz sesje powinna faktycznie utworzyć sesję i
+
+00:00:54.520 --> 00:00:58.500
+zapisać coś w bazie danych rattus.
+
+00:00:58.510 --> 00:01:01.290
+Mamy już naszego klienta rattusa już gotowego do pracy.
+
+00:01:01.300 --> 00:01:04.730
+Jest podłączony, więc możemy zacząć używać niektórych komentarzy rattus.
+
+00:01:04.840 --> 00:01:13.090
+Jeśli powrócę do naszej dokumentacji, zobaczymy, że możemy po prostu zrobić zestaw kropek z kluczem i
+
+00:01:13.420 --> 00:01:19.650
+wartością oraz innymi poleceniami, które ten klient nam umożliwia w naszym przypadku.
+
+00:01:19.710 --> 00:01:22.920
+Chcę mieć tutaj nową funkcję.
+
+00:01:22.950 --> 00:01:29.690
+Podpisaliśmy token, ale teraz chcemy ustawić token w naszej bazie danych.
+
+00:01:29.770 --> 00:01:41.880
+Powiem więc, że zamiast zwracać to chcemy przywrócić token zestawu funkcji i ta funkcja
+
+00:01:42.000 --> 00:01:49.310
+tokena będzie otrzymywała nasz token JWT i ID.
+
+00:01:49.520 --> 00:01:57.550
+I tak długo, jak wszystko idzie dobrze i jesteśmy w stanie zapisać to
+
+00:01:57.550 --> 00:01:59.830
+i bazę danych
+
+00:02:04.680 --> 00:02:09.030
+do nas, wtedy będziemy wracać odpowiedź.
+
+00:02:09.070 --> 00:02:13.070
+Kiedy już ustawimy token, nie ma powietrza.
+
+00:02:13.080 --> 00:02:20.150
+Zwrócimy ten Hodgett i możemy też chcieć złapać punkty.
+
+00:02:20.250 --> 00:02:21.570
+Potrzebuję kropki tutaj.
+
+00:02:21.660 --> 00:02:25.700
+Mogę też chcieć zrobić przerwanie kropki na wypadek, gdyby funkcja set token nie działała.
+
+00:02:25.740 --> 00:02:28.110
+Wiemy, że chcemy zwrócić obietnicę.
+
+00:02:28.110 --> 00:02:33.600
+Tak więc na razie tylko pisz logi, abyśmy mogli je debugować.
+
+00:02:33.620 --> 00:02:44.900
+Teraz utwórzmy funkcję tokenu zestawu funkcji tokenu, ponieważ widzimy dwa parametry
+
+00:02:45.260 --> 00:02:49.750
+tokena i ID.
+
+00:02:50.000 --> 00:02:53.720
+A jeśli wrócimy do naszej dokumentacji i przewijamy w dół,
+
+00:02:57.960 --> 00:03:03.440
+widzimy, że jeśli chcemy zwrócić obietnicę, którą chcemy zrobić, bo używamy daata, a potem go
+
+00:03:03.630 --> 00:03:07.060
+nie złapiemy, pamiętajmy, że mówimy, że nie złapać.
+
+00:03:07.230 --> 00:03:12.750
+Właściwie to nie zwraca domyślnie obietnicy.
+
+00:03:13.140 --> 00:03:20.640
+Aby zwrócić obietnicę, musimy skorzystać z zewnętrznej biblioteki, takiej jak Bluebird, która faktycznie
+
+00:03:20.640 --> 00:03:22.080
+czyni obietnicę.
+
+00:03:22.080 --> 00:03:27.300
+Na szczęście dla nas Bluebird było to coś, co zostało użyte w dniu, w którym
+
+00:03:27.530 --> 00:03:33.430
+obietnice nie były natywne i węzła, ale faktycznie mamy sposób, aby upewnić się, że to zwróci obietnicę.
+
+00:03:33.430 --> 00:03:41.870
+Chodzi mi o to, że zrobiliśmy to w całym kodzie z obiecanym odrzuceniem i możemy po prostu zawrzeć to w obiecanej
+
+00:03:42.230 --> 00:03:44.610
+kropce, na razie wystarczy rozwiązać.
+
+00:03:44.960 --> 00:03:48.500
+Więc zakładamy, że na razie to rozwiąże.
+
+00:03:48.500 --> 00:03:54.200
+I to jest coś, co możesz chcieć dodać obietnicę i faktycznie stworzyć nową obietnicę
+
+00:03:54.200 --> 00:03:56.210
+z determinacją i odrzuceniem.
+
+00:03:56.260 --> 00:03:59.390
+Na razie możemy po prostu powiedzieć obietnicę, która rozwiązuje.
+
+00:04:00.260 --> 00:04:07.190
+Zwrócimy obietnicę rozwiązania, a ta obietnica postanowi zrobić najlepszy zestaw dotacji
+
+00:04:08.590 --> 00:04:16.360
+dla klienta i pamiętać, że zestaw i rattus pozwalają nam nadać mu trochę siły.
+
+00:04:16.520 --> 00:04:28.530
+Ustawię to tak, aby Tokin był kluczem, a wartością będzie Heidi i po prostu lepiej ją nazwać.
+
+00:04:28.620 --> 00:04:37.200
+Powiedzmy, że będzie to kluczowa wartość, a to będzie kluczowe i wartościowe.
+
+00:04:37.470 --> 00:04:43.110
+Właściwie nie wiem, czy jest to lepsze nazewnictwo, ponieważ jest mniej opisowe, ale
+
+00:04:43.110 --> 00:04:51.110
+na razie ustawiamy Tokina na kluczową wartość i mamy nadzieję, że zwróci nam obietnicę, że tak długo, jak to
+
+00:04:51.170 --> 00:04:56.460
+się stanie, ponieważ wracamy obiecane rozwiązanie ". ponownie zwróci żeton sukcesu użytkownika.
+
+00:04:56.750 --> 00:04:57.440
+Uratujmy
+
+00:05:01.060 --> 00:05:03.080
+to i poczujmy trochę powietrza.
+
+00:05:04.910 --> 00:05:10.130
+Aha i widzę, że Sendakowie tutaj właśnie upewniają się, że zwracamy przedmiot.
+
+00:05:10.130 --> 00:05:12.530
+Po prostu wróćmy tutaj.
+
+00:05:13.990 --> 00:05:14.780
+To o wiele lepiej.
+
+00:05:16.570 --> 00:05:17.430
+Spróbujmy jeszcze raz.
+
+00:05:20.510 --> 00:05:21.260
+W porządku.
+
+00:05:21.260 --> 00:05:22.010
+Tak jest lepiej.
+
+00:05:22.010 --> 00:05:24.990
+Upewniamy się, że zwracamy ten obiekt.
+
+00:05:25.010 --> 00:05:26.330
+Teraz przetestujmy to.
+
+00:05:27.300 --> 00:05:38.920
+Obydwoje cofniemy się do przodu i chcemy się wylogować, a teraz zamierzam zalogować się za pomocą kropki. com a i zamierzam
+
+00:05:40.110 --> 00:05:46.880
+otworzyć sieć, aby kliknąć seinen.
+
+00:05:46.890 --> 00:05:47.250
+W porządku.
+
+00:05:47.250 --> 00:05:48.630
+Jesteśmy zalogowani.
+
+00:05:48.630 --> 00:05:53.310
+Jeśli przyjrzę się tutaj, mamy nasz token, który otrzymaliśmy.
+
+00:05:53.370 --> 00:05:54.330
+To wspaniale.
+
+00:05:55.320 --> 00:05:57.430
+Oto interesująca część.
+
+00:05:57.660 --> 00:06:07.440
+Jeśli wrócę do mojego czerwonego serwera S, powinienem móc powiedzieć "get" i klucz, który jest tym tokenem JWT, który
+
+00:06:07.440 --> 00:06:08.510
+przechowujemy.
+
+00:06:08.620 --> 00:06:20.750
+Zobacz wygląd tego, że jesteśmy w stanie go zdobyć, ponieważ pamiętam I. RE. użytkownika, jeśli wprowadzę klucz
+
+00:06:20.780 --> 00:06:25.850
+get, który nie istnieje, otrzymam zero.
+
+00:06:25.920 --> 00:06:33.870
+Z powodzeniem ustawiliśmy token i dodaliśmy go do bazy danych rattus.
+
+00:06:34.050 --> 00:06:36.690
+Jak łatwe i przyjemne było to.
+
+00:06:36.810 --> 00:06:43.820
+Teraz mamy token w bazie danych rattus.
+
+00:06:43.880 --> 00:06:51.590
+Teraz niektórzy z was mogą pytać, czy używamy JWT we właściwy sposób, ponieważ GAAP zawiera już informacje
+
+00:06:51.590 --> 00:06:53.030
+w nim zawarte.
+
+00:06:53.030 --> 00:06:56.600
+Możemy je po prostu zweryfikować, uruchamiając tę metodę weryfikacji.
+
+00:06:56.840 --> 00:07:02.090
+I znowu wracamy do bardzo gorącej debaty na ten temat.
+
+00:07:02.090 --> 00:07:06.910
+Ludzie mogą nie zgadzać się z tym, jak rzeczy działają i jak można to zrobić.
+
+00:07:07.070 --> 00:07:15.220
+Ale dla mnie, chociaż jest to trochę dłużej niż plik cookie, który możemy ustawić, wciąż ma pewną
+
+00:07:15.370 --> 00:07:21.840
+elastyczność, że możemy mieć informacje, które możemy tutaj odkodować z większą elastycznością.
+
+00:07:21.850 --> 00:07:29.350
+Jest większa odpowiedzialność, ale teraz mamy pełną kontrolę z naszą bazą danych rattus, aby robić to, co
+
+00:07:29.350 --> 00:07:34.760
+chcemy, jeśli chcemy po prostu zabronić użytkownikowi logowania lub banowania użytkownika.
+
+00:07:34.840 --> 00:07:38.580
+Po prostu użyj słowa kluczowego Usuń.
+
+00:07:38.710 --> 00:07:42.880
+I dopóki usuwam ten token, wszystko jest gotowe.
+
+00:07:42.940 --> 00:07:49.270
+Ale pozwala mi to również wykorzystać te informacje w innych częściach mojej aplikacji i dekodować ten token
+
+00:07:49.390 --> 00:07:51.920
+J-ws i uzyskać informacje o użytkowniku.
+
+00:07:52.030 --> 00:07:59.380
+Ale w każdym razie, jeśli wrócimy, udało nam się ustawić nasze informacje w czytanym kliencie.
+
+00:07:59.470 --> 00:08:01.430
+Bardzo, bardzo ekscytujące.
+
+00:08:02.650 --> 00:08:07.060
+A jeśli wrócimy do naszej funkcji, wszystko zaczyna wyglądać naprawdę fajnie.
+
+00:08:07.700 --> 00:08:13.500
+Myślę, że musimy zrobić sobie przerwę i ostatecznie sfinalizować tę część naszej aplikacji.
+
+00:08:13.590 --> 00:08:14.340
+Zobaczę w następnym.

@@ -1,0 +1,325 @@
+﻿WEBVTT
+
+00:00:01.410 --> 00:00:02.460
+Witamy spowrotem.
+
+00:00:02.460 --> 00:00:08.640
+Wdrożyliśmy nasz krągowy serwer CII, który nie był zły, był to po prostu plik YAML z
+
+00:00:08.640 --> 00:00:13.700
+prostym kodem, który skonfigurowaliśmy, a teraz wszystko mamy uruchomione i przeprowadzamy nasze testy.
+
+00:00:13.710 --> 00:00:19.680
+Zrobimy trochę Lantinga, jeśli chcesz, możemy też zrobić skrypt, który sprawdza, czy wszystko działa
+
+00:00:20.370 --> 00:00:27.240
+dobrze, więc teraz za każdym razem, gdy PR jest gotowy do recenzji, Shergill CII przekazuje wszystko, aby mogły się
+
+00:00:27.240 --> 00:00:33.630
+pojawić recenzje kodu, a potem możemy scalić nasze zmiany. recenzje kodu są naprawdę potrzebne, dopóki wszystkie kółka
+
+00:00:33.630 --> 00:00:40.280
+nie zobaczą - testy się zaliczają, a my możemy naprawdę opracować te testy, aby przetestować wszystkie rodzaje rzeczy.
+
+00:00:40.290 --> 00:00:46.410
+Teraz chcę dodać jeszcze jedną rzecz do naszego zrozumienia ciągłej integracji i jest to coś,
+
+00:00:46.410 --> 00:00:54.690
+co nazywa się haczykiem przed popełnieniem przestępstwa. Co, jeśli zdołamy wykonać pewne zadania, zanim jeszcze zobowiążemy się do zawieszenia nas tutaj,
+
+00:00:55.130 --> 00:00:58.910
+a my użyjemy purtier do zademonstrowania to zaczynajmy.
+
+00:01:00.220 --> 00:01:05.880
+Prettier to świetne nowe narzędzie, które zgodnie z nazwą sugeruje, że twój kod jest ładniejszy.
+
+00:01:05.890 --> 00:01:07.590
+Jest to program do formatowania kodu.
+
+00:01:07.750 --> 00:01:13.720
+Chwytasz fragment kodu, który umieszczasz za pomocą ładniejszych i ładniejszych formatów, a następnie sprawia, że wygląda całkiem
+
+00:01:13.720 --> 00:01:18.130
+niezależnie od tego, co musi się wydarzyć, aby uczynić go bardziej czytelnym.
+
+00:01:18.130 --> 00:01:20.750
+Dlaczego potrzebujemy tego ponownie?
+
+00:01:20.800 --> 00:01:23.690
+Ponieważ mamy wielu programistów pracujących nad projektem.
+
+00:01:23.770 --> 00:01:28.720
+Czy nie byłoby miło, gdyby istniał standardowy format, który wszyscy przestrzegali?
+
+00:01:28.720 --> 00:01:35.230
+Zamiast mieć ścisłe wytyczne, nie możemy kodować kodu tak, jak chcemy, a następnie przepuścić go jeszcze ładniej,
+
+00:01:35.230 --> 00:01:37.940
+zanim jeszcze go wypchniemy, aby uzyskać koncentrator.
+
+00:01:38.050 --> 00:01:45.520
+To ładne sprawia, że jest ładniejsza i widać tutaj, że działa z mnóstwem narzędzi, w tym
+
+00:01:45.550 --> 00:01:53.740
+innymi językami, takimi jak Java ph p działa ze skryptem typu przepływu GSX, którego używamy do ponownego odtworzenia
+
+00:01:53.740 --> 00:01:57.430
+mnóstwa narzędzi i mają one dużo wtyczek.
+
+00:01:57.490 --> 00:02:01.330
+Jest naprawdę bardzo dobry i bardzo polecam go używać.
+
+00:02:01.330 --> 00:02:08.660
+Pracowałem dla firm, które tego używają, a formatowanie kodu dla tych projektów jest znacznie lepsze.
+
+00:02:08.740 --> 00:02:11.090
+Więc pokażę ci, jak szybko to wdrożyć.
+
+00:02:11.170 --> 00:02:16.180
+Ale jeśli chcesz przeczytać więcej, możesz kliknąć ich boga i mają naprawdę dobre informacje na temat
+
+00:02:16.270 --> 00:02:17.850
+tego, co możesz zrobić.
+
+00:02:17.860 --> 00:02:19.060
+W porządku.
+
+00:02:19.190 --> 00:02:27.290
+Wróćmy więc do naszej aplikacji i tutaj faktycznie stworzyłem nowy komponent o nazwie counter
+
+00:02:27.530 --> 00:02:36.460
+button do counter Buntu to nowy komponent, który po prostu skopiowałem z naszego poprzedniego Countermana, który mieliśmy
+
+00:02:36.470 --> 00:02:40.530
+tutaj i właśnie zrobiłem sformatować trochę dziwnie.
+
+00:02:40.790 --> 00:02:45.140
+Mam wszystkie problemy z rozstawem i jest to dość brzydkie.
+
+00:02:46.500 --> 00:02:53.790
+I chcę to zrobić przez piękne powietrze, więc zanim nadejdzie czas, kiedy dostaniemy Hobb, to całkiem nieźle, dajmy
+
+00:02:54.790 --> 00:02:55.670
+sobie spokój.
+
+00:02:55.840 --> 00:02:59.430
+Zamierzam wrócić do strony internetowej, żeby ci to pokazać.
+
+00:02:59.470 --> 00:03:01.090
+Tak, mamy to do zrównowaŜenia.
+
+00:03:01.090 --> 00:03:03.550
+Działają, nie ma błędów.
+
+00:03:03.670 --> 00:03:10.490
+Zamierzam to zamknąć i zainstalować kilka pakietów, aby mieć ładniejszą pracę.
+
+00:03:10.510 --> 00:03:20.460
+Teraz, jeśli przejdziesz teraz do ich instalacji, możemy zainstalować Ebbe regularnie i może mieć polecenie CLIA, które uruchamia
+
+00:03:20.610 --> 00:03:21.320
+wszystko.
+
+00:03:21.360 --> 00:03:27.540
+Ale chcemy zrobić zatwierdzenie wydruku, zanim nastąpi zatwierdzenie, chcemy przeprowadzić go przez ładniejsze i mamy
+
+00:03:28.080 --> 00:03:29.550
+tu kilka opcji.
+
+00:03:29.550 --> 00:03:35.970
+Podoba mi się ich dość szybka opcja i możesz zobaczyć tutaj, że możemy po prostu
+
+00:03:36.030 --> 00:03:44.250
+użyć całkiem szybkiej odmiany kreski Huskie i używam NPM zamiast przędzy, więc napiszę NPM install, a następnie uruchomę dość
+
+00:03:44.340 --> 00:03:52.230
+szybko Huskie Dash Dash Dev Podczas gdy to jest pobieranie Wróćmy i zobaczymy, że wszystko, co musimy zrobić,
+
+00:03:52.230 --> 00:03:58.560
+to w naszym pliku konfiguracyjnym w naszym pakiecie start Jaison add in the scripts
+
+00:03:58.560 --> 00:04:01.740
+pre-kid spotkali dość szybki etap dash.
+
+00:04:01.840 --> 00:04:03.030
+Wróćmy więc.
+
+00:04:04.750 --> 00:04:05.610
+Jeśli możesz w to uwierzyć.
+
+00:04:05.620 --> 00:04:07.780
+Tak, to takie proste.
+
+00:04:07.870 --> 00:04:15.910
+Dodajemy do naszych skryptów tutaj kolejną linię, a my po prostu powiemy pre commit, teraz pre commit tutaj
+
+00:04:15.970 --> 00:04:18.450
+zostanie automatycznie wykryte i uruchomione.
+
+00:04:18.580 --> 00:04:28.110
+Za każdym razem, gdy dokonujemy zatwierdzenia, i wykonamy dość szybką komendę za pomocą opcji dash dash stage.
+
+00:04:28.130 --> 00:04:33.690
+Kolejną rzeczą, którą musimy zrobić, to fakt, że musimy upewnić się, że mamy dość uczciwą instalację.
+
+00:04:33.890 --> 00:04:40.400
+Tak więc ponownie wracamy i możemy dodać instalację NPM, a my również zaoszczędzimy
+
+00:04:43.200 --> 00:04:44.320
+dokładnie ładniej.
+
+00:04:45.320 --> 00:04:52.550
+W porządku, więc mamy ładniej zainstalowane i zapomniałem go zapisać, gdy dodaliśmy nowy skrypt, więc zróbmy to jeszcze
+
+00:04:52.550 --> 00:04:53.300
+raz.
+
+00:04:53.300 --> 00:04:56.250
+Wrócę do haka pre commit.
+
+00:04:56.480 --> 00:05:04.510
+Upewnij się, że mamy tu dodane polecenie przed zatwierdzeniem.
+
+00:05:04.720 --> 00:05:08.650
+Uratujmy i zamierzam powiedzieć, że otrzymuję status.
+
+00:05:08.650 --> 00:05:10.030
+Upewnij się, że mamy te zmiany.
+
+00:05:10.040 --> 00:05:13.730
+Zamierzam stworzyć nowy oddział tylko do celów testowych.
+
+00:05:13.750 --> 00:05:22.680
+Zamierzam nazwać to ładniej i tutaj mam zamiar dostać reklamę, by zobowiązać się, że zamierzam się zobowiązać
+
+00:05:23.400 --> 00:05:24.990
+mówiąc "proszę".
+
+00:05:27.820 --> 00:05:32.490
+I spójrz na to, że właśnie popełniono hak przed popełnieniem przestępstwa.
+
+00:05:32.560 --> 00:05:38.830
+Widać, że to właśnie teraz działa i znajduje zmiany, które trzeba wprowadzić,
+
+00:05:38.830 --> 00:05:46.110
+naprawiając i naprawia wcięcia, w tym Hettera, który jest podejrzany. Tak, i kupił przy podejrzanej TAK.
+
+00:05:46.180 --> 00:05:53.710
+Teraz to ładniejsze narzędzie działa tylko na plikach, które faktycznie zmieniliśmy.
+
+00:05:53.710 --> 00:06:00.480
+Tak więc nie zmieni to żadnego z naszych wcześniejszych plików, co jest najprawdopodobniej powodem, dla którego chcemy to zrobić.
+
+00:06:00.700 --> 00:06:05.830
+To dobre narzędzie od początku projektu, aby upewnić się, że wszystko jest spójne.
+
+00:06:05.890 --> 00:06:14.260
+Teraz, jeśli rzeczywiście pójdziemy do Connora, zobaczymy, że wygląda na to, że wszystkie nasze wcięcia są ustalone.
+
+00:06:15.350 --> 00:06:16.510
+Tak było wcześniej.
+
+00:06:16.550 --> 00:06:22.220
+Jeśli wrócę i dlatego mamy teraz wszystko jest ładne, czyste i gładkie.
+
+00:06:22.580 --> 00:06:24.060
+Jakie to jest świetne.
+
+00:06:24.080 --> 00:06:24.510
+W porządku.
+
+00:06:24.530 --> 00:06:28.570
+Tak więc dodaliśmy po prostu ładniej niezwykle łatwo.
+
+00:06:28.790 --> 00:06:41.790
+A teraz mogę po prostu uruchomić ładowanie push, ładniejszego, a otrzymamy nowy PR lub kiepską prośbę.
+
+00:06:41.790 --> 00:06:48.610
+Wróć do naszej ankiety Get Harbury kliknij na porównanie żądań ankiety.
+
+00:06:48.780 --> 00:06:49.560
+Widzimy to.
+
+00:06:49.620 --> 00:06:50.160
+O tak.
+
+00:06:50.190 --> 00:06:53.570
+Wyglądaj ładnie i czysto z kontrabandą.
+
+00:06:53.580 --> 00:07:01.460
+A teraz, jeśli utworzę żądanie ściągania, uruchomimy testy "zobacz-i".
+
+00:07:01.490 --> 00:07:03.230
+Jakie to jest świetne.
+
+00:07:05.390 --> 00:07:12.110
+Właśnie wdrożyliśmy ciągłą integrację i założę się, że twoja wyobraźnia działa dziko.
+
+00:07:12.110 --> 00:07:14.500
+Zrobiliśmy tylko testowanie Lantinga.
+
+00:07:14.510 --> 00:07:21.050
+Mieliśmy ładniej i zbudowaliśmy nasz projekt na Circle C. JA. ale jest tak wiele rzeczy, które
+
+00:07:21.050 --> 00:07:24.300
+możemy zrobić całkowicie do ciebie i całkowicie do twojego projektu.
+
+00:07:24.320 --> 00:07:31.100
+Wszystko, co możesz zrobić programowo, możesz sprawdzić za pomocą kółka C. JA. na przykład coś
+
+00:07:31.160 --> 00:07:40.660
+takiego jak analizator pakunku pakietu internetowego, który analizuje twoje pakunki, może być używany jako coś zwanego
+
+00:07:40.660 --> 00:07:48.290
+artefaktami i okręgiem C. JA. artefakty to dane, które dodajemy lub utrzymujemy w naszym obiegu pracy.
+
+00:07:48.500 --> 00:07:56.510
+Więc kiedy zobaczysz nasz okrąg - uruchamiam i gotowe, możesz mieć plik, który wyświetla ten obraz i przechowuje go
+
+00:07:56.510 --> 00:07:58.270
+gdzieś na serwerze.
+
+00:07:59.740 --> 00:08:05.900
+A teraz ten plik jest dostępny jako artefakt długo po tym, jak zadanie powiedzie się w Circle CII.
+
+00:08:05.900 --> 00:08:09.980
+Możesz więc wrócić i sprawdzić, czy Twoje kompilacje mają odpowiednią ilość.
+
+00:08:10.330 --> 00:08:16.810
+Możesz także dodać test do kręgu, aby upewnić się, że masz pewne pokrycie w testach
+
+00:08:16.810 --> 00:08:20.790
+lub możesz nawet sprawdzić lub ograniczyć wielkość plików javascript.
+
+00:08:20.890 --> 00:08:26.110
+Jeśli chcesz ograniczyć pliki javascript do 100 megabajtów, możesz uruchomić te testy i za każdym razem,
+
+00:08:26.110 --> 00:08:30.460
+gdy zostanie dodana nowa funkcja, która może przesłać ci ponad 100 megabajtów.
+
+00:08:30.550 --> 00:08:32.570
+Możesz spowodować, że test się nie powiedzie.
+
+00:08:32.620 --> 00:08:35.300
+Jest tak wiele rzeczy, które mogą zrobić.
+
+00:08:35.490 --> 00:08:42.090
+I ja osobiście miałem naprawdę dobre doświadczenia z kółkiem C. JA. ale przy każdej platformie
+
+00:08:42.120 --> 00:08:49.140
+ciągłej integracji można zrobić tak wiele rzeczy, aby ułatwić sobie życie, aby uniknąć błędów w produkcji.
+
+00:08:49.380 --> 00:08:53.150
+Dlatego zachęcam do wypróbowania tego, widzisz, jakie to proste.
+
+00:08:53.220 --> 00:08:58.770
+Od teraz wszystkie projekty, które są w użyciu, próbują ciągłej integracji, wdrażając je od samego początku.
+
+00:08:58.860 --> 00:09:06.120
+Z początku jest to trochę konfiguracja, ale gdy już pracujesz w zespołach, staje się
+
+00:09:06.240 --> 00:09:08.160
+o wiele łatwiejsze.
+
+00:09:08.180 --> 00:09:11.180
+W porządku, zobaczę w następnym filmie Buh-Bye.

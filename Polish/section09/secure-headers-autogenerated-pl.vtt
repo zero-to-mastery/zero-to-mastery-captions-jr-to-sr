@@ -1,0 +1,196 @@
+﻿WEBVTT
+
+00:00:01.330 --> 00:00:09.730
+Jak wspomnieliśmy wcześniej nagłówki nagłówków lub HTP są naprawdę bardzo ważne, mówiąc przeglądarce, co zrobić z
+
+00:00:10.000 --> 00:00:12.880
+niektórymi dostarczonymi przez nas treściami.
+
+00:00:13.240 --> 00:00:18.720
+A czasami, aby powiedzieć serwerom, co robić, a także powinny być prośby.
+
+00:00:18.730 --> 00:00:24.910
+Jest ich mnóstwo, a ja zostawię dla ciebie źródło informacji, ponieważ jest to
+
+00:00:24.940 --> 00:00:27.010
+poza zakresem tego kursu.
+
+00:00:27.550 --> 00:00:32.500
+Ale naprawdę bardzo mnie polubisz, ponieważ zamierzam uczynić ten proces super prostym dla ciebie.
+
+00:00:33.310 --> 00:00:39.420
+Aby mieć bezpieczne nagłówki w coś w rodzaju ekspresowego, to wszystko, co musimy zrobić.
+
+00:00:39.420 --> 00:00:46.180
+Znowu są to problemy, które każdy ma na swoich aplikacjach, więc istnieją pakiety, które ułatwiają
+
+00:00:46.180 --> 00:00:47.330
+ci pracę.
+
+00:00:48.880 --> 00:00:51.430
+Więc potrzebujemy tylko hełmu instalacyjnego NPM.
+
+00:00:51.430 --> 00:00:53.090
+Teraz pokażę ci, jak to działa.
+
+00:00:54.960 --> 00:01:02.120
+Jeśli wrócę do mojej aplikacji tutaj i zminimalizujmy to teraz, abyśmy mogli zobaczyć wszystko, zobaczmy, co
+
+00:01:02.270 --> 00:01:05.570
+się dzieje, gdy nie używa się hełmu.
+
+00:01:05.570 --> 00:01:14.800
+Zamierzam wpisać coś tutaj, otwórzmy kartę Sieć i po prostu wyślij trochę jibry.
+
+00:01:14.800 --> 00:01:15.260
+W porządku.
+
+00:01:15.260 --> 00:01:17.480
+Dostaję moją tajemnicę
+
+00:01:20.170 --> 00:01:28.870
+i widzę w nagłówkach, że mam wszystkie te małe informacje, na które patrzę, że mam informacje,
+
+00:01:29.170 --> 00:01:33.690
+że ta strona internetowa jest zasilana przez Xpress.
+
+00:01:33.730 --> 00:01:40.750
+To może nie wydawać się ważną informacją, ale haker może wiedzieć, że może teraz mogę mu
+
+00:01:40.880 --> 00:01:48.670
+zaradzić luki w zabezpieczeniach i wyrazić, a może, gdybym nie zaktualizował mojego ekspresowego serwera, ten zły aktor może teraz
+
+00:01:48.940 --> 00:01:51.210
+wykorzystać te luki przeciwko mnie.
+
+00:01:51.430 --> 00:01:58.270
+Jest wiele takich nagłówków, które naprawdę wpływają na bezpieczeństwo aplikacji.
+
+00:01:58.540 --> 00:02:06.520
+Mamy świetny pakiet o nazwie Hammad, który instaluję na każdym serwerze, który zbudowałem, a kask, jak
+
+00:02:06.670 --> 00:02:14.050
+widać, pomaga zabezpieczyć swoje ekspresowe aplikacje, ustawiając różne nagłówki i narzędzia do rzeczy
+
+00:02:14.110 --> 00:02:21.520
+innych niż ekspresowe, ale Express jest najczęściej najbardziej popularnym i najbardziej dobrze udokumentowane w społeczności.
+
+00:02:23.210 --> 00:02:25.480
+Jak widać, jest to dość łatwe.
+
+00:02:25.520 --> 00:02:28.420
+Więc po prostu skopiuj i wklej to.
+
+00:02:28.490 --> 00:02:31.100
+Zamierzam zainstalować Helmut.
+
+00:02:31.110 --> 00:02:46.920
+Wróćmy tutaj, a PM zainstaluje Helmuta i możemy go po prostu uwzględnić, ponieważ kask wymaga kasku.
+
+00:02:46.920 --> 00:02:47.820
+Idealny.
+
+00:02:47.820 --> 00:02:56.990
+A jeśli spojrzymy na dokumentację zaraz po aplikacji równa się Express, możemy ponownie
+
+00:02:57.030 --> 00:03:05.890
+użyć Helmuta i innego middlewarea. Przechwytywamy TB i dodajemy lub modyfikujemy nagłówki.
+
+00:03:05.900 --> 00:03:13.890
+Pamiętaj, zamiast robić takie rzeczy, w których musimy ustawić hełm hełmu, robi to za nas.
+
+00:03:14.240 --> 00:03:15.860
+Więc walcz z wyjątkiem.
+
+00:03:16.180 --> 00:03:24.080
+Ron NPM uruchomi się i wróci do naszej aplikacji i odświeżmy się tutaj.
+
+00:03:24.370 --> 00:03:29.380
+I zamierzam po prostu złożyć coś innego.
+
+00:03:29.390 --> 00:03:35.780
+W porządku Otrzymuję prośbę o więcej osób, ale sprawdź to.
+
+00:03:35.780 --> 00:03:43.540
+Nie ma już X par, ale mamy wszystkie nagłówki, takie jak opcje ochrony przed atakami cross-site
+
+00:03:43.610 --> 00:03:48.710
+scripting, pobierz opcje kontroli preselekcji DNS, opcje Content-Type wyglądają tak.
+
+00:03:48.710 --> 00:03:54.370
+Mamy nawet ścisłe zabezpieczenie transportowe Max Saige.
+
+00:03:54.740 --> 00:03:57.050
+To jest prawo rzeczy.
+
+00:03:57.050 --> 00:04:04.250
+I wiesz, co hametz ustawia to wszystko dla nas, jeśli przewiniemy w dół, zobaczysz, że możesz kliknąć
+
+00:04:04.250 --> 00:04:12.340
+wszystkie z nich i pokazuje, co jest ustawione i co jest ustawione domyślnie, ponieważ niektóre z tych rzeczy nie
+
+00:04:12.340 --> 00:04:16.650
+są ustawione tak, że masz trochę wolności do ich dostosowania.
+
+00:04:16.900 --> 00:04:22.360
+Ale po uruchomieniu hełmu bez wykonywania żadnej konfiguracji mamy wszystkie te osłony
+
+00:04:22.390 --> 00:04:23.800
+na miejscu.
+
+00:04:23.800 --> 00:04:31.990
+Na przykład H. S. TS lub ścisłe bezpieczeństwo transportu, które tutaj widzieliśmy.
+
+00:04:32.160 --> 00:04:33.410
+Gdzie to było.
+
+00:04:33.420 --> 00:04:34.680
+Proszę bardzo.
+
+00:04:34.710 --> 00:04:44.100
+Oznacza to, że za pomocą tej witryny dopuszczamy tylko AC DC na serwerze i przekierowuje wszelkie połączenia wykonane przez tego klienta
+
+00:04:44.790 --> 00:04:53.370
+do CBS i ma maksymalny wiek, który mówi, że chcę, abyś pamiętał o tym przez tak długi czas i to
+
+00:04:53.370 --> 00:04:55.560
+jest jak to rok.
+
+00:04:55.560 --> 00:04:56.410
+To długi czas.
+
+00:04:56.760 --> 00:05:05.030
+I wysokiej mocy z opcji, która jest X powered z nagłówka, który został usunięty.
+
+00:05:05.070 --> 00:05:09.050
+Pamiętaj, że pokazał Xpress z powodu Helmuta.
+
+00:05:09.050 --> 00:05:09.700
+Proszę bardzo.
+
+00:05:09.710 --> 00:05:11.610
+Ładne i proste rozwiązanie.
+
+00:05:11.690 --> 00:05:15.530
+Możesz śmiało przeczytać wszystkie te i inne nagłówki zabezpieczeń.
+
+00:05:15.590 --> 00:05:23.360
+Ale Helmut szczerze obejmuje duży fragment tych zagadnień, a jeśli masz hełm jako część aplikacji, to jesteś
+
+00:05:23.360 --> 00:05:24.850
+już całkiem gotowy.
+
+00:05:26.240 --> 00:05:29.470
+Widzisz, mówiłem ci, że to będzie fajne i łatwe wideo.
+
+00:05:29.930 --> 00:05:32.570
+Myślę, że zasłużyliśmy na to od czasu do czasu.
+
+00:05:32.570 --> 00:05:33.140
+W porządku.
+
+00:05:33.230 --> 00:05:34.560
+Do zobaczenia w następnym.
+
+00:05:34.560 --> 00:05:35.020
+PA pa.

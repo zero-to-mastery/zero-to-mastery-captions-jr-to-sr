@@ -1,0 +1,331 @@
+﻿WEBVTT
+
+00:00:01.440 --> 00:00:09.600
+Witaj ponownie, jeśli pamiętasz naszą rozmowę o testowaniu, wspomniałem, że ponowne wprowadzenie ma dwie specjalne
+
+00:00:09.600 --> 00:00:13.450
+funkcje, które często widzisz w swoich testach.
+
+00:00:13.470 --> 00:00:20.790
+Jedną z nich jest biblioteka enzymów, która pozwala nam renderować nasze komponenty w środowisku testowym,
+
+00:00:22.120 --> 00:00:30.810
+które widzieliśmy, a następnie możemy użyć dowolnych metod xpect, które chcemy, aby faktycznie przetestować to, co jest renderowane.
+
+00:00:30.850 --> 00:00:35.070
+Ale jest jeszcze jedna rzecz zwana testowaniem migawki.
+
+00:00:35.230 --> 00:00:43.060
+I znowu jest to bardzo dobre narzędzie, które naprawdę pomaga nam testować nasze komponenty
+
+00:00:43.060 --> 00:00:44.760
+do ponownego działania.
+
+00:00:44.770 --> 00:00:50.160
+Porozmawiajmy o tym w tym filmie, jeśli wrócimy do naszej aplikacji.
+
+00:00:50.250 --> 00:00:52.970
+Możesz zadawać sobie pytanie.
+
+00:00:53.070 --> 00:00:53.560
+W porządku.
+
+00:00:53.700 --> 00:01:01.980
+Mogę dalej pracować z tym komponentem samochodowym i po prostu użyć zwykłej, słusznej składni, aby upewnić się, że
+
+00:01:01.980 --> 00:01:10.010
+komponent samochodu ma wszystko, czego potrzebuję, w tym może oznaczenie tagu def, niektóre nazwy i e-maile.
+
+00:01:10.260 --> 00:01:12.690
+Ale o to chodzi.
+
+00:01:12.810 --> 00:01:20.450
+Pracowaliśmy naprawdę ciężko, aby zachować te komponenty, które nazywamy najjaśniejszymi komponentami.
+
+00:01:20.550 --> 00:01:25.940
+Nie używają składni klasy do rozszerzenia składnika Riak.
+
+00:01:25.980 --> 00:01:27.540
+Nie mają żadnego stanu.
+
+00:01:27.540 --> 00:01:32.410
+To tylko czyste funkcje, które stworzyliśmy.
+
+00:01:32.430 --> 00:01:38.940
+Więc jeśli faktycznie piszemy testy, założę się, że będziemy tutaj powtarzać dużo kodu.
+
+00:01:39.040 --> 00:01:44.960
+Zawsze będziemy testować, jeśli ten facet odda tego boga.
+
+00:01:45.040 --> 00:01:54.000
+I to jest wiele powtarzających się prac dla dewelopera, ale po prostu zdaj sobie sprawę, że będzie to dużo zbędnego
+
+00:01:54.450 --> 00:01:55.710
+zmarnowanego czasu.
+
+00:01:55.860 --> 00:02:04.100
+Czy nie byłoby wspaniale, gdybyśmy mogli po prostu zrobić migawkę tego, co renderuje ten komponent
+
+00:02:04.110 --> 00:02:12.270
+koszyka i kiedy tylko jedziemy na naszym komponencie samochodowym, wszystko się zmienia i komponent
+
+00:02:12.270 --> 00:02:21.730
+nie wygląda tak, jak oczekiwaliśmy, jako migawka, którą zrobiliśmy obraz dobrze, jeśli wygląda inaczej, nie zdajemy egzaminu.
+
+00:02:21.800 --> 00:02:24.280
+Właśnie to jest testowanie migawki.
+
+00:02:24.560 --> 00:02:25.750
+I to naprawdę łatwe.
+
+00:02:25.760 --> 00:02:28.490
+Pozwól mi zademonstrować, a przekonasz się, jakie to proste.
+
+00:02:28.730 --> 00:02:30.500
+Wróćmy do naszego testu samochodowego tutaj.
+
+00:02:31.750 --> 00:02:37.900
+Zamiast robić tyle samo, co jeden i wiele innych testów, możemy tutaj.
+
+00:02:37.900 --> 00:02:39.550
+Zróbmy tutaj coś innego.
+
+00:02:39.580 --> 00:02:41.160
+Mam zamiar napisać xpect.
+
+00:02:41.160 --> 00:02:45.260
+Jesteśmy na naszej płytkiej karcie i mówimy, że nie używamy tu góry Rander.
+
+00:02:45.380 --> 00:02:53.060
+Właśnie teraz, aby usunąć to z naszego importu, sprawiliśmy, że element koszyka jest żartem.
+
+00:02:53.080 --> 00:02:57.520
+Możemy użyć testów
+
+00:02:59.930 --> 00:03:04.930
+migawkowych, aby dopasować migawkę.
+
+00:03:04.960 --> 00:03:06.030
+to jest to!
+
+00:03:06.150 --> 00:03:07.650
+Więc co to robi.
+
+00:03:07.740 --> 00:03:09.040
+Cóż, oszczędzajmy tutaj.
+
+00:03:10.470 --> 00:03:11.870
+I zobacz, co się stało.
+
+00:03:13.300 --> 00:03:21.280
+Mamy podsumowanie z migawki, które pokazuje jedną migawkę zapisaną w jednym pakiecie testowym i
+
+00:03:21.280 --> 00:03:23.170
+widzimy, że minęło.
+
+00:03:23.170 --> 00:03:24.060
+Dobre.
+
+00:03:24.610 --> 00:03:32.940
+Ale jedną rzeczą, którą mogłeś zauważyć, jest to, że mamy teraz folder migawkowy, który pojawił się w magiczny
+
+00:03:33.090 --> 00:03:35.150
+sposób, uruchamiając tę metodę.
+
+00:03:35.670 --> 00:03:44.520
+Jeśli to otworzę, widzę, że zrobiłem migawkę i możesz przeczytać więcej na ten temat tutaj.
+
+00:03:44.660 --> 00:03:52.510
+Ale wygląda na plik tekstowy lub zwykły plik tekstowy, który ma wszystkie te rzeczy.
+
+00:03:52.520 --> 00:03:57.740
+Widzisz tutaj mały obiekt owijający 1.
+
+00:03:57.960 --> 00:04:03.900
+Ma nazwę klasy, którą mamy w naszym div.
+
+00:04:03.940 --> 00:04:15.000
+Jeśli dalej przewijam w dół, widzimy, że mamy mnóstwo informacji, takich jak rodzaj div.
+
+00:04:15.100 --> 00:04:17.720
+Mamy również rodzaj p a paragraph.
+
+00:04:17.720 --> 00:04:21.420
+Co to właściwie oznacza?
+
+00:04:21.430 --> 00:04:30.580
+Zrobiłem zdjęcie tego komponentu, gdy zrobiliśmy to płytko, aby móc teraz zachować oszczędność, powiedzmy, że pracuję
+
+00:04:30.580 --> 00:04:37.420
+nad moją aplikacją działającą na komponencie samochodowym i nadal oszczędzam, oszczędzam,
+
+00:04:37.420 --> 00:04:46.840
+ale postanawiam usunąć tę klasę rachunku tekstowego, to mam zamiar to zmienić i teraz to zapisać.
+
+00:04:46.860 --> 00:04:58.610
+Moje testy kończą się niepowodzeniem i stwierdza się, że jeden test migawki nie powiódł się, ponieważ właśnie zmieniliśmy oczekiwaną migawkę.
+
+00:04:58.650 --> 00:05:01.770
+Komponent samochodowy do renderowania.
+
+00:05:01.770 --> 00:05:02.920
+Jakie to jest świetne.
+
+00:05:03.060 --> 00:05:09.320
+Magicznie wykrywa wszelkie zmiany i jeśli, powiedzmy, że programista przychodzi i zakłóca działanie
+
+00:05:09.750 --> 00:05:12.660
+naszego komponentu koszyka, testy natychmiast zawiedzie.
+
+00:05:12.810 --> 00:05:16.750
+Widzimy, że oczekiwanie na odczyt komponentu samochodu zawodzi.
+
+00:05:18.810 --> 00:05:24.890
+To bardzo fajne, a nawet mówi ci, gdzie dokonały się zmiany.
+
+00:05:25.110 --> 00:05:33.020
+Podobnie jest z powiedzmy, że przez pomyłkę nie przekazujemy naszemu komponentowi naszego e-maila z robotem.
+
+00:05:33.140 --> 00:05:36.570
+Jeśli to zobaczę, widzimy, że nam brakuje.
+
+00:05:36.650 --> 00:05:37.310
+Jeśli uważasz,
+
+00:05:41.680 --> 00:05:42.770
+że jest bardzo fajny.
+
+00:05:42.770 --> 00:05:45.820
+Wróćmy teraz do e-maila.
+
+00:05:45.950 --> 00:05:46.560
+Zapiszmy to.
+
+00:05:46.600 --> 00:05:46.840
+DOBRZE.
+
+00:05:46.850 --> 00:05:53.610
+Wszystko mija się, ale powiedzmy, że właściwie nie chcę, aby podatek był wycentrowany.
+
+00:05:53.650 --> 00:05:54.220
+Ja robię.
+
+00:05:54.220 --> 00:05:55.270
+To było zamierzone.
+
+00:05:55.270 --> 00:05:59.550
+Chciałem przenieść nazwę klasy i wprowadzić w niej zmianę.
+
+00:05:59.840 --> 00:06:07.230
+Cóż z testowaniem migawki, jeśli to zapisuję, widzimy, że mamy naciśnięcie w, aby pokazać więcej.
+
+00:06:07.230 --> 00:06:16.860
+Mam zamiar podłączyć Pressey WG, a tutaj widzimy, że mamy opcję naciśnięcia, aby zaktualizować
+
+00:06:16.860 --> 00:06:18.240
+nieudane migawki.
+
+00:06:18.240 --> 00:06:24.590
+Jeśli cię tu przycisnę, zrobię kolejną migawkę, a ona powie "tak". Zrobiłem to celowo i zrobiłem kolejną
+
+00:06:24.600 --> 00:06:27.730
+migawkę i użyłem jej jako punktu odniesienia.
+
+00:06:27.750 --> 00:06:31.480
+Powiem więc, że ty i tam idziecie.
+
+00:06:31.530 --> 00:06:34.320
+Moja migawka jest teraz zaktualizowana.
+
+00:06:35.250 --> 00:06:41.410
+A jeśli wrócę do tego, co miałem, zanim to się nie uda, ponieważ oczekuje innej
+
+00:06:41.410 --> 00:06:42.220
+migawki.
+
+00:06:42.220 --> 00:06:45.660
+Migawka została właśnie zaktualizowana tutaj.
+
+00:06:47.020 --> 00:06:51.030
+Teraz to proste.
+
+00:06:51.040 --> 00:06:52.660
+To bardzo miłe.
+
+00:06:52.700 --> 00:07:00.770
+I w rzeczywistości, ponieważ stworzyliśmy ten element karty tak prosty, że tylko funkcja jest czystą funkcją, która
+
+00:07:00.770 --> 00:07:07.740
+pobiera dane wejściowe i zawsze generuje ten sam wynik za pomocą testowania migawki.
+
+00:07:07.970 --> 00:07:10.610
+Nie musimy już więcej testować.
+
+00:07:10.820 --> 00:07:16.070
+Testujemy dokładnie to, co musimy zrobić, aby upewnić się, że komponent samochodu renderuje to, co
+
+00:07:16.100 --> 00:07:17.900
+chcemy, aby go renderować.
+
+00:07:18.170 --> 00:07:23.950
+I to jest piękno testowania migawek i tworzenie tych małych, bezpaństwowych komponentów.
+
+00:07:24.890 --> 00:07:33.050
+Możemy mieć naprawdę fajne testy, które są jednym linijkami, aby przeprowadzić test migawkowy i dwa, które w zasadzie pokrywały
+
+00:07:33.050 --> 00:07:35.230
+nasze bazy dla koszyka.
+
+00:07:36.960 --> 00:07:43.330
+Teraz jedna rzecz, której ci nie pokazałem, pozwoli mi wrócić do aktualizowania naszej migawki tutaj.
+
+00:07:43.380 --> 00:07:48.520
+Chcesz nacisnąć, że masz zasięg kodu.
+
+00:07:48.640 --> 00:07:59.830
+Skąd wiemy, że migawka mapy lub pasująca migawka faktycznie testują komponent samochodu.
+
+00:08:00.230 --> 00:08:11.570
+No cóż, nie mogę uruchomić testu NPM, by sprawdzić, czy dash nie ma zasięgu, a to pokaże mi raport o zasięgu i pozwolę,
+
+00:08:14.510 --> 00:08:20.640
+że zrobię to trochę lepiej, żebyśmy mogli zobaczyć, jak to wygląda.
+
+00:08:20.640 --> 00:08:27.740
+Mamy absolutnie zero testów poza testem konfiguracji.
+
+00:08:27.760 --> 00:08:32.020
+Doug Tak, ale to dlatego, że nic nie robimy w tym pliku.
+
+00:08:32.070 --> 00:08:33.700
+Więc nie ma tam zbyt wiele do przetestowania.
+
+00:08:33.930 --> 00:08:39.390
+Ale jeśli spojrzymy na komponent koszyka, mimo że wszystkie
+
+00:08:39.390 --> 00:08:47.440
+pozostałe komponenty mają zerowy procent, zerowy procentowy składnik karty testowej ma teraz 100-procentowy zasięg kodu.
+
+00:08:47.440 --> 00:08:48.850
+Jakie to jest świetne.
+
+00:08:49.000 --> 00:08:54.920
+Jedna prosta linia i omówiliśmy nasze bazy z komponentem karty.
+
+00:08:54.990 --> 00:09:01.440
+Znowu będę powtarzał to przez te filmy, ale pisanie testów nie powinno być skomplikowane.
+
+00:09:01.440 --> 00:09:08.010
+Spróbuj skonstruować aplikację w taki sposób, aby testy pisania były naprawdę proste, a sposób, w jaki to robisz,
+
+00:09:08.010 --> 00:09:14.790
+polega na pisaniu tych czystych funkcji, które upraszczają wszystko i nie masz tych ogromnych funkcji, które robią mnóstwo rzeczy,
+
+00:09:14.970 --> 00:09:20.270
+które stają się trudniejsze i trudniejsze do przetestowania z większą liczbą linii kodu.
+
+00:09:22.710 --> 00:09:24.590
+W porządku, to tyle na teraz.
+
+00:09:24.870 --> 00:09:28.390
+Kontynuujmy pisanie kolejnych testów i następnego wideo.

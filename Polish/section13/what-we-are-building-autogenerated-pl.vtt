@@ -1,0 +1,190 @@
+﻿WEBVTT
+
+00:00:01.390 --> 00:00:02.380
+Witamy spowrotem.
+
+00:00:02.380 --> 00:00:07.360
+Zanim zaczniemy budować nasze zarządzanie sesjami i nasze podejście, chcemy się upewnić, że jasno
+
+00:00:07.360 --> 00:00:08.630
+wiemy, co budujemy.
+
+00:00:08.680 --> 00:00:14.950
+Stworzyłem teraz kilka diagramów, aby przejść teraz do kolejnych kroków, jeśli pamiętasz, że jest to uwierzytelnianie oparte na
+
+00:00:15.310 --> 00:00:18.230
+tokenach, które logujemy, wysyłając nazwę użytkownika i hasło.
+
+00:00:18.310 --> 00:00:21.890
+Serwer stara się, aby ich nazwa użytkownika i hasło pasowały do siebie.
+
+00:00:21.910 --> 00:00:29.060
+A następnie generujemy token JWT, który znowu będziemy robić, a następnie wyślemy token GWG z
+
+00:00:29.140 --> 00:00:35.380
+powrotem do przeglądarki i przeglądarki, w której przechowujemy ten token, aby za
+
+00:00:35.380 --> 00:00:43.030
+każdym razem potrzebować Żądanie takie jak X wymawiające profil 23, że powinniśmy mieć dostęp do wysyłania
+
+00:00:43.090 --> 00:00:51.340
+tokena GW w nagłówku autoryzacji jako część żądania do przeglądarki, że przeglądarka po prostu Rantz sprawdza kropkę na
+
+00:00:51.640 --> 00:00:52.380
+tokenie.
+
+00:00:52.420 --> 00:00:59.640
+Upewnij się, że jest tokenem, który został wygenerowany i prześle nam pakiet, który nazywamy
+
+00:01:00.100 --> 00:01:01.210
+prezentem.
+
+00:01:01.240 --> 00:01:03.170
+Więc mamy do niego dostęp.
+
+00:01:03.340 --> 00:01:11.860
+I znowu z uwierzytelnianiem opartym na plikach cookie wysyłamy nazwę użytkownika i hasło jeszcze raz
+
+00:01:12.010 --> 00:01:19.330
+serwer sprawdza pracę nazwa użytkownika i hasło generuje plik cookie, który jest unikatowy,
+
+00:01:19.330 --> 00:01:21.790
+wysyła go do przeglądarki.
+
+00:01:21.990 --> 00:01:29.580
+Przeglądarka zapamiętuje to jako plik cookie i zawsze, gdy potrzebuje profilu 23 Cóż, wyśle te
+
+00:01:29.580 --> 00:01:31.620
+informacje na serwer.
+
+00:01:31.650 --> 00:01:38.420
+Serwer sprawdzi teraz podatek, który jest plikiem cookie, do podatku, który jest przechowywany.
+
+00:01:38.850 --> 00:01:41.470
+I pamiętajcie o tym na przykład w bazie danych.
+
+00:01:41.760 --> 00:01:47.580
+I w tym przypadku możesz mieć coś takiego jak Pretis, w którym czerwony zapisuje sesję kawałek łańcucha, w
+
+00:01:47.850 --> 00:01:49.800
+którym znajduje się plik cookie.
+
+00:01:50.040 --> 00:01:54.320
+Więc serwer może powiedzieć, że ten plik cookie istnieje.
+
+00:01:54.320 --> 00:01:58.710
+I tak, stworzyłem ten plik cookie, ten plik cookie należy do tego użytkownika.
+
+00:01:58.710 --> 00:02:01.560
+Możesz wysłać mu paczkę.
+
+00:02:01.560 --> 00:02:08.590
+Dalej, dobrze, że będziemy wystawiać rachunki, to w rzeczywistości implementacja obu tych rozwiązań.
+
+00:02:08.700 --> 00:02:14.700
+I powód, dla którego wybrałem tę drogę, jest kilka rzeczy, które uważam za miły bezpieczny sposób robienia
+
+00:02:14.700 --> 00:02:15.290
+rzeczy.
+
+00:02:15.300 --> 00:02:17.260
+Daje ci to trochę elastyczności.
+
+00:02:17.460 --> 00:02:23.450
+I tak właśnie wdrażam uwierzytelnianie i sesje w moich aplikacjach osobistych.
+
+00:02:23.760 --> 00:02:29.130
+Ale to również uczy was obu sposobów robienia rzeczy, abyście mogli wybrać i wybrać dla siebie to,
+
+00:02:29.130 --> 00:02:30.970
+co jest dla was najlepsze.
+
+00:02:31.260 --> 00:02:35.880
+Cóż, zrobimy, że będziemy musieli sprawdzić nazwę użytkownika i hasło przez serwer i to jest coś,
+
+00:02:35.880 --> 00:02:38.770
+co robimy już z naszym znakiem i punktem końcowym.
+
+00:02:38.850 --> 00:02:47.970
+I inteligentna braina sprawdzamy funkcję porównywania skryptów B i porównujemy naszą przeszłość z hashem, który jest przechowywany w
+
+00:02:47.970 --> 00:02:49.740
+naszej bazie danych.
+
+00:02:49.740 --> 00:02:53.340
+Następnie wygenerujemy token.
+
+00:02:53.340 --> 00:03:01.710
+Teraz to tokin zostanie odesłane z powrotem na serwer i ten tokin znów zostanie
+
+00:03:02.100 --> 00:03:03.970
+zapisany w przeglądarce.
+
+00:03:04.020 --> 00:03:08.030
+Mówią, że serwer Tak, token zostanie wysłany z powrotem do przeglądarki.
+
+00:03:08.600 --> 00:03:14.450
+Przeglądarka zapisze go, a następnie, gdy tylko chcemy uzyskać dostęp do profilu, który chcemy
+
+00:03:14.450 --> 00:03:19.620
+wysłać token z powrotem do przeglądarki lub z powrotem do serwera.
+
+00:03:21.240 --> 00:03:28.530
+Teraz różnica polega na tym, że do tej pory robiliśmy JWT, ale
+
+00:03:28.560 --> 00:03:39.030
+zamiast zmieniać warianty JWT, sprawdzimy naszą bazę danych do odczytu, która utworzy i połączy się z naszym API, a
+
+00:03:39.030 --> 00:03:47.970
+ta baza danych będzie działać aby utrzymać naszą siłę JWT tokin, abyśmy mogli sprawdzić w bazie
+
+00:03:48.030 --> 00:03:49.600
+danych rattus.
+
+00:03:49.610 --> 00:03:52.180
+Oia, mamy token JWT.
+
+00:03:52.380 --> 00:03:59.100
+Tak więc w podobny sposób do tego, co robimy z ciasteczkami i to zwróci true lub
+
+00:03:59.300 --> 00:04:07.660
+false serwer jest wtedy raz sprawdzany, który mówi, że wszystko jest poprawnym tokenem JWT, którego nie dekodował, po prostu
+
+00:04:07.660 --> 00:04:13.450
+sprawdza tę sesję, a następnie mówi, że możesz mieć prezent, a widzisz, że
+
+00:04:13.450 --> 00:04:17.330
+łączymy te dwie metody, zamiast tylko sprawdzać GWG.
+
+00:04:17.410 --> 00:04:21.620
+W rzeczywistości przechowujemy go w bazie danych i sprawdzamy.
+
+00:04:21.970 --> 00:04:25.490
+I tak jak powiedziałem, dostaniesz trochę korzyści z obu tych rzeczy.
+
+00:04:25.630 --> 00:04:32.330
+Robiąc to w ten sposób, ze słabością tego, że brakuje ci korzyści wynikających z braku konieczności przechowywania rzeczy.
+
+00:04:32.350 --> 00:04:33.920
+Jeśli używasz JWT.
+
+00:04:34.120 --> 00:04:38.990
+Ale po raz kolejny uważam, że to dobry sposób robienia rzeczy i pokazuje obie sytuacje.
+
+00:04:39.130 --> 00:04:43.270
+Tak więc pod koniec tej sekcji zamierzamy to zaimplementować i powrócimy do tego
+
+00:04:43.270 --> 00:04:45.220
+schematu, więc wszystko ma sens.
+
+00:04:45.250 --> 00:04:46.900
+Mam nadzieję, że jesteś podekscytowany.
+
+00:04:47.140 --> 00:04:50.370
+To będzie dużo pracy, ale będzie też dużo zabawy.
+
+00:04:51.570 --> 00:04:52.680
+Zobaczę w następnym.
+
+00:04:52.990 --> 00:04:53.250
+Buh-Bye.

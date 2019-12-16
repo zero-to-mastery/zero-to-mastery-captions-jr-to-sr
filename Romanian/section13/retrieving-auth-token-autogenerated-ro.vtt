@@ -1,0 +1,214 @@
+﻿WEBVTT
+
+00:00:00.770 --> 00:00:01.900
+Bine ai revenit.
+
+00:00:02.060 --> 00:00:06.380
+Lucrurile încep să înceapă încet și se încep să lucreze.
+
+00:00:06.380 --> 00:00:07.790
+Se simte bine, nu-i așa?
+
+00:00:07.790 --> 00:00:14.510
+Și suntem atât de aproape încât avem un ultim lucru pe care vrem să-l implementăm pe backend înainte de a ne întoarce în
+
+00:00:14.510 --> 00:00:19.330
+față și de a face câteva lucruri, cum ar fi rezolvarea acestei probleme de profil.
+
+00:00:19.370 --> 00:00:28.070
+Acum, acest jeton este trimis catre noi, dar dorim sa ne asiguram ca ori de cate ori
+
+00:00:28.090 --> 00:00:37.690
+primim acest jeton de la client, facem o verificare pentru ca ne amintim in functia noastra seinen am scris
+
+00:00:37.750 --> 00:00:45.100
+aceasta functie prosteasca numita Get ID token ID that face doar o consolă.
+
+00:00:45.380 --> 00:00:53.090
+Și dacă ne întoarcem la funcția principală care este authentication seinen vom vedea că vom verifica dacă antetele de
+
+00:00:53.230 --> 00:01:01.210
+cerere are autorizație și dacă acestea fac deja atunci putem rula obține auto ID-ul poate, deoarece nu vrem ca utilizatorul
+
+00:01:01.210 --> 00:01:03.380
+să se conecteze și peste.
+
+00:01:03.640 --> 00:01:09.370
+În caz contrar, trebuie să treacă prin semnul mânerului și pasul care deja funcționează pentru moment.
+
+00:01:09.370 --> 00:01:14.500
+Am verificat și stochează informațiile care creează sesiunea pe serverul ratt
+
+00:01:14.860 --> 00:01:17.780
+și returnează informațiile despre sesiune.
+
+00:01:17.830 --> 00:01:22.440
+Deci, să terminăm asta, având un ID de identificare.
+
+00:01:22.450 --> 00:01:30.760
+Acum, această denumire ar trebui să aibă sens, în timp ce dorim să facem acest lucru, să obținem tokenul sau să obținem ID-ul din
+
+00:01:30.760 --> 00:01:32.770
+baza noastră de date rattus.
+
+00:01:32.830 --> 00:01:42.030
+Amintiți-vă dacă primesc acest jeton pe care l-am creat împreună cu utilizatorul nostru. Vreau să primesc codul de identificare al unui
+
+00:01:42.030 --> 00:01:48.840
+profil, astfel încât să putem solicita și să facem o solicitare pentru acest profil.
+
+00:01:48.840 --> 00:01:53.050
+Amintiți-vă în serverul nostru Dutchie-ne obiectivele noastre finale.
+
+00:01:53.050 --> 00:01:59.450
+Scopul nostru este să avem semnătura care spune pur și simplu că da, că ți-ai dat semenul.
+
+00:01:59.680 --> 00:02:07.180
+Apoi, odată ce primim tokenul, trimitem o solicitare pentru a obține ID-ul de profil și pentru că autentificarea
+
+00:02:07.360 --> 00:02:17.470
+în acest semn returnează un simbol și un ID memorie returnează un ID și un token au reușit acum să obțină profilul cu ID-ul
+
+00:02:17.830 --> 00:02:26.530
+pe care l-am primit și oferind scrisoarea de autorizare a tokenului, astfel încât, ulterior, atunci când facem acest lucru să
+
+00:02:26.890 --> 00:02:33.730
+fie protejat și un punct pe care numai Autocad valabil îl poate accesa, ne asigurăm
+
+00:02:34.450 --> 00:02:36.280
+că acesta funcționează corect.
+
+00:02:36.280 --> 00:02:37.760
+Deci, să facem asta.
+
+00:02:37.840 --> 00:02:43.880
+O să merg la autentificare și să rezolv un cod de identitate.
+
+00:02:43.890 --> 00:02:47.010
+Aceasta va fi o simplă funcție simplă.
+
+00:02:47.010 --> 00:02:50.550
+Pur și simplu am obținut valoarea din baza noastră de date roșie.
+
+00:02:52.340 --> 00:03:05.250
+Voi spune autorizația Konst, pentru că vom primi acest lucru din cererea noastră.
+
+00:03:05.290 --> 00:03:08.590
+Și din nou vom primi aceste obiecte.
+
+00:03:08.590 --> 00:03:16.090
+Deci, în GET OFF token I. D. Am de gând să trec obiectul de răspuns al cererii la jetonul
+
+00:03:16.210 --> 00:03:20.930
+ghettului pentru a primi un simbol I. D. și aici ar trebui să avem acces la ele acum.
+
+00:03:23.550 --> 00:03:28.450
+Acum, cu redescrierea noastră este o metodă simplă.
+
+00:03:28.530 --> 00:03:36.090
+În loc de asta vom folosi ca și cum am făcut în ratt și tot ce trebuie să
+
+00:03:36.090 --> 00:03:44.820
+facem acum este să-i dăm cheia în cazul nostru autorizația tokin și cererea Gebe va primi o funcție de apel
+
+00:03:45.090 --> 00:03:51.650
+invers atunci când primește de fapt aceasta fie cu un aer pentru un răspuns.
+
+00:03:52.050 --> 00:03:58.060
+Deci, veți obține un număr de identificare sau un număr real de identificare.
+
+00:03:58.150 --> 00:04:00.560
+Deci, să creăm funcția de apel invers.
+
+00:04:00.640 --> 00:04:12.620
+Și în acest sfârșit de săptămână faceți o verificare rapidă pentru a spune că dacă există o eroare sau poate că nu există un răspuns.
+
+00:04:12.770 --> 00:04:15.350
+În acest caz, putem să
+
+00:04:20.600 --> 00:04:26.190
+ne întoarcem și putem face răspunsul aici și apoi să adăugăm un câine.
+
+00:04:26.240 --> 00:04:31.160
+Dar doar pentru că avem deja intrarea mânerului și doar pentru a păstra dezordinea
+
+00:04:31.160 --> 00:04:38.200
+de la întâmplare, deși îmi place să păstrez răspunsurile în cadrul acestei funcții pentru că acum să adăugăm răspunsul real aici.
+
+00:04:38.210 --> 00:04:46.340
+Am de gând să spun starea răspunsului înapoi de
+
+00:04:50.270 --> 00:04:58.450
+400 și va spune să autorizeze sunete frumoase foarte oficiale.
+
+00:04:58.580 --> 00:05:07.430
+Cu toate acestea, dacă totul funcționează bine în acest caz, vrem să răspundem lui Jason cu ID-ul care este răspunsul
+
+00:05:08.050 --> 00:05:09.910
+pe care îl primim.
+
+00:05:09.940 --> 00:05:16.170
+Amintiți-vă că răspunsul va fi șirul unui răspuns care va fi atribuit ID-ului.
+
+00:05:16.230 --> 00:05:24.870
+Deci, în felul nostru, ne facem simbolul. D. va primi ID-ul de jeton și amintiți-vă pentru că ne întoarcem
+
+00:05:24.870 --> 00:05:28.040
+aici vrem să ne asigurăm că această funcție returnează de fapt și ceva.
+
+00:05:28.170 --> 00:05:33.120
+În acest caz adăugăm cheia de întoarcere aici.
+
+00:05:33.180 --> 00:05:36.890
+Deci, dacă salvăm acest lucru, nu ar trebui să facem erori.
+
+00:05:36.900 --> 00:05:38.310
+Avem o eroare de sintaxă.
+
+00:05:38.550 --> 00:05:39.340
+Am mintit.
+
+00:05:41.060 --> 00:05:45.710
+Și da, asta pentru că vrem să ne întoarcem un obiect aici.
+
+00:05:45.890 --> 00:05:50.950
+Să spunem că totul pare să funcționeze.
+
+00:05:50.980 --> 00:06:00.870
+Folosim GET OFF ID-ul tokenului dacă parcurg în jos acest lucru ar trebui să aibă sens acum sunt semnate în autentificare
+
+00:06:01.050 --> 00:06:09.780
+care merge la semn și punctul va face unul din două lucruri dacă utilizatorul trimite un jet de autorizare
+
+00:06:09.780 --> 00:06:15.320
+vom Doar prindeți id-ul de utilizator și trimiteți răspunsul nostru înapoi.
+
+00:06:15.390 --> 00:06:24.410
+Amintiți-vă de răspunsul Jaison cu ID-ul utilizatorului în cazul în care nu există nici un jeton de autorizare, atunci vom proceda la conectare verificați
+
+00:06:24.410 --> 00:06:31.700
+parolele noastre folosite în cripta și baza de date pentru a verifica parolele noastre dacă totul verifică bine și
+
+00:06:31.700 --> 00:06:37.130
+avem un ID și un e -mail, atunci vom crea sesiunea și vom stoca,
+
+00:06:37.130 --> 00:06:42.060
+de fapt, creați tokenul setat de token în baza noastră de date.
+
+00:06:42.300 --> 00:06:45.450
+Dacă nu funcționează bine, noi respingem cu o eroare.
+
+00:06:45.570 --> 00:06:53.810
+În caz contrar, vom reîntoarce ședința cu succes și un ID de utilizator și un token din nou.
+
+00:06:53.820 --> 00:07:01.110
+Deci, la sfârșitul celor două situații, utilizatorul ajunge la un ID și token.
+
+00:07:01.230 --> 00:07:06.750
+Așa că în viitor și ce vom implementa în următorul
+
+00:07:06.750 --> 00:07:12.380
+videoclip de pe front, putem folosi punctul de solicitare pentru obținerea profilului.
+
+00:07:12.390 --> 00:07:14.790
+Cu asta voi vedea în următorul videoclip.

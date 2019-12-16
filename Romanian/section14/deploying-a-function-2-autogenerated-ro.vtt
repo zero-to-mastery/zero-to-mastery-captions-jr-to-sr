@@ -1,0 +1,283 @@
+﻿WEBVTT
+
+00:00:00.900 --> 00:00:07.920
+Bun venit inapoi Cred ca este timpul ca noi sa scriem o functie Brank buna pe care sa o
+
+00:00:07.920 --> 00:00:15.980
+putem folosi cu API-ul inteligent al creierului nostru, astfel incat aici sa putem avea o pictograma emoji care sa apara pe baza contelui.
+
+00:00:16.270 --> 00:00:22.210
+Și acum folosim Lamda pentru un exercițiu simplu, dar sper că imaginația ta se face sălbatică acum cu
+
+00:00:22.210 --> 00:00:25.220
+toate lucrurile pe care le poți face cu LAMDA.
+
+00:00:25.270 --> 00:00:31.330
+Este atât de interesant și de interesant, cu siguranță că vreau să văd câteva implementări creative pe care oamenii
+
+00:00:31.330 --> 00:00:34.610
+le au cu aplicația smartphone sau cu propria aplicație.
+
+00:00:34.690 --> 00:00:39.070
+Mi-ar plăcea să văd și să aud ce ați făcut cu funcțiile lambda.
+
+00:00:39.070 --> 00:00:45.220
+Categoric postat în chat-ul nostru de comunitate, pentru că îmi place toate aceste lucruri și cât de creativi pot obține
+
+00:00:45.220 --> 00:00:45.850
+cu ei.
+
+00:00:46.880 --> 00:00:56.420
+Acum și aici voi face ceva distractiv și această funcție voi avea un mic set de emoji pe
+
+00:00:56.480 --> 00:01:03.220
+care l-am creat și aceste emojis vor fi sistemul nostru de clasificare.
+
+00:01:03.270 --> 00:01:07.920
+Aici incepeti sa continuati cresterea continua sa cresteti pana
+
+00:01:07.920 --> 00:01:12.620
+cand ajungeti la nava racheta cel mai bun rang din toate.
+
+00:01:12.620 --> 00:01:13.280
+Acum ce să facem.
+
+00:01:13.280 --> 00:01:19.980
+Ei bine, înainte de a lăsa acest lucru în afara funcției de fapt, acum o voi
+
+00:01:19.980 --> 00:01:28.610
+lăsa așa pentru a vă arăta că putem avea lucruri în afara funcției și în interiorul fricii înainte de a trimite răspunsul.
+
+00:01:28.750 --> 00:01:40.530
+Voi avea un rang de concert și acest rang va fi egal cu parametrii de șir de evenimente Querrey și veți
+
+00:01:40.990 --> 00:01:44.370
+întreba unde ați făcut asta.
+
+00:01:44.500 --> 00:01:49.770
+Ei bine, dacă ne întoarcem la evenimentul nostru Ahar nu mai avem.
+
+00:01:49.770 --> 00:01:53.360
+Să-l luăm și să-l îndreptăm de aici.
+
+00:01:55.020 --> 00:01:59.270
+Și lipiți-l aici și adăugați unul la trei.
+
+00:01:59.320 --> 00:02:00.900
+Și aici, în parametri,
+
+00:02:04.880 --> 00:02:09.390
+ceea ce am vrut să facem să ne asigurăm că nu avem cererea aici.
+
+00:02:09.510 --> 00:02:12.020
+Să încercăm din nou și să terminăm aici.
+
+00:02:12.020 --> 00:02:19.770
+Dacă mă duc la parametrii de șir de interogări, vedem că putem avea șiruri de interogare ale punctului final API.
+
+00:02:20.310 --> 00:02:26.430
+Așa că vom trimite conturile prin acest parametru și vom
+
+00:02:26.430 --> 00:02:28.310
+accesa funcția lambda.
+
+00:02:28.410 --> 00:02:36.010
+Așa că am să spun de aici de la parametrul de interogări de interogări am să-i iau rangul și vă voi arăta
+
+00:02:36.010 --> 00:02:37.360
+cum facem asta.
+
+00:02:37.570 --> 00:02:48.180
+Desigur, de aici, să creăm o funcție de acum, care va fi numită Brank emoji, iar acest Moji aleatoriu va
+
+00:02:48.270 --> 00:02:52.130
+face o funcție simplă pentru noi.
+
+00:02:53.110 --> 00:02:57.060
+Vom spune că emoji folosesc logica noastră pentru noi.
+
+00:02:57.400 --> 00:03:05.700
+Dacă rangul este mai mare decât emojis dot lenth.
+
+00:03:05.910 --> 00:03:12.330
+Deci, oricare ar fi rangul sau numarul de intrari al utilizatorului este daca este mai mare decat
+
+00:03:12.330 --> 00:03:17.660
+lenth-ul nostru, care pare ca avem aproximativ 9 daca este mai mare decat asta.
+
+00:03:17.680 --> 00:03:21.360
+Ei bine tocmai am întors ultimul sau nava cu rachete.
+
+00:03:22.290 --> 00:03:28.020
+Deci, dacă așa este cazul, o să spun și da, facem o sintaxă puțin amuzantă aici.
+
+00:03:28.050 --> 00:03:30.240
+Amintiți-vă că Mojo este doar o matrice.
+
+00:03:30.240 --> 00:03:36.450
+Și facem un pic de logică în interiorul matricei poate deveni confuză, dar este o scurtă descriere pentru
+
+00:03:36.450 --> 00:03:36.910
+moment.
+
+00:03:36.920 --> 00:03:38.460
+Sper că puteți urma.
+
+00:03:39.270 --> 00:03:47.200
+Să spunem că pentru cazul ăsta vom spune că emoji nu este decît unul care este.
+
+00:03:47.200 --> 00:03:50.450
+Obțineți cea mai recentă insignă.
+
+00:03:50.550 --> 00:03:55.090
+În caz contrar, dă-i doar rangul pe care îl avem.
+
+00:03:55.290 --> 00:03:57.600
+Dacă aveți înregistrări zero, veți obține aceasta.
+
+00:03:57.700 --> 00:03:59.710
+Aveți o intrare pe care o veți obține.
+
+00:03:59.730 --> 00:04:00.620
+Două intrări.
+
+00:04:00.630 --> 00:04:01.730
+Trei patru.
+
+00:04:01.740 --> 00:04:02.780
+Si asa mai departe.
+
+00:04:03.750 --> 00:04:07.080
+Deci, să salvăm.
+
+00:04:07.150 --> 00:04:14.320
+Și apoi, în final, în obiectul nostru de răspuns, vom merge în loc de input-urile fiind evenimentul
+
+00:04:14.320 --> 00:04:19.440
+la care vom reveni la rangul pe care îl interesează Moji.
+
+00:04:19.440 --> 00:04:22.890
+În mod ideal, vom obține un emoji din asta.
+
+00:04:23.150 --> 00:04:27.500
+Să salvăm și să fugăm aici.
+
+00:04:27.720 --> 00:04:29.790
+Acum vreau asta pentru producție.
+
+00:04:30.300 --> 00:04:32.390
+Deci voi schimba eticheta.
+
+00:04:32.400 --> 00:04:40.210
+Acum, dacă mă defilez până la prod doar pentru a vedea ce se întâmplă și o să conduc un Salles.
+
+00:04:40.770 --> 00:04:45.510
+Și în timp ce se întâmplă în fundal, vom lucra la capătul frontal al aplicației noastre
+
+00:04:45.510 --> 00:04:46.420
+de creier inteligent.
+
+00:04:46.590 --> 00:04:48.900
+Dar vreau să trec peste asta o dată ultima dată.
+
+00:04:48.900 --> 00:04:54.960
+Avem o serie de emoji și tot ceea ce facem se bazează pe parametrii șirului
+
+00:04:54.960 --> 00:05:04.010
+de interogare pe care îi primim din punctul care va fi rangul intrărilor noastre intrările utilizatorilor noștri vom reveni la un clasament
+
+00:05:04.010 --> 00:05:08.460
+Moji bazat pe ordinea pe care o avem în matrice.
+
+00:05:08.510 --> 00:05:11.970
+Pur și simplu primim o contribuție cu cârpa și Moji.
+
+00:05:12.380 --> 00:05:19.120
+Așa că, în timp ce se servește, mă voi întoarce la Front-End, uitandu-mă la aplicația noastră, de fapt, vrei
+
+00:05:19.130 --> 00:05:22.120
+să ai ceva aici de lângă rangul nostru.
+
+00:05:22.190 --> 00:05:28.820
+Așa că am să intru în componența noastră, care, din fericire, avem deja.
+
+00:05:29.350 --> 00:05:35.710
+Și apoi această componentă Rand vedem că suntem doar logging out intrări și că despre asta.
+
+00:05:35.710 --> 00:05:41.950
+Să adăugăm emoji la această componentă, înainte de a începe să atingem această listă, să ne asigurăm
+
+00:05:41.980 --> 00:05:44.590
+că funcția lambda funcționează conform destinației.
+
+00:05:44.590 --> 00:05:45.910
+Mă voi întoarce.
+
+00:05:45.940 --> 00:05:46.610
+Vedem asta.
+
+00:05:46.630 --> 00:05:49.110
+În regulă, avem un nou punct final.
+
+00:05:49.150 --> 00:05:57.400
+Vedeți că acum Prada este în producție și putem să luăm acest lucru și să punem în evidență ceea ce obținem.
+
+00:05:57.440 --> 00:06:03.650
+Voi copia și lipiți și aici, deoarece așteptăm parametrii șir de interogări, ceea ce înseamnă că trebuie să facem
+
+00:06:03.680 --> 00:06:06.310
+un semn de întrebare pentru șirurile de interogare.
+
+00:06:06.440 --> 00:06:16.480
+Vom spune că rangul este egal cu cel pe care îl vom da, să spunem că acum ne amintim de unde primim
+
+00:06:16.480 --> 00:06:17.100
+asta.
+
+00:06:17.110 --> 00:06:22.530
+Dacă ne întoarcem la funcția noastră, avem parametrii șirului de interogare și luăm proprietatea rangului.
+
+00:06:22.570 --> 00:06:30.890
+Dacă numesc asta ceva diferit de Moji bine, în acel caz, va trebui să-l folosesc pe Moji aici după semnul
+
+00:06:30.890 --> 00:06:33.270
+întrebării, dar să-i dăm o privire
+
+00:06:36.100 --> 00:06:37.230
+la asta.
+
+00:06:37.240 --> 00:06:38.440
+Să facem asta un pic mai mare.
+
+00:06:38.440 --> 00:06:41.440
+Pentru a sărbători, am primit fața mică.
+
+00:06:41.470 --> 00:06:43.660
+Funcția noastră de serviciu funcționează.
+
+00:06:43.900 --> 00:06:51.240
+Și dacă schimbăm acest lucru, să zicem 400, obținem racheta, avem insigna
+
+00:06:51.240 --> 00:06:59.200
+rocketului și dacă schimbăm această față la zero, trebuie să lucrăm la ferma noastră aici.
+
+00:06:59.200 --> 00:07:00.930
+Cât de minunat este asta.
+
+00:07:01.010 --> 00:07:07.320
+Și cât de simplu a fost să se folosească doar această funcție la lambda la serverele Amazon.
+
+00:07:07.450 --> 00:07:08.900
+Și acum avem acces la ea.
+
+00:07:10.110 --> 00:07:11.220
+Absolut uimitor.
+
+00:07:11.340 --> 00:07:12.120
+Îmi place LAMDA.
+
+00:07:12.120 --> 00:07:14.560
+Sper că te enervezi în următorul videoclip.
+
+00:07:14.730 --> 00:07:18.930
+Vom implementa acest lucru și Front-End pe care îl voi vedea.

@@ -1,0 +1,253 @@
+﻿WEBVTT
+
+00:00:02.070 --> 00:00:02.840
+Bine ai revenit.
+
+00:00:02.850 --> 00:00:08.760
+Vom începe să instalăm postscript-uri pe computerul nostru, astfel încât, la fel cum am făcut
+
+00:00:08.770 --> 00:00:16.020
+și cu serverele Front-End, vom avea un terminal care rulează capătul din față și un spate și care rulează serverul
+
+00:00:16.020 --> 00:00:22.860
+nostru, dar și un alt terminal care rulează o bază de date deoarece, după cum vă amintiți, acestea sunt
+
+00:00:22.860 --> 00:00:28.880
+doar computere care rulează undeva în același mod în care am rulat serverul nostru pe computerul nostru.
+
+00:00:28.880 --> 00:00:35.440
+De asemenea, putem rula baza de date pe computerul nostru, iar în acest videoclip vom avea setul nostru cu postscript-uri.
+
+00:00:35.670 --> 00:00:38.690
+Acum, Mongo D-B a devenit popular.
+
+00:00:38.820 --> 00:00:44.950
+Cu toate acestea, nimic nu bate o bază de date relațională pentru dezvoltarea cu adevărat a cunoștințelor dvs. de baze de date.
+
+00:00:44.970 --> 00:00:52.080
+Odată ce ați înțeles bazele de date relaționale vă oferă instrumente cu adevărat bune și modele mentale pentru
+
+00:00:52.080 --> 00:00:56.550
+a lucra cu Mongo D-B Mongo DD este foarte simplu.
+
+00:00:56.670 --> 00:01:02.640
+Poți să te gândești la asta ca pe o figură pe structura de date în care avem
+
+00:01:03.030 --> 00:01:09.390
+doar Jaison care arată ca un obiect și ne păstrăm acele informații acolo și cu bazele de date relaționale.
+
+00:01:09.390 --> 00:01:11.000
+Este mai complexă decât asta.
+
+00:01:11.160 --> 00:01:17.060
+Deci, dacă înțelegeți acest lucru, sunteți la mila înainte când vine vorba de înțelegerea bazelor de date.
+
+00:01:17.100 --> 00:01:23.660
+Deci, ne vom concentra pe asta deoarece principiile sunt încă aceleași pentru Mongo D-B.
+
+00:01:23.670 --> 00:01:23.990
+In regula.
+
+00:01:24.050 --> 00:01:30.110
+Deci, să punem la dispoziție posturi scrise pe calculatorul nostru.
+
+00:01:30.150 --> 00:01:34.840
+Primul lucru pe care vrem să-l facem este să descărcați ceva numit gooey.
+
+00:01:34.860 --> 00:01:42.290
+Deci, o interfață grafică de utilizator pentru postscripts și acest lucru există pentru aproape orice bază de date acolo.
+
+00:01:42.600 --> 00:01:45.000
+Îmi place PC quoll pentru că este gratuit.
+
+00:01:45.000 --> 00:01:49.050
+Este foarte bun pentru Mac și este foarte ușor și simplu.
+
+00:01:49.050 --> 00:01:55.500
+De asemenea, trebuie să adăugați note despre cum să descărcați ceva de genul acesta și să postați postscript-uri în general
+
+00:01:55.560 --> 00:02:00.480
+dacă utilizați o mașină Windows, dar altfel faceți doar clic pe link-ul de descărcare.
+
+00:02:01.520 --> 00:02:03.050
+Va fi complet rapid.
+
+00:02:03.060 --> 00:02:08.290
+Doar deschide-o și vei avea ceva de genul ăsta care va fi folosit pe tot parcursul cursului.
+
+00:02:08.520 --> 00:02:11.090
+Dar există multe opțiuni și o pot căuta.
+
+00:02:11.280 --> 00:02:14.720
+Căutați doar progresul.
+
+00:02:15.300 --> 00:02:23.380
+Și odată ce a fost instalat succesul fericit, îl veți găsi în dosarul aplicației dvs. și puteți urmări.
+
+00:02:23.380 --> 00:02:28.970
+Acum, să ne întoarcem la terminal pentru a avea posturi de instalat acolo sunt multe moduri și din nou
+
+00:02:28.970 --> 00:02:32.240
+voi oferi câteva note despre cum puteți face acest lucru.
+
+00:02:32.480 --> 00:02:37.520
+Dar cea mai bună cale, în special Omak este de a folosi Brue despre care am vorbit deja.
+
+00:02:37.640 --> 00:02:44.240
+De fiecare dată când faci ceva cu homebrew din nou, este o modalitate de a descărca pachete de pe Internet
+
+00:02:44.240 --> 00:02:45.310
+pe terminalul tău.
+
+00:02:45.320 --> 00:02:49.890
+Întotdeauna doriți să vă asigurați că faceți o actualizare pentru a vă asigura că totul este actualizat.
+
+00:02:53.370 --> 00:02:59.730
+Și, de asemenea, un doctor de grup a fost doar asigurați-vă că totul funcționează pe
+
+00:03:03.780 --> 00:03:06.480
+sistemul dvs., este clar că perfect.
+
+00:03:06.480 --> 00:03:12.470
+Odată ce ați instalat acest lucru, vom spune că Brue va instala post-criză
+
+00:03:14.970 --> 00:03:19.400
+skua și acest lucru se va instala pentru noi.
+
+00:03:19.620 --> 00:03:24.340
+Postscripts și veți vedea aici că deja am instalat cărți poștale.
+
+00:03:24.340 --> 00:03:30.070
+Dar dacă e prima dată când îți dai drumul prin comenzi și apoi, de fapt, îți
+
+00:03:30.070 --> 00:03:32.940
+spun exact cum să începi să o folosești.
+
+00:03:33.020 --> 00:03:37.340
+Dar, în cazul nostru, Stelly va fi mult mai ușor să înceapă postcripțiile.
+
+00:03:37.340 --> 00:03:46.800
+Aveți nevoie de servicii de preparare a boabelor pentru posturi de posturi și nu vă faceți griji că nu este vorba despre postări specifice unei baze de
+
+00:03:46.820 --> 00:03:52.080
+date pe care o descărcați descărcând în esență software-ul și apoi doriți să începeți serviciul.
+
+00:03:52.190 --> 00:03:58.480
+Fiecare are propriile comenzi, dar este la fel de simplu ca Googling și imaginând cum să executați baza de date.
+
+00:03:58.490 --> 00:04:02.880
+Așa că am început postcrisurile Eskew cum arată.
+
+00:04:02.880 --> 00:04:13.250
+Am început deja serviciul și doar pentru a vă arăta dacă mă opresc aici, se va opri serviciul teroriștilor și doar pentru a începe din nou
+
+00:04:16.040 --> 00:04:24.470
+și puteți vedea că începe acum pentru ca noi să folosim postscript-uri de care avem nevoie pentru a crea o
+
+00:04:24.470 --> 00:04:26.200
+bază de date .
+
+00:04:26.630 --> 00:04:35.200
+Și modul în care facem asta este de a folosi comanda Create D-B care a venit după ce am instalat postscript-uri.
+
+00:04:35.380 --> 00:04:37.050
+Și aici îl putem numi ceea ce vrem.
+
+00:04:37.090 --> 00:04:40.700
+Deci, să numim testul ăsta.
+
+00:04:40.840 --> 00:04:44.400
+O să creeze D-B Și acolo te duci.
+
+00:04:44.440 --> 00:04:45.810
+Iată o parte dintr-o cotă.
+
+00:04:45.820 --> 00:04:53.010
+Dacă mă întorc la PC-ul meu, va deschide acest lucru când închidem acest lucru.
+
+00:04:53.110 --> 00:04:55.420
+Am o continuare a piesei.
+
+00:04:55.600 --> 00:04:59.880
+Și solicită gazdei care este legătura cu locul unde este localizată baza de date.
+
+00:05:00.010 --> 00:05:04.160
+În cazul meu este localizat la dreapta localnicilor mei.
+
+00:05:04.180 --> 00:05:07.680
+Se execută pe calculatorul meu.
+
+00:05:07.770 --> 00:05:10.740
+Deci vrei să fie localhost și numărul portului.
+
+00:05:10.740 --> 00:05:17.220
+Acesta este numărul implicit scăzut de 5:43 pentru a ne aminti cum am avut portul trei mii trei mii
+
+00:05:17.220 --> 00:05:19.250
+unul pentru front-end și backend.
+
+00:05:19.290 --> 00:05:20.150
+Este similară cu asta.
+
+00:05:20.160 --> 00:05:22.940
+Se deschide un port pentru a asculta o bază de date.
+
+00:05:23.160 --> 00:05:28.050
+Și acesta este portul standard pentru postscript-urile pe care le veți vedea.
+
+00:05:28.050 --> 00:05:36.000
+Deci, când am făcut progresul inițial și am creat D-B, implicit sau 5 4 3 2 a fost deja setat.
+
+00:05:36.000 --> 00:05:41.100
+De fapt, pot seta ce porturi și să le schimb, dar dorim să păstrăm toate standardele, astfel
+
+00:05:41.100 --> 00:05:43.400
+încât să o păstrăm așa cum este.
+
+00:05:43.550 --> 00:05:52.260
+Dacă mă duc acum la baza de date și vom numi acele teste atât de din nou, vom face testul de bază de date de contact conectați.
+
+00:05:52.270 --> 00:05:52.750
+In regula.
+
+00:05:52.750 --> 00:05:58.840
+Suntem conectați la baza de date, dar nu prea sunt aici, ca acolo.
+
+00:05:59.090 --> 00:06:03.060
+Dar cel puțin știm că suntem conectați la testul localhost.
+
+00:06:03.160 --> 00:06:08.560
+Și un alt mod de a vă conecta la acest lucru este să vă amintiți acest lucru este o interfață grafică
+
+00:06:08.560 --> 00:06:12.760
+gooey și vă arăt acest lucru pentru că este foarte bun pentru scopuri demo, dar am
+
+00:06:12.760 --> 00:06:20.740
+vrut să lucrez confortabil cu terminalele bine pentru a face același lucru pe care tocmai am a făcut cu Guti putem scrie în PSU Ei bine, din nou, care este o
+
+00:06:20.740 --> 00:06:26.530
+comandă pe care o vom primi atunci când vom instala postscripts și vom spune la care bază de date ne-am dori să
+
+00:06:26.530 --> 00:06:27.250
+vă conectați.
+
+00:06:27.340 --> 00:06:30.640
+În cazul nostru va fi testul.
+
+00:06:30.830 --> 00:06:32.150
+Și tu te duci.
+
+00:06:32.330 --> 00:06:34.990
+La fel ca atunci când executăm nodul și schimbăm terminalele.
+
+00:06:35.000 --> 00:06:42.440
+Acum suntem în interiorul post-scripturilor care rulează pe calculatorul nostru, dar nu avem încă comenzi.
+
+00:06:42.440 --> 00:06:48.850
+Dewey Deci, în următorul videoclip vom învăța câteva comenzi bascule și, în final, vom crea niște tabele în
+
+00:06:49.270 --> 00:06:51.070
+baza de date postcristifică.
+
+00:06:51.100 --> 00:06:52.780
+O să văd asta.

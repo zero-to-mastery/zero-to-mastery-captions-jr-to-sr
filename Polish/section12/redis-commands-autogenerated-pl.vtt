@@ -1,0 +1,214 @@
+﻿WEBVTT
+
+00:00:01.000 --> 00:00:02.150
+Witamy spowrotem.
+
+00:00:02.320 --> 00:00:09.910
+Teraz pamiętaj, że w bazach danych jest 800, że każdy z nich jest dobry, ponieważ dany
+
+00:00:09.910 --> 00:00:13.340
+problem ma pewne zalety i pewne zalety.
+
+00:00:13.360 --> 00:00:19.860
+Teraz z bazami danych zawsze chcesz pomyśleć o wielkim obrazie i o korzyściach płynących z tych baz danych.
+
+00:00:19.870 --> 00:00:24.230
+W naszym przypadku wiemy, że zaczerwienienie jest w pamięci.
+
+00:00:24.280 --> 00:00:27.760
+Oznacza to, że dostęp do nich jest super szybki.
+
+00:00:27.850 --> 00:00:36.010
+Możemy uzyskać bardzo szybkie wartości, ale ma tę wadę, że zajmuje tylko migawkę i zapisuje ją na dysku od czasu
+
+00:00:36.220 --> 00:00:40.730
+do czasu, więc możesz utracić trochę danych, jeśli serwer zostanie wyłączony.
+
+00:00:41.730 --> 00:00:48.030
+I wiemy, że rattus jest często używany do małych kawałków danych, takich jak zarządzanie sesjami, a może nawet
+
+00:00:48.030 --> 00:00:51.210
+buforowanie niektórych małych danych, o których będziemy mówić.
+
+00:00:51.210 --> 00:00:58.250
+Kolejną częścią baz danych, które chcesz przeanalizować, są typy danych, które mogą obsługiwać i które bazują na tych typach
+
+00:00:58.250 --> 00:01:00.950
+danych, które pasują do Twoich potrzeb.
+
+00:01:01.040 --> 00:01:04.590
+Baza danych może być dobra lub zła dla twojego projektu.
+
+00:01:06.160 --> 00:01:11.770
+W tym filmie w następnych kilku filmach będziemy rozmawiać o tym, jakie są te
+
+00:01:12.450 --> 00:01:13.580
+typy danych.
+
+00:01:13.630 --> 00:01:21.940
+W przyszłym rozdziale poświęconym sesjom i JACT będziemy posługiwać się bardzo podstawowym, a jeśli pamiętasz, że rattus
+
+00:01:21.940 --> 00:01:27.590
+to pamięć wartości kluczowych, to dajemy jej klucz i wartość.
+
+00:01:28.120 --> 00:01:32.090
+I my będziemy mogli uzyskać dostęp do tej wartości z tego klucza.
+
+00:01:32.110 --> 00:01:39.790
+Pokażę ci więc podstawowe polecenia z wątkiem: ustaw i zobacz, że już daje mi
+
+00:01:39.790 --> 00:01:48.160
+opcje, a przez Dollona czytam CLID, co mogę umieścić, aby ustawić klucz i wartość oraz niektóre
+
+00:01:48.250 --> 00:01:48.800
+opcje.
+
+00:01:49.570 --> 00:02:01.710
+Powiedzmy więc, że chcę ustawić nazwę na Godzillę, a jeśli naciśnie klawisz enter, otrzymam OK.
+
+00:02:01.840 --> 00:02:11.350
+Teraz jesteśmy tacy sami Mogę teraz uzyskać to imię, kiedy tylko chcę, mówiąc: Get name, a otrzymam Godzilla i to
+
+00:02:11.360 --> 00:02:11.960
+wszystko.
+
+00:02:11.960 --> 00:02:16.500
+Przechowywanie wartości klucza jest po prostu tym, że dajesz mu klucz, któremu nadajesz wartość.
+
+00:02:16.550 --> 00:02:19.930
+Teraz możemy użyć polecenia get, aby odzyskać tę wartość.
+
+00:02:21.230 --> 00:02:23.990
+Innym poleceniem jest sprawdzenie, czy coś istnieje.
+
+00:02:24.170 --> 00:02:27.930
+Więc jeśli istnieje, otrzymam imię i nazwisko.
+
+00:02:28.340 --> 00:02:34.960
+Mam jedną nazwę i mogę również uruchomić polecenie delete, aby usunąć polecenie name.
+
+00:02:35.850 --> 00:02:39.280
+Teraz fibryna istnieje imię.
+
+00:02:39.600 --> 00:02:41.140
+Nie ma tam żadnego imienia.
+
+00:02:41.190 --> 00:02:43.280
+A jeśli zdobędę imię.
+
+00:02:43.570 --> 00:02:46.530
+Nie, nie, nie mam absolutnie nic.
+
+00:02:46.530 --> 00:02:53.810
+Zanim przejdę do kolejnych komentarzy, chcę ci pokazać, że dokumentacja jest twoim przyjacielem.
+
+00:02:53.820 --> 00:03:00.490
+Jeśli przejdziesz do swojej karty dokumentacji, którą tu otworzyłem, mają dla ciebie mnóstwo zasobów.
+
+00:03:00.570 --> 00:03:04.070
+Ale interesuje nas pełna lista poleceń.
+
+00:03:04.350 --> 00:03:09.560
+A jak widzisz, dają ci naprawdę dobre załamanie się tego, co robi wszystko.
+
+00:03:11.880 --> 00:03:13.390
+Rzućmy okiem na jedną z nich.
+
+00:03:13.500 --> 00:03:16.270
+Widzimy, że chcemy wypróbować komentarz dotyczący wygaśnięcia.
+
+00:03:16.890 --> 00:03:22.590
+A jeśli kliknę tutaj, zobaczysz, że ustawi on limit czasu na klucz po
+
+00:03:22.590 --> 00:03:25.270
+upływie czasu klucz będzie automatycznie liderem.
+
+00:03:25.280 --> 00:03:25.540
+W porządku.
+
+00:03:25.550 --> 00:03:28.900
+Powiedzmy, że chcemy to wypróbować.
+
+00:03:29.120 --> 00:03:39.210
+Możemy po prostu powiedzieć, że wygaśnie, albo musimy coś najpierw ustawić, więc ustawmy sesję mówienia
+
+00:03:40.480 --> 00:03:51.470
+i sesję Obi Jenny i powiedzmy, że wygasa sesja i ile sekund, ale załóżmy, że chcemy, aby
+
+00:03:51.470 --> 00:03:54.590
+wygasła w 10 sekund.
+
+00:03:56.630 --> 00:04:08.340
+Teraz, gdy dostanę sesję, dostaję Gennie, ale czekam 10 sekund i próbuję dostać się do sesji ponownie. O sesja już
+
+00:04:08.370 --> 00:04:12.300
+nie istnieje, ponieważ spowodowałem jej wygaśnięcie.
+
+00:04:12.450 --> 00:04:13.210
+Jakie to jest świetne.
+
+00:04:13.230 --> 00:04:19.980
+Znowu każda baza danych ma swój własny zestaw funkcji i Rhetors ma to miłe wygaśnięcie, w którym można po prostu
+
+00:04:19.980 --> 00:04:23.800
+wygasnąć rzeczy do usunięcia z bazy danych, kiedy tylko chcesz.
+
+00:04:23.880 --> 00:04:30.840
+Innym naprawdę przydatnym narzędziem było coś takiego jak sesje, jeśli chcesz
+
+00:04:31.410 --> 00:04:38.490
+wygasić sesję na przykład użytkownika, który, powiedzmy dzień, musi zrezygnować z OP.
+
+00:04:38.550 --> 00:04:43.020
+To prosta rzecz, którą możemy zrobić od razu z czerwonym X.
+
+00:04:43.170 --> 00:04:45.490
+Spróbujemy jeszcze kilku poleceń.
+
+00:04:45.630 --> 00:04:49.890
+Możemy ustawić licznik na 100.
+
+00:04:49.990 --> 00:04:54.160
+A my po prostu robimy proste przechowywanie wartości klucza.
+
+00:04:54.210 --> 00:04:59.790
+Teraz możemy wykonać kolejne polecenie Anke inkrementuje o.
+
+00:04:59.890 --> 00:05:06.160
+To trochę trudne do przeliterowania, ale rośnie, dajemy mu kluczowy licznik, a
+
+00:05:06.160 --> 00:05:09.480
+otrzymamy 50 lub mniej do 33.
+
+00:05:09.740 --> 00:05:10.320
+Spójrz na to.
+
+00:05:10.340 --> 00:05:15.920
+Teraz nasz licznik jest zwiększany o
+
+00:05:20.160 --> 00:05:22.040
+33.
+
+00:05:22.050 --> 00:05:23.270
+Bardzo fajny.
+
+00:05:23.310 --> 00:05:31.100
+I jak możesz sobie wyobrazić, jest także klucz do dekrementacji lub dekrementacji, a my udokumentujemy licznik,
+
+00:05:31.130 --> 00:05:40.620
+a my możemy go podać, powiedzmy 33, a tak naprawdę, z dekrementacją domyślną, a jedyną działającą wartością domyślną jest to,
+
+00:05:40.680 --> 00:05:43.670
+że poleca ją tylko jeden.
+
+00:05:43.960 --> 00:05:50.130
+Jeśli uruchomię to, zobaczysz, że liczba całkowita została teraz udokumentowana przez jeden.
+
+00:05:50.150 --> 00:05:50.600
+W porządku.
+
+00:05:50.690 --> 00:05:52.180
+Jeszcze kilka rzeczy do przejścia.
+
+00:05:52.200 --> 00:05:55.070
+Ale zróbmy sobie przerwę, a do zobaczenia w następnym wideo.

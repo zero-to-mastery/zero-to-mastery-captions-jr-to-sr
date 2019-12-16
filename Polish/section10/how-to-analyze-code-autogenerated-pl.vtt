@@ -1,0 +1,616 @@
+﻿WEBVTT
+
+00:00:01.290 --> 00:00:02.270
+Witamy spowrotem.
+
+00:00:02.310 --> 00:00:09.060
+Dostaliśmy więc konfigurację, że nasza aplikacja działa i działa, a teraz możemy ponownie spojrzeć
+
+00:00:09.060 --> 00:00:10.480
+na kod.
+
+00:00:10.500 --> 00:00:12.110
+Lubię patrzeć na kod.
+
+00:00:12.120 --> 00:00:17.220
+Gdy wszystko już działa, upewnij się, że wszystkie zmienne środowiskowe, takie
+
+00:00:17.220 --> 00:00:24.450
+jak klucze API z zespołu i baza danych, są skonfigurowane, a jeśli pamiętasz, mamy naszą aplikację kliencką,
+
+00:00:24.450 --> 00:00:28.770
+która jest od nowa, gdzie jest to właściwe tutaj.
+
+00:00:28.890 --> 00:00:36.570
+Mamy naszą bazę danych, która działa lokalnie na naszym komputerze, a następnie mamy nasz serwer i mam tu trzy
+
+00:00:36.660 --> 00:00:39.000
+okna dla każdego z nich.
+
+00:00:39.180 --> 00:00:47.520
+Ponieważ w prawdziwym świecie produkcyjnym najprawdopodobniej będziemy je mieli na różnych serwerach
+
+00:00:47.520 --> 00:00:50.890
+lub na różnych komputerach.
+
+00:00:50.940 --> 00:00:55.680
+Teraz, gdy wszystko już jest gotowe, przejdźmy przez kod.
+
+00:00:55.680 --> 00:01:02.070
+Zawsze wolę najpierw przejść przez API, abym mógł spojrzeć na punkty końcowe, ponieważ punkty mówią
+
+00:01:02.070 --> 00:01:03.500
+dużo o aplikacji.
+
+00:01:03.870 --> 00:01:06.470
+I tutaj pozwól mi trochę to zminimalizować.
+
+00:01:07.670 --> 00:01:13.620
+Tutaj mogę zacząć patrzeć na folder bardziej niebezpieczny i widzę, że nie jest to zbyt skomplikowane.
+
+00:01:13.620 --> 00:01:20.970
+Mamy plik dodgiest serwera, który zakładam, jest naszym głównym punktem wejścia, a następnie mamy kontrolery i
+
+00:01:21.180 --> 00:01:26.680
+kontrolery brzmiące jak coś, co ma logikę dla naszych punktów końcowych.
+
+00:01:26.700 --> 00:01:31.260
+Pierwszą rzeczą, którą zamierzam zrobić, to przyjrzeć się strukturze folderów, której już szukałem,
+
+00:01:31.730 --> 00:01:37.530
+a Jaison oczywiście przeczytam przeczytane przeze mnie, że projekt zapewnia, a następnie przejdę do punktu wejścia i
+
+00:01:37.980 --> 00:01:40.440
+zobaczę, jakiego rodzaju pakiety, z których korzystają.
+
+00:01:40.440 --> 00:01:47.550
+Widzę, że używają one ekspresowych analizatorów treści, aby uzyskać ciało Jaison z
+
+00:01:48.120 --> 00:01:58.960
+prośby lub prośby, że nasze ciało, z którego korzystamy, to krypta, która jest biblioteką haszującą dla najprawdopodobniej hashujących haseł.
+
+00:01:59.050 --> 00:02:06.400
+Używamy kursu, aby dać dostęp do domen, które mogą uzyskać dostęp do serwera, z którym rozmawialiśmy
+
+00:02:06.400 --> 00:02:07.030
+K'NEX.
+
+00:02:07.030 --> 00:02:15.100
+Jest to R R M, który pozwala nam tworzyć wszystkie Q wypowiedzi do naszej bazy danych, a przy okazji absolutnie kocham tę
+
+00:02:15.100 --> 00:02:16.980
+bibliotekę, którą bardzo polecam.
+
+00:02:16.980 --> 00:02:23.270
+Działa z moim Eskewem i wysyła Cressonowi mnóstwo innych baz danych.
+
+00:02:23.440 --> 00:02:28.590
+A potem mamy naszych kontrolerów nasz rejestr zarejestruj się w profilu obrazu.
+
+00:02:28.830 --> 00:02:34.470
+Mamy skonfigurowaną bazę danych, o której już rozmawialiśmy, a następnie mamy podstawową konfigurację
+
+00:02:34.470 --> 00:02:40.160
+serwera ekspresowego z rdzeniami, która pozwala nam uzyskać do niej dostęp z dowolnego miejsca.
+
+00:02:40.200 --> 00:02:43.790
+Każda domena może teraz uzyskać do niej dostęp.
+
+00:02:43.890 --> 00:02:46.730
+I to jest coś, co omawiamy w dziale bezpieczeństwa.
+
+00:02:46.860 --> 00:02:49.480
+Zostawimy to na sesję bezpieczeństwa.
+
+00:02:49.650 --> 00:03:00.070
+Ponownie mamy do dyspozycji Jais ciała, aby móc czytać Song z naszych punktów końcowych i jest to dość
+
+00:03:00.070 --> 00:03:01.950
+standardowy ekspresowy serwer.
+
+00:03:02.020 --> 00:03:03.600
+Słuchamy portu 3000.
+
+00:03:03.820 --> 00:03:13.090
+I widzę, że w punktach końcowych mamy nasz rejestracyjny obraz ID profilu profilu i obraz RL I właśnie czytając te punkty
+
+00:03:13.090 --> 00:03:16.800
+końcowe mamy pojęcie o tym, co robi aplikacja.
+
+00:03:16.810 --> 00:03:25.960
+Pozwala użytkownikom na logowanie się i rejestrację, aby pobrać profil każdego z profili, aby przeprowadzić aktualizację do
+
+00:03:26.020 --> 00:03:27.770
+punktu końcowego obrazu.
+
+00:03:27.790 --> 00:03:28.690
+To jest put.
+
+00:03:28.690 --> 00:03:35.350
+A potem, aby opublikować obraz, jesteś prawdziwy i widzę, że każdy z nich ma profil obsługi klamry rejestru,
+
+00:03:35.350 --> 00:03:38.450
+aby uzyskać wywołanie funkcji API obsługi uchwytu obrazu.
+
+00:03:38.860 --> 00:03:43.870
+Teraz mogę po prostu wejść do każdego kontrolera i po prostu zobaczyć, co każdy z nich robi.
+
+00:03:43.870 --> 00:03:51.490
+Znowu to widzieliśmy, zanim przygotowaliśmy klarowny interfejs API i wygląda na to, że obraz po prostu mówi, że
+
+00:03:51.490 --> 00:03:58.360
+mam zamiar wykonać wywołanie API do interfejsu API clarify i zamierzamy użyć modelu wykrywania twarzy.
+
+00:03:58.370 --> 00:04:04.250
+Jest to wprost z ich dokumentacji, a to zwróci ich odpowiedź na ich dane z
+
+00:04:04.250 --> 00:04:06.660
+API i na nasz koniec.
+
+00:04:06.680 --> 00:04:13.430
+Mamy również obraz uchwytu, a ten obraz uchwytu wygląda tak, jakbyśmy chwytali bazę danych użytkownika za
+
+00:04:13.430 --> 00:04:20.080
+pomocą składni K'NEX, gdzie I. RE. jest równy identyfikatorowi wniosku.
+
+00:04:20.090 --> 00:04:21.590
+Ciało.
+
+00:04:21.720 --> 00:04:29.930
+I po prostu zwiększamy pozycje o jeden i zwracamy wpisy i zwracamy je na wierzch, aby
+
+00:04:30.230 --> 00:04:38.030
+wyglądał tak, jak za każdym razem, gdy zwiększamy lub wysyłamy obraz, liczba wpisów wzrasta.
+
+00:04:38.060 --> 00:04:40.990
+W porządku, więc to plik obrazu patrzymy na profil.
+
+00:04:40.990 --> 00:04:44.640
+Ponownie obsłużyć uzyskanie profilu jest dość oczywiste.
+
+00:04:44.640 --> 00:04:52.350
+Pobraliśmy identyfikator profilu, który wybieramy wszystko z tabeli użytkownika.
+
+00:04:52.480 --> 00:04:58.720
+Jeśli I. RE. dopasowuje się do tego żądania, ponieważ pamiętaj
+
+00:04:58.750 --> 00:05:01.900
+o tym, że w przypadku dodginess serwera robimy ten identyfikator średnika,
+
+00:05:05.890 --> 00:05:09.940
+aby pobrać parametry tego żądania, i ponownie zwracamy użytkowników, których dostaliśmy z bazy danych.
+
+00:05:11.940 --> 00:05:18.270
+Rejestracja jest trochę bardziej skomplikowana, ale patrząc na to, po prostu rejestrujemy się.
+
+00:05:18.360 --> 00:05:24.120
+Wygląda na to, że mieszamy nasze hasła, co jest naprawdę dobrą praktyką bezpieczeństwa.
+
+00:05:24.120 --> 00:05:29.280
+Znowu to jest coś, o czym będziemy rozmawiać i będziemy mieli
+
+00:05:29.760 --> 00:05:37.500
+ćwiczenia w sekcji bezpieczeństwa i wygląda na to, że aktualizujemy, więc wstawiamy skrót do e-maila i tabeli logowania,
+
+00:05:38.900 --> 00:05:44.950
+a następnie używamy tabeli użytkownika do wstawienia nazwa e-mail i data, która jest połączona.
+
+00:05:44.970 --> 00:05:47.060
+Więc to tylko rejestracja
+
+00:05:49.700 --> 00:05:57.100
+i wreszcie seinen z obsługą seinen, po prostu wybieramy tę wiadomość e-mail i hash z
+
+00:05:57.100 --> 00:05:58.560
+tabeli logowania.
+
+00:05:58.780 --> 00:06:05.940
+Jeśli wiadomość e-mail pasuje do tego, co dał nam front-end, a następnie robimy coś, co Coleby chwytał, porównuj z czymś,
+
+00:06:05.940 --> 00:06:11.100
+o czym mówimy w sekcji dotyczącej bezpieczeństwa, w której porównujemy hasło z hasłem zapisanym
+
+00:06:11.100 --> 00:06:12.510
+w bazie danych.
+
+00:06:12.510 --> 00:06:20.070
+Znów bezpieczny sposób na przechowywanie informacji o użytkowniku i umożliwienie mu zalogowania się, jeśli jest
+
+00:06:20.070 --> 00:06:23.010
+poprawny, dajemy mu dane użytkownika.
+
+00:06:23.040 --> 00:06:26.480
+W przeciwnym razie mówimy źle poświadczenia.
+
+00:06:26.490 --> 00:06:28.530
+W porządku, więc nie jest tak źle.
+
+00:06:28.540 --> 00:06:30.700
+To było miłe przeżycie.
+
+00:06:30.700 --> 00:06:33.190
+Nie musimy się zbytnio uczyć o bazie kodu.
+
+00:06:33.190 --> 00:06:40.000
+I pamiętaj o pewnym projekcie, który dostaniesz, i jest o wiele więcej folderów, ale logicznie krok po kroku
+
+00:06:40.000 --> 00:06:45.070
+masz pojęcie, co robi aplikacja, zwłaszcza teraz, kiedy przeszedłeś przez aplikację, możesz zgadnąć,
+
+00:06:45.070 --> 00:06:48.670
+gdzie każdy z nich z tych punktów są używane.
+
+00:06:48.670 --> 00:06:57.580
+Przejdźmy od razu do przodu, widzimy, że jest to projekt reaktora i nie możemy po prostu otworzyć
+
+00:06:57.580 --> 00:06:59.770
+naszego folderu źródłowego.
+
+00:06:59.770 --> 00:07:05.410
+Zwykle będą miały folder komponentu i inne foldery, które mogą zobaczyć.
+
+00:07:05.410 --> 00:07:07.560
+Ale czy zawsze chcesz zacząć od kart indeksowych.
+
+00:07:07.590 --> 00:07:08.390
+Tak.
+
+00:07:08.620 --> 00:07:13.080
+Upewnij się, że widzisz, że jakiekolwiek biblioteki, z których korzystają, wygląda na
+
+00:07:13.150 --> 00:07:20.110
+to, że używają lepszej strony do stylizacji, a na sztywnym indeksie wygląda na to, że nie ma tu żadnego dostawcy,
+
+00:07:20.110 --> 00:07:24.730
+więc nie używają redux, tylko zwykłą, ponownie działającą aplikację, punktem wejścia jest aplikacja.
+
+00:07:24.730 --> 00:07:26.650
+Więc znowu idziemy do APT.
+
+00:07:26.680 --> 00:07:30.610
+Tak i widzimy, co ma główny składnik.
+
+00:07:30.670 --> 00:07:33.800
+Widzimy, że używają tutaj wielu komponentów.
+
+00:07:34.000 --> 00:07:39.790
+I pierwszą rzeczą, którą lubię zrobić, to przyjrzeć się początkowemu stanowi aplikacji.
+
+00:07:39.790 --> 00:07:45.390
+Ponownie, ponieważ używamy teraz reduxa, stan zwykle żyje w komponentach i widzimy, że istnieje wyjściowy obraz,
+
+00:07:45.400 --> 00:07:50.200
+którego jesteście, mamy coś, co nazywa się Box, którego nie jesteśmy zbyt pewni.
+
+00:07:50.410 --> 00:07:56.530
+Widzimy, że droga jest seinen jest podpisana jest fałszywa, a następnie mamy informacje użytkownika ponownie tylko patrząc
+
+00:07:56.530 --> 00:07:57.490
+na stan.
+
+00:07:57.490 --> 00:08:02.570
+Mamy wyobrażenie o tym, jak będą wyglądać informacje o aplikacji.
+
+00:08:02.640 --> 00:08:11.690
+Stan i aplikacja widzimy, że wszystko w porządku, mamy użytkownika obciążenia, mamy lokalizację obliczenia twarzy i znowu dlatego jest
+
+00:08:12.040 --> 00:08:13.360
+to ważne.
+
+00:08:13.360 --> 00:08:19.210
+Nazwij swoje funkcje bardzo dobrze, ponieważ jeśli masz nowego członka zespołu wchodzącego na projekt, to fajnie
+
+00:08:19.210 --> 00:08:24.840
+jest powiedzieć "OK", więc oblicza to, gdzie jest umiejscowienie twarzy, i zdjęcie po nazwisku.
+
+00:08:25.300 --> 00:08:27.800
+Mamy pudełko na wyświetlacz.
+
+00:08:27.940 --> 00:08:34.750
+Mamy wprowadzoną zmianę, która prawdopodobnie mogłaby być nieco bardziej opisowa na przycisku Samit i widzimy,
+
+00:08:34.750 --> 00:08:42.080
+że wykonujemy kilka świeżych połączeń, więc na przycisku Samit wygląda bardzo ważna, ponieważ mamy Thach inny
+
+00:08:42.350 --> 00:08:45.550
+rok i robimy wszystkie te rzeczy.
+
+00:08:45.550 --> 00:08:47.740
+Powinniśmy wrócić do tego i zobaczyć, co robi.
+
+00:08:48.940 --> 00:08:52.490
+Mamy zmianę trasy, która znowu wygląda na to, że obsługujemy trasy.
+
+00:08:52.690 --> 00:08:56.260
+Podoba mi się również spojrzenie na komponent, główny składnik i widzenie.
+
+00:08:56.260 --> 00:09:02.660
+W porządku, więc ładują cząsteczki nawigacyjne, które widzimy tutaj.
+
+00:09:02.800 --> 00:09:12.690
+Te szkolne tło, które się porusza, widzimy, że mamy nawigację z Simonem i zmieniamy, a potem widzimy, że jeśli
+
+00:09:13.410 --> 00:09:20.590
+trasa jest w domu, dajemy im link do linku obrazu i rozpoznawanie twarzy.
+
+00:09:20.760 --> 00:09:24.750
+A jeśli nie, to dajemy im logowanie lub rejestrację.
+
+00:09:24.750 --> 00:09:31.610
+Tak więc od razu mamy pomysł na strukturę aplikacji i po prostu patrząc na to widzimy, gdzie możemy
+
+00:09:31.610 --> 00:09:34.290
+poprawić sposób, w jaki można oczyścić rzeczy.
+
+00:09:34.460 --> 00:09:41.090
+Widzimy również, że ten składnik aplikacji staje się całkiem duży dzięki tym wszystkim metodom, może może być
+
+00:09:41.570 --> 00:09:46.550
+dobrze, gdy zacznie się przyglądać lub może mieć więcej niż jeden kontener.
+
+00:09:46.760 --> 00:09:52.170
+Wszystkie rzeczy, które możesz zrobić, przeglądając kod, ale chcę dać ci notatkę boczną.
+
+00:09:52.340 --> 00:09:57.170
+Wielu programistów, którzy pierwszy raz przychodzą do projektu, krytykuje.
+
+00:09:57.290 --> 00:10:03.410
+Patrzą na ten kod i mówią: "Powiedz dobrze, co się dzieje z tym wszystkim, to jest okropne, wygląda to tak brzydko, jak to
+
+00:10:03.620 --> 00:10:07.570
+z tym związane, i umieść nazwę funkcji zmiany, która w ogóle nie jest opisowa.
+
+00:10:07.580 --> 00:10:14.370
+Ktokolwiek to napisał, jest tak głupi, że powinienem to zmienić i o, to jest zbyt brzydkie jak te panie.
+
+00:10:14.390 --> 00:10:17.100
+To już zbyt wiele komplikacji, które powinniśmy przełamać.
+
+00:10:17.150 --> 00:10:20.800
+Powinniśmy mieć tutaj dodatkowe komponenty, które są dużo lepsze.
+
+00:10:20.810 --> 00:10:27.380
+A dzieje się tak bardzo, gdy ktoś wchodzi do projektu i natychmiast zaczyna
+
+00:10:27.380 --> 00:10:28.550
+krytykować kod.
+
+00:10:28.640 --> 00:10:31.380
+I tak, są rzeczy, które możemy poprawić tutaj.
+
+00:10:31.520 --> 00:10:39.020
+Ale starszy programista wie, że kiedy przychodzą do projektu, niekoniecznie musi oh, dlaczego wprowadzili
+
+00:10:39.020 --> 00:10:41.240
+i wprowadzili zmiany tutaj.
+
+00:10:41.240 --> 00:10:48.170
+To takie nie opisowe imię, ale nie było ich tam, kiedy ta funkcja była uruchomiona.
+
+00:10:48.320 --> 00:10:51.110
+Nie było ich podczas tworzenia tego komponentu.
+
+00:10:51.290 --> 00:10:58.370
+Kiedy zapadła decyzja, aby uczynić routing w ten sposób iz tym brakiem informacji, nie
+
+00:10:58.370 --> 00:11:01.940
+masz takiego prawa, aby koniecznie krytykować.
+
+00:11:01.940 --> 00:11:07.430
+Mam na myśli konstruktywną krytykę i stwierdzenie, że można ją ulepszyć, to dobry sposób patrzenia na nią,
+
+00:11:07.430 --> 00:11:11.780
+ale nie możesz iść i powiedzieć, że to źle, to jest okropny kod.
+
+00:11:12.170 --> 00:11:17.990
+Muszę to wszystko naprawić, ponieważ nie wiesz, co twórcy w tamtym czasie wiedzieli, być może, byli pod
+
+00:11:18.020 --> 00:11:19.320
+wpływem kryzysu czasu.
+
+00:11:19.400 --> 00:11:26.840
+Może szkolili młodszego dewelopera i to był ich pierwszy PR jako starszy programista.
+
+00:11:26.850 --> 00:11:32.580
+Patrzysz na to w beznamiętny sposób, patrząc na kod widząc, gdzie w
+
+00:11:32.580 --> 00:11:40.170
+przyszłości będziesz chciał poprawić kod, ale bez krytyki, po prostu będąc całkowicie neutralnym, ponieważ kiedy przychodzisz do
+
+00:11:40.230 --> 00:11:45.240
+projektu, celem nie jest wyróżnianie się i poprawianie wszystkiego. lepszy.
+
+00:11:45.240 --> 00:11:51.420
+Celem jest zintegrowanie projektu z zespołem i wspólna praca nad ulepszeniem projektu.
+
+00:11:52.220 --> 00:11:56.750
+Wiem, że w pewnym sensie przeszedłem tutaj na styczną, ale jest to
+
+00:11:56.750 --> 00:12:03.770
+tak ważne, ponieważ jest to coś, co widzę przez cały czas i naprawdę jest to niefortunna cecha, myślę, że
+
+00:12:03.770 --> 00:12:11.000
+niektórzy z czołowych programistów, których widziałem, mają to, na co patrzą. kod neutralnie bez krytyki lub po prostu styczna, powróćmy
+
+00:12:11.000 --> 00:12:12.620
+na właściwe tory.
+
+00:12:12.620 --> 00:12:12.860
+W porządku.
+
+00:12:12.860 --> 00:12:16.320
+Spójrzmy tylko na przycisk "Prześlij dalej".
+
+00:12:16.370 --> 00:12:22.280
+Jeśli przejdę do przycisku "przekaż dalej", podczas gdy wygląda jak formularz linku do obrazu, włączam i wyłączam
+
+00:12:22.280 --> 00:12:25.440
+przycisk "on", ale zmienia się tylko według nazw.
+
+00:12:25.460 --> 00:12:26.190
+Wiem to.
+
+00:12:26.200 --> 00:12:26.920
+W porządku.
+
+00:12:26.930 --> 00:12:28.980
+Najprawdopodobniej to.
+
+00:12:29.090 --> 00:12:32.360
+A więc ten przycisk wykrywania, w którym wykonujemy wszystkie te wywołania fecche.
+
+00:12:32.360 --> 00:12:38.600
+Wydaje się najważniejszą częścią aplikacji i mogę rzucić okiem na te wywołania fecche, aby zobaczyć, co dzieje
+
+00:12:38.600 --> 00:12:39.980
+się w aplikacji.
+
+00:12:39.980 --> 00:12:45.730
+W porządku, więc pobieram do obrazu localhost 3000 RL.
+
+00:12:45.770 --> 00:12:54.050
+Więc to jest nasz serwer API, a my robimy żądanie postu i ten obraz Jaro, jeśli przejdziemy do tego punktu końcowego, widzimy,
+
+00:12:55.240 --> 00:12:58.010
+że oh tak, obsługuje on wywołanie API.
+
+00:12:58.010 --> 00:13:07.490
+Pamiętaj, że właśnie to wywołuje interfejs API clarify i obsługuje wywołanie API i to wszystko.
+
+00:13:07.500 --> 00:13:08.600
+Zwraca dane.
+
+00:13:08.640 --> 00:13:14.360
+Od razu widzimy, że dobrze, że otrzymujemy dane z wyjaśnienia.
+
+00:13:14.460 --> 00:13:22.270
+Będzie miał odpowiedź i ta odpowiedź, jeśli otrzymamy odpowiedź, którą zrobimy, a nie fess do obrazu i
+
+00:13:22.360 --> 00:13:24.560
+punktu, który jest put.
+
+00:13:24.730 --> 00:13:29.330
+A jeśli pamiętasz, to był punkt końcowy, który zwiększał nasze wpisy.
+
+00:13:29.350 --> 00:13:38.020
+Jeśli wszystko powiedzie się, a otrzymamy odpowiedź, zwiększamy liczbę wpisów o 1, a gdy już
+
+00:13:38.020 --> 00:13:45.420
+to wszystko otrzymamy, aktualizujemy stan, aby zwiększyć liczbę użytkowników i drzew.
+
+00:13:45.490 --> 00:13:46.660
+Ok, to ma sens.
+
+00:13:46.660 --> 00:13:52.310
+Tak właśnie dzieje się, gdy trafimy w detekcję, a liczba ta rośnie tutaj.
+
+00:13:52.750 --> 00:13:54.570
+Ale co z wykrywaniem twarzy.
+
+00:13:54.580 --> 00:13:58.880
+Cóż, po raz pierwszy wykryliśmy, że mamy tu ładne imię, gdy wszystko przechodzi.
+
+00:13:58.960 --> 00:14:02.780
+Wyświetlamy rodzaj twarzy dziwnej nazwy.
+
+00:14:02.830 --> 00:14:06.180
+Wpadłem na to, ale prawdopodobnie można by poprawić.
+
+00:14:06.400 --> 00:14:10.640
+I mówi, że wyświetlamy twarz obliczając położenie twarzy.
+
+00:14:10.690 --> 00:14:16.180
+Znów dobrze się czyta, wiemy, co się tutaj dzieje.
+
+00:14:16.220 --> 00:14:21.190
+A potem oczywiście mamy elementy, które możemy obejrzeć, ale wszystkie
+
+00:14:21.260 --> 00:14:26.740
+są wystarczająco opisowe i mamy pomysł, czy potrzebujemy funkcji, w którą można zaglądać.
+
+00:14:27.200 --> 00:14:28.340
+Więc idź.
+
+00:14:28.400 --> 00:14:33.740
+Nie było tak źle, po prostu przeglądając kod pod kątem punktów końcowych, a następnie niektórych
+
+00:14:33.740 --> 00:14:35.330
+głównych kontenerów i komponentów.
+
+00:14:35.360 --> 00:14:42.200
+Mamy pojęcie o tym, co robi aplikacja i nie musisz od razu rozumieć całego kodu, ponieważ pojawi się on z
+
+00:14:42.290 --> 00:14:45.480
+czasem, gdy zaczniesz pracować nad funkcjami i błędami.
+
+00:14:45.500 --> 00:14:51.170
+Odkryjesz różne fragmenty kodu, ponieważ gdy bazy kodu stają się coraz
+
+00:14:51.170 --> 00:14:56.520
+większe, coraz trudniej jest mieć wszystko w głowie, jak działa.
+
+00:14:56.540 --> 00:15:01.850
+Więc nie czuj się przytłoczony, jeśli przyjdziesz do projektu i mają mnóstwo folderów, że nie masz pojęcia,
+
+00:15:01.850 --> 00:15:02.780
+co robią.
+
+00:15:03.630 --> 00:15:04.880
+Jak z niczym.
+
+00:15:05.040 --> 00:15:06.990
+Po prostu idź kawałek po kawałku.
+
+00:15:06.990 --> 00:15:13.380
+Zapoznaj się z koncepcjami wysokiego poziomu, w jaki sposób wszystko pasuje do siebie, w jaki sposób połączone
+
+00:15:13.380 --> 00:15:19.780
+są kropki i kiedy żądanie funkcji, takie jak Hey, może sprawić, że wykryje więcej niż jedną twarz, gdy nadejdzie.
+
+00:15:19.800 --> 00:15:26.040
+Rozpoczynasz pracę nad tą funkcją i poznajesz prawdopodobnie komponent rozpoznawania
+
+00:15:26.280 --> 00:15:32.530
+twarzy, a może funkcję obliczania położenia twarzy i powoli zaczynasz rozumieć projekt.
+
+00:15:32.580 --> 00:15:38.110
+Ale najważniejsze jest to, że chcesz mieć pojęcie o tym, jaki jest ogólny obraz.
+
+00:15:38.190 --> 00:15:40.050
+Nigdy nie skupiaj się na małych rzeczach.
+
+00:15:40.050 --> 00:15:45.820
+Zawsze zaczynaj od dużego obrazu i powoli zmniejsz ostrość.
+
+00:15:45.850 --> 00:15:50.440
+Dlatego powiedzieliśmy, że musimy zaimplementować funkcję, o którą prosił Bruno.
+
+00:15:50.560 --> 00:15:59.200
+To znaczy mieć wiele detekcji twarzy, ponieważ jeśli wrócę tutaj i zrobimy obraz, ma on wiele twarzy.
+
+00:15:59.200 --> 00:16:06.450
+Pozwól mi zobaczyć, czy mogę mieć ludzi, a ty obejrzyjmy to zdjęcie.
+
+00:16:06.580 --> 00:16:13.110
+Zamierzam skopiować adres obrazu i wkleić go tutaj.
+
+00:16:13.900 --> 00:16:15.490
+Och, mam taki, który jest dobry.
+
+00:16:15.490 --> 00:16:19.530
+Powiedzmy, że jesteś i klikam tekst.
+
+00:16:19.640 --> 00:16:19.990
+W porządku.
+
+00:16:20.000 --> 00:16:25.080
+Wygląda na to, że poprawia tylko jedną twarz, ale nie drugą.
+
+00:16:25.100 --> 00:16:30.920
+W następnym filmie naprawimy to na podstawie widoku kodu, który właśnie zrobiliśmy na podstawie analizy,
+
+00:16:30.920 --> 00:16:34.430
+którą właśnie zrobiliśmy i wykonujemy to w inteligentny sposób.
+
+00:16:34.460 --> 00:16:36.330
+Zobaczę w następnym moim.

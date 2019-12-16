@@ -1,0 +1,166 @@
+﻿WEBVTT
+
+00:00:01.780 --> 00:00:09.800
+Bine ați venit înapoi, așa cum am discutat în introducere, deoarece aplicațiile noastre merg de la site-uri web simple
+
+00:00:09.800 --> 00:00:16.740
+pe site-uri fiscale la site-uri web video cum ar fi YouTube sau jocuri de seară vă puteți
+
+00:00:16.740 --> 00:00:27.400
+imagina că acum trimitem mai mult și mai mult Javascript decât oricând înainte clientului nostru browser și vă amintiți cum a arătat o aplicație atunci când
+
+00:00:27.400 --> 00:00:31.480
+am lucrat cu re-act de pe pagina noastră DML.
+
+00:00:31.510 --> 00:00:34.900
+Tocmai am avut un element simplu.
+
+00:00:34.930 --> 00:00:43.000
+Am avut eticheta diferențiată cu o idee despre rădăcină și re-acționăm doar să ne atașăm la
+
+00:00:43.000 --> 00:00:52.800
+acel element rădăcină Id și apoi să redăm toate DML prin reactarea elementelor doar prin acea etichetă div din HDMI.
+
+00:00:53.200 --> 00:00:56.290
+Și așa funcționează aplicațiile redate pe partea clientului.
+
+00:00:57.790 --> 00:01:07.790
+Vezi spre deosebire de randarea pe partea de server unde serverul raspunde cu o pagina ASTM complet încărcata, care este gata
+
+00:01:07.790 --> 00:01:16.510
+sa fie redata utilizatorului, cu redarea pe partea clientului, devine o oase destul de goala pe o pagina
+
+00:01:16.750 --> 00:01:23.040
+shemale care se leaga de fisierele javascript ce trebuie executate si descărcat.
+
+00:01:23.220 --> 00:01:31.590
+Vedem aici că mai întâi solicităm e-mailul nostru și că în timp ce facem că avem un spinner
+
+00:01:31.590 --> 00:01:38.190
+de încărcare sau o pagină necompletată, așteptăm ca ceva să fie redat în browser.
+
+00:01:38.340 --> 00:01:43.380
+Odată ce ajunge dosarul DML, observăm câteva fișiere javascript.
+
+00:01:43.950 --> 00:01:51.240
+Și pentru că nu există nimic de oferit, așteptăm ca fișierele javascript să fie descărcate.
+
+00:01:51.420 --> 00:01:59.700
+Apoi, așteptăm ca acestea să fie evaluate și apoi în cele din urmă în timp ce urmărim încă acest
+
+00:02:00.240 --> 00:02:08.610
+ecran de încărcare odată ce tot ceea ce se face pagina noastră se încarcă și devine interactivă și o putem vedea.
+
+00:02:08.850 --> 00:02:15.990
+Acum beneficiați de acest lucru, deși trebuie să așteptăm un pic, este că, odată ce această
+
+00:02:16.590 --> 00:02:23.610
+pagină devine interactivă, dacă faceți clic pe un link de pe această pagină pentru a
+
+00:02:23.610 --> 00:02:31.500
+încărca mai mult conținut, browserul nu trebuie să facă o altă cerere către server 're redarea elementelor
+
+00:02:31.500 --> 00:02:40.700
+în browser prin re-acționa prin logica prin javascript astfel că folosind javascript va încărca conținut nou și noi biblioteci și noi
+
+00:02:40.750 --> 00:02:42.980
+vizualizări pe pagina web.
+
+00:02:43.160 --> 00:02:49.070
+Și aceasta este mult mai rapidă, deoarece încărcați doar o secțiune foarte mică a paginii noi.
+
+00:02:49.070 --> 00:02:55.220
+Deci, de exemplu, dacă am avea o bară de meniuri în partea de sus care nu trebuie să fie redată, putem doar să rearanjăm
+
+00:02:55.220 --> 00:02:56.040
+sau orice altceva.
+
+00:02:56.090 --> 00:02:59.010
+Poate că profilul este sub.
+
+00:02:59.450 --> 00:03:05.380
+Ca și în cazul în care vă amintiți în exemplul nostru de vânătoare de produse se încarcă numai părți din pagina web.
+
+00:03:05.510 --> 00:03:08.460
+Și acum este mult mai rapid.
+
+00:03:08.580 --> 00:03:16.500
+Există, de asemenea, o problemă aici, chiar și cu randarea de pe partea clientului, uneori aveți aceste pagini goale, unde oamenii pun doar
+
+00:03:16.800 --> 00:03:23.720
+încărcarea unui spinner sau a unei pagini goale, în timp ce așteptăm ca această redare inițială să se întâmple.
+
+00:03:24.600 --> 00:03:32.220
+Sa vedem cum arata aspectul de redare a serverului cu aspectul de redare a serverului arata
+
+00:03:32.220 --> 00:03:33.220
+cam diferit.
+
+00:03:35.190 --> 00:03:44.640
+Imediat puteți vedea că prin SSR se face mult mai rapid cu privire la cererea inițială în comparație cu partea Klein
+
+00:03:44.880 --> 00:03:52.890
+rendered, ceea ce a trebuit să așteptăm un pic mai mult pentru că serverul nostru răspunde acum cu
+
+00:03:53.100 --> 00:04:00.870
+o pagină complet redată, astfel încât să putem afișa ceva pentru utilizator în timp ce javascriptul este descărcat
+
+00:04:00.870 --> 00:04:03.130
+și evaluat în fundal.
+
+00:04:03.210 --> 00:04:09.810
+Dar, de asemenea, observați că pagina noastră nu devine interactivă până în acest moment, până când acești
+
+00:04:10.140 --> 00:04:12.500
+doi pași de javascript se execută.
+
+00:04:12.900 --> 00:04:16.830
+Deci avem încă același punct de interactivitate.
+
+00:04:17.010 --> 00:04:23.520
+Singura diferență este că pentru utilizator acest site web apare mult mai rapid, deoarece afișează lucrurile pe pagină
+
+00:04:23.520 --> 00:04:25.020
+mult mai repede.
+
+00:04:25.020 --> 00:04:28.780
+Ei au mai puțin timp uitându-se la spinner-ul de încărcare.
+
+00:04:28.820 --> 00:04:31.080
+În regulă, există decizia noastră.
+
+00:04:31.310 --> 00:04:36.680
+Privind aceste două lucruri este clar că trebuie să facem redarea de la server, să renunțăm la toate
+
+00:04:36.680 --> 00:04:41.600
+proiectele noastre de redare a clienților, tot ceea ce am învățat până acum, este o risipă.
+
+00:04:41.600 --> 00:04:43.140
+Stați așa bine.
+
+00:04:44.500 --> 00:04:49.510
+Nu este chiar completă sau corectă, ca în cazul a ceva.
+
+00:04:49.690 --> 00:04:52.380
+Există argumente pro și contra pentru tot.
+
+00:04:53.190 --> 00:04:58.620
+Și înainte de a intra în momentul în care doriți să efectuați randarea de pe partea clientului
+
+00:04:58.620 --> 00:05:06.450
+atunci când doriți să efectuați redarea pe partea serverului, permiteți-vă o pauză deoarece sunt sigur că aveți o întrebare acum dacă putem transforma o
+
+00:05:06.690 --> 00:05:09.470
+aplicație de pagină într-o aplicație redată pentru server.
+
+00:05:09.510 --> 00:05:15.070
+Putem face ca prietenii noștri să se transforme într-o parte a serverului sau pe o hartă rendered este chiar posibilă.
+
+00:05:15.330 --> 00:05:20.440
+Deoarece puteți vedea cât de ușor este să faceți dacă tocmai ați avut un simplu flux de pagini.
+
+00:05:20.520 --> 00:05:28.190
+Dar dacă aveați o aplicație web dinamică ca o aplicație cu o singură pagină, atunci ar putea fi ceva mai dificilă.
+
+00:05:28.220 --> 00:05:30.810
+Așa că voi vedea în următorul videoclip.

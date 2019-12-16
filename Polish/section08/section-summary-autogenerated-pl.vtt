@@ -1,0 +1,268 @@
+﻿WEBVTT
+
+00:00:02.220 --> 00:00:06.540
+Dobrze Sugoi to po prostu nadal wygląda świetnie.
+
+00:00:06.540 --> 00:00:10.050
+I dziękuję za wszystkie informacje na temat renderowania po stronie serwera.
+
+00:00:10.050 --> 00:00:10.760
+Myślę, że masz rację.
+
+00:00:10.770 --> 00:00:15.660
+Nie wydaje mi się, żebyśmy potrzebowali Roburów, abyśmy teraz byli na serwerze, ale być może przy przyszłych
+
+00:00:15.740 --> 00:00:17.950
+projektach moglibyśmy użyć czegoś podobnego. Właściwie tak.
+
+00:00:18.210 --> 00:00:18.990
+Dzięki jeszcze raz.
+
+00:00:19.110 --> 00:00:20.250
+Naprawdę to doceniam.
+
+00:00:20.250 --> 00:00:21.210
+Boże, jesteś niesamowity.
+
+00:00:23.640 --> 00:00:24.230
+W porządku.
+
+00:00:24.240 --> 00:00:25.200
+Zrobiliśmy to jeszcze raz.
+
+00:00:25.230 --> 00:00:29.330
+Kolejne zadanie wykonane dla Bruno i Kaikohe Corp ..
+
+00:00:29.490 --> 00:00:35.430
+Mamy nadzieję, że teraz czujesz się komfortowo z koncepcją renderowania po stronie serwera i
+
+00:00:35.660 --> 00:00:43.840
+renderowania po stronie klienta, a Ty możesz podjąć inteligentną decyzję, kiedy używać tego, co darmowe. Pamiętaj, że renderowanie po stronie serwera
+
+00:00:43.840 --> 00:00:50.450
+jest dobre dla witryn statycznych. Początkowe ładowanie stron jest szybsze, a SEO zdecydowanie lepiej z nimi.
+
+00:00:51.980 --> 00:00:59.260
+Wadą jest to, że nadal pełni rolę przeładowania strony, renderowanie może być wolniejsze z tego powodu.
+
+00:00:59.660 --> 00:01:08.000
+I mamy wiele żądań do serwera, ponieważ zwiększało to złożoność renderowania po stronie klienta
+
+00:01:08.120 --> 00:01:08.740
+aplikacji.
+
+00:01:08.780 --> 00:01:13.250
+Z drugiej strony było naprawdę dobre dla bogatych interakcji.
+
+00:01:13.370 --> 00:01:21.710
+Szybkie renderowanie witryny sieci Web po początkowym załadowaniu i było to dobre narzędzie dla aplikacji internetowych, ale miało
+
+00:01:21.710 --> 00:01:26.330
+tę wadę, że MCO było naprawdę trudne do uzyskania.
+
+00:01:26.660 --> 00:01:30.020
+I miałeś już dłuższy wstępny ładunek.
+
+00:01:30.240 --> 00:01:36.530
+Teraz, aby zakończyć, chcę pokazać trzy wykresy, które moim zdaniem są naprawdę pomocne.
+
+00:01:38.300 --> 00:01:45.530
+Pierwszym znakiem, na który patrzymy, jest to, jak regularnie japonki renderowały blokady strony, mamy
+
+00:01:45.530 --> 00:01:46.620
+pierwszą prośbę.
+
+00:01:46.810 --> 00:01:54.080
+Zbliża się i zaczynamy od tego, zaczynamy żądać wszystkich naszych zasobów, w tym naszego
+
+00:01:54.200 --> 00:01:58.470
+dużego pliku javascript, do którego dociera plik javascript.
+
+00:01:58.470 --> 00:02:04.210
+Następnie jest analizowany i analizowany, a nasz widok jest ostatecznie malowany.
+
+00:02:04.440 --> 00:02:06.310
+I mamy interaktywność.
+
+00:02:06.480 --> 00:02:15.090
+Zobaczysz, że zajmie dużo czasu, aby rzeczywiście mieć sprawną stronę i już omawialiśmy te dwa bity, drugi
+
+00:02:17.500 --> 00:02:21.220
+wykres jest z renderowaniem po stronie serwera.
+
+00:02:21.410 --> 00:02:31.070
+Mamy początkową prośbę HMO, ale ponieważ mamy informacje na temat naszej strony shemale,
+
+00:02:31.880 --> 00:02:34.480
+uzyskujemy szybszy widok.
+
+00:02:34.490 --> 00:02:40.130
+Problem polegający na tym, że możemy mieć widok namalowany na ekranie, ale musimy poczekać,
+
+00:02:40.130 --> 00:02:43.010
+aż skrypt JavaScript zostanie przeanalizowany i przeanalizowany.
+
+00:02:43.130 --> 00:02:49.400
+Mamy więc coś, co nazywa się niesamowitą doliną, gdzie strona wygląda na gotową
+
+00:02:49.400 --> 00:02:56.890
+i możesz zacząć klikać przycisk, ale nie zacznie działać, dopóki cała ta obsługa javascript nie zostanie załatwiona.
+
+00:02:56.940 --> 00:02:59.620
+Może więc jest lepsze rozwiązanie.
+
+00:03:00.790 --> 00:03:09.060
+Być może możemy użyć czegoś, co nazywane jest progresywnym renderingiem idei progresywnego renderowania i wiesz,
+
+00:03:09.270 --> 00:03:15.720
+o czym mówiliśmy w trakcie kursu, że wysyłamy tylko to, czego
+
+00:03:15.720 --> 00:03:18.380
+potrzebujesz do początkowego renderowania.
+
+00:03:18.510 --> 00:03:26.560
+Następnie stopniowo udostępniasz więcej funkcji i stron w tle, gdy przychodzi więcej rzeczy.
+
+00:03:27.120 --> 00:03:30.260
+Więc możesz pamiętać podział kodu.
+
+00:03:30.420 --> 00:03:31.520
+To jest to.
+
+00:03:31.770 --> 00:03:40.260
+Podział kodu wysyłał tylko to, czego potrzebowaliśmy, do frontowego końca powyżej obciążenia, które przesłało wszystko, czego potrzebujemy,
+
+00:03:40.380 --> 00:03:42.030
+do frontowego końca.
+
+00:03:42.180 --> 00:03:48.000
+A potem, gdy strona zostanie załadowana dla użytkownika, wtedy zaczęliśmy ładować wszystkie skrypty w tle może
+
+00:03:48.000 --> 00:03:52.550
+nowa strona Ibby na pasku menu tylko wtedy, gdy użytkownik ją kliknie.
+
+00:03:54.660 --> 00:04:00.700
+Chodzi o to, abyśmy otrzymali początkową prośbę HMO i nie mamy tego niesamowitego doliny,
+
+00:04:00.810 --> 00:04:07.560
+które działają naprawdę naprawdę szybko, a my po prostu powoli stopniowo uruchamiamy naszą aplikację w tle
+
+00:04:07.560 --> 00:04:09.630
+bez zauważania przez użytkownika.
+
+00:04:09.630 --> 00:04:18.220
+I rzeczywiście możesz to zobaczyć ponownie w dokumentach ponownie, jeśli przejdziemy do strony Riak i
+
+00:04:18.220 --> 00:04:19.510
+otworzę zakładkę.
+
+00:04:19.510 --> 00:04:26.600
+Jeśli przejdę do sieci i odświeżam, widzę, że ściągam mnóstwo rzeczy.
+
+00:04:26.600 --> 00:04:30.730
+Widzimy, że istnieje ta linia obciążenia, która jest czerwoną linią.
+
+00:04:30.770 --> 00:04:32.540
+Tak więc strona internetowa została załadowana.
+
+00:04:32.690 --> 00:04:42.260
+Ale potem mamy wszystkie te rzeczy, które wydają się ładować w tle, próbując uzyskać
+
+00:04:42.260 --> 00:04:44.410
+to stopniowe ładowanie.
+
+00:04:44.420 --> 00:04:53.470
+Bardzo fajne i wiele firm korzysta z tego rodzaju szybkiego tworzenia witryn internetowych.
+
+00:04:53.530 --> 00:04:58.750
+Duże firmy takie jak Flipkart czy Ali Express.
+
+00:04:59.020 --> 00:05:04.660
+A potem pojawia się pomysł serwowania skorupy lub szkieletu.
+
+00:05:04.930 --> 00:05:13.330
+Firmy takie jak Flipkart i Ali Express używają tego, gdy serwer renderuje powłokę lub szkielet ekranu, który
+
+00:05:14.140 --> 00:05:21.730
+jest od razu drukowany, więc wydaje się, że zawartość ładuje się natychmiast, nawet jeśli w
+
+00:05:21.730 --> 00:05:25.390
+tle rzeczywiście dzieje się po stronie klienta.
+
+00:05:26.890 --> 00:05:32.650
+Teraz jest to kombinacja i strategiczne, dlaczego wysyłasz na front i dlaczego renderujesz
+
+00:05:32.650 --> 00:05:33.820
+na serwerze.
+
+00:05:33.820 --> 00:05:35.490
+I o tym należy pamiętać.
+
+00:05:35.530 --> 00:05:40.190
+Znowu jako starszy programista zawsze się komplikuje.
+
+00:05:40.200 --> 00:05:44.900
+W każdej sytuacji nigdy nie jest czarno-biała prawda czy zła.
+
+00:05:44.920 --> 00:05:50.590
+Próbujesz dowiedzieć się, co jest najlepszą rzeczą, jaką możesz zrobić, i możesz wziąć fragmenty po stronie klienta
+
+00:05:51.040 --> 00:05:55.290
+i renderowaniu po stronie serwera, aby działał zgodnie ze swoimi potrzebami.
+
+00:05:55.300 --> 00:06:03.040
+Na przykład istnieje narzędzie o nazwie wstępnie wyrenderowany IO i pozwala on na indeksowanie witryn
+
+00:06:03.040 --> 00:06:10.690
+javascript dla wyszukiwarek. Robi to poprzez fakt, że ma usługę, w której renderuje stronę, a
+
+00:06:10.720 --> 00:06:15.560
+Ty możesz zapisać to, co uczyniło shemale Fałszery.
+
+00:06:15.760 --> 00:06:18.400
+Jest wiele rzeczy, które możesz zrobić.
+
+00:06:18.400 --> 00:06:25.630
+Chodzi o to, że chcesz wiedzieć, jak działają, a następnie sam decydujesz, jaką drogę
+
+00:06:25.630 --> 00:06:31.760
+chcesz wybrać i jakie elementy chcesz od siebie zabrać, aby zakończyć.
+
+00:06:31.760 --> 00:06:35.490
+Rozmawialiśmy o renderowaniu po stronie klienta po stronie serwera.
+
+00:06:35.540 --> 00:06:42.600
+Rzuciliśmy okiem na wspaniałe biblioteki, takie jak apaszki, które ułatwiają tworzenie dynamicznych aplikacji po stronie serwera.
+
+00:06:43.040 --> 00:06:51.200
+Dowiedzieliśmy się również, że firmy takie jak Priceline Walmart Airbnb są wielkim fanem rzeczy takich jak renderowanie po stronie
+
+00:06:51.200 --> 00:06:58.910
+serwera, ponieważ dbają o to, że wielu klientów przechodzi przez Osseo i chcą się upewnić, że jest to
+
+00:06:58.910 --> 00:07:01.920
+tak szybkie, jak to tylko możliwe.
+
+00:07:01.940 --> 00:07:08.500
+Ale inne strony internetowe mogą nie być tak zainteresowane i dodawać, że dodatkowa warstwa złożoności.
+
+00:07:08.690 --> 00:07:15.290
+Próbują więc zrobić coś, co jest renderowane po stronie klienta, ale również wystarczająco
+
+00:07:15.290 --> 00:07:19.370
+progresywne, gdy minimalizują ilość javascript wysyłanego do treści.
+
+00:07:19.390 --> 00:07:25.210
+Myślę, że Brunos jest zadowolony z naszej decyzji, że aplikacja Roble friends nie musi być po stronie serwera.
+
+00:07:25.210 --> 00:07:26.540
+Jest już dość szybki.
+
+00:07:26.540 --> 00:07:32.230
+Nasze pliki javascript są dość małe i nie dbamy zbytnio o Osseo z naszymi Roble przyjaciółmi.
+
+00:07:32.230 --> 00:07:35.640
+Myślę więc, że dobrze trzymamy się renderowania po stronie klienta.
+
+00:07:35.740 --> 00:07:39.170
+Jak myślisz, co zobaczę w następnej sekcji.

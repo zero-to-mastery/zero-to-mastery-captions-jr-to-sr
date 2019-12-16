@@ -1,0 +1,346 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:11.940
+Witaj ponownie tutaj, dla ciebie Mam prosty, ekspresowy serwer, który pokazuje, jak działa ponowne renderowanie po
+
+00:00:11.940 --> 00:00:13.770
+stronie serwera.
+
+00:00:15.090 --> 00:00:19.410
+Jedźmy jeden po drugim, aby dowiedzieć się, co się dzieje.
+
+00:00:19.500 --> 00:00:25.710
+A tak przy okazji, jeśli nie jesteś zbyt znajomy używając knode i express, polecam sprawdzić mój
+
+00:00:25.710 --> 00:00:26.890
+inny kurs.
+
+00:00:27.040 --> 00:00:30.850
+W przeciwnym razie zakładając, że czujemy się z tym komfortowo, jest to dość łatwe.
+
+00:00:30.850 --> 00:00:35.570
+Wszystko, co robimy, to importowanie biblioteki Express, aby utworzyć nasz serwer.
+
+00:00:35.650 --> 00:00:46.510
+Więc po prostu robimy ekspresowe, aby stworzyć nasz serwer aplikacji i we własnym wierszu 10 Mówię, że aplikacja używa Xpress dot static
+
+00:00:46.840 --> 00:00:51.130
+i nie potrzebuję tego plusa do publicznego folderu.
+
+00:00:51.130 --> 00:00:52.740
+Co to znaczy.
+
+00:00:52.840 --> 00:01:02.000
+Oznacza to, że chcę udostępniać pliki statyczne, takie jak pliki CSSA obrazów i pliki javascript
+
+00:01:02.000 --> 00:01:06.190
+przy użyciu wbudowanego oprogramowania statycznego Express.
+
+00:01:06.230 --> 00:01:13.190
+Więc jeśli kiedykolwiek będziesz pracował z EXPRESS To tylko standardowy plik dowolnego typu, który chcemy zrobić.
+
+00:01:13.190 --> 00:01:20.360
+Znowu, jeśli nasza aplikacja ma pliki CSSA, będziemy musieli dodać ją na górze naszego serwera i zamierzamy użyć
+
+00:01:20.720 --> 00:01:26.930
+publicznego folderu, który mogę nazwać, co chcę, ale to jest folder publiczny, który my "
+
+00:01:27.140 --> 00:01:29.740
+będziemy mieli nasze pliki statyczne.
+
+00:01:31.050 --> 00:01:37.200
+I zignorujmy teraz linię 12 i przejdźmy do linii 13. tutaj.
+
+00:01:38.480 --> 00:01:47.390
+Widzimy tutaj, że mamy re-act dot stworzyć żywności i faktycznie nie trzeba tego robić, jak sugeruje
+
+00:01:47.390 --> 00:01:48.080
+nazwa.
+
+00:01:48.140 --> 00:01:55.760
+To po prostu mówi, że chcemy stworzyć element będący elementem ponownego działania z aplikacji, więc ta aplikacja, którą
+
+00:01:56.120 --> 00:02:03.350
+importuję, może być naszym plikiem Apogee z naszym komponentem Riak, w którym to przypadku nie musimy tego
+
+00:02:03.770 --> 00:02:09.650
+robić lub może to być plik, który ma jakiś silnik widoku, taki jak.
+
+00:02:09.750 --> 00:02:17.070
+Tak i chcemy przekonwertować tę składnię typu "shemale" i ponownie wprowadzić składnię.
+
+00:02:17.610 --> 00:02:20.510
+Tak czy inaczej linia 13 po prostu oznacza po prostu.
+
+00:02:20.520 --> 00:02:22.380
+Mamy naszą aplikację robo znajomych.
+
+00:02:22.380 --> 00:02:27.600
+W naszym przypadku możemy po prostu mieć nasz apt naszego pliku js, jak mamy na naszym front end.
+
+00:02:27.870 --> 00:02:36.000
+Odtąd wszystko, co robimy, to Express, możemy zrobić DOT powiedzieć, że w katalogu
+
+00:02:36.000 --> 00:02:44.370
+głównym, więc jeśli robię Roble znajomych dot com slash zrobię żądanie pobierania i to
+
+00:02:44.370 --> 00:02:49.760
+się zwróci serwer zwróci odpowiedź, która renderuje indeks.
+
+00:02:49.770 --> 00:02:53.040
+Więc znowu tu wrócimy shemale.
+
+00:02:53.040 --> 00:02:57.930
+Zamierzamy wyrenderować indeks z treścią.
+
+00:02:58.440 --> 00:03:06.040
+I w tym przypadku sprawy różnią się od strony klienta, którą widzisz z przyjaciółmi Robur, tak naprawdę
+
+00:03:06.040 --> 00:03:08.110
+nigdy nie potrzebowaliśmy serwera.
+
+00:03:08.110 --> 00:03:11.880
+Właśnie dostaliśmy pliki Cline, które zostaną dostarczone.
+
+00:03:11.890 --> 00:03:20.740
+Moglibyśmy po prostu umieścić go gdzieś na takich stronach, na których znajdują się pliki statyczne Sir.
+
+00:03:20.890 --> 00:03:24.680
+Teraz tutaj używamy czegoś, co nazywa się renderowaniem.
+
+00:03:24.880 --> 00:03:32.380
+I widzisz tutaj, że renderowanie na ciąg pochodzi od czegoś, co nazywa się serwerem Dohm o nazwie
+
+00:03:32.380 --> 00:03:40.730
+"re-act" i jest to specjalny pakiet, którego używasz, gdy robisz renderowanie po stronie serwera z ponownym aktem, jak sugeruje
+
+00:03:40.730 --> 00:03:41.570
+nazwa.
+
+00:03:41.570 --> 00:03:44.290
+Wszystko to robi i jest całkiem proste.
+
+00:03:44.290 --> 00:03:52.310
+Wszystko, co robi, to powiedzenie, że hej właśnie wyrenderował aplikację robo friends, po prostu wydrukujcie cały wygląd buntowników
+
+00:03:52.310 --> 00:03:54.720
+i zamienili się w String.
+
+00:03:54.740 --> 00:04:00.930
+Ponieważ kiedy rozmawiamy między serwerem a klientem, musimy wysłać tekst.
+
+00:04:00.950 --> 00:04:04.870
+Nie możemy po prostu wysłać rzeczywistego, ponieważ dobrze, że po prostu nie zadziała.
+
+00:04:05.030 --> 00:04:11.300
+Za każdym razem, gdy wysyłamy informacje przez kabel, wysyłamy SMS-y, dlatego używamy
+
+00:04:11.300 --> 00:04:19.560
+rzeczy takich jak Jason Parsons, a tu, na naszych przyjaciołach robo, również dajemy im kilka rekwizytów.
+
+00:04:19.580 --> 00:04:25.700
+Tak więc ten proces wygląda tak, że podajemy tylko niektóre dane w naszym przypadku tylko
+
+00:04:25.700 --> 00:04:32.990
+dlatego, że robimy renderowanie po stronie serwera, wyślijmy im trochę robotów Jaison Więc to może roboty, które są
+
+00:04:32.990 --> 00:04:39.920
+bardzo popularne, kiedy chcemy wyświetlać użytkownik bez wysyłania żądania API lub wykonywania wywołania pobierania może mamy go w
+
+00:04:39.920 --> 00:04:46.460
+naszym folderze publicznym, a my po prostu piszemy robota, który jest w aktach i dajemy mu
+
+00:04:46.460 --> 00:04:50.790
+trzy obiekty robotów, które możemy przekazać jako rekwizyty solidnym przyjaciołom.
+
+00:04:50.960 --> 00:04:52.650
+I to właśnie tutaj robimy.
+
+00:04:52.790 --> 00:05:02.980
+Wszystko, co tutaj robimy, to użycie modułu FS z węzła, który mówi, że właśnie przeczytali ten plik i ten format kodowania,
+
+00:05:03.000 --> 00:05:05.220
+który jest prawie standardem.
+
+00:05:05.250 --> 00:05:10.690
+Myślę, że jeśli zostawisz to puste, pozostaniesz ten sam, ponieważ jest to domyślne.
+
+00:05:10.830 --> 00:05:17.800
+I znowu robimy Jason parce, ponieważ musimy wysłać rzeczy przez tekst.
+
+00:05:17.880 --> 00:05:23.760
+Chcemy się upewnić, że jest on parsowany i gotowy, abyśmy mogli przesłać go przez przewody
+
+00:05:23.910 --> 00:05:25.370
+do przeglądarki klienta.
+
+00:05:26.350 --> 00:05:31.660
+Teraz, chociaż niektóre z tego mogą być nowe, nie jest tak źle.
+
+00:05:31.680 --> 00:05:34.880
+Na koniec dnia jest tylko kilka linijek kodu.
+
+00:05:34.890 --> 00:05:45.280
+Wszystko, co robimy, to przekształcanie naszej aplikacji do ponownego wykorzystywania naszej aplikacji, po prostu wywołanie Randera w celu przekształcenia go w ciągi
+
+00:05:45.270 --> 00:05:49.700
+znaków, abyśmy mogli przesłać go przez Internet do przeglądarki.
+
+00:05:49.710 --> 00:05:59.530
+Chodzi o to, że jeśli wyrenderujemy tę aplikację na serwerze, zamiast tylko tego, że mamy div z aplikacją ID
+
+00:05:59.530 --> 00:06:06.270
+na przednim końcu, tak jak zwykle robimy z aplikacjami ponownie, możemy wysłać HDMI.
+
+00:06:06.400 --> 00:06:15.580
+To już jest wypełnione wszystkimi naszymi elementami robota, dzięki czemu strona internetowa może wyświetlać naszą aplikację robo friends od razu
+
+00:06:15.580 --> 00:06:20.200
+i sprawić, że ładowanie strony wydaje się dużo szybsze.
+
+00:06:20.350 --> 00:06:23.560
+Na początku też wysyłamy kilka robotów.
+
+00:06:23.560 --> 00:06:27.600
+Tak, że ponownie dla użytkownika pojawia się o wiele szybciej.
+
+00:06:27.610 --> 00:06:37.440
+Teraz mamy do czynienia z renderowaniem po stronie serwera i reagujemy, widząc, że musimy zareagować zarówno na serwerze, jak
+
+00:06:37.860 --> 00:06:43.470
+i na przeglądarce, ponieważ początkowo wysyłamy wersję z ciągami znaków.
+
+00:06:43.500 --> 00:06:52.020
+Więc ponownie działa serwer Dom renderować ciąg, który będzie konwertować nasze reagować w górę na ciągi wysłać go przez
+
+00:06:52.020 --> 00:06:52.820
+przewód.
+
+00:06:52.860 --> 00:06:56.220
+I pojawia się w przeglądarce, ale w przeglądarce.
+
+00:06:56.220 --> 00:07:00.010
+Teraz musimy zrobić coś, co nazywa się ponownie Domem.
+
+00:07:00.030 --> 00:07:01.650
+Wodzian i.
+
+00:07:01.890 --> 00:07:05.750
+Są one używane tylko do renderowania po stronie serwera.
+
+00:07:05.940 --> 00:07:08.490
+Musisz tylko poznać te dwie rzeczy.
+
+00:07:09.480 --> 00:07:17.140
+Jeśli zadzwonisz ponownie do Dom Daut Hydroid, to tak jak wywołanie metody renderowania w naszych komponentach.
+
+00:07:17.260 --> 00:07:24.670
+Tyle tylko, że dzięki temu reaktywowanemu hydratowi Ahmada, kiedy wywołujemy to w węźle, który już
+
+00:07:24.670 --> 00:07:32.500
+ma ten serwer, renderowane znaczniki, które stworzyliśmy, zachowamy, zachowujemy znaczniki i dołączamy tylko programy obsługi zdarzeń,
+
+00:07:32.650 --> 00:07:37.620
+abyśmy mogli wejść w interakcję z naszą witryną internetową.
+
+00:07:37.780 --> 00:07:44.140
+Nadal musimy to uruchamiać, ponieważ jeśli po prostu wyślemy cokolwiek otrzymamy z serwera, to nadal nie
+
+00:07:44.170 --> 00:07:46.770
+interaktywne jest tylko tekst, który otrzymujemy.
+
+00:07:47.110 --> 00:07:55.840
+Wiem, że wydaje się to naprawdę specyficzne, aby reagować, ale zasady i idee mają zastosowanie do wszystkich bibliotek i
+
+00:07:55.840 --> 00:08:02.900
+struktur, w tym wędkarza, w tym do przeglądania wszystkiego, co działa z jednostronnymi aplikacjami jednostronnymi.
+
+00:08:03.100 --> 00:08:12.370
+Użyj czegoś w tym stylu, aby wyrenderować swoją stronę lub widok na serwerze, który
+
+00:08:12.700 --> 00:08:17.470
+wyślesz jako tekst, a następnie z
+
+00:08:17.470 --> 00:08:24.430
+przodu, możesz dołączyć detektory zdarzeń lub dowolną funkcjonalność javascript, której potrzebujesz.
+
+00:08:24.590 --> 00:08:31.280
+Znowu, kiedy zostanie to zrobione tutaj, javascript przejmuje coś, co nazywa się nawodnieniem, co
+
+00:08:31.340 --> 00:08:34.420
+daje interaktywność całej stronie, którą chcemy.
+
+00:08:34.580 --> 00:08:41.180
+Teraz możesz zastanawiać się, czy mogę czekać, aż strony internetowe będą działały bez javascript.
+
+00:08:41.180 --> 00:08:44.350
+Może nie mają tyle interaktywności, więc nie potrzebujemy nawet javascript.
+
+00:08:44.340 --> 00:08:52.120
+I tak, jedną rzeczą, którą możesz zrobić z renderowaniem po stronie serwera, jest tworzenie stron internetowych, które działają nawet bez Javascript.
+
+00:08:55.690 --> 00:09:01.930
+A także chciałem wskazać w nowej wersji tam reagować na serwerze jest coś, co nazywa się renderowaniem
+
+00:09:01.930 --> 00:09:08.620
+do strumienia węzłów, który jest bardzo bardzo podobny do renderowania do ciągu znaków, z wyjątkiem faktu, że używamy czegoś
+
+00:09:08.620 --> 00:09:12.700
+zwanego strumieniem węzłów, który sprawia, że ten proces o wiele szybciej.
+
+00:09:12.700 --> 00:09:16.720
+To trochę poprawa wydajności.
+
+00:09:16.720 --> 00:09:24.060
+Wróćmy jednak do naszego kodu, reagując na renderowanie po stronie serwera i renderowanie po stronie klienta.
+
+00:09:24.080 --> 00:09:32.250
+Widzisz, że musimy zareagować, ponieważ musimy zbudować tego donga.
+
+00:09:32.300 --> 00:09:37.880
+Jedyna różnica polega na tym, że zamiast wysyłać stronę shemale z tylko jednym
+
+00:09:37.880 --> 00:09:44.540
+dniem, ma ona pomysł na aplikację, która ponownie będzie dołączana po stronie klienta po stronie serwera.
+
+00:09:44.540 --> 00:09:53.600
+Możemy to zrobić w tym miejscu, uruchamiać i renderować na ciągi tak, że zamiast przeglądarki wykonującej pracę
+
+00:09:53.600 --> 00:10:00.740
+montażu wszystkich komponentów Riak, serwer już to zrobił dla nas i to wszystko.
+
+00:10:00.740 --> 00:10:05.150
+To są główne zasady renderowania po stronie serwera.
+
+00:10:05.150 --> 00:10:08.470
+Brzmi o wiele bardziej skomplikowanie niż jest w rzeczywistości.
+
+00:10:08.570 --> 00:10:17.450
+Właśnie zmieniamy kilka kroków, teraz używanie renderowania po stronie serwera przy ponownym wprowadzaniu ma kilka skrajnych przypadków i jest
+
+00:10:17.690 --> 00:10:23.600
+to dość trudne, ponieważ re-act został pierwotnie zbudowany dla aplikacji jednej strony.
+
+00:10:23.600 --> 00:10:28.970
+Jest więc wiele manewrów, które musisz wykonać przy wielu błędach, które pojawiają się podczas pracy z
+
+00:10:28.970 --> 00:10:30.650
+renderowaniem po stronie serwera.
+
+00:10:30.650 --> 00:10:36.400
+W nadchodzącym filmie porozmawiamy o lepszych alternatywach.
+
+00:10:36.680 --> 00:10:42.200
+Ale na razie myślę, że w następnym filmie powinniśmy porozmawiać o zaletach i wadach robienia czegoś
+
+00:10:42.200 --> 00:10:42.790
+takiego.
+
+00:10:43.790 --> 00:10:50.090
+Ponownie pamiętam, chociaż użyłem tutaj jako przykładu, zasady są jednakowe dla
+
+00:10:50.090 --> 00:10:51.840
+wszystkich typów aplikacji.
+
+00:10:52.670 --> 00:10:53.450
+Zobaczę w następnym.

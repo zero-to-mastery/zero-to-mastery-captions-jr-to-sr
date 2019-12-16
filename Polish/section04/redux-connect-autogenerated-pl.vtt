@@ -1,0 +1,499 @@
+﻿WEBVTT
+
+00:00:01.160 --> 00:00:02.750
+I witaj z powrotem.
+
+00:00:02.750 --> 00:00:10.130
+Jedna rzecz, którą zauważyłem z poprzedniego wideo, to plik Constans, powinienem upewnić się, że moja zmienna i moje
+
+00:00:10.130 --> 00:00:12.260
+ciągi są takie same.
+
+00:00:12.260 --> 00:00:16.910
+Więc dodanie podkreślenia tutaj jest poprawne.
+
+00:00:16.940 --> 00:00:27.200
+Porozmawiajmy więc o następnej części, która używa innej metody, która jest dostarczana z reduktorem reac, który jest połączony teraz
+
+00:00:30.310 --> 00:00:39.170
+ta funkcja łączenia jest zoptymalizowana, abyśmy unikali używania czegoś, co nazywa się subskrybentem punktów zapisu.
+
+00:00:39.310 --> 00:00:44.490
+Więc jeśli pamiętasz, kiedy anulowaliśmy, zaloguj się do sklepu w naszym apt.
+
+00:00:44.590 --> 00:00:50.960
+Tak, mieliśmy kilka funkcji, w tym funkcję pobierania stanu, którą zablokowaliśmy.
+
+00:00:50.960 --> 00:00:55.430
+Teraz jest też funkcja subskrypcji kropek, która subskrybuje.
+
+00:00:55.480 --> 00:01:02.510
+Każdy komponent, który jest zainteresowany, aby być świadomym redux i słuchać jakichkolwiek zmian.
+
+00:01:03.680 --> 00:01:10.400
+Ale to trochę żmudne i połączenie upraszcza proces, mówiąc po prostu, użyj funkcji łączenia.
+
+00:01:10.400 --> 00:01:17.220
+I dzięki temu będziemy świadomi istnienia składnika redux.
+
+00:01:17.430 --> 00:01:25.740
+Jeśli pamiętasz komponenty Kinect to żółte małe komponenty, które wiedzą o reduxie.
+
+00:01:25.740 --> 00:01:33.470
+Stworzyliśmy więc komponent dostawcy, który zasadniczo przekazuje sklep do komponentów.
+
+00:01:33.510 --> 00:01:35.180
+Ale teraz musimy powiedzieć, które.
+
+00:01:35.220 --> 00:01:45.870
+Który z tych komponentów Riak chcemy być sprytni lub mieć świadomość, że istnieje biblioteka redox i mogą
+
+00:01:45.870 --> 00:01:47.560
+subskrybować zmiany.
+
+00:01:47.580 --> 00:01:49.230
+Pokażę ci, jak to
+
+00:01:52.380 --> 00:01:59.040
+zrobić i ten film, a tak na marginesie ten standard w branży nazywa te pojemniki inteligentnych
+
+00:01:59.040 --> 00:02:00.340
+komponentów jak apt.
+
+00:02:00.450 --> 00:02:01.310
+Tak.
+
+00:02:01.410 --> 00:02:08.080
+Najprawdopodobniej połączymy plik digest aplikacji, ponieważ jest to kontener.
+
+00:02:08.210 --> 00:02:15.680
+Więc pierwszą rzeczą, którą zrobimy, jest przejście do APT O. JOT. W tym pliku
+
+00:02:15.740 --> 00:02:18.590
+chcemy zaimportować kilka rzeczy.
+
+00:02:18.620 --> 00:02:21.490
+Zacznijmy od importowania akcji.
+
+00:02:21.530 --> 00:02:26.250
+Zamierzam zaimportować działania, które mamy.
+
+00:02:26.480 --> 00:02:27.770
+Chodźmy tutaj.
+
+00:02:28.620 --> 00:02:32.300
+Mamy ustawioną akcję pola wyszukiwania.
+
+00:02:32.310 --> 00:02:41.210
+Zrobimy więc akcję z ustawionym polem wyszukiwania, a my zaimportujemy to z działań, które wada
+
+00:02:41.210 --> 00:02:51.030
+Japa, a ponieważ akcje sugerują, że spadają, to poziom folderów jest wyższy, ponieważ ten ostatni jest w kontenerach.
+
+00:02:51.120 --> 00:02:56.740
+Mam zamiar zrobić podwójne okresy.
+
+00:02:56.850 --> 00:03:03.720
+Zapiszmy to, a otrzymamy niezłe ostrzeżenie, że zestawy są polami wyszukiwania pola, ale nigdy nie
+
+00:03:03.720 --> 00:03:04.800
+są używane.
+
+00:03:04.920 --> 00:03:11.330
+To także jest bezpieczne, ponieważ jej plik indeksu jest doskonały.
+
+00:03:11.370 --> 00:03:16.120
+Wykorzystajmy teraz tę metodę łączenia, o której mówiłem.
+
+00:03:16.140 --> 00:03:32.540
+Więc teraz na górze zamierzam powiedzieć, importować metodę connect z re-act redux i tej metody connect.
+
+00:03:32.540 --> 00:03:33.570
+Sposób, w jaki działa.
+
+00:03:33.590 --> 00:03:40.140
+I znowu i musisz się do tego przyzwyczaić, to na samym dole, gdzie eksportujemy domyślnie.
+
+00:03:40.710 --> 00:03:50.820
+Powiemy, że połączenie będzie funkcją, a następnie inną lub inną aplikacją wokół aplikacji.
+
+00:03:50.840 --> 00:03:58.550
+Teraz ta składnia może wyglądać nieco myląco i połączyć się z czymś, co
+
+00:03:58.940 --> 00:04:09.130
+nazywamy funkcją wyższego rzędu w funkcji wyższego rzędu, to funkcja, która zwraca inną funkcję, więc połączenie będzie działało
+
+00:04:09.160 --> 00:04:15.500
+i cokolwiek łączy wewnątrz tej funkcji, zwróci inną funkcję .
+
+00:04:15.640 --> 00:04:22.250
+A ponieważ zwraca inną funkcję, uruchomi tę część razem z aplikacją.
+
+00:04:22.280 --> 00:04:28.190
+W ten sposób działają komponenty wyższego rzędu, a dowiesz się więcej na ich temat w dalszej części kariery.
+
+00:04:28.190 --> 00:04:35.330
+Ale na razie po prostu wiedz, że jest to składnia, do której musisz się przyzwyczaić i wyszczególnić znak nowej linii, abyśmy mogli
+
+00:04:35.430 --> 00:04:36.560
+lepiej to zobaczyć.
+
+00:04:37.410 --> 00:04:47.250
+W tym miejscu connect akceptuje dwa parametry, które również są standardowe. Mogę je
+
+00:04:47.470 --> 00:04:58.750
+nazwać, jak tylko chcę, ale przestrzegamy standardów reduxów, w których pierwszym stanem mapy jest rekwizyty, a
+
+00:04:58.750 --> 00:05:02.210
+drugim jest wysyłanie map.
+
+00:05:02.880 --> 00:05:08.520
+Dwie uprawy.
+
+00:05:08.580 --> 00:05:09.100
+W porządku.
+
+00:05:09.100 --> 00:05:17.560
+W tej chwili właśnie podłączyliśmy ten komponent do tego komponentu aplikacji i powiedzieliśmy, że subskrybujesz
+
+00:05:17.560 --> 00:05:21.240
+wszelkie zmiany stanu w sklepie redux.
+
+00:05:22.090 --> 00:05:28.930
+A teraz aplikacja wie, że gdzieś jest sklep redux i kiedy tylko pojawi się w nim
+
+00:05:28.930 --> 00:05:31.330
+coś, co może go zainteresować.
+
+00:05:31.390 --> 00:05:35.470
+Ale teraz musimy powiedzieć, co go interesuje.
+
+00:05:35.500 --> 00:05:42.230
+W takim stanie powinienem wysłuchać jednej wysyłki lub jakiej czynności powinienem słuchać.
+
+00:05:42.250 --> 00:05:46.820
+Wróćmy więc na szczyt i tutaj na samym szczycie.
+
+00:05:46.910 --> 00:05:55.750
+Chcemy zdefiniować te funkcje, które lub te parametry do wszystkiego, co zamierzamy zrobić, to
+
+00:05:55.840 --> 00:06:04.410
+powiedzieć, że Konst stan mapy do rekwizytów, a to otrzyma stan i ups.
+
+00:06:04.520 --> 00:06:06.980
+I zwróci obiekt i jak już
+
+00:06:09.850 --> 00:06:10.480
+mówiłem,
+
+00:06:13.730 --> 00:06:19.310
+zanim będziesz mógł nazwać to, co chcesz, ale to jest standardowa i każda aplikacja redox, którą
+
+00:06:19.310 --> 00:06:22.040
+zobaczysz, lub po prostu przyzwyczaisz się do składni.
+
+00:06:22.100 --> 00:06:25.340
+Kiedy robisz to kilka razy, staje się to drugą naturą.
+
+00:06:25.340 --> 00:06:25.690
+W porządku.
+
+00:06:25.690 --> 00:06:30.950
+I tutaj chcemy powiedzieć, że pole wyszukiwania wskazuje, że
+
+00:06:35.270 --> 00:06:41.690
+jeśli ponownie przejdziemy do naszych reduktorów, mamy tu pole wyszukiwania,
+
+00:06:44.530 --> 00:06:53.260
+to stan pola wyszukiwania będzie równy stanowi, który otrzymujemy kropką w części reduktora, który
+
+00:06:53.260 --> 00:07:01.120
+ponownie, jeśli przejdziemy do reduktorów to roboty wyszukiwania, więc szukaj w polu wyszukiwania
+
+00:07:05.330 --> 00:07:06.550
+robotów.
+
+00:07:06.560 --> 00:07:13.580
+Znowu mówi się, że pole wyszukiwania, które mamy zamiar zwrócić, które będzie używane
+
+00:07:13.970 --> 00:07:24.560
+jako rekwizyty przez komponent przeskoku, będzie pochodzić ze stanu, a nie ze stanu Stata. DOT szukaj robotów pola wyszukiwania kropek,
+
+00:07:25.010 --> 00:07:33.980
+które ponownie pochodzą od naszego producenta, ponieważ zapamiętaj w indeksie nasz plik jazzowy, w którym stworzyliśmy
+
+00:07:34.070 --> 00:07:37.220
+sklep z robotami wyszukiwania REDUCE-IT.
+
+00:07:37.250 --> 00:07:45.980
+Jeśli więc wrócimy tutaj, zapiszmy to, a nasze dopasowanie do podpory nie jest zdefiniowane.
+
+00:07:46.160 --> 00:07:53.690
+I znowu, ponieważ potrzebujemy drugiej części, która jest wysłana przez Matta do
+
+00:07:56.970 --> 00:08:07.700
+podpory. Zróbmy więc ponownie, że powiemy, że mapa Konst wysłana do rekwizytów otrzyma coś, co nazywa się wysyłką.
+
+00:08:07.830 --> 00:08:14.730
+I znowu coś, co po prostu trzeba przyzwyczaić do wysyłki, jeśli pamiętasz w naszej dyskusji
+
+00:08:14.730 --> 00:08:21.510
+o floku, jest tym, co wyzwala akcję, więc bezczynność to tylko obiekt, który stworzyliśmy.
+
+00:08:21.510 --> 00:08:29.330
+Ponownie, jeśli pamiętasz, ale aby wysłać tę akcję, potrzebujemy jeszcze czegoś zwanego wysyłką.
+
+00:08:29.360 --> 00:08:35.250
+Zostaje więc wysłany do reduktora.
+
+00:08:35.330 --> 00:08:44.750
+Tak więc ta wysyłka może teraz być używana do wysyłania akcji i sposobu, w jaki możemy powiedzieć o zmianie wyszukiwania, która jest
+
+00:08:46.040 --> 00:08:48.350
+tylko nazwą, którą mogę powiedzieć.
+
+00:08:48.360 --> 00:08:51.950
+Więc pamiętaj, że jest to rekwizyt, który otrzyma.
+
+00:08:51.950 --> 00:08:58.230
+Ale zamierzamy zachować to samo, co w naszej aplikacji o zmianach w wyszukiwaniu.
+
+00:08:58.260 --> 00:09:05.910
+I tak właśnie nazwiemy Propp, a zmiana wyszukiwania otrzyma zdarzenie, ponieważ pamięta,
+
+00:09:06.390 --> 00:09:15.270
+że jest to pole wprowadzania, które użytkownicy wpisują, i to zdarzenie ponownie, ponieważ przy
+
+00:09:15.270 --> 00:09:26.840
+zmianie wyszukiwania funkcja będzie wysyłała zestaw akcji pole wyszukiwania, ponieważ pamiętaj, że akcja jest po prostu obiektem, tylko funkcją,
+
+00:09:26.870 --> 00:09:28.870
+która zwraca obiekt.
+
+00:09:28.940 --> 00:09:30.530
+Chcemy to wysłać.
+
+00:09:30.620 --> 00:09:39.950
+Producenci wiedzą o tym, a to pole wyszukiwania, gdy zostanie wysłane, będzie słuchać.
+
+00:09:40.100 --> 00:09:47.590
+Jeśli pamiętasz, w naszych działaniach, otrzyma on tekst, który jest niezależnie od użytkownika i
+
+00:09:48.220 --> 00:09:59.100
+umieści go w tym przypadku, możemy po prostu zrobić wartość kropki docelowej kropki docelowej ponownie, tak jak mamy w wydarzeniu zmiany
+
+00:09:59.100 --> 00:10:03.520
+roku wyszukiwania, które celują w wartość .
+
+00:10:03.530 --> 00:10:07.970
+Więc jeśli to uratuję, pozwól mi trochę zmniejszyć i zaoszczędzić.
+
+00:10:07.970 --> 00:10:11.390
+Teraz mam kilka małych ostrzeżeń.
+
+00:10:11.390 --> 00:10:17.100
+Jednym z nich jest to, że pamiętajmy, że musimy zwrócić to jako obiekt.
+
+00:10:17.180 --> 00:10:30.930
+Chcemy więc powiedzieć "return", tak jak zrobiliśmy to powyżej, ze stanem, który zawiera całe nasze działanie.
+
+00:10:30.950 --> 00:10:38.340
+Ponownie mapuj stan do podpory, powiedz mi, jaki stan, jaki element stanu i muszę posłuchać, i wyślij
+
+00:10:38.350 --> 00:10:46.270
+nam rekwizyty i mapę wysłaną do wniosku, powiedzmy, hej, powiedz mi, jakie podpory, których powinienem słuchać, to działania,
+
+00:10:46.300 --> 00:10:47.720
+które trzeba wysłać.
+
+00:10:49.160 --> 00:10:52.170
+W porządku wszystko działa.
+
+00:10:52.670 --> 00:10:54.640
+Nie dostaniemy tutaj żadnych błędów.
+
+00:10:55.070 --> 00:11:01.520
+I pamiętajcie teraz, że tutaj, na łączu, wiemy, jaki stan mapy dla podpory
+
+00:11:01.530 --> 00:11:08.120
+jest mapą wysłaną do procesów i połączenie ma uruchomić pierwszą część funkcji i
+
+00:11:08.120 --> 00:11:15.950
+powiedzieć, że słucham tej części stanu i jestem zainteresowani tymi działaniami, a następnie przekaże te aplikacje
+
+00:11:16.010 --> 00:11:17.460
+do aplikacji.
+
+00:11:17.480 --> 00:11:19.260
+Oto ekscytująca część.
+
+00:11:20.160 --> 00:11:24.850
+Bo pamiętaj, że powiedziałem, że redox może zastąpić twój stan w twojej aplikacji.
+
+00:11:24.990 --> 00:11:36.490
+Mogę technicznie teraz usunąć pole wyszukiwania z tego stanu z aplikacji i mogę też usunąć przy zmianie wyszukiwania, ponieważ
+
+00:11:36.510 --> 00:11:40.290
+znowu to schodzi jako rekwizyty.
+
+00:11:40.290 --> 00:11:45.860
+Nie musimy zadeklarować go jako metody aplikacji, więc mogę to teraz skasować.
+
+00:11:46.760 --> 00:11:52.660
+A potem nie interesuje mnie już to pole wyszukiwania stanu.
+
+00:11:52.790 --> 00:11:56.780
+Mogę to usunąć, ponieważ teraz schodzi jako rekwizyty.
+
+00:11:56.990 --> 00:11:59.570
+Więc zamiast tego
+
+00:12:02.890 --> 00:12:16.180
+mogę powiedzieć, że pole wyszukiwania Konst z kapitałem F pochodzi z tego przystanku, a na końcu zmiana wyszukiwania nie pochodzi
+
+00:12:16.180 --> 00:12:21.350
+z tej zmiany wyszukiwania, która była metodą aplikacji.
+
+00:12:21.370 --> 00:12:22.520
+Pochodzi z rekwizytów.
+
+00:12:22.600 --> 00:12:31.650
+Więc znowu mogę powiedzieć na temat zmiany wyszukiwania i usunąć kropkę to powiedzmy, że i znowu dostanę
+
+00:12:35.740 --> 00:12:42.040
+błąd, mówiąc, że pole wyszukiwania nie jest zdefiniowane, ponieważ pamiętaj, że z
+
+00:12:42.040 --> 00:12:47.730
+naszym stanem redux zmieniliśmy pole wyszukiwania, aby mieć ścieżkę kapitału.
+
+00:12:47.750 --> 00:12:52.480
+Więc jeśli to zmienię, to zrozumie, że właśnie to nas interesuje.
+
+00:12:53.860 --> 00:12:57.080
+Wszystko działa.
+
+00:12:57.110 --> 00:13:06.950
+Teraz mamy małą szansę, ponieważ w naszym indeksie naszej ostatniej jesieni mamy tylko jednego wydawcę.
+
+00:13:06.980 --> 00:13:11.440
+Z tego powodu tworzymy sklep, jeśli wrócimy do APT.
+
+00:13:11.490 --> 00:13:17.460
+Stan tak naprawdę ma tylko jedno pole, a to pole wyszukiwania.
+
+00:13:17.570 --> 00:13:21.950
+Więc musielibyśmy zrobić coś takiego.
+
+00:13:22.830 --> 00:13:28.680
+Aby to zadziałało, powrócimy do tego punktu, ponieważ gdy zaczniemy
+
+00:13:29.190 --> 00:13:37.470
+dodawać więcej spokoju stanu i więcej reduktorów, będziemy musieli uzyskać stan z każdego interesującego nas elementu.
+
+00:13:37.860 --> 00:13:42.510
+Ale na razie wrócimy do tego, że powiemy tylko stanowe
+
+00:13:42.510 --> 00:13:47.630
+pole wyszukiwania, ponieważ jeśli pamiętasz, a logarytm dot w Konsole nie dostaniesz stanu.
+
+00:13:47.700 --> 00:13:49.230
+Właśnie mieliśmy pole wyszukiwania.
+
+00:13:49.530 --> 00:13:54.730
+Zapiszmy to i wróćmy.
+
+00:13:54.750 --> 00:13:55.850
+W porządku.
+
+00:13:55.950 --> 00:13:58.160
+Nic w konsoli nie jest dobre.
+
+00:13:58.230 --> 00:14:03.530
+Chwila prawdy, jeśli coś tu wpisuję.
+
+00:14:03.610 --> 00:14:04.340
+Spójrz na to.
+
+00:14:04.360 --> 00:14:11.140
+Wszystko działa, mimo że nie mamy już tutaj stanu pola
+
+00:14:11.440 --> 00:14:13.910
+wyszukiwania ani metody.
+
+00:14:14.050 --> 00:14:16.570
+Zamiast tego wszystko przechodzi przez redux.
+
+00:14:16.570 --> 00:14:28.090
+I tylko po to, żeby przetestować tę teorię, jeśli wejdę tutaj w moje ustawione pole wyszukiwania i zamiast
+
+00:14:28.090 --> 00:14:37.240
+automatycznego powrotu powiem tekst konsoli lub logu i wrócę stąd obiekt, więc idziemy tylko aby
+
+00:14:37.240 --> 00:14:44.110
+logować się w konsoli, aby sprawdzić, czy akcja jest wykonywana.
+
+00:14:44.140 --> 00:14:46.480
+Oszczędzam i wracam.
+
+00:14:46.480 --> 00:14:51.290
+Otwórzmy narzędzie na konsoli i spójrzmy na to.
+
+00:14:51.370 --> 00:14:55.890
+Wszystko, co wpisuję, jest wysyłane przez akcję.
+
+00:14:55.900 --> 00:15:01.660
+Kolejną fajną częścią jest to, że jeśli przejdę do reduktora i ponownie przetestuję
+
+00:15:01.750 --> 00:15:11.340
+wszystko, a ja mówię, że konsola psich kropek to akcja typu I to zapiszę i wracamy widzimy, że mamy zabawną akcję, która się dzieje.
+
+00:15:11.340 --> 00:15:13.980
+I to jest domyślna inicjacja redox.
+
+00:15:14.100 --> 00:15:20.520
+Teraz, jeśli kliknę cokolwiek lub coś piszę, otrzymuję zmianę wyszukiwania w polu wyszukiwania prawdziwej zmiany,
+
+00:15:20.520 --> 00:15:27.390
+ponieważ reduktor przy każdej akcji zostaje uruchomiony i mówi, że zmienił wyszukiwanie zmian w razie wystąpienia akcji.
+
+00:15:27.420 --> 00:15:29.960
+Jeśli tak, powrócę do nowego stanu.
+
+00:15:29.970 --> 00:15:31.050
+Bardzo fajny.
+
+00:15:31.050 --> 00:15:37.820
+Połączyliśmy nasze reakcje z redox i wszystko działa ładnie.
+
+00:15:38.850 --> 00:15:44.370
+Jest tu pewna podstawowa konfiguracja i wiesz, że musisz pamiętać stan
+
+00:15:44.370 --> 00:15:53.040
+mapy do mapy podpory wysłanej do rekwizytora, ale kiedy już przyzwyczaisz się do tej składni, to naprawdę ładnie i
+
+00:15:53.250 --> 00:16:01.710
+pięknie działa sposób, w jaki redox działa i jak myśmy wszystko czyszczą, gdzie wszystko płynie ładnie, tak jak
+
+00:16:01.710 --> 00:16:10.320
+wspomnieliśmy, stworzyliśmy interakcję, która zostanie wysłana do funkcji zmniejszania lub funkcję, która w oparciu o tę akcję pobiera
+
+00:16:10.320 --> 00:16:13.710
+stan i zmienia go w sklepie.
+
+00:16:13.710 --> 00:16:19.200
+A ponieważ sklep został zaktualizowany, ponownie zainteresuj się tymi komponentami, które mają zamiar
+
+00:16:19.200 --> 00:16:22.040
+posłuchać tych zmian i dokonać zmian.
+
+00:16:23.460 --> 00:16:25.260
+Bardzo fajny.
+
+00:16:25.260 --> 00:16:28.430
+W następnym filmie pojawi się kilka ciekawych rzeczy.
+
+00:16:28.620 --> 00:16:30.080
+Zobaczę na tym.
+
+00:16:30.080 --> 00:16:30.390
+PA pa.

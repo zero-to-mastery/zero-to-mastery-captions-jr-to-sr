@@ -1,0 +1,253 @@
+﻿WEBVTT
+
+00:00:02.070 --> 00:00:02.840
+Witamy spowrotem.
+
+00:00:02.850 --> 00:00:08.760
+Zaczniemy konfigurować postscripty na naszym komputerze, tak abyśmy, podobnie jak z serwerami
+
+00:00:08.770 --> 00:00:16.020
+Front-End, mieli terminal, który działa z przodu i z tyłu, i który uruchamia nasz serwer, ale także
+
+00:00:16.020 --> 00:00:22.860
+inny terminal to jest uruchomiona baza danych, ponieważ jak pamiętacie, są to po prostu komputery
+
+00:00:22.860 --> 00:00:28.880
+uruchomione gdzieś w taki sam sposób, w jaki prowadziliśmy nasz serwer na naszym komputerze.
+
+00:00:28.880 --> 00:00:35.440
+Możemy również uruchomić naszą bazę danych na naszym komputerze, a w tym filmie przygotujemy naszą wersję z postscriptami.
+
+00:00:35.670 --> 00:00:38.690
+Teraz Mongo D-B stał się popularny.
+
+00:00:38.820 --> 00:00:44.950
+Jednak nic nie przebije relacyjnej bazy danych, aby naprawdę rozwinąć swoją wiedzę na temat baz danych.
+
+00:00:44.970 --> 00:00:52.080
+Po zrozumieniu relacyjnych baz danych daje naprawdę dobre narzędzia i modele mentalne do pracy
+
+00:00:52.080 --> 00:00:56.550
+z Mongo D-B Mongo DD jest bardzo proste.
+
+00:00:56.670 --> 00:01:02.640
+Możesz myśleć o tym jak o strukturze danych, w której mamy po prostu
+
+00:01:03.030 --> 00:01:09.390
+Jaisona, który wygląda jak obiekt i przechowujemy tam te informacje wraz z relacyjnymi bazami danych.
+
+00:01:09.390 --> 00:01:11.000
+Jest bardziej skomplikowany.
+
+00:01:11.160 --> 00:01:17.060
+Więc jeśli rozumiesz to, jesteś daleko mile, jeśli chodzi o zrozumienie baz danych.
+
+00:01:17.100 --> 00:01:23.660
+Skupimy się na tym, ponieważ zasady pozostają takie same dla Mongo D-B.
+
+00:01:23.670 --> 00:01:23.990
+W porządku.
+
+00:01:24.050 --> 00:01:30.110
+Przygotujmy postscripty na naszym komputerze.
+
+00:01:30.150 --> 00:01:34.840
+Pierwszą rzeczą, którą chcemy zrobić, to pobrać coś, co nazywa się lepką.
+
+00:01:34.860 --> 00:01:42.290
+Tak więc graficzny interfejs użytkownika dla postscriptów istnieje praktycznie dla każdej bazy danych.
+
+00:01:42.600 --> 00:01:45.000
+Lubię grę na PC, ponieważ jest darmowa.
+
+00:01:45.000 --> 00:01:49.050
+Jest naprawdę dobry dla Maca i jest bardzo lekki i prosty.
+
+00:01:49.050 --> 00:01:55.500
+Dopilnuję również, aby dodawać notatki o tym, jak pobrać coś takiego i pisać post scripts w ogóle, jeśli
+
+00:01:55.560 --> 00:02:00.480
+używasz maszyny z systemem Windows, ale w przeciwnym razie kliknij link pobierania.
+
+00:02:01.520 --> 00:02:03.050
+Będzie całkowicie szybki.
+
+00:02:03.060 --> 00:02:08.290
+Po prostu otwórz to i będziesz miał coś takiego, co będzie używane podczas całego kursu.
+
+00:02:08.520 --> 00:02:11.090
+Ale jest wiele opcji i można go poszukać.
+
+00:02:11.280 --> 00:02:14.720
+Poszukujesz także postępu.
+
+00:02:15.300 --> 00:02:23.380
+A kiedy już zainstalujesz szczęśliwą kontynuację, będziesz mieć ją w folderze aplikacji i będziesz mógł podążać za nią.
+
+00:02:23.380 --> 00:02:28.970
+Teraz wróćmy do terminala, aby mieć postscripts zainstalowany, istnieje wiele sposobów i znowu podam
+
+00:02:28.970 --> 00:02:32.240
+kilka uwag o tym, jak możesz to zrobić.
+
+00:02:32.480 --> 00:02:37.520
+Ale najlepszym sposobem, szczególnie Omak, jest użycie Brue'a, o którym już rozmawialiśmy.
+
+00:02:37.640 --> 00:02:44.240
+Za każdym razem, gdy robisz coś z homebrew, jest to sposób na pobieranie pakietów z Internetu na
+
+00:02:44.240 --> 00:02:45.310
+twoim terminalu.
+
+00:02:45.320 --> 00:02:49.890
+Zawsze chcesz mieć pewność, że zrobisz aktualizację naparu, aby upewnić się, że wszystko jest zaktualizowane.
+
+00:02:53.370 --> 00:02:59.730
+A także lekarz grupowy po prostu upewniał się, że wszystko działa na twoim systemie, co
+
+00:03:03.780 --> 00:03:06.480
+jest jasne, że jest doskonałe.
+
+00:03:06.480 --> 00:03:12.470
+Gdy już to zrobisz, po prostu powiemy, że Brue instaluje
+
+00:03:14.970 --> 00:03:19.400
+post-kryzysowe wydrzenie, które zainstalujemy dla nas.
+
+00:03:19.620 --> 00:03:24.340
+Postscripts i widzisz tutaj, że mam już zainstalowane pocztówki.
+
+00:03:24.340 --> 00:03:30.070
+Ale jeśli to twój pierwszy raz, Ill przebiega przez polecenia, a potem na samym
+
+00:03:30.070 --> 00:03:32.940
+końcu mówi dokładnie, jak zacząć go używać.
+
+00:03:33.020 --> 00:03:37.340
+Ale w naszym przypadku Stelly będzie o wiele łatwiejszy w uruchamianiu postscriptów.
+
+00:03:37.340 --> 00:03:46.800
+Musisz zrobić usługi parzenia, zacząć pisać postscripts i nie martw się, to nie jest specyficzne dla postscriptów jakiejkolwiek pobieranej
+
+00:03:46.820 --> 00:03:52.080
+bazy danych, zasadniczo pobierasz oprogramowanie, a następnie chcesz uruchomić usługę.
+
+00:03:52.190 --> 00:03:58.480
+Każdy ma swoje własne polecenia, ale jest tak prosty, jak Google, i zastanawia się, jak uruchomić bazę danych.
+
+00:03:58.490 --> 00:04:02.880
+Zaczęliśmy więc postscripts Eskew, wszystko jak wygląda.
+
+00:04:02.880 --> 00:04:13.250
+Już uruchomiłem usługę i tylko po to, aby pokazać, czy rzeczywiście zatrzymam się tutaj, to zatrzyma służbę terrorystów i po prostu
+
+00:04:16.040 --> 00:04:24.470
+zacznę od nowa, a widzisz, że zaczyna się teraz, abyśmy mogli używać postscriptów, których potrzebujemy do utworzenia
+
+00:04:24.470 --> 00:04:26.200
+bazy danych .
+
+00:04:26.630 --> 00:04:35.200
+A sposób, w jaki to robimy, polega na użyciu polecenia Utwórz D-B, które pojawiło się po zainstalowaniu postscriptów.
+
+00:04:35.380 --> 00:04:37.050
+I tutaj możemy nazwać to, co chcemy.
+
+00:04:37.090 --> 00:04:40.700
+Nazwijmy ten test.
+
+00:04:40.840 --> 00:04:44.400
+Będzie tworzyć D-B I gotowe.
+
+00:04:44.440 --> 00:04:45.810
+Oto część z cytatem.
+
+00:04:45.820 --> 00:04:53.010
+Jeśli wrócę do mojego komputera, otworzy to, kiedy to zamkniemy.
+
+00:04:53.110 --> 00:04:55.420
+Mam tu sequel.
+
+00:04:55.600 --> 00:04:59.880
+I prosi o host, który jest linkiem do miejsca, w którym znajduje się baza danych.
+
+00:05:00.010 --> 00:05:04.160
+W moim przypadku znajduje się on na moim localhost prawo.
+
+00:05:04.180 --> 00:05:07.680
+Działa na moim komputerze.
+
+00:05:07.770 --> 00:05:10.740
+Więc chcesz, aby był to localhost i numer portu.
+
+00:05:10.740 --> 00:05:17.220
+Jest to domyślna słaba liczba 5:43, aby pamiętać, że mieliśmy port trzy tysiące trzy tysiące jeden
+
+00:05:17.220 --> 00:05:19.250
+na front i backend.
+
+00:05:19.290 --> 00:05:20.150
+Jest podobny do tego.
+
+00:05:20.160 --> 00:05:22.940
+Otwiera port do słuchania bazy danych.
+
+00:05:23.160 --> 00:05:28.050
+I jest to standardowy port dla postscriptów, który zobaczysz.
+
+00:05:28.050 --> 00:05:36.000
+Kiedy więc zrobiłem postęp i rozpoczęłem tworzenie D-B, domyślne ustawienie lub 5 4 3 2 było już ustawione.
+
+00:05:36.000 --> 00:05:41.100
+Mogę właściwie ustawić porty i je zmienić, ale chcemy zachować wszystko w standardzie, więc
+
+00:05:41.100 --> 00:05:43.400
+zachowamy to tak, jak jest.
+
+00:05:43.550 --> 00:05:52.260
+Jeśli teraz przejdę do bazy danych i nazwiemy to testami, znowu zrobimy testowe połączenie z bazą danych.
+
+00:05:52.270 --> 00:05:52.750
+W porządku.
+
+00:05:52.750 --> 00:05:58.840
+Jesteśmy podłączeni do bazy danych, ale nie ma tu zbyt wiele.
+
+00:05:59.090 --> 00:06:03.060
+Ale przynajmniej wiemy, że jesteśmy połączeni z testem localhost.
+
+00:06:03.160 --> 00:06:08.560
+Innym sposobem na połączenie z tą pamięcią jest to, że jest to graficzny interfejs
+
+00:06:08.560 --> 00:06:12.760
+użytkownika i pokazuję ci to, ponieważ jest naprawdę dobry do celów
+
+00:06:12.760 --> 00:06:20.740
+demo, ale chciałem wygodnie pracować z terminalami, aby zrobić to samo, co właśnie z Guti możemy ponownie wpisać PSU, co jest
+
+00:06:20.740 --> 00:06:26.530
+poleceniem, które otrzymamy po instalacji postscriptów, a my powiemy, z której bazy danych chcemy się
+
+00:06:26.530 --> 00:06:27.250
+połączyć.
+
+00:06:27.340 --> 00:06:30.640
+W naszym przypadku będzie to test.
+
+00:06:30.830 --> 00:06:32.150
+I proszę.
+
+00:06:32.330 --> 00:06:34.990
+Podobnie jak wtedy, gdy uruchamiamy węzeł i zmieniamy terminale.
+
+00:06:35.000 --> 00:06:42.440
+Teraz jesteśmy wewnątrz postscriptów, które działają na naszym komputerze, ale nie znamy jeszcze żadnych poleceń.
+
+00:06:42.440 --> 00:06:48.850
+Dewey Więc w następnym filmie zamierzamy nauczyć się kilku poleceń zwalniających i wreszcie utworzyć kilka tabel w
+
+00:06:49.270 --> 00:06:51.070
+naszej bazie danych postscript.
+
+00:06:51.100 --> 00:06:52.780
+Zobaczę to przez.

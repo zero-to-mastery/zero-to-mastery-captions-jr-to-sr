@@ -1,0 +1,415 @@
+﻿WEBVTT
+
+00:00:01.580 --> 00:00:02.530
+Bine ai revenit.
+
+00:00:02.570 --> 00:00:06.250
+Să terminăm diapozitivul cu ultimele trei puncte.
+
+00:00:07.740 --> 00:00:11.970
+Afișarea de imagini de dimensiuni diferite pentru fundaluri diferite.
+
+00:00:12.630 --> 00:00:15.030
+Din nou, asta are dreptate.
+
+00:00:15.120 --> 00:00:20.400
+Chiar acum în lume există atât de mulți oameni cu atât de multe ecrane de dimensiuni diferite pe care unii
+
+00:00:20.400 --> 00:00:23.160
+oameni le vizitează site-ul Web pe un telefon mobil.
+
+00:00:23.160 --> 00:00:29.070
+Unii oameni pot fi pe un iPad și o altă persoană, poate pe un ecran mare de afișare.
+
+00:00:29.490 --> 00:00:31.880
+Toată lumea are dimensiuni diferite ale ecranului.
+
+00:00:32.040 --> 00:00:40.530
+Deci, de ce am dori să trimitem o imagine de fundal mare, care funcționează pe un ecran TV, la cineva cu un dispozitiv
+
+00:00:40.530 --> 00:00:46.840
+mobil de ecran mobil și suntem capabili să facem ușor acest lucru folosind ceva numit interogări media.
+
+00:00:47.130 --> 00:00:48.350
+Și arată că
+
+00:00:51.100 --> 00:00:57.910
+ceva de genul că aceste interogări media sunt utile atunci când doriți să aplicați stilurile CSSA în funcție de tipul general al dispozitivului,
+
+00:00:57.910 --> 00:01:01.020
+cum ar fi dimensiunea ecranului, după cum puteți vedea aici.
+
+00:01:02.360 --> 00:01:11.570
+Caracteristicile specifice cum ar fi lățimea vederii sau mediul, cum ar fi dimensiunea ecranului și interogările media, au
+
+00:01:12.050 --> 00:01:20.010
+această sintaxă generală pe care o faci la mass-media și apoi îi dai ce fel de
+
+00:01:20.010 --> 00:01:21.560
+proprietăți doriți.
+
+00:01:21.590 --> 00:01:28.160
+De exemplu, ecranul, care 99% din timp este locul în care doriți să îl utilizați pentru un ecran
+
+00:01:28.340 --> 00:01:30.590
+pe care este vizionat site-ul Web.
+
+00:01:30.590 --> 00:01:33.120
+De asemenea, puteți schimba ceva asemănător tiparului.
+
+00:01:33.290 --> 00:01:40.960
+Și acest lucru înseamnă că acest fișier SS va fi activat atunci când este în modul ecran de imprimare, dar interogările
+
+00:01:44.590 --> 00:01:51.310
+media sunt foarte simple folosind CSX puteți furniza de fapt o imagine de fundal diferită pentru diferitele dimensiuni
+
+00:01:51.310 --> 00:01:54.310
+ale ecranului pe care partea dvs. le oferă.
+
+00:01:55.470 --> 00:02:01.900
+Aceasta înseamnă că trebuie să salvați imaginile în diferite dimensiuni de fișiere pentru ca acestea să funcționeze.
+
+00:02:02.280 --> 00:02:07.120
+Dar cred că doar uitam la acest lucru s-ar putea să nu aibă sens, așa că lasă-mă să vă dau un exemplu.
+
+00:02:08.070 --> 00:02:12.420
+Am aici un site Web care va folosi de fapt ca exercițiu.
+
+00:02:12.600 --> 00:02:19.530
+La sfârșitul acestei secțiuni, pentru a optimiza lucrurile, este un fișier index simplu și veți vedea sarcina de acolo, va
+
+00:02:19.530 --> 00:02:21.690
+trebui să faceți mai târziu.
+
+00:02:21.780 --> 00:02:28.500
+Dar pentru moment, să ne concentrăm doar asupra faptului că este foarte simplu, are doar un text de salut și o
+
+00:02:28.820 --> 00:02:33.060
+imagine pe care o încarcă unele SS și, de asemenea, unele javascript.
+
+00:02:33.060 --> 00:02:39.920
+Lucrul în care vrem să ne păsăm cu adevărat este prima linie care curge prima foaie de stil și această foaie
+
+00:02:39.920 --> 00:02:40.920
+de stil aici.
+
+00:02:40.940 --> 00:02:51.400
+După cum am spus, utilizează interogările media și puteți vedea aici că avem de folosit de
+
+00:02:51.400 --> 00:02:54.390
+trei ori fundalul corpului.
+
+00:02:54.500 --> 00:02:58.150
+Avem calea obișnuită pe care am văzut-o înainte.
+
+00:02:58.220 --> 00:02:59.340
+Fundalul este galben.
+
+00:02:59.690 --> 00:03:08.420
+Dar apoi avem și interogări media care spun că vrem o interogare media pentru orice ecran care are o lățime
+
+00:03:08.420 --> 00:03:10.850
+minimă de 900 de pixeli.
+
+00:03:10.850 --> 00:03:21.350
+În acest caz, vreau să încarc corpul CSSA pentru a avea un fundal cu un u r l a imaginii pe care o oferim pentru el,
+
+00:03:21.350 --> 00:03:25.070
+care arată ca o imagine destul de masivă.
+
+00:03:27.150 --> 00:03:35.440
+Cu câteva sintaxe CSSA pentru ao face frumos și avem și o interogare Nunda pentru că putem folosi cât mai multe pe care
+
+00:03:35.440 --> 00:03:36.530
+le dorim.
+
+00:03:36.640 --> 00:03:43.740
+Asta spune același lucru, cu excepția momentului în care dorim să spunem că lățimea maximă este de 500 de pixeli.
+
+00:03:43.820 --> 00:03:51.140
+Deci, să vedem ce face de fapt și ce ar putea fi aceste diferențe.
+
+00:03:52.270 --> 00:03:58.790
+Am site-ul web care rulează aici și puteți vedea că este un site web foarte simplu, dar cred că arată
+
+00:03:58.790 --> 00:04:01.200
+destul de bine în special Stargell aici.
+
+00:04:02.040 --> 00:04:08.000
+Dar verificați acest lucru când am schimbat dimensiunea ecranului din acest fundal
+
+00:04:11.130 --> 00:04:12.650
+doar la galben.
+
+00:04:15.000 --> 00:04:26.280
+Și fundalul meu doar a apelat la imagine, astfel încât, în funcție de imaginile dimensiunea ecranului sunt încărcate sau este
+
+00:04:26.280 --> 00:04:32.390
+galben interesant, astfel încât interogările mass-media la locul de muncă
+
+00:04:35.730 --> 00:04:45.270
+ceea ce spun este dacă voi deschide instrumente de dezvoltare și merge în elementele pe care le
+
+00:04:45.960 --> 00:04:56.470
+vedem peste aici avem stilurile noastre pentru corp și aceste stiluri au un ecran media cu bărbații cu
+
+00:04:56.470 --> 00:04:59.050
+peste 900 de pixeli.
+
+00:04:59.050 --> 00:05:07.210
+Deci vedem că ori de câte ori lățimea minimă a ecranului este de peste 900 de pixeli.
+
+00:05:07.270 --> 00:05:16.660
+Vreau să aplic acest CSSA, care are sens atunci când îl facem mai mic și mai mic și mergem sub 900 de pixeli
+
+00:05:19.560 --> 00:05:27.210
+se transformă în galben și vedem în colțul din dreapta sus aici cum ne arată dimensiunea pixelilor.
+
+00:05:27.260 --> 00:05:32.010
+Dar, de îndată ce am avut mai puțin de 900, avem un fundal galben.
+
+00:05:32.260 --> 00:05:35.640
+Și apoi, de îndată ce am lovit 500, pentru
+
+00:05:39.060 --> 00:05:46.500
+că de îndată ce lățimea maximă este de 500 de pixeli Ei bine, avem un u r l încă o dată.
+
+00:05:46.710 --> 00:05:50.730
+Și vedeți aici că nu se calculează dimensiunea fundalului, iar fundalul este un
+
+00:05:50.730 --> 00:05:51.130
+pic.
+
+00:05:51.150 --> 00:05:52.520
+Deci, să rezolvăm asta.
+
+00:05:52.740 --> 00:05:58.440
+Vom spune că acoperăm cu asta.
+
+00:05:58.480 --> 00:05:59.010
+Acolo te duci.
+
+00:05:59.020 --> 00:05:59.880
+Asta arata mult mai bine.
+
+00:06:00.950 --> 00:06:02.660
+Deci, asta e interogări media.
+
+00:06:02.690 --> 00:06:06.990
+Vă voi lăsa resursele la sfârșitul videoclipului, astfel încât să puteți încerca singur.
+
+00:06:07.250 --> 00:06:16.400
+Dar am uitat să menționez un lucru interesant pe care l-ați putea gândi bine chiar dacă ecranul original al
+
+00:06:16.460 --> 00:06:23.680
+utilizatorului a spus că utilizatorul are un ecran iPad care este de această dimensiune.
+
+00:06:23.760 --> 00:06:28.680
+Încă mai încărcăm imaginea în fundal.
+
+00:06:28.720 --> 00:06:33.040
+Vreau să spun că nu mai avem nevoie să facem asta bine, să o verificăm.
+
+00:06:33.050 --> 00:06:35.600
+Acesta este un lucru la care vom intra și vom pune pe videoclipuri.
+
+00:06:35.600 --> 00:06:40.590
+Dar vreau să vă arăt doar un exemplu minunat pe care îl șterg aici.
+
+00:06:40.590 --> 00:06:42.430
+Accesați rețeaua atingeți-o.
+
+00:06:42.450 --> 00:06:48.130
+Îmi va arăta de îndată ce reîmprospătesc toate fișierele care sunt încărcate pentru acest site Web pentru
+
+00:06:48.450 --> 00:06:49.050
+a
+
+00:06:51.740 --> 00:06:53.610
+reîmprospăta și am niște fișiere aici.
+
+00:06:53.970 --> 00:07:00.800
+Dar dacă arăți că am CSSA javascript am imaginea câinelui imaginea catelului de aici.
+
+00:07:02.790 --> 00:07:03.720
+Acolo te duci.
+
+00:07:04.110 --> 00:07:08.850
+Dar nu există o imagine de fundal deoarece nu avem nevoie de dimensiunea ecranului.
+
+00:07:08.910 --> 00:07:17.650
+Dacă șterg acest lucru și de îndată ce am făcut-o un pic mai mare văd că imaginea a fost descărcat.
+
+00:07:20.430 --> 00:07:26.840
+Deci, browserul este suficient de inteligent pentru a ști să descarce doar ceea ce are de fapt nevoie.
+
+00:07:27.150 --> 00:07:33.750
+Dacă nu are nevoie de imaginea de fundal masiv Ei bine, nu este nevoie să
+
+00:07:34.080 --> 00:07:38.640
+o încărcați și tocmai ne-am salvat o grămadă de timp.
+
+00:07:38.870 --> 00:07:40.710
+Adică cât de cool e asta.
+
+00:07:42.000 --> 00:07:46.900
+Deci, interogările mass-media sunt foarte importante, mai ales dacă aveți utilizatori folosesc dimensiuni diferite ale ecranului
+
+00:07:47.260 --> 00:07:50.650
+care în această zi și vârstă sunt destul de comune.
+
+00:07:52.160 --> 00:07:52.520
+In regula.
+
+00:07:52.550 --> 00:07:54.320
+Deci asta e.
+
+00:07:54.320 --> 00:07:56.410
+Să mergem la ultimele două puncte.
+
+00:07:56.510 --> 00:08:08.430
+Utilizați capete de CD sau rețele de distribuire a conținutului, cum ar fi imaginea X și eliminați datele meta date. Să vorbim despre aceste imagini. X este doar un
+
+00:08:10.250 --> 00:08:14.290
+exemplu al unui instrument pe care îl putem folosi.
+
+00:08:14.420 --> 00:08:20.690
+Și după cum puteți vedea de pe site-ul lor Web, ceea ce fac este bine să aibă grijă de toate imaginile pentru tine.
+
+00:08:20.690 --> 00:08:21.790
+Ei le optimizează.
+
+00:08:21.800 --> 00:08:22.640
+Ei le livrează.
+
+00:08:22.640 --> 00:08:27.880
+Ei folosesc ceva numit caching despre care vom vorbi în partea de performanță 3.
+
+00:08:27.950 --> 00:08:34.550
+Ei spun că ne dă toate imaginile dvs. indiferent de cât de mari sunt acestea, indiferent
+
+00:08:34.550 --> 00:08:41.890
+cât de optimizate sunt doar încărcați-le pe site-ul nostru Web și apoi vă vom da înapoi un dvs..
+
+00:08:42.320 --> 00:08:43.580
+Și asta ești tu.
+
+00:08:43.680 --> 00:08:47.490
+Puteți să-l conectați doar la oricare dintre site-urile dvs. web.
+
+00:08:47.730 --> 00:08:49.310
+Deci asta ești aici.
+
+00:08:49.320 --> 00:08:56.310
+Pot pune o imagine XBRL pe care o primesc din fotografia pe care tocmai l-am încărcat și ei au grijă să-l
+
+00:08:56.310 --> 00:09:00.420
+optimizeze și să se asigure că este cel mai mic posibil.
+
+00:09:00.420 --> 00:09:03.400
+Și ei folosesc și ceva numit rețele de distribuire a conținutului.
+
+00:09:03.420 --> 00:09:10.260
+Deci, din nou, ceva care va intra într-o parte de performanță trei, dar acestea permit acces mai rapid
+
+00:09:10.260 --> 00:09:14.630
+prin serverele de imagini, în loc să-l încarcă pe noi înșine.
+
+00:09:17.070 --> 00:09:18.120
+Deci, e drăguț.
+
+00:09:19.710 --> 00:09:22.110
+Și apoi, în cele din urmă, asta va fi înfiorător.
+
+00:09:22.930 --> 00:09:26.460
+Vrem să eliminăm meta tagurile pentru fotografii.
+
+00:09:26.530 --> 00:09:27.620
+Ce inseamna asta.
+
+00:09:28.090 --> 00:09:34.270
+Ei bine, există un site Web foarte cool aici, pe care voi lega și ceea ce fac sunt ei
+
+00:09:34.270 --> 00:09:37.100
+vă permit să eliminați meta tag-urile unei fotografii.
+
+00:09:37.660 --> 00:09:43.730
+Ce inseamna asta este ca majoritatea fotografiilor, atunci cand le luati o poza, sa zicem cu o camera digitala.
+
+00:09:43.960 --> 00:09:50.650
+Nu numai să fotografiați, ci și să salvați câteva date despre locul în care a fost capturată fotografia dispozitivul pe care
+
+00:09:50.650 --> 00:09:53.540
+nu l-am avut nevoie pe un site Web.
+
+00:09:53.620 --> 00:09:56.010
+Dar, mai presus de toate, este, de asemenea, un fel de înfiorător.
+
+00:09:56.200 --> 00:10:02.240
+Nu vrem să avem neapărat o imagine despre noi, poate să ne plimbăm pe munte.
+
+00:10:02.350 --> 00:10:08.870
+Și pentru ca oamenii să vadă unde a fost luată fotografia ceea ce a fost dispozitivul meu și toate informațiile pe care
+
+00:10:08.870 --> 00:10:14.750
+le-am permis să vă arăt printr-un exemplu, am o imagine aici pe care am descărcat-o de pe web.
+
+00:10:14.750 --> 00:10:16.750
+Este o imagine simplă cu barca.
+
+00:10:16.990 --> 00:10:27.560
+Dacă deschid acest lucru și pe acest site web și dau click pe Vizualizați EXIF ​​corect că arată-mi unde a fost făcută
+
+00:10:27.560 --> 00:10:37.970
+această imagine care arată că a fost luată și bita ne dă coordonatele GPS și ne spune toate informațiile despre cameră că
+
+00:10:37.970 --> 00:10:48.550
+a fost luată pe un iPhone 4 și bine că nu numai că nu ne dorim asta din motive de confidențialitate, dar asta
+
+00:10:48.550 --> 00:10:55.660
+e și date suplimentare pe care nu trebuie să le avem în fotografia noastră.
+
+00:10:55.670 --> 00:10:58.010
+Acestea sunt informații suplimentare și dimensiuni suplimentare.
+
+00:10:58.510 --> 00:11:03.540
+Deci, pot să dau clic pe Eliminați și să priviți la asta.
+
+00:11:03.540 --> 00:11:13.220
+Acum am o nouă fotografie că, dacă mă duc să ajustez mărimea, văd că această fotografie este asta.
+
+00:11:13.290 --> 00:11:16.210
+Această fotografie este o sută treizeci și șapte de kilobyte.
+
+00:11:17.200 --> 00:11:19.510
+Dacă mă întorc la fotografia
+
+00:11:23.020 --> 00:11:32.360
+originală, să o punem una lângă alta și pentru asta trebuie doar să faceți clic pe o dimensiune exactă pe care o vedem.
+
+00:11:32.620 --> 00:11:39.380
+Este cu siguranță mult mai mare și nimic nu sa schimbat în imagine și am salvat cu adevărat trei kilobyte.
+
+00:11:39.610 --> 00:11:47.620
+Dar am reușit să înlăturăm atacurile Met și acest lucru este bun pentru performanță, dar, evident, și motive de
+
+00:11:47.620 --> 00:11:48.320
+securitate.
+
+00:11:49.320 --> 00:11:51.320
+Foarte tare.
+
+00:11:51.360 --> 00:11:58.150
+Așadar, să examinăm folosind toate aceste grupuri de sănătate enumerate aici.
+
+00:11:58.270 --> 00:12:05.730
+Suntem capabili să salvăm o mulțime de transferuri pe care trebuie să le facă un client și un server.
+
+00:12:06.160 --> 00:12:12.270
+Și aceasta este o problemă uriașă în special cu imaginile și folosind toate aceste tehnici putem să
+
+00:12:12.600 --> 00:12:20.670
+ne asigurăm că site-urile noastre web sunt performante, așa că sperăm să țineți acest text pe ecran acum să aveți sens pentru voi
+
+00:12:20.670 --> 00:12:22.380
+Voi vedea în următoarea.

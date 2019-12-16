@@ -1,0 +1,292 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:07.220
+Nasi gracze robo, za którymi tęskniliśmy, nie widzieliśmy naszych przyjaciół Robo od dłuższego czasu,
+
+00:00:07.220 --> 00:00:13.010
+ale chcę zademonstrować niektóre z buforujących rzeczy, które dzieją się za kulisami z przyjaciółmi z gumy.
+
+00:00:13.130 --> 00:00:19.700
+Jeśli otworzę narzędzia programistyczne, pamiętaj, że powiedziałem, że strona klienta lub przeglądarka ma masę mechanizmów buforujących, aby upewnić
+
+00:00:19.730 --> 00:00:24.930
+się, że nasza aplikacja Robo Friends działa tak szybko, jak to tylko możliwe.
+
+00:00:26.370 --> 00:00:29.620
+Cóż, jeśli odświeżę twoje.
+
+00:00:29.860 --> 00:00:37.090
+Dostaję wszystkie te prośby, ale sprawdź zakładkę rozmiaru, aby było trochę większe.
+
+00:00:37.930 --> 00:00:46.830
+Widzimy, że mówi nasz plik HMO nasz plik CSSA, a nasz plik javascript pochodzi od pracownika serwisu.
+
+00:00:46.860 --> 00:00:53.390
+Nie ma z nim powiązanego rozmiaru, ponieważ jest on buforowany przez pracownika serwisu.
+
+00:00:53.440 --> 00:01:01.630
+Zapamiętaj, jak pracownik serwisu jest czymś, co pozwala nam przechwytywać żądania SCDP i będzie sprawdzać pamięć podręczną i
+
+00:01:01.630 --> 00:01:06.850
+powiedzieć hej, czy już to mam. Mam już CSSA, mam już javascript
+
+00:01:07.120 --> 00:01:11.570
+i po prostu zwracam go, nie trafiając na serwer.
+
+00:01:12.480 --> 00:01:14.400
+No tak, właśnie tak jest.
+
+00:01:14.460 --> 00:01:22.250
+Jeśli wrócimy do zakładki aplikacji, zobaczymy, że tak, mamy pamięć podręczną udostępnioną przez przeglądarkę.
+
+00:01:22.440 --> 00:01:28.890
+Zimne przechowywanie gotówki i tutaj spoglądam na to, że mam wszystkie pliki, które zapisałem w pamięci podręcznej, w tym moją czcionkę, mój javascript to mój
+
+00:01:29.220 --> 00:01:31.970
+CSSA mój H. T. Poczta.
+
+00:01:32.160 --> 00:01:35.390
+Wszystkie są zapisane w pamięci podręcznej, zapisane w przeglądarce.
+
+00:01:36.260 --> 00:01:42.500
+Mamy też coś, co nazywa się pamięcią podręczną aplikacji, która jest starszą formą historii pamięci podręcznej, której
+
+00:01:42.500 --> 00:01:43.970
+nie używa wiele osób.
+
+00:01:44.150 --> 00:01:51.230
+Ale widzisz, że mamy taką zdolność w przeglądarce, aby pamiętać rzeczy, ale to nie tylko ten rajd.
+
+00:01:51.430 --> 00:01:57.430
+Mamy również takie rzeczy jak przechowywanie sesji, o których mówiliśmy, gdzie mogę przechowywać informacje, takie jak
+
+00:01:57.430 --> 00:02:03.280
+kluczowe informacje o wartości, takie jak trzymanie żetonów, ale może on tutaj robić ciekawe rzeczy,
+
+00:02:03.490 --> 00:02:10.300
+w których trzymasz być może przedmioty i inne informacje, które mogą być przydatne do zapamiętania przez Twoją aplikację bez
+
+00:02:10.300 --> 00:02:13.420
+konieczności wracania do serwera lub wykonywania tych żądań.
+
+00:02:13.420 --> 00:02:15.490
+I znowu samo dla lokalnego magazynu.
+
+00:02:15.490 --> 00:02:23.050
+Możesz nawet używać takich rzeczy, jak indeksowane IDB lub indeks D-B, który jest często używany w
+
+00:02:23.770 --> 00:02:31.030
+aplikacjach mobilnych, gdzie masz małą mini-bazę danych w przeglądarce, aby upewnić się, że nie podróżujesz,
+
+00:02:31.270 --> 00:02:34.770
+przesyłając żądania przez przewody na duże odległości.
+
+00:02:36.290 --> 00:02:43.220
+Teraz, jeśli wrócimy do zakładki Network Widzimy także, że jeśli przewinę o połowę z pamięci podręcznej pamięci, do której był
+
+00:02:43.280 --> 00:02:49.460
+dostęp, ponieważ to odświeżenie miało miejsce, gdy już odwiedziłem tę stronę wcześniej i to pamięta i widzisz,
+
+00:02:50.210 --> 00:02:52.700
+że to wszystko z pamięci .
+
+00:02:52.700 --> 00:02:54.260
+Jest bardzo szybki.
+
+00:02:54.260 --> 00:03:01.400
+A potem mam również wysyłkę i wiemy wszystko o tych, które znamy z pamięci, którą znamy z dysku, a
+
+00:03:01.460 --> 00:03:03.800
+także dowiedzieliśmy się o pracownikach serwisowych.
+
+00:03:03.800 --> 00:03:12.350
+A jeśli odświeżę ponownie, wszystkie te rzeczy są nadal przechowywane w pamięci podręcznej, jeśli wykonuję intensywne odświeżanie,
+
+00:03:12.350 --> 00:03:17.740
+więc mówię w porządku. Chcę opróżnić pamięć podręczną i przeładować.
+
+00:03:17.740 --> 00:03:18.520
+Proszę bardzo.
+
+00:03:18.610 --> 00:03:20.970
+Ta strona internetowa zajęła trochę więcej czasu.
+
+00:03:21.070 --> 00:03:21.940
+I widzimy to.
+
+00:03:21.970 --> 00:03:22.290
+Tak.
+
+00:03:22.300 --> 00:03:29.200
+Zażądaliśmy, aby wszystkie te rzeczy zostały załadowane na nowo, z wyjątkiem kilku rzeczy, które mam w
+
+00:03:29.200 --> 00:03:34.030
+tle, które są tylko wtyczkami, które mam, ale wszystkie materiały
+
+00:03:34.360 --> 00:03:40.630
+witryny sieci Web na żądanie od Bakken lub cokolwiek innego usługi mamy pięć odświeżyć ponownie.
+
+00:03:40.780 --> 00:03:42.220
+Znowu o wiele szybciej.
+
+00:03:42.220 --> 00:03:44.560
+Wszystko jest teraz buforowane.
+
+00:03:44.770 --> 00:03:50.770
+Wiemy już, jak robić takie rzeczy dla pracowników serwisu, ale jak możemy je spieniężyć.
+
+00:03:51.850 --> 00:03:53.270
+Nasz podręcznik.
+
+00:03:53.430 --> 00:03:59.100
+Czuję, że jest to robione automatycznie przez przeglądarkę i tak, przeglądarki są skonfigurowane, aby zrobić
+
+00:03:59.100 --> 00:04:02.130
+to automatycznie, ale nie możemy tego kontrolować.
+
+00:04:02.130 --> 00:04:05.710
+A w następnym filmie pokażę, jak to zrobić.
+
+00:04:05.850 --> 00:04:12.750
+Ale zanim to zrobię, możesz zadać sobie pytanie, czy istnieje jakiś problem, jeśli projektant lub mój
+
+00:04:13.530 --> 00:04:21.000
+zespół zdecyduje się zmienić ten plik CSSA i sprawi, że powiedzmy, że tło robota jest czerwone, a nie
+
+00:04:22.240 --> 00:04:28.970
+zielone, a użytkownik, który odświeży się, wtedy nie zobaczyłoby to czerwone tło, ponieważ go używają,
+
+00:04:29.170 --> 00:04:36.950
+bo używają tych informacji z pamięci podręcznej, a ponieważ są z pamięci podręcznej, nie będą wiedzieli, że zmiany
+
+00:04:36.950 --> 00:04:38.020
+zostały wprowadzone.
+
+00:04:38.060 --> 00:04:43.530
+I podczas gdy moja strona internetowa jest zupełnie inna, moim zdaniem, starszą wersją strony.
+
+00:04:43.670 --> 00:04:45.630
+Jak sobie z tym poradzić.
+
+00:04:45.860 --> 00:04:48.570
+I to jest coś, co nazywa się Cash Cash.
+
+00:04:48.830 --> 00:04:52.220
+Wiem, że to całkiem fajne brzmiące imię, ale jest bardzo proste.
+
+00:04:52.280 --> 00:05:00.020
+Widzisz te losowe liczby, które zostały wygenerowane dla nas, które pamiętasz, kiedy wracamy do naszych
+
+00:05:00.230 --> 00:05:10.550
+robo przyjaciół PWI, gdy robimy NPM uruchomić kompilację, który pakiet dostaje wszystko zoptymalizowane do produkcji łączy wszystkie pliki CSSA wszystkie pliki
+
+00:05:10.550 --> 00:05:19.100
+javascript w jeden koniec i dwa zoptymalizowane pliki i widzimy, że wszystko jest tak spakowane, o czym
+
+00:05:19.160 --> 00:05:20.070
+wiemy.
+
+00:05:20.120 --> 00:05:27.580
+To świetnie, ale widzimy również, że zbudowano nowy główny SS i.
+
+00:05:28.900 --> 00:05:34.980
+A te liczby są tworzone przez Crea, reagując na wszystkie, które możemy ręcznie tworzyć.
+
+00:05:34.990 --> 00:05:38.690
+Możemy po prostu zmienić plik nazwy na ten.
+
+00:05:38.700 --> 00:05:39.980
+Teraz jest fajna rzecz.
+
+00:05:40.030 --> 00:05:42.430
+Jeśli uruchomię NPM uruchom ponownie
+
+00:05:45.510 --> 00:05:50.760
+i wydam te pliki do produkcji, załóżmy, że umieszczam je na dobrych, gorących stronach.
+
+00:05:50.760 --> 00:05:55.690
+Widzisz, te liczby są dokładnie takie same jak przedtem.
+
+00:05:56.070 --> 00:06:02.600
+Tak więc użytkownik zobaczy tylko buforowaną wersję mojego starszego phos, ponieważ one się nie zmieniły.
+
+00:06:02.880 --> 00:06:04.400
+Co jeśli coś zmienimy.
+
+00:06:04.590 --> 00:06:14.690
+Co się stanie, jeśli otworzę wysublimowany tekst, a tutaj zmienię nasze powiedzmy nasze
+
+00:06:14.690 --> 00:06:22.150
+CSSA i zindeksuj, że CSSA ma dopełnienie 50 pikseli.
+
+00:06:22.250 --> 00:06:30.620
+Zamierzam zapisać powrót i uruchomić ponownie kompilację NPM.
+
+00:06:30.630 --> 00:06:31.470
+W porządku.
+
+00:06:31.470 --> 00:06:37.320
+Widzimy, że pakiet internetowy utworzył Bondela i widzimy, że jest on o dwa bajty
+
+00:06:37.410 --> 00:06:44.690
+większy, ponieważ dodaliśmy kilka dodatkowych znaków, a nasz plik javascript, jeśli pójdziemy w górę, zobaczymy dokładnie to samo
+
+00:06:45.300 --> 00:06:50.860
+imię, ale nasz plik CSSA ma teraz inna liczba niż ta powyżej.
+
+00:06:51.180 --> 00:06:57.270
+I znowu dobrze zapakowane robi to automatycznie dla ciebie, jeśli już nastąpiła zmiana.
+
+00:06:57.480 --> 00:07:05.470
+Cóż, w takim razie zamierzam zmienić ten numer, aby następnym razem wrócić do Roble'a znajomych i
+
+00:07:05.470 --> 00:07:13.060
+powiedzmy, że przygotowałem do tego, jak strony po odświeżeniu tej strony plik CSSA będzie miał
+
+00:07:13.060 --> 00:07:14.340
+inny numer.
+
+00:07:14.470 --> 00:07:18.140
+A sposób, w jaki przeglądarka wie, że plik CSSA się zmienił.
+
+00:07:18.160 --> 00:07:25.490
+Mam zamiar pobrać najnowszą wersję i to jest to, co powoduje pomijanie pamięci podręcznej, o ile nazwa plików jest różna.
+
+00:07:25.930 --> 00:07:28.060
+Chwyci to bez względu na wszystko.
+
+00:07:28.090 --> 00:07:30.970
+Czy ma to gotówkę, czy nie.
+
+00:07:30.970 --> 00:07:32.320
+Bardzo bardzo fajne.
+
+00:07:32.350 --> 00:07:37.300
+Teraz nawet jeśli nie masz aplikacji do ponownego tworzenia, to jest coś łatwego do zrealizowania.
+
+00:07:37.300 --> 00:07:37.870
+Dobrze.
+
+00:07:38.170 --> 00:07:44.500
+Jeśli projektant tworzy nowy styl CSSA z czerwonym tłem, może po prostu ręcznie zmienić tę
+
+00:07:44.500 --> 00:07:48.550
+liczbę na inną, zanim będzie można zapisać wersję 5.
+
+00:07:48.760 --> 00:07:53.710
+A teraz upewnisz się, że wszyscy użytkownicy będą mieli najnowszą wersję.
+
+00:07:53.800 --> 00:07:58.720
+Pobiorą najnowszą wersję, a gdy znów się odświeżą, użyją jej z pamięci podręcznej, ale
+
+00:07:58.720 --> 00:08:00.530
+będą mieli czerwone tło.
+
+00:08:00.950 --> 00:08:07.120
+W następnym filmie porozmawiamy o tym, w jaki sposób można zaimplementować buforowanie bez
+
+00:08:07.120 --> 00:08:12.120
+użycia domyślnego zachowania z aplikacji rewizyjnej Craiga i przeglądarki.
+
+00:08:13.150 --> 00:08:14.080
+Do zobaczenia w następnym.

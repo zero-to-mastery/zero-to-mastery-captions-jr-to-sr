@@ -1,0 +1,124 @@
+﻿WEBVTT
+
+00:00:01.990 --> 00:00:05.050
+To była inna długa sekcja.
+
+00:00:05.050 --> 00:00:08.460
+Ale mam nadzieję, że teraz wszystko ma sens.
+
+00:00:08.650 --> 00:00:11.740
+Jak zoptymalizować nasz kod.
+
+00:00:12.710 --> 00:00:20.000
+Cóż, możemy załadować tylko to, co jest potrzebne, robiąc coś takiego, jak dzielenie kodu, w którym możemy wykonać chunking oparty
+
+00:00:20.720 --> 00:00:25.160
+na trasie lub Chungking oparty na komponentach przy użyciu pakietu internetowego.
+
+00:00:25.160 --> 00:00:33.350
+I ten dynamiczny import, a może nawet za pomocą narzędzia, takiego jak ładowalna biblioteka, która robi to za ciebie i
+
+00:00:33.350 --> 00:00:34.820
+zapewnia ładną owijkę.
+
+00:00:34.850 --> 00:00:40.970
+Mamy również pomysł drżenia drzewa, o którym nie mówiliśmy zbyt wiele, ponieważ jest to
+
+00:00:40.970 --> 00:00:45.590
+robione za kulisami przez mokre, co znowu jest naprawdę miłe.
+
+00:00:46.490 --> 00:00:50.250
+A to drżenie drzewa usuwa każdy nieużywany kod.
+
+00:00:50.390 --> 00:00:52.960
+Kiedy faktycznie tworzysz swoją aplikację.
+
+00:00:53.120 --> 00:01:00.020
+Na przykład, jeśli importujesz ogromną bibliotekę, ale używasz tylko jednej z nich.
+
+00:01:00.020 --> 00:01:02.260
+Cóż, odrzuć całą resztę.
+
+00:01:02.360 --> 00:01:09.560
+Teraz idealnie w idealnym świecie, który dzieje się w stu procentach czasu ze 100-procentową dokładnością w prawdziwym
+
+00:01:10.430 --> 00:01:11.030
+życiu.
+
+00:01:11.040 --> 00:01:18.140
+To może nie być tak, ale znowu jest to coś, co można zrobić z powrotem na mokro i poprawić w miarę
+
+00:01:18.140 --> 00:01:18.950
+upływu czasu.
+
+00:01:19.460 --> 00:01:27.170
+Ale na razie używanie takich rzeczy jak uprzednio ustawiona czułość pola magnetycznego (babbel), które wcześniej widzieliśmy,
+
+00:01:27.170 --> 00:01:36.390
+co pozwala uniknąć funkcji transponowania już we współczesnych przeglądarkach, pozwala nam wykorzystać tę zdolność do drżenia drzewa, innym razem
+
+00:01:36.420 --> 00:01:39.170
+było unikanie blokowania głównego zagrożenia.
+
+00:01:39.300 --> 00:01:45.630
+I to jest coś, o czym rozmawialiśmy w kółko i na czasie, minimalizując nasz czas javascript.
+
+00:01:45.690 --> 00:01:52.290
+Nasz czas kompilacji i wykonywania kompilacji byłby bardzo sprytny, jeśli chodzi o
+
+00:01:52.350 --> 00:02:01.620
+to, jak dużo javascript Wareing, w tym nasz kod, nieumyślnie rozmawiałyśmy również o wyciekach pamięci i wyciekach pamięci.
+
+00:02:01.860 --> 00:02:11.250
+Chociaż termin ten jest nowy, wystarczy upewnić się, że nie dodajemy pamięci do naszych
+
+00:02:11.250 --> 00:02:12.060
+aplikacji.
+
+00:02:12.060 --> 00:02:20.450
+Na przykład, jeśli mamy masę detektorów zdarzeń na stronie i zmienimy tę stronę na inny wiersz, powiedzmy, że
+
+00:02:20.450 --> 00:02:25.690
+idziemy na stronę Informacje, ale nie usunęliśmy tych nawet słuchaczy.
+
+00:02:25.820 --> 00:02:30.270
+Teraz nasze przeglądarki zapamiętują coraz więcej rzeczy.
+
+00:02:30.410 --> 00:02:36.650
+Więc możesz mieć coś, co nazywa się wyciekami pamięci, podczas gdy pracujemy nad naszą aplikacją,
+
+00:02:36.650 --> 00:02:43.010
+rzeczy, które przeglądarka musi pamiętać, takie jak zmienne, zwiększają się coraz bardziej, aż osiągną limit
+
+00:02:43.100 --> 00:02:44.990
+i mogą się zawiesić.
+
+00:02:44.990 --> 00:02:48.390
+Kolejna rzecz, której można uniknąć, minimalizując nasz Javascript.
+
+00:02:48.650 --> 00:02:54.080
+I wreszcie chcemy uniknąć wielokrotnego renderowania czegoś, o czym tak naprawdę mówiliśmy,
+
+00:02:54.080 --> 00:02:58.630
+reagując i minimalizując liczbę manipulacji Domem, które musimy zrobić.
+
+00:02:58.640 --> 00:03:02.570
+Ilość pracy, jaką nasz kod musi wykonać w przeglądarce.
+
+00:03:02.570 --> 00:03:09.030
+Właściwy kod optymalizacyjny to coś, co może być kontynuowane.
+
+00:03:09.030 --> 00:03:13.400
+Jest tyle rzeczy, które możesz zrobić, ale naprawdę chcesz wybrać swoje bitwy.
+
+00:03:13.560 --> 00:03:20.280
+Mam jednak nadzieję, że ma dobry przegląd tego, co możemy zrobić i jakie są podstawowe zasady dla tej
+
+00:03:20.280 --> 00:03:20.940
+sekcji.
+
+00:03:21.930 --> 00:03:26.070
+W następnej części w końcu osiągniemy postępy webappów.
+
+00:03:26.220 --> 00:03:27.050
+Zobaczę na tym.

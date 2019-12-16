@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:01.650 --> 00:00:04.950
+Bine, ce am învățat până acum.
+
+00:00:04.950 --> 00:00:13.550
+S-sh utilizează criptarea simetrică și asimetrică, deoarece criptarea asimetrică este mai consumatoare de timp.
+
+00:00:13.610 --> 00:00:17.280
+Majoritatea conexiunilor S-sh utilizează criptarea simetrică.
+
+00:00:17.420 --> 00:00:27.560
+După cum am discutat despre ideea din spatele este că criptarea asimetrică este folosită doar pentru a partaja o cheie secretă.
+
+00:00:27.910 --> 00:00:35.140
+Apoi, folosind în cele din urmă acea cheie care este criptare simetrică pentru o comunicare ulterioară, este rapid că
+
+00:00:37.330 --> 00:00:43.210
+acum, odată ce a fost stabilită o comunicare simetrică sigură, serverul folosește cheia publică a
+
+00:00:43.300 --> 00:00:49.180
+clientului și generează o provocare și se transmite clientului pentru autentificare dacă clientul poate decripta
+
+00:00:49.180 --> 00:00:50.400
+cu succes mesaj.
+
+00:00:50.530 --> 00:00:56.170
+Ei bine, înseamnă că deține cheia privată necesară pentru o conexiune, atunci aceeași sesiune începe în cele
+
+00:00:56.170 --> 00:00:56.840
+din urmă.
+
+00:00:56.860 --> 00:01:04.990
+Așadar, în sfârșit, avem acest tunel securizat, totul este fericit și putem comunica într-un mod sigur.
+
+00:01:04.990 --> 00:01:06.240
+O problemă însă.
+
+00:01:06.580 --> 00:01:15.650
+Cineva poate să stea în mijloc și să pretindă că este celălalt și să manipuleze sau să modifice mesajul.
+
+00:01:16.780 --> 00:01:22.570
+Dacă într-o oarecare măsură convinge clientul că sunt gazda și gazda
+
+00:01:22.570 --> 00:01:32.400
+că sunt clienții, aceștia pot avea doar acest schimb de chei între ei și informația a venit prin acel intermediar.
+
+00:01:32.450 --> 00:01:41.710
+Acum, pentru a rezolva una dintre aceste probleme, vom vorbi despre ceva numit hashing și hash este
+
+00:01:41.710 --> 00:01:46.960
+o altă formă de criptografie utilizată în conexiunile securizate.
+
+00:01:46.970 --> 00:01:54.410
+Acum, în celălalt curs al dezvoltatorului web complet, folosim ceva numit decriptat pentru parolele hash.
+
+00:01:54.410 --> 00:02:01.590
+Deci, vă puteți aminti că acum unele funcții de tip hash diferă de cele două forme de corupție de mai sus.
+
+00:02:01.620 --> 00:02:07.930
+Simetrice și asimetrice în sensul că nu sunt niciodată menite să decripteze nimic.
+
+00:02:08.150 --> 00:02:13.320
+Ele generează pur și simplu o valoare unică de o lungime fixă ​​pentru fiecare intrare.
+
+00:02:14.530 --> 00:02:23.440
+A A, și dacă există o cale, pentru că dacă am hash, Bună ziua, el va trece printr-o funcție care scuipă
+
+00:02:23.440 --> 00:02:32.170
+jibberish într-adevăr foarte repede cu truc fiind faptul că nu avem nici o idee cum să ne întoarcem la
+
+00:02:32.230 --> 00:02:33.260
+întregul text.
+
+00:02:33.280 --> 00:02:35.150
+Deci, dacă treci printr-un hash.
+
+00:02:35.470 --> 00:02:42.790
+Dacă cineva se uită la asta, este imposibil ca nimeni să se întoarcă și să-și dea seama
+
+00:02:43.000 --> 00:02:44.390
+ce înseamnă asta.
+
+00:02:44.410 --> 00:02:50.150
+Deci, cum este util acest lucru bine așa cum am menționat mai înainte.
+
+00:02:50.340 --> 00:02:58.590
+S-sh este capabil să transmită mesaje în mod sigur, dar dacă o terță parte este capabilă să-și bată clientul și gazda
+
+00:02:59.160 --> 00:03:01.620
+bine, ei pot manipula mesajele.
+
+00:03:01.620 --> 00:03:06.970
+Poate că ar putea schimba mesajele din motive nefaste.
+
+00:03:06.980 --> 00:03:14.780
+Din fericire pentru noi, folosind cea de-a treia tehnică a hashes, putem verifica dacă autentificarea mesajului
+
+00:03:14.780 --> 00:03:17.230
+a fost atât de rea.
+
+00:03:17.620 --> 00:03:22.300
+Ei bine, persoana rea ​​poate modifica mesajele noastre.
+
+00:03:22.330 --> 00:03:29.390
+Aceasta se face folosind ceva numit HMX sau coduri de autentificare a mesajelor bazate pe hash.
+
+00:03:29.500 --> 00:03:31.120
+Știu că eo gură.
+
+00:03:31.150 --> 00:03:41.790
+Aceste nume devin intr-adevar foarte confuze, dar esenta este aceasta folosind o functie hash fiecare mesaj
+
+00:03:41.790 --> 00:03:53.540
+care este transmis trebuie sa contina un lucru numit Mac si acest Mac este un hash generat de
+
+00:03:53.660 --> 00:03:55.000
+cheia simetrica.
+
+00:03:55.190 --> 00:04:00.560
+Numărul secvenței de pachete și conținutul mesajelor trimise.
+
+00:04:00.770 --> 00:04:05.810
+Deci, să spunem că acest client încearcă să trimită parola cu gazda și au
+
+00:04:06.200 --> 00:04:15.890
+stabilit deja o cheie simetrică pentru comunicarea securizată în timp ce folosesc numărul secvenței de pachete cheia și apoi textul pe care îl trimit și acest
+
+00:04:15.890 --> 00:04:19.280
+caz să spunem doar că " trimiterea parolei.
+
+00:04:19.370 --> 00:04:27.460
+Am combinat acest lucru ca o intrare într-o funcție hash și această funcție va scuipa o bucată de
+
+00:04:27.460 --> 00:04:27.910
+șir.
+
+00:04:27.910 --> 00:04:29.890
+Asta nu înseamnă absolut nimic.
+
+00:04:30.190 --> 00:04:33.800
+Și acum acest lucru este trimis la gazdă.
+
+00:04:33.980 --> 00:04:35.330
+Dar asta nu înseamnă nimic corect.
+
+00:04:35.370 --> 00:04:40.210
+Cum poate gazda să verifice dacă mesajul nu a fost modificat.
+
+00:04:41.210 --> 00:04:47.090
+Ei bine, ceea ce pot face acum este pentru că au aceleași informații pe care le pot utiliza propriile lor
+
+00:04:47.090 --> 00:04:49.820
+chei simetrice, care este la fel ca și clienții.
+
+00:04:50.120 --> 00:04:57.350
+Ei pot folosi din nou numărul secvenței de pachete pe care ei o cunosc și atunci,
+
+00:04:57.620 --> 00:05:04.910
+deoarece acest mesaj a fost trimis prin S-sh, ei au, de asemenea, acel mesaj care a fost trimis.
+
+00:05:04.920 --> 00:05:09.140
+Deci, acum o conduc din nou prin aceeași funcție hash.
+
+00:05:09.570 --> 00:05:20.380
+Și odată ce o calculează, va vedea că ceea ce tocmai am generat corespunde cu ceea ce a fost clientul hash.
+
+00:05:20.550 --> 00:05:27.600
+Și dacă se potrivește bine, înseamnă că acest mesaj nu a fost modificat, deoarece în
+
+00:05:27.600 --> 00:05:36.540
+orice moment dacă parola, chiar și o literă, chiar și o capitalizare a fost schimbată, acest hash va fi complet diferit.
+
+00:05:36.600 --> 00:05:40.440
+Și aceasta este o caracteristică a schimbării funcțiilor hash.
+
+00:05:40.500 --> 00:05:45.040
+Orice lucru indiferent de cât de asemănătoare sunt intrările.
+
+00:05:45.060 --> 00:05:51.720
+Poate că va scuipa un număr complet diferit acum, învățând tot ceea ce avem
+
+00:05:51.720 --> 00:05:52.750
+până acum.
+
+00:05:52.950 --> 00:06:02.260
+Ar trebui să înțelegem ce se întâmplă atunci când introducem în S-sh la adresa IP sau vedeți până
+
+00:06:02.260 --> 00:06:09.620
+acum că s-ar putea să vă fi mințit puțin pentru că tot ce am
+
+00:06:09.620 --> 00:06:21.770
+vorbit despre dacă mă duc la terminalul meu chiar acum și noi am implementat bine acest lucru, aș fi S-sh în acel server Digital Ocean.
+
+00:06:21.770 --> 00:06:22.460
+Apăsați pe
+
+00:06:26.770 --> 00:06:35.010
+enter și am nevoie de o parolă, dar asta nu sa întâmplat când am vă arătat în videoclipurile anterioare pe care tocmai le-am conectat
+
+00:06:35.290 --> 00:06:41.750
+imediat și am reușit să fac tot ce am vrut și cum am spus că am înșelat puțin
+
+00:06:41.750 --> 00:06:49.160
+aici și eu vă vom arăta de ce a fost și de ce trebuie să introduceți în sfârșit o parolă și următorul
+
+00:06:49.160 --> 00:06:49.620
+videoclip.
+
+00:06:49.700 --> 00:06:51.530
+Știu un pic de un stânjenitor.
+
+00:06:51.620 --> 00:06:53.070
+Voi vedea în următorul videoclip.
+
+00:06:53.240 --> 00:06:53.540
+Bebai.

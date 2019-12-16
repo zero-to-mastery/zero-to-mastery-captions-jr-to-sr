@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:00.920 --> 00:00:02.210
+Witamy spowrotem.
+
+00:00:02.210 --> 00:00:09.670
+Chcę teraz użyć nowej biblioteki tutaj w naszej aplikacji, gdy się zalogujemy.
+
+00:00:09.800 --> 00:00:15.560
+Idealnie chciałbym mieć zdjęcie profilowe, a następnie, gdy kliknę i wyświetlam listę
+
+00:00:15.560 --> 00:00:25.370
+rozwijaną, gdzie mogę powiedzieć wylogować się, a może profil i profil użytkownika pojawia się i chcę użyć tej biblioteki komponentów paska
+
+00:00:25.640 --> 00:00:33.770
+re-act, którą możemy po prostu zainstaluj go, korzystając z paska do ponownego pakowania i tak długo jak
+
+00:00:33.770 --> 00:00:34.910
+używamy, reaguj.
+
+00:00:34.910 --> 00:00:38.350
+Pozwala nam na użycie Boost Japp dla komponentów.
+
+00:00:38.540 --> 00:00:45.590
+A jeśli przejdziesz do komponentów, zobaczysz, że możemy użyć mnóstwa rzeczy, w tym listy
+
+00:00:45.590 --> 00:00:47.820
+rozwijanej, którą chcę obejrzeć.
+
+00:00:48.080 --> 00:00:53.700
+To byłoby całkiem miłe mieć na naszym profilu i widzimy, że daje nam to ładną
+
+00:00:53.700 --> 00:01:00.270
+demonstrację tego, co możemy zrobić, i daje ci bardzo dużo kopiowania i wklejania kodu, który jest naprawdę fajny.
+
+00:01:00.950 --> 00:01:05.900
+Teraz niektórzy z was mogą pytać, dlaczego nie sami to zbudować.
+
+00:01:06.880 --> 00:01:13.770
+Jednym z nich jest to, że będzie dużo szybciej niż samemu.
+
+00:01:13.810 --> 00:01:21.430
+I to jest coś, co możemy zrobić całkiem prosto z niektórymi javascriptami i CSSA, które już wcześniej
+
+00:01:21.430 --> 00:01:23.900
+omawialiśmy na moich poprzednich kursach.
+
+00:01:24.870 --> 00:01:31.170
+Ale jeśli chodzi o szybkie budowanie i upewnienie się, że nasza aplikacja działa, nie chcemy zbytnio
+
+00:01:31.170 --> 00:01:34.810
+martwić się o to, czy mamy odpowiednią funkcjonalność.
+
+00:01:34.920 --> 00:01:43.360
+Możemy po prostu wstawić do naszej aplikacji, a jeśli naprawdę chcemy usunąć biblioteki, możemy to zrobić później.
+
+00:01:43.470 --> 00:01:50.190
+Ale chcę wam pokazać niebezpieczeństwa związane z dodawaniem bibliotek stron trzecich, jak zobaczycie, kiedy dodamy Riak
+
+00:01:50.190 --> 00:01:50.910
+strop.
+
+00:01:50.970 --> 00:01:53.470
+Spowo- duje konflikt z biblioteką.
+
+00:01:53.490 --> 00:02:01.200
+Mamy już taki, który jest nazywany Jeśli wrócimy do naszej aplikacji Front-End i wejdziemy do naszego źródła
+
+00:02:01.500 --> 00:02:02.170
+zindeksowanego.
+
+00:02:02.310 --> 00:02:06.290
+Tak, używamy bibliotek SPSS Tatiany.
+
+00:02:06.300 --> 00:02:07.940
+To rozwiązało ich aplikację.
+
+00:02:07.980 --> 00:02:13.470
+Aż do tego momentu i zamierzam zademonstrować wam, dlaczego chcemy być ostrożni, kiedy pobieramy coraz więcej
+
+00:02:13.950 --> 00:02:16.460
+bibliotek, dodając je do naszego projektu.
+
+00:02:16.590 --> 00:02:19.290
+Myślę więc, że będzie to również dobra lekcja dla nas.
+
+00:02:19.290 --> 00:02:24.660
+Dobrze, wiemy, że chcemy zainstalować ten pakiet, więc powiedzmy, że
+
+00:02:24.660 --> 00:02:29.830
+instalujemy NPM i będzie to nazywać się paskiem re-act.
+
+00:02:29.840 --> 00:02:30.420
+W porządku.
+
+00:02:30.470 --> 00:02:31.190
+Idealny.
+
+00:02:31.190 --> 00:02:32.610
+Następna rzecz, którą chcemy zrobić.
+
+00:02:32.660 --> 00:02:41.750
+Ponownie wracając do strony internetowej widzimy również, że musimy dodać bootstrap, ponieważ pakiet paska re-act pochodzi
+
+00:02:41.810 --> 00:02:47.060
+z komponentów, ale nie ze stylem, który jest bootstrap.
+
+00:02:47.060 --> 00:02:52.230
+Tak więc, aby uzyskać stylizację, która jest już ustawiona, wygląda na to, że możemy po prostu zainstalować
+
+00:02:52.230 --> 00:02:53.010
+pasek startowy.
+
+00:02:53.060 --> 00:02:58.310
+A jeśli używasz nowszej wersji NPM, nie musisz zapisywać zmian w desce rozdzielczej, ale po prostu pokazać, że
+
+00:02:58.310 --> 00:02:59.200
+to samo.
+
+00:02:59.200 --> 00:03:00.560
+Zamierzam to skopiować.
+
+00:03:00.860 --> 00:03:04.180
+A potem przenieśmy nasz front do góry tutaj.
+
+00:03:04.190 --> 00:03:08.100
+Więc jest trochę bliżej, ponieważ będziemy pracować nad tym w tym filmie.
+
+00:03:08.420 --> 00:03:14.360
+Dlatego instalujemy bootstrap, a potem wracamy, widzimy, że musimy zaimportować naszą CSA.
+
+00:03:14.780 --> 00:03:20.390
+I stamtąd możemy rozpocząć importowanie dowolnych komponentów, które mają ponownie dostęp do potrzeb sklepu.
+
+00:03:21.820 --> 00:03:24.230
+Teraz zaimportujmy plik CSSA.
+
+00:03:24.430 --> 00:03:38.160
+A jeśli zobaczysz tutaj, możemy teraz wejść na naszą stronę indeksu tak i zaimportować bootstrap z M. fide patrz SS.
+
+00:03:38.200 --> 00:03:45.430
+A teraz o to chodzi i oto, jak to działa z tworzeniem ponownego działania i przechwytują wszystkie znalezione
+
+00:03:45.580 --> 00:03:48.430
+pliki CSSA i łączą je ze sobą.
+
+00:03:48.880 --> 00:03:55.600
+W tej chwili mamy sposób, w jaki mamy podatników, którzy mają już
+
+00:03:55.600 --> 00:04:03.580
+jakieś zajęcia CSSA, których użyjemy, jeśli przejdziecie na przykład na przykład, lub faktycznie wchodzimy
+
+00:04:03.580 --> 00:04:12.270
+w skład komponentu, powiedzmy, że pójdziemy na rozpoznawanie twarzy, patrz tutaj, że używamy tych klas, jak
+
+00:04:12.290 --> 00:04:18.040
+puste, aby centrum Amay, które są rzeczywistymi klasami Tatian.
+
+00:04:18.040 --> 00:04:24.760
+Teraz, ze względu na sposób, w jaki reagują prace, te przesłuchania są pakowane w pakiet, a następnie zostaną załadowane
+
+00:04:24.790 --> 00:04:29.080
+do komórek początkowych i niezależnie od tego, jakie będą ich nazwy.
+
+00:04:29.080 --> 00:04:32.520
+Powiedzmy, że obaj mają klasę przycisków.
+
+00:04:32.530 --> 00:04:37.220
+Cóż, bootstrap ma zamiar go zastąpić, ponieważ będzie po Tatranie.
+
+00:04:37.590 --> 00:04:39.770
+I wiemy, że lubimy naszą aplikację tak, jak jest.
+
+00:04:39.790 --> 00:04:46.420
+Więc przenieśmy to tutaj, aby coś, co jest nadpisane DSS, wygra
+
+00:04:46.960 --> 00:04:48.690
+z Tatianą.
+
+00:04:48.760 --> 00:04:54.090
+Powiedzmy, że mamy bootstrap załadowany i gotowy do pracy.
+
+00:04:54.100 --> 00:04:57.960
+Myślę, że nadszedł czas, abyśmy zbudowali naszą rozwijaną funkcjonalność.
+
+00:04:58.030 --> 00:05:01.870
+Teraz, gdy mamy kilka komponentów, z których będziemy mogli korzystać.
+
+00:05:02.170 --> 00:05:04.210
+Mamy również ustawioną Takiyamę.
+
+00:05:04.300 --> 00:05:11.260
+Pierwszą rzeczą, którą chcę zrobić, jest stworzenie ikony awatar lub ikony małego kółka w prawym górnym
+
+00:05:11.260 --> 00:05:17.230
+rogu, więc gdy klikniemy na nią, pojawi się rozwijane okno z informacją Wyświetl profil
+
+00:05:17.230 --> 00:05:19.520
+lub wyloguj się teraz.
+
+00:05:19.960 --> 00:05:26.110
+Na szczęście dla nas także będziemy używać podatnika, ponieważ mają już dla nas przygotowane
+
+00:05:26.170 --> 00:05:27.260
+wcześniej CSSA.
+
+00:05:27.260 --> 00:05:35.020
+Jeśli wrócę tutaj, przywiązałem się do Kyon. A jeśli pójdziemy do Avatara, widzimy, że wszystko w porządku, mamy
+
+00:05:35.020 --> 00:05:37.750
+kilka opcji, z których możemy skorzystać.
+
+00:05:37.880 --> 00:05:44.630
+Powiedzmy, że chcemy użyć granicy koła i wygląd, że mamy już CSSA, której potrzebujemy.
+
+00:05:44.660 --> 00:05:52.560
+Wróćmy do naszej aplikacji i pokażmy ten krąg, jeśli zalogujemy się tutaj i zobaczymy,
+
+00:05:56.180 --> 00:06:01.910
+że się wylogujemy i po prostu nie musimy logować się
+
+00:06:01.910 --> 00:06:03.490
+i wychodzić.
+
+00:06:03.560 --> 00:06:07.210
+Wróćmy i przejdźmy do naszej aplikacji.
+
+00:06:07.360 --> 00:06:21.570
+Tak iw naszym początkowym stanie spraw, aby nasza trasa była równa domowi, zapisuję to i wracam odświeżmy Lupe Muszę zrobić NPM zacząć
+
+00:06:22.850 --> 00:06:24.560
+od nowa.
+
+00:06:25.710 --> 00:06:29.670
+Cóż, muszę pójść ponownie na NPM, ponieważ zainstalowaliśmy
+
+00:06:32.880 --> 00:06:34.760
+kilka rzeczy, tak,
+
+00:06:38.630 --> 00:06:41.110
+3000 i wygrywaliśmy, i zaczynamy.
+
+00:06:41.210 --> 00:06:43.280
+Jesteśmy teraz zalogowany.
+
+00:06:43.490 --> 00:06:47.750
+Nie mamy użytkownika, którego widzisz, że jest zupełnie pusty, ponieważ nie zalogowaliśmy się na nic.
+
+00:06:47.750 --> 00:06:54.350
+Wszyscy mamy te informacje profilowe, ale widzimy również, że nasze przeciąganie bardzo się
+
+00:06:54.350 --> 00:06:55.040
+popsuło.
+
+00:06:55.100 --> 00:06:58.690
+Nie mamy tak ładnej stylizacji, jaką mieliśmy wcześniej.
+
+00:06:58.880 --> 00:07:00.090
+Co tu się dzieje.
+
+00:07:02.170 --> 00:07:05.290
+Cóż, znowu wracamy do naszej dyskusji na temat CSSA.
+
+00:07:05.410 --> 00:07:09.850
+Widzisz, że ten indeks zaczyna się od CSSA.
+
+00:07:09.850 --> 00:07:17.800
+A jeśli spojrzysz na indeks Nazistowski SS, nasza rodzina telefonów została opisana tutaj, a biblioteka bootstrap,
+
+00:07:17.800 --> 00:07:25.110
+którą właśnie zainstalowaliśmy i dodaliśmy do naszej witryny internetowej, ponownie nadpisuje naszą rodzinę czcionek.
+
+00:07:25.200 --> 00:07:29.860
+Chcesz zrobić, to idealnie przynieść tę CSSA do końca.
+
+00:07:29.920 --> 00:07:38.130
+A także po prostu utrzymuj CSSA w osobnej sekcji, aby wiedzieć, co nadpisuje.
+
+00:07:38.200 --> 00:07:41.970
+I znowu wracamy, aby ciągle dodawać rzeczy w kółko.
+
+00:07:42.070 --> 00:07:45.270
+Jest to wystarczająco mała aplikacja, że od razu zauważamy zmiany.
+
+00:07:45.340 --> 00:07:53.410
+Ale zaraz po wprowadzeniu biblioteki innej firmy, a zwłaszcza tej, która wpływa na CSSA, możesz niechcący zmienić
+
+00:07:53.800 --> 00:07:58.000
+niektóre funkcje przeglądarki internetowej, a także ich wygląd.
+
+00:07:58.000 --> 00:08:01.480
+Więc naprawdę chcesz być ostrożny z tym w prawdziwym projekcie.
+
+00:08:01.480 --> 00:08:07.210
+Prawdopodobnie nie używałbym tych wielu bibliotek, ale chciałem pokazać, jak niebezpieczne może
+
+00:08:07.270 --> 00:08:11.110
+być to, jeśli teraz je zapiszę i wrócę.
+
+00:08:11.110 --> 00:08:12.080
+W porządku.
+
+00:08:12.400 --> 00:08:14.840
+Wszystko jest ładne i gładkie.
+
+00:08:14.860 --> 00:08:20.950
+Nie mamy jeszcze użytkownika, ponieważ dobrze oszukujemy i logujemy się, ale mamy wszystko
+
+00:08:21.040 --> 00:08:21.710
+skonfigurowane.
+
+00:08:21.820 --> 00:08:28.120
+Idealnie chcemy, aby ten profil wyglądał tak, jakbyśmy widzieli atak na nas właśnie tutaj, na
+
+00:08:28.120 --> 00:08:31.950
+górze, a gdy go kliknę, pojawi się rozwijane menu.
+
+00:08:31.960 --> 00:08:37.450
+Pomyślmy więc nad tym, że pierwszą rzeczą, którą prawdopodobnie chcielibyśmy zrobić, jest zbudowanie
+
+00:08:37.540 --> 00:08:39.660
+ikony profilu okrągłej ikony.
+
+00:08:39.900 --> 00:08:48.670
+Aby wszystko było w porządku, stwórzmy nowy folder o nazwie Profil, w którym stworzymy
+
+00:08:48.670 --> 00:08:50.080
+nowy komponent.
+
+00:08:50.290 --> 00:08:58.820
+Powiemy, że będzie to ich element ikony profilu, a my jesteśmy tutaj, aby wykonać nasz regularny komponent i kompilację,
+
+00:08:58.820 --> 00:09:00.710
+z którymi reagujemy.
+
+00:09:00.710 --> 00:09:07.010
+Chcemy zaimportować powtórkę z pakietu reata.
+
+00:09:07.030 --> 00:09:13.180
+Chcemy również zaimportować niektóre elementy z re-act bootstrap.
+
+00:09:13.300 --> 00:09:19.240
+Ale funkcja Doggo nie przejmujmy się tym, więc teraz pracujmy nad tym, aby uzyskać ten okrągły awatar na
+
+00:09:19.390 --> 00:09:20.370
+naszej stronie.
+
+00:09:20.410 --> 00:09:35.530
+Możemy po prostu powiedzieć, że ikona profilu klasy rozszerza komponent dot-dot lub też mógłbym zrobić coś podobnego.
+
+00:09:35.640 --> 00:09:37.460
+Ale na razie jest dobrze.
+
+00:09:39.050 --> 00:09:44.230
+I chcemy wyeksportować domyślną ikonę profilu.
+
+00:09:44.290 --> 00:09:44.980
+W porządku.
+
+00:09:45.010 --> 00:09:49.460
+Teraz myślenie o tej ikonie tej ikony ma nieco prawidłowy stan.
+
+00:09:49.480 --> 00:09:59.150
+To jest albo kliknięte i przełącznik jest otwarty lub jest zamknięty i idealnie mam na myśli, że jest to prosta prawda
+
+00:09:59.150 --> 00:10:01.410
+lub fałsz flagi Boole'a.
+
+00:10:01.640 --> 00:10:08.620
+Moglibyśmy przenieść całą drogę do psa tak lub dołączyć do sklepu redux ten stan, ale
+
+00:10:08.630 --> 00:10:16.500
+dla małego stanu, który jest naprawdę bardzo specyficzny dla tej ikony profilu i nie wpływa na żadne inne składniki.
+
+00:10:16.520 --> 00:10:22.100
+Chciałbym zachować stan tutaj, ponieważ każdy, kto przychodzi do projektu i potrzebuje czegoś na
+
+00:10:22.100 --> 00:10:24.890
+ikonie profilu, ma wszystko w jednym miejscu.
+
+00:10:25.610 --> 00:10:39.570
+Stwórzmy więc metodę konstruktora, która zaakceptuje props i wykona nasze regularne super wywołanie.
+
+00:10:39.790 --> 00:10:50.170
+Powiedzmy, że ten punkt będzie równy temu, nazwijmy to, otwórz go, a my ustawimy go na
+
+00:10:50.170 --> 00:10:52.290
+false, aby rozpocząć.
+
+00:10:55.080 --> 00:10:55.670
+W porządku.
+
+00:10:55.740 --> 00:11:01.060
+Mamy również funkcję renderowania iw ramach tej funkcji renderowania, co powinniśmy zrobić.
+
+00:11:01.290 --> 00:11:06.530
+Więc zwróć nasz profilowy avatar od Tatiana's Well i
+
+00:11:12.570 --> 00:11:20.520
+powiedzmy, że jeśli powrócimy do podatków, możemy po prostu skopiować i wkleić ten mały
+
+00:11:21.030 --> 00:11:24.770
+fragment wklejony tutaj, musisz to naprawić.
+
+00:11:25.020 --> 00:11:30.350
+I widzisz, że div nie jest podświetlony i chleb, a to dlatego, że to jest GSX.
+
+00:11:30.360 --> 00:11:33.210
+Pamiętaj, że musimy się upewnić, że zamykamy nasze tagi.
+
+00:11:33.300 --> 00:11:40.260
+Mimo że jest to ważne dla niego wszystkich pięciu bez slashu zamykającego i GSX, musimy zamknąć nasze tagi bez
+
+00:11:40.890 --> 00:11:42.080
+względu na wszystko.
+
+00:11:42.240 --> 00:11:42.450
+Dobrze.
+
+00:11:42.450 --> 00:11:44.070
+Powiedzmy to.
+
+00:11:44.370 --> 00:11:45.770
+A jeśli wrócę.
+
+00:11:45.900 --> 00:11:47.460
+Cóż, nic nie zostanie pokazane.
+
+00:11:47.460 --> 00:11:51.530
+Musimy to zaimportować na naszej stronie głównej.
+
+00:11:51.660 --> 00:11:55.200
+Zróbmy to na naszej stronie.
+
+00:11:55.530 --> 00:12:05.100
+Jeśli wrócimy do naszej aplikacji, zobaczymy, że mamy ten obszar, który chcemy zrobić, i ten obszar jest tam,
+
+00:12:05.100 --> 00:12:08.590
+gdzie jest znak i składnik rejestru.
+
+00:12:08.650 --> 00:12:13.430
+Na szczęście dla nas jest to na samym górze i element nawigacyjny.
+
+00:12:13.450 --> 00:12:20.980
+A ponieważ nazwa jest dość łatwa do zobaczenia i widzimy tutaj, że jest to po prostu dodanie
+
+00:12:20.980 --> 00:12:23.670
+znaku wyrejestrowania w komponentach rejestru.
+
+00:12:23.700 --> 00:12:39.050
+Dodajmy to, dodajmy whoops importu i przenieśmy ikonę profilu z profilu
+
+00:12:39.050 --> 00:12:46.420
+profilu profilu i powiedzmy profil.
+
+00:12:46.510 --> 00:12:51.850
+Teraz mamy dostęp do tego komponentu w ramach zalogowania.
+
+00:12:52.020 --> 00:12:59.430
+Zamiast wylogowywać się lub przez godzinę możemy zachować znak tylko po to, aby
+
+00:12:59.460 --> 00:13:03.340
+go tam dodać, dodamy ikonę profilu.
+
+00:13:03.570 --> 00:13:06.190
+A teraz tak naprawdę nic nie robi.
+
+00:13:06.210 --> 00:13:08.460
+Więc po prostu to przekażemy.
+
+00:13:08.490 --> 00:13:11.770
+Zapiszmy wygląda, wszystko jest w porządku.
+
+00:13:11.780 --> 00:13:22.430
+Jeśli wrócę i odświeżę Sprawdźmy, czy tutaj, a widzisz, że to sprawdzanie jest zalogowane, nie sprawdzamy sprawdzanej trasy, aby
+
+00:13:22.430 --> 00:13:25.850
+upewnić się, że jest ona podpisana.
+
+00:13:25.850 --> 00:13:35.530
+Musimy więc do nas wrócić, upewnić się, że logowanie jest ustawione na true, aby nasz pasek nawigacji również się
+
+00:13:35.530 --> 00:13:36.200
+zmienił.
+
+00:13:36.220 --> 00:13:37.260
+Hej, spójrz na to.
+
+00:13:37.420 --> 00:13:39.170
+Mamy tutaj miłego awatara.
+
+00:13:39.220 --> 00:13:41.470
+Wszystko skonfigurowane dla nas.
+
+00:13:41.470 --> 00:13:43.270
+Zróbmy sobie przerwę w następnym filmie.
+
+00:13:43.270 --> 00:13:48.100
+Będziemy nadal dodawać do tej funkcjonalności, aby wyglądało to ładnie rok i mam nadzieję,
+
+00:13:48.110 --> 00:13:49.950
+że z naszego menu rozwijanego.
+
+00:13:50.260 --> 00:13:51.480
+Do zobaczenia na tym.
+
+00:13:51.590 --> 00:13:52.060
+W porządku.

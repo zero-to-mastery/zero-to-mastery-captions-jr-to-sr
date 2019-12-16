@@ -1,0 +1,310 @@
+﻿WEBVTT
+
+00:00:01.430 --> 00:00:07.730
+Chcę dodać jedną ostatnią rzecz, którą przeoczymy do tej pory, ponieważ dobrze, nie chcę zmusić
+
+00:00:07.730 --> 00:00:10.250
+cię do zbyt wielu rzeczy.
+
+00:00:10.250 --> 00:00:21.470
+Jeśli przyjrzymy się naszemu projektowi To jest dużo fałszywych, mimo że jest to prosta aplikacja, którą możesz sobie wyobrazić, jak
+
+00:00:21.470 --> 00:00:26.310
+większy i większy może być ten plik źródłowy.
+
+00:00:26.490 --> 00:00:30.960
+Organizacja jest dużą częścią pracy nad projektami.
+
+00:00:30.980 --> 00:00:36.860
+Większość aplikacji będzie znacznie większa niż te, które stworzyliśmy i potrzebujemy dobrego sposobu na uporządkowanie
+
+00:00:36.860 --> 00:00:40.590
+ich, a struktura folderów jest jedną z najważniejszych rzeczy.
+
+00:00:40.610 --> 00:00:42.480
+Więc posprzątajmy ten kod.
+
+00:00:42.500 --> 00:00:48.710
+Pokażę ci, co bym zrobił, gdybym pracował nad tą aplikacją i chciałbym, aby była ona bardziej dostępna, tak aby
+
+00:00:48.740 --> 00:00:52.590
+była czystsza, więc gdy inni ludzie wchodzą do zespołu, rozumieją to.
+
+00:00:52.620 --> 00:00:56.050
+Ponadto będę mógł rozwijać tę
+
+00:00:59.220 --> 00:01:09.270
+bazę kodu, pierwszą rzeczą, jaką zrobię, to utworzyć kilka folderów, które jeden będzie nazywany komponentami i są to komponenty,
+
+00:01:09.270 --> 00:01:14.190
+które stworzyliśmy, takie jak pole wyszukiwania Carlist i scroll.
+
+00:01:14.250 --> 00:01:20.510
+Drugi nazywa się kontenerami i kontenerami.
+
+00:01:20.940 --> 00:01:28.950
+Czy te inteligentne komponenty zawierają składniki, które mają stan i te, które mają haki cyklu
+
+00:01:29.070 --> 00:01:31.750
+życia, które mają składnię klasy.
+
+00:01:31.830 --> 00:01:35.440
+Widzisz te komponenty lub te pojemniki.
+
+00:01:35.610 --> 00:01:39.620
+Nie możemy używać z nimi czystej funkcji, ponieważ technicznie nie są one czyste.
+
+00:01:39.690 --> 00:01:45.580
+Mają stan, który modyfikują w ramach tych funkcji i to jest w porządku.
+
+00:01:45.630 --> 00:01:52.620
+Niemożliwe jest posiadanie tylko czystych funkcji, ponieważ przez większość czasu, kiedy będziemy musieli wysyłać żądania
+
+00:01:52.770 --> 00:01:58.540
+do świata zewnętrznego, ale te komponenty są szczególne, będziemy je nazywać pojemnikami,
+
+00:01:58.540 --> 00:02:03.540
+które zawierają rzeczy i po prostu przekazują stan do komponentów.
+
+00:02:03.550 --> 00:02:14.830
+Teraz możemy po prostu powiedzieć, że zamierzamy przenieść się na nazistowskie SS do teraz w kontenerach.
+
+00:02:14.880 --> 00:02:21.720
+Powiemy również, że zamierzamy przenieść to również jako pojemnik.
+
+00:02:25.390 --> 00:02:32.260
+A następnie elementy proste funkcje czystych funkcji, które stworzyliśmy pole wyszukiwania przewijania i bez
+
+00:02:32.710 --> 00:02:33.310
+karty.
+
+00:02:33.350 --> 00:02:40.160
+Chociaż mogą to być składniki, po prostu otwórzmy folder i uprość to.
+
+00:02:41.090 --> 00:02:51.380
+Postaraj się zamknąć kartę, aby otworzyć znajomych robo, a otwarte źródło powie, że karta z przewijaniem i listy kart,
+
+00:02:52.730 --> 00:02:58.310
+które są tylko czystymi funkcjami, znajdują się wewnątrz komponentów.
+
+00:02:59.370 --> 00:03:05.370
+Teraz, jeśli pamiętasz nasze Funt jest również częścią pliku Dotsie SS aplikacji.
+
+00:03:05.400 --> 00:03:09.720
+Więc przeniesiemy to również tam, ponieważ jest tam zdefiniowane.
+
+00:03:09.970 --> 00:03:12.990
+W tym celu wróćmy do naszej aplikacji i.
+
+00:03:13.150 --> 00:03:20.230
+Teraz mamy wiele błędów, ponieważ odnoszą się one teraz do różnych części, których nie mamy.
+
+00:03:20.260 --> 00:03:20.950
+App.
+
+00:03:21.480 --> 00:03:27.980
+Dobrze żyje w innym folderze niż Carlist w polu wyszukiwania i przewijać sposób,
+
+00:03:28.400 --> 00:03:37.890
+w jaki robimy to, że używamy kropki dot, co oznacza opuścić folder lub przejść do folderu, a następnie stamtąd przejść
+
+00:03:40.340 --> 00:03:44.070
+do pojemników lub przepraszam wejść z pojemników.
+
+00:03:44.150 --> 00:03:52.130
+Więc gdzie trafi WSS, który zamierzam opuścić, czyli kropka kropka, a potem raz ktoś tu na pełny poziom,
+
+00:03:52.130 --> 00:03:58.640
+zamierzam powiedzieć, że komponent i ja możemy zrobić to samo dla reszty z nich.
+
+00:04:05.380 --> 00:04:15.290
+Uratujmy i zmieniliśmy indeks G-S, który teraz odnosi się do naszego życia i kontenerów.
+
+00:04:15.310 --> 00:04:21.490
+Więc znowu, ponieważ teraz opuszczamy folder, jesteśmy w tej samej
+
+00:04:22.300 --> 00:04:30.180
+okolicy, podczas gdy możemy po prostu robić kontenery kropkowe, oszczędzajmy i źle napisałem.
+
+00:04:30.180 --> 00:04:31.710
+Dobra pisownia przeze mnie.
+
+00:04:31.710 --> 00:04:32.870
+Wszystko wygląda dobrze.
+
+00:04:33.030 --> 00:04:36.040
+Wróćmy do naszej witryny internetowej.
+
+00:04:36.040 --> 00:04:36.790
+Proszę bardzo.
+
+00:04:36.790 --> 00:04:38.620
+Wszystko ładnie się czołga.
+
+00:04:39.820 --> 00:04:40.040
+DOBRZE.
+
+00:04:40.040 --> 00:04:43.430
+Mamy tutaj ładną strukturę folderów.
+
+00:04:43.610 --> 00:04:45.140
+Sprawy się posprzątały.
+
+00:04:45.350 --> 00:04:47.650
+I również przewijaliśmy.
+
+00:04:47.770 --> 00:04:48.340
+Tak.
+
+00:04:48.400 --> 00:04:55.460
+I myślę, że mamy po prostu dodatkową kopię, abyśmy mogli zrobić kopię tego.
+
+00:04:55.710 --> 00:04:57.760
+Upewnij się, że wszystko nadal działa.
+
+00:04:57.930 --> 00:04:59.030
+Wszystko nadal działa.
+
+00:05:01.600 --> 00:05:05.390
+Chcemy usunąć tutaj kilka spacji.
+
+00:05:05.410 --> 00:05:10.070
+Zauważamy również kilka błędów, więc niekoniecznie błędy, ale stylistyczne.
+
+00:05:10.090 --> 00:05:16.660
+Na przykład z filtrem mówię, że filtrowanie robotów i iteracja przez robota nie ma większego
+
+00:05:16.660 --> 00:05:18.190
+sensu, jak powinno.
+
+00:05:18.220 --> 00:05:23.440
+Każdy przedmiot to użytkownik robota, który otrzymujemy.
+
+00:05:23.530 --> 00:05:27.430
+Więc zapisuję to wciąż tak samo bez błędów.
+
+00:05:28.360 --> 00:05:35.710
+Widzę także trochę czyszczenia, które można zrobić przy użyciu tego stanu początkowego.
+
+00:05:35.710 --> 00:05:39.430
+Możemy po prostu powtórzyć za pomocą destrukturyzacji, że otrzymamy
+
+00:05:42.050 --> 00:05:44.280
+roboty Const i pole wyszukiwania.
+
+00:05:44.300 --> 00:05:45.600
+Przeprowadzamy proces destrukturyzacji.
+
+00:05:45.690 --> 00:05:50.750
+Nazywa ten stan kropki.
+
+00:05:50.940 --> 00:05:54.520
+A teraz mogę usunąć ten stan stąd.
+
+00:05:54.750 --> 00:06:04.200
+Mogę usunąć to zakurzone stamtąd i ze wszystkich innych miejsc, w których używamy tego stanu, a
+
+00:06:04.200 --> 00:06:08.570
+renderowanie przez zapisanie wszystkiego nadal działa.
+
+00:06:08.700 --> 00:06:11.630
+Ale kod jest znacznie czystszy.
+
+00:06:11.650 --> 00:06:19.000
+Zauważyliśmy również, że tutaj talent robotów jest równy zero, tak naprawdę jest to łatwiejszy sposób.
+
+00:06:19.000 --> 00:06:20.980
+I znowu jest tylko stylistycznie.
+
+00:06:21.100 --> 00:06:23.880
+To będzie nazywane zero.
+
+00:06:23.920 --> 00:06:29.020
+Więc jeśli jest to zero, które będzie oceniać w javascript na false.
+
+00:06:29.020 --> 00:06:31.210
+Możemy więc powiedzieć coś przeciwnego.
+
+00:06:31.210 --> 00:06:36.430
+Zapamiętaj składnię, więc jeśli jest to zero, które będzie fałszywe.
+
+00:06:36.430 --> 00:06:45.330
+Zmień to w prawdziwe, więc jeśli nie ma robotów, ładujemy się bezpiecznie i to powinno działać.
+
+00:06:45.330 --> 00:06:52.210
+I wreszcie, jeśli widzisz, a jeśli jeszcze inaczej, stwierdzimy, że możemy zrobić zwrot, nie możemy.
+
+00:06:52.250 --> 00:06:58.910
+Nie możemy powiedzieć, że zamieniamy roboty, jeśli zwracają się
+
+00:07:02.480 --> 00:07:07.020
+roboty, sprawdźmy, czy to nadal działa.
+
+00:07:08.980 --> 00:07:10.120
+Nie potrzebujemy tego X
+
+00:07:14.090 --> 00:07:15.730
+lub z powrotem, ale to nadal działa.
+
+00:07:15.920 --> 00:07:19.090
+Teraz widać, że wszystko jest o wiele czystsze.
+
+00:07:19.160 --> 00:07:26.620
+Mamy aplikację, która sprawia, że wszystkie nasze rzeczy są dla nas.
+
+00:07:26.620 --> 00:07:36.070
+I na koniec zapamiętaj zapakowane Jaison, jak mieliśmy kilka gotowych skryptów i mieliśmy tę komendę budowania.
+
+00:07:36.250 --> 00:07:46.960
+Jeśli zatrzymam to teraz i zrobię NPM build lub NPM Bruhn, to sprawdzą to.
+
+00:07:47.210 --> 00:07:57.220
+Podczas budowania stworzyli nowy folder o nazwie built i tutaj mamy wszystkie nasze pliki.
+
+00:07:57.350 --> 00:08:00.040
+Ale tym razem zoptymalizowany Co to znaczy.
+
+00:08:00.050 --> 00:08:10.370
+Cóż, jeśli pójdziemy do statycznego i pójdziemy do J. S. Spójrz na to, że wszystko jest dla nas Minah, nasz
+
+00:08:11.260 --> 00:08:19.480
+CSSA jest zoptymalizowany i wszystko, co potrzebne do wdrożenia witryny, znajduje się w tym folderze, więc możemy teraz wziąć ten zbudowany folder i umieścić go
+
+00:08:19.780 --> 00:08:21.020
+w dowolnym miejscu.
+
+00:08:21.040 --> 00:08:24.480
+Jest w Internecie, a nawet daje dobre informacje.
+
+00:08:24.640 --> 00:08:28.730
+Więc teraz mamy zoptymalizowaną budowę, nie musimy jej minimalizować.
+
+00:08:28.750 --> 00:08:31.360
+Nie musimy robić całej tej optymalizacji.
+
+00:08:31.480 --> 00:08:35.200
+Wygląda na to, że możemy używać instrukcji importowania w przeglądarkach.
+
+00:08:35.230 --> 00:08:38.490
+Teraz ten folder z aktami można teraz wdrożyć w dowolnym miejscu.
+
+00:08:40.380 --> 00:08:44.730
+Tak jak powiedziałem, tworzenie nowej wersji aplikacji usuwa cały ból związany z konfiguracją.
+
+00:08:44.760 --> 00:08:51.090
+Wszystko jest zrobione, możesz napisać kod, korzystając z komponentów Briac z internetu, aby budować piękne
+
+00:08:51.300 --> 00:08:52.640
+strony internetowe.
+
+00:08:55.240 --> 00:08:57.490
+Mam nadzieję, że jesteś podekscytowany, że zareagujesz tak jak ja.
+
+00:08:57.490 --> 00:09:03.610
+Dlatego jest to tak popularne narzędzie i właśnie dlatego tak wiele firm korzysta z niego.
+
+00:09:03.660 --> 00:09:04.730
+Zobaczę w następnym.
+
+00:09:04.960 --> 00:09:05.270
+Lecz przez.
