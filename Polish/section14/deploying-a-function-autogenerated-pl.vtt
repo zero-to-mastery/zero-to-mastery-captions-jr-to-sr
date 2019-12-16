@@ -1,0 +1,427 @@
+﻿WEBVTT
+
+00:00:01.290 --> 00:00:01.990
+Witamy spowrotem.
+
+00:00:02.190 --> 00:00:06.780
+Spróbujmy teraz wdrożyć tę funkcję, abyśmy mogli ją przetestować.
+
+00:00:07.020 --> 00:00:15.720
+Na razie zamierzam zmienić nazwę tej funkcji na coś podobnego do rangi tak traktującego hierarchę,
+
+00:00:15.810 --> 00:00:26.910
+albo utrzymajmy ją z rangą, a to oznacza, że zmienię tu nazwę, aby rangować, a drugą rzecz, którą chcę zrobić
+
+00:00:26.970 --> 00:00:31.050
+jest teraz, ponieważ jest to cel rozwoju.
+
+00:00:31.140 --> 00:00:41.140
+Inną opcją, którą mogę wypowiedzieć na temat komentarza i zostawić, jest to, co nazywamy etapem, na którym możemy skazać na śmierć lub Prod ..
+
+00:00:41.350 --> 00:00:48.190
+A to przywiązuje nazwę do naszej funkcji lambda do produkcji lub rozwoju i zwykle dobrą praktyką jest
+
+00:00:48.190 --> 00:00:53.080
+posiadanie flagi def, aby można było przetestować rzeczy, a następnie, kiedy jest
+
+00:00:53.080 --> 00:01:01.360
+gotowe do produkcji, aby to zmienić, aby pasowały do tego i następnej rzeczy, którą chcę zrobić to także zmienić nazwę naszej
+
+00:01:01.360 --> 00:01:01.810
+usługi.
+
+00:01:01.870 --> 00:01:06.730
+Jeśli spojrzymy na komentarze tutaj, zobaczę, że ta uwaga aktualizuje to twoją nazwą usługi.
+
+00:01:06.880 --> 00:01:11.520
+A jeśli pamiętasz nasze imię na AWOS, nie jest tak, nie.
+
+00:01:11.530 --> 00:01:12.160
+Tak.
+
+00:01:12.280 --> 00:01:19.580
+Musi zostać zaktualizowany o naszą nazwę, która jest w rankingu LAMDA.
+
+00:01:19.710 --> 00:01:24.310
+Zamierzam zmienić nazwę naszej usługi na rangi LAMDA.
+
+00:01:24.520 --> 00:01:31.190
+Zamierzam zapisać serwer z mniejszym plikiem YAML, a następnie przejdę do händler dodgy Tak.
+
+00:01:31.260 --> 00:01:35.020
+Teraz nie rozmawialiśmy za dużo o pisanych ręcznie.
+
+00:01:35.040 --> 00:01:37.790
+Tak, sprowadźmy je tutaj.
+
+00:01:37.800 --> 00:01:41.800
+Teraz są trzy główne rzeczy, na których chcemy się skupić.
+
+00:01:41.820 --> 00:01:49.940
+Jednym z nich jest fakt, że martwimy się tylko o funkcję, którą Lamda musi uruchomić.
+
+00:01:50.090 --> 00:01:56.390
+Więc wszystko powinno znajdować się wewnątrz tego polecenia rangi i to jest główna zasada.
+
+00:01:56.400 --> 00:02:03.600
+Teraz ta funkcja będzie uruchamiana w oparciu o zdarzenie wyzwalające i dlatego obiekt zdarzenia jest taki, jak to,
+
+00:02:03.630 --> 00:02:09.390
+co powoduje, że otrzymamy obiekt tego wyzwalacza, a to wydarzenie, o którym mówiliśmy, może
+
+00:02:09.390 --> 00:02:15.600
+być wszystkim, co może być żądaniami HDTV może to być dodatkowa prośba, którą możemy skonfigurować,
+
+00:02:17.000 --> 00:02:23.330
+i mamy również pomysł na zasoby, w których ta funkcja lambda nie może korzystać z
+
+00:02:23.570 --> 00:02:26.540
+zasobów zewnętrznych, takich jak np. Esrey.
+
+00:02:26.570 --> 00:02:33.020
+Teraz najważniejszą rzeczą do zapamiętania jest to, że Lamda samo w sobie jest tym, co nazywamy bezpaństwowcem.
+
+00:02:33.140 --> 00:02:35.890
+To nie będzie dla nas nic pamiętać.
+
+00:02:35.900 --> 00:02:41.990
+Pamiętaj, że te rzeczy są tworzone, ponieważ funkcja jest przechowywana w bazie danych i
+
+00:02:41.990 --> 00:02:50.280
+kiedy jest gotowa do uruchomienia, zostanie umieszczona w kontenerze przez Amazon i będzie uruchamiana, a po jej uruchomieniu nie
+
+00:02:50.280 --> 00:02:55.410
+będzie już żadnych żądań, które otrzyma wracać do bazy danych lub
+
+00:02:55.410 --> 00:02:59.220
+kontener się zawiesza i nie można niczego zapamiętać.
+
+00:02:59.220 --> 00:03:04.500
+Więc chcesz zachować swoje funkcje bezpaństwowca i jeśli kiedykolwiek chcesz przechowywać informacje lub dane,
+
+00:03:04.500 --> 00:03:07.520
+możesz użyć dynamo D-B lub wiadra wejściowego.
+
+00:03:07.620 --> 00:03:13.360
+Znowu coś, co możesz zrobić całkiem łatwo na serwerze mniej pliku YAML.
+
+00:03:13.390 --> 00:03:20.500
+Teraz w ramach tej funkcji widzimy, że mamy kilka rzeczy i chcę skupić twoją uwagę na ostatnim
+
+00:03:20.500 --> 00:03:22.310
+wierszu tutaj wywołania zwrotnego.
+
+00:03:22.390 --> 00:03:31.940
+Brak odpowiedzi teraz ta funkcja Colback uruchamia odpowiedź całej tej funkcji.
+
+00:03:32.250 --> 00:03:38.220
+A sposób działania lambda polega na tym, że otrzymujesz oddzwonienie z powietrzem i odpowiedzią.
+
+00:03:38.220 --> 00:03:45.570
+W naszym przypadku odpowiedzią jest kod stanu 200 z ciałem, którym jest Jaison komunikatu i danych wejściowych,
+
+00:03:45.570 --> 00:03:49.260
+a wiadomo, że to wejście zawiera obiekt zdarzenia.
+
+00:03:49.270 --> 00:03:56.410
+Teraz ten błąd tutaj nigdy nie użyjemy go w lambda, ponieważ pod maską jest coś,
+
+00:03:56.500 --> 00:04:00.060
+co integruje się z serwerem lambda.
+
+00:04:00.160 --> 00:04:04.860
+I domyślnie to jest coś, co się nami zaopiekowało.
+
+00:04:04.870 --> 00:04:11.710
+Więc jeśli kiedykolwiek zechcesz wysłać błąd z Lamdą, zamiast zmienić to tutaj, zrobiłbyś kod
+
+00:04:11.710 --> 00:04:12.230
+statusu.
+
+00:04:12.320 --> 00:04:16.200
+Na przykład 400 w odpowiedzi.
+
+00:04:16.390 --> 00:04:19.670
+Teraz zastosujmy to i zobaczmy, co się stanie.
+
+00:04:19.710 --> 00:04:26.560
+Mam zamiar zapisać tę funkcję i wszystko, co musimy zrobić z mniejszym serwerem, jest już połączone
+
+00:04:26.800 --> 00:04:27.830
+z AWOS.
+
+00:04:27.850 --> 00:04:32.830
+Zmieniliśmy nazwę i serwer mniej YAML na naszą pozycję lambda.
+
+00:04:33.220 --> 00:04:45.450
+Możemy po prostu uruchomić mniej lub mniej wdrożyć serwer.
+
+00:04:45.540 --> 00:04:49.130
+I mamy trochę natury i mamy złe wcięcia.
+
+00:04:49.170 --> 00:04:55.540
+Ponownie jest to plik YAML, więc musimy upewnić się, że wcięcie jest absolutnie poprawne.
+
+00:04:56.280 --> 00:04:57.520
+Spróbujmy jeszcze raz.
+
+00:04:58.380 --> 00:05:00.400
+Przechodzę, aby ponownie zapisać wdrożenie.
+
+00:05:05.150 --> 00:05:08.470
+Wygląda na to, że wszystko zostało wdrożone i ma naprawdę dobry rok.
+
+00:05:08.480 --> 00:05:16.070
+Widzimy, że jest to ładowanie do tworzenia chmur, a my również przesyłamy plik zip, ponieważ to, co robi
+
+00:05:16.070 --> 00:05:18.650
+pod maską, to w rzeczywistości zip.
+
+00:05:18.650 --> 00:05:25.220
+Wszystkie nasze pliki i załaduj je do naszego Esrey lub nie do naszego Ale do ich pojemnika Esrey, tak że gdy
+
+00:05:25.220 --> 00:05:29.050
+tylko będą potrzebować tej funkcji, stworzą pojemnik i wyciągną go z drzewa.
+
+00:05:29.300 --> 00:05:35.540
+I robi kilka rzeczy pod maską, ale główna część jest taka, że nasze informacje o usługach
+
+00:05:35.540 --> 00:05:36.760
+są teraz ustawione.
+
+00:05:36.770 --> 00:05:42.190
+Widzisz, że nasze funkcje są gotowe, jest to wezwanie do rangi rankingu dev lambda.
+
+00:05:42.200 --> 00:05:49.600
+Ponownie mamy podłączoną do ciebie devah, ponieważ zrobiliśmy ten etap na Dev i nie ma kluczy API ani
+
+00:05:49.630 --> 00:05:51.490
+punktów końcowych, które daliśmy.
+
+00:05:51.580 --> 00:05:56.040
+Ale nasza funkcja działa teraz bardzo fajnie.
+
+00:05:56.230 --> 00:05:58.440
+Jak możemy to sprawdzić?
+
+00:05:58.770 --> 00:06:03.070
+Jedną rzeczą, którą możemy zrobić, to możemy skorzystać
+
+00:06:08.140 --> 00:06:13.100
+z mniejszej funkcji dash Dash i możemy wywołać funkcję, którą mamy.
+
+00:06:13.150 --> 00:06:14.170
+Zadzwoń do.
+
+00:06:14.390 --> 00:06:17.710
+A funkcja, którą mieliśmy, nazywała się rangą.
+
+00:06:17.740 --> 00:06:21.470
+Więc dajmy sobie spokój.
+
+00:06:21.530 --> 00:06:27.450
+Wyglądało na to, że odwołała się do naszej funkcji z naszego pojemnika z naszej funkcji lądowej na Ada.
+
+00:06:27.540 --> 00:06:34.440
+Tak, otrzymaliśmy kod statusu 200 z treścią usługi go. 0.
+
+00:06:34.530 --> 00:06:36.780
+Jeśli wrócimy tutaj tak.
+
+00:06:36.930 --> 00:06:37.810
+To cudownie.
+
+00:06:38.040 --> 00:06:43.200
+Teraz, kiedy testujesz to w ten sposób, możesz nie chcieć wywoływać funkcji lambda za każdym razem, ponieważ
+
+00:06:43.470 --> 00:06:46.950
+może to cię kosztować, szczególnie jeśli robisz to bardzo często.
+
+00:06:46.950 --> 00:06:55.290
+Innym sposobem, w jaki możesz to zrobić, jest wypowiedzenie się na temat rangi lokalnego kreska kreskowego i lokalnych środków.
+
+00:06:55.360 --> 00:06:58.560
+Hej, nie dotknę twojej funkcji lambda.
+
+00:06:58.560 --> 00:07:04.020
+Zamierzam spróbować symulować funkcję lambda i uruchomić ją lokalnie, abyśmy nie naliczali za
+
+00:07:04.020 --> 00:07:04.680
+nic.
+
+00:07:04.800 --> 00:07:08.790
+I znowu nie zestresuj się tym, że masz milion próśb na miesiąc.
+
+00:07:08.790 --> 00:07:09.930
+Jesteś w porządku.
+
+00:07:10.050 --> 00:07:13.800
+Nie zostaniesz obciążony za funkcję lambda, chyba że robisz coś kompletnie szalonego
+
+00:07:14.280 --> 00:07:16.170
+lub masz szalonych użytkowników Montu.
+
+00:07:16.170 --> 00:07:17.840
+Więc na razie wypróbujmy to.
+
+00:07:19.540 --> 00:07:21.490
+Hej, spójrz, że to działa.
+
+00:07:21.530 --> 00:07:28.610
+Teraz ta lokalna funkcja działa tylko dlatego, że nasza funkcja jest dobra i prosta, jeśli na przykład była zależna
+
+00:07:28.730 --> 00:07:33.690
+od zasobu Esrey lub innego zasobu, w który Amazon może nie działać.
+
+00:07:33.710 --> 00:07:37.150
+Ale dla naszych celów jest to świetna poligon doświadczalny.
+
+00:07:38.410 --> 00:07:43.930
+W porządku ostatnią rzeczą, którą chcę zrobić, to to, że chcę to przygotować na to, co
+
+00:07:43.930 --> 00:07:51.070
+chcemy zrobić, to, że chcemy mieć punkt końcowy, który będzie wydarzeniem wyzwalającym, do którego możemy wywołać tę funkcję, ponieważ w naszej
+
+00:07:51.070 --> 00:07:56.910
+inteligentnej drzemce mózgowej "Nie będę w stanie po prostu uruchomić jako strata, wywołując rytm funkcji kreski myślnikowej.
+
+00:07:57.010 --> 00:08:03.400
+Wiemy, że teraz istnieje, ale chcę mieć punkt końcowy HGP i możemy to zrobić,
+
+00:08:03.400 --> 00:08:05.580
+przewijając do naszych funkcji.
+
+00:08:06.070 --> 00:08:12.460
+Widać tu w zdarzeniach, że istnieje metoda ścieżki HD DP, którą możemy wykorzystać.
+
+00:08:12.460 --> 00:08:14.640
+Zamierzam to skopiować tutaj.
+
+00:08:14.920 --> 00:08:16.270
+Wklej go
+
+00:08:19.220 --> 00:08:27.770
+i dodaj do funkcji rangowych, które mamy, i tutaj, chcę przede wszystkim, że chcę mieć
+
+00:08:29.380 --> 00:08:33.100
+PKB, ścieżka będzie taka, jak chcemy.
+
+00:08:33.100 --> 00:08:35.470
+Powiedzmy więc, że
+
+00:08:39.490 --> 00:08:45.010
+ranking i metoda będzie metodą get, która chce otrzymać wiadomość.
+
+00:08:45.010 --> 00:08:52.220
+Teraz powiedzmy, że pod maską tego, co to ma zamiar zrobić, jest użycie
+
+00:08:52.310 --> 00:09:00.880
+innej usługi przez AWOS zwanej bramką API, aby dać nam punkt końcowy, aby faktycznie wyzwolić to zdarzenie.
+
+00:09:00.890 --> 00:09:01.870
+Pozwól, że ci pokażę, co to znaczy.
+
+00:09:01.880 --> 00:09:11.600
+Wdróżmy ponownie uruchomić naszą SLA nas wdrożyć i piękna jest to, że podczas Servilius robi to automatycznie dla nas rozmawia
+
+00:09:11.630 --> 00:09:16.680
+z AWOS i upewnić się, że wszystko działa sprawnie.
+
+00:09:17.990 --> 00:09:19.240
+I oto idziemy.
+
+00:09:19.280 --> 00:09:21.410
+Mamy wszystko wdrożone.
+
+00:09:21.560 --> 00:09:25.220
+Pamiętaj, że nasz region to USA Wschodni, ponieważ to właśnie ustaliliśmy.
+
+00:09:25.370 --> 00:09:27.920
+To etap Dev i rozejrzyj się.
+
+00:09:27.950 --> 00:09:37.560
+Mamy teraz punkt końcowy, który dał nam Arel, który wygląda dobrze na Amazon, ale z moją ścieżką rankingową z
+
+00:09:37.560 --> 00:09:42.240
+poleceniem dev, ponieważ wciąż jesteśmy w fazie rozwoju.
+
+00:09:42.450 --> 00:09:44.900
+A teraz przetestujmy to.
+
+00:09:44.940 --> 00:09:46.720
+Zobaczmy, czy to faktycznie działa.
+
+00:09:46.790 --> 00:09:50.060
+Chcesz otworzyć przeglądarkę.
+
+00:09:50.130 --> 00:09:51.940
+Otwórzmy nowe okno w przeglądarce.
+
+00:09:53.590 --> 00:09:58.100
+Tutaj wklejmy to.
+
+00:09:58.120 --> 00:09:59.860
+Jakie to jest świetne.
+
+00:09:59.920 --> 00:10:04.570
+Właśnie uruchomiliśmy tę funkcję lambda, która funkcjonuje gdzieś na serwerach Amazon.
+
+00:10:04.660 --> 00:10:11.370
+Uruchomiliśmy to wydarzenie i to wydarzenie ma wszystkie te rzeczy.
+
+00:10:11.440 --> 00:10:17.620
+Przede wszystkim mamy wiadomość, która mówi, że serwer Go zapamiętajmy w naszej funkcji
+
+00:10:17.620 --> 00:10:24.680
+tutaj lub jeśli przejdziemy tutaj, zwracamy treść z komunikatem go less i wejściem, które jest zdarzeniem.
+
+00:10:25.030 --> 00:10:31.990
+Teraz wydarzenie, które tutaj widzisz, dostarcza nam informacji o przeglądarce, z której właśnie wysłałem wydarzenie.
+
+00:10:32.100 --> 00:10:34.260
+Widzę, że wszystko w porządku, mam swoje nagłówki.
+
+00:10:34.260 --> 00:10:35.260
+To była ranga ścieżki.
+
+00:10:35.280 --> 00:10:39.370
+To była prośba i tak dalej, i tak dalej.
+
+00:10:39.420 --> 00:10:42.390
+Widzę, że robię mnóstwo rzeczy.
+
+00:10:42.390 --> 00:10:47.090
+Używam DP wygrał i wszystkie te informacje o wydarzeniu.
+
+00:10:47.310 --> 00:10:54.120
+Ale tak jak my mamy funkcję Amazon lambda super super prosta.
+
+00:10:54.160 --> 00:11:00.760
+Teraz wszystko, co musimy teraz zrobić, to sprawić, że ta funkcja zrobi dla nas coś pożytecznego, ponieważ teraz tak naprawdę
+
+00:11:00.940 --> 00:11:02.450
+nie obchodzi nas to.
+
+00:11:02.470 --> 00:11:04.890
+Wróćmy do tego, co mieliśmy wcześniej.
+
+00:11:04.900 --> 00:11:08.200
+W tej chwili nie dbamy tylko o to, by otrzymać to wydarzenie.
+
+00:11:08.350 --> 00:11:17.320
+Chcemy zrobić system rankingowy naszego inteligentnego wychowania, być może dać ludziom kilka emoji na podstawie
+
+00:11:17.380 --> 00:11:18.620
+rankingu użytkownika.
+
+00:11:18.670 --> 00:11:21.440
+W następnym filmie zaczniemy to robić.
+
+00:11:21.490 --> 00:11:22.850
+Będzie dużo zabawy.
+
+00:11:22.990 --> 00:11:23.940
+Zobaczę w tym.
+
+00:11:24.170 --> 00:11:24.760
+PA pa.

@@ -1,0 +1,91 @@
+﻿WEBVTT
+
+00:00:00.890 --> 00:00:07.260
+Mergeți-i înapoi și aduceți discuția noastră la ceva despre
+
+00:00:07.320 --> 00:00:18.050
+care am vorbit anterior cu dr. Ideea de arhitectură a serviciilor micro-ideea că înainte de a avea această infrastructură monolit
+
+00:00:18.080 --> 00:00:25.760
+gigant sau bază de cod care a făcut totul pentru noi toate piesele mari toate piesele mici toate împreună împreună
+
+00:00:25.760 --> 00:00:29.390
+într-un singur loc care rulează aplicația noastră și logica.
+
+00:00:29.580 --> 00:00:38.700
+Acum, cu docker-ul și AWOS-urile fac acum lucruri extrem de ușor pentru a gestiona aceste mașini și a le conecta ideea
+
+00:00:38.700 --> 00:00:43.600
+serviciilor Micro a devenit din ce în ce mai populară.
+
+00:00:43.630 --> 00:00:50.050
+Aceasta este ideea de a împărți aplicația într-un set de servicii interconectate mai mici.
+
+00:00:50.050 --> 00:00:57.430
+În loc să construiască o singură aplicație monolit și fiecare serviciu Micro este o aplicație mică care
+
+00:00:57.820 --> 00:01:05.530
+are o arhitectură proprie, care constă în propria logică de afaceri și este preocupată de a face un lucru
+
+00:01:05.530 --> 00:01:06.670
+foarte bine.
+
+00:01:06.670 --> 00:01:12.790
+Acum vă uitați la asta credeți că acest lucru pare monolitic pare a fi o opțiune mai bună decât cele mai
+
+00:01:12.790 --> 00:01:17.190
+vechi lucruri confuze care se întâmplă aici și s-ar putea să aveți din nou dreptate.
+
+00:01:17.200 --> 00:01:21.670
+Chiar depinde într-adevăr de ceea ce face compania dvs.
+
+00:01:22.530 --> 00:01:30.570
+Cu toate acestea, beneficiul major cu serviciile Micro este că acum aveți aceste bucăți mici care pot fi testate
+
+00:01:30.660 --> 00:01:38.630
+pe cont propriu încât putem avea diferite echipe de dezvoltatori pe cont propriu și toate acestea pot fi lansate
+
+00:01:38.660 --> 00:01:41.550
+individual la producție unul câte unul.
+
+00:01:41.570 --> 00:01:44.340
+Nu trebuie să ne asigurăm că toate piesele lucrează împreună.
+
+00:01:44.360 --> 00:01:51.980
+Vreau să spun că încă mai facem, dar aici trebuie să ne asigurăm că toate echipele de dezvoltatori lucrează pe o bază de coduri.
+
+00:01:52.070 --> 00:01:59.150
+Nimeni nu sparge nimic și toate încercările trec înainte să îl trimitem producției versus aici, unde putem avea mici
+
+00:01:59.150 --> 00:02:06.830
+echipe individuale care doar se îngrijorează cu privire la mașina lor un singur serviciu și asigură-te că este cu adevărat
+
+00:02:06.830 --> 00:02:13.000
+bun și poți avea o producție actualizată în timp ce altul poate fi actualizat în producție
+
+00:02:13.010 --> 00:02:14.390
+după două săptămâni.
+
+00:02:14.510 --> 00:02:21.560
+Și atâta timp cât au ceea ce noi numim un acord la nivel de serviciu sau SLA, atâta timp cât spun că trebuie doar să vă
+
+00:02:21.560 --> 00:02:27.140
+asigurați că, indiferent de actualizările pe care le faceți, mi-ați dat aceste date de returnare sau dacă mi-ați răspuns în
+
+00:02:27.140 --> 00:02:27.740
+acest fel.
+
+00:02:27.740 --> 00:02:34.460
+Apoi, puteți lucra individual pe aceste cutii și face ca aceste companii masive care au atât
+
+00:02:34.460 --> 00:02:38.280
+de multe echipe Daval să lucreze mult mai eficient.
+
+00:02:38.510 --> 00:02:43.910
+Și aceasta este o arhitectură cu adevărat interesantă pe care doriți să o gândiți cu adevărat și să o supravegheați deoarece
+
+00:02:44.060 --> 00:02:47.840
+va deveni din ce în ce mai populară pe măsură ce timpul va continua.
+
+00:02:48.970 --> 00:02:54.820
+În regulă, să ne întoarcem la serviciile Amazon Web Services și să vorbim despre funcțiile lambda în următorul videoclip.

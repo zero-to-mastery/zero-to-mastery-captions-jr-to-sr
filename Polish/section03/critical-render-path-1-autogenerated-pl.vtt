@@ -1,0 +1,193 @@
+﻿WEBVTT
+
+00:00:01.470 --> 00:00:02.880
+Witamy spowrotem.
+
+00:00:02.880 --> 00:00:12.160
+Gdy użytkownik zażąda strony dla twojej strony, strona DML rozpocznie przesyłanie strumieniowe do przeglądarki,
+
+00:00:12.220 --> 00:00:20.320
+gdy tylko przeglądarka napotka znacznik dla zewnętrznego obrazu, skryptu plik c.
+
+00:00:20.350 --> 00:00:28.750
+Rozpocznie pobieranie pliku jednocześnie, gdy przeglądarka otrzyma lub wyśle wiadomość e-mail, wykona coś, co nazywa
+
+00:00:28.750 --> 00:00:34.980
+się analizą, a następnie przełączy ją na słownictwo, które rozumie.
+
+00:00:35.170 --> 00:00:41.690
+Po zrozumieniu tego dokumentu robi to, co zaczyna, tworząc Dom, tak jak wspomnieliśmy o
+
+00:00:41.780 --> 00:00:43.450
+modelu obiektu dokumentu.
+
+00:00:43.970 --> 00:00:51.350
+I znowu, gdy buduje się, gdy tylko zobaczy zewnętrzny zasób, idzie dalej i rozpoczyna pobieranie wszystkich
+
+00:00:51.560 --> 00:00:52.540
+tych zasobów.
+
+00:00:52.910 --> 00:01:01.220
+Zwykle pliki CSSA i javascript mają wysoki priorytet, a inne pliki, takie jak obrazy, mają
+
+00:01:01.220 --> 00:01:02.890
+niższy priorytet.
+
+00:01:02.990 --> 00:01:04.940
+Jak więc zoptymalizować ten proces?
+
+00:01:04.940 --> 00:01:11.020
+Jak zoptymalizować HCM Alpha, która jest krokiem 1.
+
+00:01:12.850 --> 00:01:22.000
+Cóż, pierwszą rzeczą, którą chcesz zrobić, to wczytać style, które są plikami CSSA tak szybko jak to możliwe, a skrypt to pliki
+
+00:01:22.120 --> 00:01:27.460
+javascript tak późno, jak to możliwe, z kilkoma wyjątkami tu i tam.
+
+00:01:29.150 --> 00:01:29.730
+Czemu.
+
+00:01:29.900 --> 00:01:37.460
+Cóż, jedną z głównych zasad wydajności CSSA jest jak najszybsze przesłanie CSSA do przeglądarki.
+
+00:01:38.850 --> 00:01:45.370
+JavaScript wymaga zakończenia analizowania CSSA przez melon, zanim będzie można go uruchomić.
+
+00:01:45.430 --> 00:01:46.750
+To jest krok 4 tutaj.
+
+00:01:47.750 --> 00:01:55.270
+W ten sposób zapewniamy stylom wystarczający czas na stworzenie modelu obiektowego DSS.
+
+00:01:55.380 --> 00:02:02.070
+Więc jeśli umieścisz javascript w tagu head w Mel.
+
+00:02:02.270 --> 00:02:11.860
+Problem z tym pozycjonowaniem, jeśli jest na górze, polega na tym, że blokuje on skrypty renderujące strony, które
+
+00:02:11.860 --> 00:02:15.680
+historycznie blokowały pobieranie dodatkowych zasobów szybciej.
+
+00:02:16.910 --> 00:02:23.750
+Zamieniając je na dole lub umieszczając je na dole, jesteś treścią stylu, a media
+
+00:02:23.750 --> 00:02:28.760
+mogą zacząć pobierać szybciej w związku z postrzeganiem lepszej wydajności.
+
+00:02:29.920 --> 00:02:38.990
+Najlepszym sposobem, aby to zademonstrować, jest przykład, że mam tu bardzo bardzo prostą kartę indeksu, która go
+
+00:02:38.990 --> 00:02:39.950
+wyłączyła.
+
+00:02:40.610 --> 00:02:46.330
+Ma prosty znacznik H-1, przycisk, który nie robi absolutnie nic.
+
+00:02:46.440 --> 00:02:53.980
+I mamy tu tag linku z zewnętrznym arkuszem stylów i tagiem skryptu na dole, o
+
+00:02:54.370 --> 00:02:59.470
+czym wspominam, który po prostu nie ostrzega o sprawdzaniu.
+
+00:02:59.480 --> 00:03:04.790
+Więc jeśli przejdziemy do naszej przeglądarki Mamy tutaj bardzo ładną stronę internetową.
+
+00:03:04.880 --> 00:03:16.260
+Nasza zakładka sieci jest otwarta i jeśli kliknę tutaj odśwież, widzę, że mój plik indeksu i gwiezdne patche widzą
+
+00:03:17.420 --> 00:03:21.030
+plik SS, który wygląda na załadowany.
+
+00:03:21.550 --> 00:03:29.890
+A ponieważ mamy tu alert, blokuje on renderowanie strony, ponieważ javascript działa już teraz, a
+
+00:03:29.890 --> 00:03:33.070
+dowiemy się, dlaczego tak jest.
+
+00:03:33.160 --> 00:03:34.720
+A kolejne filmy.
+
+00:03:34.840 --> 00:03:42.850
+Ale na razie chcę, żebyś zobaczył, że indeks i piła spadają tam, gdzie zostały pobrane.
+
+00:03:42.860 --> 00:03:45.770
+Teraz spróbujmy czegoś innego.
+
+00:03:45.870 --> 00:03:55.220
+Jeśli przeniesię ten tag skryptu powyżej arkusza stylów, zapiszę.
+
+00:03:55.420 --> 00:03:56.970
+A teraz odświeżam
+
+00:03:59.740 --> 00:04:03.890
+moją stronę, widzimy, że arkusz stylów jest już w toku.
+
+00:04:04.930 --> 00:04:13.690
+Jeśli kliknę OK, to rozpocznie się pobieranie i widzimy tutaj, że arkusz stylów utknął na
+
+00:04:14.110 --> 00:04:21.850
+14 sekund, ponieważ nie pozwoliliśmy mu go pobrać głównie z powodu działania javascript.
+
+00:04:22.020 --> 00:04:27.090
+A następnie w końcu załadowane i pobrane po JavaScript.
+
+00:04:27.090 --> 00:04:36.440
+Widzisz więc, w jaki sposób zablokowaliśmy inne rzeczy, po prostu uruchamiając skrypt w talii.
+
+00:04:37.750 --> 00:04:44.900
+Więc znowu chcemy się upewnić, że pliki javascript są na dole, a teraz jest kilka wyjątków powiedzmy
+
+00:04:44.920 --> 00:04:51.940
+na przykład, że masz Google Analytics, który jest znacznikiem skryptu i chcesz, żeby to zostało wykonane od
+
+00:04:51.940 --> 00:04:54.910
+razu, może chcesz wiedzieć użytkownik robi.
+
+00:04:54.910 --> 00:04:56.570
+Pierwsza sekunda na stronie internetowej.
+
+00:04:56.770 --> 00:05:02.800
+W takim przypadku możesz umieścić tag skryptu na górze, ale pamiętaj, że może to spowolnić twoją
+
+00:05:02.800 --> 00:05:03.520
+witrynę.
+
+00:05:03.850 --> 00:05:10.070
+Chcemy również upewnić się, że style są pobierane tak szybko, jak to możliwe.
+
+00:05:10.120 --> 00:05:11.840
+Właśnie dlatego wkładamy je w głowę.
+
+00:05:12.950 --> 00:05:19.350
+Zobaczmy więc, jeśli umieścisz swoje skrypty lub znaczniki skryptów na dole strony.
+
+00:05:19.490 --> 00:05:21.280
+Zostaną załadowani na końcu.
+
+00:05:21.380 --> 00:05:25.600
+Innymi słowy, coś może pojawić się w przeglądarce szybciej.
+
+00:05:25.610 --> 00:05:31.620
+Użytkownicy nie muszą czekać na zakończenie skryptu, zanim zobaczą coś w aplikacji.
+
+00:05:33.010 --> 00:05:40.540
+A także chcesz wczytać tagi stylu tak szybko, jak to możliwe, aby obiekt dokumentu CSSA mógł
+
+00:05:40.540 --> 00:05:43.020
+zostać utworzony jak najszybciej.
+
+00:05:43.030 --> 00:05:48.270
+I pamiętaj, abyśmy stworzyli drzewo renderowania.
+
+00:05:48.350 --> 00:05:48.870
+W porządku.
+
+00:05:48.870 --> 00:05:50.970
+To pierwsza część.
+
+00:05:51.920 --> 00:05:53.640
+Spójrzmy na krok drugi.
+
+00:05:54.050 --> 00:06:00.040
+A potem wszystkie pozostałe kroki w kolejnych filmach widzą, że.

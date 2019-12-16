@@ -1,0 +1,868 @@
+﻿WEBVTT
+
+00:00:00.510 --> 00:00:03.900
+În regulă, ne apropiem și mai aproape de a ne arăta așa.
+
+00:00:03.900 --> 00:00:07.730
+Dar vedem clar că avem o casetă de căutare aici.
+
+00:00:07.920 --> 00:00:14.410
+Deci, în acest videoclip, vom lucra la analizarea interactivă a acestei aplicații interactive.
+
+00:00:14.430 --> 00:00:15.100
+Vedem asta.
+
+00:00:15.120 --> 00:00:21.230
+Ei bine, cu siguranță avem nevoie de un titlu și de caseta de căutare, așa că să creăm asta.
+
+00:00:21.310 --> 00:00:22.730
+Dacă mă duc la index.
+
+00:00:22.950 --> 00:00:29.560
+Da, cred că acum construim o aplicație în loc să avem componenta Carlist aici
+
+00:00:29.560 --> 00:00:38.200
+ar trebui să avem o componentă mare numită aplicație și această aplicație va fi tatăl tuturor copiilor noștri, toate
+
+00:00:38.200 --> 00:00:39.340
+componentele noastre.
+
+00:00:39.850 --> 00:00:47.060
+Să facem asta, să construim prima componentă a aplicației.
+
+00:00:47.220 --> 00:00:53.010
+Și această componentă a aplicației va importa din nou re-act de
+
+00:00:57.570 --> 00:01:00.420
+re-act și aplicația va
+
+00:01:06.750 --> 00:01:19.240
+fi egală cu componenta listei de cărți, în timp ce noi putem doar copia și pune înăuntru și din nou schimbarea acestui tabel.
+
+00:01:19.500 --> 00:01:20.790
+Vrem să
+
+00:01:23.790 --> 00:01:25.700
+importăm componenta listei
+
+00:01:30.380 --> 00:01:37.350
+de carduri și de asemenea dorim ca robotii noștri să fie importați aici.
+
+00:01:37.490 --> 00:01:38.890
+Deci avem acces la ea.
+
+00:01:40.070 --> 00:01:45.920
+Și apoi, în cele din urmă, acum vrem doar să redați componenta aplicației, astfel încât să putem aduce
+
+00:01:45.920 --> 00:01:48.470
+acest lucru înapoi așa cum a fost.
+
+00:01:48.680 --> 00:01:53.990
+Salvăm că trebuie să exportăm în mod evident aplicația noastră.
+
+00:01:54.000 --> 00:02:04.130
+Așa că vom spune că aplicația implicită pentru sportul cu X salvează acest lucru să ne întoarcem.
+
+00:02:04.380 --> 00:02:04.660
+Da.
+
+00:02:04.710 --> 00:02:06.210
+Totul funcționează încă.
+
+00:02:07.010 --> 00:02:11.350
+Acum, în cadrul acestei Carlist avem și un antet.
+
+00:02:11.420 --> 00:02:14.640
+Așa că o să ne facem o să-i spună prietenilor
+
+00:02:17.960 --> 00:02:22.810
+lui Roble și să ne aducem aminte că trebuie să ne întoarcem doar un singur părinte.
+
+00:02:22.820 --> 00:02:27.050
+Așa că trebuie să facem ceva de genul
+
+00:02:31.550 --> 00:02:37.630
+div pentru ao înfășura și trebuie să închid corect această etichetă H-1.
+
+00:02:37.660 --> 00:02:46.000
+Am titlul de prieteni ai robotului și avem nevoie și de o casetă de căutare, iar H-1 a fost ușor și acum trebuie să
+
+00:02:46.000 --> 00:02:48.070
+construim o componentă pentru asta.
+
+00:02:48.100 --> 00:02:56.660
+Se pare că probabil că vrem să creăm o componentă a căsuței de căutare pentru această aplicație, deci hai să facem asta.
+
+00:02:56.660 --> 00:03:09.330
+Sunt una de spus caseta de căutare de import dintr-un fișier care va crea caseta de căutare numită vom crea un fișier nou.
+
+00:03:19.760 --> 00:03:26.000
+Și acest fișier va avea importurile re-act de la re-act și caseta
+
+00:03:28.980 --> 00:03:30.430
+de căutare.
+
+00:03:32.490 --> 00:03:36.060
+Vom avea o funcție care se întoarce.
+
+00:03:36.090 --> 00:03:38.080
+Să ne gândim la ce se întoarce.
+
+00:03:39.360 --> 00:03:43.790
+Ei bine, cu siguranta returneaza dreptul de intrare.
+
+00:03:43.830 --> 00:03:47.860
+Acesta este tipul de căutare.
+
+00:03:48.150 --> 00:03:51.520
+Și să avem de asemenea un substituent.
+
+00:03:51.660 --> 00:03:54.300
+Să închidem acest lucru și înlocuitorul.
+
+00:03:55.490 --> 00:04:02.680
+Asta înseamnă că roboții de căutare.
+
+00:04:02.830 --> 00:04:15.030
+Închideți acest lucru și salvați și trebuie să exportați caseta de căutare implicită pentru export, salvați-o cu succes.
+
+00:04:15.030 --> 00:04:16.750
+În regulă, avem caseta noastră de căutare.
+
+00:04:16.780 --> 00:04:19.170
+Dar în timp ce nu căutăm nimic
+
+00:04:22.680 --> 00:04:29.080
+acum, să adăugăm acest lucru pe linia noastră nouă, așa că pare mai bine și este întotdeauna o idee bună
+
+00:04:29.080 --> 00:04:35.500
+doar în cazul în care doriți să adăugați mai multe lucruri în caseta de căutare pentru a încheia totul într-un div.
+
+00:04:35.620 --> 00:04:37.210
+Așa că am să fac asta acum.
+
+00:04:39.620 --> 00:04:47.930
+Și în această zi vom avea doar un nume de clasă de umplutură din nou folosind Tatiana și cu
+
+00:04:47.930 --> 00:04:51.120
+intrarea putem face un nume de clasă.
+
+00:04:51.390 --> 00:04:55.360
+Și știu că acestea arată bine, așa că am să copiez și să le lipesc.
+
+00:04:55.380 --> 00:04:58.420
+Pur și simplu o faci cu fundal.
+
+00:04:58.430 --> 00:05:00.160
+Lumina este albastră.
+
+00:05:00.180 --> 00:05:02.870
+Dacă fac asta și să ne întoarcem.
+
+00:05:02.880 --> 00:05:03.420
+In regula.
+
+00:05:03.540 --> 00:05:04.750
+Acest lucru arată mai bine.
+
+00:05:04.770 --> 00:05:06.350
+Vrem să centrăm totul.
+
+00:05:06.510 --> 00:05:14.530
+Poate că în aplicație putem adăuga un nume de clasă egal cu cel al taxelor.
+
+00:05:14.530 --> 00:05:15.890
+Vezi dacă funcționează.
+
+00:05:16.960 --> 00:05:17.610
+Acolo te duci.
+
+00:05:17.680 --> 00:05:19.290
+Asta-i mult mai bine.
+
+00:05:19.300 --> 00:05:21.220
+Îmi place asta sau la.
+
+00:05:21.400 --> 00:05:25.550
+Acum, cum putem face acest lucru interactiv.
+
+00:05:25.610 --> 00:05:30.940
+Până acum am avut doar aceste site-uri web statice, dar site-urile web reale sunt interactive interactiv.
+
+00:05:33.600 --> 00:05:36.380
+Să ne gândim la asta logic.
+
+00:05:36.510 --> 00:05:39.330
+Avem o aplicație.
+
+00:05:39.540 --> 00:05:51.520
+Avem o casetă de căutare și avem o listă de carduri, dar componenta casetă de căutare trebuie să comunice cu Carlist
+
+00:05:51.520 --> 00:05:54.830
+și aceeași cu Carlist Carlist.
+
+00:05:54.910 --> 00:06:03.830
+Este bine să știți ce este în caseta de căutare, astfel încât să poată filtra roboții în consecință.
+
+00:06:03.830 --> 00:06:10.000
+Să ne întoarcem la imaginea noastră pe care o avem despre un flux de date într-un mod în care privim acest lucru.
+
+00:06:10.000 --> 00:06:20.380
+Avem componenta aplicației și apoi componenta listei de carduri care are carduri și apoi componenta căsuței de căutare care nu
+
+00:06:20.860 --> 00:06:22.740
+are copii acum.
+
+00:06:22.870 --> 00:06:29.980
+Dar pentru ca aceste două să comunice, avem un flux de date într-o singură direcție, care trebuie
+
+00:06:29.980 --> 00:06:36.100
+să-și trimită informațiile părinților lor, iar părintele le spune ce trebuie să facă.
+
+00:06:37.180 --> 00:06:38.990
+Acum, cum putem face asta?
+
+00:06:40.250 --> 00:06:46.820
+Până acum am avut doar câteva date pe care tocmai le-am strecurat, dar nu am avut-o niciodată acolo unde
+
+00:06:46.970 --> 00:06:51.860
+unul dintre copii a trebuit să modifice datele sau să comunice cu un vecin
+
+00:06:54.720 --> 00:06:56.680
+pentru a face acest lucru.
+
+00:06:56.680 --> 00:07:06.700
+Re-actul are o idee de ceva numit stat până în prezent am aflat despre elemente de recuzită, cum ar fi proprietățile
+
+00:07:06.700 --> 00:07:15.120
+pe care le păstrăm în jos, dar nu le-am schimbat niciodată, deoarece reacționa doar citesc recuzita.
+
+00:07:15.130 --> 00:07:24.060
+Dacă mă duc la Carlist, doar resetați recuzele care sunt recepționate și doar redă ceva și acest
+
+00:07:24.060 --> 00:07:33.280
+flux de date într-un mod este foarte frumos, deoarece această listă de carduri este o funcție pură, primește
+
+00:07:33.340 --> 00:07:37.600
+o intrare și apoi întoarce întotdeauna aceeași ieșire.
+
+00:07:37.600 --> 00:07:42.590
+Deci, dacă roboții sunt întotdeauna la fel, întotdeauna se va întoarce același lucru.
+
+00:07:42.790 --> 00:07:48.400
+Sunt funcții pure deterministe și este ceva despre care am vorbit mai devreme și acesta este un
+
+00:07:48.400 --> 00:07:49.680
+lucru foarte bun.
+
+00:07:49.780 --> 00:07:55.800
+Aceste componente sunt ceea ce se numește componente pure, iar unele chiar numesc componentele prost.
+
+00:07:56.140 --> 00:08:01.420
+Pur și simplu înseamnă că ei nu au nevoie să știe cu nimic altceva decât faptul că
+
+00:08:01.420 --> 00:08:04.940
+sunt niște funcții pure care primesc ceva și returnează ceva.
+
+00:08:05.140 --> 00:08:08.840
+Și asta este foarte frumos, pentru că întotdeauna știm cum va arăta asta.
+
+00:08:10.490 --> 00:08:12.940
+Și asta am avut până acum.
+
+00:08:13.160 --> 00:08:21.710
+Dar acum trebuie sa ne facem griji cu privire la altceva decat proiectele de recuzita niciodata nu se schimba popi sunt intotdeauna doar intrari pe care
+
+00:08:21.710 --> 00:08:24.360
+le primim si nu le-am modificat niciodata.
+
+00:08:25.130 --> 00:08:34.610
+Dar în acest caz avem nevoie de o memorie în aplicația noastră, avem nevoie de acest lucru pentru a comunica cu acest lucru și, de asemenea, să se schimbe și
+
+00:08:34.610 --> 00:08:35.940
+să actualizeze în consecință.
+
+00:08:36.290 --> 00:08:44.330
+Și asta este situația în care statul este în stare de reacție și veți auzi acest lucru în programarea
+
+00:08:45.290 --> 00:08:54.010
+pe calculator pur și simplu înseamnă că descrierea stării aplicației dvs. este pur și simplu un obiect care descrie cererea dumneavoastră.
+
+00:08:54.380 --> 00:09:02.600
+Iar această stare care descrie cererea noastră este robotul și whatevers-ul introdus în caseta de căutare și
+
+00:09:04.050 --> 00:09:06.980
+statul este capabil să se schimbe.
+
+00:09:07.050 --> 00:09:12.960
+Putem schimba valoarea casetei de căutare cu valoarea intrării și putem modifica
+
+00:09:12.960 --> 00:09:15.140
+ce înseamnă matricea robotului.
+
+00:09:15.150 --> 00:09:17.140
+Ce se afișează.
+
+00:09:17.240 --> 00:09:19.350
+Aceasta este o regulă pe care tocmai trebuie să o ții minte.
+
+00:09:19.520 --> 00:09:26.270
+Propsurile sunt pur și simplu lucruri care ies din stat.
+
+00:09:26.380 --> 00:09:34.440
+Deci, un părinte alimentează starea într-o componentă copilă și imediat ce componenta copil componentă primește o stare este
+
+00:09:34.440 --> 00:09:42.100
+o proprietate pe care copilul nu o poate schimba niciodată acea proprietate, părintele îi spune doar
+
+00:09:42.100 --> 00:09:47.590
+ce este statul și copilul pe care îl vedem drept roboți.
+
+00:09:47.590 --> 00:09:58.030
+Deci, primul lucru pe care trebuie să-l facem este să începem să folosim statul în aplicația noastră descrierea a ceea ce ar trebui
+
+00:09:58.540 --> 00:10:00.610
+să fie statul nostru.
+
+00:10:00.610 --> 00:10:07.900
+Deci, hai să facem o stare constantă pentru acum și să vă arătăm că statul nostru trebuie
+
+00:10:08.340 --> 00:10:14.290
+să aibă o matrice de robot și trebuie să-l numim câmp de căutare.
+
+00:10:14.560 --> 00:10:18.660
+Și asta este exact ceea ce are nevoie domeniul nostru de căutare.
+
+00:10:18.760 --> 00:10:25.450
+Dar pentru a folosi statul trebuie sa ne intoarcem la modul nostru original in
+
+00:10:25.450 --> 00:10:37.990
+care am creat componentele Riak daca iti aduci aminte ca atunci cand am creat pentru prima data re-actioneaza noi cream o clasa si facem asta
+
+00:10:38.340 --> 00:10:40.350
+spunand X sport
+
+00:10:46.380 --> 00:10:51.470
+default sau export X Stenz sau să reacționeze componenta Daut.
+
+00:10:51.610 --> 00:11:02.590
+Extinde clasa de componente și din nou putem folosi o scurtă descriere aici și doar să spunem acum că putem elimina reacția
+
+00:11:02.590 --> 00:11:03.590
+de aici.
+
+00:11:04.460 --> 00:11:14.770
+Și aceasta are întotdeauna o funcție de redare care trebuie să returneze ceva care este din nou
+
+00:11:18.940 --> 00:11:25.130
+aceasta este doar sintaxa pe care trebuie să o obișnuiți.
+
+00:11:25.200 --> 00:11:27.070
+Salveaza asta.
+
+00:11:27.230 --> 00:11:30.650
+Și am făcut o greșeală aici în loc de a exporta acest lucru ar trebui să spun clasa.
+
+00:11:30.740 --> 00:11:35.590
+Prin urmare, aplicația de clasă extinde componenta și apoi facem export.
+
+00:11:35.630 --> 00:11:36.670
+Aplicația implicită.
+
+00:11:36.680 --> 00:11:43.700
+Deci, din nou, declarăm doar o clasă pe care o salvez și avem doar ceva care spune că statul are o
+
+00:11:43.700 --> 00:11:48.220
+valoare, dar nu a folosit niciodată. Asta pentru că este destul de adevărat.
+
+00:11:48.220 --> 00:11:49.050
+Nu o folosim.
+
+00:11:49.150 --> 00:11:52.960
+Deci, cum putem adăuga statul va reacționa.
+
+00:11:52.960 --> 00:11:55.990
+Noi pur și simplu facem un constructor.
+
+00:11:55.990 --> 00:12:03.640
+S-ar putea să vă amintiți acest lucru de când am vorbit despre obiecte și acest constructor și aici
+
+00:12:03.700 --> 00:12:05.100
+putem declara statul.
+
+00:12:05.280 --> 00:12:21.350
+Pur și simplu spunem că acest punct punct este egal cu un sfârșit aici, pur și simplu am pus tot ce vrem să aibă statul nostru.
+
+00:12:21.350 --> 00:12:27.560
+Deci, dacă am salvat asta, obțin acest lucru, nu este permis înainte de super.
+
+00:12:27.560 --> 00:12:33.960
+Din nou, ceva ce ați putea să vă amintiți din videoclipul cu obiecte avansate pentru a utiliza acest lucru.
+
+00:12:34.220 --> 00:12:42.910
+Trebuie să facem acest lucru ciudat unde numim super, care sună constructorul componentei.
+
+00:12:43.020 --> 00:12:48.470
+Dacă fac asta și salvez totul funcționează bine.
+
+00:12:49.890 --> 00:13:00.750
+Și acum avem statul nostru care este roboți și câmp de căutare și această stare așa cum am spus înainte este ceea ce descrie sau app Acestea
+
+00:13:00.750 --> 00:13:05.820
+sunt lucrurile care se pot schimba și asta este ceea ce este
+
+00:13:05.820 --> 00:13:11.700
+starea este ceva care poate schimba și afecta aplicația noastră și ei de obicei trăiesc.
+
+00:13:11.790 --> 00:13:19.450
+Componenta părinte componentă care este părinte care doar fel de trece de stat la diferite componente.
+
+00:13:19.480 --> 00:13:29.120
+Dar acum pot accesa roboții nu de aici, ci de roboții DOT de la acest punct.
+
+00:13:29.250 --> 00:13:34.190
+Și din nou reacționați doar la spusele lui Sendak că va trebui să vă obișnuiți.
+
+00:13:34.230 --> 00:13:37.150
+În regulă, totul funcționează așa cum era de așteptat.
+
+00:13:37.440 --> 00:13:47.160
+Și vedeți că statul nostru, care este roboți, este acum transferat ca elemente de recuzită, astfel încât lista de cărți acceptă roboți ca
+
+00:13:47.280 --> 00:13:50.420
+elemente de recuză, chiar dacă în aplicație.
+
+00:13:50.640 --> 00:13:51.290
+Da.
+
+00:13:51.390 --> 00:13:59.040
+Este un stat și așa cum am spus, deoarece aplicația deține acum state care includ roboți.
+
+00:13:59.140 --> 00:14:02.420
+Este permis să-l schimbe.
+
+00:14:02.580 --> 00:14:11.470
+Acum, modul în care le putem comunica avem aceste două văi și, în mod ideal, în caseta de căutare
+
+00:14:11.470 --> 00:14:19.840
+am ceva chemat la schimbarea căutării, care din nou este o funcție pe care o voi face.
+
+00:14:20.440 --> 00:14:23.300
+Acesta este doar un nume aleator pe care l-am creat.
+
+00:14:23.620 --> 00:14:30.190
+Și pe schimbarea căutării vreau să spun că de fiecare dată când se schimbă intrarea exact așa
+
+00:14:30.610 --> 00:14:37.510
+cum am făcut-o cu manipularea Dom primim un eveniment și în cadrul acestui eveniment o să consolez Log Dalt
+
+00:14:41.370 --> 00:14:44.560
+acest eveniment a creat o funcție și vreau.
+
+00:14:44.570 --> 00:14:49.050
+Ori de câte ori această intrare se modifică pentru a declanșa consola, cu excepția cazului.
+
+00:14:49.120 --> 00:14:58.840
+Așa că putem trece acest lucru de acum pot spune că schimbarea căutării este pe schimbarea căutării, dar din nou pentru că acesta este un obiect
+
+00:14:58.840 --> 00:15:09.060
+pe care trebuie să-l spunem acest punct, astfel încât acesta să spună acest lucru care este aplicația Daut răspunsuri schimbare caută dacă salvez acest lucru și acum merg
+
+00:15:10.000 --> 00:15:16.970
+la caseta de căutare acum am schimbat căutarea ca o funcție, așa că pot să spun doar ca un
+
+00:15:21.490 --> 00:15:30.660
+HMO ar aminti și el tot hucking face pe schimbarea T. M ..
+
+00:15:30.900 --> 00:15:32.100
+E un eveniment.
+
+00:15:32.160 --> 00:15:35.690
+Tocmai ascultăm când se schimbă intrarea.
+
+00:15:36.210 --> 00:15:39.660
+Pot să spun că schimbarea este egală cu
+
+00:15:42.370 --> 00:15:43.640
+schimbarea căutării.
+
+00:15:43.930 --> 00:15:45.540
+Să vedem dacă funcționează.
+
+00:15:45.640 --> 00:15:46.680
+Nu primesc nici o eroare.
+
+00:15:46.690 --> 00:15:53.240
+Dacă mă întorc la aplicația mea, deschid consola și introduc ceva de genul ăsta.
+
+00:15:53.290 --> 00:16:01.090
+Primesc evenimentul și acesta este doar un lucru pe care trebuie să-l amintiți este că, cu
+
+00:16:01.090 --> 00:16:09.090
+un eveniment, avem mereu o valoare estimată de eveniment care ar trebui să ne dea valoarea căutării.
+
+00:16:09.160 --> 00:16:13.350
+Să salvăm asta și să tipăm ceva.
+
+00:16:15.060 --> 00:16:19.000
+Uită-te la faptul că observăm acum diferența pe măsură ce tastăm.
+
+00:16:19.970 --> 00:16:22.710
+Deci, hai să trecem încă o dată ce sa întâmplat.
+
+00:16:23.600 --> 00:16:25.590
+Și din nou știu că e greu.
+
+00:16:25.610 --> 00:16:31.110
+Acest lucru mi-a luat un timp pentru a obține atunci când am început, dar această diagramă într-adevăr explică bine.
+
+00:16:32.020 --> 00:16:34.120
+Am componenta aplicației mele.
+
+00:16:34.120 --> 00:16:43.140
+Căsuța mea de căutare și cardul meu fără card în timp ce caseta de căutare se schimbă în schimbare. Voi
+
+00:16:43.680 --> 00:16:48.340
+executa funcția pe care o voi numi această funcție.
+
+00:16:48.600 --> 00:16:50.970
+Și așa cum o numim noi, adăugăm asta.
+
+00:16:51.060 --> 00:16:58.170
+Amintiți-vă cum, atunci când am făcut evenimente Dom, am definit funcția și apoi de fiecare dată când se
+
+00:16:58.170 --> 00:16:59.820
+întâmplă evenimentul, s-ar numi.
+
+00:16:59.850 --> 00:17:08.660
+Deci, spunem de fiecare dată când evenimentul onchange este declanșat, apelați funcția de modificare a căutării.
+
+00:17:08.880 --> 00:17:16.260
+Și dacă vă aduceți aminte că funcția de modificare a căutării, care este o propunere, este funcția de modificare a căutării care este
+
+00:17:16.260 --> 00:17:17.390
+definită în aplicație.
+
+00:17:17.400 --> 00:17:19.430
+Așa comunicăm cu părintele.
+
+00:17:19.470 --> 00:17:24.690
+Aceasta declanșează evenimentul pe care părintele spune că îl ajută să ruleze această funcție.
+
+00:17:25.020 --> 00:17:29.770
+Și acum această funcție îl primește pe Ron.
+
+00:17:29.880 --> 00:17:39.090
+Dar acum că am valoarea intrării de căutare, pot comunica direct acea intrare de căutare în
+
+00:17:39.270 --> 00:17:40.880
+lista robotului.
+
+00:17:41.070 --> 00:17:42.600
+Dar vezi cum funcționează.
+
+00:17:42.690 --> 00:17:44.510
+Putem crea foarte mult.
+
+00:17:44.550 --> 00:18:00.150
+Să presupunem că roboți filtranți și acest lucru va fi egal cu roboții de stare DOT și cu acești roboți care sunt matricele.
+
+00:18:00.200 --> 00:18:08.150
+Din nou, modul în care accesăm statul va folosi matricea de filtrare a filtrului.
+
+00:18:08.360 --> 00:18:17.240
+Îi oferim roboți și acum matricea noastră va trebui să restituie o condiție și condiția va fi
+
+00:18:18.770 --> 00:18:19.480
+roboți.
+
+00:18:19.490 --> 00:18:28.350
+Dot nume și vom face ceva pe care nu am văzut până acum, care este la litere mici.
+
+00:18:28.660 --> 00:18:33.790
+Și aceasta este o metodă care vine cu toate șirurile și face totul cu litere mici.
+
+00:18:33.820 --> 00:18:39.760
+Și acest lucru este bun pentru comparație, deci nu trebuie să comparăm capitalizarea sau literele mici.
+
+00:18:39.930 --> 00:18:51.590
+Și dacă numele de roboți care este acum minuscul include este o altă metodă și din nou
+
+00:18:51.620 --> 00:18:58.400
+este pre-construit în javascript dacă include câmpul de căutare.
+
+00:18:58.550 --> 00:19:02.820
+Și, din nou, dorim să facem cazul în caz contrar.
+
+00:19:03.080 --> 00:19:08.080
+Ei bine, în cazul în care vom folosi capitalele sau literele mici funcționează în ambele sensuri.
+
+00:19:08.450 --> 00:19:09.210
+Și acolo este.
+
+00:19:09.410 --> 00:19:16.320
+Dacă numele roboților include litere mici și Și aceasta face comparația.
+
+00:19:16.480 --> 00:19:26.950
+Dacă ceva din șir conține două litere mici, atunci returnați numai roboții care revin la acest lucru.
+
+00:19:26.980 --> 00:19:29.120
+Să salvăm.
+
+00:19:29.240 --> 00:19:33.180
+Și vedeți aici modul în care obținem câmpul de căutare acolo, pentru că face parte din stat.
+
+00:19:33.200 --> 00:19:38.150
+Trebuie să fac acest câmp de căutare DOT.
+
+00:19:38.350 --> 00:19:42.090
+Dacă salvez asta, înțeleg.
+
+00:19:42.090 --> 00:19:44.820
+Filtrele roboților au o valoare, dar nu au fost utilizate niciodată.
+
+00:19:44.820 --> 00:19:49.270
+Dar nu vă faceți griji că nu putem acum Konsole log-ul și să vedem ce avem.
+
+00:19:51.280 --> 00:19:59.920
+Salvez și să ne întoarcem la aplicația noastră și dacă caut ceva aici am o eroare.
+
+00:20:00.060 --> 00:20:03.460
+Și aceasta este o eroare foarte confuză.
+
+00:20:03.480 --> 00:20:05.020
+Este dificilă prima dată.
+
+00:20:05.040 --> 00:20:06.450
+Dar purtați-mă cu mine aici.
+
+00:20:06.570 --> 00:20:11.560
+Problema acum este că valoarea acestui lucru.
+
+00:20:12.210 --> 00:20:23.160
+Ei bine, nu se referă la aplicație, deoarece evenimentul sa întâmplat în intrare, valoarea acestui lucru este intrarea și intrarea nu are roboți DOT de
+
+00:20:23.160 --> 00:20:33.240
+stat și acesta este un truc pe care îl uitați întotdeauna, dar pur și simplu țineți cont de acest lucru ca o regulă
+
+00:20:33.240 --> 00:20:35.010
+de deget .
+
+00:20:36.010 --> 00:20:44.020
+Cu tot ce vine de la reacție, constructorul și renderul sunt pre-construite și reacționează ori de câte
+
+00:20:44.020 --> 00:20:54.560
+ori faceți propriile metode pe o componentă folosiți această sintaxă, deci sunt funcții și aceasta asigură că această valoare este în funcție de locul
+
+00:20:54.560 --> 00:20:57.860
+în care a fost creat aplicația .
+
+00:20:58.160 --> 00:20:59.270
+Știu că este confuz.
+
+00:20:59.270 --> 00:21:00.560
+Puteți citi mai multe despre el.
+
+00:21:00.560 --> 00:21:02.240
+O să las o resursă pentru asta.
+
+00:21:02.240 --> 00:21:04.370
+Este un subiect dur pentru a obține.
+
+00:21:04.700 --> 00:21:06.230
+Dar, din nou, degeaba.
+
+00:21:06.230 --> 00:21:07.210
+Utilizați săgețile.
+
+00:21:07.250 --> 00:21:10.910
+Dacă fac asta acum și fac clic.
+
+00:21:11.140 --> 00:21:11.760
+Acolo te duci.
+
+00:21:11.920 --> 00:21:15.090
+Acum primesc roboți.
+
+00:21:16.550 --> 00:21:18.200
+Dar iată ce e.
+
+00:21:18.200 --> 00:21:24.590
+Câmpul de căutare chiar acum vedeți că încă mai am 10 robote care nu filtrează nimic.
+
+00:21:24.830 --> 00:21:31.510
+Și asta pentru că câmpul meu de căutare este întotdeauna un șir gol pentru a actualiza starea.
+
+00:21:31.610 --> 00:21:40.820
+Din nou, o altă regulă de reactare este de a face acest punct set de stare și este din nou o metodă care vine cu reacție și oricând
+
+00:21:40.830 --> 00:21:47.630
+doriți să schimbați statul faceți întotdeauna acest lucru nu faceți acest câmp de căutare DOT de stare este egal ca niciodată
+
+00:21:47.660 --> 00:21:49.240
+nu faceți asta .
+
+00:21:49.250 --> 00:21:52.720
+Trebuie să faci acest set.
+
+00:21:53.530 --> 00:22:01.610
+Statul și aici, pur și simplu, spunem câmpul de căutare este și din nou folosim un obiect, astfel
+
+00:22:01.940 --> 00:22:08.310
+că un câmp de căutare va fi acum punct de destinație point dot Valley.
+
+00:22:08.430 --> 00:22:22.620
+Dacă salvez acest lucru și mă întorc, vezi că acum totul este filtrat prin schimbarea stării, astfel încât câmpul de căutare
+
+00:22:22.620 --> 00:22:26.070
+să fie întotdeauna actualizat.
+
+00:22:26.070 --> 00:22:30.700
+Și acum filtrează roboții în funcție de câmpul de căutare modificat.
+
+00:22:33.310 --> 00:22:33.570
+O.K.
+
+00:22:33.590 --> 00:22:37.300
+Deci, un ultim lucru la acest lucru.
+
+00:22:37.540 --> 00:22:42.110
+Avem faptul că roboții de filtrare încă nu sunt un semn că aveți dreptate.
+
+00:22:42.340 --> 00:22:48.340
+Dacă ne uităm la acest lucru, acum am comunicat caseta de căutare cu OP și avem un câmp de căutare în continuă
+
+00:22:48.340 --> 00:22:48.880
+schimbare.
+
+00:22:48.880 --> 00:22:56.680
+Deci, acum trebuie să comunicăm robotilor filtrați ceea ce putem face este că roboții filtrați pot fi acum
+
+00:22:56.680 --> 00:23:02.000
+utilizați ca elemente de recuzită în locul acestor roboți de stat.
+
+00:23:02.290 --> 00:23:03.070
+Deci, să facem asta.
+
+00:23:03.100 --> 00:23:06.760
+Hai să mutăm aici jos.
+
+00:23:10.390 --> 00:23:16.480
+Și acum avem acces la roboți de filtrare și, în loc să trecem de starea acestor lucruri la
+
+00:23:16.480 --> 00:23:19.950
+roboții noștri, pur și simplu trecem prin roboți filtrați.
+
+00:23:20.080 --> 00:23:23.670
+Dacă văd asta, asigurați-vă că și bara de căutare este salvată.
+
+00:23:23.870 --> 00:23:29.950
+Și acum mă întorc, voi închide urechea și o vom scutura.
+
+00:23:33.140 --> 00:23:34.210
+Uită-te la asta.
+
+00:23:34.370 --> 00:23:37.550
+Aplicația noastră funcționează.
+
+00:23:37.550 --> 00:23:39.880
+Cat de tare e asta.
+
+00:23:39.910 --> 00:23:43.180
+Să mergem încă o dată pentru a vă arăta exact ceea ce face.
+
+00:23:45.100 --> 00:23:54.860
+Avem componenta noastră de aplicație care are două roboți de stat și câmp de căutare și deoarece aplicația deține statul.
+
+00:23:54.890 --> 00:24:04.130
+Orice componentă care are stat utilizează sintaxa de clasă, astfel încât să poată utiliza funcția constructor pentru a crea această stare
+
+00:24:04.220 --> 00:24:08.880
+punctuală și această stare este ceea ce schimbă într-o aplicație.
+
+00:24:08.900 --> 00:24:11.310
+Este ceea ce descrie aplicația.
+
+00:24:11.330 --> 00:24:16.640
+Amintiți-vă când am spus că virtualul Dom este doar un obiect javascript
+
+00:24:16.640 --> 00:24:26.930
+Domul virtual este doar un obiect nou care colectează întreaga stare și reacționează, folosește această stare pentru a face și a le transmite ca elemente de recuzită
+
+00:24:26.930 --> 00:24:32.680
+la aceste componente, astfel încât aceste componente care sunt doar funcțiile pure pot face doar.
+
+00:24:32.880 --> 00:24:37.950
+Și întotdeauna știm că aplicația va arăta la fel pentru că, în timp ce ele sunt
+
+00:24:39.300 --> 00:24:44.450
+doar simple funcții pure, gestionăm această stare și aici aplicația este singurul lucru care poate schimba această stare.
+
+00:24:44.580 --> 00:24:48.190
+Dar poate trece și lucruri precum recuzita.
+
+00:24:48.390 --> 00:24:53.870
+Așa că am trecut pe prima schimbare la caseta de căutare și caseta de căutare.
+
+00:24:54.090 --> 00:24:59.700
+De fiecare dată când există o schimbare pe intrare, permite aplicației să afle că există o schimbare.
+
+00:24:59.760 --> 00:25:00.900
+Rulați această funcție.
+
+00:25:00.990 --> 00:25:05.870
+Funcționează cu evenimentul și actualizează starea câmpului de căutare.
+
+00:25:06.000 --> 00:25:13.960
+La ceea ce scriem acum cu informațiile pe care le avem de la caseta de căutare, putem
+
+00:25:14.380 --> 00:25:24.880
+comunica acum la lista de carduri și le spunem că am vrut să filtrez starea roboților pentru a avea acum doar ceea ce include
+
+00:25:25.180 --> 00:25:34.930
+în câmpul de căutare și în loc să treacă această stați la roboții noștri că tocmai am trecut pe roboții filtrați.
+
+00:25:35.080 --> 00:25:38.930
+S-ar putea să vă întrebați ce roboți nu se schimbă niciodată.
+
+00:25:38.950 --> 00:25:44.950
+Întotdeauna creăm o nouă matrice numită roboți de filtrare și întotdeauna trecem în jos, aceasta trebuie să
+
+00:25:45.220 --> 00:25:46.860
+fie parte a statului.
+
+00:25:46.990 --> 00:25:53.500
+Și nu chiar acum, pentru că avem doar un robot codificat greu, dar când vom ajunge mai târziu în
+
+00:25:53.500 --> 00:25:56.040
+curs veți vedea că nu este cazul.
+
+00:25:56.170 --> 00:26:02.500
+De cele mai multe ori obții că utilizatorii sunt roboți dintr-un alt loc prin internet, caz în care
+
+00:26:02.500 --> 00:26:08.540
+vom avea nevoie de roboți pentru a trece de la o matrice goală la o matrice.
+
+00:26:08.540 --> 00:26:14.420
+După ce mergem și luăm toți utilizatorii noștri.
+
+00:26:14.690 --> 00:26:15.470
+In regula.
+
+00:26:15.470 --> 00:26:16.820
+A fost foarte mult.
+
+00:26:16.820 --> 00:26:22.940
+Știu că știu că este o mulțime de informații o mulțime de sintaxă nouă, dar după cum puteți vedea din câteva
+
+00:26:22.940 --> 00:26:26.110
+linii de cod am construit o aplicație destul de minunat.
+
+00:26:26.360 --> 00:26:30.590
+Următorul videoclip vom termina și vom finaliza aplicația noastră.
+
+00:26:30.620 --> 00:26:33.430
+Deci, pare atât de frumos ca asta.
+
+00:26:33.490 --> 00:26:34.900
+O să văd pe asta.

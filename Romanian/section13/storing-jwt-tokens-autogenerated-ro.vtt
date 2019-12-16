@@ -1,0 +1,283 @@
+﻿WEBVTT
+
+00:00:02.450 --> 00:00:03.430
+Este un proces lung.
+
+00:00:03.440 --> 00:00:10.730
+Dar ajungem acolo unde am creat jetonul JWT și acum suntem capabili să trimitem jkenul JWT către
+
+00:00:10.730 --> 00:00:11.540
+client.
+
+00:00:11.630 --> 00:00:16.310
+Dar, în același timp, avem acum o bază de date rattus în containerul nostru.
+
+00:00:16.310 --> 00:00:21.270
+Acum putem stoca acest jeton în baza noastră de date rattus.
+
+00:00:21.470 --> 00:00:23.390
+Și aici vom face în acest videoclip.
+
+00:00:23.480 --> 00:00:32.510
+Vom păstra aceste informații și vom seta tokenul astfel încât să avem baza de date a sesiunilor pe care o putem urmări acum și
+
+00:00:32.510 --> 00:00:39.290
+de fiecare dată când un utilizator cere un profil, verificăm întotdeauna că citim un server care conținea tokenul
+
+00:00:39.590 --> 00:00:42.100
+că va fi o distracție unu.
+
+00:00:42.230 --> 00:00:43.190
+Să începem.
+
+00:00:44.650 --> 00:00:54.520
+Să ne întoarcem la funcția Creare sesiuni, deoarece acum funcția Creare sesiuni ar trebui să creeze sesiunea și să
+
+00:00:54.520 --> 00:00:58.500
+stocheze ceva în baza de date rattus.
+
+00:00:58.510 --> 00:01:01.290
+Avem clientul rattus deja gata de plecare.
+
+00:01:01.300 --> 00:01:04.730
+Este conectat astfel încât să putem începe să folosim câteva comentarii despre ratt.
+
+00:01:04.840 --> 00:01:13.090
+Dacă mă întorc la documentația noastră aici, vedem că putem face doar puncte stabilite cu cheia și valoarea și
+
+00:01:13.420 --> 00:01:19.650
+alte comenzi pe care acest client ne permite să le facem în cazul nostru.
+
+00:01:19.710 --> 00:01:22.920
+Vreau să am o nouă funcție aici.
+
+00:01:22.950 --> 00:01:29.690
+Am semnat tokenul, dar acum dorim să setăm tokenul în citirea acestei baze de date.
+
+00:01:29.770 --> 00:01:41.880
+Așa că am să spun că, în loc să ne întoarcem, vrem să readucem tokenul set de funcții, iar
+
+00:01:42.000 --> 00:01:49.310
+această funcție set de jetoane va primi jetonul JWT și ID-ul.
+
+00:01:49.520 --> 00:01:57.550
+Și atâta timp cât totul merge bine și suntem capabili să salvăm această și
+
+00:01:57.550 --> 00:01:59.830
+baza de date
+
+00:02:04.680 --> 00:02:09.030
+citiți-ne, atunci vom reveni, de fapt, la răspuns.
+
+00:02:09.070 --> 00:02:13.070
+Deci, odată ce simbolul este setat, nu există aer.
+
+00:02:13.080 --> 00:02:20.150
+Vom reveni la acest Hodgett și am putea dori, de asemenea, să facem un punct de captură.
+
+00:02:20.250 --> 00:02:21.570
+Am nevoie de un punct aici.
+
+00:02:21.660 --> 00:02:25.700
+Aș putea, de asemenea, să dau un punct de captură în cazul în care funcția set de jetoane nu funcționează.
+
+00:02:25.740 --> 00:02:28.110
+Știm că vrem să ne întoarcem o promisiune.
+
+00:02:28.110 --> 00:02:33.600
+Deci, pentru moment, doar pentru a consola jurnal, astfel încât să putem debug-o.
+
+00:02:33.620 --> 00:02:44.900
+Acum, să creăm funcția set de jetoane funcția set de jetoane așa cum se vede că
+
+00:02:45.260 --> 00:02:49.750
+primește doi parametri jetonul și ID-ul.
+
+00:02:50.000 --> 00:02:53.720
+Și dacă ne întoarcem la documentația noastră și ne defilează, vedem că
+
+00:02:57.960 --> 00:03:03.440
+dacă vrem să ne întoarcem o promisiune care este ceea ce vrem să facem pentru că folosim daat atunci
+
+00:03:03.630 --> 00:03:07.060
+și nu-l prindem din nou, amintiți-ne atunci spunem Nu te prinde.
+
+00:03:07.230 --> 00:03:12.750
+Ei bine, de fapt, nu întoarce o promisiune în mod implicit.
+
+00:03:13.140 --> 00:03:20.640
+Și pentru a ne întoarce o promisiune, trebuie să folosim o bibliotecă externă, cum ar fi Bluebird, care face de fapt
+
+00:03:20.640 --> 00:03:22.080
+lucrurile într-o promisiune.
+
+00:03:22.080 --> 00:03:27.300
+Din fericire pentru noi Bluebird a fost ceva care a fost folosit înapoi în ziua când promisiunile
+
+00:03:27.530 --> 00:03:33.430
+nu erau native și noduri, dar avem de fapt o modalitate de a ne asigura că acest lucru întoarce o promisiune.
+
+00:03:33.430 --> 00:03:41.870
+Vreau să spun că am făcut-o peste codul de bază cu respingerea promisă și putem pur și simplu să o înfășurăm într-un punct de
+
+00:03:42.230 --> 00:03:44.610
+promisiune pentru că acum rezolvăm doar.
+
+00:03:44.960 --> 00:03:48.500
+Deci, vom presupune că va rezolva deocamdată.
+
+00:03:48.500 --> 00:03:54.200
+Și este posibil să doriți să adăugați o promisiune și, de fapt, să creați o nouă
+
+00:03:54.200 --> 00:03:56.210
+promisiune cu hotărâre și respingere.
+
+00:03:56.260 --> 00:03:59.390
+Pentru moment putem spune doar că promitem că rezolvăm.
+
+00:04:00.260 --> 00:04:07.190
+Vom reveni la această promisiune de hotărâre și această rezolvare a promisiunii va face cel mai
+
+00:04:08.590 --> 00:04:16.360
+mare punct dotat pentru clienți și să ne amintim setul, iar rattul ne permite să îi oferim o anumită putere.
+
+00:04:16.520 --> 00:04:28.530
+Am de gând să-l set, astfel încât Tokin va fi cheia și valoarea va fi Heidi și doar să-l numească mai bine.
+
+00:04:28.620 --> 00:04:37.200
+Să spunem doar că aceasta va fi o valoare cheie și că aceasta va fi cheia și valoarea.
+
+00:04:37.470 --> 00:04:43.110
+De fapt nu știu dacă este mai bine să numești pentru că e mai puțin descriptiv,
+
+00:04:43.110 --> 00:04:51.110
+dar pentru moment punem Tokin cu valoare cheie și, sperăm, ne întoarcem o promisiune că atâta timp cât rezultă din ceea ce face, deoarece
+
+00:04:51.170 --> 00:04:56.460
+ne întoarcem promis că vom rezolva, veți reveni la un token de utilizator cu succes.
+
+00:04:56.750 --> 00:04:57.440
+Să o
+
+00:05:01.060 --> 00:05:03.080
+salvăm și să avem un pic de aer aici.
+
+00:05:04.910 --> 00:05:10.130
+Oh, și văd că Sendak e aici, doar să ne asigurăm că vom întoarce un obiect.
+
+00:05:10.130 --> 00:05:12.530
+Să ne întoarcem aici.
+
+00:05:13.990 --> 00:05:14.780
+E mult mai bine.
+
+00:05:16.570 --> 00:05:17.430
+Să încercăm din nou asta.
+
+00:05:20.510 --> 00:05:21.260
+In regula.
+
+00:05:21.260 --> 00:05:22.010
+Asa e mai bine.
+
+00:05:22.010 --> 00:05:24.990
+Ne asigurăm că ne întoarcem acest obiect.
+
+00:05:25.010 --> 00:05:26.330
+Acum, să testați asta.
+
+00:05:27.300 --> 00:05:38.920
+O să mergem înapoi în față și vrem să ieșim din nou, iar acum voi intra cu un punct. com a și voi deschide
+
+00:05:40.110 --> 00:05:46.880
+rețeaua pentru a face clic pe seinen.
+
+00:05:46.890 --> 00:05:47.250
+In regula.
+
+00:05:47.250 --> 00:05:48.630
+Suntem conectați.
+
+00:05:48.630 --> 00:05:53.310
+Dacă privesc aici, avem tokenul pe care l-am primit.
+
+00:05:53.370 --> 00:05:54.330
+Grozav.
+
+00:05:55.320 --> 00:05:57.430
+Acum e partea interesantă.
+
+00:05:57.660 --> 00:06:07.440
+Dacă mă întorc la serverul meu roșu S, ar trebui să pot spune să ia și cheia care este acest simbol JWT pe care
+
+00:06:07.440 --> 00:06:08.510
+îl stocăm.
+
+00:06:08.620 --> 00:06:20.750
+Vedeți o privire că suntem capabili să obținem una pentru că amintește de I. D. a utilizatorului este ceea ce dacă intru
+
+00:06:20.780 --> 00:06:25.850
+într-o chestie de obținere care nu există Nu voi obține nimic.
+
+00:06:25.920 --> 00:06:33.870
+Am reușit cu succes să setăm un jeton și să adăugăm la baza de date rattus.
+
+00:06:34.050 --> 00:06:36.690
+Cât de ușor și distractiv a fost asta.
+
+00:06:36.810 --> 00:06:43.820
+Acum avem tokenul nostru în baza de date rattus.
+
+00:06:43.880 --> 00:06:51.590
+Acum, din nou, unii dintre voi ar putea să întrebați că folosim JWT pentru că GAAP conține deja informații
+
+00:06:51.590 --> 00:06:53.030
+în cadrul acestuia.
+
+00:06:53.030 --> 00:06:56.600
+Am putea să le verificăm prin rularea metodei de verificare.
+
+00:06:56.840 --> 00:07:02.090
+Și din nou, acest lucru se întoarce la un subiect foarte dezbătut.
+
+00:07:02.090 --> 00:07:06.910
+Oamenii pot să nu fie de acord cu cum funcționează lucrurile sau cum se pot face lucrurile.
+
+00:07:07.070 --> 00:07:15.220
+Dar pentru mine, chiar dacă este ceva mai lung decât un cookie pe care l-am putea seta, avem încă o anumită flexibilitate
+
+00:07:15.370 --> 00:07:21.840
+în faptul că putem avea informații pe care le putem decoda aici cu o mai mare flexibilitate.
+
+00:07:21.850 --> 00:07:29.350
+Există o responsabilitate mai mare, dar acum avem un control deplin cu baza noastră de date rattus pentru a face ceea ce vrem
+
+00:07:29.350 --> 00:07:34.760
+dacă vrem doar să nu permitem unui utilizator să se conecteze sau să interzică un utilizator.
+
+00:07:34.840 --> 00:07:38.580
+Trebuie doar să utilizați cuvântul cheie de ștergere.
+
+00:07:38.710 --> 00:07:42.880
+Și atâta timp cât șterg acest jeton, atunci sunt totul setat.
+
+00:07:42.940 --> 00:07:49.270
+Dar, de asemenea, îmi permite să utilizez aceste informații probabil în alte părți ale aplicației și să decodez acest
+
+00:07:49.390 --> 00:07:51.920
+jken și să obțin informații despre utilizator.
+
+00:07:52.030 --> 00:07:59.380
+Dar oricum, dacă ne întoarcem, tocmai am reușit să ne punem informațiile în clientul nostru.
+
+00:07:59.470 --> 00:08:01.430
+Foarte foarte interesant.
+
+00:08:02.650 --> 00:08:07.060
+Și dacă ne întoarcem la funcția noastră totul începe să arate cu adevărat frumos.
+
+00:08:07.700 --> 00:08:13.500
+Cred că trebuie să luăm o pauză și să finalizăm în final această parte a cererii noastre.
+
+00:08:13.590 --> 00:08:14.340
+Voi vedea în următorul.

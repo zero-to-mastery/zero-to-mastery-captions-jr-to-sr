@@ -1,0 +1,268 @@
+﻿WEBVTT
+
+00:00:02.220 --> 00:00:06.540
+Ei bine, Sugoi, în continuare, tocmai arată foarte bine.
+
+00:00:06.540 --> 00:00:10.050
+Și mulțumesc pentru toate informațiile despre redarea de pe server.
+
+00:00:10.050 --> 00:00:10.760
+Cred ca ai dreptate.
+
+00:00:10.770 --> 00:00:15.660
+Nu cred ca avem nevoie de prieteni de la Robur pentru a fi serviti de partea serverului pentru moment, dar poate ca in
+
+00:00:15.740 --> 00:00:17.950
+proiecte viitoare am putea folosi ceva de genul urmator.
+
+00:00:18.210 --> 00:00:18.990
+Multumesc din nou.
+
+00:00:19.110 --> 00:00:20.250
+Chiar apreciez asta.
+
+00:00:20.250 --> 00:00:21.210
+Dumnezeu ești minunat.
+
+00:00:23.640 --> 00:00:24.230
+In regula.
+
+00:00:24.240 --> 00:00:25.200
+Am mai făcut-o din nou.
+
+00:00:25.230 --> 00:00:29.330
+O altă sarcină făcută pentru Bruno și Kaikohe Corp ..
+
+00:00:29.490 --> 00:00:35.430
+Sperăm că acum vă simțiți confortabil cu ideea de randare pe partea de server și de redare pe
+
+00:00:35.660 --> 00:00:43.840
+partea clientului și sunteți capabili să faceți o decizie inteligentă cu privire la momentul utilizării a ceea ce vă aduce liberă Amintiți-vă redarea pe partea de server
+
+00:00:43.840 --> 00:00:50.450
+este grozavă pentru site-urile statice încărcările inițiale ale paginii sunt mai rapide și SEO este cu siguranță mai bine cu ei.
+
+00:00:51.980 --> 00:00:59.260
+Dezavantajul fiind că încă mai reîncarcă pagina completă, redarea poate fi mai lentă din cauza asta.
+
+00:00:59.660 --> 00:01:08.000
+Și avem mai multe solicitări către server deoarece creștea complexitatea redării din partea clientului pentru
+
+00:01:08.120 --> 00:01:08.740
+aplicații.
+
+00:01:08.780 --> 00:01:13.250
+Pe de altă parte, a fost foarte bine pentru interacțiunile bogate.
+
+00:01:13.370 --> 00:01:21.710
+Rapid redarea site-ului Web după sarcina inițială și a fost un instrument bun pentru aplicații web, dar a avut dezavantajul
+
+00:01:21.710 --> 00:01:26.330
+că MCO a fost foarte greu pentru a obține dreptul.
+
+00:01:26.660 --> 00:01:30.020
+Și ai avut sarcina inițială mai mare.
+
+00:01:30.240 --> 00:01:36.530
+Acum, pentru a termina, vreau să vă arăt trei diagrame care cred că sunt foarte utile.
+
+00:01:38.300 --> 00:01:45.530
+Primul caracter pe care îl vom privi este modul în care o pagină de pagini redate în mod regulat blochează că
+
+00:01:45.530 --> 00:01:46.620
+avem cererea inițială.
+
+00:01:46.810 --> 00:01:54.080
+O sosire similară și pornind de acolo începem să solicităm toate resursele noastre, inclusiv fișierul
+
+00:01:54.200 --> 00:01:58.470
+nostru javascript mare, care apare în fișierul javascript.
+
+00:01:58.470 --> 00:02:04.210
+Apoi este analizat și evaluat, iar punctul nostru de vedere este în cele din urmă pictat.
+
+00:02:04.440 --> 00:02:06.310
+Și avem interactivitate.
+
+00:02:06.480 --> 00:02:15.090
+Vedeți că este nevoie de mult timp pentru a avea într-adevăr o pagină funcțională și am discutat deja acest Two-Bits, al
+
+00:02:17.500 --> 00:02:21.220
+doilea grafic fiind redarea pe partea de server.
+
+00:02:21.410 --> 00:02:31.070
+Avem cererea noastră inițială HMO, dar pentru că avem informații despre pagina noastră de shemale, avem o
+
+00:02:31.880 --> 00:02:34.480
+vedere mai rapidă pictată.
+
+00:02:34.490 --> 00:02:40.130
+Problema fiind că am putea vedea punctul de vedere pe ecran, dar trebuie să așteptăm ca scriptul
+
+00:02:40.130 --> 00:02:43.010
+java să ajungă să fie analizat și evaluat.
+
+00:02:43.130 --> 00:02:49.400
+Deci, avem acest lucru numit vale neobișnuit în cazul în care pagina web pare a fi gata și ați
+
+00:02:49.400 --> 00:02:56.890
+putea începe să faceți clic pe un buton, dar nu va începe să funcționeze până când toate aceste afaceri javascript este îngrijit de.
+
+00:02:56.940 --> 00:02:59.620
+Poate că poate există o soluție mai bună.
+
+00:03:00.790 --> 00:03:09.060
+Poate că putem folosi ceva numit progresiv redând ideea în spatele redării progresive și știi despre ce
+
+00:03:09.270 --> 00:03:15.720
+am vorbit despre el de-a lungul cursului, doar trimitem doar ceea ce ai
+
+00:03:15.720 --> 00:03:18.380
+nevoie pentru redarea inițială.
+
+00:03:18.510 --> 00:03:26.560
+Apoi, veți face în mod progresiv mai multe funcții și pagini disponibile în fundal, pe măsură ce vor ajunge mai multe lucruri.
+
+00:03:27.120 --> 00:03:30.260
+Așadar, vă puteți aminti divizarea codului.
+
+00:03:30.420 --> 00:03:31.520
+Asta e.
+
+00:03:31.770 --> 00:03:40.260
+Împărțirea codului a trimis doar ceea ce avem nevoie la capătul din față, deasupra încărcării ori, care trimitea tot ceea ce avem nevoie
+
+00:03:40.380 --> 00:03:42.030
+la capătul din față.
+
+00:03:42.180 --> 00:03:48.000
+Apoi, odată ce pagina Web este încărcată pentru utilizator, am început să încărcăm orice script-uri de fundal, poate o
+
+00:03:48.000 --> 00:03:52.550
+pagină nouă, Ibby, în bara de meniuri, numai când utilizatorul face clic pe el.
+
+00:03:54.660 --> 00:04:00.700
+Ideea este că facem cererea inițială HMO sosește și nu avem acea vale ciudată lucrurile
+
+00:04:00.810 --> 00:04:07.560
+funcționează într-adevăr foarte repede și doar încet progresiv facem ca aplicația noastră să înceapă să lucreze în fundal
+
+00:04:07.560 --> 00:04:09.630
+fără ca utilizatorul să observe.
+
+00:04:09.630 --> 00:04:18.220
+Și puteți să vedeți acest lucru în documentele re-act încă o dată dacă mergem la pagina Riak și
+
+00:04:18.220 --> 00:04:19.510
+deschid fila.
+
+00:04:19.510 --> 00:04:26.600
+Dacă mă duc la rețea și refresh, văd că descarcă o grămadă de lucruri.
+
+00:04:26.600 --> 00:04:30.730
+Vedem că există această linie de încărcare care este linia roșie.
+
+00:04:30.770 --> 00:04:32.540
+Deci, pagina web a fost încărcată.
+
+00:04:32.690 --> 00:04:42.260
+Dar după aceea avem toate aceste lucruri care par să se încarce în fundal, încercând să se întâmple
+
+00:04:42.260 --> 00:04:44.410
+această încărcare progresivă.
+
+00:04:44.420 --> 00:04:53.470
+Foarte misto și multe companii utilizează acest tip de mod de a face site-urile Web rapid.
+
+00:04:53.530 --> 00:04:58.750
+Companiile mari, cum ar fi Flipkart sau Ali Express.
+
+00:04:59.020 --> 00:05:04.660
+Și apoi există ideea de a servi o cochilie sau un schelet al unui.
+
+00:05:04.930 --> 00:05:13.330
+Companiile precum Flipkart și Ali Express au folosit acest lucru în cazul în care serverul oferă un shell sau un ecran de
+
+00:05:14.140 --> 00:05:21.730
+schelet care se imprimă imediat, astfel încât să se simtă ca încărcarea conținutului să se facă imediat, chiar dacă în
+
+00:05:21.730 --> 00:05:25.390
+fundal se întâmplă de fapt încărcarea din partea clientului.
+
+00:05:26.890 --> 00:05:32.650
+Acum, aceasta este o combinație și strategizare despre motivul pentru care trimiteți în față și de ce
+
+00:05:32.650 --> 00:05:33.820
+faceți pe server.
+
+00:05:33.820 --> 00:05:35.490
+Și este important să te gândești.
+
+00:05:35.530 --> 00:05:40.190
+Din nou ca dezvoltator senior există întotdeauna compromisuri.
+
+00:05:40.200 --> 00:05:44.900
+Nu este niciodată alb-negru corect sau greșit pentru fiecare situație.
+
+00:05:44.920 --> 00:05:50.590
+Încercați să vă dați seama ce este cel mai bun lucru pe care îl puteți face și puteți să luați bucăți din partea
+
+00:05:51.040 --> 00:05:55.290
+clientului și din partea de redare a serverului pentru a vă face să funcționeze pentru orice doriți.
+
+00:05:55.300 --> 00:06:03.040
+De exemplu, există un instrument numit IO pre-redat și permite site-urilor javascript să fie accesate cu crawlere pentru motoarele de căutare
+
+00:06:03.040 --> 00:06:10.690
+și aceștia fac acest lucru prin a avea de fapt un serviciu în cazul în care fac renderul paginii pentru dvs.
+
+00:06:10.720 --> 00:06:15.560
+și puteți să salvați faptul că a fost redată o ședință brioșe.
+
+00:06:15.760 --> 00:06:18.400
+Și multe lucruri pe care le puteți face.
+
+00:06:18.400 --> 00:06:25.630
+Ideea fiind că vrei să știi cum funcționează lucrurile și apoi să decidă pentru ce anume vrei să
+
+00:06:25.630 --> 00:06:31.760
+iei și ce piese vrei să iei de la fiecare astfel încât să termini.
+
+00:06:31.760 --> 00:06:35.490
+Am vorbit despre randarea pe partea de server a randării clientului.
+
+00:06:35.540 --> 00:06:42.600
+Am aruncat o privire asupra unor biblioteci mari, cum ar fi șuruburile, care facilitează redarea aplicațiilor dinamice de pe server.
+
+00:06:43.040 --> 00:06:51.200
+Și am aflat de asemenea că companiile precum Priceline Walmart Airbnb sunt un mare fan al unor lucruri, cum ar fi
+
+00:06:51.200 --> 00:06:58.910
+rendering-ul de pe server, deoarece le pasă de su, mulți dintre clienții lor vin prin Osseo și vor să se
+
+00:06:58.910 --> 00:07:01.920
+asigure că este cât mai rapid posibil.
+
+00:07:01.940 --> 00:07:08.500
+Dar alte site-uri web s-ar putea să nu fie la fel de interesate de acest lucru și adăugând acest strat suplimentar de complexitate.
+
+00:07:08.690 --> 00:07:15.290
+Deci, ei încearcă să facă ceva care este clientul redat, dar și progresiv în cazul în care
+
+00:07:15.290 --> 00:07:19.370
+acestea minimiza cantitatea de javascript vom trimite la conținut.
+
+00:07:19.390 --> 00:07:25.210
+Cred că Brunos mulțumit de decizia noastră că aplicația prietenilor Roble nu trebuie să fie server.
+
+00:07:25.210 --> 00:07:26.540
+E destul de rapid deja.
+
+00:07:26.540 --> 00:07:32.230
+Fișierele noastre de javascript sunt destul de mici și nu ne pasă prea mult de Osseo cu prietenii noștri de la Roble.
+
+00:07:32.230 --> 00:07:35.640
+Deci, cred că suntem bine lipiți de randamentul clientului.
+
+00:07:35.740 --> 00:07:39.170
+Ce credeți că voi vedea în secțiunea următoare.

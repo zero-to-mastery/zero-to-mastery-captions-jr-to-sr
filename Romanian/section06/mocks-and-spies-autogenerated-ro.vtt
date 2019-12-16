@@ -1,0 +1,439 @@
+﻿WEBVTT
+
+00:00:00.780 --> 00:00:02.310
+Bine ai revenit.
+
+00:00:02.310 --> 00:00:09.120
+Un lucru pe care probabil că ați observat-o dacă vă acordați cu adevărat atenție este că
+
+00:00:09.120 --> 00:00:17.490
+aceste teste sunt bine pentru moment, deoarece API-ul Swaby este destul de rapid și vom primi datele destul de repede.
+
+00:00:17.490 --> 00:00:20.470
+Dar imaginați-vă dacă am avut multe dintre aceste teste.
+
+00:00:20.490 --> 00:00:28.940
+Imaginați-vă dacă am avut un premiu care returnează o mulțime de date care durează mult timp pentru a ajunge de fapt să vă puteți imagina acest lucru tot mai mare
+
+00:00:28.940 --> 00:00:33.590
+și mai mare până când durează pentru totdeauna pentru ca testele noastre să fie difuzate.
+
+00:00:33.590 --> 00:00:40.580
+Vreau să spun că a durat doar 2. 5 cinci șapte secunde, dar cu tot mai multe teste în valoare de mai
+
+00:00:40.580 --> 00:00:46.950
+multe și mai multe teste asincrone pe care am aștepta pentru a obține de fapt, un răspuns de date va dura mai mult și mai mult.
+
+00:00:47.030 --> 00:00:50.740
+Și dacă suntem dezvoltatori și lucrăm și ne salvăm Noi suntem costisitori.
+
+00:00:51.020 --> 00:00:57.650
+Dacă trebuie să așteptăm câteva minute pentru testele noastre de fiecare dată când ne va
+
+00:00:57.650 --> 00:01:06.200
+încetini cu adevărat cum putem îmbunătăți acest lucru, astfel încât să nu facem întotdeauna acest lucru fiscal Putem folosi ceva
+
+00:01:06.590 --> 00:01:17.820
+numit Mock cu o marcă pe care o putem falsifica o funcție și pur și simplu pretindeți că l-am alergat astfel încât să putem folosi acești bani
+
+00:01:17.880 --> 00:01:21.260
+pentru a ne spiona comportamentul unei funcții.
+
+00:01:22.160 --> 00:01:28.820
+Aceasta se numește în mod indirect printr-un alt cod, mai degrabă decât testarea ieșirii
+
+00:01:28.820 --> 00:01:31.340
+și așteptarea finalizării codului asincron.
+
+00:01:31.480 --> 00:01:35.550
+Iar tu poți să-l creezi pe Mock și într-adevăr foarte ușor.
+
+00:01:35.640 --> 00:01:37.420
+Deci, să facem asta.
+
+00:01:37.620 --> 00:01:41.060
+Să creăm un semn aici pentru a accelera testele noastre asincrone.
+
+00:01:42.440 --> 00:01:45.860
+Primul lucru pe care îl vom face să creăm mai mult spațiu aici.
+
+00:01:45.980 --> 00:01:52.610
+Am de gând să creez din nou un test nou pe care îl vom numi doar
+
+00:01:55.420 --> 00:02:01.990
+pentru a primi numărul de oameni care revin și rezultatele și se termină aici.
+
+00:02:02.880 --> 00:02:04.070
+Vom face același lucru.
+
+00:02:04.260 --> 00:02:07.080
+Al doilea parametru este o funcție.
+
+00:02:07.110 --> 00:02:09.520
+Acum vom crea ceva interesant.
+
+00:02:09.720 --> 00:02:18.560
+Vom bate jocul asta, pentru că mai întâi notați o bibliotecă de la o terță parte.
+
+00:02:18.570 --> 00:02:26.040
+Și dacă am testat cu adevărat codul bibliotecii și am verificat-o pe Haab repo și au teste care
+
+00:02:26.430 --> 00:02:29.460
+nu trebuie să testați că funcționează.
+
+00:02:29.460 --> 00:02:34.660
+Putem presupune că funcția de preluare funcționează conform destinației.
+
+00:02:35.010 --> 00:02:42.140
+Deci, hai să facem o frământare și să frământăm.
+
+00:02:42.470 --> 00:02:44.780
+Și aceasta va fi o variabilă.
+
+00:02:44.810 --> 00:02:49.760
+Deci, să spunem doar costurile pe care le putem bate jocul și modul în care putem face acest lucru în jest.
+
+00:02:49.760 --> 00:02:55.200
+Din nou, dacă vă amintiți acest lucru este ceva care vine cu doar spioni mockeri și umpluturi.
+
+00:02:55.250 --> 00:03:02.990
+În caz contrar, dacă folosești ceva de genul Moka, folosești semnătura, dar cu asta putem să facem
+
+00:03:05.530 --> 00:03:10.400
+doar patru funcții și putem face ceva chemat din nou.
+
+00:03:10.450 --> 00:03:12.630
+Toate acestea se află în documentația lor.
+
+00:03:12.670 --> 00:03:23.530
+Putem face ceva numit valoare returnată martor și putem să întoarcem ceva ca și cum această funcție fecche a fost
+
+00:03:23.530 --> 00:03:24.180
+chemată.
+
+00:03:24.370 --> 00:03:30.270
+Deci, ce se întoarce, de obicei, o funcție de preluare.
+
+00:03:30.380 --> 00:03:33.090
+Știm că întoarce o promisiune.
+
+00:03:33.110 --> 00:03:36.050
+Și să spunem doar că acum va rezolva întotdeauna.
+
+00:03:36.140 --> 00:03:40.880
+Deci, aceasta este o promisiune rezolvată și în interiorul acestei hotărâri.
+
+00:03:41.060 --> 00:03:45.930
+Permiteți-mi să fac acest lucru pe o linie nouă doar ca să putem vedea mai bine și mai bine.
+
+00:03:46.010 --> 00:03:47.000
+Aici.
+
+00:03:47.000 --> 00:03:49.590
+Omule să facem asta puțin mai mic.
+
+00:03:49.670 --> 00:04:01.150
+Vrem să rezolvăm un obiect care este Jason, pentru că dacă vă amintiți că trebuie să facem întotdeauna praful,
+
+00:04:01.180 --> 00:04:07.490
+atunci răspundeți la punctul Jaison, ca să putem mări totul.
+
+00:04:08.570 --> 00:04:10.120
+Putem spune că Jason.
+
+00:04:10.280 --> 00:04:14.150
+Deci obiectul pe care îl vom întoarce va fi o promisiune.
+
+00:04:14.180 --> 00:04:22.790
+Așa că vom rezolva o promisiune cu metoda Jaison și această metodă este din nou o
+
+00:04:25.640 --> 00:04:26.600
+promisiune.
+
+00:04:26.930 --> 00:04:37.620
+Așa că promiteți și rezolvați din nou această promisiune și din această parte vom face acest cântec Don J și
+
+00:04:37.620 --> 00:04:52.000
+apoi vom obține datele astfel încât să putem spune că în hotărârea pe care o vom avea numărul este egală cu 87 iar rezultatele vor fi să creăm
+
+00:04:52.000 --> 00:05:04.720
+doar o array care spune 0 1 2 3 4 5 să spunem asta și să obținem un pic de eroare de sintaxă să rezolvăm
+
+00:05:04.720 --> 00:05:05.650
+asta.
+
+00:05:07.090 --> 00:05:11.270
+Avem un simbol neașteptat și am uitat să vină aici virgule
+
+00:05:14.290 --> 00:05:17.130
+clasice pe care le primesc mereu.
+
+00:05:17.280 --> 00:05:17.630
+In regula.
+
+00:05:17.650 --> 00:05:20.370
+Deci, acum am marcat apelul pentru preluare.
+
+00:05:20.500 --> 00:05:27.670
+În loc să chemați acest lucru, promiteți și așteptați datele și obțineți datele sau datele.
+
+00:05:27.670 --> 00:05:34.010
+Rezultatele lor au fost doar de a face asta, presupunând automat că API funcționează.
+
+00:05:34.030 --> 00:05:37.690
+Așa că putem testa doar celelalte părți ale funcției noastre.
+
+00:05:38.380 --> 00:05:47.130
+Din nou, pentru că acest lucru este totuși asincron, ne întoarcem o promisiune, amintim că vom
+
+00:05:48.660 --> 00:05:59.700
+dori să facem o întoarcere. Punctul Swaby îi face pe oameni să-i promită pe oameni și aici, în loc de fecche,
+
+00:06:00.180 --> 00:06:10.120
+putem să mergem, să luăm mersul, fetch și astfel, atunci când testăm, putem folosi injecția de dependență pentru
+
+00:06:10.390 --> 00:06:14.790
+a ne asigura că testează diferite funcționalități.
+
+00:06:14.800 --> 00:06:21.880
+Și ați putea să vă amintiți acest lucru din testele de integrare, dar fără a folosi toate aceste resurse,
+
+00:06:21.880 --> 00:06:24.130
+încercăm să fim cât mai inteligenți.
+
+00:06:25.070 --> 00:06:31.350
+Acum putem avea punctul și vom vedea datele așa cum am făcut mai sus, unde am auzit
+
+00:06:34.500 --> 00:06:35.350
+acum aici.
+
+00:06:35.370 --> 00:06:37.380
+Să facem câteva teste.
+
+00:06:37.530 --> 00:06:44.260
+Vrem să ne așteptăm la preluarea mamei.
+
+00:06:44.310 --> 00:06:52.080
+Asta-i drept pentru că am folosit doar pentru a da F-ed și avem acum o abilitate de a asculta, deoarece, în acest lucru este, de
+
+00:06:52.110 --> 00:06:58.170
+asemenea, un spion putem spiona pe asta și a vedea ce această funcție a făcut în interiorul acestei funcții.
+
+00:06:58.170 --> 00:07:01.530
+Deci ce nu a făcut Mark în interiorul promisiunii.
+
+00:07:01.560 --> 00:07:06.310
+Nu pot să spun că mă aștept să mă bați joc de doc.
+
+00:07:06.330 --> 00:07:11.180
+Din nou, acest lucru este în documentația de a avea o cauză.
+
+00:07:11.220 --> 00:07:14.330
+De câte ori a fost numit acest lucru.
+
+00:07:15.450 --> 00:07:16.440
+O să spun lenth.
+
+00:07:16.560 --> 00:07:24.920
+Deci, de câte ori a fost chemat să fie unul să fim în siguranță și
+
+00:07:28.320 --> 00:07:30.000
+asta trece.
+
+00:07:30.000 --> 00:07:41.120
+Dar amintiți-vă cu testele asincrone pe care doriți să le facem întotdeauna asteptările punctuale pentru a vă asigura că sunt
+
+00:07:41.120 --> 00:07:42.290
+chemați.
+
+00:07:42.290 --> 00:07:47.330
+Deci, în acest caz, avem doar unul, totul funcționează.
+
+00:07:47.340 --> 00:07:48.720
+Dacă am schimbat acest lucru
+
+00:07:52.740 --> 00:07:59.150
+la zero, care nu reușește, pentru că de fapt am apelat la pescuitul de pește, această funcție pe care o cheamă maherul o dată.
+
+00:07:59.190 --> 00:08:00.450
+Foarte tare.
+
+00:08:01.080 --> 00:08:04.620
+Ce altceva putem face bine.
+
+00:08:04.650 --> 00:08:06.030
+Un alt lucru pe care îl putem face.
+
+00:08:06.100 --> 00:08:08.740
+Lasă-mă să copiez asta.
+
+00:08:08.780 --> 00:08:19.710
+Ne putem aștepta ca furajul de mahon să aibă o altă metodă chemată să fie chemată și putem testa pentru a vedea ce a
+
+00:08:19.710 --> 00:08:20.770
+fost numit.
+
+00:08:20.970 --> 00:08:25.580
+În cazul nostru, ar trebui să vă chemați singuri.
+
+00:08:25.950 --> 00:08:29.010
+Deci, din nou, să o punem aici.
+
+00:08:29.220 --> 00:08:30.410
+Să testați asta.
+
+00:08:30.480 --> 00:08:31.230
+O
+
+00:08:35.290 --> 00:08:43.680
+să salvez Oh și de fapt am făcut o greșeală și noi vrem să ne
+
+00:08:43.680 --> 00:08:53.660
+așteptăm din nou la falsul la care am fost sunat cu u r l salvați o și scoateți suportul.
+
+00:08:53.690 --> 00:08:54.270
+In regula.
+
+00:08:54.320 --> 00:08:59.270
+În realitate trec prin Amintiți-vă că afirmațiile noastre așteaptă acum două lucruri.
+
+00:08:59.300 --> 00:09:00.170
+Așa că am să
+
+00:09:04.240 --> 00:09:07.260
+vă salvez să vedeți cum a fost nevoie de puțin timp de data asta.
+
+00:09:07.630 --> 00:09:15.010
+Din nou, pentru că numim în mod repetat acest API, durează puțin mai mult timp de data aceasta 3. 9 81 de secunde.
+
+00:09:15.280 --> 00:09:20.330
+Dar, cu semnul, pentru că ne întoarcem, vom rezolva imediat.
+
+00:09:20.500 --> 00:09:23.830
+Este mult mai rapid și trece.
+
+00:09:23.950 --> 00:09:29.600
+Dacă, dintr-un motiv oarecare, am schimbat acest lucru și suntem de așteptat să sunăm
+
+00:09:32.760 --> 00:09:41.730
+pe planete și am spus că nu reușim, pentru că ne așteptăm ca oamenii să ajungă să-i facă pe oameni să nu fie
+
+00:09:41.730 --> 00:09:42.890
+foarte răi.
+
+00:09:42.900 --> 00:09:43.140
+In regula.
+
+00:09:43.170 --> 00:09:44.850
+Să mai facem câteva.
+
+00:09:45.180 --> 00:09:46.650
+Ei bine, să adăugăm din nou.
+
+00:09:46.650 --> 00:09:49.410
+Copierea și lipirea în testare nu este rău.
+
+00:09:49.470 --> 00:09:57.990
+Hai să copiem și să lipim acest lucru și să ne așteptăm ca lucrurile să funcționeze exact la fel ca și în cele de mai sus cu
+
+00:09:57.990 --> 00:09:58.760
+peștele obișnuit.
+
+00:09:58.770 --> 00:10:03.110
+Dar de data asta cu Mach. astfel încât să putem salva merge înapoi și
+
+00:10:05.860 --> 00:10:09.760
+am un test de eșec, deoarece acum numărul nostru de afirmație este de
+
+00:10:13.650 --> 00:10:14.500
+patru woohoo.
+
+00:10:14.600 --> 00:10:15.840
+Totul trece.
+
+00:10:15.980 --> 00:10:24.600
+Și dacă voi schimba acest număr la optzeci și nouă și voi schimba acest lucru la optzeci și nouă, dar să spunem
+
+00:10:24.600 --> 00:10:27.730
+că este mai mare de 10 ar
+
+00:10:30.320 --> 00:10:34.520
+trebui să eșueze, deoarece rezultatele noastre au doar șase articole.
+
+00:10:34.520 --> 00:10:35.130
+Acolo te duci.
+
+00:10:36.220 --> 00:10:38.130
+Dar dacă schimb acest
+
+00:10:42.520 --> 00:10:47.580
+lucru la mai mult de 5 testele noastre trec foarte foarte cool.
+
+00:10:48.960 --> 00:10:53.030
+Și acolo o aveți în afară de a învăța câteva metode.
+
+00:10:54.040 --> 00:11:00.010
+Ca să fie mai mari decât două sunt egale pe care le puteți verifica întotdeauna și documentația atunci
+
+00:11:00.010 --> 00:11:03.670
+când scrieți un test totul este destul de simplu dreapta.
+
+00:11:03.670 --> 00:11:09.520
+Odată ce obțineți atârnă de ea avem un test sincron, care este foarte ușor
+
+00:11:09.520 --> 00:11:12.110
+și nu ne așteptăm la afirmații.
+
+00:11:12.260 --> 00:11:18.470
+Și apoi avem un test sincron pe care trebuie doar să ne reamintim să ne întoarcem și să ne
+
+00:11:18.470 --> 00:11:22.020
+asigurăm că avem acces la promisiune, indiferent ce se întoarce.
+
+00:11:22.430 --> 00:11:29.240
+Și apoi putem evita, de asemenea, executarea unui cod sincron, cum ar fi apelurile API sau poate chiar un apel
+
+00:11:29.240 --> 00:11:34.830
+de baze de date pentru a falsifica și a bate funcții cunoscute și spioni americani.
+
+00:11:34.850 --> 00:11:44.580
+Și tocmai pentru că te-au lăsat să spionezi comportamentul funcției se cheamă prin testul nostru și o
+
+00:11:44.580 --> 00:11:47.570
+să spioneze ce se întâmplă.
+
+00:11:47.730 --> 00:11:52.550
+Și ai văzut că dăruirea oamenilor promite că conduce de fapt acest pește mistic pe care l-am creat.
+
+00:11:52.650 --> 00:11:56.140
+Tot ce aveți nevoie este această sintaxă.
+
+00:11:56.310 --> 00:12:03.240
+Și aici am adăugat lucruri suplimentare pentru că ne-am dorit un anumit comportament, dar
+
+00:12:03.240 --> 00:12:14.390
+chiar și făcând asta am fi putut vedea că preluarea lui Mach ar fi fost numită cu acest URL, doar un minunat instrument minunat.
+
+00:12:14.500 --> 00:12:19.090
+Dacă lucrați cu alte biblioteci, veți vedea o mulțime de asemănări.
+
+00:12:19.090 --> 00:12:25.710
+Așa cum am spus Stock-ul lui Mock și condimentul pot fi de asemenea văzute în semn, mai ales dacă lucrați cu moka.
+
+00:12:25.780 --> 00:12:32.140
+Dar, în ansamblu, principiile sunt aceleași și puteți vedea că testele pot fi distractive deoarece testam doar
+
+00:12:32.380 --> 00:12:37.800
+logica și nimic nu se simte mai bine decât obținerea tuturor acestor pași verzi.
+
+00:12:39.250 --> 00:12:41.450
+În regulă asta este pentru moment.
+
+00:12:41.470 --> 00:12:47.000
+Cred că este timpul ca noi să intrăm într-o oarecare măsură să testeze și să testeze prietenii noștri robo.
+
+00:12:47.110 --> 00:12:48.500
+Voi vedea în următorul.
+
+00:12:48.510 --> 00:12:48.990
+Pa! Pa.

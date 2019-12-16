@@ -1,0 +1,562 @@
+﻿WEBVTT
+
+00:00:01.180 --> 00:00:05.790
+Dați-i drumul înapoi acum că avem un semn frumos o funcție de autentificare.
+
+00:00:06.070 --> 00:00:12.220
+Este timpul să generăm jetonul JWT și să îl trimitem utilizatorului, astfel încât să putem începe să îl folosim.
+
+00:00:12.220 --> 00:00:15.270
+Și puteți vedea cum funcționează JWT-urile.
+
+00:00:15.460 --> 00:00:25.800
+Acum, în mod ideal, ceea ce dorim să facem este ceva de genul acesta, în loc să returnez doar obiectul de date care este
+
+00:00:25.800 --> 00:00:34.310
+obiectul utilizator cu nume de e-mail ID și alte câmpuri pe care le poate avea baza de date.
+
+00:00:34.620 --> 00:00:37.690
+Să adăugăm acum o altă logică aici.
+
+00:00:37.830 --> 00:00:39.390
+Voi spune că aici vrem să
+
+00:00:43.400 --> 00:00:44.910
+verificăm mai întâi ceva.
+
+00:00:44.960 --> 00:00:51.920
+Mai întâi dorim să verificăm dacă avem un ID de identificare a datelor de la orice răspuns, pentru a ne asigura că într-adevăr
+
+00:00:51.920 --> 00:00:57.020
+avem utilizatorul de care avem nevoie sau că baza de date returnează ceva ce putem folosi.
+
+00:00:57.050 --> 00:01:03.590
+Și să adăugăm doar o verificare a e-mail-ului nostru DOT și putem face alte verificări aici, dar acest lucru ar trebui să
+
+00:01:03.590 --> 00:01:09.240
+fie suficient pentru a verifica dacă aceste date sunt de fapt utilizatorul și vom face un operator ternar.
+
+00:01:09.260 --> 00:01:17.540
+Am de gând să spun dacă există, atunci vreau să răspundeți cu datele de utilizator sau dacă nu.
+
+00:01:17.540 --> 00:01:22.420
+Încă o dată putem folosi o promisiune care respinge.
+
+00:01:22.500 --> 00:01:29.950
+O funcție cu adevărat utilă de utilizat și pentru moment, doar pentru a simplifica lucrurile pe care le vom răspunde cu orice date
+
+00:01:30.070 --> 00:01:36.470
+pe care le-am primit, ați putea dori într-adevăr să întoarceți un răspuns șir aici, care nu dă prea multă informație,
+
+00:01:36.470 --> 00:01:42.470
+deoarece acum am fi transmiterea potențială a datelor în față și din baza de date pe care nu
+
+00:01:42.470 --> 00:01:44.620
+dorim cu adevărat să le facem.
+
+00:01:44.630 --> 00:01:50.960
+Dar pentru scopuri de depanare este frumos să ai acum pentru că, dacă într-un fel e ceva care nu reușește să văd.
+
+00:01:50.960 --> 00:01:54.550
+Bine, cu ce primesc respingeri.
+
+00:01:54.680 --> 00:01:56.750
+Și sperăm să ne ajutăm să depanem mai bine.
+
+00:01:58.270 --> 00:02:05.890
+Acum, aici îmi place să numesc lucruri frumoase și curate și în cazul nostru, în loc să răspund doar la datele pe care vrem să
+
+00:02:06.010 --> 00:02:09.730
+le facem în cazul în care creăm o sesiune de utilizator.
+
+00:02:09.730 --> 00:02:14.920
+Așa că am să schimb această funcție într-o funcție pe care o vom crea numită sesiuni
+
+00:02:14.980 --> 00:02:18.770
+de creare și acest lucru va crea Sesiuni va primi datele.
+
+00:02:19.600 --> 00:02:27.910
+Obiectul și acest obiect de date, care sperăm că este un utilizator, vor fi folosite și vor crea sesiuni și vor crea Sesiuni
+
+00:02:28.270 --> 00:02:35.140
+va reveni la o promisiune, o promisiune care include toate informațiile despre utilizatori de care avem nevoie, plus Tokin
+
+00:02:35.140 --> 00:02:38.160
+noul simbol pe care o vom genera.
+
+00:02:38.210 --> 00:02:47.790
+Deci, să creăm această funcție voi spune Konst să creeze sesiuni care vor primi date sau să spunem doar
+
+00:02:49.650 --> 00:02:51.610
+utilizator pentru moment.
+
+00:02:52.960 --> 00:02:59.840
+Și această funcție va crea acum sesiunea noastră pentru utilizator.
+
+00:02:59.910 --> 00:03:10.550
+Acum, aici vrem să creăm tokenul JJB și să ne întoarcem datele utilizatorilor spunem și pentru a putea crea un simbol JWT, trebuie să instalăm
+
+00:03:10.550 --> 00:03:19.790
+pachetul JND după cum știți și B. M. dacă mergem aici, acesta este pachetul pe care
+
+00:03:19.790 --> 00:03:21.170
+îl vom folosi.
+
+00:03:21.170 --> 00:03:30.320
+Pur și simplu rulați NPM install Jason tokin și ei au o simplă documentație simplă pentru a le folosi și puteți vedea că
+
+00:03:30.320 --> 00:03:35.640
+putem crea doar un token, dar executând această comanda frumos și simplu.
+
+00:03:35.780 --> 00:03:36.660
+Deci, să facem asta.
+
+00:03:36.680 --> 00:03:42.040
+Voi rula să instalez NPM când închid acum containerul nostru.
+
+00:03:42.860 --> 00:03:49.940
+Și Ron și așa pentru Jenn Webb token și asta a fost frumos și rapid.
+
+00:03:50.090 --> 00:03:57.050
+Acum, odată ce am și noi asta, dacă ne defilează, ne cerem pur și simplu și apoi semnez semnul.
+
+00:03:57.260 --> 00:03:59.560
+Am de gând să copiez asta.
+
+00:03:59.610 --> 00:04:01.420
+Hai să mergem până aici.
+
+00:04:03.090 --> 00:04:06.180
+Voi cere semnul și apoi îl voi folosi pe Konst aici.
+
+00:04:07.140 --> 00:04:17.300
+În regulă, avem acum obiectul JWT pe care îl putem folosi pentru a crea un jeton și aici să creăm
+
+00:04:17.300 --> 00:04:20.520
+o funcție numită token sign acum.
+
+00:04:20.720 --> 00:04:22.540
+Și ei creează sesiune.
+
+00:04:22.790 --> 00:04:32.700
+Am de gând să iau utilizatorul sau e-mailul și ID-ul, care din nou și verificăm aici, pentru a ne asigura că
+
+00:04:32.700 --> 00:04:41.050
+avem datele de identificare a datelor și e-mailurile de la utilizatorul de parametri pe care îl primim.
+
+00:04:41.270 --> 00:04:47.600
+Și vrem să creăm un simbol care va fi semnul semnelor.
+
+00:04:47.900 --> 00:04:52.670
+Dar din nou mi-ar plăcea să păstrez lucrurile simple și să
+
+00:04:52.880 --> 00:05:03.990
+funcționez cântece mici și să creez o nouă funcție numită token pentru semn și acest token va semna mesajul e-mail al utilizatorului care trebuie folosit pentru a
+
+00:05:03.990 --> 00:05:05.100
+semna tokenul.
+
+00:05:05.320 --> 00:05:14.130
+Bine, să creăm o nouă funcție și să facem din nou funcții frumoase și mici și să
+
+00:05:14.130 --> 00:05:18.420
+le putem testa mai ușor când scriem teste.
+
+00:05:18.420 --> 00:05:25.340
+Va fi mai simplu, pentru că în timp ce există mici bucăți mici pe care
+
+00:05:25.460 --> 00:05:32.290
+le putem examina unitatea corectă și această funcție de semn sign va primi e-mailul.
+
+00:05:32.380 --> 00:05:43.720
+Și hai să avem doar o încărcătură JWT pe care o vom folosi și această sarcină utilă JWT va avea.
+
+00:05:44.070 --> 00:05:46.110
+Mail-ul.
+
+00:05:46.360 --> 00:05:52.660
+Acum, sarcina utilă este doar dacă vă uitați la documentația aceasta este doar o denumire obișnuită.
+
+00:05:53.260 --> 00:06:00.040
+Dacă vedeți aici, putem să semnați tokenul cu un fel de date, deoarece amintim că ghilimelele GW dețin date.
+
+00:06:00.220 --> 00:06:04.540
+Când o decodificați, puteți afla de fapt ce obiect conține.
+
+00:06:04.540 --> 00:06:10.430
+Și am spus că nu vrem cu adevărat informații delicate într-un JWT în cazul nostru.
+
+00:06:10.590 --> 00:06:11.550
+E-mailul este bine.
+
+00:06:11.550 --> 00:06:16.800
+S-ar putea să doriți să utilizați ID-ul, dar ceva care ar putea fi util pentru dvs. dacă doriți să decodificați acest jeton
+
+00:06:16.830 --> 00:06:18.400
+și să îl utilizați mai târziu.
+
+00:06:18.480 --> 00:06:26.250
+Pentru noi, să păstrăm e-mailul ca încărcătură utilă a JWT, astfel încât să semnem un jeton cu e-mailul utilizatorului și putem pur
+
+00:06:27.480 --> 00:06:33.110
+și simplu să ne întoarcem aici și să semnam în cele din urmă tokenul nostru.
+
+00:06:33.210 --> 00:06:40.920
+Deci, am doar copierea de la orice documentație a spus că doriți să utilizați semn JWT și acest lucru util va
+
+00:06:41.010 --> 00:06:43.960
+fi sarcina utilă pe care tocmai am creat.
+
+00:06:46.030 --> 00:06:51.100
+Și aici vreți un secret pentru a semna din nou ceva foarte important, pe care
+
+00:06:51.100 --> 00:06:58.050
+nu doriți ca oamenii să îl cunoască și de îndată ce am spus că ceva ar trebui să vă lipiți în cap
+
+00:06:58.260 --> 00:07:04.770
+și asta înseamnă bine că este un lucru foarte sigur care ar trebui să aveți probabil o variabilă de mediu pentru.
+
+00:07:04.770 --> 00:07:11.220
+Deocamdată, însă, amintiți-vă cu variabilele de mediu, va trebui să faceți gândul și gândul de procesare, să
+
+00:07:11.220 --> 00:07:17.640
+zicem secretul JWT sau ceva de genul acesta, ci pentru că am trecut deja prin
+
+00:07:17.640 --> 00:07:27.190
+asta și deja știm cum să o fac eu doar o voi păstra simplu și spun JWT secret și ne vom înscrie cu asta.
+
+00:07:27.220 --> 00:07:30.580
+Și apropo de GWG poți face niște lucruri interesante.
+
+00:07:30.580 --> 00:07:40.550
+De exemplu, puteți să-i dați opțiuni cum ar fi expiră Dan și îl putem da câte zile sau secunde.
+
+00:07:40.570 --> 00:07:43.850
+Jkenul JWT expiră în care este o caracteristică foarte frumoasă.
+
+00:07:43.870 --> 00:07:45.820
+Deci, să spunem doar două zile.
+
+00:07:45.880 --> 00:07:51.210
+Pentru moment, doar pentru distracție, chiar dacă cu JWT puteți face acest lucru.
+
+00:07:51.280 --> 00:07:56.500
+Unul dintre principalele dezavantaje cu ei este că atunci când vine vorba de
+
+00:07:56.500 --> 00:08:04.900
+semnarea utilizatorilor este cam greu să revoce aceste jetoane și există modalități în jurul valorii de ea, dar folosind roșu S și metoda
+
+00:08:04.900 --> 00:08:11.950
+noastră de sesiuni va deveni cu adevărat foarte ușor de îndepărtat efectiv tokenul de fiecare dată când utilizatorul semnează.
+
+00:08:11.950 --> 00:08:14.250
+Dar oricum, pentru moment, să lăsăm așa.
+
+00:08:14.290 --> 00:08:21.310
+Încercăm să ne întoarcem un simbol JWT acum că doar semnează tokenul și acum avem un token
+
+00:08:21.550 --> 00:08:24.160
+și creăm sesiuni frumoase și simple.
+
+00:08:24.160 --> 00:08:28.160
+Acum permiteți-mi să salvez acest lucru și să-mi rulez din nou recipientul de docare.
+
+00:08:28.420 --> 00:08:30.210
+Tocmai l-am rula pe docker.
+
+00:08:30.250 --> 00:08:32.910
+A fost deja construită, așa că nu avem nevoie de liniuța.
+
+00:08:32.920 --> 00:08:37.850
+Bill bine.
+
+00:08:37.850 --> 00:08:39.050
+Se pare că nu există erori.
+
+00:08:39.050 --> 00:08:40.410
+Acesta este întotdeauna un semn bun.
+
+00:08:40.730 --> 00:08:41.670
+Să ne întoarcem aici.
+
+00:08:41.690 --> 00:08:48.240
+Vedem că semnez semnul și că acum următorul lucru pe care vrem să-l facem este să facem ceva
+
+00:08:48.240 --> 00:08:54.320
+cu acțiunea și să începem să lăsăm doar acest jeton în față și deci putem vedea că
+
+00:08:54.320 --> 00:08:57.100
+de fapt primim un jken de JWT.
+
+00:08:57.300 --> 00:08:59.620
+Am de gând să spun întoarcerea.
+
+00:08:59.910 --> 00:09:02.040
+Ei bine, ce ar trebui să fie returnat aici.
+
+00:09:02.040 --> 00:09:07.530
+Amintiți-vă că nu vrem cu adevărat să facem un răspuns, dar Jason pentru că vrem să păstrăm toate aceste
+
+00:09:07.560 --> 00:09:09.250
+răspunsuri pentru semnare și autentificare.
+
+00:09:09.330 --> 00:09:18.730
+Vedem că aici ne întoarcem sau vrem să ne întoarcem sesiunile de creare sau o promisiune nu respinge în cazul
+
+00:09:21.160 --> 00:09:22.000
+nostru.
+
+00:09:22.210 --> 00:09:29.610
+În mod ideal, indiferent de ceea ce aici vrem să avem un câine, atunci acesta are un răspuns.
+
+00:09:30.640 --> 00:09:39.610
+Deci, să facem un răspuns Daut Jaison sau să revenim de fapt la sesiune dacă am primit sesiunea
+
+00:09:39.610 --> 00:09:45.630
+de la crearea sesiunii și vom spune pur și simplu un răspuns.
+
+00:09:45.710 --> 00:09:53.960
+Jaison tocmai returnează orice este sesiunea și orice este sesiunea este ceea ce vom reveni din această funcție
+
+00:09:54.020 --> 00:09:56.280
+de creare a sesiunii.
+
+00:09:56.450 --> 00:10:00.510
+Asta pentru moment, pentru că o să trimitem Jaison.
+
+00:10:00.770 --> 00:10:13.270
+Să spunem doar că dorim ca succesul să fie adevărat și vom da să spunem că ID-ul de utilizator este ideea pe
+
+00:10:13.270 --> 00:10:23.490
+care am primit-o de la utilizator din baza de date și, de asemenea, dăm tokenul exact așa.
+
+00:10:23.630 --> 00:10:29.930
+Și doar pentru a face acest lucru frumos și concis din nou, pentru că este cheia este egală cu valoarea pe
+
+00:10:29.930 --> 00:10:32.120
+care o pot lăsa la tokin.
+
+00:10:32.140 --> 00:10:37.840
+Deci, acum trimitem un jeton și ID-ul nostru de utilizator.
+
+00:10:37.930 --> 00:10:46.210
+Acum, acest obiect de utilizator, dacă vă amintiți De obicei, vom returna întregul lucru și ar avea informații de profil, cum
+
+00:10:46.210 --> 00:10:52.360
+ar fi numele de e-mail, astfel încât imediat după ce ne-am conectat obținem acele informații.
+
+00:10:52.360 --> 00:10:59.770
+Acum, este lucrul pe care îl vom face pentru că, până acum, când un utilizator a fost conectat, vom rula
+
+00:10:59.770 --> 00:11:03.650
+semnul și funcția mânerului și vom returna doar obiectul utilizatorului.
+
+00:11:04.690 --> 00:11:10.130
+Dar există o modalitate mai curată și mai curată de a face acest lucru și dorim să păstrați obiectivele finale cu adevărat descriptive.
+
+00:11:11.220 --> 00:11:14.730
+Și vrei să te asiguri că Seinen se ocupă de semnarea.
+
+00:11:14.760 --> 00:11:16.450
+E fie adevărat, fie fals.
+
+00:11:16.530 --> 00:11:17.250
+Sunteți conectat (ă).
+
+00:11:17.280 --> 00:11:18.460
+Nu sunteți conectat (ă).
+
+00:11:18.540 --> 00:11:19.680
+Sunteți autentificat.
+
+00:11:19.680 --> 00:11:21.050
+Nu sunteți autentificat.
+
+00:11:21.210 --> 00:11:28.220
+În mod ideal, vom folosi ceva de genul obținerea ID-ului de profil pentru a obține informațiile utilizatorilor.
+
+00:11:28.350 --> 00:11:33.750
+Din nou, suntem doar foarte descriptivi, asemănători cu modul în care îndeplinim funcții pure.
+
+00:11:33.750 --> 00:11:39.660
+Asigurăm doar că fiecare punct final are un singur lucru și un lucru foarte bun și este un design
+
+00:11:39.660 --> 00:11:44.070
+mai plăcut pentru că are mai mult sens și este mult mai curat.
+
+00:11:44.100 --> 00:11:48.810
+Și, pe măsură ce extindeți lucrurile, este mai ușor să înțelegeți când vine un nou dezvoltator.
+
+00:11:48.810 --> 00:11:53.170
+Vor fi capabili să spună bine, asta este ceea ce probabil folosim pentru a obține profilul.
+
+00:11:53.220 --> 00:11:56.540
+Probabil că vom folosi pentru a vă conecta.
+
+00:11:56.580 --> 00:12:02.170
+S-ar putea să fie surprinzător faptul că unii văd că ne întoarcem un întreg
+
+00:12:02.230 --> 00:12:10.570
+obiect de utilizator cu semnul și că doar pentru a păstra lucrurile curate și raționale în capul nostru, voi reveni doar la
+
+00:12:10.570 --> 00:12:17.560
+ID și apoi la capătul din față De fapt, fac o solicitare la profil și pentru că avem
+
+00:12:17.950 --> 00:12:22.340
+ID-ul de utilizator. Acum putem solicita doar informațiile despre profil.
+
+00:12:22.420 --> 00:12:23.670
+Să testați asta.
+
+00:12:23.680 --> 00:12:29.700
+Am de gând să salvez și să mă întorc la aplicația mea.
+
+00:12:29.780 --> 00:12:32.060
+Voi ieși.
+
+00:12:32.180 --> 00:12:40.400
+Să facem un punct. com o Voi deschide instrumentele pentru dezvoltatori du-te la fila
+
+00:12:40.420 --> 00:12:44.860
+de rețea asigurați-vă că totul este șters și faceți clic pe conectați-vă.
+
+00:12:44.870 --> 00:12:45.620
+In regula.
+
+00:12:45.620 --> 00:12:48.790
+Se pare că nu am putut să intrăm.
+
+00:12:48.830 --> 00:12:55.040
+Dacă fac clic pe semn, uitați-vă că am succes.
+
+00:12:55.040 --> 00:12:58.330
+ID-ul real al utilizatorului este unul.
+
+00:12:58.700 --> 00:13:01.730
+Și noi avem un simbol.
+
+00:13:01.730 --> 00:13:02.930
+Fantastic.
+
+00:13:02.930 --> 00:13:09.380
+Deci, acesta este tokenul nostru care ne autentifică acum și ne asigurăm că acum serverul poate identifica
+
+00:13:09.380 --> 00:13:13.380
+acest browser pe care îl dorește și acest client.
+
+00:13:13.460 --> 00:13:14.400
+Foarte foarte rece.
+
+00:13:14.420 --> 00:13:22.720
+Dar de ce nu am reușit să ne logăm bine, acesta este un lucru pe care trebuie să-l țineți atent de
+
+00:13:22.720 --> 00:13:27.880
+fiecare dată când schimbați ceea ce se așteaptă până la acest moment.
+
+00:13:28.180 --> 00:13:33.350
+Ne-am confruntat cu conectarea face un anumit lucru și că este returnat întregul obiect utilizator.
+
+00:13:33.370 --> 00:13:38.710
+De îndată ce schimbăm ceva pe spate pentru a reveni la ceva pe care clientul
+
+00:13:38.710 --> 00:13:40.860
+nu-l cunoștea, schimbarea sa întâmplat.
+
+00:13:40.990 --> 00:13:42.610
+Și vrem să fim conștienți de asta.
+
+00:13:42.700 --> 00:13:47.640
+Ori de câte ori veți întoarce ceva diferit de ceea ce așteaptă clientul și de ce așteaptă
+
+00:13:47.650 --> 00:13:51.210
+dezvoltatorii din partea frontului să vă asigurați că vă ajustați pentru asta.
+
+00:13:51.220 --> 00:13:56.850
+Deci, dacă ne întoarcem la codul frontal, să mergem la componenta noastră.
+
+00:13:56.860 --> 00:14:04.920
+Cred ca acolo facem ceasul si vedem ca, pe masura ce ne defileam pe seinen, facem semnarea si
+
+00:14:05.270 --> 00:14:09.930
+indicam cu postul pe care il trimitem e-mail-ul si parola.
+
+00:14:10.120 --> 00:14:17.740
+Și apoi, în sfârșit, când primim un răspuns, facem un cec indicând ID-ul punctului de utilizator și apoi încărcăm utilizatorul și
+
+00:14:17.980 --> 00:14:18.980
+schimbăm traseul.
+
+00:14:19.030 --> 00:14:24.530
+Dar de fapt nu avem un punct utilizator I. D. mai facem noi.
+
+00:14:24.610 --> 00:14:29.110
+Pentru că ceea ce ne întoarcem este de fapt un obiect cu succes.
+
+00:14:29.110 --> 00:14:32.430
+ID utilizator real și un jeton.
+
+00:14:32.450 --> 00:14:41.150
+Deci, acum trebuie să schimbăm frontul pentru a spune probabil că acesta va fi date și
+
+00:14:41.150 --> 00:14:53.060
+că aceste date vor conține un ID de utilizator și dacă se potrivește atunci vrem să încărcăm utilizatorul care chiar acum nu
+
+00:14:53.060 --> 00:14:54.340
+avem .
+
+00:14:54.380 --> 00:14:57.770
+Așa că am să plec așa cum am acum.
+
+00:14:57.770 --> 00:15:01.680
+Este posibil să nu se încarce pe niciunul dintre utilizatori, deoarece nu există obiect de utilizator.
+
+00:15:01.700 --> 00:15:03.270
+O să schimb datele la moment.
+
+00:15:04.230 --> 00:15:09.480
+Și acest lucru ar putea să nu reușească și este ceva la care ne vom întoarce, pentru că am putea dori
+
+00:15:09.480 --> 00:15:13.070
+să facem o solicitare acum pentru identificarea profilului cu ideea pe care o avem.
+
+00:15:13.080 --> 00:15:24.220
+Așa că lasă-mă să spun că întoarce-te din nou să intrăm în semn că o să închid acest a la un punct. com un sign in.
+
+00:15:24.230 --> 00:15:25.370
+In regula.
+
+00:15:25.370 --> 00:15:27.070
+Suntem conectați la aplicația noastră.
+
+00:15:27.260 --> 00:15:32.700
+Avem tokenul de autentificare acum, dar avem o problemă pe care nu am definit-o.
+
+00:15:33.080 --> 00:15:40.250
+Acesta nu este un nume de utilizator, deoarece am returnat numai ID-ul și am returnat numai ID-ul.
+
+00:15:40.250 --> 00:15:48.520
+Așa cum am menționat pentru că vrem să folosim ID-ul pentru a obține profilul utilizatorului.
+
+00:15:49.780 --> 00:15:55.750
+Iar motivul pentru care dorim să facem acest lucru este faptul că știm că orice legătură cu profilul dorim
+
+00:15:55.750 --> 00:15:58.290
+să ne asigurăm că acestea sunt pasaje finale.
+
+00:15:58.330 --> 00:16:05.590
+Aceasta nu este toata lumea poate doar sa le acceseze doar utilizatorii autentificati care au jetoanele care le pot accesa pe
+
+00:16:05.590 --> 00:16:07.400
+baza ce jetoane au.
+
+00:16:08.630 --> 00:16:15.570
+În videoclipul următor, vom adăuga la acest lucru și vom avea grijă ca sistemul nostru de autentificare
+
+00:16:15.600 --> 00:16:16.840
+să funcționeze bine.
+
+00:16:17.250 --> 00:16:18.670
+O să văd în acel.
+
+00:16:18.820 --> 00:16:19.030
+Buh-Pa.

@@ -1,0 +1,178 @@
+﻿WEBVTT
+
+00:00:01.020 --> 00:00:06.320
+Bine ați venit înapoi onoruri să ia un pic de timp pentru a vorbi despre cadrul de supraveghere
+
+00:00:06.330 --> 00:00:12.750
+și ceva care am putea să fi scăzut peste un pic prea repede și video precedent și că este faptul că server
+
+00:00:12.990 --> 00:00:18.580
+mai puțin nu este doar pentru serviciile Amazon Web pe care le puteți folosi cu o mulțime de lucruri.
+
+00:00:18.780 --> 00:00:21.280
+Vedeți că în server creați mai puțin comanda.
+
+00:00:21.300 --> 00:00:27.480
+Avem toate aceste șabloane și folosim Amazonul care îl cunoaște pe James.
+
+00:00:27.730 --> 00:00:30.830
+Există și Amazon cu tipărire.
+
+00:00:30.880 --> 00:00:34.910
+Există Python acolo Java.
+
+00:00:35.080 --> 00:00:36.480
+Sunt toate aceste lucruri.
+
+00:00:36.760 --> 00:00:42.700
+Dar, de asemenea, dacă continuăm să mergem în jos, vedem deschis Wisk care este IBM.
+
+00:00:42.790 --> 00:00:49.990
+Astfel, IBM este webservices, precum și dacă continuăm să vedem că există și Azure.
+
+00:00:50.150 --> 00:00:53.400
+Deci, este Microsoft care oferă aceste servicii.
+
+00:00:53.420 --> 00:00:54.600
+Aveți și Google.
+
+00:00:54.710 --> 00:01:01.330
+Deci, Servilius lucrează cu toți furnizorii de servicii, ceea ce este cu adevărat plăcut.
+
+00:01:01.340 --> 00:01:07.520
+Un alt motiv pentru care îmi place să arăt gyud această metodă este că învățam să folosim nu doar
+
+00:01:07.520 --> 00:01:12.170
+AWOS, ci și toate celelalte servicii care ar putea satisface nevoile dvs. mai bine.
+
+00:01:12.330 --> 00:01:21.000
+Acum, de vreme ce am reușit să facem asta prin celălalt lucru pe care vreau să-l fac, vreau să fiu sigur că mi-ar plăcea
+
+00:01:21.000 --> 00:01:27.630
+să-mi amintesc versiunea noastră de nod aici 6. 10 și pentru că o vom implementa din serverul
+
+00:01:28.200 --> 00:01:37.300
+nostru mai puțin cadru, va trebui să ne întoarcem la tabloul de bord și să eliminăm această funcție lambda, deoarece nu vrem să o creăm
+
+00:01:37.300 --> 00:01:40.220
+aici, o creăm mai puțin prin server.
+
+00:01:40.300 --> 00:01:50.970
+Deci, mă voi întoarce la funcții și voi pur și simplu să-mi scot rămas bun de la revedere, viața ta a fost scurtă.
+
+00:01:50.980 --> 00:01:56.310
+Bine, să minimizăm acest lucru și să vorbim puțin despre fișierul YAML.
+
+00:01:57.660 --> 00:02:03.470
+Serverul documentație mai puțin este cu adevărat bun la explicarea tuturor acestor.
+
+00:02:03.560 --> 00:02:08.970
+Deci nu voi lua prea mult timp pentru că fiecare dintre ele este diferit, dar puteți scrie o mulțime
+
+00:02:09.230 --> 00:02:11.840
+de valori implicite pe care le au deja.
+
+00:02:11.900 --> 00:02:18.380
+De exemplu, în cazul în care necompletăm acest lucru, vedem că avem regiuni în care vrem ca serverul
+
+00:02:19.850 --> 00:02:26.270
+nostru să fie dacă locuiți în altă parte decât în ​​America de Nord, dacă doriți să schimbați
+
+00:02:26.270 --> 00:02:34.380
+acest lucru, astfel încât serverul să fie mai aproape de utilizatorii dvs. dacă continuați să derulați, vedeți că avem și variabile de mediu
+
+00:02:34.380 --> 00:02:37.140
+pe care le putem adăuga funcțiilor noastre.
+
+00:02:38.010 --> 00:02:45.220
+Poate că, poate, ne asigurăm că secretele rămân în afara funcțiilor noastre și că, evident, am vorbit despre funcții
+
+00:02:45.240 --> 00:02:52.770
+înainte de a avea funcțiile pe care le definim numite Hello, astfel încât să putem accesa acest nume cu numele
+
+00:02:52.770 --> 00:02:58.840
+de salut și acest lucru poate fi schimbat în orice și se referă la funcția suplimentară
+
+00:03:02.330 --> 00:03:04.250
+a manipulatorului din fișierul YAML.
+
+00:03:04.260 --> 00:03:09.960
+Următoarele sunt câteva exemple de evenimente pe care le puteți configura astfel încât să putem configura diferite
+
+00:03:09.960 --> 00:03:13.080
+evenimente pe care funcția helo va fi declanșată.
+
+00:03:13.080 --> 00:03:17.630
+De exemplu, putem face o oaie pe care o putem face ca trei.
+
+00:03:17.630 --> 00:03:24.470
+Deci, să presupunem că cineva încarcă o imagine pe un suport S3 ca o imagine de
+
+00:03:24.470 --> 00:03:32.840
+profil și trebuie să spunem că redimensionăm bine că declanșatorul va fi imaginea ESRI care va fi încărcată și apoi
+
+00:03:32.840 --> 00:03:36.940
+aceasta va declanșa funcția helo pentru a face ceva.
+
+00:03:36.970 --> 00:03:42.400
+Și de modul în care vom folosi un CGP în cazul nostru, dar am vrut să vă arăt că există lucruri diferite
+
+00:03:42.400 --> 00:03:44.190
+pe care le putem face, de exemplu.
+
+00:03:44.200 --> 00:03:47.570
+Un altul pe care îmi place foarte mult să-l folosesc este programul.
+
+00:03:47.770 --> 00:03:51.130
+Și aici pot spune cât de des vreau să funcționeze funcția.
+
+00:03:51.130 --> 00:03:57.570
+De exemplu, dacă vreau să funcționez în fiecare oră, poate să verificați prețul pieței de valori.
+
+00:03:57.640 --> 00:04:01.690
+Ei bine, pot să-i spun să meargă la fiecare oră și la fiecare oră.
+
+00:04:01.690 --> 00:04:03.390
+Funcția va funcționa.
+
+00:04:03.580 --> 00:04:09.740
+Și dacă utilizați un API ca Twilio care vă trimite mesaje text puteți avea la fiecare oră
+
+00:04:09.740 --> 00:04:15.990
+un mesaj text spune că prețul acțiunilor este așa și așa sau prețul acțiunilor a crescut cu 100%.
+
+00:04:16.000 --> 00:04:18.180
+Acum sunteți bogat ceva de-a lungul acestor linii.
+
+00:04:20.390 --> 00:04:23.420
+Și sunt multe lucruri pe care le putem trece aici.
+
+00:04:23.570 --> 00:04:29.420
+Dar, așa cum am spus acestea, toate elementele de configurare pe care le veți întâlni atunci
+
+00:04:29.420 --> 00:04:35.900
+când într-adevăr aveți o nevoie specifică pentru o funcție în timp ce vom face acum este construirea funcției noastre.
+
+00:04:36.010 --> 00:04:42.460
+Dar există un ultim element de configurare pe care trebuie să-l facem cu serverul mai puțin înainte de a
+
+00:04:42.460 --> 00:04:44.640
+avea acces la contul nostru AWOS.
+
+00:04:44.740 --> 00:04:53.020
+Veți vedea chiar acum că am creat acest cadru de servicii care locuiește pe laptopul meu, dar da nu știe cu
+
+00:04:53.020 --> 00:04:54.370
+adevărat că există.
+
+00:04:54.370 --> 00:04:59.860
+Trebuie să vă conectez contul la acest cadru de liste de servere, astfel încât să pot scrie funcția și
+
+00:05:00.010 --> 00:05:01.470
+apoi să o implementez.
+
+00:05:01.480 --> 00:05:04.030
+Deci, să facem asta în următorul videoclip.
+
+00:05:04.070 --> 00:05:04.920
+Ne vedem în acel.

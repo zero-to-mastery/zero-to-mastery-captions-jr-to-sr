@@ -1,0 +1,724 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:02.480
+Witamy spowrotem.
+
+00:00:02.480 --> 00:00:08.280
+Sprawdźmy nową sekcję naszej gwiazdy bezpieczeństwa.
+
+00:00:08.290 --> 00:00:16.720
+Porozmawiamy o skryptach cross-site i fałszowaniu żądań między witrynami i są one podobne.
+
+00:00:16.720 --> 00:00:20.790
+Mają pewne nakładanie się, więc omówimy je razem.
+
+00:00:20.800 --> 00:00:25.730
+Zaczniecie też zauważać, że wiele z nich w rzeczywistości pokrywa się również.
+
+00:00:25.810 --> 00:00:32.620
+Niektóre z najlepszych praktyk mają również wpływ na inne części gwiazdy.
+
+00:00:32.640 --> 00:00:36.310
+Więc czym jest cross-site scripting?
+
+00:00:36.450 --> 00:00:44.280
+Dobrze, że skrypty cross-site pojawiają się, gdy aplikacja zawiera niezaufane dane na nowej stronie
+
+00:00:44.430 --> 00:00:53.850
+internetowej bez poprawnej weryfikacji lub ucieczki lub aktualizacji strony internetowej z danymi dostarczanymi przez użytkownika za pomocą skryptów
+
+00:00:53.850 --> 00:00:59.680
+krzyżowych w javascript umożliwia atakującym wykonanie skryptów w przeglądarce ofiary.
+
+00:01:01.110 --> 00:01:04.130
+I dzięki temu możesz zrobić wiele złych rzeczy.
+
+00:01:04.140 --> 00:01:06.130
+Wykorzystajmy tutaj praktyczny przykład.
+
+00:01:06.900 --> 00:01:15.450
+Wyobraź sobie, że nasz plac zabaw dla bezpieczeństwa był postem na blogu, a ten wpis na blogu pozwalał na komentarze, a użytkownicy mogli
+
+00:01:15.450 --> 00:01:15.960
+komentować.
+
+00:01:15.960 --> 00:01:17.400
+Użytkownicy mogą komentować.
+
+00:01:17.670 --> 00:01:26.610
+Teraz może pojawić się zła osoba i wiesz, jak próbować wykonywać skrypty tak, jak my próbowaliśmy, a to nie zadziała, i widzieliśmy
+
+00:01:26.610 --> 00:01:30.680
+to już wcześniej, gdzie możemy spróbować wstawić tutaj skrypty.
+
+00:01:31.110 --> 00:01:38.320
+Cóż, to był post na blogu i zrobiłem nasz stary przykład coś takiego.
+
+00:01:38.360 --> 00:01:45.080
+Zapamiętaj nasze źródło obrazu, które będzie emitowane i ostrzeże jednego z analityków, abyśmy
+
+00:01:45.080 --> 00:01:52.270
+zamknęli zakładkę "kliknij" i uruchomiliśmy javascript w naszej przeglądarce, ale to naprawdę niewiele znaczy.
+
+00:01:52.280 --> 00:02:01.220
+Jeśli jednak był to wpis na blogu z komentarzami, zgłaszając ten komentarz, inni użytkownicy przeglądający tę przeglądarkę
+
+00:02:01.220 --> 00:02:09.140
+mogą teraz przejść do tego posta na blogu, a ponieważ wprowadziłem ten komentarz, będzie on
+
+00:02:09.410 --> 00:02:17.180
+również wykonywany w przeglądarce, a DOM spróbuje zaktualizuj, a zamiast tego uruchom tę funkcję
+
+00:02:17.180 --> 00:02:19.400
+alertu w przeglądarce użytkownika.
+
+00:02:19.560 --> 00:02:23.480
+I to właśnie oznacza Cross site scriptum.
+
+00:02:23.660 --> 00:02:34.670
+Mogę uruchamiać kod przekierowujący na dwie różne strony z mojej przeglądarki i to, co zrobi większość złych aktorów, to użycie linii
+
+00:02:34.880 --> 00:02:37.070
+podobnej do tej, w
+
+00:02:39.690 --> 00:02:48.150
+której punktowa lokalizacja kropki jest równa jakiejś utworzonej przeze mnie stronie internetowej, która jest naprawdę zła.
+
+00:02:48.490 --> 00:02:52.600
+I zamierzam wysłać coś, co nazywa się ciasteczka dot. Dokumentów.
+
+00:02:52.600 --> 00:02:54.330
+Dobra, rozpakujmy to.
+
+00:02:54.340 --> 00:03:00.470
+Zamierzam po prostu usunąć to na teraz i po prostu zrobić lokalizację okna i pokazuje mi dokładnie, gdzie jest
+
+00:03:00.470 --> 00:03:01.900
+mój u r l.
+
+00:03:02.020 --> 00:03:10.810
+Jeśli przejdę do strony internetowej, takiej jak Twitter i zrobię to samo, albo zrobię to w
+
+00:03:11.190 --> 00:03:19.710
+oknie Daut, dostaję rolę Twittera i mogę to zmienić i wysłać ludzi do różnych stron internetowych,
+
+00:03:20.010 --> 00:03:24.900
+mówiąc po prostu, że lokalizacja okna jest równa.
+
+00:03:24.930 --> 00:03:33.860
+Tak więc pierwsza część skryptu mówi, że idę do tej nowej witryny sieci Web, która jest moją własnością, która jest złą stroną internetową, a następnie
+
+00:03:34.500 --> 00:03:36.990
+chcę, żebyś wysłał mi te dane.
+
+00:03:37.020 --> 00:03:38.140
+To są pliki cookie.
+
+00:03:38.190 --> 00:03:41.090
+Co to jest plik cookie typu kropka dokumentu.
+
+00:03:41.580 --> 00:03:45.720
+I o tym właśnie będziemy rozmawiać podczas sesji JWT.
+
+00:03:45.990 --> 00:03:53.400
+Ale ciasteczko jest dla nas sposobem, kiedy logujemy się do czegoś, wykorzystajmy Twitter jako przykład.
+
+00:03:53.400 --> 00:03:59.270
+Kiedy się tutaj loguję, Twitter pamięta teraz, że jestem zalogowany.
+
+00:03:59.270 --> 00:04:04.340
+Jeśli odświeżę tę stronę, nie będę musiał się logować ponownie.
+
+00:04:04.640 --> 00:04:09.360
+Mam sesję z Twitterem i wieloma stronami internetowymi.
+
+00:04:09.590 --> 00:04:16.760
+W rzeczywistości większość z nich pozwoli ci zalogować się do tego, co nazywamy ciastkiem, losowym
+
+00:04:17.450 --> 00:04:23.910
+tekstem, który otrzymuję, a ten fragment tekstu zostanie dołączony do mojej przeglądarki.
+
+00:04:24.080 --> 00:04:29.260
+Tak więc za każdym razem, gdy odwiedzam Twittera. com teraz i mam ten fragment tekstu, który serwer z
+
+00:04:29.260 --> 00:04:31.450
+Twittera powie: och tak, to Ondrea Yeah.
+
+00:04:31.520 --> 00:04:40.100
+Możesz go wpuścić i tak jak powiedziałem, że będziemy mówić o tym szczegółowo w W. T. i sekcja sesji.
+
+00:04:40.170 --> 00:04:42.730
+Więc nie zawieszaj się zbytnio.
+
+00:04:43.490 --> 00:04:49.820
+Ale pomysł polega na tym, że jeśli kawałek tekstu jest jedyną rzeczą, która pozwala mi
+
+00:04:50.090 --> 00:04:58.450
+wejść na Twittera, to nadal mogę skopiować i wkleić ten plik cookie, otworzyć inny rodzaj przeglądarki i zalogować się na
+
+00:04:58.450 --> 00:04:58.910
+Twitterze,
+
+00:05:01.650 --> 00:05:07.110
+abym mógł się zalogować na Twitterze bez znajomości mojej nazwy użytkownika lub hasła.
+
+00:05:07.110 --> 00:05:08.350
+Bardzo przerażające rzeczy.
+
+00:05:08.700 --> 00:05:15.770
+Więc jeśli wrócimy do tego przykładu, wszystko, co powiem, to: chcę, żebyś zmienił położenie mojej komórki.
+
+00:05:15.810 --> 00:05:21.350
+Więc idź do tej strony internetowej i mam zamiar również wysłać na moją stronę internetową.
+
+00:05:21.600 --> 00:05:29.160
+Ta informacja to plik cookie, więc mogę mieć serwer, który wylogowuje pliki cookie osób, a
+
+00:05:30.310 --> 00:05:38.020
+teraz mam twoje informacje, gdybym wiedział, że komentowałeś na Twitterze, na przykład wtedy, gdybym mógł ukraść
+
+00:05:38.020 --> 00:05:45.010
+informacje o ciasteczkach i podpisać skrypty cross-site że jest używany do przechwytywania sesji.
+
+00:05:45.050 --> 00:05:48.940
+Dlatego nazywamy to już wiesz, jak temu zapobiec.
+
+00:05:48.960 --> 00:05:50.600
+Unieszkodliwiamy dane wejściowe.
+
+00:05:50.670 --> 00:05:57.350
+Upewniamy się, że nie możesz po prostu wpisać niczego, co chcesz na naszych stronach internetowych i umieścić.
+
+00:05:57.400 --> 00:05:57.750
+Dobrze.
+
+00:05:57.760 --> 00:06:00.580
+To jest całkiem ładne i łatwe.
+
+00:06:00.590 --> 00:06:02.070
+Porozmawiajmy o następnym punkcie.
+
+00:06:03.650 --> 00:06:11.440
+Krótko mówiąc, C S R F lub C sirf jest fałszywym wnioskiem.
+
+00:06:11.450 --> 00:06:14.750
+Wiem, że imiona są całkiem niezrozumiałe. Nie martw się.
+
+00:06:14.750 --> 00:06:19.130
+Głównym wyjściem z tego filmu będzie pod koniec Jak temu zapobiec.
+
+00:06:19.220 --> 00:06:21.630
+Więc możesz zawsze do niego wrócić, jeśli jesteś zdezorientowany.
+
+00:06:21.650 --> 00:06:25.420
+Są trochę bardziej zaawansowani i nie musisz ich znać na pamięć.
+
+00:06:25.430 --> 00:06:29.870
+Tak jak powiedziałem, po prostu chcesz wiedzieć, jak im zapobiegać i nie martw się, mam slajd tylko do tego.
+
+00:06:31.510 --> 00:06:34.570
+Mamy więc problem.
+
+00:06:34.780 --> 00:06:36.020
+Mamy naszego klienta.
+
+00:06:36.190 --> 00:06:39.870
+I na szczęście dla nas wiemy, że podczas komunikacji używamy arkusza tak.
+
+00:06:39.970 --> 00:06:45.370
+Mamy więc ten mały tunel, który chroni nasze dane przed osobami trzecimi i osobami, które próbują
+
+00:06:45.370 --> 00:06:46.100
+nas szpiegować.
+
+00:06:46.150 --> 00:06:53.290
+Klient wysyła żądanie do serwera, który może uzyskać profil użytkownika z bazy danych i zwraca go klientowi,
+
+00:06:53.290 --> 00:06:55.370
+abyśmy mogli się zalogować.
+
+00:06:55.720 --> 00:06:58.480
+A czasami rozmawiasz również z zewnętrznym API.
+
+00:06:58.510 --> 00:07:07.500
+Może otrzymamy informacje o pogodzie lub otrzymamy nasze roboty z zewnętrznego API, a my to robimy przez
+
+00:07:07.590 --> 00:07:08.540
+studio.
+
+00:07:09.000 --> 00:07:10.930
+Więc wszyscy jesteśmy bezpieczni, prawda.
+
+00:07:12.260 --> 00:07:20.360
+Jak widzieliśmy, gdy fałszywe żądania są przekierowywane, jeśli serwer i strona trzecia ufa klientowi
+
+00:07:20.720 --> 00:07:30.660
+dobrze, możemy użyć tego pliku cookie, aby zalogować się do serwera i bazy danych i uzyskać sesję tego użytkownika.
+
+00:07:30.680 --> 00:07:38.060
+To nie jest jedyna rzecz, którą musimy zrobić w Siserze lub fałszywe żądania w różnych serwisach.
+
+00:07:38.060 --> 00:07:44.160
+Jako zła osoba tworzymy złego Arel'a, który zawiera złośliwy kod.
+
+00:07:45.140 --> 00:07:50.300
+Najprawdopodobniej zobaczysz to w czymś podobnym do oszustwa, w którym klikasz
+
+00:07:50.300 --> 00:07:51.270
+link.
+
+00:07:51.440 --> 00:07:54.880
+Na przykład będą mieli coś takiego.
+
+00:07:54.920 --> 00:07:59.720
+Przekażmy tę listę do nowego fragmentu tekstu.
+
+00:07:59.930 --> 00:08:07.550
+To może być w e-mailu tylko w tym tekście lub na stronie internetowej, która wygląda jak Google dot com, ale
+
+00:08:07.550 --> 00:08:14.850
+w rzeczywistości ma dodatkowe L i ma API, gdzie możesz kliknąć Zaloguj się lub czytaj więcej i zabierze Cię
+
+00:08:14.870 --> 00:08:16.880
+do tego, że stronie internetowej.
+
+00:08:17.300 --> 00:08:21.330
+Podsłuchuj, co robią, również używają parametrów zapytania.
+
+00:08:21.410 --> 00:08:28.790
+I to jest tylko przykład mówiąc, że chcę konto atakującego i wysłać kwotę sto dolarów
+
+00:08:28.790 --> 00:08:30.580
+na to konto.
+
+00:08:30.740 --> 00:08:35.960
+I to jest przykład ataku surfowania za pomocą DP get.
+
+00:08:35.990 --> 00:08:41.220
+Robimy dostęp do parametru zapytania.
+
+00:08:41.380 --> 00:08:49.600
+Jeśli ofiara odwiedza kontrolę strony przez atakującego, a atak lub ofiara jest już zalogowana, powiedzmy do ich
+
+00:08:49.600 --> 00:08:56.710
+banku, ponieważ już ustawiły te pliki cookie, a serwer uważa, że są już zalogowane i
+
+00:08:56.710 --> 00:09:02.060
+jest to uzasadnione. ponieważ właśnie kliknęliśmy ten link przez osobę.
+
+00:09:02.080 --> 00:09:05.290
+Więc są w tej samej przeglądarce, w której są zalogowani.
+
+00:09:05.290 --> 00:09:17.670
+Cóż, właśnie zmusiłem ofiarę do kliknięcia linku, który wysyła mi pieniądze, a to nie jest tylko Garey, ponieważ mogą to
+
+00:09:17.680 --> 00:09:18.570
+zrobić.
+
+00:09:18.590 --> 00:09:23.270
+Możesz to również zrobić za pomocą postów za pomocą I-frame, co jest dość skomplikowane.
+
+00:09:23.280 --> 00:09:25.910
+I poza zakresem tego kursu.
+
+00:09:26.300 --> 00:09:28.100
+To dość okropne.
+
+00:09:28.100 --> 00:09:31.280
+Jak zamierzamy temu zapobiec?
+
+00:09:33.010 --> 00:09:35.150
+Cóż, porozmawiajmy o tym, jak możemy temu zapobiec.
+
+00:09:35.170 --> 00:09:37.910
+Ale zanim to zrobię, pozwól mi coś zrobić.
+
+00:09:38.150 --> 00:09:41.990
+Spróbujmy zaatakować Twittera.
+
+00:09:42.080 --> 00:09:48.590
+Napiszmy ten fragment kodu do strony z prośbą o funkcję, która faktycznie pozwala mi pokazać,
+
+00:09:48.590 --> 00:09:49.510
+co robi.
+
+00:09:55.660 --> 00:09:58.900
+Jest to usługa żądania i odpowiedzi ACB.
+
+00:09:58.900 --> 00:10:04.320
+Zasadniczo po prostu wyprowadzamy na tę stronę internetową bez względu na otrzymaną odpowiedź.
+
+00:10:04.360 --> 00:10:05.100
+Lub gdzie jesteśmy.
+
+00:10:05.200 --> 00:10:08.940
+Niezależnie od odpowiedzi, którą otrzymamy, możemy ją śledzić.
+
+00:10:08.950 --> 00:10:18.250
+Więc spróbujmy wykonać prośbę o wpis, a następnie wyślij wiadomość z tej witryny z Twittera.
+
+00:10:18.320 --> 00:10:28.570
+Mike cookee o mnie jest zalogowany na Twitterze, jeśli naciskam Enter. Mam błędy, odmawiam mi połączenia
+
+00:10:28.570 --> 00:10:34.700
+z tym, ponieważ narusza to następującą politykę bezpieczeństwa treści.
+
+00:10:36.470 --> 00:10:38.120
+Odmawia połączenia.
+
+00:10:38.150 --> 00:10:42.640
+Widzimy, że mamy tę politykę bezpieczeństwa treści, która uniemożliwia mi to.
+
+00:10:42.890 --> 00:10:46.550
+A na Twitterze używa się zabezpieczenia, które brzmi jak nie, nie, nie.
+
+00:10:46.670 --> 00:10:53.340
+Nie będziemy po prostu wysyłać dokumentów kucharskich, które są tak ważne dla tak prostej strony WWW.
+
+00:10:53.480 --> 00:10:57.470
+Więc mają dobry środek bezpieczeństwa i wygląda na to, że używają czegoś, co nazywa się
+
+00:10:57.470 --> 00:10:58.300
+polityką bezpieczeństwa treści.
+
+00:10:58.580 --> 00:11:06.050
+I wszystko, co musimy zrobić, aby to ustawić, to po prostu mieć to w nagłówkach.
+
+00:11:06.130 --> 00:11:07.200
+Co to znaczy.
+
+00:11:07.320 --> 00:11:11.950
+Cóż, pokażmy ci, że mam tutaj swoją ekspresową aplikację.
+
+00:11:12.190 --> 00:11:16.300
+I po prostu przejdźmy do metody get, w której właśnie zwracamy Hello world.
+
+00:11:16.360 --> 00:11:24.490
+Jeśli pamiętasz, że idę do localhosta, mam tutaj witający świat teraz i tutaj.
+
+00:11:26.940 --> 00:11:37.400
+Zanim wyślemy to do nas, ustawmy kropkę, a to może być inne, jeśli korzystasz teraz z ekspresowego lub
+
+00:11:37.400 --> 00:11:38.680
+innego serwera.
+
+00:11:38.690 --> 00:11:44.730
+Ale pomysł jest taki sam, że będzie 99 procent kodu jest prawie dokładnie taki sam.
+
+00:11:44.920 --> 00:11:52.500
+Wszystko, co masz zamiar zrobić, to dać obiekt i ten obiekt będzie miał wszystkie nagłówki, które chcemy.
+
+00:11:52.570 --> 00:11:58.360
+Powiedzmy, że chcemy mieć politykę bezpieczeństwa zawartości i zamierzamy
+
+00:12:02.330 --> 00:12:11.900
+powiedzieć tej witrynie, że jedyne miejsca, w których chcemy uruchomić javascript, i użyjmy podwójnych
+
+00:12:12.130 --> 00:12:16.930
+cudzysłowów, abyśmy mogli użyć również cudzysłowów.
+
+00:12:16.950 --> 00:12:22.620
+SCO w ten sposób i to będzie samo.
+
+00:12:22.650 --> 00:12:26.650
+Tak więc nasza nazwa domeny, która jest na razie hostem lokalnym.
+
+00:12:27.060 --> 00:12:34.690
+Powiedzmy też, że naprawdę ufamy Google API, więc poprostu załatwmy gównianą dupę.
+
+00:12:34.890 --> 00:12:42.130
+A do Google API, abyśmy mogli ufać Google.
+
+00:12:42.570 --> 00:12:47.490
+Mogą uruchamiać skrypty i pozwól mi to powiedzieć.
+
+00:12:47.900 --> 00:12:49.650
+Dobra składnia dla Hello world.
+
+00:12:49.660 --> 00:12:55.190
+Musimy tylko dodać wspornik tutaj teraz z zapisem.
+
+00:12:55.230 --> 00:12:55.670
+W porządku.
+
+00:12:55.680 --> 00:12:56.850
+Teraz sprawdź to.
+
+00:12:56.940 --> 00:13:07.190
+Jeśli przejdę do Hello World i odświeżę lub przejdę do sieci dotknij i odśwież, jeśli przejdziemy do localhosta, teraz widzimy, że mamy treść
+
+00:13:07.190 --> 00:13:14.800
+skryptu zasad bezpieczeństwa źródła samo GTP API google. com.
+
+00:13:14.840 --> 00:13:17.620
+Dlatego właśnie ustalamy politykę bezpieczeństwa treści.
+
+00:13:17.690 --> 00:13:18.420
+to jest to!
+
+00:13:18.500 --> 00:13:19.780
+Tak to proste.
+
+00:13:19.880 --> 00:13:24.090
+A te nagłówki wyglądają naprawdę naprawdę przytłaczająco.
+
+00:13:24.530 --> 00:13:28.550
+I nie martw się, są one o wiele prostsze niż myślisz.
+
+00:13:28.790 --> 00:13:35.000
+Jak wiesz, z owymi prośbami, mamy różne rzeczy, które możemy wysłać, takie
+
+00:13:35.240 --> 00:13:41.670
+jak parametry ciała, a także nagłówki odpowiedzi i pokażę ci, jak to uprościć.
+
+00:13:41.750 --> 00:13:44.870
+Nie będziesz robił tego ręcznie przez większość czasu.
+
+00:13:44.960 --> 00:13:50.780
+Na szczęście dla ciebie są pakiety NPM, o których będziemy mówić później w filmach, gdzie odbywa
+
+00:13:50.780 --> 00:13:52.120
+się to automatycznie.
+
+00:13:52.430 --> 00:13:59.590
+Ale chciałem wam pokazać, żebyście wiedzieli, jak ustawić nagłówki, a na koniec chcemy się upewnić,
+
+00:13:59.590 --> 00:14:07.840
+że ten plik cookie z dokumentem jest dostępny tak łatwo, a przy okazji nie polecam używania plików cookie.
+
+00:14:08.070 --> 00:14:15.040
+I znowu jest to rodzaj debaty na temat tego, czego używać, aby ludzie mnie nienawidzili za wypowiedzenie tego, ale nie jestem
+
+00:14:15.040 --> 00:14:20.340
+wielkim fanem ciasteczek tylko dlatego, że dodaje dodatkowe warstwy, które musisz zrobić, aby być bezpiecznym.
+
+00:14:20.380 --> 00:14:27.400
+Później pokażę Wam podczas kursu w JWT i wideo z sesji, w jaki sposób możemy zrobić to
+
+00:14:27.400 --> 00:14:28.260
+bezpiecznie.
+
+00:14:28.360 --> 00:14:31.570
+Ale załóżmy, że używasz plików cookie w swojej witrynie sieci Web.
+
+00:14:31.710 --> 00:14:38.260
+Znowu jest to bardzo prosty sposób, aby temu zapobiec i zapobiec subserverom.
+
+00:14:38.260 --> 00:14:40.570
+Tak więc fałszowanie żądań między witrynami.
+
+00:14:40.660 --> 00:14:46.100
+Wszystko, co musimy zrobić, to powiedzieć, że naprawdę chcemy z Expressem.
+
+00:14:46.110 --> 00:14:47.850
+Możemy po prostu powiedzieć odpowiedź.
+
+00:14:47.860 --> 00:14:53.740
+Dot cookie podaj identyfikator sesji.
+
+00:14:55.360 --> 00:15:01.780
+A tak na marginesie, to właśnie taki plik tworzy ciasteczko, mówiąc, że właśnie sprawdziłem twoją
+
+00:15:01.810 --> 00:15:03.810
+nazwę użytkownika i hasło.
+
+00:15:03.880 --> 00:15:08.960
+Oto twoja sesja, więc od teraz nie musimy sprawdzać Twojego hasła i nazwy użytkownika.
+
+00:15:09.190 --> 00:15:15.110
+Tak długo jak wyślesz nam sesję, każde żądanie sprawdzę i upewnię się, że działa ono dla ciebie.
+
+00:15:15.740 --> 00:15:23.460
+W tym miejscu powiem tylko, że są to dwa nagłówki, które
+
+00:15:24.240 --> 00:15:29.630
+chcemy ustawić wyłącznie na pliki cookie GTP.
+
+00:15:29.810 --> 00:15:38.990
+I ustawimy to na prawdziwe, a bezpieczne również na prawdziwe.
+
+00:15:39.150 --> 00:15:45.920
+Jeśli zachowam to prawo i właściwie myślę, że możemy ustawić je tylko na raz.
+
+00:15:45.930 --> 00:15:53.620
+Musimy to zamykać, a tym razem zrobimy jeszcze raz
+
+00:15:54.300 --> 00:16:01.670
+z bezpiecznym, prawdziwym ocaleniem i wróćmy tutaj.
+
+00:16:01.730 --> 00:16:07.120
+Otwórz kartę do odświeżania.
+
+00:16:08.370 --> 00:16:09.560
+Ustaw plik cookie.
+
+00:16:09.560 --> 00:16:10.190
+Spójrz na to.
+
+00:16:10.340 --> 00:16:21.180
+Mamy tylko bezpieczną kartę i fajną częścią jest, jeśli przejdziemy do aplikacji, a ciasteczka sprawdzą,
+
+00:16:21.180 --> 00:16:25.710
+czy mamy pliki cookie do sesji.
+
+00:16:25.760 --> 00:16:32.110
+Myślę, że pochodzi to z poprzedniego, więc możemy go usunąć, ale jeśli odświeżymy, mamy sesję.
+
+00:16:32.120 --> 00:16:39.460
+Jeśli zamknę to i odświeżę ponownie, sesja powraca bardzo dobrze.
+
+00:16:39.560 --> 00:16:41.560
+Nie przejmuj się tym.
+
+00:16:41.570 --> 00:16:43.960
+O ciasteczkach porozmawiamy o wiele więcej.
+
+00:16:43.970 --> 00:16:45.480
+Wiem, że może to być mylące.
+
+00:16:45.500 --> 00:16:53.740
+Ale to wszystko jest częścią tego, że możemy się zabezpieczyć i wiesz, co myślę o przejściu na slajd lub i podsumowując
+
+00:16:53.750 --> 00:16:59.700
+to, czego potrzebujemy, aby zapobiec skryptom cross-site i zobaczymy służyć może być najlepszym pomysłem.
+
+00:17:01.470 --> 00:17:03.050
+Czego się nauczyliśmy.
+
+00:17:03.300 --> 00:17:05.780
+Cóż, już to wiemy.
+
+00:17:05.820 --> 00:17:11.180
+Chcemy przeprowadzić walidację danych wejściowych po stronie klienta w celu uzyskania szybkiej informacji zwrotnej od użytkownika.
+
+00:17:11.190 --> 00:17:17.850
+Nigdy nie pozwól, aby coś takiego działało na twojej stronie internetowej i nigdy nie ufaj, że zawsze sprawdza i
+
+00:17:17.850 --> 00:17:21.430
+koduje dane użytkownika przed wyświetleniem czegoś, o czym mówiliśmy dużo.
+
+00:17:22.050 --> 00:17:28.010
+A przy okazji, współczesne struktury, takie jak kanciaste, odtwarzające wszystko, wyświetlają coś, co nazywa się znakami scaping,
+
+00:17:28.020 --> 00:17:30.580
+aby uniknąć tego typu zachowania domyślnie.
+
+00:17:31.380 --> 00:17:32.860
+Co jest naprawdę miłe.
+
+00:17:34.020 --> 00:17:38.310
+I wejście do odkażania jest czymś, co doskonale znamy.
+
+00:17:38.310 --> 00:17:43.200
+Chcę również podkreślić, aby nie używać funkcji eval w javascript.
+
+00:17:43.200 --> 00:17:47.920
+Tak, JavaScript ma funkcję zła i jest bardzo niebezpieczny.
+
+00:17:47.940 --> 00:17:48.830
+Nie używaj go.
+
+00:17:48.930 --> 00:17:52.470
+Bardzo rzadko zdarza się, abyś kiedykolwiek to zrobił.
+
+00:17:52.500 --> 00:17:54.740
+Jest też coś, co nazywa się kropka dokumentu.
+
+00:17:54.840 --> 00:17:55.520
+Dobrze.
+
+00:17:55.740 --> 00:17:58.920
+To coś w rodzaju dokumentu międzykulturowego M ..
+
+00:17:59.190 --> 00:18:10.540
+Ale gorzej, na przykład, gdy tu idę i robię dokumentację tego, co jest w porządku z dokumentem Cantab, i robimy tag skryptu,
+
+00:18:13.150 --> 00:18:19.710
+który ma ostrzeżenie o jednym i zamkniętym tagu skryptu US, nie pozwala mi
+
+00:18:24.910 --> 00:18:29.020
+tego zrobić, ponieważ właśnie ustawiłem nagłówki .
+
+00:18:29.170 --> 00:18:31.210
+Ale jeśli pójdę na moje
+
+00:18:34.730 --> 00:18:37.190
+inne boisko bezpieczeństwa, w którym nic nie zrobiłem.
+
+00:18:37.190 --> 00:18:42.230
+Odświeżmy to i usuńmy to.
+
+00:18:42.370 --> 00:18:43.200
+Spójrz na to.
+
+00:18:43.210 --> 00:18:50.650
+Byłem w stanie wykonać tylko przy użyciu Dokumentu R8 i mogłem wprowadzić skrypt w linii.
+
+00:18:50.730 --> 00:18:57.330
+Dowiedzieliśmy się, że powinniśmy ustawić nagłówki zasad bezpieczeństwa treści i nie martw się.
+
+00:18:57.350 --> 00:19:03.840
+To jest coś, co pokażę ci narzędzie, które sprawia, że jest bardzo łatwe i wideo z zestawu nagłówków.
+
+00:19:04.100 --> 00:19:10.440
+I na koniec chcemy ustawić bezpieczne i HGP tylko w przypadku plików cookie za pomocą niektórych metod, które widziałem.
+
+00:19:10.460 --> 00:19:13.550
+Pokazałem ci przy okazji.
+
+00:19:13.870 --> 00:19:22.150
+Podobnie jak w przypadku problemów, które zdarzają się przez cały czas, istnieją już istniejące rozwiązania i narzędzia, a
+
+00:19:22.150 --> 00:19:25.520
+jednym z nich jest unikanie surfowania.
+
+00:19:25.630 --> 00:19:32.950
+Ten pakiet, który musimy zainstalować, wymaga tego, a następnie możemy go użyć w dowolnej aplikacji, którą chcemy.
+
+00:19:32.950 --> 00:19:36.990
+Na przykład w Xpress pokazuje, jak z niego korzystać.
+
+00:19:37.060 --> 00:19:42.760
+Jeśli używasz ciasteczek, ale jak powiedziałem, pokażę ci lepszy sposób, więc nie stresuj się
+
+00:19:42.760 --> 00:19:43.190
+tym.
+
+00:19:43.210 --> 00:19:48.030
+Wiem, że to wideo jest trochę trudne, ale po prostu trzymaj się mnie.
+
+00:19:48.030 --> 00:19:48.880
+Zaufaj mi.
+
+00:19:48.880 --> 00:19:53.840
+Przez sesje i wideo tokin ten film będzie miał dużo więcej sensu.
+
+00:19:55.000 --> 00:20:02.470
+Pamiętaj, że atrybut HGP only zapobiega uzyskiwaniu dostępu do plików cookie przez skrypty po stronie klienta,
+
+00:20:02.470 --> 00:20:08.170
+a bezpieczny atrybut i plik cookie Sher są przesyłane przez połączenie yes.
+
+00:20:08.200 --> 00:20:16.970
+Więc obaj pracują razem ponownie AC mówi tylko, że metody HGP mogą uzyskać dostęp do cookie.
+
+00:20:16.990 --> 00:20:18.400
+Nie można javascript.
+
+00:20:18.730 --> 00:20:25.370
+To ogranicza nasz atak skryptowy, który możemy wykorzystać.
+
+00:20:25.450 --> 00:20:28.760
+W porządku, nauczyliśmy się tutaj wielu nowych słówek.
+
+00:20:28.780 --> 00:20:33.640
+Może to być film, do którego powinieneś wracać, ale po tym filmie przedstawię
+
+00:20:33.640 --> 00:20:39.460
+kilka ćwiczeń, które pozwolą ci lepiej poznać i zagrać kilka zabawnych ćwiczeń hakerskich, które zobaczę w
+
+00:20:39.460 --> 00:20:40.560
+następnym filmie.
+
+00:20:40.570 --> 00:20:40.810
+Prawdopodobnie.

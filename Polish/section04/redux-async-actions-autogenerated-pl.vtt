@@ -1,0 +1,901 @@
+﻿WEBVTT
+
+00:00:00.900 --> 00:00:02.410
+Witamy spowrotem.
+
+00:00:02.420 --> 00:00:10.380
+Jest jeden ostatni element układanki, którego potrzebujemy z reduxem i czymś, czego unikaliśmy aż
+
+00:00:10.710 --> 00:00:12.600
+do tego momentu.
+
+00:00:12.750 --> 00:00:14.620
+Widzisz, jeśli zdecydujemy się zrezygnować.
+
+00:00:14.730 --> 00:00:15.620
+Tak.
+
+00:00:16.130 --> 00:00:21.840
+Pamiętasz, że robimy ten komponent, który zamontował żądanie pobierania.
+
+00:00:22.000 --> 00:00:23.890
+Mamy asynchroniczne żądanie.
+
+00:00:23.890 --> 00:00:34.690
+Przesyłamy prośbę o interfejs API, chwytając ich użytkowników, a następnie ustawiając ten stan w robotach.
+
+00:00:34.730 --> 00:00:39.890
+Ale w jaki sposób to działa w redux.
+
+00:00:39.970 --> 00:00:49.070
+Ponieważ pamiętamy, aż do tego momentu, wszystko, co zrobiliśmy, było synchroniczne, ponieważ jeśli zrobimy to samo,
+
+00:00:49.070 --> 00:00:57.850
+co zrobiliśmy z polem wyszukiwania, to nie będzie działać z pobieraniem robotów, ponieważ wysyłamy akcję,
+
+00:00:57.850 --> 00:01:05.860
+powiedzmy, do pobierania robotów, ale ponieważ to jest asynchroniczne, które przejdzie w innym
+
+00:01:05.860 --> 00:01:07.810
+świecie do API.
+
+00:01:08.700 --> 00:01:17.720
+I spróbuj zdobyć roboty w międzyczasie reduktor po prostu sprawdzi roboty i powie, że nie ma
+
+00:01:17.730 --> 00:01:18.310
+robotów.
+
+00:01:18.310 --> 00:01:22.770
+Tak, ponieważ roślina API, która jeszcze nie powróciła.
+
+00:01:22.890 --> 00:01:24.050
+Tak jak obietnica.
+
+00:01:24.090 --> 00:01:29.070
+Tak więc badania trwają i nie wprowadzają żadnych zmian, ponieważ stan się nie zmienił.
+
+00:01:29.100 --> 00:01:36.690
+Jak więc możemy tworzyć działania, które są asynchroniczne, które wciąż przechodzą przez reduktor w sklepie, a następnie
+
+00:01:36.690 --> 00:01:37.860
+wprowadzają zmiany.
+
+00:01:39.640 --> 00:01:44.180
+I tu ponownie używamy oprogramowania pośredniego.
+
+00:01:45.500 --> 00:01:54.400
+Możemy użyć czegoś, co nazywa się redux phunk, aby obsłużyć asynchroniczne akcje, takie jak wywołania AJAX.
+
+00:01:54.560 --> 00:02:04.170
+Jest to oprogramowanie pośredniczące, które udostępnia funkcje pobierania stanu i przesyłania, które są przekazywane, dzięki czemu można obsługiwać coś,
+
+00:02:04.170 --> 00:02:08.840
+co nazywa się efektami ubocznymi, takimi jak wywołania AJAX.
+
+00:02:09.000 --> 00:02:10.440
+Dzięki temu pakietowi.
+
+00:02:10.440 --> 00:02:12.020
+Pokażemy ci, jak to działa.
+
+00:02:13.520 --> 00:02:18.050
+Pierwszą rzeczą, którą chcemy zrobić, to zainstalować pakiet redux thung.
+
+00:02:18.130 --> 00:02:22.690
+Powiem więc, że NPM install redux thunk.
+
+00:02:22.940 --> 00:02:29.380
+A tak na marginesie, tak jak w przypadku innych rzeczy istnieje mnóstwo innych sposobów radzenia sobie z
+
+00:02:29.400 --> 00:02:34.190
+asynchroniczną akcją, a redux nie jest zbudowany z bramy, więc potrzebujesz pakietów.
+
+00:02:34.190 --> 00:02:42.450
+Są inne opcje, ale Redus redux thunk jest najlepszym i najprostszym na początek.
+
+00:02:45.140 --> 00:02:45.820
+W porządku.
+
+00:02:45.980 --> 00:02:52.320
+Mamy teraz redux thunk i nie możemy po prostu zacząć go używać, przechodząc do indeksowania.
+
+00:02:52.390 --> 00:03:07.230
+Tak i tutaj możemy powiedzieć, że chcemy zaimportować coś, co nazywa się thunk middleware od redux.
+
+00:03:07.760 --> 00:03:13.920
+Ponownie możesz przeczytać wszystko na ten temat i istnieje dokumentacja na temat pobierania oprogramowania pośredniczącego HTTP thunk.
+
+00:03:13.970 --> 00:03:18.780
+Wiemy już, jak zastosować oprogramowanie pośrednie do naszej aplikacji redox.
+
+00:03:18.800 --> 00:03:23.330
+Mamy naszą funkcję oprogramowania pośredniego.
+
+00:03:23.510 --> 00:03:31.480
+Możemy po prostu dodać zastosowane lub nie zastosowane oprogramowanie pośredniczące phunk.
+
+00:03:31.690 --> 00:03:35.200
+I pozwól mi po prostu umieścić to w nowej linii, abyś mógł lepiej to zobaczyć.
+
+00:03:36.000 --> 00:03:40.500
+Dziękujemy oprogramowaniu pośredniczącemu naszemu oprogramowaniu pośredniczącemu.
+
+00:03:40.500 --> 00:03:41.360
+A to jest kolejność.
+
+00:03:41.370 --> 00:03:48.630
+Więc przejdzie przez thunked middleware, a następnie middleware oprogramowania rejestrującego.
+
+00:03:48.840 --> 00:03:54.980
+Więc uruchommy NPM start.
+
+00:03:55.250 --> 00:04:00.820
+I powiem też, że wszystko wygląda tak, jakby wszystko działało sprawnie.
+
+00:04:02.330 --> 00:04:05.280
+Ta kwestia jest już wdrożona.
+
+00:04:05.840 --> 00:04:11.850
+Ale jak właściwie używamy Cóż, zacznijmy od pierwszych kroków.
+
+00:04:11.970 --> 00:04:21.310
+Pierwszą rzeczą, którą chcemy zrobić, jest stworzenie stałej, która jest stała dla żądania naszych robotów.
+
+00:04:21.450 --> 00:04:28.160
+Pamiętaj, że w pliku dodgiest app mamy tablicę tego robota, która zapełnia się po
+
+00:04:28.160 --> 00:04:34.980
+tym, jak komponent się zamontował po wykonaniu wywołania pobierania, a my wprowadzamy stan z nowymi użytkownikami.
+
+00:04:35.040 --> 00:04:39.460
+Stała więc możemy zrobić coś podobnego do powyższego.
+
+00:04:39.470 --> 00:04:49.990
+Możemy teraz eksportować roboty żądań Konst.
+
+00:04:50.840 --> 00:04:53.780
+Ponieważ to będzie obietnica.
+
+00:04:53.900 --> 00:04:58.030
+Będzie miał trzy stany.
+
+00:04:58.190 --> 00:05:06.490
+Tak więc pierwszym będzie Pandang, który po raz pierwszy wysłaliśmy tę prośbę,
+
+00:05:06.490 --> 00:05:09.470
+czekając na obietnicę powrotu.
+
+00:05:09.790 --> 00:05:22.130
+Więc znowu użyjemy tej samej siły tutaj, a my również będziemy mieć dwa stany po oczekujących zwrotach, które
+
+00:05:22.340 --> 00:05:25.150
+są sukcesem, a
+
+00:05:30.250 --> 00:05:31.240
+także
+
+00:05:39.690 --> 00:05:45.860
+ta prośba ma trzy działania, które zakończyły się sukcesem.
+
+00:05:45.930 --> 00:05:47.250
+Chcemy śledzić.
+
+00:05:47.730 --> 00:05:53.280
+I znowu jest to dość standardowe ze wszystkimi asynchronicznymi działaniami, takimi jak wywołania AJAX.
+
+00:05:53.520 --> 00:06:01.670
+Powiedzmy to, a kolejnym krokiem, jaki znamy, jest stworzenie działań wykorzystujących te rzeczy.
+
+00:06:01.710 --> 00:06:10.080
+Wróćmy więc do akcji i tym razem zamiast po prostu zaimportować pole wyszukiwania zmian, zaimportujmy jeszcze
+
+00:06:10.080 --> 00:06:11.260
+kilka rzeczy.
+
+00:06:17.720 --> 00:06:22.770
+Zamierzam zaimportować, po prostu skopiuj i wklej tutaj, bo to dużo pisania.
+
+00:06:23.030 --> 00:06:27.920
+Jedźmy do Constance.
+
+00:06:28.180 --> 00:06:29.590
+Zamierzamy
+
+00:06:32.400 --> 00:06:38.150
+zaimportować oczekujące sześć sukcesów SAS, a potem
+
+00:06:42.720 --> 00:06:45.140
+wreszcie oszczędzić.
+
+00:06:45.380 --> 00:06:48.320
+A kiedy otrzymasz ostrzeżenie, że nie jesteśmy, nie używamy ich.
+
+00:06:48.590 --> 00:06:57.790
+Stwórzmy teraz te akcje, tak jak zrobiliśmy powyżej, zamierzamy wyeksportować Konst,
+
+00:06:57.790 --> 00:07:06.340
+a my nazwiemy to robotami i ta czynność zajmie.
+
+00:07:06.380 --> 00:07:08.830
+Hmm, co to zajmie.
+
+00:07:08.830 --> 00:07:17.810
+To trochę trudne, ale zajmie to wysłanie i wysłanie.
+
+00:07:17.840 --> 00:07:19.530
+Jeśli pamiętasz i idziemy do APT.
+
+00:07:19.580 --> 00:07:20.650
+Tak.
+
+00:07:20.720 --> 00:07:30.580
+Jest to coś, co używamy w wysyłce MAP do wniosku, który dostajemy od redux, aby wysłać akcje, aby
+
+00:07:30.670 --> 00:07:32.150
+zmniejszyć nasze.
+
+00:07:32.380 --> 00:07:39.100
+A kiedy tu wrócimy, zobaczysz, że faktycznie przekażemy to naszemu działaniu.
+
+00:07:39.100 --> 00:07:40.780
+Więc mamy do niego dostęp.
+
+00:07:40.960 --> 00:07:50.030
+Ale na razie, po prostu wiedz, że mamy zamiar wysłać i myślimy, że tutaj zrobimy kilka rzeczy,
+
+00:07:50.030 --> 00:07:53.540
+które są trochę inne niż powyższe.
+
+00:07:53.540 --> 00:08:03.820
+Pierwszą rzeczą, o którą prosimy robotów Cóż, chcemy wysłać oczekującą akcję, więc możemy po prostu
+
+00:08:03.820 --> 00:08:12.430
+wykonać standardową składnię wysyłania obiektu, który jest typu żądanie robota w toku
+
+00:08:15.020 --> 00:08:16.700
+i ładunku.
+
+00:08:17.060 --> 00:08:19.390
+Cóż, nie ma prawdziwej ładowności.
+
+00:08:19.460 --> 00:08:26.780
+Mamy tylko oczekującą prośbę, więc możemy zostawić ją tak, jak jest teraz, bez ładunku.
+
+00:08:28.340 --> 00:08:35.220
+Następnie mamy coś, co jest synchroniczne.
+
+00:08:35.220 --> 00:08:38.230
+Musimy wykonać wywołanie pobierania.
+
+00:08:38.340 --> 00:08:41.710
+Mamy więc naszą funkcję pobierania.
+
+00:08:42.060 --> 00:08:43.870
+A jeśli pamiętasz, idziemy do APT.
+
+00:08:43.980 --> 00:08:44.690
+Tak.
+
+00:08:44.730 --> 00:08:52.950
+Mamy ten interfejs API, który musimy wywołać, ale musisz też ponownie odpowiedzieć na odpowiedź Jaisona.
+
+00:08:52.950 --> 00:09:02.580
+Więc po prostu skopiuję to wszystko do akcji i po prostu skopiuj i wklej to.
+
+00:09:02.830 --> 00:09:12.600
+Dlatego ściągamy użytkowników, którzy robią DOD, a Jaison używają tej metody Jaisalmer.
+
+00:09:12.600 --> 00:09:17.750
+I wreszcie tutaj mamy dwie opcje.
+
+00:09:17.880 --> 00:09:23.920
+Mamy DOD wtedy i DOD złapie na wypadek błędu lub czegoś nie.
+
+00:09:25.060 --> 00:09:30.800
+W DOD otrzymujemy dane, które będą użytkownikami.
+
+00:09:31.300 --> 00:09:38.530
+A kiedy już otrzymamy, że nie możemy powiedzieć, że wyślemy, wyślemy to, co według ciebie
+
+00:09:38.530 --> 00:09:40.050
+mamy zamiar wysłać.
+
+00:09:40.060 --> 00:09:47.870
+Cóż, obiekt, który jest typu robotów żądających dostępu i tym razem
+
+00:09:50.660 --> 00:09:53.360
+ładunek do tego
+
+00:09:56.160 --> 00:10:04.310
+będą dane, które otrzymujemy od API i z haczykiem bardzo podobne.
+
+00:10:04.310 --> 00:10:11.120
+Dostaniemy jakiś błąd i ten błąd będzie ponownie wysyłany, a
+
+00:10:14.800 --> 00:10:18.330
+stary ma typ żądań.
+
+00:10:18.340 --> 00:10:19.610
+Roboty
+
+00:10:22.460 --> 00:10:30.500
+zawodzą z ładunkiem, dajmy mu powietrze, które otrzymujemy.
+
+00:10:30.500 --> 00:10:30.950
+W porządku.
+
+00:10:30.950 --> 00:10:39.260
+Pozwól, że zrobię to trochę mniej, abyś mógł zobaczyć, więc oszczędzamy to i teraz mamy nasze działania, a ta czynność
+
+00:10:39.260 --> 00:10:43.220
+jest o wiele bardziej skomplikowana niż ustawione pole wyszukiwania.
+
+00:10:43.220 --> 00:10:50.240
+Mamy pierwszeństwo, kiedy nazywamy tę akcję wysyłką, która oczekuje robotów w toku,
+
+00:10:50.330 --> 00:10:58.490
+a następnie pobieramy użytkowników, od których otrzymujemy użytkowników, a następnie albo odnieśliśmy sukces z
+
+00:10:59.000 --> 00:11:04.180
+ładunkiem użytkowników, albo z błędem z ładunkiem powietrza.
+
+00:11:04.230 --> 00:11:12.480
+W końcu wchodzimy do reduktorów i po ponownym wyszukiwaniu wiemy, że chcemy importować z zawartości te same
+
+00:11:12.780 --> 00:11:14.270
+akcje, które mieliśmy.
+
+00:11:14.270 --> 00:11:21.870
+Po prostu przejdźmy do Constance lub przejdźmy do akcji i skopiujmy dokładnie to, co mamy tutaj.
+
+00:11:24.720 --> 00:11:27.080
+Ponieważ będziemy potrzebować wszystkich tych stałych.
+
+00:11:28.020 --> 00:11:35.640
+A teraz tutaj zamierzamy stworzyć nowy reduktor, ponieważ zamiast łączyć wszystkie te reduktory chcemy, aby
+
+00:11:35.640 --> 00:11:39.280
+były dostosowane do konkretnego przypadku użycia.
+
+00:11:39.480 --> 00:11:48.490
+To redukuje nasze obawy o robota wyszukiwania, którego nowy reduktor będzie się martwić o to żądanie.
+
+00:11:48.630 --> 00:11:57.660
+Roboty i jeszcze raz z tą samą składnią mamy stan, który idzie do Aiko równa
+
+00:11:58.560 --> 00:12:06.220
+się stanowi początkowemu, a następnie akcji, która będzie miała domyślny pusty obiekt.
+
+00:12:06.430 --> 00:12:14.390
+W tym miejscu obiekt lub tutaj będzie miał ponownie instrukcję switch, która słucha
+
+00:12:14.390 --> 00:12:22.070
+typu action duck, a ta akcja będzie miała trzy możliwe stany.
+
+00:12:22.100 --> 00:12:32.590
+Jednym z nich jest to, że robot oczekujący na żądanie jest w toku, w którym to przypadku zwracamy obiekt.
+
+00:12:32.680 --> 00:12:38.080
+Przypisz ponownie pusty obiekt.
+
+00:12:38.180 --> 00:12:39.770
+Stan.
+
+00:12:39.980 --> 00:12:47.000
+A potem w końcu stworzymy nowy stan o nazwie "oczekuje".
+
+00:12:47.330 --> 00:12:50.240
+A to oczekuje,
+
+00:12:53.840 --> 00:13:00.600
+że zostanie ustawione, ponieważ roboty żądające są obecnie w toku.
+
+00:13:00.600 --> 00:13:01.350
+W porządku.
+
+00:13:01.680 --> 00:13:08.850
+Następną rzeczą, którą zamierzamy zrobić jeszcze raz, będzie sprawa na ten czas.
+
+00:13:09.240 --> 00:13:19.130
+Sukces i to powróci do obiektu, aby przypisać pustemu obiektowi stan.
+
+00:13:19.600 --> 00:13:34.310
+A te nowe własnościowe roboty, które są działaniem obciążającym, a także chcemy zmienić stan, wydają się
+
+00:13:34.700 --> 00:13:36.440
+być
+
+00:13:39.550 --> 00:13:43.270
+fałszywe, ponieważ otrzymaliśmy odpowiedź
+
+00:13:50.350 --> 00:13:56.470
+od obietnicy, a trzeci przypadek dotyczy błędu.
+
+00:13:57.040 --> 00:14:00.670
+W takim przypadku zwrócimy obiekt,
+
+00:14:04.180 --> 00:14:16.550
+by podpisać stan, a my po prostu będziemy mieć stan powietrza, który będzie tworzył, który ma ładunek działania.
+
+00:14:16.690 --> 00:14:23.260
+I jeszcze raz będziemy chcieli zmienić to, co jest w
+
+00:14:26.050 --> 00:14:34.010
+toku, aby było równe false i zamknąć obiekt i pamiętajcie zawsze za pomocą reduktora.
+
+00:14:34.420 --> 00:14:43.810
+Chcemy, aby wariant zawsze zwracał stan, jeśli nie spełnia żadnego z kryteriów.
+
+00:14:43.810 --> 00:14:49.250
+Tak więc ponownie stan świetny.
+
+00:14:49.620 --> 00:14:53.860
+Teraz możesz pomyśleć o swoim stanie początkowym.
+
+00:14:54.020 --> 00:14:59.990
+Mamy te kupione żądania robotów nie dbających o pole wyszukiwania.
+
+00:14:59.990 --> 00:15:06.860
+W tym przypadku chcemy stworzyć dwa różne stany początkowe dla robotów poszukiwawczych i jeden
+
+00:15:06.860 --> 00:15:08.460
+dla robotów żądających.
+
+00:15:08.600 --> 00:15:14.560
+Zmieńmy więc to ustawienie na wstępne wyszukiwanie stanów i
+
+00:15:17.420 --> 00:15:29.000
+stwórzmy nowy stan w robotach z początkowym stanem, który ma teraz te trzy stany, o których tutaj
+
+00:15:29.570 --> 00:15:43.360
+mówiliśmy, że jest w toku fałszywego, aby rozpocząć z tablicą robota, która jest obecnie pusta i ciągiem błędu, który jest
+
+00:15:43.570 --> 00:15:45.350
+również puste.
+
+00:15:49.020 --> 00:15:50.010
+Powiedzmy, że
+
+00:15:52.910 --> 00:15:58.810
+widzimy błędy, które mamy tutaj, i mamy po prostu trochę błędu składni.
+
+00:16:02.360 --> 00:16:04.970
+Ponieważ nie potrzebujemy tego nawiasu klamrowego.
+
+00:16:04.970 --> 00:16:08.220
+Proszę bardzo.
+
+00:16:08.280 --> 00:16:11.060
+I znowu chcemy zmienić stan początkowy.
+
+00:16:11.080 --> 00:16:16.050
+Roboty w tej funkcji.
+
+00:16:18.250 --> 00:16:21.420
+Oszczędzamy i wszystko wygląda dobrze.
+
+00:16:21.430 --> 00:16:26.770
+Pozwól, że to trochę mniej.
+
+00:16:26.830 --> 00:16:28.920
+Teraz mamy problem.
+
+00:16:29.410 --> 00:16:32.970
+Musimy teraz powtórzyć Sir, a jeśli przejdziemy do indeksowania.
+
+00:16:33.060 --> 00:16:40.360
+JOT. S. widzimy, że w funkcji tworzenia magazynu używamy tylko robotów wyszukiwania, które wykonujemy.
+
+00:16:40.780 --> 00:16:42.760
+Więc teraz zaimportujmy.
+
+00:16:42.790 --> 00:16:52.640
+Drugi czyta, że mówisz, że mamy roboty, a teraz dodaj to również do sklepu.
+
+00:16:53.020 --> 00:16:55.740
+Ale jak to robimy.
+
+00:16:58.080 --> 00:17:08.180
+Cóż, mamy funkcję, która ponownie pojawia się z trzema dokumentami, które nazywa się reduktorami kombi i te
+
+00:17:08.180 --> 00:17:15.160
+połączone reduktory całkiem samo wyjaśniają, łącząc wszystkie reduktory w reduktor korzenia.
+
+00:17:15.290 --> 00:17:16.380
+Zróbmy to.
+
+00:17:16.400 --> 00:17:23.380
+Zamierzam powiedzieć, że reduktor korzenia Konst będzie równy połączonemu reduktorowi.
+
+00:17:23.750 --> 00:17:32.120
+I to się stanie i przyjmiemy w postaci obiektu wszystkie reduktory.
+
+00:17:32.240 --> 00:17:38.180
+W moim przypadku to roboty poszukiwawcze i roboty żądające.
+
+00:17:38.390 --> 00:17:44.630
+A teraz ten ruby douceur można wykorzystać w sklepie, aby
+
+00:17:47.720 --> 00:17:51.880
+objąć oba reduktory, które są bezpieczne.
+
+00:17:51.880 --> 00:17:53.110
+W porządku.
+
+00:17:53.110 --> 00:17:54.040
+Prawie jesteśmy na miejscu.
+
+00:17:55.720 --> 00:17:58.930
+Teraz, ponieważ właśnie używaliśmy połączonych reduktorów.
+
+00:17:58.930 --> 00:18:03.180
+Jest to coś, o czym wspomnieliśmy wcześniej, a mianowicie, jeśli przejdę do apt.
+
+00:18:03.340 --> 00:18:14.950
+Tak i przewiń do stanu mapy, aby rekwizyt stał się naszym stanem, nie ma już pola wyszukiwania jako części
+
+00:18:14.950 --> 00:18:16.200
+jego własności.
+
+00:18:16.240 --> 00:18:25.780
+Zamiast tego będzie miał dwa roboty wyszukiwania właściwości i żąda robotów, z których każdy ma swoje własne
+
+00:18:25.780 --> 00:18:26.920
+właściwości.
+
+00:18:26.920 --> 00:18:29.680
+Teraz musimy zaktualizować
+
+00:18:33.370 --> 00:18:40.190
+roboty wyszukiwania, takie jak te, które mają właściwość pola wyszukiwania.
+
+00:18:40.250 --> 00:18:50.460
+Dlatego właśnie zobaczysz, kiedy pracujesz nad stanem redox i mapami do wniosku.
+
+00:18:50.490 --> 00:18:58.270
+Teraz ostatni element łamigłówki redux, jak to działa.
+
+00:18:58.680 --> 00:19:10.740
+Well redukcja thunk to oprogramowanie pośrednie, które czeka i widzi, czy jakiekolwiek akcje zwracają funkcję zamiast
+
+00:19:10.740 --> 00:19:12.050
+obiektu.
+
+00:19:12.440 --> 00:19:13.360
+Co to znaczy.
+
+00:19:13.740 --> 00:19:25.740
+Jeśli podejmiemy działania, zobaczymy, że to jest zwracanie obiektu, ale tutaj nie zwracamy
+
+00:19:26.100 --> 00:19:33.930
+obiektu, w rzeczywistości nie zwracamy teraz niczego.
+
+00:19:34.070 --> 00:19:36.820
+Thunked middleware czeka na funkcję.
+
+00:19:36.920 --> 00:19:43.880
+A jeśli kiedykolwiek akcja, która przez nią przechodzi, pamiętaj, że oprogramowanie pośredniczące jest po prostu tunelem, przez
+
+00:19:44.660 --> 00:19:49.050
+który przechodzą działania i dostrzega funkcję, która na nim działa.
+
+00:19:49.100 --> 00:19:53.130
+Zróbmy to najpierw, a wyjaśnię szczegółowo, jak to działa.
+
+00:19:54.030 --> 00:19:56.000
+Najpierw musimy przejść do APT.
+
+00:19:56.070 --> 00:19:57.350
+Tak.
+
+00:19:57.420 --> 00:20:01.850
+A wraz z thaim chcemy zaktualizować kilka rzeczy.
+
+00:20:01.900 --> 00:20:15.460
+Najpierw chcemy zaktualizować stan, tak aby teraz zawierał również roboty, które mają roboty DOT z żądaniem
+
+00:20:15.500 --> 00:20:16.610
+stanu.
+
+00:20:16.640 --> 00:20:19.960
+Znowu jest to stan z reduktora.
+
+00:20:20.010 --> 00:20:29.630
+Istnieje również stan oczekujący ponownie za pośrednictwem oczekującego robota żądania.
+
+00:20:30.050 --> 00:20:43.030
+A potem wreszcie stan powietrza z jeszcze raz prosi roboty z żądaniami.
+
+00:20:43.060 --> 00:20:51.510
+Druga część i najważniejsza część to działanie robota żądania.
+
+00:20:51.680 --> 00:20:58.240
+Znowu coś, co zastępuje ten komponent, który zainstalował żądanie.
+
+00:20:58.390 --> 00:21:05.650
+Sposób, w jaki możemy to zrobić, jest tutaj, dodajemy inną właściwość, którą będziemy przekazywać, i będziemy mogli
+
+00:21:05.650 --> 00:21:09.350
+nazwać ją, co chcemy, a powiemy na żądanie.
+
+00:21:09.520 --> 00:21:17.820
+Roboty i to będzie funkcja i ta funkcja.
+
+00:21:17.950 --> 00:21:23.320
+Pamiętaj, że nie chcemy koniecznie wysyłać.
+
+00:21:23.670 --> 00:21:28.670
+Chcemy zachować i przywrócić z niego funkcję.
+
+00:21:28.740 --> 00:21:43.410
+W naszym przypadku jest to żądanie robotów zmniejszających nasze i to żądanie roboty redukują je lub akcja
+
+00:21:43.980 --> 00:21:47.480
+ma metodę wysyłki.
+
+00:21:47.510 --> 00:21:48.090
+W porządku.
+
+00:21:48.090 --> 00:21:49.000
+Wiem, że to dużo.
+
+00:21:48.990 --> 00:21:51.480
+Przejdźmy teraz jeszcze raz.
+
+00:21:52.800 --> 00:21:55.150
+W tej chwili potrzebujemy tej prośby.
+
+00:21:55.220 --> 00:22:10.620
+Działanie robotów i to żądanie działań robotów wymaga metody wysyłki, aby faktycznie wysłać te akcje.
+
+00:22:10.920 --> 00:22:22.120
+Tak więc w Abdulle Tak, musimy najpierw zaimportować naszą akcję, która żąda robotów z
+
+00:22:22.120 --> 00:22:30.750
+pliku akcji, a to żądanie robotów musi mieć metodę wysyłki.
+
+00:22:30.760 --> 00:22:42.580
+To jest to samo.
+
+00:22:43.190 --> 00:22:54.870
+A teraz ta ekspedycja będzie działała tak długo, jak długo będziemy używać reduxa, ponieważ
+
+00:22:54.870 --> 00:23:00.140
+złapie fakt, że to zwróci funkcję.
+
+00:23:00.170 --> 00:23:07.390
+Jeśli więc powrócimy do naszych działań, możemy teraz
+
+00:23:13.770 --> 00:23:25.280
+zrobić to dobrze, co się właśnie stało, stworzyliśmy funkcję wyższego rzędu, która zwraca funkcję.
+
+00:23:25.280 --> 00:23:28.810
+I wiem, że to może trochę dezorientować, ale dudnienie.
+
+00:23:28.880 --> 00:23:34.950
+Ponieważ teraz żądają, aby roboty powróciły z powodu swoich funkcji.
+
+00:23:35.000 --> 00:23:42.800
+Będzie to oznaczać, że powróci, to zapewni funkcję wysyłki do tej drugiej funkcji
+
+00:23:42.950 --> 00:23:47.040
+warstwowej, abyśmy mogli jej użyć tutaj.
+
+00:23:47.420 --> 00:23:55.430
+Znowu jest to coś, do czego musisz się przyzwyczaić, ale w końcu, jeśli to zrobimy, zobaczmy, czy to
+
+00:23:55.430 --> 00:23:56.120
+działa.
+
+00:23:56.140 --> 00:24:01.530
+Teraz wiem, że to pierwszy raz, więc prawdopodobnie coś pomyliliśmy, ale potrząśnijmy.
+
+00:24:04.000 --> 00:24:07.490
+Odświeżam i wszystko działa.
+
+00:24:07.490 --> 00:24:08.890
+Nie dostaniemy żadnych błędów.
+
+00:24:09.020 --> 00:24:19.380
+Ale pamiętajmy, że musimy połączyć się z naszą aplikacją, jeśli wrócimy, możemy teraz porwać nas i mamy wszystkie te rekwizyty,
+
+00:24:19.380 --> 00:24:21.690
+których możemy teraz użyć.
+
+00:24:21.960 --> 00:24:31.530
+Tak więc komponent MT nie musi już mieć feche call, czego potrzebuje, to kropka
+
+00:24:32.760 --> 00:24:42.200
+tego topowego śmigła i akcja, którą mamy, żąda robotów na żądanie robotów doskonałych.
+
+00:24:42.430 --> 00:24:46.670
+I nie potrzebujemy już konstruktora.
+
+00:24:46.750 --> 00:24:53.110
+Ponieważ nie ma więcej stanów, roboty te będą teraz zwrócone w ramach rekwizytów na
+
+00:24:53.380 --> 00:24:53.980
+żądanie.
+
+00:24:54.070 --> 00:24:56.930
+Roboty.
+
+00:24:57.040 --> 00:25:01.100
+Znowu zmienimy ten stan
+
+00:25:03.790 --> 00:25:15.540
+na roboty, a my również możemy czekać, aby sprawdzić, czy jest ono w toku.
+
+00:25:19.140 --> 00:25:25.770
+Aby renderować, jeśli jest to prawda, chcemy renderować ładowanie.
+
+00:25:25.950 --> 00:25:30.950
+Jeśli nie, chcemy po prostu oddać naszych przyjaciół Robo.
+
+00:25:30.970 --> 00:25:33.660
+Więc pochodzą od nas.
+
+00:25:34.780 --> 00:25:39.230
+A teraz mamy tylko komponent zamontowany w naszej aplikacji.
+
+00:25:39.440 --> 00:25:45.360
+Zapiszmy i wróćmy do naszej aplikacji.
+
+00:25:45.380 --> 00:25:47.490
+Dobra, spójrz na to.
+
+00:25:47.780 --> 00:25:53.990
+To nie zdarza się bardzo często, ale jakoś udało mi się kodować bez żadnego tworzenia bez popełniania błędów.
+
+00:25:53.990 --> 00:25:55.250
+Znowu to rzadkość.
+
+00:25:55.250 --> 00:25:56.210
+Ciesz się tą chwilą.
+
+00:25:56.210 --> 00:25:57.780
+Zdecydowanie się z tego cieszę.
+
+00:25:57.800 --> 00:26:05.090
+Widzimy tutaj, że mamy robotów oczekujących na zwolnienie, a następnie ponownie wystrzelonych.
+
+00:26:06.760 --> 00:26:09.070
+Odświeżmy szybko.
+
+00:26:09.070 --> 00:26:09.400
+W porządku.
+
+00:26:09.400 --> 00:26:11.300
+Co się stanie, jeśli żądanie się nie powiedzie.
+
+00:26:11.320 --> 00:26:13.820
+Wróćmy tutaj i przejdźmy do naszej akcji.
+
+00:26:13.920 --> 00:26:14.500
+Tak.
+
+00:26:14.560 --> 00:26:18.280
+Po prostu napiszmy coś nie tak, powiemy tak.
+
+00:26:18.280 --> 00:26:19.510
+Zapisz to.
+
+00:26:19.510 --> 00:26:23.020
+Wróć i idź.
+
+00:26:23.120 --> 00:26:27.170
+Mamy żądania robotów nieudanych.
+
+00:26:27.190 --> 00:26:31.560
+Bardzo fajny.
+
+00:26:31.730 --> 00:26:32.640
+Naprawmy to.
+
+00:26:33.620 --> 00:26:37.040
+I zapisz.
+
+00:26:37.090 --> 00:26:37.780
+W porządku.
+
+00:26:37.960 --> 00:26:44.020
+Mamy naszą aplikację, która robi dokładnie to samo, co poprzednio.
+
+00:26:45.220 --> 00:26:51.080
+Nic zbyt szalonego, tylko filtrowanie naszych robotów.
+
+00:26:51.310 --> 00:27:02.760
+Ale jedyną różnicą jest to, że mamy tę niesamowitą zdolność rejestrowania i używamy redux.
+
+00:27:02.850 --> 00:27:07.340
+Bardzo fajny.
+
+00:27:07.350 --> 00:27:10.180
+Chcę przejść jeszcze raz.
+
+00:27:11.850 --> 00:27:16.450
+A to dlatego, że dla większości ludzi jest to punkt zwrotny.
+
+00:27:18.640 --> 00:27:25.720
+Pamiętaj, że to żądanie robotów, jak ma te dwie funkcje.
+
+00:27:25.930 --> 00:27:29.210
+Robot żądający teraz redux.
+
+00:27:29.220 --> 00:27:36.160
+Po wyjęciu z pudełka nie zrozumie tego, ponieważ nie zwracamy obiektu, ponieważ oczekuje on działania.
+
+00:27:36.220 --> 00:27:45.210
+Zwracamy funkcję i ta funkcja ma na celu coś dla niej oznaczać poprzez dodanie programu pośredniczącego typu
+
+00:27:45.300 --> 00:27:46.090
+"middleware".
+
+00:27:46.240 --> 00:27:47.980
+Teraz słuchamy działań.
+
+00:27:48.040 --> 00:27:54.490
+I za każdym razem, gdy uruchomi się działanie robota żądania, zwróci funkcję i wyzwoli redukcję
+
+00:27:54.490 --> 00:28:00.780
+thx i redux, powie, że to jest funkcja, którą zamierzam ci dać, jest
+
+00:28:00.790 --> 00:28:08.350
+to wysyłka, więc możesz nazwać pewne akcje i możemy w końcu uruchomić nasze działania w ten sposób.
+
+00:28:08.350 --> 00:28:15.240
+Wracamy do naszego diagramu, stworzyliśmy system, w którym uruchamiane są akcje.
+
+00:28:15.390 --> 00:28:17.310
+Przechodzą przez wszelkie oprogramowanie pośredniczące.
+
+00:28:17.370 --> 00:28:24.030
+Jeśli jest to zmiana wyszukiwanego hasła, to po prostu przejdzie prosto do reduktora uruchamianego
+
+00:28:24.450 --> 00:28:32.730
+przez ładną funkcję, która zaktualizuje sklep i wprowadzi zmiany w naszym widoku, jeśli poprosimy roboty, że zauważy, że
+
+00:28:32.730 --> 00:28:39.120
+jest to funkcja, którą zamierza przejść do oprogramowania pośredniego i redux Thunk powie.
+
+00:28:39.140 --> 00:28:47.250
+W porządku, najpierw prześlij do reduktora, a powiadomię cię, kiedy skończę obietnicę, a dam ci znać,
+
+00:28:48.000 --> 00:28:50.490
+jeśli mam jakieś roboty.
+
+00:28:50.740 --> 00:28:59.080
+A kiedy powróci, będzie wysyłał sukces przez reduktor, aktualizuj sklep i wprowadzaj
+
+00:28:59.230 --> 00:29:00.010
+zmiany.
+
+00:29:01.410 --> 00:29:03.570
+Kto do cholery był dużo.
+
+00:29:03.630 --> 00:29:09.550
+Ale jeśli dotarłeś tak daleko i rozumiesz, to już prawie dostałeś redux.
+
+00:29:09.600 --> 00:29:10.440
+to jest to!
+
+00:29:10.440 --> 00:29:13.730
+To jest cała biblioteka redux.
+
+00:29:13.980 --> 00:29:15.230
+To bardzo proste.
+
+00:29:15.240 --> 00:29:20.340
+A kiedy zaczniesz go używać kilka razy i poczujesz się z nim komfortowo, to naprawdę
+
+00:29:20.370 --> 00:29:21.850
+piękne, jak wszystko działa.
+
+00:29:21.870 --> 00:29:24.150
+Ale na razie zróbmy sobie przerwę.
+
+00:29:24.150 --> 00:29:26.240
+Dzięki za oglądanie, a do zobaczenia w następnej.
+
+00:29:26.550 --> 00:29:27.000
+PA pa.

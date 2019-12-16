@@ -1,0 +1,466 @@
+﻿WEBVTT
+
+00:00:02.090 --> 00:00:02.680
+In regula.
+
+00:00:02.710 --> 00:00:03.660
+Bine ai revenit.
+
+00:00:03.760 --> 00:00:08.530
+Ei bine, haideți să demonstrăm o divizare a codului și cum funcționează acest videoclip.
+
+00:00:08.530 --> 00:00:14.010
+Acum chiar aici am creat un proiect de reacție Creve.
+
+00:00:14.020 --> 00:00:17.920
+Deci, pur și simplu am fugit crea creați reacții de divizare a codului.
+
+00:00:17.920 --> 00:00:21.670
+Acesta este doar proiectul implicit pe care îl scoatem din cutie.
+
+00:00:21.670 --> 00:00:29.710
+Dacă încep NPM, veți vedea că nu este nimic deosebit de simplu și simplu de a crea reacție perfect
+
+00:00:31.710 --> 00:00:34.730
+pentru a începe cu împărțirea codului nostru.
+
+00:00:34.830 --> 00:00:42.800
+În primul rând, voi opri acest lucru clar aici și voi elimina totul aici.
+
+00:00:42.860 --> 00:00:52.830
+Altele decât antetul și, în mod ideal, dorim să avem trei butoane sau trei locuri pe care le putem face clic pentru a ne da
+
+00:00:52.830 --> 00:00:57.180
+o nouă pagină va avea o componentă a unei pagini.
+
+00:00:59.650 --> 00:01:13.760
+Vom avea o pagină de componentă și, în final, o componentă, dar, evident, trebuie să creăm mai întâi aceste
+
+00:01:13.760 --> 00:01:15.040
+componente.
+
+00:01:15.050 --> 00:01:17.690
+Să mergem mai departe și să facem asta.
+
+00:01:17.750 --> 00:01:30.190
+Am de gând să creez un folder nou, să îl numesc componentă, iar în interiorul lui aici vom crea doar fișierul Ron
+
+00:01:31.560 --> 00:01:32.520
+javascript
+
+00:01:35.560 --> 00:01:41.700
+al paginii inserat în fișierul javascript și apoi în final javascript.
+
+00:01:42.130 --> 00:01:52.060
+Acum, în cadrul acestor pagini vom importa re-actul de la re-act, care este destul de standard, dar știi și ce să
+
+00:01:52.120 --> 00:01:56.620
+luăm și logo-ul pe care îl avem și aici.
+
+00:01:56.620 --> 00:02:00.900
+Logo-ul re-act va duce și la import.
+
+00:02:01.080 --> 00:02:07.690
+Și pentru că suntem în folderul de componente chiar acum și logo-ul trăiește în directorul sursă trebuie să facem
+
+00:02:07.690 --> 00:02:08.750
+dot dot.
+
+00:02:08.770 --> 00:02:14.230
+Și, de fapt, dorim ca folderul componentelor să fie în interiorul sursei, pentru că nu aici afară.
+
+00:02:14.230 --> 00:02:24.980
+Deci, hai să ne mișcăm care o va pune în interiorul directorului sursă.
+
+00:02:25.010 --> 00:02:28.270
+Acum, în cadrul acestei pagini, va fi o salvare a acestei funcții.
+
+00:02:28.310 --> 00:02:39.390
+Așa că o vom numi costa pagina 1 va egala că nu va mai avea niciun fel de recuzită pe care să-l primească deocamdată, iar aici
+
+00:02:39.450 --> 00:02:44.640
+putem face întoarcere sau doar pentru a întoarce o componentă simplă.
+
+00:02:44.640 --> 00:02:49.200
+Pot să-l las așa cum este acum și să spun
+
+00:02:52.160 --> 00:03:01.890
+că Divx îi va da un nume de clasă de aplicație, așa că obținem același nume de clasă pe care l-am avut înainte.
+
+00:03:02.170 --> 00:03:05.910
+Și nu o să copiem și antetul.
+
+00:03:06.250 --> 00:03:09.820
+Deci, această pagină va avea și
+
+00:03:17.760 --> 00:03:24.290
+va închide div, dar și în interiorul nostru vrem să avem două butoane.
+
+00:03:24.490 --> 00:03:33.760
+Deci primul buton va avea un eveniment pe clic și deocamdată va fi pur și simplu gol.
+
+00:03:38.530 --> 00:03:42.450
+Și să spunem că în interiorul acestui buton voi avea eticheta.
+
+00:03:42.460 --> 00:03:44.500
+Va avea și textul de pastă.
+
+00:03:44.530 --> 00:03:53.340
+Deci, când faceți clic pe acest buton și ne duceți la pagina 2 și putem face același lucru pentru pagina 3.
+
+00:03:53.360 --> 00:03:56.290
+Deci, hai să mergem mai departe și să salvăm asta.
+
+00:03:56.660 --> 00:04:00.780
+Ultimul lucru pe care vrem să-l facem este dacă mergem să renunțăm.
+
+00:04:00.860 --> 00:04:07.970
+Da, dar avem încă și pagina 3, dar în mod ideal avem un fel de rutare.
+
+00:04:08.000 --> 00:04:16.100
+Așadar, vom afișa pagina pe pagina 2 în patiserie, dar nu în același timp, pe baza traseului pe care dorim să afișăm numai
+
+00:04:16.430 --> 00:04:23.540
+pagina dacă suntem pe pagina 1 numai pagina 2 dacă suntem pe pagina 2 și numai patiserie dacă suntem la
+
+00:04:23.540 --> 00:04:24.460
+pagina 3.
+
+00:04:24.500 --> 00:04:33.470
+Deci, să creăm doar o logică simplă de rutare, aici putem începe mai întâi prin crearea unei stări în care facem
+
+00:04:33.470 --> 00:04:36.040
+asta prin construirea unui constructor.
+
+00:04:36.140 --> 00:04:38.300
+Amintiți-vă că trebuie să sunați super.
+
+00:04:38.300 --> 00:04:44.420
+Deci, putem folosi acest cuvânt cheie și aici se va spune că această
+
+00:04:47.460 --> 00:04:51.830
+punctare este egală cu traseul și traseul implicit.
+
+00:04:51.870 --> 00:04:57.370
+Când această aplicație este inițializată, vom fi greșiți.
+
+00:04:58.750 --> 00:05:05.740
+Și bazându-ne pe locul în care faceți clic pe amintiți în pagina 1 cum trebuie să Bundes care va avea un fel de eveniment că, dacă vom
+
+00:05:05.740 --> 00:05:10.850
+face clic pe pagina 2, ne va duce la pagina a doua dacă vom face clic pe pagina 3.
+
+00:05:10.900 --> 00:05:12.840
+Ne va duce la pagina 3.
+
+00:05:13.070 --> 00:05:19.130
+Deci, să creăm un eveniment pe care îl vom numi pe schimbarea traseului și
+
+00:05:22.550 --> 00:05:25.240
+această ruta se va schimba.
+
+00:05:25.520 --> 00:05:33.110
+Să rezolvăm că ortografia va avea acest start pe metoda de schimbare a drumurilor pe care o vom
+
+00:05:33.110 --> 00:05:34.830
+crea acum în aplicație.
+
+00:05:34.850 --> 00:05:42.270
+Deci, haideți să mergem mai departe și apoi vom spune pe schimbarea traseului și această schimbare Andreae va primi traseul parametrilor
+
+00:05:42.990 --> 00:05:45.070
+și eu folosesc funcțiile de
+
+00:05:48.440 --> 00:05:51.920
+epocă aici, deci nu trebuie să ne legăm în constructor.
+
+00:05:51.920 --> 00:05:54.890
+În caz contrar, trebuie să folosim legarea punctului la schimbarea rutei.
+
+00:05:54.890 --> 00:05:56.450
+Dacă nu am făcut funcția de eroare.
+
+00:05:56.460 --> 00:05:58.780
+Dar îmi place așa cred că pare mai curat.
+
+00:05:59.660 --> 00:06:12.460
+Acum, în interiorul nostru, putem pur și simplu să spunem că acest punct de stat sat pentru a avea traseul pe care îl cheamă la orice este
+
+00:06:13.060 --> 00:06:13.970
+ruta.
+
+00:06:14.260 --> 00:06:23.060
+Deci, de fapt, putem folosi doar o scurtă descriere, dar este mai descriptivă, așa că îmi place mai mult această metodă.
+
+00:06:23.360 --> 00:06:25.830
+Deci știm ce se întâmplă.
+
+00:06:25.910 --> 00:06:31.190
+Deci, acum trecem schimbarea rutei pe componenta de pagină.
+
+00:06:31.190 --> 00:06:31.620
+In regula.
+
+00:06:31.630 --> 00:06:40.000
+Prin această logică, putem copia și lipi din nou pagina 2 și pagina 3.
+
+00:06:40.310 --> 00:06:49.200
+Același lucru și tot ceea ce facem este oricând dăm clic pe actualizăm traseul spre orice cale pe care am solicitat-o.
+
+00:06:49.280 --> 00:06:56.870
+Să ne întoarcem sau să salvăm asta și să mergem la pagina Page Ron acum urmează să primească propulul de schimbare a traseului
+
+00:06:57.320 --> 00:07:01.300
+și acest lucru pe schimbarea traseului și eu folosesc distrugerea aici.
+
+00:07:01.310 --> 00:07:04.890
+Deci nu trebuie să fac recuzită în schimbarea rutei.
+
+00:07:05.000 --> 00:07:12.860
+Pot să spun doar că schimbarea rutei va avea o funcție care se execută și aceasta pe schimbarea
+
+00:07:12.860 --> 00:07:15.800
+traseului va trimite pagina de traseu.
+
+00:07:15.890 --> 00:07:19.860
+Pentru că vom merge la pagina a doua când vom face asta puțin mai mic.
+
+00:07:20.060 --> 00:07:32.010
+Așa că puteți vedea și din nou vom face același lucru la pagina 3 de data aceasta făcând clic pe pagina 3.
+
+00:07:32.270 --> 00:07:42.060
+Și apoi, în sfârșit, putem adăuga pagina implicită pentru sportul Ron și voi merge mai departe și doar copiați toate acestea, deoarece paginile noastre
+
+00:07:42.060 --> 00:07:45.400
+vor arăta cam la fel, cu excepția
+
+00:07:48.900 --> 00:07:56.140
+faptului că numele vor fi diferite, așa că vom au și pentru clic pe clic în loc de
+
+00:07:56.140 --> 00:08:05.530
+pagina 2 și 3 vom avea o pagină de la o pagină la o pagină la o pagină pe care o vom salva.
+
+00:08:05.560 --> 00:08:15.520
+Și atunci același cu Page 2 va redenumi acest component la pagina 2 care are acces la pagina 1 și pagina
+
+00:08:15.520 --> 00:08:16.020
+3.
+
+00:08:17.890 --> 00:08:24.720
+Ea În ultima parte este evident că vrem să importăm aceste componente.
+
+00:08:24.720 --> 00:08:34.070
+Așa că am de gând să spun importă prima pagină de la sau este doar componente componente.
+
+00:08:34.220 --> 00:08:35.370
+Asigurați-vă că avem dreptate.
+
+00:08:39.840 --> 00:08:42.320
+Pagina Ron.
+
+00:08:42.410 --> 00:08:53.570
+Și apoi, în cele din urmă, copiați restul de aici pentru a vă asigura că potrivim pagina cu Sri este la pagina 3.
+
+00:08:53.790 --> 00:08:58.300
+Am vrut doar să salvez acest lucru și să conduc NPM începeți să vedeți dacă vom primi erori.
+
+00:09:06.390 --> 00:09:07.130
+In regula.
+
+00:09:07.350 --> 00:09:15.000
+Avem o pagină web destul de urâtă, cu componentele noastre redate, dar se pare că funcționează.
+
+00:09:15.000 --> 00:09:21.480
+Avem paginile care rulează dar, evident, nu dorim să le afișăm toate în același timp dorim să avem
+
+00:09:21.480 --> 00:09:28.890
+un fel de logică de rutare, iar implicit ar trebui să fie pagina 1, deoarece amintim că ruta noastră este
+
+00:09:28.890 --> 00:09:30.660
+în prezent în pagină.
+
+00:09:30.950 --> 00:09:32.720
+Și acest lucru este destul de ușor de făcut.
+
+00:09:32.720 --> 00:09:42.660
+Nu mai avem nevoie de antet deoarece bine, deoarece antetul și, de asemenea, sus sunt toate în cadrul acestor componente.
+
+00:09:42.710 --> 00:09:44.480
+Deci, haideți să eliminăm
+
+00:09:49.270 --> 00:09:50.650
+acest lucru
+
+00:09:57.510 --> 00:10:12.410
+și să adăugăm logica aici dacă vom spune dacă această rutare de stat este egală cu cea a paginii 1, apoi vom reveni la pagina pe care doriți să o auzim pe Feltz
+
+00:10:20.270 --> 00:10:26.700
+dacă avem ruta ca pagină, apoi putem să redați pagina și Sunt sigur că
+
+00:10:29.490 --> 00:10:31.920
+există modalități mai curate de
+
+00:10:35.820 --> 00:10:38.440
+a face acest lucru chiar acum.
+
+00:10:38.460 --> 00:10:43.100
+Dar pentru scopurile demonstrative, acest lucru va face bine.
+
+00:10:43.380 --> 00:10:45.960
+Nice patiserie simplă de rutare
+
+00:10:49.870 --> 00:10:51.000
+logică.
+
+00:10:51.190 --> 00:10:56.610
+În cele din urmă vom reveni aici.
+
+00:11:04.550 --> 00:11:05.780
+Bine, hai să o dăm.
+
+00:11:05.810 --> 00:11:12.290
+Salvarea logo-ului este definită de nefolosită, pentru că nu o mai folosim pe pagina principală.
+
+00:11:12.320 --> 00:11:15.670
+Să salvăm întoarcerea.
+
+00:11:15.680 --> 00:11:16.550
+In regula.
+
+00:11:16.550 --> 00:11:18.530
+Se pare că avem totul în desfășurare.
+
+00:11:18.530 --> 00:11:25.880
+Să vedem dacă fac clic pe pagina 2 Aceasta se modifică la pagina 1 modificări de patiserie la pagina 2.
+
+00:11:25.880 --> 00:11:31.130
+Deci, schimbăm paginile chiar acum, dar acest lucru este greu de spus, așa că hai să reușim să facem să arate
+
+00:11:31.130 --> 00:11:31.820
+mai bine.
+
+00:11:35.690 --> 00:11:41.510
+Și de fapt am deja câteva stiluri CSSA pe care le putem folosi pentru că în
+
+00:11:41.510 --> 00:11:45.940
+timp ce acum învățăm CSSA acum am o clasă de butoane.
+
+00:11:45.950 --> 00:11:48.830
+Nimic prea nebun doar plictisit sau a face o mai mare.
+
+00:11:48.950 --> 00:12:00.000
+Și avem și o clasă cu dizabilități, astfel încât acum putem adăuga o clasă de dezactivare la butoanele noastre, care este cea pe care de fapt
+
+00:12:00.000 --> 00:12:01.590
+facem clic pe.
+
+00:12:01.600 --> 00:12:10.720
+Deci, lasă-mă să salvez asta și de data asta voi avea doar un buton cu buton care are un nume de clasă.
+
+00:12:13.500 --> 00:12:21.780
+Dezactivat și nu va face nimic, veți avea doar prima pagină deoarece suntem în prezent pe prima
+
+00:12:21.780 --> 00:12:22.410
+pagină.
+
+00:12:22.470 --> 00:12:25.410
+Vrem doar butonul pentru pagina și pentru lipire să fie activ.
+
+00:12:25.650 --> 00:12:30.540
+Și am de gând să salvez și să fac același lucru pentru toate celelalte.
+
+00:12:30.570 --> 00:12:36.270
+Se va spune că pagina a doua pentru că suntem pe pagina a doua este dezactivată.
+
+00:12:36.370 --> 00:12:42.740
+Și în cele din urmă pentru pagina 3 Îl vom avea și pe cel cu dizabilități.
+
+00:12:42.740 --> 00:12:44.300
+Bine, să vedem dacă arată mai bine.
+
+00:12:44.300 --> 00:12:46.500
+Să ne întoarcem.
+
+00:12:46.510 --> 00:12:47.110
+In regula.
+
+00:12:47.110 --> 00:12:48.820
+Deci suntem pe pagina 1.
+
+00:12:48.850 --> 00:12:50.740
+Puteți vedea cât de bune sunt abilitățile mele CSSA.
+
+00:12:50.740 --> 00:12:52.690
+Arată foarte frumos.
+
+00:12:53.170 --> 00:12:57.380
+Și dacă faceți clic pe pagina 2, mergeți la pagina pentru a merge la patiserie.
+
+00:12:57.520 --> 00:12:59.540
+Mergem la pagina 3.
+
+00:12:59.560 --> 00:13:00.970
+Foarte tare.
+
+00:13:00.970 --> 00:13:01.460
+In regula.
+
+00:13:01.540 --> 00:13:03.720
+Așa că am făcut tot ce funcționează.
+
+00:13:03.790 --> 00:13:04.690
+Asta e uimitor.
+
+00:13:04.690 --> 00:13:07.670
+Dar unde se împarte acest cod.
+
+00:13:07.900 --> 00:13:16.320
+Ei bine, aceasta este aplicația pe care o vom folosi pentru divizarea codului și pentru că acum, dacă
+
+00:13:16.890 --> 00:13:25.180
+deschid fila cu instrumentele dezvoltatorului și merg la rețea și am făcut doar clic pe refresh.
+
+00:13:25.370 --> 00:13:27.170
+Văd că am înmormântat.
+
+00:13:27.290 --> 00:13:27.630
+Da.
+
+00:13:27.650 --> 00:13:29.400
+Ignorați toate celelalte lucruri.
+
+00:13:29.420 --> 00:13:34.650
+Acest lucru este doar lucruri reale care vine cu plug-in-urile mele crom și de a crea, de asemenea, re-act.
+
+00:13:34.700 --> 00:13:38.190
+Dar cel interesat de noi este pachetul.
+
+00:13:38.300 --> 00:13:43.460
+Da, acesta este locul în care avem componentele noastre și vedeți că aceasta este cea care durează cel mai mult
+
+00:13:43.460 --> 00:13:44.540
+timp pentru încărcare.
+
+00:13:44.540 --> 00:13:48.470
+Acum acest pachet de J. S. este doar un singur fișier.
+
+00:13:48.650 --> 00:13:56.300
+Și dacă fac clic pe pagina 2 nu se întâmplă nimic, deoarece toate javascriptul de care avem nevoie a fost deja
+
+00:13:56.750 --> 00:14:00.500
+încărcat în Bondel digests cu codul de divizare acum.
+
+00:14:00.620 --> 00:14:07.190
+Vom putea să încărcăm fișiere de fiecare dată când faceți clic pe o pagină, deoarece
+
+00:14:07.190 --> 00:14:15.920
+nu am încărcat-o încă și astfel putem face acest pachet ca doar 354 de kilobyte chiar acum mult mai mici.
+
+00:14:15.970 --> 00:14:22.770
+Știu că construiesc suspansul, dar în următorul videoclip vom face ca acest lucru să aibă un cod de divizare și este
+
+00:14:23.680 --> 00:14:24.850
+destul de ușor.
+
+00:14:24.930 --> 00:14:26.920
+Deci toți au văzut că Buh-Bye.

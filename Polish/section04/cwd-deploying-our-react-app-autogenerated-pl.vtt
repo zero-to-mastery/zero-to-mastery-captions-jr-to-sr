@@ -1,0 +1,196 @@
+﻿WEBVTT
+
+00:00:01.230 --> 00:00:02.040
+Cześć wszystkim.
+
+00:00:02.130 --> 00:00:09.210
+Mamy teraz naszą aplikację Robo Friends na github i powinieneś mieć możliwość założenia projektu Robo Friends
+
+00:00:09.240 --> 00:00:12.130
+na GitHub, ale o to chodzi.
+
+00:00:12.150 --> 00:00:18.930
+Byłoby miło, gdybyśmy mogli użyć stron GitHub, aby faktycznie sprawdzić naszą aplikację
+
+00:00:18.930 --> 00:00:28.940
+przyjaciół robo bez konieczności klonowania instalacji npm, tak jak zrobiliśmy to z prostymi projektami e-mailowymi H2 z aplikacjami
+
+00:00:28.940 --> 00:00:29.690
+reagującymi.
+
+00:00:29.690 --> 00:00:35.310
+Jest na to sposób za pomocą stron GitHub.
+
+00:00:35.680 --> 00:00:39.490
+Teraz połączę się z tym zasobem, abyś mógł śledzić krok po kroku.
+
+00:00:39.490 --> 00:00:43.010
+Ale przejrzyjmy to i zobaczmy, jakie to łatwe.
+
+00:00:43.030 --> 00:00:46.460
+Mam tutaj projekt.
+
+00:00:46.510 --> 00:00:50.450
+Mówi, że muszę dodać stronę główną, aby spakować Jason.
+
+00:00:50.500 --> 00:00:51.400
+Zróbmy to.
+
+00:00:51.400 --> 00:00:59.330
+Skopiuję to i dodałem do naszego pakietu, że tata Jason nie ma znaczenia, gdzie to jest.
+
+00:00:59.330 --> 00:01:05.090
+Jak pisać po nazwie, uczyń to trochę większym.
+
+00:01:05.160 --> 00:01:12.190
+Dodam tutaj swoją nazwę użytkownika, aw naszym przypadku jest to nazwa repozytorium.
+
+00:01:12.210 --> 00:01:14.150
+Co to było.
+
+00:01:14.210 --> 00:01:15.620
+To byli przyjaciele robo.
+
+00:01:15.620 --> 00:01:17.750
+Więc ponownie użyj swojej nazwy użytkownika GitHub.
+
+00:01:18.290 --> 00:01:24.370
+A następnie dodaj tutaj swoją nazwę projektu Hub.
+
+00:01:25.490 --> 00:01:34.630
+Jeśli przejdziemy przez kolejne kroki, zostanie napisane, że muszę zainstalować strony GitHub w tym pakiecie, a następnie dodać do niego
+
+00:01:34.630 --> 00:01:35.970
+skrypt wdrażania.
+
+00:01:36.010 --> 00:01:42.590
+Skopiuj i wklej to, więc jeśli używasz NPM, możesz to zrobić, jeśli używasz swojej przędzy.
+
+00:01:42.590 --> 00:01:43.520
+To jest polecenie.
+
+00:01:44.510 --> 00:01:47.390
+Zainstalujmy więc strony z hubem
+
+00:01:50.290 --> 00:01:56.260
+i podczas instalowania wróćmy tutaj i pokazuje to, że musimy dodać te
+
+00:01:56.260 --> 00:02:01.240
+dwa wiersze do wstępnego wdrożenia i wdrożenia w naszych skryptach.
+
+00:02:01.240 --> 00:02:03.220
+Więc jeszcze raz przejdź do naszych
+
+00:02:06.390 --> 00:02:08.900
+skryptów, a następnie skopiuj i wklej ten wiersz.
+
+00:02:09.180 --> 00:02:13.860
+Mamy więc wstępne wdrożenie i wdrożenie.
+
+00:02:13.860 --> 00:02:18.600
+Tak więc wstępne wdrożenie uruchamia kompilację uruchamiania NPM, która wiemy, co to robi.
+
+00:02:18.600 --> 00:02:20.710
+To buduje nasz projekt.
+
+00:02:20.870 --> 00:02:25.490
+Tworzy produkcyjną wersję naszego projektu i tworzy wbudowany folder.
+
+00:02:25.490 --> 00:02:33.140
+A następnie wdrożenie użyje tych stron GitHub, abyśmy właśnie zainstalowali i użyli naszego wbudowanego folderu.
+
+00:02:33.140 --> 00:02:35.560
+Wracajmy.
+
+00:02:35.660 --> 00:02:35.990
+W porządku.
+
+00:02:35.990 --> 00:02:40.780
+I w końcu musieliśmy wdrożyć tę witrynę, uruchamiając uruchomienie NPM.
+
+00:02:41.720 --> 00:02:42.590
+Zróbmy to.
+
+00:02:42.590 --> 00:02:50.190
+Pozwól mi zapisać, a potem i tutaj wyjaśnijmy to.
+
+00:02:50.240 --> 00:02:52.010
+Uruchom NPM, który jest
+
+00:02:55.240 --> 00:02:56.470
+tym skryptem.
+
+00:02:56.500 --> 00:02:59.580
+I pamiętaj, że wcześniejsze wdrożenia będą uruchamiane przed nim.
+
+00:02:59.710 --> 00:03:04.900
+Więc jeśli go uruchomię, wygląda na to, że mam błąd w pakiecie Jason.
+
+00:03:04.900 --> 00:03:06.130
+Zobaczmy.
+
+00:03:06.130 --> 00:03:07.520
+Czego tu brakuje.
+
+00:03:07.520 --> 00:03:10.570
+Na końcu mam przecinek, którego nie potrzebuję.
+
+00:03:10.570 --> 00:03:15.720
+Uruchommy to jeszcze raz.
+
+00:03:15.750 --> 00:03:18.880
+Widzisz, że właśnie utworzono folder kompilacji.
+
+00:03:18.960 --> 00:03:21.360
+Tworzy zoptymalizowaną produkcję.
+
+00:03:21.600 --> 00:03:28.370
+To wspaniale i oto nasz projekt został już opublikowany.
+
+00:03:28.370 --> 00:03:38.910
+Teraz wszystko, co musimy zrobić, to wrócić do naszego repozytorium, przejść do ustawień, a jeśli przewiniemy do
+
+00:03:39.120 --> 00:03:47.670
+końca, aby uzyskać strony centrum, musimy zmienić źródło, aby gałęzie strony centrum.
+
+00:03:47.680 --> 00:03:53.620
+Teraz możesz poczekać kilka minut lub nawet odświeżyć stronę, aby upewnić się, że
+
+00:03:53.620 --> 00:03:55.010
+zmiany zostały zastosowane.
+
+00:03:55.300 --> 00:04:03.740
+A jeśli wszystko pójdzie dobrze, pamiętaj, że wybieramy gałąź stron github, klikam ten link i
+
+00:04:03.740 --> 00:04:04.820
+odświeżam.
+
+00:04:04.820 --> 00:04:05.840
+Proszę bardzo.
+
+00:04:05.840 --> 00:04:16.950
+Nasza aplikacja dla przyjaciół Robo jest teraz dostępna w tym U. R. L. więc mogę po prostu skopiować ten adres
+
+00:04:17.760 --> 00:04:26.200
+URL, przejść do edycji mojego projektu, a następnie dodać naszą stronę internetową tutaj, aby następnym razem ktoś przyszedł i sprawdził nasze repozytorium, może
+
+00:04:26.200 --> 00:04:29.470
+po prostu kliknąć tutaj, aby zobaczyć projekt na żywo.
+
+00:04:29.470 --> 00:04:30.980
+Jakie to jest świetne.
+
+00:04:31.060 --> 00:04:39.600
+Ładne i proste, i tak po prostu mamy aplikację gotową do produkcji, ponieważ pamiętaj, że aplikacja create
+
+00:04:39.960 --> 00:04:46.690
+reag dla nas optymalizuje wszystko i zachowuje wszystko naprawdę bardzo małe do produkcji.
+
+00:04:46.710 --> 00:04:54.090
+Nasze pliki JavaScript, mimo że są zminimalizowane, wyglądają na bardzo małe i nic nie przypominają
+
+00:04:54.150 --> 00:05:03.870
+tego, co mieliśmy wcześniej z kontenerami i komponentami, ponieważ korzystamy z aplikacji Create React, która jest zoptymalizowana pod kątem produkcji.
+
+00:05:05.410 --> 00:05:09.910
+Gratulacje, pokaż znajomym. Zobaczę w następnej kolejności jeden może.

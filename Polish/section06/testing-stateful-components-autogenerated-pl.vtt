@@ -1,0 +1,382 @@
+﻿WEBVTT
+
+00:00:01.570 --> 00:00:02.780
+Witamy spowrotem.
+
+00:00:02.780 --> 00:00:10.390
+Zróbmy trochę testów, które są nieco trudniejsze do zrobienia, robimy to trochę mniejszym pomniejszonym
+
+00:00:10.440 --> 00:00:15.340
+testem Sab i PM, żeby uruchomić go w tle.
+
+00:00:15.360 --> 00:00:16.770
+To zawsze miłe.
+
+00:00:17.600 --> 00:00:21.460
+I przejdźmy do naszej karty.
+
+00:00:21.800 --> 00:00:26.890
+Lub przycisk licznika, ponieważ jest to trochę bardziej wyjątkowe.
+
+00:00:26.900 --> 00:00:28.820
+To już nie jest bezpaństwowiec.
+
+00:00:28.820 --> 00:00:32.560
+W rzeczywistości mamy stan z liczbą.
+
+00:00:32.840 --> 00:00:36.500
+I tak, mamy trochę więcej logiki.
+
+00:00:37.010 --> 00:00:45.240
+Mamy również ten stan, który ma miejsce, gdy zwiększamy liczbę stanów.
+
+00:00:45.540 --> 00:00:50.500
+I myślę, że w poprzednim filmie miałem to jako osobną metodę, którą można tu przywołać.
+
+00:00:50.580 --> 00:00:58.510
+Na razie możemy po prostu zostawić to tak, jak to jest, że chcemy przetestować tę funkcję
+
+00:00:58.510 --> 00:01:03.520
+stanu, która faktycznie rośnie, dlatego właśnie oczekujesz od licznika.
+
+00:01:03.980 --> 00:01:09.620
+Więc jak mamy zamiar przetestować, jak wiemy, pierwszym krokiem jest stworzenie pliku
+
+00:01:09.630 --> 00:01:11.880
+testowego, by tak rzec.
+
+00:01:11.880 --> 00:01:18.300
+CONAN Brian dostał zleconego podejrzanego Tak.
+
+00:01:18.430 --> 00:01:20.430
+I pierwszą rzeczą, którą chcemy zrobić.
+
+00:01:20.500 --> 00:01:26.330
+Znowu zrobiliśmy to już wcześniej, więc zamierzam skopiować z testu Carlists.
+
+00:01:26.470 --> 00:01:29.570
+Zamknijmy niektóre z nich, aby oczyścić rzeczy, a
+
+00:01:32.800 --> 00:01:35.310
+następnie je skopiuj i wklej.
+
+00:01:35.520 --> 00:01:42.200
+Teraz zamiast listy kart testowałem licznik Bawden.
+
+00:01:42.450 --> 00:01:46.440
+I tak naprawdę nie potrzebujemy już naszych fałszywych robotów.
+
+00:01:48.300 --> 00:01:57.540
+A ta aglomeracja nie ma żadnych rekwizytów, które otrzymuje.
+
+00:01:57.540 --> 00:02:08.460
+Po prostu zróbmy symulacyjny kolor koncertu, a powiemy, że ten fałszywy kolor będzie po prostu czerwony, a
+
+00:02:08.460 --> 00:02:11.280
+my damy mu pewność.
+
+00:02:11.280 --> 00:02:12.670
+To jest rzeczywisty składnik.
+
+00:02:12.720 --> 00:02:17.440
+Damy mu kolor pozorowanego koloru.
+
+00:02:19.540 --> 00:02:26.070
+Teraz jest to sprawa, mimo że jest to element stanowy, który wciąż możemy dopasować do testów
+
+00:02:26.070 --> 00:02:26.660
+migawkowych.
+
+00:02:26.680 --> 00:02:28.770
+Mam na myśli to, że wciąż jest komponentem.
+
+00:02:28.870 --> 00:02:30.100
+Więc
+
+00:02:32.770 --> 00:02:36.680
+oszczędzajmy, a teraz mamy nową migawkę idealną.
+
+00:02:36.720 --> 00:02:40.830
+Więc jeśli kiedykolwiek zmodyfikujemy konurbację i będzie to błąd, to dobrze.
+
+00:02:40.840 --> 00:02:42.200
+Zróbmy to trochę mniejszym.
+
+00:02:45.380 --> 00:02:48.510
+W porządku, stwórzmy teraz testy tutaj.
+
+00:02:48.620 --> 00:02:54.890
+A tak na marginesie, jeśli chcesz, możesz użyć opisu, a następnie pogrupować wszystkie testy razem.
+
+00:02:55.260 --> 00:02:57.160
+Ale już ci pokazałem, jak to zrobić.
+
+00:02:57.170 --> 00:03:02.410
+Możesz to zrobić samodzielnie, jeśli chcesz mieć więcej organizacji do testów.
+
+00:03:02.420 --> 00:03:09.020
+Zróbmy teraz test, który powie, że chcemy
+
+00:03:11.470 --> 00:03:17.860
+się upewnić, że poprawnie zwiększa licznik.
+
+00:03:17.980 --> 00:03:22.780
+I znowu nasza zwykła składnia i tutaj możemy pisać testy.
+
+00:03:22.780 --> 00:03:24.080
+Więc co możemy zrobić.
+
+00:03:24.850 --> 00:03:27.890
+Cóż, najpierw myślę, że po prostu zróbmy koncert.
+
+00:03:29.370 --> 00:03:39.340
+Raper i to będzie tylko płytkie renderowanie naszego komponentu, a my po prostu będziemy mieć udawanego
+
+00:03:40.150 --> 00:03:43.360
+rozmówcę, którego będziemy używać.
+
+00:03:43.360 --> 00:03:48.640
+W porządku, więc teraz, gdy mamy to, zamiast tylko zawsze pisać, oczekujemy, a
+
+00:03:48.640 --> 00:03:55.190
+potem robimy to płytko, możemy po prostu powiedzieć, że spodziewamy się rapera i możemy napisać więcej testów tutaj.
+
+00:03:55.250 --> 00:04:05.300
+Powiedzmy, że chcemy, aby raper Daut znalazł inną rzecz, którą otrzymujemy dzięki pakietowi enzymów.
+
+00:04:05.400 --> 00:04:12.060
+Tak więc na opakowaniu tak, jak w przypadku zapytania
+
+00:04:12.060 --> 00:04:22.960
+lub zapytania Jaya wybierzemy wszystko, co możemy zrobić, np. Znajdźmy, gdzie znajdujemy, powiedzmy identyfikator, i to
+
+00:04:28.030 --> 00:04:37.410
+musi być nawias kwadratowy, w którym mamy identyfikator, robiąc to, mogę teraz wejść do
+
+00:04:43.410 --> 00:04:52.710
+mojego Konurbację i po prostu nadaj jej identyfikator, a my sprawimy, że zrobimy migawkę.
+
+00:04:52.930 --> 00:04:58.570
+A teraz możemy znaleźć ten licznik ID, który jest przyciskiem.
+
+00:04:58.570 --> 00:05:10.190
+Teraz możemy zrobić coś, co nazywa się symulacją i symulacją zdarzenia, takiego jak zdarzenie kliknięcia, w którym Konner ma zdarzenie typu
+
+00:05:10.670 --> 00:05:12.940
+"kliknij, aby kliknąć".
+
+00:05:13.010 --> 00:05:19.540
+Po prostu symulowaliśmy kliknięcie tej konurbacji.
+
+00:05:19.600 --> 00:05:27.790
+Jeśli więc zasymulujemy kliknięcie na liczniku Bawdena, a stan lub liczba w stanie wynosi zero, liczymy,
+
+00:05:27.790 --> 00:05:30.850
+że teraz liczba wynosi 1.
+
+00:05:30.880 --> 00:05:41.820
+Więc wszystko, co musimy zrobić, to powiedzieć, że otwieramy xpect, możemy użyć czegoś, co nazywa się stanem.
+
+00:05:41.880 --> 00:05:47.310
+Więc to będzie chwytać stan i spodziewamy się, że
+
+00:05:50.950 --> 00:05:54.380
+stan będzie równy zliczeniu jednego.
+
+00:05:54.400 --> 00:05:55.710
+Zobaczmy, czy to faktycznie działa.
+
+00:05:55.710 --> 00:05:57.390
+Kiedy znajdziesz tu jakieś półkolonie.
+
+00:05:59.370 --> 00:06:02.240
+W porządku wszystko mija.
+
+00:06:02.310 --> 00:06:07.130
+Ale znowu chcemy się upewnić, że to faktycznie testujemy, podczas gdy chcesz,
+
+00:06:07.130 --> 00:06:11.500
+powiedzmy, że teraz jest zero, bo to się nie udało.
+
+00:06:11.510 --> 00:06:15.410
+I wróćmy jeszcze raz, aby upewnić się, że nasze rzeczy przeminą.
+
+00:06:15.410 --> 00:06:18.370
+Zamierzam ponownie zasymulować kliknięcie.
+
+00:06:18.620 --> 00:06:20.270
+Więc jeśli pójdę.
+
+00:06:20.480 --> 00:06:20.750
+Nie.
+
+00:06:20.780 --> 00:06:23.260
+Teraz spodziewa się dwóch.
+
+00:06:23.420 --> 00:06:28.670
+Zmieniłem go, by przekazać nasze testy.
+
+00:06:28.690 --> 00:06:30.130
+To fajnie.
+
+00:06:30.130 --> 00:06:33.010
+Teraz jeśli usuniemy ten licznik i
+
+00:06:37.070 --> 00:06:43.190
+mam dwa nieudane testy teraz, ponieważ na górze uruchomiono migawkę, która teraz nie działa,
+
+00:06:43.190 --> 00:06:51.530
+ponieważ zmieniliśmy wygląd komponentu Usunęliśmy również sposób, w jaki możemy pobrać ten komponent przez ID i ciebie można zobaczyć,
+
+00:06:51.530 --> 00:06:57.410
+że ta metoda symulowania ma być uruchamiana tylko w jednym funduszu zerowym, ponieważ
+
+00:06:57.410 --> 00:07:00.610
+nie udało nam się znaleźć identyfikatora licznika.
+
+00:07:00.800 --> 00:07:04.640
+Możesz tu zrobić wiele rzeczy, aby pobrać obiekt.
+
+00:07:04.640 --> 00:07:11.120
+Zazwyczaj lubię mieć identyfikator, bo dobrze ładuję, ale to całkiem fajne.
+
+00:07:11.120 --> 00:07:20.010
+Po prostu w bardzo prosty sposób przetestowaliśmy nasz stan i po raz kolejny nie jesteśmy przytłoczeni tym wszystkim, pracując z
+
+00:07:20.430 --> 00:07:27.600
+właśnie oszustwem i dokumentacją enzymu, którą możesz pobrać w jeden dzień dość łatwo i nie pamiętam
+
+00:07:27.660 --> 00:07:29.300
+wszystkich tych rzeczy.
+
+00:07:29.310 --> 00:07:33.030
+Zwykle przechodzę do ich dokumentacji i mówię o tym, że mają metodę asymilacji.
+
+00:07:33.150 --> 00:07:38.790
+O tak, oni mają metodę stanu, aby złapać stan i to, jak pracujesz jako programista lub
+
+00:07:38.790 --> 00:07:45.540
+nie masz encyklopedii w głowie wszystkich metod, po prostu wiesz, że to jest to, co enzym i po prostu
+
+00:07:45.540 --> 00:07:46.230
+zrobić.
+
+00:07:46.410 --> 00:07:50.260
+Pozwól mi pójść sprawdzić ich dokumentację i zobaczyć, jak mogę pobrać stan.
+
+00:07:50.640 --> 00:07:57.210
+Aha, a przy okazji, jeśli dodam jeszcze raz, pamiętajcie, że javascript po prostu
+
+00:07:57.330 --> 00:08:08.040
+idzie jeden po drugim, jeśli dodaję tutaj inne kliknięcie, a na dole tutaj uruchomię innego oczekuję, że spodziewam się, że teraz jest trójka.
+
+00:08:08.260 --> 00:08:12.910
+I widzisz, że wszystkie moje testy wciąż mijają, ponieważ wszystko dzieje się sekwencyjnie.
+
+00:08:14.400 --> 00:08:24.470
+A jeśli dodam do tego inne kliknięcie, to mogę lub powiedzmy, że to będzie klawiszowe naciśnięcie, nawet jeśli jest tam naciśnięcie
+
+00:08:24.470 --> 00:08:28.300
+klawisza, ponieważ nie ma żadnego naciśnięcia klawisza.
+
+00:08:28.370 --> 00:08:32.930
+Nadal oczekuję stanu Kaante we wszystkich trzech.
+
+00:08:32.930 --> 00:08:34.100
+Proszę bardzo.
+
+00:08:34.190 --> 00:08:40.820
+Teraz, kiedy testujesz, jest tyle rzeczy, które możesz przetestować, możesz po prostu kontynuować,
+
+00:08:40.820 --> 00:08:46.040
+kontynuować i ciągnąć, ale chcesz mądrze wykorzystać swój czas.
+
+00:08:46.050 --> 00:08:48.020
+Czy ten test.
+
+00:08:48.030 --> 00:08:50.360
+Czy wystarczy przejść do innych testów?
+
+00:08:50.370 --> 00:08:54.680
+I zawsze jest kompromis w kwestii tego, jak działa twój projekt.
+
+00:08:54.680 --> 00:09:00.870
+Ile innych testów masz w swoim projekcie i ile czasu i zasobów masz do napisania testów.
+
+00:09:00.870 --> 00:09:02.780
+Zróbmy ostatnią.
+
+00:09:02.910 --> 00:09:11.400
+Spodziewam się, że raper Daut prop powie,
+
+00:09:15.050 --> 00:09:22.920
+że ma taki sam kolor czerwony.
+
+00:09:22.980 --> 00:09:24.190
+Zobaczmy, czy to działa.
+
+00:09:26.700 --> 00:09:28.610
+W porządku, mam nieudany test.
+
+00:09:28.620 --> 00:09:35.190
+A to dlatego, że po prostu zgadywaliśmy na podstawie stanu, czy ma rekwizyty i dwie równe.
+
+00:09:35.190 --> 00:09:44.970
+Więc zwiążmy się i widzimy, że spodziewaliśmy się koloru czerwonego, ale zamiast tego mamy mnóstwo innych rekwizytów, ponieważ podczas gdy
+
+00:09:45.950 --> 00:09:53.070
+mamy kolor czerwony, ale mamy też dzieci i mamy Heidi, a także zdarzenie click
+
+00:09:53.250 --> 00:09:53.890
+on.
+
+00:09:55.770 --> 00:10:05.470
+Inną rzeczą, którą możemy tutaj zrobić, to być może po prostu kolor, oszczędzajmy, a teraz
+
+00:10:05.650 --> 00:10:12.910
+mamy kolor czerwony, co jest dobre, dlatego chcemy powiedzieć dwa równe.
+
+00:10:13.150 --> 00:10:14.280
+I proszę.
+
+00:10:14.410 --> 00:10:20.830
+Nasze testy kończą się tym, że mamy tu konsolowy dziennik, który jest trochę
+
+00:10:21.520 --> 00:10:28.900
+denerwujący. Usuńmy to z przycisku licznika i są testy znacznie przewyższające i wyglądające bardzo ładnie.
+
+00:10:28.950 --> 00:10:33.290
+Mam nadzieję, że masz ogólne pojęcie o testowaniu komponentów.
+
+00:10:33.360 --> 00:10:40.860
+A przy okazji, ten folder z migawkami, który w rzeczywistości będzie zawierać to w twoim centrum pobierania lub jakiejkolwiek kontroli
+
+00:10:40.920 --> 00:10:42.110
+źródła, którą posiadasz.
+
+00:10:42.180 --> 00:10:48.210
+Popchniesz to i zaangażujesz się w swój projekt, ponieważ każdy nowy
+
+00:10:48.210 --> 00:10:53.370
+programista, który pojawi się w projekcie, pobierze najnowszą wersję.
+
+00:10:53.580 --> 00:10:58.010
+A także chcesz mieć pewność, że mają te migawki, kiedy przeprowadzają testy i
+
+00:10:58.010 --> 00:10:58.980
+modyfikują komponent.
+
+00:10:58.980 --> 00:11:04.380
+Te migawki sprawdzą się w stosunku do starszej wersji i upewnią się, że ten nowy programista
+
+00:11:04.590 --> 00:11:05.690
+niczego nie zmieni.
+
+00:11:05.820 --> 00:11:12.170
+Znowu te rzeczy będą również przechodziły do kontroli twojego źródła lub kontroli wersji.
+
+00:11:12.180 --> 00:11:14.470
+Dobra, do zobaczenia w następnym wideo.
+
+00:11:14.550 --> 00:11:15.160
+PA pa.

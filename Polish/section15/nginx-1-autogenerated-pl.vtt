@@ -1,0 +1,235 @@
+﻿WEBVTT
+
+00:00:00.640 --> 00:00:01.600
+Witam ponownie.
+
+00:00:01.790 --> 00:00:03.950
+Zróbmy tutaj coś fajnego.
+
+00:00:04.100 --> 00:00:10.200
+Możemy teraz utworzyć własny, niski balancer, jeśli chodzi o równoważenie obciążenia.
+
+00:00:10.210 --> 00:00:18.040
+Użyjemy silnika X i jest kilka możliwych opcji, które mogą ułatwić dostęp do silnika, ale także coś o
+
+00:00:18.040 --> 00:00:20.740
+nazwie H. ZA. proxy jest często używany.
+
+00:00:21.590 --> 00:00:27.050
+Większość z tych narzędzi wymaga tylko pliku konfiguracyjnego i jest tam mnóstwo zasobów, które pomogą Ci
+
+00:00:27.050 --> 00:00:27.940
+w Internecie.
+
+00:00:28.820 --> 00:00:34.690
+Jednak samo tworzenie nisko balansującego staje się coraz mniej powszechne.
+
+00:00:34.730 --> 00:00:42.920
+Widzisz większość firm takich jak Amazon Digital Ocean, a większość dostawców infrastruktury udostępnia już
+
+00:00:42.920 --> 00:00:50.420
+konfiguracje load balancerów, które mogą łatwo zaimplementować, np. Działania cyfrowe mają niskie saldo,
+
+00:00:50.420 --> 00:00:53.750
+które można dodać do serwerów.
+
+00:00:53.830 --> 00:00:55.180
+To bardzo proste.
+
+00:00:55.180 --> 00:01:00.340
+Naprawdę nie potrzebujesz kodu, a po prostu klikasz kilka przycisków i wszystko jest dla Ciebie.
+
+00:01:00.340 --> 00:01:08.460
+Masz również Amazon, który ma elastyczne równoważenie obciążenia, które po prostu po prostu zaimplementujesz i skonfigurujesz.
+
+00:01:08.580 --> 00:01:14.940
+Jednak chcę, abyśmy zbudowali system równoważenia obciążenia tylko po to, aby zrozumieć, jak działa i po prostu mieć wiedzę na
+
+00:01:14.940 --> 00:01:21.420
+temat tego, jak takie rzeczy jak Amazon i Digital Ocean, w jaki sposób firmy te są w stanie zaimplementować równoważenie obciążenia.
+
+00:01:21.690 --> 00:01:23.200
+Więc dajmy sobie spokój.
+
+00:01:23.250 --> 00:01:29.790
+Mam tutaj fajny mały plik i będziesz mieć dostęp do tego na końcu tego filmu, dzięki czemu możesz
+
+00:01:30.000 --> 00:01:34.200
+przetestować niektóre z technik niskiego równoważenia i niskich testów, które zamierzamy zrobić,
+
+00:01:34.230 --> 00:01:36.390
+ponieważ jest to dużo zabawy.
+
+00:01:36.390 --> 00:01:38.700
+Teraz nie przejmuj się tym kodem.
+
+00:01:38.700 --> 00:01:46.260
+Po prostu nie korzystałem z Express i korzystałem z natywnego modułu GTP i węzła, aby stworzyć prosty serwer,
+
+00:01:46.290 --> 00:01:48.980
+który zwraca fałszywe spustoszenie na ikonę.
+
+00:01:48.990 --> 00:01:57.060
+Robię to tylko po to, aby upewnić się, że nie otrzymamy żadnych dziwnych zapisów o braku Brokera, a
+
+00:01:57.060 --> 00:01:59.370
+następnie po prostu anulujemy logowanie.
+
+00:01:59.370 --> 00:02:05.010
+Dodajemy niektóre nagłówki odpowiedzi, ale znowu jest to ważne, że jesteśmy tylko rejestrowaniem konsoli za każdym razem,
+
+00:02:05.100 --> 00:02:07.190
+gdy nasi wzmacniacze zostaną trafieni.
+
+00:02:07.200 --> 00:02:12.040
+Zostałem trafiony i nasz serwer będzie działał tutaj.
+
+00:02:12.140 --> 00:02:18.670
+Nic nie jest szalone, ale mam też do czynienia z plikiem w doku, czymś, co widzieliśmy wcześniej,
+
+00:02:18.790 --> 00:02:22.140
+a ten plik kompostowy prześladowcy jest całkiem interesujący.
+
+00:02:22.150 --> 00:02:24.310
+Mamy kilka usług.
+
+00:02:24.310 --> 00:02:29.380
+Jednym z nich jest sieć z drugiej Web 2 i web 3.
+
+00:02:29.470 --> 00:02:31.180
+Naprawdę kreatywne z moim imieniem tutaj.
+
+00:02:31.360 --> 00:02:39.190
+Ale widzisz, że mają po prostu porty 3000 i zmienmy te dwa różne porty,
+
+00:02:39.400 --> 00:02:42.950
+abyśmy mieli lepszy pomysł, jak działają.
+
+00:02:42.950 --> 00:02:51.620
+Więc każda usługa na różnych portach i wszystko, co zamierzają zrobić, to uruchomić polecenie budowania.
+
+00:02:51.670 --> 00:02:53.770
+Zauważ również, że teraz wykonujemy przekierowanie portów.
+
+00:02:53.770 --> 00:02:59.890
+Oznacza to, że są oni sami, tylko to, co znajduje się wewnątrz doku lub kontener będzie miał do
+
+00:02:59.890 --> 00:03:00.660
+nich dostęp.
+
+00:03:00.790 --> 00:03:05.170
+Jeśli przejdziemy do kompilacji, która jest dokiem lub plikiem, który je buduje.
+
+00:03:05.330 --> 00:03:09.890
+Widzę, że po prostu używamy węzła, na który wystawiamy port trzy tysiące.
+
+00:03:09.920 --> 00:03:15.890
+Tworzymy katalog o nazwie app i przenosimy na serwer ten plik GS, który już
+
+00:03:15.890 --> 00:03:24.170
+wam pokazałem, a także pakiet dodgiest w pliku do uruchomienia instalacji NPM, a następnie mamy tylko punkt wejścia i polecenie,
+
+00:03:24.170 --> 00:03:28.220
+które ma zostać uruchomione serwer, który mamy tutaj.
+
+00:03:31.260 --> 00:03:34.340
+I nie ma tu nic szalonego.
+
+00:03:34.350 --> 00:03:41.940
+Ale wtedy mamy coś, co nazywa się load balancer, a ten load balancer buduje z kolejnego złego folderu,
+
+00:03:41.940 --> 00:03:44.050
+którego jeszcze nie stworzyliśmy.
+
+00:03:44.130 --> 00:03:51.700
+Będzie wystawiał port 80, a my będziemy mieć dostęp do localhosta i łączy stronę od jednego
+
+00:03:51.880 --> 00:04:00.590
+do trzech, a także używa woluminów i ma ten komentarz. Teraz zostawię zasób w tym projekcie, żebyś mógł przeczytać
+
+00:04:00.590 --> 00:04:01.960
+na to.
+
+00:04:01.970 --> 00:04:07.370
+Wszystko, co robi, pozwala nam uruchamiać polecenia doktora w kontenerze, a ja połączyłem się z artykułem,
+
+00:04:07.370 --> 00:04:09.760
+na którym można przeczytać więcej informacji.
+
+00:04:09.770 --> 00:04:12.200
+Teraz nie jest to typowa konfiguracja.
+
+00:04:12.200 --> 00:04:20.370
+Kiedy robisz wyrównywacz obciążenia, ponieważ mamy wszystko pod jednym kontenerem, jeśli pamiętasz, że chcemy mieć system
+
+00:04:20.370 --> 00:04:25.100
+równoważenia obciążenia, który działa samodzielnie na różnych serwerach.
+
+00:04:25.290 --> 00:04:30.510
+W tej chwili mamy wszystko w jednym gigantycznym pojemniku i robię to tylko po to,
+
+00:04:30.540 --> 00:04:37.350
+abyśmy mogli demonstrować bez konieczności rozpraszania wszystkich tych różnych usług na moim laptopie i po prostu stuknąć wszystko w
+
+00:04:37.450 --> 00:04:39.800
+pliku lub skomponować dla celów demonstracyjnych.
+
+00:04:39.900 --> 00:04:46.260
+Ale w rzeczywistości mamy maszynę do wyrównywania obciążenia, która sama jest serwerem,
+
+00:04:46.290 --> 00:04:56.230
+a sama serwer jest serwerem trzecim, ale z tym plikiem mamy teraz sposób na to, aby system równoważenia obciążenia
+
+00:04:56.230 --> 00:05:05.260
+został trafiony przez port 80 a następnie rozprowadzić drogę do serwera 1 2 i 3, które będą uruchamiać
+
+00:05:05.540 --> 00:05:07.510
+tę kopię serwera.
+
+00:05:07.640 --> 00:05:13.840
+Stwórzmy więc ten folder silnika X i stwórz naszego opiekuna obciążenia Angie Nax.
+
+00:05:13.890 --> 00:05:24.550
+Zamierzam powiedzieć nowy folder, a następnie silnik X iw tym następnym folderze musimy stworzyć dwie rzeczy.
+
+00:05:24.760 --> 00:05:33.700
+Najpierw musimy utworzyć plik dokowania, ponieważ pamiętajmy, że musimy budować zgodnie z Dr. teraz i tej jesieni zrobimy prosty
+
+00:05:33.700 --> 00:05:36.970
+komentarz do pliku doc.
+
+00:05:37.060 --> 00:05:42.050
+Zamierzamy po prostu użyć silnika następnego obrazu, który już tam jest.
+
+00:05:42.130 --> 00:05:44.050
+Dzięki Hub Sudhakar.
+
+00:05:44.320 --> 00:05:45.700
+A potem
+
+00:05:49.130 --> 00:05:54.680
+skopiujemy plik. Zamierzamy utworzyć plik o nazwie Engine X dot com, który jest
+
+00:05:54.680 --> 00:06:04.010
+plikiem konfiguracyjnym i silnikiem X, który wkrótce utworzymy i przeniesiemy go do naszego kontenera w domyślnej lokalizacji konfiguracji plików X silnika. pliki
+
+00:06:04.010 --> 00:06:06.280
+powinny być w naszym przypadku.
+
+00:06:06.350 --> 00:06:09.020
+Nazwijmy to tak.
+
+00:06:13.360 --> 00:06:14.310
+to jest to!
+
+00:06:14.470 --> 00:06:19.780
+Możemy użyć Dr. Howard po prostu chwycił pojemnik lub chwycił obraz, a następnie możemy
+
+00:06:19.960 --> 00:06:21.190
+go skonfigurować od samego początku.
+
+00:06:21.340 --> 00:06:29.370
+Stwórzmy teraz nowy plik, a to będzie nasz silnik X kropka w porządku tutaj.
+
+00:06:29.510 --> 00:06:31.820
+Zacznijmy od naszej konfiguracji dla.

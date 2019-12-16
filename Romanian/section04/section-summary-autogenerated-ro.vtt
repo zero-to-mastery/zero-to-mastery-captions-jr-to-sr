@@ -1,0 +1,193 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:03.320
+Hei, e Bruno aici.
+
+00:00:03.410 --> 00:00:07.190
+Dumnezeule, această aplicație arată uimitoare.
+
+00:00:07.190 --> 00:00:09.410
+Îmi place acest lucru redux și uita-te la asta.
+
+00:00:09.410 --> 00:00:13.580
+Logarea va fi minunată Cred că dezvoltatorii noștri se vor bucura de acest lucru.
+
+00:00:13.730 --> 00:00:20.990
+Și cred că aplicația noastră se poate măsura într-adevăr foarte bine acum, cu posibilitatea de a urmări toate aceste acțiuni.
+
+00:00:21.020 --> 00:00:22.670
+O treabă minunată.
+
+00:00:22.820 --> 00:00:26.310
+Într-adevăr bucuros că te-am rănit bine.
+
+00:00:26.390 --> 00:00:29.030
+Brunos este cu siguranta incantat de munca noastra.
+
+00:00:29.030 --> 00:00:33.980
+Cred că facem o treabă bună pentru el, dar mai sunt încă multe de învățat și am
+
+00:00:33.980 --> 00:00:37.130
+sentimentul că ne va cere să facem mai multe lucruri.
+
+00:00:37.580 --> 00:00:43.040
+Să revizuim ceea ce tocmai am învățat și voi trece prin aceste diagrame care ar putea să nu
+
+00:00:43.040 --> 00:00:45.480
+vă fi făcut prea multă sens la început.
+
+00:00:45.800 --> 00:00:47.740
+Dar acum ar trebui să fie foarte clar.
+
+00:00:48.230 --> 00:00:54.550
+Am reacționat care ne-a permis să gestionăm statul cu acest stat, dar nu foarte bine.
+
+00:00:54.560 --> 00:01:03.380
+Odată ce aplicația noastră crește, aceasta poate deveni destul de agitată și ajunge într-o stare în care componenta noastră arată astfel
+
+00:01:03.380 --> 00:01:06.080
+cu toate statele care trebuie gestionate.
+
+00:01:07.420 --> 00:01:15.580
+Din fericire pentru noi, cu redux, putem crea un magazin și putem trimite aceste acțiuni la magazin și
+
+00:01:16.060 --> 00:01:19.030
+toate componentele conectate vor asculta doar.
+
+00:01:19.510 --> 00:01:24.250
+Și chestia grozavă este că nu mai trebuia să trecem sub picioare.
+
+00:01:24.250 --> 00:01:32.740
+Putem conecta componenta noastră oriunde vrem să putem conecta această componentă dacă vrem să putem conecta această componentă indiferent de componenta
+
+00:01:32.740 --> 00:01:35.660
+pe care dorim să o conectăm.
+
+00:01:35.710 --> 00:01:39.790
+Asta a fost de până la noi, dar a făcut totul într-o singură locație frumos și ușor.
+
+00:01:41.950 --> 00:01:44.250
+Aplicația noastră ar arăta astfel.
+
+00:01:47.390 --> 00:01:55.090
+Și apoi am vorbit în cele din urmă de ce folosesc redux Ei bine are sens acum.
+
+00:01:55.120 --> 00:01:57.660
+Este minunat pentru administrarea unui stat mare.
+
+00:01:57.820 --> 00:02:05.330
+Putem împărtăși date între containere și acum înțelegem cele trei principii care o fac foarte previzibilă.
+
+00:02:05.410 --> 00:02:08.630
+Primul este faptul că a fost o singură sursă de adevăr.
+
+00:02:08.650 --> 00:02:12.140
+Avem doar un obiect masiv de javascript care trebuie să vă faceți griji.
+
+00:02:12.160 --> 00:02:17.800
+Asta descrie aplicația noastră statul nostru este citit și numai.
+
+00:02:18.010 --> 00:02:21.220
+De fiecare dată când reductorul nostru scutură un nou stat.
+
+00:02:21.220 --> 00:02:23.430
+Deci niciodată nu modificăm nimic.
+
+00:02:23.530 --> 00:02:29.320
+Și putem întotdeauna să facem lucruri reci, cum ar fi întoarcerea la timp și să fugim prin
+
+00:02:29.560 --> 00:02:37.240
+acțiuni pentru a vedea ce stătător obținem sau ce stare ajungem să ajungem în viziune, cum ar fi introducerea în roata de
+
+00:02:37.240 --> 00:02:39.190
+căutare și obținerea roboților potriviți.
+
+00:02:40.140 --> 00:02:47.640
+Și apoi, în final, toate schimbările sunt făcute utilizând funcțiile pure o tehnică excelentă care evită efectele secundare, astfel
+
+00:02:47.640 --> 00:02:51.260
+încât aplicațiile noastre să fie cu adevărat previzibile.
+
+00:02:53.830 --> 00:03:00.430
+Am aflat despre această diagramă și despre modul în care totul curge frumos știi direcțional că avem acțiuni care pot sau nu
+
+00:03:00.430 --> 00:03:05.030
+pot trece prin metal, în timp ce avem reductoare pe care le avem la magazin.
+
+00:03:05.140 --> 00:03:06.050
+Noi facem schimbări.
+
+00:03:06.070 --> 00:03:11.510
+Și oricând există o acțiune, ne întoarcem și avem acest flux uni-direcțional.
+
+00:03:12.220 --> 00:03:18.910
+Și acum, în loc să folosim acele aplicații care să spunem că folosesc Jay Querrey din nou în ziua în
+
+00:03:18.910 --> 00:03:26.250
+care aveam toate aceste logici complexe pe care le putem raționa sau nu am putea avea sens în capul nostru, acum putem arăta astfel.
+
+00:03:26.260 --> 00:03:28.240
+Totul curge frumos.
+
+00:03:31.340 --> 00:03:40.380
+Apoi, ultimul punct este acela că redoxul nu înseamnă că poate folosi acest punct punct pentru lucruri cum ar fi probabil un
+
+00:03:40.380 --> 00:03:47.850
+semnal mic în formă pe care am putea să-l folosim în continuare acest stat aici pentru că nu
+
+00:03:47.850 --> 00:03:51.630
+trebuie să punem totul într-un magazin X citit.
+
+00:03:51.630 --> 00:03:57.840
+Noi, în calitate de dezvoltatori, putem decide ce se întâmplă în acest sau în magazin și ceea ce este suficient de mic și
+
+00:03:57.840 --> 00:04:05.400
+lipsit de importanță pentru a putea folosi în continuare acest stat să reacționeze bine în lucrul redox împreună și să arhitectură ce ar trebui să fie aplicația
+
+00:04:05.400 --> 00:04:05.960
+noastră.
+
+00:04:07.160 --> 00:04:14.540
+În cele din urmă, totul începe să aibă sens acum că această cale critică de redare a fost tocmai îmbunătățită.
+
+00:04:15.540 --> 00:04:23.490
+Am aflat că Westpac ne ajută să legăm aceste fișiere într-un mod frumos, astfel încât să putem livra cele
+
+00:04:23.550 --> 00:04:27.190
+mai optimizate fișiere javascript la capătul din față.
+
+00:04:28.110 --> 00:04:34.680
+Și în secțiunea de performanță partea 2 veți afla de fapt câteva trucuri pe care le putem face
+
+00:04:35.070 --> 00:04:38.340
+cu ce pachet pentru a optimiza acest lucru.
+
+00:04:38.340 --> 00:04:44.950
+De asemenea, acum înțelegem de ce redux și react acționează bine împreună.
+
+00:04:45.150 --> 00:04:50.240
+Unul pentru a reacționa pentru a minimiza numărul de actualizări Dohm pe care trebuie să le facem.
+
+00:04:50.250 --> 00:04:58.080
+Se va decide TELEGIN ce anume trebuie să fie redat și reduxul adaugă reacția, făcând mai ușor pentru noi să
+
+00:04:58.080 --> 00:05:02.950
+înțelegem cum aplicațiile noastre devin tot mai mari și mai mari.
+
+00:05:03.750 --> 00:05:04.520
+In regula.
+
+00:05:04.650 --> 00:05:08.930
+A fost o secțiune dificilă, dar mă bucur că ați ajuns aici atât de departe.
+
+00:05:08.940 --> 00:05:14.050
+Sper că veți continua, deoarece există multe alte bunaturi care vin.
+
+00:05:14.100 --> 00:05:15.270
+De abia aștept.
+
+00:05:15.270 --> 00:05:17.080
+Sper că vă simțiți bine.
+
+00:05:17.100 --> 00:05:18.100
+Ne vedem în următorul.

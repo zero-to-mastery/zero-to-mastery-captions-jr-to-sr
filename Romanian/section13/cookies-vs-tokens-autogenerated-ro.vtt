@@ -1,0 +1,409 @@
+﻿WEBVTT
+
+00:00:01.640 --> 00:00:07.690
+Am o mică diagramă care explică într-adevăr foarte bine unele dintre metodele de autentificare pe care
+
+00:00:07.690 --> 00:00:08.880
+le putem folosi.
+
+00:00:08.890 --> 00:00:15.700
+Avem autentificarea bazată pe module cookie tradiționale pe care le-am acoperit ușor în secțiunea de securitate și, de
+
+00:00:16.330 --> 00:00:19.700
+asemenea, metoda de autentificare bazată pe token-ul modern.
+
+00:00:21.530 --> 00:00:28.590
+Iar autentificarea bazată pe cookie a fost metoda implicită încercată și adevărată pentru o lungă perioadă de timp.
+
+00:00:29.060 --> 00:00:32.090
+După cum puteți vedea aici, avem un browser și un server.
+
+00:00:32.090 --> 00:00:40.420
+De obicei, avem o solicitare POST pentru autentificare sau conectare și trimitem numele de utilizator și parola
+
+00:00:40.420 --> 00:00:41.460
+pe server.
+
+00:00:41.680 --> 00:00:47.300
+Serverul verifică acest lucru, asigurându-se că parolele se potrivesc și că utilizatorul există.
+
+00:00:47.410 --> 00:00:55.270
+Și dacă totul merge bine, ei trimit un răspuns spunând OK, puteți să vă conectați, dar ei trimite
+
+00:00:55.270 --> 00:00:59.650
+și un antet care este setat cookie cu sesiunea.
+
+00:00:59.650 --> 00:01:05.980
+Acesta este un cookie care este o bucată aleatorie de șir și această piesă aleatoare de șir va identifica
+
+00:01:05.980 --> 00:01:06.910
+acest browser.
+
+00:01:06.910 --> 00:01:14.520
+Va spune oricând doriți o cerere ca utilizatorii de API aici, trimiteți-mi cookie-ul.
+
+00:01:14.710 --> 00:01:17.160
+Acesta este cookie-ul pe care tocmai l-am trimis de la server.
+
+00:01:18.860 --> 00:01:24.890
+Și în acest caz, browserul dorește să-l primească pe utilizator și să-l îndrepte că vorbește cu serverul iar serverul vede că există
+
+00:01:24.890 --> 00:01:30.350
+un cookie pe care îl va verifica pe acest tip de cookie la bagheta pe care a creat-o aici.
+
+00:01:30.350 --> 00:01:36.320
+Trebuie să ne amintim acel cookie și să ne asigurăm că se potrivește similar cu modul în care aveam parola care
+
+00:01:36.320 --> 00:01:37.740
+trebuia să se potrivească.
+
+00:01:37.810 --> 00:01:39.390
+Deci serverul va lucra aici.
+
+00:01:39.400 --> 00:01:41.200
+Va fi să faci un pic de lucru.
+
+00:01:41.200 --> 00:01:44.240
+Va spune OK da, am acest cookie.
+
+00:01:44.350 --> 00:01:47.110
+Îmi amintesc că ți-am atribuit cookie-ul.
+
+00:01:47.110 --> 00:01:48.140
+Stiu cine esti.
+
+00:01:48.250 --> 00:01:51.280
+Deci, aici este informația dvs. despre utilizator.
+
+00:01:51.280 --> 00:01:58.570
+Obțineți feedback cu numele și autentificarea bazată pe cookie este ceea ce numim stateful.
+
+00:01:58.570 --> 00:02:05.170
+Aceasta înseamnă că o înregistrare de autentificare sau o sesiune trebuie păstrate atât în ​​browser, cât și în
+
+00:02:05.170 --> 00:02:05.840
+server.
+
+00:02:06.160 --> 00:02:14.350
+Browser-ul păstrează cookie-ul sesiunii în antet și serverul trebuie să țină evidența cookie-urilor pe care le-a trimis clienților să zicem o bază
+
+00:02:14.350 --> 00:02:20.640
+de date a altui mod de a gestiona aceste date, deoarece ori de câte ori primesc
+
+00:02:20.660 --> 00:02:25.600
+o cerere trebuie să treacă aceste cookie-uri și dau seama dacă oricare dintre
+
+00:02:25.600 --> 00:02:33.410
+acestea sunt valide și ce informații de utilizator parcurg pe baza acelui modul cookie și trebuie să țină evidența acestor sesiuni
+
+00:02:33.410 --> 00:02:35.720
+active în baza de date.
+
+00:02:35.720 --> 00:02:42.740
+Și frumusețea este că, odată ce utilizatorul a spus că logurile din aplicație sesiunea este distrusă atât pe partea clientului,
+
+00:02:42.740 --> 00:02:45.290
+cât și pe partea de server.
+
+00:02:46.320 --> 00:02:48.060
+Frumos și simplu.
+
+00:02:48.060 --> 00:02:53.270
+Gestionarea bazată pe token pe de altă parte este puțin diferită.
+
+00:02:54.180 --> 00:02:59.280
+Și este ceva care a câștigat din ce în ce mai multă popularitate în ultimii ani, cu
+
+00:02:59.280 --> 00:03:00.970
+aplicații de o singură pagină.
+
+00:03:01.180 --> 00:03:08.870
+Iar când vine vorba de autentificarea bazată pe token, cea mai comună despre care vorbesc cei mai mulți oameni
+
+00:03:08.960 --> 00:03:15.870
+este JWT tokin, care este autentificarea token-ului Jason pe care o vom acoperi în acest curs.
+
+00:03:16.660 --> 00:03:23.530
+Acum, să aruncăm o privire la autentificarea bazată pe token pe care un utilizator o înregistrează sau încearcă să
+
+00:03:23.740 --> 00:03:32.090
+se autentifice și autentifică prin trimiterea unui nume de utilizator și a unei parole la serverul care verifică dacă parola asigură că totul funcționează
+
+00:03:32.270 --> 00:03:33.230
+cu utilizatorul.
+
+00:03:33.320 --> 00:03:36.320
+Dacă utilizatorul există, parola este corectă.
+
+00:03:36.320 --> 00:03:39.660
+Și vor trimite în loc de un cookie, așa cum am făcut aici.
+
+00:03:39.710 --> 00:03:41.060
+Vor trimite un semn.
+
+00:03:41.060 --> 00:03:48.650
+Un jken de JWT de lucru și acest jeton pe care o vom acoperi are câteva informații speciale,
+
+00:03:48.710 --> 00:03:57.840
+dar arată destul de asemănător cu cookie-urile, deoarece este vorba de un fragment de text și acest jeton în loc să
+
+00:03:57.990 --> 00:04:04.530
+fie într-un set cookie stocate în browser în ceva de genul magazinelor locale sau stocarea
+
+00:04:04.530 --> 00:04:05.460
+sesiunilor.
+
+00:04:05.460 --> 00:04:10.790
+Din nou, ceva care va acoperi dar acest browser memorează acum acest jeton acum.
+
+00:04:10.810 --> 00:04:19.200
+Ori de câte ori acest browser sau utilizator are nevoie pentru a accesa informațiile pe care trebuie să le trimită cu cererile lor, această autorizație a
+
+00:04:19.320 --> 00:04:26.850
+avut ca să le oferim purtătorului JWT și din nou numărul de jetoane vom acoperi acest lucru, astfel încât să nu stresați
+
+00:04:26.850 --> 00:04:27.540
+prea mult.
+
+00:04:27.540 --> 00:04:31.220
+Vrem doar să obținem fluxul a tot ceea ce funcționează aici.
+
+00:04:31.280 --> 00:04:39.990
+Acum, partea interesantă se întâmplă aici, atunci când jetonul de date este trimis cu cererea de a obține utilizatorul și
+
+00:04:39.990 --> 00:04:45.230
+punctul de serverul nu trebuie să stoca efectiv informațiile respective oriunde.
+
+00:04:45.720 --> 00:04:52.890
+De fapt, serverul nu are grijă de sesiunile pe care le-a trimis, deoarece acestea pot pur și simplu modul în care
+
+00:04:52.950 --> 00:05:01.620
+JWT token-urile funcționează este că pot pur și simplu să verifice că ceea ce au semnat și tokenul pe care l-au creat este corect fără
+
+00:05:01.620 --> 00:05:05.540
+a atinge o bază de date fără a face orice.
+
+00:05:05.550 --> 00:05:14.890
+Ei rulează pur și simplu o metodă de verificare a punctului pe ea și pot trimite orice date înapoi la browser.
+
+00:05:15.470 --> 00:05:21.540
+Și partea interesantă este că în acest JWT token există informații despre utilizator care pot fi
+
+00:05:21.660 --> 00:05:23.180
+stocate, de asemenea.
+
+00:05:23.190 --> 00:05:25.240
+Din nou, acesta este ceva la care ne vom întoarce.
+
+00:05:25.240 --> 00:05:29.520
+Deci, această diagramă va face mult mai mult sens până la sfârșit, dar vreau să
+
+00:05:29.520 --> 00:05:30.400
+vă prezint conceptul.
+
+00:05:30.480 --> 00:05:36.660
+Recepția principală este că autentificarea bazată pe simboluri în teorie este apatridă.
+
+00:05:36.660 --> 00:05:44.450
+Serverul nu are nevoie să păstreze o evidență a utilizatorilor în care sunt conectați sau care au fost emise.
+
+00:05:44.550 --> 00:05:51.930
+În schimb, tot serverul trebuie să facă este să decodeze acest JWT și să vă asigurați că acesta este un token valid.
+
+00:05:51.930 --> 00:06:01.170
+Prin rularea acestei metode verificați și odată ce un utilizator se loghează, tokenul este distrus de partea clientului.
+
+00:06:01.960 --> 00:06:06.910
+Dar nu există neapărat o interacțiune care se întâmplă pe Bakhit.
+
+00:06:06.930 --> 00:06:11.130
+De ce să alegem una peste cealaltă.
+
+00:06:11.130 --> 00:06:12.880
+Există argumente pro și contra pentru tot.
+
+00:06:13.050 --> 00:06:15.800
+Și vreau să vă dau un heads-up dacă mergi online.
+
+00:06:15.920 --> 00:06:22.760
+Există o mulțime de dezbateri cu privire la ceea ce cred oamenii și unii oameni cred că acesta este cel mai bun mod de a face acest lucru.
+
+00:06:22.770 --> 00:06:24.820
+Alții cred că acesta este cel mai bun mod de a face acest lucru.
+
+00:06:25.020 --> 00:06:28.230
+Și este doar o dezbatere masivă când vine vorba de sesiune.
+
+00:06:28.230 --> 00:06:35.790
+Este un subiect cu adevărat dezbătut și ei vor fi oameni care chiar urăsc într-un fel și într-adevăr se
+
+00:06:35.790 --> 00:06:36.960
+plac invers.
+
+00:06:36.960 --> 00:06:37.880
+Așa că ține minte.
+
+00:06:37.890 --> 00:06:42.930
+Și de fapt, vă voi oferi resurse pe parcursul acestei secțiuni, care dezbate ambele subiecte, astfel încât să
+
+00:06:42.930 --> 00:06:44.850
+puteți lua o decizie pentru dvs.
+
+00:06:44.850 --> 00:06:50.910
+Modul în care voi preda această secțiune este că vă voi arăta cum să faceți o autentificare bazată pe
+
+00:06:51.090 --> 00:06:57.210
+token, dar și să includeți sesiuni care sunt foarte asemănătoare autentificării bazate pe cookie-uri, astfel încât să puteți decide pentru
+
+00:06:57.210 --> 00:06:58.920
+dvs. cât este de bine.
+
+00:06:58.970 --> 00:07:04.410
+O să vă arăt ceea ce cred că este cel mai bine personal, dar asta nu înseamnă că este calea cea bună sau
+
+00:07:04.740 --> 00:07:06.580
+că trebuie să o faci doar așa.
+
+00:07:06.670 --> 00:07:09.540
+Există multe modalități de a face acest lucru.
+
+00:07:09.730 --> 00:07:15.100
+Dar, așa cum am spus, dacă mergi online și începi să citești, capul tău va răni în legătură cu toate avantajele și dezavantajele
+
+00:07:15.100 --> 00:07:15.600
+și opțiunile.
+
+00:07:15.640 --> 00:07:22.280
+Așa că am de gând să trec peste câteva dintre aceste pro și contra acum autentificare pe bază de token.
+
+00:07:22.280 --> 00:07:27.400
+Cel mai mare avantaj este ideea de jetoane deasupra cookie-urilor.
+
+00:07:27.510 --> 00:07:28.900
+Este apatrid.
+
+00:07:28.940 --> 00:07:34.350
+Backend-ul nu trebuie să înregistreze sau să stocheze token-urile într-o bază de date.
+
+00:07:34.370 --> 00:07:42.210
+Fiecare jeton este autonom și conține toate datele necesare pentru a verifica valabilitatea acestuia, precum și pentru a transmite
+
+00:07:42.270 --> 00:07:43.660
+informații despre utilizator.
+
+00:07:45.200 --> 00:07:47.590
+Deci, slujba serverului este de fapt simplificată.
+
+00:07:47.660 --> 00:07:50.780
+Singurul loc de muncă este apoi să semnați jetoanele.
+
+00:07:50.780 --> 00:07:58.400
+Și de fiecare dată când primește o solicitare de verificare a simbolului frumos și ușor, am făcut ca serverul să funcționeze mult
+
+00:07:58.400 --> 00:08:01.270
+mai puțin, ceea ce este întotdeauna plăcut.
+
+00:08:03.580 --> 00:08:10.030
+Cealaltă parte este că, spre deosebire de cookie-urile care conțin șiruri de valoare în JWT, puteți avea de
+
+00:08:10.030 --> 00:08:18.730
+fapt orice tip de date doriți în interiorul JWT, astfel încât să puteți avea lucruri precum ID-ul utilizatorului sau numele utilizatorului în interiorul acestui
+
+00:08:18.820 --> 00:08:25.250
+token, astfel încât atunci când serverul îl primește, de fapt, poate vedea ce tip de date.
+
+00:08:25.270 --> 00:08:32.950
+Acest token JWT conține un alt lucru bun despre jetoanele care, spre deosebire de cookie-urile care funcționează într-adevăr
+
+00:08:32.950 --> 00:08:41.910
+foarte bine cu un singur domeniu, relația client-server clasic cu browser-ul, o abordare bazată pe token, face foarte ușor pentru
+
+00:08:41.910 --> 00:08:45.060
+tine să lucrezi cu API-uri diferite.
+
+00:08:45.300 --> 00:08:52.620
+Dacă compania dvs. avea mai multe adrese IP, puteți utiliza același jeton JWT pe API-uri diferite.
+
+00:08:53.620 --> 00:09:02.810
+Deoarece este necesar un jeton JWT și verificat cu fiecare apel, atâta timp cât tokenul este valabil, cererile pot
+
+00:09:02.820 --> 00:09:05.870
+fi într-adevăr prelucrate de orice.
+
+00:09:06.030 --> 00:09:10.530
+Și da, există modalități de a face acest lucru cu o autentificare bazată pe cookie-uri este totul, dar este
+
+00:09:10.530 --> 00:09:11.550
+cu siguranta mai complicat.
+
+00:09:12.840 --> 00:09:21.870
+Acum, celălalt lucru este acela că prin autentificarea bazată pe jetoane se pot utiliza atât platforme mobile, cât și platforme mobile, cum ar
+
+00:09:21.870 --> 00:09:23.770
+fi iOS și Android.
+
+00:09:25.320 --> 00:09:31.890
+Deoarece având cookie-uri pe platforme mobile native este de fapt în timp ce acestea nu se amestecă bine împreună este
+
+00:09:32.040 --> 00:09:33.850
+posibil să lucrați cu ea.
+
+00:09:34.080 --> 00:09:40.710
+Dar folosirea cookie-urilor cu platforme mobile este într-adevăr un jeton foarte greu, pe de altă parte este frumos și simplu funcționează
+
+00:09:40.710 --> 00:09:41.850
+destul de bine.
+
+00:09:42.890 --> 00:09:46.560
+În fine, tokenurile sunt minunate, să alegem jetoanele și să uităm de cookie-uri.
+
+00:09:46.970 --> 00:09:54.870
+Ei bine, din moment ce știm un dezvoltator senior există întotdeauna argumente pro și contra de cons este că dimensiunea unui JWT,
+
+00:09:54.870 --> 00:10:03.960
+comparativ cu un cookie este de fapt JWT destul de diferite, deoarece ele dețin informații sunt mult mai mari și pentru că le trimiteți la fiecare
+
+00:10:04.470 --> 00:10:09.600
+cerere cu siguranță crește numărul de octeți pe care trebuie să le transferați înainte
+
+00:10:09.600 --> 00:10:11.540
+și înapoi înainte și înapoi.
+
+00:10:13.800 --> 00:10:19.070
+Deci, în funcție de situația dvs., dimensiunea jocului poate deveni problematică.
+
+00:10:19.440 --> 00:10:26.250
+Cealaltă parte este faptul că faptul că stocăm informații în JWT despre utilizator poate fi periculos dacă
+
+00:10:26.250 --> 00:10:31.300
+stocăm ceva sensibil în legătură cu utilizatorul dacă jetonul JWT este furat.
+
+00:10:31.560 --> 00:10:37.250
+Oamenii răi pot să o decodeze de fapt și să vadă ce este în interiorul JWT tokin destul de ușor.
+
+00:10:38.020 --> 00:10:43.180
+Și mai sunt câteva alte lucruri și voi lăsa resurse pentru dvs., cum am spus că acesta este
+
+00:10:43.180 --> 00:10:48.450
+un subiect care merge mai adânc și mai adânc și mai profund și există multe puncte de luat în considerare.
+
+00:10:48.730 --> 00:10:51.690
+Deci, pentru a simplifica lucrurile, o să vă ușurez.
+
+00:10:51.700 --> 00:10:57.790
+Vă voi arăta modul în care pun în aplicare autentificarea și puteți lua orice bucăți doriți pentru
+
+00:10:57.790 --> 00:10:58.890
+propria aplicație.
+
+00:11:00.620 --> 00:11:04.790
+La sfârșitul zilei, totuși, vom avea grijă ca aplicația noastră să fie
+
+00:11:04.780 --> 00:11:12.280
+sigură și să gestioneze aceste sesiuni într-un mod care nu va face ca aplicația noastră să fie susceptibilă să ne atace pe cei răi.
+
+00:11:13.910 --> 00:11:17.180
+Bine, să luăm o pauză și vă voi vedea în următorul videoclip.
+
+00:11:17.200 --> 00:11:17.540
+Pa.

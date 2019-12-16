@@ -1,0 +1,214 @@
+﻿WEBVTT
+
+00:00:01.060 --> 00:00:07.060
+Witamy ponownie, możemy mówić wszystko, co chcemy, o tak i lambda, ale bez kodowania go i oglądania
+
+00:00:07.060 --> 00:00:08.470
+go na żywo.
+
+00:00:08.590 --> 00:00:10.790
+Nie będziemy w pełni rozumieć.
+
+00:00:10.870 --> 00:00:15.630
+Porozmawiajmy więc o tym, jaki jest nasz plan z A. W. i Lamda, co zamierzamy zrobić.
+
+00:00:15.780 --> 00:00:18.340
+W ten sposób możemy rozpocząć wdrażanie.
+
+00:00:18.510 --> 00:00:23.730
+Teraz chcę wam dać głowy i chcę, abyście podążali tutaj,
+
+00:00:24.210 --> 00:00:31.830
+kiedy robicie to ćwiczenie, ponieważ AWOS ma coś, co nazywa się darmową warstwą, która daje
+
+00:00:31.830 --> 00:00:40.220
+wam darmowe usługi, aby wypróbować je teraz i tutaj możecie zobaczyć, że mają Esrey'a z pięcioma gigabajtami
+
+00:00:40.220 --> 00:00:48.950
+na miesiąc, że pozwalają ci i E. C na i inne opcje, ale także AWOS Lamda pozwalają ci milion darmowych próśb na miesiąc.
+
+00:00:48.950 --> 00:00:54.770
+Możesz więc wypróbować to ćwiczenie, nie będziesz płacić żadnych pieniędzy i tak długo, jak będziesz mieć mniej niż milion próśb
+
+00:00:54.770 --> 00:00:57.590
+na miesiąc, jeśli tylko je rozwijasz i grasz dalej.
+
+00:00:57.740 --> 00:00:59.600
+Jestem pewien, że to więcej niż wystarczy.
+
+00:01:00.710 --> 00:01:05.360
+Zalecam więc, abyś się zapisał, abyś mógł śledzić i przetestować to sam.
+
+00:01:05.360 --> 00:01:11.740
+To niewiarygodnie łatwe, gdy zaczynasz pracę z Lamdą, kiedy już poznasz konfigurację.
+
+00:01:11.900 --> 00:01:16.760
+To jest takie miłe i zabawne i jest tyle rzeczy, które możesz zrobić.
+
+00:01:16.760 --> 00:01:24.770
+Niedawno zbudowałem bota, który wysyła mi wiadomość tekstową za każdym razem, gdy pojawi się powiadomienie,
+
+00:01:24.770 --> 00:01:32.570
+że jestem zainteresowany Bitcoinem i dostaję wiadomość tekstową, ponieważ orzekano, że co 30 minut
+
+00:01:32.570 --> 00:01:34.810
+chciałem sprawdzić cenę Bitcoin.
+
+00:01:35.680 --> 00:01:40.310
+Takie rzeczy stają się super super łatwe dzięki AWOS.
+
+00:01:40.370 --> 00:01:46.680
+Teraz polecam utworzenie konta i skorzystanie z tego bezpłatnego poziomu.
+
+00:01:46.910 --> 00:01:54.230
+A kiedy już się zalogujesz, będziesz miał coś takiego w desce rozdzielczej, a na desce rozdzielczej możesz
+
+00:01:54.620 --> 00:02:05.250
+poprosić o dowolną usługę AWOS, którą możesz zrobić, aby dynamo DB mogło zrobić S-3, możesz zrobić chmurę z przodu, o której rozmawialiśmy, ale jesteśmy zainteresowałeś
+
+00:02:05.580 --> 00:02:11.620
+się lambdą, a ty po prostu kliknąłeś usługę, którą chcesz i faktycznie pokazałeś pulpit
+
+00:02:11.620 --> 00:02:17.120
+nawigacyjny, który już masz kilka rzeczy tutaj, ale żeby pokazać, jak
+
+00:02:17.120 --> 00:02:23.740
+łatwo jest stworzyć dobrze funkcję Mogę tylko nazwać test lub czy naprawdę powinniśmy to nazwać.
+
+00:02:24.100 --> 00:02:27.060
+Cóż, wróćmy do naszej aplikacji i zobaczmy, gdzie chcemy ją zbudować.
+
+00:02:27.140 --> 00:02:35.780
+Jeśli przejdę do mojej aplikacji, powiedzmy, że chcemy dodać system rankingowy, o który poprosił Bruno, być może w oparciu o
+
+00:02:35.780 --> 00:02:37.730
+liczbę wpisów, które posiadasz.
+
+00:02:37.730 --> 00:02:45.020
+Otrzymujesz małą odznakę, która mówi, że wiesz, że jesteś odznaką rakietową lub jesteś odznaką pluszowego misia, cokolwiek by to nie
+
+00:02:45.020 --> 00:02:45.740
+było.
+
+00:02:46.560 --> 00:02:49.460
+I chcemy to zaktualizować.
+
+00:02:50.440 --> 00:02:56.660
+Poprzez funkcję, która żyje w Amazon Lamda, więc po prostu ją stwórzmy.
+
+00:02:56.670 --> 00:03:04.790
+Zamierzam po prostu nazwać to rażąco tylko dlatego, że wszystkie popularne nazwiska, a potem Lee podobno i będą używać.
+
+00:03:04.800 --> 00:03:05.270
+Nie.
+
+00:03:05.300 --> 00:03:05.940
+Tak.
+
+00:03:06.000 --> 00:03:10.680
+Wydaje mi się, że najnowsza wersja notatki, którą mają, pozwala zobaczyć, jakich języków programowania można użyć.
+
+00:03:10.770 --> 00:03:17.020
+Wygląda na to, że mają węzeł 8. 10 Salles do najnowszej wersji Węzła.
+
+00:03:17.230 --> 00:03:22.270
+Musisz również zrobić coś, co nazywa się rolkami, o
+
+00:03:22.270 --> 00:03:31.400
+których będziesz mówić, ale na razie tylko dla celów demonstracyjnych, wybiorę losową rolkę, kliknij przycisk Utwórz funkcję i gotowe.
+
+00:03:32.230 --> 00:03:39.380
+Stworzyliśmy naszą funkcję lambda i wszystko, co musimy zrobić, to napisać tutaj naszą funkcję.
+
+00:03:39.850 --> 00:03:45.370
+A kiedy skończymy, otrzymamy punkt końcowy, który będzie miał dostęp do tej funkcji i uruchomimy ją, a my
+
+00:03:46.270 --> 00:03:48.190
+możemy napisać tutaj naszą funkcję.
+
+00:03:48.190 --> 00:03:52.240
+Ale pokażę Wam lepszy sposób na wdrożenie naszego systemu rankingowego.
+
+00:03:53.400 --> 00:03:59.820
+Zamiast pisać to tutaj i zastanawiać się nad konfiguracją, która istnieje, ponieważ ciągle się to
+
+00:03:59.820 --> 00:04:03.990
+zmienia, panel ten zawsze się zmienia i być może, gdy
+
+00:04:03.990 --> 00:04:07.610
+obejrzysz ten film, nie będzie tak wyglądać.
+
+00:04:08.400 --> 00:04:11.930
+I tak naprawdę nie chcesz się martwić konfiguracją, którą chcesz napisać.
+
+00:04:12.210 --> 00:04:17.200
+I do tego będziemy używać narzędzia Servilius, które naprawdę pomaga zestawowi.
+
+00:04:17.640 --> 00:04:22.110
+Ale chciałem wam pokazać, bez względu na to, jak łatwo jest stworzyć funkcję.
+
+00:04:22.170 --> 00:04:24.310
+I tu.
+
+00:04:24.360 --> 00:04:24.800
+W porządku.
+
+00:04:24.860 --> 00:04:31.040
+Dlatego chcemy stworzyć tutaj system rankingowy, który w oparciu o liczbę posiadanych przez
+
+00:04:31.250 --> 00:04:34.750
+nas wpisów aktualizuje naszą małą serię.
+
+00:04:34.760 --> 00:04:41.110
+Potrzebujemy narzędzia o nazwie Server less, a serwer mniej wygląda tak.
+
+00:04:41.120 --> 00:04:46.670
+Nazwa jest trochę wyłączona, ponieważ nazwa pakietu jest mniej serwerowa, ale pomaga to, co
+
+00:04:46.790 --> 00:04:50.420
+nazywamy architekturą mniejszą od serwera, którą zapewnia Amazon.
+
+00:04:50.420 --> 00:04:56.540
+Teraz serwer nazw mniej jest nieco zwodniczy, ponieważ należy pamiętać, że usługa nie
+
+00:04:56.540 --> 00:04:59.550
+oznacza, że nadal nie masz serwera.
+
+00:04:59.600 --> 00:05:03.980
+Oznacza to tylko, że nie musisz się martwić skalowaniem i wszystkimi rzeczami, które ludzie
+
+00:05:03.980 --> 00:05:05.450
+robili, aby zarządzać serwerem.
+
+00:05:05.840 --> 00:05:12.610
+Amazon robi to za ciebie i umieszczam tutaj dwa loga, ponieważ serwer mniej ostatnio zaktualizował swoje logo.
+
+00:05:12.620 --> 00:05:20.420
+Jeśli zauważysz obie te rzeczy, to jest to samo, teraz serwer mniej pozwala nam na wdrażanie funkcji Amazon lambda naprawdę
+
+00:05:20.750 --> 00:05:23.460
+bardzo łatwo z naszej linii poleceń.
+
+00:05:23.560 --> 00:05:28.580
+I nie musimy się martwić zbytnio o to, że wchodzimy na ich pulpit i konfigurujemy wszystko ręcznie,
+
+00:05:28.580 --> 00:05:30.700
+a to nigdy nie jest zabawne.
+
+00:05:30.710 --> 00:05:34.470
+Lepiej, kiedy kodujemy i używamy naszego terminala.
+
+00:05:34.670 --> 00:05:35.630
+Więc zrobimy to.
+
+00:05:35.840 --> 00:05:39.470
+Rozpocznie się następne wideo, które zamierzamy zainstalować.
+
+00:05:39.530 --> 00:05:45.560
+Ale polecam, aby uzyskać darmowy poziom dla Amazon Lamda i śledzić dalej, ponieważ będzie to
+
+00:05:45.560 --> 00:05:46.750
+dużo zabawy.
+
+00:05:46.850 --> 00:05:47.600
+Zobaczę w następnym.

@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:00.890 --> 00:00:01.750
+Hej wszystkim.
+
+00:00:01.900 --> 00:00:04.430
+Pojawiła się nowa aktualizacja z reagowaniem.
+
+00:00:04.430 --> 00:00:09.140
+I do tej pory nauczyliśmy się, jak dzielić kod za pomocą reagowania.
+
+00:00:09.200 --> 00:00:12.680
+I bądźmy szczerzy tutaj, to było trochę trudne.
+
+00:00:12.740 --> 00:00:15.230
+To było trochę nieporęczne.
+
+00:00:15.260 --> 00:00:23.730
+Cóż, w najnowszej wersji reaguj mamy teraz coś, co nazywa się reaguj leniwie i reaguj leniwie.
+
+00:00:23.750 --> 00:00:29.180
+Pozwala to na bardzo łatwe dzielenie kodu.
+
+00:00:29.960 --> 00:00:36.320
+Tak więc w poprzednim ćwiczeniu poprosiłem cię, abyś spróbował zaimplementować to sam, jeśli możesz go zdobyć.
+
+00:00:36.340 --> 00:00:37.040
+Dobra robota.
+
+00:00:37.210 --> 00:00:43.840
+W przeciwnym razie zobaczmy, jak możemy zastosować leniwe reagowanie na dzielenie kodu.
+
+00:00:43.870 --> 00:00:45.220
+Zacznijmy.
+
+00:00:45.370 --> 00:00:52.900
+Mamy więc nasze repozytorium, które ci dałem, i wszystko, co musimy tutaj zrobić, to po prostu sklonować to repozytorium
+
+00:00:54.260 --> 00:00:56.240
+w naszym terminie, a
+
+00:00:58.880 --> 00:01:03.010
+także powiedzmy, że otrzymamy klon, a my przejdziemy do tego repozytorium.
+
+00:01:03.070 --> 00:01:07.360
+Teraz pierwszym krokiem, który zrobimy, jest powiedzenie instalacji npm
+
+00:01:12.280 --> 00:01:15.250
+i och, to nie jest dobre.
+
+00:01:15.250 --> 00:01:20.510
+Widzieliśmy to już wcześniej w sekcji „Reakcja”, kiedy rozmawialiśmy o aktualizacji pakietów.
+
+00:01:20.800 --> 00:01:27.670
+Jeśli nie utrzymamy naszych pakietów i nie będziemy ich aktualizować, zwykle bez aktualizacji naszych pakietów, prawdopodobnie
+
+00:01:27.880 --> 00:01:31.050
+będziemy mieli w tym przypadku pewne luki.
+
+00:01:31.090 --> 00:01:33.510
+Och, chłopcze, są dwie krytyczne słabości.
+
+00:01:33.510 --> 00:01:36.250
+Sześćset pięćdziesiąt pięć wysokich.
+
+00:01:36.250 --> 00:01:37.150
+To nie jest dobrze.
+
+00:01:37.150 --> 00:01:38.160
+Naprawmy to.
+
+00:01:38.170 --> 00:01:39.770
+I już to zrobiliśmy.
+
+00:01:39.820 --> 00:01:44.550
+Więc wszystko, co musimy zrobić, to powiedzieć, że poprawka kontroli NPM.
+
+00:01:45.400 --> 00:01:46.390
+Więc naprawimy
+
+00:01:50.270 --> 00:01:51.360
+je, co jest przyjemne.
+
+00:01:51.380 --> 00:01:53.360
+Naprawiliśmy kilka rzeczy.
+
+00:01:53.360 --> 00:01:56.060
+Ale widzisz tutaj, że nie naprawiliśmy wszystkich.
+
+00:01:56.060 --> 00:01:59.540
+Niektóre z nich 27 wymagają ręcznego przeglądu.
+
+00:01:59.540 --> 00:02:04.220
+Znowu coś, o czym już rozmawialiśmy, a oni zareagują w tej sekcji,
+
+00:02:04.220 --> 00:02:10.960
+będzie mowa o aktualizacji pakietów, chociaż polecam przejrzenie pakietów i upewnienie się, że chcemy je zaktualizować,
+
+00:02:10.960 --> 00:02:13.450
+ponieważ jest to prosty projekt.
+
+00:02:13.480 --> 00:02:21.640
+Nie będziemy mieć żadnych przełomowych zmian, możemy po prostu uruchomić siłę kreski kontrolnej NPM, aby upewnić się,
+
+00:02:22.030 --> 00:02:24.730
+że usunęliśmy wszystkie pozostałe luki.
+
+00:02:24.730 --> 00:02:28.720
+Nie wiem też, czy to słychać, ale na zewnątrz dzieje się potężna burza.
+
+00:02:28.720 --> 00:02:35.350
+Więc jeśli usłyszysz ściekającą wodę, obiecuję, że nie jestem w łazience, żeby to nagrywać.
+
+00:02:35.400 --> 00:02:36.450
+W porządku.
+
+00:02:36.450 --> 00:02:37.440
+Sprawy wyglądają dobrze.
+
+00:02:37.440 --> 00:02:43.970
+Wygląda na to, że mieliśmy jeden pakiet, który wiązał się z przełamywaniem zmian, i istnieją trzy luki
+
+00:02:43.980 --> 00:02:51.210
+wymagające ręcznego przeglądu i nie można ich było zaktualizować, ale wrócimy do nich za sekundę, ponieważ teraz powinniśmy być
+
+00:02:51.210 --> 00:02:55.290
+w stanie rozpocząć NPM i zobaczyć nasz projekt poprawnie.
+
+00:02:55.340 --> 00:03:01.300
+Ale zanim to zrobimy, otwórzmy kod w naszym ulubionym edytorze kodów.
+
+00:03:01.340 --> 00:03:02.030
+To wspaniale.
+
+00:03:02.060 --> 00:03:11.380
+A potem zróbmy NPM, wszystko powinno działać.
+
+00:03:11.420 --> 00:03:12.360
+No to jedziemy.
+
+00:03:12.410 --> 00:03:14.670
+Nasza ładna piękna strona.
+
+00:03:14.840 --> 00:03:24.220
+Teraz, jeśli sklonujesz repozytorium, tak jak właśnie to zrobiłem, a tutaj otworzymy konsolę lub kartę sieci, upewnijmy się, że
+
+00:03:24.220 --> 00:03:25.440
+wszystko wyczyściliśmy.
+
+00:03:25.510 --> 00:03:27.500
+Kiedy kliknę na drugą stronę.
+
+00:03:27.720 --> 00:03:34.680
+Cóż, nic się nie dzieje, ponieważ nie dokonujemy obecnie podziału kodu w sposób, w jaki konfigurowany jest ten plik.
+
+00:03:34.690 --> 00:03:43.850
+Jeśli przejdziemy do aplikacji Doug J. S. jest to, że ma trzy rzeczy, które
+
+00:03:43.850 --> 00:03:47.560
+zrobiliśmy, część pierwsza bez podziału kodu, co właśnie robimy.
+
+00:03:47.710 --> 00:03:53.680
+Mamy tutaj część drugą, o której rozmawialiśmy wcześniej, a następnie część trzecią,
+
+00:03:53.680 --> 00:03:58.870
+która polegała na dzieleniu kodu za pomocą komponentu asynchronicznego.
+
+00:03:58.930 --> 00:04:07.150
+Więc jeśli skomentujemy to i zrobimy część trzecią komponentu asynchronicznego, przewiń do
+
+00:04:07.150 --> 00:04:16.030
+samego dołu, skomentuj renderowanie bez podziału kodu i skomentuj część 3 komponentem asynchronicznym,
+
+00:04:16.030 --> 00:04:20.700
+jeśli zapiszemy to wróć i odśwież.
+
+00:04:20.840 --> 00:04:21.650
+Wyczyśćmy to.
+
+00:04:21.650 --> 00:04:23.420
+Jeśli kliknę na drugą stronę.
+
+00:04:23.540 --> 00:04:24.220
+No to jedziemy.
+
+00:04:24.240 --> 00:04:29.880
+Trwa ładowanie również naszego fragmentu i trzeciego, ponieważ teraz dzielimy kod.
+
+00:04:30.350 --> 00:04:32.830
+Ale mamy lepszy sposób, prawda.
+
+00:04:32.840 --> 00:04:36.990
+Mamy leniwą reakcję, która pozwala nam na dzielenie kodu.
+
+00:04:37.040 --> 00:04:40.210
+Zobaczmy więc, jak by to wyglądało.
+
+00:04:40.290 --> 00:04:47.470
+Najpierw widzimy, że teraz możemy użyć czegoś o nazwie reaguj leniwie podczas importowania komponentów.
+
+00:04:47.550 --> 00:04:54.260
+Zróbmy to na górze, aby skomentować.
+
+00:04:54.290 --> 00:04:58.120
+Wyjmij komponent asynchroniczny i wykonaj część czwartą.
+
+00:04:58.700 --> 00:05:00.260
+Zróbmy to trochę więcej.
+
+00:05:00.650 --> 00:05:08.110
+I część czwarta użyjemy polecenia reaguj leniwie, teraz reaguj leniwie można użyć w ten sposób.
+
+00:05:08.110 --> 00:05:19.030
+Można powiedzieć, że koncert nazwijmy to leniwym, leniwa będzie równa reakcja leniwa, a potem, jeśli
+
+00:05:19.030 --> 00:05:24.940
+spojrzymy na dokumentację, po prostu mamy tutaj funkcję.
+
+00:05:24.940 --> 00:05:34.170
+Więc jeśli to skopiujemy, mamy funkcję, która dynamicznie importuje komponent w naszym przypadku chcemy zaimportować
+
+00:05:34.200 --> 00:05:36.740
+stronę do komponentu.
+
+00:05:36.750 --> 00:05:43.330
+Dodajmy więc ten rok, a następnie zróbmy to samo na stronie 3.
+
+00:05:44.950 --> 00:05:50.320
+Więc znowu powiemy leniwie i zaimportujemy.
+
+00:05:50.320 --> 00:05:51.980
+Strona 3.
+
+00:05:52.040 --> 00:05:52.520
+No to jedziemy.
+
+00:05:52.910 --> 00:06:04.020
+Więc teraz mamy ten leniwy komponent, który mówi nam, że hej, tylko załaduj ten komponent, bądź leniwy i załaduj go tylko wtedy, gdy
+
+00:06:04.020 --> 00:06:06.620
+użyjemy go w funkcji renderowania.
+
+00:06:07.340 --> 00:06:15.740
+Więc teraz, jeśli przewiniemy do końca zamiast trzeciej części tutaj, gdzie używamy komponentu asynchronicznego, zrobimy część 4,
+
+00:06:15.740 --> 00:06:16.910
+używając
+
+00:06:20.690 --> 00:06:22.020
+reakcji na leniwego
+
+00:06:24.780 --> 00:06:27.480
+i skopiujemy to i pokażemy różnicę.
+
+00:06:27.480 --> 00:06:29.040
+Więc jeśli skopiuję i wkleję.
+
+00:06:29.070 --> 00:06:29.460
+No to jedziemy.
+
+00:06:29.460 --> 00:06:38.500
+Nie potrzebujemy teraz starego sposobu wykonywania komponentu asynchronicznego. Nie musimy już używać tego komponentu
+
+00:06:38.500 --> 00:06:39.480
+asynchronicznego.
+
+00:06:39.520 --> 00:06:44.350
+Więc po prostu usuńmy tę linię, ponieważ importujemy na górze
+
+00:06:47.000 --> 00:06:47.920
+tutaj,
+
+00:06:51.000 --> 00:06:53.420
+również nie potrzebujemy tej linii.
+
+00:06:53.430 --> 00:06:54.990
+No to jedziemy.
+
+00:06:54.990 --> 00:07:03.150
+A teraz zamiast asynchronizować drugą stronę, używamy tej strony do leniwego komponentu, a następnie tego samego tutaj.
+
+00:07:03.150 --> 00:07:08.690
+Strona trzy leniwy element po prostu tak.
+
+00:07:08.760 --> 00:07:16.500
+Teraz ostatnią rzeczą, którą musimy dodać, jest to, że jeśli spojrzymy na dokumentację, to, co reaguje leniwie, to
+
+00:07:16.500 --> 00:07:19.670
+funkcja, która pozwala nam renderować import dynamiczny.
+
+00:07:19.740 --> 00:07:20.520
+Dobrze.
+
+00:07:20.820 --> 00:07:26.580
+Ale to oznacza, że jeśli renderujemy coś dynamicznie, to znaczy, gdy reakcja zobaczy
+
+00:07:26.790 --> 00:07:33.960
+w funkcji renderowania, że och, potrzebujemy strony drugiej, zaimportuje to, ale podczas importowania użytkownik będzie patrzył
+
+00:07:33.960 --> 00:07:37.590
+na stronę, zastanawiając się, co się dzieje.
+
+00:07:37.620 --> 00:07:39.630
+Natomiast składnik na stronie.
+
+00:07:39.630 --> 00:07:46.950
+Tak więc leniwy komponent powinien zostać wyrenderowany wewnątrz tego, co nazywamy komponentem zawieszenia, który pozwala nam wyświetlać
+
+00:07:46.950 --> 00:07:54.210
+niektóre rezerwowe treści, takie jak wskaźnik ładowania, podczas gdy czekamy na załadowanie tego komponentu, ponieważ znowu spojrzy
+
+00:07:54.210 --> 00:07:58.460
+na ten komponent i powie oh potrzebujemy tego komponentu.
+
+00:07:58.470 --> 00:08:01.510
+Pozwól mi go zaimportować.
+
+00:08:01.740 --> 00:08:08.040
+I chociaż importowanie odbywa się, mimo że jest super super szybkie, chcemy mieć awarię.
+
+00:08:08.130 --> 00:08:16.640
+Tak więc robimy to tak, aby zawsze owijać te leniwe komponenty w komponent zawieszający.
+
+00:08:16.740 --> 00:08:19.380
+I znowu jest to nowa funkcja reagowania.
+
+00:08:19.530 --> 00:08:28.620
+Więc wszystko, co musimy zrobić, to owinąć to w składnik suspensu i składnik suspensu.
+
+00:08:28.620 --> 00:08:37.470
+Jeśli spojrzymy tutaj, musi mieć atrybut rezerwowy, a ten atrybut rezerwowy lub właściwość oznacza,
+
+00:08:37.470 --> 00:08:41.700
+że mamy lub zwracamy komponent reagujący.
+
+00:08:41.700 --> 00:08:46.650
+W tym przypadku możemy wykonać ładowanie div, ale możemy renderować wszystko, co chcemy.
+
+00:08:46.650 --> 00:08:47.760
+Więc to jest awaria.
+
+00:08:47.760 --> 00:08:54.180
+Mówi hej, wow strona 2 ładuje się lub jeśli coś się dzieje i możemy załadować stronę drugą.
+
+00:08:54.630 --> 00:09:06.350
+Cóż, w takim przypadku rezerwą powinien być ten element, a to napięcie jest nową funkcją.
+
+00:09:06.490 --> 00:09:10.210
+Oznacza to, że możemy zaimportować ten komponent, ponieważ jest wyposażony w funkcję reagowania.
+
+00:09:10.240 --> 00:09:12.680
+Tutaj mogę po prostu powiedzieć napięcie.
+
+00:09:13.060 --> 00:09:13.570
+Właśnie tak.
+
+00:09:14.290 --> 00:09:22.150
+Teraz, po zaimportowaniu napięcia, możemy go tutaj umieścić i owinąć wszystkie nasze leniwe komponenty.
+
+00:09:22.150 --> 00:09:25.870
+Więc jeszcze raz robimy to samo tutaj.
+
+00:09:25.960 --> 00:09:33.760
+Mówimy, że return, skopiujmy, to znowu będzie zawierało element ładujący
+
+00:09:33.760 --> 00:09:39.490
+z rezerwowym zawieszeniem, a następnie zamkniemy napięcie.
+
+00:09:39.500 --> 00:09:48.820
+Teraz, jeśli to powiem, upewnijmy się, że uzupełnimy nawiasy, więc zwracamy składnik leniwy
+
+00:09:48.820 --> 00:09:51.190
+zawinięty w napięcie.
+
+00:09:51.220 --> 00:09:55.310
+Więc jeśli powiem, że wygląda na to, że nie dostaję żadnych błędów.
+
+00:09:55.390 --> 00:09:56.210
+Dobre.
+
+00:09:56.350 --> 00:10:06.520
+Ale co się stanie, gdy spróbuję to uruchomić, wróćmy do naszej aplikacji i odświeżmy i, co to za domyślna paczka.
+
+00:10:06.560 --> 00:10:11.870
+Leniwy nie jest funkcją, więc reaktywne leniwe nie działa.
+
+00:10:11.870 --> 00:10:15.660
+Czy możesz pomyśleć, dlaczego tak jest dobrze.
+
+00:10:15.860 --> 00:10:22.650
+Pamiętaj, co powiedziałem: reaguj leniwie, a składnik napięcia jest w rzeczywistości nową funkcją reagowania.
+
+00:10:22.990 --> 00:10:29.360
+A jeśli spojrzysz na nasz pakiet, nasz Jason, kiedy pierwotnie nagrałem wideo,
+
+00:10:29.360 --> 00:10:37.640
+miał szesnaście punktów dwa, zapytaliśmy, ale jeśli dobrze spojrzymy na wersję reagującą, to zdecydowanie wyższa teraz, prawda?
+
+00:10:37.650 --> 00:10:45.420
+Musimy więc zaktualizować ten pakiet reagowania, abyśmy mogli korzystać z najnowszej funkcji, która reaguje
+
+00:10:45.420 --> 00:10:47.370
+leniwie i niepewnie.
+
+00:10:47.370 --> 00:10:53.310
+Teraz mamy sprytny mały sposób, aby to zrobić i wtedy, gdy zamkniemy serwer, możemy
+
+00:10:53.310 --> 00:11:00.520
+po prostu zrobić aktualizację NPM, która zaktualizuje pakiety, ponieważ mamy te znaki, powie hej, zaktualizuj pakiet do
+
+00:11:00.520 --> 00:11:04.360
+dowolnej niewielkiej aktualizacji wersji, którą ty mieć, posiadać.
+
+00:11:04.360 --> 00:11:07.480
+Więc jeśli zrobię aktualizację NPM, proszę bardzo.
+
+00:11:07.480 --> 00:11:09.270
+Aktywowaliśmy nasze pakiety.
+
+00:11:09.280 --> 00:11:11.170
+A kiedy klikam paczkę tego Jasona.
+
+00:11:11.290 --> 00:11:15.040
+Zwróć uwagę, jak zmienia się numer wersji a.
+
+00:11:15.050 --> 00:11:15.740
+To miłe.
+
+00:11:15.740 --> 00:11:16.550
+Tak lepiej
+
+00:11:16.550 --> 00:11:19.550
+Teraz mamy przesadną najnowszą wersję.
+
+00:11:20.150 --> 00:11:28.700
+Więc jeśli teraz rozpocznę NPM, powinniśmy zareagować na leniwy i niepewny komponent dostępny dla nas.
+
+00:11:28.730 --> 00:11:34.260
+I zdaję sobie sprawę, że napięcie jest pisane tutaj.
+
+00:11:34.310 --> 00:11:35.580
+Upewnij się więc, że jesteś ostrożny.
+
+00:11:35.590 --> 00:11:38.870
+Powinno być napięciem nie z literą c.
+
+00:11:38.990 --> 00:11:43.980
+Upewnij się więc, że poprawnie napisaliśmy napięcie.
+
+00:11:43.980 --> 00:11:52.910
+Mamy więc napięcie suspensu napięcie suspensu, ponieważ kompilator faktycznie nie da ci błędu.
+
+00:11:52.950 --> 00:11:56.670
+Zamiast tego dostaniesz kilka ostrych błędów i będziesz się zastanawiać, co się dzieje.
+
+00:11:56.820 --> 00:12:04.710
+Jest to w rzeczywistości częsty błąd, zwłaszcza w przypadku użytkowników innych niż ojczyste, więc zapiszmy, że nie otrzymujemy żadnych
+
+00:12:05.270 --> 00:12:06.080
+błędów.
+
+00:12:06.090 --> 00:12:07.900
+Jason wszystko jest zaktualizowane.
+
+00:12:07.980 --> 00:12:09.290
+Więc jeśli wrócimy do naszej aplikacji.
+
+00:12:10.080 --> 00:12:10.370
+DOBRZE.
+
+00:12:10.380 --> 00:12:11.580
+Mamy stronę 1.
+
+00:12:11.730 --> 00:12:15.240
+Otwórzmy narzędzia programistyczne bez błędów.
+
+00:12:15.240 --> 00:12:18.990
+Jeśli przejdziemy do karty sieci, powiększmy ją nieco.
+
+00:12:19.140 --> 00:12:20.640
+Wyczyśćmy wszystko.
+
+00:12:20.640 --> 00:12:26.600
+Jeśli przejdę na stronę drugą, zobaczę, że dostałem swój pierwszy kawałek, a następnie stronę trzecią.
+
+00:12:26.600 --> 00:12:32.170
+Drugi fragment i żadne błędy nie zostały znalezione w ten sposób.
+
+00:12:32.220 --> 00:12:41.890
+Użyliśmy reagować na te leniwe na leniwe komponenty obciążenia tylko wtedy, gdy ich potrzebujemy, i to powiedziałbym, że jest to znaczna poprawa w porównaniu
+
+00:12:41.890 --> 00:12:44.410
+z tym, co mieliśmy wcześniej.
+
+00:12:44.410 --> 00:12:51.580
+Ponownie jedną z zalet ciągłego reagowania jest to, że gdy pojawiają się typowe problemy, staramy
+
+00:12:51.580 --> 00:12:58.030
+się znaleźć najprostsze rozwiązania i, mam nadzieję, dodać te nowe funkcje do biblioteki, aby
+
+00:12:58.030 --> 00:13:02.730
+zwiększyć wydajność naszych aplikacji, a także ułatwić ich budowę.
+
+00:13:02.950 --> 00:13:10.000
+A teraz mamy zaktualizowaną aplikację ze wszystkimi lukami w zabezpieczeniach i działającym podziałem kodu.
+
+00:13:10.270 --> 00:13:12.090
+Zobaczę w następnym przez.

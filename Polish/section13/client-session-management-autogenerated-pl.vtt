@@ -1,0 +1,502 @@
+﻿WEBVTT
+
+00:00:01.870 --> 00:00:05.910
+Witamy ponownie, stworzyliśmy token JWT.
+
+00:00:05.980 --> 00:00:08.550
+Zapisaliśmy go w naszej bazie danych rattus.
+
+00:00:08.620 --> 00:00:10.790
+Wysyłamy go z powrotem do użytkownika.
+
+00:00:10.870 --> 00:00:19.340
+Ale teraz mamy jeden ostatni problem i tak przechowujemy te informacje na komputerze użytkownika.
+
+00:00:19.420 --> 00:00:25.180
+Ponieważ po odświeżeniu potrzebują sposobu na zapisanie tokena, aby nie musieli się logować
+
+00:00:25.180 --> 00:00:26.120
+wielokrotnie.
+
+00:00:26.200 --> 00:00:33.600
+Musimy też wysłać ten token w nagłówku autoryzacji, abyśmy mogli uzyskać nasz profil, a my nauczymy
+
+00:00:33.600 --> 00:00:38.080
+się, jak to zrobić, a ten film będzie wyglądał.
+
+00:00:38.150 --> 00:00:41.310
+Teraz zamierzamy wrócić do przodu i zrobić kilka rzeczy.
+
+00:00:41.490 --> 00:00:47.910
+Wiemy, że po zalogowaniu otrzymujemy identyfikator użytkownika i token i potrzebujemy sposobu, aby przede wszystkim
+
+00:00:48.000 --> 00:00:54.510
+zapisać ten token gdzieś w naszej przeglądarce, aby przy każdym kolejnym żądaniu umieścić go w
+
+00:00:54.600 --> 00:00:55.450
+nagłówku.
+
+00:00:55.740 --> 00:00:56.960
+Pozwól mi pokazać, jak to się robi.
+
+00:00:58.080 --> 00:00:59.820
+Mamy trochę okien wokół.
+
+00:01:00.010 --> 00:01:03.420
+Zróbmy tu nasze przednie okno.
+
+00:01:04.970 --> 00:01:11.730
+I użyjemy komponentu sign, aby to zrobić, ponieważ seinen na submit seinen.
+
+00:01:11.780 --> 00:01:17.380
+Tutaj robimy naszą logikę, w której otrzymaliśmy identyfikator użytkownika danych.
+
+00:01:17.540 --> 00:01:23.810
+Teraz pierwszą rzeczą, jaką zrobimy, jest stworzenie nowej metody o nazwie Save let's,
+
+00:01:23.810 --> 00:01:31.910
+która zapisze token uwierzytelniający w sesjach i bardzo opisową nazwę, ale mam nadzieję, że w ten sposób zostanie zachowana.
+
+00:01:32.130 --> 00:01:39.630
+Otrzymamy token, który otrzymamy od zaplecza i ten token będzie przechowywany w czymś, co
+
+00:01:39.900 --> 00:01:43.260
+nazywa się sesją okna datt.
+
+00:01:44.350 --> 00:01:45.360
+Przechowywanie.
+
+00:01:45.850 --> 00:01:49.700
+Co to jest pamięć sesji?
+
+00:01:50.020 --> 00:01:57.550
+I to jest na obiekcie okna, więc oznacza to, że pochodzi z przeglądarki Magazyn sesji sesji jest
+
+00:01:57.550 --> 00:02:05.060
+dla nas sposobem na zapisanie informacji w przeglądarce, aby nawet jeśli odświeżyliśmy stronę, nadal to pamięta.
+
+00:02:05.080 --> 00:02:07.750
+Wciąż pamięta sesję.
+
+00:02:07.750 --> 00:02:10.290
+Możemy to sprawdzić, przechodząc do zakładki Aplikacje.
+
+00:02:10.330 --> 00:02:11.670
+I nasze narzędzia programistyczne.
+
+00:02:11.950 --> 00:02:17.290
+I tak jak widzieliśmy wcześniej, mamy oczywistego pracownika serwisowego, mamy tu ciasteczka.
+
+00:02:17.410 --> 00:02:27.050
+Mamy również lokalną pamięć masową i pamięć sesji, w której przechowuje się teraz sesje, ponieważ widać informacje
+
+00:02:27.090 --> 00:02:35.450
+o kluczach, które możemy przechowywać, a nawet jeśli odświeżę przeglądarkę, to zapamięta je.
+
+00:02:35.560 --> 00:02:41.780
+Teraz różnica między sesją a pamięcią lokalną będzie w rzeczywistości trochę większa.
+
+00:02:41.840 --> 00:02:47.540
+Ale na razie zamierzamy użyć pamięci sesji i przechowywać klucz oraz wartość, w której będziemy
+
+00:02:47.720 --> 00:02:50.910
+przechowywać naszą sesję lub nasze tokin tutaj.
+
+00:02:51.200 --> 00:02:52.520
+Zobaczmy, jak możemy to zrobić.
+
+00:02:52.550 --> 00:03:02.100
+Mam zamiar powiedzieć o pamięci sesji i jest to API przeglądarki, z którego możemy korzystać, a my po prostu nadajemy mu określony
+
+00:03:02.420 --> 00:03:02.990
+element.
+
+00:03:04.150 --> 00:03:11.640
+Aby powiedzieć, że klucz zostanie nazwany tokin, a wartość klucza będzie faktycznym tokenem i to
+
+00:03:13.060 --> 00:03:13.940
+wszystko.
+
+00:03:14.110 --> 00:03:20.510
+Używamy tego interfejsu API przeglądarki i nie zapisaliśmy tokena.
+
+00:03:20.930 --> 00:03:26.020
+Więc używajmy tego w parach, w których otrzymaliśmy token.
+
+00:03:26.480 --> 00:03:34.640
+Wszystko, co musimy zrobić, to być może zamiast sprawdzać tylko identyfikator użytkownika danych lub
+
+00:03:37.300 --> 00:03:42.190
+możemy nawet dodać punkt danych do sukcesu.
+
+00:03:42.230 --> 00:03:47.060
+To prawda, ponieważ pamiętaj, że teraz wysyłamy z zaplecza.
+
+00:03:47.510 --> 00:03:55.420
+I tutaj, zanim zrobimy ładunek i zmieniamy trasę, możemy po prostu powiedzieć, że w sesjach
+
+00:03:55.530 --> 00:03:59.240
+zapisujemy tokcję, a my przekazujemy dane.
+
+00:03:59.260 --> 00:04:03.140
+Token, który otrzymujemy.
+
+00:04:03.560 --> 00:04:15.230
+Jeszcze raz pamiętajcie, że w naszej zakładce sieci widzicie seinen, który straciliśmy blisko tego jeszcze raz.
+
+00:04:15.370 --> 00:04:22.210
+Nie musimy tego robić jeszcze raz, ponieważ pamiętamy, że token jest odbierany w tokenie
+
+00:04:22.740 --> 00:04:23.680
+danych.
+
+00:04:23.740 --> 00:04:28.230
+Więc zamierzam się zalogować i sprawdzić, czy to działa.
+
+00:04:28.510 --> 00:04:29.050
+Zapiszmy,
+
+00:04:32.210 --> 00:04:35.320
+o ile wiemy, że jest to trochę mniejsze.
+
+00:04:35.610 --> 00:04:38.000
+Naciśnij powiedz kropkę. com.
+
+00:04:38.040 --> 00:04:41.120
+Zaloguj się.
+
+00:04:41.240 --> 00:04:49.030
+W tej chwili nic się nie stało, ale jeśli przejdziemy do aplikacji, spójrz na to, że mamy tuken
+
+00:04:49.030 --> 00:04:49.900
+zapisany tutaj.
+
+00:04:49.900 --> 00:05:00.810
+Więc nawet jeśli odświeżam token istnieje i mogę odświeżyć token odświeżania, jeśli otworzę nowe
+
+00:05:00.840 --> 00:05:13.570
+okno i przejdę do localhosta trzy tysiące jeden i otworzę narzędzia programistyczne, więc nie ma tu żadnej sesji.
+
+00:05:14.260 --> 00:05:15.230
+To nie jest dobrze.
+
+00:05:15.610 --> 00:05:22.060
+Ale co, jeśli dodamy do tego lokalną pamięć zamiast pamięci sesji.
+
+00:05:22.110 --> 00:05:33.570
+Jeśli zrobimy magazyn lokalny i zalogujemy się ponownie, zamkniesz to i wypróbujesz to ponownie.
+
+00:05:33.580 --> 00:05:35.010
+Zamierzam odświeżyć.
+
+00:05:35.380 --> 00:05:46.190
+Oczyścimy dym, żeby się upewnić, że jest całkowicie pusty, a potem zamierzam seinen.
+
+00:05:46.300 --> 00:05:46.620
+W porządku.
+
+00:05:46.660 --> 00:05:53.530
+Teraz nie mamy nic w pamięci sesji, ale mamy coś w lokalnej pamięci i lubię przechowywanie sesji, jeśli
+
+00:05:53.590 --> 00:05:54.390
+odświeżam.
+
+00:05:54.400 --> 00:06:00.650
+Mam to w sklepach lokalnych, ale także jeśli otworzę nowe okno i wykonam lokalny
+
+00:06:02.710 --> 00:06:10.580
+host trzy tysiące jeden, że mam tu lokalną pamięć i polecam używanie pamięci sesji, ja osobiście wolę, że nad
+
+00:06:10.730 --> 00:06:11.650
+lokalnym magazynem.
+
+00:06:11.720 --> 00:06:14.860
+Ale w zależności od potrzeb możesz użyć tego, który chcesz.
+
+00:06:14.960 --> 00:06:20.600
+Znowu pamięć lokalna trwa nieco dłużej niż pamięć sesji przechowywania sesji
+
+00:06:20.600 --> 00:06:24.370
+jest po prostu dla jednej sesji.
+
+00:06:24.380 --> 00:06:31.490
+W porządku, zamknijmy to i zmieńmy to na pamięć sesji.
+
+00:06:31.540 --> 00:06:34.010
+Teraz mamy tu pewien problem.
+
+00:06:34.030 --> 00:06:39.940
+Nadal jesteśmy proszeni o zalogowanie się za każdym razem, a to dlatego, że
+
+00:06:40.390 --> 00:06:49.860
+jeśli pamiętasz, robimy czek, aby uzyskać identyfikator tokena i tak naprawdę nie wysłaliśmy naszych nagłówków autoryzacji, gdy logujemy się przy
+
+00:06:49.860 --> 00:06:51.730
+użyciu naszego tokena.
+
+00:06:51.900 --> 00:06:58.820
+W tej chwili zawsze przechodzimy przez znak klamki i ponieważ nigdy nie ustawiliśmy autoryzacji Hetter.
+
+00:06:58.970 --> 00:07:00.800
+Zróbmy to z przodu.
+
+00:07:00.920 --> 00:07:04.890
+Ustawmy nagłówek autoryzacji w logowaniu.
+
+00:07:05.240 --> 00:07:08.430
+Cóż, pamiętajcie o tym na stronie logowania.
+
+00:07:08.680 --> 00:07:13.390
+Strona logowania pojawia się tylko wtedy, gdy pamiętasz i wracasz, by zrezygnować.
+
+00:07:13.430 --> 00:07:14.420
+Tak.
+
+00:07:14.420 --> 00:07:17.530
+A tak na marginesie ta podejrzana aplikacja robi się trochę za duża.
+
+00:07:17.530 --> 00:07:22.430
+Możemy zobaczyć, dlaczego chcemy włączyć redux lub oddzielić niektóre z tych metod.
+
+00:07:22.520 --> 00:07:32.220
+Jeśli jednak przewiniemy całą drogę w dół, widzimy, że strona logowania pojawia się zawsze, gdy trasa jest seinen.
+
+00:07:32.310 --> 00:07:39.190
+Tak więc znak i strona powinny pojawiać się tylko w tych przypadkach, gdy użytkownik nie jest zalogowany.
+
+00:07:40.180 --> 00:07:52.830
+Być może tutaj, w naszym głównym komponencie, jest to aplikacja, zanim zrobimy cokolwiek, gdy komponent się zamontuje.
+
+00:07:52.890 --> 00:07:59.280
+To jest pierwsza metoda cyklu życia, która będzie słyszalna, zanim cokolwiek zostanie wyrenderowane.
+
+00:07:59.280 --> 00:08:00.490
+Chcemy coś sprawdzić.
+
+00:08:00.540 --> 00:08:06.240
+Chcemy sprawdzić, czy istnieje element pamięci sesji token, którego możemy po prostu
+
+00:08:06.300 --> 00:08:15.750
+użyć, abyśmy mogli uniknąć całego sinu i logiki, a tutaj możemy po prostu zrobić token koncertu, a my sprawdzimy magazyn
+
+00:08:15.810 --> 00:08:25.330
+sesji, do którego zmierzamy aby powiedzieć sesyjne przechowywanie sesji, a my mówimy, że otrzymujemy przedmiot zamiast tego przedmiotu, a my
+
+00:08:25.330 --> 00:08:28.950
+po prostu otrzymamy token, który mamy.
+
+00:08:29.020 --> 00:08:38.170
+Jeśli mają teraz token tutaj, po prostu powiemy, czy w tym przypadku jest po token, po prostu przynieś nam coś nowego, a
+
+00:08:38.170 --> 00:08:44.380
+ta nowa rzecz będzie naszym znakiem i punktem, a to zalogowanie się i punkt
+
+00:08:49.360 --> 00:08:53.970
+będzie mieć kilka różnych rzeczy niż to, co mieliśmy wcześniej.
+
+00:08:54.970 --> 00:09:02.530
+Najpierw będzie to drugi parametr, który ma metodę postów, którą widzieliśmy wcześniej.
+
+00:09:03.810 --> 00:09:05.100
+Będzie miał nagłówek, który
+
+00:09:09.120 --> 00:09:10.000
+jest przedmiotem.
+
+00:09:10.000 --> 00:09:12.280
+Cóż, najpierw mamy typ zawartości.
+
+00:09:12.300 --> 00:09:14.240
+Musimy powiedzieć, jaki to będzie typ.
+
+00:09:14.580 --> 00:09:21.180
+I znowu będziemy wysyłać aplikację Jaison, ponieważ zamierzamy wysłać ją do
+
+00:09:21.240 --> 00:09:31.180
+treści żądania, ale nowe wydanie będzie również hasłem do autoryzacji, a to tylko domyślne nagłówki, które możesz
+
+00:09:31.180 --> 00:09:39.280
+ustawić za pomocą HGP a te nagłówki autoryzacji będą po prostu oznaczać token, który
+
+00:09:39.280 --> 00:09:42.510
+mamy w naszej pamięci sesji.
+
+00:09:42.550 --> 00:09:44.580
+Teraz tylko główki tutaj.
+
+00:09:44.860 --> 00:09:52.720
+Właściwie sposób, w jaki chcesz ustawić autoryzację tego standardu, polega na zrobieniu czegoś w rodzaju barer, a następnie space
+
+00:09:52.720 --> 00:09:53.410
+dodajemy
+
+00:09:56.180 --> 00:09:57.980
+token do tego niedźwiedzia.
+
+00:09:58.200 --> 00:10:01.460
+I zamierzam zostawić informacje, aby przeczytać więcej na ten temat.
+
+00:10:01.860 --> 00:10:04.850
+I jest to dość łatwe do wdrożenia.
+
+00:10:04.950 --> 00:10:10.140
+Na razie jednak, żeby wszystko było proste, zostawię to tak, abyśmy wysyłali
+
+00:10:10.140 --> 00:10:12.020
+token z nagłówkami autoryzacji.
+
+00:10:12.150 --> 00:10:20.960
+A teraz po prostu robimy kropkę, a ten pies otrzyma dane.
+
+00:10:21.970 --> 00:10:26.980
+Zwrócimy to, co będzie identyfikatorem użytkownika.
+
+00:10:27.310 --> 00:10:28.600
+Więc zamierzamy to zrobić.
+
+00:10:28.630 --> 00:10:32.930
+Tak instrukcja i ta instrukcja if będą danymi.
+
+00:10:33.040 --> 00:10:37.960
+Jeśli są dane, a być może zrobimy jeszcze jeden sprawdzian
+
+00:10:40.990 --> 00:10:49.320
+dla identyfikatora danych i jeśli to się dobrze sprawdzi, w tym przypadku na razie powiem tylko o powodzeniu.
+
+00:10:50.550 --> 00:10:58.920
+Musimy zdobyć profil użytkownika, a teraz dodajmy tu haczyk z kropkami, po prostu zgaś wszystko.
+
+00:10:59.080 --> 00:11:01.210
+Na razie zrobię dziennik konsoli.
+
+00:11:03.270 --> 00:11:04.680
+W porządku, oszczędzajmy to.
+
+00:11:04.680 --> 00:11:11.850
+Upewnij się, że nie ma błędów i przejdź do tego, co się wydarzyło w naszym podejrzanym, bo to będzie
+
+00:11:11.850 --> 00:11:14.620
+pierwszy raz, kiedy pojawi się użytkownik.
+
+00:11:14.620 --> 00:11:18.110
+Nie ma tokena autoryzacji, który mają.
+
+00:11:18.270 --> 00:11:19.310
+Więc muszą się zalogować.
+
+00:11:19.350 --> 00:11:21.620
+Wysyłają swój adres e-mail i hasło.
+
+00:11:21.870 --> 00:11:28.950
+A jeśli wszystko się sprawdzi, to baza danych zwróci nam token danych, który będziemy zapisywać
+
+00:11:28.950 --> 00:11:32.350
+na naszych sesjach w naszej przeglądarce.
+
+00:11:32.840 --> 00:11:39.020
+Teraz, jeśli użytkownik odświeży i wróci do naszej aplikacji, pierwszą rzeczą, która zostanie wyrenderowana, jest apt.
+
+00:11:39.140 --> 00:11:43.580
+Tak, tam jakiś komponent zamontował zanim coś się stanie.
+
+00:11:43.700 --> 00:11:45.840
+Sprawdzamy sesje startowe Windows.
+
+00:11:45.950 --> 00:11:52.260
+Dostaniemy tokin'a i zobaczymy, czy jest token, bo jeśli nie będzie dobrze, nic się nie wydarzy, a my po
+
+00:11:52.260 --> 00:11:55.660
+prostu będziemy kontynuować nasz dzień, tak jak robiliśmy to wcześniej.
+
+00:11:55.700 --> 00:12:02.510
+W przeciwnym razie, jeśli jest token, będziemy uruchamiać seinen i wskazywać, ponieważ nie musimy
+
+00:12:02.510 --> 00:12:10.490
+już klikać tego znaku w Bostonie i mieć znak i funkcję automatycznego przesyłania, które automatycznie dopasowujemy i
+
+00:12:10.490 --> 00:12:18.470
+przekazujemy tokenowi autoryzacji Hetter, tak aby nagłówek, jeśli pójdziemy do końca, powiemy, że jest automatyczne skanowanie, a
+
+00:12:18.620 --> 00:12:25.520
+otrzymam token autoryzacji I. RE. z naszej bazy danych rattus, a
+
+00:12:25.520 --> 00:12:27.170
+ja tylko odpowiem.
+
+00:12:28.300 --> 00:12:31.570
+Z twoim I. RE..
+
+00:12:31.730 --> 00:12:40.690
+Tak więc, kiedy wrócimy tutaj, możemy zrobić nową prośbę o uzyskanie profilu.
+
+00:12:40.690 --> 00:12:41.960
+W porządku, dajmy sobie spokój.
+
+00:12:42.340 --> 00:12:43.540
+Wypróbujmy to.
+
+00:12:45.300 --> 00:12:48.200
+Upewnię się, że nie ma żadnych żetonów.
+
+00:12:48.600 --> 00:12:51.470
+Przejdźmy do sesji i pamięci lokalnej.
+
+00:12:51.480 --> 00:12:52.990
+Mam zamiar to usunąć.
+
+00:12:53.010 --> 00:12:54.160
+Wszystko jasne.
+
+00:12:54.980 --> 00:13:02.320
+I powiem, że COM A. Podpiszmy.
+
+00:13:02.520 --> 00:13:02.920
+W porządku.
+
+00:13:02.930 --> 00:13:09.420
+Mogę się zalogować, jeśli pójdę na konsolę.
+
+00:13:09.640 --> 00:13:11.140
+To wygląda tak.
+
+00:13:11.320 --> 00:13:19.600
+Nie udało się uruchomić, ale ma to sens, ponieważ właśnie się zalogowaliśmy, otrzymaliśmy właśnie token sesji.
+
+00:13:19.840 --> 00:13:21.870
+Jednak jeśli odświeżam
+
+00:13:25.030 --> 00:13:29.670
+teraz i nic nie dostaję, ponieważ dobrze to zauważyłeś.
+
+00:13:29.670 --> 00:13:39.580
+Muszę faktycznie uruchomić kropkę, a następnie zapamiętać całą naszą dobrą metodę Jason, aby upewnić się, że możemy
+
+00:13:39.580 --> 00:13:41.800
+odczytać tę informację.
+
+00:13:41.910 --> 00:13:47.660
+Powiedzmy to i wróć tutaj, hej sukces.
+
+00:13:47.890 --> 00:13:53.480
+Musimy uzyskać profil użytkownika, ponieważ mamy sukces tokena potrzebny do uzyskania profilu użytkownika.
+
+00:13:53.580 --> 00:14:00.610
+Jeśli wrócę i usuniemy sesję przejdź do cons. I odświeżam.
+
+00:14:00.730 --> 00:14:01.460
+Nie.
+
+00:14:01.830 --> 00:14:02.630
+Bez powodzenia.
+
+00:14:02.640 --> 00:14:04.660
+Musisz zalogować się do mojego przyjaciela.
+
+00:14:04.710 --> 00:14:06.150
+Bardzo bardzo fajne.
+
+00:14:06.960 --> 00:14:07.410
+W porządku.
+
+00:14:07.410 --> 00:14:14.280
+W następnym filmie zamierzamy zaimplementować tę część uzyskiwania naszego profilu użytkownika, a zobaczę, że widzę.

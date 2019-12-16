@@ -1,0 +1,463 @@
+﻿WEBVTT
+
+00:00:02.090 --> 00:00:02.680
+W porządku.
+
+00:00:02.710 --> 00:00:03.660
+Witamy spowrotem.
+
+00:00:03.760 --> 00:00:08.530
+Cóż, podzielmy się fragmentacją kodu i działaniem tego filmu.
+
+00:00:08.530 --> 00:00:14.010
+Właśnie tutaj właśnie stworzyłem projekt Reagowania Crea.
+
+00:00:14.020 --> 00:00:17.920
+Więc po prostu uruchomiłem, aby zareagować na podział kodu.
+
+00:00:17.920 --> 00:00:21.670
+To tylko domyślny projekt, który dostajemy z pudełka.
+
+00:00:21.670 --> 00:00:29.710
+Jeśli zrobię NPM start, zobaczysz, że nie ma nic szczególnego, po prostu fajnie i prosto, stwórz doskonałą akcję,
+
+00:00:31.710 --> 00:00:34.730
+aby zacząć dzielić nasze dzielenie kodu.
+
+00:00:34.830 --> 00:00:42.800
+Przede wszystkim zamierzam zatrzymać to, co tutaj jest jasne i zamierzam wszystko tutaj usunąć.
+
+00:00:42.860 --> 00:00:52.830
+Poza nagłówkiem i najlepiej, gdybyśmy chcieli mieć trzy przyciski lub trzy miejsca, które możemy kliknąć, aby dać nam
+
+00:00:52.830 --> 00:00:57.180
+nową stronę, będą miały jeden składnik strony.
+
+00:00:59.650 --> 00:01:13.760
+Będziemy mieć stronę do komponentu, a na końcu komponent, ale oczywiście musimy najpierw utworzyć te
+
+00:01:13.760 --> 00:01:15.040
+komponenty.
+
+00:01:15.050 --> 00:01:17.690
+Więc chodźmy dalej i róbmy to.
+
+00:01:17.750 --> 00:01:30.190
+Zamierzam utworzyć nowe wywołanie folderu to komponent, a tutaj po prostu utworzymy plik
+
+00:01:31.560 --> 00:01:41.700
+Ron javascript wklejając plik javascript, a na koniec javascript.
+
+00:01:42.130 --> 00:01:52.060
+Teraz na tych stronach po prostu zaimportujemy re-act z re-act, który jest dość standardowy, ale wiesz, co też
+
+00:01:52.120 --> 00:01:56.620
+możemy wziąć za logo, które tu mamy.
+
+00:01:56.620 --> 00:02:00.900
+Logo re-act również je zaimportuje.
+
+00:02:01.080 --> 00:02:07.690
+A ponieważ jesteśmy teraz w folderze komponentów, a logo znajduje się w folderze źródłowym, musimy
+
+00:02:07.690 --> 00:02:08.750
+zrobić kropkę.
+
+00:02:08.770 --> 00:02:14.230
+I faktycznie chcemy, aby folder komponentów znajdował się wewnątrz źródła, tutaj nie na zewnątrz.
+
+00:02:14.230 --> 00:02:24.980
+Po prostu przenieś to, co umieścisz w folderze źródłowym.
+
+00:02:25.010 --> 00:02:28.270
+Teraz na tej stronie zapiszesz tę funkcję.
+
+00:02:28.310 --> 00:02:39.390
+Tak więc nazwiemy to kosztem strona 1 będzie równa, nie będzie miała żadnych rekwizytów, które wszyscy otrzymają na razie i tutaj
+
+00:02:39.450 --> 00:02:44.640
+możemy zrobić zwrot lub po prostu zwrócić prosty komponent.
+
+00:02:44.640 --> 00:02:49.200
+Mogę po prostu zostawić to tak, jak jest
+
+00:02:52.160 --> 00:03:01.890
+teraz i powiedzieć, że Divx da mu klasową nazwę aplikacji, aby uzyskać taką samą nazwę klasy, jaką mieliśmy wcześniej.
+
+00:03:02.170 --> 00:03:05.910
+A ty nie skopiujemy po prostu nagłówka.
+
+00:03:06.250 --> 00:03:09.820
+Więc ta strona będzie zawierała
+
+00:03:17.760 --> 00:03:24.290
+i zamknie div, ale również tutaj chcemy mieć dwa przyciski.
+
+00:03:24.490 --> 00:03:33.760
+Pierwszy przycisk będzie miał zdarzenie click click, a na razie będzie pusty.
+
+00:03:38.530 --> 00:03:42.450
+I powiedzmy, że wewnątrz tego przycisku będę miał etykietę.
+
+00:03:42.460 --> 00:03:44.500
+Będzie też zawierał tekst wklejania.
+
+00:03:44.530 --> 00:03:53.340
+Kiedy klikniemy ten przycisk i przeniesiemy nas na stronę 2, możemy zrobić to samo dla strony 3.
+
+00:03:53.360 --> 00:03:56.290
+Więc po prostu idźmy dalej i ocalmy to.
+
+00:03:56.660 --> 00:04:00.780
+Ostatnią rzeczą, którą chcemy zrobić, jest rezygnacja.
+
+00:04:00.860 --> 00:04:07.970
+Tak, nadal mamy strony 2 i 3, ale najlepiej mamy jakąś trasę.
+
+00:04:08.000 --> 00:04:16.100
+Więc będziemy wyświetlać stronę na stronie 2 w ciastku, ale nie w tym samym czasie w oparciu o trasę, którą chcemy wyświetlić tylko
+
+00:04:16.430 --> 00:04:23.540
+stronę, jeśli jesteśmy na stronie 1 tylko strona 2, jeśli jesteśmy na stronie 2 i tylko ciasto jeśli jesteśmy na
+
+00:04:23.540 --> 00:04:24.460
+stronie 3.
+
+00:04:24.500 --> 00:04:33.470
+Stwórzmy więc prostą logikę routingu, którą możemy rozpocząć od stworzenia stanu, w którym robimy
+
+00:04:33.470 --> 00:04:36.040
+to poprzez konstruktor.
+
+00:04:36.140 --> 00:04:38.300
+Pamiętaj, że musimy zadzwonić super.
+
+00:04:38.300 --> 00:04:44.420
+Możemy więc użyć tego słowa kluczowego i tutaj powiemy, że ten punkt
+
+00:04:47.460 --> 00:04:51.830
+dotacji jest równy trasie i domyślnej trasie.
+
+00:04:51.870 --> 00:04:57.370
+Gdy ta aplikacja zostanie zainicjalizowana, będziemy po prostu bage błędne.
+
+00:04:58.750 --> 00:05:05.740
+I w oparciu o to, gdzie klikniemy, zapamiętaj na stronie 1, jak mamy Bundes, które będą miały jakieś wydarzenie, które jeśli
+
+00:05:05.740 --> 00:05:10.850
+klikniemy na stronie 2, zabierze nas do strony drugiej, jeśli klikniemy na stronie 3.
+
+00:05:10.900 --> 00:05:12.840
+To doprowadzi nas do strony 3.
+
+00:05:13.070 --> 00:05:19.130
+Stwórzmy więc wydarzenie, które nazwiemy zmianą trasy i
+
+00:05:22.550 --> 00:05:25.240
+tą zmianą trasy.
+
+00:05:25.520 --> 00:05:33.110
+Naprawmy, że pisownia będzie miała początek w metodzie zmiany drogi, którą teraz utworzymy
+
+00:05:33.110 --> 00:05:34.830
+w aplikacji.
+
+00:05:34.850 --> 00:05:42.270
+Zacznijmy więc od tego, co powiemy na zmianę trasy i ta zmiana Andreae będzie otrzymywać trasę parametrów
+
+00:05:42.990 --> 00:05:45.070
+i używam tutaj funkcji
+
+00:05:48.440 --> 00:05:51.920
+ery, abyśmy nie musieli wiązać się z konstruktorem.
+
+00:05:51.920 --> 00:05:54.890
+W przeciwnym razie musimy użyć dot-bind przy zmianie trasy.
+
+00:05:54.890 --> 00:05:56.450
+Jeśli nie zrobiliśmy funkcji błędu.
+
+00:05:56.460 --> 00:05:58.780
+Ale podoba mi się ten sposób, myślę, że wygląda czysto.
+
+00:05:59.660 --> 00:06:12.460
+W tym miejscu możemy po prostu powiedzieć, że ten stan jest ustawiony tak, aby mieć trasę, którą wywołuje, niezależnie od
+
+00:06:13.060 --> 00:06:13.970
+trasy.
+
+00:06:14.260 --> 00:06:23.060
+Tak więc możemy to skrócić, ale jest bardziej opisowy, więc lubię tę metodę lepiej.
+
+00:06:23.360 --> 00:06:25.830
+Więc wiemy, co się dzieje.
+
+00:06:25.910 --> 00:06:31.190
+Teraz przekazujemy zmianę trasy do komponentu strona pierwsza.
+
+00:06:31.190 --> 00:06:31.620
+W porządku.
+
+00:06:31.630 --> 00:06:40.000
+Tak więc dzięki tej logice możemy po prostu skopiować i wkleić na stronie 2 i stronie 3 ponownie.
+
+00:06:40.310 --> 00:06:49.200
+To samo i wszystko, co robimy, to za każdym razem, gdy klikamy, aktualizujemy trasę do wybranej przez nas trasy.
+
+00:06:49.280 --> 00:06:56.870
+Wróćmy, albo zapiszmy to i przejdźmy do strony PageRank na teraz otrzyma propozycję zmiany trasy i
+
+00:06:57.320 --> 00:07:01.300
+to po zmianie trasy i używam tutaj destrukturyzacji.
+
+00:07:01.310 --> 00:07:04.890
+Nie muszę więc wykonywać rekwizytów dotyczących zmiany trasy.
+
+00:07:05.000 --> 00:07:12.860
+Mogę po prostu powiedzieć, że zmiana trasy będzie miała funkcję, która zostanie uruchomiona i ta zmiana
+
+00:07:12.860 --> 00:07:15.800
+trasy spowoduje wysłanie strony trasy.
+
+00:07:15.890 --> 00:07:19.860
+Ponieważ przejdziemy na drugą stronę, gdy sprawimy, że będzie trochę mniejsza.
+
+00:07:20.060 --> 00:07:32.010
+Więc możesz zobaczyć i znowu zrobimy to samo na stronie 3 tym razem klikając na stronie 3.
+
+00:07:32.270 --> 00:07:42.060
+I wreszcie możemy po prostu dodać domyślną stronę sportową Rona, a ja mam zamiar ją skopiować, ponieważ nasze strony
+
+00:07:42.060 --> 00:07:45.400
+wyglądają tak samo, z wyjątkiem
+
+00:07:48.900 --> 00:07:56.140
+tego, że nazwy będą inne, więc mieć stronę 3 i zamiast jednego kliknięcia zamiast
+
+00:07:56.140 --> 00:08:05.530
+strony 2 i 3 będziemy mieli stronę na stronie do strony do strony Ron, którą to uratujemy.
+
+00:08:05.560 --> 00:08:15.520
+I wtedy to samo z Page 2 zmieni nazwę tego na składnik strony 2, który ma dostęp do strony pierwszej i strony
+
+00:08:15.520 --> 00:08:16.020
+3.
+
+00:08:17.890 --> 00:08:24.720
+Ona Na samym końcu jest oczywiście, że chcemy zaimportować te komponenty.
+
+00:08:24.720 --> 00:08:34.070
+Powiem więc, że mogę zaimportować stronę pierwszą z lub tylko komponenty komponentu.
+
+00:08:34.220 --> 00:08:35.370
+Upewnij się, że mamy rację.
+
+00:08:39.840 --> 00:08:42.320
+Strona Ron.
+
+00:08:42.410 --> 00:08:53.570
+A na koniec kopiuję resztę tutaj, aby upewnić się, że dopasowujemy stronę do strony "Sri" do strony 3.
+
+00:08:53.790 --> 00:08:58.300
+Chciałem po prostu to zapisać i uruchomić NPM, aby rozpocząć, jeśli pojawią się jakiekolwiek błędy.
+
+00:09:06.390 --> 00:09:07.130
+W porządku.
+
+00:09:07.350 --> 00:09:15.000
+Mamy dość brzydką stronę z renderowaniem naszych komponentów, ale wygląda na to, że działa.
+
+00:09:15.000 --> 00:09:21.480
+Strony są uruchomione, ale oczywiście nie chcemy wyświetlać ich wszystkich w tym samym czasie,
+
+00:09:21.480 --> 00:09:28.890
+kiedy chcemy mieć jakąś logikę routingu, a domyślna powinna być strona 1, ponieważ pamiętamy, że nasza trasa
+
+00:09:28.890 --> 00:09:30.660
+jest obecnie stroną.
+
+00:09:30.950 --> 00:09:32.720
+A to dość łatwe do zrobienia.
+
+00:09:32.720 --> 00:09:42.660
+Nie potrzebujemy już nagłówka, ponieważ zarówno nagłówek, jak i wzwyż są zawarte w tych komponentach.
+
+00:09:42.710 --> 00:09:44.480
+Usuńmy to
+
+00:09:49.270 --> 00:09:50.650
+i
+
+00:09:57.510 --> 00:10:12.410
+dodajmy tutaj logikę, powiemy, że jeśli ta trasa stanowa jest równa stronie 1, to zwracamy stronę, którą chcemy usłyszeć Feltz, jeśli mamy trasę
+
+00:10:20.270 --> 00:10:26.700
+jako stronę, wtedy możemy po prostu renderować stronę i "Jestem
+
+00:10:29.490 --> 00:10:31.920
+pewien, że istnieją teraz
+
+00:10:35.820 --> 00:10:38.440
+czystsze sposoby robienia tego.
+
+00:10:38.460 --> 00:10:43.100
+Ale do tego celu demonstracyjnego będzie to dobrze.
+
+00:10:43.380 --> 00:10:45.960
+Ładne proste ciastko logiki
+
+00:10:49.870 --> 00:10:51.000
+routingu.
+
+00:10:51.190 --> 00:10:56.610
+W końcu to tutaj zwrócimy.
+
+00:11:04.550 --> 00:11:05.780
+W porządku, dajmy sobie spokój.
+
+00:11:05.810 --> 00:11:12.290
+Zapisanie logo jest zdefiniowane jako nigdy nie używane, ponieważ nie używamy go już na stronie głównej.
+
+00:11:12.320 --> 00:11:15.670
+Zapiszmy wrócić.
+
+00:11:15.680 --> 00:11:16.550
+W porządku.
+
+00:11:16.550 --> 00:11:18.530
+Wygląda na to, że wszystko działa.
+
+00:11:18.530 --> 00:11:25.880
+Zobaczmy, czy kliknę stronę 2 To zmienia stronę 1 zmiany cukierków na stronę 2.
+
+00:11:25.880 --> 00:11:31.130
+Zmieniamy teraz strony, ale trudno to stwierdzić, więc odnieśmy sukces, aby wyglądał
+
+00:11:31.130 --> 00:11:31.820
+lepiej.
+
+00:11:35.690 --> 00:11:41.510
+I mam już kilka stylów CSSA, z których możemy skorzystać, ponieważ teraz,
+
+00:11:41.510 --> 00:11:45.940
+gdy teraz uczymy się CSSA, mam klasę przycisków.
+
+00:11:45.950 --> 00:11:48.830
+Nic zbyt szalonego, tylko znudzonego lub powiększającego.
+
+00:11:48.950 --> 00:12:00.000
+Mamy również wyłączoną klasę, dzięki czemu teraz możemy dodać klasę wyłączenia do naszych przycisków, zobaczyć,
+
+00:12:00.000 --> 00:12:01.590
+który klikamy.
+
+00:12:01.600 --> 00:12:10.720
+Więc pozwól mi zaoszczędzić i tym razem będę miał tylko przycisk przycisku, który ma nazwę klasy.
+
+00:12:13.500 --> 00:12:21.780
+Wyłączone i nic nie da, po prostu będzie strona pierwsza, ponieważ jesteśmy obecnie na pierwszej
+
+00:12:21.780 --> 00:12:22.410
+stronie.
+
+00:12:22.470 --> 00:12:25.410
+Chcemy tylko, aby przycisk strony i wklej był aktywny.
+
+00:12:25.650 --> 00:12:30.540
+I zamierzam uratować i zrobić to samo dla wszystkich innych.
+
+00:12:30.570 --> 00:12:36.270
+Powiemy, że strona druga, ponieważ jesteśmy na stronie drugiej, jest wyłączona.
+
+00:12:36.370 --> 00:12:42.740
+I na koniec na stronie 3. Będziemy również mieć wyłączone.
+
+00:12:42.740 --> 00:12:44.300
+W porządku, zobaczmy, czy to wygląda lepiej.
+
+00:12:44.300 --> 00:12:46.500
+Wracajmy.
+
+00:12:46.510 --> 00:12:47.110
+W porządku.
+
+00:12:47.110 --> 00:12:48.820
+Więc jesteśmy na stronie 1.
+
+00:12:48.850 --> 00:12:50.740
+Możesz zobaczyć, jak dobre są moje umiejętności CSSA.
+
+00:12:50.740 --> 00:12:52.690
+To wygląda bardzo pięknie.
+
+00:12:53.170 --> 00:12:57.380
+A jeśli klikniemy na stronie 2, przejdziemy do strony, aby przejść do ciasta.
+
+00:12:57.520 --> 00:12:59.540
+Przechodzimy do strony 3.
+
+00:12:59.560 --> 00:13:00.970
+Bardzo fajny.
+
+00:13:00.970 --> 00:13:01.460
+W porządku.
+
+00:13:01.540 --> 00:13:03.720
+Więc zrobiliśmy całą tę pracę.
+
+00:13:03.790 --> 00:13:04.690
+To wspaniale.
+
+00:13:04.690 --> 00:13:07.670
+Ale gdzie jest podział tego kodu.
+
+00:13:07.900 --> 00:13:16.320
+Cóż, jest to aplikacja, w której będziemy używać dzielenia kodu, a ponieważ teraz, jeśli
+
+00:13:16.890 --> 00:13:25.180
+otworzę kartę narzędzi programistycznych i przejdę do sieci, po prostu kliknę odśwież.
+
+00:13:25.370 --> 00:13:27.170
+Widzę, że dostałem spakowany zestaw.
+
+00:13:27.290 --> 00:13:27.630
+Tak.
+
+00:13:27.650 --> 00:13:29.400
+Zignoruj wszystkie te inne rzeczy.
+
+00:13:29.420 --> 00:13:34.650
+To tylko rzeczy, które są dostarczane z moimi wtyczkami do Chrome, a także tworzyć ponownie.
+
+00:13:34.700 --> 00:13:38.190
+Ale interesuje nas ten pakiet.
+
+00:13:38.300 --> 00:13:43.460
+Tak, to tutaj mamy nasze komponenty i widzisz, że to ten, który ładuje
+
+00:13:43.460 --> 00:13:44.540
+się najdłużej.
+
+00:13:44.540 --> 00:13:48.470
+Teraz ten pakiet J. S. to tylko jeden plik.
+
+00:13:48.650 --> 00:13:56.300
+A jeśli kliknę na stronie 2 nic się nie dzieje, ponieważ wszystkie javascript, które potrzebujemy, zostały już
+
+00:13:56.750 --> 00:14:00.500
+wczytane w digelach Bondela z dzieleniem kodu.
+
+00:14:00.620 --> 00:14:07.190
+Będziemy w stanie ładować pliki za każdym razem, gdy klikniemy na stronę, ponieważ nie
+
+00:14:07.190 --> 00:14:15.920
+załadowaliśmy ich jeszcze. Dzięki temu możemy sprawić, że pakiet będzie miał tylko 354 kilobajtów, a teraz jest o wiele mniejszy.
+
+00:14:15.970 --> 00:14:22.770
+Wiem, że buduję napięcie, ale w następnym filmie zamierzamy dokonać podziału kodu i jest to
+
+00:14:23.680 --> 00:14:24.850
+całkiem łatwe.
+
+00:14:24.930 --> 00:14:26.920
+Wszyscy widzieli, że Buh-Bye.

@@ -1,0 +1,418 @@
+﻿WEBVTT
+
+00:00:01.260 --> 00:00:02.070
+Witamy spowrotem.
+
+00:00:02.130 --> 00:00:06.310
+Czas zacząć tworzyć naszą aplikację robo-friends.
+
+00:00:06.450 --> 00:00:08.810
+Otwieramy nasz terminal.
+
+00:00:08.820 --> 00:00:11.220
+Powinniśmy być z nim teraz wygodnie.
+
+00:00:11.400 --> 00:00:17.910
+W tej sekcji naprawdę polecam kodowanie wzdłuż i wzdłuż procesów,
+
+00:00:17.910 --> 00:00:23.260
+ponieważ nauczysz się dużo lepiej, robiąc to samemu.
+
+00:00:23.310 --> 00:00:24.390
+I tak jak obiecałem.
+
+00:00:24.480 --> 00:00:28.700
+Jest to dość łatwe i na koniec będziemy mieć piękną aplikację.
+
+00:00:28.800 --> 00:00:35.400
+Ale dla tych, którzy lubią po prostu oglądać i pracować później, pod koniec
+
+00:00:35.490 --> 00:00:40.520
+tej sekcji dostarczę wam końcowe pliki aplikacji Robo Friends.
+
+00:00:40.810 --> 00:00:41.920
+Więc nie mamy jeszcze nic.
+
+00:00:41.920 --> 00:00:43.350
+Jesteśmy na pulpicie.
+
+00:00:43.390 --> 00:00:52.740
+Musimy faktycznie utworzyć folder projektu i musimy zainstalować reagować.
+
+00:00:52.820 --> 00:01:01.320
+Teraz, jeśli pamiętasz w NPM, możemy zainstalować reagować i mieć to jako część naszych pakietów w zapakowanym Arjay tak
+
+00:01:01.320 --> 00:01:02.000
+dalej.
+
+00:01:02.480 --> 00:01:07.370
+Ale jest jeszcze narzędzie, ponieważ typy ponownego działania są tak powszechne.
+
+00:01:07.420 --> 00:01:15.260
+Jest narzędzie, które pozwala nam napisać sposób na stworzenie reakcji na wszystkie nasze pliki już wprowadzone.
+
+00:01:15.320 --> 00:01:21.440
+Nazywa się to stwórz aplikację ponownie.
+
+00:01:21.630 --> 00:01:29.730
+To narzędzie jest pakietem globalnym, który chcesz zainstalować z NPM i tworzy projekt startowy, który
+
+00:01:29.760 --> 00:01:36.320
+zawiera pakiet zawierający baseball, dzięki czemu możemy korzystać z najnowszych funkcji javascript.
+
+00:01:36.570 --> 00:01:41.810
+Zawiera Linton i debugowanie, na które tak naprawdę jeszcze nie patrzyliśmy.
+
+00:01:41.940 --> 00:01:46.830
+Tworzy dla Ciebie całą tę infrastrukturę, więc od razu możesz zacząć pisać aplikację i jest
+
+00:01:46.830 --> 00:01:51.670
+to bardzo dobre narzędzie, z którego korzysta wiele osób, więc zainstalujemy twoją reakcję.
+
+00:01:51.690 --> 00:01:55.830
+Jeśli pamiętasz, po prostu instalujemy Dashti w NPM,
+
+00:01:59.050 --> 00:02:04.020
+a to pozwoli nam ponownie zareagować, jeśli otrzymasz te błędy.
+
+00:02:04.120 --> 00:02:07.180
+Zawsze pamiętaj, aby zrobić sudo teraz,
+
+00:02:14.500 --> 00:02:20.870
+gdy mamy ponownie stworzyć, po prostu powiedzieć, stworzyć ponownie aplikację i nazwę naszej aplikacji.
+
+00:02:20.890 --> 00:02:25.360
+W naszym przypadku nazwiemy to przyjaciółmi robo.
+
+00:02:29.130 --> 00:02:35.960
+Widzisz, że instaluje mnóstwo rzeczy, których potrzebujemy.
+
+00:02:36.350 --> 00:02:44.210
+Wygląda na to, że sukces spowodował, że Twoi znajomi Roble'a znaleźli się w moim katalogu, a nawet
+
+00:02:44.240 --> 00:02:52.550
+daje ci dobre komentarze. NPM start NPM test NPM run run NPM Ranja jacked, ale do tego dojdziemy później.
+
+00:02:52.550 --> 00:02:55.790
+Zobaczmy, co mamy w naszym folderze na pulpicie.
+
+00:02:57.070 --> 00:03:01.200
+Mamy już przyjaciół robo, które zostały już dla nas stworzone.
+
+00:03:01.590 --> 00:03:04.800
+OK, pozwólmy C. D do tego.
+
+00:03:04.950 --> 00:03:14.280
+A teraz, jeśli mam ls, który wygląda na to, że mamy mnóstwo folderów i plików, takich jak sąsiadujące z Pakistanem, które zostały już dla nas
+
+00:03:14.430 --> 00:03:18.100
+stworzone i nie ma modułów Jak to jest niesamowite.
+
+00:03:18.120 --> 00:03:23.880
+Instaluje się już we wszystkich zależnościach, których potrzebujemy.
+
+00:03:23.880 --> 00:03:28.780
+W rzeczywistości, jeśli przejdziemy na pulpit, widzimy tutaj folder.
+
+00:03:28.920 --> 00:03:36.120
+Więc przeciągnijmy to do Sublime Text, otwórzcie to i zamierzam zmienić ekrany tylko po to, abyśmy mogli zobaczyć oba
+
+00:03:36.120 --> 00:03:36.690
+te
+
+00:03:40.230 --> 00:03:42.370
+elementy w tym samym czasie.
+
+00:03:47.630 --> 00:03:56.130
+Zanim pokażę ci, co znajduje się w folderze, widzimy, że jeśli pójdziemy spakować naszego Jasona, zobaczymy zależności, na które
+
+00:03:56.130 --> 00:03:57.480
+musimy zareagować.
+
+00:03:57.480 --> 00:04:04.830
+Mamy coś, co nazywa się scenariuszem re-act dam i re-act, a także mamy kilka skryptów, które
+
+00:04:04.890 --> 00:04:07.120
+już dla nas stworzyli.
+
+00:04:07.110 --> 00:04:10.790
+Zaczynamy test budowy i Egypte.
+
+00:04:10.960 --> 00:04:16.660
+Zacznijmy od początku, ponieważ podczas gdy wygląda jak start, odczytuje skrypty i uruchamia
+
+00:04:16.660 --> 00:04:17.890
+nasz serwer.
+
+00:04:18.150 --> 00:04:19.750
+Powiem więc,
+
+00:04:26.840 --> 00:04:35.940
+że wygląd startowy NPM, który mamy na naszym lokalnym hoście, reaguje na próbkę, więc wszystko działa.
+
+00:04:35.980 --> 00:04:40.420
+Nie musieliśmy nic robić, poza tym, że naprawdę uruchamiamy tylko dwa polecenia.
+
+00:04:40.420 --> 00:04:41.330
+Bardzo fajny.
+
+00:04:41.360 --> 00:04:46.480
+OK, zobaczmy, co Crea zareagowała na naszą kartę.
+
+00:04:46.480 --> 00:04:52.560
+Mamy czytać, które są tylko informacjami, które pamiętasz, kiedy umieściliśmy je na hoście.
+
+00:04:52.660 --> 00:05:01.000
+To wyświetli w folderze projektu mamy pakiet Jaison, który ponownie ma sens.
+
+00:05:01.230 --> 00:05:03.390
+Wyjaśnię ci, co oznaczają zależności.
+
+00:05:03.450 --> 00:05:04.550
+I kolejne wideo.
+
+00:05:04.890 --> 00:05:12.080
+Ale widzimy, że skrypty zostały stworzone i wszystkie z nich używają skryptów ponownie.
+
+00:05:12.360 --> 00:05:21.450
+Teraz skrypty Riak sprawiają, że KHRAIS reaguje tak niesamowicie, zamiast instalować takie rzeczy jak mokry plecak
+
+00:05:21.720 --> 00:05:22.910
+i baseball.
+
+00:05:22.920 --> 00:05:29.270
+Czy pamiętasz, jak wiele ustawień musieliśmy zrobić, aby uzyskać obsługę javascript ESX.
+
+00:05:29.430 --> 00:05:36.120
+A potem używamy przeglądarki ephi do dołączenia do javascriptowych robotów, które będą reagować na skrypty
+
+00:05:36.120 --> 00:05:42.860
+robią wszystko za Ciebie i używają najnowszych i najlepszych, że nie musimy się o nic martwić.
+
+00:05:42.900 --> 00:05:48.480
+Dzięki temu ludzie mogą budować naprawdę szybkie aplikacje i można używać jeru.
+
+00:05:48.510 --> 00:05:53.970
+Jeśli w końcu chcesz dostosować skrypty do ponownego działania i udać się na własną rękę.
+
+00:05:53.970 --> 00:06:00.660
+Ponieważ Twój projekt staje się coraz większy, zawsze możesz wysunąć i dostosować swoją aplikację, co jest najlepszym sposobem
+
+00:06:00.660 --> 00:06:02.390
+na rozpoczęcie każdego projektu.
+
+00:06:02.400 --> 00:06:06.870
+Jest zarządzany przez zespół Facebooka i jest naprawdę dobry.
+
+00:06:08.530 --> 00:06:09.000
+DOBRZE.
+
+00:06:09.150 --> 00:06:16.860
+Widzimy również, że w pliku jest zablokowana baza danych i jest to plik, który jest automatycznie generowany
+
+00:06:16.860 --> 00:06:18.280
+przez pakiet Jaison.
+
+00:06:18.570 --> 00:06:25.950
+Zapewnia to, że numery wersji twoich zależności są zablokowane, więc jeśli dam ten projekt komukolwiek
+
+00:06:25.950 --> 00:06:33.300
+innemu miejscu na świecie, upewniamy się, że wersje są poprawne, tak aby działały w 100
+
+00:06:34.080 --> 00:06:35.270
+procentach czasu.
+
+00:06:36.310 --> 00:06:40.830
+Mamy również coś, co nazywa się "good ignore" i ma przed sobą kropkę.
+
+00:06:40.840 --> 00:06:42.520
+To tak naprawdę nazywa się plik dot.
+
+00:06:42.820 --> 00:06:47.180
+A zanim zaczniemy, zdobądź i popchnij ten projekt, aby uzyskać pomoc.
+
+00:06:47.530 --> 00:06:54.430
+Cóż, to sprawdzenie tego pliku i jeśli widzi tu coś, co nie powinno automatycznie uwzględniać, to
+
+00:06:54.430 --> 00:06:56.130
+zignoruj te pliki.
+
+00:06:56.140 --> 00:07:01.690
+Więc pamiętaj, jak powiedziałem moduły węzłów, których nie chcemy popychać do repozytorium, ponieważ podczas gdy
+
+00:07:01.780 --> 00:07:09.140
+mamy Pakistana Jasona i tworzy niepotrzebną pracę i czekamy, aby pchnąć nasz projekt. No i znowu nie obchodzi nas największy
+
+00:07:09.140 --> 00:07:10.240
+znany folder.
+
+00:07:10.240 --> 00:07:14.810
+Nie obchodzi nas folder okładek, który ponownie dotyczy testów, dlatego nie musimy tego ukrywać.
+
+00:07:15.040 --> 00:07:20.160
+Nie dbamy również o foldery kompilacji i kilka innych.
+
+00:07:20.530 --> 00:07:25.870
+To automatycznie generuje to dla nas, nie musimy dotykać.
+
+00:07:26.070 --> 00:07:32.760
+Mamy wtedy oczywiście nasze moduły węzłów i możesz zobaczyć tutaj, że jest ich mnóstwo, które
+
+00:07:32.790 --> 00:07:36.890
+ponownie tworzą ponownie automatycznie budują dla nas automatycznie.
+
+00:07:36.940 --> 00:07:41.770
+Mamy również folder publiczny i uważamy, że powinniśmy go znać.
+
+00:07:41.770 --> 00:07:48.770
+Indeksowaliśmy to H. M. mamy coś, co nazywa się manifest d'Agde Jaison.
+
+00:07:49.050 --> 00:07:56.250
+Jest to nowa funkcja, która pozwala użytkownikom pobrać skrót do Twojej witryny i mieć ikonę na
+
+00:07:56.250 --> 00:07:56.700
+pulpicie.
+
+00:07:56.700 --> 00:07:58.590
+Ale znowu nie musimy się tym martwić.
+
+00:07:58.710 --> 00:08:06.750
+A potem mamy Traficon ICAO, która jest małą ikoną, która pojawia się na górze tutaj i może ją zmienić za
+
+00:08:06.750 --> 00:08:12.990
+pomocą dowolnego pliku iso, który chcesz, i jest to narzędzie online, które je wygeneruje.
+
+00:08:12.990 --> 00:08:14.900
+Znowu coś, o co nie musimy się martwić.
+
+00:08:16.470 --> 00:08:21.210
+I wreszcie mamy folder SIRC, który jest folderem źródłowym.
+
+00:08:21.350 --> 00:08:25.020
+To tutaj następuje cała magiczna powtórka.
+
+00:08:25.320 --> 00:08:29.580
+Jeśli spojrzysz na indeksowany Tak, jest to główny plik skryptu.
+
+00:08:29.610 --> 00:08:37.050
+Robimy kilka importów, które pamiętasz, po prostu importujemy różne skrypty i po prostu mówimy o tej
+
+00:08:37.050 --> 00:08:40.640
+nowej składni, której nigdy wcześniej nie widzieliśmy.
+
+00:08:40.650 --> 00:08:45.250
+Dokument aplikacyjny R-app Dom Rander uzyskał LMM po numerze ID.
+
+00:08:45.270 --> 00:08:46.850
+OK, wiemy to.
+
+00:08:46.950 --> 00:08:55.380
+Chcemy pobrać element z identyfikatorem użytkownika root i chcemy ponownie uruchomić aplikację Dom Brender.
+
+00:08:55.650 --> 00:09:03.350
+Jeśli przejdziemy do indeksu, myślimy o pliku ASTM, który widzimy tutaj i ma naprawdę ładne komentarze,
+
+00:09:03.350 --> 00:09:12.190
+więc możecie przeczytać, że w ciele jest tylko jeden div, nie ma pliku skryptowego, na wypadek gdyby przeglądarka nie
+
+00:09:12.190 --> 00:09:13.220
+używała javascriptu.
+
+00:09:13.230 --> 00:09:15.610
+Znowu nie musimy się o to martwić.
+
+00:09:15.640 --> 00:09:22.030
+Po prostu przychodzi z plikiem, ponieważ jest to dobra praktyka, ale w ciele mamy po prostu tego div z
+
+00:09:22.030 --> 00:09:23.920
+identyfikatorem root i nic więcej.
+
+00:09:23.940 --> 00:09:26.140
+Jednak kiedy wchodzimy do naszej aplikacji, widzimy to.
+
+00:09:26.320 --> 00:09:28.190
+Cóż, zdecydowanie coś tam jest.
+
+00:09:28.300 --> 00:09:36.260
+Nie ma najmniejszego podatku, a przynajmniej logo, więc wracamy tutaj bez wiedzy, a ty reagujesz, możemy powiedzieć, że OK łapiemy
+
+00:09:36.260 --> 00:09:47.240
+tę ideę w drodze do indeksu kropka J. S. plik i mówimy, że chcemy renderować ten
+
+00:09:47.540 --> 00:09:54.050
+składnik aplikacji i to jest to, co nazwaliśmy składnią GSX, którą przejdziemy później.
+
+00:09:54.840 --> 00:10:01.240
+Ta aplikacja reaguje na to, że jest to komponent Riak i chcę, abyś
+
+00:10:01.260 --> 00:10:06.210
+renderował na ekranie w ciele, więc mogę to zmienić.
+
+00:10:06.510 --> 00:10:13.300
+Chociaż możemy powiedzieć H-1 Hello World.
+
+00:10:13.930 --> 00:10:14.640
+Dzień dobry.
+
+00:10:18.120 --> 00:10:18.710
+H-1.
+
+00:10:19.600 --> 00:10:30.120
+A teraz, jeśli to zapiszę, zauważysz, że ponownie-act automatycznie je dla nas skompiluje, więc nie chcę odświeżać i patrzeć
+
+00:10:30.150 --> 00:10:35.190
+na to na naszej stronie internetowej mamy hello world.
+
+00:10:35.230 --> 00:10:36.460
+Bardzo fajny.
+
+00:10:36.460 --> 00:10:39.400
+Teraz znowu wspaniale zareaguje Creba.
+
+00:10:39.400 --> 00:10:43.590
+Daje także ostrzeżenia, że aplikacja jest zdefiniowana, ale nigdy nie używana.
+
+00:10:43.600 --> 00:10:48.870
+Więc jeśli przejdę tutaj, importuję aplikację, ale nigdy jej nie używam.
+
+00:10:48.880 --> 00:10:56.690
+Dostajemy również naprawdę dobrą radę w naszym terminalu, w jaki sposób możemy ulepszyć aplikację.
+
+00:10:56.960 --> 00:10:57.430
+DOBRZE.
+
+00:10:57.700 --> 00:11:02.110
+Ostatnią rzeczą, którą chcę ci pokazać, zanim przejdziemy do następnej sekcji, zaczniemy wkopać się
+
+00:11:02.110 --> 00:11:05.740
+w kod, ponieważ widzisz, że kolorystyka jest w pewnym sensie wyłączona.
+
+00:11:05.760 --> 00:11:12.210
+A to dlatego, że Sublime Text naprawdę nie rozumie, co tu się dzieje.
+
+00:11:13.740 --> 00:11:26.640
+Jeśli zmienimy to na javascript Babel, otrzymamy ładną składnię i wszystko wygląda dobrze.
+
+00:11:27.630 --> 00:11:28.440
+Idealny.
+
+00:11:28.500 --> 00:11:33.230
+Przygotowaliśmy nasze aplikacje. Chciałem również zmienić Taghaviego.
+
+00:11:33.240 --> 00:11:33.840
+Witaj świecie.
+
+00:11:33.840 --> 00:11:37.500
+Na razie tylko po to, aby upewnić się, że wszystko działa.
+
+00:11:37.600 --> 00:11:44.370
+Ale na razie masz konfigurację w następnym filmie, w którym przejdziemy przez resztę plików i
+
+00:11:44.370 --> 00:11:47.080
+zaczniemy budować nasz pierwszy komponent.
+
+00:11:47.220 --> 00:11:48.370
+Będzie dużo zabawy.
+
+00:11:48.420 --> 00:11:49.360
+Zobaczę to.

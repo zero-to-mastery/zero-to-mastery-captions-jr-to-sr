@@ -1,0 +1,508 @@
+﻿WEBVTT
+
+00:00:01.210 --> 00:00:02.380
+Bine ai revenit.
+
+00:00:02.380 --> 00:00:09.120
+În acest videoclip vom vorbi puțin despre ceva avansat și nu am acoperit prea mult în acest curs și vom fi
+
+00:00:09.120 --> 00:00:14.980
+cu siguranță în următoarea secțiune, dar vreau să încep cu el, astfel încât, chiar dacă ar putea fi
+
+00:00:14.980 --> 00:00:20.020
+nou și confuz la început, când intrăm în secțiunea următoare, ne vom întoarce și vom
+
+00:00:20.020 --> 00:00:21.940
+revedea exact ceea ce facem.
+
+00:00:22.770 --> 00:00:27.820
+Vreau să fac această aplicație mai realistă într-o aplicație reală.
+
+00:00:27.870 --> 00:00:34.310
+Nu ar fi neapărat acești roboți scrisi ca aici în roboți.
+
+00:00:34.380 --> 00:00:36.320
+Da, tocmai am creat această toamnă.
+
+00:00:36.330 --> 00:00:42.000
+Dar în viața reală nu intrăm manual pe utilizatori.
+
+00:00:42.360 --> 00:00:46.570
+Folosim ceva asemănător unui API.
+
+00:00:46.780 --> 00:00:47.980
+Și ce înseamnă asta.
+
+00:00:47.980 --> 00:00:56.410
+Ei bine, dorim ca acest site Web să se încarce pentru a face o cerere undeva în lumea internetului și să-i ia
+
+00:00:56.410 --> 00:01:06.630
+pe acești roboți de pe un server unde putem face efectiv acest lucru pe care îl avem aici, numit înlocuitor Jason și nu trebuie să vă faceți
+
+00:01:06.630 --> 00:01:12.620
+griji prea mult despre el, dar de fapt au o bufnita foarte buna pe care
+
+00:01:12.620 --> 00:01:20.990
+o putem folosi si ei returneaza ceea ce avem nevoie de un nume sau un ID si un nume de utilizator.
+
+00:01:21.020 --> 00:01:23.520
+Restul informațiilor nu avem nevoie de ele.
+
+00:01:23.540 --> 00:01:30.870
+Dar, după cum puteți vedea doar introducând în asta, voi, Arel, înțeleg asta.
+
+00:01:30.870 --> 00:01:37.010
+Folosind acest lucru, vom face ca aplicația noastră să fie mai realistă.
+
+00:01:37.020 --> 00:01:39.710
+Să începem.
+
+00:01:39.780 --> 00:01:45.850
+Dacă închid fișierul meu CSSA, deoarece nu mai avem nevoie de ele.
+
+00:01:46.050 --> 00:01:48.220
+Și să închidem restul filelor.
+
+00:01:49.860 --> 00:01:59.280
+Privind această componentă a aplicației, vedem că este ceea ce numim o componentă inteligentă, cum ar fi caseta de căutare sau lista
+
+00:01:59.280 --> 00:02:04.770
+de mașini, care sunt doar funcții pure, după cum puteți vedea aici.
+
+00:02:05.950 --> 00:02:06.410
+Apt.
+
+00:02:06.600 --> 00:02:15.150
+Da, de fapt, am afirmat o bucată de date care descrie aplicația noastră și pentru că ei au stat noi le
+
+00:02:15.150 --> 00:02:16.830
+numim componente inteligente.
+
+00:02:17.770 --> 00:02:20.830
+Și componentele inteligente tind să aibă această sintaxă de clasă.
+
+00:02:21.250 --> 00:02:30.390
+Acum, în viața reală, când pornim această aplicație, aceste roboți ar fi de fapt o matrice goală deoarece nu există nimic
+
+00:02:30.430 --> 00:02:31.110
+acolo.
+
+00:02:31.150 --> 00:02:33.360
+Nu am apucat utilizatorii.
+
+00:02:33.370 --> 00:02:42.650
+Deci, cel mai probabil, dacă salvez aceste roboți nu se va afișa până când nu încărc site-ul Web și atunci când
+
+00:02:42.650 --> 00:02:47.630
+site-ul Web se încarcă, cer utilizatorilor de undeva prin internet.
+
+00:02:49.970 --> 00:02:53.390
+Undeva speram aici.
+
+00:02:53.440 --> 00:02:54.300
+Deci, să facem asta.
+
+00:02:56.540 --> 00:03:06.610
+Reactul vine cu câteva alte lucruri din interiorul componentelor pe care le putem folosi și se numesc metode de ciclu de
+
+00:03:06.760 --> 00:03:07.420
+viață.
+
+00:03:10.200 --> 00:03:12.490
+Și arată cam așa.
+
+00:03:13.930 --> 00:03:15.160
+Nu fiți prea copleșiți.
+
+00:03:15.340 --> 00:03:23.510
+Acestea sunt doar metode pe care le putem folosi aici, care vine cu re-act și se numesc cârlige de ciclu de
+
+00:03:23.510 --> 00:03:32.180
+viață, deoarece ceea ce fac ei este dacă le execută acestea va declanșa automat atunci când această aplicație este încărcată pe site-ul
+
+00:03:32.220 --> 00:03:32.740
+web.
+
+00:03:32.900 --> 00:03:33.630
+Lasă-mă să explic.
+
+00:03:34.700 --> 00:03:37.610
+Vedem că avem trei secțiuni.
+
+00:03:37.610 --> 00:03:45.810
+Avem montarea actualizării și dezasamblarea modului în care acționăm. Lucrăm să facem ceva numit montare.
+
+00:03:45.890 --> 00:03:58.880
+Când fac clic pe reîmprospătarea aici, componenta aplicației, această componentă se află aici în documentul cu ideea de
+
+00:03:59.750 --> 00:04:01.160
+rutare.
+
+00:04:01.250 --> 00:04:09.910
+Dacă ne întoarcem la indexul nostru că fișierul HMO pagina noastră Web nu este altceva decât un div cu o idee de rădăcină.
+
+00:04:10.030 --> 00:04:21.290
+Cand spunem ca montez o componenta inlocuim aceasta si adaugam intreaga noastra aplicatie care se monteaza. Asadar, montarea este inceputul
+
+00:04:21.290 --> 00:04:31.410
+aplicatiei care se monteaza acum, acestea sunt carligele de viata care sunt lovite si sunt in ordine.
+
+00:04:31.460 --> 00:04:37.910
+Deci primul lucru este că verifică Hey face această componentă are un constructor Bauld are un constructor.
+
+00:04:37.940 --> 00:04:38.300
+Da.
+
+00:04:38.330 --> 00:04:45.680
+OK, apoi rulați această bucată de cod nu are componente se va monta.
+
+00:04:45.690 --> 00:04:47.850
+Nu, atunci nu o ignoră.
+
+00:04:47.850 --> 00:04:53.180
+Are Rander Da, are un wrencher care rulează asta.
+
+00:04:53.180 --> 00:04:55.710
+Are o componentă de montare?
+
+00:04:55.730 --> 00:04:58.030
+Nu nu are o componentă demarked ignorată.
+
+00:04:58.910 --> 00:05:01.850
+Și tocmai trece prin asta de fiecare dată.
+
+00:05:01.850 --> 00:05:08.140
+De asemenea, are ceva numit actualizare și asta este ori de câte ori o componentă se schimbă.
+
+00:05:08.180 --> 00:05:18.600
+De exemplu, atunci când am avut lista de bine de fiecare dată când am introdus ceva, componenta fără card este
+
+00:05:18.840 --> 00:05:24.030
+renderată deoarece avem informații noi, funcția primește intrări noi.
+
+00:05:24.030 --> 00:05:27.210
+Același lucru cu componenta de intrare.
+
+00:05:27.210 --> 00:05:35.960
+Deci, din nou în acele componente, dacă vrem să adăugăm componenta, vom primi actualizarea componentei propok shook-ului
+
+00:05:35.960 --> 00:05:38.430
+și așa mai departe.
+
+00:05:39.340 --> 00:05:49.960
+Și în final, cu dezasamblarea este atunci când o componentă este eliminată dintr-o pagină, de exemplu, dacă schimbăm o pagină
+
+00:05:49.990 --> 00:05:58.230
+diferită aici, componenta care se va monta, componenta aplicației se va șterge din pagină.
+
+00:05:58.230 --> 00:06:05.350
+Acestea se numesc cârlige de ciclu de viață, deoarece acestea se execută de fiecare dată când o componentă face ceva și
+
+00:06:05.350 --> 00:06:06.560
+vine cu reacție.
+
+00:06:06.670 --> 00:06:12.420
+Deci, puteți să le puneți în componența dvs. de clasă și vor fi declanșate automat.
+
+00:06:12.430 --> 00:06:16.250
+Nu trebuie să vă faceți griji cu privire la apelarea lasă-mă să demonstrez acest lucru.
+
+00:06:17.840 --> 00:06:22.770
+Vrem să folosim componenta mount mount care devine apelată după render.
+
+00:06:22.870 --> 00:06:28.930
+Acest lucru spune că da componenta app este montat pe
+
+00:06:28.930 --> 00:06:43.780
+pagina web și este Sprenger că este este afișarea ceva bine putem face asta spunând componenta a montat și pentru că aceasta face parte din reacție.
+
+00:06:43.830 --> 00:06:46.310
+Observați că acum folosesc funcțiile aero aici.
+
+00:06:49.020 --> 00:06:50.510
+Acum aș crede că componenta Denn mount.
+
+00:06:50.520 --> 00:06:52.190
+Pot sa spun consola
+
+00:06:55.520 --> 00:07:05.940
+gandul log daca refresh acest lucru si deschide consola veti vedea ca am verifica daca am reîmprospata acolo ai merge a fost foarte
+
+00:07:05.940 --> 00:07:06.610
+rapid.
+
+00:07:06.620 --> 00:07:09.590
+Dar vezi că asta se numește automat.
+
+00:07:09.590 --> 00:07:11.120
+Chiar dacă nu am spus nimic.
+
+00:07:12.260 --> 00:07:14.980
+Folosind acest lucru putem face ceva interesant.
+
+00:07:15.050 --> 00:07:26.440
+Acum, când componenta se montează, pot spune că acest set de seturi darts are acum roboți pentru roboți
+
+00:07:26.440 --> 00:07:32.430
+pe care îi primim de la Griffo natural.
+
+00:07:32.640 --> 00:07:39.930
+Dacă fac asta și salvez să refresh și să vedem ce se întâmplă.
+
+00:07:40.020 --> 00:07:45.010
+Este într-adevăr foarte rapid, dar vedeți că primim roboții noștri.
+
+00:07:45.200 --> 00:07:52.470
+Spun constructorul cu o matrice goală doar pentru a vă arăta ordinea execuției aici.
+
+00:07:52.670 --> 00:07:57.140
+Dacă aș avea un jurnal de console
+
+00:08:01.180 --> 00:08:18.220
+și vom spune că unul aici va spune doi aici și vom spune doar trei dacă salvez acest lucru și deschid consola pe care o am 1
+
+00:08:18.220 --> 00:08:31.960
+3 2 3 să verificăm dacă avem primul Gerrans trei care este Rander apoi două care este componentă a montat și apoi
+
+00:08:31.960 --> 00:08:34.750
+trei rulează din nou.
+
+00:08:35.200 --> 00:08:43.340
+De fapt, să schimbăm acest lucru cu cuvintele reale, pentru a vedea mai bine ce se întâmplă de fapt.
+
+00:08:46.070 --> 00:08:53.200
+Dacă salvăm și reîmprospătăm uităm că avem un constructor care rulează mai întâi apoi face, atunci
+
+00:08:53.200 --> 00:08:57.020
+componenta se monta la fel ca această comandă.
+
+00:08:57.170 --> 00:09:00.460
+Dar acum ne-am făcut și noi.
+
+00:09:00.770 --> 00:09:03.800
+De ce a făcut randul din nou.
+
+00:09:03.840 --> 00:09:14.080
+Dacă vă amintiți că am creat constructorul, l-am fugit pe Brandur și apoi am actualizat statul și componenta făcut
+
+00:09:14.080 --> 00:09:14.920
+MT.
+
+00:09:15.010 --> 00:09:24.420
+Deci, pentru că am actualizat statul de fiecare dată când statul schimbă Amintiți-vă că mergem la ciclul de
+
+00:09:24.900 --> 00:09:36.160
+viață actualizează repunerea Iranului din nou, pentru că merge dintr-o matrice goală pe o listă de roboți redând repetată, iar Domul virtual
+
+00:09:36.160 --> 00:09:45.500
+observă că există o diferență și repetăm ​​Web browser pentru a include cunoștințele verticale ale robotului, pe care
+
+00:09:46.810 --> 00:09:48.810
+tocmai le-am făcut.
+
+00:09:48.820 --> 00:09:55.880
+Putem elimina acest lucru și, în final, facem acest lucru mai realist.
+
+00:09:56.000 --> 00:10:03.920
+În loc să folosesc fișierul robotului, voi elimina de fapt acest lucru și aici vă voi arăta un
+
+00:10:04.790 --> 00:10:09.170
+mod răcoros de a lua această listă de aici.
+
+00:10:09.170 --> 00:10:18.630
+Am de gând să copiez link-ul și o să spun despre care vom afla în secțiunea următoare.
+
+00:10:18.650 --> 00:10:25.640
+Spunem doar să faci o cerere de foaie și să aduci asta.
+
+00:10:25.950 --> 00:10:28.280
+Din nou, doar spunem că treci aici.
+
+00:10:29.540 --> 00:10:33.760
+Apoi, acest lucru va primi un răspuns și acest
+
+00:10:38.860 --> 00:10:43.270
+răspuns este Ei bine, această parte este un pic dificil.
+
+00:10:43.270 --> 00:10:44.560
+Trebuie să te obișnuiești cu asta.
+
+00:10:46.590 --> 00:10:53.500
+Jason trebuie să transformăm din nou răspunsul la ceva despre care vom vorbi în următoarea sesiune.
+
+00:10:53.510 --> 00:10:56.900
+Deocamdată, puteți să copiați și să urmați baza.
+
+00:10:56.930 --> 00:10:59.280
+Vom reveni la asta și vom explica ce se întâmplă.
+
+00:10:59.660 --> 00:11:05.140
+Și de aici a spus acest lucru pe o linie nouă, așa că știm exact ce se întâmplă.
+
+00:11:06.810 --> 00:11:13.370
+Vom spune apoi roboți până acum că putem spune utilizatori, deoarece în acest caz primim utilizatori.
+
+00:11:13.750 --> 00:11:15.000
+Iar aici putem
+
+00:11:18.390 --> 00:11:22.460
+spune că acest lucru spune roboții de stat pentru utilizatorii egali.
+
+00:11:22.950 --> 00:11:27.870
+Și trebuie să ne asigurăm că vom returna acest lucru în siguranță.
+
+00:11:27.910 --> 00:11:28.910
+Să vedem dacă funcționează.
+
+00:11:30.230 --> 00:11:30.950
+Uită-te la asta.
+
+00:11:31.060 --> 00:11:40.570
+Să reîmprospătăm și să vedeți că puținul decalaj funcționează acum.
+
+00:11:40.650 --> 00:11:47.260
+Deci, aici putem să facem acest lucru mai mic și să îl reducem la o linie.
+
+00:11:47.260 --> 00:11:48.770
+Ar trebui să ne amintim cum să facem asta.
+
+00:11:50.220 --> 00:11:52.680
+Și vedem că noi pur
+
+00:11:55.370 --> 00:11:56.390
+și
+
+00:11:59.320 --> 00:12:01.850
+simplu actualizăm starea după ce luăm.
+
+00:12:01.870 --> 00:12:04.680
+Așadar, preluăm orice sunt utilizatorii.
+
+00:12:05.020 --> 00:12:06.760
+Avem un răspuns.
+
+00:12:06.760 --> 00:12:10.690
+Facem niște magie aici cu Jason despre care vom vorbi mai târziu.
+
+00:12:10.840 --> 00:12:17.820
+Apoi, noi primim utilizatorii și actualizăm utilizatorii cu starea setată până acum actualizată.
+
+00:12:17.820 --> 00:12:28.200
+Din nou, dacă nu fac asta, să spunem că aici nu faceți nimic și nu întoarceți un obiect gol.
+
+00:12:28.330 --> 00:12:37.020
+Vedeți că nu primesc roboții pe care îi primesc numai după ce mă actualizează cu acești utilizatori.
+
+00:12:37.060 --> 00:12:38.000
+Cat de tare e asta.
+
+00:12:42.190 --> 00:12:42.840
+In regula.
+
+00:12:42.970 --> 00:12:43.810
+A fost foarte mult.
+
+00:12:43.810 --> 00:12:50.950
+Și probabil că asta ar părea destul de înfricoșător pentru a vă face să vă simțiți puțin mai confortabil pentru
+
+00:12:50.950 --> 00:12:54.100
+că folosesc fetch și nu există nimic atașat.
+
+00:12:54.100 --> 00:12:58.030
+Acest lucru înseamnă că face parte din obiectul ferestrei.
+
+00:12:58.240 --> 00:13:05.970
+Hai să verificăm dacă deschid consola și fac fereastra Daut.
+
+00:13:06.430 --> 00:13:07.260
+Da, uită-te la asta.
+
+00:13:07.270 --> 00:13:12.130
+Fetch este o metodă pe obiectul ferestrei.
+
+00:13:12.130 --> 00:13:14.140
+Acesta vine cu toate browserele acum.
+
+00:13:14.320 --> 00:13:17.070
+Este un instrument pentru noi de a face cereri.
+
+00:13:17.980 --> 00:13:26.440
+Două servere și după cum puteți vedea acest lucru este un server care se întoarce pentru noi atunci
+
+00:13:26.440 --> 00:13:35.230
+când facem loviți utilizatorii o listă de utilizatori pe care le putem folosi care este perfect pentru wrap noastre.
+
+00:13:35.260 --> 00:13:40.140
+Și, în sfârșit, te întrebi ce se întâmplă dacă ar fi foarte lent sau dacă asta ar fi fost.
+
+00:13:40.210 --> 00:13:40.800
+Nu știu.
+
+00:13:40.930 --> 00:13:41.870
+Cinci secunde.
+
+00:13:41.890 --> 00:13:44.370
+Și am avut o mulțime de utilizatori.
+
+00:13:44.800 --> 00:13:56.840
+Ei bine, în acest caz, puteți face ceva ca o declarație IF dacă roboții nu lenth este zero.
+
+00:13:57.010 --> 00:14:03.450
+În acest caz, putem returna un H1 care spune că încărcarea altcuiva
+
+00:14:09.820 --> 00:14:13.060
+putem doar să spunem că
+
+00:14:15.800 --> 00:14:19.310
+returnez acest lucru este doar javascript.
+
+00:14:19.310 --> 00:14:20.840
+Este o frumusețe în Riyadh.
+
+00:14:22.440 --> 00:14:27.710
+Și vedeți cum obținem roboți nu este definită deoarece este vorba de roboții DOT de tip punct.
+
+00:14:27.870 --> 00:14:29.870
+Din nou, ne referim la starea aplicației.
+
+00:14:30.300 --> 00:14:36.330
+Și dacă refresh, să spunem doar că nu actualizăm statul și voi
+
+00:14:36.330 --> 00:14:37.250
+reveni
+
+00:14:41.340 --> 00:14:48.630
+doar la un obiect gol, în timp ce în acel caz, doar mă încărc.
+
+00:14:48.680 --> 00:14:49.750
+Foarte tare.
+
+00:14:50.240 --> 00:14:55.510
+Și așa construiești operațiuni reale cu re-act ai o bară de încărcare.
+
+00:14:55.500 --> 00:15:05.150
+Ei pot doar să adauge aici să facă cereri pe componenta a montat și a interacționa cu componente.
+
+00:15:05.240 --> 00:15:06.100
+Foarte tare.
+
+00:15:07.900 --> 00:15:13.280
+Știți ce avem noi înșine aplicația noastră.
+
+00:15:13.370 --> 00:15:18.830
+Există un ultim lucru pe care vi-l voi arăta cu reacție și ați învățat elementele de bază și să reacționați.
+
+00:15:18.830 --> 00:15:22.270
+Puteți lua acest lucru acum pentru a construi orice aplicație pe care o doriți.
+
+00:15:22.280 --> 00:15:24.120
+Deci, încă un lucru de făcut.
+
+00:15:24.140 --> 00:15:28.110
+Încă o mică bucată pentru a ne completa cunoștințele noastre re-act.
+
+00:15:28.490 --> 00:15:29.820
+Ne vedem în următorul.
+
+00:15:29.830 --> 00:15:30.250
+Pa! Pa.

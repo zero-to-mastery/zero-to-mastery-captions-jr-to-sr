@@ -1,0 +1,385 @@
+﻿WEBVTT
+
+00:00:00.910 --> 00:00:02.130
+Bine ai revenit.
+
+00:00:02.170 --> 00:00:09.880
+Hai să vorbim despre bazele de date, dar vă voi da un heads-up ca dezvoltator de web, probabil că nu prea
+
+00:00:10.210 --> 00:00:16.540
+lucrați prea mult cu bazele de date, mai ales când vine vorba de scalarea și îmbunătățirea performanțelor.
+
+00:00:16.540 --> 00:00:22.530
+Cu toate acestea, putem să aruncăm o privire la bazele de date de la un nivel superior, astfel încât să putem conecta piesele.
+
+00:00:22.630 --> 00:00:28.870
+Și dacă se ajunge vreodată la ea, putem structura aplicațiile noastre, astfel încât să
+
+00:00:28.870 --> 00:00:32.050
+profite de baza bazei de date.
+
+00:00:32.110 --> 00:00:38.250
+Deci, să luăm o privire de ansamblu la nivel înalt a ceea ce putem face cu bazele de date.
+
+00:00:38.380 --> 00:00:46.450
+Am enumerat aici șase articole care sunt principalele modalități prin care bazele de date pot fi scalabile, iar prima este probabil cea
+
+00:00:46.510 --> 00:00:53.650
+mai importantă pe care ar trebui să o priviți înainte de a face vreun fel de optimizări într-o bază
+
+00:00:53.650 --> 00:00:54.460
+de date.
+
+00:00:55.230 --> 00:01:01.050
+Și aceasta este de a identifica întrebări ineficiente înainte de a începe să vă uitați la baza dvs. de date și cum puteți
+
+00:01:01.050 --> 00:01:01.910
+să o scalați.
+
+00:01:02.130 --> 00:01:04.630
+Aruncând mai mulți bani pentru ao îmbunătăți.
+
+00:01:04.710 --> 00:01:10.000
+Mai întâi trebuie să vă întrebați dacă folosesc eficient baza de date.
+
+00:01:10.140 --> 00:01:18.510
+Fac declarații în baza de date de la serverul API spun că fac aceste solicitări
+
+00:01:18.510 --> 00:01:20.570
+într-un mod eficient.
+
+00:01:20.670 --> 00:01:27.930
+Și există multe modalități pe care le puteți îmbunătăți prin faptul că nu aveți prea multe articulații sau dacă cereți prea multe informații
+
+00:01:27.930 --> 00:01:30.840
+atunci când aveți nevoie doar de puțină informație.
+
+00:01:30.840 --> 00:01:35.760
+Există multe modalități prin care puteți să vă îmbunătățiți toate întrebările, dar cele două
+
+00:01:35.760 --> 00:01:42.800
+lucruri principale pe care le puteți îmbunătăți este să vă asigurați că solicitați numai unde aveți absolut nevoie de pe serverul dvs.
+
+00:01:42.900 --> 00:01:50.490
+Și apoi, în final, folosind lucruri ca indexurile pentru a îmbunătăți această interogare de date.
+
+00:01:50.490 --> 00:01:52.540
+Acum ce sunt indicii.
+
+00:01:52.570 --> 00:01:58.550
+De obicei, accesul la date într-o bază de date se face cu blocuri pe discuri.
+
+00:01:58.590 --> 00:02:10.100
+Atunci când interogăm o bază de date sau un tabel, trebuie să cerem accesul întregului bloc de discuri cu informațiile din
+
+00:02:10.100 --> 00:02:11.240
+tabel.
+
+00:02:11.240 --> 00:02:12.740
+Și, de obicei, aceste date.
+
+00:02:12.800 --> 00:02:16.440
+Să presupunem că am un nume de utilizator și că vârsta nu este sortată.
+
+00:02:16.520 --> 00:02:21.780
+Deci, dacă am căuta un utilizator care are 34 de ani.
+
+00:02:21.950 --> 00:02:30.320
+Ei bine, asta va cere să mă uit prin întreaga masă, iar dacă datele ar fi sortate aș putea face ceva
+
+00:02:30.320 --> 00:02:36.780
+numit căutare binară, ceea ce face mult mai rapid pentru mine să-l găsesc pe acel utilizator.
+
+00:02:36.800 --> 00:02:41.870
+Deci, există o creștere imensă a performanței, făcând ceea ce numim indexare.
+
+00:02:42.110 --> 00:02:47.490
+Așa că țineți minte că indexarea este o modalitate de sortare a unui număr de înregistrări pe mai multe câmpuri.
+
+00:02:48.590 --> 00:02:56.360
+Deci, dacă creez un index pe un câmp care este vârsta tabelului utilizatorilor, creează o copie nouă a acelei structuri
+
+00:02:56.360 --> 00:03:02.720
+de date care deține valoarea câmpului și un pointer la înregistrarea la care se referă.
+
+00:03:02.720 --> 00:03:08.300
+Așa că gândiți-vă la crearea unui fișier pe computerul dvs., în loc să aveți doar un fișier stabil utilizator.
+
+00:03:08.300 --> 00:03:11.660
+Acum aveți și un fișier index al unui utilizator.
+
+00:03:11.910 --> 00:03:18.230
+Dar data viitoare vom interoga orice întrebări privind vârsta utilizatorilor, putem folosi acel fișier index pentru a găsi imediat
+
+00:03:18.230 --> 00:03:21.230
+acel utilizator care ne permite să folosim căutări binare.
+
+00:03:21.260 --> 00:03:26.620
+Din nou pentru a crește cu adevărat performanța.
+
+00:03:26.710 --> 00:03:32.290
+Acum, dezavantajul evident al indexării este că acești indici necesită spațiu suplimentar pe disc.
+
+00:03:32.290 --> 00:03:40.360
+Din nou, facem un alt fișier și, în funcție de sistemul dvs. care are mai mult spațiu și mai ales dacă
+
+00:03:40.360 --> 00:03:44.680
+baza de date este mare ar putea să nu funcționeze bine.
+
+00:03:44.780 --> 00:03:45.080
+In regula.
+
+00:03:45.080 --> 00:03:47.820
+Deci tot acest indice vorbesc și întrebări ineficiente.
+
+00:03:47.930 --> 00:03:50.010
+Cum pot crea un index.
+
+00:03:50.330 --> 00:03:57.710
+Amintiți-vă bine toate instrucțiunile noastre pentru a crea o tabelă pe care am făcut comanda de creare a tabelului și apoi i-am
+
+00:03:57.710 --> 00:04:00.470
+dat numele tabelului pentru a crea un index.
+
+00:04:00.470 --> 00:04:05.170
+Pur și simplu spunem că reacționarea indexului are un index.
+
+00:04:05.210 --> 00:04:09.730
+Să presupunem că folosiți vârsta la numele tabelului.
+
+00:04:09.740 --> 00:04:13.970
+În cazul nostru, utilizatorul și numele coloanei vârstă și asta este.
+
+00:04:13.970 --> 00:04:25.660
+După ce facem că oricând ne interogăm tabelul utilizatorilor pentru ceva de genul H, avem din nou o interogare mai rapidă atunci când vine vorba de Eskew sau de
+
+00:04:26.350 --> 00:04:32.430
+comenzi eficiente, care de obicei aveți o echipă de baze de date sau ingineri de
+
+00:04:32.470 --> 00:04:34.050
+baze de date.
+
+00:04:34.370 --> 00:04:40.030
+Dar crearea de lucruri simple precum indexarea sau asigurarea că solicitați numai ceea ce cereți
+
+00:04:40.090 --> 00:04:43.980
+din aplicație este modul în care faceți acest lucru.
+
+00:04:44.020 --> 00:04:48.760
+Amintiți-vă că stocarea este cea mai lentă piesă dintr-o bază de date relațională.
+
+00:04:48.850 --> 00:05:00.640
+Wombat Escorial Querrey poate provoca o cantitate imensă de întârziere sau așa că subiectul următor este creșterea memoriei.
+
+00:05:00.790 --> 00:05:02.980
+Și acesta este unul simplu.
+
+00:05:03.310 --> 00:05:10.510
+Dacă aveți o strangulare care este stocarea dvs., primul dvs. mod de acțiune, de obicei după ce
+
+00:05:10.510 --> 00:05:17.980
+ați analizat interogările ineficiente, este să-i oferiți o memorie suplimentară și faceți asta prin îmbunătățirea hardware-ului pe care
+
+00:05:17.980 --> 00:05:20.050
+lucrează baza de date.
+
+00:05:20.050 --> 00:05:26.710
+Prin creșterea cantității de informații din memorie, nu accesați discul de câte ori creșteți viteza, astfel încât să
+
+00:05:26.710 --> 00:05:31.310
+puteți stoca mai multe informații în memorie pentru o bază de date.
+
+00:05:32.540 --> 00:05:37.140
+Dar ca și în cazul a ceea ce vine cu memoria, poate adăuga doar o anumită sumă.
+
+00:05:37.220 --> 00:05:40.920
+Nu veți putea adăuga întreaga bază de date în memorie.
+
+00:05:40.920 --> 00:05:42.150
+Să vorbim despre următoarea.
+
+00:05:42.250 --> 00:05:44.490
+Și asta e scalarea verticală.
+
+00:05:44.690 --> 00:05:51.650
+Și acest lucru este de obicei făcut cu ceva de genul roșu S sau memcached și rattus este ceva cu
+
+00:05:51.650 --> 00:05:56.880
+care suntem familiarizați și am vorbit despre scalarea verticală poate include, de asemenea, creșterea memoriei.
+
+00:05:57.080 --> 00:06:03.740
+Dar, în acest caz, vorbim despre adăugarea unui alt serviciu, astfel încât sistemul dvs. să
+
+00:06:03.740 --> 00:06:05.600
+utilizeze mai eficient resursele.
+
+00:06:05.660 --> 00:06:13.390
+Așa că adăugarea unui sistem ca rentele este un fel de adăugare de memorie, dar nu o facem pe același server ca și
+
+00:06:13.390 --> 00:06:14.940
+noi în primul caz.
+
+00:06:14.950 --> 00:06:22.570
+Deci, prin adăugarea unui alt server care ne-a citit că este o memorie de stocare care din nou știm că face
+
+00:06:22.570 --> 00:06:27.230
+lucrurile rapid înseamnă că tocmai am crescut memoria bazei noastre de date.
+
+00:06:27.310 --> 00:06:28.900
+Dar cum ne ajută asta.
+
+00:06:29.260 --> 00:06:37.750
+Ei bine, de exemplu, dacă punem o întrebare ca vârsta unui utilizator și observăm că această interogare de întrebare a vârstei utilizatorului
+
+00:06:37.750 --> 00:06:46.210
+se întâmplă întotdeauna și că fiecare utilizator o folosește bine, putem efectiv să numerarăm în numerar răspunsul din nou la ceva despre
+
+00:06:46.780 --> 00:06:54.640
+care vom vorbi, dar va spune hei înainte de a mă întreba măcar despre utilizarea vârstei citiți-ne care este în
+
+00:06:54.750 --> 00:06:58.190
+memorie este mult mai rapid decât eu sunt.
+
+00:06:58.510 --> 00:07:03.550
+Verificați dacă domnul ratt sau doamna rentes are acele informații.
+
+00:07:03.700 --> 00:07:05.970
+Dacă se întâmplă bine, întoarce-o.
+
+00:07:05.980 --> 00:07:09.790
+În caz contrar, transmiteți-mi acele informații și o voi da înapoi.
+
+00:07:10.060 --> 00:07:15.580
+Dar când îmi întorc vârsta utilizatorilor, am de gând să trec prin ratt și dacă ratt
+
+00:07:15.590 --> 00:07:19.540
+nu-l are deja, o să-l păstrez acolo înainte să-l trimit.
+
+00:07:19.540 --> 00:07:23.750
+Deci este ceva asemănător cu Cdn dacă te gândești la asta.
+
+00:07:24.190 --> 00:07:32.630
+Din nou, doar încaseazăm lucruri care sunt adesea solicitate, astfel încât să utilizăm accesul la memorie în loc de accesul
+
+00:07:32.630 --> 00:07:33.770
+pe disc.
+
+00:07:35.410 --> 00:07:43.170
+O altă opțiune pentru baza de date este ceva numit Shardik și vreau să vă avertizez că shirting-ul este unul dintre acele
+
+00:07:43.170 --> 00:07:47.960
+lucruri care sună că are sens, dar este extrem de greu de făcut.
+
+00:07:48.870 --> 00:07:50.710
+Și este o problemă foarte dificilă.
+
+00:07:50.790 --> 00:07:57.930
+Acest lucru ridică o mulțime de probleme pe care probabil că nu le veți implementa vreodată prin scurtcircuit, deoarece
+
+00:07:57.930 --> 00:08:03.840
+această animație tocmai a demonstrat este pur și simplu ruperea site-ului web în diferite bucăți.
+
+00:08:03.840 --> 00:08:08.670
+Când începeți să aveți mai multe magazine în baza de date, devine prea mare pentru a se ocupa.
+
+00:08:08.790 --> 00:08:15.390
+Deci, puteți rupe datele probabil de către utilizatorii care au mai puțin de 30 de ani și de utilizatorii
+
+00:08:15.390 --> 00:08:21.900
+care sunt mai mari de 30 de ani, astfel încât atunci când faceți o interogare în loc
+
+00:08:21.900 --> 00:08:29.630
+să căutați prin întreaga listă de utilizatori, dacă știm că utilizatorul este 23, interogați această bază de date în loc de aceasta.
+
+00:08:30.640 --> 00:08:35.780
+Un alt lucru pe care îl putem face este să adăugăm mai multe baze de date la problemă.
+
+00:08:36.600 --> 00:08:41.870
+Deci, având mai multe baze de date, putem avea mai multe opțiuni aici.
+
+00:08:42.000 --> 00:08:48.780
+Dacă o mie de utilizatori solicită informații de utilizator în același timp, în loc să dea o mie de cereri la
+
+00:08:48.960 --> 00:08:55.350
+această bază de date în același timp, de ce să nu dea 300 333 de solicitări către aceasta.
+
+00:08:55.350 --> 00:09:01.620
+Apoi 333 la aceasta și 334 la aceasta și distribuiți încărcătura.
+
+00:09:01.760 --> 00:09:08.340
+Și acest lucru este ceva care bazele de date cum ar fi postscripts pot veni preconfigurate cu astfel încât, dacă
+
+00:09:08.760 --> 00:09:14.040
+adăugați mai multe baze de date bazine sau postscripts piscine face acest lucru automat pentru tine.
+
+00:09:14.160 --> 00:09:20.550
+Sau putem plasa propriul balancer de sarcină în fața acestuia pentru a distribui această încărcătură.
+
+00:09:20.550 --> 00:09:29.750
+Din nou balancatorii mici sunt ceva care va acoperi în secțiune și apoi în cele din urmă avem tipuri de baze de date o bază de
+
+00:09:31.280 --> 00:09:34.170
+date poate face doar atât de mult.
+
+00:09:34.280 --> 00:09:42.170
+Fiecare bază de date este bună la specificul său, dar unele baze de date sunt potrivite pentru un singur lucru, iar altele sunt
+
+00:09:42.170 --> 00:09:43.320
+potrivite pentru altul.
+
+00:09:43.530 --> 00:09:50.740
+Deci, atunci când alegeți bazele de date, trebuie să decideți ce tip de caracteristici sau comportamente vrem să ieșim din
+
+00:09:50.750 --> 00:09:52.040
+baza de date.
+
+00:09:52.040 --> 00:09:55.420
+Și pe baza asta trebuie să te asiguri că ai ales cea potrivită.
+
+00:09:55.790 --> 00:10:01.550
+Și aceasta este ceva care va afecta într-adevăr capul deoarece există o mulțime de baze
+
+00:10:01.550 --> 00:10:10.530
+de date acolo pentru că există atât de multe moduri de a stoca date și unele dintre aceste nume pot părea familiare pentru dvs.
+
+00:10:10.530 --> 00:10:12.860
+Știm despre stocarea relațională.
+
+00:10:12.870 --> 00:10:18.400
+Am analizat postscript-urile înainte de a fi auzit de Majeski bine și apoi
+
+00:10:18.420 --> 00:10:24.070
+există documente sau stocare care face parte din toate bazele de salvare, toate sau non-relaționale.
+
+00:10:24.180 --> 00:10:29.700
+Am învățat despre ratt și valori cheie stoc, dar există și lucruri cum ar
+
+00:10:29.700 --> 00:10:36.750
+fi bazele de date Graph și știi pentru Jei sau mese mari, iar lista merge mai departe și mai departe.
+
+00:10:36.960 --> 00:10:39.440
+Din nou, nu lăsa să vă copleșească.
+
+00:10:39.720 --> 00:10:42.390
+Cele mai multe dintre acestea nu veți atinge niciodată în cariera ta.
+
+00:10:42.390 --> 00:10:47.460
+Vrei doar să știi care sunt diferențele care sunt principalii jucători ca
+
+00:10:47.460 --> 00:10:55.620
+postscript-urile din întrebarea mea despre toate raturile Mongo DB, dar știu că sunt disponibile că atunci când aveți o problemă specifică
+
+00:10:55.620 --> 00:11:01.410
+când creați probabil o aplicație de rețea socială poate căutați la baze de date grafice
+
+00:11:01.410 --> 00:11:07.260
+care sunt într-adevăr foarte bune pentru stocarea datelor grafice, ceea ce este excelent pentru conexiunile sociale.
+
+00:11:07.260 --> 00:11:14.550
+Deci, atunci când vine vorba de bazele de date, există multe lucruri de făcut, dar trebuie doar să țineți cont
+
+00:11:15.090 --> 00:11:20.310
+de cele șase principii ale modului în care putem îmbunătăți scalarea bazelor de date.
+
+00:11:20.440 --> 00:11:21.190
+Voi vedea în următorul.

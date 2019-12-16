@@ -1,0 +1,223 @@
+﻿WEBVTT
+
+00:00:00.940 --> 00:00:01.740
+Witamy spowrotem.
+
+00:00:01.870 --> 00:00:04.500
+Spróbujmy tutaj trochę ćwiczeń.
+
+00:00:04.610 --> 00:00:13.270
+Zadzwonię na serwer, że mam tutaj coś bardziej ekscytującego, jak super wspaniała aplikacja.
+
+00:00:13.320 --> 00:00:14.490
+Po prostu to zrób.
+
+00:00:16.720 --> 00:00:23.780
+Teraz, gdy to się ładuje, chcę przeżyć doświadczenie połączenia w środku nocy z
+
+00:00:23.780 --> 00:00:27.450
+czymś, co zdarzyło mi się wcześniej.
+
+00:00:27.950 --> 00:00:34.380
+Otrzymujesz komunikat, że aplikacja została usunięta na serwerze.
+
+00:00:34.850 --> 00:00:42.170
+Możesz go przesłać i ponownie uruchomić aplikację, ponieważ użytkownicy nie mogą uzyskać dostępu do witryny.
+
+00:00:42.560 --> 00:00:47.280
+Więc pokażę wam podstawy tego, co należy zrobić w tym scenariuszu.
+
+00:00:47.960 --> 00:00:49.860
+Mamy więc naszą super wspaniałą aplikację tutaj.
+
+00:00:51.060 --> 00:00:56.470
+A jeśli pamiętamy, możemy uzyskać do niego dostęp przez SSH.
+
+00:00:56.490 --> 00:00:59.720
+Pozwól mi to zminimalizować.
+
+00:00:59.910 --> 00:01:09.300
+I tutaj możemy po prostu z naszego pulpitu, SSH do naszego katalogu głównego i zapamiętać nasz adres IP tutaj.
+
+00:01:09.540 --> 00:01:10.710
+Wciśnij Enter.
+
+00:01:11.040 --> 00:01:18.420
+Jesteśmy teraz w serwerze Ubuntu, który kupiliśmy w Digital Ocean.
+
+00:01:18.420 --> 00:01:25.290
+W porządku, pozwól mi to wyjaśnić, abyśmy mogli zobaczyć trochę lepiej, teraz, ponieważ jest to system operacyjny
+
+00:01:25.290 --> 00:01:26.970
+Linux na serwerze.
+
+00:01:27.060 --> 00:01:33.610
+Musimy zainstalować git. Jeśli wpiszę tutaj git.
+
+00:01:33.640 --> 00:01:33.900
+W porządku.
+
+00:01:33.900 --> 00:01:40.920
+Wygląda na to, że istnieje polecenie git, ale czasami może tak nie
+
+00:01:40.920 --> 00:01:54.690
+być, w takim przypadku będziemy musieli zrobić apt lub sudo apt-get. Apt-get jest sposobem instalowania pakietów w systemie Ubuntu i możesz myśleć, że jest trochę
+
+00:01:54.690 --> 00:02:01.410
+podobny do NPM, jeśli używałeś NPM przedtem, lub homebrew, jeśli używasz Mac wcześniej.
+
+00:02:01.500 --> 00:02:02.660
+Chcemy tylko zainstalować rzeczy.
+
+00:02:02.660 --> 00:02:07.840
+Więc jeśli zrobię sudo apt app dash get git.
+
+00:02:07.920 --> 00:02:16.390
+I muszę zainstalować, to możesz zobaczyć tutaj, że jestem w stanie zainstalować git, który jest świetny.
+
+00:02:16.400 --> 00:02:23.690
+W porządku, powiedzmy, że mamy aplikację na naszej stronie GitHub, a dla tego przykładu zamierzam przejść
+
+00:02:23.690 --> 00:02:29.010
+do naszych projektów Open Source, do których uczniowie przyczynili się.
+
+00:02:29.180 --> 00:02:34.960
+Po prostu kliknę w przewodnik turystyczny, a powiemy, że powiem, że przewodnik turystyczny.
+
+00:02:35.000 --> 00:02:36.530
+To ten, który chcemy sklonować.
+
+00:02:36.710 --> 00:02:49.000
+W takim razie mogę wejść tutaj i powiedzieć "git clone" repo, a ja odpowiem "tak",
+
+00:02:49.000 --> 00:02:57.980
+a my dostaniemy tutaj błąd, ponieważ odmowa uprawnień jest zabroniona,
+
+00:02:57.980 --> 00:03:15.740
+ponieważ nie mamy jeszcze skonfigurowanego SSH z GitHubem znowu tu wracam zamierzam użyć HTTPS, skopiować do schowka i spróbować jeszcze raz.
+
+00:03:15.760 --> 00:03:16.430
+W porządku.
+
+00:03:16.580 --> 00:03:27.600
+Jeśli przejdę teraz do LS, widzimy, że mamy nasz przewodnik turystyczny i możemy przejść do naszego projektu przewodnika turystycznego.
+
+00:03:27.810 --> 00:03:36.820
+I znowu, jeśli tam będę, zobaczymy, że mamy naszą małą aplikację i wszystkie pliki, których potrzebujemy na serwerze.
+
+00:03:36.900 --> 00:03:37.820
+Jakie to jest świetne?
+
+00:03:39.090 --> 00:03:47.660
+A jeśli chcemy, aby było to dostępne, możemy również wykonać instalację NPM i widać, że NPM nie jest
+
+00:03:47.660 --> 00:03:48.890
+aktualnie zainstalowany.
+
+00:03:48.890 --> 00:03:51.310
+Znowu, co robimy w tej sytuacji.
+
+00:03:55.930 --> 00:04:01.820
+Teraz możemy po prostu uruchomić nodejs i wszystko zostanie zainstalowane.
+
+00:04:01.990 --> 00:04:12.640
+Ładnie i łatwo, a zobaczymy, że nodejs pracuje teraz na naszym serwerze i możemy oczywiście zrobić to samo z
+
+00:04:12.640 --> 00:04:16.040
+NPM uruchom NPM install, jeśli chcemy.
+
+00:04:16.060 --> 00:04:20.100
+Wszystko, aby nasza aplikacja działała.
+
+00:04:20.560 --> 00:04:24.120
+Ale tak jak powiedziałem wcześniej, nie chcę się rozłączać z tymi wszystkimi poleceniami.
+
+00:04:24.130 --> 00:04:28.900
+Są to rzeczy, które mogą być stosami przepełnienia dot com lub Google.
+
+00:04:28.900 --> 00:04:35.950
+Zrozumiesz, że są to tylko polecenia, które mogły działać tak, jak możemy na własnym komputerze
+
+00:04:36.340 --> 00:04:37.870
+na serwerze zdalnym.
+
+00:04:37.870 --> 00:04:43.690
+Kolejną rzeczą, którą chciałem wam pokazać, jest, powiedzmy, że mamy świetny com dot com tutaj, tak jak
+
+00:04:43.690 --> 00:04:46.140
+mam na moim pulpicie przy okazji.
+
+00:04:46.270 --> 00:04:48.120
+Całkiem ładne tło dzisiaj.
+
+00:04:48.530 --> 00:04:54.270
+W każdym razie, powiedzmy, że tutaj mamy nasz skrypt indeksu i plik stylu.
+
+00:04:54.280 --> 00:05:00.150
+Więc tylko nasza strona internetowa i chcemy ją wprowadzić do naszego pola Ubuntu tutaj.
+
+00:05:00.160 --> 00:05:02.600
+W porządku, więc powiedzmy.
+
+00:05:02.750 --> 00:05:05.350
+Pierwszą rzeczą, którą chcemy zrobić, jest wyjście z tego miejsca.
+
+00:05:05.350 --> 00:05:10.840
+Widzimy, że wylogowaliśmy się, że wróciliśmy do naszego komputera na własnym komputerze i tutaj
+
+00:05:10.840 --> 00:05:13.030
+zainstalowałem polecenie o nazwie rsync.
+
+00:05:13.030 --> 00:05:21.130
+Przejdźmy więc do super niesamowitej kropki com i stąd właśnie powiemy rsync, a my skopiujemy
+
+00:05:24.220 --> 00:05:27.150
+wszystkie pliki w tym katalogu.
+
+00:05:27.370 --> 00:05:30.320
+Możesz przeczytać o tych składniach w Internecie.
+
+00:05:30.400 --> 00:05:35.940
+Nie ma to większego znaczenia dla tego wideo, tylko dlatego, że w tym folderze kopiuję coś rekursywnie.
+
+00:05:36.130 --> 00:05:43.290
+I mamy zamiar skopiować go na nasz adres IP.
+
+00:05:43.410 --> 00:05:44.850
+Nasze pudełko
+
+00:05:47.920 --> 00:05:54.840
+Ubuntu, a my umieścimy je w folderze o nazwie super awesome dot com.
+
+00:05:54.850 --> 00:05:55.400
+W porządku.
+
+00:05:55.510 --> 00:06:04.390
+Jeśli więc SSH dotrze do naszego pudełka, wyczyści to i sprawdźmy, co mamy.
+
+00:06:04.390 --> 00:06:06.190
+Mamy świetną kropkę
+
+00:06:06.220 --> 00:06:16.380
+com Jeśli przejdę do super-niesamowitego dot com, widzę, że mam swój skrypt indeksu i plik stylu do naszego
+
+00:06:16.440 --> 00:06:19.730
+serwera gdzieś tam w Nowym Jorku.
+
+00:06:19.740 --> 00:06:20.320
+Niesamowite.
+
+00:06:20.520 --> 00:06:22.320
+Tak więc istnieje moc SSH.
+
+00:06:22.320 --> 00:06:29.260
+Możemy tylko przesyłać pliki i przejąć kontrolę nad serwerem w innym miejscu na świecie.
+
+00:06:30.010 --> 00:06:31.180
+Bardzo fajny.
+
+00:06:31.180 --> 00:06:32.760
+Do zobaczenia w następnym.
+
+00:06:32.880 --> 00:06:33.140
+Buh.

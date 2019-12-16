@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.130 --> 00:00:07.940
+Witamy ponownie nadszedł czas, aby ta aktualizacja profilu zadziałała i połączyć się z naszym Bacchante.
+
+00:00:08.060 --> 00:00:12.800
+Wróćmy do naszego interfejsu i naszego profilu.
+
+00:00:12.910 --> 00:00:15.930
+Tak, to dwa kilka rzeczy.
+
+00:00:16.010 --> 00:00:24.770
+Najpierw chcę się upewnić, że za każdym razem, gdy aktualizujemy nasze dane wejściowe, aktualizujemy
+
+00:00:26.960 --> 00:00:38.140
+również stan naszej aplikacji, więc wracając ponownie, zamierzam wprowadzić tutaj nową metodę i zmienić tę bezpaństwową funkcję na komponent
+
+00:00:38.590 --> 00:00:39.610
+klasy.
+
+00:00:39.610 --> 00:00:46.090
+Teraz mogłem po prostu utworzyć funkcję tutaj, ale lubię używać komponentów klas lub deklaracji klas, gdy
+
+00:00:46.090 --> 00:00:48.940
+mamy inne metody, które chcemy użyć.
+
+00:00:49.830 --> 00:00:53.900
+Tak więc
+
+00:00:56.500 --> 00:01:08.840
+klasa rozszerza się lub profil klasy rozszerza ponownie składnik dot.
+
+00:01:08.890 --> 00:01:10.210
+To
+
+00:01:13.500 --> 00:01:20.170
+będzie renderowanie, zróbmy to wszystko wewnątrz Rander.
+
+00:01:20.180 --> 00:01:26.070
+Po prostu to zminimalizuję, żebyśmy mogli zobaczyć, że jest o wiele lepiej.
+
+00:01:26.220 --> 00:01:34.090
+A także chcemy mieć konstruktor samogłoski C prop.
+
+00:01:34.100 --> 00:01:45.770
+Super rekwizyty i tutaj powiedzą, że ten stan myśli i to będzie interesujące i porozmawiamy o
+
+00:01:45.770 --> 00:01:47.860
+tym trochę.
+
+00:01:48.230 --> 00:01:55.550
+Zamierzam, aby Neame było równe tej Dautowej nazwie kropki kropki użytkownika.
+
+00:01:55.550 --> 00:02:00.400
+I jeśli zastanawiasz się, dlaczego robimy rekwizyty dla konstruktorów i super, a czasem nie.
+
+00:02:00.620 --> 00:02:04.020
+Cóż, jeśli kiedykolwiek chcesz użyć tego przystanku rekwizyty wewnątrz konstruktora.
+
+00:02:04.040 --> 00:02:08.330
+Właśnie dlatego musisz to zrobić i jesteśmy w tym przypadku, dlatego właśnie to robimy.
+
+00:02:09.770 --> 00:02:12.030
+W porządku, więc mamy nazwę użytkownika.
+
+00:02:12.240 --> 00:02:22.730
+Mamy również H, który jest rekwizytem, start user dot page, a my również Pat to kropka, kropka, kropka, użytkownik,
+
+00:02:22.910 --> 00:02:27.390
+kropka Pat. Dobrze, co ja tu robię.
+
+00:02:27.390 --> 00:02:32.390
+Dlaczego tworzymy stan, gdy są to już rekwizyty.
+
+00:02:32.400 --> 00:02:39.170
+Dlaczego po prostu nie zaktualizować stanu, w którym te rzeczy rzeczywiście istnieją.
+
+00:02:39.270 --> 00:02:40.950
+I jeśli pamiętasz, kiedy idziemy do APT.
+
+00:02:41.070 --> 00:02:41.420
+Tak.
+
+00:02:41.430 --> 00:02:47.240
+Jeśli przewiniemy całą drogę do naszego stanu, mamy już tutaj wszystkie informacje o użytkowniku.
+
+00:02:47.250 --> 00:02:57.120
+Dlaczego po prostu nie zaktualizujemy tego i nie mamy zdarzenia w profilu, które wyzwala renderowanie.
+
+00:02:57.170 --> 00:03:05.780
+I tutaj chcę zademonstrować kilka dobrych praktyk myślenia w kategoriach reagowania i jak to działa, gdy widzisz z formularzami jest
+
+00:03:05.780 --> 00:03:11.870
+wiele przypadków, w których nie mogę po prostu mieć użytkownika, który po prostu
+
+00:03:11.870 --> 00:03:18.710
+kontynuuje pisanie, ciągle piszę i piszę, bo to powoduje stan jest aktualizowany i za każdym razem,
+
+00:03:18.830 --> 00:03:25.640
+gdy aktualizujemy zmiany, dane wejściowe renderują renderowanie, my renderujemy komponent i wszystkie komponenty znajdujące się
+
+00:03:25.640 --> 00:03:26.780
+pod nim.
+
+00:03:26.780 --> 00:03:35.840
+Teraz, ponieważ aplikacja jest naszą najwyższą wersją, gdy tylko zaktualizujemy stan, będziemy renderować wszystko pod nim.
+
+00:03:35.940 --> 00:03:38.520
+A to tylko marnotrawstwo.
+
+00:03:38.610 --> 00:03:48.350
+A w przypadku formularza jest to dobra praktyka, jeśli masz formularz, którego stan zachowuje się i
+
+00:03:48.380 --> 00:03:54.610
+jak tylko użytkownik kliknie, przesyła lub wykonuje jakąś ważną czynność.
+
+00:03:54.770 --> 00:04:02.330
+Następnie aktualizujemy stan, aby zachować wszystkie aktualizacje stanu, gdy użytkownicy wpisują tutaj i aktualizować tylko ogólny
+
+00:04:02.330 --> 00:04:06.250
+stan, który znajduje się w najwyższym psie.
+
+00:04:06.250 --> 00:04:06.850
+Tak.
+
+00:04:07.130 --> 00:04:09.270
+Po potwierdzeniu tego przez użytkownika.
+
+00:04:09.320 --> 00:04:09.670
+W porządku.
+
+00:04:09.710 --> 00:04:10.400
+To moje imię.
+
+00:04:10.400 --> 00:04:11.090
+To jest wiek.
+
+00:04:11.090 --> 00:04:16.750
+To jest Pat i nie musimy aktualizować sayt za każdym razem, gdy popełniają błąd na przykład.
+
+00:04:16.770 --> 00:04:17.470
+W porządku.
+
+00:04:17.480 --> 00:04:26.040
+Teraz, gdy usunęliśmy to z drogi, zajmijmy się tym, co nazywamy zmianą formy, a ta zmiana
+
+00:04:26.070 --> 00:04:34.050
+formy będzie akceptować wydarzenie i jest to typowa obsługa zdarzeń, z którą reagujemy.
+
+00:04:34.110 --> 00:04:40.090
+Mogę to zrobić, jeśli jest to ekscytujące, ale po prostu dla zabawy, po prostu wykonaj polecenie
+
+00:04:40.460 --> 00:04:43.120
+switch, które nie zawiera nazwy kropki kropki.
+
+00:04:43.380 --> 00:04:49.270
+A to będzie obsługiwać na podstawie nazwy celu.
+
+00:04:49.410 --> 00:04:51.820
+A jeśli pamiętasz, przewijamy w dół.
+
+00:04:51.960 --> 00:04:57.300
+Wprowadziliśmy różne nazwy użytkowników, wiek użytkownika, nazwa użytkownika lub zwierzę.
+
+00:04:57.540 --> 00:05:04.600
+Tak więc na podstawie tych danych mogę powiedzieć, że zminimalizujemy to tylko po to, by wyglądać czysto.
+
+00:05:05.040 --> 00:05:16.710
+Zamierzam powiedzieć, że jeśli przypadek jest nazwą użytkownika w tym przypadku, chcę zaktualizować ten zestaw kropek.
+
+00:05:16.770 --> 00:05:17.220
+St.
+
+00:05:19.900 --> 00:05:27.180
+z nazwą równą zdarzeniu kropka docelowa wartość kropki.
+
+00:05:28.490 --> 00:05:37.460
+I możemy złamać ich stronę ze względu na przypadek użytkownika.
+
+00:05:37.540 --> 00:05:41.530
+W takim przypadku dobrze dla tego zestawu należy
+
+00:05:44.640 --> 00:05:47.480
+podać zdarzenie, w którym wartość docelowa
+
+00:05:50.270 --> 00:05:52.420
+ponownie się zerwie.
+
+00:05:52.430 --> 00:06:02.170
+I na koniec nasz ostatni przypadek, w którym zrobimy przypadek użytkownika Pat, że myśli
+
+00:06:06.630 --> 00:06:14.490
+w stanie Pat są równe niezależnie od wartości punktu docelowego zdarzenia.
+
+00:06:14.580 --> 00:06:21.760
+Kto wtedy oczywiście zrobi przerwę i zawsze doda wartość domyślną, która
+
+00:06:24.480 --> 00:06:29.260
+po prostu zwraca, a nie odstrasza.
+
+00:06:29.260 --> 00:06:31.530
+W porządku, powiedzmy to.
+
+00:06:31.730 --> 00:06:35.180
+Mamy tu kilka obszarów i zobaczymy, co zrobiliśmy.
+
+00:06:35.210 --> 00:06:36.230
+Użytkownik nie jest zdefiniowany.
+
+00:06:36.230 --> 00:06:44.960
+Użytkownik nie jest dobrze zdefiniowany, ponieważ musimy upewnić się, że w Rander możemy go otworzyć
+
+00:06:44.960 --> 00:06:48.820
+w ramach renderingu, w którym używamy
+
+00:06:51.330 --> 00:06:56.790
+wpisu danych użytkownika, więc zróbmy użytkownika koncertu z początkowych rekwizytów.
+
+00:06:56.940 --> 00:06:59.750
+Zachowajmy wszystko w porządku.
+
+00:06:59.780 --> 00:07:03.910
+I mamy kilka rzeczy, które zwróci Whoops.
+
+00:07:04.140 --> 00:07:05.930
+Rozwiń je i upewnij się, że to naprawię.
+
+00:07:06.140 --> 00:07:09.540
+I wtedy też mamy przełącznik, którego ruchy nie są zdefiniowane.
+
+00:07:09.590 --> 00:07:20.490
+Znowu musimy się upewnić, że teraz w modalnym przełączniku nazywamy to rekwizytem lub przełączamy ruchomy i ten pies podpiera
+
+00:07:20.970 --> 00:07:28.720
+punkt zwrotny ruchliwym, ponieważ nie jest on funkcją bezpaństwową, jak to mieliśmy przed
+
+00:07:28.730 --> 00:07:29.400
+uratowaniem.
+
+00:07:29.660 --> 00:07:29.960
+W porządku.
+
+00:07:29.960 --> 00:07:39.380
+Wszystko przemija, jeśli wrócimy do naszej aplikacji zaloguj się z naszym
+
+00:07:39.380 --> 00:07:49.110
+dobrym przyjacielem znakiem a następnie przejdziemy do profilu, aby zaktualizować nazwę, otwórz konsolę.
+
+00:07:49.130 --> 00:07:49.740
+W porządku.
+
+00:07:49.760 --> 00:07:51.390
+Nigdzie to nie jest dobre.
+
+00:07:51.600 --> 00:07:57.140
+Ale nie byłoby miło, gdybyśmy wpuścili tutaj i ta nazwa również zostanie zaktualizowana.
+
+00:07:58.340 --> 00:08:02.750
+I pamiętajcie, że jesteśmy tutaj w naszym stanie, zanim trafimy w obronę.
+
+00:08:02.840 --> 00:08:06.210
+Tak naprawdę nie zaktualizowaliśmy stanu w apt.
+
+00:08:06.310 --> 00:08:13.800
+Tak, ale w formularzu będzie miło móc zmienić nazwę użytkownika, aby zobaczyć, jak wyświetla się, dzięki czemu możemy to
+
+00:08:13.800 --> 00:08:16.100
+zrobić, powracając do naszego profilu.
+
+00:08:18.150 --> 00:08:19.980
+Zróbmy to trochę mniejszym.
+
+00:08:21.400 --> 00:08:30.880
+A teraz nazwa użytkownika, której używamy, może być tym użytkownikiem DOT z kropką.
+
+00:08:30.970 --> 00:08:40.340
+Zapiszmy to wróć i podpisz ponownie i przejdź do swojego profilu.
+
+00:08:40.340 --> 00:08:41.310
+Napisz coś.
+
+00:08:41.390 --> 00:08:43.340
+Ale teraz widzimy, że nie mamy nazwy
+
+00:08:47.450 --> 00:08:48.620
+użytkownika i głupiego mnie.
+
+00:08:48.650 --> 00:08:53.920
+To nie jest użytkownik, ale jego imię i nazwisko to pamiętaj, że nasz stan ma wpływ na wiek imion.
+
+00:08:53.990 --> 00:08:56.650
+Uratujmy.
+
+00:08:56.810 --> 00:09:03.710
+Ostatnią rzeczą, którą chcemy zrobić, jest wywołanie tego zdarzenia.
+
+00:09:03.800 --> 00:09:05.520
+Gdzie powinniśmy to nazwać?
+
+00:09:05.840 --> 00:09:18.690
+Dobrze dla każdego wejścia możemy po prostu powiedzieć, że istnieje zmiana, która ponownie bierze tę kropkę na zdarzenie zmiany formy.
+
+00:09:18.720 --> 00:09:22.440
+Po prostu skopiujesz i wkleisz to do
+
+00:09:25.330 --> 00:09:33.240
+wszystkich danych wejściowych, oszczędzajmy i zobaczmy, czy to w końcu znowu się zaloguje, ponieważ robimy to cały czas.
+
+00:09:33.310 --> 00:09:37.020
+Seinen wyświetl profil.
+
+00:09:37.220 --> 00:09:39.280
+Zacznij pisać.
+
+00:09:39.430 --> 00:09:41.090
+Spójrz na to.
+
+00:09:41.200 --> 00:09:43.700
+Nasze wydarzenie zostaje wyrzucone.
+
+00:09:43.720 --> 00:09:45.880
+Nigdy nie aktualizujemy stanu aplikacji.
+
+00:09:45.880 --> 00:09:50.220
+Utylizujemy tylko tę małą porcję, której potrzebujemy.
+
+00:09:50.590 --> 00:09:57.460
+Ale jak tylko kliknę Zapisz, chcę się upewnić, że ta nazwa zostanie zaktualizowana.
+
+00:09:57.820 --> 00:10:05.770
+Zakończmy to, wykonując żądanie post z tymi informacjami, które posiadamy i stanem formularza.
+
+00:10:05.820 --> 00:10:07.200
+Zobacz w następnym.
+
+00:10:07.540 --> 00:10:07.750
+Konstabl.

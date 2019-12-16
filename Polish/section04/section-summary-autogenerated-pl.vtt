@@ -1,0 +1,193 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:03.320
+Hej, tu jest Bruno.
+
+00:00:03.410 --> 00:00:07.190
+O mój Boże, ta aplikacja wygląda niesamowicie.
+
+00:00:07.190 --> 00:00:09.410
+Uwielbiam ten redux i patrzę na to.
+
+00:00:09.410 --> 00:00:13.580
+Logowanie będzie niesamowite, myślę, że nasi programiści naprawdę będą się tym cieszyć.
+
+00:00:13.730 --> 00:00:20.990
+I myślę, że nasza aplikacja może teraz naprawdę dobrze się skalować, a my jesteśmy w stanie śledzić wszystkie te działania.
+
+00:00:21.020 --> 00:00:22.670
+Super niesamowita robota.
+
+00:00:22.820 --> 00:00:26.310
+Naprawdę cieszę się, że cię dobrze przeszkadzam.
+
+00:00:26.390 --> 00:00:29.030
+Brunos zdecydowanie podekscytowany naszą pracą.
+
+00:00:29.030 --> 00:00:33.980
+Myślę, że robimy dla niego dobrą robotę, ale wciąż jest wiele do nauczenia się i
+
+00:00:33.980 --> 00:00:37.130
+mam wrażenie, że poprosi nas o wiele więcej.
+
+00:00:37.580 --> 00:00:43.040
+Przyjrzyjmy się temu, czego właśnie się nauczyliśmy i przejdę przez te diagramy, które na początku
+
+00:00:43.040 --> 00:00:45.480
+nie miały dla ciebie większego sensu.
+
+00:00:45.800 --> 00:00:47.740
+Ale teraz powinno być całkiem jasne.
+
+00:00:48.230 --> 00:00:54.550
+Mieliśmy reakcję, która pozwoliła nam zarządzać państwem w tym stanie, ale niezbyt dobrze.
+
+00:00:54.560 --> 00:01:03.380
+Gdy nasza aplikacja się rozrośnie, może stać się bardzo gorączkowa i dostać się do stanu, w którym nasz komponent wygląda tak
+
+00:01:03.380 --> 00:01:06.080
+ze wszystkimi stanami, którymi należy zarządzać.
+
+00:01:07.420 --> 00:01:15.580
+Na szczęście dla nas dzięki redux, jesteśmy w stanie stworzyć sklep i wysłać te akcje do sklepu, a
+
+00:01:16.060 --> 00:01:19.030
+wszystkie podłączone komponenty po prostu nasłuchują.
+
+00:01:19.510 --> 00:01:24.250
+A fajne jest to, że nie musieliśmy już przekazywać rekwizytów.
+
+00:01:24.250 --> 00:01:32.740
+Możemy po prostu podłączyć nasz komponent tam, gdzie chcemy, możemy go podłączyć, jeśli chcemy, abyśmy mogli połączyć ten
+
+00:01:32.740 --> 00:01:35.660
+jeden komponent, który chcemy połączyć.
+
+00:01:35.710 --> 00:01:39.790
+To zależało od nas, ale wszystko w jednym miejscu było łatwe i przyjemne.
+
+00:01:41.950 --> 00:01:44.250
+Teraz nasza aplikacja wyglądałaby tak.
+
+00:01:47.390 --> 00:01:55.090
+A potem w końcu rozmawialiśmy o tym, dlaczego używamy redux. Teraz ma to sens.
+
+00:01:55.120 --> 00:01:57.660
+Jest świetny do zarządzania dużym stanem.
+
+00:01:57.820 --> 00:02:05.330
+Możemy udostępniać dane między kontenerami, a teraz rozumiemy trzy zasady, które sprawiają, że jest on bardzo przewidywalny.
+
+00:02:05.410 --> 00:02:08.630
+Pierwszym z nich jest fakt, że stanowiło ono jedno źródło prawdy.
+
+00:02:08.650 --> 00:02:12.140
+Mamy tylko jeden ogromny obiekt javascript, o który musimy się martwić.
+
+00:02:12.160 --> 00:02:17.800
+To opisuje naszą aplikację nasz stan stan jest również tylko do odczytu.
+
+00:02:18.010 --> 00:02:21.220
+Za każdym razem nasz reduktor wypluwa nowy stan.
+
+00:02:21.220 --> 00:02:23.430
+Więc nigdy niczego nie modyfikujemy.
+
+00:02:23.530 --> 00:02:29.320
+Zawsze możemy robić fajne rzeczy, np. Cofać się w czasie i przeprowadzać
+
+00:02:29.560 --> 00:02:37.240
+akcje, aby zobaczyć, jaki stan wyprowadzamy lub jaki stan osiągamy, takie jak wpisanie do koła wyszukiwania
+
+00:02:37.240 --> 00:02:39.190
+i uzyskanie odpowiednich robotów.
+
+00:02:40.140 --> 00:02:47.640
+A potem w końcu wszystkie zmiany są dokonywane przy użyciu czystych funkcji, świetna technika, która unika skutków
+
+00:02:47.640 --> 00:02:51.260
+ubocznych, dzięki czemu nasze aplikacje są naprawdę przewidywalne.
+
+00:02:53.830 --> 00:03:00.430
+Dowiedzieliśmy się o tym schemacie i o tym, jak wszystko płynie ładnie, wiesz, że mamy kierunki działania, które mogą,
+
+00:03:00.430 --> 00:03:05.030
+ale nie muszą, przechodzić przez metal, podczas gdy mamy reduktory, które przechowujemy.
+
+00:03:05.140 --> 00:03:06.050
+Wprowadzamy zmiany.
+
+00:03:06.070 --> 00:03:11.510
+I za każdym razem mamy działanie, które wracamy i mamy ten jednokierunkowy przepływ.
+
+00:03:12.220 --> 00:03:18.910
+A teraz zamiast tych aplikacji, które powiedzmy, użyj Jay'a Querrey'a z powrotem w dzień, w którym wszystkie
+
+00:03:18.910 --> 00:03:26.250
+te złożone logiki, o których możemy się przekonać lub nie moglibyśmy znaleźć sensu w naszej głowie, mogą teraz wyglądać tak.
+
+00:03:26.260 --> 00:03:28.240
+Wszystko ładnie płynie.
+
+00:03:31.340 --> 00:03:40.380
+I na koniec ostatnia uwaga jest taka, że redoks nie oznacza, że może on już używać tego stanu kropki dla
+
+00:03:40.380 --> 00:03:47.850
+rzeczy takich jak być może mały znak, że możemy chcieć nadal używać tego stanu tutaj, ponieważ
+
+00:03:47.850 --> 00:03:51.630
+nie musimy stawiać wszystkiego w czytanym X sklepie.
+
+00:03:51.630 --> 00:03:57.840
+My jako programiści możemy decydować o tym, co wchodzi w to czy w sklepie, a co
+
+00:03:57.840 --> 00:04:05.400
+jest niewielkie i nieważne, że wciąż możemy używać tego stanu, reagując w redoksie, dobrze współdziałając i projektujemy, jak powinna wyglądać nasza
+
+00:04:05.400 --> 00:04:05.960
+aplikacja.
+
+00:04:07.160 --> 00:04:14.540
+Wreszcie wszystko to zaczyna mieć sens, teraz ta krytyczna ścieżka renderowania została właśnie ulepszona.
+
+00:04:15.540 --> 00:04:23.490
+Dowiedzieliśmy się, że Westpac pomaga nam łączyć te pliki w przyjemny prosty sposób, dzięki czemu możemy dostarczać
+
+00:04:23.550 --> 00:04:27.190
+najbardziej zoptymalizowane pliki javascript na pierwszy plan.
+
+00:04:28.110 --> 00:04:34.680
+W części 2 dotyczącej wydajności zamierzamy nauczyć się kilku dodatkowych sztuczek, które możemy zrobić
+
+00:04:35.070 --> 00:04:38.340
+z tym pakietem, aby zoptymalizować to.
+
+00:04:38.340 --> 00:04:44.950
+Rozumiemy również, dlaczego redux i re-act dobrze współpracują ze sobą.
+
+00:04:45.150 --> 00:04:50.240
+Jeden reaguje, aby zminimalizować liczbę aktualizacji Dohm, które musimy wprowadzić.
+
+00:04:50.250 --> 00:04:58.080
+To właśnie TELEGIN decyduje, co dokładnie musi zostać wykonane, a redux dodaje do reakcji, dzięki czemu łatwiej
+
+00:04:58.080 --> 00:05:02.950
+nam zrozumieć, ponieważ nasze aplikacje stają się coraz większe.
+
+00:05:03.750 --> 00:05:04.520
+W porządku.
+
+00:05:04.650 --> 00:05:08.930
+To była trudna sekcja, ale cieszę się, że dotarłeś tutaj tak daleko.
+
+00:05:08.940 --> 00:05:14.050
+Mam nadzieję, że będziesz kontynuował, ponieważ pojawi się wiele innych gadżetów.
+
+00:05:14.100 --> 00:05:15.270
+Nie mogę się doczekać.
+
+00:05:15.270 --> 00:05:17.080
+Mam nadzieję, że ty też.
+
+00:05:17.100 --> 00:05:18.100
+Do zobaczenia w następnym.

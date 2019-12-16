@@ -1,0 +1,718 @@
+﻿WEBVTT
+
+00:00:01.510 --> 00:00:12.490
+Porozmawiajmy o pierwszym zagadnieniu z naszej gwiazdy bezpieczeństwa lub gwiazdy bezpieczeństwa, a tutaj są
+
+00:00:13.150 --> 00:00:14.030
+iniekcje.
+
+00:00:14.880 --> 00:00:25.330
+I zaczynamy od zastrzyków, ponieważ są to najczęstsze ataki z ostatnich lat
+
+00:00:25.330 --> 00:00:29.550
+na wszystkie te techniki.
+
+00:00:29.580 --> 00:00:31.670
+Jest to najczęściej.
+
+00:00:31.710 --> 00:00:40.770
+To, co prowadzi do największej straty finansowej, powiedziałbym o 50 procentach czasu, jeśli
+
+00:00:40.830 --> 00:00:42.500
+zapobiegasz zastrzykom.
+
+00:00:42.870 --> 00:00:47.750
+Pokryłeś dużą część poprawy bezpieczeństwa.
+
+00:00:47.800 --> 00:00:52.450
+Jest to prawdopodobnie najważniejszy temat i naprawdę fajnie jest uczyć.
+
+00:00:52.530 --> 00:00:53.840
+Więc zaczniemy od tego.
+
+00:00:55.310 --> 00:01:02.460
+Teraz zastrzyki oznaczają wstrzykiwanie kodu do innego fragmentu kodu.
+
+00:01:02.690 --> 00:01:08.090
+Istnieje kilka sposobów, w jakie możesz to zrobić, ale jest to duża zasada,
+
+00:01:08.090 --> 00:01:15.680
+że otrzymaliśmy kod, którego tak naprawdę nie chcieliśmy od osoby trzeciej użytkownika lub kogoś innego, i próbują zepsuć nasz kod
+
+00:01:15.680 --> 00:01:19.430
+i zmienić naszą kod i może robić złe rzeczy.
+
+00:01:20.840 --> 00:01:27.680
+I tak jak powiedziałem wcześniej, jest to najczęstszy atak, a jednym z najbardziej znanych
+
+00:01:27.680 --> 00:01:35.710
+zastrzyków jest coś, co nazywa się wstrzyknięciem do odwiertu Eskew i są to dwa przykłady skośnych wstrzyknięć.
+
+00:01:36.220 --> 00:01:39.400
+Ale wiesz, teraz patrzymy na kawałek tekstu.
+
+00:01:39.460 --> 00:01:41.150
+To naprawdę nic nie znaczy.
+
+00:01:41.530 --> 00:01:45.300
+Wykonajmy teraz kolejny wtrysk paliwa i zobaczmy, jak to działa.
+
+00:01:48.200 --> 00:01:55.970
+Mam zamiar użyć sequelu, który jest bazą danych dla Maca, ale jest mnóstwo innych wersji dla Windows
+
+00:01:55.970 --> 00:01:57.950
+i Linuxa, których używasz.
+
+00:01:57.950 --> 00:02:04.360
+Jest to w gruncie graficzny interfejs użytkownika do zabawy z bazą danych.
+
+00:02:04.430 --> 00:02:12.420
+Więc zamierzam tego używać i powinienem otworzyć to tutaj, ponieważ widzisz, że mam tu dwie
+
+00:02:12.520 --> 00:02:14.260
+tablice i użytkownicy.
+
+00:02:14.420 --> 00:02:20.560
+Przed tym ćwiczeniem po prostu utwórzmy nową tabelę i już utworzyłem tutaj instrukcję "Eskew
+
+00:02:20.560 --> 00:02:21.240
+all".
+
+00:02:22.230 --> 00:02:28.560
+I znowu, jeśli nie jesteś w stu procentach komfortowy z SU, a potem omówię ten temat na moim drugim
+
+00:02:28.560 --> 00:02:30.810
+kursie, więc polecam ci to sprawdzić.
+
+00:02:30.810 --> 00:02:33.840
+Możesz też znaleźć dla niego naprawdę dobre zasoby online.
+
+00:02:33.840 --> 00:02:38.410
+Mówię tylko, że chcę utworzyć nową tabelę o nazwie "Poproś o wszystkie zastrzyki".
+
+00:02:38.520 --> 00:02:44.620
+Jeśli kliknę, pojawi się kolumna z identyfikatorem i kolumna wiadomości e-mail.
+
+00:02:44.660 --> 00:02:48.410
+Ron Querrey Idziesz.
+
+00:02:48.660 --> 00:02:55.810
+Jeśli odświeżę teraz, widzę, że stworzyliśmy nową tabelę o nazwie "ratunek wszystkie zastrzyki".
+
+00:02:55.950 --> 00:02:59.460
+Teraz nie ma nic w stajni, ale mamy pomysł i kolumnę email.
+
+00:02:59.490 --> 00:03:03.030
+Dodajmy tutaj nowy wiersz.
+
+00:03:03.330 --> 00:03:12.670
+No cóż, tak naprawdę mam je przygotowane tutaj, więc po prostu zrobimy wkładkę do Eskew we wszystkie zastrzyki.
+
+00:03:12.810 --> 00:03:18.180
+Więc wstawimy do tabeli pole email.
+
+00:03:18.270 --> 00:03:19.710
+Dodamy.
+
+00:03:19.850 --> 00:03:21.530
+Cóż do tego.
+
+00:03:21.590 --> 00:03:23.210
+Więc uruchommy to zapytanie.
+
+00:03:24.410 --> 00:03:24.990
+W porządku.
+
+00:03:25.070 --> 00:03:33.570
+A jeśli wrócimy do naszego stolika, zobaczymy, że mamy nowy wiersz pomysłu jednego, ponieważ go ustawiłem, więc jest
+
+00:03:33.570 --> 00:03:34.550
+to sekwencja.
+
+00:03:34.590 --> 00:03:40.870
+Dodam tylko dwa trzy cztery lub pięć, a następnie e-mail z EHLO.
+
+00:03:40.930 --> 00:03:43.670
+Teraz tutaj niektórzy zadają ci wszystkie zastrzyki, które możemy zrobić.
+
+00:03:44.110 --> 00:03:47.590
+I chcemy zrobić coś takiego.
+
+00:03:47.590 --> 00:03:52.870
+Załóżmy, że aktualizujemy to pole e-mail, ponieważ użytkownik właśnie zmienił adres e-mail.
+
+00:03:52.870 --> 00:04:02.200
+Więc jeśli pozwolę, powiedzmy, zaktualizuj mój e-mail do czegoś podobnego, co mamy z naszego stołu i upewnij się, że
+
+00:04:05.400 --> 00:04:07.140
+mamy tutaj wycenę.
+
+00:04:07.200 --> 00:04:17.000
+Więc właśnie wprowadziłem wartość mojego nowego e-maila, aby mieć ten kawałek kodu i widzisz, że
+
+00:04:17.010 --> 00:04:23.450
+jest to podświetlone wszystko, zamiast być ciągiem takim, jak gdybyśmy
+
+00:04:23.480 --> 00:04:25.290
+to zrobili.
+
+00:04:25.570 --> 00:04:28.090
+Po prostu modyfikując ten fragment kodu
+
+00:04:31.400 --> 00:04:36.240
+i upewniamy się, że mamy ten cytat, zobaczmy, jak zmieniają się kolory.
+
+00:04:36.590 --> 00:04:43.130
+Mówię tylko, że bawiłem się tym stwierdzeniem Eskew i zrobiłem to, aby zaktualizować wartości
+
+00:04:43.160 --> 00:04:47.030
+do pustego łańcucha, a następnie dodać średnik.
+
+00:04:47.030 --> 00:04:53.150
+Mamy kolejną instrukcję, która odrzuca użytkowników tabeli lub zrzućmy tabelę.
+
+00:04:53.150 --> 00:04:56.410
+Wstrzykiwanie Q Well.
+
+00:04:56.590 --> 00:05:00.170
+I kończę oświadczenie tą linią i już
+
+00:05:05.130 --> 00:05:07.080
+nie potrzebujemy cytatów.
+
+00:05:07.930 --> 00:05:17.110
+Widzisz, że została podświetlona tak, jakby była ratunkiem lub zapytaniem, a my po prostu upuszczamy tabelkę Escorial
+
+00:05:17.110 --> 00:05:17.650
+injection.
+
+00:05:17.650 --> 00:05:26.300
+Jeśli kliknę zapytanie, a teraz odświeżam Wu-Wo Widziałeś, że są krzywo wszystkie zastrzyki.
+
+00:05:26.300 --> 00:05:29.050
+Tabela została porzucona.
+
+00:05:29.050 --> 00:05:29.830
+Zgadza się.
+
+00:05:29.830 --> 00:05:34.840
+Dodając ten fragment linii, byłem w stanie sporządzić cały stół.
+
+00:05:34.840 --> 00:05:39.560
+Możesz więc zobaczyć, jak złośliwe może być, gdy zmieniłem się po prostu, aby zalogować się lub użytkownicy.
+
+00:05:39.580 --> 00:05:45.440
+Mogę narysować całą bazę danych firmy i to po prostu dlatego, że wszedłem w tę linię.
+
+00:05:45.640 --> 00:05:52.690
+Tak więc, mimo że oczekiwaliśmy wartości e-mail zamiast dostarczania wiadomości e-mail, właśnie
+
+00:05:52.690 --> 00:06:01.400
+wysłałem ten fragment kodu, który zasadniczo rozszerzył oświadczenie szkoły, aby zrzucić tabelę, która jest wyjątkowo niebezpieczna.
+
+00:06:01.400 --> 00:06:06.570
+Był świadkiem jednego z najczęstszych sposobów ataków na witryny internetowe.
+
+00:06:06.650 --> 00:06:12.740
+Ludzie po prostu kopiują i wklejają te wiersze w różnych danych wejściowych w witrynach internetowych i aplikacjach i sprawdzają, czy coś
+
+00:06:12.890 --> 00:06:14.670
+to robi i opuszczają tabele.
+
+00:06:17.030 --> 00:06:23.310
+A jeśli wrócimy tutaj, zobaczymy także ten wierzchołek na przecinku "Says" lub chcemy równy jeden.
+
+00:06:23.300 --> 00:06:25.950
+Znowu kreska kreskowa zignoruje wszystko później.
+
+00:06:26.230 --> 00:06:29.620
+Cóż, można to wprowadzić w odczuciu hasła.
+
+00:06:29.620 --> 00:06:36.610
+Na przykład musisz zalogować się na stronie internetowej i podaje swoją nazwę użytkownika i hasło, dodając ten
+
+00:06:36.610 --> 00:06:44.080
+fragment linii, który mówisz w polu hasła. Spodziewam się hasła, a ja przekażę je do mojego szkolnego oświadczenia,
+
+00:06:44.350 --> 00:06:51.640
+ale zamiast tego Zamierzam po prostu zostawić pusty ciąg, a następnie powiedzieć lub jeden jest taki, który
+
+00:06:51.640 --> 00:06:52.880
+jest prawdziwy.
+
+00:06:53.260 --> 00:07:00.130
+Oznacza to, że skewl będzie sprawdzał, czy ten użytkownik istnieje i czy pasuje do
+
+00:07:00.130 --> 00:07:01.430
+tego hasła.
+
+00:07:01.480 --> 00:07:07.330
+Ale dlatego, że nie jesteśmy, dodajemy lub mówimy, że to hasło pasuje lub robi jedno
+
+00:07:07.530 --> 00:07:15.220
+ECOs jeden i zwraca pełne informacje o użytkowniku i loguje cię i nie martw się, że zamierzam wyjść i zabawne
+
+00:07:15.220 --> 00:07:19.520
+ćwiczenie dla ciebie po to wideo, abyś mógł sam to praktykować.
+
+00:07:19.990 --> 00:07:26.590
+To eliminuje wszystkie iniekcje i dzieje się tak z bazami danych, ale zastrzyki mogą się
+
+00:07:26.680 --> 00:07:32.500
+zdarzyć w dowolnym momencie, gdy użytkownik musi wprowadzić coś, co można zrobić zastrzyki.
+
+00:07:32.960 --> 00:07:40.190
+Pozwól, że pokażę ci inny przykład, w którym stworzyłem tutaj ćwiczenie bezpieczeństwa i nie martw się, dam ci dostęp do
+
+00:07:40.190 --> 00:07:43.130
+tych plików, abyś mógł się z nimi bawić.
+
+00:07:43.430 --> 00:07:46.000
+Ale stworzyłem bardzo prostą stronę internetową.
+
+00:07:46.010 --> 00:07:48.200
+Jeśli spojrzysz na indeks, a nie na shemale.
+
+00:07:48.200 --> 00:07:49.940
+Niewiele tu się dzieje.
+
+00:07:50.510 --> 00:07:54.570
+I mamy tylko przycisk, który po kliknięciu wysyła informacje do serwera.
+
+00:07:54.860 --> 00:07:57.340
+I mam też skonfigurowany serwer.
+
+00:07:57.380 --> 00:07:59.580
+I nie martw się, przejdziemy do tego.
+
+00:07:59.600 --> 00:08:05.110
+To jest serwer ekspresowy i wszystko, co robimy, jest wysyłane.
+
+00:08:05.120 --> 00:08:07.010
+Mamy prośbę o lukę.
+
+00:08:07.010 --> 00:08:14.420
+Więc jeśli pójdę na początek serwera, powiedzmy, start NPM.
+
+00:08:14.550 --> 00:08:16.470
+Słuchamy portu 3000.
+
+00:08:16.470 --> 00:08:19.860
+Więc jeśli przejdę do mojej przeglądarki Chrome
+
+00:08:23.680 --> 00:08:31.300
+i otworzymy localhosta na trzy tysiące osiem, zobaczymy tekst Hello World, ponieważ End Point zwróci
+
+00:08:31.300 --> 00:08:32.860
+Hello world.
+
+00:08:32.860 --> 00:08:38.830
+A potem mamy kolejny punkt końcowy, który jest post-sekretnym żądaniem, i pokażę ci,
+
+00:08:38.830 --> 00:08:41.740
+co to robi z przodu.
+
+00:08:42.770 --> 00:08:49.970
+Możemy otworzyć indeks, który shim na pliku w naszej przeglądarce, który wygląda mniej więcej tak.
+
+00:08:50.040 --> 00:08:51.810
+Bardzo prosta strona internetowa.
+
+00:08:51.840 --> 00:08:56.510
+Wszystko, co mam, to pole wejściowe i mogę wysłać zgłoszenie.
+
+00:08:56.850 --> 00:09:03.080
+Teraz ten przycisk Prześlij, jeśli wrócimy do kodu, po prostu wyślij na serwer.
+
+00:09:03.390 --> 00:09:12.150
+Chcemy pobrać wartość wejściową, a następnie uruchomię ją za pomocą tej funkcji, która po
+
+00:09:12.150 --> 00:09:17.050
+prostu dodaje tekst do naszej strony internetowej.
+
+00:09:17.130 --> 00:09:28.620
+Tak więc ponownie, jeśli napiszę Witam Samit, widzę tekst Witaj na stronie internetowej, a po wykonaniu tego robimy również wywołanie pobierania wywołania API
+
+00:09:28.620 --> 00:09:37.620
+do naszego serwera i wysyłamy tajne informacje za pomocą metody POST, używając ciągu znaków phi Jaya Saundersa.
+
+00:09:37.670 --> 00:09:40.780
+Wysyłamy dane od użytkownika.
+
+00:09:40.980 --> 00:09:42.720
+I jako Jason.
+
+00:09:42.860 --> 00:09:45.660
+Więc wysyłamy to do ciała.
+
+00:09:45.710 --> 00:09:53.230
+Po kliknięciu przycisku Witaj i otwórz kartę Sieć, kliknijmy ponownie, aby zobaczyć,
+
+00:09:53.320 --> 00:09:57.180
+że wysyłamy sekret do Bacchante.
+
+00:09:57.370 --> 00:09:57.790
+to jest to!
+
+00:09:57.790 --> 00:10:02.580
+Nic zbyt szalonego, jeśli nie jesteś zbyt zaznajomiony z serwerami węzłów.
+
+00:10:02.590 --> 00:10:08.530
+Z drugiej strony polecam sprawdzić mój inny kurs, ale nie musisz się o to
+
+00:10:08.530 --> 00:10:09.090
+martwić.
+
+00:10:09.100 --> 00:10:13.270
+To, co chcemy tutaj zrobić, to ćwiczyć inną formę zastrzyku.
+
+00:10:13.660 --> 00:10:21.490
+Spodziewamy się, że nasi użytkownicy będą się bawić i wpisywać to, co chcą, ale co, jeśli pojawi się zła osoba
+
+00:10:21.490 --> 00:10:27.810
+i powie: "Co, jeśli po prostu zrobię tu tag skryptu, ponieważ dodamy go do niego.
+
+00:10:27.820 --> 00:10:31.470
+Dodajemy wszystko, co otrzymaliśmy do naszego zespołu przez wiele tygodni.
+
+00:10:31.750 --> 00:10:34.170
+Zróbmy więc ten boom
+
+00:10:37.740 --> 00:10:47.740
+automatycznego alarmu skryptu, a następnie zamkniemy tę zakładkę tagu skryptu, a teraz mamy nadzieję uruchomić tutaj skrypt.
+
+00:10:47.740 --> 00:10:48.920
+Zobaczmy, czy to działa.
+
+00:10:51.660 --> 00:10:53.010
+Nic się nie dzieje.
+
+00:10:53.010 --> 00:10:55.420
+Uważamy i drukujemy wszystko.
+
+00:10:55.560 --> 00:11:03.750
+Teraz, jeśli wrócimy do kodu, zobaczymy, że otrzymujemy dane wejściowe, a następnie używamy wewnętrznego DML, który jest zły, jak
+
+00:11:04.230 --> 00:11:12.480
+można zobaczyć tutaj do P-TECH, ale na szczęście dla nas, gdy skrypty są wstrzykiwane do świtu, skrypt Dag jest
+
+00:11:12.540 --> 00:11:14.120
+taki, jaki mamy.
+
+00:11:14.250 --> 00:11:16.830
+I używamy interfejsu shemale.
+
+00:11:17.050 --> 00:11:24.010
+W rzeczywistości nie są uruchamiane w czasie, gdy są wstrzykiwane, ponieważ Dom już działa, a shim jest wystarczająco inteligentny, by
+
+00:11:24.010 --> 00:11:26.140
+powiedzieć, że nie zamierzam tego robić.
+
+00:11:26.130 --> 00:11:34.740
+To brzmi jak zły pomysł, ponieważ skrypty takie jak ten, które są nazywane skryptem wbudowanym, są uruchamiane tylko w
+
+00:11:34.740 --> 00:11:37.530
+czasie, gdy parsowana jest strona pierwotna.
+
+00:11:37.530 --> 00:11:45.830
+Więc jeśli odświeżę to, co nie będzie działać z drugiej strony, jest coś, co możemy zrobić.
+
+00:11:46.930 --> 00:11:47.920
+Sprawdź to.
+
+00:11:48.160 --> 00:11:58.930
+Jeśli wprowadzimy coś w rodzaju tagu graficznego, nie ma w nim nic takiego, jak tylko ukośnik, a ponieważ nie ma źródła, to
+
+00:11:58.950 --> 00:12:00.810
+będzie się działo.
+
+00:12:00.840 --> 00:12:11.590
+Możemy zorganizować imprezę na powietrzu, która jest standardowa dla shemale i tutaj mogę powiedzieć Alert.
+
+00:12:11.780 --> 00:12:15.330
+Bum i zamknij, jeśli to zrobię, więc tag
+
+00:12:19.500 --> 00:12:25.350
+obrazu, który nie będzie w stanie pobrać żadnego obrazu i będzie miał błąd
+
+00:12:25.380 --> 00:12:26.310
+ostrzeżenia.
+
+00:12:26.370 --> 00:12:35.740
+Boom, jeśli kliknę przycisk submit, otwórzmy konsolę i nieoczekiwany, i wprowadź dane, ponieważ powinniśmy tutaj użyć
+
+00:12:35.740 --> 00:12:37.540
+podwójnych cudzysłowów.
+
+00:12:40.660 --> 00:12:41.740
+Więc spróbuj ponownie.
+
+00:12:45.640 --> 00:12:54.430
+Właśnie uruchomiliśmy skrypt, który wstrzyknęliśmy do naszej przeglądarki, a to dlatego, że obrazy są wstrzykiwane
+
+00:12:54.430 --> 00:12:58.140
+do DOM w momencie napotkania obrazu.
+
+00:12:58.330 --> 00:13:04.770
+A jeśli ładowanie nie powiedzie się, tak jak w przypadku każdego zdarzenia, wywoływany jest moduł obsługi.
+
+00:13:05.020 --> 00:13:13.580
+To, co właśnie zrobiliśmy, to wstrzyknęliśmy kawałek kodu, który jest naprawdę kiepski na stronie internetowej.
+
+00:13:13.750 --> 00:13:19.660
+Więc jeśli przejdziesz do stron internetowych i skopiuj i wklej to i spróbuj go przesłać,
+
+00:13:19.660 --> 00:13:25.030
+a nie mają dobrych praktyk bezpieczeństwa, możesz wstrzyknąć dowolne skrypty do witryny.
+
+00:13:25.180 --> 00:13:27.520
+Ponownie użyj tych informacji mądrze.
+
+00:13:27.520 --> 00:13:29.960
+Nie bądź zły na podstawie tych informacji.
+
+00:13:30.040 --> 00:13:34.200
+Używamy tego jako sposobu, aby dowiedzieć się, jak zapobiegać tego rodzaju atakom.
+
+00:13:36.030 --> 00:13:38.230
+Jak więc temu zapobiec?
+
+00:13:38.580 --> 00:13:40.470
+Cóż, dość proste.
+
+00:13:40.560 --> 00:13:45.810
+Zamiast używać tego bodźca energetycznego i dlatego mówię, że shemale Inari jest złe, nie używaj go.
+
+00:13:45.810 --> 00:13:49.130
+Chcemy użyć czegoś takiego.
+
+00:13:49.150 --> 00:13:56.340
+Ostatni komentarz, który tworzy ten węzeł tekstowy, który jest wejściowy.
+
+00:13:56.400 --> 00:14:03.180
+Bez względu na to, co to jest wejście, węzeł tekstowy przekształci go w czysty tekst i zrobi
+
+00:14:03.180 --> 00:14:05.300
+coś, co będzie wymagało odkażenia.
+
+00:14:05.340 --> 00:14:13.290
+Z tego powodu nie możemy po prostu dołączyć węzła tekstowego do znacznika i nie ma znaczenia, jak zły jest
+
+00:14:13.290 --> 00:14:14.310
+nasz kod.
+
+00:14:14.430 --> 00:14:16.090
+Nic nie da.
+
+00:14:16.530 --> 00:14:19.860
+Pozwól mi zapisać i pokaż, jeśli to naprawi.
+
+00:14:19.890 --> 00:14:27.760
+Więc zamierzam ponownie złożyć O i muszę odświeżyć stronę pozwól mi odświeżyć i spróbujmy to jeszcze raz tym
+
+00:14:28.540 --> 00:14:29.230
+razem.
+
+00:14:29.230 --> 00:14:30.900
+Zamierzam skopiować i wkleić go ponownie.
+
+00:14:30.910 --> 00:14:39.730
+To samo, jeśli kliknę przycisk Submit heart nic się nie dzieje, a to jest po prostu przekształcenie go w tekst.
+
+00:14:39.800 --> 00:14:41.090
+To było całkiem fajne, prawda.
+
+00:14:42.160 --> 00:14:42.640
+W porządku.
+
+00:14:42.700 --> 00:14:44.940
+Dowiedzieliśmy się o zastrzykach.
+
+00:14:44.950 --> 00:14:47.060
+Co możemy zrobić, aby je naprawić.
+
+00:14:47.590 --> 00:14:50.770
+Cóż, są trzy główne rzeczy, które chciałem zapamiętać.
+
+00:14:50.770 --> 00:14:57.850
+Jednym z nich jest zrobienie czegoś, co nazywa się odkażaniem i to jest coś, co zrobiliśmy z polem wprowadzania danych na
+
+00:14:57.880 --> 00:14:58.910
+stronie internetowej.
+
+00:14:59.260 --> 00:15:03.790
+Idea nazywa się filozofią białej listy.
+
+00:15:04.150 --> 00:15:11.170
+Oznacza to, że sprawdzanie poprawności danych lub wszystko, co wprowadzane przez użytkownika, pozwala
+
+00:15:11.200 --> 00:15:17.380
+użytkownikowi wprowadzać dane o oczekiwanym typie, jeśli oczekuje się wprowadzenia tekstu.
+
+00:15:17.380 --> 00:15:25.760
+E-mail, do którego należy wprowadzić numer telefonu, gwarantuje, że przy użyciu javascript sprawdzane są tylko te rzeczy.
+
+00:15:25.780 --> 00:15:32.320
+Na przykład z numerem telefonu upewnij się, że są to tylko cyfry, na przykład 10 cyfr.
+
+00:15:32.860 --> 00:15:35.460
+Jeśli nie jest to właściwy typ, odrzuć go.
+
+00:15:35.470 --> 00:15:36.790
+Więc oczyszczamy to.
+
+00:15:36.790 --> 00:15:37.750
+Sprzątamy to.
+
+00:15:37.960 --> 00:15:45.100
+A przez odkażenie i wyczyszczenie go w formacie, który chcemy używać takich rzeczy jak javascript, upewniamy się, że bez względu
+
+00:15:45.100 --> 00:15:50.980
+na to, co mogę wprowadzić wszystkie te złe kody, nie ma to znaczenia, ponieważ już wyczyściłem twoje
+
+00:15:50.980 --> 00:15:54.560
+dane wejściowe i nic nie zrobię do mojego systemu.
+
+00:15:55.620 --> 00:15:59.570
+A sanityzację zwykle wykonuje się za pomocą jednego z nich.
+
+00:15:59.700 --> 00:16:02.680
+Tak jak powiedziałem białą listę lub czarną listę.
+
+00:16:02.700 --> 00:16:04.830
+Więc dlaczego lista to dobre rzeczy, które możesz zrobić.
+
+00:16:04.830 --> 00:16:08.340
+Czarna lista dotyczy rzeczy, których nie powinieneś robić.
+
+00:16:08.400 --> 00:16:14.550
+Więc niektóre z rzeczy, które możemy zrobić, to usunąć znaczniki shemale, zachowując zawartość
+
+00:16:14.970 --> 00:16:18.010
+lub zachowując całą zawartość tagu.
+
+00:16:19.530 --> 00:16:25.120
+Możesz też uniemożliwić użytkownikowi powiadomienie, że nie możesz tam umieścić tych informacji.
+
+00:16:25.170 --> 00:16:27.200
+Spróbuj ponownie coś dodać.
+
+00:16:27.240 --> 00:16:33.290
+Druga kwestia to coś, co nazywa się sparametryzowanym zapytaniem i nazywane jest również przygotowanymi instrukcjami.
+
+00:16:34.230 --> 00:16:42.080
+I to jest sposób, aby zapobiec zastrzykom Eskew Well, tak jak widzieliśmy to prekompilować i Eskewować wszystkie instrukcje
+
+00:16:42.080 --> 00:16:45.890
+tak, że wszystko, co potrzebujesz dostarczyć, to parametry.
+
+00:16:45.890 --> 00:16:47.560
+Pomyśl o tym jako o funkcji.
+
+00:16:47.650 --> 00:16:56.070
+Jeśli wrócimy do naszego przykładu, zamiast pozwolić użytkownikowi na wprowadzenie czegokolwiek, co chcemy zrobić, to
+
+00:16:56.070 --> 00:16:58.050
+mamy jakąś funkcję.
+
+00:16:58.050 --> 00:17:05.490
+Więc pozwól mi otworzyć zakładkę z zakładką konsoli i masz funkcję
+
+00:17:05.490 --> 00:17:15.680
+powiedzmy, że jest to zapytanie dobrze wybierz i tutaj podajesz zmienną nazwy e-mail, być może zmienną ID
+
+00:17:15.680 --> 00:17:26.070
+i wewnątrz tej funkcji masz coś takiego jak nazwa jest równa liczbie, po której możesz ją rozdzielić.
+
+00:17:26.080 --> 00:17:34.190
+Lub możesz powiedzieć, że jeśli nazwa nie ma długości lub jeśli nazwa zawiera znaki tego, masz
+
+00:17:34.640 --> 00:17:37.790
+kontrolę nad tym, co użytkownik wprowadza.
+
+00:17:37.790 --> 00:17:44.990
+Jest to wystarczająco duży problem, że istnieje mnóstwo naprawdę dobrych rozwiązań, które
+
+00:17:44.990 --> 00:17:48.920
+są już nazywane obiektowymi mapperami relacyjnymi.
+
+00:17:49.070 --> 00:17:54.860
+Oznacza to, że dostarczają one przygotowane oświadczenia Eskew wszystkie instrukcje dla ciebie, tak aby wszystko, co
+
+00:17:54.860 --> 00:17:56.560
+musisz podać, to parametry.
+
+00:17:56.630 --> 00:18:00.920
+Tak jak pokazałem, że myślisz o nich jako o zmiennych, które trzeba włożyć do
+
+00:18:01.010 --> 00:18:02.480
+Steelmenów, aby zostały wykonane.
+
+00:18:02.720 --> 00:18:08.510
+I w ten sposób zapobiega to, co nam się nie podoba upuszczając ten stół i będąc w stanie wprowadzić to,
+
+00:18:08.510 --> 00:18:09.340
+co chcemy.
+
+00:18:09.440 --> 00:18:17.510
+I jak wszyscy wyznajecie, a jednym z naprawdę dobrych przykładów jest K'NEX, który podstępnie podchodzi do nas z naszym
+
+00:18:17.510 --> 00:18:26.450
+inteligentnym mózgiem, gdzie jesteśmy w stanie używać rzeczy takich jak, jeśli wybierzemy, jesteśmy w stanie to po prostu dać. Parametry, o
+
+00:18:26.450 --> 00:18:32.030
+których mówimy, to "Połącz kropki" i dajemy im wszelkie parametry, których potrzebujemy.
+
+00:18:32.030 --> 00:18:35.860
+Powiedzmy, że chcemy, aby autor tytułu w roku pochodził ze stołu książki.
+
+00:18:35.990 --> 00:18:38.370
+I to jedyna rzecz, którą możemy zrobić.
+
+00:18:38.540 --> 00:18:43.260
+K'NEX zajmuje się faktycznym budowaniem dla nas wszystkich ASCII.
+
+00:18:43.340 --> 00:18:46.030
+Ale parametryzacja to wszystko.
+
+00:18:46.040 --> 00:18:51.550
+Możemy więc podać parametry tylko do wyciągu.
+
+00:18:51.570 --> 00:18:52.320
+W porządku.
+
+00:18:52.530 --> 00:18:53.750
+Więc masz to.
+
+00:18:53.790 --> 00:18:55.470
+To są zastrzyki.
+
+00:18:55.470 --> 00:19:02.730
+Zapobiegasz tym i upewniasz się, że niezależnie od tego, co użytkownik wprowadzi, jest to coś, czego oczekuje twój program,
+
+00:19:03.730 --> 00:19:07.120
+wtedy unikniesz większości problemów bezpieczeństwa, które są tam.
+
+00:19:07.120 --> 00:19:16.980
+Tak jak powiedziałem, zastrzyki są główną przyczyną ataków na witryny sieci Web, więc sprawdzaj wszystkie ostatnie dane
+
+00:19:16.980 --> 00:19:17.900
+użytkownika.
+
+00:19:18.030 --> 00:19:26.430
+Korzystanie z list y po stronie klienta, jak również na serwerze i nigdy nie wprowadzaj bezpośrednio do treści użytkownika
+
+00:19:26.520 --> 00:19:27.820
+niczego więcej.
+
+00:19:27.900 --> 00:19:30.780
+Dane wejściowe użytkownika powinny być zawsze zaufane.
+
+00:19:30.810 --> 00:19:36.580
+Kontrolują tylko to, w jaki sposób uruchamiasz program, aby móc modyfikować dowolne
+
+00:19:36.600 --> 00:19:39.730
+dane niezaufane i zaufać temu.
+
+00:19:39.950 --> 00:19:41.740
+Zobaczę w następnym Buh-Bye.

@@ -1,0 +1,109 @@
+﻿WEBVTT
+
+00:00:01.280 --> 00:00:08.240
+Să examinăm că am instruit fișierul nostru de compoziție să creeze un serviciu numit inteligent inteligent API.
+
+00:00:08.750 --> 00:00:14.420
+Și acest lucru a folosit fișierul docket utilizând construirea.
+
+00:00:14.420 --> 00:00:19.340
+În caz contrar, am putea folosi ceva asemănător imaginii și am avea nevoie de acest parametru.
+
+00:00:19.340 --> 00:00:25.210
+Acesta a mapat porturile interne ale containerelor 3000 către portul Horst.
+
+00:00:25.220 --> 00:00:33.820
+Acesta este computerul meu și pe toate cele șase fuziuni pe care le executăm NPM începe să pornească serverul nostru.
+
+00:00:33.850 --> 00:00:41.450
+De asemenea, am aflat despre stația de andocare a comenzii sau compilați rularea unde putem rula acest serviciu care va
+
+00:00:41.450 --> 00:00:44.120
+executa comanda pe care am stabilit-o aici.
+
+00:00:44.180 --> 00:00:51.150
+Cu toate acestea, cu Dharker compose run nu este atât de util pentru că în mod ideal avem mai multe servicii aici.
+
+00:00:52.240 --> 00:01:01.360
+Deci, în loc să folosim ceva numit Dharker compuneți și dock sau compune până ne permite să aducă toate serviciile pe care le-am
+
+00:01:01.360 --> 00:01:06.940
+enumerate aici și acolo va defini toate serviciile care rulează de numele containerului
+
+00:01:07.000 --> 00:01:09.220
+lor așa cum am aici.
+
+00:01:09.670 --> 00:01:18.120
+Și chiar acum, deși avem doar un serviciu API-ul nostru din spate, este suficient să arătăm că funcționează și cum
+
+00:01:18.330 --> 00:01:22.230
+putem acum adăuga mai multe lucruri în acest fișier.
+
+00:01:23.490 --> 00:01:31.770
+Acum puteți observa o problemă aici și asta este faptul că oricând facem o schimbare în fișierul nostru, ca atunci
+
+00:01:32.220 --> 00:01:40.000
+când am adăugat Morgan, a trebuit să reconstruim totul, să repetăm ​​totul pentru a ne pune în funcțiune.
+
+00:01:43.620 --> 00:01:53.340
+De exemplu, dacă mă duc la server dodginess și să spunem aici voi face doar un consola jurnal de a verifica acest lucru
+
+00:01:53.340 --> 00:02:02.060
+nu reîmprospătează gnomon nu este cu adevărat urmăresc această schimbare, deoarece aceste fișiere pe care le-am schimbat este pe mașina
+
+00:02:02.180 --> 00:02:08.580
+mea locală nu pe container, dar există o cale de a rezolva această problemă.
+
+00:02:08.780 --> 00:02:13.200
+Ne întoarcem la doc sau compun, pot adăuga volum
+
+00:02:15.790 --> 00:02:23.580
+și în cadrul volumelor îi pot da directorul meu curent pe mașina mea locală, care va fi
+
+00:02:23.580 --> 00:02:26.080
+în acest caz directorul rădăcină.
+
+00:02:26.080 --> 00:02:33.860
+Și vrem să fie cartografiat în directorul de lucru pe care îl avem în container chiar aici.
+
+00:02:33.920 --> 00:02:40.580
+Și dacă vă amintiți volumul ne permite accesul la sistemul de fișiere al docului sau al containerului unde se
+
+00:02:40.580 --> 00:02:42.270
+află docul sau containerul.
+
+00:02:42.290 --> 00:02:51.290
+Astfel, prin copierea sau prin maparea acestor fișiere în cazul în care containerul este sistemul de fișiere al
+
+00:02:51.290 --> 00:02:56.010
+containerului, se vor vedea modificările și actualizarea gnomon.
+
+00:02:56.130 --> 00:02:57.610
+Să salvăm aici.
+
+00:02:57.630 --> 00:03:03.090
+Voi închide și din nou alerga NPM sau duck compune bordură.
+
+00:03:03.100 --> 00:03:15.650
+Bill primesc comanda de verificare, dar asta pentru că l-am reconstruit dacă am schimbat acest lucru pentru a arăta că ascultă schimbările
+
+00:03:20.480 --> 00:03:27.740
+acum și îmi pot actualiza dosarul și containerul docker se va actualiza cu
+
+00:03:27.740 --> 00:03:28.810
+el.
+
+00:03:29.660 --> 00:03:34.610
+Volumele sunt un subiect destul de complex și o să plec pentru o resursă plăcută pentru tine de citit.
+
+00:03:34.670 --> 00:03:42.350
+Dar gândiți-vă doar la volume ca la o modalitate de a avea o conexiune sau a monta tot ceea
+
+00:03:42.860 --> 00:03:46.230
+ce avem pe calculatorul nostru la containerul medicului.
+
+00:03:46.300 --> 00:03:52.870
+Dar pentru moment avem o configurație frumoasă cu spatele și cred că trebuie să adăugăm postscript-urile noastre.
+
+00:03:52.900 --> 00:03:55.930
+În cele din urmă o voi vedea în următoarea.

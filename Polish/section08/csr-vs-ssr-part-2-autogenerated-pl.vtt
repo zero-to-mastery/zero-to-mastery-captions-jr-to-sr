@@ -1,0 +1,385 @@
+﻿WEBVTT
+
+00:00:02.000 --> 00:00:03.550
+Czego się nauczyliśmy do tej pory.
+
+00:00:05.060 --> 00:00:11.960
+Cóż, kiedy programiści mówią o renderowaniu po stronie klienta, zwykle mówią o renderowaniu
+
+00:00:11.990 --> 00:00:15.250
+treści w przeglądarce przy użyciu javascript.
+
+00:00:15.380 --> 00:00:17.450
+Jedna aplikacja strony.
+
+00:00:17.780 --> 00:00:25.400
+Zamiast więc pobierać całą treść z dokumentu shemale dostajesz bardzo
+
+00:00:25.400 --> 00:00:34.070
+mały, mały dokument z plikiem javascript, który wyrenderuje resztę strony w przeglądarce.
+
+00:00:34.070 --> 00:00:38.870
+Dzięki temu możemy mieć naprawdę bogate interakcje, dzięki którym nasze aplikacje czują się szybko.
+
+00:00:38.870 --> 00:00:40.300
+Porozmawiajmy o tym.
+
+00:00:40.310 --> 00:00:47.900
+Porozmawiamy o zaletach i wadach strony serwera po stronie klienta, o czym wspomniałem.
+
+00:00:48.130 --> 00:00:55.570
+Jedną z największych zalet renderowania po stronie klienta jest fakt, że ma bardzo bogate interakcje.
+
+00:00:55.710 --> 00:01:03.040
+Czy udało Ci się po prostu załadować części strony i czuć, że pracujemy z aplikacjami zamiast stron internetowych,
+
+00:01:03.040 --> 00:01:06.870
+które za każdym razem odświeżają się w pełni.
+
+00:01:07.030 --> 00:01:14.110
+Są naprawdę bardzo dobre dla tych nowoczesnych aplikacji, takich jak wrażenie, które mamy na
+
+00:01:14.110 --> 00:01:21.970
+naszej stronie internetowej renderowanie po stronie klienta ma również szybszą odpowiedź z serwera, ponieważ serwer nie musi
+
+00:01:22.360 --> 00:01:29.590
+renderować strony HTML i wiesz, że Renderuje Ponownie działa serwer Dom ma lub wykonuje dodatkową pracę.
+
+00:01:29.590 --> 00:01:33.670
+Wystarczy, że wyślesz ten mały plik Steimle.
+
+00:01:33.670 --> 00:01:38.770
+Serwer reaguje znacznie szybciej dzięki renderowaniu po stronie klienta.
+
+00:01:38.950 --> 00:01:47.230
+W końcu jest świetny dla aplikacji internetowych, nie tylko dlatego, że ma bogate interakcje, ale dlatego,
+
+00:01:47.230 --> 00:01:49.950
+że jest szybszym serwisem WWW.
+
+00:01:49.990 --> 00:01:51.440
+Po początkowym obciążeniu.
+
+00:01:51.550 --> 00:01:59.260
+Więc po tym, jak JavaScript przepracował i utworzył dla nas widok, ponieważ mamy już wszystko załadowane jak
+
+00:01:59.260 --> 00:02:05.850
+renderowanie po stronie serwera, gdzie musimy wrócić do serwera i zażądać, aby cały nasz
+
+00:02:06.950 --> 00:02:14.960
+javascript był załadowany, wszystkie nasze widoki są dostępne, więc że jesteśmy w stanie wchodzić w interakcję naprawdę szybko
+
+00:02:15.290 --> 00:02:19.410
+i modyfikować tylko części strony na podstawie widoku.
+
+00:02:19.610 --> 00:02:24.710
+Jesteśmy dobrze obeznani z korzyściami, ponieważ pracujemy z aplikacjami renderowanymi po
+
+00:02:24.710 --> 00:02:29.010
+stronie klienta i faktycznie widzimy je codziennie w Internecie.
+
+00:02:29.200 --> 00:02:37.190
+Ale jest kilka wad z tego typu aplikacjami i prawdopodobnie największym, który należy wziąć pod uwagę, jest to, że
+
+00:02:37.190 --> 00:02:44.030
+z renderowaniem po stronie klienta jest to naprawdę trudne lub zdecydowanie trudniej jest mieć dobre jako
+
+00:02:44.060 --> 00:02:47.070
+SEO lub optymalizację pod kątem wyszukiwarek.
+
+00:02:48.040 --> 00:02:49.850
+Dlaczego tak jest.
+
+00:02:50.200 --> 00:02:55.900
+Cóż, ponieważ dzięki tym aplikacjom po prostu renderujemy prosty, mały plik.
+
+00:02:55.930 --> 00:03:02.860
+W związku z tym, że reagujemy na aplikację, mamy po prostu prosty div, a sposób, w jaki działa
+
+00:03:03.100 --> 00:03:10.750
+optymalizacja wyszukiwarek, polega na tym, że przeglądarki takie jak Google i wszystkie inne przeglądarki mają własne frazery lub programy przeszukujące witryny
+
+00:03:10.750 --> 00:03:11.680
+sieci Web.
+
+00:03:11.800 --> 00:03:17.770
+Zobacz, na czym polegają witryny sieci Web, a następnie umieść je w swojej bazie danych, aby zrozumieć, o co im chodzi.
+
+00:03:17.770 --> 00:03:25.350
+Więc kiedy użytkownik przeszukuje super przepis, wszyscy znają te strony o zupie.
+
+00:03:25.470 --> 00:03:26.980
+Ta strona internetowa o zupie.
+
+00:03:27.000 --> 00:03:28.250
+Tu nie chodzi o zupę.
+
+00:03:28.260 --> 00:03:35.340
+Zamierzam dać temu użytkownikowi 10 wyników i tak można wyszukiwać.
+
+00:03:35.400 --> 00:03:44.020
+Teraz te roboty, ponieważ są tylko programami, mają trudny czas pracy z aplikacjami renderowanymi po stronie
+
+00:03:44.020 --> 00:03:52.290
+Kleina, ponieważ coś takiego jak Googlebot załaduje stronę internetową, a potem zobaczy, że ta strona
+
+00:03:52.290 --> 00:03:56.470
+ma tylko element div z pomysłem aplikacji.
+
+00:03:56.850 --> 00:04:03.180
+I będzie dobrze powiedzieć, że wiesz, że może mieć jakiś opis, że metatag mówi, że ta
+
+00:04:03.270 --> 00:04:05.100
+strona jest o robotach.
+
+00:04:05.100 --> 00:04:11.350
+Ale kiedy bot Google przegląda stronę, widzi tylko znacznik diff.
+
+00:04:11.400 --> 00:04:13.240
+Tak więc mówi, że wszystko w porządku dotyczy witryny sieci Web.
+
+00:04:13.260 --> 00:04:20.380
+Nie jestem zainteresowany pozycjonowaniem go wysoko w SEO, a ponadto mamy również naszą aplikację, która
+
+00:04:20.380 --> 00:04:26.280
+żąda Ajaxa, aby uzyskać roboty, więc znowu renderowanie trwa o wiele dłużej.
+
+00:04:26.440 --> 00:04:31.540
+Więc zanim Googlebot rzeczywiście sprawdzi, może nie wyrenderowaliśmy wszystkiego i dobrze
+
+00:04:31.540 --> 00:04:34.680
+zrozumie, co robi nasza strona internetowa.
+
+00:04:35.230 --> 00:04:41.440
+Teraz Googlebot waży od 5 do 20 sekund, zanim zrobi to, co nazywamy migawką każdej
+
+00:04:41.440 --> 00:04:44.400
+strony, aby mogli ją zaindeksować dla MCO.
+
+00:04:44.560 --> 00:04:48.120
+Ale to nie zawsze działa.
+
+00:04:48.250 --> 00:04:57.280
+I tak jest tylko w przypadku przeglądarki Chrome, takiej jak Bing lub Yahoo lub Baidu.
+
+00:04:57.280 --> 00:04:58.460
+Jest dużo inaczej.
+
+00:04:58.480 --> 00:05:03.700
+Więc pracując z tymi botami, które przeszukują twoją witrynę, naprawdę trudno jest im pokazać, o czym
+
+00:05:03.700 --> 00:05:06.450
+jest Twoja strona, żebyś miał jak najlepiej.
+
+00:05:06.670 --> 00:05:13.630
+A to jest dużo pracy z aplikacjami renderowanymi po stronie klienta i bardzo łatwo jest mieć z nimi
+
+00:05:13.660 --> 00:05:14.640
+słabą umowę.
+
+00:05:14.680 --> 00:05:17.590
+Więc jeśli masz stronę internetową, która naprawdę zależy od Nescio.
+
+00:05:17.740 --> 00:05:22.710
+Załóżmy, że jesteś firmą hotelową, która wymienia hotele na całym świecie.
+
+00:05:22.870 --> 00:05:28.330
+CEO może być dla ciebie ważny, ponieważ wielu klientów szuka w wyszukiwarkach Google, w których
+
+00:05:28.330 --> 00:05:35.200
+ludzie mówią, że chcę mieć hotel w Mediolanie, może uważają, że aplikacja renderowana po stronie serwera może być dla
+
+00:05:35.200 --> 00:05:36.040
+nich lepsza.
+
+00:05:38.020 --> 00:05:41.300
+I w końcu jest to oczywiste, o którym mówiliśmy.
+
+00:05:41.410 --> 00:05:48.280
+Chodzi o to, że ma on dłuższe początkowe obciążenie, chociaż otrzymujemy szybszą odpowiedź od
+
+00:05:48.280 --> 00:05:53.700
+serwera, ponieważ mamy javascript, który musi renderować naszą stronę internetową.
+
+00:05:53.800 --> 00:05:57.750
+Mamy szybsze początkowe obciążenie niż aplikacje renderowane po stronie serwera.
+
+00:05:57.760 --> 00:06:04.600
+Widzimy więc, że ekran ładowania lub pusta strona są dużo dłuższe niż początkowo
+
+00:06:04.600 --> 00:06:13.310
+po stronie serwera dla większości użytkowników tego typu aplikacje będą odczuwać znacznie wolniej. Co z drugiej strony.
+
+00:06:13.700 --> 00:06:17.140
+A co z aplikacjami renderowanymi po stronie serwera.
+
+00:06:17.200 --> 00:06:23.830
+Pierwszą rzeczą jest to, że aplikacje renderowane po stronie serwera są naprawdę dobre w pozycjonowaniu dla punktów,
+
+00:06:23.830 --> 00:06:30.270
+które właśnie wspomniałem, ponieważ są renderowane na serwerze, ale czas nadejdzie w przeglądarce, w której wyszukiwany
+
+00:06:30.270 --> 00:06:31.510
+jest bot google.
+
+00:06:31.660 --> 00:06:37.900
+Ma już wszystko, co zostało zrobione, a Google Googlebot może być jak o tak, to zdecydowanie
+
+00:06:37.900 --> 00:06:39.960
+strona z przepisami na zupę.
+
+00:06:40.210 --> 00:06:48.460
+Zamierzam go ustawić na wysokim poziomie, ponieważ treść jest prezentowana, zanim faktycznie uzyskasz ją w widoku.
+
+00:06:48.470 --> 00:06:55.280
+Jest to również bardzo dobre z tego, co nazywamy statycznymi witrynami, a nie tylko takimi witrynami, które nie są tak dynamiczne.
+
+00:06:55.280 --> 00:07:01.280
+Istnieją witryny sieci Web, które zawierają wiele informacji tekstowych, takich jak dokumentacja.
+
+00:07:01.310 --> 00:07:06.640
+Są naprawdę bardzo dobre i sprawiają, że statyczne strony wyglądają naprawdę ładnie.
+
+00:07:06.800 --> 00:07:13.340
+Przykładem może być na przykład strona z dokumentacją ponownego aktu.
+
+00:07:13.490 --> 00:07:19.850
+Jeśli przejdziemy do strony dokumentacji w celu ponownego odczytania, widzimy, że jest to głównie tekst i używamy go do renderowania
+
+00:07:19.850 --> 00:07:22.510
+po stronie serwera, aby renderować wszystkie te strony.
+
+00:07:22.700 --> 00:07:26.430
+Widzisz, jak M-L zmienia się w górę.
+
+00:07:26.430 --> 00:07:33.120
+Jak przełączam się między stronami.
+
+00:07:33.270 --> 00:07:37.470
+Jest to świetny przypadek użycia dla renderowania po stronie serwera.
+
+00:07:38.510 --> 00:07:45.470
+I wreszcie inny duży profesjonalista to ładowanie początkowej strony, ponieważ po stronie serwera renderowane DAP są
+
+00:07:45.470 --> 00:07:47.970
+renderowane na serwerze dla użytkownika.
+
+00:07:48.140 --> 00:07:52.810
+Najczęściej wydaje się, że te witryny ładują się trochę szybciej.
+
+00:07:53.930 --> 00:08:01.790
+Co ze stupą? Pierwszą rzeczą jest to, że musimy przeładować całą stronę, ponieważ musimy poprosić o
+
+00:08:02.030 --> 00:08:09.750
+nową stronę z serwera, a Ty możesz robić rzeczy szybko i ładnie to wyglądać.
+
+00:08:09.860 --> 00:08:15.830
+Ale jest to również trudne, szczególnie jeśli większość twojej strony wygląda tak samo, ale
+
+00:08:15.830 --> 00:08:19.530
+ciągle żądasz tego samego dla każdej innej strony.
+
+00:08:20.580 --> 00:08:24.650
+A następnie mamy wolniejsze renderowanie strony z obciętą tutaj.
+
+00:08:24.690 --> 00:08:25.070
+Whoops.
+
+00:08:25.080 --> 00:08:34.990
+Ale jestem pewien, że nadal widzisz, że widzisz czas renderowania po stronie serwera do pierwszego bajtu, czyli kiedy
+
+00:08:34.990 --> 00:08:41.940
+pierwszy kawałek informacji z serwera jest wolniejszy niż renderowanie po stronie klienta.
+
+00:08:41.950 --> 00:08:48.160
+Ponieważ, jak już wspomniałem, twój serwer musi poświęcić czas na stworzenie wiadomości e-mail dla twojej strony, zamiast
+
+00:08:48.160 --> 00:08:56.330
+po prostu wysłać szybką odpowiedź, tak jak przy renderowaniu po stronie klienta, pamiętając o ponownym uruchomieniu renderowania serwera Domingu do metody ciągów. Cóż,
+
+00:08:56.330 --> 00:09:01.780
+jest to synchroniczna C. P. ty Bankole.
+
+00:09:01.800 --> 00:09:08.100
+Co oznacza, że CPQ musi działać, aby wyrenderować twoją aplikację na serwerze, która, jeśli jest to
+
+00:09:08.100 --> 00:09:12.640
+duża aplikacja, może długo trwać w tym, co nazwaliśmy pętlą zdarzeń.
+
+00:09:12.670 --> 00:09:18.530
+Serwer nie może przetworzyć żadnego innego żądania, dopóki nie zostanie to zrobione.
+
+00:09:19.030 --> 00:09:22.200
+A dla niektórych osób może to być wielkim przełamaniem.
+
+00:09:22.330 --> 00:09:30.030
+Jeśli nasza aplikacja jest naprawdę bardzo duża i musimy naprawdę renderować naszą stronę domową przez naprawdę długi czas,
+
+00:09:30.300 --> 00:09:36.050
+to serwer będzie właśnie siedział tam, czekając, aż serwer zakończy swoją pracę.
+
+00:09:37.070 --> 00:09:43.820
+A to może być ogromna zmiana dla większości ludzi, po stronie serwera renderowanie zdecydowanie oznacza więcej pracy dla
+
+00:09:43.820 --> 00:09:44.840
+twojego serwera.
+
+00:09:45.560 --> 00:09:49.940
+Ale nie tylko dla serwera, ale także dla programistów.
+
+00:09:50.090 --> 00:09:56.870
+Zwiększasz złożoność swojej bazy kodowej, ponieważ komponenty reaktora będą teraz potrzebować serwera węzła,
+
+00:09:56.900 --> 00:10:02.320
+tak jak pokazałem, że jest on dostępny do działania.
+
+00:10:02.350 --> 00:10:05.800
+Więc z dodatkową złożonością aplikacji.
+
+00:10:05.920 --> 00:10:13.660
+Należy pamiętać, że teraz więcej czasu programisty, kapitału i zasobów zostanie przeznaczone na sprawne renderowanie po
+
+00:10:14.320 --> 00:10:20.260
+stronie serwera, w przeciwieństwie do pracy nad nowymi funkcjami lub robieniem innych rzeczy,
+
+00:10:20.260 --> 00:10:24.170
+które mogą być ważniejsze dla Twojej aplikacji.
+
+00:10:24.300 --> 00:10:29.220
+I oczywiście mamy liczbę żądań do serwera za każdym razem, gdy potrzebujemy nowej strony lub
+
+00:10:29.220 --> 00:10:30.980
+musimy komunikować się z serwerem.
+
+00:10:31.110 --> 00:10:37.620
+W zależności od połączenia internetowego może to być dla Ciebie gorsze, niż gdy początkowy czas
+
+00:10:37.650 --> 00:10:41.480
+ładowania będzie dłuższy po renderowaniu po stronie klienta.
+
+00:10:42.340 --> 00:10:49.510
+Pamiętaj, że renderowanie po stronie serwera może sprawić, że twoja strona będzie wyglądać szybciej, ale nie oznacza to,
+
+00:10:49.510 --> 00:10:56.740
+że użytkownik może z nią korzystać, ponieważ pamiętaj, że dopóki nie otrzymamy tej interaktywności, wciąż będziemy musieli załadować
+
+00:10:57.010 --> 00:10:57.700
+JavaScript.
+
+00:10:57.700 --> 00:11:01.080
+Więc musisz być ostrożny z tym.
+
+00:11:01.090 --> 00:11:01.880
+W porządku.
+
+00:11:01.880 --> 00:11:06.960
+Powinniśmy mieć dobre pojęcie o tym, co jest dobre, kiedy korzystać z jednego na drugim.
+
+00:11:07.420 --> 00:11:11.820
+Zobaczmy w następnym filmie niektóre sposoby poprawnego renderowania po stronie serwera.
+
+00:11:11.830 --> 00:11:15.240
+Ponieważ wszyscy już wiemy, jak renderować po stronie klienta.
+
+00:11:15.640 --> 00:11:16.400
+Zobaczę na tym.

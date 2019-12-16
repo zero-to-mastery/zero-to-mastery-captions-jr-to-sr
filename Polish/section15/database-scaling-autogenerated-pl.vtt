@@ -1,0 +1,385 @@
+﻿WEBVTT
+
+00:00:00.910 --> 00:00:02.130
+Witamy spowrotem.
+
+00:00:02.170 --> 00:00:09.880
+Porozmawiajmy o bazach danych, ale zamierzam dać się poznać jako programista sieciowy, który może nie działać zbyt
+
+00:00:10.210 --> 00:00:16.540
+mocno w bazach danych, szczególnie jeśli chodzi o skalowanie i poprawę ich wydajności.
+
+00:00:16.540 --> 00:00:22.530
+Możemy jednak spojrzeć na bazy danych z wyższego poziomu, abyśmy mogli połączyć te elementy.
+
+00:00:22.630 --> 00:00:28.870
+A jeśli kiedykolwiek sprowadzimy się do tego, możemy skonstruować nasze aplikacje tak,
+
+00:00:28.870 --> 00:00:32.050
+aby korzystały z bazy danych.
+
+00:00:32.110 --> 00:00:38.250
+Zróbmy zatem ogólny przegląd tego, co możemy zrobić z bazami danych.
+
+00:00:38.380 --> 00:00:46.450
+Wymieniłem tutaj sześć pozycji, które są głównymi sposobami skalowania baz danych, a pierwszy z nich
+
+00:00:46.510 --> 00:00:53.650
+jest prawdopodobnie najważniejszym, na który należy zwrócić uwagę przed dokonaniem jakichkolwiek optymalizacji bazy
+
+00:00:53.650 --> 00:00:54.460
+danych.
+
+00:00:55.230 --> 00:01:01.050
+Ma to na celu zidentyfikowanie nieefektywnych zapytań przed rozpoczęciem przeglądania bazy danych i sposobu
+
+00:01:01.050 --> 00:01:01.910
+skalowania.
+
+00:01:02.130 --> 00:01:04.630
+Rzucanie więcej pieniędzy, aby go poprawić.
+
+00:01:04.710 --> 00:01:10.000
+Najpierw musisz zadać sobie pytanie: Czy skutecznie korzystam z bazy danych.
+
+00:01:10.140 --> 00:01:18.510
+Czy składam wyciągi do bazy danych z mojego, powiedzmy, serwera API Czy przesyłam te żądania
+
+00:01:18.510 --> 00:01:20.570
+w sposób efektywny.
+
+00:01:20.670 --> 00:01:27.930
+Jest wiele sposobów na to, aby poprawić to, nie mając zbyt wielu połączeń lub prosząc o zbyt wiele
+
+00:01:27.930 --> 00:01:30.840
+informacji, gdy potrzebujesz tylko trochę informacji.
+
+00:01:30.840 --> 00:01:35.760
+Jest wiele sposobów na ulepszenie swoich zapytań o wszystkie zapytania, ale
+
+00:01:35.760 --> 00:01:42.800
+dwie główne rzeczy, które możesz poprawić, to upewnienie się, że żądasz tylko tego, czego potrzebujesz na swoim serwerze.
+
+00:01:42.900 --> 00:01:50.490
+A następnie w końcu za pomocą rzeczy takich jak indeksy, aby poprawić tę kwerendę danych.
+
+00:01:50.490 --> 00:01:52.540
+Czym są indeksy.
+
+00:01:52.570 --> 00:01:58.550
+Zwykle dostęp do danych w bazie danych odbywa się za pomocą bloków na dyskach.
+
+00:01:58.590 --> 00:02:10.100
+To wtedy, gdy zapytanie do bazy danych lub tabeli musimy poprosić o dostęp do całego bloku dysku z tą informacją o
+
+00:02:10.100 --> 00:02:11.240
+tabeli.
+
+00:02:11.240 --> 00:02:12.740
+I zwykle te dane.
+
+00:02:12.800 --> 00:02:16.440
+Załóżmy, że mam nazwę użytkownika i wiek nie jest posortowany.
+
+00:02:16.520 --> 00:02:21.780
+Więc jeśli szukałem użytkownika, który ma 34 lata.
+
+00:02:21.950 --> 00:02:30.320
+Cóż, to będzie wymagało ode mnie przejrzenia całej tabeli, natomiast jeśli dane zostały posortowane, mógłbym zrobić coś, co nazywa
+
+00:02:30.320 --> 00:02:36.780
+się wyszukiwaniem binarnym, co sprawia, że znajdowanie tego użytkownika jest o wiele szybsze.
+
+00:02:36.800 --> 00:02:41.870
+Mamy więc duży wzrost wydajności, robiąc to, co nazywamy indeksowaniem.
+
+00:02:42.110 --> 00:02:47.490
+Warto więc pamiętać, że indeksowanie to sposób na sortowanie wielu rekordów na wielu polach.
+
+00:02:48.590 --> 00:02:56.360
+Jeśli więc utworzę indeks na polu będącym wiekiem tabeli użytkowników, utworzy on nową kopię tej struktury
+
+00:02:56.360 --> 00:03:02.720
+danych, która przechowuje wartość pola i wskaźnik do rekordu, do którego się odnosi.
+
+00:03:02.720 --> 00:03:08.300
+Pomyśl o tym, jak stworzyć plik na komputerze zamiast mieć tylko stabilny plik użytkownika.
+
+00:03:08.300 --> 00:03:11.660
+Teraz masz także plik indeksu użytkownika.
+
+00:03:11.910 --> 00:03:18.230
+Ale następnym razem, gdy będziemy zadawać pytania dotyczące wieku użytkowników, możemy po prostu użyć tego pliku indeksu, aby od razu
+
+00:03:18.230 --> 00:03:21.230
+znaleźć tego użytkownika, który pozwala nam używać wyszukiwania binarnego.
+
+00:03:21.260 --> 00:03:26.620
+Ponownie, aby naprawdę zwiększyć wydajność.
+
+00:03:26.710 --> 00:03:32.290
+Teraz oczywistą wadą indeksowania jest to, że te indeksy wymagają dodatkowego miejsca na dysku.
+
+00:03:32.290 --> 00:03:40.360
+Znowu robimy kolejny plik iw zależności od tego, czy twój system ma coraz więcej miejsca, zwłaszcza jeśli
+
+00:03:40.360 --> 00:03:44.680
+baza danych jest duża, może nie działać dobrze.
+
+00:03:44.780 --> 00:03:45.080
+W porządku.
+
+00:03:45.080 --> 00:03:47.820
+A więc wszystkie te indeksy mówią i nieskuteczne zapytania.
+
+00:03:47.930 --> 00:03:50.010
+Jak mogę utworzyć indeks?
+
+00:03:50.330 --> 00:03:57.710
+Cóż, pamiętajcie o naszych przekręconych wszystkich stwierdzeniach, aby utworzyć tabelę, w której wykonaliśmy polecenie create table, a następnie nadaliśmy
+
+00:03:57.710 --> 00:04:00.470
+jej nazwę tabeli, aby utworzyć indeks.
+
+00:04:00.470 --> 00:04:05.170
+Mówimy po prostu, że tworzenie indeksu z ponownym uruchamianiem ma nazwę indeksu.
+
+00:04:05.210 --> 00:04:09.730
+Powiedzmy, użyj swojego wieku na nazwie tabeli.
+
+00:04:09.740 --> 00:04:13.970
+W naszym przypadku nazwa użytkownika i kolumna wieku i to wszystko.
+
+00:04:13.970 --> 00:04:25.660
+Po tym, jak to zrobimy, za każdym razem, gdy zapytamy o tabelę użytkowników dla czegoś takiego jak H, mamy WAY jeszcze szybsze zapytanie, jeśli chodzi
+
+00:04:26.350 --> 00:04:32.430
+o efektywny Eskew lub polecenia, z którymi zwykle masz zespół baz danych lub
+
+00:04:32.470 --> 00:04:34.050
+inżynierów baz danych.
+
+00:04:34.370 --> 00:04:40.030
+Ale tworzenie prostych rzeczy, takich jak indeksy lub upewnianie się, że żądasz tylko tego,
+
+00:04:40.090 --> 00:04:43.980
+czego potrzebujesz od aplikacji, to sposób na zrobienie tego.
+
+00:04:44.020 --> 00:04:48.760
+Pamiętaj, że pamięć jest najwolniejszym elementem w relacyjnej bazie danych.
+
+00:04:48.850 --> 00:05:00.640
+Wombat Escorial Querrey może spowodować ogromną ilość opóźnień, a więc następnym tematem jest zwiększenie pamięci.
+
+00:05:00.790 --> 00:05:02.980
+A to jest bardzo proste.
+
+00:05:03.310 --> 00:05:10.510
+Jeśli masz wąskie gardło, które jest twoją pamięcią, twoim pierwszym sposobem działania zwykle po
+
+00:05:10.510 --> 00:05:17.980
+spojrzeniu na nieefektywne zapytania jest zapewnienie dodatkowej pamięci i dokonanie tego poprzez ulepszenie sprzętu, na
+
+00:05:17.980 --> 00:05:20.050
+którym działa baza danych.
+
+00:05:20.050 --> 00:05:26.710
+Zwiększając ilość informacji w pamięci, nie uzyskujesz dostępu do dysku tak często, jak zwiększasz szybkość, dzięki
+
+00:05:26.710 --> 00:05:31.310
+czemu możesz przechowywać więcej informacji w pamięci dla bazy danych.
+
+00:05:32.540 --> 00:05:37.140
+Ale tak jak w przypadku wszystkiego, co dotyczy pamięci, może tylko dodać pewną ilość.
+
+00:05:37.220 --> 00:05:40.920
+Nie będzie można dodać całej bazy danych do pamięci.
+
+00:05:40.920 --> 00:05:42.150
+Porozmawiajmy o następnym.
+
+00:05:42.250 --> 00:05:44.490
+A to jest skalowanie pionowe.
+
+00:05:44.690 --> 00:05:51.650
+Zwykle robi się to z czymś takim jak czerwony S lub memcached, a rattus jest czymś,
+
+00:05:51.650 --> 00:05:56.880
+co znamy i mówiliśmy o pionowym skalowaniu może również obejmować zwiększenie pamięci.
+
+00:05:57.080 --> 00:06:03.740
+Ale w tym przypadku mówimy o dodaniu innej usługi, aby twój system
+
+00:06:03.740 --> 00:06:05.600
+efektywniej wykorzystywał zasoby.
+
+00:06:05.660 --> 00:06:13.390
+Dodanie takiego systemu, jak na przykład wynajem, jest jak dodanie pamięci, ale nie wykonanie jej na tym samym serwerze, co
+
+00:06:13.390 --> 00:06:14.940
+w pierwszym przypadku.
+
+00:06:14.950 --> 00:06:22.570
+Dodanie kolejnego serwera, który nas odczytał, jest pamięcią, która, jak wiemy, sprawia, że rzeczy stają się szybkie,
+
+00:06:22.570 --> 00:06:27.230
+oznacza to, że właśnie zwiększyliśmy pamięć naszej bazy danych.
+
+00:06:27.310 --> 00:06:28.900
+Ale w jaki sposób nam to pomaga.
+
+00:06:29.260 --> 00:06:37.750
+Na przykład, jeśli zapytamy o kwerendę podobną do wieku użytkownika i ciągle zauważamy, że zapytanie o wiek użytkownika zawsze
+
+00:06:37.750 --> 00:06:46.210
+się zdarza, a każdy użytkownik używa go dobrze, możemy w gotówce ponownie odpowiedzieć na coś, o czym będziemy
+
+00:06:46.780 --> 00:06:54.640
+rozmawiać, ale powiesz hej, zanim nawet zapytasz mnie o sprawdzanie wieku, które czytasz, co jest w
+
+00:06:54.750 --> 00:06:58.190
+pamięci, jest o wiele szybsze niż ja.
+
+00:06:58.510 --> 00:07:03.550
+Sprawdź, czy Mr. rattus lub Mrs. dzierżawę ma tę informację.
+
+00:07:03.700 --> 00:07:05.970
+Jeśli dobrze, po prostu go zwróć.
+
+00:07:05.980 --> 00:07:09.790
+W przeciwnym razie przekaż mi tę informację, a ja ci ją zwrócę.
+
+00:07:10.060 --> 00:07:15.580
+Ale kiedy zwrócę im wiek użytkownika, zamierzam przejść przez rattus, a jeśli rattus już
+
+00:07:15.590 --> 00:07:19.540
+go nie ma, zamierzam go tam przechowywać, zanim go wyślę.
+
+00:07:19.540 --> 00:07:23.750
+Jest to trochę podobne do Cdn, jeśli o tym myślisz.
+
+00:07:24.190 --> 00:07:32.630
+Znowu zarabiamy na rzeczach, o które często proszą, abyśmy korzystali z dostępu do pamięci zamiast dostępu
+
+00:07:32.630 --> 00:07:33.770
+do dysku.
+
+00:07:35.410 --> 00:07:43.170
+Inną opcją dla bazy danych jest coś, co nazywa się Shardik i chcę cię ostrzec, że shirting to jedna z tych
+
+00:07:43.170 --> 00:07:47.960
+rzeczy, które brzmią, jak to ma sens, ale jest to niezwykle trudne.
+
+00:07:48.870 --> 00:07:50.710
+I to jest bardzo trudny problem.
+
+00:07:50.790 --> 00:07:57.930
+To powoduje wiele problemów, które najprawdopodobniej nigdy nie zostaną wdrożone przez zwarcie, ponieważ ta
+
+00:07:57.930 --> 00:08:03.840
+właśnie animacja wykazała, że po prostu dzieli witrynę na różne części.
+
+00:08:03.840 --> 00:08:08.670
+Kiedy zaczniesz mieć coraz więcej sklepów w bazie danych, stanie się to zbyt duże, by sobie z nim poradzić.
+
+00:08:08.790 --> 00:08:15.390
+Dane mogą być rozbijane przez użytkowników mających mniej niż 30 lat i użytkowników starszych
+
+00:08:15.390 --> 00:08:21.900
+niż 30 lat, więc gdy robisz zapytanie zamiast przeszukiwać całą listę użytkowników, jeśli
+
+00:08:21.900 --> 00:08:29.630
+wiemy, że użytkownik ma 23, możemy po prostu poprosić o zapytaj tę bazę danych zamiast tego.
+
+00:08:30.640 --> 00:08:35.780
+Kolejną rzeczą, którą możemy zrobić, to dodać więcej baz danych do problemu.
+
+00:08:36.600 --> 00:08:41.870
+Dzięki wielu bazom danych możemy mieć tutaj po prostu więcej opcji.
+
+00:08:42.000 --> 00:08:48.780
+Jeśli tysiące użytkowników żąda informacji o użytkowniku w tym samym czasie, zamiast podawać tysiąc zapytań do
+
+00:08:48.960 --> 00:08:55.350
+tej bazy danych w tym samym czasie, dlaczego nie dać 300 333 wniosków do tego.
+
+00:08:55.350 --> 00:09:01.620
+Następnie 333 do tego i 334 do tego i rozprowadź ładunek.
+
+00:09:01.760 --> 00:09:08.340
+A to jest coś, co bazy danych, takie jak postscripts, mogą być wstępnie skonfigurowane, więc jeśli
+
+00:09:08.760 --> 00:09:14.040
+dodasz więcej pul bazy danych lub postscriptowych, zrobi to automatycznie za ciebie.
+
+00:09:14.160 --> 00:09:20.550
+Lub możemy umieścić własny load balancer przed nim, aby dystrybuować ten ładunek.
+
+00:09:20.550 --> 00:09:29.750
+Znowu niskie równoważniki są czymś, co zajmie się w tej sekcji, a ostatecznie mamy bazy danych, których baza
+
+00:09:31.280 --> 00:09:34.170
+danych może zrobić tylko tyle.
+
+00:09:34.280 --> 00:09:42.170
+Każda baza danych jest dobra w swojej konkretnej rzeczy, ale niektóre bazy danych nadają się do jednej rzeczy, a inne nadają
+
+00:09:42.170 --> 00:09:43.320
+się do innej.
+
+00:09:43.530 --> 00:09:50.740
+Dlatego przy wybieraniu baz danych musisz zdecydować, jaki typ cech lub zachowań chcemy usunąć z
+
+00:09:50.750 --> 00:09:52.040
+bazy danych.
+
+00:09:52.040 --> 00:09:55.420
+I na tej podstawie musisz upewnić się, że wybierasz właściwy.
+
+00:09:55.790 --> 00:10:01.550
+I to jest coś, co naprawdę zaszkodzi twojej głowie, ponieważ jest
+
+00:10:01.550 --> 00:10:10.530
+tam mnóstwo baz danych, ponieważ istnieje wiele sposobów przechowywania danych i niektóre z tych nazw mogą brzmieć znajomo.
+
+00:10:10.530 --> 00:10:12.860
+Wiemy o pamięci relacyjnej.
+
+00:10:12.870 --> 00:10:18.400
+Przyjrzeliśmy się postscriptom, zanim mogliście usłyszeć o Majeskim, a także
+
+00:10:18.420 --> 00:10:24.070
+dokumenty lub pamięć masową, która nie jest częścią wszystkich ratunkowych baz danych.
+
+00:10:24.180 --> 00:10:29.700
+Dowiedzieliśmy się o systemie rattus i składowaniu kluczowych wartości, ale są też takie
+
+00:10:29.700 --> 00:10:36.750
+rzeczy, jak bazy danych Graph i wiesz o Jei lub dużych tabelach, a lista jest ciągła i ciągła.
+
+00:10:36.960 --> 00:10:39.440
+Znowu niech cię to nie przytłacza.
+
+00:10:39.720 --> 00:10:42.390
+Większość z nich nigdy nie dotknie twojej kariery.
+
+00:10:42.390 --> 00:10:47.460
+Chcesz się tylko dowiedzieć, jakie są różnice między głównymi graczami w
+
+00:10:47.460 --> 00:10:55.620
+PostScriptach w moim pytaniu o wszystkie Mongo DB rattus, ale wiem, że są one dostępne, gdy masz konkretny problem,
+
+00:10:55.620 --> 00:11:01.410
+kiedy tworzysz aplikację sieci społecznościowej, może szukasz w bazach graficznych, które naprawdę dobrze
+
+00:11:01.410 --> 00:11:07.260
+nadają się do przechowywania danych graficznych, które świetnie nadają się do połączeń społecznościowych.
+
+00:11:07.260 --> 00:11:14.550
+Więc jeśli chodzi o bazy danych, jest wiele rzeczy do zrobienia, ale po prostu pamiętaj o
+
+00:11:15.090 --> 00:11:20.310
+sześciu zasadach, w jaki sposób możemy poprawić skalowanie bazy danych.
+
+00:11:20.440 --> 00:11:21.190
+Zobaczę w następnym.

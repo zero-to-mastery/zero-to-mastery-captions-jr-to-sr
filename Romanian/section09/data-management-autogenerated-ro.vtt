@@ -1,0 +1,442 @@
+﻿WEBVTT
+
+00:00:01.500 --> 00:00:02.650
+Bine ai revenit.
+
+00:00:02.860 --> 00:00:04.630
+Suntem atât de aproape.
+
+00:00:04.630 --> 00:00:07.130
+Vom vorbi acum despre gestionarea datelor.
+
+00:00:08.060 --> 00:00:14.980
+Și ceea ce putem face pentru a îmbunătăți securitatea atunci când vine vorba de gestionarea datelor gestionarea datelor cuprinde
+
+00:00:14.980 --> 00:00:15.940
+multe idei.
+
+00:00:15.940 --> 00:00:21.510
+Dar există câteva subiecte, de exemplu, pe care doriți să vă asigurați că întotdeauna aveți copii de siguranță.
+
+00:00:21.520 --> 00:00:27.880
+Unii oameni preferă să facă copii de siguranță ale fișierelor lor statice de pe site-ul web.
+
+00:00:27.880 --> 00:00:29.890
+Niciodată nu ai un punct de eșec.
+
+00:00:29.980 --> 00:00:36.140
+Acesta este un loc slab și, dacă ajunge acolo, nu mai aveți unde să vă recuperați.
+
+00:00:37.610 --> 00:00:41.570
+Doriți să vă asigurați că limitați expunerea la date sensibile.
+
+00:00:41.570 --> 00:00:50.330
+Asta este că doriți să criptați oprirea datelor, astfel încât să se jurnalizeze, astfel încât oamenii să poată vedea și în tranziție.
+
+00:00:50.330 --> 00:00:51.510
+Acum e treaba.
+
+00:00:51.830 --> 00:00:55.700
+Ceea ce tocmai am spus a cripta datele în repaus și în tranziție.
+
+00:00:55.710 --> 00:01:02.420
+Majoritatea timpului nu este fezabil deoarece criptarea datelor de odihnă înseamnă atunci când datele stau doar acolo acolo destul de
+
+00:01:02.840 --> 00:01:10.100
+mult să spunem într-o bază de date care criptează toate datele care costă o mulțime de bani necesită mult efort și nu
+
+00:01:10.100 --> 00:01:15.980
+este posibilă și nu este complet acoperiți bazele în ceea ce privește mijloacele de tranziție atunci când
+
+00:01:15.980 --> 00:01:16.970
+trimiteți date.
+
+00:01:17.000 --> 00:01:22.490
+Deci, atunci când trimiteți date din baza de date către server când trimiteți date de la server
+
+00:01:22.490 --> 00:01:26.270
+către client, știm că în acel caz este utilizată o foaie.
+
+00:01:27.160 --> 00:01:31.560
+Acum doriți să fiți selectivi în ceea ce privește datele pe care le criptați și de ce nu le faceți.
+
+00:01:31.660 --> 00:01:38.740
+Bazându-vă pe resursele la îndemână, este posibil să doriți să criptați informații delicate cum ar fi adresele de e-mail ale numerelor de
+
+00:01:38.740 --> 00:01:46.630
+telefon ale utilizatorilor dvs., dar probabil că nu vă faceți griji cu privire la numele de animale de companie ale utilizatorilor care codifică numele
+
+00:01:47.090 --> 00:01:51.520
+unei coloane într-o bază de date, poate că nu aveți nevoie să criptați.
+
+00:01:51.550 --> 00:01:59.150
+Deci, ce putem face cu gestionarea datelor Ei bine, vă voi arăta un exemplu rapid de lucruri pe care le puteți
+
+00:01:59.150 --> 00:01:59.810
+face.
+
+00:01:59.810 --> 00:02:07.280
+Dar ideile principale pe care doriți să le utilizați pentru criptarea oricăror date care identifică utilizatorii și date sensibile cum ar fi
+
+00:02:07.790 --> 00:02:10.470
+e-mailurile de acces și facturile de acces.
+
+00:02:10.550 --> 00:02:12.120
+Cum am spus.
+
+00:02:12.540 --> 00:02:19.140
+Și în sfârșit, după cum am menționat cu backup-ul, doriți ca aceste backup-uri să fie stocate pentru a fi criptate în
+
+00:02:19.200 --> 00:02:20.060
+mod ideal.
+
+00:02:20.100 --> 00:02:24.760
+Din nou, aceasta nu este întotdeauna fezabilă, dar doriți să vă concentrați mai întâi pe datele sensibile.
+
+00:02:24.780 --> 00:02:26.500
+Și orice altceva pe care îl puteți cripta.
+
+00:02:26.580 --> 00:02:27.440
+Ar trebui să faceți asta.
+
+00:02:28.520 --> 00:02:32.810
+Acum vreau să vorbesc despre două subiecte principale.
+
+00:02:32.810 --> 00:02:35.960
+Una este parolele de tip hash și cum să le păstrați.
+
+00:02:35.960 --> 00:02:41.840
+Și a doua este cum să criptați baza de date care are date sensibile.
+
+00:02:42.230 --> 00:02:46.910
+A doua parte aici depinde într-adevăr de baza dvs. de date, așa că nu voi trece peste ea
+
+00:02:46.910 --> 00:02:48.310
+pentru că este prea specifică.
+
+00:02:48.410 --> 00:02:55.160
+Dar instrumentele cum ar fi PGE crypto vă permit să criptați câteva coloane într-o bază de date postscripts.
+
+00:02:55.160 --> 00:02:58.590
+Una dintre bazele mele de date preferate și au o documentație excelentă.
+
+00:02:58.610 --> 00:02:59.810
+Deci, asta e ceva ce poți face.
+
+00:02:59.930 --> 00:03:09.110
+Dar dacă folosesc cripta 3G, probabil voi cripta adresa de facturare sau coloana de e-mail a utilizatorilor sau ceva
+
+00:03:09.440 --> 00:03:12.500
+sensibil pentru o coloană de utilizatori.
+
+00:03:13.440 --> 00:03:15.930
+Aceasta este doar o bună practică.
+
+00:03:15.930 --> 00:03:24.060
+Dar unul dintre subiectele care mă fascinează cu adevărat și de fapt este dragostea de stocare a parolelor.
+
+00:03:24.630 --> 00:03:28.360
+Și știu că e un lucru genial de spus, dar este într-adevăr foarte interesant.
+
+00:03:29.170 --> 00:03:34.660
+De fapt, am scris un blog al unei companii în viața mea trecută pe acest subiect care va lăsa asta pentru tine la
+
+00:03:34.660 --> 00:03:35.580
+sfârșitul acestui curs.
+
+00:03:35.800 --> 00:03:41.290
+Și este, de asemenea, ceva pe care deja l-am acoperit în cursul meu anterior, dar voi face o scurtă
+
+00:03:41.290 --> 00:03:44.320
+analiză a ceea ce ar trebui să faceți cu parolele.
+
+00:03:44.320 --> 00:03:51.100
+Orice site web care are numele de utilizator și parola și seinen trebuie să aibă o bună gestionare a datelor, mai ales atunci când
+
+00:03:51.100 --> 00:03:52.290
+vine vorba de parole.
+
+00:03:52.420 --> 00:03:54.360
+Deci ce putem face.
+
+00:03:54.610 --> 00:04:00.190
+Ei bine, există trei biblioteci care sunt într-adevăr foarte bune și aceste trei biblioteci sunt foarte
+
+00:04:00.250 --> 00:04:04.830
+bune pentru că sunt încercate și testate când vine vorba de securitate.
+
+00:04:04.840 --> 00:04:11.860
+Doriți să alegeți pachete care au fost în jur de mult timp, deoarece experții de securitate hackeri pălărie negru și hackeri
+
+00:04:11.860 --> 00:04:15.740
+alb pălărie toate au testat-o ​​și au rezistat testul de timp.
+
+00:04:15.910 --> 00:04:22.330
+Și aceste trei au fost într-adevăr testul de timp au trecut la este destul de nou, dar a fost de a face într-adevăr
+
+00:04:22.330 --> 00:04:23.130
+foarte bine.
+
+00:04:23.140 --> 00:04:30.700
+Eu personal îmi place cripta Așa că lasă-mă să vă arăt o demonstrație rapidă, am aici un dosar.
+
+00:04:30.700 --> 00:04:37.030
+Permiteți-mi să fac acest lucru un pic mai mare că am descărcat cript nici un pachet de ghici doar pentru a avea să lucreze
+
+00:04:37.030 --> 00:04:38.730
+cu nici un js foarte ușor.
+
+00:04:38.920 --> 00:04:41.310
+Și asta este destul de mult.
+
+00:04:41.410 --> 00:04:48.500
+Și dacă mă duc la pachetele lor de aici, vom vedea că au o opțiune Synchronoss
+
+00:04:48.500 --> 00:04:56.640
+și o opțiune asincronă, așa că să copiem prima parte și voi explica ce face și nu-mi place baconul.
+
+00:04:56.640 --> 00:05:07.430
+Mă voi duce cu supă aici, atunci când site-ul dvs. Web are un nume de utilizator și o parolă de ce ar trebui să facem bine primul lucru pe
+
+00:05:07.520 --> 00:05:13.940
+care îl veți face este că veți lăsa tipul de utilizator în numele de utilizator și parola.
+
+00:05:13.940 --> 00:05:16.960
+Apoi se dă clic pe trimiteți atunci când fac clic pe Trimiteți.
+
+00:05:17.030 --> 00:05:24.310
+Veți fi siguri că este un CBS, astfel încât parola și numele de utilizator pe
+
+00:05:24.590 --> 00:05:33.320
+care îl puneți în cererea CBS în corpul solicitării pe care o trimiteți către backend și apoi sosesc.
+
+00:05:33.420 --> 00:05:39.930
+Să presupunem că aceasta este spatele dvs. și, odată ce aceasta sosește, luați această parolă și vă va spune că parola pe
+
+00:05:39.930 --> 00:05:43.020
+care tocmai ați tastat-o ​​este o parolă foarte slabă.
+
+00:05:43.020 --> 00:05:46.180
+Știu, dar o vom folosi doar pentru demonstrații.
+
+00:05:46.530 --> 00:05:54.180
+Acum, ceea ce facem este să nu păstrăm niciodată parole de genul asta în baza noastră de date, deoarece dacă baza noastră de date este
+
+00:05:54.180 --> 00:05:57.940
+compromisă sau cineva intră în ea, ei au toate parolele tuturor.
+
+00:05:58.050 --> 00:05:59.420
+Nu face niciodată asta.
+
+00:05:59.430 --> 00:06:05.160
+În schimb, folosim cripta B care ne permite să facem hash.
+
+00:06:05.270 --> 00:06:11.510
+Și dacă vă aduceți aminte de hashing de la secțiunea noastră S-sh, este o cale Fange
+
+00:06:11.540 --> 00:06:19.750
+o funcție care va duce la suprasarcini și transforma-o într-un șir amestecat, care bine nu vom ști niciodată că a venit din supă.
+
+00:06:19.760 --> 00:06:20.710
+Așa că lasă-mă să vă arăt.
+
+00:06:20.750 --> 00:06:21.710
+Am
+
+00:06:24.350 --> 00:06:25.440
+de gând să-i
+
+00:06:27.730 --> 00:06:30.020
+spun lui Konsole că trebuie să
+
+00:06:33.810 --> 00:06:35.680
+salvezi scenariul lui Ron Noad
+
+00:06:39.000 --> 00:06:41.370
+și să te uiți la asta.
+
+00:06:41.580 --> 00:06:46.440
+Avem chestia asta pe care nu vrei să o copiezi.
+
+00:06:46.440 --> 00:06:52.340
+Acest lucru într-adevăr amestecat într-adevăr string șir de caractere care reprezintă supa.
+
+00:06:52.440 --> 00:06:57.160
+Chiar dacă un actor rău intră în baza noastră de date și vede oh da.
+
+00:06:57.300 --> 00:07:03.000
+Parola este că nu vor putea să facă nimic cu el, deoarece ei nu știu că pot merge pe site-ul Web
+
+00:07:03.000 --> 00:07:06.690
+și tip în acest lucru pentru că bine că nu va funcționa.
+
+00:07:06.690 --> 00:07:08.840
+Parola mea este supa.
+
+00:07:08.850 --> 00:07:10.260
+Deci, cum funcționează asta.
+
+00:07:10.260 --> 00:07:13.560
+Stocăm acest lucru în baza de date pentru utilizator.
+
+00:07:13.560 --> 00:07:20.290
+Să spunem că Andri și când Andre se întoarce, nu-mi place să-mi folosesc propriul nume.
+
+00:07:20.290 --> 00:07:22.170
+Să folosim Tim ca exemplu.
+
+00:07:22.270 --> 00:07:29.390
+Când Tim se întoarce cum putem verifica când Tim tipi supa din nou.
+
+00:07:29.650 --> 00:07:33.970
+Că este același lucru cu acest hash pe care îl avem în baza de date.
+
+00:07:33.970 --> 00:07:44.940
+Ei bine, ne întoarcem la cripta au o metodă nother numită compair și această comparație va compara șirul pe care îl introduce Tim
+
+00:07:44.940 --> 00:07:50.360
+atunci când se întoarce la site-ul din nou pentru a intra.
+
+00:07:50.640 --> 00:07:53.880
+Și hash-ul pe care l-am stocat în baza de date.
+
+00:07:53.880 --> 00:07:57.160
+În cazul meu, să spunem că am stocat acest lucru în baza de date.
+
+00:07:57.270 --> 00:08:04.550
+Și din nou, dacă nu sunteți prea familiarizat cu bazele de date, vă recomand să vă examinați cursul meu anterior.
+
+00:08:04.790 --> 00:08:06.660
+Și e al nostru.
+
+00:08:06.670 --> 00:08:09.410
+Să facem de fapt un șir.
+
+00:08:09.460 --> 00:08:12.770
+Așa că e eticheta noastră de hash pe care o ștergem din baza de date.
+
+00:08:12.790 --> 00:08:13.330
+In regula.
+
+00:08:13.420 --> 00:08:18.070
+Acum, avem un răspuns, așa că să vedem ce va fi răspunsul.
+
+00:08:18.070 --> 00:08:20.050
+Și apoi spun că mă consolez pe toate.
+
+00:08:22.410 --> 00:08:29.510
+Răspunsul când salvați rulați acest lucru vedeți că am primit.
+
+00:08:29.510 --> 00:08:30.250
+Adevărat.
+
+00:08:30.290 --> 00:08:31.450
+Deci acum știu asta.
+
+00:08:31.470 --> 00:08:34.000
+Asta e parola cortului.
+
+00:08:34.070 --> 00:08:35.240
+Se poate conecta.
+
+00:08:35.390 --> 00:08:37.800
+Dar dacă Tim scrie greșit ceva, să spun că plec.
+
+00:08:37.840 --> 00:08:38.290
+Fac.
+
+00:08:38.290 --> 00:08:39.320
+Capitalul S
+
+00:08:42.290 --> 00:08:44.100
+și un semn de exclamare.
+
+00:08:44.210 --> 00:08:47.460
+Salvez și conduc asta.
+
+00:08:47.510 --> 00:08:49.130
+Nu e parola ta.
+
+00:08:49.130 --> 00:08:49.900
+Încearcă din nou.
+
+00:08:51.110 --> 00:08:56.680
+Și este destul de bun că chiar și un capital a atacat.
+
+00:08:56.680 --> 00:08:57.220
+Acolo te duci.
+
+00:08:57.290 --> 00:08:58.340
+Deoarece un hash.
+
+00:08:58.340 --> 00:09:06.130
+Orice modificare minoră a parolei va scuipa un hash complet diferit.
+
+00:09:06.160 --> 00:09:09.850
+Acum, în cazul în care vă întrebați ce este gnoll Noal aici.
+
+00:09:09.850 --> 00:09:16.560
+Ei bine, în articolul meu pe care l-am scris, vorbesc despre runurile lui Salt și cum adaugă niște niveluri suplimentare de securitate.
+
+00:09:16.570 --> 00:09:21.980
+Este un subiect complex și dincolo de scopul acestui curs, dar citiți-l dacă sunteți interesat de el.
+
+00:09:22.000 --> 00:09:28.900
+Este doar o măsură de securitate suplimentară, dar ceea ce face este dacă observați cât de lent obținem hash-ul și apoi durează
+
+00:09:28.930 --> 00:09:31.490
+puțin timp pentru a obține adevăratul sau fals.
+
+00:09:31.540 --> 00:09:37.040
+Permiteți-mi să vă arăt dacă salvez acest lucru și o să mai conduc din nou.
+
+00:09:37.260 --> 00:09:39.810
+Vedeți acea pauză în care hash-ul a fost spulberat.
+
+00:09:39.810 --> 00:09:42.950
+Într-adevăr foarte repede, dar acest lucru a durat un pic de timp.
+
+00:09:43.950 --> 00:09:44.710
+Să vedem din nou.
+
+00:09:46.340 --> 00:09:50.610
+Deci, ce se întâmplă acolo este o protecție suplimentară prin cripta B.
+
+00:09:50.660 --> 00:09:54.700
+Se spune bine dacă ar exista o persoană rea.
+
+00:09:54.700 --> 00:09:57.120
+Din nou, continuați să încercați parolele până când primesc un meci.
+
+00:09:57.170 --> 00:10:04.280
+Deci, să fie script folosind ceva numit rundă Salt face aceste atacuri de forță brute în cazul în care
+
+00:10:04.280 --> 00:10:08.820
+persoana doar continuă să încerce parolele foarte greu, deoarece durează mult timp.
+
+00:10:09.110 --> 00:10:11.380
+E nevoie de un pic de timp pentru a verifica.
+
+00:10:11.420 --> 00:10:19.670
+Deci, dacă aș fi fost un atacator rău, aș încerca să încerc, dar pentru că cripta B este lentă, ar fi nevoie de
+
+00:10:19.670 --> 00:10:24.490
+mult timp pentru mine să ghicesc o parolă și este un alt nivel de
+
+00:10:25.130 --> 00:10:29.360
+protecție care vine cu cripta și cele mai bune biblioteci hash.
+
+00:10:29.580 --> 00:10:36.100
+Din nou, gestionarea datelor este cu adevărat importantă și acest lucru se întoarce și la variabilele de mediu.
+
+00:10:36.150 --> 00:10:41.120
+Toate secretele conținând chiar și cheia S-sh pe care doriți să o gestionați corect.
+
+00:10:41.190 --> 00:10:42.900
+Niciodată nu-ți dezvălui secretele.
+
+00:10:43.050 --> 00:10:50.270
+Faceți întotdeauna cât mai greu posibil pentru actorii răi să acceseze informații sensibile.
+
+00:10:50.320 --> 00:10:51.260
+Voi vedea în următorul.

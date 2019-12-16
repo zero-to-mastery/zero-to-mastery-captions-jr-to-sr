@@ -1,0 +1,163 @@
+﻿WEBVTT
+
+00:00:00.920 --> 00:00:09.050
+Întoarceți-vă am avut un set frumos aici, unde avem acum o pictogramă de profil și putem să deconectăm sau să vedem profilul
+
+00:00:09.050 --> 00:00:12.870
+bine sau cel puțin să putem face clic pe el.
+
+00:00:13.010 --> 00:00:15.690
+Dar nu există nicio funcție de vizualizare a profilului.
+
+00:00:15.800 --> 00:00:16.970
+Putem să ne despărțim.
+
+00:00:17.090 --> 00:00:23.810
+Dar când fac clic pe Vizualizare profil nu se întâmplă nimic acum sau vom încerca să facem este atunci când faceți clic
+
+00:00:23.810 --> 00:00:28.810
+pe Vizualizare profil Cred că ar fi frumos dacă am avea un model care apare.
+
+00:00:29.330 --> 00:00:36.680
+Și acest model ne permite să ne schimbăm numele, poate să schimbăm alte domenii din profilul nostru și să îl actualizăm în
+
+00:00:36.740 --> 00:00:37.390
+consecință.
+
+00:00:37.490 --> 00:00:40.710
+Poate ca numele nostru sa actualizat chiar aici.
+
+00:00:42.490 --> 00:00:43.320
+Deci, să facem asta.
+
+00:00:43.420 --> 00:00:47.940
+Să construim o componentă care să creeze un model pentru noi.
+
+00:00:48.400 --> 00:00:53.800
+Din fericire pentru noi, re-actul a venit cu o nouă caracteristică numită creare de portal.
+
+00:00:53.800 --> 00:00:58.450
+Vezi modals în general și aplicațiile sunt foarte frecvente.
+
+00:00:58.870 --> 00:01:06.280
+Și a existat o problemă anterior în cazul în care nu am avut portaluri și a fost o mare problemă a modului
+
+00:01:06.280 --> 00:01:11.170
+de a configura modele într-un mod care să funcționeze foarte bine cu re-act.
+
+00:01:11.210 --> 00:01:16.490
+Acum, odată cu introducerea de portaluri, acest lucru a devenit cu adevărat foarte ușor și au o
+
+00:01:16.490 --> 00:01:17.710
+documentație foarte frumoasă.
+
+00:01:17.810 --> 00:01:21.610
+Dacă doriți să citiți mai multe despre acesta și fragmente de cod frumos, de asemenea.
+
+00:01:21.980 --> 00:01:26.990
+Vom construi propriul nostru model care conține profilul, astfel încât atunci când faceți clic
+
+00:01:26.990 --> 00:01:30.940
+pe pagina de profil sau vizualizăm profilul, vom obține acest model.
+
+00:01:30.980 --> 00:01:33.400
+Deci, să mergem la lucru.
+
+00:01:33.540 --> 00:01:38.030
+Primul lucru pe care vreau să-l fac este să mă întorc la fișierul index dodgiest.
+
+00:01:38.070 --> 00:01:41.260
+Voi închide câteva dintre aceste lucruri doar pentru a păstra lucrurile curate.
+
+00:01:42.780 --> 00:01:43.310
+O.K.
+
+00:01:43.560 --> 00:01:52.290
+Acum modul în care funcționează modul este că vrem să ne asigurăm că avem o render acțiune care nu este în afara aplicației
+
+00:01:52.290 --> 00:01:55.670
+și asta e treaba cu privire la portaluri.
+
+00:01:55.850 --> 00:02:02.300
+Aveți posibilitatea să aveți un portal care este complet separat de aplicație și un număr de render act de randare Dom.
+
+00:02:02.310 --> 00:02:13.350
+Așa că gândiți-vă ca un altul să reacționeze asupra randamentului care poate fi numit să spunem modal și prin folosirea portalului de re-act de
+
+00:02:13.380 --> 00:02:19.720
+creație putem transfera de fapt propurile între ele, ceea ce este foarte cool.
+
+00:02:19.740 --> 00:02:22.080
+E un fel de portal.
+
+00:02:22.170 --> 00:02:24.050
+De aceea se numește Portal.
+
+00:02:24.060 --> 00:02:31.650
+Deci, ceea ce vrem să facem este să creăm un alt element HMO pe care l-am combinat cu componenta modală.
+
+00:02:31.860 --> 00:02:32.610
+Hai să ajungem la asta.
+
+00:02:33.900 --> 00:02:42.870
+Primul lucru pe care îl voi face este să mă întorc la dosarul meu public unde indexul meu a primit un fișier și dacă scot
+
+00:02:42.870 --> 00:02:46.090
+jos aici vedem că avem diviziuni de rădăcină.
+
+00:02:46.110 --> 00:02:53.030
+Acolo este cazul în care re-actul este obligatoriu și face totul, dar aici jos
+
+00:02:54.130 --> 00:03:03.110
+Vreau să creez un portal modal și pot spune Div ID și vom numi ceea ce vrem să spunem modal.
+
+00:03:03.240 --> 00:03:09.000
+Și din nou îmi place această demonstrație, deoarece arată cum funcționează re-actul și cum
+
+00:03:09.000 --> 00:03:10.890
+puteți extinde funcționalitatea reactării.
+
+00:03:10.900 --> 00:03:17.950
+Deci, acum am creat un alt lucru pe care îl putem lega mortalului nostru și prin utilizarea portalului de creație putem să ne
+
+00:03:17.950 --> 00:03:23.740
+asigurăm că tot ce se află în aplicația de recuzită trece la ceea ce se întâmplă și pe traseul
+
+00:03:23.860 --> 00:03:24.580
+cu carosabil.
+
+00:03:24.640 --> 00:03:29.040
+Să spunem asta și să ne întoarcem la apt.
+
+00:03:30.710 --> 00:03:31.700
+Acum în app.
+
+00:03:31.730 --> 00:03:38.140
+Da, sa spunem ca vom importa o alta componenta pe care nu am creat-o inca, insa vom incepe in curand.
+
+00:03:38.420 --> 00:03:47.210
+Și aceasta va fi componenta modală și o vom importa din folderul componentelor și va
+
+00:03:48.080 --> 00:03:54.330
+fi numită motilă sau să creăm un dosar modal.
+
+00:03:56.610 --> 00:04:02.450
+Și am un pic de eroare, pentru că nu am creat încă componentele modale.
+
+00:04:02.460 --> 00:04:02.750
+In regula.
+
+00:04:02.790 --> 00:04:03.760
+Hai să facem asta.
+
+00:04:03.810 --> 00:04:08.920
+Vreau să intru în componente a crea un nou dosar îl vom numi motil.
+
+00:04:09.480 --> 00:04:16.880
+Și în folderul modal știu că avem un pic repetitiv aici, dar asta e bine pentru moment.
+
+00:04:16.890 --> 00:04:18.270
+Modal dodgiest Și
+
+00:04:20.880 --> 00:04:23.720
+să începem să construim această componentă modală.

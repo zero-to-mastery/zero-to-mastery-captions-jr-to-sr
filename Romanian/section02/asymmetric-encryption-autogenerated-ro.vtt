@@ -1,0 +1,256 @@
+﻿WEBVTT
+
+00:00:01.710 --> 00:00:08.190
+Bine ai revenit. Acum când am discutat despre modul în care avem nevoie
+
+00:00:08.940 --> 00:00:14.930
+de un algoritm de schimbare a cheilor, acest algoritm de schimbare a cheilor are nevoie de ceva numit criptare asimetrică.
+
+00:00:14.970 --> 00:00:18.110
+Știu că e mult de luat, dar rămâi cu mine.
+
+00:00:18.180 --> 00:00:21.550
+Sperăm că acest desen mic vă va ajuta.
+
+00:00:21.580 --> 00:00:30.030
+Acum, spre deosebire de criptarea simetrică, o criptare asimetrică utilizează două chei separate pentru criptare
+
+00:00:30.030 --> 00:00:31.780
+și decriptare.
+
+00:00:31.800 --> 00:00:37.020
+Deci, aceste chei roșii sunt deținute de acest laptop albastru.
+
+00:00:37.170 --> 00:00:41.360
+Și aceste chei albastre sunt deținute de acest computer.
+
+00:00:41.400 --> 00:00:53.280
+Acum, aceste două chei sunt cunoscute sub denumirea de chei publice și chei private și împreună aceste chei formează o pereche de chei publice
+
+00:00:53.340 --> 00:00:54.050
+private.
+
+00:00:54.330 --> 00:01:02.400
+Și după cum sugerează și numele, acestea sunt publice, așa că pot împărți cheia asta roșie cu oricine vreau în lume.
+
+00:01:02.520 --> 00:01:04.260
+Poate fi în aer liber.
+
+00:01:04.260 --> 00:01:05.310
+Nu este o mare problemă.
+
+00:01:05.310 --> 00:01:06.670
+Și la fel cu acest albastru.
+
+00:01:06.840 --> 00:01:10.630
+Dar aceștia, care sunt privați, care sunt un fel de umbre, acestea
+
+00:01:10.800 --> 00:01:15.150
+sunt secretele tale absolut pe care nu ar trebui să le împărtășești niciodată cu nimeni.
+
+00:01:16.850 --> 00:01:23.660
+Acum, aceste chei publice sunt legate de cheia privată în termeni de funcționalitate.
+
+00:01:23.660 --> 00:01:26.540
+Puteți vedea că ambele sunt roșii, ambele sunt albastre aici.
+
+00:01:28.120 --> 00:01:35.820
+Cheia privată nu poate fi calculată matematic din cheia publică.
+
+00:01:35.850 --> 00:01:37.200
+Deci, ce înseamnă asta?
+
+00:01:37.200 --> 00:01:47.260
+Relațiile sunt puțin complexe, dar un mesaj închis este criptat prin cheia publică a mașinilor, care poate
+
+00:01:47.260 --> 00:01:52.680
+fi decriptată numai de aceeași cheie privată a mașinilor.
+
+00:01:52.760 --> 00:01:57.000
+Și ceea ce noi numim o relație într-o singură direcție.
+
+00:01:57.070 --> 00:01:58.570
+Așadar, permiteți-mi să vă arăt cum funcționează.
+
+00:01:58.720 --> 00:02:07.060
+Dacă îmi trimit cheia publică la computerul prietenului meu și să spunem că și prietenul își trimite cheia
+
+00:02:07.690 --> 00:02:17.400
+publică la computer dacă vreau să trimit un mesaj, pot să-i spun salut trimite-l prin criptarea cu cheia albastră cheia
+
+00:02:17.400 --> 00:02:23.250
+publică a lui să se amestece și să se cripteze așa.
+
+00:02:23.370 --> 00:02:34.740
+Iar când îl trimit la el, acum poate să-și folosească cheia privată, pentru că acest text a fost criptat de
+
+00:02:34.740 --> 00:02:36.100
+către public.
+
+00:02:36.150 --> 00:02:38.320
+Deci, cheia privată o poate decripta.
+
+00:02:39.110 --> 00:02:40.360
+Fă-i magia.
+
+00:02:40.670 --> 00:02:43.470
+Și apoi, în sfârșit, trimiteți mesajul.
+
+00:02:43.590 --> 00:02:54.000
+Bună ziua, vedeți acum cum putem trimite cheile publice altor persoane și oamenii răi pot lua cheia publică.
+
+00:02:54.070 --> 00:03:01.390
+Dar pentru că este o relație într-o singură direcție, această cheie publică nu poate decripta propriul mesaj și nici nu
+
+00:03:01.480 --> 00:03:04.600
+poate decripta nimic criptat de o cheie privată.
+
+00:03:04.600 --> 00:03:12.310
+Poate numai să cripteze ceva și poate fi decriptată numai prin cheia privată asociată.
+
+00:03:12.310 --> 00:03:15.360
+Acest lucru nu este niciodată împărțit niciodată cu nimeni.
+
+00:03:16.850 --> 00:03:22.430
+Acum, puterea întregii legături constă în faptul că cheia privată nu este niciodată ușurată.
+
+00:03:23.160 --> 00:03:23.610
+In regula.
+
+00:03:23.630 --> 00:03:26.110
+Minunat. Deci asta are sens?
+
+00:03:26.110 --> 00:03:33.750
+Un pic mai complicat decât criptarea simetrică, dar cred că ajungem acum dacă ne întoarcem la locul
+
+00:03:33.750 --> 00:03:43.300
+în care am început cei mai mulți oameni cred că SSH folosește în întregime criptarea asimetrică și asta nu este în întregime
+
+00:03:43.330 --> 00:03:44.230
+adevărat.
+
+00:03:44.260 --> 00:03:52.630
+Este această formă de criptare cu SSH este de fapt folosită numai în timpul algoritmului de schimb al cheilor de
+
+00:03:52.660 --> 00:03:53.890
+criptare simetrică.
+
+00:03:53.890 --> 00:03:55.020
+Îți amintești bine.
+
+00:03:55.030 --> 00:04:01.930
+Avem nevoie de un fel de criptare simetrică pentru a genera acea cheie galbenă fără a intra în public.
+
+00:04:01.930 --> 00:04:09.580
+Ceea ce se întâmplă ca un înțelept este că înainte de a iniția o conexiune sigură, ambele părți generează
+
+00:04:09.640 --> 00:04:13.700
+chei publice și private temporare și împărtășesc cheile lor respective.
+
+00:04:14.560 --> 00:04:15.670
+Unul celuilalt.
+
+00:04:16.000 --> 00:04:24.490
+Și în acest moment suntem capabili să obținem aceste chei galbene cheia simetrică, astfel încât să putem schimba
+
+00:04:25.330 --> 00:04:30.240
+mesaje metodice utilizând ceva numit schimbul de chei Diffie Hellman.
+
+00:04:30.460 --> 00:04:36.190
+Și voi lega la unele resurse pe care le puteți folosi deoarece este puțin complex din
+
+00:04:37.120 --> 00:04:45.640
+punct de vedere matematic, dar ceea ce face în realitate este faptul că utilizează un pic de această informație un pic de această informație
+
+00:04:45.640 --> 00:04:49.980
+un pic de chei publice pentru a genera schimbând vreodată cheile.
+
+00:04:50.050 --> 00:04:59.750
+Fiecare mașină de pe computerul său poate genera această cheie simetrică din datele de la fiecare calculator.
+
+00:04:59.780 --> 00:05:06.770
+Și din nou, acest algoritm Diffie Helman sau algoritmul cheie de schimbare a cheilor face posibil ca fiecare parte
+
+00:05:06.770 --> 00:05:12.560
+să combine propriile date private cu datele publice provenite de la alte sisteme pentru a ajunge
+
+00:05:12.560 --> 00:05:14.880
+într-o cheie de sesiune secretă identică.
+
+00:05:14.990 --> 00:05:18.000
+Știu că este o gură și știu că este derutantă.
+
+00:05:18.050 --> 00:05:22.260
+După cum am spus, verificați resursele după acest videoclip, dacă doriți să aflați mai multe despre acesta.
+
+00:05:23.730 --> 00:05:31.330
+Dar, până acum, ar trebui să știm cum putem genera o cheie simetrică folosind criptarea asimetrică folosind
+
+00:05:31.330 --> 00:05:33.700
+schimbul de chei Diffie Hellman.
+
+00:05:33.810 --> 00:05:41.040
+Și în acest fel această cheie galbenă va rămâne privată pentru noi și nu va atinge niciodată publicul
+
+00:05:41.610 --> 00:05:42.460
+apropo.
+
+00:05:43.190 --> 00:05:44.160
+S-ar putea să te gândești.
+
+00:05:44.180 --> 00:05:44.630
+In regula.
+
+00:05:44.630 --> 00:05:46.480
+Vorbește destul despre S-sh.
+
+00:05:46.550 --> 00:05:48.020
+Asta devine plictisitorul lui Andre.
+
+00:05:48.030 --> 00:05:49.850
+Chiar am început cursul.
+
+00:05:50.390 --> 00:05:53.260
+Credeți-mă că acest tip de criptare este peste tot.
+
+00:05:53.270 --> 00:05:58.660
+Probabil că îl folosiți chiar acum pentru a viziona acest videoclip utilizând schimbul de chei Diffie Hellman.
+
+00:05:58.820 --> 00:06:04.690
+Și când utilizați telefonul pentru a face ceva în cazul în care se conectează la un server, acesta utilizează schimbul
+
+00:06:04.700 --> 00:06:06.040
+de taste Diffie Hellman.
+
+00:06:06.210 --> 00:06:08.550
+Și ar trebui să știm cum funcționează aceste lucruri.
+
+00:06:08.550 --> 00:06:09.140
+Dreapta.
+
+00:06:09.150 --> 00:06:16.670
+Ca dezvoltator trebuie să înțelegem cum funcționează lucrurile nu doar la nivelul suprafeței.
+
+00:06:16.880 --> 00:06:18.850
+S-ar putea să observați cum este un lucru amuzant.
+
+00:06:19.040 --> 00:06:25.460
+Schimbul cheilor de nume este acela că nu schimbăm de fapt o cheie deoarece ar fi în public și nu
+
+00:06:25.460 --> 00:06:26.190
+vrem asta.
+
+00:06:26.210 --> 00:06:32.630
+De fapt, împărțim doar o bucată de factură publică, cum ar fi cheile publice de la
+
+00:06:32.630 --> 00:06:36.920
+fiecare calculator, și generăm separat cheia în spațiul nostru privat.
+
+00:06:38.360 --> 00:06:42.590
+Bine, să luăm puțină pauză și vă voi vedea în următorul videoclip pentru că știu că a
+
+00:06:42.590 --> 00:06:43.910
+fost o mulțime de informații.
+
+00:06:44.030 --> 00:06:45.370
+O să văd asta la revedere.

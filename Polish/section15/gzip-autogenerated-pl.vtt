@@ -1,0 +1,181 @@
+﻿WEBVTT
+
+00:00:01.130 --> 00:00:07.090
+Witamy ponownie w tym filmie, będziemy mówić o Jezusie i Jezusie.
+
+00:00:07.270 --> 00:00:11.770
+Poza optymalizacją obrazów, o których już rozmawialiśmy.
+
+00:00:12.000 --> 00:00:16.370
+Zipping jest prawdopodobnie największym i najlepszym sposobem optymalizacji wydajności.
+
+00:00:16.600 --> 00:00:20.670
+Szczęśliwie dla nas jest to naprawdę proste do wdrożenia.
+
+00:00:21.540 --> 00:00:30.470
+Domyślnie, gdy kompresujesz plik lub folder za pomocą polecenia zip, będzie on miał taką
+
+00:00:30.470 --> 00:00:39.500
+samą nazwę pliku jak wcześniej, ale teraz będzie miał rozszerzenie GZ, a także pliki będą znacznie
+
+00:00:39.800 --> 00:00:40.470
+mniejsze.
+
+00:00:41.830 --> 00:00:44.450
+Po prostu zmniejszamy te pliki.
+
+00:00:44.740 --> 00:00:50.520
+Coś, co doskonale zdajemy sobie sprawę z tego, jak wpływa to na wydajność.
+
+00:00:50.530 --> 00:00:53.720
+Skąd mamy tego Jezusa?
+
+00:00:54.030 --> 00:00:58.950
+Brzmi niezwykle użytecznie i jest bardzo łatwy w implementacji.
+
+00:00:59.040 --> 00:01:06.290
+Na przykład w aplikacji ekspresowej na serwerze ekspresowym wszystko, co musisz zrobić, to zażądać pakietu NPM
+
+00:01:06.860 --> 00:01:13.870
+kompresji, który ma zainstalować kompresję, a następnie użyć go jako aplikacji warstwy pośredniej do kompresji.
+
+00:01:14.300 --> 00:01:21.590
+I właśnie przez to, że cała twoja treść, którą wysłałeś do klienta, będzie JE's to w porządku.
+
+00:01:21.600 --> 00:01:24.110
+Jak to przetestujemy?
+
+00:01:25.610 --> 00:01:33.160
+Domyślnie wszystkie nowoczesne przeglądarki zezwalają na GCP i sprawdzają, w jaki sposób strony automatycznie wykonują to zadanie.
+
+00:01:33.330 --> 00:01:42.010
+Jeśli przejdziemy do naszej aplikacji Robo Friends i otworzę aplikację sieciową tutaj, jeśli odświeżę swoją
+
+00:01:42.010 --> 00:01:50.180
+stronę, dostanę mnóstwo żądań, jeśli kliknę pierwszy dokument i przewińę do nagłówków odpowiedzi.
+
+00:01:50.200 --> 00:01:58.460
+Widzę, że dekodowanie treści to Jezus, jeśli ciągle przewijam do pliku CSSA Widzę, że kodowanie
+
+00:01:58.510 --> 00:02:09.460
+treści to Jezus, jeśli zrobię javascript upadnie znowu to jest Cheez-It, a to się dzieje automatycznie, zobaczymy, że to również
+
+00:02:09.460 --> 00:02:15.280
+służy z naszego pracownika serwisowego, jeśli wykonuję intensywne odświeżanie.
+
+00:02:15.640 --> 00:02:19.930
+Widzimy, że nasze rozmiary plików są znowu niewielkie.
+
+00:02:19.930 --> 00:02:27.610
+I to wszystko dlatego, że gdyby nie było Jees, będzie to znacznie większe w przypadku większości odwiedzanych
+
+00:02:27.610 --> 00:02:33.700
+witryn sieci Web, jeśli przejdzie on tutaj i spojrzysz na nagłówki ich plików.
+
+00:02:33.870 --> 00:02:41.300
+Większość z nich to JE, a jak widzieliśmy w Express wszystko, co trzeba zrobić, to uruchomić oprogramowanie pośrednie
+
+00:02:42.240 --> 00:02:46.650
+NPM kompresji i można prawie wszystko, co wysyłasz do klienta.
+
+00:02:46.650 --> 00:02:53.220
+Na przykład tutaj jest lista typów plików, które pozwalają dostać się do Jezusa, co możesz zrobić Jason.
+
+00:02:53.400 --> 00:03:02.450
+Możesz zrobić nam CSA w shemale i wiele innych typów, które prawie musisz kupować, a jeśli nie, to
+
+00:03:02.450 --> 00:03:07.090
+musisz zadać sobie pytanie, dlaczego tak nie jest.
+
+00:03:07.100 --> 00:03:09.960
+Istnieje bardzo niewiele powodów, aby tego nie używać.
+
+00:03:11.030 --> 00:03:17.270
+Teraz zastanawiasz się również nad sobą. Jeśli nie mam serwera Express, to co mam,
+
+00:03:17.270 --> 00:03:23.960
+mam coś w rodzaju skatera, który hostuje moją witrynę lub niebieskiego hosta, a większość z tych
+
+00:03:24.050 --> 00:03:32.300
+witryn używa czegoś o nazwie Engine X lub Apache. serwer internetowy i te, które można uznać za prostsze serwery ekspresowe,
+
+00:03:32.540 --> 00:03:39.080
+które są naprawdę dobre w wysyłaniu plików CSSA plików CSSA plików shemale i nie trzeba
+
+00:03:39.080 --> 00:03:44.670
+konfigurować niczego niebieskiego hosta i hosta z charterem robi to za Ciebie.
+
+00:03:44.670 --> 00:03:50.540
+I zwykle mają coś takiego jak plik konfiguracyjny i jest to przykład pliku konfiguracyjnego silnika
+
+00:03:50.660 --> 00:03:51.900
+X ..
+
+00:03:52.070 --> 00:04:01.460
+Wszystko, co musimy zrobić, to powiedzieć, że w gee zip i masz gs, który jest automatycznie włączony w większości miejsc, ponieważ
+
+00:04:01.650 --> 00:04:03.920
+jest tak ważny dla wydajności.
+
+00:04:04.020 --> 00:04:06.090
+Włącz to domyślnie.
+
+00:04:06.290 --> 00:04:10.400
+Ale jak widzisz, bardzo łatwo jest sprawdzić, czy go używasz.
+
+00:04:10.520 --> 00:04:15.440
+Wystarczy przejść do karty sieci i sprawdzić, jakie ma kodowanie.
+
+00:04:17.190 --> 00:04:19.230
+Teraz tylko szybkie heads up.
+
+00:04:19.260 --> 00:04:27.190
+Jest jedna rzecz, która została stworzona przez Google, która jest w rzeczywistości trochę lepsza niż u Jeesa
+
+00:04:27.220 --> 00:04:37.020
+i nazywa się Broadley i faktycznie w większości przypadków ma o 20 procent lepszą kompresję niż GS i witryny zaczynają z
+
+00:04:37.230 --> 00:04:39.700
+niego korzystać i coraz więcej.
+
+00:04:39.810 --> 00:04:46.970
+W tej chwili adopcja nie jest jeszcze w 100 procentach, a niektóre przeglądarki wciąż
+
+00:04:46.980 --> 00:04:48.530
+wdrażają szeroko kodowanie.
+
+00:04:48.780 --> 00:04:55.410
+Ale jeśli przejdziesz do stron takich jak Product Hunt i powiedzmy, że odświeżam stronę tutaj, jeśli przejdę na samą górę do dokumentu i
+
+00:04:55.410 --> 00:05:03.330
+przejdę do dekodowania treści, widzę, że używają B. R. co jest skrótem od
+
+00:05:03.360 --> 00:05:04.770
+Broadley.
+
+00:05:04.880 --> 00:05:06.010
+Więc miej oko.
+
+00:05:06.050 --> 00:05:12.950
+Ogólnie rzecz biorąc, najprawdopodobniej prześcignie on Jezusa i stanie się dominującym algorytmem kompresji, który będzie używany
+
+00:05:12.950 --> 00:05:14.720
+na stronach internetowych.
+
+00:05:14.780 --> 00:05:19.120
+Ale tak czy inaczej te dwa narzędzia po prostu absolutnie poprawiają wydajność.
+
+00:05:19.130 --> 00:05:21.170
+Nie ma powodu, aby ich nie używać.
+
+00:05:21.470 --> 00:05:24.260
+I jak widzieliście, są niezwykle łatwe w użyciu.
+
+00:05:25.400 --> 00:05:27.200
+Ale to tyle na teraz.
+
+00:05:27.200 --> 00:05:28.450
+Zobaczę w następnym.
+
+00:05:28.810 --> 00:05:29.190
+Lecz przez.

@@ -1,0 +1,730 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:02.480
+Bine ai revenit.
+
+00:00:02.480 --> 00:00:08.280
+Să vedem o nouă secțiune a starului nostru de securitate.
+
+00:00:08.290 --> 00:00:16.720
+Vom vorbi despre scriptarea între site-uri și despre falsificarea cererilor între site-uri și sunt cam similare.
+
+00:00:16.720 --> 00:00:20.790
+Au ceva suprapuneri, așa că vom vorbi despre ei împreună.
+
+00:00:20.800 --> 00:00:25.730
+De asemenea, veți începe să observați că multe dintre acestea se suprapun, de asemenea.
+
+00:00:25.810 --> 00:00:32.620
+Unele dintre cele mai bune practici de aici vor afecta și alte părți ale stelei.
+
+00:00:32.640 --> 00:00:36.310
+Deci, ce este mai întâi scriptingul între site-uri.
+
+00:00:36.450 --> 00:00:44.280
+Scrierea script-urilor încrucișată apare ori de câte ori o aplicație include date nesigure în altă
+
+00:00:44.430 --> 00:00:53.850
+pagină web fără validarea corectă sau evadarea sau actualizarea unei pagini web cu date furnizate de utilizator folosind script-ul
+
+00:00:53.850 --> 00:00:59.680
+javascript cross-site permite unui atacator să execute scripturi în browser-ul victimei.
+
+00:01:01.110 --> 00:01:04.130
+Și poți face multe lucruri rele făcând asta.
+
+00:01:04.140 --> 00:01:06.130
+Să folosim aici un exemplu practic.
+
+00:01:06.900 --> 00:01:15.450
+Imaginați-vă că locul de joacă de securitate a fost un post pe blog și acest post pe blog a fost permis pentru comentarii și utilizatorii pot
+
+00:01:15.450 --> 00:01:15.960
+comenta.
+
+00:01:15.960 --> 00:01:17.400
+Utilizatorii pot comenta.
+
+00:01:17.670 --> 00:01:26.610
+Acum, o persoană rea poate veni și știi că încearcă să execute scripturi așa cum am încercat și că nu va funcționa și am văzut
+
+00:01:26.610 --> 00:01:30.680
+acest lucru înainte de unde putem încerca să inserăm scripturi aici.
+
+00:01:31.110 --> 00:01:38.320
+Ei bine, acesta a fost un post pe blog și am făcut exemplul nostru vechi așa ceva.
+
+00:01:38.360 --> 00:01:45.080
+Amintiți-vă sursa de imagine care va fi în aer și va alerta un analist să vă asigurați
+
+00:01:45.080 --> 00:01:52.270
+că închidem fila click submit și că am rulat javascript în browserul nostru, dar asta nu prea înseamnă prea mult.
+
+00:01:52.280 --> 00:02:01.220
+Cu toate acestea, dacă aceasta a fost o postare pe blog cu comentarii, prin trimiterea acestui comentariu, alte persoane care văd
+
+00:02:01.220 --> 00:02:09.140
+acest browser pot merge acum la această postare pe blog și pentru că am introdus acest comentariu, se va
+
+00:02:09.410 --> 00:02:17.180
+executa, de asemenea, în browser-ul lor, iar DOM va încerca și actualizați și executați această funcție de alertă
+
+00:02:17.180 --> 00:02:19.400
+în browser-ul unui utilizator.
+
+00:02:19.560 --> 00:02:23.480
+Si asta inseamna scriptum Cross site.
+
+00:02:23.660 --> 00:02:34.670
+Pot rula site-urile cu coduri încrucișate în două site-uri diferite de pe browserul meu și ceea ce ar face cel mai rău actori este
+
+00:02:34.880 --> 00:02:37.070
+utilizarea unei linii ca
+
+00:02:39.690 --> 00:02:48.150
+această locație a punctului ferestrei, egală cu un site web pe care l-am creat, un site web foarte rău.
+
+00:02:48.490 --> 00:02:52.600
+Și voi trimite ceva numit cookie document punct.
+
+00:02:52.600 --> 00:02:54.330
+În regulă, deci să despachetați asta.
+
+00:02:54.340 --> 00:03:00.470
+Am de gata sa scoate asta pentru moment si sa faca locatia ferestrei si ma arata exact unde
+
+00:03:00.470 --> 00:03:01.900
+este u r l.
+
+00:03:02.020 --> 00:03:10.810
+Dacă mă duc la un site Web ca Twitter și fac același lucru sau ar face locația ferestrei
+
+00:03:11.190 --> 00:03:19.710
+Daut primesc rolul de Twitter și pot schimba de fapt acest lucru și să trimit oameni la diferite
+
+00:03:20.010 --> 00:03:24.900
+site-uri Web doar spunând că locația ferestrei este egală.
+
+00:03:24.930 --> 00:03:33.860
+Deci, prima parte a scenariului spune că mergeți la acest nou site web pe care îl dețin, că este un site web rău
+
+00:03:34.500 --> 00:03:36.990
+și apoi vreau să-mi trimiți datele.
+
+00:03:37.020 --> 00:03:38.140
+Acestea sunt cookie-urile.
+
+00:03:38.190 --> 00:03:41.090
+Ce este cookie-ul pentru documente.
+
+00:03:41.580 --> 00:03:45.720
+Și acesta este ceva despre care vom vorbi de fapt în sesiunile JWT.
+
+00:03:45.990 --> 00:03:53.400
+Dar un cookie este o modalitate pentru noi când ne conectăm la ceva să folosim Twitter ca exemplu.
+
+00:03:53.400 --> 00:03:59.270
+Când mă loghez aici, Twitter își amintește acum că sunt logat.
+
+00:03:59.270 --> 00:04:04.340
+Dacă actualizăm această pagină, nu trebuie să mă înregistrez din nou.
+
+00:04:04.640 --> 00:04:09.360
+Am o sesiune cu Twitter și o mulțime de site-uri Web.
+
+00:04:09.590 --> 00:04:16.760
+De fapt, majoritatea dintre ele vă vor permite să vă conectați cu ceea ce numim un cookie o piesă
+
+00:04:17.450 --> 00:04:23.910
+aleatorie de text pe care o primesc și acea bucată de text va fi atașată browserului meu.
+
+00:04:24.080 --> 00:04:29.260
+Deci de fiecare dată când merg la Twitter. com acum și am acea bucată de text pe care serverul de pe
+
+00:04:29.260 --> 00:04:31.450
+Twitter o să spună oh, da, asta e Ondrea Yeah.
+
+00:04:31.520 --> 00:04:40.100
+Îl poți lăsa să intre și cum am spus că vom vorbi mai multe despre acest lucru în detaliu în W. T. și secțiunea sesiuni.
+
+00:04:40.170 --> 00:04:42.730
+Deci, să nu vă agățați prea mult de asta.
+
+00:04:43.490 --> 00:04:49.820
+Dar ideea din spatele ei este că dacă o bucată de text este singurul lucru care este Permiteți-mi să
+
+00:04:50.090 --> 00:04:58.450
+introduc Twitter, dar pot încă să pot copia și lipi acel cookie deschizând un alt browser care îl tipă și să te conectez la
+
+00:04:58.450 --> 00:04:58.910
+Twitter
+
+00:05:01.650 --> 00:05:07.110
+pentru a mă putea loga pe Twitter fără a ști numele de utilizator sau parola.
+
+00:05:07.110 --> 00:05:08.350
+Lucruri destul de înfricoșătoare.
+
+00:05:08.700 --> 00:05:15.770
+Deci, dacă ne întoarcem la acest exemplu, tot ce spun eu este că vreau să schimbați locația celulei mele.
+
+00:05:15.810 --> 00:05:21.350
+Deci, du-te la acest site web și am de gând, de asemenea, să trimită la site-ul meu Web.
+
+00:05:21.600 --> 00:05:29.160
+Această informație cookie-ul dvs., astfel încât să pot avea un server care doar log-out cookie-urile oamenilor și acum
+
+00:05:30.310 --> 00:05:38.020
+am informațiile dvs., dacă știam că ați comentat pe Twitter, de exemplu, atunci am putea fura informația cookie-uri
+
+00:05:38.020 --> 00:05:45.010
+și să semneze un și script-ul cross-site-ul este exact că este folosit pentru deturnarea sesiunii.
+
+00:05:45.050 --> 00:05:48.940
+De aceea o numim deja știți cum să preveniți acest lucru.
+
+00:05:48.960 --> 00:05:50.600
+Am dezinfectat intrările.
+
+00:05:50.670 --> 00:05:57.350
+Vă asigurăm că nu puteți introduce doar ceea ce doriți în site-urile noastre și puneți-le.
+
+00:05:57.400 --> 00:05:57.750
+Dreapta.
+
+00:05:57.760 --> 00:06:00.580
+Asta e destul de frumos și ușor.
+
+00:06:00.590 --> 00:06:02.070
+Să vorbim despre următorul punct.
+
+00:06:03.650 --> 00:06:11.440
+Câmpul C S R F sau C pentru scurtă durată este o falsificare a cererii transfrontaliere.
+
+00:06:11.450 --> 00:06:14.750
+Știu că numele sunt destul de confuze. Nu-ți face griji.
+
+00:06:14.750 --> 00:06:19.130
+Takeaway-ul principal din acest videoclip va fi la sfârșitul Cum se poate preveni acest lucru.
+
+00:06:19.220 --> 00:06:21.630
+Deci, te poți întoarce oricând, dacă ești confuz.
+
+00:06:21.650 --> 00:06:25.420
+Ele sunt puțin avansate și nu trebuie să le cunoașteți pe deplin.
+
+00:06:25.430 --> 00:06:29.870
+Cum am spus că vrei doar să știi cum să le împiedici și nu-ți face griji că am un diapozitiv doar pentru asta.
+
+00:06:31.510 --> 00:06:34.570
+Deci avem o problemă.
+
+00:06:34.780 --> 00:06:36.020
+Avem clientul nostru.
+
+00:06:36.190 --> 00:06:39.870
+Și, din fericire pentru noi, știm să folosim o foaie când comunicăm.
+
+00:06:39.970 --> 00:06:45.370
+Deci avem un tunel mic care ne protejează datele de la terțe părți și de oamenii care încearcă să
+
+00:06:45.370 --> 00:06:46.100
+ne spioneze.
+
+00:06:46.150 --> 00:06:53.290
+Un client face o cerere către un server care poate primi profilul utilizatorului din baza de date și îl returnează clientului,
+
+00:06:53.290 --> 00:06:55.370
+astfel încât să ne putem conecta.
+
+00:06:55.720 --> 00:06:58.480
+Apoi, uneori, vorbiți și cu API terță parte.
+
+00:06:58.510 --> 00:07:07.500
+Poate primim informații despre vreme sau primim roboții noștri de la un API terț și facem această solicitare printr-un
+
+00:07:07.590 --> 00:07:08.540
+studio.
+
+00:07:09.000 --> 00:07:10.930
+Deci toți suntem în siguranță.
+
+00:07:12.260 --> 00:07:20.360
+Așa cum am văzut în cazul cererilor de tip cross-site, în cazul în care serverul și partea terță are încredere
+
+00:07:20.720 --> 00:07:30.660
+în client, atunci putem folosi acest modul cookie pentru a vă conecta la server și la baza de date și a obține sesiunea utilizatorului respectiv.
+
+00:07:30.680 --> 00:07:38.060
+Deci, asta nu e singurul lucru pe care trebuie să-l facem în cazul Sisera sau a cererilor de tip cross-site.
+
+00:07:38.060 --> 00:07:44.160
+Noi, ca o persoană proastă, creați un rău pe care îl aveți în Arel, care are un cod rău intenționat în el.
+
+00:07:45.140 --> 00:07:50.300
+Deci, cel mai probabil veți vedea acest lucru în ceva de genul e-mail-uri înșelătoare în cazul în care vă fac clic
+
+00:07:50.300 --> 00:07:51.270
+pe un link.
+
+00:07:51.440 --> 00:07:54.880
+De exemplu, vor avea ceva de genul asta.
+
+00:07:54.920 --> 00:07:59.720
+Să clarificăm această listă la o nouă piesă de text.
+
+00:07:59.930 --> 00:08:07.550
+Deci, acest lucru ar putea fi într-un e-mail doar acest text sau poate pe un site web care arata ca Google dot com, dar
+
+00:08:07.550 --> 00:08:14.850
+are de fapt un L suplimentar și are un API în care poți să te autentifici sau să citești mai mult și
+
+00:08:14.870 --> 00:08:16.880
+te conduce la asta site-ul web.
+
+00:08:17.300 --> 00:08:21.330
+Și auzind ce fac, ei folosesc și parametrii de interogare.
+
+00:08:21.410 --> 00:08:28.790
+Și acesta este doar un exemplu spunând că vreau contul atacatorului și trimit suma de o sută de
+
+00:08:28.790 --> 00:08:30.580
+dolari în acel cont.
+
+00:08:30.740 --> 00:08:35.960
+Și acesta este un exemplu de atac de surf care utilizează DP.
+
+00:08:35.990 --> 00:08:41.220
+Facem un parametru de interogare.
+
+00:08:41.380 --> 00:08:49.600
+Dacă o victimă vizitează controlul unei pagini web de către un atacator și atacul sau victima sunt deja conectate, să le spunem băncii
+
+00:08:49.600 --> 00:08:56.710
+lor deoarece au setat deja aceste cookie-uri, iar serverul crede că sunt deja conectați și acest lucru este legitim
+
+00:08:56.710 --> 00:09:02.060
+pentru că tocmai l-am făcut pe acea persoană să facă clic pe acel link.
+
+00:09:02.080 --> 00:09:05.290
+Deci, aceștia sunt în același browser cu care sunt conectați.
+
+00:09:05.290 --> 00:09:17.670
+Ei bine, tocmai am făcut pe utilizator că victima să facă clic pe un link care mi-a trimis bani și asta nu este doar pentru că au făcut Garey
+
+00:09:17.680 --> 00:09:18.570
+cu asta.
+
+00:09:18.590 --> 00:09:23.270
+Puteți, de asemenea, o face cu cererile de post folosind I-cadru și care devine destul de complicat.
+
+00:09:23.280 --> 00:09:25.910
+Și în afara scopului acestui curs.
+
+00:09:26.300 --> 00:09:28.100
+Deci este destul de groaznic.
+
+00:09:28.100 --> 00:09:31.280
+Cum vom preveni ceva de genul asta.
+
+00:09:33.010 --> 00:09:35.150
+Hai să vorbim despre cum putem preveni asta.
+
+00:09:35.170 --> 00:09:37.910
+Dar înainte să fac asta, lasă-mă să fac ceva citat.
+
+00:09:38.150 --> 00:09:41.990
+Să încercăm să atacăm Twitter.
+
+00:09:42.080 --> 00:09:48.590
+Să scriem această piesă de cod o solicitare de caracteristică pe acest site Web care de fapt mi-a permis să vă arăt
+
+00:09:48.590 --> 00:09:49.510
+ce face.
+
+00:09:55.660 --> 00:09:58.900
+Este un serviciu de solicitare și răspuns pentru ACB.
+
+00:09:58.900 --> 00:10:04.320
+În mod esențial, trimitem pe acest site orice răspuns obținut.
+
+00:10:04.360 --> 00:10:05.100
+Sau unde suntem noi.
+
+00:10:05.200 --> 00:10:08.940
+Indiferent de răspunsul pe care îl primim și îl putem urmări.
+
+00:10:08.950 --> 00:10:18.250
+Deci, hai să încercăm să facem o cerere de post și în această cerere de post trimite acest site de pe Twitter.
+
+00:10:18.320 --> 00:10:28.570
+Mike cookie mea de a fi conectat la Twitter, dacă apăs pe Enter Whew Am unele erori am refuzat să se
+
+00:10:28.570 --> 00:10:34.700
+conecteze la acest lucru, deoarece încalcă următoarea politică de securitate a conținutului.
+
+00:10:36.470 --> 00:10:38.120
+Refuză să se conecteze.
+
+00:10:38.150 --> 00:10:42.640
+Vedem că avem această politică de securitate a conținutului care mă împiedică să o fac.
+
+00:10:42.890 --> 00:10:46.550
+Și Twitter aici folosește o măsură de securitate pentru a fi ca nu nu nu.
+
+00:10:46.670 --> 00:10:53.340
+Nu vom trimite doar cookie de documente care este foarte importantă pentru un alt site web atât de ușor.
+
+00:10:53.480 --> 00:10:57.470
+Deci au o bună măsură de securitate și se pare că folosesc ceva numit politică de
+
+00:10:57.470 --> 00:10:58.300
+securitate a conținutului.
+
+00:10:58.580 --> 00:11:06.050
+Și tot ce trebuie să facem pentru a stabili acest lucru este de a avea doar în capul nostru.
+
+00:11:06.130 --> 00:11:07.200
+Ce înseamnă asta?
+
+00:11:07.320 --> 00:11:11.950
+Să vedem doar că am aplicația mea expresă aici.
+
+00:11:12.190 --> 00:11:16.300
+Și hai să mergem la metoda de obținere unde ne întoarcem doar Hello world.
+
+00:11:16.360 --> 00:11:24.490
+Dacă îți amintești dacă mă duc la localhost am lumea bună aici și aici.
+
+00:11:26.940 --> 00:11:37.400
+Să trimitem acest lucru înainte să trimitem acest lucru, suntem atât de repede și putem fi diferit dacă folosiți acum serverul expres sau orice
+
+00:11:37.400 --> 00:11:38.680
+alt server.
+
+00:11:38.690 --> 00:11:44.730
+Dar ideea este aceeași că va fi 99 la sută din cod este cam exact aceeași.
+
+00:11:44.920 --> 00:11:52.500
+Tot ce ai de gand sa faci este sa-i dai un obiect si acest obiect va avea toate antetele pe care le dorim.
+
+00:11:52.570 --> 00:11:58.360
+Să spunem că vrem să avem politică de securitate a conținutului și vom
+
+00:12:02.330 --> 00:12:11.900
+spune acestui site Web că singurele locuri pe care le dorim să le execute javascript și să folosim citate duble
+
+00:12:12.130 --> 00:12:16.930
+aici doar pentru a putea folosi și citate unice.
+
+00:12:16.950 --> 00:12:22.620
+SCO va fi așa și va fi egoist.
+
+00:12:22.650 --> 00:12:26.650
+Deci, numele nostru de domeniu care este gazdă locală pentru acum.
+
+00:12:27.060 --> 00:12:34.690
+Și, de asemenea, să spunem că avem cu adevărat încredere în Google API, așa că hai să facem un fund de rahat.
+
+00:12:34.890 --> 00:12:42.130
+Și la API-ul Google, astfel încât Google să aibă încredere că pot face acest lucru.
+
+00:12:42.570 --> 00:12:47.490
+Ei pot rula scripturi și permiteți-mi să spun doar asta.
+
+00:12:47.900 --> 00:12:49.650
+Sintaxă perfectă pentru Hello world.
+
+00:12:49.660 --> 00:12:55.190
+Trebuie doar să adăugăm suportul de acum aici cu salvare.
+
+00:12:55.230 --> 00:12:55.670
+In regula.
+
+00:12:55.680 --> 00:12:56.850
+Acum verificați asta.
+
+00:12:56.940 --> 00:13:07.190
+Dacă mă duc la Hello World și mă reîmprospătesc sau merg la rețea atingeți și reîmprospătați dacă mergem la localhost acum vedem că avem conținut de
+
+00:13:07.190 --> 00:13:14.800
+script-ul de securitate Sursa de sine GTP API Google. com.
+
+00:13:14.840 --> 00:13:17.620
+Așa că am stabilit politica de securitate a conținutului.
+
+00:13:17.690 --> 00:13:18.420
+Asta e.
+
+00:13:18.500 --> 00:13:19.780
+Atât de simplu a fost.
+
+00:13:19.880 --> 00:13:24.090
+Și aceste anteturi arată cu adevărat copleșitoare.
+
+00:13:24.530 --> 00:13:28.550
+Și nu vă faceți griji că acestea sunt de fapt mult mai simple decât credeți voi.
+
+00:13:28.790 --> 00:13:35.000
+După cum știți cu o cerere de ovine, avem lucruri diferite pe care le putem trimite, cum ar
+
+00:13:35.240 --> 00:13:41.670
+fi parametrii corporali, și avem, de asemenea, anteturi de răspuns și vă voi arăta cum să simplificați acest lucru.
+
+00:13:41.750 --> 00:13:44.870
+Nu vei face asta manual de cele mai multe ori.
+
+00:13:44.960 --> 00:13:50.780
+Din fericire pentru tine există pachete NPM despre care vom vorbi mai târziu în videoclipurile în care acest
+
+00:13:50.780 --> 00:13:52.120
+lucru se face automat.
+
+00:13:52.430 --> 00:13:59.590
+Dar am vrut să vă arăt doar pentru a ști cum să setați anteturile și apoi în final vrem
+
+00:13:59.590 --> 00:14:07.840
+să ne asigurăm că acest cookie de document poate fi accesat atât de ușor și de modul în care nu recomand utilizarea cookie-urilor.
+
+00:14:08.070 --> 00:14:15.040
+Și este din nou un fel de dezbatere despre ce să folosească, astfel încât oamenii ar putea să mă urăști pentru a spune acest lucru, dar nu sunt
+
+00:14:15.040 --> 00:14:20.340
+un mare fan al cookie-urilor doar pentru că adaugă straturi suplimentare pe care trebuie să le faceți pentru a fi siguri.
+
+00:14:20.380 --> 00:14:27.400
+Și vă voi arăta mai târziu în cursul JWT și video despre sesiune cum putem face acest lucru
+
+00:14:27.400 --> 00:14:28.260
+în siguranță.
+
+00:14:28.360 --> 00:14:31.570
+Dar să presupunem că utilizați module cookie pe site-ul dvs. Web.
+
+00:14:31.710 --> 00:14:38.260
+Din nou, este o modalitate foarte simplă de a preveni acest lucru și de a preveni subserve.
+
+00:14:38.260 --> 00:14:40.570
+Deci, cererile de site-uri de tip cross-site.
+
+00:14:40.660 --> 00:14:46.100
+Tot ce trebuie să facem este să spunem că dorim de fapt cu Express.
+
+00:14:46.110 --> 00:14:47.850
+Putem spune doar răspunsul.
+
+00:14:47.860 --> 00:14:53.740
+Dot cookie spun un ID de sesiune.
+
+00:14:55.360 --> 00:15:01.780
+Și de modul în care acest lucru este exact modul în care un set cookie este creat de către server spunând că am verificat doar
+
+00:15:01.810 --> 00:15:03.810
+dvs. numele de utilizator și parola meci.
+
+00:15:03.880 --> 00:15:08.960
+Iată sesiunea dvs., astfel încât de acum înainte nu trebuie să verificăm parola și numele de utilizator.
+
+00:15:09.190 --> 00:15:15.110
+Atâta timp cât ne trimiteți ședința o fiecare cerere pe care o voi verifica și vă asigurați că funcționează pentru dvs.
+
+00:15:15.740 --> 00:15:23.460
+Deci, aici o să spun că și acestea sunt cele două anteturi pe care dorim să le
+
+00:15:24.240 --> 00:15:24.810
+setăm
+
+00:15:27.750 --> 00:15:29.630
+doar pentru cookie-urile GTP.
+
+00:15:29.810 --> 00:15:38.990
+Și o să stabilim asta la adevărat și sigur este, de asemenea, setat la adevărat.
+
+00:15:39.150 --> 00:15:45.920
+Dacă salvez acest drept și, de fapt, cred că îl putem pune doar unul câte unul.
+
+00:15:45.930 --> 00:15:53.620
+Deci, va trebui să închidem așa ceva și o să facem încă o dată din nou, cu siguranță,
+
+00:15:54.300 --> 00:15:54.810
+să
+
+00:15:58.900 --> 00:16:01.670
+salvăm și să ne întoarcem aici.
+
+00:16:01.730 --> 00:16:07.120
+Deschideți fila pentru reîmprospătarea.
+
+00:16:08.370 --> 00:16:09.560
+Setați cookie-ul.
+
+00:16:09.560 --> 00:16:10.190
+Uită-te la asta.
+
+00:16:10.340 --> 00:16:21.180
+Avem o foaie numai avem sigur și partea răcoroasă este dacă mergem la aplicație și cookie-urile se uită
+
+00:16:21.180 --> 00:16:25.710
+la faptul că avem cookie-urile pentru sesiune.
+
+00:16:25.760 --> 00:16:32.110
+Cred că acesta este de la un precedent, astfel încât să putem șterge acest lucru, dar dacă ne reîmprospătează avem sesiunea.
+
+00:16:32.120 --> 00:16:39.460
+Dacă închid acest lucru și reîmprospătează din nou sesiunea se întoarce din nou foarte rece.
+
+00:16:39.560 --> 00:16:41.560
+Nu te prea speriat de asta.
+
+00:16:41.570 --> 00:16:43.960
+Vom vorbi despre cookie-uri mult mai mult.
+
+00:16:43.970 --> 00:16:45.480
+Știu că poate deveni confuz.
+
+00:16:45.500 --> 00:16:53.740
+Dar toate acestea fac parte din timp ce ne putem asigura și știi ce cred că merg la un diapozitiv sau și rezumând ceea ce avem nevoie
+
+00:16:53.750 --> 00:16:59.700
+pentru a împiedica script-urile între site-uri și pentru a vedea servi ar putea fi cea mai bună idee.
+
+00:17:01.470 --> 00:17:03.050
+Deci, ce am învățat.
+
+00:17:03.300 --> 00:17:05.780
+Ei bine, deja știm acest lucru corect.
+
+00:17:05.820 --> 00:17:11.180
+Vrem să facem validarea de intrare a clientului pentru feedback rapid la utilizatori.
+
+00:17:11.190 --> 00:17:17.850
+Nu lăsați niciodată ceva de genul ăsta să funcționeze pe site-ul dvs. Web și niciodată să nu aveți încredere în faptul că întotdeauna validați și codificați datele
+
+00:17:17.850 --> 00:17:21.430
+introduse de utilizator înainte de a afișa ceva despre care am discutat foarte mult.
+
+00:17:22.050 --> 00:17:28.010
+Și prin modul în care cadrele moderne, cum ar fi vizualizarea unghiulară, reacționează, toate fac ceea ce se numește caracterele înșelătoare pentru
+
+00:17:28.020 --> 00:17:30.580
+a evita acest tip de comportament în mod implicit.
+
+00:17:31.380 --> 00:17:32.860
+Ceea ce este foarte frumos.
+
+00:17:34.020 --> 00:17:38.310
+Iar intrarea în dezintoxicare este ceva cu care suntem foarte familiarizați.
+
+00:17:38.310 --> 00:17:43.200
+De asemenea, vreau să subliniez că nu folosesc funcția eval în javascript.
+
+00:17:43.200 --> 00:17:47.920
+Da Javascript are o funcție rău și este foarte periculos.
+
+00:17:47.940 --> 00:17:48.830
+Nu o folosiți.
+
+00:17:48.930 --> 00:17:52.470
+Este foarte rar că ați fi vreodată vreodată acest lucru.
+
+00:17:52.500 --> 00:17:54.740
+Există și ceva numit punct punct.
+
+00:17:54.840 --> 00:17:55.520
+Dreapta.
+
+00:17:55.740 --> 00:17:58.920
+Deci este un fel de document interracial M ..
+
+00:17:59.190 --> 00:18:10.540
+Dar, mai rău, de exemplu, dacă mă duc aici și documentez ce document Cantab este dotat corect și facem o etichetă de script care are o
+
+00:18:13.150 --> 00:18:19.710
+alertă de una și aproape de tag-ul script-ului american rănit nu mă lasă să o
+
+00:18:24.910 --> 00:18:29.020
+fac pentru că am setat doar anteturile .
+
+00:18:29.170 --> 00:18:31.210
+Dar dacă mă duc la celălalt teren
+
+00:18:34.730 --> 00:18:37.190
+de joc de securitate că nu am făcut nimic.
+
+00:18:37.190 --> 00:18:42.230
+Să reîmprospăteazăm aici și să eliminăm asta.
+
+00:18:42.370 --> 00:18:43.200
+Uită-te la asta.
+
+00:18:43.210 --> 00:18:50.650
+Am reușit să execut doar folosind Document R8 și am reușit să introduc un script în linie.
+
+00:18:50.730 --> 00:18:57.330
+Am aflat că ar trebui să setăm antetele politicii de securitate pentru conținut și să nu vă faceți griji.
+
+00:18:57.350 --> 00:19:03.840
+Acesta este un lucru pe care vă voi arăta un instrument care face foarte ușor și setul de anteturi video.
+
+00:19:04.100 --> 00:19:10.440
+Și, în final, vrem să stabilim siguranța și HGP numai pentru cookie-uri folosind unele dintre metodele pe care le-am văzut.
+
+00:19:10.460 --> 00:19:13.550
+Te-am arătat pe drum.
+
+00:19:13.870 --> 00:19:22.150
+Ca și în cazul problemelor care se întâmplă tot timpul, există soluții și instrumente preexistente, iar unul dintre ele pentru
+
+00:19:22.150 --> 00:19:25.520
+a evita să vadă surful este bine.
+
+00:19:25.630 --> 00:19:32.950
+Acest pachet tot ce trebuie să facem este să îl instalăm și îl cere și apoi îl putem folosi în orice aplicație pe care o dorim.
+
+00:19:32.950 --> 00:19:36.990
+De exemplu, în Xpress vă arată cum să îl utilizați.
+
+00:19:37.060 --> 00:19:42.760
+Dacă utilizați cookie-uri, dar cum am spus că vă voi arăta o cale mai bună decât asta, așa că nu
+
+00:19:42.760 --> 00:19:43.190
+accentuați.
+
+00:19:43.210 --> 00:19:48.030
+Știu că acest videoclip este un pic dificil, dar trebuie doar să rămâi cu mine.
+
+00:19:48.030 --> 00:19:48.880
+Aveți încredere în mine.
+
+00:19:48.880 --> 00:19:53.840
+Prin sesiuni și videoclipuri video acest video va face mult mai mult sens.
+
+00:19:55.000 --> 00:20:02.470
+Amintiți-vă că atributul HGP numai împiedică accesarea cookie-urilor prin script-urile de la client, iar atributul
+
+00:20:02.470 --> 00:20:08.170
+securizat și cookie-ul Sher vor fi trimise prin conexiunea da.
+
+00:20:08.200 --> 00:20:16.970
+Deci, ambii lucrează împreună din nou AC afirmă că numai metodele HGP pot accesa cookie-ul.
+
+00:20:16.990 --> 00:20:18.400
+Nici un javascript nu poate.
+
+00:20:18.730 --> 00:20:25.370
+Așadar, acest lucru atenuează atacul nostru de scripting încrucișat, pe care l-am putea folosi.
+
+00:20:25.450 --> 00:20:28.760
+În regulă, am învățat aici o mulțime de vocabular noi.
+
+00:20:28.780 --> 00:20:33.640
+Acesta ar putea fi un videoclip la care trebuie să vă întoarceți, dar voi lista câteva exerciții pentru
+
+00:20:33.640 --> 00:20:39.460
+dvs. după acest videoclip pentru a vă familiariza puțin și pentru a juca câteva exerciții de hacking amuzante pe care le voi
+
+00:20:39.460 --> 00:20:40.560
+vedea în următorul videoclip.
+
+00:20:40.570 --> 00:20:40.810
+Probabil.

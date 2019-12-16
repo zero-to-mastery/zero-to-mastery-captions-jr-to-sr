@@ -1,0 +1,163 @@
+﻿WEBVTT
+
+00:00:01.500 --> 00:00:07.130
+Există o problemă cu care ne confruntăm, pe măsură ce aplicațiile noastre devin tot mai mari și mai mari.
+
+00:00:07.860 --> 00:00:13.620
+Proiectul nostru GET HOW crește și mai mult codul, acesta devine monolit.
+
+00:00:13.800 --> 00:00:21.510
+Acesta este un monstru mare care are nevoie să se asigure că totul funcționează, toate părțile funcționează
+
+00:00:21.780 --> 00:00:24.150
+astfel încât să funcționeze.
+
+00:00:24.310 --> 00:00:30.180
+Acest lucru face ca lucrurile să fie mai greu de gestionat și monitorizat în același timp.
+
+00:00:30.350 --> 00:00:36.830
+Trebuie să vă asigurați că acest proiect nu funcționează numai pe laptopul în care aveți un
+
+00:00:36.830 --> 00:00:44.940
+anumit sistem de operare o anumită versiune a sistemului dvs. de operare o anumită versiune de nod și multe alte lucruri.
+
+00:00:45.200 --> 00:00:51.820
+Multe alte biblioteci care depind una de cealaltă și de versiunile lor cel mai adesea atunci când oamenii
+
+00:00:51.820 --> 00:00:58.400
+încearcă și au proiecte de execuție pe o altă mașină sau computer întâlnesc erori, deoarece doar pentru
+
+00:00:58.420 --> 00:01:04.300
+că a rulat pe un computer nu înseamnă neapărat că va rula pe cealaltă.
+
+00:01:04.310 --> 00:01:09.800
+Aceasta este ceea ce noi am numit mediul înconjurător în care rulează o bucată de cod.
+
+00:01:09.800 --> 00:01:16.520
+Avem nevoie de o modalitate prin care să putem conduce programele și aplicațiile noastre în toate mediile posibile.
+
+00:01:16.520 --> 00:01:19.080
+Și aici vin containerele.
+
+00:01:20.660 --> 00:01:26.110
+Veți vedea că multe dintre aplicațiile web de astăzi sunt construite în jurul ideii de containere.
+
+00:01:26.390 --> 00:01:35.180
+Cutiile mici, care pot fi rulate oriunde, în loc de o aplicație monolit gigant, care face totul.
+
+00:01:35.180 --> 00:01:41.870
+Companiile precum Amazon și Netflix au produsele lor compuse din mai multe straturi.
+
+00:01:41.870 --> 00:01:50.090
+Aceste straturi pot fi considerate servicii fiecărui container propriu, care își face propriul lucru și comunică între ele pentru a
+
+00:01:50.090 --> 00:01:53.090
+face ca întregul sistem să funcționeze.
+
+00:01:54.380 --> 00:01:56.090
+Cam așa.
+
+00:01:56.250 --> 00:02:02.950
+Aceasta este o aplicație monolit și este mai mult o arhitectură a serviciilor micro.
+
+00:02:03.890 --> 00:02:08.080
+Te poți gândi la ele ca la discuțiile noastre despre funcțiile pure.
+
+00:02:08.240 --> 00:02:14.900
+Încercăm să păstrăm totul mic, astfel încât să avem o funcție previzibilă care ia o intrare și returnează o
+
+00:02:14.900 --> 00:02:18.290
+ieșire cu speranța că nu vor avea efecte secundare.
+
+00:02:19.100 --> 00:02:22.150
+Și nu vă faceți griji că vă vom arăta cum să faceți asta.
+
+00:02:22.160 --> 00:02:30.140
+Și, desigur, ideea de a descompune aplicația noastră în bucăți mici a fost popularizată de serviciile de containere cum
+
+00:02:30.290 --> 00:02:37.200
+ar fi docker pe care vom vorbi despre cum vedeți cu acest tip de sistem.
+
+00:02:37.560 --> 00:02:39.650
+Există o mare problemă.
+
+00:02:39.700 --> 00:02:47.430
+Fiecare serviciu sau container poate avea propriile cerințe din diferite versiuni de noduri în dependențe de
+
+00:02:47.430 --> 00:02:48.940
+bibliotecă conflictuale.
+
+00:02:48.990 --> 00:02:54.140
+Și când adăugați faptul că fiecare mașină și mediul de dezvoltare ale fiecărui dezvoltator este
+
+00:02:54.330 --> 00:03:02.180
+diferită, acesta poate fi pus la îndemâna rapidă la dezvoltarea rapidă a noilor dezvoltatori sau poate rula acest serviciu pe o altă mașină.
+
+00:03:02.220 --> 00:03:04.430
+Gândiți-vă la secțiunea noastră anterioară.
+
+00:03:04.470 --> 00:03:10.410
+Cât de dificil a fost crearea a tot ceea ce sa întâmplat în proiect în proiectul creierului inteligent, care nu era
+
+00:03:10.410 --> 00:03:11.760
+foarte distractiv, a fost.
+
+00:03:11.760 --> 00:03:17.610
+A trebuit să ne asigurăm că avem un medic înființat, atunci trebuia să executăm baza de date.
+
+00:03:17.610 --> 00:03:25.800
+Apoi, de asemenea, a trebuit să ne asigurăm că avem versiunea corectă a nodului care rulează API-ul nostru fără server.
+
+00:03:25.800 --> 00:03:31.930
+Acum imaginați-vă că lucrați la o companie care angajează un nou dezvoltator în fiecare săptămână și are un proiect și mai mare.
+
+00:03:32.010 --> 00:03:36.250
+Aceasta este o mulțime de lucru pentru toți acești dezvoltatori noi să facă.
+
+00:03:36.330 --> 00:03:41.550
+Nu ar fi frumos dacă am putea doar dezvoltatorii la bord și pentru ca aplicația noastră să
+
+00:03:42.420 --> 00:03:46.200
+funcționeze în mod consecvent și previzibil cu o singură comandă simplă.
+
+00:03:46.380 --> 00:03:51.420
+Ar fi frumos să aveți totul configurat pentru producție, astfel încât atunci când vă eliberați
+
+00:03:51.420 --> 00:03:55.990
+codul pe orice mașină cu orice versiuni care funcționează, indiferent de ce.
+
+00:03:56.040 --> 00:03:59.310
+Și din nou de aceea avem dr ..
+
+00:03:59.490 --> 00:04:06.060
+Chiar dacă totul depinde unul de altul și avem nevoie de un anumit tip de mediu, daquiri are
+
+00:04:06.060 --> 00:04:08.820
+grijă să se asigure că rulează oriunde.
+
+00:04:09.580 --> 00:04:10.540
+Și nu-ți face griji.
+
+00:04:10.660 --> 00:04:15.610
+Acestea sunt toate lucrurile pe care le vom încerca și le vom înțelege pe parcursul următoarelor ..
+
+00:04:15.620 --> 00:04:22.070
+Primul subiect pe care îl acoperim este această idee de Dr. docker ne ajută să creăm aceste containere în jurul
+
+00:04:22.070 --> 00:04:23.080
+serviciilor noastre.
+
+00:04:23.090 --> 00:04:29.160
+Cum am spus Nu te teme că ne întoarcem la aceste puncte pe măsură ce trecem prin fiecare secțiune.
+
+00:04:29.330 --> 00:04:33.280
+Vom începe să ne construim ideea în jurul arhitecturii serviciilor.
+
+00:04:33.440 --> 00:04:38.700
+Și acesta este un subiect dur, dar promit că va avea sens până la sfârșitul anului.
+
+00:04:38.700 --> 00:04:39.250
+In regula.
+
+00:04:39.320 --> 00:04:42.650
+În următorul videoclip, să aruncăm o privire mai atentă la Dr ..

@@ -1,0 +1,172 @@
+﻿WEBVTT
+
+00:00:01.860 --> 00:00:03.600
+Hej, tu jest Bruno.
+
+00:00:03.770 --> 00:00:04.340
+Łał.
+
+00:00:04.470 --> 00:00:07.630
+Ten komponent dokowy jest niesamowity.
+
+00:00:07.630 --> 00:00:08.730
+Wszyscy to kochają.
+
+00:00:08.730 --> 00:00:15.680
+Wszyscy są tak szczęśliwi, że nie muszą konfigurować baz danych i serwerów API i tego wszystkiego.
+
+00:00:15.710 --> 00:00:18.360
+Po prostu spowalniają nas.
+
+00:00:18.450 --> 00:00:20.030
+Naprawdę fantastyczna praca.
+
+00:00:20.040 --> 00:00:25.530
+Sądzę, że będziemy z tego bardzo dużo korzystać i mam nadzieję, że podzielę
+
+00:00:25.530 --> 00:00:31.200
+się tym z innymi zespołami w naszej firmie, ponieważ dobrze to i tak doceniam.
+
+00:00:31.230 --> 00:00:32.800
+Myślę, że potrzebuje trochę odpoczynku.
+
+00:00:32.820 --> 00:00:35.440
+Idź do domu, odpocznij, a do zobaczenia jutro.
+
+00:00:38.520 --> 00:00:44.920
+To była kompletna sekcja, która naprawdę nauczyła nas o okręcie i kontenerach.
+
+00:00:45.240 --> 00:00:47.050
+I zatrzymajmy się na chwilę.
+
+00:00:47.050 --> 00:00:50.560
+Możesz zadać sobie pytanie, dlaczego znowu tego potrzebujemy.
+
+00:00:50.770 --> 00:00:53.290
+Wygląda na to, że tworzymy dla nas więcej bólów głowy.
+
+00:00:53.430 --> 00:01:00.520
+Ale widzisz, że istnieje duży problem, który wykracza poza kłopoty z konfiguracją postscriptów i węzła oraz wszystkich tych
+
+00:01:00.520 --> 00:01:03.280
+innych narzędzi, aby nasze środowisko było skonfigurowane.
+
+00:01:03.400 --> 00:01:10.300
+Musimy się upewnić, że ta sama wersja odczytów postscriptowych węzła i innych usług jest
+
+00:01:10.630 --> 00:01:13.750
+poprawnie zainstalowana na każdym komputerze.
+
+00:01:13.750 --> 00:01:20.330
+Każdy z programistów musi upewnić się, że nasze laptopy i komputery działają w ten sam sposób.
+
+00:01:20.890 --> 00:01:23.720
+To duży problem dla firm.
+
+00:01:23.740 --> 00:01:30.730
+Jest to jeszcze ważniejsze, gdy faktycznie wdrażasz swój produkt podczas wdrażania na wszystkie rodzaje
+
+00:01:30.730 --> 00:01:31.300
+serwerów.
+
+00:01:31.330 --> 00:01:34.380
+Chcesz się upewnić, że działa bez względu na to, gdzie jest uruchamiany.
+
+00:01:34.750 --> 00:01:40.150
+Kontenery pozwalają nam upewnić się, że możemy uruchomić to oprogramowanie w dowolnym miejscu.
+
+00:01:40.300 --> 00:01:45.800
+Bierzemy odpowiedzialność za tworzenie środowiska od każdego, kto potrzebuje kodu.
+
+00:01:45.910 --> 00:01:52.900
+Dopóki ustawimy go poprawnie, możemy po prostu udostępnić ten kod każdemu i każdy powinien
+
+00:01:52.900 --> 00:01:54.790
+go poprawnie obsługiwać.
+
+00:01:55.300 --> 00:01:55.850
+DOBRZE.
+
+00:01:55.990 --> 00:01:57.440
+Czego się nauczyliśmy.
+
+00:01:58.280 --> 00:02:02.290
+Cóż, dowiedzieliśmy się o dokerze, co to jest i jak działa.
+
+00:02:03.420 --> 00:02:11.890
+Stworzyliśmy plik doc i nauczyliśmy się, jak z nim pracować, używając instrukcji dokowania do budowania dogów dla jej poleceń exec.
+
+00:02:11.970 --> 00:02:20.810
+Użyliśmy także funkcji tworzenia dokerów do orkiestracji aplikacji dla różnych usług, które mamy w trakcie programowania, a
+
+00:02:22.690 --> 00:02:30.400
+teraz mogliśmy uruchomić naszą rozproszoną aplikację, która może być uruchamiana w dowolnym miejscu, za pomocą
+
+00:02:30.400 --> 00:02:32.070
+tylko jednego polecenia.
+
+00:02:32.290 --> 00:02:40.250
+Używaliśmy poleceń takich jak Dr. Komponuj kompilacje i dokowania lub komponuj się w celu orkiestracji naszych usług aplikacji.
+
+00:02:40.450 --> 00:02:44.070
+Udało nam się połączyć je z takimi elementami, jak łącza.
+
+00:02:44.320 --> 00:02:52.460
+Jesteśmy w stanie wykonać przekierowanie portów i mogliśmy przekazać zmienne środowiskowe i połączyć te
+
+00:02:52.790 --> 00:02:54.860
+dwa elementy razem.
+
+00:02:55.960 --> 00:03:03.490
+W końcu zrobiliśmy kilka zabawnych rzeczy z SU tak, że kiedy faktycznie uruchomimy komendę, możemy w naszym doku lub
+
+00:03:03.490 --> 00:03:10.690
+pliku lub uruchomić nasz schemat wdrażania, tak aby wszystko działało sprawnie i jak tylko uruchomimy to polecenie, tworzone
+
+00:03:10.690 --> 00:03:17.700
+są nowe tabele dla abyśmy mogli używać bez programu Dharker, nasi programiści musieliby zainstalować i skonfigurować każdy rodzaj
+
+00:03:17.700 --> 00:03:21.240
+usługi, tak jak to zrobiliśmy w poprzedniej sekcji.
+
+00:03:22.340 --> 00:03:30.070
+Widzisz, że mamy to piękne środowisko, w którym pracujemy dla każdego, kto dołącza do naszego zespołu, po prostu
+
+00:03:30.070 --> 00:03:36.210
+poświęci trochę czasu na zainstalowanie dockera i wszystko będzie ustawione w ciągu pół dnia.
+
+00:03:36.220 --> 00:03:39.330
+To sprawia, że szefowie są bardzo szczęśliwi.
+
+00:03:40.040 --> 00:03:47.380
+Ale dowiedzieliśmy się również, że dzięki dockerowi możemy naprawdę ulepszyć nasze produkcje.
+
+00:03:47.480 --> 00:03:55.580
+Możemy po prostu dodać kontenery do wszystkiego, co chcemy opakować pojedyncze usługi w kontenerach, a ponieważ mogą
+
+00:03:55.580 --> 00:04:01.070
+one działać prawie wszędzie, możemy tylko powielić je, a następnie je
+
+00:04:01.400 --> 00:04:08.960
+powielić, a my mamy tę architekturę, w której mamy małe, małe usługi działające w różnych lokalizacjach
+
+00:04:08.960 --> 00:04:16.090
+połączonych z siebie nawzajem, ale nie martwiąc się o zarządzanie wszystkim razem w jednym miejscu.
+
+00:04:16.090 --> 00:04:16.880
+W porządku.
+
+00:04:17.170 --> 00:04:19.230
+Myślę, że potrzebujemy przerwy po tym.
+
+00:04:19.240 --> 00:04:22.420
+Mam nadzieję, że zabawny rozmówca jest naprawdę ekscytujący.
+
+00:04:22.600 --> 00:04:26.020
+I zamierzamy to wykorzystać na następną część kursu.
+
+00:04:27.190 --> 00:04:30.380
+Mam nadzieję, że dobrze się bawiłeś i do zobaczenia w następnej sekcji.
+
+00:04:30.540 --> 00:04:30.790
+BABAE.

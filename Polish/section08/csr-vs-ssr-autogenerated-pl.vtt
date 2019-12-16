@@ -1,0 +1,166 @@
+﻿WEBVTT
+
+00:00:01.780 --> 00:00:09.800
+Witamy ponownie, jak to omówiliśmy we wprowadzeniu, ponieważ nasze aplikacje przechodzą z prostych stron internetowych opartych na
+
+00:00:09.800 --> 00:00:16.740
+podatkach do stron internetowych wideo, takich jak YouTube lub gier wieczornych, które można sobie
+
+00:00:16.740 --> 00:00:27.400
+wyobrazić, że teraz wysyłamy coraz więcej skryptów JavaScript do naszego klienta lub naszego klienta. przeglądarka i pamiętasz, jak wyglądała aplikacja, gdy pracowaliśmy
+
+00:00:27.400 --> 00:00:31.480
+z ponownym aktem na naszej stronie DML.
+
+00:00:31.510 --> 00:00:34.900
+Mieliśmy tylko jeden prosty element.
+
+00:00:34.930 --> 00:00:43.000
+Mieliśmy diff oznaczony ideą root i re-act, po prostu dołączamy się do tego elementu
+
+00:00:43.000 --> 00:00:52.800
+głównego Id, a następnie renderujemy cały DML przez elementy re-act tylko przez ten jeden znacznik div w HDMI.
+
+00:00:53.200 --> 00:00:56.290
+I tak działają aplikacje renderowane po stronie klienta.
+
+00:00:57.790 --> 00:01:07.790
+Zobaczysz w przeciwieństwie do renderowania po stronie serwera, na którym serwer odpowiada w pełni obciążoną stroną ASTM, która
+
+00:01:07.790 --> 00:01:16.510
+jest gotowa do renderowania użytkownikowi po stronie klienta, uzyskując całkiem nagie kości stronę shemale, która łączy
+
+00:01:16.750 --> 00:01:23.040
+się z plikami javascript, które muszą zostać wykonane i pobrane.
+
+00:01:23.220 --> 00:01:31.590
+Widzimy tutaj, że najpierw prosimy o nasz e-mail, a gdy to robimy, mamy ładowanie
+
+00:01:31.590 --> 00:01:38.190
+lub pustą stronę, gdy czekamy, aż coś zostanie wyrenderowane w przeglądarce.
+
+00:01:38.340 --> 00:01:43.380
+Po nadejściu pliku DML zauważamy niektóre pliki javascript.
+
+00:01:43.950 --> 00:01:51.240
+A ponieważ nie ma nic do wyświetlenia, czekamy na pobranie plików javascript.
+
+00:01:51.420 --> 00:01:59.700
+Następnie czekamy na ich ocenę, a potem, gdy cały czas oglądamy ten ekran ładowania,
+
+00:02:00.240 --> 00:02:08.610
+gdy wszystko zostanie zrobione, nasza strona ładuje się i staje się interaktywna i możemy ją zobaczyć.
+
+00:02:08.850 --> 00:02:15.990
+Teraz jedyna korzyść z tego faktu, choć musimy trochę poczekać, to to, że
+
+00:02:16.590 --> 00:02:23.610
+gdy strona stanie się interaktywna, jeśli klikniesz na link na tej stronie, aby
+
+00:02:23.610 --> 00:02:31.500
+załadować więcej treści, przeglądarka nie musi wysyłać kolejnego żądania do serwera "Ponownie wyświetlaj elementy w
+
+00:02:31.500 --> 00:02:40.700
+przeglądarce, ponownie uruchamiając logikę przez javascript, więc używając javascript, załadujesz na stronę nową zawartość i nowe biblioteki
+
+00:02:40.750 --> 00:02:42.980
+oraz nowe widoki.
+
+00:02:43.160 --> 00:02:49.070
+Jest to znacznie szybsze, ponieważ ładujesz tylko niewielką część nowej strony.
+
+00:02:49.070 --> 00:02:55.220
+Jeśli na przykład mamy pasek menu na górze, który nie musi być renderowany, możemy po prostu zmienić kolejność lub
+
+00:02:55.220 --> 00:02:56.040
+cokolwiek innego.
+
+00:02:56.090 --> 00:02:59.010
+Być może profil jest pod spodem.
+
+00:02:59.450 --> 00:03:05.380
+Podobnie jak w przypadku naszego przykładu polowania na produkty, tylko części strony zostają załadowane.
+
+00:03:05.510 --> 00:03:08.460
+A teraz jest o wiele szybciej.
+
+00:03:08.580 --> 00:03:16.500
+Jest tu również problem z renderowaniem po stronie klienta, czasami masz puste strony, na których
+
+00:03:16.800 --> 00:03:23.720
+ludzie właśnie ładują spinner lub pustą stronę, gdy czekamy na to pierwsze renderowanie.
+
+00:03:24.600 --> 00:03:32.220
+Zobaczmy, jak wyglądałby wygląd strony po stronie serwera, dzięki czemu rzeczy wyglądają nieco
+
+00:03:32.220 --> 00:03:33.220
+inaczej.
+
+00:03:35.190 --> 00:03:44.640
+Od razu widać, że dzięki SSR renderowanie jest o wiele szybsze na początkowej prośbie w porównaniu ze
+
+00:03:44.880 --> 00:03:52.890
+stroną Klein, którą musieliśmy trochę poczekać, ponieważ nasz serwer odpowiada teraz w pełni renderowaną
+
+00:03:53.100 --> 00:04:00.870
+stroną, dzięki czemu możemy wyświetlić coś użytkownikowi. podczas gdy javascript jest pobierany i
+
+00:04:00.870 --> 00:04:03.130
+oceniany w tle.
+
+00:04:03.210 --> 00:04:09.810
+Ale zauważyłeś również, że nasza strona nie staje się interaktywna aż do tego momentu, dopóki te dwa
+
+00:04:10.140 --> 00:04:12.500
+kroki javascript nie zostaną uruchomione.
+
+00:04:12.900 --> 00:04:16.830
+Wciąż mamy ten sam punkt interakcji.
+
+00:04:17.010 --> 00:04:23.520
+Jedyną różnicą jest to, że dla użytkownika ta strona pojawia się o wiele szybciej, ponieważ wyświetla rzeczy na
+
+00:04:23.520 --> 00:04:25.020
+stronie o wiele szybciej.
+
+00:04:25.020 --> 00:04:28.780
+Mają mniej czasu na oglądanie tarczy ładującej.
+
+00:04:28.820 --> 00:04:31.080
+W porządku, jest nasza decyzja.
+
+00:04:31.310 --> 00:04:36.680
+Patrząc na te dwa, jasne jest, że musimy wykonać renderowanie po stronie serwera, odrzućmy wszystkie nasze
+
+00:04:36.680 --> 00:04:41.600
+projekty renderowania po stronie klienta, wszystko, czego się nauczyliśmy, do tej pory jest marnotrawstwem.
+
+00:04:41.600 --> 00:04:43.140
+W porządku, trzymaj się.
+
+00:04:44.500 --> 00:04:49.510
+To nie jest kompletne ani prawidłowe, jak z niczym.
+
+00:04:49.690 --> 00:04:52.380
+Wszystkie są plusy i minusy.
+
+00:04:53.190 --> 00:04:58.620
+I zanim przejdziemy do tego, gdy chcemy wykonać renderowanie po stronie klienta, gdy chcemy
+
+00:04:58.620 --> 00:05:06.450
+wykonać renderowanie po stronie serwera Zróbmy sobie przerwę, ponieważ jestem pewien, że masz teraz pytanie, czy możemy zamienić aplikację jednej strony
+
+00:05:06.690 --> 00:05:09.470
+w aplikację renderowaną po stronie serwera.
+
+00:05:09.510 --> 00:05:15.070
+Czy możemy sprawić, by nasi znajomi z Roble'a znaleźli się po stronie serwera, lub renderowana mapa jest nawet możliwa.
+
+00:05:15.330 --> 00:05:20.440
+Ponieważ możesz zobaczyć, jak łatwo to zrobić, jeśli masz prosty strumień stron.
+
+00:05:20.520 --> 00:05:28.190
+Ale gdybyś miał dynamiczną aplikację internetową, taką jak aplikacja pojedyncza strona, może to być trochę trudniejsze.
+
+00:05:28.220 --> 00:05:30.810
+Zobaczę się w następnym filmie.

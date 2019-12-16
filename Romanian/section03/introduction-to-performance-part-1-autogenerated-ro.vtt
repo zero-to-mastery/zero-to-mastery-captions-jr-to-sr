@@ -1,0 +1,124 @@
+﻿WEBVTT
+
+00:00:01.640 --> 00:00:09.830
+Unul dintre primele lucruri pe care le vei realiza ca dezvoltator de web este că vitezele de internet diferă pentru toată lumea.
+
+00:00:09.830 --> 00:00:13.440
+Și oamenii nu au timp să aștepte încărcarea site-ului dvs. web.
+
+00:00:13.490 --> 00:00:16.560
+Performanța este foarte importantă.
+
+00:00:17.690 --> 00:00:25.280
+Toate companiile mari dau prioritate experienței rapide a utilizatorilor, deoarece știu că oamenii de astăzi sunt obișnuiți
+
+00:00:25.370 --> 00:00:34.810
+să nu aștepte în jurul Amazonului calculat că pe site-ul lor web dacă o încărcare de pagină încetinește doar o secundă care
+
+00:00:34.810 --> 00:00:39.040
+le-ar putea costa 1. 6 miliarde de vânzări în fiecare an.
+
+00:00:39.040 --> 00:00:46.060
+Google a făcut un calcul și, încetinind rezultatele căutării cu doar patru zecimi de secundă, ar putea pierde până la un
+
+00:00:46.060 --> 00:00:52.510
+milion de căutări pe zi, ceea ce înseamnă că vor pierde din toate banii publici pe care îi
+
+00:00:52.510 --> 00:00:52.980
+primesc.
+
+00:00:54.410 --> 00:01:00.750
+Acum există moduri infinite de a vă face codul mai performant și de a vă face mai repede site-ul web.
+
+00:01:00.770 --> 00:01:06.860
+Deci, în această secțiune, ne vom concentra pe principalele lucruri care vă vor aduce 80% din beneficii.
+
+00:01:06.920 --> 00:01:08.320
+Să începem noi.
+
+00:01:09.070 --> 00:01:15.440
+Mai întâi, să recapitulăm ceea ce se întâmplă atunci când navigați de obicei către un site Web.
+
+00:01:15.520 --> 00:01:17.300
+Avem un client și un server.
+
+00:01:17.350 --> 00:01:24.430
+Să presupunem că vă aflați pe Google aici și doriți să vizitați site-ul supercom dotcom acest site minunat.
+
+00:01:24.430 --> 00:01:29.000
+Ei bine, în acest caz, faceți o cerere către server.
+
+00:01:29.430 --> 00:01:37.640
+Acest server returnează fișierul ASTM și apoi în fișierul de e-mail browser-ul începe să-l citească și vă găsește.
+
+00:01:37.720 --> 00:01:40.250
+Am o foaie de stil pe care trebuie să o obțin.
+
+00:01:40.270 --> 00:01:48.300
+Deci, merge la server din nou, apuca foaie de stil și apoi ca se uită la fișier.
+
+00:01:48.430 --> 00:01:50.860
+Avem de asemenea o imagine de care avem nevoie.
+
+00:01:50.920 --> 00:01:58.200
+Deci, în fundal, cere imaginea și din nou imaginea devine transferată din nou și din nou.
+
+00:01:58.210 --> 00:02:00.750
+Există, de asemenea, un script de etichetare a unui loc de muncă un fișier sigur.
+
+00:02:00.750 --> 00:02:03.220
+Așadar, avem nevoie și de asta.
+
+00:02:05.190 --> 00:02:12.090
+Acum, aceasta este o versiune simplificată a ceea ce se întâmplă și vom intra în detaliile ciudate care sunt secțiunile
+
+00:02:12.090 --> 00:02:14.230
+de performanță ale acestui curs.
+
+00:02:14.580 --> 00:02:17.280
+Dar conceptele de bază sunt aici.
+
+00:02:17.280 --> 00:02:25.920
+Avem o relație de client și de server, iar fișierul de e-mail ne indică ce fișiere avem nevoie
+
+00:02:26.160 --> 00:02:34.100
+de server OK, dar cum putem să ne gândim critic la performanță și să îmbunătățim procesul.
+
+00:02:34.790 --> 00:02:38.390
+Mai ales ca aplicatiile noastre web devin mai mari si mai mari.
+
+00:02:38.420 --> 00:02:44.020
+Cei mai mulți oameni sunt doar fericiți, punând un site Web online, dar asta nu e bine.
+
+00:02:44.030 --> 00:02:49.820
+Vrem să-i impresionăm pe șefii noștri că dorim să le arătăm că am îmbunătățit doar site-ul Web al companiei lor, ceea
+
+00:02:49.940 --> 00:02:52.200
+ce înseamnă mai mult venit pentru ei.
+
+00:02:52.980 --> 00:03:01.080
+Vrem să îi arătăm lui Brunow că știm ce facem și că suntem destul de mult un superstar, așa că amintiți-vă că vizitatorii
+
+00:03:02.280 --> 00:03:06.630
+vă așteaptă ca site-ul dvs. să se încarce în două secunde.
+
+00:03:07.460 --> 00:03:13.130
+Și aproximativ jumătate dintre ei vor pleca dacă vor dura mai mult de trei secunde.
+
+00:03:13.990 --> 00:03:19.510
+Acum, fiecare secundă de întârziere scade satisfacția clienților și, eventual, banii.
+
+00:03:19.510 --> 00:03:26.590
+Deci, nimic nu semnalează dezvoltatorul de juniori ca având site-ul dvs. de portofoliu să încarce o imagine inutilă de 5 megabyte
+
+00:03:26.620 --> 00:03:28.510
+pentru pagina dvs. de pornire.
+
+00:03:29.180 --> 00:03:36.440
+În următorul videoclip și în cele care urmează, vom învăța aceste principii, astfel încât să nu mai facem
+
+00:03:36.440 --> 00:03:38.510
+niciodată greșeli de performanță.
+
+00:03:38.930 --> 00:03:40.260
+O să văd asta.

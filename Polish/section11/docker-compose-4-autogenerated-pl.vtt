@@ -1,0 +1,460 @@
+﻿WEBVTT
+
+00:00:00.870 --> 00:00:04.870
+Witamy ponownie, kontynuujmy nasz przykład.
+
+00:00:04.940 --> 00:00:11.870
+Mamy Doc skomponować wszystkie ustawienia tutaj, więc powinniśmy być w stanie dodać postscripts również tutaj, tak,
+
+00:00:11.960 --> 00:00:16.430
+że po prostu mamy wszystko działa w jego kontenerze.
+
+00:00:16.490 --> 00:00:20.240
+Zanim zrobimy cokolwiek, możesz napotkać również błędy.
+
+00:00:20.240 --> 00:00:24.500
+Zawsze upewnij się, że nie ma żadnych kontenerów, które mogłyby być w konflikcie.
+
+00:00:24.650 --> 00:00:28.000
+W naszym przypadku mamy uruchomione nasze inteligentne API mózgu.
+
+00:00:28.510 --> 00:00:36.350
+Ale po to, by zacząć od czystej klapki, lubię robić psie włosy, które ściągną wszystkie
+
+00:00:36.350 --> 00:00:37.190
+usługi.
+
+00:00:37.280 --> 00:00:44.710
+Jak możesz zobaczyć tutaj idealne. Rozjaśnijmy to teraz, aby dodać tutaj post-karierę.
+
+00:00:44.790 --> 00:00:47.000
+To całkiem proste.
+
+00:00:47.070 --> 00:00:53.460
+Ponownie tworzymy nową usługę i dodajmy tutaj komentarz, abyśmy wiedzieli, co robimy, więc powiemy, że
+
+00:00:53.460 --> 00:00:59.460
+to jest postscript i zamierzam usunąć ten komentarz tutaj, ponieważ nie potrzebujemy go
+
+00:01:00.570 --> 00:01:01.120
+idealnie.
+
+00:01:01.140 --> 00:01:07.350
+I powiem, że to jest API zaplecza.
+
+00:01:08.950 --> 00:01:12.430
+W tym miejscu będę nazywać tę
+
+00:01:15.400 --> 00:01:24.100
+usługę postscriptami. Będę miał nazwę kontenera postscriptowego i zamierzamy użyć obrazu, który jest już wcześniej
+
+00:01:24.100 --> 00:01:33.360
+przygotowany dla nas w hubie dotcomów, a obraz postscriptów w Doc hobby, wygodnie nazywany postscriptami .
+
+00:01:33.380 --> 00:01:39.100
+Teraz inną rzeczą, którą chcesz zrobić, to ponownie upewnić się, że porty są dla nas dostępne.
+
+00:01:40.040 --> 00:01:45.890
+Będziemy mieli nasze domyślne postscripty i jest to domyślny port dla postscriptów.
+
+00:01:45.890 --> 00:01:48.270
+Być może pamiętasz, że użyliśmy tego wcześniej.
+
+00:01:48.560 --> 00:01:54.670
+Za każdym razem, gdy podłączamy się do naszej bazy danych i do tego tylko do tego samego portu.
+
+00:01:54.690 --> 00:02:02.730
+Teraz, jeśli to zapiszę, zobaczmy, co się stanie, gdy uruchomię dock lub skomponuję, a następnie
+
+00:02:02.730 --> 00:02:07.070
+zapamiętam, jak rysować kreskę, żeby wszystko zbudować.
+
+00:02:07.130 --> 00:02:10.350
+I widzisz, że zrobiłem tu małą literówkę.
+
+00:02:10.350 --> 00:02:11.670
+To powinny być porty.
+
+00:02:11.840 --> 00:02:12.910
+Spróbujmy jeszcze raz.
+
+00:02:21.310 --> 00:02:28.340
+I widzisz tutaj, jak to wyciąga postscripty najnowsze od profesjonalistów z biblioteki.
+
+00:02:28.420 --> 00:02:30.130
+Zobaczysz, że to działa.
+
+00:02:30.370 --> 00:02:37.600
+A ponieważ robimy to po raz pierwszy, zajmie to trochę czasu, aby pobrać wszystko.
+
+00:02:38.780 --> 00:02:45.050
+Teraz obszar tutaj, jeśli go czytasz, oznacza, że nie możemy utworzyć konfliktu usługi kontenera.
+
+00:02:45.080 --> 00:02:50.360
+PostScript kontenera jest już w użyciu i jest coś, na co chcesz uważać Za każdym
+
+00:02:50.360 --> 00:02:51.980
+razem, gdy używasz obrazów.
+
+00:02:52.010 --> 00:02:59.390
+W naszym przypadku to zdjęcie ma już ustawioną nazwę pojemnika, więc nie potrzebujemy tego.
+
+00:02:59.450 --> 00:03:02.700
+Jeśli to zapiszę i uruchomię to ponownie, otrzymamy
+
+00:03:10.210 --> 00:03:10.960
+to.
+
+00:03:11.130 --> 00:03:16.170
+Zróbmy to trochę większym, żebyście mogli zobaczyć.
+
+00:03:16.280 --> 00:03:17.020
+Proszę bardzo.
+
+00:03:19.400 --> 00:03:19.980
+W porządku.
+
+00:03:20.000 --> 00:03:26.200
+Wygląda na to, że nasz pojemnik doktora wygląda na to, że ma postscripts, a tył i back-end są
+
+00:03:26.570 --> 00:03:29.740
+uruchomione, a post Chris daje tutaj dużo danych wejściowych.
+
+00:03:29.750 --> 00:03:31.280
+Ale widzimy ich sukces.
+
+00:03:31.310 --> 00:03:33.520
+Możesz teraz uruchomić serwer bazy danych.
+
+00:03:34.040 --> 00:03:40.080
+A jeśli będziesz dalej schodzić, zobaczysz, że post-wykresy w tym procesie są gotowe do uruchomienia.
+
+00:03:40.100 --> 00:03:44.510
+A następnie komunikat końcowy to system bazy danych gotowy do zaakceptowania połączeń.
+
+00:03:44.830 --> 00:03:47.310
+Cóż, przetestujmy te połączenia.
+
+00:03:47.900 --> 00:03:49.590
+Zobaczmy, czy rzeczywiście działa.
+
+00:03:49.670 --> 00:04:00.070
+Jeśli wrócę do kontynuacji mojego kawałka i spróbuję połączyć się z inteligentnym mózgiem, jak to nazwiemy na naszym
+
+00:04:00.070 --> 00:04:00.770
+serwerze.
+
+00:04:00.880 --> 00:04:03.450
+Nazywamy ten inteligentny mózg.
+
+00:04:03.530 --> 00:04:06.890
+Użyliśmy jednego, ale po prostu wykonujmy inteligentny mózg, ponieważ to właśnie zrobiliśmy.
+
+00:04:08.880 --> 00:04:15.940
+Nie dostarczaj haseł i nie uzyskaj uwierzytelnienia hasłem dla użytkownika w ciągu ostatnich lat.
+
+00:04:16.390 --> 00:04:23.430
+Ok to ma sens, ponieważ utworzyłem tę bazę danych, ale nie ma tu nic, co tu podałem.
+
+00:04:23.700 --> 00:04:32.070
+I bardziej prawdopodobnym scenariuszem jest to, że istnieje użytkownik i hasło do bazy danych i mamy sposób
+
+00:04:32.070 --> 00:04:38.280
+na połączenie backendu z postscriptami, nawet jeśli są w swoim własnym świecie.
+
+00:04:38.280 --> 00:04:42.420
+Potrzebujesz sposobu, żeby mogli ze sobą rozmawiać i bezpiecznie się połączyć.
+
+00:04:42.600 --> 00:04:47.890
+Teraz sposób, w jaki to zrobimy, odbywa się za pomocą zmiennych środowiskowych.
+
+00:04:47.900 --> 00:04:49.790
+Pokażę ci, jak to wygląda.
+
+00:04:49.890 --> 00:04:55.510
+Jeśli wrócę do komponentu Dharker, podaję właściwość back i API.
+
+00:04:55.650 --> 00:05:01.830
+I to będzie środowisko, a środowisko
+
+00:05:01.830 --> 00:05:13.350
+to po prostu zmienne środowiskowe, które przekażemy i myślę, że możemy po prostu zrobić
+
+00:05:14.440 --> 00:05:31.660
+postscripts Użytkownik będzie, powiedzmy, Sally Hasło postscriptowe, powiedzmy, że jest tajne i powie, że baza postscriptowa nazwijmy to mądrym doktorem mózgu.
+
+00:05:31.930 --> 00:05:34.080
+I w końcu to trochę podstęp.
+
+00:05:34.090 --> 00:05:40.120
+Ale jeśli widzisz, mamy hosta i do tego momentu host był hostem lokalnym.
+
+00:05:40.120 --> 00:05:46.300
+Ale pamiętaj, że kiedy uruchamiamy Daquiri, jest to w oddzielnym świecie, więc możemy po prostu odwołać się do
+
+00:05:46.300 --> 00:05:48.390
+lokalnego komputera z naszego komputera.
+
+00:05:48.550 --> 00:05:51.160
+Zamiast tego możemy
+
+00:05:54.470 --> 00:05:58.430
+podać nazwę usługi jako hosty.
+
+00:05:58.430 --> 00:06:10.160
+W naszym przypadku będzie to postscripts i jest to połączone przez dodanie właściwości links, a łącza po
+
+00:06:10.160 --> 00:06:21.750
+prostu mówią, że w tym mroczniejszym świecie chciałbym, aby API back-end łączył się z postscriptami.
+
+00:06:21.800 --> 00:06:22.830
+Pozwól, że ci pokażę, co mam na myśli.
+
+00:06:23.650 --> 00:06:26.870
+Wracając do naszego diagramu, próbujemy zbudować ten kontener.
+
+00:06:26.950 --> 00:06:31.420
+Mamy uruchomiony nasz serwer API, a teraz mamy również uruchomioną bazę danych.
+
+00:06:31.450 --> 00:06:34.450
+Jednak tak naprawdę nie wiedzą o istnieniu drugiego.
+
+00:06:34.450 --> 00:06:39.470
+Tak naprawdę nie łączą się, a serwer API musi połączyć się z bazą
+
+00:06:39.470 --> 00:06:44.720
+danych, aby wszystkie te połączenia ratownicze nawiązywały do użytkowników przechowujących hashe i tak dalej.
+
+00:06:45.160 --> 00:06:50.290
+W przyszłych filmach również będziemy musieli połączyć czytanie, więc
+
+00:06:50.290 --> 00:06:59.040
+próbujemy utworzyć te połączenia i po prostu znowu używamy linków w przyszłości, kiedy również nas przeczytamy.
+
+00:06:59.040 --> 00:07:04.940
+Będziemy czytać usługę i link będzie tutaj w linkach.
+
+00:07:05.180 --> 00:07:07.680
+Mamy więc te zmienne środowiskowe.
+
+00:07:07.820 --> 00:07:15.430
+Teraz wszystko, co musimy zrobić, to to, że jeśli to zapiszę i wrócę, będę mógł uzyskać do nich dostęp poprzez proces.
+
+00:07:15.510 --> 00:07:17.030
+Dot postscripts
+
+00:07:19.590 --> 00:07:22.570
+pozwalają mi kopiować, bo będzie łatwiej.
+
+00:07:22.620 --> 00:07:33.070
+Host pocztowy, który będzie post scripts tak bardzo Yeow przetwarza MF, a my
+
+00:07:35.980 --> 00:07:38.770
+zrobimy dla użytkownika.
+
+00:07:38.800 --> 00:07:45.360
+Będzie to hasło użytkownika, które będzie hasłem.
+
+00:07:45.490 --> 00:07:50.460
+I wreszcie nazwa bazy danych, którą zamierzamy zostawić na nazwisko.
+
+00:07:50.500 --> 00:07:52.240
+Pozwolę sobie tylko upewnić się, że nazwy są poprawne.
+
+00:07:52.240 --> 00:07:54.630
+Hasło użytkownika D. B i host.
+
+00:07:54.790 --> 00:08:02.500
+Powinna to być D-B, która jest dziwnie nazwaną zmienną środowiskową, ale na razie jest to w porządku.
+
+00:08:03.090 --> 00:08:04.920
+Pozwól mi to zapisać.
+
+00:08:04.960 --> 00:08:09.960
+Teraz musimy ponownie uruchomić wszystko, ponieważ musimy odtworzyć naszą bazę danych.
+
+00:08:09.960 --> 00:08:12.960
+Więc sposób, w jaki to robimy, pozwala mi to zamknąć.
+
+00:08:12.960 --> 00:08:14.870
+Zamierzam uczynić to nieco większym.
+
+00:08:14.910 --> 00:08:23.850
+Oczyść terminal i przeprowadź Rona lub skomponuj, a zamiast tego wszystko sprowadzimy i widzimy,
+
+00:08:23.850 --> 00:08:32.910
+że mamy odrobinę powietrza, jeśli wrócimy do doku lub skomponujemy Och, musimy mieć tu miejsce.
+
+00:08:33.580 --> 00:08:36.310
+Pliki YAML mogą być bardzo trudne ze spacjami.
+
+00:08:36.310 --> 00:08:37.520
+Spróbujmy jeszcze raz.
+
+00:08:37.960 --> 00:08:49.920
+Przeprowadź operację, a następnie uruchom konsolę dokuj lub ponownie skomponuj.
+
+00:08:49.920 --> 00:08:50.150
+W porządku.
+
+00:08:50.170 --> 00:08:54.540
+Otrzymujemy tutaj błąd informujący, że Sally nie istnieje.
+
+00:08:54.760 --> 00:08:57.100
+Jeśli pójdę na mój serwer tak.
+
+00:08:57.550 --> 00:09:09.830
+I po prostu pocieszymy stary proces przetwarzania kropek i kropek po awarii, powiedzmy, że użytkownik zapisał OK. Otrzymałem
+
+00:09:12.910 --> 00:09:14.330
+Sally.
+
+00:09:14.380 --> 00:09:17.680
+Otrzymujemy te zmienne środowiskowe.
+
+00:09:17.710 --> 00:09:22.900
+W porządku, pozwól mi to zminimalizować.
+
+00:09:22.950 --> 00:09:29.880
+Oto druga kwestia i podchodzę do tego, ponieważ zawsze będziemy mieć te problemy, gdy po raz pierwszy
+
+00:09:29.880 --> 00:09:33.400
+konfigurujesz lekarza i może to być naprawdę frustrujące.
+
+00:09:34.750 --> 00:09:41.350
+Ale jeśli pomyślimy o tym krytycznie, daliśmy naszemu postscriptowi, że użytkownik
+
+00:09:41.350 --> 00:09:51.070
+i hasło hostują wszystkie te informacje, jednak tak naprawdę nie mamy tego na obrazie postscriptowym, musimy również
+
+00:09:51.070 --> 00:10:00.370
+zrobić to samo z naszą bazą danych, aby stworzyć hasło użytkownika baza danych i ma wszystkie
+
+00:10:00.370 --> 00:10:01.720
+potrzebne informacje.
+
+00:10:01.720 --> 00:10:09.480
+Więc jeśli skopiuję to tutaj, lub pozwól mi skopiować całe zmienne środowiska
+
+00:10:12.650 --> 00:10:14.490
+i zapiszę.
+
+00:10:14.730 --> 00:10:16.960
+Pozwól, że znów to zniosę.
+
+00:10:26.970 --> 00:10:29.360
+Obecnie nie mamy żadnych z tych problemów.
+
+00:10:29.400 --> 00:10:33.300
+A tak przy okazji, zmień nazwę użytkownika na małe, tylko dlatego,
+
+00:10:33.300 --> 00:10:37.820
+że nie chcesz mieć wielkich liter w polu użytkownika, ale wygląda to ładniej.
+
+00:10:37.830 --> 00:10:39.170
+Teraz spróbujmy.
+
+00:10:39.410 --> 00:10:47.640
+Kliknij prawym przyciskiem OK i powiedz, że chcemy się połączyć z inteligentnym portem mózgów, użytkownicy będą mieć hasło Salli,
+
+00:10:47.640 --> 00:10:49.200
+które będzie tajne.
+
+00:10:49.670 --> 00:10:52.150
+Hej, spójrz na to.
+
+00:10:52.230 --> 00:10:56.750
+Połączony z bazą danych.
+
+00:10:56.770 --> 00:10:57.560
+W porządku.
+
+00:10:57.560 --> 00:10:59.770
+Teraz trochę to posprzątajmy.
+
+00:10:59.770 --> 00:11:06.230
+Jest to nieco niechlujne i większość plików dokerów tworzy pliki.
+
+00:11:06.370 --> 00:11:14.410
+Zobaczysz trochę inną konfigurację, ponieważ od naszego inteligentnego interfejsu API do mózgu możemy po prostu połączyć
+
+00:11:14.410 --> 00:11:16.850
+się z takimi postscriptami.
+
+00:11:17.020 --> 00:11:26.350
+Mogę po prostu powiedzieć PostScript na PC i podać moje hasło i sekret.
+
+00:11:26.480 --> 00:11:30.870
+W moim przypadku hasło Salli jest tajne.
+
+00:11:31.270 --> 00:11:42.860
+Zamiast localhosta pamiętaj, że to będzie postscriptowy numer portu i nasza baza danych ponownie, ponieważ używam tego z mojego laptopa, który jest
+
+00:11:42.860 --> 00:11:51.690
+localhostem eksponuję port, więc mogłem zostawić to jako lokalny host na serwerze API backendu, kiedy faktycznie
+
+00:11:51.710 --> 00:11:58.730
+połączyć się z prosbulami, ale będę musiał to zrobić w naszym przypadku,
+
+00:11:58.730 --> 00:12:09.290
+ponieważ robię to z mojego komputera z mojego lokalnego hosta, jeśli pracuję z lokalnym hostem, widzę, że jestem połączony.
+
+00:12:09.380 --> 00:12:12.070
+Idealny.
+
+00:12:12.100 --> 00:12:17.770
+Teraz konfiguracja, którą chcemy tutaj wykonać, zamiast tego wszystkiego, powiemy tylko, że są tam
+
+00:12:17.770 --> 00:12:19.830
+postscriptum, że masz rację.
+
+00:12:21.280 --> 00:12:28.820
+I na tym etapie powiem, że po kryzysie i bardzo podobnym do tego, co tu zrobiliśmy, tak naprawdę zamierzam to skopiować
+
+00:12:28.820 --> 00:12:30.170
+i wkleić, aby
+
+00:12:35.610 --> 00:12:37.070
+było to trochę mniejsze.
+
+00:12:37.170 --> 00:12:42.220
+Odwołuje się do sekretu Salli postscriptu zamiast do localhost.
+
+00:12:42.240 --> 00:12:47.460
+Będzie odwoływać się do postscripts port 5:43 do inteligentnego mózgu.
+
+00:12:47.530 --> 00:12:55.820
+Dr. teraz wszystko, co muszę zrobić, to zapisać to wróć na serwer i
+
+00:12:56.090 --> 00:13:01.250
+zignoruj wszystkie te rzeczy, a zamiast tego usuń to, ponieważ możemy po prostu to zrobić.
+
+00:13:01.340 --> 00:13:04.630
+I post postscripts.
+
+00:13:04.970 --> 00:13:10.770
+Masz rację dla unikalnego identyfikatora zasobu.
+
+00:13:10.980 --> 00:13:17.060
+I jeśli uratowałbym to, otwórz
+
+00:13:19.890 --> 00:13:28.050
+nasz terminal ponownie, sprowadźmy wszystko i zacznijmy ponownie.
+
+00:13:28.110 --> 00:13:33.790
+Jesteśmy teraz połączeni z tą bazą danych i wszystko powinno działać.
+
+00:13:33.960 --> 00:13:34.820
+Bardzo fajny.
+
+00:13:34.830 --> 00:13:37.950
+Właśnie połączyliśmy nasze dwie aplikacje.
+
+00:13:38.080 --> 00:13:42.000
+Teraz czas sprawdzić, czy to wszystko działa z naszą aplikacją.
+
+00:13:42.040 --> 00:13:43.360
+Do zobaczenia w następnym wideo.
+
+00:13:43.520 --> 00:13:43.700
+Buh-Bye.

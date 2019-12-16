@@ -1,0 +1,91 @@
+﻿WEBVTT
+
+00:00:01.740 --> 00:00:05.400
+Am vrut să adaug o notă rapidă în scrisul clientului.
+
+00:00:05.580 --> 00:00:07.860
+Știu că mi-am periat problema.
+
+00:00:07.860 --> 00:00:09.870
+Dar aici este ideea generală.
+
+00:00:09.870 --> 00:00:16.920
+Partea clientului de rutare se întâmplă atunci când un traseu este gestionat intern de javascript care este încărcat pe
+
+00:00:16.920 --> 00:00:17.590
+pagină.
+
+00:00:17.940 --> 00:00:22.620
+Deci, asta e ceva ce vom vedea mai târziu în cursul când lucrăm cu
+
+00:00:22.620 --> 00:00:23.970
+aplicația creierului nostru inteligent.
+
+00:00:24.240 --> 00:00:28.830
+Și așa funcționează cele mai multe dintre aplicațiile de pe partea clientului.
+
+00:00:28.830 --> 00:00:34.860
+Ne ocupăm de rutare cu javascript, deoarece acum folosim randarea de pe server ca vechile pagini
+
+00:00:34.860 --> 00:00:39.080
+web care îndeplinesc o solicitare de fiecare dată în browser.
+
+00:00:39.090 --> 00:00:46.260
+De fiecare dată când regula modifică starea aplicației noastre se va schimba și ea.
+
+00:00:46.260 --> 00:00:52.410
+Acum, diferența principală dintre randarea de pe partea clientului și randarea pe partea de server este aceea că, în
+
+00:00:52.410 --> 00:00:56.850
+cazul redării pe partea clientului, nu este necesar să actualizați întreaga pagină.
+
+00:00:56.940 --> 00:01:01.640
+Să ne întoarcem la exemplul nostru dacă am doar o etichetă.
+
+00:01:01.680 --> 00:01:03.180
+Deci, să comentăm acest lucru.
+
+00:01:04.450 --> 00:01:08.500
+Și voi elimina comentariul din e-tag-ul nostru.
+
+00:01:08.580 --> 00:01:11.490
+Deci, acest lucru face acum redarea de la server.
+
+00:01:11.610 --> 00:01:20.170
+Dacă mă întorc la pagina mea, voi reîmprospăta și dacă dau clic pe pagina Despre veți vedea un bliț.
+
+00:01:20.200 --> 00:01:20.880
+Acolo te duci.
+
+00:01:21.070 --> 00:01:28.330
+Și, de asemenea, vedeți că toate aceste solicitări au fost făcute pentru a obține pagina Despre întreaga pagină web
+
+00:01:28.330 --> 00:01:30.690
+sau întreaga pagină a fost reîncărcată.
+
+00:01:32.320 --> 00:01:37.240
+Și dacă mă întorc din nou același lucru, care este rendering partea de server.
+
+00:01:37.280 --> 00:01:40.090
+Acum, dacă folosesc eticheta
+
+00:01:43.160 --> 00:01:53.550
+de link și să comentăm acest lucru din nou și salvez aici dacă actualizez încărcarea inițială totul.
+
+00:01:53.550 --> 00:02:03.120
+Dar acum, dacă fac clic pe Despre, veți vedea că numai o parte a paginii care este infectată devine încărcată.
+
+00:02:03.120 --> 00:02:11.430
+În cazul nostru, este fișierul despre Dot js și dacă ne întoarcem din nou pentru că fișierul nostru indexat js js a fost deja
+
+00:02:11.430 --> 00:02:13.980
+încărcat, nu îl veți vedea nicăieri aici.
+
+00:02:14.000 --> 00:02:17.130
+Și dacă mă duc din nou, totul este deja încărcat.
+
+00:02:17.280 --> 00:02:20.080
+Deci nu trebuie să ne întoarcem din nou la server.
+
+00:02:20.100 --> 00:02:23.590
+Este ceva foarte frumos, care vine cu accesul următor.

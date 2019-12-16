@@ -1,0 +1,355 @@
+﻿WEBVTT
+
+00:00:01.860 --> 00:00:10.290
+Wszystkie firmy przechowują dane z prostego księgi małej firmy, może nawet w dzienniku lub na kartce papieru,
+
+00:00:10.290 --> 00:00:17.650
+dwie potężne firmy, takie jak Amazon, które potrzebują komputerów do przechowywania petabajtów danych.
+
+00:00:17.760 --> 00:00:25.950
+Teraz, aby przechowywać te informacje, prawie każda firma, a czasami ludzie potrzebują czegoś, co nazywa
+
+00:00:25.950 --> 00:00:27.870
+się bazą danych.
+
+00:00:27.990 --> 00:00:31.960
+W ostatniej sekcji zobaczyliśmy, jak trudno jest mieć nasz serwer.
+
+00:00:32.040 --> 00:00:35.760
+Zapamiętaj nowego użytkownika za każdym razem, gdy serwer się zawiesił.
+
+00:00:35.760 --> 00:00:40.090
+Zmienna zostanie zresetowana, a następnie rozpocznie się od nowa.
+
+00:00:40.410 --> 00:00:48.340
+Lub jeśli chcemy zrobić logowanie lub podpisać i sprawdzić i iterować poprzez e-maile i hasła podczas
+
+00:00:48.420 --> 00:00:51.900
+pętli przez javascript, który jest nieefektywny.
+
+00:00:52.110 --> 00:00:54.070
+Właśnie tu baza danych przychodzi na ratunek.
+
+00:00:54.960 --> 00:00:58.800
+Zapytajmy więc, czym jest baza danych.
+
+00:00:58.830 --> 00:01:01.900
+Baza danych to zbiór danych.
+
+00:01:01.990 --> 00:01:03.480
+I co rozumiemy przez dane.
+
+00:01:03.790 --> 00:01:05.670
+Istnieje wiele ich form.
+
+00:01:05.710 --> 00:01:10.180
+Mogą istnieć liczby, które mogą być datami, mogą to być skróty hasłowe.
+
+00:01:10.300 --> 00:01:17.390
+Mogą istnieć bazy danych użytkownika, które pozwalają nam organizować te dane w sposób, który
+
+00:01:17.390 --> 00:01:24.290
+jest dla nas przydatny i ułatwia zarządzanie danymi i coś z tego wyniknie.
+
+00:01:24.600 --> 00:01:29.890
+I to w skrócie nazywa się system zarządzania bazami danych lub DBMS.
+
+00:01:29.960 --> 00:01:35.060
+To zbiór programów, który pozwala nam uzyskać dostęp do baz danych i pracować z danymi.
+
+00:01:35.390 --> 00:01:47.140
+Umożliwia także kontrolowanie dostępu do użytkowników bazy danych, dzięki czemu 8 brył DBI jest czymś w tym polu, co pozwala nam
+
+00:01:47.140 --> 00:01:55.290
+na narzędzie lub oprogramowanie, które pozwala nam komunikować się z informacjami z bazy danych,
+
+00:01:55.290 --> 00:02:05.790
+które są dla nas przydatne, a także pozwala nam aktualizować wstawianie delete wyszukuje wszystko, co jest w bazie danych.
+
+00:02:05.790 --> 00:02:12.930
+I ten pomysł DBMSs zaczął nabierać kształtu w 1960 roku i teraz jest na czele wielu
+
+00:02:12.930 --> 00:02:14.080
+ekscytujących rzeczy.
+
+00:02:14.100 --> 00:02:19.760
+Istnieje cała branża Inżynierów, która po prostu pracuje z bazami danych, ponieważ jest tak ważna.
+
+00:02:21.040 --> 00:02:27.070
+Istnieją teraz dwa rodzaje DBMS, które są obecnie bardzo popularne i o których będziemy mówić w
+
+00:02:27.070 --> 00:02:27.890
+tym kursie.
+
+00:02:29.740 --> 00:02:36.070
+A te dwa typy są bardzo dobrze reprezentowane przez postscripty i Mongo DB.
+
+00:02:36.400 --> 00:02:43.150
+Porozmawiajmy o pierwszym, który jest relacyjną bazą danych i jest to prawdopodobnie najbardziej popularny, jak widać
+
+00:02:43.150 --> 00:02:44.550
+po prawej stronie.
+
+00:02:44.560 --> 00:02:49.570
+Widzisz, że wszystkie te są relacyjnymi bazami danych.
+
+00:02:49.570 --> 00:02:56.890
+Postscripts Oracle prosi cię o wszystkie serwery, o których mógłbyś słyszeć, zapytam cię.
+
+00:02:57.150 --> 00:03:03.790
+Są to wszystkie rodzaje baz danych, które mają do nich relacyjny znacznik bazy danych.
+
+00:03:04.050 --> 00:03:06.720
+A piękno z nimi jest takie, że wszystkie są do siebie podobne.
+
+00:03:06.720 --> 00:03:10.580
+Wszystkie mają ten sam standardowy format.
+
+00:03:10.590 --> 00:03:19.460
+Relacyjne bazy danych składają się z dwóch lub więcej tabel z kolumnami i wierszami.
+
+00:03:19.480 --> 00:03:27.790
+Tak więc w tym przypadku użytkownicy to podatek od nazwy tabeli i nazwy użytkownika, który tworzy nasze kolumny, a
+
+00:03:27.790 --> 00:03:31.160
+wszelkie wartości, które mają tutaj, są wierszami.
+
+00:03:31.180 --> 00:03:37.930
+Każdy wiersz reprezentuje wpis, a każda kolumna sortuje bardzo specyficzny typ informacji, taki jak adres lub
+
+00:03:37.930 --> 00:03:38.890
+numery telefonów.
+
+00:03:39.880 --> 00:03:47.960
+I wtedy relacja między tabelami i polami jest nazywana schematem w relacyjnej bazie danych.
+
+00:03:48.120 --> 00:03:55.430
+Schemat musi być jasno zdefiniowany, zanim jakiekolwiek informacje mogą zostać dodane, a jeśli jest to mylące, nie martw się, zamierzamy
+
+00:03:55.430 --> 00:03:59.110
+stworzyć te bazy danych, więc ma to dla ciebie sens.
+
+00:03:59.450 --> 00:04:05.420
+Gdybyśmy mieli Twittera na przykład, zobaczylibyśmy typy stołów, które mielibyśmy i jak
+
+00:04:05.420 --> 00:04:07.080
+byśmy je uporządkowali.
+
+00:04:07.190 --> 00:04:15.350
+Mielibyśmy użytkownika stabilnego tabelę tweet w poniższej tabeli i możemy połączyć wszystkie te informacje.
+
+00:04:15.360 --> 00:04:23.160
+Na przykład łącząc różne części tabeli, na przykład nazwa użytkownika będzie taka sama
+
+00:04:23.160 --> 00:04:27.500
+w tabeli Użytkownicy, jak w tabeli tweetów.
+
+00:04:27.510 --> 00:04:37.470
+W ten sposób możemy powiedzieć, że nazwa użytkownika i tabela tweetów jest obcym kluczem nazwy użytkownika w
+
+00:04:37.470 --> 00:04:46.040
+tabeli Użytkownicy, a następnie od użytkownika będzie kluczem obcym nazwy użytkownika i poniższej tabeli.
+
+00:04:46.060 --> 00:04:56.350
+Teraz rzeczy, takie jak imię i nazwisko lub identyfikator, które identyfikują każdy wiersz w tabeli, są nazywane kluczem
+
+00:04:57.010 --> 00:05:01.890
+podstawowym, a my przejdziemy dalej w tej sekcji.
+
+00:05:01.890 --> 00:05:07.080
+W porządku, więc wszystkie te bazy danych dowiemy się o skrypcie postscriptowym, ale wszystkie są prawie takie
+
+00:05:07.080 --> 00:05:07.620
+same.
+
+00:05:07.620 --> 00:05:14.760
+Więc kiedy już wiesz, że dość łatwo jest odebrać pozostałe, jak faktycznie komunikują się z serwerem
+
+00:05:15.610 --> 00:05:22.030
+za pomocą studni Bakken, wszystkie relacyjne bazy danych używają czegoś, co nazywa się
+
+00:05:26.460 --> 00:05:34.500
+Eskew, a Escudero pozwala nam komunikować się tak, jak CTP między frontem a Bakhit z Eskewem lub jesteśmy
+
+00:05:34.500 --> 00:05:43.080
+w stanie komunikować się z bazą danych i modyfikować lub otrzymywać lub aktualizować, gdzie tylko chcemy, a także będziemy
+
+00:05:43.080 --> 00:05:45.570
+mieli wideo na ten temat.
+
+00:05:45.570 --> 00:05:49.760
+W porządku, więc to relacyjne bazy danych.
+
+00:05:49.760 --> 00:05:51.700
+A co z drugim typem.
+
+00:05:51.760 --> 00:05:58.440
+Drugi typ nazywany jest nierelacyjną bazą danych lub nie ma ratunkowej bazy danych.
+
+00:05:58.960 --> 00:06:04.960
+I znów istnieje wiele różnych rodzajów baz danych o kilku fajnych nazwach, takich jak Koshti
+
+00:06:04.960 --> 00:06:06.650
+i hiper table.
+
+00:06:06.760 --> 00:06:12.760
+Teraz mongo D-B lub nierelacyjna baza danych pozwala na zbudowanie aplikacji bez konieczności definiowania
+
+00:06:12.760 --> 00:06:14.840
+schematu w pierwszej kolejności.
+
+00:06:14.920 --> 00:06:26.340
+W przeciwieństwie do relacyjnej bazy danych, jeśli wracamy do relacyjnej bazy danych, ten schemat lub te tabele muszą być w pewnym
+
+00:06:26.430 --> 00:06:27.680
+stopniu predefiniowane.
+
+00:06:27.690 --> 00:06:35.860
+Musimy wiedzieć, w jaki sposób nasza aplikacja będzie wyglądać tak, aby te tabele, aby aplikacja była
+
+00:06:35.880 --> 00:06:44.910
+publicznie dostępna, możemy rozpocząć wprowadzanie informacji o użytkownikach oraz tweetów i obserwatorów bez ratowania wszystkich lub nierelacyjnych baz danych.
+
+00:06:44.970 --> 00:06:51.660
+Nie możemy tak po prostu zdefiniować tego, jak idziemy, i wszyscy mają różne sposoby przechowywania tych informacji, więc każdy z
+
+00:06:51.660 --> 00:06:53.180
+nich jest bardzo inny.
+
+00:06:53.430 --> 00:06:58.590
+I jest to kolejny ważny powód, aby korzystać z nierelacyjnych baz danych,
+
+00:06:58.590 --> 00:07:05.880
+jeśli twoje wymagania dotyczące danych nie są jasne na początku twojego projektu i może masz masę danych o
+
+00:07:05.880 --> 00:07:11.350
+strukturze, możesz nie mieć luksusu tworzenia relacyjnej bazy danych z jasno określony schemat.
+
+00:07:11.460 --> 00:07:18.330
+Oferują one zamiast tego większą elastyczność w tym, że nierelacyjna baza danych jest bardziej podobna do folderów, które
+
+00:07:18.330 --> 00:07:21.160
+po prostu gromadzą powiązane informacje wszystkich typów.
+
+00:07:22.290 --> 00:07:26.470
+Brak Mongo D-B to coś, co nazywa się dokumentem.
+
+00:07:26.550 --> 00:07:31.690
+Przechowuje informacje jako dokumenty.
+
+00:07:31.700 --> 00:07:33.490
+Pozwól mi zilustrować ten punkt dla ciebie.
+
+00:07:33.650 --> 00:07:37.110
+Mam tutaj mój pulpit z dwoma folderami.
+
+00:07:37.490 --> 00:07:40.020
+Jedna to naprawdę relacyjna baza danych.
+
+00:07:40.280 --> 00:07:48.860
+I tutaj mam użytkowników tweetów na profilu i możesz myśleć o relacyjnych bazach danych z tego typu pamięcią,
+
+00:07:48.860 --> 00:07:56.480
+gdzie ten folder mieszka gdzieś na komputerze, który przechowuje te informacje i kiedy tylko potrzebujemy poprosić
+
+00:07:56.480 --> 00:08:02.540
+bazę danych o coś, gdy złapiemy użytkowników i jeśli chcemy również pobrać
+
+00:08:02.540 --> 00:08:09.620
+tweety użytkownika, który nas interesuje, a następnie znaleźć tweety użytkownika, którym jesteśmy zainteresowani, za
+
+00:08:09.620 --> 00:08:17.450
+pomocą klucza obcego, który łączy się z użytkownikami, ale możemy również znaleźć wielu obserwujących, które posiada
+
+00:08:17.480 --> 00:08:18.470
+użytkownik.
+
+00:08:18.620 --> 00:08:22.730
+Pobieramy te informacje i wyświetlamy je
+
+00:08:25.430 --> 00:08:34.230
+na naszej stronie internetowej Mongo D-B, z drugiej strony każdy z nich będzie miał dokument.
+
+00:08:34.240 --> 00:08:36.950
+Więc jeśli chcę złapać pierwszego użytkownika.
+
+00:08:37.360 --> 00:08:43.930
+Cóż, po prostu łapię ten dokument i ma on wszystkich obserwatorów, tweety, których profil znajduje
+
+00:08:43.930 --> 00:08:53.260
+się w tym jednym dokumencie, a być może myślisz, że Mongo D-MI wygląda na lepszy wybór niż ten sposób robienia rzeczy
+
+00:08:53.260 --> 00:08:54.330
+w porządku.
+
+00:08:55.510 --> 00:08:59.950
+To zależy od twoich potrzeb i dlatego baza danych jest tak złożonym tematem.
+
+00:08:59.980 --> 00:09:02.410
+To naprawdę zależy od twojej sytuacji.
+
+00:09:02.440 --> 00:09:08.620
+Możesz zobaczyć ten sposób Mongo D-B będąc bardzo przydatnym, jeśli masz coś w rodzaju profilu, który może być połączony
+
+00:09:08.620 --> 00:09:09.390
+w profilu.
+
+00:09:09.580 --> 00:09:15.340
+Ale jeśli potrzebujesz czegoś, w czym pracujesz, to podążaj za danymi lub po prostu wysyłaj tweety
+
+00:09:15.360 --> 00:09:18.980
+z tweetami, które chcesz zobaczyć, jaki jest średni rozmiar tweeta.
+
+00:09:19.100 --> 00:09:25.480
+Łatwo jest po prostu pobrać ten plik i obliczyć, że w porównaniu do tego, w jaki
+
+00:09:25.480 --> 00:09:28.750
+sposób trzeba go wyodrębnić z każdego z użytkowników.
+
+00:09:28.960 --> 00:09:30.740
+Więc to naprawdę zależy od twoich potrzeb.
+
+00:09:31.940 --> 00:09:37.360
+Michelle ci inny schemat, który może być przydatny.
+
+00:09:38.860 --> 00:09:44.900
+Kiedy patrzymy na relacyjne i nierelacyjne bazy danych, możesz myśleć o relacyjnych jako.
+
+00:09:44.980 --> 00:09:54.190
+Każda tabela zawiera blok blokujący tag blokujący komentarz blokowy i łączy stajnie, aby przekazać informacje o blogu, a nie
+
+00:09:54.970 --> 00:10:02.110
+relacyjne, które przechowują cały wpis blokowy we wpisie i zawierają komentarze kategorii podatkowych i wszystkich
+
+00:10:02.530 --> 00:10:05.700
+innych powiązanych danych w jednym miejsce.
+
+00:10:05.890 --> 00:10:08.690
+Więc co Mongo DB używa do komunikacji.
+
+00:10:09.390 --> 00:10:16.080
+Jeśli wrócimy do naszego przykładu tutaj, poprosiliśmy was wszystkich o relacyjne bazy danych, takie jak postscript.
+
+00:10:16.170 --> 00:10:26.710
+Mongo D-B ma swój własny język, który nazywamy językiem zapytań i jest to tylko język zapytań Mongo D-B, ale oba mają na
+
+00:10:31.640 --> 00:10:33.640
+celu to samo.
+
+00:10:33.650 --> 00:10:40.010
+Oznacza to, że komunikacja z bazą danych zapewnia łatwy sposób komunikacji serwera z
+
+00:10:40.010 --> 00:10:41.550
+bazą danych.
+
+00:10:41.760 --> 00:10:46.230
+W tej sekcji będziemy o tym rozmawiać, a my w końcu
+
+00:10:46.800 --> 00:10:51.460
+połączymy kropki i pokażemy moc baz danych po ich podłączeniu do serwera.
+
+00:10:51.510 --> 00:10:53.020
+Zobaczę w następnym.
+
+00:10:53.300 --> 00:10:53.550
+Lecz przez.

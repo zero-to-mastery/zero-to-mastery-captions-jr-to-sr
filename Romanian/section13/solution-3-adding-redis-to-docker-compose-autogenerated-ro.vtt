@@ -1,0 +1,190 @@
+﻿WEBVTT
+
+00:00:01.370 --> 00:00:09.200
+Sper că în exercițiul anterior, maiorul a realizat cât de uimitor este Dr. compune și cât de ușor este să
+
+00:00:09.200 --> 00:00:12.290
+instalezi ceva de genul ratt.
+
+00:00:12.290 --> 00:00:18.100
+Așadar, permiteți-mi să vă arăt cum putem seta ratt la gumbos de stoc.
+
+00:00:18.350 --> 00:00:27.590
+Dacă nu ați reușit să o faceți din nou, vom adăuga un serviciu nou adăugând mai întâi un comentariu și
+
+00:00:27.650 --> 00:00:36.350
+vom adăuga un serviciu de ratt și acest serviciu Retta va avea o imagine care ne este citită.
+
+00:00:36.360 --> 00:00:43.260
+Din fericire dr. Haab are deja o imagine roșie deja creată pentru noi, care este foarte foarte bună din partea noastră.
+
+00:00:43.410 --> 00:00:46.590
+Și apoi vrem să adăugăm și porturi.
+
+00:00:47.100 --> 00:00:49.380
+Așa că avem acces la el pe mașina noastră.
+
+00:00:49.380 --> 00:00:56.900
+Atunci când gazda noastră locală și-l vom da portul rattus implicit, care este 6 3 7 9.
+
+00:00:57.140 --> 00:01:03.890
+Și dacă începe vreodată un server de rattus, exact cum ar fi cei săraci dacă ne întoarcem aici
+
+00:01:03.890 --> 00:01:09.830
+vedem că atunci când am pornit serverul, cei săraci au fost 6 3 7 9.
+
+00:01:09.830 --> 00:01:14.450
+Bine, așa că am de gând să fac din port forwarding din nou pentru a avea acces la el pe mașina mea.
+
+00:01:15.380 --> 00:01:22.670
+Și următoarea piesă este că vrem să ne asigurăm că ne putem accesa citiți din spate și API.
+
+00:01:22.690 --> 00:01:28.060
+Deci, dacă vă amintiți că va trebui să facem legături către serviciul rattus
+
+00:01:30.730 --> 00:01:34.170
+și API-ul back-end care leagă serviciul lor.
+
+00:01:34.210 --> 00:01:39.820
+Cel mai probabil, ar trebui să-i dăm și o variabilă de mediu care este la fel ca în
+
+00:01:40.060 --> 00:01:45.940
+cazul postcriscilor în care vă oferim un ochi sau un identificator de resurse unic pentru a vă conecta la acesta.
+
+00:01:46.000 --> 00:01:47.890
+Trebuie să facem același lucru și pentru ratt.
+
+00:01:47.890 --> 00:01:56.530
+Deci, să spunem că ratt are dreptate și asta va folosi numele creat în doc sau compune.
+
+00:01:56.530 --> 00:01:59.040
+În cazul nostru, serviciul de ratus.
+
+00:01:59.050 --> 00:02:12.820
+Deci, în loc de a spune localhost sau ceva de genul asta, spunem că rattul este accesat de gazda locală, iar portul va fi 6
+
+00:02:12.820 --> 00:02:20.570
+3 7 9 și asta ar trebui să fie tot ce trebuie să facem.
+
+00:02:20.710 --> 00:02:27.520
+Acum, singurul lucru pe care trebuie să-l schimbăm acum este că ne aflăm în locul în care
+
+00:02:28.120 --> 00:02:37.900
+accesăm clientul ratt în loc să folosim gazdă nu putem doar să-i dăm doar tu ești și din nou facem același lucru ca și
+
+00:02:37.900 --> 00:02:44.030
+noi a face cu baza de date pur și simplu dăm procesul de start și
+
+00:02:45.410 --> 00:02:47.960
+postscripts ani-I, dar de data aceasta
+
+00:02:51.440 --> 00:02:56.410
+pentru clientul ratt și dorim să facem procesul dot dot rattus ai
+
+00:02:59.050 --> 00:02:59.710
+dreptate.
+
+00:03:01.390 --> 00:03:02.420
+Să salvăm asta.
+
+00:03:02.710 --> 00:03:10.290
+Și vreau să relansez tot ceea ce avem pentru a închide docul, astfel încât să se creeze acest serviciu citit.
+
+00:03:10.390 --> 00:03:11.610
+Deci, hai să mergem.
+
+00:03:11.620 --> 00:03:13.870
+Am de gând să aduc totul jos.
+
+00:03:16.900 --> 00:03:19.090
+Doar așa vom obține o stare proaspătă.
+
+00:03:19.220 --> 00:03:21.890
+Toate containerele sau toate serviciile au fost eliminate.
+
+00:03:22.070 --> 00:03:24.460
+Și o să conduc doctorul compune-te.
+
+00:03:24.580 --> 00:03:35.480
+Bill și, sperăm, dacă totul funcționează, ne-am citit acum în containerul nostru.
+
+00:03:35.490 --> 00:03:36.330
+In regula.
+
+00:03:36.330 --> 00:03:36.980
+Nu am făcut-o.
+
+00:03:37.020 --> 00:03:38.190
+Orice erori de conectare.
+
+00:03:38.190 --> 00:03:42.000
+Care este lucrul pe care vrem să-l căutăm înapoi.
+
+00:03:42.000 --> 00:03:43.550
+Vedem că acele posturi se execută.
+
+00:03:43.560 --> 00:03:49.200
+Dacă parcurg tot drumul până uite la care văd sunt roșu S serviciu, de asemenea.
+
+00:03:49.530 --> 00:03:53.510
+Este gata să accepte conexiuni de conectare.
+
+00:03:53.520 --> 00:03:55.780
+Cat de tare e asta.
+
+00:03:55.800 --> 00:04:01.090
+Tocmai am adăugat postscript-urile rattus și înapoi și toate în containerul nostru.
+
+00:04:01.170 --> 00:04:05.760
+Și ați putea aminti imaginea pe care am avut-o inițial acolo unde am spus că vrem să creăm
+
+00:04:05.760 --> 00:04:08.630
+un container de medic în jurul tuturor acestor trei servicii.
+
+00:04:08.640 --> 00:04:13.620
+Și acum, lucru uimitor este că dezvoltatorii care se alătură echipei noastre nu au nevoie de îngrijorare
+
+00:04:13.710 --> 00:04:17.390
+cu privire la post-script-uri sau retestări sau chiar la backend-ul API.
+
+00:04:17.430 --> 00:04:27.280
+Totul ruleaza cu un singur comentariu si celalalt lucru interesant este ca daca ma intorc aici
+
+00:04:27.280 --> 00:04:36.750
+si in loc sa citesc pe masura ce intram in proiectul nostru, care este API-ul creierului
+
+00:04:36.840 --> 00:04:49.350
+inteligent de aici, pot accesa serverul rattus care este in containerul nostru prin rularea lui Dakar compose executa ratt și apoi
+
+00:04:49.410 --> 00:04:51.860
+rulează rattus CLIA.
+
+00:04:52.090 --> 00:04:53.010
+Uită-te la asta.
+
+00:04:53.310 --> 00:05:00.400
+Putem să vă conectăm la citirea unui server și să facem orice solicitare pentru a verifica dacă lucrurile se află în baza noastră
+
+00:05:00.400 --> 00:05:01.140
+de date.
+
+00:05:01.930 --> 00:05:03.910
+Foarte foarte rece.
+
+00:05:03.910 --> 00:05:09.640
+Sper că ați reușit să ajungeți la acest punct și să vă adresați medicului nostru, deoarece acum putem
+
+00:05:09.640 --> 00:05:11.320
+face unele lucruri foarte interesante.
+
+00:05:11.350 --> 00:05:19.400
+Vom reuși în cele din urmă să ne întoarcem la site-ul nostru în J. S. și păstrați tokinul nostru în sesiunea de
+
+00:05:19.400 --> 00:05:23.760
+creare aici, putem stoca tokenul nostru în baza noastră de date re-editare.
+
+00:05:23.900 --> 00:05:26.190
+O să facem asta în următorul videoclip.
+
+00:05:26.260 --> 00:05:27.250
+O să văd asta.

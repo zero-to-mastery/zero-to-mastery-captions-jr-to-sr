@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.320 --> 00:00:02.460
+Witamy spowrotem.
+
+00:00:02.460 --> 00:00:08.520
+Mamy testy do pracy i teraz wyszukiwarka Google działa całkiem nieźle.
+
+00:00:08.520 --> 00:00:10.750
+Jestem z tego całkiem zadowolony.
+
+00:00:10.980 --> 00:00:12.460
+I myślę, że możemy iść dalej.
+
+00:00:12.750 --> 00:00:22.500
+Stwórzmy skrypt z ostrzeżeniem i być może bardziej realistyczną lub trudniejszą funkcję do testowania.
+
+00:00:22.550 --> 00:00:31.400
+Zamierzam po prostu dodać nowy plik i wywołać ten skrypt, aby uniknąć Tak i zdecydowanie chcemy napisać dla niego kilka
+
+00:00:31.400 --> 00:00:32.170
+testów.
+
+00:00:32.180 --> 00:00:36.260
+Ale na razie napiszmy tylko o naszej funkcji i co zamierzamy zrobić.
+
+00:00:37.560 --> 00:00:44.660
+Teraz jednym z trudniejszych testów do napisania i czymś, o czym możesz pomyśleć, są testy synchroniczne.
+
+00:00:44.830 --> 00:00:52.140
+Mam na myśli teraz, że dzięki wyszukiwarce Google możemy skopiować to z praktycznie dowolną funkcją i możesz zobaczyć,
+
+00:00:52.800 --> 00:00:56.050
+dlaczego czyste funkcje są tak dobre do przetestowania.
+
+00:00:56.070 --> 00:00:58.020
+Chodzi mi o to, że właśnie testujesz funkcję.
+
+00:00:58.110 --> 00:01:05.030
+Dodajesz tylko losowe dane wejściowe i upewniasz się, że wyniki są zgodne z oczekiwaniami.
+
+00:01:05.040 --> 00:01:12.090
+Bardzo ładne i proste, a wszystkie są po prostu synchronicznymi, ładnymi testami, ale w rzeczywistości najprawdopodobniej mamy
+
+00:01:12.840 --> 00:01:16.770
+wywołania fecche lub wywołania API, które są asynchroniczne.
+
+00:01:16.800 --> 00:01:18.930
+Jak testujemy dla nich.
+
+00:01:18.930 --> 00:01:23.940
+W tym filmie zajmiemy się tym ćwiczeniem.
+
+00:01:23.940 --> 00:01:31.000
+Zamierzam użyć API, które naprawdę przypominają Swaby. Tak, to skrót od Gwiezdnych wojen
+
+00:01:31.120 --> 00:01:32.170
+API.
+
+00:01:32.170 --> 00:01:34.200
+To nic nie kosztuje i jest niesamowite.
+
+00:01:34.240 --> 00:01:36.280
+Polecam to również w drugim kursie.
+
+00:01:36.280 --> 00:01:39.930
+Więc niektórzy ludzie mogą się z tym zapoznać, ale tak, to jest świetne.
+
+00:01:39.930 --> 00:01:46.600
+Możesz zobaczyć tutaj, że możesz poprosić Planetes, abyś mógł poprosić ludzi, których możesz zażądać od
+
+00:01:46.630 --> 00:01:47.550
+Gwiezdnych wojen.
+
+00:01:47.650 --> 00:01:49.570
+Tak, super.
+
+00:01:49.600 --> 00:01:59.050
+Korzystając z interfejsu API Gwiezdnych wojen, widać, że jest to punkt końcowy, w którym możemy uzyskać tę samą odpowiedź.
+
+00:01:59.050 --> 00:02:10.150
+Stwórzmy małą, małą funkcję, której możemy użyć, abyśmy mogli przetestować teraz pobieranie w nie, to nie zadziała, ponieważ jeśli
+
+00:02:10.480 --> 00:02:18.360
+pamiętasz, pobieranie jest zaimplementowane przez przeglądarkę i znajduje się na obiekcie okna.
+
+00:02:18.480 --> 00:02:22.410
+Ale w węźle nie ma czegoś takiego jak obiekt okna.
+
+00:02:22.530 --> 00:02:24.400
+Więc nie ma okna.
+
+00:02:24.510 --> 00:02:25.620
+Sprowadzać.
+
+00:02:25.650 --> 00:02:29.190
+W tym celu musimy zainstalować coś, co nazywa
+
+00:02:31.740 --> 00:02:36.700
+się pobieraniem węzłów i istnieje kilka innych bibliotek, z których mogą korzystać.
+
+00:02:36.700 --> 00:02:40.830
+Możesz pobierać połączenia z węzła, ale trzymajmy się tego na razie.
+
+00:02:42.250 --> 00:02:52.110
+W ten sposób możemy teraz pobrać w węźle i ponownie zaimportować go w zwykły sposób, ponieważ import i eksport
+
+00:02:52.110 --> 00:02:55.610
+nie są jeszcze dostępne w węźle.
+
+00:02:55.890 --> 00:02:58.320
+A następnie po prostu zaimportuj węzeł
+
+00:03:02.180 --> 00:03:03.540
+do końca tutaj.
+
+00:03:03.540 --> 00:03:14.630
+Zróbmy z Konstem ludzi z Gwiezdnych Wojen i załóżmy, że to otrzyma Fach.
+
+00:03:14.670 --> 00:03:20.430
+Pamiętaj, że robimy tu zastrzyk zależności, abyśmy mogli je przetestować, możemy przetestować to tak dobrze i
+
+00:03:20.430 --> 00:03:22.640
+łatwo, jak to tylko możliwe.
+
+00:03:23.080 --> 00:03:29.850
+I tutaj nie możemy powiedzieć, że wrócimy.
+
+00:03:30.150 --> 00:03:38.790
+Wiem, że wiem, że jest to trochę zbędne, ponieważ nie moglibyśmy mieć wkładu i mamy fachowców, ale to pokazuje, że
+
+00:03:38.830 --> 00:03:45.800
+myślę, że zastrzyk uzależnienia jest naprawdę dobry i nie jest to coś, co koniecznie trzeba zawsze
+
+00:03:45.800 --> 00:03:51.350
+robić, ale do tego celu pomyśl, że jest to dobry sposób na
+
+00:03:51.350 --> 00:03:54.010
+zaznajomienie się z zastrzykiem zależności.
+
+00:03:54.060 --> 00:03:58.950
+Będziemy mieć interfejs API Gwiezdnych Wojen Wróćmy do
+
+00:04:01.540 --> 00:04:10.070
+tego, co mieli, i skopiujmy to i powiedzmy, że chcemy poprosić o API ludzi.
+
+00:04:10.390 --> 00:04:15.490
+A jeśli pamiętasz, zawsze musimy wykonać naszą klasyczną odpowiedź Dadds
+
+00:04:18.960 --> 00:04:23.590
+Then, a następnie uruchomić metodę Jaisona w odpowiedzi.
+
+00:04:25.370 --> 00:04:32.310
+I wreszcie mamy nasze dane, które będą ludźmi, którzy powrócą.
+
+00:04:32.330 --> 00:04:40.100
+Powiedzmy, że tutaj właśnie zwrócimy obiekt, który się liczy, ponieważ jeśli przejdziemy
+
+00:04:40.100 --> 00:04:49.370
+do ludzi tutaj, ponieważ chcemy uzyskać wszystkie postacie, otrzymamy zmienną liczby wszystkich znaków w interfejsie
+
+00:04:49.380 --> 00:04:54.590
+API, więc zróbmy to i powiemy, że liczymy.
+
+00:04:54.660 --> 00:04:58.070
+I faktycznie to powinny być dane na ten temat.
+
+00:04:59.230 --> 00:05:07.780
+A potem zrobimy wyniki, że będziemy mieli wyniki Daut, które będą miały wszystkich
+
+00:05:07.780 --> 00:05:13.080
+ludzi w tablicy i każdej osoby w obiekcie.
+
+00:05:13.090 --> 00:05:14.710
+W porządku, oszczędzajmy to.
+
+00:05:14.730 --> 00:05:22.800
+I chcę się upewnić, że to działa, więc po prostu zrobimy dialog konsoli, aby przyciągnąć ludzi i przekazać im
+
+00:05:22.800 --> 00:05:23.990
+pierwszą funkcję.
+
+00:05:24.110 --> 00:05:30.140
+Mam zamiar zaoszczędzić, a po prostu uruchom węzeł, pozwól mi to wyjaśnić na razie.
+
+00:05:30.390 --> 00:05:38.520
+I właśnie dlatego, że jest to synchroniczny i ładniejszy sposób robienia tego, właśnie tu
+
+00:05:39.090 --> 00:05:45.300
+konsola loguje dane, zapisuje i uruchamia skrypt NPM, aby uniknąć.
+
+00:05:45.320 --> 00:05:46.060
+Tak.
+
+00:05:47.570 --> 00:05:54.040
+Musimy trochę poczekać, ale widzisz tutaj, że mamy wszystkie postacie z
+
+00:05:54.060 --> 00:05:57.750
+hrabią 87 i mamy Luke'a Skywalkera.
+
+00:05:57.950 --> 00:05:58.630
+Co jeszcze mamy.
+
+00:05:58.630 --> 00:06:01.250
+Zobacz Threepio R2-D2.
+
+00:06:01.460 --> 00:06:02.550
+Wszystkie główne koty.
+
+00:06:02.570 --> 00:06:03.740
+Niesamowite.
+
+00:06:03.800 --> 00:06:05.560
+To działa.
+
+00:06:05.950 --> 00:06:07.010
+I wiesz co.
+
+00:06:07.010 --> 00:06:12.900
+Podczas gdy jesteśmy na tym po prostu dla zabawy, ponieważ to jest obietnica.
+
+00:06:12.980 --> 00:06:17.180
+Dodajmy także wersję kodu asynchronicznego kodu, a
+
+00:06:20.470 --> 00:06:29.450
+teraz po prostu usuńmy rozmowę i po prostu zadzwońcie, żeby ludzie zaczęli korzystać z asynchronizacji.
+
+00:06:29.480 --> 00:06:34.740
+Oznacza to, że przed funkcją będziemy robić synchronizację.
+
+00:06:34.970 --> 00:06:45.630
+Teraz możemy użyć słowa kluczowego weight, więc możemy po prostu powiedzieć, że Konst get request equals czeka na pierwsze połączenie.
+
+00:06:45.830 --> 00:06:54.770
+A teraz możemy powiedzieć, że dane koncertowe są równe żądaniom
+
+00:06:59.870 --> 00:07:03.470
+wagowym, które są najgorsze.
+
+00:07:03.700 --> 00:07:12.040
+A teraz możemy usunąć psa i zachować wszystko w taki sposób, w jaki go mieliśmy.
+
+00:07:12.040 --> 00:07:16.780
+Pozwolę sobie dodać średniki i po prostu zmniejszmy je, abyś mógł lepiej widzieć i
+
+00:07:20.220 --> 00:07:21.540
+możemy przenieść to
+
+00:07:24.560 --> 00:07:28.330
+na tej linii, możesz sam zdecydować, co wygląda na czystsze.
+
+00:07:28.490 --> 00:07:32.330
+Ale przetestujmy to również, aby upewnić się, że to działa.
+
+00:07:32.330 --> 00:07:38.400
+Zdobądź ludzi, a dodamy pobieranie, które zamierzamy zapisać.
+
+00:07:38.400 --> 00:07:41.920
+I Ron NPM Whoops nie istnieje.
+
+00:07:41.960 --> 00:07:44.650
+Uruchom tutaj NPM Ron.
+
+00:07:44.940 --> 00:07:48.670
+Brak skryptu węzła do unikania.
+
+00:07:48.680 --> 00:07:51.710
+Tak, poczekaj chwilę i gotowe.
+
+00:07:51.710 --> 00:07:52.870
+Wszystko działa.
+
+00:07:55.460 --> 00:08:00.770
+Nie wiem, dlaczego zdecydowałem się pokazać to w teledysku testowym, ale jestem pewny, że
+
+00:08:00.770 --> 00:08:07.400
+ktoś na tym etapie uzna to za przydatne, by porównać obietnice i Eysenck trochę stycznej, ale wróćmy do
+
+00:08:07.400 --> 00:08:08.060
+tego.
+
+00:08:08.060 --> 00:08:13.980
+Zacznijmy teraz pisać testy dla naszego kodu asynchronicznego.
+
+00:08:14.330 --> 00:08:20.060
+Znowu pierwszą rzeczą, którą zamierzamy zrobić i zamierzam usunąć get
+
+00:08:20.060 --> 00:08:23.240
+get i logi konsoli stąd,
+
+00:08:26.120 --> 00:08:32.710
+oszczędzajmy i zamierzam stworzyć nowy plik, nazwij go skryptem do testowania kropek.
+
+00:08:32.740 --> 00:08:33.240
+Seamus
+
+00:08:36.180 --> 00:08:38.120
+i jedno chcemy zrobić kilka rzeczy.
+
+00:08:38.130 --> 00:08:45.600
+Najpierw chcemy użyć funkcji pobierania, więc potrzebujemy ponownie pobrać
+
+00:08:48.320 --> 00:09:00.650
+węzeł wymagający, ponieważ użyliśmy wtyczki zależności i potrzebujemy pobierania parametrów dla Get ludzi, a następnie
+
+00:09:00.720 --> 00:09:14.140
+potrzebujemy funkcji z interfejsu API wymiany, która zwraca ludzi do analogii powiedzmy, że potrzebujesz skryptu, aby
+
+00:09:14.140 --> 00:09:26.730
+dodgierować nas lub nie potrzebujemy GS Ale pamiętaj, ponieważ nie jest to pakiet węzła, który
+
+00:09:26.850 --> 00:09:30.350
+musimy podać ścieżce.
+
+00:09:30.360 --> 00:09:36.880
+W porządku, więc wyeksportujmy funkcję, a teraz wyeksportujmy oba te elementy.
+
+00:09:36.900 --> 00:09:44.850
+Powiemy, że moduł, który eksportuje, a my eksportujemy je do obiektu, powie "Zdobądź ludzi".
+
+00:09:44.980 --> 00:09:52.840
+Zamiast robić ludzi, aby ludzie ponownie stenografowali się z E6, ma to na celu przyciągnięcie mniejszej liczby
+
+00:09:52.840 --> 00:10:00.430
+ludzi i skłonienie ludzi do obiecywania, co jest tym samym, co ludzie, którzy dostają ludzi i
+
+00:10:00.460 --> 00:10:01.820
+wartość nieruchomości.
+
+00:10:02.440 --> 00:10:10.810
+W porządku, więc teraz tutaj mamy wolę mieć dostęp do naszych funkcji.
+
+00:10:10.820 --> 00:10:14.860
+Zróbmy sobie przerwę, aw następnym filmie zakończymy ten test.
+
+00:10:15.020 --> 00:10:16.770
+Zobaczę w tym jednym.

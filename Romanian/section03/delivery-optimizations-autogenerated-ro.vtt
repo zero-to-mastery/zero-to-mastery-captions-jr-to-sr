@@ -1,0 +1,160 @@
+﻿WEBVTT
+
+00:00:01.810 --> 00:00:08.740
+Bine ați venit înapoi până acum am vorbit despre Honey Am redus fișierele reducând dimensiunea acestor descărcări
+
+00:00:09.040 --> 00:00:14.390
+prin comprimarea imaginilor de mărire a CSX și Javascript și așa mai departe.
+
+00:00:14.860 --> 00:00:21.390
+Dar există o abordare mai fundamentală, pe lângă reducerea dimensiunii de descărcare.
+
+00:00:21.400 --> 00:00:29.130
+Să luăm în considerare, de asemenea, reducerea frecvenței de descărcare pe care omul de livrare călătoria îl vede
+
+00:00:29.130 --> 00:00:38.290
+reducerea numărului de componente pe care o pagină o cere proporțional reduce numărul de cereri TTP pe care trebuie să le facă.
+
+00:00:38.290 --> 00:00:43.840
+Acest lucru nu înseamnă că emițătorul de conținut înseamnă doar o structurare mai eficientă.
+
+00:00:44.670 --> 00:00:50.310
+Amintiți-vă că omul nostru de călătorie este obosit și că există doar unul dintre ei.
+
+00:00:52.300 --> 00:00:53.360
+Deci, haideți să aruncăm o privire aici.
+
+00:00:54.460 --> 00:01:02.950
+Cu mai puține călătorii în mod ideal în timp ce minimizăm fișierele noastre, dar de asemenea nu trimitem niciun fișier
+
+00:01:03.520 --> 00:01:04.480
+pe fir.
+
+00:01:04.780 --> 00:01:07.400
+Numai cei de care avem nevoie.
+
+00:01:07.480 --> 00:01:08.760
+Cum putem face asta?
+
+00:01:09.790 --> 00:01:18.160
+Ei bine, de exemplu, dacă utilizați bootstrap sau fundație sau ceva care vă ajută cu interfața
+
+00:01:18.850 --> 00:01:28.000
+dvs. UI și adaugă noi fișiere CSSA întrebați-vă Sunt într-adevăr necesare sau ați putea utiliza fluxbox sau ea spune
+
+00:01:28.780 --> 00:01:33.540
+grilă, care sunt excelente alternative și sunt ambii nativi.
+
+00:01:33.760 --> 00:01:37.920
+Nu trebuie să descărcați cureaua de încărcare masivă sau fișierele de fondare.
+
+00:01:38.790 --> 00:01:46.650
+La fel ca și bibliotecile javascript și Javascript, ele sunt într-adevăr convenabile, dar nu întotdeauna trebuie să luați queery Jake,
+
+00:01:46.650 --> 00:01:54.060
+de exemplu, selecția elementelor, motiv pentru care interogarea J a fost inițial atât de populară a fost mult simplificată
+
+00:01:54.060 --> 00:02:00.150
+datorită metodelor noi în javascript, cum ar fi Querrey selector ng interogare selectează toate.
+
+00:02:00.750 --> 00:02:07.710
+Și chiar avem legătura de evenimente ușurată cu atributele ADD și ascunse ale seturilor de clasă, așa mai departe și așa mai
+
+00:02:07.710 --> 00:02:08.180
+departe.
+
+00:02:09.590 --> 00:02:16.550
+Deci, dacă trebuie să folosiți o bibliotecă, găsiți bibliotecile care sunt ușoare și gândiți-vă de două ori înainte să adăugați doar
+
+00:02:16.840 --> 00:02:22.330
+un alt script sau o altă bibliotecă, doar pentru câteva animații cool pe site-ul dvs. web.
+
+00:02:22.340 --> 00:02:23.930
+În cele din urmă cu imagini.
+
+00:02:23.960 --> 00:02:27.790
+Fiți atenți și nu faceți ca site-ul dvs. să fie plin de ele.
+
+00:02:28.100 --> 00:02:34.400
+În trecut am avut câteva lucruri cum ar fi sprites în care ai avut o singură imagine și
+
+00:02:34.400 --> 00:02:42.800
+pe baza poziționării CSSA poți avea pe această singură imagine mai multe imagini care se afișează doar pe baza CSSA pe care o folosești, dar ai
+
+00:02:42.800 --> 00:02:49.280
+rata gist au doar mai puține fișiere și nu Nu-l face pe omul de livrare să muncească așa de tare.
+
+00:02:49.560 --> 00:02:55.420
+Acum trebuie să vă întrebați că nu le putem spune să transmită toate fișierele dintr-o dată.
+
+00:02:55.810 --> 00:02:57.090
+Dar ce-i mare lucru.
+
+00:02:57.900 --> 00:03:00.380
+Încă o dată viața nu este atât de simplă.
+
+00:03:00.450 --> 00:03:08.490
+Datorită protocolului DB, browserele noastre vor descărca simultan un număr maxim de fișiere setate dintr-un singur domeniu la
+
+00:03:09.030 --> 00:03:10.530
+un moment dat.
+
+00:03:10.890 --> 00:03:14.850
+Și acesta variază de la 2 la 6, în funcție de browserul dvs.
+
+00:03:15.240 --> 00:03:21.600
+Și voi lăsa o resursă pentru tine în acest videoclip pentru a vedea cât de multe cereri Max sau solicitări simultane
+
+00:03:21.600 --> 00:03:23.420
+Max pot face browserul dvs.
+
+00:03:23.700 --> 00:03:25.530
+Dar fii atent.
+
+00:03:25.530 --> 00:03:29.110
+De asemenea, are limite la dimensiunea totală pe care o poate transporta.
+
+00:03:29.130 --> 00:03:31.020
+Omul de livrare nu este Superman.
+
+00:03:31.200 --> 00:03:38.110
+Așadar, din nou, dorim să minimizăm fișierele și vrem să limităm fâșiile pe care omul de livrare le face.
+
+00:03:38.370 --> 00:03:42.020
+Deci, poate putem combina fișierele noastre CSSA într-una.
+
+00:03:42.330 --> 00:03:51.830
+Combinați fișierele noastre de javascript într-unul despre care vom vorbi despre o bătaie la un videoclip viitoare și de ce acest proces s-ar
+
+00:03:51.860 --> 00:03:53.660
+putea îmbunătăți în viitor.
+
+00:03:53.780 --> 00:03:57.480
+Dar, pentru moment, să analizăm.
+
+00:03:57.670 --> 00:04:05.530
+Când deschidem Google Chrome și introducem în super dotcom super cerem serverului câteva lucruri,
+
+00:04:06.040 --> 00:04:12.000
+dar știind ce am învățat, putem optimiza acest proces corect.
+
+00:04:12.040 --> 00:04:19.810
+Putem minimiza fișierele noastre și apoi putem limita numărul de fișiere pe care le livrăm și
+
+00:04:22.780 --> 00:04:24.950
+folosind doar metodele simple.
+
+00:04:25.090 --> 00:04:28.360
+Ați făcut deja partea dvs. web extraordinar de rapidă.
+
+00:04:28.390 --> 00:04:34.560
+Acum nu vă faceți griji că mai sunt multe de parcurs și lucrurile se vor face mai distractive.
+
+00:04:36.000 --> 00:04:40.010
+Doar pentru a ne asigura că am învățat cu adevărat aceste concepte.
+
+00:04:40.010 --> 00:04:41.790
+Am un exercițiu mic pentru tine.
+
+00:04:42.620 --> 00:04:44.610
+Așa că o să văd pe asta.

@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:01.000 --> 00:00:02.150
+Bine ai revenit.
+
+00:00:02.320 --> 00:00:09.910
+Acum, amintiți-vă cu bazele de date există 800 că fiecare dintre ele este bun pentru o anumită
+
+00:00:09.910 --> 00:00:13.340
+problemă are unele beneficii și unele contra.
+
+00:00:13.360 --> 00:00:19.860
+Acum, cu bazele de date întotdeauna doriți să vă gândiți la imaginea de ansamblu și la beneficiile acestor baze de date.
+
+00:00:19.870 --> 00:00:24.230
+În cazul nostru, știm că roșeața este stocarea în memorie.
+
+00:00:24.280 --> 00:00:27.760
+Asta înseamnă că este super super rapid pentru noi să accesăm.
+
+00:00:27.850 --> 00:00:36.010
+Putem obține valori într-adevăr foarte repede de la ea, dar are acel dezavantaj în cazul în care aceasta ia doar un instantaneu și scrie pe disc
+
+00:00:36.220 --> 00:00:40.730
+ocazional, astfel încât s-ar putea pierde unele date în cazul în care serverul coboară.
+
+00:00:41.730 --> 00:00:48.030
+Și știm că rattul este adesea folosit pentru piese mici, cum ar fi gestionarea sesiunilor sau poate chiar
+
+00:00:48.030 --> 00:00:51.210
+caching-ul unor date mici pe care le vom vorbi.
+
+00:00:51.210 --> 00:00:58.250
+Dar o altă parte a bazelor de date pe care doriți să le analizați este tipul de tipuri de date pe care le pot sprijini și pe
+
+00:00:58.250 --> 00:01:00.950
+baza acestor tipuri de date care se potrivesc nevoilor dumneavoastră.
+
+00:01:01.040 --> 00:01:04.590
+O bază de date ar putea fi bună sau proastă pentru proiectul dvs.
+
+00:01:06.160 --> 00:01:11.770
+Deci, în acest videoclip, în următoarele câteva videoclipuri, vom vorbi despre ceea ce folosesc unele dintre aceste
+
+00:01:12.450 --> 00:01:13.580
+tipuri de date.
+
+00:01:13.630 --> 00:01:21.940
+Și ce vom folosi în secțiunea viitoare privind sesiunile și JACT cel foarte de bază și dacă îți amintești că rattus
+
+00:01:21.940 --> 00:01:27.590
+este un depozit de valoare cheie, îi dăm o cheie și o valoare.
+
+00:01:28.120 --> 00:01:32.090
+Și vom reuși să accesăm acea valoare din acea cheie.
+
+00:01:32.110 --> 00:01:39.790
+Deci, permiteți-mi să vă arăt foarte comenzi de bază cu fir este de a seta și aspectul că-mi oferă deja opțiuni și, prin
+
+00:01:39.790 --> 00:01:48.160
+urmare, de Dollon acest lucru a citit un CLID ceea ce pot pune astfel încât să pot stabili cheie și valoare și unele opțiuni, de
+
+00:01:48.250 --> 00:01:48.800
+asemenea.
+
+00:01:49.570 --> 00:02:01.710
+Deci, să spunem că vreau să pun numele lui Godzilla nuci un șir, dacă apăs pe Enter, sunt OK.
+
+00:02:01.840 --> 00:02:11.350
+Acum suntem Același aici, acum pot obține acest nume ori de câte ori vreau, spunând Ia-ți numele și-l iau pe Godzilla și asta-i
+
+00:02:11.360 --> 00:02:11.960
+tot.
+
+00:02:11.960 --> 00:02:16.500
+Stocarea valorii cheie este pur și simplu că îi dai o cheie pe care o dai o valoare.
+
+00:02:16.550 --> 00:02:19.930
+Și acum putem folosi comanda get pentru a obține acea valoare înapoi.
+
+00:02:21.230 --> 00:02:23.990
+O alta comanda este sa vezi daca exista ceva.
+
+00:02:24.170 --> 00:02:27.930
+Deci, dacă o fac, există un nume.
+
+00:02:28.340 --> 00:02:34.960
+Am un singur nume și pot rula comanda de ștergere, astfel încât să pot șterge comanda nume.
+
+00:02:35.850 --> 00:02:39.280
+Acum există fibrină.
+
+00:02:39.600 --> 00:02:41.140
+Nu, nu există nume acolo.
+
+00:02:41.190 --> 00:02:43.280
+Și dacă mă cunosc.
+
+00:02:43.570 --> 00:02:46.530
+Nu, nu am absolut nimic.
+
+00:02:46.530 --> 00:02:53.810
+Înainte de a continua să continui mai multe comentarii, vreau să vă arăt că încă o dată documentația este prietenul tău.
+
+00:02:53.820 --> 00:03:00.090
+Dacă mergi la fila de documentare pe care am deschis-o aici, ei au o mulțime de resurse pentru
+
+00:03:00.090 --> 00:03:00.490
+tine.
+
+00:03:00.570 --> 00:03:04.070
+Dar cel care ne interesează este lista completă a comenzilor.
+
+00:03:04.350 --> 00:03:09.560
+Și după cum puteți vedea aici, ele vă dau o defalcare foarte bună asupra a ceea ce face totul.
+
+00:03:11.880 --> 00:03:13.390
+Deci, haideți să aruncăm o privire asupra unuia dintre acestea.
+
+00:03:13.500 --> 00:03:16.270
+Vedem că vrem să încercăm expirarea comentariului.
+
+00:03:16.890 --> 00:03:22.590
+Și dacă dau clic pe aici, se va vedea că acesta stabilește un timp de expirare a cheii după ce timpul
+
+00:03:22.590 --> 00:03:25.270
+a expirat, cheia va fi în mod automat lider.
+
+00:03:25.280 --> 00:03:25.540
+In regula.
+
+00:03:25.550 --> 00:03:28.900
+Deci, să spunem că vrem să încercăm acest lucru.
+
+00:03:29.120 --> 00:03:39.210
+Putem pur și simplu să spunem că expiră sau trebuie să setăm ceva mai întâi, așa că trebuie doar să setăm
+
+00:03:40.480 --> 00:03:51.470
+o sesiune de pronunțare și sesiunea Obi Jenny și vom spune că expirați sesiunea și câte secunde, dar să spunem că dorim să
+
+00:03:51.470 --> 00:03:54.590
+avem în 10 secunde să expire.
+
+00:03:56.630 --> 00:04:08.340
+Acum, dacă mă întâlnesc, o iau pe Gennie, aștept 10 secunde și încerc să ajung din nou la sesiune. O sesiune
+
+00:04:08.370 --> 00:04:12.300
+a dispărut pentru că am expirat.
+
+00:04:12.450 --> 00:04:13.210
+Cat de tare e asta.
+
+00:04:13.230 --> 00:04:19.980
+Din nou, fiecare bază de date are un set propriu de caracteristici și Rhetorul are această expirare frumoasă, unde puteți expira doar lucrurile
+
+00:04:19.980 --> 00:04:23.800
+care trebuie șterse din baza de date ori de câte ori doriți.
+
+00:04:23.880 --> 00:04:30.840
+Un alt instrument foarte util a fost ceva de genul sesiuni, probabil, dacă doriți să expirați
+
+00:04:31.410 --> 00:04:38.490
+o sesiune, de exemplu, a unui utilizator unde, după ce spunem o zi, trebuie să demisioneze în PO.
+
+00:04:38.550 --> 00:04:43.020
+Este un lucru ușor pe care îl putem face imediat cu X.
+
+00:04:43.170 --> 00:04:45.490
+Să încercăm încă câteva comenzi.
+
+00:04:45.630 --> 00:04:49.890
+Putem seta contra 100.
+
+00:04:49.990 --> 00:04:54.160
+Și facem doar o stocare cu valoare cheie simplă.
+
+00:04:54.210 --> 00:04:59.790
+Acum putem face o altă comandă de creștere a lui Anke.
+
+00:04:59.890 --> 00:05:06.160
+Este puțin greu să spui, dar să creștem prin faptul că îi dăm un contor de chei și
+
+00:05:06.160 --> 00:05:09.480
+vom spune 50 sau mai puțin până la 33.
+
+00:05:09.740 --> 00:05:10.320
+Uită-te la asta.
+
+00:05:10.340 --> 00:05:15.920
+Acum, contorul nostru este mărit cu
+
+00:05:20.160 --> 00:05:22.040
+33.
+
+00:05:22.050 --> 00:05:23.270
+Foarte tare.
+
+00:05:23.310 --> 00:05:31.100
+Și, după cum vă puteți imagina, există și tasta decrement sau decrement și vom documenta
+
+00:05:31.130 --> 00:05:40.620
+contorul și îl putem da, să zicem 33 și, de fapt, cu decrement, implicit, iar singura valoare implicită este
+
+00:05:40.680 --> 00:05:43.670
+aceea că recomandă doar unul.
+
+00:05:43.960 --> 00:05:50.130
+Dacă execut acest lucru, veți vedea că întregul a fost acum documentat de unul.
+
+00:05:50.150 --> 00:05:50.600
+In regula.
+
+00:05:50.690 --> 00:05:52.180
+Mai multe lucruri pentru a trece prin.
+
+00:05:52.200 --> 00:05:55.070
+Dar să luăm o pauză și vă voi vedea în următorul videoclip.

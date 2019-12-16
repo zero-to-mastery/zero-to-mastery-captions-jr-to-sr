@@ -1,0 +1,265 @@
+﻿WEBVTT
+
+00:00:01.620 --> 00:00:03.020
+Hej, wciąż jesteś w pobliżu.
+
+00:00:03.060 --> 00:00:04.880
+Dobrze cię znowu widzieć.
+
+00:00:04.890 --> 00:00:05.290
+W porządku.
+
+00:00:05.340 --> 00:00:11.550
+Więc po prostu Konsole zalogował te typy akcji, a także to zrobił.
+
+00:00:11.550 --> 00:00:12.690
+Gdzie to robimy.
+
+00:00:12.690 --> 00:00:16.260
+Zrobiliśmy to także w części akcji.
+
+00:00:16.420 --> 00:00:23.660
+Ale mam na myśli, że to miło widzieć, ale nie chcemy logować się w każdym miejscu w naszej aplikacji redux dla wszystkich
+
+00:00:23.660 --> 00:00:24.580
+naszych działań.
+
+00:00:24.800 --> 00:00:29.300
+Usuńmy to i wróćmy do sposobu, w jaki mamy rzeczy.
+
+00:00:29.390 --> 00:00:35.010
+Powiem tak, a także w reduktorze zdejmij naszą blokadę konsoli.
+
+00:00:35.340 --> 00:00:44.010
+Czy nie byłoby fajnie, gdybyśmy mogli wrócić do naszej aplikacji i nadal monitorować nasze działania i
+
+00:00:44.910 --> 00:00:52.760
+aplikacje debuggera, sprawdzając, które działanie zostało uruchomione, a które zostało zredukowane lub uruchomione.
+
+00:00:53.220 --> 00:00:56.500
+Na szczęście dla nas jest sposób na zrobienie tego.
+
+00:00:57.320 --> 00:00:58.790
+Teraz pokażę ci, jak to jest.
+
+00:00:58.790 --> 00:01:03.250
+Ale najpierw muszę przyznać, że mogłem ci trochę skłamać.
+
+00:01:03.530 --> 00:01:13.180
+Widzisz, że jest jeszcze inna część tego diagramu, która pokazuje ciebie i to jest coś, co nazywa się oprogramowaniem pośredniczącym.
+
+00:01:13.490 --> 00:01:14.360
+I nie bój się.
+
+00:01:14.360 --> 00:01:20.690
+Jest to dość proste i działa podobnie do tego, jak oprogramowanie pośrednie jest ekspresowym, niewykluczonym dziełem.
+
+00:01:21.210 --> 00:01:31.680
+Po prostu nasłuchuje działań i jest to tunel, przez który przechodzą akcje iw zależności od tego, jakie jest oprogramowanie
+
+00:01:31.680 --> 00:01:36.660
+pośrednie, może modyfikować akcję lub wywołać inną akcję.
+
+00:01:36.660 --> 00:01:44.790
+Są więc jak wyzwalacze, których działania przechodzą i coś dzieje się w tym niebieskim polu, zanim
+
+00:01:44.790 --> 00:01:46.860
+trafi w reduktor.
+
+00:01:46.890 --> 00:01:50.020
+Dlaczego więc może nam to pomóc?
+
+00:01:50.970 --> 00:01:57.820
+Pokażę ci jedną rzecz, która jest naprawdę świetna, jeśli wrócimy do indeksu Stargaze, możemy
+
+00:01:59.250 --> 00:02:05.580
+zainstalować coś, co jest oprogramowaniem pośredniczącym i nazywa się to rejestratorem redox.
+
+00:02:05.580 --> 00:02:13.140
+Zróbmy więc ten reduktor instalacji NPM dłużej.
+
+00:02:13.140 --> 00:02:13.840
+Wszystko w porządku.
+
+00:02:13.950 --> 00:02:20.850
+A sposób, w jaki używamy tego dłużej, co pomaga w logowaniu się do
+
+00:02:20.850 --> 00:02:32.010
+konsoli, dzięki czemu możemy bardzo łatwo debugować lub aplikować, możemy w tym miejscu zaimportować coś, co nazywa się "logger tworzenia", który pochodzi
+
+00:02:32.010 --> 00:02:40.020
+z właśnie zainstalowanego pakietu, który jest pakietem rejestratora Dock'a i jest bardzo bardzo prosty w użyciu.
+
+00:02:40.290 --> 00:02:49.780
+Wszystko, co musimy zrobić, to wywoływać wywołania programu Logger w celu utworzenia rejestratora.
+
+00:02:50.000 --> 00:03:01.270
+A teraz, gdy mamy tę dłuższą funkcję, która jest oprogramowaniem pośredniczącym, możemy ją zastosować do naszej aplikacji redox.
+
+00:03:01.660 --> 00:03:10.450
+A sposób, w jaki to robimy, polega na pakiecie redux, który jest dostarczany z czymś, co nazywa się aplikacją middleware i stosujemy oprogramowanie
+
+00:03:13.990 --> 00:03:19.380
+pośrednie, mówiąc: Chcielibyśmy zastosować pewne oprogramowanie pośrednie do tego strumienia, który mamy, więc
+
+00:03:21.010 --> 00:03:28.870
+możemy po prostu w funkcji tworzenia sklepu mieć sekundę parametr, który mówi, że zastosuj oprogramowanie pośrednie i daj mu dowolne
+
+00:03:28.870 --> 00:03:31.160
+oprogramowanie pośrednie, które nas interesuje.
+
+00:03:31.240 --> 00:03:39.050
+W naszym przypadku im dłużej Więc załóżmy, że idę do NPM zacznij tutaj.
+
+00:03:47.660 --> 00:03:55.330
+I sposób, w jaki tworzymy rejestrator, ponieważ jest to funkcja potrzebna do uruchomienia funkcji.
+
+00:03:55.400 --> 00:03:59.900
+Zapiszmy, nie mamy błędów w dzienniku konsoli.
+
+00:04:00.360 --> 00:04:11.900
+Ale teraz, jeśli wpiszesz coś do pudełka, zobaczysz, że właśnie wpisałem L i logger, że oprogramowanie pośrednie przyłapało moją akcję i
+
+00:04:12.050 --> 00:04:19.670
+powiedział: "Na górze tej akcji, która przejdzie do reduktora, chcę również skomponować log
+
+00:04:19.670 --> 00:04:23.000
+i to jest akcja .
+
+00:04:23.030 --> 00:04:29.600
+W związku z tym poprzednie pole wyszukiwania stanu było puste, a działanie, które podjęliśmy, zmieniło pole wyszukiwania
+
+00:04:29.960 --> 00:04:31.820
+przy użyciu ładunku piekielnego.
+
+00:04:32.180 --> 00:04:35.220
+A następnym stanem było pole wyszukiwania z teraz.
+
+00:04:35.450 --> 00:04:36.750
+Jakie to jest świetne.
+
+00:04:36.770 --> 00:04:47.400
+Mamy natychmiastowe logowanie do naszej aplikacji, a ten rejestrator pomaga nam lepiej pracować z naszym kodem.
+
+00:04:47.410 --> 00:04:55.100
+Oto fascynująca część tego, ponieważ obecnie trudno jest naprawdę powiedzieć, dlaczego jest to
+
+00:04:55.100 --> 00:04:58.620
+przydatne, a nie tylko długo.
+
+00:04:58.780 --> 00:05:07.420
+Ale uroda za pomocą reduxa jest taka, że sprawienie, by Twoja aplikacja działała, było tak proste, abyś wiedział o
+
+00:05:07.420 --> 00:05:09.290
+niej i monitorował ją.
+
+00:05:09.570 --> 00:05:15.540
+Widzisz teraz, że mamy czysty system do monitorowania.
+
+00:05:15.670 --> 00:05:26.020
+Każde z naszych działań, aby bez względu na to, ile mamy akcji, zawsze możemy przewidzieć, co zamierzają
+
+00:05:26.020 --> 00:05:26.890
+zrobić.
+
+00:05:26.920 --> 00:05:34.110
+Możemy wysłuchać, co zapisujemy w logowaniu każdego z tych działań, ponieważ reduktor jest czystą funkcją.
+
+00:05:34.210 --> 00:05:39.910
+Zawsze wiemy, że powróci to ten sam stan i ponownie, ze względu
+
+00:05:39.910 --> 00:05:48.660
+na sposób reagowania na utwory, wiemy też, że gdy tylko stan ulegnie zmianie, wprowadzimy przewidywalne zmiany w naszym widoku
+
+00:05:48.660 --> 00:05:54.090
+i za pomocą oprogramowania pośredniego jesteśmy w stanie je zarejestrować działania.
+
+00:05:54.090 --> 00:06:01.330
+Teoretycznie możemy cofnąć się w czasie i odegrać różne akcje, które grają nasi użytkownicy.
+
+00:06:02.450 --> 00:06:07.840
+Ponieważ mamy listę chronologiczną wszystkich tych działań.
+
+00:06:07.840 --> 00:06:11.840
+Teraz właśnie dlatego lubię uczyć redux.
+
+00:06:11.980 --> 00:06:15.920
+Nie dzieje się tak dlatego, że biblioteka będzie dostępna przez całą wieczność.
+
+00:06:16.000 --> 00:06:21.970
+Nie, najprawdopodobniej zostanie zastąpiony przez coś nowego przez inne narzędzia i biblioteki.
+
+00:06:22.900 --> 00:06:31.210
+Ale to naprawdę ważna biblioteka, która zmienia sposób, w jaki myślimy o budowaniu aplikacji, zamiast po prostu mieć bałagania
+
+00:06:31.210 --> 00:06:37.720
+na całym świecie i po prostu myśleć o kodzie lub o czymś, o czym po
+
+00:06:37.720 --> 00:06:43.320
+prostu namagamy i na którym bazujemy, i dodajemy różne funkcje do redux.
+
+00:06:43.330 --> 00:06:52.810
+Sprawia, że myślisz w sposób hej, w jaki sposób mogę stworzyć aplikację, która jest w stanie skalować w sposób, w którym mamy
+
+00:06:52.810 --> 00:06:55.590
+tysiące interakcji użytkownika, miliony interakcji użytkownika.
+
+00:06:55.660 --> 00:07:03.190
+Jak możemy to zrobić, aby informacje przepływały od jednego do drugiego w przewidywalny widok
+
+00:07:03.190 --> 00:07:05.480
+do przewidywalnego systemu.
+
+00:07:05.810 --> 00:07:12.970
+A jako starszy programista naprawdę chcesz pomyśleć o tym, w jaki sposób budujesz systemy, które naprawdę dobrze
+
+00:07:12.970 --> 00:07:17.300
+ze sobą współpracują i są logiczne i ładnie przepływają.
+
+00:07:17.350 --> 00:07:22.660
+I właśnie dlatego redox czerpał inspirację z projektowania baz danych, ponieważ bazy danych są podobne.
+
+00:07:22.660 --> 00:07:24.670
+Zawsze są one kosztowne.
+
+00:07:24.670 --> 00:07:32.590
+Nie ma żadnych praw i potrzebują sposobu, aby upewnić się, że zarządzają tymi wszystkimi osobami, zanurzając ręce w bazie
+
+00:07:32.590 --> 00:07:39.160
+danych i robiąc różne rzeczy, ale jednocześnie unikając błędów i błędów oraz wszystkich tych rzeczy
+
+00:07:39.160 --> 00:07:41.080
+w tym samym czasie.
+
+00:07:41.170 --> 00:07:47.920
+Jest to drobiazg, ale myślę, że ważne jest zrozumienie tego i jest to dobry sposób na przemyślenie różnych rzeczy
+
+00:07:48.190 --> 00:07:53.890
+i schematów przepływu, w jaki sposób dane przepływają przez twoją aplikację, oraz w jaki sposób powinieneś
+
+00:07:53.890 --> 00:07:56.450
+zorganizować aplikację tak, aby działała płynnie.
+
+00:07:58.170 --> 00:08:06.270
+Na koniec chcę ci pokazać inne narzędzie, które podobają mi się do rejestratora redox, ponieważ jest to proste, ale narzędzia
+
+00:08:06.290 --> 00:08:14.000
+defLx def są naprawdę bardzo dobre i używają tego pomysłu middleware do słuchania akcji i lagi dla ciebie mnóstwo
+
+00:08:14.000 --> 00:08:19.400
+interesujących rzeczy, które możesz nawet odtwarzać historie i dlaczego tak zrobiliście i aplikacji.
+
+00:08:19.400 --> 00:08:23.510
+To naprawdę bardzo dobre narzędzie, na które możesz teraz grać.
+
+00:08:24.410 --> 00:08:27.130
+Dowiedzieliśmy się o oprogramowaniu pośredniczącym.
+
+00:08:27.280 --> 00:08:34.840
+Stworzyliśmy nasz sklep i mamy pełny obraz, czy też my.
+
+00:08:34.840 --> 00:08:39.230
+Jest inna część naszej aplikacji, którą musimy zmienić w redux.
+
+00:08:39.260 --> 00:08:42.860
+Więc z tym powiedziałem, że zobaczę w następnym.

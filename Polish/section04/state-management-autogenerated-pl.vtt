@@ -1,0 +1,229 @@
+﻿WEBVTT
+
+00:00:02.040 --> 00:00:03.210
+Witamy spowrotem.
+
+00:00:03.570 --> 00:00:10.610
+Zanim zaczniemy uczyć się o redoksie, musimy porozmawiać o czymś, co nazywa się zarządzaniem państwem.
+
+00:00:10.640 --> 00:00:12.440
+Słyszeliśmy tę wojnę przed państwem.
+
+00:00:12.530 --> 00:00:13.050
+Dobrze.
+
+00:00:13.190 --> 00:00:14.690
+Podczas budowania reaktora.
+
+00:00:14.720 --> 00:00:24.300
+Ten stan i stan opisywałyśmy, jak powinna wyglądać nasza aplikacja, jeśli pamiętamy, że to ponowne
+
+00:00:27.630 --> 00:00:36.750
+działanie jest po prostu grupą komponentów, które są renderowane w strukturze podobnej do drzewa.
+
+00:00:36.840 --> 00:00:41.420
+Więc na przykład taka jest niestosowność aplikacji.
+
+00:00:41.560 --> 00:00:48.390
+I każdy z tych składników miałby na przykład takie czerwone kropki.
+
+00:00:48.700 --> 00:00:49.750
+Mają państwo.
+
+00:00:49.750 --> 00:00:57.730
+Na przykład ten składnik aplikacji będzie miał stan zalogowania się, a powiedzmy, że stanem
+
+00:00:57.730 --> 00:01:06.340
+jest użytkownik, w takim przypadku ten składnik użytkownika może mieć stan dopasowania użytkownika lub jeśli jest zalogowany.
+
+00:01:06.340 --> 00:01:14.200
+A mężczyźni mogą wyrenderować komponent administratora i za każdym razem, gdy zobaczysz niebieską kropkę, oznacza to, że nastąpiła
+
+00:01:14.200 --> 00:01:21.340
+zmiana, więc jeśli pojawi się tutaj zmiana, może zaktualizować coś do tego komponentu i wyrenderujemy.
+
+00:01:21.640 --> 00:01:31.380
+Zrobiliśmy to ponownie i chcę, żebyś myślał o stanie jako o pamięci, a aplikacja musi pamiętać
+
+00:01:31.440 --> 00:01:40.240
+rzeczy, aby działały inaczej, gdybyśmy mieli proste strony internetowe w stylu shemale, jak wcześniej.
+
+00:01:40.320 --> 00:01:43.340
+Zapamiętaj tę główną witrynę firmy Kaikohe.
+
+00:01:43.490 --> 00:01:46.940
+To naprawdę nie ma żadnego stanu.
+
+00:01:48.050 --> 00:01:57.230
+Za każdym razem, gdy wyświetlamy tę samą stronę internetową każdemu, kto jej używa, mowa nie ma pojęcia,
+
+00:01:57.230 --> 00:02:03.740
+kim jest użytkownik, ani żadnych interakcji, w których mam głównie tekst.
+
+00:02:03.810 --> 00:02:07.530
+Teraz aplikacja Robo Friends jest inna.
+
+00:02:07.680 --> 00:02:08.880
+To ma.
+
+00:02:09.330 --> 00:02:14.880
+Cóż, głównie dlatego, że to napisaliśmy i mieliśmy stan kropek, ale możemy z nim współdziałać.
+
+00:02:14.940 --> 00:02:16.450
+Mogę wpisać tutaj.
+
+00:02:17.400 --> 00:02:25.360
+Liane i ja mamy stan pola wyszukiwania z LPA.
+
+00:02:25.560 --> 00:02:36.650
+A roboty, które filtrują tylko stanem Leeanne, opisują, jak nasza aplikacja powinna wyglądać na naszej aplikacji. Nasza aplikacja Robo
+
+00:02:36.650 --> 00:02:46.520
+Friends powinna wyglądać teraz tak samo z jedną kartą robota, ponieważ stan jest w polu wyszukiwania,
+
+00:02:46.520 --> 00:02:50.540
+w którym znajdują się litery LPA.
+
+00:02:51.570 --> 00:03:00.660
+Teraz z prostą aplikacją, taką jak aplikacja Robo Friends, łatwo było zrozumieć, ale zarządzanie stanem to
+
+00:03:00.900 --> 00:03:02.780
+naprawdę trudny problem.
+
+00:03:02.880 --> 00:03:10.340
+Ponieważ nasze aplikacje stają się coraz większe, a Ty zobaczysz późniejszą część kursu, kiedy zaczniemy
+
+00:03:10.340 --> 00:03:15.180
+pracować nad inteligentną aplikacją do mózgu, która rozpoznaje obraz.
+
+00:03:16.720 --> 00:03:24.430
+Zauważysz, że stan staje się coraz bardziej skomplikowany, a twoja głowa zaczyna boleć, ponieważ musisz
+
+00:03:24.430 --> 00:03:26.770
+śledzić wszystkie te wydarzenia.
+
+00:03:28.180 --> 00:03:35.380
+Znowu dzięki prostej aplikacji do ponownego odtwarzania możemy mieć ładne widoki i być może mieć różne stany
+
+00:03:35.380 --> 00:03:39.680
+i różne komponenty, ale ostatecznie aplikacja Azara staje się większa.
+
+00:03:39.760 --> 00:03:49.150
+Kończymy z czymś takim, w którym coraz więcej składników staje się coraz bardziej stanowych w tym komponencie lub możemy mieć
+
+00:03:49.150 --> 00:03:55.540
+jeden ogromny stan na samym szczycie, który również staje się bardzo trudny i
+
+00:03:55.960 --> 00:03:59.090
+wszystkie te niebieskie kropki jako aktualizacja.
+
+00:03:59.110 --> 00:04:04.180
+Muszą również zaktualizować stan, a następnie renderować.
+
+00:04:04.380 --> 00:04:11.070
+I ten przykład tutaj jest tylko małym diagramem, ale z tymi wszystkimi strzałkami widać, jak
+
+00:04:11.070 --> 00:04:17.520
+mylące jest to, że dostaniesz i śledzenie całego tego stanu jest naprawdę trudne.
+
+00:04:17.550 --> 00:04:23.060
+Więc potrzebujemy jakiejś formy zarządzania państwem i redux.
+
+00:04:23.060 --> 00:04:25.070
+Rozwiąż ten problem dla nas.
+
+00:04:25.070 --> 00:04:32.210
+Jak możemy uprościć ten schemat i ułatwić zrozumienie w naszych głowach, ponieważ twórcy redux
+
+00:04:32.870 --> 00:04:35.060
+wymyślili nową koncepcję.
+
+00:04:36.470 --> 00:04:39.750
+Co jeśli po prostu usuniemy cały stan.
+
+00:04:39.980 --> 00:04:43.050
+Tak więc ten stan ze wszystkich składników.
+
+00:04:43.220 --> 00:04:45.390
+Co jeśli mamy tylko rekwizyty.
+
+00:04:45.620 --> 00:04:49.650
+Tak więc wszystkie te komponenty właśnie opuściły rekwizyty.
+
+00:04:50.000 --> 00:05:00.150
+A teraz stan, w którym przechowujemy go w sklepie, a sklep jest po prostu stanem, który jest tym stanem kropkowym, który
+
+00:05:00.180 --> 00:05:01.700
+miał miejsce ponownie.
+
+00:05:01.860 --> 00:05:05.960
+Ale w jednym ogromnym obiekcie, tak jak tu widzisz.
+
+00:05:06.120 --> 00:05:14.940
+Zatem jeden pojedynczy obiekt, który opisuje, jak powinna wyglądać nasza aplikacja, i wszystko, co robimy, to przekazanie tego stanu do
+
+00:05:15.300 --> 00:05:18.840
+dowolnego komponentu, który potrzebuje go jako rekwizytów.
+
+00:05:19.750 --> 00:05:30.070
+Tak więc nasz diagram wyglądający tak po prostu reagując może wyglądać tak z reduxem, w którym żaden z komponentów nie
+
+00:05:30.070 --> 00:05:32.690
+musi już utrzymywać stanu.
+
+00:05:32.860 --> 00:05:41.020
+I możemy mieć jeden masywny obiekt, który opisuje naszą całą aplikację i którykolwiek komponent potrzebuje tego wniosku, może być
+
+00:05:41.020 --> 00:05:43.440
+po prostu przekazany do niego.
+
+00:05:44.320 --> 00:05:51.670
+Wszelkie aktualizacje, które mają miejsce, przechodzą przez stan, w którym stan ulega modyfikacji,
+
+00:05:51.670 --> 00:05:59.800
+a następnie przekazujemy tę informację do komponentu, który może być mylący, bez faktycznego kodowania czegokolwiek.
+
+00:05:59.900 --> 00:06:01.010
+I wrócimy do tego.
+
+00:06:01.010 --> 00:06:02.780
+To ma sens.
+
+00:06:02.990 --> 00:06:11.230
+Ale nawet wizualnie widać, że ten schemat wygląda o wiele prostiej niż poprzedni diagram.
+
+00:06:11.240 --> 00:06:15.630
+Mamy dużo mniej strzał, a wszystko po prostu płynie ładniej.
+
+00:06:15.680 --> 00:06:20.910
+Tak więc, kiedy będziemy przeglądać filmy, będziesz lepiej zaznajomiony z tą ideą zarządzania państwem.
+
+00:06:20.930 --> 00:06:28.430
+Ale chciałem pamiętać, że właśnie to rozwiązuje redux, to biblioteka, która ułatwia zarządzanie stapami
+
+00:06:28.430 --> 00:06:34.100
+nie tylko dla reac, ale dla wszelkich narzędzi, których używamy.
+
+00:06:34.220 --> 00:06:36.810
+Po prostu dobrze się z tym pracuje.
+
+00:06:37.400 --> 00:06:44.870
+A redux rzeczywiście czerpał inspirację z projektowania baz danych z takich rzeczy, jak pozyskiwanie zdarzeń lub agresja CQ, które można
+
+00:06:45.230 --> 00:06:49.400
+przeczytać więcej na temat baz danych miał ten sam problem.
+
+00:06:49.520 --> 00:06:57.530
+Wszystkie te aktualizacje i wszystkie te zmiany miały miejsce, ale potrzebowaliśmy sposobu, aby upewnić się, że wszystkie te
+
+00:06:57.890 --> 00:07:00.950
+zmiany są zorganizowane w spójny sposób.
+
+00:07:02.120 --> 00:07:02.730
+W porządku.
+
+00:07:02.860 --> 00:07:08.580
+Cóż, przejdźmy do następnego filmu i trochę się pogłębimy za pomocą redox.
+
+00:07:08.690 --> 00:07:09.680
+Do zobaczenia w następnym.

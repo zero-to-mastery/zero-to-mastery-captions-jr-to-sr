@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.840 --> 00:00:02.740
+Bine ai revenit.
+
+00:00:02.980 --> 00:00:08.380
+Înainte de a începe cu o anumită codificare și implementare a acestui lucru, am vrut să finalizez cunoștințele
+
+00:00:08.380 --> 00:00:12.000
+noastre și înțelegerea noastră atât a cookie-urilor cât și a GW.
+
+00:00:12.430 --> 00:00:19.600
+Dacă vă deschid instrumentele de dezvoltare aici și merg la aplicație, veți vedea că în secțiunea
+
+00:00:19.600 --> 00:00:23.320
+de stocare avem ceva denumit Cookies și cookie-uri.
+
+00:00:23.320 --> 00:00:27.680
+Iată exact acele bucăți de șiruri pe care le vedeți aici.
+
+00:00:27.790 --> 00:00:32.540
+Obțineți habbe mi-a fost încredințată, astfel încât să-și amintească sesiunea noastră.
+
+00:00:32.860 --> 00:00:35.720
+Sau poate o altă bucată de date.
+
+00:00:36.040 --> 00:00:40.040
+Și dacă fac clic pe aici, voi afișa câteva dintre aceste cookie-uri.
+
+00:00:40.600 --> 00:00:44.050
+Și așa păstrăm cookie-urile în browser.
+
+00:00:44.110 --> 00:00:49.900
+Și rețineți că aceste cookie-uri nu înseamnă altceva decât o bucată de șir care ne identifică pe
+
+00:00:50.110 --> 00:00:50.960
+serverul hub-ului.
+
+00:00:51.790 --> 00:00:59.500
+Pe de altă parte, când vine vorba de JWT și sunt toate legate de acest site Web, acesta este ceea ce arata un JWT
+
+00:00:59.770 --> 00:01:04.700
+token și îl puteți vedea aici când este codificat, este doar un gabberish complet.
+
+00:01:04.810 --> 00:01:07.750
+Dar când este decodificat, are toate aceste informații.
+
+00:01:07.750 --> 00:01:09.020
+Are Hetter.
+
+00:01:09.430 --> 00:01:11.780
+Puteți vedea ce fel de algoritm am folosit.
+
+00:01:11.860 --> 00:01:13.400
+Ce tip de token este.
+
+00:01:13.600 --> 00:01:16.480
+Și aveți și sarcina utilă a informațiilor.
+
+00:01:16.480 --> 00:01:23.950
+De exemplu, dacă vroiam să-i spunem numele Andre, veți vedea că, pe măsură ce tipesc, se schimbă lucrurile aici și
+
+00:01:23.950 --> 00:01:24.460
+tokenul,
+
+00:01:27.320 --> 00:01:35.660
+astfel încât de fiecare dată când decodez acest simbol, pot pur și simplu să iau această informație, probabil, un nume de utilizator și
+
+00:01:35.670 --> 00:01:38.140
+tu vezi că semnătura este verificată.
+
+00:01:38.150 --> 00:01:46.300
+Deci, acum pot spune doar că pot să semnez și să creez acest simbol.
+
+00:01:46.520 --> 00:01:52.610
+Și pentru că acest lucru este acum verificat, pot doar să verific acest jeton și să iau aceste informații ori de câte ori
+
+00:01:52.610 --> 00:01:53.070
+doresc.
+
+00:01:54.920 --> 00:01:57.070
+Deci, vedeți aici cum este diferit de un cookie.
+
+00:01:57.110 --> 00:02:02.230
+Are înțeles aici și tu poți doar să o decodezi.
+
+00:02:02.250 --> 00:02:10.320
+Acum ați putea observa aici că pot să apuc orice JWT și să-mi lipesc aici și să iau
+
+00:02:10.470 --> 00:02:11.410
+imediat informațiile.
+
+00:02:11.730 --> 00:02:17.640
+Și acesta este motivul pentru care nu doriți în mod necesar să puneți informații sensibile în
+
+00:02:17.970 --> 00:02:26.910
+sarcina utilă deoarece oricine care are un token JWT poate veni doar pe acest site Web și va lipi codul JWT și toate vor fi
+
+00:02:27.030 --> 00:02:28.340
+decodificate din nou.
+
+00:02:28.350 --> 00:02:35.440
+Vă voi arăta modalități de a nu face acest lucru când începem de fapt să codificăm și să ne amintim cum am spus asta cu jetoanele de
+
+00:02:35.600 --> 00:02:36.740
+arme ale lui Jason.
+
+00:02:36.740 --> 00:02:38.450
+Este destul de ușor.
+
+00:02:38.810 --> 00:02:49.250
+Ei bine, cu Jason Webb pachet token tot ce trebuie să faceți este să instalați JWT și apoi în cele din urmă pur și simplu vom
+
+00:02:49.970 --> 00:02:52.610
+semna token cu orice informații dorim.
+
+00:02:52.610 --> 00:02:59.060
+În acest caz vedem că este vorba de un foo bar și de un șir
+
+00:02:59.060 --> 00:03:09.800
+secret și de fiecare dată când îl primim, pur și simplu dacă defilam în jos executați funcția de verificare și vom putea verifica și decoda tokenul.
+
+00:03:09.810 --> 00:03:10.470
+In regula.
+
+00:03:10.650 --> 00:03:15.610
+Cred că este suficient să vorbim avem nevoie pentru a începe de codificare și avem nevoie pentru a începe
+
+00:03:15.610 --> 00:03:20.000
+punerea în aplicare a sesiunilor în app noastre apuca terminalul apucați editorul dvs. de text preferat.
+
+00:03:20.160 --> 00:03:21.510
+Vom începe să codificăm.
+
+00:03:21.510 --> 00:03:23.010
+Vedeți în următorul text.

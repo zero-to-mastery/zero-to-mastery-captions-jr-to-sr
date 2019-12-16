@@ -1,0 +1,196 @@
+﻿WEBVTT
+
+00:00:01.700 --> 00:00:03.920
+Hej, tu jest Bruno.
+
+00:00:03.920 --> 00:00:06.170
+To jest absolutnie fantastyczne.
+
+00:00:06.170 --> 00:00:11.420
+Zgłosiłem niektóre z twoich ustaleń naszemu dyrektorowi generalnemu i jesteśmy przekonani, że uda nam się
+
+00:00:11.420 --> 00:00:16.770
+skalować tę firmę i zarządzać wszystkimi użytkownikami, których będziemy mieli, kiedy będziemy rosnąć i rozwijać się dalej.
+
+00:00:16.790 --> 00:00:20.450
+Naprawdę doceniam, że wykonujesz fantastyczną pracę.
+
+00:00:20.450 --> 00:00:22.010
+Hej, zrób sobie przerwę.
+
+00:00:22.010 --> 00:00:22.970
+Do zobaczenia jutro.
+
+00:00:25.050 --> 00:00:25.840
+W porządku.
+
+00:00:25.920 --> 00:00:31.250
+Właśnie zakończyliśmy cały nasz obraz optymalizacji wydajności.
+
+00:00:31.260 --> 00:00:38.190
+Chcę, abyś używał tego slajdu jako odniesienia za każdym razem, gdy ktoś cię o to prosi, lub gdy chcesz poprawić
+
+00:00:38.370 --> 00:00:39.710
+wydajność swojej aplikacji.
+
+00:00:39.810 --> 00:00:43.790
+Spójrz na to i zobacz, gdzie będziesz miał największy wpływ.
+
+00:00:43.800 --> 00:00:51.060
+Zacznij od najłatwiejszego, jeśli chodzi o minimalizowanie plików lub używanie ich, a następnie przechodzenie do bardziej
+
+00:00:51.060 --> 00:00:58.500
+skomplikowanych zadań, takich jak znalezienie najlepszego sposobu na ulepszenie krytycznej ścieżki renderowania w celu równomiernego równoważenia obciążenia.
+
+00:00:58.570 --> 00:01:08.220
+Mam nadzieję, że do tej pory dobrze się bawisz, ponieważ widzisz, że nauczyłeś się ulepszać projekty i
+
+00:01:08.280 --> 00:01:09.050
+aplikacje.
+
+00:01:09.300 --> 00:01:16.330
+Nauczyłeś się go ponownie zredagować, w jaki sposób biblioteki Front-End sprawiają, że skalowalne aplikacje
+
+00:01:16.380 --> 00:01:18.640
+Front-End działają naprawdę dobrze.
+
+00:01:19.360 --> 00:01:24.520
+Dowiedzieliśmy się również o zabezpieczaniu naszych aplikacji, czy powinniśmy używać renderowania po stronie Kline lub renderowania
+
+00:01:24.520 --> 00:01:25.520
+po stronie serwera.
+
+00:01:25.540 --> 00:01:31.480
+Oczywiście dowiedzieliśmy się o sprawdzaniu typu wydajności i pisaniu testów jednostkowych
+
+00:01:31.480 --> 00:01:39.100
+wszystkich rzeczy, które czynią nas lepszymi programistami, co poprawia oprogramowanie i sprawia, że klienci
+
+00:01:39.130 --> 00:01:41.450
+naszych szefów są zadowoleni.
+
+00:01:41.670 --> 00:01:49.340
+Nauczyliśmy się także obsługi całej architektury aplikacji, na przykład za pomocą naszej inteligentnej aplikacji mózgowej.
+
+00:01:49.410 --> 00:01:53.540
+Jesteśmy w stanie stworzyć pojedynczą aplikację strony za pomocą reagowania.
+
+00:01:53.610 --> 00:01:56.600
+Obsługiwaliśmy pliki CSSA i javascript dla shemale.
+
+00:01:56.850 --> 00:02:05.220
+Użyliśmy Ada Publius lambda do wykonywania niektórych zadań, uruchamiając dla nas proste funkcje za pośrednictwem serwerów Amazon.
+
+00:02:05.220 --> 00:02:14.070
+Użyliśmy serwera API węzła, używając Express do rozmowy, aby wyjaśnić API i uzyskać odpowiedź naszych obrazów.
+
+00:02:14.370 --> 00:02:20.680
+Używamy postscriptów do zarządzania naszą bazą danych użytkowników i informacji logowania.
+
+00:02:20.700 --> 00:02:28.410
+Wykorzystaliśmy również Pretis do szybkiego przechowywania pamięci do zarządzania naszymi sesjami i upewniliśmy się, że mamy
+
+00:02:28.410 --> 00:02:34.090
+chronione trasy, aby tylko uwierzytelnieni użytkownicy mieli dostęp do prywatnych informacji.
+
+00:02:34.410 --> 00:02:40.290
+Dowiedzieliśmy się, jak dodawać kontenery doków do całego systemu, aby uprościć życie dla nas, a nawet
+
+00:02:40.290 --> 00:02:45.940
+nauczyliśmy się S-sh w tych usługach, abyśmy mogli je debugować i sprawdzić ich dzienniki.
+
+00:02:45.990 --> 00:02:53.520
+A teraz masz lepszy obraz tego, jak możesz skalować lub ulepszać nasze aplikacje, gdy rosną i
+
+00:02:53.520 --> 00:02:55.840
+dorastają do milionów użytkowników.
+
+00:02:55.980 --> 00:03:02.130
+Możemy dodać dowolne funkcje, które są drogie lub nie chcemy zajmować się naszym serwerem
+
+00:03:02.130 --> 00:03:10.830
+czymś takim jak slamdunk o architekturze usług, w której uruchamiamy te funkcje w kontenerach na Amazon, kiedy tylko tego
+
+00:03:10.830 --> 00:03:11.580
+potrzebują.
+
+00:03:11.640 --> 00:03:14.540
+Jeśli mamy coś, co jest sezonowe, które ma wysokie szczyty.
+
+00:03:14.620 --> 00:03:17.550
+Cóż, Amazon zaopiekuje się nami.
+
+00:03:17.580 --> 00:03:23.940
+Możemy użyć czegoś takiego jak równoważenie obciążenia, aby mieć wiele serwerów API do zarządzania wszystkimi
+
+00:03:24.030 --> 00:03:26.490
+żądaniami, których używają moi użytkownicy.
+
+00:03:26.640 --> 00:03:32.940
+Możemy uruchomić te serwery w kontenerach Dakar, abyśmy mogli je wdrożyć i zreplikować na dowolnym hostowanym
+
+00:03:33.390 --> 00:03:33.970
+komputerze.
+
+00:03:35.150 --> 00:03:41.870
+Możemy ulepszyć nasze bazy danych, prawdopodobnie przechowując informacje w pamięci podręcznej i czytając nas, a nawet powielając
+
+00:03:42.110 --> 00:03:45.200
+bazy danych, dzięki czemu mamy więcej mocy.
+
+00:03:45.500 --> 00:03:51.590
+A potem mamy również aresztowania i możemy ponownie stworzyć wiele instancji rattus, aby zarządzać
+
+00:03:51.590 --> 00:03:58.470
+naszymi danymi, przechowywać informacje o naszych sesjach, a nawet przechowywać pewne buforowane informacje z baz danych.
+
+00:03:59.380 --> 00:04:05.800
+A jeśli spojrzysz na ten schemat i ma to dla ciebie sens, zobaczysz, jak
+
+00:04:05.800 --> 00:04:09.120
+można ulepszyć i ulepszyć elementy i elementy.
+
+00:04:09.340 --> 00:04:10.870
+Gratulacje.
+
+00:04:11.020 --> 00:04:15.320
+To jest coś, co robi starszy programista.
+
+00:04:15.460 --> 00:04:21.150
+Określanie przepływu architektury systemu i sprawdzanie, jak możemy go ulepszyć.
+
+00:04:21.460 --> 00:04:28.390
+Jeśli jesteś w stanie to zrobić, ludzie mogą zaufać ci, że rozwiniesz swoją aplikację, aby zarządzać skalą i poradzić
+
+00:04:28.390 --> 00:04:30.130
+sobie z rozwojem projektu.
+
+00:04:31.380 --> 00:04:32.540
+Ale o to chodzi.
+
+00:04:32.610 --> 00:04:36.870
+Jest jeszcze jeden fragment, który musimy dodać, aby uzupełnić naszą wiedzę.
+
+00:04:36.870 --> 00:04:44.040
+Nauczyliśmy się wszystkich podstawowych kroków, których potrzebujemy, aby zostać starszymi programistami i nowoczesnych technologii, z których mogą
+
+00:04:44.040 --> 00:04:45.770
+korzystać starsi programiści.
+
+00:04:46.020 --> 00:04:53.340
+Ale aby ten proces przejść do stworzenia tego całego systemu, aby upewnić się, że jesteśmy w stanie wysłać to
+
+00:04:53.340 --> 00:04:55.030
+do produkcji na żywo.
+
+00:04:55.050 --> 00:05:02.010
+Potrzebujemy czegoś, co nazywa się ciągłą integracją ciągłego dostarczania i ciągłego wdrażania.
+
+00:05:02.040 --> 00:05:07.050
+Coś, o czym dowiemy się w następnej sekcji, aby w
+
+00:05:07.530 --> 00:05:12.880
+końcu połączyć wszystko i ukończyć cały obraz starszego programisty we współczesnym wieku.
+
+00:05:12.960 --> 00:05:13.950
+Zobaczę w następnej sekcji.

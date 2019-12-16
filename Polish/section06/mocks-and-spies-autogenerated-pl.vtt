@@ -1,0 +1,436 @@
+﻿WEBVTT
+
+00:00:00.780 --> 00:00:02.310
+Witamy spowrotem.
+
+00:00:02.310 --> 00:00:09.120
+Jedną z rzeczy, które zauważyliście, jeśli naprawdę zwracacie uwagę, jest to, że te
+
+00:00:09.120 --> 00:00:17.490
+testy są na razie dobre, ponieważ interfejs API Swaby jest dość szybki i wkrótce otrzymujemy dane z powrotem.
+
+00:00:17.490 --> 00:00:20.470
+Ale wyobraźcie sobie, gdybyśmy mieli wiele takich testów.
+
+00:00:20.490 --> 00:00:28.940
+Wyobraźmy sobie, że jeśli otrzymamy nagrodę, która zwróci wiele danych, których realizacja zajmuje dużo czasu, można sobie wyobrazić, że to staje się
+
+00:00:28.940 --> 00:00:33.590
+coraz większe, dopóki nie trwa wiecznie, aby nasze testy mogły zostać uruchomione.
+
+00:00:33.590 --> 00:00:40.580
+Chodzi mi o to, że zajęło to tylko 2. 5 pięć siedem sekund, ale z coraz liczniejszymi testami
+
+00:00:40.580 --> 00:00:46.950
+wartymi coraz więcej testów asynchronicznych, że czekamy, aby uzyskać odpowiedź na dane, będzie to trwać dłużej i dłużej.
+
+00:00:47.030 --> 00:00:50.740
+A jeśli jesteśmy programistami, działamy i oszczędzamy nasze koszty.
+
+00:00:51.020 --> 00:00:57.650
+Jeśli musimy czekać kilka minut na nasze testy za każdym razem, co
+
+00:00:57.650 --> 00:01:06.200
+nas spowolni, to jak możemy to poprawić, abyśmy nie zawsze robili to fiskalnie. Możemy użyć czegoś,
+
+00:01:06.590 --> 00:01:17.820
+co nazywa się Mock ze znakiem, że możemy sfałszować funkcję i po prostu udawaj, że działa, abyśmy mogli wykorzystać te pieniądze,
+
+00:01:17.880 --> 00:01:21.260
+abyśmy mogli szpiegować zachowanie funkcji.
+
+00:01:22.160 --> 00:01:28.820
+To się nazywa pośrednio przez jakiś inny kod, a nie tylko testowanie wyjścia i
+
+00:01:28.820 --> 00:01:31.340
+oczekiwanie na zakończenie asynchronicznego kodu.
+
+00:01:31.480 --> 00:01:35.550
+I możesz stworzyć Mocka i naprawdę bardzo łatwo.
+
+00:01:35.640 --> 00:01:37.420
+Zróbmy to.
+
+00:01:37.620 --> 00:01:41.060
+Stwórzmy tutaj znak, aby przyspieszyć nasze testy asynchroniczne.
+
+00:01:42.440 --> 00:01:45.860
+Pierwszą rzeczą, którą zamierzamy zrobić, jest stworzenie większej przestrzeni.
+
+00:01:45.980 --> 00:01:52.610
+Mam zamiar ponownie stworzyć nowy test, który po prostu nazwiemy, sprawi,
+
+00:01:55.420 --> 00:02:01.990
+że ludzie zwrócą liczbę i wyniki, a tutaj zakończą.
+
+00:02:02.880 --> 00:02:04.070
+Zrobimy to samo.
+
+00:02:04.260 --> 00:02:07.080
+Drugi parametr jest funkcją.
+
+00:02:07.110 --> 00:02:09.520
+Teraz stworzymy coś interesującego.
+
+00:02:09.720 --> 00:02:18.560
+Będziemy kpić z tego pobierania, ponieważ przede wszystkim należy pobrać bibliotekę strony trzeciej.
+
+00:02:18.570 --> 00:02:26.040
+A jeśli naprawdę przetestowaliśmy kod biblioteki i sprawdziliśmy, czy otrzymaliśmy repozytorium Haab i mają testy,
+
+00:02:26.430 --> 00:02:29.460
+nie musimy sprawdzać, czy działa.
+
+00:02:29.460 --> 00:02:34.660
+Możemy założyć, że funkcja pobierania działa zgodnie z przeznaczeniem.
+
+00:02:35.010 --> 00:02:42.140
+Po prostu zróbmy fałszywe pobieranie i fałszywe pobieranie.
+
+00:02:42.470 --> 00:02:44.780
+I to będzie zmienna.
+
+00:02:44.810 --> 00:02:49.760
+Powiedzmy więc, że możemy pokrzyżować koszty i sposób, w jaki możemy to żartować.
+
+00:02:49.760 --> 00:02:55.200
+Znowu, jeśli pamiętasz, to jest coś, co pochodzi tylko z pozorowanych szpiegów i innych rzeczy.
+
+00:02:55.250 --> 00:03:02.990
+W przeciwnym razie, jeśli użyjesz czegoś takiego jak Moka, użyjesz wpisania się, ale z tym właśnie możemy po
+
+00:03:05.530 --> 00:03:10.400
+prostu wykonać funkcję z kropką czwartą i możemy zrobić coś ponownie.
+
+00:03:10.450 --> 00:03:12.630
+To wszystko znajduje się w ich dokumentacji.
+
+00:03:12.670 --> 00:03:23.530
+Możemy zrobić coś, co nazywa się fałszywą wartością zwracaną i możemy po prostu zwrócić coś tak, jakby wywoływana była ta funkcja
+
+00:03:23.530 --> 00:03:24.180
+fecche.
+
+00:03:24.370 --> 00:03:30.270
+A więc, co zwykle zwraca funkcja pobierania.
+
+00:03:30.380 --> 00:03:33.090
+Wiemy, że zwraca obietnicę.
+
+00:03:33.110 --> 00:03:36.050
+I na razie powiedzmy, że zawsze to rozwiąże.
+
+00:03:36.140 --> 00:03:40.880
+Jest to rozwiązana obietnica i wewnętrzna determinacja.
+
+00:03:41.060 --> 00:03:45.930
+Pozwól, że zrobię to w nowej linii, żebyśmy mogli widzieć to coraz lepiej.
+
+00:03:46.010 --> 00:03:47.000
+Tutaj.
+
+00:03:47.000 --> 00:03:49.590
+Człowieku, pomniejszmy to.
+
+00:03:49.670 --> 00:04:01.150
+Chcemy rozwiązać obiekt, którym jest Jason, ponieważ jeśli pamiętasz, że zawsze musimy robić kurz, to odpowiedź na
+
+00:04:01.180 --> 00:04:07.490
+Jaison, abyśmy mogli po prostu wyśmiewać to wszystko.
+
+00:04:08.570 --> 00:04:10.120
+Możemy powiedzieć, że Jason.
+
+00:04:10.280 --> 00:04:14.150
+Tak więc obiekt, który powrócimy, będzie obietnicą.
+
+00:04:14.180 --> 00:04:22.790
+Więc zamierzamy rozwiązać obietnicę za pomocą metody Jaisona, a ta metoda ponownie jest
+
+00:04:25.640 --> 00:04:26.600
+obietnicą.
+
+00:04:26.930 --> 00:04:37.620
+Znowu obiecuję i postanawiam, a ta obietnica ponownie w tej części robimy tę piosenkę Don
+
+00:04:37.620 --> 00:04:52.000
+J, a potem otrzymujemy dane, abyśmy mogli powiedzieć, że w ramach postanowienia będziemy liczyć równe 87, a wyniki będą po prostu
+
+00:04:52.000 --> 00:05:04.720
+tworzyć tablica, która mówi 0 1 2 3 4 5 Powiedzmy to i pobierzmy trochę błędu składni, naprawmy
+
+00:05:04.720 --> 00:05:05.650
+to.
+
+00:05:07.090 --> 00:05:11.270
+Mamy nieoczekiwany żeton i zapomniałem przyjechać tutaj klasycznymi
+
+00:05:14.290 --> 00:05:17.130
+przecinkami, które zawsze mnie dostają.
+
+00:05:17.280 --> 00:05:17.630
+W porządku.
+
+00:05:17.650 --> 00:05:20.370
+Teraz właśnie zaznaczyliśmy wywołanie pobierania.
+
+00:05:20.500 --> 00:05:27.670
+Zamiast tego wywoływać ludzi, obiecywać i czekać na dane i uzyskać dane lub dane.
+
+00:05:27.670 --> 00:05:34.010
+Ich wyniki były w rzeczywistości robione automatycznie, zakładając, że API działa.
+
+00:05:34.030 --> 00:05:37.690
+Możemy przetestować nasze pozostałe części funkcji.
+
+00:05:38.380 --> 00:05:47.130
+Ponownie, ponieważ jest to nadal asynchroniczne, wracamy do obietnicy, pamiętajmy, że będziemy
+
+00:05:48.660 --> 00:05:59.700
+chcieli wrócić do punktu Swaby, aby ludzie obiecali ludziom, a tutaj zamiast na feche, idziemy na spacer,
+
+00:06:00.180 --> 00:06:10.120
+kpimy z funkcji, która jest pobierz i tak podczas testowania możemy użyć wtyczki zależności, aby
+
+00:06:10.390 --> 00:06:14.790
+upewnić się, że testujemy inną funkcjonalność.
+
+00:06:14.800 --> 00:06:21.880
+Być może pamiętasz to z testów integracyjnych, ale bez zużywania wszystkich tych zasobów staramy się być tak
+
+00:06:21.880 --> 00:06:24.130
+mądry, jak to tylko możliwe.
+
+00:06:25.070 --> 00:06:31.350
+Teraz możemy mieć kropkę, a my zobaczymy dane tak, jak powyżej, tutaj, gdzie teraz
+
+00:06:34.500 --> 00:06:35.350
+słyszymy.
+
+00:06:35.370 --> 00:06:37.380
+Zróbmy kilka testów.
+
+00:06:37.530 --> 00:06:44.260
+Chcemy się spodziewać przyniesienia maake'a.
+
+00:06:44.310 --> 00:06:52.080
+Zgadza się, ponieważ użyliśmy właśnie kropki F-ed i teraz mamy możliwość słuchania, ponieważ w tym właśnie jest
+
+00:06:52.110 --> 00:06:58.170
+szpieg, możemy śledzić to i zobaczyć, co ta funkcja zrobiła wewnątrz tej funkcji.
+
+00:06:58.170 --> 00:07:01.530
+Więc to, co zrobił Mark, nie sprawiło, że ludzie obiecali.
+
+00:07:01.560 --> 00:07:06.310
+Nie mogę powiedzieć, że spodziewam się udawanego drwiącego dokumentu.
+
+00:07:06.330 --> 00:07:11.180
+Ponownie jest to w dokumentacji, aby mieć przyczynę.
+
+00:07:11.220 --> 00:07:14.330
+Ile razy to się nazywało.
+
+00:07:15.450 --> 00:07:16.440
+Zamierzam powiedzieć, że jestem.
+
+00:07:16.560 --> 00:07:24.920
+Tak więc liczba razy, kiedy została nazwana tak, abyśmy byli bezpieczni, a
+
+00:07:28.320 --> 00:07:30.000
+to mija.
+
+00:07:30.000 --> 00:07:41.120
+Ale pamiętaj, że z asynchronicznymi testami chcemy zawsze wykonywać oczekiwane asercje, aby upewnić się, że są
+
+00:07:41.120 --> 00:07:42.290
+wywoływane.
+
+00:07:42.290 --> 00:07:47.330
+W tym przypadku mamy tylko jedno, co działa.
+
+00:07:47.340 --> 00:07:48.720
+Jeśli zmieniłem to
+
+00:07:52.740 --> 00:07:59.150
+na zero, które się nie powiodło, ponieważ tak naprawdę nazwaliśmy rybę Macha, ta funkcja nazywa się "przywieźć" tylko raz.
+
+00:07:59.190 --> 00:08:00.450
+Bardzo fajny.
+
+00:08:01.080 --> 00:08:04.620
+Co jeszcze możemy zrobić dobrze.
+
+00:08:04.650 --> 00:08:06.030
+Kolejna rzecz, którą możemy zrobić.
+
+00:08:06.100 --> 00:08:08.740
+Po prostu pozwól mi to skopiować.
+
+00:08:08.780 --> 00:08:19.710
+Możemy oczekiwać, że przyniesienie maake'a będzie miało inną metodę, którą można wywołać, i możemy przetestować, aby sprawdzić, z czym był
+
+00:08:19.710 --> 00:08:20.770
+wywołany.
+
+00:08:20.970 --> 00:08:25.580
+W naszym przypadku powinno to zostać wywołane samodzielnie.
+
+00:08:25.950 --> 00:08:29.010
+Więc znowu, umieśćmy to tutaj.
+
+00:08:29.220 --> 00:08:30.410
+Wypróbujmy to.
+
+00:08:30.480 --> 00:08:43.680
+Mam zamiar uratować Och, a ja naprawdę popełniłem błąd i chcemy się spodziewać ponownego
+
+00:08:43.680 --> 00:08:53.660
+udawania, że zostałem wezwany przy pomocy rat i usunąć wspornik.
+
+00:08:53.690 --> 00:08:54.270
+W porządku.
+
+00:08:54.320 --> 00:08:59.270
+W rzeczywistości przechodzi obok Pamiętaj nasze twierdzenia oczekuje teraz dwóch rzeczy.
+
+00:08:59.300 --> 00:09:00.170
+Więc zamierzam
+
+00:09:04.240 --> 00:09:07.260
+zaoszczędzić, aby zobaczyć, jak tym razem zajęło to trochę więcej czasu.
+
+00:09:07.630 --> 00:09:15.010
+Ponownie, ponieważ wielokrotnie dzwonimy do tego API, tym razem zajmuje to trochę więcej czasu 3. 9 81 sekund.
+
+00:09:15.280 --> 00:09:20.330
+Ale ze względu na to, że wracamy, robimy to, aby rozwiązać od razu.
+
+00:09:20.500 --> 00:09:23.830
+Jest o wiele szybszy i to mija.
+
+00:09:23.950 --> 00:09:29.600
+Jeśli z jakiegoś powodu zmieniłem to i wezwaliśmy do połączenia się
+
+00:09:32.760 --> 00:09:41.730
+z planetami i powiedzieliśmy, że to się nie udaje, ponieważ oczekujemy, że ludzie dostaną ludzi, a nie planetę
+
+00:09:41.730 --> 00:09:42.890
+bardzo fajną.
+
+00:09:42.900 --> 00:09:43.140
+W porządku.
+
+00:09:43.170 --> 00:09:44.850
+Zróbmy jeszcze kilka.
+
+00:09:45.180 --> 00:09:46.650
+Cóż, po prostu dodajmy jeszcze raz.
+
+00:09:46.650 --> 00:09:49.410
+Kopiowanie i wklejanie w testowaniu nie jest złe.
+
+00:09:49.470 --> 00:09:57.990
+Po prostu skopiujmy i wklejmy to i oczekujcie, że rzeczy będą działać dokładnie tak samo, jak w powyższym przypadku z normalną
+
+00:09:57.990 --> 00:09:58.760
+rybą.
+
+00:09:58.770 --> 00:10:03.110
+Ale tym razem z naszym Machiem. abyśmy mogli zaoszczędzić, aby wrócić i
+
+00:10:05.860 --> 00:10:09.760
+mam nieudany test, ponieważ teraz nasz numer potwierdzenia to cztery
+
+00:10:13.650 --> 00:10:14.500
+woohoo.
+
+00:10:14.600 --> 00:10:15.840
+Wszystko przemija.
+
+00:10:15.980 --> 00:10:24.600
+A jeśli zmienię tę liczbę na osiemdziesiąt dziewięć i zmieniam ją na osiemdziesiąt dziewięć, ale powiedzmy, że jest większa
+
+00:10:24.600 --> 00:10:27.730
+niż 10, to powinna ona zakończyć
+
+00:10:30.320 --> 00:10:34.520
+się niepowodzeniem, ponieważ nasze wyniki mają tylko sześć pozycji.
+
+00:10:34.520 --> 00:10:35.130
+Proszę bardzo.
+
+00:10:36.220 --> 00:10:38.130
+Ale jeśli zmienię
+
+00:10:42.520 --> 00:10:47.580
+to na więcej niż 5, nasze testy są bardzo fajne.
+
+00:10:48.960 --> 00:10:53.030
+I tam masz to inne niż uczenie się kilku metod.
+
+00:10:54.040 --> 00:11:00.010
+Takich, aby były większe niż dwie równe, które zawsze możesz sprawdzić, a
+
+00:11:00.010 --> 00:11:03.670
+dokumentacja podczas pisania testu jest całkiem prosta.
+
+00:11:03.670 --> 00:11:09.520
+Kiedy już to zrozumiesz, mamy testy synchroniczne, które są bardzo łatwe i
+
+00:11:09.520 --> 00:11:12.110
+po prostu nie oczekujemy potwierdzenia.
+
+00:11:12.260 --> 00:11:18.470
+A potem mamy test synchroniczny, który musimy pamiętać, aby wrócić i upewnić się, że mamy
+
+00:11:18.470 --> 00:11:22.020
+dostęp do obietnicy, niezależnie od tego, co powróci.
+
+00:11:22.430 --> 00:11:29.240
+A potem możemy również uniknąć długiego uruchamiania kodu synchronicznego, takiego jak wywołania API, a może nawet
+
+00:11:29.240 --> 00:11:34.830
+wywołania bazy danych, aby wyśmiać i wyśmiać funkcje, także znanych amerykańskich szpiegów.
+
+00:11:34.850 --> 00:11:44.580
+I właśnie dlatego, że pozwalają ci szpiegować zachowanie funkcji, jest wywoływane przez nasz test i to będzie
+
+00:11:44.580 --> 00:11:47.570
+szpiegować, co się dzieje.
+
+00:11:47.730 --> 00:11:52.550
+I widziałeś, że dajesz ludziom obietnice, że faktycznie biegną tą sztuczną rybą, którą stworzyliśmy.
+
+00:11:52.650 --> 00:11:56.140
+A wszystko, czego potrzebujesz, to ta składnia.
+
+00:11:56.310 --> 00:12:03.240
+Właśnie dodaliśmy dodatkowe rzeczy, ponieważ chcieliśmy zachować pewne zachowanie,
+
+00:12:03.240 --> 00:12:14.390
+ale nawet robiąc to moglibyśmy zauważyć, że pobieranie Macha zostałoby nazwane tym URL-em po prostu niesamowite narzędzie.
+
+00:12:14.500 --> 00:12:19.090
+Jeśli pracujesz z innymi bibliotekami, zobaczysz wiele podobieństw.
+
+00:12:19.090 --> 00:12:25.710
+Tak jak powiedziałem, Stokbs i przyprawa Mocka mogą być również widoczne w znaku, szczególnie jeśli pracujesz z moka.
+
+00:12:25.780 --> 00:12:32.140
+Ale ogólnie zasady są takie same i możesz zobaczyć, że testy mogą być zabawne, ponieważ po
+
+00:12:32.380 --> 00:12:37.800
+prostu testujemy logikę i nic nie jest lepsze niż te wszystkie zielone podania.
+
+00:12:39.250 --> 00:12:41.450
+W porządku, to tyle na teraz.
+
+00:12:41.470 --> 00:12:47.000
+Sądzę, że nadszedł czas, abyśmy zaczęli testować i testować naszych przyjaciół Robo.
+
+00:12:47.110 --> 00:12:48.500
+Zobaczę w następnym.
+
+00:12:48.510 --> 00:12:48.990
+PA pa.

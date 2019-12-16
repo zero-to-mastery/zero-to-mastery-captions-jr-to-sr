@@ -1,0 +1,259 @@
+﻿WEBVTT
+
+00:00:01.830 --> 00:00:02.750
+Witamy spowrotem.
+
+00:00:02.970 --> 00:00:07.730
+Po prostu dużo mówiłem o SSH i brzmi to całkiem interesująco.
+
+00:00:07.740 --> 00:00:10.840
+Ale jak dokładnie tego używamy?
+
+00:00:11.070 --> 00:00:13.530
+Cóż, to całkiem proste.
+
+00:00:13.590 --> 00:00:22.950
+Po prostu uruchamiamy komendę SSH z dowolnym użytkownikiem, do którego chcemy dotrzeć na dowolnym hoście, niezależnie
+
+00:00:22.950 --> 00:00:27.270
+od adresu IP komputera, który chcemy uzyskać.
+
+00:00:27.270 --> 00:00:33.070
+Pozwól, że pokażę ci, co mam na myśli przez odrobinę demonstracji. Dokładnie tutaj poszedłem do Digital
+
+00:00:33.090 --> 00:00:41.940
+Ocean dot com, a Digital Ocean to dostawca, który daje nam serwery naprawdę naprawdę tanie, naprawdę
+
+00:00:41.940 --> 00:00:44.330
+bardzo je lubię.
+
+00:00:44.340 --> 00:00:49.920
+I jeśli kiedykolwiek testujesz coś i szukasz dobrej opcji, aby mieć serwer
+
+00:00:49.920 --> 00:00:53.790
+gdzieś w chmurze. Cóż, Digital Ocean jest świetny.
+
+00:00:53.820 --> 00:00:59.550
+Poszedłem do przodu i faktycznie stworzyłem coś, co nazywa się kroplami i to oni nazywają
+
+00:00:59.550 --> 00:01:02.000
+swoją wersją serwerów, które można kupić.
+
+00:01:02.020 --> 00:01:09.540
+Wybrałem Ubuntu, który dla tych, którzy nie wiedzą, jest systemem operacyjnym typu open source, który jest zbudowany na
+
+00:01:09.540 --> 00:01:10.760
+systemie Linux.
+
+00:01:10.890 --> 00:01:16.460
+Większość serwerów na świecie używa Ubuntu, więc jest to standard.
+
+00:01:16.470 --> 00:01:21.470
+Właśnie dostanę najtańszą opcję tutaj za 5 USD miesięcznie tylko trochę pamięci.
+
+00:01:21.630 --> 00:01:27.360
+Procesor, którego nie użyjemy do niczego zbyt szalonego, więc to jest świetne.
+
+00:01:27.450 --> 00:01:29.790
+Wybrałem San Francisco jako mój region.
+
+00:01:29.790 --> 00:01:33.190
+Właściwie wybieram Nowy Jork, ponieważ jest mi bliższy.
+
+00:01:33.210 --> 00:01:35.670
+Więc tam właśnie znajdą się serwery.
+
+00:01:35.850 --> 00:01:45.070
+I zamierzam po prostu stworzyć kreację, a kiedy uderzę w tworzenie, dostarczy mi serwer, do którego mam dostęp.
+
+00:01:45.090 --> 00:01:51.720
+Więc tutaj z odrobiną jibberish nazwy, która jest moim serwerem, i widzisz
+
+00:01:51.720 --> 00:02:00.960
+tutaj, jak dali mi adres IP mojego serwera, podczas gdy mogę po prostu skopiować to i po prostu
+
+00:02:00.960 --> 00:02:11.640
+idę do mojego terminalu mogę teraz, używając polecenie SSH, trasa dostępu, którą użytkownik domyślnie podaje, a następnie skopiuj i wklej
+
+00:02:11.700 --> 00:02:14.530
+adres IP, który nam dali.
+
+00:02:14.700 --> 00:02:18.180
+Wchodź i spójrz na to.
+
+00:02:18.260 --> 00:02:22.120
+Jestem teraz w zasięgu wzroku tego serwera.
+
+00:02:22.370 --> 00:02:26.400
+Wewnątrz tego terminalu i ja mam dostęp do wszystkiego, co chcę.
+
+00:02:26.450 --> 00:02:31.500
+Więc jeśli kliknę "ls" widzę tutaj, że stworzyłem katalog hello.
+
+00:02:31.640 --> 00:02:33.260
+Mogę też zrobić inny katalog.
+
+00:02:33.260 --> 00:02:41.350
+Po prostu uruchommy katalog make, a my nazwiemy to "woohooo", ponieważ jesteśmy bardzo podekscytowani.
+
+00:02:41.510 --> 00:02:46.670
+Więc jeśli przejdę na LS, to mam katalog o nazwie Woohoo.
+
+00:02:46.670 --> 00:02:50.400
+I mam pełny dostęp do serwera.
+
+00:02:50.420 --> 00:02:51.900
+Bardzo bardzo fajne.
+
+00:02:51.980 --> 00:02:56.870
+I nie martw się, pokażę ci, jak to ustawić i jak wszystko działa.
+
+00:02:56.900 --> 00:02:58.930
+A później filmy.
+
+00:02:59.030 --> 00:03:02.310
+Ale na razie wróćmy do tego slajdu.
+
+00:03:03.280 --> 00:03:10.120
+Teraz, jeśli używasz Linuksa lub Maca, używanie SSH jest bardzo proste. Jeśli korzystasz z systemu Windows, będziesz
+
+00:03:10.160 --> 00:03:16.990
+musiał użyć klienta SSH, aby otworzyć połączenia SSH, a najpopularniejszy dla systemu Windows to
+
+00:03:16.990 --> 00:03:24.100
+"kit", który uwzględnię w zasobach dla tej lekcji. Teraz za pomocą SSH możemy połączyć się
+
+00:03:24.100 --> 00:03:29.820
+z tym zdalnym komputerem i uruchomić na nim polecenia, tak jak to pokazałem.
+
+00:03:29.980 --> 00:03:37.090
+Teraz, gdy korzystamy z SSH, możemy połączyć się z dowolnym komputerem, który pozwala na połączenia SSH w dowolnym
+
+00:03:37.990 --> 00:03:39.450
+miejscu na świecie.
+
+00:03:39.520 --> 00:03:46.060
+Sprawdźmy więc, polecenie klucza SSH i zbuduj system, który chcesz otworzyć zaszyfrowane
+
+00:03:46.060 --> 00:03:51.340
+połączenie z bezpieczną powłoką. Użytkownik reprezentuje konto, do którego chcesz uzyskać dostęp.
+
+00:03:51.340 --> 00:03:58.630
+Na przykład możesz chcieć uzyskać dostęp do użytkownika root, który jest zasadniczo synonimem administratora systemu z
+
+00:03:58.930 --> 00:04:05.210
+pełnymi uprawnieniami do modyfikowania czegokolwiek w systemie, co może czasem być niebezpieczne.
+
+00:04:05.990 --> 00:04:09.370
+Host oznacza komputer, do którego chcesz uzyskać dostęp.
+
+00:04:09.440 --> 00:04:15.280
+Może to być adres IP taki jak ten, którego użyliśmy lub nazwa domeny.
+
+00:04:15.510 --> 00:04:24.310
+A kiedy już wejdziesz, witamy się zdalnym terminalem, tak jak w tym przykładzie. DOBRZE.
+
+00:04:24.630 --> 00:04:32.460
+Więc myślisz sobie, fajny Andrei, ale jak to ma zastosowanie do tworzenia stron internetowych?
+
+00:04:32.950 --> 00:04:39.760
+Cóż, opowiem ci historię i dlaczego zaczynam od tej lekcji na tym kursie. Pierwszego dnia pracy jako pełnoetatowy programista został
+
+00:04:39.850 --> 00:04:41.690
+poproszony o utworzenie
+
+00:04:41.770 --> 00:04:45.960
+klucza SSH i połączenie go w celu uzyskania pomocy.
+
+00:04:46.480 --> 00:04:47.640
+I zgadnij co.
+
+00:04:47.770 --> 00:04:50.340
+Nie miałem pojęcia, jak to zrobić.
+
+00:04:50.410 --> 00:04:58.840
+Wiedziałem wszystko o HTML, CSS, javascript i tym podobne rzeczy, ale nikt nie powiedział mi nic o używaniu klucza SSH do
+
+00:04:58.840 --> 00:05:00.280
+powrotu do domu.
+
+00:05:00.330 --> 00:05:01.580
+Co to było?
+
+00:05:01.630 --> 00:05:04.570
+Widzisz, nie miałem pojęcia, jak to zrobić.
+
+00:05:05.420 --> 00:05:11.420
+SSH to bardzo ważna koncepcja, o której nie wiele mówi się, ale jako programista internetowy, który
+
+00:05:11.420 --> 00:05:16.330
+naprawdę musisz zrozumieć, ponieważ będziesz używać SSH cały czas w swojej karierze.
+
+00:05:16.430 --> 00:05:24.660
+Niektóre z tych przykładów obejmują: łączenie się z GitHubem, klonowanie, wypychanie, pobieranie plików z
+
+00:05:24.660 --> 00:05:27.510
+ich serwerów na komputer.
+
+00:05:27.620 --> 00:05:33.900
+Pamiętasz, skoro sklonujemy coś z GitHubu, mamy dwie opcje: korzystamy z protokołu HTTPS,
+
+00:05:33.920 --> 00:05:43.450
+którego najprawdopodobniej używałeś wcześniej, i korzystasz z SSH i pamiętasz, jak z HTTPS trzeba było wpisywać hasło przez cały
+
+00:05:43.450 --> 00:05:45.700
+czas, aby sklonować repozytorium?
+
+00:05:46.060 --> 00:05:48.250
+Nie musisz tego robić z SSH.
+
+00:05:48.550 --> 00:05:52.590
+I jest kilka innych korzyści, które przejdą później.
+
+00:05:52.620 --> 00:05:56.760
+Po drugie, możesz uzyskać zdalny dostęp do innego komputera.
+
+00:05:56.760 --> 00:06:02.200
+Więc jeśli jesteś w domu, kiedy potrzebujesz dostępu do swojego komputera, możesz po prostu włączyć w to SSH.
+
+00:06:03.770 --> 00:06:11.360
+Na koniec prawdopodobnie najważniejszym przypadkiem użycia jest to, że masz aplikację produkcyjną gdzieś na serwerze,
+
+00:06:11.360 --> 00:06:17.510
+a w środku nocy dzwonisz. Hej, przez pomyłkę skasowaliśmy twoją aplikację.
+
+00:06:17.510 --> 00:06:19.700
+Czy możesz ponownie zainstalować na serwerze?
+
+00:06:20.950 --> 00:06:25.530
+Brzmi to śmiesznie, ale tak naprawdę to mi się przydarzyło.
+
+00:06:25.660 --> 00:06:33.100
+Musiałem połączyć się z serwerem SSH, aby ponownie pobrać pliki projektu na serwer
+
+00:06:33.370 --> 00:06:42.020
+i przejść przez wszystkie etapy uruchamiania instalacji NPM, kompilację NPM, uruchomienie NPM, aby przywrócić działanie aplikacji.
+
+00:06:42.030 --> 00:06:48.450
+Więc z resztą filmów pokażę ci, jak opanować SSH, nigdy nie musiałem doświadczyć tego, co
+
+00:06:48.510 --> 00:06:50.690
+zrobiłem w pierwszym dniu pracy.
+
+00:06:50.700 --> 00:06:57.960
+Dowiesz się, w jaki sposób szyfrowanie działa, używając SSH, aby rozwiązać powyższe problemy, a także jak
+
+00:06:57.960 --> 00:07:01.600
+skonfigurować serwer, aby zezwalał na połączenia SSH.
+
+00:07:01.650 --> 00:07:03.500
+To umiejętność, która jest tak ważna.
+
+00:07:03.570 --> 00:07:05.900
+Chciałem być pierwszą częścią kursu.
+
+00:07:06.200 --> 00:07:07.860
+Będzie dużo zabawy.
+
+00:07:07.980 --> 00:07:10.390
+Więc zobaczę na następnym wideo. Buh-Bye.

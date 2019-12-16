@@ -1,0 +1,256 @@
+﻿WEBVTT
+
+00:00:01.710 --> 00:00:08.190
+Witamy spowrotem. Teraz, kiedy w poprzednim filmie rozmawialiśmy o tym, jak
+
+00:00:08.940 --> 00:00:14.930
+potrzebujemy jakiegoś algorytmu wymiany kluczy, a ten algorytm wymiany kluczy potrzebuje czegoś, co nazywa się szyfrowaniem asymetrycznym.
+
+00:00:14.970 --> 00:00:18.110
+Wiem, że to dużo wziąć, ale trzymaj się mnie.
+
+00:00:18.180 --> 00:00:21.550
+Mam nadzieję, że ten mały rysunek ci pomoże.
+
+00:00:21.580 --> 00:00:30.030
+Obecnie, w przeciwieństwie do symetrycznego szyfrowania, asymetryczne szyfrowanie wykorzystuje dwa oddzielne klucze do szyfrowania
+
+00:00:30.030 --> 00:00:31.780
+i deszyfrowania.
+
+00:00:31.800 --> 00:00:37.020
+Te czerwone klucze należą do tego niebieskiego laptopa.
+
+00:00:37.170 --> 00:00:41.360
+A te niebieskie klawisze są własnością tego innego komputera.
+
+00:00:41.400 --> 00:00:53.280
+Teraz te dwa klucze są nazywane kluczami publicznymi i kluczami prywatnymi. Razem tworzą one parę publicznych kluczy
+
+00:00:53.340 --> 00:00:54.050
+prywatnych.
+
+00:00:54.330 --> 00:01:02.400
+I jak sama nazwa wskazuje, te są publiczne, więc mogę podzielić się tym czerwonym kluczem z każdym, kogo chcę na świecie.
+
+00:01:02.520 --> 00:01:04.260
+Może być na otwartej przestrzeni.
+
+00:01:04.260 --> 00:01:05.310
+To nie jest duży problem.
+
+00:01:05.310 --> 00:01:06.670
+I to samo z tym niebieskim.
+
+00:01:06.840 --> 00:01:10.630
+Ale te prywatne, które są jakby w cieniu,
+
+00:01:10.800 --> 00:01:15.150
+są waszymi absolutnymi sekretami, z którymi nigdy nie powinniście się dzielić.
+
+00:01:16.850 --> 00:01:23.660
+Teraz te klucze publiczne są powiązane z kluczem prywatnym pod względem funkcjonalności.
+
+00:01:23.660 --> 00:01:26.540
+Widać, że obaj są czerwoni, oboje są tutaj niebiescy.
+
+00:01:28.120 --> 00:01:35.820
+Klucz prywatny nie może zostać obliczony matematycznie z klucza publicznego.
+
+00:01:35.850 --> 00:01:37.200
+Więc, co to znaczy?
+
+00:01:37.200 --> 00:01:47.260
+Czy relacje są trochę skomplikowane, ale wiadomość zamknięta jest szyfrowana przez klucz publiczny komputera, który może zostać
+
+00:01:47.260 --> 00:01:52.680
+odszyfrowany tylko przez ten sam prywatny klucz maszynowy.
+
+00:01:52.760 --> 00:01:57.000
+I nazywamy to relacją w jedną stronę.
+
+00:01:57.070 --> 00:01:58.570
+Pokażę ci, jak to działa.
+
+00:01:58.720 --> 00:02:07.060
+Jeśli wyślę mój klucz publiczny do komputera mojego znajomego, i powiedzmy, że znajomy również wysyła swój klucz publiczny
+
+00:02:07.690 --> 00:02:17.400
+do mojego komputera, jeśli chcę wysłać wiadomość, którą mogę powiedzieć, cześć, wyślij ją, szyfrując ją swoim niebieskim kluczem, do którego trafia
+
+00:02:17.400 --> 00:02:23.250
+jego klucz publiczny aby się pogmatwać i zaszyfrować w ten sposób.
+
+00:02:23.370 --> 00:02:34.740
+A kiedy go mu prześlę, teraz może użyć swojego prywatnego klucza, ponieważ ten fragment tekstu został zaszyfrowany
+
+00:02:34.740 --> 00:02:36.100
+przez społeczeństwo.
+
+00:02:36.150 --> 00:02:38.320
+Tak więc klucz prywatny może go odszyfrować.
+
+00:02:39.110 --> 00:02:40.360
+Zrób jego magię.
+
+00:02:40.670 --> 00:02:43.470
+A potem wreszcie dostaniesz wiadomość.
+
+00:02:43.590 --> 00:02:54.000
+Witaj Więc widzisz tutaj, jak możemy wysyłać klucze publiczne do innych osób, a źli ludzie mogą pobrać klucz publiczny.
+
+00:02:54.070 --> 00:03:01.390
+Ale ponieważ jest to jednokierunkowa relacja, ten klucz publiczny nie może odszyfrować własnej wiadomości ani nie może
+
+00:03:01.480 --> 00:03:04.600
+odszyfrować niczego zaszyfrowanego przez klucz prywatny.
+
+00:03:04.600 --> 00:03:12.310
+Może tylko szyfrować coś i może zostać odszyfrowane tylko przez sparowany klucz prywatny.
+
+00:03:12.310 --> 00:03:15.360
+To znowu nigdy nikomu się nie dzieli.
+
+00:03:16.850 --> 00:03:22.430
+Teraz siła całego połączenia polega na tym, że klucz prywatny nigdy nie jest ulgą w prawo.
+
+00:03:23.160 --> 00:03:23.610
+W porządku.
+
+00:03:23.630 --> 00:03:26.110
+Niesamowite. Czy to ma sens, prawda?
+
+00:03:26.110 --> 00:03:33.750
+Trochę bardziej skomplikowane niż szyfrowanie symetryczne, ale myślę, że otrzymamy teraz, jeśli wrócimy do miejsca,
+
+00:03:33.750 --> 00:03:43.300
+w którym zaczęliśmy, większość ludzi sądzi, że SSH używa całkowicie asymetrycznego szyfrowania i to nie jest do końca
+
+00:03:43.330 --> 00:03:44.230
+prawdą.
+
+00:03:44.260 --> 00:03:52.630
+Ta właśnie forma szyfrowania za pomocą SSH jest używana tylko podczas algorytmu wymiany kluczy
+
+00:03:52.660 --> 00:03:53.890
+symetrycznego szyfrowania.
+
+00:03:53.890 --> 00:03:55.020
+Pamiętasz to dobrze.
+
+00:03:55.030 --> 00:04:01.930
+Potrzebujemy jakiegoś sposobu z szyfrowaniem symetrycznym, aby wygenerować ten żółty klucz, bez wprowadzania go publicznie.
+
+00:04:01.930 --> 00:04:09.580
+To, co dzieje się jako mędrzec, polega na tym, że zanim zainicjujemy bezpieczne połączenie, obie strony generują tymczasowe
+
+00:04:09.640 --> 00:04:13.700
+klucze publiczne i prywatne i dzielą się odpowiednimi kluczami.
+
+00:04:14.560 --> 00:04:15.670
+Do siebie nawzajem.
+
+00:04:16.000 --> 00:04:24.490
+W tym momencie jesteśmy w stanie uzyskać te żółte klawisze jako klucze symetryczne, dzięki czemu możemy wymieniać komunikaty metod
+
+00:04:25.330 --> 00:04:30.240
+za pomocą czegoś, co nazywa się wymianą kluczy Diffiego Hellmana.
+
+00:04:30.460 --> 00:04:36.190
+I mam zamiar połączyć się z pewnymi zasobami, z których można korzystać,
+
+00:04:37.120 --> 00:04:45.640
+ponieważ jest to trochę skomplikowane matematycznie, ale zasadniczo polega na tym, że wykorzystuje trochę tej informacji trochę tej informacji,
+
+00:04:45.640 --> 00:04:49.980
+aby niektóre klucze publiczne generowały bez kiedykolwiek wymieniać klucze.
+
+00:04:50.050 --> 00:04:59.750
+Każda maszyna na komputerze może wygenerować ten symetryczny klucz z danych z każdego komputera.
+
+00:04:59.780 --> 00:05:06.770
+I znowu algorytm Diffiego Helmana lub algorytm wymiany klucza klucza umożliwia każdej ze stron połączenie
+
+00:05:06.770 --> 00:05:12.560
+ich prywatnych danych z publicznymi danymi z innych systemów w celu uzyskania
+
+00:05:12.560 --> 00:05:14.880
+identycznego tajnego klucza sesji.
+
+00:05:14.990 --> 00:05:18.000
+Wiem, że to kęs i wiem, że to jest mylące.
+
+00:05:18.050 --> 00:05:22.260
+Tak jak powiedziałem, sprawdź źródło po tym filmie, jeśli chcesz dowiedzieć się więcej na ten temat.
+
+00:05:23.730 --> 00:05:31.330
+Ale już teraz powinniśmy wiedzieć, w jaki sposób jesteśmy w stanie wygenerować klucz symetryczny za pomocą asymetrycznego szyfrowania za
+
+00:05:31.330 --> 00:05:33.700
+pomocą wymiany kluczy Diffiego Hellmana.
+
+00:05:33.810 --> 00:05:41.040
+W ten sposób ten żółty klucz pozostanie dla nas prywatny i nigdy nie dotknie publiczności przy
+
+00:05:41.610 --> 00:05:42.460
+okazji.
+
+00:05:43.190 --> 00:05:44.160
+Być może myślisz.
+
+00:05:44.180 --> 00:05:44.630
+W porządku.
+
+00:05:44.630 --> 00:05:46.480
+Dość gadać o S-sh.
+
+00:05:46.550 --> 00:05:48.020
+To nudzi Andre.
+
+00:05:48.030 --> 00:05:49.850
+No dalej, po prostu zaczęliśmy kurs.
+
+00:05:50.390 --> 00:05:53.260
+Zaufaj mi, że ten rodzaj szyfrowania jest wszędzie.
+
+00:05:53.270 --> 00:05:58.660
+Prawdopodobnie używasz go teraz, aby obejrzeć ten film za pomocą wymiany kluczy Diffie Hellman.
+
+00:05:58.820 --> 00:06:04.690
+A kiedy używasz telefonu do robienia wszystkiego, co łączy się z serwerem, używa wymiany
+
+00:06:04.700 --> 00:06:06.040
+kluczy Diffiego Hellmana.
+
+00:06:06.210 --> 00:06:08.550
+I powinniśmy wiedzieć, jak te rzeczy działają.
+
+00:06:08.550 --> 00:06:09.140
+Dobrze.
+
+00:06:09.150 --> 00:06:16.670
+Jako programista musimy zrozumieć, jak działa się nie tylko na poziomie powierzchni.
+
+00:06:16.880 --> 00:06:18.850
+Możesz zauważyć, jak to jest zabawne.
+
+00:06:19.040 --> 00:06:25.460
+Nazwa wymiany kluczy jest taka, że tak naprawdę nie zmienimy klucza, ponieważ byłby dostępny publicznie i nie chcemy
+
+00:06:25.460 --> 00:06:26.190
+tego.
+
+00:06:26.210 --> 00:06:32.630
+W rzeczywistości udostępniamy tylko część publicznych rachunków, takich jak nasze klucze publiczne z każdego
+
+00:06:32.630 --> 00:06:36.920
+komputera, i generujemy klucz osobno w naszej prywatnej przestrzeni.
+
+00:06:38.360 --> 00:06:42.590
+W porządku, zróbmy sobie trochę przerwy, a do zobaczenia w następnym filmie, ponieważ wiem,
+
+00:06:42.590 --> 00:06:43.910
+że było dużo informacji.
+
+00:06:44.030 --> 00:06:45.370
+Do zobaczenia, żegnaj.

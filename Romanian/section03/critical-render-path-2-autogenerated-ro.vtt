@@ -1,0 +1,559 @@
+﻿WEBVTT
+
+00:00:01.680 --> 00:00:02.840
+Du-te înapoi.
+
+00:00:02.860 --> 00:00:06.540
+Așa că am trecut prin primul pas, dar să ne uităm la al doilea pas.
+
+00:00:06.540 --> 00:00:16.340
+Acum, cu CSSA, CSSA se numește blocare a renderului deoarece, pentru a construi arborele randat amintiți-l pe
+
+00:00:16.340 --> 00:00:20.410
+acesta aici și tipăriți ceva pe ecran.
+
+00:00:20.420 --> 00:00:26.840
+Asteptam ca CIA sa spuna Domul sa o completeze si sa o combine cu Domul pentru
+
+00:00:27.840 --> 00:00:32.820
+a crea arborele de randare, astfel incat CSSA sa fie blocata.
+
+00:00:32.830 --> 00:00:38.470
+Deci, având în vedere acest lucru, este logic să vrem să le facem cât mai ușor, astfel încât un
+
+00:00:38.560 --> 00:00:44.320
+utilizator să vadă cât mai curând posibil și cu CSSA aici doar câteva lucruri pe care trebuie să le luăm
+
+00:00:44.320 --> 00:00:45.180
+în considerare.
+
+00:00:47.420 --> 00:00:50.350
+Vrem să încărcăm doar ceea ce este necesar.
+
+00:00:50.630 --> 00:00:54.140
+Vrem să includem eventual deasupra încărcăturii îndoite.
+
+00:00:54.140 --> 00:01:00.010
+Vrem să adăugăm atribute media și dorim să obținem mai puțină specificitate pentru a îmbunătăți performanța.
+
+00:01:00.350 --> 00:01:03.190
+Să intrăm în asta unul câte unul pentru a vă arăta ce vreau să spun.
+
+00:01:06.070 --> 00:01:10.270
+Avem exemplul nostru super minunat pe care l-am folosit și ultima oară.
+
+00:01:10.270 --> 00:01:16.750
+De data aceasta am adăugat tehnicile de optimizare a succesului pe care tocmai le-am discutat.
+
+00:01:16.840 --> 00:01:23.010
+Primul care încarcă doar ceea ce este necesar este un drept destul de explicabil.
+
+00:01:23.140 --> 00:01:31.330
+CSSA este cu adevarat foarte usor sa continui adaugarea de lucruri pentru a putea adauga mai multe stiluri, poate sa copiem cateva stiluri pe care le-am
+
+00:01:31.330 --> 00:01:37.210
+vazut online si sa le lipim aici si putem face acest fisier sute, daca nu mii de linii
+
+00:01:37.420 --> 00:01:38.040
+lungi.
+
+00:01:39.660 --> 00:01:45.870
+Dar, doar încărcarea a ceea ce este de fapt necesară și împiedicarea ca fișierul să fie umflat evită mai mult timp
+
+00:01:45.870 --> 00:01:46.680
+de descărcare.
+
+00:01:47.780 --> 00:01:48.580
+Dreapta.
+
+00:01:48.650 --> 00:01:50.670
+Dacă ne întoarcem la exemplul nostru.
+
+00:01:50.750 --> 00:01:59.180
+Norocos pentru noi avem doar o foaie de stil, care este atât de mic, care este spune că este zero cu trenul acum ia o
+
+00:01:59.420 --> 00:02:01.200
+milli secundă pentru a descărca.
+
+00:02:01.220 --> 00:02:02.220
+E frumos.
+
+00:02:05.160 --> 00:02:07.270
+Deci, primul este frumos și ușor.
+
+00:02:07.380 --> 00:02:11.010
+Doar încărcați în timp ce aveți nevoie.
+
+00:02:11.030 --> 00:02:15.380
+Acum, cel de-al doilea punct de deasupra încărcării ori.
+
+00:02:15.970 --> 00:02:17.520
+Și acest lucru este destul de interesant.
+
+00:02:20.000 --> 00:02:27.820
+Sunt un utilizator chiar acum și am reîmprospătat pagina Sunt interesat doar de ceea ce pot vedea dacă această pagină web cu scrollable poate am avut imagini
+
+00:02:27.820 --> 00:02:33.470
+de dedesubt sau a fost una din acea dimensiune web de o pagină pe care eu pot continua scrolling
+
+00:02:33.470 --> 00:02:34.370
+jos pe.
+
+00:02:34.380 --> 00:02:36.540
+Există tot mai multe informații.
+
+00:02:36.710 --> 00:02:40.330
+Din punct de vedere tehnic, nu trebuie să văd asta până nu încep să derulăm.
+
+00:02:40.760 --> 00:02:48.860
+Deci, prioritatea este să vedem ce este deasupra paginii principale dacă reușim să optimizăm acest lucru și să încărcăm în timp
+
+00:02:48.860 --> 00:02:54.930
+ce avem nevoie de deasupra ori că va fi destul de frumos nu ar face-o.
+
+00:02:54.930 --> 00:03:00.100
+Poate că avem nevoie doar de CSX pe care îl folosim acum deasupra vina.
+
+00:03:00.120 --> 00:03:01.790
+Permiteți-mi să vă arăt cum să faceți asta.
+
+00:03:02.400 --> 00:03:14.820
+Deci, sa spunem ca avem acest stil 3 si acest stil trei este un fisier CSSA dar nu avem nevoie de el pentru
+
+00:03:15.270 --> 00:03:27.380
+pagina principala a site-ului nostru, asa ca aici sa facem doar o clasa H-2 iar aceasta clasa H2 o vom numi.
+
+00:03:27.380 --> 00:03:30.940
+Asta e important.
+
+00:03:34.850 --> 00:03:45.180
+Și aici vom spune că vom încărca o bucată de Texas care spune că este importantă deasupra conținutului fold și putem doar să copiem
+
+00:03:47.850 --> 00:03:56.810
+acest lucru din nou și să spunem că avem de asemenea o altă etichetă H2 și aceasta va spune doar
+
+00:03:56.810 --> 00:03:58.350
+că este secundară.
+
+00:03:58.520 --> 00:04:05.990
+Și acest lucru nu este important, este sub conținutul defectului.
+
+00:04:06.770 --> 00:04:13.450
+Vrei să vezi asta până când se încarcă pagina.
+
+00:04:16.570 --> 00:04:23.440
+Și să spunem că fiecare important și secundar au propriile lor ochelari de stil, puteți vedea că în puncte
+
+00:04:23.440 --> 00:04:29.340
+de stil CSSA am clasa importantă care are fundal galben și în stil trei 3.
+
+00:04:29.380 --> 00:04:33.700
+SS Am secundar cu fundal roz.
+
+00:04:33.780 --> 00:04:39.790
+Acum, aceste fișiere de stil sunt destul de mici, dar vă puteți imagina cum ar funcționa dacă aplicația noastră ar fi mai mare.
+
+00:04:42.010 --> 00:04:49.340
+Dar chiar acum, dacă încărc acest lucru pe pagina mea web și mă reîmprospătesc.
+
+00:04:49.450 --> 00:04:55.890
+Bine, bine, nu o iau pe Stahl, pentru că am nevoie de fișierele și am
+
+00:04:55.900 --> 00:04:57.270
+și scris greșit.
+
+00:04:57.310 --> 00:04:58.070
+Prostutul de mine.
+
+00:04:58.300 --> 00:04:59.710
+Să ne reîmprospătăm.
+
+00:04:59.710 --> 00:05:05.860
+Așa că prima CSSA lucrează a doua, nu pentru că trebuie să o importăm.
+
+00:05:05.880 --> 00:05:14.090
+Deci, din nou, să adăugăm un nou dosar de stil trei dacă îmi reîmprospătesc.
+
+00:05:14.590 --> 00:05:17.220
+În regulă totul este încărcat.
+
+00:05:17.410 --> 00:05:22.310
+Dar, după cum puteți vedea aici în fila noastră de rețea, obținem o sugestie minunată.
+
+00:05:22.570 --> 00:05:27.530
+Dacă te uiți la linia roșie de aici, se spune că încărcarea este de nouă milioane de secunde.
+
+00:05:27.610 --> 00:05:31.500
+Asta înseamnă că site-ul nostru a fost încărcat în nouă milisecunde destul de repede.
+
+00:05:31.720 --> 00:05:37.800
+Dar ambele stiluri au fost încărcate înainte să vedem ceva.
+
+00:05:37.910 --> 00:05:44.600
+Dar dacă acest lucru a fost așa și fundalul roz nu este necesar deoarece, ca utilizator, voi vedea
+
+00:05:44.600 --> 00:05:46.370
+doar acest prim conținut.
+
+00:05:46.370 --> 00:05:55.190
+Să vedem dacă putem muta stilul trei care urmează să fie încărcat după linia de încărcare.
+
+00:05:55.330 --> 00:06:00.700
+Linia roșie, cu un mic javascript, este de fapt destul de simplă și puteți chiar să prindeți acest
+
+00:06:00.810 --> 00:06:01.850
+script pe linie.
+
+00:06:01.900 --> 00:06:03.100
+Nu vă stresați prea mult.
+
+00:06:03.100 --> 00:06:11.130
+Dacă nu reușiți complet, dar din nou folosind un script AG Putem încorpora acest lucru destul
+
+00:06:14.790 --> 00:06:25.400
+de ușor Ei bine, unii au într-adevăr o foaie de stil de încărcare a costurilor și care va accepta un parametru
+
+00:06:29.040 --> 00:06:41.220
+al sursei și vom spune dacă documentul Daut creează foaie de stil și noi doar vrem să ne asigurăm că această proprietate sau această
+
+00:06:41.220 --> 00:06:43.890
+metodă există de fapt.
+
+00:06:43.890 --> 00:06:50.010
+Dacă este cazul, deoarece unele browsere au acest lucru, putem spune că creați o foaie de stil
+
+00:06:50.010 --> 00:06:51.370
+și dați-i calea.
+
+00:06:51.820 --> 00:06:52.390
+În
+
+00:06:56.180 --> 00:06:58.250
+caz contrar, putem face acest lucru singuri.
+
+00:06:58.370 --> 00:07:07.820
+Putem spune că foaia de stil este egală cu documentul care creează un element și vom crea
+
+00:07:11.420 --> 00:07:26.320
+o etichetă de legătură, iar această etichetă de legătură va avea un ATF pe care îl cheamă pe calea pe care sursa o va da, de asemenea, un
+
+00:07:29.480 --> 00:07:31.260
+tip de text.
+
+00:07:31.520 --> 00:07:33.940
+CSX din nou, la fel
+
+00:07:36.570 --> 00:07:39.030
+ca tipul de foaie de stil aici.
+
+00:07:39.300 --> 00:07:51.800
+Și apoi, în cele din urmă putem să spunem documentul elementul get get by ID sau cel puțin două după numele etichetei și vom lua doar eticheta
+
+00:07:51.800 --> 00:07:58.760
+capului și pentru că returnează o matrice avem pentru a obține elementele matricei, astfel încât
+
+00:07:59.000 --> 00:08:08.640
+aceasta să ne ia eticheta capului în Ishmail și pur și simplu vom adăuga copilul foaia de stil și noi doar
+
+00:08:08.650 --> 00:08:12.000
+creăm și nu avem nevoie de Cotes
+
+00:08:14.900 --> 00:08:15.720
+perfect.
+
+00:08:15.830 --> 00:08:18.960
+Deci asta va crea foaia de stil.
+
+00:08:19.520 --> 00:08:23.950
+Deci nu mai trebuie să-l importăm aici.
+
+00:08:24.120 --> 00:08:27.100
+Stilul 3.
+
+00:08:27.310 --> 00:08:34.840
+Și acum, cu foaia de stil încărcată sau o funcție care încarcă foaia de stil, o putem acum să
+
+00:08:34.840 --> 00:08:38.450
+o încorporăm în ceva denumit Date ferestre la încărcare.
+
+00:08:38.650 --> 00:08:40.240
+Deci, atunci când se încarcă.
+
+00:08:40.240 --> 00:08:45.230
+Amintiți-vă că linia roșie când se încarcă fereastra
+
+00:08:45.480 --> 00:08:46.440
+Putem pur
+
+00:08:51.580 --> 00:08:57.120
+și simplu să executăm funcția și vom consola mult aici doar pentru a vedea că funcționează.
+
+00:08:57.160 --> 00:09:00.830
+Va fi terminat fereastra Say.
+
+00:09:02.620 --> 00:09:09.970
+Și aici putem să facem doar foaia de stil pentru încărcări cu calea de fișiere pe
+
+00:09:09.970 --> 00:09:17.730
+care o vom da, care va fi Rupes, care va fi un stil cu trei puncte de vedere.
+
+00:09:17.740 --> 00:09:19.420
+Bine, să salvăm asta.
+
+00:09:19.420 --> 00:09:26.540
+Vedeți dacă am făcut greșeli și doriți să vă reîmprospătați și văd că vă greșiți.
+
+00:09:27.560 --> 00:09:30.240
+Și să creez un aliment pe care nu-l pot scrie.
+
+00:09:30.350 --> 00:09:31.210
+Să rezolvăm asta.
+
+00:09:31.220 --> 00:09:39.920
+Creați o lege care înseamnă salvați Să încercăm din nou acest lucru și să obținem elementul după numele etichetei, deoarece ar trebui să
+
+00:09:40.700 --> 00:09:43.230
+se obțină elemente după numele etichetei.
+
+00:09:43.380 --> 00:09:44.880
+Fac asta tot timpul.
+
+00:09:44.880 --> 00:09:54.170
+Acolo te duci să-i reîmprospătăm rata, vedem că sub conținutul fold și nu avem aer, dar nu
+
+00:09:54.200 --> 00:09:57.020
+avem fundul roz aici.
+
+00:09:57.890 --> 00:10:05.010
+De asemenea, de fapt avem nevoie de o foaie de stil.
+
+00:10:09.080 --> 00:10:15.420
+Roll care va fi o foaie de stil.
+
+00:10:15.590 --> 00:10:23.650
+Deci, acum mergem și refacem Ceara de jos, dacă mă reîncărcați din nou.
+
+00:10:24.900 --> 00:10:32.970
+Vedem că indexul și stilul se încarcă înainte de evenimentul de încărcare a ferestrei, astfel încât încărcarea paginii web
+
+00:10:33.330 --> 00:10:36.410
+și terminarea stilului trei se încarcă ulterior.
+
+00:10:37.230 --> 00:10:44.260
+Și dacă mă defilez acolo, vei avea fundul roz din stilul meu de trei puncte.
+
+00:10:44.280 --> 00:10:53.290
+SS Să închidem acest lucru și vom face o reîncărcare a părului și vom vedea că acesta este gol, deoarece stilul
+
+00:10:53.290 --> 00:10:55.900
+este încărcat după pagina web.
+
+00:10:55.900 --> 00:11:02.600
+Deci, după ce se afișează, stilurile se încarcă în comparație cu galbenul care este întotdeauna acolo.
+
+00:11:05.410 --> 00:11:06.610
+De la foarte
+
+00:11:11.140 --> 00:11:12.240
+foarte cool.
+
+00:11:12.330 --> 00:11:14.890
+Așa că am făcut-o deasupra încărcăturii multiple.
+
+00:11:15.090 --> 00:11:20.420
+Acum există încă două lucruri și există mult mai rapid pentru a demonstra atributele mass-media.
+
+00:11:20.460 --> 00:11:24.960
+Ei bine, ați făcut acest lucru înainte de a vă arăta cum
+
+00:11:28.840 --> 00:11:36.710
+să faceți atribute media cu mass-media în fișierele dvs. CSSA, dar puteți să le faceți chiar și în fișierele de e-mail.
+
+00:11:38.470 --> 00:11:46.970
+De exemplu, să presupunem că ați avut niște suporturi media pe care trebuie doar pentru anumite dimensiuni ale ecranului de perete, în acest
+
+00:11:46.970 --> 00:11:54.190
+caz putem să copiați toate aceste lucruri și vom spune media care, prin modul în care este implicit, dacă
+
+00:11:54.190 --> 00:12:00.380
+nu puneți nimic în o etichetă de legătură a presupus că media este egală cu toți.
+
+00:12:00.580 --> 00:12:13.040
+Dar, în cazul nostru, să spunem că stilul nostru pentru Dotsie SS Acesta va avea un media pe ecran.
+
+00:12:13.270 --> 00:12:14.650
+Nu folosesc mass-media aici.
+
+00:12:14.650 --> 00:12:15.410
+Acolo te duci.
+
+00:12:15.760 --> 00:12:17.820
+Deci este doar ecran.
+
+00:12:17.830 --> 00:12:31.120
+Deci, pentru orice ecran și noi vom spune și bărbații vor fi 500 de pixeli.
+
+00:12:31.210 --> 00:12:42.890
+Deci, dacă fac acest lucru și voi salva și voi vedea că stilul are și o culoare roșie H-1, mă întorc aici și refresh văd că
+
+00:12:43.940 --> 00:12:47.650
+cel care spune că roșul lui trebuie să
+
+00:12:50.310 --> 00:13:02.200
+se schimbe este înapoi la cât de repede să refresh și dacă eu parcurgeți mai aproape, vedem că este verde acum și, de asemenea, observați în partea
+
+00:13:02.200 --> 00:13:06.760
+de jos că avem toate cele trei foi de stil.
+
+00:13:10.050 --> 00:13:10.920
+Foarte tare.
+
+00:13:10.920 --> 00:13:14.240
+Și apoi ultimul lucru este mai puțin specific.
+
+00:13:14.340 --> 00:13:22.990
+Și acesta este unul foarte minuscul, dar ar putea să ne păstrăm în minte faptul că dacă mergem la stilul 2
+
+00:13:23.380 --> 00:13:26.440
+aici avem un bun și un rău.
+
+00:13:26.470 --> 00:13:28.780
+De ce ar fi așa?
+
+00:13:28.810 --> 00:13:33.750
+Deoarece browserele de reținut sunt computerele care au nevoie să lucreze.
+
+00:13:33.820 --> 00:13:41.140
+Mai întâi de toate, mai multe informații pe care le-am trimis prin fir sunt cele mai multe octeți care sunt.
+
+00:13:41.200 --> 00:13:44.210
+Acest lucru este mai puțin caractere decât acesta.
+
+00:13:44.470 --> 00:13:52.570
+Dar, de asemenea, atunci când ajunge în browser, browserul trebuie să calculeze stilul pentru a crea acel
+
+00:13:52.570 --> 00:13:53.620
+domeniu CSSA.
+
+00:13:53.620 --> 00:14:01.360
+Deci, trebuie să facem un pic mai mult de lucru dacă specificitatea este cu adevărat complicată față de cazul
+
+00:14:01.360 --> 00:14:03.460
+în care este exact așa.
+
+00:14:03.460 --> 00:14:08.800
+Deci, din nou, un mic, dar critic pentru a înțelege modul în care redarea funcționează în browser.
+
+00:14:10.870 --> 00:14:12.760
+Ok, am mințit.
+
+00:14:12.760 --> 00:14:19.010
+Există un ultim lucru pe care vreau să-l subliniez când spunem că încărcați doar ceea ce este necesar.
+
+00:14:19.090 --> 00:14:22.380
+Unii dintre voi ar putea crede că există un truc pe care îl putem face.
+
+00:14:23.200 --> 00:14:34.380
+Poate că, în loc să încărcăm o foaie de stil externă, putem crea doar una internă, care este o etichetă de stil
+
+00:14:34.380 --> 00:14:35.070
+și
+
+00:14:40.960 --> 00:14:46.030
+această etichetă de stil aici, putem pune tocmai CSSA.
+
+00:14:46.110 --> 00:14:56.890
+De exemplu, dacă aș vrea ca H-1 să aibă un anumit stil, să spunem stil de font de 30 de pixeli și de fapt
+
+00:14:56.890 --> 00:15:03.340
+doar pentru a face ceva mai clar, putem spune că vom spune doar că
+
+00:15:06.450 --> 00:15:15.790
+acea culoare este Bulley, toate salvează și reîmprospătează și vedem aici, că suntem capabili să schimbăm un stil, dar nu încărcăm
+
+00:15:15.850 --> 00:15:17.790
+noi foi de stil.
+
+00:15:17.980 --> 00:15:24.370
+Deci, teoretic, putem pune toate stilurile aici și aici, să luăm totul și să
+
+00:15:24.520 --> 00:15:27.180
+le punem în acest bloc.
+
+00:15:27.430 --> 00:15:28.260
+Și este foarte bine.
+
+00:15:28.300 --> 00:15:31.780
+Evităm că o cerem de fapt.
+
+00:15:32.030 --> 00:15:34.490
+Totuși, este posibil să observați o problemă aici.
+
+00:15:34.490 --> 00:15:37.510
+Dacă aveam mai multe pagini Ishimaru.
+
+00:15:37.670 --> 00:15:42.700
+Ei bine, va trebui să copiem și să lipim acest lucru în alte pagini.
+
+00:15:42.790 --> 00:15:47.120
+Deci, aceasta funcționează numai pe una.
+
+00:15:47.230 --> 00:15:54.020
+Tim Page și acest lucru este de fapt un lucru bun de făcut dacă faci despre încărcarea completă cu un
+
+00:15:54.020 --> 00:15:57.350
+C-uri interne, doar pentru cele de mai sus ori.
+
+00:15:57.420 --> 00:15:59.930
+C Ss este un truc bun pentru a face.
+
+00:15:59.930 --> 00:16:05.450
+O altă opțiune este să ai ceva numit în linia C Ss și N rândul C Ss.
+
+00:16:05.460 --> 00:16:20.610
+Din nou este un atribut de stil de data aceasta si putem spune ca acest stil are un fundal Stu apelant galben.
+
+00:16:20.820 --> 00:16:24.560
+Dacă salvez și reîmprospătesc din nou nimic nou.
+
+00:16:24.840 --> 00:16:28.860
+Avem fondul nostru galben Bob, fără foi de stil noi.
+
+00:16:28.860 --> 00:16:31.530
+Și încă o dată, acest lucru este destul de mare.
+
+00:16:31.620 --> 00:16:36.180
+Și browserul este capabil să citească acest lucru într-adevăr foarte rapid și să aplice stilul destul de repede.
+
+00:16:36.180 --> 00:16:43.410
+Dar, din nou, limitarea acestui lucru este faptul că trebuie să o facem pentru fiecare element și nu putem avea
+
+00:16:43.410 --> 00:16:45.940
+într-adevăr clase sau ID-uri pentru el.
+
+00:16:47.860 --> 00:16:55.220
+Dar, dacă folosiți aceste strategii, puteți face site-ul web mai rapid, în funcție de situația dvs.
+
+00:16:56.240 --> 00:17:00.470
+Bine, asta este acum pentru a revizui.
+
+00:17:00.580 --> 00:17:04.850
+Am aflat că prin intermediul CSSA vrem să încărcăm doar ceea ce este necesar.
+
+00:17:05.170 --> 00:17:06.370
+Vrem să luăm în considerare.
+
+00:17:06.370 --> 00:17:08.200
+Deasupra încărcării multiple.
+
+00:17:08.200 --> 00:17:15.610
+Vrem să lucrăm cu atributele mass-media pentru a ne asigura că specificăm dimensiunile ecranului și că, de asemenea, ar trebui să
+
+00:17:15.610 --> 00:17:20.150
+ne gândim la o mai mică specificitate în ceea ce privește CSSA.
+
+00:17:20.150 --> 00:17:21.760
+Bine, asta e destul pentru acum.
+
+00:17:21.890 --> 00:17:25.280
+Voi vedea în următorul videoclip unde vorbim despre javascript Buh-Bye.

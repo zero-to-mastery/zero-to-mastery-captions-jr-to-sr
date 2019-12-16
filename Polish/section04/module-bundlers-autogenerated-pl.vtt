@@ -1,0 +1,259 @@
+﻿WEBVTT
+
+00:00:01.460 --> 00:00:03.670
+Witamy ponownie OK.
+
+00:00:03.830 --> 00:00:07.850
+Więc czujemy się całkiem swobodnie reagując i redukując.
+
+00:00:07.850 --> 00:00:13.130
+Wiemy, że są one dostępne dla nas do optymalizacji tej części.
+
+00:00:13.130 --> 00:00:21.830
+Część, w której javascript musi stale dostosowywać się do korzystania z twoich interakcji i zniechęca do malowania i układania layoutów,
+
+00:00:22.770 --> 00:00:25.010
+więc to ma sens.
+
+00:00:25.010 --> 00:00:31.790
+Ale porozmawiajmy trochę o tej części, w której mamy mnóstwo plików Djoser i musimy
+
+00:00:31.790 --> 00:00:39.340
+jakoś dostarczyć je klientowi do przeglądarki, abyśmy mogli renderować coś, co inne aplikacje stają się coraz
+
+00:00:39.340 --> 00:00:39.840
+większe.
+
+00:00:39.940 --> 00:00:45.430
+Szczególnie w przypadku aplikacji jednostronicowych mamy coraz więcej plików opieki Java.
+
+00:00:45.430 --> 00:00:52.780
+Tak więc potrzebujemy czegoś, co nazywa się "Bandler" czymś, co łączy wszystkie te pliki, tak że
+
+00:00:52.780 --> 00:01:00.670
+niezależnie od tego, czy chcemy je wszystkie złożyć, czy podzielić, robi to tak ładnie, że nie musimy
+
+00:01:00.670 --> 00:01:02.340
+tego robić ręcznie.
+
+00:01:02.410 --> 00:01:09.100
+Być może pamiętasz w ćwiczeniu Parwana, kiedy pracowaliśmy na stronie internetowej Kaikohe, więc musieliśmy ręcznie
+
+00:01:09.100 --> 00:01:14.580
+skopiować i wkleić javascript z jednej biblioteki do drugiej, jeśli to mini.
+
+00:01:14.800 --> 00:01:20.840
+A to dużo pracy ręcznej, której nie chcielibyście robić, zwłaszcza, że nasze aplikacje stają się coraz większe.
+
+00:01:20.950 --> 00:01:29.170
+Więc rzeczy takie jak lokaje są w stanie manipulować i łączyć nawet CSSA, by narobić więcej plików w jednym.
+
+00:01:29.440 --> 00:01:33.790
+Mogą łączyć pliki obsługi Java z brzydką stroną, którą mogą zoptymalizować obrazy.
+
+00:01:33.910 --> 00:01:42.870
+Mogą zrobić mnóstwo naprawdę fajnych rzeczy, aby zmaksymalizować dostawę Arafata A do tego momentu.
+
+00:01:43.160 --> 00:01:51.140
+Mieliśmy szczęście, ponieważ stworzyliśmy ponowne dotknięcie zrobiło to dla nas za każdym razem, gdy uruchomiliśmy NPM start lub NPM zbudowany, aby budować
+
+00:01:51.440 --> 00:01:57.030
+nasze pliki do produkcji. Cray reaguje pod maską, używając czegoś, co nazywa się "wetback", aby
+
+00:01:57.620 --> 00:01:59.300
+zrobić to dla nas.
+
+00:02:00.580 --> 00:02:08.000
+W następnych kilku filmach chciałbym przedstawić wam "wet pack" i "bundling", chociaż narzędzia takie jak re-act Abdou
+
+00:02:08.000 --> 00:02:11.030
+są dla nas naprawdę dobrą robotą.
+
+00:02:11.060 --> 00:02:13.810
+Nadal chcemy wiedzieć, jak to działa pod maską.
+
+00:02:15.100 --> 00:02:20.200
+A jeśli chodzi o homeboya z Bon Lake, jest mnóstwo opcji.
+
+00:02:20.920 --> 00:02:26.650
+W tej chwili najbardziej popularnym jest mokrej nawierzchni i po prostu wyskoczyli z mokrym paczuszkiem,
+
+00:02:26.650 --> 00:02:32.300
+ale jest tam nowy i lepszy parser, a potem zwinięty, który zawsze był popularny.
+
+00:02:32.440 --> 00:02:35.570
+Teraz wszystkie to Bandler's.
+
+00:02:35.650 --> 00:02:44.800
+Oznacza to, że pobrali niektóre pliki i wypluwają plik na podstawie niektórych optymalizacji, abyśmy mogli go dostarczyć
+
+00:02:44.800 --> 00:02:46.510
+do przeglądarki.
+
+00:02:46.930 --> 00:02:52.500
+Teraz, który pakiet jest panującym mistrzem i zdecydowanie jest dobrym narzędziem.
+
+00:02:52.500 --> 00:02:54.430
+Dlatego reagują w górę, używają tego.
+
+00:02:54.430 --> 00:03:01.690
+Jednak niedawno pojawił się parsel z ideą zerowej konfiguracji, która w przeciwieństwie do mokrej torby wymaga
+
+00:03:01.690 --> 00:03:02.920
+dużej konfiguracji.
+
+00:03:02.920 --> 00:03:07.780
+Musimy powiedzieć każdemu szczegółowi, co musimy zrobić z plikami, a to, czego potrzebujemy, to wypuszczony
+
+00:03:08.140 --> 00:03:10.750
+parsel, mówi: "Hej, to jest trochę gorączkowe.
+
+00:03:10.750 --> 00:03:11.740
+To trochę denerwujące.
+
+00:03:11.740 --> 00:03:13.300
+A co, jeśli tylko zaopiekujemy się tym dla ciebie.
+
+00:03:13.300 --> 00:03:17.090
+Po prostu powiedz nam, jakie pliki chcesz umieścić tutaj, a my je po prostu wyplujemy.
+
+00:03:17.260 --> 00:03:18.900
+Wszystko zoptymalizowane i gotowe do pracy.
+
+00:03:19.700 --> 00:03:26.070
+A następnie roll up słynie również z podobnych rzeczy z mokrym plecami, ale naprawdę bardzo dobrze.
+
+00:03:26.060 --> 00:03:31.850
+Jest to coś, co nazywa się drżeniem drzew, dzięki któremu unika się jakiegokolwiek kodu, którego naprawdę nie potrzebujemy, i
+
+00:03:31.850 --> 00:03:33.710
+wyrzucamy go, zanim zbiorą wszystko.
+
+00:03:34.470 --> 00:03:41.050
+W tym kursie porozmawiamy trochę o internecie i wykonamy niezłe ćwiczenie, a także małą demonstrację
+
+00:03:41.050 --> 00:03:45.680
+na parsel, ale chciałem mieć na uwadze dwie rzeczy.
+
+00:03:45.730 --> 00:03:47.110
+Pierwszy jest praktyczny.
+
+00:03:47.110 --> 00:03:51.400
+Wtedy powinienem je dobrze wykorzystać.
+
+00:03:51.580 --> 00:03:58.780
+Jaki pakiet jest wypróbowany i przetestowany moduł Bandler, że jeśli masz duży projekt, najprawdopodobniej
+
+00:03:58.780 --> 00:03:59.860
+używasz zwrotnego.
+
+00:03:59.860 --> 00:04:05.500
+Najprawdopodobniej jest to ustawione na początku projektu przez kogoś, kto jest liderem zespołu lub
+
+00:04:05.500 --> 00:04:06.600
+starszym deweloperem.
+
+00:04:07.890 --> 00:04:10.110
+Wykorzystaj te do dużych projektów.
+
+00:04:10.110 --> 00:04:15.950
+Drugi użyje parsel, jeśli jesteś sam w projekcie lub jest to mały projekt.
+
+00:04:15.960 --> 00:04:18.030
+Musisz tylko wstać i iść.
+
+00:04:18.060 --> 00:04:22.920
+Nie musisz martwić się zbytnio o pliki konfiguracyjne, takie jak pakiet sieciowy,
+
+00:04:22.920 --> 00:04:31.290
+które są bardzo łatwe do pobrania i bardzo łatwe do nauczenia się w końcu skorzystaj z funkcji zwijania, gdy wdrażasz własne pakiety NPM.
+
+00:04:32.160 --> 00:04:39.360
+Drugą kwestią i najważniejszym punktem, który myślę, jest to, że konfiguracje i pliki
+
+00:04:39.360 --> 00:04:41.940
+konfiguracyjne zawsze się zmieniają.
+
+00:04:41.940 --> 00:04:49.740
+Jedną z moich wielkich gier domowych jest to, ile czasu poświęcamy na coś w rodzaju "mokrej", aby zrozumieć jej konfigurację,
+
+00:04:49.980 --> 00:04:52.530
+a potem pojawia się nowa wersja.
+
+00:04:52.650 --> 00:04:53.910
+I rzeczy się zmieniają.
+
+00:04:54.740 --> 00:04:58.390
+Jeśli chodzi o konfigurację i pakowanie, zawsze ewoluujemy.
+
+00:04:58.430 --> 00:05:05.070
+Wszystko się poprawia i coś, czego nauczyliśmy się dwa lata temu, może teraz nie mieć zastosowania.
+
+00:05:05.930 --> 00:05:07.690
+Miej to na uwadze.
+
+00:05:07.820 --> 00:05:15.310
+Nie wychodź za burtę i nie czytaj wszystkich linii w dobrze zapakowanej dokumentacji, gdy
+
+00:05:15.320 --> 00:05:23.260
+masz problem z utworzeniem sieci, w której znajduje się plik konfiguracyjny, aby dobrze skonfigurować pakowanie modułów.
+
+00:05:23.400 --> 00:05:26.140
+W tym momencie powinieneś wiedzieć, co to oznacza.
+
+00:05:26.180 --> 00:05:31.760
+Możesz więc przejść do dokumentacji i przeczytać je podczas budowania pliku konfiguracyjnego.
+
+00:05:31.800 --> 00:05:36.900
+Nie musisz zapamiętywać każdej rzeczy i dlatego jestem wielkim fanem używania czegoś
+
+00:05:36.900 --> 00:05:44.930
+w stylu tworzenia reakcji, aby stworzyć nową aplikację, która została opracowana przez jednych z najmądrzejszych umysłów w zakresie
+
+00:05:44.940 --> 00:05:52.470
+tworzenia stron internetowych i ich codziennego dnia pracy. aby projekt był udany i zoptymalizowany oraz jak najlepiej
+
+00:05:52.470 --> 00:05:53.310
+zakodowany.
+
+00:05:53.310 --> 00:05:59.680
+Oni spędzają tam cały czas, więc po co odkrywać nowe koło.
+
+00:05:59.810 --> 00:06:01.940
+Crea reaguje już istnieje.
+
+00:06:01.950 --> 00:06:04.030
+Użyj ich mocy, wykorzystaj ich wiedzę.
+
+00:06:04.050 --> 00:06:10.620
+Korzystaj ze stałych aktualizacji, które dostajesz za darmo, i jeśli naprawdę potrzebujesz zoptymalizować.
+
+00:06:10.620 --> 00:06:18.860
+Zawsze możesz zrobić coś takiego, jak NPM uruchomić odrzutowiec i stworzyć zgrupowane, aby mieć dostęp do dobrze zapakowanego
+
+00:06:18.870 --> 00:06:20.130
+pliku konfiguracyjnego.
+
+00:06:20.130 --> 00:06:23.860
+Pamiętaj jednak, że konfiguracje zawsze się zmieniają.
+
+00:06:23.970 --> 00:06:27.880
+Wystarczy wiedzieć, jak działają i zrozumieć, dlaczego są przydatne.
+
+00:06:28.290 --> 00:06:33.990
+Ale nie spędzaj całego czasu ucząc się, jak zrobić plik konfiguracyjny.
+
+00:06:34.020 --> 00:06:40.050
+Twój czas jest lepiej spędzony, ucząc się kodu poprawnie tworzyć mniej błędów pisać lepsze testy.
+
+00:06:40.380 --> 00:06:43.930
+Wszystkie rzeczy, o których będziemy rozmawiać w dalszej części kursu.
+
+00:06:43.970 --> 00:06:45.490
+To tyle na teraz.
+
+00:06:45.530 --> 00:06:46.990
+Zobaczę w następnym.
+
+00:06:47.230 --> 00:06:47.480
+Babai.

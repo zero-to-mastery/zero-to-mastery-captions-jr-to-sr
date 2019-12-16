@@ -1,0 +1,388 @@
+﻿WEBVTT
+
+00:00:01.240 --> 00:00:06.790
+Witamy ponownie, zobaczmy, co bym zrobił, co znowu nie znaczy, że jest słuszna, to po
+
+00:00:06.790 --> 00:00:10.140
+prostu to, co zrobiłbym, aby poprawić wydajność strony.
+
+00:00:10.150 --> 00:00:12.350
+Mam nadzieję, że dobrze się bawiłeś z tym wyzwaniem.
+
+00:00:12.400 --> 00:00:16.150
+Mam nadzieję, że jest tam kilka sztuczek, które musiał przejść.
+
+00:00:16.170 --> 00:00:19.270
+Ale znowu jestem pewien, że wszyscy świetnie się spisali.
+
+00:00:19.360 --> 00:00:24.890
+Więc rozmawialiśmy o zminimalizowaniu Phylis minimalizacji dostarczania i krytycznej ścieżce renderowania.
+
+00:00:24.940 --> 00:00:28.750
+To są rzeczy, na których skupiliśmy się w tej sekcji.
+
+00:00:28.750 --> 00:00:34.990
+Patrząc na stronę internetową KCl Corp to nie jest tak źle, odświeżmy Cię tutaj, aby uzyskać te
+
+00:00:34.990 --> 00:00:35.490
+animacje.
+
+00:00:35.670 --> 00:00:36.540
+Tak.
+
+00:00:36.670 --> 00:00:36.970
+W porządku.
+
+00:00:36.970 --> 00:00:38.700
+Zrobiłem stronę internetową, więc oszukałem.
+
+00:00:38.710 --> 00:00:43.570
+Wiem, w jaki sposób możemy poprawić wydajność całkiem dobrze na tej stronie internetowej, ponieważ
+
+00:00:43.570 --> 00:00:50.890
+zrobiłem pewne rzeczy, które zdecydowanie nie były najładniejsze, ale widać tutaj, że to nie jest zła strona internetowa dla bycia tym,
+
+00:00:50.890 --> 00:00:51.920
+czym jest.
+
+00:00:52.030 --> 00:00:58.040
+Ma pewne animacje, które można przewijać.
+
+00:00:58.820 --> 00:01:04.480
+Ale zauważysz też, że używają niektórych bibliotek, które nawet nie działają.
+
+00:01:04.850 --> 00:01:08.500
+Rzućmy okiem na kod i zobaczmy, co zrobiłbym, aby go poprawić.
+
+00:01:10.140 --> 00:01:18.010
+Pierwszą rzeczą, którą powinienem zrobić, to z pewnością przyjrzeć się kobiecym akta i kobiecej teczce tutaj.
+
+00:01:18.150 --> 00:01:25.280
+Pierwszą rzeczą, która rzuca się w oczy jest ogromna ilość arkuszy stylów, które mamy.
+
+00:01:25.300 --> 00:01:32.920
+Widzimy, że mają one tony, w tym bootstrap zawierający animacje karuzeli przejściowej i oczywiście nasz
+
+00:01:32.920 --> 00:01:34.870
+główny plik CSSA.
+
+00:01:34.900 --> 00:01:41.690
+Jeśli spojrzę na te łabędzie, zobaczę, że niektóre z nich nie są nawet zminimalizowane, więc prawdopodobnie powinniśmy je
+
+00:01:41.710 --> 00:01:42.500
+zminimalizować.
+
+00:01:42.640 --> 00:01:50.800
+Ale moje pierwsze pytanie brzmi: dlaczego potrzebujemy tylu stylów SS i czy naprawdę ich potrzebujemy.
+
+00:01:50.800 --> 00:01:57.640
+Czy naprawdę potrzebujemy animacji CSSA, czy możemy zrobić niektóre z tych animacji za pomocą animacji i przejść
+
+00:01:57.730 --> 00:01:59.770
+CSSA, które pochodzą natywnie.
+
+00:01:59.810 --> 00:02:02.280
+Znowu naprawdę chcesz się skupić.
+
+00:02:02.390 --> 00:02:03.610
+Czy naprawdę tego potrzebujemy.
+
+00:02:03.620 --> 00:02:09.810
+Nie ograniczaj się do różnych rzeczy tylko dlatego, że jest to łatwe.
+
+00:02:09.960 --> 00:02:16.480
+Tak więc na pewno zdecydowanie zagłębię się w to i powiem, że prawdopodobnie mógłbym się ich pozbyć.
+
+00:02:16.560 --> 00:02:19.670
+Następnie przewijam i widzę jakiś akcent scenariusza.
+
+00:02:19.700 --> 00:02:25.520
+Och, chłopcze, jest wiele znaczników scenariusza i wszystkie są w głowie, czego zdecydowanie nie chcemy robić.
+
+00:02:25.530 --> 00:02:32.340
+Chcemy przesunąć wszystkie te elementy do samego końca ciała, chyba że są one bardzo ważne, ale patrząc
+
+00:02:32.340 --> 00:02:39.750
+na te paralaksy karuzeli Jey, przewijają się do ładnego zwoju, podczas gdy my możemy z całą pewnością je tam
+
+00:02:39.750 --> 00:02:40.580
+umieścić.
+
+00:02:41.530 --> 00:02:45.470
+Chcemy też zadać sobie pytanie, czy naprawdę tego potrzebujemy.
+
+00:02:45.520 --> 00:02:48.500
+Na przykład przewiń do tego, co robi.
+
+00:02:48.570 --> 00:02:53.890
+To ma sprawić, że przejdziemy do części strony, na której nam zależy.
+
+00:02:53.890 --> 00:02:56.300
+Ale widać, że to nawet nie działa.
+
+00:02:56.380 --> 00:02:58.880
+Więc może nawet tego nie potrzebujemy.
+
+00:02:59.140 --> 00:03:06.490
+Ponownie sprawdzając, dlaczego potrzebujesz i dlaczego nie potrzebujesz, pomyśl o tym, czy są one zminimalizowane, jeśli nie
+
+00:03:06.490 --> 00:03:07.400
+są zminimalizowane.
+
+00:03:07.450 --> 00:03:10.650
+OK, ten jest taki, ale ten nie jest.
+
+00:03:10.660 --> 00:03:12.870
+Być może powinniśmy zminimalizować to wszystko.
+
+00:03:13.150 --> 00:03:19.480
+A następnie ostatecznie połączyć wszystkie te elementy w jeden plik może mieć jeden główny plik pakunku, a
+
+00:03:19.780 --> 00:03:24.390
+reszta to pliki dostawców w jednym celu, minimalizując nasze podróże przez sieć.
+
+00:03:25.210 --> 00:03:33.920
+A potem przewijając tutaj, wiesz, typowy typowy dla shemale, nic zbyt szalonego, wszystko wygląda
+
+00:03:33.920 --> 00:03:36.160
+tu całkiem nieźle.
+
+00:03:36.590 --> 00:03:42.050
+Ale jeszcze raz przejrzyjmy niektóre z naszych punktów i zobaczmy, co możemy poprawić tutaj.
+
+00:03:42.050 --> 00:03:48.510
+W porządku, więc rozmawialiśmy o ładowaniu tagów stylu w skryptach ładowania ładunków tuż przed ciałem.
+
+00:03:48.530 --> 00:03:49.040
+W porządku.
+
+00:03:49.080 --> 00:03:51.700
+A następnie CSSA ładuje tylko to, co jest potrzebne.
+
+00:03:51.710 --> 00:03:56.940
+Zdecydowanie rozmawialiśmy o tym, że nie rozmawialiśmy o ładowaniu po złożeniu.
+
+00:03:57.070 --> 00:04:04.920
+Znowu patrząc na stronę internetową widzimy, że zdecydowanie mamy fajną przewijaną stronę internetową, ale
+
+00:04:04.920 --> 00:04:11.210
+nie potrzebujemy tych obrazów ani żadnego z nich poniżej, szczególnie CSSA.
+
+00:04:11.390 --> 00:04:12.640
+Potrzebujemy tylko najwyższej części.
+
+00:04:12.890 --> 00:04:22.720
+Więc może jedną rzeczą, którą możemy zrobić, jest dodanie tagu stylu Rupes sell tag na naszej stronie, który jest naprawdę trudny do wpisania, gdy masz
+
+00:04:22.720 --> 00:04:26.570
+mikrofon i jesteś w swojej twarzy tak jak ja.
+
+00:04:26.710 --> 00:04:33.310
+Wiesz, że to tylko jedna uwaga, jeśli chcesz się dowiedzieć z tym tagiem stylu. Mogę mieć
+
+00:04:33.430 --> 00:04:39.070
+kilka stylów tylko dla głównej części strony, którą widza od razu widzi.
+
+00:04:39.370 --> 00:04:46.930
+W ten sposób mogę po prostu wczytać arkusze stylów, tak jak pokazałem ci po załadowaniu strony, a
+
+00:04:46.930 --> 00:04:49.580
+następnie wszystkie rzeczy pod zakładką.
+
+00:04:49.600 --> 00:04:51.470
+To jeden sposób.
+
+00:04:51.470 --> 00:04:55.440
+Kolejną rzeczą, na którą możemy spojrzeć, są atrybuty mediów.
+
+00:04:55.510 --> 00:05:02.520
+Patrząc na ten obraz w tle wygląda on całkiem nieźle i założę się, że nie jest zoptymalizowany dla mobo.
+
+00:05:02.950 --> 00:05:07.150
+Spójrzmy więc, jak duży jest ten obraz Chcę otworzyć lotnisko.
+
+00:05:07.510 --> 00:05:14.770
+Nie mogę mówić, mam zamiar otworzyć zakładkę sieci za pomocą narzędzi programistycznych, a potem
+
+00:05:14.800 --> 00:05:19.240
+będę filtrować obrazy i zamierzam odświeżyć i chłopca.
+
+00:05:19.420 --> 00:05:20.560
+To dużo obrazów.
+
+00:05:20.560 --> 00:05:22.470
+Myślę, że to jest obraz bohatera.
+
+00:05:22.460 --> 00:05:23.440
+Tak, jest.
+
+00:05:23.740 --> 00:05:29.190
+Widzimy więc, że ten obraz to jeden megabajt.
+
+00:05:29.210 --> 00:05:31.520
+To całkiem niedorzeczne.
+
+00:05:31.530 --> 00:05:37.590
+Z pewnością możemy to skompresować i zminimalizować, a na pewno nie potrzebujemy dużego obrazu
+
+00:05:37.590 --> 00:05:39.030
+do ekranu mobilnego.
+
+00:05:40.010 --> 00:05:44.580
+Przyjrzyjmy się także wszystkim żądaniom, które pojawiały się na tej stronie.
+
+00:05:45.080 --> 00:05:46.010
+O chłopie.
+
+00:05:46.010 --> 00:05:47.920
+To 48 próśb.
+
+00:05:47.990 --> 00:05:50.440
+Zdecydowanie nie potrzebujemy wielu próśb.
+
+00:05:50.510 --> 00:05:56.180
+Tak na marginesie w ten sposób działało wiele starszych stron internetowych i zdecydowanie
+
+00:05:56.180 --> 00:05:58.300
+nie najlepsze z nich.
+
+00:05:58.300 --> 00:06:00.760
+W porządku, zobaczmy, co jeszcze możemy poprawić tutaj.
+
+00:06:03.160 --> 00:06:06.500
+Rozmawialiśmy o pierwszych trzech, ale mniejszej specyficzności.
+
+00:06:06.880 --> 00:06:11.800
+A ta strona internetowa nie jest z tym zbyt zła i jest to jedna z tych
+
+00:06:11.800 --> 00:06:14.640
+drobnych rzeczy, o których nie bardzo trzeba się martwić.
+
+00:06:14.680 --> 00:06:18.900
+Wpływa na wydajność, ale nie na zakres niektórych innych rzeczy.
+
+00:06:18.910 --> 00:06:22.960
+Nie martwiłbym się tym zbytnio, ale chciałem go tam włączyć.
+
+00:06:23.860 --> 00:06:29.260
+Rozmawialiśmy także o ładowaniu skryptów, ale nie mówiliśmy o asynchronicznym lub odroczeniu tych skryptów
+
+00:06:29.530 --> 00:06:35.210
+dla javascript lub zapytania o java i wszystkich innych skryptów, których tak naprawdę nie potrzebowaliśmy.
+
+00:06:35.260 --> 00:06:40.280
+Prawdopodobnie chcemy dodać do nich tag asynchroniczny lub odroczony, jeśli chcemy je zachować.
+
+00:06:41.280 --> 00:06:48.000
+Chcemy także zminimalizować manipulację DOM i uniknąć długiego uruchamiania Javascript.
+
+00:06:48.000 --> 00:06:49.470
+Spójrzmy więc tutaj.
+
+00:06:50.160 --> 00:06:55.950
+DOM manipulacja Cóż, myślę, że to się dzieje szczególnie w przypadku wszystkich tych animacji, które
+
+00:06:55.950 --> 00:06:57.510
+zobaczymy ponownie, jeśli odświeżymy.
+
+00:06:57.510 --> 00:07:00.320
+Widzimy wszystkie animacje, które tu się dzieją.
+
+00:07:01.360 --> 00:07:08.160
+Zdecydowanie możemy tego uniknąć, szczególnie przy użyciu Jake'a queery, że używają J. ZA. SOL.
+
+00:07:08.260 --> 00:07:09.360
+teraz.
+
+00:07:09.400 --> 00:07:11.440
+Rzućmy okiem na niektóre rzeczy, które robimy.
+
+00:07:11.500 --> 00:07:13.990
+Paralaksa, aby przejść do Maine.
+
+00:07:14.050 --> 00:07:16.740
+Widzisz, że bardzo często używają Jacquiera.
+
+00:07:16.930 --> 00:07:19.450
+I ta biblioteka jest świetna.
+
+00:07:19.570 --> 00:07:24.820
+Jednak prawie wszystko, co można zrobić w więzieniu, gdzie można zrobić z natywną Javą.
+
+00:07:25.270 --> 00:07:27.800
+Myślę, że istnieje strona internetowa o nazwie.
+
+00:07:28.060 --> 00:07:31.380
+Nie potrzebujesz zapytania.
+
+00:07:31.690 --> 00:07:37.690
+Zobaczmy.
+
+00:07:37.900 --> 00:07:44.650
+Lub może nie potrzebujesz Jacqui i faktycznie pokazuje ci wszystkie rzeczy, które możesz zrobić z javascript zamiast używać
+
+00:07:44.650 --> 00:07:51.370
+Jaya Querreya, abyśmy mogli uniknąć korzystania z tej ogromnej biblioteki i po prostu użyć javascript, który jest dołączony
+
+00:07:51.370 --> 00:07:51.830
+do.
+
+00:07:53.160 --> 00:07:58.710
+I znowu używamy narzędzi, takich jak przewiń do lub bibliotek, takich jak przewiń do.
+
+00:07:58.710 --> 00:08:06.330
+To ma uczynić naszą stronę internetową klikalną i przewinąć do tej sekcji, ale to jeszcze nie działa.
+
+00:08:06.330 --> 00:08:10.850
+Więc znowu naprawdę sprawdzamy, czy naprawdę tego potrzebujemy.
+
+00:08:10.950 --> 00:08:13.560
+A następnie w końcu uniknąć długiego uruchamiania Javascript.
+
+00:08:13.560 --> 00:08:17.890
+Nie sądzę, żebyśmy mieli za dużo tego, ale z animacjami, które mogą być dość trudne.
+
+00:08:18.180 --> 00:08:25.470
+Znowu rzeczy, które możesz poprawić, a my tylko drapiemy powierzchnię tutaj, ale mam nadzieję, że naprawdę dobrze
+
+00:08:25.470 --> 00:08:27.720
+się bawiłeś przy tym ćwiczeniu.
+
+00:08:27.720 --> 00:08:34.190
+To była zdecydowanie fajna gra na tej stronie internetowej i jestem bardzo podekscytowany tym, jak szybko niektóre z tych stron
+
+00:08:34.190 --> 00:08:35.150
+mogą uzyskać.
+
+00:08:35.250 --> 00:08:38.080
+Podczas oglądania publikujesz je i do społeczności.
+
+00:08:38.310 --> 00:08:44.650
+Ale najważniejszą rzeczą do zapamiętania tutaj jest to, że wydajność jest niekończącą się grą.
+
+00:08:44.970 --> 00:08:47.350
+Zawsze możesz poprawić wydajność w witrynie sieci Web.
+
+00:08:47.360 --> 00:08:49.520
+Zawsze możesz ulepszyć to maleństwo.
+
+00:08:49.830 --> 00:08:55.500
+Jako starszy programista chcesz mieć pewność, że mądrze spędzasz czas na sprawach, które mają znaczenie.
+
+00:08:55.500 --> 00:09:03.030
+Dowiedz się, co jest wartościowe dla twojego klienta dla twojego biznesu dla twojego szefa i wykonaj te optymalizacje wydajności, ale
+
+00:09:03.130 --> 00:09:08.250
+tylko do punktu, który jest potrzebny, bo inaczej doprowadzisz się do szaleństwa.
+
+00:09:08.250 --> 00:09:09.810
+Jest tyle rzeczy, które możesz zrobić.
+
+00:09:09.840 --> 00:09:11.490
+Skoncentruj się na tych dużych przedmiotach biletowych.
+
+00:09:11.490 --> 00:09:15.460
+Najważniejsze cechy, które sprawiają, że strona internetowa jest wydajna.
+
+00:09:15.710 --> 00:09:21.250
+Mam nadzieję, że dobrze się bawiłeś w tym wyzwaniu i nie mogę się doczekać spotkania z kolejnym filmem Popeye.

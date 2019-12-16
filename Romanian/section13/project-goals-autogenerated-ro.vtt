@@ -1,0 +1,181 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:10.430
+Bine ați venit înapoi după o lungă pauză lungă, vom adăuga în sfârșit câteva caracteristici interesante pentru aplicația creierului
+
+00:00:10.430 --> 00:00:11.930
+nostru inteligent.
+
+00:00:11.930 --> 00:00:16.900
+Și de-a lungul timpului în care ai fost plecat, am reușit să păcălim API-ul nostru clarificat.
+
+00:00:16.970 --> 00:00:21.100
+Se pare că poate recunoaște chipurile cu fața în jos.
+
+00:00:21.350 --> 00:00:27.510
+Dar, oricum, să ne întoarcem la Mark, acum avem conținutul nostru.
+
+00:00:27.550 --> 00:00:28.780
+Acesta este creierul inteligent.
+
+00:00:28.810 --> 00:00:35.600
+Aceasta este o reacție în sus și rulează pe localhost trei mii unul astfel încât portul trei mii unul.
+
+00:00:35.830 --> 00:00:40.350
+Și apoi avem și API-ul inteligent al creierului la care lucrăm.
+
+00:00:40.390 --> 00:00:46.960
+Și, de fapt, am descris-o acum că are un câine sau cădea cu doc ​​sau compune și face toate aceste lucruri uimitoare pentru noi, în loc
+
+00:00:46.960 --> 00:00:52.110
+de a ne face să ne facem griji cu privire la bazele de date și de a stabili totul.
+
+00:00:52.240 --> 00:00:57.110
+Acum avem acest document înapoi și API cu unele date.
+
+00:00:57.610 --> 00:01:04.330
+Și apoi am simplificat lucrurile și am făcut un utilizator cu e-mail un com cu parola.
+
+00:01:04.340 --> 00:01:14.310
+A Aceasta este o parolă de tip hash care utilizează cripta B care, în comparație cu litera A, se va potrivi.
+
+00:01:14.340 --> 00:01:22.820
+Acum, din moment ce am stabilit mediul dezvoltatorilor și permiteți-mi să clar acest lucru, avem acum capacitatea de a face o muncă
+
+00:01:22.850 --> 00:01:30.320
+de calitate și de a implementa sesiuni, pentru că, în mod ideal, dacă ne întoarcem la fișierul nostru de
+
+00:01:30.350 --> 00:01:36.900
+server dodgiest în punctele noastre finale de aici, bine să facem acest lucru puțin mai mici,
+
+00:01:37.680 --> 00:01:46.020
+astfel încât să vedem până acum că am avut accesul liber la înregistrarea și înregistrarea ID-ului profilului, de exemplu, nimeni nu
+
+00:01:46.250 --> 00:01:47.420
+le verifică.
+
+00:01:47.670 --> 00:01:55.440
+Dacă, de exemplu, acest profil de identificare a făcut pe cineva să primească o cerere de oriunde din lume, ei vor avea acces
+
+00:01:55.440 --> 00:02:00.890
+la acest lucru, deoarece nu solicităm un nume de utilizator sau o parolă în acest moment.
+
+00:02:00.900 --> 00:02:05.760
+Vreau să spun că suntem pentru seinen, dar oricine se poate conecta aici.
+
+00:02:06.160 --> 00:02:15.250
+În mod ideal, avem aici ceva care spune că trebuie să cerem autor, deoarece modul în care exprima lucrează la
+
+00:02:15.520 --> 00:02:22.930
+fel ca parserul întruchipează nucleul și Morgan lucrează la middleware-ul lor și interceptează răspunsurile pe care
+
+00:02:22.930 --> 00:02:23.950
+le primim.
+
+00:02:23.950 --> 00:02:31.860
+Ei fac ceva în jur și fac ceva și apoi continuă să o împingă până la sfârșitul ciclului.
+
+00:02:31.870 --> 00:02:38.590
+În cazul nostru, pentru ID-ul de profil este de a gestiona profilul obține, dar nu ar fi frumos să aibă ceva
+
+00:02:38.590 --> 00:02:46.000
+de genul necesită off și pentru fiecare punct final că avem nevoie de autentificare, utilizatorul trebuie să aibă de fapt permisiunea de a
+
+00:02:46.000 --> 00:02:47.400
+accesa punctul de set.
+
+00:02:47.470 --> 00:02:52.670
+Putem doar să implementăm aici și acolo vom face peste următoarele videoclipuri.
+
+00:02:53.570 --> 00:03:01.280
+Vom folosi JWT să ne citească și toate lucrurile pe care le-am învățat împreună pentru a face în sfârșit o aplicație care funcționează de
+
+00:03:01.700 --> 00:03:06.170
+fapt ca aplicațiile pe care le vedem în viața de zi cu zi.
+
+00:03:06.560 --> 00:03:12.690
+Și partea răcească despre asta este până la sfârșitul acestui lucru veți avea o aplicație ca aplicația smartphone.
+
+00:03:12.800 --> 00:03:21.440
+Ele pot imita mereu copierea și modificarea în funcție de nevoile dvs., dar veți avea logoul dvs. în funcția de conectare.
+
+00:03:21.440 --> 00:03:26.510
+Veți avea o pagină de sign-in reluați pagina dvs. de căutare deja configurată și aveți deja
+
+00:03:26.510 --> 00:03:30.690
+un server și un doctor citiți-ne sau citiți-ne baza de date toate configurate.
+
+00:03:30.800 --> 00:03:31.940
+Va fi foarte distractiv.
+
+00:03:31.940 --> 00:03:38.990
+Și până la sfârșitul acestuia vom avea un instrument excelent pentru a ne pune în portofoliu sau pentru a ne folosi pentru
+
+00:03:38.990 --> 00:03:40.810
+oricare dintre proiectele noastre viitoare.
+
+00:03:40.940 --> 00:03:45.680
+Acum, primul lucru pe care îl vom face este că voi elimina tot ce am scris, pentru că nu
+
+00:03:45.680 --> 00:03:46.490
+avem încă asta.
+
+00:03:47.460 --> 00:03:49.950
+Vrem să ne asigurăm că ne putem conduce bacota.
+
+00:03:49.950 --> 00:03:52.050
+Deci, din nou, ne vom duce pe dr.
+
+00:03:54.990 --> 00:04:04.290
+compune-te cu liniuță dash construi doar pentru a vă asigura că ar putea vedea datele mele bazele de date a fi create.
+
+00:04:04.410 --> 00:04:06.750
+Și în timp ce rulează, o să mă întorc.
+
+00:04:06.750 --> 00:04:12.490
+Vedem că capătul din față rulează deja și că totul ar trebui să funcționeze bine.
+
+00:04:13.540 --> 00:04:19.250
+Doar pentru a testa totul afară odată ce se execută toate lucrurile pe care le avem aplicația rulează pe portul 3 0 0
+
+00:04:19.320 --> 00:04:20.060
+0 0.
+
+00:04:20.620 --> 00:04:22.400
+Să ne reîmprospătăm aici.
+
+00:04:23.730 --> 00:04:31.960
+Dacă mă conectez cu un punct de la com OK, care este datele C pe care le-am furnizat, suntem capabili să ne logăm.
+
+00:04:32.490 --> 00:04:37.020
+Și încă o dată putem introduce o imagine și aceasta va funcționa pentru noi.
+
+00:04:37.110 --> 00:04:41.880
+Dar, din nou, problema noastră este că de fiecare dată când refacem ceea ce trebuie să semnem.
+
+00:04:42.090 --> 00:04:45.880
+E un pic enervant daca esti un utilizator nu-i asa.
+
+00:04:45.930 --> 00:04:46.430
+In regula.
+
+00:04:46.650 --> 00:04:53.190
+Și următorul videoclip vom începe să construim o pagină de profil, pentru ca noi să
+
+00:04:53.340 --> 00:05:00.420
+construim sesiuni și să facem necesitatea Auth. că am vorbit despre noi trebuie să avem un fel de motiv semnificativ
+
+00:05:00.420 --> 00:05:01.680
+pentru a face asta.
+
+00:05:01.770 --> 00:05:08.280
+Așadar, vom crea o pagină de profil unde veți putea să vă editați numele, poate câmpuri de formă
+
+00:05:08.280 --> 00:05:12.910
+despre profilul dvs., astfel încât să ne facem un pic mai dinamic.
+
+00:05:13.020 --> 00:05:17.570
+Și apoi vom adăuga sesiuni la cele care se văd în următoarea.
+
+00:05:17.750 --> 00:05:18.090
+Babai.

@@ -1,0 +1,424 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:09.390
+Przechadzamy się nimi w poprzednich filmach, w których dowiadujemy się, w jaki sposób daquiri powstaje za pomocą doc Rafala i
+
+00:00:09.390 --> 00:00:13.520
+zapewnia odpowiednie środowisko, w którym mogą działać nasze usługi aplikacji.
+
+00:00:13.650 --> 00:00:20.210
+Więc hipotetycznie możemy użyć go do naszego serwera węzła, możemy go użyć do naszej bazy danych PostgreSQL, czego chcemy,
+
+00:00:20.220 --> 00:00:22.350
+aby wszystkie nasze usługi były dostępne.
+
+00:00:22.440 --> 00:00:30.690
+Teraz istnieje narzędzie, które faktycznie zainstalowałeś, gdy dokiwałeś do tworzenia dokerów, a to
+
+00:00:30.690 --> 00:00:36.270
+służy do aranżowania naszych usług aplikacji podczas programowania.
+
+00:00:36.270 --> 00:00:43.500
+Jest to więc narzędzie, którego najczęściej używasz podczas programowania, ale jeśli pamiętasz, że prośba Brunosa
+
+00:00:43.620 --> 00:00:51.870
+polega na tym, aby nasze postscripty i nasz serwer działały od jednego polecenia bez konieczności konfigurowania serwera
+
+00:00:51.870 --> 00:00:54.030
+i bazy danych oddzielnie.
+
+00:00:55.000 --> 00:01:02.920
+Dekompozycja Doc pozwala ci komponować te ciemniejsze fragmenty tych różnych usług, tak że podczas tworzenia
+
+00:01:02.920 --> 00:01:05.940
+możesz bardzo łatwo to zrobić.
+
+00:01:07.460 --> 00:01:09.150
+Zapamiętaj nasz diagram tutaj.
+
+00:01:09.630 --> 00:01:14.720
+Cóż, użyjemy komponentu Dharker, nawet jeśli użyliśmy Dharkera na naszym serwerze.
+
+00:01:14.720 --> 00:01:21.270
+Zamierzamy teraz użyć funkcji dokowania lub tworzenia, aby utworzyć kontener zawierający wszystkie te rzeczy.
+
+00:01:21.620 --> 00:01:24.430
+Skoncentrujemy się na serwerze API i bazie danych.
+
+00:01:24.680 --> 00:01:32.000
+A w tych sesjach i sekcji JWT będziemy również włączać usługę rattus, która
+
+00:01:32.000 --> 00:01:41.470
+będzie dużo zabawy i znowu dokowanie Limbo orkiestruje nasze usługi aplikacji i to naprawdę będzie Farnam,
+
+00:01:41.470 --> 00:01:43.820
+kiedy zaczniemy działać.
+
+00:01:43.840 --> 00:01:45.870
+Przejdźmy teraz do tego.
+
+00:01:45.940 --> 00:01:52.360
+Wystarczy jeden heads up, jeśli pobrał docker dla Maca lub stacji dokującej, lub dla Windowsa kaczka lub komponowanie już jest z
+
+00:01:52.360 --> 00:01:52.780
+nim.
+
+00:01:52.870 --> 00:01:59.160
+Jeśli zainstalowałeś go na Linuksie, powinieneś wrócić do tej strony i zainstalować dokument lub osobno skomponować.
+
+00:01:59.200 --> 00:02:01.360
+Więc tylko głowy tam.
+
+00:02:01.580 --> 00:02:11.720
+Teraz sposób, w jaki możemy to zrobić, jest sposobem na połączenie zarówno postscriptów, jak i naszego serwera API w jedno polecenie Daker'a,
+
+00:02:11.810 --> 00:02:18.080
+aby stworzyć coś, co nazywa się doc post-fight i plik tworzący dokument.
+
+00:02:18.080 --> 00:02:25.850
+Po raz kolejny stworzyliśmy katalog główny naszego projektu i będzie on nazywał się docker compose i jest
+
+00:02:26.300 --> 00:02:33.830
+to YAML dla tego właśnie typu pliku, którego używają, a zobaczysz te wysublimowane hacki lub
+
+00:02:33.830 --> 00:02:36.890
+twój edytor rozpozna pewną składnię .
+
+00:02:36.890 --> 00:02:44.600
+Więc znowu doc może obumrzeć YAML, a ja go stworzyłem i możesz zobaczyć tutaj, że mój edytor tekstowy
+
+00:02:44.600 --> 00:02:49.130
+rozpoznaje to jako plik doktora, dokument lub plik skomponowany.
+
+00:02:49.140 --> 00:02:52.490
+Teraz to będzie wyglądać plik kompilatora duckera.
+
+00:02:53.290 --> 00:02:56.100
+Najpierw rozpoczynamy od wersji, której chcemy użyć.
+
+00:02:56.320 --> 00:03:02.300
+W moim przypadku będzie to wersja 3. 6, który jest najnowszy.
+
+00:03:02.300 --> 00:03:10.210
+Obecnie dla mnie i poniżej mamy coś zwanego usługami, a te usługi są tym, co
+
+00:03:10.210 --> 00:03:11.450
+zamierzamy zorganizować.
+
+00:03:11.530 --> 00:03:18.510
+To znaczy, że będziemy mieć usługę API zaplecza, usługę postscriptową, a także późniejszą
+
+00:03:18.630 --> 00:03:19.710
+usługę szerokości.
+
+00:03:20.050 --> 00:03:25.660
+I nazwijmy ją naszą pierwszą powierzchnią, która jest końcem.
+
+00:03:26.720 --> 00:03:31.450
+API lub możemy go nazwać inteligentnym API
+
+00:03:37.980 --> 00:03:39.030
+mózgu.
+
+00:03:39.150 --> 00:03:44.850
+Teraz możemy podać różne opcje, a Dharker Compose ponownie jest rodzajem pliku konfiguracyjnego, dzięki czemu
+
+00:03:44.850 --> 00:03:47.940
+można znaleźć wiele takich dokumentacji online i online.
+
+00:03:47.940 --> 00:03:49.690
+Ale pokażę ci niektóre z typowych.
+
+00:03:49.790 --> 00:04:02.360
+Jedną z nich jest nazwa kontenera Rupes, którą możemy nazwać kontenerem kontenera, ponieważ jako nasz powrót do naszej aplikacji i przy okazji w plikach
+
+00:04:02.360 --> 00:04:08.210
+YAML takie wcięcia tak znowu zwracają uwagę na wcięcia w sposób,
+
+00:04:08.210 --> 00:04:13.330
+w jaki robię rzeczy a potem także to mówimy.
+
+00:04:14.070 --> 00:04:18.180
+Następnie możemy również powiedzieć, jakiego obrazu użyć w Doc lub hub.
+
+00:04:18.290 --> 00:04:23.760
+W naszym przypadku możemy po prostu powiedzieć węzeł i jakiej wersji używamy dla węzła i profilu doktora.
+
+00:04:24.020 --> 00:04:29.870
+Po prostu użyjmy tego.
+
+00:04:29.960 --> 00:04:32.190
+Możemy również dać mu polecenie.
+
+00:04:32.390 --> 00:04:37.250
+Pamiętajmy więc, że musieliśmy uruchomić NPM tutaj.
+
+00:04:37.320 --> 00:04:46.020
+Możemy po prostu dać mu polecenie, kiedy usługa się uruchomi, lub pojemniki utworzone i zainstalowane, aby uruchomić start,
+
+00:04:46.020 --> 00:04:50.330
+możemy również robić rzeczy takie jak katalog roboczy.
+
+00:04:50.340 --> 00:05:00.900
+Tak działa i powie, że to jest w folderze aplikacji i możemy też zrobić Portes pamiętać, że
+
+00:05:00.900 --> 00:05:08.920
+kiedy uruchomiliśmy polecenie z powiązaniem portu i słabym przekierowaniem możemy po prostu powiedzieć,
+
+00:05:08.930 --> 00:05:20.740
+że chcemy portu trzy tysiące osiem 3000, a następnie są inne opcje istnieją środowiska takie, które udostępniają zmienne środowiskowe,
+
+00:05:20.740 --> 00:05:24.730
+jeśli chcesz przekazać klucze API.
+
+00:05:24.730 --> 00:05:28.590
+Możemy to również zrobić, ale zrobimy to później.
+
+00:05:28.600 --> 00:05:34.180
+Mamy też linki takie jak ta, co daje nam to, do czego chcemy, aby ta usługa się łączyła.
+
+00:05:34.180 --> 00:05:39.670
+Jeśli na przykład mamy awarię po awarii, możemy powiedzieć, że mamy postscript i link do tej usługi
+
+00:05:39.670 --> 00:05:42.950
+postscripts, ale nie mamy go teraz, więc nie potrzebujemy tego.
+
+00:05:43.000 --> 00:05:52.040
+A przy okazji, możemy również robić rzeczy takie jak tutaj, aby zbudować nasz wizerunek, a zamiast tego
+
+00:05:52.040 --> 00:05:56.330
+możemy powiedzieć, że chcemy zbudować z naszego
+
+00:06:00.420 --> 00:06:06.960
+doku lub pliku, który istnieje tutaj, więc zbudujemy tę usługę z profil.
+
+00:06:07.090 --> 00:06:08.200
+Więc dajmy sobie spokój.
+
+00:06:08.200 --> 00:06:11.020
+Zamierzam to teraz usunąć lub skomentować.
+
+00:06:11.200 --> 00:06:21.550
+I jak widziałem, że skomentowałeś i pliki YAML do zapisania i sposobu, w jaki go prowadzimy, komponujemy i uruchamiamy,
+
+00:06:21.550 --> 00:06:23.000
+wyjdźmy stąd.
+
+00:06:24.890 --> 00:06:36.620
+Zamierzam to wyjaśnić, mamy więcej miejsca i teraz prowadzimy Dr. skomponuj polecenie, a my możemy po prostu powiedzieć, że wygraliśmy lub
+
+00:06:36.620 --> 00:06:44.130
+skomponowaliśmy skomponowane i że będziemy czytać tę jesień, którą właśnie stworzyliśmy, i chciałem pokazać wam
+
+00:06:44.130 --> 00:06:50.770
+ten obszar, ponieważ może on uzyskać dość tajemniczy z dokiem, gdy popełniacie błąd, a
+
+00:06:50.770 --> 00:06:53.060
+właściwie konkretnie YAML pliki.
+
+00:06:53.260 --> 00:06:59.620
+W tym przypadku mówię, że coś jest nie tak i chcę mieć oko na składnię,
+
+00:06:59.770 --> 00:07:03.940
+której używasz, i odstępy, których używasz do pliku YAML.
+
+00:07:03.940 --> 00:07:14.620
+W naszym przypadku musieliśmy dodać tu średnik lub wywołać i widać, że zmienił się nawet kolor mojego edytora tekstu i jeśli masz dobry
+
+00:07:14.620 --> 00:07:19.690
+edytor tekstu, który pomaga ci wszystkim, to jest naprawdę duży,
+
+00:07:19.690 --> 00:07:24.950
+ponieważ nawet jeśli robię ten błąd, który mój AOD dostał ten błąd.
+
+00:07:25.000 --> 00:07:29.590
+Upewnij się, że wszystkie odstępy są poprawne, ponieważ może to być naprawdę trudne.
+
+00:07:29.710 --> 00:07:36.910
+Na szczęście dr compose ma naprawdę dobrą dokumentację i możesz przejść do trybu online i dowiedzieć się,
+
+00:07:37.150 --> 00:07:38.300
+jak uporządkować swoje posty.
+
+00:07:38.740 --> 00:07:44.100
+Teraz ponownie uruchom nasze polecenie Builth.
+
+00:07:47.500 --> 00:07:48.450
+I spójrz na to.
+
+00:07:48.460 --> 00:07:49.660
+Zaczyna działać.
+
+00:07:49.660 --> 00:07:54.880
+Przechwytuje wersję węzła, w którym tworzymy nasz katalog roboczy.
+
+00:07:54.970 --> 00:08:02.380
+Czytając nasz plik doco, powiedzieliśmy, że jest zbudowany z naszego źródła, które
+
+00:08:02.380 --> 00:08:12.140
+ma plik Daka, w którym instaluje się polecenie NPM i wszystko jest zbudowane przy użyciu tych informacji.
+
+00:08:12.150 --> 00:08:14.190
+Przeanalizujmy więc to, co się tutaj właśnie wydarzyło.
+
+00:08:15.250 --> 00:08:22.150
+Nasze instrukcje powiedziały kompozytorowi, aby utworzył usługę zwaną inteligentnym mózgowym interfejsem API, używając pliku doc, który
+
+00:08:22.150 --> 00:08:23.250
+stworzyliśmy wcześniej
+
+00:08:26.440 --> 00:08:34.350
+zmapowaliśmy kontener do portu 3000, abyśmy mieli do niego dostęp z naszego laptopa, a także uruchomiliśmy NPM mieszane
+
+00:08:34.360 --> 00:08:37.470
+w kontenerze, aby rozpocząć naszą usługę .
+
+00:08:37.570 --> 00:08:41.920
+Teraz tak naprawdę nie zrobiliśmy zbyt wiele, niż gdybyśmy pracowali z dokumentem.
+
+00:08:42.130 --> 00:08:46.550
+A kiedy masz tylko jedną usługę, najprawdopodobniej będziesz pracował tylko z jednym plikiem Bachara.
+
+00:08:46.690 --> 00:08:52.890
+Jedyną różnicą do tej pory jest to, że budujemy przystań lub komponujemy, aby budować nasz wizerunek zamiast Dr ..
+
+00:08:52.910 --> 00:08:55.220
+Teraz uruchommy następne polecenie.
+
+00:08:55.260 --> 00:09:00.570
+Dr. utwórz biegnij i zobacz, co się stanie.
+
+00:09:02.960 --> 00:09:09.090
+Wszystko jasne i muszę nadać mu rzeczywistą rzecz, którą chcemy, aby Consolo powiedział, że
+
+00:09:12.370 --> 00:09:19.450
+docker compose run z kontenerem, który chcemy uruchomić w naszym przypadku jest to inteligentne API mózgu, które nazwaliśmy.
+
+00:09:19.450 --> 00:09:28.060
+Po prostu złapmy to i uruchommy, a my dostaniemy tutaj kilka błędów, więc spróbujmy go debugować i widzimy, że
+
+00:09:28.060 --> 00:09:29.480
+szukamy aplikacji ścieżki.
+
+00:09:29.490 --> 00:09:31.190
+Zapakowałem naszego Jasona.
+
+00:09:31.600 --> 00:09:38.370
+Ale jeśli pamiętasz w naszym pliku doc, nasz katalog roboczy jest taki.
+
+00:09:38.420 --> 00:09:46.100
+Tak więc, aby uzyskać punkt przecięcia z listami katalogów roboczych, spróbuj i skopiuj to tutaj zamiast utworzonej przez nas
+
+00:09:46.100 --> 00:09:50.320
+aplikacji Dash, ponieważ tam właśnie istnieją nasze spakowane pliki.
+
+00:09:50.420 --> 00:09:53.590
+Jeśli ponownie uruchomimy komendę
+
+00:10:03.540 --> 00:10:14.360
+budowania i pozwolę sobie oczyścić to i ponownie uruchomić nasze kapo Gawkera, uruchom inteligentny interfejs API mózgu.
+
+00:10:14.540 --> 00:10:18.930
+Nasza aplikacja działa na porcie 3000.
+
+00:10:19.110 --> 00:10:27.080
+I jeśli pójdziemy do localhost i upewnimy się, że idziemy do localhost 3000 tutaj, spójrz na to.
+
+00:10:27.080 --> 00:10:29.070
+To działa.
+
+00:10:29.090 --> 00:10:30.160
+To cudownie.
+
+00:10:30.350 --> 00:10:35.480
+Teraz zróbmy trochę logowania, ponieważ trudno jest zobaczyć, co się dzieje i czy faktycznie trafiamy w
+
+00:10:35.480 --> 00:10:36.600
+to samo miejsce.
+
+00:10:36.950 --> 00:10:43.670
+Tak więc zamknę to szybko i zainstaluję pakiet, o którym mówiliśmy w dziale bezpieczeństwa
+
+00:10:44.270 --> 00:10:52.260
+o nazwie Morgan i zamierzamy użyć Morgana tutaj tylko do celów logowania, a następnie dodać go
+
+00:10:52.350 --> 00:10:54.660
+tutaj z Konst Morgan.
+
+00:10:55.010 --> 00:11:00.530
+Chcesz wymagać pakietu i jest to oprogramowanie pośrednie.
+
+00:11:00.780 --> 00:11:04.010
+Więc wszystko, co musimy zrobić, to użyć go tak, jak robimy to tutaj.
+
+00:11:06.810 --> 00:11:10.830
+Powiedz Morganowi i daj mu opcje, jakiego rodzaju wyjście chcemy.
+
+00:11:10.830 --> 00:11:14.670
+Podoba mi się opcja połączona i zobaczymy, jak to wygląda.
+
+00:11:14.670 --> 00:11:25.300
+Tak więc znowu uruchomię kompilację dockera, aby zbudować z naszego pliku Dagera.
+
+00:11:25.300 --> 00:11:34.500
+Możesz zobaczyć tutaj, uruchamiamy instalacje NPM i pozwól mi to wyjaśnić, więc wyczyścimy terminal, który
+
+00:11:34.510 --> 00:11:36.370
+mamy połączony.
+
+00:11:36.370 --> 00:11:41.840
+Teraz na wszelki wypadek, gdy masz jakieś pojemniki w tle lub
+
+00:11:41.980 --> 00:11:52.250
+musisz usunąć wszystko, co możesz, po prostu zrób dokowanie i zlikwiduj wszystkie pojemniki, które możesz mieć, nie wyglądają tak, jakbyśmy je
+
+00:11:52.290 --> 00:12:01.300
+mieli i możemy po prostu iść Dr . skomponuj kompilację, a to zaczyna denerwować budowanie i układanie
+
+00:12:01.300 --> 00:12:02.230
+wszystkiego.
+
+00:12:02.320 --> 00:12:10.420
+Możemy faktycznie uruchomić doker lub skomponować, aby wyświetlić kontener z budową i budową kreski myślnikowej.
+
+00:12:10.420 --> 00:12:15.460
+Trzeba to zrobić tylko na początku, aby zbudować i uruchomić instalację NPM i wszystko,
+
+00:12:15.460 --> 00:12:17.410
+co zrobiliśmy i plik dokowania.
+
+00:12:17.410 --> 00:12:20.830
+Ale potem możesz po prostu kontynuować dokumentację lub skomponować dokument.
+
+00:12:20.830 --> 00:12:30.560
+Do tej pory działam to buduje nasz backend i patrzę, że teraz się loguje i zgodnie z nazwą, którą daliśmy
+
+00:12:30.560 --> 00:12:33.730
+kontenerem, możesz zobaczyć tu i tam.
+
+00:12:33.800 --> 00:12:35.420
+Tak właśnie jest.
+
+00:12:35.720 --> 00:12:41.940
+I uruchomiono NPM start i widzisz, że teraz korzystamy z portu aplikacji trzy tysiące.
+
+00:12:42.140 --> 00:12:48.990
+A jeśli teraz wrócę i odświeżam wygląd, mamy tylko trochę logowania.
+
+00:12:48.990 --> 00:12:55.540
+Jeśli zrobię to jeszcze trzy razy i odświeżę, zobaczymy, że mamy logowanie.
+
+00:12:55.540 --> 00:13:02.410
+Właśnie stworzyliśmy plik do tworzenia dokerów z naszym inteligentnym interfejsem API.
+
+00:13:02.410 --> 00:13:04.410
+Ale najlepiej chcemy zrobić więcej.
+
+00:13:04.420 --> 00:13:08.190
+Idealnie możemy mieć postscripts rok i rok Radice.
+
+00:13:08.290 --> 00:13:12.200
+W następnym filmie opowiem o tym nieco więcej.
+
+00:13:12.260 --> 00:13:13.240
+Zobaczę w następnym.

@@ -1,0 +1,226 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:02.410
+Bine ai revenit.
+
+00:00:02.550 --> 00:00:05.420
+Am terminat toată această parte.
+
+00:00:05.520 --> 00:00:11.700
+Am creat JWT-ul și am trimis-o în fața clientului.
+
+00:00:11.700 --> 00:00:17.080
+Acum, clientul va putea să trimită înapoi tokenul GW și să obțină profilul.
+
+00:00:17.130 --> 00:00:24.990
+Acum este un alt pas pe care trebuie sa-l avem aici pentru ca vom incerca
+
+00:00:24.990 --> 00:00:34.800
+sa incorporam si managementul sesiunilor cu ratt si in loc sa folosim doar datele, verificam cu tokenul JWT o
+
+00:00:34.800 --> 00:00:46.770
+sa stocam JWT Dogan in baza noastră de date rattus și prin stocarea în baza noastră de date avem controlul deplin pentru a vedea
+
+00:00:46.860 --> 00:00:55.590
+ce jetoane sunt disponibile ce jetoane le-am oferit și, de asemenea, le revocăm ori de câte ori
+
+00:00:55.590 --> 00:00:56.390
+dorim.
+
+00:00:56.430 --> 00:00:59.290
+Tot ce trebuie să facem este doar să le ștergem din baza de date.
+
+00:00:59.400 --> 00:01:07.200
+Și chiar dacă un utilizator încearcă să obțină profilul cu acel cod, pentru că l-am eliminat, acesta nu
+
+00:01:07.200 --> 00:01:09.540
+mai poate accesa aceste informații.
+
+00:01:09.540 --> 00:01:16.500
+Și acest lucru ne oferă o mulțime de putere și manevrabilitate atunci când un utilizator lovește să se înscrie când un utilizator lovește ieșire.
+
+00:01:16.500 --> 00:01:20.490
+De exemplu, nu putem elimina acel cod din baza noastră de date.
+
+00:01:20.490 --> 00:01:29.490
+Deci, în acest videoclip, vom adăuga de fapt ratt la backend-ul nostru și vom stoca acest jwt token în baza noastră de
+
+00:01:29.540 --> 00:01:38.010
+date citiți-ne, astfel încât atunci când un utilizator verifică și solicită profilul, verificăm baza noastră de date rattus pentru
+
+00:01:38.010 --> 00:01:38.910
+acest token.
+
+00:01:38.910 --> 00:01:42.060
+Și dacă verificăm toate, le trimitem pachetul.
+
+00:01:42.120 --> 00:01:42.960
+Să începem.
+
+00:01:44.840 --> 00:01:53.600
+Pentru a putea lucra cu ratt și pentru a putea folosi pe serverul nostru trebuie să instalăm clientul roșu S și în
+
+00:01:53.660 --> 00:02:00.380
+cazul nostru avem nevoie de clientul roșu de la NPM și vedem că este o instalare drăguță
+
+00:02:05.040 --> 00:02:12.180
+și PM și ne dă un un exemplu mic de motiv de ce putem face să instalam ratt
+
+00:02:12.180 --> 00:02:13.420
+pentru moment.
+
+00:02:15.380 --> 00:02:20.740
+Și prin modul în care nu vom adăuga ratt la docul sau containerul nostru, totuși o să facem asta.
+
+00:02:20.750 --> 00:02:22.600
+Și unul din exercițiile viitoare.
+
+00:02:22.780 --> 00:02:27.020
+Dar deocamdată, pentru că încă ne dezvoltăm, asigurați-vă că totul funcționează.
+
+00:02:27.110 --> 00:02:31.250
+O vom avea complet separat de containerul nostru pentru medic.
+
+00:02:31.250 --> 00:02:39.300
+Acum voi aduce containerul înapoi, astfel încât totul se execută și avem pachetul roșcat instalat.
+
+00:02:40.520 --> 00:02:51.980
+Acum, în seinen nostru Să mergem la pagina noastră și la anunțul foarte sus noul nostru pachet rattus pur și
+
+00:02:51.980 --> 00:02:57.910
+simplu o nevoie de la pachetul de Radice am instalat.
+
+00:02:58.150 --> 00:03:06.830
+Și acum vedem că pentru a avea acces la el, pur și simplu face client egal cu roșu s create client.
+
+00:03:07.020 --> 00:03:12.110
+Și odată ce creăm clientul, putem face comenzile pe care le-am mai văzut cu Reddy.
+
+00:03:12.120 --> 00:03:18.010
+Nu pot spune că pot spune că pot verifica cheile H și pot face toate aceste comenzi.
+
+00:03:18.030 --> 00:03:23.050
+Din nou, există o mulțime de documente foarte frumoase aici pentru scopurile noastre.
+
+00:03:23.160 --> 00:03:26.520
+Să facem doar acest client chiar acum.
+
+00:03:28.270 --> 00:03:39.300
+Vom spune să înființăm Berettas și să creăm acest client.
+
+00:03:39.470 --> 00:03:49.960
+Și doar pentru a fi descript Dacă sunteți ca de fapt numirea client rattus acum acest citit ca client ca parametru
+
+00:03:50.500 --> 00:03:54.310
+de fapt, primește ca gazdă locale implicite.
+
+00:03:54.310 --> 00:03:56.290
+Dar îmi place să fiu explicit.
+
+00:03:56.290 --> 00:04:03.130
+Și când trecem de fapt la un doc sau alt server, va trebui să spunem unde
+
+00:04:03.430 --> 00:04:04.430
+este gazda.
+
+00:04:04.990 --> 00:04:12.060
+Deocamdată o să spun doar gazdei locale sau prietenului nostru vechi bun.
+
+00:04:12.120 --> 00:04:17.770
+Acum, dacă salvez acest lucru, voi primi o eroare spunând că conexiunea Radice a eșuat.
+
+00:04:17.920 --> 00:04:21.050
+Ei bine, pentru că nu alergăm ratt să ne amintim.
+
+00:04:21.160 --> 00:04:24.790
+Pentru ca noi să ne conectăm la ceva trebuie să începem citirea unui server.
+
+00:04:25.030 --> 00:04:29.210
+Și din fericire pentru noi în roșu US S. am instalat-o deja corect.
+
+00:04:29.250 --> 00:04:31.480
+Ne întoarcem la biroul nostru.
+
+00:04:31.480 --> 00:04:39.860
+Vedem că da, avem aici pachetul nostru de ratt și putem începe doar să spunem că vom adăuga o
+
+00:04:39.860 --> 00:04:45.130
+nouă fereastră și vom face acest lucru un pic mai mare.
+
+00:04:46.120 --> 00:04:57.050
+Și aici o să intru în dosarul meu roșu și să comand comanda serverului rattus.
+
+00:04:57.080 --> 00:04:57.530
+In regula.
+
+00:04:57.530 --> 00:04:59.390
+E gata să accepte conexiuni.
+
+00:04:59.540 --> 00:05:00.460
+Să ne întoarcem.
+
+00:05:01.830 --> 00:05:08.770
+Și reîmprospătați și vedem că încă mai avem această eroare.
+
+00:05:09.110 --> 00:05:10.780
+De ce este asta?
+
+00:05:10.850 --> 00:05:16.980
+Să ne gândim la acest lucru pe baza a ceea ce am învățat despre doc și toate aceste conexiuni.
+
+00:05:17.250 --> 00:05:18.630
+Ce lipsește aici.
+
+00:05:19.600 --> 00:05:25.150
+Ei bine, dacă vă amintiți că capătul nostru din spate se desfășoară într-un recipient de andocare.
+
+00:05:25.160 --> 00:05:31.060
+Acest container Stockard are o idee cu totul diferită de ceea ce este localhost.
+
+00:05:31.070 --> 00:05:35.190
+Este complet diferit de ceea ce avem pe mașina noastră.
+
+00:05:35.330 --> 00:05:38.040
+Acesta este computerul nostru local.
+
+00:05:38.150 --> 00:05:45.140
+Dacă mergem la fișierul nostru de compoziție, vedem că facem redirecționare portuară pentru ca noi să putem
+
+00:05:45.160 --> 00:05:46.750
+accesa localhost 3000.
+
+00:05:47.180 --> 00:05:51.770
+Dar pentru Rattus nu avem de fapt niciunul din ceea ce am stabilit încă.
+
+00:05:52.750 --> 00:06:00.490
+Deci, înainte de a merge mai departe și chiar dacă avem serverul nostru local care rulează, de fapt, dorim ca
+
+00:06:01.000 --> 00:06:03.820
+acesta să fie rulat pe docer.
+
+00:06:03.820 --> 00:06:07.670
+În caz contrar, trebuie să ne schimbăm întreaga configurație.
+
+00:06:07.870 --> 00:06:16.480
+Și cred că este un pas bun pentru a ne asigura că avem un server de rattus care rulează frumos în fișierul nostru doc, astfel încât să
+
+00:06:16.490 --> 00:06:22.760
+nu ne temem de cine este conectat la ceea ce este legat de unde tot ce trebuie să facem este
+
+00:06:22.760 --> 00:06:27.920
+asigurați-vă că facem o anumită transmitere a porturilor, astfel încât să putem accesa acest lucru.
+
+00:06:27.930 --> 00:06:34.110
+Așa că, înainte de a intra în următorul videoclip, vreau să vă provoc pe baza a ceea ce am învățat până
+
+00:06:34.110 --> 00:06:35.220
+acum despre docker.
+
+00:06:35.220 --> 00:06:42.420
+Puteți configura rapid un nou serviciu de rattus chiar aici și îl puteți conecta la API-ul din spate, pentru
+
+00:06:42.690 --> 00:06:44.630
+a obține această eroare.
+
+00:06:45.160 --> 00:06:46.980
+O să văd în asta.

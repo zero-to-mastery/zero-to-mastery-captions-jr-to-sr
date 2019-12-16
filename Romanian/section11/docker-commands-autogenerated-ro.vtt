@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:00.590 --> 00:00:07.720
+Bine ați venit înapoi până în acest moment am învățat la Dr. CLID comentează că interfața sa de linie de comandă este destul
+
+00:00:07.810 --> 00:00:08.740
+de simplă.
+
+00:00:08.740 --> 00:00:18.600
+Am construit un docker și i-am dat o etichetă pentru a chema ceva de pe containerul nostru, apoi am dat drumul
+
+00:00:18.910 --> 00:00:20.740
+și ne-am fugit.
+
+00:00:20.920 --> 00:00:29.470
+Și pentru că am folosit parametrul I-T I-T, am reușit să intrăm în interiorul containerului și să facem tot ce vrem cu
+
+00:00:29.470 --> 00:00:30.240
+el.
+
+00:00:30.250 --> 00:00:37.240
+De exemplu, dacă am avea fișierele noastre de proiect din API inteligent creier am putut tocmai a făcut A. P. M. începeți acolo.
+
+00:00:37.240 --> 00:00:38.990
+Dacă aș avea toate dosarele.
+
+00:00:39.430 --> 00:00:46.820
+Deci, din nou, Doc construit este folosit pentru a construi o imagine din fișierul docker pe care l-am creat și apoi docker rula din nou
+
+00:00:47.910 --> 00:00:49.580
+așa cum sugerează și numele.
+
+00:00:49.740 --> 00:00:55.400
+Rulați containerul și, din nou, de fiecare dată când rulează containerul, Dharker atribuie un hash de imagine nou.
+
+00:00:55.440 --> 00:01:02.620
+După cum am văzut și putem confirma că rulați, de fapt, tot ceea ce facem, indiferent de imagine, că vrem să folosim
+
+00:01:02.660 --> 00:01:07.150
+ceva asemănător versiunii nodului sau oricare dintre comenzile pe care le-ați putea avea.
+
+00:01:07.320 --> 00:01:15.630
+Puteți instala Ubuntu, de exemplu, și puteți rula comenzi Ubuntu cum ar fi lista de APT sau aplicația Dasch pentru a instala
+
+00:01:15.660 --> 00:01:21.800
+lucruri pentru a vă asigura că containerul dvs. funcționează de fapt, așa cum trebuia să fie.
+
+00:01:21.810 --> 00:01:28.170
+Acum, lucrul cu containerul nostru așa cum îl avem, nu putem face prea mult, putem avea versiunea
+
+00:01:28.170 --> 00:01:33.530
+nodului nostru și putem intra în el și putem rula comenzi de la el.
+
+00:01:33.540 --> 00:01:34.370
+Dar asta este.
+
+00:01:34.380 --> 00:01:35.880
+Este destul de minimă chiar acum.
+
+00:01:36.710 --> 00:01:43.470
+Dar, așa cum am spus, putem extinde acest lucru și, de fapt, întregul nostru server rulează în acest container.
+
+00:01:44.570 --> 00:01:50.120
+Și după cum ați văzut pentru că setăm mediul aici, versiunea nodului dăm
+
+00:01:50.120 --> 00:01:57.530
+doar acest container nimănui și oricine are acest doc sau fișier se va asigura întotdeauna că serverul
+
+00:01:57.530 --> 00:02:06.820
+rulează exact același fel, pentru că toată lumea folosește aceeași imagine daquiri acum rularea Pentru a vă întoarce la terminalul nostru, dacă
+
+00:02:06.850 --> 00:02:07.780
+executăm
+
+00:02:10.440 --> 00:02:12.440
+comanda noastră de fiecare dată.
+
+00:02:12.500 --> 00:02:15.180
+Ei bine, poate că nu doriți să intrați în container.
+
+00:02:15.180 --> 00:02:17.540
+Fii plăcut să-l poți rula în fundal.
+
+00:02:17.820 --> 00:02:22.780
+Și modul în care facem acest lucru este să-i dăm un alt parametru care este Dashti.
+
+00:02:23.550 --> 00:02:25.230
+Și aici avem.
+
+00:02:25.260 --> 00:02:25.890
+Acolo te duci.
+
+00:02:25.890 --> 00:02:29.910
+Containerul nostru rulează în fundal, dar nu am intrat în el.
+
+00:02:30.000 --> 00:02:31.900
+Asigurați-vă că o vom da înapoi.
+
+00:02:31.920 --> 00:02:33.620
+Din fericire nu l-am salvat.
+
+00:02:33.630 --> 00:02:40.560
+Acum putem rula o altă comandă numită Dr. p. s. și dacă facem asta, uităm la asta și apoi
+
+00:02:40.560 --> 00:02:41.750
+faci asta puțin mai mare.
+
+00:02:41.790 --> 00:02:49.740
+Putem vedea toate containerele care rulează în prezent, vezi containerul I. D. numele de imagine.
+
+00:02:49.740 --> 00:02:55.080
+Vedeți când a fost creată starea și comenzile pe care le execută.
+
+00:02:56.400 --> 00:02:57.770
+Foarte foarte rece.
+
+00:02:57.810 --> 00:03:03.790
+Și puteți avea aici mai multe containere multiple și puteți să le verificați cu Dr. p. s ..
+
+00:03:03.810 --> 00:03:04.270
+In regula.
+
+00:03:04.310 --> 00:03:06.350
+Dar acum avem o problemă.
+
+00:03:06.420 --> 00:03:09.070
+Avem un container care rulează în fundal.
+
+00:03:09.090 --> 00:03:13.770
+Cum oprim acest lucru sau cum putem intra în el.
+
+00:03:13.830 --> 00:03:22.320
+Din fericire, încă o dată avem o comandă notter docker pe care o putem folosi care este doc sau exec
+
+00:03:22.320 --> 00:03:30.580
+și folosind ideea de container sau hash pe care o vedem aici putem menționa acest container mai întunecat, pentru că
+
+00:03:30.580 --> 00:03:33.500
+așa daquiri poate distinge containere diferite.
+
+00:03:33.700 --> 00:03:36.270
+Și de modul în care alinierile sunt puțin oprite.
+
+00:03:36.280 --> 00:03:39.120
+Dar vedeți că acesta este ID-ul containerului.
+
+00:03:39.520 --> 00:03:44.400
+Și acum, aici am făcut din nou comanda I-T.
+
+00:03:44.430 --> 00:03:49.430
+Gândește-te la asta ca să ne ducem să intrăm în container.
+
+00:03:49.440 --> 00:03:57.450
+Și apoi, în cele din urmă, îi dăm hash-ul pe care l-am copiat și apoi spunem în cele din urmă că
+
+00:03:57.450 --> 00:03:59.410
+vrem să accesăm spatele.
+
+00:03:59.450 --> 00:03:59.980
+Acolo te duci.
+
+00:03:59.990 --> 00:04:04.730
+Ne întoarcem în container și aceste comenzi știu că sunt greu de reținut.
+
+00:04:04.730 --> 00:04:06.410
+Nu trebuie să vă amintiți cu adevărat.
+
+00:04:06.560 --> 00:04:11.920
+Puteți să le găsiți mereu online sau puteți viziona acest videoclip ori de câte ori aveți nevoie să le utilizați.
+
+00:04:12.110 --> 00:04:18.580
+Acum, pentru a opri acest container acum cum vă puteți imagina există o altă comandă și este destul de auto-explicativ tot ce
+
+00:04:18.590 --> 00:04:20.680
+trebuie să faceți este să spun opri.
+
+00:04:20.720 --> 00:04:22.280
+Deci, să acceptăm mai întâi acest lucru.
+
+00:04:22.280 --> 00:04:28.410
+Voi ieși să plec și apoi să-i spun pe dr. P. S. Vedem că avem containerul.
+
+00:04:28.410 --> 00:04:37.000
+Acum tot ce trebuie să fac este să spun medicul opriți și să-i dați numărul de identificare al containerului.
+
+00:04:37.020 --> 00:04:37.920
+In regula.
+
+00:04:37.920 --> 00:04:39.190
+Se pare că funcționează dacă o fac.
+
+00:04:39.190 --> 00:04:42.690
+Dr. P. S. Acum nu mai avem nimic.
+
+00:04:42.690 --> 00:04:43.540
+Felicitări.
+
+00:04:43.560 --> 00:04:50.280
+Tocmai ați învățat cele mai multe dintre instrumentele de care aveți nevoie pentru a crea containere și pentru a rula containerele și a le opri.
+
+00:04:50.340 --> 00:04:52.220
+Puteți crea câte containere doriți.
+
+00:04:52.260 --> 00:04:56.850
+Ei bine, la fel de mult ca și gazda pe care mașina ți-o permite.
+
+00:04:57.330 --> 00:05:01.410
+Și acum tocmai ați devenit un maestru de containere.
+
+00:05:01.410 --> 00:05:06.210
+Ei bine, Ali a început să mai avem câteva lucruri pe care să le acopere în următorul videoclip.
+
+00:05:06.210 --> 00:05:07.590
+O să văd pe asta.
+
+00:05:07.780 --> 00:05:07.950
+Bob.

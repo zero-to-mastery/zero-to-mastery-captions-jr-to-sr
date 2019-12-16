@@ -1,0 +1,631 @@
+﻿WEBVTT
+
+00:00:01.080 --> 00:00:02.010
+Witamy spowrotem.
+
+00:00:02.070 --> 00:00:06.840
+Nadszedł czas, abyśmy faktycznie wdrożyli ciągłą integrację w naszym projekcie.
+
+00:00:06.870 --> 00:00:11.460
+Będziemy używać koła C. JA. i zamierzamy nauczyć się kilku
+
+00:00:11.460 --> 00:00:14.480
+sztuczek po drodze, a my sami to wszystko ustawimy, więc zacznijmy.
+
+00:00:16.260 --> 00:00:22.980
+Teraz będziemy używać kółka C. JA. który zarządza serwerem dla nas.
+
+00:00:22.980 --> 00:00:29.930
+Więc są właścicielami serwerów i po prostu korzystamy z ich usług, aby przeprowadzić testy dla naszego projektu.
+
+00:00:31.180 --> 00:00:36.210
+Teraz krąg C. JA. jest rzeczywiście bezpłatny za prosty projekt, taki jak nasz.
+
+00:00:36.220 --> 00:00:41.530
+Więc zapraszamy do śledzenia i implementacji kręgu C. JA. do twoich projektów.
+
+00:00:41.710 --> 00:00:48.490
+Jeśli kiedykolwiek pracujesz nad czymkolwiek w zespołach, polecam je wykorzystać, ponieważ są po prostu bardzo
+
+00:00:48.490 --> 00:00:55.810
+ładne i proste w użyciu. Wystarczy kliknąć Eksploruj dokumenty i po prostu odbierz je, a ostatnio
+
+00:00:55.810 --> 00:01:00.280
+zaktualizowano do 2 . Wersja 0, która używa kontenerów Daquiri.
+
+00:01:00.280 --> 00:01:05.770
+Więc tylko o tym myślę, że dla twojej dokumentacji chcemy się upewnić, że używamy najnowszego.
+
+00:01:05.770 --> 00:01:09.280
+Wiele się zmieniło od 1. 0 wydanie.
+
+00:01:09.290 --> 00:01:12.350
+W porządku, porozmawiajmy o niektórych rzeczach, które będziemy robić.
+
+00:01:12.710 --> 00:01:14.600
+Mamy naszych przyjaciół Robo.
+
+00:01:14.630 --> 00:01:15.610
+Zapamiętaj ich.
+
+00:01:15.800 --> 00:01:18.980
+No cóż, ta prosta aplikacja nadal działa.
+
+00:01:18.980 --> 00:01:20.180
+Wszystko jest dobrze.
+
+00:01:20.360 --> 00:01:25.250
+Ale Bruno poprosił nas o wdrożenie ciągłej integracji w tym projekcie.
+
+00:01:25.520 --> 00:01:31.590
+Teraz, korzystając z tego repozytorium, spróbujemy włączyć koło, zobacz tutaj.
+
+00:01:31.670 --> 00:01:37.010
+Tak więc za każdym razem, gdy pojawi się nowy krąg żądania sondowania C. JA. Przebiegniemy wszystko i upewnimy
+
+00:01:37.340 --> 00:01:39.620
+się, że jest jeszcze gotowy do połączenia.
+
+00:01:39.860 --> 00:01:46.110
+Zacznijmy od koła C. JA. abyśmy mogli wprowadzić go do naszego projektu.
+
+00:01:47.210 --> 00:01:50.180
+Teraz krąg C. JA. używa pliku YAML.
+
+00:01:50.180 --> 00:01:57.940
+Coś, co widzieliśmy wcześniej w Dharker, kiedy pracowaliśmy z lambda AWOS i używa plików YAML, aby zabezpieczyć
+
+00:01:57.940 --> 00:02:04.110
+sposób, w jaki chcesz skonfigurować środowisko testowe i testy, które chcesz uruchomić.
+
+00:02:04.150 --> 00:02:05.580
+Więc najpierw zbudujmy to.
+
+00:02:05.590 --> 00:02:12.730
+Pierwszą rzeczą, którą chcemy zrobić, to stworzyć nowy folder w naszym katalogu głównym naszego projektu
+
+00:02:12.730 --> 00:02:24.490
+i domyślnie musimy nadać mu nazwę S. JA. z kropką przed nią i to dlatego, że na dowolnej
+
+00:02:24.820 --> 00:02:31.930
+maszynie, takiej jak Mac Linux lub pliki Windows lub folder, którego nazwy mają kropkę przed nim, nasze pliki
+
+00:02:31.990 --> 00:02:35.610
+zimnego systemu są automatycznie trafiane przez domyślnych użytkowników.
+
+00:02:35.620 --> 00:02:40.770
+Ale to jest standard, który widzę w kółku - ja potrzebuję mieć ich 2. 0 wersja.
+
+00:02:40.990 --> 00:02:49.250
+I tutaj tworzymy nowy plik, a plik ten będzie musiał być nazwany config dot YAML file.
+
+00:02:49.500 --> 00:02:56.670
+I w tym miejscu skonfigurujemy to, co chcemy, aby krąg widział - serwery, które uruchomimy dla nas, aby zacząć działać.
+
+00:02:56.740 --> 00:03:04.620
+Zróbmy więc prosty plik YAML, który można uruchomić w kółku C, i po prostu heads-up na wypadek, gdybyś zastanawiał się, gdzie
+
+00:03:04.710 --> 00:03:06.590
+możesz znaleźć więcej informacji.
+
+00:03:06.690 --> 00:03:08.810
+Oczywiście jeśli przewiniesz w dół.
+
+00:03:08.850 --> 00:03:15.400
+Mają świetną dokumentację tego, co możesz zrobić, po prostu skopiujmy i wklejmy niektóre z ich przykładów
+
+00:03:16.590 --> 00:03:20.390
+tutaj i wklejmy to do naszego pliku konfiguracyjnego YAML.
+
+00:03:20.460 --> 00:03:24.730
+Widzimy, że definiuję naszą wersję w naszym przypadku używamy koła CO2.
+
+00:03:24.760 --> 00:03:28.350
+Potrzebujemy więc wersji 2, a następnie definiujemy zadania.
+
+00:03:28.380 --> 00:03:29.910
+Czego chcemy.
+
+00:03:29.910 --> 00:03:39.650
+Serwer, który muszą zrobić dobrze, chcieliśmy zrobić kompilację i ta kompilacja będzie miała ciemniejszy obraz.
+
+00:03:39.650 --> 00:03:44.930
+Pamiętaj, że powiedziałem wersję 2 koła C. JA. używa dockera i wiemy o tym wszystko, ponieważ
+
+00:03:44.930 --> 00:03:52.490
+dowiedzieliśmy się o tym w naszej sekcji dokowania, co to jest okrąg C. JA. robi to, że tworzy obraz, w którym może uruchomić nasz test, i widzimy tutaj,
+
+00:03:52.880 --> 00:04:00.170
+że używają one hubu docker i mają niestandardowy obraz o nazwie Circle C. JA. i wygląda na
+
+00:04:00.170 --> 00:04:05.930
+to, że używają Rubiego jako kontenera do przeprowadzania naszych testów.
+
+00:04:05.930 --> 00:04:09.740
+Teraz nie musi to być węzeł ani nic specyficznego dla javascript.
+
+00:04:09.740 --> 00:04:12.520
+To tylko środowisko, w którym test będzie uruchomiony.
+
+00:04:12.710 --> 00:04:20.700
+Widać, że jest to ich niestandardowy obraz, więc krążysz i użyjesz tego pojemnika do stworzenia środowiska
+
+00:04:20.700 --> 00:04:22.640
+dla twoich testów.
+
+00:04:22.740 --> 00:04:28.710
+A potem mamy kroki, dlaczego musimy to zrobić i widzimy tutaj, że po prostu mówimy, aby
+
+00:04:28.710 --> 00:04:33.580
+powtórzyć pierwsze powitanie i to jest po prostu wydrukować pierwsze powitanie naszego projektu.
+
+00:04:33.730 --> 00:04:44.020
+Teraz możemy zaimplementować krąg C. JA. Musimy przejść do rejestracji, a następnie po
+
+00:04:44.140 --> 00:04:52.300
+prostu kliknąć Zarejestruj się, aby uzyskać pomoc, a gdy to zrobisz, będziesz mógł połączyć się z panelem kontrolnym
+
+00:04:52.300 --> 00:04:58.730
+Haab i zobaczysz, że mam już jakieś wcześniejsze projekty już działa i są to wszystkie
+
+00:04:58.760 --> 00:05:00.800
+moje ciągłe kroki integracyjne.
+
+00:05:00.800 --> 00:05:07.650
+Ale na razie, jeśli jest to twój pierwszy raz, być może musisz przyznać dostęp do koła C. JA. z twojego geta masz konto.
+
+00:05:07.670 --> 00:05:11.610
+W przeciwnym razie powinieneś zobaczyć pulpit nawigacyjny pustej kompilacji.
+
+00:05:11.660 --> 00:05:17.300
+Następną rzeczą, którą chcemy zrobić, to dodać projekt, który chcemy dopilnować, abyśmy dodali naszych robotów testujących repozytorium, tak
+
+00:05:17.420 --> 00:05:20.960
+aby krąg C. JA. wie o tym.
+
+00:05:20.960 --> 00:05:27.140
+Zamierzam kliknąć dodaj projekty, a tutaj spójrz na to, że mam tutaj wszystkie moje repots.
+
+00:05:27.140 --> 00:05:36.170
+Zamierzam kliknąć na projekt konfiguracji testowania znajomych Roble'a, zobacz i tutaj otrzymujemy kilka domyślnych rzeczy, które powinniśmy
+
+00:05:36.170 --> 00:05:37.070
+użyć.
+
+00:05:37.070 --> 00:05:38.410
+Lub możemy zmienić rzeczy.
+
+00:05:38.630 --> 00:05:44.970
+Na przykład nasz projekt będzie miał różne systemy operacyjne, możemy używać różnych języków.
+
+00:05:46.330 --> 00:05:53.500
+Zalecam pozostawienie domyślnego projektu jako węzła i możemy po prostu mieć system operacyjny
+
+00:05:53.500 --> 00:05:58.510
+Linux, a następnie pokazuje, jakie będą następne kroki.
+
+00:05:58.890 --> 00:06:03.270
+Ale zignorujemy to wszystko i zostawimy wszystko tak, jak jest teraz.
+
+00:06:04.040 --> 00:06:07.100
+Możesz zobaczyć tutaj, że nawet dają ci przykładowy plik, którego mogą użyć.
+
+00:06:07.100 --> 00:06:09.360
+Dzięki nim rozpoczęcie pracy jest bardzo łatwe.
+
+00:06:09.380 --> 00:06:18.940
+Właśnie kliknę przycisk Rozpocznij budowę i zobacz od razu, że moja aplikacja Robo Friends zaczyna budować.
+
+00:06:18.940 --> 00:06:20.360
+Wszystko jest skonfigurowane.
+
+00:06:24.950 --> 00:06:30.950
+A teraz kontener, który można zobaczyć, uruchamia kontener automatycznie uruchamia niektóre polecenia.
+
+00:06:30.950 --> 00:06:43.530
+To działa na ich serwerach u moich robotycznych buntowników testujących Ribault.
+
+00:06:43.540 --> 00:06:44.090
+W porządku.
+
+00:06:44.110 --> 00:06:50.270
+Musiałem zatrzymać film, ponieważ zajmuje to trochę czasu, aby kółko CII mogło uruchomić wszystko.
+
+00:06:50.530 --> 00:06:53.810
+Możesz zobaczyć, że wszystko zajęło około pięciu minut.
+
+00:06:53.860 --> 00:06:56.100
+Ale spójrzmy, co to po prostu zrobiło.
+
+00:06:56.230 --> 00:06:59.630
+Właściwie nawet nie daliśmy mu konfiguracji YAML.
+
+00:06:59.650 --> 00:07:04.980
+Ponieważ pamiętaj, że jest to tylko na moim pulpicie i nie zobowiązałem się, aby uzyskać pomoc.
+
+00:07:05.100 --> 00:07:06.000
+Wracamy.
+
+00:07:06.130 --> 00:07:12.340
+Widzimy, że jest kilka rzeczy, które zdarzają się w kółku, widząc - ja nawet nie dając żółtego spadku
+
+00:07:12.370 --> 00:07:13.400
+dla konfiguracji.
+
+00:07:14.600 --> 00:07:24.300
+Widzimy, że jesteśmy w stanie skonfigurować środowisko, w którym jest używany krąg, widząc I Ruby, aby wskazać cztery punkty na jednym
+
+00:07:24.570 --> 00:07:28.460
+obrazie, który zobaczyliśmy, aby uruchomić dla nas środowisko.
+
+00:07:28.560 --> 00:07:32.880
+Możemy zobaczyć tutaj i uruchomić kontener wszystkie rzeczy, które zrobił.
+
+00:07:32.910 --> 00:07:36.100
+Pozwoliło to również na S-sh.
+
+00:07:36.510 --> 00:07:41.680
+Jak pamiętacie z sekcji SSA możemy teraz użyć S-sh.
+
+00:07:41.820 --> 00:07:49.680
+Zajrzyj tutaj, aby faktycznie S-sh w tym pojemniku i zobacz, jak wszystko idzie może musimy debugować coś, co
+
+00:07:49.680 --> 00:07:57.450
+możemy S-sh ponownie coś, co będziemy musieli faktycznie dodać do naszego klucza publicznego do pojemnika, jeśli
+
+00:07:57.450 --> 00:07:58.910
+chcemy zrobić że.
+
+00:07:58.920 --> 00:08:04.100
+Jest to trochę zaawansowane i może czytać samodzielnie, ale ta opcja istnieje, co jest miłe.
+
+00:08:04.410 --> 00:08:10.410
+A potem robimy coś, co nazywa się sprawdzaniem kodu, który jest kołem - sprawdzam, więc dostajesz repozytorium Haab
+
+00:08:10.860 --> 00:08:12.200
+i klon to.
+
+00:08:12.270 --> 00:08:18.880
+Możesz zobaczyć tutaj Colona pełne repozytorium i domyślnie uruchomić nas przez kilka kroków.
+
+00:08:18.960 --> 00:08:23.400
+Uruchamia instalację NPM uruchamia test NPM.
+
+00:08:23.400 --> 00:08:29.370
+Jeśli klikniemy tutaj, zobaczymy, że nasze testy, które mamy na temat naszego projektu, to projekt Wrubel France.
+
+00:08:29.430 --> 00:08:39.680
+Jest 16 testów 5 migawek, które wszystkie przeszły i ciągle przewijamy i wszystko kończy się całkowicie.
+
+00:08:39.680 --> 00:08:44.330
+Mamy wszędzie zieleń i mówi się o sukcesie.
+
+00:08:44.420 --> 00:08:52.170
+Jeśli wrócę do buildów, zobaczymy, że nasi testujący znajomi robotnicy i Master przechodzą teraz z sukcesem.
+
+00:08:52.170 --> 00:08:58.740
+Teraz dodamy nieco więcej funkcjonalności niż domyślna funkcjonalność, którą otrzymujemy, po prostu uruchamiając instalację
+
+00:08:58.740 --> 00:09:03.960
+NPM i test NPM tylko po to, aby dodać pikanterii.
+
+00:09:04.150 --> 00:09:06.140
+Rozszerzmy to trochę.
+
+00:09:06.160 --> 00:09:10.300
+Teraz widzimy, że zamierzamy zrobić kompilację, aby utworzyć kontener dokowy.
+
+00:09:10.330 --> 00:09:14.100
+Sprawdzimy kod i uruchomimy Ecko pierwsze powitanie.
+
+00:09:14.110 --> 00:09:21.310
+To po prostu wydrukuje ten tekst, ale koło C. JA. ma ten pomysł przepływu pracy, więc mogę dodać
+
+00:09:21.850 --> 00:09:22.630
+kolejny krok,
+
+00:09:25.920 --> 00:09:27.880
+lub może teraz, gdy są już zbudowane.
+
+00:09:28.230 --> 00:09:30.040
+To jest kolejny pojemnik.
+
+00:09:30.880 --> 00:09:39.580
+I ten pojemnik znowu mogę po prostu zachować wszystko tak samo, ale to mam zamiar powiedzieć podwójny kłopot, aby
+
+00:09:41.120 --> 00:09:44.840
+mieć rację, tak naprawdę musimy zmienić nazwy tych.
+
+00:09:44.860 --> 00:09:49.270
+I to właśnie workflows jest w kręgu C. JA. abyśmy mogli je rozróżnić.
+
+00:09:49.270 --> 00:09:53.050
+Powiedzmy, że to będzie Bobby.
+
+00:09:53.440 --> 00:10:03.550
+To będzie Sally, a teraz, używając tych dwóch, mogę zdefiniować to, co nazywamy przepływem pracy lub przepływem pracy, i tutaj po prostu ponownie mówimy,
+
+00:10:05.460 --> 00:10:11.280
+do jakiej wersji chcemy używać przepływu pracy i możemy nadać jej nazwę, jaką
+
+00:10:11.280 --> 00:10:11.760
+chcemy.
+
+00:10:11.760 --> 00:10:12.940
+Zamierzam to nazwać.
+
+00:10:13.030 --> 00:10:22.710
+Bobby podkreśla Sally, ponieważ zamierzamy napisać je obie, a te będą miały zadania, które będą
+
+00:10:22.710 --> 00:10:24.210
+musiały wykonać.
+
+00:10:25.330 --> 00:10:32.030
+A te zawody będą pracą Babi.
+
+00:10:32.210 --> 00:10:33.750
+Upewnij się, że dodaję tutaj miejsce.
+
+00:10:36.110 --> 00:10:46.710
+I Sally, więc ten przepływ pracy powie, że biegnij tą robotą Bobby i Sally, a te obejmują te rzeczy.
+
+00:10:46.710 --> 00:10:51.560
+Więc uruchom dwa kontenery z uruchomieniem kasy, a następnie uruchom polecenie echo.
+
+00:10:52.050 --> 00:10:54.840
+Po prostu zapiszmy to, aby upewnić się, że wszystko działa.
+
+00:10:54.840 --> 00:10:57.790
+Mamy nasz plik konfiguracji see-I kręgu.
+
+00:10:57.870 --> 00:11:06.420
+Dodajmy to, aby dostać się do tego kręgu, widzę - mam plik konfiguracyjny, z którym można się bawić.
+
+00:11:06.420 --> 00:11:18.670
+Zamierzam pobrać reklamę, a następnie uzyskać zatwierdzenie Zamierzam dodać krąg C. JA. do naszej wiadomości o zatwierdzeniu.
+
+00:11:18.860 --> 00:11:22.950
+A potem w końcu popchnij mistrza pochodzenia.
+
+00:11:22.970 --> 00:11:29.930
+Teraz używam maßa i nie stworzyłem oddziału ani tego projektu, który nie jest zalecany, ale do celów demonstracyjnych
+
+00:11:29.930 --> 00:11:34.390
+na razie ufam sobie jako tylko ja w tym projekcie.
+
+00:11:34.400 --> 00:11:38.110
+Po prostu idę prosto do mistrza.
+
+00:11:38.130 --> 00:11:47.260
+W porządku, wróćmy, żeby dowiedzieć się, jak oh mamy cztery sekundy temu coś, co już się nie udało.
+
+00:11:47.260 --> 00:11:50.110
+W porządku, wróćmy, żeby wstać i zobaczyć, co się stanie.
+
+00:11:50.120 --> 00:12:01.080
+Chcesz odświeżyć przejdź do zatwierdzenia i och, widzę, że mam gigantyczną X teraz obok mojego zatwierdzenia.
+
+00:12:01.360 --> 00:12:02.370
+Klikam na to.
+
+00:12:03.390 --> 00:12:03.780
+W porządku.
+
+00:12:03.780 --> 00:12:10.000
+Popełniliśmy konfigurację wykonanego pliku YAML i wracam tutaj, a kliknięcie nie powiodło się.
+
+00:12:10.380 --> 00:12:15.500
+Widzę, że twoja konfiguracja zawiera błędy i może nie działać poprawnie.
+
+00:12:15.510 --> 00:12:16.040
+Niesamowite.
+
+00:12:16.140 --> 00:12:23.760
+Mam na myśli, że nie jest to wspaniałe, ale przynajmniej wiemy, że krąg C. JA. może wykryć nasz plik konfiguracyjny i widzimy tutaj, że
+
+00:12:23.760 --> 00:12:31.400
+daje całkiem niezłą atmosferę tego, co może mieć błąd migracyjny konfiguracji skali do wersji 2.
+
+00:12:31.400 --> 00:12:31.400
+0.
+
+00:12:32.200 --> 00:12:35.490
+A błędy wystąpiły w przepływie pracy Job.
+
+00:12:35.500 --> 00:12:37.840
+Kroki nie są listą.
+
+00:12:37.930 --> 00:12:42.040
+Wróćmy więc i naprawmy to za pomocą pliku YAML.
+
+00:12:42.040 --> 00:12:44.250
+Naprawdę musisz być ostrożny z wcięciami.
+
+00:12:44.270 --> 00:12:49.690
+Tak więc za każdym razem, gdy pracujesz z plikami YAML, upewnij się, że
+
+00:12:50.050 --> 00:12:58.840
+postępujesz zgodnie z dokumentacją i czego oczekują w tym przypadku, że musisz odzyskać wcięcia, zachowajmy to, abyśmy ponownie zrobili nasz nacisk lub
+
+00:12:59.110 --> 00:13:01.570
+G. M. chociaż wiesz co.
+
+00:13:01.630 --> 00:13:04.540
+Tylko po to, aby pokazać, co to jest okrąg C. JA. w rzeczywistości to robi.
+
+00:13:04.540 --> 00:13:05.860
+Stwórzmy nową gałąź.
+
+00:13:05.890 --> 00:13:12.250
+Zamierzam powiedzieć, że pobranie kasy jest krótkie, aby utworzyć nowy oddział i mam zamiar nazwać go
+
+00:13:12.520 --> 00:13:14.600
+okręgiem C. JA..
+
+00:13:14.620 --> 00:13:15.120
+W porządku.
+
+00:13:15.160 --> 00:13:16.450
+Stworzyliśmy nowy oddział.
+
+00:13:16.450 --> 00:13:23.410
+Jeśli otrzymam status, widzę, że mamy zaktualizowany plik YAML konfiguracji.
+
+00:13:23.410 --> 00:13:32.530
+Zamierzam powiedzieć get commit Zamierzam popełnić krąg patrz-I to jest nasza próba.
+
+00:13:33.060 --> 00:13:35.760
+A potem
+
+00:13:38.300 --> 00:13:41.260
+zamierzam wypchnąć Koło C.
+
+00:13:41.460 --> 00:13:43.600
+Więc wepchnij się do naszego
+
+00:13:47.260 --> 00:13:50.540
+oddziału i głupiego mnie. Zrozumiałem, że zapomniałem wejść.
+
+00:13:50.700 --> 00:13:51.420
+Spróbuj jeszcze raz.
+
+00:13:51.420 --> 00:13:56.640
+Zdobądź krąg zatwierdzania reklamy zobacz-I do.
+
+00:13:56.640 --> 00:13:57.150
+Proszę bardzo.
+
+00:13:57.150 --> 00:13:58.260
+To o wiele lepiej.
+
+00:13:58.320 --> 00:14:05.970
+A potem będziesz biegać, poprowadź pochodzenie kółka C. JA..
+
+00:14:05.970 --> 00:14:08.580
+W porządku, sprawdźmy, pomóżcie tutaj.
+
+00:14:08.580 --> 00:14:10.650
+W porządku mamy prośbę.
+
+00:14:10.650 --> 00:14:12.420
+Rzućmy okiem tutaj.
+
+00:14:14.390 --> 00:14:15.990
+Najpierw wszystko wygląda dobrze.
+
+00:14:15.990 --> 00:14:17.830
+To są zmiany, których pragnę.
+
+00:14:18.000 --> 00:14:25.900
+Zamierzam po prostu z naszym komentarzem i po prostu powiedzieć, tworzyć żądania ściągania i patrzeć na ten krąg C. JA.
+
+00:14:25.900 --> 00:14:29.380
+teraz kieruje wszystkimi moimi słabymi prośbami.
+
+00:14:29.470 --> 00:14:32.460
+Widzimy, że twój test przeszedł na Sally.
+
+00:14:32.590 --> 00:14:35.410
+Ale teraz Bauby wciąż działa.
+
+00:14:35.410 --> 00:14:39.010
+Więc jest w połowie zrobione, jak łatwo było.
+
+00:14:39.260 --> 00:14:42.800
+A kiedy wszystkie kontrole już minęły, dostaję te zielone znaki kontrolne.
+
+00:14:42.800 --> 00:14:46.170
+Teraz jest gotowy do połączenia żądań.
+
+00:14:46.170 --> 00:14:48.060
+Cóż, sprawdźmy koło C. JA. tutaj.
+
+00:14:48.080 --> 00:14:51.800
+Mam zamiar wrócić do Billa i to widzimy.
+
+00:14:51.860 --> 00:14:53.870
+O tak, spójrz na to.
+
+00:14:53.870 --> 00:14:55.590
+Mamy sukces.
+
+00:14:55.820 --> 00:14:58.970
+Odwróciliśmy środowisko.
+
+00:14:59.070 --> 00:15:01.410
+Sprawdziliśmy kod.
+
+00:15:01.530 --> 00:15:02.710
+To wspaniale.
+
+00:15:02.820 --> 00:15:06.350
+Mamy również echo.
+
+00:15:06.380 --> 00:15:09.290
+Podwójne kłopoty.
+
+00:15:09.700 --> 00:15:14.030
+Jeśli wrócimy tutaj, widzimy, że mieliśmy podwójne kłopoty z echa.
+
+00:15:14.170 --> 00:15:18.060
+Ale co z pierwszym przywitaniem Bobbie.
+
+00:15:18.340 --> 00:15:26.890
+Jeśli wrócimy, widzimy, że były dwie prace.
+
+00:15:26.990 --> 00:15:34.910
+Jeśli kliknę na przepływ pracy Bobby Sally, zobaczymy, że w tym przepływie pracy są dwie prace.
+
+00:15:35.040 --> 00:15:39.410
+Jeśli kliknę na Bobby, najpierw dostanę Bobby Acco.
+
+00:15:39.460 --> 00:15:40.650
+Dobrze, to świetnie.
+
+00:15:40.650 --> 00:15:44.770
+A potem, gdy wrócę do przepływu pracy, widzę to.
+
+00:15:44.770 --> 00:15:45.250
+DOBRZE.
+
+00:15:45.370 --> 00:15:48.900
+Sally i Bobby i ja widzimy dokładnie, ile czasu to zajęło.
+
+00:15:48.970 --> 00:15:53.410
+Jeśli wrócę do budowania, widzę, że właśnie dlatego mam tutaj dwie zielenie.
+
+00:15:53.410 --> 00:15:58.860
+Każda z nich biegła we własnym kontenerze bardzo fajnie.
+
+00:15:59.280 --> 00:16:06.900
+Zauważyłeś też, że nie przeprowadziliśmy już testu NPM dla instalacji NPM, ponieważ teraz dajemy mu plik konfiguracyjny,
+
+00:16:06.930 --> 00:16:11.520
+a ten plik konfiguracyjny dokładnie powie, co chcemy zrobić.
+
+00:16:11.550 --> 00:16:16.620
+Tak więc teraz musimy wdrożyć własne, aby upewnić się, że przetestujemy nasz kod.
+
+00:16:16.710 --> 00:16:21.900
+My NPM instalujemy nasz kod i wszystko działa sprawnie.
+
+00:16:21.940 --> 00:16:22.740
+W porządku.
+
+00:16:22.840 --> 00:16:27.070
+Myślę, że nadszedł czas, abyśmy rzeczywiście zaimplementowali coś wartościowego.
+
+00:16:27.070 --> 00:16:31.600
+Tylko powtarzanie Double Trouble nie pomaga nam z naszymi przyjaciółmi robo.
+
+00:16:31.930 --> 00:16:36.700
+Ale teraz, gdy widzimy moc okręgu C. JA. w kolejnym filmie zamierzamy to skonfigurować.
+
+00:16:36.790 --> 00:16:38.640
+Więc ma ładny przepływ pracy.
+
+00:16:38.680 --> 00:16:44.120
+Aby połączyć żądanie ściągnięcia, potwierdziłem scalenie, a do zobaczenia w następnym wideo.
+
+00:16:44.210 --> 00:16:44.470
+Buh-Bye.

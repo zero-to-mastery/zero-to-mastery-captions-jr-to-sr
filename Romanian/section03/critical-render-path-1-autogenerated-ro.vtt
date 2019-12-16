@@ -1,0 +1,193 @@
+﻿WEBVTT
+
+00:00:01.470 --> 00:00:02.880
+Bine ai revenit.
+
+00:00:02.880 --> 00:00:12.160
+Atunci când un utilizator solicită o pagină pentru site-ul dvs., pagina este DML începe să difuzeze în browser, de îndată
+
+00:00:12.220 --> 00:00:20.320
+ce un browser întâlnește o etichetă pentru o imagine externă un fișier de script a c.
+
+00:00:20.350 --> 00:00:28.750
+Acesta va începe să descarce fișierul simultan atunci când browserul primește sau e-mail-ul face ceva numit
+
+00:00:28.750 --> 00:00:34.980
+parsare-l este de rupere jos într-un vocabular pe care îl înțelege.
+
+00:00:35.170 --> 00:00:41.690
+După ce înțelegem documentul, acesta este ceea ce face el începe să creeze Domul așa cum am menționat
+
+00:00:41.780 --> 00:00:43.450
+modelul de obiect document.
+
+00:00:43.970 --> 00:00:51.350
+Și din nou, pe măsură ce construiește, de îndată ce vede o resursă externă, merge mai departe și începe să descarce
+
+00:00:51.560 --> 00:00:52.540
+toate acestea.
+
+00:00:52.910 --> 00:01:01.220
+De obicei, fișierele CSSA și javascript iau o prioritate ridicată, iar alte fișiere precum imaginile au
+
+00:01:01.220 --> 00:01:02.890
+prioritate mai mică.
+
+00:01:02.990 --> 00:01:04.940
+Deci, cum optimizăm acest proces.
+
+00:01:04.940 --> 00:01:11.020
+Cum optimizăm HCM Alpha care este pasul 1.
+
+00:01:12.850 --> 00:01:22.000
+Ei bine, primul lucru pe care doriți să faceți este să încărcați stiluri care sunt fișiere CSSA cât mai curând posibil și script-ul care
+
+00:01:22.120 --> 00:01:27.460
+este fișierele javascript cât mai târziu cu câteva excepții de aici și acolo.
+
+00:01:29.150 --> 00:01:29.730
+De ce.
+
+00:01:29.900 --> 00:01:37.460
+Unul dintre principalele principii ale performanței CSSA este de a obține CSSA în browser cât mai curând posibil.
+
+00:01:38.850 --> 00:01:45.370
+Javascript necesită parsing CSSA pepene galben pentru a termina înainte de a putea fi rulat.
+
+00:01:45.430 --> 00:01:46.750
+E pasul 4 aici.
+
+00:01:47.750 --> 00:01:55.270
+Acest mod ar oferi stilurilor timp suficient pentru a crea modelul de obiect DSS.
+
+00:01:55.380 --> 00:02:02.070
+Deci, dacă puneți javascript în eticheta capului într-un Mel.
+
+00:02:02.270 --> 00:02:11.860
+Problema cu poziționarea în cazul în care se află în partea de sus este faptul că blochează script-urile de redare a paginilor blocând
+
+00:02:11.860 --> 00:02:15.680
+din timp alte resurse de descărcare mai rapidă.
+
+00:02:16.910 --> 00:02:23.750
+Dacă le înlocuiți în partea de jos sau prin plasarea lor în partea de jos, sunteți conținut de stil și mass-media
+
+00:02:23.750 --> 00:02:28.760
+ar putea începe să se descarce mai repede, având în vedere percepția privind performanța îmbunătățită.
+
+00:02:29.920 --> 00:02:38.990
+Cea mai bună modalitate de a demonstra acest lucru este printr-un exemplu pe care am aici o carte de index foarte simplă și
+
+00:02:38.990 --> 00:02:39.950
+l-am oprit.
+
+00:02:40.610 --> 00:02:46.330
+Are o simplă etichetă H-1 un buton care nu face absolut nimic.
+
+00:02:46.440 --> 00:02:53.980
+Și avem o etichetă de legătură cu o foaie de stil externă și o etichetă de script în partea de jos,
+
+00:02:54.370 --> 00:02:59.470
+pe care o menționez, care pur și simplu nu avertizează spunând că verificați.
+
+00:02:59.480 --> 00:03:04.790
+Deci, dacă mergem la browserul nostru, site-ul nostru web este foarte frumos.
+
+00:03:04.880 --> 00:03:16.260
+Fila noastră de rețea este deschisă și dacă faceți clic pe refresh aici, văd că fișierul meu index și stardate văd un fișier SS
+
+00:03:17.420 --> 00:03:21.030
+este bine se pare că este încărcat.
+
+00:03:21.550 --> 00:03:29.890
+Și pentru că avem o avertizare aici blochează redarea paginii deoarece javascriptul rulează chiar acum și vom
+
+00:03:29.890 --> 00:03:33.070
+ajunge la motivul pentru care este.
+
+00:03:33.160 --> 00:03:34.720
+Și videoclipurile ulterioare.
+
+00:03:34.840 --> 00:03:42.850
+Dar pentru moment vreau să vedeți că indicele și văzut căderea în cazul în care ambele descărcate.
+
+00:03:42.860 --> 00:03:45.770
+Acum să încercăm altceva.
+
+00:03:45.870 --> 00:03:55.220
+Dacă mișc acest tag de script deasupra foii de stil pe care o salvez.
+
+00:03:55.420 --> 00:03:56.970
+Și acum îmi
+
+00:03:59.740 --> 00:04:03.890
+reîmprospătesc pagina, vedem că foaia de stil este acum în așteptare.
+
+00:04:04.930 --> 00:04:13.690
+Dacă dau clic pe OK, apoi începe să se descarce și vedem aici că foaia de stil a staționat timp
+
+00:04:14.110 --> 00:04:21.850
+de 14 secunde, pentru că nu am lăsat-o să se descarce în principal pentru că javascript rulează.
+
+00:04:22.020 --> 00:04:27.090
+Și apoi în cele din urmă încărcate și descărcate după Javascript.
+
+00:04:27.090 --> 00:04:36.440
+Deci, vedeți aici cum am împiedicat alte lucruri să se întâmple doar prin faptul că aveau scenariu pe punte.
+
+00:04:37.750 --> 00:04:44.900
+Așadar, din nou vrem să ne asigurăm că fișierele javascript tind să fie în partea de jos și acum există câteva
+
+00:04:44.920 --> 00:04:51.940
+excepții, să spunem de exemplu că aveți Google Analytics care este o etichetă de script și doriți să fie executată imediat,
+
+00:04:51.940 --> 00:04:54.910
+poate că doriți să știți ce utilizatorul face.
+
+00:04:54.910 --> 00:04:56.570
+Prima secundă de pe site-ul Web.
+
+00:04:56.770 --> 00:05:02.800
+În acest caz, poate doriți să puneți o etichetă de script în partea de sus, dar rețineți că acest lucru poate încetini site-ul
+
+00:05:02.800 --> 00:05:03.520
+dvs. Web.
+
+00:05:03.850 --> 00:05:10.070
+De asemenea, dorim să ne asigurăm că stilurile sunt descărcate cât mai curând posibil.
+
+00:05:10.120 --> 00:05:11.840
+De aceea i-am pus în cap.
+
+00:05:12.950 --> 00:05:19.350
+Așadar, să examinăm dacă puneți scripturile sau etichetele de script în partea de jos a paginii.
+
+00:05:19.490 --> 00:05:21.280
+Vor fi încărcate ultima dată.
+
+00:05:21.380 --> 00:05:25.600
+Cu alte cuvinte, ceva poate apărea mai repede în browser.
+
+00:05:25.610 --> 00:05:31.620
+Utilizatorii nu trebuie să aștepte ca un script să se termine descărcarea înainte de a vedea ceva în aplicația dvs.
+
+00:05:33.010 --> 00:05:40.540
+De asemenea, doriți să încărcați etichetele de stil cât mai curând posibil, astfel încât acest obiect al documentului CSSA să poată
+
+00:05:40.540 --> 00:05:43.020
+fi creat cât mai curând posibil.
+
+00:05:43.030 --> 00:05:48.270
+Și amintiți-vă pentru a crea arborele de randare.
+
+00:05:48.350 --> 00:05:48.870
+In regula.
+
+00:05:48.870 --> 00:05:50.970
+Deci asta este prima parte.
+
+00:05:51.920 --> 00:05:53.640
+Să ne uităm la pasul doi.
+
+00:05:54.050 --> 00:06:00.040
+Și apoi toți ceilalți pași din videoclipurile următoare văd asta.

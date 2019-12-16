@@ -1,0 +1,619 @@
+﻿WEBVTT
+
+00:00:01.290 --> 00:00:02.270
+Bine ai revenit.
+
+00:00:02.310 --> 00:00:09.060
+Așa că ne-am pus la dispoziție aplicația noastră care rulează și funcționează și acum putem să revedem
+
+00:00:09.060 --> 00:00:10.480
+din nou codul.
+
+00:00:10.500 --> 00:00:12.110
+Îmi place să mă uit la cod.
+
+00:00:12.120 --> 00:00:17.220
+Odată ce totul se execută, asigurați-vă că ați obținut toate variabilele de mediu
+
+00:00:17.220 --> 00:00:24.450
+precum cheile API din echipă, iar baza dvs. de date este configurată și dacă vă aduceți aminte că avem
+
+00:00:24.450 --> 00:00:28.770
+aplicația noastră client care este re-acționată acolo unde este corect aici.
+
+00:00:28.890 --> 00:00:36.570
+Avem baza noastră de date care rulează local pe calculatorul nostru și apoi avem serverul nostru și am trei ferestre
+
+00:00:36.660 --> 00:00:39.000
+aici pentru fiecare dintre acestea.
+
+00:00:39.180 --> 00:00:47.520
+Pentru că în lumea reală în producție vom avea cele mai multe dintre acestea pe
+
+00:00:47.520 --> 00:00:50.890
+servere diferite sau computere diferite.
+
+00:00:50.940 --> 00:00:55.680
+Deci, acum că avem totul pregătit, să facem o plimbare prin cod.
+
+00:00:55.680 --> 00:01:02.070
+Întotdeauna am preferat să trec mai întâi prin API, astfel încât să mă uit la punctele finale, deoarece punctele
+
+00:01:02.070 --> 00:01:03.500
+spun multe despre aplicație.
+
+00:01:03.870 --> 00:01:06.470
+Și aici, lasă-mă să minimalizez acest lucru un pic.
+
+00:01:07.670 --> 00:01:13.620
+De aici pot să încep să privesc dosarul mai tare și văd că nu este prea complicat.
+
+00:01:13.620 --> 00:01:20.970
+Avem un dosar server dodgiest despre care presupun că este punctul nostru principal de intrare și apoi avem
+
+00:01:21.180 --> 00:01:26.680
+controlori și controlorii sunând ca ceva care are logica pentru obiectivele noastre.
+
+00:01:26.700 --> 00:01:31.260
+Asa ca primul lucru pe care il voi face sa ma uit la structura dosarelor Am privit deja
+
+00:01:31.730 --> 00:01:37.530
+un pachet pe care Jaison eu, de asemenea, o sa-l citesc citit ca proiectul ofera si apoi merg la punctul de intrare si sa
+
+00:01:37.980 --> 00:01:40.440
+vad ce fel de pachetele pe care le folosesc.
+
+00:01:40.440 --> 00:01:47.550
+Eu văd că ei folosesc parseri Express pentru a putea obține corpul Jaison de la o
+
+00:01:48.120 --> 00:01:58.960
+cerere sau pentru a cere corpul pe care îl folosim să fim cripți care este o bibliotecă hashing pentru cele mai probabile parole de hash.
+
+00:01:59.050 --> 00:02:06.400
+Folosim curs pentru a da acces la ce domenii pot accesa serverul despre care am vorbit despre
+
+00:02:06.400 --> 00:02:07.030
+K'NEX.
+
+00:02:07.030 --> 00:02:15.100
+Este un R R M care ne permite să facem toate declarațiile Q în baza noastră de date și de modul în care iubesc absolut această
+
+00:02:15.100 --> 00:02:16.980
+bibliotecă, o recomand foarte mult.
+
+00:02:16.980 --> 00:02:23.270
+Funcționează cu postul meu Eskew de la Cresson o mulțime de alte baze de date.
+
+00:02:23.440 --> 00:02:28.590
+Și apoi avem controlerele noastre semnul nostru de registru în imaginea de profil.
+
+00:02:28.830 --> 00:02:34.470
+Avem baza de date creată despre care am vorbit deja și apoi avem un server
+
+00:02:34.470 --> 00:02:40.160
+de bază de bază creat cu nuclee care ne permit să ajungem să îl accesăm de oriunde.
+
+00:02:40.200 --> 00:02:43.790
+Deci orice domeniu poate accesa chiar acum.
+
+00:02:43.890 --> 00:02:46.730
+Și acesta este un lucru pe care îl acoperim în secțiunea de securitate.
+
+00:02:46.860 --> 00:02:49.480
+Așa că o să lăsăm asta pentru sesiunea de securitate.
+
+00:02:49.650 --> 00:03:00.070
+Avem din nou body potsherd Jaison pentru ca noi să putem citi Song de la punctele noastre finale și acesta este un server de
+
+00:03:00.070 --> 00:03:01.950
+expresie destul de standard.
+
+00:03:02.020 --> 00:03:03.600
+Ascultăm portul 3000.
+
+00:03:03.820 --> 00:03:13.090
+Și văd că, în final, avem profilul nostru de înregistrare a identității profilului și imaginii dvs. RL Și doar citind aceste puncte finalizate,
+
+00:03:13.090 --> 00:03:16.800
+avem o idee despre ceea ce face aplicația.
+
+00:03:16.810 --> 00:03:25.960
+Acesta permite utilizatorilor să se conecteze și să se înregistreze pentru a putea apuca un profil pentru fiecare profil individual pentru a face unele actualizări la
+
+00:03:26.020 --> 00:03:27.770
+punctul final al imaginii.
+
+00:03:27.790 --> 00:03:28.690
+E un picior.
+
+00:03:28.690 --> 00:03:35.350
+Și apoi să postați imaginea sunteți reali și văd că fiecare dintre ei are mânerul de înregistrare a mânerului
+
+00:03:35.350 --> 00:03:38.450
+profilului prelua mâner imaginea mâner API de apel.
+
+00:03:38.860 --> 00:03:43.870
+Deci acum pot să intru în fiecare controlor și să am o privire de ansamblu asupra a ceea ce face fiecare.
+
+00:03:43.870 --> 00:03:51.490
+Din nou, am văzut acest lucru înainte de a vă stabili clarificarea API și arată că imaginea spune pur și
+
+00:03:51.490 --> 00:03:58.360
+simplu că voi face un apel API la API-ul clarificat și vom folosi modelul de detectare a feței.
+
+00:03:58.370 --> 00:04:04.250
+Acest lucru este direct din documentația lor și asta va reveni răspunsul lor datele de
+
+00:04:04.250 --> 00:04:06.660
+la API și la sfârșitul nostru.
+
+00:04:06.680 --> 00:04:13.430
+Avem de asemenea o imagine a mânerului și această imagine a mânerului arată că suntem apucați de baza de date a
+
+00:04:13.430 --> 00:04:20.080
+utilizatorului utilizând sintaxa K'NEX unde I. D. este egal cu ID-ul cererii.
+
+00:04:20.090 --> 00:04:21.590
+Corp.
+
+00:04:21.720 --> 00:04:29.930
+Și doar creștem intrările cu unul și returnează intrările și returnează-le în față și astfel mânerul imaginii
+
+00:04:30.230 --> 00:04:38.030
+arată ca de fiecare dată când creștem sau trimitem o imagine, acest număr de intrare crește.
+
+00:04:38.060 --> 00:04:40.990
+În regulă, așa că e fișierul cu imagini care privim profilul.
+
+00:04:40.990 --> 00:04:44.640
+Din nou, mânerul de profil obține este destul de auto-explicative.
+
+00:04:44.640 --> 00:04:52.350
+Am apucat ID-ul profilului pe care îl selectăm din tabelul utilizatorului.
+
+00:04:52.480 --> 00:04:58.720
+Dacă I. D. se potrivește cu acea solicitare deoarece amintesc
+
+00:04:58.750 --> 00:05:01.900
+că în serverul de nedorvență facem acest ID semi-colon pentru a apuca parametrii
+
+00:05:05.890 --> 00:05:09.940
+cererii și din nou tocmai ne întoarcem utilizatorii pe care i-am primit din baza de date.
+
+00:05:11.940 --> 00:05:18.270
+Pentru a vă înregistra un pic mai complicat, dar uita-te la el, noi doar lucrăm la registru.
+
+00:05:18.360 --> 00:05:24.120
+Se pare că ne confruntăm cu parolele care reprezintă o practică de securitate foarte bună.
+
+00:05:24.120 --> 00:05:29.280
+Din nou, acesta este ceva despre care vom vorbi și vom face un
+
+00:05:29.760 --> 00:05:37.500
+exercițiu în secțiunea de securitate și se pare că ne actualizăm, astfel încât să inserăm hash-ul în e-mail și în tabela de
+
+00:05:38.900 --> 00:05:44.950
+jurnalizare și apoi utilizăm și tabelul utilizatorului pentru a introduce numele de e-mail și data în comun.
+
+00:05:44.970 --> 00:05:47.060
+Deci, este doar înregistrarea și apoi
+
+00:05:49.700 --> 00:05:57.100
+în cele din urmă pentru a seinen cu manipularea seinen noi pur și simplu selectăm e-mail și hash din
+
+00:05:57.100 --> 00:05:58.560
+tabelul de jurnal.
+
+00:05:58.780 --> 00:06:05.940
+Dacă e-mailul corespunde cu ceea ce ne-a oferit partea frontală și apoi facem ceva Coleby se compară cu ceva
+
+00:06:05.940 --> 00:06:11.100
+despre care vorbim în secțiunea de securitate unde comparăm parola cu hash-ul stocat în
+
+00:06:11.100 --> 00:06:12.510
+baza de date.
+
+00:06:12.510 --> 00:06:20.070
+Din nou, o modalitate sigură de a stoca informații despre utilizator și de a le permite să se conecteze dacă
+
+00:06:20.070 --> 00:06:23.010
+este valid, le oferim informațiile despre utilizator.
+
+00:06:23.040 --> 00:06:26.480
+În caz contrar, spunem acreditări greșite.
+
+00:06:26.490 --> 00:06:28.530
+Bine, ca să nu fie prea rău.
+
+00:06:28.540 --> 00:06:30.700
+A fost o treabă frumoasă.
+
+00:06:30.700 --> 00:06:33.190
+Nu trebuie să învățăm prea multe despre codul de bază.
+
+00:06:33.190 --> 00:06:40.000
+Iar tu te gândești la un proiect pe care îl vei avea și mai multe foldere, dar cu un pas logic, ai
+
+00:06:40.000 --> 00:06:45.070
+o idee ce anume are aplicația mai ales acum că ai trecut prin aplicația pe care
+
+00:06:45.070 --> 00:06:48.670
+o poți ghici unde fiecare din aceste puncte sunt utilizate.
+
+00:06:48.670 --> 00:06:57.580
+Să mergem la capătul din față, până la capătul din față, imediat ce vedem că este vorba de un proiect al unui reactor și nu
+
+00:06:57.580 --> 00:06:59.770
+putem deschide doar dosarul nostru sursă.
+
+00:06:59.770 --> 00:07:05.410
+De obicei, vor avea un folder de componente și alte foldere pe care le pot vedea.
+
+00:07:05.410 --> 00:07:07.560
+Dar întotdeauna doriți să începeți cu cardurile index.
+
+00:07:07.590 --> 00:07:08.390
+Da.
+
+00:07:08.620 --> 00:07:13.080
+Asigurați-vă că vedeți bibliotecile pe care le folosesc, se pare că folosesc
+
+00:07:13.150 --> 00:07:20.110
+tacticul pentru stil și pe stodginess indexul se pare că nu există niciun furnizor aici, astfel încât să nu folosească
+
+00:07:20.110 --> 00:07:24.730
+redux doar o simplă acțiune re-act și că punctul de intrare este aplicația.
+
+00:07:24.730 --> 00:07:26.650
+Deci, din nou, mergem la APT.
+
+00:07:26.680 --> 00:07:30.610
+Da și vedem ce are componenta principală.
+
+00:07:30.670 --> 00:07:33.800
+Vedem că folosesc o mulțime de componente aici.
+
+00:07:34.000 --> 00:07:39.790
+Și primul lucru pe care îmi place să îl fac este să mă uit la starea inițială pe care trebuie să o aibă aplicația.
+
+00:07:39.790 --> 00:07:45.390
+Din nou pentru că acum folosim redux, statul trăiește de obicei în componente și vedem că există o imagine de
+
+00:07:45.400 --> 00:07:50.200
+ieșire pe care o avem Arel avem ceva numit Box, despre care nu suntem prea siguri de.
+
+00:07:50.410 --> 00:07:56.530
+Vedem că drumul pe care este conectat este semnat este fals și apoi avem informații de utilizator din nou doar prin
+
+00:07:56.530 --> 00:07:57.490
+uitarea la stat.
+
+00:07:57.490 --> 00:08:02.570
+Avem o idee despre cum vor arăta informațiile despre aplicații.
+
+00:08:02.640 --> 00:08:11.690
+Starea și aplicația vedem că în regulă avem utilizatorul de sarcină pe care îl avem în locația de calculație a feței și, din nou, acesta este motivul pentru
+
+00:08:12.040 --> 00:08:13.360
+care este important.
+
+00:08:13.360 --> 00:08:19.210
+Numeaza-ti functiile cu adevarat bine pentru ca daca ai un nou membru al echipei care vine pe proiect este frumos pentru
+
+00:08:19.210 --> 00:08:24.840
+ei sa spuna oh OK asa ca acest lucru calculeaza unde este locatia fetei si imaginea doar dupa nume.
+
+00:08:25.300 --> 00:08:27.800
+Avem caseta de afișaj.
+
+00:08:27.940 --> 00:08:34.750
+Avem o schimbare care poate fi puțin mai descriptivă pe butonul Samit și vedem că facem câteva
+
+00:08:34.750 --> 00:08:42.080
+apeluri proaspete, așa că butonul Samit arată ca unul foarte important pentru că avem Thach încă un an
+
+00:08:42.350 --> 00:08:45.550
+de fecche și facem toate lucrurile acestea.
+
+00:08:45.550 --> 00:08:47.740
+Deci, ar trebui să ne întoarcem la asta și să vedem ce face.
+
+00:08:48.940 --> 00:08:52.490
+Avem pe schimbarea rutei, care pare din nou ca si cum am trasa rute.
+
+00:08:52.690 --> 00:08:56.260
+Și îmi place să mă uit la componenta principală și să văd componenta.
+
+00:08:56.260 --> 00:09:02.660
+În regulă, ei vor încărca particule de navigație, ceea ce vedem aici.
+
+00:09:02.800 --> 00:09:12.690
+Aceste fundaluri de școală care se mișcă văd că avem navigația cu Simon și schimbăm și apoi vedem că, dacă traseul este
+
+00:09:13.410 --> 00:09:20.590
+acasă, le dăm formularul de legătură cu imaginea de randare a logo-ului și recunoașterea feței.
+
+00:09:20.760 --> 00:09:24.750
+Și apoi, dacă nu le dăm semnalul sau înregistrăm componenta.
+
+00:09:24.750 --> 00:09:31.610
+Deci, imediat avem o idee despre structura aplicației și doar privim la aceasta vedem unde putem îmbunătăți modul
+
+00:09:31.610 --> 00:09:34.290
+în care lucrurile ar putea fi curățate.
+
+00:09:34.460 --> 00:09:41.090
+De asemenea, vedem că această componentă a aplicației devine destul de mare cu toate aceste metode, poate că reducerea poate fi un
+
+00:09:41.570 --> 00:09:46.550
+lucru bun pentru a începe să vă uitați sau, probabil, să aveți mai multe containere.
+
+00:09:46.760 --> 00:09:52.170
+Toate lucrurile pe care le puteți face în timp ce navigați prin cod, dar vreau să vă dau o notă laterală aici.
+
+00:09:52.340 --> 00:09:57.170
+O mulțime de programatori când intră pe primul proiect, primul lucru pe care îl fac este critica.
+
+00:09:57.290 --> 00:10:03.410
+Ei se uită la acest cod și spun Say bine ce este cu toate acestea acest lucru este teribil, acest lucru pare atât de urât ca ceea
+
+00:10:03.620 --> 00:10:07.570
+ce este cu acest lucru și pune numele funcției de schimbare care nu este deloc descriptivă.
+
+00:10:07.580 --> 00:10:14.370
+Oricine a scris acest lucru este atât de prost că ar trebui să schimb acest lucru și asta este prea urât ca niște domni.
+
+00:10:14.390 --> 00:10:17.100
+Aceasta este deja o prea mare complicație pe care ar trebui să o depășim.
+
+00:10:17.150 --> 00:10:20.800
+Ar trebui să avem componente suplimentare aici care să fie mult mai clare.
+
+00:10:20.810 --> 00:10:27.380
+Și acest lucru se întâmplă destul de mult în cazul în care o persoană intră în proiect și imediat începe
+
+00:10:27.380 --> 00:10:28.550
+să critice codul.
+
+00:10:28.640 --> 00:10:31.380
+Și da, există lucruri cu siguranță pe care le putem îmbunătăți aici.
+
+00:10:31.520 --> 00:10:39.020
+Dar un dezvoltator senior știe că atunci când intră pe un proiect nu este neapărat oh de ce a pus-o
+
+00:10:39.020 --> 00:10:41.240
+și a pus schimbarea aici.
+
+00:10:41.240 --> 00:10:48.170
+Acesta este un nume ne-descriptiv, dar nu au fost acolo când această funcție a fost rulată.
+
+00:10:48.320 --> 00:10:51.110
+Nu au fost acolo când a fost creată această componentă.
+
+00:10:51.290 --> 00:10:58.370
+Când a fost luată decizia de a face o asemenea rutare și cu această lipsă de informații, nu
+
+00:10:58.370 --> 00:11:01.940
+aveți acest drept de a critica în mod necesar.
+
+00:11:01.940 --> 00:11:07.430
+Vreau să spun critici constructive și spunând că acest lucru ar putea fi îmbunătățit este o modalitate bună de a privi la el,
+
+00:11:07.430 --> 00:11:11.780
+dar nu puteți merge și spune că acest lucru este greșit acest lucru este un cod teribil.
+
+00:11:12.170 --> 00:11:17.990
+Trebuie să reparăm toate astea pentru că nu știți ce dezvoltatorii au știut la acea vreme că s-ar afla
+
+00:11:18.020 --> 00:11:19.320
+într-o criză de timp.
+
+00:11:19.400 --> 00:11:26.840
+Poate că ei au fost de formare un dezvoltator junior și aceasta a fost prima lor PR ca un dezvoltator senior.
+
+00:11:26.850 --> 00:11:32.580
+Priviți acest lucru într-o manieră neemoțională, uitându-vă la cod, văzând unde, în viitor, ați putea dori să
+
+00:11:32.580 --> 00:11:40.170
+îmbunătățiți codul, dar fără critici pur și simplu complet neutru, deoarece atunci când veniți pe un proiect, obiectivul nu este acela de
+
+00:11:40.230 --> 00:11:45.240
+a se evidenția și de a îmbunătăți și de a face totul mai bine.
+
+00:11:45.240 --> 00:11:51.420
+Scopul este să se integreze în proiect cu echipa și să lucreze împreună pentru a face proiectul mai bun.
+
+00:11:52.220 --> 00:11:56.750
+Știu că am făcut o tangență aici dar este atât de important pentru că este ceva
+
+00:11:56.750 --> 00:12:03.770
+pe care îl văd tot timpul și este într-adevăr o caracteristică nefericită care cred că unii dintre dezvoltatorii de top pe care i-am văzut
+
+00:12:03.770 --> 00:12:11.000
+au acest lucru în cazul în care se uită la cod neutru fără critici sau pur și simplu a intrat într-o tangentă acolo să ne
+
+00:12:11.000 --> 00:12:12.620
+întoarcem pe drumul cel bun.
+
+00:12:12.620 --> 00:12:12.860
+In regula.
+
+00:12:12.860 --> 00:12:16.320
+Deci, să aruncăm o privire la butonul de pe butonul de prezentare.
+
+00:12:16.370 --> 00:12:22.280
+Dacă mă duc la butonul de pe butonul de prezentare aici, în timp ce se pare ca formularul de link-ul de imagine am pe
+
+00:12:22.280 --> 00:12:25.440
+butonul de pe trimite și pe, dar se schimba doar de nume.
+
+00:12:25.460 --> 00:12:26.190
+Stiu asta.
+
+00:12:26.200 --> 00:12:26.920
+In regula.
+
+00:12:26.930 --> 00:12:28.980
+Este cel mai probabil acest lucru.
+
+00:12:29.090 --> 00:12:32.360
+Deci, acest buton de detectare este locul unde facem toate apelurile de la fecche.
+
+00:12:32.360 --> 00:12:38.600
+Par a fi cea mai importantă parte a aplicației și vă pot arunca o privire la aceste apeluri pentru a vedea ce
+
+00:12:38.600 --> 00:12:39.980
+se întâmplă în aplicație.
+
+00:12:39.980 --> 00:12:45.730
+În regulă, așa că mă duc la localhost 3000 vă imaginez RL.
+
+00:12:45.770 --> 00:12:54.050
+Deci asta e serverul nostru API și facem o solicitare de post și această imagine Jaro dacă mergem la acel punct
+
+00:12:55.240 --> 00:12:58.010
+final vedem că da, manipulează apelul API.
+
+00:12:58.010 --> 00:13:07.490
+Amintiți-vă acest lucru este ceea ce face apelul la API-ul de clarificare și se ocupă de apelul API și asta-i tot.
+
+00:13:07.500 --> 00:13:08.600
+Returnează datele.
+
+00:13:08.640 --> 00:13:14.360
+Deci, imediat, vedem bine că primim datele de la clarificări.
+
+00:13:14.460 --> 00:13:22.270
+Va avea un răspuns și acest răspuns, dacă avem un răspuns, facem o notă mai bună decât imaginea
+
+00:13:22.360 --> 00:13:24.560
+și punctul care este pus.
+
+00:13:24.730 --> 00:13:29.330
+Și dacă îți aduci aminte că a fost punctul final care ne-a sporit înscrierile.
+
+00:13:29.350 --> 00:13:38.020
+Deci, dacă totul reușește și primim un răspuns, noi creștem numărul intrărilor cu 1 și apoi, odată ce
+
+00:13:38.020 --> 00:13:45.420
+obținem toate acestea, actualizăm starea pentru a crește numărul de utilizatori și numărul copacilor.
+
+00:13:45.490 --> 00:13:46.660
+Ok, asta are sens.
+
+00:13:46.660 --> 00:13:52.310
+Așa se întâmplă atunci când l-am detectat și numărul crește aici.
+
+00:13:52.750 --> 00:13:54.570
+Dar despre detectarea feței.
+
+00:13:54.580 --> 00:13:58.880
+Ei bine, prima detectare din nou avem un nume frumos aici, odată ce totul trece.
+
+00:13:58.960 --> 00:14:02.780
+Afișăm caseta de față un fel de nume ciudat.
+
+00:14:02.830 --> 00:14:06.180
+Am venit cu ea, dar probabil că ar putea fi îmbunătățită.
+
+00:14:06.400 --> 00:14:10.640
+Și se spune că afișăm fața calculând locația feței.
+
+00:14:10.690 --> 00:14:16.180
+Din nou, se citește bine că știm ce se întâmplă aici.
+
+00:14:16.220 --> 00:14:21.190
+Și apoi, evident, avem componentele pe care le putem arunca o privire, dar toate sunt
+
+00:14:21.260 --> 00:14:26.740
+suficient de descriptive și avem o idee dacă avem nevoie de o funcție implementată de unde să arătăm.
+
+00:14:27.200 --> 00:14:28.340
+Deci te duci acolo.
+
+00:14:28.400 --> 00:14:33.740
+Nu a fost așa de rău doar trecând prin codul care privea punctele finale și apoi unele
+
+00:14:33.740 --> 00:14:35.330
+dintre principalele containere și componente.
+
+00:14:35.360 --> 00:14:42.200
+Avem o idee despre ceea ce face aplicația și nu trebuie să înțelegeți imediat întregul cod, deoarece va veni de-a lungul timpului
+
+00:14:42.290 --> 00:14:45.480
+când veți începe să lucrați la caracteristici și bug-uri.
+
+00:14:45.500 --> 00:14:51.170
+Veți descoperi diferite fragmente ale codului deoarece, deoarece bazele de coduri devin tot mai mari, devine
+
+00:14:51.170 --> 00:14:56.520
+din ce în ce mai dificil să aveți totul în capul tău cum funcționează lucrurile.
+
+00:14:56.540 --> 00:15:01.850
+Deci, nu vă simțiți copleșiți dacă veniți la un proiect și au tone de dosare pe care nu aveți nicio idee despre
+
+00:15:01.850 --> 00:15:02.780
+ceea ce fac.
+
+00:15:03.630 --> 00:15:04.880
+Ca orice altceva.
+
+00:15:05.040 --> 00:15:06.990
+Luați puțin câte puțin.
+
+00:15:06.990 --> 00:15:13.380
+Înțelegeți conceptele de nivel înalt despre modul în care totul se potrivește împreună cu cum sunt conectate punctele și
+
+00:15:13.380 --> 00:15:19.780
+când o solicitare de caracteristică, cum ar fi Hey, o putem face să detecteze mai multe fețe atunci când vine vorba.
+
+00:15:19.800 --> 00:15:26.040
+Începeți să lucrați la acea caracteristică și să vă familiarizați probabil cu componenta de recunoaștere a
+
+00:15:26.280 --> 00:15:32.530
+feței și, probabil, cu funcția de calculare a locului față și să începeți să înțelegeți încet proiectul.
+
+00:15:32.580 --> 00:15:38.110
+Dar principalul lucru este că vrei să ai o idee despre ce este imaginea de ansamblu.
+
+00:15:38.190 --> 00:15:40.050
+Nu vă concentrați mai întâi pe lucrurile mici.
+
+00:15:40.050 --> 00:15:45.820
+Începeți întotdeauna cu imaginea de ansamblu și încetiniți încet focalizarea.
+
+00:15:45.850 --> 00:15:50.440
+Deci, cu asta am spus că trebuie să punem în aplicare o caracteristică pe care o cere Bruno.
+
+00:15:50.560 --> 00:15:58.750
+Asta înseamnă a avea mai multe detectări ale feței, pentru că dacă mă întorc aici și să facem o imagine, ea are mai multe
+
+00:15:58.750 --> 00:15:59.200
+fețe.
+
+00:15:59.200 --> 00:16:06.450
+Permiteți-mi să văd dacă pot avea oameni și să lăsați să vedem această imagine.
+
+00:16:06.580 --> 00:16:13.110
+Am de gând să copiez adresa de imagine și să o lipesc aici.
+
+00:16:13.900 --> 00:16:15.490
+O primesc una bună.
+
+00:16:15.490 --> 00:16:19.530
+Să presupunem că sunteți și fac clic pe text.
+
+00:16:19.640 --> 00:16:19.990
+In regula.
+
+00:16:20.000 --> 00:16:25.080
+Se pare că se corectează doar o față, dar nu și cealaltă.
+
+00:16:25.100 --> 00:16:30.920
+În următorul videoclip vom remedia acest lucru pe baza vizualizării codului pe care tocmai am făcut-o pe baza analizei
+
+00:16:30.920 --> 00:16:34.430
+pe care am făcut-o și o vom descurca într-un mod inteligent.
+
+00:16:34.460 --> 00:16:36.330
+O să văd în următoarea, cu mine.

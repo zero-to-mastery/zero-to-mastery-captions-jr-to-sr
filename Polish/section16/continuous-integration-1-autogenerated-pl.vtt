@@ -1,0 +1,370 @@
+﻿WEBVTT
+
+00:00:01.070 --> 00:00:01.910
+Witamy spowrotem.
+
+00:00:01.970 --> 00:00:08.840
+Nadszedł czas, aby napisać ładny plik konfiguracyjny ciągłej integracji, abyśmy robili tutaj
+
+00:00:08.960 --> 00:00:10.120
+coś znaczącego.
+
+00:00:10.800 --> 00:00:21.300
+Pierwszą rzeczą, którą mam zamiar zrobić, jest wynajęcie pierwszego sklepu o nazwie Build, a ta wersja będzie używać obrazu Daquiri i
+
+00:00:21.300 --> 00:00:26.490
+będę go używać, ponieważ w naszym projekcie używamy węzła.
+
+00:00:26.490 --> 00:00:33.570
+Zamierzam użyć koła C. JA. węzeł osiem punkt dziewięć i możesz dowiedzieć się, jaki rodzaj koła widzisz -
+
+00:00:33.570 --> 00:00:34.500
+obrazy, których możesz użyć.
+
+00:00:34.500 --> 00:00:37.010
+Po prostu idź do Dr. Hobb i szukaj kół.
+
+00:00:37.010 --> 00:00:37.540
+Tak.
+
+00:00:37.800 --> 00:00:39.980
+Ale zamierzam zachować punkt węzłowy.
+
+00:00:40.200 --> 00:00:43.470
+Mimo że Ruby działa tak, jak właśnie widziałeś.
+
+00:00:43.470 --> 00:00:49.530
+Teraz następna rzecz, którą zamierzam zrobić, to kroki, które zamierzam powiedzieć, sprawdzić repozytorium
+
+00:00:49.740 --> 00:00:53.000
+i chciałem uruchomić zamiast tylko echa.
+
+00:00:53.070 --> 00:01:00.540
+Albo możemy zostawić to tutaj, powiemy i PM i przeciągnięcie, a my dodamy kolejną linię.
+
+00:01:00.600 --> 00:01:09.090
+Kolejny przebieg, który faktycznie będzie się uruchamiał i PM będzie instalowany, ponieważ pamiętaj, że NPM Insall oznacza, że sprawdzi
+
+00:01:09.120 --> 00:01:10.050
+wszystkie pakiety.
+
+00:01:10.050 --> 00:01:18.660
+Upewnij się, że wszystko można zainstalować, a na koniec, po uruchomieniu instalacji NPM na ich serwerze, mamy
+
+00:01:18.900 --> 00:01:22.910
+wszystkie pliki niezbędne do projektu Robur France.
+
+00:01:22.920 --> 00:01:30.260
+Zamierzam powiedzieć "biegnij" i zamierzam przekazać to środowisku zewnętrznemu lub zmiennej środowiskowej.
+
+00:01:30.300 --> 00:01:34.370
+Zamierzamy po prostu powiedzieć koło - ja jest równa prawdzie.
+
+00:01:34.410 --> 00:01:36.640
+I teraz nic to nie zrobi.
+
+00:01:36.690 --> 00:01:43.710
+Ale w naszym projekcie, jeśli mamy jakieś instrukcje if lub pewne warunki, które chcemy wykonać, jeśli uruchamiamy
+
+00:01:43.710 --> 00:01:47.710
+kod incircle C. JA. możemy to zrobić w ten sposób.
+
+00:01:48.180 --> 00:01:49.960
+A potem mogę po prostu powiedzieć NPM.
+
+00:01:50.070 --> 00:01:59.090
+Bill Bo pamiętaj, że aplikacja do ponownego tworzenia będzie dla nas zgłaszać wszelkie błędy, jeśli to nie zadziała, a jeśli zbudowane przez nas urządzenie NPM
+
+00:01:59.090 --> 00:02:02.760
+osiągnie sukces, oznacza to, że możemy zbudować nasz projekt.
+
+00:02:02.780 --> 00:02:09.980
+To prawdopodobnie najważniejsza praca, jaką możemy wykonać, aby zbudować następną, jest być może testem.
+
+00:02:10.280 --> 00:02:13.280
+Chcemy przetestować nasz kod i uruchomić nasze testy.
+
+00:02:13.280 --> 00:02:21.230
+Jeśli zrobię to i sprawdzę PM tutaj, chcemy się upewnić, że mogę to przetestować w moim lokalnym środowisku.
+
+00:02:21.530 --> 00:02:24.830
+Ale na wszelki wypadek zapomnę uruchomić te rzeczy.
+
+00:02:24.890 --> 00:02:28.720
+Przeczytam to jeszcze raz, na wypadek, gdybym zapomniał je uruchomić.
+
+00:02:28.820 --> 00:02:35.240
+Za każdym razem, gdy robię kiepską prośbę automatycznie Circle C ma zamiar przetestować to dla nas, tak
+
+00:02:35.240 --> 00:02:42.020
+aby ktoś z mojego zespołu nie sprawdził nawet mojej prośby o pulę, chyba że wszystkie testy przejdą i
+
+00:02:42.380 --> 00:02:47.510
+w ten sposób upewnimy się, że jeśli moje modyfikacje spowodowały czyjeś testy zawieść.
+
+00:02:47.510 --> 00:02:56.360
+Wiem, że muszę je naprawić, więc w teście ponownie wykorzystam obraz Noada na dziewięć punktów, a
+
+00:02:59.490 --> 00:03:09.170
+kroki, które zamierzam wykonać, będą znów działać z instalacją NPM i zamierzam zostawić bieg tutaj i po
+
+00:03:09.170 --> 00:03:11.180
+prostu wypróbować rzeczy do
+
+00:03:14.500 --> 00:03:15.610
+testowania.
+
+00:03:17.970 --> 00:03:22.370
+A następnie kolejny bieg NPM będzie testem NPM miły
+
+00:03:25.260 --> 00:03:26.400
+i łatwy.
+
+00:03:26.800 --> 00:03:28.500
+Wiesz co tylko dla zabawy.
+
+00:03:28.640 --> 00:03:34.110
+Nie chcę dodawać całkowicie sensownego testu lub mniejszego znaczenia testu i możesz sobie wyobrazić,
+
+00:03:34.110 --> 00:03:42.110
+że możesz tutaj dodać wszelkiego rodzaju sprawdzanie maszynopisu, że możesz chcieć innych testów, które chcesz sprawdzić dla jakichkolwiek poleceń, które
+
+00:03:42.110 --> 00:03:43.970
+masz w swoim pakiecie.
+
+00:03:44.010 --> 00:03:49.950
+Jason możesz użyć, aby faktycznie przetestować, aby sprawdzić swój skrypt.
+
+00:03:50.060 --> 00:03:59.360
+Na przykład, jeśli masz pokrycie testowe NPM, możesz dodać zadanie pokrycia tutaj, gdzie sprawdza, czy twój
+
+00:03:59.360 --> 00:04:03.620
+zasięg testu się skończył, powiedzmy 80 procent.
+
+00:04:03.680 --> 00:04:07.280
+A jeśli nie, a jeśli spadnie poniżej tej studni, to się nie uda.
+
+00:04:07.300 --> 00:04:08.780
+Możemy zrobić z nim tyle rzeczy.
+
+00:04:10.600 --> 00:04:22.080
+Tutaj po prostu po prostu wymówę check, a następnie dam mu polecenie uruchomienia tylko prostego polecenia
+
+00:04:22.080 --> 00:04:27.900
+echa, które mówi, że jesteś kompletnie bezużyteczny.
+
+00:04:27.900 --> 00:04:33.420
+Tak jak powiedziałem, ale teraz mogę zademonstrować coś zabawnego w poszukującym pracy.
+
+00:04:33.420 --> 00:04:38.130
+Zamierzam zmienić nazwę tego na coś bardziej użytecznego, na przykład
+
+00:04:42.610 --> 00:04:48.270
+na kompilację i lint, ponieważ reagują w górę, nie pozwól mi, że NPM dudni.
+
+00:04:48.400 --> 00:04:57.370
+Jeśli Lanting nie przejdzie, a dla zleceń powiem, że chcę, abyś wykonał
+
+00:04:57.370 --> 00:05:06.740
+robotę budowlaną i również chcę, żebyś wykonała zadanie testowe, ale też zamierzam zrobić coś
+
+00:05:07.640 --> 00:05:15.220
+fajnego tutaj. powiedzieć, że tutaj praca testowa wymaga wysokiej pracy do
+
+00:05:18.400 --> 00:05:19.850
+końca.
+
+00:05:19.960 --> 00:05:21.070
+Co to znaczy.
+
+00:05:21.460 --> 00:05:27.200
+Teraz mówię, że budowanie i testy będą przebiegać równolegle.
+
+00:05:27.280 --> 00:05:29.330
+Och i pozwól mi to naprawić.
+
+00:05:29.350 --> 00:05:32.660
+Chcemy zbudować Cześć tam.
+
+00:05:32.680 --> 00:05:33.420
+Pozwól, że to przejdę.
+
+00:05:33.430 --> 00:05:36.180
+Mamy więc pracę i chcemy ją budować.
+
+00:05:36.340 --> 00:05:37.190
+Cześć.
+
+00:05:37.390 --> 00:05:39.950
+I zadanie testowe.
+
+00:05:40.330 --> 00:05:47.210
+Jednak praca testowa wymaga wysokiego poziomu, aby odnieść sukces.
+
+00:05:47.230 --> 00:05:54.640
+To, co się wydarzy, jest zbudowane, a wysokie będą przebiegać równolegle na dwóch oddzielnych pojemnikach.
+
+00:05:54.700 --> 00:06:02.470
+Jednak test, który gdybyśmy nie dodali wymogów, uruchomiłby się równolegle w tym samym czasie
+
+00:06:02.470 --> 00:06:04.230
+na różnych pojemnikach.
+
+00:06:04.300 --> 00:06:06.870
+Zamiast tego wymaga tam wysokiego.
+
+00:06:07.040 --> 00:06:12.880
+Aż do wysokości echa Witaj, pojemnik testowy nie może się uruchomić.
+
+00:06:13.210 --> 00:06:18.810
+I możesz zacząć wyobrażać sobie typ workflow, który możesz zrobić z oh i ja
+
+00:06:18.810 --> 00:06:26.620
+właśnie zdałem sobie sprawę, że tutaj na górze musimy upewnić się, że mówimy, że obraz Huckera upewnia nas, że to mamy.
+
+00:06:26.820 --> 00:06:31.120
+I to muszą być kroki.
+
+00:06:31.120 --> 00:06:31.570
+W porządku.
+
+00:06:31.650 --> 00:06:39.060
+Teraz, gdy mamy już wszystko skonfigurowane, upewnij się, że wszystko wygląda dobrze i upewnij się, że wszystkie nasze
+
+00:06:39.060 --> 00:06:40.680
+wcięcia są prawidłowe.
+
+00:06:40.680 --> 00:06:46.720
+Tak jak mówiłem z plikami YAML, naprawdę ważne jest, abyśmy tak właśnie mieli.
+
+00:06:46.830 --> 00:06:56.840
+Chcemy również upewnić się, że to wymaga, jest odpowiednio wcięte, tak jak to znowu uratujemy.
+
+00:06:56.960 --> 00:07:02.860
+Wynośmy się stąd i stwórzmy tylko po to, aby uzyskać status, aby upewnić się, że wprowadziliśmy te zmiany.
+
+00:07:02.880 --> 00:07:14.040
+Zamierzam stworzyć nowy oddział zwany testowaniem, a tutaj po prostu dostaniemy reklamę, aby wykonać krąg
+
+00:07:14.050 --> 00:07:20.970
+zadań "zobacz-i", a następnie w końcu popchnij testowanie pochodzenia.
+
+00:07:21.530 --> 00:07:22.940
+Zobaczmy, czy to działa.
+
+00:07:25.920 --> 00:07:26.940
+Wracajmy.
+
+00:07:26.940 --> 00:07:35.520
+Tam jest prośba, a my po prostu powiemy, że tworzymy słabą Reclast.
+
+00:07:35.530 --> 00:07:36.980
+Dobra, spójrz na to.
+
+00:07:37.000 --> 00:07:38.730
+Cześć, jest uruchomiony.
+
+00:07:38.770 --> 00:07:42.040
+Teraz test jest uruchomiony, a następnie uruchamiana jest także kompilacja.
+
+00:07:42.280 --> 00:07:45.090
+Chodźmy sprawdzić koło C. JA. i zobacz, co robi.
+
+00:07:46.660 --> 00:07:51.080
+Nasi testowi znajomi testują i patrzą na to.
+
+00:07:51.300 --> 00:07:55.810
+Mamy sukces, który się wydarzył.
+
+00:07:55.890 --> 00:07:57.750
+To tylko echo cześć.
+
+00:07:58.200 --> 00:08:03.900
+Jeśli wrócimy do przepływu pracy, widzimy to.
+
+00:08:03.910 --> 00:08:04.240
+W porządku.
+
+00:08:04.240 --> 00:08:06.770
+Więc cześć udało się w jednej sekundzie.
+
+00:08:06.780 --> 00:08:15.750
+A teraz trwa test i wydaje się, że wszystkie testy zdały egzamin trwały 34 sekundy i trwają 40 sekund,
+
+00:08:15.760 --> 00:08:16.910
+jeśli kliknę.
+
+00:08:17.260 --> 00:08:19.020
+Tak, wygląda na to, że wszystko minęło.
+
+00:08:19.030 --> 00:08:20.540
+Wszystko jest dobrze.
+
+00:08:20.680 --> 00:08:25.090
+Wracając do kompilacji widzę, że wszystko przemija.
+
+00:08:25.090 --> 00:08:33.400
+Jeśli wrócę i odświeżam, ważę lub trochę, wszystkie testy minęły.
+
+00:08:33.400 --> 00:08:37.830
+Wszystko dobrze łączy słabą prośbę.
+
+00:08:37.830 --> 00:08:44.790
+Teraz interesującą rzeczą jest to, że to się nie powiedzie za każdym razem, gdy robię teraz kiepską prośbę i którykolwiek
+
+00:08:45.060 --> 00:08:47.700
+z testów lub zbudowany nie powiedzie się.
+
+00:08:47.700 --> 00:08:49.950
+Na przykład powiedzmy, że
+
+00:08:52.640 --> 00:09:00.550
+chcę utworzyć nowy komponent lub powiedzmy, że w komponencie BOTTEN licznika zmienię stan początkowy na
+
+00:09:00.550 --> 00:09:01.380
+5.
+
+00:09:01.960 --> 00:09:03.540
+Uratuję.
+
+00:09:04.450 --> 00:09:07.560
+I znowu będę sprawdzony.
+
+00:09:07.590 --> 00:09:15.180
+M. a potem stąd dostanę kasę B.
+
+00:09:15.660 --> 00:09:28.390
+Po prostu daję to do oddziału, a ja dostanę po prostu pustą wiadomość.
+
+00:09:29.450 --> 00:09:33.200
+A potem popchnij pochodzenie, który, och,
+
+00:09:37.110 --> 00:09:41.210
+muszę przekazać mu polecenie, spróbujmy jeszcze raz.
+
+00:09:41.220 --> 00:09:43.060
+Idę powiedzieć kto.
+
+00:09:43.200 --> 00:09:44.150
+Teraz jest lepiej.
+
+00:09:44.370 --> 00:09:45.830
+Spróbujmy jeszcze raz.
+
+00:09:48.110 --> 00:09:58.960
+A ta prośba nie powiedzie się, ponieważ jeśli test NPM Iranu powie, że twoje testy nie przejdą, ponieważ mamy
+
+00:09:58.960 --> 00:10:03.830
+kilka testów, które oczekują, że stan będzie zerowy.
+
+00:10:03.850 --> 00:10:05.050
+Bardzo fajny.
+
+00:10:05.050 --> 00:10:05.360
+W porządku.
+
+00:10:05.380 --> 00:10:10.590
+Zróbmy sobie przerwę i dodam jeszcze jeden krok do naszej ciągłej integracji w następnym wideo.
+
+00:10:11.020 --> 00:10:11.290
+Buh-Bye.

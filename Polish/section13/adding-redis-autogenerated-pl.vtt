@@ -1,0 +1,226 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:02.410
+Witamy spowrotem.
+
+00:00:02.550 --> 00:00:05.420
+Zrobiliśmy tę część wszystkich.
+
+00:00:05.520 --> 00:00:11.700
+Stworzyliśmy JWT w wersji tokened i wysyłamy go do klienta.
+
+00:00:11.700 --> 00:00:17.080
+Teraz klient będzie mógł odesłać token GW i uzyskać profil.
+
+00:00:17.130 --> 00:00:24.990
+Teraz jest jeszcze jeden krok, który musimy tutaj wykonać, ponieważ spróbujemy włączyć
+
+00:00:24.990 --> 00:00:34.800
+zarządzanie sesją z użyciem rattusa i zamiast teraz korzystać z weryfikatora danych za pomocą tokenu JWT, będziemy
+
+00:00:34.800 --> 00:00:46.770
+przechowywać JWT Dogan w nasza baza danych rattus i przechowując ją w naszej bazie danych, mamy pełną kontrolę, aby zobaczyć,
+
+00:00:46.860 --> 00:00:55.590
+jakie tokeny są dostępne, jakie tokeny rozdaliśmy, a także odwołać je w dowolnym momencie, kiedy
+
+00:00:55.590 --> 00:00:56.390
+chcemy.
+
+00:00:56.430 --> 00:00:59.290
+Wszystko, co musimy zrobić, to po prostu usunąć je z bazy danych.
+
+00:00:59.400 --> 00:01:07.200
+A teraz nawet jeśli użytkownik spróbuje uzyskać profil z tym tokenem, ponieważ go usunęliśmy, nie ma już
+
+00:01:07.200 --> 00:01:09.540
+dostępu do tych informacji.
+
+00:01:09.540 --> 00:01:16.500
+A to daje nam dużą moc i zwrotność, gdy użytkownik trafi do rejestracji, gdy użytkownik wyloguje się.
+
+00:01:16.500 --> 00:01:20.490
+Na przykład nie możemy usunąć tego tokena z naszej bazy danych.
+
+00:01:20.490 --> 00:01:29.490
+Tak więc w tym filmie będziemy dodawać rattus do naszego backendu i przechowywać ten token JWT w naszej
+
+00:01:29.540 --> 00:01:38.010
+bazie danych read my, aby po sprawdzeniu i zażądaniu profilu sprawdziliśmy naszą bazę danych rattus dla tego
+
+00:01:38.010 --> 00:01:38.910
+tokena.
+
+00:01:38.910 --> 00:01:42.060
+A jeśli wszystko się skończy, wyślemy im paczkę.
+
+00:01:42.120 --> 00:01:42.960
+Zacznijmy.
+
+00:01:44.840 --> 00:01:53.600
+Aby móc pracować na naszym serwerze, musimy zainstalować czerwonego klienta S iw naszym przypadku potrzebujemy czerwonego
+
+00:01:53.660 --> 00:02:00.380
+klienta z NPM i widzimy, że jest to fajna instalacja PM
+
+00:02:05.040 --> 00:02:12.180
+i daje nam ładny mały przykład, dlaczego możemy to zrobić, zainstaluj na razie
+
+00:02:12.180 --> 00:02:13.420
+program rattus.
+
+00:02:15.380 --> 00:02:20.740
+A tak na marginesie, nie dodamy rattusa do naszego doku lub kontenera, ale zamierzamy to zrobić.
+
+00:02:20.750 --> 00:02:22.600
+I jedno z nadchodzących ćwiczeń.
+
+00:02:22.780 --> 00:02:27.020
+Ale na razie, ponieważ wciąż się rozwijamy, upewnij się, że wszystko działa.
+
+00:02:27.110 --> 00:02:31.250
+Będziemy całkowicie oddzieleni od naszego pojemnika z lekarzem.
+
+00:02:31.250 --> 00:02:39.300
+Teraz mam zamiar przywrócić kontener, więc wszystko działa, a my mamy zainstalowany najtańszy pakiet.
+
+00:02:40.520 --> 00:02:51.980
+Teraz w naszej seinenie Przejdźmy do naszej strony i na samej górze naszej nowej paczki rattus, po
+
+00:02:51.980 --> 00:02:57.910
+prostu potrzebujemy jej z właśnie zainstalowanego pakietu Radice.
+
+00:02:58.150 --> 00:03:06.830
+Teraz widzimy, że aby uzyskać do niego dostęp, po prostu robimy klienta, który jest klientem red dot.
+
+00:03:07.020 --> 00:03:12.110
+I kiedy tworzymy klienta, możemy po prostu wykonywać polecenia, które widzieliśmy wcześniej w Reddy's.
+
+00:03:12.120 --> 00:03:18.010
+Nie mogę powiedzieć, że mogę powiedzieć, że mogę sprawdzić klawisze H i wykonać wszystkie te polecenia.
+
+00:03:18.030 --> 00:03:23.050
+Znowu jest tu bardzo dobra dokumentacja dla naszych celów.
+
+00:03:23.160 --> 00:03:26.520
+Stwórzmy teraz tego klienta.
+
+00:03:28.270 --> 00:03:39.300
+Zamierzamy powiedzieć, ustawić Berettas i stworzyć tego klienta.
+
+00:03:39.470 --> 00:03:49.960
+I po prostu być deskryptorem Jeśli tak naprawdę nazywasz to klientem rattus, teraz jest to odczytane jako klient, ponieważ
+
+00:03:50.500 --> 00:03:54.310
+parametr faktycznie otrzymuje domyślny host lokalny.
+
+00:03:54.310 --> 00:03:56.290
+Ale lubię być wyraźny.
+
+00:03:56.290 --> 00:04:03.130
+A kiedy faktycznie przejdziemy do dockera lub innego serwera, będziemy musieli powiedzieć, gdzie znajduje
+
+00:04:03.430 --> 00:04:04.430
+się host.
+
+00:04:04.990 --> 00:04:12.060
+Na razie zamierzam powiedzieć lokalny gospodarz lub nasz dobry stary przyjaciel 1:27 0 jeden.
+
+00:04:12.120 --> 00:04:17.770
+Teraz, jeśli to zapiszę, dostanę komunikat, że połączenie Radice nie powiodło się.
+
+00:04:17.920 --> 00:04:21.050
+No cóż, ponieważ nie używamy pamięci, pamiętajcie.
+
+00:04:21.160 --> 00:04:24.790
+Abyśmy mogli połączyć się z czymś, musimy zacząć odczytywać serwer.
+
+00:04:25.030 --> 00:04:29.210
+I na szczęście dla nas w czerwonym US S. już to zainstalowaliśmy.
+
+00:04:29.250 --> 00:04:31.480
+Wracamy do naszego pulpitu.
+
+00:04:31.480 --> 00:04:39.860
+Widzimy, że mamy tutaj nasz pakiet rattus i możemy po prostu zacząć wszystko od powiedzenia,
+
+00:04:39.860 --> 00:04:45.130
+że dodamy nowe okno i zwiększmy to nieco.
+
+00:04:46.120 --> 00:04:57.050
+A teraz przejdę do mojego czerwonego folderu i uruchomię polecenie serwera rattus.
+
+00:04:57.080 --> 00:04:57.530
+W porządku.
+
+00:04:57.530 --> 00:04:59.390
+Jest gotowy do akceptowania połączeń.
+
+00:04:59.540 --> 00:05:00.460
+Wracajmy.
+
+00:05:01.830 --> 00:05:08.770
+Odśwież i widzimy, że wciąż otrzymujemy ten błąd.
+
+00:05:09.110 --> 00:05:10.780
+Dlaczego tak jest.
+
+00:05:10.850 --> 00:05:16.980
+Pomyślmy o tym na podstawie tego, czego dowiedzieliśmy się o docker i wszystkich tych połączeniach.
+
+00:05:17.250 --> 00:05:18.630
+Czego tu nam brakuje?
+
+00:05:19.600 --> 00:05:25.150
+Cóż, jeśli pamiętasz, nasz back-end działa w kontenerze w doku.
+
+00:05:25.160 --> 00:05:31.060
+Ten kontener Stockarda ma zupełnie inny pomysł na to, co to jest localhost.
+
+00:05:31.070 --> 00:05:35.190
+Jest zupełnie inny niż to, co mamy na naszej maszynie.
+
+00:05:35.330 --> 00:05:38.040
+To jest nasz komputer localhost.
+
+00:05:38.150 --> 00:05:45.140
+Jeśli przejdziemy do pliku doktorowego, zobaczymy, że wykonujemy przekierowanie portów, abyśmy mogli faktycznie uzyskać dostęp
+
+00:05:45.160 --> 00:05:46.750
+do localhost 3000.
+
+00:05:47.180 --> 00:05:51.770
+Ale dla rattusa nie mamy jeszcze tego skonfigurowanego.
+
+00:05:52.750 --> 00:06:00.490
+Zanim przejdziemy dalej i mimo, że mamy uruchomiony nasz lokalny serwer, chcemy
+
+00:06:01.000 --> 00:06:03.820
+go uruchomić na dockingu.
+
+00:06:03.820 --> 00:06:07.670
+W przeciwnym razie musimy zmienić całą konfigurację.
+
+00:06:07.870 --> 00:06:16.480
+Uważam, że jest to dobry krok, aby upewnić się, że mamy dobrze działający serwer rattus w naszym pliku doc, abyśmy nie musieli się martwić
+
+00:06:16.490 --> 00:06:22.760
+o to, kto jest podłączony do tego, co jest połączone z tym, gdzie wszystko, co musimy zrobić, to
+
+00:06:22.760 --> 00:06:27.920
+upewnij się, że wykonujemy niektóre przekierowania portów, abyśmy mogli uzyskać do nich dostęp.
+
+00:06:27.930 --> 00:06:34.110
+Zanim przejdziemy do następnego filmu, chcę rzucić Ci wyzwanie, bazując na dotychczasowych doświadczeniach na
+
+00:06:34.110 --> 00:06:35.220
+temat dokowania.
+
+00:06:35.220 --> 00:06:42.420
+Czy możesz szybko skonfigurować nową usługę rattus tutaj i połączyć ją z interfejsem API zaplecza,
+
+00:06:42.690 --> 00:06:44.630
+aby uzyskać ten błąd.
+
+00:06:45.160 --> 00:06:46.980
+Zobaczę w tym jednym.

@@ -1,0 +1,190 @@
+﻿WEBVTT
+
+00:00:01.370 --> 00:00:09.200
+Mam nadzieję, że w poprzednim ćwiczeniu major zdał sobie sprawę, jak niesamowity Dr. komponuje i jak łatwo jest ustawić na
+
+00:00:09.200 --> 00:00:12.290
+nim coś takiego jak rattus.
+
+00:00:12.290 --> 00:00:18.100
+Pozwól, że pokażę ci, jak możemy ustawić grzechotkę na gnoju zapasów.
+
+00:00:18.350 --> 00:00:27.590
+Jeśli nie możesz tego zrobić ponownie, dodamy nową usługę, dodając najpierw komentarz, a my
+
+00:00:27.650 --> 00:00:36.350
+dodamy usługę rattus, a ta usługa Retta otrzyma obraz, który nas odczytał.
+
+00:00:36.360 --> 00:00:43.260
+Na szczęście dr Haab ma już czerwony obraz, który już jest dla nas przygotowany, co jest bardzo bardzo miłe.
+
+00:00:43.410 --> 00:00:46.590
+A potem chcemy też dodać porty.
+
+00:00:47.100 --> 00:00:49.380
+Mamy więc dostęp do niego na naszej maszynie.
+
+00:00:49.380 --> 00:00:56.900
+Kiedy nasz lokalny host, a my damy mu domyślny port rattus, który wynosi 6 3 7 9.
+
+00:00:57.140 --> 00:01:03.890
+I jeśli kiedykolwiek uruchomisz serwer rattus, to właśnie tak będą biedni, jeśli wrócimy tutaj,
+
+00:01:03.890 --> 00:01:09.830
+widzimy, że kiedy zaczęliśmy serwer, biedni mieli 6 3 7 9.
+
+00:01:09.830 --> 00:01:14.450
+W porządku, więc zamierzam ponownie przesłać port, aby mieć do niego dostęp na moim komputerze.
+
+00:01:15.380 --> 00:01:22.670
+Kolejnym elementem jest to, że chcemy mieć pewność, że możemy uzyskać dostęp do odczytu z naszych pleców i API.
+
+00:01:22.690 --> 00:01:28.060
+Więc jeśli pamiętasz, będziemy musieli zrobić linki do usługi rattus i zaplecza
+
+00:01:30.730 --> 00:01:34.170
+API, który łączy się z ich usługą.
+
+00:01:34.210 --> 00:01:39.820
+Najprawdopodobniej powinniśmy również nadać mu zmienną środowiskową, która jest taka, jak zrobiliśmy z
+
+00:01:40.060 --> 00:01:45.940
+postscriptami, gdzie dajemy ci nasze oko lub unikalny identyfikator zasobu, aby się z nim połączyć.
+
+00:01:46.000 --> 00:01:47.890
+Musimy zrobić to samo dla rattus.
+
+00:01:47.890 --> 00:01:56.530
+Powiedzmy więc, że masz rację, i użyjesz nazwy tworzonej w dokumencie lub komponujesz.
+
+00:01:56.530 --> 00:01:59.040
+W naszym przypadku usługa rattus.
+
+00:01:59.050 --> 00:02:12.820
+Zamiast mówić localhost lub coś podobnego, po prostu mówimy, że rattus jest dostępny dla lokalnego hosta, a port ma być
+
+00:02:12.820 --> 00:02:20.570
+6 3 7 9 i to wszystko, co powinniśmy zrobić.
+
+00:02:20.710 --> 00:02:27.520
+Teraz jedyną rzeczą, którą musimy zmienić teraz jest seinen dodgy nas, gdzie mamy dostęp
+
+00:02:28.120 --> 00:02:37.900
+do klienta rattus, zamiast używać hosta, nie możemy po prostu dać mu to, że masz rację i znowu robimy dokładnie to
+
+00:02:37.900 --> 00:02:44.030
+samo, co my. robiąc z bazą danych po prostu rozpoczynamy proces i postscripts
+
+00:02:45.410 --> 00:02:47.960
+rok-I, ale tym razem do
+
+00:02:51.440 --> 00:02:56.410
+klienta rattus i chcemy zrobić proces dot dot rattus masz
+
+00:02:59.050 --> 00:02:59.710
+rację.
+
+00:03:01.390 --> 00:03:02.420
+Zapiszmy to.
+
+00:03:02.710 --> 00:03:10.290
+I chcę ponownie uruchomić wszystko, co mamy, aby zamknąć okno dokowane, aby było to odczytane jako usługa.
+
+00:03:10.390 --> 00:03:11.610
+Więc dajmy sobie spokój.
+
+00:03:11.620 --> 00:03:13.870
+Mam zamiar wszystko sprowadzić.
+
+00:03:16.900 --> 00:03:19.090
+Tak, aby uzyskać ładny świeży stan.
+
+00:03:19.220 --> 00:03:21.890
+Wszystkie kontenery lub wszystkie usługi zostały usunięte.
+
+00:03:22.070 --> 00:03:24.460
+I mam zamiar uruchomić Dr. skomponuj.
+
+00:03:24.580 --> 00:03:35.480
+Bill i mam nadzieję, że jeśli wszystko się ułoży, przeczytaliśmy już w naszym pojemniku.
+
+00:03:35.490 --> 00:03:36.330
+W porządku.
+
+00:03:36.330 --> 00:03:36.980
+Nie zrobiliśmy tego.
+
+00:03:37.020 --> 00:03:38.190
+Wszelkie błędy połączenia.
+
+00:03:38.190 --> 00:03:42.000
+To, na co chcemy patrzeć, działa back end.
+
+00:03:42.000 --> 00:03:43.550
+Widzimy, że działa proces pocztowy.
+
+00:03:43.560 --> 00:03:49.200
+Jeśli przejdę do końca, zobaczę też czerwoną usługę S.
+
+00:03:49.530 --> 00:03:53.510
+To jest gotowe do zaakceptowania połączeń.
+
+00:03:53.520 --> 00:03:55.780
+Jakie to jest świetne.
+
+00:03:55.800 --> 00:04:01.090
+Właśnie dodaliśmy postscripty rattus i powrót i wszystko do naszego lub kontenera.
+
+00:04:01.170 --> 00:04:05.760
+I może pamiętasz obraz, który początkowo mieliśmy, gdy mówiliśmy, że chcemy stworzyć pojemnik
+
+00:04:05.760 --> 00:04:08.630
+z lekarzem wokół wszystkich tych trzech usług.
+
+00:04:08.640 --> 00:04:13.620
+A teraz niesamowitą rzeczą jest to, że programiści, którzy dołączają do naszego zespołu, nie muszą
+
+00:04:13.710 --> 00:04:17.390
+się martwić o postscripty lub retests, a nawet API zaplecza.
+
+00:04:17.430 --> 00:04:27.280
+Wszystko działa z jednym komentarzem, a inne ekscytujące jest to, że jeśli wrócę tutaj i
+
+00:04:27.280 --> 00:04:36.750
+zamiast czytać, kiedy wchodzimy do naszego projektu, który jest inteligentnym interfejsem API mózgu, mogę uzyskać
+
+00:04:36.840 --> 00:04:49.350
+dostęp do serwera rattus, który jest w naszym pojemniku, po prostu uruchamiając komponent Dakar wykonaj polecenie rattus, a następnie uruchom
+
+00:04:49.410 --> 00:04:51.860
+grę rattus CLIA.
+
+00:04:52.090 --> 00:04:53.010
+Spójrz na to.
+
+00:04:53.310 --> 00:05:00.400
+Możemy zalogować się do naszego serwera i odczytać wszystkie żądania, aby sprawdzić, czy rzeczy rzeczywiście znajdują się w naszej bazie
+
+00:05:00.400 --> 00:05:01.140
+danych.
+
+00:05:01.930 --> 00:05:03.910
+Bardzo bardzo fajne.
+
+00:05:03.910 --> 00:05:09.640
+Mam nadzieję, że jesteś w stanie dotrzeć do tego punktu i zgłosić się do naszego pojemnika z lekarzem, ponieważ teraz
+
+00:05:09.640 --> 00:05:11.320
+możemy zrobić naprawdę zabawne rzeczy.
+
+00:05:11.350 --> 00:05:19.400
+W końcu będziemy mogli wrócić do naszej strony w J. S. i przechowuj nasze tokin w sesji
+
+00:05:19.400 --> 00:05:23.760
+tworzenia, tutaj możemy przechowywać nasz token w naszej bazie danych ponownych edycji.
+
+00:05:23.900 --> 00:05:26.190
+Zrobimy to w następnym filmie.
+
+00:05:26.260 --> 00:05:27.250
+Zobaczę to.

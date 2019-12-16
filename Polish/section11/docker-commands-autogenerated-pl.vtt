@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:00.590 --> 00:00:07.720
+Witamy z powrotem do tego momentu nauczyliśmy się Dr. CLID komentuje, że jego interfejs wiersza poleceń jest
+
+00:00:07.810 --> 00:00:08.740
+prosty.
+
+00:00:08.740 --> 00:00:18.600
+Stworzyliśmy docker i daliśmy mu tag do wywołania naszego kontenera, a potem zrobiliśmy dokowanie i uruchomiliśmy
+
+00:00:18.910 --> 00:00:20.740
+nasz kontener.
+
+00:00:20.920 --> 00:00:29.470
+A ponieważ użyliśmy myślnika I-T, parametr I-T mógł wejść do tego kontenera i zrobić z nim wszystko, co
+
+00:00:29.470 --> 00:00:30.240
+chcemy.
+
+00:00:30.250 --> 00:00:37.240
+Na przykład, gdybyśmy mieli pliki projektu z inteligentnego API mózgu, mogłem właśnie zrobić A. P. M. zacznij tam.
+
+00:00:37.240 --> 00:00:38.990
+Gdybym miał wszystkie te pliki.
+
+00:00:39.430 --> 00:00:46.820
+Tak więc, ponownie, wbudowany Doc jest używany do budowania obrazu z pliku dokowanego, który stworzyliśmy, a następnie dokowania uruchamiamy
+
+00:00:47.910 --> 00:00:49.580
+ponownie, jak sugeruje nazwa.
+
+00:00:49.740 --> 00:00:55.400
+Uruchom kontener i po każdym uruchomieniu kontenera Dharker przydziela nowy skrót obrazu.
+
+00:00:55.440 --> 00:01:02.620
+Jak widzieliśmy i możemy potwierdzić, że faktycznie uruchamiamy to, co mamy, niezależnie od recenzji obrazów, które chcemy użyć czegoś
+
+00:01:02.660 --> 00:01:07.150
+takiego jak wersja węzła lub którekolwiek z poleceń, które możesz mieć.
+
+00:01:07.320 --> 00:01:15.630
+Możesz na przykład zainstalować Ubuntu i możesz uruchamiać polecenia Ubuntu, takie jak lista APT lub aplikacja Dasch, aby
+
+00:01:15.660 --> 00:01:21.800
+zainstalować rzeczy, aby upewnić się, że twój kontener faktycznie działa tak, jak powinien.
+
+00:01:21.810 --> 00:01:28.170
+A teraz mamy do czynienia z naszym kontenerem w taki sposób, w jaki go mamy, tak naprawdę nie możemy zrobić zbyt
+
+00:01:28.170 --> 00:01:33.530
+wiele, możemy po prostu mieć wersję węzła i możemy w nią wchodzić i uruchamiać z niej polecenia.
+
+00:01:33.540 --> 00:01:34.370
+Ale to jest to.
+
+00:01:34.380 --> 00:01:35.880
+W tej chwili jest to dość minimalne.
+
+00:01:36.710 --> 00:01:43.470
+Ale tak jak powiedziałem, możemy to rozszerzyć i faktycznie nasz cały serwer działa w tym kontenerze.
+
+00:01:44.570 --> 00:01:50.120
+I jak widzieliście, ponieważ tutaj ustawiamy środowisko na wersję węzła, po prostu
+
+00:01:50.120 --> 00:01:57.530
+przekazujemy ten kontener każdemu, a każdy, kto ma tę stację dokującą lub plik, zawsze upewni się, że
+
+00:01:57.530 --> 00:02:06.820
+serwer działa dokładnie tak samo, ponieważ wszyscy używają teraz tego samego obrazu Daquiri. uruchamianie funkcji For wraca do naszego terminala, jeśli
+
+00:02:06.850 --> 00:02:07.780
+za
+
+00:02:10.440 --> 00:02:12.440
+każdym razem wykonamy nasze polecenie.
+
+00:02:12.500 --> 00:02:15.180
+Cóż, możesz nie chcieć wchodzić do pojemnika.
+
+00:02:15.180 --> 00:02:17.540
+Bądź miły, aby móc go uruchomić w tle.
+
+00:02:17.820 --> 00:02:22.780
+A sposób, w jaki to robimy, polega na nadaniu mu innego parametru, jakim jest Dashti.
+
+00:02:23.550 --> 00:02:25.230
+I oto mamy.
+
+00:02:25.260 --> 00:02:25.890
+Proszę bardzo.
+
+00:02:25.890 --> 00:02:29.910
+Nasz kontener działa w tle, ale nie weszliśmy do jego wnętrza.
+
+00:02:30.000 --> 00:02:31.900
+Upewnij się, że to oddamy.
+
+00:02:31.920 --> 00:02:33.620
+Na szczęście nie uratowaliśmy tego.
+
+00:02:33.630 --> 00:02:40.560
+Teraz możemy uruchomić kolejne polecenie o nazwie Dr. str. s. i jeśli to zrobimy, a potem sprawisz,
+
+00:02:40.560 --> 00:02:41.750
+że będzie trochę większy.
+
+00:02:41.790 --> 00:02:49.740
+Możemy zobaczyć wszystkie kontenery, które obecnie są uruchomione, zobacz nasz kontener I. RE. nasze nazwy obrazów.
+
+00:02:49.740 --> 00:02:55.080
+Zobacz, kiedy został utworzony status, a także polecenia, które uruchamia.
+
+00:02:56.400 --> 00:02:57.770
+Bardzo bardzo fajne.
+
+00:02:57.810 --> 00:03:03.790
+I możesz mieć wiele kont wielokrotnych tutaj i możesz po prostu sprawdzić je z Dr. str. s ..
+
+00:03:03.810 --> 00:03:04.270
+W porządku.
+
+00:03:04.310 --> 00:03:06.350
+Ale teraz mamy problem.
+
+00:03:06.420 --> 00:03:09.070
+Mamy kontener działający w tle.
+
+00:03:09.090 --> 00:03:13.770
+Jak możemy to powstrzymać lub jak możemy do tego przystąpić.
+
+00:03:13.830 --> 00:03:22.320
+Na szczęście mamy kolejną komendę dokowania, z której możemy korzystać, czyli dock lub exec, i używając pomysłu
+
+00:03:22.320 --> 00:03:30.580
+kontenera lub skrótu, który widzimy tutaj, możemy odwołać się do tego ciemniejszego kontenera, ponieważ w ten sposób
+
+00:03:30.580 --> 00:03:33.500
+Daquiri może odróżnić różne pojemniki.
+
+00:03:33.700 --> 00:03:36.270
+A tak przy okazji, wyrównania są trochę za niskie.
+
+00:03:36.280 --> 00:03:39.120
+Ale widzisz, że to jest identyfikator kontenera.
+
+00:03:39.520 --> 00:03:44.400
+A teraz tutaj ponownie wykonuję polecenie I-T.
+
+00:03:44.430 --> 00:03:49.430
+Pomyśl o tym, jak zmusić nas do wejścia do pojemnika.
+
+00:03:49.440 --> 00:03:57.450
+I wreszcie dajemy mu hasz, który skopiowaliśmy, a następnie w końcu mówimy, że chcemy uzyskać
+
+00:03:57.450 --> 00:03:59.410
+dostęp do tyłu.
+
+00:03:59.450 --> 00:03:59.980
+Proszę bardzo.
+
+00:03:59.990 --> 00:04:04.730
+Wracamy do kontenera i te polecenia, które znam, są trudne do zapamiętania.
+
+00:04:04.730 --> 00:04:06.410
+Nie musisz ich naprawdę pamiętać.
+
+00:04:06.560 --> 00:04:11.920
+Zawsze możesz je znaleźć w Internecie lub możesz obejrzeć ten film, gdy chcesz z nich skorzystać.
+
+00:04:12.110 --> 00:04:18.580
+Teraz, aby zatrzymać ten pojemnik teraz, jak możesz sobie wyobrazić, że jest inne polecenie i jest całkiem zrozumiałym wszystkim,
+
+00:04:18.590 --> 00:04:20.680
+co musimy zrobić, to powiedzieć przestań.
+
+00:04:20.720 --> 00:04:22.280
+Przyjmijmy to najpierw.
+
+00:04:22.280 --> 00:04:28.410
+Po prostu wyjdę, a potem powiem Dr. P. S. Widzimy, że mamy pojemnik.
+
+00:04:28.410 --> 00:04:37.000
+Teraz wszystko, co muszę zrobić, to powiedzieć, że lekarz się zatrzymał i nadać mu skrót nazwy kontenera.
+
+00:04:37.020 --> 00:04:37.920
+W porządku.
+
+00:04:37.920 --> 00:04:39.190
+Wygląda na to, że zadziała, jeśli to zrobię.
+
+00:04:39.190 --> 00:04:42.690
+Dr. P. S. Teraz nic nie mamy.
+
+00:04:42.690 --> 00:04:43.540
+Gratulacje.
+
+00:04:43.560 --> 00:04:50.280
+Właśnie nauczyłeś się większości narzędzi potrzebnych do tworzenia kontenerów i uruchamiania kontenerów i zatrzymywania ich.
+
+00:04:50.340 --> 00:04:52.220
+Możesz utworzyć dowolną liczbę kontenerów.
+
+00:04:52.260 --> 00:04:56.850
+Tak samo jak twój komputer, który maszyna pozwala ci robić.
+
+00:04:57.330 --> 00:05:01.410
+A teraz stałeś się mistrzem kontenerów.
+
+00:05:01.410 --> 00:05:06.210
+W następnym filmie zaczniemy od Aliego. Jeszcze kilka rzeczy do omówienia.
+
+00:05:06.210 --> 00:05:07.590
+Zobaczę na tym.
+
+00:05:07.780 --> 00:05:07.950
+Kok.

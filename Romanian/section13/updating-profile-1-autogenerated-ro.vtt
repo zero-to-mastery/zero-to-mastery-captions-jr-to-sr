@@ -1,0 +1,295 @@
+﻿WEBVTT
+
+00:00:00.720 --> 00:00:01.770
+Bine ai revenit.
+
+00:00:01.770 --> 00:00:09.330
+Să lucrăm la funcția de actualizare a profilului un punct foarte important care este bine să ne asigurăm că
+
+00:00:09.330 --> 00:00:14.130
+ne protejăm Nu vrem ca nimeni să poată actualiza un profil.
+
+00:00:14.460 --> 00:00:19.210
+Și în sfârșit ajungem să lucrăm puțin din backend.
+
+00:00:19.370 --> 00:00:21.420
+Acum, ce vrem să facem aici.
+
+00:00:21.500 --> 00:00:23.630
+Voi minimiza asta.
+
+00:00:23.830 --> 00:00:37.910
+Și în rutele noastre și în aplicația noastră expresă vom crea o postură de punct de aplicație care este profilul cu
+
+00:00:37.910 --> 00:00:39.850
+parametrul Heidi.
+
+00:00:40.040 --> 00:00:49.350
+Și acesta va avea un răspuns la cerere care va avea ce ar trebui să aibă.
+
+00:00:49.370 --> 00:01:00.720
+Ei bine, vrem ca profilul să se ocupe de actualizarea profilului și trecem în obiectul de răspuns al cererii, precum și în obiectul nostru D-B, astfel încât
+
+00:01:00.750 --> 00:01:08.360
+să ne putem conecta la baza de date și să actualizăm de fapt baza de date a utilizatorului.
+
+00:01:08.370 --> 00:01:11.480
+Deci, cereți răspuns D. B Să
+
+00:01:14.320 --> 00:01:24.630
+vă salvați să vedeți că am observat schimbarea în containerul nostru Daker, care este foarte frumos.
+
+00:01:24.640 --> 00:01:32.110
+Acum, de fapt, să construim această actualizare a profilului mânerului mergem din nou la
+
+00:01:32.140 --> 00:01:42.610
+controlorii noștri pentru a profita și, în loc să manipuleze profilurile, vom crea o funcție nouă numită actualizare profil mâner și
+
+00:01:42.610 --> 00:01:51.910
+va fi o funcție simplă, această funcție simplă va accepta cereți un răspuns și db-ul pe care tocmai
+
+00:01:51.910 --> 00:01:53.100
+l-am transmis.
+
+00:01:53.320 --> 00:02:04.360
+Și înăuntru de aici vom lua ID-ul de la punctul de cerere.
+
+00:02:04.720 --> 00:02:08.550
+Amintiți-vă că este domeniul pe care îl oferim.
+
+00:02:08.590 --> 00:02:15.920
+Deci, poate fi profilate 23 de fișiere săraci unul dacă profilul este unul va prinde un utilizator pe care îl avem.
+
+00:02:16.270 --> 00:02:22.540
+Iar în secțiunea de securitate am discutat despre această idee de a nu fi încredințat întotdeauna informații și de ce vă trimite utilizatorul.
+
+00:02:22.540 --> 00:02:28.060
+Și putem face niște verificări aici pentru a vă asigura că Puranas există, asigurați-vă că ceea ce așteptăm
+
+00:02:28.210 --> 00:02:30.100
+de la client este corect.
+
+00:02:30.100 --> 00:02:33.670
+Dar, de dragul timpului, ne vom concentra doar pe actualizarea profilului.
+
+00:02:33.700 --> 00:02:36.340
+În caz contrar, vom petrece prea mult timp.
+
+00:02:36.340 --> 00:02:37.750
+Priviți Yumiko.
+
+00:02:38.140 --> 00:02:38.650
+In regula.
+
+00:02:38.650 --> 00:02:50.660
+De asemenea, dorim să luăm numele de vârstă și obiect de companie pe care o vom trimite din cererea de intrare în forma
+
+00:02:51.280 --> 00:02:52.300
+corpului.
+
+00:02:52.450 --> 00:02:58.480
+Acum nu am făcut acest lucru pe partea clientului, dar vrem să trimitem un formular și să
+
+00:02:58.480 --> 00:03:01.820
+punem obiect care conține vârsta de nume și Pat.
+
+00:03:01.910 --> 00:03:09.730
+Și acum, cu obiectul D-B, putem folosi Carnac-ul pentru a spune pur și simplu că vreau utilizatori D-B.
+
+00:03:09.830 --> 00:03:14.900
+Și încă o dată, dacă nu sunteți familiarizați cu K'NEX, puteți să mergeți la documentația lor și este
+
+00:03:14.900 --> 00:03:15.590
+foarte simplu.
+
+00:03:15.590 --> 00:03:18.380
+Citește engleza și vei vedea ce vreau să spun acum.
+
+00:03:18.710 --> 00:03:26.560
+Voi spune să luați un utilizator stabil în cazul în care ID-ul este
+
+00:03:30.080 --> 00:03:30.870
+deja.
+
+00:03:30.920 --> 00:03:34.590
+Pot să fac asta simplificat și să păstrez așa.
+
+00:03:34.610 --> 00:03:41.970
+Deci, unde ID-ul se potrivește cu ceea ce am furnizat și în acest caz vrem să ne actualizăm.
+
+00:03:42.290 --> 00:03:50.130
+Și pentru că acum nu avem coloana de vârstă coloana de animale de companie în baza noastră de date, care va fi unul
+
+00:03:50.130 --> 00:03:54.770
+dintre exercițiile pe care le vom face să ne îngrijorăm de actualizarea numelui.
+
+00:03:54.790 --> 00:04:00.330
+Așa că am să spun din nou numele actualizării, îl pot simplifica și pot
+
+00:04:04.200 --> 00:04:08.280
+face nume pentru că este numele coloanei din tabelul utilizatorilor.
+
+00:04:08.280 --> 00:04:14.810
+În cele din urmă putem face un punct și atunci când vom primi un răspuns de la asta vom
+
+00:04:21.060 --> 00:04:21.870
+spune asta.
+
+00:04:21.890 --> 00:04:24.360
+Oare nu asta am vrut să facem.
+
+00:04:24.930 --> 00:04:27.160
+Vom spune că vrem să.
+
+00:04:27.360 --> 00:04:32.080
+Ei bine, dacă există un fel de răspuns și putem face un pic de verificare aici.
+
+00:04:32.100 --> 00:04:38.260
+Dar dacă există un răspuns din baza de date, ceea ce ne dorim, vom răspunde.
+
+00:04:38.850 --> 00:04:48.770
+Jason să spunem doar succesul deoarece am actualizat cu succes utilizatorul.
+
+00:04:49.010 --> 00:05:03.420
+În caz contrar, vom răspunde doar cu un statut de 400 și îl putem spune doar lui Jason pentru o oră.
+
+00:05:03.420 --> 00:05:10.410
+Nu este găsit sau să spunem doar că nu putem să actualizăm și,
+
+00:05:13.540 --> 00:05:20.380
+bineînțeles, cu orice promisiune pe care dorim să o facem pentru
+
+00:05:20.380 --> 00:05:37.860
+a prinde erori și în cazul nostru vom spune că aerul va face doar un statut de răspuns de 400 pe zi și un răspuns al erorii de actualizare a utilizatorului.
+
+00:05:37.860 --> 00:05:39.660
+Bine, să salvăm aici.
+
+00:05:41.490 --> 00:05:42.780
+Vedeți dacă avem erori.
+
+00:05:42.780 --> 00:05:43.620
+Nu există încă erori.
+
+00:05:43.620 --> 00:05:44.910
+Acesta este întotdeauna un semn bun.
+
+00:05:44.910 --> 00:05:53.050
+Deci, haideți să dăm mânerului o actualizare de profil aici, asigurați-vă că exportim.
+
+00:05:53.210 --> 00:05:56.650
+Și acum ar trebui să avem acest lucru pe serverul nostru.
+
+00:05:57.090 --> 00:06:05.510
+JS acum pentru a testa acest lucru pentru a face o cerere de post putem fie să înceapă de lucru pe partea din față și de
+
+00:06:05.510 --> 00:06:12.650
+a face o cerere Fettes sau putem folosi ceva de genul Postman și Postman este ceva pe care l-am folosit înainte de
+
+00:06:12.650 --> 00:06:13.830
+cursul meu anterior.
+
+00:06:13.850 --> 00:06:21.600
+Este absolut uimitor dacă lucrezi vreodată cu ochii API și construiești API-ul tău.
+
+00:06:21.770 --> 00:06:27.890
+Trebuie să fiți în timp ce trebuie să utilizați poștașul este absolut minunat și veți vedea de ce acum.
+
+00:06:28.220 --> 00:06:34.400
+Voi face o cerere de post localhost și Olby 3000.
+
+00:06:34.790 --> 00:06:43.010
+Și se va întâmpla să-l prezinți pe Heidi, deoarece avem un singur utilizator acum în corp.
+
+00:06:43.010 --> 00:06:48.590
+Vrem să spunem că va fi Jaison brut pe care îl trimitem.
+
+00:06:48.820 --> 00:06:55.370
+Va avea o formulă și o să vă asigurați că acesta este Jason.
+
+00:06:55.530 --> 00:06:57.200
+Să
+
+00:07:00.050 --> 00:07:05.910
+presupunem că forma și pusei și această formă
+
+00:07:09.150 --> 00:07:15.660
+de intrare va avea numele paginii Johnny de 54.
+
+00:07:15.840 --> 00:07:21.110
+Și în cele din urmă Pat, care este
+
+00:07:24.460 --> 00:07:30.970
+doar spune cinci clic pe trimite aici am un succes.
+
+00:07:30.970 --> 00:07:41.840
+Am reușit să intru în corp și să-i dau niște contribuții și dacă ne întoarcem, vedem că acolo
+
+00:07:41.840 --> 00:07:49.210
+a fost o cerere de post pentru a-ți face un profil.
+
+00:07:49.220 --> 00:07:50.830
+Iată partea distractivă.
+
+00:07:50.840 --> 00:07:53.850
+Să ne întoarcem la noi și să
+
+00:07:57.030 --> 00:07:59.370
+ne conectăm din nou.
+
+00:07:59.550 --> 00:08:07.780
+Vom spune la o zi a lui Tom Pastore și vom vedea că numele nostru de utilizatori este acum Johnny.
+
+00:08:07.850 --> 00:08:13.680
+Am creat cu succes funcția de actualizare a profilului mânerului.
+
+00:08:13.810 --> 00:08:15.520
+E uimitor.
+
+00:08:16.230 --> 00:08:18.410
+Și în câteva linii de cod.
+
+00:08:18.440 --> 00:08:20.160
+Nu a fost așa de rău.
+
+00:08:20.280 --> 00:08:30.480
+Am creat pur și simplu o cerere de post și această cerere de post este pur și simplu de așteptare pentru parametrul de vârstă nume de identitate și Pat
+
+00:08:30.480 --> 00:08:36.510
+din formularul de intrare tot corpul și apoi am doar actualizarea bazei de date a utilizatorilor.
+
+00:08:36.660 --> 00:08:44.310
+Atâta timp cât codul de identificare corespunde cu ceea ce ați furnizat și actualizează în cazul nostru doar numele pe care va reveni
+
+00:08:44.310 --> 00:08:48.980
+sau nu poate să îl actualizeze în funcție de timpul pe care l-am făcut.
+
+00:08:49.100 --> 00:08:49.340
+In regula.
+
+00:08:49.340 --> 00:08:51.260
+Doar nu doar ca să nu ne confundăm.
+
+00:08:51.290 --> 00:08:58.680
+Să ne întoarcem la poștaș și să ne asigurăm că schimbăm numele lui Johnny într-un just în cazul în care reușim din nou.
+
+00:08:58.850 --> 00:09:06.010
+Dacă am reîmprospătare am avut un semn.
+
+00:09:06.060 --> 00:09:08.230
+În regulă, ne întoarcem la normal.
+
+00:09:08.250 --> 00:09:09.420
+Totul e bine.
+
+00:09:10.460 --> 00:09:14.520
+Avem utilizatorul nostru modul în care avem nevoie de el ostil.
+
+00:09:14.740 --> 00:09:19.960
+Deci, acum că avem această actualizare a profilului mânerului, o vom conecta de fapt
+
+00:09:20.230 --> 00:09:27.580
+la partea clientului, astfel încât atunci când l-am salvat pe pagina noastră de profil, va funcționa, va fi o mulțime de distracție.
+
+00:09:27.720 --> 00:09:29.820
+Voi vedea în următorul videoclip.

@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.990 --> 00:00:11.730
+Bine ați revenit la o secțiune de bonus specială și la biți suplimentari și vom vorbi despre analiza codului.
+
+00:00:11.770 --> 00:00:19.210
+Vedeți de cele mai multe ori ca dezvoltatori veți începe să lucrați la proiecte chiar de
+
+00:00:19.210 --> 00:00:20.210
+la început.
+
+00:00:20.230 --> 00:00:27.150
+Vreau să spun că este foarte rar că sunteți acolo la început înființând structurile de dosare originale în
+
+00:00:27.150 --> 00:00:28.870
+cod și pachet web.
+
+00:00:29.230 --> 00:00:36.100
+De cele mai multe ori, dacă lucrați la o companie mare, de obicei au deja un proiect pe
+
+00:00:36.100 --> 00:00:39.020
+care l-au construit și vi se spune.
+
+00:00:39.070 --> 00:00:39.560
+In regula.
+
+00:00:40.500 --> 00:00:41.520
+Du-te apuca fișierele.
+
+00:00:41.550 --> 00:00:43.660
+Du-te apuca codul și începeți.
+
+00:00:44.460 --> 00:00:51.700
+Trebuie să începeți să examinați codul care îl analizează și să aflați cum funcționează totul.
+
+00:00:52.080 --> 00:01:00.380
+Dar, doar uita la cod și poate o documentație făcută de colegii tăi în această secțiune, vom folosi creierul inteligent pentru
+
+00:01:00.380 --> 00:01:06.920
+o aplicație pe care am construit-o de la zero în cursul meu anterior, dezvoltatorul complet de
+
+00:01:06.920 --> 00:01:08.790
+la zero la stăpânire.
+
+00:01:09.950 --> 00:01:16.770
+În acest curs vom adăuga o tona de mai multe caracteristici la fel ca și noi în viața reală.
+
+00:01:17.150 --> 00:01:22.730
+Vom adăuga mai multe detectări de fețe pe care le vom crea profiluri de utilizatori
+
+00:01:22.760 --> 00:01:29.780
+și abilitatea de a salva și modifica profilurile utilizatorilor adăugând sesiuni pentru management adăugând containere de andocare pentru dezvoltarea noastră
+
+00:01:29.780 --> 00:01:37.650
+și mult mai mult, dar pentru ca noi să facem acest lucru pentru a analiza baza de cod și pentru a înțelege ce
+
+00:01:37.650 --> 00:01:38.530
+se întâmplă.
+
+00:01:39.430 --> 00:01:45.190
+În următorul videoclip, vă voi trece prin procesul meu când încep să încep să lucrez
+
+00:01:45.190 --> 00:01:53.010
+la un proiect care a fost deja început înainte de a ajunge și aceasta este o abilitate importantă care este adesea ignorată.
+
+00:01:53.810 --> 00:02:01.350
+Dezvoltatorii noștri de vârf pot să parcurg logic codul și să ne prindem de modul în care funcționează lucrurile astfel încât
+
+00:02:01.440 --> 00:02:04.530
+să putem începe să contribuim imediat la proiect.
+
+00:02:04.530 --> 00:02:10.650
+Putem vizualiza un nivel ridicat și înțelegem cum se potrivește fiecare piesă împreună și vom învăța cum să
+
+00:02:10.650 --> 00:02:12.340
+procedăm în această secțiune.
+
+00:02:13.230 --> 00:02:20.000
+Apoi vom implementa noua funcție de detectare a feței multiple, așa cum o cere Bruno.
+
+00:02:20.120 --> 00:02:25.010
+Vom urmări cele mai bune practici pentru a face cererea de tragere pentru a contribui la proiecte și pentru a
+
+00:02:25.010 --> 00:02:26.260
+face multe lucruri distractive.
+
+00:02:26.450 --> 00:02:28.040
+Deci trebuie să începem.
+
+00:02:28.250 --> 00:02:35.720
+Cu mult înainte de a face asta, vreau doar să vă dau un heads-up, înființarea unui proiect curent pe mașina
+
+00:02:35.720 --> 00:02:37.540
+dvs. va fi frustrant.
+
+00:02:37.610 --> 00:02:44.290
+Va trebui să vă configurați serverul de bază de date și clientul și vă voi arăta cum să faceți acest lucru.
+
+00:02:44.480 --> 00:02:50.510
+Dar pentru că noi toți avem mașini diferite diferite laptopuri diferite sistem de operare va fi într-adevăr
+
+00:02:50.510 --> 00:02:57.020
+foarte frustrant și vor fi momente în care trebuie să Google în jurul valorii de sau ar putea să
+
+00:02:57.020 --> 00:03:04.190
+aveți erori pe care nu le înțelegeți și fac acest lucru pentru scop, deoarece acest lucru este atât de comună în industrie.
+
+00:03:04.490 --> 00:03:10.790
+Dar vă voi arăta cum să configurați întregul proiect și în secțiunile viitoare vom folosi acest exemplu de cât de
+
+00:03:10.790 --> 00:03:16.460
+frustrant a fost să înființăm totul baza de date pe serverul clientului și apoi să folosim
+
+00:03:17.270 --> 00:03:23.050
+docer și să vă arătăm de ce Daquiri este atât de uimitor și de ce rezolvă această problemă.
+
+00:03:23.810 --> 00:03:26.360
+Pentru că face acest proces foarte ușor.
+
+00:03:26.360 --> 00:03:34.550
+Dar înainte de a face asta și doar să vă scufundați în doc, trebuie să înțelegeți frustrarea, astfel încât să fiți avertizați.
+
+00:03:34.570 --> 00:03:41.320
+Voi oferi resurse în această secțiune, astfel încât acest proiect să funcționeze pe toate sistemele de operare, dar
+
+00:03:41.710 --> 00:03:48.520
+să folosească acest lucru ca o modalitate de a vă exersa ceva ce ar trebui să faceți atunci când
+
+00:03:48.700 --> 00:03:51.340
+începeți ca dezvoltator web și compania dvs.
+
+00:03:51.400 --> 00:03:52.700
+Să începem să ne arătăm.
+
+00:03:53.080 --> 00:03:54.000
+Voi vedea în următorul.

@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.960 --> 00:00:03.290
+Bine ai revenit.
+
+00:00:03.340 --> 00:00:09.760
+Acum, că am ajuns în buruieni pentru a optimiza codul nostru să vorbim în mod specific despre reacția
+
+00:00:10.300 --> 00:00:18.720
+cum putem optimiza codul nostru în re-act, cum ar fi prietenii nostri robo sus va pentru orice ajutor reactiv sau primul lucru pe care
+
+00:00:18.720 --> 00:00:24.750
+doriți să verificați este o caracteristică care a apărut încă de la reactarea a cincisprezece puncte punct
+
+00:00:24.750 --> 00:00:25.420
+zero.
+
+00:00:25.830 --> 00:00:29.100
+Și acesta este instrumentul nostru de performanță.
+
+00:00:29.220 --> 00:00:39.090
+Tot ce trebuie să facem este în gazda noastră locală să dăm parametrul șir de interogare de re-act perf re-act sublinia
+
+00:00:39.180 --> 00:00:40.970
+Perth de aici.
+
+00:00:41.130 --> 00:00:53.270
+Dacă apăsați Enter nu se întâmplă nimic, dar dacă deschideți instrumentele de dezvoltare și mergeți la performanță, putem face
+
+00:00:53.270 --> 00:00:55.190
+acum ceva interesant.
+
+00:00:55.280 --> 00:01:01.400
+Mă duc să înregistrez câteva înregistrări în caseta de căutare și apoi apasă
+
+00:01:01.400 --> 00:01:11.720
+stop și apoi le vom analiza sau vom analiza performanța aplicației noastre să avem înregistrări și să tipăm lucrurile într-adevăr foarte repede
+
+00:01:11.750 --> 00:01:17.140
+și să schimbăm lucrurile și să ne oprim doar șapte secunde.
+
+00:01:18.650 --> 00:01:28.340
+Acum, folosind acest lucru reacționați pentru a sublinia perf, acum putem vedea componentele noastre și ceea ce fac în performanță
+
+00:01:28.340 --> 00:01:29.680
+în jos.
+
+00:01:29.900 --> 00:01:34.260
+Acum știu că acest lucru este copleșitor, așa că să încercăm să mergem prin el.
+
+00:01:34.430 --> 00:01:35.650
+Simplu și ușor.
+
+00:01:35.810 --> 00:01:44.760
+Vedem că avem aplicația noastră care este redată și filtrată și dorim să aruncăm o privire aici
+
+00:01:44.820 --> 00:01:51.410
+la C-p U. S. vedem că aici sunt niște baruri galbene frumoase care înseamnă că se întâmplă ceva javascript.
+
+00:01:51.570 --> 00:01:58.940
+Așa că am să-l subliniez doar făcând clic și apoi făcând clic și vedeți în secțiunea de sincronizare
+
+00:01:59.630 --> 00:02:03.470
+a utilizatorului și aici, în secțiunea de sincronizare
+
+00:02:10.710 --> 00:02:15.910
+a utilizatorului, dacă parcurg Lin arătând astfel folosind reacția la sublinierea perf.
+
+00:02:16.220 --> 00:02:22.640
+Acum, instrumentele de dezvoltare cromate recunosc componentele Riak, puteți vedea aici logo-ul re-act și ne arată
+
+00:02:22.640 --> 00:02:24.770
+ce fel de muncă face.
+
+00:02:24.770 --> 00:02:28.830
+Vedem că avem reacția de a face arbore doar în acest moment.
+
+00:02:29.100 --> 00:02:30.510
+Avem aplicația conectată.
+
+00:02:30.500 --> 00:02:32.360
+Ține minte că folosim redox.
+
+00:02:32.360 --> 00:02:40.700
+Avem aplicația ca principală componentă a containerului, iar sub ea vedem că avem limite de aer Carlist
+
+00:02:40.820 --> 00:02:46.910
+și componente de derulare și dedesubt că vedem componentele noastre de carte
+
+00:02:49.590 --> 00:02:51.600
+foarte foarte cool.
+
+00:02:51.600 --> 00:02:57.100
+Și de fapt vedem aici ce fac în parantezele pătrate pe care le vedem că se actualizează.
+
+00:02:57.120 --> 00:03:02.800
+Deci, probabil că scriu ceva aici, puteți să vedeți că am scris ceva în această secțiune.
+
+00:03:02.940 --> 00:03:12.760
+Aceste componente se actualizează în fiecare bară de culori arată timpul pe care o componentă o face, deoarece javascript este un
+
+00:03:12.790 --> 00:03:22.090
+singur filet ori de câte ori o componentă este montarea sau redarea sau actualizarea este hogging firul principal.
+
+00:03:22.100 --> 00:03:29.220
+Amintiți-vă pe muncitorul principal al browserului și împiedicând alte coduri să ruleze aceste citate paranteze
+
+00:03:29.330 --> 00:03:34.030
+spun actualizare și, uneori, vor spune Brandur și montarea.
+
+00:03:34.140 --> 00:03:38.280
+Acestea descriu ce parte din ciclul de viață al componentei are loc.
+
+00:03:39.420 --> 00:03:41.940
+Și cronologia rupe fiecare pas.
+
+00:03:42.000 --> 00:03:46.190
+Puteți vedea sincronizarea fină a metodelor pe care le utilizați.
+
+00:03:46.230 --> 00:03:53.610
+Aplicația noastră este destul de mică, astfel încât să nu vedeți prea multe saltări aici, dar pe măsură ce obțineți tot mai multe componente,
+
+00:03:53.670 --> 00:03:59.680
+vă puteți imagina cum va merge mai adânc și mai adânc și mai adânc în arborele de randare.
+
+00:03:59.730 --> 00:04:08.000
+Îmi place să numesc acest copac de Craciun invers și cu atât mai mare arborele lor de Crăciun este mai multe componente
+
+00:04:08.000 --> 00:04:15.350
+și mai multe nevoie de render pentru că amintesc modul în care re-act de lucru este în cazul în
+
+00:04:15.440 --> 00:04:25.250
+care ceva de actualizări în app se va actualiza și să transfere acele elemente de recuzită la toate componentele sub el și toate acele componente care
+
+00:04:25.520 --> 00:04:28.170
+sunt funcții trebuie să funcționeze Embrey.
+
+00:04:28.200 --> 00:04:31.600
+Deci, vrei să eviți ceva în care e într-adevăr profund.
+
+00:04:31.650 --> 00:04:38.110
+Ele arata ca doar piramidele de doom, doar piramidele masive sau inversarii pomilor de Craciun.
+
+00:04:38.940 --> 00:04:45.090
+Acum este tipic să aveți un copac destul de adânc în reacție. Dar dacă optimizați o
+
+00:04:45.570 --> 00:04:52.890
+componentă care este montată frecvent, aceasta poate contribui la reducerea numărului de componente de împachetare, cum ar fi componenta
+
+00:04:52.890 --> 00:04:54.000
+de conectare.
+
+00:04:54.330 --> 00:04:59.240
+Deoarece fiecare adaugă o performanță mică și o penalizare de memorie.
+
+00:04:59.320 --> 00:05:06.910
+Un lucru pe care trebuie să-l țineți minte aici este că atunci când rulați acest lucru se execută pe versiunea devolvement de re-act, care
+
+00:05:06.910 --> 00:05:12.730
+este mult mai lent, deoarece aveți X X Akshara unelte Plus, chiar dacă executați această re-act perf încetinește
+
+00:05:12.890 --> 00:05:14.040
+pe app dumneavoastră.
+
+00:05:14.320 --> 00:05:19.810
+Deci, nu este exact același lucru cu producția dvs. de producție va fi cel mai probabil mai rapid, dar
+
+00:05:19.870 --> 00:05:27.310
+este un bun indicator de ce aplicația dvs. este de a face și puteți să-l testați pentru a vedea în cazul în care sunt acum blocajele mele.
+
+00:05:27.510 --> 00:05:33.740
+Privind la acest lucru am fi putut realiza ceva.
+
+00:05:33.840 --> 00:05:45.030
+Cum putem ajuta acest proces cu redux bine prin folosirea reduxului? Fii inteligent cu privire la ceea ce componentele se actualizează, deoarece în cazul în
+
+00:05:45.480 --> 00:05:53.370
+care această componentă toplevel actualizează o să-i facă pe toți copiii săi sau să le recreeze pe acești
+
+00:05:53.370 --> 00:05:54.200
+copii.
+
+00:05:54.420 --> 00:06:02.790
+Dar dacă avem redux și în loc să folosim această componentă brute pentru a actualiza starea, putem conecta direct
+
+00:06:02.790 --> 00:06:11.700
+o componentă inferioară amintim prin utilizarea conexiunii ne putem conecta la starea de lucru, astfel încât să putem conecta doar componenta
+
+00:06:11.970 --> 00:06:19.380
+aici și numai aceste două sub ea se va actualiza versus dacă ar fi conectat componenta
+
+00:06:19.380 --> 00:06:23.580
+toplevel care va face într-adevăr mult mai multe componente.
+
+00:06:23.580 --> 00:06:25.320
+Deci asta e strategia de acolo.
+
+00:06:25.380 --> 00:06:32.070
+Doriți să aveți doar un container sau o componentă la cel mai înalt nivel sau doar câteva componente în partea
+
+00:06:32.070 --> 00:06:38.220
+de sus care sunt conectate la redox sau pentru a evita trecerea recuzită și copaci cu adevărat imbricate.
+
+00:06:38.220 --> 00:06:46.800
+Doriți să utilizați conexiunea mai aproape de nodurile frunzelor și este o decizie arhitecturală pe care dvs. și echipa dvs. o
+
+00:06:46.800 --> 00:06:50.000
+faceți pe baza argumentelor pro și contra.
+
+00:06:51.790 --> 00:06:56.430
+În cele din urmă, am vrut să vă arăt instrumentele de dezvoltare a instrumentelor de dezvoltare.
+
+00:06:56.590 --> 00:06:59.680
+Acesta este un dop de crom în care puteți obține.
+
+00:06:59.680 --> 00:07:04.950
+Trebuie doar să faceți clic pe Adăugați la Chrome și veți avea și este foarte util.
+
+00:07:05.220 --> 00:07:14.490
+Dacă mă duc aici în fila re-act, veți vedea că acesta afișează aplicația mea Am recuzita și am magazin Am furnizorul
+
+00:07:14.490 --> 00:07:20.970
+meu de aplicație conectat aplicația mea și apoi văd căsuța de căutare derulați.
+
+00:07:20.970 --> 00:07:24.460
+Și apoi, în final, toate componentele mele pentru copii.
+
+00:07:24.540 --> 00:07:31.860
+Lucrul minunat în legătură cu acest lucru este că vă arată ce recuzită ai ce copii aveți toate
+
+00:07:31.860 --> 00:07:32.730
+aceste lucruri.
+
+00:07:32.820 --> 00:07:39.650
+Și când schimbăm lucrurile, observi schimbările.
+
+00:07:39.790 --> 00:07:46.900
+Dar pentru performanță, uneltele de putere reactivă sunt într-adevăr foarte plăcute când faceți clic pe aceste actualizări evidențiate
+
+00:07:47.050 --> 00:07:54.490
+și ceea ce se va întâmpla este oricând modificarea aplicației dvs. sau dacă o componentă este renderată, o va
+
+00:07:54.490 --> 00:07:55.740
+scoate în evidență.
+
+00:07:55.840 --> 00:07:56.660
+Hai să verificăm.
+
+00:07:56.680 --> 00:08:01.100
+Voi începe să scriu și să privesc la asta.
+
+00:08:01.220 --> 00:08:09.600
+Afișează ceea ce este rebranded, care este aproape toată aplicația noastră și urmăriți acest lucru pe măsură ce tip mai repede.
+
+00:08:10.670 --> 00:08:11.810
+Vezi asta.
+
+00:08:11.870 --> 00:08:17.390
+Am fost într-adevăr foarte agresiv cu tastarea acolo, dar tu vezi cum culorile
+
+00:08:17.390 --> 00:08:22.090
+schimbă ceea ce culoarea reprezintă cât de des lucrurile sunt redate.
+
+00:08:22.140 --> 00:08:26.720
+Sunt mai repede, devin mai apropiați de culoarea roșie.
+
+00:08:26.730 --> 00:08:33.750
+Deci gândiți-vă la culorile fierbinți și cu cât sunt mai lent, cu atât sunt mai aproape de albastru.
+
+00:08:33.830 --> 00:08:38.300
+Acum este util pentru detectarea unui ciclu de redare inutil.
+
+00:08:38.510 --> 00:08:48.090
+De exemplu, pe măsură ce scriu aici, văd că antetul meu este actualizat, dar de ce vreau să spun că este același
+
+00:08:48.090 --> 00:08:49.410
+lucru tot timpul.
+
+00:08:49.470 --> 00:08:54.560
+De ce aș avea nevoie să citesc redați această funcție care este o operație care nu este necesară.
+
+00:08:54.670 --> 00:08:57.810
+Și când privim înapoi codul nostru în aplicație.
+
+00:08:57.900 --> 00:08:59.710
+Da, vedem asta.
+
+00:08:59.880 --> 00:09:08.960
+Ei bine, are sens, pentru că de fiecare dată când fac evenimentul de căutare, trebuie să disprețuiesc acțiunea ssion și actualizează
+
+00:09:08.990 --> 00:09:10.720
+câmpul de căutare.
+
+00:09:10.880 --> 00:09:20.230
+Deci, această componentă a aplicației devine renderată deoarece există o schimbare în magazinul Redock.
+
+00:09:20.240 --> 00:09:27.690
+Și pentru că antetul face parte din aceasta, va face și ea.
+
+00:09:29.130 --> 00:09:32.820
+Deci, acestea sunt genurile de lucruri pe care doriți să le observați.
+
+00:09:32.940 --> 00:09:38.640
+Acum rețineți că văzând galben sau roșu atunci când subliniați sau când componentele sunt redate nu este
+
+00:09:39.030 --> 00:09:40.740
+neapărat un lucru rău.
+
+00:09:41.520 --> 00:09:48.660
+Va fi de așteptat atunci când faceți lucruri cum ar fi glisante sau defilare sau orice elemente de UI
+
+00:09:49.170 --> 00:09:50.960
+care declanșează actualizări frecvente.
+
+00:09:51.360 --> 00:09:57.240
+Deci nu puteți să o evitați complet, dar dacă faceți doar clic pe un buton și vă vedeți brusc
+
+00:09:57.240 --> 00:10:01.140
+și văzând roșu, înseamnă că se întâmplă ceva ce doriți să remediați.
+
+00:10:01.820 --> 00:10:10.330
+Deci, instrumentul de aici actualizările highlight este folosit în principal pentru a vedea ce se actualizează în mod inutil și ca dezvoltator de
+
+00:10:10.330 --> 00:10:17.070
+aplicații pe care doriți să aveți o idee generală despre modul în care aplicația dvs. re-act este redată.
+
+00:10:17.170 --> 00:10:24.310
+Deoarece ne amintim că vrem să evităm manipulările inutile, pentru că știm până acum că asta
+
+00:10:24.310 --> 00:10:25.750
+ne împiedică performanțele.
+
+00:10:26.430 --> 00:10:32.560
+În următorul videoclip, vă voi arăta cum putem evita unele dintre aceste redări inutile.
+
+00:10:32.730 --> 00:10:33.540
+Voi vedea în următorul.

@@ -1,0 +1,802 @@
+﻿WEBVTT
+
+00:00:02.400 --> 00:00:05.230
+Ratele sunt sigur că vom citi mai multe teste.
+
+00:00:05.230 --> 00:00:09.340
+Dar până acum am lucrat numai cu niște componente simple.
+
+00:00:09.470 --> 00:00:15.940
+Ce se întâmplă dacă vrem să lucrăm cu ceva de genul unui container pe care îl folosește un câine
+
+00:00:15.940 --> 00:00:17.000
+de top?
+
+00:00:17.200 --> 00:00:23.890
+Este, de asemenea, o componentă conectată.
+
+00:00:23.930 --> 00:00:27.870
+Cum putem testa cu asta.
+
+00:00:28.030 --> 00:00:29.380
+Hai sa incercam.
+
+00:00:30.290 --> 00:00:34.980
+Am de gând să creez un fișier nou și să îl numesc test de aptitudini.
+
+00:00:35.050 --> 00:00:35.700
+Da.
+
+00:00:37.810 --> 00:00:46.400
+Iar testul de aptitudini îl face din nou și nu putem trece prin mișcări și să copiem una din ultimele
+
+00:00:46.400 --> 00:00:46.870
+teste.
+
+00:00:46.880 --> 00:00:56.140
+Să facem asta și de data asta, în loc de aglomerație, va fi sus.
+
+00:00:56.260 --> 00:01:01.410
+Și din nou nu vom primi nici o culoare.
+
+00:01:01.480 --> 00:01:03.580
+Hai să vedem ce se întâmplă.
+
+00:01:03.580 --> 00:01:04.240
+Oh, de fapt.
+
+00:01:04.300 --> 00:01:05.780
+Permiteți-mi să șterg și asta.
+
+00:01:05.860 --> 00:01:08.510
+Salvați.
+
+00:01:08.760 --> 00:01:09.390
+In regula.
+
+00:01:09.390 --> 00:01:11.020
+Am ceva erori.
+
+00:01:11.130 --> 00:01:17.960
+Se spune că se așteaptă să se facă componenta aplicației care este aici, dar primesc o
+
+00:01:17.970 --> 00:01:24.920
+eroare spunând că încălcarea invarianțială nu a putut fi stocată nici în context, nici în aplicația de conectare.
+
+00:01:24.930 --> 00:01:36.070
+În regulă, așa că hai să închidem un magazin, să spui că magazinul Konst Lock este egal cu un obiect gol pentru moment.
+
+00:01:36.430 --> 00:01:47.550
+Sau să facem doar roboții unei matrice goale și să o facem pe Sir sau un câmp de căutare.
+
+00:01:47.990 --> 00:01:52.410
+Acesta este un șir gol și vom trece doar acest magazin
+
+00:01:55.250 --> 00:01:56.080
+mock
+
+00:02:01.460 --> 00:02:07.180
+ca magazin proc și întreg Băieți am fost stocat obține stat nu este o funcție.
+
+00:02:07.310 --> 00:02:09.350
+Și asta are dreptate.
+
+00:02:09.350 --> 00:02:17.330
+Dacă vă aduceți aminte că magazinul nostru nu este doar un obiect gol sau un obiect fals.
+
+00:02:17.390 --> 00:02:23.690
+Vreau să spun că este vorba de termeni redox, dar a venit și cu toate celelalte lucruri despre
+
+00:02:23.690 --> 00:02:26.620
+care nu ne-am gândit când am instalat.
+
+00:02:26.720 --> 00:02:32.390
+Am primit abonament la stat și toate celelalte metode care au venit cu el.
+
+00:02:32.420 --> 00:02:40.420
+Asta inseamna ca trebuie sa ne batjocoream intreaga lista de metode de stocare cu care Redux vine.
+
+00:02:40.460 --> 00:02:45.930
+Și dacă update-urile redux și adaugă ceva nou în viitor, va trebui să actualizăm și asta.
+
+00:02:46.280 --> 00:02:51.390
+Și din fericire pentru noi există instrumente care deja fac asta pentru tine.
+
+00:02:51.650 --> 00:03:02.810
+De exemplu, există un pachet numit magazin de blocare redux pe care îl puteți folosi pentru a băta cu adevărat acest magazin și
+
+00:03:02.810 --> 00:03:06.320
+au aceste metode adecvate pe el.
+
+00:03:06.320 --> 00:03:08.780
+Și acesta este un pachet NPM pe care îl putem instala.
+
+00:03:08.780 --> 00:03:11.500
+Dar vreau să iau o altă cale.
+
+00:03:11.600 --> 00:03:20.480
+Vreau să iau un traseu de simplitate, pentru că acum privesc la această aplicație dot J. S. fișier Facem multe lucruri
+
+00:03:20.480 --> 00:03:27.890
+și îmi plac teste simple de testare care testează lucruri simple.
+
+00:03:28.130 --> 00:03:35.540
+Și această aplicație care este sincer puțin cam complicată pentru că avem această conexiune, astfel încât nu este
+
+00:03:35.540 --> 00:03:40.050
+tehnic să redăm chiar aplicația pe care o face Canet.
+
+00:03:40.290 --> 00:03:42.270
+Și atunci asta e șobolanul.
+
+00:03:42.810 --> 00:03:50.280
+Permiteți-mi să vă arăt ce vreau să spun dacă mă întorc la aplicația noastră și vă deschid instrumentele de dezvoltare pentru actul
+
+00:03:50.280 --> 00:03:57.510
+de dezvoltare care ar putea fi necesar să descărcați acest fișier și dacă nu aveți deja, văd că aplicația mea este
+
+00:03:57.540 --> 00:03:59.990
+furnizor și apoi conectați la aplicație.
+
+00:04:00.130 --> 00:04:09.620
+Deci, această aplicație ce încercăm de fapt este această componentă Kinect care înfășoară aplicația și numai în interiorul ei.
+
+00:04:09.640 --> 00:04:14.970
+Avem aplicația și apoi parcurgeți caseta de căutare Hetter și așa mai departe și așa mai departe.
+
+00:04:16.430 --> 00:04:17.650
+Să simplificăm acest lucru.
+
+00:04:17.660 --> 00:04:23.910
+De ce nu doar testați aplicația noastră în loc de testare sunt componentele conectate.
+
+00:04:24.560 --> 00:04:33.400
+Și asta este ceea ce aș vrea să fac atunci când testez lucrurile în loc să încerc să testez o componentă cu adevărat complicată.
+
+00:04:33.490 --> 00:04:39.640
+Mă întreb că această componentă este la fel de simplă în care poate exista lucruri mai bune pe care le pot
+
+00:04:40.090 --> 00:04:42.760
+face cu codul pentru ao face mai probabilă.
+
+00:04:42.850 --> 00:04:45.800
+Care de obicei rezultă într-un cod mai bun în general.
+
+00:04:55.350 --> 00:05:00.010
+Deci, privirea la această componentă a aplicației are două lucruri principale.
+
+00:05:00.060 --> 00:05:04.430
+Unul se conectează la magazinul cutiei de citire.
+
+00:05:04.530 --> 00:05:08.100
+Prin toate aceste hărți spun două recuzită și hartă expediate la recuzită.
+
+00:05:08.310 --> 00:05:11.900
+Dar, de asemenea, face o tona de chiuvete.
+
+00:05:11.940 --> 00:05:14.550
+Deci, să separăm acest lucru.
+
+00:05:14.550 --> 00:05:23.220
+Am de gând să creez un nou fișier component și să-l numesc pagina principală digests astfel încât să vă puteți gândi la aceasta ca pagina de
+
+00:05:23.220 --> 00:05:25.020
+start a prietenilor nostri Robur
+
+00:05:28.260 --> 00:05:32.910
+sus și acum această pagină principală va avea, de asemenea, un fișier de testare.
+
+00:05:32.970 --> 00:05:35.400
+Așa că am să mut aplicația.
+
+00:05:35.600 --> 00:05:45.400
+Testat da să fie efectiv redenumit la pagina principală și a pus-o în folderul componente.
+
+00:05:48.210 --> 00:05:48.920
+In regula.
+
+00:05:48.990 --> 00:05:53.500
+Testele noastre nu reușesc, dar asta pentru că ne-am dezamăgit numele.
+
+00:05:53.510 --> 00:05:55.660
+Deci, hai să facem acest pas cu pas.
+
+00:05:55.850 --> 00:06:03.110
+Să facem ca apt Rajai fundul să fie îngrijorat de simpla conectare și primirea doar primirea
+
+00:06:03.110 --> 00:06:12.360
+recuzită din magazin și de a face pagina noastră principală să fie preocupat de redare toate aceste lucruri pagina de start.
+
+00:06:12.410 --> 00:06:14.030
+Deci, cum putem face asta?
+
+00:06:14.570 --> 00:06:21.550
+Ei bine, primul pas este să copiez întregul fișier de aplicații dodgiest spre pagina noastră principală.
+
+00:06:21.770 --> 00:06:23.030
+Copiați-l și lipiți-l.
+
+00:06:23.240 --> 00:06:29.190
+Și chiar de pe lilieci elimina toate lucrurile redux, pentru că nu am nevoie de nimic redux.
+
+00:06:29.240 --> 00:06:33.440
+Aceasta va fi o componentă simplă care nu este conectată la un magazin redux.
+
+00:06:33.620 --> 00:06:43.160
+Deci am de gând să înlătură Conectul Am de gând să eliminați orice acțiune și să părăsiți componentele noastre.
+
+00:06:43.160 --> 00:06:54.210
+Voi elimina starea hărții la expedierea hărții propului la propul și o voi redenumi la componenta principală a paginii
+
+00:06:54.600 --> 00:06:59.850
+și unde nu ai o cădere CSSA pentru ea.
+
+00:07:00.040 --> 00:07:04.510
+Sau poate că ar trebui să mutăm această aplicație mai departe la pagina noastră principală.
+
+00:07:04.520 --> 00:07:06.980
+Deci, pentru moment, voi crea ceva rapid.
+
+00:07:07.100 --> 00:07:15.410
+Voi spune o nouă pagină principală a fișierului Cs și de modul în care începeți să vedeți de ce am putea dori să avem
+
+00:07:15.410 --> 00:07:18.950
+o structură de dosare mai bună decât fișierele fișierelor.
+
+00:07:19.010 --> 00:07:24.490
+S-ar putea să dorim să avem componente și un dosar component pentru fiecare dintre aceste componente.
+
+00:07:24.890 --> 00:07:30.280
+Și voi doar să copiați și să lipiți aici și să vă întoarceți la pagina noastră principală.
+
+00:07:30.290 --> 00:07:33.380
+Acum avem acest DSS,
+
+00:07:36.170 --> 00:07:42.910
+avem constructorul și nu știu de ce avem conta aici.
+
+00:07:42.990 --> 00:07:45.670
+Nu cred că avem nevoie de numărătoarea care o folosește deloc.
+
+00:07:45.750 --> 00:07:48.210
+Deci, să eliminăm asta.
+
+00:07:48.480 --> 00:07:50.460
+Așa că nu avem
+
+00:07:53.560 --> 00:08:00.430
+nevoie de constructor și din nou în pagina noastră principală nu există niciun constructor pe care
+
+00:08:00.430 --> 00:08:09.760
+îl avem Componenta nu a fost montată deoarece în timp ce vrem să cerem roboți și avem randul nostru regulat dar
+
+00:08:09.760 --> 00:08:16.090
+nu mai avem legătura noastră suntem doar redând pur și simplu pagina noastră principală.
+
+00:08:16.150 --> 00:08:16.690
+In regula.
+
+00:08:16.690 --> 00:08:26.310
+Deci am eliminat acest lucru și am făcut acest lucru într-o aplicație simplă, care încă are componenta montată, dar asta e doar propulul
+
+00:08:26.430 --> 00:08:29.360
+pe care l-am primit de la magazin.
+
+00:08:30.910 --> 00:08:31.540
+In regula.
+
+00:08:31.570 --> 00:08:33.550
+Deci, hai să mergem în APTA.
+
+00:08:33.580 --> 00:08:39.900
+Da și acum eliminați partea superioară, pentru că nu mai avem nevoie de asta, sau nu avem nevoie de partea
+
+00:08:39.900 --> 00:08:43.260
+de randare de care avem nevoie doar de componenta conectată.
+
+00:08:43.290 --> 00:08:45.240
+Deci, din nou aici.
+
+00:08:45.240 --> 00:08:54.920
+Acum, pentru redarea noastră tot ce trebuie să facem este să îndepărtați bine toate aceste lucruri se simte frumos eliminarea chestii și de a
+
+00:08:54.920 --> 00:09:01.940
+face fișiere mai mici și tot ce avem nevoie este componenta principală de pagină pentru a face.
+
+00:09:02.180 --> 00:09:02.960
+Dreapta.
+
+00:09:03.740 --> 00:09:12.220
+Deci, eliminăm toate aceste importuri de componente și doar importăm din nou componenta principală a
+
+00:09:15.550 --> 00:09:16.200
+paginii.
+
+00:09:16.310 --> 00:09:17.780
+Un alt motiv pentru care îmi place să reacționez.
+
+00:09:17.810 --> 00:09:21.110
+Totul este atât de frumos și simplu de a muta componentele în jur.
+
+00:09:21.200 --> 00:09:24.310
+Dar uite ce am făcut foarte repede.
+
+00:09:24.470 --> 00:09:31.640
+Oh, cu siguranță nu avem nevoie de componentă pentru montare deoarece facem asta în pagina principală.
+
+00:09:31.640 --> 00:09:36.410
+Așadar, arătați cât de mică este faptul că această componentă a ajuns cât de drăguță este asta.
+
+00:09:37.380 --> 00:09:43.220
+Și acum această componentă de aplicație tocmai a devenit o componentă super-simplă a containerului.
+
+00:09:43.380 --> 00:09:50.850
+Și aceasta este o decizie de arhitectură pe care chiar îmi place cu adevărat, pentru că nu avem nevoie chiar să testăm
+
+00:09:51.090 --> 00:09:52.020
+acest lucru.
+
+00:09:52.050 --> 00:09:53.590
+Putem sa.
+
+00:09:53.710 --> 00:10:03.130
+Pentru că tot ceea ce facem este să folosim funcția de conectare pentru a atrage statul și a expedia
+
+00:10:03.190 --> 00:10:05.240
+evenimente din magazinul Redock.
+
+00:10:05.260 --> 00:10:10.480
+Deci, chiar și scrierea de teste pentru acest lucru, deși am putea face acest lucru, pur și simplu testează
+
+00:10:10.720 --> 00:10:11.290
+funcționalitatea redux.
+
+00:10:11.290 --> 00:10:17.500
+Și asta e ceva ce biblioteca redux face deja deja teste și oameni care lucrează pentru a se
+
+00:10:17.500 --> 00:10:19.110
+asigura că funcționează corect.
+
+00:10:20.230 --> 00:10:25.290
+Această componentă devine acum ceva atât de simplu, încât este posibil să nu mai fie nevoie să încercăm.
+
+00:10:25.810 --> 00:10:33.550
+Și ne-am mutat toată logica pe care o putem testa pe componenta principală a paginii și este ceva cu adevărat important să
+
+00:10:33.760 --> 00:10:34.790
+ne gândim.
+
+00:10:34.810 --> 00:10:39.400
+Pentru a încerca întotdeauna să faceți testele dvs. ușor.
+
+00:10:39.580 --> 00:10:44.620
+Dacă nu sunt atunci, poate că există ceva în codul dvs. încât să puteți simplifica Ngan să vedeți cât de
+
+00:10:44.620 --> 00:10:45.880
+elegant este o soluție.
+
+00:10:46.030 --> 00:10:51.770
+Ultimul lucru pe care chiar ne dorim să-l facem este să trecem pe jos aceste elemente de recuzită până la pagina principală.
+
+00:10:52.180 --> 00:11:05.240
+Pentru a face acest lucru, putem folosi doar unele distrugeri sau împrăștieri de obiecte spun acest punct de recuzită.
+
+00:11:05.410 --> 00:11:10.210
+Să vedem dacă și de fapt nu am testat acest cod, așa că asigurați-vă că funcționează încă.
+
+00:11:10.300 --> 00:11:11.890
+Să începem NPM.
+
+00:11:11.920 --> 00:11:14.920
+Sigur că e ceva ce am pierdut.
+
+00:11:15.990 --> 00:11:19.490
+Să închidem asta.
+
+00:11:19.540 --> 00:11:26.840
+În regulă, avem metoda dvs. de randare ar trebui să aibă o declarație de întoarcere și trebuie să ne întoarcem de fapt
+
+00:11:26.900 --> 00:11:31.350
+din această declarație de randare ca o prostie a noastră revenire Sless.
+
+00:11:34.720 --> 00:11:41.870
+Și avem o problemă cu CSSA și asta pentru că nu poate găsi fontul Segev.
+
+00:11:41.930 --> 00:11:43.610
+Deci asta e un remediu simplu.
+
+00:11:43.700 --> 00:11:51.110
+Mergem la fântână și facem pentru că fontul Segev este în recipiente.
+
+00:11:51.320 --> 00:11:59.340
+Putem pur și simplu să facem containere pentru moment, chiar dacă probabil că vrem să mutăm acest lucru acum
+
+00:11:59.340 --> 00:12:02.360
+pentru scopuri demonstrative care sunt bine.
+
+00:12:02.400 --> 00:12:03.600
+Totul trece.
+
+00:12:03.600 --> 00:12:07.380
+Dacă mă întorc, văd că sunt alte câteva erori.
+
+00:12:07.530 --> 00:12:17.800
+Avem contele lui Noal și trecem starea de numărare aici în componenta antetului.
+
+00:12:18.120 --> 00:12:26.460
+Dar dacă vă amintiți componenta noastră Hetter are contra-bateria care are de fapt statul său propriu.
+
+00:12:26.470 --> 00:12:29.770
+Se pare că facem acest lucru fără nici un motiv.
+
+00:12:30.130 --> 00:12:36.460
+Deci, haideți să eliminăm asta din momentul în care este din pagina principală.
+
+00:12:36.530 --> 00:12:37.120
+Da.
+
+00:12:37.190 --> 00:12:42.310
+Așa că putem să eliminăm această salvare.
+
+00:12:42.390 --> 00:12:42.840
+In regula.
+
+00:12:42.840 --> 00:12:45.890
+Totul funcționează, asigurați-vă că funcționează căutările noastre.
+
+00:12:46.020 --> 00:12:46.430
+Da.
+
+00:12:46.470 --> 00:12:49.200
+Totul este numărul de lucru este de lucru.
+
+00:12:49.200 --> 00:13:00.410
+Dacă îmi deschid instrumentele de dezvoltare a actului de re-act nu nu redux dorim să reactăm că avem furnizorul pe care avem
+
+00:13:00.410 --> 00:13:01.500
+aplicația conectată.
+
+00:13:01.550 --> 00:13:02.510
+Dar verificați asta.
+
+00:13:03.700 --> 00:13:14.210
+Acum avem pagina principală pe care o putem testa și această pagină principală este acum mai accesibilă pentru noi folosind enzime
+
+00:13:14.210 --> 00:13:15.620
+decât doar.
+
+00:13:15.790 --> 00:13:17.300
+Deci, să scriem câteva teste aici.
+
+00:13:19.270 --> 00:13:23.130
+Vom merge la pagina principală și vom face teste.
+
+00:13:23.200 --> 00:13:31.890
+În regulă, să schimbăm mai întâi numele pe pagina principală pe care o testăm acum și pentru că mă simt ca și cum
+
+00:13:31.890 --> 00:13:38.370
+vom face multe și vom trece în picioare niște elemente de recuzită. Există un truc mic
+
+00:13:38.430 --> 00:13:46.220
+pe care să-l putem face să spunem că 'va avea o mulțime de ambalaj și voi elimina acest lucru deocamdată.
+
+00:13:48.440 --> 00:13:55.670
+Și putem folosi ceva chemat înainte ca fiecare să vină din nou cu cadre de testare și alte cadre de testare, iar
+
+00:13:55.760 --> 00:14:00.400
+asta trebuie să fie sigur că rulează înainte de fiecare dintre testele noastre.
+
+00:14:00.410 --> 00:14:08.300
+Acum, aici ne dăm o funcție și în interiorul acestei funcții putem spune ce ar trebui să fie înainte de
+
+00:14:08.300 --> 00:14:10.100
+fiecare dintre testele noastre.
+
+00:14:10.100 --> 00:14:15.460
+În cazul nostru, vrem să frământăm propulsoșii și aceste elemente de recuzită.
+
+00:14:15.460 --> 00:14:17.030
+Unde vom avea.
+
+00:14:17.170 --> 00:14:28.910
+Vom avea roboții la cerere care, dacă vă amintiți, să închidem acest lucru și să închidem acest lucru, deci este
+
+00:14:28.910 --> 00:14:31.020
+puțin mai curat.
+
+00:14:31.240 --> 00:14:37.300
+Dacă vă amintiți că pagina principală are funcția robotului la cerere.
+
+00:14:37.300 --> 00:14:43.930
+Deci nu putem face doar funcția justă pe care am văzut-o mai înainte cu batjocura.
+
+00:14:43.930 --> 00:14:46.780
+Deci, noi doar spunem că aceasta este doar această funcție simplă.
+
+00:14:46.780 --> 00:14:49.520
+Nu vă faceți griji cu privire la efectuarea apelului API.
+
+00:14:49.720 --> 00:14:52.260
+Vom spune că roboții sunt o matrice goală.
+
+00:14:54.410 --> 00:15:08.230
+Câmpul de căutare va fi un șir gol și acesta este în așteptare va fi setat la false.
+
+00:15:08.320 --> 00:15:15.850
+Și apoi, în sfârșit, pentru că avem acest lucru pentru fiecare sau înainte
+
+00:15:15.850 --> 00:15:19.420
+de fiecare. Vom spune că rapperul
+
+00:15:22.120 --> 00:15:30.190
+va egala pagina principală redusă și pagina principală din nou, exact ca în cazul nostru.
+
+00:15:30.280 --> 00:15:35.400
+Da, tocmai am primit posturile.
+
+00:15:35.640 --> 00:15:42.680
+Aceasta este recuzita.
+
+00:15:42.720 --> 00:15:47.490
+Deci, aceasta va primi toate aceste proprietăți exact așa cum am făcut în apt.
+
+00:15:47.610 --> 00:15:48.260
+Da.
+
+00:15:48.360 --> 00:15:49.220
+Vezi ce fildeș aici.
+
+00:15:54.040 --> 00:15:54.380
+In regula.
+
+00:15:54.420 --> 00:16:02.770
+Deci, să spunem dacă veți reveni la testul NPM și avem câteva erori, deoarece nu este semicolon care
+
+00:16:02.770 --> 00:16:04.240
+este virgulă.
+
+00:16:04.240 --> 00:16:12.110
+Arcul meu nu are virgulă și avem o eroare spunând că suitele noastre de testare trebuie să conțină un test, pentru că nu
+
+00:16:12.170 --> 00:16:13.490
+l-am citit încă.
+
+00:16:13.850 --> 00:16:16.580
+Tocmai am scris înainte de fiecare.
+
+00:16:16.590 --> 00:16:18.330
+Acum, să începem cu elementele de bază.
+
+00:16:18.350 --> 00:16:31.530
+Aceasta face ca pagina principală să nu se prăbușească și vom spune că, în timp ce putem folosi testarea instantanee a instrumentului nostru de testare preferat, putem spune să
+
+00:16:31.830 --> 00:16:38.820
+ne așteptăm la înfășurare, deoarece acum avem acces la acest pachet, care este redus,
+
+00:16:38.820 --> 00:16:47.780
+pentru că înainte ca fiecare să meargă înainte de acest lucru test și voi spune să se potrivească cu instantaneu.
+
+00:16:48.270 --> 00:16:54.750
+Îmi place cât de ușor este să salvăm.
+
+00:16:54.910 --> 00:16:57.270
+Și ce am făcut aici.
+
+00:16:57.490 --> 00:16:57.860
+Wow.
+
+00:16:57.910 --> 00:17:00.290
+Sunt virgulă scrisă de nenorocire.
+
+00:17:01.600 --> 00:17:03.090
+Bine, te duci acolo.
+
+00:17:03.160 --> 00:17:07.650
+Trebuie să vă râdeți chiar acum cu toate virgulele pe care mi le lipsește când cod.
+
+00:17:07.660 --> 00:17:10.790
+Dar hei suntem cu toții om aici, toți greșim.
+
+00:17:10.810 --> 00:17:16.100
+Nu cred că există vreodată un dezvoltator perfect care să nu facă greșeli în timp ce codifică.
+
+00:17:16.210 --> 00:17:16.730
+Dacă există.
+
+00:17:16.730 --> 00:17:19.030
+Sunt foarte gelos de ei.
+
+00:17:19.030 --> 00:17:19.360
+In regula.
+
+00:17:19.390 --> 00:17:24.140
+Să încercăm altceva să spunem că vreau să fiu sigur că filtrează roboții corect.
+
+00:17:24.160 --> 00:17:28.640
+Așa că o să spun corect robotii filtrului.
+
+00:17:29.570 --> 00:17:42.770
+Și voi spune că aici ne așteptăm pe rapper și cum facem asta.
+
+00:17:42.800 --> 00:17:44.450
+Dacă mergem la pagina principală da J. S.
+
+00:17:47.240 --> 00:17:55.990
+avem roboți de filtrare aici, dar asta se întâmplă în funcția de redare.
+
+00:17:56.030 --> 00:18:07.500
+Deci, hai sa curatam asta si sa spunem ca avem robotii de filtrare si ca acest roboti de filtru vor primi
+
+00:18:07.520 --> 00:18:13.000
+robotii si aproape o va face sau Nera functioneaza si
+
+00:18:18.590 --> 00:18:21.020
+putem doar sa luam aceasta
+
+00:18:25.010 --> 00:18:26.480
+si sa
+
+00:18:29.770 --> 00:18:32.170
+intoarcem doar robotii filtrati.
+
+00:18:32.170 --> 00:18:40.870
+Vom avea nevoie de câmpul de căutare aici și vom spune că acest câmp va căuta câmpul de căutare cu litere mici.
+
+00:18:41.060 --> 00:18:51.610
+Și acum, aici putem spune că roboții de filtrare provin de la acest robot filtru punct.
+
+00:18:51.620 --> 00:18:53.330
+Să ne asigurăm că asta se întâmplă.
+
+00:18:53.330 --> 00:18:55.810
+Mă voi întoarce și voi începe
+
+00:18:59.740 --> 00:19:03.420
+NPM și se pare că am făcut o greșeală undeva aici.
+
+00:19:03.730 --> 00:19:10.840
+Trebuie să trecem de fapt robotul însuși sau să spunem că o să primească roboții sau chiar putem
+
+00:19:10.840 --> 00:19:17.490
+face asta aici pentru analiză, lăsați-o așa și asigurați-vă că numele nostru este corect aici.
+
+00:19:17.530 --> 00:19:19.540
+Filtre roboți Să revenim.
+
+00:19:20.800 --> 00:19:22.290
+În regulă, încă funcționează.
+
+00:19:23.070 --> 00:19:30.400
+Deci, acum că am făcut acest lucru puțin mai curat în funcția noastră de redare și hai să eliminăm
+
+00:19:30.400 --> 00:19:36.430
+câmpul de căutare de la veselia voastră cum să pot testa de fapt acest lucru.
+
+00:19:36.430 --> 00:19:47.990
+Acum putem doar să testați această metodă pe clasa principală a paginii și acum putem folosi proprietatea instanței care
+
+00:19:49.050 --> 00:19:51.600
+vine cu enzima.
+
+00:19:51.990 --> 00:19:58.530
+Și acum, această instanță ne va oferi acces la toate metodele pe care pagina principală le include, inclusiv roboți
+
+00:19:58.530 --> 00:19:59.220
+de directoare.
+
+00:19:59.430 --> 00:20:10.470
+Deci, să spunem în testul nostru că voi muta acest lucru în jur. Voi spune că roboții Dot filtru vor rula roboți de filtrare
+
+00:20:10.500 --> 00:20:13.470
+cu să spunem o matrice goală.
+
+00:20:15.260 --> 00:20:20.660
+Și ne așteptăm ca aceasta să fie egală cu o matrice goală.
+
+00:20:20.750 --> 00:20:31.020
+Deci, să salvăm și să executăm testul NPM sau testul NPM.
+
+00:20:31.260 --> 00:20:32.760
+Avem un test eșuat.
+
+00:20:35.220 --> 00:20:38.040
+Și am făcut o mică greșeală aici.
+
+00:20:38.130 --> 00:20:43.010
+Imaginea ar trebui să fie în jurul întregului lucru.
+
+00:20:43.020 --> 00:20:48.320
+Vrem să ne așteptăm ca roboții de filtru să fie de acord și am vrut să egalm matricea goală.
+
+00:20:48.390 --> 00:20:51.130
+Să salvăm rănile.
+
+00:20:51.150 --> 00:20:52.560
+Totul trece.
+
+00:20:52.830 --> 00:20:59.460
+Dar să examinăm alte cazuri, deoarece în timp ce acest lucru este cel mai probabil nu va
+
+00:20:59.550 --> 00:21:04.860
+fi cazul, să spunem că de data aceasta în această declarație numai dacă primim
+
+00:21:04.860 --> 00:21:13.020
+fiecare înaintea fiecăruia și avem acces la ambalaj de data asta dorim să avem un caz special în cazul în care
+
+00:21:13.020 --> 00:21:16.760
+recuzita macheta va avea un câmp de căutare a.
+
+00:21:16.960 --> 00:21:34.670
+Și aici avem un robot care este să spunem Id trei cu numele de John și e-mail Wolf ameliorarea numele de utilizator din
+
+00:21:34.670 --> 00:21:41.080
+acesta pentru acum John la gmail dot com.
+
+00:21:41.240 --> 00:21:45.510
+Să salvăm acest lucru și să creăm o nouă declarație xpect.
+
+00:21:45.510 --> 00:22:02.240
+Acum și doar pentru acest test vom folosi un ambalaj diferit atât de leneș pentru a spune o învelitoare cu o știu că nu este cea mai curată, dar încearcă să ilustreze un
+
+00:22:02.240 --> 00:22:06.220
+punct aici, așa că poartă cu mine.
+
+00:22:06.320 --> 00:22:08.500
+Deci, hai să facem recuzită.
+
+00:22:09.590 --> 00:22:11.480
+Și două elemente de recuzită.
+
+00:22:11.720 --> 00:22:14.120
+Și acesta va fi și un rapper.
+
+00:22:14.120 --> 00:22:24.870
+Deci, să spunem dacă rapperul să salveze și să evalueze corect roboții de filtrare și știi ce tocmai mi-am dat seama că cred
+
+00:22:24.930 --> 00:22:33.900
+că o modalitate mai bună pentru noi de a face roboți de filtrare pentru cel puțin acum este că
+
+00:22:33.900 --> 00:22:39.380
+putem uita de recuzită și putem face acest punct roboții propului.
+
+00:22:41.980 --> 00:22:47.480
+Deci, întorcându-ne aici, putem elimina acum matricele, așa că pare puțin mai curată.
+
+00:22:48.840 --> 00:22:52.710
+Și să facem acest test.
+
+00:22:52.710 --> 00:22:58.860
+Avem un pic de eroare aici pentru că trebuie să facem și wrapperul Konst, deoarece Rapparee nu este definit.
+
+00:22:58.860 --> 00:23:05.480
+Amintiți-vă că trebuie să o definim și testele noastre trec, deoarece câmpul nostru de căutare este a.
+
+00:23:05.540 --> 00:23:09.410
+Și avem doar roboți cu Ioan și Ioan Ajimobi.
+
+00:23:09.620 --> 00:23:19.300
+Dar dacă am schimbat acest lucru la John O-ho, acesta nu reușește, deoarece ne-am aștepta să egim roboții
+
+00:23:19.300 --> 00:23:21.070
+reali cu John.
+
+00:23:21.220 --> 00:23:31.140
+Deocamdată putem spune că ne așteptăm ca această matrice să fie returnată și voi elimina prima.
+
+00:23:31.660 --> 00:23:32.260
+Să
+
+00:23:35.910 --> 00:23:37.820
+salvăm du-te și să ai în plus.
+
+00:23:38.000 --> 00:23:39.130
+Blocuri paranteze aici.
+
+00:23:39.130 --> 00:23:40.000
+Din nou, acest lucru este bun.
+
+00:23:40.000 --> 00:23:42.720
+Testele noastre nu reușesc și ne străduim să le transmitem.
+
+00:23:43.030 --> 00:23:47.670
+În regulă și acum știm că robotul filtrului funcționează corect.

@@ -1,0 +1,451 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:08.430
+Bine ați venit înapoi, am învățat puțin despre testare, dar despre cum să testați componenta noastră
+
+00:00:09.120 --> 00:00:12.580
+re-act sau să reactăm prietenii noștri robo.
+
+00:00:12.800 --> 00:00:20.330
+Dacă aruncăm o privire asupra dosarului nostru de aici, am prieteni PWI robo, pentru că acum este
+
+00:00:20.330 --> 00:00:30.010
+o aplicație Web progresivă și pe baza a ceea ce am învățat am putea merge la dosarul de acțiuni Constans folderul poate
+
+00:00:30.650 --> 00:00:34.220
+că există dosare de reduceri dosar cred.
+
+00:00:34.220 --> 00:00:41.370
+Și pentru că acestea sunt doar funcții simple, am putea ști cum să le testați.
+
+00:00:41.900 --> 00:00:50.810
+Dar singurul lucru pe care nu l-am discutat este cum să testam aceste funcții care sunt componentele sale Riak.
+
+00:00:50.810 --> 00:00:54.000
+Vreau să spun ce facem de fapt.
+
+00:00:54.290 --> 00:01:00.690
+Și există modalități pe care le putem da seama pentru a testa acest lucru prin metodele pe care le-am învățat până acum.
+
+00:01:01.460 --> 00:01:08.780
+Dar există o mare bibliotecă care simplifică lucrurile pentru noi și asta este enzima.
+
+00:01:09.150 --> 00:01:12.750
+Și aceasta este o bibliotecă de Air B și B.
+
+00:01:12.750 --> 00:01:14.020
+Este destul de standard.
+
+00:01:14.040 --> 00:01:22.220
+Și reacția comunității, dacă doriți să vă testați componentele, atunci sunteți cel mai probabil să folosiți enzima o enzimă este
+
+00:01:22.940 --> 00:01:32.240
+din nou un instrument care ne permite să spunem hei în testele noastre doar face ca această componentă a mașinii și enzima ne
+
+00:01:32.240 --> 00:01:35.900
+va da o tonă de metode de testare.
+
+00:01:36.050 --> 00:01:41.200
+Hey a făcut-o pe div Brender a făcut imaginea lui Brandur.
+
+00:01:41.360 --> 00:01:46.100
+Numele și adresa de e-mail au fost redate.
+
+00:01:46.290 --> 00:01:52.950
+Deci, în acest film, lăsați să instalați enzime și să aruncați o privire la ceea ce ne oferă.
+
+00:01:53.020 --> 00:01:58.810
+Acum au o documentație excelentă aici și puteți vedea că pe baza versiunii noastre Riak au lucruri
+
+00:01:58.810 --> 00:02:01.200
+diferite pe care trebuie să le instalăm.
+
+00:02:01.360 --> 00:02:07.200
+Și din moment ce folosim reacția care este mai mare decât 16 dacă aruncăm o privire la
+
+00:02:10.520 --> 00:02:14.500
+ambalajul Jaison, vedem că folosim re-act șaisprezece punct al doilea.
+
+00:02:14.690 --> 00:02:19.820
+S-ar putea să folosiți o versiune mai mare de reacție, dar cel mai probabil veți folosi o versiune
+
+00:02:19.820 --> 00:02:26.520
+care este mai mare decât acest lucru și în acest caz ne oferă informații destul de bune despre ce trebuie să facem și ce trebuie
+
+00:02:26.520 --> 00:02:27.200
+să instalăm.
+
+00:02:27.210 --> 00:02:33.220
+Așadar, trebuie să instalăm biblioteca de enzime, precum și acest adaptor pentru enzime re-act 16.
+
+00:02:33.360 --> 00:02:41.880
+Deci, doar un adaptor special de care avem nevoie pentru această versiune mai nouă de
+
+00:02:42.450 --> 00:02:55.490
+reacție skyn mergeți mai departe și copiați acest lucru și veți vedea că facem liniuță dash save Dev, deoarece este o dependență de moarte.
+
+00:02:55.500 --> 00:02:56.310
+In regula.
+
+00:02:56.550 --> 00:03:03.310
+Avem enzime instalate cu adaptorul de enzime.
+
+00:03:03.330 --> 00:03:09.450
+Acum, dacă treceți prin documentația lor, trebuie să facem o pregătire rapidă pentru ca noi
+
+00:03:09.450 --> 00:03:11.510
+să putem folosi enzima.
+
+00:03:11.540 --> 00:03:15.260
+Și din nou, acest lucru se datorează faptului că folosim o nouă versiune de reacție.
+
+00:03:15.260 --> 00:03:22.340
+Și am vrut să țin cont că nu este chiar dificil să mă vedeți dacă am aceste cazuri speciale de
+
+00:03:22.340 --> 00:03:25.540
+biblioteci și trebuie să facem un fel de pregătire.
+
+00:03:25.580 --> 00:03:30.890
+De cele mai multe ori, toate aceste biblioteci au documentație pentru a începe.
+
+00:03:30.890 --> 00:03:35.600
+Vreau să spun că scopul lor este ca oamenii să le folosească cât mai mult posibil,
+
+00:03:35.600 --> 00:03:38.550
+astfel încât ei să vă ușureze înțelegerea și stabilirea enzimei.
+
+00:03:38.570 --> 00:03:47.410
+Ceea ce trebuie să facem este să creăm ceva numit setări de teste care să facă doar acest lucru.
+
+00:03:47.520 --> 00:03:54.580
+Deci, în dosarul nostru sursă putem spune că un nou fișier va conduce împreună testele.
+
+00:03:54.640 --> 00:04:07.040
+J. S. iar aici vom importa ceva numit configurare din enzimă.
+
+00:04:07.140 --> 00:04:12.250
+Și din nou, toate acestea pot fi găsite în documentația lor, astfel încât să nu te intimideze de asta.
+
+00:04:12.270 --> 00:04:18.080
+N-am avut nici o idee cum să fac asta până când le-am citit documentația doar pe pagina lor de introducere vă
+
+00:04:18.090 --> 00:04:20.100
+voi arăta cum să faceți asta.
+
+00:04:20.160 --> 00:04:27.400
+Și apoi, în sfârșit, dorim să importăm și ceva numit adaptor.
+
+00:04:27.590 --> 00:04:28.680
+Și dacă nu pot scrie.
+
+00:04:28.700 --> 00:04:32.360
+Așa v-ați enactat adaptorul din adaptorul
+
+00:04:34.600 --> 00:04:38.170
+de enzime din bibliotecă.
+
+00:04:38.210 --> 00:04:42.210
+Acum, de asemenea, am instalat.
+
+00:04:42.380 --> 00:04:53.250
+Și apoi, în final, avem nevoie doar de o singură linie aici și asta înseamnă să configurați fila adaptorului cu un nou adaptor dacă doriți
+
+00:04:53.760 --> 00:04:57.720
+cu adevărat să știți ce face acest lucru.
+
+00:04:57.870 --> 00:05:05.460
+Poate trece prin codarea lor pe hub, dar doar uitandu-ne la numele pe care il vom spune ca este doar configurarea
+
+00:05:05.640 --> 00:05:07.340
+dreptului nostru de testare.
+
+00:05:07.350 --> 00:05:10.290
+Deci asta ne-a stabilit ce putem face.
+
+00:05:10.320 --> 00:05:14.820
+Cum putem testa efectiv componentele noastre acum cu enzime
+
+00:05:17.660 --> 00:05:23.930
+Enzyte ne oferă în principal doar trei lucruri pe care le putem folosi.
+
+00:05:24.050 --> 00:05:25.590
+Lasă-mă să-ți arăt ce sunt.
+
+00:05:25.610 --> 00:05:35.350
+Una este ceva numit Shallow celălalt Vrei ceva numit Mount și apoi al treilea o face.
+
+00:05:35.460 --> 00:05:43.440
+Și acestea sunt funcții pe care le putem folosi de la bibliotecile de terminale pe care tocmai le-am folosit și de la acestea am
+
+00:05:43.470 --> 00:05:50.310
+reușit să facem ceva cu adevărat interesant cu componentele pe care le vedeți într-o lume ideală pentru a face un
+
+00:05:50.310 --> 00:05:51.010
+test.
+
+00:05:51.180 --> 00:05:55.950
+Putem face totul și să ne asigurăm că fiecare viraj.
+
+00:05:55.950 --> 00:05:57.120
+Deci, ce ne-am așteptat.
+
+00:05:57.120 --> 00:06:04.290
+După cum am spus mai devreme, pentru a ne asigura că vom întoarce un div, probabil, cu aceste tipuri de nume de
+
+00:06:04.290 --> 00:06:09.570
+clasă, vom returna, de asemenea, un alt DB în interiorul acestuia cu nume și e-mail.
+
+00:06:09.590 --> 00:06:15.980
+Deci, la fel ca un dom, trebuie să ne dăm seama dacă face exact ceea ce are nevoie
+
+00:06:15.980 --> 00:06:24.720
+și doar dacă ne uităm la nume, se pare că enzima ne oferă o modalitate de a face MT și de a umple această componentă.
+
+00:06:24.740 --> 00:06:27.100
+Deci, ce au însemnat toate acestea.
+
+00:06:28.550 --> 00:06:30.730
+Și o să vă dau un heads-up.
+
+00:06:30.740 --> 00:06:37.150
+Cel mai probabil, 90% din timpul pe care doriți să îl utilizați este puțin superficial și este ceea ce vom folosi
+
+00:06:37.250 --> 00:06:38.190
+în acest curs.
+
+00:06:38.240 --> 00:06:43.400
+Există unele cazuri pe care ați putea dori să utilizați mount și render, dar trebuie doar să rețineți că
+
+00:06:43.700 --> 00:06:48.720
+cu enzime suntem destul de mult doar folosind acest lucru care face foarte foarte frumos și simplu.
+
+00:06:48.860 --> 00:06:56.330
+Primul lucru pe care îl folosim cel mai mult Ceea ce face puțin mai bine este să creezi un fișier
+
+00:06:56.330 --> 00:07:01.490
+de testare aici pentru că nu vom importa enzimă în componenta noastră reală.
+
+00:07:01.490 --> 00:07:08.420
+Deci, în cadrul fișierelor de componente, voi spune doar un nou test de carduri de fișiere.
+
+00:07:08.570 --> 00:07:12.690
+Și acum să importăm enzima aici.
+
+00:07:15.660 --> 00:07:18.930
+O importanță a lui Zola în componenta noastră reală.
+
+00:07:19.090 --> 00:07:22.330
+Deci, din nou, vom importa
+
+00:07:25.600 --> 00:07:26.530
+carte
+
+00:07:29.450 --> 00:07:33.650
+de la hard dodgiest via Și acum să
+
+00:07:36.490 --> 00:07:49.590
+ne distrăm doar să vedem ce se întâmplă dacă fac cartela superioară sau componenta cardului și să consolez doar conectați acest lucru.
+
+00:07:49.740 --> 00:07:52.010
+Acum, cum să procedăm de fapt acest test.
+
+00:07:52.320 --> 00:08:00.210
+Ei bine, dacă mergem la Jaison ambalate avem un jest instalat, dar amintiți-vă pentru că am fost folosind
+
+00:08:00.210 --> 00:08:07.620
+creați re-acționa acest lucru vine construit în script-uri Riak are toate lucrurile stabilite pentru noi.
+
+00:08:07.920 --> 00:08:10.530
+Deci, poate pur și simplu să ruleze testul
+
+00:08:16.140 --> 00:08:20.200
+NPM și avem un pic de îngust aici, spunând că re-act nu este definită.
+
+00:08:21.020 --> 00:08:29.390
+Asta pentru că amintiți-vă că folosim GSX aici, așa că avem nevoie de o modalitate de a refuza sexul
+
+00:08:29.390 --> 00:08:35.510
+și dacă vă amintiți cu orice componentă, întotdeauna importăm reactarea din pachetul re-act.
+
+00:08:38.160 --> 00:08:38.450
+In regula.
+
+00:08:38.490 --> 00:08:44.680
+Se spune că suita noastră de testare trebuie să conțină cel puțin un test pentru că nu încercăm nimic.
+
+00:08:44.820 --> 00:08:51.500
+Dar, în partea de jos, vedem că avem o învelitoare superficială de lungime 1.
+
+00:08:51.570 --> 00:08:57.170
+Deci, ce face superficial pur și simplu, executând această sintaxă.
+
+00:08:57.180 --> 00:09:06.370
+Spunem că hei superficial face această componentă a cardului și randarea superficială este utilă, deoarece
+
+00:09:06.370 --> 00:09:09.100
+face doar componenta cardului.
+
+00:09:09.100 --> 00:09:15.790
+Dacă componenta cardului, dintr-un anumit motiv, să presupunem că are o componentă din interiorul său, care este componenta
+
+00:09:17.600 --> 00:09:21.210
+Halo Ei bine, nu va face asta, de asemenea.
+
+00:09:21.320 --> 00:09:29.330
+Este vorba doar de a face superficial doar această componentă și este util pentru că vă constrânge să testați o componentă la
+
+00:09:29.330 --> 00:09:37.220
+un moment dat o unitate ca s-ar putea să vă amintiți un test unitate este ceva care testează doar o unitate la
+
+00:09:37.520 --> 00:09:41.430
+un moment dat o bucată mică la un moment dat.
+
+00:09:41.780 --> 00:09:50.060
+Și acest lucru vă asigură că testele dvs. nu afirmă indirect despre comportamentul unei componente chawl, cum ar fi
+
+00:09:50.240 --> 00:09:51.280
+componenta halo.
+
+00:09:52.230 --> 00:09:56.270
+De aceea, eu sunt un mare fan al suprafeței superficiale care produce o enzimă.
+
+00:09:56.310 --> 00:10:02.740
+În mod ideal, doriți să testați un singur lucru fără a afecta toate componentele copilului.
+
+00:10:04.420 --> 00:10:07.130
+Și acest lucru vă păstrează testele frumoase și curate.
+
+00:10:07.890 --> 00:10:16.810
+Acum, lucrurile interesante, cu puțină adâncime, sunt că vom obține o multitudine de metode pe care le putem folosi acum, de exemplu, pe această componentă
+
+00:10:18.300 --> 00:10:19.090
+de coș.
+
+00:10:19.170 --> 00:10:27.810
+Acum, pentru că facem acest lucru, putem să ne folosim pe vechiul nostru prieten vechi, așteptând să
+
+00:10:30.500 --> 00:10:40.490
+spunem că este vorba despre componenta de mașină redusă și apoi putem spune că este egală cu una egală
+
+00:10:40.490 --> 00:10:46.170
+și o să-i dăm o proprietate pe lungime. IT-ul nostru.
+
+00:10:46.210 --> 00:10:50.560
+BLOCK se
+
+00:10:53.870 --> 00:11:01.430
+așteaptă să facă componenta cardului.
+
+00:11:01.670 --> 00:11:08.310
+Și acum putem să o punem înăuntru să salvăm și să mergem acolo.
+
+00:11:08.350 --> 00:11:15.970
+Avem un test care trece și acest lucru arată că bine componentul mașinii atunci când o facem că o
+
+00:11:15.970 --> 00:11:18.870
+să facă efectiv ceva la unul egal.
+
+00:11:18.880 --> 00:11:22.110
+Vreau să spun că este un test prost, dar asta e frumos.
+
+00:11:22.150 --> 00:11:30.770
+Am reușit doar să oferim o componentă simplă și simplă de mașină, lasă-mă să scot salutul de aici.
+
+00:11:33.020 --> 00:11:36.760
+Și ce zici de aceste două alte două lucruri?
+
+00:11:36.800 --> 00:11:40.730
+Nu vom merge prea mult pentru că au aceste cazuri specifice de utilizare.
+
+00:11:40.730 --> 00:11:46.520
+Așa cum am spus de cele mai multe ori doriți să utilizați superficial și păstrați-vă testele
+
+00:11:47.210 --> 00:11:56.780
+frumoase și simple și conținute, dar mt face ceea ce se numește DOM completă randare este ideal pentru cazuri de utilizare în cazul în care aveți
+
+00:11:56.780 --> 00:11:59.710
+componente care pot interacționa cu DOM API.
+
+00:11:59.900 --> 00:12:06.480
+Deci, din anumite motive, poate componenta cardului utilizează selectorul de interogări Daut.
+
+00:12:06.620 --> 00:12:11.380
+Sau oricare dintre domenii API pe care le vedem de obicei.
+
+00:12:11.900 --> 00:12:18.150
+Sau poate componenta masina are un fel de metoda ciclului de viata O reactie la metoda ciclului de viata.
+
+00:12:18.440 --> 00:12:21.430
+Vreți să testați componenta lui Sacha sa montat.
+
+00:12:21.690 --> 00:12:31.270
+Acum, unul cu mount-ul este că necesită un API complet DOM pentru a funcționa și a fi disponibil pentru noi pentru ca
+
+00:12:31.270 --> 00:12:33.480
+monta să se întâmple.
+
+00:12:34.710 --> 00:12:42.140
+Și aceasta înseamnă că trebuie să ruleze într-un mediu care cel puțin arată ca mediul de browser.
+
+00:12:42.410 --> 00:12:49.500
+Și dacă vă amintiți din discuțiile noastre anterioare, s-ar putea să nu doriți întotdeauna să executați testele dvs. în interiorul unui browser, deoarece în
+
+00:12:49.530 --> 00:12:51.920
+timp ce durează un pic de timp.
+
+00:12:52.140 --> 00:12:58.530
+Deci, dacă nu doriți să executați testele dvs. în interiorul unui browser, puteți utiliza ceva de genul unui browser fără cap
+
+00:12:58.890 --> 00:13:00.440
+sau un jasc făcut.
+
+00:13:00.570 --> 00:13:04.860
+Și se recomandă ca cu jazzul să fie folosit cu Monk.
+
+00:13:05.070 --> 00:13:05.930
+Ține minte asta.
+
+00:13:06.030 --> 00:13:14.880
+MT Îmi place randarea superficială face o redare completă și de fapt montează componenta într-o groapă la fel ca re-act noi
+
+00:13:15.000 --> 00:13:21.220
+ceea ce înseamnă că testele se pot afecta reciproc dacă toate utilizează același depozit.
+
+00:13:21.600 --> 00:13:28.890
+Dar, așa cum am spus, este foarte rar că doriți să utilizați MT pentru că se poate complica
+
+00:13:28.890 --> 00:13:33.960
+și apoi doriți să păstrați testele cât mai curate și mai limitate.
+
+00:13:33.960 --> 00:13:42.270
+În cele din urmă, ultima este funcția de randare și de redare, așa cum sugerează numele, este folosit pentru
+
+00:13:42.420 --> 00:13:52.440
+a face Riak componente, dar spre deosebire de un real Dom este redat la o ședință statică, astfel încât randa reda ceva
+
+00:13:52.440 --> 00:13:56.980
+foarte asemănător cu ceea ce este superficial și Montross.
+
+00:13:57.030 --> 00:14:03.100
+Cu toate acestea, diferențele care fac folosesc o bibliotecă numită Cheerio sub capotă.
+
+00:14:03.300 --> 00:14:06.060
+Gândește-te la asta ca pe un munte superficial.
+
+00:14:06.120 --> 00:14:13.770
+De fapt, nu are nevoie de un API complet DOM, dar face ca oricare dintre copiii săi de bază sau oricare dintre copiii de pe
+
+00:14:13.800 --> 00:14:16.710
+cartelă să fie dedesubt, dacă trebuie să le testați.
+
+00:14:16.710 --> 00:14:17.120
+In regula.
+
+00:14:17.160 --> 00:14:23.610
+Deci, avem enzime configurate și putem testa câteva dintre componentele noastre, dar mai avem încă puțin mai mult de lucru
+
+00:14:23.610 --> 00:14:26.060
+pe care trebuie să-l facem pentru acel.
+
+00:14:26.100 --> 00:14:28.000
+Voi vedea în următorul.

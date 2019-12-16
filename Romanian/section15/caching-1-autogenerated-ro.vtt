@@ -1,0 +1,232 @@
+﻿WEBVTT
+
+00:00:00.980 --> 00:00:04.640
+Caching-ul este procesul de stocare a unor date.
+
+00:00:05.410 --> 00:00:14.430
+În numerar, numerarul este o zonă componentă de stocare temporară unde datele sunt stocate astfel încât în ​​viitor să pot
+
+00:00:14.470 --> 00:00:16.590
+fi servit mai repede.
+
+00:00:16.630 --> 00:00:23.050
+Gândește-te la asta ca la o cutie de pachete care stochează informații în așa fel încât să nu trebuiască să călătorim
+
+00:00:23.050 --> 00:00:26.560
+tot drumul înapoi ori de câte ori vom prelua aceste informații.
+
+00:00:26.590 --> 00:00:33.150
+Avem un pachet care este mult mai aproape de noi, care ne poate da aceste informații mult mai devreme.
+
+00:00:33.170 --> 00:00:40.890
+Acum, pentru ca noi să înțelegem cu adevărat caching-ul, trebuie să mergem la pașii de bază care se vorbește despre C-p folosirea memoriei
+
+00:00:40.890 --> 00:00:52.420
+de acces aleatoare sau a RAM-ului și hard disk-urilor acum C. P. utilizarea sunt construite cu o memorie specială
+
+00:00:52.690 --> 00:00:59.940
+pe chip numită registre, care de obicei constă într-o cantitate mică de stocare rapidă.
+
+00:01:00.030 --> 00:01:07.260
+Deci, C-p utilizează în prezent, de fapt, au puțină memorie, în afară de a face doar toată munca sau de
+
+00:01:07.260 --> 00:01:09.330
+a fi creierul computerelor noastre.
+
+00:01:10.400 --> 00:01:16.760
+Sunt cea mai apropiată și mai mică memorie din calculatoarele noastre, dar și cea mai rapidă.
+
+00:01:16.940 --> 00:01:26.300
+Uneori este posibil să fi auzit de aceste registre este l Zero Cash ALSWANG numerar L-3 pentru numerar și toate
+
+00:01:26.310 --> 00:01:31.520
+aceste cache-uri depind dacă există sau nu pe arhitectura cipului.
+
+00:01:31.760 --> 00:01:35.210
+Dar ele sunt folosite ca o modalitate foarte rapidă de a accesa memoria.
+
+00:01:35.210 --> 00:01:36.730
+Cel mai rapid putem merge.
+
+00:01:37.220 --> 00:01:41.120
+Și apoi avem ceva de genul Ramm sau memorie cu acces aleatoriu.
+
+00:01:41.200 --> 00:01:48.470
+Există din nou mai aproape de IPC, nu la fel de aproape de registrele în care mici bucăți mici de
+
+00:01:48.470 --> 00:01:56.960
+memorie pe care le aveați Cp, dar suficient de mari încât să poată deține informații importante pe care le puteți accesa și utiliza
+
+00:01:56.960 --> 00:02:03.990
+din nou, deoarece aceasta este în memorie cât mai curând deoarece puterea se stinge de la computerele noastre.
+
+00:02:04.000 --> 00:02:05.660
+Ei bine, informațiile au dispărut.
+
+00:02:05.930 --> 00:02:13.080
+Dar pentru că este o memorie Ei bine, este de asemenea rapid de accesat.
+
+00:02:13.320 --> 00:02:16.570
+Și apoi avem ceva de genul hard disk-urilor.
+
+00:02:16.980 --> 00:02:20.550
+Și acestea erau discuri fizice pe care le aveam în calculatorul nostru.
+
+00:02:20.580 --> 00:02:26.820
+Acum, acești domni în computerele dvs. veți găsi ceva de genul unități de solid state care de fapt fac
+
+00:02:27.060 --> 00:02:29.110
+accesul la informații mult mai rapid.
+
+00:02:29.930 --> 00:02:37.880
+Dar diferența dintre RAM și această unitate de hard disk este costurile de performanță și apropierea de CPE pe care
+
+00:02:37.880 --> 00:02:46.670
+o vedeți pe măsură ce mergem pe linie devine mai ieftin și mai ieftin dar, de asemenea, devine mai lent și vândut
+
+00:02:46.670 --> 00:02:52.420
+mai lent pentru a accesa această memorie pentru CPQ pentru a accesa memoria discului.
+
+00:02:52.640 --> 00:02:59.300
+Ei bine, trebuie să călătorească o distanță mai lungă și discul durează mai mult timp pentru a obține
+
+00:02:59.340 --> 00:03:06.470
+acele informații la CPQ, dar beneficiul suplimentar este că, chiar dacă puterea se stinge, acest disc va aminti din
+
+00:03:07.870 --> 00:03:12.220
+nou informațiile noastre față de berbecul care stochează numai date temporare.
+
+00:03:12.220 --> 00:03:15.090
+Discul este capabil să stocheze date pe termen lung.
+
+00:03:16.660 --> 00:03:16.970
+O.K.
+
+00:03:16.980 --> 00:03:20.150
+Dar de ce învățăm doar despre asta?
+
+00:03:20.310 --> 00:03:22.170
+Cum este util pentru noi.
+
+00:03:22.850 --> 00:03:30.560
+Vedeți pentru că caching-ul este de fapt peste tot și majoritatea oamenilor nu vă dau seama
+
+00:03:30.560 --> 00:03:39.500
+cât de multe locuri pot să stocăm lucruri similare în care putem accesa memoria sau accesa datele mult mai repede
+
+00:03:39.560 --> 00:03:43.910
+în computerele noastre utilizând CPQ RAM și hard disk-uri.
+
+00:03:43.910 --> 00:03:54.210
+Ce putem face aceleași principii similare în aplicațiile noastre, de exemplu, folosim capetele CD-urilor pentru a cache-uri sunt un CSSA shemale și fișiere javascript,
+
+00:03:54.270 --> 00:04:00.810
+astfel încât, în loc de browser-ul merge tot drumul înapoi la server în întreaga
+
+00:04:00.840 --> 00:04:08.700
+țară de pe tot globul poate accesa cel mai apropiat server CDN și utilizați fișierele memorate în cache.
+
+00:04:09.830 --> 00:04:14.600
+Există, de asemenea, lucruri pe care le putem încasa pe server, de exemplu, pe server.
+
+00:04:14.600 --> 00:04:20.720
+Dacă aș accesa un fel de API care să-mi întoarcă roboții bine, așa că nu trebuie
+
+00:04:20.720 --> 00:04:28.930
+să solicit ca de fiecare dată să pot recupera informațiile despre robot, poate într-o variabilă, probabil într-o memorie de stocare ca rattus sau
+
+00:04:28.940 --> 00:04:31.750
+poate chiar într-o bază de date .
+
+00:04:31.760 --> 00:04:38.810
+Dacă API-ul este într-adevăr lent, putem folosi de asemenea caching-ul pe partea bazei de date, iar serverele de bază de
+
+00:04:38.810 --> 00:04:45.200
+date vor fi configurate din cutie, de obicei pentru cache optim, dar ele vă permit să controlați și
+
+00:04:45.200 --> 00:04:48.280
+să modificați parametrii în funcție de nevoile dvs.
+
+00:04:48.430 --> 00:04:54.400
+Și apoi am vorbit despre ratt și știm despre tot rattul nostru, acum îl folosim pentru a
+
+00:04:54.550 --> 00:04:56.300
+gestiona jetoanele sesiunii noastre.
+
+00:04:56.390 --> 00:04:58.230
+Când vorbesc cu tine despre Reddy, se gândi el.
+
+00:04:58.300 --> 00:05:01.880
+În regulă, Andre mă învață despre o altă bază de date inutilă.
+
+00:05:01.880 --> 00:05:03.140
+Aceasta este o pierdere de timp.
+
+00:05:03.200 --> 00:05:07.990
+Dar apoi ați început încet să veniți și v-am arătat că puteți gestiona sesiunile folosind
+
+00:05:07.990 --> 00:05:09.730
+cititoarele și este foarte rapid.
+
+00:05:09.730 --> 00:05:15.380
+Ce-ar fi dacă ți-aș spune că putem folosi S-ul roșu pentru cererile de bază de date în cache? Asta e tot
+
+00:05:15.380 --> 00:05:19.240
+ce am vorbit despre un pic în baza de date pentru scalarea videoclipului.
+
+00:05:19.290 --> 00:05:24.830
+De exemplu, dacă am avea un server de noduri și a trebuit să facem o solicitare la baza de date.
+
+00:05:25.170 --> 00:05:32.850
+Ei bine, pot să-mi plasez mai întâi serverul de pâine chiar între noi și să pot cere serverului Hei, ai această
+
+00:05:32.850 --> 00:05:34.370
+informație despre utilizator.
+
+00:05:34.530 --> 00:05:40.020
+Dacă în timp ce mergem la baza de date nu recuperăm acele informații prin intermediul Wall-ului de salvare și îl
+
+00:05:40.020 --> 00:05:41.190
+trimitem înapoi la note.
+
+00:05:41.550 --> 00:05:47.970
+Dar înainte de a trimite-o direct înapoi, vom trece prin rattus magazin acea informație în memorie și apoi o
+
+00:05:47.970 --> 00:05:54.840
+vom transfera înapoi la server, astfel încât data viitoare serverul să solicite aceleași informații pe care le trecem prin rattus
+
+00:05:54.840 --> 00:05:57.060
+Retta spune oh da, am eu.
+
+00:05:57.060 --> 00:06:03.120
+Aici mergeți și evităm salvarea tuturor instrucțiunilor și a accesului pe disc care se va întâmpla cel mai
+
+00:06:03.570 --> 00:06:06.030
+probabil cu o bază de date.
+
+00:06:06.180 --> 00:06:11.100
+Și asta e ceea ce chiar vrei să faci înainte de a face orice fel de scalare de baze de
+
+00:06:11.100 --> 00:06:13.320
+date unde începem să lucrăm cu baza de date.
+
+00:06:13.320 --> 00:06:21.900
+Vrei să dai seama că pot să plătesc bani pot folosi ratt sau memcached pentru a ne plăti cererile sau întrebările noastre și sunt
+
+00:06:22.500 --> 00:06:26.830
+atât de multe alte locuri pe care le poți face bani.
+
+00:06:27.000 --> 00:06:33.870
+De exemplu, cea mai obișnuită și cea cu care probabil vă cunoașteți este cache-ul pe partea
+
+00:06:33.900 --> 00:06:35.750
+clientului sau pe browser.
+
+00:06:36.060 --> 00:06:42.870
+Vedeți că browserele ne dau o multitudine de modalități de a cachea informații și ne vom strădui puțin mai
+
+00:06:42.870 --> 00:06:48.820
+adânc în acest subiect pentru că puteți face unele optimizări de performanță cu adevărat interesante.
+
+00:06:49.200 --> 00:06:54.670
+Deci, pentru acea va trebui să așteptați până la următoarea înregistrare, astfel încât să faceți asta.

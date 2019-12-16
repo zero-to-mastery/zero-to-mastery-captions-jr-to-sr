@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.960 --> 00:00:03.290
+Witamy spowrotem.
+
+00:00:03.340 --> 00:00:09.760
+Teraz, gdy już dostaliśmy się do chwastów, jak zoptymalizować nasz kod, porozmawiajmy konkretnie o tym, jak
+
+00:00:10.300 --> 00:00:18.720
+możemy zoptymalizować nasz kod w ponownym działaniu, takim jak nasi znajomi robo, aby uzyskać pomoc reaktywną lub pierwszą rzeczą, którą
+
+00:00:18.720 --> 00:00:24.750
+chcesz zrealizować, jest cecha, która nadejdzie od czasu, gdy odtworzy piętnaście punktów cztery punkty
+
+00:00:24.750 --> 00:00:25.420
+zero.
+
+00:00:25.830 --> 00:00:29.100
+I to jest nasze narzędzie wydajności.
+
+00:00:29.220 --> 00:00:39.090
+Wszystko, co musimy zrobić, to w naszym lokalnym hoście podać parametr ciągu zapytania o re-act perf re-act
+
+00:00:39.180 --> 00:00:40.970
+podkreślenia Perth stąd.
+
+00:00:41.130 --> 00:00:53.270
+Jeśli trafisz, nic się nie stanie, ale jeśli otworzysz swoje narzędzia programistyczne i przejdziesz do wydajności, możemy zrobić coś
+
+00:00:53.270 --> 00:00:55.190
+naprawdę interesującego.
+
+00:00:55.280 --> 00:01:01.400
+Zamierzam znaleźć kilka rzeczy w polu wyszukiwania, a następnie nacisnąć
+
+00:01:01.400 --> 00:01:11.720
+przycisk stop, a następnie przeanalizować je lub przeanalizować wydajność naszej aplikacji, nagrajmy i wpiszemy rzeczy naprawdę szybko,
+
+00:01:11.750 --> 00:01:17.140
+zmieńmy rzeczy i przestańmy tylko siedem sekund.
+
+00:01:18.650 --> 00:01:28.340
+Teraz, korzystając z tego, reagując na efekt podkreślenia, możemy teraz zobaczyć nasze komponenty i to, co robią w
+
+00:01:28.340 --> 00:01:29.680
+obniżonej wydajności.
+
+00:01:29.900 --> 00:01:34.260
+Teraz wiem, że to przytłaczające, więc spróbujmy przejść przez to.
+
+00:01:34.430 --> 00:01:35.650
+Ładne i łatwe.
+
+00:01:35.810 --> 00:01:44.760
+Widzimy, że mamy naszą aplikację, która renderuje i jest filtrowana i chcemy spojrzeć tutaj
+
+00:01:44.820 --> 00:01:51.410
+na C-p U. S. widzimy, że jest tu trochę ładnych żółtych pasków, co oznacza, że dzieje się javascript.
+
+00:01:51.570 --> 00:01:58.940
+Podświetlam to po prostu klikając, a następnie klikając i widzisz w sekcji czasowej użytkownika
+
+00:01:59.630 --> 00:02:03.470
+również tutaj w sekcji czasu użytkownika,
+
+00:02:10.710 --> 00:02:15.910
+jeśli przewijam Lin tak wyglądam, używając reakcji na podkreślenie.
+
+00:02:16.220 --> 00:02:22.640
+Teraz narzędzia do programowania Chrome rozpoznają komponenty Riak, na których widać logo ponownego działania i pokazują
+
+00:02:22.640 --> 00:02:24.770
+nam, jaką pracę wykonują.
+
+00:02:24.770 --> 00:02:28.830
+Widzimy, że mamy reakcję na renderowanie drzewa właśnie w tym momencie.
+
+00:02:29.100 --> 00:02:30.510
+Mamy podłączoną aplikację.
+
+00:02:30.500 --> 00:02:32.360
+Pamiętaj, że używamy redox.
+
+00:02:32.360 --> 00:02:40.700
+Mamy aplikację jako nasz główny komponent kontenerowy, a pod nią widzimy, że mamy Carlist linie brzegowe
+
+00:02:40.820 --> 00:02:46.910
+i elementy przewijania, a pod spodem widać, że nasze elementy karty
+
+00:02:49.590 --> 00:02:51.600
+są bardzo fajne.
+
+00:02:51.600 --> 00:02:57.100
+I widzimy tutaj, co robią w nawiasach kwadratowych, które widzimy, że się aktualizują.
+
+00:02:57.120 --> 00:03:02.800
+Ponieważ prawdopodobnie coś tutaj wpisuję, możesz zobaczyć, że coś piszę w tej sekcji.
+
+00:03:02.940 --> 00:03:12.760
+Komponenty te są aktualizowane w każdym z pasków kolorów pokazującym czas, w którym komponent wykonuje pracę, ponieważ javascript jest
+
+00:03:12.790 --> 00:03:22.090
+jednokrotnym gwintem za każdym razem, gdy komponent jest montowany lub renderowany, lub aktualizowany jest zgranie głównego wątku.
+
+00:03:22.100 --> 00:03:29.220
+Pamiętaj, że główny pracownik przeglądarki i zapobieganie temu, aby inny kod wyświetlał te cytaty w nawiasach,
+
+00:03:29.330 --> 00:03:34.030
+mówi o aktualizacji, a czasem mówią Brandur i montują.
+
+00:03:34.140 --> 00:03:38.280
+Opisują, jaka część cyklu życia komponentu ma miejsce.
+
+00:03:39.420 --> 00:03:41.940
+A oś czasu rozkłada każdy krok.
+
+00:03:42.000 --> 00:03:46.190
+Możesz zobaczyć drobnoziarnisty czas na metodach, których używasz.
+
+00:03:46.230 --> 00:03:53.610
+Nasza aplikacja jest dość mała, więc nie widać tu zbyt wielu skoków, ale wraz z coraz większą liczbą składników
+
+00:03:53.670 --> 00:03:59.680
+można sobie wyobrazić, jak to będzie się coraz głębiej i głębiej w drzewie renderowania.
+
+00:03:59.730 --> 00:04:08.000
+Lubię to nazywać odwróconą choinką i im większa jest ich świąteczna choinka, tym więcej elementów
+
+00:04:08.000 --> 00:04:15.350
+wymaga renderowania, ponieważ pamiętaj o sposobie ponownego działania, jeśli coś zaktualizuje się w aplikacji,
+
+00:04:15.440 --> 00:04:25.250
+zaktualizuje je i przekaże te rekwizyty do wszystkich komponentów poniżej i wszystkie te komponenty, które są funkcjami, muszą
+
+00:04:25.520 --> 00:04:28.170
+działać w renderowaniu Embrey.
+
+00:04:28.200 --> 00:04:31.600
+Więc chcesz uniknąć czegoś, co jest naprawdę bardzo głębokie.
+
+00:04:31.650 --> 00:04:38.110
+Wyglądają jak piramidy zagłady, po prostu masywne piramidy lub odwrócone choinki.
+
+00:04:38.940 --> 00:04:45.090
+Obecnie typowe jest, że mają dość głębokie drzewa komponentów w reaku. Ale
+
+00:04:45.570 --> 00:04:52.890
+jeśli optymalizujesz komponent, który jest często montowany, może to pomóc zmniejszyć liczbę elementów opakowania, takich jak
+
+00:04:52.890 --> 00:04:54.000
+komponent połączenia.
+
+00:04:54.330 --> 00:04:59.240
+Ponieważ każdy dodaje niewielką wydajność i karę w pamięci.
+
+00:04:59.320 --> 00:05:06.910
+Jedną z rzeczy, o których warto pamiętać, jest to, że po uruchomieniu tej wersji działa ona w wersji devolvement, która
+
+00:05:06.910 --> 00:05:12.730
+jest znacznie wolniejsza, ponieważ dostajesz narzędzie X Akshara Plus, a nawet uruchamia to ponowne spowolnienie
+
+00:05:12.890 --> 00:05:14.040
+działania aplikacji.
+
+00:05:14.320 --> 00:05:19.810
+Nie jest to dokładnie to samo, co produkcja produkcyjna najprawdopodobniej będzie szybsza, ale jest
+
+00:05:19.870 --> 00:05:27.310
+dobrym wskaźnikiem tego, co robi twoja aplikacja i możesz ją przetestować, aby zobaczyć, gdzie obecnie znajdują się moje wąskie gardła.
+
+00:05:27.510 --> 00:05:33.740
+Patrząc na to, moglibyśmy coś zrealizować.
+
+00:05:33.840 --> 00:05:45.030
+W jaki sposób możemy pomóc w tym procesie za pomocą reduxa używając reduxu Wyglądając sprytnie na temat aktualizacji
+
+00:05:45.480 --> 00:05:53.370
+składników, ponieważ ten zaktualizowany składnik zaktualizuje wszystkie swoje dzieci lub prześladuje wszystkie te
+
+00:05:53.370 --> 00:05:54.200
+dzieci.
+
+00:05:54.420 --> 00:06:02.790
+Ale jeśli mamy redux i zamiast używać tego brutalnego komponentu do aktualizacji stanu możemy po prostu bezpośrednio podłączyć
+
+00:06:02.790 --> 00:06:11.700
+niższy komponent pamiętając przy użyciu connect możemy połączyć się ze stanem, dzięki czemu możemy teraz po prostu połączyć komponent
+
+00:06:11.970 --> 00:06:19.380
+tutaj i tylko te dwa poniżej zaktualizuje się w porównaniu do tego, czy ma podłączony główny
+
+00:06:19.380 --> 00:06:23.580
+komponent, który naprawdę renderuje o wiele więcej komponentów.
+
+00:06:23.580 --> 00:06:25.320
+A więc taka jest tam strategia.
+
+00:06:25.380 --> 00:06:32.070
+Czy chcesz mieć tylko jeden kontener lub komponent najwyższego poziomu lub tylko kilka komponentów na górze,
+
+00:06:32.070 --> 00:06:38.220
+które są połączone z redox lub aby uniknąć przekazywania rekwizytów i naprawdę zagnieżdżonych drzewek.
+
+00:06:38.220 --> 00:06:46.800
+Czy chcesz używać połączenia bliżej węzłów typu liść i jest to decyzja architektoniczna, którą Ty i Twój zespół tworzycie
+
+00:06:46.800 --> 00:06:50.000
+w oparciu o zalety i wady.
+
+00:06:51.790 --> 00:06:56.430
+Na koniec chciałem również pokazać wam narzędzia do ponownego programowania.
+
+00:06:56.590 --> 00:06:59.680
+To jest wtyczka do Chrome, którą możesz zdobyć.
+
+00:06:59.680 --> 00:07:04.950
+Wystarczy kliknąć przycisk Dodaj do Chrome, aby go uzyskać i jest bardzo przydatny.
+
+00:07:05.220 --> 00:07:14.490
+Jeśli przejdę do zakładki ponownego aktu, zobaczysz, że pokazuje moją aplikację Mam swoje rekwizyty i sklep Mam swojego
+
+00:07:14.490 --> 00:07:20.970
+dostawcę Moja połączona aplikacja moja aplikacja, a następnie widzę przewijanie pola wyszukiwania.
+
+00:07:20.970 --> 00:07:24.460
+I wreszcie wszystkie moje dzieci są komponentami.
+
+00:07:24.540 --> 00:07:31.860
+Fajną rzeczą jest to, że pokazuje ci, jakie masz rekwizyty, jakie masz dzieci, wszystkie te
+
+00:07:31.860 --> 00:07:32.730
+rzeczy.
+
+00:07:32.820 --> 00:07:39.650
+A gdy zmieniamy rzeczy, można zauważyć zmiany.
+
+00:07:39.790 --> 00:07:46.900
+Jednak dla wydajności narzędzia mocy biernej są naprawdę fajne, gdy klikniesz na te najważniejsze
+
+00:07:47.050 --> 00:07:54.490
+aktualizacje i co się stanie, gdy zmieni się Twoja aplikacja lub składnik zostanie ponownie renderowany, to
+
+00:07:54.490 --> 00:07:55.740
+go podświetli.
+
+00:07:55.840 --> 00:07:56.660
+Sprawdźmy to.
+
+00:07:56.680 --> 00:08:01.100
+Zacznę pisać i patrzeć na to.
+
+00:08:01.220 --> 00:08:09.600
+Pokazuje, czym jest rebranding, co jest prawie całą naszą aplikacją i oglądaj to, kiedy piszę szybciej.
+
+00:08:10.670 --> 00:08:11.810
+Widzisz to.
+
+00:08:11.870 --> 00:08:17.390
+Po wpisaniu tekstu poszedłem naprawdę agresywnie, ale widzisz, jak zmieniają się
+
+00:08:17.390 --> 00:08:22.090
+kolory, które kolor reprezentuje, jak często są renderowane.
+
+00:08:22.140 --> 00:08:26.720
+Są szybsze, im bliżej koloru czerwonego.
+
+00:08:26.730 --> 00:08:33.750
+Więc pomyśl o gorących kolorach i im wolniej są im bliżej niebieskiego.
+
+00:08:33.830 --> 00:08:38.300
+Teraz jest to pomocne w wykryciu niepotrzebnego cyklu renderowania.
+
+00:08:38.510 --> 00:08:48.090
+Na przykład, gdy wpisuję tutaj, widzę, że mój nagłówek jest aktualizowany, ale dlaczego mam na myśli, że jest taki sam przez
+
+00:08:48.090 --> 00:08:49.410
+cały czas.
+
+00:08:49.470 --> 00:08:54.560
+Dlaczego powinienem czytać render, to jest funkcja, która działa niepotrzebnie.
+
+00:08:54.670 --> 00:08:57.810
+A kiedy spojrzymy wstecz na nasz kod w aplikacji.
+
+00:08:57.900 --> 00:08:59.710
+Tak, widzimy to.
+
+00:08:59.880 --> 00:09:08.960
+Ma to sens, ponieważ za każdym razem, gdy robię zdarzenie wyszukiwania, muszę lekceważyć działanie ssion i
+
+00:09:08.990 --> 00:09:10.720
+aktualizuje pole wyszukiwania.
+
+00:09:10.880 --> 00:09:20.230
+Ta aplikacja ws zostanie zrenderowana, ponieważ nastąpiła zmiana w magazynie redock.
+
+00:09:20.240 --> 00:09:27.690
+A ponieważ nagłówek jest częścią tego, również będzie renderowany.
+
+00:09:29.130 --> 00:09:32.820
+Są to rzeczy, które chcesz zacząć zauważać.
+
+00:09:32.940 --> 00:09:38.640
+Pamiętaj, że widzenie koloru żółtego lub czerwonego podczas podświetlania lub renderowania komponentów niekoniecznie
+
+00:09:39.030 --> 00:09:40.740
+jest czymś złym.
+
+00:09:41.520 --> 00:09:48.660
+Można się tego spodziewać, gdy robisz takie rzeczy jak suwaki lub przewijanie lub elementy interfejsu użytkownika,
+
+00:09:49.170 --> 00:09:50.960
+które powodują częste aktualizacje.
+
+00:09:51.360 --> 00:09:57.240
+Nie możesz tego całkowicie uniknąć, ale jeśli klikniesz przycisk i nagle zobaczysz czerwony, oznacza
+
+00:09:57.240 --> 00:10:01.140
+to, że coś się dzieje, co chcesz naprawić.
+
+00:10:01.820 --> 00:10:10.330
+Narzędzie aktualizacji aktualizacji najważniejszych służy głównie do niepotrzebnego sprawdzania, co jest aktualizowane, a jako programista aplikacji
+
+00:10:10.330 --> 00:10:17.070
+chcesz mieć ogólne pojęcie o tym, jak jest odtwarzana twoja aplikacja ponownie.
+
+00:10:17.170 --> 00:10:24.310
+Ponieważ pamiętajmy, że chcemy uniknąć niepotrzebnych niemych manipulacji, ponieważ wiemy już, że to naprawdę utrudnia
+
+00:10:24.310 --> 00:10:25.750
+nasze działanie.
+
+00:10:26.430 --> 00:10:32.560
+W następnym filmie pokażę, jak możemy uniknąć tych niepotrzebnych rendererów.
+
+00:10:32.730 --> 00:10:33.540
+Zobaczę w następnym.

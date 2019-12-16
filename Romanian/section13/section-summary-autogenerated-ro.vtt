@@ -1,0 +1,283 @@
+﻿WEBVTT
+
+00:00:01.220 --> 00:00:10.520
+Hei este Bruno aici wow trebuie să fi lucrat extrem de greu că a fost o mulțime de cod, dar eu nu pot să cred.
+
+00:00:10.520 --> 00:00:12.020
+Avem sesiuni.
+
+00:00:12.260 --> 00:00:19.130
+Utilizatorii noștri nu trebuie să se conecteze în mod constant pentru a utiliza aplicația noastră inteligentă pentru creier și ne-am protejat toate rutele noastre
+
+00:00:19.130 --> 00:00:21.830
+astfel încât obiectivele noastre finale să fie în siguranță.
+
+00:00:21.830 --> 00:00:23.510
+Aceasta este o treabă incredibilă.
+
+00:00:23.510 --> 00:00:29.660
+Îmi place cum îl folosești pe Dreda pentru a face sesiunile într-adevăr foarte repede pentru a verifica și nu te-a putut mulțumi suficient.
+
+00:00:29.660 --> 00:00:34.400
+Cred că ai nevoie de câteva zile de concediu după aceea, pentru că pentru asta a fost o mulțime de coduri oricum.
+
+00:00:34.550 --> 00:00:36.140
+Foarte apreciat.
+
+00:00:36.140 --> 00:00:40.580
+Compania noastră crește din plin datorită dvs., așa că cred că o promoție iese în
+
+00:00:40.580 --> 00:00:41.130
+curând.
+
+00:00:41.950 --> 00:00:44.220
+În orice caz, faceți o pauză.
+
+00:00:44.230 --> 00:00:45.970
+Ne vedem în câteva zile.
+
+00:00:45.970 --> 00:00:47.350
+Inapoi la munca.
+
+00:00:47.440 --> 00:00:47.940
+Pa! Pa.
+
+00:00:51.300 --> 00:00:52.540
+În regulă, toată lumea.
+
+00:00:52.540 --> 00:00:53.330
+Bună treabă.
+
+00:00:53.350 --> 00:00:58.870
+Am reușit să-l impresionăm pe Bruno și aceasta a fost o secțiune foarte dificilă, dar frumusețea acelei secțiuni este
+
+00:00:59.380 --> 00:01:05.620
+că acum aveți o bază de cod pe care o puteți utiliza pentru a vă extinde proiectele, deoarece majoritatea aplicațiilor pe care
+
+00:01:05.620 --> 00:01:09.640
+le veți utiliza vor avea un fel de utilizatorii și funcțiile de conectare.
+
+00:01:09.640 --> 00:01:15.190
+Doriți să vă asigurați că există anumite tipuri de sesiuni și că doriți, de asemenea, să protejați unele drepturi pentru a putea utiliza aplicația
+
+00:01:15.190 --> 00:01:20.050
+inteligentă a creierului și în orice mod doriți să o extindeți și să o faceți mai bine sau chiar să
+
+00:01:20.050 --> 00:01:21.510
+creați ceva nou pe cont propriu.
+
+00:01:21.670 --> 00:01:28.870
+Dar acum aveți o bună înțelegere a modului de utilizare a sesiunilor și JWT pentru a avea acces deplin
+
+00:01:29.140 --> 00:01:30.760
+și control asupra utilizatorilor.
+
+00:01:31.240 --> 00:01:37.990
+Am reușit să ne creăm calea de conectare în care stocăm numele de utilizator și parolele parolele de
+
+00:01:38.050 --> 00:01:47.650
+tip hash din baza noastră de date, dacă un utilizator semnează în generarea unui token și acel token devine, de asemenea, stocat în baza noastră de
+
+00:01:47.800 --> 00:01:48.850
+date Dreda.
+
+00:01:48.850 --> 00:01:54.840
+Acum s-ar putea să vă întrebați că acest lucru nu face ca acest lucru să fie extrem de complicat și, de asemenea, să dureze mai mult.
+
+00:01:55.060 --> 00:02:01.450
+Ei bine, pentru că rattus este un depozit de memorie stocat în memorie este extrem de rapid.
+
+00:02:01.450 --> 00:02:08.500
+Una dintre cele mai rapide baze de date pe care le puteți avea pentru a accesa mici fragmente de date cum ar fi jetoanele de sesiune.
+
+00:02:08.500 --> 00:02:14.680
+Deci, acest lucru este într-adevăr foarte rapid și puteți scala deoarece puteți avea mai multe baze de date rattus
+
+00:02:14.710 --> 00:02:16.360
+și mai multe servere API.
+
+00:02:16.390 --> 00:02:24.460
+Așadar, construiți un sistem care este extrem de scalabil, puteți continua să adăugați mașini la acesta și va funcționa repede indiferent de numărul
+
+00:02:24.460 --> 00:02:32.560
+de utilizatori care au fost de asemenea capabili să aibă JWT care conține un semn de informație, astfel încât dacă avem alte API de
+
+00:02:32.860 --> 00:02:38.980
+care avem nevoie pentru a vorbi și nu este o simplă relație de client-client, putem folosi acest
+
+00:02:38.980 --> 00:02:44.410
+token pentru a vorbi de fapt cu alte puncte finale API de pe serverul nostru.
+
+00:02:44.410 --> 00:02:51.460
+Din nou, este extensibil pe măsură ce trecem la tot mai multe servere de arhitecturi mai adânci și imbricate, care
+
+00:02:51.490 --> 00:02:53.060
+dincolo de domeniul discursului.
+
+00:02:53.080 --> 00:03:01.270
+Dar acest lucru învață o modalitate foarte bună de a vă extinde și, eventual, să aveți o soluție scalabilă pentru arhitectura dvs.
+
+00:03:01.270 --> 00:03:07.690
+Oricum, am stocat acest jeton în serverul nostru Retta și îl returnează clientului pe care clientul îl stochează
+
+00:03:07.690 --> 00:03:15.270
+apoi în magazinele de sesiune sau în spațiul de stocare local și de acolo utilizatorul poate face orice își dorește oricând are
+
+00:03:15.280 --> 00:03:21.190
+nevoie de ceva de genul actualizarea unui profil sau obținerea unui profil sau orice alte căi.
+
+00:03:21.190 --> 00:03:28.330
+Ei pur și simplu apuca acel jeton de la sediul lor de stocare trimis la noi spunem Oh multumesc pentru token.
+
+00:03:28.330 --> 00:03:29.980
+Văd antetul de autorizare.
+
+00:03:30.160 --> 00:03:31.730
+Am de gând să citesc asta.
+
+00:03:32.020 --> 00:03:35.970
+Hei, domnule ratt sau doamna rattus aveți acel simbol.
+
+00:03:36.280 --> 00:03:37.200
+Da, da.
+
+00:03:37.270 --> 00:03:39.350
+Dacă o fac aici, este I. D ..
+
+00:03:39.400 --> 00:03:45.130
+Iar odată ce verificarea merge la server, spuneți bine că spui cine spui
+
+00:03:45.130 --> 00:03:48.420
+că tu poți avea un cadou frumos.
+
+00:03:48.500 --> 00:03:54.710
+Privind acum la acest cod, există multe lucruri pe care le putem îmbunătăți și o mulțime de lucruri pe care am putea să
+
+00:03:54.710 --> 00:03:55.540
+le refăcem.
+
+00:03:55.670 --> 00:03:58.930
+Și dacă ați început să observați să vedeți pe Sink, este foarte bine.
+
+00:03:59.000 --> 00:04:03.180
+Asta inseamna ca incepeti sa intelegeti cum sunt conectate punctele cum sunt legate lucrurile.
+
+00:04:03.470 --> 00:04:08.990
+Și vă încurajez să curățați codul și să vedeți de unde puteți îmbunătăți de ce puteți face acest lucru.
+
+00:04:09.020 --> 00:04:15.950
+De asemenea, vreau să faceți un exercițiu puțin și dacă vă amintiți în apt.
+
+00:04:16.040 --> 00:04:19.490
+Da, avem câmpuri noi pe care le-am creat în stat.
+
+00:04:19.640 --> 00:04:24.110
+Un pat și o stare de vârstă pe care utilizatorul o are.
+
+00:04:24.320 --> 00:04:33.110
+Dar trebuie să adăugăm acele coloane la mesele noastre și să avem capacitatea de a le actualiza.
+
+00:04:33.270 --> 00:04:34.510
+Poate în actualizarea profilului.
+
+00:04:34.510 --> 00:04:38.770
+De asemenea, putem trimite pat și vârsta pentru a obține aceste valori.
+
+00:04:38.770 --> 00:04:46.210
+Prin urmare, aceasta este provocarea dvs. știind ceea ce am făcut, încorporând actualizarea profilului și indicând, de asemenea, contul de animale de
+
+00:04:46.210 --> 00:04:49.000
+companie și de vârstă ca o sugestie.
+
+00:04:49.030 --> 00:04:56.380
+Este posibil să aveți nevoie să actualizați tabelul de creare, în timp ce în postul gresse chiar aici în tabele ar trebui
+
+00:04:56.410 --> 00:05:02.320
+să adăugați câteva coloane suplimentare aici, cum ar fi Pat și H și ar putea fi necesar să
+
+00:05:02.320 --> 00:05:05.020
+vă luați containerul și să construiți totul.
+
+00:05:05.200 --> 00:05:11.890
+Dar odată ce faceți acest lucru și treceți prin pașii pe care îi puteți extinde la
+
+00:05:11.890 --> 00:05:16.120
+actualizarea postului de profil, includeți vârsta și animalul de companie.
+
+00:05:16.120 --> 00:05:22.450
+Acum, am inclus toate lucrurile pe care le-am învățat în ultimele secțiuni și puteți vedea acum cât
+
+00:05:22.450 --> 00:05:26.230
+de curat și frumos este mediul nostru de lucru.
+
+00:05:26.290 --> 00:05:31.050
+Am pus bazele noastre de date rattus un API toate într-un singur container.
+
+00:05:31.090 --> 00:05:39.650
+Deci, dintr-o singură comandă și timp de dezvoltare, suntem doar capabili să avem lucruri și să avem o dezvoltare rapidă.
+
+00:05:39.670 --> 00:05:41.210
+Sper că veți vedea valoarea în acest sens.
+
+00:05:41.350 --> 00:05:47.620
+Și ca dezvoltator aveți acum posibilitatea de a încorpora acest lucru în echipa dumneavoastră șefii dvs. clienții dumneavoastră.
+
+00:05:47.710 --> 00:05:50.020
+Compania ta te va iubi doar pentru asta.
+
+00:05:50.020 --> 00:05:53.730
+Deci, vă recomand să faceți acest lucru și ceva de genul asta.
+
+00:05:53.740 --> 00:06:02.680
+De asemenea, am folosit lucruri precum ratt pentru a putea crea aplicații scalabile mari, deoarece știm cum
+
+00:06:02.680 --> 00:06:04.660
+să folosim containerele.
+
+00:06:04.660 --> 00:06:10.420
+Acum putem face mai multe replicări ale serverului nostru API.
+
+00:06:10.600 --> 00:06:16.960
+Putem face mai multe replicări ale bazelor noastre de date și replicări multiple ale bazei noastre de date rattus, care
+
+00:06:16.960 --> 00:06:18.480
+este într-adevăr foarte rapidă.
+
+00:06:18.490 --> 00:06:27.490
+Deci, chiar dacă API este ratat în așteptare pentru ID-ul și verificarea jetonului de sesiune este extrem de rapid, astfel încât să putem continua să
+
+00:06:27.490 --> 00:06:29.320
+adăugăm mașini la acesta.
+
+00:06:29.320 --> 00:06:33.170
+Continuă să adaugi mașini și să scrii în producție.
+
+00:06:33.190 --> 00:06:39.010
+Pe măsură ce tot mai mulți utilizatori cresc și ne vom ocupa de echilibrarea încărcării și de modul în care ar putea funcționa partea
+
+00:06:39.010 --> 00:06:39.870
+3 a performanței.
+
+00:06:40.120 --> 00:06:46.270
+Dar această diagramă ar trebui să vă facă acum multă sens și cum sunt legate toate aceste piese este unul dintre
+
+00:06:46.270 --> 00:06:48.040
+cele mai grele lucruri de înțeles.
+
+00:06:48.040 --> 00:06:53.500
+Deci, dacă ați reușit să înțelegeți acest lucru dacă sunteți capabil să urmați de-a lungul codului împreună
+
+00:06:53.710 --> 00:07:01.780
+cu mine și să înțelegeți ce am făcut până acum, sunteți cu mult peste un dezvoltator web obișnuit, aveți acum o imagine de nivel înalt, astfel
+
+00:07:01.990 --> 00:07:06.460
+încât să puteți decide pentru dvs. ce fel de arhitectură doriți ce vrei
+
+00:07:06.460 --> 00:07:12.580
+să faci atunci când construiești o aplicație, astfel încât este plăcută să lucrezi cu dezvoltatorii, dar și timpul de producție.
+
+00:07:12.610 --> 00:07:20.430
+E un indraznet la scară și are flexibilitatea de a crește și cu asta cred că avem nevoie de o pauză.
+
+00:07:20.730 --> 00:07:22.830
+Voi vedea în următoarea secțiune Buh-Bye.

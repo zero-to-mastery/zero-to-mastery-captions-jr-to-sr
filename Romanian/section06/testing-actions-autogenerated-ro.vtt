@@ -1,0 +1,547 @@
+﻿WEBVTT
+
+00:00:01.120 --> 00:00:02.500
+Bine ai revenit.
+
+00:00:02.500 --> 00:00:07.730
+Am scris acum câteva teste și 13 teste.
+
+00:00:07.780 --> 00:00:09.340
+Nu e rău pentru un mic lot.
+
+00:00:09.340 --> 00:00:13.750
+Există cu siguranță mai mult decât putem face, dar vreau să acoperim ultima parte.
+
+00:00:13.740 --> 00:00:22.680
+Acum, că eu cred că este important și care ne testează acțiunile acum, s-ar putea să vă întrebați ce despre Constance nu
+
+00:00:22.680 --> 00:00:28.920
+testați fișierul Constans, dar puteți vedea aici că Constanța este doar pur și simplu doar
+
+00:00:29.640 --> 00:00:38.100
+atribuind constante șir la o variabilă și atunci când " testarea cu adevărat doriți să decideți pentru tine ceea ce
+
+00:00:38.100 --> 00:00:41.860
+trebuie să testați și de ce nu testați.
+
+00:00:41.920 --> 00:00:46.590
+Chiar intrați într-o gaură de iepure, care continuați să lucrați la test, continuați să lucrați la teste.
+
+00:00:46.680 --> 00:00:53.310
+Și următorul lucru pe care știți că nu l-ați făcut cu adevărat pe partea de producție a lucrurilor și testelor
+
+00:00:53.310 --> 00:00:59.940
+este important, dar într-adevăr doriți să evitați ideea că trebuie doar să am o teste de 100 de pasi
+
+00:01:00.030 --> 00:01:05.210
+sau 100 de fotografii sau am nevoie de acoperirea codului meu să fie 100%.
+
+00:01:05.640 --> 00:01:11.550
+De fapt, nu este o idee bună să aveți o acoperire de 100% a codului, deoarece înseamnă că
+
+00:01:11.910 --> 00:01:19.680
+executați teste care, cel mai probabil, nu trebuie să fie difuzate, iar timpul dvs. ar fi putut fi folosit cu înțelepciune în alte zone
+
+00:01:19.680 --> 00:01:20.960
+ale aplicației dvs.
+
+00:01:20.970 --> 00:01:26.490
+Amintiți-vă că există lucruri infinite pe care le putem face pentru refactor sau pentru ca codul nostru mai frumos să scrie
+
+00:01:26.970 --> 00:01:29.060
+mai multe teste, dar avem timp limitat.
+
+00:01:29.130 --> 00:01:34.310
+Deci, ca un dezvoltator senior, trebuie să vă decideți unde sunt compromisurile.
+
+00:01:35.610 --> 00:01:36.200
+In regula.
+
+00:01:36.250 --> 00:01:40.590
+Deci, dosarul Constans nu avem nevoie de teste pentru actiuni.
+
+00:01:40.630 --> 00:01:44.000
+Cred că avem nevoie de câteva teste pentru acțiunile noastre.
+
+00:01:44.020 --> 00:01:47.400
+Hai să creăm o acțiune sau acțiuni care
+
+00:01:51.700 --> 00:01:53.690
+testează și cad aici.
+
+00:01:53.800 --> 00:01:58.750
+Să mai importăm stele ca acțiuni.
+
+00:02:00.680 --> 00:02:02.410
+Din dosarul acțiunilor noastre
+
+00:02:06.560 --> 00:02:11.710
+și cu prima acțiune pe care o avem, care este câmpul de căutare setat.
+
+00:02:11.880 --> 00:02:12.920
+E un lucru destul de simplu.
+
+00:02:12.930 --> 00:02:21.170
+Vrem doar să ne asigurăm că această funcție returnează acest obiect astfel încât să putem folosi numai funcționalitatea de
+
+00:02:21.170 --> 00:02:22.210
+bază aici.
+
+00:02:22.340 --> 00:02:35.180
+Putem doar să o avem și știu că ar trebui să folosesc ceea ce v-ați descris pentru a separa cele două acțiuni pe care le avem.
+
+00:02:35.180 --> 00:02:38.380
+Dar cred că ai ideea că poți face asta singur.
+
+00:02:38.420 --> 00:02:50.480
+Vreau să te duc la bord aici, dar să presupunem că ar trebui să creeze o acțiune pentru a
+
+00:02:50.480 --> 00:02:51.770
+căuta
+
+00:02:54.970 --> 00:03:04.980
+roboți și că aceasta va avea o simplă stivă foarte simplă. Slothul are un text constant
+
+00:03:04.980 --> 00:03:17.760
+care va egala termenul nostru de căutare și consulatele au acțiunea așteptată iar acțiunea preconizată va fi obiectul nostru și să
+
+00:03:24.090 --> 00:03:27.770
+ne importăm constantele aici, de asemenea.
+
+00:03:29.000 --> 00:03:31.650
+Deci le putem folosi.
+
+00:03:31.790 --> 00:03:36.650
+Va avea un tip de câmp de căutare și o încărcătură utilă.
+
+00:03:37.160 --> 00:03:39.050
+Și aceasta este acțiunea așteptată.
+
+00:03:39.050 --> 00:03:45.820
+Asadar ne asteptam ca actiunea sa includa textul sau nu avem nevoie de caracterele de sir aici.
+
+00:03:46.010 --> 00:03:47.270
+Acolo te duci.
+
+00:03:47.270 --> 00:03:52.030
+Așadar, putem pur și simplu să spunem că acțiunile xpecii caută ce
+
+00:03:56.170 --> 00:03:57.300
+a fost.
+
+00:03:57.310 --> 00:04:00.580
+A fost setat câmpul de căutare.
+
+00:04:00.640 --> 00:04:02.370
+Copiați ca set
+
+00:04:05.530 --> 00:04:12.230
+câmp de căutare pentru a avea textul și pentru a avea două egale.
+
+00:04:12.280 --> 00:04:18.970
+Așadar, vrem să setăm câmpul de căutare cu acel text și trebuie să avem rezultatul așteptat
+
+00:04:18.970 --> 00:04:21.570
+al acțiunii, astfel încât acțiunea așteptată.
+
+00:04:21.610 --> 00:04:24.630
+Să salvăm.
+
+00:04:24.760 --> 00:04:27.240
+Si ce mi-a lipsit aici.
+
+00:04:27.250 --> 00:04:31.070
+Să nu vedem vreo virgulă aici.
+
+00:04:31.090 --> 00:04:33.030
+Acum folosiți virgulele.
+
+00:04:33.470 --> 00:04:35.760
+Această secțiune de test a fost greu pentru mine cu virgulele.
+
+00:04:35.790 --> 00:04:36.360
+Ai dreptate.
+
+00:04:36.480 --> 00:04:37.080
+Deci te duci acolo.
+
+00:04:37.080 --> 00:04:41.580
+Avem noi teste acum în acțiunile care trec.
+
+00:04:41.580 --> 00:04:43.130
+Foarte foarte dragut.
+
+00:04:43.260 --> 00:04:45.510
+Și așa simplu ar trebui să știm cum să facem asta.
+
+00:04:45.810 --> 00:04:46.950
+Dar aici este partea provocatoare.
+
+00:04:46.950 --> 00:04:56.460
+Acum avem această rugăminte de acțiune pentru a face ca un băiat să facă o expediție și un apel API aici și acest lucru
+
+00:04:56.460 --> 00:04:59.090
+este posibil să nu fi văzut.
+
+00:04:59.100 --> 00:05:04.810
+Am creat un API pentru asta, care doar extrage apelul nostru de preluare.
+
+00:05:05.040 --> 00:05:12.240
+Așa că îi dăm un răspuns aurl și face răspunsul de răspuns așa încât să simplifice lucrurile pentru lucrurile pentru
+
+00:05:12.240 --> 00:05:18.980
+noi, deci nu trebuie să le luăm în mod constant răspunsul la răspuns Sardesai Dar ați văzut acest
+
+00:05:19.940 --> 00:05:21.080
+lucru înainte
+
+00:05:24.010 --> 00:05:29.580
+de faptul că în timp ce acțiunile au doar ei expedierea cererii robotului în așteptare.
+
+00:05:29.710 --> 00:05:34.920
+Și apoi, în cele din urmă, vor avea succes sau nu.
+
+00:05:35.290 --> 00:05:45.510
+Deci, cum facem acest lucru pentru că privim la această acțiune avem nevoie de expediere deoarece aceasta este o acțiune asincronă Amintiți-vă că
+
+00:05:45.720 --> 00:05:48.540
+trebuie să vă mulțumim pentru asta.
+
+00:05:48.550 --> 00:05:52.280
+Avem nevoie de un middleware thunk.
+
+00:05:52.420 --> 00:05:54.900
+Să începem să scriem testele și să vedem la ce ne putem îmbunătăți.
+
+00:05:54.900 --> 00:05:57.630
+Voi închide câteva dintre aceste file pentru a curăța lucrurile.
+
+00:06:01.940 --> 00:06:03.010
+Acolo te duci.
+
+00:06:03.110 --> 00:06:10.160
+Și vom crea un nou bloc și în acest bloc vrem
+
+00:06:12.870 --> 00:06:20.310
+să spunem schimbarea sau manipularea mânerului care solicită API-ul roboților și vom
+
+00:06:23.600 --> 00:06:33.400
+spune aici că primul lucru pe care trebuie să-l facem trebuie să trecem expedierea la funcția din
+
+00:06:33.400 --> 00:06:42.480
+nou Mi-am amintit expedierea aici bine dacă am face-o fără aceasta, așa că hai să-l testăm.
+
+00:06:42.600 --> 00:06:53.960
+Dacă execut acțiunile xpect dot dot robot de acțiune și cred că este ceea ce se numeste roboți de cerere și lăsăm-l
+
+00:06:53.960 --> 00:07:04.070
+la acest lucru și să spunem doar că ne așteptăm ca tipul de acțiune să aibă cereri de a
+
+00:07:09.670 --> 00:07:13.590
+cere robot în așteptare și sarcină utilă.
+
+00:07:13.600 --> 00:07:21.990
+Dacă ne uităm la acțiunile noastre, nu trimitem nicio sarcină utilă, așa că putem merge mai departe și lăsăm asta așa
+
+00:07:21.990 --> 00:07:22.950
+cum este.
+
+00:07:23.070 --> 00:07:27.310
+Dacă salvez încă o cerere de roboți eșuat
+
+00:07:30.650 --> 00:07:36.390
+și acolo te duci primesc o eroare de eroare de tip.
+
+00:07:36.390 --> 00:07:47.120
+Dispeceratul nu este o funcție, deoarece amintiți-vă cu codul asincron pe care trebuie să trecem această funcție de expediere pentru a rula efectiv
+
+00:07:47.960 --> 00:07:57.070
+acest lucru și am folosit pentru middleware thunk pentru ca noi să facem acest lucru dacă vă amintiți indexate.
+
+00:07:57.190 --> 00:08:04.060
+Da, avem middleware-ul thunk și aici cum facem acest lucru.
+
+00:08:04.470 --> 00:08:07.360
+Ei bine, există un pachet special pe care îl putem folosi aici.
+
+00:08:07.530 --> 00:08:11.250
+Permiteți-mi să ieșesc din asta, fă-o puțin mai mare.
+
+00:08:12.240 --> 00:08:18.890
+Să clarificăm că putem instala un pachet numit magazinul redux și amintim că
+
+00:08:22.310 --> 00:08:30.170
+acest lucru ne oferă acces la un magazin fals pe care îl putem folosi pentru testare.
+
+00:08:30.480 --> 00:08:37.060
+Deci haideți să facem și PM instalarea liniuță dash în condiții de siguranță.
+
+00:08:37.370 --> 00:08:53.150
+Def și acum avem acces la acest magazin fals și modul în care îl putem folosi este dacă mă duc aici și spun importul configura magazin și
+
+00:08:54.610 --> 00:09:00.780
+încă o dată acest lucru este tot în documentația lor pentru
+
+00:09:00.780 --> 00:09:06.340
+pachetul pe care doriți să utilizați magazin redox maake.
+
+00:09:06.650 --> 00:09:16.210
+De asemenea, dorim să importim middleware-ul thunk din pachetul redox care, dacă vă
+
+00:09:19.030 --> 00:09:27.350
+aduceți aminte că deja avem în indexul nostru nu face jazz.
+
+00:09:27.450 --> 00:09:35.460
+Și ultimul lucru pe care trebuie să-l facem să ne asigurăm că este aliniat corect este să configurați și să creați
+
+00:09:35.550 --> 00:09:41.200
+acest magazin, astfel încât să putem pur și simplu să spunem Konst magazin blocat.
+
+00:09:42.700 --> 00:09:43.250
+Este
+
+00:09:45.900 --> 00:09:55.500
+egal cu configurarea magazinului blocat și reconfigurați-l oferindu-i unele proprietăți dintre care una dintre ele este middleware-ul pe care îl
+
+00:09:55.500 --> 00:09:58.890
+vom folosi care va fi middleware-ul Thankx.
+
+00:09:58.890 --> 00:10:04.280
+Deci, uneori, cel mai probabil veți adăuga acest lucru într-un fișier de testare.
+
+00:10:04.290 --> 00:10:11.280
+Pentru moment o voi păstra aici pentru că avem doar un fișier de acțiune, dar de obicei îl poți exporta.
+
+00:10:11.280 --> 00:10:14.930
+Deci, magazinul este disponibil pentru toate testele.
+
+00:10:16.600 --> 00:10:20.970
+Deci, acum putem crea un magazin
+
+00:10:24.790 --> 00:10:29.940
+egal cu magazinul maake și am fost pe el.
+
+00:10:30.190 --> 00:10:42.460
+Și acum pot spune că magazinul Daut expediază și păstrează că expedierea ia acțiuni cereri de puncte roboți.
+
+00:10:42.580 --> 00:10:46.740
+Așa că vom trimite această acțiune.
+
+00:10:46.870 --> 00:10:52.760
+Amintiți-vă că această acțiune este aici.
+
+00:10:52.880 --> 00:11:06.890
+Și odată ce expediem că putem face ceva de genul acțiunii Konst este egal cu a stoca acțiunile lui Daut.
+
+00:11:07.010 --> 00:11:09.850
+Și acum această acțiune va conține ceea ce avem nevoie.
+
+00:11:11.260 --> 00:11:12.900
+Permiteți-mi să consolez consola pentru a vă arăta.
+
+00:11:12.910 --> 00:11:14.050
+Consolați
+
+00:11:18.340 --> 00:11:30.200
+astfel acțiunea de jurnalizare care va conține acțiunea Să salvăm testul NPM Iran.
+
+00:11:30.230 --> 00:11:36.540
+Derulați în sus și am o eroare de jurnal consola aici.
+
+00:11:36.590 --> 00:11:44.280
+Configurați magazinul de configurare Mock trebuie să configurați magazinul Haake aici.
+
+00:11:44.290 --> 00:11:49.320
+În regulă, vedem că expedierea nu este o funcție.
+
+00:11:49.390 --> 00:11:57.470
+Acum, de ce este asta și acest lucru este ceva pe care l-ați observat în timp ce privim acțiunea.
+
+00:11:57.710 --> 00:12:04.960
+J. S. S-5 vă amintiți că redux mulțumesc se așteaptă ca o funcție să fie returnată.
+
+00:12:05.410 --> 00:12:13.750
+Și, deși programul nostru funcționează așa cum este acum, în mod ideal, vrem să ne întoarcem la câinele de sus.
+
+00:12:13.740 --> 00:12:14.280
+Da.
+
+00:12:17.270 --> 00:12:21.590
+Vedeți aici și asta este ceva despre care am vorbit înainte de secțiunea redux.
+
+00:12:21.590 --> 00:12:28.520
+Vedeți aici că dăm doar expedierea la roboții cererii noastre.
+
+00:12:28.940 --> 00:12:38.110
+Dar modul în care lucrează Thankx este că vrem să ne asigurăm că trimitem ca acesta să execute funcția din interiorul
+
+00:12:38.110 --> 00:12:47.140
+acestuia, astfel încât să putem rula funcția de expediere a dispecerizării la fel cum avem în testele noastre aici și
+
+00:12:47.140 --> 00:12:50.900
+acțiunile cer roboți și dorim să expediem acea.
+
+00:12:51.010 --> 00:12:55.280
+În caz contrar, ar trebui să facem magazin Daut dispecerat Midhir, care este cam urât.
+
+00:12:55.360 --> 00:13:01.870
+Încă o dată, să reparăm că tot ce trebuie să facem este în acțiuni, pentru că dacă
+
+00:13:01.870 --> 00:13:07.560
+îți amintești de Apogee Da, am trimis acum și trebuie să alergem roboții.
+
+00:13:07.630 --> 00:13:16.090
+Asadar, vom avea o functie in interiorul unei functii si dorim sa ne asiguram ca aceasta functioneaza si
+
+00:13:16.090 --> 00:13:16.660
+ea.
+
+00:13:16.660 --> 00:13:19.060
+Deci am de gând să mă întorc și să fac
+
+00:13:26.170 --> 00:13:28.290
+NPM începe să lumineze și totul funcționează.
+
+00:13:28.730 --> 00:13:35.090
+Dar acum suntem capabili să susținem testele mai bine și testul PM să revină
+
+00:13:38.210 --> 00:13:42.650
+la testele noastre și vedem că unul nu reușește.
+
+00:13:44.130 --> 00:13:49.630
+Avem un tip de cereri de robot în așteptarea că ne-am așteptat, dar în schimb avem o funcție.
+
+00:13:51.590 --> 00:13:59.830
+Și dacă logăm acțiunile, vedem că avem un tip de acțiune de așteptare a robotului pe care îl primim.
+
+00:13:59.970 --> 00:14:04.220
+Și asta pentru că puteți vedea că acțiunea întoarce o matrice.
+
+00:14:04.320 --> 00:14:15.170
+Și vrem obiectul acțiunii în perspectivă, pentru că nu mai trebuie să executăm această acțiune.
+
+00:14:15.170 --> 00:14:23.560
+Totul este rulat aici și putem obține acțiunile pe care putem să le spunem doar acțiunii xpect
+
+00:14:26.480 --> 00:14:34.320
+primul element din matricea care urmează să fie rulat și uităm că totul funcționează.
+
+00:14:34.500 --> 00:14:37.650
+Și știu că acest lucru poate deveni puțin confuz.
+
+00:14:37.710 --> 00:14:42.120
+Și oricând încerci lucruri asincrone, poate fi destul de dificil.
+
+00:14:42.300 --> 00:14:50.670
+Dar tot ce am facut a fost crearea unui magazin fals care a avut middleware-ul thunk astfel incat
+
+00:14:51.120 --> 00:14:58.830
+acesta asteapta pentru orice functii care sunt returnate dintr-o actiune, caz in care am facut cu
+
+00:14:58.830 --> 00:15:10.510
+actiunile noastre cererea de roboti pentru ca vedeti aici ca fiecare face o actiune care are o expediere iar acum această expediere primește roboții în
+
+00:15:10.510 --> 00:15:14.890
+mod automat cererile propuse că va primi acțiunile.
+
+00:15:14.890 --> 00:15:17.070
+Și pentru că dacă mergem la acțiunea noastră.
+
+00:15:17.230 --> 00:15:17.760
+Da.
+
+00:15:17.770 --> 00:15:26.970
+Primul lucru pe care îl expediem este acțiunea în așteptare pe care o primim la acțiune zero.
+
+00:15:27.060 --> 00:15:32.270
+Chemată acțiunea așteptată a robotilor în așteptare.
+
+00:15:32.280 --> 00:15:32.940
+In regula.
+
+00:15:32.940 --> 00:15:39.570
+Deci, cum să testați succesul robotului de cerere și să cereți roboții să nu reușească.
+
+00:15:39.900 --> 00:15:45.060
+Și aceasta este o mică provocare pe care o voi lăsa pentru tine să
+
+00:15:45.060 --> 00:15:55.130
+decideți ce să faceți pe baza a ceea ce am învățat despre testele asincrone și, de asemenea, ceea ce am învățat despre batjocorirea reduxului nostru și
+
+00:15:55.130 --> 00:15:57.430
+aceasta este o problemă dificilă.
+
+00:15:57.440 --> 00:16:04.550
+Deci, utilizați resursele pe care le aveți la îndemână Internetul Google stochează tot ceea ce puteți pentru a încerca să găsiți
+
+00:16:04.550 --> 00:16:08.810
+acest lucru, pentru că asta este tot ceea ce înseamnă testare.
+
+00:16:08.810 --> 00:16:17.780
+Testarea este uneori foarte simplă atunci când aveți componente sau funcții pur funcționale sau ar putea fi cu adevărat dificil
+
+00:16:17.780 --> 00:16:23.160
+atunci când aveți toate aceste dependențe pe care le efectuați testele.
+
+00:16:23.720 --> 00:16:26.130
+Dar fiecare situație este diferită.
+
+00:16:26.210 --> 00:16:33.290
+Și din fericire pentru noi, cu toate aceste resurse online, puteți să-l dați seama, atâta timp cât înțelegeți cum
+
+00:16:33.290 --> 00:16:39.510
+funcționează lucrurile și ce înseamnă erorile care, ca dezvoltator senior, este cel mai important lucru.
+
+00:16:39.620 --> 00:16:44.080
+Ei nu cunosc fiecare sintaxă dintr-o bibliotecă și cunosc toată documentația.
+
+00:16:44.120 --> 00:16:50.770
+Ei înțeleg doar cum funcționează lucrurile sub capotă, astfel încât atunci când apare problema, ei o pot rezolva.
+
+00:16:52.050 --> 00:16:58.960
+În cele din urmă, am vrut să vă arăt două lucruri care te pot ajuta sau cred că sunt minunate.
+
+00:16:58.980 --> 00:17:07.620
+Ori de câte ori faceți teste asincrone, prima este o bibliotecă numită bate și bate este pur și simplu un
+
+00:17:07.640 --> 00:17:08.600
+pachet gol.
+
+00:17:08.640 --> 00:17:16.190
+Puteți instala și puteți vedea aici că putem pretinde că facem un alcool.
+
+00:17:16.380 --> 00:17:25.080
+Putem face o solicitare de obținere a unui punct final și putem răspunde în mod automat cu ceea ce dorim.
+
+00:17:25.200 --> 00:17:32.240
+Putem spune că acest răspuns a avut un statut de 200 și ne-a dat numele de utilizator și adresa de e-mail.
+
+00:17:32.610 --> 00:17:40.630
+Iar acest lucru te pregătește foarte bine pentru testele asincrone odată ce te afli adânc în teste, mai ales când începi
+
+00:17:40.630 --> 00:17:42.220
+să lucrezi cu API.
+
+00:17:43.030 --> 00:17:48.970
+Super Test este unul dintre instrumentele mele preferate, pur și simplu prin importul de teste super, ca aici.
+
+00:17:49.060 --> 00:17:57.880
+Și avem cererea pe care o poate solicita să spunem o aplicație expresă și puteți face toate aceste cuvinte cum ar
+
+00:17:58.120 --> 00:18:05.860
+fi difuzarea primiți și așteptați un tip de conținut și un statut și o mulțime de lucruri.
+
+00:18:05.890 --> 00:18:13.170
+Acum, acest lucru este dincolo de sfera de aplicare a acestui curs și este ceva pe care puteți să aruncați o privire la ai mai
+
+00:18:13.210 --> 00:18:19.240
+multe și mai mult în testare, dar doar să înțeleagă că există tone de instrumente acolo pentru tine de a
+
+00:18:19.240 --> 00:18:21.750
+utiliza pentru a scrie curat frumos teste frumoase.
+
+00:18:22.840 --> 00:18:24.420
+Ne vedem în următorul.
+
+00:18:24.430 --> 00:18:24.960
+Pa! Pa.

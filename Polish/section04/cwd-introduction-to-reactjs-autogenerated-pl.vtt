@@ -1,0 +1,433 @@
+﻿WEBVTT
+
+00:00:00.960 --> 00:00:07.520
+Dobra robota sprawiająca, że tak wiele rzeczy będzie coraz ciekawiej zaczynało się w tej sekcji,
+
+00:00:07.760 --> 00:00:15.470
+ponieważ teraz uczymy się prawdziwych narzędzi, z których korzystają prawdziwe firmy, a które zatrudnimy w 2018 r., A
+
+00:00:15.500 --> 00:00:23.490
+rozwój stanie się o wiele szybszy, ponieważ " ponownie wykorzystujemy te narzędzia, aby szybciej i lepiej budować witryny internetowe.
+
+00:00:23.490 --> 00:00:28.670
+Porozmawiajmy więc o ponownym działaniu. Co mamy, zanim zaczniemy działać.
+
+00:00:28.780 --> 00:00:36.840
+Jak już wspomniałem wcześniej, mieliśmy Jake'a, Jake'a, który był, jak pamiętacie, bardzo pilny kod
+
+00:00:36.840 --> 00:00:41.090
+pisania był jak mieszanie składników sekwencyjnie.
+
+00:00:41.220 --> 00:00:44.420
+Jeśli tak się stanie, zrób to, a następnie zrób to.
+
+00:00:44.430 --> 00:00:50.020
+Ale jeśli tak się stanie, zrób to, co powoduje wiele niespójności.
+
+00:00:50.250 --> 00:00:57.990
+A jeśli pamiętasz sekcję manipulacji DOM, to naprawdę bardzo trudne i nieustannie śledzenie
+
+00:00:57.990 --> 00:01:06.230
+tego, co się zmieniło, a co zmienić to ogromny bałagan i tworzy bardzo powolny rozwój.
+
+00:01:06.690 --> 00:01:12.780
+A ponieważ twoja strona staje się coraz bardziej złożona, bardzo trudno jest ją skalować, co sprawia,
+
+00:01:12.780 --> 00:01:16.290
+że zespołom programistów bardzo trudno jest nią zarządzać.
+
+00:01:17.400 --> 00:01:24.000
+Teraz re-act został stworzony na Facebooku, ponieważ wiesz, że Facebook to całkiem spora aplikacja i wiele rzeczy musi się
+
+00:01:24.000 --> 00:01:25.620
+wydarzyć, aby działała dobrze.
+
+00:01:25.770 --> 00:01:33.180
+Mają ten problem, a twórca reaguje jako sposób rozwiązania tego problemu i może mieć narzędzie, które pozwala mu tworzyć
+
+00:01:33.240 --> 00:01:39.360
+strony internetowe w ładny przewidywalny sposób, dzięki czemu wielu programistów może pracować nad nim w tym
+
+00:01:39.360 --> 00:01:40.580
+samym czasie.
+
+00:01:42.370 --> 00:01:45.210
+I lubię używać analogii do automatu do chleba.
+
+00:01:46.290 --> 00:01:47.900
+Korzystanie z ponownego aktu jest właśnie takie.
+
+00:01:47.910 --> 00:01:58.910
+Po prostu wrzucasz składniki i reaguje, robiąc całą magię pod maską i uruchamia stronę internetową.
+
+00:01:59.020 --> 00:02:06.980
+Jest więc bardzo niezawodny i bardzo spójny, a robi to naprawdę dobrze i jest to pogląd,
+
+00:02:07.550 --> 00:02:17.050
+który sprawia, że nasze strony internetowe zmieniają się DOM w przewidywalny sposób, który jest łatwy do skalowania i łatwy w
+
+00:02:17.050 --> 00:02:17.780
+zarządzaniu.
+
+00:02:18.610 --> 00:02:24.640
+A piękno ponownego aktu jest takie, ponieważ jest to po prostu widok, który niekoniecznie oznacza, że jest tylko
+
+00:02:24.640 --> 00:02:25.520
+dla przeglądarek.
+
+00:02:25.960 --> 00:02:32.150
+W rzeczywistości reaktor może być używany z urządzeniami mobilnymi do budowania natywnych aplikacji.
+
+00:02:32.170 --> 00:02:40.120
+Jest on używany w aplikacjach wirtualnej rzeczywistości, w których możesz tworzyć aplikacje komputerowe, a gdziekolwiek chcesz, aby dobrze reagował, możesz z
+
+00:02:40.210 --> 00:02:41.260
+niego korzystać.
+
+00:02:41.290 --> 00:02:48.400
+A duże firmy, o których wspomniałem wcześniej, reagują na Facebooka i Instagram, a użytkownicy Netflix reagują za każdym razem,
+
+00:02:48.400 --> 00:02:52.700
+gdy przegląda się wybory filmowe. Cóż, to ponowne używanie pod maską.
+
+00:02:52.990 --> 00:02:57.100
+To bardzo przydatne narzędzie i bardzo duże zapotrzebowanie.
+
+00:02:57.160 --> 00:03:03.310
+Dlatego jestem podekscytowany rozmową o tym, jak zareagować i nauczyć cię tej cennej umiejętności w tej sekcji.
+
+00:03:03.310 --> 00:03:09.340
+Teraz, aby zrozumieć re-act, jest kilka rzeczy, które chcemy przejść i są to
+
+00:03:09.340 --> 00:03:14.760
+zasady, które są bardzo cenne, czego nauczyli się przez lata twórcy.
+
+00:03:14.770 --> 00:03:21.320
+Jednym z nich jest myślenie w komponentach do tego momentu, że właśnie zbudowaliśmy strony internetowe.
+
+00:03:21.570 --> 00:03:27.170
+Wszystko to tylko jeden plik javascript jeden plik CSSA jeden ASTM Alpha.
+
+00:03:27.330 --> 00:03:34.310
+Ale czy nie byłoby dobrze, gdyby sieć była siecią tych małych komponentów.
+
+00:03:34.320 --> 00:03:41.130
+Pomyśl o nich jako o klockach Lego, gdzie każdy tworzy konkretny klocek Lego, a po prostu
+
+00:03:41.130 --> 00:03:44.650
+połącz te klocki Lego, aby stworzyć swoją stronę.
+
+00:03:44.730 --> 00:03:50.850
+Taki jest pomysł, aby na nowo ustanowić, wykorzystajmy to jako przykład.
+
+00:03:50.850 --> 00:04:00.750
+Najpierw masz atomy, które jak widać tutaj są ikonami oraz małymi i podzielnymi elementami na twojej
+
+00:04:00.750 --> 00:04:03.300
+stronie, takimi jak obrazy.
+
+00:04:03.420 --> 00:04:07.720
+Istnieje podatek i dzielisz je na atomy.
+
+00:04:07.740 --> 00:04:15.990
+Stamtąd tworzą się molekuły lub łączą się atomy o podobnej funkcjonalności, takie jak pasek nawigacyjny
+
+00:04:15.990 --> 00:04:16.960
+tutaj.
+
+00:04:17.040 --> 00:04:25.220
+Łączycie poszczególne atomy z pewną funkcjonalnością, a następnie macie znowu trochę większe cząsteczki niż
+
+00:04:25.220 --> 00:04:29.420
+molekuły, które łączą się w większą funkcjonalność.
+
+00:04:29.510 --> 00:04:31.790
+I wreszcie masz szablony.
+
+00:04:31.790 --> 00:04:37.900
+Kombinacja tych organizmów, aby pokazać, jak powinna wyglądać Twoja aplikacja lub witryna.
+
+00:04:37.910 --> 00:04:43.050
+Wreszcie masz strony, które są stroną Twojej aplikacji.
+
+00:04:43.290 --> 00:04:52.600
+A jeśli myślisz o komponentach, obraz ten pokazuje, że możesz zbudować małe, małe komponenty, które możesz
+
+00:04:53.140 --> 00:04:58.130
+ponownie wykorzystać i umieścić w różnych częściach strony.
+
+00:04:58.210 --> 00:05:05.110
+Na przykład ten szkielet tutaj, jeśli zbuduję komponent "re-act", który jest kręgosłupem, mogę teraz użyć go
+
+00:05:05.110 --> 00:05:06.550
+na wielu stronach.
+
+00:05:06.550 --> 00:05:13.030
+Nie muszę też przepisywać kodu, jeśli chcę, aby pasek nawigacji był używany w różnych obszarach
+
+00:05:13.030 --> 00:05:13.540
+aplikacji.
+
+00:05:13.540 --> 00:05:19.640
+Znowu nie muszę przepisywać kodu, który piszę na raz, i mogę go ponownie wykorzystać w rzeczywistości
+
+00:05:19.660 --> 00:05:20.970
+nawet udostępniony światu.
+
+00:05:21.250 --> 00:05:28.820
+I ten pomysł komponentów reaguje na Maisy, ponieważ tutaj mam stronę internetową, która ma trzy komponenty zbudowane
+
+00:05:28.840 --> 00:05:32.240
+przez kogoś i możemy je ponownie wykorzystać.
+
+00:05:32.440 --> 00:05:36.160
+I to nie tylko CSX i shemale.
+
+00:05:36.280 --> 00:05:42.280
+Ale prawdziwa funkcjonalność, taka jak paski nawigacyjne i formularze podpisywania.
+
+00:05:42.280 --> 00:05:51.400
+Mogę po prostu pobrać ten składnik Riak i dołączyć go do mojej strony internetowej, a ze względu na sposób, w jaki reaguje na
+
+00:05:51.400 --> 00:05:56.640
+strukturę, tak naprawdę nie musi wiedzieć o reszcie strony internetowej jest tylko
+
+00:05:56.830 --> 00:06:02.280
+jego własny blok lokalny, który działa sam przez zmniejszenie zależności od inne części witryny.
+
+00:06:02.530 --> 00:06:06.340
+Mogę po prostu podłączyć to gdzie chcę.
+
+00:06:06.350 --> 00:06:10.740
+Inną ważną koncepcją z React jest idea jednokierunkowego przepływu danych.
+
+00:06:12.340 --> 00:06:19.150
+Najlepszym sposobem, aby to opisać, jest oglądanie struktury tego drzewa, w której widzimy, że mamy
+
+00:06:19.150 --> 00:06:25.060
+rodzica, a potem dzieci mają własne dzieci i te dzieci mają własne
+
+00:06:25.060 --> 00:06:25.570
+dzieci.
+
+00:06:26.600 --> 00:06:34.190
+I pomysł z reaktorami, że dane przepływają od góry do dołu, a nigdy odwrotnie, jeśli
+
+00:06:34.520 --> 00:06:38.310
+te czerwone nazywajmy je zmiennymi komponentami.
+
+00:06:38.480 --> 00:06:44.120
+W takim razie tylko ich dzieci wiedzą o zmianie.
+
+00:06:44.120 --> 00:06:50.570
+Rodzice tak naprawdę nie przejmują się zmianą, ponieważ kierunek przepływu danych jest zawsze w dalszym
+
+00:06:50.570 --> 00:06:51.420
+ciągu.
+
+00:06:51.440 --> 00:06:58.690
+Więc wracamy do idei komponentów, jeśli mamy stronę zbudowaną na komponentach
+
+00:06:58.930 --> 00:07:06.270
+i to była strona, a były to organizmy, a następnie cząsteczki niż atomy.
+
+00:07:06.330 --> 00:07:11.050
+W takim przypadku zmieniają się czerwone komponenty, a następnie tylko te znajdujące się poniżej.
+
+00:07:11.070 --> 00:07:18.240
+Jak widać tutaj na niebiesko, znamy tę zmianę i na tej podstawie będą działać odpowiednio i zmieniać
+
+00:07:18.240 --> 00:07:19.120
+się.
+
+00:07:19.290 --> 00:07:25.770
+Teraz bez problemu, trudno jest zrozumieć tę koncepcję, ale uwierz mi, że jest
+
+00:07:25.770 --> 00:07:29.450
+to bardzo ważna koncepcja, którą wprowadzono ponownie.
+
+00:07:29.460 --> 00:07:35.820
+Tworzy naprawdę niezły kod bezbłędnie i jest to idea, że
+
+00:07:35.850 --> 00:07:41.250
+zrozumiesz coraz więcej, gdy zaczniemy kodować i reagować.
+
+00:07:41.490 --> 00:07:49.560
+Następną rzeczą jest pomysł wirtualnego psa, który wiesz, co Dahmus jest modelem obiektu dokumentu.
+
+00:07:49.680 --> 00:07:54.900
+Dowiedzieliśmy się również, że jedną z najważniejszych rzeczy, jako deweloper, jest zminimalizowanie
+
+00:07:54.900 --> 00:08:00.960
+ilości głupich manipulacji, które wykonujemy, ponieważ przeglądarki internetowe muszą naprawdę ciężko pracować, aby to
+
+00:08:00.960 --> 00:08:05.240
+osiągnąć, i zmniejsza to wydajność strony internetowej oraz wzrasta.
+
+00:08:05.250 --> 00:08:11.110
+Ale myślę, że ten obraz pokazuje, co wcześniej reaguje naprawdę dobrze.
+
+00:08:11.150 --> 00:08:15.800
+Byliśmy malarzami, którym powiedzieliśmy akademiku, co dokładnie robić.
+
+00:08:15.860 --> 00:08:23.130
+Usuń ten element, a następnie dodaj go, a następnie dodaj i pomaluj w ten sposób, reagując.
+
+00:08:23.150 --> 00:08:29.940
+Mamy to ponownie kupione, a Riak z powrotem tworzy coś, co nazywa się Virtual
+
+00:08:30.020 --> 00:08:36.970
+Virtual Virtual Dom to tylko obiekt javascript i ten obiekt javascript, który właśnie opisuje naszą stronę.
+
+00:08:37.260 --> 00:08:45.180
+Obecny stan witryny sieci Web, a my po prostu dajemy temu obiektowi możliwość reagowania, a następnie
+
+00:08:45.270 --> 00:08:53.160
+reagowania przez niego, automatycznie wprowadza zmiany w Domie i maluje obraz w najbardziej optymalny sposób.
+
+00:08:53.190 --> 00:08:56.420
+Więc po prostu mówimy, że to jest przedmiot.
+
+00:08:56.580 --> 00:09:02.910
+Tego właśnie chcemy, a DOM i osoba, której się spodziewamy, zajmują się manipulacją Domem.
+
+00:09:02.910 --> 00:09:10.560
+Pamiętaj, jak denerwujące było robienie szczęścia Quesada dla wszystkich, a następnie pobieranie alimentów według id, a następnie
+
+00:09:10.710 --> 00:09:14.390
+robienie tych wszystkich programów obsługi zdarzeń zareaguje.
+
+00:09:14.400 --> 00:09:22.380
+Z drugiej strony wirtualna Dom jest po prostu kopią domeny w obiekcie javascript i reaguje pod maską, po
+
+00:09:22.380 --> 00:09:28.860
+prostu zmienia widok i dlatego jest w stanie pracować poza przeglądarkami i można używać rzeczy
+
+00:09:28.860 --> 00:09:33.740
+takich jak VR i urządzenia mobilne, ponieważ reagują jako maszyna.
+
+00:09:33.750 --> 00:09:35.330
+A co Camus jest włączony.
+
+00:09:35.350 --> 00:09:38.910
+Możemy zmienić płótno tak, jak chcemy.
+
+00:09:38.910 --> 00:09:43.620
+W końcu ponownie działać ma wielki ekosystem.
+
+00:09:43.700 --> 00:09:49.460
+Jest to prawdopodobnie jeden z największych ekosystemów i Javascript w tej chwili i jest tak
+
+00:09:49.460 --> 00:09:56.760
+wiele narzędzi, które działały z ponownym aktem, ponieważ społeczność programistów jest tak duża, że każdy problem, który tam masz, jest
+
+00:09:56.850 --> 00:10:02.200
+najprawdopodobniej szansą, że ktoś inny ma miał to i opublikował go w Internecie i
+
+00:10:02.200 --> 00:10:03.560
+można znaleźć rozwiązania.
+
+00:10:03.630 --> 00:10:09.730
+Możesz go znaleźć w paczkach reagowania i 21:00 możesz go użyć z Noadem w baseballu, który możesz
+
+00:10:09.730 --> 00:10:10.820
+użyć z nim.
+
+00:10:10.960 --> 00:10:17.980
+To po prostu naprawdę dobry ekosystem, który wykorzystuje najnowszą technologię javascript do tworzenia stron internetowych
+
+00:10:17.980 --> 00:10:20.440
+w naprawdę ładny elegancki sposób.
+
+00:10:20.440 --> 00:10:26.700
+Teraz jedna rzecz, o której chcę cię ostrzec w tej sekcji, zobaczymy kod taki jak ten.
+
+00:10:27.520 --> 00:10:30.050
+Na początku będzie to bardzo dziwne.
+
+00:10:30.220 --> 00:10:34.860
+To jest tak samo, gdy patrzysz na javascript pierwszą kropkę.
+
+00:10:34.980 --> 00:10:37.350
+Wydawał się zupełnie nowym światem.
+
+00:10:37.350 --> 00:10:43.080
+To będzie, gdy po raz pierwszy spojrzysz na to, ale zaufasz mi wiedząc, co wiesz o javascript, to
+
+00:10:43.170 --> 00:10:44.640
+staje się naprawdę łatwe.
+
+00:10:44.670 --> 00:10:51.710
+Masz klasy, które rozszerzają komponent Riak i tak budujemy komponenty.
+
+00:10:51.930 --> 00:10:59.970
+Znów mamy konstruktor, który widzieliśmy i zaawansowane obiekty, a następnie każda klasa ma obowiązkową funkcję renderowania, po
+
+00:11:00.060 --> 00:11:03.840
+prostu powiesz, co ten zegar powinien wyrenderować.
+
+00:11:03.840 --> 00:11:06.930
+I jak widać, wygląda na to, że jest w nim samiec.
+
+00:11:07.350 --> 00:11:11.970
+Nie jest to dokładnie mężczyzna, ale składnia jest bardzo podobna.
+
+00:11:11.970 --> 00:11:16.420
+Tak więc nawet patrząc na to widać, że ten składnik zegara.
+
+00:11:16.440 --> 00:11:20.110
+Znów ten blok logo zwraca tylko Hello World.
+
+00:11:20.130 --> 00:11:23.640
+Tag H-1 z H2, który mówi, że jest.
+
+00:11:23.640 --> 00:11:30.630
+A wtedy, gdy nadejdzie czas tylko po to, by dać wam głowę, usłyszycie słowa takie jak rekwizyty
+
+00:11:30.750 --> 00:11:36.540
+i komponenty stanu i Riaka, ale to tylko składnia języka, więc nauczycie się.
+
+00:11:36.810 --> 00:11:39.490
+A kiedy się do tego przyzwyczaisz, to jest całkiem łatwe.
+
+00:11:39.840 --> 00:11:43.690
+Więc nie martw się, to wszystko ma sens.
+
+00:11:43.800 --> 00:11:49.120
+Pod koniec tego wiesz, że zbudujemy całkiem fajny OP.
+
+00:11:49.300 --> 00:11:57.120
+Nazywają to przyjaciółmi Brabo, a my zamierzamy zbudować tę aplikację, która będzie dobrze przeszukiwać znajomych robotów i
+
+00:11:57.630 --> 00:11:59.670
+znaleźć ich dane kontaktowe.
+
+00:11:59.730 --> 00:12:02.970
+I jak widać, aktualizacje są aktualizowane na żywo.
+
+00:12:03.240 --> 00:12:04.680
+Jest super szybki.
+
+00:12:04.890 --> 00:12:06.400
+Jest responsywny.
+
+00:12:06.750 --> 00:12:08.540
+Będzie dużo zabawy.
+
+00:12:08.640 --> 00:12:14.920
+I będziemy budować to dość szybko, aby pokazać, jak potężna jest reakcja.
+
+00:12:14.970 --> 00:12:15.470
+W porządku.
+
+00:12:15.510 --> 00:12:17.790
+Jestem bardzo podekscytowany, aby dostać się do tej sekcji.
+
+00:12:17.790 --> 00:12:19.350
+Będziesz się świetnie bawić.
+
+00:12:19.470 --> 00:12:20.970
+Do zobaczenia w następnym.
+
+00:12:21.000 --> 00:12:21.270
+PA pa.

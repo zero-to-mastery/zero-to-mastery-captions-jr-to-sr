@@ -1,0 +1,220 @@
+﻿WEBVTT
+
+00:00:01.310 --> 00:00:08.920
+Cu bazele de date există o tona dintre ele și chiar și în cursul anterior am acoperit diferențele dintre bazele de date
+
+00:00:09.070 --> 00:00:16.330
+relaționale și nu există baze de date relaționale bazate pe bazele de date Eski Well care au însemnat că a trebuit
+
+00:00:16.330 --> 00:00:24.460
+să definiți schemele sau modul în care baza dvs. de date arăta în prealabil și ați reușit să construiți baze de date complexe în
+
+00:00:24.490 --> 00:00:25.270
+acest fel.
+
+00:00:25.780 --> 00:00:29.220
+Și asta este ceea ce postscript-urile reprezintă o bază de date relațională.
+
+00:00:29.380 --> 00:00:35.170
+Este o bază de date care ne permite să avem diferite mese care sunt legate unul de
+
+00:00:35.170 --> 00:00:38.980
+celălalt și definim acele relații cu ceea ce numim scheme.
+
+00:00:39.080 --> 00:00:47.400
+Și din nou folosim postscript-urile ca o bază de date relațională pentru a ține utilizatorii și parolele în braina noastră inteligentă.
+
+00:00:47.490 --> 00:00:53.310
+Dar există un motiv pentru care există atât de multe baze de date, încât există baze de date diferite pentru a
+
+00:00:53.310 --> 00:00:54.400
+optimiza diferite lucruri.
+
+00:00:54.450 --> 00:01:04.140
+Amazon Netflix Facebook magazinul Alibaba Joh's Donut are toate nevoile de baze de date diferite pentru a satisface toate aceste
+
+00:01:04.140 --> 00:01:04.840
+nevoi.
+
+00:01:04.980 --> 00:01:07.990
+O multitudine de baze de date pot fi găsite online.
+
+00:01:08.490 --> 00:01:16.760
+Și astăzi vom vorbi despre una dintre bazele de date cele mai iubite și folosite, numite re-editează și nu spun nici
+
+00:01:16.910 --> 00:01:19.310
+o salvare toată baza de date.
+
+00:01:19.370 --> 00:01:24.310
+Deci, în acest fel putem învăța un pic de bază de date relațională cu postgresql, precum și
+
+00:01:24.320 --> 00:01:30.940
+să știm cu toții de salvare cu ochii roșii roșii, ceea ce noi numim o codificare Noas în baza de date a memoriei.
+
+00:01:31.250 --> 00:01:36.640
+Și până la sfârșitul secțiunii aceste cuvinte vor însemna ceva pentru tine.
+
+00:01:36.700 --> 00:01:37.760
+Deci sa începem.
+
+00:01:39.610 --> 00:01:46.070
+Berettas este o bază de date open source care este adesea folosită pentru a construi aplicații web scalabile
+
+00:01:46.070 --> 00:01:47.270
+cu performanțe ridicate.
+
+00:01:47.270 --> 00:01:55.790
+Multe companii utilizează rente Acum, bazele de date Noah calificate pot avea multe tipuri diferite.
+
+00:01:55.840 --> 00:01:59.410
+Aveți lucruri cum ar fi bazele de date ale bibliotecilor de documente.
+
+00:01:59.410 --> 00:02:02.660
+S-ar putea să fi auzit despre Mongo D-B sau Koshti.
+
+00:02:02.770 --> 00:02:05.270
+Acestea sunt într-adevăr foarte bune la stocarea documentelor.
+
+00:02:05.290 --> 00:02:12.580
+Deci, dacă vă gândiți la profilurile conectate în care profilul dvs. are toate aceste câmpuri și categorii
+
+00:02:12.580 --> 00:02:17.160
+diferite și un singur utilizator are acel document ca datele.
+
+00:02:17.200 --> 00:02:20.880
+În acest caz bine, acestea sunt într-adevăr foarte bune.
+
+00:02:21.030 --> 00:02:27.560
+Aveți lucruri ca o coloană largă cu Cassandra și lucruri precum bazele de date Graph pentru Nio pentru Jay.
+
+00:02:27.660 --> 00:02:35.680
+Dacă aveți, de exemplu, o aplicație social media care descrie un grafic ca o conexiune între utilizatorii săi.
+
+00:02:35.850 --> 00:02:43.490
+Acum, roșu S este ceea ce numim un magazin de valori cheie și această relație cheie valoare este un
+
+00:02:43.490 --> 00:02:48.380
+pic similară cu modul în care ne ocupăm de obiecte în javascript.
+
+00:02:48.380 --> 00:02:54.290
+Avem o proprietate obiect care are o valoare asociată cu ea o cheie și o valoare.
+
+00:02:55.350 --> 00:02:59.790
+Și vom trece peste modul în care vom folosi ratt în următoarele două videoclipuri.
+
+00:02:59.910 --> 00:03:07.950
+Dar singurul lucru pe care vreau să-l prezint este că este o bază de date în memorie care o face foarte
+
+00:03:07.950 --> 00:03:08.670
+rapid.
+
+00:03:09.380 --> 00:03:14.900
+Se vede citit ca este folosit pentru datele de scurtă durată în aplicațiile noastre.
+
+00:03:15.670 --> 00:03:23.500
+Și este adesea folosit cu lucruri cum ar fi sesiunile sau conturile de pagini web și în memorie înseamnă că nu
+
+00:03:23.650 --> 00:03:29.630
+aveți seturi de date mari, cum ar fi cu ceva de genul Cassandra sau Mongo D-B.
+
+00:03:29.680 --> 00:03:36.430
+Aveți mici fragmente de date atât de mici, încât să ne păstrăm în memorie.
+
+00:03:36.430 --> 00:03:38.990
+Aceasta este memoria mașinii și nu pe disc.
+
+00:03:39.040 --> 00:03:47.020
+Dacă vă amintiți memoria este ceva foarte ușor de accesat pe o mașină și discul este puțin mai
+
+00:03:47.020 --> 00:03:47.650
+lent.
+
+00:03:47.800 --> 00:03:53.260
+Puteți stoca mult mai multe informații pe disc, dar este puțin mai lent de accesat.
+
+00:03:53.270 --> 00:04:00.310
+Deci, cu rentele pe care doriți să-l utilizați atunci când aveți mici bucăți de date la care aveți nevoie de acces.
+
+00:04:00.770 --> 00:04:04.440
+Și nici tu nu-ți păsa dacă ai putea pierde o parte din acele date.
+
+00:04:06.170 --> 00:04:14.390
+Acum, chiar dacă datele se află în memorie, aceasta are nevoie de o captură instantanee din fiecare moment pentru a salva conținutul actual
+
+00:04:14.510 --> 00:04:21.190
+al bazei de date pe disc, ceea ce este minunat să se recupereze de când există opriri neașteptate.
+
+00:04:21.250 --> 00:04:26.430
+Oriunde ați citit că rulează și veți pierde doar ultimele minute de informații.
+
+00:04:27.870 --> 00:04:35.280
+Apoi, bazându-ne pe acele informații, ar trebui să folosim rattus ori de câte ori avem mici fragmente de date
+
+00:04:35.700 --> 00:04:42.570
+care nu sunt super importante, că dacă serviciul se prăbușește, vom putea reveni la un instantaneu și
+
+00:04:42.570 --> 00:04:45.480
+s-ar putea să pierdem ultimele informații.
+
+00:04:45.870 --> 00:04:49.420
+Dar sacrificăm toate acestea pentru viteza de serviciu.
+
+00:04:49.470 --> 00:04:54.270
+Este super super rapid și este foarte scalabil.
+
+00:04:55.480 --> 00:05:01.480
+Și citit ca toate celelalte baze de date are un set unic de tipuri de date pe care le poate stoca.
+
+00:05:01.780 --> 00:05:07.120
+Și vom trece prin unele dintre ele și următoarele videoclipuri și veți vedea că nu utilizează Eskew Ei
+
+00:05:07.180 --> 00:05:11.600
+bine, nu este nici o bază de date Eskew și vom vedea cum funcționează.
+
+00:05:13.570 --> 00:05:19.240
+În această secțiune ne vom obișnui cu Rattus și apoi vom veni atunci când vom vorbi
+
+00:05:19.240 --> 00:05:26.800
+despre sesiuni și JWT vom folosi de fapt rattus într-un mod de a gestiona o sesiune pentru noi, deoarece un dezvoltator
+
+00:05:26.800 --> 00:05:30.500
+senior trebuie să decidem ce instrument este potrivit pentru slujbă.
+
+00:05:30.610 --> 00:05:32.050
+Ar trebui să știm acest lucru până acum.
+
+00:05:32.260 --> 00:05:39.190
+Și, deși postscripts este uimitor atunci când aveți instrumente cum ar fi retests care pot fi într-adevăr foarte rapid pentru gestionarea de bucăți
+
+00:05:39.190 --> 00:05:45.010
+mici de date, există unele cazuri de utilizare în cazul în care ați putea dori să aibă unele informații iritis
+
+00:05:45.090 --> 00:05:49.650
+și unele informații nu sunt postscripts, în funcție de ceea ce nevoile tale sunt.
+
+00:05:49.960 --> 00:05:57.470
+Și în majoritatea companiilor veți vedea că este foarte rară că o companie mare are doar un singur tip de bază de date.
+
+00:05:57.520 --> 00:06:04.990
+De cele mai multe ori au diferite baze de date în jurul valorii de toate, deoarece au diferite nevoi diferite moduri de care au nevoie pentru
+
+00:06:04.990 --> 00:06:09.290
+a citi datele și moduri diferite de care au nevoie pentru a scrie date.
+
+00:06:09.550 --> 00:06:12.730
+Și din nou pe baza acestui instrument folosesc diferite instrumente.
+
+00:06:14.070 --> 00:06:20.520
+Deci, vom învăța acea abilitate de a putea folosi diferite piese de instrumente care sunt ca baze de date cu care
+
+00:06:21.060 --> 00:06:21.860
+să lucrați.
+
+00:06:21.900 --> 00:06:26.960
+În timp ce avem bine, e timpul să începem cu Radice.
+
+00:06:26.960 --> 00:06:28.450
+Voi vedea în următorul.
+
+00:06:28.630 --> 00:06:28.910
+Buh-Pa.

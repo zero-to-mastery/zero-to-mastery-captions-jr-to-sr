@@ -1,0 +1,373 @@
+﻿WEBVTT
+
+00:00:01.570 --> 00:00:02.640
+Witamy spowrotem.
+
+00:00:02.890 --> 00:00:04.970
+Przejdźmy przez lekcję historii.
+
+00:00:05.020 --> 00:00:06.590
+Wiesz, jak bardzo je kocham.
+
+00:00:06.640 --> 00:00:10.210
+Zawsze należy zapytać, dlaczego to narzędzie zostało zbudowane.
+
+00:00:10.270 --> 00:00:16.650
+Dlaczego ludzie spędzają czas i pieniądze, tworząc je za pomocą dowolnych narzędzi, z których korzystamy.
+
+00:00:16.660 --> 00:00:25.120
+Więc zanim mieliśmy Dr. mieliśmy coś zwanego maszynami do wirtualizacji i to wszystko jest tutaj po lewej
+
+00:00:25.120 --> 00:00:25.570
+stronie.
+
+00:00:27.130 --> 00:00:35.590
+Mieliśmy narzędzia takie jak VM ware lub virtual box, a maszyny wirtualne to tak zwane
+
+00:00:36.550 --> 00:00:43.510
+środowiska piaskownicy, które zawierają pełny komputer z wirtualnym sprzętowym jądrem systemu operacyjnego.
+
+00:00:43.510 --> 00:00:49.900
+Jak widać na tym schemacie, jest tak, jakbyś mógł sobie wyobrazić, że jest to
+
+00:00:50.230 --> 00:00:55.360
+jeden komputer, a maszyna wirtualna była jak komputer na wierzchu.
+
+00:00:55.540 --> 00:01:01.730
+Tak więc aplikacja była uruchomiona w systemie operacyjnym na tym komputerze do uruchomienia na tym samym komputerze.
+
+00:01:01.780 --> 00:01:04.330
+Ale znowu kolejny system operacyjny.
+
+00:01:04.570 --> 00:01:07.590
+I widać, że było całkiem duże.
+
+00:01:07.600 --> 00:01:13.780
+Ale to pozwoliło nam rozwiązać ten problem polegający na tym, aby rzeczy
+
+00:01:13.780 --> 00:01:20.580
+działały w środowisku, które jest niebieskim środowiskiem, w tym pomarańczowym środowisku, czerwonym środowisku, w
+
+00:01:20.580 --> 00:01:28.380
+spójny i przewidywalny sposób, a ponieważ istnieją tak duże rzeczy, które miały swój własny system operacyjny
+
+00:01:28.380 --> 00:01:38.000
+i biblioteki, które czasami Zajęło kilka minut nawet uruchomienie tych aplikacji, a teraz pojawił się dokownik i zmienił pomysł, który
+
+00:01:38.060 --> 00:01:45.110
+widzisz w ciemniejszych kontenerach, które zamykają oprogramowanie w kompletnym systemie plików, który zawiera wszystko
+
+00:01:45.130 --> 00:01:50.300
+i musi działać tak, jak robiliśmy to z maszynami wirtualnymi.
+
+00:01:50.550 --> 00:01:57.760
+Posiadałeś biblioteki systemowe systemu runtime tools, które można instalować na serwerze.
+
+00:01:57.930 --> 00:02:00.320
+Możesz użyć w oknie dokowanym.
+
+00:02:00.510 --> 00:02:05.880
+I znowu to zagwarantowało, że zawsze będzie działało tak
+
+00:02:05.880 --> 00:02:16.400
+samo niezależnie od środowiska, w którym działa, teraz kontenery są lekką alternatywą dla pełnej wirtualizacji maszyn lub maszyn wirtualnych.
+
+00:02:16.400 --> 00:02:26.130
+Dlatego są zaprojektowane inaczej niż maszyny wirtualne do uruchamiania tylko pojedynczych aplikacji na każdym kontenerze.
+
+00:02:26.900 --> 00:02:35.560
+Ponieważ są one tak małe i cienkie, a jest to popularna koncepcja mikroprzedsiębiorstw, o których mówiliśmy o kontenerach,
+
+00:02:36.520 --> 00:02:43.390
+które używają systemu operacyjnego hosta, nie mają one własnego systemu operacyjnego, tak jak w przypadku
+
+00:02:43.390 --> 00:02:44.800
+maszyn wirtualnych.
+
+00:02:44.800 --> 00:02:47.270
+Korzystają z systemu operacyjnego hosta.
+
+00:02:47.860 --> 00:02:53.230
+Z tego powodu potrzebują zaledwie kilku sekund, a twoja aplikacja kontenerowa
+
+00:02:53.230 --> 00:03:00.390
+działa dużo szybciej niż z maszynami wirtualnymi, więc przy ciemniejszych kontenerach możemy mieć szybki i łatwy
+
+00:03:00.390 --> 00:03:07.500
+dostęp do uruchamiania tych małych pojedynczych aplikacji i po prostu Mają wiele z tych rzeczy, po
+
+00:03:07.500 --> 00:03:16.080
+prostu stwórz tyle pojemników, ile chcesz. Łatwo je po prostu powiększyć i rozbudować w miarę jak będziesz mieć więcej użytkowników.
+
+00:03:16.310 --> 00:03:21.320
+I właśnie wtedy zaczynasz się do takich rzeczy jak orkiestracja kontenerów, w której
+
+00:03:21.590 --> 00:03:27.910
+musisz zarządzać wszystkimi tymi kontenerami, a przy okazji, jeśli kiedykolwiek słyszałeś o Cabernecie, to właśnie to robi.
+
+00:03:30.050 --> 00:03:31.660
+Więc myślę, że mamy ten punkt przekreślony.
+
+00:03:31.730 --> 00:03:33.950
+Darker to platforma kontenerowa.
+
+00:03:34.190 --> 00:03:41.880
+W przeciwieństwie do kontenerów maszyn wirtualnych, pakuj tylko ich biblioteki i ustawienia wymagane dla twojej aplikacji.
+
+00:03:42.050 --> 00:03:48.650
+Są wydajne i lekkie, a to zapewnia, że aplikacja będzie działać tak
+
+00:03:48.650 --> 00:03:51.540
+samo wszędzie i wszędzie.
+
+00:03:51.650 --> 00:03:53.580
+Więc kontenery są dobre.
+
+00:03:53.990 --> 00:03:55.160
+Absolutnie.
+
+00:03:56.460 --> 00:04:00.860
+Teraz, kiedy to mamy, Porozmawiajmy o tym, jakie są właściwie pojemniki.
+
+00:04:00.860 --> 00:04:05.250
+W pewnym sensie rzucałem słowo R, ale tak naprawdę nie wyjaśniłem, co to jest.
+
+00:04:06.250 --> 00:04:10.530
+Cóż, kontener można objaśnić za pomocą diagramu.
+
+00:04:10.870 --> 00:04:17.980
+Najpierw mamy host, którym jest maszyna lub komputer, na którym będziemy mogli hostować nasz kontener.
+
+00:04:17.980 --> 00:04:25.870
+W tej sekcji ponownie użyjemy laptopa jako hosta lub komputera jako hosta.
+
+00:04:25.900 --> 00:04:33.640
+Teraz na górze tego hosta mamy coś, co nazywamy pojemnikiem, coś, co tworzymy razem z Dr.
+
+00:04:33.730 --> 00:04:41.000
+I na szczęście dla nas z jedną uwagą ze względu na Dharker możemy po prostu
+
+00:04:41.000 --> 00:04:48.670
+stworzyć ten kontener, aw jego wnętrzu mamy coś zwanego obrazem, a pojemnik składa się z obrazu.
+
+00:04:49.090 --> 00:04:57.910
+Widzisz obraz, którego używa lekarz, aby połączyć aplikację w samodzielny pakiet, który może mieszkać wewnątrz
+
+00:04:57.910 --> 00:04:59.140
+kontenera.
+
+00:04:59.140 --> 00:05:07.810
+Więc w tym obrazie mogę powiedzieć, że chcę serwer węzła i ten obraz jest czytany przez lekarza, ponieważ znowu jest
+
+00:05:07.840 --> 00:05:12.820
+to tylko plik i ten plik generuje ten kontener, który działa.
+
+00:05:12.820 --> 00:05:15.420
+Uwaga dla nas.
+
+00:05:15.660 --> 00:05:23.760
+Kluczową częścią tego jest to, że środowisko wewnątrz kontenera jest całkowicie odizolowane od środowiska
+
+00:05:23.850 --> 00:05:25.030
+hosta.
+
+00:05:25.110 --> 00:05:29.440
+Nie ma znaczenia, co tu uruchamiamy, dopóki ten komputer może uruchomić dokowanie.
+
+00:05:29.770 --> 00:05:36.540
+Następnie w tym kontenerze możemy mieć wszystkie biblioteki i zależności, których chcemy, aby
+
+00:05:36.810 --> 00:05:39.160
+nasz serwer Notes działał.
+
+00:05:39.230 --> 00:05:46.310
+A tak na marginesie ten obraz ma również coś, co nazywa się łatwym systemem plików, tak jak
+
+00:05:46.310 --> 00:05:51.970
+mamy pliki na naszym komputerze i jest dodawany automatycznie przez doker wewnątrz kontenera.
+
+00:05:52.060 --> 00:05:54.110
+I to nazywamy tomem.
+
+00:05:54.400 --> 00:06:02.020
+Mamy zatem obraz, który jest plikiem, który opisuje, co powinien zrobić kontener, a wewnątrz tego kontenera mamy również
+
+00:06:02.020 --> 00:06:08.170
+opcję użycia czegoś podobnego do systemu plików, tak jak mamy pliki na naszym laptopie dla
+
+00:06:08.170 --> 00:06:09.400
+dodatkowej funkcjonalności.
+
+00:06:11.810 --> 00:06:20.020
+Aby przejrzeć doker, twoja aplikacja do obrazu jest samodzielnym plikiem wykonywalnym, a Dharker
+
+00:06:20.020 --> 00:06:27.340
+wykonuje ten obraz w tym kontenerze, a środowisko wewnątrz kontenera jest całkowicie
+
+00:06:27.610 --> 00:06:30.090
+odizolowane od hosta.
+
+00:06:30.090 --> 00:06:32.580
+Znowu to jest coś, do czego wrócimy.
+
+00:06:32.650 --> 00:06:36.430
+Zamierzam wam zademonstrować, jak zamierzamy to zrobić i zamierzamy wspólnie pracować nad
+
+00:06:36.430 --> 00:06:37.750
+stworzeniem psa w niebezpieczeństwie.
+
+00:06:37.750 --> 00:06:41.800
+A potem wrócimy do tego obrazu i zdacie sobie sprawę, o tak, to wszystko ma
+
+00:06:41.800 --> 00:06:42.430
+teraz sens.
+
+00:06:42.490 --> 00:06:43.270
+Więc trzymaj się mnie.
+
+00:06:43.270 --> 00:06:45.410
+Zaufaj mi, że dostaniesz to.
+
+00:06:45.700 --> 00:06:50.650
+Cała ta sprawa z obrazem wydaje się dość skomplikowana.
+
+00:06:51.100 --> 00:06:58.020
+Na szczęście dla ciebie jest coś, co nazywa się Dharker hop, a to sprawia, że docker jest niesamowitym produktem.
+
+00:06:59.990 --> 00:07:11.440
+Widzisz Dr. Hobb po prostu piasta kropka kropka com jest trochę jak NPM i JavaScript i z hubem
+
+00:07:11.440 --> 00:07:16.810
+Doctor zapewnia sklep, taki jak witryna internetowa, gdzie można wyszukiwać i pobierać obrazy do użycia.
+
+00:07:16.810 --> 00:07:23.800
+Zostały już wcześniej napisane przez ludzi i są bardzo dobrze adoptowane przez wiele osób i wiele
+
+00:07:23.800 --> 00:07:28.350
+organizacji, więc jest to coś, co większość ludzi używa Dharker.
+
+00:07:28.450 --> 00:07:34.780
+Na przykład, jeśli przewińę w dół, widzę, że wszystko jest w porządku, ale mogę użyć obrazu węzła, jeśli
+
+00:07:34.900 --> 00:07:35.820
+kliknę szczegóły.
+
+00:07:36.160 --> 00:07:37.090
+Widzę to.
+
+00:07:37.270 --> 00:07:40.370
+W porządku Mam różne wersje węzłów, z których mogę korzystać.
+
+00:07:40.390 --> 00:07:46.840
+Powiedzmy, że chciałem użyć dziewiątego punktu jedenastego. Mogę kliknąć na port lub plik tutaj i spojrzeć na to.
+
+00:07:46.990 --> 00:07:53.050
+Chociaż może to wyglądać jak jibbry teraz, to nieco później i później zajmiemy się
+
+00:07:53.050 --> 00:07:59.910
+filmami, ale jest to obraz dokowany po prostu używając tego pliku i uruchomionego z nim okna dokowanego.
+
+00:08:00.030 --> 00:08:07.590
+Stworzy to kontener, który ma już skonfigurowaną wersję węzła 9 i widać tutaj, że mamy wiele rzeczy, które
+
+00:08:07.590 --> 00:08:12.380
+możemy uruchomić, i możemy pisać postscripty, które możemy uruchomić. Monga możemy
+
+00:08:12.390 --> 00:08:17.170
+uruchomić, aby przeczytać S, będziemy rozmawiać o wielu tylu rzeczach.
+
+00:08:17.630 --> 00:08:22.250
+Tak więc, podobnie jak NPM, możesz użyć tych pakietów, które są już dla nas predefiniowane.
+
+00:08:22.350 --> 00:08:25.720
+I przez większość czasu będziesz to robić zamiast pisać własne.
+
+00:08:26.100 --> 00:08:31.060
+Ale pokażę ci, jak napisać niektóre z własnych plików Daco, ponieważ dlaczego nie.
+
+00:08:33.170 --> 00:08:39.350
+Teraz, gdy mamy podstawową wiedzę na temat tego, co robi lekarz i jakie pojemniki znajdują
+
+00:08:39.350 --> 00:08:45.450
+się w dalszej części sekcji, zamierzamy zrobić coś takiego w naszym ustawieniu programistycznym.
+
+00:08:45.530 --> 00:08:52.490
+Zamierzamy stworzyć kontener dokowy, który jest połączony z naszym front endem, inteligentnym
+
+00:08:52.490 --> 00:08:53.720
+aplikowaniem mózgu.
+
+00:08:53.750 --> 00:08:59.450
+Teraz w tym kontenerze Stockard mamy już API naszego węzła ekspresowego, ale zamierzamy
+
+00:08:59.450 --> 00:09:04.760
+również wprowadzić nasze postscripty, a także ostatecznie rattus do zarządzania sesjami.
+
+00:09:04.790 --> 00:09:13.160
+Znowu pojawiające się w przyszłych sekcjach i umieszczając to wszystko w pojemniku, możemy po prostu uruchomić jedno polecenie
+
+00:09:13.160 --> 00:09:21.020
+i serwer bazy danych API odczytuje jego bazę danych, wszystkie uruchomione zaczynają się uruchamiać i zaczynają gromadzić
+
+00:09:21.020 --> 00:09:23.780
+się w tym jednym kontenerze.
+
+00:09:23.780 --> 00:09:25.280
+To będzie jak magia.
+
+00:09:25.850 --> 00:09:32.240
+A tak przy okazji, w większości konfiguracji produkcyjnych, które widzisz w nowoczesnych firmach, zobaczysz coś takiego, gdzie
+
+00:09:32.240 --> 00:09:38.270
+masz aplikację po stronie klienta, nasz inteligentny mózg, który ma jakiś mechanizm równoważenia obciążenia, a
+
+00:09:38.930 --> 00:09:45.260
+ten moduł równoważący obciążenia po prostu dystrybuuje się do różnych serwerów API, więc że jeśli mamy
+
+00:09:45.680 --> 00:09:52.940
+duży ruch, to nie zapychamy jednego serwera API i mamy te klony API, ponieważ są po prostu zwykłymi obrazami
+
+00:09:53.510 --> 00:09:54.110
+Gawkera.
+
+00:09:54.200 --> 00:09:57.690
+Stworzyliśmy więc coraz więcej kontenerów, co jest dla nas łatwe.
+
+00:09:57.950 --> 00:10:02.240
+I nie martw się, pokażę ci, jak zrobić load balancer w nadchodzącym wideo.
+
+00:10:02.750 --> 00:10:09.350
+A te serwery API łączą się teraz z bazami danych, takimi jak postscripts, i możemy mieć wiele baz danych ponownie,
+
+00:10:09.350 --> 00:10:10.730
+aby obsłużyć całe obciążenie.
+
+00:10:10.970 --> 00:10:18.440
+Mogą też połączyć się z czymś takim, jak Pretis, o którym będziemy rozmawiać, zarządzając
+
+00:10:18.440 --> 00:10:27.020
+buforowaniem lub zarządzaniem sesjami, a dzięki funkcji dokowania można łatwo klonować i tworzyć więcej kopii w
+
+00:10:27.020 --> 00:10:30.110
+miarę jak powiększamy i powiększamy.
+
+00:10:30.240 --> 00:10:36.080
+Ale chcę pokazać wam ten diagram tylko po to, aby pokazać, jak wygląda aplikacja produkcyjna.
+
+00:10:36.080 --> 00:10:43.790
+Chodzi o to, że jesteśmy w stanie stworzyć te małe usługi, które możemy powielić, abyśmy mogli rozwijać się
+
+00:10:43.820 --> 00:10:48.140
+wraz z rosnącym zapotrzebowaniem aplikacji na rosnącą bazę użytkowników.
+
+00:10:49.290 --> 00:10:50.250
+W porządku.
+
+00:10:50.580 --> 00:10:54.030
+Czas zacząć korzystać z okna dokowanego i kolejnych filmów.
+
+00:10:55.490 --> 00:10:56.810
+Zobaczę na tym.
+
+00:10:56.850 --> 00:10:57.140
+Bebai.

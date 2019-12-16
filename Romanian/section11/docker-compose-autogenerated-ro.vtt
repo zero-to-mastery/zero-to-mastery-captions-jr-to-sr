@@ -1,0 +1,424 @@
+﻿WEBVTT
+
+00:00:01.670 --> 00:00:09.390
+Răsfoiți-i înapoi în videoclipurile anterioare pe care le învățăm cum este creat daquiri folosind doc Rafal și oferă un
+
+00:00:09.390 --> 00:00:13.520
+mediu adecvat în care pot rula serviciile noastre de aplicații.
+
+00:00:13.650 --> 00:00:20.210
+Deci, ipotetic, îl putem folosi pentru serverul nostru de noduri pe care îl putem folosi pentru baza noastră de date postgresql indiferent
+
+00:00:20.220 --> 00:00:22.350
+de ce vrem toate serviciile noastre.
+
+00:00:22.440 --> 00:00:30.690
+Acum există un instrument de notare pe care l-ați instalat când ați primit docul numit docer compose și acesta
+
+00:00:30.690 --> 00:00:36.270
+este folosit pentru a orchestra serviciile noastre de aplicații în timpul dezvoltării.
+
+00:00:36.270 --> 00:00:43.500
+Deci, acesta este un instrument pe care îl veți folosi în cea mai mare parte în timpul dezvoltării, dar dacă vă
+
+00:00:43.620 --> 00:00:51.870
+amintiți că cererea Brunos este ca postscript-urile și serverul nostru să fie difuzate dintr-o singură comandă fără a fi nevoie să configurați separat un
+
+00:00:51.870 --> 00:00:54.030
+server și o bază de date.
+
+00:00:55.000 --> 00:01:02.920
+Docul se descompune și vă permite să compuneți aceste bucăți mai întunecate aceste servicii diferite, astfel încât în ​​timpul dezvoltării
+
+00:01:02.920 --> 00:01:05.940
+să puteți face aceste lucruri foarte ușor.
+
+00:01:07.460 --> 00:01:09.150
+Amintiți-vă diagrama noastră aici.
+
+00:01:09.630 --> 00:01:14.720
+Ei bine, vom folosi compunerea Dharker chiar dacă am folosit Dharker pentru serverul nostru.
+
+00:01:14.720 --> 00:01:21.270
+Vom folosi acum docuri sau compune pentru a crea un container care conține toate aceste lucruri.
+
+00:01:21.620 --> 00:01:24.430
+Ne vom concentra pe serverul API și pe baza de date.
+
+00:01:24.680 --> 00:01:32.000
+Și în aceste sesiuni și în secțiunea JWT vom include și serviciul de rattus care va
+
+00:01:32.000 --> 00:01:41.470
+fi foarte distractiv și din nou docking Limbo va orchestra serviciile noastre de aplicații și va fi într-adevăr într-adevăr Farnam atunci
+
+00:01:41.470 --> 00:01:43.820
+când vom ajunge la lucru.
+
+00:01:43.840 --> 00:01:45.870
+Așa că hai să ajungem la asta acum.
+
+00:01:45.940 --> 00:01:52.360
+Doar un heads-up dacă ar fi descărcat docker-ul pentru Mac sau dock sau pentru Windows rață sau computere deja vine cu
+
+00:01:52.360 --> 00:01:52.780
+el.
+
+00:01:52.870 --> 00:01:59.160
+Dacă l-ați instalat pe Linux, trebuie să reveniți la acea pagină și să instalați doc sau să compilați separat.
+
+00:01:59.200 --> 00:02:01.360
+Deci, doar un capete sus acolo.
+
+00:02:01.580 --> 00:02:11.720
+Acum, modul în care putem face acest lucru, care este modul de a combina ambele postscript-uri și serverul nostru API într-o
+
+00:02:11.810 --> 00:02:18.080
+singură comandă Daker, este de a crea ceva numit doc-fight și doc-doc.
+
+00:02:18.080 --> 00:02:25.850
+Încă o dată, am creat la un director rădăcină al proiectului nostru și acesta va fi numit docker compose și
+
+00:02:26.300 --> 00:02:33.830
+este un YAML pentru acest tip de fișier pe care îl utilizează și veți vedea că subiecții sau
+
+00:02:33.830 --> 00:02:36.890
+editorul dvs. vor recunoaște anumite sintaxe .
+
+00:02:36.890 --> 00:02:44.600
+Deci, din nou, docul poate să moară YAML și l-am creat și puteți vedea aici că editorul meu de text recunoaște
+
+00:02:44.600 --> 00:02:49.130
+acest lucru ca fișier doc sau un fișier doc sau compune.
+
+00:02:49.140 --> 00:02:52.490
+Acum, asta va arăta un fișier compost de duck.
+
+00:02:53.290 --> 00:02:56.100
+Mai întâi începem cu versiunea pe care dorim să o folosim.
+
+00:02:56.320 --> 00:03:02.300
+Deci, în cazul meu, va fi versiunea 3. 6 care este ultima.
+
+00:03:02.300 --> 00:03:10.210
+În prezent, pentru mine și jos, avem ceva numit servicii și aceste servicii sunt ceea ce
+
+00:03:10.210 --> 00:03:11.450
+vom orchestra.
+
+00:03:11.530 --> 00:03:18.510
+Asta este că vom avea un serviciu de backend API, un serviciu de post-scripturi și, mai târziu, un serviciu
+
+00:03:18.630 --> 00:03:19.710
+de lățime.
+
+00:03:20.050 --> 00:03:25.660
+Și să-i dăm un nume primei noastre suprafețe care este partea din spate.
+
+00:03:26.720 --> 00:03:31.450
+API sau îl putem numi API creier
+
+00:03:37.980 --> 00:03:39.030
+inteligent.
+
+00:03:39.150 --> 00:03:44.850
+Acum îi putem oferi opțiuni diferite, iar Dharker compune încă o dată un fel de fișier de configurare, astfel încât să
+
+00:03:44.850 --> 00:03:47.940
+puteți găsi o mulțime de aceste documente online și online.
+
+00:03:47.940 --> 00:03:49.690
+Dar vă voi arăta câteva dintre cele obișnuite.
+
+00:03:49.790 --> 00:04:02.360
+Unul dintre ele este numele containerului nume Rupes și putem apela backend-ul containerului deoarece, deoarece capătul din spate al aplicației noastre și de modul în YAML dosarelor indentări
+
+00:04:02.360 --> 00:04:08.210
+ca aceasta chestiune, astfel, din nou, să ia un ochi pe indenta în
+
+00:04:08.210 --> 00:04:13.330
+modul în care fac lucrurile și apoi îi spunem și noi.
+
+00:04:14.070 --> 00:04:18.180
+Și apoi putem să-i spunem și ce imagine să folosească de la Doc sau hub.
+
+00:04:18.290 --> 00:04:23.760
+În cazul nostru putem spune doar nodul și ce versiune folosim pentru nod și profilul doc.
+
+00:04:24.020 --> 00:04:29.870
+Să o folosim doar pe asta.
+
+00:04:29.960 --> 00:04:32.190
+De asemenea, îi putem da o comandă.
+
+00:04:32.390 --> 00:04:37.250
+Așa că trebuie să ne amintim cum trebuie să începem NPM aici.
+
+00:04:37.320 --> 00:04:46.020
+Putem să-i dăm o comandă atunci când începe serviciul sau containerele create și instalate pentru a rula să pornim
+
+00:04:46.020 --> 00:04:50.330
+și noi putem face lucruri precum directorul de lucru.
+
+00:04:50.340 --> 00:05:00.900
+Așa că lucrăm der și vom spune că acesta este în dosarul aplicației și putem face și Portes să ne aducem aminte
+
+00:05:00.900 --> 00:05:08.920
+că atunci când am pornit comanda cu portul obligatoriu și redirecționarea slabă putem spune pur și
+
+00:05:08.930 --> 00:05:20.740
+simplu că dorim portul trei mii opt 3000 și apoi există și alte opțiuni aveți lucruri ca un mediu care vă oferă variabile de mediu
+
+00:05:20.740 --> 00:05:24.730
+dacă vreți să treceți probabil cheile API.
+
+00:05:24.730 --> 00:05:28.590
+Putem face acest lucru, dar vom face asta mai târziu.
+
+00:05:28.600 --> 00:05:34.180
+Avem, de asemenea, lucruri precum link-uri și care ne oferă ceea ce ne dorim ca acest serviciu să facă legătura.
+
+00:05:34.180 --> 00:05:39.670
+Deci, dacă am avut post-crash, de exemplu, putem spune postscript-uri și un link la acel serviciu postscripts, dar
+
+00:05:39.670 --> 00:05:42.950
+nu-l avem acum, așa că nu avem nevoie de asta.
+
+00:05:43.000 --> 00:05:52.040
+Și, de asemenea, putem să facem lucruri cum ar fi construite aici pentru a ne construi imaginea și, în loc să
+
+00:05:52.040 --> 00:05:56.330
+folosim acest lucru, putem spune că vrem să construim
+
+00:06:00.420 --> 00:06:06.960
+din docul sau fișierul nostru care există aici, așa că va construi acest serviciu din profil.
+
+00:06:07.090 --> 00:06:08.200
+Deci, hai să mergem.
+
+00:06:08.200 --> 00:06:11.020
+Am de gând să-l elimine sau să-l comenteze pentru moment.
+
+00:06:11.200 --> 00:06:21.550
+Și când v-am văzut comentând și fișierele YAML pentru ao salva și felul în care conducem sau compunem și rulam-o, să ieșim
+
+00:06:21.550 --> 00:06:23.000
+de aici.
+
+00:06:24.890 --> 00:06:36.620
+Am de gând să clar acest lucru avem mai mult spațiu și acum rulați Dr. compuneți comanda și putem spune pur și simplu că am câștigat sau compuneți construiți și
+
+00:06:36.620 --> 00:06:44.130
+că va citi această toamnă pe care tocmai am creat-o și am vrut să vă arăt acest domeniu pentru că
+
+00:06:44.130 --> 00:06:50.770
+poate deveni destul de criptic cu docul ori de câte ori faceți o greșeală și de fapt, în
+
+00:06:50.770 --> 00:06:53.060
+mod specific la YAML fișiere.
+
+00:06:53.260 --> 00:06:59.620
+În acest caz, am obținut acest ere spunând că este ceva în neregulă și vreau să vă supraveghez sintaxa pe
+
+00:06:59.770 --> 00:07:03.940
+care o utilizați și distanța pe care o utilizați pentru fișierul YAML.
+
+00:07:03.940 --> 00:07:14.620
+În cazul nostru, trebuie să adăugăm un punct și virgulă aici sau un apel aici și veți vedea că chiar și culoarea sa schimbat în editorul meu de text și dacă aveți
+
+00:07:14.620 --> 00:07:19.690
+un editor de text bun care vă ajută pe toți cu acest lucru este
+
+00:07:19.690 --> 00:07:24.950
+într-adevăr foarte mare pentru că, chiar dacă fac această greșeală meu AOD obține această eroare.
+
+00:07:25.000 --> 00:07:29.590
+Asigurați-vă că toate spațierea dvs. este corectă, deoarece aceasta poate fi foarte dificilă.
+
+00:07:29.710 --> 00:07:36.910
+Din fericire dr. compose are o documentație foarte bună și puteți merge online și puteți afla cum
+
+00:07:37.150 --> 00:07:38.300
+să vă structurați postările.
+
+00:07:38.740 --> 00:07:44.100
+Acum să conducem comanda noastră sau să compunem comanda Builth vrea din nou.
+
+00:07:47.500 --> 00:07:48.450
+Și uită-te la asta.
+
+00:07:48.460 --> 00:07:49.660
+Începe să funcționeze.
+
+00:07:49.660 --> 00:07:54.880
+Este grabbing de la versiunea nod în cazul în care suntem crearea directorul nostru de lucru.
+
+00:07:54.970 --> 00:08:02.380
+Așa că citim fișierul doco pentru că am spus construit din sursa noastră
+
+00:08:02.380 --> 00:08:12.140
+care are fișierul Daka pe care rulează NPM instalează executând comanda și totul este construit folosind aceste informații.
+
+00:08:12.150 --> 00:08:14.190
+Deci, să trecem peste ceea ce sa întâmplat aici.
+
+00:08:15.250 --> 00:08:22.150
+Instrucțiunile noastre au spus compozitorului să creeze un serviciu numit inteligent API creier folosind fișierul doc pe care l-am
+
+00:08:22.150 --> 00:08:23.250
+creat anterior
+
+00:08:26.440 --> 00:08:34.350
+am cartografiat containerul la portul 3000, astfel încât să avem acces la el de la laptopul nostru și am fugit, de asemenea, NPM
+
+00:08:34.360 --> 00:08:37.470
+amestecat în container pentru a începe serviciul nostru .
+
+00:08:37.570 --> 00:08:41.920
+Acum nu am făcut prea mult decât dacă lucrăm cu doc.
+
+00:08:42.130 --> 00:08:46.550
+Iar când aveți doar un singur serviciu, cel mai probabil lucrați doar cu singurul dosar Bachar.
+
+00:08:46.690 --> 00:08:52.890
+Singura diferență până acum este că construim docuri sau compunem pentru a ne construi imaginea în loc de Dr.
+
+00:08:52.910 --> 00:08:55.220
+Acum, să conducem următoarea comandă.
+
+00:08:55.260 --> 00:09:00.570
+Dr. compune alerga și vezi ce se întâmplă.
+
+00:09:02.960 --> 00:09:09.090
+Totul este clar și trebuie să-i dau un lucru real pe care vrem să-l spună consolo-ului să
+
+00:09:12.370 --> 00:09:19.450
+se alăture cu containerul pe care dorim să-l executăm în cazul nostru este API-ul creierului inteligent pe care l-am denumit.
+
+00:09:19.450 --> 00:09:28.060
+Deci, haideți să luăm acest lucru și să fugăm și avem câteva erori aici, așa că haideți să le debugăm și vedem că căutăm
+
+00:09:28.060 --> 00:09:29.480
+o aplicație cale.
+
+00:09:29.490 --> 00:09:31.190
+Am împachetat pe Jason.
+
+00:09:31.600 --> 00:09:38.370
+Dar dacă vă aduceți aminte în fișierul doc, directorul nostru de lucru este acesta.
+
+00:09:38.420 --> 00:09:46.100
+Deci, doar pentru a obține un punct peste cu liste de director de lucru încercați să copiați aici, în loc de app dash pe care
+
+00:09:46.100 --> 00:09:50.320
+am creat, pentru că acolo în cazul în care există fișierele noastre ambalate.
+
+00:09:50.420 --> 00:09:53.590
+Dacă rulați din nou comanda
+
+00:10:03.540 --> 00:10:14.360
+de construire și permiteți-mi să clar acest lucru și din nou, rulați-vă gașca capos rula smart brain API uita-te la asta.
+
+00:10:14.540 --> 00:10:18.930
+Aplicația noastră rulează pe portul 3000.
+
+00:10:19.110 --> 00:10:27.080
+Și dacă mergem la localhost și ne asigurăm că mergem la localhost 3000, uită-te la asta.
+
+00:10:27.080 --> 00:10:29.070
+Functioneaza.
+
+00:10:29.090 --> 00:10:30.160
+Asta-i grozav.
+
+00:10:30.350 --> 00:10:35.480
+Acum, hai să ne logam aici pentru că este greu să vezi ce se întâmplă și dacă suntem de
+
+00:10:35.480 --> 00:10:36.600
+fapt lovind același punct.
+
+00:10:36.950 --> 00:10:43.670
+Așa că am de gând să închid acest lucru rapid și să instalez un pachet despre care
+
+00:10:44.270 --> 00:10:52.260
+am vorbit în secțiunea de securitate numită Morgan și vom folosi Morgan aici doar pentru scopuri de logare și apoi vom
+
+00:10:52.350 --> 00:10:54.660
+adăuga aici cu Konst Morgan.
+
+00:10:55.010 --> 00:11:00.530
+Doriți să solicitați pachetul și este un middleware.
+
+00:11:00.780 --> 00:11:04.010
+Deci, tot ce trebuie să facem este să o folosim ca și noi.
+
+00:11:06.810 --> 00:11:10.830
+Și spune-i lui Morgan și dă-i opțiuni pentru ce fel de ieșire vrem.
+
+00:11:10.830 --> 00:11:14.670
+Îmi place opțiunea combinată și vom vedea cum arată.
+
+00:11:14.670 --> 00:11:25.300
+Deci, încă o dată, voi rula programul de docking compose pentru a construi din fișierul nostru Daker.
+
+00:11:25.300 --> 00:11:34.500
+Puteți vedea aici că executăm instalarea NPM și permiteți-mi să clar acest drept, astfel încât să clarificăm terminalul pe
+
+00:11:34.510 --> 00:11:36.370
+care l-am combinat.
+
+00:11:36.370 --> 00:11:41.840
+Acum, doar în cazul în care aveți orice containere care rulează în fundal sau
+
+00:11:41.980 --> 00:11:52.250
+aveți nevoie pentru a lua jos orice poți face doar docker compuse în jos și a aduce înapoi orice containere pe care le-ar putea să nu
+
+00:11:52.290 --> 00:12:01.300
+arata ca am avut orice și putem merge doar Dr . compune construi și acest lucru devine enervant de construire și punerea totul
+
+00:12:01.300 --> 00:12:02.230
+în sus.
+
+00:12:02.320 --> 00:12:10.420
+Putem, de fapt, să fugim la doc sau să compunem în sus pentru a aduce containerul cu o linie de bord construită și construită.
+
+00:12:10.420 --> 00:12:15.460
+Trebuie doar să faceți acest lucru la început pentru a construi și a rula instalarea NPM și tot ceea
+
+00:12:15.460 --> 00:12:17.410
+ce am făcut și fișierul docker.
+
+00:12:17.410 --> 00:12:20.830
+Dar după aceea puteți să continuați să rulați doc sau să compuneți.
+
+00:12:20.830 --> 00:12:30.560
+Până în prezent am executat acest lucru construiește backend-ul nostru și uita-te la faptul că acum se înregistrează înapoi și în funcție de numele pe care
+
+00:12:30.560 --> 00:12:33.730
+am dat recipientul puteți vedea înapoi și aici.
+
+00:12:33.800 --> 00:12:35.420
+Asta este.
+
+00:12:35.720 --> 00:12:41.940
+Și a început NPM și veți vedea că acum rulează pe port app trei mii.
+
+00:12:42.140 --> 00:12:48.990
+Și dacă mă voi întoarce acum și voi reîmprospăta aspectul, avem doar un pic de logare.
+
+00:12:48.990 --> 00:12:55.540
+Dacă fac acest lucru de trei ori și reîmprospătează, vedem că ne-am înregistrat.
+
+00:12:55.540 --> 00:13:02.410
+Deci tocmai am creat un fișier de docare compuneți cu API-ul inteligent al creierului nostru.
+
+00:13:02.410 --> 00:13:04.410
+Dar, în mod ideal, vrem să facem mai mult decât atât.
+
+00:13:04.420 --> 00:13:08.190
+În mod ideal, putem avea posturi de an și rădăcini.
+
+00:13:08.290 --> 00:13:12.200
+În următorul videoclip, vom vorbi puțin despre asta.
+
+00:13:12.260 --> 00:13:13.240
+Voi vedea în următorul.

@@ -1,0 +1,370 @@
+﻿WEBVTT
+
+00:00:01.600 --> 00:00:09.000
+Przyszedł czas, aby stworzyć progresywnĘ ... aplikację internetowĘ ... za pomocĘ ... naszych znajomych robo.
+
+00:00:09.180 --> 00:00:12.230
+Teraz zamiast używać znajomych robota w
+
+00:00:16.070 --> 00:00:24.050
+naszej aplikacji robo-friends, mam na myśli to, że są to rebelianci, ale nazwałem to inaczej, więc dobrze nagrywałem naprawdę
+
+00:00:24.110 --> 00:00:28.340
+długo i to jest to, co robię, żeby się bawić.
+
+00:00:29.330 --> 00:00:34.930
+Jeśli zdobędziesz referencję Landera w zoo, to cieszę się, że cieszę się, że to robisz.
+
+00:00:34.930 --> 00:00:35.610
+Jeśli nie.
+
+00:00:35.630 --> 00:00:37.520
+Upewnij się, że oglądasz film MTV, to świetnie.
+
+00:00:37.520 --> 00:00:44.760
+W każdym razie mam aplikację robo friends tutaj i nie ma nic innego niż wszystko, co widzieliśmy wcześniej.
+
+00:00:44.780 --> 00:00:46.520
+Jeśli uruchomię
+
+00:00:50.760 --> 00:00:54.150
+NPM start, mamy idealnych przyjaciół robota.
+
+00:00:54.230 --> 00:00:59.830
+Ale Bruno poprosił nas o zrobienie tego na progresywnej stronie internetowej.
+
+00:01:00.040 --> 00:01:01.390
+Jak możemy to zrobić.
+
+00:01:01.480 --> 00:01:05.540
+Pierwszą rzeczą, którą musimy zrobić, to umieścić to online.
+
+00:01:05.590 --> 00:01:12.920
+Możemy zrobić z niej lokalną aplikację internetową, ponieważ nie będziemy w stanie przetestować jej na Lighthouse.
+
+00:01:13.030 --> 00:01:19.780
+Więc pierwszą rzeczą jest, że mam tutaj aplikację robotów z niesamowitym nazwiskiem.
+
+00:01:20.020 --> 00:01:27.370
+Ale chcemy mieć dobre strony połączone tutaj, tak aby były one w rzeczywistości z aplikacją reagowania z kopią
+
+00:01:27.370 --> 00:01:28.600
+zapasową zapytania.
+
+00:01:28.600 --> 00:01:33.750
+Jest to trochę trudne, ponieważ nie ma pliku index dot js.
+
+00:01:33.910 --> 00:01:36.540
+Mam na myśli, ale jest w folderze publicznym.
+
+00:01:36.910 --> 00:01:45.940
+I tak nie jest tak proste, jak po prostu przejście do ustawień i kliknięcie "stwórz", aby dowiedzieć się, w jaki sposób strony muszą wykonać
+
+00:01:45.940 --> 00:01:46.760
+trochę pracy.
+
+00:01:46.810 --> 00:01:50.050
+Zróbmy to najpierw.
+
+00:01:50.140 --> 00:01:57.660
+Zamierzam zrobić to trochę mniej i nie potrzebujemy tego, więc posprzątajmy to teraz.
+
+00:01:57.690 --> 00:02:04.820
+Właściwie to pierwszą rzeczą, którą chcemy zrobić, to zainstalować pakiet i ten pakiet będzie.
+
+00:02:04.830 --> 00:02:11.780
+Pozwól, że po prostu powiększę to, żebyś mógł zobaczyć, jak nazywa się G. H. strony dla stron.
+
+00:02:11.840 --> 00:02:17.020
+Więc po prostu zainstaluj GNM G. H. strony, abyśmy
+
+00:02:19.980 --> 00:02:25.810
+mieli to narzędzie, które pozwoli nam wdrożyć, aby uzyskać jej strony.
+
+00:02:25.860 --> 00:02:33.900
+Jeśli więc ponownie przejdziemy do pakietu Jaison, zobaczymy, że mamy zainstalowane jej strony.
+
+00:02:33.990 --> 00:02:44.070
+Następną rzeczą, którą chcemy zrobić z jej stronami, jest uruchomienie wdrożenia przez nas, abyśmy mogli uruchomić wdrożenie NPM
+
+00:02:44.070 --> 00:02:44.750
+Ron.
+
+00:02:44.910 --> 00:02:49.710
+Zamierza wdrożyć, aby uzyskać jej strony, a sposób, w jaki postępujemy, jest dość prosty.
+
+00:02:49.770 --> 00:02:53.100
+Mamy polecenie deploy, a polecenie
+
+00:02:56.590 --> 00:03:05.420
+deploy będzie miało G. H. strony, a my będziemy budować.
+
+00:03:05.740 --> 00:03:14.900
+Tak więc uruchomimy zatwierdzenie budowania, aby zbudować nasz phos i upewnij się, że mamy
+
+00:03:15.440 --> 00:03:26.480
+tutaj przecinek, a następnie zanim wdrożymy skrypty NPM, możesz wykonać składnię i nazwę polecenia prae przed jakimkolwiek
+
+00:03:26.480 --> 00:03:27.470
+poleceniem.
+
+00:03:27.470 --> 00:03:28.190
+Uruchom to.
+
+00:03:28.190 --> 00:03:37.200
+Tak więc w naszym przypadku przed wdrożeniem tak pre-deploy powiemy, że PM jest zbudowany, a tak na
+
+00:03:41.540 --> 00:03:48.180
+marginesie jest to w dokumentacji Kuriego, abyś mógł sprawdzić, jak działa sekcja rozmieszczania
+
+00:03:48.180 --> 00:03:54.020
+stron, a otrzymasz szczegółowy opis tego, co się tutaj dzieje.
+
+00:03:54.020 --> 00:03:55.450
+W porządku, oszczędzajmy to.
+
+00:03:55.460 --> 00:04:03.920
+Ostatnim elementem układanki jest to, że przy tworzeniu reakcji należy utworzyć w pakiecie
+
+00:04:04.730 --> 00:04:06.780
+na stronie głównej.
+
+00:04:07.430 --> 00:04:12.700
+I tutaj musimy określić, gdzie będzie nasza strona główna.
+
+00:04:13.160 --> 00:04:15.490
+I chcesz go dołączyć do swojej nazwy użytkownika.
+
+00:04:15.500 --> 00:04:27.970
+Więc powiemy GTP nam w moim przypadku to jest moja nazwa użytkownika Dogget hub dot IO, a na
+
+00:04:28.030 --> 00:04:30.740
+końcu nazwa repo.
+
+00:04:30.880 --> 00:04:39.970
+W moim przypadku nieprzyjemnie długa nazwa repozytorium zamierzamy dodać tutaj i upewnić się, że mamy przecinek
+
+00:04:39.970 --> 00:04:41.500
+na końcu.
+
+00:04:41.530 --> 00:04:42.520
+Zapiszmy to.
+
+00:04:42.790 --> 00:04:44.290
+Uruchommy NPM.
+
+00:04:44.290 --> 00:04:53.750
+Ron wdraża wdrożenie PM Thruna.
+
+00:04:53.800 --> 00:04:56.770
+Zamierza utworzyć folder kompilacji.
+
+00:04:58.500 --> 00:05:04.100
+I możesz zobaczyć tutaj, stworzył naszą aplikację dla nas, która jest indeksowana.
+
+00:05:04.170 --> 00:05:10.180
+Shemale i wszystkie nasze niezbędne pliki oraz folder statyczny.
+
+00:05:10.230 --> 00:05:17.670
+Więc javascript wszelkie pliki multimedialne i on CSSA Fox i widzimy, że został opublikowany i folder jest gotowy
+
+00:05:17.670 --> 00:05:18.890
+do wdrożenia.
+
+00:05:20.140 --> 00:05:32.400
+Na tym łączu teraz ostatnią rzeczą, którą musimy zrobić, to przejść do uzyskania koncentratora i na stronie ustawień przewinąć do samego końca, aby uzyskać strony
+
+00:05:32.400 --> 00:05:41.670
+pomocy i upewnić się, że ta gałąź odbiera, w jaki sposób rozgałęziają się strony, nie wszystko jest wzorcowe Dachs,
+
+00:05:41.670 --> 00:05:47.280
+ale znajduje się w dziale Uzyskaj pomoc strony, które umieściliśmy.
+
+00:05:47.430 --> 00:05:53.010
+Widać już, że mamy już zaznaczenie, że Twoja strona jest publikowana pod tym linkiem.
+
+00:05:53.340 --> 00:05:54.430
+Kliknij tutaj.
+
+00:05:55.960 --> 00:05:57.000
+I proszę.
+
+00:05:57.070 --> 00:06:04.590
+Mamy naszą aplikację do tworzenia aplikacji reagowania wdrożoną na stronach, w których mamy darmowy hosting.
+
+00:06:04.600 --> 00:06:05.460
+Bardzo fajny.
+
+00:06:05.800 --> 00:06:09.430
+A my mamy tak długo, długo jesteś el.
+
+00:06:09.520 --> 00:06:12.870
+Teraz możemy przetestować naszą aplikację na Lighthouse.
+
+00:06:12.910 --> 00:06:21.020
+Zróbmy więc ten, który kliknie i powie wygenerować raport, a jak wiemy, Biały Dom przetestuje
+
+00:06:21.020 --> 00:06:21.590
+wszystko.
+
+00:06:21.590 --> 00:06:23.030
+Zobacz, jak działa on online.
+
+00:06:23.030 --> 00:06:30.380
+Zobacz, ile czasu poświęcamy na czas pierwszego malarstwa, aby dowiedzieć się, jak dobrze
+
+00:06:30.380 --> 00:06:33.840
+postępuje aplikacja internetowa, na którą patrzymy.
+
+00:06:33.910 --> 00:06:37.360
+Wynik nie jest zły.
+
+00:06:37.370 --> 00:06:45.260
+Mamy ASIO 89 procent dostępności 80 procent progresywnej aplikacji internetowej 82 procent wydajności 92 najlepszych praktyk
+
+00:06:45.260 --> 00:06:46.760
+100 procent.
+
+00:06:46.760 --> 00:06:47.990
+To cudownie.
+
+00:06:47.990 --> 00:06:54.110
+To świetnie, ale nie wszystko na 100, a progresywna aplikacja internetowa to nie 100.
+
+00:06:54.200 --> 00:06:55.990
+Chcemy to osiągnąć.
+
+00:06:56.060 --> 00:06:57.800
+Podczas gdy idealny wynik.
+
+00:06:57.800 --> 00:07:06.260
+Teraz, kiedy przewijamy do tego miejsca, wiemy, że latarnia morska dostarcza nam naprawdę dobrych informacji na temat tego, jak
+
+00:07:06.290 --> 00:07:07.760
+możemy się poprawić.
+
+00:07:07.820 --> 00:07:14.150
+Na przykład mówi dokładnie, co musimy zrobić, aby nasza aplikacja była progresywną siecią.
+
+00:07:14.170 --> 00:07:23.820
+Mówi, że nie masz żadnego polecenia instalacji aplikacji internetowej, więc nie ma ikon ani niczego.
+
+00:07:24.020 --> 00:07:30.590
+Ludzie nie mogą dodać go do swojego ekranu głównego i mieć logo na telefonie komórkowym,
+
+00:07:30.590 --> 00:07:32.530
+tak jak zwykła aplikacja.
+
+00:07:32.550 --> 00:07:40.890
+Nie ma również ekranu powitalnego, ale wszystkie poprzednie audyty, w tym płyta CD. s. i w tym pracowników
+
+00:07:40.890 --> 00:07:41.740
+usług.
+
+00:07:41.790 --> 00:07:50.330
+To jest świetna część, ponieważ tworzymy aplikację re-act ma progresywną aplikację internetową i zawsze jest aktualizowana
+
+00:07:50.360 --> 00:07:53.390
+z najlepszymi opcjami dla ciebie.
+
+00:07:53.390 --> 00:07:56.600
+Wszystko to zrobiliśmy dla nas.
+
+00:07:58.770 --> 00:08:08.730
+Mamy też kilka fajnych funkcji zaraz po wyjęciu z pudełka, na przykład gdy wyłączę Wi-Fi i odświeżę
+
+00:08:08.730 --> 00:08:09.620
+to.
+
+00:08:09.830 --> 00:08:13.710
+Nie mamy pustej strony z niczym.
+
+00:08:13.710 --> 00:08:18.620
+Z tym małym dinozaurem, który dostajesz w Google Chrome, ta aplikacja działa.
+
+00:08:18.710 --> 00:08:23.000
+Chodzi mi o to, że nie ładujemy naszych robotów, ponieważ tworzymy prośbę API.
+
+00:08:23.000 --> 00:08:27.070
+Moglibyśmy technicznie dodać to żądanie API.
+
+00:08:27.080 --> 00:08:28.610
+Więc działa również off-line.
+
+00:08:28.700 --> 00:08:35.150
+Ale jeśli kliknę w Google na komputerze, że ta aplikacja wciąż działa i na podstawie typu
+
+00:08:35.150 --> 00:08:43.160
+aplikacji, którą mamy, możemy mieć aplikację offline, która wciąż działa i za każdym razem, gdy odświeżam, nadal otrzymuję tę aplikację.
+
+00:08:43.230 --> 00:08:44.060
+Bardzo fajny.
+
+00:08:44.790 --> 00:08:51.330
+Teraz z każdą inną witryną internetową, która nie jest progresywną aplikacją internetową Przejdźmy do mojej ulubionej strony internetowej.
+
+00:08:51.340 --> 00:08:54.330
+Czekać.
+
+00:08:54.530 --> 00:08:57.150
+Ale dlaczego to widzisz.
+
+00:08:57.220 --> 00:08:58.550
+Nie ma połączenia z Internetem.
+
+00:08:58.550 --> 00:09:00.990
+Nie otrzymujemy absolutnie nic.
+
+00:09:02.240 --> 00:09:09.480
+Chociaż jest to zabawna sztuczka, jeśli trafisz w spację, dostaniesz małą grę dinozaurów.
+
+00:09:09.480 --> 00:09:12.760
+Mogą je przeskakiwać.
+
+00:09:13.970 --> 00:09:15.380
+Bardzo fajny.
+
+00:09:15.740 --> 00:09:16.120
+W porządku.
+
+00:09:16.130 --> 00:09:18.020
+To trochę uzależnia.
+
+00:09:18.020 --> 00:09:22.100
+Ale widzisz, że nie jest to progresywna aplikacja internetowa.
+
+00:09:22.100 --> 00:09:24.140
+Nasza jest.
+
+00:09:24.140 --> 00:09:27.170
+A my dostajemy to z pudełka z kreatywną aplikacją ponownie.
+
+00:09:27.560 --> 00:09:29.900
+Bardzo bardzo fajne.
+
+00:09:29.900 --> 00:09:31.600
+Włączmy to z powrotem.
+
+00:09:31.910 --> 00:09:39.050
+Zdecydowanie jest to nasz Internet ponownie, jeśli wrócimy do aplikacji i zmniejszmy to.
+
+00:09:40.610 --> 00:09:49.010
+Widzimy, że mamy usługę rejestracji usługi tutaj po wyjęciu z pudełka stworzonego przez Create re-act app
+
+00:09:49.340 --> 00:09:52.790
+i ma wszystko skonfigurowane dla nas.
+
+00:09:53.020 --> 00:10:00.570
+A następnie mamy kilka innych rzeczy, które musimy naprawić w następnym wideo.
+
+00:10:00.650 --> 00:10:07.690
+Zaczniemy pracę nad tym i odpieramy i staramy się uzyskać te wyniki doskonałe, ale jak dotąd
+
+00:10:07.690 --> 00:10:08.610
+tak dobre.
+
+00:10:08.620 --> 00:10:13.840
+Otrzymaliśmy nawet Estill CPS od razu po wyjęciu z pudełka, ponieważ dostaliśmy jak strony.
+
+00:10:14.080 --> 00:10:17.440
+Na razie jednak zobaczę w następnym filmie Buh-Bye.

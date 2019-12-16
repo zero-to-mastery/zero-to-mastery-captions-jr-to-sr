@@ -1,0 +1,526 @@
+﻿WEBVTT
+
+00:00:01.170 --> 00:00:08.130
+Bine ați venit înapoi este timpul ca noi să începem de fapt să implementăm sesiuni deoarece avem acum un
+
+00:00:08.160 --> 00:00:14.300
+profil de lucru și amintim că obiectivul nostru este să încercăm să facem acest lucru.
+
+00:00:14.360 --> 00:00:17.310
+Vom conecta la aplicația noastră.
+
+00:00:17.540 --> 00:00:20.920
+Utilizatorul va trimite numele de utilizator și parola.
+
+00:00:21.110 --> 00:00:32.830
+Serverul va genera apoi un jeton JWT și o vom trimite utilizatorului astfel încât data viitoare când vor accesa oricare dintre rutele
+
+00:00:32.830 --> 00:00:40.960
+care sunt protejate sau care necesită autentificare ca profilul 23, vor trebui să trimită acest
+
+00:00:40.960 --> 00:00:51.070
+JWT token cu astfel încât atunci când un utilizator obține un profil sau actualizează un profil prin efectuarea unei
+
+00:00:51.070 --> 00:00:52.270
+solicitări POST.
+
+00:00:52.390 --> 00:00:57.160
+Ei bine, ei trebuie să trimită tokenul JWT la server.
+
+00:00:57.460 --> 00:01:05.290
+Serverul poate apoi să verifice tokenul folosind metoda DOD verify sau, în cazul nostru, poate să dețină
+
+00:01:05.290 --> 00:01:11.960
+tokenul într-o bază de date citiți-ne pentru a vă asigura că acesta este valabil.
+
+00:01:12.190 --> 00:01:18.580
+Și apoi, dacă totul este în regulă, puteți avea profilul dvs. sau puteți actualiza profilul.
+
+00:01:18.670 --> 00:01:20.910
+Și în acest videoclip vom lucra în această privință.
+
+00:01:20.950 --> 00:01:27.150
+Vom genera tokenul JWT după ce utilizatorul semnează și să începem.
+
+00:01:28.840 --> 00:01:36.250
+Acum, dacă ne întoarcem la serverul nostru Da, avem dosarul nostru de docking care rulează în fundal aici totul
+
+00:01:36.250 --> 00:01:41.970
+verifică punctul de final cu care vrem să lucrăm este semnul în final.
+
+00:01:42.010 --> 00:01:48.070
+Deci, atunci când ne-am conectat suntem numit această funcție mâner seinen și veți vedea aici că este un
+
+00:01:48.370 --> 00:01:50.040
+pic diferit de celelalte.
+
+00:01:50.110 --> 00:01:57.660
+Veți vedea că toate celelalte puncte finale primesc un răspuns de cerere și apoi au o funcție care
+
+00:01:57.660 --> 00:01:59.770
+primește răspunsul la restul solicitărilor.
+
+00:01:59.770 --> 00:02:05.300
+Și noi trecem și în baza de date și scriptul care este biblioteca hash.
+
+00:02:05.320 --> 00:02:09.390
+Acum este puțin diferit pentru că vreau să arăt diferite moduri de a face acest lucru.
+
+00:02:09.550 --> 00:02:16.000
+În acest caz, ori de câte ori se semnează o semnătură, semnul mânerului va fi apelat cu baza de date și
+
+00:02:16.000 --> 00:02:18.480
+va fi prins cu ajutorul injecției de dependență.
+
+00:02:18.520 --> 00:02:24.830
+Asta ne dăm dependența bazei de date și suntem corupți pentru a face față lui seinen, astfel încât atunci când semnătura mânerului este
+
+00:02:24.850 --> 00:02:26.720
+chemată aici și să se conecteze.
+
+00:02:26.840 --> 00:02:30.330
+Da, se numește cu scriptul DB.
+
+00:02:30.640 --> 00:02:36.060
+Apoi, ori de câte ori există o cerere de post, funcția se execută din nou.
+
+00:02:36.070 --> 00:02:38.330
+Deci, încă o dată aceasta este o funcție de ordin înalt.
+
+00:02:38.440 --> 00:02:43.150
+O funcție care returnează o funcție și primește răspunsul la cerere.
+
+00:02:44.790 --> 00:02:47.120
+Și funcționează în ambele sensuri.
+
+00:02:47.130 --> 00:02:54.810
+Puteți face acest lucru sau putem face acest lucru și acest lucru este pur și simplu mai
+
+00:02:55.080 --> 00:03:04.650
+curat, deoarece în timp ce executăm această funcție și atunci când mesajul este lovit ori de câte ori un utilizator strălucește, vom
+
+00:03:05.040 --> 00:03:08.230
+adăuga automat răspunsul la cerere acestui manipulant.
+
+00:03:08.230 --> 00:03:10.720
+Acum, lucrul este acum.
+
+00:03:10.720 --> 00:03:11.520
+Manipulați-vă.
+
+00:03:11.530 --> 00:03:13.900
+Vrem să o facem mai bine.
+
+00:03:14.110 --> 00:03:19.620
+Nu vrem să spunem doar utilizarea semnului și a metodelor pe care le avem înainte de a genera acum un simbol.
+
+00:03:19.630 --> 00:03:22.250
+Deci, să schimbăm acest lucru cu altceva.
+
+00:03:22.390 --> 00:03:29.680
+Să o schimbăm pentru a spune să semnați o autentificare.
+
+00:03:29.840 --> 00:03:31.380
+Sună puțin mai oficial.
+
+00:03:32.520 --> 00:03:32.990
+O.K.
+
+00:03:33.120 --> 00:03:34.560
+Și există semnul autentificării.
+
+00:03:34.570 --> 00:03:36.910
+Va trebui să creăm.
+
+00:03:36.930 --> 00:03:43.350
+Așa că hai să mergem la seinen dodgy Da și să te conectezi.
+
+00:03:43.410 --> 00:03:51.730
+Da, să schimbați acum sau să adăugăm semnul verificat în autentificare și acest semn în
+
+00:03:54.240 --> 00:03:59.320
+autentificare va face ceea ce se ocupă cu seinen.
+
+00:03:59.430 --> 00:04:05.370
+Va primi o bază de date și un script din cărămidă B prin injecția de dependență.
+
+00:04:05.370 --> 00:04:08.610
+Apoi va primi răspunsul la cerere și apoi
+
+00:04:12.000 --> 00:04:14.640
+va face câteva lucruri aici.
+
+00:04:15.820 --> 00:04:22.870
+Deocamdată, însă, să ne asigurăm că exporăm această funcție nouă în loc de intrarea mânerului.
+
+00:04:23.030 --> 00:04:31.170
+Și hai să vorbim despre ceea ce vom face în interiorul dvs. dacă ne amintim diagrama noastră. Ei bine, vrem
+
+00:04:31.680 --> 00:04:37.940
+să verificăm parolele și totul verificați dacă baza de date face ceea ce face seinen.
+
+00:04:38.010 --> 00:04:46.340
+Dar, de asemenea, dorim să generăm un jken de JWT dacă totul se verifică și modul în care îmi place să scriu lucrurile
+
+00:04:46.340 --> 00:04:49.220
+este să mă gândesc la ce funcționează.
+
+00:04:49.370 --> 00:04:52.090
+Scrieți lucrurile cu funcții care încă nu există.
+
+00:04:52.130 --> 00:04:54.750
+Așa că putem să construim cu ușurință asta.
+
+00:04:55.900 --> 00:04:57.290
+Să-i dăm drumul aici.
+
+00:04:57.340 --> 00:05:03.100
+Ceea ce vrem să verificăm mai întâi în acest caz este că vrem să ne asigurăm că,
+
+00:05:03.100 --> 00:05:06.950
+în primul rând, vom primi răspunsul la solicitări din partea clientului.
+
+00:05:06.970 --> 00:05:19.280
+Deci, haideți să verificăm dacă pächter-ul de autorizare este setat de client deoarece amintesc că pot trimite jetoane JWT
+
+00:05:19.280 --> 00:05:21.970
+în antetul de autorizare.
+
+00:05:22.190 --> 00:05:24.690
+Și nu vă faceți griji că vom vedea cum se face acest lucru pe partea clientului.
+
+00:05:24.800 --> 00:05:31.400
+Dar vrem să verificăm pentru că, dacă au deja acest jeton de autorizare, nu ar trebui să se poată
+
+00:05:31.400 --> 00:05:37.570
+conecta din nou, ci pot merge mai departe și doar intră pe site-ul apuca profilul lor.
+
+00:05:37.640 --> 00:05:42.350
+Vreau să spun că acesta este unul dintre principalele motive pentru care facem acest lucru este că nu vrem ca utilizatorul să trebuiască să îl
+
+00:05:42.350 --> 00:05:43.330
+semneze în mod constant.
+
+00:05:43.850 --> 00:05:50.610
+Și aici să ne întoarcem la gândire sau să avem două opțiuni.
+
+00:05:50.620 --> 00:05:57.060
+Unul este că avem autorizația în anteturi și semnătura.
+
+00:05:57.510 --> 00:06:04.400
+Dacă acesta este cazul, atunci putem spune ceva ca să luăm profilul utilizatorului pentru moment, să-l denumim.
+
+00:06:04.410 --> 00:06:12.790
+Ieșiți codul de identificare și aceasta este o funcție care nu există.
+
+00:06:13.060 --> 00:06:22.920
+Așa că o să o las așa cum se întâmplă și să apară doar să sune un concert ieși
+
+00:06:22.920 --> 00:06:32.870
+din ID-ul token și această funcție va fi o funcție prostie care nu are absolut nimic altceva decât deconectarea consolei.
+
+00:06:32.910 --> 00:06:39.170
+OK, să spunem asta.
+
+00:06:39.260 --> 00:06:46.320
+Acum spunem că avem cea de-a doua opțiune, a doua opțiune, dacă nu au autorizația.
+
+00:06:46.520 --> 00:06:49.300
+Ei bine, vrem să ne ocupăm de semnare.
+
+00:06:49.640 --> 00:06:57.250
+Așadar, încă o dată vom spune să ne ocupăm și să ne amintim că mânerul seinen are nevoie de baza de date
+
+00:06:57.250 --> 00:07:00.680
+să fie cererea de criptare și obiectele de răspuns.
+
+00:07:01.190 --> 00:07:11.180
+Așa că am să dau această solicitare sau să începem cu obiectele de solicitare și de răspuns B B script.
+
+00:07:11.360 --> 00:07:16.610
+Și pentru că aceasta nu mai este o funcție de ordin superior, o numim o singură dată.
+
+00:07:16.820 --> 00:07:24.620
+Haideți să schimbați acest lucru dintr-o funcție care readuce o funcție la o simplă funcție de
+
+00:07:25.310 --> 00:07:26.090
+regulă.
+
+00:07:28.430 --> 00:07:30.850
+Să adăugăm acest lucru pe linia dvs. de fapt, doar pentru a vedea o mai
+
+00:07:34.100 --> 00:07:35.050
+bună care este mai bună.
+
+00:07:35.050 --> 00:07:41.660
+Deci trebuie să avem autorizație în acest caz să luăm ID-ul auto și să sperăm să apucăm profilul de utilizator.
+
+00:07:41.860 --> 00:07:46.950
+În caz contrar, dorim să ne ocupăm de seinen, ceea ce avem deja în mod implicit.
+
+00:07:47.260 --> 00:07:55.360
+Acum, aici, cu mânerul seinen, vreau să trec peste un concept important, și anume că
+
+00:07:55.720 --> 00:08:06.040
+tocmai am schimbat mânerul seinen de a fi un handler implicit al acestui punct final, având acum semnul și autentificarea.
+
+00:08:06.040 --> 00:08:12.630
+Și când facem asta mental, doar pentru a simplifica lucrurile și a evita erorile viitoare, vreau să spun asta.
+
+00:08:12.640 --> 00:08:13.160
+O.K.
+
+00:08:13.210 --> 00:08:15.950
+Pentru că acesta este cel care execută punctul final.
+
+00:08:16.000 --> 00:08:22.400
+Acesta ar trebui să fie cel care returnează răspunsul la un răspuns de 200 de situații.
+
+00:08:22.660 --> 00:08:30.910
+Nu vrem ca semnul mânerului să se întoarcă la punctul de răspuns Jaison sau la starea răspunsului la eroare 400, deoarece
+
+00:08:31.120 --> 00:08:37.720
+aceasta este doar o funcție de ajutor acum pe care o folosim în interiorul principalului handler.
+
+00:08:37.720 --> 00:08:43.030
+Dacă, dintr-un motiv oarecare, un dezvoltator nou vine de-a lungul și vede acest lucru și spune oh voi reveni doar
+
+00:08:43.030 --> 00:08:43.870
+un răspuns aici.
+
+00:08:43.910 --> 00:08:48.960
+Ei bine, va fi o eroare, deoarece putem trimite mai multe răspunsuri.
+
+00:08:49.010 --> 00:08:55.310
+Așadar, îmi place să păstrez lucrurile curate și ceea ce se ocupă de punctul final final ar trebui să fie acela
+
+00:08:55.310 --> 00:08:56.970
+care întoarce efectiv un răspuns.
+
+00:08:57.940 --> 00:09:01.530
+Acum există o modalitate frumoasă prin care putem să curățăm lucrurile.
+
+00:09:01.540 --> 00:09:08.350
+Să ne întoarcem la semnul mânerului și să funcționăm aici și să ne schimbăm toate răspunsurile pentru a ne întoarce
+
+00:09:08.740 --> 00:09:14.240
+o promisiune deoarece, la sfârșitul zilei, semnarea mânerului este un fel de promisiuni de manevră.
+
+00:09:14.260 --> 00:09:20.890
+Face baza de date selectând verificarea bazei de date care întoarce o promisiune și ori de câte ori avem o funcție
+
+00:09:20.890 --> 00:09:26.620
+pe care vrem să ne asigurăm că vom rămâne consecvenți această funcție ar trebui să întoarcă întotdeauna o
+
+00:09:26.980 --> 00:09:27.910
+ieșire așteptată.
+
+00:09:28.180 --> 00:09:33.070
+Și asta este ceva pe care l-am învățat înainte în acest curs, și anume că nu vrem să trimitem o
+
+00:09:33.190 --> 00:09:34.190
+promisiune sau un flux.
+
+00:09:34.450 --> 00:09:40.090
+Vrem să rămânem la ceva previzibil, astfel încât, dacă o altă funcție ca semnul și autentificarea o folosește
+
+00:09:40.090 --> 00:09:46.930
+bine, ne asigurăm că semnul în autentificare, oricine scrie acest lucru, nu trebuie să vă faceți griji cu privire la semnul mânerului
+
+00:09:46.930 --> 00:09:52.540
+și la funcția în care putem avea încredere că funcționează și se întoarce doar o promisiune.
+
+00:09:52.540 --> 00:09:59.260
+Bine, să schimbăm acest lucru, astfel încât acum avem un răspuns care vine de la autentificare seinen și schimbare mâner
+
+00:09:59.260 --> 00:10:04.750
+seinen pentru a vă asigura că nu face nici un răspuns și doar întoarce promisiunile.
+
+00:10:04.760 --> 00:10:12.230
+Acum, primul lucru pe care îl voi face este mânerul pe care trebuie să-l returnez clientului la capătul din
+
+00:10:12.250 --> 00:10:13.030
+față.
+
+00:10:13.180 --> 00:10:16.260
+Atât de multe răspunsuri pe care le trimitem înapoi.
+
+00:10:16.720 --> 00:10:24.490
+Deci, să spunem că în interiorul meu voi adăuga un punct apoi pentru mânerul seinen și poate voi păstra acest lucru pe o singură linie, astfel încât să
+
+00:10:24.490 --> 00:10:26.080
+fie mai ușor de văzut.
+
+00:10:26.500 --> 00:10:33.310
+Deci, mânerul semnează că va avea un punct, atunci va primi utilizatorul după cum puteți vedea aici.
+
+00:10:33.310 --> 00:10:40.760
+Vom întoarce utilizatorul de aici și de la acest utilizator sau să lăsăm acum doar date.
+
+00:10:42.120 --> 00:10:52.140
+Aceste date vor avea pentru moment să facem doar un răspuns Daut Jaison și tocmai am întors datele.
+
+00:10:52.490 --> 00:11:01.350
+Acesta este un utilizator de care suntem interesați și, din anumite motive, dacă nu merge bine, atunci
+
+00:11:01.350 --> 00:11:09.830
+putem face o captură prostă, iar numerarul în stoc va primi statutul de răspuns aerian.
+
+00:11:11.070 --> 00:11:18.120
+400 și deocamdată putem reveni la aerul real.
+
+00:11:18.120 --> 00:11:19.400
+In regula.
+
+00:11:19.570 --> 00:11:26.070
+Acum, dacă mă întorc aici, trebuie să ne asigurăm că semnul mânerului este o promisiune,
+
+00:11:26.220 --> 00:11:32.160
+deoarece în timp ce facem 8. 10 de captură merge înapoi aici ne uităm la semnul mâner și funcția.
+
+00:11:32.250 --> 00:11:38.880
+Și primul lucru pe care l-am observat este faptul că dacă nu se dă nici un e-mail și o parolă, vom
+
+00:11:38.880 --> 00:11:43.310
+reveni la o stare pentru Hodgin pe care nu o dorim să o facem.
+
+00:11:43.320 --> 00:11:50.880
+Poate că, în schimb, ceea ce vrem să facem este să respingem o promisiune pentru a prinde aici semnul mânerului.
+
+00:11:51.720 --> 00:12:02.490
+Deci voi schimba aceasta situatie in loc de starea de raspuns la o respingere de promisiune care respinge automat
+
+00:12:02.490 --> 00:12:05.320
+si revine o promisiune.
+
+00:12:05.340 --> 00:12:06.580
+Frumos și simplu.
+
+00:12:06.930 --> 00:12:10.090
+Dacă continuăm să mergem aici, următorul pas îl vedem.
+
+00:12:10.170 --> 00:12:14.640
+Bine că facem această bază de date să privească în sus, dar nu ne întoarcem nimic aici.
+
+00:12:14.640 --> 00:12:16.470
+Nu văd un cuvânt cheie returnat.
+
+00:12:16.520 --> 00:12:18.910
+Ne întoarcem înăuntru, dar nu aici.
+
+00:12:18.990 --> 00:12:21.260
+Și aceasta este o greșeală obișnuită cu promisiuni.
+
+00:12:21.280 --> 00:12:24.990
+Vrem întotdeauna să vă asigurați că promisiunile dvs. de întoarcere.
+
+00:12:24.990 --> 00:12:29.390
+Deci, în cazul nostru, să adăugăm un cuvânt cheie înapoi aici.
+
+00:12:29.400 --> 00:12:31.250
+Acum ne întoarcem această promisiune.
+
+00:12:31.440 --> 00:12:34.220
+Și când intrăm înăuntru, vedem asta.
+
+00:12:34.230 --> 00:12:34.480
+O.K.
+
+00:12:34.500 --> 00:12:37.050
+Ei bine, nu vrem să avem un răspuns.
+
+00:12:37.050 --> 00:12:41.790
+Vrem doar sa intoarcem utilizatorul si poate ca dorim chiar sa schimbam numele
+
+00:12:41.790 --> 00:12:47.970
+pentru a manipula semnul si pentru a verifica probabil parola de utilizator sau ceva de-a lungul acestor linii.
+
+00:12:47.970 --> 00:12:56.760
+Deocamdată, însă, să schimbăm acest lucru într-un mic cadou frumos sau să îl luăm așa și să-l întoarcem pe
+
+00:12:57.750 --> 00:12:58.370
+utilizator.
+
+00:12:58.420 --> 00:13:05.070
+Acum rețineți întoarce o matrice a utilizatorului în cazul nostru, un utilizator care se întoarce de la verificarea parolei și
+
+00:13:05.250 --> 00:13:07.760
+a e-mailului care arată puțin mai curat.
+
+00:13:08.030 --> 00:13:15.400
+Și apoi pentru DOT prindeți aici vrem să ne asigurăm că în loc de statutul
+
+00:13:15.400 --> 00:13:18.920
+din nou putem spune doar o promisiune.
+
+00:13:19.000 --> 00:13:21.220
+Respinge.
+
+00:13:21.430 --> 00:13:27.160
+Și încă o dată, pentru orice eroare, vom promite că nu vom respinge.
+
+00:13:27.490 --> 00:13:28.030
+In regula.
+
+00:13:28.030 --> 00:13:34.450
+Deci, indiferent de ce functie ar trebui sa isi returneze o promisiune acum, astfel incat cu semnul de maner
+
+00:13:34.450 --> 00:13:39.280
+si ne putem ocupa doar asa ca apoi trimite-ne datele care sunt utilizatorii.
+
+00:13:39.310 --> 00:13:42.550
+În caz contrar, vom detecta erorile pe care le-am primit.
+
+00:13:42.610 --> 00:13:48.580
+În cazul nostru, au fost capabili să obțină acreditări de la Ron și tocmai au returnat răspunsul lui Jaison.
+
+00:13:48.880 --> 00:13:51.860
+Acum, să ne asigurăm aici și să ne testați codul.
+
+00:13:51.860 --> 00:13:54.830
+Am scris un pic de cod, fără să-l testăm.
+
+00:13:54.950 --> 00:14:02.830
+Deci, să ne întoarcem aici și să ieșim din nou și să încercăm cu un vechi prieten bun un punct. com sau o zi de opt ore și deschideți
+
+00:14:03.570 --> 00:14:06.820
+consola, asigurați-vă că nu există erori aici.
+
+00:14:07.090 --> 00:14:09.040
+Când am făcut clic pe conectare.
+
+00:14:09.070 --> 00:14:10.950
+Uită-te bine la Nicăieri.
+
+00:14:10.960 --> 00:14:12.960
+Și încă ne putem conecta.
+
+00:14:13.030 --> 00:14:18.620
+Nu am realizat absolut nimic în ceea ce privește funcționalitatea pe front.
+
+00:14:18.760 --> 00:14:21.820
+Dar acum avem mai multă flexibilitate.
+
+00:14:21.850 --> 00:14:29.280
+Încă întoarcem utilizatorul în timp ce semnează utilizatorul din baza de date.
+
+00:14:29.560 --> 00:14:36.490
+Dar, de asemenea, ne-am extins Așa că acum verificăm dacă există antete de autorizare și dacă
+
+00:14:36.580 --> 00:14:39.600
+există, putem să luăm simbolul Heidi.
+
+00:14:39.820 --> 00:14:47.190
+Acum, că avem setat în următorul videoclip, vreau să generez un jeton JWT pentru acest utilizator.
+
+00:14:47.290 --> 00:14:51.640
+Dacă este prima dată când se loghează din nou, nu au un jet de autorizare.
+
+00:14:51.640 --> 00:15:00.970
+Ei bine, vreau sa ma ocup de seinen prin hapsanul utilizatorului, dar si atunci cand returnez datele utilizatorilor, de asemenea, doresc sa returnez un
+
+00:15:00.970 --> 00:15:06.570
+JWT token pentru ca in vizitele ulterioare sa nu mai treaca prin acest pas.
+
+00:15:07.530 --> 00:15:08.160
+O să văd pe asta.

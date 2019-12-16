@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.230 --> 00:00:02.440
+Witamy spowrotem.
+
+00:00:02.460 --> 00:00:09.630
+Zacznijmy od pierwszego tematu ciągłej integracji ciągłej integracji.
+
+00:00:09.790 --> 00:00:11.890
+Czy to tutaj jest niebieskie pudełko?
+
+00:00:12.760 --> 00:00:22.150
+Jest to praktyka polegająca na rozpowszechnianiu, w której programiści integrują kod ze współużytkowanym repozytorium
+
+00:00:22.150 --> 00:00:32.310
+często kilka razy dziennie, a każdą integrację można następnie zweryfikować za pomocą zautomatyzowanej kompilacji testów automatycznych.
+
+00:00:32.310 --> 00:00:40.170
+Rozpakujmy teraz to oświadczenie, więc ma to sens w zwykłej angielskiej ciągłej integracji jest sposobem, aby programiści
+
+00:00:40.170 --> 00:00:48.440
+korzystali ze wspólnego repozytorium, takiego jak dostać pracę, i wiemy wszystko o tym, jak do tej pory i
+
+00:00:48.440 --> 00:00:52.200
+to współdzielone repozytorium będzie używane przez cały dzień.
+
+00:00:52.380 --> 00:01:02.070
+Każda próba usunięcia błędu lub nowa funkcja musi przejść automatyczny krok Builth, który może obejmować testy takie jak testy
+
+00:01:02.070 --> 00:01:09.360
+i Linked-In, aby upewnić się, że wszystkie testy przechodzą pomyślnie wszystkie nasze testy jednostkowe.
+
+00:01:09.360 --> 00:01:17.410
+Być może nie popełniliśmy żadnego błędu związanego z pożyczaniem lub składniami i że wszystko buduje nasze projekty zgodnie z oczekiwaniami.
+
+00:01:17.630 --> 00:01:23.200
+Upewniamy się, że kod jest zgodny z resztą kodu.
+
+00:01:23.290 --> 00:01:31.270
+Jedną z kluczowych zalet regularnej integracji jest to, że można szybko wykryć błędy
+
+00:01:31.270 --> 00:01:38.530
+i łatwiej je zlokalizować, ponieważ każda wprowadzana zmiana będzie niewielka i będzie
+
+00:01:38.710 --> 00:01:41.950
+wskazywać konkretną zmianę wprowadzającą defekt.
+
+00:01:41.950 --> 00:01:48.960
+Jeśli zrobimy PR lub żądanie ściągnięcia na Hobbla, przeprowadzimy testy i te testy zakończą się niepowodzeniem.
+
+00:01:49.120 --> 00:01:57.510
+Wiemy od razu, że PR musi zostać naprawiony, a nawet jeśli pojawi się błąd po jego scaleniu, jeśli nagle
+
+00:01:58.140 --> 00:01:59.950
+pojawi się błąd.
+
+00:01:59.970 --> 00:02:07.030
+No cóż, wiemy, że ta prośba o ankietę najprawdopodobniej zrobiła to, ponieważ została niedawno wprowadzona.
+
+00:02:07.080 --> 00:02:09.750
+Więc o co w tym wszystkim chodzi.
+
+00:02:09.750 --> 00:02:16.110
+Chodzi o to, aby firmy upewniły się, że kod od wielu programistów ma najmniejsze możliwe błędy
+
+00:02:16.530 --> 00:02:18.480
+i że pozostaje niezmienny.
+
+00:02:18.480 --> 00:02:20.870
+Tak dużo jak to możliwe.
+
+00:02:21.070 --> 00:02:27.190
+Teraz poprowadzę cię przez konfigurację, abyś mógł zobaczyć, o co mi chodzi, kiedy mówię, wykonaj
+
+00:02:27.190 --> 00:02:29.870
+krok budowania, jak testy i kompilacje.
+
+00:02:29.890 --> 00:02:33.330
+Nie martw się, do tego dojdziemy.
+
+00:02:33.370 --> 00:02:42.460
+Chcę, żebyś miał tę rację, chociaż ten proces gwarantuje, że kod poszczególnych deweloperów spełnia określony standard i
+
+00:02:42.460 --> 00:02:49.480
+że w ten sposób, bez względu na to, jak duże są nasze zespoły,
+
+00:02:49.600 --> 00:02:55.560
+możemy zagwarantować, że poszczególni programiści nie odejdą od oryginału baza kodów.
+
+00:02:55.660 --> 00:03:04.960
+Trzymamy rzeczy w rzędzie i pod kontrolą, a ciągła integracja polega na tym, że często
+
+00:03:05.050 --> 00:03:14.910
+łączy się proces tworzenia PR z testami automatycznymi, czyli testami uruchamianymi automatycznie i włączasz rzeczy jako
+
+00:03:14.910 --> 00:03:20.100
+automatyczne budowanie, a następnie innych programistów sprawdzających PR.
+
+00:03:20.100 --> 00:03:27.240
+A potem w końcu scalając go, unikając piekła integracji, które zwykle dzieje się, gdy ludzie
+
+00:03:27.240 --> 00:03:30.820
+czekają na dzień premiery, aby scalić wszystko.
+
+00:03:31.110 --> 00:03:37.680
+Powiedzmy, że dzień przed wielkim wydaniem wszyscy, którzy pracowali nad funkcją, każdy ma inne funkcje,
+
+00:03:37.680 --> 00:03:43.430
+i będzie się łączyć od razu, bez faktycznego zmierzenia się z problemem.
+
+00:03:43.440 --> 00:03:45.430
+Trudno to wytłumaczyć.
+
+00:03:45.480 --> 00:03:51.130
+Tak więc zamierzamy wprowadzić go w życie u naszych przyjaciół robo.
+
+00:03:51.320 --> 00:03:57.770
+Ale chcę, żebyś po prostu pamiętał, że ta ciągła integracja kładzie duży nacisk na automatyzację testów, aby sprawdzić,
+
+00:03:58.130 --> 00:04:00.350
+czy aplikacja nie jest zepsuta.
+
+00:04:00.350 --> 00:04:07.910
+Za każdym razem, gdy nowe zatwierdzenie lub żądanie pobrania PR zostanie zintegrowane z główną gałęzią, którą widzimy tutaj, że
+
+00:04:08.120 --> 00:04:15.880
+tworzymy PR, testy są automatycznie uruchamiane dla nas, a my uruchamiamy kompilację i upewniamy się, że wszystko mija i to
+
+00:04:16.100 --> 00:04:22.520
+jest automatycznie wykonywane, aby upewnić się, że wcześniej łączymy się, zanim ktoś przejrzy nasze żądania
+
+00:04:23.030 --> 00:04:25.720
+dotyczące puli, które przechodzą te testy.
+
+00:04:25.720 --> 00:04:27.790
+W porządku, przejdźmy do następnego.
+
+00:04:27.970 --> 00:04:34.930
+Następny jest ten żółty kwadrat, który w ciągłej integracji Lap, nazywany ciągłym dostarczaniem i ciągłym
+
+00:04:36.130 --> 00:04:42.520
+dostarczaniem, jest praktyką utrzymywania bazy kodów możliwej do wdrożenia w dowolnym momencie.
+
+00:04:43.510 --> 00:04:51.630
+Poza upewnieniem się, że aplikacja w tej niebieskiej części jest zintegrowana z główną gałęzią,
+
+00:04:51.630 --> 00:04:54.500
+mamy kilka dodatkowych kroków.
+
+00:04:54.730 --> 00:05:02.530
+Widać, że musi mieć wszystkie konfiguracje niezbędne do wprowadzenia produkcji, gdy chcemy ciągłej
+
+00:05:02.530 --> 00:05:03.130
+dostawy.
+
+00:05:03.160 --> 00:05:10.540
+Chodzi o to, że zawsze będziemy przygotowywać wszystko, aby kiedy produkt dostawczy został wdrożony do produkcji
+
+00:05:10.540 --> 00:05:17.140
+może mieć aktualizację naszego produktu, możemy to zrobić i mamy dodatkowy etap testów
+
+00:05:17.140 --> 00:05:24.190
+akceptacyjnych, takich jak ta funkcja. Aby to zrobić, możesz mieć kogoś, kto jest uroczym lub
+
+00:05:24.190 --> 00:05:31.690
+wysokiej jakości analitykiem lub kto przeprowadza testy lub właściciel produktu, który sprawdza, czy wszystkie funkcje są
+
+00:05:31.750 --> 00:05:38.860
+zaimplementowane, a następnie ręcznie programista lub kierownik zespołu klika przycisk. co oznacza wdrożenie do ciągłego
+
+00:05:40.380 --> 00:05:41.660
+dostarczania produkcji.
+
+00:05:41.700 --> 00:05:47.310
+Jak widać rozszerzenie ciągłej integracji zapewnia szybkie i szybkie
+
+00:05:47.310 --> 00:05:50.710
+wprowadzanie nowych zmian dla klientów.
+
+00:05:51.560 --> 00:05:58.910
+Oznacza to, że oprócz zautomatyzowania twoich testów, musisz również zautomatyzować proces wydawania, aby móc
+
+00:05:59.570 --> 00:06:01.330
+wdrożyć swoją produkcję.
+
+00:06:01.340 --> 00:06:09.270
+Jak już wcześniej mówiłem w teorii, z ciągłym procesem dostarczania dostaw do Twojej firmy możesz zdecydować się
+
+00:06:09.300 --> 00:06:16.300
+na codzienne wydawanie co tydzień co noc lub cokolwiek, co odpowiada twoim wymaganiom biznesowym.
+
+00:06:17.120 --> 00:06:22.040
+Ale idea ciągłego dostarczania jest idealna, tak jak robimy to w przypadku ciągłej integracji
+
+00:06:22.040 --> 00:06:29.030
+i tworzenia małych, ale często samochodów i łączenia naszych zapytań i funkcji tak często, jak to możliwe z ciągłą
+
+00:06:29.030 --> 00:06:29.770
+dostawą.
+
+00:06:29.900 --> 00:06:31.490
+Działa bardzo dobrze.
+
+00:06:31.640 --> 00:06:39.530
+Kiedy zaczynasz robić małe wydania, możesz zauważyć na telefonie, że twoje aplikacje są zawsze aktualizowane,
+
+00:06:39.530 --> 00:06:46.220
+nowe łatki pojawiają się prawie co tydzień, a oni nieustannie dostarczają małe,
+
+00:06:46.220 --> 00:06:52.910
+przyrostowe zmiany w aplikacji, które można łatwo rozwiązać, na wypadek gdyby problem.
+
+00:06:52.910 --> 00:06:56.160
+Muszą wrócić i naprawić rzeczy.
+
+00:06:56.210 --> 00:06:57.310
+W porządku.
+
+00:06:57.480 --> 00:06:58.700
+To nie tylko dwa.
+
+00:06:58.710 --> 00:07:02.040
+Wiem, że tytuł mówi "zobacz-I" i trochę zapalam.
+
+00:07:02.040 --> 00:07:12.110
+Jest jeszcze jedno i to jest ciągłe wdrażanie, które jest ściśle związane z ciągłym dostarczaniem i odnosi się do
+
+00:07:12.110 --> 00:07:17.900
+utrzymania aplikacji w dowolnym momencie, tak jak mamy to w przypadku
+
+00:07:17.900 --> 00:07:19.270
+ciągłego dostarczania.
+
+00:07:19.360 --> 00:07:27.500
+Istnieje jednak niewielka różnica i ciągłe wdrażanie w trybie ciągłym idzie prosto do
+
+00:07:27.500 --> 00:07:28.400
+produkcji.
+
+00:07:28.400 --> 00:07:34.730
+To znaczy, że nie ma ręcznego programisty lub Team Lead lub managera, który kliknął porzucony
+
+00:07:34.730 --> 00:07:37.510
+mówi, że wszystkie testy akceptacyjne minęły.
+
+00:07:37.610 --> 00:07:38.790
+Wszystko się kończy.
+
+00:07:38.810 --> 00:07:45.860
+Zamierzam wdrożyć wdrożenie produkcyjne w dalszym ciągu jest filozofią, w której mówisz, że
+
+00:07:45.920 --> 00:07:53.530
+testy akceptanta są automatycznie automatycznie pomyślnie przekazywane do produkcji i być może zauważyłeś ciągłe
+
+00:07:53.530 --> 00:07:54.600
+dostarczanie.
+
+00:07:54.610 --> 00:08:02.700
+Kiedy patrzysz na strony GET HOT ze stronami pobierania, takimi jak robo friends redux, widzimy, że nasza
+
+00:08:02.700 --> 00:08:04.220
+aplikacja jest wdrożona.
+
+00:08:04.590 --> 00:08:10.230
+I jakkolwiek włączyłem się do masteringu nowej wersji, może chciałbym tytułować to na coś
+
+00:08:11.170 --> 00:08:16.840
+innego, możemy chcieć dokonać pewnych zmian tutaj może zmienić tytuł może zmienić kolor, ale
+
+00:08:16.930 --> 00:08:23.980
+kiedy tylko połączę się z mistrzem tutaj ten link będzie zaktualizowany, ponieważ odwołuje się do jakiegokolwiek Mistrza Zen
+
+00:08:23.980 --> 00:08:26.890
+i jest podobny do ciągłego wdrażania.
+
+00:08:26.890 --> 00:08:35.520
+Za każdym razem, gdy jest scalany i wszystkie moje testy przechodzą, a to, co widzą lub wdrażają użytkownicy, również
+
+00:08:35.520 --> 00:08:37.110
+zostanie automatycznie zmienione.
+
+00:08:38.450 --> 00:08:41.810
+Dlaczego teraz uczę Google tego.
+
+00:08:41.960 --> 00:08:48.590
+Dzieje się tak dlatego, że ciągłe wdrażanie i ciągła dostawa rozwinęły się jako najlepsze praktyki w utrzymywaniu
+
+00:08:48.590 --> 00:08:53.910
+aplikacji w dobrym stanie w stanie nadającym się do wdrożenia w dowolnym momencie.
+
+00:08:54.290 --> 00:08:57.800
+I to jest po prostu dobra praktyka.
+
+00:08:57.860 --> 00:09:04.270
+Pozwala to zespołowi na szybki ruch, zachowując przy tym wysokie standardy jakości, które mogą być sprawdzane automatycznie.
+
+00:09:04.310 --> 00:09:09.940
+Widzisz, że wiele czołowych firm praktykuje w ten sposób rozwijanie swojego kodu źródłowego w rzeczywistości.
+
+00:09:09.950 --> 00:09:16.980
+Jeśli masz kilka pierwszych dni w dużej firmie, prawdopodobnie zapoznasz się z tym procesem, więc
+
+00:09:17.060 --> 00:09:18.510
+dobrze go znasz.
+
+00:09:18.860 --> 00:09:27.110
+Pamiętaj tylko, że ta kontynuacja wdrożenia idzie o krok dalej niż ciągłe dostarczanie z tą
+
+00:09:27.110 --> 00:09:27.890
+praktyką.
+
+00:09:28.100 --> 00:09:36.340
+Każda zmiana przechodząca przez wszystkie etapy produkcji, którą nazywamy potokiem, jest przekazywana
+
+00:09:36.550 --> 00:09:38.180
+do klientów.
+
+00:09:38.200 --> 00:09:44.170
+Nie ma interwencji człowieka i tylko próba nieudana uniemożliwi wdrożenie nowej zmiany
+
+00:09:44.170 --> 00:09:45.790
+w produkcji.
+
+00:09:45.820 --> 00:09:52.050
+Teraz po raz kolejny będzie to bardzo mylące, jeśli zobaczysz to po raz pierwszy.
+
+00:09:52.230 --> 00:09:59.070
+Zamierzamy faktycznie zbudować rurociąg na dużym stopniu jako etap ciągłej integracji, abyście wiedzieli, jakie są
+
+00:09:59.130 --> 00:10:01.530
+korzyści i jak to zrobić.
+
+00:10:01.570 --> 00:10:07.220
+Czy jednak Twoja firma powinna porozmawiać o tym w następnym filmie?
+
+00:10:07.330 --> 00:10:09.070
+Zobaczę w tym jednym.

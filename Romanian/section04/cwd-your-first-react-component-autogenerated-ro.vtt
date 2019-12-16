@@ -1,0 +1,697 @@
+﻿WEBVTT
+
+00:00:01.620 --> 00:00:02.230
+In regula.
+
+00:00:02.250 --> 00:00:03.210
+Bine ai revenit.
+
+00:00:03.210 --> 00:00:06.480
+Avem aplicația noastră Hello World, dar asta nu arată foarte bine.
+
+00:00:06.480 --> 00:00:09.370
+Vrem să facem aplicația noastră de prieteni robo.
+
+00:00:09.390 --> 00:00:15.340
+Așa că în acest videoclip vom începe să construim prima noastră componentă.
+
+00:00:15.420 --> 00:00:19.020
+Ne întoarcem aici, ne amintim că avem terminalul din partea dreaptă.
+
+00:00:19.050 --> 00:00:25.830
+Și tocmai am fugit NPM începe și a crea Doubs verifică toate fișierele pentru noi asigurați-vă că nu există erori.
+
+00:00:25.830 --> 00:00:33.630
+Se spune ca aplicatia noastra este definita, dar niciodata nu este folosita asa ca sa comentam acest lucru din nou Comentariu slash spun acest
+
+00:00:34.320 --> 00:00:37.050
+lucru si veti vedea ca totul functioneaza bine.
+
+00:00:38.540 --> 00:00:42.470
+Acum puteți avea câteva întrebări tocmai văzute în acest index.
+
+00:00:42.590 --> 00:00:48.860
+J. S. toamna o vedem că importăm reacția, dar cum funcționează.
+
+00:00:48.860 --> 00:00:55.340
+Ne amintim că nu a funcționat înainte de a fi nevoie să folosim, iar apoi browserul din nou re-act
+
+00:00:55.340 --> 00:00:59.130
+are un pachet umed sub capota care face legătura pentru noi.
+
+00:00:59.210 --> 00:01:03.620
+Deci, ni se permite să folosim importurile atâta timp cât păstrăm acest lucru în partea de sus a fișierului.
+
+00:01:03.710 --> 00:01:10.590
+Putem importa orice alte fișiere dorim sau orice alte pachete vrem.
+
+00:01:10.600 --> 00:01:14.270
+De asemenea, vedem că două lucruri reacționează și reacționează.
+
+00:01:14.300 --> 00:01:21.150
+Dom dacă vă amintiți re-act este o bibliotecă de vizualizare.
+
+00:01:21.210 --> 00:01:25.590
+Deci acesta este micul robot pe care îl amintim de videoclipul precedent.
+
+00:01:25.980 --> 00:01:27.900
+Este nucleul pachetului.
+
+00:01:27.920 --> 00:01:31.260
+Are manipularea DOM pentru noi.
+
+00:01:31.260 --> 00:01:35.850
+Dar așa cum am spus înainte, Riak poate fi folosit în mai multe locuri, nu doar în browser.
+
+00:01:36.090 --> 00:01:38.270
+Poate fi folosit pentru dispozitive mobile.
+
+00:01:38.280 --> 00:01:45.300
+Acesta poate fi folosit pentru realitatea virtuală și puteți conecta și reda diferite biblioteci de acest gen, în funcție
+
+00:01:45.390 --> 00:01:47.780
+de ecranul pe care îl redirecționați.
+
+00:01:47.940 --> 00:01:57.090
+Deci re-actul Dom este folosit pentru site-urile proaste, astfel încât adezivul să reacționeze, dar putem avea ceva asemănător lui Riak
+
+00:01:57.090 --> 00:01:57.570
+nativ.
+
+00:01:57.570 --> 00:02:01.870
+Asta face de fapt două telefoane mobile.
+
+00:02:01.920 --> 00:02:04.640
+Avem de asemenea index CSSA pentru import.
+
+00:02:04.710 --> 00:02:13.290
+Și aceasta este o nouă sintaxă care va reacționa pentru a ne permite să adăugăm CSSA nu doar într-un singur fișier ci pentru fiecare
+
+00:02:13.290 --> 00:02:14.340
+componentă diferită.
+
+00:02:14.340 --> 00:02:15.910
+Dacă mergem la APT.
+
+00:02:16.050 --> 00:02:20.840
+Da, avem un CSSA dot care descrie aplicația.
+
+00:02:21.180 --> 00:02:22.830
+Dacă mergem să indice da.
+
+00:02:22.860 --> 00:02:27.890
+În timp ce am indexat începe VSS care are propriul status.
+
+00:02:27.900 --> 00:02:35.610
+Iar aceste celule se vor aplica numai pentru componentele și pentru redare Exide G-S.
+
+00:02:35.860 --> 00:02:41.500
+Și modul în care îl folosim este doar importul și apoi, spre deosebire de
+
+00:02:41.500 --> 00:02:47.890
+un pachet Riak, unde spunem doar numele pachetului și știe automat verificarea dosarului de module cunoscute,
+
+00:02:47.950 --> 00:02:55.230
+trebuie să-l spunem unde locuiește indexul Dotsie SS și sintaxa lui punct slash înseamnă că este în același director.
+
+00:02:55.270 --> 00:02:59.850
+Așa că spuneți verificarea în dosarul sursă și ex-SS-ul nazist ar trebui să fie acolo.
+
+00:03:01.230 --> 00:03:05.040
+OK și, în cele din urmă, văd lucrătorii serviciului de înregistrare.
+
+00:03:05.040 --> 00:03:10.980
+Și acesta este un subiect avansat pe care nu îl vom acoperi în acest curs, dar gândim la lucrătorii de
+
+00:03:10.980 --> 00:03:16.740
+serviciu ca pe o nouă caracteristică care permite aplicațiilor noastre să devină mai rapide și potențial să lucreze offline.
+
+00:03:16.740 --> 00:03:19.070
+Este ceva de care nu trebuie să ne preocupăm.
+
+00:03:19.080 --> 00:03:26.160
+Deci, pentru moment, puteți să comentați acest lucru și acesta va funcționa în continuare, dar îl vom
+
+00:03:26.160 --> 00:03:34.830
+păstra aici doar pentru că creați reactivarea ne dă gratuit gratuit lucrurile cu care ne pasă cu adevărat, deși este în timp
+
+00:03:34.830 --> 00:03:43.110
+ce această linie aici aici lucru este ceea ce re-actul spune ea vreau pachetul de reacție să folosească funcția render și
+
+00:03:43.200 --> 00:03:52.680
+această render este că am vrut să fac orice este acest lucru, dar dacă vă amintiți înainte de a avea app și bine acest
+
+00:03:55.060 --> 00:03:59.010
+lucru nu este într-adevăr o etichetă shemale este aceasta.
+
+00:03:59.170 --> 00:04:04.810
+Tocmai am creat asta din acel director.
+
+00:04:04.830 --> 00:04:09.470
+Există ceva numit aplicație și nu are un punct.
+
+00:04:09.720 --> 00:04:17.700
+Da fișier așa cum o vedem aici și asta se datorează faptului că în mod automat spune că dacă nu există un punct CSX sau
+
+00:04:17.730 --> 00:04:19.350
+alt tip după el.
+
+00:04:19.360 --> 00:04:27.400
+Ei bine, presupune că este vorba de javascript, dar acest lucru va funcționa la fel de bine cum puteți vedea deoarece ultimul merge
+
+00:04:27.490 --> 00:04:33.410
+la fișierul appgiest și vedeți de ce putem folosi această sarcină rușinoasă pe care am creat-o.
+
+00:04:33.610 --> 00:04:39.220
+Dacă mergem să renunțăm la fișierele japoneze din nou și vedem că importăm ceva, facem
+
+00:04:39.220 --> 00:04:42.370
+ceva numit destructurare aici și obținem și componenta.
+
+00:04:43.290 --> 00:04:49.640
+Și avem câteva fișiere, cum ar fi Logo-ul în Fiji și răpirea CSSA pe care o importăm.
+
+00:04:49.920 --> 00:04:52.240
+Și din nou vedem că sintaxa noastră este un pic.
+
+00:04:52.240 --> 00:05:03.780
+De asemenea, asigurați-vă că modificăm fișierele noastre în tabelul javascript și se pare că aplicația de clasă A extinde componenta care vine
+
+00:05:04.470 --> 00:05:05.780
+cu reacția.
+
+00:05:05.790 --> 00:05:08.010
+Și aceasta este doar o sintaxă standard.
+
+00:05:08.040 --> 00:05:15.910
+Acest lucru face ca membrii să aibă întotdeauna rolul pe care trebuie să-l facă cel puțin ceva.
+
+00:05:15.910 --> 00:05:21.210
+Și modul în care facem asta este să întoarcem o bucată Chanel de pe site-ul Web.
+
+00:05:21.390 --> 00:05:24.810
+Deci vedem aici bun venit pentru a reacționa pentru a începe la adăugat.
+
+00:05:25.030 --> 00:05:27.900
+Ei bine, exact așa se spune aici.
+
+00:05:28.050 --> 00:05:29.390
+Aceasta este puterea de a reacționa.
+
+00:05:29.400 --> 00:05:38.800
+Creați propriile noastre componente personalizate, propriile personalizate, o etichetă shemale pe care o putem adăuga și dacă vă
+
+00:05:38.800 --> 00:05:45.270
+amintiți imaginea unui flux de date, avem un părinte care are copii.
+
+00:05:45.270 --> 00:05:48.240
+Prin urmare, aplicația are copii, dar știi ce.
+
+00:05:48.480 --> 00:05:52.110
+Să construim o componentă proprie pentru a face acest lucru clar.
+
+00:05:52.320 --> 00:05:57.690
+În loc să avem salut lume aici, să creăm o componentă numită Hello.
+
+00:05:58.930 --> 00:06:02.320
+Și este o sarcină de auto-închidere, astfel încât doriți să aveți backslash.
+
+00:06:02.620 --> 00:06:12.580
+Și aici, în loc de a spune import app să facem import Bună ziua de la Noi o vom numi salut dodgy Da.
+
+00:06:12.610 --> 00:06:14.630
+Și veți observa că este capitalizată aici.
+
+00:06:14.740 --> 00:06:19.770
+Ei bine, dacă construiți o componentă, standardul este că este capitalizat.
+
+00:06:19.840 --> 00:06:21.180
+Deci se va numi salut.
+
+00:06:21.270 --> 00:06:28.650
+Da, dacă salvăm acest lucru, vom primi o eroare care spune că modulul nu a fost găsit nu poate fi rezolvat.
+
+00:06:28.660 --> 00:06:29.010
+Salut.
+
+00:06:29.050 --> 00:06:30.870
+Deoarece fișierul nu există.
+
+00:06:31.030 --> 00:06:32.290
+Deci, să creăm una.
+
+00:06:32.290 --> 00:06:36.970
+Am de gând să spun nou dosar Bună ziua dodgier Da.
+
+00:06:37.960 --> 00:06:38.600
+Acolo te duci.
+
+00:06:38.620 --> 00:06:42.730
+Avem un nou dosar hello dodgiest și este compilat cu succes.
+
+00:06:42.970 --> 00:06:46.320
+Dacă mergem pe site-ul Web, uită-te la asta.
+
+00:06:46.330 --> 00:06:51.860
+De fapt, chiar ne dă aerul pe site-ul Web și de aceea creați reacționarea este chiar așa de minunată.
+
+00:06:51.940 --> 00:06:57.540
+Vă arată exact ce sunt erorile fără a deschide consola chiar aici.
+
+00:06:59.460 --> 00:07:03.760
+Din nou, nu avem nimic construit chiar acum în Halo. Așa că trebuie să-l creăm.
+
+00:07:03.780 --> 00:07:05.970
+Să folosim aplicația ca James ca exemplu.
+
+00:07:05.970 --> 00:07:14.850
+Se pare că trebuie să importăm re-actul și componenta, așa că trebuie să spunem și să ne re-acționăm din Riyadh.
+
+00:07:15.400 --> 00:07:16.500
+O.K.
+
+00:07:16.530 --> 00:07:25.020
+Și motivul pentru care facem din nou acest lucru este distrugerea, în loc de a face re-act
+
+00:07:25.020 --> 00:07:31.230
+dot componentă putem acum doar face componenta și înseamnă același lucru.
+
+00:07:31.350 --> 00:07:34.310
+Din nou, uitandu-ma la App Dodest, se pare ca spunem clasa.
+
+00:07:34.350 --> 00:07:39.440
+Numele computerului nostru extinde componenta la acea clasă.
+
+00:07:39.720 --> 00:07:47.940
+O să sunăm din nou, asta este ceea ce componentele noastre numesc componente extinse.
+
+00:07:47.990 --> 00:07:58.730
+Și reamintiți-vă din nou să vă schimbați javascript-ul la Paypal și dacă vă amintiți o regulă este că întotdeauna dorim să avem
+
+00:07:58.730 --> 00:08:07.540
+o funcție de randare și în cadrul acestei funcții de redare îi spunem ce vrem să ne întoarcem.
+
+00:08:08.010 --> 00:08:13.800
+Ei bine, vrem să ne întoarcem exemplul din lume, dar putem spune
+
+00:08:16.600 --> 00:08:18.220
+H-1 Bună ziua.
+
+00:08:19.870 --> 00:08:27.290
+H-1 Bine, să vedem ce se întâmplă când fac asta.
+
+00:08:27.470 --> 00:08:31.570
+Și se spune că importatorul de import implicit la export nu a fost găsit.
+
+00:08:31.600 --> 00:08:34.720
+Ei bine, pentru că nu exportăm asta.
+
+00:08:34.720 --> 00:08:42.580
+Amintiți-vă dacă vrem ca un alt fișier să îl folosească trebuie să exportați și vom folosi exportul implicit când exporăm doar
+
+00:08:42.880 --> 00:08:44.410
+un singur lucru.
+
+00:08:44.710 --> 00:08:50.620
+Dacă vom folosi cuvântul implicit, acest fișier va exporta numai la un singur lucru și aceasta este aplicația.
+
+00:08:50.820 --> 00:08:57.430
+Așadar, pot să spun că implicit pentru export.
+
+00:08:57.670 --> 00:09:02.970
+Să salvăm pare să funcționeze Să vedem ce se întâmplă pe site-ul nostru.
+
+00:09:03.420 --> 00:09:04.270
+Salut Lume.
+
+00:09:04.440 --> 00:09:09.910
+Tocmai am creat prima noastră componentă.
+
+00:09:09.930 --> 00:09:10.850
+Cat de tare e asta.
+
+00:09:11.720 --> 00:09:19.760
+Acum, acum avem doar o singură linie, dar dacă am vrut să fac ceva de genul Divx
+
+00:09:19.760 --> 00:09:28.230
+care o dăde într-un div și poate de dedesubt, toți spun un paragraf care spune că mergi să reacționezi.
+
+00:09:31.560 --> 00:09:35.380
+Dacă l-am salvat, am o altă eroare.
+
+00:09:37.970 --> 00:09:44.960
+Și pentru că îi dăm mai multe linii aici și ne întoarce așteptând un singur lucru.
+
+00:09:45.230 --> 00:09:47.840
+Trebuie să o împacheiem în paranteze.
+
+00:09:48.970 --> 00:09:55.180
+Asemenea pentru a avea javascript spun ca aceasta este o expresie.
+
+00:09:55.220 --> 00:09:57.140
+Evaluați întregul lucru.
+
+00:09:57.290 --> 00:10:05.610
+Dacă salvează acest lucru, arata că funcționează și apoi salutăm lumea să fie binevenită pentru a reacționa.
+
+00:10:05.720 --> 00:10:08.420
+Foarte misto aici.
+
+00:10:08.430 --> 00:10:20.050
+Dacă vă aduceți aminte dacă importem Daut Hello Dad CSA noi putem crea orice stiluri CSL dorim, dar trebuie să creăm
+
+00:10:20.050 --> 00:10:27.560
+acel fișier pentru Salles în fișier nou și trebuie să-l obțin singur.
+
+00:10:27.570 --> 00:10:32.020
+Și apoi numele fișierului va fi salut dot Cs acum.
+
+00:10:32.040 --> 00:10:34.650
+Bună ziua CSSA Pot spune doar că H-1.
+
+00:10:34.710 --> 00:10:36.610
+Și acesta este doar CSSA standard.
+
+00:10:36.840 --> 00:10:40.000
+Va avea fundal roșu.
+
+00:10:40.410 --> 00:10:43.120
+O să salvez și eu.
+
+00:10:43.170 --> 00:10:44.360
+Totul arată bine.
+
+00:10:45.270 --> 00:10:46.440
+Și uită-te la asta.
+
+00:10:49.250 --> 00:10:51.760
+Dar știi ce să faci mai repede.
+
+00:10:51.790 --> 00:10:59.510
+Pentru că am trecut peste CSSA, vreau să vă arăt un pachet răcoros numit Tatiana și așa Kyon's ne permite să
+
+00:10:59.510 --> 00:11:06.830
+avem nume de clasă predefinite asemănătoare cu bootstrap pe care le putem adăuga la componente pentru a face lucrurile
+
+00:11:06.830 --> 00:11:08.630
+să arate foarte bine.
+
+00:11:08.690 --> 00:11:09.420
+Deci, să facem asta.
+
+00:11:09.440 --> 00:11:17.670
+Am de gând să închid acest lucru și să spun și PM instala Tatiana lui.
+
+00:11:17.750 --> 00:11:18.210
+In regula.
+
+00:11:18.220 --> 00:11:19.190
+A fost adăugat un pachet.
+
+00:11:19.210 --> 00:11:25.230
+Putem verifica, mergând la pachetul nostru Jason, vedem că Tatiana e acolo și putem
+
+00:11:25.230 --> 00:11:33.200
+folosi mâinile Tatianei foarte ușor, dar doar vom merge la indicele dosarului lui Jeff și vom spune importanța lui Tatiana.
+
+00:11:33.350 --> 00:11:42.460
+Și acum avem acces la acest pachet doar pentru a vă arăta că este atacul lui Kyon dacă mă duc să etichetez stilurile lui
+
+00:11:46.770 --> 00:11:54.270
+Kyon care ne oferă niște clase pe care le putem folosi că, de exemplu, centrul fiscal va spune doar TC,
+
+00:11:54.270 --> 00:12:01.170
+atâta timp cât avem sunete fiscale și așa că utilizați numele clasei TCAS va alinia taxa noastră.
+
+00:12:01.270 --> 00:12:12.840
+Deci, acum că avem Kyon și este indexat nu doar fișier putem spune doar în interiorul aici clasa este egală
+
+00:12:12.960 --> 00:12:18.820
+cu EF 1 pentru Fonte vrea și Tuckson salva.
+
+00:12:19.020 --> 00:12:24.150
+Dar trebuie sa fac NPM incepeti aici asigurati-va ca serverul nostru ruleaza
+
+00:12:25.150 --> 00:12:30.940
+astfel incat sa putem verifica schimbarile noastre si suntem convinsi ca Volcom sa reactioneze.
+
+00:12:30.940 --> 00:12:33.130
+Dar de fapt există un șmecherie aici.
+
+00:12:33.160 --> 00:12:39.220
+Dacă deschideți consola, deși acest lucru a funcționat, primesc un avertisment spunând clase de proprietate Dom invalide.
+
+00:12:39.220 --> 00:12:41.280
+Ați vrut să spuneți numele clasei și reacționați.
+
+00:12:41.290 --> 00:12:50.750
+Într-adevăr foarte bun la a vă oferi erori și s-ar putea să vă întrebați de ce un nume de clasă în loc de
+
+00:12:51.020 --> 00:12:51.750
+clasă.
+
+00:12:51.770 --> 00:12:57.910
+Pentru că dacă salvez asta, nu mai am aerul ăsta.
+
+00:12:58.350 --> 00:12:59.300
+De ce este asta.
+
+00:12:59.550 --> 00:13:04.270
+Până în acest moment, am fost un fel de stigmă.
+
+00:13:04.560 --> 00:13:06.870
+Dar acesta este un fișier javascript.
+
+00:13:06.990 --> 00:13:10.120
+Cum putem face acest lucru.
+
+00:13:10.140 --> 00:13:19.380
+Acest lucru este de fapt ceva numit GSX parte a actului este că vă permite să scrie acest e-mail ca sintaxa în
+
+00:13:19.980 --> 00:13:28.540
+javascript dvs. și s-ar putea să vă întrebați că nu se încalcă regula de separare a preocupărilor și cum suntem
+
+00:13:28.540 --> 00:13:36.610
+chiar capabili să adăugați un simbol la javascript pentru a răspunde la prima întrebare separarea preocupărilor re-act are
+
+00:13:36.610 --> 00:13:43.300
+ideea de componente și că este mai bine să aibă funcționalitate și stiluri per component,
+
+00:13:43.540 --> 00:13:47.810
+astfel încât fiecare componentă să fie un univers separat.
+
+00:13:47.860 --> 00:13:55.690
+Și tocmai adăugați aceste componente și ideea de separare a preocupărilor cu reacția este aceea că componentele în timp ce
+
+00:13:56.290 --> 00:13:59.310
+sunt preocupate de ele însele nimic altceva.
+
+00:13:59.380 --> 00:14:03.520
+Deci schimba paradigma aici și este un fel de drept.
+
+00:14:03.520 --> 00:14:05.060
+Mă pot uita doar la componenta halo.
+
+00:14:05.050 --> 00:14:06.360
+Știu exact ce face.
+
+00:14:06.370 --> 00:14:13.090
+Mă pot uita la acest SS și oricând trebuie să fac o schimbare, trebuie să-mi fac griji în legătură
+
+00:14:13.090 --> 00:14:15.900
+cu fișierele care conțin CSSA și Javascript.
+
+00:14:15.910 --> 00:14:21.440
+Cel de-al doilea lucru este acest lucru numit GSX sub capotă.
+
+00:14:21.490 --> 00:14:28.970
+Ceea ce face reactorul este de fapt să mă lase să folosesc această sintaxă, dar nu sunt real ASTM toate taxele.
+
+00:14:29.110 --> 00:14:34.840
+Amintiți-vă ce am spus despre Domul virtual și cum reactul își creează propriul obiect și apoi se uită la DOM și
+
+00:14:34.840 --> 00:14:39.180
+îl compară și spune că trebuie să schimb acest lucru și îl face pentru noi.
+
+00:14:39.320 --> 00:14:48.070
+Re-actul folosește GSX pentru a-și crea Domul virtual Domul lor fals pe care l-au construit pe baza a ceea ce le
+
+00:14:48.070 --> 00:14:48.780
+dăm.
+
+00:14:48.940 --> 00:14:55.300
+Apoi se uită la acest Dom virtual și la realul Dom și spun că această parte sa schimbat.
+
+00:14:55.300 --> 00:15:01.840
+Voi schimba Domhnall pe baza ușii virtuale și de aceea re-actul este într-adevăr foarte rapid.
+
+00:15:02.020 --> 00:15:08.380
+Creează obiecte foarte rapide și Javascript și schimbă doar ceea ce trebuie făcut în
+
+00:15:08.380 --> 00:15:09.240
+ușă.
+
+00:15:09.310 --> 00:15:10.740
+Deci, să vă obișnuiți.
+
+00:15:10.780 --> 00:15:18.190
+În primul rând este ciudat, dar din nou, atâta timp cât îl înfășurați într-o coloană, puteți scrie aici
+
+00:15:18.190 --> 00:15:24.130
+o ședință, precum și componente personalizate cum ar fi Halo pe care le-am folosit în
+
+00:15:28.500 --> 00:15:39.080
+indexate nu doar pentru și acum și poate și are sens că nu putem spune clasic deoarece clasa este un cuvânt rezervat în clasa javascript este
+
+00:15:39.980 --> 00:15:42.770
+parte a limbajului folosit de javascript.
+
+00:15:42.770 --> 00:15:49.460
+Deci, dacă acest lucru este javascript, faptul că vedem aici o clasă nu are sens în vechea versiune de
+
+00:15:49.460 --> 00:15:50.030
+reacție.
+
+00:15:50.030 --> 00:15:57.730
+Acest lucru a rupt de fapt reacționa, dar acum ne dă o eroare frumoasă, deoarece acesta este javascript și nu un shemale.
+
+00:15:57.740 --> 00:16:01.100
+Trebuie să spunem numele de clasă și este ceva la care vă veți obișnui.
+
+00:16:01.100 --> 00:16:05.600
+Veți fi înșelat de la început, dar devine ușor după un timp.
+
+00:16:05.610 --> 00:16:12.230
+În fine, ultimul lucru pe care ți-l voi arăta este partea de a reacta în cadrul componentei
+
+00:16:12.230 --> 00:16:19.220
+halo. Acum pot adăuga ceva numit recuzită sau proprietăți, iar aceste elemente de recuzită pot fi numite orice.
+
+00:16:19.220 --> 00:16:21.310
+Gândește-te la ele ca la o șmecherie cu toate atributele.
+
+00:16:21.310 --> 00:16:24.450
+Pot să spun salutări.
+
+00:16:24.730 --> 00:16:27.660
+El îi cheamă aici.
+
+00:16:27.980 --> 00:16:30.050
+Vreau să o împachetez în paranteze curbate.
+
+00:16:30.230 --> 00:16:35.460
+Și asta eo expresie a javascripturii, indiferent ce vreau
+
+00:16:38.930 --> 00:16:43.140
+să pot spune, hello re-act ninja.
+
+00:16:43.370 --> 00:16:48.940
+Și dacă văd acest lucru, am o eroare spunând că nu o concatenare inutilă.
+
+00:16:48.940 --> 00:16:52.100
+Deci, spune că de ce adăugați chiar și lucrurile.
+
+00:16:52.110 --> 00:16:53.960
+Puteți să le puneți pe toate împreună.
+
+00:16:54.010 --> 00:17:00.310
+Deci, este destul de greu să vă dați chiar sugestii sau avertismente despre când faceți ceva care nu este curat.
+
+00:17:00.310 --> 00:17:02.970
+Dar pentru moment, pentru scopuri demonstrative, acest lucru este bine.
+
+00:17:03.340 --> 00:17:10.840
+Acum că am dat-o la ceea ce noi numim un salut Propp să salut acum am acces și salut.
+
+00:17:11.020 --> 00:17:11.620
+Da.
+
+00:17:11.740 --> 00:17:14.580
+Două elemente de
+
+00:17:17.140 --> 00:17:31.790
+recuză pot spune acum acest punct punct de salut salut Salvez acest lucru du-te înapoi și spun salut re-act de Ninja.
+
+00:17:32.000 --> 00:17:43.980
+Vedeți cu această sintaxă se spune că acest obiect care este Halo are proprietăți de recuzită care este salut.
+
+00:17:44.020 --> 00:17:51.100
+Știu că este confuză este doar sintaxa pe care trebuie să o obișnuim, dar acum avem
+
+00:17:51.310 --> 00:17:57.120
+acces la orice proprietate și orice valoare de proprietate pe care o primim.
+
+00:17:57.240 --> 00:18:02.360
+Bună ziua aceasta este o putere care va veni la îndemână mai târziu.
+
+00:18:02.360 --> 00:18:08.010
+Dar vreau să-ți construiești propria componentă aici și să te simți confortabil cu Sendak's.
+
+00:18:08.170 --> 00:18:11.700
+Este într-adevăr foarte puternic și o dată să te obișnuiești cu asta.
+
+00:18:11.830 --> 00:18:14.250
+Puteți construi toate componentele pe care le doriți.
+
+00:18:14.290 --> 00:18:14.590
+O.K.
+
+00:18:14.620 --> 00:18:15.630
+Un ultim lucru.
+
+00:18:16.700 --> 00:18:23.500
+Acest indice ar putea fi cam dificil, dar vreau să vă arăt că aceasta este de fapt doar o funcție.
+
+00:18:23.670 --> 00:18:39.480
+Dacă fac Konst salut și aici această funcție acceptă recuzită dacă fac o funcție de eroare aici o înfășoară în paranteze curl și în loc de a face această
+
+00:18:39.480 --> 00:18:47.570
+render pur și simplu întoarce dacă salvez acest lucru bine am primit o eroare pentru
+
+00:18:54.660 --> 00:19:02.620
+că acest lucru a oprit Propast Salutări nu există într-adevăr pentru că nu mai
+
+00:19:02.650 --> 00:19:06.070
+este un obiect este o funcție.
+
+00:19:06.070 --> 00:19:07.220
+Așa că nu am nevoie de recuzită.
+
+00:19:07.240 --> 00:19:13.990
+El primește elemente de recuzită indiferent de parametrii pe care i le dă și susține că salutul este acceptabil pentru noi.
+
+00:19:14.020 --> 00:19:16.770
+Eu salvez acest lucru înapoi și uita-te la asta.
+
+00:19:16.780 --> 00:19:17.590
+Functioneaza.
+
+00:19:17.830 --> 00:19:19.750
+Sunt doar funcții.
+
+00:19:19.740 --> 00:19:27.460
+Gândiți-vă la reactoarele pe care le facem doar pentru a crea aceste funcții care
+
+00:19:27.730 --> 00:19:36.420
+iau parametri și acești parametri care sunt date prin acordarea de atribute și valori sunt doar redate.
+
+00:19:36.690 --> 00:19:43.000
+Am acces la salutul propozitului daca il dau sau altul aici numit sa zicem un caine
+
+00:19:43.000 --> 00:19:47.040
+atunci voi avea si caini de inceput pentru mine.
+
+00:19:48.550 --> 00:19:54.550
+Și din nou, avem o eroare foarte mică spunând că acea componentă ar fi apucat acest lucru,
+
+00:19:54.550 --> 00:19:59.140
+dar nu o folosim cu adevărat și folosim concatenarea inutilă a șirului.
+
+00:19:59.140 --> 00:20:05.720
+Din nou foarte util, după cum puteți vedea destul de simplu pentru a ridica în următoarea lecție.
+
+00:20:05.730 --> 00:20:10.830
+Vom începe efectiv să lucrăm la aplicația noastră de prieteni robo acum că avem noțiunile de bază.
+
+00:20:10.830 --> 00:20:12.540
+Am văzut asta.

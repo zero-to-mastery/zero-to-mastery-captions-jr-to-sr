@@ -1,0 +1,208 @@
+﻿WEBVTT
+
+00:00:00.910 --> 00:00:02.020
+Odprowadź ich z powrotem.
+
+00:00:02.370 --> 00:00:06.220
+Porozmawiajmy o naszym ostatnim temacie, jeśli chodzi o wydajność.
+
+00:00:06.360 --> 00:00:09.810
+To równoważenie obciążenia równoważenia obciążenia.
+
+00:00:09.870 --> 00:00:17.820
+Jak sama nazwa wskazuje, jest to dla nas sposób na zbalansowanie wielu żądań w tym samym czasie i
+
+00:00:17.970 --> 00:00:25.120
+rozprowadzenie ich do różnych usług. To jest coś, co chcemy zacząć, kiedy coraz więcej użytkowników używa
+
+00:00:25.210 --> 00:00:32.820
+naszej aplikacji, może zgłaszając prośby do naszego ekspresu. W miarę, jak wysyłamy coraz więcej żądań, to Express
+
+00:00:32.820 --> 00:00:39.700
+up lub nasz serwer Express będzie trafiony coraz więcej razy, dopóki nie poradzi sobie z
+
+00:00:39.700 --> 00:00:40.540
+obciążeniem.
+
+00:00:40.660 --> 00:00:46.960
+W idealnym scenariuszu możemy po prostu mieć inny serwer, być może dwa lub trzy serwery,
+
+00:00:46.960 --> 00:00:53.560
+a to przed nim zimny, niski balanser rozprowadza go tak, że pierwszy użytkownik trafia na pierwszy serwer.
+
+00:00:53.560 --> 00:00:58.900
+Drugi użytkownik na drugim serwerze trzeci użytkownik na trzeci serwer i byliśmy w
+
+00:00:59.020 --> 00:01:00.860
+stanie obsłużyć więcej obciążenia.
+
+00:01:00.880 --> 00:01:06.160
+Teraz, abyśmy mogli zrozumieć, jak działają load balancery i jak możemy je wdrożyć.
+
+00:01:06.220 --> 00:01:14.780
+Najpierw musimy mówić o najbardziej podstawowym sposobie działania relacji klient-serwer.
+
+00:01:14.810 --> 00:01:23.180
+Teraz na większości witryn internetowych, takich jak witryny Wordpress, które są hostowane na skuterze lub w niebieskim hostingu, najprostsze witryny
+
+00:01:23.180 --> 00:01:28.910
+internetowe z blogiem, że prawdopodobnie kupiłeś nazwę domeny od GoDaddy, a może nawet
+
+00:01:28.910 --> 00:01:32.710
+hosting na GoDaddy mają serwer, który Ci udało.
+
+00:01:32.720 --> 00:01:34.550
+Nigdy nie musisz tworzyć serwera.
+
+00:01:34.910 --> 00:01:42.380
+Chodzi mi o to, że do tej pory stworzyliśmy serwer ekspresowy obsługujący zawartość dla klienta, ale większość ludzi nie
+
+00:01:42.380 --> 00:01:48.360
+jest programistami stron internetowych i nie muszą oni wiedzieć, jak sami zbudować serwer ekspresowy.
+
+00:01:48.410 --> 00:01:54.680
+Po prostu przekazują to firmie, która ma dla nich serwery i przekazuje im pliki, aby
+
+00:01:54.680 --> 00:01:56.410
+się nimi zająć.
+
+00:01:56.870 --> 00:02:04.420
+Większość z tych firm, jak ja powiedziałem, że host gator blue host używają czegoś, co
+
+00:02:04.620 --> 00:02:14.070
+nazywa się serwerem lub serwerem Apache GTP i są to oprogramowanie typu open source, które umieszczasz na komputerze na komputerze.
+
+00:02:14.230 --> 00:02:21.270
+Są szczególnie dobre w obsłudze statycznych plików statycznych, takich jak javascript UML i VSS.
+
+00:02:21.850 --> 00:02:22.740
+Są bardzo proste.
+
+00:02:22.750 --> 00:02:27.920
+Wszystko, co robią, to dać mi prośbę, a wyślę ci wszystkie potrzebne pliki.
+
+00:02:28.300 --> 00:02:28.990
+to jest to!
+
+00:02:29.170 --> 00:02:33.130
+I zobaczysz te dwa programy w całym Internecie.
+
+00:02:33.460 --> 00:02:38.650
+Ale naprawdę możemy zrobić coś naprawdę interesującego z tymi narzędziami, ponieważ te narzędzia są
+
+00:02:38.650 --> 00:02:42.170
+naprawdę bardzo dobre i naprawdę szybkie, obsługują pliki statyczne.
+
+00:02:42.400 --> 00:02:49.030
+Możemy ich używać jako równoważników obciążenia, a silnik jest bardzo popularny i całkiem łatwy
+
+00:02:49.030 --> 00:02:53.540
+w implementacji. Widzimy, że możemy zrobić coś takiego.
+
+00:02:53.710 --> 00:02:55.630
+Możemy mieć naszą aplikację na jedną stronę.
+
+00:02:55.690 --> 00:03:00.100
+Powiedzmy, że nasz inteligentny mózg się wydał, a my złożymy wniosek.
+
+00:03:00.280 --> 00:03:07.690
+Teraz, zamiast poprosić o przejście na nasz serwer, nasz serwer API trafi serwer X silnika,
+
+00:03:07.690 --> 00:03:15.790
+który się skonfiguruje, a ten serwer X silnika zrównoważy obciążenie między serwerami 1 i 3 w zależności
+
+00:03:15.790 --> 00:03:19.770
+od tego, który z nich jest najmniej obciążony.
+
+00:03:19.870 --> 00:03:27.100
+W ten sposób mamy więcej użytkowników, o ile mamy silnik X, który może działać jako coś, co nazywamy
+
+00:03:27.100 --> 00:03:31.680
+odwrotnym proxy i przekazywać koszty do jednego i dwóch serwerów.
+
+00:03:31.990 --> 00:03:38.890
+Następnie może odbierać te pliki i bardzo szybko wyświetlać je przeglądarce, a także
+
+00:03:38.890 --> 00:03:42.190
+robić ciekawe rzeczy, takie jak gotówka.
+
+00:03:42.190 --> 00:03:48.040
+Tak więc, gdy następnym razem użytkownik zażąda tej samej strony G-mail zamiast iść do
+
+00:03:48.340 --> 00:03:56.350
+kilku, dwóch lub trzech, może po prostu go zwrócić, ponieważ jest w gotówce, a zobaczysz wiele aplikacji zbudowanych w ten sposób.
+
+00:03:57.800 --> 00:04:00.620
+Teraz patrząc na ten diagram myślisz sobie.
+
+00:04:00.890 --> 00:04:05.610
+Po prostu zwiększyliśmy złożoność naszej aplikacji i jak jest to szybsze.
+
+00:04:05.630 --> 00:04:11.720
+Jeśli cokolwiek mówimy na więcej maszyn, teraz robimy więcej przeskoków i robimy więcej pracy.
+
+00:04:11.720 --> 00:04:19.460
+I masz rację myśląc, że ponieważ dodajemy więcej rzeczy, więcej pracy wymaga więcej przetwarzania, które trzeba zrobić,
+
+00:04:19.460 --> 00:04:22.360
+aby faktycznie zwrócić te pliki.
+
+00:04:22.370 --> 00:04:28.060
+A jeśli nie masz wielu użytkowników, to marnujesz zmarnowane zasoby.
+
+00:04:28.160 --> 00:04:33.260
+To naprawdę nie pomaga, ale gdy zaczynasz mieć coraz więcej użytkowników, których pojedynczy serwer
+
+00:04:33.260 --> 00:04:38.920
+po prostu nie może obsłużyć, ostatecznie serwer ulegnie awarii, nie będzie w stanie obsłużyć wszystkich tych żądań.
+
+00:04:38.960 --> 00:04:44.870
+Wtedy zaczynasz wdrażanie load balancera, a silnik X to naprawdę dobry sposób
+
+00:04:44.870 --> 00:04:45.580
+użycia.
+
+00:04:45.590 --> 00:04:53.210
+Tak jak powiedziałem odwrotny serwer proxy i aby wyświetlać pliki statyczne, ma on więcej użytkowników, tym
+
+00:04:53.210 --> 00:04:59.700
+szybciej staje się równoważnikiem obciążenia niż po prostu relacja z jednym klientem.
+
+00:04:59.720 --> 00:05:07.250
+Ostatecznie możesz mieć taką architekturę, w której masz pojedynczą stronę poza kodem, który ma sieć dostarczania treści,
+
+00:05:07.250 --> 00:05:13.970
+gdzie być może masz wersje pamięci podręcznej twojego pliku javascript Schmall CSSA, który jest cały
+
+00:05:14.000 --> 00:05:22.310
+spakowany jes, a potem być może wysyłasz żądania API do punktu końcowego odpoczynku. ale te żądania API uderzą
+
+00:05:22.400 --> 00:05:30.500
+w moduł równoważenia obciążenia i roześlą żądanie na podstawie dowolnego serwera, a serwer wróci ponownie do mojej pamięci
+
+00:05:30.500 --> 00:05:37.640
+podręcznej, niektóre z żądań mogą być prośbą o odpowiedź Jason, a także może zgodzić się
+
+00:05:37.640 --> 00:05:42.870
+z tym żądaniem i zwrócić je z powrotem do klient.
+
+00:05:43.130 --> 00:05:49.010
+Abyś mógł teraz wykorzystać wszystkie te narzędzia, których nauczyłeś się, aby zmaksymalizować wydajność i
+
+00:05:49.010 --> 00:05:51.570
+uczynić ten proces możliwie jak najszybciej.
+
+00:05:51.830 --> 00:05:55.600
+Wystarczy rozmowa, abyśmy zaimplementowali to w następnym wideo.
+
+00:05:55.610 --> 00:06:00.500
+Pokażę ci, jak zaimplementować nisko balanser, a potem zrobimy coś
+
+00:06:00.500 --> 00:06:01.040
+fajnego.
+
+00:06:01.100 --> 00:06:06.160
+W rzeczywistości sprawdzimy wszystko i zobaczymy, jak dobrze radzi sobie z ładunkiem.
+
+00:06:07.380 --> 00:06:07.900
+A następnie x1.

@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:01.840 --> 00:00:02.740
+Witamy spowrotem.
+
+00:00:02.980 --> 00:00:08.380
+Zanim zaczniemy niektóre kodowanie i wdrażanie tego, chciałem sfinalizować naszą wiedzę i
+
+00:00:08.380 --> 00:00:12.000
+zrozumienie zarówno plików cookie, jak i GW.
+
+00:00:12.430 --> 00:00:19.600
+Jeśli otworzę tutaj moje narzędzia programistyczne i przejdę do aplikacji, zobaczysz, że w sekcji przechowywania mamy
+
+00:00:19.600 --> 00:00:23.320
+coś, co nazywa się ciasteczkami i ciasteczkami.
+
+00:00:23.320 --> 00:00:27.680
+Oto dokładnie te fragmenty, które widzisz tutaj.
+
+00:00:27.790 --> 00:00:32.540
+Zdobądź przydział habbe, aby zapamiętał naszą sesję.
+
+00:00:32.860 --> 00:00:35.720
+A może inny kawałek danych.
+
+00:00:36.040 --> 00:00:40.040
+A jeśli kliknę tutaj, wyświetlę niektóre z tych plików cookie.
+
+00:00:40.600 --> 00:00:44.050
+I tak przechowujemy pliki cookie w przeglądarce.
+
+00:00:44.110 --> 00:00:49.900
+I pamiętaj, że te pliki cookie nie oznaczają niczego innego niż fragment łańcucha, który identyfikuje nas na
+
+00:00:50.110 --> 00:00:50.960
+serwerze centralnym.
+
+00:00:51.790 --> 00:00:59.500
+Z drugiej strony, jeśli chodzi o JWT i wszystkie są powiązane z tą stroną, wygląda to tak, jak wygląda token
+
+00:00:59.770 --> 00:01:04.700
+JWT, który można zobaczyć tutaj, gdy jest zakodowany, to tylko kompletny bełkot.
+
+00:01:04.810 --> 00:01:07.750
+Ale kiedy jest dekodowany, ma wszystkie te informacje.
+
+00:01:07.750 --> 00:01:09.020
+Ma Hetter.
+
+00:01:09.430 --> 00:01:11.780
+Możesz zobaczyć jakiego algorytmu użyliśmy.
+
+00:01:11.860 --> 00:01:13.400
+Jakiego rodzaju jest tokenem.
+
+00:01:13.600 --> 00:01:16.480
+I masz także ładunek informacji.
+
+00:01:16.480 --> 00:01:23.950
+Na przykład, jeśli chciałem, aby nazwisko mówiło "Andre", zobaczysz, że podczas wpisywania zmienia to tutaj i tokena,
+
+00:01:23.950 --> 00:01:24.460
+więc
+
+00:01:27.320 --> 00:01:35.660
+za każdym razem, gdy dekoduje to token, mogę po prostu pobrać tę informację, być może nazwę użytkownika i zobaczysz
+
+00:01:35.670 --> 00:01:38.140
+tutaj, że podpis jest zweryfikowany.
+
+00:01:38.150 --> 00:01:46.300
+Teraz mogę tylko powiedzieć, że mogę to podpisać i stworzyć ten token.
+
+00:01:46.520 --> 00:01:52.610
+A ponieważ jest to teraz zweryfikowane, mogę po prostu zweryfikować token i pobrać te informacje, kiedy tylko
+
+00:01:52.610 --> 00:01:53.070
+chcę.
+
+00:01:54.920 --> 00:01:57.070
+Widzisz więc, jak to się różni od ciasteczka.
+
+00:01:57.110 --> 00:02:02.230
+To naprawdę ma sens tutaj i po prostu możesz go po prostu rozszyfrować.
+
+00:02:02.250 --> 00:02:10.320
+Teraz możesz zauważyć, że mogę po prostu chwycić dowolny JWT i po prostu wkleić tutaj i od razu
+
+00:02:10.470 --> 00:02:11.410
+pobrać informacje.
+
+00:02:11.730 --> 00:02:17.640
+I to jest powód, dla którego niekoniecznie chcesz umieszczać wrażliwe informacje w polu danych,
+
+00:02:17.970 --> 00:02:26.910
+ponieważ każdy, kto ma token JWT, może po prostu wejść na tę stronę internetową i wkleić zakodowane JWT, a wszystkie zostaną
+
+00:02:27.030 --> 00:02:28.340
+ponownie odkodowane.
+
+00:02:28.350 --> 00:02:35.440
+Pokażę ci sposoby, żeby tego nie robić, kiedy zaczniemy kodowanie i pamiętamy, jak to powiedziałem przy pomocy tokenów
+
+00:02:35.600 --> 00:02:36.740
+Jason Arms.
+
+00:02:36.740 --> 00:02:38.450
+To całkiem łatwe.
+
+00:02:38.810 --> 00:02:49.250
+Z pakietem tokenów Jason Webb wszystko, co musimy zrobić, to zainstalować JWT, a następnie po prostu podpisujemy token
+
+00:02:49.970 --> 00:02:52.610
+dowolnymi informacjami, które chcemy.
+
+00:02:52.610 --> 00:02:59.060
+W tym przypadku widzimy, że jest to pasek foo i jakiś tajny ciąg znaków,
+
+00:02:59.060 --> 00:03:09.800
+a za każdym razem, gdy go otrzymamy, po prostu, jeśli przewijamy w dół, uruchom funkcję weryfikacji, a my jesteśmy w stanie zweryfikować i odkodować token.
+
+00:03:09.810 --> 00:03:10.470
+W porządku.
+
+00:03:10.650 --> 00:03:15.610
+Myślę, że wystarczy rozmowa, że musimy zacząć kodować i musimy zacząć wdrażać sesje
+
+00:03:15.610 --> 00:03:20.000
+w naszej aplikacji, weź swój terminal, chwyć ulubionego edytora tekstu.
+
+00:03:20.160 --> 00:03:21.510
+Zaczniemy kodowanie.
+
+00:03:21.510 --> 00:03:23.010
+Zobacz w następnym przez.

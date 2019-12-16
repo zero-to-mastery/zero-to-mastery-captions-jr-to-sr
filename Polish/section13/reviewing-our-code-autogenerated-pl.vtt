@@ -1,0 +1,103 @@
+﻿WEBVTT
+
+00:00:01.200 --> 00:00:05.470
+Och, chłopcze, to była długa podróż, ale udało nam się to zrobić.
+
+00:00:05.640 --> 00:00:13.640
+Udało nam się dodać sesję do naszej aplikacji i sprawić, by wszystko wyglądało idealnie.
+
+00:00:13.660 --> 00:00:15.130
+Mamy przesłane obrazy.
+
+00:00:15.130 --> 00:00:22.120
+Możemy aktualizować profile, do których możemy przesyłać obrazy, i upewniamy się, że za każdym razem, gdy odświeżamy, mamy dostęp
+
+00:00:22.120 --> 00:00:23.280
+do naszego profilu.
+
+00:00:23.320 --> 00:00:27.310
+Mamy chronione trasy, którym udało się dodać sesję.
+
+00:00:27.580 --> 00:00:30.000
+Zobaczmy więc, co właśnie zrobiliśmy.
+
+00:00:32.660 --> 00:00:41.210
+Cóż z tyłu, jeśli wrócimy, widzimy, że dodaliśmy teraz oprogramowanie pośredniczące do uwierzytelniania, aby upewnić się, że te chronione
+
+00:00:41.210 --> 00:00:46.080
+punkty końcowe nie zostaną dotknięte przez nikogo, kto nie powinien.
+
+00:00:46.160 --> 00:00:48.020
+Muszą mieć token.
+
+00:00:48.200 --> 00:00:55.820
+Włączyliśmy również uwierzytelnianie logowania i uwierzytelnianie logowania jest naprawdę bardzo miłym Hendlerem, który
+
+00:00:56.180 --> 00:01:00.360
+pozwala nam sprawdzić, czy istnieje nagłówek autoryzacji.
+
+00:01:00.680 --> 00:01:07.400
+Jeśli dobrze jest w tym przypadku porozmawiaj z bazą danych rattus, weź token i zgadnij pomysł użytkownika
+
+00:01:07.880 --> 00:01:12.840
+i przekaż mu te informacje, aby mogli pobrać informacje o profilu.
+
+00:01:12.890 --> 00:01:20.390
+Wykonaj żądanie GET do identyfikatora profilu, który jest ponownie chroniony, więc musi przekazać mu token
+
+00:01:20.390 --> 00:01:21.110
+autoryzacji.
+
+00:01:21.110 --> 00:01:25.050
+A jeśli nie mają nagłówka autoryzacji, jest to ich pierwsze logowanie.
+
+00:01:25.160 --> 00:01:34.890
+Upewnij się, że obsługujemy logowanie, aby sprawdzić wszystkie te rzeczy, utworzyć sesję dodawania punktu danych w naszej bazie danych do nas, a następnie w końcu zwrócić swoją
+
+00:01:35.070 --> 00:01:40.860
+sesję za pomocą tokenu I. RE. więc mogą robić, co
+
+00:01:40.860 --> 00:01:46.710
+chcą, jak zdobyć profil i możesz zauważyć, że tak naprawdę nie zrobiliśmy tego dla rejestru.
+
+00:01:46.720 --> 00:01:52.030
+Być może będziemy musieli wdrożyć niektóre z nich w naszym rejestrze i wskazać, ale jest to coś, co można
+
+00:01:52.210 --> 00:01:57.100
+zrobić na własną rękę i jest to dość proste, teraz, gdy mamy podstawową wiedzę na temat tego, jak
+
+00:01:57.100 --> 00:01:57.930
+to działa.
+
+00:02:00.070 --> 00:02:07.750
+I wszystko, co musieliśmy zrobić z przodu, było na naszym tokenie, że otrzymujemy dwa sesje przechowywania,
+
+00:02:07.810 --> 00:02:15.030
+a następnie dla wszystkich chronionych tras, które uzyskiwały dostęp, musieliśmy uwzględnić token w naszym żądaniu
+
+00:02:15.030 --> 00:02:17.310
+i tak działają sesje.
+
+00:02:17.310 --> 00:02:22.530
+Dbamy o to, aby chronić to, co jest dla nas cenne, i dostęp do niego mają tylko osoby, które mają do niego
+
+00:02:22.530 --> 00:02:23.020
+dostęp.
+
+00:02:23.370 --> 00:02:29.700
+Ciekawą rzeczą, którą możemy teraz zrobić, jest to, że za każdym razem, gdy użytkownik się wyloguje,
+
+00:02:29.700 --> 00:02:36.450
+możemy po prostu upewnić się, że usuwamy token z pamięci sesji w naszym kodzie, ale możemy też wysłać do
+
+00:02:36.510 --> 00:02:44.370
+nas prośbę o syna lub prośbę i upewnić się, że usuwamy ten token z naszej bazy danych rattus, więc mamy pełną kontrolę
+
+00:02:44.580 --> 00:02:51.300
+nad tym, kiedy odwołujemy żetony, gdy tracimy je, gdy robimy te wszystkie rzeczy, co jest naprawdę bardzo miłe.
+
+00:02:52.650 --> 00:02:55.980
+Więc pokażmy naszą pracę Bruno.
+
+00:02:55.980 --> 00:02:57.810
+Zobaczę w następnym filmie, ale przez.

@@ -1,0 +1,202 @@
+﻿WEBVTT
+
+00:00:00.750 --> 00:00:05.650
+Și o întoarcere de bun venit știm cum funcționează aplicația prietenilor de dărâmături.
+
+00:00:05.660 --> 00:00:14.330
+Acum, cu trei act care este minunat, dar Bruno ne-a cerut un lucru specific de care trebuie să adăugăm redux la aplicația noastră de
+
+00:00:14.330 --> 00:00:20.860
+prieteni robo, astfel încât să se poată scala bine și să se ocupe mai bine de managementul statului.
+
+00:00:22.630 --> 00:00:28.960
+Acum, aceste clipuri video urmau să colaboreze pas cu pas.
+
+00:00:28.990 --> 00:00:34.630
+Vă voi arăta cum se implementează reduxul și cum funcționează și veți urmări de-a lungul încercării de
+
+00:00:35.170 --> 00:00:38.320
+a vă asigura că și codul dvs. funcționează.
+
+00:00:38.770 --> 00:00:42.120
+Bine, ia-ți o pauză acum și fă-ți mediul înființat.
+
+00:00:42.140 --> 00:00:46.470
+Vorbind codul alături de mine, ești stabilit.
+
+00:00:46.510 --> 00:00:46.940
+In regula.
+
+00:00:46.960 --> 00:00:48.300
+Și o să începem.
+
+00:00:48.370 --> 00:00:56.360
+Primul lucru pe care îl voi face este că am prietenii robotului meu, așa că voi clona
+
+00:00:56.360 --> 00:01:06.650
+acest Ribault și vom face doar setul nostru regulat cu clone și apoi voi merge la CD-ul în robotii mei prieteni perfect.
+
+00:01:06.690 --> 00:01:09.510
+Hai să deschidem acest lucru în editorul tău
+
+00:01:14.630 --> 00:01:18.720
+de text și din nou îmi place să intrăm împreună, așa că arată bine.
+
+00:01:19.470 --> 00:01:20.670
+Și curat.
+
+00:01:20.720 --> 00:01:21.250
+Perfect.
+
+00:01:22.670 --> 00:01:29.510
+Acum, evident, primul lucru pe care trebuie să-l facem când clonăm ceva este instalarea, pentru
+
+00:01:29.510 --> 00:01:32.710
+a ne asigura că avem toate pachetele.
+
+00:01:32.920 --> 00:01:38.970
+De asemenea, dorim să ne asigurăm că totul se desfășoară fără probleme, fără nici un fel de eroare.
+
+00:01:39.190 --> 00:01:48.410
+Deci, următorul pas va fi să începeți procesul NPM.
+
+00:01:48.460 --> 00:01:49.180
+In regula.
+
+00:01:49.180 --> 00:01:49.690
+Perfect.
+
+00:01:49.690 --> 00:01:50.930
+Totul funcționează.
+
+00:01:51.040 --> 00:01:53.780
+Și ar trebui să putem filtra.
+
+00:01:53.780 --> 00:01:56.420
+Perfect.
+
+00:01:56.430 --> 00:01:56.690
+In regula.
+
+00:01:56.700 --> 00:01:59.790
+Deci suntem familiarizați cu această bază de coduri.
+
+00:02:01.120 --> 00:02:09.990
+Ne-am re-acționa, dar asta e doar o reacție simplă cu containerele și componentele.
+
+00:02:10.040 --> 00:02:19.690
+Primul lucru pe care ar trebui să-l facem este să instalați redux, așa că am să închid acest
+
+00:02:20.480 --> 00:02:30.990
+lucru și Iranul MBM instalați redux acest pachet redux ne va da niște unelte pentru a încorpora redox în reactorul nostru.
+
+00:02:32.220 --> 00:02:33.840
+Dar iată partea răcoroasă.
+
+00:02:33.840 --> 00:02:37.630
+Cu pachetul redox și de ce sunt un fan atât de mare.
+
+00:02:38.690 --> 00:02:45.680
+Este că 90% din codul dvs. va fi în continuare Javascript redux vă va oferi câteva ajutoare,
+
+00:02:46.070 --> 00:02:48.620
+dar încă mai scrieți javascript.
+
+00:02:48.740 --> 00:02:52.280
+Îți îmbunătățești abilitățile de javascript.
+
+00:02:52.280 --> 00:02:57.470
+Când scrieți redux și învață principii cu adevarat foarte bune și de aceea
+
+00:02:57.530 --> 00:03:05.630
+sunt un mare fan al bibliotecii, nu este posibil să aveți întotdeauna nevoie de redux în proiectele dvs., dar este doar
+
+00:03:05.960 --> 00:03:13.070
+un bun instrument bun de învățat deoarece are concepte atât de mari încât veți folosi în întreaga carieră.
+
+00:03:13.220 --> 00:03:19.010
+Acum, cel de-al doilea lucru de care avem nevoie și acest lucru este ceva similar cu
+
+00:03:19.010 --> 00:03:25.730
+reactul, amintiți-vă cum am instalat pachetul re-act și apoi am nevoie și de ceva numit pachet re-act dormit pentru a
+
+00:03:25.730 --> 00:03:29.130
+vă conecta reacționa la dong bine în mod similar.
+
+00:03:29.140 --> 00:03:38.770
+Trebuie să conectăm reduxul pentru a reacționa, deoarece teoretic redux ar putea lucra cu orice altă bibliotecă prin adăugarea unui
+
+00:03:38.980 --> 00:03:40.240
+alt pachet.
+
+00:03:40.300 --> 00:03:46.600
+Putem din nou să re-acționăm că hei vom folosi redox cu tine.
+
+00:03:46.600 --> 00:03:48.050
+Deci este foarte ușor de făcut.
+
+00:03:48.070 --> 00:03:53.080
+Vom instala doar NPM și pachetul se va numi re-act,
+
+00:03:59.260 --> 00:04:06.570
+iar modul în care acest re-act redux va funcționa este că va conecta numai containerele.
+
+00:04:06.760 --> 00:04:14.410
+Astfel, în acest caz, APTA J. S. la ceea ce numim un magazin redux sau acel obiect javascript mare despre
+
+00:04:14.410 --> 00:04:14.820
+care vorbim.
+
+00:04:14.860 --> 00:04:21.110
+Asta descrie starea de la și vor comunica containerul va comunica
+
+00:04:21.200 --> 00:04:23.770
+cu magazinul și invers.
+
+00:04:24.900 --> 00:04:31.410
+Acum, celelalte componente, ceea ce numim componente nemaipomenite sau de prezentare.
+
+00:04:31.530 --> 00:04:34.250
+Știu că există redux.
+
+00:04:34.320 --> 00:04:41.010
+Singura conexiune va fi între ceva numit un container sau o componentă inteligentă
+
+00:04:41.100 --> 00:04:42.650
+și magazinul redux.
+
+00:04:42.660 --> 00:04:44.130
+Deci, lasă-mă să vă arăt ce vreau să spun.
+
+00:04:45.280 --> 00:04:51.040
+Dacă vă aduceți aminte de această diagramă, am instalat pachetul redux pe care îl puteți considera ca
+
+00:04:51.040 --> 00:04:51.990
+fiind aici.
+
+00:04:52.000 --> 00:04:58.300
+Această cutie roșie care ne permite să creăm un magazin și câteva alte funcții de ajutor.
+
+00:04:58.300 --> 00:05:10.310
+De asemenea, am descărcat re-act redux care ne permite să conectăm aceste două piese și să reacționăm redux este capabil de a fi folosit pentru a spune
+
+00:05:10.310 --> 00:05:17.090
+hey dorim ca componentele celo să fie conștienți de faptul că folosim redux și pentru a
+
+00:05:17.090 --> 00:05:20.650
+obține statul lor de la redux magazin.
+
+00:05:22.380 --> 00:05:28.020
+Așa că gândiți-vă la această diagramă pe măsură ce lucrăm prin tot ce facem este, în
+
+00:05:28.020 --> 00:05:30.710
+esență, să conectăm aceste două biblioteci împreună.
+
+00:05:30.770 --> 00:05:37.630
+În regulă, acum, când avem aceste două pachete, le putem începe să le importăm și să le folosim în
+
+00:05:37.630 --> 00:05:43.660
+magazinul nostru, dar asta e pentru următoarele două videoclipuri pe care le voi vedea în următorul.
+
+00:05:43.770 --> 00:05:44.010
+Buh-Pa.

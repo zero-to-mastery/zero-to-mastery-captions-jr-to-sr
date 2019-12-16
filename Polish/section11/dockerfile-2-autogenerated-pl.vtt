@@ -1,0 +1,295 @@
+﻿WEBVTT
+
+00:00:01.410 --> 00:00:02.310
+Witamy spowrotem.
+
+00:00:02.610 --> 00:00:07.730
+Nauczyliśmy się kilku poleceń dokowania i sposobu tworzenia pojedynków.
+
+00:00:08.220 --> 00:00:10.610
+Ale jest kilka rzeczy, które chcemy zrobić.
+
+00:00:10.620 --> 00:00:17.700
+Na przykład mamy naszą wersję węzła, ale najlepiej jesteśmy w stanie uruchomić nasz inteligentny mózg API w
+
+00:00:17.760 --> 00:00:18.760
+tym kontenerze.
+
+00:00:18.930 --> 00:00:20.360
+Jak możemy to zrobić.
+
+00:00:20.760 --> 00:00:24.090
+W tym filmie zajmiemy się tym.
+
+00:00:24.260 --> 00:00:27.550
+Pozwól, że przedstawię ci kilka dodatkowych poleceń do dokowania, z których możemy skorzystać.
+
+00:00:27.560 --> 00:00:32.400
+Pierwszym z nich jest katalog roboczy lub instrukcja pracownika.
+
+00:00:32.540 --> 00:00:36.910
+A to mówi, że jest to katalog w kontenerze, z którego chcemy pracować.
+
+00:00:37.010 --> 00:00:44.800
+I mam zamiar stworzyć taki, który mówi app lub logistyczne inteligentne API mózgu.
+
+00:00:45.750 --> 00:00:47.790
+I to jest katalog roboczy.
+
+00:00:47.790 --> 00:00:54.400
+Gdy następnym razem wejdziemy na tył kontenera, znajdziemy się tutaj.
+
+00:00:55.490 --> 00:01:04.100
+Następne, którego chcemy użyć, to coś w rodzaju kopii w kopii, ponieważ nazwa sugeruje kopiowanie
+
+00:01:04.100 --> 00:01:10.190
+tego, co chcemy z naszego obecnego katalogu do kontenera.
+
+00:01:10.190 --> 00:01:14.420
+W naszym przypadku jest to nasz katalog główny, więc możemy powiedzieć, że chcemy
+
+00:01:17.080 --> 00:01:17.860
+wszystko skopiować.
+
+00:01:18.370 --> 00:01:19.670
+I ten katalog główny.
+
+00:01:19.750 --> 00:01:24.470
+I gdzie chcemy umieścić go w naszym pojemniku.
+
+00:01:24.550 --> 00:01:28.580
+W naszym przypadku chcemy umieścić go w naszym katalogu roboczym, abyśmy mogli zachować go tak, jak jest.
+
+00:01:28.930 --> 00:01:33.360
+A tak przy okazji, mogę zrobić coś takiego, gdybym tylko chciał
+
+00:01:35.520 --> 00:01:41.670
+skopiować plik Jaison pakietu paczek, ja też mógłbym to zrobić, ponieważ jest to w katalogu głównym.
+
+00:01:41.740 --> 00:01:44.890
+Wcześniej chcemy skopiować wszystko.
+
+00:01:44.900 --> 00:01:46.070
+Proszę bardzo.
+
+00:01:46.130 --> 00:01:53.840
+I wtedy ostatnie polecenie, które zamierzam was nauczyć, jest uruchamiane i uruchamiane, to po prostu powiedzenie, co powinniśmy tutaj zrobić
+
+00:01:54.440 --> 00:01:57.660
+i jakie polecenia powinniśmy uruchamiać w kontenerze.
+
+00:01:58.010 --> 00:02:03.210
+I chcemy uruchomić instalację NPM, ponieważ utworzyliśmy katalog roboczy.
+
+00:02:03.300 --> 00:02:08.410
+Skopiowaliśmy wszystkie te pliki, a następnie chcemy uruchomić instalację NPM.
+
+00:02:08.420 --> 00:02:15.750
+Coś w rodzaju tego, co robimy, gdy robimy klonowanie na naszym pulpicie, nasz projekt, a następnie uruchamiamy instalację NPM.
+
+00:02:15.890 --> 00:02:17.080
+Dokładnie to samo.
+
+00:02:18.080 --> 00:02:20.980
+Możesz tutaj uruchamiać wiele poleceń.
+
+00:02:20.990 --> 00:02:27.540
+Teraz możesz zastanawiać się, jaka jest różnica pomiędzy uruchomieniem i uruchomieniem polecenia, jest to, co nazywamy obrazem.
+
+00:02:27.600 --> 00:02:28.330
+Krok.
+
+00:02:28.460 --> 00:02:33.860
+Stan kontenera po komendzie uruchomienia zostanie zatwierdzony do stacji dokującej lub obrazu.
+
+00:02:33.860 --> 00:02:42.600
+Tak więc plik Daco może uruchamiać wiele kroków, które jedna nad drugą warstwą tworzą obraz, który chcemy.
+
+00:02:42.660 --> 00:02:49.540
+Z drugiej strony polecenie to jest domyślnie używane domyślnie przy uruchamianiu obrazu kompilacji.
+
+00:02:49.620 --> 00:02:56.690
+Zatem dok lub upadek może mieć tylko jeden komentarz i zwykle pojawia się pod koniec jesieni.
+
+00:02:56.730 --> 00:03:00.370
+Więc po prostu sprawdźmy, co się stanie, jeśli uruchomię te polecenia teraz.
+
+00:03:00.570 --> 00:03:06.400
+Jeśli wejdę do mojego terminala i jeszcze raz zwiększmy to nieco.
+
+00:03:06.550 --> 00:03:17.120
+I jeszcze raz doker Iranu zbudował nasz super niesamowity.
+
+00:03:17.130 --> 00:03:17.530
+W porządku.
+
+00:03:17.550 --> 00:03:18.840
+Widzisz, że jest więcej kroków.
+
+00:03:18.840 --> 00:03:21.700
+Teraz działa instalacja NPM.
+
+00:03:21.780 --> 00:03:24.180
+Mamy ostrzeżenie, ale myślę, że powinno być dobrze.
+
+00:03:24.180 --> 00:03:33.240
+I w końcu uruchamiamy polecenie pięć kroków i wygląda na to, że został pomyślnie zbudowany teraz.
+
+00:03:33.270 --> 00:03:36.500
+Przejdźmy teraz do tego kontenera i zobaczmy, co się stało.
+
+00:03:36.570 --> 00:03:46.360
+Chcemy to wyczyścić i powiedzieć, że dokowód znowu działa, a super-wspaniały kontener działa w ten sposób, że
+
+00:03:49.210 --> 00:03:56.510
+nasz katalog roboczy jest inteligentnym mózgowym interfejsem użytkownika, który właśnie zdefiniowaliśmy.
+
+00:03:56.550 --> 00:04:05.160
+A jeśli robię w zeszłym roku, to fajnie jest, że mamy wszystkie nasze pliki z naszego komputera w tym pojemniku.
+
+00:04:05.160 --> 00:04:07.340
+I uruchomiliśmy także instalację NPM.
+
+00:04:07.440 --> 00:04:13.450
+Teoretycznie, jeśli biegnę i zaczynam tutaj, jak fajnie
+
+00:04:16.480 --> 00:04:18.120
+jest.
+
+00:04:18.160 --> 00:04:23.000
+Nasz serwer działa teraz na kontenerze w kontenerze w doku.
+
+00:04:23.020 --> 00:04:25.430
+Aplikacja działa na porcie 3000.
+
+00:04:25.790 --> 00:04:26.010
+DOBRZE.
+
+00:04:26.020 --> 00:04:28.060
+Więc sprawdźmy to.
+
+00:04:28.090 --> 00:04:34.530
+Otwieram nową kartę i po prostu zróbmy localhost trzy tysiące.
+
+00:04:34.980 --> 00:04:37.040
+Witryna jest osiągalna.
+
+00:04:37.350 --> 00:04:41.670
+A to dlatego, że localhost odnosi się do naszego komputera.
+
+00:04:42.000 --> 00:04:48.390
+Ale jeśli pamiętasz o naszej dyskusji, wszystkie pojemniki są pojemnikami zupełnie odrębnymi rzeczami działającymi
+
+00:04:48.390 --> 00:04:49.210
+samodzielnie.
+
+00:04:49.530 --> 00:04:54.150
+A nasz komputer tak naprawdę nie ma wiedzy o tym pojemniku.
+
+00:04:54.770 --> 00:04:56.190
+I o to chodzi.
+
+00:04:56.210 --> 00:05:01.580
+I to jest coś, co przyciąga wielu ludzi, gdy mamy kontener,
+
+00:05:01.580 --> 00:05:10.260
+pozwól mi wyjść z tego, gdy mamy pojemnik, którego kontener tak naprawdę nie zna z maszyny, musimy mu
+
+00:05:10.260 --> 00:05:13.770
+powiedzieć, gdzie można odsłonić port .
+
+00:05:13.770 --> 00:05:19.480
+Widzisz, że świat zewnętrzny, który jest moim komputerem, nie może domyślnie połączyć się z kontenerem.
+
+00:05:19.490 --> 00:05:25.320
+Musimy w rzeczywistości powiedzieć kontenerowi, co należy wyeksponować i nazwaliśmy to powiązanie portu, a do tego
+
+00:05:25.320 --> 00:05:27.290
+użyjemy techniki zwanej przekierowaniem portów.
+
+00:05:27.330 --> 00:05:29.690
+I brzmi to bardziej skomplikowanie niż jest.
+
+00:05:29.730 --> 00:05:37.320
+Wszystko, co musimy zrobić, to w naszym poleceniu podać parametr kreski P, który oznacza port i dać
+
+00:05:37.320 --> 00:05:44.220
+mu port trzy tysiące na naszym kontenerze, a my za to port 3000 na hoście
+
+00:05:44.220 --> 00:05:45.530
+na maszynie.
+
+00:05:45.840 --> 00:05:57.530
+Więc jeśli uruchomię to OK, weszliśmy do pojemnika, który uruchomiłem NPM start, nasza aplikacja działa na porcie 3000, a teraz
+
+00:05:57.530 --> 00:06:08.040
+jeśli wrócimy R8 odniesienie do ich bazy danych nie jest zdefiniowane i to dlatego, że jeśli
+
+00:06:08.160 --> 00:06:19.170
+pójdziemy do naszego serwera dodgy nas mieć tutaj użytkownika bazy danych żądań pobierania, który w rzeczywistości jest nieprawidłowy.
+
+00:06:19.170 --> 00:06:23.070
+Mamy D-B, ale nigdy nie używamy bazy danych, ale to działa.
+
+00:06:23.250 --> 00:06:25.700
+Zmieńmy to na.
+
+00:06:25.980 --> 00:06:27.990
+To działa.
+
+00:06:28.970 --> 00:06:38.080
+Chcemy uratować i odświeżyć, a trudną częścią jest to, że będziemy musieli znowu to uruchomić.
+
+00:06:38.090 --> 00:06:42.050
+Pozwól mi to zamknąć i uruchom uruchomienie NPM.
+
+00:06:42.130 --> 00:06:53.180
+Wróćmy i odświeżmy, a zobaczysz, jak to w rzeczywistości nie działa, a to dlatego, że
+
+00:06:58.870 --> 00:07:02.010
+musimy to zamknąć.
+
+00:07:02.050 --> 00:07:06.990
+Wyjdziemy z tego i odbudujemy nasz obraz, który
+
+00:07:10.040 --> 00:07:13.210
+zaczął kopiować pliki, których używamy.
+
+00:07:14.180 --> 00:07:18.820
+Następnie w końcu uruchom nasz kontener i jeśli byliśmy na NPM, zacznijmy teraz.
+
+00:07:20.700 --> 00:07:23.220
+Wróć i odśwież.
+
+00:07:23.410 --> 00:07:25.080
+To działa.
+
+00:07:25.280 --> 00:07:28.090
+Jakie to miłe uczucie.
+
+00:07:28.100 --> 00:07:33.030
+Właśnie oficjalnie stworzyliśmy kontener Dharker dla naszego serwera API.
+
+00:07:33.350 --> 00:07:41.120
+Teraz wszystko, co musimy zrobić, to oddać ten folder z dokumentem lub plikiem gdziekolwiek i tak długo jak
+
+00:07:41.150 --> 00:07:46.830
+mają lekarza, możemy po prostu uruchomić to na dowolnej maszynie, której chcemy.
+
+00:07:46.860 --> 00:07:50.540
+Bardzo fajne, ale teraz jest problem.
+
+00:07:51.640 --> 00:07:53.930
+Co powiesz o tej bazie danych.
+
+00:07:54.040 --> 00:07:55.300
+Co z tym robimy?
+
+00:07:55.300 --> 00:07:58.340
+Co robimy z postscriptami do tego.
+
+00:07:58.450 --> 00:08:00.690
+Musisz poczekać na następne wideo.
+
+00:08:00.970 --> 00:08:01.890
+Zobaczę na tym.

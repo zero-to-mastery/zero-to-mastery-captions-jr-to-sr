@@ -1,0 +1,214 @@
+﻿WEBVTT
+
+00:00:00.950 --> 00:00:02.180
+Bine ai revenit.
+
+00:00:02.180 --> 00:00:10.100
+Să terminăm testarea funcționalității noastre de căutare Google, deoarece cu testele cu cât aveți mai mult cu atât este mai
+
+00:00:10.100 --> 00:00:10.590
+bine.
+
+00:00:10.640 --> 00:00:17.440
+În cele mai multe cazuri, oricum, deoarece acestea nu vor intra niciodată în producție, este doar pentru scopuri de devoluție.
+
+00:00:17.510 --> 00:00:23.690
+Nu doare niciodată să facă o mulțime de teste care să acopere o mulțime de scenarii, pentru că astfel ne acoperim
+
+00:00:23.690 --> 00:00:24.990
+și mai mult bazele.
+
+00:00:26.050 --> 00:00:34.380
+Și nu vă faceți griji prea multe despre repetarea dvs. sau nu vă repetați regulă și de programare cu ea atunci când vine
+
+00:00:34.380 --> 00:00:35.800
+vorba de teste.
+
+00:00:35.890 --> 00:00:42.070
+Este bine să vă repetați o dată din când în când, mai ales dacă face testele să fie ușor de citit pentru
+
+00:00:42.070 --> 00:00:43.890
+alte persoane care vă citesc codul.
+
+00:00:43.900 --> 00:00:46.530
+Din nou, acestea nu intră niciodată în producție.
+
+00:00:46.630 --> 00:00:52.360
+Deci este întotdeauna mai bine să aveți mai multe teste decât mai puține teste.
+
+00:00:52.590 --> 00:00:56.710
+Deci, să testați încă câteva cazuri cu funcția noastră de căutare Google.
+
+00:00:56.880 --> 00:01:11.420
+Să presupunem că dorim, de asemenea, ca aceasta să funcționeze cu intrări definite și Noal și că vrem să ne asigurăm
+
+00:01:11.420 --> 00:01:14.980
+că această funcție va funcționa.
+
+00:01:14.980 --> 00:01:16.350
+Și lasă-mă să copiez asta.
+
+00:01:16.360 --> 00:01:17.020
+Asteptati-va
+
+00:01:19.940 --> 00:01:28.230
+de afirmatie si in cadrul acestei cautari pe Google voi spune doar pe definit si dorim ca aceasta sa fie egala cu o
+
+00:01:28.230 --> 00:01:33.720
+matrice goala, daca intr-un fel vom primi un raspuns ciudat, o intrare nedefinita de la utilizator.
+
+00:01:33.720 --> 00:01:39.180
+Încă mai dorim să întoarcem o matrice goală pentru că poate încă în partea frontală afișăm
+
+00:01:39.180 --> 00:01:40.320
+o listă goală.
+
+00:01:40.350 --> 00:01:43.350
+Să salvăm și asta trece.
+
+00:01:43.350 --> 00:01:44.960
+Acum avem trei teste.
+
+00:01:45.030 --> 00:01:49.110
+Și să încercăm din nou și cazul nul.
+
+00:01:49.140 --> 00:01:55.700
+Vom copia acest lucru și vom testa și pentru nu.
+
+00:01:55.700 --> 00:01:56.270
+In regula.
+
+00:01:56.270 --> 00:02:03.650
+Testele noastre trec perfect și puteți vedea cât de frumos a fost prezentat acolo doar pentru noi.
+
+00:02:03.660 --> 00:02:09.950
+În cele din urmă, dorim să verificăm dacă ne uităm la scenariul nostru că vom întoarce nu mai mult de trei meciuri.
+
+00:02:09.950 --> 00:02:12.770
+Aceasta este o caracteristică importantă a aplicației noastre.
+
+00:02:13.040 --> 00:02:15.650
+Încă o dată, să spunem
+
+00:02:18.310 --> 00:02:22.690
+că nu se întorc mai mult de trei meciuri.
+
+00:02:25.730 --> 00:02:27.930
+Și șchiopii fac mai mult spațiu pentru asta, așa
+
+00:02:32.090 --> 00:02:35.870
+că putem vedea și încă o dată poți vedea o mulțime de repetări aici, dar e bine.
+
+00:02:35.930 --> 00:02:37.620
+Facem teste.
+
+00:02:37.640 --> 00:02:44.720
+Sa spun ca din nou voi incerca sa copiati asta pentru ca sunt lenesa sa scriu
+
+00:02:44.780 --> 00:02:57.030
+si va spune ca vrem ca atunci cand cautam dotcom care toate astea vrem ca acest lucru sa fie egal cu peretele egal cu un matrice cu trei
+
+00:02:57.030 --> 00:02:57.930
+elemente.
+
+00:02:57.930 --> 00:02:59.190
+Cum putem face asta?
+
+00:02:59.190 --> 00:03:01.530
+Din nou, acest lucru este doar simplu javascript.
+
+00:03:01.530 --> 00:03:10.740
+Putem face doar o lungime de punct în brațul xpect care se va întoarce, sperăm 3, chiar dacă facem
+
+00:03:10.790 --> 00:03:18.150
+dotcom și are patru elemente din cauza funcției noastre de returnare a lungimii de trei.
+
+00:03:18.260 --> 00:03:19.230
+Asa ca sa testam asta.
+
+00:03:21.170 --> 00:03:27.050
+Uită-te la testul nostru de testare și la alt sfat aici.
+
+00:03:27.350 --> 00:03:33.380
+Doar pentru că trece testul dvs. nu înseamnă că este întotdeauna corect, este întotdeauna bine să începeți prin a face
+
+00:03:33.380 --> 00:03:37.120
+testele să eșueze și apoi încercați să le faceți să funcționeze.
+
+00:03:37.670 --> 00:03:42.790
+Hai să nu reușim prin adăugarea a patru aici și este în siguranță.
+
+00:03:43.220 --> 00:03:50.570
+Și bine, vedem că ne-am așteptat ca o valoare să fie egală cu patru, dar am primit 3.
+
+00:03:50.840 --> 00:03:52.010
+Asta e bine.
+
+00:03:52.010 --> 00:03:54.880
+Dacă ne schimbăm la 3, totul este bun.
+
+00:03:54.980 --> 00:03:57.980
+Și puteți să jucați cu ei le pune puțin mai mult.
+
+00:03:58.140 --> 00:03:59.750
+Cred că ești Sharn ca să ai dreptate.
+
+00:03:59.760 --> 00:04:01.420
+Nu e chiar asa de rau.
+
+00:04:01.440 --> 00:04:03.320
+Nu pare a fi intimidantă.
+
+00:04:03.420 --> 00:04:09.090
+Și totuși, când te uiți la testele celorlalți, ar putea exista mai multe metode pe care le adaugă altceva decât să
+
+00:04:09.090 --> 00:04:10.550
+fie și să fie egale.
+
+00:04:10.560 --> 00:04:12.490
+Dar principiul de bază este același.
+
+00:04:12.570 --> 00:04:19.000
+Pur și simplu avem o funcție pe care o conducem și care este.
+
+00:04:19.160 --> 00:04:26.120
+Un lucru final putem grupa toate acestea deoarece amintim cu aplicatiile noastre, gandindu-se ca lucrurile sa
+
+00:04:26.120 --> 00:04:32.270
+devina mai mari si mai mari si mai mari putem grupa teste care sunt
+
+00:04:32.270 --> 00:04:40.580
+similare in special in acest caz cei care fac cautarea Google cu o functie nother numita descrie si descrie
+
+00:04:41.800 --> 00:04:44.140
+vom spune descrie căutarea Google.
+
+00:04:44.380 --> 00:04:49.590
+Și acesta este exact același mod în care a fost descris blocul.
+
+00:04:49.630 --> 00:04:55.480
+Primul parametru este un șir care va fi afișat pe test și apoi
+
+00:04:56.020 --> 00:05:02.180
+al doilea este o funcție și putem introduce toate aceste teste în interiorul acestui bloc.
+
+00:05:02.230 --> 00:05:11.170
+Deci acum, dacă văd acest lucru, văd că testele sunt grupate și știu că toate aceste teste care au fost difuzate
+
+00:05:11.170 --> 00:05:19.030
+se află sub funcția de căutare Google, astfel încât atunci când avem sute de teste, putem vedea care dintre
+
+00:05:19.030 --> 00:05:25.380
+ele se află în dificultate și unde vrem țintă pentru a ne fixa testul.
+
+00:05:25.480 --> 00:05:26.220
+In regula.
+
+00:05:26.270 --> 00:05:28.730
+Mai multe lucruri interesante în următorul videoclip.
+
+00:05:28.730 --> 00:05:30.050
+O să văd asta.
+
+00:05:30.210 --> 00:05:30.470
+Babai.

@@ -1,0 +1,280 @@
+﻿WEBVTT
+
+00:00:00.900 --> 00:00:07.920
+Witamy ponownie Myślę, że nadszedł czas, aby napisać odpowiednią funkcję Branka, której możemy użyć z
+
+00:00:07.920 --> 00:00:15.980
+naszym inteligentnym interfejsem API mózgu, aby tutaj być może pojawi się ikona emoji, która pojawi się na podstawie liczby.
+
+00:00:16.270 --> 00:00:22.210
+I używamy teraz Lamdy do prostego ćwiczenia, ale mam nadzieję, że twoja wyobraźnia działa teraz dziko
+
+00:00:22.210 --> 00:00:25.220
+ze wszystkimi rzeczami, które możesz zrobić z LAMDĄ.
+
+00:00:25.270 --> 00:00:31.330
+Jest tak fajny i tak interesujący, że zdecydowanie chcę zobaczyć twórcze implementacje, które ludzie mają
+
+00:00:31.330 --> 00:00:34.610
+z aplikacją na smartfona lub z własną aplikacją.
+
+00:00:34.690 --> 00:00:39.070
+Chciałbym zobaczyć i usłyszeć, co zrobiłeś z funkcjami lambda.
+
+00:00:39.070 --> 00:00:45.220
+Zdecydowanie opublikowany na naszym czacie społecznościowym, ponieważ uwielbiam te wszystkie rzeczy i to, jak kreatywni mogą się z tym
+
+00:00:45.220 --> 00:00:45.850
+pogodzić.
+
+00:00:46.880 --> 00:00:56.420
+Teraz i tutaj zamierzam zrobić coś fajnego, a ta funkcja będzie miała mały zestaw emoji,
+
+00:00:56.480 --> 00:01:03.220
+który stworzyłem, a te emoji będą naszym systemem rankingowym.
+
+00:01:03.270 --> 00:01:07.920
+Tutaj zaczynasz od rosnącego, który ciągle rośniesz,
+
+00:01:07.920 --> 00:01:12.620
+aż dotrzesz do statku rakietowego o najwyższej randze.
+
+00:01:12.620 --> 00:01:13.280
+Co teraz powinniśmy zrobić.
+
+00:01:13.280 --> 00:01:19.980
+Cóż, po pierwsze, odłóżmy to na zewnątrz funkcji, teraz zostawię to
+
+00:01:19.980 --> 00:01:28.610
+tak, żeby pokazać, że możemy mieć rzeczy poza funkcją i wewnątrz strachu, zanim wyślemy odpowiedź.
+
+00:01:28.750 --> 00:01:40.530
+Mam zamiar mieć rangę koncertową, a ta ranga będzie równała się parametrom kropkowym Querrey, a ty pytasz
+
+00:01:40.990 --> 00:01:44.370
+oddziału, skąd je wziąłeś.
+
+00:01:44.500 --> 00:01:49.770
+Cóż, jeśli wrócimy do naszego wydarzenia Ahar, już go nie mamy.
+
+00:01:49.770 --> 00:01:53.360
+Chwyćmy i wskażmy stąd.
+
+00:01:55.020 --> 00:01:59.270
+I wklej to tutaj i dodaj jeden do trzech.
+
+00:01:59.320 --> 00:02:00.900
+A tutaj, w
+
+00:02:04.880 --> 00:02:09.390
+parametrach, które chcieliśmy zrobić, upewnij się, że nie mamy tutaj żądania pobierania.
+
+00:02:09.510 --> 00:02:12.020
+Spróbujmy jeszcze raz i zakończmy tutaj.
+
+00:02:12.020 --> 00:02:19.770
+Jeśli przejdę do parametrów ciągu zapytań, zobaczymy, że jesteśmy w stanie uzyskać ciągi zapytań naszego punktu końcowego API.
+
+00:02:20.310 --> 00:02:26.430
+Tak więc wyślemy wpisy zliczymy za pomocą tego parametru i przejdziemy do accessit
+
+00:02:26.430 --> 00:02:28.310
+na funkcji lambda.
+
+00:02:28.410 --> 00:02:36.010
+Powiem stąd, z parametru ciągów zapytań, że zdobędę rangę, a pokażę ci, jak
+
+00:02:36.010 --> 00:02:37.360
+to robimy.
+
+00:02:37.570 --> 00:02:48.180
+Z pewnością teraz stwórzmy teraz tę funkcję, która będzie nazywać się emoji Branka, a ten losowy Moji
+
+00:02:48.270 --> 00:02:52.130
+wykona dla nas prostą, małą funkcję.
+
+00:02:53.110 --> 00:02:57.060
+Powiemy tylko, że emoji używa naszej małej logiki dla nas.
+
+00:02:57.400 --> 00:03:05.700
+Jeśli ranga jest większa niż liczba punktów emoji.
+
+00:03:05.910 --> 00:03:12.330
+Taka jest ranga lub liczba wpisów użytkownika, jeśli jest większa niż nasza
+
+00:03:12.330 --> 00:03:17.660
+litość, która wygląda na około 9, jeśli jest większa.
+
+00:03:17.680 --> 00:03:21.360
+Właśnie wrócił ostatni lub statek rakietowy.
+
+00:03:22.290 --> 00:03:28.020
+Więc jeśli tak jest, powiem, że tak, robimy tutaj trochę zabawną składnię.
+
+00:03:28.050 --> 00:03:30.240
+Pamiętaj, że Mojo to tylko tablica.
+
+00:03:30.240 --> 00:03:36.450
+I robimy trochę logiki wewnątrz tablicy może się zagmatwać, ale na razie jest to dobry
+
+00:03:36.450 --> 00:03:36.910
+skrót.
+
+00:03:36.920 --> 00:03:38.460
+Mam nadzieję, że możesz śledzić dalej.
+
+00:03:39.270 --> 00:03:47.200
+Powiedzmy, że w tym przypadku powiemy, że emoji nie jest dwunasty minus jeden.
+
+00:03:47.200 --> 00:03:50.450
+Zdobądź najnowszą odznakę.
+
+00:03:50.550 --> 00:03:55.090
+W przeciwnym razie po prostu daj jakąkolwiek rangę.
+
+00:03:55.290 --> 00:03:57.600
+Jeśli masz zero wpisów, dostaniesz ten.
+
+00:03:57.700 --> 00:03:59.710
+Masz jedno hasło, które dostaniesz.
+
+00:03:59.730 --> 00:04:00.620
+Dwa wpisy.
+
+00:04:00.630 --> 00:04:01.730
+Trzy cztery.
+
+00:04:01.740 --> 00:04:02.780
+Itd. itp.
+
+00:04:03.750 --> 00:04:07.080
+Więc oszczędzajmy.
+
+00:04:07.150 --> 00:04:14.320
+I w końcu w naszym obiekcie odpowiedzi zamierzamy zamiast wejść, które są wydarzeniem,
+
+00:04:14.320 --> 00:04:19.440
+które chcemy przywrócić rangą, na której nam zależy.
+
+00:04:19.440 --> 00:04:22.890
+Idealnie więc mamy z tego emoji.
+
+00:04:23.150 --> 00:04:27.500
+Zapiszmy i uruchom tutaj wdrożenie.
+
+00:04:27.720 --> 00:04:29.790
+Teraz chcę to do produkcji.
+
+00:04:30.300 --> 00:04:32.390
+Zamierzam zmienić tag.
+
+00:04:32.400 --> 00:04:40.210
+Teraz, gdy przewijam do góry, aby pokazać, co się dzieje i zamierzam uruchomić wdrożenie Salles.
+
+00:04:40.770 --> 00:04:45.510
+A gdy to się dzieje w tle, będziemy pracować nad interfejsem naszej aplikacji
+
+00:04:45.510 --> 00:04:46.420
+inteligentnego mózgu.
+
+00:04:46.590 --> 00:04:48.900
+Ale chcę to powtórzyć ostatni raz.
+
+00:04:48.900 --> 00:04:54.960
+Mamy szereg emotikonów i wszystko, co robimy, bazuje na parametrach ciągów zapytania,
+
+00:04:54.960 --> 00:05:04.010
+które otrzymujemy od punktu, który będzie stanowił rangę naszych wpisów, które nasi użytkownicy będą zwracać tylko w rankingu Moji
+
+00:05:04.010 --> 00:05:08.460
+w oparciu o kolejność, którą mamy w tablicy.
+
+00:05:08.510 --> 00:05:11.970
+Po prostu otrzymujemy sygnał wejściowy z szmatą i Moji.
+
+00:05:12.380 --> 00:05:19.120
+Tak więc, podczas gdy to jest serwowane, zamierzam wrócić do mojego Front-Endu patrząc na naszą aplikację, tak naprawdę
+
+00:05:19.130 --> 00:05:22.120
+chcesz mieć coś tutaj obok naszej rangi.
+
+00:05:22.190 --> 00:05:28.820
+Więc zamierzam przejść do naszego komponentu rankingu, który na szczęście już mamy.
+
+00:05:29.350 --> 00:05:35.710
+A potem ten składnik Rand widzi, że właśnie wylogowujemy się z wpisów i to wszystko.
+
+00:05:35.710 --> 00:05:41.950
+Dodajmy nasze emoji do tego komponentu, zanim zaczniemy dotykać tej listy, upewnij się, że nasza
+
+00:05:41.980 --> 00:05:44.590
+funkcja lambda działa zgodnie z przeznaczeniem.
+
+00:05:44.590 --> 00:05:45.910
+Mam zamiar wrócić.
+
+00:05:45.940 --> 00:05:46.610
+Widzimy to.
+
+00:05:46.630 --> 00:05:49.110
+W porządku, mamy nowy punkt końcowy.
+
+00:05:49.150 --> 00:05:57.400
+Widzisz, że to teraz Prada jest w produkcji i możemy ją pobrać i wskazać i przetestować, co otrzymujemy.
+
+00:05:57.440 --> 00:06:03.650
+Zamierzam skopiować i wkleić i tutaj, ponieważ czekamy na parametry ciągu zapytania, co oznacza, że musimy
+
+00:06:03.680 --> 00:06:06.310
+wykonać znak zapytania dla ciągów zapytań.
+
+00:06:06.440 --> 00:06:17.100
+Powiemy, że ranga równa się, że ją podamy, powiedzmy na razie, pamiętaj, skąd ją odbieramy.
+
+00:06:17.110 --> 00:06:22.530
+Jeśli wrócimy do naszej funkcji, mamy parametry ciągu zapytania i przechwytywamy właściwość rank.
+
+00:06:22.570 --> 00:06:30.890
+Jeśli w tym przypadku nadaję nazwę czemuś podobnemu do Moji, będę musiał użyć Moji'ego po
+
+00:06:30.890 --> 00:06:33.270
+znaku zapytania, ale spójrzmy na
+
+00:06:36.100 --> 00:06:37.230
+to.
+
+00:06:37.240 --> 00:06:38.440
+Sprawmy, że będzie trochę większa.
+
+00:06:38.440 --> 00:06:41.440
+Żeby świętować, mamy małą mrugniętą twarz.
+
+00:06:41.470 --> 00:06:43.660
+Nasza funkcja serwisowa działa.
+
+00:06:43.900 --> 00:06:51.240
+A jeśli zmienimy to na, powiedzmy 400, otrzymamy rakietę, którą mamy odznakę rakietową,
+
+00:06:51.240 --> 00:06:59.200
+i jeśli zmienimy to na zero uśmiechniętą twarz, będziemy musieli pracować na naszym ranczo tutaj.
+
+00:06:59.200 --> 00:07:00.930
+Jak to jest niesamowite.
+
+00:07:01.010 --> 00:07:07.320
+I jak łatwo było wdrożyć tę funkcję do lambda na serwery Amazon.
+
+00:07:07.450 --> 00:07:08.900
+A teraz mamy do niego dostęp.
+
+00:07:10.110 --> 00:07:11.220
+Absolutnie wspaniałe.
+
+00:07:11.340 --> 00:07:12.120
+Uwielbiam LAMDA.
+
+00:07:12.120 --> 00:07:14.560
+Mam nadzieję, że jesteś podekscytowany kolejnym filmem.
+
+00:07:14.730 --> 00:07:18.930
+Zamierzamy wdrożyć to i Front-End, który zobaczę na tym.

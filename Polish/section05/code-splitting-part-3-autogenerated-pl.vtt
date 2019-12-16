@@ -1,0 +1,460 @@
+﻿WEBVTT
+
+00:00:01.360 --> 00:00:03.250
+I witaj z powrotem.
+
+00:00:03.250 --> 00:00:10.330
+Po prostu przestaliśmy dzielić kod, co było bardzo ekscytujące, ale w rzeczywistości jest czystszy
+
+00:00:10.570 --> 00:00:12.290
+sposób robienia rzeczy.
+
+00:00:12.380 --> 00:00:13.470
+Jest ich kilka.
+
+00:00:13.540 --> 00:00:16.370
+Pokażę ci teraz jednego z nich.
+
+00:00:16.890 --> 00:00:18.140
+To tutaj.
+
+00:00:18.330 --> 00:00:22.610
+Ten stan komponentu DOT jest dość brzydki.
+
+00:00:22.650 --> 00:00:27.360
+A jeśli ktoś cię potrzebuje, to twoja drużyna przychodzi, a oni nie są obeznani ze składnią, że
+
+00:00:27.360 --> 00:00:28.990
+będą naprawdę zakłopotani twoim kodem.
+
+00:00:29.130 --> 00:00:33.000
+Idealnie sprawimy, że nasz kod będzie bardzo prosty do zrozumienia.
+
+00:00:33.150 --> 00:00:40.740
+Więc spróbujmy to zrobić po prostu po to, aby zachować spójność, ponieważ komponenty,
+
+00:00:40.740 --> 00:00:48.430
+podczas gdy istnieją technicznie obiekty, zamierzam uczynić ten Noal zamiast łańcucha, aby zachować spójność.
+
+00:00:48.450 --> 00:00:54.910
+Teraz jesteśmy tutaj z czystszą wersją.
+
+00:00:54.910 --> 00:01:03.320
+Czy nie byłoby miło, gdybyśmy mieli jakiś komponent, taki jak Bonan sygnału, którego nie można owijać wokół rzeczy i
+
+00:01:03.320 --> 00:01:07.970
+po prostu powiedzieć, że ten komponent będzie asynchroniczny Aints.
+
+00:01:07.970 --> 00:01:12.420
+Więc po prostu go zaimportujmy, zróbmy to.
+
+00:01:12.430 --> 00:01:19.840
+Zamierzam stworzyć komponent asynchroniczny, a zobaczysz, dlaczego na końcu filmu Boinne
+
+00:01:19.850 --> 00:01:28.570
+pomocne będzie przejście do komponentów i utworzenie nowego pliku, a my nazwiemy go komponentem synchronizacji.
+
+00:01:28.630 --> 00:01:37.630
+Dodginess tutaj mamy typowy import reagować, a także składnik z naszego
+
+00:01:42.020 --> 00:01:44.250
+pakietu Riak.
+
+00:01:44.250 --> 00:01:44.590
+W porządku.
+
+00:01:44.610 --> 00:01:53.280
+Teraz stworzymy coś, co nazywa się komponentem wyższego rzędu i jest to komponent,
+
+00:01:53.280 --> 00:01:56.830
+który zwraca inny komponent.
+
+00:01:56.860 --> 00:02:02.410
+To tak, jak funkcja wyższego rzędu. Funkcja wyższego rzędu, o której mówiliśmy,
+
+00:02:02.410 --> 00:02:04.990
+jest funkcją, która zwraca funkcję.
+
+00:02:04.990 --> 00:02:11.790
+Ponownie dlatego, że komponenty są po prostu funkcjami, to właśnie jest to komponent, który zwraca inny
+
+00:02:12.780 --> 00:02:15.900
+komponent, tak jak mieliśmy połączenie i redux.
+
+00:02:15.900 --> 00:02:21.930
+Więc sposób, w jaki tworzymy to, a przy okazji, gdy piszę to, jeśli to przekracza twoją głowę, nie martw się,
+
+00:02:22.020 --> 00:02:24.120
+że komponent async jest dość standardowy.
+
+00:02:24.120 --> 00:02:30.810
+Możesz przejść do trybu online i wyszukać go, a cały kod tego składnika async wygląda prawie
+
+00:02:30.810 --> 00:02:31.650
+tak samo.
+
+00:02:31.680 --> 00:02:36.750
+Więc musisz się do tego przyzwyczaić, jeśli chcesz dowiedzieć się więcej o komponentach wyższego rzędu.
+
+00:02:36.750 --> 00:02:43.740
+Dokumenty ponownego aktu mają sekcję komponentów o wysokim poziomie i naprawdę ci pomogą.
+
+00:02:44.040 --> 00:02:47.190
+Ale na razie trzymaj się mnie, to wszystko ma sens.
+
+00:02:47.310 --> 00:02:55.920
+Najpierw zaczniemy eksportować błąd, który nazwiemy podzespołem synchronizującym małymi
+
+00:02:55.930 --> 00:03:00.050
+literami, powiedzmy, która funkcja.
+
+00:03:00.150 --> 00:03:08.740
+Powiedzmy więc, że domyślny komponent funkcji async eksperymentu i ten składnik asynchroniczny pamiętasz, ponieważ jest to funkcja
+
+00:03:08.750 --> 00:03:16.570
+wyższego rzędu, będzie potrzebował komponentu jako parametru, który powie komponentowi importu, więc będzie to dla
+
+00:03:16.580 --> 00:03:19.980
+nas strona 2 i strona 3.
+
+00:03:20.060 --> 00:03:27.470
+A teraz w końcu wracamy do naszej składni, którą znamy, czyli komponentu synchronizacji klasy
+
+00:03:27.470 --> 00:03:28.260
+A.
+
+00:03:28.310 --> 00:03:35.390
+Ale tym razem z kapitałem, ponieważ jest klasą, to jest komponent, który tworzymy,
+
+00:03:35.390 --> 00:03:46.530
+który rozszerza komponent, by zareagować, i tutaj mamy konstruktora, który również otrzyma rekwizyt. I znowu musimy zadzwonić super z rekwizytami,
+
+00:03:46.530 --> 00:03:49.860
+żeby mieć dostęp do im.
+
+00:03:53.070 --> 00:04:00.780
+I powiemy po prostu, że ten stan jest równy składnikowi zero.
+
+00:04:00.800 --> 00:04:02.890
+Tak jak mieliśmy apt.
+
+00:04:02.990 --> 00:04:03.750
+Tak.
+
+00:04:06.040 --> 00:04:09.320
+Będziemy mieć komponent Nie tutaj.
+
+00:04:09.550 --> 00:04:18.060
+Teraz w tej następnej części będziemy robić komponent nie.
+
+00:04:18.150 --> 00:04:26.880
+Teraz, jeśli pamiętasz, musimy załadować te ph do MP shreik i mamy obietnice, ponieważ użyliśmy wtedy kropki,
+
+00:04:26.910 --> 00:04:33.500
+a potem musieliśmy ustawić stan na dowolny komponent, który otrzymaliśmy dla zabawy.
+
+00:04:33.510 --> 00:04:40.020
+Pokażę ci, jak zrobić z umywalką taką wagę, żeby uzyskać trochę więcej dodatkowych informacji.
+
+00:04:40.260 --> 00:04:50.840
+Więc znowu z jakąkolwiek asynchroniczną funkcją możemy po prostu powiedzieć synchronizację i tutaj możemy użyć
+
+00:04:51.010 --> 00:05:01.850
+słodkiej klawiatury, więc możemy powiedzieć, że Konst jest domyślny i jest to trochę destrukturyzacji, jeśli
+
+00:05:01.850 --> 00:05:09.250
+pamiętasz domyślne ustawienie tutaj, po prostu destruyfikujemy, aby upewnić się
+
+00:05:09.250 --> 00:05:14.470
+otrzymujemy domyślny komponent, który będzie równy komponentowi.
+
+00:05:14.790 --> 00:05:24.860
+I jak mamy je zdobyć, póki nie czekamy i wykonujemy nasz asynchroniczny kod, który ma być komponentem importu,
+
+00:05:25.520 --> 00:05:32.760
+ponieważ dzięki temu będziemy mogli zaimportować nasz push, aby zaimponować składnikowi shreik.
+
+00:05:32.800 --> 00:05:40.930
+Więc wszystko, co tu robimy, jest w trakcie, gdy mieliśmy tutaj składnik, który on nazywa domyślną kropką, teraz
+
+00:05:40.930 --> 00:05:43.380
+będziemy mieli dostęp do komponentu.
+
+00:05:43.720 --> 00:05:44.790
+Teraz tutaj.
+
+00:05:44.800 --> 00:05:47.980
+Możemy wreszcie zrobić ten składnik stanu
+
+00:05:51.760 --> 00:05:53.470
+satt, który nazywa
+
+00:05:56.140 --> 00:05:57.070
+komponentem.
+
+00:05:57.250 --> 00:06:04.260
+Znowu to samo, co robimy tutaj, z komponentem równa się toupees do domyślnego tylko skróconego i
+
+00:06:04.270 --> 00:06:06.070
+czystszego sposobu robienia tego.
+
+00:06:06.070 --> 00:06:08.410
+Na koniec chcemy wyrenderować
+
+00:06:11.300 --> 00:06:12.180
+komponent.
+
+00:06:12.230 --> 00:06:17.930
+Więc powiem składnik conc, ponieważ nie wiemy, czy to będzie strona 2, czy ciasto.
+
+00:06:17.930 --> 00:06:20.950
+Chcemy tylko ogólnej ogólnej nazwy komponentu.
+
+00:06:21.500 --> 00:06:27.790
+I będzie to równa ten stan komponentu DOT.
+
+00:06:27.830 --> 00:06:38.250
+I na koniec tutaj możemy po prostu wrócić, jeśli mamy komponent, który powiemy przekazać ten komponent i wszelkie rekwizyty, które
+
+00:06:38.640 --> 00:06:44.760
+mogą mieć przy użyciu odrobiny struktury, w której po prostu powiedz,
+
+00:06:44.760 --> 00:06:53.810
+czy ten komponent ma jakieś rekwizyty również je zawierają i mamy aby upewnić się, że tak otoczyliśmy.
+
+00:06:53.810 --> 00:07:00.440
+Dlatego pamiętaj, że przekazaliśmy komponent asynchroniczny Prossy, jeśli w jakiś sposób cokolwiek przechodzi
+
+00:07:00.440 --> 00:07:02.060
+przez te komponenty.
+
+00:07:02.060 --> 00:07:06.870
+W przeciwnym razie po prostu renderuj nie renderuj niczego.
+
+00:07:09.130 --> 00:07:13.930
+W końcu, ponieważ owijamy to w funkcję, musimy zwrócić coś, a my
+
+00:07:13.930 --> 00:07:17.040
+chcemy zwrócić komponent asynchroniczny, więc nie możemy powiedzieć,
+
+00:07:20.880 --> 00:07:23.590
+że na dole włączamy składnik synchronizacji.
+
+00:07:23.910 --> 00:07:25.970
+Uratujmy.
+
+00:07:26.260 --> 00:07:34.790
+Teraz uruchomię NPM start tutaj, aby sprawdzić błędy, które nadal musimy zaimportować do komponentu async.
+
+00:07:34.800 --> 00:07:36.580
+Teraz możemy użyć.
+
+00:07:36.680 --> 00:07:39.950
+Ale to może wyglądać trochę myląco, więc zobacz.
+
+00:07:39.980 --> 00:07:42.270
+Zobaczmy, jak możemy teraz użyć tego komponentu.
+
+00:07:42.320 --> 00:07:44.420
+Ten komponent wyższego rzędu.
+
+00:07:44.420 --> 00:07:45.550
+Wracam do APT.
+
+00:07:45.580 --> 00:08:01.550
+Tak i zamierzam zaimportować komponent synchronizacji z naszego folderu składników.
+
+00:08:01.590 --> 00:08:05.300
+Teraz możemy użyć tego komponentu async, aby trochę to wyczyścić.
+
+00:08:05.430 --> 00:08:14.110
+Możemy to teraz skomentować i powrócić do tego, jak mieliśmy to na początku, kiedy nie mieliśmy
+
+00:08:14.110 --> 00:08:15.350
+podziału kodu.
+
+00:08:15.490 --> 00:08:24.820
+Ale tym razem dla tego oświadczenia zwrotnego zamierzamy powiedzieć, że chcemy mieć stronę asynchroniczną
+
+00:08:24.820 --> 00:08:29.100
+drugą, która równa się składnikowi asynchronicznemu.
+
+00:08:29.450 --> 00:08:30.860
+I pamiętaj, że to jest funkcja.
+
+00:08:30.860 --> 00:08:43.610
+Tak więc wywołajmy tę funkcję z pierwszym parametrem, który zapamiętuje komponent importu.
+
+00:08:43.770 --> 00:08:49.160
+Aby zaimportować komponent, po prostu zaimportujemy komponenty da
+
+00:08:52.860 --> 00:08:56.220
+slash ph, co pozwoli mi
+
+00:09:00.260 --> 00:09:02.380
+to nieco zmniejszyć.
+
+00:09:04.810 --> 00:09:05.690
+Proszę bardzo.
+
+00:09:05.920 --> 00:09:11.920
+Wszystko, co tutaj zrobiliśmy, to powiedzmy, że komponent async, który
+
+00:09:12.220 --> 00:09:20.410
+jest utworzoną przez nas funkcją, pobiera parametr, który importuje komponent i z tego zaimportowanego komponentu pobieramy
+
+00:09:20.560 --> 00:09:27.730
+domyślny domyślny komponent i dodajemy do stanu, a potem jesteśmy powróci i wyrenderuje komponent.
+
+00:09:27.730 --> 00:09:37.100
+Wracając tutaj, mogę teraz powiedzieć, że strona asynchroniczna zwróci stronę asynchroniczną 2 i możemy zrobić to
+
+00:09:37.100 --> 00:09:40.070
+samo dla strony 3.
+
+00:09:40.140 --> 00:09:46.560
+Mogę powiedzieć, że tutaj mamy stronę 3 synchronizacji.
+
+00:09:46.680 --> 00:09:51.750
+Więc teraz naszym składnikiem jest ciastko sync.
+
+00:09:51.850 --> 00:09:54.260
+Zapiszmy w prawo.
+
+00:09:54.270 --> 00:09:55.830
+Nie dostaję żadnych błędów.
+
+00:09:55.830 --> 00:09:57.840
+Zobaczmy, czy rzeczywiście działa w przeglądarce.
+
+00:09:57.840 --> 00:10:01.290
+Wróćmy i odświeżmy.
+
+00:10:01.430 --> 00:10:05.880
+Mamy nasz pakiet, jeśli kliknę to kliknięcie na drugiej stronie.
+
+00:10:06.090 --> 00:10:12.070
+W porządku, dostaję inny plik i inny plik.
+
+00:10:12.220 --> 00:10:14.070
+Idealny.
+
+00:10:14.070 --> 00:10:18.300
+Teraz zauważysz, że mamy tu trzy i cztery.
+
+00:10:18.350 --> 00:10:22.860
+To dlatego, że tutaj mamy import.
+
+00:10:22.910 --> 00:10:27.650
+Teraz tworzymy cztery kawałki, których tak naprawdę nie chcemy.
+
+00:10:27.740 --> 00:10:30.750
+Możemy teraz usunąć to wszystko.
+
+00:10:30.920 --> 00:10:41.780
+Teraz możemy po prostu wrócić do sposobu, w jaki mamy rzeczy z tym ustawionym stanem kropek, wszystko zapisz, odświeżmy się
+
+00:10:41.780 --> 00:10:42.750
+tutaj.
+
+00:10:42.800 --> 00:10:44.630
+Mamy zestawione produkty trawiące.
+
+00:10:44.900 --> 00:10:52.030
+Jeśli wyczyściłem i przejdę do strony 2, przejdziesz do strony 2 ciasta.
+
+00:10:52.200 --> 00:10:53.580
+Bardzo bardzo fajne.
+
+00:10:53.580 --> 00:10:54.850
+I zobaczyłeś ten błysk.
+
+00:10:54.870 --> 00:10:56.250
+Nie widzisz już tej lampy błyskowej.
+
+00:10:56.250 --> 00:11:03.240
+Ale początkowo, gdy ładują się, jest trochę flash i to jest kompromis, który musisz
+
+00:11:03.240 --> 00:11:11.730
+zdecydować, czy chcę ten szybki flash, w którym użytkownik musi czekać na import plików javascript, aby nasz czas
+
+00:11:11.850 --> 00:11:16.540
+ładowania początkowego czasu ładowania dla pierwszy pakiet jest szybszy.
+
+00:11:16.650 --> 00:11:19.960
+I to jest coś, co musisz zdecydować jako starszy programista.
+
+00:11:20.100 --> 00:11:27.400
+Ale teraz masz narzędzia, dzięki którym możesz zdecydować, dlaczego chcesz to zrobić i możesz na
+
+00:11:27.770 --> 00:11:34.770
+to spojrzeć, mówiąc, że jest to rzeczywiście czystsze niż to, co robiliśmy wcześniej.
+
+00:11:34.780 --> 00:11:35.640
+Myślę, że to jest.
+
+00:11:35.650 --> 00:11:40.370
+Myślę, że składnik asynchroniczny jest zdecydowanie trudniejszy do uchwycenia.
+
+00:11:40.660 --> 00:11:45.280
+Przy okazji, na wypadek, gdybyś znowu się z tym zmieszał.
+
+00:11:45.850 --> 00:11:52.870
+Jeśli po prostu zostawię to tak, jak miało to miejsce w przypadku komponentu, który już wcześniej robiliśmy.
+
+00:11:52.960 --> 00:11:56.380
+Cóż, w takim razie znowu będzie działać.
+
+00:11:56.380 --> 00:11:59.360
+To był tylko skrótowy sposób robienia tego.
+
+00:11:59.620 --> 00:12:05.800
+W każdym razie wracając do punktu, w którym teraz możemy korzystać z asynchronicznego komponentu w naszym
+
+00:12:05.990 --> 00:12:11.620
+kodzie i za każdym razem, gdy musimy załadować coś, co możemy po prostu owinąć w
+
+00:12:11.620 --> 00:12:16.990
+komponent asynchroniczny, zaimportujemy nazwę komponentu i cokolwiek chcemy i wyrenderujemy go Ostatnia rzecz.
+
+00:12:17.180 --> 00:12:21.080
+Jeśli wrócę do mojego NPM uruchomić
+
+00:12:28.450 --> 00:12:37.990
+Billa, otwieramy to i widzimy, że w porównaniu do poprzedniego czasu mamy faktycznie większy rozmiar Bondela dla głównego.
+
+00:12:38.080 --> 00:12:45.560
+Mamy tu jeden bajt, ale nie musimy się martwić, że nasz rozmiar pakietu właśnie się zwiększył.
+
+00:12:45.560 --> 00:12:47.160
+Dlaczego tak jest.
+
+00:12:47.180 --> 00:12:54.230
+Ponieważ w naszym głównym pakiecie dodaliśmy komponent asynchroniczny, ponieważ pamiętamy aplikację Dahlia,
+
+00:12:54.230 --> 00:12:58.220
+którą ponownie importujemy jako komponent asynchroniczny.
+
+00:12:58.270 --> 00:13:01.160
+Zawsze myśl o kompromisach.
+
+00:13:01.180 --> 00:13:04.930
+Czy to jest najlepsza rzecz, którą można dostarczyć użytkownikowi na samym początku.
+
+00:13:05.110 --> 00:13:09.410
+Czy chcemy asynchronicznie ładować te porcje.
+
+00:13:09.590 --> 00:13:17.620
+Mam jednak nadzieję, że dobrze się bawiłeś i widzisz moc asynchronicznego ładowania i dzielenia kodu.
+
+00:13:17.770 --> 00:13:24.850
+Jest to całkiem nowy temat, ale myślę, że każda firma powinna wziąć pod uwagę dostarczając javascript
+
+00:13:24.940 --> 00:13:25.990
+do użytkownika.
+
+00:13:26.500 --> 00:13:27.950
+Do zobaczenia w następnym.
+
+00:13:28.060 --> 00:13:28.250
+Przez.

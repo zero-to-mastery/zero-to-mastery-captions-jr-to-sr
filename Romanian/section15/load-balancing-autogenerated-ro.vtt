@@ -1,0 +1,208 @@
+﻿WEBVTT
+
+00:00:00.910 --> 00:00:02.020
+Du-te înapoi.
+
+00:00:02.370 --> 00:00:06.220
+Să vorbim despre ultimul nostru subiect când vine vorba de performanță.
+
+00:00:06.360 --> 00:00:09.810
+Aceasta este echilibrarea sarcinii de echilibrare a sarcinii.
+
+00:00:09.870 --> 00:00:17.820
+După cum sugerează și numele, este o modalitate de a echilibra mai multe solicitări în același timp și le-am distribuit
+
+00:00:17.970 --> 00:00:25.120
+diferitelor servicii și asta este ceva ce vrem să începem să facem când avem mai mulți utilizatori care
+
+00:00:25.210 --> 00:00:32.820
+folosesc aplicația noastră, Aplicația pe măsură ce facem din ce în ce mai multe solicitări este Exprimată sau serverul
+
+00:00:32.820 --> 00:00:39.700
+nostru expres va fi lovit din ce în ce mai mult până când nu se poate ocupa
+
+00:00:39.700 --> 00:00:40.540
+de sarcină.
+
+00:00:40.660 --> 00:00:46.960
+Într-un scenariu ideal putem avea doar un alt server, probabil două sau trei servere și acest lucru
+
+00:00:46.960 --> 00:00:53.560
+în fața lui rece un balancer scăzut doar îl distribuie astfel încât primul utilizator să meargă la primul server.
+
+00:00:53.560 --> 00:00:58.900
+Cel de-al doilea utilizator al doilea server al celui de-al treilea utilizator către al treilea server și că am
+
+00:00:59.020 --> 00:01:00.860
+reușit să ocupăm mai multă încărcătură.
+
+00:01:00.880 --> 00:01:06.160
+Acum, pentru ca noi să înțelegem cum funcționează balancatorii de sarcină și, de asemenea, cum putem implementa acest lucru.
+
+00:01:06.220 --> 00:01:14.780
+Mai întâi trebuie să vorbim despre modul cel mai de bază pe care o funcționează o relație client și server.
+
+00:01:14.810 --> 00:01:23.180
+Acum, pe cele mai multe site-uri web, cum ar fi site-uri Wordpress care sunt găzduite pe skater gazdă sau albastru gazdă cele mai simple site-uri
+
+00:01:23.180 --> 00:01:28.910
+doar blog-ul pe care ați cumpărat probabil numele de domeniu de la GoDaddy și poate chiar gazduieste-l
+
+00:01:28.910 --> 00:01:32.710
+pe GoDaddy au un server pe care au reușit pentru tine.
+
+00:01:32.720 --> 00:01:34.550
+Nu trebuie să creați niciodată un server.
+
+00:01:34.910 --> 00:01:42.380
+Vreau să spun că până acum am creat un server expres care servește conținut clientului, dar majoritatea oamenilor nu sunt
+
+00:01:42.380 --> 00:01:48.360
+dezvoltatori web și nu au nevoie să știe cum să construiască ei înșiși un server expres.
+
+00:01:48.410 --> 00:01:54.680
+Ei mai degrabă doar să predea acest lucru unei companii care are servere pentru ei și să le dea dosarele astfel încât
+
+00:01:54.680 --> 00:01:56.410
+să se ocupe de ea.
+
+00:01:56.870 --> 00:02:04.420
+Și majoritatea acestor companii cum ar fi am spus gazdă gazdă gazdă albastru toate utilizează ceva numit
+
+00:02:04.620 --> 00:02:14.070
+fie Apache server GTP sau motorul următor și acestea sunt software open source pe care le pune pe o mașină pe un computer.
+
+00:02:14.230 --> 00:02:21.270
+Și sunt deosebit de buni în a servi fișiere statice de conținut static, cum ar fi UML javascript și VSS.
+
+00:02:21.850 --> 00:02:22.740
+Sunt foarte simple.
+
+00:02:22.750 --> 00:02:27.920
+Tot ce fac sunt să-mi dea o cerere și vă voi trimite toate fișierele de care aveți nevoie.
+
+00:02:28.300 --> 00:02:28.990
+Asta e.
+
+00:02:29.170 --> 00:02:33.130
+Și veți vedea aceste două bucăți de software pe Internet.
+
+00:02:33.460 --> 00:02:38.650
+Dar putem să facem cu adevărat ceva interesant cu aceste instrumente, deoarece aceste instrumente sunt într-adevăr
+
+00:02:38.650 --> 00:02:42.170
+foarte bune și într-adevăr foarte rapide, doar servind fișiere statice.
+
+00:02:42.400 --> 00:02:49.030
+Putem sa le folosim ca balansanti de incarcare, un motor urmand foarte popular pentru a face acest lucru si destul
+
+00:02:49.030 --> 00:02:53.540
+de usor de implementat. Vezi ca putem face ceva de genul asta.
+
+00:02:53.710 --> 00:02:55.630
+Putem avea o cerere de pagină unică.
+
+00:02:55.690 --> 00:03:00.100
+Să spunem creierul nostru inteligent și facem o cerere.
+
+00:03:00.280 --> 00:03:07.690
+Acum, această solicitare, în loc să meargă la serverul nostru, serverul nostru API afișează în schimb un server X
+
+00:03:07.690 --> 00:03:15.790
+al motorului care va configura și acest server de motor X va echilibra încărcarea între serverul 1 2 și 3 bazat
+
+00:03:15.790 --> 00:03:19.770
+pe oricare dintre ele este cel mai puțin ocupat.
+
+00:03:19.870 --> 00:03:27.100
+În acest fel, cu atât mai mulți utilizatori avem atâta timp cât avem motorul X care poate acționa ca ceea ce numim un
+
+00:03:27.100 --> 00:03:31.680
+proxy invers și am trecut printr-un cost pe un server doi și trei.
+
+00:03:31.990 --> 00:03:38.890
+Apoi, acesta poate primi aceste fișiere și le poate servi într-adevăr foarte rapid la browser și puteți face, de asemenea, lucruri
+
+00:03:38.890 --> 00:03:42.190
+interesante, cum ar fi de fapt de numerar aceste cereri.
+
+00:03:42.190 --> 00:03:48.040
+Deci, data viitoare când un utilizator solicită aceeași pagină de poștă electronică în loc să meargă
+
+00:03:48.340 --> 00:03:56.350
+la mai multe una sau două, se poate întoarce doar pentru că este în numerar și veți vedea o mulțime de aplicații construite astfel.
+
+00:03:57.800 --> 00:04:00.620
+Privind acum la această diagramă, te gândești la tine însuți.
+
+00:04:00.890 --> 00:04:05.610
+Tocmai am mărit complexitatea aplicației noastre și cum este aceasta mai rapidă.
+
+00:04:05.630 --> 00:04:11.720
+Dacă tot vorbim cu mai multe mașini, acum facem mai multă hamei și facem mai multă muncă.
+
+00:04:11.720 --> 00:04:19.460
+Și aveți dreptate în a gândi că pentru că adăugăm mai multe lucruri, mai mult de lucru mai mult de prelucrare care trebuie să
+
+00:04:19.460 --> 00:04:22.360
+se facă pentru a reveni efectiv aceste fișiere.
+
+00:04:22.370 --> 00:04:28.060
+Și dacă nu aveți o mulțime de utilizatori, atunci acest lucru este doar pierdut resurse pierdute timp.
+
+00:04:28.160 --> 00:04:33.260
+Nu vă ajută cu adevărat, dar atunci când începeți să aveți mai mulți utilizatori pe care un singur server
+
+00:04:33.260 --> 00:04:38.920
+nu se poate ocupa în cele din urmă că serverul se va prăbuși, nu va putea să facă față tuturor acestor solicitări.
+
+00:04:38.960 --> 00:04:44.870
+Atunci când începeți să implementați un balancer de sarcină și deoarece motorul X este o metodă foarte bună
+
+00:04:44.870 --> 00:04:45.580
+de utilizat.
+
+00:04:45.590 --> 00:04:53.210
+Cum am spus un proxy invers și pentru a servi fișiere statice, de fapt, are mai mulți utilizatori
+
+00:04:53.210 --> 00:04:59.700
+ai mai rapid balancerul de sarcină decât să faci doar o relație de client unic.
+
+00:04:59.720 --> 00:05:07.250
+În cele din urmă puteți avea o arhitectură ca aceasta, unde aveți o singură pagină din cationul care are
+
+00:05:07.250 --> 00:05:13.970
+o rețea de distribuire a conținutului, unde aveți probabil versiuni cache ale fișierului javascript al CSSA
+
+00:05:14.000 --> 00:05:22.310
+Schmall, care este tot jes pe zip și apoi probabil că faceți cereri API la un punct final de odihnă dar
+
+00:05:22.400 --> 00:05:30.500
+aceste solicitări API vor lovi un balancer de sarcină și vor distribui cererea dvs. pe baza oricărui server deschis și
+
+00:05:30.500 --> 00:05:37.640
+serverul va reveni din nou în memoria cache a unei cereri, poate o cerere de răspuns Jason
+
+00:05:37.640 --> 00:05:42.870
+și poate, de asemenea, GZA această cerere și să o returneze client.
+
+00:05:43.130 --> 00:05:49.010
+Deci, acum puteți să utilizați toate instrumentele pe care le-ați învățat pentru a maximiza performanța și a
+
+00:05:49.010 --> 00:05:51.570
+face acest proces cât mai rapid posibil.
+
+00:05:51.830 --> 00:05:55.600
+Asta-i suficient să vorbim să o implementăm în următorul videoclip.
+
+00:05:55.610 --> 00:06:00.500
+Vă voi arăta cum să implementați un simplu balansier foarte simplu și apoi vom face ceva
+
+00:06:00.500 --> 00:06:01.040
+distractiv.
+
+00:06:01.100 --> 00:06:06.160
+De fapt, vom încerca puțin și vom vedea cât de bine se ocupă de încărcătură.
+
+00:06:07.380 --> 00:06:07.900
+Și apoi x1.

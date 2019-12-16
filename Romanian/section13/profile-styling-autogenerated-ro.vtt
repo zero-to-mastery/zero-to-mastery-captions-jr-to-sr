@@ -1,0 +1,427 @@
+﻿WEBVTT
+
+00:00:01.160 --> 00:00:02.180
+Du-te înapoi.
+
+00:00:02.290 --> 00:00:08.320
+Acum, că avem o pictogramă de profil frumos și un meniu frumos derulant, vreau să fiu sigur că aceste lucruri
+
+00:00:08.320 --> 00:00:08.840
+funcționează.
+
+00:00:08.860 --> 00:00:14.650
+Deci, haideți să elaborăm funcția de deconectare și acest videoclip și, de asemenea, să o eliminăm aici, pentru că nu
+
+00:00:14.650 --> 00:00:16.720
+mai avem nevoie de acest lucru.
+
+00:00:16.720 --> 00:00:18.750
+Să ne întoarcem la centrul nostru tehnic.
+
+00:00:18.910 --> 00:00:26.200
+Primul lucru pe care îl dorim este că vrem ca funcția de schimbare a drumurilor pe care o folosim deja în aplicația
+
+00:00:26.200 --> 00:00:31.230
+noastră să ne semnalăm aici și să ne schimbăm pentru a vă despărți perfect.
+
+00:00:31.860 --> 00:00:39.550
+Și aici, dacă vă întoarceți la navigația noastră, vedem că toate aceste rute au propulsea de schimbare a traseului pe care o
+
+00:00:39.640 --> 00:00:43.980
+primim din aplicație și care pur și simplu schimbă rutarea pentru noi.
+
+00:00:45.480 --> 00:00:47.450
+Să luăm schimbarea pe traseu.
+
+00:00:47.460 --> 00:00:49.090
+Să presupunem că avem ca recuzită.
+
+00:00:49.110 --> 00:01:01.030
+O să lucrăm la asta puțin și spunem că această propunere Daut sau trebuie să avem de fapt o funcție de enclavă și această funcție
+
+00:01:01.810 --> 00:01:10.390
+neclară va avea acest început de recuzită dobândită pe schimbarea rândului chemată cu semnalul chemat pentru că vrem
+
+00:01:10.390 --> 00:01:17.270
+să înscrieți-vă și de asemenea trebuie să trecem de fapt acest Propp acum.
+
+00:01:17.310 --> 00:01:23.970
+Deci, să ne întoarcem la navigația noastră și aici putem schimba asta.
+
+00:01:23.970 --> 00:01:31.830
+Putem elimina complet textul care a deconectat, pentru că nu mai avem nevoie de el, dar dorim ca funcția
+
+00:01:31.830 --> 00:01:34.850
+de schimbare a drumurilor să funcționeze aici.
+
+00:01:34.920 --> 00:01:42.060
+Asa ca sa trecem pe traseul de pe traseu inainte ca sa avem un profil ca si pentru
+
+00:01:42.060 --> 00:01:51.430
+ca avem deja acces la aceasta si la navigatie si doar stergem complet viteza lasa sa ma salvez inapoi si avem un pic de
+
+00:01:59.030 --> 00:02:06.490
+problema aici si asta pentru ca daca noi du-te la pictograma noastră de profil Ei bine, pot numi acest
+
+00:02:06.760 --> 00:02:08.770
+lucru în interiorul funcției.
+
+00:02:08.770 --> 00:02:12.240
+Am încă două înăuntru al clicului.
+
+00:02:12.280 --> 00:02:13.330
+Trebuie să
+
+00:02:16.730 --> 00:02:24.110
+atribuim funcția astfel încât atunci când se face clic se întâmplă funcția rulează nu doar imediat execută-o.
+
+00:02:24.110 --> 00:02:30.330
+În regulă, să spunem că mergem repede pe asta.
+
+00:02:30.340 --> 00:02:30.620
+Grabă.
+
+00:02:30.620 --> 00:02:31.190
+Perfect.
+
+00:02:31.190 --> 00:02:35.860
+Dacă dau clic pe ieșire, uite că sunt deconectat.
+
+00:02:35.880 --> 00:02:36.640
+Asta-i grozav.
+
+00:02:36.860 --> 00:02:39.630
+Acum sunt câteva lucruri pe care le observ aici.
+
+00:02:39.650 --> 00:02:44.260
+Unul este că meniul dropdown este puțin cam aici.
+
+00:02:44.270 --> 00:02:45.950
+Trebuie să ajustăm unele VSS.
+
+00:02:45.980 --> 00:02:49.220
+Și, de asemenea, când mă deconectez, nu vreau să merg la pagina de înregistrare.
+
+00:02:49.250 --> 00:02:55.640
+Vreau să merg la semnul și la pagina să o rezolvăm mai întâi.
+
+00:02:55.670 --> 00:03:02.570
+Ceea ce vrem să facem este să mergem la aplicația lui J. S. Vom vedea daca o voi gasi sau daca
+
+00:03:04.090 --> 00:03:09.260
+vom merge la dodginess si pe schimbarea drumului daca vom parcurge in jos vom vedea ca este un router foarte simplu.
+
+00:03:09.430 --> 00:03:19.060
+Când ieșim, am stabilit statul la starea inițială, caz în care este semnalul nostru sau în cazul nostru
+
+00:03:19.060 --> 00:03:24.980
+este casa pe care o schimbăm doar pentru scopurile de devoluție.
+
+00:03:27.450 --> 00:03:29.250
+Și există multe modalități de a rezolva acest lucru.
+
+00:03:29.250 --> 00:03:32.100
+În primul rând, această logică de rutare ar putea fi îmbunătățită.
+
+00:03:32.100 --> 00:03:37.980
+Vedem că avem de fapt același drum de ieșire care spune stat la starea inițială și apoi
+
+00:03:37.980 --> 00:03:39.250
+pentru că continuă.
+
+00:03:39.330 --> 00:03:48.510
+De asemenea, rula ruta pentru a seta la orice rută pe care o transmitem acum, în cazul nostru, pentru că
+
+00:03:48.510 --> 00:03:55.900
+trecem prin ruta de ieșire și dacă defilam aici, avem semnalul de rutare și acolo verificăm.
+
+00:03:55.920 --> 00:03:59.150
+Și în acest caz ne-am semnat și altfel ne-am înregistrat.
+
+00:03:59.160 --> 00:04:05.600
+Ei bine, logica aici este un pic oprit, dar o reparație rapidă pe care am putea să o facem aici, putem
+
+00:04:05.600 --> 00:04:11.790
+adăuga logica reală aici, deci poate că dacă e semnul dacă semnalul de răsădit se poate ajunge doar la semnul
+
+00:04:12.360 --> 00:04:17.940
+și pagina, de asemenea sau putem Nu trebuie decât să sunați aici pentru a nu actualiza chiar ruta.
+
+00:04:17.970 --> 00:04:25.050
+Suntem doar de îndată ce vom ieși din starea inițială care, în cazul nostru, va fi semnul în
+
+00:04:25.050 --> 00:04:25.600
+pagină.
+
+00:04:25.620 --> 00:04:30.560
+Și asta nu va fi niciodată chemat Să salvăm și să testăm asta.
+
+00:04:32.100 --> 00:04:40.190
+Voi schimba traseul spre ceea ce am avut înainte și care a fost semnat și toate schimbările sunt semnate
+
+00:04:40.190 --> 00:04:41.490
+și în vigoare.
+
+00:04:41.660 --> 00:04:44.810
+Mergându-mă înapoi, o voi face.
+
+00:04:44.810 --> 00:04:51.170
+Hei a pus un dot com și observați că cariera mea de styling sa schimbat din nou din cauza curelelor de
+
+00:04:51.170 --> 00:04:55.550
+cizme din nou ceva care va trebui să repare Sunt semnat în dosar.
+
+00:04:55.550 --> 00:04:58.800
+Faceți clic aici și ieșiți.
+
+00:04:58.850 --> 00:04:59.500
+Perfect.
+
+00:04:59.510 --> 00:05:02.460
+Sunt Allen pagina de însemnare.
+
+00:05:02.520 --> 00:05:03.150
+In regula.
+
+00:05:03.150 --> 00:05:07.160
+Știți că anul acesta avem o altă problemă cu formularul.
+
+00:05:07.440 --> 00:05:11.100
+Acesta este un pic dificil, deoarece de ce se întâmplă acest lucru.
+
+00:05:11.100 --> 00:05:19.170
+Am pus stilurile noastre dupa bootstrapul nostru, iar Kyon si indicele nostru Nazi SS este dupa bootstrap. Dar acesta este un lucru amuzant
+
+00:05:19.170 --> 00:05:21.270
+care se intampla de fapt.
+
+00:05:21.270 --> 00:05:23.600
+Și un alt motiv în care vrei să fii atent.
+
+00:05:23.600 --> 00:05:26.190
+Orice puteți să porți la proiectul dvs.
+
+00:05:26.310 --> 00:05:30.920
+Dacă mă defilez aici, văd că, în timp ce
+
+00:05:33.870 --> 00:05:44.020
+fundalul este transparent în cazul în care mă defilez în jos și mă aprind, va vedea că o privește la asta.
+
+00:05:44.500 --> 00:05:51.730
+Asta este acum, în timp ce ne dorim din lucrurile noastre, dar cineva sună fundal transparent cu
+
+00:05:51.730 --> 00:05:52.640
+clasa importantă.
+
+00:05:53.050 --> 00:05:54.180
+Și dacă fac clic
+
+00:05:56.960 --> 00:05:58.990
+aici, se pare că acest text este CSSA.
+
+00:05:59.060 --> 00:06:01.110
+Da, asta e bootstrap chiar acolo.
+
+00:06:01.280 --> 00:06:07.360
+Deci bootstrap atribuie automat locul important dar nu locul.
+
+00:06:07.730 --> 00:06:13.650
+Să ne întoarcem la bootstrapul elementului de inspectare.
+
+00:06:13.660 --> 00:06:19.330
+Se atribuie automat steagul important, care înlocuiește din nou toate Cs.
+
+00:06:19.520 --> 00:06:20.240
+Unde suntem.
+
+00:06:20.240 --> 00:06:21.190
+Să mergem înapoi pentru
+
+00:06:24.670 --> 00:06:26.080
+a derula în sus și acolo este.
+
+00:06:28.600 --> 00:06:31.200
+Vedeți aici, nu se citesc.
+
+00:06:31.340 --> 00:06:37.900
+În timp ce avem cu Kyon's și în schimb este scris scrise de aceeași clasă
+
+00:06:37.990 --> 00:06:39.480
+în clasa bootstrap.
+
+00:06:39.520 --> 00:06:48.180
+Din nou, un alt motiv pentru care doriți să vă lipiți de obicei cu biblioteca VSS, deoarece nu știți niciodată ce
+
+00:06:48.180 --> 00:06:48.880
+fac.
+
+00:06:49.710 --> 00:06:54.570
+Deci, să rezolvăm într-adevăr foarte repede, pentru că îmi place fundalul negru pe care l-am avut.
+
+00:06:56.330 --> 00:07:03.800
+Și o reparație simplă pe care o putem face este probabil că pentru noi putem crea un fișier nou pe care îl
+
+00:07:04.000 --> 00:07:15.040
+vom apela pentru a semna dot Cs și putem pur și simplu să ignorăm totul, așa că să numim acest lucru oricât de negru vom trece și vom spune că acest lucru
+
+00:07:15.040 --> 00:07:17.880
+este ori de câte ori se hovering.
+
+00:07:17.890 --> 00:07:21.140
+Vreau ca culoarea de fundal
+
+00:07:25.460 --> 00:07:27.450
+să fie neagră.
+
+00:07:27.460 --> 00:07:33.440
+Acum, Bruce Shepp va trece peste acest lucru pentru că are steagul important, astfel încât să putem adăuga
+
+00:07:33.440 --> 00:07:36.060
+propriul pavilion aici, spunând că este important.
+
+00:07:36.060 --> 00:07:37.730
+Acum te avertizez aici.
+
+00:07:37.910 --> 00:07:43.820
+Acest lucru este doar pentru scopuri demonstrative doar în cazul în care întâlniți ceva de genul asta, care se întâmplă adesea
+
+00:07:43.820 --> 00:07:48.110
+atunci când vă amestecați și potriviți personal niciodată nu-mi place să folosesc acest lucru.
+
+00:07:48.130 --> 00:07:51.060
+Dacă utilizați acest lucru, atunci există ceva în neregulă.
+
+00:07:51.060 --> 00:07:52.930
+Poate că există modalități mai bune de a face acest lucru.
+
+00:07:52.930 --> 00:07:58.870
+În cazul nostru, poate că în loc să folosim Buscema, putem face altceva, pentru a nu suprascrie toate stilurile noastre
+
+00:07:58.900 --> 00:08:01.760
+sau poate să nu folosim împreună Collins și bootstrap.
+
+00:08:02.230 --> 00:08:10.310
+Dar pentru moment avem acest bloc Hover pe care îl putem aplica fiecăruia dintre clasele noastre, în
+
+00:08:10.310 --> 00:08:21.060
+cazul nostru putem merge în registru sau în semn și în semnătura putem avea doar o clasă pe care o adăugăm la toate
+
+00:08:21.060 --> 00:08:22.110
+intrările noastre.
+
+00:08:22.290 --> 00:08:24.440
+Avem deja multe stiluri CSSA.
+
+00:08:24.480 --> 00:08:26.830
+Și noi ar trebui să KPRC SSL.
+
+00:08:26.940 --> 00:08:29.130
+Hai să mergem cu blocul
+
+00:08:32.000 --> 00:08:34.770
+Hover Clott să știm ce alte impunem noi.
+
+00:08:35.090 --> 00:08:38.090
+Avem asta aici.
+
+00:08:38.360 --> 00:08:40.520
+Să salvăm
+
+00:08:43.780 --> 00:08:46.870
+întoarce-te ce-mi lipsește aici.
+
+00:08:46.990 --> 00:08:55.230
+Să ne întoarcem și asta pentru că de fapt trebuie să importăm fișierul nostru CSSA pe care tocmai l-am creat.
+
+00:08:56.330 --> 00:09:01.810
+Deci, din nou, majoritatea semnează un Daut.
+
+00:09:01.850 --> 00:09:06.080
+Asa ca sa incercam sa mergem inapoi sa privim la asta.
+
+00:09:06.210 --> 00:09:08.960
+Avem fundalul nostru stabilit.
+
+00:09:09.000 --> 00:09:11.220
+Putem face probabil același lucru pentru un registru.
+
+00:09:11.220 --> 00:09:13.530
+Vedem că acest lucru este încă afectat.
+
+00:09:13.620 --> 00:09:16.480
+Dar asta e ceva ce poți face în timpul tău.
+
+00:09:16.530 --> 00:09:20.950
+Am mai scris mai multe stiluri de păr.
+
+00:09:20.980 --> 00:09:25.720
+În regulă, acum, când am reușit asta, să ne întoarcem să ne lămurim puțin.
+
+00:09:27.400 --> 00:09:30.820
+O să-i răpesc pe Da toate hainele noastre din
+
+00:09:35.070 --> 00:09:42.800
+aceste tab-uri și să ne ducem la casa noastră și să fim logodiți cu adevărat, ca să putem juca cu asta.
+
+00:09:42.900 --> 00:09:45.030
+Dacă mă întorc acolo, mergem.
+
+00:09:45.060 --> 00:09:50.080
+Cred că ultima reparație pe care vrem să o facem este poziționarea cutiei.
+
+00:09:50.100 --> 00:09:52.070
+Să rezolvăm asta.
+
+00:09:52.250 --> 00:09:58.370
+Și este de fapt o reparație minunată pe care o putem face din nou dacă mergem la profil.
+
+00:09:58.670 --> 00:10:06.080
+Din fericire pentru noi, cu meniul derulant, există un atribut pe care îl putem folosi din nou dacă ne
+
+00:10:06.500 --> 00:10:09.180
+întoarcem la capcana noastră de reacție.
+
+00:10:09.340 --> 00:10:13.710
+Avem să vedem poziția care este în sus la stânga
+
+00:10:17.350 --> 00:10:24.400
+dreapta și puteți vedea aici că puteți alinia lucrurile în funcție de modul în care doriți să
+
+00:10:24.400 --> 00:10:24.980
+fie.
+
+00:10:25.000 --> 00:10:29.210
+În cazul nostru, dorim să utilizăm atributul drept.
+
+00:10:29.420 --> 00:10:35.720
+Așa că mă pot întoarce aici și doar să rămân consecvent pentru ca Klaas să păstreze citate dublate exact așa cum am
+
+00:10:35.720 --> 00:10:36.590
+avut aici.
+
+00:10:36.620 --> 00:10:38.330
+Chiar dacă puteți folosi ambele.
+
+00:10:38.330 --> 00:10:45.500
+Și să adăugăm doar atributul potrivit care vine cu 3. x chape.
+
+00:10:45.540 --> 00:10:46.320
+Dacă
+
+00:10:49.250 --> 00:10:52.920
+mă întorc sunt opt ​​Avem totul frumos și de lucru.
+
+00:10:52.920 --> 00:10:56.150
+Cred că este timpul pentru noi deoarece semnul nostru funcționează funcționalitatea noastră.
+
+00:10:56.220 --> 00:10:58.580
+E timpul să ne construim profilul.
+
+00:10:58.690 --> 00:10:59.810
+Asta va fi unul distractiv.
+
+00:11:00.090 --> 00:11:01.190
+O să văd în acel.
+
+00:11:01.570 --> 00:11:01.860
+Dar prin.

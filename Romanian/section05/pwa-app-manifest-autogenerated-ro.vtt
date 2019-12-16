@@ -1,0 +1,208 @@
+﻿WEBVTT
+
+00:00:01.710 --> 00:00:02.710
+Du-te înapoi.
+
+00:00:02.970 --> 00:00:10.770
+Să vorbim despre cel de-al doilea punct de a face un webapp progresiv și, probabil, cea mai dragă pictogramă mică pe
+
+00:00:10.920 --> 00:00:13.620
+care o voi avea în acest curs.
+
+00:00:13.620 --> 00:00:23.060
+Aplicația care se manifestă acum pentru ca o aplicație Web progresivă să se comporte ca o aplicație nativă trebuie să imită nu
+
+00:00:23.270 --> 00:00:32.660
+doar funcția unei aplicații native, ci și câteva dintre opiniile pe care le primim cu aceasta sau cu shell-ul, de exemplu, pe
+
+00:00:32.660 --> 00:00:33.740
+telefonul dvs.
+
+00:00:33.740 --> 00:00:40.760
+Puteți să descărcați o aplicație și să aveți o pictogramă de aplicație pe dispozitivele Android pe care aveți lucruri, cum ar fi ecranele de afișare.
+
+00:00:40.940 --> 00:00:49.100
+Ideea este de a face ca aplicația web să fie cât se poate de indiscutabilă într-o aplicație mobilă reală.
+
+00:00:50.600 --> 00:00:55.000
+Și putem face asta cu aplicația manifestată înainte să intrăm în ea.
+
+00:00:55.040 --> 00:01:03.890
+Singurul lucru pe care vreau să-l subliniez este că o mulțime de oameni uită să includă în indexul lor începe un fișier shemale
+
+00:01:03.890 --> 00:01:10.430
+această linie peste aici și acest lucru iese din cutie cu creați reacționa până el poate vedea
+
+00:01:10.430 --> 00:01:19.370
+că eu sunt în indexul public că un director și această linie, care este meta-tag-ul cu portul de vizualizare, optimizează aplicația pentru mai
+
+00:01:19.370 --> 00:01:20.350
+multe dispozitive.
+
+00:01:20.690 --> 00:01:25.510
+Și acest lucru ar putea părea foarte evident, dar o mulțime de oameni o uită.
+
+00:01:25.580 --> 00:01:32.850
+Și această linie ajută la ajustarea dimensiunii ecranului în funcție de dispozitiv.
+
+00:01:32.860 --> 00:01:35.060
+Aceasta este o necesitate.
+
+00:01:35.080 --> 00:01:40.200
+Și vă va avertiza dacă vă lipsesc această linie și raportul farului.
+
+00:01:40.340 --> 00:01:45.110
+Acum, că avem ecranul configurat pentru dispozitivele mobile.
+
+00:01:45.110 --> 00:01:47.360
+Să vorbim despre manifestarea aplicației.
+
+00:01:47.570 --> 00:01:54.770
+Și după cum puteți vedea din nou în dosarul nostru public, acesta este un lucru pe care îl obținem gratuit de la crearea
+
+00:01:56.150 --> 00:01:57.710
+reactorului și asta este.
+
+00:01:57.740 --> 00:02:01.430
+Acesta este cel mai adjectiv manifestat în dosar.
+
+00:02:01.480 --> 00:02:07.540
+Este un dosar simplu al lui Jaisalmer, care oferă dezvoltatorilor posibilitatea de a controla modul în care aplicația
+
+00:02:07.990 --> 00:02:15.670
+ar trebui să apară pentru utilizatori în zone în care se așteaptă să vadă aplicații cum ar fi ecranul inițial al dispozitivului mobil.
+
+00:02:15.910 --> 00:02:21.610
+Și definiți modul în care va lansa aplicația și cum va arăta.
+
+00:02:21.610 --> 00:02:29.530
+Deci, dacă vă amintiți în exemplul meu aici cu această aplicație de știri pentru hackeri am avut anunțul
+
+00:02:29.800 --> 00:02:36.410
+pe butonul de pornire de pe ecranul aplicației și ați observat că am făcut
+
+00:02:36.620 --> 00:02:46.710
+clic pe acest lucru numit manifest și aplicație și acesta este mesajul manifest Jasonville browser-ul citește acest lucru și scutește această mică
+
+00:02:46.710 --> 00:02:49.380
+bucată de informații pentru noi.
+
+00:02:49.500 --> 00:02:58.150
+Și dacă scot în jos, vezi că am aici icoane care să fie descărcate exact așa cum am făcut când
+
+00:02:58.150 --> 00:03:00.880
+am descărcat-o pe ecranul de pornire.
+
+00:03:01.450 --> 00:03:06.690
+Și aceasta este pictograma pe care o veți vedea când descărcați această aplicație pe telefonul dvs. mobil.
+
+00:03:07.060 --> 00:03:13.820
+Și, de asemenea, ne oferă această caracteristică minunată pentru a adăuga la ecranul de start.
+
+00:03:13.870 --> 00:03:17.350
+Deci, acesta este fișierul manifest app și ce face.
+
+00:03:17.530 --> 00:03:20.410
+Acum, cum să generăm aceste icoane.
+
+00:03:21.460 --> 00:03:31.330
+Vedem aici că aplicația de creare a re-actului a generat o pată în dosarul public, dar ne lipsesc câteva lucruri,
+
+00:03:31.420 --> 00:03:33.030
+nu suntem noi.
+
+00:03:33.070 --> 00:03:40.150
+Nu avem toate aceste icoane de dimensiuni suplimentare pentru telefoane mobile, pentru că mai trebuie să
+
+00:03:40.150 --> 00:03:48.590
+le generăm pentru aplicația noastră și putem vedea aici că au diferite dimensiuni bazate pe dispozitivul la care se face descărcarea.
+
+00:03:50.050 --> 00:03:55.290
+Din fericire pentru noi există un instrument excelent care face acest lucru foarte frumos și ușor.
+
+00:03:55.340 --> 00:03:59.040
+Se numește generator real con.
+
+00:04:00.640 --> 00:04:10.940
+Și tot ce trebuie să facem este să furnizăm o imagine, cum ar fi o imagine a unui robot, făcând
+
+00:04:11.480 --> 00:04:16.230
+clic pe selectați Fab. com și vă va duce prin pașii pentru a le descărca.
+
+00:04:16.610 --> 00:04:23.600
+Tot ceea ce trebuie să facem este să le includem în dosarul nostru public, la fel ca legile Fabrikant icon
+
+00:04:23.600 --> 00:04:27.970
+și să le menționăm în punctul manifest Jaisalmer, ușa de la capăt.
+
+00:04:27.980 --> 00:04:35.240
+Acesta este exact locul în care vom face în exercițiul nostru de a transforma prietenii robotului într-o aplicație
+
+00:04:35.320 --> 00:04:36.440
+web progresivă.
+
+00:04:36.470 --> 00:04:46.160
+Un alt lucru pe care acest site îl face pentru noi este examinarea și personalizarea ecranului de pornire pentru
+
+00:04:46.160 --> 00:04:48.100
+fișierul nostru manifest.
+
+00:04:48.100 --> 00:04:50.210
+Acum ce este un ecran de pornire.
+
+00:04:51.580 --> 00:04:58.990
+În versiunile mai vechi de Chrome pentru Android, atingând pictograma ecranului de pornire pentru o aplicație ar
+
+00:04:58.990 --> 00:05:04.700
+dura adesea până la câteva sute de milli-secunde înainte de încărcarea ecranului.
+
+00:05:04.750 --> 00:05:11.990
+Un utilizator ar vedea un ecran alb care face experiența un pic jarring.
+
+00:05:11.990 --> 00:05:15.560
+Și se pare că site-ul Web se încarcă foarte lent.
+
+00:05:15.980 --> 00:05:23.930
+Deci, crom 47 și mai sus susțin această idee a unui ecran de pornire în care puteți adăuga o culoare
+
+00:05:23.930 --> 00:05:26.440
+de fundal când atingeți aplicația.
+
+00:05:26.480 --> 00:05:32.240
+Aplicația Web progresivă, în loc să se încarce ecranul alb, va încărca ceva numit ecran de
+
+00:05:32.240 --> 00:05:32.790
+pornire.
+
+00:05:33.570 --> 00:05:40.620
+Unde va avea culoarea de fundal numele și pictograma de pe web și veți obține toate acestea de
+
+00:05:40.710 --> 00:05:42.870
+la Dumnezeul nostru Jaisalmer manifestat.
+
+00:05:43.320 --> 00:05:50.320
+Și acest lucru este făcut doar pentru a face ca aplicația dvs. Web să se simtă mult mai aproape de ceea ce vedeți cu aplicațiile native.
+
+00:05:50.460 --> 00:05:55.860
+Când faceți clic pe aplicațiile native, chiar dacă se încarcă, acestea au un fel de fundal și
+
+00:05:55.860 --> 00:06:00.100
+o pictogramă pentru a vă arăta că se încarcă, chiar dacă asta este.
+
+00:06:00.100 --> 00:06:01.510
+E destul de simplu.
+
+00:06:01.510 --> 00:06:05.600
+Tot ce avem nevoie este o serie de icoane și le adăugăm să se manifeste.
+
+00:06:05.630 --> 00:06:08.390
+Am primit JS pe R-Pa.
+
+00:06:08.420 --> 00:06:09.490
+Atât deocamdată.
+
+00:06:09.500 --> 00:06:11.080
+Voi vedea în următorul.
+
+00:06:11.210 --> 00:06:11.530
+Pa! Pa.

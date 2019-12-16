@@ -1,0 +1,487 @@
+﻿WEBVTT
+
+00:00:02.480 --> 00:00:03.480
+Witamy spowrotem.
+
+00:00:03.590 --> 00:00:06.420
+Omówiliśmy zastrzyki bibliotek stron trzecich.
+
+00:00:06.440 --> 00:00:14.190
+Wygląda na to, że następnym przystankiem na liście jest rejestrowanie, a rejestrowanie to kolejny ważny temat.
+
+00:00:14.190 --> 00:00:15.170
+Dam wam wskazówkę.
+
+00:00:15.180 --> 00:00:19.810
+Wszystkie te są ważne, ale logowanie może być dość trudne.
+
+00:00:19.940 --> 00:00:23.330
+Nie ma jasnego właściwego i niewłaściwego sposobu robienia rzeczy.
+
+00:00:23.360 --> 00:00:24.350
+Jeśli chodzi o logowanie.
+
+00:00:24.530 --> 00:00:29.020
+Ale porozmawiajmy o tym, o co chodzi w logowaniu.
+
+00:00:29.070 --> 00:00:35.390
+Uzyskując informacje z twojego systemu powiedzmy, że twoja maszyna jest twoim serwerem co do tego, co się dzieje.
+
+00:00:36.440 --> 00:00:42.620
+Chcesz zebrać informacje o tym, jak użytkownicy korzystają z Twojej usługi.
+
+00:00:42.620 --> 00:00:50.270
+Twoja strona internetowa jest Twoim prawdopodobnie interfejsem API odpoczynku, więc jeśli coś pójdzie nie tak lub
+
+00:00:50.720 --> 00:01:00.650
+zobaczysz coś podejrzanego, możesz skorzystać z rejestrowania i tego, co udało nam się zarejestrować, aby znaleźć problem, naprawić torfowisko lub zapobiec atakom.
+
+00:01:00.710 --> 00:01:07.280
+Jednym z największych problemów związanych z bezpieczeństwem jest coś, co nazywa
+
+00:01:07.550 --> 00:01:18.170
+się niewystarczającym protokołowaniem niewystarczającym rejestrowaniem, a monitorowanie połączone z brakującym lub nieefektywnym protokołowaniem umożliwia atakującym atakowanie systemów, gdy nie
+
+00:01:18.650 --> 00:01:25.040
+są wykrywane, aby mogły manipulować lub wyciągać lub niszczyć dane.
+
+00:01:25.040 --> 00:01:31.280
+Interesujące jest to, że jeśli spojrzysz na większość naruszeń, które zdarzyły się w
+
+00:01:31.280 --> 00:01:38.840
+związku z historią, pokazują, że czas na wykrycie naruszenia, gdy coś poszło nie tak i być może
+
+00:01:38.840 --> 00:01:46.970
+zła osoba weszła do twojego systemu, twoja baza danych i dostała informację o czasie, który zajmuje faktycznie wykryto to
+
+00:01:46.970 --> 00:01:48.500
+około 200 dni.
+
+00:01:48.720 --> 00:01:58.970
+Jest to zwykle wykrywane przez zewnętrzne podmioty, takie jak zespoły bezpieczeństwa, a nie przez wewnętrzny monitoring.
+
+00:01:59.010 --> 00:02:07.900
+Posiadanie dobrego rejestrowania oznacza, że możesz szybko wykrywać problemy i zapobiegać wszelkim złym rzeczom, które mogą
+
+00:02:07.900 --> 00:02:11.380
+się dziać z twoim produktem.
+
+00:02:11.400 --> 00:02:13.910
+Jak możemy to zrobić?
+
+00:02:13.930 --> 00:02:22.190
+Chcemy mieć odpowiednie ustawienia logowania na naszym produkcie, a dwa narzędzia, które naprawdę lubię z węzłem to
+
+00:02:22.370 --> 00:02:24.330
+Winston i Morgan.
+
+00:02:24.410 --> 00:02:25.540
+Zobaczmy więc, jak działają.
+
+00:02:27.570 --> 00:02:28.260
+W porządku.
+
+00:02:28.260 --> 00:02:32.490
+Więc zróbmy trochę logowania do naszego serwera.
+
+00:02:34.600 --> 00:02:38.120
+Mam dwa pakiety, które naprawdę lubię.
+
+00:02:38.380 --> 00:02:42.290
+Jeśli chodzi o logowanie i jest mnóstwo opcji.
+
+00:02:42.460 --> 00:02:46.770
+Pierwszym, który ci pokażę, jest Morgan.
+
+00:02:47.020 --> 00:02:54.380
+Jak widać, jest to oprogramowanie pośredniczące do rejestrowania żądań HGP na uwagę i jest bardzo łatwe do zainstalowania.
+
+00:02:54.390 --> 00:02:58.810
+Możemy po prostu zainstalować ją NPM, a następnie wymagać, jak mamy to tutaj.
+
+00:02:58.870 --> 00:02:59.990
+Zróbmy to.
+
+00:03:00.040 --> 00:03:12.070
+Zamierzam uruchomić instalację MTM Morgan, a na górze mam zamiar po prostu Konst Morgana i go potrzebuję.
+
+00:03:15.090 --> 00:03:19.920
+Ponieważ właśnie go zainstalowaliśmy.
+
+00:03:20.120 --> 00:03:27.770
+Tak więc z Morganem możemy użyć go jako middleware ponownie dla express, jeśli chcecie użyć middleware, użyjecie
+
+00:03:27.770 --> 00:03:33.800
+czegoś podobnego do apt, ale używajcie tak, jak to mamy tutaj z
+
+00:03:33.800 --> 00:03:41.930
+parserem dodgującym Jaison, który przy okazji pozwala nam lub otrzymać Jaison dane z żądanego organu, jak widać tutaj.
+
+00:03:41.960 --> 00:03:45.350
+Tak więc z Morganiem mogę powiedzieć Morgan, a
+
+00:03:48.690 --> 00:03:51.640
+następnie podać kilka opcji, powiedzmy malutkich.
+
+00:03:51.750 --> 00:03:57.030
+Więc jeśli przejrzymy tutaj, zobaczymy, że są opcje, które możemy dać więcej.
+
+00:03:57.120 --> 00:04:00.040
+Jaki rodzaj rejestrowania powinniśmy mieć.
+
+00:04:02.580 --> 00:04:12.720
+Tak więc z małym teraz, gdy mamy to oprogramowanie pośrednie, uratujmy Rona NPM, zacznijmy naszą aplikację od
+
+00:04:12.750 --> 00:04:13.460
+słuchania
+
+00:04:16.000 --> 00:04:20.760
+portu 3000, otwórzmy się i powiedzmy "prześlij".
+
+00:04:20.770 --> 00:04:21.580
+W porządku.
+
+00:04:21.580 --> 00:04:24.740
+Wracając tutaj widzę, że dostaję opcje.
+
+00:04:24.850 --> 00:04:31.360
+Sekret punktowy uzyskał status 200 i zajęło 3. 7 Meli sekund.
+
+00:04:31.360 --> 00:04:35.200
+Dostaliśmy rejestrację tego, co stało się z prośbą.
+
+00:04:35.210 --> 00:04:40.560
+Oto mała uwaga, którą musimy naprawić, zanim będziemy mogli to przetestować.
+
+00:04:40.570 --> 00:04:46.340
+Widzisz, że są to opcje zamiast oczekiwanego żądania postu.
+
+00:04:46.690 --> 00:04:52.810
+Jeśli otworzę konsolę, dostanę błąd, o którym będziemy rozmawiać w nadchodzącym
+
+00:04:52.990 --> 00:04:55.350
+filmie o bezpieczeństwie.
+
+00:04:56.230 --> 00:04:58.700
+Więc na razie opuścimy to tak, jak jest.
+
+00:04:58.720 --> 00:05:04.630
+Naprawimy ten problem i powrócimy do niego w nadchodzącym filmie, więc nie martw
+
+00:05:04.630 --> 00:05:10.420
+się, naprawiamy to, instalujemy NPM, instalujemy pakiet o nazwie core, a my
+
+00:05:14.160 --> 00:05:17.810
+ponownie użyjemy go jako dodatkowego oprogramowania pośredniczącego.
+
+00:05:17.880 --> 00:05:21.810
+Oczywiście kurs Konst jest
+
+00:05:27.080 --> 00:05:29.270
+oczywiście potrzebny.
+
+00:05:29.370 --> 00:05:36.050
+I znów możemy powiedzieć, że takie rdzenie aplikacji są takie.
+
+00:05:36.120 --> 00:05:40.510
+Powiedzmy, że uruchommy NPM ponownie.
+
+00:05:42.470 --> 00:05:45.090
+I wróć do naszej aplikacji.
+
+00:05:45.300 --> 00:05:46.590
+Spróbujemy jeszcze raz.
+
+00:05:47.820 --> 00:05:50.430
+Hit check lub zmieńmy dwa.
+
+00:05:50.440 --> 00:05:51.320
+Dzień dobry.
+
+00:05:51.600 --> 00:05:56.010
+Prześlij, a my wracamy i patrzymy na to.
+
+00:05:56.090 --> 00:06:00.370
+Mamy prośbę o dodanie do tajnego punktu końcowego.
+
+00:06:00.530 --> 00:06:05.010
+Zwracamy status 200 i możesz tu również zobaczyć czasy.
+
+00:06:05.060 --> 00:06:06.710
+Bardzo fajny.
+
+00:06:06.710 --> 00:06:09.960
+W porządku, więc Morgan ma to rejestrowanie, które otrzymujemy.
+
+00:06:09.980 --> 00:06:10.450
+DOBRZE.
+
+00:06:10.550 --> 00:06:14.590
+Możemy zrobić kolejną, która mi się podoba, która jest połączona i oszczędzam tutaj.
+
+00:06:15.050 --> 00:06:16.400
+Wróć.
+
+00:06:16.400 --> 00:06:21.860
+Wpisz coś podobnego do Samit i spójrz na to.
+
+00:06:21.960 --> 00:06:24.180
+Otrzymujemy o wiele więcej informacji.
+
+00:06:24.180 --> 00:06:30.560
+Dostaję prośbę o wpis. Widzę, jakiego rodzaju protokołu HTP użyłem.
+
+00:06:30.590 --> 00:06:34.120
+Sprawdziłem, z jakiego urządzenia pochodzi żądanie.
+
+00:06:34.190 --> 00:06:36.760
+I mnóstwo dodatkowych informacji.
+
+00:06:37.740 --> 00:06:45.330
+Tak więc po otrzymaniu Morgana mamy tę informację, że na przykład, jeśli mamy serwer będący API, możemy go teraz monitorować i jeśli wiemy
+
+00:06:45.690 --> 00:06:50.850
+o tym o 4:00 p. m. Coś może się wydarzyć, możemy cofnąć się w
+
+00:06:50.850 --> 00:06:51.790
+czasie i zobaczyć.
+
+00:06:52.050 --> 00:06:54.360
+W tym czasie coś się stało.
+
+00:06:54.360 --> 00:07:03.120
+Dlaczego mniej użytkowników wysyłało żądania postu lub logowało się do naszej witryny sieci Web lub jakiejkolwiek innej metryki, której mogą potrzebować.
+
+00:07:03.120 --> 00:07:08.370
+Pamiętaj, że im więcej masz informacji, tym lepiej możesz być informowany o tym, co się dzieje.
+
+00:07:08.400 --> 00:07:10.360
+Więc Morgan jest całkiem niezły.
+
+00:07:10.410 --> 00:07:11.730
+Spójrzmy na inny.
+
+00:07:14.190 --> 00:07:18.160
+Następny, który chcę ci przedstawić, nazywa się Winston.
+
+00:07:18.330 --> 00:07:20.250
+Idziemy do NPM, aby zainstalować
+
+00:07:23.240 --> 00:07:26.290
+Winstona, a my zamierzamy go pobrać w ten sposób.
+
+00:07:26.300 --> 00:07:33.860
+Więc pozwól mi zamknąć serwer i PM zainstaluj Winstona i podczas instalacji.
+
+00:07:33.890 --> 00:07:36.860
+Przejdźmy do dokumentacji Winston tutaj.
+
+00:07:37.010 --> 00:07:40.390
+I widzisz, że to jest logger na prawie wszystko.
+
+00:07:40.680 --> 00:07:47.810
+Tak, możesz myśleć o Winstonie jako o logu konsoli, który mamy, oprócz tego, że ma mnóstwo więcej funkcji, z
+
+00:07:48.020 --> 00:07:51.440
+których możesz korzystać i może o tym przeczytać.
+
+00:07:51.470 --> 00:07:53.000
+Jest naprawdę bardzo dobry.
+
+00:07:53.000 --> 00:07:56.450
+Użyłem tego w produkcji i bardzo polecam.
+
+00:07:56.590 --> 00:08:01.510
+Zobacz w logu konsoli możesz zrobić tylko kilka rzeczy.
+
+00:08:01.550 --> 00:08:06.610
+Ma ograniczenia z Winstedem, masz moc robienia wielu interesujących rzeczy.
+
+00:08:06.710 --> 00:08:15.800
+Zmieńmy więc ten dziennik konsoli na Winstona, ponieważ teraz możemy używać Winstona i sprawdzać, jaki rodzaj
+
+00:08:15.800 --> 00:08:18.290
+dziennika otrzymujemy od użytkownika.
+
+00:08:18.350 --> 00:08:21.290
+Chcemy zapisać ten bieg Uruchom NPM
+
+00:08:23.960 --> 00:08:28.960
+powróćmy do naszej aplikacji i powiedzmy, że czek sprawdź, że nie otrzymujemy
+
+00:08:32.340 --> 00:08:32.930
+niczego
+
+00:08:37.140 --> 00:08:42.870
+zalogowanego, ponieważ z Winstedem i musimy podać z niektórymi parametrami, więc pierwszy mówi jaki
+
+00:08:42.870 --> 00:08:43.870
+rodzaj logowania.
+
+00:08:43.950 --> 00:08:48.780
+A drugi to dziennik lub dziennik, którego chcemy.
+
+00:08:48.780 --> 00:08:52.880
+Więc spróbujemy ponownie lub powiedzmy, że najpierw spróbujemy
+
+00:08:55.790 --> 00:09:01.080
+ponownie, a następnie przejdziemy sprawdzanie amunicji i możemy zrobić naprawdę fajne rzeczy.
+
+00:09:01.250 --> 00:09:10.880
+Na przykład, jeśli jest jakiś błąd, możemy odpowiedzieć Winstonowi, przenieśmy to tutaj.
+
+00:09:12.370 --> 00:09:22.850
+I powiedz, że to jest dobre, jeśli dostajemy użytkownika i umieszczamy.
+
+00:09:23.020 --> 00:09:28.350
+A jeśli się wyda, to zamierzamy zrobić coś innego.
+
+00:09:28.360 --> 00:09:39.280
+Wylogujemy się na antenie lub możemy zrobić tylko krótki błąd w formularzu i powiedzieć,
+
+00:09:42.990 --> 00:09:49.140
+że ten koleś się z nami miesza.
+
+00:09:49.170 --> 00:09:56.460
+Więc jeśli powiem, że powróć, prześlij ponownie, wróć.
+
+00:09:56.460 --> 00:09:59.430
+Widzę, że dane wejściowe użytkownika ampho były sprawdzane.
+
+00:09:59.430 --> 00:10:00.300
+To wspaniale.
+
+00:10:00.300 --> 00:10:07.800
+Jeśli coś zepsuję, powiedzmy, że wysyłamy żądanie wsadowe, a my nie wysyłamy użytkownika i nie wysyłamy.
+
+00:10:07.840 --> 00:10:15.980
+Powiedzmy więc, że na pierwszym końcu wyślę użytkownika i wstawię z wykrzyknikiem, gdzie mogę to
+
+00:10:16.020 --> 00:10:26.730
+zrobić za pomocą jednego i jednego, aby zapisać powrót, odświeżmy to, a powiemy, jak teraz przesłać, a my Zdobędę
+
+00:10:28.000 --> 00:10:29.650
+to powietrze.
+
+00:10:29.690 --> 00:10:31.670
+Ten gość się z nami bawi.
+
+00:10:32.680 --> 00:10:41.200
+Widzisz więc, jak z Winstonem możemy uzyskać naprawdę dobre rejestrowanie, abyśmy mogli odejść, bo
+
+00:10:41.290 --> 00:10:43.150
+gdzieś się zamkną.
+
+00:10:43.300 --> 00:10:49.870
+Możemy cofnąć się w czasie i powiedzieć o 4:00 p. m. nasza usługa została zamknięta lub
+
+00:10:49.870 --> 00:10:57.610
+możemy napotkać pewne problemy, które możemy cofnąć i zobaczyć, co się stało, tym razem i jesteśmy w stanie uzyskać wskazówki na temat
+
+00:10:57.610 --> 00:11:00.280
+niektórych elementów, które użytkownicy wysłali lub innych rzeczy.
+
+00:11:00.280 --> 00:11:06.640
+Widać tutaj, że logowanie zależy od Ciebie, jakie informacje chcesz zachować, jakie informacje chcesz
+
+00:11:06.640 --> 00:11:09.070
+zapisać, zależy wyłącznie od Ciebie.
+
+00:11:09.070 --> 00:11:16.150
+Chodzi o to, że chcesz mieć dobre informacje, ale nie przechowujesz
+
+00:11:16.180 --> 00:11:27.090
+żadnych danych osobowych w dziennikach i zdecydowanie nie zwracasz żadnych danych wejściowych logowania do klienta, ponieważ jeśli
+
+00:11:27.450 --> 00:11:35.040
+coś wyślemy, powiedzmy, że użytkownik próbuje podpisać i jeśli wysłaliśmy z błędem
+
+00:11:35.040 --> 00:11:41.520
+lub wrócimy zamiast statusu mówiącego, że użytkownik już istnieje.
+
+00:11:41.520 --> 00:11:52.130
+Cóż, jeśli zareagujemy na to, a my wyślemy to na przód, a teraz przekazuję informacje o moim systemie, pozwalam osobie na
+
+00:11:52.130 --> 00:12:02.390
+stronie internetowej powiedzieć, że właśnie znalazłem użytkownika, który może być w bazie danych, może mogę spróbuj zalogować się do
+
+00:12:02.810 --> 00:12:09.860
+nich i użyj Eskew all injection, aby sprawdzić, czy mogę uzyskać ich informacje.
+
+00:12:10.160 --> 00:12:13.260
+A więc o to, że logowanie jest bardzo trudne.
+
+00:12:13.340 --> 00:12:19.130
+Chcesz jak najwięcej rejestrować informacje, aby uzyskać wiedzę na temat
+
+00:12:19.130 --> 00:12:28.500
+działania systemu, ale jednocześnie zachowaj ostrożność, aby przechowywać te informacje tylko na poziomach, które powinny mieć
+
+00:12:28.500 --> 00:12:30.480
+do nich dostęp.
+
+00:12:30.480 --> 00:12:40.200
+Więc nigdy nie chcesz wylogować się z błędów systemu na konsoli, ponieważ wtedy każdy na
+
+00:12:40.200 --> 00:12:43.300
+świecie może to zobaczyć.
+
+00:12:43.310 --> 00:12:45.490
+W końcu chcę zakończyć jedną rzeczą.
+
+00:12:45.530 --> 00:12:52.550
+Występuje poważny problem z logowaniem, że logujemy się do celów bezpieczeństwa, ale logi będą tylko informować
+
+00:12:52.550 --> 00:12:56.890
+nas o złośliwym wydarzeniu, gdy już to się stanie.
+
+00:12:58.080 --> 00:13:04.230
+A jeśli będziemy tylko okresowo monitorować nasze dzienniki, to będziemy tęsknić za wszelkimi informacjami, które były
+
+00:13:04.440 --> 00:13:06.310
+ważne w danym momencie.
+
+00:13:07.430 --> 00:13:12.800
+A ponadto pojawia się kwestia, ile danych chcemy nagrać, jeśli mamy naprawdę zajęty
+
+00:13:12.800 --> 00:13:13.280
+serwis.
+
+00:13:13.280 --> 00:13:19.460
+Czy pliki blokad będą ogromne, ponieważ mogę po prostu zapisać wszystkie te dzienniki w pliku tekstowym i zatrzymać
+
+00:13:19.460 --> 00:13:20.930
+je w dowolnym miejscu.
+
+00:13:20.930 --> 00:13:27.510
+Im więcej informacji mamy, tym trudniej jest znaleźć dane, które i tak będziemy poszukiwać.
+
+00:13:27.560 --> 00:13:31.520
+Logowanie jest złożonym tematem, ale chcesz po prostu o tym pomyśleć.
+
+00:13:31.550 --> 00:13:37.670
+Jakie informacje są potrzebne, aby mieć bezpieczną aplikację, którą można wykryć, gdy pojawiają się problemy z
+
+00:13:37.670 --> 00:13:38.460
+zabezpieczeniami.
+
+00:13:38.810 --> 00:13:46.760
+Ale także utrzymuj blogi z dala od klientów lub użytkowników, ponieważ nie chcesz ujawniać żadnych informacji o
+
+00:13:46.760 --> 00:13:47.430
+systemie.
+
+00:13:47.510 --> 00:13:53.170
+Wszelkie małe informacje mogą być użyte przeciwko tobie.
+
+00:13:53.190 --> 00:13:54.330
+W porządku.
+
+00:13:54.330 --> 00:13:55.410
+Myślę, że boli mnie głowa.
+
+00:13:55.410 --> 00:14:00.020
+Było wiele informacji, ale mam nadzieję, że uznałeś to za przydatne i do zobaczenia w następnym.
+
+00:14:00.320 --> 00:14:00.600
+Lecz przez.

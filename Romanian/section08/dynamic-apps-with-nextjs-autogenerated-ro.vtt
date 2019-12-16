@@ -1,0 +1,514 @@
+﻿WEBVTT
+
+00:00:00.710 --> 00:00:06.290
+Bine ați venit înapoi am creat un site foarte foarte de bază.
+
+00:00:06.650 --> 00:00:15.470
+Și până acum, dacă ne uităm la cod, am putea construi probabil propria noastră platformă de bloguri în care avem doar pagini
+
+00:00:15.680 --> 00:00:23.030
+pentru postările noastre de blog sau informațiile companiei noastre și am început să funcționăm cu adevărat foarte repede.
+
+00:00:23.850 --> 00:00:29.370
+Dar, după cum știm, cele mai multe ori aplicațiile sunt mult mai complexe decât asta.
+
+00:00:29.370 --> 00:00:30.590
+Sunt dinamici.
+
+00:00:30.690 --> 00:00:37.590
+Ei au apeluri API pe care trebuie să le facă și să obțină date și să schimbe părți ale site-ului web pe baza acestor
+
+00:00:37.590 --> 00:00:38.150
+date.
+
+00:00:38.280 --> 00:00:40.530
+Ceva pe care l-am făcut cu aplicația de prieteni robo.
+
+00:00:40.890 --> 00:00:49.840
+Trebuie să preluăm roboții din componenta noastră și să-l punem pe pagina noastră.
+
+00:00:49.860 --> 00:00:59.460
+Deci, în acest videoclip, să vedem cum putem face acest lucru cum puteți avea aplicații dinamice cu următoarea fază următoare ne permite
+
+00:00:59.460 --> 00:01:09.130
+să facem acest lucru cu un API numit Obțineți recuzită inițială și cu care putem prelua datele pentru o anumită pagină, să spunem
+
+00:01:09.370 --> 00:01:17.320
+o nouă pagină sau suntem pe punctul de a construi și va trece-o până la componenta ca propunere.
+
+00:01:17.330 --> 00:01:19.730
+Din nou reacționați pur și simplu.
+
+00:01:19.790 --> 00:01:27.320
+Lucrul interesant pe care îl vom vedea este că putem decide să efectuăm apelul API pe server înainte de
+
+00:01:27.320 --> 00:01:30.190
+a fi redat și trimis clientului.
+
+00:01:30.350 --> 00:01:38.210
+Sau putem face acest apel API pe partea frontală a întregului client, unde odată ce îi dăm pagina pe care o
+
+00:01:38.200 --> 00:01:39.560
+va încărca separat.
+
+00:01:40.290 --> 00:01:41.980
+Deci sa începem.
+
+00:01:42.150 --> 00:01:48.120
+Primul lucru pe care trebuie să-l facem este ca noi să putem face un apel prin preluare,
+
+00:01:48.120 --> 00:01:53.160
+deoarece acesta este disponibil numai în browser și nu executăm acest lucru în browser.
+
+00:01:53.160 --> 00:01:55.970
+Aceasta va fi pe partea de server.
+
+00:01:56.070 --> 00:02:00.930
+Trebuie să avem acces pentru a prelua și putem instala doar un pachet care este recomandat.
+
+00:02:00.930 --> 00:02:10.120
+Dacă lucrați cu partea următoare și cu serverul, se numește bine să executăm NPM, nu NPM de
+
+00:02:10.120 --> 00:02:19.500
+instalare a capitalului și se numește mare, atât de morfic pe fetch. Suntem numele pe care îl știu.
+
+00:02:19.520 --> 00:02:24.790
+În regulă, acum, când putem folosi fetch pe partea clientului, să creăm o pagină nouă aici.
+
+00:02:24.860 --> 00:02:29.710
+Voi spune că un nou dosar va fi
+
+00:02:32.400 --> 00:02:38.180
+numit roboți da roboți că Isus va avea câteva lucruri.
+
+00:02:38.180 --> 00:02:50.720
+Mai întâi de toate, vom folosi linkul de la linkul următor o componentă de legătură și de asemenea vom importa Thach-ul
+
+00:02:51.200 --> 00:02:59.740
+pe care tocmai l-am descărcat din pachetul izomorphic pe fetch și suntem destul de familiarizați
+
+00:03:03.240 --> 00:03:09.160
+cu sintaxa de acum pot face o concerte roboți.
+
+00:03:09.200 --> 00:03:14.650
+El nu va pune semne de întrebare ca acesta.
+
+00:03:14.650 --> 00:03:15.270
+Acolo te duci.
+
+00:03:15.430 --> 00:03:26.250
+Și ne vom întoarce aici o componentă și să spunem că această componentă va fi o
+
+00:03:26.250 --> 00:03:40.360
+div care are o etichetă H1 care spune roboți și un div div, că în ea vor apărea date de tip robot.
+
+00:03:40.360 --> 00:03:42.400
+Deocamdată o vom introduce.
+
+00:03:42.420 --> 00:03:45.960
+Dar, sperăm, putem să preluăm și să facem niște date aici.
+
+00:03:47.830 --> 00:03:58.540
+Și putem închide acest lucru astfel și, probabil, în partea de jos sau în partea de sus putem adăuga un link care se referă la pagina de pornire, astfel încât să
+
+00:03:58.540 --> 00:04:02.010
+ne putem întoarce la pagina de start dacă vrem.
+
+00:04:04.400 --> 00:04:11.560
+Și acesta va fi doar un buton care spune acasă.
+
+00:04:11.680 --> 00:04:24.620
+Apoi, închideți în final linkul nostru și apoi să nu uităm să exportați roboți impliciți.
+
+00:04:24.780 --> 00:04:29.580
+Să salvăm acest lucru și, de asemenea, să ne întoarcem la
+
+00:04:32.330 --> 00:04:40.320
+pagina noastră principală, iar în pagina principală să ne asigurăm că adăugăm o etichetă link-ul nother pe pagina robotului.
+
+00:04:41.470 --> 00:04:46.730
+Și asta va face referire la roboți.
+
+00:04:46.890 --> 00:04:52.650
+Și, de fapt, patru pagini este standard sau standardul doar pentru a păstra
+
+00:04:52.650 --> 00:04:59.590
+fișierele cu litere mici vor schimba cele două roboți minuscule doar pentru a ține pasul cu standardele.
+
+00:05:01.580 --> 00:05:02.030
+In regula.
+
+00:05:02.090 --> 00:05:07.120
+Deci, să schimbăm legătura de aici pe pagina noastră de roboți.
+
+00:05:07.260 --> 00:05:10.220
+Din nou, de aceea avem și litere mici.
+
+00:05:10.560 --> 00:05:17.250
+Deci, arata Gneisenau pe care tocmai v-ati gandit sa-l salvati si sa va asigurati ca si pagina robotului are
+
+00:05:17.250 --> 00:05:17.910
+legatura.
+
+00:05:18.120 --> 00:05:24.140
+Să începem procesul PM care rulează în următorul și să vedem ce se întâmplă aici.
+
+00:05:28.570 --> 00:05:28.850
+In regula.
+
+00:05:28.870 --> 00:05:32.260
+Avem două trupe acum, dar ambii spun roboți.
+
+00:05:32.260 --> 00:05:34.020
+Să ne întoarcem aici.
+
+00:05:34.390 --> 00:05:42.240
+Dacă mergem la partea noastră de index, da, haideți să lăsăm să facem asta în legătură cu o bootă.
+
+00:05:42.340 --> 00:05:43.790
+Sunt, din pacate, din Canada.
+
+00:05:43.930 --> 00:05:44.470
+In regula.
+
+00:05:46.650 --> 00:05:54.450
+Avem pagina Despre și pagina robotului și avem o săgeată de aici care spune sintaxa aici.
+
+00:05:54.450 --> 00:05:58.470
+Îmi plac foarte mult erorile pe care le afișează aici.
+
+00:05:58.830 --> 00:06:00.970
+Deci, să ne întoarcem aici la roboții noștri.
+
+00:06:04.060 --> 00:06:06.710
+Iar un set de paranteze curbate.
+
+00:06:06.960 --> 00:06:08.610
+Ai nevoie de paranteze aici.
+
+00:06:10.330 --> 00:06:13.090
+Să salvăm.
+
+00:06:13.090 --> 00:06:13.780
+Acolo te duci.
+
+00:06:13.810 --> 00:06:15.240
+Pagina noastră robustă funcționează.
+
+00:06:15.250 --> 00:06:21.830
+Este chiar urât acum, dar totul funcționează cel puțin dacă vă aduceți aminte cu aplicația
+
+00:06:21.830 --> 00:06:31.520
+de prieteni robot utilizându-ne un element numit substituent Jason și acest înlocuitor de la Jaisalmer ne dă un punct final al utilizatorului pe
+
+00:06:31.550 --> 00:06:34.030
+care îl putem folosi aici.
+
+00:06:34.040 --> 00:06:42.350
+El poate vedea Jason-ul pe care îl obținem atunci când facem o solicitare folosind acest lucru.
+
+00:06:42.530 --> 00:06:45.110
+Să încărcăm niște date aici.
+
+00:06:45.500 --> 00:06:53.480
+Iar modul în care facem acest lucru este să adăugăm elemente de recuzită inițiale de la roboți, astfel încât să putem trece
+
+00:06:53.480 --> 00:06:55.840
+aceste roboți ca elemente de recuzită.
+
+00:06:55.840 --> 00:06:58.480
+Trimiteți-mă aici și o vom explica pe măsură ce mergem.
+
+00:06:58.510 --> 00:07:00.590
+Voi adăuga o nouă metodă.
+
+00:07:01.440 --> 00:07:07.620
+Chemați să obțineți recuzita inițială și da, tocmai adăugăm o metodă pentru roboți.
+
+00:07:07.620 --> 00:07:12.980
+Acesta este un alt mod de ao face în loc de metoda de clasă pe care ați mai văzut-o înainte.
+
+00:07:13.900 --> 00:07:22.400
+Și aici vom folosi async Oh, așteptați să putem face promisiuni, dar să folosim funcția de asincronizare.
+
+00:07:24.560 --> 00:07:32.120
+Și aici vom face răspunsul nostru.
+
+00:07:32.340 --> 00:07:39.200
+Raspunsul care va spune sa astepte fetchul la care avem acces acum si va fi acolo unde
+
+00:07:39.200 --> 00:07:39.650
+sunteti.
+
+00:07:39.650 --> 00:07:47.910
+Ei bine, am copiat locașurile Jason și doar pentru a avea o vedere mai bună.
+
+00:07:47.910 --> 00:07:48.850
+Voi spune.
+
+00:07:48.900 --> 00:07:54.050
+Apoi nu avem nevoie de ele pentru că așteptăm acum.
+
+00:07:54.310 --> 00:08:01.370
+De acum, vom spune că datele concertului vor fi numite Punctul de răspuns așteptat.
+
+00:08:01.790 --> 00:08:06.160
+Jason.
+
+00:08:06.220 --> 00:08:09.130
+Și apoi, în cele din urmă,
+
+00:08:11.910 --> 00:08:15.830
+ne putem întoarce, ca să putem returna aceste date.
+
+00:08:16.160 --> 00:08:21.760
+Să presupunem că roboții vor fi returnați cu datele.
+
+00:08:25.510 --> 00:08:28.300
+După cum sugerează și numele, avem câteva erori aici.
+
+00:08:28.310 --> 00:08:30.100
+Și să vedem ce am făcut.
+
+00:08:30.160 --> 00:08:32.130
+Nu avem aici punct și virgulă.
+
+00:08:32.140 --> 00:08:35.440
+Totul funcționează după cum sugerează și numele.
+
+00:08:35.440 --> 00:08:41.760
+Tot ce spunem este Hey înainte de a încărca acest lucru robotic, să luăm câteva recuzită pentru asta.
+
+00:08:41.770 --> 00:08:43.560
+Vom face o recuzită inițială.
+
+00:08:43.690 --> 00:08:47.920
+Vom face un apel API la acest lucru și vom obține toate datele noastre.
+
+00:08:47.920 --> 00:08:56.230
+Amintiți-vă acest lucru sunt datele pe care le primim și apoi încărcate ca roboți și ceea ce putem face acum
+
+00:08:56.230 --> 00:08:57.820
+este în roboți.
+
+00:08:57.820 --> 00:09:04.780
+Am recuzită acum pentru că din nou numele sugerează recuzită inițial și aceste elemente de recuză au acum proprietățile roboților
+
+00:09:04.900 --> 00:09:05.850
+pe ele.
+
+00:09:06.680 --> 00:09:13.600
+Deci, să spunem că în loc să avem date despre roboți, vom folosi de fapt bucle.
+
+00:09:13.610 --> 00:09:19.270
+De fapt, vom folosi o sintaxă mai bună.
+
+00:09:19.430 --> 00:09:26.420
+Și din nou paranteze curbate, deci este expresia javascript și vom spune că roboții dot dot.
+
+00:09:26.420 --> 00:09:34.940
+Vom mapa aceste roboți și acest lucru este foarte asemănător cu ceea ce
+
+00:09:34.940 --> 00:09:50.820
+am făcut în aplicația noastră de re-act în care luăm roboții și putem spune să creăm un aliat care are o cheie a unui robot.
+
+00:09:50.910 --> 00:09:58.500
+ID Din nou, amintiți-vă că avem numele de utilizator cu numele de utilizator pe care îl primim aici.
+
+00:09:58.690 --> 00:10:00.340
+Și știi ce.
+
+00:10:00.340 --> 00:10:05.130
+Pentru moment, hai să facem asta și să vedem ce se întâmplă pentru a ne asigura că funcționează.
+
+00:10:05.250 --> 00:10:08.180
+Să o salvăm și să vedem dacă avem o eroare.
+
+00:10:08.380 --> 00:10:19.320
+Nu trebuie să ne întoarcem la pagina noastră și să faceți clic pe roboți și tocmai am trebuit să ne reînviorăm puțin și să vedem ce ajungem
+
+00:10:19.320 --> 00:10:19.770
+aici.
+
+00:10:19.770 --> 00:10:21.160
+Să vedem dacă avem erori.
+
+00:10:22.090 --> 00:10:24.020
+Respinge restul resurselor prea mici.
+
+00:10:24.270 --> 00:10:26.250
+Oh, asta e Fab. com bine.
+
+00:10:26.260 --> 00:10:26.500
+In regula.
+
+00:10:26.500 --> 00:10:28.270
+Totul funcționează.
+
+00:10:28.330 --> 00:10:34.610
+Nu doar încărcăm ID-urile după cum credem, deși încărcăm 10 articole din listă.
+
+00:10:34.810 --> 00:10:39.640
+Și dacă ne întoarcem de fapt, pentru că nu fac nimic, să spunem asta.
+
+00:10:39.670 --> 00:10:47.420
+Și aici vom încărca roboți sau numele robotului.
+
+00:10:47.520 --> 00:10:52.140
+Să salvăm întoarcerea aici și să ne uităm la asta.
+
+00:10:52.570 --> 00:10:59.720
+Datele noastre sunt încărcate și puteți vedea că acest lucru este foarte similar cu ceea ce facem în aplicația de prieteni robot.
+
+00:10:59.740 --> 00:11:06.160
+Pur și simplu folosim acest substituent Jaisalmer pentru a ne apuca roboții
+
+00:11:06.160 --> 00:11:15.800
+și apoi utilizați un alt API pentru a apuca imaginile robotului și lipsesc puțină grija CSSA, dar ideea este aceeași.
+
+00:11:15.930 --> 00:11:18.470
+Să facem asta un pic mai frumos.
+
+00:11:18.570 --> 00:11:25.050
+Dacă vrem să avem link-uri către fiecare dintre aceste roboți, de exemplu, un profil de roboți.
+
+00:11:25.050 --> 00:11:27.490
+Ei bine, putem folosi eticheta de legătură din nou.
+
+00:11:28.420 --> 00:11:36.060
+Setați acest timp în jurul nostru, putem spune că link-ul Tref va fi legat și
+
+00:11:38.730 --> 00:11:40.900
+folosesc șiruri Templi aici.
+
+00:11:40.910 --> 00:11:48.610
+Există aceste citate chiar deasupra tab-ului de pe tastatură și șirurile Templi prin modul în care sunt caracteristici ESX, astfel
+
+00:11:48.610 --> 00:11:51.790
+încât, sperăm, să fiți familiarizați cu ele.
+
+00:11:52.270 --> 00:11:53.900
+Vom spune un robot.
+
+00:11:54.460 --> 00:11:56.920
+Și apoi o voi da ideea.
+
+00:11:56.980 --> 00:11:58.000
+Deci, să
+
+00:12:00.840 --> 00:12:04.090
+spunem că un robot a primit ID-ul.
+
+00:12:04.260 --> 00:12:15.330
+Așa că spunem că du-te la link sau Jarrell a spus că e robot sau ar trebui să facem roboți aici pentru că asta avem
+
+00:12:15.330 --> 00:12:17.160
+aici pentru această pagină.
+
+00:12:17.550 --> 00:12:26.420
+Și apoi, înăuntru, vom lăsa numele robotului așa cum este, dar apropiați tag-ul de legătură, așa că hai să salvăm și să vedem ce
+
+00:12:26.430 --> 00:12:27.760
+se întâmplă aici.
+
+00:12:32.950 --> 00:12:35.930
+Intrați aici pentru că trebuie să închid acest
+
+00:12:38.790 --> 00:12:44.670
+component merry și am o eroare spunând că utilizați un șir direct în interiorul unui link.
+
+00:12:44.690 --> 00:12:50.510
+Această utilizare a fost depreciată, deoarece ar trebui să o înfășurăm într-un fel de etichetă.
+
+00:12:50.510 --> 00:12:53.010
+Deci, să spunem doar un ATAC pentru moment.
+
+00:12:55.910 --> 00:13:00.280
+Să salvăm și să ne întoarcem sau să privim la asta.
+
+00:13:00.280 --> 00:13:04.070
+Acum am aceste link-uri, dar verificați acest Albar pe măsură ce fac clic pe el.
+
+00:13:05.610 --> 00:13:06.010
+Uită-te la asta.
+
+00:13:06.030 --> 00:13:11.340
+Mă duc la roboți una după ce mă duc înapoi, merg la roboți spre pagină.
+
+00:13:11.520 --> 00:13:16.200
+Și, evident, nu avem paginile pentru că nu am creat acele fișiere în dosarul paginilor.
+
+00:13:16.200 --> 00:13:21.510
+Dar vedeți aici cât de ușor putem conecta la profiluri dacă vrem.
+
+00:13:21.510 --> 00:13:22.460
+Cat de tare e asta.
+
+00:13:25.240 --> 00:13:32.160
+Din nou, lucrurile funcționează într-adevăr foarte repede și cu adevărat foarte ușor în următorul.
+
+00:13:32.170 --> 00:13:33.740
+Acum, să facem un ultim lucru.
+
+00:13:34.120 --> 00:13:39.030
+Vreau să consolăm să înregistrez datele aici.
+
+00:13:39.160 --> 00:13:47.670
+Dacă salvez aici acum că avem o consolă sau un jurnal de date, să vedem ce se întâmplă în partea de browser.
+
+00:13:47.890 --> 00:13:53.480
+Dacă deschid din nou consola, văd că există Amaar, care reprezintă un modul fierbinte.
+
+00:13:53.500 --> 00:13:58.430
+Reîncărcarea se uită întotdeauna la schimbări, așa că nu trebuie să ne îngrijorăm.
+
+00:13:58.510 --> 00:14:08.500
+Dacă fac clic pe roboți bine, primesc consola de pe front fără nimic pe server la cerere, dar dacă
+
+00:14:08.500 --> 00:14:12.230
+o reîmprospătesc din nou, vei vedea că
+
+00:14:15.060 --> 00:14:18.520
+nu sa întâmplat nimic pe consola.
+
+00:14:18.520 --> 00:14:29.750
+Dar dacă mă întorc, veți vedea că pe server a fost înregistrat ca consul pentru a înregistra date ce sa întâmplat
+
+00:14:29.750 --> 00:14:30.650
+aici.
+
+00:14:30.800 --> 00:14:38.600
+Vedeți asta pentru că atunci când redăm pagina pe server avem deja datele și nu mai avem nici un
+
+00:14:38.600 --> 00:14:41.510
+motiv să-l preluăm din nou pe client.
+
+00:14:41.510 --> 00:14:48.490
+Deci, în acest caz, reîmprospătarea paginii nu aduce niciodată datele despre client, care este foarte foarte cool.
+
+00:14:56.300 --> 00:14:57.710
+In regula.
+
+00:14:57.710 --> 00:15:04.570
+Cred ca incepeti sa obtineti ideea urmatoarei da si cat de usor este sa faceti randarea serverului. Acum,
+
+00:15:06.120 --> 00:15:14.130
+probabil, puteti sa va despartati pe cont propriu si sa reconstruiti intregii prieteni ai lui Roble folosind urmatorul si comparand diferentele
+
+00:15:14.130 --> 00:15:15.320
+de acolo.
+
+00:15:15.750 --> 00:15:18.230
+Vă recomandăm să consultați această bibliotecă.
+
+00:15:18.270 --> 00:15:25.170
+Ca întotdeauna au o documentație excelentă și sper să explorezi cum poți crea aplicații chiar mai mari decât
+
+00:15:25.170 --> 00:15:25.890
+asta.
+
+00:15:27.120 --> 00:15:28.120
+Voi vedea în următorul.
+
+00:15:28.360 --> 00:15:28.640
+Dar prin.

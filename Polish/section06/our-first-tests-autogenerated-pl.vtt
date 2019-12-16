@@ -1,0 +1,370 @@
+﻿WEBVTT
+
+00:00:02.100 --> 00:00:03.330
+Witamy spowrotem.
+
+00:00:03.330 --> 00:00:08.380
+Zacznijmy faktycznie pisać test dla funkcji wyszukiwania Google.
+
+00:00:08.460 --> 00:00:13.640
+Pierwszą rzeczą, którą chcemy zrobić, jest oczywiście dostęp do tej funkcji wyszukiwania Google.
+
+00:00:13.770 --> 00:00:17.300
+Ale w naszym pliku testowym i to jest proste.
+
+00:00:17.320 --> 00:00:19.460
+To po prostu javascript.
+
+00:00:19.480 --> 00:00:27.070
+Możemy po prostu wyeksportować tę funkcję i zaimportować ją tutaj, ponieważ jest to węzeł i teraz pracujemy
+
+00:00:27.070 --> 00:00:31.090
+w przeglądarce lub używamy Babel lub Wet Back.
+
+00:00:31.240 --> 00:00:34.620
+Nie mamy jeszcze instrukcji importu i eksportu.
+
+00:00:34.630 --> 00:00:35.970
+Nie, nad tym pracuje.
+
+00:00:36.070 --> 00:00:44.710
+Ale na razie wciąż używają wspólnego Yes, który, jak być może wiesz, ma moduł składni, który eksportuje
+
+00:00:45.520 --> 00:00:46.450
+równe.
+
+00:00:46.660 --> 00:00:50.390
+A my po prostu zrobimy wyszukiwarkę Google.
+
+00:00:50.590 --> 00:00:52.760
+Zamierzamy to wyeksportować.
+
+00:00:52.810 --> 00:01:03.650
+A na koniec możemy to zaimportować na samym początku tego testu, stwierdzając, że Konst Google search
+
+00:01:05.190 --> 00:01:09.800
+wymaga od skryptu, abyśmy mogli to
+
+00:01:13.420 --> 00:01:14.380
+zapisać.
+
+00:01:14.650 --> 00:01:27.210
+I po to, aby przetestować, legistyczna konsola zalogowała się i zrobiła wyszukiwanie w Google, zapisując test Rona NPM.
+
+00:01:27.280 --> 00:01:27.810
+W porządku.
+
+00:01:27.970 --> 00:01:38.110
+Mamy więc nasz dziennik konsoli wyszukiwania Google, który polega na unikalności skryptów, ale także w przeszłości widzimy, że wylogowujemy
+
+00:01:38.170 --> 00:01:43.100
+się z funkcji wyszukiwania Google, która jest świetna.
+
+00:01:43.180 --> 00:01:48.670
+Zamierzamy teraz to skomentować, ponieważ wiemy, że to działa, nie chcemy logować konsoli.
+
+00:01:49.010 --> 00:01:56.630
+Ale możesz również zauważyć, że jest to irytujące testowanie NPM w kółko.
+
+00:01:56.780 --> 00:02:05.040
+I na szczęście dla nas z gests możemy zrobić miły łatwy polecenia dash dash watch, a następnie dajemy to, co oglądać
+
+00:02:05.040 --> 00:02:06.320
+w naszym przypadku.
+
+00:02:06.330 --> 00:02:08.090
+Wszystkie pliki javascript.
+
+00:02:08.160 --> 00:02:16.570
+Tak więc za każdym razem, gdy wprowadzimy zmiany w plikach javascript, po prostu będziemy ich uważać
+
+00:02:16.630 --> 00:02:19.920
+i będziemy mieć ciągły test.
+
+00:02:20.000 --> 00:02:20.820
+Zobaczmy, co mam na myśli.
+
+00:02:20.930 --> 00:02:28.910
+Zamierzam to zapisać i uruchomić test NPM.
+
+00:02:29.070 --> 00:02:36.780
+A jeśli zastanawiasz się, dlaczego twoje testy NPM, a nie NPM, uruchamiają test Beths tylko domyślną i PM, jeśli robisz
+
+00:02:36.900 --> 00:02:43.050
+i PM start lub test NPM, to przyszedłeś do tych dwóch poleceń bez słowa run.
+
+00:02:43.110 --> 00:02:49.890
+Ale jeśli zrobisz cokolwiek, co sam stworzyłeś, jak NPM upiecz ciasto, musisz zrobić NPM uruchomić
+
+00:02:49.890 --> 00:02:53.410
+upiec ciasto lub tak, że teraz działa.
+
+00:02:53.530 --> 00:02:59.290
+Jeśli zmienię cokolwiek tutaj, aby legista go zapisał.
+
+00:02:59.350 --> 00:03:01.230
+Widzisz, że to się teraz zmienia.
+
+00:03:01.240 --> 00:03:08.260
+Jeśli to zmienię To ciągle aktualizuje się z nowym testem, ale nic się tu jeszcze nie dzieje.
+
+00:03:08.260 --> 00:03:14.240
+Napiszmy więc prawdziwy test, który możemy wykorzystać teraz, gdy mamy funkcję wyszukiwania Google.
+
+00:03:14.350 --> 00:03:15.330
+Chcemy to przetestować.
+
+00:03:15.340 --> 00:03:27.490
+Chcemy powiedzieć, że wyszukiwarka Google daje nam coś w rodzaju manekina i, powiedzmy, test testowy i jakoś powiedzieć, że to, co
+
+00:03:28.480 --> 00:03:31.630
+powróci, powinno pasować do wszystkiego.
+
+00:03:31.760 --> 00:03:37.030
+Pamiętaj, że jest to biblioteka potwierdzająca, że nie chcemy tworzyć twierdzeń i możesz to zauważyć.
+
+00:03:37.060 --> 00:03:38.640
+Jeden problem tutaj.
+
+00:03:38.820 --> 00:03:41.310
+A co z bazą danych.
+
+00:03:41.320 --> 00:03:46.360
+Cóż, będziemy musieli wyeksportować tę bazę danych.
+
+00:03:46.390 --> 00:03:47.300
+Dobrze.
+
+00:03:47.500 --> 00:03:52.890
+I całkowicie możemy zrobić bazę danych Google i dodać do eksportu modułów.
+
+00:03:53.290 --> 00:04:01.540
+Ale czy realistycznie widzisz w rzeczywistości, że nie wyeksportujesz bazy danych i nie zaimportujesz jej do testu i
+
+00:04:01.540 --> 00:04:05.340
+nie będziesz musiał przejść przez bazę danych.
+
+00:04:05.380 --> 00:04:09.430
+To naprawdę drogie, naprawdę powolne i ogromny ból głowy.
+
+00:04:09.430 --> 00:04:16.870
+Idealnie chcesz rynku, na którym chcesz udawać, że mamy tu bazę danych, dzięki czemu testy
+
+00:04:16.990 --> 00:04:18.190
+przebiegają szybciej.
+
+00:04:18.910 --> 00:04:20.410
+Pozwól mi pokazać, jak możemy to zrobić.
+
+00:04:20.470 --> 00:04:32.080
+Możemy po prostu powiedzieć, że D-B blokuje szyderstwo bazy danych, a ta fikcja będzie zawierała fałszywą bazę danych, która w rzeczywistości nie jest naszą prawdziwą bazą
+
+00:04:32.080 --> 00:04:34.830
+danych, tylko czymś, co możemy przetestować.
+
+00:04:34.840 --> 00:04:42.440
+Więc powiedzmy, że ma on kropkę, ma kropkę z serem
+
+00:04:47.170 --> 00:04:58.350
+i ma kropkę com, a ma obrazki z psem, tak kompletnie różne od naszej prawdziwej
+
+00:04:58.680 --> 00:05:01.040
+bazy danych.
+
+00:05:01.050 --> 00:05:05.890
+W porządku, więc mamy to teraz, ale problem jest dobrze wyszukiwarka Google.
+
+00:05:06.190 --> 00:05:10.960
+Do tego momentu korzystano z bazy danych Google.
+
+00:05:10.960 --> 00:05:14.270
+A jeśli uruchomisz tę funkcję w teście skryptu tak.
+
+00:05:14.530 --> 00:05:17.170
+Cóż, nie mamy dostępu do tej bazy danych.
+
+00:05:17.170 --> 00:05:26.230
+Musielibyśmy ręcznie zmienić funkcję i upewnić się, że filtruje ona przez DB, próbując w dobry sposób rozwiązać ten problem, i
+
+00:05:26.230 --> 00:05:32.710
+sposób, w jaki chcesz napisać swoje funkcje, to znów chcesz, żeby były czyste.
+
+00:05:32.710 --> 00:05:37.990
+A także chcesz dodać do nich rzeczy jak bazę danych poprzez coś,
+
+00:05:38.470 --> 00:05:47.410
+co nazywa się zastrzykiem zależności, abyśmy mogli zrobić to ponownie i użyć go w innych częściach naszej bazy kodu, aby baza
+
+00:05:48.160 --> 00:05:56.390
+danych została wprowadzona do wyszukiwarki Google, aby każdy mógł użyć tak jak w teście mogę wstrzyknąć ten znak DB
+
+00:05:56.650 --> 00:05:58.910
+zamiast prawdziwej bazy danych.
+
+00:05:59.970 --> 00:06:01.480
+To naprawdę łatwe.
+
+00:06:01.500 --> 00:06:09.780
+Wszystko, co musimy zrobić, to przekazać mu parametr np. D. B i zamierzam to zmienić na D-B.
+
+00:06:10.110 --> 00:06:16.020
+A teraz ta wyszukiwarka Google jest bardziej rozszerzalna, możemy dodać dowolną bazę danych, którą chcemy filtrować.
+
+00:06:16.020 --> 00:06:30.180
+Teraz wszystko, co musimy zrobić, to to, co nazywamy funkcją jest dodanie jednego parametru bazy danych Google.
+
+00:06:30.260 --> 00:06:45.190
+Jeśli to skomentujemy i wrócimy do naszego pliku testowego, możemy wejść do bazy danych D-B.
+
+00:06:45.200 --> 00:06:47.750
+Zapiszmy teraz i zobaczmy, co się stanie.
+
+00:06:49.160 --> 00:06:49.800
+W porządku.
+
+00:06:49.800 --> 00:06:55.280
+Test przechodzi, ale tak naprawdę nie testujemy niczego teraz.
+
+00:06:55.380 --> 00:06:58.370
+Zwracamy tylko rzeczy i uruchamiamy tę funkcję.
+
+00:06:58.380 --> 00:07:00.840
+Ale nie w tym miejscu chcemy testować.
+
+00:07:00.840 --> 00:07:03.540
+Nie ma większego znaczenia, że uruchamiamy tę funkcję.
+
+00:07:03.540 --> 00:07:07.200
+Chcemy potwierdzić, że robi to, co oczekiwaliśmy.
+
+00:07:09.470 --> 00:07:18.310
+I znowu, tak jak mieliśmy słowo kluczowe, po prostu daje nam niezłą funkcję do wykorzystania.
+
+00:07:18.470 --> 00:07:26.870
+Jeśli użyjesz matchers, widzimy, że w ich dokumentacji mają xpect i być i mają
+
+00:07:26.870 --> 00:07:33.680
+kilka innych rzeczy, które możesz zdefiniować, aby były zdefiniowane jako falsie
+
+00:07:33.680 --> 00:07:35.990
+i mają tony.
+
+00:07:36.050 --> 00:07:51.250
+Póki co, skomentujmy to i powiedz, że oczekujemy, że cześć będzie "cześć", cześć, to samo Cześć, trudno, powiedzmy, że wszystko w porządku,
+
+00:07:51.250 --> 00:08:02.640
+wszystko przemija, ale jeśli zmienię tylko po to, aby wiedzieć i zapisać Och, dostaję nieudany test.
+
+00:08:02.780 --> 00:08:10.360
+Mówi, że spodziewał się braku wartości, ale został przyjęty i ma całkiem niezły wynik.
+
+00:08:10.370 --> 00:08:15.130
+Pokazuje, która linia się nie udała i na czym polegała próba.
+
+00:08:15.320 --> 00:08:25.760
+Korzystając z tej logiki, zmieńmy teraz wyszukiwanie w Google na xpect I wiesz co.
+
+00:08:25.770 --> 00:08:29.060
+Zachowajmy ten test, ponieważ podoba mi się ten test.
+
+00:08:29.070 --> 00:08:29.830
+Dzień dobry.
+
+00:08:30.120 --> 00:08:30.560
+Dzień dobry.
+
+00:08:30.570 --> 00:08:41.480
+I nazywa to głupim testem i tworzy kolejny test, mamy tylko tyle, ile chcemy, a
+
+00:08:41.480 --> 00:08:50.470
+ta piosenka powie, że szuka google, a tutaj będziemy mieli funkcję, dodajmy
+
+00:08:54.080 --> 00:09:03.530
+tutaj spację, bo wygląda ładniej, a my Powiemy, że oczekujemy wyszukiwania w Google
+
+00:09:03.530 --> 00:09:08.390
+i możemy to po prostu skopiować.
+
+00:09:08.440 --> 00:09:14.110
+Oczekujemy wyszukiwarki Google i uruchamiamy tę funkcję za pomocą testu testowego D-B Mach ..
+
+00:09:14.320 --> 00:09:16.810
+I tutaj możemy użyć zamiast być.
+
+00:09:16.810 --> 00:09:22.650
+Możemy również zrobić dwa równe i w ramach dwóch równe.
+
+00:09:22.650 --> 00:09:25.810
+Teraz pozwól mi po prostu utworzyć nową linię, abyś mógł ją zobaczyć.
+
+00:09:26.130 --> 00:09:33.180
+Powiemy, że oczekujemy, że będzie równa pustej tablicy, ponieważ nie ma tutaj testu.
+
+00:09:33.270 --> 00:09:33.720
+Uratujmy
+
+00:09:36.790 --> 00:09:39.160
+Och, i zapomniałem tutaj o małym nawiasie.
+
+00:09:39.210 --> 00:09:44.600
+Chcemy, aby oczekiwano rezultatu tego, więc potrzebujemy dodatkowego wspornika tutaj.
+
+00:09:44.610 --> 00:09:46.270
+Więc upewnij się, że masz rację.
+
+00:09:46.430 --> 00:09:48.980
+Zapisz wszystko poszło.
+
+00:09:49.140 --> 00:09:50.940
+Teraz nie potrzebujesz tego.
+
+00:09:50.940 --> 00:09:51.870
+Idealny.
+
+00:09:51.870 --> 00:09:54.780
+Znowu być może nie mając go na dwóch liniach jest lepszy.
+
+00:09:54.790 --> 00:09:56.400
+Więc widzisz.
+
+00:09:56.400 --> 00:10:05.270
+Mamy więc funkcję oczekiwania, która uruchamia to i równa się testowi, że jest równa pustej tablicy.
+
+00:10:06.350 --> 00:10:14.930
+Możemy teraz dodać kolejną linię i załóżmy, że teraz oczekujemy, że Google przetestuje psa i
+
+00:10:14.930 --> 00:10:24.820
+jeśli pies istnieje, chcieliśmy włączyć te dwie strony internetowe, abyśmy mogli dodać do tej tablicy psią kropkę com.
+
+00:10:25.250 --> 00:10:29.870
+A także zdjęcia psa dot com w prawo.
+
+00:10:33.330 --> 00:10:39.020
+I oszczędzajmy.
+
+00:10:39.060 --> 00:10:39.750
+W porządku.
+
+00:10:39.750 --> 00:10:42.120
+To działa i przechodzi.
+
+00:10:42.180 --> 00:10:48.150
+Wciąż mamy dwa testy, ponieważ podczas gdy jest ich tylko dwa.
+
+00:10:48.420 --> 00:10:57.710
+Ale gdybym to zmienił, powiedzmy, że tylko D-G wszyscy się tam dostali, ponieważ dostaliśmy coś innego, niż oczekiwaliśmy,
+
+00:10:57.710 --> 00:10:59.600
+oczekiwaliśmy czegoś innego.
+
+00:10:59.600 --> 00:11:02.800
+Eric No to idziesz.
+
+00:11:02.870 --> 00:11:06.640
+Mamy nasz pierwszy test.
+
+00:11:06.830 --> 00:11:08.390
+Zobaczę w następnym filmie.
+
+00:11:08.720 --> 00:11:08.920
+Przez.

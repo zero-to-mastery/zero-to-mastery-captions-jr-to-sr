@@ -1,0 +1,283 @@
+﻿WEBVTT
+
+00:00:01.220 --> 00:00:10.520
+Hej, tu Bruno, musiałeś bardzo ciężko pracować, to było dużo kodu, ale nie mogę w to uwierzyć.
+
+00:00:10.520 --> 00:00:12.020
+Mamy sesje.
+
+00:00:12.260 --> 00:00:19.130
+Nasi użytkownicy nie muszą ciągle logować się, aby korzystać z naszej inteligentnej aplikacji mózgowej i chroniliśmy wszystkie nasze trasy,
+
+00:00:19.130 --> 00:00:21.830
+aby nasze punkty końcowe były teraz bezpieczne.
+
+00:00:21.830 --> 00:00:23.510
+To jest niesamowita praca.
+
+00:00:23.510 --> 00:00:29.660
+Uwielbiam sposób, w jaki używasz Dredy, aby sesje naprawdę szybko się sprawdzały i nie mogłem ci wystarczająco podziękować.
+
+00:00:29.660 --> 00:00:34.400
+Myślę, że potrzebujesz kilku dni urlopu po tym, bo i tak było dużo kodu.
+
+00:00:34.550 --> 00:00:36.140
+Naprawdę doceniony.
+
+00:00:36.140 --> 00:00:40.580
+Nasza firma rośnie ogromnie dzięki tobie, więc myślę, że wkrótce pojawi się
+
+00:00:40.580 --> 00:00:41.130
+promocja.
+
+00:00:41.950 --> 00:00:44.220
+W każdym razie odpocznij.
+
+00:00:44.230 --> 00:00:45.970
+Do zobaczenia za parę dni.
+
+00:00:45.970 --> 00:00:47.350
+Wracać do pracy.
+
+00:00:47.440 --> 00:00:47.940
+PA pa.
+
+00:00:51.300 --> 00:00:52.540
+W porządku wszyscy.
+
+00:00:52.540 --> 00:00:53.330
+Dobra robota.
+
+00:00:53.350 --> 00:00:58.870
+Udało nam się zaimponować Bruno i to była naprawdę trudna sekcja, ale piękna tej sekcji
+
+00:00:59.380 --> 00:01:05.620
+jest to, że masz teraz bazę kodu, której możesz użyć do rozszerzenia swoich projektów, ponieważ większość aplikacji, które
+
+00:01:05.620 --> 00:01:09.640
+będziesz używać, będzie miała jakiś rodzaj użytkownicy i funkcja logowania.
+
+00:01:09.640 --> 00:01:15.190
+Chcesz się upewnić, że są jakieś sesje i chcesz również chronić niektóre prawa, abyś mógł korzystać z
+
+00:01:15.190 --> 00:01:20.050
+inteligentnej aplikacji mózgowej i niezależnie od tego, jak chcesz ją rozszerzyć i ulepszyć, lub nawet
+
+00:01:20.050 --> 00:01:21.510
+samemu stworzyć coś nowego.
+
+00:01:21.670 --> 00:01:28.870
+Ale teraz dobrze rozumiesz, jak używać sesji i JWT, aby mieć pełny dostęp i kontrolę
+
+00:01:29.140 --> 00:01:30.760
+nad swoimi użytkownikami.
+
+00:01:31.240 --> 00:01:37.990
+Udało nam się stworzyć naszą trasę, w której przechowujemy nazwy użytkowników i hasła
+
+00:01:38.050 --> 00:01:47.650
+hashujące w naszej bazie danych, jeśli użytkownik się zaloguje, wygenerujemy token i ten token zostanie również zapisany w naszej bazie
+
+00:01:47.800 --> 00:01:48.850
+danych Dreda.
+
+00:01:48.850 --> 00:01:54.840
+Teraz możesz zadawać sobie pytanie, że to nie czyni tego bardzo skomplikowanym, a także trwa dłużej.
+
+00:01:55.060 --> 00:02:01.450
+Cóż, ponieważ to rattus to pamięć, która jest przechowywana w pamięci, jest niezwykle szybka.
+
+00:02:01.450 --> 00:02:08.500
+Jedna z najszybszych baz danych, które można uzyskać, aby uzyskać dostęp do małych fragmentów danych, takich jak tokeny sesji.
+
+00:02:08.500 --> 00:02:14.680
+Jest to naprawdę szybkie i możesz skalować, ponieważ możesz mieć wiele baz danych rattus i
+
+00:02:14.710 --> 00:02:16.360
+wiele serwerów API.
+
+00:02:16.390 --> 00:02:24.460
+Stworzysz więc system, który jest niezwykle skalowalny, możesz dodawać do niego maszyny i będzie działać szybko, bez względu
+
+00:02:24.460 --> 00:02:32.560
+na to, ilu użytkowników może również mieć JWT, które zawierają pewne oznaki informacji, więc jeśli mamy inne API, które
+
+00:02:32.860 --> 00:02:38.980
+potrzebujemy aby porozmawiać i to nie jest prosta relacja z klientem, możemy używać tego
+
+00:02:38.980 --> 00:02:44.410
+tokena, aby rozmawiać z innymi punktami końcowymi API z naszego serwera.
+
+00:02:44.410 --> 00:02:51.460
+Znowu można go rozszerzać, ponieważ przenosimy się do coraz większej liczby serwerów i zagnieżdżonych architektur, co ponownie wykracza
+
+00:02:51.490 --> 00:02:53.060
+poza zakres dyskursu.
+
+00:02:53.080 --> 00:03:01.270
+Jest to jednak świetny sposób na rozbudowę i mieć skalowalne rozwiązanie dla twojej architektury.
+
+00:03:01.270 --> 00:03:07.690
+W każdym razie zapisaliśmy ten token na naszym serwerze Retta i zwracamy go klientowi, a następnie
+
+00:03:07.690 --> 00:03:15.270
+klient zapisuje go w swoich magazynach sesji lub lokalnym magazynie, a stamtąd użytkownik może robić, co chce, za każdym razem,
+
+00:03:15.280 --> 00:03:21.190
+gdy potrzebuje czegoś w rodzaju aktualizacji profilu lub uzyskania profilu lub dowolne inne trasy.
+
+00:03:21.190 --> 00:03:28.330
+Po prostu biorą ten token z wysłanej nam pamięci sesji, mówimy "Oh dzięki za token".
+
+00:03:28.330 --> 00:03:29.980
+Widzę nagłówek autoryzacji.
+
+00:03:30.160 --> 00:03:31.730
+Zamierzam sprawdzić to.
+
+00:03:32.020 --> 00:03:35.970
+Hej, panie rattus lub Mrs. rattus, czy masz to token?
+
+00:03:36.280 --> 00:03:37.200
+Tak, mam.
+
+00:03:37.270 --> 00:03:39.350
+Jeśli oni to robią, to ja. RE..
+
+00:03:39.400 --> 00:03:45.130
+A kiedy ten sprawdzian trafi na serwer, mówi, że mówisz, że mówisz,
+
+00:03:45.130 --> 00:03:48.420
+że możesz mieć swój miły prezent.
+
+00:03:48.500 --> 00:03:54.710
+Teraz patrząc na ten kod, możemy wiele ulepszyć i wiele rzeczy, które moglibyśmy
+
+00:03:54.710 --> 00:03:55.540
+zmienić.
+
+00:03:55.670 --> 00:03:58.930
+A jeśli zauważysz, że Sink's jest naprawdę dobry.
+
+00:03:59.000 --> 00:04:03.180
+Oznacza to, że zaczynasz rozumieć, w jaki sposób punkty są połączone, jak rzeczy są połączone.
+
+00:04:03.470 --> 00:04:08.990
+Zachęcam Cię do oczyszczenia kodu i sprawdzenia, gdzie możesz poprawić, dlaczego możesz to zrobić.
+
+00:04:09.020 --> 00:04:15.950
+Chcę również, abyś wykonał trochę ćwiczenia i to jest, jeśli pamiętasz w naszym apt.
+
+00:04:16.040 --> 00:04:19.490
+Tak, mamy nowe pola, które stworzyliśmy w tym stanie.
+
+00:04:19.640 --> 00:04:24.110
+Klepnięcie i stan wiekowy użytkownika.
+
+00:04:24.320 --> 00:04:33.110
+Musimy jednak dodać te kolumny do naszych tabel i mieć możliwość ich aktualizacji.
+
+00:04:33.270 --> 00:04:34.510
+Może w aktualizacji profilu.
+
+00:04:34.510 --> 00:04:38.770
+Możemy również wysłać kod i wiek, aby uzyskać te wartości.
+
+00:04:38.770 --> 00:04:46.210
+Więc to jest twoje wyzwanie, wiedząc, co właśnie zrobiliśmy, włączając aktualizację profilu i wskażmy również dla
+
+00:04:46.210 --> 00:04:49.000
+zwierząt domowych i wieku jako wskazówkę.
+
+00:04:49.030 --> 00:04:56.380
+Być może będziesz musiał zaktualizować tabelę tworzenia, podczas gdy w tym miejscu w tabelach może być konieczne
+
+00:04:56.410 --> 00:05:02.320
+dodanie kilku dodatkowych kolumn, takich jak Pat i H, i może być konieczne usunięcie
+
+00:05:02.320 --> 00:05:05.020
+kontenera i ponowne skompilowanie wszystkiego.
+
+00:05:05.200 --> 00:05:11.890
+Ale gdy już to zrobisz i przejdziesz przez kolejne kroki, możesz rozszerzyć aktualizację
+
+00:05:11.890 --> 00:05:16.120
+postów, aby uwzględnić także wiek i zwierzaka.
+
+00:05:16.120 --> 00:05:22.450
+Teraz w końcu włączyliśmy wszystkie rzeczy, których się nauczyliśmy w kilku ostatnich sekcjach, i teraz widzisz,
+
+00:05:22.450 --> 00:05:26.230
+jak czyste i przyjemne jest nasze środowisko pracy.
+
+00:05:26.290 --> 00:05:31.050
+W tym jednym pojemniku umieszczamy naszą bazę danych rattus API.
+
+00:05:31.090 --> 00:05:39.650
+Tak więc od jednego polecenia i czasu rozwoju jesteśmy w stanie sprawić, że wszystko działa i naprawdę szybko się rozwija.
+
+00:05:39.670 --> 00:05:41.210
+Mam nadzieję, że dostrzegasz w tym wartość.
+
+00:05:41.350 --> 00:05:47.620
+Jako programista masz teraz możliwość włączenia tego do swojego zespołu swoich szefów, Twoich klientów.
+
+00:05:47.710 --> 00:05:50.020
+Twoja firma po prostu cię za to pokocha.
+
+00:05:50.020 --> 00:05:53.730
+Dlatego bardzo polecam to zrobić i coś takiego.
+
+00:05:53.740 --> 00:06:02.680
+Użyliśmy również rzeczy takich jak rattus, aby móc tworzyć skalowalne duże aplikacje, ponieważ wiemy,
+
+00:06:02.680 --> 00:06:04.660
+jak używać kontenerów.
+
+00:06:04.660 --> 00:06:10.420
+Teraz możemy wykonać wiele replikacji naszego serwera API.
+
+00:06:10.600 --> 00:06:16.960
+Możemy tworzyć wielokrotne repliki naszych baz danych i wielokrotne replikacje naszej bazy danych rattus, która
+
+00:06:16.960 --> 00:06:18.480
+jest naprawdę szybka.
+
+00:06:18.490 --> 00:06:27.490
+Tak więc, mimo że interfejs API kolejkuje polecenie rattus dla identyfikatora i sprawdzania tokena sesji, jest on bardzo szybki, więc możemy ciągle
+
+00:06:27.490 --> 00:06:29.320
+dodawać do niego maszyny.
+
+00:06:29.320 --> 00:06:33.170
+Dodawaj do niego maszyny i skaluj w produkcji.
+
+00:06:33.190 --> 00:06:39.010
+Wraz ze wzrostem liczby użytkowników zwiększy się obciążenie systemu i jego wydajność w części
+
+00:06:39.010 --> 00:06:39.870
+3.
+
+00:06:40.120 --> 00:06:46.270
+Ale ten schemat powinien teraz mieć dla ciebie dużo sensu i to, że wszystkie te elementy są połączone, jest jedną
+
+00:06:46.270 --> 00:06:48.040
+z najtrudniejszych rzeczy do uchwycenia.
+
+00:06:48.040 --> 00:06:53.500
+Jeśli więc jesteś w stanie to zrozumieć, jeśli potrafisz śledzić kod razem ze
+
+00:06:53.710 --> 00:07:01.780
+mną i rozumiesz, co zrobiłem do tej pory, jesteś znacznie powyżej zwykłego programisty, masz teraz obraz wysokiego poziomu, więc możesz
+
+00:07:01.990 --> 00:07:06.460
+zdecydować dla siebie, jakiej architektury chcesz, co chcesz zrobić, gdy
+
+00:07:06.460 --> 00:07:12.580
+tworzysz aplikację, dzięki czemu praca z programistami jest przyjemna, a jednocześnie przychodzi czas na produkcję.
+
+00:07:12.610 --> 00:07:20.430
+Jest odważny w skali i ma elastyczność, aby się rozwijać i myślę, że wszyscy potrzebujemy przerwy.
+
+00:07:20.730 --> 00:07:22.830
+Zobaczę w następnej części Buh-Bye.

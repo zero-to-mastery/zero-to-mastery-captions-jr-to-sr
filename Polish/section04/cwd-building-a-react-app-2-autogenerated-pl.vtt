@@ -1,0 +1,334 @@
+﻿WEBVTT
+
+00:00:00.420 --> 00:00:01.180
+Witamy spowrotem.
+
+00:00:01.350 --> 00:00:10.150
+Kontynuujmy budowanie naszych robotów od teraz do tego momentu, jeśli spojrzysz na naszego geniusza indeksu. Cóż, było dużo
+
+00:00:10.250 --> 00:00:13.200
+kopiowania i wklejania, które zrobiliśmy.
+
+00:00:13.250 --> 00:00:18.950
+Gdybyśmy mieli wielu robotów, wyobraźmy sobie, że mamy ich setkę, że musimy ciągle kopiować i
+
+00:00:18.950 --> 00:00:21.630
+wklejać, co nie jest zbyt skuteczne.
+
+00:00:21.680 --> 00:00:30.110
+Również, jeśli pamiętacie nasz diagram tutaj o jednokierunkowym przepływie danych, zawsze mieliśmy rodzica, takiego jak komponent aplikacji, który miał dzieci,
+
+00:00:30.110 --> 00:00:34.930
+które miały własne dzieci i tak dalej i tak dalej.
+
+00:00:35.000 --> 00:00:43.250
+Używając tej wiedzy, możemy mieć jeden duży komponent, który ma różne dzieci, dzięki czemu każdy komponent
+
+00:00:43.250 --> 00:00:47.920
+jest mały i nadaje się do ponownego użycia.
+
+00:00:47.940 --> 00:00:57.110
+Wróćmy teraz do naszego przykładu, gdy mamy robota, którego J. S. najlepiej możemy wymienić wszystkich
+
+00:00:58.640 --> 00:01:09.690
+10 użytkowników w taki sposób, w jaki robimy, że mamy składnik listy kart, aby zaimportować komponent bez karty, który
+
+00:01:09.690 --> 00:01:16.920
+jest rodzicem karty, a następnie możemy to uczynić zamiast wszystkich tych kart.
+
+00:01:17.230 --> 00:01:30.340
+Tak więc powiem listę kart i znowu będziemy musieli powiedzieć nową kartę plików, ta sztywność znowu zmieni twoją
+
+00:01:33.010 --> 00:01:43.750
+składnię na tabelę, przywróci ją z ponownego aktu i zrobię to trochę większy.
+
+00:01:44.980 --> 00:01:52.620
+I znowu powiemy po prostu, że lista kart Konstarów równa się, że na razie chcesz coś zaakceptować.
+
+00:01:54.300 --> 00:01:56.460
+Ale to powróci.
+
+00:01:56.850 --> 00:02:01.630
+Cóż powinien powrócić.
+
+00:02:01.800 --> 00:02:05.030
+Powinien zwrócić karty w prawo.
+
+00:02:05.860 --> 00:02:07.900
+Możemy po prostu skopiować i
+
+00:02:11.690 --> 00:02:13.110
+wkleić to tutaj.
+
+00:02:13.430 --> 00:02:15.690
+Naprawmy tu wcięcie, a
+
+00:02:18.670 --> 00:02:22.920
+teraz lista kart będzie tą, która zwraca te karty.
+
+00:02:24.260 --> 00:02:33.190
+Symbol indeksu kropka po prostu wyrenderuje Carlist.
+
+00:02:33.290 --> 00:02:41.990
+Jeśli dobrze to zapiszę, zgaduję, że karta nie jest używana, więc nie możemy jej usunąć, a roboty nie są
+
+00:02:41.990 --> 00:02:42.560
+używane.
+
+00:02:42.560 --> 00:02:56.020
+Ale możemy teraz użyć robotów, aby przekazać, że robotom dorównuje fakt, że lista kart z robotami akceptuje rekwizyty robotów Mówię, że
+
+00:02:56.350 --> 00:03:04.560
+wszystko działa, ale dostaję błąd, ponieważ jak widzisz, nie eksportowaliśmy, jeśli wrócimy.
+
+00:03:04.800 --> 00:03:12.760
+do listy kart eksportuj domyślnie i miejmy nadzieję, że już zaczynasz ją
+
+00:03:12.760 --> 00:03:13.860
+rozumieć.
+
+00:03:13.870 --> 00:03:19.990
+Tutaj jest wiele powtórzeń, ale za każdym razem, gdy poznajesz składnię, ładnie
+
+00:03:20.470 --> 00:03:28.360
+tworzymy te komponenty i dostajemy mnóstwo błędów, ponieważ nie mamy dostępu do robotów i identyfikatorów
+
+00:03:28.780 --> 00:03:30.220
+oraz karty.
+
+00:03:30.220 --> 00:03:38.340
+Więc zaimportujmy kartę z tej samej karty katalogowej tak.
+
+00:03:39.230 --> 00:03:40.830
+Roboty nie są zdefiniowane.
+
+00:03:40.880 --> 00:03:45.300
+Wiemy, że lista kart otrzymuje teraz roboty.
+
+00:03:45.490 --> 00:03:52.490
+Więc mam dostęp do niego w rekwizytach lub mogę być zorganizowany i powiedzieć, że mamy do niego dostęp.
+
+00:03:53.520 --> 00:04:04.900
+Roboty, jeśli widzę ten wygląd, mam wszystko z powrotem tak, jak było.
+
+00:04:05.030 --> 00:04:07.320
+Ale to nie wszystkie z nich.
+
+00:04:07.340 --> 00:04:10.420
+Chwytamy tylko 0 1 2.
+
+00:04:10.430 --> 00:04:11.750
+Tylko trzech z nich.
+
+00:04:11.750 --> 00:04:17.910
+I jak widzieliśmy na solidnym Tak, mam 10.
+
+00:04:18.070 --> 00:04:20.660
+Jak możemy to zrobić lepiej.
+
+00:04:20.980 --> 00:04:28.390
+Zróbmy to trochę mniej, żebyś mógł zobaczyć, że wygląda na to, że chcemy zrobić jakąś pętlę.
+
+00:04:28.440 --> 00:04:29.340
+Dobrze.
+
+00:04:29.370 --> 00:04:35.470
+Chcemy zapętlić roboty i utworzyć komponent karty dla każdego z nich.
+
+00:04:35.580 --> 00:04:36.830
+Jak możemy to zrobić tutaj.
+
+00:04:36.850 --> 00:04:45.010
+Andrea zacznijmy od dodania kolejnej zmiennej, nazwijmy ją komponentem karty
+
+00:04:47.690 --> 00:04:48.670
+Konst.
+
+00:04:50.450 --> 00:04:56.580
+I w ramach komponentu karty chcemy powiedzieć, że roboty, które chcemy.
+
+00:04:56.690 --> 00:04:59.330
+Cóż, co chcemy robić, gdy robimy pętlę.
+
+00:04:59.360 --> 00:05:03.400
+Jak już wcześniej powiedziałem, chcemy poprawnie mapować.
+
+00:05:03.420 --> 00:05:06.680
+Moglibyśmy także zrobić dla każdego, ale zawsze to zalecam.
+
+00:05:07.050 --> 00:05:09.240
+I w tej mapie każdy robot
+
+00:05:11.770 --> 00:05:12.860
+otrzymuje to.
+
+00:05:12.910 --> 00:05:16.750
+Dostajemy więc użytkownika za każdym razem, gdy go
+
+00:05:20.040 --> 00:05:26.550
+przeglądamy, abyśmy mogli powiedzieć, że użytkownik powinien wrócić, ponieważ mapa musi zwrócić, zwraca to prawo.
+
+00:05:26.550 --> 00:05:32.820
+Chcemy zwrócić element karty, który mogę skopiować i wkleić tutaj.
+
+00:05:34.440 --> 00:05:42.310
+I w ramach zwrotu mogę tylko powiedzieć teraz, zamiast indeksów robotów 0 mamy indeks
+
+00:05:42.390 --> 00:05:48.720
+Dobrze, ponieważ pamiętacie drugi parametr, który dostajemy na mapie to indeks.
+
+00:05:48.740 --> 00:05:52.690
+Mogę więc powiedzieć użytkownikowi i mnie o indeksie.
+
+00:05:52.730 --> 00:06:02.480
+A teraz w robotach powiem, że cześć cztery indeksu Ishaan za pierwszym razem będzie zero.
+
+00:06:02.610 --> 00:06:08.760
+Następnie jeden, a następnie dwa aż do 9, aby uwzględnić nasze 10 robotów.
+
+00:06:08.790 --> 00:06:11.200
+Zobaczmy, czy to faktycznie działa.
+
+00:06:11.310 --> 00:06:19.210
+Gdybym miał tutaj składnik karty, pamiętasz, że musimy go zawinąć w nawiasy klamrowe, ponieważ jest to
+
+00:06:19.210 --> 00:06:22.110
+javascript, który wie, eby ocenić.
+
+00:06:22.360 --> 00:06:24.680
+Jeśli to zapisałem.
+
+00:06:24.820 --> 00:06:26.830
+Wygląda na to, że kompiluje się pomyślnie.
+
+00:06:26.950 --> 00:06:28.270
+Wracam i.
+
+00:06:28.540 --> 00:06:30.110
+Święty Moly.
+
+00:06:30.240 --> 00:06:33.630
+Mamy kartę lub.
+
+00:06:33.770 --> 00:06:35.090
+Jakie to jest świetne.
+
+00:06:35.090 --> 00:06:37.060
+To było niewiarygodnie szybkie.
+
+00:06:37.280 --> 00:06:40.820
+Używamy tylko naszej wspólnej wiedzy i wiedzy o JavaScript.
+
+00:06:40.970 --> 00:06:46.160
+Po prostu użyj mapy, aby zwrócić wiele komponentów.
+
+00:06:46.160 --> 00:06:50.640
+Mam nadzieję, że zdajesz sobie sprawę z tego, jak potężne jest to i dlatego ponowne działanie jest teraz tak popularne.
+
+00:06:50.640 --> 00:06:57.440
+Możemy używać javascript do zwracania tych HVM wszystkich elementów i robienia rzeczy naprawdę szybko.
+
+00:06:59.330 --> 00:07:04.180
+Jeśli otworzę konsolę, zobaczę, że otrzymałem ostrzeżenie.
+
+00:07:04.190 --> 00:07:11.210
+Każde dziecko w tablicy lub iteratorze powinno mieć unikalny kluczowy podpórkę i istnieje link do niego, jeśli chcesz
+
+00:07:11.210 --> 00:07:12.270
+go przeczytać.
+
+00:07:13.320 --> 00:07:16.150
+Jest to szczególny przypadek, który musisz tylko pamiętać.
+
+00:07:17.460 --> 00:07:24.030
+Kiedy pracujesz z reakcją tak, jak działa wirtualna Dom, to śledzi ona, jakie są te wszystkie karty.
+
+00:07:24.270 --> 00:07:35.240
+Ale bez posiadania czegoś, co nazywa się kluczowym Proppem, jeśli niektóre z tych samochodów zostaną usunięte, zareaguj, nie będą wiedzieć, które i które będą
+
+00:07:36.660 --> 00:07:42.600
+musiały zmienić cały Dom vs Jeśli mają klucz Prabhat mówi, że ten zostanie
+
+00:07:42.600 --> 00:07:43.160
+usunięty.
+
+00:07:43.170 --> 00:07:45.930
+Mogę po prostu usunąć to od członka świtu.
+
+00:07:46.020 --> 00:07:50.130
+Chcemy zminimalizować ilość pracy, którą wykonujemy do zrzutu.
+
+00:07:50.250 --> 00:07:53.110
+Więc kiedy robisz pętlę, to jest coś, o czym musisz pamiętać.
+
+00:07:53.160 --> 00:07:57.060
+W naszym przypadku musisz nadać mu unikalny klucz.
+
+00:07:57.190 --> 00:08:01.160
+Możemy po prostu powiedzieć "cześć", czyli indeks.
+
+00:08:01.170 --> 00:08:02.220
+Jeśli
+
+00:08:05.240 --> 00:08:10.130
+to zapiszemy, musimy ponownie zawinąć je w nawiasy klamrowe.
+
+00:08:10.970 --> 00:08:14.670
+Ponieważ to javascript i gotowe.
+
+00:08:14.690 --> 00:08:16.940
+Teraz nie mamy już błędu.
+
+00:08:22.970 --> 00:08:29.110
+I po prostu zróbmy to na nowej linii, po prostu wygląda na ładniej.
+
+00:08:33.600 --> 00:08:39.010
+A ponieważ zwracamy go w wielu liniach, chcemy go zawinąć w nawias.
+
+00:08:39.280 --> 00:08:40.150
+I to jest lepsze.
+
+00:08:42.060 --> 00:08:45.320
+Więc działa to tak dobrze, jak tego chcemy.
+
+00:08:45.390 --> 00:08:49.110
+Chcę ci pokazać jedną rzecz, ponieważ jest to javascript.
+
+00:08:49.200 --> 00:08:53.890
+Wszystko, co umieściliśmy w nawiasach klamrowych, to javascript, w tym komentarze.
+
+00:08:54.390 --> 00:08:58.660
+Cóż, możemy po prostu skopiować i wkleić to wszystko.
+
+00:08:58.740 --> 00:09:03.760
+Usuń stałą i po prostu dodaj ją w nawiasach.
+
+00:09:07.690 --> 00:09:14.280
+Jeśli to zapiszę, powinno to działać tak, jak powinno.
+
+00:09:14.450 --> 00:09:20.160
+I to jest kolejna moc re-act reagowania sprawia, że jesteś naprawdę dobrym programistą javascript, ponieważ
+
+00:09:20.880 --> 00:09:25.350
+inne niż ta składnia GSX wszystko inne jest tylko javascript.
+
+00:09:25.350 --> 00:09:32.790
+Tak więc jesteśmy w stanie stworzyć bezkofeinowy komponent, który wymienia karty i wszystko, co musimy zrobić,
+
+00:09:33.270 --> 00:09:39.380
+to przekazać go jako rekwizyt robotów i właśnie zrobiliśmy to ton sprzątaczem.
+
+00:09:39.390 --> 00:09:40.830
+Bardzo fajny.
+
+00:09:40.830 --> 00:09:42.830
+W porządku, to wszystko w tym filmie.
+
+00:09:42.840 --> 00:09:45.430
+Więcej rzeczy wydarzy się w następnym.
+
+00:09:45.440 --> 00:09:46.540
+Do zobaczenia na tym.
+
+00:09:46.560 --> 00:09:46.830
+PA pa.

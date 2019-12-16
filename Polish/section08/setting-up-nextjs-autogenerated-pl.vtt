@@ -1,0 +1,277 @@
+﻿WEBVTT
+
+00:00:02.050 --> 00:00:07.180
+Witamy ponownie w następnych filmach, o których dowiemy się dalej.
+
+00:00:07.290 --> 00:00:07.980
+Tak.
+
+00:00:08.150 --> 00:00:16.010
+Naprawdę świetne narzędzie, jeśli chcesz budować aplikacje renderowane po stronie serwera, a zaczniemy od zainstalowania Nexxus
+
+00:00:16.010 --> 00:00:18.070
+i skonfigurowania wszystkiego.
+
+00:00:18.110 --> 00:00:22.420
+I pod koniec tego zobaczycie, dlaczego jest to tak popularne narzędzie.
+
+00:00:22.420 --> 00:00:27.870
+Aby zacząć, otwórzmy nasz terminal i dowolny edytor tekstu, który posiadasz.
+
+00:00:28.160 --> 00:00:33.880
+I po prostu pójdziemy dalej, a my stworzymy katalog, który nazwiemy renderingiem następnego serwera po LEAD.
+
+00:00:33.980 --> 00:00:36.820
+Idę na CD do tego folderu.
+
+00:00:38.460 --> 00:00:42.540
+I stąd uruchomimy nasze regularne polecenie, które jest w nim NPM.
+
+00:00:42.600 --> 00:00:43.530
+Dash y.
+
+00:00:43.620 --> 00:00:45.010
+Aby uzyskać nasz pakiet.
+
+00:00:45.210 --> 00:00:46.360
+Plik Jaisalmer.
+
+00:00:46.530 --> 00:00:48.720
+Otworzymy nasz edytor tekstów.
+
+00:00:49.890 --> 00:00:52.070
+Sprawmy, aby okna były ładne i ładne razem.
+
+00:00:53.690 --> 00:00:54.510
+Proszę bardzo.
+
+00:00:54.710 --> 00:01:00.720
+W tym pakiecie, do pliku, który chcemy zainstalować, chcemy zainstalować kilka rzeczy, które chcemy zainstalować.
+
+00:01:01.560 --> 00:01:08.520
+Pakiet oczywiście nie wymaga wyjaśnienia, ale reaguje i reaguje głupio.
+
+00:01:08.670 --> 00:01:13.770
+I widzieliśmy te pakiety, zanim zaczęliśmy budować, budujemy ponownie aplikację, która jest renderowana
+
+00:01:13.770 --> 00:01:15.080
+po stronie serwera.
+
+00:01:15.180 --> 00:01:21.330
+Więc potrzebujemy przepakowań, zainstalujmy je.
+
+00:01:21.420 --> 00:01:29.190
+Teraz, gdy jest to ładowanie, po prostu przejrzyjmy kilka rzeczy, które następnie dostarczą nam następnego, tak jak
+
+00:01:29.190 --> 00:01:30.390
+tworzenie reakcji.
+
+00:01:30.420 --> 00:01:37.480
+Zawiera wszystko, czego potrzebujesz, aby tworzyć aplikacje renderowane po stronie serwera.
+
+00:01:37.530 --> 00:01:44.230
+Zawiera routing, dzięki któremu możesz przejść od strony do strony.
+
+00:01:44.260 --> 00:01:47.550
+Ma już przygotowane pakiety internetowe.
+
+00:01:47.800 --> 00:01:58.100
+Możesz korzystać z różnych typów CSSA, jeśli chcesz, również dzięki obsłudze maszynopisu.
+
+00:01:58.180 --> 00:02:05.020
+I jest tylko tona więcej ton rzeczy, które pomagają budować aplikacje po stronie serwera.
+
+00:02:05.020 --> 00:02:10.560
+Naprawdę bardzo szybko, a zobaczysz teraz, jak szybko możemy to zbudować.
+
+00:02:10.570 --> 00:02:14.790
+Wróćmy do naszego folderu i zobaczymy, że wszystko zostało pobrane.
+
+00:02:15.340 --> 00:02:25.570
+Jedyne, co musimy teraz zrobić, to zmienić naszą komendę, by zacząć mówić w naszych skryptach, a powiemy "Dalej",
+
+00:02:26.740 --> 00:02:29.550
+co tu się dzieje.
+
+00:02:29.620 --> 00:02:33.290
+Mam zamiar uruchomić NPM start.
+
+00:02:33.570 --> 00:02:39.680
+Dostaję się tam i jest napisane, że nie mogę znaleźć katalogu strony, a to jest domyślne z następnym.
+
+00:02:39.810 --> 00:02:43.310
+Spodziewamy się zobaczyć tutaj katalog strony.
+
+00:02:43.410 --> 00:02:44.460
+Więc po prostu to stwórzmy.
+
+00:02:44.460 --> 00:02:45.780
+Zamierzam
+
+00:02:49.580 --> 00:02:52.720
+powiedzieć nowe strony folderów.
+
+00:02:52.760 --> 00:02:56.200
+W porządku, co uruchomimy ponownie NPM.
+
+00:03:00.640 --> 00:03:01.940
+Dobra, spójrz na to.
+
+00:03:02.110 --> 00:03:04.280
+Jest skompilowany pomyślnie.
+
+00:03:04.300 --> 00:03:06.180
+Przypomina nam to, że CCRI reaguje.
+
+00:03:06.180 --> 00:03:12.880
+Mamy wszystko skonfigurowane, jest gotowe i działa na localhost 3000, widzimy, że mamy folder stron, ale
+
+00:03:13.030 --> 00:03:19.010
+także kolejny folder, który pojawił się ponownie, podobnie jak w przypadku ponownego utworzenia.
+
+00:03:19.060 --> 00:03:25.330
+Robi mnóstwo rzeczy pod maską, w tym folder dystrybucyjny ze wszystkimi pakietami, które są
+
+00:03:25.870 --> 00:03:27.770
+już dla nas ustawione.
+
+00:03:28.610 --> 00:03:29.120
+Niesamowity.
+
+00:03:31.640 --> 00:03:34.060
+Teraz chodźmy do localhost i zobaczmy, co się stanie.
+
+00:03:34.060 --> 00:03:39.070
+Mam na myśli, że nie mamy niczego w folderze Page, ale po prostu przetestujmy to.
+
+00:03:39.160 --> 00:03:43.990
+Zamierzam powiedzieć localhost i cztery lub cztery.
+
+00:03:44.000 --> 00:03:49.530
+Nie można znaleźć tej strony, chociaż mamy naprawdę fajne powietrze, ponieważ nie mamy jeszcze żadnych
+
+00:03:49.530 --> 00:03:49.960
+stron.
+
+00:03:50.370 --> 00:03:51.500
+Zbudujmy więc jeden.
+
+00:03:53.330 --> 00:04:01.310
+Zamierzam utworzyć nowy plik i będzie to nazywać się indeksem kropka J Tak.
+
+00:04:01.420 --> 00:04:04.810
+Ponownie punkt wejścia naszej aplikacji.
+
+00:04:04.870 --> 00:04:13.980
+Pierwszą rzeczą, jaką zobaczy użytkownik, i zróbmy coś takiego, co widzieliśmy, zanim zareagujemy,
+
+00:04:13.980 --> 00:04:23.390
+zanim stworzymy komponent indeksu, a ten składnik indeksu zwróci listę rzeczy do zrobienia poprzez czystszą
+
+00:04:23.430 --> 00:04:25.730
+wersję tego .
+
+00:04:25.920 --> 00:04:33.120
+Zamiast używać nawiasów klamrowych możemy użyć rzeczywistych nawiasów, więc oceniamy tylko wyrażenie w środku i tutaj możemy
+
+00:04:33.120 --> 00:04:36.810
+po prostu powiedzieć, że to div, a wewnątrz
+
+00:04:41.900 --> 00:04:55.360
+tego div po prostu powiedzmy głowę lub jedną z S. R. magik.
+
+00:04:55.360 --> 00:04:57.660
+W porządku, powiedzmy to i zobaczmy, co się stanie.
+
+00:04:57.700 --> 00:04:59.300
+Tutaj nic się nie zmieniło.
+
+00:05:00.390 --> 00:05:02.110
+Tutaj nic się nie zmieniło.
+
+00:05:02.490 --> 00:05:06.450
+Mamy domyślny eksport nie jest elementem rehabilitacyjnym.
+
+00:05:06.450 --> 00:05:13.860
+I znów widzimy, że od razu daje nam to naprawdę miłe błędy i
+
+00:05:13.860 --> 00:05:22.650
+mówi nam, co robimy źle w tym przypadku. Powinniśmy byli wiedzieć, że musimy wyeksportować domyślny indeks.
+
+00:05:22.800 --> 00:05:32.990
+Jeśli zapiszę tę kompilację pomyślnie i mam jako S. R. magik, jak szalony jest to.
+
+00:05:33.030 --> 00:05:43.770
+Nie importowaliśmy reakcji lub reagujemy tak, jak przedtem, zanim napisaliśmy komponent i wyeksportowaliśmy go.
+
+00:05:44.170 --> 00:05:47.390
+I to jest piękno następnego.
+
+00:05:47.470 --> 00:05:52.190
+Robi wszystko dla ciebie wszystkie powtarzające się rzeczy, które robili.
+
+00:05:52.270 --> 00:05:53.610
+Nie musisz już tego robić.
+
+00:05:53.800 --> 00:05:59.050
+Wszystko, co musisz zrobić, to po prostu mieć komponenty na twoich stronach, a te będą twoimi stronami.
+
+00:05:59.050 --> 00:06:05.520
+Na przykład właśnie stworzyliśmy naszą stronę główną, nasz składnik indeksu, który renderuje wszystko automatycznie.
+
+00:06:05.680 --> 00:06:11.190
+Wyeksportowaliśmy prosty indeks komponentów Riak, taki jak.
+
+00:06:11.280 --> 00:06:17.590
+I tak, możemy nadal kwestionować to i tworzyć dowolne komponenty, które chcemy, abyśmy mogli mieć nasze własne
+
+00:06:17.590 --> 00:06:23.020
+komponenty, własne komponenty reac, aby stworzyć wszystko, co chcemy, tak jak robiliśmy to
+
+00:06:23.020 --> 00:06:29.760
+z przodu, a wszystko, co musimy zrobić, to po prostu upewnić się, że nasz składnik to domyślny eksport.
+
+00:06:29.960 --> 00:06:37.590
+A następnie jest wystarczająco inteligentny, aby wiedzieć, że po prostu zamierzam uczynić ten komponent dla ciebie i jak zobaczysz, po
+
+00:06:37.590 --> 00:06:43.730
+prostu śledzimy błędy i kompilujemy automatycznie, i poinformujemy nas o każdej okazji, że popełniliśmy błąd.
+
+00:06:45.540 --> 00:06:46.340
+Tam to masz.
+
+00:06:46.350 --> 00:06:51.950
+Ustawiliśmy następne i wszystko ładuje się idealnie.
+
+00:06:51.960 --> 00:06:56.750
+Jeśli tutaj otworzę kartę sieci i odświeżam.
+
+00:06:57.240 --> 00:07:06.150
+Widzę, że wszystkie wywołania, które otrzymuję, w tym główny indeks japes sugerują, że żądam, ale fajne jest to,
+
+00:07:06.150 --> 00:07:12.100
+że jeśli otworzę źródło strony widoku, zauważymy, że wiem, że to jest
+
+00:07:15.240 --> 00:07:18.900
+małe, więc zróbmy to trochę nieco większy.
+
+00:07:20.360 --> 00:07:23.610
+Widzimy to jako część strony shemale, którą otrzymaliśmy.
+
+00:07:23.690 --> 00:07:28.690
+Mamy maga H-1 SSR.
+
+00:07:28.690 --> 00:07:42.020
+Tak więc jest już wstępnie renderowane, gdy otrzymaliśmy to.
+
+00:07:42.050 --> 00:07:48.810
+Teraz widzisz, że mamy także kilka rzeczy, które wychodzą z pudełka z jednym pakietem i następnym
+
+00:07:48.810 --> 00:07:49.360
+zestawem.
+
+00:07:49.580 --> 00:07:52.810
+Ale na razie mamy zrenderowaną stronę serwera.
+
+00:07:52.970 --> 00:07:54.490
+Zróbmy więcej w następnym filmie.

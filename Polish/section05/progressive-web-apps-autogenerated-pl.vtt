@@ -1,0 +1,406 @@
+﻿WEBVTT
+
+00:00:00.990 --> 00:00:10.290
+Na koniec zakończmy rozmowę z optymalizacją wydajności Front-End z progresywnymi aplikacjami internetowymi.
+
+00:00:10.380 --> 00:00:20.450
+Co to jest progresywna aplikacja internetowa? Cóż, webapp to strona internetowa, która pozwala użytkownikom na interakcję ze stroną
+
+00:00:20.450 --> 00:00:23.360
+internetową na wiele sposobów.
+
+00:00:23.440 --> 00:00:34.980
+Niezależnie od tego, czy jest to gejowski Twitter czy Facebook, to w oknie przeglądarki, takim jak chrome Safari Firefox,
+
+00:00:35.070 --> 00:00:44.870
+natywna aplikacja z drugiej strony to aplikacja na telefon komórkowy, taki jak iPhone czy Samsung,
+
+00:00:46.050 --> 00:00:48.190
+co oznacza "natywny".
+
+00:00:48.430 --> 00:00:53.480
+Jest przeznaczony do pracy na rodzimej platformie, takiej jak telefon komórkowy.
+
+00:00:53.500 --> 00:01:00.750
+Czy uważasz, że aplikacje internetowe działające w przeglądarkach zachowują się bardziej jak prawdziwe w telefonie?
+
+00:01:01.210 --> 00:01:06.030
+Dobrze postępujące aplikacje internetowe to nowa technologia, której celem jest osiągnięcie tego celu.
+
+00:01:06.310 --> 00:01:13.860
+Podobnie jak aplikacje na telefonie, chcemy, aby użytkownik miał podobne doświadczenia podczas odwiedzania sieci.
+
+00:01:13.930 --> 00:01:17.590
+Ale najpierw porozmawiajmy o różnicach między tymi dwoma, aby
+
+00:01:20.900 --> 00:01:22.350
+stworzyć aplikację internetową.
+
+00:01:22.370 --> 00:01:29.250
+Wszystko, co musisz wiedzieć, to trochę H. M. C-s nas i Javascript i jesteś gotowy.
+
+00:01:30.190 --> 00:01:38.230
+Aby utworzyć natywną aplikację, która jest aplikacją na telefon komórkowy, musisz nauczyć się języka ojczystego, takiego jak Java dla
+
+00:01:38.230 --> 00:01:43.220
+aplikacji na Androida lub Objective-C i szybka dla aplikacji na iOS.
+
+00:01:44.200 --> 00:01:51.540
+W przeciwieństwie do przeglądania w przeglądarce natywne aplikacje mają wszystkie potrzebne pliki na telefonie komórkowym użytkownika.
+
+00:01:52.510 --> 00:01:58.840
+Na przykład, jeśli wejdzie on do twojego telefonu i przejrzy twoje aplikacje, zobaczysz, jak duże są te aplikacje
+
+00:01:58.840 --> 00:01:59.620
+na telefon.
+
+00:01:59.710 --> 00:02:06.930
+Patrząc na ich rozmiar pliku, a to dlatego, że w przeciwieństwie do relacji klienta
+
+00:02:06.930 --> 00:02:15.210
+serwera, która ma aplikację, która musi przejść przez żądanie M-L i wreszcie uzyskać CSSA i pliki javascript.
+
+00:02:15.390 --> 00:02:18.600
+Możesz pobrać natywne aplikacje i mieć je na swoim telefonie.
+
+00:02:18.600 --> 00:02:20.700
+Pliki po prostu żyjące w telefonie.
+
+00:02:21.540 --> 00:02:26.810
+Jedyną rzeczą, którą naprawdę możesz zrobić z aplikacją internetową, może być zakładka strony internetowej.
+
+00:02:26.820 --> 00:02:31.850
+Dodatkowo aplikacje natywne mogą wysyłać powiadomienia push.
+
+00:02:32.060 --> 00:02:40.070
+Mogą nawet pracować poza linią i nigdy nie dostaniesz pustego ekranu.
+
+00:02:40.470 --> 00:02:41.070
+Na
+
+00:02:44.270 --> 00:02:54.690
+przykład, jeśli zdecydujesz się na hub i mam wyłączoną Wi-Fi, jeśli odświeżam stronę, gdy dostaję tę małą ikonę dinozaura mówiącą, że
+
+00:02:54.720 --> 00:02:57.230
+nie ma połączenia z Internetem.
+
+00:02:57.540 --> 00:03:06.790
+Nigdy nie widzieliście, że na Native się szczęśliwy, ponieważ rodzime aplikacje są budowane do pracy off-line.
+
+00:03:07.020 --> 00:03:14.740
+Może nie ma pełnej funkcjonalności poza linią, ale nadal działa i teraz dostaje pusty ekran.
+
+00:03:14.800 --> 00:03:20.800
+W końcu dzięki aplikacjom mobilnym lub aplikacjom natywnym możesz je pobrać.
+
+00:03:20.800 --> 00:03:28.180
+W takich miejscach, jak App Store czy Google Play, nie można tego zrobić za pomocą aplikacji internetowych.
+
+00:03:29.410 --> 00:03:32.410
+Och i prawie zapomniałem z natywnymi aplikacjami.
+
+00:03:32.770 --> 00:03:38.890
+Mają także dostęp do sprzętu telefonicznego, takiego jak lokalizacja geograficzna aparatu.
+
+00:03:39.130 --> 00:03:41.620
+Powiadomienia push.
+
+00:03:41.670 --> 00:03:42.320
+W porządku.
+
+00:03:42.480 --> 00:03:43.950
+Mam nadzieję, że rozumiesz.
+
+00:03:44.070 --> 00:03:50.330
+W tej chwili nasze aplikacje mobilne i nasze aplikacje internetowe to nie to samo.
+
+00:03:52.440 --> 00:03:56.850
+A aplikacje mobilne zwykle działają lepiej niż aplikacje internetowe na telefony.
+
+00:03:58.160 --> 00:04:01.830
+I tu pojawiają się progresywne aplikacje internetowe.
+
+00:04:01.910 --> 00:04:07.150
+Teraz możesz sprawić, by aplikacje internetowe zachowywały się jak aplikacje natywne.
+
+00:04:07.220 --> 00:04:16.670
+Co mam na myśli z progresywnymi aplikacjami internetowymi, dzięki którym Twoja przeglądarka nie ma najlepszego paska RL.
+
+00:04:17.680 --> 00:04:22.030
+Tak, aby cała aplikacja obejmowała ekran i wyglądała jak aplikacja mobilna.
+
+00:04:22.300 --> 00:04:28.520
+Możesz pobrać je na swój telefon i mieć ikonę aplikacji na ekranie głównym telefonu.
+
+00:04:28.840 --> 00:04:30.330
+Mogą pracować online.
+
+00:04:30.460 --> 00:04:33.220
+Mogą wysyłać powiadomienia push w telefonie.
+
+00:04:34.140 --> 00:04:43.010
+Działają one o wiele szybciej, tak jak na telefonach, o wiele bardziej niż zwykłe aplikacje internetowe, ponieważ są zaprojektowane z
+
+00:04:43.020 --> 00:04:48.840
+myślą o urządzeniach mobilnych i istnieje kilka innych funkcji progresywnych aplikacji internetowych.
+
+00:04:48.840 --> 00:04:54.760
+Wszystko w celu uczynienia ich jak najbardziej zbliżonym do natywnego.
+
+00:04:54.770 --> 00:05:01.470
+Pomyśl o progresywnych aplikacjach internetowych i aplikacjach, ale zachowują się one bardziej jak aplikacje natywne.
+
+00:05:01.610 --> 00:05:05.470
+Nie martw się, jest to łatwiejsze do wdrożenia, niż myślisz.
+
+00:05:06.370 --> 00:05:14.120
+Podobnie jak w przypadku istniejących aplikacji internetowych, które będą hostowane bezpośrednio na powiązanych witrynach, programiści mogą aktualizować je bezpośrednio
+
+00:05:14.120 --> 00:05:20.320
+na swoim serwerze internetowym, wdrażając lub aktualizując ich centrum pobierania, jeśli jest ono hostowane
+
+00:05:20.380 --> 00:05:29.240
+na stronach pomocy, bez przesyłania tych aktualizacji do kilku różnych sklepów z aplikacjami, ponieważ w celu aktualizacji w aplikacji na iOS
+
+00:05:29.600 --> 00:05:36.520
+App Store, musisz przesłać te zmiany i uzyskać zatwierdzone przez Apple aplikacje z progresywną aplikacją internetową.
+
+00:05:36.530 --> 00:05:39.350
+Naprawdę nie musisz tego robić.
+
+00:05:39.460 --> 00:05:45.200
+A najlepsza część tej samej aplikacji będzie działać na wszystkich platformach przeglądarkowych.
+
+00:05:45.310 --> 00:05:49.120
+Oznacza to, że jeśli telefon korzysta z Safari, będzie pracował na safari.
+
+00:05:49.180 --> 00:05:52.090
+Praca w Firefoksie będzie działać w Chrome.
+
+00:05:52.940 --> 00:06:01.750
+I nie musisz się martwić, że zostanie zbudowany na system Android lub iOS lub nawet Windows.
+
+00:06:01.770 --> 00:06:04.310
+Jaki jest cel tego wszystkiego.
+
+00:06:05.120 --> 00:06:09.490
+Oczywiście lepsze wrażenia użytkownika szybsze witryny sieci Web.
+
+00:06:09.830 --> 00:06:14.690
+I już wiemy, jak ważne jest to z naszych poprzednich filmów.
+
+00:06:14.750 --> 00:06:20.480
+Wiele osób jest naprawdę podekscytowanych progresywnymi aplikacjami internetowymi i choć jest całkiem
+
+00:06:20.480 --> 00:06:26.020
+nowa, szybko sięga po Bestival z nowym zespołem 5 API.
+
+00:06:26.300 --> 00:06:32.140
+Zaczynamy coraz częściej uzyskiwać dostęp do obcego sprzętu, z którego korzystały tylko aplikacje natywne.
+
+00:06:33.660 --> 00:06:42.370
+Jeśli przejdziesz do tego, co możemy dziś zrobić, to witryna pokazuje, co możesz zrobić i platformę internetową.
+
+00:06:42.520 --> 00:06:51.200
+Kiedy budujesz swoją aplikację i widzisz, że możemy robić powiadomienia, możemy robić przechwytywanie audio i wideo.
+
+00:06:51.250 --> 00:06:58.070
+Możemy zrobić lokalizację geograficzną, więc na pewno zyskujemy coraz więcej mocy dzięki naszym aplikacjom internetowym.
+
+00:06:58.150 --> 00:07:00.980
+Teraz jest interesująca rzecz.
+
+00:07:01.030 --> 00:07:06.700
+Jak myślisz, kto wpadł na pomysł progresywnych webappów?
+
+00:07:06.730 --> 00:07:08.400
+To był Google.
+
+00:07:08.470 --> 00:07:13.950
+Jak myślisz, kto najwolniej wspiera tę ideę progresywnych aplikacji internetowych?
+
+00:07:15.840 --> 00:07:26.960
+Porzuć to Apple, ponieważ celem jest sprawić, by sieć działała jak aplikacja i możesz spojrzeć na firmy i
+
+00:07:27.050 --> 00:07:32.480
+ich zainteresowania i zobaczyć, dlaczego mieliby takie podejście.
+
+00:07:32.480 --> 00:07:36.940
+Google ma na przykład duży udział w rynku w sieci.
+
+00:07:37.040 --> 00:07:44.540
+Interesuje ich przeglądarka Chrome i ich wyniki wyszukiwania Google com, które mogą być używane tak często, jak
+
+00:07:44.540 --> 00:07:45.560
+to możliwe.
+
+00:07:45.770 --> 00:07:53.240
+Podczas gdy Apple ma zamknięty ekosystem App Store i jeśli chcesz zbudować ścianę aplikacji, musisz ją zbudować w
+
+00:07:53.240 --> 00:07:59.330
+taki sposób, w jaki Apple chce używać Celive-C lub szybkiego i używać swojego kodu X
+
+00:07:59.360 --> 00:08:03.920
+platformy programisty i przesyłać do sklepu z aplikacjami mieć aplikację.
+
+00:08:05.150 --> 00:08:13.970
+Firma Apple jest zainteresowana utrzymywaniem dominacji aplikacji na swoich telefonach, podczas gdy Google jest zainteresowane utrzymaniem
+
+00:08:14.270 --> 00:08:17.030
+swojej dominacji w Internecie.
+
+00:08:18.370 --> 00:08:22.900
+I zawsze dobrze jest myśleć o tych rzeczach, patrząc na technologie opracowane
+
+00:08:22.900 --> 00:08:27.400
+przez te duże firmy, które często są wynikiem osobistego zainteresowania.
+
+00:08:27.400 --> 00:08:32.740
+Wiem, że to brzmi pesymistycznie, ale to prawda, chociaż przynosi nam to korzyści.
+
+00:08:32.740 --> 00:08:42.770
+Dobrze jest zrozumieć nadrzędne cele, na przykład Facebook ma coś, co nazywa się rodzimym re-actem.
+
+00:08:43.160 --> 00:08:52.810
+I tak jak się nauczyliśmy, reagowanie na natywny sposób jest sposobem na tworzenie aplikacji, które działają tak, jak aplikacje natywne.
+
+00:08:52.880 --> 00:08:59.960
+Wykorzystanie rzeczywistości może teraz budować aplikacje na systemy iOS i Android, przy czym prawie 90 procent kodu jest
+
+00:08:59.960 --> 00:09:02.320
+dzielone między te dwie platformy.
+
+00:09:02.420 --> 00:09:05.500
+Zresztą, wracajmy teraz do rzeczy.
+
+00:09:05.650 --> 00:09:14.250
+Stale walczy się z tym, ponieważ Chrome zastosował tę progresywną postawę aplikacji internetowej i jabłko, które ma przeglądarkę
+
+00:09:14.340 --> 00:09:19.310
+Safari, która naprawdę nie nadąża za wprowadzeniem tych technologii.
+
+00:09:20.430 --> 00:09:23.250
+Ale w każdym razie to kosztuje ich bitwa.
+
+00:09:23.670 --> 00:09:30.270
+I tak jak wszystko, o czym wspomniałem do tej pory, nie chcemy wybierać technologii tylko dlatego, że
+
+00:09:30.270 --> 00:09:33.680
+jest biodro i fajnie i jest najnowszym szałem.
+
+00:09:33.750 --> 00:09:37.790
+Chcemy mieć pewność, że doda to wartość do naszego projektu.
+
+00:09:38.010 --> 00:09:45.040
+Teraz progresywne aplikacje internetowe będą ewoluować w miarę upływu czasu, ale głównym wyjściem jest to,
+
+00:09:45.040 --> 00:09:51.530
+że progresywne aplikacje internetowe zwiększają zadowolenie naszych użytkowników, nawet jeśli nie wszyscy.
+
+00:09:51.570 --> 00:09:58.950
+Podobnie jak ludzie z nami, jeśli jest to łatwe do wdrożenia, powinniśmy to rozważyć, ponieważ dodanie go
+
+00:09:58.950 --> 00:10:04.350
+do naszego projektu, nawet jeśli pomaga niewielu osobom, nadal jest korzystne.
+
+00:10:04.410 --> 00:10:09.030
+A wraz z upływem czasu mamy nadzieję, że coraz więcej adopcji się zdarza.
+
+00:10:09.850 --> 00:10:17.830
+Właśnie z tego powodu aplikacja do ponownej zmiany jest już gotowa z progresywnymi możliwościami aplikacji sieciowych.
+
+00:10:17.960 --> 00:10:20.000
+Słyszałeś mnie dobrze.
+
+00:10:20.000 --> 00:10:22.040
+Robią to po wyjęciu z pudełka.
+
+00:10:22.070 --> 00:10:28.670
+Ponownie stwórz ponownie aplikację, która pomoże ci w tym miejscu z kilkoma dodatkami, które pokażę
+
+00:10:28.670 --> 00:10:30.730
+W nadchodzących rozmiarach sierpnia.
+
+00:10:30.860 --> 00:10:34.100
+Możemy mieć progresywną aplikację internetową dość szybko.
+
+00:10:34.340 --> 00:10:40.130
+Tak więc twierdzę, że ponieważ jest to tak łatwe, jest już skonfigurowane w Korei, aby ponownie uruchomić aplikację.
+
+00:10:40.220 --> 00:10:45.930
+Powinniśmy wdrażać progresywne zdolności webapps, ponieważ sprawia to, że użytkownik czuje się lepiej.
+
+00:10:47.090 --> 00:10:48.710
+Zdecydowanie lepsza wydajność,
+
+00:10:51.850 --> 00:10:56.350
+ale w jaki sposób możemy uczynić naszych przyjaciół robo progresywną aplikacją internetową.
+
+00:10:56.350 --> 00:10:59.010
+Pamiętam, że to właśnie Bruno nam kazał.
+
+00:10:59.820 --> 00:11:08.640
+Na szczęście dla nas firma Google stworzyła coś, co nazywa się latarnią, a ta latarnia morska to wtyczka do
+
+00:11:08.640 --> 00:11:11.370
+wtyczki Chrome, którą możemy zainstalować.
+
+00:11:11.370 --> 00:11:18.180
+Możesz to zobaczyć już tutaj, zainstalować i uruchomić na dowolnej stronie internetowej i podać nam dane o wydajności,
+
+00:11:18.180 --> 00:11:26.520
+a także o tym, jak blisko jesteśmy do tej progresywnej aplikacji internetowej, a ja za pół roku dla nas, naszych rebelianckich przyjaciół,
+
+00:11:26.520 --> 00:11:33.240
+z redox już skonfigurowanymi i Mam link do strony internetowej, ponieważ podczas gdy potrzebujemy rzeczywistego Jesteś na
+
+00:11:33.240 --> 00:11:33.840
+zewnątrz.
+
+00:11:34.260 --> 00:11:42.610
+Więc jeśli kliknę na to, mogę przejść do wtyczki Lighthouse i powiedzieć generować raport, a to wygeneruje dla
+
+00:11:42.610 --> 00:11:44.330
+nas różne raporty.
+
+00:11:44.530 --> 00:11:51.150
+Jej aplikacja zostanie wyłączona, a następnie ponownie uruchomiona online, aby sprawdzić, czy ma jakieś funkcje offline, i
+
+00:11:51.190 --> 00:11:56.500
+sprawdza, czy ma jakieś inne funkcje, które będą mieć progresywne aplikacje internetowe.
+
+00:11:56.920 --> 00:12:04.270
+Otrzymujemy raport i jak widzisz, daje nam to kilka dodatkowych rzeczy, takich jak dostępność najlepszych praktyk
+
+00:12:04.660 --> 00:12:11.030
+Osseo, o których będziemy rozmawiać, a także wydajność, ale liczba, która nas interesuje,
+
+00:12:11.030 --> 00:12:13.210
+jest postępowym numerem Whitelock.
+
+00:12:13.310 --> 00:12:19.320
+Widzimy, że chociaż niczego nie zrobiliśmy, mamy 82 procent.
+
+00:12:19.320 --> 00:12:22.240
+Mam na myśli to, że zielony jest dobry.
+
+00:12:22.260 --> 00:12:28.150
+Jeśli przejdziemy do progresywnej mapy wojennej, powie nam nawet, co możemy zrobić, aby to naprawić.
+
+00:12:28.230 --> 00:12:33.300
+Jak mamy 82 procent, kiedy nic nie zrobiliśmy.
+
+00:12:34.700 --> 00:12:41.210
+Cóż, tak jak powiedziałem wcześniej, aplikacja do ponownego tworzenia ustawień ustawia wszystko dla nas, dzięki czemu jest łatwa do wdrożenia.
+
+00:12:41.720 --> 00:12:49.100
+I nie martw się, przejdziemy przez to i na razie osiągniemy 100% w naszym ćwiczeniu.
+
+00:12:49.250 --> 00:12:50.730
+Wystarczy mi mówić.
+
+00:12:51.050 --> 00:12:52.700
+Do zobaczenia w następnym wideo.
+
+00:12:52.700 --> 00:12:53.270
+PA pa.

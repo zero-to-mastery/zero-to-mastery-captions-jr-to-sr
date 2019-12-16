@@ -1,0 +1,115 @@
+﻿WEBVTT
+
+00:00:01.620 --> 00:00:03.000
+Bine ai revenit.
+
+00:00:03.000 --> 00:00:06.360
+Am reușit în sfârșit sau cel puțin acolo.
+
+00:00:06.360 --> 00:00:10.970
+Un ultim subiect de discuție și terminăm cu steaua securității.
+
+00:00:11.190 --> 00:00:15.280
+Să vorbim despre autentificare și s-ar putea să te gândești singur la tine.
+
+00:00:15.500 --> 00:00:15.840
+Stai asa.
+
+00:00:15.840 --> 00:00:19.460
+Am făcut acest lucru deja cu stocarea parolei.
+
+00:00:19.530 --> 00:00:27.230
+Cu un pic de injecție și folosind biblioteci actualizate și logarea HSDPA noi și toate aceste lucruri.
+
+00:00:27.290 --> 00:00:30.140
+Și ați fi văzut că unele dintre acestea se suprapun.
+
+00:00:30.260 --> 00:00:31.720
+Acesta este cazul securității.
+
+00:00:32.180 --> 00:00:39.270
+Atunci când o parte a sistemului este vulnerabilă, afectează alte părți și este așa cum sunt lucrurile acum.
+
+00:00:39.290 --> 00:00:46.070
+Autentificarea înseamnă să vă asigurați că persoana de la celălalt capăt este ceea ce ei spun că sunt.
+
+00:00:47.780 --> 00:00:54.410
+Și acest lucru se face prin parole pentru a autentifica faptul că utilizatorii spun că sunt persoana care are
+
+00:00:54.410 --> 00:00:55.930
+acces la acest cont.
+
+00:00:57.250 --> 00:01:00.600
+Și apoi, după aceea, trebuie să-i gestionăm sesiunea.
+
+00:01:00.730 --> 00:01:07.080
+Asta înseamnă să ne asigurăm că spunem că Tim este aici care îmi trimite cererea.
+
+00:01:07.120 --> 00:01:14.450
+Amintiți-vă pe Twitter nu trebuie să vă conectați de fiecare dată când vă reîmprospătați și autentificarea este
+
+00:01:14.480 --> 00:01:22.550
+cu adevărat importantă, deoarece ar putea avea consecințe cu adevărat mari, permițând atacatorilor să compromită parolele cheile sesiunii de
+
+00:01:22.550 --> 00:01:28.300
+sesiune sau alte defecte pot însemna că jocul le personifică pe alți utilizatori.
+
+00:01:29.490 --> 00:01:30.780
+Și iată ce e.
+
+00:01:31.550 --> 00:01:36.710
+Această diagramă este ceva la care ne vom întoarce, deoarece atunci când vine
+
+00:01:36.710 --> 00:01:42.770
+vorba de autentificare, avem o întreagă secțiune dedicată acesteia, unde vedem cele mai bune practici care
+
+00:01:42.770 --> 00:01:49.270
+învață despre autentificarea bazată pe sesiune și autentificarea bazată pe token și despre modul în care acestea funcționează.
+
+00:01:49.460 --> 00:01:51.410
+Dar ideile sunt aceleași.
+
+00:01:51.410 --> 00:01:59.270
+Ne asigurăm că parolele se potrivesc și că utilizatorul este ceea ce ei spun că sunt și apoi le dăm
+
+00:01:59.600 --> 00:02:07.490
+fie un cookie, fie un jeton pentru a gestiona sesiunea lor de fiecare dată când fac o cerere și știm cine
+
+00:02:07.500 --> 00:02:09.650
+știm că știm că .
+
+00:02:09.860 --> 00:02:11.510
+Asta e Tim făcând cererea ta.
+
+00:02:11.540 --> 00:02:19.680
+Să-i dăm lui Tim resursele adecvate pe care are nevoie de autentificare bună înseamnă implementarea unor reguli simple, dar adecvate de
+
+00:02:19.680 --> 00:02:26.430
+parolă, care să încurajeze utilizatorii să aibă parole aleatorii lungi în loc de parole prostești cum ar
+
+00:02:26.430 --> 00:02:33.810
+fi 2:59 doriți să utilizați ceva de genul autentificării multi-factor pentru log conectarea la Twitter necesită, de asemenea, să
+
+00:02:33.810 --> 00:02:39.270
+aveți autentificarea cu două factori pe telefonul dvs. unde trebuie să spuneți da
+
+00:02:39.510 --> 00:02:41.900
+sunt cine spun că sunt.
+
+00:02:41.910 --> 00:02:43.860
+Permiteți-mi să mă loghez și eu.
+
+00:02:43.890 --> 00:02:51.050
+De asemenea, aflăm că cookie-urile pe care doriți să le setați ar trebui să fie doar și anteturile sigure să fie adevărate.
+
+00:02:51.090 --> 00:02:56.430
+Dar, așa cum am spus, acesta este un subiect pe care cred că este cu adevărat important și avem o întreagă secțiune dedicată
+
+00:02:56.430 --> 00:02:56.880
+acestuia.
+
+00:02:57.180 --> 00:03:04.080
+Dar ideea este că avem nevoie de o modalitate de a ne asigura că oricine este de partea cealaltă avem încredere și putem avea încredere
+
+00:03:04.080 --> 00:03:06.390
+că ei spun că ei spun că sunt.

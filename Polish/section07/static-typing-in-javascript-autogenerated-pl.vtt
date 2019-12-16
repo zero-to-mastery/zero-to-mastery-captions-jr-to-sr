@@ -1,0 +1,334 @@
+﻿WEBVTT
+
+00:00:02.080 --> 00:00:02.710
+W porządku.
+
+00:00:02.710 --> 00:00:03.700
+Witamy spowrotem.
+
+00:00:03.700 --> 00:00:08.390
+W końcu przejdźmy do rzeczy i rozmawiajmy teraz o maszynopisie.
+
+00:00:08.440 --> 00:00:10.600
+Dlaczego wybrali maszynopis.
+
+00:00:10.600 --> 00:00:16.770
+Ponieważ istnieje wiele sposobów na wprowadzenie skryptów statycznych do javascript.
+
+00:00:16.780 --> 00:00:27.720
+Są takie narzędzia, jak przepływ Elm, rozum M-L, i oczywiście maszynopis, na przykład powód, dla którego M-L i
+
+00:00:27.750 --> 00:00:38.380
+flow zostały stworzone przez Facebooka i twórców na Facebooku, a maszynopis przez podejrzanych Microsoftów, ale wszyscy robią
+
+00:00:38.380 --> 00:00:39.740
+to samo.
+
+00:00:39.790 --> 00:00:43.830
+Wszyscy próbują uczynić javascript statycznie napisanym językiem.
+
+00:00:44.840 --> 00:00:47.890
+Porozmawiajmy teraz o rozsądku.
+
+00:00:48.410 --> 00:00:55.940
+Powód jest oparty na języku programowania o nazwie Camel i jak powiedziałem wcześniej jest tworzony przez
+
+00:00:55.940 --> 00:00:59.800
+Facebook, aby ułatwić programistom javascript do odbioru.
+
+00:00:59.890 --> 00:01:07.400
+Jest to język sam w sobie, ale na tyle podobny do javascript, że jest łatwy do odbioru, a Facebook faktycznie
+
+00:01:07.400 --> 00:01:10.070
+używa go w niektórych swoich projektach.
+
+00:01:10.100 --> 00:01:17.290
+A obecnie 50 procent ich posłańców z tanga jest napisane z rozsądku.
+
+00:01:17.360 --> 00:01:20.900
+To popularny język z Facebooka.
+
+00:01:21.750 --> 00:01:25.810
+W porządku, ale wciąż nie rozumiem, co to wszystko znaczy.
+
+00:01:25.930 --> 00:01:27.920
+Co może być następnym slajdem, pomoże ci.
+
+00:01:30.500 --> 00:01:32.260
+Znowu wszystkie te narzędzia.
+
+00:01:32.270 --> 00:01:40.100
+Ich celem jest sprawienie, aby napisanie javascript było trochę ładniejsze, trochę mniej błędne i wprowadzanie statycznych maszyn do
+
+00:01:40.100 --> 00:01:40.660
+pisania.
+
+00:01:41.940 --> 00:01:50.890
+A przepływ, który jest bardzo często używany w projektach re-act, nazywa się statycznym sprawdzaniem typu.
+
+00:01:51.120 --> 00:01:52.920
+Zacznijmy od tego.
+
+00:01:53.100 --> 00:02:03.780
+Flow może dodawać typy do naszego javascripta, pisząc kod, który działa z przepływem, a następnie umieszczając go w kompilatorze,
+
+00:02:03.780 --> 00:02:11.580
+takim jak prasa lub kompilator B-ball, który wypluwa javascript i wiemy, co Biblia robi
+
+00:02:11.580 --> 00:02:13.380
+z poprzednich sekcji.
+
+00:02:13.440 --> 00:02:22.290
+Potrzeba Tak 6 kodu lub tak 7 lub tak, kod i zmienia go na E. S. 5 kodów, aby wszystkie przeglądarki mogły to
+
+00:02:22.320 --> 00:02:23.120
+zrozumieć.
+
+00:02:24.060 --> 00:02:31.650
+Teraz przepływ jest statycznym statycznym sprawdzaniem typu, co oznacza, że faktycznie piszemy coś takiego na górze
+
+00:02:31.650 --> 00:02:32.760
+naszych plików.
+
+00:02:34.790 --> 00:02:43.250
+W górnej części naszych plików zrobi się coś w stylu kreska w przepływie i przepływu będzie można powiedzieć, że ten plik
+
+00:02:43.880 --> 00:02:48.380
+ma typy przepływu i mam zamiar to sprawdzić dla ciebie.
+
+00:02:48.380 --> 00:02:51.150
+Sprawdza typy ponownie.
+
+00:02:51.470 --> 00:02:55.850
+Nie przejmuj się, gdy mówimy o typach, w których faktycznie je poznajesz i kręcisz filmy.
+
+00:02:55.850 --> 00:02:58.550
+Ale znowu chcemy najpierw zbudować fundament.
+
+00:02:58.550 --> 00:03:08.470
+Jeśli wrócisz tutaj, co faktycznie robimy z przepływem, to sprawdza wszystko i polega na tym, że faktycznie może
+
+00:03:09.340 --> 00:03:16.990
+usunąć ten przepływ dodawania i wszystkie inne typy, które wprowadziliśmy do naszego kodu.
+
+00:03:16.990 --> 00:03:26.820
+Przed rozpoczęciem produkcji przed wysłaniem go do naszych użytkowników i przepływu faktycznie jest fabrycznie wbudowany w reaktor Cray.
+
+00:03:26.980 --> 00:03:35.700
+Jeśli przejdziemy do dokumentacji przepływu, która płynie dot org, widzimy to i tworzymy ponownie.
+
+00:03:35.700 --> 00:03:43.220
+Po prostu uruchamiamy te polecenia i możemy zacząć pisać sprawdzanie typów w naszym kodzie.
+
+00:03:43.320 --> 00:03:53.450
+Znowu coś, co obejmie maszynopis różni się od przepływu, ponieważ skrypt potoku ma swój własny kompilator.
+
+00:03:53.450 --> 00:04:00.500
+To nie jest tak, że przepływ zależy od tego, czy uda się usunąć cały ten dodatkowy kod, zanim splunie na
+
+00:04:00.500 --> 00:04:02.810
+javascript, który chcemy wysłać do interfejsu.
+
+00:04:03.590 --> 00:04:10.080
+Maszynopis to tak zwany nadzbiór javascript.
+
+00:04:10.080 --> 00:04:13.220
+Dodaje funkcje na javascript.
+
+00:04:13.330 --> 00:04:23.220
+Oznacza to, że javascript jest maszynopisem, a maszynopis po prostu dodaje kilka dodatkowych funkcji do
+
+00:04:23.220 --> 00:04:24.170
+Javascript.
+
+00:04:24.300 --> 00:04:26.130
+Ale ma też swój własny kompilator.
+
+00:04:26.190 --> 00:04:31.490
+Tak więc piszemy kod maszynopisu, który następnie zostanie uruchomiony przez kompilator.
+
+00:04:31.520 --> 00:04:38.250
+Pamiętam, że kompilator to po prostu maszyna, która pobiera dane z jakiegoś fragmentu kodu i
+
+00:04:38.310 --> 00:04:40.230
+wyprowadza inny fragment kodu.
+
+00:04:40.230 --> 00:04:47.440
+W naszym przypadku zamierzamy przekonwertować go z maszynopisu na javascript, który nasze przeglądarki potrafią czytać dokładnie tak, jak
+
+00:04:47.440 --> 00:04:49.540
+mówiłem o tym wcześniej.
+
+00:04:49.550 --> 00:04:56.230
+M-L ma to samo, co jego własny kompilator i przejdzie przez kompilator i wypluje kod
+
+00:04:56.230 --> 00:04:56.820
+JavaScript.
+
+00:04:56.830 --> 00:05:06.070
+Różnica między maszynopisem a rozumem M-L jest tym, że powodem jest całkowicie odrębny język od javascript na własnym maszynopisie, który
+
+00:05:06.070 --> 00:05:10.690
+próbuje naśladować javascript i rozwijać się za pomocą javascript.
+
+00:05:10.690 --> 00:05:12.430
+Tak jak powiedziałem, to superset.
+
+00:05:12.430 --> 00:05:16.110
+Ale rozum M-L to zupełnie inny język.
+
+00:05:16.210 --> 00:05:20.900
+Nie zależy od zmian javascript w ekosystemie.
+
+00:05:20.900 --> 00:05:29.410
+Dowolny z tego i Wiąz jest dokładnie taki sam jak powód M-L to własny język, który jest bezpieczny,
+
+00:05:29.420 --> 00:05:32.880
+ma własny kompilator i wypluwa JavaScript.
+
+00:05:33.260 --> 00:05:37.290
+Więc możesz usłyszeć w javascript ludzie używający tych narzędzi.
+
+00:05:37.310 --> 00:05:42.710
+Jedną rzecz, na którą powinieneś się skupić, ponieważ Wiąz i rozum M-L są wciąż całkiem nowe.
+
+00:05:42.830 --> 00:05:47.330
+Nie znajdziesz tam zbyt wielu zleceń, które by o to poprosiły.
+
+00:05:47.330 --> 00:05:55.190
+Miło jest nauczyć się interesującego, ale znowu przez większość czasu patrzysz na obie strony
+
+00:05:55.520 --> 00:05:57.600
+nauki lub maszynopis.
+
+00:05:57.660 --> 00:06:04.950
+Powodem, dla którego uczę pisania skryptu zamiast przepływu w tym kursie jest to, że wzrost maszynopisu
+
+00:06:05.220 --> 00:06:09.560
+przewyższa wszystkie inne, których nauczyliśmy się w tej sekcji.
+
+00:06:09.570 --> 00:06:18.560
+Cała ta niegdyś duża część tego polega na tym, że kąt jest zbudowany za pomocą maszynopisu i maszynopisu.
+
+00:06:18.630 --> 00:06:24.090
+Więc jeśli jesteś kanciastym programistą, domyślnie używasz już maszynopisu.
+
+00:06:25.400 --> 00:06:32.480
+Jednak wiele społeczności Riak również zaczęło używać maszynopisu i po prostu ogólna społeczność
+
+00:06:32.480 --> 00:06:41.320
+javascript zaczyna coraz bardziej przyzwyczajać się do używania tego i chociaż przepływ został stworzony specjalnie do pracy
+
+00:06:41.320 --> 00:06:46.360
+z maszynopisem re-act, który obecnie wyprzedza jego popularność.
+
+00:06:46.360 --> 00:06:48.660
+Dlatego chcieliśmy się tego nauczyć.
+
+00:06:48.910 --> 00:06:55.840
+Dodatkowo, gdy nauczysz się, jak w przypadku większości rzeczy, gdy nauczysz się jednej metody, łatwo jest uzyskać przepływ
+
+00:06:55.840 --> 00:06:59.050
+i jak działa typowanie statyczne w przepływie.
+
+00:06:59.140 --> 00:07:06.340
+Przy okazji, jeśli mi nie ufasz, jeśli przyjrzymy się badaniu przepełnienia stosu z tego roku,
+
+00:07:08.160 --> 00:07:16.200
+zobaczymy, że najbardziej lubiane języki, podczas gdy mamy pytona Russ Codlin, mamy tam javascript, ale widzisz maszynopis,
+
+00:07:16.190 --> 00:07:19.170
+ponieważ jest to jego własny język.
+
+00:07:19.170 --> 00:07:22.230
+Chodzi mi o to, że jest to nadzbiór javascript, ale jest tam.
+
+00:07:22.230 --> 00:07:33.310
+Jest bardzo bardzo lubiany, a także bardzo wysoki w sekcji "Wanted", więc jest bardzo ważny i jeśli spojrzysz gdziekolwiek,
+
+00:07:33.310 --> 00:07:36.380
+wszyscy są naprawdę podekscytowani maszynopisami.
+
+00:07:37.270 --> 00:07:42.590
+Jedna szybka notatka, dlaczego tak, według ciebie, kanciasta jest tak wielkim fanem maszynopisu.
+
+00:07:44.170 --> 00:07:45.540
+Teraz to tylko moja opinia.
+
+00:07:45.550 --> 00:07:49.840
+Mogę się mylić, ale jeśli pamiętasz, powiedziałem, że kanciasty jest jak kuchnia.
+
+00:07:49.870 --> 00:07:56.440
+To świetne rozwiązanie dla dużych firm, takich jak banki, aby upewnić się, że ich
+
+00:07:56.620 --> 00:08:04.060
+potężne zespoły programistów pracują w kuchni, która ma już wszystko zdefiniowane jak gotować chleb lub jak
+
+00:08:04.480 --> 00:08:13.050
+gotować maszynę do pisania dodaje statyczne pisanie, które dodaje dodatkową warstwę bezpieczeństwa lub dodatkową warstwę bezpieczeństwa typu w kodzie.
+
+00:08:13.180 --> 00:08:17.730
+Ponownie rozbudowujemy tę kuchnię, aby upewnić się, że kody lub kodery.
+
+00:08:17.740 --> 00:08:21.160
+Twórcy w zespole grają zgodnie z zasadami.
+
+00:08:21.220 --> 00:08:23.230
+Myślę, że to całkiem interesujące.
+
+00:08:23.290 --> 00:08:25.080
+Wróćmy więc do tematu.
+
+00:08:25.920 --> 00:08:30.360
+Jako programiści musimy zrozumieć, dlaczego wkładamy rzeczy do naszych projektów.
+
+00:08:30.570 --> 00:08:36.200
+Nie chcemy po prostu podążać za trendem, ponieważ pokazałem wam diabła z ankiety i
+
+00:08:36.210 --> 00:08:41.780
+każdy używa maszynopisu i po prostu przeskoczył do najnowszego modowego starszego programisty.
+
+00:08:41.820 --> 00:08:48.490
+Musimy sami zdecydować, co działa dla naszego projektu i naszego zespołu, i co ma sens.
+
+00:08:49.190 --> 00:08:55.350
+Oto mój szkic, kiedy używać statycznego sprawdzania typu maszynopisu.
+
+00:08:55.470 --> 00:09:03.980
+Twój projekt staje się coraz większy. Masz już napisane testy i coraz więcej programistów dołącza do
+
+00:09:03.980 --> 00:09:04.570
+zespołu.
+
+00:09:04.700 --> 00:09:11.600
+Chcesz, aby kod sam się dokumentował, a także aby uniknąć błędów, ponieważ ludzie potrzebują kodu.
+
+00:09:11.600 --> 00:09:18.740
+Masz również budżet w firmie, aby szkolić nowych pracowników do nauki tego nowego języka i oczekiwać, że
+
+00:09:18.950 --> 00:09:20.450
+nasz cykl rozwoju.
+
+00:09:20.450 --> 00:09:26.210
+Tak szybko możemy pisać funkcje, a kod będzie wolniejszy, ponieważ teraz piszemy
+
+00:09:26.210 --> 00:09:27.360
+więcej kodu.
+
+00:09:27.830 --> 00:09:28.780
+To twoja lista kontrolna.
+
+00:09:28.790 --> 00:09:30.770
+Jeśli tak jest, to powinniśmy dodać maszynopis.
+
+00:09:30.770 --> 00:09:32.140
+Jeśli nie, nie powinniśmy.
+
+00:09:32.330 --> 00:09:37.960
+Ale aby to naprawdę zrozumieć, musimy napisać maszynopis i przejść przez
+
+00:09:39.140 --> 00:09:42.330
+ten proces, więc wreszcie przyjmijmy kodowanie.
+
+00:09:42.360 --> 00:09:44.400
+Zobaczę w następnym wideo przez.

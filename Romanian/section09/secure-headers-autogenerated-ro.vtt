@@ -1,0 +1,196 @@
+﻿WEBVTT
+
+00:00:01.330 --> 00:00:09.730
+Așa cum am menționat anterior, antetele antetului sau HTP sunt cu adevărat importante în a spune browserului ce să facă cu
+
+00:00:10.000 --> 00:00:12.880
+unele dintre conținutul pe care l-am livrat.
+
+00:00:13.240 --> 00:00:18.720
+Și uneori, pentru a le spune serverelor ce să facă și ei cu acestea ar trebui să fie solicitări.
+
+00:00:18.730 --> 00:00:24.910
+Există o grămadă de ele și voi lăsa o resursă pentru tine să le citești pentru că este faptul că
+
+00:00:24.940 --> 00:00:27.010
+este în afara scopului acestui curs.
+
+00:00:27.550 --> 00:00:32.500
+Dar o să mă placi foarte mult pentru că voi face acest proces foarte simplu pentru tine.
+
+00:00:33.310 --> 00:00:39.420
+Pentru a avea antete sigure în ceva de genul asta, trebuie să facem asta.
+
+00:00:39.420 --> 00:00:46.180
+Din nou, acestea sunt probleme pe care toată lumea le are în aplicațiile lor, astfel încât există pachete care vă ajută
+
+00:00:46.180 --> 00:00:47.330
+să ușurați lucrurile.
+
+00:00:48.880 --> 00:00:51.430
+Așa că avem nevoie doar de casca de instalare NPM.
+
+00:00:51.430 --> 00:00:53.090
+Acum, permiteți-mi să vă arăt cum funcționează.
+
+00:00:54.960 --> 00:01:02.120
+Dacă mă întorc la aplicația mea aici și să minimizăm acest lucru pentru moment, putem vedea tot ce trebuie să
+
+00:01:02.270 --> 00:01:05.570
+vedem ce se întâmplă fără a folosi casca.
+
+00:01:05.570 --> 00:01:14.800
+Am de gând să tip ceva aici și să deschidem fila Network și să trimitem niște jabberish.
+
+00:01:14.800 --> 00:01:15.260
+In regula.
+
+00:01:15.260 --> 00:01:17.480
+Mi-am luat secretul
+
+00:01:20.170 --> 00:01:28.870
+și văd în anteturile mele că am toate aceste mici informații, uite că am informații
+
+00:01:29.170 --> 00:01:33.690
+că acest site web este alimentat de Xpress.
+
+00:01:33.730 --> 00:01:40.750
+Acum, asta ar putea să nu pară o informație importantă, ci un hacker informat, poate că acum îl
+
+00:01:40.880 --> 00:01:48.670
+pot să-l vulnerheze și să-mi exprime și poate că dacă nu am actualizat serverul meu expres că actorul rău poate folosi
+
+00:01:48.940 --> 00:01:51.210
+acum aceste vulnerabilități împotriva mea.
+
+00:01:51.430 --> 00:01:58.270
+Există multe anteturi de genul care afectează cu adevărat securitatea aplicației.
+
+00:01:58.540 --> 00:02:06.520
+Și avem acest pachet numit Hammad pe care îl instalez pe fiecare server pe care l-am construit și pe
+
+00:02:06.670 --> 00:02:14.050
+cască, după cum puteți vedea vă ajută să vă asigurați aplicațiile expres prin setarea diferitelor antete
+
+00:02:14.110 --> 00:02:21.520
+și există instrumente pentru alte lucruri decât expresia, dar Express este, în general, bine documentate în comunitate.
+
+00:02:23.210 --> 00:02:25.480
+Și după cum puteți vedea aici, este destul de ușor.
+
+00:02:25.520 --> 00:02:28.420
+Deci, să copiem și să lipim acest lucru.
+
+00:02:28.490 --> 00:02:31.100
+Voi instala Helmut.
+
+00:02:31.110 --> 00:02:46.920
+Să ne întoarcem aici și să instalăm Helmut, iar noi îl putem include ca casca egală cu căștile necesare.
+
+00:02:46.920 --> 00:02:47.820
+Perfect.
+
+00:02:47.820 --> 00:02:56.990
+Și apoi, dacă ne uităm la documentație imediat după ce aplicația este egală cu Express, putem folosi
+
+00:02:57.030 --> 00:03:05.890
+din nou Helmut și un alt middleware. Deci interceptăm TB-urile și adăugăm sau modificăm anteturile.
+
+00:03:05.900 --> 00:03:13.890
+Amintiți-vă în loc de a face acest tip de lucru în cazul în care trebuie să setați casca anteturi face acest lucru pentru noi.
+
+00:03:14.240 --> 00:03:15.860
+Așa că lupta salvați.
+
+00:03:16.180 --> 00:03:24.080
+Ron NPM începe și se întoarce la aplicația noastră și să refăcut aici.
+
+00:03:24.370 --> 00:03:29.380
+Și voi trimite doar altceva.
+
+00:03:29.390 --> 00:03:35.780
+În regulă, primesc o cerere de solicitant, dar verificați asta.
+
+00:03:35.780 --> 00:03:43.540
+Nu există nici un paragraf X de mai mult, dar avem toate aceste antete, cum ar fi cross-site scripting protecție opțiuni de
+
+00:03:43.610 --> 00:03:48.710
+descărcare gratuită opțiune de descărcare DNS prefetch de control opțiuni Content-Type arata asta.
+
+00:03:48.710 --> 00:03:54.370
+Chiar avem o siguranță strictă de transport Max Saige.
+
+00:03:54.740 --> 00:03:57.050
+Aceasta este o lege a lucrurilor.
+
+00:03:57.050 --> 00:04:04.250
+Și știi ce hametz ne fixează toate aceste lucruri dacă ne defilează jos vedeți că puteți face clic pe
+
+00:04:04.250 --> 00:04:12.340
+toate acestea și vă arată ce se stabilește și ce este setat implicit deoarece unele dintre aceste lucruri nu sunt setate
+
+00:04:12.340 --> 00:04:16.650
+astfel încât să aveți unele libertate de a le ajusta.
+
+00:04:16.900 --> 00:04:22.360
+Dar afară din cutie doar prin rulare de cască fără a face nici o configurație avem toți
+
+00:04:22.390 --> 00:04:23.800
+acești gardieni în loc.
+
+00:04:23.800 --> 00:04:31.990
+De exemplu, H. S. TS sau o siguranță strictă de transport pe care am văzut-o aici.
+
+00:04:32.160 --> 00:04:33.410
+Unde era.
+
+00:04:33.420 --> 00:04:34.680
+Acolo te duci.
+
+00:04:34.710 --> 00:04:44.100
+Acest lucru spune că, cu acest site web vom permite doar AC DC s pe server și redirecționează orice apeluri făcute de acest client către
+
+00:04:44.790 --> 00:04:53.370
+CBS și are o vârstă maximă care spune că vreau să vă amintiți acest lucru atât de mult timp și acest lucru
+
+00:04:53.370 --> 00:04:55.560
+se simte este un an.
+
+00:04:55.560 --> 00:04:56.410
+E mult timp.
+
+00:04:56.760 --> 00:05:05.030
+Și opțiunea de mare putere prin care este X alimentat de antet care a fost eliminat.
+
+00:05:05.070 --> 00:05:09.050
+Amintiți-vă că a arătat Xpress din cauza lui Helmut.
+
+00:05:09.050 --> 00:05:09.700
+Acolo te duci.
+
+00:05:09.710 --> 00:05:11.610
+Soluție simplă și simplă.
+
+00:05:11.690 --> 00:05:15.530
+Puteți continua și citiți toate aceste antete și alte titluri de securitate.
+
+00:05:15.590 --> 00:05:23.360
+Dar Helmut acoperă sincer o mare parte din aceste probleme și dacă aveți casca ca parte a aplicației dvs. în timp ce sunteți
+
+00:05:23.360 --> 00:05:24.850
+destul de mult stabilite.
+
+00:05:26.240 --> 00:05:29.470
+Vedeți că ți-am spus că va fi un film frumos și ușor.
+
+00:05:29.930 --> 00:05:32.570
+Cred că merităm asta din când în când.
+
+00:05:32.570 --> 00:05:33.140
+In regula.
+
+00:05:33.230 --> 00:05:34.560
+Ne vedem în următorul.
+
+00:05:34.560 --> 00:05:35.020
+Pa! Pa.

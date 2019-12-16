@@ -1,0 +1,217 @@
+﻿WEBVTT
+
+00:00:01.110 --> 00:00:09.870
+Să vorbim despre primul nostru subiect din rețelele de distribuire de conținut sau TDX și este un subiect pe care l-am
+
+00:00:09.870 --> 00:00:18.360
+acoperit puțin în cursul căruia îi ajută să accelereze aproape orice site web prin cache-ul fișierelor sale în servere
+
+00:00:18.360 --> 00:00:19.870
+din întreaga lume.
+
+00:00:21.040 --> 00:00:28.290
+Vedeți dacă vizitatorii dvs. vin din Europa Asia de Nord America de Nord oriunde altundeva.
+
+00:00:28.510 --> 00:00:36.900
+Conținutul este difuzat automat de la cel mai apropiat server pentru cel mai rapid Spizz posibil.
+
+00:00:37.000 --> 00:00:44.500
+Iar această diagramă este de pe site-ul web CloudFlare, probabil cel mai popular serviciu CDN din America de Nord creat este
+
+00:00:45.450 --> 00:00:48.210
+extrem de simplu pe site-ul lor Web.
+
+00:00:48.210 --> 00:00:50.120
+Nu trebuie să faceți nimic cu codul.
+
+00:00:50.250 --> 00:00:55.740
+Pur și simplu treceți prin pagina lor web spuneți-le ce trebuie să faceți și fac toată munca grea pentru dvs.
+
+00:00:57.240 --> 00:01:06.050
+Tot ce trebuie să faceți este să vă actualizați serverele de nume DNS pentru a utiliza legea dreptului de autor și aceasta se declanșează automat.
+
+00:01:06.060 --> 00:01:08.090
+Ce înseamnă asta?
+
+00:01:08.400 --> 00:01:16.380
+Ei bine, inițial, dacă acesta este serverul nostru de origine, care este propriul nostru server, avem
+
+00:01:16.380 --> 00:01:26.600
+toate fișierele noastre și aceste servere CDN sunt deținute de CloudFlare Ei bine inițial cererea unui utilizator permite să spună utilizatorilor din
+
+00:01:26.600 --> 00:01:35.780
+Alaska atunci când un utilizator solicită o pagină web utilizatorii cereți, deoarece modificăm în cadrul KLOV pentru flare și
+
+00:01:35.780 --> 00:01:44.510
+spuneți-i hei, în loc să ne vină direct la serverul de origine, am modificat configurația DNS astfel încât
+
+00:01:44.750 --> 00:01:49.000
+acest utilizator să fie direcționat către serverele CloudFlare.
+
+00:01:49.220 --> 00:01:56.090
+Deci, ei se duc la cererea inițială a serverului de margine și acesta este
+
+00:01:56.480 --> 00:02:06.780
+ceea ce noi numim un server CDN face uneori o cerere către serverul de origine pentru conținutul solicitat de utilizator și serverul de
+
+00:02:07.050 --> 00:02:09.030
+origine răspunde cu cererea.
+
+00:02:09.260 --> 00:02:13.520
+Și apoi, în cele din urmă, serverul răspunde clientului.
+
+00:02:13.520 --> 00:02:16.470
+În regulă, așa că nu pare mai rapidă.
+
+00:02:17.340 --> 00:02:26.480
+Ei bine, valoarea unui CDN este apropierea de client care apare după solicitarea inițială către serverul de origine.
+
+00:02:26.540 --> 00:02:33.460
+Vedeți prima dată în jurul acestui server pentru a obține fișierele de pe serverul de origine.
+
+00:02:33.490 --> 00:02:39.420
+Cu toate acestea, se face ceva numit caching unde din nou vom acoperi în această secțiune.
+
+00:02:39.880 --> 00:02:48.420
+După solicitarea inițială, aceste date sunt stocate în cache sau reținute în rețeaua Cdn, astfel încât fiecare solicitare ulterioară de
+
+00:02:48.420 --> 00:02:55.350
+la client trebuie doar să meargă până la cel mai apropiat server care este aici.
+
+00:02:55.740 --> 00:03:02.220
+Deci, orice alte solicitări de la acest client vor merge întotdeauna la acest server și nu trebuie să vă faceți griji
+
+00:03:02.220 --> 00:03:04.110
+cu privire la serverul de origine.
+
+00:03:04.150 --> 00:03:06.370
+De ce este util acest lucru.
+
+00:03:06.510 --> 00:03:09.540
+Evident, îmbunătățește viteza de încărcare a paginii.
+
+00:03:09.540 --> 00:03:12.690
+Există, de asemenea, configurați astfel încât să se ocupe de sarcini mai mari de trafic.
+
+00:03:13.050 --> 00:03:19.380
+Se poate bloca spammerii răzuiți și alți răi bots, deoarece în timp ce CloudFlare și alte companii care oferă acest lucru
+
+00:03:19.380 --> 00:03:25.230
+se specializează în acest lucru, astfel încât să dedice o mulțime de timp echipei lor de inginerie pentru a
+
+00:03:25.230 --> 00:03:26.330
+rezolva aceste probleme.
+
+00:03:26.340 --> 00:03:33.660
+Reduce consumul de lățime de bandă și uneori efectuează și echilibrarea încărcărilor între mai multe servere.
+
+00:03:33.810 --> 00:03:37.950
+Din nou, echilibrarea încărcării este ceva care va acoperi în această secțiune.
+
+00:03:37.950 --> 00:03:41.010
+În cele din urmă, este de asemenea foarte sigur.
+
+00:03:41.010 --> 00:03:44.440
+De obicei, vă permit să trimiteți fișiere statice pe o foaie.
+
+00:03:44.520 --> 00:03:45.290
+Da.
+
+00:03:45.300 --> 00:03:53.200
+Și, de asemenea, protejarea site-urilor web de lucruri cum ar fi atacurile de sistem de operare sau distribuirea de atacuri de negare a serviciilor.
+
+00:03:53.220 --> 00:03:55.700
+Deci există multe avantaje.
+
+00:03:56.220 --> 00:04:00.310
+Acum, în acest exemplu, am folosit CloudFlare, dar există multe opțiuni acolo.
+
+00:04:01.300 --> 00:04:07.120
+Desigur, avem CloudFlare și puteți vedea câte servere pe care le au în întreaga lume, care, bazându-se
+
+00:04:07.120 --> 00:04:11.840
+pe unde sunt utilizatorii, se pot conecta la cel mai apropiat server.
+
+00:04:11.860 --> 00:04:20.880
+Există, de asemenea, cloud popular Amazon trunked și apoi Microsoft are propria rețea Microsoft Azure de livrare
+
+00:04:20.880 --> 00:04:22.090
+a conținutului.
+
+00:04:22.380 --> 00:04:27.500
+Și există o mulțime de alte resurse, dar aceste trei sunt probabil cele mai populare.
+
+00:04:27.530 --> 00:04:28.760
+Acum, să ne întoarcem la
+
+00:04:31.490 --> 00:04:35.720
+diagramă pentru a înțelege de ce anunțurile CDN sunt atât de populare și atât de utilizate pe scară largă.
+
+00:04:35.810 --> 00:04:41.970
+Trebuie să dăm seama care este problema și problema este ceva numit latență.
+
+00:04:42.320 --> 00:04:49.160
+Este întârzierea enervantă care apare din momentul în care l-am lovit pe Enter pentru a solicita o pagină web pentru a
+
+00:04:49.160 --> 00:04:52.140
+obține de fapt încărcarea paginii web în browserul meu.
+
+00:04:53.830 --> 00:04:59.410
+Această întârziere este afectată de o serie de factori și am vorbit despre aceasta
+
+00:04:59.500 --> 00:05:08.270
+și despre secțiunea de optimizare a rețelei în toate cazurile, deși o mare parte din aceasta este întârzierea de distanța fizică dintre dvs.
+
+00:05:08.270 --> 00:05:10.890
+și site-urile web care găzduiesc serverul.
+
+00:05:11.070 --> 00:05:14.100
+Să folosim această diagramă ca exemplu.
+
+00:05:14.890 --> 00:05:15.910
+O cerere.
+
+00:05:15.990 --> 00:05:20.640
+Să presupunem că am fost la New York în Singapore un server care este în Singapore.
+
+00:05:20.640 --> 00:05:29.360
+Ei bine, aceasta este o lungă distanță lungă și o cerere nu merge neapărat direct la Singapore.
+
+00:05:29.490 --> 00:05:35.910
+Cel mai adesea, hameii de la un router la un alt router la o altă oră până când ajunge tot drumul în Singapore și apoi
+
+00:05:36.270 --> 00:05:39.180
+în cele din urmă trebuie să trimită acele fișiere înapoi.
+
+00:05:40.060 --> 00:05:48.870
+Acum este destul de clar cum CDN îmbunătățește această latență prin tragerea fișierelor de conținut static de la serverul de
+
+00:05:48.870 --> 00:05:54.690
+origine și Singapore într-o rețea distribuită CDN și un proces numit caching.
+
+00:05:55.020 --> 00:06:01.100
+Deci, dacă serverul era doar în Portugalia, serverul Cdn era doar în Portugalia.
+
+00:06:01.170 --> 00:06:03.220
+Evităm toate aceste hamei suplimentare.
+
+00:06:04.410 --> 00:06:07.660
+Și acesta este un punct în care nu trebuie să mergem mai departe.
+
+00:06:07.770 --> 00:06:14.010
+Este destul de evident de ce rețelele CDN sunt valoroase și doriți să utilizați companii
+
+00:06:14.010 --> 00:06:24.320
+care au deja servere în întreaga lume, cum ar fi CloudFlare Amazon și Microsoft, deoarece acestea au deja acea specialitate și sunt destul de ieftine
+
+00:06:24.320 --> 00:06:28.940
+de utilizat și unele oferă opțiuni gratuite cum ar fi CloudFlare.
+
+00:06:28.940 --> 00:06:30.960
+Deci, cu siguranta, da-i drumul.
+
+00:06:31.010 --> 00:06:35.710
+Ori de câte ori aveți nevoie pentru a optimiza livrarea fișierelor la capătul din față.
+
+00:06:35.920 --> 00:06:37.780
+Voi vedea în următorul Buh-Bye.

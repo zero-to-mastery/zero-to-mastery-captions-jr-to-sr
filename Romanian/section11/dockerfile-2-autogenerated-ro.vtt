@@ -1,0 +1,298 @@
+﻿WEBVTT
+
+00:00:01.410 --> 00:00:02.310
+Bine ai revenit.
+
+00:00:02.610 --> 00:00:07.730
+Am învățat câteva comenzi docker și cum să creezi o luptă de vânătoare.
+
+00:00:08.220 --> 00:00:10.610
+Dar sunt câteva lucruri pe care vrem să le facem.
+
+00:00:10.620 --> 00:00:17.700
+De exemplu, avem versiunea noastră a unui nod, dar în mod ideal putem să ne rupem API-ul creier inteligent în
+
+00:00:17.760 --> 00:00:18.760
+acest container.
+
+00:00:18.930 --> 00:00:20.360
+Cum putem face asta?
+
+00:00:20.760 --> 00:00:24.090
+În acest film să abordăm asta.
+
+00:00:24.260 --> 00:00:27.550
+Permiteți-mi să vă prezint câteva alte comenzi de docare pe care le putem folosi.
+
+00:00:27.560 --> 00:00:32.400
+Primul este directorul de lucru sau instruirea muncitorului.
+
+00:00:32.540 --> 00:00:36.910
+Și asta spune că acesta este directorul din containerul din care ne dorim să lucrăm.
+
+00:00:37.010 --> 00:00:44.800
+Și voi crea doar unul care spune API pentru aplicații inteligente sau logistice inteligente.
+
+00:00:45.750 --> 00:00:47.790
+Și acesta este directorul de lucru.
+
+00:00:47.790 --> 00:00:54.400
+Data viitoare când intrăm în spatele containerului ne găsim aici.
+
+00:00:55.490 --> 00:01:04.100
+Următoarea pe care o dorim să o folosim este ceva de genul copie în copie, pe măsură ce numele sugerează
+
+00:01:04.100 --> 00:01:10.190
+că copiază tot ceea ce ne dorim din directorul nostru curent în container.
+
+00:01:10.190 --> 00:01:14.420
+În cazul nostru, acesta este directorul nostru rădăcină, astfel încât să putem spune că vrem să
+
+00:01:17.080 --> 00:01:17.860
+copiem totul.
+
+00:01:18.370 --> 00:01:19.670
+Și acest director rădăcină.
+
+00:01:19.750 --> 00:01:24.470
+Și unde vrem să o punem în containerul nostru.
+
+00:01:24.550 --> 00:01:28.580
+În cazul nostru, vrem să o punem în directorul nostru de lucru, astfel încât să îl putem păstra așa cum este.
+
+00:01:28.930 --> 00:01:33.360
+Și pe calea asta, pot face ceva de genul: Dacă vreau doar
+
+00:01:35.520 --> 00:01:41.670
+să copiez pachetul de pachete Jaison, aș putea să fac și asta, pentru că asta e la directorul rădăcină.
+
+00:01:41.740 --> 00:01:44.890
+Înainte de acum vrem să copiem totul.
+
+00:01:44.900 --> 00:01:46.070
+Acolo te duci.
+
+00:01:46.130 --> 00:01:53.840
+Și apoi ultima comandă pe care o voi învăța este rulați și rulați pur și simplu spunând ce ar trebui să facem aici și
+
+00:01:54.440 --> 00:01:57.660
+ce tip de comenzi ar trebui să alergăm în container.
+
+00:01:58.010 --> 00:02:03.210
+Și vrem să executați instalarea NPM deoarece am creat un director de lucru.
+
+00:02:03.300 --> 00:02:08.410
+Am copiat toate aceste fișiere și apoi vom dori să executați instalarea NPM.
+
+00:02:08.420 --> 00:02:15.750
+Ceea ce facem atunci când facem clona pe desktop-ul nostru proiectul nostru și apoi executați instalarea NPM.
+
+00:02:15.890 --> 00:02:17.080
+Acesta este exact același lucru.
+
+00:02:18.080 --> 00:02:20.980
+Și puteți rula mai multe comenzi aici.
+
+00:02:20.990 --> 00:02:27.540
+Acum s-ar putea să vă gândiți Care este diferența dintre rularea și comanda acum rulată este ceea ce numim o imagine.
+
+00:02:27.600 --> 00:02:28.330
+Etapa.
+
+00:02:28.460 --> 00:02:33.860
+Statul containerului după o comandă de rulare va fi angajat în doc sau imagine.
+
+00:02:33.860 --> 00:02:42.600
+Deci, un fișier Daco poate rula mai multe etape de rulare care se suprapun unul pe altul pentru a construi imaginea pe care o dorim.
+
+00:02:42.660 --> 00:02:49.540
+Acum, comanda, pe de altă parte, este ceva care implicit implicit când lansați imaginea de construire.
+
+00:02:49.620 --> 00:02:56.690
+Deci, un doc sau o cădere poate avea doar un singur comentariu și care de obicei vine la sfârșitul toamnei.
+
+00:02:56.730 --> 00:03:00.370
+Deci, haideți să verificăm și să vedem ce se întâmplă dacă voi rula aceste comenzi acum.
+
+00:03:00.570 --> 00:03:06.400
+Dacă intru în terminalul meu și din nou să-l fac puțin mai mare.
+
+00:03:06.550 --> 00:03:17.120
+Și încă o dată, docarul Iranului ne-a construit super-minunat.
+
+00:03:17.130 --> 00:03:17.530
+In regula.
+
+00:03:17.550 --> 00:03:18.840
+Vedeți că mai sunt pași.
+
+00:03:18.840 --> 00:03:21.700
+Acum rulează instalarea NPM.
+
+00:03:21.780 --> 00:03:24.180
+Avem un avertisment, dar cred că ar trebui să fie bine.
+
+00:03:24.180 --> 00:03:29.490
+Și apoi, în final, executăm comanda cu cinci pași și se pare că a fost construită cu succes
+
+00:03:32.890 --> 00:03:33.240
+acum.
+
+00:03:33.270 --> 00:03:36.500
+Să mergem de fapt în container și să vedem ce sa întâmplat.
+
+00:03:36.570 --> 00:03:46.360
+Vrem să clarificăm acest lucru și să spunem că docker-ul rulează din nou Highty și apoi container super minunat funcționează ca acest
+
+00:03:49.210 --> 00:03:56.510
+lucru directorul nostru de lucru este utilizatorul sursă inteligente creier API pe care tocmai am definit.
+
+00:03:56.550 --> 00:04:05.160
+Și dacă fac anul trecut cât de cool este că avem toate fișierele noastre de pe computerul nostru în acest container.
+
+00:04:05.160 --> 00:04:07.340
+Și am instalat și NPM.
+
+00:04:07.440 --> 00:04:13.450
+Deci, teoretic, dacă alerg și încep pm aici cât de cool
+
+00:04:16.480 --> 00:04:18.120
+este asta.
+
+00:04:18.160 --> 00:04:23.000
+Serverul nostru rulează pe un container chiar acum într-un container de andocare.
+
+00:04:23.020 --> 00:04:25.430
+O aplicație rulează pe portul 3000.
+
+00:04:25.790 --> 00:04:26.010
+O.K.
+
+00:04:26.020 --> 00:04:28.060
+Așa că hai să verificăm.
+
+00:04:28.090 --> 00:04:34.530
+Deschid o nouă filă și să facem doar trei mii de localnici.
+
+00:04:34.980 --> 00:04:37.040
+Site-ul poate fi atins.
+
+00:04:37.350 --> 00:04:41.670
+Și asta pentru că localhost se referă la computerul nostru.
+
+00:04:42.000 --> 00:04:48.390
+Dar dacă vă amintiți despre discuția noastră, toate containerele sunt containere, un lucru complet separat care rulează pe
+
+00:04:48.390 --> 00:04:49.210
+cont propriu.
+
+00:04:49.530 --> 00:04:54.150
+Și calculatorul nostru nu are cunoștință de containerul acela.
+
+00:04:54.770 --> 00:04:56.190
+Și asta e treaba.
+
+00:04:56.210 --> 00:05:01.580
+Și acesta este un lucru pe care o mulțime de oameni l-au prins când
+
+00:05:01.580 --> 00:05:10.260
+avem un container, lasă-mă să ies din asta când avem un container pe care containerul nu-l cunoaște de fapt de mașină, de fapt,
+
+00:05:10.260 --> 00:05:13.770
+trebuie să-i spunem unde să expunem un port .
+
+00:05:13.770 --> 00:05:19.480
+Vedeți lumea din afara care este calculatorul meu nu se poate conecta la container în mod implicit.
+
+00:05:19.490 --> 00:05:25.320
+Trebuie să spunem de fapt containerului ce să expună și am numit acest port obligatoriu și vom folosi o tehnică numită
+
+00:05:25.320 --> 00:05:27.290
+port forwarding pentru a face acest lucru.
+
+00:05:27.330 --> 00:05:29.690
+Și suna mai complicat decât este.
+
+00:05:29.730 --> 00:05:37.320
+Tot ce trebuie să facem este în cadrul comenzii noastre să îi dați parametrul de liniuță P, care reprezintă portul și
+
+00:05:37.320 --> 00:05:44.220
+să-i dați dorim portul de trei mii pe containerul nostru și vom merge pentru ca portul 3000 să fie
+
+00:05:44.220 --> 00:05:45.530
+pe gazda mașinii.
+
+00:05:45.840 --> 00:05:57.530
+Deci, dacă am rula OK am intrat în containerul pe care l-am rulat NPM pornește aplicația noastră rulează pe portul 3000 și acum
+
+00:05:57.530 --> 00:06:08.040
+dacă ne întoarcem referință R8, baza lor de date nu este definită și asta pentru că dacă mergem la serverul
+
+00:06:08.160 --> 00:06:19.170
+nostru ne supără noi aveți aici în baza de date Cerere de bază de solicitare, care de fapt nu este corectă.
+
+00:06:19.170 --> 00:06:23.070
+Avem D-B acum că nu folosim niciodată baza de date, dar de fapt funcționează.
+
+00:06:23.250 --> 00:06:25.700
+Deci, să schimbăm acest lucru.
+
+00:06:25.980 --> 00:06:27.990
+Functioneaza.
+
+00:06:28.970 --> 00:06:38.080
+Vrem să salvăm și să reîmprospătăm, iar partea complicată este că va trebui să reluăm acest lucru.
+
+00:06:38.090 --> 00:06:42.050
+Lasă-mă să închid asta și să încep NPM.
+
+00:06:42.130 --> 00:06:53.180
+Să ne întoarcem și să ne reîmprospătăm și veți vedea cum nu funcționează chiar acum și asta pentru că și de fapt trebuie
+
+00:06:58.870 --> 00:07:02.010
+să lăsăm să închidem acest lucru.
+
+00:07:02.050 --> 00:07:06.990
+Vom renunța la asta și vom reconstrui imaginea noastră, a început să copieze
+
+00:07:10.040 --> 00:07:13.210
+fișierele pe care le executăm prin pași.
+
+00:07:14.180 --> 00:07:18.820
+Apoi, rulați în cele din urmă containerul nostru și dacă am fi în NPM începeți acum.
+
+00:07:20.700 --> 00:07:23.220
+Du-te înapoi și reîmprospătați.
+
+00:07:23.410 --> 00:07:25.080
+Functioneaza.
+
+00:07:25.280 --> 00:07:28.090
+Cât de frumos simte asta.
+
+00:07:28.100 --> 00:07:33.030
+Am creat oficial container Dharker pentru serverul nostru API.
+
+00:07:33.350 --> 00:07:41.120
+Deci, acum tot ce trebuie să faceți este să dați acest dosar cu documentul sau fișierul oriunde și atâta timp cât ei au
+
+00:07:41.150 --> 00:07:46.830
+un medic, putem pur și simplu rula acest lucru pe orice mașină pe care o dorim.
+
+00:07:46.860 --> 00:07:50.540
+Foarte misto, dar acum există o problemă.
+
+00:07:51.640 --> 00:07:53.930
+Ce zici de această bază de date.
+
+00:07:54.040 --> 00:07:55.300
+Ce facem cu asta?
+
+00:07:55.300 --> 00:07:58.340
+Ce facem cu postscript-urile pentru asta?
+
+00:07:58.450 --> 00:08:00.690
+Trebuie să așteptați următorul videoclip.
+
+00:08:00.970 --> 00:08:01.890
+O să văd pe asta.

@@ -1,0 +1,271 @@
+﻿WEBVTT
+
+00:00:00.620 --> 00:00:01.370
+Witamy spowrotem.
+
+00:00:02.230 --> 00:00:08.970
+Właśnie umieściłem nasz projekt przyjaciół robo na GitHub, ale powiedzmy, że pobierasz ten projekt.
+
+00:00:09.110 --> 00:00:15.950
+Być może udostępniasz projekt innym programistom, ale powiedzmy, że ten projekt został napisany w zeszłym roku.
+
+00:00:15.950 --> 00:00:21.500
+Jak możemy zaktualizować ten projekt, jeśli pamiętasz, kiedy patrzymy na pakiet.
+
+00:00:21.500 --> 00:00:23.090
+Plik Dot Jason.
+
+00:00:23.090 --> 00:00:30.020
+Mamy wersję reagującą jako szesnaście punkt dwa, ale wersja reagująca jest teraz wyższa.
+
+00:00:30.020 --> 00:00:35.750
+Zaktualizujmy więc ten projekt, tak jak w przypadku każdego innego projektu.
+
+00:00:35.750 --> 00:00:39.670
+Sklonuję to repozytorium i użyję SS H.
+
+00:00:39.710 --> 00:00:46.260
+Być może będziesz musiał użyć HDP, jeśli nie masz takiej konfiguracji, ale zamierzam użyć SSA tylko po to, aby nie
+
+00:00:46.260 --> 00:00:48.500
+musiałem za każdym razem wpisywać hasła.
+
+00:00:48.750 --> 00:00:56.820
+Więc sklonuję to repozytorium i powiedz, że klonowanie znajomych robo jest niesamowite.
+
+00:00:56.860 --> 00:01:03.600
+Teraz, jeśli przejdę do folderu przyjaciół robo i otworzę to i wysublimuję.
+
+00:01:03.670 --> 00:01:05.120
+No to jedziemy.
+
+00:01:05.170 --> 00:01:09.620
+Mamy nasz pakiet Jason File, który możemy zobaczyć tutaj.
+
+00:01:09.670 --> 00:01:13.650
+Teraz, gdy zwykle pobieram projekt, chcę mieć pewność, że się rozpocznie.
+
+00:01:13.650 --> 00:01:20.990
+Więc powiem Start NPM i upewniam się, że wszystko nadal działa i otrzymuję błąd, ponieważ najpierw
+
+00:01:20.990 --> 00:01:23.270
+muszę wykonać npm zainstalować Oh
+
+00:01:27.910 --> 00:01:28.460
+chłopcze.
+
+00:01:28.600 --> 00:01:36.730
+Dostajemy mnóstwo błędów lub ostrzeżeń informujących, że przeprowadziliśmy audyt niektórych twoich pakietów i jest kilka słabych
+
+00:01:36.730 --> 00:01:37.720
+punktów.
+
+00:01:37.780 --> 00:01:38.820
+Właściwie całkiem sporo.
+
+00:01:38.830 --> 00:01:49.170
+I dwa krytyczne - możemy uruchomić poprawkę kontroli NPM, aby to naprawić, więc skopiujmy to i uruchommy ponownie, a teraz
+
+00:01:55.110 --> 00:02:01.130
+pojawia się kolejny problem, że dwadzieścia siedem luk wymaga ręcznej weryfikacji.
+
+00:02:01.740 --> 00:02:07.140
+Widzisz tutaj, że dzieje się tak głównie dlatego, że niektóre z nich wymagają, jak to nazywamy, przełomowych zmian,
+
+00:02:07.230 --> 00:02:08.850
+które mogą uszkodzić naszą aplikację.
+
+00:02:08.850 --> 00:02:16.660
+I to jest kompromis podczas aktualizacji bibliotek, używasz starszej wersji biblioteki, która mogła ulec zmianie i
+
+00:02:16.660 --> 00:02:24.470
+teraz całkowicie psuje twoją aplikację, więc czasami chcesz iść jeden po drugim, aby sprawdzić i
+
+00:02:24.890 --> 00:02:28.670
+zobaczyć, jakie zmiany są w tych bibliotekach.
+
+00:02:28.670 --> 00:02:31.400
+Teraz, jeśli uruchomię
+
+00:02:35.160 --> 00:02:42.550
+tutaj fabułę NPM, da mi to pewne pojęcie o moich problemach.
+
+00:02:42.690 --> 00:02:54.520
+Zanim zrobię poprawkę audytu NPM, a następnie wymuszę myślnik, aby wymusić wszystkie te zmiany, chcę trochę porozmawiać o
+
+00:02:54.520 --> 00:02:56.530
+tym pakiecie,
+
+00:02:59.670 --> 00:03:07.800
+że Jason widzi skrypty reagowania, czyli skrypt tworzenia aplikacji, który działa, jest nieaktualny.
+
+00:03:07.800 --> 00:03:14.800
+Istnieje o wiele wyższa wersja skryptów React, na które reaguje większa wersja CIA.
+
+00:03:15.000 --> 00:03:17.190
+Podobnie jest z reagowaniem.
+
+00:03:17.190 --> 00:03:26.540
+Jedną rzeczą, którą mogę zrobić, to powiedzieć aktualizację NPM i jeśli uruchomię to i kiedy kliknę ten plik, sprawdź to, czy
+
+00:03:27.930 --> 00:03:29.060
+to widziałeś.
+
+00:03:29.340 --> 00:03:38.820
+Moja wersja została zaktualizowana i str. m. zaktualizuj to, co robi, patrzy na tę wersję
+
+00:03:38.820 --> 00:03:44.790
+i mówi Co to jest najwyższa wersja, którą mogę uaktualnić w moim przypadku, ponieważ używam tej karty.
+
+00:03:44.790 --> 00:03:51.970
+Mówi się: hej, możesz uaktualnić do najwyższej wersji w mniejszej wersji.
+
+00:03:52.050 --> 00:03:59.960
+Więc jeśli byłaby dobrze reagująca wersja 17, to nie zaktualizowałaby się do 17, ponieważ używamy marchewki.
+
+00:03:59.970 --> 00:04:10.150
+Pamiętaj, że możemy użyć większego niż gdybyśmy tego chcieli, ale w ten sposób upewniamy się, że aktualizujemy tylko to, co jest w
+
+00:04:10.150 --> 00:04:14.690
+mniejszej wersji, która zwykle nie ma żadnych przełomowych zmian.
+
+00:04:14.740 --> 00:04:19.610
+Na przykład, kiedy zareagujemy na 17, najprawdopodobniej nastąpi kilka przełomowych zmian.
+
+00:04:19.720 --> 00:04:19.960
+W porządku.
+
+00:04:19.990 --> 00:04:29.120
+Mamy więc zaktualizowaną wersję Reaguj, ale nadal mamy te luki, które musimy naprawić, uruchommy teraz
+
+00:04:29.120 --> 00:04:36.680
+poprawkę audytu i wymuś, zakładając, że przejrzeliśmy zmiany i zakładamy, że wszystko
+
+00:04:36.710 --> 00:04:38.990
+jest w porządku.
+
+00:04:39.290 --> 00:04:45.080
+Więc zamierzam to uruchomić i jeszcze raz pamiętać, że używając siły chcesz upewnić
+
+00:04:45.080 --> 00:04:47.520
+się, że faktycznie przeglądasz aktualizacje.
+
+00:04:47.540 --> 00:04:53.290
+Teraz, gdy to się dzieje, kolejna rzecz, którą mogłem zrobić z reakcją,
+
+00:04:53.310 --> 00:05:01.340
+to faktyczne przejście do strony z reakcją i sprawdzenie faktycznej wersji, a zamiast tego, że dbałem o to
+
+00:05:01.430 --> 00:05:09.800
+lub robiłem aktualizację NPM, mogłem po prostu zmienić wersję, powiedzmy, wersja 17 wychodzi zareagować siedemnaście punktów zero punkt dwa.
+
+00:05:09.890 --> 00:05:16.160
+Cóż, mogę to zmienić i spakować Jason i ponownie uruchomić instalację
+
+00:05:19.150 --> 00:05:21.370
+npm, wyczyśćmy to.
+
+00:05:21.370 --> 00:05:28.310
+Widzimy tutaj, że nasz skrypt ReACT został teraz zaktualizowany do wersji trzy punkt drugi.
+
+00:05:28.330 --> 00:05:31.460
+To jest najnowsza wersja create reag.
+
+00:05:31.840 --> 00:05:32.850
+To cudownie.
+
+00:05:32.920 --> 00:05:40.020
+Jeśli ponownie przeprowadzę kontrolę NPM, mam zero luk w zabezpieczeniach.
+
+00:05:40.020 --> 00:05:40.470
+W porządku.
+
+00:05:40.470 --> 00:05:45.290
+Wygląda na to, że wszystko wygląda dobrze, ale mamy jeden problem.
+
+00:05:45.310 --> 00:05:48.540
+Zaktualizowaliśmy wszystko, co mamy.
+
+00:05:48.540 --> 00:05:57.770
+Nie ma żadnych luk w zabezpieczeniach, ale ponieważ zaktualizowaliśmy wszystkie te rzeczy, nasz projekt będzie nadal działał, podczas gdy istnieje jeden sposób, aby
+
+00:05:57.770 --> 00:05:58.910
+się dowiedzieć.
+
+00:05:59.120 --> 00:06:03.090
+Zacznijmy od NPM.
+
+00:06:03.110 --> 00:06:03.770
+W porządku.
+
+00:06:03.800 --> 00:06:11.910
+Nowa aplikacja create reag poprosiła mnie o docelową przeglądarkę, więc kliknę tutaj i spojrzę na to.
+
+00:06:11.920 --> 00:06:14.710
+Wygląda na to, że wszystko nadal działa.
+
+00:06:14.710 --> 00:06:16.090
+Dobra robo przyjaciele.
+
+00:06:16.090 --> 00:06:21.460
+Jeśli otworzę narzędzia programistyczne i przejdę do konsoli, nie będzie żadnych błędów.
+
+00:06:21.520 --> 00:06:30.570
+To wspaniale, więc po prostu byłem w stanie zaktualizować mój projekt, zaktualizować mój projekt o wszystkie
+
+00:06:31.320 --> 00:06:38.470
+najnowsze reakcje, wszystkie najnowsze reakcje na skrypty reagowania, których używa aplikacja reagowania.
+
+00:06:38.700 --> 00:06:43.860
+Zaktualizowaliśmy również przędze TAC i wszystko działa dobrze.
+
+00:06:45.080 --> 00:06:50.810
+Mogę więc teraz wprowadzić tę zmianę, aby uzyskać hub, abyśmy nie mieli tych ostrzeżeń bezpieczeństwa.
+
+00:06:50.810 --> 00:06:51.890
+Zróbmy to.
+
+00:06:51.890 --> 00:06:57.280
+Powiem get get get commit.
+
+00:06:57.510 --> 00:07:07.590
+Powiem, że naprawiłem problemy z bezpieczeństwem, zaktualizowałem biblioteki, aby uzyskać wzorzec push push, ponieważ
+
+00:07:10.400 --> 00:07:20.770
+podczas gdy jestem jedyny w tym projekcie, mogę po prostu naciskać na Maxa, proszę pana.
+
+00:07:20.930 --> 00:07:32.030
+Teraz, jeśli wrócę do mojej strony github i odświeżę, zajrzyjmy do karty bezpieczeństwa i zobaczmy, że mamy
+
+00:07:32.030 --> 00:07:40.410
+zero zamkniętych zero otwartych, ponieważ nasz projekt jest teraz w pełni aktualny.
+
+00:07:40.440 --> 00:07:42.380
+Jakie to jest świetne.
+
+00:07:42.420 --> 00:07:49.590
+Jest to świetny sposób na aktualizowanie projektów i usuwanie luk w zabezpieczeniach.
+
+00:07:49.890 --> 00:07:57.750
+Ale im więcej bibliotek masz, tym więcej zależności masz, tym więcej czynności konserwacyjnych musisz zrobić, aby
+
+00:07:57.750 --> 00:08:04.380
+mieć pewność, że za każdym razem, gdy aktualizujesz bibliotekę, nie zepsuje twojej aplikacji.
+
+00:08:04.380 --> 00:08:11.290
+Nasza aplikacja dla przyjaciół Robo była dość mała, ale możesz sobie wyobrazić, że jest to coraz większy problem w miarę rozwoju aplikacji.
+
+00:08:11.940 --> 00:08:17.550
+Ale mam nadzieję, że nauczyłeś się jednego małego triku, którego nauka zajęła mi dużo czasu i mojej
+
+00:08:17.550 --> 00:08:18.300
+kariery programistycznej.
+
+00:08:18.390 --> 00:08:26.400
+Jest to najprostszy sposób na aktualizację i bezpieczeństwo projektów, wystarczy po prostu zaktualizować pakiet.
+
+00:08:26.530 --> 00:08:27.690
+W dokumencie.
+
+00:08:27.930 --> 00:08:29.520
+Zobaczę w następnym przez.

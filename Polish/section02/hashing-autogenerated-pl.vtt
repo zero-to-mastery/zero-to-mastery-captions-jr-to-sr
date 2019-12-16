@@ -1,0 +1,211 @@
+﻿WEBVTT
+
+00:00:01.650 --> 00:00:04.950
+Dobrze, czego nauczyliśmy się do tej pory.
+
+00:00:04.950 --> 00:00:13.550
+S-sh używa zarówno szyfrowania symetrycznego, jak i asymetrycznego, ponieważ szyfrowanie asymetryczne jest bardziej czasochłonne.
+
+00:00:13.610 --> 00:00:17.280
+Większość połączeń S-sh używa szyfrowania symetrycznego.
+
+00:00:17.420 --> 00:00:27.560
+Jak już wspominaliśmy, kryje się za tym, że szyfrowanie asymetryczne służy tylko do udostępniania tajnego klucza.
+
+00:00:27.910 --> 00:00:35.140
+A następnie w końcu za pomocą tego klucza, który jest szyfrowaniem symetrycznym dla dalszej komunikacji, więc jest
+
+00:00:37.330 --> 00:00:43.210
+szybki teraz po ustanowieniu bezpiecznej komunikacji symetrycznej, serwer wykorzystuje klucz publiczny klienta i
+
+00:00:43.300 --> 00:00:49.180
+generuje wyzwanie i przekazuje do klienta w celu uwierzytelnienia, jeśli klient może pomyślnie
+
+00:00:49.180 --> 00:00:50.400
+odszyfrować wiadomość.
+
+00:00:50.530 --> 00:00:56.170
+Oznacza to, że posiada klucz prywatny wymagany do połączenia, a następnie rozpoczyna się ta sama
+
+00:00:56.170 --> 00:00:56.840
+sesja.
+
+00:00:56.860 --> 00:01:04.990
+W końcu mamy bezpieczny tunel, który jest szczęśliwy i możemy się komunikować w bezpieczny sposób.
+
+00:01:04.990 --> 00:01:06.240
+Jednak jeden problem.
+
+00:01:06.580 --> 00:01:15.650
+Ktoś może siedzieć w środku i udawać, że jest drugim, i modyfikować wiadomość.
+
+00:01:16.780 --> 00:01:22.570
+Jeśli w jakiś sposób przekonają klienta, że są gospodarzem i
+
+00:01:22.570 --> 00:01:32.400
+gospodarzem, że są klientami, mogą po prostu wymieniać między sobą kluczową wymianę, a informacje płyną przez tego pośrednika.
+
+00:01:32.450 --> 00:01:41.710
+Teraz, aby rozwiązać jeden z tych problemów, porozmawiamy o czymś, co nazywa się hashing, a hash
+
+00:01:41.710 --> 00:01:46.960
+to inna forma kryptografii wykorzystywana w bezpiecznych połączeniach powłoki.
+
+00:01:46.970 --> 00:01:54.410
+Teraz w moim drugim kursie kompletny programista sieciowy używamy czegoś, co nazywa się odszyfrowuj do haszowania haseł.
+
+00:01:54.410 --> 00:02:01.590
+Więc możesz pamiętać, że teraz jedna funkcja haszowania różni się od dwóch powyższych form korupcji.
+
+00:02:01.620 --> 00:02:07.930
+Symetryczne i asymetryczne, ponieważ nigdy nie mają na celu odszyfrowania czegokolwiek.
+
+00:02:08.150 --> 00:02:13.320
+Po prostu generują unikalną wartość stałej długości dla każdego wejścia.
+
+00:02:14.530 --> 00:02:23.440
+Że A pojawia się i jest w jedną stronę, ponieważ gdybym się począł Witam, to będzie przebiegać przez
+
+00:02:23.440 --> 00:02:32.170
+funkcję, która wypluwa jibberish naprawdę bardzo szybko z tą sztuczką, że nie mamy pojęcia, jak wrócić do
+
+00:02:32.230 --> 00:02:33.260
+całego tekstu.
+
+00:02:33.280 --> 00:02:35.150
+Więc jeśli przejdziesz przez hasz.
+
+00:02:35.470 --> 00:02:42.790
+Jeśli ktoś na to patrzy, jest prawie niemożliwe, aby ktokolwiek wrócił i zrozumiał, co
+
+00:02:43.000 --> 00:02:44.390
+to oznacza.
+
+00:02:44.410 --> 00:02:50.150
+Jak to jest przydatne? Tak jak wcześniej wspomnieliśmy.
+
+00:02:50.340 --> 00:02:58.590
+S-sh jest w stanie bezpiecznie przesyłać wiadomości, ale jeśli strona trzecia jest w stanie zduplikować klienta i
+
+00:02:59.160 --> 00:03:01.620
+hosta, może manipulować wiadomościami.
+
+00:03:01.620 --> 00:03:06.970
+Może mogliby zmienić wiadomości z niecnych powodów.
+
+00:03:06.980 --> 00:03:14.780
+Na szczęście dla nas, korzystając z trzeciego skrótu techniki, jesteśmy w stanie zweryfikować, czy uwierzytelnienie
+
+00:03:14.780 --> 00:03:17.230
+wiadomości było tak złe.
+
+00:03:17.620 --> 00:03:22.300
+Cóż, zła osoba może modyfikować nasze wiadomości.
+
+00:03:22.330 --> 00:03:29.390
+Odbywa się to za pomocą czegoś, co nazywa się HMX lub hash oparte uwierzytelnianie kodów.
+
+00:03:29.500 --> 00:03:31.120
+Wiem, że to kęs.
+
+00:03:31.150 --> 00:03:41.790
+Te nazwy stają się naprawdę bardzo mylące, ale istotą tego jest to, że używając funkcji skrótu,
+
+00:03:41.790 --> 00:03:53.540
+każda przesłana wiadomość musi zawierać coś, co nazywa się Mac, a ten Mac jest hashem wygenerowanym z klucza
+
+00:03:53.660 --> 00:03:55.000
+symetrycznego.
+
+00:03:55.190 --> 00:04:00.560
+Numer kolejny pakietu i treść wiadomości, które zostały wysłane.
+
+00:04:00.770 --> 00:04:05.810
+Powiedzmy, że ten klient próbuje wysłać hasło z hostem, a oni
+
+00:04:06.200 --> 00:04:15.890
+już ustanowili klucz symetryczny dla bezpiecznej komunikacji, podczas gdy używają numeru sekwencji pakietu, klucz, a następnie dowolny tekst, który wysyłam, a ten
+
+00:04:15.890 --> 00:04:19.280
+przypadek, powiedzmy, że " ponowne wysłanie hasła.
+
+00:04:19.370 --> 00:04:27.910
+Łączę to jako wejście w funkcję mieszającą, a ta funkcja wypluje jakiś kawałek sznurka.
+
+00:04:27.910 --> 00:04:29.890
+To oznacza absolutnie nic.
+
+00:04:30.190 --> 00:04:33.800
+A teraz to jest wysyłane do hosta.
+
+00:04:33.980 --> 00:04:35.330
+Ale to nic nie znaczy.
+
+00:04:35.370 --> 00:04:40.210
+W jaki sposób host może sprawdzić, czy wiadomość nie została naruszona?
+
+00:04:41.210 --> 00:04:47.090
+Cóż, teraz mogą to zrobić, ponieważ mają te same informacje, które mogą używać własnego klucza symetrycznego,
+
+00:04:47.090 --> 00:04:49.820
+który jest taki sam jak klientów.
+
+00:04:50.120 --> 00:04:57.350
+Mogą ponownie użyć numeru sekwencyjnego pakietu, który obaj znają, a następnie, ponieważ
+
+00:04:57.620 --> 00:05:04.910
+ta wiadomość została wysłana przez S-sh, mają również tę wiadomość, która została wysłana.
+
+00:05:04.920 --> 00:05:09.140
+Więc teraz uruchamiają go ponownie za pomocą tej samej funkcji skrótu.
+
+00:05:09.570 --> 00:05:20.380
+A kiedy to się obliczy, zobaczy, że to, co właśnie wygenerowałem, pasuje do tego, co było hashem klienta.
+
+00:05:20.550 --> 00:05:27.600
+A jeśli dobrze się zgadza, oznacza to, że ta wiadomość nie została zmieniona, ponieważ
+
+00:05:27.600 --> 00:05:36.540
+w dowolnym momencie, jeśli hasło zmieniło się nawet o jedną literę, nawet jeśli kapitalizacja została zmieniona, hasz będzie zupełnie inny.
+
+00:05:36.600 --> 00:05:40.440
+I to jest jedna cecha zmiany funkcji skrótu.
+
+00:05:40.500 --> 00:05:45.040
+Każda pojedyncza rzecz bez względu na to, jak podobne są dane wejściowe.
+
+00:05:45.060 --> 00:05:51.720
+Może wypluje zupełnie inny numer, ucząc się wszystkiego, co mamy do tej
+
+00:05:51.720 --> 00:05:52.750
+pory.
+
+00:05:52.950 --> 00:06:02.260
+Powinniśmy zrozumieć, co się dzieje, kiedy wpisujemy S-sh na adres IP, czy widzisz, że
+
+00:06:02.260 --> 00:06:09.620
+do tej pory mogłem cię okłamać, ponieważ wszystko, o czym
+
+00:06:09.620 --> 00:06:21.770
+rozmawialiśmy, jeśli teraz przejdę do mojego terminala i tylko zaimplementowałem to dobrze, chciałbym S-sh do tego serwera Digital Ocean.
+
+00:06:21.770 --> 00:06:22.460
+Naciśnij
+
+00:06:26.770 --> 00:06:35.010
+Enter, a otrzymam hasło, ale tak się nie stało, gdy pokazałem ci w poprzednich filmach, które od razu
+
+00:06:35.290 --> 00:06:41.750
+się zalogowałem i mogłem zrobić wszystko, co chciałem i jak powiedziałem, że trochę oszukałem
+
+00:06:41.750 --> 00:06:49.620
+i ja pokażą ci, dlaczego tak się stało i dlaczego musimy ostatecznie wprowadzić hasło i następne wideo.
+
+00:06:49.700 --> 00:06:51.530
+Znam trochę cliffhanger.
+
+00:06:51.620 --> 00:06:53.070
+Zobaczę w następnym filmie.
+
+00:06:53.240 --> 00:06:53.540
+Bebai.

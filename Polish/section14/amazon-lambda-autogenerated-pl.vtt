@@ -1,0 +1,244 @@
+﻿WEBVTT
+
+00:00:01.430 --> 00:00:02.550
+Witamy spowrotem.
+
+00:00:02.900 --> 00:00:07.850
+Porozmawiajmy o czymś, nad czym będziemy pracować w tej sekcji i prawdopodobnie najbardziej ekscytujących rzeczach Elise
+
+00:00:07.850 --> 00:00:10.090
+dla mnie, jeśli chodzi o Adę.
+
+00:00:10.130 --> 00:00:10.790
+Tak.
+
+00:00:10.820 --> 00:00:17.180
+I to jest funkcja lambda, którą widzimy tradycyjnie, że stworzyliśmy i wdrożyliśmy aplikacje
+
+00:00:17.180 --> 00:00:23.940
+internetowe, w których mamy kontrolę nad owymi prośbami, tak jak stworzyliśmy naszą inteligentną aplikację mózgową.
+
+00:00:24.010 --> 00:00:25.680
+W pewnym sensie kontrolujemy wszystko.
+
+00:00:25.690 --> 00:00:34.210
+Każdy mały element, który odpowiadamy za ten serwer za wdrożenie tego ekspresowego serwera i upewnienie się, że
+
+00:00:34.210 --> 00:00:36.710
+nasze zasoby są ustawione.
+
+00:00:36.820 --> 00:00:41.440
+Byliśmy odpowiedzialni za to, co nazywamy administrowaniem i zarządzaniem zasobami, które
+
+00:00:41.440 --> 00:00:47.380
+zapewniają, że wdrażamy na odpowiednim komputerze, który jest w stanie skalować i wszystkie te elementy konfiguracji.
+
+00:00:47.410 --> 00:00:54.860
+Teraz jest kilka problemów związanych z tą metodą, po prostu robienie wszystkiego, na co jesteś obciążony
+
+00:00:54.860 --> 00:01:01.760
+za utrzymywanie serwera nawet wtedy, gdy faktycznie nie używamy lub serwujemy i prosisz, na przykład,
+
+00:01:01.790 --> 00:01:07.490
+jeśli nikt nie sprawdza naszej strony internetowej mózg i serwer nadal działają.
+
+00:01:07.490 --> 00:01:14.740
+Słuchanie połączeń, gdy płacimy pieniądze za uruchomienie tego serwera, nie jest zbyt skuteczne.
+
+00:01:15.950 --> 00:01:21.560
+Jesteśmy również odpowiedzialni za upewnienie się, że serwer jest uruchomiony, że jest na nim wykonana konserwacja,
+
+00:01:21.740 --> 00:01:25.910
+że dokonujemy aktualizacji, gdy potrzebne są aktualizacje i wszystkie te zasoby.
+
+00:01:25.910 --> 00:01:33.800
+Znów kolejna warstwa bólów głowy, a następnie musimy się martwić o bezpieczeństwo, upewniając się, że wszystko, co robimy z serwerem,
+
+00:01:33.800 --> 00:01:40.260
+jest bezpieczne i nie będziemy mieć złych ludzi, którzy będą mogli uzyskać do niego dostęp.
+
+00:01:42.180 --> 00:01:44.410
+Więc Azara używa umiejętności.
+
+00:01:44.520 --> 00:01:50.700
+A w końcu, gdy coraz więcej użytkowników zaczyna korzystać z naszej usługi, musimy upewnić się, że nasz serwer może
+
+00:01:50.700 --> 00:01:52.090
+się do niej dostosować.
+
+00:01:52.290 --> 00:01:58.260
+Ale w tym samym czasie, gdy nie jest używany, nie obciąża nas zbyt dużą ilością pieniędzy, ponieważ musimy
+
+00:01:58.260 --> 00:01:58.980
+go utrzymywać.
+
+00:02:00.450 --> 00:02:05.810
+A zwłaszcza dla mniejszych firm i indywidualnych programistów może to być ogromny ból głowy.
+
+00:02:06.000 --> 00:02:11.370
+Zaczynasz rozpraszać się całym zarządzaniem zasobami z innych ważniejszych rzeczy,
+
+00:02:11.370 --> 00:02:17.150
+takich jak budowanie aplikacji i pisanie kodu teraz w większych firmach.
+
+00:02:17.190 --> 00:02:22.840
+To, co nazywamy infrastrukturą, zwykle ma swój własny zespół zwany zespołem infrastruktury.
+
+00:02:23.010 --> 00:02:29.430
+Więc, co te duże firmy mogą wykorzystać swoją wiedzę i zespoły, tak abyśmy mogli skupić się na kodzie i
+
+00:02:29.460 --> 00:02:31.100
+po prostu przekazać je.
+
+00:02:32.360 --> 00:02:38.080
+Jako programiści szukaliśmy takich rozwiązań przez długi czas i właśnie tam,
+
+00:02:38.930 --> 00:02:45.830
+w Servilius, pojawia się idea mniejszego serwera, który pozwala nam tworzyć aplikacje, w
+
+00:02:45.830 --> 00:02:49.260
+których po prostu przekazujemy dostawcę chmury.
+
+00:02:49.370 --> 00:02:52.360
+Więc Google Amazon lub Microsoft nasz kod.
+
+00:02:52.400 --> 00:02:57.140
+I uruchamia to dla nas po prostu mówi, że hej powiedz mi, co muszę uruchomić, a ja zaopiekuję się wszystkim
+
+00:02:57.140 --> 00:02:57.760
+dla ciebie.
+
+00:02:57.770 --> 00:03:03.770
+Dbają również o to, abyśmy otrzymywali tylko to, czego faktycznie używamy, ponieważ mogą
+
+00:03:03.770 --> 00:03:08.850
+monitorować, jaki kod zostanie wykonany i jakie zasoby faktycznie zużywa.
+
+00:03:08.870 --> 00:03:13.900
+Na przykład w przypadku rzeczy sezonowych, takich jak świąteczne zakupy.
+
+00:03:14.080 --> 00:03:19.910
+Cóż, dostawca usług w chmurze może po prostu dodać więcej serwerów do żądań.
+
+00:03:20.960 --> 00:03:27.080
+A kiedy umrze, może usunąć te serwery i ponieważ mogą używać tych serwerów dla innych firm, nie obchodzi
+
+00:03:27.500 --> 00:03:29.850
+ich, że już ich nie używamy.
+
+00:03:29.870 --> 00:03:35.360
+A w końcu nasz kod działa w bezpiecznym środowisku, w którym dostawca usług w chmurze zajmuje się dla
+
+00:03:35.360 --> 00:03:36.220
+nas wszystkim.
+
+00:03:36.230 --> 00:03:38.730
+Dbają o to, aby wszystko było aktualne i bezpieczne.
+
+00:03:39.770 --> 00:03:41.630
+W porządku, brzmi naprawdę świetnie.
+
+00:03:41.630 --> 00:03:42.350
+Jestem sprzedany.
+
+00:03:42.410 --> 00:03:43.570
+Zacznijmy to robić.
+
+00:03:43.680 --> 00:03:47.230
+Cóż, użyjmy Amazon Lamda i LAMDA.
+
+00:03:47.230 --> 00:03:52.270
+Tak jak powiedziałem, pozwala uruchomić funkcję i tak to będzie działać, a my zamierzamy
+
+00:03:52.270 --> 00:03:55.650
+ją wdrożyć w trakcie, gdy użytkownik złoży zapytanie.
+
+00:03:55.710 --> 00:03:58.030
+Powiedzmy, że mamy tylko funkcję, którą loguje konsola.
+
+00:03:58.140 --> 00:04:00.320
+JESTEM TAK FANCY.
+
+00:04:00.480 --> 00:04:08.400
+Wszystko, co musimy zrobić, to zrobić np. Wywołanie Fetch z naszej aplikacji do twojej reguły, którą zapewnia nam Amazon Lamda,
+
+00:04:08.400 --> 00:04:15.880
+a my po prostu wgrywamy ten kod do Amazon Lamda i jak tylko zadzwonimy do dziś, to Arel to
+
+00:04:16.200 --> 00:04:17.110
+zrobi log.
+
+00:04:17.190 --> 00:04:18.480
+Jestem taki fantazyjny.
+
+00:04:18.620 --> 00:04:19.860
+Teraz jak to działa.
+
+00:04:19.860 --> 00:04:26.220
+Pod maską widać, że dostawca chmury tworzy kontener, o którym wiemy, a my nauczyliśmy się
+
+00:04:26.220 --> 00:04:30.060
+w docker i uruchamia tę funkcję wewnątrz niego.
+
+00:04:31.280 --> 00:04:36.230
+A co się stanie, jeśli pięciu użytkowników jednocześnie poprosi o tę funkcję.
+
+00:04:36.440 --> 00:04:43.220
+Cóż, zamierzają utworzyć pięć osobnych kontenerów dla każdego użytkownika i odpowiedzieć za pomocą okna dialogowego konsoli.
+
+00:04:43.300 --> 00:04:45.680
+Jestem taki fantazyjny.
+
+00:04:45.850 --> 00:04:52.900
+Wszystko, co robią, to po prostu zapisanie funkcji, którą podajemy w ich bazie danych, a gdy zostanie ona
+
+00:04:53.200 --> 00:04:57.340
+wywołana, pobierze ją z bazy danych i uruchomi ją.
+
+00:04:57.340 --> 00:05:02.240
+Teraz możesz zobaczyć problem z tym i jest to tak naprawdę nazywany problemem zimnego startu.
+
+00:05:02.290 --> 00:05:07.600
+Oznacza to, że muszą pobrać tę funkcję z bazy danych, która jest przechowywana jako ciąg, a następnie
+
+00:05:07.630 --> 00:05:09.220
+uruchomić ją w kontenerze.
+
+00:05:09.300 --> 00:05:17.770
+To wymaga czasu i to jest jedyną wadą Amazona, kiedy uruchamia ona po raz pierwszy funkcję, która zajmuje trochę
+
+00:05:17.770 --> 00:05:18.630
+czasu.
+
+00:05:18.640 --> 00:05:22.900
+Mam na myśli to, że kiedy mówimy trochę czasu, to nadal jest Amazon, więc jest szybki.
+
+00:05:23.230 --> 00:05:28.750
+Ale po uruchomieniu funkcji, a teraz coraz więcej użytkowników korzysta z niej, to jest w porządku,
+
+00:05:28.750 --> 00:05:30.310
+ponieważ jest w pojemniku.
+
+00:05:30.310 --> 00:05:31.800
+Więc o tym należy pamiętać.
+
+00:05:32.680 --> 00:05:38.650
+Ale piękno tego polega na tym, że funkcja ta będzie uruchamiana tylko wtedy, gdy ją uruchomimy, a
+
+00:05:38.650 --> 00:05:42.180
+kiedy nie zostanie uruchomiona, Amazon nie obciąży nas wcale.
+
+00:05:42.190 --> 00:05:48.640
+Jest to wspaniałe, jeśli masz sezonowe porody w firmie lub chcesz zrobić coś, co
+
+00:05:48.640 --> 00:05:53.540
+nie działa stale, co tylko od czasu do czasu działa.
+
+00:05:53.550 --> 00:05:54.150
+W porządku.
+
+00:05:54.150 --> 00:05:57.750
+Dość rozmowa, którą musimy kodować, aby właściwie zrozumieć tę koncepcję.
+
+00:05:57.810 --> 00:06:01.410
+W następnym filmie rozpoczniemy pracę z Amazon Lamda.

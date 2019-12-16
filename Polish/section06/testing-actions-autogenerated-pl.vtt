@@ -1,0 +1,541 @@
+﻿WEBVTT
+
+00:00:01.120 --> 00:00:02.500
+Witamy spowrotem.
+
+00:00:02.500 --> 00:00:07.730
+Napisaliśmy już sporo testów i 13 testów.
+
+00:00:07.780 --> 00:00:09.340
+To nie jest złą rzeczą dla małej partii.
+
+00:00:09.340 --> 00:00:13.750
+Jest zdecydowanie więcej, co możemy zrobić, ale chcę omówić ostatnią część.
+
+00:00:13.740 --> 00:00:22.680
+Teraz, jak myślę, jest to ważne i to jest testowanie naszych działań, teraz możesz zadawać sobie pytanie, co
+
+00:00:22.680 --> 00:00:28.920
+z Constance, że nie testujemy pliku Constans, ale widać tutaj, że Constance
+
+00:00:29.640 --> 00:00:38.100
+po prostu dobrze przypisuje stałe stałe do zmiennej, a kiedy " Ponownie testujesz, naprawdę chcesz sam zdecydować,
+
+00:00:38.100 --> 00:00:41.860
+co musisz przetestować i dlaczego nie testujesz.
+
+00:00:41.920 --> 00:00:46.590
+Naprawdę trafiasz do króliczej dziury, która jest po prostu kontynuujesz pracę nad testem, kontynuuj pracę nad testami.
+
+00:00:46.680 --> 00:00:53.310
+Następną rzeczą, o której wiesz, że tak naprawdę nie zrobiłeś nic na stronie produkcyjnej, a
+
+00:00:53.310 --> 00:00:59.940
+testy są ważne, ale naprawdę chcesz uniknąć pomysłu, że muszę mieć testy na 100 lub
+
+00:01:00.030 --> 00:01:05.210
+więcej migawek lub potrzebuję mojego zasięgu kodu być w 100 procentach.
+
+00:01:05.640 --> 00:01:11.550
+To nie jest dobry pomysł, aby mieć 100-procentowy zasięg kodu, ponieważ oznacza to,
+
+00:01:11.910 --> 00:01:19.680
+że masz testy, które najprawdopodobniej nie muszą być uruchamiane, a Twój czas mógł zostać mądrze wykorzystany w innych
+
+00:01:19.680 --> 00:01:20.960
+obszarach aplikacji.
+
+00:01:20.970 --> 00:01:26.490
+Pamiętaj, że istnieje wiele nieskończonych rzeczy, które możemy zrobić, aby poprawić lub sprawić, by nasz kod ładniej zapisywał
+
+00:01:26.970 --> 00:01:29.060
+więcej testów, ale mamy ograniczony czas.
+
+00:01:29.130 --> 00:01:34.310
+Więc jako starszy programista musisz sam zdecydować, gdzie są kompromisy.
+
+00:01:35.610 --> 00:01:36.200
+W porządku.
+
+00:01:36.250 --> 00:01:40.590
+Tak więc plik Constans naprawdę nie potrzebujemy testów, ale działania.
+
+00:01:40.630 --> 00:01:44.000
+Myślę, że potrzebujemy testów na nasze działania.
+
+00:01:44.020 --> 00:01:47.400
+Stwórzmy akcję lub akcje, które test
+
+00:01:51.700 --> 00:01:53.690
+upadną i tutaj.
+
+00:01:53.800 --> 00:01:58.750
+Ponownie spróbujmy gwiazdy jako akcji.
+
+00:02:00.680 --> 00:02:02.410
+Z naszego pliku
+
+00:02:06.560 --> 00:02:11.710
+akcji iz pierwszą akcją, którą mamy, która jest ustawionym polem wyszukiwania.
+
+00:02:11.880 --> 00:02:12.920
+To całkiem proste.
+
+00:02:12.930 --> 00:02:21.170
+Chcemy tylko upewnić się, że ta funkcja zwraca ten obiekt, więc możemy po prostu użyć podstawowej prostej
+
+00:02:21.170 --> 00:02:22.210
+funkcji tutaj.
+
+00:02:22.340 --> 00:02:35.180
+Możemy po prostu mieć to i wiem, że powinienem używać tego, co ci opisałem, aby oddzielić te dwa działania, które mamy.
+
+00:02:35.180 --> 00:02:38.380
+Ale myślę, że masz pomysł, że możesz to zrobić na własną rękę.
+
+00:02:38.420 --> 00:02:50.480
+Chcę cię tu wsiąść, ale pozwólmy, żeby to była akcja do przeszukiwania robotów, a to
+
+00:02:50.480 --> 00:02:51.770
+będzie
+
+00:02:54.970 --> 00:03:04.980
+mieć prosty, bardzo prosty stos. Sloth ma stały tekst, który będzie równy
+
+00:03:04.980 --> 00:03:17.760
+naszemu wyszukiwanemu terminowi, a konsulaty mają spodziewane działanie a oczekiwane działanie będzie naszym celem i zaimportujmy
+
+00:03:24.090 --> 00:03:27.770
+tu również nasze stałe.
+
+00:03:29.000 --> 00:03:31.650
+Więc możemy ich użyć.
+
+00:03:31.790 --> 00:03:36.650
+Będzie mieć rodzaj pola wyszukiwania zmian i ładunek.
+
+00:03:37.160 --> 00:03:39.050
+I to jest oczekiwana akcja.
+
+00:03:39.050 --> 00:03:45.820
+Spodziewamy się więc, że akcja będzie zawierała tekst lub nie potrzebujemy tutaj znaków łańcuchowych.
+
+00:03:46.010 --> 00:03:47.270
+Proszę bardzo.
+
+00:03:47.270 --> 00:03:52.030
+Możemy więc po prostu powiedzieć, że akcje xpect wyszukują, co
+
+00:03:56.170 --> 00:03:57.300
+to było.
+
+00:03:57.310 --> 00:04:00.580
+Zostało ustawione pole wyszukiwania.
+
+00:04:00.640 --> 00:04:02.370
+Skopiuj
+
+00:04:05.530 --> 00:04:12.230
+to pole wyszukiwania, aby tekst miał dwa równe.
+
+00:04:12.280 --> 00:04:18.970
+Chcemy ustawić pole wyszukiwania z tym tekstem i potrzebujemy go, aby uzyskać oczekiwany
+
+00:04:18.970 --> 00:04:21.570
+wynik działania w oczekiwany sposób.
+
+00:04:21.610 --> 00:04:24.630
+Uratujmy.
+
+00:04:24.760 --> 00:04:27.240
+I za czym tęskniłem.
+
+00:04:27.250 --> 00:04:31.070
+Nie widzimy tutaj przecinka.
+
+00:04:31.090 --> 00:04:33.030
+Teraz za pomocą przecinków.
+
+00:04:33.470 --> 00:04:35.760
+Ta sekcja testu była dla mnie trudna z przecinkami.
+
+00:04:35.790 --> 00:04:36.360
+Masz rację.
+
+00:04:36.480 --> 00:04:37.080
+Więc idź.
+
+00:04:37.080 --> 00:04:41.580
+Mamy teraz nowe testy w działaniach, które mijają.
+
+00:04:41.580 --> 00:04:43.130
+Bardzo bardzo dobrze.
+
+00:04:43.260 --> 00:04:45.510
+I to proste, powinniśmy wiedzieć, jak to zrobić.
+
+00:04:45.810 --> 00:04:46.950
+Ale tutaj jest trudna część.
+
+00:04:46.950 --> 00:04:56.460
+Teraz mamy roboty z żądaniami akcji, o których chłopiec robi przesyłkę i ma wywołanie API tutaj, a to jest coś,
+
+00:04:56.460 --> 00:04:59.090
+czego być może nie widziałeś.
+
+00:04:59.100 --> 00:05:04.810
+Stworzyłem tutaj API, który po prostu wyodrębnia nasze wywołanie pobierania.
+
+00:05:05.040 --> 00:05:12.240
+Tak więc dajemy aurl i reagujemy tak, aby uprościć rzeczy dla nas, abyśmy
+
+00:05:12.240 --> 00:05:18.980
+nie musieli ciągle uzyskiwać odpowiedzi na odpowiedź Sardesai Ale widzieliście to wcześniej,
+
+00:05:19.940 --> 00:05:21.080
+podczas
+
+00:05:24.010 --> 00:05:29.580
+gdy działania mają po prostu wysyłka wniosku robotów w toku.
+
+00:05:29.710 --> 00:05:34.920
+A potem w końcu to się skończy albo zakończy się niepowodzeniem.
+
+00:05:35.290 --> 00:05:45.510
+Jak to zrobić, ponieważ patrząc na tę akcję, potrzebujemy wysyłki, ponieważ jest to działanie asynchroniczne Pamiętaj, że
+
+00:05:45.720 --> 00:05:48.540
+musimy za to podziękować.
+
+00:05:48.550 --> 00:05:52.280
+Potrzebujemy oprogramowania pośredniczącego typu thunk.
+
+00:05:52.420 --> 00:05:54.900
+Zacznijmy pisać testy i zobaczmy, co możemy poprawić.
+
+00:05:54.900 --> 00:05:57.630
+Zamierzam zamknąć niektóre z tych zakładek, żeby oczyścić rzeczy.
+
+00:06:01.940 --> 00:06:03.010
+Proszę bardzo.
+
+00:06:03.110 --> 00:06:10.160
+I zamierzamy stworzyć nowy blok, w tym bloku chcemy powiedzieć,
+
+00:06:12.870 --> 00:06:20.310
+że zmiana zmienia uchwyt lub obsługuje API robota, a my powiemy, że
+
+00:06:23.600 --> 00:06:33.400
+dobrze, że pierwszą rzeczą, którą chcemy zrobić, musimy przekazać wysyłkę do naszego Funkcjonowanie ponownie Przypomniałem
+
+00:06:33.400 --> 00:06:42.480
+sobie wysyłkę tutaj dobrze, jeśli zrobimy to bez tego, więc po prostu przetestujmy to.
+
+00:06:42.600 --> 00:06:53.960
+Jeśli uruchomię akcje Xpect dot request robot's action i uważam, że to tak zwane roboty żądań i
+
+00:06:53.960 --> 00:07:04.070
+zostawiamy to w tym miejscu i powiedzmy, że oczekujemy, że typ akcji będzie oznaczał
+
+00:07:09.670 --> 00:07:13.590
+żądanie robotów oczekujących i ładunków.
+
+00:07:13.600 --> 00:07:21.990
+Jeśli spojrzymy na nasze działania, nie wysyłamy żadnych ładunków, więc możemy po prostu iść dalej i pozostawić to takim,
+
+00:07:21.990 --> 00:07:22.950
+jakie jest.
+
+00:07:23.070 --> 00:07:27.310
+Jeśli zapiszę jeszcze jeden robot z
+
+00:07:30.650 --> 00:07:36.390
+nieudanym żądaniem, a dostaniesz komunikat, otrzymuję błąd typu błędu.
+
+00:07:36.390 --> 00:07:47.120
+Wysłanie nie jest funkcją, ponieważ pamiętaj, że z asynchronicznym kodem musimy przekazać tę funkcję wysyłki, aby faktycznie to
+
+00:07:47.960 --> 00:07:57.070
+uruchomić, a my korzystaliśmy z oprogramowania pośredniczącego, abyśmy mogli to zrobić, jeśli pamiętasz indeksowanie.
+
+00:07:57.190 --> 00:08:04.060
+Tak, mamy oprogramowanie pośredniczące typu thunk i tutaj, jak to robimy.
+
+00:08:04.470 --> 00:08:07.360
+Cóż, istnieje specjalny pakiet, którego możemy użyć tutaj.
+
+00:08:07.530 --> 00:08:11.250
+Pozwól mi wyjść z tego, spraw, żeby było trochę większe.
+
+00:08:12.240 --> 00:08:18.890
+Załóżmy, że możemy zainstalować pakiet o nazwie sklep redux i
+
+00:08:22.310 --> 00:08:30.170
+pamiętaj, że daje nam to dostęp do fałszywego sklepu, którego możemy użyć do testowania.
+
+00:08:30.480 --> 00:08:37.060
+Zróbmy więc i PM zainstalujmy deskę rozdzielczą bezpieczną.
+
+00:08:37.370 --> 00:08:53.150
+Def, a teraz mamy dostęp do tego fałszywego sklepu i sposób, w jaki możemy go użyć, to jeśli wejdę tutaj i powiem, że importuję konfigurację sklepu
+
+00:08:54.610 --> 00:09:00.780
+i jeszcze raz to wszystko znajduje się w ich dokumentacji
+
+00:09:00.780 --> 00:09:06.340
+dla pakietu, który chcesz użyć w sklepie redox maake.
+
+00:09:06.650 --> 00:09:16.210
+Chcemy również zaimportować oprogramowanie pośredniczące thunk z pakietu redox, który, jeśli
+
+00:09:19.030 --> 00:09:27.350
+pamiętasz, mamy już w naszym indeksie plik jazzowy.
+
+00:09:27.450 --> 00:09:35.460
+I ostatnią rzeczą, którą musimy zrobić, to upewnić się, że jest odpowiednio ustawiona, aby skonfigurować i stworzyć
+
+00:09:35.550 --> 00:09:41.200
+ten sklep, abyśmy mogli po prostu powiedzieć, że sklep jest zamknięty.
+
+00:09:42.700 --> 00:09:55.500
+Równa się konfiguruje zablokowany magazyn i rekonfiguruje go, nadając mu pewne właściwości, z których jedno z nich jest oprogramowaniem
+
+00:09:55.500 --> 00:09:58.890
+pośredniczącym, które będziemy używać middleware.
+
+00:09:58.890 --> 00:10:04.280
+Czasami najprawdopodobniej dodasz to w pliku testowym konfiguracji.
+
+00:10:04.290 --> 00:10:11.280
+Na razie zatrzymam to tutaj, ponieważ mamy tylko jeden plik akcji, ale zazwyczaj można go wyeksportować.
+
+00:10:11.280 --> 00:10:14.930
+Więc sklep jest dostępny dla wszystkich twoich testów.
+
+00:10:16.600 --> 00:10:20.970
+Teraz możemy stworzyć sklep równy
+
+00:10:24.790 --> 00:10:29.940
+sklepowi z maake'em i byliśmy na nim.
+
+00:10:30.190 --> 00:10:42.460
+Mogę teraz powiedzieć, że sklep Daut wysyła i przechowuje, że przesyłka wykonuje akcje robotami żądającymi kropek.
+
+00:10:42.580 --> 00:10:46.740
+Więc wyślemy tę akcję.
+
+00:10:46.870 --> 00:10:52.760
+Pamiętaj, że to jest ta akcja tutaj.
+
+00:10:52.880 --> 00:11:06.890
+A kiedy wyślemy, że możemy zrobić coś podobnego do działania Konst, to zachowanie Dauta będzie działało.
+
+00:11:07.010 --> 00:11:09.850
+A teraz ta akcja ma zawierać to, czego potrzebujemy.
+
+00:11:11.260 --> 00:11:12.900
+Pozwól, że po prostu zapiszę log, żeby ci pokazać.
+
+00:11:12.910 --> 00:11:14.050
+Więc
+
+00:11:18.340 --> 00:11:30.200
+pocieszasz akcję dziennika, która będzie zawierała akcję, oszczędzajmy test NPM Iranu.
+
+00:11:30.230 --> 00:11:36.540
+Przewiń w górę i mam tu trochę błędu dziennika konsoli.
+
+00:11:36.590 --> 00:11:44.280
+Konfiguracja sklepu Mocka powinna być skonfigurowana tutaj.
+
+00:11:44.290 --> 00:11:49.320
+W porządku, więc widzimy, że wysyłka nie jest funkcją.
+
+00:11:49.390 --> 00:11:57.470
+Dlaczego tak jest i to jest coś, co być może zauważyliście, patrząc na akcję.
+
+00:11:57.710 --> 00:12:04.960
+JOT. S. S-5 pamiętasz, że dzięki reduxowi dziękujesz, że funkcja zostanie zwrócona.
+
+00:12:05.410 --> 00:12:13.750
+I chociaż nasz program działa tak, jak jest teraz, to najlepiej, abyśmy wrócili do najlepszego psa.
+
+00:12:13.740 --> 00:12:14.280
+Tak.
+
+00:12:17.270 --> 00:12:21.590
+Widzisz to i to jest coś, o czym rozmawialiśmy przed sekcją redux.
+
+00:12:21.590 --> 00:12:28.520
+Widzisz tutaj, że właśnie wysyłamy przesyłkę do naszych robotów z prośbą.
+
+00:12:28.940 --> 00:12:38.110
+Ale sposób, w jaki działa funkcja Thankx, polega na tym, że chcemy się upewnić, że wysyłamy tak, jak uruchamiamy
+
+00:12:38.110 --> 00:12:47.140
+w nim funkcję, abyśmy mogli uruchomić funkcję wysyłki wysyłki, tak jak mamy to w naszych testach tutaj, a
+
+00:12:47.140 --> 00:12:50.900
+akcje żądają robotów i chcemy wysłać że.
+
+00:12:51.010 --> 00:12:55.280
+W przeciwnym razie musielibyśmy przechowywać w sklepie Daut ekspedycję Midhir, która jest trochę brzydka.
+
+00:12:55.360 --> 00:13:01.870
+Jeszcze raz, aby naprawić, że wszystko, co musimy zrobić, to działania, ponieważ jeśli
+
+00:13:01.870 --> 00:13:07.560
+pamiętasz Apogee Tak, wysłaliśmy teraz i roboty questowe muszą zostać uruchomione.
+
+00:13:07.630 --> 00:13:16.660
+Tak więc będziemy mieć funkcję wewnątrz funkcji i chcemy się upewnić, że to też działa.
+
+00:13:16.660 --> 00:13:19.060
+Tak więc zamierzam wrócić i zrobić NPM
+
+00:13:26.170 --> 00:13:28.290
+zacząć jasne i wszystko nadal działa.
+
+00:13:28.730 --> 00:13:35.090
+Ale teraz mamy nadzieję, że uda nam się lepiej przeprowadzić testy, a testy PM wracają
+
+00:13:38.210 --> 00:13:42.650
+do naszych testów i widzimy, że mamy jeden błąd.
+
+00:13:44.130 --> 00:13:49.630
+Mamy typ żądania robotów oczekujących, których oczekiwaliśmy, ale zamiast tego mamy funkcję.
+
+00:13:51.590 --> 00:13:59.830
+A jeśli rejestrujemy akcje, widzimy, że mamy oczekujący proces działania, którego oczekujemy.
+
+00:13:59.970 --> 00:14:04.220
+A to dlatego, że widać, że akcja zwraca tablicę.
+
+00:14:04.320 --> 00:14:15.170
+I chcemy obiektu działania w Xpect, ponieważ nie musimy już uruchamiać tej akcji.
+
+00:14:15.170 --> 00:14:23.560
+To wszystko jest uruchamiane tutaj i możemy uzyskać działania, które możemy po prostu powiedzieć
+
+00:14:26.480 --> 00:14:34.320
+działanie xpect pierwszy element w tablicy, aby uruchomić i patrzeć, że wszystko działa.
+
+00:14:34.500 --> 00:14:37.650
+I wiem, że to może trochę zagmatwać.
+
+00:14:37.710 --> 00:14:42.120
+Za każdym razem, gdy testujesz asynchroniczne rzeczy, może to być trudne.
+
+00:14:42.300 --> 00:14:50.670
+Ale wszystko, co zrobiliśmy, to naprawdę stworzyć fałszywy sklep z oprogramowaniem pośredniczącym, więc oczekuje
+
+00:14:51.120 --> 00:14:58.830
+na funkcje zwracane z działania, w którym to przypadku robiliśmy nasze działania, żądając
+
+00:14:58.830 --> 00:15:10.510
+robotów, ponieważ widzimy tutaj, że każdy z nich wykonuje akcję, która wymaga wysłania a teraz ta wysyłka automatycznie pobiera
+
+00:15:10.510 --> 00:15:14.890
+roboty żądań zdania, a otrzyma akcje.
+
+00:15:14.890 --> 00:15:17.070
+A jeśli pójdziemy do naszej akcji.
+
+00:15:17.230 --> 00:15:17.760
+Tak.
+
+00:15:17.770 --> 00:15:26.970
+Pierwszą rzeczą, którą wyślemy, jest oczekująca akcja, na którą otrzymujemy akcję zero.
+
+00:15:27.060 --> 00:15:32.270
+Nazwał spodziewaną akcję robotów w toku.
+
+00:15:32.280 --> 00:15:32.940
+W porządku.
+
+00:15:32.940 --> 00:15:39.570
+Jak więc przetestować sukces robota żądania i poprosić robotów o niepowodzenie.
+
+00:15:39.900 --> 00:15:45.060
+I to jest małe wyzwanie, które zamierzam zostawić dla ciebie, by zdecydować,
+
+00:15:45.060 --> 00:15:55.130
+co zrobić w oparciu o to, czego dowiedzieliśmy się o testach asynchronicznych, a także o tym, czego dowiedzieliśmy się o kpieniu z naszych reduxów lub
+
+00:15:55.130 --> 00:15:57.430
+- jest to trudny problem.
+
+00:15:57.440 --> 00:16:04.550
+Więc używaj wszelkich zasobów, które masz pod ręką Internet, stos Google, przepełnij wszystko, co możesz, aby spróbować
+
+00:16:04.550 --> 00:16:08.810
+i zorientować się, ponieważ o to właśnie chodzi w testowaniu.
+
+00:16:08.810 --> 00:16:17.780
+Testowanie jest czasami bardzo proste, gdy masz czyste funkcjonalne komponenty lub funkcje lub może być naprawdę trudne,
+
+00:16:17.780 --> 00:16:23.160
+gdy masz wszystkie te zależności, na których testy działają.
+
+00:16:23.720 --> 00:16:26.130
+Ale każda sytuacja jest inna.
+
+00:16:26.210 --> 00:16:33.290
+I na szczęście dla nas z tymi wszystkimi zasobami online możesz to zrozumieć, o ile rozumiesz,
+
+00:16:33.290 --> 00:16:39.510
+jak działają i co oznaczają błędy, co jako starszy programista jest najważniejszą rzeczą.
+
+00:16:39.620 --> 00:16:44.080
+Nie znają wszystkich składni w bibliotece i znają całą dokumentację.
+
+00:16:44.120 --> 00:16:50.770
+Po prostu rozumieją, jak działa pod maską, więc gdy pojawia się problem, mogą go rozwiązać.
+
+00:16:52.050 --> 00:16:58.960
+Na koniec chciałem ci pokazać dwie rzeczy, które mogą ci pomóc lub myślę, że są świetne.
+
+00:16:58.980 --> 00:17:07.620
+Za każdym razem, gdy wykonujesz testy asynchroniczne, pierwszą z nich jest biblioteka o nazwie puk i puk, po prostu jest
+
+00:17:07.640 --> 00:17:08.600
+pustym paczką.
+
+00:17:08.640 --> 00:17:16.190
+Możesz zainstalować i możesz zobaczyć tutaj, że możemy udawać, że robimy alkohol.
+
+00:17:16.380 --> 00:17:25.080
+Możemy wykonać żądanie pobrania do punktu końcowego i możemy automatycznie odpowiedzieć, co chcemy.
+
+00:17:25.200 --> 00:17:32.240
+Można powiedzieć, że ta odpowiedź miała status 200 i dała nam nazwę użytkownika i adres e-mail.
+
+00:17:32.610 --> 00:17:40.630
+A to bardzo ładnie poradzi na testy asynchroniczne, gdy przejdziesz do testowania, szczególnie gdy zaczniesz pracować
+
+00:17:40.630 --> 00:17:42.220
+z API.
+
+00:17:43.030 --> 00:17:48.970
+Super test jest jednym z moich ulubionych narzędzi po prostu przez importowanie super testów, tak jak tutaj.
+
+00:17:49.060 --> 00:17:57.880
+Mamy też prośbę, na którą może poprosić, powiedzmy, ekspresową aplikację i możesz zrobić wszystkie te
+
+00:17:58.120 --> 00:18:05.860
+powiedzonka, takie jak uruchamianie get i oczekiwanie typu zawartości, statusu i mnóstwa rzeczy.
+
+00:18:05.890 --> 00:18:13.170
+To wykracza poza zakres tego kursu i jest czymś, na co możesz rzucić okiem na to, że dostajesz coraz
+
+00:18:13.210 --> 00:18:19.240
+więcej do testowania, ale po prostu zdajesz sobie sprawę, że istnieje mnóstwo narzędzi, które możesz
+
+00:18:19.240 --> 00:18:21.750
+wykorzystać do napisania czystych, pięknych testów.
+
+00:18:22.840 --> 00:18:24.420
+Do zobaczenia w następnym.
+
+00:18:24.430 --> 00:18:24.960
+PA pa.

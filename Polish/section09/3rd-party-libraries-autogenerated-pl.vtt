@@ -1,0 +1,388 @@
+﻿WEBVTT
+
+00:00:01.510 --> 00:00:02.460
+Witamy spowrotem.
+
+00:00:02.770 --> 00:00:10.840
+Kontynuujmy nasze wytyczne dotyczące bezpieczeństwa i korzystajmy z naszych bibliotek drugiej strony trzeciej, aby zobaczyć, o co w tym
+
+00:00:10.840 --> 00:00:11.800
+wszystkim chodzi.
+
+00:00:15.080 --> 00:00:17.170
+Nasze aplikacje rosną.
+
+00:00:17.270 --> 00:00:24.920
+Jesteśmy zależni od coraz większej liczby bibliotek stron trzecich i możesz zobaczyć, że od razu, jeśli przejdziesz do dowolnego
+
+00:00:24.920 --> 00:00:31.520
+projektu i przejrzysz jego folder modułów węzłów, użyjemy ton kodu od innych ludzi i to
+
+00:00:31.520 --> 00:00:32.840
+nie jest złe.
+
+00:00:32.870 --> 00:00:38.490
+Nie chcemy zapisywać naszych własnych funkcji w naszych własnych rozwiązaniach, które już zostały odkryte.
+
+00:00:38.600 --> 00:00:44.720
+Idea A. P. M. jest w stanie udostępniać kod innym osobom, abyśmy mogli szybciej tworzyć aplikacje.
+
+00:00:44.720 --> 00:00:47.230
+Mam na myśli spojrzenie, co może zrobić dla nas reakcja.
+
+00:00:48.010 --> 00:00:55.910
+Teraz, kiedy tak się dzieje, napotykasz na inny problem, w którym ponownie używasz kodu, którego sam nie
+
+00:00:55.910 --> 00:00:56.860
+napisałeś.
+
+00:00:57.690 --> 00:01:04.980
+Być może nie jest to najbezpieczniejsza i jeśli chodzi o biblioteki stron trzecich, zawsze chcesz mieć pewność, że
+
+00:01:04.980 --> 00:01:11.990
+jeśli dodasz je do swojego projektu, że jest to dobra biblioteka, to jest to biblioteka, której możesz
+
+00:01:12.000 --> 00:01:18.770
+zaufać i która jest biblioteką jest bezpieczny, ponieważ każdy może załadować dowolny pakiet, który chce na
+
+00:01:18.790 --> 00:01:19.690
+NPM.
+
+00:01:19.890 --> 00:01:28.560
+A jeśli jestem kiepską osobą, to prawdopodobnie mogę załadować naprawdę złą bibliotekę, która mówi, że pomaga ci jeden
+
+00:01:28.680 --> 00:01:35.040
+problem, ale w rzeczywistości zbiera informacje o użytkowniku, a może o wynikach logowania.
+
+00:01:35.370 --> 00:01:39.000
+Więc zawsze chcesz być ostrożny z bibliotekami stron trzecich.
+
+00:01:39.420 --> 00:01:46.920
+Na szczęście masz dość dobry system, który możesz zaimplementować, a to po prostu upewnij się, że idziesz na stronę
+
+00:01:46.920 --> 00:01:52.710
+GET HELP jakiejkolwiek biblioteki, z której korzystasz, i przyglądasz się ich gwiazdom i ile
+
+00:01:52.710 --> 00:01:54.610
+razy zostały one rozwidlone.
+
+00:01:54.620 --> 00:02:02.790
+Ogólnie rzecz biorąc, duża społeczność wokół niego może zaufać dużym bibliotekom, takim jak reagowanie lub redukowanie, ponieważ są
+
+00:02:02.820 --> 00:02:06.150
+one rozwijane przez firmy, którym można zaufać.
+
+00:02:06.150 --> 00:02:08.000
+Cóż, możesz po prostu.
+
+00:02:08.430 --> 00:02:14.070
+Ale mają też wiele gwiazd na Hobb wiele osób pracuje nad tym i wiele
+
+00:02:14.070 --> 00:02:19.410
+czasu społeczności open source poszło na to, aby uczynić go lepszym i bezpieczniejszym.
+
+00:02:19.410 --> 00:02:28.040
+Dlatego korzystaj z pakietów dobrze znanych i szanowanych, nad którymi ciągle pracujemy.
+
+00:02:28.050 --> 00:02:34.190
+Teraz chcę pokazać dwie rzeczy, które możesz zrobić od razu, aby naprawdę poprawić swoje praktyki w
+
+00:02:34.190 --> 00:02:40.900
+zakresie bezpieczeństwa, jeśli chodzi o biblioteki stron trzecich i to są te dwa narzędzia - NSB i wąż.
+
+00:02:40.910 --> 00:02:42.160
+Myślę, że mówisz Snick.
+
+00:02:42.200 --> 00:02:48.040
+Nie wiem, jak to jest wymawiane, ale pokażemy, jak to działa, by sprawdzić biblioteki innych firm.
+
+00:02:49.570 --> 00:02:54.890
+Mam tutaj naszą progresywną aplikację internetową Robo i tutaj.
+
+00:02:54.910 --> 00:02:56.730
+Zróbmy to trochę większym.
+
+00:02:57.800 --> 00:03:05.750
+Zamierzam zainstalować te dwa pakiety, o których właśnie opowiadałem o instalacji NPM G dla
+
+00:03:05.750 --> 00:03:10.970
+globalnej, tak, żebym mógł użyć polecenia NSB i wprowadzić.
+
+00:03:11.010 --> 00:03:13.760
+Teraz prawdopodobnie popełnię błąd.
+
+00:03:13.800 --> 00:03:14.510
+Tu jest.
+
+00:03:14.610 --> 00:03:16.950
+Otrzymasz łatwy błąd dostępu.
+
+00:03:17.250 --> 00:03:18.930
+Odmowa pozwolenia.
+
+00:03:18.930 --> 00:03:24.370
+Ponownie, jeśli otrzymujesz ten błąd, oznacza to, że nie masz uprawnień do zainstalowania pakietu globalnego.
+
+00:03:24.450 --> 00:03:29.780
+Czasami możesz więc zrobić sudo lub uruchomić polecenie w trybie administratora.
+
+00:03:31.080 --> 00:03:36.180
+Zróbmy to z NSB, a będziesz musiał podać swoje hasło.
+
+00:03:36.210 --> 00:03:41.220
+Upewnij się, że mówisz, że jesteś tym, za kogo się podajesz i masz zainstalowany pakiet.
+
+00:03:41.400 --> 00:03:44.650
+A więc A. B. co możemy z tym zrobić.
+
+00:03:45.680 --> 00:03:52.390
+Cóż, możemy uruchomić polecenie o nazwie NSB check i sprawdzi to nasz przyjaciel Ruber P. W ..
+
+00:03:52.700 --> 00:03:53.710
+Zobaczmy, co robi.
+
+00:03:59.370 --> 00:04:06.690
+Wygląda na to, że mamy jedną lukę w zabezpieczeniach i sprawdzanie NSB jest niesamowite, ponieważ daje świetne informacje
+
+00:04:06.960 --> 00:04:09.750
+o tym, gdzie są twoje problemy.
+
+00:04:10.470 --> 00:04:17.160
+Widzisz, ludzie ciągle znajdują luki w kodzie i potrafią robić z nim złe rzeczy.
+
+00:04:17.430 --> 00:04:20.020
+I dobrzy ludzie zawsze próbują to naprawić.
+
+00:04:20.100 --> 00:04:24.410
+I to wszystko, co masz na telefonie iPhone lub telefonie z Androidem.
+
+00:04:24.420 --> 00:04:32.280
+Stałe aktualizacje, ponieważ firmy stale aktualizują oprogramowanie, aby być bezpieczniejszym.
+
+00:04:32.280 --> 00:04:38.070
+Jeśli ktoś znajdzie lukę, musi to naprawić natychmiast, ponieważ wszyscy atakujący będą wyglądać jak
+
+00:04:38.070 --> 00:04:39.950
+nowa luka w zabezpieczeniach.
+
+00:04:39.960 --> 00:04:45.310
+Zamierzam to wypróbować i zobaczyć, czy mogę z tym zrobić złe rzeczy.
+
+00:04:45.780 --> 00:04:53.730
+Zawsze więc zawsze aktualizuj i korzystaj z najnowszych aktualizacji oprogramowania, ponieważ w większości przypadków dostępne są aktualizacje zabezpieczeń
+
+00:04:53.730 --> 00:04:56.590
+w celu uniknięcia tego typu luk.
+
+00:04:56.730 --> 00:05:02.800
+A przy sprawdzaniu NSB widzimy, że mamy pakiet o nazwie Hoek Hoek Hoek.
+
+00:05:02.820 --> 00:05:06.990
+Nie wiem, jak to powiedzieć i widać, że jest to średni poziom.
+
+00:05:06.990 --> 00:05:14.690
+Mamy 4. Zainstalowana 2 wersja i ta luka dotyczy wszystkich elementów 4. 2 lub mniej.
+
+00:05:15.450 --> 00:05:21.690
+Następnie pokazuje, jaka jest wersja łatki, a także, co używa tego pakietu.
+
+00:05:21.690 --> 00:05:28.430
+Chodzi o to, że widzimy, że przyjaciel robaka, który zaatakował cały pakiet, jest używany przez skrypty re-act tylko w środowisku
+
+00:05:28.440 --> 00:05:29.030
+Seelye.
+
+00:05:29.040 --> 00:05:32.750
+Bouvard JS Dom request Hawk Hoek.
+
+00:05:32.910 --> 00:05:36.360
+Używamy go, aby zobaczyć zagnieżdżanie, które tu się dzieje.
+
+00:05:36.360 --> 00:05:42.510
+Nawet jeśli nie wiemy o tym bezpośrednio, jest on używany tylko przez Domma, który używa tej prośby i
+
+00:05:42.510 --> 00:05:43.450
+używa Hok.
+
+00:05:43.460 --> 00:05:44.910
+Mają tę nadzieję.
+
+00:05:45.210 --> 00:05:51.910
+A także daje informacje, gdzie można znaleźć więcej szczegółów na temat tej luki.
+
+00:05:52.350 --> 00:05:58.490
+A jeśli rzeczywiście odwiedzasz witrynę Hoque, zróbmy nadzieję i zobaczmy, że
+
+00:06:01.890 --> 00:06:12.360
+oh tak, jest bliska wersja 5 punktu 0. 3 i że zdecydowanie mamy nieaktualną wersję.
+
+00:06:12.420 --> 00:06:13.460
+Bardzo fajny.
+
+00:06:13.500 --> 00:06:18.030
+Dlatego chcemy to zmienić, zmieniając nasz pakiet.
+
+00:06:18.150 --> 00:06:26.970
+Jason Faltu nowsza wersja lub może po prostu ponownie użyć polecenia instalacji NPM, aby ponownie zainstalować to, czego
+
+00:06:26.970 --> 00:06:27.560
+potrzebujemy.
+
+00:06:29.130 --> 00:06:29.370
+W porządku.
+
+00:06:29.370 --> 00:06:33.860
+A co z pozostałymi dwoma, o których mówiłem na temat zainstalowanego NPM dashi.
+
+00:06:33.900 --> 00:06:38.890
+Ale tym razem nazywa się Sonic snipy Snick.
+
+00:06:38.940 --> 00:06:47.010
+Pójdziemy z Nickiem, a ta historia będzie wymagać, aby połączyć swoje konto
+
+00:06:47.010 --> 00:06:48.030
+Halba.
+
+00:06:48.060 --> 00:06:53.530
+To dlatego, że z NSB prowadzimy audyt naszego zapakowanego Boga.
+
+00:06:53.600 --> 00:07:00.120
+Jason phó snake będzie sprawdzał katalog modułów węzła za pomocą polecenia tego nicka.
+
+00:07:00.170 --> 00:07:01.830
+I to jest naprawdę bardzo dobre narzędzie.
+
+00:07:02.710 --> 00:07:12.740
+Jeśli więc Ron pozwoli mi to wyjaśnić, jeśli przeprowadzimy test Snick, okaże się, że potrzebujemy konta uwierzytelniającego.
+
+00:07:12.750 --> 00:07:17.100
+Musimy więc połączyć to z naszą pomocą Uzyskaj pomoc, więc mogę
+
+00:07:21.820 --> 00:07:27.660
+zrobić Snick off, a ja po prostu zaloguję się za pomocą mojego konta pomocy, które chcę autoryzować.
+
+00:07:29.940 --> 00:07:31.170
+Tak, zgadzam się.
+
+00:07:34.770 --> 00:07:36.570
+W porządku, jesteśmy gotowi do użycia.
+
+00:07:36.720 --> 00:07:41.420
+Więc chodźmy z testem Snick.
+
+00:07:41.650 --> 00:07:44.230
+Musimy uruchomić NPM i najpierw rozwiązać.
+
+00:07:44.440 --> 00:07:51.370
+I znowu, ponieważ właśnie sklonowałem ten pakiet, nie uruchomiłem instalacji NPM, więc nie ma jeszcze folderu modułów
+
+00:07:51.370 --> 00:07:52.020
+węzłów.
+
+00:07:52.060 --> 00:08:00.100
+I ten projekt, ale NSB był w stanie uruchomić testy, ponieważ testuje pakiet Jasonville.
+
+00:08:00.390 --> 00:08:04.900
+W porządku, więc po prostu uruchom instalację NPM.
+
+00:08:04.960 --> 00:08:05.330
+W porządku.
+
+00:08:05.340 --> 00:08:07.350
+A teraz biegnijmy uruchomić nasze polecenie.
+
+00:08:07.350 --> 00:08:15.290
+Zamierzam to wyczyścić, a my będziemy wracać i wąchać testy, a gdy to się uda, będzie
+
+00:08:15.290 --> 00:08:17.110
+to tona testów.
+
+00:08:17.120 --> 00:08:23.520
+Istnieją inne narzędzia takie jak te, ale idea i cel końcowy są zawsze takie same.
+
+00:08:23.600 --> 00:08:29.750
+Upewnij się, że używane biblioteki innych firm są zawsze aktualne i nie
+
+00:08:29.750 --> 00:08:33.630
+korzystasz z pakietów o znanych lukach.
+
+00:08:33.740 --> 00:08:41.350
+I jest mnóstwo informacji online o tym, jak je znaleźć.
+
+00:08:41.360 --> 00:08:41.950
+W porządku.
+
+00:08:42.840 --> 00:08:45.990
+Testujemy to wiele zależności.
+
+00:08:46.080 --> 00:08:55.030
+Tysiąc czterdzieści dziewięć na zależności i znalazł 13 luk w zabezpieczeniach z 528 podatnymi ścieżkami.
+
+00:08:55.030 --> 00:08:57.930
+Święty Moly to bardzo dużo.
+
+00:08:58.390 --> 00:09:06.990
+Daje tony wydajności, a nawet daje informacje o tym, jak to naprawić.
+
+00:09:07.000 --> 00:09:11.920
+Widzisz, że twoje zależności są nieaktualne, w przeciwnym razie będziesz używał nowego
+
+00:09:11.920 --> 00:09:19.320
+lub twardego ciasteczka, a potem twardego ciasteczka 2. 3, aby ponownie sprawdzić, czy próbowano usunąć Brak modułu i ponownie zainstalować je z uruchomionymi
+
+00:09:19.320 --> 00:09:19.960
+testami węży.
+
+00:09:21.230 --> 00:09:26.590
+A jeśli problem będzie się powtarzał i prawdopodobnie tak się stanie, ponieważ po prostu zainstalujemy tę
+
+00:09:26.590 --> 00:09:29.660
+jedną z twoich zależności, możemy połączyć przestarzałe moduły.
+
+00:09:29.660 --> 00:09:34.730
+Więc znowu musisz to naprawić i zainstalować nowe pakiety.
+
+00:09:34.820 --> 00:09:37.200
+Ale widzisz, że mamy czas.
+
+00:09:37.700 --> 00:09:38.840
+I o to chodzi.
+
+00:09:38.870 --> 00:09:46.940
+Zdecydowanie, kiedy to uruchomisz, bardzo rzadko zdarza się, że dostaniesz 100 procent, ale przynajmniej teraz wiemy,
+
+00:09:46.940 --> 00:09:52.280
+od czego zacząć i gdzie może zaktualizować nasze pakiety.
+
+00:09:52.280 --> 00:09:58.700
+Problem z niektórymi z nich polega na tym, że pakiet z twardym plikiem cookie jest potrzebny na przykład
+
+00:09:58.700 --> 00:10:05.690
+w pakiecie żądania i być może jeśli zaktualizujemy twardy pakiet cookie, pakiet z żądaniem nie będzie mógł pracować z
+
+00:10:05.690 --> 00:10:07.820
+nowszą wersją trudnego pliku cookie.
+
+00:10:08.060 --> 00:10:14.990
+I wiesz, co to jest jeden z dużych problemów z PM i mając te naprawdę głęboko zagnieżdżone drzewka
+
+00:10:14.990 --> 00:10:15.720
+zależności.
+
+00:10:16.250 --> 00:10:22.000
+I jest wiele dyskusji w Internecie, jak rozwiązać ten problem i jakie są najlepsze praktyki.
+
+00:10:22.190 --> 00:10:28.390
+Mam jednak nadzieję, że korzystając z tych dwóch narzędzi, sam zdecydujesz, co chcesz naprawić.
+
+00:10:30.110 --> 00:10:36.410
+Mam nadzieję, że nauczyło cię to, że musisz uważać na wszystkie te pakiety i dobrze jest
+
+00:10:36.410 --> 00:10:42.860
+uruchomić te testy, a być może jako zespół decydują, kiedy coś naprawić, i kiedy nie chcesz nie
+
+00:10:42.860 --> 00:10:47.700
+włączać biblioteki innej firmy z powodu podatności na atak. lub kiedy powinieneś.
+
+00:10:47.940 --> 00:10:48.810
+Do zobaczenia w następnym wideo.

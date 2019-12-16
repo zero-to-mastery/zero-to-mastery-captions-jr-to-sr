@@ -1,0 +1,220 @@
+﻿WEBVTT
+
+00:00:01.310 --> 00:00:08.920
+Dzięki bazom danych jest ich mnóstwo, a nawet w poprzednim kursie omówiliśmy różnice między relacyjnymi bazami danych, a
+
+00:00:09.070 --> 00:00:16.330
+bazy danych Eski Well nie bazowały na relacyjnych bazach danych, co oznacza, że musieliście zdefiniować swoje
+
+00:00:16.330 --> 00:00:24.460
+schematy lub sposób, w jaki baza danych wyglądała wcześniej i można było zbudować bardzo złożone bazy danych w ten
+
+00:00:24.490 --> 00:00:25.270
+sposób.
+
+00:00:25.780 --> 00:00:29.220
+I to właśnie postscripts jest relacyjną bazą danych.
+
+00:00:29.380 --> 00:00:35.170
+Jest to baza danych, która pozwala nam mieć różne tabele, które są ze sobą powiązane i
+
+00:00:35.170 --> 00:00:38.980
+definiujemy te relacje za pomocą tego, co nazywamy schematami.
+
+00:00:39.080 --> 00:00:47.400
+I znowu używamy postscriptów jako relacyjnej bazy danych do przechowywania naszych użytkowników i haseł w naszej inteligentnej brainie.
+
+00:00:47.490 --> 00:00:53.310
+Ale jest powód, dla którego istnieje tak wiele baz danych, gdzie budowane są różne bazy danych, aby
+
+00:00:53.310 --> 00:00:54.400
+zoptymalizować różne rzeczy.
+
+00:00:54.450 --> 00:01:04.140
+Amazon Netflix Facebook Alibaba Sklep pączków Joh wszystkie mają różne potrzeby bazy danych, aby zaspokoić wszystkie te
+
+00:01:04.140 --> 00:01:04.840
+potrzeby.
+
+00:01:04.980 --> 00:01:07.990
+Wiele baz danych można znaleźć w Internecie.
+
+00:01:08.490 --> 00:01:16.760
+A dzisiaj porozmawiamy o jednej z najbardziej lubianych i używanych baz danych, która nazywa się ponowna edycja i powiemy, że nie
+
+00:01:16.910 --> 00:01:19.310
+ma ratowania całej bazy danych.
+
+00:01:19.370 --> 00:01:24.310
+W ten sposób jesteśmy w stanie nauczyć się nieco relacyjnej bazy danych z
+
+00:01:24.320 --> 00:01:30.940
+postgresql, a także znać akcję ratowania wszystkimi czerwonymi oczami, to jest to, co nazywamy Noasem, przekrzywić całą bazę pamięci.
+
+00:01:31.250 --> 00:01:36.640
+A pod koniec sekcji te słowa będą dla ciebie znaczące.
+
+00:01:36.700 --> 00:01:37.760
+Więc zacznijmy.
+
+00:01:39.610 --> 00:01:46.070
+Berettas to baza danych o otwartym kodzie źródłowym, która jest często używana do tworzenia naprawdę wydajnych skalowalnych
+
+00:01:46.070 --> 00:01:47.270
+aplikacji internetowych.
+
+00:01:47.270 --> 00:01:55.790
+Wiele firm korzysta z renty Teraz wykwalifikowane bazy danych Noah mogą mieć wiele różnych typów.
+
+00:01:55.840 --> 00:01:59.410
+Masz takie rzeczy jak bazy danych gildii notatek.
+
+00:01:59.410 --> 00:02:02.660
+Być może słyszałeś o Mongo D-B lub Koshti.
+
+00:02:02.770 --> 00:02:05.270
+Są naprawdę bardzo dobre w przechowywaniu dokumentów.
+
+00:02:05.290 --> 00:02:12.580
+Więc jeśli myślisz o profilach Linked-In, gdzie twój profil zawiera wszystkie te pola i kategorie,
+
+00:02:12.580 --> 00:02:17.160
+a jeden użytkownik ma taki dokument jak dane.
+
+00:02:17.200 --> 00:02:20.880
+W takim przypadku są one naprawdę bardzo dobre.
+
+00:02:21.030 --> 00:02:27.560
+Masz takie rzeczy jak szeroka kolumna z Cassandrą i takie rzeczy jak bazy danych Nio dla Jaya.
+
+00:02:27.660 --> 00:02:35.680
+Jeśli masz na przykład aplikację społecznościową, która opisuje wykres, na przykład połączenie między jego użytkownikami.
+
+00:02:35.850 --> 00:02:43.490
+Teraz czerwony S jest tak zwanym magazynem wartości kluczowych, a ta relacja wartości klucza jest
+
+00:02:43.490 --> 00:02:48.380
+trochę podobna do sposobu obsługi obiektów w javascript.
+
+00:02:48.380 --> 00:02:54.290
+Mamy właściwość obiektu, która ma przypisaną wartość klucz i wartość.
+
+00:02:55.350 --> 00:02:59.790
+I zamierzamy zastanowić się, jak zamierzamy użyć rattus w następnych kilku filmach.
+
+00:02:59.910 --> 00:03:07.950
+Ale jedyną rzeczą, którą chcę przejść, jest to, że jest to baza danych w pamięci, która czyni ją naprawdę bardzo
+
+00:03:07.950 --> 00:03:08.670
+szybką.
+
+00:03:09.380 --> 00:03:14.900
+W naszych aplikacjach widzisz, jak używasz krótkich danych.
+
+00:03:15.670 --> 00:03:23.500
+Często używa się go w takich sytuacjach jak sesje lub strony internetowe, a w pamięci oznacza to, że
+
+00:03:23.650 --> 00:03:29.630
+nie masz dużych zestawów danych, jak na przykład z Cassandrą czy Mongo D-B.
+
+00:03:29.680 --> 00:03:36.430
+Masz małe fragmenty danych, tak małe fragmenty danych, które pozwalają nam zachować je w pamięci.
+
+00:03:36.430 --> 00:03:38.990
+To jest pamięć urządzenia, a nie na dysku.
+
+00:03:39.040 --> 00:03:47.020
+Jeśli pamiętasz pamięć jest czymś bardzo łatwo dostępnym na komputerze, a dysk jest nieco
+
+00:03:47.020 --> 00:03:47.650
+wolniejszy.
+
+00:03:47.800 --> 00:03:53.260
+Możesz przechowywać o wiele więcej informacji na dysku, ale dostęp do nich jest nieco wolniejszy.
+
+00:03:53.270 --> 00:04:00.310
+Więc z czynszami, których chcesz użyć, gdy masz małe kawałki danych, do których potrzebujesz dostępu.
+
+00:04:00.770 --> 00:04:04.440
+I nie obchodzi cię, że możesz stracić część tych danych.
+
+00:04:06.170 --> 00:04:14.390
+Teraz, mimo że dane znajdują się w pamięci, wykonuje się co jakiś czas migawkę, aby zapisać bieżącą zawartość
+
+00:04:14.510 --> 00:04:21.190
+bazy danych na dysku, z którego można łatwo zregenerować się po nieoczekiwanym zamknięciu.
+
+00:04:21.250 --> 00:04:26.430
+Gdziekolwiek ją przeczytasz, działa, a stracisz tylko kilka minut informacji.
+
+00:04:27.870 --> 00:04:35.280
+Następnie, bazując na tych informacjach, powinniśmy używać rattusa, gdy mamy małe fragmenty danych, które nie
+
+00:04:35.700 --> 00:04:42.570
+są super-super ważne, że jeśli usługa ulegnie awarii, będziemy mogli wrócić do migawki
+
+00:04:42.570 --> 00:04:45.480
+i możemy stracić najnowsze informacje.
+
+00:04:45.870 --> 00:04:49.420
+Ale poświęcamy to wszystko na szybkość służby.
+
+00:04:49.470 --> 00:04:54.270
+Jest super super szybki i bardzo skalowalny.
+
+00:04:55.480 --> 00:05:01.480
+I czytaj tak jak wszystkie inne bazy danych ma unikalny zestaw typów danych, które może przechowywać.
+
+00:05:01.780 --> 00:05:07.120
+Przejrzymy niektóre z nich i kolejne filmy, a przekonasz się, że nie używają Eskew Well,
+
+00:05:07.180 --> 00:05:11.600
+to nie jest cała baza danych Eskew, a zobaczymy, jak to działa.
+
+00:05:13.570 --> 00:05:19.240
+W tej sekcji zamierzamy przyzwyczaić się do Rattusa, a następnie podchodząc, gdy mówimy
+
+00:05:19.240 --> 00:05:26.800
+o sesjach i JWT, będziemy używać programu rattus w taki sposób, aby zarządzać sesją, ponieważ starsi programiści muszą
+
+00:05:26.800 --> 00:05:30.500
+zdecydować, które narzędzie jest odpowiedni do tej pracy.
+
+00:05:30.610 --> 00:05:32.050
+Powinniśmy to już wiedzieć.
+
+00:05:32.260 --> 00:05:39.190
+I chociaż postscripts jest niesamowity, gdy masz narzędzia, takie jak retests, które mogą być naprawdę szybkie w zarządzaniu małymi
+
+00:05:39.190 --> 00:05:45.010
+kawałkami danych, jest kilka przypadków użycia, w których możesz chcieć uzyskać informacje o zapaleniu tęczówki,
+
+00:05:45.090 --> 00:05:49.650
+a niektóre informacje nie są postscriptami w zależności od twoich potrzeb.
+
+00:05:49.960 --> 00:05:57.470
+W większości firm widać bardzo rzadko, że duża firma ma tylko jeden typ bazy danych.
+
+00:05:57.520 --> 00:06:04.990
+W większości przypadków mają różne bazy danych, ponieważ mają różne potrzeby na różne sposoby,
+
+00:06:04.990 --> 00:06:09.290
+aby odczytać dane i różne sposoby zapisywania danych.
+
+00:06:09.550 --> 00:06:12.730
+I znowu w oparciu o to narzędzie używają różnych narzędzi.
+
+00:06:14.070 --> 00:06:20.520
+Więc nauczymy się tej umiejętności korzystania z różnych narzędzi, które są bazami danych do
+
+00:06:21.060 --> 00:06:21.860
+pracy.
+
+00:06:21.900 --> 00:06:26.960
+Mimo że wszystko dobrze, nadszedł czas, aby zacząć pracę z Radice.
+
+00:06:26.960 --> 00:06:28.450
+Zobaczę w następnym.
+
+00:06:28.630 --> 00:06:28.910
+Buh-Bye.

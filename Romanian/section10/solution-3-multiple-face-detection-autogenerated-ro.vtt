@@ -1,0 +1,652 @@
+﻿WEBVTT
+
+00:00:00.760 --> 00:00:01.530
+Bine ai revenit.
+
+00:00:01.840 --> 00:00:08.700
+Să începem să adăugăm această nouă caracteristică, care este de a crea detectări multiple ale feței.
+
+00:00:08.800 --> 00:00:11.350
+Acum, cum ar trebui să începem în legătură cu acest lucru.
+
+00:00:11.360 --> 00:00:15.320
+Primul lucru pe care vreau să-l fac este să mut lucrurile în jur.
+
+00:00:15.500 --> 00:00:20.310
+Să ne punem Front-End aici.
+
+00:00:20.370 --> 00:00:23.230
+Deci, eu nu merg în mod constant și înapoi aici.
+
+00:00:23.670 --> 00:00:32.400
+Și primul lucru foarte important este că în timp ce suntem dependenți de acest API, acest lucru clarifică API, ca să pot intra
+
+00:00:32.400 --> 00:00:39.830
+în documentație și să văd ce fel de răspuns obținem acolo unde pot să deconectez tot ce face backend-ul
+
+00:00:39.840 --> 00:00:44.020
+atunci când lovim detectarea și clarificarea ne trimite un răspuns.
+
+00:00:44.100 --> 00:00:44.970
+Să aruncăm o privire.
+
+00:00:46.700 --> 00:00:53.900
+Dacă mă duc la capătul din spate al imaginii, văd că răspunsul clarificat este prezent în date.
+
+00:00:53.900 --> 00:01:01.090
+Deci, hai să anulam înregistrarea acestor date și să vedem ce fel de informații obținem.
+
+00:01:01.130 --> 00:01:09.200
+Voi salva și cum am spus că este probabil o modalitate mai ușoară de a mă duce la documentație pentru a vedea
+
+00:01:09.410 --> 00:01:11.150
+la ce au răspuns.
+
+00:01:11.150 --> 00:01:16.370
+Dar cred că acest mod este mai general, așa că cred că ar fi mai bine să privim aici.
+
+00:01:16.370 --> 00:01:17.800
+Deci, să ne întoarcem.
+
+00:01:17.970 --> 00:01:22.830
+Detectează că ne asigurăm că presupunerea noastră este corectă și că retur ceva.
+
+00:01:22.970 --> 00:01:23.420
+In regula.
+
+00:01:23.430 --> 00:01:25.480
+Se pare că avem un răspuns.
+
+00:01:26.790 --> 00:01:33.330
+Descriere OK obținem un ID creat la datele de intrare ale modelului.
+
+00:01:33.330 --> 00:01:37.820
+Datele corecte ar putea fi ceva de care suntem interesați.
+
+00:01:37.950 --> 00:01:42.160
+Deci, hai să intrăm în asta să mergem cu adevărat înainte să facem asta.
+
+00:01:42.270 --> 00:01:48.720
+Să vedem că din moment ce ne întoarcem datele de pe acest plan, să vedem ce face partea frontală cu
+
+00:01:48.720 --> 00:01:49.580
+aceste informații.
+
+00:01:50.580 --> 00:01:59.740
+Deci, în capătul din față, dacă aruncăm o privire la locul unde a fost locația de calcul a feței.
+
+00:01:59.940 --> 00:02:02.430
+Vedem că primim niște date aici.
+
+00:02:02.430 --> 00:02:03.620
+Mă întreb dacă ar putea fi asta.
+
+00:02:03.660 --> 00:02:09.420
+Deci, să mergem să calculam locația feței, să găsim locul în care suntem de fapt numiți asta și
+
+00:02:09.420 --> 00:02:15.130
+totuși vedem că există un răspuns care vine de aici, unde facem imaginea că sunteți alcool.
+
+00:02:15.240 --> 00:02:19.440
+În regulă, așa cred că ar putea fi răspunsul de la clarificare.
+
+00:02:19.710 --> 00:02:24.290
+Să vedem ce se întoarce la capătul din față.
+
+00:02:24.420 --> 00:02:27.270
+Mă duc doar aici,
+
+00:02:31.040 --> 00:02:42.400
+spun dialogul consolei și descriu răspunsul pe care îl voi salva și trebuie să mă înregistrez pentru că tocmai am fost
+
+00:02:44.460 --> 00:02:51.770
+reîmprospătați, așa că G-mail dot Hey seinen și să copiem și să lipim.
+
+00:02:51.840 --> 00:02:53.620
+Trebuie să fac din nou imaginea.
+
+00:02:58.010 --> 00:03:01.220
+Copiați și lipiți detectați și deschideți consola.
+
+00:03:04.620 --> 00:03:04.880
+In regula.
+
+00:03:04.890 --> 00:03:10.700
+Deci, acesta este răspunsul pe care îl obținem cu un ID.
+
+00:03:11.000 --> 00:03:16.820
+Să vedem că primim date de intrare a datelor.
+
+00:03:16.880 --> 00:03:23.800
+Există o mulțime de lucruri pe care le putem trece probabil la documentația lor și să ne dăm seama de ce avem nevoie.
+
+00:03:24.870 --> 00:03:27.910
+Să vedem dacă ajungem la zero.
+
+00:03:28.150 --> 00:03:28.370
+O.K.
+
+00:03:28.380 --> 00:03:29.820
+Deci, aceasta este o mulțime de informații.
+
+00:03:29.820 --> 00:03:32.500
+Să vedem cum îl folosim de fapt la capătul din față.
+
+00:03:33.030 --> 00:03:40.110
+Deci, la capătul frontal dacă mă duc să afișez caseta de față care este ceea ce folosim sau calculam
+
+00:03:40.110 --> 00:03:46.290
+fața locului și de aceea folosim datele pentru că mă duc aici și văd că primesc datele
+
+00:03:46.310 --> 00:03:49.830
+tatălui nostru regiunea regiunii și zona de legare Amfo.
+
+00:03:49.890 --> 00:03:51.300
+Deci, să copiați acest
+
+00:03:54.120 --> 00:03:58.010
+lucru sau să traversăm că regiunile noastre de date Celso ies la ieșire.
+
+00:03:58.020 --> 00:04:00.300
+Deci, haideți să mergem
+
+00:04:07.310 --> 00:04:18.560
+la ieșirile de date, astfel încât datele de ieșire zero regiuni de date și cât de interesant avem o matrice aici de două, dar
+
+00:04:18.560 --> 00:04:26.920
+dacă ne întoarcem la cod se pare că regiunile vom folosi doar unul și vom obține informații regiune
+
+00:04:26.920 --> 00:04:29.880
+și pentru a calcula locația feței.
+
+00:04:29.890 --> 00:04:40.150
+Deci, dacă mă duc aici, văd OK că acesta este coloana de delimitare a coloanei din stânga coloanei de jos coloana din dreapta
+
+00:04:40.480 --> 00:04:42.530
+și cea de-a doua.
+
+00:04:42.570 --> 00:04:42.810
+In regula.
+
+00:04:42.810 --> 00:04:43.800
+Avem același lucru.
+
+00:04:43.810 --> 00:04:44.040
+O.K.
+
+00:04:44.050 --> 00:04:51.810
+Asta e interesant dacă avem doar o imagine cu o singură persoană.
+
+00:04:51.810 --> 00:04:55.240
+Să facem din nou clic pe asta.
+
+00:04:55.250 --> 00:04:57.630
+Vrem mereu să testeze ipotezele noastre.
+
+00:04:57.630 --> 00:05:06.270
+Așa că am să copiez acest lucru și asta e un cântec pe care l-am detectat.
+
+00:05:06.290 --> 00:05:08.920
+În regulă, avem un al doilea răspuns aici.
+
+00:05:08.930 --> 00:05:17.060
+Din nou, să examinăm acest lucru pentru ipotezele noastre, așa că, dacă merg totul, eu pun regiunile de date euro, există o
+
+00:05:17.060 --> 00:05:20.260
+singură regiune, deoarece există doar o singură față.
+
+00:05:20.270 --> 00:05:20.690
+In regula.
+
+00:05:20.780 --> 00:05:29.430
+Deci, fără a codifica nimic, putem presupune că poate că regiuni ar putea fi ceea ce ne oferă informația despre față.
+
+00:05:29.460 --> 00:05:35.280
+Din nou, acest lucru este fără a se uita chiar la documentele sau API-ul la care se face referire prin clarificare.
+
+00:05:35.380 --> 00:05:36.370
+Să încercăm asta.
+
+00:05:36.910 --> 00:05:44.940
+Să avem o buclă, în loc să întoarcem un singur lucru.
+
+00:05:44.950 --> 00:05:46.270
+Sau chiar mai bine.
+
+00:05:46.300 --> 00:05:49.540
+Să schimbăm această regiune de date 1.
+
+00:05:49.600 --> 00:05:54.220
+Să vedem dacă aici și dacă mă întorc, trebuie să mă conectez din nou.
+
+00:05:57.460 --> 00:06:01.840
+Conectați-vă și utilizați imaginea pe care am avut-o aici.
+
+00:06:01.840 --> 00:06:02.890
+Amintiți-vă ultima
+
+00:06:05.930 --> 00:06:09.740
+dată când am detectat această față, dar nu și pe aceasta.
+
+00:06:09.740 --> 00:06:15.680
+Deci, revenind din nou la locul unde am schimbat acea linie, am spus că vrem ca
+
+00:06:17.310 --> 00:06:24.650
+detecția celei de-a doua faze să arate că fața lui este acum detectată și nu doar prin schimbarea numărului în matrice.
+
+00:06:24.890 --> 00:06:29.710
+Deci, chiar înainte de a rula orice linie de cod, știm unde o putem rezolva.
+
+00:06:29.750 --> 00:06:31.770
+Dar doar testarea.
+
+00:06:31.860 --> 00:06:40.840
+Deci, se pare că trebuie să ne batem peste asta și, în loc să ne întoarcem un
+
+00:06:40.840 --> 00:06:51.450
+obiect, putem să întoarcem o serie de obiecte și atunci când afișăm fața sau ne amintim că avem caseta de afișaj.
+
+00:06:51.650 --> 00:07:01.270
+Ar trebui să ne întoarcem, probabil, mai multe obiecte de unde ar putea să începem să facem lucrurile acum, ceea ce de obicei vrei să faci este să
+
+00:07:01.270 --> 00:07:05.080
+creezi o nouă filială când începi să lucrezi la caracteristica ta.
+
+00:07:05.080 --> 00:07:11.560
+Acum ei au o idee mare despre locul în care doriți să începeți să vă testați codul și să vă porniți sucursala
+
+00:07:11.560 --> 00:07:15.490
+și să începeți să lucrați la ea și să faceți mici comiteri treptate.
+
+00:07:15.490 --> 00:07:22.890
+Dar pentru moment voi trece peste acest proces pentru că vrem să ne concentrăm doar pe crearea acestei noi caracteristici.
+
+00:07:22.960 --> 00:07:33.200
+Deci, primul lucru pe care dorim să-l facem este să hărțim peste acest lucru în loc să avem primul element al sondajului, pentru că
+
+00:07:33.200 --> 00:07:42.250
+știu că este vorba despre o matrice acum, voi spune hartă și știu că va reveni la unele informații de detectare a
+
+00:07:42.250 --> 00:07:44.800
+feței într-un loc sigur față.
+
+00:07:44.860 --> 00:07:47.510
+Și să începem o linie nouă pentru a putea vedea mai bine.
+
+00:07:49.350 --> 00:07:52.120
+Închideți parantezele.
+
+00:07:53.170 --> 00:07:59.350
+În regulă și avem aceste informații de la fiecare dintre fețe, așa că dacă am două fețe voi avea două
+
+00:07:59.350 --> 00:08:00.610
+elemente în matrice.
+
+00:08:02.550 --> 00:08:02.790
+O.K.
+
+00:08:02.800 --> 00:08:11.110
+Așa că avem acest lucru acum, pentru că ne batem peste asta și vrem să ne întoarcem un obiect de fiecare dată când putem să
+
+00:08:11.140 --> 00:08:14.170
+mutăm de fapt toate astea din interior aici.
+
+00:08:17.960 --> 00:08:24.530
+Și caseta de dezosare a feței în regiune este ceea ce se așteaptă acum.
+
+00:08:24.560 --> 00:08:31.370
+Să atribuim o variabilă acestui lucru, care este clarificat, pe care îl folosim aici pentru a măsura unde ar trebui să
+
+00:08:31.370 --> 00:08:35.520
+afișăm acea casetă albastră în care se spune că sunt cauzate fețele.
+
+00:08:35.810 --> 00:08:38.570
+Clarificarea față în
+
+00:08:42.950 --> 00:08:49.910
+față este egală cu aceasta și modificați variabila de mai sus.
+
+00:08:49.910 --> 00:08:58.770
+Pentru a clarifica fața lui Dar, de fapt, văd asta, deoarece vrem să ne întoarcem aceste fețe clarificate care
+
+00:08:58.770 --> 00:09:02.130
+vor fi o serie de obiecte.
+
+00:09:02.310 --> 00:09:06.430
+S-ar putea să mă descurc și să spun întoarcerea.
+
+00:09:06.540 --> 00:09:17.050
+Așadar, această locație de calculare a chipului ne-am putea dori să o numim pentru a colaționa chipurile sau pentru a face față locațiilor și pentru a schimba acest lucru
+
+00:09:17.050 --> 00:09:18.520
+oriunde altundeva îl vedem.
+
+00:09:18.520 --> 00:09:22.980
+Deci, să spunem unde altfel avem acest lucru.
+
+00:09:23.020 --> 00:09:26.730
+Deci, doar aceste două locuri voi schimba acest lucru pentru a face față locațiilor.
+
+00:09:27.700 --> 00:09:29.860
+Vrei să salvezi acum.
+
+00:09:31.990 --> 00:09:35.170
+Următoarea parte este afișarea Facebook așa că am.
+
+00:09:35.290 --> 00:09:38.620
+Vom reveni acum la o serie de obiecte.
+
+00:09:38.770 --> 00:09:46.450
+Dacă mergem să afișezi caseta de față, care este un nume de variație cu adevărat amuzant, în timp ce afișează caseta de față, vedem
+
+00:09:46.450 --> 00:09:47.410
+că suntem setați.
+
+00:09:47.410 --> 00:09:51.970
+Așa că separăm caseta de la o cutie egală.
+
+00:09:51.990 --> 00:09:57.790
+În regulă, dar asta se așteaptă la un obiect și acum ne întoarcem o matrice.
+
+00:09:59.270 --> 00:10:00.740
+Asa ca sa schimbam asta.
+
+00:10:00.740 --> 00:10:02.390
+Avem casete acum.
+
+00:10:02.720 --> 00:10:05.610
+Și ar trebui să fie cutii.
+
+00:10:05.750 --> 00:10:14.720
+Și doar pentru a păstra numele standard, ar trebui să ne schimbăm numele de stat în cutii și în Ophir, unde
+
+00:10:14.720 --> 00:10:18.650
+avem din nou modificări inițiale de la casete.
+
+00:10:18.830 --> 00:10:21.950
+Acum întoarcem o matrice în locul unui obiect.
+
+00:10:21.950 --> 00:10:25.590
+Deci, să schimbăm acest lucru într-o matrice.
+
+00:10:26.620 --> 00:10:28.680
+În regulă, permiteți-mi să salvez dacă vom obține erori.
+
+00:10:28.680 --> 00:10:29.680
+Nimic încă.
+
+00:10:30.600 --> 00:10:33.390
+Unde folosim aceste cutii.
+
+00:10:33.390 --> 00:10:35.730
+Vrem să ne asigurăm că aceste nume sunt capabile să facă și ele.
+
+00:10:35.730 --> 00:10:39.190
+Așa că hai să ne uităm la orice mențiune despre cutii aici.
+
+00:10:39.210 --> 00:10:44.050
+Avem caseta delimitată de la clarificarea faptului că este o față fină.
+
+00:10:44.310 --> 00:10:47.170
+Poate putem schimba numele în cutii.
+
+00:10:47.610 --> 00:10:57.440
+Permiteți-mi să închid acele casete de afișare și să le folosesc aici și să le actualizez și eu.
+
+00:10:57.440 --> 00:11:00.090
+Unde altceva menționăm caseta de cuvinte.
+
+00:11:00.090 --> 00:11:07.160
+Am văzut redarea acestei casete de stat, dar din nou avem mai multe casete, iar Nasaw va spune căsuțele și să salvăm doar
+
+00:11:07.850 --> 00:11:11.220
+pentru a ne asigura că nu facem nici o eroare.
+
+00:11:11.330 --> 00:11:14.360
+Și vedem că linia 1:38 nu este definită.
+
+00:11:14.360 --> 00:11:22.510
+Dacă mă duc la 1:38, văd că componenta de recunoaștere a feței care a primit această casetă de informații acum are nevoie
+
+00:11:22.510 --> 00:11:27.450
+să primească de fapt cutii și poate că ar trebui să o redenumim.
+
+00:11:27.640 --> 00:11:30.270
+Recuzări la cutii, de asemenea.
+
+00:11:30.370 --> 00:11:31.280
+Deci, să salvăm.
+
+00:11:31.360 --> 00:11:36.520
+Totul funcționează, dar știm imediat că, din moment ce trecem cutii ca elemente de recuzită pentru recunoașterea față,
+
+00:11:36.940 --> 00:11:38.810
+trebuie să intrăm în această componentă.
+
+00:11:39.080 --> 00:11:43.060
+Vedeți că fac pas cu pas să văd unde mă conduc aceste variabile.
+
+00:11:43.390 --> 00:11:51.320
+Mă duc la recunoașterea feței și imediat OK, văd că ar trebui să schimb doar două cutii.
+
+00:11:52.200 --> 00:12:04.680
+Și vreau, de asemenea, să schimb aceste două casete cutii și cutii.
+
+00:12:04.920 --> 00:12:06.810
+Să salvez și să vedem ce se întâmplă aici.
+
+00:12:06.810 --> 00:12:09.240
+Este întotdeauna bine să ne verificăm activitatea și să vedem unde suntem.
+
+00:12:09.330 --> 00:12:13.910
+Așa că am să spun hei la gmail dot com.
+
+00:12:14.200 --> 00:12:16.680
+Hei, hai să mergem.
+
+00:12:16.910 --> 00:12:19.870
+Și din nou folosiți imaginea cuplului
+
+00:12:23.230 --> 00:12:25.820
+preferat pentru a lipi.
+
+00:12:25.880 --> 00:12:28.560
+Deruleaza in jos.
+
+00:12:29.040 --> 00:12:29.910
+Nimic nu este afișat.
+
+00:12:29.910 --> 00:12:31.790
+Acum am rupt aplicația.
+
+00:12:31.980 --> 00:12:33.840
+Dar să ne întoarcem aici.
+
+00:12:33.870 --> 00:12:42.440
+Să vedem dacă primim vreo eroare în fila Rețea pe care cineva să o mai facă clic și o facem puțin mai
+
+00:12:42.440 --> 00:12:43.010
+mare.
+
+00:12:43.010 --> 00:12:44.900
+Vedem că totul funcționează.
+
+00:12:45.080 --> 00:12:48.320
+Așa că am putea face ceva aici.
+
+00:12:48.970 --> 00:12:55.900
+Și un alt instrument pe care îmi place să-l folosesc este probabil instrumentele dezvoltatorului, instrumentele de re-act
+
+00:12:55.900 --> 00:13:03.520
+dezvoltator care din nou sunt un plug crom pe care îl puteți instala și dacă, să spunem, căutați componenta
+
+00:13:04.480 --> 00:13:13.480
+de recunoaștere a feței, văd că această componentă de recunoaștere a feței trebuie să are cutia de delimitare aici că nu există nimic
+
+00:13:13.480 --> 00:13:15.370
+care să aibă sens.
+
+00:13:15.370 --> 00:13:22.400
+Dar dacă intrăm aici și ne uităm la cutiile pe care le vedem așa.
+
+00:13:22.490 --> 00:13:25.150
+Primeste o recuzita de raze de lacrimi Ei bine, acele
+
+00:13:28.640 --> 00:13:31.440
+fonduri pe care magazinele mele mi-au facut pline in timp ce inregistreaza.
+
+00:13:31.500 --> 00:13:32.670
+Dar m-am întors la ea.
+
+00:13:32.790 --> 00:13:39.840
+Bine, așa că avem acum matricea care are două cutii și se pare că se întoarce.
+
+00:13:39.840 --> 00:13:41.020
+Ceea ce vrem.
+
+00:13:41.010 --> 00:13:50.070
+Deci, haideți să ne întoarcem la aplicația noastră și observați aici că OK, așa că vom transforma o matrice aici, care are un index de 0 și
+
+00:13:50.070 --> 00:13:57.230
+1, dar în caseta delimitată facem căsuțele din coloana de sus a coloanelor din dreapta care nu există deoarece acest lucru
+
+00:13:57.270 --> 00:14:00.230
+nu mai este un obiect este o matrice.
+
+00:14:00.310 --> 00:14:06.300
+Așa că există o reparație frumoasă pe care o putem face din nou și putem crea doar
+
+00:14:06.510 --> 00:14:09.040
+o expresie javascript ambalând-o în paranteze curbate.
+
+00:14:09.290 --> 00:14:10.620
+Nu asta nu vrem să facem.
+
+00:14:10.620 --> 00:14:11.750
+Paranteze curbate.
+
+00:14:11.880 --> 00:14:17.040
+Și pentru că cutiile sunt acum o matrice pot să spun doar cutii.
+
+00:14:17.100 --> 00:14:28.270
+Faceți clic pe funcția noastră de favoare caracterizată prin faptul că fiecare iterație are o cutie care, dacă vă aduceți aminte, ne dă acele proprietăți
+
+00:14:28.270 --> 00:14:37.490
+div cu rândul de sus al casetei sau rândul de sus din cutie și alte dimensiuni de care avem nevoie.
+
+00:14:37.510 --> 00:14:43.800
+Deci, să întoarcem acest lucru și o să păstrez acest lucru pe o singură linie, chiar dacă este destul de lungă.
+
+00:14:43.930 --> 00:14:48.690
+În felul acesta putem să spunem întoarcerea și apoi elementul pe care îl dorim.
+
+00:14:48.700 --> 00:14:57.070
+Și pentru că acum este o cutie, putem doar să ne întoarcem la Box, care are aceste proprietăți ale coloanei din dreapta
+
+00:14:57.400 --> 00:15:01.380
+jos a coloanei din stânga și să ne asigurăm aici.
+
+00:15:03.380 --> 00:15:03.750
+O.K.
+
+00:15:03.910 --> 00:15:04.890
+Să mergem la o diagramă aici.
+
+00:15:04.900 --> 00:15:09.700
+Și din nou, mergem pas cu pas doar logic vorbind cu noi înșine și găsindu-ne ce trebuie
+
+00:15:09.700 --> 00:15:10.330
+să facem.
+
+00:15:10.450 --> 00:15:11.920
+Să ne întoarcem.
+
+00:15:11.920 --> 00:15:14.540
+Trebuie să ne conectează din nou.
+
+00:15:15.280 --> 00:15:15.740
+Sa mergem.
+
+00:15:15.740 --> 00:15:18.680
+Semnați rapid.
+
+00:15:18.860 --> 00:15:21.030
+Și voi închide asta deocamdată.
+
+00:15:21.080 --> 00:15:23.080
+Să luăm din nou imaginea.
+
+00:15:25.340 --> 00:15:26.250
+Du-te înapoi aici.
+
+00:15:26.270 --> 00:15:29.270
+Lipiți-o.
+
+00:15:29.320 --> 00:15:30.930
+Uită-te la cele două imagini.
+
+00:15:30.940 --> 00:15:35.060
+Să ne asigurăm că nu ajungem la erori la consola.
+
+00:15:35.080 --> 00:15:35.650
+Oh.
+
+00:15:35.710 --> 00:15:42.520
+Fiecare copil dintr-o matrice sau iterator ar trebui să aibă o cheie proprie unică și acesta este un avertisment și reacție foarte
+
+00:15:42.550 --> 00:15:43.080
+frecventă.
+
+00:15:43.090 --> 00:15:44.710
+Și asta e ușor de rezolvat.
+
+00:15:44.710 --> 00:15:51.370
+Ori de câte ori cartografiați alimentele și reacționați, doriți să adăugați un element cheie care este unic.
+
+00:15:51.520 --> 00:16:00.190
+Cheia pentru moment este doar a fi rândul de la celălalt capăt, probabil ar putea fi ceva mai bun, dar cel puțin știm că
+
+00:16:00.190 --> 00:16:01.540
+va fi unic.
+
+00:16:01.540 --> 00:16:06.990
+Pentru moment, să ne întoarcem din nou pentru că trebuie să ne convingem în mod constant.
+
+00:16:07.030 --> 00:16:11.250
+Am putea dori doar să schimbăm ruta statul de-a lungul drumului spre dezvoltare.
+
+00:16:11.260 --> 00:16:21.540
+Așa că nu trebuie să facem asta din nou și din nou, dar dacă ne întoarcem să detecteze două fețe Nicăieri, dacă mergem
+
+00:16:21.540 --> 00:16:25.700
+la rețea, se pare că totul funcționează perfect.
+
+00:16:25.710 --> 00:16:31.350
+Cred că am implementat caracteristica și acum ceea ce dorim să facem este să testați de fapt lucruri diferite și să încercați
+
+00:16:31.620 --> 00:16:34.490
+să întrerupeți acest lucru și să vedeți dacă avem erori.
+
+00:16:34.530 --> 00:16:38.540
+Poate că putem scrie câteva teste pentru a face acest test de testare
+
+00:16:50.380 --> 00:16:51.700
+și vom merge acolo.
+
+00:16:51.700 --> 00:16:57.640
+Avem o nouă caracteristică implementată Asigurați-vă că vom crea o nouă sucursală Faceți o solicitare de tragere Știți că încercați
+
+00:16:57.660 --> 00:17:02.080
+să începeți diferite lucruri Încercați și rupeți că această caracteristică funcționează de fapt Nu am
+
+00:17:02.080 --> 00:17:06.130
+făcut greșeli și am primit prima noastră caracteristică în timpul verii .
+
+00:17:06.140 --> 00:17:11.260
+Acum, sperăm că acest lucru vă oferă o idee bună despre cum funcționează aplicația, pentru că o vom
+
+00:17:11.260 --> 00:17:14.670
+folosi în secțiunile următoare pentru a face niște lucruri foarte interesante.
+
+00:17:14.680 --> 00:17:19.080
+Deci, pentru moment, voi vedea în următorul videoclip.

@@ -1,0 +1,409 @@
+﻿WEBVTT
+
+00:00:01.010 --> 00:00:07.060
+Acum știu că reacționează deja, vine cu doar un alt instrument de testare pre-instalat.
+
+00:00:07.190 --> 00:00:13.190
+Dar cred că este important pentru noi să înțelegem cum funcționează, astfel încât să putem construi, de asemenea, ceva de genul a
+
+00:00:13.190 --> 00:00:14.690
+crea creați reacții noi înșine.
+
+00:00:14.870 --> 00:00:20.020
+Deci am de gând să încep de la zero și să pun câteva exemple de testare pentru tine.
+
+00:00:21.460 --> 00:00:24.770
+Acum, aici are o documentație excelentă.
+
+00:00:24.820 --> 00:00:32.490
+Încă o dată cu orice bibliotecă pe care o faceți prin ghidul dvs. și vă oferim o mulțime de informații pe măsură ce biblioteca se schimbă, puteți
+
+00:00:32.490 --> 00:00:36.850
+vedea că aceasta este versiunea 20 2. 4 acum lucrurile s-ar putea actualiza.
+
+00:00:36.970 --> 00:00:40.280
+Dar conceptele lor principale nu se vor schimba.
+
+00:00:40.360 --> 00:00:46.990
+Deci, să începem prin instalarea doar sau în primul rând să creăm un dosar de proiect.
+
+00:00:47.350 --> 00:00:54.940
+Am de gând să creez un dosar de proiect numit test și vom intra doar în acel dosar și vom rula PM-ul nostru
+
+00:00:55.210 --> 00:00:56.490
+obișnuit în el.
+
+00:00:56.530 --> 00:00:59.540
+Dash y pentru a crea un pachet NPM.
+
+00:01:00.160 --> 00:01:08.220
+Și, de asemenea, dorim să creăm un fișier script JSE și să-l deschidem.
+
+00:01:08.310 --> 00:01:10.190
+Și editorul nostru de
+
+00:01:18.200 --> 00:01:20.880
+text preferat arăta frumos și destul de perfect.
+
+00:01:20.890 --> 00:01:29.480
+Acum, să ne uităm la ambalajul Jaison și, evident, primul pas pe care trebuie să-l facem este să rulați NPM să instalați doar și, de fapt,
+
+00:01:33.580 --> 00:01:35.360
+permiteți-mi să anulez acest lucru.
+
+00:01:35.420 --> 00:01:39.830
+Amintiți-vă că este doar în scopuri de dezvoltare.
+
+00:01:39.950 --> 00:01:45.380
+Nu avem nevoie de ea ca dependență pentru noi.
+
+00:01:45.380 --> 00:01:48.860
+Deci, de obicei, atunci când instalați
+
+00:01:52.790 --> 00:01:58.590
+doar doriți să faceți NPM instala liniuță dash salva def defecte.
+
+00:01:58.940 --> 00:02:00.330
+Să încercăm din nou asta.
+
+00:02:00.380 --> 00:02:09.210
+Amintiți-vă că cu versiunea dvs. de NPM atunci când faceți gesturi instalate de NPM, aceasta presupune că linia de bord va
+
+00:02:09.270 --> 00:02:13.280
+fi salvată ca un dev sau ca o dependență.
+
+00:02:13.290 --> 00:02:15.710
+Deci, de asta se termină linia de dash în siguranță aici.
+
+00:02:15.750 --> 00:02:25.410
+Acum, în timp ce se încarcă acest lucru, să intrăm în script-urile noastre și să schimbăm acest lucru în comanda de test.
+
+00:02:27.250 --> 00:02:36.640
+Și tot ceea ce trebuie să facem aici este să fie executat imediat ce este instalat.
+
+00:02:36.730 --> 00:02:42.160
+Nu stii ce se intampla aici, arata ca un pic mai mic. Hai sa terminam asta si sa-l fugim din
+
+00:02:42.440 --> 00:02:48.100
+nou acum acum in timp ce se incarca. Sa intrum in dosarul de fusta si sa ne gandim la ce exercitiu
+
+00:02:48.100 --> 00:02:49.550
+am putea dori sa integreze.
+
+00:02:49.840 --> 00:02:57.910
+Și cred că dacă am incorpora o funcție simplă de căutare Google ar putea fi un exercițiu puțin distractiv.
+
+00:02:57.910 --> 00:02:59.670
+Deci, să facem asta.
+
+00:02:59.910 --> 00:03:05.900
+Se pare că tot ce a fost adăugat Syllis a lovit clar face acest lucru un pic mai mic.
+
+00:03:06.390 --> 00:03:12.660
+Și din nou, dacă mergem în Pakistan, Jason vedem că nu face parte din dependențele lui Dev,
+
+00:03:12.690 --> 00:03:20.960
+ci dependențe, ci Dev, pentru că o faci pentru că am făcut linia de bordură a salva sau a șterge moartea în scenariu.
+
+00:03:20.990 --> 00:03:21.890
+Fișier JS.
+
+00:03:22.130 --> 00:03:25.720
+Să spunem că au fost Google și avem o variabilă.
+
+00:03:25.850 --> 00:03:32.330
+Aceasta va fi o versiune simplificată a algoritmului de căutare, dar principiile vor
+
+00:03:32.330 --> 00:03:33.630
+fi aceleași.
+
+00:03:33.650 --> 00:03:42.150
+Deci, să spunem că baza de date Google are o gamă largă de site-uri web pe care le-au indexat.
+
+00:03:42.350 --> 00:03:45.460
+Să spunem că prima este Catts dot com.
+
+00:03:45.740 --> 00:03:48.710
+Evident că este vorba despre internet.
+
+00:03:48.710 --> 00:03:56.710
+Avem, de asemenea, rețete de supă Dawk pe toată lumea iubesc supa.
+
+00:03:56.710 --> 00:04:04.940
+Avem flori dot com și hai să adăugăm încă o să spunem că avem și animale dot com.
+
+00:04:04.950 --> 00:04:11.280
+Site-uri de web destul de de bază și acestea sunt tot site-ul Web pe care Google îl poate căuta în mod evident în viața
+
+00:04:11.280 --> 00:04:11.550
+reală.
+
+00:04:11.550 --> 00:04:16.200
+Această listă ar putea fi ceva mai mare.
+
+00:04:16.210 --> 00:04:16.750
+In regula.
+
+00:04:16.800 --> 00:04:19.340
+Deci, există baza noastră de date Google.
+
+00:04:19.470 --> 00:04:20.490
+Știi ce.
+
+00:04:20.640 --> 00:04:24.380
+În timp ce suntem la asta, să spunem că mai sunt câteva poze cu pisici.
+
+00:04:24.530 --> 00:04:32.140
+Punct. com și poate favoritul meu preferat și
+
+00:04:38.220 --> 00:04:45.840
+am adăugat aceste două ultime deoarece poate că dacă cineva caută pisici în browserul Google Chrome Ei
+
+00:04:45.840 --> 00:04:51.170
+bine am putea dori să le arătăm din nou aceste trei linkuri.
+
+00:04:51.180 --> 00:04:56.810
+Să creați o funcție și aceasta va fi doar funcția de căutare Google.
+
+00:04:59.230 --> 00:05:04.450
+Și această funcție va efectua căutarea oferită
+
+00:05:08.350 --> 00:05:10.240
+de utilizator.
+
+00:05:10.240 --> 00:05:15.380
+Deci, indiferent de ce caută și de acolo are câteva lucruri.
+
+00:05:15.400 --> 00:05:20.910
+Mai întâi dorim să spunem că va fi un algoritm foarte simplu.
+
+00:05:21.010 --> 00:05:27.290
+Evident, acest lucru poate fi mai complicat pe Google, dar ideea este că noi suntem ceva și dacă există un
+
+00:05:27.290 --> 00:05:30.240
+fel de potrivire pe care dorim so returnăm.
+
+00:05:30.400 --> 00:05:41.040
+Să spunem doar că baza de date Google va fi filtrată și utilizând funcția de filtrare va spune că
+
+00:05:41.040 --> 00:05:49.940
+fiecare element din baza de date este un site Web care va fi filtrat și
+
+00:05:50.090 --> 00:05:53.300
+trebuie să faceți este
+
+00:05:55.990 --> 00:05:59.220
+să returnați site-ul Web care include.
+
+00:05:59.260 --> 00:06:12.610
+Deci, acest lucru este de a spune pisici dot com dacă acesta include orice căutare, dar a fost ca am spus foarte foarte frumos
+
+00:06:12.610 --> 00:06:16.820
+și de bază Google algoritm de căutare.
+
+00:06:17.120 --> 00:06:23.680
+Și, de asemenea, dorim să returneză aceste potriviri utilizatorului, pentru că asta face Google.
+
+00:06:23.870 --> 00:06:31.370
+Dar să spunem că dorim să ne asigurăm că, deoarece ipotetic această bază de date poate deveni cu adevărat mare, dorim să
+
+00:06:31.670 --> 00:06:39.290
+revenim doar la primele trei rezultate, astfel încât să putem spune doar să vă asigur că vă rog să spuneți mai întâi
+
+00:06:39.290 --> 00:06:40.170
+acest lucru.
+
+00:06:40.190 --> 00:06:49.290
+Vrem să spunem dacă această lungime a punctului este mai mare de trei dacă aveți mai mult de trei
+
+00:06:49.290 --> 00:06:57.030
+meciuri, atunci vom spune doar meciuri punct fel și tocmai am întors primele trei rezultate.
+
+00:06:58.660 --> 00:07:01.480
+În caz contrar, returnează meciurile obișnuite.
+
+00:07:02.690 --> 00:07:07.060
+Să facem acest lucru mai mic ca să vedem.
+
+00:07:07.110 --> 00:07:07.530
+In regula.
+
+00:07:07.530 --> 00:07:10.680
+Să încercăm acest lucru și să vedem dacă funcționează.
+
+00:07:10.680 --> 00:07:20.360
+Voi rula funcția de căutare Google și să spunem că intrarea în căutarea pe care o voi pune va fi supă și
+
+00:07:20.360 --> 00:07:23.720
+mai puțin doar anulată pentru a se
+
+00:07:26.940 --> 00:07:32.940
+asigura că indiferent de ieșire este în timp ce o conectăm la terminalul
+
+00:07:32.940 --> 00:07:35.070
+nostru permiteți-mi să salvez.
+
+00:07:35.340 --> 00:07:41.520
+Și din nou cu nod, putem rula doar acest script de nod.
+
+00:07:41.620 --> 00:07:42.120
+J. S.
+
+00:07:44.950 --> 00:07:46.300
+Uită-te bine la asta.
+
+00:07:46.300 --> 00:07:48.130
+Am rețete de supă.
+
+00:07:48.250 --> 00:07:50.430
+Dacă se schimbă acest lucru,
+
+00:07:54.800 --> 00:07:56.140
+pisicile primesc pisici.
+
+00:07:56.270 --> 00:08:02.530
+Iar pisicile mele preferate sunt calme, dar nu pisica pic, deoarece nu se potriveste cu pisicile.
+
+00:08:02.660 --> 00:08:11.230
+Dacă am avea un site Web mai mare aici, să-i spunem pisicile mele preferate și eu doar caută pisica O și asigurați-vă
+
+00:08:13.980 --> 00:08:18.380
+că adaug o virgulă pe care o uit întotdeauna virgula.
+
+00:08:18.380 --> 00:08:20.980
+Lasă-mă să clar acest lucru și să încerc din nou.
+
+00:08:24.080 --> 00:08:24.450
+In regula.
+
+00:08:24.500 --> 00:08:31.340
+Am doar două și trei rezultate pentru că facem această felie mică.
+
+00:08:31.340 --> 00:08:34.190
+Revenim doar primele trei rezultate.
+
+00:08:34.190 --> 00:08:34.790
+Minunat.
+
+00:08:34.940 --> 00:08:42.950
+Tocmai am implementat Google pe o scară mai simplă, dar vă gândiți că acest lucru este destul de mult cum funcționează Google.
+
+00:08:42.950 --> 00:08:48.050
+Bine, deci a fost distractiv, dar cum putem testa acest lucru.
+
+00:08:48.050 --> 00:08:54.890
+Să presupunem că am fost Google și vrem să ne asigurăm că această funcție de căutare Google funcționează
+
+00:08:54.890 --> 00:09:02.880
+corect, deoarece este o funcție importantă pentru aplicația noastră, deoarece am instalat doar să executați testul NPM și să vedem ce se
+
+00:09:02.880 --> 00:09:03.530
+întâmplă.
+
+00:09:05.490 --> 00:09:07.020
+Testul NPM
+
+00:09:11.310 --> 00:09:17.440
+spune că nu s-au găsit teste deoarece nu am efectuat niciun test.
+
+00:09:17.850 --> 00:09:25.740
+Dar puteți vedea aici că doar în mod automat caută orice, care are fie un folder care are
+
+00:09:25.740 --> 00:09:32.310
+sublinierea sub teste crosscourt și orice în interiorul său sau se va uita la orice
+
+00:09:32.310 --> 00:09:36.550
+fișier care are spec. Sau sintaxa punct de test.
+
+00:09:36.780 --> 00:09:46.380
+Prin această logică pot să creez un nou test de scenariu de fișiere, sau să-l pun pe Spack și aici, de
+
+00:09:46.380 --> 00:09:47.300
+asemenea, comun.
+
+00:09:47.820 --> 00:09:49.530
+Și am lovit intra.
+
+00:09:49.530 --> 00:09:50.870
+Și dacă o să
+
+00:09:57.070 --> 00:09:58.730
+mai conduc din nou, am un eșec.
+
+00:09:58.810 --> 00:10:04.600
+Se spune că suita de testare trebuie să conțină cel puțin un test.
+
+00:10:04.600 --> 00:10:05.800
+Să clarificăm asta.
+
+00:10:06.190 --> 00:10:12.100
+Deci, cum puteți scrie un test pentru căutarea Google și vom ajunge la acesta în următorul videoclip.
+
+00:10:12.130 --> 00:10:18.880
+Dar doar pentru a ne asigura că testul nostru trece, vă voi arăta o cale rapidă
+
+00:10:18.910 --> 00:10:26.250
+în care putem scrie teste unitare și tocmai că avem acum o funcție IT și primul parametru al funcției.
+
+00:10:26.320 --> 00:10:28.020
+Și din nou, asta vine doar.
+
+00:10:28.150 --> 00:10:33.730
+Dar dacă descărcați alte biblioteci de testare, aproape toți au această funcție.
+
+00:10:33.730 --> 00:10:37.300
+Cum am spus că toate aceste biblioteci au o sintaxă foarte asemănătoare.
+
+00:10:37.330 --> 00:10:43.480
+Deci, dacă știți unul, puteți trece destul de ușor în celălalt cu câteva modificări minore.
+
+00:10:43.540 --> 00:10:49.570
+Deci, primul parametru și aici este un fel de șir care va apărea aici, deci să spunem doar că
+
+00:10:49.660 --> 00:10:51.040
+acesta este un test.
+
+00:10:51.430 --> 00:10:59.240
+Și apoi al doilea parametru este o funcție care este testul care trebuie să fie rulat.
+
+00:10:59.240 --> 00:11:04.990
+În cazul nostru, nu avem nimic altceva decât să salvăm acest lucru și să executăm testul NPM
+
+00:11:07.600 --> 00:11:08.110
+Whoa.
+
+00:11:08.260 --> 00:11:09.490
+Uită-te la asta.
+
+00:11:09.490 --> 00:11:11.980
+Avem primul nostru test.
+
+00:11:13.030 --> 00:11:14.140
+A fost destul de ușor.
+
+00:11:14.140 --> 00:11:23.050
+Tot ce am făcut a fost NPM și doar și deja avem această nouă funcție și nu putem executa teste și
+
+00:11:23.050 --> 00:11:27.000
+vedem că acesta este un test trecut într-o milisecundă.
+
+00:11:27.070 --> 00:11:28.540
+Acesta este un test destul de rapid.
+
+00:11:28.570 --> 00:11:31.210
+Totul este verde și frumos.
+
+00:11:31.210 --> 00:11:32.730
+Ceva se simte bine.
+
+00:11:33.070 --> 00:11:35.270
+Vă dă un impuls frumos de dopamină.
+
+00:11:35.350 --> 00:11:36.250
+In regula.
+
+00:11:36.250 --> 00:11:41.500
+În următorul videoclip, vom începe să scriem câteva teste pentru căutarea Google.
+
+00:11:41.500 --> 00:11:42.250
+Voi vedea în următorul.

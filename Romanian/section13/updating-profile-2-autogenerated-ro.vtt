@@ -1,0 +1,337 @@
+﻿WEBVTT
+
+00:00:01.130 --> 00:00:07.940
+Bine ați venit înapoi este timpul să faceți în sfârșit această actualizare a profilului și să o conectați la bacchante.
+
+00:00:08.060 --> 00:00:12.800
+Să ne întoarcem la Front-End și în profilul nostru.
+
+00:00:12.910 --> 00:00:15.930
+Da, două lucruri.
+
+00:00:16.010 --> 00:00:24.770
+În primul rând, vreau să fiu sigur că ori de câte ori ne actualizăm contribuția noastră, actualizăm de
+
+00:00:26.960 --> 00:00:38.140
+asemenea starea aplicației noastre, astfel încât să ne întoarcem din nou. Voi face o nouă metodă aici și voi schimba această funcție apatridă într-o componentă
+
+00:00:38.590 --> 00:00:39.610
+de clasă.
+
+00:00:39.610 --> 00:00:46.090
+Acum aș putea crea funcția aici, dar îmi place să folosesc componente de clasă sau declarații de clasă ori de câte ori avem
+
+00:00:46.090 --> 00:00:48.940
+alte metode pe care le dorim să le folosim.
+
+00:00:49.830 --> 00:00:53.900
+Astfel, clasa se
+
+00:00:56.500 --> 00:01:08.840
+extinde sau un profil de clasă extinde componenta re-act punct.
+
+00:01:08.890 --> 00:01:10.210
+Asta
+
+00:01:13.500 --> 00:01:20.170
+va avea o răsplată, să aducem toate astea în Rander.
+
+00:01:20.180 --> 00:01:26.070
+Voi doar să minimizăm acest lucru, astfel încât să putem vedea mai bine că este mult mai bine.
+
+00:01:26.220 --> 00:01:34.090
+Și, de asemenea, dorim să avem o recuzită de vocală C constructor.
+
+00:01:34.100 --> 00:01:45.770
+Super recuzită și aici va spune că acest gând stă și acest lucru va fi interesant și vom vorbi
+
+00:01:45.770 --> 00:01:47.860
+puțin despre asta.
+
+00:01:48.230 --> 00:01:55.550
+Am de gând să am Neame egal cu acest Daut nume de puncte dot dot utilizator.
+
+00:01:55.550 --> 00:02:00.400
+Și dacă vă întrebați de ce facem recuzită pentru constructor și super și uneori nu o facem.
+
+00:02:00.620 --> 00:02:04.020
+Ei bine, dacă vreți să folosiți aceste elemente de oprire în interiorul constructorului.
+
+00:02:04.040 --> 00:02:08.330
+Acesta este motivul pentru care trebuie să faceți acest lucru și suntem în acest caz, de aceea facem acest lucru.
+
+00:02:09.770 --> 00:02:12.030
+În regulă, așa că avem un nume de utilizator.
+
+00:02:12.240 --> 00:02:22.730
+Avem, de asemenea, H, care este recuzita start user punct de pagină și avem, de asemenea, Pat acest punct de opri prop a lui
+
+00:02:22.910 --> 00:02:27.390
+punctul dot Pat Ei bine ce fac eu aici.
+
+00:02:27.390 --> 00:02:32.390
+De ce creăm o stare atunci când acestea sunt deja elemente de recuzită.
+
+00:02:32.400 --> 00:02:39.170
+De ce nu actualizați doar statul în care aceste lucruri există.
+
+00:02:39.270 --> 00:02:40.950
+Și dacă vă aduceți aminte când mergem la APT.
+
+00:02:41.070 --> 00:02:41.420
+Da.
+
+00:02:41.430 --> 00:02:47.240
+Dacă navigăm până la starea noastră bine, avem deja toate informațiile despre utilizator aici.
+
+00:02:47.250 --> 00:02:57.120
+De ce nu actualizăm acest lucru și avem un eveniment în profil care se declanșează până la randare.
+
+00:02:57.170 --> 00:03:05.780
+Și aici vreau să demonstrez câteva bune practici de gândire în ceea ce privește reacția și modul în care funcționează vedeți cu
+
+00:03:05.780 --> 00:03:11.870
+formulare există o mulțime de cazuri în care nu pot avea doar un utilizator doar să
+
+00:03:11.870 --> 00:03:18.710
+păstreze tastarea păstrați tastarea păstrați tastarea și care cauzează un răzbunător starea este actualizată și de fiecare dată
+
+00:03:18.830 --> 00:03:25.640
+când actualizăm schimbarea unei intrări pe care o face redă noi renderere facem componenta și toate componentele
+
+00:03:25.640 --> 00:03:26.780
+sub ea.
+
+00:03:26.780 --> 00:03:35.840
+Acum, deoarece aplicația este faptul că nivelul nostru de vârf imediat ce actualizăm statul va face totul sub el.
+
+00:03:35.940 --> 00:03:38.520
+Și asta e doar o pierdere.
+
+00:03:38.610 --> 00:03:48.350
+Și cu formă aceasta este o practică bună care este dacă aveți o formă având o stare pe care formularul o
+
+00:03:48.380 --> 00:03:54.610
+menține și imediat ce utilizatorul dă click sau trimite o acțiune importantă.
+
+00:03:54.770 --> 00:04:02.330
+Apoi, actualizăm starea astfel încât să păstrăm toate actualizările de stare pe măsură ce utilizatorii scriu aici și actualizează doar
+
+00:04:02.330 --> 00:04:06.250
+starea generală mare care se află în câinele de sus.
+
+00:04:06.250 --> 00:04:06.850
+Da.
+
+00:04:07.130 --> 00:04:09.270
+După ce utilizatorul a confirmat acest lucru.
+
+00:04:09.320 --> 00:04:09.670
+In regula.
+
+00:04:09.710 --> 00:04:10.400
+Acesta este numele meu.
+
+00:04:10.400 --> 00:04:11.090
+Aceasta este vârsta.
+
+00:04:11.090 --> 00:04:16.750
+Acesta este Pat și nu trebuie să ne actualizăm spunând de fiecare dată când fac o greșeală, de exemplu.
+
+00:04:16.770 --> 00:04:17.470
+In regula.
+
+00:04:17.480 --> 00:04:26.040
+Acum că am reușit să ne ocupăm de ceea ce noi numim schimbare de formă și acest lucru pe schimbarea formei
+
+00:04:26.070 --> 00:04:34.050
+va accepta un eveniment și acesta este doar o manipulare tipică a evenimentului pe care o facem cu reacția.
+
+00:04:34.110 --> 00:04:40.090
+Pot să o fac dacă sunt vapori aici, dar doar pentru distracție, să facem doar o declarație de comutare care
+
+00:04:40.460 --> 00:04:43.120
+nu are numele de punct punct de destinație.
+
+00:04:43.380 --> 00:04:49.270
+Și acest lucru se va ocupa pe numele țintă.
+
+00:04:49.410 --> 00:04:51.820
+Și dacă îți amintești, ne ducem jos.
+
+00:04:51.960 --> 00:04:57.300
+Am dat date de intrare diferite nume de utilizatori user name user name sau animal de companie.
+
+00:04:57.540 --> 00:05:04.600
+Deci, bazându-mă pe acele inputuri, pot spune să minimizăm acest lucru doar pentru a arăta mai curat.
+
+00:05:05.040 --> 00:05:16.710
+Voi spune că dacă cazul este numele de utilizator în acest caz, vreau să actualizați acest punct set.
+
+00:05:16.770 --> 00:05:17.220
+Sf.
+
+00:05:19.900 --> 00:05:27.180
+cu numele pentru a egala valoarea punctului punctului evenimentului.
+
+00:05:28.490 --> 00:05:37.460
+Și le putem rupe pagina de utilizator altfel cu caz.
+
+00:05:37.540 --> 00:05:41.530
+În acest caz bine din acest set afișează
+
+00:05:44.640 --> 00:05:47.480
+evenimentul că valoarea țintă se
+
+00:05:50.270 --> 00:05:52.420
+rupe din nou.
+
+00:05:52.430 --> 00:06:02.170
+Și apoi, în ultimul nostru caz, vom face un caz de utilizator. Pat aceste gânduri la starea
+
+00:06:06.630 --> 00:06:14.490
+de a fi Pat echivalând orice este valoarea punctului țintă al evenimentului.
+
+00:06:14.580 --> 00:06:21.760
+Cine va face apoi în mod evident o pauză și va adăuga întotdeauna o
+
+00:06:24.480 --> 00:06:29.260
+valoare implicită, care pur și simplu nu întoarce returnarea.
+
+00:06:29.260 --> 00:06:31.530
+Bine, să spunem asta.
+
+00:06:31.730 --> 00:06:35.180
+Și avem câteva domenii aici și vom vedea ce am făcut.
+
+00:06:35.210 --> 00:06:36.230
+Utilizatorul nu este definit.
+
+00:06:36.230 --> 00:06:44.960
+Utilizatorul nu este definit bine pentru că trebuie să ne asigurăm că în Rander îl putem deschide în cadrul randului pe
+
+00:06:44.960 --> 00:06:48.820
+care îl folosim pentru introducerea datelor de utilizator,
+
+00:06:51.330 --> 00:06:56.790
+așa că să facem un utilizator de concert de la recuzita de start.
+
+00:06:56.940 --> 00:06:59.750
+Să salvăm totul.
+
+00:06:59.780 --> 00:07:03.910
+Și avem câteva lucruri pe care le întoarcem.
+
+00:07:04.140 --> 00:07:05.930
+Scufuiți-i și asigurați-vă că rezolv asta.
+
+00:07:06.140 --> 00:07:09.540
+Și apoi avem de asemenea comutare motile nu este definită.
+
+00:07:09.590 --> 00:07:20.490
+Din nou, trebuie să ne asigurăm că acum suntem în cadrul modului de a comuta apel acest lucru popi sau de a comuta motile și acest
+
+00:07:20.970 --> 00:07:28.720
+câine props punct comuta motile, deoarece nu este o functie apatrid ca am avut-o înainte de a ne
+
+00:07:28.730 --> 00:07:29.400
+salva.
+
+00:07:29.660 --> 00:07:29.960
+In regula.
+
+00:07:29.960 --> 00:07:39.380
+Totul trece, dacă ne întoarcem la aplicația noastră, semnează cu un
+
+00:07:39.380 --> 00:07:49.110
+bun prieten un semn și mergem la actualizarea profilului, numele deschizând consola.
+
+00:07:49.130 --> 00:07:49.740
+In regula.
+
+00:07:49.760 --> 00:07:51.390
+Nicăieri nu e bine.
+
+00:07:51.600 --> 00:07:57.140
+Dar nu ar fi frumos să scriem aici și acest nume să fie și actualizat.
+
+00:07:58.340 --> 00:08:02.750
+Și amintiți-vă că suntem în propriul nostru stat înainte de a lovi cu adevărat salvarea.
+
+00:08:02.840 --> 00:08:06.210
+Nu am actualizat cu adevărat statul în apt.
+
+00:08:06.310 --> 00:08:13.800
+Da, dar în cadrul formularului va fi frumos să puteți schimba numele de utilizator pentru a vedea cum se afișează, astfel încât să putem face
+
+00:08:13.800 --> 00:08:16.100
+acest lucru prin revenirea la profilul nostru.
+
+00:08:18.150 --> 00:08:19.980
+Să facem asta puțin mai mic.
+
+00:08:21.400 --> 00:08:30.880
+Și acum numele de utilizator aici pe care îl folosim poate fi în locul acestui utilizator DOT de stare dot.
+
+00:08:30.970 --> 00:08:40.340
+Să salvăm această întoarcere trebuie să semneze și din nou să te duci la profilul tău.
+
+00:08:40.340 --> 00:08:41.310
+Scrie ceva.
+
+00:08:41.390 --> 00:08:43.340
+Dar acum vedem că nu avem numele de
+
+00:08:47.450 --> 00:08:48.620
+utilizator și mă prosti.
+
+00:08:48.650 --> 00:08:53.920
+Nu este membrul membrului utilizatorului care ne amintește că statul nostru are doar un impact asupra vârstei.
+
+00:08:53.990 --> 00:08:56.650
+Să salvăm.
+
+00:08:56.810 --> 00:09:03.710
+Și apoi, ultimul lucru pe care vrem să-l facem este de fapt să numim acest lucru la schimbarea evenimentului.
+
+00:09:03.800 --> 00:09:05.520
+Acum, unde să numim asta.
+
+00:09:05.840 --> 00:09:18.690
+Ei bine, pentru fiecare intrare se poate spune doar că există o schimbare pe care ia acest punct pe eveniment schimbare formă din nou.
+
+00:09:18.720 --> 00:09:22.440
+Trebuie doar să copiați și să lipiți acest lucru la toate
+
+00:09:25.330 --> 00:09:33.240
+intrările să salvăm și să vedem dacă acest lucru funcționează în cele din urmă conectați din nou pentru că noi facem asta tot timpul.
+
+00:09:33.310 --> 00:09:37.020
+Seinen vizualizează profilul.
+
+00:09:37.220 --> 00:09:39.280
+Începe să tastezi.
+
+00:09:39.430 --> 00:09:41.090
+Uită-te la asta.
+
+00:09:41.200 --> 00:09:43.700
+Evenimentul nostru este concediat.
+
+00:09:43.720 --> 00:09:45.880
+Nu actualizăm niciodată starea aplicației.
+
+00:09:45.880 --> 00:09:50.220
+Pur și simplu facem doar o mică porțiune mică de care avem nevoie.
+
+00:09:50.590 --> 00:09:57.460
+Dar, de îndată ce fac clic pe Salvez, vreau să fiu sigur că acest nume va fi actualizat.
+
+00:09:57.820 --> 00:10:05.770
+Deci, să terminăm acest lucru făcând o solicitare de post cu această informație pe care o avem și formularul de stare.
+
+00:10:05.820 --> 00:10:07.200
+Vedeți în următorul.
+
+00:10:07.540 --> 00:10:07.750
+Bobby.

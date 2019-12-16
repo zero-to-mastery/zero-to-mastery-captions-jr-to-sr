@@ -1,0 +1,373 @@
+﻿WEBVTT
+
+00:00:02.100 --> 00:00:03.330
+Bine ai revenit.
+
+00:00:03.330 --> 00:00:08.380
+Să începem să scriem un test pentru funcția de căutare Google.
+
+00:00:08.460 --> 00:00:13.640
+Primul lucru pe care dorim să-l facem este, evident, accesul la această funcție de căutare Google.
+
+00:00:13.770 --> 00:00:17.300
+Dar în dosarul nostru de testare și asta e simplu.
+
+00:00:17.320 --> 00:00:19.460
+Acesta este pur și simplu doar javascript.
+
+00:00:19.480 --> 00:00:27.070
+Putem exporta această funcție și o putem importa acum aici pentru că acesta este un nod și
+
+00:00:27.070 --> 00:00:31.090
+acum rulați în browser sau folosind Babel sau wetback.
+
+00:00:31.240 --> 00:00:34.620
+Nu avem încă declarațiile de import și export.
+
+00:00:34.630 --> 00:00:35.970
+Nu lucrează la asta.
+
+00:00:36.070 --> 00:00:44.710
+Dar deocamdată folosesc în continuare comun Da care, după cum probabil știți, are modulul de sintaxă pe care exporturile îl
+
+00:00:45.520 --> 00:00:46.450
+are egal.
+
+00:00:46.660 --> 00:00:50.390
+Și vom face doar căutarea Google.
+
+00:00:50.590 --> 00:00:52.760
+Vom exporta asta.
+
+00:00:52.810 --> 00:01:03.650
+Și apoi, în sfârșit, putem să importăm acest lucru chiar la începutul acestui test, spunând că Konst este egal
+
+00:01:05.190 --> 00:01:09.800
+cu căutarea de la script, pentru a salva
+
+00:01:13.420 --> 00:01:14.380
+asta.
+
+00:01:14.650 --> 00:01:27.210
+Și doar pentru a testa consola legist logat acest lucru și de a face o căutare Google a salva testul lui Ron NPM.
+
+00:01:27.280 --> 00:01:27.810
+In regula.
+
+00:01:27.970 --> 00:01:38.110
+Așadar, avem jurnalul de consolă al căutării Google, care se află pe script-ul de dodginess, dar și în trecut vedem că
+
+00:01:38.170 --> 00:01:43.100
+suntem logați funcția de căutare Google, care este minunat.
+
+00:01:43.180 --> 00:01:48.670
+Vom comenta acest lucru pentru moment, pentru că știm că funcționează, nu vrem să consolăm jurnalul.
+
+00:01:49.010 --> 00:01:56.630
+Dar s-ar putea să fi observat, de asemenea, că este un fel de enervant care rulează testul NPM peste și peste și peste.
+
+00:01:56.780 --> 00:02:05.040
+Și, din fericire, pentru noi, cu gesturi, putem face un ceas ușor de comandat, cu bordură, și apoi îi oferim ceea ce să urmărim
+
+00:02:05.040 --> 00:02:06.320
+în cazul nostru.
+
+00:02:06.330 --> 00:02:08.090
+Toate fișierele javascript.
+
+00:02:08.160 --> 00:02:16.570
+Deci, de fiecare dată când facem modificări în orice fișiere javascript, vom avea grijă de acestea și vom face
+
+00:02:16.630 --> 00:02:19.920
+testul să fie difuzate în mod constant.
+
+00:02:20.000 --> 00:02:20.820
+Să vedem ce vreau să spun.
+
+00:02:20.930 --> 00:02:28.910
+Am de gând să salvez asta și să conduc testul NPM.
+
+00:02:29.070 --> 00:02:36.780
+Și dacă vă întrebați de ce testați NPM-ul dvs. de om și nu NPM executați testul Beths doar implicit și PM dacă faceți
+
+00:02:36.900 --> 00:02:43.050
+și pm start sau NPM test ați venit în jurul celor două comenzi fără cuvântul de alergare.
+
+00:02:43.110 --> 00:02:49.890
+Dar dacă faci ceva pe care l-ai creat ca NPM să coaceți un tort, trebuie să faci un NPM
+
+00:02:49.890 --> 00:02:53.410
+să coaceți o prăjitură sau așa că acum rulează.
+
+00:02:53.530 --> 00:02:59.290
+Dacă schimba ceva aici, legistul o salvează.
+
+00:02:59.350 --> 00:03:01.230
+Vedeți că se schimbă acum.
+
+00:03:01.240 --> 00:03:08.260
+Dacă schimb acest lucru Se actualizează în mod constant cu noul test, dar nimic nu se întâmplă aici încă.
+
+00:03:08.260 --> 00:03:14.240
+Deci, să scriem un test real pe care îl putem folosi acum că avem funcția de căutare Google.
+
+00:03:14.350 --> 00:03:15.330
+Vrem să-l testăm.
+
+00:03:15.340 --> 00:03:27.490
+Vrem să spunem căutarea Google ne dă un fel de manechin și să punem testul de testare și să spunem cumva cum ar trebui
+
+00:03:28.480 --> 00:03:31.630
+să se potrivească acest lucru.
+
+00:03:31.760 --> 00:03:37.030
+Amintiți-vă că este o bibliotecă de afirmații, nu vrem să facem o afirmație și puteți observa.
+
+00:03:37.060 --> 00:03:38.640
+O problemă aici.
+
+00:03:38.820 --> 00:03:41.310
+Cum rămâne cu baza de date.
+
+00:03:41.320 --> 00:03:46.360
+Ei bine, va trebui să exportim și această bază de date.
+
+00:03:46.390 --> 00:03:47.300
+Dreapta.
+
+00:03:47.500 --> 00:03:52.890
+Și suntem în totalitate Putem face o bază de date Google și am adăugat la exportul modulelor.
+
+00:03:53.290 --> 00:04:01.540
+Dar este realist pe care îl vedeți în viața reală, nu veți exporta baza de date și nu veți importa într-un test și nu
+
+00:04:01.540 --> 00:04:05.340
+veți avea sarcina de a trece prin baza de date.
+
+00:04:05.380 --> 00:04:09.430
+Este cu adevărat costisitor foarte lent și o durere de cap imensă.
+
+00:04:09.430 --> 00:04:16.870
+În mod ideal, doriți o piață pe care doriți să vă prefaceți că avem o bază de date aici pentru a face ca testele să
+
+00:04:16.990 --> 00:04:18.190
+funcționeze mai repede.
+
+00:04:18.910 --> 00:04:20.410
+Permiteți-mi să vă arăt cum putem face asta.
+
+00:04:20.470 --> 00:04:32.080
+Putem spune că D-B blochează o bază de date mocke și acest mocke va avea o bază de date falsă care nu este de fapt baza noastră de date reală,
+
+00:04:32.080 --> 00:04:34.830
+doar ceva pe care putem testa.
+
+00:04:34.840 --> 00:04:42.440
+Deci, să spunem că acest lucru are câine dot com că are brânză pufos
+
+00:04:47.170 --> 00:04:58.350
+dot com ea să spunem Disney dot com și are imagini de câine dot com atât de complet diferit de baza
+
+00:04:58.680 --> 00:05:01.040
+noastră de date reală.
+
+00:05:01.050 --> 00:05:05.890
+Bine, deci avem acest lucru acum, dar problema este căutarea Google.
+
+00:05:06.190 --> 00:05:10.960
+Până în acest moment a fost folosită baza de date Google.
+
+00:05:10.960 --> 00:05:14.270
+Și dacă ați executat această funcție în testul de script da.
+
+00:05:14.530 --> 00:05:17.170
+Ei bine, nu avem acces la acea bază de date.
+
+00:05:17.170 --> 00:05:26.230
+Va trebui să schimbați manual funcția și să vă asigurați că se filtrează prin baterea DB într-o modalitate bună de a rezolva această problemă și
+
+00:05:26.230 --> 00:05:32.080
+modul în care doriți să vă scrieți funcțiile este din nou doriți ca acestea să fie
+
+00:05:32.260 --> 00:05:32.710
+curate.
+
+00:05:32.710 --> 00:05:37.990
+Și doriți, de asemenea, să le adăugați la ele ca la o bază de date
+
+00:05:38.470 --> 00:05:47.410
+prin ceva numit injecție de dependență, care este pentru ca noi să reușim să reușim și să îl folosim în alte părți ale bazei noastre
+
+00:05:48.160 --> 00:05:56.390
+de coduri, dacă baza de date este injectată în căutarea Google, ca și cum aș fi în test, pot injecta această marcă DB
+
+00:05:56.650 --> 00:05:58.910
+în locul bazei de date reale.
+
+00:05:59.970 --> 00:06:01.480
+Și este foarte ușor de făcut.
+
+00:06:01.500 --> 00:06:09.780
+Tot ce trebuie să facem este să-i dăm un parametru de a spune D. B și o să schimb asta în D-B.
+
+00:06:10.110 --> 00:06:16.020
+Și acum această căutare Google este mai extensibilă, putem adăuga baza de date pe care dorim să o filtram.
+
+00:06:16.020 --> 00:06:30.180
+Acum, tot ce trebuie să facem este în ceea ce numim funcția este adăugarea unui singur parametru al bazei de date Google.
+
+00:06:30.260 --> 00:06:45.190
+Dacă comentăm acest lucru și ne întoarcem la fișierul nostru de testare, putem introduce baza de date D-B.
+
+00:06:45.200 --> 00:06:47.750
+Să salvăm acum și să vedem ce se întâmplă.
+
+00:06:49.160 --> 00:06:49.800
+In regula.
+
+00:06:49.800 --> 00:06:55.280
+Testul trece, dar nu încercăm nimic acum.
+
+00:06:55.380 --> 00:06:58.370
+Ne întoarcem doar lucrurile și executăm această funcție.
+
+00:06:58.380 --> 00:07:00.840
+Dar asta nu este locul în care vrem să încercăm.
+
+00:07:00.840 --> 00:07:03.540
+Nu este foarte important să conducem această funcție.
+
+00:07:03.540 --> 00:07:07.200
+Vrem să afirmăm că acest lucru face ceea ce ne-am așteptat să facem.
+
+00:07:09.470 --> 00:07:18.310
+Și din nou, așa cum am avut cuvântul cheie, ne dă o mică funcție minunată de folosit.
+
+00:07:18.470 --> 00:07:26.870
+Dacă te duci la utilizarea matherilor vedem că în documentația lor ei au xpect și să fie și au și alte
+
+00:07:26.870 --> 00:07:33.680
+câteva lucruri pe care le puteți utiliza pentru a fi definite ca fiind definite ca fiind falsie
+
+00:07:33.680 --> 00:07:35.990
+truthy și au o tonă.
+
+00:07:36.050 --> 00:07:51.250
+Pentru moment, hai să comentăm acest lucru și să spunem că ne așteptăm să salutăm Bună ziua bună Bună ziua greu să zicem că totul
+
+00:07:51.250 --> 00:08:02.640
+merge bine, dar dacă mă schimb doar pentru a ști și a salva Oh, am un test eșuat.
+
+00:08:02.780 --> 00:08:10.360
+Se spune ca se asteapta ca valoarea nu a primit salut si ca are o productie destul de placuta.
+
+00:08:10.370 --> 00:08:15.130
+Aceasta vă arată ce linie a eșuat și ce test a eșuat.
+
+00:08:15.320 --> 00:08:25.760
+Folosind această logică, haideți să schimbăm acum căutarea Google pentru a avea xpect și știți ce.
+
+00:08:25.770 --> 00:08:29.060
+Să ținem acest test pentru că îmi place acest test.
+
+00:08:29.070 --> 00:08:29.830
+Salut.
+
+00:08:30.120 --> 00:08:30.560
+Salut.
+
+00:08:30.570 --> 00:08:41.480
+Si asta este un test prostie si a face un nou test, din nou, avem doar cat dorim
+
+00:08:41.480 --> 00:08:50.470
+si acest cantec va spune ca cauta google si aici vom avea functia sa adaugam
+
+00:08:54.080 --> 00:09:03.530
+un spatiu aici pentru ca arata mai bine si noi "Voi spune că așteptăm cautarea Google
+
+00:09:03.530 --> 00:09:08.390
+și putem doar să copiem acest lucru.
+
+00:09:08.440 --> 00:09:14.110
+Așteptăm căutarea Google și executăm această funcție cu testul de testare D-B Mach.
+
+00:09:14.320 --> 00:09:16.810
+Și aici putem folosi în loc să fim.
+
+00:09:16.810 --> 00:09:22.650
+Putem de asemenea face două egale și în cele două egale.
+
+00:09:22.650 --> 00:09:25.810
+Acum permiteți-mi să creez o linie nouă doar ca să o puteți vedea.
+
+00:09:26.130 --> 00:09:33.180
+Va spune că ne așteptăm ca acesta să fie egal cu o matrice goală, deoarece nu există test de test aici.
+
+00:09:33.270 --> 00:09:33.720
+Hai
+
+00:09:36.790 --> 00:09:39.160
+să salvăm Oh și am uitat o mică coadă aici.
+
+00:09:39.210 --> 00:09:44.600
+Vrem ca asteptatul sa aiba ca rezultat acest lucru, asa ca avem nevoie de o suprapunere suplimentara aici.
+
+00:09:44.610 --> 00:09:46.270
+Asigură-te că ai dreptate.
+
+00:09:46.430 --> 00:09:48.980
+Salvează totul.
+
+00:09:49.140 --> 00:09:50.940
+Nu aveți nevoie de asta acum.
+
+00:09:50.940 --> 00:09:51.870
+Perfect.
+
+00:09:51.870 --> 00:09:54.780
+Din nou, poate că nu o aveți pe două linii este mai bună.
+
+00:09:54.790 --> 00:09:56.400
+Deci puteți vedea.
+
+00:09:56.400 --> 00:10:05.270
+Așadar, avem funcția așteptată care execută acest lucru și este egală cu testarea faptului că aceasta este egală cu matricea goală.
+
+00:10:06.350 --> 00:10:14.930
+Acum putem adăuga o linie nother și să spunem că acum vrem să așteptăm ca Google să testeze câinele
+
+00:10:14.930 --> 00:10:24.820
+și, dacă există câine, am vrut să includem aceste două site-uri web, astfel încât să putem adăuga câine dot com la acest câmp.
+
+00:10:25.250 --> 00:10:29.870
+Și, de asemenea, imagini de câine dot com la acest drept.
+
+00:10:33.330 --> 00:10:39.020
+Și să salvăm.
+
+00:10:39.060 --> 00:10:39.750
+In regula.
+
+00:10:39.750 --> 00:10:42.120
+Aceasta se execută și trece.
+
+00:10:42.180 --> 00:10:48.150
+Mai avem două teste, deoarece în timp ce există doar două dintre ele.
+
+00:10:48.420 --> 00:10:57.710
+Dar dacă aș schimba acest lucru pentru a spune că doar D-G intră acolo pentru că avem ceva diferit de ceea ce ne-am aștepta să
+
+00:10:57.710 --> 00:10:59.600
+ne așteptăm la altfel.
+
+00:10:59.600 --> 00:11:02.800
+Eric acolo te duci.
+
+00:11:02.870 --> 00:11:06.640
+Avem primul nostru test.
+
+00:11:06.830 --> 00:11:08.390
+Voi vedea în următorul videoclip.
+
+00:11:08.720 --> 00:11:08.920
+De.

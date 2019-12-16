@@ -1,0 +1,604 @@
+﻿WEBVTT
+
+00:00:01.310 --> 00:00:06.020
+Acum voi lăsa o resursă a modului în care funcționează fișierul de configurare din motorul X.
+
+00:00:06.020 --> 00:00:11.290
+Există o documentație excelentă online și, ca în cazul tuturor configurațiilor, nu trebuie să memorați sincronizările.
+
+00:00:11.300 --> 00:00:16.250
+Acestea sunt doar lucruri pe care le veți găsi în momentul în care implementați un balancer de sarcină.
+
+00:00:16.250 --> 00:00:20.030
+Asa ca am de gand sa inceapa cu ceva setari de baza mai intai.
+
+00:00:20.090 --> 00:00:27.130
+Voi spune că procesul lucrătorilor va fi unul în care nu am nevoie de apel.
+
+00:00:27.540 --> 00:00:28.770
+Ce înseamnă asta?
+
+00:00:28.890 --> 00:00:35.170
+Ei bine, numărul de procese lucrătoare este definit de acest fișier și poate fi orice vrem să adăugăm 2
+
+00:00:35.170 --> 00:00:36.140
+3 4.
+
+00:00:36.150 --> 00:00:37.850
+Acestea sunt procese muncitoare.
+
+00:00:39.560 --> 00:00:43.100
+De obicei se potrivește cu numărul de utilizări C-p pe care doriți să le utilizați.
+
+00:00:43.100 --> 00:00:46.910
+Deci, de exemplu, dacă ați avut pentru utilizare pe mașina dvs. pentru care ați putea folosi pentru.
+
+00:00:46.910 --> 00:00:48.880
+Pentru moment, o să-l las sau pe unul.
+
+00:00:48.980 --> 00:00:51.020
+Apoi definim evenimentele
+
+00:00:53.620 --> 00:01:02.320
+și aceste evenimente vor avea ceva numit conexiuni Worker și am de gând să spun
+
+00:01:02.320 --> 00:01:04.790
+că va avea 1024.
+
+00:01:05.070 --> 00:01:08.870
+Și tu vezi mii douăzeci și patru sau cinci de 16 ca aici.
+
+00:01:08.880 --> 00:01:09.900
+Destul de mult.
+
+00:01:09.900 --> 00:01:17.010
+Din nou, acesta stabilește numărul maxim de conexiuni simultane care pot fi deschise de un proces de lucru.
+
+00:01:17.010 --> 00:01:23.070
+Așadar, avem un singur proces de lucru și sunt conexiunile simultane maxime pe care le putem avea.
+
+00:01:23.200 --> 00:01:25.180
+Și apoi, în sfârșit, ajungem la partea distractivă.
+
+00:01:25.180 --> 00:01:26.670
+Am definit
+
+00:01:29.710 --> 00:01:31.600
+HP și acest TTP.
+
+00:01:31.810 --> 00:01:38.950
+Ei bine, va trebui să-i spunem că vrem ca balancerul de sarcină și Gen X să treacă pe serverele
+
+00:01:38.950 --> 00:01:40.840
+pe care le avem.
+
+00:01:40.860 --> 00:01:48.660
+Deci, în cazul nostru, voi spune că serverul web va fi în port trei mii.
+
+00:01:48.860 --> 00:01:56.500
+Și acestea se vor potrivi cu numele pe care le avem aici și porturile asociate cu acestea.
+
+00:01:57.310 --> 00:02:03.760
+Așa că am să spun că serverul va fi bine unul trei mii.
+
+00:02:03.930 --> 00:02:08.510
+Următoarea va fi de două mii trei.
+
+00:02:08.700 --> 00:02:20.220
+Și apoi serverul Web 3 va fi în port trei mii două.
+
+00:02:20.300 --> 00:02:27.380
+Și acum că ne gândim cel mai probabil, aceste servere web se vor deschide la același
+
+00:02:27.440 --> 00:02:30.930
+port deoarece le replicăm doar replicându-le repetându-le.
+
+00:02:31.130 --> 00:02:36.340
+Deci, de cele mai multe ori acestea vor avea portul să zicem 3000 deschis în mod constant.
+
+00:02:36.440 --> 00:02:41.030
+Așa că o să schimb doar că 3000 3000 și să facă același lucru.
+
+00:02:41.030 --> 00:02:41.750
+Și
+
+00:02:46.630 --> 00:02:52.700
+docul meu, Rafal, întorcându-mă aici, trebuie să ne asigurăm că putem folosi și să le referim cumva.
+
+00:02:53.170 --> 00:02:59.340
+Iar modul implicit pe care îl facem este că folosim în amonte și în amonte putem
+
+00:02:59.470 --> 00:03:08.480
+să numim asta oricum dorim să-i spunem doar aplicația mea 1 și o să le înfășurăm aici și vă voi arăta ce se întâmplă în
+
+00:03:08.590 --> 00:03:09.510
+următorii viaţă.
+
+00:03:10.090 --> 00:03:16.180
+Așa că am spus că în amonte va fi aplicația mea una care va conține
+
+00:03:16.180 --> 00:03:20.030
+aceste trei servere și nu server de server.
+
+00:03:20.080 --> 00:03:25.390
+Putem spune acum că serverul va asculta portul 80
+
+00:03:28.500 --> 00:03:33.770
+și trebuie să mă asigur că nu uit
+
+00:03:38.150 --> 00:03:49.770
+semicoloanele aici și apoi am să spun că locația traseului implicit ne va conduce la ceea ce numim Proxy
+
+00:03:49.770 --> 00:03:50.990
+Pass.
+
+00:03:51.010 --> 00:03:58.620
+Așadar, amintiți-vă cum a spus că va fi un proxy invers Proxy Pass pur și simplu spune că vreau să
+
+00:04:01.190 --> 00:04:02.890
+vă accesați aplicația mea.
+
+00:04:02.890 --> 00:04:05.060
+Unul pe care l-am creat.
+
+00:04:05.120 --> 00:04:10.420
+Deci, această versiune în amonte, aplicația mea poate fi acum menționată în proxy-ul de aici.
+
+00:04:10.490 --> 00:04:16.670
+Deci, pur și simplu, spunem hei dacă l-am lovit pe ruta principală ca asta, treci toți aceia
+
+00:04:16.670 --> 00:04:19.580
+pe serverul de server pentru serverul trei.
+
+00:04:19.680 --> 00:04:24.020
+Din nou, toate acestea sunt bine documentate și configurația lor.
+
+00:04:24.030 --> 00:04:25.660
+Este unic pentru motorul x.
+
+00:04:25.800 --> 00:04:31.740
+Deci ar putea arata confuz acum, dar este doar modul implicit de a configura un balancer de sarcina.
+
+00:04:31.890 --> 00:04:33.920
+Și acum avem totul înființat.
+
+00:04:34.260 --> 00:04:41.040
+Dar putem face si lucruri interesante cu motorul X, de exemplu
+
+00:04:41.040 --> 00:04:55.440
+daca as fi servit fisiere statice pe care le pot spune despre locatie si folosind aceasta sintaxa mica pot spune ca servesc orice gif javascript CSX.
+
+00:04:55.510 --> 00:04:56.310
+Ce altceva avem.
+
+00:04:56.320 --> 00:05:01.600
+Avem JPEG avem fișiere PMG și tot
+
+00:05:04.180 --> 00:05:11.830
+ce include pe cele pe care vreau să le cache doar.
+
+00:05:11.890 --> 00:05:16.450
+Deci, dacă avem vreunul dintre aceste fișiere cu aceste extensii.
+
+00:05:16.450 --> 00:05:25.330
+Ei bine, în acel caz doar cache-le folosind expiră parametru și putem spune tot ce vrei ca 168
+
+00:05:25.510 --> 00:05:27.830
+ore și asta-i tot.
+
+00:05:27.870 --> 00:05:31.000
+Să ne asigurăm că îmi amintesc toate semi-colonii de aici.
+
+00:05:31.170 --> 00:05:35.490
+Și acesta este un fișier tipic de configurare a motorului X.
+
+00:05:35.520 --> 00:05:40.380
+Din nou, tot ceea ce facem cu adevărat este doar să spunem hei referință app mea 1
+
+00:05:40.380 --> 00:05:47.280
+și acest lucru va include aceste servere și vom face un proxy trece prin acestea și vom fi doar de gând să asculte portul 80.
+
+00:05:47.280 --> 00:05:48.700
+Bine, să salvăm asta.
+
+00:05:48.720 --> 00:05:52.070
+Mă duc la doctor Compune.
+
+00:05:52.190 --> 00:05:58.850
+Acum avem un folder X al motorului care va rula fișierul doc și ne va muta fișierul de configurare
+
+00:05:59.240 --> 00:06:02.420
+pe care tocmai l-am creat pe containerul nostru.
+
+00:06:02.540 --> 00:06:04.900
+Deci haideți să facem acest lucru și să vedem cum funcționează acest lucru.
+
+00:06:06.610 --> 00:06:17.890
+Mai întâi să vedem NPM pentru docker compuneți linia de bord și să vedem dacă totul funcționează.
+
+00:06:20.240 --> 00:06:27.830
+Si avem un pic de eroare aici pentru ca am facut o greseala mica si asta este aici, ar
+
+00:06:27.830 --> 00:06:34.520
+trebui sa fie procese muncitoreasca, chiar daca este una deoarece se asteapta ca uneori mai multe
+
+00:06:34.520 --> 00:06:36.250
+sa fie procesele muncitorilor.
+
+00:06:36.380 --> 00:06:38.600
+Asa ca sa salvam si sa incercam din nou.
+
+00:06:38.600 --> 00:06:43.520
+Mergând la închiderea și refacerea tuturor hei uita la
+
+00:06:47.340 --> 00:06:51.210
+server care rulează la aceste porturi.
+
+00:06:51.210 --> 00:06:55.630
+Amintiți-vă că această gazdă locală se află în container, deși nu putem accesa cu adevărat.
+
+00:06:55.890 --> 00:06:59.160
+Dar avem serverele noastre web care rulează.
+
+00:06:59.180 --> 00:07:02.570
+Deci, dacă mă duc la portul local gazdă.
+
+00:07:07.350 --> 00:07:13.110
+Localhost și în loc de Port 3000 va face portul 80.
+
+00:07:13.110 --> 00:07:16.720
+În regulă, avem un fel de răspuns.
+
+00:07:16.860 --> 00:07:18.910
+Dacă deschid consola, nu există erori.
+
+00:07:19.090 --> 00:07:20.140
+Dar verificați asta.
+
+00:07:20.260 --> 00:07:23.900
+Dacă mă întorc acum, văd traficul. com solicitat.
+
+00:07:24.040 --> 00:07:29.690
+Și, de asemenea, am fost lovit pe web unul a fost lovit.
+
+00:07:29.830 --> 00:07:33.450
+Așa că doar răspunde.
+
+00:07:33.530 --> 00:07:37.870
+Acum, dacă ne întoarcem și ne reînviorăm din nou, mergem înapoi, vedem
+
+00:07:41.390 --> 00:07:42.040
+asta.
+
+00:07:42.070 --> 00:07:42.900
+Oh bine.
+
+00:07:42.920 --> 00:07:44.940
+Și acum avem și noi.
+
+00:07:44.960 --> 00:07:51.120
+Acesta a fost capul și cu trei care a fost cap și Fabrikant așa cum a cerut de la
+
+00:07:51.200 --> 00:07:56.180
+Webb câștigat și balancer de încărcare doar pentru a face lovit fiecare dintre aceste servere.
+
+00:07:56.300 --> 00:08:02.660
+Și dacă ne întoarcem la fișierul de configurare, puteți defini aici modul în care doriți să distribuiți
+
+00:08:02.660 --> 00:08:03.130
+greutatea.
+
+00:08:03.140 --> 00:08:08.950
+De exemplu, doriți ca WEP să aibă mai mult de două ori mai multe cereri, precum și două și trei.
+
+00:08:09.050 --> 00:08:10.000
+Poti sa faci asta.
+
+00:08:10.040 --> 00:08:11.440
+Puteți avea ordine diferite.
+
+00:08:11.450 --> 00:08:14.230
+Dar pentru moment este doar să le lovești unul câte unul în ordine.
+
+00:08:14.240 --> 00:08:15.140
+Unu doi trei.
+
+00:08:15.140 --> 00:08:16.320
+Apoi, unu doi trei.
+
+00:08:16.460 --> 00:08:20.020
+Unu doi trei foarte foarte cool.
+
+00:08:20.020 --> 00:08:22.440
+Și acest lucru a fost foarte greu de implementat.
+
+00:08:22.490 --> 00:08:23.700
+Dreapta.
+
+00:08:23.930 --> 00:08:25.550
+Acum iată partea interesantă.
+
+00:08:25.550 --> 00:08:27.550
+Să ne distrăm de asta.
+
+00:08:27.560 --> 00:08:30.600
+Acum avem un balancer de încărcare care transmite solicitările.
+
+00:08:30.770 --> 00:08:35.980
+Dacă l-am lovit cu o mulțime de cereri cu sute și sute de cereri.
+
+00:08:36.140 --> 00:08:41.440
+Ei bine, putem face un pic de echilibrare a sarcinii care testează o testare a sarcinii.
+
+00:08:41.750 --> 00:08:45.720
+Și din fericire pentru noi există o cantitate de resurse pe care o putem folosi aici.
+
+00:08:45.740 --> 00:08:52.670
+Vom folosi pachetul NPM de testare scăzut, dar există o mulțime de distracție, cum ar fi artileria.
+
+00:08:52.740 --> 00:09:01.280
+Sunt asediate pe care le puteți utiliza și, de asemenea, cele mai populare w k și toate acestea destul de mult face același
+
+00:09:01.280 --> 00:09:01.810
+lucru.
+
+00:09:01.850 --> 00:09:07.220
+Acestea simulează cererile și le putem spune câte cereri vrem să lovim la un punct final, deci
+
+00:09:07.220 --> 00:09:09.000
+să folosim un test scăzut.
+
+00:09:09.010 --> 00:09:13.730
+Tot ce trebuie să facem este să instalăm la nivel global un test scăzut pe care îl am deja.
+
+00:09:13.730 --> 00:09:19.550
+Poate că ar trebui să executați comanda sudo și după aceea aveți la dispoziție comanda de testare
+
+00:09:19.550 --> 00:09:20.000
+scăzută.
+
+00:09:20.300 --> 00:09:22.210
+Deci, permiteți-mi să demonstrez ceva.
+
+00:09:22.640 --> 00:09:27.170
+Am de gând să spun un test scăzut și să conduc această comandă.
+
+00:09:27.170 --> 00:09:28.650
+Lasă-mă să fac asta puțin mai mare.
+
+00:09:29.870 --> 00:09:36.190
+Acum, linia de testare mică t spune pur și simplu că patru limite de timp sunt.
+
+00:09:36.190 --> 00:09:44.750
+Vreau să faci acest test scăzut timp de cinci secunde și apoi linia C înseamnă numărul de clienți pe care vrem să
+
+00:09:44.750 --> 00:09:45.930
+le creăm.
+
+00:09:46.280 --> 00:09:54.260
+Așadar, creăm 100 de clienți și 100 dintre aceștia urmează să sosească simultan pe server.
+
+00:09:56.510 --> 00:10:00.790
+Și apoi, în cele din urmă, avem linia de margine a noastră P. S. Și asta înseamnă.
+
+00:10:00.870 --> 00:10:02.840
+Rata cererilor pe secundă.
+
+00:10:02.870 --> 00:10:07.930
+Așa că vom trimite 100 de cereri pe secundă la localhost 80.
+
+00:10:08.120 --> 00:10:11.120
+Odată ce am apăsat Enter, verificați ce se întâmplă în partea dreaptă.
+
+00:10:11.640 --> 00:10:14.360
+Gata să-i dăm drumul.
+
+00:10:16.510 --> 00:10:18.900
+Cat de tare e asta.
+
+00:10:18.940 --> 00:10:25.270
+Și puteți vedea aici că merge foarte repede, dar se întoarce de la web două două trei una două
+
+00:10:25.270 --> 00:10:27.700
+două trei una două două trei.
+
+00:10:27.810 --> 00:10:30.810
+Și avem, de asemenea, un sumar frumos despre ceea ce am făcut.
+
+00:10:31.730 --> 00:10:34.800
+Dacă fac acest lucru un pic mai mic pentru a putea vedea mai bine.
+
+00:10:34.910 --> 00:10:40.290
+Vedem că am terminat patru sute nouăzeci și nouă de cereri de 100 de solicitări pe secundă.
+
+00:10:40.370 --> 00:10:46.850
+Așa cum am spus din nou o sută de concurrency nivel ca parametrii pe care le-am dat-am avut localhost 80 am fugit de testare timp de
+
+00:10:48.080 --> 00:10:55.600
+cinci secunde și latență medie cât timp a trebuit să răspundă a fost de 5. 1 milisecunde destul de
+
+00:10:55.780 --> 00:10:56.830
+repede.
+
+00:10:56.830 --> 00:11:03.590
+Și vă arată mai multe informații despre câte solicitări au fost trimise într-o anumită perioadă de timp, astfel încât acestea să pară
+
+00:11:03.770 --> 00:11:04.940
+destul de bune.
+
+00:11:04.940 --> 00:11:06.640
+Acum este un experiment puțin distractiv.
+
+00:11:07.760 --> 00:11:14.020
+Ce se întâmplă dacă închid acest lucru și în loc de containerul docker care are încărcătorul încărcăturii.
+
+00:11:14.140 --> 00:11:17.560
+Dacă începem NPM.
+
+00:11:17.560 --> 00:11:24.700
+Am setat-o, astfel încât serverul care este doar un singur server să asculte localhost trei mii Acum rețineți
+
+00:11:24.700 --> 00:11:29.230
+că fișierul nostru de server dodgiest este doar un server simplu.
+
+00:11:29.230 --> 00:11:35.200
+Deci, acum, când o rulez pe localhost 3000, putem testa ce se întâmplă atunci când nu există un balancer slab și
+
+00:11:35.200 --> 00:11:36.380
+doar un singur server.
+
+00:11:36.640 --> 00:11:42.220
+Tot ce trebuie să facem este să executați același test, dar de data asta, în loc de port 80, facem port trei mii.
+
+00:11:42.400 --> 00:11:43.220
+Să-i dăm drumul.
+
+00:11:45.260 --> 00:11:48.370
+Și vedeți că serverul răspunde cu consola care o înregistrează.
+
+00:11:48.410 --> 00:11:55.430
+A fost lovită timp de cinci secunde și apoi avem un răspuns.
+
+00:11:55.770 --> 00:11:56.520
+Interesant.
+
+00:11:56.520 --> 00:12:00.130
+Deci, haideți să aruncăm o privire la asta.
+
+00:12:00.230 --> 00:12:06.460
+Vedem aici că avem din nou 500 de quest-uri complete, fără erori.
+
+00:12:06.460 --> 00:12:14.920
+La fel ca înainte, dar latența medie a fost de 2. 3 milisecunde față de 5. 1 milisecundă când am avut balancerul
+
+00:12:14.920 --> 00:12:16.350
+de sarcină.
+
+00:12:16.360 --> 00:12:18.000
+Interesant.
+
+00:12:18.430 --> 00:12:24.370
+Așadar, lipsa unui echilibru scăzut aici a fost de fapt mai rapidă aici, deoarece toate valorile sunt aceleași, cu
+
+00:12:24.370 --> 00:12:27.710
+excepția faptului că latența medie a fost mult mai rapidă.
+
+00:12:28.090 --> 00:12:30.130
+Și asta ar putea avea sens.
+
+00:12:30.130 --> 00:12:36.190
+Unul pentru că bine nu l-am lovit prea mult cu prea mult trafic.
+
+00:12:36.370 --> 00:12:42.370
+Și, de asemenea, faptul că rulam acest echilibru scăzut într-un singur container care are un balancer scăzut și trei
+
+00:12:42.370 --> 00:12:45.790
+servere web în viața reală nu am face acest lucru.
+
+00:12:45.790 --> 00:12:53.140
+Fiecare dintre aceste servicii va fi pe recipiente diferite de mașini diferite, astfel încât să provoace un pic
+
+00:12:53.140 --> 00:12:54.790
+de întârziere, de asemenea.
+
+00:12:54.790 --> 00:12:56.580
+Dar să creștem și alte câteva lucruri.
+
+00:12:56.590 --> 00:12:58.840
+Să spunem că acum vreau să
+
+00:13:02.290 --> 00:13:04.340
+am 500 cereri pe secundă.
+
+00:13:04.510 --> 00:13:07.830
+Voi apăsa pe Enter.
+
+00:13:07.850 --> 00:13:08.290
+In regula.
+
+00:13:08.300 --> 00:13:08.810
+Asta e bine.
+
+00:13:08.810 --> 00:13:10.050
+Nu primim erori.
+
+00:13:10.070 --> 00:13:12.290
+Este capabil să completeze cererile.
+
+00:13:12.290 --> 00:13:13.020
+Grozav.
+
+00:13:13.130 --> 00:13:13.840
+Și dacă o fac.
+
+00:13:13.850 --> 00:13:18.160
+Și mai mult dacă aș face o mie de cereri simultane.
+
+00:13:22.070 --> 00:13:23.630
+Bine, deci face ceva.
+
+00:13:23.630 --> 00:13:26.900
+Are două mii nouă sute optzeci și nouă de cereri complete.
+
+00:13:26.900 --> 00:13:32.240
+Să conducem docul sau să compunem balancerul de sarcină și să vedem cum va funcționa.
+
+00:13:37.440 --> 00:13:41.550
+Din nou voi face același lucru, dar de data asta pe portul 80.
+
+00:13:41.730 --> 00:13:43.170
+Să facem asta.
+
+00:13:43.380 --> 00:13:45.500
+Capul nostru face o treabă care face o
+
+00:13:49.280 --> 00:13:50.680
+treabă și un homeboy.
+
+00:13:50.780 --> 00:13:53.860
+Numerele astea nu arată foarte bine.
+
+00:13:54.650 --> 00:14:04.970
+Avem latență medie de 140 milisecunde față de 2. 9 secunde și cererile completate sunt de fapt mai puține decât
+
+00:14:05.030 --> 00:14:07.850
+atunci când am avut singurul server.
+
+00:14:08.390 --> 00:14:16.010
+Și din nou, deoarece executăm acest lucru pe un container, este mai lent decât dacă a implementat
+
+00:14:16.010 --> 00:14:23.530
+corect încărcarea încărcării, dar folosind acest instrument, vreau să jucați și să experimentați lucruri diferite.
+
+00:14:23.580 --> 00:14:30.450
+Vedeți dacă poate face acest echilibru de încărcare mai rapid decât metoda gazdă locală.
+
+00:14:30.450 --> 00:14:35.850
+Aveți grijă dacă executați un container pe care nu îl primiți, dar vedeți cât de departe trebuie să mergeți pentru a face acest lucru să
+
+00:14:35.850 --> 00:14:36.370
+nu reușească.
+
+00:14:37.710 --> 00:14:44.850
+Sper că aveți o idee bună de a rula un balancer de sarcină cum ar putea funcționa modul în care puteți implementa și de asemenea
+
+00:14:44.850 --> 00:14:51.150
+cum să faceți ceva de genul testării încărcării pentru a vedea cât de bun este serverul dvs. la obținerea solicitării și când
+
+00:14:51.150 --> 00:14:56.580
+este posibil să aveți nevoie să actualizați de fapt, serverele pot avea un balancer de sarcină în fața serverului
+
+00:14:56.580 --> 00:14:57.160
+dvs.
+
+00:14:59.130 --> 00:14:59.700
+In regula.
+
+00:14:59.700 --> 00:15:04.230
+Du-te distrați acolo și test scăzut și să se distreze cu instrument de testare scazut.
+
+00:15:04.410 --> 00:15:05.650
+Voi vedea în următorul.
+
+00:15:05.920 --> 00:15:06.460
+Pa! Pa.

@@ -1,0 +1,199 @@
+﻿WEBVTT
+
+00:00:01.390 --> 00:00:01.980
+W porządku.
+
+00:00:02.080 --> 00:00:09.490
+Tak więc przestaliśmy mówić, że musimy dostarczać javascript w przyjemny sposób, abyśmy mogli mieć szybki czas
+
+00:00:09.670 --> 00:00:17.290
+na tak znaczące malowanie i czas na interaktywne, a także rozmawialiśmy o tym, w jaki sposób musimy
+
+00:00:17.620 --> 00:00:21.730
+poprawić wykonanie naszego javascript, ma sens na Strona.
+
+00:00:22.060 --> 00:00:28.030
+Na początek skupimy się na początku, jak dostarczać pliki javascript w najbardziej
+
+00:00:28.030 --> 00:00:29.280
+efektywny sposób.
+
+00:00:29.340 --> 00:00:33.680
+Widzisz, nowoczesne strony internetowe wysyłają dużo javascript.
+
+00:00:33.800 --> 00:00:42.020
+Powszechne jest łączenie skryptów w duże pliki lub plik w pakiecie w środowisku GDP One.
+
+00:00:42.240 --> 00:00:43.370
+Coś w tym stylu.
+
+00:00:43.560 --> 00:00:51.390
+Mieliśmy tylko jeden ogromny plik javascript, który został utworzony przez połączenie wszystkich naszych mniejszych i wysłanie go, gdy tylko
+
+00:00:51.390 --> 00:00:58.300
+użytkownik wejdzie na naszą stronę, a następnie ten plik javascript będzie działał również na stronie Informacje,
+
+00:00:58.300 --> 00:01:02.360
+jeśli przejdą do strony Informacje, a może kontakt strona.
+
+00:01:02.370 --> 00:01:09.040
+Teraz stało się tak, ponieważ duża liczba żądań, które początkowo miały negatywny
+
+00:01:09.820 --> 00:01:17.010
+wpływ na wydajność, jednak w miarę wzrostu liczby linii JavaScript pliki stawały się coraz większe.
+
+00:01:17.080 --> 00:01:24.060
+Po co wysyłać javascript, jeśli użytkownik nie będzie tego potrzebował, dopóki nie przejdzie na drugą stronę.
+
+00:01:24.070 --> 00:01:29.260
+Może jest tu trochę javascriptu, który działa tylko na stronie About lub stronie kontaktowej.
+
+00:01:29.260 --> 00:01:30.860
+Dlaczego mielibyśmy to wysłać?
+
+00:01:31.090 --> 00:01:36.730
+Jeśli użytkownik tego nie potrzebuje i nigdy nie odwiedza strony Informacje lub strony kontaktowej, która
+
+00:01:37.000 --> 00:01:38.590
+jest marnowaniem zasobów.
+
+00:01:38.620 --> 00:01:46.150
+Oprócz nowej opcji spowolnienia TTP do tego nie jest już tak, aby po prostu wysłać cały
+
+00:01:46.150 --> 00:01:48.360
+javascript za jednym zamachem.
+
+00:01:48.370 --> 00:01:55.870
+Często chcesz wysyłać wiele równoczesnych żądań, które teoretycznie stają się znacznie tańsze.
+
+00:01:55.960 --> 00:02:04.470
+Nowoczesne aplikacje nie powinny tego robić, ponieważ javascript korzysta z małych fragmentów, aby uniknąć zablokowania
+
+00:02:04.470 --> 00:02:05.770
+głównego zagrożenia.
+
+00:02:05.990 --> 00:02:14.270
+Możemy to zrobić poprzez coś, co nazywa się dzieleniem kodu, co pozwala nam zmniejszyć ilość pracy
+
+00:02:14.450 --> 00:02:16.640
+wykonywanej podczas wykonywania.
+
+00:02:16.970 --> 00:02:18.330
+Zobaczmy, jak to wygląda.
+
+00:02:24.620 --> 00:02:25.430
+Tam to masz.
+
+00:02:25.670 --> 00:02:29.010
+Nazywamy to dzieleniem kodu lub progresywnym ładowaniem.
+
+00:02:30.300 --> 00:02:38.080
+Chcemy przesłać minimalnie funkcjonalną stronę składającą się tylko z javascriptu w wersji shemale i, jeśli jest to
+
+00:02:38.080 --> 00:02:40.800
+potrzebne, do aktualnej strony głównej.
+
+00:02:41.020 --> 00:02:47.740
+A gdy pojawi się więcej zasobów, aplikacja może leniwej załadować lub odblokować więcej funkcji.
+
+00:02:47.740 --> 00:02:54.940
+Może, gdy użytkownik kliknie na stronie Informacje, może załadować plik javascript lub może chce załadować stronę
+
+00:02:54.940 --> 00:03:01.630
+główną, a przeglądarka nie wykonuje zbyt wiele pracy w tle, gdy użytkownik odwiedza stronę
+
+00:03:02.080 --> 00:03:02.830
+główną.
+
+00:03:03.010 --> 00:03:11.550
+Może on załadować plik strony javascript na stronie Informacje, dzieląc je na poszczególne przedziały, które dajemy przeglądarce,
+
+00:03:12.360 --> 00:03:14.390
+mniej pracy do wykonania.
+
+00:03:14.610 --> 00:03:22.440
+Przy okazji, jeśli zastanawiasz się, co oznacza ten czerwony javascript, to zazwyczaj jest to javascript od dostawcy.
+
+00:03:22.650 --> 00:03:32.940
+Na przykład, jeśli nasza strona internetowa wymaga ponownego działania Dobrze wiemy, że musimy reagować na każdej stronie.
+
+00:03:32.960 --> 00:03:40.670
+Możemy utworzyć plik dostawcy, który również zostanie wczytany i są to wszystkie pliki skryptów stron trzecich,
+
+00:03:40.670 --> 00:03:45.680
+których potrzebuje cała nasza witryna lub cała nasza aplikacja.
+
+00:03:45.830 --> 00:03:51.430
+I tylko krótka notatka o tych bibliotekach stron trzecich, których wszyscy używamy.
+
+00:03:51.710 --> 00:03:57.890
+Zwykle mają rachunek za produkcję w produkcji, jest to coś, co możesz użyć znacznie
+
+00:03:57.890 --> 00:04:00.380
+szybciej niż ich wersje rozwojowe.
+
+00:04:00.410 --> 00:04:08.150
+Oznacza to, że jest to zmodyfikowany plik, który usuwa wszelkie narzędzia, takie jak narzędzia do debugowania, które mogą pochodzić z
+
+00:04:08.150 --> 00:04:09.630
+bibliotek innych firm.
+
+00:04:10.010 --> 00:04:14.100
+A to wychodzi z pudełka, aby zareagować w górę.
+
+00:04:14.150 --> 00:04:21.680
+Uruchomimy generator NPM, który zbuduje wersję produkcyjną i zareaguje na nią.
+
+00:04:21.890 --> 00:04:28.690
+Więc wyklucza wszystko, czego faktycznie nie potrzebujemy i produkcji, jeśli zastanawiasz się, jak to działa.
+
+00:04:28.740 --> 00:04:30.720
+Są po prostu prostymi instrukcjami.
+
+00:04:30.720 --> 00:04:39.450
+Na przykład, jeśli masz nasz sagger redux, który pokazałem ci w poprzedniej sekcji, gdzie jesteśmy w stanie
+
+00:04:39.450 --> 00:04:47.580
+zalogować się do konsoli wszystkich naszych działań, ale w produkcji tak naprawdę nie chciałbyś tego.
+
+00:04:47.580 --> 00:04:48.890
+To tylko rzeczywiste linie kodu.
+
+00:04:48.900 --> 00:04:53.510
+Nie chcesz też, aby wszystkie Twoje działania były rejestrowane dla użytkownika.
+
+00:04:53.600 --> 00:04:57.350
+Zamiast tego powiedzielibyście, jeśli chodzi o środowisko.
+
+00:04:57.350 --> 00:05:04.560
+Jeśli więc jest to produkcja, to nie korzystaj z rejestratora.
+
+00:05:04.620 --> 00:05:12.000
+Jeśli jest to kompilacja rozwojowa, użyj dłuższej prostej logiki i Javascript, ale aby wrócić
+
+00:05:12.000 --> 00:05:20.780
+do naszego punktu, chcemy przesłać minimalnie funkcjonalną stronę składającą się tylko z javascript i CSSA z Ishmail,
+
+00:05:21.050 --> 00:05:23.730
+których potrzebujemy do bieżącej strony.
+
+00:05:23.750 --> 00:05:24.800
+Obecna susza.
+
+00:05:25.310 --> 00:05:35.270
+A gdy przychodzi więcej zasobów, aplikacja może leniwym ładować i odblokowywać więcej funkcji, a leniwy ładowanie oznacza po prostu ładowanie ich po
+
+00:05:35.360 --> 00:05:42.200
+tym, jak strona staje się interaktywna, dzięki czemu użytkownik może poczuć, że aplikacja jest
+
+00:05:42.210 --> 00:05:48.090
+szybka, aw następnym filmie wypróbujemy naszą rękę w naszym własnym dzieleniu kodu.
+
+00:05:48.240 --> 00:05:49.190
+Wiesz, że powiedziałem to prawo.
+
+00:05:49.200 --> 00:05:52.670
+Ale będzie fajnie, więc zobaczę w tym.
+
+00:05:52.760 --> 00:05:52.960
+Babai.

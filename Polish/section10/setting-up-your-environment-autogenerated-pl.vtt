@@ -1,0 +1,1105 @@
+﻿WEBVTT
+
+00:00:01.910 --> 00:00:03.050
+Witamy spowrotem.
+
+00:00:03.050 --> 00:00:03.600
+W porządku.
+
+00:00:03.890 --> 00:00:10.580
+Zacznijmy tworzyć nasze inteligentne projekty mózgu, aby działały na naszych maszynach, z których będziemy korzystać
+
+00:00:10.580 --> 00:00:17.690
+w następnych kilku sekcjach, aby rzeczywiście dodawać do nich nowe funkcje i robić naprawdę fajne rzeczy
+
+00:00:17.690 --> 00:00:22.190
+dzięki nowoczesnym narzędziom, które naprawdę poprawiają nasze w górę.
+
+00:00:22.190 --> 00:00:26.480
+Pierwszą rzeczą, jaką zamierzam zrobić, będę udawać, że to mój pierwszy dzień w pracy.
+
+00:00:26.480 --> 00:00:33.460
+Mam inteligentny projekt mózgu i inteligentne API mózgu, a Bruno i zespół właśnie
+
+00:00:33.480 --> 00:00:41.480
+powiedzieli nam, że istnieje aplikacja kliencka, która jest tym serwerem i że musimy również skonfigurować bazę
+
+00:00:41.750 --> 00:00:49.850
+danych, ponieważ ten serwer musi rozmawiać z baza danych, w której znajdują się wszyscy użytkownicy i
+
+00:00:49.910 --> 00:00:55.870
+gdzie przechowujemy zaszyfrowane hasła, ponieważ użytkownicy mogą się logować i rejestrować.
+
+00:00:56.050 --> 00:00:56.770
+Weźmy się za to.
+
+00:00:56.800 --> 00:01:02.620
+Pierwszą rzeczą, którą zrobię, jest zawsze dobra praktyka, zamiast po prostu
+
+00:01:03.460 --> 00:01:08.070
+klonować oryginalne repo, aby po prostu zapomnieć.
+
+00:01:08.230 --> 00:01:13.540
+Teraz w moim przypadku, ponieważ jest to w repozytorium, teraz na razie będę miał róg.
+
+00:01:13.630 --> 00:01:22.250
+Ale zalecam, abyś rozwidlał swoje projekty i wysyłasz prośby o wyciągnięcie z tych rozwidlonych projektów.
+
+00:01:24.250 --> 00:01:30.630
+Ale na razie zamierzam po prostu sklonować inteligentną aplikację do mózgu, żeby zacząć.
+
+00:01:30.880 --> 00:01:33.930
+Więc otworzę mój terminal i tutaj.
+
+00:01:33.940 --> 00:01:35.610
+Zróbmy to trochę większym.
+
+00:01:35.980 --> 00:01:40.770
+I tutaj zamierzam po prostu sklonować twoje repo.
+
+00:01:41.110 --> 00:01:42.250
+I podczas gdy to działa.
+
+00:01:42.400 --> 00:01:45.560
+Przejdźmy do API i róbmy to samo.
+
+00:01:46.460 --> 00:01:53.340
+Po prostu sklonuj tego Cerebro i sklonuj.
+
+00:01:53.360 --> 00:01:54.060
+W porządku.
+
+00:01:54.190 --> 00:01:55.830
+Możesz teraz zminimalizować to okno.
+
+00:01:56.720 --> 00:02:01.610
+I po prostu tutaj mamy dwa nasze foldery.
+
+00:02:01.650 --> 00:02:04.270
+A teraz zwiększmy to.
+
+00:02:05.240 --> 00:02:12.090
+Teraz chcemy to zrobić, ponieważ mamy dwie rzeczy, w których możemy chcieć mieć dwa okna końcowe.
+
+00:02:12.320 --> 00:02:14.510
+Zamierzam dodać nowe okno.
+
+00:02:14.510 --> 00:02:22.450
+Znowu robisz to trochę bardziej, żebyśmy wszyscy mogli zobaczyć i zamierzam mieć
+
+00:02:23.020 --> 00:02:27.150
+jeden serwer dla mojego klienta.
+
+00:02:27.260 --> 00:02:32.390
+Pierwszą rzeczą, którą mam zamiar zrobić, wyjaśnię to nieco i wyjaśnię to również.
+
+00:02:32.580 --> 00:02:37.020
+I powiem, że to będzie aplikacja po stronie klienta, inteligentny mózg.
+
+00:02:37.380 --> 00:02:42.270
+I to będzie serwer, którego używa aplikacja kliencka.
+
+00:02:42.270 --> 00:02:48.330
+Więc to będzie C. D do inteligentnego interfejsu API mózgu.
+
+00:02:48.340 --> 00:02:49.050
+W porządku.
+
+00:02:49.070 --> 00:02:56.270
+Teraz zwykle na hoście pobierania jest dobra dokumentacja zespołu, jak zainstalować i zrobić wszystko, aby ją
+
+00:02:56.270 --> 00:02:57.010
+skonfigurować.
+
+00:02:57.020 --> 00:03:03.020
+Możemy po prostu zacząć od tego i najprawdopodobniej będziemy musieli zainstalować NPM, ponieważ
+
+00:03:03.020 --> 00:03:08.250
+mamy pakiet dodgiest w pliku zwykle ze wszystkimi naszymi pakietami NPM.
+
+00:03:08.320 --> 00:03:11.710
+Ale zanim to zrobimy, pozwól mi otworzyć subline
+
+00:03:14.430 --> 00:03:18.010
+i zamierzam połączyć te dwa okna, aby ułatwić sobie życie.
+
+00:03:27.070 --> 00:03:27.540
+Idealny.
+
+00:03:27.580 --> 00:03:35.110
+Więc teraz mam swój serwer, który jest tutaj, mogę udawać, że to jest jego własny
+
+00:03:35.170 --> 00:03:44.580
+komputer, a następnie zrobić to samo dla mojej strony klienta, po prostu umieścić te dwa razem, po prostu zorganizować
+
+00:03:44.580 --> 00:03:52.770
+mój ekran, więc wiem, że te dwa są całkowicie osobno i zanim nawet uruchomię NPM i
+
+00:03:52.770 --> 00:04:01.080
+zobaczyłem, że lubię zaglądać do pakietu Jason pho, który zwykle powie Ci polecenia, z których projektów
+
+00:04:01.080 --> 00:04:08.820
+korzystamy, lub jakich zależności głębokości używamy i po prostu patrząc na to Mogę Google być
+
+00:04:08.880 --> 00:04:10.480
+może NPM.
+
+00:04:10.640 --> 00:04:12.170
+To robi jeden gnomon.
+
+00:04:12.360 --> 00:04:18.300
+To tutaj PGE robi PGE postscriptom, więc muszą używać tej bazy danych i wyrażać.
+
+00:04:18.390 --> 00:04:25.200
+Korzystają z serwera Express, prawdopodobnie używają czegoś, co nazywa się "Zastanawiaj się", co
+
+00:04:25.200 --> 00:04:26.270
+to jest.
+
+00:04:26.490 --> 00:04:26.730
+DOBRZE.
+
+00:04:26.730 --> 00:04:32.490
+Używają krypty, żeby znać J. S. prawdopodobnie wyłudził jej hasło,
+
+00:04:32.490 --> 00:04:35.700
+więc już wiem, co aplikacja używa jako narzędzi.
+
+00:04:36.150 --> 00:04:40.390
+Zainstalujmy je, ponieważ aby aplikacja działała, oczywiście musimy zainstalować te pakiety.
+
+00:04:40.410 --> 00:04:47.050
+Zobaczysz, że pojawi się folder modułów węzła i zrobi to samo dla aplikacji
+
+00:04:47.050 --> 00:04:50.220
+klienckiej przechodzącej do instalacji NPM.
+
+00:04:50.580 --> 00:04:55.720
+I znowu idziemy pakować naszego Jasona. Widzę OIA, to projekt Briaca.
+
+00:04:55.720 --> 00:05:00.150
+Używają skryptów Riak, więc jest to zdecydowanie re-act.
+
+00:05:00.170 --> 00:05:00.640
+To wspaniale.
+
+00:05:00.640 --> 00:05:06.280
+A to są wszystkie polecenia, z których mogę korzystać, wygląda na to, że NPM start jest tym, czego chcę
+
+00:05:06.280 --> 00:05:11.860
+użyć dla interfejsu, a potem z tyłu widzę, że jest tylko jeden skrypt, który jest początkiem NPM.
+
+00:05:11.890 --> 00:05:21.520
+Zanim zrobię cokolwiek, mogę po prostu uruchomić NPM start i sprawdzić, czy wszystko to działa, co robi.
+
+00:05:21.520 --> 00:05:23.690
+Aplikacja działa poprawnie, jest świetna.
+
+00:05:24.130 --> 00:05:26.610
+I uruchommy NPM również tutaj.
+
+00:05:30.060 --> 00:05:35.080
+A ponieważ mamy już serwer działający na porcie trzy
+
+00:05:35.080 --> 00:05:39.330
+tysiące, trafiamy tak, więc dostajemy inny port.
+
+00:05:39.540 --> 00:05:42.580
+I nie patrząc na pojedynczą linię kodu.
+
+00:05:42.630 --> 00:05:43.210
+W porządku.
+
+00:05:43.260 --> 00:05:48.030
+Mam wszystko skonfigurowane i działające lub wygląda na to.
+
+00:05:48.090 --> 00:05:48.480
+W porządku.
+
+00:05:48.480 --> 00:05:51.870
+Wygląda więc na to, że działa teraz.
+
+00:05:52.260 --> 00:05:54.660
+Spróbujmy tylko stworzyć konto.
+
+00:05:54.660 --> 00:05:56.800
+Powiemy hej na.
+
+00:05:57.030 --> 00:06:07.440
+Lub nazwa jest hej hej w Gmail com, a my powiemy, że hasło to hej rejestr mogę zarejestrować,
+
+00:06:07.740 --> 00:06:10.110
+jeśli otworzę konsolę.
+
+00:06:10.110 --> 00:06:19.300
+Dobra, widzę, że w rejestrze jest 400 złych żądań i wskazuję, że wrócę do mojego terminalu.
+
+00:06:19.340 --> 00:06:22.430
+W porządku, dostaję błąd na serwerze.
+
+00:06:22.580 --> 00:06:25.640
+Otrzymuję komunikat o błędzie połączenia K'NEX.
+
+00:06:25.640 --> 00:06:28.510
+Połączenie nieoczekiwanie zakończyło się.
+
+00:06:28.580 --> 00:06:28.790
+DOBRZE.
+
+00:06:28.790 --> 00:06:34.320
+Wygląda więc na to, że istnieje jakiś rodzaj połączenia bez patrzenia na jakikolwiek kod i.
+
+00:06:34.540 --> 00:06:40.430
+Wygląda na to, że nie mogę się zarejestrować i wiemy, że aby
+
+00:06:40.430 --> 00:06:50.300
+mieć jakąkolwiek formę logowania lub użytkowników, potrzebujemy bazy danych, aby zapamiętać dla nas rzeczy, takie jak nazwy użytkowników, hasła, informacje o
+
+00:06:50.660 --> 00:06:52.730
+profilu, wszystkie te rzeczy.
+
+00:06:52.800 --> 00:06:53.050
+W porządku.
+
+00:06:53.040 --> 00:06:54.020
+I my to wiemy.
+
+00:06:54.030 --> 00:07:00.020
+Chodzi mi o to, że Bruno powiedział nam, że istnieje aplikacja klienta, serwer i baza danych.
+
+00:07:00.180 --> 00:07:08.420
+Wygląda więc na to, że musimy teraz skonfigurować naszą bazę danych, aby mieć to połączenie i ponieważ nie dostaję żadnych komunikatów
+
+00:07:08.420 --> 00:07:13.180
+o błędach na interfejsie, a front jest zwykle bardzo łatwy do skonfigurowania.
+
+00:07:13.950 --> 00:07:21.470
+Mogę wrócić i przejść przez zależności i zobaczyć, czego używają i widzę, że używają PGE, która
+
+00:07:21.470 --> 00:07:30.590
+jest postscriptami i najprawdopodobniej połączenie z bazą danych i konfiguracja odbywa się w jednym z głównych plików, takich jak
+
+00:07:31.770 --> 00:07:34.360
+serwer, który jest w Japonii.
+
+00:07:34.380 --> 00:07:39.590
+Więc chodzę tutaj prawdopodobnie pierwszy i od razu widzę to.
+
+00:07:39.630 --> 00:07:40.030
+W porządku.
+
+00:07:40.050 --> 00:07:46.260
+Wygląda na to, że baza danych D-B używa tego pakietu K'NEX i K'NEX.
+
+00:07:46.350 --> 00:07:54.270
+Powiedzmy, że nie wiem, co to jest. Po prostu pójdę tutaj i powiem K'NEXowi i premierowi, jakie mam
+
+00:07:54.270 --> 00:07:55.020
+wyniki.
+
+00:07:56.860 --> 00:08:00.530
+Wszechstronne baterie w zestawie z wieloma dialektami.
+
+00:08:00.690 --> 00:08:04.910
+To jest narzędzie do tworzenia zapytań bez G-S i przeglądarki.
+
+00:08:04.920 --> 00:08:05.240
+W porządku.
+
+00:08:05.250 --> 00:08:07.770
+W porządku, więc wygląda na to, że używamy go do zapytania.
+
+00:08:07.840 --> 00:08:13.900
+No cóż, pójdziemy po hub, może dadzą nam lepszy opis.
+
+00:08:13.900 --> 00:08:17.370
+Wygląda na to, że mają stronę internetową, więc Lescaut to sprawdza.
+
+00:08:17.410 --> 00:08:17.940
+O tak.
+
+00:08:17.990 --> 00:08:20.680
+Dołączone baterie K'NEX.
+
+00:08:20.680 --> 00:08:28.020
+Zapytaj wszystkich konstruktorów i wygląda na to, że jesteśmy w stanie stworzyć Eskew wszystkie instrukcje naprawdę ładnie
+
+00:08:28.020 --> 00:08:30.500
+wyczyścić wszystkie instrukcje używając tego.
+
+00:08:30.540 --> 00:08:36.780
+Jeśli przejdę tutaj, powiedzmy, że konstruktor zapytań powiedzmy, że chcemy dokonać wyboru.
+
+00:08:36.780 --> 00:08:37.300
+Metoda.
+
+00:08:37.470 --> 00:08:37.810
+W porządku.
+
+00:08:37.810 --> 00:08:46.500
+Wygląda na to, że używamy K'NEX do wyboru autora tytułu na rok z bazy danych książek, a
+
+00:08:46.500 --> 00:08:50.770
+wynik to instrukcja select, która nam to daje.
+
+00:08:50.810 --> 00:08:51.090
+W porządku.
+
+00:08:51.090 --> 00:08:51.690
+Niesamowite.
+
+00:08:51.720 --> 00:08:54.450
+Więc może wiedziałeś, kim jest K'NEX.
+
+00:08:54.750 --> 00:09:00.170
+Może nie, ale z jakimkolwiek projektem przyjrzę się temu i powiem OK, więc to jest to, do czego
+
+00:09:00.170 --> 00:09:00.950
+go używają.
+
+00:09:00.960 --> 00:09:09.930
+To ma sens, że tworzymy bazę danych i używamy K'NEX do połączenia z bazą danych SCARUS portu i
+
+00:09:10.320 --> 00:09:17.950
+wygląda na to, że jest tu połączenie i wygląda na to, że jest to localhost.
+
+00:09:17.980 --> 00:09:22.260
+To chce 7. 0 Dudd zero Darwan to to samo co localhost.
+
+00:09:22.270 --> 00:09:28.620
+Jeśli zmienię zmiany na localhost, to będzie to samo, co zobaczył Funny Cher, kiedy myślę,
+
+00:09:28.620 --> 00:09:36.630
+że powiedziałem to wcześniej, gdzie powiedział, że nie ma miejsca takiego jak chcieć 2 7 0 0 1, co oznacza localhost.
+
+00:09:36.660 --> 00:09:38.870
+Więc w domu nie ma takiego miejsca jak dom.
+
+00:09:39.240 --> 00:09:40.360
+Myślałem, że to było zabawne.
+
+00:09:40.500 --> 00:09:44.670
+W każdym razie widzimy również, że istnieje inteligentna baza danych mózgu.
+
+00:09:44.700 --> 00:09:45.500
+W porządku.
+
+00:09:45.540 --> 00:09:51.530
+Użytkownik jest w Google, który stworzyłem, ale zobaczymy, czy tego potrzebujemy.
+
+00:09:51.540 --> 00:09:57.720
+Patrząc na to, musimy połączyć się z bazą danych, a następnie ujawnić je, ponieważ pracujesz
+
+00:09:57.720 --> 00:09:59.070
+na własnym komputerze.
+
+00:09:59.190 --> 00:10:05.040
+Musisz połączyć się z bazą danych znajdującą się na komputerze lub może mieć bazę danych testów, z którą
+
+00:10:05.070 --> 00:10:06.230
+możemy się połączyć.
+
+00:10:06.300 --> 00:10:11.970
+Ale Bruno nic nie wspomniał, więc wygląda na to, że musimy sami założyć bazę danych.
+
+00:10:12.090 --> 00:10:17.490
+I znowu, jeśli bazy danych są dla ciebie nowe, polecam sprawdzić mój drugi kurs.
+
+00:10:17.790 --> 00:10:30.690
+Na razie możemy uruchomić bazę danych PostgreSQL i stworzyć w niej inteligentną bazę danych aplikacji.
+
+00:10:31.640 --> 00:10:39.080
+Na Macu to jest inne dla każdej maszyny, możesz użyć czegoś, co nazywa się lepkim
+
+00:10:39.080 --> 00:10:47.440
+lub graficznym interfejsem użytkownika, aby stworzyć te tabele dla ciebie tylko dlatego, że jest trochę łatwiejsze niż używanie
+
+00:10:47.440 --> 00:10:48.060
+terminala.
+
+00:10:48.280 --> 00:10:56.230
+A więc coś, co nazywa się sequelem Peace, jest powiązane ze źródłami, które mają Gucci'ego dla Windowsa, Linuksa i
+
+00:10:56.230 --> 00:10:57.280
+innych źródeł.
+
+00:10:57.280 --> 00:11:02.770
+Ale sequel jest darmowy i naprawdę fajny dla Mac pozwala mi pokazać.
+
+00:11:06.470 --> 00:11:13.070
+Znowu to pozwala nam używać postscriptów i mieć ładny graficzny interfejs użytkownika.
+
+00:11:13.160 --> 00:11:17.660
+Wróćmy więc do naszej bazy danych i.
+
+00:11:17.660 --> 00:11:18.060
+W porządku.
+
+00:11:18.080 --> 00:11:24.810
+Wygląda na to, że możemy po prostu spróbować połączyć się z localhost, czego chcemy.
+
+00:11:24.980 --> 00:11:29.580
+I do inteligentnej bazy danych mózgu.
+
+00:11:29.700 --> 00:11:31.030
+A więc połączmy się tutaj.
+
+00:11:32.180 --> 00:11:36.510
+W porządku, Eric nie może się połączyć z odmową połączenia z serwerem.
+
+00:11:36.860 --> 00:11:42.580
+Czy serwer obsługujący działa na hoście lokalnym na hoście i na tym numerze portu.
+
+00:11:42.870 --> 00:11:45.270
+Cóż, prawdopodobnie nie.
+
+00:11:45.350 --> 00:11:51.280
+Chodzi mi o to, że bez konieczności uruchamiania serwera bazy danych, nie będziesz musiał tego uruchamiać.
+
+00:11:51.290 --> 00:11:58.680
+Pierwszą rzeczą, którą musisz zrobić, to powiedzieć, że uruchomiłem serwer PostScriptów na moim komputerze.
+
+00:11:58.950 --> 00:12:03.880
+Znowu nie ma nic, co zrobiliśmy, aby stworzyć bazę danych.
+
+00:12:04.070 --> 00:12:09.960
+Wszystko, co musimy zrobić, to otworzyć terminal i jest on nowy.
+
+00:12:10.110 --> 00:12:11.710
+To może się trochę powiększyć.
+
+00:12:14.200 --> 00:12:23.140
+I mamy zamiar powiedzieć Drew i jest to coś, co mogę wykorzystać Brue jest homebrewed dla Maca i
+
+00:12:23.140 --> 00:12:29.040
+używając tego polecenia na Macu mogę uruchomić lub zatrzymać linki postscriptowe.
+
+00:12:29.140 --> 00:12:29.770
+Mogę
+
+00:12:33.630 --> 00:12:35.970
+to wpisać, ponieważ mam już zainstalowane postscripty.
+
+00:12:35.970 --> 00:12:38.970
+Ponownie zostawię zasoby, abyś zrobił to samo.
+
+00:12:39.120 --> 00:12:42.440
+Jeśli jeszcze tego nie zrobiłeś z mojego poprzedniego kursu.
+
+00:12:42.780 --> 00:12:46.920
+Więc usługi Bruce'a rozpoczną postscripts W porządku.
+
+00:12:46.920 --> 00:12:49.730
+Pomyślnie uruchomiono postscripts.
+
+00:12:49.750 --> 00:12:57.710
+Teraz, jeśli wrócimy i uruchomiliśmy serwer, próbuję połączyć się z inteligentną bazą danych mózgu,
+
+00:12:57.980 --> 00:13:00.540
+którą już potajemnie stworzyłem.
+
+00:13:00.560 --> 00:13:01.130
+W porządku.
+
+00:13:01.130 --> 00:13:05.130
+Wygląda na to, że jestem połączony z bazą danych.
+
+00:13:05.180 --> 00:13:06.600
+Są tu dwie tabele.
+
+00:13:06.620 --> 00:13:13.080
+Istnieje tabela dziennika, która ma identyfikatory w wersji hash lub hasło i e-maile.
+
+00:13:13.190 --> 00:13:14.890
+Możemy użyć tego do zalogowania.
+
+00:13:14.900 --> 00:13:15.440
+DOBRZE.
+
+00:13:15.590 --> 00:13:23.210
+A potem mamy użytkowników, których nazwy e-mailowe są wspólne i właśnie patrząc na bazę danych, mam pewien
+
+00:13:23.210 --> 00:13:27.000
+pomysł, jakie informacje potrzebuje inteligentna aplikacja mózgowa.
+
+00:13:27.080 --> 00:13:32.480
+Wygląda na to, że ma tylko informacje o użytkowniku.
+
+00:13:32.490 --> 00:13:35.300
+Teraz mam to już stworzone.
+
+00:13:35.580 --> 00:13:42.030
+Ale co by było, gdybyśmy nie mieli tego już, jeśli mamy inną bazę danych.
+
+00:13:42.090 --> 00:13:44.470
+Więc zamknijmy to i spróbuj jeszcze raz.
+
+00:13:44.620 --> 00:13:50.550
+Nie chcę ponownie otwierać sequelu i tym razem połączyć się z bazą
+
+00:13:50.550 --> 00:13:56.830
+danych o nazwie inteligentny mózg, jeśli połączę inteligentny mózg bazy danych, który nie istnieje.
+
+00:13:56.830 --> 00:14:00.550
+Jak utworzyć inteligentną bazę danych mózgu?
+
+00:14:00.550 --> 00:14:10.280
+Znowu w zależności od systemu, w którym twój postscripts działa na Macu, mogę utworzyć Create D-B
+
+00:14:10.400 --> 00:14:14.680
+i nadać mu nazwę, której szukam.
+
+00:14:14.680 --> 00:14:19.620
+I znów pojawia się z naparowaną wersją postscriptów.
+
+00:14:19.660 --> 00:14:21.010
+Ponownie zostawię linki do tego.
+
+00:14:21.040 --> 00:14:24.320
+Możesz to zrobić, jeśli nie masz postscripts na swoim komputerze.
+
+00:14:24.430 --> 00:14:28.260
+Powiem więc, że należy utworzyć inteligentny mózg bazy danych.
+
+00:14:28.420 --> 00:14:37.960
+Jeśli teraz wrócę i spróbuję połączyć wygląd, który ponownie łączy się z serwerem, a my jesteśmy w bazie danych, ale
+
+00:14:37.990 --> 00:14:40.420
+widzimy, że nie mamy tabel.
+
+00:14:40.420 --> 00:14:47.530
+Tworzymy tabele, przechodząc do zapytania, a tutaj mam historię zapytań, więc zamierzam ją napisać
+
+00:14:47.530 --> 00:14:49.000
+dla ciebie.
+
+00:14:49.000 --> 00:14:56.530
+Mogę utworzyć tabelę użytkowników i to jest po prostu proste Eskew wszystkie polecenia, a my przejdziemy
+
+00:14:56.530 --> 00:14:57.990
+to nieco dalej.
+
+00:14:58.960 --> 00:15:06.520
+Kiedy faktycznie pracujemy z dockerem, ale tworzymy identyfikator z kluczem podstawowym, który ma iść w kolejności jeden
+
+00:15:06.520 --> 00:15:08.640
+dwa trzy cztery pięć.
+
+00:15:08.710 --> 00:15:16.630
+Mamy nazwę, która ogranicza zmienne znaki 100 e-maili, które muszą być niepowtarzalne, a nie wszystkie.
+
+00:15:16.630 --> 00:15:25.490
+Musi być również w typie tekstowym, a wpisy, które zaczynają się zaczynają się od wartości domyślnej 0 i dołączone, to
+
+00:15:25.490 --> 00:15:27.710
+datownik, który jest datą.
+
+00:15:27.710 --> 00:15:35.410
+A to może mi przypominać, że przypominasz trochę maszynopis i pytam wszystkich o wpisanie na klawiaturze,
+
+00:15:35.420 --> 00:15:39.870
+zanim zaczniemy przypisywać identyfikatory, nazwiska i adresy e-mail.
+
+00:15:39.920 --> 00:15:43.870
+Musimy powiedzieć, jaki typ przyjmuje.
+
+00:15:44.030 --> 00:15:51.740
+I tak działają bazy danych w celu optymalizacji zapytań i ogólnie mają dobrą wydajność
+
+00:15:51.740 --> 00:15:53.010
+baz danych.
+
+00:15:53.240 --> 00:15:55.100
+Więc uruchommy to zapytanie.
+
+00:15:56.110 --> 00:16:00.090
+Jeśli teraz odświeżę, mam użytkownika stabilnego.
+
+00:16:00.160 --> 00:16:01.080
+To wspaniale.
+
+00:16:01.270 --> 00:16:04.770
+Możemy również utworzyć dziennik i tabelę.
+
+00:16:07.260 --> 00:16:10.250
+Znowu to samo jest hash Id i e-mail.
+
+00:16:10.290 --> 00:16:14.180
+Jeśli uruchomię to zapytanie i odświeżam.
+
+00:16:14.680 --> 00:16:19.900
+W porządku Mam log i tabelę użytkowników niesamowite.
+
+00:16:19.940 --> 00:16:23.060
+A więc działa moja baza danych.
+
+00:16:23.090 --> 00:16:25.200
+Teoretycznie nasza aplikacja powinna działać.
+
+00:16:25.200 --> 00:16:34.050
+Teraz wróćmy do naszego połączenia tutaj i zamiast bazy danych i wygląda na to, że nie potrzebujemy użytkownika, ponieważ
+
+00:16:34.050 --> 00:16:38.850
+nie ustawiliśmy użytkownika i używamy tutaj ponownie hosta lokalnego.
+
+00:16:38.850 --> 00:16:43.910
+Zamierzam powiedzieć inteligentny mózg, jeden do zapisania.
+
+00:16:44.160 --> 00:16:45.720
+Ponownie uruchomiliśmy nasz serwer.
+
+00:16:45.720 --> 00:16:46.770
+Spróbujmy jeszcze raz.
+
+00:16:46.860 --> 00:16:50.450
+Wrócę do naszej aplikacji.
+
+00:16:50.650 --> 00:16:53.470
+Spróbujmy jeszcze raz.
+
+00:16:53.470 --> 00:16:57.580
+Chcę się zarejestrować świetnie.
+
+00:16:57.680 --> 00:16:59.710
+Właśnie zalogowaliśmy się do naszej aplikacji.
+
+00:16:59.730 --> 00:17:01.220
+Jeśli wrócę do mojej bazy danych
+
+00:17:04.620 --> 00:17:05.880
+i odświeżę twój wygląd
+
+00:17:09.360 --> 00:17:10.440
+tego, co mam.
+
+00:17:10.440 --> 00:17:13.350
+Hej hej z Gmaila dot com zero wpisów.
+
+00:17:13.350 --> 00:17:22.600
+Znacznik czasu, kiedy dołączyłem, a nawet mam zakodowane hasło z e-mailem, które jest bardzo fajne.
+
+00:17:22.770 --> 00:17:26.250
+Powinniśmy móc teraz pracować z tą aplikacją.
+
+00:17:26.280 --> 00:17:26.840
+Dobrze.
+
+00:17:27.180 --> 00:17:33.050
+Zamknijmy konsolę i wygląda na to, że magiczny mózg wykryje twarze na zdjęciu.
+
+00:17:33.120 --> 00:17:33.980
+Spróbuj.
+
+00:17:34.170 --> 00:17:37.110
+Możemy wprowadzić tutaj u r l, aby wykryć twarze.
+
+00:17:37.260 --> 00:17:44.370
+Więc mam tu jakąś twarz, z której mogę skorzystać. Zamierzam powiedzieć "adres obrazu kopii", który podaje
+
+00:17:44.400 --> 00:17:49.370
+mi adres URL, a ja wkleję tutaj i kliknę przycisk "Wykryj".
+
+00:17:49.390 --> 00:17:49.840
+W porządku.
+
+00:17:49.870 --> 00:17:56.810
+Spójrz na liczbę naszych zgłoszeń wzrosła o jeden i mogę to sprawdzić, przechodząc do użytkowników i widzimy, że twoje wpisy
+
+00:17:56.810 --> 00:18:00.020
+są teraz raz, więc baza danych została zaktualizowana.
+
+00:18:00.100 --> 00:18:01.750
+A jeśli wrócę do serwera.
+
+00:18:01.790 --> 00:18:02.110
+W porządku.
+
+00:18:02.120 --> 00:18:03.970
+Bez błędów.
+
+00:18:03.980 --> 00:18:04.350
+W porządku.
+
+00:18:04.370 --> 00:18:07.850
+I oh, gdzie jest ta funkcja wykrywania twarzy.
+
+00:18:07.850 --> 00:18:09.930
+Naprawdę tego nie widzimy.
+
+00:18:09.930 --> 00:18:14.120
+Jeśli otworzę konsolę, zobaczę, och.
+
+00:18:14.140 --> 00:18:16.550
+Teraz mamy kolejne 400 w naszym powietrzu.
+
+00:18:16.570 --> 00:18:20.630
+Zła prośba i widzę, że jesteś na obrazie końcowym, jesteś prawdziwy.
+
+00:18:20.680 --> 00:18:23.300
+Więc coś z obrazem, którym jesteś, działa.
+
+00:18:25.760 --> 00:18:28.230
+Po prostu nie można uzyskać obrazu Jaro.
+
+00:18:28.580 --> 00:18:31.490
+Jeśli otworzę kartę sieciową i spróbuję
+
+00:18:34.590 --> 00:18:38.340
+ponownie, zobaczymy, że obraz, który jesteś, jest tutaj nieprawidłowy.
+
+00:18:38.490 --> 00:18:44.800
+Mamy 400 kwadratowych żądań i nie możemy pracować z API.
+
+00:18:45.330 --> 00:18:51.480
+W porządku brzmi, że mamy jeszcze jeden element układanki, który musimy
+
+00:18:51.480 --> 00:18:56.660
+naprawić, i że używamy API o nazwie clarify i
+
+00:19:02.390 --> 00:19:10.370
+clarify to API, które pozwala nam wysłać adres URL obrazu i zwraca nam odpowiedź .
+
+00:19:10.370 --> 00:19:16.280
+Więc jeśli przejdę do dokumentacji deweloperów i pójdę
+
+00:19:18.990 --> 00:19:25.900
+do przewidzieć, widzimy, że dzięki twojej studni możemy przewidzieć pewne rzeczy.
+
+00:19:25.990 --> 00:19:26.690
+Co możemy zrobić.
+
+00:19:26.800 --> 00:19:32.950
+Wygląda na to, że potrzebujemy klucza API i przy każdym interfejsie API, z którym współpracujesz, potrzebujesz czegoś, co nazywa
+
+00:19:33.370 --> 00:19:35.650
+się kluczem API, ponieważ tak wie API.
+
+00:19:35.890 --> 00:19:36.400
+O tak.
+
+00:19:36.460 --> 00:19:37.180
+To jest Andre.
+
+00:19:37.180 --> 00:19:42.810
+Już zapłacił za nasze usługi lub ma 1000 darmowych obrazów, które może nam wysłać.
+
+00:19:42.880 --> 00:19:47.290
+A przy okazji wyjaśnienie jest bezpłatne dla poziomu podstawowego, więc nie martw się.
+
+00:19:47.290 --> 00:19:50.680
+To jest coś, co dostajesz z pudełka za darmo.
+
+00:19:50.770 --> 00:19:53.590
+Potrzebujemy klucza API.
+
+00:19:53.640 --> 00:20:03.270
+Najlepszą rzeczą, jaką mogę zrobić, to wrócić do mojego interfejsu API i być może wyszukać API API API na razie
+
+00:20:03.280 --> 00:20:09.250
+i stronę, na którą chcemy, żebyśmy zrobili pełny interfejs wyszukiwania, powiedzmy API.
+
+00:20:09.420 --> 00:20:13.450
+A jeśli dalej przewijam w dół, przewijam w dół. Rozumiem.
+
+00:20:13.470 --> 00:20:13.840
+O tak.
+
+00:20:13.860 --> 00:20:18.630
+Oto mój klucz API do wyjaśnienia.
+
+00:20:18.630 --> 00:20:21.370
+I tak, pokazuję, że możesz być Ickey.
+
+00:20:21.660 --> 00:20:22.320
+I nie martw się.
+
+00:20:22.320 --> 00:20:26.270
+Do czasu obejrzenia tego filmu zmieniłbym to, więc nie masz do niego dostępu.
+
+00:20:26.280 --> 00:20:30.160
+To jedna z tych tajemnic, których nie powinno się nikomu pokazywać.
+
+00:20:30.180 --> 00:20:33.870
+Nigdy nie powinieneś wprowadzać go do produkcji, gdy wepchniesz to do centrum.
+
+00:20:33.870 --> 00:20:42.690
+Musisz zrobić tutaj coś takiego jak klucz API, aby użytkownicy nie widzieli klucza API, ponieważ w większości przypadków klucze interfejsu API
+
+00:20:42.690 --> 00:20:48.840
+są cenne, ponieważ płacisz za nie albo masz limity stawek i możesz korzystać z
+
+00:20:48.840 --> 00:20:54.750
+usługi tysiąc razy, a gdybym był złym człowiekiem, po prostu to ukradnę i
+
+00:20:54.750 --> 00:20:57.500
+znów wykorzystam wszystkie twoje klarowne dane.
+
+00:20:57.510 --> 00:20:59.000
+Nie martw się, zmienię to już teraz.
+
+00:20:59.010 --> 00:21:01.360
+Do czasu, gdy to zobaczysz, możesz go użyć.
+
+00:21:01.500 --> 00:21:05.380
+Ale wszedłem do mojego klarownego indie kluczowego obrazu.
+
+00:21:05.400 --> 00:21:09.970
+Dodgy Tak, który istnieje tutaj.
+
+00:21:10.020 --> 00:21:10.510
+W porządku.
+
+00:21:10.570 --> 00:21:15.910
+Znowu w przypadku większości projektów jest to coś, co programiści już powiedzą, że są
+
+00:21:16.210 --> 00:21:19.590
+w dokumentacji, więc nie musisz sam tego szukać.
+
+00:21:20.200 --> 00:21:25.210
+Ale dla tych z was, którzy ponownie nie byli częścią mojego poprzedniego kursu i
+
+00:21:25.210 --> 00:21:30.420
+nie pracowali z wyjaśnieniem, wszystko, co musisz zrobić, to założyć konto i jest całkowicie bezpłatne.
+
+00:21:32.220 --> 00:21:39.090
+Możesz po prostu powiedzieć, że twoja nowa aplikacja kliknie na twoją aplikację i ma tutaj klucze API, a klucze
+
+00:21:39.810 --> 00:21:44.460
+API zostaną wygenerowane dla ciebie i możesz to po prostu skopiować. Możesz też
+
+00:21:47.340 --> 00:21:54.630
+przejść do kluczy API tutaj i kliknąć Utwórz nowy klucz API i wygląda na to, że jest to mój klucz
+
+00:21:54.630 --> 00:21:55.150
+API.
+
+00:21:56.340 --> 00:22:02.380
+Jeśli wrócę, zobaczysz, że w rzeczywistości jest inny niż starszy, który już nie działa.
+
+00:22:02.920 --> 00:22:05.710
+Więc po prostu skopiowałem i wkleiłem to zapisane.
+
+00:22:05.950 --> 00:22:11.570
+A teraz wróćmy do naszego.
+
+00:22:11.570 --> 00:22:13.950
+W porządku, zamknijmy to i spróbujmy jeszcze raz.
+
+00:22:13.950 --> 00:22:18.740
+Zamierzam kliknąć Wykryj.
+
+00:22:18.820 --> 00:22:19.440
+Hmm.
+
+00:22:19.590 --> 00:22:20.670
+Wróćmy tutaj.
+
+00:22:20.670 --> 00:22:23.790
+W porządku, więc to nie działa.
+
+00:22:24.600 --> 00:22:28.910
+Nadal dostaję obraz, że wszyscy jesteście złą prośbą.
+
+00:22:28.950 --> 00:22:31.020
+I o to chodzi.
+
+00:22:31.230 --> 00:22:36.870
+Jako deweloper zawsze i wszędzie pojawiają się głupie błędy, które wydają nam się, że coś jest
+
+00:22:36.870 --> 00:22:38.490
+nie tak z konfiguracją.
+
+00:22:38.490 --> 00:22:39.900
+Co ja robię źle.
+
+00:22:40.030 --> 00:22:46.110
+I jest tylko jedną z tych rzeczy, które musisz przetestować wszystkie swoje założenia i zdasz sobie sprawę, że
+
+00:22:46.110 --> 00:22:49.970
+czasami robisz głupi błąd i myślisz o tym logicznie OK.
+
+00:22:50.070 --> 00:22:56.610
+Kod, który właśnie otrzymałem, działał, ponieważ pracują nad nim inni deweloperzy i zrobiliśmy specjalny przypadek, w którym
+
+00:22:56.610 --> 00:22:59.730
+zmodyfikowaliśmy klucz API, który najprawdopodobniej nie będzie.
+
+00:22:59.730 --> 00:23:03.790
+Chciałem ci tylko pokazać, jak to zrobić, jeśli sam musisz to zrobić.
+
+00:23:03.870 --> 00:23:10.710
+Ale nie chcielibyśmy zmienić zbyt wiele tego kodu, ponieważ ten kod jest hipotetycznie już
+
+00:23:10.710 --> 00:23:11.850
+w produkcji.
+
+00:23:11.940 --> 00:23:14.400
+Tak więc robimy coś, co robimy źle.
+
+00:23:14.460 --> 00:23:16.070
+Wprowadziliśmy klucz API.
+
+00:23:16.140 --> 00:23:18.430
+Nasze połączenie z bazą danych istnieje.
+
+00:23:18.510 --> 00:23:20.100
+A drzewa są aktualizowane.
+
+00:23:20.220 --> 00:23:24.830
+Jedyne, co logicznie ma sens, jest z tym związane.
+
+00:23:24.910 --> 00:23:30.520
+A jeśli rzeczywiście spojrzysz na tę wiadomość, to nie ty.
+
+00:23:30.540 --> 00:23:32.250
+Wcale nie.
+
+00:23:32.270 --> 00:23:36.420
+Jeśli pójdziesz na sam początek, zobaczmy, że widzimy, że
+
+00:23:41.430 --> 00:23:48.070
+jest to obraz bazowy 64, który znowu jest innym sposobem uzyskiwania obrazów, ale nie jest
+
+00:23:48.090 --> 00:23:49.950
+to R-AL, którego oczekujemy.
+
+00:23:49.980 --> 00:23:54.720
+Musisz więc zachować ostrożność, ponieważ Google usunął tutaj kartę z obrazem.
+
+00:23:54.720 --> 00:23:55.850
+Więc trudno cię dostać.
+
+00:23:55.880 --> 00:23:59.330
+Dodałem go tutaj, ponieważ mam wtyczkę chrome, która to robi.
+
+00:23:59.640 --> 00:24:07.510
+Wybierzmy więc inny obraz, który faktycznie ma studnię Zamierzam skopiować ten adres obrazu kopii, wróć
+
+00:24:07.510 --> 00:24:09.600
+do naszej aplikacji.
+
+00:24:09.610 --> 00:24:09.980
+W porządku.
+
+00:24:10.000 --> 00:24:13.860
+Teraz wygląda jak u r l z Dot jpeg.
+
+00:24:13.930 --> 00:24:15.150
+Zamierzam kliknąć
+
+00:24:17.930 --> 00:24:24.330
+wykrywany wygląd, na którym mamy wykrywanie twarzy działające w naszej aplikacji i tam ją mamy.
+
+00:24:24.350 --> 00:24:26.890
+Mamy naszą konfigurację i wszystko działa.
+
+00:24:26.900 --> 00:24:31.250
+Jeśli przejdziemy do konsoli Wyjaśnijmy to i spróbujmy ponownie.
+
+00:24:31.580 --> 00:24:34.790
+Spróbujmy teraz innego obrazu, tym razem spróbujemy tego.
+
+00:24:36.870 --> 00:24:45.270
+Zamierzam powiedzieć, że adres obrazu kopii upewnij się, że jesteś Arel, nie jest to baza 64 Spróbujmy
+
+00:24:45.270 --> 00:24:45.840
+innego.
+
+00:24:45.840 --> 00:24:54.050
+Spróbujemy tego adresu jednej kopii obrazu.
+
+00:24:54.100 --> 00:24:54.790
+To jest jpeg.
+
+00:24:54.790 --> 00:24:55.270
+Dobre.
+
+00:24:55.270 --> 00:24:56.910
+Klikam.
+
+00:24:56.970 --> 00:24:57.670
+W porządku.
+
+00:24:57.820 --> 00:25:03.980
+Brak błędów w konsoli zwiększa liczbę wpisów i wykrywa twarze.
+
+00:25:04.000 --> 00:25:06.430
+W porządku, bardzo fajnie, więc wszystko mamy przygotowane.
+
+00:25:06.460 --> 00:25:12.310
+Jeśli wrócimy na nasz serwer, a następnie przejdziemy do naszej aplikacji, nie ma błędów.
+
+00:25:12.310 --> 00:25:13.270
+Wszystko działa.
+
+00:25:13.270 --> 00:25:18.480
+Wszystko jest skonfigurowane i wtedy zaczynamy faktycznie patrzeć na kod i analizować rzeczy.
+
+00:25:18.550 --> 00:25:23.710
+Po skonfigurowaniu wszystkiego, aby wszystko działało, wiemy, że tego właśnie potrzebujemy.
+
+00:25:23.710 --> 00:25:28.370
+Możemy teraz zacząć przeglądać kod i zastanawiać się, co robić, czego nie możemy zrobić.
+
+00:25:29.510 --> 00:25:32.970
+Nawiasem mówiąc szybka notatka dla postscriptów.
+
+00:25:32.980 --> 00:25:37.650
+Innym sposobem uzyskania dostępu do bazy danych jest ponowne użycie polecenia PSU.
+
+00:25:37.670 --> 00:25:42.230
+Znowu jest to coś, co może przyjść z twoimi Bruin's postscripts lub może będziesz musiał zrobić
+
+00:25:42.230 --> 00:25:44.560
+coś innego w zależności od twojego komputera.
+
+00:25:44.660 --> 00:25:52.170
+Ale robię postscripty i chcesz, aby nazwa użytkownika i hasło były hostami lokalnymi.
+
+00:25:52.180 --> 00:25:59.320
+W naszym przypadku słaba liczba, którą pamiętasz, domyślnie stworzyła postscripts, który jest krzywy, a następnie mamy
+
+00:25:59.320 --> 00:26:01.600
+naszą inteligentną aplikację mózgową.
+
+00:26:01.600 --> 00:26:08.570
+Więc jeśli zrobię tutaj inteligentny Brai, a nie mamy nazwy użytkownika i hasła, zostawmy to.
+
+00:26:08.620 --> 00:26:11.220
+Zobaczymy, czy działa bez nazwy użytkownika i hasła.
+
+00:26:12.100 --> 00:26:19.230
+Spójrz na to, że jestem połączony z bazą danych i tutaj mogę użyć typowych poleceń, takich jak ukośnik.
+
+00:26:20.230 --> 00:26:26.530
+Co daje mi wszystkie stoły, które mam dostępne i mogę uruchomić SU wszystkie
+
+00:26:26.530 --> 00:26:34.250
+polecenia tutaj, tak jak wybierz gwiazdę od użytkowników i widzę, że działa również G-mail dot com głowy.
+
+00:26:34.320 --> 00:26:39.230
+Znowu coś, co omówimy na poprzednim kursie, ale przynajmniej teraz wiesz, że to właśnie robimy
+
+00:26:39.240 --> 00:26:41.050
+z naszym graficznym interfejsem użytkownika.
+
+00:26:41.070 --> 00:26:44.610
+Właśnie łączymy się z tą bazą danych i uzyskujemy dostęp do niej.
+
+00:26:44.640 --> 00:26:46.210
+Ale w bardziej przyjaznym.
+
+00:26:46.230 --> 00:26:50.100
+Łatwiej używać mody.
+
+00:26:50.180 --> 00:26:50.700
+W porządku.
+
+00:26:50.780 --> 00:26:55.640
+To działa, a następne wideo, które zamierzamy zacząć przeglądać kod i zobaczyć,
+
+00:26:55.640 --> 00:26:58.210
+jak możemy wdrożyć wielokrotne wykrywanie twarzy.
+
+00:26:58.440 --> 00:27:00.470
+Zobaczę w następnym Buh-Bye.

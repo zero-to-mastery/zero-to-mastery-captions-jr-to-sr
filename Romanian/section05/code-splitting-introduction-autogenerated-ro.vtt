@@ -1,0 +1,199 @@
+﻿WEBVTT
+
+00:00:01.390 --> 00:00:01.980
+In regula.
+
+00:00:02.080 --> 00:00:09.490
+Așa că ne-am oprit spunând că trebuie să furnizăm javascript într-un mod frumos, astfel încât să putem avea un timp
+
+00:00:09.670 --> 00:00:17.290
+rapid pentru ca vopsea semnificativă și timp pentru a interactiv și am vorbit, de asemenea, despre modul în care avem
+
+00:00:17.620 --> 00:00:21.730
+nevoie pentru a îmbunătăți executarea javascript vrea sens pe pagina.
+
+00:00:22.060 --> 00:00:28.030
+Pentru a începe, ne vom concentra pe începutul modului de a livra fișierele javascript în cel mai
+
+00:00:28.030 --> 00:00:29.280
+eficient mod posibil.
+
+00:00:29.340 --> 00:00:33.680
+Vedeți site-urile moderne livrează o mulțime de javascript.
+
+00:00:33.800 --> 00:00:42.020
+Este comună legarea scripturilor în fișiere mari sau într-un fișier inclus într-un mediu de tip GDP.
+
+00:00:42.240 --> 00:00:43.370
+Cam așa.
+
+00:00:43.560 --> 00:00:51.390
+Am avut doar un fișier javascript masiv, care a fost creat prin combinarea tuturor celor mai mici și trimiterea acestuia de
+
+00:00:51.390 --> 00:00:58.300
+îndată ce utilizatorul intră pe site-ul nostru și apoi acest fișier javascript ar lucra, de asemenea, pe pagina
+
+00:00:58.300 --> 00:01:02.360
+Despre dacă merge la pagina Despre sau poate contact pagină.
+
+00:01:02.370 --> 00:01:09.040
+Acum, acest lucru sa întâmplat deoarece o mare cantitate de solicitări, în cazul în care în detrimentul
+
+00:01:09.820 --> 00:01:17.010
+performanței dvs. inițial totuși ca linii JavaScript a crescut fișierele au devenit mai mari și mai mari și mai mari.
+
+00:01:17.080 --> 00:01:24.060
+Deci, de ce nava javascript în cazul în care un utilizator nu va avea nevoie de ea până când el sau ea vizitează oa doua pagină.
+
+00:01:24.070 --> 00:01:29.260
+Poate că există aici javascript care funcționează numai în pagina Despre sau în pagina de contact.
+
+00:01:29.260 --> 00:01:30.860
+De ce ar trebui să-l livrăm.
+
+00:01:31.090 --> 00:01:36.730
+Dacă utilizatorul nu are nevoie de el și niciodată nu accesează pagina Despre sau pagina de contact care
+
+00:01:37.000 --> 00:01:38.590
+este o risipă de resurse.
+
+00:01:38.620 --> 00:01:46.150
+În plus, cu opțiunea nouă, dar încetinită, a TTP la acest lucru nu mai este cazul să transportați
+
+00:01:46.150 --> 00:01:48.360
+doar javascript dintr-o dată.
+
+00:01:48.370 --> 00:01:55.870
+Deseori, doriți să expediați mai multe cereri simultane, care devin teoretic mult mai ieftine aici.
+
+00:01:55.960 --> 00:02:04.470
+Aplicațiile moderne nu ar trebui să facă acest javascript beneficiază de faptul că sunt în bucăți mici pentru a evita
+
+00:02:04.470 --> 00:02:05.770
+blocarea primei amenințări.
+
+00:02:05.990 --> 00:02:14.270
+Și putem face acest lucru prin ceva numit divizare a codului, care ne permite să reducem cantitatea de muncă
+
+00:02:14.450 --> 00:02:16.640
+efectuată în timpul executării.
+
+00:02:16.970 --> 00:02:18.330
+Să vedem cum arată asta.
+
+00:02:24.620 --> 00:02:25.430
+Acolo îl aveți.
+
+00:02:25.670 --> 00:02:29.010
+Se numește acest fragment de cod sau bootstrapping progresiv.
+
+00:02:30.300 --> 00:02:38.080
+Vrem să trimitem o pagină minimal funcțională compusă doar dintr-un javascript shemale și după cum este
+
+00:02:38.080 --> 00:02:40.800
+necesar pentru actualul site scris.
+
+00:02:41.020 --> 00:02:47.740
+Și, odată cu apariția mai multor resurse, aplicația poate încărca leneș sau poate debloca mai multe caracteristici.
+
+00:02:47.740 --> 00:02:54.940
+Poate că un utilizator dă clic pe pagina Despre care poate încărca fișierul javascript sau poate că pagina de
+
+00:02:54.940 --> 00:03:01.630
+pornire este încărcată și browserul nu lucrează prea mult pe fundal în timp ce utilizatorul accesează pagina de
+
+00:03:02.080 --> 00:03:02.830
+pornire.
+
+00:03:03.010 --> 00:03:11.550
+Poate încărca fișierul Despre javascript din fila Despre, prin împărțirea acestor până la fiecare compartiment individual, pe care le oferim browserului
+
+00:03:12.360 --> 00:03:14.390
+mai puțin de făcut.
+
+00:03:14.610 --> 00:03:22.440
+Apropo, dacă vă întrebați ce înseamnă acest javascript roșu, acesta este, de obicei, un javascript de vânzător.
+
+00:03:22.650 --> 00:03:32.940
+De exemplu, dacă pagina noastră Web folosește re-actul Știm că trebuie să reacționăm pe fiecare pagină.
+
+00:03:32.960 --> 00:03:40.670
+Putem crea acest fișier de furnizor care se încarcă, de asemenea, și toate acestea sunt fișierele script-urilor noastre terțe
+
+00:03:40.670 --> 00:03:45.680
+părți pe care întregul nostru site sau întreaga noastră aplicație are nevoie.
+
+00:03:45.830 --> 00:03:51.430
+Și doar o notă rapidă despre aceste biblioteci terțe părți pe care să le folosim noi toți.
+
+00:03:51.710 --> 00:03:57.890
+Ei au de obicei o producție Bill într-o producție de producție este ceva pe care îl puteți folosi care este
+
+00:03:57.890 --> 00:04:00.380
+mult mai rapid decât dezvoltarea lor se bazează.
+
+00:04:00.410 --> 00:04:08.150
+Aceasta înseamnă că este un fișier modificat care elimină orice instrumente, cum ar fi instrumente de depanare care ar putea veni
+
+00:04:08.150 --> 00:04:09.630
+cu biblioteci terțe părți.
+
+00:04:10.010 --> 00:04:14.100
+Și asta iese din cutie cu creați reacționa.
+
+00:04:14.150 --> 00:04:21.680
+Desfășurăm rularea NPM construită, va construi versiunea de producție a reacției și va reacționa.
+
+00:04:21.890 --> 00:04:28.690
+Deci, exclude tot ceea ce nu avem nevoie de producție dacă vă întrebați cum funcționează acest lucru.
+
+00:04:28.740 --> 00:04:30.720
+Sunt simple dacă sunt declarații.
+
+00:04:30.720 --> 00:04:39.450
+De exemplu, dacă aveți slujitorul nostru redux pe care l-am arătat în secțiunea anterioară în care suntem capabili să vă
+
+00:04:39.450 --> 00:04:47.580
+logam în consola tuturor acțiunilor noastre, dar în producție nu ați vrea cu adevărat să vă faceți asta.
+
+00:04:47.580 --> 00:04:48.890
+Acestea sunt doar linii reale de cod.
+
+00:04:48.900 --> 00:04:53.510
+De asemenea, nu doriți ca toate acțiunile dvs. să fie înregistrate pentru utilizator.
+
+00:04:53.600 --> 00:04:57.350
+Deci, în loc să spui dacă mediul.
+
+00:04:57.350 --> 00:05:04.560
+Deci, dacă aceasta este producția construită atunci nu folosiți loggerul.
+
+00:05:04.620 --> 00:05:12.000
+Dacă este vorba despre dezvoltarea dezvoltării, folosiți mai mult doar logica simplă și Javascript, dar pentru a ne
+
+00:05:12.000 --> 00:05:20.780
+întoarce la punctul nostru, dorim să trimitem o pagină minimal funcțională compusă din doar javașscript și CSSA de la Ishmail pe
+
+00:05:21.050 --> 00:05:23.730
+care avem nevoie pentru pagina curentă.
+
+00:05:23.750 --> 00:05:24.800
+Seceta actuală.
+
+00:05:25.310 --> 00:05:35.270
+Și, odată cu apariția mai multor resurse, aplicația poate încărca leneș și poate debloca mai multe funcții, iar încărcarea leneșă înseamnă că le
+
+00:05:35.360 --> 00:05:42.200
+încărcați după ce pagina dvs. devine interactivă, astfel încât utilizatorul să se poată simți ca aplicația
+
+00:05:42.210 --> 00:05:48.090
+este rapidă și în următorul videoclip ne vom strădui la divizarea propriului cod.
+
+00:05:48.240 --> 00:05:49.190
+Știi că am spus această lege.
+
+00:05:49.200 --> 00:05:52.670
+Dar va fi distractiv, așa că o voi vedea în acel.
+
+00:05:52.760 --> 00:05:52.960
+Babai.

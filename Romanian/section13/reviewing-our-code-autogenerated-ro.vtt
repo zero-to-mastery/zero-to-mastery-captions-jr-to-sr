@@ -1,0 +1,103 @@
+﻿WEBVTT
+
+00:00:01.200 --> 00:00:05.470
+Băiatul a fost o călătorie lungă, dar am reușit să o facem.
+
+00:00:05.640 --> 00:00:13.640
+Am reușit să adăugăm sesiune în aplicația noastră și să facem totul să se simtă perfect.
+
+00:00:13.660 --> 00:00:15.130
+Avem imaginile noastre trimise.
+
+00:00:15.130 --> 00:00:22.120
+Putem actualiza profilurile pe care le putem trimite imagini și ne asigurăm că de fiecare dată când reînnoim avem acces
+
+00:00:22.120 --> 00:00:23.280
+la profilul nostru.
+
+00:00:23.320 --> 00:00:27.310
+Am protejat rutele pe care am reușit să le adăugăm.
+
+00:00:27.580 --> 00:00:30.000
+Deci, să revizuim ceea ce am făcut.
+
+00:00:32.660 --> 00:00:41.210
+Ei bine, în spate, dacă ne întoarcem aici, vedem că am adăugat acum middleware de autentificare pentru a ne asigura că aceste obiective
+
+00:00:41.210 --> 00:00:46.080
+finale protejate nu sunt atinse de nimeni care nu ar trebui să fie.
+
+00:00:46.160 --> 00:00:48.020
+Trebuie să aibă un simbol.
+
+00:00:48.200 --> 00:00:55.820
+Am încorporat, de asemenea, semnul autentificării și autentificarea semnului este un Hendler cu adevărat foarte frumos, care ne
+
+00:00:56.180 --> 00:01:00.360
+permite să verificăm dacă există un antet de autorizare.
+
+00:01:00.680 --> 00:01:07.400
+Dacă este bine în acest caz, discutați cu baza de date rattus, luați jetonul și apucați ideea utilizatorului
+
+00:01:07.880 --> 00:01:12.840
+și dați-i acele informații astfel încât să poată prelua informațiile despre profil.
+
+00:01:12.890 --> 00:01:20.390
+Faceți o solicitare GET la ID-ul profilului care este din nou protejat, astfel încât trebuie să treacă printr-un jeton de
+
+00:01:20.390 --> 00:01:21.110
+autorizare.
+
+00:01:21.110 --> 00:01:25.050
+Și apoi, dacă nu au un antet de autorizare, aceasta este prima dată când vă conectați.
+
+00:01:25.160 --> 00:01:34.890
+Asigurați-vă că vom gestiona semnul pentru a verifica toate aceste lucruri creați o sesiune adăugați un punct de date în baza noastră de date citiți-ne și apoi reveniți în cele din
+
+00:01:35.070 --> 00:01:40.860
+urmă sesiunea lor cu jetonul I. D. astfel încât să poată face ceea
+
+00:01:40.860 --> 00:01:46.710
+ce doresc, cum ar fi obținerea de profil și s-ar putea să observați că nu am făcut acest lucru pentru înregistrare.
+
+00:01:46.720 --> 00:01:52.030
+S-ar putea să trebuiască să punem în aplicare o parte din acest lucru în registrul nostru și punctul de asemenea, dar acest lucru este ceva pe
+
+00:01:52.210 --> 00:01:57.100
+care le puteți face pe cont propriu și este destul de simplu de făcut acum că avem o înțelegere de bază despre cum
+
+00:01:57.100 --> 00:01:57.930
+funcționează acest lucru.
+
+00:02:00.070 --> 00:02:07.750
+Tot ceea ce trebuia să facem în partea frontală a fost la tokenul nostru că primim două stocări
+
+00:02:07.810 --> 00:02:15.030
+de sesiuni și apoi pentru toate rutele protejate care accesau trebuia să includem tokenul în cererea
+
+00:02:15.030 --> 00:02:17.310
+noastră și așa lucrează sesiunile.
+
+00:02:17.310 --> 00:02:22.530
+Ne asigurăm că protejăm ceea ce este important pentru noi și numai cei care accesează acest site pot accesa acest
+
+00:02:22.530 --> 00:02:23.020
+lucru.
+
+00:02:23.370 --> 00:02:29.700
+Lucrul interesant pe care îl putem face acum este că oricând un utilizator semnează, putem pur și simplu
+
+00:02:29.700 --> 00:02:36.450
+să ne asigurăm că eliminăm tokenul din spațiul de stocare al sesiunii în codul nostru, dar de asemenea putem trimite o
+
+00:02:36.510 --> 00:02:44.370
+cerere unui fiu sau o cerere către noi și vom indica că eliminăm acel jeton din baza noastră de date rattus, astfel că avem
+
+00:02:44.580 --> 00:02:51.300
+un control deplin atunci când revocăm token-ele când le expirăm atunci când facem toate aceste lucruri care sunt cu adevărat frumoase.
+
+00:02:52.650 --> 00:02:55.980
+Deci, hai să ne arătăm munca lui Bruno.
+
+00:02:55.980 --> 00:02:57.810
+Voi vedea în următorul videoclip, dar până la urmă.

@@ -1,0 +1,196 @@
+﻿WEBVTT
+
+00:00:01.750 --> 00:00:02.700
+Bine ai revenit.
+
+00:00:02.820 --> 00:00:09.710
+Să conectăm serverul nostru mai puțin la profilul nostru AWOS.
+
+00:00:09.750 --> 00:00:17.470
+Acum, primul lucru pe care trebuie să-l facem este să ne întoarcem la AWOS și în cadrul funcției lambda, de fapt, tot drumul
+
+00:00:17.470 --> 00:00:20.640
+înapoi la tabloul de bord, să dăm click aici.
+
+00:00:21.590 --> 00:00:29.180
+Pentru a configura profilurile noastre, trebuie să folosim un serviciu numit I-AM și va trebui să utilizați
+
+00:00:29.180 --> 00:00:35.210
+acest lucru oricând utilizați oricare dintre serviciile AWOS și această permisiune de control.
+
+00:00:35.210 --> 00:00:40.890
+Și aici voi adăuga un utilizator și acest utilizator voi spune adăugați un utilizator.
+
+00:00:40.940 --> 00:00:50.440
+Am de gând să-l numesc rand și este, prin urmare, ar trebui să fie bine lambda lowside aici doar așa că știm că este o
+
+00:00:50.440 --> 00:00:51.360
+funcție lambda.
+
+00:00:52.500 --> 00:00:55.860
+Și vreau să-i dau acces programatic.
+
+00:00:55.860 --> 00:01:03.450
+Asta înseamnă că poate accesa programele noastre funcțiile lambda, dar nu vrem ca ei să acceseze tabloul de bord de
+
+00:01:03.450 --> 00:01:04.470
+gestionare aici.
+
+00:01:04.470 --> 00:01:05.750
+Acest lucru este mai sigur.
+
+00:01:05.790 --> 00:01:13.050
+Nu este necesar să le acordăm toate permisiunile, astfel că vom lovi în continuare permisiunile și doriți să creați
+
+00:01:13.110 --> 00:01:14.790
+un grup de permisiuni.
+
+00:01:14.790 --> 00:01:20.630
+Deci, în cazul nostru, vom atașa politicile existente cu care Amazon a venit deja.
+
+00:01:20.910 --> 00:01:28.460
+Și dacă caut funcții sau funcții lambda, vedem că există câteva lucruri pe care le
+
+00:01:28.460 --> 00:01:31.020
+putem face pentru demonstrații.
+
+00:01:31.220 --> 00:01:35.750
+Aveți diferite opțiuni și vă voi oferi informații de acces.
+
+00:01:35.750 --> 00:01:41.690
+Voi folosi doar accesul administratorului, care nu este neapărat cea mai bună idee în producție, deoarece vă oferă
+
+00:01:41.690 --> 00:01:47.390
+acces la admin și este posibil să nu doriți în mod necesar să dați acea multă permisiune,
+
+00:01:47.840 --> 00:01:52.660
+dar puteți decide pentru dvs. ce permisiuni doriți când sunteți doar testarea prin intermediul
+
+00:01:52.670 --> 00:01:54.500
+administratorului la Access's este bine.
+
+00:01:55.370 --> 00:01:58.780
+Și vom da clic pe următorul.
+
+00:01:59.030 --> 00:02:00.570
+Vrem să revizuim totul.
+
+00:02:00.620 --> 00:02:01.110
+Bun.
+
+00:02:01.190 --> 00:02:03.280
+Am de gând să vă spun să creați un utilizator.
+
+00:02:03.470 --> 00:02:05.180
+Și tu te duci.
+
+00:02:05.240 --> 00:02:12.110
+Avem succes și ne-a dat un accesoriu și o cheie secretă pe care o putem folosi acum pentru a
+
+00:02:12.500 --> 00:02:15.310
+conecta serverul la cel mai înalt profil.
+
+00:02:15.770 --> 00:02:25.920
+Deci, să ne întoarcem la terminalul nostru și aici trebuie să scriem comanda Salles config.
+
+00:02:26.520 --> 00:02:31.020
+Și acesta este ceva ce trebuie doar să faci inițial odată ce o faci, atunci Serviciul este deja
+
+00:02:31.020 --> 00:02:31.770
+configurat pentru tine.
+
+00:02:31.830 --> 00:02:37.320
+Vom pune acreditări și vom oferi câțiva parametri.
+
+00:02:37.320 --> 00:02:45.390
+Primul este furnizorul care este AWOS deoarece îmi amintesc că pot folosi Google Pot să folosesc IBM Microsoft indiferent de
+
+00:02:45.390 --> 00:02:52.790
+furnizorul pe care îl dorim și apoi următorul parametru va fi cheia și vom da cheia secretă pe care
+
+00:02:52.790 --> 00:02:54.370
+am primit-o aici.
+
+00:02:54.530 --> 00:02:55.890
+O să copiez asta.
+
+00:02:55.910 --> 00:02:56.930
+Accesul de
+
+00:03:00.480 --> 00:03:02.070
+acces nu va trece aici.
+
+00:03:02.080 --> 00:03:12.130
+Și apoi, în cele din urmă, secretul și secretele pe care le vom spune arătați și copiați și le transmiteți aici.
+
+00:03:12.250 --> 00:03:12.970
+Să
+
+00:03:16.360 --> 00:03:17.320
+apăsăm pe Enter.
+
+00:03:17.320 --> 00:03:18.230
+Uită-te la asta.
+
+00:03:18.400 --> 00:03:25.930
+Am creat AWOS, astfel încât acum oricând folosim cadrul de servicii, acesta este atașat la acest profil
+
+00:03:26.070 --> 00:03:27.170
+pe un.
+
+00:03:27.420 --> 00:03:28.280
+Minunat.
+
+00:03:28.300 --> 00:03:34.860
+Acum, doar pentru a vă arăta ce se întâmplă în spatele scenei, a creat de fapt un dosar numit AWOS.
+
+00:03:36.520 --> 00:03:37.540
+Sau speră.
+
+00:03:37.550 --> 00:03:38.770
+Acum niște lucruri pe care vrem să le facem.
+
+00:03:38.900 --> 00:03:42.710
+Este în dosarul rădăcină și este un fișier ascuns.
+
+00:03:42.830 --> 00:03:51.490
+Deci trebuie să fie un WS și dacă intrăm aici, lasă-mă să clar acest lucru și să-l fac.
+
+00:03:51.620 --> 00:03:54.070
+Vedem că acum avem un fișier de acreditare.
+
+00:03:54.260 --> 00:04:01.790
+Și dacă deschid fișierul de acreditare, vedem că avem aici ID-ul de acces și cheia de acces.
+
+00:04:01.790 --> 00:04:07.670
+Deci așa știe că, ori de câte ori implementăm sau facem ceva cu Amazon AWOS, vom
+
+00:04:07.670 --> 00:04:09.080
+verifica acest fișier.
+
+00:04:09.090 --> 00:04:11.620
+Bine, să ne întoarcem la ceea ce am avut înainte.
+
+00:04:11.760 --> 00:04:19.070
+Să ne jucăm CD-ul pe desktop-ul nostru și apoi sa numit perfect rang.
+
+00:04:19.080 --> 00:04:19.650
+In regula.
+
+00:04:19.650 --> 00:04:20.200
+Asta e.
+
+00:04:20.220 --> 00:04:23.190
+Avem conectat biroul nostru de servere.
+
+00:04:23.390 --> 00:04:23.750
+Da.
+
+00:04:23.760 --> 00:04:30.720
+Suntem cu toții pregătiți să începem să scriem un cod. De fapt, am funcția noastră, facem ceva, astfel încât să îl putem
+
+00:04:30.720 --> 00:04:32.810
+folosi în creierul nostru inteligent acum.
+
+00:04:34.020 --> 00:04:34.810
+Voi vedea în următorul.

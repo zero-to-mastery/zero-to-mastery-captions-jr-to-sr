@@ -1,0 +1,427 @@
+﻿WEBVTT
+
+00:00:01.290 --> 00:00:01.990
+Bine ai revenit.
+
+00:00:02.190 --> 00:00:06.780
+Să încercăm și să desfășurăm această funcție pentru a putea încerca.
+
+00:00:07.020 --> 00:00:15.720
+Deocamdata voi schimba numele acestei functii la ceva de genul rand, astfel incat handler rand sau sa-l pastram cu
+
+00:00:15.810 --> 00:00:26.910
+rang si asta inseamna ca am schimbat numele de aici pentru a rang si cealalta lucru pe care vreau sa fac este chiar acum,
+
+00:00:26.970 --> 00:00:31.050
+pentru că este vorba de scopuri de devoluție.
+
+00:00:31.140 --> 00:00:41.140
+O altă opțiune pe care o pot comenta și pleca este ceea ce noi numim o etapă în care putem să omorâm sau să îmbrăcăm ..
+
+00:00:41.350 --> 00:00:48.190
+Și acest lucru atribuie un nume lambda funcției noastre de producție sau de dezvoltare și este, de obicei, o bună practică de
+
+00:00:48.190 --> 00:00:53.080
+a avea doar pavilionul def, astfel încât să puteți testa lucrurile și atunci când este
+
+00:00:53.080 --> 00:01:01.360
+gata pentru producție pentru a schimba că să prod dreptul și următorul lucru pe care vreau de a face este, de asemenea, doresc să schimbe numele serviciului
+
+00:01:01.360 --> 00:01:01.810
+nostru.
+
+00:01:01.870 --> 00:01:06.730
+Dacă ne uităm la comentariile de aici, văd că această notă actualizează acest lucru cu numele serviciului tău.
+
+00:01:06.880 --> 00:01:11.520
+Și dacă îți amintești că numele nostru pe AWOS nu e un răspuns nu.
+
+00:01:11.530 --> 00:01:12.160
+Da.
+
+00:01:12.280 --> 00:01:19.580
+El trebuie să fie actualizat cu numele nostru care este în mod categoric LAMDA.
+
+00:01:19.710 --> 00:01:24.310
+Deci voi schimba denumirea serviciului nostru la LAMDA.
+
+00:01:24.520 --> 00:01:31.190
+Am de gând să salvez serverul mai puțin fișier YAML și apoi am de gând să merg în händler dodgy Da.
+
+00:01:31.260 --> 00:01:35.020
+Acum nu prea am vorbit prea mult despre scrisul scris.
+
+00:01:35.040 --> 00:01:37.790
+Da, să le aducem aici așa.
+
+00:01:37.800 --> 00:01:41.800
+Acum sunt trei lucruri principale pe care vrem să ne concentrăm aici.
+
+00:01:41.820 --> 00:01:49.940
+Una este faptul că suntem doar îngrijorați de o funcție pe care Lamda trebuie să o execute.
+
+00:01:50.090 --> 00:01:56.390
+Deci totul ar trebui să fie în interiorul acestei ordini de rang și acesta este principalul principiu.
+
+00:01:56.400 --> 00:02:03.600
+Acum această funcție va fi rulată pe baza unui eveniment de declanșare și de aceea obiectul evenimentului este ceea ce
+
+00:02:03.630 --> 00:02:09.390
+declanșează că vom ajunge la acel obiect al declanșatorului și acest eveniment despre care am vorbit
+
+00:02:09.390 --> 00:02:15.600
+poate fi orice ar putea fi o cerere HDTV ar putea fi o cerere suplimentară pe care
+
+00:02:17.000 --> 00:02:23.330
+o putem configura și avem și această idee despre resurse în care această funcție lambda nu a putut
+
+00:02:23.570 --> 00:02:26.540
+folosi resurse externe ca Esrey, de exemplu.
+
+00:02:26.570 --> 00:02:33.020
+Acum, cheia care trebuie amintită aici este faptul că Lamda, în sine, este ceea ce numim apatrid.
+
+00:02:33.140 --> 00:02:35.890
+Asta nu ne va aminti nimic pentru noi.
+
+00:02:35.900 --> 00:02:41.990
+Amintiți-vă că aceste lucruri sunt create deoarece funcția este stocată într-o bază de date și când este gata să fie
+
+00:02:41.990 --> 00:02:50.280
+invocată, aceasta va fi pusă într-un container de către Amazon și va începe să ruleze și după ce termină să fie difuzată și nu mai sunt cereri
+
+00:02:50.280 --> 00:02:55.410
+pe care le va primi reintrodus în baza de date sau că containerul va merge în
+
+00:02:55.410 --> 00:02:59.220
+jos și nu există nicio modalitate de a vă aminti nimic.
+
+00:02:59.220 --> 00:03:04.500
+Deci, doriți să păstrați funcțiile fără stat și dacă vreți să stocați informații sau date, puteți
+
+00:03:04.500 --> 00:03:07.520
+utiliza dinamul D-B sau o găleată de intrare.
+
+00:03:07.620 --> 00:03:13.360
+Din nou, ceva ce puteți face destul de ușor în fișierul server mai puțin YAML.
+
+00:03:13.390 --> 00:03:20.500
+Acum, în cadrul acestei funcții, vedem că avem câteva lucruri și vreau să vă concentrez atenția asupra ultimului
+
+00:03:20.500 --> 00:03:22.310
+apel de apel aici.
+
+00:03:22.390 --> 00:03:31.940
+Fără răspuns acum această funcție Colback este ceea ce declanșează răspunsul acestei întregi funcții.
+
+00:03:32.250 --> 00:03:38.220
+Și modul în care funcționează lambda este că primiți un apel invers cu un aer și un răspuns.
+
+00:03:38.220 --> 00:03:45.570
+În cazul nostru răspunsul este codul de stare 200 cu un corp care este Jaison de mesaj și intrare
+
+00:03:45.570 --> 00:03:49.260
+și această intrare este cunoscută că are obiectul evenimentului.
+
+00:03:49.270 --> 00:03:56.410
+Acum, această eroare de aici nu o să o folosim cu adevărat pe lambda, deoarece sub capotă
+
+00:03:56.500 --> 00:04:00.060
+există ceva numit proxy lambda care este integrat.
+
+00:04:00.160 --> 00:04:04.860
+Și, în mod implicit, acesta este ceva care ne-a avut grijă de noi.
+
+00:04:04.870 --> 00:04:11.710
+Deci, dacă vreți vreodată să trimiteți o eroare la Lamda în loc să schimbați aici, ați face un cod de
+
+00:04:11.710 --> 00:04:12.230
+stare.
+
+00:04:12.320 --> 00:04:16.200
+De exemplu, 400 în răspunsul dvs.
+
+00:04:16.390 --> 00:04:19.670
+Acum, să implementăm acest lucru și să vedem ce se întâmplă.
+
+00:04:19.710 --> 00:04:26.560
+Am de gând să salvez această funcție și tot ce trebuie să facem cu serverul mai puțin este că deja l-am
+
+00:04:26.800 --> 00:04:27.830
+conectat la AWOS.
+
+00:04:27.850 --> 00:04:32.830
+Am schimbat numele și serverul mai puțin YAML la lambda noastră de rang.
+
+00:04:33.220 --> 00:04:45.450
+Putem pur și simplu rula serverul mai puțin sau mai puțin implementat.
+
+00:04:45.540 --> 00:04:49.130
+Și avem un pic de natură și avem indentație proastă.
+
+00:04:49.170 --> 00:04:55.540
+Din nou, este un fișier YAML, așa că trebuie să ne asigurăm că indentarea este absolut corectă.
+
+00:04:56.280 --> 00:04:57.520
+Să încercăm din nou asta.
+
+00:04:58.380 --> 00:05:00.400
+Saltând din nou salvarea.
+
+00:05:05.150 --> 00:05:08.470
+Se pare că totul a fost desfășurat și are un an cu adevărat plăcut.
+
+00:05:08.480 --> 00:05:16.070
+Vedem că se încarcă în formarea cloud și că încărcăm și fișierul zip, deoarece ceea ce face sub
+
+00:05:16.070 --> 00:05:18.650
+capotă este de fapt zip.
+
+00:05:18.650 --> 00:05:25.220
+Toate fișierele noastre și să le încarcă la Esrey sau nu la nostru Dar la găleata lor Esrey, astfel încât, ori de câte ori
+
+00:05:25.220 --> 00:05:29.050
+au nevoie de această funcție, ei vor crea recipientul și-l ia din copac.
+
+00:05:29.300 --> 00:05:35.540
+Și face câteva lucruri sub capota, dar partea principală este că informațiile noastre de serviciu sunt
+
+00:05:35.540 --> 00:05:36.760
+acum setate.
+
+00:05:36.770 --> 00:05:42.190
+Vedeți că funcțiile noastre sunt gata este apelul rang lambda dev.
+
+00:05:42.200 --> 00:05:49.600
+Din nou, avem devahul atașat pentru dvs. deoarece am făcut această etapă pentru Dev și nu există chei API sau puncte
+
+00:05:49.630 --> 00:05:51.490
+finale pe care le-am dat.
+
+00:05:51.580 --> 00:05:56.040
+Dar funcția noastră se desfășoară acum foarte bine.
+
+00:05:56.230 --> 00:05:58.440
+Acum, cum putem testa acest lucru.
+
+00:05:58.770 --> 00:06:03.070
+Ei bine, un lucru pe care îl putem face este că putem folosi
+
+00:06:08.140 --> 00:06:13.100
+funcția de bordură cu liniuță mai mică și putem invoca funcția pe care o avem.
+
+00:06:13.150 --> 00:06:14.170
+Să sunăm.
+
+00:06:14.390 --> 00:06:17.710
+Și funcția pe care am avut-o a fost numită rang.
+
+00:06:17.740 --> 00:06:21.470
+Deci, hai să mergem.
+
+00:06:21.530 --> 00:06:27.450
+Se pare că ne-a invocat funcția de la containerul nostru din funcția de teren pe Ada.
+
+00:06:27.540 --> 00:06:34.440
+Da, avem un cod de stare de 200 cu caroseria de serviciu 1. 0.
+
+00:06:34.530 --> 00:06:36.780
+Dacă ne întoarcem aici așa.
+
+00:06:36.930 --> 00:06:37.810
+Asta-i grozav.
+
+00:06:38.040 --> 00:06:43.200
+Acum, când îl testați așa, s-ar putea să nu doriți să invocați funcția lambda de fiecare dată pentru că
+
+00:06:43.470 --> 00:06:46.950
+ar putea să te coste mai ales dacă faci asta foarte mult.
+
+00:06:46.950 --> 00:06:55.290
+Un alt mod în care puteți face acest lucru este de a spune, de fapt, să invocați funcția locală a liniei de liniuță și a mijloacelor locale.
+
+00:06:55.360 --> 00:06:58.560
+Hei, nu voi atinge funcția lambda.
+
+00:06:58.560 --> 00:07:04.020
+Voi încerca să simulez funcția lambda și să o execut la nivel local, astfel încât să nu vă
+
+00:07:04.020 --> 00:07:04.680
+percepem nimic.
+
+00:07:04.800 --> 00:07:08.790
+Și din nou, nu vă stresați prea mult despre asta aveți un milion de solicitări pe lună.
+
+00:07:08.790 --> 00:07:09.930
+Esti bine.
+
+00:07:10.050 --> 00:07:13.800
+Nu veți fi taxat pentru funcția lambda dacă nu faceți ceva absolut nebun
+
+00:07:14.280 --> 00:07:16.170
+sau dacă aveți utilizatori nebun Montu.
+
+00:07:16.170 --> 00:07:17.840
+Deci, pentru moment, să încercăm acest lucru.
+
+00:07:19.540 --> 00:07:21.490
+Hei uita la asta functioneaza.
+
+00:07:21.530 --> 00:07:28.610
+Acum, această funcție locală funcționează doar pentru că funcția noastră este plăcută și simplă dacă, de exemplu, ea depinde de o resursă Esrey
+
+00:07:28.730 --> 00:07:33.690
+sau de o altă resursă pe care Amazon o are, poate că nu ar funcționa.
+
+00:07:33.710 --> 00:07:37.150
+Dar pentru scopurile noastre acest lucru este un mare teren de testare.
+
+00:07:38.410 --> 00:07:43.930
+În fine, ultimul lucru pe care vreau să-l fac este să-l pregătesc pentru ceea ce vrem
+
+00:07:43.930 --> 00:07:51.070
+să facem, că este să ne dăm un punct final ca un eveniment de declanșare A să declanșăm această funcție, deoarece în
+
+00:07:51.070 --> 00:07:56.910
+creierul nostru inteligent nu voi fi capabil să alerg doar ca o pierdere invoca dash rang funcție rang.
+
+00:07:57.010 --> 00:08:03.400
+Știm că acum există, dar vreau să am un punct final pentru HGP și putem pur și simplu să facem
+
+00:08:03.400 --> 00:08:05.580
+acest lucru deplasându-ne la funcțiile noastre.
+
+00:08:06.070 --> 00:08:12.460
+Și vedeți aici în evenimente că există o metodă HD path path pe care o putem folosi.
+
+00:08:12.460 --> 00:08:14.640
+Așa că o să copiez aici.
+
+00:08:14.920 --> 00:08:16.270
+Îl lipiți și
+
+00:08:19.220 --> 00:08:27.770
+adăugați la funcțiile de rang pe care le avem și aici vreau să fiu mai întâi de toate, vreau să am un
+
+00:08:29.380 --> 00:08:33.100
+PIB, calea va fi tot ceea ce ne dorim.
+
+00:08:33.100 --> 00:08:35.470
+Deci, să spunem doar rank
+
+00:08:39.490 --> 00:08:45.010
+și metoda va fi o metodă de obținere care vrea să primească mesajul.
+
+00:08:45.010 --> 00:08:52.220
+Acum, să spunem că și sub capotă ceea ce va face acest lucru este de fapt să
+
+00:08:52.310 --> 00:09:00.880
+folosiți un alt serviciu de către AWOS numit gateway API pentru a ne da un punct final pentru a declanșa acest eveniment.
+
+00:09:00.890 --> 00:09:01.870
+Lasă-mă să-ți arăt ce înseamnă asta.
+
+00:09:01.880 --> 00:09:11.600
+Să ne desfășurăm încă o dată rula SLA pe care ne-o desfășurăm și frumusețea este că în timp ce Servilius face acest lucru automat pentru
+
+00:09:11.630 --> 00:09:16.680
+noi, vorbim cu AWOS și asigurăm că totul se desfășoară fără probleme.
+
+00:09:17.990 --> 00:09:19.240
+Și acolo mergem.
+
+00:09:19.280 --> 00:09:21.410
+Avem totul dislocat.
+
+00:09:21.560 --> 00:09:25.220
+Amintiți-vă că regiunea noastră este în Statele Unite, pentru că asta am stabilit.
+
+00:09:25.370 --> 00:09:27.920
+Este etapa Dev și privește.
+
+00:09:27.950 --> 00:09:37.560
+Avem acum un punct final și ne-a dat un Arel care arată ca un Amazon bine, dar cu gradul meu de cale cu
+
+00:09:37.560 --> 00:09:42.240
+comanda dev pentru că suntem încă în curs de dezvoltare.
+
+00:09:42.450 --> 00:09:44.900
+Și acum să testăm asta.
+
+00:09:44.940 --> 00:09:46.720
+Să vedem dacă funcționează de fapt.
+
+00:09:46.790 --> 00:09:50.060
+Doriți să deschideți browserul.
+
+00:09:50.130 --> 00:09:51.940
+Să deschidem o fereastră nouă în browser.
+
+00:09:53.590 --> 00:09:58.100
+Și aici să o lipim.
+
+00:09:58.120 --> 00:09:59.860
+Cat de tare e asta.
+
+00:09:59.920 --> 00:10:04.570
+Am declanșat doar funcția lambda care trăiește undeva pe serverele Amazon.
+
+00:10:04.660 --> 00:10:11.370
+Am declanșat-o cu un eveniment și evenimentul are toate aceste lucruri.
+
+00:10:11.440 --> 00:10:17.620
+Mai întâi de toate, avem un mesaj care spune că serverul Go să ne amintim în funcția noastră
+
+00:10:17.620 --> 00:10:24.680
+aici sau dacă mergem aici vom întoarce un corp cu serverul cu mesaje go mai puțin și o intrare care este evenimentul.
+
+00:10:25.030 --> 00:10:31.990
+Acum evenimentul pe care îl puteți vedea aici ne oferă informații despre browserul pe care tocmai l-am trimis.
+
+00:10:32.100 --> 00:10:34.260
+Văd bine că am capul meu.
+
+00:10:34.260 --> 00:10:35.260
+A fost un rang de cale.
+
+00:10:35.280 --> 00:10:39.370
+A fost o cerere și așa mai departe și așa mai departe.
+
+00:10:39.420 --> 00:10:42.390
+Văd că fac o grămadă de lucruri.
+
+00:10:42.390 --> 00:10:47.090
+Folosesc DP câștigat și toate aceste informații despre eveniment.
+
+00:10:47.310 --> 00:10:54.120
+Dar, la fel, avem o functie amazon lambda super super simpla.
+
+00:10:54.160 --> 00:11:00.760
+Acum, tot ce trebuie să facem acum este de a face această funcție să facă ceva util pentru noi, pentru că
+
+00:11:00.940 --> 00:11:02.450
+acum nu ne pasă.
+
+00:11:02.470 --> 00:11:04.890
+Să ne întoarcem la ceea ce am avut înainte.
+
+00:11:04.900 --> 00:11:08.200
+Chiar acum nu ne pasă de primirea evenimentului.
+
+00:11:08.350 --> 00:11:17.320
+Vrem să facem sistemul de rang al inteligentului nostru de a aduce, poate da oamenilor unele emoji bazate pe
+
+00:11:17.380 --> 00:11:18.620
+clasamentul utilizatorului.
+
+00:11:18.670 --> 00:11:21.440
+În următorul videoclip vom începe să facem asta.
+
+00:11:21.490 --> 00:11:22.850
+Va fi foarte distractiv.
+
+00:11:22.990 --> 00:11:23.940
+O să văd în acel.
+
+00:11:24.170 --> 00:11:24.760
+Pa! Pa.

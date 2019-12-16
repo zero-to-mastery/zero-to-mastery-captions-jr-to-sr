@@ -1,0 +1,229 @@
+﻿WEBVTT
+
+00:00:02.040 --> 00:00:03.210
+Bine ai revenit.
+
+00:00:03.570 --> 00:00:10.610
+Înainte de a începe să învățăm despre redox, trebuie să vorbim despre ceva numit management de stat.
+
+00:00:10.640 --> 00:00:12.440
+Am auzit acest război înainte de stat.
+
+00:00:12.530 --> 00:00:13.050
+Dreapta.
+
+00:00:13.190 --> 00:00:14.690
+Când se construiește un reactor.
+
+00:00:14.720 --> 00:00:24.300
+Am avut această stare și stat descris ce ar trebui să arate aplicația noastră dacă ne amintim că
+
+00:00:27.630 --> 00:00:36.750
+acest react este pur și simplu un grup de componente care sunt redate într-o structură arborescentă.
+
+00:00:36.840 --> 00:00:41.420
+Așadar, acest lucru ar fi, de exemplu, aplauzele aplicației.
+
+00:00:41.560 --> 00:00:48.390
+Și fiecare dintre aceste componente ar avea stat, de exemplu, punctele roșii de aici.
+
+00:00:48.700 --> 00:00:49.750
+Ei au stat.
+
+00:00:49.750 --> 00:00:57.730
+Deci, de exemplu, această componentă de aplicație va avea o stare de conectare ca și să spunem că statul este
+
+00:00:57.730 --> 00:01:06.340
+utilizator în acest caz această componentă de utilizator ar putea avea o stare de potrivire a utilizatorului sau dacă este conectată ca atare.
+
+00:01:06.340 --> 00:01:14.200
+Și bărbații ar putea să facă componenta de administrare și oricând veți vedea punctul albastru, ceea ce înseamnă că a existat
+
+00:01:14.200 --> 00:01:21.340
+o schimbare, astfel că dacă există o schimbare aici, ea poate actualiza ceva în această componentă și vom face.
+
+00:01:21.640 --> 00:01:31.380
+Și am făcut acest lucru în re-act și vreau să te gândești la stat ca la memorie pe care o aplicație trebuie
+
+00:01:31.440 --> 00:01:40.240
+să-și amintească lucrurile pentru a lucra, altfel ne-am fi avut doar o pagină web shemale simplă ca înainte.
+
+00:01:40.320 --> 00:01:43.340
+Rețineți acest site Web de bază Kaikohe.
+
+00:01:43.490 --> 00:01:46.940
+Acest lucru într-adevăr nu are nici un stat o face.
+
+00:01:48.050 --> 00:01:57.230
+De fiecare dată când afișează exact aceeași pagină web pentru oricine îl folosește, discursul nu are nicio idee despre
+
+00:01:57.230 --> 00:02:03.740
+cine este utilizatorul sau despre orice interacțiune pe care o am cu textul.
+
+00:02:03.810 --> 00:02:07.530
+Acum, aplicația de prieteni robo este diferită.
+
+00:02:07.680 --> 00:02:08.880
+Are.
+
+00:02:09.330 --> 00:02:14.880
+Ei bine, mai ales pentru că am scris-o și am avut punctul punct, dar putem interacționa cu el.
+
+00:02:14.940 --> 00:02:16.450
+Pot să introduc aici.
+
+00:02:17.400 --> 00:02:25.360
+Liane și cu mine avem o stare a căsuței de căutare cu LPA în ea.
+
+00:02:25.560 --> 00:02:36.650
+Și roboții care se filtrează doar cu statul Leeanne descriu modul în care aplicația noastră ar trebui să arate aplicația noastră, aplicația noastră de
+
+00:02:36.650 --> 00:02:46.520
+prieteni robo acum ar trebui să arate așa cu doar o singură carte de robot, deoarece statul este alcătuit dintr-o casetă
+
+00:02:46.520 --> 00:02:50.540
+de căutare având literele LPA din interiorul acesteia.
+
+00:02:51.570 --> 00:03:00.660
+Acum, cu o aplicație simplă, cum ar fi starea de aplicații de prieteni robo, era destul de ușor de înțeles, dar managementul de stat este
+
+00:03:00.900 --> 00:03:02.780
+o problemă foarte dificilă.
+
+00:03:02.880 --> 00:03:10.340
+Aplicațiile noastre devin din ce în ce mai mari și mai mari și veți vedea de fapt partea ulterioară a cursului
+
+00:03:10.340 --> 00:03:15.180
+atunci când începem să lucrăm la aplicația creier inteligent care recunoaște imaginea.
+
+00:03:16.720 --> 00:03:24.430
+Veți observa cum devine tot mai complicat statul și că capul începe să doară pentru că trebuie să
+
+00:03:24.430 --> 00:03:26.770
+țineți evidența tuturor acestor lucruri.
+
+00:03:28.180 --> 00:03:35.380
+Deci, din nou, cu o aplicație simplă de re-act putem avea vederi frumoase și poate avem stări diferite și componente
+
+00:03:35.380 --> 00:03:39.680
+diferite, dar în cele din urmă aplicația Azara devine mai mare.
+
+00:03:39.760 --> 00:03:49.150
+Încheiem cu ceva de genul ăsta în care avem mai multe și mai multe componente din ce în ce mai multe state în cadrul acelei componente
+
+00:03:49.150 --> 00:03:55.540
+sau putem avea o stare masivă chiar în partea de sus aici, care, de asemenea, devine destul de
+
+00:03:55.960 --> 00:03:59.090
+greu și toate aceste puncte albastre ca actualizare.
+
+00:03:59.110 --> 00:04:04.180
+Ei trebuie, de asemenea, să actualizeze starea și apoi să redea.
+
+00:04:04.380 --> 00:04:11.070
+Și acest exemplu aici este doar un mic diagrama, dar puteți vedea cu toate aceste săgeți cât
+
+00:04:11.070 --> 00:04:17.520
+de confuză va ajunge și de a urmări toate aceste stări este într-adevăr foarte greu.
+
+00:04:17.550 --> 00:04:23.060
+Așa că avem nevoie de o formă de conducere a statului și de reducere.
+
+00:04:23.060 --> 00:04:25.070
+Rezolvați această problemă pentru noi.
+
+00:04:25.070 --> 00:04:32.210
+Cum am putea face această diagramă mai simplă și să facem lucrurile mai ușor de înțeles în capul nostru, deoarece dezvoltatorii redux
+
+00:04:32.870 --> 00:04:35.060
+au venit cu un concept nou.
+
+00:04:36.470 --> 00:04:39.750
+Și dacă am elimina tot statul.
+
+00:04:39.980 --> 00:04:43.050
+Deci, această stare de la toate componentele.
+
+00:04:43.220 --> 00:04:45.390
+Dacă avem doar elemente de recuzită.
+
+00:04:45.620 --> 00:04:49.650
+Deci, toate aceste componente au lăsat doar elemente de recuzită.
+
+00:04:50.000 --> 00:05:00.150
+Și acum statul îl păstrăm într-un magazin și un magazin este pur și simplu doar statul care este acel punct punct care a
+
+00:05:00.180 --> 00:05:01.700
+reactat a avut.
+
+00:05:01.860 --> 00:05:05.960
+Dar într-un obiect masiv la fel cum vedeți aici.
+
+00:05:06.120 --> 00:05:14.940
+Deci, un singur obiect care descrie modul în care ar trebui să arate aplicația noastră și tot ceea ce facem este doar trecerea acestei stări la oricare
+
+00:05:15.300 --> 00:05:18.840
+componentă care are nevoie de ea ca elemente de recuzită.
+
+00:05:19.750 --> 00:05:30.070
+Deci, diagrama noastră de a arăta așa cu reacție doar poate merge la a arăta astfel cu redux în cazul în care nici unul dintre componentele nu
+
+00:05:30.070 --> 00:05:32.690
+mai trebuie să dețină statul mai.
+
+00:05:32.860 --> 00:05:41.020
+Și putem avea un obiect masiv care să descrie întreaga noastră aplicație și orice componentă care are nevoie de această propunere
+
+00:05:41.020 --> 00:05:43.440
+poate fi doar trecută la ea.
+
+00:05:44.320 --> 00:05:51.670
+Și orice actualizări care se întâmplă trec prin stat, statul devine modificat și apoi
+
+00:05:51.670 --> 00:05:59.800
+transmitem acele informații componentei pe care această diagramă ar putea să o confundă fără a codifica nimic.
+
+00:05:59.900 --> 00:06:01.010
+Și ne vom întoarce la asta.
+
+00:06:01.010 --> 00:06:02.780
+Deci, acest lucru are sens.
+
+00:06:02.990 --> 00:06:11.230
+Dar chiar și vizual, puteți vedea că această diagramă pare mult mai simplă decât diagrama anterioară.
+
+00:06:11.240 --> 00:06:15.630
+Avem săgeți mult mai puțin și totul curge mai bine.
+
+00:06:15.680 --> 00:06:20.910
+Deci, pe măsură ce vom trece prin videoclipurile pe care le veți cunoaște din ce în ce mai mult cu această idee de management de stat.
+
+00:06:20.930 --> 00:06:28.430
+Dar am vrut să țin cont de faptul că asta este ceea ce redux este de rezolvare redux este o bibliotecă care face
+
+00:06:28.430 --> 00:06:34.100
+managementul Stape mai ușor nu numai pentru reacție, ci și pentru orice unelte pe care le folosim.
+
+00:06:34.220 --> 00:06:36.810
+Se întâmplă chiar să funcționeze cu adevărat foarte bine.
+
+00:06:37.400 --> 00:06:44.870
+Și, de fapt, redux sa inspirat din proiectarea bazei de date din lucruri cum ar fi evenimente de aprovizionare sau agresiune CQ pe care
+
+00:06:45.230 --> 00:06:49.400
+le puteți citi mai mult pe baze de date, având aceeași problemă.
+
+00:06:49.520 --> 00:06:57.530
+Toate aceste actualizări și toate aceste schimbări s-au întâmplat, dar am avut nevoie de o modalitate de a ne asigura că toate
+
+00:06:57.890 --> 00:07:00.950
+aceste schimbări sunt organizate într-un mod frumos coeziv.
+
+00:07:02.120 --> 00:07:02.730
+In regula.
+
+00:07:02.860 --> 00:07:08.580
+Ei bine, haideți să intrăm în următorul videoclip și să devenim puțin mai profundă cu redox.
+
+00:07:08.690 --> 00:07:09.680
+Ne vedem în următorul.

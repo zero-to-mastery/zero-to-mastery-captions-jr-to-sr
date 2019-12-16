@@ -1,0 +1,136 @@
+﻿WEBVTT
+
+00:00:02.200 --> 00:00:06.710
+Primul despre care vom vorbi este criptarea simetrică.
+
+00:00:06.940 --> 00:00:15.850
+Și tocmai pentru a vă reaminti, criptarea este o modalitate de a ascunde sau, în esență, să amestecați un cuvânt de spus
+
+00:00:16.150 --> 00:00:24.460
+și să faceți ceva ce este imposibil pentru un terț sau pentru cineva să citească fără un fel de o
+
+00:00:24.460 --> 00:00:26.380
+modalitate de ao decripta.
+
+00:00:26.410 --> 00:00:29.300
+Deci este o modalitate de a avea secrete.
+
+00:00:30.960 --> 00:00:41.190
+Acum, criptarea simetrică utilizează o cheie secretă atât pentru criptare, cât și pentru decriptare de către ambele părți.
+
+00:00:41.190 --> 00:00:42.130
+Lasă-mă să-ți arăt ce vreau să spun.
+
+00:00:43.020 --> 00:00:51.780
+Dacă aș vrea să trimit salut ca mesaj la acest alt computer, folosind criptarea simetrică, pot avea
+
+00:00:51.780 --> 00:00:58.530
+o cheie care transformă acest text de salut într-o bucată de jibberish.
+
+00:00:58.920 --> 00:01:08.820
+Și atâta timp cât prietenul meu sau celălalt calculator are aceeași cheie, pot să folosesc acest lucru pentru ao decripta și să mă
+
+00:01:09.410 --> 00:01:10.110
+salut.
+
+00:01:10.470 --> 00:01:16.890
+Și cine este vreodată în mijloc aici, oricine este în publicul de aici, citind mesajul
+
+00:01:16.890 --> 00:01:23.120
+nostru, nu va înțelege ce spunem unii altora pentru că nu au această cheie.
+
+00:01:23.150 --> 00:01:29.580
+Deci, din nou, cu criptare simetrică, oricine posedă o cheie poate decripta mesajul transferat.
+
+00:01:30.360 --> 00:01:34.990
+Și SSH comunică prin această cheie partajată.
+
+00:01:35.100 --> 00:01:38.640
+Și asta este modul în care putem vorbi unii cu alții.
+
+00:01:38.660 --> 00:01:44.460
+Așa a putut să vorbească cu Oceanul Digital cu acel server. O.K.
+
+00:01:44.630 --> 00:01:45.050
+Minunat.
+
+00:01:45.050 --> 00:01:51.910
+Acest lucru pare frumos, dar ceea ce este o problemă pe care o observați aici.
+
+00:01:51.960 --> 00:01:53.200
+Vă puteți gândi la orice?
+
+00:01:53.580 --> 00:01:57.810
+Ei bine, oricine are cheia poate decripta mesajul.
+
+00:01:57.810 --> 00:02:04.020
+Deci, dacă v-aș trimite parola la acest alt computer în loc de salut.
+
+00:02:04.020 --> 00:02:06.450
+Ceva foarte important.
+
+00:02:07.480 --> 00:02:18.850
+Dacă într-un fel domnul tipul rău se întâmplă să găsească cheia sau, de asemenea, știu această cheie,
+
+00:02:19.680 --> 00:02:26.870
+el sau ea poate afla parola mea el poate decripta acest mesaj doar folosind aceeași cheie ca noi.
+
+00:02:27.010 --> 00:02:34.540
+Așa că trebuie să obținem cheia într-un mod sigur, astfel încât și ceilalți să nu poată să o folosească sau să nu
+
+00:02:34.540 --> 00:02:35.940
+afle ce este.
+
+00:02:36.070 --> 00:02:45.710
+Și acest lucru se face prin ceea ce numim un algoritm de schimb de chei. O modalitate sigură de a schimba aceste chei fără ca
+
+00:02:46.370 --> 00:02:48.810
+actorii răi să o intercepteze.
+
+00:02:49.810 --> 00:02:56.020
+Și ceea ce face acest algoritm deosebit de sigur este faptul că cheia nu este niciodată transmisă efectiv
+
+00:02:56.140 --> 00:02:57.870
+între client și gazdă.
+
+00:02:57.880 --> 00:03:05.650
+În schimb, cele două computere partajează date publice și apoi o manipulează pentru a calcula independent cheia
+
+00:03:05.860 --> 00:03:06.670
+secretă.
+
+00:03:08.240 --> 00:03:14.840
+Deci, chiar dacă o altă mașină captează datele partajate public, nu va fi capabil să calculeze cheia, deoarece
+
+00:03:15.350 --> 00:03:22.190
+acest algoritm de schimbare a cheilor, care pentru moment este cam ca această cutie magică purpurie, nu este cunoscut.
+
+00:03:23.170 --> 00:03:29.710
+Deci, fără ca aceștia să aibă acest algoritm de schimb de chei, ei nu vor putea să afle vreodată ce este cheia noastră
+
+00:03:29.710 --> 00:03:36.100
+galbenă și nu ne îngrijorăm că vom vorbi despre acest lucru în următorul videoclip și despre cum se face acest lucru.
+
+00:03:37.220 --> 00:03:46.790
+Dar trebuie remarcat faptul că cheia secretă este specifică fiecărei sesiuni SSH și este generată înainte
+
+00:03:47.120 --> 00:03:50.370
+de ceva numit autentificare Kline.
+
+00:03:50.390 --> 00:04:00.310
+Deci, odată ce cheia a fost generată între aceste două părți, toate pachetele care se mișcă între aceste două mașini
+
+00:04:00.790 --> 00:04:09.210
+trebuie să fie criptate cu această cheie. Deci, folosind criptarea simetrică, suntem capabili să comunicăm într-un mod privat.
+
+00:04:09.210 --> 00:04:14.730
+Dar se pare că trebuie să facem un fel de schimb de chei aici și în
+
+00:04:14.730 --> 00:04:17.920
+următorul videoclip vom vorbi despre exact cum facem asta.
+
+00:04:17.970 --> 00:04:19.280
+O să văd pe asta.
+
+00:04:19.340 --> 00:04:19.590
+Buh-pa.

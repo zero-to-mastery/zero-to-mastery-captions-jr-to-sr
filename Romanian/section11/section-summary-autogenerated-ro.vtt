@@ -1,0 +1,172 @@
+﻿WEBVTT
+
+00:00:01.860 --> 00:00:03.600
+Hei, e Bruno aici.
+
+00:00:03.770 --> 00:00:04.340
+Wow.
+
+00:00:04.470 --> 00:00:07.630
+Acest compozitor de docare este uimitor.
+
+00:00:07.630 --> 00:00:08.730
+Toată lumea o iubește.
+
+00:00:08.730 --> 00:00:15.680
+Toți sunt atât de fericiți încât nu trebuie să creeze baze de date și servere API și toate aceste lucruri.
+
+00:00:15.710 --> 00:00:18.360
+Toți ne încetinesc oricum.
+
+00:00:18.450 --> 00:00:20.030
+Lucru foarte fantastic.
+
+00:00:20.040 --> 00:00:25.530
+Cred că vom folosi foarte mult și sper să împărtășesc acest lucru și cu
+
+00:00:25.530 --> 00:00:31.200
+alte echipe din compania noastră, pentru că bine este totuși bine oricum să apreciem acest lucru.
+
+00:00:31.230 --> 00:00:32.800
+Cred că are nevoie de odihnă.
+
+00:00:32.820 --> 00:00:35.440
+Du-te acasă ia o pauză și te voi vedea mâine.
+
+00:00:38.520 --> 00:00:44.920
+A fost o secțiune completă care ne-a învățat cu adevărat despre docuri și containere.
+
+00:00:45.240 --> 00:00:47.050
+Și să ne oprim o clipă.
+
+00:00:47.050 --> 00:00:50.560
+S-ar putea să te întrebi de ce avem nevoie de asta din nou.
+
+00:00:50.770 --> 00:00:53.290
+Se pare că noi creăm mai multe dureri de cap pentru noi.
+
+00:00:53.430 --> 00:01:00.520
+Dar vedeți că există o mare problemă, dincolo de complicațiile de instalare a postcrisurilor și a nodului și a tuturor
+
+00:01:00.520 --> 00:01:03.280
+acestor instrumente pentru a crea mediul înconjurător.
+
+00:01:03.400 --> 00:01:10.300
+Trebuie să ne asigurăm că aceeași versiune a serviciilor de citire a mesajelor nodurilor și a altor servicii
+
+00:01:10.630 --> 00:01:13.750
+este instalată corect corect pe fiecare computer.
+
+00:01:13.750 --> 00:01:20.330
+Fiecare dintre dezvoltatori trebuie să ne asigurăm că laptopurile și computerele funcționează în același mod.
+
+00:01:20.890 --> 00:01:23.720
+Și aceasta este o mare problemă pentru companii.
+
+00:01:23.740 --> 00:01:30.730
+Acest lucru devine și mai important când implementați produsul atunci când desfășurați servere la tot felul de
+
+00:01:30.730 --> 00:01:31.300
+servere.
+
+00:01:31.330 --> 00:01:34.380
+Vrei să te asiguri că funcționează indiferent de locul în care se execută.
+
+00:01:34.750 --> 00:01:40.150
+Containerele ne permit să ne asigurăm că putem rula acest software oriunde.
+
+00:01:40.300 --> 00:01:45.800
+Își asumăm responsabilitatea de a crea mediul de la toți cei care au nevoie de cod.
+
+00:01:45.910 --> 00:01:52.900
+Și atâta timp cât ne-am pregătit corespunzător, putem împărtăși acel cod cu oricine și toată lumea ar trebui
+
+00:01:52.900 --> 00:01:54.790
+să o funcționeze corect.
+
+00:01:55.300 --> 00:01:55.850
+O.K.
+
+00:01:55.990 --> 00:01:57.440
+Deci, ce am învățat.
+
+00:01:58.280 --> 00:02:02.290
+Ei bine, am aflat despre docker ce este și cum funcționează.
+
+00:02:03.420 --> 00:02:11.890
+Am creat un fișier doc și să învățăm cum să lucrăm cu el folosind doctrina doctrină construiască câinele ei comenzi exec.
+
+00:02:11.970 --> 00:02:20.810
+Am folosit de asemenea docker compose pentru a orchestra aplicațiile diferitelor servicii pe care le avem în timpul
+
+00:02:22.690 --> 00:02:30.400
+dezvoltării și acum am reușit să rulați aplicația noastră distribuită, care poate fi rulată oriunde,
+
+00:02:30.400 --> 00:02:32.070
+dintr-o singură comandă.
+
+00:02:32.290 --> 00:02:40.250
+Am folosit comenzi ca Dr. compune construi și doc sau compune până la orchestra serviciile noastre de aplicare.
+
+00:02:40.450 --> 00:02:44.070
+Am reușit să le legăm de lucruri precum link-uri.
+
+00:02:44.320 --> 00:02:52.460
+Suntem capabili să facem expedierea porturilor și am reușit, de asemenea, să transmitem variabilele de mediu și să conectăm
+
+00:02:52.790 --> 00:02:54.860
+aceste două piese împreună.
+
+00:02:55.960 --> 00:03:03.490
+În cele din urmă, am făcut niște lucruri amuzante cu SU, astfel încât, atunci când executăm comanda, suntem capabili în docul sau
+
+00:03:03.490 --> 00:03:10.690
+fișierul nostru sau executați schema noastră de implementare astfel încât totul să ruleze fără probleme și de îndată ce executăm comanda
+
+00:03:10.690 --> 00:03:17.700
+respectivă, noi mese sunt create pentru noi, fără Dharker, dezvoltatorii noștri ar fi trebuit să instaleze și să configureze fiecare
+
+00:03:17.700 --> 00:03:21.240
+tip de serviciu așa cum am făcut-o în secțiunea anterioară.
+
+00:03:22.340 --> 00:03:30.070
+Vedeți acum că avem acest mediu minunat pentru ca noi să lucrăm la oricine care se alătură echipei noastre va lua doar puțin
+
+00:03:30.070 --> 00:03:36.210
+timp pentru a instala docer și a avea totul înființat în decurs de o jumătate de zi.
+
+00:03:36.220 --> 00:03:39.330
+Acest lucru face șefii foarte foarte fericiți.
+
+00:03:40.040 --> 00:03:47.380
+Dar am învățat, de asemenea, că, cu docker, putem îmbunătăți cu adevărat și producția noastră.
+
+00:03:47.480 --> 00:03:55.580
+Putem doar să adăugăm containere la orice vrem să împacheiem servicii unice în recipiente și pentru că acestea pot
+
+00:03:55.580 --> 00:04:01.070
+rula aproape oriunde ne putem păstra duplicarea păstrându-le duplicându-le și avem
+
+00:04:01.400 --> 00:04:08.960
+această arhitectură în care avem mici servicii mici care rulează în diferite locații toate legate de reciproc,
+
+00:04:08.960 --> 00:04:16.090
+dar nu trebuie să vă faceți griji cu privire la gestionarea tuturor lucrurilor într-o singură locație.
+
+00:04:16.090 --> 00:04:16.880
+In regula.
+
+00:04:17.170 --> 00:04:19.230
+Cred că avem nevoie de o pauză după aceea.
+
+00:04:19.240 --> 00:04:22.420
+Sper că vorbești distractiv este într-adevăr interesant.
+
+00:04:22.600 --> 00:04:26.020
+Și o vom folosi pentru următoarea parte a cursului.
+
+00:04:27.190 --> 00:04:30.380
+Sper că te-ai distrat și te voi vedea în secțiunea următoare.
+
+00:04:30.540 --> 00:04:30.790
+BABAE.

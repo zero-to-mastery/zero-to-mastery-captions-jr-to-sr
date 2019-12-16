@@ -1,0 +1,415 @@
+﻿WEBVTT
+
+00:00:01.580 --> 00:00:02.530
+Witamy spowrotem.
+
+00:00:02.570 --> 00:00:06.250
+Zakończmy ten slajd trzema ostatnimi punktami.
+
+00:00:07.740 --> 00:00:11.970
+Wyświetlanie obrazów o różnych rozmiarach dla różnych środowisk.
+
+00:00:12.630 --> 00:00:15.030
+Znowu ma to sens.
+
+00:00:15.120 --> 00:00:20.400
+Obecnie na świecie jest tylu ludzi o tak wielu ekranach o różnych rozmiarach, że niektórzy
+
+00:00:20.400 --> 00:00:23.160
+ludzie odwiedzają Twoją witrynę na telefonie komórkowym.
+
+00:00:23.160 --> 00:00:29.070
+Niektóre osoby mogą znajdować się na iPadzie, a inna osoba może na dużym ekranie.
+
+00:00:29.490 --> 00:00:31.880
+Każdy ma różne rozmiary ekranu.
+
+00:00:32.040 --> 00:00:40.530
+Dlaczego więc chcieć wysłać duży obraz w tle, który działa na ekranie telewizora komuś z małym urządzeniem przenośnym i
+
+00:00:40.530 --> 00:00:46.840
+możemy to łatwo zrobić za pomocą czegoś, co nazywa się zapytaniami o media.
+
+00:00:47.130 --> 00:00:48.350
+Wyglądają one
+
+00:00:51.100 --> 00:00:57.910
+tak, jakby zapytania o media były przydatne, gdy chcesz zastosować style CSSA w zależności od ogólnego typu
+
+00:00:57.910 --> 00:01:01.020
+urządzenia, takiego jak rozmiar ekranu, jak widać tutaj.
+
+00:01:02.360 --> 00:01:11.570
+Specyficzne cechy, takie jak szerokość widoku lub środowisko, takie jak rozmiar ekranu i zapytania o media,
+
+00:01:12.050 --> 00:01:20.010
+mają tę ogólną składnię, gdy robisz na nośniku, a następnie podajesz mu jakiego rodzaju
+
+00:01:20.010 --> 00:01:21.560
+właściwości chcesz.
+
+00:01:21.590 --> 00:01:28.160
+Na przykład ekran, który w 99 procentach jest tam, gdzie chcesz, chcesz go używać na ekranie, na którym
+
+00:01:28.340 --> 00:01:30.590
+jest wyświetlana witryna sieci Web.
+
+00:01:30.590 --> 00:01:33.120
+Możesz także zmienić coś w rodzaju druku.
+
+00:01:33.290 --> 00:01:40.960
+A to oznacza, że ten plik SS zostanie aktywowany, gdy jest w trybie ekranu drukowania, ale zapytania
+
+00:01:44.590 --> 00:01:51.310
+o media są bardzo proste przy użyciu CSX można rzeczywiście dostarczyć inny obraz tła dla
+
+00:01:51.310 --> 00:01:54.310
+różnych rozmiarów ekranu, które zapewnia strona.
+
+00:01:55.470 --> 00:02:01.900
+Oznacza to, że musisz zapisać obrazy w różnych rozmiarach plików, aby mogły działać.
+
+00:02:02.280 --> 00:02:07.120
+Ale myślę, że samo oglądanie tego może nie mieć sensu, pozwól, że dam ci przykład.
+
+00:02:08.070 --> 00:02:12.420
+Mam tutaj stronę internetową, która faktycznie będzie używana jako ćwiczenie.
+
+00:02:12.600 --> 00:02:19.530
+Na końcu tej sekcji, aby zoptymalizować rzeczy, jest to prosty plik indeksu i widzisz tam zadanie, które
+
+00:02:19.530 --> 00:02:21.690
+będziesz musiał wykonać później.
+
+00:02:21.780 --> 00:02:28.500
+Ale na razie skupmy się tylko na tym, że jest bardzo prosty, ma tylko tekst powitania
+
+00:02:28.820 --> 00:02:33.060
+i obraz, który ładuje niektóre SS, a także niektóre javascript.
+
+00:02:33.060 --> 00:02:39.920
+Chodzi nam o to, aby pierwsza linia, która przepływa przez pierwszy arkusz stylów i ten arkusz
+
+00:02:39.920 --> 00:02:40.920
+stylów, tutaj.
+
+00:02:40.940 --> 00:02:51.400
+Jak już powiedziałem, korzysta z zapytań o media i widać tutaj, że trzykrotnie
+
+00:02:51.400 --> 00:02:54.390
+używamy tła ciała.
+
+00:02:54.500 --> 00:02:58.150
+Mamy regularny sposób, który widzieliśmy wcześniej.
+
+00:02:58.220 --> 00:02:59.340
+Tło jest żółte.
+
+00:02:59.690 --> 00:03:08.420
+Ale mamy również zapytania o media, które mówią, że chcemy zapytania o media dla dowolnego ekranu o
+
+00:03:08.420 --> 00:03:10.850
+minimalnej szerokości 900 pikseli.
+
+00:03:10.850 --> 00:03:21.350
+W takim przypadku chcę załadować CSSA ciała, aby uzyskać tło z ułożonym obrazem, który wygląda
+
+00:03:21.350 --> 00:03:25.070
+jak całkiem niezły obraz.
+
+00:03:27.150 --> 00:03:35.440
+Z kilkoma składniami CSSA, które sprawiają, że jest miła, a także mamy zapytanie Nunda me, ponieważ możemy użyć tyle,
+
+00:03:35.440 --> 00:03:36.530
+ile chcemy.
+
+00:03:36.640 --> 00:03:43.740
+To mówi to samo, z tą różnicą, że tym razem chcemy powiedzieć, że maksymalna szerokość to 500 pikseli.
+
+00:03:43.820 --> 00:03:51.140
+Zobaczmy więc, co tak naprawdę robi i jakie mogą być te różnice.
+
+00:03:52.270 --> 00:03:58.790
+Mam tu stronę internetową i widzisz, że jest to bardzo prosta strona internetowa, ale myślę, że wygląda
+
+00:03:58.790 --> 00:04:01.200
+całkiem dobrze, szczególnie tutaj, w Stargell.
+
+00:04:02.040 --> 00:04:08.000
+Ale sprawdź to, zmieniłem rozmiar ekranu tego tła, które zmieniło się
+
+00:04:11.130 --> 00:04:12.650
+na żółte.
+
+00:04:15.000 --> 00:04:26.280
+Moje tło po prostu zmieniło się w obraz, więc wygląda na to, zależnie od rozmiaru ekranu, który ładuje
+
+00:04:26.280 --> 00:04:32.390
+obrazy lub jest żółte interesujące, więc to zapytania o
+
+00:04:35.730 --> 00:04:45.270
+media w pracy, co mam na myśli, jeśli otworzę narzędzia programistyczne i przejdę do elementów,
+
+00:04:45.960 --> 00:04:56.470
+które widzimy tutaj mamy nasze style dla ciała, a te style mają ekran mediów z mężczyznami z
+
+00:04:56.470 --> 00:04:59.050
+ponad 900 pikselami.
+
+00:04:59.050 --> 00:05:07.210
+Widzimy więc, że za każdym razem minimalna szerokość ekranu przekracza 900 pikseli.
+
+00:05:07.270 --> 00:05:16.660
+Chcę zastosować tę CSSA, która ma sens, ponieważ sprawiamy, że staje się ona mniejsza i mniejsza, a my poniżej 900
+
+00:05:19.560 --> 00:05:27.210
+pikseli zmienia kolor na żółty i widzimy w prawym górnym rogu, jak pokazuje nam szerokość piksela.
+
+00:05:27.260 --> 00:05:32.010
+Ale gdy tylko mieliśmy mniej niż 900, mamy żółte tło.
+
+00:05:32.260 --> 00:05:35.640
+A potem, jak tylko osiągniemy
+
+00:05:39.060 --> 00:05:46.500
+500, bo jak tylko maksymalna szerokość wynosi 500 pikseli. Cóż, znowu mamy.
+
+00:05:46.710 --> 00:05:50.730
+I widzisz tutaj, że nie jest to kalkulacja w rozmiarze tła, a tło jest
+
+00:05:50.730 --> 00:05:51.130
+trochę.
+
+00:05:51.150 --> 00:05:52.520
+Naprawmy to.
+
+00:05:52.740 --> 00:05:58.440
+Powiemy okładkę, z wyjątkiem tego.
+
+00:05:58.480 --> 00:05:59.010
+Proszę bardzo.
+
+00:05:59.020 --> 00:05:59.880
+To wygląda o wiele lepiej.
+
+00:06:00.950 --> 00:06:02.660
+Więc to są zapytania o media.
+
+00:06:02.690 --> 00:06:06.990
+Zostawię zasoby na koniec filmu, abyś mógł sam go przetestować.
+
+00:06:07.250 --> 00:06:16.400
+Ale zapomniałem wspomnieć o jednej interesującej rzeczy, o której możesz pomyśleć sobie dobrze, nawet jeśli na
+
+00:06:16.460 --> 00:06:23.680
+oryginalnym ekranie użytkownika powiedzmy, że użytkownik ma ekran iPada o takim rozmiarze.
+
+00:06:23.760 --> 00:06:28.680
+Czy wciąż ładujemy obraz w tle.
+
+00:06:28.720 --> 00:06:33.040
+Chodzi mi o to, że nadal nie musimy tego robić, sprawdźmy to.
+
+00:06:33.050 --> 00:06:35.600
+To jest coś, co będziemy umieszczać i kłaść na wideo.
+
+00:06:35.600 --> 00:06:40.590
+Ale chcę wam pokazać tylko miły mały przykład, który tutaj skreślam.
+
+00:06:40.590 --> 00:06:42.430
+Przejdź do sieci, dotknij jej.
+
+00:06:42.450 --> 00:06:48.130
+Pokaże mi, jak tylko odświeżę wszystkie pliki, które są ładowane do tej witryny, aby
+
+00:06:48.450 --> 00:06:49.050
+odświeżyć
+
+00:06:51.740 --> 00:06:53.610
+i mam tu kilka plików.
+
+00:06:53.970 --> 00:07:00.800
+Ale jeśli spojrzycie, ja mam javascript CSSA, to obraz psa jest tutaj obrazem szczeniaka.
+
+00:07:02.790 --> 00:07:03.720
+Proszę bardzo.
+
+00:07:04.110 --> 00:07:08.850
+Ale bez obrazu tła, ponieważ nie potrzebujemy go do rozmiaru ekranu.
+
+00:07:08.910 --> 00:07:17.650
+Jeśli to usuniemy i jak tylko zwiększę rozmiar, zobaczysz, że obraz został pobrany.
+
+00:07:20.430 --> 00:07:26.840
+Przeglądarka jest więc na tyle sprytna, że pobiera tylko to, czego potrzebuje.
+
+00:07:27.150 --> 00:07:33.750
+Jeśli nie potrzebuje masywnego obrazu tła, nie trzeba go ładować, a
+
+00:07:34.080 --> 00:07:38.640
+my po prostu zaoszczędziliśmy sobie mnóstwo czasu.
+
+00:07:38.870 --> 00:07:40.710
+Chodzi mi o to, że to jest fajne.
+
+00:07:42.000 --> 00:07:46.900
+Zapytania o media są bardzo ważne, zwłaszcza jeśli masz użytkowników, którzy używają różnych rozmiarów
+
+00:07:47.260 --> 00:07:50.650
+ekranu, co w dzisiejszych czasach jest dość powszechne.
+
+00:07:52.160 --> 00:07:52.520
+W porządku.
+
+00:07:52.550 --> 00:07:54.320
+Więc to jest to.
+
+00:07:54.320 --> 00:07:56.410
+Przejdźmy do ostatnich dwóch punktów.
+
+00:07:56.510 --> 00:08:08.430
+Użyj końcówek CD lub sieci dostarczania treści, takich jak obraz X, i usuń metadane obrazu, porozmawiajmy o tym obrazie X to tylko
+
+00:08:10.250 --> 00:08:14.290
+jeden z przykładów narzędzia, którego możemy użyć.
+
+00:08:14.420 --> 00:08:20.690
+Jak widać z ich strony internetowej, to, co robią, dobrze się zajmują wszystkimi obrazami.
+
+00:08:20.690 --> 00:08:21.790
+Optymalizują je.
+
+00:08:21.800 --> 00:08:22.640
+Dostarczają je.
+
+00:08:22.640 --> 00:08:27.880
+Używają czegoś, co nazywa się buforowaniem, o czym opowiem w części 3 dotyczącej wydajności.
+
+00:08:27.950 --> 00:08:34.550
+Mówią, że podasz nam wszystkie twoje zdjęcia bez względu na to, jak duże są one bez
+
+00:08:34.550 --> 00:08:41.890
+względu na to, jak są zoptymalizowane, po prostu prześlij je na naszą stronę internetową, a następnie oddamy ci twoje.
+
+00:08:42.320 --> 00:08:43.580
+I to jesteś l.
+
+00:08:43.680 --> 00:08:47.490
+Możesz po prostu podłączyć go do którejkolwiek ze swoich stron internetowych.
+
+00:08:47.730 --> 00:08:49.310
+Więc to wszyscy jesteście tutaj.
+
+00:08:49.320 --> 00:08:56.310
+Mogę umieścić zdjęcie XBRL, które dostaję ze zdjęcia, które właśnie przesłałem, i dbają o jego optymalizację
+
+00:08:56.310 --> 00:09:00.420
+i upewnienie się, że jest to najmniejsze możliwe.
+
+00:09:00.420 --> 00:09:03.400
+Wykorzystują też coś, co nazywa się sieciami dostarczania treści.
+
+00:09:03.420 --> 00:09:10.260
+Znowu coś, co dostanie się do części trzeciej wydajności, ale pozwoli na szybszy dostęp poprzez
+
+00:09:10.260 --> 00:09:14.630
+swoje serwery obrazów, zamiast po prostu przesłać je sami.
+
+00:09:17.070 --> 00:09:18.120
+To całkiem miłe.
+
+00:09:19.710 --> 00:09:22.110
+A potem w końcu stanie się to przerażające.
+
+00:09:22.930 --> 00:09:26.460
+Chcemy usunąć metatagi zdjęć.
+
+00:09:26.530 --> 00:09:27.620
+Co to znaczy.
+
+00:09:28.090 --> 00:09:34.270
+Cóż, jest tu naprawdę fajna strona internetowa, do której będę się odwoływać, a to, co robią,
+
+00:09:34.270 --> 00:09:37.100
+pozwoli ci usunąć metatagi ze zdjęcia.
+
+00:09:37.660 --> 00:09:43.730
+Oznacza to, że większość zdjęć, gdy robisz im zdjęcie, powiedzmy za pomocą aparatu cyfrowego.
+
+00:09:43.960 --> 00:09:50.650
+Nie tylko zrób zdjęcie, ale także zapisz dane dotyczące tego, gdzie zrobiono zdjęcie, jakie urządzenie zostało zrobione, a
+
+00:09:50.650 --> 00:09:53.540
+czego nie potrzebujemy w witrynie sieci Web.
+
+00:09:53.620 --> 00:09:56.010
+Ale przede wszystkim jest to trochę przerażające.
+
+00:09:56.200 --> 00:10:02.240
+Nie chcemy koniecznie mieć naszego wizerunku, może wędrówki jakąś górą.
+
+00:10:02.350 --> 00:10:08.870
+A dla ludzi, aby zobaczyć, gdzie zostało zrobione zdjęcie, jakie było moje urządzenie i wszystkie te
+
+00:10:08.870 --> 00:10:14.750
+informacje pozwolą mi pokazać ci przykład, mam tutaj obraz, który pobrałem z internetu.
+
+00:10:14.750 --> 00:10:16.750
+To ładne proste zdjęcie łodzi.
+
+00:10:16.990 --> 00:10:27.560
+Jeśli otworzę to i tę stronę i kliknę na View EXIF, zobaczę, gdzie zrobiono to zdjęcie, które wygląda
+
+00:10:27.560 --> 00:10:37.970
+tak, jakby zostało zrobione i na Bita daje nam nasze współrzędne GPS i podaje nam wszystkie informacje
+
+00:10:37.970 --> 00:10:48.550
+o kamerach że zostało zrobione na iPhonie 4 i nie tylko nie chcemy tego ze względu na prywatność,
+
+00:10:48.550 --> 00:10:55.660
+ale to także dodatkowe dane, których nie potrzebujemy na naszym zdjęciu.
+
+00:10:55.670 --> 00:10:58.010
+To tylko dodatkowe informacje i dodatkowy rozmiar.
+
+00:10:58.510 --> 00:11:03.540
+Mogę więc kliknąć Usuń i spojrzeć na to.
+
+00:11:03.540 --> 00:11:13.220
+Teraz dostaję nowe zdjęcie, które jeśli przejdę do regulacji rozmiaru widzę, że to zdjęcie jest to.
+
+00:11:13.290 --> 00:11:16.210
+To zdjęcie ma sto trzydzieści siedem kilobajtów.
+
+00:11:17.200 --> 00:11:19.510
+Jeśli wrócę do
+
+00:11:23.020 --> 00:11:32.360
+oryginalnego zdjęcia, ułóżmy je obok siebie i dla tego właśnie klikam na odpowiedni rozmiar, który widzimy.
+
+00:11:32.620 --> 00:11:39.380
+Jest zdecydowanie dużo większy i nic się nie zmieniło w obrazie, a my naprawdę uratowaliśmy tylko trzy kilobajty.
+
+00:11:39.610 --> 00:11:47.620
+Ale udało nam się usunąć ataki Met i jest to dobre ze względu na wydajność, ale oczywiście również ze względów
+
+00:11:47.620 --> 00:11:48.320
+bezpieczeństwa.
+
+00:11:49.320 --> 00:11:51.320
+Bardzo fajny.
+
+00:11:51.360 --> 00:11:58.150
+Zobaczmy więc, używając wszystkich tych chorych Meeków wymienionych tutaj.
+
+00:11:58.270 --> 00:12:05.730
+Jesteśmy w stanie zaoszczędzić dużo transferu, który musi wykonać klient i serwer.
+
+00:12:06.160 --> 00:12:12.270
+Jest to ogromny problem, szczególnie w przypadku obrazów i korzystania z tych wszystkich technik, dzięki którym możemy
+
+00:12:12.600 --> 00:12:20.670
+mieć pewność, że nasze strony internetowe są skuteczne, więc miejmy nadzieję, że przytrzymaj ten tekst na ekranie, teraz ma dla ciebie sens,
+
+00:12:20.670 --> 00:12:22.380
+co zobaczę w następnym.

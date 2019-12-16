@@ -1,0 +1,274 @@
+﻿WEBVTT
+
+00:00:01.100 --> 00:00:02.210
+Bine ai revenit.
+
+00:00:02.210 --> 00:00:08.780
+Acum că avem acțiunile noastre Constance și reductoare Să începem să conectăm această parte redux a aplicației
+
+00:00:09.170 --> 00:00:11.540
+noastre la aplicația noastră de reactare.
+
+00:00:13.290 --> 00:00:16.630
+Acum, modul în care putem face acest lucru este destul de simplu.
+
+00:00:17.520 --> 00:00:25.260
+Dacă vă aduceți aminte că am descarcat un pachet numit re-act redux și că acest pachet să-l
+
+00:00:26.910 --> 00:00:32.840
+importăm aici vine cu API frumos și ușor de doar două lucruri.
+
+00:00:32.920 --> 00:00:40.540
+Unul este un furnizor și celălalt este conectarea și folosirea acestor două lucruri, vom putea să conectăm aceste
+
+00:00:40.780 --> 00:00:42.900
+două părți ale aplicației.
+
+00:00:43.570 --> 00:00:52.660
+Așa că am de gând să spun importul de la react.
+
+00:00:52.870 --> 00:00:58.520
+Acum, în acest videoclip, vom vorbi despre furnizor și în următoarea discuție despre conectare.
+
+00:00:58.540 --> 00:01:04.560
+Deci, pentru moment, să lăsăm furnizorul să-l importe.
+
+00:01:04.780 --> 00:01:13.300
+Acum, aici, trebuie să facem câteva lucruri pe care trebuie să le facem mai întâi pentru a crea
+
+00:01:13.300 --> 00:01:23.510
+magazinul, dacă ne întoarcem la diagrama noastră și ne amintim că există ceva numit magazin și redox, care este sursa întregului adevăr.
+
+00:01:23.800 --> 00:01:32.530
+Acesta este un obiect mare de obiecte javascript care descrie suprapunerea de stat, astfel încât re-actul îl poate face să
+
+00:01:32.530 --> 00:01:36.010
+facă modificări și să le afișeze utilizatorului.
+
+00:01:36.010 --> 00:01:43.330
+Așadar, am creat o acțiune pe care am creat-o și am redus un reductor și avem de asemenea nevoie de un magazin.
+
+00:01:43.510 --> 00:01:45.900
+Deci, să facem asta mai întâi.
+
+00:01:46.020 --> 00:01:53.600
+Putem folosi pachetul redux pentru acest lucru și să spunem import și are o funcție denumită crea magazin.
+
+00:01:53.670 --> 00:01:54.920
+Numele frumos și ușor.
+
+00:01:55.170 --> 00:02:00.620
+Și o vom importa din pachetul redox.
+
+00:02:00.660 --> 00:02:06.570
+Acum, modul în care creăm un magazin este destul de ușor și putem spune
+
+00:02:09.780 --> 00:02:19.940
+că magazinul Konst este egal cu crearea magazinului, iar în interiorul acestuia punem ceea ce numim o rădăcină REDUCE-IT, care este reducerea aplicației noastre
+
+00:02:20.570 --> 00:02:22.390
+acum în viața reală.
+
+00:02:22.460 --> 00:02:25.420
+Avem multe reduceri.
+
+00:02:25.730 --> 00:02:34.230
+Dacă ne întoarcem la producătorul nostru, acum avem doar un roboți de căutare care ne reduc.
+
+00:02:34.430 --> 00:02:41.240
+Dar, așa cum am spus înainte, aplicațiile devin din ce în ce mai complexe și veți avea tot mai multe acțiuni
+
+00:02:41.360 --> 00:02:42.450
+care trebuie luate.
+
+00:02:42.890 --> 00:02:50.420
+Și putem continua să menționăm acțiunile legate de roboții de căutare chiar aici, dar mai târziu în videoclip,
+
+00:02:50.420 --> 00:02:54.840
+avem de asemenea nevoie să obținem roboți din API.
+
+00:02:55.280 --> 00:03:05.870
+Dacă vă amintiți acum din cauza asta, vom avea multe multe reductoare și în magazin dorim să combinăm
+
+00:03:05.870 --> 00:03:15.820
+toți acești reductori pentru a crea un reductor rădăcină pe care o vom face mai târziu.
+
+00:03:16.650 --> 00:03:25.080
+Dar deocamdată, pentru că avem doar un singur producător, să folosim doar roboții de căutare să o reducă pentru a crea magazinul
+
+00:03:25.080 --> 00:03:25.480
+și
+
+00:03:29.650 --> 00:03:31.580
+trebuie să importăm acest lucru.
+
+00:03:31.600 --> 00:03:32.880
+Să mergem mai departe și să facem asta.
+
+00:03:33.680 --> 00:03:34.920
+Și spun
+
+00:03:38.010 --> 00:03:44.470
+roboți de căutare de import de la Rafalul nostru de reducere.
+
+00:03:44.480 --> 00:03:44.970
+In regula.
+
+00:03:45.020 --> 00:03:51.930
+Deci, am aici roboți de căutare pentru a crea magazinul și asta e.
+
+00:03:51.950 --> 00:04:00.560
+Avem un magazin Acum acest magazin poate fi accesat și trimis în aplicația noastră.
+
+00:04:00.650 --> 00:04:08.110
+Amintiți-vă cu redux ipotetic putem elimina toate statele de la re-acționa-l și păstrați-l în interiorul magazinului
+
+00:04:08.110 --> 00:04:11.850
+și treci în jos magazin ca un suport.
+
+00:04:11.890 --> 00:04:21.590
+Deci, să vedem ce se întâmplă dacă fac asta dacă mă duc la magazin egal cu magazinul pe care îl avem și eu îl salvez.
+
+00:04:21.740 --> 00:04:23.670
+Și să deschidem și apt.
+
+00:04:23.760 --> 00:04:24.460
+Da.
+
+00:04:25.360 --> 00:04:26.780
+Și indie.
+
+00:04:26.810 --> 00:04:27.690
+A fost montată.
+
+00:04:27.890 --> 00:04:29.240
+Să
+
+00:04:32.000 --> 00:04:40.060
+consolezem doar logul punctului dot dot.
+
+00:04:40.100 --> 00:04:41.460
+Bine, să vedem că NPM
+
+00:04:48.270 --> 00:04:49.630
+va deschide consola și avem
+
+00:04:52.820 --> 00:04:57.800
+un pic cam îngust aici, care este doar o eroare de sintaxă în cazul nostru, apoi afirmații, deci să
+
+00:04:57.800 --> 00:04:58.550
+rezolvăm asta.
+
+00:05:01.540 --> 00:05:03.150
+Du-te la reducerea ta.
+
+00:05:03.240 --> 00:05:09.420
+Nu avem nevoie de ghilimele duble aici pentru punct și virgulă aici pentru că avem aici.
+
+00:05:09.500 --> 00:05:17.770
+Să salvăm asta și vom avea o eroare spunând că câmpul de căutare nu este definit în fișierul nostru de reduceri.
+
+00:05:17.840 --> 00:05:20.720
+Și din nou o mică eroare aici.
+
+00:05:20.720 --> 00:05:30.370
+Modul în care vrem să trecem cel de-al treilea parametru la un design de obiect este ca un obiect, așa că vrem să mergem
+
+00:05:30.370 --> 00:05:31.020
+așa.
+
+00:05:32.880 --> 00:05:39.790
+Și ați uitat să faceți mici mici erori constante aici pentru a salva bine.
+
+00:05:39.840 --> 00:05:40.950
+Deci, totul funcționează.
+
+00:05:40.950 --> 00:05:46.700
+Avem un avertisment spunând că furnizorul este definit, dar niciodată folosit nu este bine.
+
+00:05:47.570 --> 00:05:49.180
+Pentru că nu mai folosim încă.
+
+00:05:49.250 --> 00:05:51.390
+Dar să mergem la jurnalul de console și să vedem ce se întâmplă.
+
+00:05:52.750 --> 00:06:01.570
+În regulă vedem că magazinul nostru de aici a înregistrat codul și avem câteva funcții pe care le putem folosi, inclusiv obțineți statul îl
+
+00:06:01.870 --> 00:06:05.860
+permite să îl folosiți și să vedeți ce se întâmplă.
+
+00:06:05.890 --> 00:06:15.750
+Din nou, mergeți la fișierul meu index, pe care îl voi spune sau în apt O. J. 's fi de gand sa spun ca ai
+
+00:06:15.760 --> 00:06:20.490
+stat sa salvezi sa te intorci si sa te uiti la asta.
+
+00:06:20.550 --> 00:06:27.190
+Avem statul nostru care are doar câmpul de căutare chiar acum.
+
+00:06:27.190 --> 00:06:27.620
+In regula.
+
+00:06:27.760 --> 00:06:36.910
+Așadar, apăsăm magazinul nostru ca suport și putem folosi starea foarte bine să eliminăm acest jurnal de
+
+00:06:36.910 --> 00:06:37.750
+consolă.
+
+00:06:37.750 --> 00:06:43.120
+Deoarece nu avem nevoie de ea, înțelegem ce se întâmplă acum și fișierul index care
+
+00:06:43.120 --> 00:06:45.820
+trebuie să trecem prin magazin către aplicație.
+
+00:06:45.920 --> 00:06:52.900
+Acum nu vrem sa trecem prin magazin pana la componentele mai mici din nou si sa
+
+00:06:53.200 --> 00:07:01.170
+reactionam redox ne ofera o componenta placuta pe care o putem folosi pentru a face acest lucru foarte usor.
+
+00:07:01.280 --> 00:07:06.770
+Putem pur și simplu să înfășurăm componenta noastră de aplicație în această componentă a furnizorului.
+
+00:07:06.770 --> 00:07:07.770
+Lasa-ma sa-ti arat.
+
+00:07:08.300 --> 00:07:24.180
+Vom avea o componentă de furnizor și această componentă a aplicației se va afla în
+
+00:07:24.180 --> 00:07:27.150
+interiorul acesteia.
+
+00:07:27.160 --> 00:07:31.540
+Acum, formatul de a lua aici este un pic off, dar este bine pentru moment.
+
+00:07:31.540 --> 00:07:39.220
+Vreau doar să văd că furnizorul împachetează aplicația și acum, în loc să
+
+00:07:39.220 --> 00:07:47.440
+treacă magazinul în aplicație, îl putem include în componenta furnizorului, iar componenta furnizorului se
+
+00:07:47.440 --> 00:07:56.410
+va ocupa de trecerea magazinului la toate componentele componenta din aplicație și folosim ceva numit
+
+00:07:56.410 --> 00:08:02.730
+Connect despre care am vorbit să terminăm această conexiune.
+
+00:08:02.750 --> 00:08:04.530
+Deci, tu o ai.
+
+00:08:04.610 --> 00:08:14.000
+Am creat componenta furnizorului care trece prin magazin, iar magazinul folosește reductorul sau orice reductor pe care trebuie
+
+00:08:14.000 --> 00:08:19.660
+să-l creăm pentru a crea acel copac al statului nostru.
+
+00:08:20.820 --> 00:08:28.950
+În următorul videoclip, permiteți-mi să salvez acest lucru în următorul videoclip pe care îl vom folosi pe celălalt capăt al lui Riak redux pentru
+
+00:08:29.100 --> 00:08:31.520
+a conecta în final totul împreună.
+
+00:08:32.270 --> 00:08:34.070
+O să văd un Babai.

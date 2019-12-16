@@ -1,0 +1,154 @@
+﻿WEBVTT
+
+00:00:00.660 --> 00:00:01.740
+Witamy spowrotem.
+
+00:00:01.740 --> 00:00:07.680
+Jest jeszcze jedna rzecz, którą chcę ci pokazać jedną małą sztuczkę i czy nie byłoby miło,
+
+00:00:07.680 --> 00:00:14.700
+gdybyśmy mieli jakieś dane źródłowe w tych tabelach, abyśmy uruchomili doker skomponować rachunek, że jest już kilku użytkowników,
+
+00:00:14.700 --> 00:00:17.400
+których możemy rozpocznij testowanie za pomocą.
+
+00:00:17.820 --> 00:00:21.860
+I to jest bardzo częstym przypadkiem podczas pracy nad projektem.
+
+00:00:21.900 --> 00:00:24.650
+Zróbmy to w tym filmie.
+
+00:00:24.690 --> 00:00:34.730
+Wszystko, co musimy zrobić, to stworzyć kolejne polecenie i tym razem po
+
+00:00:34.730 --> 00:00:45.840
+utworzeniu loginu i tabeli użytkowników utworzymy polecenie, a ta komenda uruchomi kolejną niejasną instrukcję.
+
+00:00:45.840 --> 00:00:51.700
+To się nazywa seed i to będzie w folderze seed.
+
+00:00:51.720 --> 00:01:02.800
+Po raz kolejny tworzymy kolejny folder o nazwie seed i słyszymy, że nowy plik ponownie zbiera ziarno.
+
+00:01:02.880 --> 00:01:10.410
+Eskew dobrze i to ziarno, które SU wszystko zrobi proste przekrzywić całą parą.
+
+00:01:10.720 --> 00:01:11.950
+Wstawi
+
+00:01:15.350 --> 00:01:23.750
+do tabeli użytkowników nazwę e-mail i drzewa.
+
+00:01:24.260 --> 00:01:26.320
+I powiedzmy też Joynta.
+
+00:01:29.460 --> 00:01:33.460
+I wprowadzi wartości.
+
+00:01:33.490 --> 00:01:40.110
+Pójdźmy z Timem, ponieważ będzie to nazwa e-mail.
+
+00:01:40.250 --> 00:01:49.700
+Albo zmieńmy to, przejdźmy do Jesse e-maili, które będą Jessem w Gmailu, a drzewa
+
+00:01:52.500 --> 00:02:00.810
+będą tylko powiedzmy pięć wpisów, a data dołączy się dopiero 2018 roku.
+
+00:02:01.130 --> 00:02:03.650
+Jedźmy z 1
+
+00:02:07.970 --> 00:02:19.070
+stycznia i jeszcze raz, aby się upewnić, że po prostu wykonamy rozpoczętą transakcję i zatwierdzimy ją na końcu.
+
+00:02:20.750 --> 00:02:30.150
+Chcemy również wstawić do dziennika i tabeli, ponieważ muszą się również zalogować, a ta tabela
+
+00:02:30.140 --> 00:02:35.480
+logowania będzie akceptować Passhe i e-mail, a wartościami będą
+
+00:02:39.190 --> 00:02:40.180
+te
+
+00:02:44.010 --> 00:02:48.120
+małe skróty, które już zostały sprawdzone.
+
+00:02:48.120 --> 00:02:54.450
+Więc ten hash z kryptą jest po prostu hasłem A.
+
+00:02:54.960 --> 00:03:02.520
+Tak długo, jak umieścisz list, będziesz mógł się zalogować, a jego e-mailem Jessy będzie Jessee pod adresem
+
+00:03:02.610 --> 00:03:04.120
+gmail dot com
+
+00:03:07.950 --> 00:03:08.600
+perfect.
+
+00:03:08.730 --> 00:03:14.730
+I ostatnia rzecz, którą musimy zrobić, i oczywiście można sobie wyobrazić, jeśli chcemy dodać więcej użytkowników,
+
+00:03:15.030 --> 00:03:19.930
+więcej informacji, więcej danych, które możemy zawsze dodawać do tego pliku siedzenia.
+
+00:03:20.210 --> 00:03:23.430
+Ale na razie wystarczy przetestować, czy wszystko jest w porządku.
+
+00:03:23.430 --> 00:03:35.630
+Ostatnią rzeczą, którą musimy zrobić, to w pliku dokera, który chcemy dodać do folderu foldera o nazwie seed i dodać wszystkie pliki znajdujące
+
+00:03:35.630 --> 00:03:38.350
+się w folderze seed.
+
+00:03:39.510 --> 00:03:42.550
+Ponownie zamknijmy to.
+
+00:03:45.900 --> 00:03:48.980
+Przenieś wszystko i odbuduj wszystko, co
+
+00:03:54.310 --> 00:03:55.120
+przewijamy.
+
+00:03:55.130 --> 00:03:59.950
+OK, widzimy jak o tak, mamy dwie odpowiedzi, które się wydarzyły, to dobry znak.
+
+00:04:01.280 --> 00:04:08.900
+A jeśli teraz wrócimy do naszej aplikacji i wylogujemy się, zobaczmy, czy możemy zalogować się z informacjami Jessy.
+
+00:04:08.900 --> 00:04:17.970
+Tak samo jest z Jessem w Gmailu, a e-mail był tylko listem. Wygląda na to, że możemy zalogować się
+
+00:04:17.970 --> 00:04:19.770
+na konto Jesse'ego.
+
+00:04:19.890 --> 00:04:21.330
+To jest konto testowe.
+
+00:04:21.390 --> 00:04:25.870
+Liczba wpisów jest już 5 i wszystko działa.
+
+00:04:25.950 --> 00:04:35.190
+Jesteśmy w stanie nawiązać połączenie, a my jesteśmy już w stanie obsadzić naszą bazę danych naszą testową bazą danych.
+
+00:04:35.330 --> 00:04:41.210
+I chciałem ci to pokazać, żeby pokazać ci, co możesz zrobić z Dr. Phil. Możesz dodawać rzeczy,
+
+00:04:41.210 --> 00:04:46.780
+które możesz wykonywać, ale teraz powinno to mieć sens, jak wszystko działa.
+
+00:04:47.970 --> 00:04:53.010
+W następnym filmie zajmiemy się wszystkim i upewnimy się, że rozumiemy, jak każdy z
+
+00:04:53.010 --> 00:04:54.680
+tych elementów jest połączony.
+
+00:04:54.750 --> 00:04:59.520
+Wiem, że było dużo informacji, które wyrzuciłem tam, gdzie ty, a
+
+00:04:59.520 --> 00:05:05.640
+to jest sekcja, którą możesz odwiedzić kilka razy, ale pamiętaj, że chcemy połączyć te kropki tutaj
+
+00:05:05.640 --> 00:05:10.670
+iw następnym wideo, które zamierzam aby pomóc ci sfinalizować i utrwalić tę wiedzę.
+
+00:05:10.890 --> 00:05:12.740
+Zobaczę to przez.

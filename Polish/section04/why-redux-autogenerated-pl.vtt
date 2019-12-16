@@ -1,0 +1,382 @@
+﻿WEBVTT
+
+00:00:01.750 --> 00:00:02.710
+Witamy spowrotem.
+
+00:00:02.710 --> 00:00:09.160
+Wiem, że wszyscy jesteśmy podekscytowani rozpoczęciem kodowania, ale chcę zrobić ostatnie wideo, zanim
+
+00:00:09.160 --> 00:00:13.860
+zaczniemy pracować z jakimś kodem, który jest ekscytującą częścią.
+
+00:00:14.010 --> 00:00:20.820
+Ale jeszcze raz chcę podkreślić, że zanim użyjemy czegoś, musimy zrozumieć, dlaczego i dlaczego
+
+00:00:21.000 --> 00:00:28.780
+potrzebujemy czegoś takiego jak redux, teraz w Internecie, a każda firma, która pracuje z reakcją, ma większość
+
+00:00:28.780 --> 00:00:31.200
+z nich również redoks.
+
+00:00:31.300 --> 00:00:39.220
+Więc usłyszysz ponownie aktywną aplikację redux wspomnianą o tonę podczas oglądania samouczków lub pracy z reakcją, a to
+
+00:00:39.840 --> 00:00:43.150
+dlatego, że naprawdę dobrze ze sobą współpracują.
+
+00:00:43.180 --> 00:00:49.510
+Po prostu przejrzyjmy kilka rzeczy o reduxie, które chcemy mieć pewność, że się uczymy i trochę
+
+00:00:49.510 --> 00:00:49.990
+ostrzeżenia.
+
+00:00:49.990 --> 00:00:55.730
+Niektóre z tych rzeczy mogą ci się spodobać, a może trochę mylące, ale najpierw
+
+00:00:55.730 --> 00:01:01.840
+chcę pokazać slajdy, ponieważ po przejściu przez kodowanie redux, kobiety wracają do nich i upewniają
+
+00:01:02.170 --> 00:01:06.440
+się, że te zasady są stosowane i mają sens ty.
+
+00:01:06.460 --> 00:01:07.930
+Więc weź ze mną.
+
+00:01:07.960 --> 00:01:10.480
+Zaufaj mi, że na koniec wszystko ma sens.
+
+00:01:12.880 --> 00:01:21.820
+Dlaczego chcemy używać redux, o czym już wspominaliśmy, redux jest naprawdę dobry w zarządzaniu stanem
+
+00:01:21.850 --> 00:01:23.470
+szczególnie dużym.
+
+00:01:23.470 --> 00:01:29.500
+Tak więc redox jest biblioteką, z której chcielibyśmy skorzystać, jeśli nasze aplikacje stają się coraz większe i większe i
+
+00:01:29.500 --> 00:01:31.500
+mają większy i większy stan.
+
+00:01:31.570 --> 00:01:37.690
+Pamiętajmy, że chcemy używać narzędzi bazujących na problemach duszy, a redux rozwiązuje problem tego, co
+
+00:01:37.690 --> 00:01:45.760
+dzieje się, gdy aplikacje z reaktywacją stają się naprawdę duże i używanie właśnie tego stanu kropek nie ma już
+
+00:01:45.760 --> 00:01:46.520
+sensu.
+
+00:01:46.540 --> 00:01:48.880
+Robi się coraz bardziej skomplikowany.
+
+00:01:48.880 --> 00:01:51.880
+Pamiętaj, że Briac jest tym, co nazywamy warstwą widoku.
+
+00:01:51.880 --> 00:01:55.780
+Jest naprawdę dobry w widoku, ale niekoniecznie w stanie zarządzania.
+
+00:01:55.900 --> 00:02:00.660
+Więc używaj redux, kiedy sprawy naprawdę się komplikują.
+
+00:02:00.670 --> 00:02:08.670
+Drugi punkt jest przydatny do współdzielenia danych między kontenerami, a to jest kolejna rzecz, gdy
+
+00:02:08.670 --> 00:02:14.920
+projekty stają się duże, kiedy muszą zacząć dzielić stan między kontenerami.
+
+00:02:15.970 --> 00:02:22.870
+W reakcji jest to rzeczywiście trochę trudne i musisz przenieść stan w górę o jedną warstwę, aby mieć
+
+00:02:23.080 --> 00:02:26.290
+rodzica, który może współdzielić stan między tymi dwoma.
+
+00:02:26.710 --> 00:02:33.250
+Ale z reduxem staje się to naprawdę bardzo łatwe, co zamierzamy zademonstrować w naszej sekcji dotyczącej kodowania.
+
+00:02:33.370 --> 00:02:40.590
+I wreszcie, redox ma przewidywalne zarządzanie stanami za pomocą trzech zleceń.
+
+00:02:40.740 --> 00:02:48.200
+Jakie są trzy zasadnicze te trzy zasady w redox naprawdę mają sens.
+
+00:02:48.200 --> 00:02:52.990
+Na koniec, ale nadal chcę je wam przedstawić, abyśmy byli tego świadomi.
+
+00:02:53.960 --> 00:02:57.370
+Pierwsza to idea jednego źródła prawdy.
+
+00:02:57.680 --> 00:03:04.490
+A to jest fantazyjny sposób powiedzenia, że mamy jeden duży obiekt, który opisuje cały
+
+00:03:04.550 --> 00:03:06.010
+stan aplikacji.
+
+00:03:06.020 --> 00:03:14.010
+Pamiętaj, że mieliśmy jeden masowy obiekt stanu, który opisuje wszystko w naszej aplikacji.
+
+00:03:14.170 --> 00:03:21.940
+Mamy więc jedno źródło prawdy, ponieważ reaktywacja reaguje na podstawie stanu, w jakim się znajduje.
+
+00:03:21.940 --> 00:03:29.330
+Możemy mieć tylko jeden duży obiekt, który opisuje, jak powinna wyglądać aplikacja, i zareaguje, zajmie się tym.
+
+00:03:29.330 --> 00:03:37.370
+Drugą zasadą jest idea, że stan jest tylko do odczytu, a to zachęca do czegoś, co
+
+00:03:37.610 --> 00:03:45.380
+nazywa się nieumiejętnością, która nie modyfikuje obiektu i zapobiega nieoczekiwanym błędom w ten sposób.
+
+00:03:45.470 --> 00:03:52.060
+Zatem obiekt stanu, który utworzymy za pomocą reduxa, nigdy nie zostanie zmodyfikowany.
+
+00:03:52.130 --> 00:04:00.870
+Zamiast tego stworzylibyśmy nowy stan po tym, jak każde działanie zostało podjęte przez użytkownika, a ostatecznie trzecią
+
+00:04:00.870 --> 00:04:08.850
+zasadą jest idea, że zmiany są dokonywane tylko przy użyciu czystych funkcji, o których mówiliśmy
+
+00:04:08.850 --> 00:04:10.460
+w poprzednim kursie.
+
+00:04:10.500 --> 00:04:19.080
+Idea, że czysta funkcja jest czymś, co odbiera dane wejściowe i zawsze zamienia wyjście, które jest
+
+00:04:19.110 --> 00:04:20.220
+przewidywalne.
+
+00:04:20.220 --> 00:04:28.760
+Jeśli wprowadzimy to samo, ale 1000 razy, spodziewamy się, że ta funkcja będzie miała 1000 razy ten sam wynik przy
+
+00:04:28.760 --> 00:04:30.220
+użyciu tych zasad.
+
+00:04:30.470 --> 00:04:36.740
+Redux ma kilka nowych słów, które zamierzamy wprowadzić w naszym słowniku, a my będziemy z nimi
+
+00:04:36.740 --> 00:04:38.760
+czuć do końca tej sekcji.
+
+00:04:38.960 --> 00:04:40.360
+Pierwszym z nich jest działanie.
+
+00:04:40.370 --> 00:04:46.890
+Czynność to czynność wykonywana przez użytkownika, na przykład kliknięcie przycisku lub menu rozwijanego.
+
+00:04:47.100 --> 00:04:54.030
+A co dzieje się w redoksie, gdy użytkownik kliknie coś na przycisk i tworzy akcję.
+
+00:04:54.150 --> 00:05:02.010
+Przechodzi przez coś zwanego reduktorem, a reduktor jest po prostu funkcją
+
+00:05:02.010 --> 00:05:10.410
+czysto funkcyjną, która otrzymuje dane wejściowe, które są czynnością, więc użytkownik kliknął przycisk
+
+00:05:10.680 --> 00:05:22.600
+i tworzy wyjście, a to wyjście jest stanem lub sklepem, jak to nazywamy redux, który jest całym stanem aplikacji.
+
+00:05:22.710 --> 00:05:31.290
+W miarę przechodzenia przez funkcję sklep jest aktualizowany i reaguje, ponieważ zauważy, że ta zmiana stanu powoduje
+
+00:05:31.680 --> 00:05:33.640
+zmiany w widoku.
+
+00:05:36.590 --> 00:05:40.520
+Znowu są to wojny, które napotkamy, kiedy zaczynamy kodować.
+
+00:05:40.580 --> 00:05:44.070
+Dlaczego to robisz.
+
+00:05:44.080 --> 00:05:51.270
+Chodzi mi o to, że możemy po prostu mieć akcję, a potem dzieje się akcja, a potem wprowadzamy zmiany.
+
+00:05:52.790 --> 00:05:56.280
+Chodzi mi o to, że tak jak Jake jesteśmy przyzwyczajeni do pracy.
+
+00:05:56.470 --> 00:05:59.200
+I tak, to wygląda na bardziej skomplikowane, prawda?
+
+00:05:59.200 --> 00:06:06.460
+Dodając wszystkie powyższe kroki wcześniej, ale jak widać powyżej, jeśli masz mnóstwo akcji, które dzieją się w nowoczesnych aplikacjach,
+
+00:06:06.520 --> 00:06:11.990
+które są bardzo interaktywne. Dzieje się tak, gdy użytkownicy przewijają akcję, a następnie klikają
+
+00:06:11.990 --> 00:06:16.090
+przycisk, a następnie podświetlają coś i tak dalej. naprzód.
+
+00:06:16.150 --> 00:06:21.640
+Widzisz, że im więcej działań mamy, tym więcej zmian musimy wprowadzić, a te zmiany mogą
+
+00:06:21.640 --> 00:06:26.550
+wyzwalać inne działania, które wyzwalają inne zmiany i tak dalej i tak dalej.
+
+00:06:26.560 --> 00:06:30.090
+Może to być dość skomplikowane, jak widać na tym schemacie.
+
+00:06:31.820 --> 00:06:39.900
+Z reduxem zapewniamy, że wszystkie akcje przechodzą przez jeden reduktor.
+
+00:06:40.280 --> 00:06:49.570
+Wszystko przepływa przez tę funkcję i dzięki tej funkcji zawsze dlatego, że jest czyste, zwraca ten sam stan
+
+00:06:50.290 --> 00:06:58.180
+w oparciu o akcję i aktualizuje sklep, a teraz ten sklep, który reprezentuje wygląd
+
+00:06:58.180 --> 00:07:00.610
+naszej aplikacji, powoduje zmiany.
+
+00:07:01.000 --> 00:07:08.390
+Tak więc leje wszystkie te działania w jeden reduktor, aby wszystko było przewidywalne i przyjemne.
+
+00:07:08.410 --> 00:07:13.600
+Jedna z tych rzeczy, które trudno wyjaśnić bez uprzedniego natrafienia na problem,
+
+00:07:13.600 --> 00:07:16.360
+który pozwoli ci teraz zredukować.
+
+00:07:16.570 --> 00:07:23.260
+I chcę tego nauczyć tylko z przyczyn historycznych, wykorzystując architekturę zimnego strumienia świetlnego,
+
+00:07:24.220 --> 00:07:30.790
+a oprogramowanie służy do tego, abyśmy byli w stanie rozwiązywać problemy w
+
+00:07:30.790 --> 00:07:33.300
+logiczny i zorganizowany sposób.
+
+00:07:33.490 --> 00:07:40.930
+I ten wzór strumienia, który zainspirował bibliotekę redux, ma tę koncepcję posiadania akcji,
+
+00:07:40.930 --> 00:07:49.520
+a następnie dyspozytora, który wywołuje tę akcję do sklepu, który jest naszym stanem, który aktualizuje widok.
+
+00:07:49.790 --> 00:07:53.590
+I jest to jeden sposób, w jaki przepływ danych wszystko płynie w jedną stronę.
+
+00:07:53.660 --> 00:07:59.510
+Jeśli widok zostanie zaktualizowany, wracamy do akcji i ponownie trafiamy do dyspozytora, który
+
+00:07:59.510 --> 00:08:03.250
+wywołuje zmianę do sklepu, a następnie do widoku.
+
+00:08:03.340 --> 00:08:06.380
+I to był całkiem rewolucyjny pomysł.
+
+00:08:07.800 --> 00:08:14.470
+Ponieważ wcześniej mieliśmy coś nazywanego kontrolerem widoku MVC lub modelu.
+
+00:08:14.710 --> 00:08:21.780
+Być może słyszeliście o tym, że całkiem popularna była idea z wzorcem MVC, że
+
+00:08:21.780 --> 00:08:26.780
+mamy akcję i ta czynność jest odczytywana przez kontroler.
+
+00:08:27.120 --> 00:08:34.710
+Znowu inny plik javascript, który wygląda, że użytkownik frakcji kliknął przycisk i na podstawie tego,
+
+00:08:34.710 --> 00:08:38.750
+co mówi kontroler. Aktualizujemy model lub dane.
+
+00:08:38.790 --> 00:08:39.820
+W tym przypadku.
+
+00:08:40.020 --> 00:08:47.490
+Możemy więc myśleć o tym, że zmieniamy coś w modelu, a następnie aktualizujemy widok.
+
+00:08:47.500 --> 00:08:54.280
+Teraz problem z wzorem MBC jest dobrze na tym diagramie mamy tutaj kontroler,
+
+00:08:54.280 --> 00:08:56.890
+który zmienia różne części modelu.
+
+00:08:57.100 --> 00:09:03.020
+Model ten może zmienić widok, który może wywołać inną zmianę.
+
+00:09:03.070 --> 00:09:07.270
+I ten model może zmienić inną część widoku i tak dalej i tak dalej.
+
+00:09:07.270 --> 00:09:14.470
+I mamy to, co widzieliśmy, zanim osiągnęliśmy szaleństwo działań i dokonaliśmy zmian, wszystkie te strzały
+
+00:09:14.470 --> 00:09:17.860
+przecinały się i nie wyglądały zbyt ładnie.
+
+00:09:18.720 --> 00:09:24.480
+I choć może nie być źle, gdy twoje aplikacje są mniejsze, ponieważ twoje aplikacje stają się większe,
+
+00:09:24.480 --> 00:09:28.190
+chcesz zrobić coś takiego, więc jest logiczne i ma sens.
+
+00:09:28.260 --> 00:09:29.970
+I właśnie to chcemy zrobić z architekturą.
+
+00:09:29.970 --> 00:09:37.170
+Chcemy projektować nasze aplikacje w taki sposób, aby rosły, chociaż możemy dodać kilka rzeczy
+
+00:09:37.730 --> 00:09:43.200
+na koniec, wszystko jest łatwiejsze do zrozumienia i zrozumienia.
+
+00:09:43.260 --> 00:09:48.500
+Mamy więc strumień, który wymusza unikalny przepływ danych kierunkowych.
+
+00:09:49.500 --> 00:09:57.770
+Mamy wzór MVC, który zdecydowanie można poprawić, jeśli otrzymasz coś z tego filmu.
+
+00:09:57.780 --> 00:10:06.090
+Chciałbym zrozumieć tylko to, że redukcja pod koniec dnia jest prawie taka sama, jak
+
+00:10:06.090 --> 00:10:14.970
+ten stan DOD w reakcji z trzema dokumentami, które możemy zastąpić tym stanem Staata i
+
+00:10:15.120 --> 00:10:25.050
+teoretycznie usunąć cały ten stan z reakcji i wszystko dzieje się wewnątrz tej biblioteki redux, którą znowu będziemy
+
+00:10:25.050 --> 00:10:25.740
+robić.
+
+00:10:25.920 --> 00:10:29.280
+Ale jedno zastrzeżenie.
+
+00:10:29.500 --> 00:10:39.950
+Technicznie możesz mieć redux ze stanem, ale także zachować trochę reac w komponencie.
+
+00:10:40.060 --> 00:10:47.080
+Redux nie zastępuje całkowicie tego stanu lub tego zestawu Stotts ustawia i reaguje.
+
+00:10:47.110 --> 00:10:53.710
+Możesz nadal używać ich razem, a pokażę ci, kiedy będziesz chciał to zrobić, gdy będzie to dobra decyzja.
+
+00:10:54.130 --> 00:11:00.700
+Ale tak jak powiedziałem wcześniej, bez wchodzenia w żaden kod redoks, może to wyglądać
+
+00:11:00.760 --> 00:11:02.710
+trochę przytłaczająco i myląco.
+
+00:11:02.710 --> 00:11:04.710
+Obiecuję, że wrócimy.
+
+00:11:04.720 --> 00:11:07.590
+Te schematy i rzeczy na końcu będą miały sens.
+
+00:11:07.690 --> 00:11:14.110
+Zanim rzucę kod na ekran, chcę się upewnić, że masz pewne zasady i koncepcje, z
+
+00:11:14.110 --> 00:11:15.420
+których korzystamy.
+
+00:11:15.420 --> 00:11:16.060
+W porządku.
+
+00:11:16.270 --> 00:11:21.250
+Wiem, gdzie myślisz, że Andre jest chory i zmęczony slajdami, mimo że mają ten
+
+00:11:21.250 --> 00:11:25.600
+fajny kolor klasyfikacji, że muszę zobaczyć kod, bo się tutaj nudzę.
+
+00:11:25.640 --> 00:11:30.440
+Cóż, wiesz, na co odpowiedziano ci w następnym filmie.
+
+00:11:30.490 --> 00:11:35.330
+W końcu zamierzamy zacząć pisać kod i dostać się do zabawnych rzeczy.
+
+00:11:36.110 --> 00:11:36.880
+Zobaczę w tym.

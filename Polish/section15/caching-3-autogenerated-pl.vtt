@@ -1,0 +1,403 @@
+﻿WEBVTT
+
+00:00:01.340 --> 00:00:02.120
+Witamy spowrotem.
+
+00:00:02.300 --> 00:00:10.220
+Zakończmy naszą dyskusję na temat zarabiania na stronie w ciemno, ponieważ wiemy już, jak tu robić cachowanie.
+
+00:00:10.220 --> 00:00:15.470
+To naprawdę zależy od twojej aplikacji, jak chcesz ją zaimplementować.
+
+00:00:15.560 --> 00:00:21.950
+Teraz z przeglądarką mamy niezły standard, z którego możemy skorzystać, a ja pokazałem wam dobre
+
+00:00:21.950 --> 00:00:28.880
+strony w naszej aplikacji przyjaciół Robur, jak możemy buforować za pomocą narzędzi do ponownego tworzenia aplikacji, a
+
+00:00:28.880 --> 00:00:30.640
+także pracownika serwisu.
+
+00:00:30.730 --> 00:00:37.880
+Ale co, jeśli faktycznie kontrolujesz serwer w przeciwieństwie do stron Roble France, które są czysto Front-End.
+
+00:00:38.080 --> 00:00:47.190
+Co zrobić, jeśli masz serwer Express i potrzebujesz pamięci podręcznej Cóż, możemy skorzystać z pamięci podręcznej GTP,
+
+00:00:47.520 --> 00:00:51.380
+która jest dostępna we wszystkich przeglądarkach.
+
+00:00:51.460 --> 00:00:56.110
+Widzisz, mamy tu przeglądarkę, niebieski i serwer tutaj.
+
+00:00:56.620 --> 00:01:03.970
+A jeśli wykonamy żądanie pobrania pliku i wskazujemy, że przeglądarka początkowo wysyła żądanie do serwera i
+
+00:01:04.270 --> 00:01:05.140
+serwera.
+
+00:01:05.140 --> 00:01:12.100
+Jeśli pamiętasz, zawsze reagujesz na coś, powiedzmy odpowiedź Jaisalmer, która mówi o sukcesie lub jakimś
+
+00:01:12.100 --> 00:01:13.140
+rodzaju danych.
+
+00:01:13.600 --> 00:01:20.560
+Ale wraz z tą odpowiedzią zwykle wysyłane są również nagłówki, które domyślnie są dostarczane z Expressem.
+
+00:01:20.560 --> 00:01:26.230
+Lub możesz je ręcznie skonfigurować, jeśli masz takie rzeczy jak Content-Length, ale masz te dwie
+
+00:01:26.230 --> 00:01:28.600
+rzeczy, których używamy do buforowania.
+
+00:01:28.600 --> 00:01:36.290
+Jednym z nich jest kontrola pamięci podręcznej, a druga to E-Tec i używanie tych nagłówków, które wysyłamy z serwera.
+
+00:01:36.420 --> 00:01:41.550
+Możemy powiedzieć przeglądarce, w jaki sposób buforować, jak ją przechwycić i kiedy jej nie złapać.
+
+00:01:42.030 --> 00:01:45.690
+Więc zbadajmy ten temat.
+
+00:01:45.770 --> 00:01:50.110
+Mam tutaj bardzo prosty serwer, który stworzyłem.
+
+00:01:50.120 --> 00:01:53.230
+Teraz przejrzyjmy kod.
+
+00:01:53.300 --> 00:01:59.120
+Zwykle lubię pisać to sam, ale to było coś, co zrobiliśmy już wiele razy
+
+00:01:59.120 --> 00:02:03.440
+z serwerami Express, więc nie chcę was zanudzać od początku.
+
+00:02:03.440 --> 00:02:09.300
+Wszystko, na czym nam zależy, to te dwa punkty końcowe, które są nowe i których nie widzieliśmy
+
+00:02:09.860 --> 00:02:13.040
+przed końcowym punktem końcowym i punktem końcowym statycznym.
+
+00:02:13.060 --> 00:02:20.140
+Teraz może być jakiś nowy kod, którego wcześniej nie widzieliśmy, więc przejdźmy do tego.
+
+00:02:20.160 --> 00:02:29.560
+Pierwszy statyczny to punkt końcowy, który dodajemy i jest to oprogramowanie pośrednie. W ten sposób udostępniasz
+
+00:02:29.680 --> 00:02:37.270
+statyczne witryny internetowe pliki ekspresowe lub statyczne i wyrażają wszystko, co mówimy,
+
+00:02:37.270 --> 00:02:45.730
+że obsługują Express, użyj ekspresowej metody statycznej do wyświetlenia pliku to jest w publicznym folderze
+
+00:02:45.730 --> 00:02:53.850
+i widzicie tutaj, że stworzyłem publiczny folder z indeksem, który jest bardzo prosty.
+
+00:02:54.180 --> 00:02:56.030
+Wstyd Alpha.
+
+00:02:56.230 --> 00:03:00.250
+Jeśli wrócę do serwera, zamierzam uczynić to nieco większym.
+
+00:03:00.260 --> 00:03:02.110
+Zamierzam uczynić to nieco większym.
+
+00:03:02.110 --> 00:03:02.740
+Proszę bardzo.
+
+00:03:03.840 --> 00:03:09.030
+Wszystko, o czym mówię, to w tym momencie obsłużyć ten indeks, zaczynając kęs.
+
+00:03:09.300 --> 00:03:21.090
+Dodałem także opcję Max H i ekspresowo, w jaki sposób definiujesz kontrolę cache Hetter ma po prostu powiedzieć, co
+
+00:03:21.750 --> 00:03:26.190
+oznacza maksymalny wiek i maksymalny wiek.
+
+00:03:26.220 --> 00:03:31.530
+Ile sekund chcesz, aby przeglądarka zapamiętała tę zawartość.
+
+00:03:31.560 --> 00:03:33.250
+Te dane, które wysyłamy.
+
+00:03:33.720 --> 00:03:41.100
+Tak więc w naszym przypadku mówimy, że chcę, aby MacSpeech był dwie godziny i mogę powiedzieć dwie godziny lub dwa dni w roku, lub
+
+00:03:41.280 --> 00:03:42.240
+mogę to zrobić.
+
+00:03:42.330 --> 00:03:44.880
+Mogę nadać mu numer, który jest w milisekundach.
+
+00:03:46.060 --> 00:03:48.290
+I myślę, że zostawmy to na dwie godziny.
+
+00:03:48.310 --> 00:03:53.280
+W tym momencie mówię, że chcesz zapamiętać ten zasób przez dwie godziny.
+
+00:03:54.580 --> 00:03:56.350
+Więc przetestujmy to.
+
+00:03:56.350 --> 00:03:58.570
+To prosty serwer, który to uruchamia.
+
+00:03:58.690 --> 00:04:01.730
+To mi posłuży za nasz indeks Alpha.
+
+00:04:02.020 --> 00:04:02.820
+Spójrzmy.
+
+00:04:05.240 --> 00:04:14.770
+Jeśli przejdę do localhosta i przejdziemy do stanu statycznego i punktu, w którym pojawia się moja strona internetowa, która mówi
+
+00:04:14.770 --> 00:04:21.020
+"Catch Me Baby One More Time", jeśli otworzę narzędzia programistyczne i odświeżę.
+
+00:04:21.230 --> 00:04:30.260
+Widzę, że ten statyczny plik tutaj zwrócił trzy lub cztery zamiast 200.
+
+00:04:30.270 --> 00:04:35.430
+Teraz trzy lub cztery, jeśli najecham na niego, zobacz, że nie jest zmodyfikowany.
+
+00:04:36.250 --> 00:04:41.400
+A jeśli znów się odświeżę, to słowo Keefa nie zostało zmodyfikowane.
+
+00:04:41.630 --> 00:04:46.700
+Jeśli wykonuję intensywne odświeżanie odświeżenia z pamięcią podręczną MT-NW, otrzymam 200.
+
+00:04:46.700 --> 00:04:50.190
+Oznacza to, że przeszli całą drogę na serwer iz powrotem.
+
+00:04:50.210 --> 00:04:52.390
+I zwróć mi tę informację.
+
+00:04:52.400 --> 00:05:00.860
+Więc co oznaczają trzy lub cztery niezmodyfikowane, jeśli otworzę naszą statyczną zawartość i przewijam do nagłówków Widzę, że oto mój
+
+00:05:01.940 --> 00:05:05.710
+wielki nagłówek kontroli pamięci podręcznej, który jest Avocet.
+
+00:05:05.720 --> 00:05:09.140
+A więc dwie godziny to tyle sekund.
+
+00:05:09.290 --> 00:05:19.070
+Widzimy również pole e-TAG, a trzy lub cztery niezmodyfikowane są tym, co otrzymujemy, gdy e-TAG generowany automatycznie przez Express mówi, że nic
+
+00:05:19.070 --> 00:05:26.120
+się nie zmieniło w tym pliku i mówi, że zwykle z czymś, co jest hashiem, jest
+
+00:05:26.120 --> 00:05:32.590
+losowo generowana liczba, która jeśli nic się nie zmieni w naszym pliku pliku indeksu
+
+00:05:32.810 --> 00:05:34.200
+pozostanie taka sama.
+
+00:05:34.220 --> 00:05:40.420
+Więc jeśli pamiętamy ten numer, zamierzam zmienić coś w naszym indeksie na podkładce Alpha. Idźmy do indeksu,
+
+00:05:40.420 --> 00:05:44.350
+który A. P. M. i dodaj tutaj kilka wykrzykników.
+
+00:05:44.410 --> 00:05:46.210
+Uratuję.
+
+00:05:46.430 --> 00:05:49.720
+A teraz, kiedy wracam i odświeżam,
+
+00:05:52.410 --> 00:05:54.030
+dostaję 200.
+
+00:05:54.360 --> 00:05:54.900
+Ponownie,
+
+00:05:58.520 --> 00:06:01.530
+ponieważ mój e-tag jest teraz zupełnie inny.
+
+00:06:01.670 --> 00:06:03.350
+Aby upewnić się, że zrobiliśmy to dobrze.
+
+00:06:03.350 --> 00:06:04.690
+Wciśnij enter ponownie.
+
+00:06:05.610 --> 00:06:14.010
+I dostaję trzy lub cztery, ponieważ teraz już zdążyłem spieniężyć te informacje, ten e-tag jest taki sam, jeśli
+
+00:06:14.040 --> 00:06:20.980
+wrócę i zmienię go na okres, w którym wracam i odświeżam, teraz mam 200.
+
+00:06:21.180 --> 00:06:24.400
+I e-TAG ponownie kończy się na 3 0.
+
+00:06:27.600 --> 00:06:34.490
+Zmiana znaku wykrzyknika pięć odświeżyć e-TAG teraz, a następnie 5.
+
+00:06:36.960 --> 00:06:42.430
+W porządku, to trzy lub cztery niezmodyfikowane żądanie.
+
+00:06:42.580 --> 00:06:49.870
+A co to oznacza, że przeglądarka wysyła to żądanie do mojego serwera ekspresowego serwera i mówi: Hey, ale mam tę rzecz
+
+00:06:49.870 --> 00:06:56.620
+e-tagu, że zasób został zmieniony. Ekspresowy serwer mówi: nie, nie, nie, to jest ten tag, że mam plik nie
+
+00:06:56.620 --> 00:07:01.030
+zmienił się więc możesz śmiało korzystać z cokolwiek w swojej pamięci podręcznej.
+
+00:07:01.030 --> 00:07:04.500
+To jest głęboka pamięć podręczna tej witryny.
+
+00:07:04.840 --> 00:07:06.240
+Jakie to jest świetne.
+
+00:07:06.250 --> 00:07:13.270
+Oto interesująca część, ponieważ zbuforowałem ten plik lub ten punkt końcowy.
+
+00:07:13.270 --> 00:07:21.290
+To daje mi nie wstyd, że wpadnę na dwie godziny, jeśli teraz zamknę to i otworzę nowe okno.
+
+00:07:21.400 --> 00:07:26.980
+I po prostu idę do localhosta trzy tysiące dwa statyczne i najpierw
+
+00:07:26.980 --> 00:07:31.090
+otwieram narzędzia programistyczne, a ja przechodzę do statycznego.
+
+00:07:31.160 --> 00:07:32.980
+Mam 200.
+
+00:07:33.200 --> 00:07:35.130
+Ale jest trochę szaro.
+
+00:07:35.240 --> 00:07:39.840
+A jeśli przejdę całą drogę w prawo, to widzę, że pochodzi z dysku.
+
+00:07:40.190 --> 00:07:46.820
+Ponieważ przechowujemy to w pamięci podręcznej, jeśli nie odwiedzam tej witryny przez dwie godziny i wrócę, nie dostanę
+
+00:07:46.820 --> 00:07:50.960
+tego, ponieważ powiedziałem mu: Hej, chciałem tylko gotówkę na dwie godziny.
+
+00:07:50.960 --> 00:07:53.210
+Bardzo bardzo fajne.
+
+00:07:53.210 --> 00:07:55.830
+Teraz jako dodatkowy przykład.
+
+00:07:55.910 --> 00:08:00.840
+A także po prostu wprowadzenie nieco nowej składni, która jest nieco bardziej zaawansowana.
+
+00:08:00.890 --> 00:08:04.270
+To, co tu mamy, nie jest wstydem.
+
+00:08:04.310 --> 00:08:08.840
+Wszystko, co mogę zrobić w podobny sposób również w ten sposób.
+
+00:08:08.850 --> 00:08:16.880
+Powiedziałem nagłówki, więc używam nagłówków odpowiedzi i używam Express 4. 00 API tutaj.
+
+00:08:16.880 --> 00:08:20.750
+Express zmienił to w zależności od wersji, której używasz, więc po prostu prowadzisz.
+
+00:08:20.750 --> 00:08:23.390
+Musisz przejść do dokumentacji Express.
+
+00:08:23.390 --> 00:08:26.210
+Może to być ustawione nagłówki lub inna metoda.
+
+00:08:26.780 --> 00:08:29.780
+Ale mogę zmienić nagłówek, by powiedzieć sterowanie pamięcią podręczną.
+
+00:08:29.780 --> 00:08:38.660
+Chcę, aby ten zasób był publiczny i miałby maksymalny wiek. Wierzę, że to może być jeden dzień. Mogę też powiedzieć,
+
+00:08:38.660 --> 00:08:41.590
+że nagłówek to podatek od treści.
+
+00:08:41.720 --> 00:08:48.230
+A potem wysyłam odpowiedź, używając tego, co nazywamy nowym buforem, i to jest coś,
+
+00:08:48.410 --> 00:08:57.950
+co przychodzi w węźle, a bufor pozwala nam wysłać ciągi shemale przez kabel, aby mogły być odczytane przez przeglądarkę i pod
+
+00:08:57.980 --> 00:08:58.820
+maską.
+
+00:08:58.820 --> 00:09:01.130
+Oto, czym jest serwowanie plików statycznych.
+
+00:09:01.130 --> 00:09:07.550
+Używa tego nowego bufora, ale jeśli przejdę teraz do najwyższego punktu końcowego i zapamiętam
+
+00:09:07.550 --> 00:09:17.800
+tę Stronę Max, którą właśnie utworzyłem 6 4 0 0 Pójdę do najwyższego punktu końcowego i widzę, że najwyższy punkt końcowy dostaję Siła testowa,
+
+00:09:17.800 --> 00:09:25.060
+którą właśnie wysłałem, a potem również przyjrzę się kontroli tej pamięci podręcznej w wieku 8 6 4
+
+00:09:25.090 --> 00:09:30.320
+0 0 i mam również swój e-tag i tam go masz.
+
+00:09:30.550 --> 00:09:38.560
+Jeśli wrócę tutaj, aby przejść do Product Hunt i tego produktu i jeśli otworzę kartę Network, mamy teraz pojęcie
+
+00:09:38.710 --> 00:09:40.930
+o tym, co robi.
+
+00:09:41.020 --> 00:09:48.480
+Jeśli przewińę tutaj w górę, aby na przykład powiedzieć stronę pocztową, widzę, że wszystko na to wygląda.
+
+00:09:48.490 --> 00:09:59.460
+Używając CloudFlare jako ich CDN używają kodowania treści B. R. ale jeśli przewińę w dół, widzę również, że mają
+
+00:09:59.460 --> 00:10:02.130
+kontrolę pamięci podręcznej Max h 0.
+
+00:10:02.130 --> 00:10:08.190
+Oznacza to, że nie chcą buforować, a teraz mamy sposób, aby przeczytać nagłówki i zrozumieć, co
+
+00:10:08.280 --> 00:10:11.850
+się dzieje, a ich interfejs API nie oznacza podejrzanych.
+
+00:10:11.910 --> 00:10:14.150
+Tak widzę to.
+
+00:10:14.160 --> 00:10:17.270
+O tak, zdecydowanie to przechowują.
+
+00:10:17.430 --> 00:10:20.300
+Jest również powiązany z tagiem e-tag.
+
+00:10:20.520 --> 00:10:27.670
+I możesz zacząć rozumieć, co robi każda strona internetowa pod względem buforowania, ale aby ją
+
+00:10:27.670 --> 00:10:33.880
+zawrzeć, jeśli chodzi o buforowanie, możesz zaimplementować na wszystkich poziomach swojego stosu.
+
+00:10:33.910 --> 00:10:35.070
+To nie tylko jedno miejsce.
+
+00:10:35.080 --> 00:10:36.610
+To nie tylko przeglądarka.
+
+00:10:36.640 --> 00:10:43.540
+Nie tylko z płytą CD i pamięcią podręczną może przechowywać pamięć podręczną w dowolnym miejscu, które uznasz za odpowiednie do twojej aplikacji.
+
+00:10:43.540 --> 00:10:49.570
+Najprawdopodobniej zaczniesz od czegoś podobnego do front-endu z kontrolką pamięci podręcznej i znacznikami
+
+00:10:49.570 --> 00:10:55.810
+oraz używając pracowników usługowych, może używając CloudFlare CDN, a następnie możesz chcieć przenieść się do
+
+00:10:55.810 --> 00:11:03.050
+rzeczywistości używając rattus do buforowania zapytań do bazy danych lub buforowania drogich wywołań API, które zajmuje dużo czasu.
+
+00:11:03.130 --> 00:11:10.060
+To naprawdę zależy od ciebie jako programisty do implementacji, ale jak wiemy, jeśli chodzi o wydajność, chcesz
+
+00:11:10.060 --> 00:11:16.660
+tylko zacząć pracę nad problemem, być może rozwiązaniem z pamięcią podręczną, gdy istnieje mierzalny test, który
+
+00:11:16.660 --> 00:11:23.140
+możemy wdrożyć, abyśmy mogli na pewno wiedzieć że jeśli zaimplementujemy tę metodę pamięci podręcznej, która
+
+00:11:23.140 --> 00:11:29.290
+znacząco poprawi naszą aplikację i nasze doświadczenie użytkownika, zobaczę ją w następnym filmie.

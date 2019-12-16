@@ -1,0 +1,448 @@
+﻿WEBVTT
+
+00:00:01.220 --> 00:00:03.020
+Și bine ai venit înapoi.
+
+00:00:03.020 --> 00:00:11.230
+Acum că avem redux și Riak redux instalat Să începem să scriem un cod și să introducem redux.
+
+00:00:11.430 --> 00:00:19.700
+Acum, primul lucru pe care vrem să-l facem este să creezi ceva numit acțiune și, de asemenea, un reducător.
+
+00:00:19.980 --> 00:00:30.040
+Dacă vă aduceți aminte de această diagramă am menționat că Reebok are aceste două componente o acțiune și o reducere.
+
+00:00:30.050 --> 00:00:33.820
+Așa că vom construi cele două și vom arăta ce vreau să spun.
+
+00:00:35.460 --> 00:00:39.440
+Primul lucru pe care vrem să îl facem este să creați un fișier nou.
+
+00:00:39.630 --> 00:00:45.930
+Să o păstrăm în dosarul sursă și vom spune că acest lucru se va numi Acțiuni
+
+00:00:47.940 --> 00:00:54.020
+gândite de James și de aici vom crea o acțiune utilizând doar javascript simplu.
+
+00:00:54.090 --> 00:01:03.680
+Vom spune că exportul Konst și prima acțiune pe care o vom face este câmpul de căutare.
+
+00:01:03.750 --> 00:01:09.810
+Amintește-ți că atunci când introducem în caseta de căutare pe care o putem filtra, roboții
+
+00:01:09.810 --> 00:01:17.100
+vor spune că acțiunea care se află în căutarea pe care am avut-o în aplicația re-act va spune
+
+00:01:17.100 --> 00:01:31.180
+că aceasta va fi numită Setare câmp de căutare și acest câmp de căutare va primiți o intrare de text pe care utilizatorul o tipărește și pentru că dorim să păstrăm acest lucru cât
+
+00:01:31.180 --> 00:01:37.840
+mai mic posibil, îl putem împacheta în paranteze curbate astfel încât să putem evita declarația de
+
+00:01:37.840 --> 00:01:38.540
+returnare.
+
+00:01:38.560 --> 00:01:45.100
+Ne întoarcem doar un obiect și acest obiect va
+
+00:01:47.810 --> 00:01:54.430
+avea un tip numit să spunem că schimbăm câmpul de căutare.
+
+00:01:57.540 --> 00:02:06.070
+Și vom avea și o sarcină utilă numită impozit.
+
+00:02:06.210 --> 00:02:13.980
+Deci, aceasta este o acțiune pe care se va numi câmpul de căutare setat va lua taxat ceea ce este ceea ce
+
+00:02:13.980 --> 00:02:20.060
+utilizatorul introduce și va reveni la un obiect care are un tip de câmp de căutare modificat.
+
+00:02:20.460 --> 00:02:28.200
+Deci, aceasta este acțiunea care este luată și va trimite și utilajul de plată este un nume comun
+
+00:02:28.200 --> 00:02:36.750
+care este folosit și redox, astfel încât să ne obișnuiți cu acea sarcină utilă trimitem orice informație este necesară pentru
+
+00:02:36.750 --> 00:02:41.680
+a merge la producătorul care tocmai merge indiferent de intrarea utilizatorului.
+
+00:02:42.750 --> 00:02:43.120
+In regula.
+
+00:02:43.150 --> 00:02:45.220
+Tocmai am creat acțiunea noastră.
+
+00:02:45.340 --> 00:02:46.030
+Asta e.
+
+00:02:46.180 --> 00:02:47.800
+Asta e acțiunea noastră.
+
+00:02:47.800 --> 00:02:49.390
+Frumos și simplu.
+
+00:02:49.390 --> 00:02:57.640
+Acum, aici am capitalizat acest lucru pentru că este o constantă și o constantă este de obicei capitalizată.
+
+00:02:57.640 --> 00:03:07.720
+Toate capacele din javascript sunt doar cele standard, dar îmi place să folosesc o variabilă constantă reală, deoarece doar cu un șir pot să
+
+00:03:07.720 --> 00:03:12.960
+spunem ceva greșit și s-ar putea să nu ajungem la aer.
+
+00:03:13.000 --> 00:03:18.220
+Dar dacă folosim o variabilă și ne spunem greșit, aceasta va avea de fapt o eroare atunci când executăm aplicația.
+
+00:03:18.220 --> 00:03:21.210
+Deci este un mic truc frumos.
+
+00:03:21.220 --> 00:03:27.990
+Și cele mai multe demo-uri redox au un cost și urmează perete în cazul în care acestea urmăresc toate aceste acțiuni.
+
+00:03:28.240 --> 00:03:34.480
+Și este de asemenea frumos să ai un fișier în care să vezi ce acțiuni ai.
+
+00:03:34.480 --> 00:03:39.630
+Linie după linie, deoarece majoritatea aplicațiilor vor avea mai mult decât o singură acțiune după cum veți vedea.
+
+00:03:39.700 --> 00:03:44.010
+Deci, să creăm un fișier nou și îl vom numi constant.
+
+00:03:44.250 --> 00:03:46.130
+Da.
+
+00:03:46.330 --> 00:03:51.390
+Și aici, în termen de export doar Să facem un pic mai mare, ca să poți vedea.
+
+00:03:51.500 --> 00:03:52.740
+Acolo te duci.
+
+00:03:52.780 --> 00:03:58.650
+Vom exporta o schimbare constantă.
+
+00:03:59.690 --> 00:04:02.070
+Câmpul de căutare.
+
+00:04:02.310 --> 00:04:04.290
+Și asta ne va egala puterea.
+
+00:04:05.180 --> 00:04:10.250
+Din nou, exact același lucru schimbare domeniul de căutare a cumpărat șirul pare un pic
+
+00:04:13.060 --> 00:04:16.520
+redundant, dar este doar o bună practică de a avea.
+
+00:04:16.810 --> 00:04:23.380
+Deci, acum că avem această variabilă care este o constantă și pentru că o exporăm putem
+
+00:04:23.380 --> 00:04:24.510
+să o
+
+00:04:29.680 --> 00:04:38.070
+importăm aici și vom spune că schimbăm câmpul de căutare asigură-te că nu există erori de ortografie în acest fel și
+
+00:04:38.490 --> 00:04:41.080
+vom spune că importul din fișierul Constans.
+
+00:04:45.710 --> 00:04:49.630
+Și să facem asta puțin mai mic, așa că totul se potrivește.
+
+00:04:49.710 --> 00:04:52.930
+Și tu te duci.
+
+00:04:52.940 --> 00:04:59.640
+Deci, acum putem folosi câmpul de căutare modificat în locul textului.
+
+00:04:59.780 --> 00:05:00.660
+Și tu te duci.
+
+00:05:00.730 --> 00:05:08.650
+Avem un fișier de acțiuni frumos și bun cu acțiunea câmpului de căutare setat și vă puteți imagina aici pe măsură ce luăm tot mai
+
+00:05:08.650 --> 00:05:14.680
+multe acțiuni pe care le putem continua să adăugăm lucruri și continuăm să adăugăm toate constantele de care
+
+00:05:14.680 --> 00:05:18.460
+avem nevoie pentru acțiunile pe care le primește aplicația noastră .
+
+00:05:18.460 --> 00:05:18.660
+In regula.
+
+00:05:18.670 --> 00:05:22.020
+Următorul lucru pe care îl amintim cu redox este după acțiune.
+
+00:05:22.030 --> 00:05:30.190
+Avem de asemenea un reductor pe care l-am spus că este o funcție mare care citește acțiunea și scuipă
+
+00:05:30.190 --> 00:05:32.420
+ceea ce numim stat.
+
+00:05:32.530 --> 00:05:38.560
+Așa că hai să facem asta să creăm un alt fișier
+
+00:05:42.040 --> 00:05:53.670
+aici, îl vom numi reductori supărați și credem că aici să creăm asta sau vom începe mai întâi spunând statul inițial Konst.
+
+00:05:54.050 --> 00:05:56.030
+Deci avem nevoie de un punct de plecare.
+
+00:05:56.030 --> 00:06:00.790
+Așadar, este posibil să vă amintiți în dosarul nostru fișierul dodgiest cu creați reactivarea.
+
+00:06:00.860 --> 00:06:08.220
+Dacă deschid acest lucru, vedem că avem starea inițială cu câmpul de căutare care este necompletat.
+
+00:06:08.240 --> 00:06:15.400
+Deci, similar cu faptul că trebuie să spunem că etapa inițială aici va avea câmpul de căutare care este
+
+00:06:18.290 --> 00:06:20.390
+egal cu un șir gol.
+
+00:06:22.080 --> 00:06:23.510
+Deci, asta e starea inițială.
+
+00:06:23.550 --> 00:06:28.050
+Acesta este obiectul inițial pe care îl vom avea în magazinul redux.
+
+00:06:28.530 --> 00:06:31.850
+Și acum trebuie să creăm din nou reductorul.
+
+00:06:31.920 --> 00:06:38.190
+Amintiți-vă că este o funcție foarte ușor de făcut din nou pentru că o vom folosi în alte locuri.
+
+00:06:38.190 --> 00:06:46.780
+O vom exporta și vom spune că acest lucru va fi numit un robot de căutare, deoarece aceasta este
+
+00:06:46.780 --> 00:06:52.640
+acțiunea care o face că va căuta roboți folosind câmpul de căutare.
+
+00:06:52.660 --> 00:06:58.980
+Deci, aceste roboți de căutare își reduc binele în câteva lucruri.
+
+00:06:59.030 --> 00:07:09.470
+Mai întâi este un stat care este starea aplicației noastre, iar apoi cel de-al doilea lucru este acțiunea.
+
+00:07:09.490 --> 00:07:11.720
+Așa sa întâmplat.
+
+00:07:13.630 --> 00:07:20.440
+Și folosind ESX să-i dăm doar parametrii impliciți pentru a ne asigura că dacă acesta este gol sau acțiunea este
+
+00:07:20.440 --> 00:07:21.890
+goală nu intrăm acolo.
+
+00:07:21.910 --> 00:07:30.340
+Deci, vom spune că statul va fi starea inițială, motiv pentru care avem aici și apoi acțiunea va fi doar
+
+00:07:30.340 --> 00:07:32.110
+un obiect gol.
+
+00:07:32.110 --> 00:07:38.790
+Amintiți-vă că acțiunile noastre sunt doar obiecte care se întorceau.
+
+00:07:38.820 --> 00:07:48.690
+Deci, de aici, folosind funcțiile de aer, avem primul nostru reductor și reducem forța de forfecare, ceea ce fac ei, primesc această intrare
+
+00:07:48.780 --> 00:07:52.190
+a unei stări și a unei acțiuni.
+
+00:07:52.230 --> 00:07:58.680
+Și dacă le pasă de acțiunea pe care o primesc în cazul nostru, dacă ne pasă dacă primim
+
+00:07:58.680 --> 00:08:04.980
+orice acțiune legată de căutarea robotului, vom face ceva ce vom acționa asupra statului așa cum mergem facem
+
+00:08:04.980 --> 00:08:09.820
+că vom folosi o declarație de comutare și vom spune în cadrul instrucțiunii
+
+00:08:09.820 --> 00:08:12.960
+comutator că vom face un tip de acțiune să
+
+00:08:15.650 --> 00:08:17.370
+rețină tipul de acțiune.
+
+00:08:17.480 --> 00:08:20.280
+Asta e ceva pe care îl folosim în acțiunea lui Dodge.
+
+00:08:20.510 --> 00:08:25.480
+Rețineți că avem un câmp de căutare pentru schimbare.
+
+00:08:25.610 --> 00:08:31.390
+Privind la asta, se pare că vom avea grijă de tipul de acțiune al căutării în câmpul de căutare.
+
+00:08:31.430 --> 00:08:41.910
+Deci, să importăm dosarul Constance aici pentru redox, deoarece săracii noștri sunt gata, de asemenea.
+
+00:08:42.050 --> 00:08:51.530
+Și în interiorul nostru putem spune că în cazul în care tipul de acțiune.
+
+00:08:51.730 --> 00:08:54.730
+Omule să lăsăm doar să schimbăm câmpul de căutare.
+
+00:08:56.370 --> 00:09:07.100
+Dacă acest lucru este bine, vrem să readucăm un nou stat și acest lucru se întoarce la cele trei principii despre care am
+
+00:09:07.100 --> 00:09:08.060
+vorbit.
+
+00:09:08.060 --> 00:09:08.850
+Haideți să aruncăm o privire.
+
+00:09:10.240 --> 00:09:15.610
+Cele trei principii în care reacționăm este că avem singura sursă de adevăr, care este un obiect mare care
+
+00:09:15.610 --> 00:09:16.690
+descrie aplicația noastră.
+
+00:09:16.840 --> 00:09:22.490
+Așa că avem variabila noastră de stare inițială pe care am spus că statul este doar citit.
+
+00:09:22.540 --> 00:09:26.880
+Asta înseamnă că nu putem niciodată să modificăm obiectul.
+
+00:09:26.900 --> 00:09:37.170
+Singurul lucru pe care îl putem face este să creeze un obiect nou care are același lucru ca înainte de obiectul anterior starea anterioară pe
+
+00:09:37.200 --> 00:09:43.670
+care am avut-o cu orice modificări pe care le-am avut astfel de stare este Read-Only.
+
+00:09:43.740 --> 00:09:50.190
+Și apoi cel de-al treilea lucru este că schimbările se efectuează doar prin utilizarea unor funcții pure. Îmi
+
+00:09:50.430 --> 00:09:59.520
+amintesc că funcțiile pure sunt funcții care primesc un fel de intrare la fel ca în reductorul nostru și retur o ieșire care nu are
+
+00:09:59.520 --> 00:10:00.440
+efecte secundare.
+
+00:10:00.450 --> 00:10:03.120
+Asta nu modifică nimic.
+
+00:10:03.300 --> 00:10:07.940
+De fiecare dată când introducem o intrare, ea oferă întotdeauna aceeași ieșire.
+
+00:10:08.400 --> 00:10:15.310
+Așadar, bazându-ne pe aceste principii, dacă ne întoarcem, știm că vrem ca această diminuare să fie o
+
+00:10:15.310 --> 00:10:22.270
+funcție pură, care are un fel de contribuție și ar trebui să revină la o nouă stare și la
+
+00:10:22.270 --> 00:10:32.800
+modul în care facem acest lucru fără a face doar câmpul de căutare Daut de stat și modificarea acelei proprietăți pe care o vom face pentru atribuirea punctelor obiect.
+
+00:10:32.960 --> 00:10:43.970
+Și felul în care facem acest lucru este parantezele curbate în virgulă cu statul pe care îl primim, care este starea inițială începutul și
+
+00:10:43.970 --> 00:10:50.270
+apoi în cele din urmă ceea ce vrem să schimbăm în obiectul respectiv.
+
+00:10:50.270 --> 00:10:58.280
+În cazul nostru, suntem interesați de schimbarea proprietății câmpului de căutare, iar proprietatea câmpului
+
+00:10:58.280 --> 00:11:03.690
+de căutare va avea acțiunea Daut a acțiunii.
+
+00:11:03.790 --> 00:11:06.800
+Din nou, permiteți-mi să fac acest lucru puțin mai mic.
+
+00:11:06.970 --> 00:11:13.920
+Vom reveni la o nouă stare, după cum puteți vedea aici cu design-ul obiectului, care va avea totul
+
+00:11:13.920 --> 00:11:14.730
+în stat.
+
+00:11:14.880 --> 00:11:22.050
+În plus, vom actualiza proprietatea câmpului de căutare cu proprietatea nouă pe care o avem cu acțiunea
+
+00:11:22.150 --> 00:11:23.070
+încărcăturii utile.
+
+00:11:23.130 --> 00:11:28.760
+Amintiți-vă că acțiunile au două lucruri care trimit un obiect cu tipul unui obiect cu sarcină utilă.
+
+00:11:28.780 --> 00:11:32.310
+Dacă ne întoarcem cu tipul de mare și cu sarcina utilă.
+
+00:11:32.450 --> 00:11:37.370
+Deci, aceasta este pur și simplu spunând că am primit o acțiune numită Schimbarea Sarsfield.
+
+00:11:37.490 --> 00:11:45.280
+Dacă este cazul, atunci returnați noua stare cu sarcină utilă acționată indiferent de ce a intrat utilizatorul.
+
+00:11:45.320 --> 00:11:50.510
+Știu că poate deveni puțin confuză, dar aceasta este doar sintaxa standard redux la care trebuie să
+
+00:11:50.510 --> 00:11:51.330
+te obișnuiești.
+
+00:11:52.550 --> 00:11:53.400
+Doar un heads-up.
+
+00:11:53.400 --> 00:11:57.050
+Există un alt mod de a face acest lucru pe care unii oameni le plac și sunt mai curate.
+
+00:11:57.050 --> 00:12:05.760
+O altă opțiune este de a face operațiunea de distrugere a obiectelor sau de împrăștiere a obiectelor, ceea ce înseamnă că putem face ceva de genul
+
+00:12:06.150 --> 00:12:06.810
+asta.
+
+00:12:10.550 --> 00:12:12.370
+Care funcționează frumos, de asemenea.
+
+00:12:12.410 --> 00:12:15.230
+Pentru moment, totuși, trebuie să ne păstrăm așa cum
+
+00:12:18.720 --> 00:12:23.960
+am avut și apoi să ne amintim întotdeauna că o funcție pură trebuie întotdeauna să returneze ceva.
+
+00:12:23.960 --> 00:12:39.640
+Deci, în cazul în care tipul de acțiune nu este acest lucru, de asemenea, dorim să spunem implicit ca întotdeauna să revenim doar la stare.
+
+00:12:39.640 --> 00:12:40.130
+Acolo te duci.
+
+00:12:40.150 --> 00:12:41.790
+Am creat o redo.
+
+00:12:42.040 --> 00:12:44.830
+Aceasta este o funcție pură.
+
+00:12:44.830 --> 00:12:52.990
+Acum, am putea folosi o declarație if dacă vrem, dar îmi place să folosesc comutatorul și documentația Riak, de asemenea,
+
+00:12:52.990 --> 00:12:59.550
+recomandă comutarea pentru că aveți mai multe cazuri de acțiuni multiple care acționează asupra reductorului
+
+00:12:59.560 --> 00:13:06.040
+de căutare roboți și este mult mai ușor să adăugați și să adăugați pe diferite
+
+00:13:06.250 --> 00:13:08.590
+lucruri care afectează starea robotului.
+
+00:13:08.590 --> 00:13:09.100
+In regula.
+
+00:13:09.160 --> 00:13:10.830
+Asta nu a fost prea rău.
+
+00:13:10.930 --> 00:13:21.170
+Am creat un reductor cu o stare inițială și avem și constantele și acțiunile noastre.
+
+00:13:21.300 --> 00:13:28.530
+Așa că diagrama pe care ți-am arătat-o ​​începe să facă ceva mai multă sens în următorul videoclip.
+
+00:13:28.530 --> 00:13:33.870
+Să le conectăm de fapt, pentru că acum nu este legată de nimic care nu este conectat
+
+00:13:33.870 --> 00:13:36.520
+la aplicațiile noastre pentru a ne re-acționa.
+
+00:13:36.570 --> 00:13:39.850
+Tocmai am creat aceste fișiere care trăiesc singure.
+
+00:13:40.380 --> 00:13:42.030
+Ne vedem în următorul.
+
+00:13:42.050 --> 00:13:42.590
+Pa! Pa.

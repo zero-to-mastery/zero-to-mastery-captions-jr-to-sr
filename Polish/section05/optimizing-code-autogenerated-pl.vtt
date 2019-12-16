@@ -1,0 +1,397 @@
+﻿WEBVTT
+
+00:00:01.190 --> 00:00:02.340
+Witam ponownie.
+
+00:00:02.350 --> 00:00:05.560
+Porozmawiajmy trochę o optymalizacji kodu.
+
+00:00:06.380 --> 00:00:15.670
+Jeśli pamiętasz z naszej krytycznej ścieżki renderowania, rozmowa javascript uruchamia się lub uruchamia i pozwala użytkownikom
+
+00:00:15.760 --> 00:00:26.950
+na interakcję ze stroną internetową, np. Klikając menu rozwijane lub dodając elementy do listy, aby utworzyć listę po pobraniu jednego
+
+00:00:27.010 --> 00:00:35.550
+z najcięższych kosztów javascriptu jest czas na javascript silnik, który znajduje się wewnątrz przeglądarki,
+
+00:00:35.560 --> 00:00:44.100
+aby przeanalizować i skompilować ten kod, który ma odczytać i zrozumieć kod, który jest
+
+00:00:44.250 --> 00:00:44.900
+tutaj.
+
+00:00:45.870 --> 00:00:53.550
+Na szczęście dla nas z przeglądarkami takimi jak chrome możemy użyć ich narzędzi programistycznych do analizy analizy i
+
+00:00:53.550 --> 00:00:54.440
+kompilacji.
+
+00:00:54.900 --> 00:00:55.780
+Spójrzmy.
+
+00:00:57.480 --> 00:01:04.620
+Mam tu otwartą stronę na Twitterze, ale jeśli otworzę narzędzia programistyczne i przejdę
+
+00:01:04.620 --> 00:01:13.900
+do zakładki wydajności, mogę pobić rekord, aby zobaczyć, co dzieje się za kulisami pod względem wydajności na tej
+
+00:01:13.900 --> 00:01:14.920
+stronie.
+
+00:01:14.920 --> 00:01:21.240
+Tak więc zamierzam pobić rekord, a następnie odświeżyć stronę po jej zakończeniu.
+
+00:01:21.380 --> 00:01:22.130
+Orzeźwiający.
+
+00:01:22.160 --> 00:01:34.470
+Zamierzam przestać, a teraz jest w stanie wydobyć to, co się wydarzyło w tym czasie, który nagrywaliśmy.
+
+00:01:34.510 --> 00:01:38.720
+Patrzenie na to może być trochę przytłaczające.
+
+00:01:38.860 --> 00:01:45.840
+Wiele osób ma dużo wykresów i jest dużo do zrobienia.
+
+00:01:46.100 --> 00:01:49.750
+Ale chcę pokazać wam główne części, które mogą być dla was interesujące.
+
+00:01:50.620 --> 00:01:57.070
+Pierwszą z nich jest ta oś czasu naszego nagrania i widać tutaj, że podczas jej
+
+00:01:57.820 --> 00:02:01.280
+przewijania pokazuje, co jest ładowane na stronie.
+
+00:02:01.450 --> 00:02:05.350
+Widać, że pojawia się coraz więcej rzeczy.
+
+00:02:07.810 --> 00:02:15.010
+Idealne i mamy tę zieloną linię, która pokazuje pierwszy lakier, który można zobaczyć tutaj, jak to maluje,
+
+00:02:16.210 --> 00:02:22.430
+a następnie mamy niebieską linię, która jest załadowana treścią DOM, o której już mówiliśmy.
+
+00:02:22.450 --> 00:02:29.260
+I wreszcie włączyła się czerwona linia, która jest stroną internetową zdarzenia ładowania.
+
+00:02:29.380 --> 00:02:36.250
+To całkiem fajne i fajne, możemy zobaczyć, ile czasu zajmuje wyświetlenie naszej strony na ekranie.
+
+00:02:36.520 --> 00:02:43.540
+Ale bardziej ekscytująca i interesująca rzecz, na którą spojrzeć, znajduje się na karcie Podsumowanie i zamierzam uczynić
+
+00:02:43.630 --> 00:02:47.830
+ją nieco większą, abyśmy mogli zobaczyć tutaj kartę Podsumowanie.
+
+00:02:47.830 --> 00:02:53.710
+Widzimy, że jest ładowanie, na które czekamy, aby załadować pliki.
+
+00:02:54.540 --> 00:03:00.180
+Jest scenariusz, który jest renderowany, a potem jest malarstwo i kilka innych rzeczy.
+
+00:03:00.880 --> 00:03:09.310
+Ale część żółta jest skryptem, który jest javascript, a ta część zawiera
+
+00:03:10.210 --> 00:03:19.430
+analizę składni i pokazuje, że zajęło to jeden punkt osiem sekund, aby strona javascript działała.
+
+00:03:19.480 --> 00:03:29.460
+Możemy również przejść do sedna i spojrzeć na łączny czas i ponownie widzimy żółte części javascriptu, który
+
+00:03:30.180 --> 00:03:39.510
+działa do oceny skryptów i wywołania funkcji, a następnie mamy drzewo colta, które ponownie daje
+
+00:03:39.520 --> 00:03:46.470
+nam naprawdę dobre informacje, ale nie bądźmy zbytnio zarzuceni na to.
+
+00:03:46.490 --> 00:03:55.290
+Chcę pokazać to tylko po to, aby pokazać, że javascript jest dużą częścią tego ładowania strony internetowej, więc spędzanie długiego czasu
+
+00:03:55.320 --> 00:04:03.360
+analizowania i kompilowania kodu przeglądarki może w dużym stopniu opóźnić, jak szybko użytkownik będzie mógł wchodzić w interakcję z
+
+00:04:03.630 --> 00:04:04.640
+twoją witryną.
+
+00:04:05.010 --> 00:04:11.460
+Temat, o którym mówiliśmy wcześniej, jest tym bardziej napisanym skryptem
+
+00:04:11.460 --> 00:04:18.460
+JavaScript, który zajmuje więcej czasu, zanim parsowanie witryny stanie się interaktywne.
+
+00:04:18.470 --> 00:04:27.410
+Teraz nie tylko kompilacja parsowania ma koszt wykonania skryptu javascript, który uruchamia kod, a parsowanie skompilowanych
+
+00:04:27.570 --> 00:04:34.470
+zdarzeń jest jedną z operacji, które muszą się zdarzyć w głównym wątku.
+
+00:04:34.610 --> 00:04:39.130
+A jeśli pamiętasz główny wątek jest trochę jak pracownik w przeglądarce.
+
+00:04:39.200 --> 00:04:45.050
+Jest tylko jeden robotnik wykonujący całą pracę i możemy go zablokować za pomocą ciężkiego javascriptu.
+
+00:04:45.080 --> 00:04:50.130
+Pamiętaj, że kiedy zrobiliśmy alert w naszym skrypcie, zadzwoń na demo.
+
+00:04:50.710 --> 00:04:56.290
+Zablokowało to wykonanie i nie mogliśmy przewijać ani klikać żadnych przycisków, dopóki nie klikniemy OK.
+
+00:04:56.660 --> 00:05:01.220
+Więc mamy javascript na naszej stronie tutaj.
+
+00:05:01.240 --> 00:05:07.780
+Żądamy pliku javascript, ponieważ napotkaliśmy znacznik skryptu, a następnie w końcu
+
+00:05:07.990 --> 00:05:09.430
+dociera javascript.
+
+00:05:09.480 --> 00:05:17.880
+Następnie musimy uruchomić naszą kompilację analizatora składni, a następnie napotkamy o wywołanie pobierania i plik
+
+00:05:17.880 --> 00:05:18.520
+javascript.
+
+00:05:18.540 --> 00:05:26.700
+Musimy więc poczekać na pojawienie się tej treści, aby zapełnić nasz javascript, a być może wtedy
+
+00:05:26.700 --> 00:05:29.340
+ponownie wykonamy skompilowane części.
+
+00:05:29.340 --> 00:05:37.110
+I na koniec nasza strona staje się interaktywna i chcę pokazać wam inne naprawdę dobre narzędzie, które można zobaczyć
+
+00:05:37.110 --> 00:05:39.270
+w akcji na stronie internetowej.
+
+00:05:41.240 --> 00:05:46.670
+Jeśli wrócimy na naszą stronę internetową, tutaj połowa łatwiejszej do opanowania strony internetowej, która jest w rzeczywistości
+
+00:05:46.670 --> 00:05:47.110
+otwarta.
+
+00:05:47.120 --> 00:05:52.560
+A to zostało stworzone przez studentów biorących udział w projektach open source.
+
+00:05:52.850 --> 00:05:58.340
+Bardzo fajne, a następnie zawiera linki do niektórych naszych projektów open source, do których masz dostęp.
+
+00:05:58.340 --> 00:06:03.920
+Pomyśl o tym jako o placu zabaw, aby przetestować wszystko, co chcesz.
+
+00:06:04.770 --> 00:06:12.960
+Korzystając z tej strony internetowej, gdzie można przejść do czegoś w rodzaju testu
+
+00:06:13.140 --> 00:06:19.600
+broni, możemy wprowadzić UR L, a następnie nacisnąć przycisk Start.
+
+00:06:19.700 --> 00:06:20.510
+W porządku.
+
+00:06:20.510 --> 00:06:21.200
+Idealny.
+
+00:06:21.250 --> 00:06:26.910
+Stawka trochę czasu, ale kiedy już to zrobimy, mamy fajny raport o tym, co się stało.
+
+00:06:27.320 --> 00:06:31.240
+Ale tym, który chcę ci pokazać, jest ten podział przetwarzania.
+
+00:06:31.490 --> 00:06:39.050
+Jeśli klikniesz tutaj, wyświetli się rodzaj awarii podobny do tego, jaki zrobiły portale Google Devol.
+
+00:06:39.210 --> 00:06:42.870
+Ale w naprawdę fajny sposób, aby zobaczyć, co dokładnie się dzieje.
+
+00:06:44.050 --> 00:06:48.580
+Ponownie widzimy scenariusz obrazu, który zajmował czas.
+
+00:06:48.660 --> 00:06:50.060
+Ładowanie.
+
+00:06:50.080 --> 00:06:55.990
+Widzimy też rzeczy takie jak ocenianie skryptów, ile czasu zajęło oszacowanie skryptów, jak długo
+
+00:06:55.990 --> 00:06:59.140
+trwało kompilowanie kodu przez silnik V-8.
+
+00:06:59.380 --> 00:07:08.870
+A jeśli wrócimy do naszych narzędzi def, zobaczymy ponownie coś podobnego, że mamy skrypt Evaluate, który jest
+
+00:07:08.870 --> 00:07:13.420
+ocenianym skryptem i zajęło to tyle czasu.
+
+00:07:13.460 --> 00:07:20.090
+Mamy wywołanie funkcji, które mierzy wywołanie funkcji javascript najwyższego poziomu, które pojawia się tylko wtedy, gdy
+
+00:07:20.090 --> 00:07:25.790
+przeglądarka wchodzi w mechanizm javascript i istnieje wiele rzeczy, które możesz tutaj zrobić i
+
+00:07:25.820 --> 00:07:26.600
+przeanalizować.
+
+00:07:26.630 --> 00:07:31.870
+Możesz spędzić mnóstwo czasu, ucząc się wszystkich funkcji Chrome.
+
+00:07:31.880 --> 00:07:38.600
+Ale nie wchodź tu zbyt głęboko w króliczą dziurę, ponieważ najważniejszą rzeczą, na której chcemy się skupić, jest
+
+00:07:38.600 --> 00:07:42.540
+idea, że wykonanie tej kompilacji przez Barrę zajmuje dużo czasu.
+
+00:07:42.710 --> 00:07:44.510
+To duży wysiłek.
+
+00:07:44.510 --> 00:07:53.300
+Głównym wyjściem jest to, że przeglądarka potrzebuje dużo czasu, aby pracować z javascript i może opóźnić, jak szybko użytkownik
+
+00:07:53.300 --> 00:07:57.120
+może wchodzić w interakcję z naszą witryną.
+
+00:07:57.140 --> 00:08:02.510
+Wyobraź sobie, że widzą przycisk, ale nie klikają go lub dotykają go przez wiele sekund.
+
+00:08:02.510 --> 00:08:05.680
+Może to zdecydowanie pogorszyć wrażenia użytkownika.
+
+00:08:07.520 --> 00:08:15.110
+Jedną z małych notatek, które chcę zrobić, jest ta rzecz, która również jest kanciasta, a teraz jej kątowa czwórka lub pięć, niezależnie od
+
+00:08:15.410 --> 00:08:19.150
+wersji, na której się znajdują, ma przed sobą tę ideę.
+
+00:08:19.220 --> 00:08:27.170
+Kompilacja, widzisz przeglądarki robią coś o nazwie git tylko na czas kompilacji, jak plik javascript zostanie
+
+00:08:27.290 --> 00:08:29.350
+załadowany do przeglądarki.
+
+00:08:29.420 --> 00:08:34.910
+Kompilują go natychmiast, a gdy czekamy na załadowanie, zespół kątowy
+
+00:08:34.920 --> 00:08:42.860
+wymyślił obliczenia z wyprzedzeniem od naszego terminala, kompilując je z wyprzedzeniem, a następnie wysyłając kod, z
+
+00:08:42.860 --> 00:08:47.860
+którego przeglądarka może pracować, prosto do przeglądarki. z dala.
+
+00:08:47.870 --> 00:08:53.910
+Widać tutaj, że udało im się znacznie obniżyć liczbę skryptów.
+
+00:08:54.320 --> 00:09:00.590
+Teraz są plusy i minusy tego wszystkiego i jest powód, dla którego nie każdy robi kompilację z wyprzedzeniem,
+
+00:09:01.190 --> 00:09:03.170
+ale sam możesz to przeczytać.
+
+00:09:03.170 --> 00:09:07.420
+Chcę tylko pokazać wam, że istnieje kilka rozwiązań tego problemu.
+
+00:09:07.730 --> 00:09:10.430
+A wtedy możesz myśleć o czymś innym.
+
+00:09:10.580 --> 00:09:13.190
+OK, więc twój javascript właśnie został załadowany.
+
+00:09:13.460 --> 00:09:20.240
+I jak możesz utrzymać swoją stronę w zgryzie, nawet po wczytaniu jej na stronę WWW, a
+
+00:09:20.300 --> 00:09:24.730
+to wszystko ogranicza ilość pracy przetwarzania, którą komputer musi wykonać.
+
+00:09:24.740 --> 00:09:27.950
+Przede wszystkim oznacza to ograniczenie animacji.
+
+00:09:28.040 --> 00:09:35.110
+Pamiętasz Kaikohe Corp. Strona internetowa i liczba animacji, które mamy, nie są tak
+
+00:09:35.110 --> 00:09:42.390
+ciężkie, że animacje wymagają dużej mocy obliczeniowej i graficznej i mogą sprawić poważne wrażenie, jakbyś wiedziała, że możesz je posypać tu
+
+00:09:42.390 --> 00:09:45.260
+i tam, ale nie przesadzaj z nimi.
+
+00:09:45.330 --> 00:09:52.430
+Dotyczy to zwłaszcza urządzeń mobilnych, które zwykle mają słabszą moc obliczeniową.
+
+00:09:52.740 --> 00:09:59.130
+Dlatego pamiętaj, że jednym z największych winowajców wydajności jest wyzwalanie animacji
+
+00:09:59.130 --> 00:10:07.270
+podczas przewijania zdarzeń lub przesuwania elementów strony lub zmniejszania ich i zmieniania wyglądu strony internetowej.
+
+00:10:07.290 --> 00:10:13.400
+Przeglądarka musi nie tylko przetwarzać zmiany wizualne związane z przewijaniem strony dynamicznej, ale także musi
+
+00:10:13.590 --> 00:10:17.390
+przetwarzać wszystkie swoje animacje w tym samym czasie.
+
+00:10:17.700 --> 00:10:23.990
+Więc pomyśl jeszcze raz o tym jednym pracowniku, który ciągle pracuje dla ciebie, nie pozwól mu zacząć.
+
+00:10:24.060 --> 00:10:25.440
+Pozwól, że pokażę ci inną rzecz.
+
+00:10:27.540 --> 00:10:31.020
+Po włączeniu w linii javascript w swoim HMO.
+
+00:10:31.080 --> 00:10:37.390
+Tak więc wstawiasz znacznik skryptu i jesteś symbolem, powiedzmy, że źródło jest indeksowane.
+
+00:10:37.500 --> 00:10:45.990
+Tak, to jest operacja blokowania renderowania, jeśli pamiętasz, że przeglądarka musi wykonać ten skrypt do końca, zanim będziemy
+
+00:10:45.990 --> 00:10:48.560
+mogli kontynuować przetwarzanie kodu HTML.
+
+00:10:48.630 --> 00:10:50.910
+Więc jeśli przejdziemy do oceny skryptów tutaj.
+
+00:10:51.090 --> 00:10:55.990
+Jeśli to otworzysz, zobaczysz, że Parsa H. T. M-L jest w środku.
+
+00:10:56.100 --> 00:10:59.430
+Znów wiem, że powtarzam się, ale ma to sens.
+
+00:10:59.430 --> 00:11:06.060
+Jeśli budujesz witrynę, a może nawet celuje ona w wielu użytkowników urządzeń mobilnych, staraj
+
+00:11:06.060 --> 00:11:14.580
+się przede wszystkim budować i wykonywać zadania na reprezentatywnym sprzęcie, który używa czegoś w rodzaju testu strony internetowej, aby
+
+00:11:14.880 --> 00:11:19.710
+przetestować moc urządzeń mobilnych, którą mogą zapewnić Twoi użytkownicy. mieć.
+
+00:11:21.490 --> 00:11:28.820
+Chcesz, aby Twój skrypt javascript był parsowany i kompilowany na niskim poziomie, a do budżetu
+
+00:11:28.820 --> 00:11:37.460
+Twojego zespołu został dodany budżet wydajności, który zapewnia kontrolę kodu JavaScript i kosztów, a nie tylko układasz
+
+00:11:37.460 --> 00:11:40.950
+kod i kod, nie testując wydajność.
+
+00:11:41.930 --> 00:11:48.530
+A pod koniec dnia mamy Świętego Graala, co chcemy osiągnąć dzięki naszemu kodeksowi.
+
+00:11:48.590 --> 00:11:55.670
+Chcemy mieć szybki czas na pierwszą sensowną farbę, która jest od razu
+
+00:11:55.760 --> 00:11:57.940
+widoczna dla użytkownika.
+
+00:11:58.010 --> 00:12:04.580
+I wreszcie bardzo szybki czas interaktywny, aby móc jak najszybciej wchodzić w interakcje z naszymi stronami
+
+00:12:04.580 --> 00:12:05.430
+internetowymi.
+
+00:12:05.750 --> 00:12:11.970
+A w kolejnych filmach będziemy rozmawiać o tym, jak możemy to zrobić i pokazać kilka naprawdę dobrych przykładów.
+
+00:12:12.380 --> 00:12:13.690
+Zobaczę w następnym.
+
+00:12:13.930 --> 00:12:14.190
+Konstabl.

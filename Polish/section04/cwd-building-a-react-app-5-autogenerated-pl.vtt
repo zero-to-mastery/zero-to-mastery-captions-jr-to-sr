@@ -1,0 +1,277 @@
+﻿WEBVTT
+
+00:00:00.650 --> 00:00:03.070
+Nasi przyjaciele robo wyglądają naprawdę fajnie.
+
+00:00:03.080 --> 00:00:05.690
+Naprawdę podoba mi się to, ale jest jeden problem.
+
+00:00:05.870 --> 00:00:14.940
+Jeśli zminimalizuję to OK, reaguje to dobrze, ale jeśli przewijam dobrze, tracę pasek wyszukiwania na górze.
+
+00:00:14.940 --> 00:00:21.320
+Byłoby miło, gdyby był na górze i mam zwój, który mogę zrobić i nadal przeszukiwać
+
+00:00:24.460 --> 00:00:30.070
+moich znajomych, dobrze, że dobrze myślę, że prawdopodobnie istnieje styl CSSA, który mogę
+
+00:00:30.070 --> 00:00:39.160
+dodać tutaj, ale chcę wam zilustrować fakt które reagują, a my reagujemy tak dobrze, ponieważ potrafimy tworzyć komponenty, które były użyteczne nie
+
+00:00:39.160 --> 00:00:42.500
+tylko jako elementy samochodu, ale także funkcjonalność.
+
+00:00:42.550 --> 00:00:48.070
+Czy byłoby fajnie, gdyby było coś, co można dodać do listy rundy kart.
+
+00:00:48.070 --> 00:00:58.910
+Może uda mi się utworzyć komponent przewijania, a ten komponent przewijania po prostu otacza bez karty.
+
+00:00:59.140 --> 00:01:02.100
+A teraz bez karty będzie całkowicie przewijany.
+
+00:01:02.140 --> 00:01:07.630
+Ale teraz mogę przewijać ten komponent w dowolnym miejscu w mojej aplikacji, gdy tylko potrzebuję przewijania.
+
+00:01:07.930 --> 00:01:10.690
+Mogę go po prostu owinąć.
+
+00:01:10.760 --> 00:01:11.810
+Możemy to zrobić.
+
+00:01:11.870 --> 00:01:12.740
+Spróbujmy.
+
+00:01:14.660 --> 00:01:19.080
+Zamierzam zaimportować komponent, którego jeszcze nie mamy.
+
+00:01:19.100 --> 00:01:30.340
+To się nazywa przewijanie z pliku, który utworzy się w ciągu sekundy, tworząc nowy plik.
+
+00:01:30.560 --> 00:01:31.890
+Nazwiemy ten zwój.
+
+00:01:32.000 --> 00:01:32.580
+JOT. S.
+
+00:01:35.290 --> 00:01:42.800
+i tutaj ponownie przejdziemy przez ruch ponownego działania z ponownego aktu.
+
+00:01:42.850 --> 00:01:44.290
+Zrób trochę większy.
+
+00:01:46.100 --> 00:01:54.440
+I znowu chcę to zmienić na baseball, a my powiemy, że Konst przewinie.
+
+00:01:54.550 --> 00:02:01.770
+Mówi, że powróci z tego, co powinno powrócić.
+
+00:02:01.800 --> 00:02:11.740
+Zanim o tym porozmawiamy, nie zapominajmy, że musimy wyeksportować domyślną grafikę.
+
+00:02:11.760 --> 00:02:19.000
+Teraz mamy problem, który chcemy zwrócić, ale nie ma to sensu.
+
+00:02:19.000 --> 00:02:27.760
+Jeśli pójdę do AB dodgy Yes, to nie jest to komponent samozamykający się, który zawija komponenty.
+
+00:02:27.800 --> 00:02:33.690
+Jak więc możemy powiedzieć, aby przewinąć do hej po prostu oddać to, co jest w tobie?
+
+00:02:36.270 --> 00:02:44.240
+Do tego momentu dowiedzieliśmy się o rekwizytach i nauczyliśmy się o stanie.
+
+00:02:44.330 --> 00:02:53.010
+Jest jedna rzecz i reaguje, że chcę cię uczyć, a to jest dzieci i dzieci, to
+
+00:02:54.270 --> 00:03:00.270
+ta bazgroła może używać dzieci jako sposobu na oddanie swoich dzieci.
+
+00:03:00.690 --> 00:03:01.770
+Co mam przez to na myśli?
+
+00:03:02.990 --> 00:03:09.650
+Tu każdy obiekt profs ma dzieci.
+
+00:03:09.750 --> 00:03:16.360
+Więc jeśli pójdę do dzieci z propem, zobaczmy, co się stanie.
+
+00:03:16.580 --> 00:03:28.380
+Oszczędzam i wracam do renderowania wszystkiego, ale jeśli usunę to i po prostu zrobię i H-1,
+
+00:03:36.950 --> 00:03:45.050
+po prostu dostaję to, widzisz rekwizyty, dzieci zaczynają właśnie to.
+
+00:03:45.050 --> 00:03:49.440
+Jeśli I Konsole myślał rekwizyty dziennika Otwórzmy
+
+00:03:53.470 --> 00:03:54.760
+con ..
+
+00:03:54.850 --> 00:03:57.730
+Widzę, że dostaję przedmiot.
+
+00:03:57.730 --> 00:04:07.510
+I mimo, że dostaję jakiekolwiek rekwizyty do automatycznego przewijania, każdy pojedynczy komponent o nazwie Bre-X ma tę
+
+00:04:07.510 --> 00:04:08.260
+właściwość.
+
+00:04:09.490 --> 00:04:17.990
+Dzieci i te dzieci wyglądają na zagmatwane, ale mają listę kart bez karty
+
+00:04:22.380 --> 00:04:32.720
+Więc korzystając z tego Propstu, nasze dzieci mogą tworzyć komponenty owijające inne komponenty do tej pory mogliśmy
+
+00:04:32.730 --> 00:04:39.450
+owijać tylko te małe elementy, które są jak znaczniki zespołu.
+
+00:04:39.780 --> 00:04:44.910
+Ale za każdym razem, gdy mieliśmy komponent niestandardowy z wielką literą, którą zbudowaliśmy dobrze, możemy go
+
+00:04:44.910 --> 00:04:45.920
+naprawdę owinąć.
+
+00:04:45.970 --> 00:04:50.630
+Teraz możemy użyć tej myśli dzieci.
+
+00:04:50.730 --> 00:04:52.620
+Ale tu jest fajna część.
+
+00:04:52.860 --> 00:04:54.830
+Używanie rekwizytów dla naszych dzieci.
+
+00:04:55.110 --> 00:05:07.130
+Cóż, mogę stworzyć przewijany komponent Pozwól mi pokazać, jak proste są różne ubrania, które Dave, a następnie tutaj ponownie wybrano kropki z motywem
+
+00:05:07.140 --> 00:05:16.080
+klamrowym, i wszystko, czego potrzebujemy, to dodać style do tego elementu div. Mogę utworzyć plik CSSA z
+
+00:05:16.080 --> 00:05:22.590
+kropką i dodać styl, więc można go przewijać, ale chcę pokazać
+
+00:05:22.590 --> 00:05:33.090
+ci inny sposób, który używa rzeczy takich jak HMO używających tego atrybutu stylu GSX mogę dodawać style, ale używając
+
+00:05:33.090 --> 00:05:34.960
+podwójnych nawiasów klamrowych.
+
+00:05:35.130 --> 00:05:37.780
+To jest wyrażenie javascript.
+
+00:05:38.040 --> 00:05:43.670
+I w tym zwracam obiekt, a ten obiekt może mieć CSSA.
+
+00:05:45.100 --> 00:05:47.730
+Takich jak przepełnienie właściwości.
+
+00:05:47.740 --> 00:05:49.660
+Czemu.
+
+00:05:50.000 --> 00:05:51.840
+Która jest właściwością CSSA.
+
+00:05:51.980 --> 00:06:02.990
+I możemy powiedzieć, że przewijamy ponownie sposób CSSA, aby przewijane elementy powiedziały, że granica to jednolity blok o
+
+00:06:03.290 --> 00:06:05.660
+wielkości jednego piksela.
+
+00:06:06.080 --> 00:06:15.450
+I w końcu damy mu wysokość 500 pikseli, aby to zmniejszyć, więc widzisz, że zamierzam zapisać kompilację,
+
+00:06:15.450 --> 00:06:21.560
+to dobrze, jeśli wrócę, wygląda na to, że mamy tutaj pudełko.
+
+00:06:21.640 --> 00:06:26.480
+Zróbmy to trochę większym, żebyś zobaczył pięć pikseli, nawet jeśli jest brzydki.
+
+00:06:26.560 --> 00:06:29.350
+I zapomniałem tutaj.
+
+00:06:29.650 --> 00:06:30.130
+Dobrze.
+
+00:06:30.130 --> 00:06:30.360
+W porządku.
+
+00:06:30.370 --> 00:06:35.660
+Zobaczmy, że mamy przewijany komponent.
+
+00:06:36.690 --> 00:06:44.080
+Zróbmy to trochę bardziej, żebyśmy mogli lepiej to zobaczyć.
+
+00:06:44.110 --> 00:06:53.580
+Jeśli zrobię mniejszy, mam teraz przewijaną stronę komponentu.
+
+00:06:53.710 --> 00:06:55.250
+Bardzo fajny.
+
+00:06:55.270 --> 00:06:57.540
+Teraz jest to proste.
+
+00:06:57.790 --> 00:07:00.240
+Pozwala na wyszukiwanie.
+
+00:07:00.520 --> 00:07:07.460
+Pozwala na przewijanie, ale pokazuje siłę reakcji, prawda?
+
+00:07:08.210 --> 00:07:18.020
+Stworzyliśmy te proste funkcje i jedyne, co nam każą, to dobrze powiedzieć, jaki jest stan, w
+
+00:07:18.020 --> 00:07:28.890
+którym cała aplikacja jest opisywana przez te dwie rzeczy, które roboty i pole wyszukiwania oraz ponowne działanie zajmują
+
+00:07:29.010 --> 00:07:30.600
+się piersią.
+
+00:07:30.870 --> 00:07:38.150
+Gdy tylko pola wyszukiwania lub zmiany robota reagują na spływanie.
+
+00:07:38.150 --> 00:07:46.850
+Wszystkie te informacje stanowią rekwizyty dla wszystkich tych elementów i magicznie tworzą dla nas nasz pogląd.
+
+00:07:46.850 --> 00:07:49.660
+Dlatego reakcja jest tak potężna, że jest warstwą widoku.
+
+00:07:49.820 --> 00:07:55.570
+Dba o manipulowanie DOMem i wszystko co mówimy to hej, jaki jest stan.
+
+00:07:55.730 --> 00:07:59.570
+Jakie funkcje chciałbyś pracować z państwem i resztą?
+
+00:07:59.570 --> 00:08:06.350
+Optymalizuje się, aby wszystko było super szybkie i można zobaczyć, jak niesamowicie szybko wszystko jest
+
+00:08:06.350 --> 00:08:06.810
+tutaj.
+
+00:08:06.830 --> 00:08:11.730
+Jest to bardzo zgryźliwa aplikacja, którą można teraz ponownie wykorzystać.
+
+00:08:12.170 --> 00:08:19.460
+Mogę teraz przenieść pole wyszukiwania do innej części strony internetowej, którą mogę dodać do innej części strony
+
+00:08:19.460 --> 00:08:20.300
+internetowej.
+
+00:08:21.190 --> 00:08:27.300
+To, co sprawiło, że reagują tak potężnie i dlatego tak wiele stron internetowych jest zasilanych przez ponowne działanie.
+
+00:08:27.420 --> 00:08:35.770
+Kiedy nauczysz się składni i przyzwyczaisz się do wszystkiego, co dzieje się, gdy odrodzenie naprawdę staje się potężne.
+
+00:08:35.910 --> 00:08:41.580
+I chociaż trochę czasu zajęło nam stworzenie tej aplikacji, gdy już się przyzwyczaicie, godzinę taką
+
+00:08:41.580 --> 00:08:45.510
+można utworzyć w mniej niż godzinę, prawdopodobnie 30 minut.
+
+00:08:46.990 --> 00:08:47.710
+W porządku.
+
+00:08:47.710 --> 00:08:49.910
+Myślę, że wykonaliśmy świetną robotę tutaj.
+
+00:08:49.930 --> 00:08:51.290
+Nie mogę się doczekać, aby zobaczyć cię w następnym wideo.
